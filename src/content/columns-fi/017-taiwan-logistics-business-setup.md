@@ -148,4 +148,4 @@ Työhön ilman lupaa voidaan soveltaa hallinnollista sakkoa ja määräystä lä
 
 Tämä artikkeli on yleisesitys oikeudellisesta järjestelystä, eikä neuvontaa konkreettiseen asiaan. Koska lupakriteerit, hakemuslomakkeet ja toimivaltaisen viranomaisen käytäntö voivat muuttua, ajantasaiset viralliset lähteet ja asian olosuhteet vahvistetaan ennen sijoituksen tai sopimuksen toteuttamista.
 
-**Asianajaja Wei Tseng (曾雋崴)**
+Asianajaja Wei Tseng (曾雋崴)

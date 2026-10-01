@@ -148,4 +148,4 @@ El treball sense permís pot comportar una multa administrativa i l’ordre de s
 
 Aquest article té una finalitat divulgativa i explica de manera general el règim jurídic, i no és assessorament per a un cas concret. Com que els criteris d’autorització, els formularis de sol·licitud i la pràctica de l’autoritat competent poden canviar, confirmi les fonts oficials actualitzades i les circumstàncies de l’assumpte abans d’executar una inversió o un contracte.
 
-**Advocada Wei Tseng (曾雋崴)**
+Advocada Wei Tseng (曾雋崴)

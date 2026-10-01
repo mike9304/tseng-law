@@ -42,9 +42,9 @@ Līgumā ir lietderīgi konkrēti noteikt intelektuālā īpašuma, piemēram, p
 
 Taivānas meitas sabiedrība un ārvalstu sabiedrības filiāle nav viena un tā pati organizācija. Meitas sabiedrība ir patstāvīga juridiskā persona, kas dibināta saskaņā ar Taivānas tiesībām, savukārt filiāle tiek reģistrēta kā ārvalstu sabiedrības galvenā biroja (本公司) daļa. Atšķiras juridiskā personība, galvenā biroja atbildība, grāmatvedības un nodokļu režīms, peļņas pārskaitījums, pārstāvības pilnvara un iekšējās kontroles veids, tāpēc organizācijas formu nedrīkst izvēlēties tikai pēc pārdošanas kontroles.
 
-Ja vajadzīga ārvalstu ieguldījuma gaita, jāpārbauda **Ekonomikas ministrijas Ieguldījumu izskatīšanas departamenta (經濟部投資審議司)** norādījumi, jo tas pašlaik ir kompetentā iestāde. Laiks, kas vajadzīgs ieguldījuma atļaujai, līdzekļu pārskaitījumam, sabiedrības vai filiāles reģistrācijai, bankas konta atvēršanai, nodokļu reģistrācijai (稅籍登記) un importētāja kvalifikācijas iegūšanai, atšķiras pēc ieguldītāja, nozares, organizācijas formas, iesniegtajiem materiāliem un pēc tā, vai notiek labošana vai papildināšana. Tāpēc, tā vietā, lai izlaišanas datumu noteiktu, pieņemot kādu fiksētu termiņu, vispirms jāpārbauda, vai katrs solis piemērojams, un jaunākās pieņemšanas prasības.
+Ja vajadzīga ārvalstu ieguldījuma gaita, jāpārbauda Ekonomikas ministrijas Ieguldījumu izskatīšanas departamenta (經濟部投資審議司) norādījumi, jo tas pašlaik ir kompetentā iestāde. Laiks, kas vajadzīgs ieguldījuma atļaujai, līdzekļu pārskaitījumam, sabiedrības vai filiāles reģistrācijai, bankas konta atvēršanai, nodokļu reģistrācijai (稅籍登記) un importētāja kvalifikācijas iegūšanai, atšķiras pēc ieguldītāja, nozares, organizācijas formas, iesniegtajiem materiāliem un pēc tā, vai notiek labošana vai papildināšana. Tāpēc, tā vietā, lai izlaišanas datumu noteiktu, pieņemot kādu fiksētu termiņu, vispirms jāpārbauda, vai katrs solis piemērojams, un jaunākās pieņemšanas prasības.
 
-Lai kāda struktūra tiktu izvēlēta, kosmētikas regulējumā centrālais atbildības subjekts ir **kosmētikas ražotājs vai importētājs**. Izstrādājuma materiālu sakārtošanu vai drošības novērtējumu (安全性評估) var uzticēt ārējam ekspertam, taču pats uzticējums nepārnes ražotāja vai importētāja tiesisko atbildību. Nošķirt līgumisko darba sadali no likumā noteiktā atbildības subjekta ir ienākšanas struktūras izvērtējuma izejas punkts.
+Lai kāda struktūra tiktu izvēlēta, kosmētikas regulējumā centrālais atbildības subjekts ir kosmētikas ražotājs vai importētājs. Izstrādājuma materiālu sakārtošanu vai drošības novērtējumu (安全性評估) var uzticēt ārējam ekspertam, taču pats uzticējums nepārnes ražotāja vai importētāja tiesisko atbildību. Nošķirt līgumisko darba sadali no likumā noteiktā atbildības subjekta ir ienākšanas struktūras izvērtējuma izejas punkts.
 
 ## 2. Izstrādājuma reģistrācija un PIF ir divi atšķirīgi režīmi
 
@@ -131,4 +131,4 @@ Sabiedrības un filiāles pamata struktūru varat aplūkot lapā [Sabiedrības d
 
 Šis raksts ir izglītojošs materiāls vispārīgai kārtības skaidrošanai, kas saistīta ar ienākšanu kosmētikas tirgū Taivānā; tas nav juridisks atzinums par atsevišķu izstrādājumu vai reklāmu un nesola noteiktu iznākumu, atļauju, reģistrāciju, pārdošanas iespēju vai izskatīšanas termiņa ievērošanu. Ienākšanas forma, izstrādājuma materiāli, marķējuma un reklāmas saturs un kompetentās iestādes jaunākā prakse jāpārbauda katrā lietā atsevišķi.
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)

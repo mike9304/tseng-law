@@ -223,13 +223,13 @@ describe('Japanese litigation column 010 — gym injury damages', () => {
 
   it('covers all permitted damages and keeps insurance and closing qualified', () => {
     const requiredRules = [
-      '**医療費**',
-      '**必要な介護・付添費用**',
-      '**必要な交通費**',
-      '**労働能力の喪失による損害**',
-      '**療養期間中の休業損害**',
-      '**非財産的損害**',
-      '**懲罰的損害賠償**',
+      '医療費',
+      '必要な介護・付添費用',
+      '必要な交通費',
+      '労働能力の喪失による損害',
+      '療養期間中の休業損害',
+      '非財産的損害',
+      '懲罰的損害賠償',
       '実際に認められるか、またその額は、各費用の必要性、事故との因果関係、証拠、責任割合および裁判所の判断によります。',
       '障害の割合だけで賠償額が確定したり、損失が退職時まで自動的に計算されたりするわけではありません。',
       '実損害額の5倍以下、重大な過失について3倍以下、過失について1倍以下',
@@ -287,7 +287,7 @@ describe('Japanese litigation column 010 — gym injury damages', () => {
     }
 
     expect(raw).toContain(
-      `![${finalMedia.caption}](${imagePrefix}${finalMedia.image})\n\n**${finalMedia.caption}**`,
+      `![${finalMedia.caption}](${imagePrefix}${finalMedia.image})\n\n${finalMedia.caption}`,
     );
     expect(countOccurrences(raw, finalMedia.caption)).toBe(2);
     expect(raw).not.toContain('[![');

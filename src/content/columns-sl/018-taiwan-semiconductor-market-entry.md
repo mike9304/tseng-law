@@ -85,11 +85,11 @@ Za vodjo tajvanske hčerinske družbe in podružnice tuje družbe je vloga za de
 
 Naslednje situacije so hipotetični zgledi v podporo razmisleku; ne obljubljajo določenega izida, da je določen način zakonit ali boljši.
 
-**Tuja podjetja, usmerjena v začetni izvoz.** Če na Tajvanu še ni zaposlenih niti zalog in želite preveriti povpraševanje prek samostojnega distributerja, je mogoče najprej presoditi dobavo, razmerje distribucije in obseg dejavnosti na Tajvanu. Sama pogodba o distribuciji pa ne odpravi vseh vprašanj regulacije na Tajvanu.
+Tuja podjetja, usmerjena v začetni izvoz. Če na Tajvanu še ni zaposlenih niti zalog in želite preveriti povpraševanje prek samostojnega distributerja, je mogoče najprej presoditi dobavo, razmerje distribucije in obseg dejavnosti na Tajvanu. Sama pogodba o distribuciji pa ne odpravi vseh vprašanj regulacije na Tajvanu.
 
-**Tuja podjetja, ki na Tajvanu postopoma širijo prodajo in tehnično podporo.** Če načrtujete zaposlovanje na Tajvanu in nadaljnje upravljanje zalog, izterjave plačil ter podpore strankam, je smiselno konkretno primerjati strukturo hčerinske družbe ter podružnice ter skupaj presoditi tudi pogodbeno odgovornost, načrt delovanja sedeža, davke ter načrt osebja.
+Tuja podjetja, ki na Tajvanu postopoma širijo prodajo in tehnično podporo. Če načrtujete zaposlovanje na Tajvanu in nadaljnje upravljanje zalog, izterjave plačil ter podpore strankam, je smiselno konkretno primerjati strukturo hčerinske družbe ter podružnice ter skupaj presoditi tudi pogodbeno odgovornost, načrt delovanja sedeža, davke ter načrt osebja.
 
-**Tuja podjetja v fazi raziskave trga.** Če pred ustanovitvijo prodajne organizacije želite le funkcije zbiranja podatkov in stikov, je mogoče presoditi predstavništvo. Če pa dejanski načrt vključuje prodajo skladiščenega blaga ali delo na kraju, je treba posebej potrditi, ali so te dejavnosti dovoljene.
+Tuja podjetja v fazi raziskave trga. Če pred ustanovitvijo prodajne organizacije želite le funkcije zbiranja podatkov in stikov, je mogoče presoditi predstavništvo. Če pa dejanski načrt vključuje prodajo skladiščenega blaga ali delo na kraju, je treba posebej potrditi, ali so te dejavnosti dovoljene.
 
 ## 8. Za prvi posvet zadošča operativni pregled; ni treba takoj predati vse zaupne dokumentacije
 

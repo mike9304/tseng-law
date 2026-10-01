@@ -51,7 +51,7 @@ Věnujte proto této věci pozornost.
 
 ​
 
-**Q. Musí všechna odvětví systémem „předběžného ověření provozovny“ ověřovat, zda je provoz možný?**
+Q. Musí všechna odvětví systémem „předběžného ověření provozovny“ ověřovat, zda je provoz možný?
 
 Všem odvětvím se doporučuje potvrdit systémem „předběžného ověření provozovny“ (營業場所預先查詢), zda je provoz možný.
 
@@ -61,7 +61,7 @@ Proto v praxi není nutné při zápisu společnosti ověřovat všechna odvětv
 
 Podle „[Provozní pokyny služby asistovaného dotazu na provozovny města Tchaj-pej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámení města Tchaj-pej,
 
-od 1. 1. 2023 při žádosti o zápis založení, přemístění sídla nebo doplnění odvětví činnosti společnosti nebo podniku (včetně pobočky (分公司) a pobočné provozovny (分支機構)) výsledek předběžného ověření provozovny **musí** být připojen k žádosti o zápis, bez ohledu na odvětví.
+od 1. 1. 2023 při žádosti o zápis založení, přemístění sídla nebo doplnění odvětví činnosti společnosti nebo podniku (včetně pobočky (分公司) a pobočné provozovny (分支機構)) výsledek předběžného ověření provozovny musí být připojen k žádosti o zápis, bez ohledu na odvětví.
 
 Níže uvedený seznam „odvětví, která jsou předmětem úředního ověření“ (主動查詢之營業項目) označuje odvětví, která Obchodní úřad v průběhu přezkumu zápisu ověřuje z úřední moci navíc (隨案主動查詢), když odvětví figuruje v žádosti, ale chybí v připojeném výsledku; skutečnost, že odvětví na tomto seznamu není, neznamená osvobození od ověření.
 

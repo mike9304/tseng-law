@@ -40,9 +40,9 @@ Pokud zaměstnanec sám odejde, společnost odstupné vyplácet nemusí.
 
 Dopustí-li se však zaměstnanec protiprávního činu,
 
-**poruší vnitřní řád (工作規則),**
+poruší vnitřní řád (工作規則),
 
-**nebo se bez důvodu nedostaví 3 dny po sobě (曠工),**
+nebo se bez důvodu nedostaví 3 dny po sobě (曠工),
 
 může společnost propustit bez výplaty odstupného.
 
@@ -52,7 +52,7 @@ Následující tabulka to shrnuje.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Druh** | **Hospodářské propuštění (資遣員工, 經濟解僱)** | **Kárné propuštění (解僱員工, 懲戒解僱)** | **Vlastní odchod zaměstnance**  **員工自請離職** |
+| Druh | Hospodářské propuštění (資遣員工, 經濟解僱) | Kárné propuštění (解僱員工, 懲戒解僱) | Vlastní odchod zaměstnance  員工自請離職 |
 | Význam | Existuje-li u zaměstnavatele potřeba úpravy personálu kvůli situaci podniku, leží důvod v hospodářské oblasti zaměstnavatele, nikoli v odpovědnosti zaměstnance. Proto musí zaměstnavatel dodržet výpovědní dobu (預告期間) a vyplatit odstupné, aby vyvážil nevýhody zaměstnance. | Dopustí-li se zaměstnanec protiprávního nebo nevhodného činu, může zaměstnavatel okamžitě ukončit pracovní smlouvu (勞動契約) bez předchozí výpovědi a odstupné vyplácet nemusí. Jde o jednu z kárných pravomocí zaměstnavatele. | Zaměstnanec může kdykoli ukončit smlouvu, avšak musí podle doby zaměstnání dodržet výpovědní dobu, aby zaměstnavatel mohl provést předání a hledání náhrady. |
 | Podmínky | Ano (článek 11 tchajwanského zákona o pracovních normách) | Ano (článek 12 tchajwanského zákona o pracovních normách) | Nejsou |
 | Předchozí výpověď | Nutná | Není nutná | Nutná |
@@ -194,17 +194,17 @@ klade nadměrné požadavky
 
 nebo převádí zaměstnance na podivná místa,
 
-**je třeba zachovávat důkazy.**
+je třeba zachovávat důkazy.
 
-**Vaše běžné záznamy docházky,**
+Vaše běžné záznamy docházky,
 
-**záznamy přesčasů, záznamy výsledků,**
+záznamy přesčasů, záznamy výsledků,
 
-**vnitřní řád, e-mailovou korespondenci se spolupracovníky a nadřízenými**
+vnitřní řád, e-mailovou korespondenci se spolupracovníky a nadřízenými
 
-**i nahrávky rozhovorů s nadřízenými —**
+i nahrávky rozhovorů s nadřízenými —
 
-**zachovávejte důkazy, které jsou pro vás příznivé.**
+zachovávejte důkazy, které jsou pro vás příznivé.
 
 ​
 

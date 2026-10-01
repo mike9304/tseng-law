@@ -44,9 +44,9 @@ The agreement should specify the permitted use of intellectual property such as 
 
 A Taiwan subsidiary and a Taiwan branch of a foreign company are not the same organizational form. A subsidiary is a separate legal entity incorporated under Taiwan law, whereas a branch is registered as part of the foreign company’s head office. Because they differ in legal personality, the head office’s liability, accounting and tax treatment, profit remittance, representative authority, and internal controls, the organizational form should not be selected based solely on the desired degree of sales control.
 
-If foreign-investment procedures are required, the current guidance of the **Department of Investment Review, Ministry of Economic Affairs (MOEA)** should be consulted. The time needed to obtain investment approval, remit funds, register a company or branch, open a bank account, complete tax registration, and obtain importer status varies according to the investor, industry, organizational form, submitted documents, and whether supplemental documents are requested. Rather than setting a launch date on the assumption of a fixed period, the parties should first confirm which procedures apply and the latest filing requirements.
+If foreign-investment procedures are required, the current guidance of the Department of Investment Review, Ministry of Economic Affairs (MOEA) should be consulted. The time needed to obtain investment approval, remit funds, register a company or branch, open a bank account, complete tax registration, and obtain importer status varies according to the investor, industry, organizational form, submitted documents, and whether supplemental documents are requested. Rather than setting a launch date on the assumption of a fixed period, the parties should first confirm which procedures apply and the latest filing requirements.
 
-Whichever structure is chosen, the central responsible entity under cosmetics regulation is the **cosmetics manufacturer or importer**. Product documentation or the safety assessment may be assigned to an outside expert, but outsourcing alone does not transfer the cosmetics manufacturer’s or importer’s legal responsibility. Distinguishing contractual task allocation from the responsible entity under the law is the starting point for reviewing the market-entry structure.
+Whichever structure is chosen, the central responsible entity under cosmetics regulation is the cosmetics manufacturer or importer. Product documentation or the safety assessment may be assigned to an outside expert, but outsourcing alone does not transfer the cosmetics manufacturer’s or importer’s legal responsibility. Distinguishing contractual task allocation from the responsible entity under the law is the starting point for reviewing the market-entry structure.
 
 ## 2. Product Registration and the PIF Are Separate Requirements
 
@@ -80,7 +80,7 @@ Even if the original manufacturer holds the originals or a secure electronic or 
 
 When the competent authority inspects a PIF, it must in principle notify the cosmetics manufacturer or importer at least seven days before the inspection. An inspection may, however, be conducted without advance notice if a statutory exception under the applicable regulations applies. Complete and current records should always be maintained in a condition that permits their retrieval and production, regardless of whether notice is given.
 
-Reporting false information in a product registration or recording false information in a PIF may result in an administrative fine of **NT$10,000–NT$1,000,000**. In contrast, if PIF records are incomplete, the competent authority ordinarily orders correction within a specified period, and an administrative fine may be imposed if the deficiency is not corrected within that period. False information and a remediable documentation deficiency should not be treated as producing the same consequence.
+Reporting false information in a product registration or recording false information in a PIF may result in an administrative fine of NT$10,000–NT$1,000,000. In contrast, if PIF records are incomplete, the competent authority ordinarily orders correction within a specified period, and an administrative fine may be imposed if the deficiency is not corrected within that period. False information and a remediable documentation deficiency should not be treated as producing the same consequence.
 
 Recall or destruction does not automatically follow every deficiency in PIF documentation. The product’s safety, the nature of the violation, the status of corrective action, and the statutory requirements applicable to each measure must be considered separately. Measures taken when a safety issue is identified should be distinguished from a request to supplement documentation, and the response should follow the competent authority’s notice and the applicable legal provisions.
 
@@ -94,7 +94,7 @@ Whether labeling, promotion, or advertising is false or exaggerated or claims me
 
 For example, saying that a cosmetic treats acne, has an anti-inflammatory effect, or sterilizes may amount to a claim of medical efficacy. The review should also consider claims that associate the product with a disease, before-and-after images, presentations evoking a medical professional, and contexts that connect an ingredient description to a therapeutic effect of the product.
 
-The administrative fine for false or exaggerated advertising is **NT$40,000–NT$200,000**, while the administrative fine for claims of medical efficacy is **NT$600,000–NT$5,000,000**. Because the ranges differ by violation type, the advertisement’s overall presentation should be compared against the supporting records before publication.
+The administrative fine for false or exaggerated advertising is NT$40,000–NT$200,000, while the administrative fine for claims of medical efficacy is NT$600,000–NT$5,000,000. Because the ranges differ by violation type, the advertisement’s overall presentation should be compared against the supporting records before publication.
 
 ### Influencers, Reviewers, and Sales Partners
 
@@ -133,4 +133,4 @@ For the basic differences between a company and a branch, see [Taiwan Company Fo
 
 This article provides general educational information about the rules governing entry into Taiwan’s cosmetics market. It is not legal advice on any specific product or advertisement and does not guarantee any permit or registration, eligibility for sale, or processing time. The market-entry structure, product records, labeling and advertising content, and the competent authorities’ current practices should be confirmed for each particular matter.
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**
+Wei Tseng (曾雋崴), Taiwan Attorney

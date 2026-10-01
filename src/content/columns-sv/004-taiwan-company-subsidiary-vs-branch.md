@@ -192,4 +192,4 @@ Det slutliga valet är säkrare om det prövas av sakkunniga i Taiwan och på hu
 
 Den här artikeln är allmän information i utbildningssyfte om skillnaderna mellan det taiwanesiska dotterbolaget och ett utländskt bolags filial; den utgör inte juridisk eller skatterättslig rådgivning för ett konkret fall och utlovar inget visst resultat. De tillämpliga reglerna och den skattemässiga behandlingen kan variera beroende på investerarens och huvudkontorets säte, verksamhetens innehåll, transaktionerna och medelflödet, avtalsvillkoren och den behöriga myndighetens senaste praxis; före genomförande av bildande, investering, avtal, utdelning eller överföring ska de senaste officiella källorna och de egna omständigheterna bekräftas.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

@@ -148,4 +148,4 @@ Ved arbeid uten tillatelse kan det ilegges en administrativ bot og et påbud om 
 
 Denne artikkelen gir generell veiledning om den rettslige ordningen og er ikke rådgivning for en konkret sak. Fordi tillatelseskriteriene, søknadsskjemaene og den kompetente myndighetens praksis kan endres, bekreftes de ajourførte offisielle kildene og sakens omstendigheter før gjennomføringen av en investering eller en kontrakt.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

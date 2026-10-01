@@ -85,11 +85,11 @@ Užsienio bendrovės Taivano dukterinės bendrovės ir filialo vadovui leidimą 
 
 Toliau pateiktos situacijos yra hipotetinės, skirtos mąstymui paremti; jomis negarantuojama, kad kuris nors būdas yra teisėtas ar geresnis.
 
-**Įmonės, kurių dėmesys ankstyvajam eksportui.** Jei Taivane dar nėra darbuotojų ar atsargų ir norite paklausą tikrinti per nepriklausomą platintoją, pirmiausia galima vertinti tiekimą, platinimo santykį ir veiklos Taivane apimtį. Vien platinimo sutartis visų Taivano reguliavimo klausimų neišsprendžia.
+Įmonės, kurių dėmesys ankstyvajam eksportui. Jei Taivane dar nėra darbuotojų ar atsargų ir norite paklausą tikrinti per nepriklausomą platintoją, pirmiausia galima vertinti tiekimą, platinimo santykį ir veiklos Taivane apimtį. Vien platinimo sutartis visų Taivano reguliavimo klausimų neišsprendžia.
 
-**Įmonės, kurios Taivane palaipsniui plečia pardavimą ir techninę pagalbą.** Jei planuojate įdarbinti Taivane ir toliau valdyti atsargas, lėšų surinkimą ir klientų pagalbą, tikslinga konkrečiai palyginti dukterinės bendrovės ir filialo struktūrą ir kartu įvertinti sutartinę atsakomybę, pagrindinės buveinės veiklos būdą, mokesčius ir personalo planą.
+Įmonės, kurios Taivane palaipsniui plečia pardavimą ir techninę pagalbą. Jei planuojate įdarbinti Taivane ir toliau valdyti atsargas, lėšų surinkimą ir klientų pagalbą, tikslinga konkrečiai palyginti dukterinės bendrovės ir filialo struktūrą ir kartu įvertinti sutartinę atsakomybę, pagrindinės buveinės veiklos būdą, mokesčius ir personalo planą.
 
-**Įmonės rinkos tyrimo etape.** Jei prieš sudarant pardavimo organizaciją norite tik informacijos rinkimo ir ryšių funkcijų, galima vertinti atstovybę. Tačiau jei faktinis planas apima sandėlyje laikomų prekių pardavimą ar darbą vietoje, atskirai reikia patikrinti, ar ta veikla leidžiama.
+Įmonės rinkos tyrimo etape. Jei prieš sudarant pardavimo organizaciją norite tik informacijos rinkimo ir ryšių funkcijų, galima vertinti atstovybę. Tačiau jei faktinis planas apima sandėlyje laikomų prekių pardavimą ar darbą vietoje, atskirai reikia patikrinti, ar ta veikla leidžiama.
 
 ## 8. Pirmai konsultacijai pakanka veiklos apžvalgos; nebūtina iš karto perduoti visų konfidencialių dokumentų
 

@@ -148,4 +148,4 @@ Kepada kerja tanpa lesen boleh terpakai denda pentadbiran dan perintah meninggal
 
 Artikel ini ialah bahan pendidikan yang bertujuan menjelaskan secara umum rejim undang-undang, dan bukan nasihat untuk kes konkret. Kerana kriteria kebenaran, borang permohonan dan amalan pihak berkuasa kompeten boleh berubah, sahkan sumber rasmi yang dikemas kini dan keadaan kes sebelum melaksanakan pelaburan atau kontrak.
 
-**Peguam Wei Tseng (曾雋崴)**
+Peguam Wei Tseng (曾雋崴)

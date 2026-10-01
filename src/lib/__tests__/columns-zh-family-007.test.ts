@@ -103,7 +103,7 @@ const disclaimer =
   '本文係供教育用途，旨在一般性說明台灣的離婚、涉外家事、夫妻財產及未成年子女制度，並非針對個別案件的法律意見。管轄、準據法、外國裁判之承認、婚姻與戶籍狀態、財產制、關於子女之既有協議或裁判、事實關係與證據，以及最新官方規定，均可能使程序與結果有所不同。登記、救濟、請求及執行期限，均應於採取行動前，以各項權利與程序的確切起算事由為準，逐一確認。';
 const staleDisclaimer =
   '本文僅供一般法律資訊參考，不構成個案法律意見。管轄、準據法、外國裁判或身分行為之承認、具體事實、證據、既有協議或裁判及最新官方規定，均可能影響結論；採取行動前，應依正確起算事由個別計算申請、救濟、時效與執行期間。';
-const author = '**曾雋崴律師（Wei Tseng）**';
+const author = '曾雋崴律師（Wei Tseng）';
 const exactEnding = `- ${internalLinks[2]}
 
 ---
@@ -113,20 +113,20 @@ ${disclaimer}
 ${author}`;
 const frozenVisibleHanCount = 7_649;
 const frozenSourceSha256 =
-  'b47187e98a544678f82ac82a6eeff00860c1df1199333984e94d2f39015481d3';
+  'ebdbe4615984f52c9fce023322476df09964b79e9157b943943d76ec7ec518d8';
 const frozenSection4TailSha256 =
   'a507e018ed271a5caf2483f5c8880d836f485789c693a0fbdc9c35418f2f645d';
 const frozenSection5OnwardSha256 =
-  '8004be5e2ae0fd8d95a727c384fa4101cec1957fef6dfa06f57e531b874ea3ed';
+  'd118d5448bf7b19159c9582dd6d3383860814ab7c71826e8b5948a5deaa20926';
 const frozenSection8AgreementPrefixLength = 16_860;
 const frozenSection8AgreementPrefixSha256 =
   'e6f13969b4ab04d31100ccad5d51ae5fbe6a8d7aaf306dbe9c973dc3101ef7f9';
 const frozenSection8AgreementTailLength = 1_043;
 const frozenSection8AgreementTailSha256 =
   'eac23054c07aed295e4d21a8a81852629a16d2100a24a0200ad4af9446e42668';
-const frozenSection9OnwardLength = 8_160;
+const frozenSection9OnwardLength = 8_156;
 const frozenSection9OnwardSha256 =
-  'ab08926b19d4c055735b6f195fe6cf71f36155a783dc720acf9f1d01a1a9d9a1';
+  '068c106efae4a616fa55be484b957e040b3f7c4b93b1ab5414deaa6a7e5a491f';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -693,7 +693,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /逐一確認。\n\n\*\*曾雋崴律師（Wei Tseng）\*\*$/,
+      /逐一確認。\n\n曾雋崴律師（Wei Tseng）$/,
     );
     expect(countOccurrences(raw, disclaimer)).toBe(1);
     expect(countOccurrences(raw, staleDisclaimer)).toBe(0);
@@ -750,7 +750,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '婚姻財產一律對半',
       '平均每月消費支出作為判斷標準',
       '贍養費和剩餘財產分配請求權都必須在離婚之日起5年內提出',
-      '離婚之日起**5年**內提出',
+      '離婚之日起5年內提出',
       '有過錯的一方一般不能提起離婚訴訟',
       '外遇的一方目前仍無法提起離婚訴訟',
       '憲法法庭已刪除第1052條第2項但書',
@@ -780,7 +780,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     expect(raw).not.toContain('婚前資金當然決定所有權');
     expect(raw).not.toContain('登記名義當然決定所有權');
     expect(raw).not.toContain('收到判決書或調解筆錄之日起30日');
-    expect(raw).not.toContain('收到判決書或調解筆錄之日起**30日**');
+    expect(raw).not.toContain('收到判決書或調解筆錄之日起30日');
     expect(raw).not.toContain('30日只是線上申辦期間');
     expect(raw).not.toContain('逾期使離婚失效');
     expect(raw).not.toContain('逾期使已生效的離婚失效');

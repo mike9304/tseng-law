@@ -59,7 +59,7 @@ Rubrikerna på nyhetsartiklar, nätinlägg och rättskommentarer om detta ärend
 
 ![Fick en manlig koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Fick en manlig koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?**
+Fick en manlig koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?
 
 Det praktiska intresset i det här ärendet är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisning som gavs och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att handlingarna redan efter olyckan bör ordnas var för sig.
 
@@ -93,13 +93,13 @@ Om olycksförloppet kan uppfylla rekvisiten för ett brott kan man snabbt anmäl
 
 De skadeposter vars yrkande kan prövas är följande. Om varje post faktiskt godtas, och till vilket belopp, beror på varje utgifts nödvändighet, orsakssambandet med olyckan, verifikationerna, ansvarsandelen och domstolens bedömning.
 
-1. **Vårdkostnader**: Kostnader som faktiskt lagts ut för besök, undersökningar, behandling, läkemedel och rehabilitering bevisas med kvitton och journal.
-2. **Omvårdnads- eller omsorgskostnader**: Om omvårdnad, sett till skadans grad och behandlingsförloppet, var nödvändig, och om tid och kostnad är skäliga, granskas det med vård- och utgiftshandlingar.
-3. **Resekostnader**: Kostnader som behövs för att åka till och från vårdinrättningen för behandling bevisas med reseunderlag, kvitton och liknande handlingar.
-4. **Skada för nedsatt arbetsförmåga (勞動能力減損)**: Om följdskador och varaktig nedsättning av arbetsförmågan fastställs kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetsliv. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
-5. **Inkomstbortfall under återhämtningsperioden (收入損失)**: Den period då man faktiskt inte kunde arbeta på grund av behandling eller vila, och den inkomstminskning som följde, måste bevisas med lönehandlingar, skattedokument, anställningshandlingar med mera.
-6. **Icke-ekonomisk skada (非財產上損害)**: Beloppet för det psykiska lidandet fastställs av domstolen utifrån faktorer i varje ärende, som skadans grad, behandlingstid, följdtillstånd och partens konkreta omständigheter.
-7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till 1 gång den faktiska skadan. Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
+1. Vårdkostnader: Kostnader som faktiskt lagts ut för besök, undersökningar, behandling, läkemedel och rehabilitering bevisas med kvitton och journal.
+2. Omvårdnads- eller omsorgskostnader: Om omvårdnad, sett till skadans grad och behandlingsförloppet, var nödvändig, och om tid och kostnad är skäliga, granskas det med vård- och utgiftshandlingar.
+3. Resekostnader: Kostnader som behövs för att åka till och från vårdinrättningen för behandling bevisas med reseunderlag, kvitton och liknande handlingar.
+4. Skada för nedsatt arbetsförmåga (勞動能力減損): Om följdskador och varaktig nedsättning av arbetsförmågan fastställs kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetsliv. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
+5. Inkomstbortfall under återhämtningsperioden (收入損失): Den period då man faktiskt inte kunde arbeta på grund av behandling eller vila, och den inkomstminskning som följde, måste bevisas med lönehandlingar, skattedokument, anställningshandlingar med mera.
+6. Icke-ekonomisk skada (非財產上損害): Beloppet för det psykiska lidandet fastställs av domstolen utifrån faktorer i varje ärende, som skadans grad, behandlingstid, följdtillstånd och partens konkreta omständigheter.
+7. Straffskadestånd (懲罰性賠償金): Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till 1 gång den faktiska skadan. Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
 
 ## 5. Även om gymmet har ansvarsförsäkring (責任保險), kan ersättningens existens och belopp bestridas?
 

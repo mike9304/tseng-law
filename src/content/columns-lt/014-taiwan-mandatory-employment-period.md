@@ -191,4 +191,4 @@ Sutvarkant dokumentus laiko tvarka tikslinga kartu nurodyti sutarties sudarymo d
 
 Šis tekstas yra švietimo tikslais skirta medžiaga, kuria bendrai paaiškinama Taivano minimalaus darbo laikotarpio sąlyga, mokymo išlaidų ir išmokos, mokamos iš anksto, grąžinimas bei pasitraukimo įspėjimo terminas; tai nėra teisinė nuomonė konkrečioje darbo byloje. Sąlygos galiojimas ir atsakomybės apimtis gali skirtis pagal sutarties rūšį ir tekstą, faktinį mokymą ir išlaidas, kompensacijos tikslą ir jo pranešimą, darbo laikotarpį, pasibaigimo priežastį ir įrodymus. Prieš pasitraukimo valios išreiškimą, darbo užmokesčio išskaitymo priėmimą, grąžinimo susitarimą ar atsaką į ginčą reikia patikrinti naujausius oficialius šaltinius ir atskiras aplinkybes.
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

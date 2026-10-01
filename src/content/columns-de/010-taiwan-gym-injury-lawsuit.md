@@ -59,7 +59,7 @@ Die folgenden Titel von Medienberichten, Online-Beiträgen und rechtlichen Erlä
 
 ![Erlitt ein koreanischer männlicher Student beim Personal Training einen Bandscheibenriss durch Deadlift mit 90 kg?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Erlitt ein koreanischer männlicher Student beim Personal Training einen Bandscheibenriss durch Deadlift mit 90 kg?**
+Erlitt ein koreanischer männlicher Student beim Personal Training einen Bandscheibenriss durch Deadlift mit 90 kg?
 
 Dieser Fall ist praktisch bedeutsam, weil er zeigt, dass die Haftung nicht schon deshalb feststeht, weil eine Verletzung im Fitnessstudio eingetreten ist. Inhalt der Sicherheitspflicht (安全義務) des Dienstleisters, konkrete Anleitung und Verletzung der Sorgfaltspflicht (注意義務), Kausalzusammenhang zwischen Verletzung und Handlung sowie Umfang des Schadens werden anhand der Unterlagen jedes Falls beurteilt. Voraussetzungen und Fristen des Strafverfahrens und des Zivilverfahrens unterscheiden sich, sodass die Aufzeichnungen von Anfang an getrennt zu ordnen sind.
 
@@ -93,13 +93,13 @@ Besteht die Möglichkeit, dass der Unfallhergang einen Straftatbestand erfüllt,
 
 Schadenspositionen, deren Geltendmachung geprüft werden kann, sind die folgenden. Ob und in welcher Höhe sie anerkannt werden, hängt von der Notwendigkeit jeder Ausgabe, dem Kausalzusammenhang mit dem Unfall, den Belegen, dem Haftungsanteil und der gerichtlichen Beurteilung ab.
 
-1. **Heilbehandlungskosten**: Tatsächlich aufgewendete Kosten für Untersuchung, Diagnose, Behandlung, Arzneimittel und Rehabilitation werden durch Belege und Krankenakten nachgewiesen.
-2. **Pflege- oder Betreuungskosten**: Ob nach Verletzungsgrad und Behandlungsverlauf Pflege erforderlich war und ob Dauer und Kosten angemessen sind, wird anhand medizinischer und Ausgabendaten geprüft.
-3. **Fahrtkosten**: Kosten, die für Wege zur Behandlungseinrichtung erforderlich sind, werden durch Fahrtnachweise und Belege dargetan.
-4. **Schaden wegen Verlust der Arbeitsfähigkeit (勞動能力減損)**: Werden Folgeschäden und dauerhafte Minderung der Arbeitsfähigkeit anerkannt, kann die Bewertung medizinische und berufliche Unterlagen, den Grad der Beeinträchtigung, Beruf und Einkommen sowie die verbleibende Erwerbszeit zusammenfassen. Allein eine Beeinträchtigungsquote legt den Ersatzbetrag nicht fest, und der Verlust wird nicht automatisch bis zum Ruhestand berechnet.
-5. **Verdienstausfall in der Erholungszeit (收入損失)**: Zeitraum, in dem wegen Behandlung oder Schonung tatsächlich nicht gearbeitet werden konnte, und das dadurch verminderte Einkommen sind durch Gehaltsabrechnungen, Steuerunterlagen und Beschäftigungsnachweise nachzuweisen.
-6. **Nichtvermögensschaden (非財產上損害)**: Den Betrag für seelisches Leid setzt das Gericht anhand fallbezogener Umstände wie Verletzungsgrad, Behandlungsdauer, Folgeschäden und der konkreten Lage der Partei fest.
-7. **Strafschadensersatz (懲罰性賠償金)**: Es gibt die Regelung, dass in Klagen, auf die das Verbraucherschutzgesetz Anwendung findet, bei vorsätzlich verursachtem Schaden bis zum 5-fachen, bei grober Fahrlässigkeit bis zum 3-fachen und bei Fahrlässigkeit bis zur Höhe des tatsächlichen Schadens (1-fach) verlangt werden kann. Ob [Artikel 51 des taiwanesischen Verbraucherschutzgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) auf den Fall Anwendung findet und ob sowie in welcher Höhe Ersatz tatsächlich zugesprochen wird, richtet sich nach der gerichtlichen Beurteilung der konkreten Voraussetzungen und Beweise.
+1. Heilbehandlungskosten: Tatsächlich aufgewendete Kosten für Untersuchung, Diagnose, Behandlung, Arzneimittel und Rehabilitation werden durch Belege und Krankenakten nachgewiesen.
+2. Pflege- oder Betreuungskosten: Ob nach Verletzungsgrad und Behandlungsverlauf Pflege erforderlich war und ob Dauer und Kosten angemessen sind, wird anhand medizinischer und Ausgabendaten geprüft.
+3. Fahrtkosten: Kosten, die für Wege zur Behandlungseinrichtung erforderlich sind, werden durch Fahrtnachweise und Belege dargetan.
+4. Schaden wegen Verlust der Arbeitsfähigkeit (勞動能力減損): Werden Folgeschäden und dauerhafte Minderung der Arbeitsfähigkeit anerkannt, kann die Bewertung medizinische und berufliche Unterlagen, den Grad der Beeinträchtigung, Beruf und Einkommen sowie die verbleibende Erwerbszeit zusammenfassen. Allein eine Beeinträchtigungsquote legt den Ersatzbetrag nicht fest, und der Verlust wird nicht automatisch bis zum Ruhestand berechnet.
+5. Verdienstausfall in der Erholungszeit (收入損失): Zeitraum, in dem wegen Behandlung oder Schonung tatsächlich nicht gearbeitet werden konnte, und das dadurch verminderte Einkommen sind durch Gehaltsabrechnungen, Steuerunterlagen und Beschäftigungsnachweise nachzuweisen.
+6. Nichtvermögensschaden (非財產上損害): Den Betrag für seelisches Leid setzt das Gericht anhand fallbezogener Umstände wie Verletzungsgrad, Behandlungsdauer, Folgeschäden und der konkreten Lage der Partei fest.
+7. Strafschadensersatz (懲罰性賠償金): Es gibt die Regelung, dass in Klagen, auf die das Verbraucherschutzgesetz Anwendung findet, bei vorsätzlich verursachtem Schaden bis zum 5-fachen, bei grober Fahrlässigkeit bis zum 3-fachen und bei Fahrlässigkeit bis zur Höhe des tatsächlichen Schadens (1-fach) verlangt werden kann. Ob [Artikel 51 des taiwanesischen Verbraucherschutzgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) auf den Fall Anwendung findet und ob sowie in welcher Höhe Ersatz tatsächlich zugesprochen wird, richtet sich nach der gerichtlichen Beurteilung der konkreten Voraussetzungen und Beweise.
 
 ## 5. Können das Ob und die Höhe des Ersatzes auch bei einer Haftpflichtversicherung (責任保險) des Fitnessstudios streitig bleiben?
 

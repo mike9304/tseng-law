@@ -192,4 +192,4 @@ A végső választás biztonságosabb, ha Tajvanon és a külföldi központ hel
 
 Ez a cikk a tajvani leányvállalat és a külföldi társaság fióktelepe közötti különbségekről szóló általános, oktatási célú tájékoztató; nem minősül konkrét esetben adott jogi vagy adóügyi tanácsnak, és nem ígér meghatározott eredményt. Az alkalmazandó rendelkezések és az adókezelés a befektető és a külföldi központ helye, a tevékenység tartalma, az ügyletek és a tőkeáramlás, az egyezmény feltételei, valamint az illetékes szerv legújabb gyakorlata szerint különbözhetnek; alapítás, beruházás, szerződés, osztalék vagy átutalás végrehajtása előtt a legújabb hivatalos forrásokat és a saját körülményeket ellenőrizni kell.
 
-**Wei Tseng ügyvédnő (曾雋崴)**
+Wei Tseng ügyvédnő (曾雋崴)

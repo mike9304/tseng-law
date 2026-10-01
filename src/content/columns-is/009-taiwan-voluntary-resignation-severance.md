@@ -25,7 +25,7 @@ Hann á almennt ekki rétt á starfslokabótum (18. gr. laga um vinnustaðla, �
 
 ​
 
-Það eru þó **undantekningartilvik**.
+Það eru þó undantekningartilvik.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Lög um vinnustaðla (勞動基準法) kveða þó á um frest.
 
 Starfsmaður sem vill slíta ráðningarsamningnum samkvæmt 1. eða 6. lið hér að ofan (til dæmis vegna þess að tryggingaskráningu vantar) verður að gæta frests.
 
-Hann skal slíta ráðningarsamningnum innan **30 daga** frá þeim degi er hann fékk vitneskju um aðstæðurnar.
+Hann skal slíta ráðningarsamningnum innan 30 daga frá þeim degi er hann fékk vitneskju um aðstæðurnar.
 
-Í tilviki 6. liðar skal hann slíta ráðningarsamningnum innan **30 daga** frá þeim degi er hann fékk vitneskju um tjónið.
+Í tilviki 6. liðar skal hann slíta ráðningarsamningnum innan 30 daga frá þeim degi er hann fékk vitneskju um tjónið.
 
 Því þarf starfsmaðurinn að fylgjast nákvæmlega með frestinum.
 
@@ -89,7 +89,7 @@ Starfslokabótum má þá synja, eða krefjast þeirra.
 
 Þetta skiptir máli í vinnudeilum á Taívan (勞資糾紛).
 
-**„Tímasetningin“** er afar mikilvæg.
+„Tímasetningin“ er afar mikilvæg.
 
 Sá sem undirbýr sig fyrirfram stendur í flestum tilvikum betur að vígi til að gæta réttinda sinna.
 

@@ -17,13 +17,13 @@ V zadnjem času so številne osebe uspešno ustanovile družbo (公司) na Tajva
 
 vprašanja, ki se pri ustanavljanju pogosto zastavljajo, pa so zbrana spodaj.
 
-Osebe, ki so prebrale [**Osnove ustanavljanja družbe na Tajvanu**](/sl/columns/taiwan-company-establishment-basics), lahko nato pogledajo tudi ta poglobljeni pregled.
+Osebe, ki so prebrale [Osnove ustanavljanja družbe na Tajvanu](/sl/columns/taiwan-company-establishment-basics), lahko nato pogledajo tudi ta poglobljeni pregled.
 
 Spodnja vprašanja in odgovori naj pomagajo osebam, ki razmišljajo o ustanovitvi družbe na Tajvanu.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Želim ustanoviti družbo, vendar še nimam naslova za vpis. Ali je ustanovitev vseeno mogoča?**
+1. Želim ustanoviti družbo, vendar še nimam naslova za vpis. Ali je ustanovitev vseeno mogoča?
 
 Ko tujec ustanavlja družbo na Tajvanu, mora naložbeni načrt (投資計畫書) predložiti Oddelku za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司) v presojo.
 
@@ -43,7 +43,7 @@ V osnovnem pregledu je bralec navedel, da je odprtje računa najtežja stopnja; 
 
 Ker je na Tajvanu zelo veliko primerov pranja denarja (洗錢), postaja odpiranje bančnih računov vse strožje.
 
-**Nasvet:**
+Nasvet:
 
 Ker presoja naložbenega načrta prav tako vzame čas,
 
@@ -57,13 +57,13 @@ odprete pripravljalni račun in nakažete kapital.
 
 ​
 
-**2. Ali je v banki mogoče odpreti račun družbe tudi brez tajvanskega dovoljenja za prebivanje?**
+2. Ali je v banki mogoče odpreti račun družbe tudi brez tajvanskega dovoljenja za prebivanje?
 
 Mogoče je.
 
 Banka praviloma zahteva dva identifikacijska dokumenta.
 
-Brez dovoljenja za prebivanje pa je pri tajvanski imigracijski upravi mogoče zaprositi za »**obrazec z osnovnimi podatki o enotni identifikacijski številki**« (統一證號基本資料表).
+Brez dovoljenja za prebivanje pa je pri tajvanski imigracijski upravi mogoče zaprositi za »obrazec z osnovnimi podatki o enotni identifikacijski številki« (統一證號基本資料表).
 
 Izdaja je mogoča še isti dan,
 
@@ -71,7 +71,7 @@ imigracijska uprava (移民署) pa je zelo polna; zato je treba priti zgodaj in 
 
 ​
 
-**3. Pri presoji naložbenega načrta naj bi se navedla izobrazba in delovne izkušnje. Kaj, če moja izobrazba in izkušnje ne ustrezajo panogi družbe, ki jo želim ustanoviti?**
+3. Pri presoji naložbenega načrta naj bi se navedla izobrazba in delovne izkušnje. Kaj, če moja izobrazba in izkušnje ne ustrezajo panogi družbe, ki jo želim ustanoviti?
 
 Pregledna komisija Ministrstva za gospodarstvo sicer presoja ozadje vlagatelja,
 
@@ -85,13 +85,13 @@ V tej točki je zadevo smiselno temeljito predebatirati z odvetnico ali odvetnik
 
 ​
 
-**4. Na kaj paziti, ko se najema naslov za vpis družbe (na primer gostinski lokal)?**
+4. Na kaj paziti, ko se najema naslov za vpis družbe (na primer gostinski lokal)?
 
-Ustanovitev družbe traja približno **3 mesece**, pridobitev delovnega dovoljenja (工作許可) in dovoljenja za prebivanje traja približno še **1 mesec**,
+Ustanovitev družbe traja približno 3 mesece, pridobitev delovnega dovoljenja (工作許可) in dovoljenja za prebivanje traja približno še 1 mesec,
 
 zato je začetek pogodbe treba določiti čim pozneje.
 
-Poleg tega v najemnih pogodbah za poslovne lokale na Tajvanu najemodajalec najemniku pogosto prizna »**obdobje ureditve notranjosti**« (裝潢期間).
+Poleg tega v najemnih pogodbah za poslovne lokale na Tajvanu najemodajalec najemniku pogosto prizna »obdobje ureditve notranjosti« (裝潢期間).
 
 Gre za obdobje, oproščeno najemnine; o njem se je mogoče pogajati.
 
@@ -107,7 +107,7 @@ je po potrebi mogoče predlagati notarsko overitev najemne pogodbe (公證) ali 
 
 ​
 
-**5. Ali je pri ustanavljanju družbe mogoče najeti pisarniški prostor?**
+5. Ali je pri ustanavljanju družbe mogoče najeti pisarniški prostor?
 
 Odvisno je od vpisanih panog dejavnosti (營業項目) družbe.
 

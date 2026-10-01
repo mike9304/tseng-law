@@ -25,7 +25,7 @@ og dette skiller seg fra ordningen i enkelte andre land, for eksempel Korea.
 
 ​
 
-Det finnes imidlertid **unntakstilfeller**.
+Det finnes imidlertid unntakstilfeller.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Loven om arbeidsnormer (勞動基準法) bestemmer imidlertid
 
 at arbeidstakere som vil bringe arbeidsavtalen til opphør etter punkt 1 eller punkt 6 ovenfor (for eksempel på grunn av manglende forsikringstilknytning),
 
-skal bringe arbeidsavtalen til opphør innen **30 dager** fra den dagen da de kjenner situasjonen,
+skal bringe arbeidsavtalen til opphør innen 30 dager fra den dagen da de kjenner situasjonen,
 
-eller (ved punkt 6) innen **30 dager** fra den dagen da de kjenner skadefølgen.
+eller (ved punkt 6) innen 30 dager fra den dagen da de kjenner skadefølgen.
 
 Derfor skal arbeidstakere holde fristen nøyaktig for øye.
 
@@ -89,7 +89,7 @@ sluttvederlaget nektes eller kreves.
 
 Derfor er i taiwanske arbeidskonflikter (勞資糾紛)
 
-**tidspunktet** svært viktig.
+tidspunktet svært viktig.
 
 Den som forbereder seg på forhånd, står i de fleste tilfeller sterkere til å ivareta rettighetene sine; noe bestemt utfall følger ikke av det.
 

@@ -151,4 +151,4 @@ Resmi mevzuat sayfalarında hükmün değişiklik günü ve yürürlük günü d
 
 Bu yazı, Tayvan’daki miras, evlilik mal rejimi, velayet ve küçük vesayeti rejimini genel olarak açıklamak için eğitim amaçlı bir belgedir; tek tek miras veya aile dosyasına hukuki görüş değildir. Uygulanacak hukuk, usul ve sonuç, mirasçı çevresi, vasiyet, malvarlığı ve borçlar, evlilik mal rejimi, mevcut mahkeme kararları ve uluslararası unsurlara göre değişebilir. Feragat veya vergi beyanı gibi süreler hesaplanmadan veya malvarlığı tasarruf edilmeden önce en güncel resmi kaynaklar ve dosyanın olguları doğrulanmalıdır.
 
-**Avukat Wei Tseng (曾雋崴)**
+Avukat Wei Tseng (曾雋崴)

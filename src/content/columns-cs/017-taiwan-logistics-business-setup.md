@@ -148,4 +148,4 @@ Za práci bez povolení hrozí správní pokuta a příkaz opustit Tchaj-wan (�
 
 Tento článek je vzdělávacím podkladem k obecnému vysvětlení právního režimu a není radou ke konkrétní věci. Protože prahy povolení, formuláře žádostí a praxe příslušného orgánu se mohou měnit, ověřte aktualizované oficiální podklady a okolnosti věci před provedením investice nebo smlouvy.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

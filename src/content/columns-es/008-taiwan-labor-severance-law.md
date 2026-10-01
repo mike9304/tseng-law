@@ -40,9 +40,9 @@ Si el trabajador dimite de forma voluntaria, la empresa no tiene que pagar la in
 
 Sin embargo, cabe el despido sin indemnización si el trabajador comete un acto ilícito.
 
-**También cabe si infringe las normas de la empresa (工作規則).**
+También cabe si infringe las normas de la empresa (工作規則).
 
-**También cabe si falta al trabajo sin motivo durante 3 días consecutivos.**
+También cabe si falta al trabajo sin motivo durante 3 días consecutivos.
 
 En esos casos, la empresa puede despedir al trabajador sin pagarle la indemnización por despido.
 
@@ -52,7 +52,7 @@ La comparación queda en la tabla siguiente.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Tipo** | **Despido económico (資遣員工, 經濟解僱)** | **Despido disciplinario (解僱員工, 懲戒解僱)** | **Dimisión voluntaria del trabajador (員工自請離職)** |
+| Tipo | Despido económico (資遣員工, 經濟解僱) | Despido disciplinario (解僱員工, 懲戒解僱) | Dimisión voluntaria del trabajador (員工自請離職) |
 | Significado | Cuando el empleador, según la situación de gestión, necesita un ajuste de personal, la causa surge en el ámbito de gestión del empleador y no es responsabilidad del trabajador. Por ello el empleador debe respetar el período de preaviso (預告期間) y asumir obligaciones como el pago de la indemnización por despido, a fin de equilibrar el perjuicio del trabajador. | Si el trabajador comete un acto ilícito o impropio, el empleador puede resolver de inmediato el contrato de trabajo (勞動契約) sin preaviso y no tiene que pagar la indemnización por despido. Ello es una de las facultades disciplinarias del empleador. | El trabajador tiene libertad para poner fin al contrato en cualquier momento, pero debe respetar el período de preaviso según su antigüedad, a fin de que el empleador pueda organizar la entrega del puesto y buscar a otra persona. |
 | Requisitos | Sí  (artículo 11 de la Ley de Normas Laborales de Taiwán) | Sí  (artículo 12 de la Ley de Normas Laborales de Taiwán) | No |
 | Preaviso | Necesario | No necesario | Necesario |
@@ -194,17 +194,17 @@ hace exigencias desmesuradas
 
 o lo destina a un puesto extraño,
 
-**deben dejarse pruebas.**
+deben dejarse pruebas.
 
-**Conserve el registro normal de asistencia.**
+Conserve el registro normal de asistencia.
 
-**Conserve el registro de horas extraordinarias y el de resultados.**
+Conserve el registro de horas extraordinarias y el de resultados.
 
-**Conserve el reglamento de la empresa y los correos con compañeros y superiores.**
+Conserve el reglamento de la empresa y los correos con compañeros y superiores.
 
-**Grabe las conversaciones con el superior.**
+Grabe las conversaciones con el superior.
 
-**Conserve cualquier prueba que le favorezca.**
+Conserve cualquier prueba que le favorezca.
 
 ​
 

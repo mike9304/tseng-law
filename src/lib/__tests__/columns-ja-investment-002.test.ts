@@ -114,15 +114,15 @@ describe('Japanese investment column 002 — company exit and capital return', (
     const contentSection = extractExitProcessSection(post?.content ?? '');
 
     // The full translation keeps exactly seven numbered steps in this section.
-    expect(rawSection.match(/^\d+\. \*\*/gm)).toHaveLength(7);
-    expect(contentSection.match(/^\d+\. \*\*/gm)).toHaveLength(7);
+    expect(rawSection.match(/^\d+\. /gm)).toHaveLength(7);
+    expect(contentSection.match(/^\d+\. /gm)).toHaveLength(7);
 
     const requiredPhrases = [
       // 解散と清算の区別、解散登記だけでは債務は消えない
       '解散は、会社の通常の営業を終えて清算段階へ移行するための法律上の手続であり、清算は、その後に会社に残された事務と財産関係を整理する手続です。',
       '解散登記を終えただけで、すべての債務が消滅したり、会社財産が自動的に株主の財産に変わったりするわけではありません。',
       // 終了前の実査と外国人投資・銀行・外国為替資料
-      '1. **終了前に現況を調査します。**',
+      '1. 終了前に現況を調査します。',
       '投資構造と株主の送金経路、資金の国外移転に必要な銀行・外国為替資料も併せて確認します。',
       // 会社法第113条・第316条と議決定足数
       '有限公司は、会社法第113条に基づき、株主の議決権の3分の2以上の同意が必要です。',
@@ -343,8 +343,8 @@ describe('Japanese investment column 002 — company exit and capital return', (
       '本稿は、台湾会社の終了と会社財産の処理に関する一般的な法律情報および教育資料であり、特定の事案に対する法律意見ではありません。';
     expect(raw).toContain(disclaimer);
     expect(post?.content).toContain(disclaimer);
-    expect(raw).toContain('**曾雋崴弁護士（Wei Tseng）**');
-    expect(post?.content).toContain('**曾雋崴弁護士（Wei Tseng）**');
+    expect(raw).toContain('曾雋崴弁護士（Wei Tseng）');
+    expect(post?.content).toContain('曾雋崴弁護士（Wei Tseng）');
 
     // The old closing summary and blockquote link list must stay removed.
     expect(raw).not.toContain('## まとめ');

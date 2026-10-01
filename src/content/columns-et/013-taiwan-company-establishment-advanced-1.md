@@ -17,13 +17,13 @@ Viimasel ajal on paljud asutanud äriühingu (公司) Taiwanis ning saanud töö
 
 Asutamise käigus sageli esitatud küsimused on koondatud allpool.
 
-Kes on lugenud [**äriühingu asutamise aluseid**](/et/columns/taiwan-company-establishment-basics), võib seejärel tutvuda ka selle põhjalikuma süvendava osaga.
+Kes on lugenud [äriühingu asutamise aluseid](/et/columns/taiwan-company-establishment-basics), võib seejärel tutvuda ka selle põhjalikuma süvendava osaga.
 
 Järgmised küsimused ja vastused on mõeldud neile, kes kaaluvad äriühingu asutamist Taiwanis.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Soovin asutada äriühingu, kuid ei ole veel leidnud registreerimisaadressi. Kas asutamine on siiski võimalik?**
+1. Soovin asutada äriühingu, kuid ei ole veel leidnud registreerimisaadressi. Kas asutamine on siiski võimalik?
 
 Kui välismaalane asutab äriühingu Taiwanis, peab ta esitama investeerimiskava (投資計畫書) Majandusministeeriumi investeeringute läbivaatamise osakonnale (經濟部投資審議司) kontrollimiseks.
 
@@ -43,7 +43,7 @@ Konto avamine osutub praktikas sageli kõige raskemaks etapiks.
 
 Kuna rahapesujuhtumeid (洗錢) on Taiwanis väga palju, muutub pangakonto avamine üha rangemaks.
 
-**Märkus:**
+Märkus:
 
 Investeerimiskava kontroll võtab samuti aega.
 
@@ -57,13 +57,13 @@ Alles jääb piisavalt aega avada pangas ettevalmistuskonto ja kanda kapital.
 
 ​
 
-**2. Kas pangas saab äriühingu konto avada ka ilma Taiwani elamiskaardita?**
+2. Kas pangas saab äriühingu konto avada ka ilma Taiwani elamiskaardita?
 
 See on võimalik.
 
 Pank nõuab tavaliselt kahte isikut tõendavat dokumenti.
 
-Ilma elamiskaardita võite taotleda Taiwani immigratsiooniametilt **ühtse tunnusnumbri põhiandmete vormi** (統一證號基本資料表).
+Ilma elamiskaardita võite taotleda Taiwani immigratsiooniametilt ühtse tunnusnumbri põhiandmete vormi (統一證號基本資料表).
 
 Vormi saab väljastada samal päeval.
 
@@ -71,7 +71,7 @@ Immigratsiooniamet (移民署) on siiski väga hõivatud, seega tasub tulla vara
 
 ​
 
-**3. Olen kuulnud, et investeerimiskava (投資計畫書) kontrollimisel tuleb märkida haridus ja töökogemus, ning kardan, et minu haridus ja kogemus ei sobi asutatava äriühingu valdkonnaga.**
+3. Olen kuulnud, et investeerimiskava (投資計畫書) kontrollimisel tuleb märkida haridus ja töökogemus, ning kardan, et minu haridus ja kogemus ei sobi asutatava äriühingu valdkonnaga.
 
 Majandusministeeriumi investeeringute läbivaatamise osakond uurib küll investori tausta,
 
@@ -85,13 +85,13 @@ Seda punkti tasub põhjalikult arutada Taiwani advokaadiga.
 
 ​
 
-**4. Millele tuleb tähelepanu pöörata, kui üüritakse äriühingu registreerimisaadress (näiteks restoranipind)?**
+4. Millele tuleb tähelepanu pöörata, kui üüritakse äriühingu registreerimisaadress (näiteks restoranipind)?
 
-Äriühingu asutamine kestab umbes **3 kuud**, ning tööloa (工作許可) ja elamiskaardi saamine võtab sellele lisaks umbes **1 kuu**.
+Äriühingu asutamine kestab umbes 3 kuud, ning tööloa (工作許可) ja elamiskaardi saamine võtab sellele lisaks umbes 1 kuu.
 
 Lepingu jõustumise päev tasub paigutada võimalikult hiljaks.
 
-Lisaks annab üürileandja Taiwanis äripindade üürilepingutes sageli üürnikule **viimistlusperioodi** (裝潢期間).
+Lisaks annab üürileandja Taiwanis äripindade üürilepingutes sageli üürnikule viimistlusperioodi (裝潢期間).
 
 See on üürivaba periood, mille üle võite läbi rääkida.
 
@@ -107,7 +107,7 @@ Võite vajaduse korral pakkuda üürilepingu notariaalset kinnitamist (公證) v
 
 ​
 
-**5. Kas äriühingu asutamisel saab üürida tavalist ärikontoripinda?**
+5. Kas äriühingu asutamisel saab üürida tavalist ärikontoripinda?
 
 See sõltub äriühingu tegevusaladest (營業項目).
 

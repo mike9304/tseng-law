@@ -85,11 +85,11 @@ Taivānas meitas sabiedrības un ārvalstu sabiedrības filiāles vadītājam da
 
 Turpmākās situācijas ir hipotētiskas, lai atbalstītu pārdomas; tās nesola noteiktu iznākumu, ka kāds veids ir likumīgs vai labāks.
 
-**Ārvalstu uzņēmumi, kas vērsti uz sākotnējo eksportu.** Ja Taivānā vēl nav ne darbinieku, ne krājumu un vēlaties pārbaudīt pieprasījumu caur neatkarīgu izplatītāju, vispirms var vērtēt piegādes, izplatīšanas attiecības un darbības apjomu Taivānā. Tomēr pats izplatīšanas līgums neatrisina visus regulējuma jautājumus Taivānā.
+Ārvalstu uzņēmumi, kas vērsti uz sākotnējo eksportu. Ja Taivānā vēl nav ne darbinieku, ne krājumu un vēlaties pārbaudīt pieprasījumu caur neatkarīgu izplatītāju, vispirms var vērtēt piegādes, izplatīšanas attiecības un darbības apjomu Taivānā. Tomēr pats izplatīšanas līgums neatrisina visus regulējuma jautājumus Taivānā.
 
-**Ārvalstu uzņēmumi, kas Taivānā pakāpeniski paplašina pārdošanu un tehnisko atbalstu.** Ja plānojat pieņemt darbā Taivānā un turpināt pārvaldīt krājumus, maksājumu iekasēšanu un klientu atbalstu, ir lietderīgi konkrēti salīdzināt meitas sabiedrības un filiāles struktūru un kopā izvērtēt arī līguma atbildību, galvenā biroja darbības veidu, nodokļus un personāla plānu.
+Ārvalstu uzņēmumi, kas Taivānā pakāpeniski paplašina pārdošanu un tehnisko atbalstu. Ja plānojat pieņemt darbā Taivānā un turpināt pārvaldīt krājumus, maksājumu iekasēšanu un klientu atbalstu, ir lietderīgi konkrēti salīdzināt meitas sabiedrības un filiāles struktūru un kopā izvērtēt arī līguma atbildību, galvenā biroja darbības veidu, nodokļus un personāla plānu.
 
-**Ārvalstu uzņēmumi tirgus izpētes posmā.** Ja pirms pārdošanas organizācijas izveides vēlaties tikai informācijas vākšanas un saskarsmes funkcijas, var vērtēt pārstāvniecību. Ja tomēr faktiskais plāns ietver uzglabāto preču pārdošanu vai darbu uz vietas, atsevišķi jāpārbauda, vai šīs darbības ir atļautas.
+Ārvalstu uzņēmumi tirgus izpētes posmā. Ja pirms pārdošanas organizācijas izveides vēlaties tikai informācijas vākšanas un saskarsmes funkcijas, var vērtēt pārstāvniecību. Ja tomēr faktiskais plāns ietver uzglabāto preču pārdošanu vai darbu uz vietas, atsevišķi jāpārbauda, vai šīs darbības ir atļautas.
 
 ## 8. Pirmajai konsultācijai pietiek ar darbības pārskatu; nav vajadzīgs uzreiz nodot visus konfidenciālos materiālus
 

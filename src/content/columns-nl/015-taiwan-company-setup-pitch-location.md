@@ -51,7 +51,7 @@ Let daarom op dit punt.
 
 ​
 
-**Q. Moeten alle sectoren via het stelsel van “voorafgaande raadpleging van de bedrijfsruimte” nagaan of de exploitatie mogelijk is?**
+Q. Moeten alle sectoren via het stelsel van “voorafgaande raadpleging van de bedrijfsruimte” nagaan of de exploitatie mogelijk is?
 
 Het wordt aanbevolen dat alle sectoren via het stelsel van “voorafgaande raadpleging van de bedrijfsruimte” (營業場所預先查詢) bevestigen of de exploitatie mogelijk is.
 
@@ -61,7 +61,7 @@ In de praktijk hoeven daarom bij de vennootschapsinschrijving niet alle bedrijfs
 
 De “[Werkinstructies van de raadplegingsdienst voor bedrijfsruimten van de stad Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) en de geldende bekendmaking van de stad Taipei leggen het volgende vast.
 
-Sinds 1 januari 2023 moet bij de aanvraag tot inschrijving van oprichting, van zetelverplaatsing of van toevoeging van bedrijfsactiviteiten van een vennootschap of van een andere onderneming (inclusief het bijkantoor (分公司) en de nevenvestiging (分支機構)) het resultaat van de voorafgaande raadpleging van de bedrijfsruimte **verplicht** bij de inschrijvingsaanvraag worden gevoegd, ongeacht de bedrijfsactiviteit.
+Sinds 1 januari 2023 moet bij de aanvraag tot inschrijving van oprichting, van zetelverplaatsing of van toevoeging van bedrijfsactiviteiten van een vennootschap of van een andere onderneming (inclusief het bijkantoor (分公司) en de nevenvestiging (分支機構)) het resultaat van de voorafgaande raadpleging van de bedrijfsruimte verplicht bij de inschrijvingsaanvraag worden gevoegd, ongeacht de bedrijfsactiviteit.
 
 De lijst hieronder van de “bedrijfsactiviteiten die ambtshalve worden nagegaan” (主動查詢之營業項目) duidt de bedrijfsactiviteiten aan die het handelsbureau ambtshalve extra nagaat tijdens de inschrijvingstoetsing (隨案主動查詢) wanneer die bedrijfsactiviteit in de aanvraag staat maar in het bijgevoegde resultaat ontbreekt; het feit dat een bedrijfsactiviteit niet op deze lijst staat, betekent niet dat de controle is vrijgesteld.
 

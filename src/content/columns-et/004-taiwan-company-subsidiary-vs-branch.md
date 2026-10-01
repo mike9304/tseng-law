@@ -192,4 +192,4 @@ Lõplik valik on kindlam uurida, kui Taiwani ja peakontori asukoha asjatundjatel
 
 See artikkel on üldine ülevaade Taiwani tütarettevõtte ja välismaise äriühingu filiaali erinevustest (子公司·分公司); see ei ole õigus- ega maksunõu üksikus asjas ega anna kindla tulemuse kohta lubadust. Kohalduvad sätted ja maksustamiskäsitlus võivad sõltuda investori ja peakontori asukohast, äritegevuse sisust, tehingutest ja rahavoost, lepingu eeldustest ja pädeva asutuse uusimast praktikast; enne asutamise, investeeringu, lepingu, dividendi või ülekande teostamist tuleb uurida uusimaid ametlikke allikaid ja oma asjaolusid.
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)

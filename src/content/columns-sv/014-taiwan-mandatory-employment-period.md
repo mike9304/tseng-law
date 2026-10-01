@@ -191,4 +191,4 @@ När materialet ordnas i tidsföljd bör avtalets ingångsdatum, utbildningens s
 
 Den här texten är utbildningsmaterial som allmänt förklarar avtalet om minsta tjänstgöringstid i Taiwan, återbetalning av utbildningskostnad och förskottsbetalning samt arbetstagarens uppsägning; det är inte juridisk rådgivning för ett konkret arbetsärende. Avtalets giltighet och ansvarsomfånget kan variera beroende på avtals typ och lydelse, faktisk utbildning och kostnad, ersättningens syfte och underrättelse, tjänstgöringstid, upphörandeskäl och bevisning. Innan avgångsförklaring, löneavdrag, återbetalningsöverenskommelse eller tvistreaktion, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

@@ -151,4 +151,4 @@ Na uradnih straneh predpisov je treba preveriti dan novele in dan začetka velja
 
 Ta članek je izobraževalno gradivo za splošno razlago režima dedovanja, zakonskega premoženjskega režima, starševske skrbi in skrbništva nad mladoletnimi na Tajvanu; ni pravni nasvet v konkretni dedni ali družinski zadevi. Pravo, ki se uporablja, postopek in izid se lahko razlikujejo glede na krog dedičev, oporoko, premoženje in dolgove, zakonski premoženjski režim, obstoječe sodne odločbe ter mednarodne elemente. Pred izračunom rokov, kot je odpoved ali davčna napoved, ali pred razpolaganjem s premoženjem preverite najnovejše uradno gradivo in posamične okoliščine.
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)

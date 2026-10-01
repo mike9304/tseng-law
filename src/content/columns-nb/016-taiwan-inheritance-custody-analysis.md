@@ -151,4 +151,4 @@ På de offisielle forskriftssidene bekrefter man forskriftens endringsdato og ik
 
 Denne artikkelen gir generell veiledning om ordningen for arv, den ekteskapelige formueordningen, foreldreansvaret og vergemålet for mindreårige i Taiwan; den er ikke juridisk rådgivning for en konkret sak om bo eller familie (民法). Gjeldende rett, prosedyren og resultatet kan variere etter kretsen av arvinger, testament, formuen og gjelden, ekteskapsordningen, de eksisterende rettsavgjørelser og de internasjonale elementer. Før man beregner frister slik som frafallet eller skatteoppgaven, eller råder over formuen, bekreftes de nyeste offisielle kildene og de individuelle omstendighetene.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

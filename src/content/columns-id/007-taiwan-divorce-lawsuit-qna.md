@@ -196,4 +196,4 @@ Sumber primer berikut merupakan titik awal untuk memastikan struktur hukum dan p
 
 Tulisan ini merupakan bahan yang bertujuan mendidik dan menjelaskan secara umum lembaga perceraian, perkara keluarga berunsur asing, harta suami istri, serta anak di bawah umur di Taiwan, dan bukan merupakan pendapat hukum untuk perkara tertentu. Prosedur dan hasilnya dapat berbeda menurut kewenangan mengadili, hukum yang berlaku, pengakuan atas putusan pengadilan asing, status perkawinan dan administrasi kependudukan, rezim harta, kesepakatan atau putusan yang sudah ada mengenai anak, hubungan fakta dan bukti, serta ketentuan resmi terbaru. Batas waktu pencatatan, upaya hukum, pengajuan tuntutan, dan eksekusi hendaknya dipastikan satu per satu sebelum bertindak, dengan berpedoman pada peristiwa awal penghitungan yang tepat bagi masing-masing hak dan prosedur.
 
-**Wei Tseng (曾雋崴), Advokat di Taiwan**
+Wei Tseng (曾雋崴), Advokat di Taiwan

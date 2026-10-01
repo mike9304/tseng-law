@@ -42,9 +42,9 @@ Við hönnun raunverulegrar verkaskiptingar er það sem fyrst skal staðfesta, 
 
 Taívanskt dótturfélag og útibú erlends félags eru ekki sama skipulagið. Dótturfélagið er sérstakur lögaðili stofnaður samkvæmt rétti Taívan, en útibúið er skráð sem hluti höfuðstöðva (本公司) hins erlenda félags. Þau eru ólík hvað varðar lögaðilastöðu, ábyrgð höfuðstöðva, bókhalds- og skattalega meðferð, flutning hagnaðar, fyrirsvarsrétt og innra eftirlit, svo skipulagsformið má ekki velja einungis eftir því hversu mikilli stjórn á sölunni er óskað.
 
-Sé málsmeðferð erlendrar fjárfestingar nauðsynleg skal staðfesta leiðbeiningar **fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司)** sem nú er lögbær stofnun. Sá tími sem þarf til fjárfestingarheimildar, millifærslu fjár, skráningar félags eða útibús, opnunar bankareiknings, skattaskráningar (稅籍登記) og öflunar innflytjandastöðu er misjafn eftir fjárfesti, atvinnugrein, skipulagsformi, framlögðum gögnum og því hvort leiðrétting eða viðbót kemur til. Því skal, í stað þess að ákveða dagsetningu markaðssetningar út frá einum föstum tímaramma, fyrst staðfesta beitingu hverrar formlegrar meðferðar og nýjustu skilakröfur.
+Sé málsmeðferð erlendrar fjárfestingar nauðsynleg skal staðfesta leiðbeiningar fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司) sem nú er lögbær stofnun. Sá tími sem þarf til fjárfestingarheimildar, millifærslu fjár, skráningar félags eða útibús, opnunar bankareiknings, skattaskráningar (稅籍登記) og öflunar innflytjandastöðu er misjafn eftir fjárfesti, atvinnugrein, skipulagsformi, framlögðum gögnum og því hvort leiðrétting eða viðbót kemur til. Því skal, í stað þess að ákveða dagsetningu markaðssetningar út frá einum föstum tímaramma, fyrst staðfesta beitingu hverrar formlegrar meðferðar og nýjustu skilakröfur.
 
-Hvaða skipulag sem valið er, er miðlægi ábyrgðaraðilinn í snyrtivörureglunum **framleiðandi eða innflytjandi snyrtivara (化粧品製造或輸入業者)**. Röðun vörugagna eða öryggismat (安全性評估) má fela utanaðkomandi sérfræðingi, en það eitt að fela verkið flytur ekki lögbundna ábyrgð framleiðanda eða innflytjanda. Að greina milli verkaskiptingar samkvæmt samningi og ábyrgðaraðila samkvæmt reglunum er upphafspunktur könnunar innkomuskipulagsins.
+Hvaða skipulag sem valið er, er miðlægi ábyrgðaraðilinn í snyrtivörureglunum framleiðandi eða innflytjandi snyrtivara (化粧品製造或輸入業者). Röðun vörugagna eða öryggismat (安全性評估) má fela utanaðkomandi sérfræðingi, en það eitt að fela verkið flytur ekki lögbundna ábyrgð framleiðanda eða innflytjanda. Að greina milli verkaskiptingar samkvæmt samningi og ábyrgðaraðila samkvæmt reglunum er upphafspunktur könnunar innkomuskipulagsins.
 
 ## 2. Vöruskráning og PIF eru tvö aðskilin fyrirkomulög
 
@@ -131,4 +131,4 @@ Grunnskipulag félags og útibús (分公司) má sjá í [Grunnur að félagast
 
 Þessi grein er fræðsluefni ætlað til að lýsa almennt því fyrirkomulagi sem tengist innkomu vörumerkis á snyrtivörumarkað Taívan; hún er ekki lögfræðilegt mat á tiltekinni vöru eða tiltekinni auglýsingu (廣告) og slær því ekki föstu að leyfi eða skráning fáist, að sala verði möguleg eða að afgreiðslufresti verði fylgt. Form innkomu, vörugögn, innihald merkingar og auglýsinga og nýjustu framkvæmd lögbærrar stofnunar skal staðfesta í hverju máli.
 
-**Lögmaður Wei Tseng (曾雋崴)**
+Lögmaður Wei Tseng (曾雋崴)

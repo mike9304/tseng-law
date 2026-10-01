@@ -196,4 +196,4 @@ Sumber primer (peringkat 1) berikut ialah titik permulaan untuk menyemak struktu
 
 Artikel ini ialah bahan pendidikan yang bertujuan menjelaskan secara umum institusi perceraian, kes keluarga antarabangsa, harta perkahwinan dan anak bawah umur di Taiwan, dan bukan nasihat undang-undang untuk kes individu. Tatacara dan hasil boleh berbeza menurut bidang kuasa, undang-undang konflik, pengiktirafan keputusan asing, keadaan perkahwinan dan pendaftaran isi rumah, rejim harta, persetujuan atau keputusan sedia ada berkaitan anak, fakta dan bukti, serta peraturan rasmi terbaharu. Tempoh pendaftaran, rayuan, tuntutan dan pelaksanaan mesti, sebelum bertindak, disemak satu persatu menurut titik permulaan tepat setiap hak dan setiap tatacara.
 
-**Wei Tseng (曾雋崴), peguam di Taiwan**
+Wei Tseng (曾雋崴), peguam di Taiwan

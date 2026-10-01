@@ -59,7 +59,7 @@ Overskrifterne på medieomtaler, netopslag og juridiske kommentarer om denne sag
 
 ![Fik en koreansk mandlig studerende en diskusprolaps ved en deadlift på 90 kg under personlig træning?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Fik en koreansk mandlig studerende en diskusprolaps ved en deadlift på 90 kg under personlig træning?**
+Fik en koreansk mandlig studerende en diskusprolaps ved en deadlift på 90 kg under personlig træning?
 
 Det praktisk vigtige ved denne sag er, at den viser, at ansvaret ikke straks fastlægges ved det blotte forhold, at en skade er opstået i et fitnesscenter (健身房). Indholdet af sikkerhedspligten (安全義務) hos tjenesteyderen, den konkrete ledelseshandling og tilsidesættelsen af omhyggelighedspligten (注意義務), årsagsforbindelsen mellem skade og adfærd samt skadens omfang vurderes på grundlag af dokumenterne i hver sag. Betingelserne og fristerne for straffesagen (刑事) og for den civile sag (民事) adskiller sig ligeledes. Dokumenterne bør derfor ordnes hver for sig straks efter ulykken.
 
@@ -93,13 +93,13 @@ Kan ulykkens omstændigheder opfylde gerningsindholdet i en forbrydelse, kan der
 
 De erstatningsposter, hvis krav kan undersøges, er følgende. Den faktiske anerkendelse og beløbet afhænger af nødvendigheden af hver udgift, årsagsforbindelsen med ulykken, bevismaterialet, ansvarsforholdet og rettens vurdering.
 
-1. **Lægeudgifter**: De faktisk afholdte udgifter til konsultation, undersøgelser, behandling, lægemidler og genoptræning bevises ved kvitteringerne og journalen.
-2. **Udgifter til pleje eller bistand (看護費用)**: Om der, set i lyset af skadens grad og behandlingsforløbet, var behov for pleje, og om periode og omkostning er passende, undersøges med de lægelige og udgiftsmæssige dokumenter.
-3. **Transportudgifter**: De udgifter, der er nødvendige for at tage til og fra behandlingsstedet, bevises ved rejsebilag, kvitteringer og lignende dokumenter.
-4. **Tab af erhvervsevne (勞動能力減損)**: Anerkendes restskader og en vedvarende nedsættelse af arbejdsevnen, kan der vurderes i sammenhæng med lægelige og erhvervsmæssige dokumenter, uarbejdsdygtighedens grad, erhvervet og indkomsten samt det resterende arbejdsliv. Alene uarbejdsdygtighedsprocenten fastlægger ikke erstatningen, og tabet beregnes ikke automatisk indtil pensionstidspunktet.
-5. **Indkomsttab i rekonvalescensperioden (收入損失)**: Den periode, hvor der på grund af behandling eller hvile faktisk ikke kunne arbejdes, og den deraf følgende nedsættelse af indkomsten, skal bevises ved løn-, skatte- og ansættelsesdokumenter.
-6. **Ikke-formueretligt tab (非財產上損害)**: Godtgørelsen for tort fastlægges af retten ud fra faktorer i hver sag, såsom skadens grad, behandlingsperioden, restskaderne og partens konkrete omstændigheder.
-7. **Pønal erstatning (懲罰性賠償金)**: Der findes en regel, hvorefter der i en tvist, hvor loven om forbrugerbeskyttelse finder anvendelse, kan kræves indtil 5 gange det faktiske tab, hvis tabet er forårsaget af virksomhedens forsæt, indtil 3 gange ved grov uagtsomhed og op til det faktiske tabs beløb ved uagtsomhed. Om [artikel 51 i den taiwanske lov om forbrugerbeskyttelse](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) finder anvendelse på sagen, og om der faktisk tilkendes pønal erstatning, og med hvilket beløb, afhænger af rettens vurdering af de konkrete betingelser og beviserne (消費者保護法).
+1. Lægeudgifter: De faktisk afholdte udgifter til konsultation, undersøgelser, behandling, lægemidler og genoptræning bevises ved kvitteringerne og journalen.
+2. Udgifter til pleje eller bistand (看護費用): Om der, set i lyset af skadens grad og behandlingsforløbet, var behov for pleje, og om periode og omkostning er passende, undersøges med de lægelige og udgiftsmæssige dokumenter.
+3. Transportudgifter: De udgifter, der er nødvendige for at tage til og fra behandlingsstedet, bevises ved rejsebilag, kvitteringer og lignende dokumenter.
+4. Tab af erhvervsevne (勞動能力減損): Anerkendes restskader og en vedvarende nedsættelse af arbejdsevnen, kan der vurderes i sammenhæng med lægelige og erhvervsmæssige dokumenter, uarbejdsdygtighedens grad, erhvervet og indkomsten samt det resterende arbejdsliv. Alene uarbejdsdygtighedsprocenten fastlægger ikke erstatningen, og tabet beregnes ikke automatisk indtil pensionstidspunktet.
+5. Indkomsttab i rekonvalescensperioden (收入損失): Den periode, hvor der på grund af behandling eller hvile faktisk ikke kunne arbejdes, og den deraf følgende nedsættelse af indkomsten, skal bevises ved løn-, skatte- og ansættelsesdokumenter.
+6. Ikke-formueretligt tab (非財產上損害): Godtgørelsen for tort fastlægges af retten ud fra faktorer i hver sag, såsom skadens grad, behandlingsperioden, restskaderne og partens konkrete omstændigheder.
+7. Pønal erstatning (懲罰性賠償金): Der findes en regel, hvorefter der i en tvist, hvor loven om forbrugerbeskyttelse finder anvendelse, kan kræves indtil 5 gange det faktiske tab, hvis tabet er forårsaget af virksomhedens forsæt, indtil 3 gange ved grov uagtsomhed og op til det faktiske tabs beløb ved uagtsomhed. Om [artikel 51 i den taiwanske lov om forbrugerbeskyttelse](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) finder anvendelse på sagen, og om der faktisk tilkendes pønal erstatning, og med hvilket beløb, afhænger af rettens vurdering af de konkrete betingelser og beviserne (消費者保護法).
 
 ## 5. Kan, også når fitnesscentret har en ansvarsforsikring (責任保險), erstatningens eksistens og beløb bestrides?
 

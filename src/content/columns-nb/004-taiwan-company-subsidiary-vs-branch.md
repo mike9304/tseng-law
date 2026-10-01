@@ -192,4 +192,4 @@ Det endelige valget er sikrere å undersøke hvis fagfolk i Taiwan og på hoveds
 
 Denne artikkelen er alminnelig informativt materiale til opplæringsformål om forskjellene mellom taiwansk datterselskap og filial av et utenlandsk selskap (子公司·分公司); den er ikke juridisk eller skattemessig rådgivning i en konkret sak og lover ikke et bestemt utfall. Gjeldende forskrifter og skattemessig behandling kan avvike etter investors og hovedsetets sete, virksomhetsinnhold, transaksjoner og pengestrøm, overenskomstbetingelser og den siste praksisen hos den kompetente myndigheten; før utførelse av stiftelse, investering, kontrakt, utbytte eller overføring skal de siste offisielle kildene og de egne omstendighetene undersøkes.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

@@ -196,4 +196,4 @@ Seuraavat ensisijaiset lähteet (taso 1) ovat lähtökohta tämän artikkelin oi
 
 Tämä artikkeli on yleisesitys avioeroa, kansainvälisiä perheasioita, puolisoiden omaisuutta ja alaikäisiä lapsia koskevista järjestelyistä Taiwanissa, eikä oikeudellista neuvontaa yksittäiseen asiaan. Menettely ja lopputulos voivat poiketa toimivallan, lainvalintasääntöjen, ulkomaisten päätösten tunnustamisen, avioliitto- ja siviilisäätytilan, omaisuusjärjestelmän, olemassa olevan sopimuksen tai päätöksen lapsesta, seikkojen ja todisteiden sekä uusimpien virallisten säännösten mukaan. Rekisteröinti-, muutoksenhaku-, vaatimus- ja täytäntöönpanomääräajat on ennen toimintaa käytävä läpi kohta kohdalta kunkin oikeuden ja kunkin menettelyn tarkan alkupisteen mukaan.
 
-**Asianajaja Wei Tseng (曾雋崴)**
+Asianajaja Wei Tseng (曾雋崴)

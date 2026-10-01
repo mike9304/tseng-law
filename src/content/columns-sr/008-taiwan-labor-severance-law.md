@@ -40,9 +40,9 @@ Ako zaposleni sam da otkaz, društvo otpremninu ne mora da isplati.
 
 Ako međutim zaposleni učini protivpravni akt,
 
-**prekrši pravilnik o radu (工作規則),**
+prekrši pravilnik o radu (工作規則),
 
-**ili se bez razloga ne pojavi 3 dana uzastopno (曠工),**
+ili se bez razloga ne pojavi 3 dana uzastopno (曠工),
 
 društvo može da otpusti bez isplate otpremnine.
 
@@ -52,7 +52,7 @@ Sledeća tabela to sažima.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Vrsta** | **Privredni otkaz (資遣員工, 經濟解僱)** | **Disciplinski otkaz (解僱員工, 懲戒解僱)** | **Sopstveni odlazak zaposlenog (員工自請離職)** |
+| Vrsta | Privredni otkaz (資遣員工, 經濟解僱) | Disciplinski otkaz (解僱員工, 懲戒解僱) | Sopstveni odlazak zaposlenog (員工自請離職) |
 | Značenje | Ako kod poslodavca postoji potreba usklađivanja osoblja zbog stanja preduzeća, razlog leži u privrednoj oblasti poslodavca, a ne u odgovornosti zaposlenog. Zato poslodavac mora da poštuje otkazni rok (預告期間) i da isplati otpremninu, da uravnoteži nepovoljnosti zaposlenog. | Ako zaposleni učini protivpravni ili neprikladan akt, poslodavac može odmah da raskine ugovor o radu (勞動契約) bez prethodnog otkaza i otpremninu ne mora da isplati. Reč je o jednom od disciplinskih ovlašćenja poslodavca. | Zaposleni može u svakom trenutku da raskine ugovor, ali mora prema trajanju zaposlenja da poštuje otkazni rok, da poslodavac može da izvrši predaju i traženje zamene. |
 | Uslovi | Da  (član 11 tajvanskog Zakona o radnim standardima) | Da  (član 12 tajvanskog Zakona o radnim standardima) | Nema |
 | Prethodni otkaz | Nužan | Nije nužan | Nužan |
@@ -194,17 +194,17 @@ postavlja preterane zahteve
 
 ili premešta zaposlene na čudna mesta,
 
-**treba čuvati dokaze.**
+treba čuvati dokaze.
 
-**Vaše uobičajene zapise dolazaka,**
+Vaše uobičajene zapise dolazaka,
 
-**zapise prekovremenog rada, zapise rezultata,**
+zapise prekovremenog rada, zapise rezultata,
 
-**pravilnik o radu, elektronsku poštu sa saradnicima i nadređenima**
+pravilnik o radu, elektronsku poštu sa saradnicima i nadređenima
 
-**kao i snimke razgovora s nadređenima —**
+kao i snimke razgovora s nadređenima —
 
-**čuvajte dokaze koji su za Vas povoljni.**
+čuvajte dokaze koji su za Vas povoljni.
 
 ​
 

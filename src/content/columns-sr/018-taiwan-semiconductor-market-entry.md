@@ -85,11 +85,11 @@ Za rukovodioca tajvanskog zavisnog društva i ogranka stranog društva zahtev za
 
 Sledeće situacije jesu hipotetičke radi podrške razmišljanju; ne obećavaju da je određeni način zakonit ili bolji.
 
-**Strana preduzeća usmerena na početni izvoz.** Ako na Tajvanu još nema zaposlenih niti zaliha i želite da proverite potražnju preko nezavisnog distributera, može se najpre oceniti isporuka, odnos distribucije i obim delatnosti na Tajvanu. Sam ugovor o distribuciji međutim ne rešava sva pitanja regulacije na Tajvanu.
+Strana preduzeća usmerena na početni izvoz. Ako na Tajvanu još nema zaposlenih niti zaliha i želite da proverite potražnju preko nezavisnog distributera, može se najpre oceniti isporuka, odnos distribucije i obim delatnosti na Tajvanu. Sam ugovor o distribuciji međutim ne rešava sva pitanja regulacije na Tajvanu.
 
-**Strana preduzeća koja na Tajvanu postepeno šire prodaju i tehničku podršku.** Ako planirate da zapošljavate na Tajvanu i da i dalje upravljate zalihama, naplatom i podrškom kupcima, umesno je konkretno porediti strukturu zavisnog društva i ogranka i oceniti i ugovornu odgovornost, način rada matične kompanije, poreze i plan osoblja.
+Strana preduzeća koja na Tajvanu postepeno šire prodaju i tehničku podršku. Ako planirate da zapošljavate na Tajvanu i da i dalje upravljate zalihama, naplatom i podrškom kupcima, umesno je konkretno porediti strukturu zavisnog društva i ogranka i oceniti i ugovornu odgovornost, način rada matične kompanije, poreze i plan osoblja.
 
-**Strana preduzeća u etapi istraživanja tržišta.** Ako pre osnivanja prodajne organizacije želite samo funkcije prikupljanja podataka i veze, može da se oceni predstavništvo. Ako međutim stvarni plan obuhvata prodaju zaliha ili rad na licu mesta, treba posebno potvrditi da li su te delatnosti dozvoljene.
+Strana preduzeća u etapi istraživanja tržišta. Ako pre osnivanja prodajne organizacije želite samo funkcije prikupljanja podataka i veze, može da se oceni predstavništvo. Ako međutim stvarni plan obuhvata prodaju zaliha ili rad na licu mesta, treba posebno potvrditi da li su te delatnosti dozvoljene.
 
 ## 8. Za prvu konsultaciju dovoljan je pregled rada; nije potrebno odmah predati svu poverljivu dokumentaciju
 

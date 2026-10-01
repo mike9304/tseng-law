@@ -42,9 +42,9 @@ Sözleşmede marka (商標) ve görüntüler gibi fikri mülkiyetin kullanım ka
 
 Tayvan bağlı şirketi ile yabancı bir şirketin şubesi aynı örgüt değildir. Bağlı şirket, Tayvan hukukuna göre kurulan ayrı bir tüzel kişidir; şube ise yabancı şirketin merkezinin (本公司) bir parçası olarak tescil edilir. Tüzel kişilik, merkezin sorumluluğu, muhasebe ve vergi işlemi, kâr aktarımı, temsil yetkisi ve iç kontrol biçimi farklıdır; örgüt biçimi yalnızca satış üzerindeki istenen kontrol ölçüsüne göre seçilmemelidir.
 
-Yabancı yatırım usulü gerekiyorsa, hâlihazırda yetkili makam olarak **Ekonomi Bakanlığı Yatırım İnceleme Dairesi’nin (經濟部投資審議司)** rehberi doğrulanmalıdır. Yatırım onayı, fon transferi, şirket veya şube tescili, banka hesabı açılması, vergi kaydı (稅籍登記) ve ithalatçı niteliğinin elde edilmesi için gereken süre, yatırımcıya, sektöre, örgüt biçimine, sunulan belgelere ve düzeltme veya tamamlama olup olmadığına göre değişir. Bu yüzden belirli bir süre varsayarak lansman tarihini saptamak yerine, her işlemin uygulanması ve en yeni başvuru şartları önce doğrulanmalıdır.
+Yabancı yatırım usulü gerekiyorsa, hâlihazırda yetkili makam olarak Ekonomi Bakanlığı Yatırım İnceleme Dairesi’nin (經濟部投資審議司) rehberi doğrulanmalıdır. Yatırım onayı, fon transferi, şirket veya şube tescili, banka hesabı açılması, vergi kaydı (稅籍登記) ve ithalatçı niteliğinin elde edilmesi için gereken süre, yatırımcıya, sektöre, örgüt biçimine, sunulan belgelere ve düzeltme veya tamamlama olup olmadığına göre değişir. Bu yüzden belirli bir süre varsayarak lansman tarihini saptamak yerine, her işlemin uygulanması ve en yeni başvuru şartları önce doğrulanmalıdır.
 
-Hangi yapı seçilirse seçilsin, kozmetik düzenlemesinde asıl sorumlu **kozmetik üreticisi veya ithalatçısıdır**. Ürün belgelerinin düzenlenmesi veya güvenlik değerlendirmesi (安全性評估) dış uzmanlara bırakılabilir; ancak işin bırakılmış olması üreticinin veya ithalatçının hukuki sorumluluğunu devretmez. Sözleşmeye göre iş bölümünü, düzenlemeye göre kimin sorumlu olduğundan ayırmak, giriş yapısının incelenmesinin başlangıç noktasıdır.
+Hangi yapı seçilirse seçilsin, kozmetik düzenlemesinde asıl sorumlu kozmetik üreticisi veya ithalatçısıdır. Ürün belgelerinin düzenlenmesi veya güvenlik değerlendirmesi (安全性評估) dış uzmanlara bırakılabilir; ancak işin bırakılmış olması üreticinin veya ithalatçının hukuki sorumluluğunu devretmez. Sözleşmeye göre iş bölümünü, düzenlemeye göre kimin sorumlu olduğundan ayırmak, giriş yapısının incelenmesinin başlangıç noktasıdır.
 
 ## 2. Ürün tescili ile PIF ayrı rejimlerdir
 
@@ -131,4 +131,4 @@ Tayvan satış hazırlığı aşağıdaki sırayla denetlenirse bir rejimin diğ
 
 Bu yazı, bir markanın Tayvan kozmetik pazarına girişine bağlı rejimi genel olarak açıklamaya yönelik eğitim belgesidir; somut bir ürüne veya reklama ilişkin hukuki görüş değildir ve izin ya da tescilin alınacağını, satışın mümkün olacağını veya bir işlem süresinin tutulacağını ileri sürmez. Giriş biçimi, ürün verileri, etiketleme ve reklam içeriği ile yetkili makamın en yeni uygulaması her işte doğrulanmalıdır.
 
-**Avukat Wei Tseng (曾雋崴)**
+Avukat Wei Tseng (曾雋崴)

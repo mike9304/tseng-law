@@ -41,9 +41,9 @@ Segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokab�
 
 Fremji starfsmaðurinn hins vegar ólögmæta háttsemi gildir eftirfarandi.
 
-**Brot á vinnureglum (工作規則) er eitt slíkt tilvik.**
+Brot á vinnureglum (工作規則) er eitt slíkt tilvik.
 
-**Fjarvera án ástæðu 3 daga í röð (曠工) er annað.**
+Fjarvera án ástæðu 3 daga í röð (曠工) er annað.
 
 Má félagið þá segja upp án þess að greiða starfslokabætur.
 
@@ -53,7 +53,7 @@ Eftirfarandi tafla dregur þetta saman.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Tegund** | **Efnahagsleg uppsögn (資遣員工, 經濟解僱)** | **Agaleg uppsögn (解僱員工, 懲戒解僱)** | **Sjálfviljug uppsögn starfsmanns**  **員工自請離職** |
+| Tegund | Efnahagsleg uppsögn (資遣員工, 經濟解僱) | Agaleg uppsögn (解僱員工, 懲戒解僱) | Sjálfviljug uppsögn starfsmanns  員工自請離職 |
 | Merking | Ef vinnuveitandi þarf, vegna rekstrarástands, að aðlaga mannafla, liggur ástæðan á sviði rekstrar vinnuveitandans og er ekki á ábyrgð starfsmannsins. Því skal vinnuveitandi virða uppsagnarfrest (預告期間) og greiða starfslokabætur, svo óhagræði starfsmannsins sé jafnað. | Fremji starfsmaðurinn ólögmæta eða ótilhlýðilega háttsemi, má vinnuveitandi þegar í stað slíta ráðningarsamningi (勞動契約) án fyrirvara og þarf ekki að greiða starfslokabætur. Þetta er ein af agaheimildum vinnuveitanda. | Starfsmaðurinn er frjáls til að slíta samningnum hvenær sem er, en skal eftir starfstíma virða uppsagnarfrestinn, svo vinnuveitandi geti tryggt afhendingu starfa og leitað staðgengils. |
 | Skilyrði | Já (11. gr. laga um vinnustaðla á Taívan) | Já (12. gr. laga um vinnustaðla á Taívan) | Engin |
 | Fyrirvari | Krafist | Ekki krafist | Krafist |
@@ -195,17 +195,17 @@ Sama gildir þegar það setur óhóflegar kröfur.
 
 Sama gildir þegar það flytur starfsmenn í einkennilegar stöður.
 
-**Þá skalt þú varðveita sönnunargögn.**
+Þá skalt þú varðveita sönnunargögn.
 
-**Varðveittu venjulegar mætingaskrár þínar.**
+Varðveittu venjulegar mætingaskrár þínar.
 
-**Varðveittu yfirvinnuskrár og frammistöðuskrár.**
+Varðveittu yfirvinnuskrár og frammistöðuskrár.
 
-**Varðveittu vinnureglur og tölvupóstsamskipti við samstarfsmenn og yfirmenn.**
+Varðveittu vinnureglur og tölvupóstsamskipti við samstarfsmenn og yfirmenn.
 
-**Varðveittu einnig upptökur af samtölum við yfirmenn.**
+Varðveittu einnig upptökur af samtölum við yfirmenn.
 
-**Varðveittu þau sönnunargögn sem mæla með þér.**
+Varðveittu þau sönnunargögn sem mæla með þér.
 
 ​
 

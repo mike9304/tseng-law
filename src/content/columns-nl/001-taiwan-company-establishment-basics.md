@@ -142,4 +142,4 @@ U kunt het betreffende werkterrein raadplegen onder [Welke zaken wij behandelen]
 
 Dit artikel is algemeen informatiemateriaal voor educatieve doeleinden over de vennootschapsoprichting in Taiwan (公司設立) en de daarmee samenhangende regelingen; het is geen juridisch of fiscaal advies in een concreet geval en belooft geen bepaald resultaat. Nodige procedures en resultaten kunnen verschillen volgens investeringsstructuur, sector, nationaliteit en verblijfsstatus van de aanvrager en de recentste praktijk van de bevoegde autoriteit; vóór het uitvoeren van investering, contract of tewerkstelling moeten de recentste officiële bronnen en de eigen omstandigheden worden onderzocht.
 
-**Advocaat Wei Tseng (曾雋崴)**
+Advocaat Wei Tseng (曾雋崴)

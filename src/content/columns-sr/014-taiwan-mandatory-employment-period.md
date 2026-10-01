@@ -191,4 +191,4 @@ Pri uređivanju dokumentacije u vremenskom redosledu poželjno je na jednom mest
 
 Ovaj tekst je obrazovni materijal za opšte objašnjenje klauzule obaveznog ostanka na Tajvanu, vraćanja troškova obuke i davanja unapred i otkaznog roka odlaska; nije pravni savet o konkretnoj radnoj stvari. Važenje klauzule i opseg odgovornosti mogu se razlikovati prema vrsti i tekstu ugovora, stvarnoj obuci i troškovima, svrsi naknade i njenom saopštenju, periodu rada, razlogu prestanka i dokazima. Pre izjave volje o odlasku, prijema odbitka od plate, sporazuma o vraćanju ili odgovora na spor treba da proverite najnovije službene izvore i pojedinačne okolnosti.
 
-**Advokatkinja Wei Tseng (曾雋崴)**
+Advokatkinja Wei Tseng (曾雋崴)

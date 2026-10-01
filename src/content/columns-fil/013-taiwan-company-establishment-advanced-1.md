@@ -17,13 +17,13 @@ Kamakailan, marami ang nagtatag ng kompanya sa Taiwan at nakakuha ng visa sa tra
 
 Kaya tinipon ko rito ang mga tanong na madalas itanong ng marami sa panahon ng pagtatatag ng kompanya.
 
-Para sa mga nakabasa na ng [**Batayang Bahagi ng Pagtatatag ng Kompanya**](/fil/columns/taiwan-company-establishment-basics), sundan po ninyo rin ang masusing bahaging ito.
+Para sa mga nakabasa na ng [Batayang Bahagi ng Pagtatatag ng Kompanya](/fil/columns/taiwan-company-establishment-basics), sundan po ninyo rin ang masusing bahaging ito.
 
 Ang mga tanong at sagot sa ibaba ay pangkalahatang gabay para sa sinumang nag-iisip magtatag ng kompanya sa Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Nais kong magtatag ng kompanya, ngunit wala pa akong nahahanap na adres para sa rehistro ng kompanya. Maaari pa rin bang magtatag?**
+1. Nais kong magtatag ng kompanya, ngunit wala pa akong nahahanap na adres para sa rehistro ng kompanya. Maaari pa rin bang magtatag?
 
 Kapag ang isang dayuhan ay nagtatatag ng kompanya sa Taiwan, kailangan niyang magsumite ng plano ng pamumuhunan (投資計畫書) sa Kagawaran ng Pagsusuri ng Pamumuhunan (經濟部投資審議司) ng Taiwan at sumailalim sa pagsusuri.
 
@@ -43,7 +43,7 @@ Sa naunang batayang bahagi, may isang mambabasang nagsabi na ang pagbubukas ng b
 
 Dahil napakaraming kaso ng paghuhugas ng pera (洗錢) sa Taiwan, lalo pang humihigpit ang pagbubukas ng bank account.
 
-**Payo:**
+Payo:
 
 Nangangailangan din ng panahon ang pagsusuri sa plano ng pamumuhunan.
 
@@ -57,13 +57,13 @@ May panahon din upang magbukas ng account sa bangko at magpadala ng kapital.
 
 ​
 
-**2. Maaari bang magbukas ng account ng kompanya sa bangko kahit walang sertipiko ng paninirahan ng dayuhan (ARC) sa Taiwan?**
+2. Maaari bang magbukas ng account ng kompanya sa bangko kahit walang sertipiko ng paninirahan ng dayuhan (ARC) sa Taiwan?
 
 Maaari po.
 
 Karaniwang humihingi ang bangko ng dalawang uri ng patunay ng pagkakakilanlan.
 
-Kung wala kayong sertipiko ng paninirahan ng dayuhan (ARC), maaari kayong mag-aplay sa Pambansang Ahensiya sa Imigrasyon (NIA, 內政部移民署) ng Taiwan ng **pangunahing talahanayan ng pinag-isang numero ng ID** (統一證號基本資料表).
+Kung wala kayong sertipiko ng paninirahan ng dayuhan (ARC), maaari kayong mag-aplay sa Pambansang Ahensiya sa Imigrasyon (NIA, 內政部移民署) ng Taiwan ng pangunahing talahanayan ng pinag-isang numero ng ID (統一證號基本資料表).
 
 Maaari itong maibigay sa mismong araw.
 
@@ -71,7 +71,7 @@ Napakasikip naman sa NIA, kaya maaga po kayong pumunta at kumuha ng numero.
 
 ​
 
-**3. Narinig kong kailangang isulat ang pinag-aralan at ang karanasan sa trabaho sa pagsusuri ng plano ng pamumuhunan, kaya nag-aalala ako na baka hindi tumugma ang aking pinag-aralan at karanasan sa uri ng negosyo ng kompanyang itatatag ko.**
+3. Narinig kong kailangang isulat ang pinag-aralan at ang karanasan sa trabaho sa pagsusuri ng plano ng pamumuhunan, kaya nag-aalala ako na baka hindi tumugma ang aking pinag-aralan at karanasan sa uri ng negosyo ng kompanyang itatatag ko.
 
 Sinusuri nga ng komite ng pagsusuri sa ilalim ng Ministri ng Ekonomiya (經濟部) ang background ng mamumuhunan gaya ng pinag-aralan at karanasan.
 
@@ -85,13 +85,13 @@ Hinggil sa bahaging ito, mainam na kumonsulta kayo nang sapat sa isang abogada o
 
 ​
 
-**4. May dapat bang pag-ingatan kapag umuupa ng adres para sa rehistro ng kompanya (halimbawa, isang puwesto ng restawran)?**
+4. May dapat bang pag-ingatan kapag umuupa ng adres para sa rehistro ng kompanya (halimbawa, isang puwesto ng restawran)?
 
-Umaabot ng humigit-kumulang **tatlong buwan** ang pagtatatag ng kompanya, at humigit-kumulang **isang buwan** pa ang pagkuha ng permiso sa trabaho (工作許可) at ng sertipiko ng paninirahan ng dayuhan (ARC).
+Umaabot ng humigit-kumulang tatlong buwan ang pagtatatag ng kompanya, at humigit-kumulang isang buwan pa ang pagkuha ng permiso sa trabaho (工作許可) at ng sertipiko ng paninirahan ng dayuhan (ARC).
 
 Kaya itakda po ninyo sa pinakahuling posibleng araw ang petsa ng pagsisimula ng kontrata.
 
-At saka, sa mga kontrata sa upa ng puwesto sa Taiwan, madalas na binibigyan ng may-ari ang umuupa ng "**panahon ng pagsasaayos ng loob**" (裝潢期間).
+At saka, sa mga kontrata sa upa ng puwesto sa Taiwan, madalas na binibigyan ng may-ari ang umuupa ng "panahon ng pagsasaayos ng loob" (裝潢期間).
 
 Ito ay panahong hindi sinisingil ang upa, kaya subukan po ninyong makipagkasundo hinggil dito.
 
@@ -107,7 +107,7 @@ Maaari ninyong ialok, kung kinakailangan, ang pagpapanotaryo (公證) ng kontrat
 
 ​
 
-**5. Maaari bang umupa ng karaniwang opisina (一般辦公室) kapag nagtatatag ng kompanya?**
+5. Maaari bang umupa ng karaniwang opisina (一般辦公室) kapag nagtatatag ng kompanya?
 
 Depende ito sa mga rehistradong gawain (營業項目) ng kompanya.
 

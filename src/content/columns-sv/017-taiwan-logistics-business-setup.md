@@ -148,4 +148,4 @@ Vid arbete utan tillstånd kan sanktionsavgift och utreseorder (限令出國) ti
 
 Denna artikel är utbildningsmaterial för att allmänt förklara det rättsliga systemet, och det är inte juridisk rådgivning för ett enskilt ärende. Eftersom tillståndsmått, ansökningsformulär och den behöriga myndighetens praxis kan ändras, bekräfta de senaste officiella källorna och de enskilda omständigheterna innan en investering eller ett avtal genomförs.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

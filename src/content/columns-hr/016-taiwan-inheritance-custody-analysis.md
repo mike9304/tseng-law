@@ -151,4 +151,4 @@ Na službenim stranicama propisa treba provjeriti dan izmjene i dan stupanja na 
 
 Ovaj je članak građa informativne i obrazovne naravi namijenjena općem objašnjenju instituta nasljeđivanja, bračnog imovinskog režima, roditeljske odgovornosti (親權) i skrbništva nad maloljetnikom na Tajvanu, a ne pravno savjetovanje u pojedinoj ostavinskoj ili obiteljskoj stvari. Mjerodavno pravo, postupak i ishod mogu se razlikovati prema krugu nasljednika, oporuci, imovini i dugovima, bračnom imovinskom režimu, postojećim sudskim odlukama i međunarodnim elementima. Prije izračuna rokova, kao odricanje ili porezna prijava, ili prije raspolaganja imovinom, provjerite najnovije službene podloge i pojedine okolnosti.
 
-**Odvjetnica Wei Tseng (曾雋崴)**
+Odvjetnica Wei Tseng (曾雋崴)

@@ -25,7 +25,7 @@ và điểm này khác với một số nước, ví dụ Hàn Quốc.
 
 ​
 
-Tuy nhiên, vẫn có **những trường hợp ngoại lệ**.
+Tuy nhiên, vẫn có những trường hợp ngoại lệ.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Tuy nhiên, Luật Tiêu chuẩn Lao động quy định rằng
 
 nếu người lao động muốn chấm dứt hợp đồng lao động theo khoản 1 hoặc khoản 6 nêu trên (ví dụ: muốn chấm dứt hợp đồng lao động vì công ty không tham gia bảo hiểm cho mình),
 
-thì phải chấm dứt hợp đồng lao động trong vòng **30 ngày** kể từ ngày biết được tình huống đó,
+thì phải chấm dứt hợp đồng lao động trong vòng 30 ngày kể từ ngày biết được tình huống đó,
 
-hoặc, trong trường hợp khoản 6, trong vòng **30 ngày** kể từ ngày biết được hậu quả thiệt hại.
+hoặc, trong trường hợp khoản 6, trong vòng 30 ngày kể từ ngày biết được hậu quả thiệt hại.
 
 Vì vậy, người lao động phải nắm chắc thời hạn.
 
@@ -89,7 +89,7 @@ có thể không phải chi trả trợ cấp thôi việc hoặc có quyền y�
 
 Do đó, trong các tranh chấp lao động tại Đài Loan,
 
-**thời điểm** là yếu tố hết sức quan trọng.
+thời điểm là yếu tố hết sức quan trọng.
 
 Trong phần lớn trường hợp, bên nào chuẩn bị trước thì bên đó bảo vệ được quyền lợi của mình.
 

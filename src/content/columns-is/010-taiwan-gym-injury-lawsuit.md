@@ -59,7 +59,7 @@ Fyrirsagnir fjölmiðlaumfjöllunar, netfærslna og lögfræðilegra skýringa u
 
 ![Fékk kóreskur karlkyns háskólanemi brjósklos við réttstöðulyftu á 90 kg í einkatíma?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Fékk kóreskur karlkyns háskólanemi brjósklos við réttstöðulyftu á 90 kg í einkatíma?**
+Fékk kóreskur karlkyns háskólanemi brjósklos við réttstöðulyftu á 90 kg í einkatíma?
 
 Það sem skiptir máli í framkvæmd við þetta mál er að það sýnir að ábyrgðin ræðst ekki umsvifalaust af því einu að meiðsli hafi orðið á líkamsræktarstöð (健身房). Inntak öryggisskyldu (安全義務) þjónustuveitanda, tiltekin leiðsögn og brot á aðgæsluskyldu (注意義務), orsakasambandið milli meiðslanna og háttseminnar og umfang tjónsins eru metin út frá gögnum hvers máls. Skilyrði og frestir sakamáls (刑事) og einkamáls (民事) eru einnig ólík, svo nauðsynlegt er strax eftir slysið að skipuleggja gögnin hvert í sínu lagi.
 
@@ -93,13 +93,13 @@ Geti atvik slyssins uppfyllt skilyrði refsiverðs brots má tilkynna málið fl
 
 Bótaliðir sem koma til greina eru þessir. Raunveruleg viðurkenning og fjárhæð ráðast af nauðsyn hvers kostnaðar, orsakasambandi við slysið, sönnunargögnum, ábyrgðarhlutfalli og mati dómstólsins.
 
-1. **Lækniskostnaður**: Kostnaður sem raunverulega var greiddur vegna skoðunar, rannsókna, meðferðar, lyfja og endurhæfingar er sannaður með kvittunum og sjúkraskrá.
-2. **Umönnunar- eða hjúkrunarkostnaður (看護費用)**: Hvort umönnun var nauðsynleg í ljósi alvarleika meiðslanna og meðferðarferlisins, og hvort tímabil og kostnaður séu hæfileg, er skoðað út frá sjúkra- og útgjaldagögnum.
-3. **Ferðakostnaður**: Kostnaður sem nauðsynlegur er til að fara til og frá meðferðarstað er sannaður með ferðagögnum, kvittunum og sambærilegum gögnum.
-4. **Tjón vegna skerðingar vinnugetu (勞動能力減損)**: Séu varanlegar afleiðingar og viðvarandi skerðing vinnugetu viðurkenndar má meta tjónið saman út frá læknis- og starfsgögnum, stig skerðingarinnar, starfi og tekjum og þeirri starfsævi sem eftir er. Skerðingarhlutfallið eitt ræður ekki skaðabótunum, og tapið er ekki sjálfkrafa reiknað fram að starfslokum.
-5. **Tekjutap á batatímabili (收入損失)**: Tímabilið sem viðkomandi gat raunverulega ekki unnið vegna meðferðar eða hvíldar, og tekjuskerðingin sem af því leiddi, skulu sönnuð með launagögnum, skattagögnum og vinnuskrám.
-6. **Ófjárhagslegt tjón (非財產上損害)**: Fjárhæð miskabóta er ákveðin af dómstólnum út frá þáttum hvers máls, svo sem alvarleika meiðslanna, meðferðartíma, varanlegum afleiðingum og tilteknum aðstæðum aðila.
-7. **Refsikenndar skaðabætur (懲罰性賠償金)**: Til er regla um að í máli þar sem lög um neytendavernd gilda megi, hafi tjónið orðið af ásetningi atvinnurekanda, krefjast bóta sem nema allt að 5 sinnum raunverulegu tjóni; við stórfellt gáleysi allt að 3 sinnum tjóninu; og við gáleysi allt að fjárhæð raunverulegs tjóns. Hvort [51. gr. laga um neytendavernd á Taívan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gildi um málið, og hvort refsikenndar skaðabætur séu í raun dæmdar, og hver fjárhæðin sé, ræðst af mati dómstólsins á tilteknum skilyrðum og sönnunargögnum.
+1. Lækniskostnaður: Kostnaður sem raunverulega var greiddur vegna skoðunar, rannsókna, meðferðar, lyfja og endurhæfingar er sannaður með kvittunum og sjúkraskrá.
+2. Umönnunar- eða hjúkrunarkostnaður (看護費用): Hvort umönnun var nauðsynleg í ljósi alvarleika meiðslanna og meðferðarferlisins, og hvort tímabil og kostnaður séu hæfileg, er skoðað út frá sjúkra- og útgjaldagögnum.
+3. Ferðakostnaður: Kostnaður sem nauðsynlegur er til að fara til og frá meðferðarstað er sannaður með ferðagögnum, kvittunum og sambærilegum gögnum.
+4. Tjón vegna skerðingar vinnugetu (勞動能力減損): Séu varanlegar afleiðingar og viðvarandi skerðing vinnugetu viðurkenndar má meta tjónið saman út frá læknis- og starfsgögnum, stig skerðingarinnar, starfi og tekjum og þeirri starfsævi sem eftir er. Skerðingarhlutfallið eitt ræður ekki skaðabótunum, og tapið er ekki sjálfkrafa reiknað fram að starfslokum.
+5. Tekjutap á batatímabili (收入損失): Tímabilið sem viðkomandi gat raunverulega ekki unnið vegna meðferðar eða hvíldar, og tekjuskerðingin sem af því leiddi, skulu sönnuð með launagögnum, skattagögnum og vinnuskrám.
+6. Ófjárhagslegt tjón (非財產上損害): Fjárhæð miskabóta er ákveðin af dómstólnum út frá þáttum hvers máls, svo sem alvarleika meiðslanna, meðferðartíma, varanlegum afleiðingum og tilteknum aðstæðum aðila.
+7. Refsikenndar skaðabætur (懲罰性賠償金): Til er regla um að í máli þar sem lög um neytendavernd gilda megi, hafi tjónið orðið af ásetningi atvinnurekanda, krefjast bóta sem nema allt að 5 sinnum raunverulegu tjóni; við stórfellt gáleysi allt að 3 sinnum tjóninu; og við gáleysi allt að fjárhæð raunverulegs tjóns. Hvort [51. gr. laga um neytendavernd á Taívan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gildi um málið, og hvort refsikenndar skaðabætur séu í raun dæmdar, og hver fjárhæðin sé, ræðst af mati dómstólsins á tilteknum skilyrðum og sönnunargögnum.
 
 ## 5. Má, einnig þegar líkamsræktarstöðin hefur ábyrgðartryggingu (責任保險), deila um hvort bætur komi til og um fjárhæðina?
 

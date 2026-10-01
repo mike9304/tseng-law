@@ -51,7 +51,7 @@ Por tanto, preste atención.
 
 ​
 
-**P. ¿Todos los sectores deben consultar a través del sistema de «consulta previa del local de negocio» si la explotación es posible?**
+P. ¿Todos los sectores deben consultar a través del sistema de «consulta previa del local de negocio» si la explotación es posible?
 
 Se recomienda que todos los sectores confirmen si la explotación es posible a través del sistema de «consulta previa del local de negocio».
 
@@ -61,7 +61,7 @@ Por ello, en la práctica no es necesario consultar todos los ramos al registrar
 
 Según las «[Instrucciones de funcionamiento del servicio de consulta de locales de negocio de la ciudad de Taipéi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) y la guía vigente de la ciudad de Taipéi, el anexo es obligatorio.
 
-Desde el 1 de enero de 2023, al solicitar el registro de constitución, de traslado de domicilio o de adición de ramos de actividad de una sociedad o de un comercio (incluidas la sucursal (分公司) y el establecimiento auxiliar (分支機構)), el resultado de la consulta previa del local de negocio **debe** anexarse a la solicitud de registro, con independencia del sector.
+Desde el 1 de enero de 2023, al solicitar el registro de constitución, de traslado de domicilio o de adición de ramos de actividad de una sociedad o de un comercio (incluidas la sucursal (分公司) y el establecimiento auxiliar (分支機構)), el resultado de la consulta previa del local de negocio debe anexarse a la solicitud de registro, con independencia del sector.
 
 La lista siguiente de «ramos objeto de consulta de oficio» (主動查詢之營業項目) es el objeto de la consulta adicional que la Oficina de Comercio realiza de oficio durante la revisión del registro (隨案主動查詢) cuando el ramo figura en la solicitud pero falta en el resultado anexado; el hecho de que un ramo no esté en esta lista no significa que la consulta quede exenta.
 

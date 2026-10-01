@@ -25,7 +25,7 @@ och det skiljer sig från vad som gäller i en del andra länder, till exempel K
 
 ​
 
-Det finns dock **undantagsfall**.
+Det finns dock undantagsfall.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Lagen om arbetsnormer (勞動基準法) föreskriver dock att,
 
 om arbetstagaren vill avsluta arbetsavtalet med stöd av punkterna 1 eller 6 ovan (till exempel för att avsluta avtalet på grund av utebliven försäkring),
 
-arbetsavtalet måste avslutas inom **30 dagar** från den dag då arbetstagaren fick kännedom om situationen,
+arbetsavtalet måste avslutas inom 30 dagar från den dag då arbetstagaren fick kännedom om situationen,
 
-eller, för punkt 6, inom **30 dagar** från den dag då arbetstagaren fick kännedom om skadans följd.
+eller, för punkt 6, inom 30 dagar från den dag då arbetstagaren fick kännedom om skadans följd.
 
 Arbetstagaren måste alltså hålla reda på fristen väl.
 
@@ -89,7 +89,7 @@ kan avgångsvederlag utebli eller krävas.
 
 Därför är, i arbetstvister (勞資糾紛) i Taiwan,
 
-”**tiden**” mycket viktig.
+”tiden” mycket viktig.
 
 Den som förbereder sig i förväg står i regel starkare för att ta till vara sina rättigheter; något visst utfall följer inte av det.
 

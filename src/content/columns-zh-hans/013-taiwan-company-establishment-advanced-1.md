@@ -17,13 +17,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 设立时常见问题汇总如下。
 
-读过[**公司设立基础篇**](/zh-hans/columns/taiwan-company-establishment-basics)的人，可接着参阅这篇更详细的深入篇。
+读过[公司设立基础篇](/zh-hans/columns/taiwan-company-establishment-basics)的人，可接着参阅这篇更详细的深入篇。
 
 以下问答旨在协助考虑在台湾设立公司的人。
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. 我想设立公司，但尚未找到登记地址。是否仍可设立？**
+1. 我想设立公司，但尚未找到登记地址。是否仍可设立？
 
 外国人在台湾设立公司时，须向经济部投资审议司提出投资计划书供审查。
 
@@ -43,7 +43,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 因为台湾洗钱案例很多，银行开户越来越严格。
 
-**建议**：
+建议：
 
 投资计划审查也需要时间。
 
@@ -57,7 +57,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ​
 
-**2. 没有台湾居留证，也能在银行开立公司账户吗？**
+2. 没有台湾居留证，也能在银行开立公司账户吗？
 
 可以。
 
@@ -71,7 +71,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ​
 
-**3. 听说审查投资计划时须记载学历与职业经历，我担心自己的学历与经历与拟设立公司的行业不符。**
+3. 听说审查投资计划时须记载学历与职业经历，我担心自己的学历与经历与拟设立公司的行业不符。
 
 经济部投资审议司固然审查投资人背景。
 
@@ -85,13 +85,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ​
 
-**4. 承租公司登记地址（例如餐饮店铺）时须注意哪些要点？**
+4. 承租公司登记地址（例如餐饮店铺）时须注意哪些要点？
 
-公司设立约需 **3个月**，取得工作许可（工作許可）与居留证另约需 **1个月**。
+公司设立约需 3个月，取得工作许可（工作許可）与居留证另约需 1个月。
 
 故租赁起始日宜尽量往后排。
 
-此外，台湾商业店铺租赁契约中，出租人常给承租人“**装潢期间**”（裝潢期間）。
+此外，台湾商业店铺租赁契约中，出租人常给承租人“装潢期间”（裝潢期間）。
 
 这是免租金期间；可以协商。
 
@@ -107,7 +107,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ​
 
-**5. 设立公司时，可以承租一般办公空间吗？**
+5. 设立公司时，可以承租一般办公空间吗？
 
 这取决于公司的营业项目。
 

@@ -32,9 +32,9 @@ This column follows that process for the foreign spouse of a Taiwanese national 
 
 How you apply depends on where you are:
 
-- **Outside Taiwan:** apply to the Bureau of Consular Affairs or a Taiwan mission for a resident visa as a spouse. The documents are listed on the [Bureau of Consular Affairs page](https://www.boca.gov.tw/fp-398-696-550e9-1.html).
-- **Already in Taiwan on a visa:** if you entered on a visa allowing a stay of 60 days or more, with no "no extension" or similar restriction, Article 23 lets you apply to the Immigration Agency directly. If you entered visa-free, note that the agency's guidance lists people who obtain a new resident visa from the Bureau of Consular Affairs after entry among those who may apply for an ARC, so check with the Bureau first.
-- **Already holding an ARC for work or study:** [Article 23-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1) allows you to change the basis of your residence to marriage.
+- Outside Taiwan: apply to the Bureau of Consular Affairs or a Taiwan mission for a resident visa as a spouse. The documents are listed on the [Bureau of Consular Affairs page](https://www.boca.gov.tw/fp-398-696-550e9-1.html).
+- Already in Taiwan on a visa: if you entered on a visa allowing a stay of 60 days or more, with no "no extension" or similar restriction, Article 23 lets you apply to the Immigration Agency directly. If you entered visa-free, note that the agency's guidance lists people who obtain a new resident visa from the Bureau of Consular Affairs after entry among those who may apply for an ARC, so check with the Bureau first.
+- Already holding an ARC for work or study: [Article 23-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1) allows you to change the basis of your residence to marriage.
 
 If you enter on a resident visa, [Article 22(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) requires you to apply for the ARC within 30 days, counted from the day after entry. The agency's guidance adds that for a foreign spouse's first ARC, or when changing the basis of residence to marriage, the Taiwanese spouse must attend, and the first ARC is issued for one year.
 

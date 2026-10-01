@@ -275,7 +275,7 @@ describe('Korean investment column 011 — cosmetics registration, PIF, and adve
       '/images/blog/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
     );
     expect(raw.trimEnd()).toMatch(
-      /이 글은 대만의 화장품 시장 진출 관련 제도를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 제품이나 광고에 대한 법률 의견, 허가·등록, 판매 가능성 또는 처리기간을 보장하지 않습니다\. 진출 형태, 제품 자료, 표시·광고 내용과 주무기관의 최신 실무를 개별 사안별로 확인하시기 바랍니다\.\n\n\*\*증준외 변호사\(曾雋崴, Wei Tseng\)\*\*$/,
+      /이 글은 대만의 화장품 시장 진출 관련 제도를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 제품이나 광고에 대한 법률 의견, 허가·등록, 판매 가능성 또는 처리기간을 보장하지 않습니다\. 진출 형태, 제품 자료, 표시·광고 내용과 주무기관의 최신 실무를 개별 사안별로 확인하시기 바랍니다\.\n\n증준외 변호사\(曾雋崴, Wei Tseng\)$/,
     );
     expect(raw.match(/[\uac00-\ud7af]/g)?.length ?? 0).toBeGreaterThan(3_000);
     expect(raw.length).toBeGreaterThan(8_000);
@@ -287,7 +287,7 @@ describe('Korean investment column 011 — cosmetics registration, PIF, and adve
     const eojeolCount = publicText.split(/\s+/).filter(Boolean).length;
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
-    expect(eojeolCount).toBe(1_464);
+    expect(eojeolCount).toBe(1_463);
     expect(calculatedMinutes).toBe(9);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);

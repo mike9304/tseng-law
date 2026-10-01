@@ -17,13 +17,13 @@ Récemment, de nombreuses personnes ont constitué avec succès une société (�
 
 Les questions fréquemment posées au moment de la constitution sont rassemblées ci-dessous.
 
-Ceux qui ont lu [**les fondamentaux de la création de société**](/fr/columns/taiwan-company-establishment-basics) peuvent ensuite se reporter aussi à cette partie approfondie plus détaillée.
+Ceux qui ont lu [les fondamentaux de la création de société](/fr/columns/taiwan-company-establishment-basics) peuvent ensuite se reporter aussi à cette partie approfondie plus détaillée.
 
 Les questions et réponses suivantes visent à aider les personnes qui envisagent de constituer une société à Taïwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Je souhaite constituer une société, mais je n’ai pas encore trouvé d’adresse d’immatriculation. La constitution est-elle néanmoins possible ?**
+1. Je souhaite constituer une société, mais je n’ai pas encore trouvé d’adresse d’immatriculation. La constitution est-elle néanmoins possible ?
 
 Lorsqu’un étranger constitue une société à Taïwan, il doit présenter un plan d’investissement (投資計畫書) au Département de l’examen des investissements du ministère de l’Économie (經濟部投資審議司) aux fins d’examen.
 
@@ -43,7 +43,7 @@ L’ouverture du compte est souvent l’étape la plus difficile.
 
 Parce que les cas de blanchiment d’argent (洗錢) sont très nombreux à Taïwan, l’ouverture des comptes bancaires devient de plus en plus stricte.
 
-**Conseil** :
+Conseil :
 
 Comme l’examen du plan d’investissement prend aussi du temps,
 
@@ -57,7 +57,7 @@ il reste suffisamment de temps pour ouvrir à la banque le compte de la sociét�
 
 ​
 
-**2. Peut-on ouvrir un compte de société à la banque même sans carte de séjour de Taïwan ?**
+2. Peut-on ouvrir un compte de société à la banque même sans carte de séjour de Taïwan ?
 
 C’est possible.
 
@@ -71,7 +71,7 @@ mais l’administration de l’immigration (移民署) est très fréquentée ;
 
 ​
 
-**3. J’ai entendu dire que, lors de l’examen du plan d’investissement, il faut indiquer la formation et l’expérience professionnelle, et je m’inquiète que ma formation et mon expérience ne correspondent pas au secteur de la société que je souhaite constituer.**
+3. J’ai entendu dire que, lors de l’examen du plan d’investissement, il faut indiquer la formation et l’expérience professionnelle, et je m’inquiète que ma formation et mon expérience ne correspondent pas au secteur de la société que je souhaite constituer.
 
 La commission d’examen du ministère de l’Économie examine certes les antécédents de l’investisseur,
 
@@ -85,13 +85,13 @@ Sur ce point, vous devriez échanger de manière approfondie avec une avocate ou
 
 ​
 
-**4. Quels points faut-il observer lorsque l’adresse d’immatriculation de la société (par exemple un local de restauration) est prise à bail ?**
+4. Quels points faut-il observer lorsque l’adresse d’immatriculation de la société (par exemple un local de restauration) est prise à bail ?
 
-La constitution de la société dure environ **3 mois**, l’obtention du permis de travail (工作許可) et de la carte de séjour environ **un mois de plus**,
+La constitution de la société dure environ 3 mois, l’obtention du permis de travail (工作許可) et de la carte de séjour environ un mois de plus,
 
 aussi devez-vous fixer le début du contrat le plus tard possible.
 
-En outre, dans les contrats de bail de locaux commerciaux à Taïwan, le bailleur accorde souvent au preneur une « **période d’aménagement** » (裝潢期間).
+En outre, dans les contrats de bail de locaux commerciaux à Taïwan, le bailleur accorde souvent au preneur une « période d’aménagement » (裝潢期間).
 
 Il s’agit d’une période exonérée de loyer ; vous pouvez la négocier.
 
@@ -107,7 +107,7 @@ vous pouvez, s’il y a lieu, proposer de faire notarier le contrat de bail (公
 
 ​
 
-**5. Peut-on, lors de la constitution de la société, prendre à bail un local à usage de bureaux ?**
+5. Peut-on, lors de la constitution de la société, prendre à bail un local à usage de bureaux ?
 
 Cela dépend des branches d’activité (營業項目) de la société.
 

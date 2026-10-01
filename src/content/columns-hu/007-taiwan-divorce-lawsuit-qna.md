@@ -196,4 +196,4 @@ A következő elsődleges források (1. szint) a cikk jogi szerkezetének és el
 
 Ez a cikk a tajvani válási intézmények, a nemzetközi családi ügyek, a házassági vagyon és a kiskorú gyermekek általános ismertetésére szánt oktatási anyag, nem egyedi ügyben adott jogi tanács. Az eljárás és az eredmény a joghatóság, a kollíziós jog, a külföldi ítéletek elismerése, a házasság és a háztartás-nyilvántartás állapota, a vagyonjogi rend, a gyermekre vonatkozó meglévő megállapodás vagy döntés, a tények és a bizonyítékok, valamint a legújabb hivatalos rendelkezések szerint különbözhet. A bejegyzés, a jogorvoslat, az igény és a végrehajtás határidejét a cselekvés előtt minden jog és minden eljárás pontos kezdőnapja szerint egyenként kell ellenőrizni.
 
-**Wei Tseng ügyvédnő (曾雋崴)**
+Wei Tseng ügyvédnő (曾雋崴)

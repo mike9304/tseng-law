@@ -25,7 +25,7 @@ author: "legal-ai-assistant"
 
 대만 가권지수에 포함된 TSMC 주식이나 0050 같은 현지 ETF에 직접 투자할 때는 한국과 대만의 세금을 함께 살펴야 합니다. 대만에서는 매도와 배당에 세금이 붙고, 한국 거주자는 신고할 소득과 세액을 따로 계산해야 합니다.
 
-한국 세법상 거주자이면서 대만에서는 비거주자인 사람이 **대만 상장 증권을 직접 보유한 경우**를 전제로 합니다. 미국 등에 상장된 대만 관련 상품이나 예탁증서는 구조가 다를 수 있습니다. 대만에 오래 머물렀다면 세법상 거주자에 해당하는지도 확인할 필요가 있습니다. 판단 기준은 [대만 소득세 거주자 판단](/ko/columns/taiwan-income-tax-residency)에 나와 있습니다.
+한국 세법상 거주자이면서 대만에서는 비거주자인 사람이 대만 상장 증권을 직접 보유한 경우를 전제로 합니다. 미국 등에 상장된 대만 관련 상품이나 예탁증서는 구조가 다를 수 있습니다. 대만에 오래 머물렀다면 세법상 거주자에 해당하는지도 확인할 필요가 있습니다. 판단 기준은 [대만 소득세 거주자 판단](/ko/columns/taiwan-income-tax-residency)에 나와 있습니다.
 
 ## 한국 거주자의 대만 증권계좌 개설
 
@@ -35,27 +35,27 @@ author: "legal-ai-assistant"
 
 ## 주식과 0050을 팔 때 붙는 대만 세금
 
-대만 [「證券交易稅條例」](https://law-out.mof.gov.tw/LawContent.aspx?id=FL006079&media=print)에 따른 증권거래세는 **매도 금액**에 붙습니다. 대만 재정부의 [주식 세율 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/securities-transaction-tax/filing/mM8n39b)는 일반 주식을 팔 때의 세율을 **0.3%**로 설명합니다. [수익증권 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/securities-transaction-tax/filing/KJZD0QV)에 나온 해당 투자신탁 수익증권의 세율은 **0.1%**입니다. 0050 같은 ETF는 법적으로 어떤 증권인지, 따로 적용되는 거래 규정이 있는지도 봐야 합니다. [재정부의 설명](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-saving-manual/national/securities-transaction-tax/mbo7V96)에 따르면 이 세금은 매도자가 부담합니다.
+대만 [「證券交易稅條例」](https://law-out.mof.gov.tw/LawContent.aspx?id=FL006079&media=print)에 따른 증권거래세는 매도 금액에 붙습니다. 대만 재정부의 [주식 세율 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/securities-transaction-tax/filing/mM8n39b)는 일반 주식을 팔 때의 세율을 0.3%로 설명합니다. [수익증권 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/securities-transaction-tax/filing/KJZD0QV)에 나온 해당 투자신탁 수익증권의 세율은 0.1%입니다. 0050 같은 ETF는 법적으로 어떤 증권인지, 따로 적용되는 거래 규정이 있는지도 봐야 합니다. [재정부의 설명](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-saving-manual/national/securities-transaction-tax/mbo7V96)에 따르면 이 세금은 매도자가 부담합니다.
 
-대만 [소득세법 제4조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-1)은 증권거래소득에 대한 **대만 소득세 부과를 중지**하고, 증권거래 손실도 과세소득에서 공제하지 못하도록 정합니다. 매도차익에 대만 소득세는 붙지 않아도, 매도에는 증권거래세가 붙습니다. **한국의 양도소득세가 면제된다는 뜻은 아닙니다.** 매수·매도 체결내역과 수수료, 환전 기록은 함께 보관하는 편이 좋습니다.
+대만 [소득세법 제4조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-1)은 증권거래소득에 대한 대만 소득세 부과를 중지하고, 증권거래 손실도 과세소득에서 공제하지 못하도록 정합니다. 매도차익에 대만 소득세는 붙지 않아도, 매도에는 증권거래세가 붙습니다. 한국의 양도소득세가 면제된다는 뜻은 아닙니다. 매수·매도 체결내역과 수수료, 환전 기록은 함께 보관하는 편이 좋습니다.
 
 ## 회사 배당의 21% 원천징수와 협정상 10% 상한
 
-대만 [「各類所得扣繳率標準」 제3조 제1호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)는 대만 **비거주자 개인**이 받는 회사 배당에 국내법상 **21%**를 원천징수하도록 정합니다. ETF 현금분배는 지급 주체와 분배 구성에 따라 확인할 사항이 있으므로, 회사 배당 세율을 모든 분배금에 그대로 대입할 수는 없습니다. 원천징수내역이 적힌 명세서를 받아 두는 편이 좋습니다.
+대만 [「各類所得扣繳率標準」 제3조 제1호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)는 대만 비거주자 개인이 받는 회사 배당에 국내법상 21%를 원천징수하도록 정합니다. ETF 현금분배는 지급 주체와 분배 구성에 따라 확인할 사항이 있으므로, 회사 배당 세율을 모든 분배금에 그대로 대입할 수는 없습니다. 원천징수내역이 적힌 명세서를 받아 두는 편이 좋습니다.
 
-대만 재정부는 [보도자료](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=127fffb302f24987b0bbf1eff78ff9c9)에서 **한·대만 소득세협정이 2023년 12월 27일 발효됐으며, 2024년 1월 1일부터 적용**된다고 밝혔습니다. 협정은 [소득세협정 목록](https://www.mof.gov.tw/singlehtml/191?cntId=63930)에도 올라 있습니다. 재정부의 [원천징수율 표](https://www.mof.gov.tw/singlehtml/191?cntId=63931)는 한국 협정의 **배당 원천징수 상한을 10%**로 적고 있습니다.
+대만 재정부는 [보도자료](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=127fffb302f24987b0bbf1eff78ff9c9)에서 한·대만 소득세협정이 2023년 12월 27일 발효됐으며, 2024년 1월 1일부터 적용된다고 밝혔습니다. 협정은 [소득세협정 목록](https://www.mof.gov.tw/singlehtml/191?cntId=63930)에도 올라 있습니다. 재정부의 [원천징수율 표](https://www.mof.gov.tw/singlehtml/191?cntId=63931)는 한국 협정의 배당 원천징수 상한을 10%로 적고 있습니다.
 
 이 상한을 적용받으려면 협정 요건을 갖춘 한국 거주자여야 합니다. 한국 국적만으로 자동 적용되지는 않습니다. 상대국 거주자 증명과 원천징수 절차는 [대만 재정부 안내](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=26c8ff2757cd4e309bb42a2ebad4f826)에 나와 있습니다. 배당 지급 전에는 증권사와 지급회사를 통해 증명서, 수익적 소유자, 신청 방법을 확인해야 합니다. 이미 국내법상 세율로 원천징수됐다면 대만에서 환급받을 수 있는지, 어떤 서류가 필요한지도 별도로 따져야 합니다.
 
 ## 한국 양도소득세 신고
 
-[국세청의 해외주식 양도소득세 안내](https://b.nts.go.kr/jeju/na/ntt/selectNttInfo.do?mi=2201&nttSn=1350890)에 따르면 과세대상 국외주식의 양도차익은 실제 거래가액과 취득비용 등으로 계산합니다. 국내·국외 과세대상 주식 손익을 통산한 뒤 **연 250만 원의 양도소득 기본공제를 한 번** 적용합니다. 국외주식의 일반적인 소득세율은 **20%**이며, 별도의 개인지방소득세가 붙습니다. 중소기업이 아닌 회사의 주식에는 일반적으로 [지방세법 제103조의3](https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=001649&lsJoLnkSeq=1000899162&print=print)에 따라 **2%**의 개인지방소득세율이 적용됩니다. 보유 상품의 분류나 예외가 있으면 실제 신고에 적용할 세율은 다시 확인해야 합니다.
+[국세청의 해외주식 양도소득세 안내](https://b.nts.go.kr/jeju/na/ntt/selectNttInfo.do?mi=2201&nttSn=1350890)에 따르면 과세대상 국외주식의 양도차익은 실제 거래가액과 취득비용 등으로 계산합니다. 국내·국외 과세대상 주식 손익을 통산한 뒤 연 250만 원의 양도소득 기본공제를 한 번 적용합니다. 국외주식의 일반적인 소득세율은 20%이며, 별도의 개인지방소득세가 붙습니다. 중소기업이 아닌 회사의 주식에는 일반적으로 [지방세법 제103조의3](https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=001649&lsJoLnkSeq=1000899162&print=print)에 따라 2%의 개인지방소득세율이 적용됩니다. 보유 상품의 분류나 예외가 있으면 실제 신고에 적용할 세율은 다시 확인해야 합니다.
 
 한국에서 250만 원을 공제받는다고 대만 증권거래세를 돌려받는 것은 아닙니다. 반대로 대만 소득세법이 매매차익 과세를 중지했다고 한국 신고가 사라지지도 않습니다. 해외 거래내역을 원화로 정리할 때는 체결일, 대금을 지급한 날, 수수료, 적용한 환율 자료를 같이 봐야 합니다. 한국 거주자인지, 거래한 상품이 과세대상 주식인지부터 세무전문가와 검토하면 계산이 분명해집니다.
 
 ## 대만 배당세와 한국의 외국납부세액공제
 
-대만에서 받은 배당은 한국 거주자가 배당소득을 신고할 때도 함께 살펴야 합니다. [국세청은](https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7802&mi=2355) 한국 소득세법 제57조의 외국납부세액공제를 설명하면서, 국외원천소득에 대해 외국에 납부한 소득세액의 **일정액을 공제할 수 있다**고 안내합니다. 공제액은 한국 세액과 소득 구분, 다른 배당과의 합산, 대만에서 적법하게 최종 부담한 세액 등에 따라 달라집니다.
+대만에서 받은 배당은 한국 거주자가 배당소득을 신고할 때도 함께 살펴야 합니다. [국세청은](https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7802&mi=2355) 한국 소득세법 제57조의 외국납부세액공제를 설명하면서, 국외원천소득에 대해 외국에 납부한 소득세액의 일정액을 공제할 수 있다고 안내합니다. 공제액은 한국 세액과 소득 구분, 다른 배당과의 합산, 대만에서 적법하게 최종 부담한 세액 등에 따라 달라집니다.
 
 21%가 원천징수됐더라도 협정상 10% 상한을 적용받거나 대만에서 환급받을 수 있는지 먼저 따져야, 한국에서 공제할 세액도 정확히 정할 수 있습니다. 배당명세서, 원천징수 증빙, 대만의 환급·승인 자료도 함께 보관해 둡니다.
 

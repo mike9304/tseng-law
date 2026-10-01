@@ -115,7 +115,7 @@ const disclaimer =
   'This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and minor children; it is not legal advice for any specific matter. Procedures and outcomes may vary depending on jurisdiction, applicable law, recognition of foreign judgments, marital and household-registration status, the matrimonial-property regime, any existing agreement or court decision concerning minor children, the facts and evidence, and the latest official rules. Before taking action, separately confirm every deadline for registration, challenge or appeal, filing a claim, or enforcement by reference to the precise triggering event for the particular right or procedure.';
 const staleDisclaimer =
   'This article is general legal information only and is not legal advice. Jurisdiction, applicable law, recognition of foreign divorces or judgments, the specific facts and evidence, existing agreements or court orders, and current official rules may all change the analysis and result. Before taking action, calculate any application, review, limitation, or enforcement period from the correct triggering event for the specific right or procedure involved.';
-const author = '**Wei Tseng (曾雋崴), Taiwan Attorney**';
+const author = 'Wei Tseng (曾雋崴), Taiwan Attorney';
 const exactEnding = `- ${internalLinks[2]}
 
 ${disclaimer}
@@ -149,11 +149,11 @@ const article10301AdjustmentParagraph =
 const article1056SubsectionHeading =
   '### Article 1056, Article 1057, and child support';
 const article1056Paragraph =
-  '**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
+  'Article 1056 provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
 const completeParentalRightsSubsectionHeading =
   '### Complete parental rights and duties, not “custody” as an umbrella';
 const childScopeParagraph =
-  'Under Taiwan law, the precise concept is the **exercise and assumption of rights and duties regarding a minor child**. It may include the child’s residence, day-to-day care, educational and medical decisions, management of the child’s property, and legal representation. Terms such as “parental rights” or “custody” may be used as shorthand for convenience, but no single term fully translates the entire set of rights and duties under Taiwan law.';
+  'Under Taiwan law, the precise concept is the exercise and assumption of rights and duties regarding a minor child. It may include the child’s residence, day-to-day care, educational and medical decisions, management of the child’s property, and legal representation. Terms such as “parental rights” or “custody” may be used as shorthand for convenience, but no single term fully translates the entire set of rights and duties under Taiwan law.';
 const bestInterestsSubsectionHeading =
   '### Best interests and statutory factors';
 const unresolvedIssuesSubsectionHeading =
@@ -171,7 +171,7 @@ const bestInterestsFactorsParagraph =
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
-  '3. **Household registration.** Registration with the household-registration authority is constitutive for this path. Without registration, the private writing does not complete a Taiwan mutual-consent divorce.';
+  '3. Household registration. Registration with the household-registration authority is constitutive for this path. Without registration, the private writing does not complete a Taiwan mutual-consent divorce.';
 const courtResultsSubsectionHeading =
   '### Court results and Household Registration Act Articles 48 and 48-2';
 const courtResultsFirstParagraph =
@@ -183,29 +183,29 @@ const mediationSubsectionHeading =
 const mediationIntroParagraph =
   'Family matters governed by the Family Act ordinarily proceed through court mediation before adjudication. Even a matter filed directly for adjudication may be deemed an application for mediation under the Act. Because there are exceptions involving the method of service or the nature of the matter, as well as rules governing transitions between procedures, however, not every case can be described as following a single immutable sequence. Mediation may address not only the parties’ intention to divorce but also related issues involving property, children, and the manner of payment, but the court may not confirm, without modification, an agreement that is detrimental to a minor child.';
 const courtMediationOutcomeParagraphMarker =
-  '**Court mediation or settlement,**';
+  'Court mediation or settlement,';
 const courtMediationOutcomeParagraph =
-  '**Court mediation or settlement,** once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. **Litigation** may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.';
+  'Court mediation or settlement, once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. Litigation may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.';
 const expectedDurationParagraph =
   'The time required to resolve a case varies depending on service of process, the number of mediation sessions, the facts and evidence in dispute, any appraisals or investigations, child-related issues, international service, and how many levels of court proceedings are involved, so no fixed completion date can be given.';
 const evidenceProhibitionsParagraph =
   'Do not use unlawful surveillance, unauthorized access to accounts, intrusion into a mobile phone or computer, location tracking, recordings made in violation of law, or disclosure of a child’s private information as methods of gathering evidence. Retaliation against the other party, concealment or sham transfer of assets, and moving a child contrary to an agreement or court order may also create additional risks for the case and the child. If it is unclear whether material may lawfully be obtained or how it should be preserved, check the applicable law and court procedures before collecting it.';
 const frozenBeforeFilingDocumentsSha256 =
-  'daa434cb7b8064df773030b7406d4e8d6046478c9ca377760f5bb734c4c6077e';
+  '173982a33a41ebfdb737df2a1e2d79fa2a321e433e31a8bd3670702f2597df5c';
 const frozenCourtResultsSubsectionSha256 =
-  '180f59abec39bf4cf6aefe84b3c9733c7dffa49e8d505c65db22aa75dd1ceebf';
+  'cd3cc2f913e658d8c559d191c46d687736f93b8cd551ea86e77dce05f549cb92';
 const frozenSection3OnwardSha256 =
-  '9d3873b2036c80039630af2d171ff24516644066bb330b300a359c50b4313296';
+  'e218c0617ef812936c55a9be294145f79614dd37439796b1c7c7f80ca26b08ed';
 const frozenSection4OutsideArticle1052IntroSha256 =
-  '6d21299c224a5ff4d86880622d8d47f69f3f7ccebfa2a78861d08032ee49d8ef';
+  '64f5911cf568e7d80b0a57f39defe4533e7d03e3bd08f3a56eda80907a0ad9cd';
 const frozenSection5OnwardSha256 =
-  '172b2892b1d1f4c4ab2d6c700a34804f710979bc0b0580ae61084abd69f14754';
+  '637cc171093641ac501bdca922932e06b49d143f58a3d432876896fa6899c117';
 const frozenSection1OnwardSha256 =
-  'b64f3368517a247872fe3f0d3cd7f0a60eeb52843c12bf5ee3b2cf985546d4dd';
+  '9bd992465119f6d686e189c07aef64fa5eedc0819abb855f32431da62dba85ec';
 const frozenVisibleWordCount = 5_827;
 // WO-X2 (EN-20): re-frozen after adding the short frontmatter seoTitle.
 const frozenSourceSha256 =
-  '11a7267d248b6a877e90bbf5aadbf84bbc7f7f4a19867467659172ff0ce960ab';
+  'd86bba225f8067c73c0dc3cc9c87558fde2fc435bb717bcbc0af16261ef3288d';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -354,7 +354,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 1,
         heading: headings[0],
         phrase:
-          '**Mutual-consent divorce** is a private status act that becomes effective only when Civil Code Article 1050’s writing, witness, and household-registration requirements are all satisfied.',
+          'Mutual-consent divorce is a private status act that becomes effective only when Civil Code Article 1050’s writing, witness, and household-registration requirements are all satisfied.',
       },
       {
         number: 2,
@@ -411,7 +411,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 14,
         heading: headings[6],
         phrase:
-          '**Article 1057** concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
+          'Article 1057 concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
       },
       {
         number: 15,
@@ -492,9 +492,9 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('locks the three paths and five separate cross-border questions', () => {
     const section = sectionBody(parsed.content, headings[0]);
     const requiredPhrases = [
-      '**Mutual-consent divorce** is a private status act',
-      '**Divorce established through court mediation or settlement** ends the marriage when the court mediation or settlement is established.',
-      '**Judicial divorce** is granted by court judgment on a statutory ground under Civil Code Article 1052.',
+      'Mutual-consent divorce is a private status act',
+      'Divorce established through court mediation or settlement ends the marriage when the court mediation or settlement is established.',
+      'Judicial divorce is granted by court judgment on a statutory ground under Civil Code Article 1052.',
       'whether a Taiwan court or administrative authority has jurisdiction or authority to handle the requested step;',
       'which jurisdiction’s law applies to divorce, matrimonial property, and child-related issues;',
       'whether a foreign divorce, judgment, or status act is recognized or effective in Taiwan;',
@@ -513,11 +513,11 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const requiredPhrases = [
       faq1Answer,
       'Article 1050 separates three requirements:',
-      '**Writing.** The mutual-consent divorce must be in writing.',
+      'Writing. The mutual-consent divorce must be in writing.',
       'A witness does not satisfy the requirement by merely adding a name to a document without confirming that intent.',
       'Registration with the household-registration authority is constitutive for this path.',
       'Without registration, the private writing does not complete a Taiwan mutual-consent divorce.',
-      '**thirty days from finality of the Taiwan divorce judgment or from establishment of the court mediation or settlement**',
+      'thirty days from finality of the Taiwan divorce judgment or from establishment of the court mediation or settlement',
       'The date on which a judgment or record is served or received is not the common triggering date in every case.',
       'A late application must still be accepted.',
       'Lateness does not undo an already effective court divorce.',
@@ -671,16 +671,16 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('locks Article 1052 paragraph 1 grounds, paragraph 2, and the constitutional qualification', () => {
     const section = sectionBody(parsed.content, headings[3]);
     const grounds = [
-      '1. **Bigamy.**',
-      '2. **Consensual sexual intercourse with a person other than the spouse.**',
-      '3. **Unbearable abuse by one spouse against the other.**',
-      '4. **Abuse by one spouse against the other spouse’s lineal relative, or by one spouse’s lineal relative against the other spouse, making common life unbearable.**',
-      '5. **Malicious desertion of the other spouse in a continuing state.**',
-      '6. **An attempt by one spouse to kill the other.**',
-      '7. **An incurable serious disease.**',
-      '8. **A serious incurable mental illness.**',
-      '9. **Life or death unknown for more than three years.**',
-      '10. **A final sentence of imprisonment for more than six months for an intentional offense.**',
+      '1. Bigamy.',
+      '2. Consensual sexual intercourse with a person other than the spouse.',
+      '3. Unbearable abuse by one spouse against the other.',
+      '4. Abuse by one spouse against the other spouse’s lineal relative, or by one spouse’s lineal relative against the other spouse, making common life unbearable.',
+      '5. Malicious desertion of the other spouse in a continuing state.',
+      '6. An attempt by one spouse to kill the other.',
+      '7. An incurable serious disease.',
+      '8. A serious incurable mental illness.',
+      '9. Life or death unknown for more than three years.',
+      '10. A final sentence of imprisonment for more than six months for an intentional offense.',
     ];
     const requiredPhrases = [
       faq3Answer,
@@ -770,7 +770,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const section = sectionBody(parsed.content, headings[3]);
     const introMarker = `${article1052Paragraph1Heading}\n\n`;
     const introStart = section.indexOf(introMarker) + introMarker.length;
-    const listStart = section.indexOf('\n\n1. **Bigamy.**', introStart);
+    const listStart = section.indexOf('\n\n1. Bigamy.', introStart);
     const section5Start = parsed.content.indexOf(`## ${headings[4]}`);
     const section4OutsideIntro =
       section.slice(0, introStart) +
@@ -786,7 +786,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       firstParagraphAfter(post?.content ?? '', article1052Paragraph1Heading),
     ).toBe(article1052Paragraph1ReaderSentence);
     expect(section).toContain(
-      `${article1052Paragraph1Heading}\n\n${article1052Paragraph1ReaderSentence}\n\n1. **Bigamy.**`,
+      `${article1052Paragraph1Heading}\n\n${article1052Paragraph1ReaderSentence}\n\n1. Bigamy.`,
     );
     expect(countOccurrences(raw, article1052Paragraph1ReaderSentence)).toBe(1);
     expect(raw).not.toContain(staleArticle1052TranslationInstruction);
@@ -927,8 +927,8 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const requiredPhrases = [
       faq5Answer,
       article1056Paragraph,
-      '**Article 1057** concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
-      '**Article 1116-2** continues parents’ duty to support a minor child after divorce.',
+      'Article 1057 concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
+      'Article 1116-2 continues parents’ duty to support a minor child after divorce.',
       'Child support is distinct from Article 1057 spousal support.',
       'Government average consumption statistics are not a binding formula that automatically sets Article 1057 support.',
       'An unmarried couple does not obtain divorce rights, Article 1056 divorce damages, or Article 1057 post-divorce support merely because they lived together.',
@@ -948,7 +948,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const subsectionStart = parsed.content.indexOf(subsectionMarker);
     const paragraphStart = subsectionStart + subsectionMarker.length;
     const article1057Start = parsed.content.indexOf(
-      '\n\n**Article 1057**',
+      '\n\nArticle 1057',
       paragraphStart,
     );
 
@@ -1123,13 +1123,13 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const section = sectionBody(parsed.content, headings[9]);
     const requiredPhrases = [
       'Cross-border relocation with a minor child is not decided by Korean living costs, a single nationality, or a treaty label alone.',
-      '**Authority over residence and travel.**',
-      '**Consent or court order.**',
-      '**Best interests and continuing contact.**',
-      '**Passports, entry, exit, immigration, and registration.**',
-      '**Recognition and enforcement.**',
-      '**Actual expenses and both parents’ resources.**',
-      '**Urgent protection.**',
+      'Authority over residence and travel.',
+      'Consent or court order.',
+      'Best interests and continuing contact.',
+      'Passports, entry, exit, immigration, and registration.',
+      'Recognition and enforcement.',
+      'Actual expenses and both parents’ resources.',
+      'Urgent protection.',
       'Agreement that a child will live in Korea does not by itself fix support at Korean cost-of-living levels.',
       'Do not state or imply that the 1980 Hague Child Abduction Convention automatically governs Taiwan.',
       'Cross-border removal, retention, and return questions require advice and analysis in every relevant jurisdiction',
@@ -1143,10 +1143,10 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact authority-over-residence relocation item without habitual-residence wording', () => {
     const section = sectionBody(parsed.content, headings[9]);
     const expectedItem =
-      '1. **Authority over residence and travel.** Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?';
-    const itemStart = section.indexOf('1. **Authority over residence and travel.**');
+      '1. Authority over residence and travel. Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?';
+    const itemStart = section.indexOf('1. Authority over residence and travel.');
     const nextItemStart = section.indexOf(
-      '\n2. **Consent or court order.**',
+      '\n2. Consent or court order.',
       itemStart,
     );
 
@@ -1159,12 +1159,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact best-interests and continuing-contact relocation item', () => {
     const section = sectionBody(parsed.content, headings[9]);
     const expectedItem =
-      '3. **Best interests and continuing contact.** How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent? A workable plan should address the frequency of contact, stays during school holidays, travel costs, and handover locations.';
+      '3. Best interests and continuing contact. How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent? A workable plan should address the frequency of contact, stays during school holidays, travel costs, and handover locations.';
     const itemStart = section.indexOf(
-      '3. **Best interests and continuing contact.**',
+      '3. Best interests and continuing contact.',
     );
     const nextItemStart = section.indexOf(
-      '\n4. **Passports, entry, exit, immigration, and registration.**',
+      '\n4. Passports, entry, exit, immigration, and registration.',
       itemStart,
     );
 
@@ -1180,7 +1180,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'Organize the materials not as a collection intended to pressure the other party, but as records that accurately explain jurisdiction, procedure, the facts, and the child’s needs. Preparing the following nine categories so that both the chronology of the case and the source of each original document are clear can reduce the risk of confusing different claims and deadlines.';
     const introStart = `## ${headings[10]}\n\n`.length;
     const firstItemStart = section.indexOf(
-      '\n\n1. **Identity, status, and addresses.**',
+      '\n\n1. Identity, status, and addresses.',
     );
 
     expect(firstItemStart).toBeGreaterThan(-1);
@@ -1194,12 +1194,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact identity, status, and address evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '1. **Identity, status, and addresses.** Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address. Note any discrepancy between the information shown in the documents and where each party actually lives now or the address at which each party can be served.';
+      '1. Identity, status, and addresses. Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address. Note any discrepancy between the information shown in the documents and where each party actually lives now or the address at which each party can be served.';
     const itemStart = section.indexOf(
-      '1. **Identity, status, and addresses.**',
+      '1. Identity, status, and addresses.',
     );
     const nextItemStart = section.indexOf(
-      '\n2. **Divorce instruments and court papers.**',
+      '\n2. Divorce instruments and court papers.',
       itemStart,
     );
 
@@ -1218,12 +1218,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact divorce instruments and court papers evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '2. **Divorce instruments and court papers.** Collect and organize by procedure any written mutual-consent divorce agreement; documentation of how the witnesses confirmed the spouses’ genuine intent to divorce; court papers; records of service; mediation and settlement records; judgments; and documents proving finality.';
+      '2. Divorce instruments and court papers. Collect and organize by procedure any written mutual-consent divorce agreement; documentation of how the witnesses confirmed the spouses’ genuine intent to divorce; court papers; records of service; mediation and settlement records; judgments; and documents proving finality.';
     const itemStart = section.indexOf(
-      '2. **Divorce instruments and court papers.**',
+      '2. Divorce instruments and court papers.',
     );
     const nextItemStart = section.indexOf(
-      '\n3. **Foreign marriage or divorce records.**',
+      '\n3. Foreign marriage or divorce records.',
       itemStart,
     );
 
@@ -1239,12 +1239,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact foreign marriage or divorce records evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '3. **Foreign marriage or divorce records.** For foreign marriage and divorce records and foreign judgments or certificates, check authentication by a Taiwan overseas mission or other competent authority; the Chinese translation and whether it has been certified or notarized; and their recognition, legal effect, and registration status in Taiwan.';
+      '3. Foreign marriage or divorce records. For foreign marriage and divorce records and foreign judgments or certificates, check authentication by a Taiwan overseas mission or other competent authority; the Chinese translation and whether it has been certified or notarized; and their recognition, legal effect, and registration status in Taiwan.';
     const itemStart = section.indexOf(
-      '3. **Foreign marriage or divorce records.**',
+      '3. Foreign marriage or divorce records.',
     );
     const nextItemStart = section.indexOf(
-      '\n4. **Matrimonial property and debts.**',
+      '\n4. Matrimonial property and debts.',
       itemStart,
     );
 
@@ -1260,12 +1260,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact matrimonial property and debts evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '4. **Matrimonial property and debts.** Identify the applicable matrimonial-property agreement and property regime. Link every asset and debt—and, where applicable, its registered titleholder and the source and timing of acquisition—to a complete inventory together with records of fund transfers, dispositions, loans, repayments, taxes, and valuations.';
+      '4. Matrimonial property and debts. Identify the applicable matrimonial-property agreement and property regime. Link every asset and debt—and, where applicable, its registered titleholder and the source and timing of acquisition—to a complete inventory together with records of fund transfers, dispositions, loans, repayments, taxes, and valuations.';
     const itemStart = section.indexOf(
-      '4. **Matrimonial property and debts.**',
+      '4. Matrimonial property and debts.',
     );
     const nextItemStart = section.indexOf(
-      '\n5. **Alleged divorce-ground chronology.**',
+      '\n5. Alleged divorce-ground chronology.',
       itemStart,
     );
 
@@ -1284,12 +1284,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact alleged divorce-ground chronology evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '5. **Alleged divorce-ground chronology.** Create a neutral timeline of the events and their timing underlying the alleged grounds for divorce. Preserve lawfully obtained communications, medical and police records, and other evidence in their original state. Distinguish speculation from directly verified facts.';
+      '5. Alleged divorce-ground chronology. Create a neutral timeline of the events and their timing underlying the alleged grounds for divorce. Preserve lawfully obtained communications, medical and police records, and other evidence in their original state. Distinguish speculation from directly verified facts.';
     const itemStart = section.indexOf(
-      '5. **Alleged divorce-ground chronology.**',
+      '5. Alleged divorce-ground chronology.',
     );
     const nextItemStart = section.indexOf(
-      '\n6. **Each child’s situation.**',
+      '\n6. Each child’s situation.',
       itemStart,
     );
 
@@ -1305,10 +1305,10 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact each child’s situation evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '6. **Each child’s situation.** Compile information on each child’s age, health, education, residence, caregiving history and current care arrangements, views appropriate to the child’s stage of development, relationship with each parent, and safety and stability, all from the perspective of the child’s best interests.';
-    const itemStart = section.indexOf('6. **Each child’s situation.**');
+      '6. Each child’s situation. Compile information on each child’s age, health, education, residence, caregiving history and current care arrangements, views appropriate to the child’s stage of development, relationship with each parent, and safety and stability, all from the perspective of the child’s best interests.';
+    const itemStart = section.indexOf('6. Each child’s situation.');
     const nextItemStart = section.indexOf(
-      '\n7. **Support, contact, and relocation plans.**',
+      '\n7. Support, contact, and relocation plans.',
       itemStart,
     );
 
@@ -1326,12 +1326,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact support, contact, and relocation plans evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '7. **Support, contact, and relocation plans.** Compile together any current child-related agreements and court proceedings, child-support payment records and actual expenses, the history of contact or visitation, travel documents and itineraries, and any specific plan for international relocation.';
+      '7. Support, contact, and relocation plans. Compile together any current child-related agreements and court proceedings, child-support payment records and actual expenses, the history of contact or visitation, travel documents and itineraries, and any specific plan for international relocation.';
     const itemStart = section.indexOf(
-      '7. **Support, contact, and relocation plans.**',
+      '7. Support, contact, and relocation plans.',
     );
     const nextItemStart = section.indexOf(
-      '\n8. **Deadlines calculated from correct triggering events.**',
+      '\n8. Deadlines calculated from correct triggering events.',
       itemStart,
     );
 
@@ -1350,12 +1350,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact triggering-event deadlines evidence item', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '8. **Deadlines calculated from correct triggering events.** Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event. Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.';
+      '8. Deadlines calculated from correct triggering events. Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event. Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.';
     const itemStart = section.indexOf(
-      '8. **Deadlines calculated from correct triggering events.**',
+      '8. Deadlines calculated from correct triggering events.',
     );
     const nextItemStart = section.indexOf(
-      '\n9. **Privacy plan and limited disclosure.**',
+      '\n9. Privacy plan and limited disclosure.',
       itemStart,
     );
 
@@ -1373,9 +1373,9 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
-      '9. **Privacy plan and limited disclosure.** Share identification numbers, addresses, and medical, educational, or financial information concerning a spouse or child only with people and institutions that need the information and only to the extent necessary. Establish a privacy plan covering file-access permissions, methods of transmission, and disposal of copies.';
+      '9. Privacy plan and limited disclosure. Share identification numbers, addresses, and medical, educational, or financial information concerning a spouse or child only with people and institutions that need the information and only to the extent necessary. Establish a privacy plan covering file-access permissions, methods of transmission, and disposal of copies.';
     const itemStart = section.indexOf(
-      '9. **Privacy plan and limited disclosure.**',
+      '9. Privacy plan and limited disclosure.',
     );
     const prohibitionsStart = section.indexOf(
       `\n\n${evidenceProhibitionsParagraph}`,
@@ -1408,15 +1408,15 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const checklistStarts = [
-      '1. **Identity, status, and addresses.**',
-      '2. **Divorce instruments and court papers.**',
-      '3. **Foreign marriage or divorce records.**',
-      '4. **Matrimonial property and debts.**',
-      '5. **Alleged divorce-ground chronology.**',
-      '6. **Each child’s situation.**',
-      '7. **Support, contact, and relocation plans.**',
-      '8. **Deadlines calculated from correct triggering events.**',
-      '9. **Privacy plan and limited disclosure.**',
+      '1. Identity, status, and addresses.',
+      '2. Divorce instruments and court papers.',
+      '3. Foreign marriage or divorce records.',
+      '4. Matrimonial property and debts.',
+      '5. Alleged divorce-ground chronology.',
+      '6. Each child’s situation.',
+      '7. Support, contact, and relocation plans.',
+      '8. Deadlines calculated from correct triggering events.',
+      '9. Privacy plan and limited disclosure.',
     ];
 
     let previousIndex = -1;
@@ -1501,7 +1501,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /\n\n\*\*Wei Tseng \(曾雋崴\), Taiwan Attorney\*\*$/,
+      /\n\nWei Tseng \(曾雋崴\), Taiwan Attorney$/,
     );
     expect(countOccurrences(raw, disclaimer)).toBe(1);
     expect(countOccurrences(raw, author)).toBe(1);
@@ -1561,8 +1561,8 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'all property acquired during marriage is divided half and half',
       'divided half and half',
       'average monthly consumption expenditure',
-      'both the support claim and the property-division claim must be asserted within **5 years**',
-      'within **5 years** from the date of divorce',
+      'both the support claim and the property-division claim must be asserted within 5 years',
+      'within 5 years from the date of divorce',
       'the “party at fault” (the party responsible for the breakdown of the marriage) or',
       staleArticle1052TranslationInstruction,
       'the adulterous party cannot file a divorce lawsuit',

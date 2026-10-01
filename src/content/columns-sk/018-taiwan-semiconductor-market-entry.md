@@ -85,11 +85,11 @@ Pre vedúceho taiwanskej dcérskej spoločnosti a pobočky zahraničnej spoločn
 
 Nasledujúce situácie sú hypotetické na podporu úvahy; nesľubujú určitý výsledok a nehovoria, že daný spôsob je zákonný alebo výhodnejší.
 
-**Zahraničné podniky zamerané na počiatočný vývoz.** Ak na Taiwane ešte nie sú zamestnanci ani zásoby a chcete overiť dopyt prostredníctvom nezávislého distribútora, možno najprv posúdiť dodávky, distribučný vzťah a rozsah činnosti na Taiwane. Samotná distribučná zmluva však nevyrieši všetky otázky úpravy na Taiwane.
+Zahraničné podniky zamerané na počiatočný vývoz. Ak na Taiwane ešte nie sú zamestnanci ani zásoby a chcete overiť dopyt prostredníctvom nezávislého distribútora, možno najprv posúdiť dodávky, distribučný vzťah a rozsah činnosti na Taiwane. Samotná distribučná zmluva však nevyrieši všetky otázky úpravy na Taiwane.
 
-**Zahraničné podniky, ktoré na Taiwane postupne rozširujú predaj a technickú podporu.** Ak plánujete prijímať na Taiwane a naďalej spravovať zásoby, výber platieb a podporu zákazníkov, je vhodné konkrétne porovnať štruktúru dcérskej spoločnosti a pobočky a spoločne posúdiť i zmluvnú zodpovednosť, spôsob prevádzky ústredia, dane a plán personálu.
+Zahraničné podniky, ktoré na Taiwane postupne rozširujú predaj a technickú podporu. Ak plánujete prijímať na Taiwane a naďalej spravovať zásoby, výber platieb a podporu zákazníkov, je vhodné konkrétne porovnať štruktúru dcérskej spoločnosti a pobočky a spoločne posúdiť i zmluvnú zodpovednosť, spôsob prevádzky ústredia, dane a plán personálu.
 
-**Zahraničné podniky vo fáze prieskumu trhu.** Ak pred zriadením predajnej organizácie chcete len funkcie zberu informácií a styku, možno posúdiť zastúpenie. Ak však skutočný plán zahŕňa predaj skladovaného tovaru alebo prácu na mieste, treba osobitne overiť, či sú tieto činnosti povolené.
+Zahraničné podniky vo fáze prieskumu trhu. Ak pred zriadením predajnej organizácie chcete len funkcie zberu informácií a styku, možno posúdiť zastúpenie. Ak však skutočný plán zahŕňa predaj skladovaného tovaru alebo prácu na mieste, treba osobitne overiť, či sú tieto činnosti povolené.
 
 ## 8. Na prvú konzultáciu stačí prevádzkový prehľad; nie je nutné hneď odovzdávať všetky dôverné podklady
 

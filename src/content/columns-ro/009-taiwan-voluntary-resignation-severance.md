@@ -25,7 +25,7 @@ spre deosebire de unele state, de exemplu Coreea.
 
 ​
 
-Există totuși **cazuri excepționale**.
+Există totuși cazuri excepționale.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Totuși, legea standardelor muncii (勞動基準法) dispune că,
 
 dacă salariatul dorește să pună capăt contractului de muncă în temeiul punctelor 1 sau 6 de mai sus (de exemplu pentru a încheia contractul din cauza neafilierii la asigurare),
 
-trebuie să pună capăt contractului de muncă într-un termen de **30 de zile** de la ziua în care a cunoscut această situație,
+trebuie să pună capăt contractului de muncă într-un termen de 30 de zile de la ziua în care a cunoscut această situație,
 
-sau, pentru punctul 6, într-un termen de **30 de zile** de la ziua în care a cunoscut prejudiciul produs.
+sau, pentru punctul 6, într-un termen de 30 de zile de la ziua în care a cunoscut prejudiciul produs.
 
 Salariatul trebuie deci să stăpânească bine termenul.
 
@@ -89,7 +89,7 @@ indemnizația poate să nu fie plătită sau poate fi pretinsă.
 
 De aceea, în conflictele de muncă (勞資糾紛) din Taiwan,
 
-„**timpul**” este foarte important.
+„timpul” este foarte important.
 
 În majoritatea cazurilor, partea care se pregătește din timp este într-o poziție mai bună pentru a-și apăra drepturile.
 

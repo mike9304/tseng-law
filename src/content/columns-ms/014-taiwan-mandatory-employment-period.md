@@ -191,4 +191,4 @@ Dengan menyusun dokumen dalam tertib masa, sebaiknya nyatakan bersama tarikh pem
 
 Teks ini ialah dokumen bertujuan pendidikan untuk menjelaskan secara umum perjanjian tempoh kerja minimum di Taiwan, pemulangan kos latihan dan bayaran pendahuluan serta notis peletakan jawatan; ini bukan nasihat undang-undang untuk kes kerja konkret. Kesahan perjanjian dan skop tanggungjawab boleh berbeza menurut jenis dan kandungan kontrak, latihan dan kos sebenar, tujuan pampasan dan komunikasinya, tempoh kerja, sebab terhapus dan bukti. Sebelum merumuskan peletakan jawatan, menerima potongan gaji, bersetuju pemulangan atau menjawab pertikaian, sebaiknya sahkan sumber rasmi terbaharu dan keadaan individu.
 
-**Wei Tseng (曾雋崴), peguam di Taiwan**
+Wei Tseng (曾雋崴), peguam di Taiwan

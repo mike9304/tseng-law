@@ -93,9 +93,9 @@ W razie braku zgody z opinią ekspertyzy można wnioskować o ponowne rozpatrzen
 
 Roszczenie oparte na art. 184 Kodeksu cywilnego zakłada bezprawne naruszenie prawa, związek przyczynowy z wypadkiem i dowód szkody. Sam fakt, że doszło do wypadku, nie oznacza, że wszystkie poniższe pozycje zostaną uznane. Art. 216 Kodeksu cywilnego jest kryterium ustalenia zakresu szkody rzeczywistej i utraconej korzyści (所失利益).
 
-- **Obrażenia**: Według art. 193 Kodeksu cywilnego szkoda podlegająca naprawieniu może obejmować potrzebne koszty medyczne (醫療費用), dodatkowe koszty życia codziennego, takie jak koszty opieki (看護費用), transportu na leczenie (就醫交通費) i pomocy technicznej, a także utratę dochodów (收入損失) przez rzeczywistą niezdolność do pracy oraz zmniejszenie zdolności do pracy (勞動能力減損). Według art. 195 Kodeksu cywilnego można też dochodzić szkody niemajątkowej.
-- **Śmierć**: Według art. 192 Kodeksu cywilnego, gdy zachodzi podstawa, naprawienie szkody może obejmować koszty medyczne przed śmiercią i koszty zwiększonych potrzeb życiowych, koszty pogrzebu (殯葬費) oraz utratę alimentów (扶養利益損失) osoby, która miała ustawowe prawo do alimentów. Według art. 194 Kodeksu cywilnego szkody niemajątkowej mogą też dochodzić niektórzy krewni.
-- **Majątek**: Według art. 196 Kodeksu cywilnego można dochodzić uzasadnionej rzeczywistej szkody majątkowej, w tym kosztów naprawy pojazdu albo utraty wartości.
+- Obrażenia: Według art. 193 Kodeksu cywilnego szkoda podlegająca naprawieniu może obejmować potrzebne koszty medyczne (醫療費用), dodatkowe koszty życia codziennego, takie jak koszty opieki (看護費用), transportu na leczenie (就醫交通費) i pomocy technicznej, a także utratę dochodów (收入損失) przez rzeczywistą niezdolność do pracy oraz zmniejszenie zdolności do pracy (勞動能力減損). Według art. 195 Kodeksu cywilnego można też dochodzić szkody niemajątkowej.
+- Śmierć: Według art. 192 Kodeksu cywilnego, gdy zachodzi podstawa, naprawienie szkody może obejmować koszty medyczne przed śmiercią i koszty zwiększonych potrzeb życiowych, koszty pogrzebu (殯葬費) oraz utratę alimentów (扶養利益損失) osoby, która miała ustawowe prawo do alimentów. Według art. 194 Kodeksu cywilnego szkody niemajątkowej mogą też dochodzić niektórzy krewni.
+- Majątek: Według art. 196 Kodeksu cywilnego można dochodzić uzasadnionej rzeczywistej szkody majątkowej, w tym kosztów naprawy pojazdu albo utraty wartości.
 
 ## Q8. Jeżeli leczenie trwa, jak przedstawiać dokumenty kosztów medycznych?
 

@@ -124,7 +124,7 @@ describe('English litigation column 010 — gym injury damages', () => {
     const damageSection = extractSection(parsed.content, 3);
     expect(
       Array.from(
-        damageSection.matchAll(/^(\d+)\. \*\*([^*]+)\*\*:/gm),
+        damageSection.matchAll(/^(\d+)\. ([^:\n]+):/gm),
         (match) => `${match[1]}. ${match[2]}`,
       ),
     ).toEqual([
@@ -162,8 +162,8 @@ describe('English litigation column 010 — gym injury damages', () => {
       'Hello. I am Attorney Wei Tseng',
       'Here I will answer several frequently asked questions',
       'That concludes this summary of frequently asked questions and answers',
-      '**1. What legal routes may be available',
-      '**5. If a gym has liability insurance',
+      '1. What legal routes may be available',
+      '5. If a gym has liability insurance',
     ]) {
       expect(parsed.content).not.toContain(stale);
     }

@@ -25,9 +25,9 @@ Poniższe pytania i odpowiedzi mają pomóc osobom rozważającym założenie sp
 
 ​
 
-**1. Na co zwrócić uwagę przy przelewie kapitału (資本額) z zagranicy na rachunek przygotowawczy tajwańskiej spółki (公司籌備處帳戶)? (poniższy przykład dotyczy reżimu i praktyki bankowej w Korei; w innych państwach reguły wywozu kapitału i zgłoszeń dewizowych trzeba sprawdzić osobno)**
+1. Na co zwrócić uwagę przy przelewie kapitału (資本額) z zagranicy na rachunek przygotowawczy tajwańskiej spółki (公司籌備處帳戶)? (poniższy przykład dotyczy reżimu i praktyki bankowej w Korei; w innych państwach reguły wywozu kapitału i zgłoszeń dewizowych trzeba sprawdzić osobno)
 
-Co do zasady banki w Korei wymagają, aby inwestor **osobiście** stawił się w banku w Korei i przelał środki z rachunku prowadzonego na własne nazwisko.
+Co do zasady banki w Korei wymagają, aby inwestor osobiście stawił się w banku w Korei i przelał środki z rachunku prowadzonego na własne nazwisko.
 
 Przelew przez bankowość internetową albo za pośrednictwem krewnego w Korei nie jest możliwy.
 
@@ -35,9 +35,9 @@ Ponadto, zgodnie z koreańskimi przepisami o kontroli dewizowej, osoba posiadaj�
 
 Przed przelewem kapitału (資本金匯款) proszę zasięgnąć informacji w swoim głównym banku w Korei.
 
-**​**
+​
 
-**2. Przy wpłacie kapitału zakładowego, czy można przelać nowe dolary tajwańskie (新臺幣, TWD) z osobistego rachunku na Tajwanie na rachunek przygotowawczy tajwańskiej spółki?**
+2. Przy wpłacie kapitału zakładowego, czy można przelać nowe dolary tajwańskie (新臺幣, TWD) z osobistego rachunku na Tajwanie na rachunek przygotowawczy tajwańskiej spółki?
 
 Jest to możliwe, lecz należy przedłożyć dokumenty potwierdzające pochodzenie środków w nowych dolarach tajwańskich uzyskanych na Tajwanie.
 
@@ -47,9 +47,9 @@ Jeżeli chodzi o dywidendy i zyski z inwestycji w przedsiębiorstwo na Tajwanie,
 
 Jeżeli przelew następuje z rachunku bankowego w Korei, nie trzeba załączać dokumentów dotyczących pochodzenia środków.
 
-**​**
+​
 
-**3. Po wpływie kapitału na rachunek przygotowawczy, kiedy można go przekształcić w zwykły rachunek spółki (正式公司帳戶)?**
+3. Po wpływie kapitału na rachunek przygotowawczy, kiedy można go przekształcić w zwykły rachunek spółki (正式公司帳戶)?
 
 Co do zasady, po otrzymaniu dokumentów rejestracji osoby prawnej (法人登記文件),
 
@@ -57,17 +57,17 @@ osoba odpowiedzialna (負責人) może udać się do banku i przekształcić rac
 
 Jednak ponieważ wewnętrzne reguły poszczególnych banków (銀行) się różnią, jeżeli kapitał trzeba wykorzystać pilnie, należy najpierw zwrócić się do banku.
 
-**​**
+​
 
-**4. Po przekształceniu rachunku przygotowawczego w rachunek zwykły, czy można od razu korzystać z bankowości internetowej?**
+4. Po przekształceniu rachunku przygotowawczego w rachunek zwykły, czy można od razu korzystać z bankowości internetowej?
 
 Zależy to od banku; co do zasady potrzebny jest co najmniej numer telefonu komórkowego.
 
 Niektóre banki mogą nakładać dodatkowe wymagania, na przykład okres korzystania z rachunku wynoszący co najmniej 6 miesięcy po utworzeniu.
 
-**​**
+​
 
-**5. Czy spółka może zatrudniać pracowników o obywatelstwie zagranicznym?**
+5. Czy spółka może zatrudniać pracowników o obywatelstwie zagranicznym?
 
 A. Pierwszy pracownik: kierownik przedsiębiorstwa zwykłej inwestycji Chińczyków zamorskich lub cudzoziemców (一般僑外投資事業主管工作). Kryterium „pracy o charakterze specjalistycznym lub technicznym” z punktu B poniżej nie stosuje się, lecz stosuje się przesłanki adresata, w tym przesłankę kierownika (經理人) spółki, której wkład Chińczyków zamorskich lub cudzoziemców przekracza 1/3, a także przesłanki wyników pracodawcy dotyczące kapitału i obrotu (art. 38 i 39 standardów badania).
 

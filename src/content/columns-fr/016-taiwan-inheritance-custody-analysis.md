@@ -151,4 +151,4 @@ Sur les pages officielles de réglementation, vous confirmez la date de réforme
 
 Cet article est un matériel à des fins éducatives pour expliquer de façon générale le régime de succession, le régime patrimonial conjugal, l’autorité parentale et la tutelle des mineurs à Taïwan ; ce n’est pas un conseil juridique pour une affaire concrète de succession ou de famille. La loi applicable, la procédure et le résultat peuvent varier selon le cercle des héritiers, le testament, le patrimoine et les dettes, le régime matrimonial, les décisions judiciaires existantes et les éléments internationaux. Avant de calculer des délais comme la renonciation ou la déclaration fiscale, ou de disposer du patrimoine, veuillez confirmer les sources officielles les plus récentes et les circonstances individuelles.
 
-**L’avocate Wei Tseng (曾雋崴)**
+L’avocate Wei Tseng (曾雋崴)

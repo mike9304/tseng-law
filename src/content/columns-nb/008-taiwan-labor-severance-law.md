@@ -40,9 +40,9 @@ Sier arbeidstakeren selv opp, trenger selskapet ikke å utbetale sluttvederlag.
 
 Begår arbeidstakeren imidlertid et delikt (侵權行為),
 
-**krenker vedkommende interne regler (工作規則),**
+krenker vedkommende interne regler (工作規則),
 
-**eller uteblir uten grunn 3 dager på rad fra arbeidet (曠工),**
+eller uteblir uten grunn 3 dager på rad fra arbeidet (曠工),
 
 kan selskapet avskjedige uten å utbetale sluttvederlag.
 
@@ -52,7 +52,7 @@ Oversikten står i en enkel tabell.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Art** | **Økonomisk oppsigelse (資遣員工, 經濟解僱)** | **Disiplinær avskjed (解僱員工, 懲戒解僱)** | **Arbeidstakerens egen oppsigelse (員工自請離職)** |
+| Art | Økonomisk oppsigelse (資遣員工, 經濟解僱) | Disiplinær avskjed (解僱員工, 懲戒解僱) | Arbeidstakerens egen oppsigelse (員工自請離職) |
 | Betydning | Består det hos arbeidsgiveren på grunn av forretningssituasjonen behov for personaltilpasning, ligger grunnen i arbeidsgiverens virksomhetsområde og ikke i arbeidstakerens ansvar. Derfor skal arbeidsgiveren overholde varselfristen (預告期間) og utbetale sluttvederlag, så arbeidstakerens ulemper utlignes balansert. | Begår arbeidstakeren en rettsstridig eller upassende handling, kan arbeidsgiveren straks bringe arbeidsavtalen (勞動契約) til opphør uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Dette er 1 av arbeidsgiverens disiplinærbeføyelser. | Arbeidstakeren er fri til når som helst å bringe avtalen til opphør, men skal etter ansettelsens varighet overholde varselfristen, slik at arbeidsgiveren får tid til overlevering og til å finne en erstatter. |
 | Vilkår | Ja  (artikkel 11 i den taiwanske loven om arbeidsnormer) | Ja  (artikkel 12 i den taiwanske loven om arbeidsnormer) | Ingen |
 | Forutgående varsel | Påkrevd | Ikke påkrevd | Påkrevd |
@@ -194,17 +194,17 @@ stiller overdrevne krav
 
 eller omplasserer medarbeidere til merkelige stillinger,
 
-**skal du sikre bevis.**
+skal du sikre bevis.
 
-**dine normale fremmøteregistreringer,**
+dine normale fremmøteregistreringer,
 
-**overarbeidsregistre, prestasjonsregistre,**
+overarbeidsregistre, prestasjonsregistre,
 
-**interne regler, e-postutveksling med kolleger og overordnede**
+interne regler, e-postutveksling med kolleger og overordnede
 
-**samt samtaleopptak med overordnede —**
+samt samtaleopptak med overordnede —
 
-**sikre bevis som er gunstige for deg.**
+sikre bevis som er gunstige for deg.
 
 ​
 

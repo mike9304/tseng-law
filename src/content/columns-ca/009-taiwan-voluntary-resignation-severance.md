@@ -25,7 +25,7 @@ Això difereix d’alguns ordenaments, com el coreà.
 
 ​
 
-Tanmateix, hi ha **casos excepcionals**.
+Tanmateix, hi ha casos excepcionals.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Tanmateix, la Llei de normes laborals (勞動基準法) disposa un termini.
 
 Si el treballador desitja posar fi al contracte de treball pels apartats 1 o 6 anteriors (per exemple, per acabar el contracte per manca d’afiliació a l’assegurança), el termini és curt.
 
-Ha de posar fi al contracte de treball dins de **30 dies** des del dia en què va conèixer aquesta situació.
+Ha de posar fi al contracte de treball dins de 30 dies des del dia en què va conèixer aquesta situació.
 
-O, en el cas de l’apartat 6, dins de **30 dies** des del dia en què va conèixer el resultat del dany.
+O, en el cas de l’apartat 6, dins de 30 dies des del dia en què va conèixer el resultat del dany.
 
 Per això el treballador ha de controlar bé el termini.
 
@@ -89,7 +89,7 @@ Es pot no pagar la indemnització o es pot exigir.
 
 Per això, en els conflictes laborals (勞資糾紛) de Taiwan el moment en què s’actua és decisiu.
 
-El **temps** és molt important.
+El temps és molt important.
 
 En la majoria dels casos, qui es prepara per endavant està en millor posició per defensar els seus drets; això no promet un resultat.
 

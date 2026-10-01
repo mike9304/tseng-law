@@ -196,4 +196,4 @@ De følgende primære kilder (niveau 1) er udgangspunkt for gennemgangen af denn
 
 Denne artikel er undervisningsmateriale til almindelig belysning af skilsmisse, internationale familiesager, ægtefælleformue og mindreårige børn i Taiwan, og ingen retsrådgivning for en individuel sag. Procedure og udfald kan variere efter kompetence, den anvendelige ret, anerkendelse af udenlandske afgørelser, ægteskabelig stilling og civilstand, formueordning, bestående aftale eller afgørelse om barnet, kendsgerninger og beviser samt de nyeste officielle forskrifter. Registrerings-, retsmiddel-, kravs- og fuldbyrdelsesfrister skal, før handlingen, punktvis efterprøves efter det nøjagtige begyndelsespunkt for hver ret og hver procedure.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

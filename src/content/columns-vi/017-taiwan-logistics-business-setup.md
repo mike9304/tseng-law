@@ -148,4 +148,4 @@ Việc làm không có giấy phép có thể bị áp dụng tiền phạt hàn
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích các chế độ pháp luật một cách khái quát, không phải là ý kiến pháp lý cho một vụ việc cụ thể. Vì tiêu chuẩn cấp phép, mẫu đơn và thực tiễn của cơ quan có thẩm quyền có thể thay đổi, xin quý vị xác nhận tài liệu chính thức mới nhất cùng hoàn cảnh riêng của mình trước khi thực hiện đầu tư hoặc ký kết hợp đồng.
 
-**Luật sư Wei Tseng (曾雋崴)**
+Luật sư Wei Tseng (曾雋崴)

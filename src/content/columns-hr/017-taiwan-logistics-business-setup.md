@@ -148,4 +148,4 @@ Na rad bez dozvole mogu se primijeniti upravna kazna i nalog za napuštanje Tajv
 
 Ovaj je članak podloga informativne i obrazovne naravi za opće objašnjenje pravnog režima i nije savjet u konkretnom predmetu. Budući da se mjerila dozvola, obrasci zahtjeva i praksa nadležnog tijela mogu mijenjati, prije izvršenja ulaganja ili ugovora potvrdite ažurirane službene izvore i okolnosti predmeta.
 
-**Odvjetnica Wei Tseng (曾雋崴)**
+Odvjetnica Wei Tseng (曾雋崴)

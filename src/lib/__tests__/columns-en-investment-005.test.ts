@@ -32,7 +32,7 @@ const questions = [
 ];
 const answerParagraphs = [
   [
-    "Korean banks generally require the investor **personally** to visit a bank in Korea and remit the funds from the investor's own account.",
+    "Korean banks generally require the investor personally to visit a bank in Korea and remit the funds from the investor's own account.",
     "Remitting the funds through online banking or through a relative or acquaintance in Korea on the investor's behalf is not permitted.",
     'In addition, under Korea\'s foreign exchange laws, a Korean national who establishes or acquires an equity interest in a foreign company must file an "overseas direct investment report." The report must be filed when the capital is remitted to the Taiwan company, and failure to file may result in sanctions for violating foreign exchange laws.',
     'Before remitting the capital, please consult the Korean bank with which you normally do business.',
@@ -64,9 +64,9 @@ function sectionAfterQuestion(
   question: string,
   nextQuestion?: string,
 ) {
-  const after = content.split(`**${question}**\n\n`)[1] ?? '';
+  const after = content.split(`${question}\n\n`)[1] ?? '';
   return nextQuestion
-    ? after.split(`\n\n**${nextQuestion}**`)[0]
+    ? after.split(`\n\n${nextQuestion}`)[0]
     : after.split('\n\nPlease contact us')[0];
 }
 
@@ -138,7 +138,7 @@ describe('English investment column 005 — faithful Korean-source translation',
     expect(parsed.content).not.toMatch(/^## /m);
     expect(
       Array.from(
-        parsed.content.matchAll(/^\*\*(\d+\..+)\*\*$/gm),
+        parsed.content.matchAll(/^(\d+\..+)$/gm),
         (match) => match[1],
       ),
     ).toEqual(questions);
@@ -153,7 +153,7 @@ describe('English investment column 005 — faithful Korean-source translation',
       );
       const paragraphs = section.split('\n\n').filter(Boolean);
       expect(paragraphs).toEqual(answerParagraphs[index]);
-      expect(post?.content).toContain(`**${question}**`);
+      expect(post?.content).toContain(`${question}`);
     }
   });
 
@@ -168,7 +168,7 @@ describe('English investment column 005 — faithful Korean-source translation',
 
   it('restores the Korean-source capital-remittance requirements without additions', () => {
     const required = [
-      'require the investor **personally** to visit a bank in Korea',
+      'require the investor personally to visit a bank in Korea',
       "through a relative or acquaintance in Korea on the investor's behalf is not permitted",
       'must file an "overseas direct investment report."',
       'The report must be filed when the capital is remitted to the Taiwan company',
@@ -260,7 +260,7 @@ describe('English investment column 005 — faithful Korean-source translation',
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(591);
+    expect(visibleWordCount).toBe(586);
     expect(calculatedMinutes).toBe(3);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

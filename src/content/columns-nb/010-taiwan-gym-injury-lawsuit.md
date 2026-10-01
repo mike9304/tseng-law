@@ -59,7 +59,7 @@ Overskriftene på medieomtalen, nettinnleggene og de juridiske kommentarene om d
 
 ![Fikk en koreansk mannlig student en diskusprolaps ved et markløft på 90 kg under personlig trening?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Fikk en koreansk mannlig student en diskusprolaps ved et markløft på 90 kg under personlig trening?**
+Fikk en koreansk mannlig student en diskusprolaps ved et markløft på 90 kg under personlig trening?
 
 Det praktiske ved denne saken er at den viser at ansvaret ikke straks fastlegges ved det at en skade er oppstått i et treningssenter (健身房). Innholdet i sikkerhetsplikten (安全義務) hos tjenesteyteren, den konkrete instruksjonen som ble gitt og tilsidesettelsen av omhyggelighetsplikten (注意義務), årsaksforbindelsen mellom skade og atferd samt skadens omfang vurderes på grunnlag av dokumentene i hver sak. Betingelsene og fristene for straffesaken (刑事) og for den sivile saken (民事) skiller seg likedan, så dokumentene straks etter ulykken må ordnes hver for seg.
 
@@ -93,13 +93,13 @@ Kan ulykkens omstendigheter oppfylle bestanddelene av en forbrytelse, kan det hu
 
 De erstatningspostene hvis krav kan undersøkes, er følgende. Den faktiske anerkjennelsen og beløpet avhenger av nødvendigheten av hver utgift, årsaksforbindelsen med ulykken, bevismaterialet, ansvarsforholdet og rettens vurdering.
 
-1. **Legeutgifter**: Utgiftene som faktisk er påløpt til konsultasjon, undersøkelser, behandling, legemidler og gjenopptrening bevises ved kvitteringene og journalen.
-2. **Utgifter til pleie eller bistand (看護費用)**: Om det, sett i lys av skadens grad og behandlingsforløpet, var behov for pleie, og om periode og kostnad er passende, undersøkes med de medisinske og utgiftsmessige dokumentene.
-3. **Transportutgifter**: De utgiftene som er nødvendige for å reise til og fra behandlingsstedet, bevises ved reiseoversikten, kvitteringene og lignende dokumenter.
-4. **Tap av arbeidsevne (勞動能力減損)**: Anerkjennes restskader og en vedvarende nedsettelse av arbeidsevnen, kan det vurderes i sammenheng med medisinske og yrkesmessige dokumenter, uføregraden, yrket og inntekten samt det gjenværende arbeidslivet. Uføreprosenten alene fastsetter ikke erstatningen, og tapet beregnes ikke automatisk frem til pensjonsalder.
-5. **Inntektstap i gjenopprettingsperioden (收入損失)**: Den perioden der det på grunn av behandling eller hvile faktisk ikke kunne arbeides, og den derav følgende nedsettelsen av inntekten, skal bevises ved lønns-, skatte- og ansettelsesdokumenter.
-6. **Ikke-økonomisk tap (非財產上損害)**: Oppreisningen fastsettes av retten ut fra faktorer i hver sak, slik som skadens grad, behandlingsperioden, restskadene og partens konkrete omstendigheter.
-7. **Pønalerstatning (懲罰性賠償金)**: Det finnes en regel hvoretter det i en tvist som loven om forbrukerbeskyttelse finner anvendelse, hvis tapet er forårsaket av virksomhetens forsett, kan kreves inntil 5 ganger det faktiske tapet; ved grov uaktsomhet inntil 3 ganger; og ved uaktsomhet inntil 1 gang det faktiske tapet. Om [artikkel 51 i den taiwanske loven om forbrukerbeskyttelse](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) finner anvendelse på saken, og om det faktisk tilkjennes pønalerstatning, og med hvilket beløp, avhenger av rettens vurdering av de konkrete betingelsene og bevisene (消費者保護法).
+1. Legeutgifter: Utgiftene som faktisk er påløpt til konsultasjon, undersøkelser, behandling, legemidler og gjenopptrening bevises ved kvitteringene og journalen.
+2. Utgifter til pleie eller bistand (看護費用): Om det, sett i lys av skadens grad og behandlingsforløpet, var behov for pleie, og om periode og kostnad er passende, undersøkes med de medisinske og utgiftsmessige dokumentene.
+3. Transportutgifter: De utgiftene som er nødvendige for å reise til og fra behandlingsstedet, bevises ved reiseoversikten, kvitteringene og lignende dokumenter.
+4. Tap av arbeidsevne (勞動能力減損): Anerkjennes restskader og en vedvarende nedsettelse av arbeidsevnen, kan det vurderes i sammenheng med medisinske og yrkesmessige dokumenter, uføregraden, yrket og inntekten samt det gjenværende arbeidslivet. Uføreprosenten alene fastsetter ikke erstatningen, og tapet beregnes ikke automatisk frem til pensjonsalder.
+5. Inntektstap i gjenopprettingsperioden (收入損失): Den perioden der det på grunn av behandling eller hvile faktisk ikke kunne arbeides, og den derav følgende nedsettelsen av inntekten, skal bevises ved lønns-, skatte- og ansettelsesdokumenter.
+6. Ikke-økonomisk tap (非財產上損害): Oppreisningen fastsettes av retten ut fra faktorer i hver sak, slik som skadens grad, behandlingsperioden, restskadene og partens konkrete omstendigheter.
+7. Pønalerstatning (懲罰性賠償金): Det finnes en regel hvoretter det i en tvist som loven om forbrukerbeskyttelse finner anvendelse, hvis tapet er forårsaket av virksomhetens forsett, kan kreves inntil 5 ganger det faktiske tapet; ved grov uaktsomhet inntil 3 ganger; og ved uaktsomhet inntil 1 gang det faktiske tapet. Om [artikkel 51 i den taiwanske loven om forbrukerbeskyttelse](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) finner anvendelse på saken, og om det faktisk tilkjennes pønalerstatning, og med hvilket beløp, avhenger av rettens vurdering av de konkrete betingelsene og bevisene (消費者保護法).
 
 ## 5. Kan, også når treningssenteret har en ansvarsforsikring (責任保險), erstatningens eksistens og beløp bestrides?
 

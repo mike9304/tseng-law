@@ -45,6 +45,17 @@ function makeCollection(): BuilderCmsCollection {
 }
 
 describe('cms-collection-datasets (WIX-PERFECT #6: data-driven binding)', () => {
+  it('removes emphasis from direct column bindings while preserving other collections', () => {
+    const collection = makeCollection();
+    collection.records[0].fields.title = '**제목**';
+    collection.records[0].fields.summary = '**0.3%**로 적용';
+    expect(resolveCmsCollectionDataset(collection)[0].primaryLabel).toBe('**제목**');
+    collection.collectionId = 'columns';
+    const row = resolveCmsCollectionDataset(collection)[0];
+    expect(row.primaryLabel).toBe('제목');
+    expect(row.secondaryLabel).toBe('0.3%로 적용');
+    expect(row.fieldValues).toMatchObject({ title: '제목', summary: '0.3%로 적용' });
+  });
   it('builds and round-trips a stable cms target id', () => {
     const id = cmsCollectionTargetId('recipes');
     expect(id).toBe('cms.recipes.list');

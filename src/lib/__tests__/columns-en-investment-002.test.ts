@@ -74,7 +74,7 @@ const internalLinks = [
 ];
 const disclaimer =
   'This article provides general legal information and educational material about closing a Taiwan company and handling company property; it is not legal advice for any specific matter. The appropriate dissolution, liquidation, capital-reduction, and business-suspension procedures and tax filings may vary with the company form, articles of incorporation, financial condition, creditors, foreign investment, and individual transactions, so the particular matter should be reviewed separately before any resolution is adopted or funds are transferred.';
-const author = '**Wei Tseng (曾雋崴), Taiwan Attorney**';
+const author = 'Wei Tseng (曾雋崴), Taiwan Attorney';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -316,7 +316,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     );
     expect(post?.content).toContain(disclaimer);
     expect(post?.content.trimEnd()).toMatch(
-      /\*\*Wei Tseng \(曾雋崴\), Taiwan Attorney\*\*$/,
+      /Wei Tseng \(曾雋崴\), Taiwan Attorney$/,
     );
   });
 

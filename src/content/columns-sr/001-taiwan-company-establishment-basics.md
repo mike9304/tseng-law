@@ -142,4 +142,4 @@ Obim naših usluga možete videti na stranici [U kojim stvarima zastupamo klijen
 
 Ovaj članak je opšteinformativnog i edukativnog karaktera i odnosi se na osnivanje društva na Tajvanu i povezana pravila; nije pravni niti poreski savet u konkretnoj stvari i ne obećava određeni ishod. Potrebni postupci i rezultati mogu se razlikovati prema strukturi investicije, grani, državljanstvu i boravišnom statusu podnosioca i najnovijoj praksi nadležnog organa; pre izvršenja investicije, ugovora ili zapošljavanja treba oceniti najnovije zvanične izvore i okolnosti sopstvene stvari.
 
-**Advokatkinja Wei Tseng (曾雋崴)**
+Advokatkinja Wei Tseng (曾雋崴)

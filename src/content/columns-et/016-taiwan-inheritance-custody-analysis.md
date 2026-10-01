@@ -151,4 +151,4 @@ Ametlikel õiguslehtedel kontrollitakse sätte muutmise päeva ja jõustumise p�
 
 See artikkel on üldine selgitus, et kirjeldada pärimise, abieluvararežiimi, hooldusõiguse ja alaealise eestkoste korda Taiwanis; see ei ole õigusnõuanne konkreetses pärandi- või pereasjas. Kohalduv õigus, menetlus ja tulemus võivad sõltuda pärijate ringist, testamendist, varast ja võlast, abielurežiimist, olemasolevatest kohtuotsustest ja rahvusvahelistest elementidest. Enne tähtaegade arvutamist, nagu loobumine või maksudeklaratsioon, või vara käsutamist kontrollitakse uusimaid ametlikke allikaid ja individuaalsed asjaolud.
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)

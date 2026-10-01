@@ -191,4 +191,4 @@ Ao ordenar os documentos em ordem temporal, convém indicar em conjunto a data d
 
 Este texto é um documento com fim educativo para explicar de forma geral o pacto de período mínimo de trabalho em Taiwan, a restituição dos encargos de formação e da prestação antecipada e o pré-aviso de demissão; não é um parecer jurídico para um assunto de trabalho concreto. A validade do pacto e a extensão da responsabilidade podem variar segundo o tipo e o teor do contrato, a formação e o custo reais, a finalidade da contrapartida e a sua comunicação, o período de trabalho, a causa de extinção e as provas. Antes de formular a demissão, de aceitar uma retenção salarial, de aceder a um acordo de restituição ou de responder a um litígio, convém confirmar as fontes oficiais mais recentes e as circunstâncias individuais.
 
-**Wei Tseng (曾雋崴), advogada em Taiwan**
+Wei Tseng (曾雋崴), advogada em Taiwan

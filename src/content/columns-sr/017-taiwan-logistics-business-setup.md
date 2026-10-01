@@ -148,4 +148,4 @@ Na rad bez dozvole mogu se primeniti upravna novčana kazna i nalog za napuštan
 
 Ovaj tekst je opšteinformativnog i edukativnog karaktera i odnosi se na opšti pravni režim; nije savet u konkretnoj stvari. Pošto se merila dozvola, obrasci zahteva i praksa nadležnog organa mogu menjati, pre izvršenja investicije ili ugovora treba potvrditi ažurirane zvanične izvore i okolnosti stvari.
 
-**Advokatkinja Wei Tseng (曾雋崴)**
+Advokatkinja Wei Tseng (曾雋崴)

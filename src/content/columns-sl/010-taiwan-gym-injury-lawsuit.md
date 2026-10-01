@@ -59,7 +59,7 @@ Naslovi tiskovnih poročil, spletnih objav in pravnih komentarjev k tej zadevi, 
 
 ![Ali je pri korejskem študentu prišlo do rupture medvretenčne ploščice, ko je pri osebni vadbi izvajal mrtvi dvig 90 kg?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Ali je pri korejskem študentu prišlo do rupture medvretenčne ploščice, ko je pri osebni vadbi izvajal mrtvi dvig 90 kg?**
+Ali je pri korejskem študentu prišlo do rupture medvretenčne ploščice, ko je pri osebni vadbi izvajal mrtvi dvig 90 kg?
 
 Praktični pomen te zadeve je, da pokaže, da se odgovornost ne določi takoj že s samim dejstvom, da se je poškodba zgodila v fitnesu. Vsebina varnostne dolžnosti (安全義務), ki bremeni ponudnika storitve, konkretno dano navodilo in kršitev dolžnosti skrbnosti (注意義務), vzročna zveza med poškodbo in ravnanjem ter obseg škode se presojajo po listinah vsake zadeve. Pogoji in roki kazenskega postopka in civilnega postopka se prav tako razlikujejo, zato je treba zapise takoj po nesreči urediti ločeno.
 
@@ -93,13 +93,13 @@ Posnetki so lahko po preteku dobe hrambe prepisani (影像可能被覆蓋) ali i
 
 Postavke škode, ki lahko pridejo v poštev, so naslednje. Dejansko priznanje in višina sta odvisna od nujnosti vsakega izdatka, vzročne zveze z nesrečo, dokazil, razmerja odgovornosti in presoje sodišča.
 
-1. **Zdravstveni stroški**: Izdatki, dejansko porabljeni za posvet, pregled, zdravljenje, zdravila in rehabilitacijo, se dokazujejo s potrdili in zdravstveno dokumentacijo.
-2. **Stroški nege ali oskrbe**: Ali je bila glede na stopnjo poškodbe in potek zdravljenja nega nujna ter ali sta trajanje ter strošek primerna, se presoja z zdravstveno dokumentacijo in z dokazili o izdatkih.
-3. **Potni stroški**: Izdatki, nujni za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazujejo z evidenco prevozov, potrdili in podobnimi dokazili.
-4. **Zmanjšanje delovne zmožnosti (勞動能力減損)**: Če so priznane posledice in trajno znižanje delovne zmožnosti, je mogoče ocenjevati skupaj po medicinski in poklicni dokumentaciji, stopnji okvare, poklicu in dohodku in preostalem času delovne zmožnosti. Sam odstotek okvare ne določa zneska odškodnine, niti se izguba ne izračuna samodejno do trenutka upokojitve.
-5. **Izgubljeni dohodek v času okrevanja (收入損失)**: Čas, v katerem dejansko ni bilo mogoče delati zaradi zdravljenja ali okrevanja, in iz tega izhajajoče znižanje dohodka je treba dokazati s plačilnimi listami, davčnimi evidencami in kadrovskimi evidencami.
-6. **Nepremoženjska škoda (非財產上損害)**: Znesek za duševne bolečine določi sodišče po elementih vsake zadeve, kot so stopnja poškodbe, čas zdravljenja, posledice in konkretne okoliščine stranke.
-7. **Kaznovalna odškodnina (懲罰性賠償金)**: Obstaja pravilo, po katerem je v postopku, za katerega velja zakon o varstvu potrošnikov, mogoče, če je škoda nastala z naklepom podjetja, zahtevati do 5-kratnika dejanske škode; pri hudi malomarnosti do 3-kratnika, pri malomarnosti pa do višine dejanske škode. Ali se [51. člen tajvanskega zakona o varstvu potrošnikov](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na zadevo nanaša ter ali se kaznovalna odškodnina dejansko prisodi in v kakšni višini, je odvisno od presoje sodišča glede konkretnih predpostavk ter dokazov.
+1. Zdravstveni stroški: Izdatki, dejansko porabljeni za posvet, pregled, zdravljenje, zdravila in rehabilitacijo, se dokazujejo s potrdili in zdravstveno dokumentacijo.
+2. Stroški nege ali oskrbe: Ali je bila glede na stopnjo poškodbe in potek zdravljenja nega nujna ter ali sta trajanje ter strošek primerna, se presoja z zdravstveno dokumentacijo in z dokazili o izdatkih.
+3. Potni stroški: Izdatki, nujni za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazujejo z evidenco prevozov, potrdili in podobnimi dokazili.
+4. Zmanjšanje delovne zmožnosti (勞動能力減損): Če so priznane posledice in trajno znižanje delovne zmožnosti, je mogoče ocenjevati skupaj po medicinski in poklicni dokumentaciji, stopnji okvare, poklicu in dohodku in preostalem času delovne zmožnosti. Sam odstotek okvare ne določa zneska odškodnine, niti se izguba ne izračuna samodejno do trenutka upokojitve.
+5. Izgubljeni dohodek v času okrevanja (收入損失): Čas, v katerem dejansko ni bilo mogoče delati zaradi zdravljenja ali okrevanja, in iz tega izhajajoče znižanje dohodka je treba dokazati s plačilnimi listami, davčnimi evidencami in kadrovskimi evidencami.
+6. Nepremoženjska škoda (非財產上損害): Znesek za duševne bolečine določi sodišče po elementih vsake zadeve, kot so stopnja poškodbe, čas zdravljenja, posledice in konkretne okoliščine stranke.
+7. Kaznovalna odškodnina (懲罰性賠償金): Obstaja pravilo, po katerem je v postopku, za katerega velja zakon o varstvu potrošnikov, mogoče, če je škoda nastala z naklepom podjetja, zahtevati do 5-kratnika dejanske škode; pri hudi malomarnosti do 3-kratnika, pri malomarnosti pa do višine dejanske škode. Ali se [51. člen tajvanskega zakona o varstvu potrošnikov](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na zadevo nanaša ter ali se kaznovalna odškodnina dejansko prisodi in v kakšni višini, je odvisno od presoje sodišča glede konkretnih predpostavk ter dokazov.
 
 ## 5. Tudi če ima fitnes zavarovanje odgovornosti (責任保險), sta lahko obstoj odškodnine in višina sporna?
 

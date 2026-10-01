@@ -192,4 +192,4 @@ Lopullinen valinta on turvallisinta tutkia niin, että Taiwanin ja päätoimipai
 
 Tämä artikkeli on yleisesitys taiwanilaisen tytäryhtiön ja ulkomaisen yhtiön sivuliikkeen eroista (子公司·分公司); se ei ole oikeudellista tai verotuksellista neuvontaa konkreettisessa asiassa eikä lupaa tiettyä lopputulosta. Sovellettavat säännökset ja verotuksellinen käsittely voivat poiketa sijoittajan ja päätoimipaikan sijainnin, yrityssisällön, transaktioiden ja rahavirran, sopimusedellytysten ja toimivaltaisen viranomaisen uusimman käytännön mukaan; ennen perustamisen, sijoituksen, sopimuksen, osingon tai siirron suorittamista on tutkittava uusimmat viralliset lähteet ja omat olosuhteet.
 
-**Asianajaja Wei Tseng (曾雋崴)**
+Asianajaja Wei Tseng (曾雋崴)

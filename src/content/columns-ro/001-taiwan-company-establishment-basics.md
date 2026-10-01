@@ -142,4 +142,4 @@ Puteți vedea domeniul de activitate vizat la [Ce cauze tratăm](/ro/services), 
 
 Acest articol este un document de informare generală în scop educativ asupra înființării de societăți în Taiwan și a regulilor conexe; nu constituie o consultanță juridică sau fiscală într-o cauză concretă și nu promite un rezultat determinat. Procedurile necesare și rezultatele pot varia după structura de investiție, sectorul, cetățenia și statutul de ședere al solicitantului, precum și practica cea mai recentă a autorității competente; înainte de a executa o investiție, un contract sau o angajare, este indicat să fie consultate sursele oficiale cele mai recente și împrejurările proprii cauzei.
 
-**Avocata Wei Tseng (曾雋崴)**
+Avocata Wei Tseng (曾雋崴)

@@ -93,9 +93,9 @@ Nếu không đồng ý với ý kiến giám định, quý vị có thể xin x
 
 Yêu cầu theo Điều 184 Bộ luật Dân sự đòi hỏi tiền đề là có hành vi xâm phạm quyền một cách trái pháp luật, có quan hệ nhân quả với vụ tai nạn, và có chứng minh về thiệt hại. Chỉ riêng việc đã xảy ra tai nạn thì không làm cho tất cả các khoản dưới đây đều được công nhận. Điều 216 Bộ luật Dân sự là căn cứ xác định phạm vi thiệt hại thực tế và lợi ích đáng lẽ được hưởng (所失利益).
 
-- **Thương tích**: theo Điều 193 Bộ luật Dân sự, có thể xem xét chi phí y tế cần thiết, các chi phí sinh hoạt tăng thêm như chi phí người chăm sóc (看護費用), chi phí đi lại khám chữa bệnh (就醫交通費) và dụng cụ hỗ trợ, cùng thiệt hại về thu nhập phát sinh do thực tế không thể làm việc và phần suy giảm khả năng lao động. Theo Điều 195 Bộ luật Dân sự, tổn thất tinh thần cũng có thể được xem xét.
-- **Tử vong**: theo Điều 192 Bộ luật Dân sự, trong trường hợp có áp dụng, có thể xem xét chi phí y tế và chi phí sinh hoạt tăng thêm trước khi tử vong, chi phí mai táng (殯葬費), cùng khoản mất cấp dưỡng của người lẽ ra được cấp dưỡng theo pháp luật (扶養利益損失). Theo Điều 194 Bộ luật Dân sự, tổn thất tinh thần của một số thân nhân nhất định cũng có thể được xem xét.
-- **Tài sản**: theo Điều 196 Bộ luật Dân sự, quý vị có thể yêu cầu bồi thường phần thiệt hại tài sản thực tế đã được chứng minh, bao gồm chi phí sửa chữa xe hoặc mức giảm giá trị của xe.
+- Thương tích: theo Điều 193 Bộ luật Dân sự, có thể xem xét chi phí y tế cần thiết, các chi phí sinh hoạt tăng thêm như chi phí người chăm sóc (看護費用), chi phí đi lại khám chữa bệnh (就醫交通費) và dụng cụ hỗ trợ, cùng thiệt hại về thu nhập phát sinh do thực tế không thể làm việc và phần suy giảm khả năng lao động. Theo Điều 195 Bộ luật Dân sự, tổn thất tinh thần cũng có thể được xem xét.
+- Tử vong: theo Điều 192 Bộ luật Dân sự, trong trường hợp có áp dụng, có thể xem xét chi phí y tế và chi phí sinh hoạt tăng thêm trước khi tử vong, chi phí mai táng (殯葬費), cùng khoản mất cấp dưỡng của người lẽ ra được cấp dưỡng theo pháp luật (扶養利益損失). Theo Điều 194 Bộ luật Dân sự, tổn thất tinh thần của một số thân nhân nhất định cũng có thể được xem xét.
+- Tài sản: theo Điều 196 Bộ luật Dân sự, quý vị có thể yêu cầu bồi thường phần thiệt hại tài sản thực tế đã được chứng minh, bao gồm chi phí sửa chữa xe hoặc mức giảm giá trị của xe.
 
 ## Q8. Nếu việc điều trị vẫn tiếp tục thì tài liệu chi phí y tế được nộp thế nào?
 

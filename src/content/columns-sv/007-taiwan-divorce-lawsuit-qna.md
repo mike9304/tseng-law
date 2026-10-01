@@ -196,4 +196,4 @@ Följande primärkällor (nivå 1) är utgångspunkten för att kontrollera text
 
 Den här texten är utbildningsmaterial som allmänt förklarar instituten skilsmässa, internationella familjemål, makarnas förmögenhet och omyndiga barn i Taiwan, och inte juridisk rådgivning i ett enskilt ärende. Förfarande och utfall kan skilja sig åt beroende på behörighet, lagvalsregel, erkännande av utländska avgöranden, äktenskaps- och hushållsregistreringsläge, förmögenhetssystem, befintligt avtal eller avgörande om barnet, fakta och bevis samt de senaste officiella föreskrifterna. Frister för registrering, rättsmedel, yrkande och verkställighet måste, innan man handlar, kontrolleras en och en efter den exakta starten för varje rätt och varje förfarande.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

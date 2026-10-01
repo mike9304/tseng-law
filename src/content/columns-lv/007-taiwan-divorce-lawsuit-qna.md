@@ -196,4 +196,4 @@ Turpmākie primārie avoti (1. līmenis) ir izejas punkts šā raksta tiesiskās
 
 Šis raksts ir izglītojošs materiāls, kas paredzēts vispārīgam Taivānas laulības šķiršanas, starptautisku ģimenes lietu, laulāto mantas un nepilngadīgu bērnu institūtu skaidrojumam, nevis juridisks padoms konkrētā lietā. Kārtība un iznākums var atšķirties pēc jurisdikcijas, piemērojamām tiesībām, ārvalstu nolēmumu atzīšanas, laulības un mājsaimniecības reģistra stāvokļa, mantisko attiecību režīma, esošās vienošanās vai lēmuma par bērnu, faktiem un pierādījumiem, kā arī jaunākajiem oficiālajiem noteikumiem. Reģistrācijas, pārsūdzības, prasījuma un izpildes termiņus pirms rīcības Jums jāpārbauda pa vienam pēc katras tiesības un katras kārtības precīzā tecējuma sākuma.
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)

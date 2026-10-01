@@ -154,7 +154,7 @@ describe('Korean litigation column 010 — gym injury damages', () => {
     const visibleEojeolCount = visibleText.split(/\s+/).filter(Boolean).length;
     const calculatedMinutes = Math.ceil(visibleEojeolCount / 180);
 
-    expect(visibleEojeolCount).toBe(1_234);
+    expect(visibleEojeolCount).toBe(1_227);
     expect(calculatedMinutes).toBe(7);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
@@ -232,13 +232,13 @@ describe('Korean litigation column 010 — gym injury damages', () => {
 
   it('covers all permitted damage categories and the qualified Article 51 multipliers', () => {
     const requiredDamageRules = [
-      '**의료비**',
-      '**간병비 또는 돌봄비용**',
-      '**교통비**',
-      '**노동능력 상실에 따른 손해**',
-      '**회복기간 중 일실수입**',
-      '**비재산적 손해**',
-      '**징벌적 손해배상**',
+      '의료비',
+      '간병비 또는 돌봄비용',
+      '교통비',
+      '노동능력 상실에 따른 손해',
+      '회복기간 중 일실수입',
+      '비재산적 손해',
+      '징벌적 손해배상',
       '청구를 검토할 수 있는 손해 항목은 다음과 같습니다.',
       '진료·검사·치료·약제·재활에 실제로 지출한 비용은 영수증과 진료기록으로 입증합니다.',
       '치료 경과에 비추어 간병이 필요했는지',
@@ -305,7 +305,7 @@ describe('Korean litigation column 010 — gym injury damages', () => {
       expect(countOccurrences(raw, caption)).toBe(occurrences);
     }
 
-    const finalMediaBlock = `![${finalMedia.caption}](${imagePrefix}${finalMedia.image})\n\n**${finalMedia.caption}**`;
+    const finalMediaBlock = `![${finalMedia.caption}](${imagePrefix}${finalMedia.image})\n\n${finalMedia.caption}`;
     expect(raw).toContain(finalMediaBlock);
     expect(countOccurrences(raw, finalMedia.caption)).toBe(2);
     expect(raw).not.toContain('[![');

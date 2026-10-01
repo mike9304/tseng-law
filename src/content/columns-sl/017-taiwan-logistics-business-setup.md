@@ -148,4 +148,4 @@ Za delo brez dovoljenja se lahko uporabita upravna globa in nalog za zapustitev 
 
 Ta članek je izobraževalno gradivo za splošno razlago pravnega režima in ni nasvet v konkretni zadevi. Ker se merila dovoljenj, obrazci vlog in praksa pristojnega organa lahko spreminjajo, pred izvedbo naložbe ali pogodbe preverite posodobljeno uradno gradivo in okoliščine zadeve.
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)

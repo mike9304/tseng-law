@@ -17,13 +17,13 @@ Recientemente muchas personas han constituido una sociedad en Taiwán y han obte
 
 A continuación se recogen las preguntas que más se plantean al constituirla.
 
-Quienes hayan leído [**la parte básica de constitución de sociedades**](/es/columns/taiwan-company-establishment-basics) pueden continuar con esta parte avanzada más detallada.
+Quienes hayan leído [la parte básica de constitución de sociedades](/es/columns/taiwan-company-establishment-basics) pueden continuar con esta parte avanzada más detallada.
 
 Las preguntas y respuestas siguientes pueden servir de orientación general a quien considera constituir una sociedad en Taiwán.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Deseo constituir una sociedad, pero aún no he encontrado la dirección de registro. ¿Es posible constituirla?**
+1. Deseo constituir una sociedad, pero aún no he encontrado la dirección de registro. ¿Es posible constituirla?
 
 Cuando un extranjero constituye una sociedad en Taiwán, debe presentar un plan de inversión (投資計畫書) al Departamento de Revisión de Inversiones del Ministerio de Economía de Taiwán (經濟部投資審議司) para su revisión.
 
@@ -43,7 +43,7 @@ En la parte básica anterior un lector mencionó que la apertura de la cuenta es
 
 Como los casos de blanqueo de capitales (洗錢) en Taiwán son muy numerosos, la apertura de cuentas bancarias se vuelve cada vez más estricta.
 
-**Consejo**:
+Consejo:
 
 Como la revisión del plan de inversión también requiere tiempo, conviene solapar los trabajos.
 
@@ -57,7 +57,7 @@ Hay tiempo suficiente para abrir en el banco la cuenta de la sociedad en constit
 
 ​
 
-**2. ¿Puedo abrir una cuenta de sociedad en el banco aunque no tenga tarjeta de residencia de Taiwán?**
+2. ¿Puedo abrir una cuenta de sociedad en el banco aunque no tenga tarjeta de residencia de Taiwán?
 
 Es posible.
 
@@ -71,7 +71,7 @@ La Administración de Inmigración está muy concurrida, de modo que conviene ir
 
 ​
 
-**3. He oído que en la revisión del plan de inversión deben consignarse la formación y la experiencia, y me preocupa que mi formación y experiencia no coincidan con el sector de la sociedad que pretendo constituir.**
+3. He oído que en la revisión del plan de inversión deben consignarse la formación y la experiencia, y me preocupa que mi formación y experiencia no coincidan con el sector de la sociedad que pretendo constituir.
 
 El comité de revisión del Ministerio de Economía examina los antecedentes del inversor.
 
@@ -85,13 +85,13 @@ Sobre este punto, conviene consultar de forma suficiente con una abogada o un ab
 
 ​
 
-**4. Al arrendar la dirección de registro de la sociedad (por ejemplo, un local de restauración), ¿hay puntos a los que prestar atención?**
+4. Al arrendar la dirección de registro de la sociedad (por ejemplo, un local de restauración), ¿hay puntos a los que prestar atención?
 
-La constitución de la sociedad requiere unos **3 meses**, y la obtención del permiso de trabajo y de la tarjeta de residencia, alrededor de **1 mes**.
+La constitución de la sociedad requiere unos 3 meses, y la obtención del permiso de trabajo y de la tarjeta de residencia, alrededor de 1 mes.
 
 Por ello, fije la fecha de inicio del contrato lo más tarde posible.
 
-Además, en los contratos de arrendamiento de locales en Taiwán el propietario suele conceder al arrendatario un «**período de obras o de acondicionamiento**» (裝潢期間).
+Además, en los contratos de arrendamiento de locales en Taiwán el propietario suele conceder al arrendatario un «período de obras o de acondicionamiento» (裝潢期間).
 
 Se trata de un período exento de renta, y conviene negociarlo.
 
@@ -107,7 +107,7 @@ Si es necesario, puede proponer la notarización del contrato de arrendamiento o
 
 ​
 
-**5. Al constituir la sociedad, ¿puede arrendar un local de oficinas ordinario?**
+5. Al constituir la sociedad, ¿puede arrendar un local de oficinas ordinario?
 
 Depende de los ramos de actividad de la sociedad.
 

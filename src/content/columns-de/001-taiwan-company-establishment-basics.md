@@ -142,4 +142,4 @@ Den einschlägigen Arbeitsbereich können Sie unter [Welche Angelegenheiten wir 
 
 Dieser Beitrag ist allgemeines Informationsmaterial zu Bildungszwecken über die Gesellschaftsgründung in Taiwan und die damit zusammenhängenden Regelungen; er ist keine Rechts- oder Steuerberatung in einem konkreten Fall und sichert kein bestimmtes Ergebnis zu. Erforderliche Verfahren und Ergebnisse können je nach Investitionsstruktur, Branche, Staatsangehörigkeit und Aufenthaltsstatus der antragstellenden Person sowie der neuesten Praxis der zuständigen Behörde abweichen; vor Durchführung von Investition, Vertrag oder Beschäftigung sind die neuesten amtlichen Quellen und die eigenen Umstände zu prüfen.
 
-**Rechtsanwältin Wei Tseng (曾雋崴)**
+Rechtsanwältin Wei Tseng (曾雋崴)

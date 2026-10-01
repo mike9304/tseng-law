@@ -85,11 +85,11 @@ Pro vedoucího tchajwanské dceřiné společnosti a pobočky zahraniční spole
 
 Následující situace jsou hypotetické k podpoře úvahy; neslibují určený výsledek, že určitý způsob je zákonný nebo lepší.
 
-**Zahraniční podniky zaměřené na počáteční vývoz.** Pokud na Tchaj-wanu ještě nejsou zaměstnanci ani zásoby a chcete ověřit poptávku prostřednictvím nezávislého distributora, lze nejprve posoudit dodávky, distribuční vztah a rozsah činnosti na Tchaj-wanu. Samotná distribuční smlouva však nevyřeší všechny otázky regulace na Tchaj-wanu.
+Zahraniční podniky zaměřené na počáteční vývoz. Pokud na Tchaj-wanu ještě nejsou zaměstnanci ani zásoby a chcete ověřit poptávku prostřednictvím nezávislého distributora, lze nejprve posoudit dodávky, distribuční vztah a rozsah činnosti na Tchaj-wanu. Samotná distribuční smlouva však nevyřeší všechny otázky regulace na Tchaj-wanu.
 
-**Zahraniční podniky, které na Tchaj-wanu postupně rozšiřují prodej a technickou podporu.** Pokud plánujete nabírat zaměstnance na Tchaj-wanu a nadále spravovat zásoby, výběr plateb a podporu zákazníků, je vhodné konkrétně porovnat strukturu dceřiné společnosti a pobočky a společně posoudit i smluvní odpovědnost, způsob provozu ústředí, daně a plán personálu.
+Zahraniční podniky, které na Tchaj-wanu postupně rozšiřují prodej a technickou podporu. Pokud plánujete nabírat zaměstnance na Tchaj-wanu a nadále spravovat zásoby, výběr plateb a podporu zákazníků, je vhodné konkrétně porovnat strukturu dceřiné společnosti a pobočky a společně posoudit i smluvní odpovědnost, způsob provozu ústředí, daně a plán personálu.
 
-**Zahraniční podniky ve fázi průzkumu trhu.** Pokud před zřízením prodejní organizace chcete jen funkce sběru informací a styku, lze posoudit zastoupení. Pokud však skutečný plán zahrnuje prodej skladovaného zboží nebo práci na místě, je třeba zvlášť ověřit, zda tyto činnosti jsou povoleny.
+Zahraniční podniky ve fázi průzkumu trhu. Pokud před zřízením prodejní organizace chcete jen funkce sběru informací a styku, lze posoudit zastoupení. Pokud však skutečný plán zahrnuje prodej skladovaného zboží nebo práci na místě, je třeba zvlášť ověřit, zda tyto činnosti jsou povoleny.
 
 ## 8. Pro první konzultaci stačí provozní přehled; není nutné hned předávat veškeré důvěrné podklady
 

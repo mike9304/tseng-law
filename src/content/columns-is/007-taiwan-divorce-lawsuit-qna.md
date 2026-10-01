@@ -196,4 +196,4 @@ Eftirfarandi frumheimildir (stig 1) eru upphafspunktur til að kanna lagagrundv�
 
 Þessi grein er fræðsluefni til almennrar skýringar á stofnunum skilnaðar, alþjóðlegra fjölskyldumála, eigna hjóna og ólögráða barna á Taívan, og ekki lögfræðileg ráðgjöf um tiltekið mál. Málsmeðferð og niðurstaða geta verið ólík eftir varnarþingi, lagavali, viðurkenningu erlendra dóma, hjúskapar- og heimilisskráningarstöðu, eignaskipulagi, fyrirliggjandi samkomulagi eða ákvörðun um barnið, atvikum og sönnunargögnum og nýjustu opinberu reglum. Fresti skráningar, úrræða, krafna og fullnustu skal, áður en athöfn fer fram, kanna atriði fyrir atriði eftir nákvæmu upphafi hvers réttar og hverrar málsmeðferðar.
 
-**Lögmaður Wei Tseng (曾雋崴)**
+Lögmaður Wei Tseng (曾雋崴)

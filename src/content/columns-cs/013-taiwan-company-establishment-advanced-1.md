@@ -17,13 +17,13 @@ V poslední době mnoho osob úspěšně založilo společnost (公司) na Tchaj
 
 Otázky, které se při zakládání často opakují, jsou shrnuty níže.
 
-Osoby, které si přečetly [**základy založení společnosti**](/cs/columns/taiwan-company-establishment-basics), mohou následně nahlédnout i do této podrobnější části.
+Osoby, které si přečetly [základy založení společnosti](/cs/columns/taiwan-company-establishment-basics), mohou následně nahlédnout i do této podrobnější části.
 
 Následující otázky a odpovědi mají pomoci osobám, které zvažují založení společnosti na Tchaj-wanu.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Chci založit společnost, ale zatím nemám adresu zápisu. Je založení přesto možné?**
+1. Chci založit společnost, ale zatím nemám adresu zápisu. Je založení přesto možné?
 
 Když cizinec zakládá společnost na Tchaj-wanu, musí předložit investiční plán (投資計畫書) Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司) k posouzení.
 
@@ -43,7 +43,7 @@ Už v článku o základech jeden čtenář uvedl, že otevření účtu je nejt
 
 Protože na Tchaj-wanu je velmi mnoho případů praní peněz (洗錢), otevírání bankovních účtů se stává stále přísnějším.
 
-**Rada:**
+Rada:
 
 Protože posouzení investičního plánu také zabere čas,
 
@@ -57,13 +57,13 @@ Ve stejné lhůtě je také dost času otevřít přípravný účet v bance a p
 
 ​
 
-**2. Lze v bance otevřít firemní účet i bez tchajwanského průkazu k pobytu?**
+2. Lze v bance otevřít firemní účet i bez tchajwanského průkazu k pobytu?
 
 Je to možné.
 
 Banka obecně vyžaduje dva doklady totožnosti.
 
-Nemáte-li průkaz k pobytu, lze u tchajwanské imigrační správy požádat o „**výpis základních údajů k jednotnému identifikačnímu číslu**“ (統一證號基本資料表).
+Nemáte-li průkaz k pobytu, lze u tchajwanské imigrační správy požádat o „výpis základních údajů k jednotnému identifikačnímu číslu“ (統一證號基本資料表).
 
 Vydání je možné téhož dne,
 
@@ -71,7 +71,7 @@ imigrační správa (移民署) je však velmi vytížená; proto je třeba při
 
 ​
 
-**3. Při posouzení investičního plánu se prý uvádí vzdělání a odborná praxe. Co když mé vzdělání a praxe neodpovídají odvětví společnosti, kterou chci založit?**
+3. Při posouzení investičního plánu se prý uvádí vzdělání a odborná praxe. Co když mé vzdělání a praxe neodpovídají odvětví společnosti, kterou chci založit?
 
 Přezkumná komise Ministerstva hospodářství sice posuzuje zázemí investora,
 
@@ -85,13 +85,13 @@ V tomto bodě je vhodné věc důkladně probrat s advokátkou nebo advokátem n
 
 ​
 
-**4. Na co dávat pozor, když se pronajímá adresa zápisu společnosti (například restaurační provozovna)?**
+4. Na co dávat pozor, když se pronajímá adresa zápisu společnosti (například restaurační provozovna)?
 
-Založení společnosti trvá přibližně **3 měsíce** a získání pracovního povolení (工作許可) a průkazu k pobytu trvá navíc přibližně **1 měsíc**,
+Založení společnosti trvá přibližně 3 měsíce a získání pracovního povolení (工作許可) a průkazu k pobytu trvá navíc přibližně 1 měsíc,
 
 proto je třeba začátek smlouvy stanovit co nejpozději.
 
-Kromě toho v nájemních smlouvách na obchodní provozovny na Tchaj-wanu pronajímatel často poskytuje nájemci „**období úpravy interiéru**“ (裝潢期間).
+Kromě toho v nájemních smlouvách na obchodní provozovny na Tchaj-wanu pronajímatel často poskytuje nájemci „období úpravy interiéru“ (裝潢期間).
 
 Jde o období osvobozené od nájemného; lze o něj jednat.
 
@@ -107,7 +107,7 @@ lze v případě potřeby navrhnout notářský zápis nájemní smlouvy (公證
 
 ​
 
-**5. Lze při zakládání společnosti pronajmout kancelářský prostor?**
+5. Lze při zakládání společnosti pronajmout kancelářský prostor?
 
 Záleží to na odvětvích činnosti (營業項目) společnosti.
 

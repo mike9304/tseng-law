@@ -151,4 +151,4 @@ På de officiella lagsidorna kan du bekräfta stadgandets ändringsdag och ikraf
 
 Den här artikeln är utbildningsmaterial som allmänt förklarar systemet för arv, makars förmögenhetsordning, föräldraansvar och förmynderskap för den omyndiga i Taiwan; det är inte juridisk rådgivning för ett konkret arvs- eller familjeärende. Tillämplig lag, förfarande och resultat kan variera beroende på kretsen av arvingar, testamente, förmögenhet och skulder, äktenskapsförmögenhetsordning, befintliga domstolsavgöranden och internationella inslag. Innan du beräknar frister såsom avstående eller skattedeklaration, eller förfogar över förmögenhet, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

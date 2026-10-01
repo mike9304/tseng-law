@@ -40,9 +40,9 @@ Si el treballador dimiteix de manera voluntària, l’empresa no ha de pagar la 
 
 Tanmateix, hi ha supòsits en què el treballador comet un acte il·lícit.
 
-**Infringeix les normes de l’empresa (工作規則).**
+Infringeix les normes de l’empresa (工作規則).
 
-**O falta a la feina sense motiu durant 3 dies consecutius.**
+O falta a la feina sense motiu durant 3 dies consecutius.
 
 En aquests casos, l’empresa pot acomiadar el treballador sense pagar-li la indemnització per acomiadament.
 
@@ -52,7 +52,7 @@ Li ho resumeixo en una taula senzilla.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Tipus** | **Acomiadament econòmic (資遣員工, 經濟解僱)** | **Acomiadament disciplinari (解僱員工, 懲戒解僱)** | **Dimissió voluntària del treballador (員工自請離職)** |
+| Tipus | Acomiadament econòmic (資遣員工, 經濟解僱) | Acomiadament disciplinari (解僱員工, 懲戒解僱) | Dimissió voluntària del treballador (員工自請離職) |
 | Significat | Quan l’ocupador, segons la situació de gestió, necessita un ajust de personal, la causa sorgeix en l’àmbit de gestió de l’ocupador i no és responsabilitat del treballador. Per això l’ocupador ha de respectar el període de preavís (預告期間) i assumir obligacions com el pagament de la indemnització per acomiadament, a fi d’equilibrar el perjudici del treballador. | Si el treballador comet un acte il·lícit o impropi, l’ocupador pot posar fi de seguida al contracte de treball (勞動契約) sense preavís i no ha de pagar la indemnització per acomiadament. Això és una de les facultats disciplinàries de l’ocupador. | El treballador té llibertat per posar fi al contracte en qualsevol moment, però ha de respectar el període de preavís segons la seva antiguitat, a fi que l’ocupador pugui organitzar el traspàs del lloc i buscar una altra persona. |
 | Requisits | Sí  (article 11 de la Llei de normes laborals de Taiwan) | Sí  (article 12 de la Llei de normes laborals de Taiwan) | No |
 | Preavís | Necessari | No necessari | Necessari |
@@ -194,17 +194,17 @@ Fa exigències desmesurades.
 
 O destina el treballador a un lloc estrany.
 
-**S’han de deixar proves.**
+S’han de deixar proves.
 
-**Conservi el registre normal d’assistència.**
+Conservi el registre normal d’assistència.
 
-**Conservi el registre d’hores extraordinàries i el de resultats.**
+Conservi el registre d’hores extraordinàries i el de resultats.
 
-**Conservi el reglament intern de l’empresa i els correus amb companys i superiors.**
+Conservi el reglament intern de l’empresa i els correus amb companys i superiors.
 
-**Gravi les converses amb el superior.**
+Gravi les converses amb el superior.
 
-**Conservi qualsevol prova que li sigui favorable.**
+Conservi qualsevol prova que li sigui favorable.
 
 ​
 

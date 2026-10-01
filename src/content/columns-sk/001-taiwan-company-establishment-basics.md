@@ -142,4 +142,4 @@ Rozsah príslušnej činnosti môžete vidieť v [V čom klientov zastupujeme](/
 
 Tento príspevok má všeobecnú informačnú a vzdelávaciu povahu a týka sa založenia spoločnosti na Taiwane a súvisiacich pravidiel; nie je právnym ani daňovým poradenstvom v konkrétnej veci a určitý výsledok nesľubuje. Potrebné postupy a výsledky sa môžu líšiť podľa štruktúry investície, odvetvia, štátnej príslušnosti a pobytového statusu žiadateľa a najnovšej praxe kompetentného orgánu; pred vykonaním investície, zmluvy alebo zamestnania treba posúdiť najnovšie oficiálne zdroje a okolnosti vlastnej veci.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

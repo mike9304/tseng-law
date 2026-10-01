@@ -85,11 +85,11 @@ För en företagsledare i ett utländskt bolags taiwanesiska dotterbolag eller f
 
 Följande är hypotetiska exempel för att underlätta tanken; det garanterar inte att ett visst sätt är lagligt eller att det är att föredra.
 
-**Utländska företag med tidig export i centrum.** Om det ännu inte finns anställda eller lager i Taiwan och du vill pröva efterfrågan via en oberoende distributör kan du börja med att se på leverans, distributionsförhållande och verksamhetsomfång i Taiwan. Ett distributionsavtal undanröjer dock inte alla regleringsfrågor i Taiwan.
+Utländska företag med tidig export i centrum. Om det ännu inte finns anställda eller lager i Taiwan och du vill pröva efterfrågan via en oberoende distributör kan du börja med att se på leverans, distributionsförhållande och verksamhetsomfång i Taiwan. Ett distributionsavtal undanröjer dock inte alla regleringsfrågor i Taiwan.
 
-**Utländska företag där försäljning och tekniskt stöd i Taiwan successivt utvidgas.** Om du planerar att anställa i Taiwan och fortsätta hantera lager, inkasso och kundstöd bör du konkret jämföra dotterbolag och filial, och även pröva avtalsansvar, huvudkontorets driftsätt, skatt och personalplan.
+Utländska företag där försäljning och tekniskt stöd i Taiwan successivt utvidgas. Om du planerar att anställa i Taiwan och fortsätta hantera lager, inkasso och kundstöd bör du konkret jämföra dotterbolag och filial, och även pröva avtalsansvar, huvudkontorets driftsätt, skatt och personalplan.
 
-**Utländska företag i marknadsundersökningsfas.** Om du före en säljorganisation bara vill ha informationsinhämtning och kontaktfunktion kan representationskontor prövas. Om den faktiska planen omfattar försäljning ur lager eller arbete på plats ska det dock separat bekräftas om den verksamheten är tillåten.
+Utländska företag i marknadsundersökningsfas. Om du före en säljorganisation bara vill ha informationsinhämtning och kontaktfunktion kan representationskontor prövas. Om den faktiska planen omfattar försäljning ur lager eller arbete på plats ska det dock separat bekräftas om den verksamheten är tillåten.
 
 ## 8. Vid det första samtalet räcker en driftsöversikt; all konfidentiell information behöver inte lämnas först
 

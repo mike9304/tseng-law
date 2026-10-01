@@ -126,4 +126,4 @@ praneškite nedelsiant arba paprašykite nutraukti, kad apsisaugotumėte.
 Jei manote, kad patyrėte seksualinį priekabiavimą,
 
 eikite į policijos nuovadą su patikimu draugu arba su advokatu Taivane (律師) ir pateikite pranešimą.
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

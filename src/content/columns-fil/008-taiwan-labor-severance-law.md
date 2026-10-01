@@ -40,9 +40,9 @@ Kapag kusang-loob na nagbitiw ang empleyado, hindi kailangang magbayad ng separa
 
 Gayunman, kung ang empleyado ay gumawa ng gawaing labag sa batas,
 
-**lumabag sa mga tuntunin ng kompanya,**
+lumabag sa mga tuntunin ng kompanya,
 
-**o lumiban sa trabaho nang tatlong sunod na araw nang walang makatwirang dahilan,**
+o lumiban sa trabaho nang tatlong sunod na araw nang walang makatwirang dahilan,
 
 Maaaring tanggalin siya ng kompanya kahit hindi binabayaran ng separation pay.
 
@@ -52,7 +52,7 @@ Ibubuod ko ito sa inyo sa pamamagitan ng isang simpleng talahanayan.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Uri** | **Economic dismissal (pagtanggal dahil sa dahilang pang-ekonomiya)**  **資遣員工(經濟解僱)** | **Disciplinary dismissal (pagtanggal dahil sa paglabag)**  **解僱員工(懲戒解僱)** | **Kusang pagbibitiw ng empleyado**  **員工自請離職** |
+| Uri | Economic dismissal (pagtanggal dahil sa dahilang pang-ekonomiya)  資遣員工(經濟解僱) | Disciplinary dismissal (pagtanggal dahil sa paglabag)  解僱員工(懲戒解僱) | Kusang pagbibitiw ng empleyado  員工自請離職 |
 | Kahulugan | Kapag kailangan ng amo na mag-ayos ng tauhan dahil sa kalagayan ng negosyo, ang dahilan ay nagmula sa larangan ng pamamahala ng amo at hindi pananagutan ng manggagawa. Kaya naman obligado ang amo na sundin ang panahon ng paunang abiso (預告期間) at magbayad ng separation pay, upang mabalanse ang disbentaha sa panig ng manggagawa. | Kapag ang manggagawa ay gumawa ng gawaing labag sa batas o hindi wastong gawain, maaaring wakasan agad ng amo ang kontrata sa paggawa nang walang paunang abiso, at hindi kailangang magbayad ng separation pay. Ito ay isa sa mga kapangyarihang pandisiplina ng amo. | May kalayaan ang manggagawa na wakasan ang kontrata anumang oras, ngunit kailangan niyang sundin ang panahon ng paunang abiso ayon sa haba ng kanyang serbisyo, upang makapaghanda ang amo ng paglilipat-tungkulin at makahanap ng kapalit. |
 | Kondisyon | Mayroon  (Artikulo 11 ng Batas sa mga Pamantayan sa Paggawa ng Taiwan) | Mayroon  (Artikulo 12 ng Batas sa mga Pamantayan sa Paggawa ng Taiwan) | Wala |
 | Paunang abiso | Kailangan | Hindi kailangan | Kailangan |
@@ -194,17 +194,17 @@ naghahain ng hindi makatwirang hinihingi,
 
 o inilalagay ang empleyado sa kakaibang posisyon,
 
-**kailangan ninyong magtabi ng ebidensya.**
+kailangan ninyong magtabi ng ebidensya.
 
-**Ang normal ninyong rekord ng pagpasok,**
+Ang normal ninyong rekord ng pagpasok,
 
-**ang rekord ng overtime at ang rekord ng inyong pagganap,**
+ang rekord ng overtime at ang rekord ng inyong pagganap,
 
-**ang mga tuntunin sa trabaho (工作規則) ng kompanya at ang mga email ninyo sa mga katrabaho at superbisor,**
+ang mga tuntunin sa trabaho (工作規則) ng kompanya at ang mga email ninyo sa mga katrabaho at superbisor,
 
-**i-record din ninyo ang mga usapan sa inyong superbisor,**
+i-record din ninyo ang mga usapan sa inyong superbisor,
 
-**upang magtabi kayo ng ebidensyang paborable sa inyo.**
+upang magtabi kayo ng ebidensyang paborable sa inyo.
 
 ​
 

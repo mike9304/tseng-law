@@ -196,4 +196,4 @@ Následující primární prameny (1. úroveň) jsou výchozím bodem k ověřen
 
 Tento článek je vzdělávací materiál určený k obecnému vysvětlení institutů rozvodu, mezinárodních rodinných věcí, manželského majetku a nezletilých dětí na Tchaj-wanu, nikoli právní poradenství v konkrétní věci. Postup a výsledek se mohou lišit podle příslušnosti, rozhodného práva, uznání zahraničních rozhodnutí, stavu manželství a evidence domácností, majetkového režimu, existující dohody nebo rozhodnutí týkajícího se dítěte, skutků a důkazů i nejnovějších úředních předpisů. Lhůty zápisu, opravných prostředků, nároku a výkonu je třeba před jednáním ověřit jeden po druhém podle přesného počátku běhu každého práva a každého postupu.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

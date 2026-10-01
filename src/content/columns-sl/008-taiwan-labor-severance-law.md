@@ -40,9 +40,9 @@ Obveznost izplačila odpravnine nastane šele tedaj, ko družba delavca odpusti.
 
 Če pa delavec stori protipravno dejanje,
 
-**krši interni delovni red (工作規則),**
+krši interni delovni red (工作規則),
 
-**ali se brez razloga ne zglasi 3 dni zapored (曠工),**
+ali se brez razloga ne zglasi 3 dni zapored (曠工),
 
 lahko družba odpusti brez izplačila odpravnine.
 
@@ -52,7 +52,7 @@ Spodnja preglednica to strne.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Vrsta** | **Gospodarska odpoved (資遣員工, 經濟解僱)** | **Disciplinska odpoved (解僱員工, 懲戒解僱)** | **Prostovoljni odhod delavca (員工自請離職)** |
+| Vrsta | Gospodarska odpoved (資遣員工, 經濟解僱) | Disciplinska odpoved (解僱員工, 懲戒解僱) | Prostovoljni odhod delavca (員工自請離職) |
 | Pomen | Če ima delodajalec zaradi poslovnih razmer potrebo po prilagoditvi osebja, je razlog v gospodarskem področju delodajalca, ne pa v odgovornosti delavca. Zato mora delodajalec spoštovati odpovedni rok (預告期間) in izplačati odpravnino, da uravnoteži neugodnosti delavca. | Če delavec stori protipravno ali neprimerno dejanje, lahko delodajalec takoj konča pogodbo o zaposlitvi (勞動契約) brez predhodne odpovedi in odpravnine ni dolžan izplačati. Gre za eno od disciplinskih pooblastil delodajalca. | Delavec lahko kadar koli konča pogodbo, vendar mora glede na dobo zaposlitve spoštovati odpovedni rok, da lahko delodajalec opravi predajo in iskanje nadomestnega delavca. |
 | Pogoji | Da (11. člen tajvanskega zakona o temeljnih delovnih standardih) | Da (12. člen tajvanskega zakona o temeljnih delovnih standardih) | Jih ni |
 | Predhodna odpoved | Potrebna | Ni potrebna | Potrebna |
@@ -194,17 +194,17 @@ postavlja pretirane zahteve
 
 ali premešča delavce na čudna mesta,
 
-**je treba ohranjati dokaze.**
+je treba ohranjati dokaze.
 
-**Vaše običajne evidence prisotnosti,**
+Vaše običajne evidence prisotnosti,
 
-**evidence nadur, evidence rezultatov,**
+evidence nadur, evidence rezultatov,
 
-**interni delovni red, e-poštno dopisovanje s sodelavci in nadrejenimi**
+interni delovni red, e-poštno dopisovanje s sodelavci in nadrejenimi
 
-**pa tudi posnetke pogovorov z nadrejenimi —**
+pa tudi posnetke pogovorov z nadrejenimi —
 
-**ohranjajte dokaze, ki so za vas ugodni.**
+ohranjajte dokaze, ki so za vas ugodni.
 
 ​
 

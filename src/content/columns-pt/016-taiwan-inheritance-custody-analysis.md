@@ -151,4 +151,4 @@ Nas páginas oficiais de regulamentação, confirma-se a data de alteração e a
 
 Este artigo é um material com fins educativos para explicar de forma geral o regime de sucessão, o regime patrimonial conjugal, a autoridade parental e a tutela dos menores em Taiwan; não é um conselho jurídico para um assunto concreto de sucessão ou de família. A lei aplicável, o procedimento e o resultado podem variar segundo o círculo dos herdeiros, o testamento, o património e as dívidas, o regime matrimonial, as decisões judiciais existentes e os fatores transfronteiriços. Antes de calcular prazos como a renúncia ou a declaração fiscal, ou de dispor do património, confirmem-se as fontes oficiais mais recentes e as circunstâncias individuais.
 
-**A advogada Wei Tseng (曾雋崴)**
+A advogada Wei Tseng (曾雋崴)

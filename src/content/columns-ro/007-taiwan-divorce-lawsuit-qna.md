@@ -196,4 +196,4 @@ Sursele primare (nivelul 1) următoare sunt punctul de plecare pentru a verifica
 
 Acest articol este un material educativ destinat să explice în general instituțiile divorțului, ale cauzelor de familie internaționale, ale patrimoniului conjugal și ale copiilor minori din Taiwan, și nu o consultanță juridică pentru o cauză individuală. Procedura și rezultatul pot diferi după competență, dreptul de conflict, recunoașterea deciziilor străine, starea căsătoriei și a stării civile, regimul bunurilor, acordul sau decizia existente referitoare la copil, faptele și probele, precum și prescripțiile oficiale cele mai recente. Termenele de înscriere, de cale de atac, de pretenție și de executare trebuie, înainte de a acționa, verificate unul câte unul după punctul de plecare exact al fiecărui drept și al fiecărei proceduri.
 
-**Avocata Wei Tseng (曾雋崴)**
+Avocata Wei Tseng (曾雋崴)

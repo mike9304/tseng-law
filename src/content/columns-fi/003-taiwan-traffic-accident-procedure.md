@@ -93,9 +93,9 @@ Asiantuntijalausuntoa vastaan voidaan hakea uudelleentarkastusta, kuitenkin vain
 
 Vaatimus siviililain (民法) 184 artiklan mukaan edellyttää oikeudenvastaista oikeuden loukkausta, syy-yhteyttä onnettomuuteen ja vahingon näyttöä. Pelkkä onnettomuuden tapahtuminen ei merkitse, että kaikki seuraavat erät hyväksytään. Siviililain 216 artikla on mittapuu tosiasiallisen vahingon ja menetetyn voiton (所失利益) laajuudelle.
 
-- **Vammautuminen**: Siviililain 193 artiklan mukaan voidaan tutkia tarvittavat hoitokulut (醫療費用), hoito (看護費用), matkat hoitoon (就醫交通費), apuvälineet ja muut lisääntyneet elinkustannukset sekä ansiomenetys (收入損失) tosiasiallisesta työkyvyttömyydestä ja työkyvyn alentumisesta (勞動能力減損). Siviililain 195 artiklan mukaan voidaan tutkia myös aineeton vahinko.
-- **Kuolema**: Siviililain 192 artiklan mukaan voidaan, siltä osin kuin se soveltuu, tutkia hoitokulut ja lisääntyneet elinkustannukset ennen kuolemaa, hautauskulut (殯葬費) ja elatuksen menetys (扶養利益損失) sille, jolla oli oikeudellinen elatusvaatimus. Siviililain 194 artiklan mukaan voidaan tutkia myös tiettyjen sukulaisten aineeton vahinko.
-- **Varallisuus**: Siviililain 196 artiklan mukaan voidaan vaatia näytettyjä tosiasiallisia varallisuusvahinkoja, mukaan lukien ajoneuvon korjaus tai arvon alentuminen.
+- Vammautuminen: Siviililain 193 artiklan mukaan voidaan tutkia tarvittavat hoitokulut (醫療費用), hoito (看護費用), matkat hoitoon (就醫交通費), apuvälineet ja muut lisääntyneet elinkustannukset sekä ansiomenetys (收入損失) tosiasiallisesta työkyvyttömyydestä ja työkyvyn alentumisesta (勞動能力減損). Siviililain 195 artiklan mukaan voidaan tutkia myös aineeton vahinko.
+- Kuolema: Siviililain 192 artiklan mukaan voidaan, siltä osin kuin se soveltuu, tutkia hoitokulut ja lisääntyneet elinkustannukset ennen kuolemaa, hautauskulut (殯葬費) ja elatuksen menetys (扶養利益損失) sille, jolla oli oikeudellinen elatusvaatimus. Siviililain 194 artiklan mukaan voidaan tutkia myös tiettyjen sukulaisten aineeton vahinko.
+- Varallisuus: Siviililain 196 artiklan mukaan voidaan vaatia näytettyjä tosiasiallisia varallisuusvahinkoja, mukaan lukien ajoneuvon korjaus tai arvon alentuminen.
 
 ## Q8. Miten hoitokuluasiakirjat on jätettävä, kun hoito jatkuu?
 

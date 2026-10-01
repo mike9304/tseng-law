@@ -151,4 +151,4 @@ Virallisilla säädössivuilla vahvistetaan säädöksen muutospäivä ja voimaa
 
 Tämä artikkeli on yleisesitys Taiwanin perinnöstä, avio-oikeudellisesta varallisuusjärjestelmästä, huollosta ja alaikäisen holhouksesta; se ei ole oikeudellista neuvontaa konkreettiseen pesä- tai perheasiaan (民法). Sovellettava oikeus, menettely ja tulos voivat vaihdella perillisten piirin, testamentin, varallisuuden ja velan, avioliittojärjestelmän, olemassa olevien tuomioistuimen päätösten ja kansainvälisten elementtien mukaan. Ennen määräaikojen laskemista, kuten luopumisen tai veroilmoituksen määräaikaa, tai varallisuudesta määräämistä vahvistetaan uusimmat viralliset lähteet ja yksilölliset olosuhteet.
 
-**Asianajaja Wei Tseng (曾雋崴)**
+Asianajaja Wei Tseng (曾雋崴)

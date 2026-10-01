@@ -142,4 +142,4 @@ Cakupan pekerjaan yang berkaitan dapat Anda periksa pada [Bidang perkara yang ka
 
 Tulisan ini merupakan bahan yang bertujuan mendidik dan menjelaskan secara umum pendirian perusahaan di Taiwan beserta sistem yang berkaitan dengannya, dan bukan nasihat hukum atau nasihat perpajakan untuk perkara tertentu. Karena prosedur yang diperlukan dan hasilnya dapat berbeda menurut struktur investasi, bidang usaha, kewarganegaraan dan status tinggal pemohon, serta praktik terbaru instansi yang berwenang, sebaiknya Anda memastikan sumber resmi terbaru dan keadaan perkara Anda sendiri sebelum melaksanakan investasi, perjanjian, atau perekrutan.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

@@ -85,11 +85,11 @@ Het is relatief eenvoudiger om de werkvergunning te verkrijgen voor een beheerde
 
 De volgende scenario’s zijn hypothetisch om het nadenken te helpen; zij garanderen niet dat een bepaalde wijze rechtmatig of verkieslijk is.
 
-**Buitenlandse ondernemingen gericht op de aanvankelijke uitvoer.** Indien er in Taiwan nog geen werknemers noch voorraden zijn en men de vraag via een onafhankelijke distributeur wil toetsen, kan men eerst de levering, de distributierelatie en het activiteitsveld in Taiwan bekijken. Een distributiecontract alleen lost niet alle reguleringsvragen in Taiwan op.
+Buitenlandse ondernemingen gericht op de aanvankelijke uitvoer. Indien er in Taiwan nog geen werknemers noch voorraden zijn en men de vraag via een onafhankelijke distributeur wil toetsen, kan men eerst de levering, de distributierelatie en het activiteitsveld in Taiwan bekijken. Een distributiecontract alleen lost niet alle reguleringsvragen in Taiwan op.
 
-**Buitenlandse ondernemingen die de verkoop en de technische ondersteuning in Taiwan uitbreiden.** Indien men in Taiwan wil aanwerven en voorraden, inning en klantensteun blijft beheren, dient men dochtervennootschap en bijkantoor concreet te vergelijken, en ook de contractuele verantwoordelijkheid, de exploitatiewijze van het hoofdkantoor, de belastingen en het personeel te toetsen.
+Buitenlandse ondernemingen die de verkoop en de technische ondersteuning in Taiwan uitbreiden. Indien men in Taiwan wil aanwerven en voorraden, inning en klantensteun blijft beheren, dient men dochtervennootschap en bijkantoor concreet te vergelijken, en ook de contractuele verantwoordelijkheid, de exploitatiewijze van het hoofdkantoor, de belastingen en het personeel te toetsen.
 
-**Buitenlandse ondernemingen in de marktonderzoekfase.** Indien men vóór een verkooporganisatie alleen informatie- en contactfuncties wil, kan een vertegenwoordigingskantoor (代表人辦事處) worden beoordeeld. Indien het werkelijke plan de verkoop van voorraden of het werk ter plaatse omvat, moet afzonderlijk worden bevestigd of deze activiteiten zijn toegelaten.
+Buitenlandse ondernemingen in de marktonderzoekfase. Indien men vóór een verkooporganisatie alleen informatie- en contactfuncties wil, kan een vertegenwoordigingskantoor (代表人辦事處) worden beoordeeld. Indien het werkelijke plan de verkoop van voorraden of het werk ter plaatse omvat, moet afzonderlijk worden bevestigd of deze activiteiten zijn toegelaten.
 
 ## 8. Voor het eerste gesprek volstaat een exploitatieoverzicht; men hoeft niet meteen alle vertrouwelijke stukken over te dragen
 

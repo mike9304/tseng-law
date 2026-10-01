@@ -25,9 +25,9 @@ Le domande e risposte seguenti, preparate dall’avvocata Wei Tseng (曾雋崴),
 
 ​
 
-**1. Nel trasferimento del capitale (資本額) dalla Corea al conto preparatorio di una società taiwanese (公司籌備處帳戶), a che cosa si deve prestare attenzione? (questo punto descrive, a titolo di esempio, il regime e la prassi bancaria della Corea; per un trasferimento da un altro Paese, le regole della banca e del controllo dei cambi locali devono verificarsi a parte)**
+1. Nel trasferimento del capitale (資本額) dalla Corea al conto preparatorio di una società taiwanese (公司籌備處帳戶), a che cosa si deve prestare attenzione? (questo punto descrive, a titolo di esempio, il regime e la prassi bancaria della Corea; per un trasferimento da un altro Paese, le regole della banca e del controllo dei cambi locali devono verificarsi a parte)
 
-In generale, le banche della Corea esigono che l’investitore si rechi **di persona** a una banca in Corea e trasferisca i fondi da un conto a proprio nome.
+In generale, le banche della Corea esigono che l’investitore si rechi di persona a una banca in Corea e trasferisca i fondi da un conto a proprio nome.
 
 Il trasferimento tramite home banking o per il tramite di un familiare in Corea non è possibile.
 
@@ -35,9 +35,9 @@ Inoltre, in conformità con la normativa coreana sul controllo dei cambi, la per
 
 Prima di trasferire il capitale (資本金匯款), si informi presso la sua banca principale in Corea.
 
-**​**
+​
 
-**2. Nel pagamento del capitale sociale, si possono trasferire nuovi dollari taiwanesi (新臺幣, TWD) dal conto personale a Taiwan al conto preparatorio della società taiwanese?**
+2. Nel pagamento del capitale sociale, si possono trasferire nuovi dollari taiwanesi (新臺幣, TWD) dal conto personale a Taiwan al conto preparatorio della società taiwanese?
 
 È possibile, ma devono prodursi documenti che giustifichino l’origine dei fondi in nuovi dollari taiwanesi acquisiti a Taiwan.
 
@@ -47,9 +47,9 @@ Se si tratta di dividendi e di utili provenienti da un investimento in un’impr
 
 Se il trasferimento è effettuato da un conto bancario in Corea, non è necessario allegare documenti relativi all’origine dei fondi.
 
-**​**
+​
 
-**3. Dopo l’arrivo del capitale al conto preparatorio, quando può essere convertito in conto sociale ordinario (正式公司帳戶)?**
+3. Dopo l’arrivo del capitale al conto preparatorio, quando può essere convertito in conto sociale ordinario (正式公司帳戶)?
 
 In generale, i documenti di iscrizione della società (法人登記文件) devono prima essere rilasciati.
 
@@ -57,17 +57,17 @@ Il responsabile (負責人) può allora recarsi in banca e convertire il conto p
 
 Tuttavia, poiché le regole interne di ciascuna banca (銀行) differiscono, se occorre utilizzare il capitale d’urgenza, conviene recarsi prima alla banca.
 
-**​**
+​
 
-**4. Dopo la conversione del conto preparatorio in conto ordinario, l’home banking può essere utilizzato subito?**
+4. Dopo la conversione del conto preparatorio in conto ordinario, l’home banking può essere utilizzato subito?
 
 Ciò varia secondo le banche; in generale, un numero di telefono mobile almeno è necessario.
 
 Certe banche possono imporre esigenze supplementari, per esempio una durata di utilizzo del conto di almeno 6 mesi dopo la costituzione.
 
-**​**
+​
 
-**5. La società può assumere lavoratori stranieri?**
+5. La società può assumere lavoratori stranieri?
 
 A. Primo lavoratore: la domanda è presentata come un lavoro di direzione in un’impresa di investimento ordinario di cinesi residenti all’estero o di stranieri (一般僑外投資事業主管工作). Il criterio del «lavoro di natura specializzata o tecnica» del punto B sotto non si applica, ma si applicano i requisiti di ammissibilità, in particolare quello di dirigente (經理人) di una società il cui apporto di cinesi residenti all’estero o di stranieri supera 1/3, nonché le condizioni di risultati del datore di lavoro relative al capitale e al fatturato (articoli 38 e 39 delle norme di esame).
 

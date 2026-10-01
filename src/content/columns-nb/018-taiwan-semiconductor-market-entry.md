@@ -85,11 +85,11 @@ Det er relativt enklere å erverve arbeidstillatelsen for en leder av det taiwan
 
 De følgende scenariene er hypotetiske for å hjelpe vurderingen; de fastslår ikke at en gitt måte er rettmessig eller bedre (子公司).
 
-**Utenlandske virksomheter rettet mot den innledende eksporten.** Hvis det i Taiwan ennå verken er arbeidstakere eller lagre, og man vil etterprøve etterspørselen via en uavhengig distributør, kan man først se leveringen, distribusjonsforholdet og virksomhetsfeltet i Taiwan. En distribusjonskontrakt alene løser ikke alle reguleringsspørsmål i Taiwan.
+Utenlandske virksomheter rettet mot den innledende eksporten. Hvis det i Taiwan ennå verken er arbeidstakere eller lagre, og man vil etterprøve etterspørselen via en uavhengig distributør, kan man først se leveringen, distribusjonsforholdet og virksomhetsfeltet i Taiwan. En distribusjonskontrakt alene løser ikke alle reguleringsspørsmål i Taiwan.
 
-**Utenlandske virksomheter som utvider salget og den tekniske støtten i Taiwan.** Hvis man i Taiwan vil ansette og fortsatt styre varelager, innkreving og kundestøtte, bør man konkret sammenligne datterselskap og filial og også etterprøve det kontraktsmessige ansvaret, hovedsetets driftsmåte, skattene og personalet.
+Utenlandske virksomheter som utvider salget og den tekniske støtten i Taiwan. Hvis man i Taiwan vil ansette og fortsatt styre varelager, innkreving og kundestøtte, bør man konkret sammenligne datterselskap og filial og også etterprøve det kontraktsmessige ansvaret, hovedsetets driftsmåte, skattene og personalet.
 
-**Utenlandske virksomheter i markedsundersøkelsesfasen.** Hvis man før en salgsorganisasjon kun vil ha informasjons- og kontaktfunksjoner, kan et representasjonskontor (代表人辦事處) vurderes. Hvis den faktiske planen omfatter salg fra lager eller arbeid på stedet, skal det særskilt bekreftes om disse aktivitetene er tillatt.
+Utenlandske virksomheter i markedsundersøkelsesfasen. Hvis man før en salgsorganisasjon kun vil ha informasjons- og kontaktfunksjoner, kan et representasjonskontor (代表人辦事處) vurderes. Hvis den faktiske planen omfatter salg fra lager eller arbeid på stedet, skal det særskilt bekreftes om disse aktivitetene er tillatt.
 
 ## 8. Til den første samtalen rekker en driftsoversikt; man trenger ikke straks å overdra alle fortrolige bilag
 

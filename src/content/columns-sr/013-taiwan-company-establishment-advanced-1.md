@@ -17,13 +17,13 @@ U poslednje vreme su mnogi ljudi uspešno osnovali društvo (公司) na Tajvanu 
 
 Pitanja koja se često postavljaju pri osnivanju sastavila sam u nastavku.
 
-Oni koji su čitali [**Osnivanje društva na Tajvanu — osnove**](/sr/columns/taiwan-company-establishment-basics) mogu zatim da pogledaju i ovaj detaljniji produbljeni deo.
+Oni koji su čitali [Osnivanje društva na Tajvanu — osnove](/sr/columns/taiwan-company-establishment-basics) mogu zatim da pogledaju i ovaj detaljniji produbljeni deo.
 
 Nadam se da će navedena pitanja i odgovori pomoći onima koji razmatraju osnivanje društva na Tajvanu.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Želim da osnujem društvo, ali još nemam adresu upisa. Da li je osnivanje ipak moguće?**
+1. Želim da osnujem društvo, ali još nemam adresu upisa. Da li je osnivanje ipak moguće?
 
 Kada stranac osniva društvo na Tajvanu, mora da podnese investicioni plan (投資計畫書) Odeljenju za pregled i odobravanje investicija Ministarstva ekonomije (經濟部投資審議司) na ocenu.
 
@@ -43,7 +43,7 @@ Već u delu o osnovama jedan čitalac naveo je da je otvaranje računa najteža 
 
 Pošto je na Tajvanu veoma mnogo slučajeva pranja novca (洗錢), otvaranje bankovnih računa postaje sve teže.
 
-**Savet:**
+Savet:
 
 Pošto i ocena investicionog plana zahteva vreme,
 
@@ -57,13 +57,13 @@ U istom roku ima dovoljno vremena i da se u banci otvori pripremni račun i pren
 
 ​
 
-**2. Može li se u banci otvoriti račun društva i bez tajvanske isprave o boravku stranca?**
+2. Može li se u banci otvoriti račun društva i bez tajvanske isprave o boravku stranca?
 
 Moguće je.
 
 Banka po pravilu traži dva identifikaciona dokumenta,
 
-a bez isprave o boravku možete kod Imigracione uprave Tajvana zatražiti „**osnovni obrazac jedinstvenog identifikacionog broja**” (統一證號基本資料表).
+a bez isprave o boravku možete kod Imigracione uprave Tajvana zatražiti „osnovni obrazac jedinstvenog identifikacionog broja” (統一證號基本資料表).
 
 Izdavanje je moguće istog dana,
 
@@ -71,7 +71,7 @@ Imigraciona uprava (移民署) je međutim veoma opterećena; zato treba doći r
 
 ​
 
-**3. Pri oceni investicionog plana navodno treba navesti obrazovanje i radno iskustvo. Brinem da obrazovanje i iskustvo ne odgovaraju delatnosti društva koje želim da osnujem.**
+3. Pri oceni investicionog plana navodno treba navesti obrazovanje i radno iskustvo. Brinem da obrazovanje i iskustvo ne odgovaraju delatnosti društva koje želim da osnujem.
 
 Odeljenje za pregled i odobravanje investicija Ministarstva ekonomije ocenjuje pozadinu investitora,
 
@@ -85,13 +85,13 @@ U ovoj tački stvar treba temeljno razmotriti s advokatkinjom ili advokatom na T
 
 ​
 
-**4. Na šta treba obratiti pažnju kada se zakupljuje adresa upisa društva (na primer ugostiteljski lokal)?**
+4. Na šta treba obratiti pažnju kada se zakupljuje adresa upisa društva (na primer ugostiteljski lokal)?
 
-Osnivanje društva traje oko **3 meseca**, a sticanje radne dozvole (工作許可) i isprave o boravku stranca traje još oko **jedan mesec**,
+Osnivanje društva traje oko 3 meseca, a sticanje radne dozvole (工作許可) i isprave o boravku stranca traje još oko jedan mesec,
 
 zato datum početka ugovora treba odrediti što kasnije.
 
-Osim toga, u ugovorima o zakupu trgovačkih lokala na Tajvanu zakupodavac često zakupcu daje „**period uređenja prostora**” (裝潢期間).
+Osim toga, u ugovorima o zakupu trgovačkih lokala na Tajvanu zakupodavac često zakupcu daje „period uređenja prostora” (裝潢期間).
 
 Reč je o periodu oslobođenom zakupnine; o njemu se može pregovarati.
 
@@ -107,7 +107,7 @@ po potrebi se može predložiti overa ugovora o zakupu (公證) ili dodatna kauc
 
 ​
 
-**5. Može li se pri osnivanju društva zakupiti kancelarijski prostor?**
+5. Može li se pri osnivanju društva zakupiti kancelarijski prostor?
 
 Zavisi od upisanih delatnosti (營業項目) društva.
 

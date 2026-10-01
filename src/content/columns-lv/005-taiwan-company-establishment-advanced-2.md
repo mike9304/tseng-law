@@ -25,9 +25,9 @@ Turpmākos jautājumus un atbildes sagatavojusi advokāte Wei Tseng (曾雋崴);
 
 ​
 
-**1. Kam pievērst uzmanību, pārskaitot kapitālu (資本額) no ārvalstīm uz Taivānas sabiedrības sagatavošanas kontu (公司籌備處帳戶)? (Korejas banku prakse ir tikai piemērs)**
+1. Kam pievērst uzmanību, pārskaitot kapitālu (資本額) no ārvalstīm uz Taivānas sabiedrības sagatavošanas kontu (公司籌備處帳戶)? (Korejas banku prakse ir tikai piemērs)
 
-Turpmākais ir piemērs par Korejas banku praksi, nevis noteikums visām ārvalstīm. Principā bankas Korejā prasa, lai ieguldītājs **personīgi** ierodas bankā Korejā un pārskaita līdzekļus no konta, kas atvērts uz paša vārda.
+Turpmākais ir piemērs par Korejas banku praksi, nevis noteikums visām ārvalstīm. Principā bankas Korejā prasa, lai ieguldītājs personīgi ierodas bankā Korejā un pārskaita līdzekļus no konta, kas atvērts uz paša vārda.
 
 Pārskaitījums internetbankā vai ar radinieka starpniecību Korejā nav iespējams.
 
@@ -35,9 +35,9 @@ Turklāt saskaņā ar Korejas ārvalstu valūtas kontroles noteikumiem personai 
 
 Pirms kapitāla pārskaitījuma (資本金匯款) sazinieties ar savu banku mītnes valstī.
 
-**​**
+​
 
-**2. Iemaksājot pamatkapitālu, vai var pārskaitīt jaunos Taivānas dolārus (新臺幣, TWD) no personīgā konta Taivānā uz Taivānas sabiedrības sagatavošanas kontu?**
+2. Iemaksājot pamatkapitālu, vai var pārskaitīt jaunos Taivānas dolārus (新臺幣, TWD) no personīgā konta Taivānā uz Taivānas sabiedrības sagatavošanas kontu?
 
 Tas ir iespējams, tomēr jāiesniedz dokumenti, kas apstiprina Taivānā iegūto jauno Taivānas dolāru izcelsmi.
 
@@ -47,9 +47,9 @@ Ja tās ir dividendes un peļņa no ieguldījuma uzņēmumā Taivānā, jāiesni
 
 Ja notiek pārskaitījums no bankas konta Korejā, dokumenti par līdzekļu izcelsmi nav jāpievieno.
 
-**​**
+​
 
-**3. Pēc kapitāla ieskaitīšanas sagatavošanas kontā, kad to var pārvērst par pastāvīgo sabiedrības kontu (正式公司帳戶)?**
+3. Pēc kapitāla ieskaitīšanas sagatavošanas kontā, kad to var pārvērst par pastāvīgo sabiedrības kontu (正式公司帳戶)?
 
 Principā to var pēc juridiskās personas reģistrācijas dokumentu (法人登記文件) saņemšanas.
 
@@ -57,17 +57,17 @@ Atbildīgā persona (負責人) pēc tam bankā pārvērš sabiedrības sagatavo
 
 Tā kā atsevišķu banku (銀行) iekšējie noteikumi atšķiras, ja kapitāls jāizmanto steidzami, ieteicams vispirms vērsties bankā.
 
-**​**
+​
 
-**4. Pēc sagatavošanas konta pārvēršanas par pastāvīgo kontu, vai internetbanku var lietot uzreiz?**
+4. Pēc sagatavošanas konta pārvēršanas par pastāvīgo kontu, vai internetbanku var lietot uzreiz?
 
 Tas ir atkarīgs no bankas; principā vajadzīgs vismaz mobilā tālruņa numurs.
 
 Dažas bankas var uzlikt papildu prasības, piemēram, konta lietošanas laiku vismaz 6 mēnešus pēc dibināšanas.
 
-**​**
+​
 
-**5. Vai sabiedrība var nodarbināt ārzemniekus?**
+5. Vai sabiedrība var nodarbināt ārzemniekus?
 
 A. Pirmais darbinieks: parastā ārvalstu ķīniešu vai ārzemnieku ieguldījumu uzņēmuma vadītājs (一般僑外投資事業主管工作). Turpmāk B punktā minētais „profesionāla vai tehniska rakstura darba“ kritērijs nepiemērojas, tomēr piemērojas adresāta priekšnoteikumi, tostarp priekšnoteikums būt pārvaldniekam (經理人) sabiedrībā, kuras ārvalstu ķīniešu vai ārzemnieku ieguldījums pārsniedz 1/3, kā arī darba devēja rezultātu priekšnoteikumi par kapitālu un apgrozījumu (pārbaudes normu 38. un 39. pants).
 

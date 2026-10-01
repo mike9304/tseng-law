@@ -85,11 +85,11 @@ Agak lebih mudah memperoleh permit kerja bagi pengurus anak syarikat atau cawang
 
 Senario berikut ialah hipotesis sebagai bahan untuk menimbang pilihan. Ia tidak menjamin bahawa suatu cara adalah sah atau lebih baik.
 
-**Syarikat asing yang berpusat pada eksport awal.** Jika belum ada pekerja mahupun stok di Taiwan dan anda ingin mengesahkan permintaan melalui pengedar bebas, anda boleh meneliti dahulu bekalan, hubungan pengedaran dan bidang aktiviti di Taiwan. Kontrak pengedaran semata-mata tidak menepikan semua keperluan kawal selia di Taiwan.
+Syarikat asing yang berpusat pada eksport awal. Jika belum ada pekerja mahupun stok di Taiwan dan anda ingin mengesahkan permintaan melalui pengedar bebas, anda boleh meneliti dahulu bekalan, hubungan pengedaran dan bidang aktiviti di Taiwan. Kontrak pengedaran semata-mata tidak menepikan semua keperluan kawal selia di Taiwan.
 
-**Syarikat asing yang memperluas jualan dan sokongan teknikal di Taiwan.** Jika anda merancang mengambil kerja di Taiwan dan terus mengurus stok, kutipan dan sokongan pelanggan, sebaiknya bandingkan secara konkret anak syarikat dan cawangan, dan menyemak juga tanggungjawab kontrak, cara beroperasi pejabat utama, cukai dan kakitangan.
+Syarikat asing yang memperluas jualan dan sokongan teknikal di Taiwan. Jika anda merancang mengambil kerja di Taiwan dan terus mengurus stok, kutipan dan sokongan pelanggan, sebaiknya bandingkan secara konkret anak syarikat dan cawangan, dan menyemak juga tanggungjawab kontrak, cara beroperasi pejabat utama, cukai dan kakitangan.
 
-**Syarikat asing dalam fasa kajian pasaran.** Jika, sebelum organisasi jualan, anda hanya mahu fungsi maklumat dan perhubungan, pejabat perwakilan boleh dinilai. Jika pelan sebenar merangkumi jualan stok atau kerja di tempat, perlu disahkan secara berasingan sama ada aktiviti ini dibenarkan.
+Syarikat asing dalam fasa kajian pasaran. Jika, sebelum organisasi jualan, anda hanya mahu fungsi maklumat dan perhubungan, pejabat perwakilan boleh dinilai. Jika pelan sebenar merangkumi jualan stok atau kerja di tempat, perlu disahkan secara berasingan sama ada aktiviti ini dibenarkan.
 
 ## 8. Bagi perundingan pertama, gambaran operasi mencukupi; tidak perlu menyerahkan dari awal semua dokumen sulit
 

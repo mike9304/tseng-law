@@ -42,9 +42,9 @@ Ve smlouvě je vhodné konkrétně stanovit rozsah užívání duševního vlast
 
 Tchajwanská dceřiná společnost a pobočka zahraniční společnosti nejsou stejnou organizací. Dceřiná společnost je samostatná právnická osoba založená podle práva Tchaj-wanu, zatímco pobočka se zapisuje jako část ústředí (本公司) zahraniční společnosti. Liší se právní osobností, odpovědností ústředí, účetním a daňovým zacházením, převodem zisku, zastupovacím oprávněním a způsobem vnitřní kontroly, proto se forma organizace nemá volit jen podle kontroly nad prodejem.
 
-Je-li potřebný postup zahraniční investice, je třeba ověřit pokyny **Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司)** jako aktuálně příslušného orgánu. Lhůta potřebná k povolení investice, převodu peněz, zápisu společnosti nebo pobočky, otevření bankovního účtu, daňové registraci (稅籍登記) a získání kvalifikace dovozce se liší podle investora, odvětví, organizační formy, předložených podkladů a toho, zda dochází k opravě nebo doplnění. Datum uvedení na trh proto nestanovujte na základě domnělé pevné lhůty; nejprve ověřte, zda se každý úkon uplatní, a jaké jsou nejnovější podmínky přijetí.
+Je-li potřebný postup zahraniční investice, je třeba ověřit pokyny Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司) jako aktuálně příslušného orgánu. Lhůta potřebná k povolení investice, převodu peněz, zápisu společnosti nebo pobočky, otevření bankovního účtu, daňové registraci (稅籍登記) a získání kvalifikace dovozce se liší podle investora, odvětví, organizační formy, předložených podkladů a toho, zda dochází k opravě nebo doplnění. Datum uvedení na trh proto nestanovujte na základě domnělé pevné lhůty; nejprve ověřte, zda se každý úkon uplatní, a jaké jsou nejnovější podmínky přijetí.
 
-Ať je zvolena kterákoli struktura, ústředním subjektem odpovědnosti v regulaci kosmetiky je **výrobce nebo dovozce kosmetiky**. Uspořádání podkladů k výrobku nebo hodnocení bezpečnosti (安全性評估) lze svěřit externímu odborníkovi, ale pouhé svěření práce nepřenáší právní odpovědnost výrobce nebo dovozce. Odlišit smluvní rozdělení práce od zákonného subjektu odpovědnosti je výchozím bodem přezkumu struktury vstupu.
+Ať je zvolena kterákoli struktura, ústředním subjektem odpovědnosti v regulaci kosmetiky je výrobce nebo dovozce kosmetiky. Uspořádání podkladů k výrobku nebo hodnocení bezpečnosti (安全性評估) lze svěřit externímu odborníkovi, ale pouhé svěření práce nepřenáší právní odpovědnost výrobce nebo dovozce. Odlišit smluvní rozdělení práce od zákonného subjektu odpovědnosti je výchozím bodem přezkumu struktury vstupu.
 
 ## 2. Registrace produktu a PIF jsou dva odlišné režimy
 
@@ -131,4 +131,4 @@ Základní strukturu společnosti a pobočky najdete v článku [Základy založ
 
 Tento text je vzdělávacím podkladem k obecnému vysvětlení režimu souvisejícího se vstupem na trh kosmetiky na Tchaj-wanu; není právním stanoviskem k jednotlivému výrobku nebo reklamě a neslibuje určený výsledek, povolení, registraci, možnost prodeje ani dodržení lhůty vyřízení. Formu vstupu, podklady k výrobku, obsah označení a reklamy a nejnovější praxi příslušného orgánu je třeba ověřit v každé věci zvlášť.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

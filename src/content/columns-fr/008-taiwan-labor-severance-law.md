@@ -40,9 +40,9 @@ Si le salarié démissionne de lui-même, la société n’a pas à verser d’i
 
 Si le salarié commet toutefois un acte illicite,
 
-**viole le règlement intérieur (工作規則),**
+viole le règlement intérieur (工作規則),
 
-**ou s’absente du travail sans motif légitime 3 jours de suite (曠工),**
+ou s’absente du travail sans motif légitime 3 jours de suite (曠工),
 
 la société peut licencier sans verser d’indemnité de licenciement.
 
@@ -52,7 +52,7 @@ Le tableau ci-dessous résume ces distinctions.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Type** | **Licenciement économique**  **資遣員工 (經濟解僱)** | **Licenciement disciplinaire**  **解僱員工 (懲戒解僱)** | **Démission du salarié**  **員工自請離職** |
+| Type | Licenciement économique  資遣員工 (經濟解僱) | Licenciement disciplinaire  解僱員工 (懲戒解僱) | Démission du salarié  員工自請離職 |
 | Signification | S’il existe, chez l’employeur, un besoin d’ajustement du personnel en raison de la situation de l’entreprise, le motif se situe dans le domaine entrepreneurial de l’employeur et non dans la responsabilité du salarié. C’est pourquoi l’employeur doit respecter le délai de préavis (預告期間) et verser une indemnité de licenciement, afin de compenser de manière équilibrée les inconvénients subis par le salarié. | Si le salarié commet un acte illicite ou inapproprié, l’employeur peut mettre fin immédiatement au contrat de travail (勞動契約) sans préavis préalable et n’a pas à verser d’indemnité de licenciement. C’est l’une des prérogatives disciplinaires de l’employeur. | Le salarié est libre de mettre fin au contrat à tout moment, mais doit, selon la durée d’emploi, respecter le délai de préavis, afin que l’employeur puisse procéder à la passation et à la recherche d’un remplaçant. |
 | Conditions | Présentes  (article 11 de la loi taïwanaise sur les normes du travail) | Présentes  (article 12 de la loi taïwanaise sur les normes du travail) | Aucune |
 | Préavis préalable | Requis | Non requis | Requis |
@@ -194,17 +194,17 @@ pose des exigences excessives
 
 ou mute les salariés à des postes étranges,
 
-**vous devez conserver des preuves.**
+vous devez conserver des preuves.
 
-**Vos relevés de présence habituels,**
+Vos relevés de présence habituels,
 
-**relevés d’heures supplémentaires, relevés de performance,**
+relevés d’heures supplémentaires, relevés de performance,
 
-**règlement intérieur, correspondance par courriel avec les collègues et les supérieurs**
+règlement intérieur, correspondance par courriel avec les collègues et les supérieurs
 
-**ainsi que les enregistrements d’entretien avec les supérieurs —**
+ainsi que les enregistrements d’entretien avec les supérieurs —
 
-**conservez les preuves qui vous sont favorables.**
+conservez les preuves qui vous sont favorables.
 
 ​
 

@@ -93,9 +93,9 @@ Ja ekspertīzes atzinumam nepiekrīt, var pieprasīt pārskatīšanu, taču to v
 
 Prasījums, kas balstīts uz Civillikuma 184. pantu, pieņem prettiesisku tiesību aizskārumu, cēloņsakarību ar negadījumu un zaudējumu pierādījumu. Pats fakts, ka negadījums noticis, nenozīmē, ka visi turpmāk minētie posteņi tiek atzīti. Civillikuma 216. pants ir kritērijs faktisko zaudējumu un zaudētās peļņas (所失利益) apjoma noteikšanai.
 
-- **Ievainojums**: Saskaņā ar Civillikuma 193. pantu var izvērtēt nepieciešamos medicīniskos izdevumus (醫療費用), ikdienas dzīves palielinātās vajadzības, piemēram, kopšanas izmaksas (看護費用), ceļa izdevumus ārstēšanai (就醫交通費) un palīglīdzekļus, kā arī ienākumu zaudējumu (收入損失) faktiskas darbnespējas dēļ un darbspējas samazināšanos (勞動能力減損). Saskaņā ar Civillikuma 195. pantu var izvērtēt arī morālo kaitējumu.
-- **Nāve**: Saskaņā ar Civillikuma 192. pantu, ja ir pamats, var izvērtēt medicīniskos izdevumus pirms nāves un palielināto dzīves vajadzību izmaksas, apbedīšanas izdevumus (殯葬費) un uzturēšanas zaudējumu (扶養利益損失) personai, kurai bija likumīgas tiesības uz uzturēšanu. Saskaņā ar Civillikuma 194. pantu var izvērtēt arī noteiktu tuvinieku morālo kaitējumu.
-- **Manta**: Saskaņā ar Civillikuma 196. pantu var prasīt pamatotus faktiskos mantiskos zaudējumus, tostarp transportlīdzekļa remonta izmaksas vai vērtības zudumu.
+- Ievainojums: Saskaņā ar Civillikuma 193. pantu var izvērtēt nepieciešamos medicīniskos izdevumus (醫療費用), ikdienas dzīves palielinātās vajadzības, piemēram, kopšanas izmaksas (看護費用), ceļa izdevumus ārstēšanai (就醫交通費) un palīglīdzekļus, kā arī ienākumu zaudējumu (收入損失) faktiskas darbnespējas dēļ un darbspējas samazināšanos (勞動能力減損). Saskaņā ar Civillikuma 195. pantu var izvērtēt arī morālo kaitējumu.
+- Nāve: Saskaņā ar Civillikuma 192. pantu, ja ir pamats, var izvērtēt medicīniskos izdevumus pirms nāves un palielināto dzīves vajadzību izmaksas, apbedīšanas izdevumus (殯葬費) un uzturēšanas zaudējumu (扶養利益損失) personai, kurai bija likumīgas tiesības uz uzturēšanu. Saskaņā ar Civillikuma 194. pantu var izvērtēt arī noteiktu tuvinieku morālo kaitējumu.
+- Manta: Saskaņā ar Civillikuma 196. pantu var prasīt pamatotus faktiskos mantiskos zaudējumus, tostarp transportlīdzekļa remonta izmaksas vai vērtības zudumu.
 
 ## 8. Ja ārstēšana turpinās, kā iesniegt medicīnisko izdevumu dokumentus?
 
@@ -363,7 +363,7 @@ Ja Jums ir papildu jautājumi, aprakstiet tos izvērtējuma pieprasījumā konta
 
 ​
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)
 
 ---
 

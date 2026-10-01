@@ -194,4 +194,4 @@ The safest approach is for professionals in Taiwan and the jurisdiction of the h
 
 This article is educational material intended to explain the general differences between a Taiwan subsidiary and a branch of a foreign company; it is not legal or tax advice for any specific matter. The applicable laws and tax treatment may vary according to the locations of the investor and head office, the nature of the business, transactions and cash flows, eligibility under the Agreement, and current practice of the competent authorities. The latest official materials and the circumstances of the particular matter should therefore be checked before establishing or funding an entity, entering into a contract, declaring a dividend, or making a remittance.
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**
+Wei Tseng (曾雋崴), Taiwan Attorney

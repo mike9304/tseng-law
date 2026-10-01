@@ -51,7 +51,7 @@ Stoga ovoj stvari posvetite pozornost.
 
 ​
 
-**Pitanje. Mora li se za sve djelatnosti sustavom „prethodne provjere mjesta poslovanja” provjeravati je li poslovanje na tom mjestu dopušteno?**
+Pitanje. Mora li se za sve djelatnosti sustavom „prethodne provjere mjesta poslovanja” provjeravati je li poslovanje na tom mjestu dopušteno?
 
 Za sve djelatnosti preporučuje se da se sustavom „prethodne provjere mjesta poslovanja” (營業場所預先查詢) potvrdi je li poslovanje na tom mjestu dopušteno.
 
@@ -61,7 +61,7 @@ Stoga u praksi nije nužno pri upisu društva provjeravati sve djelatnosti.
 
 Prema „[uputama o radu usluge potpomognute provjere mjesta poslovanja grada Taipeia](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) i prema važećoj obavijesti grada Taipeia vrijedi sljedeće.
 
-Od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune djelatnosti društva ili samostalnog poslovnog subjekta (uključujući podružnicu (分公司) i pomoćnu jedinicu (分支機構)) rezultat prethodne provjere mjesta poslovanja **mora** biti priložen zahtjevu za upis, bez obzira na djelatnost.
+Od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune djelatnosti društva ili samostalnog poslovnog subjekta (uključujući podružnicu (分公司) i pomoćnu jedinicu (分支機構)) rezultat prethodne provjere mjesta poslovanja mora biti priložen zahtjevu za upis, bez obzira na djelatnost.
 
 Niže navedeni popis „djelatnosti koje su predmetom službene provjere” (主動查詢之營業項目) označuje djelatnosti koje Trgovački ured tijekom pregleda upisa provjerava po službenoj dužnosti dodatno (隨案主動查詢), kad djelatnost figurira u zahtjevu, a nedostaje u priloženom rezultatu; činjenica da djelatnost nije na tom popisu ne znači oslobođenje od provjere.
 

@@ -191,4 +191,4 @@ Ved ordningen af bilagene i tidsfølge bør man sammen angive datoen for kontrak
 
 Denne tekst er et dokument med pædagogisk formål til alment at forklare aftalen om en bindingsperiode i Taiwan, tilbagebetalingen af uddannelsesomkostningerne og af den forudbetalte ydelse samt fratrædelsesvarslet; den er ikke juridisk rådgivning om en konkret arbejdssag. Aftalens gyldighed og ansvarets omfang kan variere efter kontraktens type og indhold, den faktiske uddannelse og omkostning, kompensationens formål og dens meddelelse, tjenesteperioden, ophørsårsagen og beviserne. Før man formulerer fratrædelsen, accepterer et lønfradrag, aftaler en tilbagebetaling eller besvarer en tvist, bør man gennemgå de nyeste officielle kilder og de individuelle omstændigheder.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

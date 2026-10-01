@@ -51,7 +51,7 @@ Vær derfor opmærksom på dette punkt.
 
 ​
 
-**Q. Skal alle brancher via ordningen for »forudgående forespørgsel om forretningsstedet« undersøge, om udøvelsen er mulig?**
+Q. Skal alle brancher via ordningen for »forudgående forespørgsel om forretningsstedet« undersøge, om udøvelsen er mulig?
 
 Det anbefales, at alle brancher via ordningen for »forudgående forespørgsel om forretningsstedet« (營業場所預先查詢) bekræfter, om udøvelsen er mulig.
 
@@ -61,7 +61,7 @@ I praksis behøver derfor ikke alle forretningsområder at undersøges ved selsk
 
 Reglen følger af »[arbejdsretningslinjerne for oplysningstjenesten om forretningssteder i byen Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)« (臺北市營業場所協助查詢服務作業須知) og den gældende vejledning fra byen Taipei.
 
-Siden 1. januar 2023 skal resultatet af den forudgående forespørgsel om forretningsstedet **obligatorisk** vedlægges registreringsansøgningen ved ansøgning om registrering af stiftelse, af flytning af hjemsted eller af tilføjelse af forretningsområder for et selskab eller en erhvervsvirksomhed (商業) (herunder filialen (分公司) og andre forretningsenheder (分支機構)), uanset forretningsområdet.
+Siden 1. januar 2023 skal resultatet af den forudgående forespørgsel om forretningsstedet obligatorisk vedlægges registreringsansøgningen ved ansøgning om registrering af stiftelse, af flytning af hjemsted eller af tilføjelse af forretningsområder for et selskab eller en erhvervsvirksomhed (商業) (herunder filialen (分公司) og andre forretningsenheder (分支機構)), uanset forretningsområdet.
 
 Listen nedenfor over de »forretningsområder, der undersøges af embedet« (主動查詢之營業項目) betegner de forretningsområder, som handelskontoret af embedet yderligere undersøger under registreringsprøvelsen (隨案主動查詢), når forretningsområdet står i ansøgningen, men mangler i det vedlagte resultat; det forhold, at et forretningsområde ikke står på denne liste, betyder ikke, at forretningsområdet er fritaget for kontrollen.
 

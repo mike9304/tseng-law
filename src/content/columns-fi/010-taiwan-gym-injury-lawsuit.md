@@ -59,7 +59,7 @@ Alla ovat käännetyt otsikot tätä asiaa koskevista uutisjutuista, verkkojulka
 
 ![Saiiko korealainen miesopiskelija välilevyn repeämän 90 kg:n maastavedossa henkilökohtaisessa valmennuksessa?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Saiiko korealainen miesopiskelija välilevyn repeämän 90 kg:n maastavedossa henkilökohtaisessa valmennuksessa?**
+Saiiko korealainen miesopiskelija välilevyn repeämän 90 kg:n maastavedossa henkilökohtaisessa valmennuksessa?
 
 Tämän asian merkitys on siinä, että se osoittaa, ettei vastuuta määrätä heti pelkästä seikasta, että vamma on syntynyt kuntosalilla (健身房). Palveluntarjoajan turvavelvollisuuden (安全義務) sisältö, valmentajan konkreettinen ohjaus ja huolellisuusvelvollisuuden (注意義務) laiminlyönti, vamman ja käyttäytymisen välinen syy-yhteys sekä vahingon laajuus arvioidaan kunkin asian asiakirjojen perusteella. Rikosasian (刑事) ja siviiliasian (民事) edellytykset ja määräajat eroavat samoin, joten asiakirjat on heti onnettomuuden jälkeen järjestettävä erikseen.
 
@@ -93,13 +93,13 @@ Jos onnettomuuden olosuhteet voivat täyttää rikoksen tunnusmerkit, voidaan no
 
 Korvauserät, joiden vaatimista voidaan harkita, ovat seuraavat. Se, katsotaanko kukin erä vahingoksi, ja sen määrä riippuvat kunkin menon tarpeellisuudesta, syy-yhteydestä onnettomuuteen, näyttöaineistosta, vastuusuhteesta ja tuomioistuimen arviosta.
 
-1. **Sairaanhoitokulut**: Todellisuudessa maksetut kulut vastaanotosta, tutkimuksista, hoidosta, lääkkeistä ja kuntoutuksesta todistetaan kuiteilla ja potilasasiakirjoilla.
-2. **Hoito- tai avustuskulut (看護費用)**: Tutkitaan lääketieteellisten ja menoa koskevien asiakirjojen kanssa, oliko vamman asteen ja hoitokulun valossa hoidon tarvetta ja ovatko jakso ja kustannus asianmukaisia.
-3. **Kuljetuskulut**: Kulut, jotka ovat tarpeen hoitopaikkaan ja sieltä pois, todistetaan matkatiedoilla, kuiteilla ja vastaavilla asiakirjoilla.
-4. **Vahinko työkyvyn alenemasta (勞動能力減損)**: Jos jälkivammat ja pysyvä työkyvyn aleneminen katsotaan näytetyksi, voidaan arvioida yhdessä lääketieteellisten ja ammatillisten asiakirjojen, työkyvyttömyyden asteen, ammatin ja tulon sekä jäljellä olevan työiän kanssa. Pelkkä työkyvyttömyysprosentti ei määrää korvausta, eikä vahinkoa lasketa automaattisesti eläkkeelle jäämiseen asti.
-5. **Tulonmenetys toipumisjaksolla (收入損失)**: Jakso, jona hoidon tai levon vuoksi ei tosiasiassa voitu työskennellä, ja siitä seuraava tulon aleneminen on todistettava palkka-, vero- ja työsuhdeasiakirjoilla.
-6. **Aineeton vahinko (非財產上損害)**: Moraalisen kärsimyksen määrän tuomioistuin määrää kunkin asian olosuhteista, kuten vamman asteesta, hoitojaksosta, jälkivammoista ja asianosaisen konkreettisista olosuhteista.
-7. **Rangaistusluonteinen korvaus (懲罰性賠償金)**: On sääntö, jonka mukaan riidassa, jossa kuluttajansuojalakia sovelletaan, jos vahinko on aiheutunut yrityksen tahallisuudesta, voidaan vaatia enintään 5 kertaa tosiasiallinen vahinko; jos törkeästä tuottamuksesta, enintään 3 kertaa; ja jos tuottamuksesta, enintään 1-kertaisesti tosiasiallisen vahingon suuruisena. Sovelletaanko [Taiwanin kuluttajansuojalain 51 artiklaa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asiaan ja tuomitaanko rangaistusluonteista korvausta ja millä määrällä, riippuu tuomioistuimen arviosta konkreettisista edellytyksistä ja todisteista (消費者保護法).
+1. Sairaanhoitokulut: Todellisuudessa maksetut kulut vastaanotosta, tutkimuksista, hoidosta, lääkkeistä ja kuntoutuksesta todistetaan kuiteilla ja potilasasiakirjoilla.
+2. Hoito- tai avustuskulut (看護費用): Tutkitaan lääketieteellisten ja menoa koskevien asiakirjojen kanssa, oliko vamman asteen ja hoitokulun valossa hoidon tarvetta ja ovatko jakso ja kustannus asianmukaisia.
+3. Kuljetuskulut: Kulut, jotka ovat tarpeen hoitopaikkaan ja sieltä pois, todistetaan matkatiedoilla, kuiteilla ja vastaavilla asiakirjoilla.
+4. Vahinko työkyvyn alenemasta (勞動能力減損): Jos jälkivammat ja pysyvä työkyvyn aleneminen katsotaan näytetyksi, voidaan arvioida yhdessä lääketieteellisten ja ammatillisten asiakirjojen, työkyvyttömyyden asteen, ammatin ja tulon sekä jäljellä olevan työiän kanssa. Pelkkä työkyvyttömyysprosentti ei määrää korvausta, eikä vahinkoa lasketa automaattisesti eläkkeelle jäämiseen asti.
+5. Tulonmenetys toipumisjaksolla (收入損失): Jakso, jona hoidon tai levon vuoksi ei tosiasiassa voitu työskennellä, ja siitä seuraava tulon aleneminen on todistettava palkka-, vero- ja työsuhdeasiakirjoilla.
+6. Aineeton vahinko (非財產上損害): Moraalisen kärsimyksen määrän tuomioistuin määrää kunkin asian olosuhteista, kuten vamman asteesta, hoitojaksosta, jälkivammoista ja asianosaisen konkreettisista olosuhteista.
+7. Rangaistusluonteinen korvaus (懲罰性賠償金): On sääntö, jonka mukaan riidassa, jossa kuluttajansuojalakia sovelletaan, jos vahinko on aiheutunut yrityksen tahallisuudesta, voidaan vaatia enintään 5 kertaa tosiasiallinen vahinko; jos törkeästä tuottamuksesta, enintään 3 kertaa; ja jos tuottamuksesta, enintään 1-kertaisesti tosiasiallisen vahingon suuruisena. Sovelletaanko [Taiwanin kuluttajansuojalain 51 artiklaa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asiaan ja tuomitaanko rangaistusluonteista korvausta ja millä määrällä, riippuu tuomioistuimen arviosta konkreettisista edellytyksistä ja todisteista (消費者保護法).
 
 ## 5. Voiko korvauksen olemassaoloa ja määrää riitauttaa myös silloin, kun kuntosalilla on vastuuvakuutus (責任保險)?
 

@@ -25,7 +25,7 @@ tai skiriasi nuo kai kurių jurisdikcijų, pavyzdžiui, Korėjos.
 
 ​
 
-Vis dėlto yra **išimtinių atvejų**.
+Vis dėlto yra išimtinių atvejų.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Darbo standartų įstatymas (勞動基準法) vis dėlto nustato, kad
 
 jei darbuotojas nori nutraukti darbo sutartį pagal pirmiau nurodytą 1 arba 6 punktą (pavyzdžiui, kad nutrauktų sutartį dėl neįtraukimo į draudimą),
 
-darbo sutartį privalo nutraukti per **30 dienų** nuo dienos, kai sužinojo apie šią padėtį,
+darbo sutartį privalo nutraukti per 30 dienų nuo dienos, kai sužinojo apie šią padėtį,
 
-arba, 6 punkto atveju, per **30 dienų** nuo dienos, kai sužinojo apie žalos pasekmę.
+arba, 6 punkto atveju, per 30 dienų nuo dienos, kai sužinojo apie žalos pasekmę.
 
 Todėl darbuotojas turi atidžiai stebėti šį terminą.
 
@@ -89,7 +89,7 @@ galima išeitinės išmokos nemokėti arba jos reikalauti.
 
 Todėl Taivano darbo ginčuose (勞資糾紛)
 
-„**laikas**“ yra labai svarbus.
+„laikas“ yra labai svarbus.
 
 Daugeliu atvejų iš anksto pasirengusi šalis yra geresnėje padėtyje ginti savo teises; pats pasirengimas rezultato nežada.
 

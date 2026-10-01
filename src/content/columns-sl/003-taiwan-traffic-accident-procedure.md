@@ -93,9 +93,9 @@ Ob nestrinjanju z izvedenskim mnenjem je mogoče zaprositi za ponovni pregled, v
 
 Zahtevek, utemeljen na 184. členu civilnega zakonika, predpostavlja protipravno kršitev pravice, vzročno zvezo z nesrečo in dokaz škode. Sama okoliščina, da je do nesreče prišlo, ne pomeni, da so vse spodaj navedene postavke priznane. 216. člen civilnega zakonika je merilo za določitev obsega dejanske škode in izgubljenega dobička (所失利益).
 
-- **Poškodba**: Po 193. členu civilnega zakonika je mogoče presoditi potrebne zdravstvene stroške (醫療費用), dodatne stroške vsakdanjega življenja, kot so stroški nege (看護費用), potni stroški za zdravljenje (就醫交通費) in tehnične pomoči, pa tudi izgubo dohodka (收入損失) zaradi dejanske nezmožnosti dela in zmanjšanje delovne zmožnosti (勞動能力減損). Po 195. členu civilnega zakonika je mogoče presoditi tudi nepremoženjsko škodo.
-- **Smrt**: Po 192. členu civilnega zakonika, če podlaga nastopi, je mogoče presoditi zdravstvene stroške pred smrtjo in stroške povečanih življenjskih potreb, pogrebne stroške (殯葬費) in izgubo preživnine (扶養利益損失) osebe, ki je imela zakonsko pravico do preživnine. Po 194. členu civilnega zakonika je mogoče presoditi tudi nepremoženjsko škodo določenih sorodnikov.
-- **Premoženje**: Po 196. členu civilnega zakonika je mogoče uveljavljati utemeljeno dejansko premoženjsko škodo, vključno s stroški popravila vozila ali izgubo vrednosti.
+- Poškodba: Po 193. členu civilnega zakonika je mogoče presoditi potrebne zdravstvene stroške (醫療費用), dodatne stroške vsakdanjega življenja, kot so stroški nege (看護費用), potni stroški za zdravljenje (就醫交通費) in tehnične pomoči, pa tudi izgubo dohodka (收入損失) zaradi dejanske nezmožnosti dela in zmanjšanje delovne zmožnosti (勞動能力減損). Po 195. členu civilnega zakonika je mogoče presoditi tudi nepremoženjsko škodo.
+- Smrt: Po 192. členu civilnega zakonika, če podlaga nastopi, je mogoče presoditi zdravstvene stroške pred smrtjo in stroške povečanih življenjskih potreb, pogrebne stroške (殯葬費) in izgubo preživnine (扶養利益損失) osebe, ki je imela zakonsko pravico do preživnine. Po 194. členu civilnega zakonika je mogoče presoditi tudi nepremoženjsko škodo določenih sorodnikov.
+- Premoženje: Po 196. členu civilnega zakonika je mogoče uveljavljati utemeljeno dejansko premoženjsko škodo, vključno s stroški popravila vozila ali izgubo vrednosti.
 
 ## Q8. Če zdravljenje traja, kako predložiti listine zdravstvenih stroškov?
 
@@ -363,7 +363,7 @@ Tega vidika zato ni mogoče podcenjevati; prepričana sem, da je glede na okoli�
 
 ​
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)
 
 ---
 

@@ -17,13 +17,13 @@ V poslednom čase mnoho osôb úspešne založilo spoločnosť (公司) na Taiwa
 
 Otázky, ktoré sa pri zakladaní často opakujú, sú zhrnuté nižšie.
 
-Osoby, ktoré si prečítali [**základy založenia spoločnosti**](/sk/columns/taiwan-company-establishment-basics), môžu následne nahliadnuť i do tejto podrobnejšej časti.
+Osoby, ktoré si prečítali [základy založenia spoločnosti](/sk/columns/taiwan-company-establishment-basics), môžu následne nahliadnuť i do tejto podrobnejšej časti.
 
 Nasledujúce otázky a odpovede majú pomôcť osobám, ktoré zvažujú založenie spoločnosti na Taiwane.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Chcem založiť spoločnosť, ale zatiaľ nemám adresu zápisu. Je založenie napriek tomu možné?**
+1. Chcem založiť spoločnosť, ale zatiaľ nemám adresu zápisu. Je založenie napriek tomu možné?
 
 Keď cudzinec zakladá spoločnosť na Taiwane, musí predložiť investičný plán (投資計畫書) Odboru preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司) na posúdenie.
 
@@ -43,7 +43,7 @@ V základnej časti jeden čitateľ uviedol, že otvorenie účtu je najťažšo
 
 Pretože na Taiwane je veľmi veľa prípadov prania peňazí (洗錢), posudzovanie žiadostí o otvorenie účtu je stále prísnejšie.
 
-**Rada:**
+Rada:
 
 Posúdenie investičného plánu tiež zaberie čas.
 
@@ -57,13 +57,13 @@ V tej istej lehote je dosť času otvoriť prípravný účet v banke a previes�
 
 ​
 
-**2. Možno v banke otvoriť firemný účet i bez taiwanského preukazu na pobyt?**
+2. Možno v banke otvoriť firemný účet i bez taiwanského preukazu na pobyt?
 
 Je to možné.
 
 Banka všeobecne vyžaduje dva doklady totožnosti.
 
-Bez preukazu na pobyt možno na taiwanskej imigračnej správe požiadať o „**formulár základných údajov jednotného identifikačného čísla**“ (統一證號基本資料表).
+Bez preukazu na pobyt možno na taiwanskej imigračnej správe požiadať o „formulár základných údajov jednotného identifikačného čísla“ (統一證號基本資料表).
 
 Vydanie je možné toho istého dňa.
 
@@ -71,7 +71,7 @@ Imigračná správa (移民署) je však veľmi vyťažená; preto treba prísť
 
 ​
 
-**3. Pri posúdení investičného plánu sa vraj uvádza vzdelanie a odborná prax. Čo keď moje vzdelanie a prax nezodpovedajú odvetviu spoločnosti, ktorú chcem založiť?**
+3. Pri posúdení investičného plánu sa vraj uvádza vzdelanie a odborná prax. Čo keď moje vzdelanie a prax nezodpovedajú odvetviu spoločnosti, ktorú chcem založiť?
 
 Preskúmavacia komisia Ministerstva hospodárstva síce posudzuje zázemie investora.
 
@@ -85,13 +85,13 @@ V tomto bode je vhodné vec dôkladne prebrať s advokátkou alebo advokátom na
 
 ​
 
-**4. Na čo dávať pozor, keď sa prenajíma adresa zápisu spoločnosti (napríklad reštauračná prevádzkareň)?**
+4. Na čo dávať pozor, keď sa prenajíma adresa zápisu spoločnosti (napríklad reštauračná prevádzkareň)?
 
-Založenie spoločnosti trvá približne **3 mesiace** a získanie pracovného povolenia (工作許可) a preukazu na pobyt trvá navyše približne **jeden mesiac**.
+Založenie spoločnosti trvá približne 3 mesiace a získanie pracovného povolenia (工作許可) a preukazu na pobyt trvá navyše približne jeden mesiac.
 
 Preto treba začiatok zmluvy stanoviť čo najneskôr.
 
-Okrem toho v nájomných zmluvách na obchodné prevádzkarne na Taiwane prenajímateľ často poskytuje nájomcovi „**obdobie úpravy interiéru**“ (裝潢期間).
+Okrem toho v nájomných zmluvách na obchodné prevádzkarne na Taiwane prenajímateľ často poskytuje nájomcovi „obdobie úpravy interiéru“ (裝潢期間).
 
 Ide o obdobie oslobodené od nájomného; možno oň rokovať.
 
@@ -107,7 +107,7 @@ Možno v prípade potreby navrhnúť notárske osvedčenie nájomnej zmluvy (公
 
 ​
 
-**5. Možno pri zakladaní spoločnosti prenajať kancelársky priestor?**
+5. Možno pri zakladaní spoločnosti prenajať kancelársky priestor?
 
 Záleží to na odvetviach činnosti (營業項目) spoločnosti.
 

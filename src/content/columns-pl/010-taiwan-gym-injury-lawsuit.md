@@ -59,7 +59,7 @@ Tytuły doniesień prasowych, publikacji internetowych i komentarzy prawnych dot
 
 ![Czy koreański student doznał pęknięcia krążka międzykręgowego, wykonując martwy ciąg 90 kg podczas treningu personalnego?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Czy koreański student doznał pęknięcia krążka międzykręgowego, wykonując martwy ciąg 90 kg podczas treningu personalnego?**
+Czy koreański student doznał pęknięcia krążka międzykręgowego, wykonując martwy ciąg 90 kg podczas treningu personalnego?
 
 Praktyczne znaczenie tej sprawy polega na tym, że pokazuje, iż odpowiedzialność nie jest ustalana od razu samym faktem, że uraz nastąpił na siłowni. Treść obowiązku bezpieczeństwa (安全義務), który ciąży na usługodawcy, konkretna wskazówka oraz naruszenie obowiązku staranności (注意義務), związek przyczynowy między urazem a zachowaniem oraz zakres szkody ocenia się na podstawie dokumentów każdej sprawy. Warunki i terminy postępowania karnego i postępowania cywilnego są też odrębne, więc zaraz po wypadku należy porządkować ślady osobno.
 
@@ -93,13 +93,13 @@ Jeśli okoliczności wypadku mogą wypełnić znamiona przestępstwa, można szy
 
 Składniki szkody, których można dochodzić, są następujące. Rzeczywiste uznanie i kwota zależą od konieczności każdego wydatku, związku przyczynowego z wypadkiem, dowodów, stopnia odpowiedzialności i oceny sądu.
 
-1. **Koszty medyczne**: Kosztów rzeczywiście poniesionych na poradę, badania, leczenie, leki i rehabilitację dowodzi się pokwitowaniami i dokumentacją medyczną.
-2. **Koszty opieki lub asysty**: To, czy opieka była konieczna w świetle stopnia urazu i przebiegu leczenia oraz czy okres i koszt były odpowiednie, ustala się na podstawie dokumentacji medycznej i dowodów wydatków.
-3. **Koszty transportu**: Kosztów koniecznych, by dojeżdżać do placówki medycznej na leczenie, dowodzi się rejestrem przejazdów, pokwitowaniami i podobnymi dokumentami.
-4. **Szkoda z utraty zdolności do pracy (勞動能力減損)**: Jeśli uznane są następstwa i trwałe obniżenie zdolności do pracy, można ją oceniać łącznie na podstawie dokumentów medycznych i zawodowych, stopnia niepełnosprawności, zawodu i dochodów oraz pozostałego okresu pracy. Sam procent niepełnosprawności nie ustala odszkodowania, a strata nie jest liczona automatycznie do chwili emerytury.
-5. **Utrata dochodu w okresie powrotu do zdrowia (收入損失)**: Okresu, w którym rzeczywiście nie można było pracować z powodu leczenia lub rekonwalescencji, oraz wynikającego z tego obniżenia dochodu należy dowieść dokumentacją płacową i podatkową oraz dokumentami zatrudnienia.
-6. **Szkoda niemajątkowa (非財產上損害)**: Kwotę za cierpienie moralne ustala sąd na podstawie czynników każdej sprawy, jak stopień urazu, okres leczenia, następstwa i konkretne okoliczności strony.
-7. **Odszkodowanie karne (懲罰性賠償金)**: Istnieje przepis, według którego w sporze, do którego stosuje się ustawę o ochronie konsumentów, jeśli przedsiębiorstwo wyrządziło szkodę umyślnie, można żądać do 5-krotności rzeczywistej szkody; przy rażącym niedbalstwie — do 3-krotności; a przy zwykłym niedbalstwie — do wysokości rzeczywistej szkody (1-krotność). Czy [art. 51 tajwańskiej ustawy o ochronie konsumentów](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) stosuje się do sprawy oraz czy odszkodowanie karne zostanie rzeczywiście zasądzone i w jakiej kwocie, zależy od oceny sądu dotyczącej konkretnych przesłanek i dowodów.
+1. Koszty medyczne: Kosztów rzeczywiście poniesionych na poradę, badania, leczenie, leki i rehabilitację dowodzi się pokwitowaniami i dokumentacją medyczną.
+2. Koszty opieki lub asysty: To, czy opieka była konieczna w świetle stopnia urazu i przebiegu leczenia oraz czy okres i koszt były odpowiednie, ustala się na podstawie dokumentacji medycznej i dowodów wydatków.
+3. Koszty transportu: Kosztów koniecznych, by dojeżdżać do placówki medycznej na leczenie, dowodzi się rejestrem przejazdów, pokwitowaniami i podobnymi dokumentami.
+4. Szkoda z utraty zdolności do pracy (勞動能力減損): Jeśli uznane są następstwa i trwałe obniżenie zdolności do pracy, można ją oceniać łącznie na podstawie dokumentów medycznych i zawodowych, stopnia niepełnosprawności, zawodu i dochodów oraz pozostałego okresu pracy. Sam procent niepełnosprawności nie ustala odszkodowania, a strata nie jest liczona automatycznie do chwili emerytury.
+5. Utrata dochodu w okresie powrotu do zdrowia (收入損失): Okresu, w którym rzeczywiście nie można było pracować z powodu leczenia lub rekonwalescencji, oraz wynikającego z tego obniżenia dochodu należy dowieść dokumentacją płacową i podatkową oraz dokumentami zatrudnienia.
+6. Szkoda niemajątkowa (非財產上損害): Kwotę za cierpienie moralne ustala sąd na podstawie czynników każdej sprawy, jak stopień urazu, okres leczenia, następstwa i konkretne okoliczności strony.
+7. Odszkodowanie karne (懲罰性賠償金): Istnieje przepis, według którego w sporze, do którego stosuje się ustawę o ochronie konsumentów, jeśli przedsiębiorstwo wyrządziło szkodę umyślnie, można żądać do 5-krotności rzeczywistej szkody; przy rażącym niedbalstwie — do 3-krotności; a przy zwykłym niedbalstwie — do wysokości rzeczywistej szkody (1-krotność). Czy [art. 51 tajwańskiej ustawy o ochronie konsumentów](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) stosuje się do sprawy oraz czy odszkodowanie karne zostanie rzeczywiście zasądzone i w jakiej kwocie, zależy od oceny sądu dotyczącej konkretnych przesłanek i dowodów.
 
 ## 5. Nawet jeśli siłownia ma ubezpieczenie odpowiedzialności (責任保險), czy istnienie odszkodowania i kwota mogą być sporne?
 

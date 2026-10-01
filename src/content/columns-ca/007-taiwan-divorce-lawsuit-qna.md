@@ -196,4 +196,4 @@ Les fonts primàries de 1r grau següents són el punt de partida per confirmar 
 
 Aquest article és un material de propòsit educatiu per explicar de manera general el divorci, la família internacional, el patrimoni conjugal i el règim del menor a Taiwan; no és assessorament jurídic per a un assumpte concret. El procediment i el resultat poden variar segons la competència, la llei aplicable, el reconeixement de sentències estrangeres, l’estat del matrimoni i del registre civil, el règim patrimonial, els acords o resolucions existents sobre el fill, els fets i les proves i la normativa oficial més recent. Els terminis d’inscripció, impugnació, reclamació i execució s’han de confirmar de manera individual, abans d’actuar, amb el dia d’inici exacte del termini de cada dret i de cada procediment.
 
-**Advocada Wei Tseng (曾雋崴)**
+Advocada Wei Tseng (曾雋崴)

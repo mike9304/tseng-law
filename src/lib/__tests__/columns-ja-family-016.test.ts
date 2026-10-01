@@ -89,7 +89,7 @@ const exactEnding = `---
 
 本稿は、台湾の相続、夫婦財産制、親権および未成年後見制度について一般的に説明するための教育目的の資料であり、個別の相続事件または家事事件に関する法的助言ではありません。相続人の範囲、遺言、財産と債務、夫婦財産制、既存の裁判所の判断および渉外要素により、適用法、手続および結果が異なる場合があります。相続放棄や税務申告などの期限を計算し、または財産を処分する前に、最新の公式資料と個別事情を確認してください。
 
-**曾雋崴弁護士（Wei Tseng）**`;
+曾雋崴弁護士（Wei Tseng）`;
 const expectedFrontmatter = `---
 title: "台湾の相続と親権：遺された家族のための法律ガイド"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
@@ -397,7 +397,7 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
 
   it("ends with the exact disclaimer and sole correct signature", () => {
     expect(parsed.content.trimEnd().endsWith(exactEnding)).toBe(true);
-    expect(raw.trimEnd().endsWith("**曾雋崴弁護士（Wei Tseng）**")).toBe(true);
+    expect(raw.trimEnd().endsWith("曾雋崴弁護士（Wei Tseng）")).toBe(true);
     expect(raw.match(/曾雋崴/g)).toHaveLength(1);
     expect(raw).not.toContain("曾俊瑋");
   });
@@ -427,7 +427,7 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
     expect(post?.readTime).toBe(`約${calculatedMinutes}分`);
     expect(crypto.createHash("sha256").update(raw).digest("hex")).toBe(
-      "f2fdc652b126b6dd3a58200c8a2759129349a03896bf4e25a1c300acb9027cce",
+      "710280c695f0a5c4c925f5f8ccbfa54a65fd136a4ef391a759cecb0dd6a448b4",
     );
   });
 

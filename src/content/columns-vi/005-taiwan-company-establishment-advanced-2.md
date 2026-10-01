@@ -26,9 +26,9 @@ Phần hỏi đáp dưới đây dành cho quý vị đang cân nhắc thành l�
 
 ​
 
-**1. Khi chuyển vốn điều lệ (資本額) từ nước ngoài vào tài khoản văn phòng chuẩn bị thành lập công ty Đài Loan (公司籌備處帳戶) thì cần lưu ý điều gì? (mục 1 dưới đây lấy chế độ ngoại hối và thực tiễn ngân hàng của Hàn Quốc làm ví dụ về một quốc gia nước ngoài, không phải hướng dẫn chung cho mọi nhà đầu tư nước ngoài)**
+1. Khi chuyển vốn điều lệ (資本額) từ nước ngoài vào tài khoản văn phòng chuẩn bị thành lập công ty Đài Loan (公司籌備處帳戶) thì cần lưu ý điều gì? (mục 1 dưới đây lấy chế độ ngoại hối và thực tiễn ngân hàng của Hàn Quốc làm ví dụ về một quốc gia nước ngoài, không phải hướng dẫn chung cho mọi nhà đầu tư nước ngoài)
 
-Thông thường, các ngân hàng Hàn Quốc yêu cầu **chính nhà đầu tư** phải trực tiếp đến ngân hàng tại Hàn Quốc và chuyển tiền từ tài khoản đứng tên mình.
+Thông thường, các ngân hàng Hàn Quốc yêu cầu chính nhà đầu tư phải trực tiếp đến ngân hàng tại Hàn Quốc và chuyển tiền từ tài khoản đứng tên mình.
 
 Việc chuyển tiền qua ngân hàng điện tử hoặc nhờ người thân, người quen ở Hàn Quốc chuyển thay là không được chấp nhận.
 
@@ -36,9 +36,9 @@ Ngoài ra, theo pháp luật quản lý ngoại hối của Hàn Quốc, ngườ
 
 Trước khi chuyển vốn điều lệ, quý vị hãy hỏi ý kiến ngân hàng giao dịch chính của mình tại Hàn Quốc.
 
-**​**
+​
 
-**2. Khi nộp vốn điều lệ của công ty, quý vị có thể chuyển Đài tệ mới (新臺幣, TWD) từ tài khoản Đài Loan đứng tên mình vào tài khoản văn phòng chuẩn bị thành lập công ty Đài Loan không?**
+2. Khi nộp vốn điều lệ của công ty, quý vị có thể chuyển Đài tệ mới (新臺幣, TWD) từ tài khoản Đài Loan đứng tên mình vào tài khoản văn phòng chuẩn bị thành lập công ty Đài Loan không?
 
 Được, nhưng quý vị phải nộp giấy tờ chứng minh nguồn gốc của khoản Đài tệ mới đã có được tại Đài Loan.
 
@@ -48,9 +48,9 @@ Nếu là cổ tức và tiền chia lợi nhuận phát sinh từ việc đầu
 
 Trường hợp chuyển tiền từ tài khoản ngân hàng ở Hàn Quốc thì không cần đính kèm giấy tờ về nguồn gốc tiền (điểm này nêu theo bối cảnh Hàn Quốc của bài viết).
 
-**​**
+​
 
-**3. Sau khi vốn điều lệ đã được nộp vào tài khoản văn phòng chuẩn bị thành lập công ty, khi nào có thể chuyển tài khoản đó thành tài khoản công ty chính thức (正式公司帳戶)?**
+3. Sau khi vốn điều lệ đã được nộp vào tài khoản văn phòng chuẩn bị thành lập công ty, khi nào có thể chuyển tài khoản đó thành tài khoản công ty chính thức (正式公司帳戶)?
 
 Thông thường, sau khi nhận được giấy tờ đăng ký thành lập pháp nhân,
 
@@ -58,17 +58,17 @@ người chịu trách nhiệm của công ty (公司負責人) có thể đến
 
 Tuy nhiên, vì quy định nội bộ của mỗi ngân hàng một khác, nên nếu quý vị cần sử dụng vốn điều lệ gấp thì nên hỏi ngân hàng trước.
 
-**​**
+​
 
-**4. Sau khi tài khoản văn phòng chuẩn bị thành lập công ty được chuyển thành tài khoản chính thức, quý vị có thể sử dụng ngay ngân hàng điện tử không?**
+4. Sau khi tài khoản văn phòng chuẩn bị thành lập công ty được chuyển thành tài khoản chính thức, quý vị có thể sử dụng ngay ngân hàng điện tử không?
 
 Điều này khác nhau tùy từng ngân hàng, nhưng thông thường tối thiểu phải có số điện thoại di động.
 
 Một số ngân hàng có thể đặt thêm yêu cầu, chẳng hạn tài khoản phải có thời gian sử dụng từ 6 tháng trở lên kể từ khi thành lập công ty.
 
-**​**
+​
 
-**5. Công ty có thể tuyển dụng người nước ngoài làm nhân viên không?**
+5. Công ty có thể tuyển dụng người nước ngoài làm nhân viên không?
 
 A. Nhân viên thứ nhất: công việc quản lý tại doanh nghiệp có vốn đầu tư của Hoa kiều hoặc người nước ngoài (一般僑外投資事業主管工作). Tiêu chí "công việc chuyên môn hoặc kỹ thuật" nêu ở mục B dưới đây không áp dụng, nhưng vẫn áp dụng các yêu cầu về đối tượng (như người quản lý (經理人) của công ty có phần vốn của Hoa kiều hoặc người nước ngoài vượt quá một phần ba) và các yêu cầu về vốn, doanh thu của người sử dụng lao động (Điều 38 và Điều 39 Tiêu chuẩn thẩm định).
 

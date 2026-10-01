@@ -142,4 +142,4 @@ A vonatkozó tevékenységi kört a [Milyen ügyekben járunk el](/hu/services) 
 
 Ez a cikk a tajvani társaságalapításról és a kapcsolódó szabályokról szóló általános, oktatási célú tájékoztató; nem minősül konkrét ügyben adott jogi vagy adóügyi tanácsnak, és nem ígér meghatározott eredményt. A szükséges eljárások és eredmények a beruházási szerkezet, az ágazat, a kérelmező állampolgársága és tartózkodási státusza, valamint az illetékes szerv legújabb gyakorlata szerint különbözhetnek; beruházás, szerződés vagy foglalkoztatás végrehajtása előtt a legújabb hivatalos forrásokat és az ügy saját körülményeit kell vizsgálni.
 
-**Wei Tseng ügyvédnő (曾雋崴)**
+Wei Tseng ügyvédnő (曾雋崴)

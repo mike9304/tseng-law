@@ -59,7 +59,7 @@ Níže uvádíme přeložené názvy tiskových zpráv, internetových příspě
 
 ![Došlo u korejského vysokoškolského studenta k prasknutí meziobratlové ploténky, když při osobním tréninku prováděl mrtvý tah 90 kg?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Došlo u korejského vysokoškolského studenta k prasknutí meziobratlové ploténky, když při osobním tréninku prováděl mrtvý tah 90 kg?**
+Došlo u korejského vysokoškolského studenta k prasknutí meziobratlové ploténky, když při osobním tréninku prováděl mrtvý tah 90 kg?
 
 Praktický význam této věci spočívá v tom, že ukazuje, že odpovědnost se neurčuje hned samotným faktem, že k úrazu došlo v posilovně. Obsah povinnosti bezpečnosti (安全義務), která tíží poskytovatele služby, konkrétní pokyn a porušení povinnosti péče (注意義務), příčinná souvislost mezi úrazem a jednáním a rozsah škody se posuzují podle dokumentů každé věci. Podmínky a lhůty trestního řízení a občanského řízení jsou rovněž odlišné, proto je třeba podklady hned od počátku uspořádat odděleně pro trestní a pro občanské řízení.
 
@@ -93,13 +93,13 @@ Pokud okolnosti nehody mohou naplnit znaky trestného činu, lze rychle podat oz
 
 Položky škody, jejichž uplatnění lze posoudit, jsou následující. Skutečné uznání a výše závisí na nutnosti každého výdaje, příčinné souvislosti s nehodou, dokladech, poměru odpovědnosti a posouzení soudu.
 
-1. **Léčebné výdaje**: Výdaje skutečně vynaložené na konzultaci, vyšetření, léčbu, léčiva a rehabilitaci se prokazují stvrzenkami a zdravotní dokumentací.
-2. **Náklady na ošetřování nebo péči**: Zda byla s ohledem na stupeň úrazu a průběh léčby péče nutná a zda jsou doba a náklady přiměřené, se posuzuje zdravotními a výdajovými podklady.
-3. **Dopravné**: Výdaje nutné k dojíždění do zdravotnického zařízení kvůli léčbě se prokazují evidencí přesunů, stvrzenkami a podobnými doklady.
-4. **Ztráta pracovní schopnosti (勞動能力減損)**: Jsou-li uznány následky a trvalé snížení pracovní schopnosti, lze ztrátu posoudit podle lékařských a profesních podkladů, stupně postižení, povolání a příjmu a zbývající doby pracovní způsobilosti. Samotné procento postižení náhradu neurčuje a ztráta se nepočítá automaticky až do okamžiku odchodu do důchodu.
-5. **Ušlý příjem v době zotavení (收入損失)**: Dobu, po kterou skutečně nebylo možné pracovat kvůli léčbě nebo rekonvalescenci, a z toho vyplývající snížení příjmu je třeba prokázat mzdovými a daňovými doklady a doklady o zaměstnání.
-6. **Nemajetková škoda (非財產上損害)**: Částku za duševní útrapy stanoví soud podle prvků každé věci, jako je stupeň úrazu, doba léčby, následky a konkrétní okolnosti strany.
-7. **Sankční náhrada škody (懲罰性賠償金)**: Existuje pravidlo, podle kterého v řízení, na něž se vztahuje zákon o ochraně spotřebitele, lze, způsobil-li podnik škodu úmyslně, žádat až 5násobek skutečné škody; při hrubé nedbalosti až 3násobek; a při nedbalosti až do výše skutečné škody. Zda se [čl. 51 tchajwanského zákona o ochraně spotřebitele](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na věc vztahuje a zda bude sankční náhrada skutečně přiznána a v jaké výši, závisí na posouzení soudu ohledně konkrétních předpokladů a důkazů.
+1. Léčebné výdaje: Výdaje skutečně vynaložené na konzultaci, vyšetření, léčbu, léčiva a rehabilitaci se prokazují stvrzenkami a zdravotní dokumentací.
+2. Náklady na ošetřování nebo péči: Zda byla s ohledem na stupeň úrazu a průběh léčby péče nutná a zda jsou doba a náklady přiměřené, se posuzuje zdravotními a výdajovými podklady.
+3. Dopravné: Výdaje nutné k dojíždění do zdravotnického zařízení kvůli léčbě se prokazují evidencí přesunů, stvrzenkami a podobnými doklady.
+4. Ztráta pracovní schopnosti (勞動能力減損): Jsou-li uznány následky a trvalé snížení pracovní schopnosti, lze ztrátu posoudit podle lékařských a profesních podkladů, stupně postižení, povolání a příjmu a zbývající doby pracovní způsobilosti. Samotné procento postižení náhradu neurčuje a ztráta se nepočítá automaticky až do okamžiku odchodu do důchodu.
+5. Ušlý příjem v době zotavení (收入損失): Dobu, po kterou skutečně nebylo možné pracovat kvůli léčbě nebo rekonvalescenci, a z toho vyplývající snížení příjmu je třeba prokázat mzdovými a daňovými doklady a doklady o zaměstnání.
+6. Nemajetková škoda (非財產上損害): Částku za duševní útrapy stanoví soud podle prvků každé věci, jako je stupeň úrazu, doba léčby, následky a konkrétní okolnosti strany.
+7. Sankční náhrada škody (懲罰性賠償金): Existuje pravidlo, podle kterého v řízení, na něž se vztahuje zákon o ochraně spotřebitele, lze, způsobil-li podnik škodu úmyslně, žádat až 5násobek skutečné škody; při hrubé nedbalosti až 3násobek; a při nedbalosti až do výše skutečné škody. Zda se [čl. 51 tchajwanského zákona o ochraně spotřebitele](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na věc vztahuje a zda bude sankční náhrada skutečně přiznána a v jaké výši, závisí na posouzení soudu ohledně konkrétních předpokladů a důkazů.
 
 ## 5. I když má posilovna pojištění odpovědnosti (責任保險), mohou být existence náhrady a výše sporné?
 

@@ -40,9 +40,9 @@ Kündigt die beschäftigte Person selbst, muss die Gesellschaft keine Abfindung 
 
 Begeht die beschäftigte Person jedoch eine rechtswidrige Handlung,
 
-**verletzt sie Betriebsregeln (工作規則),**
+verletzt sie Betriebsregeln (工作規則),
 
-**oder bleibt sie ohne Grund 3 Tage hintereinander der Arbeit fern (曠工),**
+oder bleibt sie ohne Grund 3 Tage hintereinander der Arbeit fern (曠工),
 
 kann die Gesellschaft kündigen, ohne Abfindung zu zahlen.
 
@@ -52,7 +52,7 @@ Die folgende Tabelle fasst die Unterschiede zusammen.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Art** | **Wirtschaftliche Kündigung (資遣員工, 經濟解僱)** | **Disziplinarkündigung (解僱員工, 懲戒解僱)** | **Eigene Kündigung der beschäftigten Person (員工自請離職)** |
+| Art | Wirtschaftliche Kündigung (資遣員工, 經濟解僱) | Disziplinarkündigung (解僱員工, 懲戒解僱) | Eigene Kündigung der beschäftigten Person (員工自請離職) |
 | Bedeutung | Besteht beim Arbeitgeber wegen der Geschäftslage Bedarf an Personalanpassung, liegt der Grund im unternehmerischen Bereich des Arbeitgebers und nicht in der Verantwortung der beschäftigten Person. Deshalb hat der Arbeitgeber die Kündigungsfrist (預告期間) einzuhalten und Abfindung zu zahlen, um Nachteile der beschäftigten Person ausgewogen auszugleichen. | Begeht die beschäftigte Person eine rechtswidrige oder unangemessene Handlung, kann der Arbeitgeber den Arbeitsvertrag (勞動契約) ohne vorherige Ankündigung sofort beenden und muss keine Abfindung zahlen. Dies ist eine der Disziplinarbefugnisse des Arbeitgebers. | Die beschäftigte Person ist frei, den Vertrag jederzeit zu beenden, muss aber je nach Beschäftigungsdauer die Kündigungsfrist einhalten, damit der Arbeitgeber Übergabe und Ersatzsuche vornehmen kann. |
 | Voraussetzungen | Vorhanden  (Artikel 11 des taiwanesischen Arbeitsstandardsgesetzes) | Vorhanden  (Artikel 12 des taiwanesischen Arbeitsstandardsgesetzes) | Keine |
 | Vorherige Ankündigung | Erforderlich | Nicht erforderlich | Erforderlich |
@@ -194,17 +194,17 @@ schwer erreichbare Ziele setzt,
 
 oder Beschäftigte auf merkwürdige Stellen versetzt,
 
-**müssen Sie Beweise sichern.**
+müssen Sie Beweise sichern.
 
-**Ihre normalen Anwesenheitsaufzeichnungen,**
+Ihre normalen Anwesenheitsaufzeichnungen,
 
-**Überstundenaufzeichnungen, Leistungsaufzeichnungen,**
+Überstundenaufzeichnungen, Leistungsaufzeichnungen,
 
-**Betriebsregeln, E-Mail-Verkehr mit Kolleginnen, Kollegen und Vorgesetzten**
+Betriebsregeln, E-Mail-Verkehr mit Kolleginnen, Kollegen und Vorgesetzten
 
-**sowie Gesprächsaufzeichnungen mit Vorgesetzten —**
+sowie Gesprächsaufzeichnungen mit Vorgesetzten —
 
-**sichern Sie Beweise, die für Sie günstig sind.**
+sichern Sie Beweise, die für Sie günstig sind.
 
 ​
 

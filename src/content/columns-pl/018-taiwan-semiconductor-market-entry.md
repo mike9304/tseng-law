@@ -85,11 +85,11 @@ Stosunkowo łatwiej jest uzyskać zezwolenie na pracę dla zarządzającego tajw
 
 Poniższe scenariusze są hipotetyczne, aby pomóc w myśleniu; nie ustalają, że dany sposób jest legalny lub korzystniejszy.
 
-**Zagraniczne przedsiębiorstwa skupione na początkowym eksporcie.** Jeśli nie ma jeszcze ani pracowników, ani zapasów na Tajwanie i chcą Państwo sprawdzić popyt przez niezależnego dystrybutora, można najpierw zbadać dostawy, stosunek dystrybucji i zakres działalności na Tajwanie. Sama umowa dystrybucji nie usuwa wszystkich kwestii regulacyjnych na Tajwanie.
+Zagraniczne przedsiębiorstwa skupione na początkowym eksporcie. Jeśli nie ma jeszcze ani pracowników, ani zapasów na Tajwanie i chcą Państwo sprawdzić popyt przez niezależnego dystrybutora, można najpierw zbadać dostawy, stosunek dystrybucji i zakres działalności na Tajwanie. Sama umowa dystrybucji nie usuwa wszystkich kwestii regulacyjnych na Tajwanie.
 
-**Zagraniczne przedsiębiorstwa, które rozszerzają sprzedaż i wsparcie techniczne na Tajwanie.** Jeśli planują Państwo zatrudniać na Tajwanie i nadal zarządzać zapasami, inkasem i wsparciem klienta, należy konkretnie porównać spółkę zależną i oddział, a także ponownie przejrzeć odpowiedzialność umowną, sposób operowania centrali, podatki i personel.
+Zagraniczne przedsiębiorstwa, które rozszerzają sprzedaż i wsparcie techniczne na Tajwanie. Jeśli planują Państwo zatrudniać na Tajwanie i nadal zarządzać zapasami, inkasem i wsparciem klienta, należy konkretnie porównać spółkę zależną i oddział, a także ponownie przejrzeć odpowiedzialność umowną, sposób operowania centrali, podatki i personel.
 
-**Zagraniczne przedsiębiorstwa w fazie badania rynku.** Jeśli przed organizacją sprzedaży chcą Państwo tylko funkcji informacji i łączności, można ocenić biuro przedstawicielskie. Jeśli rzeczywisty plan obejmuje sprzedaż zapasów lub pracę na miejscu, trzeba osobno potwierdzić, czy te działalności są dozwolone.
+Zagraniczne przedsiębiorstwa w fazie badania rynku. Jeśli przed organizacją sprzedaży chcą Państwo tylko funkcji informacji i łączności, można ocenić biuro przedstawicielskie. Jeśli rzeczywisty plan obejmuje sprzedaż zapasów lub pracę na miejscu, trzeba osobno potwierdzić, czy te działalności są dozwolone.
 
 ## 8. Na pierwsze spotkanie wystarczy panorama operacyjna; nie trzeba od razu przekazywać wszystkich materiałów poufnych
 

@@ -85,11 +85,11 @@ Að ljúka skráningu á Taívan merkir ekki að starfsfólk erlendra höfuðst�
 
 Eftirfarandi aðstæður eru tilgátur til aðstoðar við íhugun; þær slá því ekki föstu að tiltekin leið sé lögmæt eða betri.
 
-**Erlend fyrirtæki sem beinast að upphaflegum útflutningi.** Séu á Taívan enn hvorki starfsmenn né birgðir, og ætlunin sé að kanna eftirspurn um sjálfstæðan dreifingaraðila, má fyrst horfa til afhendingar, dreifingarsambands og starfssviðs á Taívan. Dreifingarsamningur einn leysir ekki öll regluverksatriði á Taívan.
+Erlend fyrirtæki sem beinast að upphaflegum útflutningi. Séu á Taívan enn hvorki starfsmenn né birgðir, og ætlunin sé að kanna eftirspurn um sjálfstæðan dreifingaraðila, má fyrst horfa til afhendingar, dreifingarsambands og starfssviðs á Taívan. Dreifingarsamningur einn leysir ekki öll regluverksatriði á Taívan.
 
-**Erlend fyrirtæki sem víkka sölu og tæknilegan stuðning á Taívan.** Sé ætlunin að ráða á Taívan og halda áfram að stýra birgðum, innheimtu og viðskiptastuðningi, ætti að bera saman dótturfélag og útibú tiltekið, og einnig kanna samningsábyrgð, rekstraraðferð höfuðstöðva, skatta og mannaflaáætlun.
+Erlend fyrirtæki sem víkka sölu og tæknilegan stuðning á Taívan. Sé ætlunin að ráða á Taívan og halda áfram að stýra birgðum, innheimtu og viðskiptastuðningi, ætti að bera saman dótturfélag og útibú tiltekið, og einnig kanna samningsábyrgð, rekstraraðferð höfuðstöðva, skatta og mannaflaáætlun.
 
-**Erlend fyrirtæki á markaðskönnunarstigi.** Vilji maður, áður en söluskipulag er sett á fót, aðeins hafa upplýsinga- og tengiliðahlutverk, má kanna umboðsskrifstofu (代表人辦事處). Nái raunveruleg áætlun til sölu birgða eða vinnu á staðnum, skal sérstaklega staðfesta hvort sú starfsemi sé heimil.
+Erlend fyrirtæki á markaðskönnunarstigi. Vilji maður, áður en söluskipulag er sett á fót, aðeins hafa upplýsinga- og tengiliðahlutverk, má kanna umboðsskrifstofu (代表人辦事處). Nái raunveruleg áætlun til sölu birgða eða vinnu á staðnum, skal sérstaklega staðfesta hvort sú starfsemi sé heimil.
 
 ## 8. Til fyrsta samtals nægir rekstraryfirlit; ekki þarf að afhenda öll trúnaðargögn strax
 

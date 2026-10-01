@@ -51,7 +51,7 @@ Tāpēc pievērsiet šai lietai uzmanību.
 
 ​
 
-**Vai visām nozarēm ar sistēmu „darbības vietas iepriekšēja pārbaude“ jāpārbauda, vai darbība ir iespējama?**
+Vai visām nozarēm ar sistēmu „darbības vietas iepriekšēja pārbaude“ jāpārbauda, vai darbība ir iespējama?
 
 Visām nozarēm ieteicams ar sistēmu „darbības vietas iepriekšēja pārbaude“ (營業場所預先查詢) apstiprināt, vai darbība ir iespējama.
 
@@ -61,7 +61,7 @@ Tāpēc praksē, reģistrējot sabiedrību, nav jāpārbauda visas nozares.
 
 Saskaņā ar „[Taipejas pilsētas darbības vietu palīdzības pārbaudes pakalpojuma darbības norādījumu](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“(臺北市營業場所協助查詢服務作業須知) un Taipejas pilsētas spēkā esošo norādi,
 
-no 2023. gada 1. janvāra, piesakot sabiedrības vai komercdarbības (tostarp filiāles (分公司) un struktūrvienības (分支機構)) dibināšanas, atrašanās vietas pārcelšanas vai darbības nozaru papildināšanas reģistrāciju, darbības vietas iepriekšējās pārbaudes iznākums **jāpievieno** reģistrācijas pieteikumam, neatkarīgi no nozares.
+no 2023. gada 1. janvāra, piesakot sabiedrības vai komercdarbības (tostarp filiāles (分公司) un struktūrvienības (分支機構)) dibināšanas, atrašanās vietas pārcelšanas vai darbības nozaru papildināšanas reģistrāciju, darbības vietas iepriekšējās pārbaudes iznākums jāpievieno reģistrācijas pieteikumam, neatkarīgi no nozares.
 
 Turpmākais saraksts „nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目) apzīmē nozares, kuras Tirdzniecības pārvalde reģistrācijas izskatīšanas gaitā papildus pārbauda pēc savas iniciatīvas (隨案主動查詢), kad nozare ir norādīta pieteikumā, bet pievienotajā iznākumā tās trūkst; apstāklis, ka nozares šajā sarakstā nav, nenozīmē atbrīvojumu no pārbaudes.
 

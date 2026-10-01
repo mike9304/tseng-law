@@ -17,13 +17,13 @@ Di recente, numerose persone hanno costituito una società (公司) a Taiwan e h
 
 Le domande formulate di frequente al momento della costituzione sono riunite di seguito.
 
-Chi ha letto [**i fondamenti della costituzione di società**](/it/columns/taiwan-company-establishment-basics) può in seguito fare riferimento anche a questa parte approfondita più dettagliata.
+Chi ha letto [i fondamenti della costituzione di società](/it/columns/taiwan-company-establishment-basics) può in seguito fare riferimento anche a questa parte approfondita più dettagliata.
 
 Le domande e risposte seguenti mirano ad aiutare le persone che valutano di costituire una società a Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Intendo costituire una società, ma non ho ancora trovato un indirizzo di iscrizione. La costituzione è comunque possibile?**
+1. Intendo costituire una società, ma non ho ancora trovato un indirizzo di iscrizione. La costituzione è comunque possibile?
 
 Quando uno straniero costituisce una società a Taiwan, deve presentare un piano di investimento (投資計畫書) al Dipartimento per l’esame degli investimenti del Ministero dell’Economia (經濟部投資審議司) per l’esame.
 
@@ -43,7 +43,7 @@ Nell’articolo sui fondamenti, una lettrice o un lettore ha indicato che l’ap
 
 Poiché i casi di riciclaggio di denaro (洗錢) sono molto numerosi a Taiwan, l’apertura dei conti bancari diventa sempre più rigorosa.
 
-**Consiglio**:
+Consiglio:
 
 Poiché l’esame del piano di investimento richiede anche tempo,
 
@@ -57,13 +57,13 @@ resta tempo sufficiente per aprire in banca il conto preparatorio e trasferire i
 
 ​
 
-**2. Si può aprire un conto di società in banca anche senza certificato di soggiorno per stranieri di Taiwan?**
+2. Si può aprire un conto di società in banca anche senza certificato di soggiorno per stranieri di Taiwan?
 
 È possibile.
 
 La banca esige in generale due documenti di identità.
 
-Senza certificato di soggiorno per stranieri, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan la «**scheda di dati di base del numero unificato di identificazione**» (統一證號基本資料表).
+Senza certificato di soggiorno per stranieri, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan la «scheda di dati di base del numero unificato di identificazione» (統一證號基本資料表).
 
 Il rilascio è possibile nello stesso giorno,
 
@@ -71,7 +71,7 @@ ma l’amministrazione dell’immigrazione (移民署) è molto frequentata; con
 
 ​
 
-**3. Ho sentito dire che, nell’esame del piano di investimento, deve indicarsi la formazione e l’esperienza professionale, e temo che la mia formazione e la mia esperienza non corrispondano al settore della società che intendo costituire.**
+3. Ho sentito dire che, nell’esame del piano di investimento, deve indicarsi la formazione e l’esperienza professionale, e temo che la mia formazione e la mia esperienza non corrispondano al settore della società che intendo costituire.
 
 La commissione di esame del Ministero dell’Economia esamina il percorso formativo e professionale dell’investitore.
 
@@ -85,13 +85,13 @@ Su questo punto, conviene confrontarsi in modo approfondito con un’avvocata o 
 
 ​
 
-**4. Quali punti devono osservarsi quando l’indirizzo di iscrizione della società (per esempio un locale di ristorazione) è preso in locazione?**
+4. Quali punti devono osservarsi quando l’indirizzo di iscrizione della società (per esempio un locale di ristorazione) è preso in locazione?
 
-La costituzione della società dura circa **3 mesi**, l’ottenimento dell’autorizzazione di lavoro (工作許可) e del certificato di soggiorno per stranieri circa **1 mese in più**,
+La costituzione della società dura circa 3 mesi, l’ottenimento dell’autorizzazione di lavoro (工作許可) e del certificato di soggiorno per stranieri circa 1 mese in più,
 
 perciò l’inizio del contratto va fissato il più tardi possibile.
 
-Inoltre, nei contratti di locazione di locali commerciali a Taiwan, il locatore concede di frequente al locatario un «**periodo di allestimento**» (裝潢期間).
+Inoltre, nei contratti di locazione di locali commerciali a Taiwan, il locatore concede di frequente al locatario un «periodo di allestimento» (裝潢期間).
 
 Si tratta di un periodo esente da canone; si può negoziare.
 
@@ -107,7 +107,7 @@ si può, se del caso, proporre la stipula del contratto di locazione per atto no
 
 ​
 
-**5. Si può, nella costituzione della società, prendere in locazione un locale a uso ufficio?**
+5. Si può, nella costituzione della società, prendere in locazione un locale a uso ufficio?
 
 Ciò dipende dalle voci di attività (營業項目) della società.
 

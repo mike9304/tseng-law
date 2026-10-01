@@ -16,9 +16,9 @@ const immutableTailMarker = Buffer.from(
   '## 1. 最低勤務期間条項はいつ有効となるか',
   'utf8',
 );
-const immutableTailLength = 25_919;
+const immutableTailLength = 25_915;
 const immutableTailSha256 =
-  '3c93a87a2897d86fdf241d08f392814adee03be6c55ebd2b02276e105b75e2f2';
+  'a2b8a76be010237440f8841ca2df823c36859eb7997ddbd50998c860c7878e80';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const closingBytes =

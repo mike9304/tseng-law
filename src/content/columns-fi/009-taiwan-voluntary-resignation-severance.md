@@ -25,7 +25,7 @@ ja tämä eroaa eräiden muiden maiden, esimerkiksi Korean, järjestelmästä.
 
 ​
 
-On kuitenkin **poikkeustapauksia**.
+On kuitenkin poikkeustapauksia.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Työstandardilaki (勞動基準法) määrää kuitenkin,
 
 että työntekijöiden, jotka haluavat päättää työsopimuksen edellä olevan kohdan 1 tai kohdan 6 nojalla (esimerkiksi puuttuvan vakuutusliitännän vuoksi),
 
-on päätettävä työsopimus **30 päivän** kuluessa siitä päivästä, jona he tietävät tilanteen,
+on päätettävä työsopimus 30 päivän kuluessa siitä päivästä, jona he tietävät tilanteen,
 
-tai (kohdan 6 osalta) **30 päivän** kuluessa siitä päivästä, jona he tietävät vahinkoseurauksen.
+tai (kohdan 6 osalta) 30 päivän kuluessa siitä päivästä, jona he tietävät vahinkoseurauksen.
 
 Siksi työntekijöiden on pidettävä määräaika tarkasti silmällä.
 
@@ -89,7 +89,7 @@ eroraha evätä tai sitä vaatia.
 
 Siksi taiwanilaisissa työriidoissa (勞資糾紛)
 
-**ajankohta** on hyvin tärkeä.
+ajankohta on hyvin tärkeä.
 
 Se, joka valmistautuu etukäteen, on yleensä vahvemmassa asemassa oikeuksiensa valvonnassa; tiettyä lopputulosta siitä ei seuraa.
 

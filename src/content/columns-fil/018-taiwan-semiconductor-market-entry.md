@@ -85,11 +85,11 @@ Mas madalas na natutugunan ng manager ng subsidiary sa Taiwan o ng sangay ng day
 
 Ang sumusunod ay hipotetikong senaryo para tumulong sa pag-iisip. Hindi nito tinitiyak na legal o mas mainam ang isang paraan.
 
-**Kompanyang nakatuon sa maagang pagluluwas.** Kung wala pang empleyado o imbentaryo sa Taiwan, at nais subukan ang pangangailangan sa pamilihan sa pamamagitan ng malayang tagapamahagi, suriin muna ang suplay, ugnayan sa distribusyon, at saklaw ng gawain sa Taiwan. Ang kontrata sa distribusyon lamang ay hindi nagtatanggal ng lahat ng isyu sa regulasyon sa Taiwan.
+Kompanyang nakatuon sa maagang pagluluwas. Kung wala pang empleyado o imbentaryo sa Taiwan, at nais subukan ang pangangailangan sa pamilihan sa pamamagitan ng malayang tagapamahagi, suriin muna ang suplay, ugnayan sa distribusyon, at saklaw ng gawain sa Taiwan. Ang kontrata sa distribusyon lamang ay hindi nagtatanggal ng lahat ng isyu sa regulasyon sa Taiwan.
 
-**Kompanyang palalawakin ang benta at suportang teknikal sa Taiwan.** Kung kumuha ng tauhan sa Taiwan at patuloy na mamamahala ng imbentaryo, pagkolekta ng bayad, at suporta sa kliyente, ihambing nang kongkreto ang subsidiary at ang sangay, at suriin din ang pananagutang kontraktuwal, ang operasyon ng punong tanggapan, ang buwis, at ang tauhan.
+Kompanyang palalawakin ang benta at suportang teknikal sa Taiwan. Kung kumuha ng tauhan sa Taiwan at patuloy na mamamahala ng imbentaryo, pagkolekta ng bayad, at suporta sa kliyente, ihambing nang kongkreto ang subsidiary at ang sangay, at suriin din ang pananagutang kontraktuwal, ang operasyon ng punong tanggapan, ang buwis, at ang tauhan.
 
-**Kompanya sa yugto ng pagsasaliksik sa pamilihan.** Kung bago magtatag ng organisasyon sa benta ay pangangalap ng impormasyon at ugnayan lamang ang gusto, maaaring isaalang-alang ang tanggapang kinatawan. Kung kasama sa aktuwal na plano ang pagbebenta ng imbentaryo o gawain sa lugar, kumpirmahin nang hiwalay kung pinahihintulutan ang mga gawaing iyon.
+Kompanya sa yugto ng pagsasaliksik sa pamilihan. Kung bago magtatag ng organisasyon sa benta ay pangangalap ng impormasyon at ugnayan lamang ang gusto, maaaring isaalang-alang ang tanggapang kinatawan. Kung kasama sa aktuwal na plano ang pagbebenta ng imbentaryo o gawain sa lugar, kumpirmahin nang hiwalay kung pinahihintulutan ang mga gawaing iyon.
 
 ## 8. Sa unang konsultasyon, maghanda ng buod ng operasyon; hindi kailangang ibigay agad ang lahat ng kumpidensiyal na materyal
 

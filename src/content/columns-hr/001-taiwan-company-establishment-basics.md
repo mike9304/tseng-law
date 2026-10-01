@@ -142,4 +142,4 @@ Opseg povezanih usluga možete vidjeti u [Koje predmete vodimo](/hr/services), i
 
 Ovaj je članak opće informativne i obrazovne naravi o osnivanju društva na Tajvanu i povezanim pravilima; nije pravno ni porezno savjetovanje u konkretnom predmetu i ne obećava određeni ishod. Potrebni postupci i rezultati mogu se razlikovati prema strukturi ulaganja, djelatnosti, državljanstvu i boravišnom statusu podnositelja i najnovijoj praksi nadležnog tijela; prije izvršenja ulaganja, ugovora ili zaposlenja treba ocijeniti najnovije službene izvore i okolnosti vlastitog predmeta.
 
-**Odvjetnica Wei Tseng (曾雋崴)**
+Odvjetnica Wei Tseng (曾雋崴)

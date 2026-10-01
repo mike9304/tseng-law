@@ -151,4 +151,4 @@ A hivatalos jogszabályi oldalakon a cikk módosítási és hatálybalépési na
 
 Ez a cikk a tajvani öröklés, házastársi vagyonjogi rendszer, szülői felügyelet és kiskorú gyámság intézményét általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi öröklési vagy családjogi ügyben, és nem ígér meghatározott eredményt. Az alkalmazandó jog, az eljárás és az eredmény az örökösök körétől, a végrendelettől, a vagyontól és a tartozásoktól, a házassági vagyonjogi rendszertől, a meglévő bírósági határozatoktól és a nemzetközi elemektől függően változhat. Az öröklésről való lemondás, az adóbevallás és hasonló határidők számítása vagy a vagyon feletti rendelkezés előtt a legújabb hivatalos forrásokat és az egyedi körülményeket kell ellenőrizni.
 
-**Wei Tseng ügyvédnő (曾雋崴)**
+Wei Tseng ügyvédnő (曾雋崴)

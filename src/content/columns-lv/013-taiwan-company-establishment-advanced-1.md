@@ -17,13 +17,13 @@ Pēdējā laikā daudzas personas ir dibinājušas sabiedrību (公司) Taivān�
 
 Turpmāk ir sakārtoti jautājumi, kas dibināšanas gaitā bieži tiek uzdoti.
 
-Personas, kuras lasījušas [**sabiedrības dibināšanas pamatus**](/lv/columns/taiwan-company-establishment-basics), pēc tam var iepazīties arī ar šo padziļināto daļu.
+Personas, kuras lasījušas [sabiedrības dibināšanas pamatus](/lv/columns/taiwan-company-establishment-basics), pēc tam var iepazīties arī ar šo padziļināto daļu.
 
 Turpmākie jautājumi un atbildes palīdzēs personām, kuras apsver sabiedrības dibināšanu Taivānā.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Vēlos dibināt sabiedrību, taču vēl nav reģistrācijas adreses. Vai dibināšana tomēr ir iespējama?**
+1. Vēlos dibināt sabiedrību, taču vēl nav reģistrācijas adreses. Vai dibināšana tomēr ir iespējama?
 
 Kad ārzemnieks dibina sabiedrību Taivānā, ieguldījuma plāns (投資計畫書) jāiesniedz Ekonomikas ministrijas Ieguldījumu izskatīšanas departamentam (經濟部投資審議司) izvērtēšanai.
 
@@ -43,7 +43,7 @@ Iepriekšējā pamata izklāstā kāds lasītājs teica, ka konta atvēršana ir
 
 Tā kā Taivānā ir ļoti daudz naudas atmazgāšanas (洗錢) gadījumu, bankas kontu atvēršana kļūst arvien stingrāka.
 
-**Ieteikums:**
+Ieteikums:
 
 Tā kā arī ieguldījuma plāna izvērtēšana prasa laiku, abi soļi jāveic vienlaikus.
 
@@ -57,13 +57,13 @@ Pietiek laika, lai bankā atvērtu sagatavošanas kontu un pārskaitītu kapitā
 
 ​
 
-**2. Vai bankā var atvērt sabiedrības kontu arī bez Taivānas uzturēšanās apliecības?**
+2. Vai bankā var atvērt sabiedrības kontu arī bez Taivānas uzturēšanās apliecības?
 
 Tas ir iespējams.
 
 Banka vispārēji prasa divus identitātes dokumentus.
 
-Bez uzturēšanās apliecības Taivānas imigrācijas pārvaldē var pieteikties „**vienotā identifikācijas numura pamatdatu izrakstam**“ (統一證號基本資料表).
+Bez uzturēšanās apliecības Taivānas imigrācijas pārvaldē var pieteikties „vienotā identifikācijas numura pamatdatu izrakstam“ (統一證號基本資料表).
 
 Izsniegšana ir iespējama tajā pašā dienā.
 
@@ -71,7 +71,7 @@ Tomēr imigrācijas pārvalde (移民署) ir ļoti noslogota; tāpēc jāierodas
 
 ​
 
-**3. Izvērtējot ieguldījuma plānu, it kā jānorāda izglītība un profesionālā pieredze. Kas notiek, ja mana izglītība un pieredze nesakrīt ar nozari, kurā vēlos dibināt sabiedrību?**
+3. Izvērtējot ieguldījuma plānu, it kā jānorāda izglītība un profesionālā pieredze. Kas notiek, ja mana izglītība un pieredze nesakrīt ar nozari, kurā vēlos dibināt sabiedrību?
 
 Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments gan vērtē ieguldītāja izcelsmi.
 
@@ -85,13 +85,13 @@ To var izklāstīt detalizēti tā, lai varētu pārliecināt personas, kas veic
 
 ​
 
-**4. Kam pievērst uzmanību, nomājot sabiedrības reģistrācijas adresi (piemēram, restorāna telpu)?**
+4. Kam pievērst uzmanību, nomājot sabiedrības reģistrācijas adresi (piemēram, restorāna telpu)?
 
-Sabiedrības dibināšana ilgst aptuveni **3 mēnešus**, un darba atļaujas (工作許可) un uzturēšanās apliecības iegūšana ilgst aptuveni vēl **1 mēnesi**.
+Sabiedrības dibināšana ilgst aptuveni 3 mēnešus, un darba atļaujas (工作許可) un uzturēšanās apliecības iegūšana ilgst aptuveni vēl 1 mēnesi.
 
 Tāpēc līguma sākums jānosaka iespējami vēlu.
 
-Turklāt nomas līgumos par tirdzniecības telpām Taivānā iznomātājs īrniekam bieži piešķir „**iekārtošanas periodu**“ (裝潢期間).
+Turklāt nomas līgumos par tirdzniecības telpām Taivānā iznomātājs īrniekam bieži piešķir „iekārtošanas periodu“ (裝潢期間).
 
 Tas ir no nomas maksas atbrīvots periods; par to var vest sarunas.
 
@@ -107,7 +107,7 @@ Vajadzības gadījumā var ierosināt nomas līguma notariālo aktu (公證) vai
 
 ​
 
-**5. Vai, dibinot sabiedrību, var nomāt biroja telpu?**
+5. Vai, dibinot sabiedrību, var nomāt biroja telpu?
 
 Tas ir atkarīgs no sabiedrības darbības nozarēm (營業項目).
 

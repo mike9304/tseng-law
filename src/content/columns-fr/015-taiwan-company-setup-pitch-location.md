@@ -51,7 +51,7 @@ Prêtez donc attention à ce point.
 
 ​
 
-**Q. Tous les secteurs doivent-ils vérifier, par le système de « consultation préalable du local », si l’exploitation est possible ?**
+Q. Tous les secteurs doivent-ils vérifier, par le système de « consultation préalable du local », si l’exploitation est possible ?
 
 Il est recommandé à tous les secteurs de confirmer, par le système de « consultation préalable du local » (營業場所預先查詢), si l’exploitation est possible.
 
@@ -61,7 +61,7 @@ Aussi, en pratique, il n’est pas nécessaire de vérifier toutes les branches 
 
 Les « [instructions de fonctionnement du service d’aide à la consultation des locaux de la ville de Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) » (臺北市營業場所協助查詢服務作業須知) et le guide en vigueur de la ville de Taipei fixent la règle suivante.
 
-Depuis le 1 janvier 2023, lors de la demande d’immatriculation de constitution, de transfert de siège ou d’ajout de branches d’activité d’une société ou d’un commerce (y compris la succursale (分公司) et l’établissement auxiliaire (分支機構)), le résultat de la consultation préalable du local **doit** être joint à la demande d’immatriculation, indépendamment du secteur.
+Depuis le 1 janvier 2023, lors de la demande d’immatriculation de constitution, de transfert de siège ou d’ajout de branches d’activité d’une société ou d’un commerce (y compris la succursale (分公司) et l’établissement auxiliaire (分支機構)), le résultat de la consultation préalable du local doit être joint à la demande d’immatriculation, indépendamment du secteur.
 
 La liste ci-dessous des « branches faisant l’objet d’une vérification d’office » (主動查詢之營業項目) désigne les branches que le bureau du commerce vérifie d’office en plus pendant l’examen de l’immatriculation (隨案主動查詢) lorsque la branche figure dans la demande mais manque dans le résultat joint ; le fait qu’une branche ne figure pas sur cette liste ne signifie pas que la vérification soit dispensée.
 

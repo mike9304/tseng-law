@@ -93,9 +93,9 @@ Si hi ha discrepància amb el dictamen pericial, es pot demanar una revisió, pe
 
 La reclamació basada en l’article 184 del Codi civil pressuposa una lesió il·lícita d’un dret, el nexe causal amb l’accident i la prova del dany. El mer fet que hagi ocorregut un accident no implica que es reconeguin tots els conceptes següents. L’article 216 del Codi civil és el criteri per determinar l’abast del dany efectiu i del lucre cessant (所失利益).
 
-- **Lesions**: Segons l’article 193 del Codi civil es poden examinar les despeses mèdiques (醫療費用) necessàries, les despeses addicionals de la vida diària com les de cura (看護費用), de transport per a tractament (就醫交通費) i d’ajudes tècniques, així com la pèrdua d’ingressos (收入損失) per incapacitat laboral real i la disminució de la capacitat laboral (勞動能力減損). Segons l’article 195 del Codi civil també es pot examinar el dany moral.
-- **Mort**: Segons l’article 192 del Codi civil, quan escaigui, es poden examinar les despeses mèdiques anteriors a la mort i les despeses de necessitats vitals incrementades, les despeses funeràries (殯葬費) i la pèrdua d’aliments (扶養利益損失) de qui tenia dret legal a aliments. Segons l’article 194 del Codi civil també es pot examinar el dany moral de determinats parents.
-- **Patrimoni**: Segons l’article 196 del Codi civil es pot reclamar el dany patrimonial efectiu acreditat, incloses les despeses de reparació del vehicle o la pèrdua de valor.
+- Lesions: Segons l’article 193 del Codi civil es poden examinar les despeses mèdiques (醫療費用) necessàries, les despeses addicionals de la vida diària com les de cura (看護費用), de transport per a tractament (就醫交通費) i d’ajudes tècniques, així com la pèrdua d’ingressos (收入損失) per incapacitat laboral real i la disminució de la capacitat laboral (勞動能力減損). Segons l’article 195 del Codi civil també es pot examinar el dany moral.
+- Mort: Segons l’article 192 del Codi civil, quan escaigui, es poden examinar les despeses mèdiques anteriors a la mort i les despeses de necessitats vitals incrementades, les despeses funeràries (殯葬費) i la pèrdua d’aliments (扶養利益損失) de qui tenia dret legal a aliments. Segons l’article 194 del Codi civil també es pot examinar el dany moral de determinats parents.
+- Patrimoni: Segons l’article 196 del Codi civil es pot reclamar el dany patrimonial efectiu acreditat, incloses les despeses de reparació del vehicle o la pèrdua de valor.
 
 ## 8. Si el tractament continua, com es presenten les dades de despeses mèdiques?
 
@@ -195,7 +195,7 @@ L’assegurança de responsabilitat civil davant tercers (第三人責任險), l
 - [Barem de prestacions de l’assegurança obligatòria de responsabilitat civil d’automòbils](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contracte tipus d’assegurança d’automòbil d’ús particular de la Comissió de Supervisió Financera (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-**16.** Després de l’accident, es pot deixar tot en mans de l’asseguradora?
+16. Després de l’accident, es pot deixar tot en mans de l’asseguradora?
 
 ​
 
@@ -231,7 +231,7 @@ Si s’encomana a l’asseguradora, s’ha de seguir contínuament el procés de
 
 ​
 
-**17.** Quina és la responsabilitat penal per lesions per imprudència del causant d’un accident de trànsit?
+17. Quina és la responsabilitat penal per lesions per imprudència del causant d’un accident de trànsit?
 
 ​
 
@@ -255,7 +255,7 @@ En algunes sentències per lesions greus per imprudència s’ha imposat una pen
 
 ​
 
-**18.** Si es transigeix amb l’altra part, es pot desistir de la querella penal?
+18. Si es transigeix amb l’altra part, es pot desistir de la querella penal?
 
 ​
 
@@ -275,7 +275,7 @@ En alguns casos el tribunal pot acordar la suspensió de la pena (緩刑); no é
 
 ​
 
-**19.** Si s’abandona el lloc després de l’accident, es configura sempre el delicte penal de fuga?
+19. Si s’abandona el lloc després de l’accident, es configura sempre el delicte penal de fuga?
 
 ​
 
@@ -295,7 +295,7 @@ Si només hi ha danys en el vehicle, no es considera fuga.
 
 ​
 
-**20.** Com es busca un advocat per a un accident de trànsit?
+20. Com es busca un advocat per a un accident de trànsit?
 
 ​
 
@@ -363,7 +363,7 @@ Per a altres preguntes, escrigui a través de la pàgina Contacte; no es promet 
 
 ​
 
-**Advocada Wei Tseng (曾雋崴)**
+Advocada Wei Tseng (曾雋崴)
 
 ---
 

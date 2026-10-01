@@ -47,9 +47,9 @@ The same paragraph adds an alternative, joined to the five-year route by "or", f
 
 Foreigners working in professional roles can use [Article 18 of the Act for the Recruitment and Employment of Foreign Professionals](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=18):
 
-- **Foreign professionals:** five years of continuous lawful residence, living in Taiwan an *average* of at least 183 days a year. The Immigration Act route needs 183 days in *each* year. The other conditions are the same: adulthood, good conduct, self-support and national interest.
-- **Foreign special professionals:** if you resided in Taiwan on a special-professional work permit or an Employment Gold Card, three years of continuous lawful residence at an average of 183 days a year is enough. If you meet conditions announced by the Ministry of the Interior, one year of lawful residence with at least 183 days of residence is enough.
-- **Degrees earned in Taiwan:** a degree from a Taiwan university or college shortens the period. For professionals, a doctorate counts as three years, a master's as two, and a bachelor's or associate degree as one. For special professionals, a doctorate counts as two years and a master's as one. Degrees cannot be combined.
+- Foreign professionals: five years of continuous lawful residence, living in Taiwan an *average* of at least 183 days a year. The Immigration Act route needs 183 days in *each* year. The other conditions are the same: adulthood, good conduct, self-support and national interest.
+- Foreign special professionals: if you resided in Taiwan on a special-professional work permit or an Employment Gold Card, three years of continuous lawful residence at an average of 183 days a year is enough. If you meet conditions announced by the Ministry of the Interior, one year of lawful residence with at least 183 days of residence is enough.
+- Degrees earned in Taiwan: a degree from a Taiwan university or college shortens the period. For professionals, a doctorate counts as three years, a master's as two, and a bachelor's or associate degree as one. For special professionals, a doctorate counts as two years and a master's as one. Degrees cannot be combined.
 
 The two-year application window after qualifying applies here too.
 

@@ -191,4 +191,4 @@ En ordonnant les documents en ordre temporel, il convient d’indiquer ensemble 
 
 Ce texte est un document à but éducatif pour expliquer de manière générale la clause de durée minimale de service à Taïwan, la restitution des frais de formation et de la prestation anticipée et le préavis de démission ; ce n’est pas un avis juridique pour une affaire de travail concrète. La validité de la clause et l’étendue de la responsabilité peuvent varier selon le type et la teneur du contrat, la formation et le coût réels, la finalité de la contrepartie et sa communication, la période de travail, la cause d’extinction et les preuves. Avant de formuler la démission, d’accepter une retenue salariale, de convenir d’une restitution ou de répondre à un litige, il convient de confirmer les sources officielles les plus récentes et les circonstances individuelles.
 
-**Wei Tseng (曾雋崴), avocate à Taïwan**
+Wei Tseng (曾雋崴), avocate à Taïwan

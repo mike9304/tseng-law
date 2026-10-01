@@ -25,7 +25,7 @@ ve bu, bazı hukuk düzenlerinden — örneğin Kore’den — farklıdır.
 
 ​
 
-Ancak **istisnai haller** vardır.
+Ancak istisnai haller vardır.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Ancak İş Standartları Kanunu (勞動基準法) şunu öngörür:
 
 çalışan yukarıdaki 1. veya 6. bentler uyarınca iş sözleşmesini sona erdirmek isterse (örneğin sigortaya kaydettirmeme nedeniyle sözleşmeyi bitirmek için),
 
-bu durumu öğrendiği günden itibaren **30 gün** içinde,
+bu durumu öğrendiği günden itibaren 30 gün içinde,
 
-veya (6. bent için) zarar sonucunu öğrendiği günden itibaren **30 gün** içinde iş sözleşmesini sona erdirmelidir.
+veya (6. bent için) zarar sonucunu öğrendiği günden itibaren 30 gün içinde iş sözleşmesini sona erdirmelidir.
 
 Çalışan bu yüzden süreyi iyi kavramalıdır.
 
@@ -89,7 +89,7 @@ kıdem tazminatını ödemeyebilir veya isteyebilir.
 
 Bu yüzden Tayvan’daki iş uyuşmazlıklarında (勞資糾紛)
 
-**zamanlama** çok önemlidir.
+zamanlama çok önemlidir.
 
 Önceden hazırlanan taraf, haklarını korumak bakımından daha elverişli durumdadır; bundan belirli bir sonuç çıkmaz.
 

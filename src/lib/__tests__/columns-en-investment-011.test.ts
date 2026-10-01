@@ -182,7 +182,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
       'legal personality, the head office’s liability, accounting and tax treatment, profit remittance, representative authority, and internal controls',
       'Department of Investment Review, Ministry of Economic Affairs (MOEA)',
       'obtain investment approval, remit funds, register a company or branch, open a bank account, complete tax registration, and obtain importer status',
-      'the central responsible entity under cosmetics regulation is the **cosmetics manufacturer or importer**',
+      'the central responsible entity under cosmetics regulation is the cosmetics manufacturer or importer',
       'outsourcing alone does not transfer the cosmetics manufacturer’s or importer’s legal responsibility',
       'Distinguishing contractual task allocation from the responsible entity under the law',
     ];
@@ -360,7 +360,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
   it('ends with the exact disclaimer and canonical author, with nothing after the author', () => {
     const exactEnding = `This article provides general educational information about the rules governing entry into Taiwan’s cosmetics market. It is not legal advice on any specific product or advertisement and does not guarantee any permit or registration, eligibility for sale, or processing time. The market-entry structure, product records, labeling and advertising content, and the competent authorities’ current practices should be confirmed for each particular matter.
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**`;
+Wei Tseng (曾雋崴), Taiwan Attorney`;
 
     expect(parsed.content.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(post?.content.trimEnd().endsWith(exactEnding)).toBe(true);

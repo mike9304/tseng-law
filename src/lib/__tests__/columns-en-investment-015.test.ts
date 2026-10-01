@@ -153,7 +153,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
       'companies commonly register multiple business items',
       'around ten items at once',
       'it is not necessary to conduct an inquiry for every business item',
-      'since January 1, 2023 an application to register the establishment, relocation, or addition of business items of a company or business (including branches and sub-branch offices) **must** attach the business-location pre-inquiry result, whatever the business item.',
+      'since January 1, 2023 an application to register the establishment, relocation, or addition of business items of a company or business (including branches and sub-branch offices) must attach the business-location pre-inquiry result, whatever the business item.',
       'The list of "business items subject to proactive inquiry" (主動查詢之營業項目) below covers the items the Department of Commerce queries on its own initiative during registration review (隨案主動查詢) when the application names such an item but the attached inquiry result omits it; an item absent from this list is not exempt from the inquiry.',
     ];
     for (const phrase of required) {
@@ -168,7 +168,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
       'please feel free to contact a Taiwan attorney',
       'Administrative agency rules may change frequently',
       'confirm the latest regulations before registering a company',
-      '**Wei Tseng (曾雋崴), Taiwan Attorney**',
+      'Wei Tseng (曾雋崴), Taiwan Attorney',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);

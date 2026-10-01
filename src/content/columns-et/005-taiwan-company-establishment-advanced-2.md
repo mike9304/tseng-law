@@ -25,9 +25,9 @@ Järgmised küsimused ja vastused on mõeldud neile, kes kaaluvad äriühingu as
 
 ​
 
-**1. Millele peate tähelepanu pöörama, kui kannate kapitali (資本額) Koreast Taiwani äriühingu ettevalmistuskontole (公司籌備處帳戶)? (see punkt puudutab Korea süsteeme ja Korea pangapraktikat)**
+1. Millele peate tähelepanu pöörama, kui kannate kapitali (資本額) Koreast Taiwani äriühingu ettevalmistuskontole (公司籌備處帳戶)? (see punkt puudutab Korea süsteeme ja Korea pangapraktikat)
 
-Korea pangad (銀行) nõuavad tavaliselt, et investor külastaks **isiklikult** panka Koreas ja kannaks vahendid oma nimel olevalt kontolt.
+Korea pangad (銀行) nõuavad tavaliselt, et investor külastaks isiklikult panka Koreas ja kannaks vahendid oma nimel olevalt kontolt.
 
 Ülekanne internetipanga kaudu või lähedase kaudu (匯款) ei ole lubatud.
 
@@ -35,9 +35,9 @@ Lisaks peab isik, kellel on Korea kodakondsus ja kes asutab välismaise juriidil
 
 Enne kapitali ülekannet (資本金匯款) küsige nõu pangalt, millest vahendid väljuvad.
 
-**​**
+​
 
-**2. Kas äriühingu kapitali sissemaksmisel võite kanda uusi Taiwani dollareid (新臺幣, TWD) oma Taiwani kontolt Taiwani äriühingu ettevalmistuskontole?**
+2. Kas äriühingu kapitali sissemaksmisel võite kanda uusi Taiwani dollareid (新臺幣, TWD) oma Taiwani kontolt Taiwani äriühingu ettevalmistuskontole?
 
 See on võimalik, kuid peate esitama dokumendid, mis tõendavad Taiwanis omandatud TWD-vahendite päritolu.
 
@@ -47,9 +47,9 @@ Kui tegemist on dividendide ja kasumiga investeeringust Taiwani ettevõttesse, t
 
 Kui vahendid kantakse üle Korea pangakontolt, ei ole vahendite päritolu dokumente vaja lisada.
 
-**​**
+​
 
-**3. Millal saab ettevalmistuskonto pärast kapitali laekumist muuta äriühingu ametlikuks kontoks (正式公司帳戶)?**
+3. Millal saab ettevalmistuskonto pärast kapitali laekumist muuta äriühingu ametlikuks kontoks (正式公司帳戶)?
 
 Tavaliselt pärast juriidilise isiku registreerimisdokumentide (法人登記文件) kättesaamist
 
@@ -57,17 +57,17 @@ võib vastutav isik (負責人) minna panka ja muuta äriühingu ettevalmistusko
 
 Kuna iga panga (銀行) sise-eeskirjad siiski erinevad, on soovitatav pangalt esmalt küsida, kui kapitali on vaja kiiresti kasutada.
 
-**​**
+​
 
-**4. Kas internetipanka saab kasutada kohe, kui ettevalmistuskonto on muudetud ametlikuks kontoks?**
+4. Kas internetipanka saab kasutada kohe, kui ettevalmistuskonto on muudetud ametlikuks kontoks?
 
 See erineb panga järgi; tavaliselt nõutakse vähemalt mobiiltelefoni numbrit.
 
 Mõnel pangal võivad olla lisatingimused, näiteks konto kasutusaeg vähemalt 6 kuud asutamise järel.
 
-**​**
+​
 
-**5. Kas äriühing võib palgata töötajateks välismaalasi?**
+5. Kas äriühing võib palgata töötajateks välismaalasi?
 
 A. Esimene töötaja: taotlus esitatakse tavalise väljaspool Taiwani elavate hiinlaste või välismaalaste investeeringuga ettevõtte juhtiva tööna (一般僑外投資事業主管工作). Allpool punktis B nimetatud „erialase või tehnilise töö“ mõõdupuu ei kohaldu, kuid kohalduvad sihtrühma eeldused, sealhulgas tegevjuht (經理人) äriühingus, milles väljaspool Taiwani elavate hiinlaste või välismaalaste sissemakse ületab 1/3, ning tööandja tulemusnõuded kapitali ja käibe kohta (hindamisstandardid artikkel 38 ja artikkel 39).
 

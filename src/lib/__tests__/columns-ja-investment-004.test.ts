@@ -294,7 +294,7 @@ const relatedGuideLinks = [
 ];
 const disclaimerParagraph =
   '本稿は、台湾子会社と外国会社の支店の一般的な違いを説明するための教育目的の資料であり、個別の事案に対する法律・税務上の助言ではありません。適用される法令および税務処理は、投資家と本店の所在地、事業内容、取引と資金の流れ、協定適用要件ならびに所管官庁の最新の実務によって異なり得るため、設立・投資・契約・配当または送金を実行する前に、最新の公式資料および個別の事情をご確認ください。';
-const authorLine = '**曾雋崴弁護士（Wei Tseng）**';
+const authorLine = '曾雋崴弁護士（Wei Tseng）';
 
 describe('Japanese investment column 004 — subsidiary versus branch', () => {
   it('publishes the contracted frontmatter and exactly three FAQs', () => {

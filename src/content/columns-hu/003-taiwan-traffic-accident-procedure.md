@@ -93,9 +93,9 @@ Ha a szakvéleménnyel nincs egyetértés, újratárgyalás kérhető, de az új
 
 A polgári törvénykönyv 184. cikkén alapuló igény jogellenes jogsértést, a balesettel való okozati összefüggést és a kár bizonyítását feltételezi. Önmagában az, hogy baleset történt, nem vonja maga után, hogy az alábbi tételek mind elismertek. A polgári törvénykönyv 216. cikke a tényleges kár és az elmaradt haszon (所失利益) terjedelmének megállapítási kritériuma.
 
-- **Sérülések**: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a gyógyászati segédeszközök, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nem vagyoni kár is vizsgálható.
-- **Halál**: A polgári törvénykönyv 192. cikke szerint, ha van alap, vizsgálhatók a halál előtti orvosi költségek és a megnövekedett életviteli szükségletek költségei, a temetési költségek (殯葬費), valamint annak a személynek a tartási érdekkiesése (扶養利益損失), akinek törvényes tartási joga volt. A polgári törvénykönyv 194. cikke szerint egyes rokonok nem vagyoni kára is vizsgálható.
-- **Vagyon**: A polgári törvénykönyv 196. cikke szerint az indokolt tényleges vagyoni kár érvényesíthető, ideértve a jármű javítási költségeit vagy az értékvesztést.
+- Sérülések: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a gyógyászati segédeszközök, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nem vagyoni kár is vizsgálható.
+- Halál: A polgári törvénykönyv 192. cikke szerint, ha van alap, vizsgálhatók a halál előtti orvosi költségek és a megnövekedett életviteli szükségletek költségei, a temetési költségek (殯葬費), valamint annak a személynek a tartási érdekkiesése (扶養利益損失), akinek törvényes tartási joga volt. A polgári törvénykönyv 194. cikke szerint egyes rokonok nem vagyoni kára is vizsgálható.
+- Vagyon: A polgári törvénykönyv 196. cikke szerint az indokolt tényleges vagyoni kár érvényesíthető, ideértve a jármű javítási költségeit vagy az értékvesztést.
 
 ## Q8. Ha a kezelés tart, hogyan kell bemutatni az orvosi költségiratokat?
 

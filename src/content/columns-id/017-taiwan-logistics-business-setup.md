@@ -148,4 +148,4 @@ Bekerja tanpa izin dapat dikenai denda administratif dan perintah meninggalkan T
 
 Tulisan ini merupakan bahan yang bertujuan mendidik untuk menjelaskan sistem hukum secara umum, dan bukan nasihat hukum untuk perkara tertentu. Karena ukuran perizinan, formulir permohonan, dan praktik instansi yang berwenang dapat berubah, sebaiknya Anda memastikan sumber resmi terbaru dan keadaan perkara Anda sendiri sebelum melaksanakan investasi atau perjanjian.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

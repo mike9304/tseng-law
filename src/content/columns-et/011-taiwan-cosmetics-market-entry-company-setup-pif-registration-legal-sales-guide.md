@@ -42,9 +42,9 @@ Lepingus (契約) on asjakohane konkreetselt määrata intellektuaalomandi, näi
 
 Taiwani tütarettevõte ja välismaise äriühingu filiaal ei ole sama organisatsioon. Tütarettevõte on Taiwani õiguse järgi asutatud eraldi juriidiline isik, filiaal aga registreeritakse välismaise äriühingu peakontori (本公司) osana. Nad erinevad õigussubjektsuses, peakontori vastutuses, raamatupidamises ja maksukäsitluses, kasumi ülekandes, esindamisvolituses ja sisekontrollis, seega ei tohi organisatsioonivormi valida ainuüksi müügikontrolli järgi.
 
-Kui välisinvesteeringu menetlus on vajalik, tuleb lähtuda **Majandusministeeriumi investeeringute läbivaatamise osakonna (經濟部投資審議司)** kehtivatest juhistest. Investeeringu heakskiiduks, vahendite ülekandeks, äriühingu või filiaali registreerimiseks, pangakonto avamiseks, maksuregistreerimiseks (稅籍登記) ja importija staatuse saamiseks vajalik aeg sõltub investorist, valdkonnast, organisatsioonivormist, esitatud dokumentidest ja sellest, kas toimub parandus või täiendamine. Seetõttu tuleb, selle asemel et panna turuletuleku päev paika eeldusel, et menetlus mahub kindlasse aega, esmalt kindlaks teha iga toimingu kohaldamine ja uusimad esitamisnõuded.
+Kui välisinvesteeringu menetlus on vajalik, tuleb lähtuda Majandusministeeriumi investeeringute läbivaatamise osakonna (經濟部投資審議司) kehtivatest juhistest. Investeeringu heakskiiduks, vahendite ülekandeks, äriühingu või filiaali registreerimiseks, pangakonto avamiseks, maksuregistreerimiseks (稅籍登記) ja importija staatuse saamiseks vajalik aeg sõltub investorist, valdkonnast, organisatsioonivormist, esitatud dokumentidest ja sellest, kas toimub parandus või täiendamine. Seetõttu tuleb, selle asemel et panna turuletuleku päev paika eeldusel, et menetlus mahub kindlasse aega, esmalt kindlaks teha iga toimingu kohaldamine ja uusimad esitamisnõuded.
 
-Milline struktuur ka valitakse, on kosmeetika reguleerimise keskne vastutaja **kosmeetika tootja või importija (化粧品製造或輸入業者)**. Tooteandmete korrastamise või ohutushinnangu (安全性評估) võib usaldada välisele eksperdile, kuid pelk töö usaldamine ei kanna tootja või importija seadusjärgset vastutust üle. Lepingulise tööjaotuse ja reguleerimise kohase vastutaja eristamine on sisenemisstruktuuri hindamise lähtepunkt.
+Milline struktuur ka valitakse, on kosmeetika reguleerimise keskne vastutaja kosmeetika tootja või importija (化粧品製造或輸入業者). Tooteandmete korrastamise või ohutushinnangu (安全性評估) võib usaldada välisele eksperdile, kuid pelk töö usaldamine ei kanna tootja või importija seadusjärgset vastutust üle. Lepingulise tööjaotuse ja reguleerimise kohase vastutaja eristamine on sisenemisstruktuuri hindamise lähtepunkt.
 
 ## 2. Toote registreerimine ja PIF on eraldi süsteemid
 
@@ -131,4 +131,4 @@ Müügi ettevalmistus Taiwanis, kui see kinnitatakse järgmises järjekorras, v�
 
 See artikkel on üldine selgitus, mis kirjeldab kosmeetikaturule sisenemisega Taiwanis seotud süsteemi; see ei ole õigushinnang konkreetse toote või konkreetse reklaami (廣告) kohta ega kinnita, et luba või registreerimine saadaks, et müük oleks võimalik või et menetlusaega järgitaks. Sisenemisvorm, tooteandmed, märgistuse ja reklaami sisu ning pädeva asutuse uusim praktika tuleb igas asjas eraldi üle kontrollida.
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)

@@ -142,4 +142,4 @@ Seda valdkonda puudutav tutvustus on lehel [Milliste asjadega tegeleme](/et/serv
 
 See artikkel on üldine ülevaade äriühingu asutamisest Taiwanis (公司設立) ja sellega seotud reeglitest; see ei ole õigus- ega maksunõu üksikus asjas ega anna kindla tulemuse kohta lubadust. Vajalikud menetlused ja lõpptulemused võivad sõltuda investeerimisstruktuurist, valdkonnast, taotleja kodakondsusest ja elamisstaatusest ning pädeva asutuse uusimast praktikast; enne investeeringu, lepingu või töölevõtmise teostamist tuleb uurida uusimaid ametlikke allikaid ja oma asjaolusid.
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)

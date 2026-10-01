@@ -40,9 +40,9 @@ Ha a munkavállaló maga mond fel, a társaságnak nem kell végkielégítést f
 
 Ha a munkavállaló azonban jogellenes cselekményt követ el,
 
-**megsérti a belső szabályzatot (工作規則),**
+megsérti a belső szabályzatot (工作規則),
 
-**vagy ok nélkül 3 napon át egymás után hiányzik a munkából (曠工),**
+vagy ok nélkül 3 napon át egymás után hiányzik a munkából (曠工),
 
 a társaság végkielégítés fizetése nélkül is elbocsáthat.
 
@@ -52,7 +52,7 @@ Az alábbi táblázat foglalja össze.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Fajta** | **Gazdasági felmondás (資遣員工, 經濟解僱)** | **Fegyelmi felmondás (解僱員工, 懲戒解僱)** | **A munkavállaló saját felmondása**  **員工自請離職** |
+| Fajta | Gazdasági felmondás (資遣員工, 經濟解僱) | Fegyelmi felmondás (解僱員工, 懲戒解僱) | A munkavállaló saját felmondása  員工自請離職 |
 | Jelentés | Ha a munkáltatónál a vállalkozás helyzete miatt személyzeti kiigazításra van szükség, az ok a munkáltató gazdasági körében van, nem a munkavállaló felelősségében. Ezért a munkáltatónak be kell tartania a felmondási időt (預告期間), és végkielégítést kell fizetnie, hogy kiegyenlítse a munkavállaló hátrányait. | Ha a munkavállaló jogellenes vagy helytelen cselekményt követ el, a munkáltató előzetes felmondás nélkül, azonnali hatállyal megszüntetheti a munkaszerződést (勞動契約), és nem kell végkielégítést fizetnie. Ez a munkáltató fegyelmi jogosítványainak egyike. | A munkavállaló bármikor megszüntetheti a szerződést, de a foglalkoztatás ideje szerint be kell tartania a felmondási időt, hogy a munkáltató el tudja végezni az átadás-átvételt, és pótlást találjon. |
 | Feltételek | Van  (a tajvani munkaügyi törvény 11. cikke) | Van  (a tajvani munkaügyi törvény 12. cikke) | Nincs |
 | Előzetes felmondás | Szükséges | Nem szükséges | Szükséges |
@@ -193,17 +193,17 @@ túlzott követeléseket támaszt,
 
 vagy a munkavállalókat különös munkakörbe helyezi,
 
-**bizonyítékokat kell megőrizni.**
+bizonyítékokat kell megőrizni.
 
-**A szokásos jelenléti nyilvántartásokat,**
+A szokásos jelenléti nyilvántartásokat,
 
-**a túlóra-nyilvántartásokat, az eredmény-nyilvántartásokat,**
+a túlóra-nyilvántartásokat, az eredmény-nyilvántartásokat,
 
-**a belső szabályzatot, a munkatársakkal és a felettesekkel folytatott e-mail-levelezést**
+a belső szabályzatot, a munkatársakkal és a felettesekkel folytatott e-mail-levelezést
 
-**valamint a felettesekkel folytatott beszélgetések felvételeit –**
+valamint a felettesekkel folytatott beszélgetések felvételeit –
 
-**Őrizze meg a saját maga számára kedvező bizonyítékokat.**
+Őrizze meg a saját maga számára kedvező bizonyítékokat.
 
 ​
 

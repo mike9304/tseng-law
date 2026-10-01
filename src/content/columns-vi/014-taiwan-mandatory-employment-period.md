@@ -191,4 +191,4 @@ Khi sắp xếp tài liệu theo trình tự thời gian, nên ghi kèm ngày gi
 
 Bài viết này là tài liệu mang mục đích thông tin và giáo dục nhằm giải thích một cách khái quát về thỏa thuận thời hạn làm việc tối thiểu tại Đài Loan, việc hoàn trả chi phí đào tạo và khoản chi trả trước, cùng việc báo trước khi nghỉ việc; bài viết không phải là ý kiến pháp lý cho bất kỳ vụ việc lao động cụ thể nào. Hiệu lực của thỏa thuận và phạm vi trách nhiệm có thể khác nhau tùy theo loại hợp đồng và câu chữ của điều khoản, nội dung cùng chi phí đào tạo trên thực tế, mục đích và việc thông báo khoản bù đắp, thời gian làm việc, nguyên nhân chấm dứt hợp đồng và các chứng cứ liên quan. Trước khi đưa ra thông báo xin nghỉ việc, khấu trừ tiền lương, ký thỏa thuận hoàn trả hoặc xử lý tranh chấp, quý vị vẫn nên kiểm tra tài liệu chính thức mới nhất và xác nhận các tình tiết cụ thể của vụ việc.
 
-**Luật sư Wei Tseng (曾雋崴)**
+Luật sư Wei Tseng (曾雋崴)

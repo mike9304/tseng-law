@@ -192,4 +192,4 @@ Galīgā izvēle ir drošāka, ja to izvērtē speciālisti Taivānā un galven�
 
 Šis raksts ir vispārīgas izglītojošas informācijas materiāls par atšķirībām starp Taivānas meitas sabiedrību un ārvalstu sabiedrības filiāli; tas nav juridisks vai nodokļu padoms konkrētā gadījumā un nesola noteiktu iznākumu. Piemērojamās normas un nodokļu atspoguļojums var atšķirties pēc ieguldītāja un galvenā biroja atrašanās vietas, darbības satura, darījumu un līdzekļu plūsmas, līguma priekšnoteikumiem un kompetentās iestādes jaunākās prakses; pirms dibināšanas, ieguldījuma, līguma, dividendes vai pārskaitījuma veikšanas jāapstiprina jaunākie oficiālie avoti un paši apstākļi.
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)

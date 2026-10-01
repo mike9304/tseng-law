@@ -148,4 +148,4 @@ Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan t
 
 Dit artikel is een educatief materiaal bestemd om de juridische regeling algemeen toe te lichten, en is geen raad voor een concreet dossier. Omdat de vergunningscriteria, de aanvraagformulieren en de praktijk van de bevoegde autoriteit kunnen wijzigen, bevestigt men de bijgewerkte officiële bronnen en de omstandigheden van het dossier vóór het uitvoeren van een investering of een contract.
 
-**Advocaat Wei Tseng (曾雋崴)**
+Advocaat Wei Tseng (曾雋崴)

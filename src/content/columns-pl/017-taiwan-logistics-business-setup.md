@@ -148,4 +148,4 @@ Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz op
 
 Ten artykuł jest materiałem edukacyjnym przeznaczonym do ogólnego objaśnienia reżimu prawnego i nie jest poradą w konkretnej sprawie. Ponieważ kryteria zezwoleń, formularze wniosków i praktyka właściwego organu mogą się zmieniać, proszę potwierdzić aktualne źródła oficjalne i okoliczności sprawy przed wykonaniem inwestycji lub umowy.
 
-**Adwokatka Wei Tseng (曾雋崴)**
+Adwokatka Wei Tseng (曾雋崴)

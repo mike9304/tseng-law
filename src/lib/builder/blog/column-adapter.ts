@@ -8,6 +8,7 @@
  */
 
 import type { Locale } from '@/lib/locales';
+import { removeColumnBoldEmphasis } from '@/lib/column-emphasis';
 import { listColumnBundles } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
 import { isInternalColumnPost } from '@/lib/builder/columns/public-post-filter';
@@ -32,10 +33,10 @@ export function columnToBlogPost(column: ColumnDocument): BlogPost {
     postId: column.slug,
     slug: column.slug,
     locale: column.locale,
-    title: column.title,
-    excerpt: column.summary,
-    bodyHtml: column.bodyHtml,
-    bodyMarkdown: column.bodyMarkdown,
+    title: removeColumnBoldEmphasis(column.title),
+    excerpt: removeColumnBoldEmphasis(column.summary),
+    bodyHtml: removeColumnBoldEmphasis(column.bodyHtml),
+    bodyMarkdown: removeColumnBoldEmphasis(column.bodyMarkdown),
     featuredImage: fm.featuredImage,
     author: fm.author ?? { ...DEFAULT_AUTHOR },
     category: fm.blogCategory ?? legacyCategoryFallback,
@@ -46,8 +47,8 @@ export function columnToBlogPost(column: ColumnDocument): BlogPost {
     featured: fm.featured ?? false,
     seo: fm.seo
       ? {
-          title: fm.seo.title,
-          description: fm.seo.description,
+          title: fm.seo.title ? removeColumnBoldEmphasis(fm.seo.title) : fm.seo.title,
+          description: fm.seo.description ? removeColumnBoldEmphasis(fm.seo.description) : fm.seo.description,
           ogImage: fm.seo.ogImage,
         }
       : undefined,

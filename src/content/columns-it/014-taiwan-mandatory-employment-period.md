@@ -191,4 +191,4 @@ Nell’ordinare i documenti in ordine temporale, conviene indicare insieme la da
 
 Questo testo è un documento a fini informativi per spiegare in termini generali il patto di periodo minimo di lavoro a Taiwan, la restituzione degli oneri di formazione e dell’erogazione anticipata e il preavviso di dimissione; non è un parere giuridico per un caso di lavoro concreto. La validità del patto e l’ambito della responsabilità possono variare secondo il tipo e il tenore del contratto, la formazione e il costo reali, la finalità della contropartita e la sua comunicazione, il periodo di lavoro, la causa di estinzione e le prove. Prima di formulare la dimissione, di accettare una ritenuta salariale, di convenire una restituzione o di rispondere a una controversia, conviene confermare le fonti ufficiali più recenti e le circostanze individuali.
 
-**Wei Tseng (曾雋崴), avvocata a Taiwan**
+Wei Tseng (曾雋崴), avvocata a Taiwan

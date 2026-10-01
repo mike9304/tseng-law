@@ -85,11 +85,11 @@ Manajer anak perusahaan atau cabang Taiwan dari perusahaan asing pada umumnya le
 
 Berikut skenario penilaian hipotetis sebagai bahan untuk menimbang pilihan, bukan kesimpulan yang menjamin suatu cara sah atau lebih baik.
 
-**Perusahaan yang berfokus pada ekspor tahap awal.** Jika belum ada karyawan atau persediaan di Taiwan dan ingin menguji permintaan lewat distributor independen, tinjau dulu pasokan, hubungan distribusi, dan ruang lingkup kegiatan di Taiwan. Kontrak distribusi saja tidak meniadakan ketentuan Taiwan yang tetap harus dipenuhi.
+Perusahaan yang berfokus pada ekspor tahap awal. Jika belum ada karyawan atau persediaan di Taiwan dan ingin menguji permintaan lewat distributor independen, tinjau dulu pasokan, hubungan distribusi, dan ruang lingkup kegiatan di Taiwan. Kontrak distribusi saja tidak meniadakan ketentuan Taiwan yang tetap harus dipenuhi.
 
-**Perusahaan yang memperluas penjualan dan dukungan teknis di Taiwan.** Jika merencanakan rekrutmen di Taiwan serta terus mengelola persediaan, penagihan, dan dukungan pelanggan, bandingkan secara konkret anak perusahaan dan cabang, sekaligus meninjau tanggung jawab kontrak, cara kantor pusat beroperasi, pajak, dan tenaga kerja.
+Perusahaan yang memperluas penjualan dan dukungan teknis di Taiwan. Jika merencanakan rekrutmen di Taiwan serta terus mengelola persediaan, penagihan, dan dukungan pelanggan, bandingkan secara konkret anak perusahaan dan cabang, sekaligus meninjau tanggung jawab kontrak, cara kantor pusat beroperasi, pajak, dan tenaga kerja.
 
-**Perusahaan pada tahap riset pasar.** Jika sebelum membentuk organisasi penjualan hanya ingin fungsi pengumpulan informasi dan penghubung, kantor perwakilan dapat dinilai. Jika rencana nyata mencakup penjualan barang persediaan atau pekerjaan lapangan, tetap harus dikonfirmasi secara terpisah apakah kegiatan itu diizinkan.
+Perusahaan pada tahap riset pasar. Jika sebelum membentuk organisasi penjualan hanya ingin fungsi pengumpulan informasi dan penghubung, kantor perwakilan dapat dinilai. Jika rencana nyata mencakup penjualan barang persediaan atau pekerjaan lapangan, tetap harus dikonfirmasi secara terpisah apakah kegiatan itu diizinkan.
 
 ## 8. Untuk kontak pertama, siapkan ikhtisar operasi; tidak perlu menyerahkan seluruh data rahasia lebih dulu
 

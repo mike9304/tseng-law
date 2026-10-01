@@ -17,13 +17,13 @@ Recent, multe persoane au înființat cu succes o societate (公司) în Taiwan 
 
 Întrebările puse frecvent la momentul înființării sunt adunate mai jos.
 
-Cei care au citit [**fundamentele înființării unei societăți**](/ro/columns/taiwan-company-establishment-basics) pot consulta apoi și această parte aprofundată.
+Cei care au citit [fundamentele înființării unei societăți](/ro/columns/taiwan-company-establishment-basics) pot consulta apoi și această parte aprofundată.
 
 Întrebările și răspunsurile următoare urmăresc să ajute persoanele care au în vedere să înființeze o societate în Taiwan. 😊
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Doresc să înființez o societate, dar nu am găsit încă o adresă de înregistrare. Înființarea este totuși posibilă?**
+1. Doresc să înființez o societate, dar nu am găsit încă o adresă de înregistrare. Înființarea este totuși posibilă?
 
 Când un străin înființează o societate în Taiwan, trebuie să prezinte un plan de investiție (投資計畫書) Departamentului de examinare a investițiilor al Ministerului Economiei (經濟部投資審議司) spre examinare.
 
@@ -43,7 +43,7 @@ Deja în partea fundamentală, un cititor a arătat că deschiderea contului era
 
 Pentru că cazurile de spălare de bani (洗錢) sunt foarte numeroase în Taiwan, deschiderea conturilor bancare devine din ce în ce mai strictă.
 
-**Sfat:**
+Sfat:
 
 Cum examinarea planului de investiție ia și ea timp,
 
@@ -57,13 +57,13 @@ precum și să deschideți la bancă contul pregătitor și să virați capitalu
 
 ​
 
-**2. Se poate deschide un cont de societate la bancă chiar fără carte de ședere în Taiwan?**
+2. Se poate deschide un cont de societate la bancă chiar fără carte de ședere în Taiwan?
 
 Este posibil.
 
 Banca cere în general o dublă verificare de identitate,
 
-și fără carte de ședere, puteți cere de la administrația imigrației din Taiwan „**foaia de date de bază**” (統一證號基本資料表).
+și fără carte de ședere, puteți cere de la administrația imigrației din Taiwan „foaia de date de bază” (統一證號基本資料表).
 
 Eliberarea este posibilă în aceeași zi,
 
@@ -71,7 +71,7 @@ dar administrația imigrației (移民署) este foarte frecventată; este deci p
 
 ​
 
-**3. Am auzit că, la examinarea planului de investiție, trebuie indicate formarea și experiența profesională, și mă îngrijorez că formarea și experiența mea nu corespund sectorului societății pe care doresc să o înființez.**
+3. Am auzit că, la examinarea planului de investiție, trebuie indicate formarea și experiența profesională, și mă îngrijorez că formarea și experiența mea nu corespund sectorului societății pe care doresc să o înființez.
 
 Comisia de examinare a Ministerului Economiei examinează desigur antecedentele investitorului,
 
@@ -85,13 +85,13 @@ Pe acest punct ar trebui să discutați pe larg cu un avocat din Taiwan.
 
 ​
 
-**4. La ce trebuie să fiți atent când luați în locațiune adresa de înregistrare a societății (de exemplu un local de alimentație)?**
+4. La ce trebuie să fiți atent când luați în locațiune adresa de înregistrare a societății (de exemplu un local de alimentație)?
 
-Înființarea societății durează circa **3 luni**, obținerea permisului de muncă (工作許可) și a cărții de ședere circa **1 lună în plus**,
+Înființarea societății durează circa 3 luni, obținerea permisului de muncă (工作許可) și a cărții de ședere circa 1 lună în plus,
 
 așa că trebuie să fixați începutul contractului cât mai târziu posibil.
 
-În plus, în contractele de locațiune a localurilor comerciale în Taiwan, locatorul acordă adesea locatarului o „**perioadă de amenajare**” (裝潢期間).
+În plus, în contractele de locațiune a localurilor comerciale în Taiwan, locatorul acordă adesea locatarului o „perioadă de amenajare” (裝潢期間).
 
 Este o perioadă scutită de chirie; o puteți negocia.
 
@@ -107,7 +107,7 @@ puteți, dacă este cazul, să propuneți autentificarea contractului de locați
 
 ​
 
-**5. Se poate, la înființarea societății, lua în locațiune un spațiu de birouri?**
+5. Se poate, la înființarea societății, lua în locațiune un spațiu de birouri?
 
 Aceasta depinde de obiectul de activitate (營業項目) al societății.
 

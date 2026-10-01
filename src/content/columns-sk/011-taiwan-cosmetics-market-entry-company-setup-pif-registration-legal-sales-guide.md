@@ -42,9 +42,9 @@ V zmluve je vhodné konkrétne stanoviť rozsah užívania duševného vlastníc
 
 Taiwanská dcérska spoločnosť a pobočka zahraničnej spoločnosti nie sú tou istou organizáciou. Dcérska spoločnosť je samostatná právnická osoba založená podľa práva Taiwanu, zatiaľ čo pobočka sa zapisuje ako časť ústredia (本公司) zahraničnej spoločnosti. Líši sa právna osobnosť, zodpovednosť ústredia, účtovný a daňový režim, prevod zisku, zastupovacie oprávnenie a spôsob vnútornej kontroly, preto sa forma organizácie nemá voliť len podľa kontroly nad predajom.
 
-Ak je potrebný postup zahraničnej investície, treba overiť pokyny **Odboru preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司)** ako aktuálne príslušného orgánu. Lehota potrebná na povolenie investície, prevod peňazí, zápis spoločnosti alebo pobočky, otvorenie bankového účtu, daňovú registráciu (稅籍登記) a získanie kvalifikácie dovozcu sa líši podľa investora, odvetvia, organizačnej formy, predložených podkladov a toho, či dochádza k oprave alebo doplneniu. Preto namiesto stanovenia dátumu uvedenia na trh za predpokladu určitej pevnej lehoty treba najprv overiť, či sa každý úkon uplatní, a najnovšie podmienky prijatia.
+Ak je potrebný postup zahraničnej investície, treba overiť pokyny Odboru preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司) ako aktuálne príslušného orgánu. Lehota potrebná na povolenie investície, prevod peňazí, zápis spoločnosti alebo pobočky, otvorenie bankového účtu, daňovú registráciu (稅籍登記) a získanie kvalifikácie dovozcu sa líši podľa investora, odvetvia, organizačnej formy, predložených podkladov a toho, či dochádza k oprave alebo doplneniu. Preto namiesto stanovenia dátumu uvedenia na trh za predpokladu určitej pevnej lehoty treba najprv overiť, či sa každý úkon uplatní, a najnovšie podmienky prijatia.
 
-Nech je zvolená ktorákoľvek štruktúra, ústredným subjektom zodpovednosti v úprave kozmetiky je **výrobca alebo dovozca kozmetiky**. Usporiadanie podkladov k výrobku alebo hodnotenie bezpečnosti (安全性評估) možno zveriť vonkajšiemu odborníkovi, ale samotné zverenie práce neprenáša právnu zodpovednosť výrobcu alebo dovozcu. Odlíšiť zmluvné rozdelenie práce od zákonného subjektu zodpovednosti je východiskovým bodom preskúmania štruktúry vstupu.
+Nech je zvolená ktorákoľvek štruktúra, ústredným subjektom zodpovednosti v úprave kozmetiky je výrobca alebo dovozca kozmetiky. Usporiadanie podkladov k výrobku alebo hodnotenie bezpečnosti (安全性評估) možno zveriť vonkajšiemu odborníkovi, ale samotné zverenie práce neprenáša právnu zodpovednosť výrobcu alebo dovozcu. Odlíšiť zmluvné rozdelenie práce od zákonného subjektu zodpovednosti je východiskovým bodom preskúmania štruktúry vstupu.
 
 ## 2. Registrácia produktu a PIF sú dva odlišné režimy
 
@@ -131,4 +131,4 @@ Základnú štruktúru spoločnosti a pobočky možno vidieť v [Základy zaklad
 
 Tento text je vzdelávacím podkladom k všeobecnému vysvetleniu režimu súvisiaceho so vstupom na trh kozmetiky na Taiwane; nie je právnym stanoviskom k jednotlivému výrobku alebo reklame a nesľubuje určitý výsledok, povolenie, registráciu, možnosť predaja ani dodržanie lehoty vybavenia. Formu vstupu, podklady k výrobku, obsah označenia a reklamy a najnovšiu prax príslušného orgánu treba overiť v každej veci osobitne.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

@@ -196,4 +196,4 @@ Sljedeći primarni izvori (1. razina) polazna su točka za provjeru pravne građ
 
 Ovaj je članak građa informativne i obrazovne naravi namijenjena općem objašnjenju instituta razvoda, međunarodnih obiteljskih stvari, bračne imovine i maloljetne djece na Tajvanu, a ne pravno savjetovanje u pojedinoj stvari. Postupak i ishod mogu se razlikovati prema nadležnosti, mjerodavnom pravu, priznanju stranih odluka, stanju braka i evidencije kućanstava, imovinskom režimu, postojećem sporazumu ili odluci koja se tiče djeteta, činjeničnim stanjima i dokazima te najnovijim službenim propisima. Rokove upisa, pravnih lijekova, zahtjeva i ovrhe prije djelovanja treba provjeriti jedan po jedan prema točnom početku tijeka svakog prava i svakog postupka.
 
-**Odvjetnica Wei Tseng (曾雋崴)**
+Odvjetnica Wei Tseng (曾雋崴)

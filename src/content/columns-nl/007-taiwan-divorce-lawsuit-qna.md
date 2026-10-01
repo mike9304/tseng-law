@@ -196,4 +196,4 @@ De volgende primaire bronnen (niveau 1) zijn uitgangspunt tot nagaan van de rech
 
 Dit artikel is onderwijsmateriaal tot algemene toelichting over echtscheiding, internationale familierechtelijke zaken, huwelijksvermogen en minderjarige kinderen in Taiwan, en geen rechtsadvies voor een individuele zaak. Procedure en resultaat kunnen verschillen naargelang de bevoegdheid, het toepasselijke recht, de erkenning van buitenlandse beslissingen, de huwelijks- en personenstand, het vermogensstelsel, een bestaande overeenkomst of beslissing over het kind, de feiten en de bewijzen en de nieuwste officiële voorschriften. Termijnen voor inschrijving, rechtsmiddel, vordering en executie moeten, vóór het handelen, stuk voor stuk volgens het nauwkeurige aanvangspunt van elk recht en elke procedure worden nagegaan.
 
-**Advocaat Wei Tseng (曾雋崴)**
+Advocaat Wei Tseng (曾雋崴)

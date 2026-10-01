@@ -31,7 +31,7 @@ const relatedGuidanceParagraph =
   '関連する業務範囲は[台湾投資・会社設立サービス](/ja/services/investment)で、担当弁護士の経歴と対応言語は[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)でご確認いただけます。具体的な事案に関するお問い合わせは[ご相談・お問い合わせ](/ja/contact)をご利用ください。';
 const disclaimerParagraph =
   '本稿は、台湾での会社設立および関連制度を一般的に説明するための教育目的の資料であり、個別の事案に対する法律・税務上の助言ではありません。投資構造、業種、申請者の国籍・在留資格および所管官庁の最新の実務によって必要な手続や結果が異なり得るため、投資・契約・雇用を実行する前に、最新の公式資料と個別の事情をご確認ください。';
-const authorLine = '**曾雋崴弁護士（Wei Tseng）**';
+const authorLine = '曾雋崴弁護士（Wei Tseng）';
 const publicText = parsed.content
   .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
   .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
@@ -200,7 +200,7 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       '> 外国人が台湾で会社を設立するときによくある質問',
     );
     expect(raw).not.toContain(
-      '**8. 台湾の主な会社関係税率はどうなっていますか？**',
+      '8. 台湾の主な会社関係税率はどうなっていますか？',
     );
   });
 

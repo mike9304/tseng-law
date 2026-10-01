@@ -17,13 +17,13 @@ Viime aikoina monet ovat perustaneet yhtiön (公司) Taiwanissa ja saaneet työ
 
 Perustamisen yhteydessä usein esitetyt kysymykset on koottu jäljempänä.
 
-Se, joka on lukenut [**yhtiön perustamisen perusteet**](/fi/columns/taiwan-company-establishment-basics), voi sen jälkeen tutustua myös tähän seikkaperäisempään syventävään osaan.
+Se, joka on lukenut [yhtiön perustamisen perusteet](/fi/columns/taiwan-company-establishment-basics), voi sen jälkeen tutustua myös tähän seikkaperäisempään syventävään osaan.
 
 Seuraavat kysymykset ja vastaukset on tarkoitettu niille, jotka harkitsevat yhtiön perustamista Taiwanissa.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Haluan perustaa yhtiön, mutta en ole vielä löytänyt rekisteröintiosoitetta. Onko perustaminen silti mahdollista?**
+1. Haluan perustaa yhtiön, mutta en ole vielä löytänyt rekisteröintiosoitetta. Onko perustaminen silti mahdollista?
 
 Kun ulkomaalainen perustaa yhtiön Taiwanissa, hänen on jätettävä sijoitussuunnitelma (投資計畫書) talousministeriön sijoitustarkastusosastolle (經濟部投資審議司) tarkastettavaksi.
 
@@ -43,7 +43,7 @@ Jo perusteet-artikkelin yhteydessä eräs lukija totesi, että tilin avaaminen o
 
 Koska rahanpesutapauksia (洗錢) Taiwanissa on hyvin runsaasti, pankkitilien avaaminen tiukkenee yhä.
 
-**Huomautus:**
+Huomautus:
 
 Koska sijoitussuunnitelman tarkastus vie myös aikaa,
 
@@ -57,13 +57,13 @@ Samassa määräajassa ehtii avata valmistelutilin pankissa ja siirtää pääom
 
 ​
 
-**2. Voiko pankissa avata yhtiötilin myös ilman Taiwanin oleskelukorttia?**
+2. Voiko pankissa avata yhtiötilin myös ilman Taiwanin oleskelukorttia?
 
 Se on mahdollista.
 
 Pankki vaatii yleensä kaksi henkilöllisyysasiakirjaa,
 
-ja ilman oleskelukorttia voitte hakea Taiwanin maahanmuuttoviranomaiselta **yhtenäisen tunnusnumeron perustietolomakkeen** (統一證號基本資料表).
+ja ilman oleskelukorttia voitte hakea Taiwanin maahanmuuttoviranomaiselta yhtenäisen tunnusnumeron perustietolomakkeen (統一證號基本資料表).
 
 Lomake voidaan antaa samana päivänä,
 
@@ -71,7 +71,7 @@ mutta maahanmuuttoviranomainen (移民署) on hyvin ruuhkainen, joten paikalle k
 
 ​
 
-**3. Olen kuullut, että sijoitussuunnitelman (投資計畫書) tarkastuksessa on ilmoitettava koulutus ja työkokemus, ja pelkään, etteivät koulutukseni ja kokemukseni sovi perustettavan yhtiön alaan.**
+3. Olen kuullut, että sijoitussuunnitelman (投資計畫書) tarkastuksessa on ilmoitettava koulutus ja työkokemus, ja pelkään, etteivät koulutukseni ja kokemukseni sovi perustettavan yhtiön alaan.
 
 Talousministeriön sijoitustarkastusosasto tutkii tosin sijoittajan taustan,
 
@@ -85,13 +85,13 @@ Tästä kohdasta kannattaa keskustella perusteellisesti taiwanilaisen asianajaja
 
 ​
 
-**4. Mihin on kiinnitettävä huomiota, kun yhtiön rekisteröintiosoite (esimerkiksi ravintolatila) vuokrataan?**
+4. Mihin on kiinnitettävä huomiota, kun yhtiön rekisteröintiosoite (esimerkiksi ravintolatila) vuokrataan?
 
-Yhtiön perustaminen kestää noin **3 kuukautta**, ja työluvan (工作許可) sekä oleskelukortin saaminen vie sen päälle noin **1 kuukauden**.
+Yhtiön perustaminen kestää noin 3 kuukautta, ja työluvan (工作許可) sekä oleskelukortin saaminen vie sen päälle noin 1 kuukauden.
 
 Siksi sopimuksen voimaantulopäivä kannattaa sijoittaa mahdollisimman myöhään.
 
-Lisäksi vuokranantaja antaa Taiwanissa liikehuoneistojen vuokrasopimuksissa usein vuokralaiselle **sisustusjakson** (裝潢期間).
+Lisäksi vuokranantaja antaa Taiwanissa liikehuoneistojen vuokrasopimuksissa usein vuokralaiselle sisustusjakson (裝潢期間).
 
 Tämä on vuokrasta vapaa jakso, josta voitte neuvotella.
 
@@ -107,7 +107,7 @@ voitte tarvittaessa ehdottaa vuokrasopimuksen vahvistamista julkisella notaarill
 
 ​
 
-**5. Voiko yhtiötä perustettaessa vuokrata kaupallisen toimistotilan?**
+5. Voiko yhtiötä perustettaessa vuokrata kaupallisen toimistotilan?
 
 Se riippuu yhtiön toimialoista (營業項目).
 

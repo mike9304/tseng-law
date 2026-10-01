@@ -151,4 +151,4 @@ A les pàgines oficials de normativa s’han de confirmar la data de reforma i l
 
 Aquest article té una finalitat divulgativa i explica de manera general el règim de successió, el règim patrimonial conjugal, la potestat parental i la tutela de menors a Taiwan; no és assessorament jurídic per a un assumpte concret de successió o de família. La llei aplicable, el procediment i el resultat poden variar segons el cercle d’hereus, el testament, el patrimoni i els deutes, el règim matrimonial, les resolucions judicials existents i els elements d’estrangeria. Abans de calcular terminis com la repudiació o la declaració tributària, o de disposar del patrimoni, convé confirmar les fonts oficials més recents i les circumstàncies individuals.
 
-**Advocada Wei Tseng (曾雋崴)**
+Advocada Wei Tseng (曾雋崴)

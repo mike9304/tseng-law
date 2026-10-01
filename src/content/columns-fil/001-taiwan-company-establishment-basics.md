@@ -142,4 +142,4 @@ Makikita sa [Mga usaping hinahawakan ng tanggapan](/fil/services) ang saklaw ng 
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag sa pangkalahatan ang pagtatatag ng kompanya sa Taiwan at ang mga kaugnay na sistema, at hindi ito payong legal o payo sa buwis para sa isang tiyak na usapin. Dahil maaaring magbago ang kinakailangang hakbang at ang resulta depende sa istruktura ng pamumuhunan, sa uri ng negosyo, sa pagkamamamayan at katayuan ng pananatili ng nag-aaplay, at sa pinakabagong gawi ng ahensiyang may hurisdiksiyon, mangyaring tiyakin ninyo ang pinakabagong opisyal na sanggunian at ang inyong indibidwal na kalagayan bago magsagawa ng pamumuhunan, ng kontrata o ng pagtatrabaho.
 
-**Abogada Wei Tseng (曾雋崴)**
+Abogada Wei Tseng (曾雋崴)

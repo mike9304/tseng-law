@@ -1,3 +1,4 @@
+import { removeColumnBoldEmphasis } from '@/lib/column-emphasis';
 /**
  * cms-collection-datasets.ts — data-driven dataset binding for USER-created CMS collections.
  *
@@ -209,11 +210,16 @@ export function resolveCmsCollectionDataset(
     const slug = slugKey ? recordFieldValue(record, slugKey) : record.recordId;
     const routePath = `${routeBase.replace(/\/$/, '')}/${slug}`;
     const fieldValues: Record<string, string> = { recordId: record.recordId, slug, href: routePath, url: routePath };
-    for (const f of fields) fieldValues[f.key] = recordFieldValue(record, f.key);
+    for (const f of fields) {
+      const value = recordFieldValue(record, f.key);
+      fieldValues[f.key] = collection.collectionId === 'columns' && ['title', 'name', 'summary', 'description', 'content'].includes(f.key)
+        ? removeColumnBoldEmphasis(value)
+        : value;
+    }
     return {
       recordId: record.recordId,
-      primaryLabel: titleKey ? recordFieldValue(record, titleKey) : record.recordId,
-      secondaryLabel: secondaryKey ? recordFieldValue(record, secondaryKey) : '',
+      primaryLabel: titleKey ? fieldValues[titleKey] : record.recordId,
+      secondaryLabel: secondaryKey ? fieldValues[secondaryKey] : '',
       routePath,
       fieldValues,
     };

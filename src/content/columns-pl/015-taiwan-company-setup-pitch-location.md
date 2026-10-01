@@ -51,7 +51,7 @@ Prosimy więc zwrócić na to uwagę.
 
 ​
 
-**Czy wszystkie branże muszą sprawdzać przez system „wcześniejszego sprawdzenia lokalu”, czy działalność jest możliwa?**
+Czy wszystkie branże muszą sprawdzać przez system „wcześniejszego sprawdzenia lokalu”, czy działalność jest możliwa?
 
 Wszystkim branżom zaleca się potwierdzenie, przez system „wcześniejszego sprawdzenia lokalu” (營業場所預先查詢), czy działalność jest możliwa.
 
@@ -61,7 +61,7 @@ Dlatego w praktyce nie trzeba sprawdzać wszystkich branż przy rejestracji spó
 
 Zgodnie z „[instrukcją usługi wspomagającej zapytania o lokale działalności miasta Tajpej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) oraz obowiązującym obwieszczeniem miasta Tajpej,
 
-od 1 stycznia 2023 r. przy wniosku o rejestrację założenia, przeniesienia siedziby lub dodania branż działalności spółki lub przedsiębiorstwa (w tym oddziału (分公司) i placówki pomocniczej (分支機構)) wynik wcześniejszego sprawdzenia lokalu **musi** być załączony do wniosku o rejestrację, niezależnie od branży.
+od 1 stycznia 2023 r. przy wniosku o rejestrację założenia, przeniesienia siedziby lub dodania branż działalności spółki lub przedsiębiorstwa (w tym oddziału (分公司) i placówki pomocniczej (分支機構)) wynik wcześniejszego sprawdzenia lokalu musi być załączony do wniosku o rejestrację, niezależnie od branży.
 
 Poniższa lista „branż objętych sprawdzeniem z urzędu” (主動查詢之營業項目) oznacza branże, które Biuro Handlu dodatkowo sprawdza z urzędu w toku kontroli rejestracji (隨案主動查詢), gdy branża figuruje we wniosku, lecz brakuje jej w załączonym wyniku; fakt, że branża nie figuruje na tej liście, nie oznacza zwolnienia ze sprawdzenia.
 

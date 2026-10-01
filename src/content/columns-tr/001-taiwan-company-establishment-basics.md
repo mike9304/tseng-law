@@ -142,4 +142,4 @@ Anlaşmanın sınırlı oranı, yalnızca bir anlaşma var diye kendiliğinden u
 
 Bu yazı, Tayvan’da şirket kuruluşu ve ilgili kurallar hakkında eğitim amacıyla genel bilgi belgesidir; somut bir dosyada hukuki veya mali görüş değildir ve belirli bir sonuç vaat etmez. Gereken usuller ve sonuçlar yatırım yapısına, sektöre, başvuranın uyruğuna, oturma statüsüne ve yetkili merciin en güncel uygulamasına göre değişebilir; bir yatırım, sözleşme veya istihdam yürütülmeden önce en güncel resmi kaynaklar ve dosyanın kendi olguları incelenmelidir.
 
-**Avukat Wei Tseng (曾雋崴)**
+Avukat Wei Tseng (曾雋崴)

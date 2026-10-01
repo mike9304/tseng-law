@@ -192,4 +192,4 @@ Endanlegt val er varkárara að kanna, ef sérfræðingar á Taívan og í þeir
 
 Þessi grein er almennt fræðsluefni um muninn á dótturfélagi á Taívan og útibúi erlends félags (子公司·分公司); hún er ekki lögfræðileg eða skattaleg ráðgjöf í tilteknu máli og heitir engri tiltekinni niðurstöðu. Gildandi reglur og skattaleg meðferð geta verið misjöfn eftir staðsetningu fjárfestis og höfuðstöðva, innihaldi starfseminnar, viðskiptum og fjármagnsstreymi, samningsskilmálum og nýjustu framkvæmd lögbærs stjórnvalds; áður en stofnun, fjárfesting, samningur, arður eða sending er framkvæmd skal kanna nýjustu opinberu heimildir og eigin aðstæður.
 
-**Lögmaður Wei Tseng (曾雋崴)**
+Lögmaður Wei Tseng (曾雋崴)

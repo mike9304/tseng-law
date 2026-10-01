@@ -191,4 +191,4 @@ Porządkując dokumenty w porządku czasowym, należy łącznie wskazać datę z
 
 Ten tekst jest dokumentem o celu edukacyjnym, aby ogólnie objaśnić porozumienie o minimalnym okresie pracy na Tajwanie, zwrot kosztów szkolenia i świadczenia wypłaconego z góry oraz wypowiedzenie złożone przez pracownika; to nie jest opinia prawna dla konkretnej sprawy pracy. Ważność porozumienia i zakres odpowiedzialności mogą się zmieniać według typu i treści umowy, rzeczywistego szkolenia i kosztu, celu świadczenia i jego podania, okresu pracy, przyczyny wygaśnięcia i dowodów. Przed złożeniem rezygnacji, przyjęciem potrącenia z wynagrodzenia, uzgodnieniem zwrotu lub odpowiedzią na spór należy potwierdzić najnowsze źródła oficjalne i okoliczności indywidualne.
 
-**Adwokatka Wei Tseng (曾雋崴)**
+Adwokatka Wei Tseng (曾雋崴)

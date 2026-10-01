@@ -148,4 +148,4 @@ Við vinnu án leyfis getur stjórnvaldssekt og fyrirmæli um brottför af Taív
 
 Þessi grein er fræðsluefni til almennrar skýringar á lagalegu skipulagi og er ekki ráðgjöf í tilteknu máli. Þar sem leyfisviðmið, umsóknareyðublöð og framkvæmd lögbærs yfirvalds geta breyst, skal kanna uppfærðar opinberar heimildir og atvik málsins áður en fjárfesting eða samningur er framkvæmdur.
 
-**Lögmaður Wei Tseng (曾雋崴)**
+Lögmaður Wei Tseng (曾雋崴)

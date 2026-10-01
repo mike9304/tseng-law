@@ -25,9 +25,9 @@ Toliau pateikiami advokatės Wei Tseng (曾雋崴) parengti klausimai ir atsakym
 
 ​
 
-**1. Į ką atkreipti dėmesį pervedant kapitalą (資本額) iš užsienio į Taivano bendrovės parengiamąją sąskaitą (公司籌備處帳戶)? (Korėjos bankų pavyzdys; kitose valstybėse kapitalo išvežimo ir užsienio valiutos kontrolės taisykles reikia tikrinti atskirai)**
+1. Į ką atkreipti dėmesį pervedant kapitalą (資本額) iš užsienio į Taivano bendrovės parengiamąją sąskaitą (公司籌備處帳戶)? (Korėjos bankų pavyzdys; kitose valstybėse kapitalo išvežimo ir užsienio valiutos kontrolės taisykles reikia tikrinti atskirai)
 
-Korėjos bankų pavyzdyje bankai paprastai reikalauja, kad investuotojas **pats** atvyktų į banką savo valstybėje ir pervestų lėšas iš savo vardu vedamos sąskaitos.
+Korėjos bankų pavyzdyje bankai paprastai reikalauja, kad investuotojas pats atvyktų į banką savo valstybėje ir pervestų lėšas iš savo vardu vedamos sąskaitos.
 
 Tame Korėjos pavyzdyje pervedimas internetine bankininkyste arba per giminaitį negalimas.
 
@@ -35,9 +35,9 @@ Be to, pagal Korėjos užsienio valiutos kontrolės teisės aktus asmuo, turinti
 
 Prieš pervedant kapitalą (資本金匯款) pasikonsultuokite su savo banku investuotojo valstybėje; pirmiau pateiktame pavyzdyje aprašyti Korėjos bankai.
 
-**​**
+​
 
-**2. Įmokant įstatinį kapitalą, ar galima pervesti naujuosius Taivano dolerius (新臺幣, TWD) iš asmeninės sąskaitos Taivane į Taivano bendrovės parengiamąją sąskaitą?**
+2. Įmokant įstatinį kapitalą, ar galima pervesti naujuosius Taivano dolerius (新臺幣, TWD) iš asmeninės sąskaitos Taivane į Taivano bendrovės parengiamąją sąskaitą?
 
 Tai įmanoma, tačiau reikia pateikti dokumentus, patvirtinančius Taivane gautų naujųjų Taivano dolerių lėšų kilmę.
 
@@ -47,9 +47,9 @@ Jei tai dividendai ir pelnas iš investicijos į įmonę Taivane, reikia pateikt
 
 Jei pervedama iš banko sąskaitos Korėjoje, lėšų kilmės dokumentų pridėti nereikia.
 
-**​**
+​
 
-**3. Po kapitalo įskaitymo į parengiamąją sąskaitą, kada ją galima pertvarkyti į nuolatinę bendrovės sąskaitą (正式公司帳戶)?**
+3. Po kapitalo įskaitymo į parengiamąją sąskaitą, kada ją galima pertvarkyti į nuolatinę bendrovės sąskaitą (正式公司帳戶)?
 
 Paprastai tai galima gavus juridinio asmens registracijos dokumentus (法人登記文件),
 
@@ -57,17 +57,17 @@ tada atsakingasis asmuo (負責人) gali nuvykti į banką ir parengiamąją ben
 
 Kadangi atskirų bankų (銀行) vidaus taisyklės skiriasi, jei kapitalą reikia panaudoti skubiai, tikslinga pirmiausia kreiptis į banką.
 
-**​**
+​
 
-**4. Pertvarkius parengiamąją sąskaitą į nuolatinę, ar internetine bankininkyste galima naudotis iš karto?**
+4. Pertvarkius parengiamąją sąskaitą į nuolatinę, ar internetine bankininkyste galima naudotis iš karto?
 
 Tai priklauso nuo banko; paprastai reikia bent mobiliojo telefono numerio.
 
 Kai kurie bankai gali kelti papildomų reikalavimų, pavyzdžiui, kad sąskaita būtų naudojama ne trumpiau kaip 6 mėnesius po įsteigimo.
 
-**​**
+​
 
-**5. Ar bendrovė gali įdarbinti užsieniečius?**
+5. Ar bendrovė gali įdarbinti užsieniečius?
 
 A. Pirmasis darbuotojas: paprastos užjūrio kinų arba užsieniečių investicijos įmonės vadovas (一般僑外投資事業主管工作). Toliau B punkte nurodytas „specializuoto arba techninio darbo“ kriterijus netaikomas, tačiau taikomos adresato sąlygos, įskaitant vadovo (經理人) sąlygą bendrovėje, kurios užjūrio kinų arba užsieniečių įnašas viršija 1/3, ir darbdavio kapitalo bei apyvartos rezultatų sąlygos (peržiūros standartų 38 ir 39 straipsniai).
 

@@ -17,13 +17,13 @@ In jüngerer Zeit haben viele Personen in Taiwan eine Gesellschaft (公司) gegr
 
 Die Fragen, die bei der Gründung häufig gestellt werden, sind im Folgenden zusammengestellt.
 
-Wer den Beitrag [**Grundlagen der Gesellschaftsgründung**](/de/columns/taiwan-company-establishment-basics) gelesen hat, kann anschließend auch diese ausführlichere Vertiefung heranziehen.
+Wer den Beitrag [Grundlagen der Gesellschaftsgründung](/de/columns/taiwan-company-establishment-basics) gelesen hat, kann anschließend auch diese ausführlichere Vertiefung heranziehen.
 
 Die folgenden Fragen und Antworten sollen Personen helfen, die eine Gesellschaftsgründung in Taiwan erwägen.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Ich möchte eine Gesellschaft gründen, habe aber noch keine Eintragungsadresse gefunden. Ist die Gründung trotzdem möglich?**
+1. Ich möchte eine Gesellschaft gründen, habe aber noch keine Eintragungsadresse gefunden. Ist die Gründung trotzdem möglich?
 
 Wenn Ausländerinnen und Ausländer in Taiwan eine Gesellschaft gründen, müssen sie der Abteilung für Investitionsprüfung des Wirtschaftsministeriums (經濟部投資審議司) einen Investitionsplan (投資計畫書) zur Prüfung vorlegen.
 
@@ -43,7 +43,7 @@ Bereits in der Grundlagenfassung wurde angemerkt, dass die Kontoeröffnung der s
 
 Weil es in Taiwan sehr viele Fälle von Geldwäsche (洗錢) gibt, wird die Eröffnung von Bankkonten zunehmend strenger.
 
-**Hinweis:**
+Hinweis:
 
 Da die Prüfung des Investitionsplans Zeit in Anspruch nimmt, ist parallel zu planen.
 
@@ -57,7 +57,7 @@ Es bleibt ausreichend Zeit, bei der Bank das Vorbereitungskonto zu eröffnen und
 
 ​
 
-**2. Kann man bei der Bank ein Gesellschaftskonto eröffnen, auch ohne taiwanesische Aufenthaltskarte?**
+2. Kann man bei der Bank ein Gesellschaftskonto eröffnen, auch ohne taiwanesische Aufenthaltskarte?
 
 Das ist möglich.
 
@@ -71,7 +71,7 @@ Die Einwanderungsbehörde (移民署) ist jedoch sehr überlaufen, daher sollten
 
 ​
 
-**3. Ich habe gehört, dass bei der Prüfung des Investitionsplans Ausbildung und Berufserfahrung anzugeben sind, und sorge mich, dass meine Ausbildung und Berufserfahrung nicht zur Branche der zu gründenden Gesellschaft passen.**
+3. Ich habe gehört, dass bei der Prüfung des Investitionsplans Ausbildung und Berufserfahrung anzugeben sind, und sorge mich, dass meine Ausbildung und Berufserfahrung nicht zur Branche der zu gründenden Gesellschaft passen.
 
 Die Prüfungskommission des Wirtschaftsministeriums prüft zwar den Hintergrund der Investorin oder des Investors.
 
@@ -85,13 +85,13 @@ Zu diesem Punkt sollten Sie sich mit einer taiwanesischen Anwältin oder einem t
 
 ​
 
-**4. Worauf ist zu achten, wenn die Eintragungsadresse der Gesellschaft (zum Beispiel ein Restaurantlokal) gemietet wird?**
+4. Worauf ist zu achten, wenn die Eintragungsadresse der Gesellschaft (zum Beispiel ein Restaurantlokal) gemietet wird?
 
-Die Gesellschaftsgründung dauert etwa **3 Monate**, die Erlangung der Arbeitserlaubnis (工作許可) und der Aufenthaltskarte zusätzlich etwa **1 Monat**.
+Die Gesellschaftsgründung dauert etwa 3 Monate, die Erlangung der Arbeitserlaubnis (工作許可) und der Aufenthaltskarte zusätzlich etwa 1 Monat.
 
 Daher sollten Sie den Vertragsbeginn möglichst spät ansetzen.
 
-In taiwanesischen Mietverträgen für Ladenlokale gewährt die Vermieterseite der Mietpartei häufig eine mietzinsfreie „**Ausbauzeit**“ (裝潢期間).
+In taiwanesischen Mietverträgen für Ladenlokale gewährt die Vermieterseite der Mietpartei häufig eine mietzinsfreie „Ausbauzeit“ (裝潢期間).
 
 Dies ist ein von der Miete befreiter Zeitraum; Sie können darüber verhandeln.
 
@@ -107,7 +107,7 @@ Sie können erforderlichenfalls eine Beurkundung des Mietvertrags (公證) oder 
 
 ​
 
-**5. Kann man bei der Gesellschaftsgründung gewerbliche Büroräume mieten?**
+5. Kann man bei der Gesellschaftsgründung gewerbliche Büroräume mieten?
 
 Das hängt von den Geschäftszweigen (營業項目) der Gesellschaft ab.
 

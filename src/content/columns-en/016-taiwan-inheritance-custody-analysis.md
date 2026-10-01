@@ -153,4 +153,4 @@ On the official legislation pages, check the dates of amendment and entry into f
 
 This article provides general educational information about Taiwan’s law of succession, marital-property regimes, parental rights and duties, and guardianship of minors. It is not legal advice for any particular inheritance or family matter. The applicable law, procedures, and outcome may vary with the identity of the heirs, any will, the assets and debts, the marital-property regime, existing court orders, and cross-border factors. Before calculating a deadline for waiver of inheritance or tax filing, or disposing of property, confirm the current official materials and the facts of the matter.
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**
+Wei Tseng (曾雋崴), Taiwan Attorney

@@ -25,9 +25,9 @@ Aşağıdaki soru ve yanıtlar, Tayvan’da şirket kuruluşunu (公司設立) d
 
 ​
 
-**1. Yurt dışından Tayvan şirketi hazırlık hesabına (公司籌備處帳戶) sermaye (資本額) aktarılırken nelere dikkat edilmelidir? (Aşağıdaki banka ve döviz kuralları yalnızca Kore örneğidir; kendi ülkenizin kuralları ayrıca incelenmelidir.)**
+1. Yurt dışından Tayvan şirketi hazırlık hesabına (公司籌備處帳戶) sermaye (資本額) aktarılırken nelere dikkat edilmelidir? (Aşağıdaki banka ve döviz kuralları yalnızca Kore örneğidir; kendi ülkenizin kuralları ayrıca incelenmelidir.)
 
-Kural olarak Kore bankaları, yatırımcının Kore’deki bir bankaya **bizzat** gidip kendi adına bir hesaptan aktarmasını ister.
+Kural olarak Kore bankaları, yatırımcının Kore’deki bir bankaya bizzat gidip kendi adına bir hesaptan aktarmasını ister.
 
 Çevrimiçi bankacılık veya Kore’deki bir yakın aracılığıyla vekâleten aktarım mümkün değildir.
 
@@ -35,9 +35,9 @@ Ayrıca Kore döviz denetimi kurallarına göre, Kore uyruklu kişi yabancı bir
 
 Sermayeyi aktarmadan (資本金匯款) önce kendi ülkenizde çalıştığınız bankaya danışınız.
 
-**​**
+​
 
-**2. Şirket sermayesi yatırılırken, kişinin Tayvan’daki hesabından Tayvan doları (新臺幣, TWD) Tayvan şirketi hazırlık hesabına aktarılabilir mi?**
+2. Şirket sermayesi yatırılırken, kişinin Tayvan’daki hesabından Tayvan doları (新臺幣, TWD) Tayvan şirketi hazırlık hesabına aktarılabilir mi?
 
 Mümkündür, ancak Tayvan’da edinilmiş Tayvan doları fonlarının kaynağını gösteren belgeler sunulmalıdır.
 
@@ -47,9 +47,9 @@ Tayvan’da bir işletmeye yatırımdan doğan temettü ve kâr ise, bu temettü
 
 Aktarım Kore’deki bir banka hesabından yapılırsa, fonların kaynağına ilişkin belgeler eklenmek zorunda değildir.
 
-**​**
+​
 
-**3. Sermaye hazırlık hesabına ulaştıktan sonra olağan şirket hesabına (正式公司帳戶) ne zaman çevrilebilir?**
+3. Sermaye hazırlık hesabına ulaştıktan sonra olağan şirket hesabına (正式公司帳戶) ne zaman çevrilebilir?
 
 Kural olarak tüzel kişi tescil belgelerini (法人登記文件) aldıktan sonra,
 
@@ -57,17 +57,17 @@ sorumlu (負責人) bankaya gidip şirketin hazırlık hesabını olağan hesaba
 
 Ancak her bankanın (銀行) iç kuralları ayrıldığından, sermayenin acilen kullanılması gerekiyorsa önce bankaya başvurmak uygundur.
 
-**​**
+​
 
-**4. Hazırlık hesabı olağan hesaba çevrildikten sonra çevrimiçi bankacılık hemen kullanılabilir mi?**
+4. Hazırlık hesabı olağan hesaba çevrildikten sonra çevrimiçi bankacılık hemen kullanılabilir mi?
 
 Bu bankalara göre değişir; kural olarak en az bir cep telefonu numarası gerekir.
 
 Bazı bankalar ek gerekler koyabilir, örneğin kuruluştan sonra hesabın en az 6 ay kullanılmış olması.
 
-**​**
+​
 
-**5. Şirket yabancı uyruklu kişileri çalışan olarak istihdam edebilir mi?**
+5. Şirket yabancı uyruklu kişileri çalışan olarak istihdam edebilir mi?
 
 A. İlk çalışan: başvuru, olağan yurt dışı Çinli veya yabancı yatırım işletmesinde yönetim işi (一般僑外投資事業主管工作) olarak sunulur. Aşağıdaki B noktasındaki “uzmanlık veya teknik nitelikte iş” ölçütü uygulanmaz, ancak yurt dışı Çinlilerin veya yabancıların elindeki hisse veya koyulan sermaye toplamının, çıkarılmış hisselerin veya toplam sermayenin 1/3’ünü aştığı bir şirketin işletme sorumlusu (經理人) olmak gibi uygunluk koşulları ile işverenin sermaye ve ciroya ilişkin sonuç koşulları uygulanır (inceleme ölçütleri madde 38 ve 39).
 

@@ -25,9 +25,9 @@ Les questions et réponses suivantes, préparées par l’avocate Wei Tseng (曾
 
 ​
 
-**1. Lors du virement du capital (資本額) depuis l’étranger vers le compte de la société taïwanaise en formation (公司籌備處帳戶), à quoi faut-il prêter attention ? (les règles bancaires et de change de la Corée exposées ci-dessous ne sont qu’un exemple)**
+1. Lors du virement du capital (資本額) depuis l’étranger vers le compte de la société taïwanaise en formation (公司籌備處帳戶), à quoi faut-il prêter attention ? (les règles bancaires et de change de la Corée exposées ci-dessous ne sont qu’un exemple)
 
-En général, les banques de Corée exigent que l’investisseur se rende **en personne** dans une banque en Corée et vire les fonds depuis un compte à son propre nom.
+En général, les banques de Corée exigent que l’investisseur se rende en personne dans une banque en Corée et vire les fonds depuis un compte à son propre nom.
 
 Le virement par banque en ligne ou par l’intermédiaire d’un proche en Corée n’est pas possible.
 
@@ -35,9 +35,9 @@ En outre, conformément à la réglementation coréenne sur le contrôle des cha
 
 Avant de virer le capital (資本金匯款), renseignez-vous auprès de votre banque principale dans votre pays d’origine.
 
-**​**
+​
 
-**2. Lors du versement du capital social, peut-on virer des dollars de Taïwan (新臺幣, TWD) depuis son compte personnel à Taïwan vers le compte de la société taïwanaise en formation ?**
+2. Lors du versement du capital social, peut-on virer des dollars de Taïwan (新臺幣, TWD) depuis son compte personnel à Taïwan vers le compte de la société taïwanaise en formation ?
 
 C’est possible, mais vous devez produire des pièces justifiant l’origine des fonds en dollars de Taïwan acquis à Taïwan.
 
@@ -47,9 +47,9 @@ S’il s’agit de dividendes et de bénéfices provenant d’un investissement 
 
 Si le virement est effectué depuis un compte bancaire en Corée, il n’est pas nécessaire de joindre des pièces relatives à l’origine des fonds.
 
-**​**
+​
 
-**3. Après l’arrivée du capital sur le compte de la société en formation, quand peut-il être converti en compte bancaire ordinaire de la société (正式公司帳戶) ?**
+3. Après l’arrivée du capital sur le compte de la société en formation, quand peut-il être converti en compte bancaire ordinaire de la société (正式公司帳戶) ?
 
 En général, les documents d’immatriculation de la personne morale (法人登記文件) doivent d’abord être délivrés.
 
@@ -57,17 +57,17 @@ Le responsable (負責人) peut alors se rendre à la banque et convertir le com
 
 Toutefois, comme les règles internes de chaque banque (銀行) diffèrent, s’il faut utiliser le capital d’urgence, il convient de s’adresser d’abord à la banque.
 
-**​**
+​
 
-**4. Après la conversion du compte de la société en formation en compte ordinaire, la banque en ligne peut-elle être utilisée immédiatement ?**
+4. Après la conversion du compte de la société en formation en compte ordinaire, la banque en ligne peut-elle être utilisée immédiatement ?
 
 Cela varie selon les banques ; en général, un numéro de téléphone mobile au moins est nécessaire.
 
 Certaines banques peuvent imposer des exigences supplémentaires, par exemple une durée d’utilisation du compte d’au moins 6 mois après la constitution.
 
-**​**
+​
 
-**5. La société peut-elle embaucher des salariés de nationalité étrangère ?**
+5. La société peut-elle embaucher des salariés de nationalité étrangère ?
 
 A. Premier salarié : la demande est présentée comme un travail de direction dans une entreprise d’investissement ordinaire de Chinois d’outre-mer ou d’étrangers (一般僑外投資事業主管工作). Le critère du « travail de nature spécialisée ou technique » du point B ci-dessous ne s’applique pas, mais s’appliquent les conditions d’éligibilité, notamment celle de dirigeant (經理人) d’une société dont l’apport de Chinois d’outre-mer ou d’étrangers dépasse un tiers, ainsi que les conditions de résultats de l’employeur relatives au capital et au chiffre d’affaires (articles 38 et 39 des normes d’examen).
 

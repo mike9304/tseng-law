@@ -196,4 +196,4 @@ Toliau nurodyti pirminiai šaltiniai (1 lygmuo) yra išeities taškas šio strai
 
 Šis straipsnis yra švietimo paskirties medžiaga, skirta bendrai paaiškinti santuokos nutraukimo, tarptautinių šeimos bylų, sutuoktinių turto ir nepilnamečių vaikų institutus Taivane, o ne teisinė konsultacija konkrečioje byloje. Eiga ir rezultatas gali skirtis pagal jurisdikciją, taikytiną teisę, užsienio sprendimų pripažinimą, santuokos ir namų ūkio registro būklę, turtinį režimą, esamą susitarimą ar sprendimą dėl vaiko, faktus ir įrodymus bei naujausius oficialius teisės aktus. Įrašo, teisės gynimo priemonių, reikalavimo ir vykdymo terminus prieš imantis veiksmų reikia patikrinti vieną po kito pagal tikslią kiekvienos teisės ir kiekvienos eigos pradžią.
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

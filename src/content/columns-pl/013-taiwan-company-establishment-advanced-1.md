@@ -17,13 +17,13 @@ W ostatnim czasie wiele osób pomyślnie założyło spółkę (公司) na Tajwa
 
 Pytania często zadawane przy zakładaniu zebrano poniżej.
 
-Osoby, które przeczytały [**podstawy zakładania spółki**](/pl/columns/taiwan-company-establishment-basics), mogą następnie sięgnąć także do tego bardziej szczegółowego omówienia.
+Osoby, które przeczytały [podstawy zakładania spółki](/pl/columns/taiwan-company-establishment-basics), mogą następnie sięgnąć także do tego bardziej szczegółowego omówienia.
 
 Poniższe pytania i odpowiedzi mają pomóc osobom, które rozważają założenie spółki na Tajwanie.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Chcę założyć spółkę, ale nie mam jeszcze adresu rejestracji. Czy założenie jest mimo to możliwe?**
+1. Chcę założyć spółkę, ale nie mam jeszcze adresu rejestracji. Czy założenie jest mimo to możliwe?
 
 Gdy cudzoziemiec zakłada spółkę na Tajwanie, musi złożyć plan inwestycji (投資計畫書) do Departamentu Przeglądu Inwestycji Ministerstwa Gospodarki (經濟部投資審議司) w celu kontroli.
 
@@ -43,7 +43,7 @@ Przy części podstawowej jeden z czytelników napisał, że otwarcie rachunku j
 
 Ponieważ na Tajwanie jest bardzo wiele przypadków prania pieniędzy (洗錢), otwieranie rachunków bankowych staje się coraz surowsze.
 
-**Wskazówka:**
+Wskazówka:
 
 Ponieważ kontrola planu inwestycji również zajmuje czas,
 
@@ -57,13 +57,13 @@ pozostaje wystarczająco dużo czasu, aby otworzyć w banku rachunek przygotowaw
 
 ​
 
-**2. Czy można otworzyć rachunek spółki w banku nawet bez tajwańskiej karty pobytu?**
+2. Czy można otworzyć rachunek spółki w banku nawet bez tajwańskiej karty pobytu?
 
 To jest możliwe.
 
 Bank wymaga na ogół podwójnego potwierdzenia tożsamości,
 
-a bez karty pobytu można wystąpić do tajwańskiej administracji imigracyjnej o „**formularz danych podstawowych do jednolitego numeru identyfikacyjnego**” (統一證號基本資料表).
+a bez karty pobytu można wystąpić do tajwańskiej administracji imigracyjnej o „formularz danych podstawowych do jednolitego numeru identyfikacyjnego” (統一證號基本資料表).
 
 Wydanie jest możliwe tego samego dnia,
 
@@ -71,7 +71,7 @@ jednak administracja imigracyjna (移民署) jest bardzo oblegana; należy więc
 
 ​
 
-**3. Podobno przy kontroli planu inwestycji trzeba podać wykształcenie i doświadczenie zawodowe, i obawiam się, że moje wykształcenie i doświadczenie nie odpowiadają branży spółki, którą chcę założyć.**
+3. Podobno przy kontroli planu inwestycji trzeba podać wykształcenie i doświadczenie zawodowe, i obawiam się, że moje wykształcenie i doświadczenie nie odpowiadają branży spółki, którą chcę założyć.
 
 Departament Przeglądu Inwestycji Ministerstwa Gospodarki bada wprawdzie zaplecze inwestora,
 
@@ -85,13 +85,13 @@ W tym punkcie należy szczegółowo omówić sprawę z adwokatem na Tajwanie.
 
 ​
 
-**4. Na co zwracać uwagę, gdy adres rejestracji spółki (na przykład lokal gastronomiczny) jest najmowany?**
+4. Na co zwracać uwagę, gdy adres rejestracji spółki (na przykład lokal gastronomiczny) jest najmowany?
 
-Założenie spółki trwa około **3 miesięcy**, a uzyskanie zezwolenia na pracę (工作許可) i karty pobytu trwa dodatkowo około **1 miesiąca**,
+Założenie spółki trwa około 3 miesięcy, a uzyskanie zezwolenia na pracę (工作許可) i karty pobytu trwa dodatkowo około 1 miesiąca,
 
 dlatego początek umowy należy ustalić możliwie najpóźniej.
 
-Ponadto w umowach najmu lokali handlowych na Tajwanie wynajmujący często przyznaje najemcy „**okres wykończenia**” (裝潢期間).
+Ponadto w umowach najmu lokali handlowych na Tajwanie wynajmujący często przyznaje najemcy „okres wykończenia” (裝潢期間).
 
 Jest to okres zwolniony z czynszu; można o niego negocjować.
 
@@ -107,7 +107,7 @@ można w razie potrzeby zaproponować poświadczenie umowy najmu (公證) lub do
 
 ​
 
-**5. Czy przy zakładaniu spółki można wynająć lokal biurowy?**
+5. Czy przy zakładaniu spółki można wynająć lokal biurowy?
 
 Zależy to od branż działalności (營業項目) spółki.
 

@@ -20,7 +20,7 @@ faq:
 
 ![Naslovna slika](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-**Odvjetnica Wei Tseng (曾雋崴)** u nastavku iznosi pravila zakonske otpremnine prema tajvanskom pravu (資遣費).
+Odvjetnica Wei Tseng (曾雋崴) u nastavku iznosi pravila zakonske otpremnine prema tajvanskom pravu (資遣費).
 
 Tekst objašnjava kada pravo na zakonsku otpremninu nastaje, a kada ne.
 
@@ -40,9 +40,9 @@ Ako radnik sam ode, društvo zakonsku otpremninu ne mora isplatiti.
 
 Ako međutim radnik počini protupravnu radnju,
 
-**povrijedi radna pravila (工作規則),**
+povrijedi radna pravila (工作規則),
 
-**ili se bez razloga ne pojavi 3 dana uzastopce (曠工),**
+ili se bez razloga ne pojavi 3 dana uzastopce (曠工),
 
 društvo može otpustiti bez isplate zakonske otpremnine.
 
@@ -52,7 +52,7 @@ Sljedeća tablica to sažima.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Vrsta** | **Gospodarski otkaz (資遣員工, 經濟解僱)** | **Stegovni otkaz (解僱員工, 懲戒解僱)** | **Dobrovoljni odlazak radnika (員工自請離職)** |
+| Vrsta | Gospodarski otkaz (資遣員工, 經濟解僱) | Stegovni otkaz (解僱員工, 懲戒解僱) | Dobrovoljni odlazak radnika (員工自請離職) |
 | Značenje | Ako kod poslodavca postoji potreba usklađivanja osoblja zbog stanja poduzeća, razlog leži u gospodarskom području poslodavca, a ne u odgovornosti radnika. Stoga poslodavac mora poštovati otkazni rok (預告期間) i isplatiti zakonsku otpremninu, kako bi uravnotežio nepovoljnosti radnika. | Ako radnik počini protupravnu ili neprikladnu radnju, poslodavac može odmah otkazati ugovor o radu (勞動契約) bez prethodne obavijesti i zakonsku otpremninu ne mora isplatiti. Riječ je o jednoj od stegovnih ovlasti poslodavca. | Radnik može u svakom trenutku dati otkaz, ali mora prema trajanju zaposlenja poštovati otkazni rok, kako bi poslodavac mogao obaviti predaju i traženje zamjene. |
 | Uvjeti | Postoje  (članak 11. tajvanskog Zakona o standardima rada) | Postoje  (članak 12. tajvanskog Zakona o standardima rada) | Nema |
 | Prethodna obavijest | Potrebna | Nije potrebna | Potrebna |
@@ -194,17 +194,17 @@ stavlja pretjerane zahtjeve
 
 ili premješta radnike na čudna mjesta,
 
-**treba čuvati dokaze.**
+treba čuvati dokaze.
 
-**Vaše redovite evidencije dolazaka,**
+Vaše redovite evidencije dolazaka,
 
-**evidencije prekovremenog rada, evidencije rezultata,**
+evidencije prekovremenog rada, evidencije rezultata,
 
-**radna pravila, korespondenciju e-poštom sa suradnicima i nadređenima**
+radna pravila, korespondenciju e-poštom sa suradnicima i nadređenima
 
-**i snimke razgovora s nadređenima —**
+i snimke razgovora s nadređenima —
 
-**čuvajte dokaze koji su za Vas povoljni.**
+čuvajte dokaze koji su za Vas povoljni.
 
 ​
 

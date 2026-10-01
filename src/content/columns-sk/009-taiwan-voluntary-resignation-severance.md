@@ -25,7 +25,7 @@ nemôže dostať odstupné (資遣費) (článok 18 zákona o pracovných normá
 
 ​
 
-Existujú však **výnimočné prípady**.
+Existujú však výnimočné prípady.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Zákon o pracovných normách (勞動基準法) však stanoví, že
 
 ak chce zamestnanec ukončiť pracovnú zmluvu na základe bodu 1 alebo 6 vyššie (napríklad aby ukončil zmluvu kvôli nezápisu do poistenia),
 
-musí ukončiť pracovnú zmluvu v lehote **30 dní** odo dňa, keď sa o tejto situácii dozvedel,
+musí ukončiť pracovnú zmluvu v lehote 30 dní odo dňa, keď sa o tejto situácii dozvedel,
 
-alebo, pri bode 6, v lehote **30 dní** odo dňa, keď poznal následok škody.
+alebo, pri bode 6, v lehote 30 dní odo dňa, keď poznal následok škody.
 
 Zamestnanec si preto musí túto lehotu ustrážiť.
 
@@ -89,7 +89,7 @@ sa určí, či odstupné treba vyplatiť, alebo či ho možno žiadať.
 
 Preto v pracovnoprávnych sporoch (勞資糾紛) na Taiwane
 
-je „**čas**“ veľmi dôležitý.
+je „čas“ veľmi dôležitý.
 
 Vo väčšine prípadov je lepšie chránená strana, ktorá sa pripraví vopred.
 

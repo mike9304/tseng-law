@@ -289,7 +289,7 @@ describe('English full column corpus', () => {
       const imageMarkup = `![${caption}](../images/010-taiwan-gym-injury-lawsuit/${image})`;
       const mediaBlock = url
         ? `${imageMarkup}\n\n[${caption}](${url})`
-        : `${imageMarkup}\n\n**${caption}**`;
+        : `${imageMarkup}\n\n${caption}`;
       expect(raw).toContain(mediaBlock);
       if (url) {
         expect(loadedPublicContent).toContain(`[${caption}](${url})`);

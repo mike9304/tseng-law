@@ -93,9 +93,9 @@ Gegn sérfræðiálitinu má sækja um endurmat, þó aðeins eitt sinn. Sérfr�
 
 Kröfur samkvæmt 184. gr. almennra borgaralaga (民法) gera ráð fyrir ólögmætri skerðingu réttar, orsakasambandi við slysið og sönnun tjóns. Það eitt að slys hafi orðið merkir ekki að allir eftirfarandi liðir séu viðurkenndir. 216. gr. almennra borgaralaga er mælikvarði á umfang raunverulegs tjóns og tapaðs hagnaðar (所失利益).
 
-- **Meiðsli**: Samkvæmt 193. gr. almennra borgaralaga má kanna nauðsynlegan meðferðarkostnað (醫療費用), aukinn lífsnauðsynjakostnað eins og hjúkrun (看護費用), ferðakostnað vegna læknismeðferðar (就醫交通費) og hjálpartæki ásamt tekjutapi (收入損失) við raunverulega vinnuóhæfni og skerðingu vinnugetu (勞動能力減損). Samkvæmt 195. gr. almennra borgaralaga má einnig kanna ófjárhagslegt tjón.
-- **Dauðsfall**: Samkvæmt 192. gr. almennra borgaralaga má, að svo miklu leyti sem við á, kanna meðferðarkostnað og aukinn lífsnauðsynjakostnað fyrir dauðsfall, útfararkostnað (殯葬費) og tap meðlags (扶養利益損失) fyrir þann sem lagalega átti rétt á framfærslu. Samkvæmt 194. gr. almennra borgaralaga má einnig kanna ófjárhagslegt tjón tiltekinna ættingja.
-- **Eignir**: Samkvæmt 196. gr. almennra borgaralaga má krefjast sannaðs raunverulegs eignatjóns, þar á meðal viðgerðar ökutækis eða virðisrýrnunar.
+- Meiðsli: Samkvæmt 193. gr. almennra borgaralaga má kanna nauðsynlegan meðferðarkostnað (醫療費用), aukinn lífsnauðsynjakostnað eins og hjúkrun (看護費用), ferðakostnað vegna læknismeðferðar (就醫交通費) og hjálpartæki ásamt tekjutapi (收入損失) við raunverulega vinnuóhæfni og skerðingu vinnugetu (勞動能力減損). Samkvæmt 195. gr. almennra borgaralaga má einnig kanna ófjárhagslegt tjón.
+- Dauðsfall: Samkvæmt 192. gr. almennra borgaralaga má, að svo miklu leyti sem við á, kanna meðferðarkostnað og aukinn lífsnauðsynjakostnað fyrir dauðsfall, útfararkostnað (殯葬費) og tap meðlags (扶養利益損失) fyrir þann sem lagalega átti rétt á framfærslu. Samkvæmt 194. gr. almennra borgaralaga má einnig kanna ófjárhagslegt tjón tiltekinna ættingja.
+- Eignir: Samkvæmt 196. gr. almennra borgaralaga má krefjast sannaðs raunverulegs eignatjóns, þar á meðal viðgerðar ökutækis eða virðisrýrnunar.
 
 ## Q8. Hvernig skal skila gögnum um meðferðarkostnað þegar meðferð heldur áfram?
 

@@ -191,4 +191,4 @@ Materjale ajajärjekorda korrastades tuleks koos märkida lepingu sõlmimise pä
 
 See tekst on üldine selgitus, et kirjeldada minimaalse töötamise aja kokkulepet Taiwanis, koolituskulude ja ettemakstud hüvitise tagastamist ning lahkumise etteteatamist; see ei ole õigusnõuanne konkreetses tööasjas (最低服務年限約定). Kokkuleppe kehtivus ja vastutuse ulatus võivad sõltuda lepingu liigist ja sisust, tegelikust koolitusest ja kulust, hüvitise eesmärgist ja selle teatisest, töötamise ajast, lõppemise põhjusest ja tõenditest. Enne lahkumise vormistamist, palgakinnipidamise aktsepteerimist, tagastamise kokkuleppimist või vaidlusele vastamist tuleks kontrollida uusimaid ametlikke allikaid ja individuaalseid asjaolusid.
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)

@@ -59,7 +59,7 @@ Tajuk maklumat akhbar, terbitan dalam talian dan ulasan undang-undang berkaitan 
 
 ![Adakah pelajar universiti lelaki Korea mengalami pecah cakera intervertebra semasa melakukan angkat mati 90 kg dalam latihan peribadi?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Adakah pelajar universiti lelaki Korea mengalami pecah cakera intervertebra semasa melakukan angkat mati 90 kg dalam latihan peribadi?**
+Adakah pelajar universiti lelaki Korea mengalami pecah cakera intervertebra semasa melakukan angkat mati 90 kg dalam latihan peribadi?
 
 Kepentingan praktikal kes ini ialah ia menunjukkan bahawa tanggungjawab tidak ditentukan serta-merta oleh semata-mata hakikat bahawa kecederaan berlaku di pusat kecergasan. Kandungan kewajipan keselamatan (安全義務) yang membebankan penyedia, arahan khusus yang diberikan dan apa-apa pelanggaran kewajipan kewaspadaan (注意義務), kaitan sebab antara kecederaan dan kelakuan, serta skop kerugian dinilai daripada dokumen setiap kes. Syarat dan tempoh tatacara jenayah serta tatacara sivil juga berbeza, jadi rekod hendaklah disusun secara berasingan sejak selepas kemalangan.
 
@@ -93,13 +93,13 @@ Jika keadaan kemalangan boleh memenuhi unsur kesalahan, laporan boleh dibuat den
 
 Jenis kerugian yang boleh diteliti tuntutannya adalah seperti berikut. Pengiktirafan sebenar dan jumlah bergantung pada keperluan setiap belanja, kaitan sebab dengan kemalangan, dokumen sokongan, nisbah tanggungjawab dan penilaian mahkamah.
 
-1. **Kos perubatan**: Kos yang benar-benar dibayar untuk konsultasi, pemeriksaan, rawatan, ubat dan pemulihan dibuktikan dengan resit dan rekod perubatan.
-2. **Kos jagaan atau bantuan**: Jika, memandangkan darjah kecederaan dan perkembangan rawatan, jagaan diperlukan, dan jika tempoh dan kos memadai, ini diteliti dengan dokumen perubatan dan belanja.
-3. **Kos pengangkutan**: Kos yang diperlukan untuk pergi ke hospital atau klinik bagi rawatan dan pulang dibuktikan dengan daftar pergerakan, resit dan dokumen serupa.
-4. **Kerugian kerana kehilangan keupayaan kerja (勞動能力減損)**: Jika kemerosotan kekal dan pengurangan berterusan keupayaan kerja diakui, boleh dinilai secara bersama dengan dokumen perubatan dan profesional, darjah ketidakupayaan, profesion dan pendapatan, serta tempoh kerja yang tinggal. Peratusan ketidakupayaan semata-mata tidak menetapkan pampasan, dan kerugian tidak dikira secara automatik sehingga saat persaraan.
-5. **Kehilangan pendapatan semasa tempoh pemulihan (收入損失)**: Tempoh apabila seseorang benar-benar tidak dapat bekerja kerana rawatan atau rehat, dan pengurangan pendapatan yang terhasil, mesti dibuktikan dengan dokumen gaji, cukai, kehadiran kerja, dll.
-6. **Ganti rugi bukan berbentuk wang (非財產上損害)**: Jumlah bagi penderitaan mental ditetapkan mahkamah daripada faktor setiap kes, seperti darjah kecederaan, tempoh rawatan, kemerosotan kekal dan keadaan konkret pihak.
-7. **Ganti rugi punitif (懲罰性賠償金)**: Terdapat peruntukan yang, dalam pertikaian yang tertakluk kepada undang-undang perlindungan pengguna, membenarkan tuntutan sehingga 5 kali kerugian sebenar jika kerugian disebabkan perbuatan sengaja syarikat; jika kerana kecuaian berat, sehingga 3 kali; dan jika kerana kecuaian, sehingga 1 kali jumlah kerugian sebenar. Jika [perkara 51 undang-undang perlindungan pengguna Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) terpakai kepada kes dan jika terdapat pampasan sebenar dan bagi jumlah apa, ini bergantung pada penilaian mahkamah mengenai syarat konkret dan bukti.
+1. Kos perubatan: Kos yang benar-benar dibayar untuk konsultasi, pemeriksaan, rawatan, ubat dan pemulihan dibuktikan dengan resit dan rekod perubatan.
+2. Kos jagaan atau bantuan: Jika, memandangkan darjah kecederaan dan perkembangan rawatan, jagaan diperlukan, dan jika tempoh dan kos memadai, ini diteliti dengan dokumen perubatan dan belanja.
+3. Kos pengangkutan: Kos yang diperlukan untuk pergi ke hospital atau klinik bagi rawatan dan pulang dibuktikan dengan daftar pergerakan, resit dan dokumen serupa.
+4. Kerugian kerana kehilangan keupayaan kerja (勞動能力減損): Jika kemerosotan kekal dan pengurangan berterusan keupayaan kerja diakui, boleh dinilai secara bersama dengan dokumen perubatan dan profesional, darjah ketidakupayaan, profesion dan pendapatan, serta tempoh kerja yang tinggal. Peratusan ketidakupayaan semata-mata tidak menetapkan pampasan, dan kerugian tidak dikira secara automatik sehingga saat persaraan.
+5. Kehilangan pendapatan semasa tempoh pemulihan (收入損失): Tempoh apabila seseorang benar-benar tidak dapat bekerja kerana rawatan atau rehat, dan pengurangan pendapatan yang terhasil, mesti dibuktikan dengan dokumen gaji, cukai, kehadiran kerja, dll.
+6. Ganti rugi bukan berbentuk wang (非財產上損害): Jumlah bagi penderitaan mental ditetapkan mahkamah daripada faktor setiap kes, seperti darjah kecederaan, tempoh rawatan, kemerosotan kekal dan keadaan konkret pihak.
+7. Ganti rugi punitif (懲罰性賠償金): Terdapat peruntukan yang, dalam pertikaian yang tertakluk kepada undang-undang perlindungan pengguna, membenarkan tuntutan sehingga 5 kali kerugian sebenar jika kerugian disebabkan perbuatan sengaja syarikat; jika kerana kecuaian berat, sehingga 3 kali; dan jika kerana kecuaian, sehingga 1 kali jumlah kerugian sebenar. Jika [perkara 51 undang-undang perlindungan pengguna Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) terpakai kepada kes dan jika terdapat pampasan sebenar dan bagi jumlah apa, ini bergantung pada penilaian mahkamah mengenai syarat konkret dan bukti.
 
 ## 5. Walaupun pusat kecergasan mempunyai insurans tanggungjawab (責任保險), bolehkah pampasan dan jumlahnya masih dipertikaikan?
 

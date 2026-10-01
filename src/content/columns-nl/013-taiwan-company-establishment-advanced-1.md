@@ -17,13 +17,13 @@ Onlangs hebben talrijke personen met succes een vennootschap (公司) in Taiwan 
 
 De vragen die bij de oprichting vaak worden gesteld, zijn hieronder verzameld.
 
-Wie [**de grondslagen van de vennootschapsoprichting**](/nl/columns/taiwan-company-establishment-basics) heeft gelezen, kan vervolgens ook deze uitvoerigere verdieping raadplegen.
+Wie [de grondslagen van de vennootschapsoprichting](/nl/columns/taiwan-company-establishment-basics) heeft gelezen, kan vervolgens ook deze uitvoerigere verdieping raadplegen.
 
 De volgende vragen en antwoorden beogen personen te helpen die een vennootschapsoprichting in Taiwan overwegen.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Ik wil een vennootschap oprichten, maar heb nog geen inschrijvingsadres gevonden. Is de oprichting toch mogelijk?**
+1. Ik wil een vennootschap oprichten, maar heb nog geen inschrijvingsadres gevonden. Is de oprichting toch mogelijk?
 
 Wanneer een buitenlander in Taiwan een vennootschap opricht, moet hij of zij een investeringsplan (投資計畫書) indienen bij de Dienst Investeringstoetsing van het ministerie van Economische Zaken (經濟部投資審議司) ter toetsing.
 
@@ -43,7 +43,7 @@ In het eerdere artikel over de grondslagen is al aangegeven dat de rekeningopeni
 
 Omdat de gevallen van witwassen (洗錢) in Taiwan zeer talrijk zijn, wordt de opening van bankrekeningen steeds strenger.
 
-**Toelichting**:
+Toelichting:
 
 De toetsing van het investeringsplan vergt ook tijd.
 
@@ -57,7 +57,7 @@ Die tijd gebruikt u om bij de bank de voorbereidingsrekening te openen en het ka
 
 ​
 
-**2. Kan men bij de bank een vennootschapsrekening openen, ook zonder verblijfskaart van Taiwan?**
+2. Kan men bij de bank een vennootschapsrekening openen, ook zonder verblijfskaart van Taiwan?
 
 Dat is mogelijk.
 
@@ -71,7 +71,7 @@ De immigratiedienst (移民署) is echter zeer drukbezocht; u dient daarom vroeg
 
 ​
 
-**3. Ik heb gehoord dat bij de toetsing van het investeringsplan opleiding en beroepservaring moeten worden vermeld, en ik vrees dat mijn opleiding en ervaring niet bij de sector van de op te richten vennootschap passen.**
+3. Ik heb gehoord dat bij de toetsing van het investeringsplan opleiding en beroepservaring moeten worden vermeld, en ik vrees dat mijn opleiding en ervaring niet bij de sector van de op te richten vennootschap passen.
 
 De toetsingscommissie van het ministerie van Economische Zaken toetst weliswaar de achtergrond van de investeerder.
 
@@ -85,13 +85,13 @@ Over dit punt dient u grondig te overleggen met een advocaat in Taiwan.
 
 ​
 
-**4. Waarop moet worden gelet wanneer het inschrijvingsadres van de vennootschap (bijvoorbeeld een horecalokaal) wordt gehuurd?**
+4. Waarop moet worden gelet wanneer het inschrijvingsadres van de vennootschap (bijvoorbeeld een horecalokaal) wordt gehuurd?
 
-De vennootschapsoprichting duurt ongeveer **3 maanden**, en de verkrijging van de werkvergunning (工作許可) en van de verblijfskaart duurt ongeveer **1 maand** extra.
+De vennootschapsoprichting duurt ongeveer 3 maanden, en de verkrijging van de werkvergunning (工作許可) en van de verblijfskaart duurt ongeveer 1 maand extra.
 
 Plaats de ingangsdatum van de overeenkomst daarom zo laat mogelijk.
 
-Bovendien verleent de verhuurder in huurovereenkomsten voor winkelpanden in Taiwan de huurder vaak een **inrichtingsperiode** (裝潢期間).
+Bovendien verleent de verhuurder in huurovereenkomsten voor winkelpanden in Taiwan de huurder vaak een inrichtingsperiode (裝潢期間).
 
 Dit is een van huur vrijgestelde periode; u kunt daarover onderhandelen.
 
@@ -107,7 +107,7 @@ U kunt dan het notarieel laten vastleggen van de huurovereenkomst (公證) of ee
 
 ​
 
-**5. Kan men bij de vennootschapsoprichting een commercieel kantoorpand huren?**
+5. Kan men bij de vennootschapsoprichting een commercieel kantoorpand huren?
 
 Dat hangt af van de bedrijfsactiviteiten (營業項目) van de vennootschap.
 

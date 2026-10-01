@@ -314,9 +314,9 @@ describe('English investment column 017 — logistics and motor freight', () => 
     expect(
       parsed.content
         .trimEnd()
-        .endsWith('**Wei Tseng (曾雋崴), Taiwan Attorney**'),
+        .endsWith('Wei Tseng (曾雋崴), Taiwan Attorney'),
     ).toBe(true);
-    expect(post?.content).toContain('**Wei Tseng (曾雋崴), Taiwan Attorney**');
+    expect(post?.content).toContain('Wei Tseng (曾雋崴), Taiwan Attorney');
   });
 
   it('contains substantial English prose and locks the final 200-wpm read time', () => {

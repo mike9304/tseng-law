@@ -47,8 +47,8 @@ describe('cms runtime collection resolution', () => {
               locale: 'ko',
               fields: {
                 slug: 'cms-column-published',
-                title: 'CMS column title',
-                summary: '<p>CMS summary text</p>',
+                title: '**CMS column title**',
+                summary: '<p>**CMS summary text**</p>',
                 category: 'News',
                 date: '2026-05-28',
                 featuredImage: { url: '/api/builder/assets/hero.webp' },
@@ -104,8 +104,8 @@ describe('cms runtime collection resolution', () => {
               locale: 'ko',
               fields: {
                 slug: 'cms-column-published',
-                title: 'CMS column title',
-                summary: '<p>CMS summary text</p>',
+                title: '**CMS column title**',
+                summary: '<p>**CMS summary text**</p>',
                 category: 'legal',
                 categoryLabel: 'Legal Information',
                 date: '2026-05-28',

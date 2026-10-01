@@ -142,4 +142,4 @@ Zakres odnośnej działalności mogą Państwo sprawdzić w [Jakie sprawy prowad
 
 Niniejszy artykuł jest dokumentem informacji ogólnej o charakterze edukacyjnym na temat zakładania spółki na Tajwanie i powiązanych reguł; nie stanowi porady prawnej ani podatkowej w konkretnej sprawie i nie obiecuje określonego wyniku. Potrzebne procedury i wyniki mogą się różnić w zależności od struktury inwestycji, branży, obywatelstwa i statusu pobytowego wnioskodawcy oraz najnowszej praktyki organu kompetentnego; przed wykonaniem inwestycji, umowy albo zatrudnienia należy zbadać najnowsze źródła oficjalne oraz okoliczności właściwe sprawie.
 
-**Adwokatka Wei Tseng (曾雋崴)**
+Adwokatka Wei Tseng (曾雋崴)

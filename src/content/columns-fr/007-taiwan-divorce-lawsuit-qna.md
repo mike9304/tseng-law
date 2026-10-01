@@ -196,4 +196,4 @@ Les sources primaires (1er niveau) suivantes sont le point de départ pour véri
 
 Cet article est un matériau éducatif destiné à expliquer de façon générale les institutions du divorce, des affaires familiales internationales, du patrimoine conjugal et des enfants mineurs à Taïwan, et non un conseil juridique pour une affaire individuelle. La procédure et le résultat peuvent différer selon la compétence, les règles de conflit de lois, la reconnaissance des décisions étrangères, l’état du mariage et du registre des ménages, le régime des biens, l’accord ou la décision existants relatifs à l’enfant, les faits et les preuves, ainsi que les prescriptions officielles les plus récentes. Les délais d’inscription, de recours, de prétention et d’exécution doivent, avant d’agir, être vérifiés un par un d’après le point de départ exact de chaque droit et de chaque procédure.
 
-**Wei Tseng (曾雋崴), avocate à Taïwan**
+Wei Tseng (曾雋崴), avocate à Taïwan

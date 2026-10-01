@@ -25,9 +25,9 @@ Navedena pitanja i odgovore pripremila je advokatkinja Wei Tseng (曾雋崴); na
 
 ​
 
-**1. Na šta treba obratiti pažnju pri prenosu kapitala (資本額) iz Koreje na pripremni račun tajvanskog društva (公司籌備處帳戶)? (ova tačka se tiče korejskog režima i korejske bankarske prakse)**
+1. Na šta treba obratiti pažnju pri prenosu kapitala (資本額) iz Koreje na pripremni račun tajvanskog društva (公司籌備處帳戶)? (ova tačka se tiče korejskog režima i korejske bankarske prakse)
 
-Načelno banke u Koreji zahtevaju da se investitor **lično** pojavi u banci u Koreji i prenese sredstva sa računa koji se vodi na sopstveno ime.
+Načelno banke u Koreji zahtevaju da se investitor lično pojavi u banci u Koreji i prenese sredstva sa računa koji se vodi na sopstveno ime.
 
 Prenos internetskim bankarstvom ili preko srodnika u Koreji nije moguć.
 
@@ -35,9 +35,9 @@ Dalje, prema korejskim propisima o deviznoj kontroli, lice s korejskim državlja
 
 Pre prenosa kapitala (資本金匯款) obratite se svojoj glavnoj banci u Koreji.
 
-**​**
+​
 
-**2. Pri uplati osnovnog kapitala, može li se novi tajvanski dolar (新臺幣, TWD) preneti sa ličnog računa na Tajvanu na pripremni račun tajvanskog društva?**
+2. Pri uplati osnovnog kapitala, može li se novi tajvanski dolar (新臺幣, TWD) preneti sa ličnog računa na Tajvanu na pripremni račun tajvanskog društva?
 
 Moguće je, ali treba podneti isprave koje potvrđuju poreklo sredstava u novom tajvanskom dolaru stečenih na Tajvanu.
 
@@ -47,9 +47,9 @@ Ako je reč o dividendama i dobiti od investicije u preduzeće na Tajvanu, treba
 
 Ako se prenos vrši sa bankovnog računa u Koreji, nije potrebno priložiti isprave o poreklu sredstava.
 
-**​**
+​
 
-**3. Nakon što je kapital upisan na pripremni račun, kada se može pretvoriti u redovni račun društva (正式公司帳戶)?**
+3. Nakon što je kapital upisan na pripremni račun, kada se može pretvoriti u redovni račun društva (正式公司帳戶)?
 
 Načelno to je moguće nakon prijema isprava o upisu pravnog lica (法人登記文件).
 
@@ -57,17 +57,17 @@ Odgovorno lice (負責人) zatim u banci pretvori pripremni račun društva u re
 
 Pošto se unutrašnja pravila pojedinih banaka (銀行) razlikuju, ako kapital treba hitno upotrebiti, preporučuje se da se najpre obratite banci.
 
-**​**
+​
 
-**4. Nakon pretvaranja pripremnog računa u redovni račun, može li se internetsko bankarstvo odmah koristiti?**
+4. Nakon pretvaranja pripremnog računa u redovni račun, može li se internetsko bankarstvo odmah koristiti?
 
 Zavisi od banke; načelno je potreban barem broj mobilnog telefona.
 
 Neke banke mogu da postave dodatne zahteve, na primer da se račun koristi najmanje 6 meseci nakon osnivanja.
 
-**​**
+​
 
-**5. Može li društvo da zapošljava strance (uključujući lica s korejskim državljanstvom)?**
+5. Može li društvo da zapošljava strance (uključujući lica s korejskim državljanstvom)?
 
 Prvi zaposleni: rukovodilac preduzeća redovne investicije prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Merilo „posla stručne ili tehničke prirode” iz sledeće tačke ne primenjuje se, ali se primenjuju uslovi podobnosti, uključujući uslov rukovodioca (經理人) društva čiji ulog prekomorskih Kineza ili stranaca prelazi 1/3, kao i uslovi rezultata poslodavca koji se tiču kapitala i prometa (članovi 38 i 39 standarda provere).
 

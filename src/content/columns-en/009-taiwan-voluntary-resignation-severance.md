@@ -27,7 +27,7 @@ unlike in Korea.
 
 ​
 
-There are, however, **exceptions**.
+There are, however, exceptions.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -65,9 +65,9 @@ The Labor Standards Act provides, however, that
 
 if an employee wishes to terminate the labor contract on either ground 1 or 6 above (for example, because the employer failed to enroll the employee in insurance),
 
-the employee must terminate the labor contract within **30 days** after becoming aware of the circumstances,
+the employee must terminate the labor contract within 30 days after becoming aware of the circumstances,
 
-or, in the case of ground 6, within **30 days** after becoming aware of the resulting harm.
+or, in the case of ground 6, within 30 days after becoming aware of the resulting harm.
 
 Employees must therefore pay close attention to these deadlines.
 
@@ -93,7 +93,7 @@ may either avoid paying severance or claim it.
 
 Therefore, in Taiwan labor disputes,
 
-**“timing”** is crucial.
+“timing” is crucial.
 
 In most cases, the party that prepares in advance is better positioned to protect its rights.
 

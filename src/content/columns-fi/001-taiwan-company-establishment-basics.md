@@ -142,4 +142,4 @@ Tätä oikeudenalaa koskeva esittely on sivulla [Mitä asioita käsittelemme](/f
 
 Tämä artikkeli on yleisesitys yhtiön perustamisesta Taiwanissa (公司設立) ja siihen liittyvistä järjestelyistä; se ei ole oikeudellista tai verotuksellista neuvontaa yksittäisessä asiassa eikä lupaa tiettyä tulosta. Tarvittavat menettelyt ja lopputulokset voivat poiketa sijoitusrakenteen, toimialan, hakijan kansallisuuden ja oleskeluaseman sekä toimivaltaisen viranomaisen uusimman käytännön mukaan; ennen sijoituksen, sopimuksen tai työllistämisen toteuttamista on tutkittava uusimmat viralliset lähteet ja omat olosuhteet.
 
-**Asianajaja Wei Tseng (曾雋崴)**
+Asianajaja Wei Tseng (曾雋崴)

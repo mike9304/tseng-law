@@ -192,4 +192,4 @@ Alegerea finală este mai sigură dacă este examinată de specialiști din Taiw
 
 Acest articol este un material de informare generală în scop educativ asupra diferențelor dintre filiala taiwaneză și sucursala unei societăți străine; nu constituie nici o consultanță juridică, nici una fiscală pentru un caz concret și nu promite un rezultat determinat. Regulile aplicabile și tratamentul fiscal pot varia după sediul investitorului și al sediului, conținutul activității, operațiunile și fluxul fondurilor, condițiile acordului și practica cea mai recentă a autorității competente; înainte de a executa o constituire, o investiție, un contract, un dividend sau un virament, sursele oficiale cele mai recente și împrejurările proprii trebuie verificate.
 
-**Avocata Wei Tseng (曾雋崴)**
+Avocata Wei Tseng (曾雋崴)

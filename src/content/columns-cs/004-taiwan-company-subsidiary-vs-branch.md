@@ -192,4 +192,4 @@ Konečná volba je bezpečnější, posoudí-li ji odborníci na Tchaj-wanu a v 
 
 Tento článek je materiálem obecné informace vzdělávací povahy o rozdílech mezi tchajwanskou dceřinou společností a pobočkou zahraniční společnosti; není právním ani daňovým poradenstvím v konkrétním případě a neslibuje určený výsledek. Použitelná ustanovení a daňové zachycení se mohou lišit podle sídla investora a ústředí, obsahu činnosti, operací a toku prostředků, předpokladů dohody a nejnovější praxe kompetentního orgánu; před provedením založení, investice, smlouvy, dividendy nebo převodu je třeba potvrdit nejnovější oficiální zdroje a vlastní okolnosti.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

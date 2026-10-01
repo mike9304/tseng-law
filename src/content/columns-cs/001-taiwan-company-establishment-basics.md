@@ -142,4 +142,4 @@ Rozsah příslušné činnosti můžete vidět v [V čem klienty zastupujeme](/c
 
 Tento článek je dokumentem obecné informace vzdělávací povahy o založení společnosti na Tchaj-wanu a souvisejících pravidlech; není právním ani daňovým poradenstvím v konkrétní věci a neslibuje určený výsledek. Potřebné postupy a výsledky se mohou lišit podle struktury investice, odvětví, státní příslušnosti a pobytového statusu žadatele a nejnovější praxe kompetentního orgánu; před provedením investice, smlouvy nebo zaměstnání je třeba posoudit nejnovější oficiální zdroje a okolnosti vlastní věci.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

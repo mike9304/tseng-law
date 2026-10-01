@@ -59,7 +59,7 @@ Bu işe ilişkin basın haberlerinin, çevrimiçi yayınların ve hukuki açıkl
 
 ![Koreli bir erkek üniversite öğrencisi kişisel antrenmanda 90 kg deadlift yaparken disk yırtılması mı yaşadı?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Koreli bir erkek üniversite öğrencisi kişisel antrenmanda 90 kg deadlift yaparken disk yırtılması mı yaşadı?**
+Koreli bir erkek üniversite öğrencisi kişisel antrenmanda 90 kg deadlift yaparken disk yırtılması mı yaşadı?
 
 Bu işin pratik anlamı, spor salonunda bir yaralanmanın meydana gelmiş olmasının tek başına sorumluluğu derhal belirlemediğini göstermesidir. Hizmet sağlayıcının güvenlik yükümlülüğünün (安全義務) içeriği, somut rehberlik fiili ve özen yükümlülüğünün (注意義務) ihlali, yaralanma ile davranış arasındaki illiyet bağı ve zararın kapsamı her işin belgelerine göre değerlendirilir. Ceza usulü ile hukuk usulünün şartları ve süreleri de farklıdır; bu yüzden kazadan hemen sonra kayıtlar ayrı ayrı düzenlenmelidir.
 
@@ -93,13 +93,13 @@ Kaza şartları bir suçun unsurları oluşabilecekse, soruşturma makamının (
 
 İncelenebilecek zarar kalemleri şunlardır. Gerçek tanıma ve tutar, her giderin gerekliliğine, kaza ile illiyet bağına, belgelere, sorumluluk oranına ve mahkemenin değerlendirmesine bağlıdır.
 
-1. **Tıbbi giderler**: Muayene, tetkik, tedavi, ilaç ve rehabilitasyon için gerçekten ödenen giderler makbuz ve klinik kayıtla ispatlanır.
-2. **Bakım veya yardım giderleri**: Yaralanmanın derecesi ve tedavi seyrine göre bakımın gerekip gerekmediği, süre ve maliyetin uygun olup olmadığı tıbbi ve gider belgeleriyle incelenir.
-3. **Ulaşım giderleri**: Tedavi için sağlık kuruluşuna gidip gelmek için gereken giderler hareket kaydı, makbuz ve benzeri belgelerle ispatlanır.
-4. **Çalışma gücü kaybından zarar (勞動能力減損)**: Sekel ve çalışma gücünde kalıcı azalma tanınırsa tıbbi ve mesleki belgeler, maluliyet derecesi, meslek ve gelir ile kalan çalışma süresi birlikte değerlendirilebilir. Yalnız maluliyet yüzdesi tazminatı belirlemez; zarar emeklilik yaşına kadar kendiliğinden hesaplanmaz.
-5. **İyileşme süresindeki gelir kaybı (收入損失)**: Tedavi veya istirahat nedeniyle gerçekten çalışılamayan süre ve bundan doğan gelir azalması bordro, vergi kayıtları ve istihdam belgeleriyle ispatlanmalıdır.
-6. **Malvarlığı dışı zarar (非財產上損害)**: Manevi acı için tutar, yaralanmanın derecesi, tedavi süresi, sekeller ve tarafın somut şartları gibi her işe özgü etkenlerden mahkemece belirlenir.
-7. **Cezalandırıcı tazminat (懲罰性賠償金)**: Tüketiciyi Koruma Kanunu’nun uygulandığı bir uyuşmazlıkta zarar işletmenin kastıyla doğmuşsa gerçek zararın en çok 5 katı, ağır kusurda en çok 3 katı, kusurda en çok gerçek zarar tutarının 1 katı istenebileceğine dair bir kural vardır. [Tayvan Tüketiciyi Koruma Kanunu’nun 51. maddesinin](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) işe uygulanıp uygulanmayacağı ve gerçek bir tazminat olup olmayacağı, hangi tutarda olacağı, somut şartlar ve deliller hakkındaki mahkeme değerlendirmesine bağlıdır.
+1. Tıbbi giderler: Muayene, tetkik, tedavi, ilaç ve rehabilitasyon için gerçekten ödenen giderler makbuz ve klinik kayıtla ispatlanır.
+2. Bakım veya yardım giderleri: Yaralanmanın derecesi ve tedavi seyrine göre bakımın gerekip gerekmediği, süre ve maliyetin uygun olup olmadığı tıbbi ve gider belgeleriyle incelenir.
+3. Ulaşım giderleri: Tedavi için sağlık kuruluşuna gidip gelmek için gereken giderler hareket kaydı, makbuz ve benzeri belgelerle ispatlanır.
+4. Çalışma gücü kaybından zarar (勞動能力減損): Sekel ve çalışma gücünde kalıcı azalma tanınırsa tıbbi ve mesleki belgeler, maluliyet derecesi, meslek ve gelir ile kalan çalışma süresi birlikte değerlendirilebilir. Yalnız maluliyet yüzdesi tazminatı belirlemez; zarar emeklilik yaşına kadar kendiliğinden hesaplanmaz.
+5. İyileşme süresindeki gelir kaybı (收入損失): Tedavi veya istirahat nedeniyle gerçekten çalışılamayan süre ve bundan doğan gelir azalması bordro, vergi kayıtları ve istihdam belgeleriyle ispatlanmalıdır.
+6. Malvarlığı dışı zarar (非財產上損害): Manevi acı için tutar, yaralanmanın derecesi, tedavi süresi, sekeller ve tarafın somut şartları gibi her işe özgü etkenlerden mahkemece belirlenir.
+7. Cezalandırıcı tazminat (懲罰性賠償金): Tüketiciyi Koruma Kanunu’nun uygulandığı bir uyuşmazlıkta zarar işletmenin kastıyla doğmuşsa gerçek zararın en çok 5 katı, ağır kusurda en çok 3 katı, kusurda en çok gerçek zarar tutarının 1 katı istenebileceğine dair bir kural vardır. [Tayvan Tüketiciyi Koruma Kanunu’nun 51. maddesinin](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) işe uygulanıp uygulanmayacağı ve gerçek bir tazminat olup olmayacağı, hangi tutarda olacağı, somut şartlar ve deliller hakkındaki mahkeme değerlendirmesine bağlıdır.
 
 ## 5. Spor salonunun sorumluluk sigortası (責任保險) olsa bile tazminatın varlığı ve tutarı tartışılabilir mi?
 

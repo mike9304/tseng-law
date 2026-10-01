@@ -17,13 +17,13 @@ Tayvan’da şirket (公司) kuruluşunu tamamlayan ve ardından çalışma vize
 
 Kuruluş sırasında sıkça sorulan sorular aşağıda toplanmıştır.
 
-[**Şirket kuruluşunun temel bölümünü**](/tr/columns/taiwan-company-establishment-basics) okuyanlar ardından bu daha ayrıntılı derinlemesine bölüme de bakabilir.
+[Şirket kuruluşunun temel bölümünü](/tr/columns/taiwan-company-establishment-basics) okuyanlar ardından bu daha ayrıntılı derinlemesine bölüme de bakabilir.
 
 Aşağıdaki soru ve yanıtlar, Tayvan’da şirket kurmayı düşünenlere yardımcı olmayı amaçlar.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Şirket kurmak istiyorum ama henüz tescil adresini bulamadım. Kuruluş yine de mümkün mü?**
+1. Şirket kurmak istiyorum ama henüz tescil adresini bulamadım. Kuruluş yine de mümkün mü?
 
 Yabancı uyruklu bir kişi, Tayvan’da şirket kurarken Ekonomi Bakanlığı Yatırım İnceleme Dairesine (經濟部投資審議司) yatırım planı (投資計畫書) sunarak incelemeden geçmelidir.
 
@@ -43,7 +43,7 @@ Temel bölümde de bir okur, hesap açılışının en zor adım olduğunu belir
 
 Tayvan’da kara para aklama (洗錢) vakaları çok sayıda olduğu için banka hesabı açılışı giderek daha sıkılaşmaktadır.
 
-**Tavsiye:**
+Tavsiye:
 
 Yatırım planı incelemesi de zaman aldığı için adres araması bekletilmemelidir.
 
@@ -57,13 +57,13 @@ Ardından bankada hazırlık hesabını açmak ve sermayeyi göndermek için yet
 
 ​
 
-**2. Tayvan oturma belgesi olmasa da bankada şirket hesabı açılabilir mi?**
+2. Tayvan oturma belgesi olmasa da bankada şirket hesabı açılabilir mi?
 
 Mümkündür.
 
 Banka genel olarak iki ayrı kimlik belgesi ister.
 
-Oturma belgesi yoksa Tayvan göç idaresinden “**birleşik kimlik numarası temel bilgi formu**” (統一證號基本資料表) talep edilebilir.
+Oturma belgesi yoksa Tayvan göç idaresinden “birleşik kimlik numarası temel bilgi formu” (統一證號基本資料表) talep edilebilir.
 
 Aynı gün verilmesi mümkün olmakla birlikte kalabalık hesaba katılmalıdır.
 
@@ -71,7 +71,7 @@ Göç idaresi (移民署) çok kalabalıktır; bu nedenle erken gidip numara alm
 
 ​
 
-**3. Yatırım planı incelemesinde öğrenim ve mesleki deneyimin yazılması gerektiğini duydum; öğrenimim ve deneyimim kurmak istediğim şirketin sektörüne uymayacak diye kaygılanıyorum.**
+3. Yatırım planı incelemesinde öğrenim ve mesleki deneyimin yazılması gerektiğini duydum; öğrenimim ve deneyimim kurmak istediğim şirketin sektörüne uymayacak diye kaygılanıyorum.
 
 Ekonomi Bakanlığı inceleme komisyonu yatırımcının geçmişini gerçekten inceler.
 
@@ -85,13 +85,13 @@ Bu noktada Tayvan avukatı ile yeterince görüşülmesi uygun olur.
 
 ​
 
-**4. Şirket tescil adresi (örneğin bir restoran dükkânı) kiralanırken nelere dikkat edilmelidir?**
+4. Şirket tescil adresi (örneğin bir restoran dükkânı) kiralanırken nelere dikkat edilmelidir?
 
-Şirket kuruluşu yaklaşık **3 ay** sürer. Çalışma izni (工作許可) ve oturma belgesinin alınması ise buna ek olarak yaklaşık **1 ay** sürer.
+Şirket kuruluşu yaklaşık 3 ay sürer. Çalışma izni (工作許可) ve oturma belgesinin alınması ise buna ek olarak yaklaşık 1 ay sürer.
 
 Bu nedenle sözleşme başlangıç günü mümkün olduğunca geç tutulmalıdır.
 
-Ayrıca Tayvan’daki dükkân kira sözleşmelerinde ev sahibi kiracıya sıklıkla “**dekorasyon süresi**” (裝潢期間) verir.
+Ayrıca Tayvan’daki dükkân kira sözleşmelerinde ev sahibi kiracıya sıklıkla “dekorasyon süresi” (裝潢期間) verir.
 
 Bu, kiranın muaf tutulduğu bir süredir; müzakere edilebilir.
 
@@ -107,7 +107,7 @@ Gerektiğinde kira sözleşmesinin noter onayı (公證) veya ek teminat öneril
 
 ​
 
-**5. Şirket kuruluşunda ofis tipi ticari mekân kiralanabilir mi?**
+5. Şirket kuruluşunda ofis tipi ticari mekân kiralanabilir mi?
 
 Bu, şirketin faaliyet kalemlerine (營業項目) bağlıdır.
 

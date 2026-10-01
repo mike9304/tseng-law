@@ -148,4 +148,4 @@ Loata töötamisega võivad kaasneda haldustrahv (罰鍰) ja riigist lahkumise k
 
 See artikkel on üldine selgitus õiguskorra kohta, mitte nõuanne konkreetses asjas. Kuna loakriteeriumid, taotlusvormid ja pädeva asutuse praktika võivad muutuda, kontrollitakse ajakohaseid ametlikke allikaid ja asja olusid enne investeeringu või lepingu täitmist.
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)

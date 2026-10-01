@@ -191,4 +191,4 @@ Näyttöä aikajärjestykseen järjestettäessä sopimuksen tekemisen päivä, k
 
 Tämä teksti on yleisesitys Taiwanin vähimmäispalvelusajan sopimuksesta, koulutuskustannusten ja ennakkomaksun palautuksesta sekä irtisanoutumisen ennakkoilmoituksesta; se ei ole oikeudellista neuvontaa konkreettiseen työasiaan (最低服務年限約定). Sopimuksen pätevyys ja vastuun laajuus voivat vaihdella sopimuksen tyypin ja sisällön, tosiasiallisen koulutuksen ja kustannuksen, korvauksen tarkoituksen ja sen ilmoituksen, palvelusajan, päättymissyyn ja todisteiden mukaan. Ennen irtisanoutumisen muotoilua, palkanvähennyksen hyväksymistä, palautuksesta sopimista tai riitaan vastaamista olisi vahvistettava uusimmat viralliset lähteet ja yksilölliset olosuhteet.
 
-**Asianajaja Wei Tseng (曾雋崴)**
+Asianajaja Wei Tseng (曾雋崴)

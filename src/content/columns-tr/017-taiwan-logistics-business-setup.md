@@ -148,4 +148,4 @@ Yabancı hedef şirketin ortağı veya yatırımcısı olsa bile bu olgu tek ba�
 
 Bu yazı, genel hukuk rejimini açıklamak için eğitim amaçlı bir belgedir; tek tek dosyaya hukuki görüş değildir. İzin ölçütleri, başvuru formları ve yetkili makamın uygulaması değişebileceği için yatırım veya sözleşme yürütülmeden önce en güncel resmi kaynaklar ve dosyanın olguları doğrulanmalıdır.
 
-**Avukat Wei Tseng (曾雋崴)**
+Avukat Wei Tseng (曾雋崴)

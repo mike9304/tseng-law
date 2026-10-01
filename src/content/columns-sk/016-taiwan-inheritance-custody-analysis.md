@@ -151,4 +151,4 @@ Na oficiálnych stránkach predpisov treba overiť deň novely a deň nadobudnut
 
 Tento článok je vzdelávacím podkladom k všeobecnému vysvetleniu režimu dedenia, manželského majetkového režimu, rodičovskej starostlivosti a opatrovníctva maloletých na Taiwane; nie je právnou radou ku konkrétnej dedičskej alebo rodinnej veci. Uplatniteľné právo, postup a výsledok sa môžu líšiť podľa okruhu dedičov, závetu, majetku a dlhov, manželského majetkového režimu, existujúcich súdnych rozhodnutí a medzinárodných prvkov. Pred výpočtom lehôt, ako je vzdanie sa alebo daňové priznanie, alebo pred nakladaním s majetkom overte najnovšie oficiálne podklady a jednotlivé okolnosti.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

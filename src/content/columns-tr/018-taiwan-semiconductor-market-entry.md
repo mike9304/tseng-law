@@ -85,11 +85,11 @@ Yabancı şirketin Tayvan bağlı şirketi ve şube yöneticisi için çalışma
 
 Aşağıdakiler düşünmeye yardımcı varsayımsal inceleme durumlarıdır; belirli bir yöntemin hukuka uygun veya daha iyi olduğunu garanti eden sonuç değildir.
 
-**İlk ihracatın merkezde olduğu şirket.** Tayvan içinde henüz çalışan veya stok yoksa ve bağımsız dağıtıcı üzerinden piyasa talebini doğrulamak isteniyorsa, tedarik, dağıtım ilişkisi ve Tayvan içi faaliyet kapsamı önce bakılabilir. Ancak dağıtım sözleşmesi tek başına Tayvan içindeki bütün düzenleme meselelerini çözmez.
+İlk ihracatın merkezde olduğu şirket. Tayvan içinde henüz çalışan veya stok yoksa ve bağımsız dağıtıcı üzerinden piyasa talebini doğrulamak isteniyorsa, tedarik, dağıtım ilişkisi ve Tayvan içi faaliyet kapsamı önce bakılabilir. Ancak dağıtım sözleşmesi tek başına Tayvan içindeki bütün düzenleme meselelerini çözmez.
 
-**Tayvan içinde satış ve teknik desteği giderek genişleten şirket.** Tayvan’da çalışan alınıp stok, tahsilat ve müşteri desteğinin yönetilmesine devam edilecekse bağlı şirket ile şube yapısı somut karşılaştırılmalı; sözleşme sorumluluğu, merkezin işletme biçimi, vergi ve personel planı da birlikte incelenmelidir.
+Tayvan içinde satış ve teknik desteği giderek genişleten şirket. Tayvan’da çalışan alınıp stok, tahsilat ve müşteri desteğinin yönetilmesine devam edilecekse bağlı şirket ile şube yapısı somut karşılaştırılmalı; sözleşme sorumluluğu, merkezin işletme biçimi, vergi ve personel planı da birlikte incelenmelidir.
 
-**Pazar araştırması aşamasındaki şirket.** Satış örgütü kurulmadan önce yalnızca bilgi toplama ve irtibat işlevi isteniyorsa temsilcilik incelenebilir. Ancak gerçek plan stok mal satışı veya saha çalışmasını içeriyorsa, o faaliyetin yapılıp yapılamayacağı ayrıca doğrulanmalıdır.
+Pazar araştırması aşamasındaki şirket. Satış örgütü kurulmadan önce yalnızca bilgi toplama ve irtibat işlevi isteniyorsa temsilcilik incelenebilir. Ancak gerçek plan stok mal satışı veya saha çalışmasını içeriyorsa, o faaliyetin yapılıp yapılamayacağı ayrıca doğrulanmalıdır.
 
 ## 8. İlk görüşmede yalnızca işletme özeti yeterlidir; gizli belgelerin tamamını ilk yazışmada vermek gerekmez
 

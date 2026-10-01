@@ -192,4 +192,4 @@ Pilihan akhirnya lebih aman ditinjau dalam keadaan para ahli di Taiwan dan di te
 
 Tulisan ini merupakan bahan yang bertujuan mendidik untuk menjelaskan perbedaan umum antara anak perusahaan di Taiwan dan kantor cabang perusahaan asing, dan bukan nasihat hukum atau nasihat perpajakan untuk perkara tertentu. Karena peraturan yang berlaku dan perlakuan perpajakannya dapat berbeda menurut tempat kedudukan investor dan kantor pusat, isi usahanya, transaksi dan aliran dananya, syarat penerapan perjanjiannya, serta praktik terbaru instansi yang berwenang, sebaiknya Anda memastikan sumber resmi terbaru dan keadaan perkara Anda sendiri sebelum melaksanakan pendirian, investasi, perjanjian, pembagian dividen, atau pengiriman uang.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

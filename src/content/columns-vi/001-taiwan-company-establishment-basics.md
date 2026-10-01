@@ -142,4 +142,4 @@ Quý vị có thể tìm hiểu phạm vi công việc liên quan tại [Các l�
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích một cách khái quát về việc thành lập công ty tại Đài Loan và các chế độ liên quan, không phải là ý kiến pháp lý hay ý kiến về thuế cho một vụ việc cụ thể. Vì thủ tục cần thiết và kết quả có thể thay đổi tùy theo cấu trúc đầu tư, ngành nghề, quốc tịch và tư cách cư trú của người nộp đơn, cũng như thực tiễn mới nhất của cơ quan có thẩm quyền, xin quý vị xác nhận tài liệu chính thức mới nhất và hoàn cảnh cụ thể của mình trước khi tiến hành đầu tư, ký kết hợp đồng hoặc tuyển dụng.
 
-**Luật sư Wei Tseng (曾雋崴)**
+Luật sư Wei Tseng (曾雋崴)

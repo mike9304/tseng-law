@@ -148,4 +148,4 @@ Ungenehmigte Arbeit kann Verwaltungsbuße und Ausreiseanordnung (限令出國) n
 
 Dieser Beitrag ist allgemeines Informationsmaterial zu Bildungszwecken über die rechtlichen Regelungen; er ist keine Rechtsberatung in einem konkreten Fall. Genehmigungsmaßstäbe, Antragsformulare und die Praxis der zuständigen Behörde können sich ändern; vor Durchführung von Investition oder Vertrag sind die neuesten amtlichen Quellen und die eigenen Umstände zu prüfen.
 
-**Rechtsanwältin Wei Tseng (曾雋崴)**
+Rechtsanwältin Wei Tseng (曾雋崴)

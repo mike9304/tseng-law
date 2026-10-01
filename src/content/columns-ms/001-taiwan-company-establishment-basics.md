@@ -142,4 +142,4 @@ Anda boleh merujuk skop aktiviti yang berkenaan di bawah [Hal yang kami kendalik
 
 Artikel ini ialah dokumen maklumat umum untuk tujuan pendidikan mengenai penubuhan syarikat di Taiwan dan peraturan berkaitan; ia bukan nasihat undang-undang atau cukai dalam kes konkret dan tidak menjanjikan hasil tertentu. Prosedur yang diperlukan dan hasil boleh berbeza menurut struktur pelaburan, sektor, kewarganegaraan dan status kediaman pemohon serta amalan terbaharu pihak berkuasa kompeten; sebelum melaksanakan pelaburan, kontrak atau pekerjaan, sumber rasmi terbaharu dan keadaan khusus kes patut diteliti.
 
-**Peguam Wei Tseng (曾雋崴)**
+Peguam Wei Tseng (曾雋崴)

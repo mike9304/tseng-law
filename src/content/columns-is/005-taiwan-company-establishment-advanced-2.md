@@ -25,9 +25,9 @@ Spurningarnar og svörin hér á eftir eiga að hjálpa þeim sem íhuga að sto
 
 ​
 
-**1. Að hverju skal gæta þegar hlutafé (資本額) er millifært frá útlöndum á undirbúningsreikning taívanska félagsins (公司籌備處帳戶)? (dæmið hér á eftir lýsir kóreska kerfinu og kóreskri bankaframkvæmd)**
+1. Að hverju skal gæta þegar hlutafé (資本額) er millifært frá útlöndum á undirbúningsreikning taívanska félagsins (公司籌備處帳戶)? (dæmið hér á eftir lýsir kóreska kerfinu og kóreskri bankaframkvæmd)
 
-Kóreskir bankar (銀行) krefjast þess að jafnaði að fjárfestirinn heimsæki **persónulega** banka í Kóreu og millifæri féð af reikningi í eigin nafni.
+Kóreskir bankar (銀行) krefjast þess að jafnaði að fjárfestirinn heimsæki persónulega banka í Kóreu og millifæri féð af reikningi í eigin nafni.
 
 Millifærsla með netbanka eða í gegnum nákominn aðila í Kóreu (匯款) er ekki möguleg.
 
@@ -35,9 +35,9 @@ Enn fremur skal sá sem hefur kóreskt ríkisfang og stofnar erlendan lögaðila
 
 Aflaðu upplýsinga hjá bankanum þínum í því landi sem féð er sent frá, áður en hlutafjármillifærslan (資本金匯款) fer fram; í kóreska dæminu er það aðalbanki fjárfestisins í Kóreu.
 
-**​**
+​
 
-**2. Máttu við innborgun hlutafjár félagsins millifæra nýja taívanska dollara (新臺幣, TWD) af persónulegum reikningi þínum á Taívan á undirbúningsreikning taívanska félagsins?**
+2. Máttu við innborgun hlutafjár félagsins millifæra nýja taívanska dollara (新臺幣, TWD) af persónulegum reikningi þínum á Taívan á undirbúningsreikning taívanska félagsins?
 
 Það er mögulegt, en þú skalt leggja fram gögn sem sanna uppruna TWD-fjárins sem aflað var á Taívan.
 
@@ -47,9 +47,9 @@ Sé um arð og hagnað af fjárfestingu í atvinnustarfsemi á Taívan að ræð
 
 Sé millifærslan framkvæmd af bankareikningi erlendis þarf ekki að fylgja gögnum um uppruna fjárins.
 
-**​**
+​
 
-**3. Hvenær má undirbúningsreikninginn, að hlutafé innkomnu, umbreyta í almennan félagsreikning (正式公司帳戶)?**
+3. Hvenær má undirbúningsreikninginn, að hlutafé innkomnu, umbreyta í almennan félagsreikning (正式公司帳戶)?
 
 Að jafnaði getur ábyrgðarmaðurinn (負責人), þegar skráningargögn lögaðilans (法人登記文件) hafa borist,
 
@@ -57,17 +57,17 @@ farið í bankann og umbreytt undirbúningsreikningi félagsins í almennan reik
 
 Þar sem innri reglur hvers banka (銀行) eru þó ólíkar er ráðlegt að spyrja bankann fyrst, ef hlutaféð þarf að nota brátt.
 
-**​**
+​
 
-**4. Er unnt að taka netbanka í notkun þegar í stað, eftir að undirbúningsreikningnum hefur verið umbreytt í almennan reikning?**
+4. Er unnt að taka netbanka í notkun þegar í stað, eftir að undirbúningsreikningnum hefur verið umbreytt í almennan reikning?
 
 Það er misjafnt eftir bönkum; að jafnaði er krafist að minnsta kosti farsímanúmers.
 
 Tilteknir bankar geta sett viðbótarkröfur, til dæmis notkunartíma reikningsins að lágmarki 6 mánuði eftir stofnun.
 
-**​**
+​
 
-**5. Getur félagið ráðið erlenda ríkisborgara sem starfsmenn?**
+5. Getur félagið ráðið erlenda ríkisborgara sem starfsmenn?
 
 A. Fyrsti starfsmaður: beiðnin er lögð fram sem stjórnunarstarf í almennri fjárfestingarstarfsemi Kínverja búsettra erlendis (華僑) eða útlendinga (一般僑外投資事業主管工作). Mælikvarði „sérhæfðrar eða tæknilegrar vinnu“ undir lið B hér á eftir á ekki við, en skilyrði viðtakanda gilda, þar á meðal skilyrðið sem framkvæmdastjóri (經理人) félags þar sem hlutafjárframlag Kínverja búsettra erlendis (華僑) eða útlendinga fer yfir 1/3, ásamt árangursskilyrðum vinnuveitanda um hlutafé og veltu (matsstaðlar 38. og 39. gr.).
 

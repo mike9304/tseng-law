@@ -192,4 +192,4 @@ Končna izbira je varnejša, če jo presodijo strokovnjaki na Tajvanu in v kraju
 
 Ta članek je gradivo splošne informacije izobraževalne narave o razlikah med tajvansko hčerinsko družbo in podružnico tuje družbe; ni pravni niti davčni nasvet v konkretni zadevi in ne obljublja določenega izida. Določbe, ki se uporabljajo, ter davčna obravnava se lahko razlikujejo glede na sedež vlagatelja in matične družbe, vsebino dejavnosti, posle ter tok sredstev, pogoje sporazuma ter najnovejšo prakso pristojnega organa; pred izvedbo ustanovitve, naložbe, pogodbe, dividende ali nakazila je treba potrditi najnovejše uradne vire in lastne okoliščine.
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)

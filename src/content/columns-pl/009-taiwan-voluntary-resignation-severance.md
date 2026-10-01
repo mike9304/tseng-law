@@ -25,7 +25,7 @@ co odróżnia Tajwan od niektórych innych porządków prawnych, na przykład ko
 
 ​
 
-Istnieją jednak **przypadki wyjątkowe**.
+Istnieją jednak przypadki wyjątkowe.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Ustawa o normach pracy (勞動基準法) stanowi jednak, że
 
 jeśli pracownik chce zakończyć umowę o pracę na podstawie pkt 1 lub 6 powyżej (na przykład aby zakończyć umowę z powodu braku zgłoszenia do ubezpieczenia),
 
-musi zakończyć umowę o pracę w terminie **30 dni** od dnia, w którym poznał tę sytuację,
+musi zakończyć umowę o pracę w terminie 30 dni od dnia, w którym poznał tę sytuację,
 
-albo, w przypadku pkt 6, w terminie **30 dni** od dnia, w którym poznał skutek szkody.
+albo, w przypadku pkt 6, w terminie 30 dni od dnia, w którym poznał skutek szkody.
 
 Pracownik musi więc pilnować tego terminu.
 

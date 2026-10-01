@@ -151,4 +151,4 @@ Einnig skal greina eignir sem krefjast bráðrar varðveislu og venjulega skilam
 
 Þessi grein er fræðsluefni til almennrar skýringar á skipulagi erfða, eignaskipulags hjóna, forsjár og lögráðs ólögráða á Taívan; hún er ekki lögfræðileg ráðgjöf í tilteknu máli um dánarbú eða fjölskyldu (民法). Gildandi réttur, málsmeðferð og niðurstaða geta verið misjöfn eftir hópi erfingja, erfðaskrá, eignum og skuldum, eignaskipulagi hjóna, fyrirliggjandi dómum og erlendum þætti. Áður en frestir svo sem arfafsal eða skattaskil eru reiknaðir, eða eignum ráðstafað, skal kanna nýjustu opinberu heimildir og einstök atvik.
 
-**Lögmaður Wei Tseng (曾雋崴)**
+Lögmaður Wei Tseng (曾雋崴)

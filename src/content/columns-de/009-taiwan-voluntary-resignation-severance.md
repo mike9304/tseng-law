@@ -25,7 +25,7 @@ Das unterscheidet sich von manchen anderen Rechtsordnungen; Korea ist ein gekenn
 
 ​
 
-Es gibt jedoch **Ausnahmefälle**.
+Es gibt jedoch Ausnahmefälle.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Das Arbeitsstandardsgesetz bestimmt jedoch eine Frist.
 
 Beschäftigte Personen, die den Arbeitsvertrag nach Ziffer 1 oder Ziffer 6 oben beenden wollen (etwa wegen fehlender Versicherungsanmeldung), müssen die Frist einhalten.
 
-Sie müssen den Arbeitsvertrag innerhalb von **30 Tagen** ab dem Tag, an dem sie die Lage kennen, beenden.
+Sie müssen den Arbeitsvertrag innerhalb von 30 Tagen ab dem Tag, an dem sie die Lage kennen, beenden.
 
-Oder sie müssen ihn (bei Ziffer 6) innerhalb von **30 Tagen** ab dem Tag, an dem sie den Schadenseintritt kennen, beenden.
+Oder sie müssen ihn (bei Ziffer 6) innerhalb von 30 Tagen ab dem Tag, an dem sie den Schadenseintritt kennen, beenden.
 
 Deshalb müssen beschäftigte Personen die Frist genau im Blick behalten.
 
@@ -89,7 +89,7 @@ Streiten beide, kann die Seite, die den Vertrag zuerst aus hinreichendem Grund b
 
 Deshalb ist in taiwanesischen Arbeitsstreitigkeiten (勞資糾紛)
 
-der **Zeitpunkt** sehr wichtig.
+der Zeitpunkt sehr wichtig.
 
 Wer sich vorher vorbereitet, ist in der besseren Lage, die eigenen Rechte zu wahren; ein bestimmtes Ergebnis folgt daraus nicht.
 

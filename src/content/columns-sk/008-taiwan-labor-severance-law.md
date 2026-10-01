@@ -40,9 +40,9 @@ Ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí.
 
 Ak sa však zamestnanec dopustí protiprávneho činu,
 
-**poruší pracovný poriadok (工作規則),**
+poruší pracovný poriadok (工作規則),
 
-**alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (曠工),**
+alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (曠工),
 
 môže ho spoločnosť prepustiť bez výplaty odstupného.
 
@@ -52,7 +52,7 @@ Nasledujúca tabuľka to zhŕňa.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Druh** | **Hospodárske prepustenie (資遣員工, 經濟解僱)** | **Kárne prepustenie (解僱員工, 懲戒解僱)** | **Vlastný odchod zamestnanca (員工自請離職)** |
+| Druh | Hospodárske prepustenie (資遣員工, 經濟解僱) | Kárne prepustenie (解僱員工, 懲戒解僱) | Vlastný odchod zamestnanca (員工自請離職) |
 | Význam | Ak zamestnávateľ potrebuje upraviť počet zamestnancov kvôli situácii podniku, dôvod je v hospodárskej oblasti zamestnávateľa, nie v zodpovednosti zamestnanca. Zamestnávateľ preto musí dodržať výpovednú dobu (預告期間) a vyplatiť odstupné, aby vyvážil nevýhodu zamestnanca. | Ak sa zamestnanec dopustí protiprávneho alebo nevhodného konania, môže zamestnávateľ okamžite ukončiť pracovnú zmluvu (勞動契約) bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Ide o výkon kárnej právomoci zamestnávateľa. | Zamestnanec môže zmluvu ukončiť, musí však podľa dĺžky zamestnania dodržať výpovednú dobu, aby zamestnávateľ stihol odovzdanie agendy a hľadanie náhrady. |
 | Podmienky | Áno  (článok 11 taiwanského zákona o pracovných normách) | Áno  (článok 12 taiwanského zákona o pracovných normách) | Žiadne |
 | Predchádzajúca výpoveď | Vyžaduje sa | Nevyžaduje sa | Vyžaduje sa |
@@ -194,17 +194,17 @@ kladie nadmerné požiadavky
 
 alebo preraďuje zamestnanca na nezvyčajné miesta,
 
-**treba si dôkazy uchovať.**
+treba si dôkazy uchovať.
 
-**Vaše bežné záznamy dochádzky,**
+Vaše bežné záznamy dochádzky,
 
-**záznamy nadčasov, záznamy výsledkov,**
+záznamy nadčasov, záznamy výsledkov,
 
-**pracovný poriadok, e-mailovú korešpondenciu so spolupracovníkmi a nadriadenými**
+pracovný poriadok, e-mailovú korešpondenciu so spolupracovníkmi a nadriadenými
 
-**aj nahrávky rozhovorov s nadriadenými —**
+aj nahrávky rozhovorov s nadriadenými —
 
-**uchovávajte dôkazy, ktoré sú pre vás priaznivé.**
+uchovávajte dôkazy, ktoré sú pre vás priaznivé.
 
 ​
 

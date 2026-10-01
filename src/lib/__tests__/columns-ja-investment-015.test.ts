@@ -29,7 +29,7 @@ function structuralSignature(content: string) {
         return `image:${line.match(/\]\(([^)]+)\)/)?.[1] ?? ''}`;
       }
       if (line.startsWith('<http')) return `autolink:${line.slice(1, -1)}`;
-      if (line.startsWith('**Q.')) return 'question';
+      if (line.startsWith('Q.')) return 'question';
       if (line === '---') return 'thematic-break';
       if (line.startsWith('> - ')) return 'quoted-list-item';
       if (line.startsWith('> ')) return 'quote';
@@ -134,11 +134,11 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
 
   it('keeps the source question, recommendation, ten-item example, and exception', () => {
     const requiredPhrases = [
-      '**Q. すべての業種について、「営業場所事前照会」システムで営業の可否を照会する必要がありますか？**',
+      'Q. すべての業種について、「営業場所事前照会」システムで営業の可否を照会する必要がありますか？',
       'すべての業種について、必ず「営業場所事前照会」システムで営業の可否を確認することをお勧めします。',
       '一度に10項目ほど登録したい場合も少なくありません。',
       '実際には会社登記の際にすべての業種を照会する必要はありません。',
-      '2023年1月1日から、会社・商業（分公司・分支機構を含む）の設立、所在地移転、営業項目追加の登記を申請する際は、業種を問わず営業場所事前照会の結果を**必ず**登記申請に添付しなければなりません。',
+      '2023年1月1日から、会社・商業（分公司・分支機構を含む）の設立、所在地移転、営業項目追加の登記を申請する際は、業種を問わず営業場所事前照会の結果を必ず登記申請に添付しなければなりません。',
       '下記の「自発的照会対象業種」（主動查詢之營業項目）の一覧は、登記申請書にその業種が記載されているのに添付した照会結果に含まれていない場合に、商業処が登記審査の中で職権により追加照会を行う（隨案主動查詢）対象であり、この一覧にない業種であっても照会が免除されるわけではありません。',
       '後に管轄機関から罰金を科される可能性もあります。',
     ];

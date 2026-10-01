@@ -51,7 +51,7 @@ Presti quindi attenzione a questo punto.
 
 ​
 
-**Q. Tutti i settori devono verificare, con il sistema di «consultazione preventiva del locale», se l’esercizio è possibile?**
+Q. Tutti i settori devono verificare, con il sistema di «consultazione preventiva del locale», se l’esercizio è possibile?
 
 È raccomandato a tutti i settori confermare, con il sistema di «consultazione preventiva del locale» (營業場所預先查詢), se l’esercizio è possibile.
 
@@ -61,7 +61,7 @@ Nella pratica, peraltro, non è necessario verificare tutte le voci di attività
 
 Si applicano le [«istruzioni operative del servizio di informazione sui locali della città di Taipei»](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) e la guida in vigore della città di Taipei.
 
-Dal 1 gennaio 2023, nella domanda di iscrizione di costituzione, di trasferimento di sede o di aggiunta di voci di attività di una società o di un’impresa (compresa la succursale (分公司) e la sede secondaria (分支機構)), il risultato della consultazione preventiva del locale **deve** essere allegato alla domanda di iscrizione, indipendentemente dal settore.
+Dal 1 gennaio 2023, nella domanda di iscrizione di costituzione, di trasferimento di sede o di aggiunta di voci di attività di una società o di un’impresa (compresa la succursale (分公司) e la sede secondaria (分支機構)), il risultato della consultazione preventiva del locale deve essere allegato alla domanda di iscrizione, indipendentemente dal settore.
 
 L’elenco sotto delle «voci di attività oggetto di una verifica d’ufficio» (主動查詢之營業項目) designa le voci di attività che l’ufficio del commercio verifica d’ufficio in più durante l’esame dell’iscrizione (隨案主動查詢) quando la voce figura nella domanda ma manca nel risultato allegato; il fatto che una voce non figuri in questo elenco non significa che la verifica sia dispensata.
 

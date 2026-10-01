@@ -59,7 +59,7 @@ Tālāk ir šīs lietas preses ziņojumu, interneta ierakstu un juridisko koment
 
 ![Vai vīrietim, korejiešu studentam, starpskriemeļu disks plīsa, kad personīgajā treniņā viņš veica 90 kg stieņa pacelšanu no zemes?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Vai vīrietim, korejiešu studentam, starpskriemeļu disks plīsa, kad personīgajā treniņā viņš veica 90 kg stieņa pacelšanu no zemes?**
+Vai vīrietim, korejiešu studentam, starpskriemeļu disks plīsa, kad personīgajā treniņā viņš veica 90 kg stieņa pacelšanu no zemes?
 
 Šīs lietas praktiskā nozīme ir tā, ka tā rāda: atbildība netiek noteikta uzreiz tikai ar faktu, ka trauma notika sporta zālē. Drošības pienākuma (安全義務) saturs, kas gulstas uz pakalpojuma sniedzēju, konkrētais dotais norādījums un rūpības pienākuma (注意義務) pārkāpums, cēloņsakarība starp traumu un rīcību, kā arī zaudējumu apjoms tiek vērtēti pēc katras lietas dokumentiem. Kriminālprocesa un civilprocesa priekšnoteikumi un termiņi arī atšķiras, tāpēc tūlīt pēc negadījuma materiāli jāsakārto atsevišķi.
 
@@ -93,13 +93,13 @@ Ja negadījuma apstākļi var atbilst noziedzīga nodarījuma pazīmēm, var āt
 
 Zaudējumu posteņi, kuru izvirzīšanu var izvērtēt, ir šādi. Faktiskā atzīšana un apmērs ir atkarīgi no katra izdevuma nepieciešamības, cēloņsakarības ar negadījumu, apliecinājumiem, atbildības attiecības un tiesas vērtējuma.
 
-1. **Medicīniskie izdevumi**: Izdevumi, kas faktiski izlietoti konsultācijai, izmeklēšanai, ārstēšanai, zālēm un rehabilitācijai, tiek pierādīti ar kvītīm un medicīnisko dokumentāciju.
-2. **Aprūpes vai kopšanas izmaksas**: Vai, ņemot vērā traumas pakāpi un ārstēšanas gaitu, aprūpe bija nepieciešama un vai laiks un izmaksas ir samērīgas, vērtē pēc medicīniskajiem un izdevumu materiāliem.
-3. **Transporta izdevumi**: Izdevumi, kas nepieciešami, lai ārstēšanās dēļ brauktu uz ārstniecības iestādi, tiek pierādīti ar pārvietošanās uzskaiti, kvītīm un līdzīgiem dokumentiem.
-4. **Zaudējumi no darbspējas zuduma (勞動能力減損)**: Ja atzītas sekas un pastāvīgs darbspējas samazinājums, var vērtēt kopā pēc medicīniskajiem un profesionālajiem materiāliem, invaliditātes pakāpes, nodarbošanās un ienākumiem un atlikušā darbspējīgā laika. Pats invaliditātes procents atlīdzību nenosaka, un zudums netiek automātiski rēķināts līdz aiziešanai pensijā.
-5. **Zaudētie ienākumi atveseļošanās laikā (收入損失)**: Laiks, kurā ārstēšanās vai atveseļošanās dēļ faktiski nebija iespējams strādāt, un no tā izrietošais ienākumu samazinājums jāpierāda ar algas, nodokļu un darba uzskaites materiāliem.
-6. **Nemantiskie zaudējumi (非財產上損害)**: Summu par garīgām ciešanām nosaka tiesa pēc katras lietas elementiem, piemēram, traumas pakāpes, ārstēšanās laika, seku un puses konkrētajiem apstākļiem.
-7. **Soda rakstura zaudējumu atlīdzība (懲罰性賠償金)**: Pastāv noteikums, ka procesā, uz kuru attiecas Patērētāju aizsardzības likums, ja zaudējumi radušies uzņēmuma tīša nodoma dēļ, var prasīt līdz 5-kārtīgai faktisko zaudējumu summai; rupjas neuzmanības gadījumā — līdz 3 reizēm; un neuzmanības gadījumā — ne vairāk kā 1-kārtīgā faktisko zaudējumu apmērā. Vai [Taivānas Patērētāju aizsardzības likuma 51. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) uz lietu attiecas un vai soda rakstura atlīdzība faktiski tiek piespriesta un kādā apmērā, ir atkarīgs no tiesas vērtējuma par konkrētajiem priekšnoteikumiem un pierādījumiem.
+1. Medicīniskie izdevumi: Izdevumi, kas faktiski izlietoti konsultācijai, izmeklēšanai, ārstēšanai, zālēm un rehabilitācijai, tiek pierādīti ar kvītīm un medicīnisko dokumentāciju.
+2. Aprūpes vai kopšanas izmaksas: Vai, ņemot vērā traumas pakāpi un ārstēšanas gaitu, aprūpe bija nepieciešama un vai laiks un izmaksas ir samērīgas, vērtē pēc medicīniskajiem un izdevumu materiāliem.
+3. Transporta izdevumi: Izdevumi, kas nepieciešami, lai ārstēšanās dēļ brauktu uz ārstniecības iestādi, tiek pierādīti ar pārvietošanās uzskaiti, kvītīm un līdzīgiem dokumentiem.
+4. Zaudējumi no darbspējas zuduma (勞動能力減損): Ja atzītas sekas un pastāvīgs darbspējas samazinājums, var vērtēt kopā pēc medicīniskajiem un profesionālajiem materiāliem, invaliditātes pakāpes, nodarbošanās un ienākumiem un atlikušā darbspējīgā laika. Pats invaliditātes procents atlīdzību nenosaka, un zudums netiek automātiski rēķināts līdz aiziešanai pensijā.
+5. Zaudētie ienākumi atveseļošanās laikā (收入損失): Laiks, kurā ārstēšanās vai atveseļošanās dēļ faktiski nebija iespējams strādāt, un no tā izrietošais ienākumu samazinājums jāpierāda ar algas, nodokļu un darba uzskaites materiāliem.
+6. Nemantiskie zaudējumi (非財產上損害): Summu par garīgām ciešanām nosaka tiesa pēc katras lietas elementiem, piemēram, traumas pakāpes, ārstēšanās laika, seku un puses konkrētajiem apstākļiem.
+7. Soda rakstura zaudējumu atlīdzība (懲罰性賠償金): Pastāv noteikums, ka procesā, uz kuru attiecas Patērētāju aizsardzības likums, ja zaudējumi radušies uzņēmuma tīša nodoma dēļ, var prasīt līdz 5-kārtīgai faktisko zaudējumu summai; rupjas neuzmanības gadījumā — līdz 3 reizēm; un neuzmanības gadījumā — ne vairāk kā 1-kārtīgā faktisko zaudējumu apmērā. Vai [Taivānas Patērētāju aizsardzības likuma 51. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) uz lietu attiecas un vai soda rakstura atlīdzība faktiski tiek piespriesta un kādā apmērā, ir atkarīgs no tiesas vērtējuma par konkrētajiem priekšnoteikumiem un pierādījumiem.
 
 ## 5. Vai atlīdzība joprojām var būt strīdus priekšmets arī tad, ja sporta zālei ir civiltiesiskās atbildības apdrošināšana (責任保險)?
 

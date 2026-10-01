@@ -17,13 +17,13 @@ Az utóbbi időben sokan sikerrel alapítottak társaságot (公司) Tajvanon, �
 
 Az alapításkor gyakran felmerülő kérdéseket az alábbiakban összegyűjtöttem.
 
-Ha elolvasta a [**társaságalapítás alapjait**](/hu/columns/taiwan-company-establishment-basics), ezt a részletesebb elmélyítő részt is érdemes áttekintenie.
+Ha elolvasta a [társaságalapítás alapjait](/hu/columns/taiwan-company-establishment-basics), ezt a részletesebb elmélyítő részt is érdemes áttekintenie.
 
 Az alábbi kérdések és válaszok azoknak kívánnak segíteni, akik tajvani társaságalapítást fontolgatnak.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Társaságot szeretnék alapítani, de még nem találtam bejegyzési címet. Az alapítás így is lehetséges?**
+1. Társaságot szeretnék alapítani, de még nem találtam bejegyzési címet. Az alapítás így is lehetséges?
 
 Amikor külföldi személy Tajvanon társaságot alapít, beruházási tervet (投資計畫書) kell benyújtania a Gazdasági Minisztérium Beruházásvizsgáló Főosztályához (經濟部投資審議司) vizsgálat céljából.
 
@@ -43,7 +43,7 @@ Már az alapozó részben egy olvasó azt jelezte, hogy a számlanyitás a legne
 
 Mivel Tajvanon sok a pénzmosási (洗錢) eset, a bankszámlanyitás egyre szigorúbbá válik.
 
-**Tanács:**
+Tanács:
 
 Mivel a beruházási terv vizsgálata is időt vesz igénybe,
 
@@ -57,13 +57,13 @@ a banknál az előkészítő számla megnyitására és a tőke átutalására.
 
 ​
 
-**2. Tajvani tartózkodási igazolvány nélkül is nyitható társasági számla a banknál?**
+2. Tajvani tartózkodási igazolvány nélkül is nyitható társasági számla a banknál?
 
 Lehetséges.
 
 A bank általában kettős személyazonosítást kér,
 
-és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól az „**egységes azonosítószám alapadatlapját**” (統一證號基本資料表) lehet kérni.
+és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól az „egységes azonosítószám alapadatlapját” (統一證號基本資料表) lehet kérni.
 
 A kiadás még aznap lehetséges,
 
@@ -71,7 +71,7 @@ de a bevándorlási hivatal (移民署) nagyon zsúfolt; ezért korán kell érk
 
 ​
 
-**3. Azt hallottam, hogy a beruházási terv vizsgálatakor a végzettséget és a szakmai tapasztalatot fel kell tüntetni, és aggaszt, hogy a végzettségem és a tapasztalatom nem illik az alapítani kívánt társaság ágazatához.**
+3. Azt hallottam, hogy a beruházási terv vizsgálatakor a végzettséget és a szakmai tapasztalatot fel kell tüntetni, és aggaszt, hogy a végzettségem és a tapasztalatom nem illik az alapítani kívánt társaság ágazatához.
 
 A Gazdasági Minisztérium vizsgálóbizottsága ugyan vizsgálja a befektető hátterét,
 
@@ -85,13 +85,13 @@ Ezen a ponton alaposan egyeztetni kell tajvani ügyvéddel; a tanácsadás nem m
 
 ​
 
-**4. Mire kell ügyelni, amikor a társaság bejegyzési címét (például vendéglátóhelyiséget) bérlik?**
+4. Mire kell ügyelni, amikor a társaság bejegyzési címét (például vendéglátóhelyiséget) bérlik?
 
-A társaságalapítás körülbelül **3 hónapot**, a munkavállalási engedély (工作許可) és a tartózkodási igazolvány megszerzése további körülbelül **1 hónapot** vesz igénybe,
+A társaságalapítás körülbelül 3 hónapot, a munkavállalási engedély (工作許可) és a tartózkodási igazolvány megszerzése további körülbelül 1 hónapot vesz igénybe,
 
 ezért a szerződés kezdőnapját a lehető legkésőbbre kell tenni.
 
-Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakran „**kialakítási időszakot**” (裝潢期間) ad a bérlőnek.
+Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakran „kialakítási időszakot” (裝潢期間) ad a bérlőnek.
 
 Ez bérletidíj-mentes időszak; erről lehet tárgyalni.
 
@@ -107,7 +107,7 @@ szükség esetén javasolható a bérleti szerződés közjegyzői hitelesítés
 
 ​
 
-**5. A társaságalapításkor bérelhető-e irodahelyiség irodaházban?**
+5. A társaságalapításkor bérelhető-e irodahelyiség irodaházban?
 
 Ez a társaság tevékenységi ágaitól (營業項目) függ.
 

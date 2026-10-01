@@ -45,14 +45,14 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
 
   it('keeps exactly five source-ordered questions in the original bold structure', () => {
     const bodyQuestions = Array.from(
-      raw.matchAll(/^\*\*(\d+\.[^\n]+)\*\*$/gm),
+      raw.matchAll(/^(\d+\.[^\n]+)$/gm),
       (match) => match[1],
     );
 
     expect(bodyQuestions).toEqual(questions);
     expect(post?.content.match(/^## /gm)).toBeNull();
     expect(raw.match(/^# /gm)).toHaveLength(1);
-    expect(raw).toContain('**アドバイス**：');
+    expect(raw).toContain('アドバイス：');
   });
 
   it('restores the complete address and investment-review answer without added law', () => {
@@ -80,7 +80,7 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
     const requiredPhrases = [
       '台湾の居留証がなくても、銀行で会社口座を開設できますか？',
       '一般に、銀行では二つの身分証明書を求められますが、',
-      '台湾の移民署で「**基本資料表**（統一證號基本資料表）」を申請',
+      '台湾の移民署で「基本資料表（統一證號基本資料表）」を申請',
       '当日中に発行してもらえますが、',
       '移民署は非常に混雑するため、早めに行って整理券をお取りください。',
       '経済部の審議委員会では投資家の経歴を審査しますが、',
@@ -98,9 +98,9 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
 
   it('restores every source condition for lease timing and landlord negotiations', () => {
     const requiredPhrases = [
-      '会社設立には約**3か月**、就業許可証と居留証の取得にも約**1か月**',
+      '会社設立には約3か月、就業許可証と居留証の取得にも約1か月',
       '契約開始日はできるだけ遅く設定してください。',
-      '家主が借主に「**内装期間**」を設けることがよくあります。',
+      '家主が借主に「内装期間」を設けることがよくあります。',
       'これは賃料が免除される期間ですので、交渉してみてください。',
       '台湾の保証金は比較的少ない（通常2か月分）',
       '家主は外国人に貸すことをためらう傾向があります。',

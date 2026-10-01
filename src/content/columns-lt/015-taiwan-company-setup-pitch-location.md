@@ -51,7 +51,7 @@ Todėl į tai atkreipkite dėmesį.
 
 ​
 
-**Ar kiekvienai veiklos sričiai per sistemą „išankstinė veiklos vietos patikra“ reikia tikrinti, ar veikla galima?**
+Ar kiekvienai veiklos sričiai per sistemą „išankstinė veiklos vietos patikra“ reikia tikrinti, ar veikla galima?
 
 Visoms veiklos sritims rekomenduojama sistemoje „išankstinė veiklos vietos patikra“ (營業場所預先查詢) patikrinti, ar veikla galima.
 
@@ -61,7 +61,7 @@ Todėl praktikoje registruojant bendrovę nebūtina tikrinti visų veiklos srič
 
 Pagal „[Taipėjaus miesto veiklos vietų pagalbinės užklausos paslaugos nurodymus](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) ir galiojantį Taipėjaus miesto nurodymą,
 
-nuo 2023 m. sausio 1 d. teikiant prašymą įregistruoti bendrovės ar komercinės veiklos steigimą, buveinės perkėlimą ar registruotų veiklos sričių papildymą (įskaitant bendrovės filialą (分公司) ir padalinį (分支機構)) išankstinės veiklos vietos patikros rezultatą **būtina** pridėti prie registracijos prašymo, nepriklausomai nuo veiklos srities.
+nuo 2023 m. sausio 1 d. teikiant prašymą įregistruoti bendrovės ar komercinės veiklos steigimą, buveinės perkėlimą ar registruotų veiklos sričių papildymą (įskaitant bendrovės filialą (分公司) ir padalinį (分支機構)) išankstinės veiklos vietos patikros rezultatą būtina pridėti prie registracijos prašymo, nepriklausomai nuo veiklos srities.
 
 Toliau pateiktas sąrašas „veiklos sritys, kurioms taikoma tarnybinė patikra“ (主動查詢之營業項目) nurodo sritis, kurias Prekybos tarnyba registracijos peržiūros metu papildomai tikrina tarnybine tvarka (隨案主動查詢), kai sritis yra prašyme, bet pridėtame rezultate tos srities nėra; tai, kad srities šiame sąraše nėra, nereiškia atleidimo nuo patikros.
 

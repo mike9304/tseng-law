@@ -40,9 +40,9 @@ Se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar ind
 
 Se a pessoa empregada cometer, contudo, um ato ilícito, o despedimento sem indemnização pode caber.
 
-**Violar o regulamento interno (工作規則) tem o mesmo efeito.**
+Violar o regulamento interno (工作規則) tem o mesmo efeito.
 
-**Faltar ao trabalho sem motivo 3 dias seguidos (曠工) tem o mesmo efeito.**
+Faltar ao trabalho sem motivo 3 dias seguidos (曠工) tem o mesmo efeito.
 
 A sociedade pode despedir sem pagar indemnização por despedimento.
 
@@ -52,7 +52,7 @@ Resumo-lhe isso num quadro simples.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Tipo** | **Despedimento económico**  **資遣** **員工(經濟解僱)** | **Despedimento disciplinar**  **解僱** **員工(懲戒解僱)** | **Demissão própria da pessoa empregada**  **員工自請離職** |
+| Tipo | Despedimento económico  資遣 員工(經濟解僱) | Despedimento disciplinar  解僱 員工(懲戒解僱) | Demissão própria da pessoa empregada  員工自請離職 |
 | Significado | Se existir, no empregador, uma necessidade de ajustamento do pessoal em razão da situação da empresa, o motivo situa-se no domínio empresarial do empregador e não na responsabilidade da pessoa empregada. É por isso que o empregador deve respeitar o prazo de pré-aviso (預告期間) e pagar uma indemnização por despedimento, a fim de compensar de forma equilibrada os inconvenientes da pessoa empregada. | Se a pessoa empregada cometer um ato ilícito ou inapropriado, o empregador pode pôr termo de imediato ao contrato de trabalho (勞動契約) sem pré-aviso e não tem de pagar indemnização por despedimento. É uma das prerrogativas disciplinares do empregador. | A pessoa empregada é livre de pôr termo ao contrato a qualquer momento, mas deve, segundo a duração de emprego, respeitar o prazo de pré-aviso, a fim de que o empregador possa proceder à passagem e à procura de um substituto. |
 | Condições | Sim (artigo 11 da lei taiwanesa sobre as normas do trabalho) | Sim (artigo 12 da lei taiwanesa sobre as normas do trabalho) | Nenhuma |
 | Pré-aviso prévio | Exigido | Não exigido | Exigido |
@@ -194,17 +194,17 @@ Se pôr exigências excessivas, isso conta.
 
 Se transferir os trabalhadores para postos estranhos, isso conta.
 
-**Deve conservar provas.**
+Deve conservar provas.
 
-**Conserve os registos de presença habituais.**
+Conserve os registos de presença habituais.
 
-**Conserve os registos de horas extraordinárias e de desempenho.**
+Conserve os registos de horas extraordinárias e de desempenho.
 
-**Conserve o regulamento interno e a correspondência por correio eletrónico com os colegas e os superiores.**
+Conserve o regulamento interno e a correspondência por correio eletrónico com os colegas e os superiores.
 
-**Grave as conversas com o superior.**
+Grave as conversas com o superior.
 
-**Conserve qualquer prova que lhe seja favorável.**
+Conserve qualquer prova que lhe seja favorável.
 
 ​
 

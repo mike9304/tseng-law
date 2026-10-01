@@ -151,4 +151,4 @@ Oficialiuose teisės aktų puslapiuose reikia patikrinti straipsnio pakeitimo ir
 
 Šis straipsnis yra švietimo paskirties medžiaga, skirta bendrai paaiškinti paveldėjimo, sutuoktinių turtinio režimo, tėvų valdžios ir nepilnamečių globos institutus Taivane; tai nėra teisinė konsultacija konkrečioje palikimo ar šeimos byloje. Taikytina teisė, eiga ir rezultatas gali skirtis pagal įpėdinių ratą, testamentą, turtą ir skolas, sutuoktinių turtinį režimą, esamus teismo sprendimus ir tarptautinius elementus. Prieš skaičiuojant terminus, tokius kaip atsisakymas ar mokestinė deklaracija, arba prieš disponuojant turtu patikrinkite naujausius oficialius šaltinius ir atskiras aplinkybes.
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

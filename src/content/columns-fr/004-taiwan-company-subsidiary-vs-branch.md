@@ -192,4 +192,4 @@ Le choix final est plus sûr s’il est examiné par des spécialistes à Taïwa
 
 Le présent article est un matériel d’information générale à des fins éducatives sur les différences entre la filiale taïwanaise et la succursale d’une société étrangère ; il ne constitue pas un conseil juridique ni fiscal pour un cas concret et n’assure pas un résultat déterminé. Les règles applicables et le traitement fiscal peuvent varier selon le siège de l’investisseur et du siège, le contenu de l’activité, les opérations et le flux des fonds, les conditions de l’accord et la pratique la plus récente de l’autorité compétente ; avant d’exécuter une constitution, un investissement, un contrat, un dividende ou un virement, les sources officielles les plus récentes et les circonstances propres sont à confirmer.
 
-**Avocate Wei Tseng (曾雋崴)**
+Avocate Wei Tseng (曾雋崴)

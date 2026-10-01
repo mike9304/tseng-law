@@ -192,4 +192,4 @@ Konačni je izbor sigurniji ako ga ocjene stručnjaci na Tajvanu i u mjestu sjed
 
 Ovaj je članak opće informativne i obrazovne naravi o razlikama između tajvanskog kćerinskog društva i podružnice stranog društva; nije pravno ni porezno savjetovanje u konkretnom predmetu i ne obećava određeni ishod. Mjerodavne odredbe i porezni tretman mogu se razlikovati prema sjedištu ulagača i sjedištu, sadržaju djelatnosti, transakcijama i toku sredstava, pretpostavkama sporazuma i najnovijoj praksi nadležnog tijela; prije izvršenja osnivanja, ulaganja, ugovora, dividende ili prijenosa treba potvrditi najnovije službene izvore i vlastite okolnosti.
 
-**Odvjetnica Wei Tseng (曾雋崴)**
+Odvjetnica Wei Tseng (曾雋崴)

@@ -35,7 +35,7 @@ const internalTargets = [
 
 function numberedSections(content: string) {
   const matches = Array.from(
-    content.matchAll(/^\*\*(\d+\..+)\*\*$/gm),
+    content.matchAll(/^(\d+\..+)$/gm),
   );
 
   return matches.map((match, index) =>
@@ -103,7 +103,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
     expect(parsed.content).not.toMatch(/^## /m);
     expect(
       Array.from(
-        parsed.content.matchAll(/^\*\*(\d+\..+)\*\*$/gm),
+        parsed.content.matchAll(/^(\d+\..+)$/gm),
         (match) => match[1],
       ),
     ).toEqual(questions);
@@ -182,10 +182,10 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
 
   it('keeps all source numbers and lease recommendations', () => {
     const required = [
-      'about **three months**',
-      'about **one additional month**',
+      'about three months',
+      'about one additional month',
       'set the lease start date as late as possible',
-      '**fit-out period**',
+      'fit-out period',
       'This is a rent-free period',
       "usually two months' rent",
       'reluctant to lease to foreign nationals',
@@ -287,7 +287,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
         item.locale === 'en',
     );
 
-    expect(visibleWordCount).toBe(794);
+    expect(visibleWordCount).toBe(789);
     expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

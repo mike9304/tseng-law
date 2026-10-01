@@ -85,11 +85,11 @@ Tööloa saamine on suhteliselt lihtsam Taiwani tütarettevõtte või välismais
 
 Järgmised stsenaariumid on hüpoteetilised kaalumise abiks; need ei kinnita, et kindel viis oleks seaduslik või eelistatav.
 
-**Välismaised ettevõtted, kes sihivad varajast eksporti.** Kui Taiwanis ei ole veel töötajaid ega varusid ja soovitakse uurida nõudlust sõltumatu turustaja kaudu, võib esmalt vaadata tarnet, turustamissuhet ja tegevusala Taiwanis. Pelk turustamisleping ei lahenda kõiki reguleerimisküsimusi Taiwanis.
+Välismaised ettevõtted, kes sihivad varajast eksporti. Kui Taiwanis ei ole veel töötajaid ega varusid ja soovitakse uurida nõudlust sõltumatu turustaja kaudu, võib esmalt vaadata tarnet, turustamissuhet ja tegevusala Taiwanis. Pelk turustamisleping ei lahenda kõiki reguleerimisküsimusi Taiwanis.
 
-**Välismaised ettevõtted, kes laiendavad müüki ja tehnilist tuge Taiwanis.** Kui Taiwanis soovitakse palgata ning jätkuvalt juhtida varusid, sissenõudmist ja kliendituge, tuleks tütarettevõtet ja filiaali võrrelda konkreetselt ning kontrollida ka lepingulist vastutust, peakontori tegevusviisi, makse ja personali.
+Välismaised ettevõtted, kes laiendavad müüki ja tehnilist tuge Taiwanis. Kui Taiwanis soovitakse palgata ning jätkuvalt juhtida varusid, sissenõudmist ja kliendituge, tuleks tütarettevõtet ja filiaali võrrelda konkreetselt ning kontrollida ka lepingulist vastutust, peakontori tegevusviisi, makse ja personali.
 
-**Välismaised ettevõtted turu-uuringu etapis.** Kui enne müügiorganisatsiooni soovitakse ainult teabe- ja sidetoiminguid, võib hinnata esindusbürood (代表人辦事處). Kui tegelik kava hõlmab varude müüki või tööd kohapeal, tuleb eraldi kindlaks teha, kas need toimingud on lubatud.
+Välismaised ettevõtted turu-uuringu etapis. Kui enne müügiorganisatsiooni soovitakse ainult teabe- ja sidetoiminguid, võib hinnata esindusbürood (代表人辦事處). Kui tegelik kava hõlmab varude müüki või tööd kohapeal, tuleb eraldi kindlaks teha, kas need toimingud on lubatud.
 
 ## 8. Esimeseks vestluseks piisab tegevuse ülevaatest; kõiki konfidentsiaalseid materjale ei ole vaja kohe üle anda
 

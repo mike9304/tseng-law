@@ -25,9 +25,9 @@ Soalan dan jawapan berikut bertujuan membantu orang yang mempertimbangkan penubu
 
 ​
 
-**1. Apabila memindahkan modal (資本額) dari luar negara ke akaun persediaan syarikat Taiwan (公司籌備處帳戶), apa yang perlu diberi perhatian? (contoh di bawah menggunakan rejim dan amalan bank Korea; peraturan negara asal pelabur lain mesti disemak secara berasingan)**
+1. Apabila memindahkan modal (資本額) dari luar negara ke akaun persediaan syarikat Taiwan (公司籌備處帳戶), apa yang perlu diberi perhatian? (contoh di bawah menggunakan rejim dan amalan bank Korea; peraturan negara asal pelabur lain mesti disemak secara berasingan)
 
-Pada umumnya, bank di Korea menuntut bahawa pelabur datang **secara peribadi** ke bank di Korea dan memindahkan dana dari akaun atas namanya sendiri.
+Pada umumnya, bank di Korea menuntut bahawa pelabur datang secara peribadi ke bank di Korea dan memindahkan dana dari akaun atas namanya sendiri.
 
 Pindahan melalui bank dalam talian atau melalui saudara di Korea tidak mungkin.
 
@@ -35,9 +35,9 @@ Selain itu, selaras dengan peraturan Korea mengenai kawalan pertukaran, orang be
 
 Sebelum memindahkan modal (資本金匯款), tanyakan kepada bank utama anda di negara asal anda.
 
-**​**
+​
 
-**2. Apabila membayar modal syarikat, bolehkah dolar Taiwan (新臺幣, TWD) dipindahkan dari akaun peribadi di Taiwan ke akaun persediaan syarikat Taiwan?**
+2. Apabila membayar modal syarikat, bolehkah dolar Taiwan (新臺幣, TWD) dipindahkan dari akaun peribadi di Taiwan ke akaun persediaan syarikat Taiwan?
 
 Ini mungkin, tetapi anda mesti mengemukakan dokumen yang membuktikan punca dana dalam dolar Taiwan yang diperoleh di Taiwan.
 
@@ -47,9 +47,9 @@ Jika dividen dan keuntungan daripada pelaburan dalam perniagaan di Taiwan, perlu
 
 Jika pindahan dilakukan dari akaun bank di Korea, tidak perlu menyertakan dokumen mengenai punca dana. Amalan bank negara lain mesti disemak secara berasingan.
 
-**​**
+​
 
-**3. Selepas modal tiba dalam akaun persediaan, bilakah ia boleh ditukar kepada akaun syarikat biasa (正式公司帳戶)?**
+3. Selepas modal tiba dalam akaun persediaan, bilakah ia boleh ditukar kepada akaun syarikat biasa (正式公司帳戶)?
 
 Pada umumnya, dokumen pendaftaran badan undang-undang (法人登記文件) mesti diterima dahulu.
 
@@ -57,17 +57,17 @@ Penanggungjawab (負責人) kemudian boleh pergi ke bank dan menukar akaun perse
 
 Namun, kerana peraturan dalaman setiap bank (銀行) berbeza, jika modal perlu digunakan dengan segera, patut merujuk dahulu kepada bank.
 
-**​**
+​
 
-**4. Selepas penukaran akaun persediaan kepada akaun biasa, bolehkah bank dalam talian digunakan serta-merta?**
+4. Selepas penukaran akaun persediaan kepada akaun biasa, bolehkah bank dalam talian digunakan serta-merta?
 
 Ini berbeza menurut bank; pada umumnya, sekurang-kurangnya nombor telefon mudah alih diperlukan.
 
 Sesetengah bank boleh mengenakan keperluan tambahan, contohnya tempoh penggunaan akaun sekurang-kurangnya 6 bulan selepas penubuhan.
 
-**​**
+​
 
-**5. Bolehkah syarikat menggaji pekerja warganegara asing?**
+5. Bolehkah syarikat menggaji pekerja warganegara asing?
 
 A. Pekerja pertama: permohonan dikemukakan sebagai kerja pengurusan dalam perniagaan pelaburan biasa orang Cina perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria “kerja khusus atau teknikal” (專門性或技術性工作) pada titik B di bawah tidak terpakai, tetapi terpakai syarat penerima, khususnya pengurus (經理人) syarikat yang modal orang Cina perantauan atau orang asing melebihi 1/3, serta syarat prestasi majikan mengenai modal dan perolehan (perkara 38 dan 39 Standard Semakan (審查標準)).
 

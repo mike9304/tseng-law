@@ -28,7 +28,7 @@ const insolvencyParagraph =
   '해산 후의 청산은 회사 자산이 부채보다 많은 경우에만 가능한 절차가 아닙니다. 「회사법」 제89조에 따르면 회사 재산으로 채무를 변제하기에 부족한 경우 청산인은 즉시 파산선고를 신청해야 합니다. 채무초과, 지급불능, 담보, 조세채무 및 채권자 수를 확인하여 통상 청산을 계속할 수 있는지 개별적으로 판단해야 합니다.';
 const disclaimer =
   '이 글은 대만 회사의 종료와 회사 재산 처리에 관한 일반적인 법률정보 및 교육 자료이며, 특정 사안에 대한 법률의견이 아닙니다. 적절한 해산·청산·감자·휴업 절차와 세무신고는 회사 형태, 정관, 재무상태, 채권자, 외국인투자 및 개별 거래에 따라 달라질 수 있으므로 실제 결의나 자금 이동 전에 해당 사안을 별도로 확인해야 합니다.';
-const author = '**증준외 변호사(Wei Tseng)**';
+const author = '증준외 변호사(Wei Tseng)';
 
 const faq = [
   {
@@ -253,7 +253,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
         `${disclaimer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n${author.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`,
       ),
     );
-    expect(raw.trimEnd()).toMatch(/\*\*증준외 변호사\(Wei Tseng\)\*\*$/);
+    expect(raw.trimEnd()).toMatch(/증준외 변호사\(Wei Tseng\)$/);
   });
 
   it('derives read_time from the exact visible public eojeol count at 180 per minute', () => {

@@ -196,4 +196,4 @@ Các tài liệu gốc dưới đây, tính đến ngày 25 tháng 7 năm 2026, 
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích một cách khái quát chế độ ly hôn, gia đình có yếu tố nước ngoài, tài sản vợ chồng và con chưa thành niên tại Đài Loan, không phải ý kiến tư vấn pháp lý cho một vụ việc cụ thể. Thủ tục và kết quả có thể khác nhau tùy theo thẩm quyền tài phán, luật áp dụng, việc công nhận bản án nước ngoài, tình trạng hôn nhân và hộ khẩu, chế độ tài sản, các thỏa thuận hay bản án đã có liên quan đến con, tình tiết cùng chứng cứ của vụ việc và các quy định chính thức mới nhất. Đối với thời hạn đăng ký, khiếu nại, thực hiện quyền yêu cầu và thi hành án, xin quý vị xác nhận riêng cho từng quyền và từng thủ tục theo đúng mốc khởi tính của chúng trước khi hành động.
 
-**Luật sư Wei Tseng (曾雋崴)**
+Luật sư Wei Tseng (曾雋崴)

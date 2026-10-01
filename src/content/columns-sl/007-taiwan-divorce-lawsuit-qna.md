@@ -196,4 +196,4 @@ Naslednji primarni viri (1. raven) so izhodišče za preverjanje pravne zgradbe 
 
 Ta članek je izobraževalno gradivo, namenjeno splošni razlagi institutov ločitve, mednarodnih družinskih zadev, zakonskega premoženja in mladoletnih otrok na Tajvanu, ne pa pravni nasvet v konkretni zadevi. Postopek ter izid se lahko razlikujeta glede na pristojnost, pravo, ki se uporablja, priznanje tujih odločb, stan zakonske zveze ter evidence gospodinjstev, premoženjski režim, obstoječi sporazum ali odločitev v zvezi z otrokom, dejstva in dokaze ter najnovejše uradne predpise. Roke vpisa, pravnih sredstev, zahtevka in izvršbe je treba pred ravnanjem preveriti enega za drugim po natančnem izhodišču teka vsake pravice in vsakega postopka.
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)

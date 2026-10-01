@@ -25,7 +25,7 @@ et cela diffère de certains autres droits, par exemple celui de la Corée.
 
 ​
 
-Il existe toutefois des **cas exceptionnels**.
+Il existe toutefois des cas exceptionnels.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Toutefois, la loi sur les normes du travail (勞動基準法) dispose que,
 
 si le salarié souhaite mettre fin au contrat de travail au titre des points 1 ou 6 ci-dessus (par exemple pour terminer le contrat faute d’affiliation à l’assurance),
 
-il doit mettre fin au contrat de travail dans un délai de **30 jours** à compter du jour où il a connu cette situation,
+il doit mettre fin au contrat de travail dans un délai de 30 jours à compter du jour où il a connu cette situation,
 
-ou, pour le point 6, dans un délai de **30 jours** à compter du jour où il a connu le résultat du préjudice.
+ou, pour le point 6, dans un délai de 30 jours à compter du jour où il a connu le résultat du préjudice.
 
 Le salarié doit donc bien maîtriser le délai.
 
@@ -89,7 +89,7 @@ l’indemnité peut ne pas être versée ou peut être exigée.
 
 C’est pourquoi, dans les conflits du travail (勞資糾紛) à Taïwan,
 
-le « **temps** » est très important.
+le « temps » est très important.
 
 Dans la plupart des cas, celui qui s’est préparé à l’avance est mieux placé pour faire valoir ses droits ; aucun résultat déterminé n’en découle.
 

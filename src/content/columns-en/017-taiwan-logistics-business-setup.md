@@ -150,4 +150,4 @@ Unauthorized work may lead to administrative fines and an order to leave Taiwan.
 
 This article is an educational overview of the general legal framework and is not legal advice for any specific matter. Licensing standards, application forms, and agency practice may change. Confirm the current official materials and the facts of the proposed investment or contract before proceeding.
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**
+Wei Tseng (曾雋崴), Taiwan Attorney

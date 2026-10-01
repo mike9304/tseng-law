@@ -93,9 +93,9 @@ Bilirkişi görüşüne katılınmazsa yeniden inceleme istenebilir, ancak yenid
 
 Medeni Kanunun 184. maddesine dayanan talep, bir hakka hukuka aykırı saldırı, kaza ile nedensellik bağı ve zararın kanıtını varsayar. Yalnızca bir kaza olmuş olması, aşağıdaki kalemlerin hepsinin tanındığı anlamına gelmez. Medeni Kanunun 216. maddesi gerçek zarar ile yoksun kalınan kârın (所失利益) kapsamını saptama ölçütüdür.
 
-- **Yaralanma**: Medeni Kanunun 193. maddesine göre gereken tıbbi giderler (醫療費用), bakım giderleri (看護費用), tedaviye gidiş giderleri (就醫交通費) ve yardımcı araçlar gibi günlük yaşama eklenen giderler ile gerçek iş göremezlikten doğan gelir kaybı (收入損失) ve çalışma gücünün azalması (勞動能力減損) incelenebilir. Medeni Kanunun 195. maddesine göre manevi zarar da incelenebilir.
-- **Ölüm**: Medeni Kanunun 192. maddesine göre yer varsa ölümden önceki tıbbi giderler ve artan yaşam ihtiyacı giderleri, cenaze giderleri (殯葬費) ve yasal nafaka hakkına sahip kişinin nafaka kaybı (扶養利益損失) incelenebilir. Medeni Kanunun 194. maddesine göre belirli yakınların manevi zararı da incelenebilir.
-- **Malvarlığı**: Medeni Kanunun 196. maddesine göre aracın onarım giderleri veya değer kaybı dâhil, belgelenmiş gerçek malvarlığı zararı talep edilebilir.
+- Yaralanma: Medeni Kanunun 193. maddesine göre gereken tıbbi giderler (醫療費用), bakım giderleri (看護費用), tedaviye gidiş giderleri (就醫交通費) ve yardımcı araçlar gibi günlük yaşama eklenen giderler ile gerçek iş göremezlikten doğan gelir kaybı (收入損失) ve çalışma gücünün azalması (勞動能力減損) incelenebilir. Medeni Kanunun 195. maddesine göre manevi zarar da incelenebilir.
+- Ölüm: Medeni Kanunun 192. maddesine göre yer varsa ölümden önceki tıbbi giderler ve artan yaşam ihtiyacı giderleri, cenaze giderleri (殯葬費) ve yasal nafaka hakkına sahip kişinin nafaka kaybı (扶養利益損失) incelenebilir. Medeni Kanunun 194. maddesine göre belirli yakınların manevi zararı da incelenebilir.
+- Malvarlığı: Medeni Kanunun 196. maddesine göre aracın onarım giderleri veya değer kaybı dâhil, belgelenmiş gerçek malvarlığı zararı talep edilebilir.
 
 ## Q8. Tedavi sürerse tıbbi gider belgelerini nasıl sunmalı?
 

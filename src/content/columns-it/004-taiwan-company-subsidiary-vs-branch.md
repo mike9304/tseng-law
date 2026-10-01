@@ -192,4 +192,4 @@ La scelta finale è più sicura se è esaminata da specialisti a Taiwan e nel lu
 
 Il presente articolo è un materiale di informazione generale a fini educativi sulle differenze tra la società controllata taiwanese e la succursale di una società estera; non costituisce una consulenza legale né fiscale per un caso concreto e non promette un risultato determinato. Le regole applicabili e il trattamento fiscale possono variare secondo la sede dell’investitore e della sede, il contenuto dell’attività, operazioni e flusso dei fondi, condizioni dell’accordo e la prassi più recente dell’autorità competente; prima di eseguire una costituzione, un investimento, un contratto, un dividendo o un trasferimento, le fonti ufficiali più recenti e circostanze proprie devono confermarsi.
 
-**Avvocata Wei Tseng (曾雋崴)**
+Avvocata Wei Tseng (曾雋崴)

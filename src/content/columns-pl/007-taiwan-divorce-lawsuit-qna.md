@@ -196,4 +196,4 @@ Następujące źródła pierwotne (1. poziom) są punktem wyjścia do sprawdzeni
 
 Ten artykuł jest materiałem edukacyjnym przeznaczonym do ogólnego wyjaśnienia instytucji rozwodu, międzynarodowych spraw rodzinnych, majątku małżeńskiego i dzieci małoletnich na Tajwanie, a nie poradą prawną w indywidualnej sprawie. Procedura i wynik mogą się różnić według jurysdykcji, prawa kolizyjnego, uznania orzeczeń zagranicznych, stanu małżeństwa i stanu cywilnego, ustroju majątkowego, istniejącego porozumienia lub rozstrzygnięcia dotyczącego dziecka, faktów i dowodów oraz najnowszych przepisów urzędowych. Terminy wpisu, zaskarżenia, roszczenia i egzekucji trzeba, przed działaniem, sprawdzić jeden po drugim według dokładnego początku biegu każdego prawa i każdej procedury.
 
-**Adwokatka Wei Tseng (曾雋崴)**
+Adwokatka Wei Tseng (曾雋崴)

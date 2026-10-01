@@ -151,4 +151,4 @@ Oficiālajās normu lapās jāpārbauda grozījuma diena un normas spēkā stā�
 
 Šis raksts ir izglītojošs materiāls vispārīgai mantošanas, laulāto mantisko attiecību režīma, aizgādības un nepilngadīgā aizbildnības kārtības skaidrošanai Taivānā; tas nav juridisks padoms par konkrētu mantojuma vai ģimenes lietu. Piemērojamās tiesības, gaita un iznākums var atšķirties pēc mantinieku loka, testamenta, mantas un parādiem, laulāto mantisko attiecību režīma, esošajiem tiesas nolēmumiem un starptautiskiem elementiem. Pirms termiņu aprēķina, piemēram, atteikšanās vai nodokļu deklarācijas, vai pirms rīcības ar mantu pārbaudiet jaunākos oficiālos materiālus un atsevišķos apstākļus.
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)

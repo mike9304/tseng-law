@@ -23,7 +23,7 @@ const jaParsed = matter(jaRaw);
 const EXPECTED_JA_TITLE = '従業員が自発的に退職しても退職金を受け取れる例外';
 const EXPECTED_KO_TITLE = '직원이 자발적으로 퇴사해도 퇴직금을 받을 수 있는 예외';
 const EXPECTED_JA_BODY_SHA256 =
-  '5adfa30b808a3e11e296ff6fba92fee4936d6e20503c6f916e0491b76ef40833';
+  '87e2a64f3fce52fb70f6dd6ad93c6b58746db5108d9058edbdb7b762a745a71c';
 const EXPECTED_VISIBLE_CHARACTER_COUNT = 1162;
 
 function extractVisibleText(markdown: string): string {
@@ -103,11 +103,11 @@ describe('Japanese labor column 009 mirror', () => {
     expect(jaParsed.content).toContain(
       '労働者が上記第1号または第6号の事由に基づいて労働契約を終了しようとする場合',
     );
-    expect(jaParsed.content).toContain('その事由を知った日から**30日**以内に');
+    expect(jaParsed.content).toContain('その事由を知った日から30日以内に');
     expect(jaParsed.content).toContain(
-      '損害が生じたことを知った日から**30日**以内に労働契約を終了しなければならない',
+      '損害が生じたことを知った日から30日以内に労働契約を終了しなければならない',
     );
-    expect(jaParsed.content.match(/\*\*30日\*\*/g)).toHaveLength(2);
+    expect(jaParsed.content.match(/30日/g)).toHaveLength(2);
     expect(jaParsed.content).not.toMatch(/第[16]項/);
     expect(jaParsed.content).not.toContain('損害の結果を知った日');
   });

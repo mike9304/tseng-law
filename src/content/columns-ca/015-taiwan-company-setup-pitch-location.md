@@ -51,7 +51,7 @@ Per tant, presti atenció.
 
 ​
 
-**Pregunta. Tots els sectors han de consultar a través del sistema de «consulta prèvia del local de negoci» si l’explotació és possible?**
+Pregunta. Tots els sectors han de consultar a través del sistema de «consulta prèvia del local de negoci» si l’explotació és possible?
 
 Es recomana que tots els sectors confirmin si l’explotació és possible a través del sistema de «consulta prèvia del local de negoci».
 
@@ -61,7 +61,7 @@ Per això, en la pràctica no cal consultar tots els rams en registrar la societ
 
 Segons les «[Instruccions de funcionament del servei de consulta de locals de negoci de la ciutat de Taipei (臺北市營業場所協助查詢服務作業須知)](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» i la guia vigent de la ciutat de Taipei,
 
-Des de l’1 de gener de 2023, en sol·licitar el registre de constitució, de trasllat de domicili o d’addició de rams d’activitat d’una societat o d’un comerç (incloent-hi la sucursal (分公司) i l’establiment dependent (分支機構)), el resultat de la consulta prèvia del local de negoci **s’ha** d’adjuntar a la sol·licitud de registre, amb independència del sector.
+Des de l’1 de gener de 2023, en sol·licitar el registre de constitució, de trasllat de domicili o d’addició de rams d’activitat d’una societat o d’un comerç (incloent-hi la sucursal (分公司) i l’establiment dependent (分支機構)), el resultat de la consulta prèvia del local de negoci s’ha d’adjuntar a la sol·licitud de registre, amb independència del sector.
 
 La llista següent de «rams objecte de consulta d’ofici» (主動查詢之營業項目) és l’objecte de la consulta addicional que l’Oficina de Comerç realitza d’ofici durant la revisió del registre (隨案主動查詢) quan el ram figura a la sol·licitud però manca en el resultat adjunt; el fet que un ram no estigui en aquesta llista no significa que la consulta quedi exempta.
 

@@ -85,11 +85,11 @@ Người quản lý của công ty con và chi nhánh Đài Loan của công ty 
 
 Sau đây là các tình huống giả định để cân nhắc, không bảo đảm rằng một cách làm cụ thể là hợp pháp hay đáng ưu tiên hơn.
 
-**Doanh nghiệp xuất khẩu giai đoạn đầu.** Nếu chưa có nhân viên hay tồn kho tại Đài Loan và muốn xác nhận nhu cầu qua nhà phân phối độc lập, có thể xem trước cung ứng, quan hệ phân phối và phạm vi hoạt động tại Đài Loan. Nhưng bản thân hợp đồng phân phối không loại trừ mọi vấn đề pháp lý tại Đài Loan.
+Doanh nghiệp xuất khẩu giai đoạn đầu. Nếu chưa có nhân viên hay tồn kho tại Đài Loan và muốn xác nhận nhu cầu qua nhà phân phối độc lập, có thể xem trước cung ứng, quan hệ phân phối và phạm vi hoạt động tại Đài Loan. Nhưng bản thân hợp đồng phân phối không loại trừ mọi vấn đề pháp lý tại Đài Loan.
 
-**Doanh nghiệp mở rộng bán hàng và hỗ trợ kỹ thuật tại Đài Loan.** Nếu dự kiến tuyển dụng tại Đài Loan và tiếp tục quản lý tồn kho, thu tiền, hỗ trợ khách hàng, nên so sánh cụ thể công ty con và chi nhánh, đồng thời đánh giá trách nhiệm hợp đồng, cách tổng công ty vận hành, thuế và nhân sự.
+Doanh nghiệp mở rộng bán hàng và hỗ trợ kỹ thuật tại Đài Loan. Nếu dự kiến tuyển dụng tại Đài Loan và tiếp tục quản lý tồn kho, thu tiền, hỗ trợ khách hàng, nên so sánh cụ thể công ty con và chi nhánh, đồng thời đánh giá trách nhiệm hợp đồng, cách tổng công ty vận hành, thuế và nhân sự.
 
-**Doanh nghiệp đang khảo sát thị trường.** Nếu trước khi lập tổ chức bán hàng chỉ muốn thu thập thông tin và liên lạc, có thể đánh giá văn phòng đại diện. Nếu kế hoạch thực tế gồm bán hàng tồn kho hoặc làm việc tại hiện trường, vẫn phải xác nhận riêng hoạt động đó có được phép không.
+Doanh nghiệp đang khảo sát thị trường. Nếu trước khi lập tổ chức bán hàng chỉ muốn thu thập thông tin và liên lạc, có thể đánh giá văn phòng đại diện. Nếu kế hoạch thực tế gồm bán hàng tồn kho hoặc làm việc tại hiện trường, vẫn phải xác nhận riêng hoạt động đó có được phép không.
 
 ## 8. Tư vấn lần đầu chỉ cần chuẩn bị tổng quan vận hành, chưa cần nộp toàn bộ tài liệu mật
 

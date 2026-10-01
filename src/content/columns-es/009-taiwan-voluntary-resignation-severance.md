@@ -25,7 +25,7 @@ Ello difiere de algunos ordenamientos, como el coreano.
 
 ​
 
-Sin embargo, hay **casos excepcionales**.
+Sin embargo, hay casos excepcionales.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Sin embargo, la Ley de Normas Laborales (勞動基準法) impone un plazo.
 
 Si el trabajador desea poner fin al contrato de trabajo por los apartados 1 o 6 anteriores (por ejemplo, para terminar el contrato por falta de afiliación al seguro), el plazo es breve.
 
-Debe poner fin al contrato de trabajo dentro de **30 días** desde el día en que conoció esa situación.
+Debe poner fin al contrato de trabajo dentro de 30 días desde el día en que conoció esa situación.
 
-En el caso del inciso 6, el plazo es de **30 días** desde el día en que conoció el resultado del daño.
+En el caso del inciso 6, el plazo es de 30 días desde el día en que conoció el resultado del daño.
 
 Por ello el trabajador debe controlar bien el plazo.
 
@@ -89,7 +89,7 @@ Puede no pagarse la indemnización o puede exigirse.
 
 Por ello, en los conflictos laborales (勞資糾紛) de Taiwán el plazo pesa.
 
-El **tiempo** es muy importante.
+El tiempo es muy importante.
 
 En la mayoría de los casos, quien se prepara de antemano está en mejor posición para defender sus derechos; de ello no se sigue un resultado determinado.
 

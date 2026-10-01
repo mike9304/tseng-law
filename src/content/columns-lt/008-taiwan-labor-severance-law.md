@@ -40,9 +40,9 @@ Jei darbuotojas išeina savo noru, bendrovė išeitinės išmokos mokėti nepriv
 
 Jei vis dėlto darbuotojas padaro neteisėtą veiką,
 
-**pažeidžia vidaus darbo taisykles (工作規則),**
+pažeidžia vidaus darbo taisykles (工作規則),
 
-**arba be priežasties neatvyksta į darbą 3 dienas iš eilės (曠工),**
+arba be priežasties neatvyksta į darbą 3 dienas iš eilės (曠工),
 
 bendrovė gali atleisti nemokėdama išeitinės išmokos.
 
@@ -52,7 +52,7 @@ Lentelėje tai trumpai apibendrinama.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Rūšis** | **Ekonominis atleidimas (資遣員工, 經濟解僱)** | **Drausminis atleidimas (解僱員工, 懲戒解僱)** | **Darbuotojo savanoriškas pasitraukimas (員工自請離職)** |
+| Rūšis | Ekonominis atleidimas (資遣員工, 經濟解僱) | Drausminis atleidimas (解僱員工, 懲戒解僱) | Darbuotojo savanoriškas pasitraukimas (員工自請離職) |
 | Reikšmė | Jei darbdaviui dėl įmonės padėties reikia koreguoti personalą, priežastis kyla darbdavio ūkinėje srityje, o ne dėl darbuotojo kaltės. Todėl darbdavys privalo laikytis įspėjimo termino (預告期間) ir išmokėti išeitinę išmoką, kad subalansuotų darbuotojui tenkančią nenaudą. | Jei darbuotojas padaro neteisėtą arba netinkamą veiką, darbdavys gali nedelsdamas nutraukti darbo sutartį (勞動契約) be išankstinio įspėjimo ir išeitinės išmokos mokėti neprivalo. Tai viena iš darbdavio drausminių teisių. | Darbuotojas gali bet kada nutraukti sutartį, tačiau pagal darbo stažą privalo laikytis įspėjimo termino, kad darbdavys galėtų atlikti perdavimą ir ieškoti pavaduojančio asmens. |
 | Sąlygos | Taip (Taivano Darbo standartų įstatymo 11 straipsnis) | Taip (Taivano Darbo standartų įstatymo 12 straipsnis) | Nėra |
 | Išankstinis įspėjimas | Privaloma | Nereikia | Privaloma |
@@ -194,17 +194,17 @@ kelia pernelyg didelius reikalavimus
 
 arba perkelia darbuotoją į keistas pareigas,
 
-**reikia išsaugoti įrodymus.**
+reikia išsaugoti įrodymus.
 
-**Savo įprastus atvykimo į darbą įrašus,**
+Savo įprastus atvykimo į darbą įrašus,
 
-**viršvalandžių įrašus, veiklos rezultatų įrašus,**
+viršvalandžių įrašus, veiklos rezultatų įrašus,
 
-**vidaus darbo taisykles, el. laiškus su kolegomis ir vadovais**
+vidaus darbo taisykles, el. laiškus su kolegomis ir vadovais
 
-**ir pokalbių su vadovu įrašus —**
+ir pokalbių su vadovu įrašus —
 
-**saugokite Jums palankius įrodymus.**
+saugokite Jums palankius įrodymus.
 
 ​
 

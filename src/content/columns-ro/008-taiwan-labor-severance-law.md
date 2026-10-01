@@ -40,9 +40,9 @@ Dacă persoana angajată demisionează ea însăși, societatea nu are obligați
 
 Dacă persoana angajată săvârșește totuși o faptă ilicită,
 
-**încalcă regulamentul intern (工作規則),**
+încalcă regulamentul intern (工作規則),
 
-**sau lipsește de la muncă fără motiv legitim 3 zile la rând (曠工),**
+sau lipsește de la muncă fără motiv legitim 3 zile la rând (曠工),
 
 societatea poate concedia fără a plăti indemnizație de concediere.
 
@@ -52,7 +52,7 @@ Vă rezum aceasta într-un tabel simplu.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Tip** | **Concediere economică (資遣員工, 經濟解僱)** | **Concediere disciplinară (解僱員工, 懲戒解僱)** | **Demisia proprie a persoanei angajate**  **員工自請離職** |
+| Tip | Concediere economică (資遣員工, 經濟解僱) | Concediere disciplinară (解僱員工, 懲戒解僱) | Demisia proprie a persoanei angajate  員工自請離職 |
 | Semnificație | Dacă există, la angajator, o nevoie de ajustare a personalului din cauza situației întreprinderii, motivul se situează în domeniul antreprenorial al angajatorului, nu în răspunderea persoanei angajate. De aceea angajatorul trebuie să respecte termenul de preaviz (預告期間) și să plătească o indemnizație de concediere, pentru a compensa în mod echilibrat inconvenientele persoanei angajate. | Dacă persoana angajată săvârșește o faptă ilicită sau nepotrivită, angajatorul poate pune capăt de îndată contractului de muncă (勞動契約) fără preaviz și nu are obligația de a plăti indemnizație de concediere. Aceasta este una dintre prerogativele disciplinare ale angajatorului. | Persoana angajată este liberă să pună capăt contractului oricând, dar trebuie, după durata de angajare, să respecte termenul de preaviz, pentru ca angajatorul să poată proceda la predare și la căutarea unui înlocuitor. |
 | Condiții | Prezente  (art. 11 din legea taiwaneză a standardelor muncii) | Prezente  (art. 12 din legea taiwaneză a standardelor muncii) | Niciuna |
 | Preaviz | Cerut | Nu este cerut | Cerut |
@@ -194,17 +194,17 @@ pune cerințe excesive
 
 sau mută salariații la posturi ciudate,
 
-**trebuie să păstrați probe.**
+trebuie să păstrați probe.
 
-**Înregistrările dumneavoastră obișnuite de prezență,**
+Înregistrările dumneavoastră obișnuite de prezență,
 
-**înregistrările de ore suplimentare, înregistrările de performanță,**
+înregistrările de ore suplimentare, înregistrările de performanță,
 
-**regulamentul intern, corespondența prin e-mail cu colegii și superiorii**
+regulamentul intern, corespondența prin e-mail cu colegii și superiorii
 
-**precum și înregistrările de interviu cu superiorii —**
+precum și înregistrările de interviu cu superiorii —
 
-**păstrați probele care vă sunt favorabile.**
+păstrați probele care vă sunt favorabile.
 
 ​
 

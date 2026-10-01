@@ -151,4 +151,4 @@ Sa opisyal na pahina ng mga batas, tiyakin ang petsa ng pagbabago at ang petsa n
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag sa pangkalahatan ang sistema ng pagmamana, ang rehimeng ari-arian ng mag-asawa, ang karapatan sa anak at ang pangangalaga sa menor de edad sa Taiwan; hindi ito legal na payo para sa isang tiyak na kaso ng pagmamana o usaping pampamilya. Maaaring mag-iba ang batas na inilalapat, ang proseso at ang resulta depende sa saklaw ng mga tagapagmana, sa testamento, sa ari-arian at mga utang, sa rehimeng ari-arian ng mag-asawa, sa umiiral nang hatol ng korte at sa mga dayuhang elemento. Bago kalkulahin ang taning gaya ng sa pagtanggi sa mana o sa paghahain ng buwis, o bago magtapon ng ari-arian, mangyaring tiyakin ang pinakabagong opisyal na materyal at ang mga katotohanan ng inyong sariling kalagayan.
 
-**Abogada Wei Tseng (曾雋崴)**
+Abogada Wei Tseng (曾雋崴)

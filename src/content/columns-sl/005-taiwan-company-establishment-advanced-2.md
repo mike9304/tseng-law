@@ -25,9 +25,9 @@ Spodnja vprašanja in odgovore je pripravila odvetnica Wei Tseng (曾雋崴); na
 
 ​
 
-**1. Na kaj paziti pri nakazilu kapitala (資本額) iz Koreje na pripravljalni račun tajvanske družbe (公司籌備處帳戶)? (točka zadeva korejski režim in korejsko bančno prakso)**
+1. Na kaj paziti pri nakazilu kapitala (資本額) iz Koreje na pripravljalni račun tajvanske družbe (公司籌備處帳戶)? (točka zadeva korejski režim in korejsko bančno prakso)
 
-Banke v Koreji praviloma zahtevajo, da se vlagatelj **osebno** zglasi v banki v Koreji in nakaže sredstva z računa, vodenega na lastno ime.
+Banke v Koreji praviloma zahtevajo, da se vlagatelj osebno zglasi v banki v Koreji in nakaže sredstva z računa, vodenega na lastno ime.
 
 Nakazilo prek spletnega bančništva ali prek sorodnika v Koreji ni mogoče.
 
@@ -35,9 +35,9 @@ Nadalje, po korejskih predpisih o deviznem nadzoru mora oseba s korejskim držav
 
 Pred nakazilom kapitala (資本金匯款) se posvetujte pri svoji glavni banki v Koreji.
 
-**​**
+​
 
-**2. Ali je mogoče pri vplačilu kapitala družbe nove tajvanske dolarje (新臺幣, TWD) nakazati z osebnega računa na Tajvanu na pripravljalni račun tajvanske družbe?**
+2. Ali je mogoče pri vplačilu kapitala družbe nove tajvanske dolarje (新臺幣, TWD) nakazati z osebnega računa na Tajvanu na pripravljalni račun tajvanske družbe?
 
 Mogoče je, vendar je treba predložiti listine, ki dokazujejo izvor sredstev v novih tajvanskih dolarjih, pridobljenih na Tajvanu.
 
@@ -47,9 +47,9 @@ Mogoče je, vendar je treba predložiti listine, ki dokazujejo izvor sredstev v 
 
 Če nakazilo poteka z bančnega računa v Koreji, listin o izvoru sredstev ni treba priložiti.
 
-**​**
+​
 
-**3. Kdaj je mogoče pripravljalni račun po pripisu kapitala pretvoriti v redni račun družbe (正式公司帳戶)?**
+3. Kdaj je mogoče pripravljalni račun po pripisu kapitala pretvoriti v redni račun družbe (正式公司帳戶)?
 
 Praviloma po prejemu listin o vpisu pravne osebe (法人登記文件),
 
@@ -57,17 +57,17 @@ lahko odgovorna oseba (負責人) v banki pretvori pripravljalni račun družbe 
 
 Ker pa se notranja pravila posameznih bank (銀行) razlikujejo, je ob nujni potrebi po uporabi kapitala smiselno najprej vprašati banko.
 
-**​**
+​
 
-**4. Ali je spletno bančništvo mogoče uporabljati takoj po pretvorbi pripravljalnega računa v redni račun?**
+4. Ali je spletno bančništvo mogoče uporabljati takoj po pretvorbi pripravljalnega računa v redni račun?
 
 Odvisno od banke; praviloma je potreben vsaj mobilni telefon.
 
 Nekatere banke lahko nalagajo dodatne zahteve, na primer dobo uporabe računa najmanj 6 mesecev po ustanovitvi.
 
-**​**
+​
 
-**5. Ali lahko družba zaposli tuje državljane (vključno z osebami s korejskim državljanstvom)?**
+5. Ali lahko družba zaposli tuje državljane (vključno z osebami s korejskim državljanstvom)?
 
 A. Prvi zaposleni: vloga se vloži kot delo poslovodje v podjetju običajne naložbe čezmorskih Kitajcev ali tujcev (一般僑外投資事業主管工作). Merilo »strokovnega ali tehničnega dela« iz točke B spodaj se ne uporabi, vendar se uporabijo pogoji upravičenosti, vključno s pogojem, da gre za poslovodjo (經理人) družbe, pri kateri vložek čezmorskih Kitajcev ali tujcev presega 1/3, in pogoji rezultatov delodajalca glede kapitala in prometa (po 38. in 39. členu meril pregleda).
 

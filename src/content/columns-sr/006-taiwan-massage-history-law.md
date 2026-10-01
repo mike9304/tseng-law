@@ -126,4 +126,4 @@ odmah to saopštite ili zatražite prekid, da biste se zaštitili.
 Ako smatrate da ste pretrpeli seksualno uznemiravanje,
 
 idite na policijsku stanicu s pouzdanim prijateljem ili s advokatom na Tajvanu (律師), da podnesete prijavu.
-**Advokatkinja Wei Tseng (曾雋崴)**
+Advokatkinja Wei Tseng (曾雋崴)

@@ -191,4 +191,4 @@ Ved ordningen av bilagene i tidsfølge bør man sammen angi datoen for kontrakte
 
 Denne teksten gir generell veiledning om avtalen om bindingstid i Taiwan, tilbakebetalingen av utdanningskostnadene og av den forskuddsbetalte ytelsen samt oppsigelsesvarselet; den er ikke juridisk rådgivning for en konkret arbeidssak (最低服務年限約定). Avtalens gyldighet og ansvarets omfang kan variere etter kontraktens type og innhold, den faktiske utdanning og kostnad, kompensasjonens formål og dens melding, tjenesteperioden, opphørsårsaken og bevisene. Før man formulerer fratredelsen, aksepterer et lønnstrekk, avtaler en tilbakebetaling eller besvarer en tvist, bør man bekrefte de nyeste offisielle kildene og de individuelle omstendighetene.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

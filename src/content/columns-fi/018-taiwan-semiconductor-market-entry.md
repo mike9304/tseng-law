@@ -85,11 +85,11 @@ Työluvan saaminen on suhteellisen helpompaa taiwanilaisen tytäryhtiön tai ulk
 
 Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät takaa, että tietty tapa olisi lainmukainen tai parempi.
 
-**Ulkomaiset yritykset, jotka tähtäävät alkuvaiheen vientiin.** Jos Taiwanissa ei vielä ole työntekijöitä eikä varastoja ja halutaan tutkia kysyntää riippumattoman jakelijan kautta, voidaan ensin katsoa toimitusta, jakelusuhdetta ja toimialaa Taiwanissa. Pelkkä jakelusopimus ei ratkaise kaikkia sääntelykysymyksiä Taiwanissa.
+Ulkomaiset yritykset, jotka tähtäävät alkuvaiheen vientiin. Jos Taiwanissa ei vielä ole työntekijöitä eikä varastoja ja halutaan tutkia kysyntää riippumattoman jakelijan kautta, voidaan ensin katsoa toimitusta, jakelusuhdetta ja toimialaa Taiwanissa. Pelkkä jakelusopimus ei ratkaise kaikkia sääntelykysymyksiä Taiwanissa.
 
-**Ulkomaiset yritykset, jotka laajentavat myyntiä ja teknistä tukea Taiwanissa.** Jos Taiwanissa halutaan palkata ja edelleen johtaa varastoja, perintää ja asiakastukea, tytäryhtiötä ja sivuliikettä tulisi verrata konkreettisesti ja tutkia myös sopimusvastuu, päätoimipaikan toimintatapa, verot ja henkilöstö.
+Ulkomaiset yritykset, jotka laajentavat myyntiä ja teknistä tukea Taiwanissa. Jos Taiwanissa halutaan palkata ja edelleen johtaa varastoja, perintää ja asiakastukea, tytäryhtiötä ja sivuliikettä tulisi verrata konkreettisesti ja tutkia myös sopimusvastuu, päätoimipaikan toimintatapa, verot ja henkilöstö.
 
-**Ulkomaiset yritykset markkinatutkimusvaiheessa.** Jos ennen myyntiorganisaatiota halutaan vain tieto- ja yhteystoimintoja, voidaan arvioida edustustoa (代表人辦事處). Jos tosiasiallinen suunnitelma käsittää varastojen myynnin tai työn paikan päällä, on erikseen vahvistettava, ovatko nämä toimet sallittuja.
+Ulkomaiset yritykset markkinatutkimusvaiheessa. Jos ennen myyntiorganisaatiota halutaan vain tieto- ja yhteystoimintoja, voidaan arvioida edustustoa (代表人辦事處). Jos tosiasiallinen suunnitelma käsittää varastojen myynnin tai työn paikan päällä, on erikseen vahvistettava, ovatko nämä toimet sallittuja.
 
 ## 8. Ensimmäiseen keskusteluun riittää toiminnan yleiskuva; kaikkia luottamuksellisia aineistoja ei tarvitse heti luovuttaa
 

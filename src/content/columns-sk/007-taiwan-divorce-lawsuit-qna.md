@@ -196,4 +196,4 @@ Nasledujúce primárne pramene (1. úroveň) sú východiskom na overenie právn
 
 Tento článok je vzdelávací materiál určený na všeobecné vysvetlenie úpravy rozvodu, medzinárodných rodinných vecí, manželského majetku a maloletých detí na Taiwane; nie je právnym poradenstvom v konkrétnej veci. Postup a výsledok sa môžu líšiť podľa príslušnosti, rozhodného práva, uznania rozhodnutia vydaného v zahraničí, stavu manželstva a evidencie obyvateľov, majetkového režimu, existujúcej dohody alebo rozhodnutia vo veci dieťaťa, skutkov a dôkazov aj najnovších úradných predpisov. Lehoty zápisu, opravných prostriedkov, nároku a výkonu treba pred konaním overiť každú osobitne podľa presného začiatku plynutia daného práva a daného postupu.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

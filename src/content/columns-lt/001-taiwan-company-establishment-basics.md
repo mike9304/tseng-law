@@ -142,4 +142,4 @@ Susijusios veiklos apimtį galite matyti puslapyje [Kokiose bylose atstovaujame 
 
 Šis straipsnis yra bendros informacijos dokumentas švietimo tikslais apie įmonės steigimą Taivane ir susijusias taisykles; jis nėra teisinė ar mokestinė konsultacija konkrečioje byloje ir nežada nustatyto rezultato. Reikalingos procedūros ir rezultatai gali skirtis pagal investicijos struktūrą, veiklos sektorių, prašytojo pilietybę ir leidimo gyventi statusą bei kompetentingos institucijos naujausią praktiką; prieš vykdant investiciją, sutartį ar įdarbinimą reikia įvertinti naujausius oficialius šaltinius ir savo bylos aplinkybes.
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

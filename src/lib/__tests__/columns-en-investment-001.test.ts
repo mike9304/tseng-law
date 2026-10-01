@@ -385,12 +385,12 @@ describe('English investment column 001 — company-formation basics', () => {
     expect(parsed.content).toContain(disclaimer);
     expect(parsed.content.trimEnd()).toMatch(
       new RegExp(
-        `${relatedServicesParagraph.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n${disclaimer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n\\*\\*Wei Tseng \\(曾雋崴\\), Taiwan Attorney\\*\\*$`,
+        `${relatedServicesParagraph.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n${disclaimer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\nWei Tseng \\(曾雋崴\\), Taiwan Attorney$`,
       ),
     );
     expect(post?.content).toContain(disclaimer);
     expect(post?.content.trimEnd()).toMatch(
-      /\*\*Wei Tseng \(曾雋崴\), Taiwan Attorney\*\*$/,
+      /Wei Tseng \(曾雋崴\), Taiwan Attorney$/,
     );
   });
 

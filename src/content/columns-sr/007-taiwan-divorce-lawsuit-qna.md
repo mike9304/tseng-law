@@ -196,4 +196,4 @@ Sledeći primarni izvori (1. nivo) polazna su tačka za proveru pravne građe i 
 
 Ovaj članak je obrazovni materijal namenjen opštem objašnjenju instituta razvoda, međunarodnih porodičnih stvari, bračne imovine i maloletne dece na Tajvanu, a ne pravni savet u konkretnoj stvari. Postupak i rezultat mogu se razlikovati prema nadležnosti, merodavnom pravu, priznanju stranih odluka, stanju braka i evidencije prebivališta, imovinskom režimu, postojećem sporazumu ili odluci koja se tiče deteta, činjenicama i dokazima kao i najnovijim službenim propisima. Rokove upisa, pravnih lekova, zahteva i izvršenja treba pre delovanja proveriti jedan po jedan prema tačnom početku toka svakog prava i svakog postupka.
 
-**Advokatkinja Wei Tseng (曾雋崴)**
+Advokatkinja Wei Tseng (曾雋崴)

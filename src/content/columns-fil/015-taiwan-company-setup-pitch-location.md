@@ -51,7 +51,7 @@ Kaya nga, mangyaring mag-ingat kayo!
 
 ​
 
-**Q. Kailangan ba ng lahat ng uri ng negosyo na magtanong sa sistemang paunang pagsusuri sa lugar ng negosyo kung pinahihintulutan ang operasyon?**
+Q. Kailangan ba ng lahat ng uri ng negosyo na magtanong sa sistemang paunang pagsusuri sa lugar ng negosyo kung pinahihintulutan ang operasyon?
 
 Inirerekomenda namin na gamitin ng lahat ng uri ng negosyo ang sistemang paunang pagsusuri sa lugar ng negosyo upang tiyakin kung pinahihintulutan ang operasyon.
 
@@ -61,7 +61,7 @@ Kaya nga, sa katunayan ay hindi kailangang gawan ng paunang pagsusuri ang lahat 
 
 Nakasaad ang tuntunin sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) at sa kasalukuyang paunawa ng Lungsod ng Taipei.
 
-Mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
+Mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay kinakailangang maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
 
 Ang listahan ng "mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga gawaing kusang sinusuri ng Kagawaran ng Komersiyo ng Lungsod ng Taipei habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang gawaing iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang gawaing wala sa listahang ito.
 

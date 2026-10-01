@@ -151,4 +151,4 @@ Nelle pagine ufficiali di normativa, si conferma la data di riforma e quella di 
 
 Questo articolo è un materiale con fini educativi per spiegare in termini generali il regime di successione, il regime patrimoniale coniugale, la potestà genitoriale e la tutela dei minori a Taiwan; non è una consulenza legale per un caso concreto di successione o di famiglia. La legge applicabile, la procedura e il risultato possono variare secondo la cerchia degli eredi, il testamento, il patrimonio e i debiti, il regime matrimoniale, le decisioni giudiziarie esistenti e gli elementi internazionali. Prima di calcolare termini come la rinuncia o la dichiarazione fiscale, o di disporre del patrimonio, si confermino le fonti ufficiali più recenti e le circostanze individuali.
 
-**L’avvocata Wei Tseng (曾雋崴)**
+L’avvocata Wei Tseng (曾雋崴)

@@ -25,9 +25,9 @@ De volgende vragen en antwoorden zijn bedoeld voor wie een vennootschapsoprichti
 
 ​
 
-**1. Waarop moet u letten wanneer het kapitaal (資本額) vanuit het buitenland naar de voorbereidingsrekening van de Taiwanese vennootschap (公司籌備處帳戶) wordt overgemaakt? (het onderstaande voorbeeld betreft het stelsel en de bankpraktijk van Korea; in andere landen gelden eigen regels)**
+1. Waarop moet u letten wanneer het kapitaal (資本額) vanuit het buitenland naar de voorbereidingsrekening van de Taiwanese vennootschap (公司籌備處帳戶) wordt overgemaakt? (het onderstaande voorbeeld betreft het stelsel en de bankpraktijk van Korea; in andere landen gelden eigen regels)
 
-Koreaanse banken (銀行) verlangen in de regel dat de investeerder **in persoon** een bank in Korea bezoekt en de middelen overmaakt vanaf een rekening op eigen naam.
+Koreaanse banken (銀行) verlangen in de regel dat de investeerder in persoon een bank in Korea bezoekt en de middelen overmaakt vanaf een rekening op eigen naam.
 
 Overmaking via internetbankieren of via een naaste in Korea (匯款) is niet mogelijk.
 
@@ -35,9 +35,9 @@ Voorts moet, overeenkomstig de Koreaanse regelgeving inzake valutatoezicht, de p
 
 Vraag vóór de kapitaalovermaking (資本金匯款) inlichtingen bij uw eigen bank in het land van waaruit u overmaakt.
 
-**​**
+​
 
-**2. Mag u bij de storting van het maatschappelijk kapitaal nieuwe Taiwanese dollars (新臺幣, TWD) van uw persoonlijke rekening in Taiwan overmaken naar de voorbereidingsrekening van de Taiwanese vennootschap?**
+2. Mag u bij de storting van het maatschappelijk kapitaal nieuwe Taiwanese dollars (新臺幣, TWD) van uw persoonlijke rekening in Taiwan overmaken naar de voorbereidingsrekening van de Taiwanese vennootschap?
 
 Dat is mogelijk, maar u moet stukken overleggen die de herkomst van de in Taiwan verworven TWD-middelen staven.
 
@@ -47,9 +47,9 @@ Gaat het om dividenden en winsten uit een investering in een onderneming in Taiw
 
 Wordt de overmaking uitgevoerd vanaf een buitenlandse bankrekening, dan hoeven geen stukken over de herkomst van de middelen te worden bijgevoegd.
 
-**​**
+​
 
-**3. Wanneer kan de voorbereidingsrekening, nadat het kapitaal daarop is binnengekomen, worden omgezet in een gewone vennootschapsrekening (正式公司帳戶)?**
+3. Wanneer kan de voorbereidingsrekening, nadat het kapitaal daarop is binnengekomen, worden omgezet in een gewone vennootschapsrekening (正式公司帳戶)?
 
 In de regel kan, nadat de inschrijvingsstukken van de rechtspersoon (法人登記文件) zijn ontvangen,
 
@@ -57,17 +57,17 @@ de verantwoordelijke (負責人) naar de bank gaan en de voorbereidingsrekening 
 
 Omdat de interne regels van elke bank (銀行) echter verschillen, is het raadzaam eerst de bank te raadplegen indien het kapitaal dringend moet worden gebruikt.
 
-**​**
+​
 
-**4. Kan internetbankieren onmiddellijk worden gebruikt nadat de voorbereidingsrekening in een gewone rekening is omgezet?**
+4. Kan internetbankieren onmiddellijk worden gebruikt nadat de voorbereidingsrekening in een gewone rekening is omgezet?
 
 Dat verschilt per bank; in de regel is ten minste een mobiel telefoonnummer nodig.
 
 Bepaalde banken kunnen aanvullende eisen stellen, bijvoorbeeld een gebruiksduur van de rekening van ten minste 6 maanden na de oprichting.
 
-**​**
+​
 
-**5. Kan de vennootschap buitenlandse werknemers in dienst nemen?**
+5. Kan de vennootschap buitenlandse werknemers in dienst nemen?
 
 A. Eerste werknemer: het verzoek wordt ingediend als leidinggevende arbeid in een gewone onderneming met investering van overzeese Chinezen of buitenlanders (一般僑外投資事業主管工作). De maatstaf van de “gespecialiseerde of technische arbeid” van punt B hieronder is niet van toepassing, maar wel de adressaatvoorwaarden, waaronder die van manager (經理人) van een vennootschap waarvan de inbreng van overzeese Chinezen of buitenlanders 1/3 overschrijdt en de resultaatvoorwaarden van de werkgever inzake kapitaal en omzet (toetsingsnormen art. 38 en art. 39).
 

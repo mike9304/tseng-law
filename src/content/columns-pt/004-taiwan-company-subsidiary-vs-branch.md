@@ -192,4 +192,4 @@ A escolha final é mais segura se for examinada por especialistas em Taiwan e no
 
 O presente artigo é um material de informação geral para fins educativos sobre as diferenças entre a subsidiária taiwanesa e a sucursal de uma sociedade estrangeira; não constitui um conselho jurídico nem fiscal para um caso concreto e não promete um resultado determinado. As regras aplicáveis e o tratamento fiscal podem variar segundo a sede do investidor e da sede, o conteúdo da atividade, operações e fluxo dos fundos, condições do acordo e a prática mais recente da autoridade competente; antes de executar uma constituição, um investimento, um contrato, um dividendo ou uma transferência, as fontes oficiais mais recentes e circunstâncias próprias devem confirmar-se.
 
-**Advogada Wei Tseng (曾雋崴)**
+Advogada Wei Tseng (曾雋崴)

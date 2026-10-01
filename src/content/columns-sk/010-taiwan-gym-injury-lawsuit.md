@@ -59,7 +59,7 @@ Názvy tlačových správ, internetových príspevkov a právnych komentárov k 
 
 ![Došlo u kórejského vysokoškolského študenta k prasknutiu medzistavcovej platničky, keď pri osobnom tréningu vykonával mŕtvy ťah 90 kg?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Došlo u kórejského vysokoškolského študenta k prasknutiu medzistavcovej platničky, keď pri osobnom tréningu vykonával mŕtvy ťah 90 kg?**
+Došlo u kórejského vysokoškolského študenta k prasknutiu medzistavcovej platničky, keď pri osobnom tréningu vykonával mŕtvy ťah 90 kg?
 
 Praktický význam tejto veci spočíva v tom, že zodpovednosť sa neurčuje hneď samotnou skutočnosťou, že k úrazu došlo v posilňovni. Obsah povinnosti bezpečnosti (安全義務), ktorá zaťažuje poskytovateľa služby, konkrétny pokyn a porušenie povinnosti starostlivosti (注意義務), príčinná súvislosť medzi úrazom a konaním a rozsah škody sa posudzujú podľa dokumentov každej veci. Predpoklady a lehoty trestného konania a občianskeho konania sú takisto odlišné, preto treba hneď od začiatku viesť podklady trestného a občianskeho postupu oddelene.
 
@@ -93,13 +93,13 @@ Ak okolnosti nehody môžu naplniť znaky trestného činu, možno rýchlo poda�
 
 Položky škody, ktorých uplatnenie možno posúdiť, sú nasledujúce. Skutočné uznanie a výška závisia od nutnosti každého výdavku, príčinnej súvislosti s nehodou, dokladov, pomeru zodpovednosti a posúdenia súdu.
 
-1. **Liečebné výdavky**: Výdavky skutočne vynaložené na konzultáciu, vyšetrenie, liečbu, liečivá a rehabilitáciu sa preukazujú stvrdenkami a zdravotnou dokumentáciou.
-2. **Náklady na ošetrovanie alebo starostlivosť**: Či bola s ohľadom na stupeň úrazu a priebeh liečby starostlivosť nutná a či sú doba a náklady primerané, sa posudzuje zdravotnými a výdavkovými podkladmi.
-3. **Cestovné**: Výdavky nutné na dochádzanie do zdravotníckeho zariadenia kvôli liečbe sa preukazujú evidenciou presunov, stvrdenkami a podobnými dokladmi.
-4. **Strata pracovnej schopnosti (勞動能力減損)**: Ak sú uznané následky a trvalé zníženie pracovnej schopnosti, možno hodnotiť spoločne podľa lekárskych a profesijných podkladov, stupňa postihnutia, povolania a príjmu a zostávajúceho obdobia, počas ktorého by ešte mohol zárobkovo pracovať. Samotné percento postihnutia náhradu neurčuje a strata sa nepočíta automaticky až do okamihu odchodu do dôchodku.
-5. **Ušlý príjem v dobe zotavenia (收入損失)**: Dobu, počas ktorej skutočne nebolo možné pracovať kvôli liečbe alebo rekonvalescencii, a z toho vyplývajúce zníženie príjmu treba preukázať mzdovými, daňovými a dochádzkovými podkladmi.
-6. **Nemajetková ujma (非財產上損害)**: Sumu za duševné útrapy stanoví súd podľa prvkov každej veci, ako je stupeň úrazu, doba liečby, následky a konkrétne okolnosti strany.
-7. **Sankčná náhrada škody (懲罰性賠償金)**: Existuje pravidlo, podľa ktorého v konaní, na ktoré sa vzťahuje zákon o ochrane spotrebiteľa, možno, ak škoda vznikla úmyslom podniku, žiadať až 5-násobok skutočnej škody; pri hrubej nedbanlivosti až 3-násobok; a pri nedbanlivosti najviac do výšky skutočnej škody. Či sa [článok 51 taiwanského zákona o ochrane spotrebiteľa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na vec vzťahuje a či bude sankčná náhrada skutočne priznaná a v akej výške, závisí od toho, ako súd posúdi konkrétne predpoklady a dôkazy.
+1. Liečebné výdavky: Výdavky skutočne vynaložené na konzultáciu, vyšetrenie, liečbu, liečivá a rehabilitáciu sa preukazujú stvrdenkami a zdravotnou dokumentáciou.
+2. Náklady na ošetrovanie alebo starostlivosť: Či bola s ohľadom na stupeň úrazu a priebeh liečby starostlivosť nutná a či sú doba a náklady primerané, sa posudzuje zdravotnými a výdavkovými podkladmi.
+3. Cestovné: Výdavky nutné na dochádzanie do zdravotníckeho zariadenia kvôli liečbe sa preukazujú evidenciou presunov, stvrdenkami a podobnými dokladmi.
+4. Strata pracovnej schopnosti (勞動能力減損): Ak sú uznané následky a trvalé zníženie pracovnej schopnosti, možno hodnotiť spoločne podľa lekárskych a profesijných podkladov, stupňa postihnutia, povolania a príjmu a zostávajúceho obdobia, počas ktorého by ešte mohol zárobkovo pracovať. Samotné percento postihnutia náhradu neurčuje a strata sa nepočíta automaticky až do okamihu odchodu do dôchodku.
+5. Ušlý príjem v dobe zotavenia (收入損失): Dobu, počas ktorej skutočne nebolo možné pracovať kvôli liečbe alebo rekonvalescencii, a z toho vyplývajúce zníženie príjmu treba preukázať mzdovými, daňovými a dochádzkovými podkladmi.
+6. Nemajetková ujma (非財產上損害): Sumu za duševné útrapy stanoví súd podľa prvkov každej veci, ako je stupeň úrazu, doba liečby, následky a konkrétne okolnosti strany.
+7. Sankčná náhrada škody (懲罰性賠償金): Existuje pravidlo, podľa ktorého v konaní, na ktoré sa vzťahuje zákon o ochrane spotrebiteľa, možno, ak škoda vznikla úmyslom podniku, žiadať až 5-násobok skutočnej škody; pri hrubej nedbanlivosti až 3-násobok; a pri nedbanlivosti najviac do výšky skutočnej škody. Či sa [článok 51 taiwanského zákona o ochrane spotrebiteľa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na vec vzťahuje a či bude sankčná náhrada skutočne priznaná a v akej výške, závisí od toho, ako súd posúdi konkrétne predpoklady a dôkazy.
 
 ## 5. Aj keď má posilňovňa poistenie zodpovednosti (責任保險), môžu byť existencia náhrady a výška sporné?
 

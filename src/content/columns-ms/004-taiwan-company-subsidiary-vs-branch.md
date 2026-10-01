@@ -192,4 +192,4 @@ Pilihan akhir lebih selamat jika diteliti oleh pakar di Taiwan dan di tempat pej
 
 Artikel ini ialah bahan maklumat umum untuk tujuan pendidikan mengenai perbezaan antara anak syarikat Taiwan dan cawangan syarikat asing; ia bukan nasihat undang-undang mahupun cukai untuk kes konkret dan tidak menjanjikan hasil tertentu. Peraturan yang terpakai dan rawatan cukai boleh berbeza menurut lokasi pelabur dan pejabat utama, isi aktiviti, operasi dan aliran dana, syarat perjanjian dan amalan terbaharu pihak berkuasa kompeten; sebelum melaksanakan penubuhan, pelaburan, kontrak, dividen atau pindahan, sumber rasmi terbaharu dan keadaan khusus hendaklah disahkan.
 
-**Peguam Wei Tseng (曾雋崴)**
+Peguam Wei Tseng (曾雋崴)

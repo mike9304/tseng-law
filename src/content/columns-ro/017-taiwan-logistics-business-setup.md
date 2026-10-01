@@ -148,4 +148,4 @@ Munca fără permis poate atrage o amendă administrativă și un ordin de a pă
 
 Acest articol este un material educativ destinat să explice în mod general regimul juridic, și nu este un sfat pentru o cauză concretă. Cum criteriile de autorizație, formularele de cerere și practica autorității competente se pot schimba, confirmați sursele oficiale actualizate și împrejurările cauzei înainte de a executa o investiție sau un contract.
 
-**Avocata Wei Tseng (曾雋崴)**
+Avocata Wei Tseng (曾雋崴)

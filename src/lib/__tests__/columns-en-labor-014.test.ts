@@ -81,7 +81,7 @@ const internalTargets = [
 ];
 const disclaimer =
   "This article is provided for educational purposes as a general explanation of minimum-service-period clauses in Taiwan, the repayment of training costs and prepaid benefits, and resignation notice. It is not legal advice on any individual employment matter. The enforceability of a clause and the scope of liability may vary depending on the contract type and wording, the training actually provided and its cost, the purpose and disclosure of compensation, the period served, the reason employment ended, and the available evidence. Before giving notice of resignation, making a wage deduction, entering into a repayment agreement, or responding to a dispute, consult the latest official sources and consider the specific circumstances.";
-const author = "**Wei Tseng (曾雋崴), Taiwan Attorney**";
+const author = "Wei Tseng (曾雋崴), Taiwan Attorney";
 const exactEnding = `- ${internalLinks[2]}
 
 ---

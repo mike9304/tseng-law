@@ -192,4 +192,4 @@ Lựa chọn cuối cùng sẽ an toàn hơn nếu được xem xét trong đi�
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích những khác biệt chung giữa công ty con tại Đài Loan và chi nhánh của công ty nước ngoài, không phải là ý kiến pháp lý hay ý kiến về thuế cho một vụ việc cụ thể. Vì pháp luật được áp dụng và cách xử lý về thuế có thể thay đổi tùy theo nơi đặt trụ sở của nhà đầu tư và của trụ sở chính, nội dung kinh doanh, giao dịch và dòng tiền, các điều kiện áp dụng hiệp định cùng thực tiễn mới nhất của cơ quan có thẩm quyền, xin quý vị xác nhận tài liệu chính thức mới nhất và hoàn cảnh cụ thể của mình trước khi tiến hành thành lập, đầu tư, ký kết hợp đồng, chia cổ tức hoặc chuyển tiền.
 
-**Luật sư Wei Tseng (曾雋崴)**
+Luật sư Wei Tseng (曾雋崴)

@@ -191,4 +191,4 @@ Ketika menyusun dokumen menurut urutan waktu, sebaiknya Anda mencantumkan sekali
 
 Tulisan ini merupakan bahan yang bertujuan mendidik dan menjelaskan secara umum perjanjian masa kerja minimum di Taiwan, pengembalian biaya pelatihan dan pembayaran di muka, serta pemberitahuan pengunduran diri; tulisan ini bukan nasihat hukum untuk perkara ketenagakerjaan tertentu. Keabsahan perjanjian dan cakupan tanggung jawabnya dapat berbeda menurut jenis dan rumusan perjanjiannya, pelatihan dan biaya yang sesungguhnya, tujuan kompensasi dan pemberitahuannya, masa kerja, penyebab berakhirnya hubungan kerja, dan bukti yang ada. Sebelum menyampaikan pernyataan pengunduran diri, menerima pemotongan upah, menandatangani kesepakatan pengembalian, atau menghadapi sengketa, sebaiknya Anda memastikan sumber resmi terbaru dan keadaan perkara Anda sendiri.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

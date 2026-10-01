@@ -148,4 +148,4 @@ Darbam bez atļaujas var piemērot administratīvo naudas sodu un rīkojumu atst
 
 Šis raksts ir izglītojošs materiāls vispārīgai tiesiskās kārtības skaidrošanai un nav padoms par konkrētu lietu. Tā kā atļaujas sliekšņi, pieteikuma veidlapas un kompetentās iestādes prakse var mainīties, pirms ieguldījuma vai līguma izpildes pārbaudiet atjauninātos oficiālos materiālus un lietas apstākļus.
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)

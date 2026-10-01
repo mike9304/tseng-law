@@ -142,4 +142,4 @@ Du kan se kontorets arbejdsområde under [Hvilke sager vi behandler](/da/service
 
 Denne artikel er almindeligt informerende materiale til undervisningsformål om selskabsstiftelse i Taiwan (公司設立) og de dermed sammenhængende ordninger; den er ikke juridisk eller skattemæssig rådgivning i en konkret sag og lover ikke et bestemt resultat. Nødvendige procedurer og udfald kan variere efter investeringsstruktur, branche, ansøgerens nationalitet og opholdsstatus samt den kompetente myndigheds nyeste praksis; før gennemførelse af investering, kontrakt eller beskæftigelse skal de nyeste officielle kilder og de egne omstændigheder undersøges.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

@@ -93,9 +93,9 @@ Nesutinkant su ekspertizės nuomone galima prašyti peržiūros, tačiau ją gal
 
 Reikalavimas pagal Civilinio kodekso 184 straipsnį numato neteisėtą teisės pažeidimą, priežastinį ryšį su įvykiu ir žalos įrodymą. Vien tai, kad įvykis įvyko, nereiškia, kad visos toliau nurodytos eilutės pripažįstamos. Civilinio kodekso 216 straipsnis yra tikrosios žalos ir prarastos naudos (所失利益) apimties nustatymo kriterijus.
 
-- **Sužeidimas**: Pagal Civilinio kodekso 193 straipsnį galima vertinti būtinas gydymo išlaidas (醫療費用), papildomas kasdienio gyvenimo išlaidas, tokias kaip slaugos išlaidos (看護費用), kelionės išlaidos gydymui (就醫交通費) ir pagalbos priemonės, taip pat pajamų praradimą (收入損失) dėl tikro negalėjimo dirbti ir darbingumo sumažėjimą (勞動能力減損). Pagal Civilinio kodekso 195 straipsnį galima vertinti ir neturtinę žalą.
-- **Mirtis**: Pagal Civilinio kodekso 192 straipsnį, jei pagrindas atsiranda, galima vertinti gydymo išlaidas prieš mirtį ir padidėjusių gyvenimo poreikių išlaidas, laidotuvių išlaidas (殯葬費) ir išlaikymo praradimą (扶養利益損失) asmens, kuris turėjo įstatyminę teisę į išlaikymą. Pagal Civilinio kodekso 194 straipsnį galima vertinti ir tam tikrų giminaičių neturtinę žalą.
-- **Turtas**: Pagal Civilinio kodekso 196 straipsnį galima reikalauti pagrįstos tikrosios turtinės žalos, įskaitant transporto priemonės remonto išlaidas arba vertės sumažėjimą.
+- Sužeidimas: Pagal Civilinio kodekso 193 straipsnį galima vertinti būtinas gydymo išlaidas (醫療費用), papildomas kasdienio gyvenimo išlaidas, tokias kaip slaugos išlaidos (看護費用), kelionės išlaidos gydymui (就醫交通費) ir pagalbos priemonės, taip pat pajamų praradimą (收入損失) dėl tikro negalėjimo dirbti ir darbingumo sumažėjimą (勞動能力減損). Pagal Civilinio kodekso 195 straipsnį galima vertinti ir neturtinę žalą.
+- Mirtis: Pagal Civilinio kodekso 192 straipsnį, jei pagrindas atsiranda, galima vertinti gydymo išlaidas prieš mirtį ir padidėjusių gyvenimo poreikių išlaidas, laidotuvių išlaidas (殯葬費) ir išlaikymo praradimą (扶養利益損失) asmens, kuris turėjo įstatyminę teisę į išlaikymą. Pagal Civilinio kodekso 194 straipsnį galima vertinti ir tam tikrų giminaičių neturtinę žalą.
+- Turtas: Pagal Civilinio kodekso 196 straipsnį galima reikalauti pagrįstos tikrosios turtinės žalos, įskaitant transporto priemonės remonto išlaidas arba vertės sumažėjimą.
 
 ## Q8. Jei gydymas tęsiasi, kaip teikti gydymo išlaidų dokumentus?
 
@@ -363,7 +363,7 @@ Jei turite papildomų klausimų, aprašykite juos užklausos formoje kontaktų p
 
 ​
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)
 
 ---
 

@@ -93,9 +93,9 @@ Při nesouhlasu s názorem znaleckého posudku lze požádat o přezkum, ten vš
 
 Nárok založený na článku 184 občanského zákoníku předpokládá protiprávní porušení práva, příčinnou souvislost s nehodou a důkaz škody. Samotná skutečnost, že k nehodě došlo, nevede k tomu, že všechny níže uvedené položky jsou uznány. Článek 216 občanského zákoníku je kritériem stanovení rozsahu skutečné škody a ušlého prospěchu (所失利益).
 
-- **Poranění**: Podle článku 193 občanského zákoníku lze posoudit potřebné lékařské náklady (醫療費用), dodatečné náklady každodenního života, jako náklady péče (看護費用), dopravy na léčení (就醫交通費) a technické pomoci, a také ztrátu příjmů (收入損失) skutečnou neschopností práce a snížení pracovní schopnosti (勞動能力減損). Podle článku 195 občanského zákoníku lze také posoudit nemajetkovou újmu.
-- **Smrt**: Podle článku 192 občanského zákoníku, nastane-li základ, lze posoudit lékařské náklady před smrtí a náklady zvýšených životních potřeb, náklady pohřbu (殯葬費) a ztrátu výživného (扶養利益損失) osoby, která měla zákonné právo na výživné. Podle článku 194 občanského zákoníku lze také posoudit nemajetkovou újmu některých příbuzných.
-- **Majetek**: Podle článku 196 občanského zákoníku lze uplatnit odůvodněnou skutečnou majetkovou škodu, včetně nákladů opravy vozidla nebo ztráty hodnoty.
+- Poranění: Podle článku 193 občanského zákoníku lze posoudit potřebné lékařské náklady (醫療費用), dodatečné náklady každodenního života, jako náklady péče (看護費用), dopravy na léčení (就醫交通費) a technické pomoci, a také ztrátu příjmů (收入損失) skutečnou neschopností práce a snížení pracovní schopnosti (勞動能力減損). Podle článku 195 občanského zákoníku lze také posoudit nemajetkovou újmu.
+- Smrt: Podle článku 192 občanského zákoníku, nastane-li základ, lze posoudit lékařské náklady před smrtí a náklady zvýšených životních potřeb, náklady pohřbu (殯葬費) a ztrátu výživného (扶養利益損失) osoby, která měla zákonné právo na výživné. Podle článku 194 občanského zákoníku lze také posoudit nemajetkovou újmu některých příbuzných.
+- Majetek: Podle článku 196 občanského zákoníku lze uplatnit odůvodněnou skutečnou majetkovou škodu, včetně nákladů opravy vozidla nebo ztráty hodnoty.
 
 ## Q8. Trvá-li léčení, jak předkládat listiny lékařských nákladů?
 

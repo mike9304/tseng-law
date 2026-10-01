@@ -25,7 +25,7 @@ ja see erineb mõne teise õiguskorra, näiteks Korea, korrast.
 
 ​
 
-On siiski **erandlikke juhte**.
+On siiski erandlikke juhte.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Tööstandardite seadus (勞動基準法) näeb siiski ette,
 
 et töötajad, kes soovivad töölepingu lõpetada eespool nimetatud punkti 1 või punkti 6 alusel (näiteks kindlustusse mitteliitmise tõttu),
 
-peavad töölepingu lõpetama **30 päeva** jooksul päevast, mil nad olukorrast teada saavad,
+peavad töölepingu lõpetama 30 päeva jooksul päevast, mil nad olukorrast teada saavad,
 
-või (punkti 6 puhul) **30 päeva** jooksul päevast, mil nad kahju tagajärjest teada saavad.
+või (punkti 6 puhul) 30 päeva jooksul päevast, mil nad kahju tagajärjest teada saavad.
 
 Seetõttu peavad töötajad tähtaega täpselt silmas pidama.
 
@@ -89,7 +89,7 @@ lahkumishüvitise ära jätta või seda nõuda.
 
 Seetõttu on Taiwani töövaidlustes (勞資糾紛)
 
-**„ajastus“** väga tähtis.
+„ajastus“ väga tähtis.
 
 Enamasti on oma õiguste kaitsmiseks paremas seisus see pool, kes on ette valmistunud; ettevalmistus ei otsusta tulemust.
 

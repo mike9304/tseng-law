@@ -11,6 +11,7 @@ import { estimateColumnReadTimeLabel, listColumnBundles } from '@/lib/builder/co
 import type { ColumnDocument } from '@/lib/builder/columns/types';
 import { filterPublicColumnPosts } from '@/lib/builder/columns/public-post-filter';
 import { resolveColumnTopic } from '@/lib/column-topics';
+import { removeColumnBoldEmphasis } from '@/lib/column-emphasis';
 
 /**
  * Blob-aware column reader that merges file-based legal columns
@@ -108,11 +109,11 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
   );
   // Body is whatever the editor produced — prefer markdown for AI ingestion
   // since the column-knowledge stripMarkdown flow expects markdown-ish text.
-  const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
+  const content = removeColumnBoldEmphasis(doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '');
   const typography = normalizeTypography(doc.frontmatter?.typography);
   return {
     slug: doc.slug,
-    title: doc.title || doc.slug,
+    title: removeColumnBoldEmphasis(doc.title || doc.slug),
     publicationDate,
     date: dateIso,
     dateDisplay,
@@ -126,7 +127,7 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     tags: doc.frontmatter?.tags ?? [],
     featuredImage: doc.frontmatter?.featuredImage || '',
     content,
-    summary: doc.summary || '',
+    summary: removeColumnBoldEmphasis(doc.summary || ''),
     ...(typography
       ? {
           typography,
@@ -141,14 +142,14 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     doc.frontmatter.category === 'formation' || doc.frontmatter.category === 'legal' || doc.frontmatter.category === 'case'
       ? doc.frontmatter.category
       : 'legal';
-  const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
+  const content = removeColumnBoldEmphasis(doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '');
   const dateIso = doc.frontmatter.lastmod || doc.updatedAt;
   const publicationDate = parseColumnPublicationDate(doc.frontmatter.publishedAt)
     || parseColumnPublicationDate(doc.frontmatter.dateDisplay);
   const typography = normalizeTypography(doc.frontmatter.typography);
   return {
     slug: doc.slug,
-    title: doc.title || doc.slug,
+    title: removeColumnBoldEmphasis(doc.title || doc.slug),
     publicationDate,
     date: dateIso,
     dateDisplay: formatColumnPublicationDate(
@@ -166,7 +167,7 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     tags: doc.frontmatter.tags ?? [],
     featuredImage: doc.frontmatter.featuredImage || '',
     content,
-    summary: doc.summary || '',
+    summary: removeColumnBoldEmphasis(doc.summary || ''),
     ...(typography
       ? {
           typography,

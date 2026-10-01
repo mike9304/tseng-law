@@ -93,9 +93,9 @@ Jika tidak bersetuju dengan pendapat pakar itu, semakan semula boleh dipohon, te
 
 Tuntutan berdasarkan perkara 184 Kanun Sivil mengandaikan pelanggaran haram terhadap hak, kaitan sebab dengan kemalangan dan bukti kerosakan. Hakikat kemalangan berlaku semata-mata tidak bermakna semua kerugian yang disenaraikan diakui. Perkara 216 Kanun Sivil ialah kriteria untuk menentukan skop kerosakan sebenar dan kehilangan keuntungan (所失利益).
 
-- **Kecederaan**: Menurut perkara 193 Kanun Sivil boleh diteliti kos perubatan (醫療費用) yang diperlukan, kos tambahan kehidupan harian seperti kos jagaan (看護費用), kos perjalanan untuk rawatan (就醫交通費) dan alat bantu, serta kehilangan pendapatan (收入損失) kerana ketidakupayaan kerja sebenar dan pengurangan keupayaan kerja (勞動能力減損). Menurut perkara 195 Kanun Sivil pampasan penderitaan juga boleh diteliti.
-- **Kematian**: Menurut perkara 192 Kanun Sivil, apabila berkenaan, boleh diteliti kos perubatan sebelum kematian dan kos keperluan hidup yang meningkat, kos pengebumian (殯葬費) dan kehilangan nafkah (扶養利益損失) orang yang mempunyai hak berkanun kepada nafkah. Menurut perkara 194 Kanun Sivil pampasan penderitaan saudara tertentu juga boleh diteliti.
-- **Harta**: Menurut perkara 196 Kanun Sivil boleh dituntut kerosakan harta sebenar yang dibuktikan, termasuk kos pembaikan kenderaan atau kehilangan nilai.
+- Kecederaan: Menurut perkara 193 Kanun Sivil boleh diteliti kos perubatan (醫療費用) yang diperlukan, kos tambahan kehidupan harian seperti kos jagaan (看護費用), kos perjalanan untuk rawatan (就醫交通費) dan alat bantu, serta kehilangan pendapatan (收入損失) kerana ketidakupayaan kerja sebenar dan pengurangan keupayaan kerja (勞動能力減損). Menurut perkara 195 Kanun Sivil pampasan penderitaan juga boleh diteliti.
+- Kematian: Menurut perkara 192 Kanun Sivil, apabila berkenaan, boleh diteliti kos perubatan sebelum kematian dan kos keperluan hidup yang meningkat, kos pengebumian (殯葬費) dan kehilangan nafkah (扶養利益損失) orang yang mempunyai hak berkanun kepada nafkah. Menurut perkara 194 Kanun Sivil pampasan penderitaan saudara tertentu juga boleh diteliti.
+- Harta: Menurut perkara 196 Kanun Sivil boleh dituntut kerosakan harta sebenar yang dibuktikan, termasuk kos pembaikan kenderaan atau kehilangan nilai.
 
 ## Q8. Jika rawatan berterusan, bagaimana mengemukakan dokumen kos perubatan?
 

@@ -142,4 +142,4 @@ El ámbito de trabajo relacionado puede consultarse en [Asuntos que atendemos](/
 
 Este artículo es información jurídica general con fines educativos sobre la constitución de sociedades en Taiwán y el régimen conexo; no es asesoramiento para un caso concreto y no garantiza un resultado. Como los trámites necesarios y el resultado pueden variar según la estructura de inversión, el sector, la nacionalidad y el estatuto de estancia del solicitante, y la práctica más reciente de la autoridad competente, confirme las fuentes oficiales actualizadas y las circunstancias del asunto antes de ejecutar una inversión, un contrato o una contratación.
 
-**Abogada Wei Tseng (曾雋崴)**
+Abogada Wei Tseng (曾雋崴)

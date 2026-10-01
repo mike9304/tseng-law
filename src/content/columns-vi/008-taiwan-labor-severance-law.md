@@ -40,9 +40,9 @@ Trong trường hợp người lao động tự xin nghỉ việc (自請離職)
 
 Tuy nhiên, nếu người lao động có hành vi vi phạm pháp luật,
 
-**vi phạm nội quy lao động,**
+vi phạm nội quy lao động,
 
-**hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày,**
+hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày,
 
 công ty có thể sa thải người lao động mà không phải chi trả trợ cấp thôi việc.
 
@@ -52,7 +52,7 @@ Bảng dưới đây tóm tắt các hình thức chấm dứt hợp đồng.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Loại** | **Cho thôi việc vì lý do kinh tế**  **資遣員工(經濟解僱)** | **Sa thải kỷ luật**  **解僱員工(懲戒解僱)** | **Người lao động tự xin nghỉ việc**  **員工自請離職** |
+| Loại | Cho thôi việc vì lý do kinh tế  資遣員工(經濟解僱) | Sa thải kỷ luật  解僱員工(懲戒解僱) | Người lao động tự xin nghỉ việc  員工自請離職 |
 | Ý nghĩa | Khi người sử dụng lao động cần điều chỉnh nhân sự do tình hình kinh doanh, nguyên nhân đó phát sinh từ phạm vi kinh doanh của người sử dụng lao động chứ không thuộc trách nhiệm của người lao động. Vì vậy, người sử dụng lao động phải tuân thủ thời hạn báo trước (預告期間) và có nghĩa vụ chi trả trợ cấp thôi việc, qua đó bù đắp một cách cân bằng những bất lợi mà người lao động phải gánh chịu. | Khi người lao động có hành vi vi phạm pháp luật hoặc hành vi không đúng đắn, người sử dụng lao động được chấm dứt hợp đồng lao động (勞動契約) ngay lập tức mà không cần báo trước, và không phải chi trả trợ cấp thôi việc. Đây là một biểu hiện của quyền kỷ luật của người sử dụng lao động. | Người lao động có quyền tự do chấm dứt hợp đồng vào bất cứ lúc nào, nhưng phải tuân thủ thời hạn báo trước tương ứng với thâm niên công tác (年資) của mình, để người sử dụng lao động có thể sắp xếp bàn giao công việc và tìm người thay thế. |
 | Điều kiện | Có  (Điều 11 Luật Tiêu chuẩn Lao động Đài Loan) | Có  (Điều 12 Luật Tiêu chuẩn Lao động Đài Loan) | Không |
 | Báo trước | Cần báo trước | Không cần báo trước | Cần báo trước |
@@ -194,17 +194,17 @@ Khi công ty bắt bẻ những lỗi nhỏ của người lao động,
 
 hoặc điều chuyển người lao động sang một vị trí bất thường,
 
-**quý vị phải lưu giữ chứng cứ.**
+quý vị phải lưu giữ chứng cứ.
 
-**Bảng chấm công thể hiện việc đi làm bình thường của mình,**
+Bảng chấm công thể hiện việc đi làm bình thường của mình,
 
-**bảng ghi giờ làm thêm, hồ sơ về thành tích công việc,**
+bảng ghi giờ làm thêm, hồ sơ về thành tích công việc,
 
-**nội quy công ty, các thư điện tử trao đổi với đồng nghiệp và cấp trên,**
+nội quy công ty, các thư điện tử trao đổi với đồng nghiệp và cấp trên,
 
-**cùng với việc ghi âm các cuộc nói chuyện với cấp trên,**
+cùng với việc ghi âm các cuộc nói chuyện với cấp trên,
 
-**đều là những chứng cứ có lợi cho mình mà quý vị cần lưu giữ.**
+đều là những chứng cứ có lợi cho mình mà quý vị cần lưu giữ.
 
 ​
 

@@ -40,9 +40,9 @@ Kıdem tazminatı ödeme yükümlülüğü ancak şirket çalışanı işten ç�
 
 Ancak çalışan hukuka aykırı bir fiil işlerse,
 
-**şirket kurallarını (工作規則) ihlal ederse,**
+şirket kurallarını (工作規則) ihlal ederse,
 
-**veya neden olmadan 3 gün üst üste işe gelmezse (曠工),**
+veya neden olmadan 3 gün üst üste işe gelmezse (曠工),
 
 şirket kıdem tazminatı ödemeden işten çıkarabilir.
 
@@ -52,7 +52,7 @@ Aşağıdaki tablo üç sona erme türünü karşılaştırır.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Tür** | **Ekonomik işten çıkarma (資遣員工(經濟解僱))** | **Disiplin nedeniyle işten çıkarma (解僱員工(懲戒解僱))** | **Çalışanın kendi isteğiyle istifası (員工自請離職)** |
+| Tür | Ekonomik işten çıkarma (資遣員工(經濟解僱)) | Disiplin nedeniyle işten çıkarma (解僱員工(懲戒解僱)) | Çalışanın kendi isteğiyle istifası (員工自請離職) |
 | Anlam | İşverende işletme durumuna göre personel ayarlama ihtiyacı varsa, neden işverenin işletme alanında doğmuştur ve çalışanın sorumluluğunda değildir. Bu yüzden işveren bildirim süresine (預告期間) uymalı ve çalışanın sakıncalarını dengeli biçimde telafi etmek için kıdem tazminatı ödemelidir. | Çalışan hukuka aykırı veya uygunsuz bir fiil işlerse işveren, önceden bildirim olmadan iş sözleşmesini (勞動契約) derhal sona erdirebilir ve kıdem tazminatı ödemek zorunda değildir. Bu, işverenin disiplin yetkilerinden biridir. | Çalışan sözleşmeyi her an sona erdirmekte özgürdür; ancak istihdam süresine göre bildirim süresine uymalıdır ki işveren teslimi yapabilsin ve yerine birini arayabilsin. |
 | Şartlar | Var  (Tayvan İş Standartları Kanununun 11. maddesi) | Var  (Tayvan İş Standartları Kanununun 12. maddesi) | Yok |
 | Önceden bildirim | Gerekli | Gerekli değil | Gerekli |
@@ -194,17 +194,17 @@ aşırı talepler yöneltirse
 
 veya çalışanları tuhaf görevlere naklederse,
 
-**delil saklanmalıdır.**
+delil saklanmalıdır.
 
-**Olağan devam kayıtlarınız,**
+Olağan devam kayıtlarınız,
 
-**fazla mesai kayıtları, performans kayıtları,**
+fazla mesai kayıtları, performans kayıtları,
 
-**şirket kuralları, meslektaşlar ve üstlerle e-posta yazışmaları**
+şirket kuralları, meslektaşlar ve üstlerle e-posta yazışmaları
 
-**ve üstlerle görüşme kayıtları —**
+ve üstlerle görüşme kayıtları —
 
-**size elverişli delilleri saklayın.**
+size elverişli delilleri saklayın.
 
 ​
 

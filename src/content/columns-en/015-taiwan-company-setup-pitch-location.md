@@ -47,7 +47,7 @@ If the inquiry result shows that restaurant use is not permitted, the city gover
 
 Please therefore take care.
 
-**Q. Must every type of business use the "Business Location Prior Inquiry" system to check whether it may operate at a particular location?**
+Q. Must every type of business use the "Business Location Prior Inquiry" system to check whether it may operate at a particular location?
 
 We recommend that every type of business use the "Business Location Prior Inquiry" system to confirm whether it may operate at the proposed location.
 
@@ -57,7 +57,7 @@ In practice, therefore, it is not necessary to conduct an inquiry for every busi
 
 Under the "[Taipei City Business Location Assisted Inquiry Service Operating Guidelines](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) and the city's current notice,
 
-since January 1, 2023 an application to register the establishment, relocation, or addition of business items of a company or business (including branches and sub-branch offices) **must** attach the business-location pre-inquiry result, whatever the business item.
+since January 1, 2023 an application to register the establishment, relocation, or addition of business items of a company or business (including branches and sub-branch offices) must attach the business-location pre-inquiry result, whatever the business item.
 
 The list of "business items subject to proactive inquiry" (主動查詢之營業項目) below covers the items the Department of Commerce queries on its own initiative during registration review (隨案主動查詢) when the application names such an item but the attached inquiry result omits it; an item absent from this list is not exempt from the inquiry.
 
@@ -78,4 +78,4 @@ Administrative agency rules may change frequently, so it is advisable to confirm
 > - [Korean-Speaking Taiwan Lawyer](/en/korean-lawyer-in-taiwan)
 > - [Taiwan Company Formation Lawyer Guide](/en/taiwan-company-setup-lawyer)
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**
+Wei Tseng (曾雋崴), Taiwan Attorney

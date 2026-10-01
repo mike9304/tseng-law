@@ -142,4 +142,4 @@ Pode consultar-se o âmbito de atividade respetivo em [Assuntos que tratamos](/p
 
 O presente artigo é um documento de informação geral para fins educativos sobre a constituição de sociedade em Taiwan e as regras conexas; não constitui um conselho jurídico ou fiscal num assunto concreto e não promete um resultado determinado. Os procedimentos necessários e os resultados podem variar segundo a estrutura de investimento, o setor, a nacionalidade e o estatuto de residência do requerente, bem como a prática mais recente da autoridade competente; antes de executar um investimento, um contrato ou um emprego, convém examinar as fontes oficiais mais recentes e as circunstâncias próprias do assunto.
 
-**Advogada Wei Tseng (曾雋崴)**
+Advogada Wei Tseng (曾雋崴)

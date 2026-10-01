@@ -25,7 +25,7 @@ ne može da primi otpremninu (資遣費) (član 18 Zakona o radnim standardima),
 
 ​
 
-Postoje međutim **izuzetni slučajevi**.
+Postoje međutim izuzetni slučajevi.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Zakon o radnim standardima (勞動基準法) međutim predviđa da,
 
 ako zaposleni želi da raskine ugovor o radu na osnovu tačke 1 ili 6 gore (na primer da raskine ugovor zbog neupisivanja u osiguranje),
 
-mora da raskine ugovor o radu u roku od **30 dana** od dana kada je saznao tu situaciju,
+mora da raskine ugovor o radu u roku od 30 dana od dana kada je saznao tu situaciju,
 
-ili, kod tačke 6, u roku od **30 dana** od dana kada je saznao posledicu štete.
+ili, kod tačke 6, u roku od 30 dana od dana kada je saznao posledicu štete.
 
 Zaposleni zato mora da pazi na taj rok.
 
@@ -89,7 +89,7 @@ ta strana može ili da ne isplati otpremninu, ili da je zahteva.
 
 U radnim sporovima (勞資糾紛) na Tajvanu vreme je odlučujuće.
 
-„**Vreme**” je veoma važno.
+„Vreme” je veoma važno.
 
 U većini slučajeva bolje je zaštićena strana koja se pripremi unapred.
 

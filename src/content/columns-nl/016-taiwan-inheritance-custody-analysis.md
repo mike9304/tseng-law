@@ -151,4 +151,4 @@ Op de officiële reglementeringspagina’s bevestigt men de hervormingsdatum en 
 
 Dit artikel geeft algemene educatieve informatie over het erfrecht, het huwelijksvermogensstelsel, het ouderlijk gezag en de voogdij over minderjarigen in Taiwan (民法); het is geen juridisch advies voor een concreet dossier van nalatenschap of van familie. Het toepasselijke recht, de procedure en het resultaat kunnen variëren volgens de kring van de erfgenamen, het testament, het vermogen en de schulden, het huwelijksstelsel, de bestaande rechterlijke beslissingen en de internationale elementen. Vóór het berekenen van termijnen zoals de verwerping of de fiscale aangifte, of het beschikken over het vermogen, bevestigt men de meest recente officiële bronnen en de individuele omstandigheden.
 
-**Advocaat Wei Tseng (曾雋崴)**
+Advocaat Wei Tseng (曾雋崴)

@@ -40,9 +40,9 @@ Siger arbejdstageren selv op, behøver selskabet ikke at udbetale godtgørelse v
 
 Begår arbejdstageren et retsbrud, kan selskabet afskedige uden godtgørelse ved afskedigelse.
 
-**Krænker vedkommende interne regler (工作規則), gælder det samme.**
+Krænker vedkommende interne regler (工作規則), gælder det samme.
 
-**Udebliver vedkommende uden grund 3 dage i træk fra arbejdet (曠工), gælder det samme.**
+Udebliver vedkommende uden grund 3 dage i træk fra arbejdet (曠工), gælder det samme.
 
 Selskabet kan da afskedige uden at udbetale godtgørelse ved afskedigelse.
 
@@ -52,7 +52,7 @@ Det sammenfattes i tabellen nedenfor.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Art** | **Økonomisk afskedigelse (資遣員工, 經濟解僱)** | **Disciplinær afskedigelse (解僱員工, 懲戒解僱)** | **Arbejdstagerens egen opsigelse (員工自請離職)** |
+| Art | Økonomisk afskedigelse (資遣員工, 經濟解僱) | Disciplinær afskedigelse (解僱員工, 懲戒解僱) | Arbejdstagerens egen opsigelse (員工自請離職) |
 | Betydning | Består der hos arbejdsgiveren på grund af forretningssituationen behov for personaletilpasning, ligger grunden i arbejdsgiverens virksomhedsområde og ikke i arbejdstagerens ansvar. Derfor skal arbejdsgiveren overholde varselsfristen (預告期間) og udbetale godtgørelse ved afskedigelse, så arbejdstagerens ulemper udlignes afbalanceret. | Begår arbejdstageren en retsstridig eller upassende handling, kan arbejdsgiveren straks bringe arbejdsaftalen (勞動契約) til ophør uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Dette er 1 af arbejdsgiverens disciplinærbeføjelser. | Arbejdstageren er fri til når som helst at bringe aftalen til ophør, men skal efter ansættelsens varighed overholde varselsfristen, så arbejdsgiveren kan søge overdragelse og erstatning. |
 | Vilkår | Ja  (artikel 11 i den taiwanske lov om arbejdsnormer) | Ja  (artikel 12 i den taiwanske lov om arbejdsnormer) | Ingen |
 | Forudgående varsel | Påkrævet | Ikke påkrævet | Påkrævet |
@@ -194,17 +194,17 @@ Det kan stille overdrevne krav.
 
 Det kan omplacere medarbejdere til mærkelige stillinger.
 
-**Du skal sikre beviser.**
+Du skal sikre beviser.
 
-**Gem dine normale fremmøderegistre.**
+Gem dine normale fremmøderegistre.
 
-**Gem overarbejdsregistre og præstationsregistre.**
+Gem overarbejdsregistre og præstationsregistre.
 
-**Gem interne regler og e-mailudveksling med kolleger og overordnede.**
+Gem interne regler og e-mailudveksling med kolleger og overordnede.
 
-**Gem samtaleoptagelser med overordnede.**
+Gem samtaleoptagelser med overordnede.
 
-**Sikr de beviser, der taler til din fordel.**
+Sikr de beviser, der taler til din fordel.
 
 ​
 

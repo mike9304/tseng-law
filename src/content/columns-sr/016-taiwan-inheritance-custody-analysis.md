@@ -151,4 +151,4 @@ Na službenim stranicama propisa treba proveriti dan izmene i dan stupanja na sn
 
 Ovaj članak je obrazovni materijal namenjen opštem objašnjenju režima nasleđivanja, bračnog imovinskog režima, roditeljske odgovornosti i starateljstva nad maloletnim licem na Tajvanu; nije pravni savet u konkretnoj naslednoj ili porodičnoj stvari. Merodavno pravo, postupak i rezultat mogu se razlikovati prema krugu naslednika, testamentu, imovini i dugovima, bračnom imovinskom režimu, postojećim sudskim odlukama i međunarodnim elementima. Pre izračunavanja rokova, kao što je odricanje ili poreska prijava, ili pre raspolaganja imovinom, proverite najnoviju službenu dokumentaciju i pojedinačne okolnosti.
 
-**Advokatkinja Wei Tseng (曾雋崴)**
+Advokatkinja Wei Tseng (曾雋崴)

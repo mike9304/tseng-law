@@ -25,7 +25,7 @@ at ito ay naiiba sa ilang bansa (halimbawa ang Korea); huwag itumbas ang 資遣�
 
 ​
 
-Ngunit may mga **eksepsiyonal na sitwasyon**.
+Ngunit may mga eksepsiyonal na sitwasyon.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Gayunman, itinatakda ng Batas sa mga Pamantayan sa Paggawa na
 
 kung nais ng manggagawa na wakasan ang kontrata sa paggawa batay sa bilang 1 o bilang 6 sa itaas (halimbawa, dahil hindi siya ipinatala sa insurance),
 
-kailangan niyang wakasan ito sa loob ng **30 araw** mula nang malaman niya ang naturang sitwasyon,
+kailangan niyang wakasan ito sa loob ng 30 araw mula nang malaman niya ang naturang sitwasyon,
 
-o, sa kaso ng bilang 6, sa loob ng **30 araw** mula nang malaman niya ang naging pinsala.
+o, sa kaso ng bilang 6, sa loob ng 30 araw mula nang malaman niya ang naging pinsala.
 
 Kaya't kailangang bantayang mabuti ng manggagawa ang panahon.
 
@@ -89,7 +89,7 @@ ang siyang makatatangging magbayad o makahihingi ng separation pay.
 
 Kaya nga sa mga alitan sa paggawa dito sa Taiwan,
 
-napakahalaga ang **panahon**.
+napakahalaga ang panahon.
 
 Sa maraming kaso, mas napoprotektahan ang karapatan ng panig na maagang nagtipon ng ebidensya at sumunod sa taning; hindi ito katiyakan ng resulta.
 

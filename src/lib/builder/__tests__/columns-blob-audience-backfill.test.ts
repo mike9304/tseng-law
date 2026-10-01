@@ -22,9 +22,9 @@ describe('published column copies keep file-only recommendation metadata', () =>
           version: 1,
           slug: 'taiwan-income-tax-residency',
           locale: 'ko',
-          title: '대만 세법상 거주자 판단',
-          summary: 'published copy without audience',
-          bodyMarkdown: '본문',
+          title: '**대만 세법상 거주자 판단**',
+          summary: '**published copy** without audience',
+          bodyMarkdown: '**본문** [출처](https://example.com)',
           bodyHtml: '<p>본문</p>',
           linkedSlugs: {},
           frontmatter: {
@@ -57,6 +57,8 @@ describe('published column copies keep file-only recommendation metadata', () =>
       const posts = await getAllColumnPostsIncludingBlob('ko');
       const shadowed = posts.find((post) => post.slug === 'taiwan-income-tax-residency');
       expect(shadowed?.summary).toBe('published copy without audience');
+      expect(shadowed?.title).toBe('대만 세법상 거주자 판단');
+      expect(shadowed?.content).toBe('본문 [출처](https://example.com)');
       expect(shadowed).toMatchObject({ audience: ['ko'], aiAuthored: true, columnNumber: 24 });
       // Same-day ties go to the higher column number: the last 2026-09-30 ko column (048) leads.
       expect(prioritizeRecommendedColumns('ko', posts)[0]?.slug).toBe(expertiseSlugsFor('ko').at(-1));

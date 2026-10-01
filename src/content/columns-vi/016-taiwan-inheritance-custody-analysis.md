@@ -151,4 +151,4 @@ Trên các trang pháp quy chính thức, quý vị hãy xác nhận ngày sửa
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích một cách khái quát chế độ thừa kế, chế độ tài sản vợ chồng, quyền và nghĩa vụ đối với con chưa thành niên cùng chế độ giám hộ người chưa thành niên tại Đài Loan, không phải ý kiến tư vấn pháp lý cho một vụ việc thừa kế hay một việc gia đình cụ thể. Luật được áp dụng, thủ tục và kết quả có thể khác nhau tùy theo phạm vi những người thừa kế, di chúc, tài sản và các khoản nợ, chế độ tài sản trong hôn nhân, các bản án, quyết định đã có của tòa án và các yếu tố quốc tế. Trước khi tính những thời hạn như việc từ chối nhận di sản hay việc kê khai thuế, hoặc trước khi định đoạt tài sản, xin quý vị xác nhận tài liệu chính thức mới nhất cùng các tình tiết của riêng mình.
 
-**Luật sư Wei Tseng (曾雋崴)**
+Luật sư Wei Tseng (曾雋崴)

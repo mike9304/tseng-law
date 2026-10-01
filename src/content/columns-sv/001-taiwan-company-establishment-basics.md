@@ -142,4 +142,4 @@ Du kan se det berörda verksamhetsområdet under [Vilka ärenden vi behandlar](/
 
 Den här artikeln är allmän information i utbildningssyfte om bolagsbildning i Taiwan och tillhörande regler; den utgör inte juridisk eller skatterättslig rådgivning i ett konkret ärende och utlovar inget visst resultat. Nödvändiga förfaranden och utfall kan variera beroende på investeringsstruktur, bransch, sökandens nationalitet och vistelsestatus samt den behöriga myndighetens senaste praxis; före genomförande av investering, avtal eller anställning ska de senaste officiella källorna och de egna omständigheterna prövas.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

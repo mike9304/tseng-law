@@ -25,9 +25,9 @@ Níže uvedené otázky a odpovědi připravila advokátka Wei Tseng (曾雋崴)
 
 ​
 
-**1. Na co dát pozor při převodu kapitálu (資本額) z Koreje na přípravný účet tchajwanské společnosti (公司籌備處帳戶)? (tento bod se týká korejského režimu a korejské bankovní praxe)**
+1. Na co dát pozor při převodu kapitálu (資本額) z Koreje na přípravný účet tchajwanské společnosti (公司籌備處帳戶)? (tento bod se týká korejského režimu a korejské bankovní praxe)
 
-Zásadně banky v Koreji vyžadují, aby se investor **osobně** dostavil do banky v Koreji a převedl prostředky z účtu vedeného na vlastní jméno.
+Zásadně banky v Koreji vyžadují, aby se investor osobně dostavil do banky v Koreji a převedl prostředky z účtu vedeného na vlastní jméno.
 
 Převod internetovým bankovnictvím nebo prostřednictvím příbuzného v Koreji není možný.
 
@@ -35,9 +35,9 @@ Dále, podle korejských předpisů o devizové kontrole, osoba s korejskou stá
 
 Před převodem kapitálu (資本金匯款) se informujte u své hlavní banky v Koreji.
 
-**​**
+​
 
-**2. Při vkladu základního kapitálu, lze převést nové tchajwanské dolary (新臺幣, TWD) z osobního účtu na Tchaj-wanu na přípravný účet tchajwanské společnosti?**
+2. Při vkladu základního kapitálu, lze převést nové tchajwanské dolary (新臺幣, TWD) z osobního účtu na Tchaj-wanu na přípravný účet tchajwanské společnosti?
 
 Je to možné, avšak je třeba předložit listiny potvrzující původ prostředků v tchajwanských dolarech získaných na Tchaj-wanu.
 
@@ -47,9 +47,9 @@ Jde-li o dividendy a zisky z investice do podniku na Tchaj-wanu, je třeba před
 
 Nastane-li převod z bankovního účtu v Koreji, není třeba připojovat listiny o původu prostředků.
 
-**​**
+​
 
-**3. Po připsání kapitálu na přípravný účet, kdy jej lze přeměnit na řádný účet společnosti (正式公司帳戶)?**
+3. Po připsání kapitálu na přípravný účet, kdy jej lze přeměnit na řádný účet společnosti (正式公司帳戶)?
 
 Zásadně to lze po obdržení listin o zápisu právnické osoby (法人登記文件).
 
@@ -57,17 +57,17 @@ Odpovědná osoba (負責人) poté v bance přemění přípravný účet spole
 
 Protože se však vnitřní pravidla jednotlivých bank (銀行) liší, je-li třeba kapitál použít naléhavě, je vhodné se nejprve obrátit na banku.
 
-**​**
+​
 
-**4. Po přeměně přípravného účtu na řádný účet, lze internetové bankovnictví používat ihned?**
+4. Po přeměně přípravného účtu na řádný účet, lze internetové bankovnictví používat ihned?
 
 Záleží na bance; zásadně je potřeba alespoň číslo mobilního telefonu.
 
 Některé banky mohou ukládat další požadavky, například dobu používání účtu nejméně 6 měsíců po založení.
 
-**​**
+​
 
-**5. Může společnost zaměstnávat cizince (včetně osob s korejskou státní příslušností)?**
+5. Může společnost zaměstnávat cizince (včetně osob s korejskou státní příslušností)?
 
 A. První zaměstnanec: vedoucí podniku běžné investice zámořských Číňanů nebo cizinců (一般僑外投資事業主管工作). Kritérium „práce odborné nebo technické povahy“ z bodu B níže se neuplatní, avšak uplatní se předpoklady adresáta, včetně předpokladu vedoucího (經理人) společnosti, jejíž vklad zámořských Číňanů nebo cizinců přesahuje 1/3, a také předpoklady výsledků zaměstnavatele týkající se kapitálu a obratu (články 38 a 39 norem přezkumu).
 

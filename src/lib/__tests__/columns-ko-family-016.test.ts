@@ -74,7 +74,7 @@ const internalLinks = [
 ];
 const disclaimer =
   '이 글은 대만의 상속, 부부재산제, 친권과 미성년후견 제도를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 상속·가사 사건에 대한 법률 자문이 아닙니다. 상속인의 범위, 유언, 재산과 채무, 혼인재산제, 기존 법원 재판 및 국제적 요소에 따라 적용 법률, 절차와 결과가 달라질 수 있습니다. 상속포기·세무신고 등 기한을 계산하거나 재산을 처분하기 전에 최신 공식 자료와 개별 사정을 확인하시기 바랍니다.';
-const author = '**증준외 변호사(曾雋崴, Wei Tseng)**';
+const author = '증준외 변호사(曾雋崴, Wei Tseng)';
 
 function firstParagraphAfter(content: string, heading: string) {
   return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
@@ -289,7 +289,7 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
       `${raw.slice(0, raw.indexOf(disclaimer))}${disclaimer}\n\n${author}`,
     );
     expect(raw.trimEnd()).toMatch(
-      /확인하시기 바랍니다\.\n\n\*\*증준외 변호사\(曾雋崴, Wei Tseng\)\*\*$/,
+      /확인하시기 바랍니다\.\n\n증준외 변호사\(曾雋崴, Wei Tseng\)$/,
     );
   });
 

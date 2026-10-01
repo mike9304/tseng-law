@@ -191,4 +191,4 @@ Sakārtojot materiālus hronoloģiskā kārtībā, ir lietderīgi kopīgi norād
 
 Šis raksts ir izglītojošs materiāls vispārīgai nolīguma par minimālo nostrādājamo laiku Taivānā, apmācības izmaksu un avansā izmaksātā labuma atdošanas un aiziešanas paziņojuma termiņa skaidrošanai; tas nav juridisks atzinums par konkrētu darba lietu. Nolīguma spēkā esamība un atbildības apjoms var atšķirties pēc līguma veida un teksta, faktiskās apmācības un izmaksām, kompensācijas mērķa un tā paziņojuma, darba laika, izbeigšanas iemesla un pierādījumiem. Pirms aiziešanas izteikuma, algas ieturējuma pieņemšanas, atdošanas vienošanās vai reakcijas uz strīdu jāpārbauda jaunākie oficiālie materiāli un atsevišķie apstākļi.
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)

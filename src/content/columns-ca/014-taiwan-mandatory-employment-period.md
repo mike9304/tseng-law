@@ -191,4 +191,4 @@ En ordenar les dades en ordre temporal, convé indicar conjuntament la data de c
 
 Aquest article té una finalitat divulgativa i explica de manera general el pacte de període mínim de treball a Taiwan, la devolució de la despesa de formació i de la prestació anticipada i el preavís de dimissió; no és assessorament jurídic per a un assumpte laboral concret. La validesa del pacte i l’abast de la responsabilitat poden variar segons el tipus i el tenor del contracte, la formació i el cost reals, la finalitat de la compensació i la seva comunicació, el període de treball, la causa d’extinció i les proves. Abans de formular la dimissió, d’acceptar un descompte salarial, de pactar una devolució o de respondre a un litigi, convé confirmar les fonts oficials més recents i les circumstàncies individuals.
 
-**Advocada Wei Tseng (曾雋崴)**
+Advocada Wei Tseng (曾雋崴)

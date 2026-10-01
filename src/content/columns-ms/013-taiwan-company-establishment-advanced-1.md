@@ -17,13 +17,13 @@ Baru-baru ini, ramai orang telah berjaya menubuhkan syarikat (公司) di Taiwan 
 
 Soalan yang kerap diajukan semasa penubuhan dikumpulkan di bawah.
 
-Mereka yang telah membaca [**asas penubuhan syarikat**](/ms/columns/taiwan-company-establishment-basics) kemudian boleh merujuk juga kepada bahagian mendalam yang lebih terperinci ini.
+Mereka yang telah membaca [asas penubuhan syarikat](/ms/columns/taiwan-company-establishment-basics) kemudian boleh merujuk juga kepada bahagian mendalam yang lebih terperinci ini.
 
 Soalan dan jawapan berikut bertujuan membantu orang yang merancang menubuhkan syarikat di Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Saya ingin menubuhkan syarikat, tetapi belum menemui alamat pendaftaran. Adakah penubuhan tetap mungkin?**
+1. Saya ingin menubuhkan syarikat, tetapi belum menemui alamat pendaftaran. Adakah penubuhan tetap mungkin?
 
 Apabila orang asing menubuhkan syarikat di Taiwan, ia mesti mengemukakan pelan pelaburan (投資計畫書) kepada Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi (經濟部投資審議司) bagi tujuan semakan.
 
@@ -43,7 +43,7 @@ Sudah dalam bahagian asas, seorang pembaca menyatakan bahawa pembukaan akaun ial
 
 Kerana kes pengubahan wang haram (洗錢) banyak di Taiwan, pembukaan akaun bank menjadi semakin ketat.
 
-**Nasihat:**
+Nasihat:
 
 Kerana semakan pelan pelaburan juga mengambil masa,
 
@@ -57,13 +57,13 @@ masih cukup masa untuk membuka akaun persediaan di bank dan memindahkan modal.
 
 ​
 
-**2. Bolehkah membuka akaun syarikat di bank walaupun tanpa kad kediaman Taiwan?**
+2. Bolehkah membuka akaun syarikat di bank walaupun tanpa kad kediaman Taiwan?
 
 Ini mungkin.
 
 Bank menuntut pada umumnya pengesahan identiti berganda,
 
-dan tanpa kad kediaman, anda boleh memohon di pentadbiran imigresen Taiwan “**borang data asas nombor pengenalan seragam**” (統一證號基本資料表).
+dan tanpa kad kediaman, anda boleh memohon di pentadbiran imigresen Taiwan “borang data asas nombor pengenalan seragam” (統一證號基本資料表).
 
 Pengeluaran mungkin pada hari yang sama,
 
@@ -71,7 +71,7 @@ tetapi pentadbiran imigresen (移民署) sangat sesak; maka sebaiknya tiba awal 
 
 ​
 
-**3. Saya mendengar bahawa, semasa semakan pelan pelaburan, perlu dinyatakan pendidikan dan pengalaman profesional, dan saya bimbang bahawa pendidikan dan pengalaman saya tidak sepadan dengan sektor syarikat yang ingin saya tubuhkan.**
+3. Saya mendengar bahawa, semasa semakan pelan pelaburan, perlu dinyatakan pendidikan dan pengalaman profesional, dan saya bimbang bahawa pendidikan dan pengalaman saya tidak sepadan dengan sektor syarikat yang ingin saya tubuhkan.
 
 Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi memang meneliti latar belakang pelabur,
 
@@ -85,13 +85,13 @@ Mengenai titik ini, bincangkan dengan teliti bersama peguam di Taiwan.
 
 ​
 
-**4. Titik apa yang perlu diperhatikan apabila alamat pendaftaran syarikat (contohnya premis restoran) diambil sewa?**
+4. Titik apa yang perlu diperhatikan apabila alamat pendaftaran syarikat (contohnya premis restoran) diambil sewa?
 
-Penubuhan syarikat berlangsung sekitar **3 bulan**, pemerolehan permit kerja (工作許可) dan kad kediaman sekitar **1 bulan**,
+Penubuhan syarikat berlangsung sekitar 3 bulan, pemerolehan permit kerja (工作許可) dan kad kediaman sekitar 1 bulan,
 
 maka anda mesti menetapkan permulaan kontrak selewat mungkin.
 
-Selain itu, dalam kontrak sewa premis kedai di Taiwan, tuan rumah kerap memberi penyewa “**tempoh pengubahsuaian**” (裝潢期間).
+Selain itu, dalam kontrak sewa premis kedai di Taiwan, tuan rumah kerap memberi penyewa “tempoh pengubahsuaian” (裝潢期間).
 
 Ini ialah tempoh yang dikecualikan sewa; anda boleh merundingkannya.
 
@@ -107,7 +107,7 @@ anda boleh, jika perlu, mencadangkan supaya kontrak sewa dibuat secara notari (�
 
 ​
 
-**5. Bolehkah, semasa penubuhan syarikat, menyewa ruang pejabat komersial?**
+5. Bolehkah, semasa penubuhan syarikat, menyewa ruang pejabat komersial?
 
 Ini bergantung pada item perniagaan (營業項目) syarikat.
 

@@ -40,9 +40,9 @@ Jika pekerja meletakkan jawatan sendiri, syarikat tidak perlu membayar pampasan 
 
 Jika pekerja bagaimanapun melakukan perbuatan yang dilarang undang-undang,
 
-**melanggar peraturan dalaman (工作規則),**
+melanggar peraturan dalaman (工作規則),
 
-**atau tidak hadir kerja tanpa sebab 3 hari berturut-turut (曠工),**
+atau tidak hadir kerja tanpa sebab 3 hari berturut-turut (曠工),
 
 syarikat boleh memberhentikan tanpa membayar pampasan pemberhentian.
 
@@ -52,7 +52,7 @@ Saya merumuskan ini dalam jadual ringkas.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Jenis** | **Pemberhentian ekonomi**  **資遣** **員工(經濟解僱)** | **Pemberhentian disiplin**  **解僱** **員工(懲戒解僱)** | **Peletakan jawatan sendiri pekerja**  **員工自請離職** |
+| Jenis | Pemberhentian ekonomi  資遣 員工(經濟解僱) | Pemberhentian disiplin  解僱 員工(懲戒解僱) | Peletakan jawatan sendiri pekerja  員工自請離職 |
 | Makna | Jika terdapat, pada majikan, keperluan penyesuaian kakitangan kerana keadaan perniagaan, sebab terletak dalam bidang keusahawanan majikan dan bukan dalam tanggungjawab pekerja. Itulah sebabnya majikan mesti mematuhi tempoh notis (預告期間) dan membayar pampasan pemberhentian, agar memampas secara seimbang ketidakselesaan pekerja. | Jika pekerja melakukan perbuatan yang dilarang undang-undang atau tidak sesuai, majikan boleh menamatkan serta-merta kontrak kerja (勞動契約) tanpa notis terdahulu dan tidak perlu membayar pampasan pemberhentian. Ini ialah salah satu kuasa disiplin majikan. | Orang yang digaji bebas menamatkan kontrak pada bila-bila masa, tetapi mesti, menurut tempoh pekerjaan, mematuhi tempoh notis, agar majikan boleh menjalankan penyerahan dan mencari pengganti. |
 | Syarat | Ada  (perkara 11 undang-undang piawaian buruh Taiwan) | Ada  (perkara 12 undang-undang piawaian buruh Taiwan) | Tiada |
 | Notis terdahulu | Diperlukan | Tidak diperlukan | Diperlukan |
@@ -194,17 +194,17 @@ meletakkan tuntutan berlebihan
 
 atau memindahkan pekerja ke jawatan ganjil,
 
-**anda mesti menyimpan bukti.**
+anda mesti menyimpan bukti.
 
-**Rekod kehadiran biasa anda,**
+Rekod kehadiran biasa anda,
 
-**rekod kerja lebih masa, rekod prestasi,**
+rekod kerja lebih masa, rekod prestasi,
 
-**peraturan dalaman, surat-menyurat e-mel dengan rakan sekerja dan atasan**
+peraturan dalaman, surat-menyurat e-mel dengan rakan sekerja dan atasan
 
-**serta rekod temu duga dengan atasan —**
+serta rekod temu duga dengan atasan —
 
-**simpan bukti yang menguntungkan anda.**
+simpan bukti yang menguntungkan anda.
 
 ​
 

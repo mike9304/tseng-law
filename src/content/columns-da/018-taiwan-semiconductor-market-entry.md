@@ -85,11 +85,11 @@ Det er relativt enklere at erhverve arbejdstilladelsen for en leder af det taiwa
 
 De følgende scenarier er hypotetiske og skal hjælpe overvejelsen; de garanterer ikke, at en given måde er retmæssig eller bedre.
 
-**Udenlandske virksomheder rettet mod den indledende eksport.** Hvis der i Taiwan endnu hverken er arbejdstagere eller lagre, og man vil efterprøve efterspørgslen via en uafhængig distributør, kan man først se leveringen, distributionsforholdet og virksomhedsfeltet i Taiwan. En distributionskontrakt alene løser ikke alle reguleringsspørgsmål i Taiwan.
+Udenlandske virksomheder rettet mod den indledende eksport. Hvis der i Taiwan endnu hverken er arbejdstagere eller lagre, og man vil efterprøve efterspørgslen via en uafhængig distributør, kan man først se leveringen, distributionsforholdet og virksomhedsfeltet i Taiwan. En distributionskontrakt alene løser ikke alle reguleringsspørgsmål i Taiwan.
 
-**Udenlandske virksomheder der udvider salget og den tekniske støtte i Taiwan.** Hvis man i Taiwan vil ansætte og fortsat lede lagre, opkrævning og kundestøtte, bør man konkret sammenligne datterselskab og filial og også efterprøve det kontraktlige ansvar, hovedsædets driftsmåde, skatterne og personalet.
+Udenlandske virksomheder der udvider salget og den tekniske støtte i Taiwan. Hvis man i Taiwan vil ansætte og fortsat lede lagre, opkrævning og kundestøtte, bør man konkret sammenligne datterselskab og filial og også efterprøve det kontraktlige ansvar, hovedsædets driftsmåde, skatterne og personalet.
 
-**Udenlandske virksomheder i markedsundersøgelsesfasen.** Hvis man før en salgsorganisation kun vil have informations- og kontaktfunktioner, kan et repræsentationskontor (代表人辦事處) vurderes. Hvis den faktiske plan omfatter salg af lagre eller arbejde på stedet, skal det særskilt afklares, om disse aktiviteter er tilladt.
+Udenlandske virksomheder i markedsundersøgelsesfasen. Hvis man før en salgsorganisation kun vil have informations- og kontaktfunktioner, kan et repræsentationskontor (代表人辦事處) vurderes. Hvis den faktiske plan omfatter salg af lagre eller arbejde på stedet, skal det særskilt afklares, om disse aktiviteter er tilladt.
 
 ## 8. Til den første samtale rækker et driftsoverblik; man behøver ikke straks at overdrage alle fortrolige bilag
 

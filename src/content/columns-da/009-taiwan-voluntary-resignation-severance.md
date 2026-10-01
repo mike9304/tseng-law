@@ -25,7 +25,7 @@ og dette adskiller sig fra reglerne i visse andre lande — Korea er ét eksempe
 
 ​
 
-Der findes imidlertid **undtagelsestilfælde**.
+Der findes imidlertid undtagelsestilfælde.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Loven om arbejdsnormer (勞動基準法) bestemmer imidlertid en frist.
 
 Arbejdstagere, der vil bringe arbejdsaftalen til ophør efter punkt 1 eller punkt 6 ovenfor (for eksempel på grund af manglende forsikringstilknytning), skal iagttage fristen.
 
-De skal bringe arbejdsaftalen til ophør inden **30 dage** fra den dag, hvor de kender situationen.
+De skal bringe arbejdsaftalen til ophør inden 30 dage fra den dag, hvor de kender situationen.
 
-Ved punkt 6 skal ophøret ske inden **30 dage** fra den dag, hvor de kender skadefølgen.
+Ved punkt 6 skal ophøret ske inden 30 dage fra den dag, hvor de kender skadefølgen.
 
 Derfor skal arbejdstagere holde fristen nøjagtigt for øje.
 
@@ -89,7 +89,7 @@ Den part, der først og med tilstrækkelig grund bringer aftalen til ophør, kan
 
 I taiwanske arbejdskonflikter (勞資糾紛) er tidspunktet derfor afgørende.
 
-Netop **tidspunktet** er meget vigtigt.
+Netop tidspunktet er meget vigtigt.
 
 Den, der forbereder sig i forvejen, står i de fleste tilfælde stærkere til at varetage sine rettigheder.
 

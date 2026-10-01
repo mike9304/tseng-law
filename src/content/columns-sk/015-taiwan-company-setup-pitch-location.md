@@ -51,7 +51,7 @@ Venujte preto tejto veci pozornosť.
 
 ​
 
-**Q. Musia všetky odvetvia systémom „predbežného overenia prevádzkarne“ overovať, či je prevádzka možná?**
+Q. Musia všetky odvetvia systémom „predbežného overenia prevádzkarne“ overovať, či je prevádzka možná?
 
 Všetkým odvetviam sa odporúča potvrdiť systémom „predbežného overenia prevádzkarne“ (營業場所預先查詢), či je prevádzka možná.
 
@@ -61,7 +61,7 @@ Preto v praxi nie je nutné pri zápise spoločnosti overovať všetky odvetvia.
 
 Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipeja](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámenia mesta Taipej platí nasledujúce pravidlo.
 
-Od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a podriadenej prevádzky (分支機構)) výsledok predbežného overenia prevádzkarne **musí** byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
+Od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a podriadenej prevádzky (分支機構)) výsledok predbežného overenia prevádzkarne musí byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
 
 Nižšie uvedený zoznam „odvetví, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目) označuje odvetvia, ktoré Obchodný úrad v priebehu preskúmania zápisu overuje z úradnej moci navyše (隨案主動查詢), keď odvetvie figuruje v žiadosti, ale chýba v pripojenom výsledku; skutočnosť, že odvetvie na tomto zozname nie je, neznamená oslobodenie od overenia.
 

@@ -93,9 +93,9 @@ Vid oenighet med sakkunnigutlåtandet kan omprövning begäras, men omprövninge
 
 Kravet grundat på artikel 184 i civillagen förutsätter en olaglig kränkning av en rättighet, orsakssamband med olyckan och bevis för skadan. Enbart det faktum att en olycka har inträffat innebär inte att alla följande poster godtas. Artikel 216 i civillagen är måttet för att fastställa omfånget av den faktiska skadan och den uteblivna vinsten (所失利益).
 
-- **Skador**: Enligt artikel 193 i civillagen kan prövas de nödvändiga sjukvårdskostnaderna (醫療費用), de ökade levnadskostnaderna såsom vårdkostnader (看護費用), resekostnader för behandling (就醫交通費) och hjälpmedel, samt inkomstförlust (收入損失) genom faktisk arbetsoförmåga och nedsättning av arbetsförmågan (勞動能力減損). Enligt artikel 195 i civillagen kan även ideell skada prövas.
-- **Dödsfall**: Enligt artikel 192 i civillagen kan, när det är befogat, prövas sjukvårdskostnader före dödsfallet och ökade levnadskostnader, begravningskostnader (殯葬費) och förlust av underhåll (扶養利益損失) för den som hade laglig rätt till underhåll. Enligt artikel 194 i civillagen kan även ideell skada för vissa anhöriga prövas.
-- **Förmögenhet**: Enligt artikel 196 i civillagen kan den styrkta faktiska förmögenhetsskadan krävas, inbegripet kostnader för reparation av fordonet eller värdeförlust.
+- Skador: Enligt artikel 193 i civillagen kan prövas de nödvändiga sjukvårdskostnaderna (醫療費用), de ökade levnadskostnaderna såsom vårdkostnader (看護費用), resekostnader för behandling (就醫交通費) och hjälpmedel, samt inkomstförlust (收入損失) genom faktisk arbetsoförmåga och nedsättning av arbetsförmågan (勞動能力減損). Enligt artikel 195 i civillagen kan även ideell skada prövas.
+- Dödsfall: Enligt artikel 192 i civillagen kan, när det är befogat, prövas sjukvårdskostnader före dödsfallet och ökade levnadskostnader, begravningskostnader (殯葬費) och förlust av underhåll (扶養利益損失) för den som hade laglig rätt till underhåll. Enligt artikel 194 i civillagen kan även ideell skada för vissa anhöriga prövas.
+- Förmögenhet: Enligt artikel 196 i civillagen kan den styrkta faktiska förmögenhetsskadan krävas, inbegripet kostnader för reparation av fordonet eller värdeförlust.
 
 ## Q8. Om behandlingen fortsätter, hur ska handlingar om sjukvårdskostnader ges in?
 

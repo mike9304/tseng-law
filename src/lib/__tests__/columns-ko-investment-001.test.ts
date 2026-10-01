@@ -238,7 +238,7 @@ describe('Korean investment column 001 — company-establishment basics', () => 
       '이 글은 대만 회사 설립과 관련 제도를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 사안에 대한 법률·세무 자문이 아닙니다. 투자 구조, 업종, 신청인의 국적·체류자격과 주무기관의 최신 실무에 따라 필요한 절차와 결과가 달라질 수 있으므로, 투자·계약·고용을 실행하기 전에 최신 공식 자료와 개별 사정을 확인하시기 바랍니다.',
     );
     expect(raw.trimEnd()).toMatch(
-      /확인하시기 바랍니다\.\n\n\*\*증준외 변호사\(曾雋崴, Wei Tseng\)\*\*$/,
+      /확인하시기 바랍니다\.\n\n증준외 변호사\(曾雋崴, Wei Tseng\)$/,
     );
     expect(raw.match(/[\uac00-\ud7af]/g)?.length ?? 0).toBeGreaterThan(3_000);
     expect(raw.length).toBeGreaterThan(8_000);

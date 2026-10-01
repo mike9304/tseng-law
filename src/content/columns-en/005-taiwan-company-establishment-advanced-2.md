@@ -21,9 +21,9 @@ If you have read [Taiwan Company Formation — Basics](https://www.wei-wei-lawye
 
 The Q&A below, prepared by Wei Tseng (曾雋崴), Taiwan Attorney, may also be helpful to those considering establishing a company in Taiwan.
 
-**1. What should I keep in mind when remitting capital from Korea to a Taiwan company's preparatory account?**
+1. What should I keep in mind when remitting capital from Korea to a Taiwan company's preparatory account?
 
-Korean banks generally require the investor **personally** to visit a bank in Korea and remit the funds from the investor's own account.
+Korean banks generally require the investor personally to visit a bank in Korea and remit the funds from the investor's own account.
 
 Remitting the funds through online banking or through a relative or acquaintance in Korea on the investor's behalf is not permitted.
 
@@ -31,7 +31,7 @@ In addition, under Korea's foreign exchange laws, a Korean national who establis
 
 Before remitting the capital, please consult the Korean bank with which you normally do business.
 
-**2. When paying in the company's capital, can I transfer New Taiwan dollars from my own Taiwan account to the company's preparatory account?**
+2. When paying in the company's capital, can I transfer New Taiwan dollars from my own Taiwan account to the company's preparatory account?
 
 Yes, but you must submit documents showing the source of the New Taiwan dollar funds acquired in Taiwan.
 
@@ -41,7 +41,7 @@ If the funds are dividends or profits from an investment in a Taiwan business, y
 
 If the funds are remitted from a Korean bank account, no source-of-funds documents need to be attached.
 
-**3. After the capital has been deposited into the company's preparatory account, when can the account be converted into a formal account?**
+3. After the capital has been deposited into the company's preparatory account, when can the account be converted into a formal account?
 
 Generally, the company registration documents must first be issued.
 
@@ -49,13 +49,13 @@ The company's responsible person may then visit the bank to convert the preparat
 
 However, because each bank has different internal rules, if you need to use the capital urgently, it is advisable to ask the bank in advance.
 
-**4. Can I use online banking immediately after the company's preparatory account is converted into a formal account?**
+4. Can I use online banking immediately after the company's preparatory account is converted into a formal account?
 
 Requirements vary by bank, but generally at least a mobile phone number is required.
 
 Some banks may impose additional requirements, such as requiring the account to have been in use for at least six months after the company was established.
 
-**5. Can the company employ Korean nationals?**
+5. Can the company employ Korean nationals?
 
 A. First employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作). The "specialized or technical work" criteria in B below do not apply, but the eligibility requirements (such as being a manager (經理人) of a company in which overseas-Chinese or foreign investors hold more than one third) and the employer's capital and turnover requirements (Review Standards Articles 38 and 39) still apply.
 

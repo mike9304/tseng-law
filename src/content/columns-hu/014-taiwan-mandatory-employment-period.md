@@ -191,4 +191,4 @@ Az iratok időrend szerinti rendezésekor együtt kell feltüntetni a szerződé
 
 Ez a cikk a tajvani minimális szolgálati időre vonatkozó kikötést, a képzési költség és az előzetes juttatás visszatérítését, valamint a kilépéskori felmondási időt általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi munkaügyi ügyben, és nem ígér meghatározott eredményt. A megállapodás érvényessége és a felelősség köre a szerződés típusától és szövegétől, a tényleges képzéstől és költségektől, az ellentételezés céljától és közlésétől, a szolgálati időtől, a megszűnés okától és a bizonyítékoktól függően változhat. Kilépési nyilatkozat, bérlevonás, visszatérítési megállapodás vagy vita megválaszolása előtt a legújabb hivatalos forrásokat és az egyedi körülményeket kell ellenőrizni.
 
-**Wei Tseng ügyvédnő (曾雋崴)**
+Wei Tseng ügyvédnő (曾雋崴)

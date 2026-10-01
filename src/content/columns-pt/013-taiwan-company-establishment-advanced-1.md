@@ -17,13 +17,13 @@ Recentemente, muitas pessoas constituíram uma sociedade (公司) em Taiwan e ob
 
 As perguntas mais frequentes no momento da constituição estão reunidas abaixo.
 
-Quem leu [**os fundamentos da constituição de sociedades**](/pt/columns/taiwan-company-establishment-basics) pode em seguida consultar também esta parte aprofundada mais pormenorizada.
+Quem leu [os fundamentos da constituição de sociedades](/pt/columns/taiwan-company-establishment-basics) pode em seguida consultar também esta parte aprofundada mais pormenorizada.
 
 As perguntas e respostas seguintes visam ajudar as pessoas que ponderam constituir uma sociedade em Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Pretendo constituir uma sociedade, mas ainda não encontrei um endereço de inscrição. A constituição é mesmo assim possível?**
+1. Pretendo constituir uma sociedade, mas ainda não encontrei um endereço de inscrição. A constituição é mesmo assim possível?
 
 Quando um estrangeiro constitui uma sociedade em Taiwan, deve apresentar um plano de investimento (投資計畫書) ao Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司) para exame.
 
@@ -43,7 +43,7 @@ Na parte sobre os fundamentos, a abertura da conta foi indicada como a etapa mai
 
 Porque os casos de branqueamento de capitais (洗錢) são muito numerosos em Taiwan, a abertura das contas bancárias torna-se cada vez mais estrita.
 
-**Conselho**:
+Conselho:
 
 O exame do plano de investimento também leva tempo.
 
@@ -57,13 +57,13 @@ Resta então tempo suficiente para abrir no banco a conta da sociedade em forma�
 
 ​
 
-**2. Pode abrir-se uma conta de sociedade no banco mesmo sem cartão de residência de Taiwan?**
+2. Pode abrir-se uma conta de sociedade no banco mesmo sem cartão de residência de Taiwan?
 
 É possível.
 
 O banco exige em geral uma dupla verificação de identidade.
 
-Sem cartão de residência, pode pedir-se junto da administração da imigração de Taiwan a «**folha de dados básicos do número de identificação unificado**» (統一證號基本資料表).
+Sem cartão de residência, pode pedir-se junto da administração da imigração de Taiwan a «folha de dados básicos do número de identificação unificado» (統一證號基本資料表).
 
 A emissão é possível no próprio dia.
 
@@ -71,7 +71,7 @@ A administração da imigração (移民署) está, porém, muito frequentada; c
 
 ​
 
-**3. Ouvi dizer que, no exame do plano de investimento, deve indicar-se a formação e a experiência profissional, e preocupa-me que a minha formação e a minha experiência não correspondam ao setor da sociedade que pretendo constituir.**
+3. Ouvi dizer que, no exame do plano de investimento, deve indicar-se a formação e a experiência profissional, e preocupa-me que a minha formação e a minha experiência não correspondam ao setor da sociedade que pretendo constituir.
 
 A comissão de exame do Ministério da Economia examina de facto os antecedentes do investidor.
 
@@ -85,13 +85,13 @@ Sobre este ponto, convém tratar o assunto em pormenor com uma advogada ou um ad
 
 ​
 
-**4. Que pontos devem observar-se quando o endereço de inscrição da sociedade (por exemplo um local de restauração) é tomado de arrendamento?**
+4. Que pontos devem observar-se quando o endereço de inscrição da sociedade (por exemplo um local de restauração) é tomado de arrendamento?
 
-A constituição da sociedade dura cerca de **3 meses**, e a obtenção da autorização de trabalho (工作許可) e do cartão de residência cerca de **1 mês** a mais.
+A constituição da sociedade dura cerca de 3 meses, e a obtenção da autorização de trabalho (工作許可) e do cartão de residência cerca de 1 mês a mais.
 
 Por isso, também se deve fixar o início do contrato o mais tarde possível.
 
-Além disso, nos contratos de arrendamento de locais comerciais em Taiwan, o senhorio concede frequentemente ao arrendatário um «**período de obras e de instalação**» (裝潢期間).
+Além disso, nos contratos de arrendamento de locais comerciais em Taiwan, o senhorio concede frequentemente ao arrendatário um «período de obras e de instalação» (裝潢期間).
 
 Trata-se de um período isento de renda; pode negociar-se.
 
@@ -107,7 +107,7 @@ Pode, se for o caso, propor-se a certificação notarial do contrato de arrendam
 
 ​
 
-**5. Pode, na constituição da sociedade, tomar de arrendamento um escritório comercial ordinário?**
+5. Pode, na constituição da sociedade, tomar de arrendamento um escritório comercial ordinário?
 
 Isso depende dos ramos de atividade (營業項目) da sociedade.
 

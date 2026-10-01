@@ -93,9 +93,9 @@ Gegen die Gutachtenmeinung kann Nachprüfung beantragt werden, jedoch nur einmal
 
 Ansprüche nach Artikel 184 des Zivilgesetzbuchs (民法) setzen rechtswidrige Rechtsverletzung, Kausalzusammenhang mit dem Unfall und Nachweis des Schadens voraus. Allein die Tatsache eines Unfalls bedeutet nicht, dass alle folgenden Posten anerkannt werden. Artikel 216 des Zivilgesetzbuchs ist Maßstab für den Umfang des tatsächlichen Schadens und des entgangenen Gewinns (所失利益).
 
-- **Verletzung**: Nach Artikel 193 des Zivilgesetzbuchs können erforderliche Heilbehandlungskosten (醫療費用), im Leben erhöhte Bedarfskosten wie Pflege (看護費用), Fahrtkosten zur Behandlung (就醫交通費) und Hilfsmittel sowie Verdienstausfall (收入損失) durch tatsächliche Arbeitsunfähigkeit und Minderung der Arbeitsfähigkeit (勞動能力減損) geprüft werden. Nach Artikel 195 des Zivilgesetzbuchs kann auch immaterieller Schaden geprüft werden.
-- **Tod**: Nach Artikel 192 des Zivilgesetzbuchs können, soweit einschlägig, Heilbehandlungskosten und erhöhte Lebensbedarfskosten vor dem Tod, Bestattungskosten (殯葬費) und Unterhaltsverlust (扶養利益損失) der gesetzlich Unterhaltsberechtigten geprüft werden. Nach Artikel 194 des Zivilgesetzbuchs kann auch immaterieller Schaden bestimmter Verwandter geprüft werden.
-- **Vermögen**: Nach Artikel 196 des Zivilgesetzbuchs können nachgewiesene tatsächliche Vermögensschäden einschließlich Fahrzeugreparatur oder Wertminderung verlangt werden.
+- Verletzung: Nach Artikel 193 des Zivilgesetzbuchs können erforderliche Heilbehandlungskosten (醫療費用), im Leben erhöhte Bedarfskosten wie Pflege (看護費用), Fahrtkosten zur Behandlung (就醫交通費) und Hilfsmittel sowie Verdienstausfall (收入損失) durch tatsächliche Arbeitsunfähigkeit und Minderung der Arbeitsfähigkeit (勞動能力減損) geprüft werden. Nach Artikel 195 des Zivilgesetzbuchs kann auch immaterieller Schaden geprüft werden.
+- Tod: Nach Artikel 192 des Zivilgesetzbuchs können, soweit einschlägig, Heilbehandlungskosten und erhöhte Lebensbedarfskosten vor dem Tod, Bestattungskosten (殯葬費) und Unterhaltsverlust (扶養利益損失) der gesetzlich Unterhaltsberechtigten geprüft werden. Nach Artikel 194 des Zivilgesetzbuchs kann auch immaterieller Schaden bestimmter Verwandter geprüft werden.
+- Vermögen: Nach Artikel 196 des Zivilgesetzbuchs können nachgewiesene tatsächliche Vermögensschäden einschließlich Fahrzeugreparatur oder Wertminderung verlangt werden.
 
 ## Q8. Wie sind Heilbehandlungskostenunterlagen einzureichen, wenn die Behandlung andauert?
 

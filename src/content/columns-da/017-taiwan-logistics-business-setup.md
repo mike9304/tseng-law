@@ -148,4 +148,4 @@ På arbejde uden tilladelse kan en administrativ bøde og et påbud om at forlad
 
 Denne artikel er et pædagogisk materiale bestemt til alment at forklare den retlige ordning og er ikke rådgivning for en konkret sag. Fordi tilladelseskriterierne, ansøgningsformularerne og den kompetente myndigheds praksis kan ændres, gennemgås de ajourførte officielle kilder og sagens omstændigheder før gennemførelsen af en investering eller en kontrakt.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

@@ -93,9 +93,9 @@ Pri nesúhlase s názorom znaleckého posudku možno požiadať o preskúmanie, 
 
 Nárok založený na článku 184 občianskeho zákonníka predpokladá protiprávne porušenie práva, príčinnú súvislosť s nehodou a dôkaz škody. Samotná skutočnosť, že k nehode došlo, nevedie k tomu, že všetky nižšie uvedené položky sú uznané. Článok 216 občianskeho zákonníka je kritériom stanovenia rozsahu skutočnej škody a ušlého zisku (所失利益).
 
-- **Poranenie**: Podľa článku 193 občianskeho zákonníka možno posúdiť potrebné lekárske náklady (醫療費用), dodatočné náklady každodenného života, ako sú náklady na opatrovanie (看護費用), cestovné na liečbu (就醫交通費) a náklady na technické pomôcky, a tiež stratu príjmu (收入損失) preukázanú neschopnosťou pracovať, ako aj zníženie pracovnej schopnosti (勞動能力減損). Podľa článku 195 občianskeho zákonníka možno tiež posúdiť nemajetkovú ujmu.
-- **Smrť**: Podľa článku 192 občianskeho zákonníka, ak na to vznikne právny základ, možno posúdiť lekárske náklady pred smrťou a náklady zvýšených životných potrieb, náklady pohrebu (殯葬費) a stratu výživného (扶養利益損失) osoby, ktorá mala zákonné právo na výživné. Podľa článku 194 občianskeho zákonníka možno tiež posúdiť nemajetkovú ujmu niektorých príbuzných.
-- **Majetok**: Podľa článku 196 občianskeho zákonníka možno uplatniť odôvodnenú skutočnú majetkovú škodu vrátane nákladov na opravu vozidla alebo straty hodnoty.
+- Poranenie: Podľa článku 193 občianskeho zákonníka možno posúdiť potrebné lekárske náklady (醫療費用), dodatočné náklady každodenného života, ako sú náklady na opatrovanie (看護費用), cestovné na liečbu (就醫交通費) a náklady na technické pomôcky, a tiež stratu príjmu (收入損失) preukázanú neschopnosťou pracovať, ako aj zníženie pracovnej schopnosti (勞動能力減損). Podľa článku 195 občianskeho zákonníka možno tiež posúdiť nemajetkovú ujmu.
+- Smrť: Podľa článku 192 občianskeho zákonníka, ak na to vznikne právny základ, možno posúdiť lekárske náklady pred smrťou a náklady zvýšených životných potrieb, náklady pohrebu (殯葬費) a stratu výživného (扶養利益損失) osoby, ktorá mala zákonné právo na výživné. Podľa článku 194 občianskeho zákonníka možno tiež posúdiť nemajetkovú ujmu niektorých príbuzných.
+- Majetok: Podľa článku 196 občianskeho zákonníka možno uplatniť odôvodnenú skutočnú majetkovú škodu vrátane nákladov na opravu vozidla alebo straty hodnoty.
 
 ## Q8. Ak liečba trvá, ako predkladať listiny o lekárskych nákladoch?
 

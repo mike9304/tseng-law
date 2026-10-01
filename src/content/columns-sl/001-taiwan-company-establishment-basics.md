@@ -142,4 +142,4 @@ Obseg ustreznega dela si lahko ogledate na strani [Katere zadeve vodimo](/sl/ser
 
 Ta članek je splošna informacija izobraževalne narave o ustanavljanju družbe na Tajvanu in s tem povezanih pravilih; ni pravni niti davčni nasvet v konkretni zadevi in ne obljublja določenega izida. Potrebni postopki in izidi se lahko razlikujejo glede na strukturo naložbe, panogo, državljanstvo ter status prebivanja vlagatelja ter najnovejšo prakso pristojnega organa; pred izvedbo naložbe, pogodbe ali zaposlitve je treba presoditi najnovejše uradne vire ter okoliščine lastne zadeve.
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)

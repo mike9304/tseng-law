@@ -42,9 +42,9 @@ U ugovoru je primjereno konkretno utvrditi opseg uporabe intelektualnog vlasniš
 
 Tajvansko kćerinsko društvo i podružnica stranog društva nisu ista organizacija. Kćerinsko društvo samostalna je pravna osoba osnovana prema pravu Tajvana, dok se podružnica upisuje kao dio središnjice (本公司) stranog društva. Razlikuju se pravna osobnost, odgovornost središnjice, računovodstveni i porezni tretman, prijenos dobiti, ovlaštenje za zastupanje i način unutarnje kontrole, pa se oblik organizacije ne smije birati samo prema nadzoru nad prodajom.
 
-Ako je potreban postupak stranog ulaganja, treba provjeriti upute **Odjela za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司)** kao trenutačno nadležnog tijela. Rok potreban za odobrenje ulaganja, prijenos sredstava, upis društva ili podružnice, otvaranje bankovnog računa, poreznu registraciju (稅籍登記) i stjecanje kvalifikacije uvoznika razlikuje se prema ulagaču, djelatnosti, obliku organizacije, predloženim podlogama i prema tome dolazi li do ispravka ili dopune. Stoga umjesto utvrđivanja datuma stavljanja na tržište uz pretpostavku određenog fiksnog roka treba najprije provjeriti primjenjuje li se svaka radnja te najnovije uvjete podnošenja zahtjeva.
+Ako je potreban postupak stranog ulaganja, treba provjeriti upute Odjela za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司) kao trenutačno nadležnog tijela. Rok potreban za odobrenje ulaganja, prijenos sredstava, upis društva ili podružnice, otvaranje bankovnog računa, poreznu registraciju (稅籍登記) i stjecanje kvalifikacije uvoznika razlikuje se prema ulagaču, djelatnosti, obliku organizacije, predloženim podlogama i prema tome dolazi li do ispravka ili dopune. Stoga umjesto utvrđivanja datuma stavljanja na tržište uz pretpostavku određenog fiksnog roka treba najprije provjeriti primjenjuje li se svaka radnja te najnovije uvjete podnošenja zahtjeva.
 
-Koja god se struktura odabere, središnji je subjekt odgovornosti u regulaciji kozmetike **proizvođač ili uvoznik kozmetike**. Uređivanje podloga o proizvodu ili ocjena sigurnosti (安全性評估) može se povjeriti vanjskom stručnjaku, no samo povjeravanje posla ne prenosi pravnu odgovornost proizvođača ili uvoznika. Razlikovanje ugovorne podjele rada od zakonskog subjekta odgovornosti polazna je točka pregleda strukture stupanja.
+Koja god se struktura odabere, središnji je subjekt odgovornosti u regulaciji kozmetike proizvođač ili uvoznik kozmetike. Uređivanje podloga o proizvodu ili ocjena sigurnosti (安全性評估) može se povjeriti vanjskom stručnjaku, no samo povjeravanje posla ne prenosi pravnu odgovornost proizvođača ili uvoznika. Razlikovanje ugovorne podjele rada od zakonskog subjekta odgovornosti polazna je točka pregleda strukture stupanja.
 
 ## 2. Registracija proizvoda i PIF dva su različita režima
 
@@ -131,4 +131,4 @@ Osnovnu strukturu društva i podružnice možete vidjeti u [Osnove osnivanja dru
 
 Ovaj je tekst opća informacija obrazovne naravi o režimu stupanja na tržište kozmetike na Tajvanu; nije pravno mišljenje o pojedinom proizvodu ili reklami i ne obećava određeni ishod, dopuštenje, registraciju, mogućnost prodaje ni poštovanje roka rješavanja. Oblik stupanja, podloge o proizvodu, sadržaj označavanja i reklame te najnoviju praksu nadležnog tijela treba provjeriti u svakom predmetu zasebno.
 
-**Odvjetnica Wei Tseng (曾雋崴)**
+Odvjetnica Wei Tseng (曾雋崴)

@@ -192,4 +192,4 @@ Galutinį pasirinkimą saugiausia patikėti Taivano ir pagrindinės buveinės vi
 
 Šis straipsnis yra bendros informacijos dokumentas švietimo tikslais apie Taivano dukterinės bendrovės ir užsienio bendrovės filialo bendrus skirtumus; jis nėra teisinė ar mokestinė konsultacija konkrečioje byloje ir nežada nustatyto rezultato. Taikytinos nuostatos ir mokestinis vertinimas gali skirtis pagal investuotojo ir pagrindinės buveinės vietą, veiklos turinį, sandorius ir lėšų srautą, sutarties taikymo sąlygas ir kompetentingos institucijos naujausią praktiką; prieš vykdant steigimą, investiciją, sutartį, dividendus ar pervedimą reikia įvertinti naujausius oficialius šaltinius ir savo bylos aplinkybes.
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

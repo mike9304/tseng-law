@@ -151,4 +151,4 @@ Pada halaman peraturan resmi, tanggal perubahan dan tanggal mulai berlakunya pas
 
 Tulisan ini merupakan bahan yang bertujuan mendidik dan menjelaskan secara umum lembaga pewarisan, rezim harta perkawinan, hak asuh, serta perwalian anak di bawah umur di Taiwan, dan bukan merupakan pendapat hukum atas perkara pewarisan maupun perkara keluarga tertentu. Hukum yang berlaku, prosedur, dan hasilnya dapat berbeda-beda menurut ruang lingkup ahli waris, wasiat, harta dan utang, rezim harta perkawinan, putusan pengadilan yang sudah ada, serta unsur asing. Sebelum menghitung batas waktu seperti penolakan warisan dan pelaporan pajak, atau sebelum melakukan pengalihan atas harta, mohon pastikan bahan resmi terbaru beserta keadaan masing-masing perkara.
 
-**Wei Tseng (曾雋崴), Advokat di Taiwan**
+Wei Tseng (曾雋崴), Advokat di Taiwan

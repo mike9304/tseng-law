@@ -87,11 +87,11 @@ It is relatively easier for a manager of a foreign company’s Taiwan subsidiary
 
 The following are hypothetical review scenarios to aid thinking. They do not guarantee that a particular approach is lawful or preferable.
 
-**Companies focused on early-stage export.** If there are not yet Taiwan employees or inventory, and you wish to test demand through an independent distributor, you can first review supply, the distribution relationship, and the scope of activity in Taiwan. A distribution contract by itself does not remove all Taiwan regulatory issues.
+Companies focused on early-stage export. If there are not yet Taiwan employees or inventory, and you wish to test demand through an independent distributor, you can first review supply, the distribution relationship, and the scope of activity in Taiwan. A distribution contract by itself does not remove all Taiwan regulatory issues.
 
-**Companies expanding Taiwan sales and technical support.** If you plan to hire in Taiwan and to keep managing inventory, collections, and customer support, compare a subsidiary and a branch in concrete terms, and also review contractual liability, how the head office will operate, tax, and staffing.
+Companies expanding Taiwan sales and technical support. If you plan to hire in Taiwan and to keep managing inventory, collections, and customer support, compare a subsidiary and a branch in concrete terms, and also review contractual liability, how the head office will operate, tax, and staffing.
 
-**Companies still in a market-research stage.** If, before forming a sales organization, you only want information-gathering and liaison functions, a representative office may be considered. If the actual plan includes selling inventory or on-site work, separately confirm whether those activities are permitted.
+Companies still in a market-research stage. If, before forming a sales organization, you only want information-gathering and liaison functions, a representative office may be considered. If the actual plan includes selling inventory or on-site work, separately confirm whether those activities are permitted.
 
 ## 8. For a first consultation, prepare an operating overview; you need not hand over all confidential materials first
 

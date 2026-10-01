@@ -1,4 +1,5 @@
 import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
+import { removeColumnBoldEmphasis } from '@/lib/column-emphasis';
 import type { BuilderCollectionRecordSeoPreview as BuilderCmsCollectionRecordSeoPreview } from '@/lib/builder/cms';
 import {
   formatColumnPublicationDate,
@@ -139,8 +140,8 @@ export function resolvePublishedCmsColumnPosts(
     .filter((record) => !collection.localized || record.locale === locale || !record.locale)
     .map((record) => {
       const slug = readSlugValue(record.recordId, record.fields);
-      const title = readFirstTextValue(record.fields, ['title', 'name']) ?? slug;
-      const summary = readDescriptionValue(record.fields, ['summary', 'description', 'content'], title);
+      const title = removeColumnBoldEmphasis(readFirstTextValue(record.fields, ['title', 'name']) ?? slug);
+      const summary = removeColumnBoldEmphasis(readDescriptionValue(record.fields, ['summary', 'description', 'content'], title));
       const category = resolveColumnCategory(readFirstTextValue(record.fields, ['category']));
       const categoryLabel = readFirstTextValue(record.fields, ['categoryLabel'])
         ?? resolveColumnCategoryLabel(category, locale);
@@ -159,7 +160,7 @@ export function resolvePublishedCmsColumnPosts(
         storedDateDisplay,
       );
       const readTime = readFirstTextValue(record.fields, ['readTime']) ?? '';
-      const content = readDescriptionValue(record.fields, ['content', 'summary', 'description'], summary);
+      const content = removeColumnBoldEmphasis(readDescriptionValue(record.fields, ['content', 'summary', 'description'], summary));
 
       return {
         slug,
@@ -272,8 +273,9 @@ export function findPublishedCmsCollectionRecordSeo(
   ));
   if (!match) return null;
 
-  const title = readFirstTextValue(match.fields, config.titleKeys) ?? match.recordId;
-  const description = readDescriptionValue(match.fields, config.descriptionKeys, title);
+  const cleanText = (text: string) => collectionId === 'columns' ? removeColumnBoldEmphasis(text) : text;
+  const title = cleanText(readFirstTextValue(match.fields, config.titleKeys) ?? match.recordId);
+  const description = cleanText(readDescriptionValue(match.fields, config.descriptionKeys, title));
   const canonicalPath = `${config.routeBase(locale)}/${readSlugValue(match.recordId, match.fields)}`;
   const image = readImageValue(match.fields, config.imageKeys);
 
@@ -295,9 +297,10 @@ function buildCmsCollectionRecordPreview(
   config: CmsRuntimeCollectionConfig,
 ): PublishedCmsCollectionRecordPreview | null {
   const slug = readSlugValue(recordId, record);
-  const title = readFirstTextValue(record, config.titleKeys) ?? slug;
+  const cleanText = (text: string) => collection.collectionId === 'columns' ? removeColumnBoldEmphasis(text) : text;
+  const title = cleanText(readFirstTextValue(record, config.titleKeys) ?? slug);
   const secondaryLabel = config.secondaryLabel(collection, record, locale);
-  const description = readDescriptionValue(record, config.descriptionKeys, secondaryLabel || title);
+  const description = cleanText(readDescriptionValue(record, config.descriptionKeys, secondaryLabel || title));
   const routePath = `${config.routeBase(locale)}/${slug}`;
   const fieldValues = buildCmsCollectionRecordFieldValues({
     description,
@@ -306,6 +309,9 @@ function buildCmsCollectionRecordPreview(
     slug,
     title,
   });
+  for (const key of ['title', 'name', 'description', 'summary', 'content']) {
+    if (fieldValues[key]) fieldValues[key] = cleanText(fieldValues[key]);
+  }
   return {
     recordId: slug,
     primaryLabel: title,

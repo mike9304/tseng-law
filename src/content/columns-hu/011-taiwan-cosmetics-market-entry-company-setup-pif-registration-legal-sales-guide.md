@@ -42,9 +42,9 @@ A szerződésben konkrétan rögzíteni kell a szellemi tulajdon, például a v�
 
 A tajvani leányvállalat és a külföldi társaság fióktelepe nem ugyanaz a szervezet. A leányvállalat a tajvani jog szerint alapított külön jogi személy, míg a fióktelepet a külföldi társaság központjának (本公司) részeként jegyzik be. Különbözik a jogi személyiség, a központ felelőssége, a számviteli és adózási kezelés, a nyereségátvitel, a képviseleti jog és a belső ellenőrzés módja, ezért a szervezeti formát nem szabad pusztán az értékesítés feletti ellenőrzés alapján választani.
 
-Ha külföldi beruházási eljárás szükséges, a jelenleg illetékes szerv, a **Gazdasági Minisztérium Beruházásvizsgáló Főosztálya (經濟部投資審議司)** útmutatóját kell megnézni. A beruházás jóváhagyásához, a tőkeátutaláshoz, a társaság vagy fióktelep bejegyzéséhez, a bankszámla nyitásához, az adóügyi nyilvántartásba vételhez (稅籍登記) és az importőri minőség megszerzéséhez szükséges időtartam a befektető, az ágazat, a szervezeti forma, a benyújtott iratok és a javítás vagy pótlás szerint változik. Ezért a bevezetés dátumát nem rögzített időtartamot feltételezve kell kitűzni, hanem először azt kell tisztázni, mely eljárások alkalmazandók, és mik a legújabb benyújtási követelmények.
+Ha külföldi beruházási eljárás szükséges, a jelenleg illetékes szerv, a Gazdasági Minisztérium Beruházásvizsgáló Főosztálya (經濟部投資審議司) útmutatóját kell megnézni. A beruházás jóváhagyásához, a tőkeátutaláshoz, a társaság vagy fióktelep bejegyzéséhez, a bankszámla nyitásához, az adóügyi nyilvántartásba vételhez (稅籍登記) és az importőri minőség megszerzéséhez szükséges időtartam a befektető, az ágazat, a szervezeti forma, a benyújtott iratok és a javítás vagy pótlás szerint változik. Ezért a bevezetés dátumát nem rögzített időtartamot feltételezve kell kitűzni, hanem először azt kell tisztázni, mely eljárások alkalmazandók, és mik a legújabb benyújtási követelmények.
 
-Bármely szerkezetet választják is, a kozmetikai szabályozás központi felelőse a **kozmetikum gyártója vagy importőre**. A termékadatok rendezése vagy a biztonsági értékelés (安全性評估) külső szakértőre bízható, de pusztán a megbízás nem ruházza át a gyártó vagy az importőr jogi felelősségét. A szerződés szerinti munkamegosztás és a jogszabály szerinti felelős megkülönböztetése a belépési szerkezet vizsgálatának kiindulópontja.
+Bármely szerkezetet választják is, a kozmetikai szabályozás központi felelőse a kozmetikum gyártója vagy importőre. A termékadatok rendezése vagy a biztonsági értékelés (安全性評估) külső szakértőre bízható, de pusztán a megbízás nem ruházza át a gyártó vagy az importőr jogi felelősségét. A szerződés szerinti munkamegosztás és a jogszabály szerinti felelős megkülönböztetése a belépési szerkezet vizsgálatának kiindulópontja.
 
 ## 2. A terméknyilvántartás és a PIF két külön rendszer
 
@@ -131,4 +131,4 @@ A társaság és a fióktelep alapstruktúrája a [társaságalapítás alapjai 
 
 Ez a cikk a tajvani kozmetikai piacra lépéshez kapcsolódó rendszert általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi termékre vagy reklámra, és nem ígér meghatározott eredményt az engedélyről, a nyilvántartásról, az értékesítési lehetőségről vagy az ügyintézési időtartamról. A belépési formát, a termékadatokat, a jelölés és a reklám tartalmát, valamint az illetékes szerv legújabb gyakorlatát ügyenként kell ellenőrizni.
 
-**Wei Tseng ügyvédnő (曾雋崴)**
+Wei Tseng ügyvédnő (曾雋崴)

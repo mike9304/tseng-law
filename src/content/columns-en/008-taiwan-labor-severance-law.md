@@ -38,9 +38,9 @@ If the employee resigns voluntarily, the company does not need to pay severance.
 
 However, if the employee engages in unlawful conduct,
 
-**violates company rules,**
+violates company rules,
 
-**or is absent from work without justification for three consecutive days,**
+or is absent from work without justification for three consecutive days,
 
 the company may dismiss the employee without paying severance.
 
@@ -48,7 +48,7 @@ I will summarize this in a simple table.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Type** | **Economic dismissal**  **資遣員工(經濟解僱)** | **Disciplinary dismissal**  **解僱員工(懲戒解僱)** | **Employee voluntary resignation**  **員工自請離職** |
+| Type | Economic dismissal  資遣員工(經濟解僱) | Disciplinary dismissal  解僱員工(懲戒解僱) | Employee voluntary resignation  員工自請離職 |
 | Meaning | When an employer needs to adjust staffing because of business conditions, the reason arises from the employer’s business and is not attributable to the worker. The employer must therefore observe the advance-notice period and pay severance to mitigate the resulting disadvantage to the worker. | When a worker engages in unlawful or improper conduct, the employer may immediately terminate the labor contract without prior notice and need not pay severance. This is an exercise of the employer’s disciplinary authority. | A worker is free to terminate the contract but must observe the notice period applicable to the worker’s length of service, giving the employer time to arrange a handover and find a replacement. |
 | Conditions | Yes  (Taiwan Labor Standards Act Article 11) | Yes  (Taiwan Labor Standards Act Article 12) | None |
 | Prior notice | Required | Not required | Required |
@@ -172,17 +172,17 @@ makes unreasonable demands,
 
 or assigns the employee to an unusual position,
 
-**you must preserve evidence.**
+you must preserve evidence.
 
-**Keep your regular attendance records.**
+Keep your regular attendance records.
 
-**Keep your overtime and performance records.**
+Keep your overtime and performance records.
 
-**Keep the company’s work rules and emails with coworkers and supervisors.**
+Keep the company’s work rules and emails with coworkers and supervisors.
 
-**Record conversations with your supervisor.**
+Record conversations with your supervisor.
 
-**Preserve any evidence that supports your position.**
+Preserve any evidence that supports your position.
 
 If you work in Taiwan,
 

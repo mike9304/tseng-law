@@ -148,4 +148,4 @@ Au travail sans permis peuvent s’appliquer une amende administrative et un ord
 
 Cet article est un matériel éducatif destiné à expliquer de façon générale le régime juridique, et ce n’est pas un conseil pour une affaire concrète. Comme les critères d’autorisation, les formulaires de demande et la pratique de l’autorité compétente peuvent changer, confirmez les sources officielles actualisées et les circonstances de l’affaire avant d’exécuter un investissement ou un contrat.
 
-**L’avocate Wei Tseng (曾雋崴)**
+L’avocate Wei Tseng (曾雋崴)

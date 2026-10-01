@@ -192,4 +192,4 @@ Konačni izbor bezbedniji je ako ga ocenjuju stručnjaci na Tajvanu i u mestu ma
 
 Ovaj članak je opšteinformativnog i edukativnog karaktera i odnosi se na razlike između tajvanskog zavisnog društva i ogranka stranog društva; nije pravni niti poreski savet u konkretnoj stvari i ne obećava određeni ishod. Merodavne odredbe i poreski tretman mogu se razlikovati prema sedištu investitora i sedištu matične kompanije, sadržaju delatnosti, poslovima i toku sredstava, uslovima sporazuma i najnovijoj praksi nadležnog organa; pre izvršenja osnivanja, investicije, ugovora, dividende ili prenosa treba potvrditi najnovije zvanične izvore i okolnosti sopstvene stvari.
 
-**Advokatkinja Wei Tseng (曾雋崴)**
+Advokatkinja Wei Tseng (曾雋崴)

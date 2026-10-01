@@ -25,7 +25,7 @@ Isso difere de alguns outros ordenamentos, por exemplo do coreano.
 
 ​
 
-Existem, contudo, **casos excecionais**.
+Existem, contudo, casos excecionais.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Contudo, a lei sobre as normas do trabalho (勞動基準法) fixa um prazo.
 
 Se o trabalhador desejar pôr termo ao contrato de trabalho a título dos pontos 1 ou 6 acima (por exemplo para terminar o contrato por falta de afiliação ao seguro), esse prazo aplica-se.
 
-Deve pôr termo ao contrato de trabalho num prazo de **30 dias** a contar do dia em que conheceu esta situação.
+Deve pôr termo ao contrato de trabalho num prazo de 30 dias a contar do dia em que conheceu esta situação.
 
-No ponto 6, em alternativa, o prazo é de **30 dias** a contar do dia em que conheceu o resultado do prejuízo.
+No ponto 6, em alternativa, o prazo é de 30 dias a contar do dia em que conheceu o resultado do prejuízo.
 
 O trabalhador deve portanto estar muito atento a estes prazos.
 
@@ -89,7 +89,7 @@ A indemnização pode não ser paga ou pode ser exigida.
 
 É por isso que, nos conflitos do trabalho (勞資糾紛) em Taiwan, o calendário decide.
 
-O «**tempo**» é muito importante.
+O «tempo» é muito importante.
 
 Na maior parte dos casos, quem se preparou de antemão fica em melhor posição para defender os seus direitos.
 

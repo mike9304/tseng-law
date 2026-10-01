@@ -85,11 +85,11 @@ Za voditelja tajvanskog kćerinskog društva i podružnice stranog društva zaht
 
 Sljedeće su situacije hipotetske radi potpore razmišljanju; ne obećavaju da je neki način zakonit ili poželjniji.
 
-**Strana poduzeća usmjerena na početni izvoz.** Ako na Tajvanu još nema zaposlenika ni zaliha i želite provjeriti potražnju preko neovisnog distributera, najprije se mogu ocijeniti opskrba, distribucijski odnos i opseg djelatnosti na Tajvanu. Sam distribucijski ugovor međutim ne rješava sva pitanja regulacije na Tajvanu.
+Strana poduzeća usmjerena na početni izvoz. Ako na Tajvanu još nema zaposlenika ni zaliha i želite provjeriti potražnju preko neovisnog distributera, najprije se mogu ocijeniti opskrba, distribucijski odnos i opseg djelatnosti na Tajvanu. Sam distribucijski ugovor međutim ne rješava sva pitanja regulacije na Tajvanu.
 
-**Strana poduzeća koja na Tajvanu postupno proširuju prodaju i tehničku potporu.** Ako planirate zapošljavati na Tajvanu i i dalje voditi zalihe, naplatu i potporu kupcima, valja konkretno usporediti strukturu kćerinskog društva (子公司) i podružnice (分公司) te zajedno ocijeniti i ugovornu odgovornost, način rada središnjice, poreze i plan osoblja.
+Strana poduzeća koja na Tajvanu postupno proširuju prodaju i tehničku potporu. Ako planirate zapošljavati na Tajvanu i i dalje voditi zalihe, naplatu i potporu kupcima, valja konkretno usporediti strukturu kćerinskog društva (子公司) i podružnice (分公司) te zajedno ocijeniti i ugovornu odgovornost, način rada središnjice, poreze i plan osoblja.
 
-**Strana poduzeća u fazi istraživanja tržišta.** Ako prije postavljanja prodajne organizacije želite samo funkcije prikupljanja obavijesti i veze, može se ocijeniti predstavništvo (代表人辦事處). Ako međutim stvarni plan obuhvaća prodaju skladištene robe ili rad na mjestu, treba zasebno potvrditi jesu li te djelatnosti dopuštene.
+Strana poduzeća u fazi istraživanja tržišta. Ako prije postavljanja prodajne organizacije želite samo funkcije prikupljanja obavijesti i veze, može se ocijeniti predstavništvo (代表人辦事處). Ako međutim stvarni plan obuhvaća prodaju skladištene robe ili rad na mjestu, treba zasebno potvrditi jesu li te djelatnosti dopuštene.
 
 ## 8. Za prvo savjetovanje dostatan je pregled poslovanja; nije nužno odmah predati sve povjerljive podloge
 

@@ -144,4 +144,4 @@ The treaty’s reduced rates do not apply automatically merely because the treat
 
 This article is an educational resource providing a general overview of Taiwan company formation and related rules, and it is not legal or tax advice for any specific matter. Because the required procedures and outcomes may vary with the investment structure, industry, the applicant’s nationality and immigration status, and current agency practice, confirm the latest official sources and the circumstances of the individual matter before investing, entering into a contract, or employing personnel.
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**
+Wei Tseng (曾雋崴), Taiwan Attorney

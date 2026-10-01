@@ -40,9 +40,9 @@ Kui töötaja lahkub omal soovil, ei pea äriühing lahkumishüvitist maksma.
 
 Kui töötaja siiski paneb toime õigusvastase teo,
 
-**rikub töökorralduseeskirja (工作規則),**
+rikub töökorralduseeskirja (工作規則),
 
-**või puudub põhjuseta töölt 3 järjestikusel päeval (曠工),**
+või puudub põhjuseta töölt 3 järjestikusel päeval (曠工),
 
 võib äriühing üles öelda ilma lahkumishüvitist maksmata.
 
@@ -52,7 +52,7 @@ Järgnev tabel võrdleb kolme lõpetamisviisi.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Liik** | **Majanduslik ülesütlemine (資遣員工, 經濟解僱)** | **Distsiplinaarne ülesütlemine (解僱員工, 懲戒解僱)** | **Töötaja omal soovil lahkumine**  **員工自請離職** |
+| Liik | Majanduslik ülesütlemine (資遣員工, 經濟解僱) | Distsiplinaarne ülesütlemine (解僱員工, 懲戒解僱) | Töötaja omal soovil lahkumine  員工自請離職 |
 | Tähendus | Kui tööandjal on äritegevuse olukorra tõttu vaja personali kohandada, asub põhjus tööandja ettevõtluse sfääris, mitte töötaja vastutuses. Seetõttu peab tööandja järgima etteteatamistähtaega (預告期間) ja maksma lahkumishüvitist, et töötaja ebasoodsat olukorda tasakaalustada. | Kui töötaja paneb toime õigusvastase või ebasobiva teo, võib tööandja töölepingu (勞動契約) etteteatamiseta kohe üles öelda ega pea lahkumishüvitist maksma. See on osa tööandja distsiplinaarvolitustest. | Töötaja võib lepingu igal ajal lõpetada, kuid peab staaži järgi järgima etteteatamistähtaega, et tööandja saaks korraldada üleandmise ja asendaja otsimise. |
 | Tingimused | Jah (Taiwani tööstandardite seaduse artikkel 11) | Jah (Taiwani tööstandardite seaduse artikkel 12) | Ei ole |
 | Etteteatamine | Nõutav | Ei ole nõutav | Nõutav |
@@ -194,17 +194,17 @@ esitab ülemääraseid nõudmisi
 
 või paigutab töötajaid ootamatutele ametikohtadele,
 
-**tuleb tõendid säilitada.**
+tuleb tõendid säilitada.
 
-**Oma tavalised kohalolekuandmed,**
+Oma tavalised kohalolekuandmed,
 
-**ületunnitöö andmed, tulemusandmed,**
+ületunnitöö andmed, tulemusandmed,
 
-**töökorralduseeskiri, e-kirjavahetus töökaaslaste ja ülemustega**
+töökorralduseeskiri, e-kirjavahetus töökaaslaste ja ülemustega
 
-**ning vestluste salvestised ülemustega —**
+ning vestluste salvestised ülemustega —
 
-**säilitage teile olulised tõendid.**
+säilitage teile olulised tõendid.
 
 ​
 

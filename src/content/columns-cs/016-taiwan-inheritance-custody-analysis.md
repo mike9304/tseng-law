@@ -151,4 +151,4 @@ Na oficiálních stránkách předpisů je třeba ověřit den novely a den naby
 
 Tento článek je vzdělávacím podkladem k obecnému vysvětlení režimu dědění, manželského majetkového režimu, rodičovské péče a opatrovnictví nezletilých na Tchaj-wanu; není právní radou ke konkrétní dědické nebo rodinné věci. Použitelné právo, postup a výsledek se mohou lišit podle okruhu dědiců, závěti, majetku a dluhů, manželského majetkového režimu, existujících soudních rozhodnutí a mezinárodních prvků. Před výpočtem lhůt, jako je vzdání se nebo daňové přiznání, nebo před nakládáním s majetkem ověřte nejnovější oficiální podklady a jednotlivé okolnosti.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

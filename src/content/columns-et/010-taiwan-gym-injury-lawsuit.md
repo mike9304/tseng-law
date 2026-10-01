@@ -59,7 +59,7 @@ Allpool on selle asja meediakajastuste, võrgupostituste ja õiguskommentaaride 
 
 ![Kas Korea meesüliõpilasel tekkis personaalse treeningu käigus 90 kg jõutõmbel lülivaheketta rebend?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Kas Korea meesüliõpilasel tekkis personaalse treeningu käigus 90 kg jõutõmbel lülivaheketta rebend?**
+Kas Korea meesüliõpilasel tekkis personaalse treeningu käigus 90 kg jõutõmbel lülivaheketta rebend?
 
 Selle asja praktiline tähendus on selles, et see näitab: ainuüksi asjaolu, et vigastus tekkis jõusaalis (健身房), ei määra vastutust kohe. Teenuseosutaja ohutuskohustuse (安全義務) sisu, konkreetne juhendamistegevus ja hoolsuskohustuse (注意義務) rikkumine, vigastuse ja teo vaheline põhjuslik seos ning kahju ulatust hinnatakse iga asja materjalide põhjal. Kriminaalmenetluse (刑事) ja tsiviilmenetluse (民事) eeldused ning tähtajad erinevad samuti, seega tuleb andmed õnnetuse järel eraldi korrastada.
 
@@ -93,13 +93,13 @@ Kui õnnetuse asjaolud võivad täita süüteo tunnused, võib kiiresti teha tea
 
 Hüvitise kirjed, mille nõudmist võib kaaluda, on järgmised. Tegelik tunnustamine ja summa sõltuvad iga kulu vajalikkusest, põhjuslikust seosest õnnetusega, tõenditest, vastutuse osakaalust ja kohtu hinnangust.
 
-1. **Ravikulud**: Vastuvõtule, uuringutele, ravile, ravimitele ja taastusravile tegelikult kulutatud summad tõendatakse kviitungite ja haiguslooga.
-2. **Hooldus- või hooldamiskulu (看護費用)**: Meditsiini- ja kuludokumentidega uuritakse, kas vigastuse astme ja ravi kulgemise valguses oli hooldust vaja ning kas periood ja kulu olid asjakohased.
-3. **Transpordikulu**: Raviasutusse ja sealt tagasi sõitmiseks vajalik kulu tõendatakse sõidudokumentide, kviitungite ja sarnaste tõenditega.
-4. **Kahju töövõime vähenemisest (勞動能力減損)**: Kui järelkahjustused ja püsiv töövõime langus loetakse tõendatuks, võib hinnata koos meditsiini- ja kutsedokumentide, kahjustuse astme, ameti ja sissetuleku ning järelejäänud tööeaga. Ainuüksi kahjustuse määr ei määra hüvitise summat ega ole alus kahju automaatseks arvutamiseks pensionieani.
-5. **Saamata jäänud tulu taastumisperioodil (收入損失)**: Periood, mil ravi või taastumise tõttu tegelikult ei saanud töötada, ja sellest tulenenud sissetuleku vähenemine tuleb tõendada palga-, maksu- ja töösuhte dokumentidega.
-6. **Mittevaraline kahju (非財產上損害)**: Vaimse kannatuse summa määrab kohus asja tegurite põhjal, nagu vigastuse aste, raviperiood, järelkahjustused ja poole konkreetsed asjaolud.
-7. **Karistuslik hüvitis (懲罰性賠償金)**: On säte, mille järgi tarbijakaitseseaduse kohaldumisega vaidluses, kui kahju tekkis ettevõtja tahtlusest, võib nõuda kuni 5-kordset tegelikku kahju; raske hooletuse korral kuni 3-kordset; hooletuse korral kuni tegeliku kahju summani. Kas [Taiwani tarbijakaitseseaduse (消費者保護法) artikkel 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asjale kohaldub ning kas karistuslikku hüvitist mõistetakse välja ja millises summas, sõltub kohtu hinnangust konkreetsetele eeldustele ja tõenditele.
+1. Ravikulud: Vastuvõtule, uuringutele, ravile, ravimitele ja taastusravile tegelikult kulutatud summad tõendatakse kviitungite ja haiguslooga.
+2. Hooldus- või hooldamiskulu (看護費用): Meditsiini- ja kuludokumentidega uuritakse, kas vigastuse astme ja ravi kulgemise valguses oli hooldust vaja ning kas periood ja kulu olid asjakohased.
+3. Transpordikulu: Raviasutusse ja sealt tagasi sõitmiseks vajalik kulu tõendatakse sõidudokumentide, kviitungite ja sarnaste tõenditega.
+4. Kahju töövõime vähenemisest (勞動能力減損): Kui järelkahjustused ja püsiv töövõime langus loetakse tõendatuks, võib hinnata koos meditsiini- ja kutsedokumentide, kahjustuse astme, ameti ja sissetuleku ning järelejäänud tööeaga. Ainuüksi kahjustuse määr ei määra hüvitise summat ega ole alus kahju automaatseks arvutamiseks pensionieani.
+5. Saamata jäänud tulu taastumisperioodil (收入損失): Periood, mil ravi või taastumise tõttu tegelikult ei saanud töötada, ja sellest tulenenud sissetuleku vähenemine tuleb tõendada palga-, maksu- ja töösuhte dokumentidega.
+6. Mittevaraline kahju (非財產上損害): Vaimse kannatuse summa määrab kohus asja tegurite põhjal, nagu vigastuse aste, raviperiood, järelkahjustused ja poole konkreetsed asjaolud.
+7. Karistuslik hüvitis (懲罰性賠償金): On säte, mille järgi tarbijakaitseseaduse kohaldumisega vaidluses, kui kahju tekkis ettevõtja tahtlusest, võib nõuda kuni 5-kordset tegelikku kahju; raske hooletuse korral kuni 3-kordset; hooletuse korral kuni tegeliku kahju summani. Kas [Taiwani tarbijakaitseseaduse (消費者保護法) artikkel 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asjale kohaldub ning kas karistuslikku hüvitist mõistetakse välja ja millises summas, sõltub kohtu hinnangust konkreetsetele eeldustele ja tõenditele.
 
 ## 5. Kas ka siis, kui jõusaalil on vastutuskindlustus (責任保險), võib hüvitise olemasolu ja summat vaidlustada?
 

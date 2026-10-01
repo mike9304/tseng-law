@@ -25,9 +25,9 @@ Spørgsmålene og svarene nedenfor skal hjælpe personer, der overvejer at stift
 
 ​
 
-**1. Hvad skal du være opmærksom på, når kapitalen (資本額) overføres fra udlandet til det taiwanske selskabs forberedelseskonto (公司籌備處帳戶)? (eksemplet nedenfor beskriver det koreanske system og den koreanske bankpraksis)**
+1. Hvad skal du være opmærksom på, når kapitalen (資本額) overføres fra udlandet til det taiwanske selskabs forberedelseskonto (公司籌備處帳戶)? (eksemplet nedenfor beskriver det koreanske system og den koreanske bankpraksis)
 
-Koreanske banker (銀行) kræver som regel, at investoren **personligt** besøger en bank i Korea og overfører midlerne fra en konto i eget navn.
+Koreanske banker (銀行) kræver som regel, at investoren personligt besøger en bank i Korea og overfører midlerne fra en konto i eget navn.
 
 Overførsel via netbank eller via en nærstående i Korea (匯款) er ikke mulig.
 
@@ -35,9 +35,9 @@ Endvidere skal personen med koreansk statsborgerskab, der stifter en udenlandsk 
 
 Indhent oplysninger hos din bank i det land, pengene sendes fra, inden kapitaloverførslen (資本金匯款); i det koreanske eksempel er det din hovedbank i Korea.
 
-**​**
+​
 
-**2. Må du ved indbetaling af selskabskapitalen overføre ny taiwansk dollar (新臺幣, TWD) fra din personlige konto i Taiwan til det taiwanske selskabs forberedelseskonto?**
+2. Må du ved indbetaling af selskabskapitalen overføre ny taiwansk dollar (新臺幣, TWD) fra din personlige konto i Taiwan til det taiwanske selskabs forberedelseskonto?
 
 Det er muligt, men du skal fremlægge dokumenter, der godtgør oprindelsen af de i Taiwan erhvervede TWD-midler.
 
@@ -47,9 +47,9 @@ Drejer det sig om udbytte og overskud fra en investering i en virksomhed i Taiwa
 
 Udføres overførslen fra en bankkonto i udlandet, behøver dokumenter om midlernes oprindelse ikke at vedlægges.
 
-**​**
+​
 
-**3. Hvornår kan forberedelseskontoen, efter at kapitalen er indgået, omdannes til en almindelig selskabskonto (正式公司帳戶)?**
+3. Hvornår kan forberedelseskontoen, efter at kapitalen er indgået, omdannes til en almindelig selskabskonto (正式公司帳戶)?
 
 Som regel kan den ansvarlige (負責人), når registreringsdokumenterne for den juridiske person (法人登記文件) er modtaget, gå i banken.
 
@@ -57,17 +57,17 @@ Der omdannes selskabets forberedelseskonto til en almindelig konto.
 
 Da de interne regler i hver bank (銀行) imidlertid adskiller sig, anbefales det at forespørge banken først, hvis der er brug for kapitalen med det samme.
 
-**​**
+​
 
-**4. Kan netbank tages i brug straks, efter at forberedelseskontoen er omdannet til en almindelig konto?**
+4. Kan netbank tages i brug straks, efter at forberedelseskontoen er omdannet til en almindelig konto?
 
 Det varierer fra bank til bank; som regel kræves der mindst et mobiltelefonnummer.
 
 Visse banker kan stille yderligere krav, for eksempel en brugstid for kontoen på mindst 6 måneder efter stiftelsen.
 
-**​**
+​
 
-**5. Kan selskabet ansætte udenlandske statsborgere som medarbejdere?**
+5. Kan selskabet ansætte udenlandske statsborgere som medarbejdere?
 
 A. Første medarbejder: anmodningen indgives som ledende arbejde i en almindelig virksomhed med investering fra oversøiske kinesere eller udlændinge (一般僑外投資事業主管工作). Målestokken for »specialiseret eller teknisk arbejde« under punkt B nedenfor finder ikke anvendelse, men adressatvilkårene gør, herunder vilkåret som leder (經理人) af et selskab, hvis indskud fra oversøiske kinesere eller udlændinge overstiger 1/3, samt arbejdsgiverens resultatvilkår vedrørende kapital og omsætning (bedømmelsesstandarder art. 38 og art. 39).
 

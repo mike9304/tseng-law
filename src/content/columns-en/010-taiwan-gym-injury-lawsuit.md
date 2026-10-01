@@ -61,7 +61,7 @@ The English renderings of the headlines of media reports, online posts, and lega
 
 ![Did a Korean male university student rupture a disc while deadlifting 90 kg during a personal-training session?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Did a Korean male university student rupture a disc while deadlifting 90 kg during a personal-training session?**
+Did a Korean male university student rupture a disc while deadlifting 90 kg during a personal-training session?
 
 This case is practically significant because it shows that the mere occurrence of a gym injury does not immediately determine liability. The scope of the service provider's duty to ensure safety, the specific instruction given and any breach of the duty of care, the causal relationship between the conduct and the injury, and the extent of the loss are all assessed based on the evidence in each case. The requirements and time limits of criminal and civil procedures also differ, so records should be organized separately from the outset.
 
@@ -95,13 +95,13 @@ If the circumstances of the accident may satisfy the elements of a criminal offe
 
 The categories of damages that may be considered are as follows. Whether each item is actually recognized, and in what amount, depends on the necessity of each expense, its causal relationship to the accident, the supporting documentation, the apportionment of liability, and the court's assessment.
 
-1. **Medical expenses**: Amounts actually spent on consultations, examinations, treatment, medication, and rehabilitation are proven with receipts and medical records.
-2. **Caregiving or nursing costs**: Whether care was necessary in light of the severity of the injury and the course of treatment, and whether the period and cost were reasonable, are assessed using medical and expenditure records.
-3. **Transportation expenses**: Costs necessary for traveling to and from medical institutions for treatment are proven with travel records, receipts, and the like.
-4. **Loss of earning capacity**: If lasting impairment and a continuing reduction in earning capacity are established, the loss may be assessed by considering medical and occupational evidence, the degree of impairment, occupation and income, and the remaining working life. An impairment rating alone does not fix the amount of compensation, nor is the loss automatically calculated through to retirement age.
-5. **Lost earnings during recovery**: The period during which the claimant actually could not work because of treatment or recuperation, and the income lost as a result, must be proven with payroll records, tax records, employment records, and the like.
-6. **Non-pecuniary damages**: The amount for mental suffering is determined by the court based on case-specific factors such as the severity of the injury, the duration of treatment, any lasting effects, and the parties' particular circumstances.
-7. **Punitive damages**: In litigation governed by the Consumer Protection Act, there is a provision allowing a claim of up to five times the actual damages where the loss was caused by the business operator's intentional conduct, up to three times for gross negligence, and up to the amount of the actual damages for negligence. Whether [Article 51 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) applies to a given case, and whether punitive damages are actually awarded and in what amount, depend on the court's assessment of the specific requirements and evidence.
+1. Medical expenses: Amounts actually spent on consultations, examinations, treatment, medication, and rehabilitation are proven with receipts and medical records.
+2. Caregiving or nursing costs: Whether care was necessary in light of the severity of the injury and the course of treatment, and whether the period and cost were reasonable, are assessed using medical and expenditure records.
+3. Transportation expenses: Costs necessary for traveling to and from medical institutions for treatment are proven with travel records, receipts, and the like.
+4. Loss of earning capacity: If lasting impairment and a continuing reduction in earning capacity are established, the loss may be assessed by considering medical and occupational evidence, the degree of impairment, occupation and income, and the remaining working life. An impairment rating alone does not fix the amount of compensation, nor is the loss automatically calculated through to retirement age.
+5. Lost earnings during recovery: The period during which the claimant actually could not work because of treatment or recuperation, and the income lost as a result, must be proven with payroll records, tax records, employment records, and the like.
+6. Non-pecuniary damages: The amount for mental suffering is determined by the court based on case-specific factors such as the severity of the injury, the duration of treatment, any lasting effects, and the parties' particular circumstances.
+7. Punitive damages: In litigation governed by the Consumer Protection Act, there is a provision allowing a claim of up to five times the actual damages where the loss was caused by the business operator's intentional conduct, up to three times for gross negligence, and up to the amount of the actual damages for negligence. Whether [Article 51 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) applies to a given case, and whether punitive damages are actually awarded and in what amount, depend on the court's assessment of the specific requirements and evidence.
 
 ## 5. Can compensation still be disputed even if the gym has liability insurance?
 

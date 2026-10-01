@@ -25,7 +25,7 @@ en dat verschilt van de regels in veel andere landen, waaronder Korea.
 
 ​
 
-Er bestaan echter **uitzonderingsgevallen**.
+Er bestaan echter uitzonderingsgevallen.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ De wet op de arbeidsnormen (勞動基準法) bepaalt echter
 
 dat werknemers die de arbeidsovereenkomst volgens punt 1 of punt 6 hierboven willen beëindigen (bijvoorbeeld wegens ontbrekende verzekeringsaansluiting),
 
-de arbeidsovereenkomst binnen **30 dagen** vanaf de dag waarop zij de situatie kennen,
+de arbeidsovereenkomst binnen 30 dagen vanaf de dag waarop zij de situatie kennen,
 
-of (bij punt 6) binnen **30 dagen** vanaf de dag waarop zij het schadegevolg kennen, moeten beëindigen.
+of (bij punt 6) binnen 30 dagen vanaf de dag waarop zij het schadegevolg kennen, moeten beëindigen.
 
 Daarom moeten werknemers de termijn nauwkeurig in het oog houden.
 
@@ -89,7 +89,7 @@ de ontslagvergoeding worden geweigerd of gevorderd.
 
 Daarom is bij Taiwanese arbeidsgeschillen (勞資糾紛)
 
-het **tijdstip** zeer belangrijk.
+het tijdstip zeer belangrijk.
 
 Wie zich vooraf voorbereidt, staat sterker om de eigen rechten te bewaren; een bepaalde uitkomst volgt daaruit niet.
 

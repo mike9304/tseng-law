@@ -59,7 +59,7 @@ Els títols de les informacions de premsa, de les publicacions en línia i dels 
 
 ![Un noi universitari coreà es va trencar el disc intervertebral en fer un pes mort de 90 kg en entrenament personal?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Un noi universitari coreà es va trencar el disc intervertebral en fer un pes mort de 90 kg en entrenament personal?**
+Un noi universitari coreà es va trencar el disc intervertebral en fer un pes mort de 90 kg en entrenament personal?
 
 L’interès pràctic d’aquest cas és que mostra que la responsabilitat no es determina de seguida pel mer fet que s’hagi produït una lesió en un gimnàs. El contingut de l’obligació de seguretat (安全義務) que recau sobre el prestador del servei, l’acte concret d’instrucció i la infracció del deure de diligència (注意義務), el nexe causal entre la lesió i la conducta, i l’abast del dany es valoren a partir de les dades de cada assumpte. Els requisits i els terminis del procediment penal i del procediment civil també són diferents, de manera que des de just després de l’accident convé organitzar els registres per separat.
 
@@ -93,13 +93,13 @@ Si les circumstàncies de l’accident poden integrar el tipus d’un delicte, e
 
 Els conceptes de dany que es poden examinar per a la reclamació són els següents. El reconeixement real i l’import depenen de la necessitat de cada despesa, del nexe causal amb l’accident, dels justificants, de la proporció de responsabilitat i del criteri del tribunal.
 
-1. **Despeses mèdiques**: Les despeses realment desemborsades en consulta, proves, tractament, medicaments i rehabilitació es proven amb rebuts i historial clínic.
-2. **Despeses de cures o d’assistència**: Si, a la vista del grau de la lesió i de l’evolució del tractament, les cures eren necessàries, i si el període i el cost són adequats, s’examina amb dades mèdiques i de despesa.
-3. **Despeses de transport**: Les despeses necessàries per anar i tornar al centre sanitari per al tractament es proven amb el registre de desplaçaments, rebuts i similars.
-4. **Dany per pèrdua de capacitat laboral (勞動能力減損)**: Si es reconeixen seqüeles i una minva persistent de la capacitat laboral, es pot valorar conjuntament amb dades mèdiques i professionals, el grau de discapacitat, la professió i els ingressos, i el període laboral restant. El percentatge de discapacitat no fixa per si sol la indemnització, ni la pèrdua es calcula automàticament fins al moment de la jubilació.
-5. **Pèrdua d’ingressos durant el període de recuperació (收入損失)**: El període en què realment no es va poder treballar pel tractament o el repòs i la reducció d’ingressos que això va produir s’han de provar amb dades salarials, fiscals, d’assistència a la feina, etc.
-6. **Dany no patrimonial (非財產上損害)**: L’import pel sofriment moral el fixa el tribunal a partir de factors de cada assumpte, com el grau de la lesió, el període de tractament, les seqüeles i les circumstàncies concretes de la part.
-7. **Indemnització punitiva (懲罰性賠償金)**: Hi ha una norma segons la qual, en un litigi al qual s’aplica la Llei de protecció dels consumidors, si el dany es va produir per dol de l’empresari es pot reclamar fins a 5 vegades el dany real; si per culpa greu, fins a 3 vegades; i si per culpa, fins a 1 vegada l’import del dany real. Si l’[article 51 de la Llei de protecció dels consumidors de Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) s’aplica a l’assumpte i si s’arriba a concedir una indemnització punitiva i per quin import, depèn del criteri del tribunal sobre els requisits concrets i les proves.
+1. Despeses mèdiques: Les despeses realment desemborsades en consulta, proves, tractament, medicaments i rehabilitació es proven amb rebuts i historial clínic.
+2. Despeses de cures o d’assistència: Si, a la vista del grau de la lesió i de l’evolució del tractament, les cures eren necessàries, i si el període i el cost són adequats, s’examina amb dades mèdiques i de despesa.
+3. Despeses de transport: Les despeses necessàries per anar i tornar al centre sanitari per al tractament es proven amb el registre de desplaçaments, rebuts i similars.
+4. Dany per pèrdua de capacitat laboral (勞動能力減損): Si es reconeixen seqüeles i una minva persistent de la capacitat laboral, es pot valorar conjuntament amb dades mèdiques i professionals, el grau de discapacitat, la professió i els ingressos, i el període laboral restant. El percentatge de discapacitat no fixa per si sol la indemnització, ni la pèrdua es calcula automàticament fins al moment de la jubilació.
+5. Pèrdua d’ingressos durant el període de recuperació (收入損失): El període en què realment no es va poder treballar pel tractament o el repòs i la reducció d’ingressos que això va produir s’han de provar amb dades salarials, fiscals, d’assistència a la feina, etc.
+6. Dany no patrimonial (非財產上損害): L’import pel sofriment moral el fixa el tribunal a partir de factors de cada assumpte, com el grau de la lesió, el període de tractament, les seqüeles i les circumstàncies concretes de la part.
+7. Indemnització punitiva (懲罰性賠償金): Hi ha una norma segons la qual, en un litigi al qual s’aplica la Llei de protecció dels consumidors, si el dany es va produir per dol de l’empresari es pot reclamar fins a 5 vegades el dany real; si per culpa greu, fins a 3 vegades; i si per culpa, fins a 1 vegada l’import del dany real. Si l’[article 51 de la Llei de protecció dels consumidors de Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) s’aplica a l’assumpte i si s’arriba a concedir una indemnització punitiva i per quin import, depèn del criteri del tribunal sobre els requisits concrets i les proves.
 
 ## 5. Encara que el gimnàs tingui una assegurança de responsabilitat (責任保險), es pot discutir encara si hi ha indemnització i quin n’és l’import?
 

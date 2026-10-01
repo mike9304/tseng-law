@@ -85,11 +85,11 @@ Külföldi társaság tajvani leányvállalatának és fióktelepének vezetőj�
 
 Az alábbiak a gondolkodást segítő hipotetikus vizsgálati helyzetek, és nem olyan következtetés, amely meghatározott módot jogszerűnek vagy jobbnak ígérne, és nem ígér meghatározott eredményt.
 
-**A kezdeti kivitelre összpontosító vállalkozás.** Ha még nincs tajvani munkavállaló vagy készlet, és független forgalmazón keresztül kívánják a piaci keresletet felmérni, először az ellátást, a forgalmazási viszonyt és a tajvani tevékenységi kört lehet vizsgálni. A forgalmazási szerződés önmagában azonban nem oldja meg a tajvani szabályozás minden kérdését.
+A kezdeti kivitelre összpontosító vállalkozás. Ha még nincs tajvani munkavállaló vagy készlet, és független forgalmazón keresztül kívánják a piaci keresletet felmérni, először az ellátást, a forgalmazási viszonyt és a tajvani tevékenységi kört lehet vizsgálni. A forgalmazási szerződés önmagában azonban nem oldja meg a tajvani szabályozás minden kérdését.
 
-**A tajvani értékesítést és műszaki támogatást fokozatosan bővítő vállalkozás.** Ha Tajvanon munkavállalókat vesznek fel, és a készletet, a beszedést és az ügyféltámogatást továbbra is kezelni tervezik, a leányvállalatot és a fióktelepet konkrétan össze kell vetni, és a szerződéses felelősséget, a központ üzemeltetési módját, az adózást és a személyzeti tervet is együtt kell vizsgálni.
+A tajvani értékesítést és műszaki támogatást fokozatosan bővítő vállalkozás. Ha Tajvanon munkavállalókat vesznek fel, és a készletet, a beszedést és az ügyféltámogatást továbbra is kezelni tervezik, a leányvállalatot és a fióktelepet konkrétan össze kell vetni, és a szerződéses felelősséget, a központ üzemeltetési módját, az adózást és a személyzeti tervet is együtt kell vizsgálni.
 
-**Piackutatási szakaszban lévő vállalkozás.** Ha értékesítési szervezet előtt csak információgyűjtést és kapcsolattartást kívánnak tartani, a képviseleti iroda vizsgálható. Ha azonban a tényleges terv készletáru-értékesítést vagy helyszíni munkát tartalmaz, külön ellenőrizni kell, végezhető-e az a tevékenység.
+Piackutatási szakaszban lévő vállalkozás. Ha értékesítési szervezet előtt csak információgyűjtést és kapcsolattartást kívánnak tartani, a képviseleti iroda vizsgálható. Ha azonban a tényleges terv készletáru-értékesítést vagy helyszíni munkát tartalmaz, külön ellenőrizni kell, végezhető-e az a tevékenység.
 
 ## 8. Az első megkereséshez elég az üzemeltetési áttekintés, nem kell először az összes bizalmas anyagot átadni
 

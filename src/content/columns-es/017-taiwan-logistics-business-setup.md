@@ -148,4 +148,4 @@ Al trabajo sin permiso pueden imponerse una multa administrativa y la orden de s
 
 Este artículo es material educativo destinado a explicar de forma general el régimen jurídico, y no es asesoramiento para un caso concreto. Como los criterios de autorización, los formularios de solicitud y la práctica de la autoridad competente pueden cambiar, confirme las fuentes oficiales actualizadas y las circunstancias del asunto antes de ejecutar una inversión o un contrato.
 
-**Abogada Wei Tseng (曾雋崴)**
+Abogada Wei Tseng (曾雋崴)

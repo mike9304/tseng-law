@@ -77,13 +77,13 @@ describe('Japanese column 005 — Korean-canonical mirror', () => {
     const positions = canonicalQuestions.map((question) => raw.indexOf(question));
     expect(positions.every((position) => position >= 0)).toBe(true);
     expect(positions).toEqual([...positions].sort((a, b) => a - b));
-    expect(raw.match(/^\*\*\d+\. .+\*\*$/gm)).toHaveLength(5);
+    expect(raw.match(/^\d+\. .+$/gm)).toHaveLength(5);
     expect(raw).not.toMatch(/^## /m);
   });
 
   it('faithfully restores the Korean capital-remittance statements', () => {
     const requiredPhrases = [
-      '投資家**本人**が韓国の銀行窓口を直接訪れ、本人名義の口座から送金することを求めています。',
+      '投資家本人が韓国の銀行窓口を直接訪れ、本人名義の口座から送金することを求めています。',
       'インターネットバンキングや、韓国にいる親族・知人による代理送金はできません。',
       '韓国籍の方が外国法人を設立し、またはその持分を取得した場合は、「海外直接投資申告」を行わなければなりません。',
       '申告は台湾法人への資本金送金時までに受理されている必要があり',

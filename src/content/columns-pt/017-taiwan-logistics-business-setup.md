@@ -148,4 +148,4 @@ Ao trabalho sem autorização podem aplicar-se uma coima administrativa e uma or
 
 Este artigo é um material educativo destinado a explicar de forma geral o regime jurídico, e não é um conselho para um assunto concreto. Como os critérios de autorização, os formulários de pedido e a prática da autoridade competente podem mudar, confirmem-se as fontes oficiais atualizadas e as circunstâncias do assunto antes de executar um investimento ou um contrato.
 
-**A advogada Wei Tseng (曾雋崴)**
+A advogada Wei Tseng (曾雋崴)

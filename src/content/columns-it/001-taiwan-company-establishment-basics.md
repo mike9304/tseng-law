@@ -142,4 +142,4 @@ Si può consultare l’ambito di attività rispettivo in [Quali questioni tratti
 
 Il presente articolo è un documento di informazione generale a fini educativi sulla costituzione di società a Taiwan e le regole connesse; non costituisce una consulenza legale o fiscale in un caso concreto e non promette un risultato determinato. Le procedure necessarie e i risultati possono variare secondo la struttura di investimento, il settore, la nazionalità e il titolo di soggiorno del richiedente, nonché la prassi più recente dell’autorità competente; prima di eseguire un investimento, un contratto o un impiego, conviene esaminare le fonti ufficiali più recenti e le circostanze proprie del caso.
 
-**Avvocata Wei Tseng (曾雋崴)**
+Avvocata Wei Tseng (曾雋崴)

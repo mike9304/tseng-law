@@ -51,7 +51,7 @@ Vær derfor oppmerksom på dette punktet.
 
 ​
 
-**Spørsmål. Skal alle bransjer via ordningen for «forutgående forespørsel om forretningsstedet» undersøke om utøvelsen er mulig?**
+Spørsmål. Skal alle bransjer via ordningen for «forutgående forespørsel om forretningsstedet» undersøke om utøvelsen er mulig?
 
 Det anbefales at alle bransjer via ordningen for «forutgående forespørsel om forretningsstedet» (營業場所預先查詢) bekrefter om utøvelsen er mulig.
 
@@ -61,7 +61,7 @@ I praksis trenger derfor ikke alle grener å undersøkes ved selskapsregistrerin
 
 Ifølge «[arbeidsretningslinjene for Taipeis tjeneste for assistert forespørsel om forretningssted](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) og den gjeldende veiledningen fra byen Taipei
 
-skal siden 1. januar 2023 ved søknad om registrering av stiftelse, av flytting av hjemsted eller av tilføyelse av forretningsgrener for et selskap eller en virksomhet (herunder filialen (分公司) og underavdelingen (分支機構)) resultatet av den forutgående forespørselen om forretningsstedet **obligatorisk** vedlegges registreringssøknaden, uavhengig av bransjen.
+skal siden 1. januar 2023 ved søknad om registrering av stiftelse, av flytting av hjemsted eller av tilføyelse av forretningsgrener for et selskap eller en virksomhet (herunder filialen (分公司) og underavdelingen (分支機構)) resultatet av den forutgående forespørselen om forretningsstedet obligatorisk vedlegges registreringssøknaden, uavhengig av bransjen.
 
 Listen nedenfor over de «forretningsgrener som handelskontoret undersøker på eget initiativ» (主動查詢之營業項目) betegner de forretningsgrenene som handelskontoret undersøker på eget initiativ under registreringsprøvingen (隨案主動查詢), når grenen står i søknaden, men mangler i det vedlagte resultatet; det forhold at en gren ikke står på denne listen, betyr ikke at grenen er fritatt for kontrollen.
 

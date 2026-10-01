@@ -142,4 +142,4 @@ L’àmbit de treball relacionat es pot consultar a [Assumptes que atenem](/ca/s
 
 Aquest article és informació jurídica general amb finalitats educatives sobre la constitució de societats a Taiwan i el règim connex; no és assessorament per a un cas concret i no garanteix un resultat. Com que els tràmits necessaris i el resultat poden variar segons l’estructura d’inversió, el sector, la nacionalitat i la situació d’estada del sol·licitant, i la pràctica més recent de l’autoritat competent, confirmi les fonts oficials actualitzades i les circumstàncies de l’assumpte abans d’executar una inversió, un contracte o una contractació.
 
-**Advocada Wei Tseng (曾雋崴)**
+Advocada Wei Tseng (曾雋崴)

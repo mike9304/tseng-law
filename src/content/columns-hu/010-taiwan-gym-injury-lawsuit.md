@@ -59,7 +59,7 @@ Az ügyre vonatkozó sajtóhírek, internetes közlések és jogi kommentárok c
 
 ![Koreai férfi egyetemi hallgatónál porckorongrepedés lépett fel, amikor személyi edzés közben 90 kg felhúzást végzett?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Koreai férfi egyetemi hallgatónál porckorongrepedés lépett fel, amikor személyi edzés közben 90 kg felhúzást végzett?**
+Koreai férfi egyetemi hallgatónál porckorongrepedés lépett fel, amikor személyi edzés közben 90 kg felhúzást végzett?
 
 Az ügy gyakorlati jelentősége az, hogy megmutatja: a felelősség nem dől el rögtön pusztán attól, hogy a sérülés edzőteremben történt. A szolgáltatót terhelő biztonsági kötelezettség (安全義務) tartalma, a konkrétan adott útmutatás és a gondossági kötelezettség (注意義務) megsértése, a sérülés és a magatartás közötti okozati összefüggés, valamint a kár terjedelme az egyes ügy iratai alapján ítélendő meg. A büntetőeljárás és a polgári eljárás feltételei és határidői is elkülönülnek, ezért a baleset után a nyomokat külön kell rendezni.
 
@@ -93,13 +93,13 @@ Ha a baleset körülményei kimeríthetik egy bűncselekmény tényállását, g
 
 A vizsgálható kártérítési tételek a következők. A tényleges elismerés és az összeg minden kiadás szükségességétől, a balesettel való okozati összefüggéstől, a bizonylatoktól, a felelősségi aránytól és a bíróság értékelésétől függ.
 
-1. **Orvosi költségek**: A rendelésre, vizsgálatra, kezelésre, gyógyszerre és rehabilitációra ténylegesen költött költségeket nyugtákkal és orvosi dokumentációval kell bizonyítani.
-2. **Gondozási vagy ápolási költségek**: Azt, hogy a sérülés foka és a kezelés lefolyása alapján szükséges volt-e a gondozás, valamint hogy az időszak és a költség megfelelő-e, orvosi és kiadási iratokkal vizsgálják.
-3. **Közlekedési költségek**: A kezeléshez a gyógyintézetbe oda-vissza szükséges költségeket utazási nyilvántartással, nyugtákkal és hasonló iratokkal kell bizonyítani.
-4. **Munkaképesség-csökkenésből eredő kár (勞動能力減損)**: Ha utóhatások és tartós munkaképesség-csökkenés elismertek, orvosi és foglalkozási iratokkal, a károsodás fokával, a foglalkozással és a jövedelemmel, valamint a fennmaradó munkavégzési időszakkal együtt értékelhető. Maga a károsodási arány nem rögzíti a kártérítést, és a veszteséget nem számítják automatikusan a nyugdíjkorhatárig.
-5. **A felépülési időszak kieső jövedelme (收入損失)**: Azt az időszakot, amikor kezelés vagy pihenés miatt ténylegesen nem lehetett dolgozni, és az ebből eredő jövedelemcsökkenést bérjegyzékkel, adóügyi iratokkal és a foglalkoztatást igazoló iratokkal kell bizonyítani.
-6. **Nem vagyoni kár (非財產上損害)**: A lelki szenvedés összegét a bíróság az ügy tényezői, például a sérülés foka, a kezelési idő, az utóhatások és a fél konkrét körülményei alapján állapítja meg.
-7. **Büntető kártérítés (懲罰性賠償金)**: Van olyan szabály, hogy a fogyasztóvédelmi törvény hatálya alá tartozó perben, ha a kárt a vállalkozás szándéka okozta, a tényleges kár legfeljebb 5-szöröse, súlyos gondatlanság esetén legfeljebb 3-szorosa, gondatlanság esetén legfeljebb a tényleges kár összegéig, azaz annak 1-szereséig követelhető. Hogy a [tajvani fogyasztóvédelmi törvény 51. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) alkalmazandó-e az ügyre, valamint hogy jár-e büntető kártérítés, és milyen összegben, a bíróságnak a konkrét feltételekre és bizonyítékokra vonatkozó értékelésétől függ.
+1. Orvosi költségek: A rendelésre, vizsgálatra, kezelésre, gyógyszerre és rehabilitációra ténylegesen költött költségeket nyugtákkal és orvosi dokumentációval kell bizonyítani.
+2. Gondozási vagy ápolási költségek: Azt, hogy a sérülés foka és a kezelés lefolyása alapján szükséges volt-e a gondozás, valamint hogy az időszak és a költség megfelelő-e, orvosi és kiadási iratokkal vizsgálják.
+3. Közlekedési költségek: A kezeléshez a gyógyintézetbe oda-vissza szükséges költségeket utazási nyilvántartással, nyugtákkal és hasonló iratokkal kell bizonyítani.
+4. Munkaképesség-csökkenésből eredő kár (勞動能力減損): Ha utóhatások és tartós munkaképesség-csökkenés elismertek, orvosi és foglalkozási iratokkal, a károsodás fokával, a foglalkozással és a jövedelemmel, valamint a fennmaradó munkavégzési időszakkal együtt értékelhető. Maga a károsodási arány nem rögzíti a kártérítést, és a veszteséget nem számítják automatikusan a nyugdíjkorhatárig.
+5. A felépülési időszak kieső jövedelme (收入損失): Azt az időszakot, amikor kezelés vagy pihenés miatt ténylegesen nem lehetett dolgozni, és az ebből eredő jövedelemcsökkenést bérjegyzékkel, adóügyi iratokkal és a foglalkoztatást igazoló iratokkal kell bizonyítani.
+6. Nem vagyoni kár (非財產上損害): A lelki szenvedés összegét a bíróság az ügy tényezői, például a sérülés foka, a kezelési idő, az utóhatások és a fél konkrét körülményei alapján állapítja meg.
+7. Büntető kártérítés (懲罰性賠償金): Van olyan szabály, hogy a fogyasztóvédelmi törvény hatálya alá tartozó perben, ha a kárt a vállalkozás szándéka okozta, a tényleges kár legfeljebb 5-szöröse, súlyos gondatlanság esetén legfeljebb 3-szorosa, gondatlanság esetén legfeljebb a tényleges kár összegéig, azaz annak 1-szereséig követelhető. Hogy a [tajvani fogyasztóvédelmi törvény 51. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) alkalmazandó-e az ügyre, valamint hogy jár-e büntető kártérítés, és milyen összegben, a bíróságnak a konkrét feltételekre és bizonyítékokra vonatkozó értékelésétől függ.
 
 ## 5. Akkor is vitatható a kártérítés megléte vagy összege, ha az edzőteremnek van felelősségbiztosítása (責任保險)?
 

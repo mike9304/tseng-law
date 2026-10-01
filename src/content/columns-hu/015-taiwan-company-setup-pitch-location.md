@@ -51,7 +51,7 @@ Ezért erre figyelni kell.
 
 ​
 
-**Kérdés. Minden tevékenységi ághoz a „telephely előzetes lekérdezése” rendszerén keresztül kell ellenőrizni, hogy a tevékenység lehetséges-e?**
+Kérdés. Minden tevékenységi ághoz a „telephely előzetes lekérdezése” rendszerén keresztül kell ellenőrizni, hogy a tevékenység lehetséges-e?
 
 Minden tevékenységi ághoz ajánlott a „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerén keresztül ellenőrizni, hogy a tevékenység lehetséges-e.
 
@@ -61,7 +61,7 @@ Ezért a gyakorlatban nem szükséges a társaság bejegyzésekor minden tevéke
 
 A „[Tajpej város telephely-tájékoztatási szolgálatának működési utasítása](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) és Tajpej város hatályos útmutatója szerint
 
-társaság vagy kereskedelmi vállalkozás (ideértve a fióktelepet (分公司) és az alárendelt telephelyet (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől – a tevékenységi ágtól függetlenül – **csatolni kell** a telephely előzetes lekérdezésének eredményét.
+társaság vagy kereskedelmi vállalkozás (ideértve a fióktelepet (分公司) és az alárendelt telephelyet (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől – a tevékenységi ágtól függetlenül – csatolni kell a telephely előzetes lekérdezésének eredményét.
 
 Az alábbi „hivatalból vizsgált tevékenységi ágak” (主動查詢之營業項目) jegyzéke azokat a tevékenységi ágakat jelöli, amelyeket a Kereskedelmi Hivatal a bejegyzés vizsgálata során hivatalból további lekérdezéssel (隨案主動查詢) ellenőriz, ha a tevékenységi ág szerepel a kérelemben, de hiányzik a csatolt eredményből; az, hogy egy tevékenységi ág nincs ezen a jegyzéken, nem jelenti a lekérdezés alóli mentességet.
 

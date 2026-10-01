@@ -40,9 +40,9 @@ Apabila karyawan mengundurkan diri atas kemauan sendiri, perusahaan tidak wajib 
 
 Namun apabila karyawan melakukan perbuatan melawan hukum,
 
-**melanggar peraturan perusahaan (工作規則),**
+melanggar peraturan perusahaan (工作規則),
 
-**atau mangkir tanpa alasan sah (曠工) selama 3 hari berturut-turut,**
+atau mangkir tanpa alasan sah (曠工) selama 3 hari berturut-turut,
 
 perusahaan dapat memberhentikan karyawan tersebut tanpa membayar pesangon.
 
@@ -52,7 +52,7 @@ Saya akan merangkumnya untuk Anda dalam sebuah tabel sederhana.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Jenis** | **Pemutusan hubungan kerja karena alasan ekonomi**  **資遣員工(經濟解僱)** | **Pemecatan karena pelanggaran**  **解僱員工(懲戒解僱)** | **Pengunduran diri karyawan atas kemauan sendiri**  **員工自請離職** |
+| Jenis | Pemutusan hubungan kerja karena alasan ekonomi  資遣員工(經濟解僱) | Pemecatan karena pelanggaran  解僱員工(懲戒解僱) | Pengunduran diri karyawan atas kemauan sendiri  員工自請離職 |
 | Makna | Apabila pemberi kerja perlu melakukan penyesuaian ketenagakerjaan karena kondisi usahanya, penyebabnya berasal dari ranah pengelolaan pemberi kerja dan bukan merupakan tanggung jawab pekerja. Karena itu pemberi kerja wajib menaati masa pemberitahuan sebelumnya (預告期間) dan memikul kewajiban membayar pesangon, sehingga kerugian yang dialami pekerja dapat diimbangi secara seimbang. | Apabila pekerja melakukan perbuatan melawan hukum atau perbuatan tidak patut, pemberi kerja dapat langsung mengakhiri perjanjian kerja (勞動契約) tanpa pemberitahuan sebelumnya dan tidak perlu membayar pesangon. Hal ini merupakan salah satu bentuk kewenangan disiplin pemberi kerja. | Pekerja bebas mengakhiri perjanjian kerja kapan saja, tetapi harus menaati masa pemberitahuan sebelumnya sesuai masa kerjanya, agar pemberi kerja dapat mengatur serah terima pekerjaan dan mencari penggantinya. |
 | Syarat | Ada  (Pasal 11 Undang-Undang Standar Ketenagakerjaan Taiwan) | Ada  (Pasal 12 Undang-Undang Standar Ketenagakerjaan Taiwan) | Tidak ada |
 | Pemberitahuan sebelumnya | Diperlukan | Tidak diperlukan | Diperlukan |
@@ -194,17 +194,17 @@ mengajukan tuntutan yang tidak masuk akal,
 
 atau menempatkan karyawan pada posisi yang tidak wajar,
 
-**Anda harus menyimpan bukti.**
+Anda harus menyimpan bukti.
 
-**Catatan kehadiran Anda yang normal,**
+Catatan kehadiran Anda yang normal,
 
-**catatan kerja lembur, catatan pencapaian kerja,**
+catatan kerja lembur, catatan pencapaian kerja,
 
-**peraturan perusahaan, catatan email dengan rekan kerja dan atasan,**
+peraturan perusahaan, catatan email dengan rekan kerja dan atasan,
 
-**serta rekaman percakapan dengan atasan Anda —**
+serta rekaman percakapan dengan atasan Anda —
 
-**simpanlah bukti yang menguntungkan diri Anda sendiri.**
+simpanlah bukti yang menguntungkan diri Anda sendiri.
 
 ​
 

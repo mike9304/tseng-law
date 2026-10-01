@@ -85,11 +85,11 @@ Este relativ mai ușor să se obțină permisul de muncă pentru un gestionar al
 
 Scenariile următoare sunt ipotetice pentru a ajuta la reflecție; nu stabilesc că un mod ar fi licit sau preferabil.
 
-**Întreprinderi străine centrate pe exportul inițial.** Dacă nu există încă nici salariați nici stocuri în Taiwan și vreți să verificați cererea printr-un distribuitor independent, puteți examina mai întâi furnizarea, raportul de distribuție și obiectul de activitate în Taiwan. Un contract de distribuție nu elimină, prin el însuși, toate chestiunile de reglementare în Taiwan.
+Întreprinderi străine centrate pe exportul inițial. Dacă nu există încă nici salariați nici stocuri în Taiwan și vreți să verificați cererea printr-un distribuitor independent, puteți examina mai întâi furnizarea, raportul de distribuție și obiectul de activitate în Taiwan. Un contract de distribuție nu elimină, prin el însuși, toate chestiunile de reglementare în Taiwan.
 
-**Întreprinderi străine care lărgesc vânzările și sprijinul tehnic în Taiwan.** Dacă intenționați să angajați în Taiwan și să continuați să gestionați stocuri, încasări și sprijinul clientului, este potrivit să se compare concret filiala și sucursala, și să se revadă și răspunderea contractuală, modul de operare al sediului, impozitele și personalul.
+Întreprinderi străine care lărgesc vânzările și sprijinul tehnic în Taiwan. Dacă intenționați să angajați în Taiwan și să continuați să gestionați stocuri, încasări și sprijinul clientului, este potrivit să se compare concret filiala și sucursala, și să se revadă și răspunderea contractuală, modul de operare al sediului, impozitele și personalul.
 
-**Întreprinderi străine în fază de studiu de piață.** Dacă, înaintea unei organizații de vânzări, vreți numai funcții de informare și de legătură, un birou de reprezentare se poate evalua. Dacă planul real include vânzarea de stocuri sau munca pe loc, trebuie confirmat aparte dacă aceste activități sunt permise.
+Întreprinderi străine în fază de studiu de piață. Dacă, înaintea unei organizații de vânzări, vreți numai funcții de informare și de legătură, un birou de reprezentare se poate evalua. Dacă planul real include vânzarea de stocuri sau munca pe loc, trebuie confirmat aparte dacă aceste activități sunt permise.
 
 ## 8. Pentru prima convorbire, o prezentare de ansamblu a operațiunilor este suficientă; nu este necesar să se predea de la început toate actele confidențiale
 

@@ -93,9 +93,9 @@ Pri neslaganju s mišljenjem veštačenja može se zahtevati ponovno razmatranje
 
 Potraživanje zasnovano na članu 184 Građanskog zakonika pretpostavlja protivpravnu povredu prava, uzročnu vezu s nezgodom i dokaz štete. Sama činjenica da je do nezgode došlo ne vodi tome da su sve niže navedene stavke priznate. Član 216 Građanskog zakonika je merilo utvrđivanja obima stvarne štete i izgubljene koristi (所失利益).
 
-- **Povreda**: Prema članu 193 Građanskog zakonika mogu se oceniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života, kao što su troškovi nege (看護費用), prevoza na lečenje (就醫交通費) i tehničke pomoći, a takođe gubitak prihoda (收入損失) stvarnom nesposobnošću za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članu 195 Građanskog zakonika može se oceniti i nematerijalna šteta.
-- **Smrt**: Prema članu 192 Građanskog zakonika, ako nastupi osnov, mogu se oceniti medicinski troškovi pre smrti i troškovi povećanih životnih potreba, troškovi sahrane (殯葬費) i gubitak izdržavanja (扶養利益損失) lica koje je imalo zakonsko pravo na izdržavanje. Prema članu 194 Građanskog zakonika može se oceniti i nematerijalna šteta izvesnih srodnika.
-- **Imovina**: Prema članu 196 Građanskog zakonika može se istaći obrazložena stvarna imovinska šteta, uključujući troškove popravke vozila ili gubitak vrednosti.
+- Povreda: Prema članu 193 Građanskog zakonika mogu se oceniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života, kao što su troškovi nege (看護費用), prevoza na lečenje (就醫交通費) i tehničke pomoći, a takođe gubitak prihoda (收入損失) stvarnom nesposobnošću za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članu 195 Građanskog zakonika može se oceniti i nematerijalna šteta.
+- Smrt: Prema članu 192 Građanskog zakonika, ako nastupi osnov, mogu se oceniti medicinski troškovi pre smrti i troškovi povećanih životnih potreba, troškovi sahrane (殯葬費) i gubitak izdržavanja (扶養利益損失) lica koje je imalo zakonsko pravo na izdržavanje. Prema članu 194 Građanskog zakonika može se oceniti i nematerijalna šteta izvesnih srodnika.
+- Imovina: Prema članu 196 Građanskog zakonika može se istaći obrazložena stvarna imovinska šteta, uključujući troškove popravke vozila ili gubitak vrednosti.
 
 ## Q8. Ako lečenje traje, kako podnositi isprave medicinskih troškova?
 

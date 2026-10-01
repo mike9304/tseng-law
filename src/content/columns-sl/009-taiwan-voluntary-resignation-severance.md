@@ -25,7 +25,7 @@ kar se razlikuje od ureditve v nekaterih pravnih redih, na primer v Koreji.
 
 ​
 
-Obstajajo pa **izjemni primeri**.
+Obstajajo pa izjemni primeri.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Zakon o temeljnih delovnih standardih (勞動基準法) pa določa, da
 
 mora delavec, če želi končati pogodbo o zaposlitvi na podlagi zgornje 1. ali 6. točke (na primer da bi pogodbo končal zaradi nevključitve v zavarovanje),
 
-pogodbo o zaposlitvi končati v roku **30 dni** od dneva, ko je za to okoliščino izvedel,
+pogodbo o zaposlitvi končati v roku 30 dni od dneva, ko je za to okoliščino izvedel,
 
-ali, pri 6. točki, v roku **30 dni** od dneva, ko je izvedel za posledico škode.
+ali, pri 6. točki, v roku 30 dni od dneva, ko je izvedel za posledico škode.
 
 Delavec mora zato rok skrbno spremljati.
 
@@ -89,7 +89,7 @@ stranka, ki pogodbo prva konča z zadostnim razlogom, lahko odpravnine ne izpla�
 
 Zato je v delovnih sporih (勞資糾紛) na Tajvanu
 
-»**čas**« zelo pomemben.
+»čas« zelo pomemben.
 
 V večini primerov je bolje zavarovana stranka, ki se pripravi vnaprej.
 

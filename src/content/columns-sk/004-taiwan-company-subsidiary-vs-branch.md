@@ -192,4 +192,4 @@ Konečná voľba je bezpečnejšia, ak ju posúdia odborníci na Taiwane a v mie
 
 Tento článok má všeobecnú informačnú a vzdelávaciu povahu a týka sa rozdielov medzi taiwanskou dcérskou spoločnosťou a pobočkou zahraničnej spoločnosti; nie je právnym ani daňovým poradenstvom v konkrétnej veci a určitý výsledok nesľubuje. Uplatniteľné ustanovenia a daňové zachytenie sa môžu líšiť podľa sídla investora a ústredia, obsahu činnosti, operácií a toku prostriedkov, predpokladov dohody a najnovšej praxe kompetentného orgánu; pred vykonaním založenia, investície, zmluvy, dividendy alebo prevodu treba potvrdiť najnovšie oficiálne zdroje a vlastné okolnosti.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

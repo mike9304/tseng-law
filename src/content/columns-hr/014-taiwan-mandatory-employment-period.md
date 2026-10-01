@@ -191,4 +191,4 @@ Pri uređivanju podloga u vremenskom slijedu valja zajedno navesti dan sklapanja
 
 Ovaj je tekst građa informativne i obrazovne naravi namijenjena općem objašnjenju klauzule o najmanjem trajanju radnog odnosa na Tajvanu, povrata troškova obuke i davanja isplaćenog unaprijed te otkaznog roka pri odlasku; nije pravno savjetovanje u pojedinom radnom predmetu. Valjanost klauzule i opseg odgovornosti mogu se razlikovati prema vrsti i tekstu ugovora, stvarnoj obuci i trošku, svrsi naknade i njezinu priopćenju, trajanju rada, razlogu prestanka i dokazima. Prije izjave o odlasku, odbitka od plaće, sporazuma o povratu ili odgovora na spor trebate provjeriti najnovije službene podloge i pojedine okolnosti.
 
-**Odvjetnica Wei Tseng (曾雋崴)**
+Odvjetnica Wei Tseng (曾雋崴)

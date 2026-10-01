@@ -17,13 +17,13 @@ For nylig har mange fået stiftet et selskab (公司) i Taiwan og opnået et arb
 
 Nedenfor er samlet svar på de spørgsmål, der ofte stilles ved stiftelsen.
 
-Den, der har læst [**grundlaget for selskabsstiftelsen**](/da/columns/taiwan-company-establishment-basics), kan derefter også konsultere denne udførligere fordybelse.
+Den, der har læst [grundlaget for selskabsstiftelsen](/da/columns/taiwan-company-establishment-basics), kan derefter også konsultere denne udførligere fordybelse.
 
 Spørgsmålene og svarene nedenfor skal hjælpe personer, der overvejer at stifte selskab i Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Jeg vil stifte et selskab, men har endnu ikke fundet en registreringsadresse. Er stiftelsen alligevel mulig?**
+1. Jeg vil stifte et selskab, men har endnu ikke fundet en registreringsadresse. Er stiftelsen alligevel mulig?
 
 Når en udlænding stifter et selskab i Taiwan, skal vedkommende indgive en investeringsplan (投資計畫書) til Investeringsafdelingen under Ministeriet for Økonomiske Anliggender (經濟部投資審議司) til prøvelse.
 
@@ -43,7 +43,7 @@ Allerede i den tidligere artikel om grundlaget har en læser anført, at kontoå
 
 Fordi tilfældene af hvidvask (洗錢) i Taiwan er meget talrige, bliver åbningen af bankkonti stadig strengere.
 
-**Bemærkning:**
+Bemærkning:
 
 Prøvelsen af investeringsplanen tager også tid.
 
@@ -57,13 +57,13 @@ Der er også tid nok til at åbne forberedelseskontoen i banken og overføre kap
 
 ​
 
-**2. Kan man i banken åbne en selskabskonto, også uden opholdskort for Taiwan?**
+2. Kan man i banken åbne en selskabskonto, også uden opholdskort for Taiwan?
 
 Det er muligt.
 
 Banken kræver som regel to legitimationer.
 
-Uden opholdskort kan du hos Taiwans immigrationsmyndighed ansøge om »**grunddatabladet for det ensartede identitetsnummer**(統一證號基本資料表)«.
+Uden opholdskort kan du hos Taiwans immigrationsmyndighed ansøge om »grunddatabladet for det ensartede identitetsnummer(統一證號基本資料表)«.
 
 Udstedelsen er mulig samme dag.
 
@@ -71,7 +71,7 @@ Immigrationsmyndigheden (移民署) har mange besøgende; du bør derfor komme t
 
 ​
 
-**3. Jeg har hørt, at der ved prøvelsen af investeringsplanen (投資計畫書) skal anføres uddannelse og erhvervserfaring, og jeg frygter, at min uddannelse og erfaring ikke passer til branchen for det selskab, der skal stiftes.**
+3. Jeg har hørt, at der ved prøvelsen af investeringsplanen (投資計畫書) skal anføres uddannelse og erhvervserfaring, og jeg frygter, at min uddannelse og erfaring ikke passer til branchen for det selskab, der skal stiftes.
 
 Prøvelseskommissionen under Ministeriet for Økonomiske Anliggender prøver ganske vist investorens baggrund.
 
@@ -85,13 +85,13 @@ Dette punkt bør du drøfte grundigt med en advokat i Taiwan.
 
 ​
 
-**4. Hvad skal der tages hensyn til, når selskabets registreringsadresse (for eksempel et restaurationslokale) lejes?**
+4. Hvad skal der tages hensyn til, når selskabets registreringsadresse (for eksempel et restaurationslokale) lejes?
 
-Selskabsstiftelsen varer omkring **3 måneder**, og opnåelsen af arbejdstilladelsen (工作許可) og opholdskortet tager yderligere omkring **1 måned**.
+Selskabsstiftelsen varer omkring 3 måneder, og opnåelsen af arbejdstilladelsen (工作許可) og opholdskortet tager yderligere omkring 1 måned.
 
 Du bør derfor lægge aftalens ikrafttrædelsesdato så sent som muligt.
 
-Desuden giver udlejeren i lejeaftaler for butikslokaler i Taiwan ofte lejeren en »**indretningsperiode**« (裝潢期間).
+Desuden giver udlejeren i lejeaftaler for butikslokaler i Taiwan ofte lejeren en »indretningsperiode« (裝潢期間).
 
 Dette er en lejefri periode, som du kan forhandle om.
 
@@ -107,7 +107,7 @@ Du kan om nødvendigt foreslå en notariel bekræftelse af lejeaftalen (公證) 
 
 ​
 
-**5. Kan man ved selskabsstiftelsen leje et kommercielt kontorlokale?**
+5. Kan man ved selskabsstiftelsen leje et kommercielt kontorlokale?
 
 Det afhænger af selskabets forretningsgrene (營業項目).
 

@@ -25,9 +25,9 @@ Die folgenden Fragen und Antworten sollen Personen helfen, die eine Gesellschaft
 
 ​
 
-**1. Worauf ist zu achten, wenn das Kapital (資本額) aus dem Ausland auf das Vorbereitungskonto der taiwanesischen Gesellschaft (公司籌備處帳戶) überwiesen wird? (Der folgende Abschnitt zum koreanischen System und zur koreanischen Bankpraxis ist ein gekennzeichnetes Beispiel.)**
+1. Worauf ist zu achten, wenn das Kapital (資本額) aus dem Ausland auf das Vorbereitungskonto der taiwanesischen Gesellschaft (公司籌備處帳戶) überwiesen wird? (Der folgende Abschnitt zum koreanischen System und zur koreanischen Bankpraxis ist ein gekennzeichnetes Beispiel.)
 
-Koreanische Banken verlangen in der Regel, dass die Investorin oder der Investor **persönlich** eine koreanische Bank aufsucht und von dem eigenen Konto überweist.
+Koreanische Banken verlangen in der Regel, dass die Investorin oder der Investor persönlich eine koreanische Bank aufsucht und von dem eigenen Konto überweist.
 
 Eine Überweisung per Internetbanking oder durch Verwandte in Korea ist nicht möglich.
 
@@ -35,9 +35,9 @@ Nach dem koreanischen Devisenrecht muss eine Person mit koreanischer Staatsangeh
 
 Bitte holen Sie vor der Kapitalüberweisung (資本金匯款) Auskunft bei Ihrer koreanischen Hausbank ein.
 
-**​**
+​
 
-**2. Kann man bei der Einzahlung des Gesellschaftskapitals Beträge in Neuen Taiwan-Dollar (新臺幣, TWD) vom eigenen taiwanesischen Konto auf das Vorbereitungskonto der taiwanesischen Gesellschaft überweisen?**
+2. Kann man bei der Einzahlung des Gesellschaftskapitals Beträge in Neuen Taiwan-Dollar (新臺幣, TWD) vom eigenen taiwanesischen Konto auf das Vorbereitungskonto der taiwanesischen Gesellschaft überweisen?
 
 Das ist möglich; Sie müssen jedoch Nachweise über die Herkunft der in Taiwan erworbenen TWD-Mittel vorlegen.
 
@@ -47,9 +47,9 @@ Handelt es sich um Dividenden und Gewinne aus einer Investition in ein taiwanesi
 
 Bei einer Überweisung von einem Konto bei einer koreanischen Bank brauchen Unterlagen zur Mittelherkunft nicht beigefügt zu werden.
 
-**​**
+​
 
-**3. Wann kann das Vorbereitungskonto, nachdem das Kapital darauf eingegangen ist, in ein ordentliches Gesellschaftskonto (正式公司帳戶) umgewandelt werden?**
+3. Wann kann das Vorbereitungskonto, nachdem das Kapital darauf eingegangen ist, in ein ordentliches Gesellschaftskonto (正式公司帳戶) umgewandelt werden?
 
 In der Regel kann die verantwortliche Person (負責人) nach Erhalt der Eintragungsunterlagen der juristischen Person (法人登記文件) das Vorbereitungskonto umstellen.
 
@@ -57,17 +57,17 @@ Sie geht zur Bank und wandelt das Vorbereitungskonto der Gesellschaft in ein ord
 
 Da die internen Vorschriften der einzelnen Banken (銀行) jedoch voneinander abweichen, empfiehlt es sich, die Bank zuerst zu befragen, wenn das Kapital dringend verwendet werden muss.
 
-**​**
+​
 
-**4. Kann das Internetbanking sofort genutzt werden, nachdem das Vorbereitungskonto in ein ordentliches Konto umgewandelt wurde?**
+4. Kann das Internetbanking sofort genutzt werden, nachdem das Vorbereitungskonto in ein ordentliches Konto umgewandelt wurde?
 
 Das unterscheidet sich von Bank zu Bank; in der Regel ist zumindest eine Mobilfunknummer erforderlich.
 
 Einzelne Banken können zusätzliche Anforderungen stellen, etwa eine Nutzungsdauer des Kontos von mindestens 6 Monaten nach der Gründung.
 
-**​**
+​
 
-**5. Kann die Gesellschaft ausländische Staatsangehörige als Beschäftigte einstellen?**
+5. Kann die Gesellschaft ausländische Staatsangehörige als Beschäftigte einstellen?
 
 A. Erste Beschäftigte: Es wird eine leitende Tätigkeit in einem allgemeinen Unternehmen mit Investition von Überseechinesen oder Ausländern (一般僑外投資事業主管工作) beantragt. Der Maßstab der „fachlichen oder technischen Tätigkeit“ unter B. gilt nicht; es gelten jedoch die Adressatenvoraussetzungen wie die der geschäftsführenden Person (經理人) einer Gesellschaft, deren Einlage von Überseechinesen oder Ausländern ein Drittel übersteigt, sowie die Leistungsvoraussetzungen des Arbeitgebers zu Kapital und Umsatz (Prüfungsstandards Art. 38 und Art. 39).
 

@@ -196,4 +196,4 @@ Le fonti primarie (di primo livello) seguenti sono il punto di partenza per veri
 
 Questo articolo è un materiale educativo destinato a spiegare in termini generali gli istituti del divorzio, delle questioni familiari internazionali, del patrimonio coniugale e dei figli minori a Taiwan, e non una consulenza legale per un caso individuale. La procedura e il risultato possono differire secondo la competenza, il diritto internazionale privato, il riconoscimento delle decisioni straniere, lo stato del matrimonio e dello stato civile, il regime dei beni, l’accordo o la decisione esistenti relativi al figlio, i fatti e le prove, nonché le prescrizioni ufficiali più recenti. I termini di iscrizione, di ricorso, di pretesa e di esecuzione devono, prima di agire, essere verificati uno a uno secondo il punto di partenza esatto di ciascun diritto e di ciascuna procedura.
 
-**Wei Tseng (曾雋崴), avvocata a Taiwan**
+Wei Tseng (曾雋崴), avvocata a Taiwan

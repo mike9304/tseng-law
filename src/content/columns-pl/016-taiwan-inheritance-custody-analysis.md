@@ -151,4 +151,4 @@ Na oficjalnych stronach regulacji potwierdzają Państwo datę nowelizacji i dat
 
 Ten artykuł jest materiałem o celach edukacyjnych do ogólnego objaśnienia reżimu dziedziczenia, ustroju majątkowego małżeńskiego, władzy rodzicielskiej i opieki nad małoletnimi na Tajwanie; to nie jest porada prawna dla konkretnej sprawy spadku lub rodziny. Prawo właściwe, procedura i wynik mogą się zmieniać według kręgu spadkobierców, testamentu, majątku i długów, ustroju małżeńskiego, istniejących orzeczeń sądowych i elementów międzynarodowych. Przed obliczeniem terminów takich jak zrzeczenie lub zgłoszenie podatkowe albo rozporządzeniem majątkiem proszę potwierdzić najnowsze źródła oficjalne i okoliczności indywidualne.
 
-**Adwokatka Wei Tseng (曾雋崴)**
+Adwokatka Wei Tseng (曾雋崴)

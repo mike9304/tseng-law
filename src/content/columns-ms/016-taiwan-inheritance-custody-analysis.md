@@ -151,4 +151,4 @@ Di halaman rasmi peraturan, anda mengesahkan tarikh pembaharuan dan tarikh berku
 
 Artikel ini ialah bahan bertujuan pendidikan untuk menjelaskan secara umum rejim pewarisan, rejim harta perkahwinan, kuasa ibu bapa dan perwalian anak bawah umur di Taiwan; ini bukan nasihat undang-undang untuk kes konkret pewarisan atau keluarga. Undang-undang yang terpakai, prosedur dan hasil boleh berbeza menurut kalangan waris, wasiat, harta dan hutang, rejim perkahwinan, keputusan kehakiman sedia ada dan unsur antarabangsa. Sebelum mengira tempoh seperti pelepasan atau pengisytiharan cukai, atau melupuskan harta, sila sahkan sumber rasmi terbaharu dan keadaan individu.
 
-**Peguam Wei Tseng (曾雋崴)**
+Peguam Wei Tseng (曾雋崴)

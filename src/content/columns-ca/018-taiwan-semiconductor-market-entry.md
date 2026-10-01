@@ -85,11 +85,11 @@ Per al gerent d’una filial o sucursal taiwanesa d’una societat estrangera, e
 
 Els escenaris següents són hipotètics i només serveixen per orientar l’anàlisi; no garanteixen que un mode sigui lícit o preferible.
 
-**Empreses centrades en l’exportació inicial.** Si encara no hi ha empleats ni inventari a Taiwan i es vol comprovar la demanda mitjançant un distribuïdor independent, es poden examinar primer el subministrament, la relació de distribució i l’àmbit d’activitat a Taiwan. Un contracte de distribució per si sol no elimina totes les qüestions regulatòries a Taiwan.
+Empreses centrades en l’exportació inicial. Si encara no hi ha empleats ni inventari a Taiwan i es vol comprovar la demanda mitjançant un distribuïdor independent, es poden examinar primer el subministrament, la relació de distribució i l’àmbit d’activitat a Taiwan. Un contracte de distribució per si sol no elimina totes les qüestions regulatòries a Taiwan.
 
-**Empreses que amplien vendes i suport tècnic a Taiwan.** Si es planeja contractar a Taiwan i continuar gestionant inventari, cobraments i suport al client, convé comparar de manera concreta filial i sucursal, i revisar també la responsabilitat contractual, el mode d’operar de la seu, els impostos i el personal.
+Empreses que amplien vendes i suport tècnic a Taiwan. Si es planeja contractar a Taiwan i continuar gestionant inventari, cobraments i suport al client, convé comparar de manera concreta filial i sucursal, i revisar també la responsabilitat contractual, el mode d’operar de la seu, els impostos i el personal.
 
-**Empreses en fase d’estudi de mercat.** Si, abans d’una organització de vendes, només es volen funcions d’informació i enllaç, es pot avaluar una oficina de representació. Si el pla real inclou venda d’inventari o treball in situ, cal confirmar per separat si aquestes activitats estan permeses.
+Empreses en fase d’estudi de mercat. Si, abans d’una organització de vendes, només es volen funcions d’informació i enllaç, es pot avaluar una oficina de representació. Si el pla real inclou venda d’inventari o treball in situ, cal confirmar per separat si aquestes activitats estan permeses.
 
 ## 8. En la primera consulta n’hi ha prou d’un panorama operatiu; no cal lliurar tota la informació confidencial d’entrada
 

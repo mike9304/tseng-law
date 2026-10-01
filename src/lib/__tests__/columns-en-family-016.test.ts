@@ -80,7 +80,7 @@ const exactEnding = `---
 
 This article provides general educational information about Taiwan’s law of succession, marital-property regimes, parental rights and duties, and guardianship of minors. It is not legal advice for any particular inheritance or family matter. The applicable law, procedures, and outcome may vary with the identity of the heirs, any will, the assets and debts, the marital-property regime, existing court orders, and cross-border factors. Before calculating a deadline for waiver of inheritance or tax filing, or disposing of property, confirm the current official materials and the facts of the matter.
 
-**Wei Tseng (曾雋崴), Taiwan Attorney**`;
+Wei Tseng (曾雋崴), Taiwan Attorney`;
 const expectedFrontmatter = `---
 title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
 seoTitle: "Taiwan Inheritance and Parental Rights Guide"
@@ -397,7 +397,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /facts of the matter\.\n\n\*\*Wei Tseng \(曾雋崴\), Taiwan Attorney\*\*$/,
+      /facts of the matter\.\n\nWei Tseng \(曾雋崴\), Taiwan Attorney$/,
     );
   });
 
@@ -416,7 +416,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(
       // WO-X2 (EN-20): re-frozen after adding the short frontmatter seoTitle.
-      '29653775ff136020c3227d0185ba0e8d79e0bb873a4bb8a5559cefd30d446678',
+      '40185cb753161d30b74640eae5cd3d6e297590fe6ec2c4d5e8a58b019ba43918',
     );
   });
 

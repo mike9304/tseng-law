@@ -196,4 +196,4 @@ Aşağıdaki 1. el resmi kaynaklar, 25 Temmuz 2026 itibarıyla bu yazının huku
 
 Bu yazı, Tayvan’daki boşanma, uluslararası aile işleri, evlilik malvarlığı ve reşit olmayan çocuk kurumlarını genel olarak açıklamaya yönelik eğitim malzemesidir; bireysel bir işe ilişkin hukuki görüş değildir. Usul ve sonuç, yetkiye, kanunlar ihtilafına, yabancı kararların tanınmasına, evlilik ve nüfus durumuna, mal rejimine, çocuğa ilişkin mevcut anlaşma veya karara, olgulara ve delillere ve en yeni resmi düzenlemelere göre değişebilir. Tescil, kanun yolu, talep ve icra süreleri, harekete geçmeden önce her hakkın ve usulün tam başlangıç noktasına göre tek tek doğrulanmalıdır.
 
-**Avukat Wei Tseng (曾雋崴)**
+Avukat Wei Tseng (曾雋崴)

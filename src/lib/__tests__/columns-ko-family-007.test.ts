@@ -95,7 +95,7 @@ const internalLinks = [
 ];
 const disclaimer =
   '이 글은 대만의 이혼, 국제가사, 부부재산 및 미성년 자녀 제도를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 사건에 대한 법률 자문이 아닙니다. 관할, 준거법, 외국 재판의 승인, 혼인·호적 상태, 재산제, 자녀에 관한 기존 합의나 재판, 사실관계와 증거 및 최신 공식 규정에 따라 절차와 결과가 달라질 수 있습니다. 등록·불복·청구·집행 기한은 행동하기 전에 각 권리와 절차의 정확한 기산점을 기준으로 개별적으로 확인하시기 바랍니다.';
-const author = '**증준외 변호사(曾雋崴, Wei Tseng)**';
+const author = '증준외 변호사(曾雋崴, Wei Tseng)';
 const exactEnding = `- ${internalLinks[2]}
 
 ---
@@ -598,7 +598,7 @@ describe('Korean family column 007 — Taiwan divorce procedure Q&A', () => {
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /확인하시기 바랍니다\.\n\n\*\*증준외 변호사\(曾雋崴, Wei Tseng\)\*\*$/,
+      /확인하시기 바랍니다\.\n\n증준외 변호사\(曾雋崴, Wei Tseng\)$/,
     );
     expect(countOccurrences(raw, disclaimer)).toBe(1);
     expect(countOccurrences(raw, author)).toBe(1);
@@ -654,7 +654,7 @@ describe('Korean family column 007 — Taiwan divorce procedure Q&A', () => {
       '한국의 물가 수준에 맞춰 양육비',
       '법원에 강제 집행을 요청할 수 있습니다',
       '댓글이나 연락주세요',
-      '부****양****비',
+      '부양비',
       '증준외 대만변호사입니다',
       '曾俊瑋',
       'img-01.jpg',

@@ -85,11 +85,11 @@ Für Geschäftsleiter einer taiwanesischen Tochter oder Zweigniederlassung einer
 
 Die folgenden Szenarien dienen dem Nachdenken; sie garantieren nicht, dass eine bestimmte Weise rechtmäßig oder besser ist.
 
-**Unternehmen mit frühem Exportfokus.** Gibt es noch keine Beschäftigten oder Lager in Taiwan und soll die Nachfrage über einen unabhängigen Händler geprüft werden, können Lieferung, Vertriebsbeziehung und Tätigkeitsspielraum in Taiwan zuerst betrachtet werden. Ein Vertriebsvertrag beseitigt nicht alle regulatorischen Fragen in Taiwan.
+Unternehmen mit frühem Exportfokus. Gibt es noch keine Beschäftigten oder Lager in Taiwan und soll die Nachfrage über einen unabhängigen Händler geprüft werden, können Lieferung, Vertriebsbeziehung und Tätigkeitsspielraum in Taiwan zuerst betrachtet werden. Ein Vertriebsvertrag beseitigt nicht alle regulatorischen Fragen in Taiwan.
 
-**Unternehmen, die Verkauf und technischen Support in Taiwan ausweiten.** Ist Einstellung in Taiwan sowie laufende Lager-, Inkasso- und Kundenbetreuung geplant, Tochter und Zweigniederlassung konkret vergleichen und vertragliche Haftung, Betriebsweise der Zentrale, Steuer und Personal mitprüfen.
+Unternehmen, die Verkauf und technischen Support in Taiwan ausweiten. Ist Einstellung in Taiwan sowie laufende Lager-, Inkasso- und Kundenbetreuung geplant, Tochter und Zweigniederlassung konkret vergleichen und vertragliche Haftung, Betriebsweise der Zentrale, Steuer und Personal mitprüfen.
 
-**Unternehmen in der Markterkundung.** Soll vor einer Verkaufsorganisation nur Information und Kontakt bestehen, kann eine Repräsentanz geprüft werden. Umfasst der tatsächliche Plan Lagerverkauf oder Vor-Ort-Arbeit, gesondert klären, ob das zulässig ist.
+Unternehmen in der Markterkundung. Soll vor einer Verkaufsorganisation nur Information und Kontakt bestehen, kann eine Repräsentanz geprüft werden. Umfasst der tatsächliche Plan Lagerverkauf oder Vor-Ort-Arbeit, gesondert klären, ob das zulässig ist.
 
 ## 8. Für die Vorbereitung einer Anfrage reicht ein Betriebsüberblick; nicht alle vertraulichen Unterlagen zuerst übermitteln
 

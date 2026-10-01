@@ -51,7 +51,7 @@ Bu nedenle dikkat ediniz.
 
 ​
 
-**S. Bütün sektörler “işletme yeri ön sorgusu” sistemi üzerinden faaliyetin mümkün olup olmadığını sorgulamalı mıdır?**
+S. Bütün sektörler “işletme yeri ön sorgusu” sistemi üzerinden faaliyetin mümkün olup olmadığını sorgulamalı mıdır?
 
 Bütün sektörlerin “işletme yeri ön sorgusu” (營業場所預先查詢) sistemi üzerinden faaliyetin mümkün olup olmadığını doğrulaması önerilir.
 
@@ -61,7 +61,7 @@ Bu yüzden uygulamada şirket tescilinde bütün sektörlerin sorgulanması gere
 
 “[Taipei şehri işletme yeri yardım sorgusu hizmeti işleyiş yönergesi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) ile Taipei şehrinin yürürlükteki rehberi esas alınır.
 
-Bu rehbere göre 1 Ocak 2023’ten itibaren şirket ve ticaretin (şube (分公司) ve bağlı işyeri (分支機構) dâhil) kuruluş, merkez nakli veya faaliyet kalemi ekleme tescili başvurusunda, sektör ayrımı olmaksızın işletme yeri ön sorgu sonucu tescil başvurusuna **mutlaka** eklenmelidir.
+Bu rehbere göre 1 Ocak 2023’ten itibaren şirket ve ticaretin (şube (分公司) ve bağlı işyeri (分支機構) dâhil) kuruluş, merkez nakli veya faaliyet kalemi ekleme tescili başvurusunda, sektör ayrımı olmaksızın işletme yeri ön sorgu sonucu tescil başvurusuna mutlaka eklenmelidir.
 
 Aşağıdaki “resen sorgu konusu faaliyet kalemleri” (主動查詢之營業項目) listesi, tescil başvurusunda o kalem varken eklenen sorgu sonucunda eksik kaldığında Ticaret Dairesinin tescil incelemesi sırasında resen ek sorgu yaptığı (隨案主動查詢) konuları gösterir; listede olmayan bir kalemin sorgudan muaf olduğu anlamına gelmez.
 

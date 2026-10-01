@@ -85,11 +85,11 @@ Il est plus aisé d’obtenir le permis de travail pour un gérant de la filiale
 
 Les scénarios suivants sont hypothétiques pour aider à réfléchir ; ils n’établissent pas qu’un mode soit licite ou préférable.
 
-**Entreprises étrangères centrées sur l’exportation initiale.** S’il n’y a encore ni salariés ni stocks à Taïwan et que vous voulez vérifier la demande par un distributeur indépendant, vous pouvez examiner d’abord la fourniture, le rapport de distribution et le champ d’activité à Taïwan. Un contrat de distribution à lui seul n’élimine pas toutes les questions de régulation à Taïwan.
+Entreprises étrangères centrées sur l’exportation initiale. S’il n’y a encore ni salariés ni stocks à Taïwan et que vous voulez vérifier la demande par un distributeur indépendant, vous pouvez examiner d’abord la fourniture, le rapport de distribution et le champ d’activité à Taïwan. Un contrat de distribution à lui seul n’élimine pas toutes les questions de régulation à Taïwan.
 
-**Entreprises étrangères qui élargissent les ventes et le soutien technique à Taïwan.** Si vous prévoyez d’embaucher à Taïwan et de continuer à gérer stocks, encaissements et soutien au client, il convient de comparer concrètement filiale et succursale, et de revoir aussi la responsabilité contractuelle, le mode de relation commerciale du siège, les impôts et le personnel.
+Entreprises étrangères qui élargissent les ventes et le soutien technique à Taïwan. Si vous prévoyez d’embaucher à Taïwan et de continuer à gérer stocks, encaissements et soutien au client, il convient de comparer concrètement filiale et succursale, et de revoir aussi la responsabilité contractuelle, le mode de relation commerciale du siège, les impôts et le personnel.
 
-**Entreprises étrangères en phase d’étude de marché.** Si, avant une organisation de ventes, vous ne voulez que des fonctions d’information et de liaison, un bureau de représentation peut s’évaluer. Si le plan réel inclut la vente de stocks ou le travail sur place, il faut confirmer à part si ces activités sont permises.
+Entreprises étrangères en phase d’étude de marché. Si, avant une organisation de ventes, vous ne voulez que des fonctions d’information et de liaison, un bureau de représentation peut s’évaluer. Si le plan réel inclut la vente de stocks ou le travail sur place, il faut confirmer à part si ces activités sont permises.
 
 ## 8. Pour la première consultation, un panorama opérationnel suffit ; il n’est pas nécessaire de remettre d’entrée toutes les pièces confidentielles
 

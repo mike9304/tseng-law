@@ -42,9 +42,9 @@ V pogodbi je smiselno konkretno določiti obseg uporabe intelektualne lastnine, 
 
 Tajvanska hčerinska družba in podružnica tuje družbe nista ista organizacija. Hčerinska družba je samostojna pravna oseba, ustanovljena po tajvanskem pravu, medtem ko se podružnica vpiše kot del matične družbe (本公司) tuje družbe. Razlikujejo se pravna osebnost, odgovornost matične družbe, računovodska in davčna obravnava, prenos dobička, pooblastilo za zastopanje in način notranjega nadzora, zato se organizacijske oblike ne smejo izbirati le po tem, kolikšen nadzor nad prodajo želite.
 
-Če je potreben postopek tuje naložbe, je treba preveriti napotke **Oddelka za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司)** kot trenutno pristojnega organa. Rok, potreben za dovoljenje naložbe, nakazilo sredstev, vpis družbe ali podružnice, odprtje bančnega računa, davčno registracijo (稅籍登記) in pridobitev statusa uvoznika, se razlikuje glede na vlagatelja, panogo, organizacijsko obliko, predloženo dokumentacijo in to, ali pride do popravka ali dopolnitve. Zato je treba namesto določitve datuma vstopa na trg ob predpostavki stalnega roka najprej preveriti, kateri postopki se uporabijo in kakšne so najnovejše zahteve za vložitev.
+Če je potreben postopek tuje naložbe, je treba preveriti napotke Oddelka za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司) kot trenutno pristojnega organa. Rok, potreben za dovoljenje naložbe, nakazilo sredstev, vpis družbe ali podružnice, odprtje bančnega računa, davčno registracijo (稅籍登記) in pridobitev statusa uvoznika, se razlikuje glede na vlagatelja, panogo, organizacijsko obliko, predloženo dokumentacijo in to, ali pride do popravka ali dopolnitve. Zato je treba namesto določitve datuma vstopa na trg ob predpostavki stalnega roka najprej preveriti, kateri postopki se uporabijo in kakšne so najnovejše zahteve za vložitev.
 
-Ne glede na izbrano strukturo je osrednji subjekt odgovornosti v regulaciji kozmetike je **proizvajalec ali uvoznik kozmetike**. Ureditev dokumentacije k izdelku ali oceno varnosti (安全性評估) je mogoče zaupati zunanjemu strokovnjaku, vendar samo zaupanje dela ne prenese pravne odgovornosti proizvajalca ali uvoznika. Ločiti pogodbeno delitev dela od subjekta, ki nosi odgovornost po zakonu, je izhodišče pregleda strukture vstopa.
+Ne glede na izbrano strukturo je osrednji subjekt odgovornosti v regulaciji kozmetike je proizvajalec ali uvoznik kozmetike. Ureditev dokumentacije k izdelku ali oceno varnosti (安全性評估) je mogoče zaupati zunanjemu strokovnjaku, vendar samo zaupanje dela ne prenese pravne odgovornosti proizvajalca ali uvoznika. Ločiti pogodbeno delitev dela od subjekta, ki nosi odgovornost po zakonu, je izhodišče pregleda strukture vstopa.
 
 ## 2. Registracija izdelka in PIF sta dve različni ureditvi
 
@@ -131,4 +131,4 @@ Osnovno strukturo družbe in podružnice si lahko ogledate v članku [Osnove ust
 
 Ta članek je izobraževalno gradivo za splošno pojasnilo ureditve, povezane z vstopom na trg kozmetike na Tajvanu; ni pravno mnenje o posameznem izdelku ali oglasu in ne obljublja določenega izida, dovoljenja, registracije, možnosti prodaje niti spoštovanja roka obravnave. Obliko vstopa, dokumentacijo o izdelku, vsebino označevanja in oglaševanja in najnovejšo prakso pristojnega organa je treba preveriti v vsaki zadevi posebej.
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)

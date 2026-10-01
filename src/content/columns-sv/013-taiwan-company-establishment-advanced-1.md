@@ -17,13 +17,13 @@ På senare tid har många personer bildat bolag (公司) i Taiwan och fått arbe
 
 De frågor som ofta ställs vid bildandet samlas nedan.
 
-De som har läst [**grunderna i bolagsbildning**](/sv/columns/taiwan-company-establishment-basics) kan därefter också läsa den här mer detaljerade fördjupningen.
+De som har läst [grunderna i bolagsbildning](/sv/columns/taiwan-company-establishment-basics) kan därefter också läsa den här mer detaljerade fördjupningen.
 
 Följande frågor och svar är tänkta som hjälp för den som överväger att bilda bolag i Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Jag vill bilda bolag, men har ännu inte hittat en registreringsadress. Är bildandet ändå möjligt?**
+1. Jag vill bilda bolag, men har ännu inte hittat en registreringsadress. Är bildandet ändå möjligt?
 
 När en utlänning bildar bolag i Taiwan ska en investeringsplan (投資計畫書) ges in till avdelningen för investeringsprövning vid ekonomiministeriet (經濟部投資審議司) för prövning.
 
@@ -43,7 +43,7 @@ I den tidigare texten om grunderna beskrevs kontoöppningen som det svåraste st
 
 Eftersom fallen av penningtvätt (洗錢) är mycket många i Taiwan blir öppning av bankkonton allt striktare.
 
-**Råd:**
+Råd:
 
 Prövningen av investeringsplanen tar också tid.
 
@@ -57,13 +57,13 @@ Det finns då tillräcklig tid att öppna förberedelsekontot hos banken och öv
 
 ​
 
-**2. Kan man öppna bolagskonto hos banken även utan taiwanesiskt uppehållskort?**
+2. Kan man öppna bolagskonto hos banken även utan taiwanesiskt uppehållskort?
 
 Det är möjligt.
 
 Banken kräver i allmänhet dubbel identitetskontroll.
 
-Utan uppehållskort kan du hos Taiwans immigrationsmyndighet begära ”**grunduppgiftsblanketten för det enhetliga id-numret**” (統一證號基本資料表).
+Utan uppehållskort kan du hos Taiwans immigrationsmyndighet begära ”grunduppgiftsblanketten för det enhetliga id-numret” (統一證號基本資料表).
 
 Utfärdande är möjligt samma dag.
 
@@ -71,7 +71,7 @@ Immigrationsmyndigheten (移民署) är dock mycket välbesökt; det är därfö
 
 ​
 
-**3. Jag har hört att utbildning och yrkeserfarenhet ska anges vid prövningen av investeringsplanen, och oroar mig för att min utbildning och erfarenhet inte stämmer med branschen för det bolag jag vill bilda.**
+3. Jag har hört att utbildning och yrkeserfarenhet ska anges vid prövningen av investeringsplanen, och oroar mig för att min utbildning och erfarenhet inte stämmer med branschen för det bolag jag vill bilda.
 
 Ekonomiministeriets prövningskommitté granskar visst investerarens bakgrund.
 
@@ -85,13 +85,13 @@ På den punkten bör du gå igenom saken grundligt med en advokat i Taiwan.
 
 ​
 
-**4. Vilka punkter ska iakttas när bolagets registreringsadress (till exempel en restauranglokal) hyrs?**
+4. Vilka punkter ska iakttas när bolagets registreringsadress (till exempel en restauranglokal) hyrs?
 
-Bolagsbildningen tar omkring **3 månader**, och erhållandet av arbetstillstånd (工作許可) och uppehållskort tar ytterligare omkring **1 månad**,
+Bolagsbildningen tar omkring 3 månader, och erhållandet av arbetstillstånd (工作許可) och uppehållskort tar ytterligare omkring 1 månad,
 
 så du bör sätta avtalets startdatum så sent som möjligt.
 
-Dessutom ger hyresvärden i taiwanesiska hyresavtal för butikslokaler ofta hyresgästen en ”**inredningsperiod**” (裝潢期間).
+Dessutom ger hyresvärden i taiwanesiska hyresavtal för butikslokaler ofta hyresgästen en ”inredningsperiod” (裝潢期間).
 
 Det är en period utan hyra, och den går att förhandla om.
 
@@ -107,7 +107,7 @@ Du kan, om det behövs, föreslå notarisering av hyresavtalet (公證) eller en
 
 ​
 
-**5. Kan man vid bolagsbildningen hyra en kontorslokal?**
+5. Kan man vid bolagsbildningen hyra en kontorslokal?
 
 Det beror på bolagets verksamhetsgrenar (營業項目).
 

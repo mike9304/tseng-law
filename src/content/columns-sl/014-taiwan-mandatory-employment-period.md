@@ -191,4 +191,4 @@ Pri urejanju gradiva v časovnem zaporedju je smiselno skupaj navesti dan skleni
 
 Ta članek je izobraževalno gradivo, namenjeno splošni razlagi dogovora o najmanjšem obdobju trajanja delovnega razmerja na Tajvanu, vračila stroškov usposabljanja in dajatve, plačane vnaprej, in izjave o odhodu; ni pravni nasvet v konkretni delovni zadevi. Veljavnost dogovora in obseg odgovornosti se lahko razlikujejo glede na vrsto in besedilo pogodbe, dejansko usposabljanje ter stroške, namen nadomestila ter njegovo sporočilo, obdobje dela, razlog prenehanja ter dokaze. Pred izjavo o odhodu, sprejemom odtegljaja od plače, sporazumom o vračilu ali odzivom na spor je treba preveriti najnovejše uradne vire in posamične okoliščine.
 
-**Odvetnica Wei Tseng (曾雋崴)**
+Odvetnica Wei Tseng (曾雋崴)

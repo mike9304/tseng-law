@@ -40,9 +40,9 @@ Neemt de werknemer zelf ontslag, dan hoeft de vennootschap geen ontslagvergoedin
 
 Pleegt de werknemer echter een onrechtmatige handeling,
 
-**schendt hij interne regels (工作規則),**
+schendt hij interne regels (工作規則),
 
-**of blijft hij zonder reden 3 dagen achtereen van het werk weg (曠工),**
+of blijft hij zonder reden 3 dagen achtereen van het werk weg (曠工),
 
 dan kan de vennootschap ontslaan zonder ontslagvergoeding te betalen.
 
@@ -52,7 +52,7 @@ De onderstaande tabel vat dit samen.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Soort** | **Economisch ontslag (資遣員工, 經濟解僱)** | **Tuchtontslag (解僱員工, 懲戒解僱)** | **Eigen ontslag van de werknemer (員工自請離職)** |
+| Soort | Economisch ontslag (資遣員工, 經濟解僱) | Tuchtontslag (解僱員工, 懲戒解僱) | Eigen ontslag van de werknemer (員工自請離職) |
 | Betekenis | Bestaat bij de werkgever wegens de bedrijfssituatie behoefte aan personeelsaanpassing, dan ligt de grond in het ondernemingsdomein van de werkgever en niet in de verantwoordelijkheid van de werknemer. Daarom moet de werkgever de opzeggingstermijn (預告期間) naleven en ontslagvergoeding betalen, om nadelen van de werknemer evenwichtig te vereffenen. | Pleegt de werknemer een onrechtmatige of ongepaste handeling, dan kan de werkgever de arbeidsovereenkomst (勞動契約) zonder voorafgaande opzegging dadelijk beëindigen en hoeft hij geen ontslagvergoeding te betalen. Dit is 1 van de tuchtbevoegdheden van de werkgever. | De werknemer is vrij de overeenkomst te allen tijde te beëindigen, maar moet overeenkomstig de duur van de tewerkstelling de opzeggingstermijn naleven, zodat de werkgever overdracht en vervanging kan zoeken. |
 | Voorwaarden | Ja (artikel 11 van de Taiwanese wet op de arbeidsnormen) | Ja (artikel 12 van de Taiwanese wet op de arbeidsnormen) | Geen |
 | Voorafgaande opzegging | Vereist | Niet vereist | Vereist |
@@ -194,17 +194,17 @@ overdreven eisen stelt
 
 of werknemers naar merkwaardige functies overplaatst,
 
-**moet u bewijzen veiligstellen.**
+moet u bewijzen veiligstellen.
 
-**Uw normale aanwezigheidsregisters,**
+Uw normale aanwezigheidsregisters,
 
-**overurenregisters, prestatieregisters,**
+overurenregisters, prestatieregisters,
 
-**interne regels, e-mailverkeer met collega's en meerderen**
+interne regels, e-mailverkeer met collega's en meerderen
 
-**en gespreksopnamen met meerderen —**
+en gespreksopnamen met meerderen —
 
-**stel bewijzen veilig die voor u gunstig zijn.**
+stel bewijzen veilig die voor u gunstig zijn.
 
 ​
 

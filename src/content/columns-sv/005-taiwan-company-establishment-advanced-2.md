@@ -25,9 +25,9 @@ Följande frågor och svar är tänkta som hjälp för den som överväger bolag
 
 ​
 
-**1. Vad ska man vara uppmärksam på när kapitalet (資本額) överförs från utlandet till det taiwanesiska bolagets förberedelsekonto (公司籌備處帳戶)? (exemplet nedan gäller koreanska regler och koreansk bankpraxis)**
+1. Vad ska man vara uppmärksam på när kapitalet (資本額) överförs från utlandet till det taiwanesiska bolagets förberedelsekonto (公司籌備處帳戶)? (exemplet nedan gäller koreanska regler och koreansk bankpraxis)
 
-Koreanska banker kräver i allmänhet att investeraren **personligen** besöker en bank i Korea och överför medlen från ett konto i eget namn.
+Koreanska banker kräver i allmänhet att investeraren personligen besöker en bank i Korea och överför medlen från ett konto i eget namn.
 
 Överföring via internetbank eller genom en närstående i Korea är inte möjlig.
 
@@ -35,9 +35,9 @@ Enligt koreansk valutakontroll ska till exempel en person med koreansk nationali
 
 Innan du överför kapitalet (資本金匯款) bör du fråga din bank i det land pengarna skickas från vilka regler som gäller där.
 
-**​**
+​
 
-**2. Vid inbetalning av bolagskapitalet, kan man överföra nya taiwanesiska dollar (新臺幣, TWD) från sitt personliga konto i Taiwan till det taiwanesiska bolagets förberedelsekonto?**
+2. Vid inbetalning av bolagskapitalet, kan man överföra nya taiwanesiska dollar (新臺幣, TWD) från sitt personliga konto i Taiwan till det taiwanesiska bolagets förberedelsekonto?
 
 Det är möjligt, men du måste ge in handlingar som styrker ursprunget till de nya taiwanesiska dollar som förvärvats i Taiwan.
 
@@ -47,9 +47,9 @@ Om det är utdelning och vinst från en investering i ett företag i Taiwan ska 
 
 Om överföringen i stället görs från ett bankkonto utomlands behöver handlingar om medlens ursprung inte bifogas.
 
-**​**
+​
 
-**3. När kan kapitalet, efter att det kommit in på förberedelsekontot, omvandlas till ett vanligt bolagskonto (正式公司帳戶)?**
+3. När kan kapitalet, efter att det kommit in på förberedelsekontot, omvandlas till ett vanligt bolagskonto (正式公司帳戶)?
 
 I allmänhet kan den ansvariga personen (負責人), efter att handlingarna om registrering av den juridiska personen (法人登記文件) mottagits,
 
@@ -57,17 +57,17 @@ gå till banken och omvandla bolagets förberedelsekonto till ett vanligt konto.
 
 Eftersom de interna reglerna hos varje bank (銀行) skiljer sig åt, bör du dock kontakta banken först om kapitalet måste användas snabbt.
 
-**​**
+​
 
-**4. Kan internetbanken användas genast efter att förberedelsekontot omvandlats till ett vanligt konto?**
+4. Kan internetbanken användas genast efter att förberedelsekontot omvandlats till ett vanligt konto?
 
 Det varierar mellan banker; i allmänhet krävs åtminstone ett mobiltelefonnummer.
 
 Vissa banker kan ställa ytterligare krav, till exempel en användningstid för kontot om minst 6 månader efter bildandet.
 
-**​**
+​
 
-**5. Kan bolaget anställa utländska medborgare som arbetstagare?**
+5. Kan bolaget anställa utländska medborgare som arbetstagare?
 
 A. Första arbetstagaren: ansökan görs som ledningsarbete i ett vanligt företag med utlandskinesisk eller utländsk investering (一般僑外投資事業主管工作). Måttet ”arbete av specialiserad eller teknisk karaktär” under B nedan tillämpas inte, men adressatvillkoren gäller, bland annat det att vara chef (經理人) i ett bolag där utlandskinesers eller utlänningars insats överstiger 1/3, samt arbetsgivarens resultatvillkor om kapital och omsättning (prövningsnormerna artikel 38 och artikel 39).
 

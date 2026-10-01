@@ -25,9 +25,9 @@ Az alábbi kérdések és válaszok azoknak kívánnak segíteni, akik tajvani t
 
 ​
 
-**1. Mire kell figyelni a tőke (資本額) Koreából a tajvani társaság előkészítő számlájára (公司籌備處帳戶) történő átutalásakor? (ez a pont a koreai devizaszabályozásra és a koreai banki gyakorlatra vonatkozik)**
+1. Mire kell figyelni a tőke (資本額) Koreából a tajvani társaság előkészítő számlájára (公司籌備處帳戶) történő átutalásakor? (ez a pont a koreai devizaszabályozásra és a koreai banki gyakorlatra vonatkozik)
 
-A koreai bankok általában megkövetelik, hogy a befektető **személyesen** jelenjen meg egy koreai bankban, és a saját nevére szóló számláról utalja a tőkét.
+A koreai bankok általában megkövetelik, hogy a befektető személyesen jelenjen meg egy koreai bankban, és a saját nevére szóló számláról utalja a tőkét.
 
 Internetes bankon vagy koreai hozzátartozón keresztül történő megbízott átutalás nem lehetséges.
 
@@ -35,9 +35,9 @@ Továbbá a koreai devizaszabályozás szerint a koreai állampolgárságú szem
 
 A tőke átutalása (資本金匯款) előtt tájékozódjon a számlavezető bankjánál.
 
-**​**
+​
 
-**2. A társasági tőke befizetésekor átutalhatók-e új tajvani dollárok (新臺幣, TWD) a tajvani személyes számláról a tajvani társaság előkészítő számlájára?**
+2. A társasági tőke befizetésekor átutalhatók-e új tajvani dollárok (新臺幣, TWD) a tajvani személyes számláról a tajvani társaság előkészítő számlájára?
 
 Lehetséges, de be kell nyújtani a Tajvanon szerzett új tajvani dollár tőke eredetét igazoló iratokat.
 
@@ -47,9 +47,9 @@ Ha tajvani vállalkozásba történt beruházásból származó osztalékról é
 
 Ha az átutalás külföldi (például koreai) bankszámláról történik, a tőke eredetére vonatkozó iratokat nem kell csatolni.
 
-**​**
+​
 
-**3. A tőke előkészítő számlára érkezése után mikor alakítható át rendes társasági számlává (正式公司帳戶)?**
+3. A tőke előkészítő számlára érkezése után mikor alakítható át rendes társasági számlává (正式公司帳戶)?
 
 Általában a jogi személy bejegyzési iratainak (法人登記文件) átvétele után
 
@@ -57,17 +57,17 @@ a felelős (負責人) elmehet a bankba, és az előkészítő számlát rendes 
 
 Mivel azonban az egyes bankok (銀行) belső szabályai különböznek, ha a tőkét sürgősen kell felhasználni, először a bankhoz kell fordulni.
 
-**​**
+​
 
-**4. Az előkészítő számla rendes számlává alakítása után azonnal használható az internetes bank?**
+4. Az előkészítő számla rendes számlává alakítása után azonnal használható az internetes bank?
 
 Bankonként különbözik; általában legalább mobiltelefonszám szükséges.
 
 Egyes bankok további követelményeket támaszthatnak, például a számla használatának legalább 6 hónapos időtartamát a létrehozás után.
 
-**​**
+​
 
-**5. Foglalkoztathat-e a társaság külföldi állampolgárságú munkavállalókat?**
+5. Foglalkoztathat-e a társaság külföldi állampolgárságú munkavállalókat?
 
 A. Az első munkavállaló: a kérelem a tengerentúli kínaiak vagy külföldiek szokásos beruházási vállalkozásának vezetői munkakörére (一般僑外投資事業主管工作) vonatkozik. Az alábbi B pont „szakmai vagy műszaki jellegű munkájának” kritériuma nem alkalmazandó, de alkalmazandók a címzett feltételei, ideértve annak a vezetőnek (經理人) a feltételét, akinek társaságában a tengerentúli kínaiak vagy külföldiek hozzájárulása meghaladja az 1/3-ot, valamint a munkáltató tőkére és árbevételre vonatkozó eredményfeltételeit (a vizsgálati szabványok 38. és 39. cikke).
 

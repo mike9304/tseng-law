@@ -148,4 +148,4 @@ Az engedély nélküli munkára közigazgatási bírság és Tajvan elhagyásár
 
 Ez a cikk az általános jogi intézmény ismertetésére szolgáló, oktatási célú anyag; nem jogi vélemény egyedi ügyben, és nem ígér meghatározott eredményt. Az engedélyezési mércék, a kéreleműrlapok és az illetékes szerv gyakorlata változhat, ezért beruházás vagy szerződés végrehajtása előtt a legújabb hivatalos forrásokat és az egyedi körülményeket kell ellenőrizni.
 
-**Wei Tseng ügyvédnő (曾雋崴)**
+Wei Tseng ügyvédnő (曾雋崴)

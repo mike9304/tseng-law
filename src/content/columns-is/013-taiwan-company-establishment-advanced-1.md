@@ -17,13 +17,13 @@ Nýlega hafa margir stofnað félag (公司) á Taívan og fengið atvinnuáritu
 
 Hér á eftir eru teknar saman spurningar sem oft koma upp við stofnunina.
 
-Sá sem hefur lesið [**grunninn að félagastofnuninni**](/is/columns/taiwan-company-establishment-basics) getur síðan einnig kynnt sér þennan ítarhluta.
+Sá sem hefur lesið [grunninn að félagastofnuninni](/is/columns/taiwan-company-establishment-basics) getur síðan einnig kynnt sér þennan ítarhluta.
 
 Spurningarnar og svörin hér á eftir eiga að hjálpa þeim sem íhuga að stofna félag á Taívan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Ég vil stofna félag, en hef enn ekki fundið skráningarheimili. Er stofnunin engu að síður möguleg?**
+1. Ég vil stofna félag, en hef enn ekki fundið skráningarheimili. Er stofnunin engu að síður möguleg?
 
 Þegar útlendingur stofnar félag á Taívan skal hann leggja fjárfestingaráætlun (投資計畫書) til skoðunar hjá fjárfestingarathugunardeild efnahagsráðuneytisins (經濟部投資審議司).
 
@@ -43,7 +43,7 @@ margir útlendingar hafi nýlega horfið eftir opnun reiknings, svo opnun reikni
 
 Vegna þess að tilvik peningaþvættis (洗錢) á Taívan eru mjög mörg verður opnun bankareikninga sífellt strangari.
 
-**Athugasemd:**
+Athugasemd:
 
 Vegna þess að skoðun fjárfestingaráætlunarinnar tekur einnig tíma
 
@@ -57,13 +57,13 @@ opna undirbúningsreikninginn og millifæra hlutaféð.
 
 ​
 
-**2. Má opna félagsreikning í bankanum, einnig án dvalarleyfisskírteinis á Taívan?**
+2. Má opna félagsreikning í bankanum, einnig án dvalarleyfisskírteinis á Taívan?
 
 Það er mögulegt.
 
 Bankinn krefst að jafnaði tvöfaldrar auðkenningar,
 
-og án dvalarleyfisskírteinis geturðu sótt um hjá innflytjendastofnun Taívan „**grunnupplýsingaeyðublaðið um samræmt kenninúmer**“ (統一證號基本資料表).
+og án dvalarleyfisskírteinis geturðu sótt um hjá innflytjendastofnun Taívan „grunnupplýsingaeyðublaðið um samræmt kenninúmer“ (統一證號基本資料表).
 
 Útgáfa er möguleg sama dag,
 
@@ -71,7 +71,7 @@ en iðulega er margt um manninn hjá innflytjendastofnuninni (移民署); þú �
 
 ​
 
-**3. Ég hef heyrt að við skoðun fjárfestingaráætlunarinnar (投資計畫書) skuli tilgreina menntun og starfsreynslu, og ég óttast að menntun mín og reynsla passi ekki við starfsgrein þess félags sem stofna á.**
+3. Ég hef heyrt að við skoðun fjárfestingaráætlunarinnar (投資計畫書) skuli tilgreina menntun og starfsreynslu, og ég óttast að menntun mín og reynsla passi ekki við starfsgrein þess félags sem stofna á.
 
 Skoðunarnefnd efnahagsráðuneytisins skoðar að vísu bakgrunn fjárfestisins,
 
@@ -85,13 +85,13 @@ og lýsa svo nákvæmlega að þeir sem skoða geti sannfærst.
 
 ​
 
-**4. Að hverju skal gæta þegar skráningarheimili félagsins (til dæmis veitingastaður) er leigt?**
+4. Að hverju skal gæta þegar skráningarheimili félagsins (til dæmis veitingastaður) er leigt?
 
-Félagastofnunin tekur um **3 mánuði**, og það tekur um **einn mánuð** til viðbótar að fá atvinnuleyfi (工作許可) og dvalarleyfisskírteini.
+Félagastofnunin tekur um 3 mánuði, og það tekur um einn mánuð til viðbótar að fá atvinnuleyfi (工作許可) og dvalarleyfisskírteini.
 
 Því ættir þú að ákveða gildistökudag samningsins eins seint og unnt er.
 
-Enn fremur veitir leigusali í leigusamningum um verslunarhúsnæði á Taívan leigjanda oft „**innréttingartímabil**“ (裝潢期間).
+Enn fremur veitir leigusali í leigusamningum um verslunarhúsnæði á Taívan leigjanda oft „innréttingartímabil“ (裝潢期間).
 
 Þetta er tímabil án leigu, sem þú getur samið um.
 
@@ -107,7 +107,7 @@ máttu, ef þörf krefur, bjóða vottun leigusamningsins (公證) eða viðbót
 
 ​
 
-**5. Má, við félagastofnun, leigja almennt skrifstofuhúsnæði?**
+5. Má, við félagastofnun, leigja almennt skrifstofuhúsnæði?
 
 Það ræðst af skráðum starfsgreinum félagsins (營業項目).
 

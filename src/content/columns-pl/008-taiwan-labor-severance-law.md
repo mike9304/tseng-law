@@ -40,9 +40,9 @@ Jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy.
 
 Jeśli zatrudniona osoba popełnia jednak czyn bezprawny,
 
-**narusza regulamin pracy (工作規則),**
+narusza regulamin pracy (工作規則),
 
-**albo opuszcza pracę bez powodu przez 3 dni z rzędu (曠工),**
+albo opuszcza pracę bez powodu przez 3 dni z rzędu (曠工),
 
 spółka może zwolnić bez wypłaty odprawy.
 
@@ -52,7 +52,7 @@ Podsumowuję to w prostej tabeli.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Rodzaj** | **Zwolnienie ekonomiczne (資遣員工, 經濟解僱)** | **Zwolnienie dyscyplinarne (解僱員工, 懲戒解僱)** | **Własna rezygnacja zatrudnionej osoby (員工自請離職)** |
+| Rodzaj | Zwolnienie ekonomiczne (資遣員工, 經濟解僱) | Zwolnienie dyscyplinarne (解僱員工, 懲戒解僱) | Własna rezygnacja zatrudnionej osoby (員工自請離職) |
 | Znaczenie | Jeśli u pracodawcy istnieje potrzeba korekty personelu z powodu sytuacji przedsiębiorstwa, przyczyna leży w sferze gospodarczej pracodawcy, a nie w odpowiedzialności zatrudnionej osoby. Dlatego pracodawca musi przestrzegać terminu wypowiedzenia (預告期間) i wypłacić odprawę, aby zrównoważyć niekorzyści zatrudnionej osoby. | Jeśli zatrudniona osoba popełnia czyn bezprawny lub niewłaściwy, pracodawca może natychmiast zakończyć umowę o pracę (勞動契約) bez wcześniejszego wypowiedzenia i nie musi wypłacać odprawy. Jest to jedna z prerogatyw dyscyplinarnych pracodawcy. | Zatrudniona osoba może w każdej chwili zakończyć umowę, lecz musi, według czasu zatrudnienia, przestrzegać terminu wypowiedzenia, aby pracodawca mógł przeprowadzić przekazanie i poszukiwanie zastępstwa. |
 | Warunki | Tak (art. 11 tajwańskiej ustawy o normach pracy) | Tak (art. 12 tajwańskiej ustawy o normach pracy) | Brak |
 | Wcześniejsze wypowiedzenie | Wymagane | Niewymagane | Wymagane |
@@ -194,17 +194,17 @@ stawia nadmierne wymagania
 
 albo przenosi pracowników na dziwne stanowiska,
 
-**należy zachowywać dowody.**
+należy zachowywać dowody.
 
-**Zwykłe ewidencje obecności,**
+Zwykłe ewidencje obecności,
 
-**ewidencje nadgodzin, ewidencje wyników,**
+ewidencje nadgodzin, ewidencje wyników,
 
-**regulamin pracy, korespondencję e-mail ze współpracownikami i przełożonymi**
+regulamin pracy, korespondencję e-mail ze współpracownikami i przełożonymi
 
-**oraz nagrania rozmów z przełożonymi —**
+oraz nagrania rozmów z przełożonymi —
 
-**proszę zachować dowody korzystne dla siebie.**
+proszę zachować dowody korzystne dla siebie.
 
 ​
 

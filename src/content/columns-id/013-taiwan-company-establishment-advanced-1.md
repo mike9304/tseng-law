@@ -17,13 +17,13 @@ Belakangan ini banyak orang mendirikan perusahaan di Taiwan serta mengajukan vis
 
 Berikut ini saya rangkum pertanyaan yang sering muncul pada saat pendirian perusahaan.
 
-Bagi Anda yang telah membaca [**Dasar Pendirian Perusahaan**](/id/columns/taiwan-company-establishment-basics), silakan lanjutkan pula ke panduan lanjutan yang lebih rinci ini.
+Bagi Anda yang telah membaca [Dasar Pendirian Perusahaan](/id/columns/taiwan-company-establishment-basics), silakan lanjutkan pula ke panduan lanjutan yang lebih rinci ini.
 
 Tanya jawab berikut dapat menjadi orientasi umum bagi Anda yang sedang mempertimbangkan untuk mendirikan perusahaan di Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Saya ingin mendirikan perusahaan, tetapi belum menemukan alamat pendaftaran perusahaan. Apakah pendirian tetap dapat dilakukan?**
+1. Saya ingin mendirikan perusahaan, tetapi belum menemukan alamat pendaftaran perusahaan. Apakah pendirian tetap dapat dilakukan?
 
 Ketika orang asing mendirikan perusahaan di Taiwan, ia harus mengajukan rencana investasi (投資計畫書) kepada Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司) untuk ditinjau.
 
@@ -43,7 +43,7 @@ Pada tulisan dasar sebelumnya pun ada pembaca yang menyebutkan bahwa pembukaan r
 
 Karena kasus pencucian uang (洗錢) di Taiwan sangat banyak, pembukaan rekening bank menjadi semakin ketat.
 
-**Saran:**
+Saran:
 
 Peninjauan rencana investasi juga memakan waktu.
 
@@ -57,7 +57,7 @@ Anda masih memiliki cukup waktu untuk membuka rekening kantor persiapan perusaha
 
 ​
 
-**2. Apakah saya dapat membuka rekening perusahaan di bank meskipun tidak memiliki kartu izin tinggal (ARC) Taiwan?**
+2. Apakah saya dapat membuka rekening perusahaan di bank meskipun tidak memiliki kartu izin tinggal (ARC) Taiwan?
 
 Hal itu dapat dilakukan.
 
@@ -71,7 +71,7 @@ Kantor Badan Imigrasi tersebut sangat ramai, sehingga sebaiknya Anda datang lebi
 
 ​
 
-**3. Saya mendengar bahwa pada peninjauan rencana investasi harus dituliskan riwayat pendidikan dan pengalaman kerja. Saya khawatir riwayat pendidikan dan pengalaman kerja saya tidak sesuai dengan bidang usaha perusahaan yang hendak saya dirikan.**
+3. Saya mendengar bahwa pada peninjauan rencana investasi harus dituliskan riwayat pendidikan dan pengalaman kerja. Saya khawatir riwayat pendidikan dan pengalaman kerja saya tidak sesuai dengan bidang usaha perusahaan yang hendak saya dirikan.
 
 Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi, memang meninjau latar belakang investor.
 
@@ -85,13 +85,13 @@ Mengenai hal ini, sebaiknya Anda meminta peninjauan dari advokat di Taiwan.
 
 ​
 
-**4. Adakah hal yang perlu diperhatikan ketika menyewa tempat untuk alamat pendaftaran perusahaan (misalnya toko rumah makan)?**
+4. Adakah hal yang perlu diperhatikan ketika menyewa tempat untuk alamat pendaftaran perusahaan (misalnya toko rumah makan)?
 
-Pendirian perusahaan memakan waktu sekitar **3 bulan**, dan perolehan izin kerja (工作許可) serta kartu izin tinggal (ARC) memerlukan sekitar **1 bulan**.
+Pendirian perusahaan memakan waktu sekitar 3 bulan, dan perolehan izin kerja (工作許可) serta kartu izin tinggal (ARC) memerlukan sekitar 1 bulan.
 
 Karena jangka waktu itu cukup panjang, sebaiknya Anda menetapkan tanggal mulai perjanjian selambat mungkin.
 
-Selain itu, dalam perjanjian sewa toko di Taiwan, pemilik kerap memberikan "**masa pengerjaan interior bebas sewa**" (裝潢期間) kepada penyewa.
+Selain itu, dalam perjanjian sewa toko di Taiwan, pemilik kerap memberikan "masa pengerjaan interior bebas sewa" (裝潢期間) kepada penyewa.
 
 Masa tersebut adalah jangka waktu yang dibebaskan dari sewa, dan sebaiknya Anda merundingkannya.
 
@@ -107,7 +107,7 @@ Bila diperlukan, Anda dapat mengusulkan pembuatan akta notaris (公證) atas per
 
 ​
 
-**5. Ketika mendirikan perusahaan, apakah saya dapat menyewa ruang perkantoran komersial?**
+5. Ketika mendirikan perusahaan, apakah saya dapat menyewa ruang perkantoran komersial?
 
 Hal itu bergantung pada bidang usaha terdaftar (營業項目) perusahaan.
 

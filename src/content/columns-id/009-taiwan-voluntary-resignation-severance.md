@@ -25,7 +25,7 @@ Hal ini berbeda dari anggapan umum bahwa pesangon otomatis diterima setiap kali 
 
 ​
 
-Namun terdapat **keadaan-keadaan pengecualian**.
+Namun terdapat keadaan-keadaan pengecualian.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Namun Undang-Undang Standar Ketenagakerjaan menentukan tenggat yang ketat.
 
 Apabila pekerja hendak mengakhiri perjanjian kerja berdasarkan angka 1 atau angka 6 di atas (misalnya karena hendak mengakhiri perjanjian kerja akibat tidak didaftarkan pada asuransi), tenggat itu harus ditaati.
 
-Pekerja harus mengakhiri perjanjian kerja dalam waktu **30 hari** sejak hari ia mengetahui keadaan tersebut.
+Pekerja harus mengakhiri perjanjian kerja dalam waktu 30 hari sejak hari ia mengetahui keadaan tersebut.
 
-Dalam hal angka 6, tenggatnya adalah **30 hari** sejak hari ia mengetahui akibat kerugian tersebut.
+Dalam hal angka 6, tenggatnya adalah 30 hari sejak hari ia mengetahui akibat kerugian tersebut.
 
 Karena itu pekerja harus mencermati tenggat waktunya dengan baik.
 
@@ -89,7 +89,7 @@ Pihak itu dapat terbebas dari kewajiban membayar pesangon atau justru dapat menu
 
 Karena itu, dalam sengketa ketenagakerjaan (勞資糾紛) di Taiwan,
 
-**saat** sangat menentukan.
+saat sangat menentukan.
 
 Pada umumnya, pihak yang menyiapkan bukti dan langkahnya lebih dahulu lebih mampu menjaga haknya.
 

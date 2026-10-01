@@ -151,4 +151,4 @@ Pe paginile oficiale de reglementare, confirmați data reformei și cea de intra
 
 Acest articol este un material cu scopuri educative pentru a explica în mod general regimul de succesiune, regimul patrimonial conjugal, autoritatea părintească și tutela minorilor în Taiwan; nu este o consultanță juridică pentru o cauză concretă de succesiune sau de familie. Legea aplicabilă, procedura și rezultatul pot varia după cercul moștenitorilor, testament, patrimoniu și datorii, regimul matrimonial, hotărârile judecătorești existente și elementele internaționale. Înainte de a calcula termene precum renunțarea sau declarația fiscală, sau de a dispune de patrimoniu, vă rugăm să confirmați sursele oficiale cele mai recente și împrejurările individuale.
 
-**Avocata Wei Tseng (曾雋崴)**
+Avocata Wei Tseng (曾雋崴)

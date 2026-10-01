@@ -17,13 +17,13 @@ Pastaruoju metu daugelis asmenų Taivane įsteigė įmonę (公司) ir gavo darb
 
 Toliau pateikiame klausimus, kurie dažnai kyla steigiant įmonę.
 
-Asmenys, kurie skaitė [**Įmonės steigimas Taivane — pagrindai**](/lt/columns/taiwan-company-establishment-basics), gali toliau peržiūrėti ir šią išsamesnę dalį.
+Asmenys, kurie skaitė [Įmonės steigimas Taivane — pagrindai](/lt/columns/taiwan-company-establishment-basics), gali toliau peržiūrėti ir šią išsamesnę dalį.
 
 Toliau pateikti klausimai ir atsakymai skirti padėti asmenims, kurie svarsto įmonės steigimą Taivane.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Noriu įsteigti įmonę, bet dar neradau registracijos adreso. Ar steigimas vis tiek įmanomas?**
+1. Noriu įsteigti įmonę, bet dar neradau registracijos adreso. Ar steigimas vis tiek įmanomas?
 
 Kai užsienietis steigia įmonę Taivane, jis privalo pateikti investicijų planą (投資計畫書) Ekonomikos ministerijos Investicijų peržiūros departamentui (經濟部投資審議司) peržiūrai.
 
@@ -43,7 +43,7 @@ Jau pagrindų dalyje vienas skaitytojas nurodė, kad sąskaitos atidarymas yra s
 
 Kadangi Taivane yra labai daug pinigų plovimo (洗錢) atvejų, banko sąskaitų atidarymas tampa vis griežtesnis.
 
-**Patarimas:**
+Patarimas:
 
 Investicijų plano peržiūra taip pat užtrunka.
 
@@ -57,13 +57,13 @@ Lieka pakankamai laiko banke atidaryti parengiamąją sąskaitą ir pervesti kap
 
 ​
 
-**2. Ar be Taivano leidimo gyventi pažymėjimo banke galima atidaryti įmonės sąskaitą?**
+2. Ar be Taivano leidimo gyventi pažymėjimo banke galima atidaryti įmonės sąskaitą?
 
 Tai įmanoma.
 
 Bankas paprastai reikalauja dvigubo tapatybės patvirtinimo.
 
-Be leidimo gyventi pažymėjimo Taivano imigracijos tarnyboje galima kreiptis dėl „**bendrojo identifikacinio numerio pagrindinių duomenų formos**“ (統一證號基本資料表).
+Be leidimo gyventi pažymėjimo Taivano imigracijos tarnyboje galima kreiptis dėl „bendrojo identifikacinio numerio pagrindinių duomenų formos“ (統一證號基本資料表).
 
 Išdavimas galimas tą pačią dieną.
 
@@ -71,7 +71,7 @@ Tačiau imigracijos tarnyba (移民署) yra labai apkrauta; todėl reikia atvykt
 
 ​
 
-**3. Girdėjau, kad per investicijų plano peržiūrą reikia nurodyti išsilavinimą ir profesinę patirtį. Kas, jei mano išsilavinimas ir patirtis neatitinka įmonės, kurią noriu steigti, šakos?**
+3. Girdėjau, kad per investicijų plano peržiūrą reikia nurodyti išsilavinimą ir profesinę patirtį. Kas, jei mano išsilavinimas ir patirtis neatitinka įmonės, kurią noriu steigti, šakos?
 
 Ekonomikos ministerijos peržiūros komisija investuotojo patirtį tikrina.
 
@@ -85,13 +85,13 @@ Ją reikia išdėstyti išsamiai, kad būtų galima įtikinti vertintojus.
 
 ​
 
-**4. Į ką atkreipti dėmesį nuomojant įmonės registracijos adresą (pavyzdžiui, maitinimo įstaigos patalpas)?**
+4. Į ką atkreipti dėmesį nuomojant įmonės registracijos adresą (pavyzdžiui, maitinimo įstaigos patalpas)?
 
-Įmonės steigimas trunka apie **3 mėnesius**, o leidimo dirbti (工作許可) ir leidimo gyventi pažymėjimo gavimas trunka dar apie **1 mėnesį**.
+Įmonės steigimas trunka apie 3 mėnesius, o leidimo dirbti (工作許可) ir leidimo gyventi pažymėjimo gavimas trunka dar apie 1 mėnesį.
 
 Todėl sutarties pradžią reikia nustatyti kuo vėliau.
 
-Be to, Taivano prekybos patalpų nuomos sutartyse nuomotojas dažnai nuomininkui suteikia „**įrengimo laikotarpį**“ (裝潢期間).
+Be to, Taivano prekybos patalpų nuomos sutartyse nuomotojas dažnai nuomininkui suteikia „įrengimo laikotarpį“ (裝潢期間).
 
 Tai laikotarpis, atleistas nuo nuomos mokesčio; dėl jo galima derėtis.
 
@@ -107,7 +107,7 @@ Prireikus galima pasiūlyti nuomos sutarties notarinį tvirtinimą (公證) arba
 
 ​
 
-**5. Ar steigiant įmonę galima nuomotis komercines biuro patalpas?**
+5. Ar steigiant įmonę galima nuomotis komercines biuro patalpas?
 
 Tai priklauso nuo įmonės veiklos sričių (營業項目).
 

@@ -192,4 +192,4 @@ Wybór końcowy jest bezpieczniejszy, jeżeli zbadają go specjaliści na Tajwan
 
 Niniejszy artykuł jest materiałem informacji ogólnej o charakterze edukacyjnym na temat różnic między tajwańską spółką zależną a oddziałem spółki zagranicznej; nie stanowi porady prawnej ani podatkowej w konkretnym przypadku i nie zapewnia określonego wyniku. Przepisy mające zastosowanie i ujęcie podatkowe mogą się różnić według miejsca inwestora i centrali, treści działalności, operacji i przepływu środków, przesłanek umowy oraz najnowszej praktyki organu kompetentnego; przed wykonaniem utworzenia, inwestycji, umowy, dywidendy albo przelewu najnowsze źródła oficjalne i okoliczności własne należy potwierdzić.
 
-**Adwokatka Wei Tseng (曾雋崴)**
+Adwokatka Wei Tseng (曾雋崴)

@@ -25,7 +25,7 @@ což se liší od úpravy v některých jurisdikcích, například v Koreji.
 
 ​
 
-Existují však **výjimečné případy**.
+Existují však výjimečné případy.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Zákon o pracovních normách (勞動基準法) však stanoví, že
 
 chce-li zaměstnanec ukončit pracovní smlouvu na základě bodu 1 nebo 6 výše (například aby ukončil smlouvu kvůli nezapsání do pojištění),
 
-musí ukončit pracovní smlouvu ve lhůtě **30 dní** ode dne, kdy poznal tuto situaci,
+musí ukončit pracovní smlouvu ve lhůtě 30 dní ode dne, kdy poznal tuto situaci,
 
-nebo, u bodu 6, ve lhůtě **30 dní** ode dne, kdy poznal následek škody.
+nebo, u bodu 6, ve lhůtě 30 dní ode dne, kdy poznal následek škody.
 
 Zaměstnanec proto musí lhůtu hlídat.
 
@@ -89,7 +89,7 @@ může strana, která smlouvu ukončila první, odstupné nevyplatit, nebo je m�
 
 Proto v pracovněprávních sporech (勞資糾紛) na Tchaj-wanu
 
-je „**čas**“ velmi důležitý.
+je „čas“ velmi důležitý.
 
 Ve většině případů je lépe chráněna strana, která se připraví předem.
 

@@ -191,4 +191,4 @@ Belgeler zaman sırasına göre derlenirken sözleşme kurulma günü, eğitimin
 
 Bu yazı, Tayvan’daki asgari hizmet süresi sözleşmesi, eğitim gideri ve avans niteliğindeki ödemenin iadesi ile ayrılış ön bildirimini genel olarak açıklamak için eğitim amaçlı bir belgedir; tek tek iş dosyasına hukuki görüş değildir. Sözleşme türü ve metni, fiili eğitim ve gider, karşılığın amacı ve bildirimi, çalışma süresi, sona erme nedeni ve delillere göre sözleşmenin geçerliliği ve sorumluluk kapsamı değişebilir. İstifa iradesi, ücret kesintisi, iade anlaşması veya uyuşmazlığa yanıt vermeden önce en güncel resmi kaynaklar ve dosyanın olguları doğrulanmalıdır.
 
-**Avukat Wei Tseng (曾雋崴)**
+Avukat Wei Tseng (曾雋崴)

@@ -51,7 +51,7 @@ Zato ovoj stvari posvetite pažnju.
 
 ​
 
-**P. Mora li se za svaku granu delatnosti sistemom „prethodne provere mesta delatnosti” proveriti da li je delatnost moguća?**
+P. Mora li se za svaku granu delatnosti sistemom „prethodne provere mesta delatnosti” proveriti da li je delatnost moguća?
 
 Za svaku granu delatnosti preporučuje se da se sistemom „prethodne provere mesta delatnosti” (營業場所預先查詢) potvrdi da li je delatnost na adresi moguća.
 
@@ -61,7 +61,7 @@ Zato u praksi nije nužno pri upisu društva proveravati sve delatnosti.
 
 Prema „[uputstvu o radu usluge informisanja o mestima delatnosti grada Tajpeja](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) ”(臺北市營業場所協助查詢服務作業須知) i važećem vodiču grada Tajpeja,
 
-od 1. 1. 2023. pri zahtevu za upis osnivanja, premeštaja sedišta ili dopune delatnosti društva ili preduzeća (uključujući ogranak (分公司) i pomoćnu jedinicu (分支機構)) ishod prethodne provere mesta delatnosti **mora** biti priložen zahtevu za upis, bez obzira na delatnost.
+od 1. 1. 2023. pri zahtevu za upis osnivanja, premeštaja sedišta ili dopune delatnosti društva ili preduzeća (uključujući ogranak (分公司) i pomoćnu jedinicu (分支機構)) ishod prethodne provere mesta delatnosti mora biti priložen zahtevu za upis, bez obzira na delatnost.
 
 Spisak „delatnosti koje su predmet službene provere” (主動查詢之營業項目) naveden u nastavku označava delatnosti koje Trgovinsko odeljenje tokom ocene upisa proverava po službenoj dužnosti dodatno (隨案主動查詢) kada se delatnost pojavi u zahtevu, ali nedostaje u priloženom ishodu; činjenica da delatnost nije na ovom spisku ne znači oslobođenje od provere.
 

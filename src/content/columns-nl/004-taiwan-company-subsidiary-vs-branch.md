@@ -192,4 +192,4 @@ De eindkeuze is veiliger te onderzoeken indien professionals in Taiwan en op het
 
 Dit artikel is algemeen informatiemateriaal voor educatieve doeleinden over de verschillen tussen Taiwanese dochtervennootschap en bijkantoor van een buitenlandse vennootschap (子公司·分公司); het is geen juridisch of fiscaal advies in een concreet geval en belooft geen bepaald resultaat. Toepasselijke voorschriften en fiscale behandeling kunnen verschillen volgens zetel van investeerder en hoofdzetel, bedrijfsinhoud, transacties en geldstroom, verdragsvoorwaarden en de recentste praktijk van de bevoegde autoriteit; vóór het uitvoeren van oprichting, investering, contract, dividend of overmaking moeten de recentste officiële bronnen en de eigen omstandigheden worden onderzocht.
 
-**Advocaat Wei Tseng (曾雋崴)**
+Advocaat Wei Tseng (曾雋崴)

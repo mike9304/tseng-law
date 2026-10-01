@@ -191,4 +191,4 @@ Ordonând documentele în ordine temporală, este potrivit să se indice împreu
 
 Acest text este un document cu scop educativ pentru a explica în mod general clauza de durată minimă a muncii în Taiwan, restituirea cheltuielilor de formare și a prestației anticipate și preavizul de demisie; nu este un aviz juridic pentru o cauză de muncă concretă. Valabilitatea clauzei și întinderea răspunderii pot varia după tipul și conținutul contractului, formarea și costul reale, finalitatea contraprestației și comunicarea ei, perioada de muncă, cauza stingerii și probele. Înainte de a formula demisia, de a accepta o reținere salarială, de a conveni o restituire sau de a răspunde unui litigiu, este potrivit să se confirme sursele oficiale cele mai recente și împrejurările individuale.
 
-**Wei Tseng (曾雋崴), avocată în Taiwan**
+Wei Tseng (曾雋崴), avocată în Taiwan

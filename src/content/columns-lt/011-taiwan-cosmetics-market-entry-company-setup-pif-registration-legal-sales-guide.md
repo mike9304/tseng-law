@@ -42,9 +42,9 @@ Sutartyje tikslinga konkrečiai nustatyti intelektinės nuosavybės, pavyzdžiui
 
 Taivano dukterinė bendrovė ir užsienio bendrovės filialas nėra ta pati organizacija. Dukterinė bendrovė yra savarankiškas juridinis asmuo, įsteigtas pagal Taivano teisę, o filialas registruojamas kaip užsienio bendrovės pagrindinės buveinės (本公司) dalis. Skiriasi juridinio asmens statusas, pagrindinės buveinės atsakomybė, apskaitos ir mokestinis vertinimas, pelno pervedimas, atstovavimo teisė ir vidaus kontrolės būdas, todėl organizacijos formos negalima rinktis vien pagal pardavimo kontrolę.
 
-Jei reikalinga užsienio investicijos eiga, reikia patikrinti **Ekonomikos ministerijos Investicijų peržiūros departamento (經濟部投資審議司)** kaip šiuo metu kompetentingos institucijos gaires. Investicijos leidimui, lėšų pervedimui, bendrovės ar filialo registracijai, banko sąskaitos atidarymui, mokestinei registracijai (稅籍登記) ir importuotojo kvalifikacijai gauti reikalingas laikotarpis skiriasi pagal investuotoją, šaką, organizacijos formą, pateiktus dokumentus ir tai, ar jie taisomi ar papildomi. Užuot įėjimo datą fiksavus pagal tariamai nustatytą terminą, pirmiausia reikia patikrinti, kurie veiksmai taikomi, ir naujausias pateikimo sąlygas.
+Jei reikalinga užsienio investicijos eiga, reikia patikrinti Ekonomikos ministerijos Investicijų peržiūros departamento (經濟部投資審議司) kaip šiuo metu kompetentingos institucijos gaires. Investicijos leidimui, lėšų pervedimui, bendrovės ar filialo registracijai, banko sąskaitos atidarymui, mokestinei registracijai (稅籍登記) ir importuotojo kvalifikacijai gauti reikalingas laikotarpis skiriasi pagal investuotoją, šaką, organizacijos formą, pateiktus dokumentus ir tai, ar jie taisomi ar papildomi. Užuot įėjimo datą fiksavus pagal tariamai nustatytą terminą, pirmiausia reikia patikrinti, kurie veiksmai taikomi, ir naujausias pateikimo sąlygas.
 
-Kad ir kuri struktūra būtų pasirinkta, kosmetikos reguliavimo centrinis atsakomybės subjektas yra **kosmetikos gamintojas arba importuotojas**. Gaminio dokumentų sutvarkymą ar saugos vertinimą (安全性評估) galima pavesti išorės specialistui, tačiau vien pavedimas neperkelia gamintojo arba importuotojo teisinės atsakomybės. Sutartinio darbų pasidalijimo atskyrimas nuo įstatyminio atsakomybės subjekto yra įėjimo struktūros peržiūros išeities taškas.
+Kad ir kuri struktūra būtų pasirinkta, kosmetikos reguliavimo centrinis atsakomybės subjektas yra kosmetikos gamintojas arba importuotojas. Gaminio dokumentų sutvarkymą ar saugos vertinimą (安全性評估) galima pavesti išorės specialistui, tačiau vien pavedimas neperkelia gamintojo arba importuotojo teisinės atsakomybės. Sutartinio darbų pasidalijimo atskyrimas nuo įstatyminio atsakomybės subjekto yra įėjimo struktūros peržiūros išeities taškas.
 
 ## 2. Produkto registracija ir PIF yra du skirtingi režimai
 
@@ -131,4 +131,4 @@ Bendrovės ir filialo pagrindinę struktūrą galite matyti straipsnyje [Įmonė
 
 Šis tekstas yra šviečiamasis tekstas, bendrais bruožais paaiškinantis su įėjimu į Taivano kosmetikos rinką susijusį režimą; jis nėra teisinė nuomonė dėl atskiro gaminio ar reklamos ir nežada nustatyto rezultato, leidimo, registracijos, pardavimo galimybės ar tvarkymo termino. Įėjimo formą, gaminio dokumentus, ženklinimo ir reklamos turinį bei kompetentingos institucijos naujausią praktiką reikia patikrinti kiekvienu atveju atskirai.
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

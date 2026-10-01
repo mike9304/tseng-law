@@ -99,9 +99,9 @@ For an ordinary direct application for committee review, give reasons and apply 
 
 A claim under Civil Code Article 184 requires an unlawful infringement of a right, causation connected to the accident, and proof of damage. The accident alone does not automatically establish every listed loss. Civil Code Article 216 provides the standard for determining the scope of actual loss and lost profit.
 
-- **Injury**: Under Civil Code Article 193, recoverable loss may include necessary medical expenses; expenses for care, travel for treatment, assistive devices, and other increased living needs; proven temporary income loss; and loss of earning capacity. Civil Code Article 195 also permits a claim for non-pecuniary damage.
-- **Death**: Under Civil Code Article 192, recoverable loss may include applicable pre-death medical and increased-need expenses, funeral expenses, and loss of support for a person legally entitled to support. Civil Code Article 194 also permits non-pecuniary damage for qualifying relatives.
-- **Property**: Under Civil Code Article 196, a claimant may seek proven actual property damage, including supported repair expenses or diminution in value.
+- Injury: Under Civil Code Article 193, recoverable loss may include necessary medical expenses; expenses for care, travel for treatment, assistive devices, and other increased living needs; proven temporary income loss; and loss of earning capacity. Civil Code Article 195 also permits a claim for non-pecuniary damage.
+- Death: Under Civil Code Article 192, recoverable loss may include applicable pre-death medical and increased-need expenses, funeral expenses, and loss of support for a person legally entitled to support. Civil Code Article 194 also permits non-pecuniary damage for qualifying relatives.
+- Property: Under Civil Code Article 196, a claimant may seek proven actual property damage, including supported repair expenses or diminution in value.
 
 ## Q8. How should I submit medical-expense records while treatment continues?
 

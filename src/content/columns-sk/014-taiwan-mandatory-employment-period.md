@@ -191,4 +191,4 @@ Pri usporiadaní podkladov v časovom poradí je vhodné spoločne uviesť deň 
 
 Tento text je vzdelávacím podkladom k všeobecnému vysvetleniu dohody o minimálnej dobe trvania pracovného pomeru na Taiwane, vrátenia nákladov na školenie a plnenia poskytnutého vopred a výpovednej doby; nie je právnym stanoviskom ku konkrétnej pracovnej veci. Platnosť dohody a rozsah zodpovednosti sa môžu líšiť podľa typu a znenia zmluvy, skutočného školenia a nákladov, účelu náhrady a jeho oznámenia, doby práce, dôvodu skončenia a dôkazov. Pred výpoveďou, prijatím zrážky zo mzdy, dohodou o vrátení alebo reakciou na spor treba overiť najnovšie oficiálne podklady a jednotlivé okolnosti.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

@@ -17,13 +17,13 @@ Gần đây, nhiều người đã thành lập công ty thành công tại Đà
 
 Phần dưới đây tổng hợp những câu hỏi thường gặp trong quá trình thành lập công ty.
 
-Quý vị nào đã đọc [**Cơ bản về thành lập công ty**](/vi/columns/taiwan-company-establishment-basics) thì xin tham khảo tiếp phần chuyên sâu chi tiết dưới đây.
+Quý vị nào đã đọc [Cơ bản về thành lập công ty](/vi/columns/taiwan-company-establishment-basics) thì xin tham khảo tiếp phần chuyên sâu chi tiết dưới đây.
 
 Phần hỏi đáp dưới đây dành cho quý vị đang cân nhắc thành lập công ty tại Đài Loan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Tôi muốn thành lập công ty nhưng vẫn chưa tìm được địa chỉ đăng ký của công ty. Tôi có thể tiến hành thủ tục thành lập không?**
+1. Tôi muốn thành lập công ty nhưng vẫn chưa tìm được địa chỉ đăng ký của công ty. Tôi có thể tiến hành thủ tục thành lập không?
 
 Khi người nước ngoài thành lập công ty tại Đài Loan, quý vị phải nộp bản kế hoạch đầu tư (投資計畫書) lên Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司) của Đài Loan để được thẩm định.
 
@@ -43,7 +43,7 @@ Trong bài viết cơ bản trước đây cũng có người nêu rằng mở t
 
 Do các vụ rửa tiền (洗錢) tại Đài Loan rất nhiều, việc mở tài khoản ngân hàng ngày càng trở nên nghiêm ngặt hơn.
 
-**Lời khuyên:**
+Lời khuyên:
 
 Việc thẩm định kế hoạch đầu tư cũng mất thời gian.
 
@@ -57,7 +57,7 @@ Quý vị vẫn còn đủ thời gian để mở tài khoản văn phòng chu�
 
 ​
 
-**2. Tôi không có thẻ cư trú Đài Loan thì có mở được tài khoản công ty tại ngân hàng không?**
+2. Tôi không có thẻ cư trú Đài Loan thì có mở được tài khoản công ty tại ngân hàng không?
 
 Quý vị vẫn có thể mở được tài khoản công ty.
 
@@ -71,7 +71,7 @@ Sở Di dân rất đông người, nên quý vị hãy đến sớm để lấy
 
 ​
 
-**3. Tôi nghe nói khi thẩm định kế hoạch đầu tư thì phải ghi học vấn và kinh nghiệm làm việc. Tôi lo rằng học vấn và kinh nghiệm của mình không phù hợp với ngành nghề của công ty dự định thành lập.**
+3. Tôi nghe nói khi thẩm định kế hoạch đầu tư thì phải ghi học vấn và kinh nghiệm làm việc. Tôi lo rằng học vấn và kinh nghiệm của mình không phù hợp với ngành nghề của công ty dự định thành lập.
 
 Vụ Thẩm định Đầu tư có xem xét lý lịch học vấn và kinh nghiệm của nhà đầu tư.
 
@@ -85,13 +85,13 @@ Về điểm này, quý vị nên trao đổi kỹ với luật sư Đài Loan.
 
 ​
 
-**4. Khi thuê địa chỉ đăng ký của công ty (ví dụ: mặt bằng nhà hàng) thì có điều gì cần lưu ý không?**
+4. Khi thuê địa chỉ đăng ký của công ty (ví dụ: mặt bằng nhà hàng) thì có điều gì cần lưu ý không?
 
-Trong một số trường hợp, việc thành lập công ty mất khoảng **3 tháng**, còn việc xin giấy phép làm việc (工作許可) cùng thẻ cư trú mất khoảng **1 tháng**; đó không phải thời hạn được bảo đảm.
+Trong một số trường hợp, việc thành lập công ty mất khoảng 3 tháng, còn việc xin giấy phép làm việc (工作許可) cùng thẻ cư trú mất khoảng 1 tháng; đó không phải thời hạn được bảo đảm.
 
 Vì vậy quý vị hãy đặt ngày bắt đầu hợp đồng muộn nhất có thể.
 
-Ngoài ra, trong hợp đồng thuê mặt bằng kinh doanh tại Đài Loan, bên cho thuê thường dành cho bên thuê một "**thời gian thi công nội thất**" (裝潢期間).
+Ngoài ra, trong hợp đồng thuê mặt bằng kinh doanh tại Đài Loan, bên cho thuê thường dành cho bên thuê một "thời gian thi công nội thất" (裝潢期間).
 
 Đây là khoảng thời gian được miễn tiền thuê, quý vị hãy thử thương lượng.
 
@@ -107,7 +107,7 @@ Khi cần thiết, quý vị có thể đề xuất công chứng (公證) hợp
 
 ​
 
-**5. Khi thành lập công ty, tôi có thể thuê không gian văn phòng thương mại thông thường không?**
+5. Khi thành lập công ty, tôi có thể thuê không gian văn phòng thương mại thông thường không?
 
 Điều này tùy thuộc vào ngành nghề kinh doanh (營業項目) của công ty.
 

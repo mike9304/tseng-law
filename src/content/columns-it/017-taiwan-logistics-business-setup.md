@@ -148,4 +148,4 @@ Al lavoro senza autorizzazione possono applicarsi una sanzione amministrativa e 
 
 Questo articolo è un materiale educativo destinato a spiegare in termini generali il regime giuridico, e non è un consiglio per un caso concreto. Poiché i criteri di autorizzazione, i formulari di domanda e la pratica dell’autorità competente possono cambiare, si confermino le fonti ufficiali aggiornate e le circostanze del caso prima di eseguire un investimento o un contratto.
 
-**L’avvocata Wei Tseng (曾雋崴)**
+L’avvocata Wei Tseng (曾雋崴)

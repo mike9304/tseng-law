@@ -25,7 +25,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ​
 
-하지만 **예외적인 경우**가 있습니다.
+하지만 예외적인 경우가 있습니다.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 근로자가 위의 제1、6항으로 노동계약을 종료하려면 (예를 들어 보험 미가입으로 인해 근로계약을 종료하고자 할 경우),
 
-해당 상황을 알게 된 날로부터 **30일** 이내에,
+해당 상황을 알게 된 날로부터 30일 이내에,
 
-또는 (제6호의 경우) 손해 결과를 알게 된 날로부터 **30일** 이내에 노동계약을 종료해야 한다고 규정하고 있습니다.
+또는 (제6호의 경우) 손해 결과를 알게 된 날로부터 30일 이내에 노동계약을 종료해야 한다고 규정하고 있습니다.
 
 따라서 근로자는 시간을 잘 파악해야 합니다.
 
@@ -89,7 +89,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 따라서 대만의 노동 분쟁에서는
 
-''**시간**''이 매우 중요합니다.
+''시간''이 매우 중요합니다.
 
 대부분의 경우 미리 준비한 쪽이 권리를 보장받게 됩니다.
 

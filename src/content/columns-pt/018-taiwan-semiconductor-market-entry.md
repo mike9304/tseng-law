@@ -85,11 +85,11 @@ Concluir a inscrição em Taiwan não implica que o pessoal da sede estrangeira 
 
 Os cenários seguintes são hipotéticos e servem só para orientar a análise; não estabelecem que um modo seja lícito ou preferível.
 
-**Empresas estrangeiras centradas na exportação inicial.** Se ainda não houver nem assalariados nem stocks em Taiwan e se se quiser verificar a procura por um distribuidor independente, pode examinar-se primeiro o fornecimento, a relação de distribuição e o campo de atividade em Taiwan. Um contrato de distribuição por si só não elimina todas as questões de regulação em Taiwan.
+Empresas estrangeiras centradas na exportação inicial. Se ainda não houver nem assalariados nem stocks em Taiwan e se se quiser verificar a procura por um distribuidor independente, pode examinar-se primeiro o fornecimento, a relação de distribuição e o campo de atividade em Taiwan. Um contrato de distribuição por si só não elimina todas as questões de regulação em Taiwan.
 
-**Empresas estrangeiras que alargam as vendas e o apoio técnico em Taiwan.** Se se prever contratar em Taiwan e continuar a gerir stocks, cobranças e apoio ao cliente, convém comparar de forma concreta subsidiária e sucursal, e rever também a responsabilidade contratual, o modo de operar da sede, os impostos e o pessoal.
+Empresas estrangeiras que alargam as vendas e o apoio técnico em Taiwan. Se se prever contratar em Taiwan e continuar a gerir stocks, cobranças e apoio ao cliente, convém comparar de forma concreta subsidiária e sucursal, e rever também a responsabilidade contratual, o modo de operar da sede, os impostos e o pessoal.
 
-**Empresas estrangeiras em fase de estudo de mercado.** Se, antes de uma organização de vendas, se quiserem só funções de informação e de ligação, um escritório de representação pode avaliar-se. Se o plano real incluir a venda de stocks ou o trabalho no local, deve confirmar-se em separado se estas atividades são permitidas.
+Empresas estrangeiras em fase de estudo de mercado. Se, antes de uma organização de vendas, se quiserem só funções de informação e de ligação, um escritório de representação pode avaliar-se. Se o plano real incluir a venda de stocks ou o trabalho no local, deve confirmar-se em separado se estas atividades são permitidas.
 
 ## 8. Para a primeira consulta, um panorama operacional basta; não é necessário entregar à partida todas as peças confidenciais
 

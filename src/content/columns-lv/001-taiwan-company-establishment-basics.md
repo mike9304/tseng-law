@@ -142,4 +142,4 @@ Attiecīgo darba jomu varat aplūkot lapā [Kādās lietās mēs palīdzam](/lv/
 
 Šis raksts ir vispārīgas izglītojošas informācijas dokuments par sabiedrības dibināšanu Taivānā un saistītajiem noteikumiem; tas nav juridisks vai nodokļu padoms konkrētā lietā un nesola noteiktu iznākumu. Vajadzīgās gaitas un rezultāti var atšķirties pēc ieguldījuma struktūras, nozares, pieteicēja valstspiederības un uzturēšanās statusa un kompetentās iestādes jaunākās prakses; pirms ieguldījuma, līguma vai nodarbināšanas veikšanas jāizvērtē jaunākie oficiālie avoti un pašas lietas apstākļi.
 
-**Advokāte Wei Tseng (曾雋崴)**
+Advokāte Wei Tseng (曾雋崴)

@@ -17,13 +17,13 @@ Recentment moltes persones han constituït una societat a Taiwan i han obtingut 
 
 Tot seguit es recullen les preguntes que més es plantegen en el moment de la constitució.
 
-Qui hagi llegit [**la part bàsica de constitució de societats**](/ca/columns/taiwan-company-establishment-basics) pot continuar amb aquesta part avançada més detallada.
+Qui hagi llegit [la part bàsica de constitució de societats](/ca/columns/taiwan-company-establishment-basics) pot continuar amb aquesta part avançada més detallada.
 
 Les preguntes i respostes següents poden servir d’orientació general a qui considera constituir una societat a Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Desitjo constituir una societat, però encara no he trobat l’adreça de registre. És possible constituir-la?**
+1. Desitjo constituir una societat, però encara no he trobat l’adreça de registre. És possible constituir-la?
 
 Quan un estranger constitueix una societat a Taiwan, ha de presentar un pla d’inversió (投資計畫書) al Departament de Revisió d’Inversions del Ministeri d’Economia de Taiwan (經濟部投資審議司) per a la seva revisió.
 
@@ -43,7 +43,7 @@ A la part bàsica anterior un lector va esmentar que l’obertura del compte és
 
 Com que els casos de blanqueig de capitals (洗錢) a Taiwan són molt nombrosos, l’obertura de comptes bancaris es torna cada vegada més estricta.
 
-**Consell**:
+Consell:
 
 Com que la revisió del pla d’inversió també requereix temps, convé avançar en paral·lel.
 
@@ -57,7 +57,7 @@ També hi ha temps suficient per obrir al banc el compte preparatori de la socie
 
 ​
 
-**2. Puc obrir un compte de societat al banc encara que no tingui certificat de residència de Taiwan?**
+2. Puc obrir un compte de societat al banc encara que no tingui certificat de residència de Taiwan?
 
 És possible.
 
@@ -71,7 +71,7 @@ L’Administració d’Immigració, però, està molt concorreguda, de manera qu
 
 ​
 
-**3. He sentit que en la revisió del pla d’inversió s’han de consignar la formació i l’experiència, i em preocupa que la meva formació i experiència no coincideixin amb el sector de la societat que pretenc constituir.**
+3. He sentit que en la revisió del pla d’inversió s’han de consignar la formació i l’experiència, i em preocupa que la meva formació i experiència no coincideixin amb el sector de la societat que pretenc constituir.
 
 El comitè de revisió del Ministeri d’Economia examina els antecedents de l’inversor.
 
@@ -85,13 +85,13 @@ Sobre aquest punt, convé comentar aquest punt a fons amb una advocada o un advo
 
 ​
 
-**4. En arrendar l’adreça de registre de la societat (per exemple, un local de restauració), hi ha punts als quals prestar atenció?**
+4. En arrendar l’adreça de registre de la societat (per exemple, un local de restauració), hi ha punts als quals prestar atenció?
 
-La constitució de la societat requereix uns **3 mesos**, i l’obtenció del permís de treball i del certificat de residència, al voltant d’**1 mes**.
+La constitució de la societat requereix uns 3 mesos, i l’obtenció del permís de treball i del certificat de residència, al voltant d’1 mes.
 
 Per això, fixi la data d’inici del contracte tan tard com sigui possible.
 
-A més, en els contractes d’arrendament de locals a Taiwan el propietari sol concedir a l’arrendatari un «**període de condicionament del local**» (裝潢期間).
+A més, en els contractes d’arrendament de locals a Taiwan el propietari sol concedir a l’arrendatari un «període de condicionament del local» (裝潢期間).
 
 Es tracta d’un període exempt de renda, i convé negociar-lo.
 
@@ -107,7 +107,7 @@ Si és necessari, pot proposar d’atorgar el contracte d’arrendament en escri
 
 ​
 
-**5. En constituir la societat, pot arrendar un local d’oficines ordinari?**
+5. En constituir la societat, pot arrendar un local d’oficines ordinari?
 
 Depèn dels rams d’activitat de la societat.
 

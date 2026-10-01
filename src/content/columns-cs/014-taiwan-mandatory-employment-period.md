@@ -191,4 +191,4 @@ Při uspořádání podkladů v časovém pořadí je vhodné uvést den uzavře
 
 Tento text je vzdělávacím podkladem k obecnému vysvětlení ujednání o minimální době trvání pracovního poměru na Tchaj-wanu, vrácení nákladů na školení a plnění poskytnutého předem a výpovědi pracovníka; není právním stanoviskem ke konkrétní pracovní věci. Platnost ujednání a rozsah odpovědnosti se mohou lišit podle typu a znění smlouvy, skutečného školení a nákladů, účelu náhrady a jeho sdělení, doby práce, důvodu skončení a důkazů. Před podáním výpovědi, přijetím srážky ze mzdy, dohodou o vrácení nebo reakcí na spor je třeba ověřit nejnovější oficiální podklady a jednotlivé okolnosti.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

@@ -25,7 +25,7 @@ e ciò differisce da altri ordinamenti, per esempio dalla Corea.
 
 ​
 
-Esistono, tuttavia, **casi eccezionali**.
+Esistono, tuttavia, casi eccezionali.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Tuttavia, la legge sugli standard del lavoro (勞動基準法) dispone che,
 
 se il lavoratore desidera porre termine al contratto di lavoro in base ai punti 1 o 6 sopra (per esempio per terminare il contratto per mancanza di affiliazione all’assicurazione),
 
-deve porre termine al contratto di lavoro in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto questa situazione,
+deve porre termine al contratto di lavoro in un termine di 30 giorni a decorrere dal giorno in cui ha conosciuto questa situazione,
 
-o, per il punto 6, in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto il pregiudizio che ne è derivato.
+o, per il punto 6, in un termine di 30 giorni a decorrere dal giorno in cui ha conosciuto il pregiudizio che ne è derivato.
 
 Il lavoratore deve quindi padroneggiare bene il termine.
 
@@ -89,7 +89,7 @@ l’indennità può non essere pagata o può essere richiesta.
 
 È per questo che, nei conflitti del lavoro (勞資糾紛) a Taiwan,
 
-il «**tempo**» è molto importante.
+il «tempo» è molto importante.
 
 Nella maggior parte dei casi, chi si prepara in anticipo è in una posizione migliore per far valere i propri diritti; da ciò non segue un esito determinato.
 

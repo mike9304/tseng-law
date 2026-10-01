@@ -142,4 +142,4 @@ Takmarkað samningshlutfall gildir ekki sjálfkrafa af því einu að samningur 
 
 Þessi grein er almennt fræðsluefni um félagastofnun á Taívan (公司設立) og tengdar stofnanir; hún er ekki lögfræðileg eða skattaleg ráðgjöf í tilteknu máli og heitir engri tiltekinni niðurstöðu. Nauðsynlegar málsmeðferðir og úrslit geta verið misjöfn eftir fjárfestingarskipulagi, atvinnugrein, ríkisfangi og dvalarstöðu umsækjanda og nýjustu framkvæmd lögbærs stjórnvalds; áður en fjárfesting, samningur eða ráðning er framkvæmd skal kanna nýjustu opinberu heimildir og eigin aðstæður.
 
-**Lögmaður Wei Tseng (曾雋崴)**
+Lögmaður Wei Tseng (曾雋崴)

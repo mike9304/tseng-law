@@ -85,11 +85,11 @@ Para el gerente de la filial o sucursal taiwanesa de una sociedad extranjera, ob
 
 Los siguientes escenarios son hipotéticos y solo sirven para orientar el análisis; no garantizan que un modo sea lícito o preferible.
 
-**Empresas centradas en la exportación inicial.** Si aún no hay empleados ni inventario en Taiwán y se quiere comprobar la demanda mediante un distribuidor independiente, pueden examinarse primero el suministro, la relación de distribución y el ámbito de actividad en Taiwán. Un contrato de distribución, por sí solo, no dispensa del cumplimiento de la normativa taiwanesa.
+Empresas centradas en la exportación inicial. Si aún no hay empleados ni inventario en Taiwán y se quiere comprobar la demanda mediante un distribuidor independiente, pueden examinarse primero el suministro, la relación de distribución y el ámbito de actividad en Taiwán. Un contrato de distribución, por sí solo, no dispensa del cumplimiento de la normativa taiwanesa.
 
-**Empresas que amplían ventas y apoyo técnico en Taiwán.** Si se planea contratar en Taiwán y seguir gestionando inventario, cobros y apoyo al cliente, conviene comparar de forma concreta filial y sucursal, y revisar también la responsabilidad contractual, el modo de operar de la sede, los impuestos y el personal.
+Empresas que amplían ventas y apoyo técnico en Taiwán. Si se planea contratar en Taiwán y seguir gestionando inventario, cobros y apoyo al cliente, conviene comparar de forma concreta filial y sucursal, y revisar también la responsabilidad contractual, el modo de operar de la sede, los impuestos y el personal.
 
-**Empresas en fase de estudio de mercado.** Si, antes de una organización de ventas, solo se quieren funciones de información y enlace, puede evaluarse una oficina de representación. Si el plan real incluye venta de inventario o trabajo in situ, hay que confirmar por separado si esas actividades están permitidas.
+Empresas en fase de estudio de mercado. Si, antes de una organización de ventas, solo se quieren funciones de información y enlace, puede evaluarse una oficina de representación. Si el plan real incluye venta de inventario o trabajo in situ, hay que confirmar por separado si esas actividades están permitidas.
 
 ## 8. En la primera consulta basta un panorama operativo; no hace falta entregar toda la información confidencial de entrada
 

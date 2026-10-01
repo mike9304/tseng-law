@@ -20,7 +20,7 @@ faq:
 
 ![Galvenais attēls](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Šo skaidrojumu sagatavojusi **advokāte Wei Tseng (曾雋崴)**, Taivānas advokāte.
+Šo skaidrojumu sagatavojusi advokāte Wei Tseng (曾雋崴), Taivānas advokāte.
 
 Šajā rakstā izklāstu likumā noteikto atlaišanas pabalstu (資遣費) Taivānā.
 
@@ -40,9 +40,9 @@ Ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav j�
 
 Ja tomēr darbinieks izdara pretlikumīgu darbību,
 
-**pārkāpj iekšējos darba noteikumus (工作規則),**
+pārkāpj iekšējos darba noteikumus (工作規則),
 
-**vai bez iemesla 3 dienas pēc kārtas neierodas darbā (曠工),**
+vai bez iemesla 3 dienas pēc kārtas neierodas darbā (曠工),
 
 sabiedrība var atlaist bez atlaišanas pabalsta izmaksas.
 
@@ -52,7 +52,7 @@ Turpmākā tabula to apkopo.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Veids** | **Ekonomiskā atlaišana (資遣員工, 經濟解僱)** | **Disciplinārā atlaišana (解僱員工, 懲戒解僱)** | **Darbinieka brīvprātīga aiziešana (員工自請離職)** |
+| Veids | Ekonomiskā atlaišana (資遣員工, 經濟解僱) | Disciplinārā atlaišana (解僱員工, 懲戒解僱) | Darbinieka brīvprātīga aiziešana (員工自請離職) |
 | Nozīme | Ja darba devējam uzņēmuma stāvokļa dēļ vajadzīga personāla korekcija, iemesls slēpjas darba devēja saimnieciskajā jomā, nevis darbinieka atbildībā. Tāpēc darba devējam jāievēro iepriekšējā paziņojuma termiņš (預告期間) un jāizmaksā atlaišanas pabalsts, lai līdzsvarotu darbinieka nelabvēlību. | Ja darbinieks izdara pretlikumīgu vai neatbilstošu darbību, darba devējs var nekavējoties izbeigt darba līgumu (勞動契約) bez iepriekšēja paziņojuma un atlaišanas pabalstu neizmaksāt. Tā ir viena no darba devēja disciplinārajām pilnvarām. | Darbinieks var jebkurā laikā izbeigt līgumu, tomēr atbilstoši nostrādātajam laikam jāievēro paziņojuma termiņš, lai darba devējs varētu veikt nodošanu un meklēt aizstājēju. |
 | Nosacījumi | Ir  (Taivānas Darba standartu likuma 11. pants) | Ir  (Taivānas Darba standartu likuma 12. pants) | Nav |
 | Iepriekšējs paziņojums | Nepieciešams | Nav nepieciešams | Nepieciešams |
@@ -194,17 +194,17 @@ izvirza pārmērīgas prasības
 
 vai pārcel darbiniekus dīvainos amatos,
 
-**jāsaglabā pierādījumi.**
+jāsaglabā pierādījumi.
 
-**Jūsu parastie ierašanās uzskaites ieraksti,**
+Jūsu parastie ierašanās uzskaites ieraksti,
 
-**virsstundu ieraksti, rezultātu ieraksti,**
+virsstundu ieraksti, rezultātu ieraksti,
 
-**iekšējie darba noteikumi, e-pasta sarakste ar līdzstrādniekiem un priekšniekiem**
+iekšējie darba noteikumi, e-pasta sarakste ar līdzstrādniekiem un priekšniekiem
 
-**un arī sarunu ieraksti ar priekšniekiem —**
+un arī sarunu ieraksti ar priekšniekiem —
 
-**saglabājiet pierādījumus, kas Jums ir labvēlīgi.**
+saglabājiet pierādījumus, kas Jums ir labvēlīgi.
 
 ​
 

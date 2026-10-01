@@ -25,7 +25,7 @@ dan ini berbeza daripada sesetengah bidang kuasa lain — Korea, sebagai contoh.
 
 ​
 
-Namun terdapat **kes pengecualian**.
+Namun terdapat kes pengecualian.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Namun, undang-undang piawaian buruh (勞動基準法) memperuntukkan bahawa,
 
 jika pekerja ingin menamatkan kontrak kerja di bawah titik 1 atau 6 di atas (contohnya untuk menamatkan kontrak kerana tidak disertakan ke insurans),
 
-ia mesti menamatkan kontrak kerja dalam tempoh **30 hari** dari hari ia mengetahui situasi ini,
+ia mesti menamatkan kontrak kerja dalam tempoh 30 hari dari hari ia mengetahui situasi ini,
 
-atau, bagi titik 6, dalam tempoh **30 hari** dari hari ia mengetahui hasil kerugian.
+atau, bagi titik 6, dalam tempoh 30 hari dari hari ia mengetahui hasil kerugian.
 
 Pekerja maka mesti menguasai tempoh dengan baik.
 
@@ -89,7 +89,7 @@ boleh sama ada tidak membayar pampasan pemberhentian atau menuntutnya.
 
 Itulah sebabnya, dalam konflik buruh (勞資糾紛) di Taiwan,
 
-“**masa**” sangat penting.
+“masa” sangat penting.
 
 Dalam banyak kes, pihak yang menyusun bukti lebih awal dan mematuhi tempoh berada dalam kedudukan yang lebih kukuh — ini bukan janji tentang hasil.
 

@@ -196,4 +196,4 @@ De følgende primære kildene (nivå 1) er utgangspunkt for ettergang av denne a
 
 Denne artikkelen er undervisningsmateriale til alminnelig belysning av instituttene skilsmisse, internasjonale familiesaker, ektefelleformue og mindreårige barn i Taiwan, og ingen rettsrådgivning for en individuell sak. Prosedyre og utfall kan avvike etter kompetanse, hvilken rett som gjelder, anerkjennelse av utenlandske avgjørelser, ekteskaps- og sivilstand, formueordning, bestående avtale eller avgjørelse om barnet, kjensgjerninger og beviser samt de nyeste offisielle forskriftene. Registrerings-, rettsmiddel-, kravs- og fullbyrdelsesfrister skal, før handlingen, punktvis ettergås etter det nøyaktige utgangspunktet for hver rett og hver prosedyre.
 
-**Advokat Wei Tseng (曾雋崴)**
+Advokat Wei Tseng (曾雋崴)

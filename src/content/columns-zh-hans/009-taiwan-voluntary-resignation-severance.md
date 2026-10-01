@@ -25,7 +25,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ​
 
-但仍有**例外情形**。
+但仍有例外情形。
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 若受雇人拟以上述第1点或第6点终止劳动合同（例如因未办理保险而终止契约），
 
-须自知悉该情形之日起**30日**内终止劳动合同，
+须自知悉该情形之日起30日内终止劳动合同，
 
-或就第6点，自知悉损害结果之日起**30日**内终止。
+或就第6点，自知悉损害结果之日起30日内终止。
 
 因此受雇人须掌握期限。
 
@@ -89,7 +89,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 因此，在台湾劳资纠纷中，
 
-“**时间**”非常重要。
+“时间”非常重要。
 
 多数情形，事先做准备的一方更有条件维护自己的权利；这并不当然带来某一结果。
 

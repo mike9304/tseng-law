@@ -25,7 +25,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ​
 
-しかし、**例外的な場合**があります。
+しかし、例外的な場合があります。
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 労働者が上記第1号または第6号の事由に基づいて労働契約を終了しようとする場合（たとえば保険未加入を理由に労働契約を終了しようとする場合）、
 
-その事由を知った日から**30日**以内に、
+その事由を知った日から30日以内に、
 
-または（第6号の場合）損害が生じたことを知った日から**30日**以内に労働契約を終了しなければならないと定めています。
+または（第6号の場合）損害が生じたことを知った日から30日以内に労働契約を終了しなければならないと定めています。
 
 したがって労働者は、これらの期限を正確に把握しておく必要があります。
 
@@ -89,7 +89,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 したがって台湾の労働紛争では、
 
-「**時間**」が非常に重要です。
+「時間」が非常に重要です。
 
 ほとんどの場合、あらかじめ準備した側が自らの権利を確保できます。
 

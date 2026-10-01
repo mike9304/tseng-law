@@ -196,4 +196,4 @@ Järgmised esmased allikad (1. aste) on lähtekoht selle artikli õigusstruktuur
 
 See artikkel on üldine ülevaade lahutusest, rahvusvahelistest pereasjadest, abikaasade varast ja alaealistest lastest Taiwanis ega ole õigusnõu üksiku asja kohta. Menetlus ja tulemus võivad sõltuda pädevusest, kohaldatavast õigusest, välismaiste otsuste tunnustamisest, abielu- ja tsiviilstaatusest, vararežiimist, olemasolevast lapsekokkuleppest või -otsusest, asjaoludest ja tõenditest ning uusimatest ametlikest sätetest. Registreerimis-, vaidlustamis-, nõude- ja täitmistähtajad tuleb enne toimingut läbi käia punkti kaupa iga õiguse ja iga menetluse täpse alguspunkti järgi.
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)

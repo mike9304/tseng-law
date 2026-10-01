@@ -148,4 +148,4 @@ Darbui be leidimo gali būti taikoma administracinė bauda ir nurodymas išvykti
 
 Šis straipsnis yra švietimo tikslais parengtas bendros teisinės tvarkos paaiškinimas ir nėra teisinė konsultacija konkrečioje byloje. Kadangi leidimo kriterijai, prašymo formos ir kompetentingos institucijos praktika gali keistis, prieš vykdant investiciją ar sutartį patikrinkite naujausius oficialius šaltinius ir bylos aplinkybes.
 
-**Advokatė Wei Tseng (曾雋崴)**
+Advokatė Wei Tseng (曾雋崴)

@@ -25,7 +25,7 @@ ami egyes más jogrendszerektől – például Koreától – eltér.
 
 ​
 
-Vannak azonban **kivételes esetek**.
+Vannak azonban kivételes esetek.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ A munkaügyi törvény (勞動基準法) azonban úgy rendelkezik, hogy
 
 ha a munkavállaló a fenti 1. vagy 6. pont alapján kívánja megszüntetni a munkaszerződést (például azért, hogy a szerződés a biztosításba be nem jelentés miatt szűnjön meg),
 
-a munkaszerződést **30 napon** belül kell megszüntetnie attól a naptól számítva, amikor a helyzetről tudomást szerzett,
+a munkaszerződést 30 napon belül kell megszüntetnie attól a naptól számítva, amikor a helyzetről tudomást szerzett,
 
-vagy, a 6. pont esetén, **30 napon** belül attól a naptól, amikor a bekövetkezett kárról tudomást szerzett.
+vagy, a 6. pont esetén, 30 napon belül attól a naptól, amikor a bekövetkezett kárról tudomást szerzett.
 
 A munkavállalónak tehát jól kell kezelnie a határidőt.
 

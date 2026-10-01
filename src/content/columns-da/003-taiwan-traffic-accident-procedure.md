@@ -93,9 +93,9 @@ Mod den sagkyndige udtalelse kan fornyet prøvelse ansøges, dog kun 1 gang. Sag
 
 Krav ifølge artikel 184 i civilloven (民法) forudsætter retsstridig krænkelse af en ret, årsagssammenhæng med ulykken og bevis for skaden. Den blotte kendsgerning, at en ulykke er sket, betyder ikke, at alle følgende poster anerkendes. Artikel 216 i civilloven er målestok for omfanget af den faktiske skade og den tabte fortjeneste (所失利益).
 
-- **Tilskadekomst**: Ifølge artikel 193 i civilloven kan nødvendige behandlingsudgifter (醫療費用), forøgede udgifter til livsophold såsom pleje (看護費用), transport til behandling (就醫交通費) og hjælpemidler samt indtægtstab (收入損失) ved faktisk arbejdsudygtighed og nedsættelse af arbejdsevnen (勞動能力減損) undersøges. Ifølge artikel 195 i civilloven kan også ikke-økonomisk skade undersøges.
-- **Dødsfald**: Ifølge artikel 192 i civilloven kan, for så vidt det finder anvendelse, behandlingsudgifter og forhøjede livsbehovsudgifter før dødsfaldet, begravelsesudgifter (殯葬費) og tab af forsørgelse (扶養利益損失) for den, der retligt havde krav på forsørgelse, undersøges. Ifølge artikel 194 i civilloven kan også ikke-økonomisk skade for visse slægtninge undersøges.
-- **Formue**: Ifølge artikel 196 i civilloven kan beviste faktiske formueskader, herunder køretøjsreparation eller værdiforringelse, kræves.
+- Tilskadekomst: Ifølge artikel 193 i civilloven kan nødvendige behandlingsudgifter (醫療費用), forøgede udgifter til livsophold såsom pleje (看護費用), transport til behandling (就醫交通費) og hjælpemidler samt indtægtstab (收入損失) ved faktisk arbejdsudygtighed og nedsættelse af arbejdsevnen (勞動能力減損) undersøges. Ifølge artikel 195 i civilloven kan også ikke-økonomisk skade undersøges.
+- Dødsfald: Ifølge artikel 192 i civilloven kan, for så vidt det finder anvendelse, behandlingsudgifter og forhøjede livsbehovsudgifter før dødsfaldet, begravelsesudgifter (殯葬費) og tab af forsørgelse (扶養利益損失) for den, der retligt havde krav på forsørgelse, undersøges. Ifølge artikel 194 i civilloven kan også ikke-økonomisk skade for visse slægtninge undersøges.
+- Formue: Ifølge artikel 196 i civilloven kan beviste faktiske formueskader, herunder køretøjsreparation eller værdiforringelse, kræves.
 
 ## Q8. Hvordan skal dokumenter om behandlingsudgifter indgives, når behandlingen fortsætter?
 

@@ -93,9 +93,9 @@ Eksperdiarvamuse vastu saab taotleda korduvläbivaatust, siiski ainult üks kord
 
 Nõue tsiviilseadustiku (民法) artikli 184 järgi eeldab õigusvastast õiguse rikkumist, põhjuslikku seost õnnetusega ja kahju tõendamist. Pelk asjaolu, et õnnetus on toimunud, ei tähenda, et kõik järgmised kirjed tunnustatakse. Tsiviilseadustiku artikkel 216 on mõõdupuu tegeliku kahju ja saamata jäänud tulu (所失利益) ulatusele.
 
-- **Kehavigastus**: Tsiviilseadustiku artikli 193 järgi saab uurida vajalikke ravikulusid (醫療費用), hooldust (看護費用), sõitu ravile (就醫交通費), abivahendeid ja muid suurenenud elamiskulusid ning palgakaotust (收入損失) tegelikust töövõimetusest ja töövõime alanemisest (勞動能力減損). Tsiviilseadustiku artikli 195 järgi saab uurida ka mittevaralist kahju.
-- **Surm**: Tsiviilseadustiku artikli 192 järgi saab, niivõrd kui see kohaldub, uurida ravikulusid ja suurenenud elamiskulusid enne surma, matusekulusid (殯葬費) ja ülalpidamise kaotust (扶養利益損失) sellele, kellel oli õiguslik ülalpidamisnõue. Tsiviilseadustiku artikli 194 järgi saab uurida ka teatud sugulaste mittevaralist kahju.
-- **Vara**: Tsiviilseadustiku artikli 196 järgi saab nõuda tõendatud tegelikke varalisi kahjusid, sealhulgas sõiduki parandust või väärtuse alanemist.
+- Kehavigastus: Tsiviilseadustiku artikli 193 järgi saab uurida vajalikke ravikulusid (醫療費用), hooldust (看護費用), sõitu ravile (就醫交通費), abivahendeid ja muid suurenenud elamiskulusid ning palgakaotust (收入損失) tegelikust töövõimetusest ja töövõime alanemisest (勞動能力減損). Tsiviilseadustiku artikli 195 järgi saab uurida ka mittevaralist kahju.
+- Surm: Tsiviilseadustiku artikli 192 järgi saab, niivõrd kui see kohaldub, uurida ravikulusid ja suurenenud elamiskulusid enne surma, matusekulusid (殯葬費) ja ülalpidamise kaotust (扶養利益損失) sellele, kellel oli õiguslik ülalpidamisnõue. Tsiviilseadustiku artikli 194 järgi saab uurida ka teatud sugulaste mittevaralist kahju.
+- Vara: Tsiviilseadustiku artikli 196 järgi saab nõuda tõendatud tegelikke varalisi kahjusid, sealhulgas sõiduki parandust või väärtuse alanemist.
 
 ## Q8. Kuidas tuleb ravikulude dokumendid esitada, kui ravi jätkub?
 
@@ -363,7 +363,7 @@ Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatu v
 
 ​
 
-**Advokaat Wei Tseng (曾雋崴)**
+Advokaat Wei Tseng (曾雋崴)
 
 ---
 

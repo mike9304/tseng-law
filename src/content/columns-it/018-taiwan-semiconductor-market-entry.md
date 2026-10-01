@@ -85,11 +85,11 @@ Concludere l’iscrizione a Taiwan non implica che il personale della sede stran
 
 Gli scenari seguenti sono ipotetici per aiutare a riflettere; non stabiliscono che un modo sia lecito o preferibile.
 
-**Imprese straniere centrate sull’esportazione iniziale.** Se non vi sono ancora né dipendenti né scorte a Taiwan e se si vuole verificare la domanda tramite un distributore indipendente, può esaminarsi prima la fornitura, il rapporto di distribuzione e il campo di attività a Taiwan. Un contratto di distribuzione da solo non elimina tutte le questioni di regolazione a Taiwan.
+Imprese straniere centrate sull’esportazione iniziale. Se non vi sono ancora né dipendenti né scorte a Taiwan e se si vuole verificare la domanda tramite un distributore indipendente, può esaminarsi prima la fornitura, il rapporto di distribuzione e il campo di attività a Taiwan. Un contratto di distribuzione da solo non elimina tutte le questioni di regolazione a Taiwan.
 
-**Imprese straniere che allargano le vendite e il sostegno tecnico a Taiwan.** Se si prevede di assumere a Taiwan e continuare a gestire scorte, incassi e sostegno al cliente, conviene confrontare in concreto società controllata e succursale, e rivedere anche la responsabilità contrattuale, il modo di operare della sede, le imposte e il personale.
+Imprese straniere che allargano le vendite e il sostegno tecnico a Taiwan. Se si prevede di assumere a Taiwan e continuare a gestire scorte, incassi e sostegno al cliente, conviene confrontare in concreto società controllata e succursale, e rivedere anche la responsabilità contrattuale, il modo di operare della sede, le imposte e il personale.
 
-**Imprese straniere in fase di studio di mercato.** Se, prima di un’organizzazione di vendite, si vogliono solo funzioni di informazione e di collegamento, un ufficio di rappresentanza può valutarsi. Se il piano reale include la vendita di scorte o il lavoro sul posto, deve confermarsi separatamente se queste attività sono permesse.
+Imprese straniere in fase di studio di mercato. Se, prima di un’organizzazione di vendite, si vogliono solo funzioni di informazione e di collegamento, un ufficio di rappresentanza può valutarsi. Se il piano reale include la vendita di scorte o il lavoro sul posto, deve confermarsi separatamente se queste attività sono permesse.
 
 ## 8. Per il primo colloquio, un panorama operativo basta; non è necessario consegnare subito tutti i documenti riservati
 

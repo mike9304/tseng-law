@@ -142,4 +142,4 @@ Vous pouvez consulter le champ d’activité concerné sous [Affaires que nous t
 
 Le présent article est un document d’information générale à des fins éducatives sur la création de société à Taïwan et les règles connexes ; il ne constitue pas un conseil juridique ou fiscal dans une affaire concrète et ne promet pas un résultat déterminé. Les procédures nécessaires et les résultats peuvent varier selon la structure d’investissement, le secteur, la nationalité et le statut de séjour du demandeur ainsi que la pratique la plus récente de l’autorité compétente ; avant d’exécuter un investissement, un contrat ou un emploi, il convient d’examiner les sources officielles les plus récentes et les circonstances propres à l’affaire.
 
-**Avocate Wei Tseng (曾雋崴)**
+Avocate Wei Tseng (曾雋崴)

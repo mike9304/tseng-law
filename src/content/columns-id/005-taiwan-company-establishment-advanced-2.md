@@ -25,9 +25,9 @@ Tanya jawab berikut ini memuat orientasi umum bagi Anda yang sedang mempertimban
 
 ​
 
-**1. Apa yang harus diperhatikan ketika modal (資本額) dikirimkan dari luar negeri ke rekening kantor persiapan perusahaan (公司籌備處帳戶) di Taiwan? (butir ini memakai Korea sebagai satu contoh rezim devisa; ketentuan di negara Anda sendiri harus dipastikan tersendiri)**
+1. Apa yang harus diperhatikan ketika modal (資本額) dikirimkan dari luar negeri ke rekening kantor persiapan perusahaan (公司籌備處帳戶) di Taiwan? (butir ini memakai Korea sebagai satu contoh rezim devisa; ketentuan di negara Anda sendiri harus dipastikan tersendiri)
 
-Sebagai contoh, bank-bank di Korea pada umumnya mensyaratkan investor **sendiri** datang langsung ke bank dan mengirimkan dana dari rekening atas namanya sendiri.
+Sebagai contoh, bank-bank di Korea pada umumnya mensyaratkan investor sendiri datang langsung ke bank dan mengirimkan dana dari rekening atas namanya sendiri.
 
 Pengiriman dana melalui perbankan internet ataupun pengiriman yang diwakilkan kepada kerabat di negara tersebut tidak dimungkinkan.
 
@@ -35,9 +35,9 @@ Selain itu, menurut peraturan pengelolaan devisa Korea, orang yang berkewarganeg
 
 Sebelum mengirimkan modal, tanyakan lebih dahulu kepada bank utama tempat Anda bertransaksi di negara asal dana.
 
-**​**
+​
 
-**2. Ketika modal perusahaan disetorkan, dapatkah dolar baru Taiwan (新臺幣, TWD) dikirimkan dari rekening pribadi Anda di Taiwan ke rekening kantor persiapan perusahaan Taiwan?**
+2. Ketika modal perusahaan disetorkan, dapatkah dolar baru Taiwan (新臺幣, TWD) dikirimkan dari rekening pribadi Anda di Taiwan ke rekening kantor persiapan perusahaan Taiwan?
 
 Hal itu dimungkinkan, tetapi Anda harus menyerahkan dokumen bukti sumber dana atas dolar baru Taiwan yang diperoleh di Taiwan.
 
@@ -47,9 +47,9 @@ Apabila dana itu berupa dividen dan laba yang timbul dari penanaman modal pada u
 
 Apabila dana dikirimkan dari rekening bank di Korea, dokumen mengenai sumber dana tidak perlu dilampirkan. Hal ini dinyatakan menurut konteks Korea dalam tulisan ini; pengiriman dari negara lain harus dipastikan tersendiri.
 
-**​**
+​
 
-**3. Setelah modal disetorkan ke rekening kantor persiapan perusahaan, kapan rekening itu dapat dialihkan menjadi rekening resmi perusahaan (正式公司帳戶)?**
+3. Setelah modal disetorkan ke rekening kantor persiapan perusahaan, kapan rekening itu dapat dialihkan menjadi rekening resmi perusahaan (正式公司帳戶)?
 
 Pada umumnya, dokumen pendaftaran badan hukum harus terlebih dahulu diterbitkan.
 
@@ -57,17 +57,17 @@ Penanggung jawab (負責人) kemudian dapat datang ke bank dan mengalihkan reken
 
 Namun, karena ketentuan internal setiap bank berbeda-beda, apabila Anda harus menggunakan modal itu secara mendesak, sebaiknya Anda menanyakannya lebih dahulu kepada bank.
 
-**​**
+​
 
-**4. Setelah rekening kantor persiapan perusahaan dialihkan menjadi rekening resmi, dapatkah perbankan internet langsung digunakan?**
+4. Setelah rekening kantor persiapan perusahaan dialihkan menjadi rekening resmi, dapatkah perbankan internet langsung digunakan?
 
 Hal itu berbeda-beda pada setiap bank, tetapi pada umumnya sekurang-kurangnya diperlukan nomor telepon seluler.
 
 Sebagian bank dapat menetapkan persyaratan tambahan, misalnya masa penggunaan rekening setelah pendirian sekurang-kurangnya 6 bulan.
 
-**​**
+​
 
-**5. Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan?**
+5. Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan?
 
 A. Karyawan pertama: pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria "pekerjaan spesialis atau teknis" (專門性或技術性工作) pada bagian B di bawah tidak berlaku, tetapi persyaratan objek (seperti manajer (經理人) perusahaan yang penyertaan modal Tionghoa perantauan atau asingnya melebihi sepertiga) dan persyaratan kinerja pemberi kerja berupa modal dan omzet (Pasal 38 dan Pasal 39 Standar Penelaahan (審查標準)) tetap berlaku.
 

@@ -61,7 +61,7 @@ Land is taxed separately. [Land Tax Act Article 1](https://law.moj.gov.tw/LawCla
 
 ## The rate on a sale depends on tax residence
 
-[Income Tax Act Article 4-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-4) covers transactions involving a house, a house and its land, or land eligible for a building permit, **acquired** on or after January 1, 2016. It also covers a presale property together with its land, and a house-use right created by superficies, acquired on or after that date. A purchase now falls on or after that date.
+[Income Tax Act Article 4-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-4) covers transactions involving a house, a house and its land, or land eligible for a building permit, acquired on or after January 1, 2016. It also covers a presale property together with its land, and a house-use right created by superficies, acquired on or after that date. A purchase now falls on or after that date.
 
 Under [Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=7), a resident is someone who has a Taiwan domicile and habitually lives in Taiwan, or who has no Taiwan domicile but stays 183 days or more in the tax year. Everyone else is a non-resident. The [column on Taiwan income-tax residence](/en/columns/taiwan-income-tax-residency) explains that test. A seller who is a resident in the year of sale is subject to the resident rates in Article 14-4.
 

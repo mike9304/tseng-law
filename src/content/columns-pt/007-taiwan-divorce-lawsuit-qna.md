@@ -196,4 +196,4 @@ As fontes primárias (1.º nível) seguintes são o ponto de partida para verifi
 
 Este artigo é um material educativo destinado a explicar de forma geral as instituições do divórcio, dos assuntos familiares internacionais, do património conjugal e dos filhos menores em Taiwan, e não um conselho jurídico para um assunto individual. O procedimento e o resultado podem diferir segundo a competência, o direito internacional privado, o reconhecimento das decisões estrangeiras, o estado do casamento e do registo domiciliário, o regime dos bens, o acordo ou a decisão existentes relativos ao filho, os factos e as provas, bem como as prescrições oficiais mais recentes. Os prazos de inscrição, de recurso, de pretensão e de execução devem, antes de atuar, ser verificados um a um segundo o ponto de partida exato de cada direito e de cada procedimento.
 
-**Wei Tseng (曾雋崴), advogada em Taiwan**
+Wei Tseng (曾雋崴), advogada em Taiwan

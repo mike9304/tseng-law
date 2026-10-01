@@ -148,4 +148,4 @@ Sa pagtatrabaho nang walang pahintulot ay maaaring ipataw ang multa administrati
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag ang pangkalahatang sistemang legal, at hindi ito legal na payo para sa isang tiyak na usapin. Maaaring magbago ang pamantayan ng lisensiya, ang mga pormularyo ng aplikasyon at ang gawi ng ahensiyang may hurisdiksiyon, kaya bago isagawa ang pamumuhunan o ang kontrata, mangyaring tiyakin ninyo ang pinakabagong opisyal na materyal at ang inyong indibidwal na kalagayan.
 
-**Abogada Wei Tseng (曾雋崴)**
+Abogada Wei Tseng (曾雋崴)

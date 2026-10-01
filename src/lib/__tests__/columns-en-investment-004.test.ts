@@ -27,7 +27,7 @@ const faq3Answer =
   'A branch is not an independent issuer and cannot itself be listed in Taiwan. For a subsidiary to be listed, it must satisfy the applicable requirements of the Company Act and the stock exchange. Tax incentives are not determined solely by organizational form. An investment tax credit under Article 10-1 of the Statute for Industrial Innovation requires a separate review of the qualifying investment, filing deadline, credit method, restrictions on duplicate benefits, and tax credit limits.';
 const disclaimer =
   'This article is educational material intended to explain the general differences between a Taiwan subsidiary and a branch of a foreign company; it is not legal or tax advice for any specific matter. The applicable laws and tax treatment may vary according to the locations of the investor and head office, the nature of the business, transactions and cash flows, eligibility under the Agreement, and current practice of the competent authorities. The latest official materials and the circumstances of the particular matter should therefore be checked before establishing or funding an entity, entering into a contract, declaring a dividend, or making a remittance.';
-const author = '**Wei Tseng (曾雋崴), Taiwan Attorney**';
+const author = 'Wei Tseng (曾雋崴), Taiwan Attorney';
 
 const faq = [
   {

@@ -25,7 +25,7 @@ kas atšķiras no regulējuma dažās valstīs, piemēram, Korejā.
 
 ​
 
-Tomēr pastāv **izņēmuma gadījumi**.
+Tomēr pastāv izņēmuma gadījumi.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -63,9 +63,9 @@ Darba standartu likums (勞動基準法) tomēr nosaka, ka
 
 ja darbinieks vēlas izbeigt darba līgumu, pamatojoties uz iepriekš 1. vai 6. punktu (piemēram, lai izbeigtu līgumu tāpēc, ka darbinieks nav ierakstīts apdrošināšanā),
 
-darba līgums jāizbeidz **30 dienu** termiņā no dienas, kad viņš šo situāciju uzzināja,
+darba līgums jāizbeidz 30 dienu termiņā no dienas, kad viņš šo situāciju uzzināja,
 
-vai, 6. punktā, **30 dienu** termiņā no dienas, kad viņš uzzināja zaudējuma sekas.
+vai, 6. punktā, 30 dienu termiņā no dienas, kad viņš uzzināja zaudējuma sekas.
 
 Tāpēc darbiniekam rūpīgi jāseko šim termiņam.
 

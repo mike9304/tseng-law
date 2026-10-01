@@ -191,4 +191,4 @@ Við röðun gagna í tímaröð ætti saman að tilgreina gerðardag samningsin
 
 Þessi texti er fræðsluefni til að lýsa almennt samkomulagi um lágmarksstarfstímabil á Taívan, endurgreiðslu þjálfunarkostnaðar og fyrirframgreiddra hlunninda og uppsagnarfresti; hann er ekki lögfræðileg ráðgjöf um tiltekið vinnuréttarmál (最低服務年限約定). Gildi samkomulagsins og umfang ábyrgðar geta verið misjöfn eftir gerð og innihaldi samningsins, raunverulegri þjálfun og kostnaði, tilgangi bótanna og tilkynningu þeirra, starfstímabili, ástæðu lokunar og sönnunargögnum. Áður en uppsögn er sett fram, frádráttur af launum samþykktur, endurgreiðsla samin eða deilu svarað ætti að staðfesta nýjustu opinberu heimildir og einstaklingsbundin atvik.
 
-**Lögmaður Wei Tseng (曾雋崴)**
+Lögmaður Wei Tseng (曾雋崴)

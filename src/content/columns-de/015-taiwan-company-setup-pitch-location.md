@@ -51,7 +51,7 @@ Das ist bei der späteren Eintragung zu berücksichtigen.
 
 ​
 
-**Müssen alle Branchen über das System der „Vorabprüfung des Geschäftsorts“ prüfen, ob der Betrieb zulässig ist?**
+Müssen alle Branchen über das System der „Vorabprüfung des Geschäftsorts“ prüfen, ob der Betrieb zulässig ist?
 
 Es wird empfohlen, für alle Branchen über das System der „Vorabprüfung des Geschäftsorts“ (營業場所預先查詢) zu prüfen, ob der Betrieb zulässig ist.
 
@@ -61,7 +61,7 @@ In der Praxis müssen daher bei der Gesellschaftseintragung nicht alle Branchen 
 
 Nach den „[Richtlinien für den Auskunftsdienst zu Geschäftsorten der Stadt Taipeh](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) und der geltenden Bekanntmachung der Stadt Taipeh gilt die folgende Pflicht.
 
-Seit dem 1. Januar 2023 ist bei Anträgen auf Eintragung der Gründung, der Sitzverlegung oder der Hinzufügung von Geschäftszweigen von Gesellschaften und Handelsunternehmen (einschließlich Zweigniederlassungen (分公司) und Zweigstellen (分支機構)) das Ergebnis der Vorabprüfung des Geschäftsorts **zwingend** dem Eintragungsantrag beizufügen, unabhängig von der Branche.
+Seit dem 1. Januar 2023 ist bei Anträgen auf Eintragung der Gründung, der Sitzverlegung oder der Hinzufügung von Geschäftszweigen von Gesellschaften und Handelsunternehmen (einschließlich Zweigniederlassungen (分公司) und Zweigstellen (分支機構)) das Ergebnis der Vorabprüfung des Geschäftsorts zwingend dem Eintragungsantrag beizufügen, unabhängig von der Branche.
 
 Die nachstehende Liste der „von Amts wegen abzufragenden Geschäftszweige“ (主動查詢之營業項目) bezeichnet diejenigen Zweige, die das Handelsamt während der Eintragungsprüfung von Amts wegen zusätzlich abfragt (隨案主動查詢), wenn der Zweig im Eintragungsantrag steht, im beigefügten Abfrageergebnis aber fehlt; ein Zweig, der nicht auf dieser Liste steht, ist damit nicht von der Abfrage befreit.
 

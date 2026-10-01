@@ -40,9 +40,9 @@ Jos työntekijä irtisanoutuu itse, yhtiön ei tarvitse maksaa erorahaa.
 
 Jos työntekijä kuitenkin tekee lainvastaisen teon,
 
-**rikkoo työsääntöjä (工作規則),**
+rikkoo työsääntöjä (工作規則),
 
-**tai on ilman syytä poissa työstä 3 peräkkäisenä päivänä (曠工),**
+tai on ilman syytä poissa työstä 3 peräkkäisenä päivänä (曠工),
 
 yhtiö voi irtisanoa maksamatta erorahaa.
 
@@ -52,7 +52,7 @@ Olen koonnut tämän yksinkertaiseen taulukkoon.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Laji** | **Taloudellinen irtisanominen (資遣員工, 經濟解僱)** | **Kurinpidollinen irtisanominen (解僱員工, 懲戒解僱)** | **Työntekijän oma irtisanoutuminen (員工自請離職)** |
+| Laji | Taloudellinen irtisanominen (資遣員工, 經濟解僱) | Kurinpidollinen irtisanominen (解僱員工, 懲戒解僱) | Työntekijän oma irtisanoutuminen (員工自請離職) |
 | Merkitys | Jos työnantajalla on liiketoimintatilanteen vuoksi tarve henkilöstön sopeuttamiseen, syy sijaitsee työnantajan yritystoiminnan alueella eikä työntekijän vastuussa. Siksi työnantajan on noudatettava ilmoitusaikaa (預告期間) ja maksettava eroraha, jotta työntekijän haitat tasataan tasapainoisesti. | Jos työntekijä tekee lainvastaisen tai sopimattoman teon, työnantaja voi heti päättää työsopimuksen (勞動契約) ilman ennakkoilmoitusta eikä sen tarvitse maksaa erorahaa. Tämä on osa työnantajan kurinpitovaltuuksia. | Työntekijä saa milloin tahansa päättää sopimuksen, mutta hänen on palvelussuhteen keston mukaan noudatettava ilmoitusaikaa, jotta työnantaja voi hakea luovutusta ja sijaista. |
 | Edellytykset | Kyllä (Taiwanin työstandardilain 11 artikla) | Kyllä (Taiwanin työstandardilain 12 artikla) | Ei |
 | Ennakkoilmoitus | Vaaditaan | Ei vaadita | Vaaditaan |
@@ -194,17 +194,17 @@ esittää liiallisia vaatimuksia
 
 tai siirtää työntekijöitä outoihin tehtäviin,
 
-**teidän on turvattava todisteet.**
+teidän on turvattava todisteet.
 
-**Normaalit läsnäolotietonne,**
+Normaalit läsnäolotietonne,
 
-**ylityötiedot, suoritustiedot,**
+ylityötiedot, suoritustiedot,
 
-**sisäiset säännöt, sähköpostivaihto työtovereiden ja esimiesten kanssa**
+sisäiset säännöt, sähköpostivaihto työtovereiden ja esimiesten kanssa
 
-**sekä keskustelunauhoitukset esimiesten kanssa —**
+sekä keskustelunauhoitukset esimiesten kanssa —
 
-**turvatkaa teille suotuisat todisteet.**
+turvatkaa teille suotuisat todisteet.
 
 ​
 

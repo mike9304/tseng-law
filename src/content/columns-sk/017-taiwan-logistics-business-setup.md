@@ -148,4 +148,4 @@ Na prácu bez povolenia sa môžu uplatniť správna pokuta a príkaz opustiť T
 
 Tento článok je vzdelávacím podkladom k všeobecnému vysvetleniu právneho režimu a nie je radou ku konkrétnej veci. Pretože požiadavky na povolenia, formuláre žiadostí a prax príslušného orgánu sa môžu meniť, overte aktualizované oficiálne podklady a okolnosti veci pred vykonaním investície alebo zmluvy.
 
-**Advokátka Wei Tseng (曾雋崴)**
+Advokátka Wei Tseng (曾雋崴)

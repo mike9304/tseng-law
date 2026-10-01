@@ -192,4 +192,4 @@ Son seçim, Tayvan’da ve ana kuruluşun yerindeki uzmanların aynı olguları 
 
 Bu yazı, Tayvan bağlı şirketi ile yabancı bir şirketin şubesi arasındaki genel farklar hakkında eğitim amacıyla bilgi malzemesidir; somut bir dosya için hukuki veya mali görüş değildir ve belirli bir sonuç vaat etmez. Uygulanacak kurallar ve vergi işlemi yatırımcının ve ana kuruluşun yerine, faaliyetin içeriğine, işlemlere ve fon akışına, anlaşma koşullarına ve yetkili merciin en güncel uygulamasına göre değişebilir; bir kuruluş, yatırım, sözleşme, temettü veya aktarım yürütülmeden önce en güncel resmi kaynaklar ve dosyanın kendi olguları doğrulanmalıdır.
 
-**Avukat Wei Tseng (曾雋崴)**
+Avukat Wei Tseng (曾雋崴)

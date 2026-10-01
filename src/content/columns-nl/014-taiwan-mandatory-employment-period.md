@@ -191,4 +191,4 @@ Bij het ordenen van de stukken in tijdsvolgorde dient men samen de datum van con
 
 Deze tekst is een document met educatief doel om algemeen de afspraak van een minimale arbeidsperiode in Taiwan, de teruggave van de opleidingskosten en van de vooruitbetaalde prestatie en de opzegging bij vertrek van de werknemer toe te lichten; zij is geen juridisch advies voor een concreet arbeidsdossier (最低服務年限約定). De geldigheid van de afspraak en de omvang van de aansprakelijkheid kunnen variëren volgens het type en de inhoud van het contract, de werkelijke opleiding en kosten, het doel van de tegenprestatie en haar mededeling, de arbeidsperiode, de beëindigingsoorzaak en de bewijzen. Vóór het formuleren van het ontslag, het aanvaarden van een looninhouding, het overeenkomen van een teruggave of het beantwoorden van een geschil, dient men de meest recente officiële bronnen en de individuele omstandigheden na te gaan.
 
-**Advocaat Wei Tseng (曾雋崴)**
+Advocaat Wei Tseng (曾雋崴)

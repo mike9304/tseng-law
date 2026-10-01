@@ -25,7 +25,7 @@ const EXPECTED_EN_TITLE =
 const EXPECTED_KO_TITLE =
   '직원이 자발적으로 퇴사해도 퇴직금을 받을 수 있는 예외';
 const EXPECTED_EN_BODY_SHA256 =
-  'aff551ecc1b1241c2c79b4dffc9940857fa327f877894fa445d8a05e7e6540de';
+  '5633c423410a894e1d9c30f0fffbdedca38562f617461179378c374e300d0b88';
 const EXPECTED_VISIBLE_WORD_COUNT = 486;
 
 function extractDestinations(content: string, pattern: RegExp): string[] {
@@ -118,12 +118,12 @@ describe('English labor column 009 mirror', () => {
       'terminate the labor contract on either ground 1 or 6 above',
     );
     expect(enParsed.content).toContain(
-      'within **30 days** after becoming aware of the circumstances',
+      'within 30 days after becoming aware of the circumstances',
     );
     expect(enParsed.content).toContain(
-      'within **30 days** after becoming aware of the resulting harm',
+      'within 30 days after becoming aware of the resulting harm',
     );
-    expect(enParsed.content.match(/\*\*30 days\*\*/g)).toHaveLength(2);
+    expect(enParsed.content.match(/30 days/g)).toHaveLength(2);
   });
 
   it('freezes corrected body integrity, word count, read time, and name safety', () => {

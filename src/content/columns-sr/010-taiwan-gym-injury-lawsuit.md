@@ -59,7 +59,7 @@ Naslovi novinskih izveštaja, internetskih objava i pravnih komentara o ovoj stv
 
 ![Je li se kod korejskog studenta dogodilo pucanje intervertebralnog diska dok je na ličnom treningu izvodio mrtvo dizanje 90 kg?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Je li se kod korejskog studenta dogodilo pucanje intervertebralnog diska dok je na ličnom treningu izvodio mrtvo dizanje 90 kg?**
+Je li se kod korejskog studenta dogodilo pucanje intervertebralnog diska dok je na ličnom treningu izvodio mrtvo dizanje 90 kg?
 
 Praktični značaj ove stvari leži u tome što pokazuje da se odgovornost ne određuje odmah samom činjenicom da je do povrede došlo u teretani. Sadržaj dužnosti bezbednosti (安全義務) koja tereti pružaoca usluge, konkretno dato uputstvo i povreda dužnosti pažnje (注意義務), uzročna veza između povrede i postupanja i obim štete ocenjuju se prema ispravama svake stvari. Pretpostavke i rokovi krivičnog postupka i parničnog postupka takođe se razlikuju, zato treba odmah posle nezgode dokumentaciju urediti odvojeno.
 
@@ -93,13 +93,13 @@ Ako okolnosti nezgode mogu ispuniti obeležja krivičnog dela, može se brzo pod
 
 Stavke štete čije se ostvarenje može razmotriti jesu sledeće. To da li će sud stavku dosuditi, i u kojoj visini, zavisi od nužnosti svakog izdatka, uzročne veze s nezgodom, dokaza, odnosa odgovornosti i ocene suda.
 
-1. **Troškovi lečenja**: Izdaci stvarno učinjeni za pregled, ispitivanje, lečenje, lekove i rehabilitaciju dokazuju se računima i medicinskom dokumentacijom.
-2. **Troškovi nege ili zbrinjavanja**: Da li je s obzirom na stepen povrede i tok lečenja nega bila nužna i da li su vreme i troškovi primereni, ocenjuje se na osnovu medicinske dokumentacije i dokaza o izdacima.
-3. **Troškovi prevoza**: Izdaci nužni za odlazak u zdravstvenu ustanovu zbog lečenja dokazuju se evidencijom kretanja, računima i sličnim ispravama.
-4. **Šteta zbog smanjenja radne sposobnosti (勞動能力減損)**: Ako su priznate posledice i trajno smanjenje radne sposobnosti, može se ocenjivati zbirno prema medicinskoj i profesionalnoj dokumentaciji, stepenu oštećenja, zanimanju i prihodu i preostalom vremenu radne sposobnosti. Sam procenat oštećenja naknadu ne određuje i gubitak se ne računa automatski do trenutka odlaska u penziju.
-5. **Izgubljena zarada u vreme oporavka (收入損失)**: Vreme u kojem stvarno nije bilo moguće raditi zbog lečenja ili oporavka, i iz toga proisteklo smanjenje prihoda, treba dokazati platnim listama, poreskim evidencijama i evidencijama rada.
-6. **Nematerijalna šteta (非財產上損害)**: Iznos za duševne patnje utvrđuje sud prema elementima svake stvari, kao što su stepen povrede, vreme lečenja, posledice i konkretne okolnosti strane.
-7. **Kaznena naknada štete (懲罰性賠償金)**: Postoji pravilo prema kojem se u postupku na koji se primenjuje Zakon o zaštiti potrošača, ako je šteta nastala umišljajem preduzeća, može se zahtevati iznos do 5 puta veći od stvarne štete; pri grubom nehatu do 3 puta veći; a pri nehatu do visine stvarne štete. Da li se [član 51 tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na stvar odnosi i da li se kaznena naknada stvarno dosuđuje i u kojoj visini, zavisi od ocene suda o konkretnim pretpostavkama i dokazima.
+1. Troškovi lečenja: Izdaci stvarno učinjeni za pregled, ispitivanje, lečenje, lekove i rehabilitaciju dokazuju se računima i medicinskom dokumentacijom.
+2. Troškovi nege ili zbrinjavanja: Da li je s obzirom na stepen povrede i tok lečenja nega bila nužna i da li su vreme i troškovi primereni, ocenjuje se na osnovu medicinske dokumentacije i dokaza o izdacima.
+3. Troškovi prevoza: Izdaci nužni za odlazak u zdravstvenu ustanovu zbog lečenja dokazuju se evidencijom kretanja, računima i sličnim ispravama.
+4. Šteta zbog smanjenja radne sposobnosti (勞動能力減損): Ako su priznate posledice i trajno smanjenje radne sposobnosti, može se ocenjivati zbirno prema medicinskoj i profesionalnoj dokumentaciji, stepenu oštećenja, zanimanju i prihodu i preostalom vremenu radne sposobnosti. Sam procenat oštećenja naknadu ne određuje i gubitak se ne računa automatski do trenutka odlaska u penziju.
+5. Izgubljena zarada u vreme oporavka (收入損失): Vreme u kojem stvarno nije bilo moguće raditi zbog lečenja ili oporavka, i iz toga proisteklo smanjenje prihoda, treba dokazati platnim listama, poreskim evidencijama i evidencijama rada.
+6. Nematerijalna šteta (非財產上損害): Iznos za duševne patnje utvrđuje sud prema elementima svake stvari, kao što su stepen povrede, vreme lečenja, posledice i konkretne okolnosti strane.
+7. Kaznena naknada štete (懲罰性賠償金): Postoji pravilo prema kojem se u postupku na koji se primenjuje Zakon o zaštiti potrošača, ako je šteta nastala umišljajem preduzeća, može se zahtevati iznos do 5 puta veći od stvarne štete; pri grubom nehatu do 3 puta veći; a pri nehatu do visine stvarne štete. Da li se [član 51 tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na stvar odnosi i da li se kaznena naknada stvarno dosuđuje i u kojoj visini, zavisi od ocene suda o konkretnim pretpostavkama i dokazima.
 
 ## 5. Čak i kada teretana ima osiguranje odgovornosti (責任保險), mogu li postojanje naknade i visina biti sporni?
 

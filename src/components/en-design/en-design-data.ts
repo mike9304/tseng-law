@@ -120,6 +120,16 @@ export const EN_HOME_FAQ_ORDER: readonly string[] = [
   'Can I claim damages for an injury at a gym or facility?',
 ];
 
+/** Recommended section on the English columns index: these guides first (then the rest newest first). */
+export const EN_RECOMMENDED_COLUMN_ORDER = [
+  'foreign-professional-dismissed-taiwan',
+  'taiwanese-spouse-divorce-agreement-registration',
+  'taiwan-police-questioning-foreigner-rights',
+  'taiwan-accident-police-records',
+  'taiwan-permanent-residence-aprc',
+  'taiwan-criminal-accessory-civil-suit-fraud',
+] as const;
+
 /** FAQ category order on the English FAQ page (category ids from lib/builder/faq/faq-shared.ts). */
 export const EN_FAQ_CATEGORY_ORDER = ['consultation', 'labor-law', 'family-divorce', 'criminal-defense', 'civil-traffic', 'company-setup'] as const;
 

@@ -32,6 +32,8 @@ import EnServicesBody from '@/components/en-design/EnServicesBody';
 import EnPricingBody from '@/components/en-design/EnPricingBody';
 import EnAboutBody from '@/components/en-design/EnAboutBody';
 import EnContactBody from '@/components/en-design/EnContactBody';
+import { EnColumnsStartHere } from '@/components/en-design/EnColumns';
+import { EN_COLUMN_TOPIC_ORDER, EN_RECOMMENDED_COLUMN_ORDER } from '@/components/en-design/en-design-data';
 import { EnLawyersGlance, EnLawyersShell } from '@/components/en-design/EnLawyers';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
@@ -398,7 +400,9 @@ export function ColumnsLegacyPageBody({
   return (
     <>
       {showHero ? (
-        <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
+        <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description}>
+          {locale === 'en' ? <EnColumnsStartHere posts={posts} /> : null}
+        </PageHeader>
       ) : null}
       {locale === 'zh-hant' ? <ZhHantBoardSwitch active="expert" expertCount={posts.length} /> : null}
       {showRepeater ? (
@@ -407,7 +411,8 @@ export function ColumnsLegacyPageBody({
           posts={toColumnListItems(posts)}
           initialFilters={toColumnGridFilters(searchParams)}
           featuredSlugs={locale === 'zh-hant' ? ZH_HANT_FEATURED_COLUMN_SLUGS : undefined}
-          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : undefined}
+          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : locale === 'en' ? EN_COLUMN_TOPIC_ORDER : undefined}
+          recommendedOrder={locale === 'en' ? EN_RECOMMENDED_COLUMN_ORDER : undefined}
         />
       ) : null}
     </>

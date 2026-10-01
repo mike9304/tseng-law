@@ -11,6 +11,8 @@ import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/dat
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import jaColumnsStyles from '@/components/ja-design/JaColumns.module.css';
 import { JA_COLUMN_TOPIC_ORDER, JA_PINNED_COLUMN_SLUGS } from '@/components/ja-design/ja-arrangement';
+import { EnColumnsShell, EnColumnsStartHere } from '@/components/en-design/EnColumns';
+import { EN_COLUMN_TOPIC_ORDER, EN_RECOMMENDED_COLUMN_ORDER } from '@/components/en-design/en-design-data';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
@@ -262,7 +264,8 @@ export default async function ColumnsPage(
         <EnAcquisitionGuideLinks locale={locale} />
       </>
     );
-    return locale === 'zh-hant' ? <ZhHantColumnsShell>{publishedBody}</ZhHantColumnsShell> : publishedBody;
+    if (locale === 'zh-hant') return <ZhHantColumnsShell>{publishedBody}</ZhHantColumnsShell>;
+    return locale === 'en' ? <EnColumnsShell>{publishedBody}</EnColumnsShell> : publishedBody;
   }
 
   const copy = pageCopy[locale].insights;
@@ -314,7 +317,9 @@ export default async function ColumnsPage(
         </>
       ) : null}
       {showHero ? (
-        <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
+        <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description}>
+          {locale === 'en' ? <EnColumnsStartHere posts={posts} /> : null}
+        </PageHeader>
       ) : null}
       {locale === 'zh-hant'
         ? (
@@ -334,12 +339,14 @@ export default async function ColumnsPage(
           featuredSlugs={locale === 'zh-hant' ? ZH_HANT_FEATURED_COLUMN_SLUGS : undefined}
           // ja design: cornerstone picks for the top Japanese needs, then themes in Japanese demand order.
           openingSlugs={locale === 'ja' ? JA_PINNED_COLUMN_SLUGS : undefined}
-          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : locale === 'ja' ? JA_COLUMN_TOPIC_ORDER : undefined}
+          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : locale === 'ja' ? JA_COLUMN_TOPIC_ORDER : locale === 'en' ? EN_COLUMN_TOPIC_ORDER : undefined}
+          recommendedOrder={locale === 'en' ? EN_RECOMMENDED_COLUMN_ORDER : undefined}
         />
       ) : null}
       <EnAcquisitionGuideLinks locale={locale} />
     </>
   );
   if (locale === 'ja') return <JaPageShell page="columns" className={jaColumnsStyles.root}>{body}</JaPageShell>;
-  return locale === 'zh-hant' ? <ZhHantColumnsShell>{body}</ZhHantColumnsShell> : body;
+  if (locale === 'zh-hant') return <ZhHantColumnsShell>{body}</ZhHantColumnsShell>;
+  return locale === 'en' ? <EnColumnsShell>{body}</EnColumnsShell> : body;
 }

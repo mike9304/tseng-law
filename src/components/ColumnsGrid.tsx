@@ -505,6 +505,7 @@ export default function ColumnsGrid({
   featuredSlugs,
   openingSlugs,
   topicOrder,
+  recommendedOrder,
 }: {
   locale: PublicLocale8;
   posts: ColumnListItem[];
@@ -517,17 +518,28 @@ export default function ColumnsGrid({
   featuredSlugs?: readonly string[];
   /** Optional curated slugs for the opening section, in order and shown in full (ja design). Takes precedence over featuredSlugs. */
   openingSlugs?: readonly string[];
-  /** Optional order of the topic sections; topics not listed keep their default order after the listed ones. */
-  topicOrder?: readonly ColumnTopic[];
+  /** Optional order of the topic sections (zh-hant, ja, en); topics not listed keep their default order after the listed ones. */
+  topicOrder?: readonly string[];
+  /** Optional slugs shown first in the recommended section (en design); the rest stay newest first. */
+  recommendedOrder?: readonly string[];
 }) {
   const listHref = hrefBase ?? `/${locale}/columns`;
   // Posts recommended to this locale's readers come first (also in filtered
   // lists) and get their own section above the topic groups.
   const recommendedTitle = recommendedTitleOverride ?? RECOMMENDED_SECTION_TITLE[locale];
-  const { recommended, rest: nonRecommended } = useMemo(
-    () => (recommendedTitle ? splitRecommendedColumns(locale, incomingPosts) : { recommended: [], rest: [...incomingPosts] }),
-    [locale, incomingPosts, recommendedTitle],
-  );
+  const { recommended, rest: nonRecommended } = useMemo(() => {
+    const split = recommendedTitle ? splitRecommendedColumns(locale, incomingPosts) : { recommended: [], rest: [...incomingPosts] };
+    if (!recommendedOrder || recommendedOrder.length === 0) return split;
+    const rank = (slug: string, index: number) => {
+      const position = recommendedOrder.indexOf(slug);
+      return position === -1 ? recommendedOrder.length + index : position;
+    };
+    const ordered = split.recommended
+      .map((post, index) => ({ post, rank: rank(post.slug, index) }))
+      .sort((a, b) => a.rank - b.rank)
+      .map(({ post }) => post);
+    return { recommended: ordered, rest: split.rest };
+  }, [locale, incomingPosts, recommendedTitle, recommendedOrder]);
   const posts = useMemo(() => [...recommended, ...nonRecommended], [recommended, nonRecommended]);
   const openingPosts = useMemo(() => {
     if (openingSlugs?.length) {
@@ -654,12 +666,12 @@ export default function ColumnsGrid({
       }
       buckets.get(key)!.push(post);
     }
-    const defaultTopics = Object.keys(topicLabels) as ColumnTopic[];
-    const canonical: string[] = topicMode
-      ? (topicOrder && topicOrder.length > 0
-        ? [...topicOrder.filter((topic) => defaultTopics.includes(topic)), ...defaultTopics.filter((topic) => !topicOrder.includes(topic))]
-        : defaultTopics)
+    const defaultOrder: string[] = topicMode
+      ? (Object.keys(topicLabels) as ColumnTopic[])
       : ['formation', 'legal', 'case'];
+    const canonical = topicMode && topicOrder && topicOrder.length > 0
+      ? [...topicOrder.filter((key) => defaultOrder.includes(key)), ...defaultOrder.filter((key) => !topicOrder.includes(key))]
+      : defaultOrder;
     return canonical.filter((key) => buckets.has(key)).map((key) => ({ key, posts: buckets.get(key)! }));
     // eslint-disable-next-line react-hooks/exhaustive-deps -- labels/topicOf derive from locale
   }, [posts, topicMode, uiLocale, topicOrder]);

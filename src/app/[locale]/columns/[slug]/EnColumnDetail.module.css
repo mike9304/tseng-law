@@ -1,0 +1,90 @@
+/*
+ * en column detail (Opus 5.5 en lane, 2026-10-01). Article body typography stays with the column
+ * typography preset; the hero becomes a white briefing header with the photo below it, and the
+ * TOC, FAQ, sidebar and post navigation take the en look. Scoped to #en-column.
+ */
+
+/* Hero: text first on white, photo in flow below (no darkening overlay or blurred backdrop) */
+.detail:global(.en-column) :global(.blog-hero) { display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding: 40px 0 0; background: #fff; color: var(--en-ink); }
+.detail:global(.en-column) :global(.blog-hero .blog-hero-inner) { order: 1; align-self: center; width: min(1200px, 100%); padding-top: 0; padding-bottom: 32px; }
+.detail:global(.en-column) :global(.blog-hero .blog-hero-bg) {
+  order: 2;
+  position: relative;
+  inset: auto;
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  aspect-ratio: 21 / 8;
+  overflow: hidden;
+  border-top: 6px solid var(--en-signal);
+  background: var(--en-mist);
+}
+.detail:global(.en-column) :global(.blog-hero .blog-hero-bg img[aria-hidden='true']),
+.detail:global(.en-column) :global(.blog-hero .blog-hero-overlay) { display: none; }
+.detail:global(.en-column) :global(.blog-hero .blog-hero-img) { width: 100%; height: 100%; object-fit: cover; }
+.detail:global(.en-column) :global(.blog-hero .blog-back-link) {
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--en-line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--en-ink);
+  font-weight: 700;
+}
+.detail:global(.en-column) :global(.blog-hero .blog-back-link:hover) { border-color: var(--en-ink); }
+.detail:global(.en-column) :global(.blog-hero .blog-category-badge) { border: none; border-radius: 2px; background: var(--en-ink); color: #fff; font-weight: 800; letter-spacing: 0.08em; }
+.detail:global(.en-column) :global(.blog-hero h1.blog-hero-title) {
+  max-width: 21em;
+  margin: 18px 0 16px;
+  font-family: var(--en-sans) !important;
+  font-size: clamp(34px, 3.8vw, 58px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.032em;
+  color: var(--en-ink);
+  text-shadow: none;
+  text-wrap: balance;
+}
+.detail:global(.en-column) :global(.blog-hero .blog-meta),
+.detail:global(.en-column) :global(.blog-hero .blog-meta a),
+.detail:global(.en-column) :global(.blog-hero .blog-meta time),
+.detail:global(.en-column) :global(.blog-hero .blog-meta span) { color: var(--en-muted); font-size: 14.5px; font-weight: 600; }
+.detail:global(.en-column) :global(.blog-hero .blog-meta a) { color: var(--en-ink); text-decoration: underline; text-underline-offset: 4px; }
+.detail:global(.en-column) :global(.blog-hero) :focus-visible { outline: 3px solid var(--en-ink); outline-offset: 3px; }
+
+/* Article */
+.detail:global(.en-column) :global(.blog-article) { padding-top: 48px; background: #fff; }
+.detail:global(.en-column) :global(.blog-container) { gap: 56px; }
+.detail:global(.en-column) :global(.blog-body h2) { color: var(--en-ink); font-weight: 800; letter-spacing: -0.02em; }
+.detail:global(.en-column) :global(.blog-body h3) { color: var(--en-ink); font-weight: 800; }
+.detail:global(.en-column) :global(.column-toc) { padding: 18px 22px; border: none; border-top: 3px solid var(--en-ink); border-radius: 0; background: var(--en-mist); }
+.detail:global(.en-column) :global(.column-toc-label) { font-size: 12.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--en-muted); }
+.detail:global(.en-column) :global(.column-toc-link) { color: var(--en-ink); font-weight: 700; }
+.detail:global(.en-column) :global(.column-faq) { margin-top: 48px; padding-top: 24px; border-top: 3px solid var(--en-ink); }
+.detail:global(.en-column) :global(.column-faq-item) { padding: 16px 0; border-bottom: 1px solid var(--en-line); }
+.detail:global(.en-column) :global(.column-faq-question) { display: grid; grid-template-columns: 2.2em minmax(0, 1fr); gap: 10px; font-weight: 800; color: var(--en-ink); }
+.detail:global(.en-column) :global(.column-faq-question)::before { content: 'Q'; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 4px; background: var(--en-ink); color: #fff; font-size: 14px; }
+.detail:global(.en-column) :global(.column-faq-answer) { margin: 10px 0 0 calc(2.2em + 10px); padding: 14px 18px; border-left: 4px solid var(--en-sage); background: var(--en-mist); color: var(--en-text); }
+
+/* Sidebar: consultation first in the en panel look */
+.detail:global(.en-column) :global(.blog-sidebar-card) { border-radius: 0; box-shadow: none; }
+.detail:global(.en-column) :global(.blog-sidebar > .blog-sidebar-card:first-child) { border: none; border-top: 6px solid var(--en-signal); background: var(--en-mist); }
+.detail:global(.en-column) :global(.blog-sidebar-title) { font-family: var(--en-sans) !important; font-weight: 800; color: var(--en-ink); }
+.detail:global(.en-column) :global(.blog-sidebar > .blog-sidebar-card:first-child .button) { min-height: 52px; border: 2px solid var(--en-ink); border-radius: 4px; background: var(--en-ink); color: #fff; font-weight: 700; }
+.detail:global(.en-column) :global(.blog-related-link) { display: inline-flex; min-height: 44px; align-items: center; color: var(--en-ink); font-weight: 700; }
+.detail:global(.en-column) :global(.blog-article a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
+
+/* Previous / next (inline-styled links: border and radius need !important) */
+.detail:global(.en-column) :global(.column-post-nav a) { border: none !important; border-top: 3px solid var(--en-ink) !important; border-radius: 0 !important; background: var(--en-mist); color: var(--en-ink) !important; }
+.detail:global(.en-column) :global(.column-post-nav a span:first-child) { color: var(--en-muted) !important; font-weight: 700; }
+.detail:global(.en-column) :global(.column-post-nav a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
+
+@media (max-width: 1240px) {
+  .detail:global(.en-column) :global(.blog-hero .blog-hero-inner) { padding-inline: 20px; }
+}
+@media (max-width: 767px) {
+  .detail:global(.en-column) :global(.blog-hero) { padding-top: 24px; }
+  .detail:global(.en-column) :global(.blog-hero .blog-hero-bg) { width: 100%; aspect-ratio: 16 / 9; }
+  .detail:global(.en-column) :global(.blog-hero h1.blog-hero-title) { font-size: clamp(30px, 8.6vw, 38px); }
+  .detail:global(.en-column) :global(.blog-article) { padding-top: 32px; }
+  .detail:global(.en-column) :global(.column-faq-answer) { margin-left: 0; }
+}

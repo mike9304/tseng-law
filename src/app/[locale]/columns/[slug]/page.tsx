@@ -38,6 +38,8 @@ import styles from './ColumnDetail.module.css';
 import zhStyles from './ZhHantColumnDetail.module.css';
 import jaStyles from './JaColumnDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import enStyles from './EnColumnDetail.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
@@ -533,7 +535,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // ja design (Opus 5.5 ja lane): same article inside the ja wrapper (paper header, framed photo plate).
   if (locale === 'ja') return <JaPageShell page="column" className={jaStyles.root}>{content}</JaPageShell>;
   // zh-hant second pass (son7-87 / Opus 5.5): same article inside a scoped wrapper for the split hero and sidebar styling.
-  return locale === 'zh-hant'
-    ? <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="column">{content}</div>
+  if (locale === 'zh-hant') {
+    return <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="column">{content}</div>;
+  }
+  // en redesign (Opus 5.5 en lane): same article inside the scoped en wrapper (only the /en/ route, not guidance locales).
+  return urlLocale === 'en'
+    ? <EnPageShell page="column"><div className={`${enStyles.detail} en-column`}>{content}</div></EnPageShell>
     : content;
 }

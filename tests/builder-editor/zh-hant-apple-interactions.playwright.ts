@@ -101,7 +101,30 @@ test.describe('zh-hant Apple pass — decorative video across breakpoint changes
     });
     await expect(control).toHaveCount(0, { timeout: 15_000 });
     await expect(player).toHaveAttribute('data-video-ready', 'false');
-    expect(await backgroundIsPainted(player)).toBe(true);
+    // The poster fades back in (CSS opacity transition).
+    await expect.poll(() => backgroundIsPainted(player), { timeout: 5_000 }).toBe(true);
+  });
+
+  test('a paused hero keeps its background after reduced motion is switched on and off', async ({ page }) => {
+    test.setTimeout(120_000);
+    await preparePage(page);
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/zh-hant', { waitUntil: 'load' });
+
+    const player = page.locator('#hero .decorative-autoplay-video').first();
+    const control = player.locator('.decorative-autoplay-video__control');
+    await expect(control).toHaveAttribute('aria-label', '暫停影片', { timeout: 30_000 });
+    await control.click();
+    await expect(control).toHaveAttribute('aria-label', '播放影片');
+
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await expect(player).toHaveAttribute('data-video-mounted', 'false', { timeout: 10_000 });
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    await expect(player).toHaveAttribute('data-video-mounted', 'true', { timeout: 10_000 });
+    await page.waitForTimeout(1500);
+    expect(await videoPaused(player)).toBe(true);
+    await expect.poll(() => backgroundIsPainted(player), { timeout: 5_000 }).toBe(true);
+    await expect(control).toHaveAttribute('aria-label', '播放影片');
   });
 });
 
@@ -192,6 +215,18 @@ test.describe('zh-hant Apple pass — language suggestion keeps the first screen
     // Back to the first screen: the hint steps aside again.
     await page.evaluate(() => window.scrollTo(0, 0));
     await expect(hint).toHaveCount(0, { timeout: 10_000 });
+  });
+
+  test('the hint stays off a first-visit cinematic opening (ko)', async ({ page }) => {
+    test.setTimeout(120_000);
+    await page.addInitScript((key) => {
+      window.localStorage.setItem(key, String(Date.now() + 24 * 60 * 60 * 1000));
+    }, YEAR_END_POPUP_HIDE_UNTIL_KEY);
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/ko', { waitUntil: 'load' });
+    await expect(page.locator('.site[data-cinematic-intro-visible="true"]')).toHaveCount(1, { timeout: 10_000 });
+    await page.waitForTimeout(2500);
+    await expect(page.locator('.locale-suggestion')).toHaveCount(0);
   });
 
   test('after a client-side navigation to the home, the hint stays off its first screen', async ({ page }) => {

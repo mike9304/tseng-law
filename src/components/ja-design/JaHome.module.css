@@ -622,3 +622,6 @@
 .root:global(#ja-home) :global(.home-contact-cta .container > :not([data-builder-node-key='copy']):not(.home-contact-actions)) {
   margin-top: 28px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / 18%); font-size: 13px; line-height: 1.9; color: rgb(255 255 255 / 66%);
 }
+
+/* Round 2 revise: the facts numerals carry the vermilion accent (large text, 5.3:1 on white). */
+.root:global(#ja-home) :global(#stats .stat-number) { color: var(--ja-shu); }

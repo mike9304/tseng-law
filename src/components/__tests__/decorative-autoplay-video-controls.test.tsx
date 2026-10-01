@@ -91,23 +91,31 @@ describe('DecorativeAutoplayVideo playback controls', () => {
     expect(live.pause).toHaveBeenCalledTimes(1);
   });
 
-  it('shows the poster until the replacement encoding has a frame, and keeps the control usable', () => {
-    // First load on a phone: nothing ready yet — poster only, no control.
+  it('shows the poster until the mounted element has a frame, and keeps the control usable', () => {
+    // First load on a phone (mount 0): nothing ready yet — poster only, no control.
     expect(resolveDecorativeVideoPresentation({
-      shouldMountVideo: true, readySource: null, sourceKey: 'mobile', controlRevealed: false,
+      shouldMountVideo: true, readyMountId: null, mountId: 0, controlRevealed: false,
     })).toEqual({ videoReady: false, showControl: false });
-    // Mobile encoding ready.
+    // Mount 0 ready.
     expect(resolveDecorativeVideoPresentation({
-      shouldMountVideo: true, readySource: 'mobile', sourceKey: 'mobile', controlRevealed: true,
+      shouldMountVideo: true, readyMountId: 0, mountId: 0, controlRevealed: true,
     })).toEqual({ videoReady: true, showControl: true });
-    // Rotated while paused: the desktop replacement has no frame (WebKit readyState 1) — the poster
-    // comes back, and the Play control stays.
+    // Rotated while paused (mount 1, no frame in WebKit): poster back, Play control stays.
     expect(resolveDecorativeVideoPresentation({
-      shouldMountVideo: true, readySource: 'mobile', sourceKey: 'desktop', controlRevealed: true,
+      shouldMountVideo: true, readyMountId: 0, mountId: 1, controlRevealed: true,
     })).toEqual({ videoReady: false, showControl: true });
+    // Rotated back to the first encoding (mount 2): still not ready — the old mount's readiness
+    // must not carry over even though the encoding matches again (Astra round 4).
+    expect(resolveDecorativeVideoPresentation({
+      shouldMountVideo: true, readyMountId: 0, mountId: 2, controlRevealed: true,
+    })).toEqual({ videoReady: false, showControl: true });
+    // After a media error: no readiness, no control.
+    expect(resolveDecorativeVideoPresentation({
+      shouldMountVideo: true, readyMountId: null, mountId: 2, controlRevealed: false,
+    })).toEqual({ videoReady: false, showControl: false });
     // Reduced motion / save-data: no video, no control.
     expect(resolveDecorativeVideoPresentation({
-      shouldMountVideo: false, readySource: 'mobile', sourceKey: 'mobile', controlRevealed: true,
+      shouldMountVideo: false, readyMountId: 0, mountId: 0, controlRevealed: true,
     })).toEqual({ videoReady: false, showControl: false });
   });
 

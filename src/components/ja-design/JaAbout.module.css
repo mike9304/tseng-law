@@ -9,8 +9,14 @@
   display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); grid-template-rows: auto auto auto 1fr;
   gap: 0 clamp(32px, 5vw, 72px); padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent;
 }
-.root:global(#ja-about) :global(.firm-intro-logo-wrap) { grid-column: 1; grid-row: 1; margin: 0 0 24px; max-width: 360px; }
-.root:global(#ja-about) :global(.firm-intro-logo-wrap img) { width: 100%; height: auto; border-radius: 0; }
+.root:global(#ja-about) :global(.firm-intro-logo-wrap) { grid-column: 1; grid-row: 1; margin: 8px 0 32px 8px; }
+.root:global(#ja-about) :global(.firm-intro-logo-wrap) { position: relative; width: 132px; height: 132px; padding: 0; background: transparent; }
+/* The green logo card is replaced by the red seal on paper; the image stays in the DOM (alt text) but is not painted. */
+.root:global(#ja-about) :global(.firm-intro-logo-wrap img) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.root:global(#ja-about) :global(.firm-intro-logo-wrap)::before {
+  content: ''; position: absolute; inset: 0; border-radius: 50%; background: #fff url('/images/brand/hovering-seal-official.png') 50% 50% / 68% no-repeat;
+  box-shadow: 0 0 0 1px var(--ja-line-strong), 0 0 0 7px var(--ja-paper), 0 0 0 8px var(--ja-shu);
+}
 .root:global(#ja-about) :global(.firm-intro-title) {
   grid-column: 1; grid-row: 2; margin: 0 0 14px; font-size: clamp(24px, 2.2vw, 30px); font-weight: 700; letter-spacing: 0.1em; color: var(--ja-ink);
 }

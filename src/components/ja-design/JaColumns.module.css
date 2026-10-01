@@ -94,3 +94,6 @@
   .root:global(#ja-columns) :global(.columns-search-input) { padding-inline: 16px; font-size: 15px; }
   .root:global(#ja-columns) :global(.columns-search-submit) { padding-inline: 20px; }
 }
+
+/* Round 2: lighter thumbnails (the grade, not the markup). */
+.root:global(#ja-columns) :global(.columns-card-img img) { filter: brightness(1.07) saturate(1.04); }

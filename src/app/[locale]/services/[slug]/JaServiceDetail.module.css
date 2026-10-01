@@ -10,7 +10,15 @@
 .hero.hero:global(.svc-hero[data-tone='dark']) {
   background: var(--ja-paper); color: var(--ja-ink);
   border-top: 0; border-bottom: 1px solid var(--ja-line-strong);
-  padding: clamp(48px, 5.6vw, 88px) 0 clamp(44px, 5vw, 76px);
+  position: relative; --ja-strip: clamp(48px, 5vw, 80px);
+  padding: clamp(48px, 5.6vw, 88px) 0 calc(clamp(44px, 5vw, 76px) + var(--ja-strip));
+}
+.hero.hero:global(.svc-hero)::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: var(--ja-strip); border-top: 1px solid var(--ja-line-strong); pointer-events: none;
+  background:
+    linear-gradient(var(--ja-shu), var(--ja-shu)) max(32px, calc((100% - 1240px) / 2)) 0 / 96px 4px no-repeat,
+    linear-gradient(180deg, rgb(250 248 244 / 34%), rgb(250 248 244 / 0%) 60%),
+    url('/images/editorial/ja-tea-terrace-morning-hero.webp') 50% 68% / cover no-repeat;
 }
 .heroInner.heroInner:global(.svc-hero-inner) {
   display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); gap: 32px clamp(32px, 5vw, 80px); align-items: start;
@@ -19,7 +27,7 @@
 .hero.hero :global(.svc-back-link) { margin-bottom: 18px; font-size: 13.5px; letter-spacing: 0.06em; color: var(--ja-sub); }
 .hero.hero :global(h1.svc-hero-title) {
   max-width: 17em; margin: 0 0 16px; font-family: var(--ja-mincho); font-weight: 600;
-  font-size: clamp(32px, 4vw, 58px); line-height: 1.34; letter-spacing: 0.05em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
+  font-size: clamp(34px, 4.6vw, 68px); line-height: 1.3; word-break: auto-phrase; letter-spacing: 0.05em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
 }
 .hero.hero :global(.svc-hero-subtitle) { max-width: 36em; font-size: 16.5px; line-height: 2; letter-spacing: 0.05em; color: var(--ja-sub); }
 

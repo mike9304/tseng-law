@@ -33,10 +33,11 @@
   color: var(--ja-gold-text); font-size: 12.5px; font-weight: 700; letter-spacing: 0.16em;
 }
 .root:global(#ja-column) :global(.blog-hero h1.blog-hero-title) {
-  max-width: 21em; margin: 0 0 22px; color: var(--ja-ink); font-family: var(--ja-mincho); font-weight: 600;
-  font-size: clamp(28px, 3.5vw, 50px); line-height: 1.45; letter-spacing: 0.05em; font-feature-settings: 'palt' 1;
+  max-width: 21em; margin: 0 0 26px; color: var(--ja-ink); font-family: var(--ja-mincho); font-weight: 600;
+  font-size: clamp(30px, 4vw, 56px); line-height: 1.4; letter-spacing: 0.05em; font-feature-settings: 'palt' 1; word-break: auto-phrase; text-wrap: balance;
 }
-.root:global(#ja-column) :global(.blog-hero .blog-meta) { gap: 6px 22px; padding-top: 14px; border-top: 1px solid var(--ja-line-strong); max-width: 760px; }
+.root:global(#ja-column) :global(.blog-hero h1.blog-hero-title)::after { content: ''; display: block; width: 72px; height: 2px; margin-top: 24px; background: var(--ja-shu); }
+.root:global(#ja-column) :global(.blog-hero .blog-meta) { gap: 6px 22px; padding-top: 0; border-top: 0; max-width: 760px; }
 .root:global(#ja-column) :global(.blog-hero .blog-meta),
 .root:global(#ja-column) :global(.blog-hero .blog-meta a),
 .root:global(#ja-column) :global(.blog-hero .blog-meta time),

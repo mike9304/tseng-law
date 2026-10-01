@@ -334,7 +334,7 @@ describe('published July editorial hero strings', () => {
     // subtitle with the domestic one. Display-only; the saved canvas keeps its text, and the composite
     // hero below still renders the saved subtitle.
     expect(subtitleText).toBe('具備韓國、日本跨境實務經驗的專業團隊，協助處理台灣法律議題。');
-    expect(visibleText(html)).toContain('台灣律師團隊承辦車禍、離婚、繼承、勞資爭議與刑事案件，請先來信說明案情。');
+    expect(visibleText(html)).toContain('車禍、離婚、繼承、勞資爭議與刑事案件，請先來信簡述案情，律師看過後回信。');
     expect(visibleText(html)).not.toContain(subtitleText);
     // The saved columns-link label belonged to the removed wayfinding strip; the columns
     // section still links the archive.

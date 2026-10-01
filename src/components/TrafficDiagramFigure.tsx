@@ -59,7 +59,7 @@ export default function TrafficDiagramFigure({
         />}
       </div>
       <figcaption id={captionId} className={styles.caption}>
-        <strong className={styles.legend}>{copy.legend}</strong>
+        <span className={styles.legend}>{copy.legend}</span>
         <span className={styles.text}>{copy.caption}</span>
         <span className={styles.assumption} data-traffic-diagram-assumption>{copy.assumption}</span>
         {enlarge ? (

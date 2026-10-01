@@ -99,3 +99,310 @@
   .jumps { gap: 0 22px; }
   .jumps a { padding: 0; }
 }
+
+/* ===== Apple pass (2026-10-01) =====
+   Same design language as the zh-hant home (ZhHantDesign.module.css "Apple pass"): light header with a big
+   sans H1, rounded tiles on white / #f5f5f7 bands, pill actions, gradient numerals, one dark closing chapter.
+   Later rules override the earlier passes. */
+.root:global(#zh-hant-about) {
+  --ap-gray: #f5f5f7;
+  --ap-text: #1d1d1f;
+  --ap-muted: #6e6e73;
+  --ap-line: #e3e3e8;
+  --ap-accent: #0a7a55;
+  --ap-ink: #16382d;
+  --ap-ink-deep: #0d231b;
+  --ap-radius: 28px;
+  --ap-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ap-band: clamp(72px, 9vw, 128px);
+  background: #fff;
+  color: var(--ap-text);
+}
+.root:global(#zh-hant-about) :global(.container) { max-width: 1240px; }
+
+/* ---------- Header: light, big type, facts as a rounded tile ---------- */
+.root:global(#zh-hant-about) :global(.page-header) {
+  background: #fff;
+  color: var(--ap-text);
+  padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
+  border-bottom: none;
+}
+.root:global(#zh-hant-about) :global(.page-header)::after { display: none; }
+.root:global(#zh-hant-about) :global(.page-header > .container) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 36px clamp(40px, 6vw, 96px); align-items: center; }
+.root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='copy']) { max-width: none; align-self: end; }
+.root:global(#zh-hant-about) :global(.page-header .section-label) { display: none; }
+.root:global(#zh-hant-about) :global(.page-header .breadcrumb),
+.root:global(#zh-hant-about) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
+.root:global(#zh-hant-about) :global(.page-header .breadcrumb a:hover) { color: var(--ap-text); }
+/* 44px tap target for the breadcrumb link without moving the trail (padding offset by negative margin). */
+.root:global(#zh-hant-about) :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 9px; margin: -10px -9px; }
+.root:global(#zh-hant-about) :global(.page-header-title),
+.root:global(#zh-hant-about) :global(.page-header-title *) {
+  color: var(--ap-text) !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700;
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+.root:global(#zh-hant-about) :global(.page-header-title) { margin: 20px 0 0; }
+.root:global(#zh-hant-about) :global(.page-header .section-lede) {
+  max-width: 34em;
+  margin: 22px 0 0;
+  color: var(--ap-muted);
+  font-family: var(--font-sans);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.6;
+}
+.root:global(#zh-hant-about) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+
+.facts {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 3.4vw, 44px);
+  border: none;
+  border-radius: var(--ap-radius);
+  background: var(--ap-gray);
+}
+.fact { grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 20px 0; border-bottom: 1px solid var(--ap-line); }
+.fact:first-child { padding-top: 0; }
+.fact:last-child { padding-bottom: 0; border-bottom: none; }
+.fact dt { font-size: 14px; font-weight: 600; letter-spacing: 0.08em; color: var(--ap-muted); }
+.fact dd { font-family: var(--font-sans); font-size: clamp(22px, 2vw, 28px); font-weight: 700; line-height: 1.35; color: var(--ap-text); }
+.factYear dd {
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ap-ink);
+  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* In-page jumps: a segmented pill control like the home's office tabs */
+.jumps { display: flex; flex-wrap: wrap; width: fit-content; max-width: 100%; gap: 4px; padding: 4px; border-radius: 999px; background: var(--ap-gray); }
+.jumps a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 999px;
+  color: var(--ap-text);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.jumps a:hover { background: #fff; box-shadow: 0 2px 8px rgb(0 0 0 / 10%); text-decoration: none; }
+
+/* ---------- Firm history: gray band, year tiles ---------- */
+.firm { padding: var(--ap-band) 0; background: var(--ap-gray); }
+.firmGrid { grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 40px clamp(40px, 6vw, 96px); }
+.firmAside { top: calc(var(--header-offset-desktop, 64px) + 32px); }
+.firmLogo { max-width: 340px; padding: 18px 22px; border-radius: 18px; background: var(--ap-ink); }
+.firmTitle { margin: 36px 0 16px; font-family: var(--font-sans) !important; font-size: clamp(32px, 4vw, 56px); font-weight: 700; line-height: 1.14; color: var(--ap-text); }
+.firmSubtitle { font-size: 17px; line-height: 1.8; color: var(--ap-muted); }
+.firmSource { margin-top: 12px; }
+.firmSource a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ap-accent); font-weight: 600; text-decoration: none; }
+.firmSource a:hover { text-decoration: underline; text-underline-offset: 6px; }
+.firmSource a:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 4px; }
+.timeline { display: grid; gap: 16px; border-left: none; }
+.entry {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  padding: clamp(28px, 3vw, 40px) clamp(28px, 3.2vw, 44px);
+  border-radius: var(--ap-radius);
+  background: #fff;
+  transition: translate 0.6s var(--ap-ease), box-shadow 0.6s var(--ap-ease);
+}
+.entry:last-child { padding-bottom: clamp(28px, 3vw, 40px); }
+.entry::before { content: none; }
+.entry:hover { translate: 0 -4px; box-shadow: 0 22px 44px rgb(0 0 0 / 9%); }
+.entryYear:empty { display: none; }
+.entryYear {
+  font-family: var(--font-sans);
+  font-size: clamp(48px, 4.6vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ap-ink);
+  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.entry p { font-size: 17px; line-height: 1.8; color: var(--ap-muted); }
+.entryLead p { font-family: var(--font-sans); font-size: clamp(18px, 1.5vw, 20px); line-height: 1.8; color: var(--ap-text); }
+
+/* ---------- Contact: the dark closing chapter (same gradient as the home's last call) ----------
+   Secondary text #bdbdc2 (not the home's #a1a1a6): the gradient's bright top measured 4.2:1 behind the offices label. */
+.contact { padding: clamp(96px, 12vw, 168px) 0; background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%); color: #fff; }
+.contactGrid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 48px clamp(40px, 6vw, 96px); align-items: center; }
+.contactTitle { margin: 0 0 18px; font-family: var(--font-sans) !important; font-size: clamp(36px, 4.4vw, 64px); font-weight: 700; line-height: 1.14; color: #fff; }
+.contactLede { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.7; color: #bdbdc2; }
+.contactEmail { margin-top: 28px; font-family: var(--font-sans); font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; }
+.contactEmail a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; text-decoration: none; }
+.contactEmail a:hover { text-decoration: underline; text-decoration-color: #8fd3b6; text-underline-offset: 8px; }
+.contactActions { margin-top: 28px; gap: 12px 28px; }
+.root:global(#zh-hant-about) .contactActions :global(.button) {
+  min-height: 54px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 999px !important;
+  background: #fff;
+  color: var(--ap-ink);
+  font-weight: 700;
+  transition: transform 0.3s var(--ap-ease), box-shadow 0.3s var(--ap-ease);
+}
+.contactActions :global(.button:hover) { background: #fff; border-color: #fff; transform: translateY(-2px); box-shadow: 0 14px 32px rgb(0 0 0 / 30%); }
+.contactMore { color: #8fd3b6; text-decoration: none; }
+.contactMore:hover { text-decoration: underline; text-underline-offset: 6px; }
+.contact a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; border-radius: 4px; }
+.offices { padding: clamp(28px, 3.2vw, 44px); border-radius: var(--ap-radius); background: rgb(255 255 255 / 7%); }
+.officesLabel { margin: 0 0 4px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; color: #bdbdc2; }
+.officeList li { grid-template-columns: 5em minmax(0, 1fr); padding: 18px 0; border-bottom: 1px solid rgb(255 255 255 / 12%); }
+.officeList li:last-child { border-bottom: none; padding-bottom: 0; }
+.officeName { color: #fff; }
+.officeAddress { color: #bdbdc2; }
+
+@media (max-width: 1000px) {
+  .root:global(#zh-hant-about) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+  .facts { grid-column: 1; grid-row: 3; }
+  .contactGrid { grid-template-columns: minmax(0, 1fr); }
+  .firmGrid { grid-template-columns: minmax(0, 1fr); }
+  .firmAside { position: static; }
+}
+@media (max-width: 767px) {
+  .root:global(#zh-hant-about) { --ap-radius: 22px; }
+  .factYear dd { font-size: 52px; }
+  .firmLogo { max-width: 300px; }
+  .firmTitle { margin-top: 28px; }
+  .root:global(#zh-hant-about) :global(.page-header) { padding: 64px 0 40px; }
+  .facts { padding: 24px; }
+  .fact { padding: 16px 0; }
+  .fact:not(.factYear) dd { font-size: 22px; }
+  .root:global(#zh-hant-about) :global(.page-header-title),
+  .root:global(#zh-hant-about) :global(.page-header-title *) { letter-spacing: 0; }
+  .jumps { width: auto; }
+  .jumps a { flex: 1 1 auto; justify-content: center; padding: 0 14px; font-size: 14px; }
+  .firm { padding: 72px 0; }
+  .entry { padding: 24px; }
+  .entry:last-child { padding-bottom: 24px; }
+  .contact { padding: 88px 0; }
+  .contactActions :global(.button) { width: 100%; justify-content: center; }
+  .offices { padding: 24px; }
+  .officeList li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .entry,
+    .offices {
+      animation: zhRiseIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+}
+@keyframes zhRiseIn { from { opacity: 0; transform: translateY(48px) scale(0.98); } to { opacity: 1; transform: none; } }
+
+/* ===== Apple pass, critique fixes (2026-10-01) =====
+   1. Same font stack as the home (PingFang TC first).  2. Header actions: ink pill + accent text link with ›.
+   3. Bands alternate header white → firm white (gray tiles) → team gray (white tiles, same as /lawyers) → dark close.
+   4. The closing band is the home's last call: centered title, white pill + outlined email pill, offices below. */
+.root:global(#zh-hant-about) {
+  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-body: var(--font-sans);
+  font-family: var(--font-sans);
+}
+
+/* Header: copy / actions / jumps on the left, facts tile on the right */
+.root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='copy']) { grid-row: 1; }
+.facts { grid-row: 1 / span 3; }
+.headerActions { grid-column: 1; grid-row: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.headerPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--ap-ink);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s var(--ap-ease);
+}
+.headerPrimary:hover { background: var(--ap-ink-deep); color: #fff; transform: translateY(-1px); text-decoration: none; }
+.headerSecondary { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--ap-accent); font-size: 17px; font-weight: 600; text-decoration: none; }
+.headerSecondary span { font-size: 1.15em; line-height: 1; }
+.headerSecondary:hover { color: var(--ap-accent); text-decoration: underline; text-underline-offset: 6px; }
+.headerPrimary:focus-visible,
+.headerSecondary:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.headerSecondary:focus-visible { border-radius: 4px; }
+.jumps { grid-column: 1; grid-row: 3; margin-top: 4px; }
+
+/* Firm history on white with gray tiles (the team band below is gray with white tiles on both about and lawyers) */
+.firm { background: #fff; padding-top: clamp(40px, 5vw, 72px); }
+.entry { background: var(--ap-gray); }
+.firmAside { align-self: start; }
+
+/* Team: one tile rule on both pages (gray band, white tiles) */
+.root:global(#zh-hant-about) :global(#team) { --team-band: var(--ap-gray); --team-tile: #fff; --team-line: var(--ap-line); }
+
+/* Closing chapter: the home's last call */
+.contactGrid { grid-template-columns: minmax(0, 1fr); gap: clamp(48px, 6vw, 80px); justify-items: center; }
+.contactCopy { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.contactTitle { max-width: 14em; margin: 0; font-size: clamp(40px, 5.4vw, 80px); line-height: 1.14; }
+.contactLede { max-width: 36em; margin: 20px auto 0; color: #bdbdc2; }
+.contactActions { justify-content: center; gap: 12px; margin-top: 40px; }
+.root:global(#zh-hant-about) .contactActions :global(.button) { min-height: 54px; padding: 14px 28px; }
+.contactEmail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  margin: 0;
+  padding: 14px 28px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.contactEmail:hover { border-color: #fff; background: rgb(255 255 255 / 8%); color: #fff; text-decoration: none; }
+.contactMoreWrap { margin: 16px 0 0; }
+.contactMore { color: #8fd3b6; font-size: 17px; }
+.contactMore span { font-size: 1.15em; line-height: 1; }
+.offices { width: 100%; max-width: 1040px; padding: clamp(28px, 3.2vw, 40px) clamp(28px, 3.2vw, 44px); }
+.officesLabel { text-align: left; }
+.officeList { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
+.officeList li,
+.officeList li:last-child { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 16px 0 0; border-bottom: none; }
+.officeAddress { line-height: 1.6; }
+@media (max-width: 1000px) {
+  .root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='copy']) { grid-row: 1; }
+  .headerActions { grid-row: 2; }
+  .jumps { grid-row: 3; }
+  .facts { grid-column: 1; grid-row: 4; }
+  .officeList { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+}
+@media (max-width: 767px) {
+  .headerActions { gap: 4px 24px; }
+  .headerPrimary { flex: 1 1 100%; }
+  .contactActions { width: 100%; }
+  .root:global(#zh-hant-about) .contactActions :global(.button),
+  .contactEmail { width: 100%; }
+  .officeList { grid-template-columns: minmax(0, 1fr); }
+  .officeList li { padding-top: 14px; }
+}

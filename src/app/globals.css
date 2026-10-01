@@ -27299,5 +27299,22 @@ html[dir='rtl'] .guidance-answer {
   display: none !important;
 }
 .site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-lawyer-profile, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns, #zh-hant-column, [data-zh-hant-design='service-detail']) .button {
-  border-radius: 2px !important;
+  /* Apple pass (2026-10-01): pills everywhere, like the home. */
+  border-radius: 999px !important;
+}
+
+/* zh-hant pages: header logo tap height ≥44px (measured 224.6x40 at 390; header height unchanged), and the
+   back-to-top button leaves the tab order while it is invisible (it was focusable at opacity 0). */
+.site[data-locale='zh-hant'] .header-logo {
+  min-height: 44px;
+}
+.site[data-locale='zh-hant'] .scroll-top:not([data-visible='true']) {
+  visibility: hidden;
+}
+.site[data-locale='zh-hant'] .scroll-top {
+  transition: opacity 200ms ease, transform 200ms ease, visibility 0s linear 200ms, background 180ms ease, box-shadow 180ms ease;
+}
+.site[data-locale='zh-hant'] .scroll-top[data-visible='true'] {
+  visibility: visible;
+  transition-delay: 0s;
 }

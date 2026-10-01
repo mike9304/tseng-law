@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import PricingCards, { getPricingContent } from '@/components/PricingCards';
 import { pageCopy } from '@/data/page-copy';
@@ -5,9 +6,10 @@ import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/cons
 import styles from './ZhHantPricing.module.css';
 
 /**
- * zh-hant pricing page: green header with a fee board (each line jumps to its row below)
- * and the consultation CTA, then the fee schedule. Copy and amounts come from page-copy
- * and the shared pricing data.
+ * zh-hant pricing page: header with a fee board (each line jumps to its tile below)
+ * and the consultation CTA, then the fee schedule. Apple pass (2026-10-01): light header,
+ * the board as a gray rounded tile — styles only, see the module's last block. Copy and amounts come from page-copy
+ * and the shared pricing data. Fix round (2026-10-01): no ↗ on the primary CTA, plus a 聯絡方式 › secondary link.
  */
 export default function ZhHantPricingBody() {
   const copy = pageCopy['zh-hant'].pricing;
@@ -35,8 +37,10 @@ export default function ZhHantPricingBody() {
         </nav>
         <div className={styles.headerActions}>
           <a href={mailto} className="button" aria-label={`${data.ctaLabel} — ${getConsultationCtaLabel('zh-hant')}`}>
-            {data.ctaLabel} <span aria-hidden>↗</span>
+            {data.ctaLabel}
           </a>
+          {/* Secondary header link (spec: existing links only) — the header nav's own 聯絡方式 entry. */}
+          <Link href="/zh-hant/contact" className={styles.headerLink}>聯絡方式<span aria-hidden> ›</span></Link>
         </div>
       </PageHeader>
       <PricingCards locale="zh-hant" />

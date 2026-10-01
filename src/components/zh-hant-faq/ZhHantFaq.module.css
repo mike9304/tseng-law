@@ -1,56 +1,337 @@
-/* zh-hant FAQ, second pass (son7-87 / Opus 5.5, 2026-10-01). FaqPublicExplorer markup unchanged; layout via its data attribute and roles. */
-.root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-gold-text: #8a6a2a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --zh-paper: #f7f5ef; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
+/* zh-hant FAQ (son7-87 lane / Opus 5.5, 2026-10-01). FaqPublicExplorer markup is unchanged; layout via its
+   data attribute and roles. Earlier passes (green header, serif, cream band) were replaced by the Apple pass. */
 
-/* Header */
-.root:global(#zh-hant-faq) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 64px; border-bottom: none; }
-.root:global(#zh-hant-faq) :global(.page-header-title),
-.root:global(#zh-hant-faq) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
-.root:global(#zh-hant-faq) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
-.root:global(#zh-hant-faq) :global(.page-header .section-label) { color: var(--zh-gold); }
-.root:global(#zh-hant-faq) :global(.page-header .section-label::before) { background: var(--zh-gold); }
+/* ===== Apple pass (2026-10-01) ===== */
+/* Light header → search + categories beside the questions (a white tile) on the gray band → the home's last call. */
+.root {
+  --ap-gray: #f5f5f7;
+  --ap-text: #1d1d1f;
+  --ap-muted: #6e6e73;
+  --ap-line: #e3e3e8;
+  --ap-accent: #0a7a55;
+  --ap-ink: #16382d;
+  --ap-ink-deep: #0d231b;
+  --ap-radius: 28px;
+  --ap-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ap-band: clamp(72px, 9vw, 128px);
+  --text-secondary: var(--ap-muted);
+  --max-width: 1240px;
+  display: flow-root;
+  background: var(--ap-gray);
+  color: var(--ap-text);
+}
+.root:global(#zh-hant-faq) :global(.container) { max-width: 1240px; padding-inline: 32px; }
+
+/* ---------- Header ---------- */
+.root:global(#zh-hant-faq) :global(.page-header) {
+  padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
+  background: #fff;
+  color: var(--ap-text);
+  border: none;
+}
+.root:global(#zh-hant-faq) :global(.page-header)::after { display: none; }
+.root:global(#zh-hant-faq) :global(.page-header > .container > :first-child) { max-width: none; text-align: left; }
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb) { margin: 0 0 18px; }
 .root:global(#zh-hant-faq) :global(.page-header .breadcrumb),
-.root:global(#zh-hant-faq) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
-.root:global(#zh-hant-faq) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb) { align-items: center; }
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; margin-inline: -9px; padding-inline: 9px; text-decoration: none; }
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb) { margin-bottom: 8px; }
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb a:hover) { color: var(--ap-accent); }
+.root:global(#zh-hant-faq) :global(.page-header-title),
+.root:global(#zh-hant-faq) :global(.page-header-title *) {
+  margin: 0;
+  color: var(--ap-text) !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700;
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+.root:global(#zh-hant-faq) :global(.page-header .section-lede) {
+  max-width: 34em;
+  margin: 22px 0 0;
+  color: var(--ap-muted);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.6;
+}
+.root:global(#zh-hant-faq) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
 
-/* Explorer: search + categories as a left rail, questions wide on the right */
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 20px 64px; align-items: start; margin: 64px auto 56px; }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :first-child) { grid-column: 1; grid-row: 1; grid-template-columns: minmax(0, 1fr); max-width: none; }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; align-items: stretch; gap: 4px; padding-top: 16px; border-top: 2px solid var(--zh-ink); }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { display: flex; align-items: center; justify-content: flex-start; text-align: left; min-height: 44px; padding: 8px 14px; border-radius: 2px; border-color: transparent; background: transparent; font-size: 15.5px; }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a:hover) { background: #eef2ec; border-color: transparent; }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[class*='categoryActive']) { background: var(--zh-ink); border-color: var(--zh-ink); color: #fff; }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 2; grid-row: 1 / span 3; min-width: 0; border-top: 2px solid var(--zh-ink); }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button) { font-size: 18px; line-height: 1.6; padding-block: 20px; }
+/* ---------- Explorer: rail on the left, the questions as one white tile ---------- */
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) {
+  box-sizing: border-box;
+  width: min(1240px, calc(100% - 2 * var(--page-gutter, 20px)));
+  padding-inline: 32px;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  gap: 20px clamp(32px, 4vw, 64px);
+  align-items: start;
+  margin: var(--ap-band) auto;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :first-child) {
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  max-width: none;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :first-child label) { gap: 10px; color: var(--ap-text); font-size: 15px; font-weight: 600; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] input[type='search']) {
+  min-height: 52px;
+  padding: 0 22px;
+  background: #fff;
+  border: 1px solid #86868b;
+  border-radius: 999px;
+  color: var(--ap-text);
+  font-size: 17px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] input[type='search'])::placeholder { color: var(--ap-muted); opacity: 1; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] input[type='search']:hover) { border-color: var(--ap-text); }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] input[type='search']:focus) { border-color: var(--ap-ink); box-shadow: 0 0 0 4px rgb(22 56 45 / 12%); }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='status']) {
+  min-height: 0;
+  padding: 0 22px;
+  background: none;
+  border: none;
+  color: var(--ap-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  max-width: none;
+  margin-top: 16px;
+  padding: 0;
+  border: none;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 48px;
+  padding: 0 22px;
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  color: var(--ap-text);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a:hover) { background: #e8e8ed; color: var(--ap-text); }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[class*='categoryActive']),
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[class*='categoryActive']:hover) { background: var(--ap-ink); color: #fff; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :last-child) {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  min-width: 0;
+  max-width: none;
+  padding: 8px clamp(24px, 3vw, 44px);
+  background: #fff;
+  border: none;
+  border-radius: var(--ap-radius);
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] article > span:last-child) { background: var(--ap-line); }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] article:last-child > span:last-child) { display: none; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button) {
+  gap: 24px;
+  min-height: 84px;
+  padding: 22px 0;
+  text-wrap: pretty;
+  color: var(--ap-text);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.55;
+  transition: color 0.25s ease;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button:hover),
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button:focus-visible) { background: transparent; color: var(--ap-ink); }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3) { text-wrap: pretty; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button > span:first-child) { text-wrap: pretty; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button small) { margin-bottom: 6px; color: var(--ap-accent); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button > span:last-child) {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--ap-gray);
+  color: var(--ap-ink);
+  font-size: 18px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button:hover > span:last-child),
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button[aria-expanded='true'] > span:last-child) { background: var(--ap-ink); color: #fff; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region']) { max-width: 46em; padding: 0 0 26px; }
 .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region'] p),
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region']) { font-size: 16.5px; line-height: 1.95; }
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) :focus-visible { outline: 2px solid var(--zh-ink); outline-offset: 3px; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region']) { color: var(--ap-muted); font-size: 17px; font-weight: 400; line-height: 1.85; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button:focus-visible) { outline-offset: -3px; border-radius: 12px; }
 
-/* Closing contact band: cream, so it reads as part of the page rather than the green footer */
-.band { background: var(--zh-cream); color: var(--zh-ink); padding: 56px 0; border-top: 4px solid var(--zh-ink); }
-.bandInner { display: flex; align-items: center; justify-content: space-between; gap: 24px 48px; flex-wrap: wrap; }
-.bandTitle { margin: 0 0 8px; font-family: var(--font-serif-tc); font-size: clamp(26px, 2.8vw, 36px); line-height: 1.45; color: var(--zh-ink); }
-.bandText { margin: 0; font-size: 17px; color: #3c4a43; }
-.bandEmail { margin: 16px 0 0; font-family: var(--font-serif-tc); font-size: clamp(21px, 2.2vw, 26px); font-weight: 700; overflow-wrap: anywhere; }
-.bandEmail a { color: var(--zh-ink); text-decoration: underline; text-decoration-color: var(--zh-gold-text); text-underline-offset: 6px; }
-.band :global(.button) { background: var(--zh-ink); border-color: var(--zh-ink); color: #fff; font-weight: 700; min-height: 54px; padding: 14px 28px; }
-.band :global(.button:hover) { background: #0f2a21; border-color: #0f2a21; }
-.band a:focus-visible { outline: 3px solid var(--zh-ink); outline-offset: 3px; }
+/* ---------- Last call: the home's closing chapter ---------- */
+.band {
+  padding: clamp(96px, 12vw, 168px) 0;
+  background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%);
+  color: #fff;
+  text-align: center;
+}
+.bandInner { display: flex; flex-direction: column; align-items: center; }
+.bandTitle {
+  max-width: 14em;
+  margin: 0 auto;
+  color: #fff !important;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(40px, 5.4vw, 80px) !important;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.bandText { max-width: 36em; margin: 20px auto 0; color: rgb(255 255 255 / 76%); font-size: clamp(17px, 1.5vw, 21px); line-height: 1.7; }
+.bandActions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 28px; margin-top: 40px; }
+.root:global(#zh-hant-faq) .band .bandButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 32px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 999px !important;
+  color: var(--ap-ink);
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s var(--ap-ease), box-shadow 0.3s var(--ap-ease);
+}
+.root:global(#zh-hant-faq) .band .bandButton:hover { background: #fff; color: var(--ap-ink); transform: translateY(-2px) scale(1.02); box-shadow: 0 18px 40px rgb(0 0 0 / 30%); }
+.bandEmail { margin: 0; font-size: 17px; font-weight: 600; overflow-wrap: anywhere; }
+.bandEmail a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; text-decoration: none; }
+.bandEmail a:hover { text-decoration: underline; text-underline-offset: 6px; }
+.band a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; border-radius: 4px; }
+.root:global(#zh-hant-faq) .band .bandButton:focus-visible { border-radius: 999px !important; }
 
+/* ---------- Motion ----------
+   The page's tiles are one tall question list (taller than a screen) and a full-width band, so nothing here uses the
+   home's scroll reveal: a view() entry range on a tile that tall would keep the first questions faded while read.
+   Only the hover/expand transitions above move. */
+
+/* ---------- Narrow screens ---------- */
 @media (max-width: 900px) {
-  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(0, 1fr); margin: 36px auto 56px; }
-  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) { flex-direction: row; flex-wrap: wrap; border-top: none; padding-top: 0; }
-  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { border-color: #c8d2c6; border-radius: 999px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :first-child) { grid-row: auto; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) {
+    grid-row: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-self: stretch;
+    width: auto;
+    margin: 4px calc(-32px - var(--page-gutter, 20px)) 8px;
+    padding: 2px calc(32px + var(--page-gutter, 20px)) 6px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: calc(32px + var(--page-gutter, 20px));
+    scrollbar-width: none;
+  }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'])::-webkit-scrollbar { display: none; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 18px;
+    background: #fff;
+    font-size: 15px;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
   .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 1; grid-row: auto; }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-faq) :global(.page-header) { padding: 40px 0 44px; }
-  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button) { font-size: 16.5px; }
-  .band { padding: 48px 0; }
-  .band :global(.button) { width: 100%; justify-content: center; }
+  .root { --ap-radius: 22px; }
+  .root:global(#zh-hant-faq) :global(.container) { width: 100%; padding-inline: 20px; }
+  .root:global(#zh-hant-faq) :global(.page-header) { padding: 48px 0 40px; }
+  .root:global(#zh-hant-faq) :global(.page-header .breadcrumb) { margin-bottom: 4px; }
+  .root:global(#zh-hant-faq) :global(.page-header .section-lede) { margin-top: 16px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { margin-block: 40px 72px; width: 100%; padding-inline: 20px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) { margin-inline: -20px; padding-inline: 20px; scroll-padding-inline: 20px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :last-child) { padding: 4px 20px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button) { gap: 16px; min-height: 72px; padding: 18px 0; font-size: 17px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button > span:last-child) { width: 32px; height: 32px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region']),
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region'] p) { font-size: 16px; }
+  .band { padding: 96px 0 104px; }
+  .bandActions { flex-direction: column; width: 100%; gap: 10px; }
+  .root:global(#zh-hant-faq) .band .bandButton { width: 100%; }
 }
 
-/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
-.band :global(.button) { border-radius: 2px; }
-@media (max-width: 1000px) {
-  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { border-radius: 2px; }
+/* ===== Apple pass (2026-10-01) — critic round ===== */
+/* One type stack and one content edge with the home and the header: PingFang TC first (as #zh-hant-home), and the
+   site container min(1200px, 100% - 2 * gutter) so the H1, the explorer and the header logo share x = 113 at 1440. */
+.root:global(#zh-hant-faq) {
+  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-body: var(--font-sans);
+  font-family: var(--font-sans);
+}
+.root:global(#zh-hant-faq) :global(.container),
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) {
+  width: min(1200px, calc(100% - (var(--page-gutter, 20px) * 2)));
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+/* The category rail follows the reader down the long question list (no empty gray column), active pill unchanged. */
+@media (min-width: 901px) {
+  /* The tall question list spans all rows; a final 1fr row takes its extra height so the search and rail stay at the top. */
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-rows: auto auto 1fr; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) {
+    grid-row: 2 / span 2;
+    align-self: start;
+    position: sticky;
+    top: calc(var(--header-offset-desktop, 137px) + 24px);
+  }
+}
+
+/* Last call, the home's exact pattern: the title wraps after "，" onto two lines, gray lede, white pill + outlined pill. */
+.bandTitle { max-width: 9em; word-break: keep-all; }
+.bandText { color: #a1a1a6; }
+.bandActions { gap: 12px; }
+.root:global(#zh-hant-faq) .band .bandButton { padding: 0 28px; }
+.bandEmail a {
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 999px;
+  font-weight: 700;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.bandEmail a:hover { border-color: #fff; background: rgb(255 255 255 / 8%); text-decoration: none; }
+.band .bandEmail a:focus-visible { border-radius: 999px; }
+
+@media (max-width: 767px) {
+  .root:global(#zh-hant-faq) :global(.container),
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { width: min(1200px, calc(100% - (var(--page-gutter, 20px) * 2))); padding-inline: 0; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { margin-block: 40px 72px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) {
+    margin-inline: calc(-1 * var(--page-gutter, 20px));
+    padding-inline: var(--page-gutter, 20px);
+    scroll-padding-inline: var(--page-gutter, 20px);
+  }
+  .bandEmail { width: 100%; }
+  .bandEmail a { width: 100%; }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) {
+    margin-inline: calc(-1 * var(--page-gutter, 20px));
+    padding-inline: var(--page-gutter, 20px);
+    scroll-padding-inline: var(--page-gutter, 20px);
+  }
 }

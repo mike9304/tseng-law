@@ -77,22 +77,35 @@ export function EnSituationIndex({ posts }: { posts: readonly { slug: string; ti
         <h2 id="en-situations-title" className={styles.sectionTitle}>Living or working in Taiwan</h2>
       </div>
       <ol className={styles.situationGrid}>
-        {situations.map((situation, index) => (
-          <li key={situation.id} className={styles.situation} data-en-situation={situation.id}>
-            <span className={styles.situationNo} aria-hidden>{String(index + 1).padStart(2, '0')}</span>
-            <h3 className={styles.situationTitle}>{situation.label}</h3>
-            {situation.guideLinks.length > 0 ? (
-              <ul className={styles.situationGuides}>
-                {situation.guideLinks.slice(0, 2).map((guide) => (
-                  <li key={guide.slug}><Link href={guide.href}>{guide.title}</Link></li>
-                ))}
-              </ul>
-            ) : null}
-            <Link href={situation.href} className={styles.situationMore}>
-              {situation.hrefLabel} <span aria-hidden>→</span>
-            </Link>
-          </li>
-        ))}
+        {situations.map((situation, index) => {
+          const [lead, ...rest] = situation.guideLinks.slice(0, 2);
+          return (
+            <li key={situation.id} className={styles.situation} data-en-situation={situation.id}>
+              <span className={styles.situationNo} aria-hidden>{String(index + 1).padStart(2, '0')}</span>
+              <h3 className={styles.situationTitle}>{situation.label}</h3>
+              {lead ? (
+                <p className={styles.situationLead}>
+                  <Link href={lead.href}>{lead.title}</Link>
+                </p>
+              ) : null}
+              <div className={styles.situationFoot}>
+                <Link href={situation.href} className={styles.situationMore}>
+                  {situation.hrefLabel} <span aria-hidden>→</span>
+                </Link>
+                {rest.length > 0 ? (
+                  <details className={styles.situationExtra}>
+                    <summary>{rest.length === 1 ? 'One more guide' : `${rest.length} more guides`}</summary>
+                    <ul>
+                      {rest.map((guide) => (
+                        <li key={guide.slug}><Link href={guide.href}>{guide.title}</Link></li>
+                      ))}
+                    </ul>
+                  </details>
+                ) : null}
+              </div>
+            </li>
+          );
+        })}
       </ol>
     </section>
   );

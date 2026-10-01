@@ -12,6 +12,7 @@ import type { FAQItem } from '@/data/faq-content';
 import { EN_HOME_FAQ_ORDER, EN_SERVICE_ORDER, orderByList } from './en-design-data';
 import { EnHeroTrust, EnProcessAndFees, EnSituationIndex } from './EnHomeParts';
 import EnHeroMedia from './EnHeroMedia';
+import EnRailControls from './EnRailControls';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import pageStyles from './EnPage.module.css';
@@ -36,7 +37,7 @@ type Props = {
  */
 const EN_HERO_OVERRIDES = {
   'section-label': 'Taiwan legal support for international businesses and individuals',
-  headline: 'Taiwan law, in plain English.',
+  headline: 'Taiwan law,\nin plain English.',
   subtitle:
     'Work, family, police and accident matters, residence permits, company setup. Email Attorney Wei Tseng and meet in Taipei or by video.',
 };
@@ -78,12 +79,15 @@ export default function EnHomeBody({ posts, faqItems }: Props) {
           </div>
         </div>
       </div>
-      <ServicesBento locale="en" id="practice" variant="default" presentation="editorial" order={EN_SERVICE_ORDER} />
+      <div className={styles.railWrap}>
+        <ServicesBento locale="en" id="practice" variant="default" presentation="editorial" order={EN_SERVICE_ORDER} />
+        <EnRailControls />
+      </div>
       <EnProcessAndFees />
       <HomeAttorneySplit locale="en" presentation="editorial" />
       <InsightsArchiveSection locale="en" posts={posts} presentation="editorial" />
       <HomeCaseResultsSplit locale="en" presentation="editorial" />
-      <HomeStatsSection locale="en" />
+      <HomeStatsSection locale="en" plainLede />
       <FAQAccordion locale="en" items={orderedFaq} id="faq" sectionClassName="section section--gray" layout="split" />
       <OfficeMapTabs locale="en" id="offices" sectionClassName="section section--light" presentation="editorial" />
       <HomeContactCta locale="en" />

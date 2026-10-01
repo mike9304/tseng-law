@@ -130,6 +130,8 @@
 .root :global(.svc-col-card) { border-radius: 2px; }
 .root :global(.svc-col-card:hover) { box-shadow: none; border-color: var(--zh-ink, #16382d); }
 .root :global(.svc-sidebar-card) { border-radius: 2px; }
-.root .contactPanel :global(a.svc-sidebar-btn) { border-radius: 2px; }
+.root .contactPanel :global(a.svc-sidebar-btn),
+.root :global(.button) { border-radius: 2px !important; }
 .root :global(.authority-card) { border-radius: 2px; box-shadow: none; }
-.root :global(.svc-col-badge) { display: none; }
+/* Astra SHOULD: keep the category as a plain flat label, not a pill. */
+.root :global(.svc-col-badge) { border-radius: 2px; border: none; background: rgb(22 56 45 / 88%); color: #fff; backdrop-filter: none; }

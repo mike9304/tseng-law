@@ -129,6 +129,28 @@ export function handleDecorativeVideoCanPlay(
   }
 }
 
+export type DecorativeVideoSourceKey = 'mobile' | 'desktop';
+
+/**
+ * Poster and control visibility. Readiness belongs to one mounted encoding: after a breakpoint change
+ * the replacement element shows the poster until it has a frame (WebKit leaves a paused replacement at
+ * readyState 1). The control, once shown, stays so Play/Replay works on a replacement still loading.
+ */
+export function resolveDecorativeVideoPresentation({
+  shouldMountVideo,
+  readySource,
+  sourceKey,
+  controlRevealed,
+}: {
+  shouldMountVideo: boolean;
+  readySource: DecorativeVideoSourceKey | null;
+  sourceKey: DecorativeVideoSourceKey;
+  controlRevealed: boolean;
+}): { videoReady: boolean; showControl: boolean } {
+  const videoReady = shouldMountVideo && readySource === sourceKey;
+  return { videoReady, showControl: shouldMountVideo && (videoReady || controlRevealed) };
+}
+
 export function runDecorativeVideoControlActivation(
   video: Pick<HTMLVideoElement, 'currentTime' | 'pause' | 'play'>,
   state: DecorativeVideoPlaybackState,
@@ -248,7 +270,8 @@ export function DecorativeAutoplayVideo({
   const [idleReady, setIdleReady] = useState(false);
   const [nearViewport, setNearViewport] = useState(false);
   const [inViewport, setInViewport] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
+  const [readySource, setReadySource] = useState<DecorativeVideoSourceKey | null>(null);
+  const [controlRevealed, setControlRevealed] = useState(false);
   // Which encoding to mount, measured with matchMedia after hydration. WebKit 26.4 evaluates
   // <source media> as false before layout when the video is inserted by script, so it played the
   // desktop file on phones; choosing in script mounts exactly one matching set of sources.
@@ -421,6 +444,7 @@ export function DecorativeAutoplayVideo({
     waitForPosterPaint,
   }) && isDecorativeVideoSourceViewportResolved(hasMobileVideo, sourceViewportMobile);
   const useMobileSources = shouldUseMobileDecorativeVideoSources(hasMobileVideo, sourceViewportMobile);
+  const sourceKey: DecorativeVideoSourceKey = useMobileSources ? 'mobile' : 'desktop';
 
   useEffect(() => {
     const video = videoRef.current;
@@ -437,7 +461,12 @@ export function DecorativeAutoplayVideo({
     typeof width === 'number' && typeof height === 'number'
       ? { width, height }
       : { fill: true as const };
-  const isVideoReady = shouldMountVideo && videoReady;
+  const { videoReady: isVideoReady, showControl } = resolveDecorativeVideoPresentation({
+    shouldMountVideo,
+    readySource,
+    sourceKey,
+    controlRevealed,
+  });
   const controlLabel = resolveDecorativeVideoControlLabel(
     playbackState,
     controlLabels,
@@ -511,7 +540,8 @@ export function DecorativeAutoplayVideo({
           tabIndex={-1}
           preload="metadata"
           onCanPlay={() => {
-            setVideoReady(true);
+            setReadySource(sourceKey);
+            setControlRevealed(true);
             handleDecorativeVideoCanPlay(videoRef.current, {
               inViewport,
               ...playbackState,
@@ -522,7 +552,7 @@ export function DecorativeAutoplayVideo({
               setPlaybackState({ userPaused: false, ended: true });
             }
           }}
-          onError={() => setVideoReady(false)}
+          onError={() => setReadySource(null)}
         >
           {useMobileSources && mobileMp4Src ? (
             <source
@@ -540,7 +570,7 @@ export function DecorativeAutoplayVideo({
           {useMobileSources ? null : <source src={webmSrc} type="video/webm" />}
         </video>
       ) : null}
-      {isVideoReady ? (
+      {showControl ? (
         <button
           type="button"
           className="decorative-autoplay-video__control"

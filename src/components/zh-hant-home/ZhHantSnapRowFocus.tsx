@@ -32,7 +32,10 @@ export default function ZhHantSnapRowFocus({ rootSelector }: { rootSelector: str
       let item: Element = target;
       while (item.parentElement && item.parentElement !== row) item = item.parentElement;
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: reduce ? 'auto' : 'smooth' });
+      // Next frame: a smooth scroll started inside focusin is cancelled by WebKit's own focus scroll.
+      window.requestAnimationFrame(() => {
+        item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: reduce ? 'auto' : 'smooth' });
+      });
     };
     root.addEventListener('focusin', onFocusIn);
     return () => root.removeEventListener('focusin', onFocusIn);

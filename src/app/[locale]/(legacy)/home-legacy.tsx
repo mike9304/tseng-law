@@ -16,6 +16,8 @@ import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import ZhHantHomeBody from '@/components/ZhHantHomeBody';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import JaPersonalPaths from '@/components/ja-design/JaPersonalPaths';
+import JaHeroMedia from '@/components/ja-design/JaHeroMedia';
+import JaHeroTrust from '@/components/ja-design/JaHeroTrust';
 import jaHomeStyles from '@/components/ja-design/JaHome.module.css';
 import { JA_PINNED_COLUMN_SLUGS, JA_SERVICE_ORDER } from '@/components/ja-design/ja-arrangement';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
@@ -116,6 +118,12 @@ export function LegacyHomePageBody({
   );
 }
 
+/** Search shortcuts under the hero search field: everyday topics, run through the site search. */
+const JA_SEARCH_CHIPS = ['会社設立', '労務', '交通事故', '離婚', '相続', '刑事'].map((q) => ({
+  label: q,
+  href: `/ja/search?q=${encodeURIComponent(q)}`,
+}));
+
 /**
  * ja home (Opus 5.5 ja lane, 2026-10-01). Same components and copy as the shared legacy home,
  * re-ordered for Japanese readers: needs first (the 日系企業 entry block, then a row of
@@ -129,7 +137,15 @@ function jaHomeBody(posts: HomeInsightArchivePosts, faqItems: FAQItem[]) {
     <JaPageShell page="home" className={jaHomeStyles.root}>
       {/* Display-only: the kicker reads as the firm name (the stock label is English). */}
       <BuilderSurfaceProvider nodeId="home-hero" mode="published" overrides={{ 'section-label': getOrganizationName('ja') }} selectedSurfaceKey={null}>
-        <HeroSearch locale="ja" presentation="editorial" scrollHref="#overseas-entry-full-heading" />
+        <HeroSearch
+          locale="ja"
+          presentation="editorial"
+          scrollHref="#overseas-entry-full-heading"
+          quickMenus={JA_SEARCH_CHIPS}
+          persistentQuickMenus
+          media={<JaHeroMedia />}
+          trustContent={<JaHeroTrust />}
+        />
       </BuilderSurfaceProvider>
       <Reveal>
         <EnAcquisitionGuideLinks locale="ja" variant="full" />

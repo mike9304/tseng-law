@@ -1,24 +1,28 @@
 /*
- * ja design system (Opus 5.5 ja lane, 2026-10-01).
- * Shared layer for every Japanese page wrapper (`[data-ja-design]`): 生成り paper,
- * sumi-green ink, hairline 罫線 and a gold double rule, Mincho only on the H1
- * (globals allowlist), Gothic H2/H3 with palt + generous 字間, vertical page labels.
- * Deliberately unlike the zh-hant green editorial pages (dark green bands, cream board).
+ * ja design system (Opus 5.5 ja lane, 2026-10-01; Apple pass 2026-10-01).
+ * Concept 「間」: warm 生成り paper, sumi ink and one vermilion (朱) accent taken from the firm's red seal,
+ * hairline 罫線, generous 余白. Mincho only on the H1 (globals allowlist), Gothic H2/H3 with palt + 字間.
+ * The token names keep their earlier spelling (--ja-green = the primary ink, --ja-gold-text = the accent text
+ * colour) so that every page module follows when the palette moves.
+ * Deliberately unlike the zh-hant home (dawn video, white type) and the en home.
  * Every selector is scoped under `.root[data-ja-design]`; other locales never render it.
  */
 .root {
-  --ja-ink: #1c2622;
-  --ja-text: #2f3a35;
-  --ja-sub: #4f5c55;
-  --ja-green: #16382d;
-  --ja-green-2: #24503f;
-  --ja-green-tint: #e9efe9;
-  --ja-gold: #9f8752;
-  --ja-gold-text: #6c5829;
-  --ja-paper: #f7f5ef;
-  --ja-paper-2: #efebe1;
-  --ja-line: #dcd6c8;
-  --ja-line-strong: #b6ac95;
+  --ja-ink: #1b1814;
+  --ja-text: #38332c;
+  --ja-sub: #5a544a;
+  --ja-green: #1b1814;
+  --ja-green-2: #3b352d;
+  --ja-green-tint: #f1ede4;
+  --ja-shu: #c8102e;
+  --ja-shu-deep: #a50d26;
+  --ja-gold: #c8102e;
+  --ja-gold-text: #b00e28;
+  --ja-paper: #faf8f4;
+  --ja-paper-2: #f2eee5;
+  --ja-line: #e6e0d4;
+  --ja-line-strong: #cdc4b2;
+  --ja-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --ja-mincho: var(--font-heading-ja);
   --ja-gothic: var(--font-body-ja);
   --ja-measure: 38em;

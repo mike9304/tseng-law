@@ -162,7 +162,7 @@ export const serviceAreas: ServiceArea[] = [
     subtitle: {
       ko: '대만 노동기준법에 따른 해고·퇴직금·근로계약 분쟁 전문',
       'zh-hant': '台灣勞基法下的解僱、資遣費與勞動契約爭議',
-      en: 'Specialized support for dismissal, severance, and employment contract disputes under Taiwan labor law'
+      en: 'Support for dismissal, severance, and employment contract disputes under Taiwan labor law'
     },
     intro: {
       ko: '대만의 퇴직금(資遣費) 제도는 한국과 적용 사유와 산정 방식이 다릅니다. 계약 종료의 법적 근거, 신제와 구제(舊制)가 적용되는 근속기간, 예고와 기간 제한을 구분해 검토해야 하며, 법무법인 호정은 한국 기업과 한국인 근로자 양측에 해고·퇴직금·근로계약 분쟁 자문을 제공합니다.',

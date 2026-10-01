@@ -8,14 +8,15 @@ import { ROUTED_PUBLIC_LOCALES, type RoutedPublicLocale } from '@/lib/public-gui
  */
 export const ROOT_FALLBACK_LOCALE: RoutedPublicLocale = 'ko';
 
-/** Legacy or alternate primary subtags that map onto a published locale. */
-const PRIMARY_ALIASES: Readonly<Record<string, RoutedPublicLocale>> = {
-  no: 'nb',
-  nn: 'nb',
-  tl: 'fil',
-  iw: 'he',
-  in: 'id',
-};
+/** Legacy or alternate primary subtags that map onto a published locale. A Map, so header
+ *  text such as `constructor` or `__proto__` can never reach inherited object properties. */
+const PRIMARY_ALIASES: ReadonlyMap<string, RoutedPublicLocale> = new Map([
+  ['no', 'nb'],
+  ['nn', 'nb'],
+  ['tl', 'fil'],
+  ['iw', 'he'],
+  ['in', 'id'],
+]);
 
 const TRADITIONAL_CHINESE_REGIONS = new Set(['tw', 'hk', 'mo']);
 const SIMPLIFIED_CHINESE_REGIONS = new Set(['cn', 'sg', 'my']);
@@ -41,7 +42,8 @@ export function localeForLanguageTag(tag: string): RoutedPublicLocale | null {
   }
 
   if (isRoutedLocale(primary)) return primary;
-  return PRIMARY_ALIASES[primary] ?? null;
+  const alias = PRIMARY_ALIASES.get(primary);
+  return alias && isRoutedLocale(alias) ? alias : null;
 }
 
 type WeightedTag = { tag: string; q: number; order: number };

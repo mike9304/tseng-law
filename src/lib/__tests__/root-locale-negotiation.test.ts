@@ -1,7 +1,8 @@
 import { buildCustomRoute } from 'next/dist/server/lib/router-utils/filesystem';
 import { NextRequest } from 'next/server';
+import { unstable_doesMiddlewareMatch } from 'next/experimental/testing/server';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { middleware } from '@/middleware';
+import { config as middlewareConfig, middleware } from '@/middleware';
 import { ROUTED_PUBLIC_LOCALES } from '@/lib/public-guidance';
 import {
   ROOT_FALLBACK_LOCALE,
@@ -64,6 +65,15 @@ describe('root locale negotiation', () => {
     expect(negotiateRootLocale('en;q=abc,ja;q=0.1')).toBe('ja');
   });
 
+  it('never resolves header text to inherited object properties (Astra P1)', () => {
+    for (const tag of ['constructor', '__proto__', 'toString', 'hasOwnProperty', 'valueOf', 'prototype']) {
+      expect(localeForLanguageTag(tag)).toBeNull();
+      expect(negotiateRootLocale(tag)).toBe('ko');
+    }
+    expect(negotiateRootLocale('constructor,en;q=0.8')).toBe('en');
+    expect(negotiateRootLocale('__proto__;q=1,ja;q=0.5')).toBe('ja');
+  });
+
   it('maps every published locale code to itself', () => {
     for (const locale of ROUTED_PUBLIC_LOCALES) {
       expect(localeForLanguageTag(locale)).toBe(locale);
@@ -91,6 +101,24 @@ describe('bare-domain redirect wiring', () => {
     expect(plain.headers.get('location')).toBe('https://tseng-law.com/ko');
     const tagged = await middleware(rootRequest('ja-JP', '?utm_source=line'));
     expect(tagged.headers.get('location')).toBe('https://tseng-law.com/ja?utm_source=line');
+  });
+
+  it('redirects a prototype-name header to a published locale, never to a function body', async () => {
+    const response = await middleware(rootRequest('constructor,en;q=0.8'));
+    expect(response.status).toBe(307);
+    expect(response.headers.get('location')).toBe('https://tseng-law.com/en');
+    const fallback = await middleware(rootRequest('constructor'));
+    expect(fallback.headers.get('location')).toBe('https://tseng-law.com/ko');
+  });
+
+  it('runs middleware for / on the apex and www hosts (compiled matcher)', () => {
+    for (const host of ['tseng-law.com', 'www.tseng-law.com']) {
+      expect(
+        unstable_doesMiddlewareMatch({ config: middlewareConfig, url: `https://${host}/`, headers: { host } }),
+      ).toBe(true);
+    }
+    expect(unstable_doesMiddlewareMatch({ config: middlewareConfig, url: 'https://tseng-law.com/zh-hant' })).toBe(true);
+    expect(unstable_doesMiddlewareMatch({ config: middlewareConfig, url: 'https://tseng-law.com/_next/static/x.js' })).toBe(false);
   });
 
   it('no longer pins / to /ko in next.config, so middleware decides', () => {

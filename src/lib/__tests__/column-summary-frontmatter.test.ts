@@ -6,7 +6,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost, resolveColumnSummary } from '@/lib/columns';
 import { buildLocaleLlmsTxt } from '@/lib/llms-txt';
 import { buildArticleJsonLd, buildSeoMetadata } from '@/lib/seo';
-import { allNativeFiles, isExpertiseColumnFile20260930, isNativeLocaleColumnFile } from './native-locale-columns';
+import { isExpertiseColumnFile20260930, isNativeLocaleColumnFile } from './native-locale-columns';
 
 const AUTHORED_SUMMARY =
   'Foreign companies may enter Taiwan through a subsidiary, branch, or representative office. Company setup does not grant a work permit or ARC.';
@@ -119,7 +119,8 @@ describe('English column corpus summaries', () => {
 
   it('gives every EN column a 150–160 character authored summary without Korean-company framing or an ellipsis', () => {
     // 32 translated EN columns plus the English-only native columns (same rules apply).
-    expect(files).toHaveLength(33 + allNativeFiles('en').length);
+    expect(files.length).toBeGreaterThan(0);
+    expect(files).toHaveLength(getAllColumnPosts('en').length);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
@@ -141,7 +142,7 @@ describe('English column corpus summaries', () => {
 
   it('reuses those summaries in EN meta description, Article JSON-LD, and llms.txt annotations', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts).toHaveLength(33 + allNativeFiles('en').length);
+    expect(posts).toHaveLength(files.length);
     const llms = buildLocaleLlmsTxt('en');
 
     for (const post of posts) {

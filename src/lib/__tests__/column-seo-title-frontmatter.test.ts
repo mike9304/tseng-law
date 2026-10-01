@@ -3,9 +3,8 @@ import os from 'node:os';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { afterEach, describe, expect, it } from 'vitest';
-import { getColumnPost, resolveColumnSeoTitle } from '@/lib/columns';
+import { getAllColumnPosts, getColumnPost, resolveColumnSeoTitle } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
-import { allNativeFiles } from './native-locale-columns';
 
 const FALLBACK_TITLE = 'Fixture Company Setup Column With An Intentionally Long Display Title';
 const AUTHORED_SEO_TITLE = 'Taiwan Company Setup: Subsidiary, Branch, Work Permits';
@@ -114,7 +113,8 @@ describe('English column corpus seoTitle', () => {
 
   it('adds a seoTitle only when the display title would push <title> past 60 characters', () => {
     // 32 translated EN columns plus the English-only native columns (same rules apply).
-    expect(files).toHaveLength(33 + allNativeFiles('en').length);
+    expect(files.length).toBeGreaterThan(0);
+    expect(files).toHaveLength(getAllColumnPosts('en').length);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');

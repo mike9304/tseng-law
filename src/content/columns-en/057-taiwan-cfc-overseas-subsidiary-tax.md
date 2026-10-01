@@ -1,7 +1,7 @@
 ---
 title: "When a Taiwan company must recognize its overseas subsidiary's profits"
-seoTitle: "Taiwan corporate CFC rules for low-tax overseas subsidiaries"
-summary: "Taiwan's corporate CFC test looks at a low-tax jurisdiction and control by the company together with related persons. Local operations and small-profit relief have specific conditions; a dividend need not be paid first."
+seoTitle: "Taiwan CFC tax on overseas subsidiaries"
+summary: "Taiwan's corporate CFC rules can pull low-tax overseas subsidiary income into the parent tax base when control tests are met. Exemptions need early documents."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"

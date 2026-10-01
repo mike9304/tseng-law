@@ -1,7 +1,7 @@
 ---
 title: "Taiwan wage disputes: mediation and a union strike vote"
-seoTitle: "Taiwan wage disputes and strike votes: rules for foreign employers"
-summary: "A failed mediation and a union vote are separate conditions for a Taiwan strike. Foreign headquarters should distinguish a proposed wage change from an unpaid wage claim and preserve the local record."
+seoTitle: "Taiwan labor mediation and strike votes"
+summary: "Taiwan wage disputes separate mediation from a lawful strike vote. Foreign employers should track Labor Act deadlines, union ballots, and settlement records."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"

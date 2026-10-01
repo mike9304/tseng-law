@@ -1,7 +1,7 @@
 ---
 title: "A foreign brand's Taiwan store: company, branch, or master franchise"
-seoTitle: "Taiwan market entry by franchise, trademark license, or subsidiary"
-summary: "A foreign brand’s Taiwan filing obligations depend on whether it invests in a local company, registers a branch or licenses a local operator. Trademark licensing, franchise disclosure, shop leases and food-business registration have separate requirements."
+seoTitle: "Taiwan franchise and brand entry paths"
+summary: "Foreign brands entering Taiwan choose a company, branch, or master franchise. Investment filings, trademark licenses, and Fair Trade franchise rules differ."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"

@@ -8,7 +8,7 @@ date_display: "2026년 10월 1일"
 read_time: "8분 분량"
 categories:
   - "대만 법률정보"
-topic: "medical"
+topic: "litigation"
 featured_image: "../images/056-taiwan-medical-malpractice-foreign-patient/featured-01.webp"
 faq:
   - q: "한국에 돌아와서도 대만 진료기록을 받을 수 있나요?"

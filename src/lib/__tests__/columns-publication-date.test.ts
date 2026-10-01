@@ -65,6 +65,14 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '047': '2026-09-30',
   '048': '2026-09-30',
   '050': '2026-09-30', // traffic police-records column (049 in its lane)
+  '052': '2026-10-01',
+  '053': '2026-10-01',
+  '054': '2026-10-01',
+  '055': '2026-10-01',
+  '056': '2026-10-01',
+  '057': '2026-10-01',
+  '058': '2026-10-01',
+  '059': '2026-10-01',
   '051': '2026-10-01', // Korean-first traffic column (left turn vs straight motorcycle)
 };
 
@@ -123,7 +131,7 @@ const GAP_COLUMN_SLUGS = [
 const GAP = GAP_COLUMN_SLUGS.length;
 
 // 2026-09-30 expertise columns in the Korean archive (043, 046, 048): newest, in source order.
-const KO_EXPERTISE_SLUGS = archiveLeadSlugsFor('ko'); // 051 (2026-10-01) first, then the 2026-09-30 batch
+const KO_EXPERTISE_SLUGS = archiveLeadSlugsFor('ko'); // 051…059 (2026-10-01, source order) then the 2026-09-30 batch
 const KO_LEAD = KO_EXPERTISE_SLUGS.length;
 
 const EXPECTED_ARCHIVE_ORDER = [

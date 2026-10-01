@@ -8,7 +8,7 @@ date_display: "2026年10月1日"
 read_time: "約8分鐘閱讀"
 categories:
   - "台灣法律資訊"
-topic: "medical"
+topic: "litigation"
 featured_image: "../images/056-taiwan-medical-malpractice-foreign-patient/featured-01.webp"
 faq:
   - q: "人已經離境，還能向醫院要病歷嗎？"

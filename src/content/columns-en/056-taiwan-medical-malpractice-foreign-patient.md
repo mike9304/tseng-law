@@ -1,14 +1,14 @@
 ---
 title: "Injured at a Taiwan hospital: the chart, mediation, and a lawsuit"
-seoTitle: "Taiwan medical dispute for a foreign patient: records and claims"
-summary: "A foreign patient hurt at a Taiwan hospital or clinic can ask for a copy of the chart under the Medical Care Act, and, once there is a medical dispute, on the seven-working-day clock in the Medical Accident Prevention and Dispute Resolution Act. A civil case goes through mediation first. A criminal complaint does not itself award compensation."
+seoTitle: "Taiwan medical injury claims foreigners"
+summary: "Foreign patients hurt in Taiwan can request medical records, try mediation, then sue. Limitation periods and chart language often differ from home practice."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"
 read_time: "8 min read"
 categories:
   - "Taiwan Legal Information"
-topic: "medical"
+topic: "litigation"
 featured_image: "../images/056-taiwan-medical-malpractice-foreign-patient/featured-01.webp"
 faq:
   - q: "Can I get my Taiwan medical chart from abroad?"

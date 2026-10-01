@@ -1,14 +1,14 @@
 ---
 title: "A purchase dispute in Taiwan: where can a foreign buyer complain?"
-seoTitle: "Taiwan consumer complaints for foreign online and in-store buyers"
-summary: "For a dispute with a Taiwan seller, keep the order and payment record, complain to the business or local consumer service centre, and distinguish an online cancellation claim from an in-store return request."
+seoTitle: "Taiwan online purchase dispute remedies"
+summary: "Foreign buyers disputing a Taiwan online order should keep payment proof, complain to the seller, then use consumer-protection or small-claims paths in Taiwan."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"
 read_time: "4 min read"
 categories:
   - "Taiwan Legal Information"
-topic: "consumer"
+topic: "litigation"
 featured_image: "../images/058-taiwan-online-consumer-dispute-foreigners/featured-01.webp"
 faq:
   - q: "Can a tourist complain about a Taiwan purchase?"

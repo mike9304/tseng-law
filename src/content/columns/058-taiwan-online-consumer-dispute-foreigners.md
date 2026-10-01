@@ -8,7 +8,7 @@ date_display: "2026년 10월 1일"
 read_time: "4분 분량"
 categories:
   - "대만 법률정보"
-topic: "consumer"
+topic: "litigation"
 featured_image: "../images/058-taiwan-online-consumer-dispute-foreigners/featured-01.webp"
 faq:
   - q: "한국 관광객도 대만 소비자 민원을 넣을 수 있나요?"

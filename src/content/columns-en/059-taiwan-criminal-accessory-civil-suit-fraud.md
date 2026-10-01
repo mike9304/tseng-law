@@ -1,7 +1,7 @@
 ---
 title: "A Taiwan fraud loss: the damages claim inside the criminal case"
-seoTitle: "Taiwan ancillary civil action after an investment or crypto scam"
-summary: "A person harmed by an offense may file an ancillary civil action under Code of Criminal Procedure Article 487, but only after criminal proceedings have been instituted in court and before the close of oral argument in the second instance. That claim is not a provisional attachment. An acquittal, a 免訴 judgment, or a 不受理 judgment leads to dismissal unless the claimant requests transfer to the civil division. Fees generally apply to that transfer; eligibility for special relief under Article 54 of the Fraud Crime Hazard Prevention Act needs separate assessment."
+seoTitle: "Taiwan fraud ancillary civil claims"
+summary: "Victims of Taiwan fraud may file an ancillary civil claim inside the criminal case under the Code of Criminal Procedure, changing timing versus a separate suit."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"

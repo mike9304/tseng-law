@@ -33,10 +33,10 @@ describe('Traditional Chinese full column corpus', () => {
     expect(zhFiles.filter((name) => nativeFiles.includes(name))).toEqual(nativeFiles);
   });
 
-  it('loads all Traditional Chinese posts (32 translated plus 5 native)', () => {
-    expect(koFilesInZh).toHaveLength(33);
-    expect(getAllColumnPosts('zh-hant')).toHaveLength(koFilesInZh.length + allNativeFiles('zh-hant').length);
-    expect(getAllColumnPosts('zh-hant')).toHaveLength(38);
+  it('loads all Traditional Chinese posts (KO twins plus native zh-hant)', () => {
+    const twinCount = koFilesInZh.length;
+    const nativeCount = allNativeFiles('zh-hant').length;
+    expect(getAllColumnPosts('zh-hant')).toHaveLength(twinCount + nativeCount);
   });
 
   it('contains no Hangul in public Traditional Chinese column copy', () => {

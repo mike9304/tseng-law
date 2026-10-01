@@ -1,64 +1,322 @@
 {
   "reason": "API embedding calls are not authorized. These published columns use the existing public text-search index; genuine vectors may be backfilled only with future authorization.",
-  "recordedAt": "2026-09-27",
+  "recordedAt": "2026-10-01",
   "columns": [
-    { "locale": "ko", "slug": "taiwanese-spouse-divorce-agreement-registration" },
-    { "locale": "ko", "slug": "taiwanese-spouse-divorce-from-abroad" },
-    { "locale": "ko", "slug": "taiwanese-spouse-divorce-cross-border-parenting" },
-    { "locale": "en", "slug": "taiwanese-spouse-divorce-agreement-registration" },
-    { "locale": "en", "slug": "taiwanese-spouse-divorce-from-abroad" },
-    { "locale": "en", "slug": "taiwanese-spouse-divorce-cross-border-parenting" },
-    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-agreement-registration" },
-    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-from-abroad" },
-    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-cross-border-parenting" },
-    { "locale": "ko", "slug": "marrying-taiwanese-national-registration-checklist" },
-    { "locale": "ko", "slug": "baby-taiwan-nationality-birth-registration" },
-    { "locale": "en", "slug": "marrying-taiwanese-national-registration-checklist" },
-    { "locale": "en", "slug": "baby-taiwan-nationality-birth-registration" },
-    { "locale": "zh-hant", "slug": "marrying-taiwanese-national-registration-checklist" },
-    { "locale": "zh-hant", "slug": "baby-taiwan-nationality-birth-registration" },
-    { "locale": "ko", "slug": "taiwan-income-tax-residency" },
-    { "locale": "ko", "slug": "taiwan-estate-tax-foreign-decedent" },
-    { "locale": "ko", "slug": "foreign-heir-taiwan-succession-law-land" },
-    { "locale": "ko", "slug": "taiwan-employment-gold-card" },
-    { "locale": "ko", "slug": "taiwan-foreign-spouse-residence" },
-    { "locale": "ko", "slug": "taiwan-permanent-residence-aprc" },
-    { "locale": "ko", "slug": "enforce-foreign-judgment-in-taiwan" },
-    { "locale": "ko", "slug": "hire-taiwan-lawyer-from-abroad" },
-    { "locale": "en", "slug": "taiwan-income-tax-residency" },
-    { "locale": "en", "slug": "taiwan-estate-tax-foreign-decedent" },
-    { "locale": "en", "slug": "foreign-heir-taiwan-succession-law-land" },
-    { "locale": "en", "slug": "taiwan-employment-gold-card" },
-    { "locale": "en", "slug": "taiwan-foreign-spouse-residence" },
-    { "locale": "en", "slug": "taiwan-permanent-residence-aprc" },
-    { "locale": "en", "slug": "enforce-foreign-judgment-in-taiwan" },
-    { "locale": "en", "slug": "hire-taiwan-lawyer-from-abroad" },
-    { "locale": "zh-hant", "slug": "taiwan-income-tax-residency" },
-    { "locale": "zh-hant", "slug": "taiwan-estate-tax-foreign-decedent" },
-    { "locale": "zh-hant", "slug": "foreign-heir-taiwan-succession-law-land" },
-    { "locale": "zh-hant", "slug": "taiwan-employment-gold-card" },
-    { "locale": "zh-hant", "slug": "taiwan-foreign-spouse-residence" },
-    { "locale": "zh-hant", "slug": "taiwan-permanent-residence-aprc" },
-    { "locale": "zh-hant", "slug": "enforce-foreign-judgment-in-taiwan" },
-    { "locale": "zh-hant", "slug": "hire-taiwan-lawyer-from-abroad" },
-    { "locale": "en", "slug": "taiwan-exit-ban-foreigners" },
-    { "locale": "en", "slug": "taiwan-police-questioning-foreigner-rights" },
-    { "locale": "en", "slug": "foreign-professional-dismissed-taiwan" },
-    { "locale": "ko", "slug": "korea-crypto-tax-2027-taiwan-residents" },
-    { "locale": "ko", "slug": "taiwan-marital-property-regime-international-couples" },
-    { "locale": "ko", "slug": "taiwan-stocks-direct-investment-tax" },
-    { "locale": "en", "slug": "taiwan-crypto-exchange-vasp-dispute" },
-    { "locale": "en", "slug": "foreigner-buy-sell-taiwan-real-estate-tax" },
-    { "locale": "en", "slug": "taiwan-stocks-direct-investment-tax" },
-    { "locale": "zh-hant", "slug": "taiwan-crypto-exchange-vasp-dispute" },
-    { "locale": "zh-hant", "slug": "taiwan-investment-scam-recovery" },
-    { "locale": "zh-hant", "slug": "taiwan-payment-order-provisional-attachment" },
-    { "locale": "zh-hant", "slug": "taiwan-overseas-income-us-stocks-crypto-amt" },
-    { "locale": "zh-hant", "slug": "taiwan-marital-property-regime-international-couples" },
-    { "locale": "zh-hant", "slug": "foreigner-buy-sell-taiwan-real-estate-tax" },
-    { "locale": "ko", "slug": "taiwan-accident-police-records" },
-    { "locale": "zh-hant", "slug": "taiwan-accident-police-records" },
-    { "locale": "en", "slug": "taiwan-accident-police-records" },
-    { "locale": "ko", "slug": "taiwan-left-turn-vs-straight-motorcycle" }
+    {
+      "locale": "ko",
+      "slug": "taiwanese-spouse-divorce-agreement-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwanese-spouse-divorce-from-abroad"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwanese-spouse-divorce-cross-border-parenting"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwanese-spouse-divorce-agreement-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwanese-spouse-divorce-from-abroad"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwanese-spouse-divorce-cross-border-parenting"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwanese-spouse-divorce-agreement-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwanese-spouse-divorce-from-abroad"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwanese-spouse-divorce-cross-border-parenting"
+    },
+    {
+      "locale": "ko",
+      "slug": "marrying-taiwanese-national-registration-checklist"
+    },
+    {
+      "locale": "ko",
+      "slug": "baby-taiwan-nationality-birth-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "marrying-taiwanese-national-registration-checklist"
+    },
+    {
+      "locale": "en",
+      "slug": "baby-taiwan-nationality-birth-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "marrying-taiwanese-national-registration-checklist"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "baby-taiwan-nationality-birth-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-income-tax-residency"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-estate-tax-foreign-decedent"
+    },
+    {
+      "locale": "ko",
+      "slug": "foreign-heir-taiwan-succession-law-land"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-employment-gold-card"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-spouse-residence"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-permanent-residence-aprc"
+    },
+    {
+      "locale": "ko",
+      "slug": "enforce-foreign-judgment-in-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "hire-taiwan-lawyer-from-abroad"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-income-tax-residency"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-estate-tax-foreign-decedent"
+    },
+    {
+      "locale": "en",
+      "slug": "foreign-heir-taiwan-succession-law-land"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-employment-gold-card"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-spouse-residence"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-permanent-residence-aprc"
+    },
+    {
+      "locale": "en",
+      "slug": "enforce-foreign-judgment-in-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "hire-taiwan-lawyer-from-abroad"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-income-tax-residency"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-estate-tax-foreign-decedent"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "foreign-heir-taiwan-succession-law-land"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-employment-gold-card"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-spouse-residence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-permanent-residence-aprc"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "enforce-foreign-judgment-in-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "hire-taiwan-lawyer-from-abroad"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-exit-ban-foreigners"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-police-questioning-foreigner-rights"
+    },
+    {
+      "locale": "en",
+      "slug": "foreign-professional-dismissed-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "korea-crypto-tax-2027-taiwan-residents"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-marital-property-regime-international-couples"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-stocks-direct-investment-tax"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-crypto-exchange-vasp-dispute"
+    },
+    {
+      "locale": "en",
+      "slug": "foreigner-buy-sell-taiwan-real-estate-tax"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-stocks-direct-investment-tax"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-crypto-exchange-vasp-dispute"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-investment-scam-recovery"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-payment-order-provisional-attachment"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-overseas-income-us-stocks-crypto-amt"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-marital-property-regime-international-couples"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "foreigner-buy-sell-taiwan-real-estate-tax"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-accident-police-records"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-accident-police-records"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-accident-police-records"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-left-turn-vs-straight-motorcycle"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-commercial-court-jurisdiction-threshold"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-franchise-foreign-brand-entry"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-company-dissolution-liquidation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-medical-malpractice-foreign-patient"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-online-consumer-dispute-foreigners"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-criminal-accessory-civil-suit-fraud"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-commercial-court-jurisdiction-threshold"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-franchise-foreign-brand-entry"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-employer-labor-dispute-strike"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-company-dissolution-liquidation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-medical-malpractice-foreign-patient"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-cfc-overseas-subsidiary-tax"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-online-consumer-dispute-foreigners"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-criminal-accessory-civil-suit-fraud"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-commercial-court-jurisdiction-threshold"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-franchise-foreign-brand-entry"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-employer-labor-dispute-strike"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-company-dissolution-liquidation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-medical-malpractice-foreign-patient"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-cfc-overseas-subsidiary-tax"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-criminal-accessory-civil-suit-fraud"
+    }
   ]
 }

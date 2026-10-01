@@ -98,12 +98,51 @@ export const TRAFFIC_COLUMN_FILES_20261001 = {
   ko: ['051-taiwan-left-turn-vs-straight-motorcycle.md'],
 } as const;
 
+/**
+ * Expertise columns 052–059 (2026-10-01 weekday routine). Locale-specific like 041–048.
+ */
+export const EXPERTISE_COLUMN_FILES_20261001 = {
+  ko: [
+    '052-taiwan-commercial-court-jurisdiction-threshold.md',
+    '053-taiwan-franchise-foreign-brand-entry.md',
+    '055-taiwan-company-dissolution-liquidation.md',
+    '056-taiwan-medical-malpractice-foreign-patient.md',
+    '058-taiwan-online-consumer-dispute-foreigners.md',
+    '059-taiwan-criminal-accessory-civil-suit-fraud.md',
+  ],
+  en: [
+    '052-taiwan-commercial-court-jurisdiction-threshold.md',
+    '053-taiwan-franchise-foreign-brand-entry.md',
+    '054-taiwan-foreign-employer-labor-dispute-strike.md',
+    '055-taiwan-company-dissolution-liquidation.md',
+    '056-taiwan-medical-malpractice-foreign-patient.md',
+    '057-taiwan-cfc-overseas-subsidiary-tax.md',
+    '058-taiwan-online-consumer-dispute-foreigners.md',
+    '059-taiwan-criminal-accessory-civil-suit-fraud.md',
+  ],
+  ja: [
+    '054-taiwan-foreign-employer-labor-dispute-strike.md',
+    '055-taiwan-company-dissolution-liquidation.md',
+    '058-taiwan-online-consumer-dispute-foreigners.md',
+  ],
+  'zh-hant': [
+    '052-taiwan-commercial-court-jurisdiction-threshold.md',
+    '053-taiwan-franchise-foreign-brand-entry.md',
+    '054-taiwan-foreign-employer-labor-dispute-strike.md',
+    '055-taiwan-company-dissolution-liquidation.md',
+    '056-taiwan-medical-malpractice-foreign-patient.md',
+    '057-taiwan-cfc-overseas-subsidiary-tax.md',
+    '059-taiwan-criminal-accessory-civil-suit-fraud.md',
+  ],
+} as const;
+
 /** Every 2026-09-30 column file of `locale` (041–048 expertise + 050 traffic) plus the 2026-10-01 051, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...(TRAFFIC_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((EXPERTISE_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -119,19 +158,26 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first: the 2026-10-01 column(s), then the 2026-09-30
- * batch in source (filename) order. Use this for newest-first ordering assertions;
+ * Archive lead of `locale`, newest first by date: the 2026-10-01 column(s) in source
+ * (filename) order, then the 2026-09-30 batch in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const newer: readonly string[] = (TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
-  const newerSlugs = [...newer].sort().reverse().map(slugOf);
+  const newer: readonly string[] = [
+    ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((EXPERTISE_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
+  // Same calendar day → source (filename) order, matching sortColumnPostsNewestFirst.
+  const newerSlugs = [...newer].sort().map(slugOf);
   return [...newerSlugs, ...expertiseSlugsFor(locale).filter((slug) => !newerSlugs.includes(slug))];
 }
 
 /** Publication date of an archive-lead slug: 2026-10-01 for the newer column(s), otherwise 2026-09-30. */
 export function archiveLeadPublicationDate(slug: string): string {
-  const newer = Object.values(TRAFFIC_COLUMN_FILES_20261001).flat().map(slugOf);
+  const newer = [
+    ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
+    ...Object.values(EXPERTISE_COLUMN_FILES_20261001),
+  ].flat().map(slugOf);
   return newer.includes(slug) ? '2026-10-01' : '2026-09-30';
 }
 
@@ -158,6 +204,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(EXPERTISE_COLUMN_FILES_20260930),
     ...Object.values(TRAFFIC_COLUMN_FILES_20260930),
     ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
+    ...Object.values(EXPERTISE_COLUMN_FILES_20261001),
   ].flat().map(slugOf),
 );
 

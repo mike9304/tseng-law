@@ -8,7 +8,7 @@ date_display: "2026年10月1日"
 read_time: "約4分"
 categories:
   - "台湾法律情報"
-topic: "consumer"
+topic: "litigation"
 featured_image: "../images/058-taiwan-online-consumer-dispute-foreigners/featured-01.webp"
 faq:
   - q: "旅行中に台湾で買った物でも申訴できますか。"

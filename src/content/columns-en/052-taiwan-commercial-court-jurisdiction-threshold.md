@@ -1,7 +1,7 @@
 ---
 title: "Taiwan's Commercial Court now reaches more private-company disputes"
-seoTitle: "Taiwan Commercial Court jurisdiction from October 2026"
-summary: "From October 1, 2026, Taiwan's Commercial Court has lower monetary and capital thresholds and a new route for some private-company shareholder disputes. The claim and the company's status still determine the court."
+seoTitle: "Taiwan Commercial Court thresholds 2026"
+summary: "From 1 Oct 2026 Taiwan's Commercial Court uses lower NT$ thresholds for some private-company shareholder disputes; the claim type still decides the forum."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"

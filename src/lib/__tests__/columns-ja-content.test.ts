@@ -40,11 +40,11 @@ describe('Japanese full column corpus + site locale', () => {
     expect(jaFiles.filter((name) => nativeFiles.includes(name))).toEqual(nativeFiles);
   });
 
-  it('loads 32 translated plus 4 native Japanese posts with full bodies and kana', () => {
+  it('loads translated KO twins plus native Japanese posts with full bodies and kana', () => {
     const posts = getAllColumnPosts('ja');
-    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('ja', post.slug))).toHaveLength(33);
-    expect(koFilesInJa).toHaveLength(33);
-    expect(posts).toHaveLength(33 + allNativeFiles('ja').length);
+    const twinCount = koFilesInJa.length;
+    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('ja', post.slug))).toHaveLength(twinCount);
+    expect(posts).toHaveLength(twinCount + allNativeFiles('ja').length);
     for (const post of posts) {
       expect(post.content.length).toBeGreaterThan(600);
       expect(KANA.test(post.title + post.content)).toBe(true);

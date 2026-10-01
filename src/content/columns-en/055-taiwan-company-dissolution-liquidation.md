@@ -1,7 +1,7 @@
 ---
 title: "Closing a Taiwan subsidiary or branch: when can the remaining cash leave?"
-seoTitle: "Taiwan company dissolution and liquidation for foreign parents"
-summary: "A Taiwan company's dissolution registration starts liquidation; it does not clear creditors or tax. A foreign company's Taiwan branch follows a different cancellation rule, and local debts survive."
+seoTitle: "Taiwan company dissolution liquidation"
+summary: "Dissolution registration starts Taiwan liquidation; it does not clear tax, labor, or creditor claims. Foreign parents need a checklist before remitting capital."
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "October 1, 2026"

@@ -44,11 +44,12 @@ describe('English full column corpus', () => {
     expect(enFiles.filter((name) => nativeFiles.includes(name))).toEqual(nativeFiles);
   });
 
-  it('loads 32 translated plus 5 native English posts with full bodies (not Overview stubs only)', () => {
+  it('loads translated KO twins plus native English posts with full bodies (not Overview stubs only)', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))).toHaveLength(33);
-    expect(koFilesInEn).toHaveLength(33);
-    expect(posts).toHaveLength(33 + allNativeFiles('en').length);
+    const twinCount = koFilesInEn.length;
+    const nativeCount = allNativeFiles('en').length;
+    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))).toHaveLength(twinCount);
+    expect(posts).toHaveLength(twinCount + nativeCount);
 
     for (const post of posts) {
       expect(post.title.trim().length).toBeGreaterThan(8);

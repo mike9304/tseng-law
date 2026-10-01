@@ -46,3 +46,21 @@ Evidence root: `/Users/son7/tseng-zh-hant-pass2-20261001/design/`.
 - Independent read-only GPT-6 Astra xhigh review: APPROVE after the copy-preservation and focus-order findings above were fixed. Review record: `codex/ASTRA-BATCH-1-REVIEW.md`. Codex performed the final QA/build and production-build screenshot checks.
 
 Production rollout and post-deploy verification remain a separate user-directed step. A custom authored home is deliberately outside the stock presentation admission rule.
+
+## Astra B1 R1 rejection remediation — 2026-10-01
+
+The later `design/codex/VERDICT-ASTRA-B1-R1.md` returned REJECT and supersedes the earlier independent APPROVE recorded above. This follow-up implements its one MUST and both SHOULD findings. Codex performed the final verification for this revision; no new external Astra verdict is claimed.
+
+| Finding | Verified cause | Change | Evidence |
+| --- | --- | --- | --- |
+| MUST: invisible consultation-button focus | Real Tab navigation on all six details at 1440/390 produced a 2px green outline on the identical green panel, contrast 1:1. | Scoped `:focus-visible` rule: 3px `#f5dfad` outline, 4px offset. | All 12 production-build views pass real Tab navigation, visible focus, viewport visibility and contrast checks. Measured contrast 9.79497:1. `baseline-focus-review-r1.json`, `after-focus-review-r1.json`, representative `baseline-focus-*` / `after-focus-*` PNGs. |
+| SHOULD: narrow mobile summary copy | At 390px the text area was 218px, with 72px horizontal padding and inline numbering. | Move numbers above the mobile text; reduce horizontal padding to 32px. Desktop card layout is unchanged. | Text width is 258px on all six details, a 40px increase. Representative full-page after PNGs and `after-keypoints-390.png` for investment/civil/family were visually inspected. |
+| SHOULD: private CSS-class dependencies | The zh-hant modules selected shared component internals through six CSS-module class-name fragments. | Add explicit `data-hero-slot` / `data-page-header-slot` attributes and replace all fragment selectors, including responsive rules. | No class-fragment selectors remain in the two modules. Home/directory heights and headings are unchanged. Other-locale styles remain scoped out. |
+
+Fresh `npm run qa` passed with exit 0: 1,358 files / 13,284 tests, existing 14 skipped and 1 todo, type checking, ESLint and builder route guards. No tests or assertions were changed. Fresh `npm run build` passed with exit 0; the existing `ContactEditorial.module.css` autoprefixer warning remains the only CSS warning. Logs: `codex/qa-r1.log`, `codex/build-r1.log`.
+
+The new `.next-build` production server used the existing isolated file-backed fixture. Operating before screenshots were preserved. All 10 zh-hant and 30 ko/en/ja full-page after screenshots were renewed at 1440×900 / 390×844. All 40 return 200, contain one H1, have no page errors or horizontal overflow. All 30 other-locale views match baseline H1, section markup and document height; 8 PNGs are pixel-identical. Remaining pixel differences were inspected and confined to the existing browser-language suggestion overlay and home FAQ-heading capture state; the shared changes add attributes only. Metrics: `codex/visual-verification-r1.json`. Functional smoke passes home search/navigation/FAQ/offices, service-directory links, and all six details at 1440/768/390: `codex/browser-smoke-r1.log`, `codex/browser-interactions.json`.
+
+Supplemental long key-point element screenshots temporarily hide the fixed header during capture so it cannot obscure the middle of the extracted section. Full-page and focus screenshots retain the actual header. Reproduction scripts are `codex/focus-review-r1.mjs`, `codex/keypoint-capture-r1.mjs` and `codex/verify-r1-captures.mjs`.
+
+Public copy, fixed strings, legal conditions, addresses, source data, production storage, other worktrees and batch 4/5 implementations were not changed. Build-generated `next-env.d.ts` is excluded. No push or deployment is authorized by this revision.

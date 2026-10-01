@@ -48,7 +48,7 @@ export default function PageHeader({
   return (
     <section className={`section page-header ${children ? 'page-header--with-content' : 'page-header--compact'} ${styles.pageHeader}`}>
       <div className="container">
-        <div className={styles.pageHeaderCopy}>
+        <div className={styles.pageHeaderCopy} data-page-header-slot="copy">
           <Breadcrumbs locale={locale} current={title} />
           {label.trim().toLocaleLowerCase() !== title.trim().toLocaleLowerCase() ? (
             <SectionLabel data-builder-surface-key="section-label">{label}</SectionLabel>
@@ -62,7 +62,7 @@ export default function PageHeader({
             </p>
           ) : null}
         </div>
-        {children ? <div className={styles.pageHeaderChildren}>{children}</div> : null}
+        {children ? <div className={styles.pageHeaderChildren} data-page-header-slot="children">{children}</div> : null}
       </div>
     </section>
   );

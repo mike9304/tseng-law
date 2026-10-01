@@ -50,7 +50,7 @@
   margin-bottom: 24px;
 }
 .home:global(#zh-hant-home) :global(.hero .hero-subtitle) { max-width: 30em; font-size: 18px; line-height: 1.85; }
-.home:global(#zh-hant-home) :global(.hero [class*='byline']) {
+.home:global(#zh-hant-home) :global(.hero [data-hero-slot='byline']) {
   display: inline-flex;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -67,7 +67,7 @@
 }
 .home:global(#zh-hant-home) :global(.hero .locale-home-paths) { gap: 8px; }
 .home:global(#zh-hant-home) :global(.hero .en-home-path-button) { background: transparent; border-color: #c5cec5; }
-.home:global(#zh-hant-home) :global(.hero [class*='heroMediaFrame']) {
+.home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame']) {
   aspect-ratio: 5 / 5.4;
   height: auto;
   min-height: 400px;
@@ -85,7 +85,7 @@
   border-block: 1px solid #d8dfd5;
   background: #fff;
 }
-.home:global(#zh-hant-home) :global(.hero [class*='searchDropdown']) {
+.home:global(#zh-hant-home) :global(.hero [data-hero-slot='search-dropdown']) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
   gap: 16px 40px;
@@ -93,7 +93,7 @@
   max-width: none;
   grid-template-rows: auto auto;
 }
-.home:global(#zh-hant-home) :global(.hero [class*='searchLabel']) { grid-column: 1; margin: 0; font-size: 18px; font-weight: 600; }
+.home:global(#zh-hant-home) :global(.hero [data-hero-slot='search-label']) { grid-column: 1; margin: 0; font-size: 18px; font-weight: 600; }
 .home:global(#zh-hant-home) :global(.hero .hero-search-bar) { grid-column: 1; margin: 0; min-height: 54px; }
 .home:global(#zh-hant-home) :global(.hero .hero-quick-menu) { position: static; display: flex; flex-wrap: wrap; grid-column: 2; grid-row: 1 / span 2; margin: 0; gap: 8px; width: 100%; opacity: 1; visibility: visible; border: none; border-radius: 0; box-shadow: none; background: transparent; overflow: visible; max-height: none; animation: none; }
 .home:global(#zh-hant-home) :global(.hero .hero-quick-menu a) { min-height: 44px; padding: 10px 16px; border: 1px solid #dbe1d7; border-radius: 4px; }
@@ -191,7 +191,7 @@
 
 @media (max-width: 1000px) {
   .home:global(#zh-hant-home) :global(.hero .container.hero-inner) { gap: 32px; }
-  .home:global(#zh-hant-home) :global(.hero [class*='heroMediaFrame']) { min-height: 360px; }
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame']) { min-height: 360px; }
   .home:global(#zh-hant-home) :global(#practice > .container) { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .home:global(#zh-hant-home) :global(#practice .services-card-grid) { grid-column: 1; grid-row: auto; margin-top: 16px; }
 }
@@ -204,10 +204,10 @@
   .home:global(#zh-hant-home) :global(.hero .hero-copy) { padding: 0; }
   .home:global(#zh-hant-home) :global(.hero .hero-title) { font-size: 40px; line-height: 1.38; margin-bottom: 20px; }
   .home:global(#zh-hant-home) :global(.hero .hero-subtitle) { font-size: 16px; line-height: 1.85; }
-  .home:global(#zh-hant-home) :global(.hero [class*='heroMediaFrame']) { min-height: 0; aspect-ratio: 16 / 10; border-radius: 4px 44px 4px 4px; box-shadow: 8px 8px 0 #e5e9df; }
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame']) { min-height: 0; aspect-ratio: 16 / 10; border-radius: 4px 44px 4px 4px; box-shadow: 8px 8px 0 #e5e9df; }
   .home:global(#zh-hant-home) :global(.hero .hero-search-wrapper) { padding-block: 24px; }
-  .home:global(#zh-hant-home) :global(.hero [class*='searchDropdown']) { display: block; }
-  .home:global(#zh-hant-home) :global(.hero [class*='searchLabel']) { font-size: 17px; margin-bottom: 12px; }
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='search-dropdown']) { display: block; }
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='search-label']) { font-size: 17px; margin-bottom: 12px; }
   .home:global(#zh-hant-home) :global(.hero .hero-quick-menu) { margin-top: 16px; }
   .home:global(#zh-hant-home) :global(.hero .hero-quick-menu a) { padding: 10px 12px; font-size: 13px; }
   .trustFacts { margin-top: 24px; gap: 8px 16px; font-size: 12px; }

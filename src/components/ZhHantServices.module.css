@@ -10,8 +10,8 @@
 .root:global(#zh-hant-services) :global(.container) { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: 32px; }
 .root:global(#zh-hant-services) :global(.page-header) { background: #f5f3ed; padding: 56px 0; border-bottom: 1px solid #dbe1d7; }
 .root:global(#zh-hant-services) :global(.page-header > .container) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 48px; align-items: center; }
-.root:global(#zh-hant-services) :global(.page-header [class*='pageHeaderCopy']) { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
-.root:global(#zh-hant-services) :global(.page-header [class*='pageHeaderChildren']) { margin: 0; display: contents; }
+.root:global(#zh-hant-services) :global(.page-header [data-page-header-slot='copy']) { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.root:global(#zh-hant-services) :global(.page-header [data-page-header-slot='children']) { margin: 0; display: contents; }
 .root:global(#zh-hant-services) :global(.page-header-title) { font-size: clamp(36px, 4.3vw, 60px); line-height: 1.35; letter-spacing: 0.025em; margin-bottom: 20px; }
 .root:global(#zh-hant-services) :global(.section-lede) { font-size: 18px; line-height: 1.85; max-width: 30em; margin: 0; }
 .root:global(#zh-hant-services) :global(.section-label) { margin-block: 20px; }

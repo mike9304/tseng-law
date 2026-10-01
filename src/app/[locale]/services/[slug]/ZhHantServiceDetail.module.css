@@ -44,6 +44,7 @@
 .root .contactPanel :global(.svc-sidebar-title) { font-size: 24px; color: #fff; }
 .root .contactPanel :global(.svc-sidebar-text) { color: #e1eade; font-size: 15px; line-height: 1.85; }
 .root .contactPanel :global(a.svc-sidebar-btn) { min-height: 52px; background: #eef3e8; color: #16382d; border-color: #eef3e8; border-radius: 4px; }
+.root .contactPanel :global(a.svc-sidebar-btn:focus-visible) { outline: 3px solid #f5dfad; outline-offset: 4px; }
 .root :global(.svc-sidebar-card--attorney) { padding: 0; background: #fff; }
 .root :global(.svc-related-link) { display: block; line-height: 1.75; padding-block: 10px; }
 
@@ -72,8 +73,8 @@
   .root :global(.container.svc-container) { padding-inline: 24px; gap: 32px; }
   .root :global(.svc-body) { font-size: 16px; line-height: 1.85; }
   .root :global(p.svc-intro) { font-size: 17px; line-height: 1.85; }
-  .root :global(.svc-keypoints-list li) { padding: 20px 20px 20px 52px; font-size: 16px; }
-  .root :global(.svc-keypoints-list li::before) { top: 20px; left: 18px; font-size: 12px; }
+  .root :global(.svc-keypoints-list li) { padding: 20px 16px; font-size: 16px; }
+  .root :global(.svc-keypoints-list li::before) { position: static; display: block; margin-bottom: 8px; font-size: 12px; }
   .root :global(.svc-keypoints-title),
   .root :global(.svc-columns-heading) { font-size: 26px; }
   .root :global(.svc-columns-grid) { grid-template-columns: minmax(0, 1fr); gap: 20px; }

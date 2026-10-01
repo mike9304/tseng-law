@@ -273,22 +273,22 @@ export default function HeroSearch({
               <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
             </p>
             {lead ? (
-              <Link href={profilePath} className={styles.byline}>
+              <Link href={profilePath} className={styles.byline} data-hero-slot="byline">
                 <strong>{lead.name}</strong> · {lead.role}
               </Link>
             ) : null}
             {ctaGroup('light')}
             {trustContent ?? <HeroTrustStrip locale={locale} tone="light" />}
           </div>
-          <div className={styles.heroMediaFrame}>
+          <div className={styles.heroMediaFrame} data-hero-slot="media-frame">
             <HeroMediaBackground locale={locale} />
           </div>
         </div>
         <div className={`hero-search-wrapper ${styles.searchBand}`}>
           <div className="container">
-            <div ref={wrapRef} className={`hero-search-dropdown-wrap ${styles.searchDropdown}`}>
+            <div ref={wrapRef} className={`hero-search-dropdown-wrap ${styles.searchDropdown}`} data-hero-slot="search-dropdown">
               <div data-builder-node-key="search" style={{ display: 'contents' }}>
-                <label htmlFor={searchInputId} className={styles.searchLabel}>
+                <label htmlFor={searchInputId} className={styles.searchLabel} data-hero-slot="search-label">
                   {hero.searchPlaceholder}
                 </label>
                 {searchForm(false)}

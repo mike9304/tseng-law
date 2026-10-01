@@ -81,7 +81,7 @@ const internalTargets = [
 ];
 const disclaimer =
   '本文僅供一般法律資訊與教育用途，旨在說明台灣最低服務年限約定、培訓費用及預付性給付的返還，以及離職預告等問題，不構成針對任何個別勞動事件的法律意見。約定的效力與責任範圍，可能因契約類型與條款、實際培訓內容與成本、補償的目的與告知、已服務期間、契約終止原因及相關證據而異。作成離職意思表示、扣發工資、簽署返還協議或處理爭議前，仍應查核最新官方資料並確認個案具體事實。';
-const author = '**曾雋崴律師（Wei Tseng）**';
+const author = '曾雋崴律師（Wei Tseng）';
 const exactEnding = `- ${internalLinks[2]}
 
 ---
@@ -446,7 +446,7 @@ describe('Traditional Chinese labor column 014 — minimum-service-period clause
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      '71458ca78e9a375683d5b41bcc5209c943f1b071f0a4b14a8faea596b1485e70',
+      '32000684d23eebdc9792071805ab62fa47ae47f6b034b1bd2fd0d148a61fa3fb',
     );
   });
 

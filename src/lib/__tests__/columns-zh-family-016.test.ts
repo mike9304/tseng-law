@@ -75,7 +75,7 @@ const internalLinks = [
 ];
 const disclaimer =
   '本文旨在一般性說明台灣的繼承、夫妻財產制、親權及未成年人監護制度，僅供法律資訊與教育參考，不構成對任何個別繼承或家事事件的法律意見。實際適用的法律、程序及結果，可能因繼承人範圍、遺囑、財產與債務、夫妻財產制、既有法院裁判及涉外因素而異。計算拋棄繼承、稅務申報等期限或處分財產前，仍應查核最新官方資料及個案事實。';
-const author = '**曾雋崴律師（Wei Tseng）**';
+const author = '曾雋崴律師（Wei Tseng）';
 
 function firstParagraphAfter(content: string, heading: string) {
   return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
@@ -301,7 +301,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       `${raw.slice(0, raw.indexOf(disclaimer))}${disclaimer}\n\n${author}`,
     );
     expect(raw.trimEnd()).toMatch(
-      /個案事實。\n\n\*\*曾雋崴律師（Wei Tseng）\*\*$/,
+      /個案事實。\n\n曾雋崴律師（Wei Tseng）$/,
     );
   });
 
@@ -321,7 +321,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      '5f63bf7755b33ad07bccf1c8c0731f428384d4efe63fab9d245b990b467bb35d',
+      '3e350231f8a5bb279f58a05bd1b9b159257e10f32c5dd09db5bf0d172634295b',
     );
   });
 

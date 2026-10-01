@@ -1,5 +1,6 @@
-import { permanentRedirect } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 export default function RootPage() {
-  permanentRedirect('/ko');
+  // Middleware answers `/` from Accept-Language; this only runs if middleware is bypassed.
+  redirect('/ko');
 }

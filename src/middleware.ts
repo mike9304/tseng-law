@@ -4,6 +4,7 @@ import {
   loadActiveRedirects,
 } from '@/lib/builder/seo/redirects-edge';
 import { resolveGuidanceMiddlewareRewrite } from '@/lib/public-guidance';
+import { negotiateRootLocale } from '@/lib/root-locale-negotiation';
 
 type BasicCredential = {
   readonly username: string;
@@ -264,8 +265,26 @@ async function handlePublicRedirect(request: NextRequest): Promise<NextResponse 
   return NextResponse.redirect(target, match.type);
 }
 
+/**
+ * The bare domain opens the visitor's browser language (Accept-Language), falling back to `/ko`.
+ * Temporary (307) and uncacheable on purpose: the target differs per visitor, and a permanent
+ * redirect would pin a browser to its first answer.
+ */
+function rootLocaleRedirect(request: NextRequest): NextResponse {
+  const locale = negotiateRootLocale(request.headers.get('accept-language'));
+  const target = new URL(`/${locale}${request.nextUrl.search}`, request.nextUrl.origin);
+  const response = NextResponse.redirect(target, 307);
+  response.headers.set('Vary', 'Accept-Language');
+  response.headers.set('Cache-Control', 'private, no-store');
+  return response;
+}
+
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+
+  if (pathname === '/') {
+    return rootLocaleRedirect(request);
+  }
 
   if (CONSULTATION_ADMIN_PATH_RE.test(pathname)) {
     return handleAdminAuth(request, consultationAuthConfig(), 'Hojeong consultation admin');

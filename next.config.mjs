@@ -194,11 +194,7 @@ const nextConfig = {
 
     return [
       ...semiconductorBoardRedirects,
-      {
-        source: '/',
-        destination: '/ko',
-        permanent: true
-      },
+      // `/` is negotiated per visitor in middleware (Accept-Language → locale, fallback /ko).
       {
         source: '/:path*',
         has: [

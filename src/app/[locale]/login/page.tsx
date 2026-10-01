@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import MemberAuthClient from '@/components/members/MemberAuthClient';
+import EnPageShell from '@/components/en-design/EnPageShell';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import { resolveSafeNextPath } from '@/lib/safe-next';
@@ -46,5 +47,7 @@ export default async function MemberLoginPage(
   const member = await getCurrentSiteMember();
   if (member) redirect(nextPath);
 
-  return <MemberAuthClient locale={locale} nextPath={nextPath} />;
+  const body = <MemberAuthClient locale={locale} nextPath={nextPath} />;
+  // en redesign (Opus 5.5 en lane): the same sign-in form in the en wrapper (en type and ink palette).
+  return locale === 'en' ? <EnPageShell page="login">{body}</EnPageShell> : body;
 }

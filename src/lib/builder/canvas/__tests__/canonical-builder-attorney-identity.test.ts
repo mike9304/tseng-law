@@ -38,7 +38,7 @@ describe('canonical builder attorney identity', () => {
 
     expect(productCopy).toContain('曾雋崴律師');
     expect(productCopy).toContain('曾雋崴律師審閱');
-    expect(seedFixture).toContain('曾雋崴 · 合夥律師');
+    expect(seedFixture).toContain('曾雋崴 · 主持律師');
     expect(seedFixture).toContain('wei-tseng-official%2Epng');
     expect(headerFixture).toContain('曾雋崴(준외)');
     expect(datasetFixture).toContain('/images/team/wei-tseng-official.png');

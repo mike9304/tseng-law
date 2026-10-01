@@ -122,7 +122,7 @@ describe('/api/booking/staff', () => {
       {
         staffId: 'staff-tseng',
         name: { ko: '증위명 변호사', 'zh-hant': '曾偉銘 律師', en: 'Attorney Tseng Wei-Ming' },
-        title: { ko: '대표 변호사', 'zh-hant': '主持律師', en: 'Managing Attorney' },
+        title: { ko: '대표 변호사', 'zh-hant': '合夥律師', en: 'Managing Attorney' },
         bio: { ko: '소개', 'zh-hant': '介紹', en: 'Bio' },
         isActive: true,
         createdAt: '2026-06-03T00:00:00.000Z',
@@ -143,7 +143,7 @@ describe('/api/booking/staff', () => {
     expect(payload.staff.map((member) => member.staffId)).toEqual(['staff-tseng']);
     expect(payload.staff[0]?.displayName).toBe('증준외');
     expect(payload.staff[0]?.displayTitle).toBe('파트너 변호사');
-    expect(payload.staff[0]?.title).toEqual({ ko: '파트너 변호사', 'zh-hant': '合夥律師', en: 'Partner' });
+    expect(payload.staff[0]?.title).toEqual({ ko: '파트너 변호사', 'zh-hant': '主持律師', en: 'Partner' });
     expect(payload.staff[0]?.name).toEqual({
       ko: '증준외',
       'zh-hant': '曾雋崴',

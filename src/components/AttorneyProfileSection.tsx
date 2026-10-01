@@ -26,7 +26,7 @@ const labels = {
     experience: '經歷',
     fullProfile: '完整簡介',
     consult: '電子郵件諮詢',
-    representative: '合夥律師',
+    representative: '主持律師',
     teamTitle: '團隊成員',
     partnerTitle: '合作會計師',
   },

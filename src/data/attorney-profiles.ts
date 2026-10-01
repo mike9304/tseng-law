@@ -129,7 +129,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       slug: 'wei-tseng',
       name: '曾雋崴律師',
       alternateNames: ['曾雋崴', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
-      role: '台灣律師 · 合夥律師',
+      role: '台灣律師 · 主持律師',
       title: '曾雋崴台灣律師簡介',
       description:
         '台灣律師曾雋崴的學經歷、主要服務領域與代表案件，涵蓋在台公司設立、投資、訴訟、簽證及智慧財產等法律事務。事務所提供韓文、中文、日文、英文諮詢。',

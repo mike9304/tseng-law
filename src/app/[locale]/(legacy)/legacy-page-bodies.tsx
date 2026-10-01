@@ -148,7 +148,7 @@ function buildAttorneyQualificationSentence(locale: SiteLocale, name: string, fi
     case 'ko':
       return `${name}는 대만 변호사 자격을 보유한 ${firm}의 파트너 변호사입니다.`;
     case 'zh-hant':
-      return `${name}為具備台灣律師資格的${firm}合夥律師。`;
+      return `${name}為具備台灣律師資格的${firm}主持律師。`;
     case 'ja':
       return `${name}は、台湾弁護士の資格を有する${firm}のパートナー弁護士です。`;
     default:

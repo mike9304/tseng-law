@@ -122,7 +122,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         id: 'tseng-junwei',
         profileSlug: 'wei-tseng',
         name: '曾雋崴',
-        role: '合夥律師',
+        role: '主持律師',
         email: 'wei@hoveringlaw.com.tw',
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',

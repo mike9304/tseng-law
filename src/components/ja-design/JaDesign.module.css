@@ -135,6 +135,9 @@
    !important because several shared components set their own (often white) rings. The service and
    column heroes still carry data-tone="dark" from the shared markup but are paper in ja. */
 .root:global([data-ja-design]) :focus-visible { outline: 3px solid var(--ja-green) !important; outline-offset: 3px !important; }
+/* Filled buttons have white text; without a resting outline colour the first focused frame used
+   currentColor (white) before the green ring resolved. */
+.root:global([data-ja-design]) :global(.button) { outline-color: var(--ja-green); }
 .root:global([data-ja-design]) :global([data-tone='dark']) :focus-visible { outline-color: #fff !important; }
 .root:global([data-ja-design]) :global(.svc-hero[data-tone='dark']) :focus-visible,
 .root:global([data-ja-design]) :global(.blog-hero[data-tone='dark']) :focus-visible { outline-color: var(--ja-green) !important; }

@@ -395,10 +395,14 @@ describe('the existing four languages keep their exact home markup', () => {
       // zh-hant (2026-10-01, Taiwanese readers first): services, then practical columns, then the
       // attorney and cases; trust facts (stats) follow the cases. The decorative heritage interlude
       // is not part of the zh-hant home.
-      expectLandmarksOnce(markup, locale, locale === 'zh-hant' ? ['heritage'] : []);
+      // ja design (2026-10-01): needs block first, then practice areas and the pinned column
+      // archive; no heritage interlude on the ja home either.
+      expectLandmarksOnce(markup, locale, locale === 'zh-hant' || locale === 'ja' ? ['heritage'] : []);
       expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'zh-hant'
         ? ['hero', 'practice', 'insights', 'about', 'results', 'stats', 'faq', 'offices', 'contact']
-        : EXPECTED_SEQUENCE);
+        : locale === 'ja'
+          ? ['hero', 'practice', 'insights', 'about', 'stats', 'results', 'faq', 'offices', 'contact']
+          : EXPECTED_SEQUENCE);
     }
   });
 });

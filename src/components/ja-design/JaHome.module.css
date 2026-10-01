@@ -44,6 +44,9 @@
 .root:global(#ja-home) :global(#hero .hero-search-wrapper) { background: var(--ja-paper-2); border-top: 1px solid var(--ja-line); border-bottom: 5px double var(--ja-line-strong); }
 .root:global(#ja-home) :global(#hero .hero-search-input) { border-radius: 0; }
 .root:global(#ja-home) :global(#hero .hero-search-btn) { border-radius: 0; }
+/* The search suggestions stay open after keyboard focus leaves the search box and would cover the
+   needs index right below the hero; on ja they show only while focus is inside the search area. */
+.root:global(#ja-home) :global(#hero .hero-search-dropdown-wrap:not(:focus-within) .hero-quick-menu) { display: none; }
 
 /* ---------- Needs: 日系企業 entry block as a numbered index ---------- */
 .root:global(#ja-home) :global([data-overseas-entry='full']) { background: #fff; padding-bottom: 24px; }

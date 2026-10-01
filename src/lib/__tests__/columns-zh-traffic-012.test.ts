@@ -31,7 +31,7 @@ const supplementaryLabel = '超車法規與步驟圖解';
 const headings = [
   '道路交通安全規則第101條的超車要件',
   '原文介紹的匿名事故案例',
-  '判斷超車事故責任時應確認的事項',
+  '超車前的路況判斷與示意義務',
 ] as const;
 const internalLinks = [
   {
@@ -50,7 +50,7 @@ const internalLinks = [
 const disclaimer =
   '本文僅提供台灣超車規則與事故責任判斷的一般法律資訊，不構成特定案件的法律意見或結果保證。實際責任可能因事故地點、車輛動態、速度、燈號、證據、鑑定結果及現行法規而異，具體案件仍應依相關資料個別分析。';
 
-const EXPECTED_VISIBLE_HAN = 1_052;
+const EXPECTED_VISIBLE_HAN = 1_034;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -153,7 +153,7 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
       '機車欠缺煞車餘裕，因而與2號車碰撞。',
       'B頭部受重傷，當場死亡；A失去意識，被送往醫院。',
       'A與B的家屬起初認為，2號車急速變換車道是碰撞的主要原因。',
-      '案件進入訴訟，過程中並進行多次事故鑑定。',
+      '案件進入訴訟，期間進行了多次事故鑑定。',
       '依原文的案例敘述，鑑定認定A為本件碰撞的主要肇因。',
       '該結論僅限於本件事實。',
       '並不表示任何單一因素必然決定過失歸屬。',

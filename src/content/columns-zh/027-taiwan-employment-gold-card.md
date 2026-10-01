@@ -22,7 +22,7 @@ author: "legal-ai-assistant"
 
 # 就業金卡由申請人自行向移民署申請
 
-想在台灣工作，但還沒有雇主，或想自己準備文件的人，可以看看就業金卡。就業金卡由申請人逕向內政部移民署申請，資格依政府公布的各專業領域標準審查。薪資所得稅的減免常和金卡放在一起介紹，但它是另一套規定。申請就業金卡與申請租稅優惠，是兩件須分別辦理的事。
+還沒有雇主，或想自己準備文件來台工作的人，可以考慮就業金卡。就業金卡由申請人逕向內政部移民署申請，資格依政府公布的各專業領域標準審查。薪資所得稅的減免常和金卡放在一起介紹，但適用另一套規定，兩項申請須分別辦理。
 
 ## 就業金卡包含哪些許可？
 
@@ -30,7 +30,7 @@ author: "legal-ai-assistant"
 
 [第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=4)所稱外國特定專業人才，是具有中央目的事業主管機關公告所需的科技、數位、經濟、教育、文化藝術、運動、金融、法律、建築設計、國防、環境、生技等領域特殊專長的外國專業人才，或經主管機關會商相關機關認定具有特殊專長的人。同條也定義了專業工作的範圍。
 
-[金卡辦公室的介紹](https://goldcard.nat.gov.tw/en/about/)將就業金卡介紹為開放式工作許可：不必先被聘用，也不由雇主提出申請，持卡人可以找工作、就任、轉換工作。領域頁面若要求聘僱契約或過去的任職證明，那些文件是用來證明申請人符合該領域的資格。
+[金卡辦公室的介紹](https://goldcard.nat.gov.tw/en/about/)稱就業金卡為開放式工作許可：不必先被聘用，也不由雇主提出申請，持卡人可以找工作、就任、轉換工作。領域頁面若要求聘僱契約或過去的任職證明，那些文件是用來證明申請人符合該領域的資格。
 
 [申請說明](https://goldcard.nat.gov.tw/en/application/)寫明，持外國護照者，或持中華民國護照且無戶籍者，可以申請。該頁說明有戶籍或國民身分證的人不得申請。無戶籍者在國內申請，須以外國護照入境。同一頁說明，卡片在台灣的移民署服務站領取；從國外進來的人，於入境後三十日內領取。出發前宜再次確認領卡規定；提出金卡申請，不會暫停計算免簽證或短期停留的期限。該頁並提醒，停留期限內辦不完的，仍須出境再入境。
 
@@ -62,7 +62,7 @@ author: "legal-ai-assistant"
 
 [第22條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=22)自一百零七年度起，對未設戶籍、因工作首次核准居留且符合一定條件的外國特定專業人才，自首次居留滿一百八十三日且薪資所得超過新臺幣三百萬元的課稅年度起五年內，各該居留滿一百八十三日的課稅年度，超過三百萬元部分的半數不計入綜合所得總額，且不適用所得基本稅額條例第12條第1項第1款。其中一種情形，是取得就業金卡並在有效期間受聘從事專業工作。
 
-第20條是直系尊親屬的停留簽證。辦公室[英文問答](https://goldcard.nat.gov.tw/en/faq/what-is-the-legal-bases-of-enacting-tax-benefits-for-foreign-specialist-professionals-and-what-are-the-benefits/)仍把依據寫成第20條。[中文問答](https://goldcard.nat.gov.tw/zh/faq/can-i-apply-for-the-gold-card-tax-benefits/)正文依第22條說明，文末建議閱讀的條次仍列了第20條。一百八十三日在所得稅上的意義，見[台灣所得稅居住者](/zh-hant/columns/taiwan-income-tax-residency)。
+辦公室[英文問答](https://goldcard.nat.gov.tw/en/faq/what-is-the-legal-bases-of-enacting-tax-benefits-for-foreign-specialist-professionals-and-what-are-the-benefits/)仍把依據寫成第20條（該條是直系尊親屬的停留簽證）。[中文問答](https://goldcard.nat.gov.tw/zh/faq/can-i-apply-for-the-gold-card-tax-benefits/)正文依第22條說明，文末建議閱讀的條次仍列了第20條。一百八十三日在所得稅上的意義，見[台灣所得稅居住者](/zh-hant/columns/taiwan-income-tax-residency)。
 
 第22條授權子法規定的條件，見[外國特定專業人才減免所得稅辦法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340150)。持金卡的人，依[第3條第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340150&flno=3)，要同時符合：因工作首次核准居留、從事與其特殊專長相關的專業工作，以及核發金卡之日前五年內未設戶籍且不是所得稅法的境內居住者。不過，受聘僱從事專業工作前曾經核准在台居留，而核准居留的原因不是從事專業工作（例如就學，或從事非專業工作）者，不受「因工作首次核准居留」的限制；在台就學並取得副學士以上學位者，判斷是否為境內居住者時，就學期間及依[外國專業人才延攬及僱用法第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=12)延期居留的期間，也不計入居留天數（減免辦法第3條第5項）。符合上述條件，並在金卡有效期間受聘從事該專業工作，才能申請第22條的優惠。
 

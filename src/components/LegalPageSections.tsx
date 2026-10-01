@@ -3,6 +3,8 @@ import type { LegalPageContent } from '@/data/legal-pages';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
 import styles from './LegalPageSections.module.css';
+import zhPageShellStyles from './zh-hant-pages/ZhHantPageShell.module.css';
+import zhLegalStyles from './zh-hant-pages/ZhHantLegal.module.css';
 
 export default function LegalPageSections({
   locale,
@@ -13,7 +15,7 @@ export default function LegalPageSections({
 }) {
   const isPrivacy = content.label === 'PRIVACY';
 
-  return (
+  const body = (
     <>
       <PageHeader locale={locale} label={content.label} title={content.title} description={content.description}>
         <p className={`legal-effective-date ${styles.effectiveDate}`}>
@@ -49,4 +51,13 @@ export default function LegalPageSections({
       </Reveal>
     </>
   );
+  // zh-hant Apple pass (2026-10-01): typography only, inside a scoped wrapper; other locales render unchanged.
+  if (locale === 'zh-hant') {
+    return (
+      <div className={`${zhPageShellStyles.shell} ${zhLegalStyles.root}`} id="zh-hant-legal" data-zh-hant-design="legal">
+        {body}
+      </div>
+    );
+  }
+  return body;
 }

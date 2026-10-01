@@ -6,6 +6,7 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import ZhHantPricingSchedule from '@/components/zh-hant-pricing/ZhHantPricingSchedule';
+import JaPricingTable from '@/components/ja-design/JaPricingTable';
 import styles from './PricingCards.module.css';
 
 export type PricingItem = {
@@ -284,6 +285,7 @@ export function getPricingContent(locale: SiteLocale): PricingContent {
 export default function PricingCards({ locale }: { locale: SiteLocale }) {
   const data = pricingData[locale];
   if (locale === 'zh-hant') return <ZhHantPricingSchedule data={data} />;
+  if (locale === 'ja') return <JaPricingTable data={data} />;
 
   return (
     <section className={`section pricing-section ${styles.root}`}>

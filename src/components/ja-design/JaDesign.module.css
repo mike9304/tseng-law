@@ -1,0 +1,140 @@
+/*
+ * ja design system (Opus 5.5 ja lane, 2026-10-01).
+ * Shared layer for every Japanese page wrapper (`[data-ja-design]`): 生成り paper,
+ * sumi-green ink, hairline 罫線 and a gold double rule, Mincho only on the H1
+ * (globals allowlist), Gothic H2/H3 with palt + generous 字間, vertical page labels.
+ * Deliberately unlike the zh-hant green editorial pages (dark green bands, cream board).
+ * Every selector is scoped under `.root[data-ja-design]`; other locales never render it.
+ */
+.root {
+  --ja-ink: #1c2622;
+  --ja-text: #2f3a35;
+  --ja-sub: #4f5c55;
+  --ja-green: #16382d;
+  --ja-green-2: #24503f;
+  --ja-green-tint: #e9efe9;
+  --ja-gold: #9f8752;
+  --ja-gold-text: #6c5829;
+  --ja-paper: #f7f5ef;
+  --ja-paper-2: #efebe1;
+  --ja-line: #dcd6c8;
+  --ja-line-strong: #b6ac95;
+  --ja-mincho: var(--font-heading-ja);
+  --ja-gothic: var(--font-body-ja);
+  --ja-measure: 38em;
+  color: var(--ja-text);
+  letter-spacing: 0.04em;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Page header: paper, green top rule, vertical label, double rule ---------- */
+.root:global([data-ja-design]) :global(.page-header) {
+  background: var(--ja-paper);
+  border-top: 3px solid var(--ja-green);
+  border-bottom: 0;
+  padding: clamp(48px, 5.5vw, 76px) 0 clamp(44px, 5vw, 68px);
+}
+.root:global([data-ja-design]) :global(.page-header)::after {
+  height: 5px;
+  background: transparent;
+  border-top: 1px solid var(--ja-line-strong);
+  border-bottom: 1px solid var(--ja-line-strong);
+  opacity: 1;
+}
+.root:global([data-ja-design]) :global(.page-header > .container) {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  grid-auto-rows: auto;
+  column-gap: clamp(20px, 3vw, 44px);
+  align-items: start;
+}
+.root:global([data-ja-design]) :global(.page-header.page-header--with-content > .container) {
+  grid-template-columns: 44px minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-rows: auto auto auto 1fr;
+}
+.root:global([data-ja-design]) :global(.page-header [data-page-header-slot='copy']) { display: contents; }
+.root:global([data-ja-design]) :global(.page-header .breadcrumb) {
+  grid-column: 2; grid-row: 1; margin: 0 0 18px; font-size: 13px; letter-spacing: 0.06em; color: var(--ja-sub);
+}
+.root:global([data-ja-design]) :global(.page-header .breadcrumb a) { color: var(--ja-sub); }
+.root:global([data-ja-design]) :global(.page-header .breadcrumb-current) { color: var(--ja-ink); }
+.root:global([data-ja-design]) :global(.page-header .section-label) {
+  grid-column: 1; grid-row: 1 / span 3; align-self: start; justify-self: center;
+  writing-mode: vertical-rl; text-orientation: mixed;
+  margin: 2px 0 0; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.34em; color: var(--ja-gold-text);
+}
+.root:global([data-ja-design]) :global(.page-header .section-label)::before {
+  width: 1px; height: 40px; background: var(--ja-gold); opacity: 1; border-radius: 0;
+}
+.root:global([data-ja-design]) :global(.page-header .page-header-title) {
+  grid-column: 2; grid-row: 2; margin: 0 0 18px; max-width: 18em;
+  font-family: var(--ja-mincho); font-weight: 600; font-size: clamp(32px, 3.3vw, 50px);
+  line-height: 1.42; letter-spacing: 0.08em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
+}
+.root:global([data-ja-design]) :global(.page-header .section-lede) {
+  grid-column: 2; grid-row: 3; margin: 0; max-width: var(--ja-measure);
+  font-size: 16.5px; line-height: 2; letter-spacing: 0.05em; color: var(--ja-sub);
+}
+.root:global([data-ja-design]) :global(.page-header [data-page-header-slot='children']) {
+  grid-column: 3; grid-row: 1 / -1; align-self: start; margin: 0; min-width: 0;
+}
+
+/* ---------- Section typography ---------- */
+.root:global([data-ja-design]) :global(.section-title) {
+  position: relative; padding-bottom: 18px; margin-bottom: 22px;
+  font-size: clamp(23px, 2.1vw, 29px); line-height: 1.55; font-weight: 700;
+  letter-spacing: 0.07em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
+}
+.root:global([data-ja-design]) :global(.section-title)::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, var(--ja-green) 0 64px, var(--ja-line) 64px 100%);
+}
+.root:global([data-ja-design]) :global(.section-label) {
+  color: var(--ja-gold-text); font-size: 12px; letter-spacing: 0.24em; font-weight: 700;
+}
+.root:global([data-ja-design]) :global(.section-label)::before {
+  width: 8px; height: 8px; background: var(--ja-green); opacity: 1; border-radius: 0;
+}
+.root:global([data-ja-design]) :global(.section-lede) {
+  font-size: 16px; line-height: 2; letter-spacing: 0.05em; color: var(--ja-sub); max-width: var(--ja-measure);
+}
+.root:global([data-ja-design]) :global(.ornament-divider) { display: none; }
+
+/* Cards and buttons: square corners, hairlines, no soft shadows */
+.root:global([data-ja-design]) :global(.card) {
+  border-radius: 0; border: 1px solid var(--ja-line); box-shadow: none; background: #fff;
+}
+.root:global([data-ja-design]) :global(.button) {
+  border-radius: 2px; letter-spacing: 0.08em; font-weight: 700; min-height: 48px;
+}
+.root:global([data-ja-design]) :global(.button:not(.secondary)) {
+  background: var(--ja-green); border-color: var(--ja-green); color: #fff;
+}
+.root:global([data-ja-design]) :global(.button:not(.secondary):hover) { background: var(--ja-green-2); border-color: var(--ja-green-2); }
+.root:global([data-ja-design]) :global(.button.secondary) {
+  background: #fff; border: 1px solid var(--ja-green); color: var(--ja-green);
+}
+
+/* Focus: a 3px green ring on light surfaces, white on dark ones */
+.root:global([data-ja-design]) :focus-visible { outline: 3px solid var(--ja-green); outline-offset: 3px; }
+.root:global([data-ja-design]) :global([data-tone='dark']) :focus-visible,
+.root:global([data-ja-design]) :global(.section--dark) :focus-visible { outline-color: #fff; }
+
+@media (max-width: 767px) {
+  .root:global([data-ja-design]) :global(.page-header > .container),
+  .root:global([data-ja-design]) :global(.page-header.page-header--with-content > .container) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .root:global([data-ja-design]) :global(.page-header .breadcrumb) { grid-column: 1; grid-row: auto; margin-bottom: 14px; }
+  .root:global([data-ja-design]) :global(.page-header .section-label) {
+    grid-column: 1; grid-row: auto; writing-mode: horizontal-tb; justify-self: start; align-self: auto;
+    margin: 0 0 10px; letter-spacing: 0.24em;
+  }
+  .root:global([data-ja-design]) :global(.page-header .section-label)::before { width: 28px; height: 1px; }
+  .root:global([data-ja-design]) :global(.page-header .page-header-title) {
+    grid-column: 1; grid-row: auto; font-size: clamp(28px, 7.6vw, 34px); letter-spacing: 0.06em; margin-bottom: 14px;
+  }
+  .root:global([data-ja-design]) :global(.page-header .section-lede) { grid-column: 1; grid-row: auto; font-size: 15.5px; line-height: 1.95; }
+  .root:global([data-ja-design]) :global(.page-header [data-page-header-slot='children']) { grid-column: 1; grid-row: auto; margin-top: 24px; }
+}

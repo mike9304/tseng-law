@@ -4,6 +4,8 @@ import PageHeader from '@/components/PageHeader';
 import JsonLd from '@/components/JsonLd';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
 import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaFaqStyles from '@/components/ja-design/JaFaq.module.css';
 import { pageCopy } from '@/data/page-copy';
 import {
   buildPublishedSitePageMetadata,
@@ -88,8 +90,9 @@ export default async function FaqPage(
     });
     const schemaItems = faqItemsToSchemaItems(items);
 
+    // ja design (Opus 5.5 ja lane): same three children inside the ja FAQ wrapper.
     return (
-      <>
+      <JaPageShell page="faq" className={jaFaqStyles.root}>
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
         <FaqPublicExplorer
           locale={locale}
@@ -99,7 +102,7 @@ export default async function FaqPage(
           initialQuery={firstSearchParamValue(searchParams?.q)}
         />
         {schemaItems.length > 0 ? <JsonLd data={generateFAQSchema(schemaItems)} /> : null}
-      </>
+      </JaPageShell>
     );
   }
 

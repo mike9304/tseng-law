@@ -21,6 +21,11 @@ import ZhHantTeam from '@/components/zh-hant-team/ZhHantTeam';
 import ZhHantContactBody from '@/components/zh-hant-contact/ZhHantContactBody';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
+import JaPricingBody from '@/components/ja-design/JaPricingBody';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaAboutStyles from '@/components/ja-design/JaAbout.module.css';
+import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
+import jaContactStyles from '@/components/ja-design/JaContact.module.css';
 import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
@@ -61,6 +66,17 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams): ColumnsGridFil
 export function AboutLegacyPageBody({ locale }: { locale: SiteLocale }) {
   if (locale === 'zh-hant') return <ZhHantAboutBody />;
   const copy = pageCopy[locale].about;
+  if (locale === 'ja') {
+    // ja design (Opus 5.5 ja lane): same four blocks, scoped by the ja about/team modules.
+    return (
+      <JaPageShell page="about" className={`${jaAboutStyles.root} ${jaTeamStyles.team}`}>
+        <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+        <FirmIntroductionSection locale={locale} />
+        <AttorneyProfileSection locale={locale} />
+        <ContactBlocks locale={locale} />
+      </JaPageShell>
+    );
+  }
   return (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
@@ -100,7 +116,7 @@ export function ServicesLegacyPageBody({
 export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   if (locale === 'zh-hant') return <ZhHantContactBody />;
   const copy = pageCopy[locale].contact;
-  return (
+  const blocks = (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
         <ContactEmailActions locale={locale} />
@@ -116,6 +132,10 @@ export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
       <OfficeMapTabs locale={locale} />
     </>
   );
+  // ja design (Opus 5.5 ja lane): same six blocks in the same order, scoped by the ja contact module.
+  return locale === 'ja'
+    ? <JaPageShell page="contact" className={jaContactStyles.root}>{blocks.props.children}</JaPageShell>
+    : blocks;
 }
 
 const attorneyFactLabels = {
@@ -283,6 +303,10 @@ export function LawyersLegacyPageBody({
     </>
   );
   // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside a scoped wrapper for the green header and team styling.
+  if (locale === 'ja') {
+    // ja design (Opus 5.5 ja lane): same blocks, 履歴書-style team rows from the shared ja team module.
+    return <JaPageShell page="lawyers" className={jaTeamStyles.team}>{body}</JaPageShell>;
+  }
   return locale === 'zh-hant'
     ? <div className={zhLawyersStyles.root} id="zh-hant-lawyers" data-zh-hant-design="lawyers">{body}</div>
     : body;
@@ -315,6 +339,7 @@ export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
 
 export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
   if (locale === 'zh-hant') return <ZhHantPricingBody />;
+  if (locale === 'ja') return <JaPricingBody />;
   const copy = pageCopy[locale].pricing;
   return (
     <>

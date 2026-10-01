@@ -1,0 +1,48 @@
+/*
+ * ja about (Opus 5.5 ja lane, 2026-10-01). FirmIntroductionSection / AttorneyProfileSection /
+ * ContactBlocks markup unchanged: the firm story becomes a two-column 沿革 layout (identity on
+ * the left, dated paragraphs on a gold rule on the right); contact blocks become ruled panels.
+ */
+.root:global(#ja-about) :global(.firm-intro-section) { background: #fff; padding: clamp(56px, 6vw, 96px) 0; }
+.root:global(#ja-about) :global(.firm-intro-section > .container > .section-label) { margin-bottom: 18px; }
+.root:global(#ja-about) :global(.firm-intro-card) {
+  display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); grid-template-rows: auto auto auto 1fr;
+  gap: 0 clamp(32px, 5vw, 72px); padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent;
+}
+.root:global(#ja-about) :global(.firm-intro-logo-wrap) { grid-column: 1; grid-row: 1; margin: 0 0 24px; max-width: 360px; }
+.root:global(#ja-about) :global(.firm-intro-logo-wrap img) { width: 100%; height: auto; border-radius: 0; }
+.root:global(#ja-about) :global(.firm-intro-title) {
+  grid-column: 1; grid-row: 2; margin: 0 0 14px; font-size: clamp(24px, 2.2vw, 30px); font-weight: 700; letter-spacing: 0.1em; color: var(--ja-ink);
+}
+.root:global(#ja-about) :global(.firm-intro-subtitle) { grid-column: 1; grid-row: 3; margin: 0; font-size: 15px; line-height: 1.95; color: var(--ja-sub); }
+.root:global(#ja-about) :global(.firm-intro-source) { grid-column: 1; grid-row: 4; align-self: start; margin: 20px 0 0; font-size: 13px; }
+.root:global(#ja-about) :global(.firm-intro-source a) { color: var(--ja-sub); }
+.root:global(#ja-about) :global(.firm-intro-body) {
+  grid-column: 2; grid-row: 1 / span 4; position: relative; margin: 0; padding-left: 32px; border-left: 1px solid var(--ja-gold);
+}
+.root:global(#ja-about) :global(.firm-intro-body p) { position: relative; margin: 0 0 24px; font-size: 15.5px; line-height: 2; color: var(--ja-text); }
+.root:global(#ja-about) :global(.firm-intro-body p:last-child) { margin-bottom: 0; }
+.root:global(#ja-about) :global(.firm-intro-body p)::before {
+  content: ''; position: absolute; left: -37px; top: 0.72em; width: 9px; height: 9px; background: #fff; border: 2px solid var(--ja-gold);
+}
+
+/* Contact blocks: paper band, ruled cards */
+.root:global(#ja-about) :global(.reveal > .section) { background: var(--ja-paper); }
+.root:global(#ja-about) :global(.contact-grid) { gap: 20px; }
+.root:global(#ja-about) :global(.contact-grid .card) { padding: 26px 28px; border-top: 2px solid var(--ja-green); }
+.root:global(#ja-about) :global(.contact-grid .card-title) { font-size: 18px; font-weight: 700; letter-spacing: 0.08em; color: var(--ja-ink); }
+
+@media (max-width: 900px) {
+  .root:global(#ja-about) :global(.firm-intro-card) { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+  .root:global(#ja-about) :global(.firm-intro-logo-wrap),
+  .root:global(#ja-about) :global(.firm-intro-title),
+  .root:global(#ja-about) :global(.firm-intro-subtitle),
+  .root:global(#ja-about) :global(.firm-intro-source),
+  .root:global(#ja-about) :global(.firm-intro-body) { grid-column: 1; grid-row: auto; }
+  .root:global(#ja-about) :global(.firm-intro-body) { margin-top: 28px; padding-left: 24px; }
+  .root:global(#ja-about) :global(.firm-intro-body p)::before { left: -29px; }
+  .root:global(#ja-about) :global(.firm-intro-source) { order: 5; }
+}
+@media (max-width: 767px) {
+  .root:global(#ja-about) :global(.contact-grid .card) { padding: 22px 18px; }
+}

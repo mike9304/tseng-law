@@ -1,0 +1,85 @@
+/* ja pricing (Opus 5.5 ja lane, 2026-10-01): header quote flow + ruled 料金表. Tokens come from JaDesign.module.css (.root). */
+.root { --ja-row-head: #fbfaf6; }
+
+/* Header: quote flow as three stacked STEP rows with a connecting rule */
+.flow { background: #fff; border: 1px solid var(--ja-line); padding: 26px 28px 22px; }
+.flowLabel { margin: 0 0 16px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--ja-gold-text); }
+.flowSteps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.flowSteps li { position: relative; display: grid; grid-template-columns: 76px minmax(0, 1fr); align-items: center; gap: 16px; min-height: 52px; padding: 6px 0; }
+.flowSteps li + li { border-top: 1px dashed var(--ja-line); }
+.flowNo {
+  display: inline-flex; align-items: center; justify-content: center; height: 30px;
+  background: var(--ja-green); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+.flowText { font-size: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--ja-ink); }
+
+/* 料金表 */
+.schedule { padding: clamp(48px, 6vw, 88px) 0 clamp(64px, 7vw, 104px); background: #fff; }
+.table { width: 100%; border-collapse: collapse; table-layout: fixed; border-top: 2px solid var(--ja-ink); }
+.caption { caption-side: top; text-align: left; padding: 0 0 14px; }
+.captionTitle { font-size: clamp(22px, 2vw, 26px); font-weight: 700; letter-spacing: 0.08em; color: var(--ja-ink); font-feature-settings: 'palt' 1; }
+.captionCurrency { display: inline-block; margin-left: 18px; font-size: 13px; letter-spacing: 0.12em; color: var(--ja-sub); }
+.table thead th {
+  padding: 12px 20px; background: var(--ja-paper); border-bottom: 1px solid var(--ja-line-strong);
+  text-align: left; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--ja-sub);
+}
+.table thead th:nth-child(1) { width: 27%; }
+.table thead th:nth-child(2) { width: 23%; }
+.row > th, .row > td { padding: 28px 20px; vertical-align: top; border-bottom: 1px solid var(--ja-line); }
+.row:target > th, .row:target > td { background: #fcfaf3; }
+.itemCell { background: var(--ja-row-head); text-align: left; font-weight: 400; }
+.itemNo { display: block; margin-bottom: 10px; font-family: Georgia, 'Times New Roman', serif; font-size: 14px; letter-spacing: 0.1em; color: var(--ja-gold-text); font-variant-numeric: tabular-nums; }
+.itemIcon { display: inline-flex; width: 26px; height: 26px; margin-right: 10px; vertical-align: -6px; color: var(--ja-green); }
+.itemIcon svg { width: 100%; height: 100%; }
+.itemTitle { font-size: 18px; font-weight: 700; line-height: 1.6; letter-spacing: 0.06em; color: var(--ja-ink); }
+.feeCell { white-space: nowrap; }
+.amount { display: block; font-family: var(--ja-mincho); font-size: clamp(26px, 2.4vw, 34px); font-weight: 600; line-height: 1.3; letter-spacing: 0.02em; color: var(--ja-green); font-variant-numeric: tabular-nums lining-nums; }
+.unit { display: block; margin-top: 6px; font-size: 14px; letter-spacing: 0.08em; color: var(--ja-sub); }
+.details { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.details li { position: relative; padding-left: 1.3em; font-size: 15.5px; line-height: 1.85; color: var(--ja-text); }
+.details li::before { content: '・'; position: absolute; left: 0; top: 0; color: var(--ja-green); font-weight: 700; }
+.note { margin: 16px 0 0; padding: 12px 16px; background: var(--ja-paper); border-left: 3px solid var(--ja-gold); font-size: 14.5px; line-height: 1.9; color: var(--ja-text); }
+.advisory { margin-top: 16px; font-size: 14.5px; line-height: 1.9; }
+.advisory p { margin: 0; }
+
+.notes { margin-top: 28px; max-width: 46em; }
+.notes p { position: relative; margin: 0 0 10px; padding-left: 1.4em; font-size: 14.5px; line-height: 1.95; color: var(--ja-sub); }
+.notes p::before { content: '※'; position: absolute; left: 0; top: 0; }
+
+.cta {
+  margin-top: 44px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px 40px;
+  padding: 30px 36px; background: var(--ja-paper); border: 1px solid var(--ja-line); border-left: 4px solid var(--ja-green);
+}
+.ctaCopy { min-width: 0; }
+.ctaNote { margin: 0; font-size: 15px; color: var(--ja-sub); }
+.ctaEmail { margin: 6px 0 0; font-size: clamp(19px, 2vw, 23px); font-weight: 700; letter-spacing: 0.04em; overflow-wrap: anywhere; }
+.ctaEmail a { color: var(--ja-green); text-decoration: underline; text-decoration-color: var(--ja-gold); text-underline-offset: 6px; }
+.cta :global(.button) { min-height: 52px; padding: 14px 28px; }
+
+@media (max-width: 1000px) {
+  .root:global(#ja-pricing) :global(.page-header.page-header--with-content > .container) { grid-template-columns: 44px minmax(0, 1fr); }
+  .root:global(#ja-pricing) :global(.page-header [data-page-header-slot='children']) { grid-column: 2; grid-row: auto; margin-top: 28px; max-width: 520px; }
+}
+
+/* Phone: each row becomes a block; the column headers are repeated as inline labels by structure */
+@media (max-width: 767px) {
+  .root:global(#ja-pricing) :global(.page-header.page-header--with-content > .container) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#ja-pricing) :global(.page-header [data-page-header-slot='children']) { grid-column: 1; }
+  .flow { padding: 20px 18px 16px; }
+  .flowSteps li { grid-template-columns: 68px minmax(0, 1fr); gap: 12px; }
+  .flowText { font-size: 15px; }
+  .table, .table tbody, .row, .row > th, .row > td { display: block; width: 100%; }
+  .table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .table caption { display: block; }
+  .captionCurrency { display: block; margin: 4px 0 0; }
+  .row { border-bottom: 1px solid var(--ja-line); }
+  .row > th, .row > td { border-bottom: 0; padding: 0 2px; }
+  .itemCell { background: transparent; padding-top: 24px !important; }
+  .feeCell { padding-top: 10px !important; white-space: normal; }
+  .amount, .unit { display: inline; }
+  .unit { margin: 0 0 0 8px; }
+  .scopeCell { padding: 14px 2px 24px !important; }
+  .cta { padding: 24px 20px; }
+  .cta :global(.button) { width: 100%; justify-content: center; text-align: center; }
+}

@@ -33,7 +33,7 @@ export const EN_SITUATIONS: readonly EnSituation[] = [
   },
   {
     id: 'family',
-    label: 'Marriage, divorce or children with a Taiwanese spouse',
+    label: 'Marriage, divorce or parenting matters involving a Taiwanese spouse',
     href: '/en/services/family',
     hrefLabel: 'Family Litigation',
     guides: [

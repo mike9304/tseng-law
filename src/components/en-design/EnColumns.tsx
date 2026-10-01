@@ -19,21 +19,34 @@ export function EnColumnsShell({ children }: { children: ReactNode }) {
 /**
  * Header panel: one starting guide per reader situation (labels are the situation labels used
  * across the English pages; each link is an existing English column with its own title).
+ * Desktop shows the list open beside the H1; phones get the same list collapsed in a
+ * <details> so search and topic navigation stay near the top of the screen.
  */
 export function EnColumnsStartHere({ posts }: { posts: readonly { slug: string; title: string }[] }) {
   const rows = resolveEnSituations(posts).filter((situation) => situation.guideLinks.length > 0);
   if (rows.length === 0) return null;
+  const list = (
+    <ol className={styles.startList}>
+      {rows.map((situation) => (
+        <li key={situation.id}>
+          <span className={styles.startLabel}>{situation.label}</span>
+          <Link href={situation.guideLinks[0].href}>{situation.guideLinks[0].title}</Link>
+        </li>
+      ))}
+    </ol>
+  );
   return (
-    <nav className={styles.start} aria-label="Start here">
-      <p className={styles.startTitle}>Start here</p>
-      <ol className={styles.startList}>
-        {rows.map((situation) => (
-          <li key={situation.id}>
-            <span className={styles.startLabel}>{situation.label}</span>
-            <Link href={situation.guideLinks[0].href}>{situation.guideLinks[0].title}</Link>
-          </li>
-        ))}
-      </ol>
-    </nav>
+    <>
+      <nav className={`${styles.start} ${styles.startDesktop}`} aria-label="Start here">
+        <p className={styles.startTitle}>Start here</p>
+        {list}
+      </nav>
+      <details className={`${styles.start} ${styles.startMobile}`}>
+        <summary className={styles.startSummary}>
+          Start here <span className={styles.startCount}>{rows.length} guides</span>
+        </summary>
+        <nav aria-label="Start here">{list}</nav>
+      </details>
+    </>
   );
 }

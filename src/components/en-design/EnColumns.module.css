@@ -9,6 +9,15 @@
 .startList a { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-ink); font-size: 15px; font-weight: 700; line-height: 1.4; text-decoration: underline; text-decoration-color: var(--en-signal); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .startList a:focus-visible { outline: 3px solid var(--en-ink); outline-offset: 2px; }
 
+/* Phones: the same list collapsed (see EnColumnsStartHere) */
+.startMobile { display: none; }
+.startSummary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; cursor: pointer; font-size: 15px; font-weight: 800; color: var(--en-ink); list-style: none; }
+.startSummary::-webkit-details-marker { display: none; }
+.startSummary::after { content: '+'; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border: 2px solid var(--en-ink); border-radius: 4px; font-weight: 800; }
+.startMobile[open] .startSummary::after { content: '−'; }
+.startSummary:focus-visible { outline: 3px solid var(--en-ink); outline-offset: 2px; }
+.startCount { margin-left: auto; font-size: 13px; font-weight: 700; color: var(--en-muted); }
+
 /* Board tabs */
 .columns :global([data-issue-board-tabs]) { padding-block: 0; border-bottom: 1px solid var(--en-line); background: #fff; }
 .columns :global([data-issue-board-tabs] nav.columns-filters .columns-filter-btn) { min-height: 56px; margin-right: 24px; padding: 0 2px; border: none; border-bottom: 4px solid transparent; border-radius: 0; background: transparent; color: var(--en-text); font-size: 16px; font-weight: 800; }
@@ -53,7 +62,10 @@
   .columns :global(.columns-topic-section:first-child .columns-card:first-child) { grid-row: auto; }
 }
 @media (max-width: 767px) {
-  .start { padding: 14px 18px 6px; }
+  .startDesktop { display: none; }
+  .startMobile { display: block; }
+  .start { padding: 6px 18px; }
+  .startMobile[open] { padding-bottom: 6px; }
   .columns :global([data-issue-board-tabs] nav.columns-filters .columns-filter-btn) { margin-right: 16px; font-size: 15px; }
   .columns :global(.columns-topic-section) { padding: 28px 0; }
   .columns :global(.columns-topic-section:first-child .columns-card:not(:first-child) .columns-card-img) { aspect-ratio: 16 / 9; }

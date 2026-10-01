@@ -16,6 +16,7 @@ import LegalPageSections from '@/components/LegalPageSections';
 import ServicesBento from '@/components/ServicesBento';
 import ZhHantServicesBody from '@/components/ZhHantServicesBody';
 import ZhHantPricingBody from '@/components/zh-hant-pricing/ZhHantPricingBody';
+import ZhHantAboutBody from '@/components/zh-hant-about/ZhHantAboutBody';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
@@ -53,6 +54,7 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams): ColumnsGridFil
 }
 
 export function AboutLegacyPageBody({ locale }: { locale: SiteLocale }) {
+  if (locale === 'zh-hant') return <ZhHantAboutBody />;
   const copy = pageCopy[locale].about;
   return (
     <>

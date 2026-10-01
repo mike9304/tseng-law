@@ -9,3 +9,10 @@
   .lawyers :global(.attorney-facts-section) { padding: 48px 0 56px; }
   .lawyers :global(.attorney-facts-section .attorney-card-section) { grid-template-columns: minmax(0, 1fr); }
 }
+/* Three staff cards share one row at wide sizes (no lone card with an empty half-row). */
+@media (min-width: 1200px) {
+  .lawyers :global(.attorney-staff-grid) { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .lawyers :global(.attorney-staff-grid .attorney-card--sub) { align-content: start; }
+  .lawyers :global(.attorney-staff-grid .attorney-card--sub [class*='identity']) { grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
+  .lawyers :global(.attorney-staff-grid .attorney-card--sub .attorney-card-photo--sub) { width: 112px; height: 140px; }
+}

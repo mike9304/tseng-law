@@ -47,7 +47,7 @@
 .root[data-en-design][id] :global(.page-header .breadcrumb) { margin-bottom: 28px; font-size: 14px; }
 .root[data-en-design][id] :global(.page-header .breadcrumb),
 .root[data-en-design][id] :global(.page-header .breadcrumb *) { color: var(--en-muted); }
-.root[data-en-design][id] :global(.page-header .breadcrumb a) { text-decoration: underline; text-underline-offset: 4px; }
+.root[data-en-design][id] :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
 .root[data-en-design][id] :global(.page-header .section-label) {
   display: inline-flex;
   align-items: center;
@@ -102,6 +102,8 @@
 }
 .root[data-en-design][id] :global(.section-label)::before { content: ''; position: static; flex: none; width: 12px; height: 12px; margin: 0; background: var(--en-signal); opacity: 1; }
 
+.root[data-en-design][id] :global(a.authority-card-name) { display: flex; align-items: center; min-height: 44px; }
+
 /* At a glance: a fact sheet beside the H1 (facts restate this page's own data) */
 .glance {
   margin: 0;
@@ -137,7 +139,7 @@
   font-variant-numeric: tabular-nums;
   overflow-wrap: anywhere;
 }
-.glanceRow dd a { color: var(--en-ink); text-decoration: underline; text-decoration-color: var(--en-signal); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.glanceRow dd a { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-ink); text-decoration: underline; text-decoration-color: var(--en-signal); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .glanceRow dd small { display: block; margin-top: 2px; font-size: 14px; font-weight: 500; color: var(--en-muted); }
 .glanceActions { display: flex; flex-wrap: wrap; gap: 10px; padding: 8px 24px 24px; }
 

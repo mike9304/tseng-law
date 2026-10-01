@@ -137,7 +137,8 @@
   transform: rotate(-45deg);
   background: none;
 }
-.home[data-en-design][id] :global(.hero .hero-trust-rating) { color: var(--en-ink); text-decoration: underline; text-underline-offset: 4px; }
+.home[data-en-design][id] :global(.hero .hero-trust-rating) { display: inline-flex; align-items: center; min-height: 44px; margin-block: -12px; color: var(--en-ink); text-decoration: underline; text-underline-offset: 4px; }
+.home[data-en-design][id] :global(#offices .office-rating-link) { display: inline-flex; align-items: center; min-height: 44px; }
 .home[data-en-design][id] :global(.hero) :focus-visible { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 .home[data-en-design][id] :global(.hero [data-hero-slot='media-frame']) {
   aspect-ratio: auto;
@@ -182,6 +183,8 @@
 .home[data-en-design][id] :global(.hero .hero-search-input) { min-height: 52px; font-size: 17px; }
 .home[data-en-design][id] :global(.hero .hero-search-input)::placeholder { color: #4b5e53 !important; }
 .home[data-en-design][id] :global(.hero .hero-search-wrapper) :focus-visible { outline: 3px solid #e3cf9c; outline-offset: 2px; }
+.home[data-en-design][id] :global(.hero .hero-search-bar) :focus-visible,
+.home[data-en-design][id] :global(.hero .hero-quick-menu) :focus-visible { outline: 3px solid var(--en-ink); outline-offset: -3px; }
 .home[data-en-design][id] :global(.hero .hero-scroll-arrow) { display: none; }
 
 /* ---------- Start here: individual situations + overseas companies ---------- */
@@ -299,6 +302,8 @@
 .home[data-en-design][id] :global(#about .split-text) { max-width: 34em; }
 .home[data-en-design][id] :global(#about a) { color: var(--en-ink); }
 .home[data-en-design][id] :global(#insights) { background: #fff; border-top: 3px solid var(--en-ink); }
+.home[data-en-design][id] :global(#insights a:focus-visible),
+.home[data-en-design][id] :global(#insights button:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 .home[data-en-design][id] :global(#insights .insights-featured-title),
 .home[data-en-design][id] :global(#insights h3) { font-family: var(--en-sans) !important; letter-spacing: -0.01em; }
 .home[data-en-design][id] :global(#results) { background: var(--en-ink); }

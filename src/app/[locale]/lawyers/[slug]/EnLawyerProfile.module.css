@@ -18,6 +18,7 @@
 .body :global(.profile-hero-body .section-label)::before { content: ''; position: static; width: 12px; height: 12px; margin: 0; background: var(--en-signal); opacity: 1; }
 .body :global(h2.profile-hero-title) { font-family: var(--en-sans) !important; font-size: clamp(32px, 3.2vw, 44px) !important; font-weight: 800; line-height: 1.1; letter-spacing: -0.028em; color: var(--en-ink); }
 .body :global(.profile-hero-role) { font-weight: 700; color: var(--en-signal-text); }
+.body :global(.profile-hero-body .attorney-card-email) { display: inline-flex; align-items: center; min-height: 44px; }
 .body :global(.profile-summary-list .split-text) { font-size: 17px; line-height: 1.65; color: var(--en-text); }
 .body :global(.profile-summary-list .split-text:first-child) { font-size: 19px; font-weight: 500; color: var(--en-ink); }
 .body :global(.profile-chip) { border: 1.5px solid var(--en-ink); border-radius: 4px; background: #fff; color: var(--en-ink); font-weight: 700; }

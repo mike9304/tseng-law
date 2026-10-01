@@ -32,6 +32,8 @@
 .team :global(.attorney-card-photo img) { border-radius: 0; }
 .team :global(.attorney-card-cta) { min-height: 44px; border: 2px solid var(--en-ink); border-radius: 4px; color: var(--en-ink); font-weight: 700; }
 .team :global(.attorney-card-cta:hover) { background: var(--en-ink); color: #fff; }
+.team :global(.attorney-card-email),
+.team :global(.attorney-card-name-link) { display: inline-flex; align-items: center; min-height: 44px; }
 .team :global(a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 
 /* Offices (address lines from the English contact data) */

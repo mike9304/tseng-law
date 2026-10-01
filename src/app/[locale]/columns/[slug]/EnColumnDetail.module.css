@@ -48,7 +48,7 @@
 .detail:global(.en-column) :global(.blog-hero .blog-meta a),
 .detail:global(.en-column) :global(.blog-hero .blog-meta time),
 .detail:global(.en-column) :global(.blog-hero .blog-meta span) { color: var(--en-muted); font-size: 14.5px; font-weight: 600; }
-.detail:global(.en-column) :global(.blog-hero .blog-meta a) { color: var(--en-ink); text-decoration: underline; text-underline-offset: 4px; }
+.detail:global(.en-column) :global(.blog-hero .blog-meta a) { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-ink); text-decoration: underline; text-underline-offset: 4px; }
 .detail:global(.en-column) :global(.blog-hero) :focus-visible { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 
 /* Article */

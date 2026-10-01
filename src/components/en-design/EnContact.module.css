@@ -41,6 +41,8 @@
 .contact :global(.messenger-card) { border-radius: 0; border-top: 4px solid var(--en-ink); box-shadow: none; }
 .contact :global(.messenger-card:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 .contact :global(.messenger-features) { border-radius: 0; background: var(--en-mist); }
+.contact :global(.messenger-features li) { color: var(--en-text); }
+.contact :global(#offices .office-rating-link) { display: inline-flex; align-items: center; min-height: 44px; }
 .contact > :global(section.section:not(.page-header):not(#offices):not(.messenger-chat-section)) { background: var(--en-mist); border-top: 3px solid var(--en-ink); }
 .contact :global(.contact-grid .card) { border: none; border-top: 4px solid var(--en-ink); border-radius: 0; background: #fff; box-shadow: none; }
 .contact :global(.contact-grid .card-title) { font-family: var(--en-sans) !important; font-weight: 800; color: var(--en-ink); }

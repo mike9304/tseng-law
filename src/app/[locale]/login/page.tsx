@@ -5,6 +5,8 @@ import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import { resolveSafeNextPath } from '@/lib/safe-next';
 import { buildSeoMetadata } from '@/lib/seo';
+import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
+import zhLoginStyles from '@/components/zh-hant-pages/ZhHantLogin.module.css';
 
 const LOGIN_DESCRIPTIONS: Record<SiteLocale, string> = {
   ko: '회원 계정에 로그인합니다.',
@@ -46,5 +48,13 @@ export default async function MemberLoginPage(
   const member = await getCurrentSiteMember();
   if (member) redirect(nextPath);
 
+  // zh-hant Apple pass (2026-10-01): typography only, inside a scoped wrapper; other locales render unchanged.
+  if (locale === 'zh-hant') {
+    return (
+      <div className={`${zhPageShellStyles.shell} ${zhLoginStyles.root}`} id="zh-hant-login" data-zh-hant-design="login">
+        <MemberAuthClient locale={locale} nextPath={nextPath} />
+      </div>
+    );
+  }
   return <MemberAuthClient locale={locale} nextPath={nextPath} />;
 }

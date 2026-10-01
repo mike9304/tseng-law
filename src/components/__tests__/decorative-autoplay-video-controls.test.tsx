@@ -5,6 +5,7 @@ import { describe, expect, it, vi } from 'vitest';
 import DecorativeAutoplayVideo, {
   DECORATIVE_VIDEO_CONTROL_LABELS,
   handleDecorativeVideoCanPlay,
+  resolveDecorativeVideoPresentation,
   resolveDecorativeVideoControlLabel,
   runDecorativeVideoControlActivation,
   shouldAutoplayDecorativeVideo,
@@ -88,6 +89,26 @@ describe('DecorativeAutoplayVideo playback controls', () => {
     expect(live.pause).not.toHaveBeenCalled();
     handleDecorativeVideoCanPlay(live, { inViewport: false, ...playing });
     expect(live.pause).toHaveBeenCalledTimes(1);
+  });
+
+  it('shows the poster until the replacement encoding has a frame, and keeps the control usable', () => {
+    // First load on a phone: nothing ready yet — poster only, no control.
+    expect(resolveDecorativeVideoPresentation({
+      shouldMountVideo: true, readySource: null, sourceKey: 'mobile', controlRevealed: false,
+    })).toEqual({ videoReady: false, showControl: false });
+    // Mobile encoding ready.
+    expect(resolveDecorativeVideoPresentation({
+      shouldMountVideo: true, readySource: 'mobile', sourceKey: 'mobile', controlRevealed: true,
+    })).toEqual({ videoReady: true, showControl: true });
+    // Rotated while paused: the desktop replacement has no frame (WebKit readyState 1) — the poster
+    // comes back, and the Play control stays.
+    expect(resolveDecorativeVideoPresentation({
+      shouldMountVideo: true, readySource: 'mobile', sourceKey: 'desktop', controlRevealed: true,
+    })).toEqual({ videoReady: false, showControl: true });
+    // Reduced motion / save-data: no video, no control.
+    expect(resolveDecorativeVideoPresentation({
+      shouldMountVideo: false, readySource: 'mobile', sourceKey: 'mobile', controlRevealed: true,
+    })).toEqual({ videoReady: false, showControl: false });
   });
 
   it('re-applies playback state to the replacement element after a source switch', () => {

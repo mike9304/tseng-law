@@ -111,6 +111,12 @@ export default defineConfig({
       use: { ...devices['Desktop Safari'] },
     },
     {
+      // zh-hant Apple pass regressions that only showed in WebKit (video remount, focus scroll).
+      name: 'webkit-public',
+      testMatch: '**/zh-hant-apple-interactions.playwright.ts',
+      use: { ...devices['Desktop Safari'] },
+    },
+    {
       name: 'firefox-builder',
       testMatch: '**/admin-builder.playwright.ts?(x)',
       use: { ...devices['Desktop Firefox'] },

@@ -16,7 +16,10 @@ export default function ZhHantPracticeFocus() {
       const item = (event.target as HTMLElement | null)?.closest<HTMLElement>('.services-card-grid-item');
       if (!item) return;
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: reduce ? 'auto' : 'smooth' });
+      // Next frame: a smooth scroll started inside focusin is cancelled by WebKit's own focus scroll.
+      window.requestAnimationFrame(() => {
+        item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: reduce ? 'auto' : 'smooth' });
+      });
     };
     grid.addEventListener('focusin', onFocusIn);
     return () => grid.removeEventListener('focusin', onFocusIn);

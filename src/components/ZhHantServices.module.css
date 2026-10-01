@@ -174,3 +174,382 @@
   .card > article { padding: 20px 0 6px; }
   .practiceNav { gap: 0 22px; }
 }
+
+/* ===== Apple pass (2026-10-01) =====
+   Same language as the zh-hant home (ZhHantDesign.module.css "Apple pass"): white header with a big sans H1 and a
+   rounded photo tile, a frosted sticky chip bar, the practice groups as white tiles on #f5f5f7 (one wide tile when a
+   group has a single practice), and the home's dark consultation band. Later rules override the passes above. */
+.root:global(#zh-hant-services) {
+  --ap-gray: #f5f5f7;
+  --ap-text: #1d1d1f;
+  --ap-muted: #6e6e73;
+  --ap-line: #e3e3e8;
+  --ap-accent: #0a7a55;
+  --ap-ink: #16382d;
+  --ap-ink-deep: #0d231b;
+  --ap-radius: 28px;
+  --ap-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --zh-ink: var(--ap-ink);
+  --text-secondary: var(--ap-muted);
+  background: #fff;
+  color: var(--ap-text);
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+.root:global(#zh-hant-services) :global(.container) { max-width: 1240px; padding-inline: 32px; }
+
+/* ---------- Header: light, big type, photo tile ---------- */
+.root:global(#zh-hant-services) :global(.page-header) {
+  background: #fff;
+  color: var(--ap-text);
+  padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
+  border: none;
+}
+.root:global(#zh-hant-services) :global(.page-header > .container) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  grid-template-rows: auto auto;
+  gap: 0 clamp(40px, 6vw, 96px);
+  align-items: center;
+}
+.root:global(#zh-hant-services) :global(.page-header [data-page-header-slot='copy']) { align-self: end; }
+.root:global(#zh-hant-services) :global(.page-header .breadcrumb),
+.root:global(#zh-hant-services) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; letter-spacing: 0; }
+.root:global(#zh-hant-services) :global(.page-header .breadcrumb) { margin-bottom: 18px; }
+/* 44px hit area without changing the line box. */
+.root:global(#zh-hant-services) :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; margin-block: -12px; text-decoration: none; }
+.root:global(#zh-hant-services) :global(.page-header .breadcrumb a:hover) { color: var(--ap-accent); text-decoration: underline; text-underline-offset: 4px; }
+.root:global(#zh-hant-services) :global(.page-header-title),
+.root:global(#zh-hant-services) :global(.page-header-title *) {
+  color: var(--ap-text) !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700;
+}
+.root:global(#zh-hant-services) :global(.page-header-title) {
+  margin: 0 0 22px;
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.root:global(#zh-hant-services) :global(.page-header .section-lede) {
+  max-width: 34em;
+  margin: 0;
+  color: var(--ap-muted);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+.heroActions { flex-direction: row; flex-wrap: wrap; align-items: center; align-self: start; gap: 12px 28px; margin-top: 36px; }
+.heroActions :global(.button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 30px;
+  border: none;
+  border-radius: 999px;
+  background: var(--ap-ink);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: background-color 0.3s var(--ap-ease);
+}
+.heroActions :global(.button:hover) { background: var(--ap-ink-deep); border-color: var(--ap-ink-deep); color: #fff; }
+.heroActions :global(.button) > span { display: none; }
+.heroActions > a:last-child:not(:global(.button)) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ap-accent);
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.heroActions > a:last-child:not(:global(.button))::after { content: '›'; margin-left: 6px; font-size: 1.15em; line-height: 1; }
+.heroActions > a:last-child:not(:global(.button)):hover { text-decoration: underline; text-underline-offset: 5px; }
+.heroVisual { aspect-ratio: 5 / 4; border-radius: var(--ap-radius); background: var(--ap-gray); }
+.heroVisual img { object-position: 50% 60%; }
+.root:global(#zh-hant-services) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+
+/* ---------- Sticky chip bar ---------- */
+.practiceNav {
+  justify-content: center;
+  gap: 8px;
+  max-width: none;
+  margin: 0;
+  padding: 12px max(32px, calc((100% - 1176px) / 2));
+  border-bottom: 1px solid var(--ap-line);
+  background: rgb(255 255 255 / 86%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+}
+.practiceNav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--ap-gray);
+  color: var(--ap-text);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s var(--ap-ease), color 0.3s var(--ap-ease);
+}
+.practiceNav a:hover { background: var(--ap-ink); color: #fff; text-decoration: none; }
+.practiceNav a:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+
+/* ---------- Groups: tiles on gray ---------- */
+.groups { padding: clamp(72px, 9vw, 128px) 0; background: var(--ap-gray); }
+.group + .group { margin-top: clamp(72px, 8vw, 112px); }
+.groupHead { display: block; margin: 0 0 clamp(28px, 3.4vw, 44px); padding: 0; border: none; }
+.groupTitle {
+  margin: 0;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0;
+  color: var(--ap-text);
+  text-wrap: balance;
+}
+.groupText { margin: 14px 0 0; max-width: 34em; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; color: var(--ap-muted); }
+.groupGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.groupGrid:has(> :nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.groupGrid:has(> :only-child) { grid-template-columns: minmax(0, 1fr); }
+.card > article {
+  gap: 16px;
+  padding: 40px 36px 30px;
+  border: none;
+  border-radius: var(--ap-radius);
+  background: #fff;
+  box-shadow: none;
+  transition: transform 0.6s var(--ap-ease), box-shadow 0.6s var(--ap-ease);
+}
+.card > article:hover,
+.card > article:focus-within { transform: translateY(-4px); box-shadow: 0 22px 44px rgb(0 0 0 / 9%); }
+.cardIcon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 6px;
+  padding: 9px;
+  border: 1px solid var(--ap-line);
+  border-radius: 12px;
+  color: var(--ap-accent);
+}
+.cardIcon svg { width: 100%; height: 100%; }
+.cardTitle { font-family: var(--font-sans) !important; font-size: 25px; font-weight: 700; line-height: 1.4; letter-spacing: 0; color: var(--ap-text); }
+.cardText { font-size: 16px; line-height: 1.8; color: var(--ap-muted); }
+.cardTags li { font-size: 14px; color: var(--ap-muted); }
+.cardTags li + li::before { color: var(--ap-muted); }
+.cardLink {
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 0;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ap-accent);
+  text-decoration: none;
+}
+.cardLink:hover { text-decoration: underline; text-underline-offset: 5px; }
+.cardLink:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 6px; }
+/* A group with a single practice: one wide tile, title on the left, the full description on the right. */
+.groupGrid:has(> :only-child) > .card > article {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-rows: auto auto 1fr auto;
+  gap: 16px clamp(40px, 6vw, 96px);
+  padding: clamp(40px, 4.4vw, 56px) clamp(36px, 4.4vw, 56px) 40px;
+}
+.groupGrid:has(> :only-child) .cardIcon { grid-column: 1; grid-row: 1; }
+.groupGrid:has(> :only-child) .cardTitle { grid-column: 1; grid-row: 2; align-self: start; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.25; }
+.groupGrid:has(> :only-child) .cardText { grid-column: 2; grid-row: 1 / span 3; align-self: start; display: block; -webkit-line-clamp: unset; overflow: visible; font-size: 17px; }
+.groupGrid:has(> :only-child) .cardTags { grid-column: 2; grid-row: 4; align-self: end; }
+.groupGrid:has(> :only-child) .cardLink { grid-column: 1; grid-row: 4; align-self: end; }
+
+/* ---------- Closing band: the home's dark consultation band ---------- */
+.contact {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 12px;
+  max-width: none;
+  margin: 0;
+  padding: clamp(96px, 12vw, 168px) 32px;
+  border: none;
+  background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%);
+  color: #fff;
+  text-align: center;
+}
+.contact > div { display: contents; }
+.contact h2 {
+  max-width: 14em;
+  margin: 0;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(40px, 5.4vw, 80px);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0;
+  color: #fff;
+  text-wrap: balance;
+}
+.contact p { max-width: 36em; margin: 20px 0 0; color: #a1a1a6; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.7; }
+/* Full-row title and lede (box-sizing: border-box) narrowed with padding so the two pills can share the next row. */
+.contact h2 { flex: 0 0 100%; max-width: none; padding-inline: max(0px, calc((100% - 10em) / 2)); }
+.contact p:not(.contactEmail) { flex: 0 0 100%; max-width: none; padding-inline: max(0px, calc((100% - 36em) / 2)); }
+.contact .contactEmail { order: 2; margin: 40px 0 0; font-size: 16px; font-weight: 600; }
+.contact .contactEmail a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 0.3s var(--ap-ease), background-color 0.3s var(--ap-ease);
+}
+.contact .contactEmail a:hover { border-color: #fff; background: rgb(255 255 255 / 8%); }
+.contact :global(.button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  order: 1;
+  margin-top: 40px;
+  padding: 0 32px;
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ap-ink);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.contact :global(.button:hover) { background: #e8f0ec; color: var(--ap-ink-deep); }
+.contact :global(.button) > span { display: none; }
+.contact :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* Pills: a global zh-hant rule forces `.button { border-radius: 2px !important }` (specificity 1,2,0); these win at 1,3,0. */
+.root:global(#zh-hant-services) .heroActions :global(.button),
+.root:global(#zh-hant-services) .contact :global(.button) { border-radius: 999px !important; }
+
+/* ---------- Motion (scroll-driven reveal, as on the home) ---------- */
+@keyframes zhRiseIn { from { opacity: 0; transform: translateY(48px) scale(0.98); } to { opacity: 1; transform: none; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .card,
+    .heroVisual {
+      animation: zhRiseIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+}
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 1000px) {
+  .groupGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .groupGrid:has(> :only-child) > .card > article { display: flex; flex-direction: column; }
+  .groupGrid:has(> :only-child) .cardLink { order: 5; }
+}
+@media (max-width: 900px) {
+  .root:global(#zh-hant-services) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .heroVisual { grid-column: 1; grid-row: 3; margin-top: 40px; aspect-ratio: 16 / 10; }
+  .practiceNav { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .practiceNav::-webkit-scrollbar { display: none; }
+  .practiceNav a { flex: 0 0 auto; }
+}
+@media (max-width: 767px) {
+  .root:global(#zh-hant-services) { --ap-radius: 22px; }
+  .root:global(#zh-hant-services) :global(.container) { padding-inline: 20px; }
+  .root:global(#zh-hant-services) :global(.page-header) { padding: 56px 0 40px; }
+  .root:global(#zh-hant-services) :global(.page-header-title) { font-size: clamp(44px, 13.4vw, 60px); margin-bottom: 16px; }
+  .root:global(#zh-hant-services) :global(.page-header .section-lede) { font-size: 18px; }
+  .heroActions { flex-direction: column; align-items: stretch; gap: 8px; margin-top: 28px; }
+  .heroActions :global(.button) { width: 100%; }
+  .heroActions > a:last-child:not(:global(.button)) { justify-content: center; }
+  .heroVisual { margin-top: 32px; aspect-ratio: 4 / 3; }
+  .practiceNav { gap: 8px; padding: 10px 20px; }
+  .practiceNav a { padding: 0 16px; font-size: 14px; }
+  .group + .group { margin-top: 64px; }
+  /* Phones: a group's tiles become one swipeable row (the home's #practice pattern); a single tile stays full width. */
+  .groupGrid,
+  .groupGrid:has(> :nth-child(2):last-child) {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    gap: 12px;
+    margin-inline: -20px;
+    padding: 4px 20px 18px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+    scrollbar-width: none;
+  }
+  .groupGrid::-webkit-scrollbar { display: none; }
+  .groupGrid:has(> :only-child) { grid-auto-flow: row; grid-template-columns: minmax(0, 1fr); grid-auto-columns: auto; margin-inline: 0; padding: 0; overflow: visible; }
+  .card { scroll-snap-align: start; }
+  .card > article,
+  .groupGrid:has(> :only-child) > .card > article { padding: 30px 24px 22px; }
+  .contact { padding: 88px 20px; }
+  .contact .contactEmail { margin-top: 12px; }
+  .contact .contactEmail,
+  .contact .contactEmail a { width: 100%; }
+  .contact .contactEmail a { justify-content: center; padding: 0 16px; }
+  .contact :global(.button) { width: 100%; }
+}
+@media (max-width: 1000px) {
+  .groupGrid:has(> :only-child) .cardLink { align-self: flex-start; }
+}
+.root:global(#zh-hant-services) .heroVisual img { display: block; width: 100%; height: 100% !important; object-fit: cover; }
+.groupGrid:has(> :only-child) .cardTags { display: flex; align-items: center; min-height: 44px; }
+@media (max-width: 1000px) {
+  .groupGrid:has(> :only-child) .cardTags { align-self: flex-start; min-height: 0; }
+}
+.root:global(#zh-hant-services) :global(.page-header .breadcrumb a) { min-width: 44px; justify-content: center; padding-inline: 9px; margin-inline: -9px; }
+/* Two columns between phone and desktop: a third tile takes the full row instead of leaving a gap. */
+@media (min-width: 768px) and (max-width: 1000px) {
+  .groupGrid > .card:nth-child(3):last-child { grid-column: 1 / -1; }
+}
+
+/* ===== Critique fixes (2026-10-01) =====
+   One grid with the header, footer and the other zh-hant subpages: the global `.container` geometry
+   (width min(1200px, 100% - 2 × --page-gutter), no padding), so the H1, tiles, chip row and photo line up with the
+   header logo (x=113 at 1440) and the header CTA's right edge. */
+.root:global(#zh-hant-services) {
+  --svc-gutter: var(--page-gutter, clamp(1.1rem, 4vw, 3.25rem));
+  --svc-max: var(--max-width, 1200px);
+  --svc-inset: max(var(--svc-gutter), calc((100% - var(--svc-max)) / 2));
+}
+.root:global(#zh-hant-services) :global(.container) {
+  width: min(var(--svc-max), calc(100% - var(--svc-gutter) * 2));
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+/* Chip row: starts at the content edge instead of floating centred in the full-width bar. */
+.practiceNav { justify-content: flex-start; padding-inline: var(--svc-inset); scroll-padding-inline: var(--svc-inset); }
+.contact { padding-inline: var(--svc-gutter); }
+@media (max-width: 767px) {
+  .root:global(#zh-hant-services) :global(.container) { padding-inline: 0; }
+  .practiceNav { padding-inline: var(--svc-gutter); }
+  .groupGrid,
+  .groupGrid:has(> :nth-child(2):last-child) {
+    margin-inline: calc(var(--svc-gutter) * -1);
+    padding-inline: var(--svc-gutter);
+    scroll-padding-inline: var(--svc-gutter);
+  }
+  .groupGrid:has(> :only-child) { margin-inline: 0; padding-inline: 0; }
+  .contact { padding-inline: var(--svc-gutter); }
+}

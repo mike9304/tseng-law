@@ -106,3 +106,342 @@
 @media (max-width: 767px) {
   .board { box-shadow: none; margin-right: 0; }
 }
+
+/* ===== Apple pass (2026-10-01) =====
+   The pricing page in the language of the zh-hant home: a light header with a big sans H1 and the fee board as a
+   gray rounded tile, then the four fees as a bento of white tiles on #f5f5f7 (large gradient amounts), a footnote,
+   and one dark closing tile like the home's last call. Later rules override the green/serif passes above. */
+.root:global(#zh-hant-pricing) {
+  --ap-gray: #f5f5f7;
+  --ap-text: #1d1d1f;
+  --ap-muted: #6e6e73;
+  --ap-line: #e3e3e8;
+  --ap-accent: #0a7a55;
+  --ap-ink: #16382d;
+  --ap-ink-deep: #0d231b;
+  --ap-radius: 28px;
+  --ap-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --text-secondary: var(--ap-muted);
+  background: #fff;
+  color: var(--ap-text);
+}
+.root:global(#zh-hant-pricing) :global(.container) { max-width: 1240px; }
+
+/* Header: light, big type, the board as a tile */
+.root:global(#zh-hant-pricing) :global(.page-header) {
+  padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
+  background: #fff;
+  color: var(--ap-text);
+  border-bottom: none;
+}
+.root:global(#zh-hant-pricing) :global(.page-header)::after,
+.root:global(#zh-hant-pricing) :global(.page-header)::before { display: none !important; }
+.root:global(#zh-hant-pricing) :global(.page-header > .container) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: 32px clamp(48px, 6vw, 96px);
+  align-items: center;
+}
+.root:global(#zh-hant-pricing) :global(.page-header [data-page-header-slot='copy']) { align-self: end; max-width: none; }
+.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb),
+.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
+.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb a:hover) { color: var(--ap-accent); }
+/* 首頁 measured 26x23: give the crumb link a full tap target without moving the line. */
+.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb-link) { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin: -10px -9px; padding: 0 9px; }
+.root:global(#zh-hant-pricing) :global(.page-header-title),
+.root:global(#zh-hant-pricing) :global(.page-header-title *) {
+  color: var(--ap-text) !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700;
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+.root:global(#zh-hant-pricing) :global(.page-header-title) { margin: 18px 0 20px; }
+.root:global(#zh-hant-pricing) :global(.page-header .section-lede) {
+  max-width: 34em;
+  margin: 0;
+  color: var(--ap-muted);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.root:global(#zh-hant-pricing) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+
+.headerActions { align-self: start; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.root:global(#zh-hant-pricing) .headerActions :global(a.button) {
+  min-height: 52px;
+  padding: 0 30px;
+  gap: 10px;
+  border-radius: 999px !important;
+  background: var(--ap-ink);
+  border-color: var(--ap-ink);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background 0.3s ease, transform 0.3s var(--ap-ease);
+}
+.root:global(#zh-hant-pricing) .headerActions :global(a.button:hover) { background: var(--ap-ink-deep); border-color: var(--ap-ink-deep); color: #fff; transform: translateY(-1px); }
+
+.board {
+  grid-row: 1 / span 2;
+  align-self: center;
+  padding: clamp(28px, 3vw, 40px) clamp(28px, 3vw, 40px) clamp(18px, 2vw, 26px);
+  background: var(--ap-gray);
+  color: var(--ap-text);
+  border-radius: var(--ap-radius);
+  box-shadow: none;
+}
+.boardCurrency { margin: 0 0 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: var(--ap-muted); }
+.boardList li + li { border-top: 1px solid var(--ap-line); }
+.boardLink { justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 14px 0; color: var(--ap-text); transition: color 0.2s ease; }
+.boardLeader { display: none; }
+.boardTitle { font-size: 17px; font-weight: 600; color: var(--ap-text); transition: color 0.2s ease; }
+.boardLink:hover .boardTitle { color: var(--ap-accent); text-decoration: none; }
+.boardPrice { font-family: var(--font-sans); font-size: clamp(22px, 2vw, 28px); font-weight: 800; letter-spacing: 0; color: var(--ap-text); }
+.boardPrice small { margin-left: 6px; font-size: 14px; font-weight: 500; color: var(--ap-muted); }
+.root:global(#zh-hant-pricing) .boardLink:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 8px; }
+
+/* Fee tiles on the gray band */
+.schedule { padding: clamp(72px, 9vw, 128px) 0; background: var(--ap-gray); }
+.currency { margin: 0 0 20px; text-align: left; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: var(--ap-muted); }
+.tiles { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px; }
+.row,
+.currency + .row {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(36px, 3.4vw, 44px);
+  background: #fff;
+  border: none;
+  border-radius: var(--ap-radius);
+  scroll-margin-top: 140px;
+  transition: translate 0.6s var(--ap-ease), box-shadow 0.6s var(--ap-ease);
+}
+.row[data-fee='consultation'], .row[data-fee='retainer'] { grid-column: span 5; }
+.row[data-fee='litigation'], .row[data-fee='company'] { grid-column: span 7; }
+.row:hover { translate: 0 -4px; box-shadow: 0 22px 44px rgb(0 0 0 / 9%); }
+.rowHead { display: block; }
+.rowIcon { display: block; width: 44px; height: 44px; margin: 0 0 22px; color: var(--ap-accent); }
+.rowIcon svg { width: 100%; height: 100%; stroke: currentColor; }
+.rowTitle { margin: 0; font-family: var(--font-sans); font-size: clamp(22px, 2vw, 26px); font-weight: 700; line-height: 1.4; color: var(--ap-text); }
+.rowPrice { margin: 12px 0 0; gap: 4px 12px; }
+.amount {
+  font-family: var(--font-sans);
+  font-size: clamp(44px, 4vw, 60px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ap-ink);
+  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.unit { font-size: 17px; color: var(--ap-muted); }
+.rowBody { display: flex; flex-direction: column; flex: 1 1 auto; margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--ap-line); }
+.details { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.row[data-fee='litigation'] .details, .row[data-fee='company'] .details { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 28px; }
+.details li { padding-left: 20px; font-size: 16px; line-height: 1.75; color: var(--ap-text); }
+.details li::before { top: 0.72em; width: 6px; height: 6px; border-radius: 50%; background: var(--ap-accent); transform: none; }
+.steps { gap: 12px; margin: 28px 0 0; }
+.steps li { gap: 6px; padding: 18px 20px 20px; border: none; border-radius: 18px; background: var(--ap-gray); font-size: 16px; font-weight: 700; color: var(--ap-text); }
+.stepNo {
+  font-family: var(--font-sans);
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ap-ink);
+  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.note { margin: auto 0 0; padding: 16px 20px; border: none; border-radius: 16px; background: var(--ap-gray); font-size: 15.5px; line-height: 1.8; color: var(--ap-text); }
+.details + .note, .steps + .note { margin-top: 24px; }
+.advisory { margin-top: auto; padding-top: 24px; }
+.advisory p { margin: 0; font-size: 15.5px; line-height: 1.8; color: var(--ap-muted); }
+.root:global(#zh-hant-pricing) .advisory :global(.link-underline) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ap-accent);
+  font-weight: 600;
+  text-decoration: none;
+  background-image: none;
+}
+.root:global(#zh-hant-pricing) .advisory :global(.link-underline)::after { content: none; }
+.root:global(#zh-hant-pricing) .advisory :global(.link-underline:hover) { text-decoration: underline; text-underline-offset: 5px; }
+.row :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 4px; }
+.disclaimer { max-width: 52em; margin: 28px 0 0; padding: 0; border: none; font-size: 14px; line-height: 1.85; color: var(--ap-muted); }
+
+/* Closing dark tile (the home's last call, in a tile) */
+.cta {
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  margin-top: clamp(56px, 7vw, 96px);
+  padding: clamp(56px, 7vw, 104px) clamp(24px, 5vw, 64px);
+  border-radius: var(--ap-radius);
+  background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%);
+  color: #fff;
+  text-align: center;
+}
+.ctaNote { color: #b4b4b9; font-size: clamp(17px, 1.5vw, 21px); }
+.ctaEmail { margin: 12px 0 0; font-family: var(--font-sans); font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.15; letter-spacing: 0; }
+.ctaEmail a { color: #fff; text-decoration: none; }
+.ctaEmail a:hover { text-decoration: underline; text-decoration-color: rgb(255 255 255 / 50%); text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.root:global(#zh-hant-pricing) .cta :global(a.button) {
+  min-height: 54px;
+  padding: 0 32px;
+  border-radius: 999px !important;
+  background: #fff;
+  border-color: #fff;
+  color: var(--ap-ink);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: transform 0.3s var(--ap-ease);
+}
+.root:global(#zh-hant-pricing) .cta :global(a.button:hover) { background: #fff; border-color: #fff; color: var(--ap-ink); transform: translateY(-2px) scale(1.02); }
+.cta a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+
+/* Motion: tiles rise in as they enter, like the home. */
+@keyframes zhRiseIn { from { opacity: 0; transform: translateY(48px) scale(0.98); } to { opacity: 1; transform: none; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .row,
+    .cta {
+      animation: zhRiseIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .root:global(#zh-hant-pricing) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+  .board { grid-column: 1; grid-row: 3; margin-top: 16px; }
+  .row[data-fee] { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .root:global(#zh-hant-pricing) { --ap-radius: 22px; }
+  .root:global(#zh-hant-pricing) :global(.container) { padding-inline: 20px; }
+  .root:global(#zh-hant-pricing) :global(.page-header) { padding: 64px 0 40px; }
+  .root:global(#zh-hant-pricing) .headerActions :global(a.button) { width: 100%; justify-content: center; }
+  .board { padding: 24px 24px 12px; }
+  .boardLink { flex-wrap: nowrap; min-height: 64px; padding: 12px 0; }
+  .boardTitle { font-size: 16px; white-space: nowrap; }
+  .boardPrice { font-size: 19px; }
+  .boardPrice small { font-size: 13px; margin-left: 4px; }
+  .tiles { gap: 14px; }
+  .row, .currency + .row { padding: 28px 24px; }
+  .row[data-fee='litigation'] .details, .row[data-fee='company'] .details { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .rowTitle { font-size: 22px; }
+  .amount { font-size: clamp(36px, 10.4vw, 48px); }
+  .rowBody { margin-top: 22px; padding-top: 22px; }
+  .steps { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .steps li { flex-direction: row; align-items: center; gap: 14px; padding: 14px 18px; }
+  .stepNo { font-size: 28px; min-width: 22px; }
+  .cta { gap: 24px; padding: 48px 20px; }
+  .ctaEmail { font-size: clamp(19px, 5.2vw, 30px); overflow-wrap: anywhere; }
+  .root:global(#zh-hant-pricing) .cta :global(a.button) { width: 100%; justify-content: center; padding: 0 16px; font-size: 16px; letter-spacing: 0; }
+}
+
+/* ===== Fix round (2026-10-01, critic pass) =====
+   One font stack with the home, the home's full-bleed last call (statement + white pill + outlined email pill),
+   a 聯絡方式 › secondary link, bottom-anchored tile bodies (no dead area under short lists), quieter header board
+   and amounts, and phone edges on the logo line. Later rules win over the Apple pass above. */
+.root:global(#zh-hant-pricing) {
+  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-body: var(--font-sans);
+  font-family: var(--font-sans);
+}
+
+/* Header: secondary text link next to the primary pill */
+.headerLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ap-accent);
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.headerLink:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+/* Header board: an index of the tiles, not a second price presentation */
+.boardPrice { font-size: clamp(18px, 1.4vw, 20px); font-weight: 600; }
+.boardTitle { font-weight: 500; }
+.boardLink { min-height: 60px; }
+
+/* Tiles: head on top, body anchored to the bottom so tiles in one row end on the same line */
+.rowHead { flex: 0 0 auto; margin-bottom: 28px; }
+.rowBody { flex: 0 0 auto; margin-top: auto; }
+.amount { font-size: clamp(40px, 3.6vw, 52px); }
+
+/* Closing band: the home's #contact (full-bleed ink gradient, centered two-line statement, pills) */
+.closing {
+  padding-block: clamp(96px, 12vw, 168px);
+  background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%);
+  color: #fff;
+  text-align: center;
+}
+.closing .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 0 auto;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  animation: none;
+}
+.closing .ctaNote {
+  /* Two lines like the home's title: 9.5ic holds exactly nine ideographs in any engine/font, so the line breaks
+     after 電子郵件 (諮詢時間以電子郵件 / 聯繫後確定。) without touching the copy. */
+  max-width: 9.5ic;
+  text-wrap: wrap; /* the inherited `pretty` makes WebKit rebalance to 7/8 at 320 */
+  margin: 0 auto;
+  color: #fff;
+  font-size: clamp(40px, 5.4vw, 80px);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+.ctaActions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 40px; }
+.closing .ctaEmail { margin: 0; font-size: 17px; line-height: 1; overflow-wrap: normal; }
+.closing .ctaEmail a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.closing .ctaEmail a:hover { border-color: #fff; background: rgb(255 255 255 / 8%); text-decoration: none; }
+.root:global(#zh-hant-pricing) .closing .cta :global(a.button) { min-height: 54px; padding: 0 28px; }
+
+@media (max-width: 767px) {
+  /* The global .container already keeps the gutter; extra padding put the H1 at x=38 against the logo at 18. */
+  .root:global(#zh-hant-pricing) :global(.container) { padding-inline: 0; }
+  .closing { padding-block: 96px; }
+  .closing .cta { padding: 0; }
+  /* 9 characters must fit the 340px line at 390 so the break stays after 電子郵件 */
+  .closing .ctaNote { font-size: min(40px, 9.2vw); }
+  .ctaActions { flex-direction: column; align-items: stretch; width: 100%; margin-top: 32px; }
+  .closing .ctaEmail a { width: 100%; padding: 0 16px; font-size: 16px; letter-spacing: 0; }
+  .root:global(#zh-hant-pricing) .closing .cta :global(a.button) { width: 100%; }
+}

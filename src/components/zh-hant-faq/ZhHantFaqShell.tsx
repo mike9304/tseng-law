@@ -8,9 +8,9 @@ import {
 import styles from './ZhHantFaq.module.css';
 
 /**
- * zh-hant FAQ page shell, second pass (son7-87 / Opus 5.5, 2026-10-01): scopes the green header
- * and the two-column explorer layout, and closes the page with the home contact band copy
- * (homeContactCta) and the public email.
+ * zh-hant FAQ page shell (son7-87 lane / Opus 5.5, Apple pass 2026-10-01): scopes the light header and
+ * the explorer (search + categories beside the questions, on a gray band), and closes the page like the
+ * home's last call — the homeContactCta copy, the email action and the public address.
  */
 export default function ZhHantFaqShell({ children }: { children: ReactNode }) {
   const { homeContactCta, contact } = siteContent['zh-hant'];
@@ -20,14 +20,14 @@ export default function ZhHantFaqShell({ children }: { children: ReactNode }) {
       {children}
       <section className={styles.band} aria-labelledby="zh-hant-faq-contact">
         <div className={`container ${styles.bandInner}`}>
-          <div>
-            <h2 id="zh-hant-faq-contact" className={styles.bandTitle}>{homeContactCta.title}</h2>
-            <p className={styles.bandText}>{homeContactCta.description}</p>
+          <h2 id="zh-hant-faq-contact" className={styles.bandTitle}>{homeContactCta.title}</h2>
+          <p className={styles.bandText}>{homeContactCta.description}</p>
+          <div className={styles.bandActions}>
+            <a href={mailto} className={`button ${styles.bandButton}`} aria-label={`${contact.cta.label} — ${getConsultationCtaLabel('zh-hant')}`}>
+              {contact.cta.label}
+            </a>
             <p className={styles.bandEmail}><a href={mailto}>{getConsultationPublicEmail()}</a></p>
           </div>
-          <a href={mailto} className="button" aria-label={`${contact.cta.label} — ${getConsultationCtaLabel('zh-hant')}`}>
-            {contact.cta.label}
-          </a>
         </div>
       </section>
     </div>

@@ -33,6 +33,7 @@ export default function ServicesBento({
   showHeader = true,
   presentation,
   scenarioTags,
+  order,
 }: {
   locale: SiteLocale;
   id?: string;
@@ -42,6 +43,8 @@ export default function ServicesBento({
   presentation?: 'editorial';
   /** Optional short scenario labels per service slug (zh-hant home design). Omitted elsewhere. */
   scenarioTags?: Readonly<Record<string, readonly string[]>>;
+  /** Optional display order by service slug (zh-hant home). Anchors, icons and links stay tied to each item. */
+  order?: readonly string[];
 }) {
   const { services } = siteContent[locale];
   const editorial = presentation === 'editorial';
@@ -86,7 +89,17 @@ export default function ServicesBento({
           </>
         ) : null}
         <div className="services-detail-list services-card-grid">
-          {services.items.map((item, index) => {
+          {services.items
+            .map((item, index) => ({ item, index }))
+            .sort((a, b) => {
+              if (!order || order.length === 0) return a.index - b.index;
+              const rank = (i: number) => {
+                const at = order.indexOf(serviceSlugs[i] ?? '');
+                return at === -1 ? order.length + i : at;
+              };
+              return rank(a.index) - rank(b.index);
+            })
+            .map(({ item, index }) => {
             const anchor = item.href.split('#')[1];
             const aliases = aliasAnchors.get(index) ?? [];
             return (

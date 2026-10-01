@@ -170,11 +170,14 @@ export default function InsightsArchiveSection({
   posts,
   presentation,
   omitLandmarkId = false,
+  pinnedSlugs,
 }: {
   locale: SiteLocale;
   posts: ArchivePost[];
   presentation?: 'editorial';
   omitLandmarkId?: boolean;
+  /** Optional editorial picks shown first, in order (zh-hant home). Other locales omit it. */
+  pinnedSlugs?: readonly string[];
 }) {
   const copy = copyByLocale[locale];
   const authorLabel =
@@ -221,8 +224,13 @@ export default function InsightsArchiveSection({
   // mixed across topics so the home archive shows a spread.
   const sortedPosts = useMemo(() => {
     const { recommended, rest } = splitRecommendedColumns(locale, posts);
-    return [...recommended, ...interleaveColumnsByTopic(sortInsightsPostsNewestFirst(rest))];
-  }, [locale, posts]);
+    const ordered = [...recommended, ...interleaveColumnsByTopic(sortInsightsPostsNewestFirst(rest))];
+    if (!pinnedSlugs || pinnedSlugs.length === 0) return ordered;
+    const pinned = pinnedSlugs
+      .map((slug) => ordered.find((post) => post.slug === slug))
+      .filter((post): post is ArchivePost => Boolean(post));
+    return [...pinned, ...ordered.filter((post) => !pinned.includes(post))];
+  }, [locale, posts, pinnedSlugs]);
   const [featured, ...rest] = sortedPosts;
   const listItems = rest;
   const pageSize = 3;

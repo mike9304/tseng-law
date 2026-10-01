@@ -69,7 +69,7 @@ const scrollArrowLabels: Record<SiteLocale, string> = {
 
 const editorialSearchExamples: Record<SiteLocale, string> = {
   ko: '예: 회사 설립',
-  'zh-hant': '例如：公司設立',
+  'zh-hant': '例如：車禍和解',
   en: 'e.g. company setup',
   ja: '例：会社設立',
 };

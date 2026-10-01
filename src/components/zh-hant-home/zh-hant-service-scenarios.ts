@@ -10,3 +10,6 @@ export const ZH_HANT_SERVICE_SCENARIOS: Readonly<Record<string, readonly string[
   criminal: ['偵查應對', '被告代理', '被害人代理'],
   ip: ['商標', '著作權', '金融投資相關爭議'],
 };
+
+/** zh-hant service order for Taiwanese readers (2026-10-01): disputes first, company setup (mostly foreign clients) last. */
+export const ZH_HANT_DOMESTIC_SERVICE_ORDER = ['civil', 'family', 'criminal', 'labor', 'ip', 'investment'] as const;

@@ -2,19 +2,12 @@ import Link from 'next/link';
 import styles from '../ZhHantDesign.module.css';
 
 /**
- * zh-hant home: entry points by reader type, placed under the hero CTA.
- * Navigation only — every line restates existing services, routes and the
- * firm's consultation languages; no new claims.
+ * zh-hant home: entry points by reader type, placed under the hero CTA. Taiwanese readers'
+ * everyday disputes come first; company setup sits with foreign clients (2026-10-01 direction).
+ * Navigation only — every line restates existing services, routes and the firm's consultation
+ * languages; no new claims.
  */
 const DOORS = [
-  {
-    title: '公司與投資',
-    text: '在台設立公司、外國人投資審查，以及商業契約與爭議。',
-    links: [
-      { label: '公司設立指南', href: '/zh-hant/guides/taiwan-company-setup' },
-      { label: '投資與公司設立', href: '/zh-hant/services/investment' },
-    ],
-  },
   {
     title: '個人與家庭',
     text: '車禍與損害賠償、離婚與繼承、刑事案件。',
@@ -25,11 +18,20 @@ const DOORS = [
     ],
   },
   {
-    title: '在台外國人與韓國客戶',
-    text: '可用中文、韓文、日文或英文溝通，處理在台法律程序。',
+    title: '工作與契約糾紛',
+    text: '解僱與資遣費、契約糾紛與損害賠償、商標與著作權。',
     links: [
+      { label: '勞動與僱傭爭議', href: '/zh-hant/services/labor' },
+      { label: '民事訴訟與損害賠償', href: '/zh-hant/services/civil' },
+      { label: '智慧財產與金融爭議', href: '/zh-hant/services/ip' },
+    ],
+  },
+  {
+    title: '外國人與外國企業在台',
+    text: '在台設立公司與投資審查，可用中文、韓文、日文或英文溝通。',
+    links: [
+      { label: '投資與公司設立', href: '/zh-hant/services/investment' },
       { label: '會說韓文的台灣律師', href: '/zh-hant/korean-lawyer-in-taiwan' },
-      { label: '聯絡方式', href: '/zh-hant/contact' },
     ],
   },
 ] as const;

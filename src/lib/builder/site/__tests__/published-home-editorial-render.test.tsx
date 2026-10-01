@@ -325,7 +325,12 @@ describe('published July editorial hero strings', () => {
     expect(labelText).toBe('TAIWAN LEGAL');
     expect(visibleText(html)).toContain('昊鼎國際法律事務所');
     expect(visibleText(html)).not.toContain(labelText);
-    expect(visibleText(html)).toContain(subtitleText);
+    // 2026-10-01 (Taiwanese readers first): the projected home also replaces the saved Korea/Japan-led
+    // subtitle with the domestic one. Display-only; the saved canvas keeps its text, and the composite
+    // hero below still renders the saved subtitle.
+    expect(subtitleText).toBe('具備韓國、日本跨境實務經驗的專業團隊，協助處理台灣法律議題。');
+    expect(visibleText(html)).toContain('車禍、離婚與繼承、勞資爭議與刑事案件的台灣律師團隊，台北、台中、高雄、屏東均設有據點。');
+    expect(visibleText(html)).not.toContain(subtitleText);
     // The saved columns-link label belonged to the removed wayfinding strip; the columns
     // section still links the archive.
     expect(columnsLabel).toBe('查看專欄內容');

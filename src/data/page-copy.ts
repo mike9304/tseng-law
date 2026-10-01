@@ -83,7 +83,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     services: {
       label: 'SERVICES',
       title: '服務領域',
-      description: '涵蓋在台投資、訴訟與顧問業務。'
+      description: '涵蓋民事、家事、刑事與勞資案件，以及在台投資與顧問業務。'
     },
     lawyers: {
       label: 'OUR TEAM',

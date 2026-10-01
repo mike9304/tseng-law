@@ -1347,7 +1347,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     services: {
       label: 'SERVICES',
       title: '主要服務',
-      description: '服務範圍涵蓋在台投資、訴訟與法律顧問。',
+      description: '服務範圍涵蓋民事、家事、刑事與勞資案件，以及在台投資與法律顧問。',
       items: [
         {
           title: '投資與公司設立',
@@ -1725,7 +1725,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     homeContactCta: {
       title: '台灣法律問題，歡迎來信諮詢。',
-      description: '依案件類型安排投資、訴訟及公司設立諮詢。'
+      description: '依案件類型安排民事、家事、刑事、勞資與公司設立等諮詢。'
     },
     footer: {
       note: '承辦台灣各地的法律顧問與爭議案件，並具備韓國、日本跨境案件的實務經驗。',

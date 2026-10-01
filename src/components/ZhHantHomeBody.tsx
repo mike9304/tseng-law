@@ -9,7 +9,9 @@ import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import ZhHantAudienceDoors from '@/components/zh-hant-home/ZhHantAudienceDoors';
 import ZhHantMobileCta from '@/components/zh-hant-home/ZhHantMobileCta';
-import { ZH_HANT_SERVICE_SCENARIOS } from '@/components/zh-hant-home/zh-hant-service-scenarios';
+import ZhHantEngagement from '@/components/zh-hant-home/ZhHantEngagement';
+import { ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
+import { ZH_HANT_DOMESTIC_SERVICE_ORDER, ZH_HANT_SERVICE_SCENARIOS } from '@/components/zh-hant-home/zh-hant-service-scenarios';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import type { FAQItem } from '@/data/faq-content';
 import styles from './ZhHantDesign.module.css';
@@ -22,24 +24,36 @@ type Props = {
   attorneyIntro?: string;
 };
 
-/** Search shortcuts: real queries a Taiwanese reader types, run through the site search. */
-const SEARCH_CHIPS = ['公司設立', '車禍', '離婚', '資遣費', '刑事', '商標'].map((q) => ({
+/** Search shortcuts: everyday disputes a Taiwanese reader types, run through the site search. */
+const SEARCH_CHIPS = ['車禍', '離婚', '繼承', '資遣費', '詐騙', '刑事'].map((q) => ({
   label: q,
   href: `/zh-hant/search?q=${encodeURIComponent(q)}`,
 }));
 
 
 /**
- * zh-hant home, second pass (son7-87 / Opus 5.5, 2026-10-01): hero with reader-type
- * entry points, trust facts directly under it, scannable service grid, then attorney,
- * cases, columns, FAQ, offices and contact. Uses existing, sourced copy throughout;
- * locked strings (hero CTA, search prompt, stats lede, FAQ answers) are rendered as is.
+ * zh-hant home for Taiwanese readers (son7-87 / Opus 5.5, 2026-10-01, operator direction: disputes first,
+ * company setup is for foreign clients): hero with reader-type entry points, services in domestic order,
+ * practical columns, how to retain the firm, then attorney, cases, trust facts, FAQ, offices and contact.
+ * Locked strings (hero CTA, search prompt, stats lede, FAQ answers) are rendered as is.
  * `quickMenus` (saved July menus) is superseded by search shortcuts in this design.
  */
+/** Home FAQ in domestic order: company-setup questions (mostly foreign clients) move to the end; text unchanged. */
+function domesticFaqOrder(items: FAQItem[]): FAQItem[] {
+  const company = items.filter((item) => item.question.includes('公司'));
+  return [...items.filter((item) => !company.includes(item)), ...company];
+}
+
 export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, attorneyIntro }: Props) {
   // The July stock canvas saved an English kicker ("TAIWAN LEGAL"); show the firm name instead.
   // Display-only: the saved canvas is not modified.
-  const overrides = { ...heroOverrides, 'section-label': '昊鼎國際法律事務所' };
+  // The saved subtitle leads with Korea/Japan cross-border work; Taiwanese readers see their own matters
+  // and the four local offices instead. Display-only as well.
+  const overrides = {
+    ...heroOverrides,
+    'section-label': '昊鼎國際法律事務所',
+    subtitle: '車禍、離婚與繼承、勞資爭議與刑事案件的台灣律師團隊，台北、台中、高雄、屏東均設有據點。',
+  };
   return (
     <div className={styles.home} id="zh-hant-home" data-zh-hant-design="home">
       <BuilderSurfaceProvider nodeId="home-hero" mode="published" overrides={overrides} selectedSurfaceKey={null}>
@@ -52,14 +66,15 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
           trustContent={<ZhHantAudienceDoors />}
         />
       </BuilderSurfaceProvider>
-      <HomeStatsSection locale="zh-hant" plainLede />
-      <ServicesBento locale="zh-hant" id="practice" variant="default" presentation="editorial" scenarioTags={ZH_HANT_SERVICE_SCENARIOS} />
+      <ServicesBento locale="zh-hant" id="practice" variant="default" presentation="editorial" scenarioTags={ZH_HANT_SERVICE_SCENARIOS} order={ZH_HANT_DOMESTIC_SERVICE_ORDER} />
+      <InsightsArchiveSection locale="zh-hant" posts={posts} presentation="editorial" pinnedSlugs={ZH_HANT_FEATURED_COLUMN_SLUGS} />
+      <ZhHantEngagement />
       <BuilderSurfaceProvider nodeId="home-attorney" mode="published" overrides={attorneyIntro === undefined ? {} : { 'intro-primary': attorneyIntro }} selectedSurfaceKey={null}>
         <HomeAttorneySplit locale="zh-hant" presentation="editorial" />
       </BuilderSurfaceProvider>
       <HomeCaseResultsSplit locale="zh-hant" presentation="editorial" />
-      <InsightsArchiveSection locale="zh-hant" posts={posts} presentation="editorial" />
-      <FAQAccordion locale="zh-hant" items={faqItems} id="faq" sectionClassName="section section--gray" layout="split" />
+      <HomeStatsSection locale="zh-hant" plainLede />
+      <FAQAccordion locale="zh-hant" items={domesticFaqOrder(faqItems)} id="faq" sectionClassName="section section--gray" layout="split" />
       <OfficeMapTabs locale="zh-hant" id="offices" sectionClassName="section section--light" presentation="editorial" />
       <HomeContactCta locale="zh-hant" />
       <ZhHantMobileCta />

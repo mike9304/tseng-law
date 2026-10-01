@@ -43,7 +43,7 @@ const contactCopy = {
   },
   'zh-hant': {
     title: '台灣法律問題，歡迎來信諮詢。',
-    description: '依案件類型安排投資、訴訟及公司設立諮詢。',
+    description: '依案件類型安排民事、家事、刑事、勞資與公司設立等諮詢。',
   },
   en: {
     // WO-X1 (EN-06/J27): no unsupported urgency; reply language and time zone.

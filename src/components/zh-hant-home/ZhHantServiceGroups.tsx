@@ -6,13 +6,15 @@ import { ZH_HANT_SERVICE_SCENARIOS } from './zh-hant-service-scenarios';
 import styles from '../ZhHantServices.module.css';
 
 /**
- * zh-hant services list, second pass: the six existing practice cards in two groups
- * (business / individuals). Card text, links and anchors (#investment, #civil,
- * aliases #real-estate and #finance) are unchanged; only the arrangement is new.
+ * zh-hant services list for Taiwanese readers: the six existing practice cards grouped
+ * individuals & family → work & IP → foreign clients (company setup last, 2026-10-01 direction).
+ * Card text, links and anchors (#investment, #civil, aliases #real-estate and #finance) are
+ * unchanged; only the arrangement is new.
  */
 const GROUPS = [
-  { id: 'business', title: '企業與商務', text: '公司設立與投資、勞資關係、智慧財產與金融爭議。', slugs: ['investment', 'labor', 'ip'] },
-  { id: 'individual', title: '個人與家庭', text: '契約與損害賠償、離婚與繼承、刑事案件。', slugs: ['civil', 'family', 'criminal'] },
+  { id: 'individual', title: '個人與家庭', text: '車禍與損害賠償、契約糾紛、離婚與繼承、刑事案件。', slugs: ['civil', 'family', 'criminal'] },
+  { id: 'work', title: '勞資與智慧財產', text: '解僱與資遣費、商標與著作權、金融投資爭議。', slugs: ['labor', 'ip'] },
+  { id: 'foreign', title: '外國人與外國企業在台', text: '在台設立公司、投資審查與特殊行業許可。', slugs: ['investment'] },
 ] as const;
 
 const ALIASES: Record<string, string[]> = { civil: ['real-estate'], ip: ['finance'] };

@@ -193,8 +193,9 @@ describe('Japanese services-list copy', () => {
     expect(siteContent.ko.services.description).toBe(
       '대만 내 투자, 소송, 자문 전반을 구조화하여 제공합니다.',
     );
+    // zh-hant reordered for Taiwanese readers (2026-10-01 operator direction): disputes first, investment after.
     expect(siteContent['zh-hant'].services.description).toBe(
-      '服務範圍涵蓋在台投資、訴訟與法律顧問。',
+      '服務範圍涵蓋民事、家事、刑事與勞資案件，以及在台投資與法律顧問。',
     );
     expect(siteContent.en.services.description).toBe(
       'Taiwan company formation, litigation, residence permits, and tax and accounting support.',

@@ -3,7 +3,8 @@ import type { Locale, SiteLocale } from '@/lib/locales';
 
 export const ARCHIVE_INTRO_COPY = {
   ko: '대만 회사설립, 투자와 분쟁 대응에 필요한 법률정보를 확인하세요.',
-  'zh-hant': '查看台灣公司設立、投資與爭議處理所需的法律資訊。',
+  // 2026-10-01: Taiwanese readers come for everyday disputes first; company setup is mainly for foreign clients.
+  'zh-hant': '查看車禍、離婚與繼承、勞資與各類糾紛處理所需的法律資訊，也包括在台投資與公司設立。',
   en: 'Find legal information you need for Taiwan company formation, investment, and dispute response.',
   ja: '台湾の会社設立、投資、紛争対応に必要な法律情報をご確認ください。',
 } as const satisfies Record<SiteLocale, string>;

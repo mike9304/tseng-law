@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import ZhHantServiceGroups from '@/components/zh-hant-home/ZhHantServiceGroups';
+import { ZH_HANT_DOMESTIC_SERVICE_ORDER } from '@/components/zh-hant-home/zh-hant-service-scenarios';
+import { getServiceSlugs } from '@/data/service-details';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
@@ -28,7 +30,10 @@ export default function ZhHantServicesBody({ showHero, showRepeater }: { showHer
       {showRepeater ? (
         <>
           <nav className={styles.practiceNav} aria-label={services.title}>
-            {services.items.map((item) => <a key={item.href} href={`#${item.href.split('#')[1]}`}>{item.title}</a>)}
+            {[...services.items]
+              .map((item, index) => ({ item, slug: getServiceSlugs()[index] ?? '' }))
+              .sort((a, b) => ZH_HANT_DOMESTIC_SERVICE_ORDER.indexOf(a.slug as never) - ZH_HANT_DOMESTIC_SERVICE_ORDER.indexOf(b.slug as never))
+              .map(({ item }) => <a key={item.href} href={`#${item.href.split('#')[1]}`}>{item.title}</a>)}
           </nav>
           <ZhHantServiceGroups showTitle={!showHero} />
           <section className={styles.contact}>

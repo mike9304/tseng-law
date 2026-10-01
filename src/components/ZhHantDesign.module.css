@@ -373,7 +373,7 @@
 .engagement { background: var(--zh-cream, #f4efe2); padding: 80px 0; }
 .engagementGrid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 0.8fr); gap: 40px 64px; align-items: start; }
 .engagementTitle { margin: 0 0 24px; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.4; color: var(--zh-ink, #16382d); }
-.engagementSteps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.engagementSteps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .engagementSteps li { display: flex; flex-direction: column; gap: 8px; padding: 20px 18px 22px; background: #fff; border-top: 3px solid var(--zh-ink, #16382d); border-radius: 2px; }
 .engagementNo { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--zh-ink, #16382d); color: var(--zh-cream, #f4efe2); font-weight: 700; }
 .engagementStepTitle { font-size: 17px; font-weight: 700; color: var(--zh-ink, #16382d); }
@@ -388,9 +388,6 @@
 .engagementOffices li { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid #ddd3bb; }
 .engagementOfficeName { font-weight: 700; color: var(--zh-ink, #16382d); }
 .engagementOfficeAddress { font-size: 14.5px; line-height: 1.7; color: #3c4a43; }
-@media (max-width: 1100px) {
-  .engagementSteps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (max-width: 900px) {
   .engagementGrid { grid-template-columns: minmax(0, 1fr); }
   .engagementOffices { padding-left: 0; border-left: none; }

@@ -27,7 +27,7 @@ const DOORS = [
     ],
   },
   {
-    title: '外國人與外國企業在台',
+    title: '在台外國人與外國企業',
     text: '在台設立公司與投資審查，可用中文、韓文、日文或英文溝通。',
     links: [
       { label: '投資與公司設立', href: '/zh-hant/services/investment' },

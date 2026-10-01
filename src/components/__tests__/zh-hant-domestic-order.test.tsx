@@ -12,7 +12,7 @@ describe('zh-hant arrangement for Taiwanese readers (2026-10-01)', () => {
   it('puts personal and family matters in the first door and company setup in the last', () => {
     const html = renderToStaticMarkup(<ZhHantAudienceDoors />);
     expect(html.indexOf('個人與家庭')).toBeLessThan(html.indexOf('工作與契約糾紛'));
-    expect(html.indexOf('工作與契約糾紛')).toBeLessThan(html.indexOf('外國人與外國企業在台'));
+    expect(html.indexOf('工作與契約糾紛')).toBeLessThan(html.indexOf('在台外國人與外國企業'));
     expect(html.indexOf('/zh-hant/services/investment')).toBeGreaterThan(html.indexOf('/zh-hant/services/criminal'));
   });
 

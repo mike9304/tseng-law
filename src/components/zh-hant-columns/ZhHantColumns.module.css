@@ -2,7 +2,7 @@
 .root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-gold-text: #8a6a2a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --zh-paper: #f7f5ef; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
 
 /* Header */
-.root:global(#zh-hant-columns) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 40px 0 84px; border-bottom: none; }
+.root:global(#zh-hant-columns) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 32px 0 76px; border-bottom: none; }
 .root:global(#zh-hant-columns) :global(.page-header-title),
 .root:global(#zh-hant-columns) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
 .root:global(#zh-hant-columns) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
@@ -82,8 +82,8 @@
 }
 
 /* Board switch (2026-10-01 「메뉴가 너무 숨어 있다」): two large cards overlapping the header edge. */
-.switch { position: relative; z-index: 2; margin-top: -56px; margin-bottom: 8px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
-.switchCard { display: flex; flex-direction: column; gap: 6px; min-height: 0; padding: 18px 24px; background: #fff; color: var(--zh-ink); border: 1px solid var(--zh-line); border-radius: 4px; box-shadow: 0 14px 30px rgb(22 56 45 / 12%); text-decoration: none; }
+.switch { position: relative; z-index: 2; margin-top: -56px; margin-bottom: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.switchCard { display: flex; flex-direction: column; gap: 6px; min-height: 0; padding: 14px 22px; background: #fff; color: var(--zh-ink); border: 1px solid var(--zh-line); border-radius: 4px; box-shadow: 0 14px 30px rgb(22 56 45 / 12%); text-decoration: none; }
 a.switchCard:hover, .switchCard:not(.switchActive):hover { border-color: #8aa592; }
 .switchActive { background: var(--zh-cream); border: 2px solid var(--zh-ink); }
 .switchLink { display: flex; flex-direction: column; gap: 8px; color: inherit; text-decoration: none; }
@@ -125,3 +125,15 @@ a.switchCard:hover, .switchCard:not(.switchActive):hover { border-color: #8aa592
 .root:global(#zh-hant-columns) :global(.page-header-title),
 .root:global(#zh-hant-columns) :global(.page-header-title *) { font-size: clamp(34px, 3.6vw, 52px) !important; }
 .root:global(#zh-hant-columns) :global(.columns-filters) { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); padding-right: 40px; }
+/* D1 SHOULD 1: more of the first column card in the first screen. */
+.root:global(#zh-hant-columns) :global(.columns-search-label) { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.root:global(#zh-hant-columns) :global(section.section[class*='ColumnsGrid']) { padding-top: 16px; }
+.root:global(#zh-hant-columns) :global(.columns-filters) { margin-bottom: 12px; }
+@media (max-width: 767px) {
+  /* Phones: the two boards as a compact side-by-side pair (title + count); descriptions stay on wider screens. */
+  .switch { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: -40px; }
+  .switchCard { padding: 12px 14px; justify-content: center; min-height: 56px; }
+  .switchTitle { font-size: 16px; gap: 6px; flex-wrap: wrap; }
+  .switchText, .switchLatest { display: none; }
+  .root:global(#zh-hant-columns) :global(.page-header) { padding: 28px 0 60px; }
+}

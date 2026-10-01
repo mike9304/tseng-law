@@ -392,11 +392,12 @@ describe('the existing four languages keep their exact home markup', () => {
           faqItems={[]}
         />,
       );
-      // zh-hant second pass (2026-10-01): trust facts (stats) follow the hero and the
-      // decorative heritage interlude is not part of the zh-hant home.
+      // zh-hant (2026-10-01, Taiwanese readers first): services, then practical columns, then the
+      // attorney and cases; trust facts (stats) follow the cases. The decorative heritage interlude
+      // is not part of the zh-hant home.
       expectLandmarksOnce(markup, locale, locale === 'zh-hant' ? ['heritage'] : []);
       expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'zh-hant'
-        ? ['hero', 'stats', 'practice', 'about', 'results', 'insights', 'faq', 'offices', 'contact']
+        ? ['hero', 'practice', 'insights', 'about', 'results', 'stats', 'faq', 'offices', 'contact']
         : EXPECTED_SEQUENCE);
     }
   });

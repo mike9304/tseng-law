@@ -53,6 +53,12 @@
 }
 .root:global(#ja-column) :global(.column-toc-label) { font-size: 13px; font-weight: 700; letter-spacing: 0.24em; color: var(--ja-gold-text); }
 .root:global(#ja-column) :global(.column-toc a) { color: var(--ja-ink); }
+/* 目次 rows: each entry is a 44px-tall row with a hairline (the list doubles as the tap target list). */
+.root:global(#ja-column) :global(.column-toc li) { border-bottom: 1px dashed var(--ja-line); }
+.root:global(#ja-column) :global(.column-toc a) { display: flex; align-items: center; min-height: 44px; padding: 4px 0; }
+.root:global(#ja-column) :global(.blog-sidebar .authority-card a:not(.button)) { display: inline-flex; align-items: center; min-height: 44px; }
+/* Source lists (公式資料・参考法令) are link-per-item lists: give each link a 44px row. */
+.root:global(#ja-column) :global(.column-markdown li > a) { display: inline-flex; align-items: center; min-height: 44px; }
 .root:global(#ja-column) :global(h2.blog-heading) {
   padding: 12px 16px; margin-top: 2.4em; background: var(--ja-paper); border-left: 4px solid var(--ja-green);
   font-size: clamp(19px, 1.7vw, 22px); line-height: 1.6; letter-spacing: 0.04em; color: var(--ja-ink);

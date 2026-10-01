@@ -57,12 +57,26 @@
   grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px;
 }
 .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card) {
-  display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 0 20px; align-items: start;
+  display: grid; grid-template-columns: 168px minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 0 20px; align-items: start;
   padding: 20px 0; border-bottom: 1px solid var(--ja-line);
 }
-.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-img) { aspect-ratio: 4 / 3; width: 100%; height: auto; }
-.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-image-meta) { display: none; }
-.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-body) { padding: 0; }
+/* The thumbnail is too small for the image overlay, so its topic label and publication date move into
+   the text column, on the line above the author / reading time (the date stays visible). */
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-img) { display: contents; }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-img > img) {
+  grid-column: 1; grid-row: 1 / span 2; width: 100% !important; height: auto !important; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0;
+}
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-image-overlay) { display: none; }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-image-meta) {
+  grid-column: 2; grid-row: 1; position: static; inset: auto; justify-content: flex-start; align-items: baseline; gap: 4px 14px; margin: 0 0 6px;
+}
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-image-meta .columns-category-badge--image) {
+  padding: 0; background: transparent; color: var(--ja-gold-text); font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em;
+}
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-image-meta .columns-card-datechip) {
+  padding: 0; background: transparent; color: var(--ja-sub); font-size: 12.5px; letter-spacing: 0.04em;
+}
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-body) { grid-column: 2; grid-row: 2; padding: 0; }
 
 @media (max-width: 900px) {
   .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-grid) { grid-template-columns: minmax(0, 1fr); }

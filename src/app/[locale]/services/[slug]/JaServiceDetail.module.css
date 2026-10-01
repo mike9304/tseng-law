@@ -36,6 +36,7 @@
 .hero.hero :global(.svc-back-link) { display: inline-flex; align-items: center; min-height: 44px; }
 .article.article :global(.svc-keypoints-list a) { display: inline-flex; align-items: center; min-height: 44px; }
 .article.article :global(a.authority-card-name) { display: inline-flex; align-items: center; min-height: 44px; }
+.article.article :global(.authority-card a:not(.button)) { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* Article */
 .article.article:global(.svc-article) { padding: clamp(44px, 5vw, 80px) 0 clamp(56px, 6vw, 96px); background: #fff; }

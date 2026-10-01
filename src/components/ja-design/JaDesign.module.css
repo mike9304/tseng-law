@@ -58,6 +58,9 @@
   grid-column: 2; grid-row: 1; margin: 0 0 18px; font-size: 13px; letter-spacing: 0.06em; color: var(--ja-sub);
 }
 .root:global([data-ja-design]) :global(.page-header .breadcrumb a) { color: var(--ja-sub); }
+/* Breadcrumb links are ~41×23px: an invisible hit area makes each at least 44px tall and wide. */
+.root:global([data-ja-design]) :global(.breadcrumb a) { position: relative; }
+.root:global([data-ja-design]) :global(.breadcrumb a)::after { content: ''; position: absolute; inset: -11px -8px; min-width: 44px; }
 .root:global([data-ja-design]) :global(.page-header .breadcrumb-current) { color: var(--ja-ink); }
 .root:global([data-ja-design]) :global(.page-header .section-label) {
   grid-column: 1; grid-row: 1 / span 3; align-self: start; justify-self: center;

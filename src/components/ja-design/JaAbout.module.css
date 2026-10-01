@@ -17,6 +17,7 @@
 .root:global(#ja-about) :global(.firm-intro-subtitle) { grid-column: 1; grid-row: 3; margin: 0; font-size: 15px; line-height: 1.95; color: var(--ja-sub); }
 .root:global(#ja-about) :global(.firm-intro-source) { grid-column: 1; grid-row: 4; align-self: start; margin: 20px 0 0; font-size: 13px; }
 .root:global(#ja-about) :global(.firm-intro-source a) { color: var(--ja-sub); }
+.root:global(#ja-about) :global(.firm-intro-source a) { display: inline-flex; align-items: center; min-height: 44px; }
 .root:global(#ja-about) :global(.firm-intro-body) {
   grid-column: 2; grid-row: 1 / span 4; position: relative; margin: 0; padding-left: 32px; border-left: 1px solid var(--ja-gold);
 }

@@ -1,7 +1,7 @@
 /* en team page (Opus 5.5 en lane, 2026-10-01). Team cards: EnAbout.module.css (.team). */
 .lawyers :global(.attorney-team-section) { border-top: none; padding-top: 56px; }
-.lawyers :global(.attorney-facts-section) { padding: 72px 0 88px; background: #fff; border-top: 3px solid var(--en-ink); }
-.lawyers :global(.attorney-facts-section .section-title) { font-family: var(--en-sans) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; color: var(--en-ink); }
+.lawyers :global(.attorney-facts-section) { padding: 72px 0 88px; background: #fff; border-top: 1px solid var(--en-ink); }
+.lawyers :global(.attorney-facts-section .section-title) { font-family: var(--en-display) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; color: var(--en-ink); }
 .lawyers :global(.attorney-facts-section .attorney-card-section) { display: grid; grid-template-columns: minmax(10em, 0.35fr) minmax(0, 1fr); gap: 6px 32px; padding: 18px 0; border-top: 1px solid var(--en-line); }
 .lawyers :global(.attorney-facts-section .attorney-card-section p) { margin: 0; font-size: 16.5px; line-height: 1.65; color: var(--en-text); }
 @media (max-width: 767px) {

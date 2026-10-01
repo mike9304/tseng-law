@@ -1,53 +1,56 @@
 /* en contact (Opus 5.5 en lane, 2026-10-01). Tokens come from EnPage.module.css (.root). Shared component markup unchanged. */
 
 /* Email panel in the header slot (ContactEmailActions) */
-.contact :global(.page-header .contact-email-actions) { margin: 0; padding: 22px 24px; border-top: 6px solid var(--en-signal); border-radius: 0; background: var(--en-mist); box-shadow: none; text-align: left; }
-.contact :global(.page-header .contact-email-actions__label) { font-size: 12.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--en-muted); }
-.contact :global(.page-header .contact-email-actions__address) { font-size: clamp(20px, 2vw, 26px); font-weight: 800; color: var(--en-ink); overflow-wrap: anywhere; }
-.contact :global(.page-header .contact-email-actions__row) { gap: 10px; }
+.contact :global(.page-header .contact-email-actions) { margin: 0; padding: 26px; border: 1px solid var(--en-line-dark); border-radius: 24px; background: rgb(20 23 27 / 92%); box-shadow: none; text-align: left; color: #fff; }
+.contact :global(.page-header .contact-email-actions__label) { font-family: var(--en-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(255 255 255 / 80%); }
+.contact :global(.page-header .contact-email-actions__address) { font-family: var(--en-display); font-size: clamp(22px, 2.2vw, 30px); font-weight: 700; letter-spacing: -0.02em; color: #fff; overflow-wrap: anywhere; }
+.contact :global(.page-header .contact-email-actions__row) { display: flex; flex-wrap: wrap; gap: 10px; }
 .contact :global(.page-header .contact-email-actions__row a),
-.contact :global(.page-header .contact-email-actions__row button) { min-height: 48px; border-radius: 4px; font-weight: 700; }
-.contact :global(.page-header .contact-email-actions__row a) { border: 2px solid var(--en-ink); background: var(--en-ink); color: #fff; }
-.contact :global(.page-header .contact-email-actions__row button) { border: 2px solid var(--en-ink); background: #fff; color: var(--en-ink); }
-.contact :global(.page-header .contact-email-actions__note) { font-size: 15px; line-height: 1.6; color: var(--en-text); }
+.contact :global(.page-header .contact-email-actions__row button) { min-height: 48px; padding: 10px 22px; border-radius: 999px; font-weight: 700; flex: 0 1 auto; width: auto; }
+.contact :global(.page-header .contact-email-actions__row a) { border: 2px solid var(--en-signal); background: var(--en-signal); color: var(--en-ink); }
+.contact :global(.page-header .contact-email-actions__row button) { border: 2px solid rgb(255 255 255 / 70%); background: transparent; color: #fff !important; }
+.contact :global(.page-header .contact-email-actions__row button *) { color: #fff !important; }
+.contact :global(.page-header .contact-email-actions__status) { color: #d3d6da; }
+.contact :global(.page-header .contact-email-actions__note) { font-size: 15px; line-height: 1.6; color: #d3d6da; }
+.contact :global(.page-header .contact-email-actions) :focus-visible { outline: 3px solid var(--en-signal); outline-offset: 3px; }
 
 /* Form beside the checklist */
 .split { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 40px 56px; align-items: start; padding-block: 64px 80px; }
-.formCol { min-width: 0; padding-top: 20px; border-top: 3px solid var(--en-ink); }
-.formCol :global(form h2) { font-family: var(--en-sans) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
+.formCol { min-width: 0; padding-top: 20px; border-top: 1px solid var(--en-ink); }
+.formCol :global(form h2) { font-family: var(--en-display) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
 .formCol :global(input),
 .formCol :global(select),
-.formCol :global(textarea) { min-height: 48px; border: 1.5px solid #9fb0a3; border-radius: 4px; font-size: 16px; }
+.formCol :global(textarea) { min-height: 48px; border: 1.5px solid #b9b5a8; border-radius: 14px; font-size: 16px; }
 .formCol :global(input:focus-visible),
 .formCol :global(select:focus-visible),
 .formCol :global(textarea:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 1px; border-color: var(--en-ink); }
-.formCol :global(button[type='submit']) { min-height: 52px; border: 2px solid var(--en-ink); border-radius: 4px; background: var(--en-ink); color: #fff; font-weight: 700; }
+.formCol :global(button[type='submit']) { min-height: 52px; border: 2px solid var(--en-ink); border-radius: 999px; background: var(--en-ink); color: #fff; font-weight: 700; }
 .formCol :global(button[type='submit']:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 .guideCol { min-width: 0; }
-.guideCol :global(.consultation-guide-section) { padding: 24px 24px 8px; background: var(--en-mist); border-top: 6px solid var(--en-signal); }
+.guideCol :global(.consultation-guide-section) { padding: 24px 24px 8px; background: var(--en-mist); border: 1px solid var(--en-line); border-radius: 24px; }
 .guideCol :global(.consultation-guide-section .container) { width: auto; max-width: none; padding: 0; margin: 0; }
 .guideCol :global(.consultation-guide-section .section-label) { margin-bottom: 8px; }
-.guideCol :global(.consultation-guide-section h2.section-title) { margin: 0 0 8px; font-family: var(--en-sans) !important; font-size: 26px !important; font-weight: 800; line-height: 1.2 !important; letter-spacing: -0.02em; color: var(--en-ink); }
+.guideCol :global(.consultation-guide-section h2.section-title) { margin: 0 0 8px; font-family: var(--en-display) !important; font-size: 26px !important; font-weight: 800; line-height: 1.2 !important; letter-spacing: -0.02em; color: var(--en-ink); }
 .guideCol :global(.consultation-guide-section .section-lede) { font-size: 15.5px; line-height: 1.6; color: var(--en-text); }
 .guideCol :global(.consultation-guide-section .ornament-divider) { display: none; }
 .guideCol :global(.consultation-guide-section .contact-grid) { display: block; margin-top: 12px; }
 .guideCol :global(.consultation-guide-section .legal-card) { padding: 16px 0; border: none; border-top: 1px solid var(--en-line); border-radius: 0; background: transparent; box-shadow: none; transform: none; }
-.guideCol :global(.consultation-guide-section .card-title) { margin: 0 0 8px; font-family: var(--en-sans) !important; font-size: 17px; font-weight: 800; color: var(--en-ink); }
+.guideCol :global(.consultation-guide-section .card-title) { margin: 0 0 8px; font-family: var(--en-display) !important; font-size: 17px; font-weight: 800; color: var(--en-ink); }
 .guideCol :global(.consultation-guide-section .legal-card-list li) { font-size: 15px; line-height: 1.55; color: var(--en-text); }
 
 /* Email/AI section, inquiry types, offices */
-.contact :global(.messenger-chat-section) { padding-block: 72px; background: #fff; border-top: 3px solid var(--en-ink); }
-.contact :global(.messenger-chat-section h2.section-title) { font-family: var(--en-sans) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
-.contact :global(.messenger-card) { border-radius: 0; border-top: 4px solid var(--en-ink); box-shadow: none; }
+.contact :global(.messenger-chat-section) { padding-block: 72px; background: #fff; border-top: 1px solid var(--en-ink); }
+.contact :global(.messenger-chat-section h2.section-title) { font-family: var(--en-display) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
+.contact :global(.messenger-card) { border-radius: 0; border: 1px solid var(--en-line); border-radius: 24px; box-shadow: none; }
 .contact :global(.messenger-card:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 .contact :global(.messenger-features) { border-radius: 0; background: var(--en-mist); }
 .contact :global(.messenger-features li) { color: var(--en-text); }
 .contact :global(#offices .office-rating-link) { display: inline-flex; align-items: center; min-height: 44px; }
-.contact > :global(section.section:not(.page-header):not(#offices):not(.messenger-chat-section)) { background: var(--en-mist); border-top: 3px solid var(--en-ink); }
-.contact :global(.contact-grid .card) { border: none; border-top: 4px solid var(--en-ink); border-radius: 0; background: #fff; box-shadow: none; }
-.contact :global(.contact-grid .card-title) { font-family: var(--en-sans) !important; font-weight: 800; color: var(--en-ink); }
-.contact :global(#offices) { border-top: 3px solid var(--en-ink); }
-.contact :global(#offices h2.section-title) { font-family: var(--en-sans) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
+.contact > :global(section.section:not(.page-header):not(#offices):not(.messenger-chat-section)) { background: var(--en-mist); border-top: 1px solid var(--en-ink); }
+.contact :global(.contact-grid .card) { border: 1px solid var(--en-line); border-radius: 24px; background: #fff; box-shadow: none; }
+.contact :global(.contact-grid .card-title) { font-family: var(--en-display) !important; font-weight: 800; color: var(--en-ink); }
+.contact :global(#offices) { border-top: 1px solid var(--en-ink); }
+.contact :global(#offices h2.section-title) { font-family: var(--en-display) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
 .contact :global(#offices .office-card) { border-radius: 0; box-shadow: none; }
 .contact :global(a:focus-visible),
 .contact :global(button:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
@@ -60,3 +63,6 @@
   .guideCol :global(.consultation-guide-section) { padding: 20px 18px 4px; }
   .contact :global(.messenger-chat-section) { padding-block: 48px; }
 }
+
+.formCol :global(textarea) { border-radius: 16px; }
+.formCol :global(input[type='checkbox']) { min-height: 0; border-radius: 4px; }

@@ -9,6 +9,14 @@
 .startList a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4; text-decoration: underline; text-decoration-color: var(--en-signal); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .startList a:focus-visible { outline: 3px solid var(--en-signal); outline-offset: 2px; }
 
+.startMore { border-top: 1px solid var(--en-line-dark); }
+.startMore summary { display: flex; align-items: center; justify-content: space-between; min-height: 48px; cursor: pointer; font-family: var(--en-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; list-style: none; }
+.startMore summary::-webkit-details-marker { display: none; }
+.startMore summary::after { content: '+'; font-size: 18px; color: var(--en-signal); }
+.startMore[open] summary::after { content: '−'; }
+.startMore summary:focus-visible { outline: 3px solid var(--en-signal); outline-offset: 2px; }
+.startMore .startList li:first-child { border-top: 1px solid var(--en-line-dark); }
+
 /* Phones: the same list collapsed (see EnColumnsStartHere) */
 .startMobile { display: none; }
 .startSummary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; cursor: pointer; font-size: 15px; font-weight: 700; color: #fff; list-style: none; }
@@ -37,7 +45,8 @@
 .columns :global(.columns-topic-section:first-child) { border-top: none; }
 .columns :global(.columns-topic-title) { font-family: var(--en-display) !important; font-size: clamp(26px, 2.4vw, 34px); font-weight: 800; line-height: 1.15; letter-spacing: -0.025em; color: var(--en-ink); }
 .columns :global(.columns-topic-count) { font-weight: 800; color: var(--en-ink); }
-.columns :global(.columns-card) { border: 1px solid var(--en-line); border-radius: 24px; background: #fff; box-shadow: none; }
+.columns :global(.columns-card) { overflow: hidden; border: 1px solid var(--en-line); border-radius: 24px; background: #fff; box-shadow: none; }
+.columns :global(.columns-card-body) { padding: 20px 24px 24px; }
 .columns :global(.columns-card:hover) { transform: none; box-shadow: 0 10px 24px rgb(13 34 26 / 8%); }
 .columns :global(.columns-card-img) { border-radius: 0; }
 .columns :global(.columns-card-title) { font-family: var(--en-display) !important; font-size: 19px; font-weight: 800; line-height: 1.3; letter-spacing: -0.012em; color: var(--en-ink); }
@@ -49,6 +58,8 @@
 /* Recommended: a wide lead card + two stacked */
 .columns :global(.columns-topic-section:first-child .columns-grid) { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); grid-template-rows: auto auto; gap: 24px 32px; }
 .columns :global(.columns-topic-section:first-child .columns-card:first-child) { grid-row: 1 / span 2; }
+.columns :global(.columns-topic-section:first-child .columns-card:first-child) { display: flex; flex-direction: column; align-self: stretch; }
+.columns :global(.columns-topic-section:first-child .columns-card:first-child .columns-card-img) { flex: 1 1 auto; min-height: 320px; aspect-ratio: auto; }
 .columns :global(.columns-topic-section:first-child .columns-card:first-child .columns-card-title) { font-size: clamp(22px, 2vw, 28px); }
 .columns :global(.columns-topic-section:first-child .columns-card:not(:first-child) .columns-card-img) { aspect-ratio: 16 / 7; }
 

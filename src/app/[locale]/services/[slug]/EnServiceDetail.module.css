@@ -14,7 +14,7 @@
     radial-gradient(60% 90% at 88% 20%, rgb(255 198 26 / 16%) 0%, rgb(255 198 26 / 0%) 60%),
     radial-gradient(50% 80% at 100% 90%, rgb(40 190 190 / 14%) 0%, rgb(40 190 190 / 0%) 60%),
     linear-gradient(90deg, #07090b 0%, rgb(7 9 11 / 90%) 55%, rgb(7 9 11 / 55%) 100%),
-    url('/images/editorial/en-night-taxi-hero.webp') 72% 40% / cover no-repeat,
+    url('/images/editorial/en-night-taxi-hero.webp') 8% 92% / 160% auto no-repeat,
     #07090b;
   color: #fff;
 }
@@ -72,7 +72,7 @@
   text-decoration: none;
   transition: transform 0.3s var(--en-ease), background-color 0.2s ease;
 }
-.heroCta:hover { background: #ffd54d; border-color: #ffd54d; color: var(--en-ink); transform: translateY(-2px); }
+.heroCta:hover { background: #ffd54d; border-color: #ffd54d; color: var(--en-ink); }
 .jump {
   display: inline-flex;
   align-items: center;
@@ -181,4 +181,9 @@
   .article :global(p.svc-intro) { font-size: 18px; }
   .article :global(.svc-keypoints-list li) { padding-left: 40px; font-size: 16px; }
   .article :global(.svc-columns-grid) { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Hover lift only when the visitor has not asked for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .heroCta:hover { transform: translateY(-2px); }
 }

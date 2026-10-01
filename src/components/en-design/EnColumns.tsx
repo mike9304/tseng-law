@@ -25,9 +25,9 @@ export function EnColumnsShell({ children }: { children: ReactNode }) {
 export function EnColumnsStartHere({ posts }: { posts: readonly { slug: string; title: string }[] }) {
   const rows = resolveEnSituations(posts).filter((situation) => situation.guideLinks.length > 0);
   if (rows.length === 0) return null;
-  const list = (
+  const renderRows = (items: typeof rows) => (
     <ol className={styles.startList}>
-      {rows.map((situation) => (
+      {items.map((situation) => (
         <li key={situation.id}>
           <span className={styles.startLabel}>{situation.label}</span>
           <Link href={situation.guideLinks[0].href}>{situation.guideLinks[0].title}</Link>
@@ -35,11 +35,20 @@ export function EnColumnsStartHere({ posts }: { posts: readonly { slug: string; 
       ))}
     </ol>
   );
+  const list = renderRows(rows);
+  const firstRows = rows.slice(0, 4);
+  const moreRows = rows.slice(4);
   return (
     <>
       <nav className={`${styles.start} ${styles.startDesktop}`} aria-label="Start here">
         <p className={styles.startTitle}>Start here</p>
-        {list}
+        {renderRows(firstRows)}
+        {moreRows.length > 0 ? (
+          <details className={styles.startMore}>
+            <summary>{moreRows.length} more situations</summary>
+            {renderRows(moreRows)}
+          </details>
+        ) : null}
       </nav>
       <details className={`${styles.start} ${styles.startMobile}`}>
         <summary className={styles.startSummary}>

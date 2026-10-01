@@ -142,13 +142,17 @@
     radial-gradient(60% 90% at 88% 20%, rgb(255 198 26 / 16%) 0%, rgb(255 198 26 / 0%) 60%),
     radial-gradient(50% 80% at 100% 90%, rgb(40 190 190 / 14%) 0%, rgb(40 190 190 / 0%) 60%),
     linear-gradient(90deg, #07090b 0%, rgb(7 9 11 / 90%) 55%, rgb(7 9 11 / 55%) 100%),
-    url('/images/editorial/en-night-taxi-hero.webp') 72% 40% / cover no-repeat,
+    var(--en-plate, none),
     #07090b;
   border-bottom: none;
   color: #fff;
   min-height: 0;
 }
-.root[data-en-design][id] :global(.page-header)::after { display: none; }
+/* One signal-yellow rule closes every page header (the plate-less utility pages carry it alone). */
+.root[data-en-design][id] :global(.page-header)::after { content: ''; display: block; position: absolute; inset: auto 0 0 0; z-index: 1; height: 3px; background: var(--en-signal); pointer-events: none; }
+/* Plate crops differ by page family; pricing, FAQ, team, about, contact and profiles stay plain ink. */
+.root[data-en-design='services'] { --en-plate: url('/images/editorial/en-night-taxi-hero.webp') 24% 78% / 170% auto no-repeat; }
+.root[data-en-design='columns'] { --en-plate: url('/images/editorial/en-night-taxi-hero.webp') 100% 8% / 190% auto no-repeat; }
 .root[data-en-design][id] :global(.page-header > .container) {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
@@ -295,7 +299,7 @@
   transition: transform 0.3s var(--en-ease), background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .primary { background: var(--en-signal); border: 2px solid var(--en-signal); color: var(--en-ink); }
-.primary:hover { background: #ffd54d; border-color: #ffd54d; color: var(--en-ink); transform: translateY(-2px); }
+.primary:hover { background: #ffd54d; border-color: #ffd54d; color: var(--en-ink); }
 .secondary { background: transparent; border: 2px solid currentColor; color: var(--en-ink); }
 .secondary:hover { background: var(--en-ink); border-color: var(--en-ink); color: #fff; }
 .glance .secondary,
@@ -389,7 +393,7 @@
   color: var(--en-muted);
   font-variant-numeric: tabular-nums;
 }
-.root:global(:is(#en-home, #en-services)) :global(.services-bento .services-detail-card:hover) { transform: translateY(-5px); border-color: var(--en-ink); box-shadow: 0 18px 40px rgb(10 11 13 / 10%); }
+.root:global(:is(#en-home, #en-services)) :global(.services-bento .services-detail-card:hover) { border-color: var(--en-ink); box-shadow: 0 18px 40px rgb(10 11 13 / 10%); }
 .root:global(:is(#en-home, #en-services)) :global(.services-bento .services-detail-header) { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 14px; padding-right: 36px; }
 .root:global(:is(#en-home, #en-services)) :global(.services-bento .service-icon) { width: 48px; height: 48px; padding: 11px; margin: 0; border-radius: 14px; background: var(--en-signal); color: var(--en-ink); }
 .root:global(:is(#en-home, #en-services)) :global(.services-bento .services-detail-title) { margin: 0; font-family: var(--en-display) !important; font-size: clamp(24px, 2.1vw, 30px); font-weight: 700; line-height: 1.12; letter-spacing: -0.028em; color: var(--en-ink); }
@@ -480,4 +484,10 @@
   .glanceRow { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 12px 0; }
   .glanceActions { padding: 6px 20px 20px; }
   .glanceActions > a { flex: 1 1 100%; }
+}
+
+/* Hover lift only when the visitor has not asked for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .primary:hover { transform: translateY(-2px); }
+  .root:global(:is(#en-home, #en-services)) :global(.services-bento .services-detail-card:hover) { transform: translateY(-5px); }
 }

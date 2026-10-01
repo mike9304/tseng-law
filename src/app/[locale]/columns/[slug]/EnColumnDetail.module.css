@@ -5,7 +5,7 @@
  */
 
 /* Hero: text first on white, photo in flow below (no darkening overlay or blurred backdrop) */
-.detail:global(.en-column) :global(.blog-hero) { display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding: clamp(24px, 3vw, 40px) 0 clamp(32px, 4vw, 56px); color: #fff; background: radial-gradient(60% 90% at 88% 10%, rgb(255 198 26 / 16%) 0%, rgb(255 198 26 / 0%) 60%), linear-gradient(90deg, #07090b 0%, rgb(7 9 11 / 90%) 55%, rgb(7 9 11 / 55%) 100%), url('/images/editorial/en-night-taxi-hero.webp') 72% 40% / cover no-repeat, #07090b; }
+.detail:global(.en-column) :global(.blog-hero) { display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding: clamp(24px, 3vw, 40px) 0 clamp(32px, 4vw, 56px); color: #fff; background: radial-gradient(60% 90% at 88% 10%, rgb(255 198 26 / 16%) 0%, rgb(255 198 26 / 0%) 60%), linear-gradient(90deg, #07090b 0%, rgb(7 9 11 / 90%) 55%, rgb(7 9 11 / 55%) 100%), url('/images/editorial/en-night-taxi-hero.webp') 96% 16% / 190% auto no-repeat, #07090b; }
 .detail:global(.en-column) :global(.blog-hero .blog-hero-inner) { order: 1; align-self: center; width: min(1200px, 100%); padding-top: 0; padding-bottom: 32px; }
 .detail:global(.en-column) :global(.blog-hero .blog-hero-bg) {
   order: 2;
@@ -88,3 +88,4 @@
   .detail:global(.en-column) :global(.blog-article) { padding-top: 32px; }
   .detail:global(.en-column) :global(.column-faq-answer) { margin-left: 0; }
 }
+.detail :global(.column-toc-link) { display: inline-block; padding-block: 4px; }

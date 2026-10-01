@@ -36,6 +36,7 @@ import {
 } from '@/lib/consultation/public-contact';
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './LawyerProfile.module.css';
+import zhStyles from './ZhHantLawyerProfile.module.css';
 
 export const dynamic = 'force-dynamic';
 
@@ -195,7 +196,7 @@ export default async function LawyerProfilePage(
     })),
   };
 
-  return (
+  const content = (
     <>
       {showSeo ? (
         <>
@@ -394,4 +395,8 @@ export default async function LawyerProfilePage(
       ) : null}
     </>
   );
+  // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside a scoped wrapper for the zh-hant profile styling.
+  return locale === 'zh-hant'
+    ? <div className={zhStyles.root} id="zh-hant-lawyer-profile" data-zh-hant-design="lawyer-profile">{content}</div>
+    : content;
 }

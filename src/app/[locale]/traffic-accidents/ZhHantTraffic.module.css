@@ -1,0 +1,22 @@
+/* zh-hant traffic hub, second pass (son7-87 / Opus 5.5, 2026-10-01): typography and article grid aligned with
+   the rest of the zh-hant redesign. Shared hub markup and other locales unchanged. */
+.zh { --zh-ink: #16382d; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
+
+/* Serif headings; CJK glyphs need neutral or slightly open tracking, not the shared negative letter-spacing. */
+.zh h1, .zh h2, .zh h3 { font-family: var(--font-serif-tc); }
+.zh h1 { font-weight: 700; letter-spacing: 0.03em; }
+.zh h2 { font-weight: 700; letter-spacing: 0.02em; }
+.zh h3 { font-weight: 700; letter-spacing: 0.01em; }
+
+/* Column cards: even three-column grid with an ink rule, three-line summaries */
+.zh :global(#articles) > div:last-child { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.zh :global(#articles) > div:last-child > a { border-top: 3px solid var(--zh-ink); border-radius: 2px; }
+.zh :global(#articles) > div:last-child > a h3 { font-size: 20px; margin-top: 4px; color: var(--zh-ink); }
+.zh :global(#articles) > div:last-child > a p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+@media (max-width: 960px) {
+  .zh :global(#articles) > div:last-child { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .zh :global(#articles) > div:last-child { grid-template-columns: minmax(0, 1fr); }
+}

@@ -7,6 +7,7 @@ import { buildSeoMetadata } from '@/lib/seo';
 import { TRAFFIC_DIAGRAM_ID, TRAFFIC_PATH, trafficColumnSlugsFor, trafficHubCopy } from '@/data/traffic-hub';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import styles from './traffic.module.css';
+import zhStyles from './ZhHantTraffic.module.css';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -22,7 +23,7 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
   const copy = trafficHubCopy[locale];
   const posts = trafficColumnSlugsFor(locale).map(slug => getColumnPost(slug, locale));
   return (
-    <div className={styles.page}>
+    <div className={locale === 'zh-hant' ? `${styles.page} ${zhStyles.zh}` : styles.page}>
       <section className={styles.hero}>
         <div className={styles.container}>
           <p className={styles.kicker}>{copy.kicker}</p>

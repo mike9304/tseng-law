@@ -27280,17 +27280,19 @@ html[dir='rtl'] .guidance-answer {
 
 /* ja shell (Opus 5.5 ja lane, 2026-10-01): pages that render the ja design (data-ja-design wrapper) carry the
    間 palette — sumi ink and one vermilion — into the shared header action and footer. Other locales never match. */
-.site:has([data-ja-design]) .header .nav-cta {
+.site:has([data-ja-design]) .header .nav-cta,
+body:has([data-ja-design]) .drawer .drawer-footer .button:not(.secondary):not(.ghost) {
   border-radius: 999px;
-  background: #1b1814;
-  border-color: #1b1814;
+  background: #c8102e;
+  border-color: #c8102e;
   color: #fff;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 .site:has([data-ja-design]) .header .nav-cta:hover,
-.site:has([data-ja-design]) .header .nav-cta:focus-visible {
-  background: #c8102e;
-  border-color: #c8102e;
+.site:has([data-ja-design]) .header .nav-cta:focus-visible,
+body:has([data-ja-design]) .drawer .drawer-footer .button:not(.secondary):not(.ghost):hover {
+  background: #a50d26;
+  border-color: #a50d26;
 }
 .site:has([data-ja-design]) .site-footer { background: #17140f; }
 
@@ -27440,3 +27442,46 @@ body:has([data-ja-design]) .site-footer .footer-locale-switch .locale-flag-switc
 body:has([data-ja-design]) .footer-skyline { background: linear-gradient(180deg, #faf8f4 0%, #f2eee5 100%); }
 body:has([data-ja-design]) .footer-skyline .skyline-image img { filter: grayscale(100%) sepia(0.12) contrast(1.02) brightness(0.99); }
 body:has([data-ja-design]) { background: linear-gradient(180deg, #faf8f4 0%, #fff 220px); }
+
+/* ja round 2 (Opus 5.5 ja lane, 2026-10-01). Everything below is gated on the ja design wrapper. */
+
+/* Japanese line breaking: break between phrases, never inside one (word-break: auto-phrase where supported; elsewhere the
+   normal strict CJK breaking stays). The :not(#_) hook lifts specificity above the older per-element resets. */
+body:has([data-ja-design]) :is([data-ja-design], .site-footer, .header .mega-panel, .drawer):not(#_) :not(#_):not(input):not(textarea):not(a[href^='mailto:']) {
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+body:has([data-ja-design]) :is([data-ja-design], .site-footer) :is(p, li, dd, .faq-answer, .section-lede):not(#_) { text-wrap: pretty; }
+
+/* The old pencil skyline of Taiwanese landmarks contradicts the 間 pages; the sumi footer starts straight under the content. */
+body:has([data-ja-design]) .footer-skyline { display: none; }
+
+/* Breadcrumb hit area on phones: 44px tall without changing the visual rhythm. */
+@media (max-width: 767px) {
+  body:has([data-ja-design]) [data-ja-design] a.breadcrumb-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 4px; margin-inline: -4px; }
+}
+
+/* Mobile drawer: logo and wordmark in one row, nav in the desktop order. */
+body:has([data-ja-design]) .drawer .drawer-header .drawer-brand { display: inline-flex; align-items: center; gap: 12px; flex-direction: row; }
+body:has([data-ja-design]) .drawer .drawer-nav { display: flex; flex-direction: column; }
+body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/services'] { order: 1; }
+body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/lawyers'] { order: 2; }
+body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/pricing'] { order: 3; }
+body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/columns'] { order: 4; }
+body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/traffic-accidents'] { order: 5; }
+body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/videos'] { order: 6; }
+body:has([data-ja-design]) .drawer .drawer-nav-link[href*='/contact'] { order: 7; }
+
+/* Language picker: the current tile keeps 日本語 on one line, right-to-left entries sit on the left of their cell. */
+body:has([data-ja-design]) [class*='GlobalLanguagePicker_autonym'] { flex-wrap: wrap; }
+body:has([data-ja-design]) [class*='GlobalLanguagePicker_item'][dir='rtl'] { direction: ltr; justify-items: start; text-align: left; }
+
+/* Mega panel: a short lead plus the email action fills the empty left half. */
+body:has([data-ja-design]) .header .mega-panel .mega-intro::after {
+  content: ''; display: block; width: min(100%, 360px); height: 120px; margin-top: 28px; border-left: 6px solid #c8102e;
+  background: url('/images/editorial/ja-tea-terrace-morning-hero.webp') 50% 66% / cover no-repeat;
+}
+/* Shared editorial rules force word-break: normal on the practice summaries; phrase breaks win on ja pages. */
+html[lang='ja'] body:has([data-ja-design]) [data-ja-design] :is(.services-detail-desc, .services-card-summary):not(#_) { word-break: auto-phrase; line-break: strict; }
+body:has([data-ja-design]) [class*='GlobalLanguagePicker_badge'] { margin-inline-start: 0; }

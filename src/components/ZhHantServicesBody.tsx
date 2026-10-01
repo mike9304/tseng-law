@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
-import ServicesBento from '@/components/ServicesBento';
+import ZhHantServiceGroups from '@/components/zh-hant-home/ZhHantServiceGroups';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
-import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { getConsultationPublicEmail, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import styles from './ZhHantServices.module.css';
 
 export default function ZhHantServicesBody({ showHero, showRepeater }: { showHero: boolean; showRepeater: boolean }) {
@@ -30,11 +30,12 @@ export default function ZhHantServicesBody({ showHero, showRepeater }: { showHer
           <nav className={styles.practiceNav} aria-label={services.title}>
             {services.items.map((item) => <a key={item.href} href={`#${item.href.split('#')[1]}`}>{item.title}</a>)}
           </nav>
-          <ServicesBento locale="zh-hant" showHeader={!showHero} presentation="editorial" />
+          <ZhHantServiceGroups showTitle={!showHero} />
           <section className={styles.contact}>
             <div>
               <h2>{homeContactCta.title}</h2>
               <p>{homeContactCta.description}</p>
+              <p className={styles.contactEmail}><a href={getConsultationPublicMailto('zh-hant')}>{getConsultationPublicEmail()}</a></p>
             </div>
             <a href={getConsultationPublicMailto('zh-hant')} className="button">申請電子郵件諮詢 <span aria-hidden>↗</span></a>
           </section>

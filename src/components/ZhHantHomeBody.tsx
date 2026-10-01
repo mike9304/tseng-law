@@ -9,6 +9,7 @@ import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import ZhHantAudienceDoors from '@/components/zh-hant-home/ZhHantAudienceDoors';
 import ZhHantMobileCta from '@/components/zh-hant-home/ZhHantMobileCta';
+import { ZH_HANT_SERVICE_SCENARIOS } from '@/components/zh-hant-home/zh-hant-service-scenarios';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import type { FAQItem } from '@/data/faq-content';
 import styles from './ZhHantDesign.module.css';
@@ -27,15 +28,6 @@ const SEARCH_CHIPS = ['公司設立', '車禍', '離婚', '資遣費', '刑事',
   href: `/zh-hant/search?q=${encodeURIComponent(q)}`,
 }));
 
-/** Scenario labels taken word for word from each zh-hant service description. */
-const SERVICE_SCENARIOS: Record<string, readonly string[]> = {
-  investment: ['公司設立', '投資審查', '特殊許可'],
-  civil: ['契約糾紛', '損害賠償', '消費者權益'],
-  family: ['離婚', '親權', '繼承'],
-  labor: ['解僱', '資遣費', '勞動契約'],
-  criminal: ['偵查應對', '被告代理', '被害人代理'],
-  ip: ['商標與專利', '著作權', '金融投資爭議'],
-};
 
 /**
  * zh-hant home, second pass (son7-87 / Opus 5.5, 2026-10-01): hero with reader-type
@@ -61,7 +53,7 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
         />
       </BuilderSurfaceProvider>
       <HomeStatsSection locale="zh-hant" plainLede />
-      <ServicesBento locale="zh-hant" id="practice" variant="default" presentation="editorial" scenarioTags={SERVICE_SCENARIOS} />
+      <ServicesBento locale="zh-hant" id="practice" variant="default" presentation="editorial" scenarioTags={ZH_HANT_SERVICE_SCENARIOS} />
       <BuilderSurfaceProvider nodeId="home-attorney" mode="published" overrides={attorneyIntro === undefined ? {} : { 'intro-primary': attorneyIntro }} selectedSurfaceKey={null}>
         <HomeAttorneySplit locale="zh-hant" presentation="editorial" />
       </BuilderSurfaceProvider>

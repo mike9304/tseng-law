@@ -79,3 +79,42 @@
   .root :global(.svc-columns-heading) { font-size: 26px; }
   .root :global(.svc-columns-grid) { grid-template-columns: minmax(0, 1fr); gap: 20px; }
 }
+
+/* ===== Second pass (son7-87 / Opus 5.5, 2026-10-01): same green system as home/list ===== */
+.hero, .root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
+.hero:global(.svc-hero) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0; border-bottom: none; }
+.hero :global(h1.svc-hero-title) { font-family: var(--font-serif-tc); font-weight: 700; color: var(--zh-cream) !important; font-size: clamp(38px, 4vw, 58px); }
+.hero :global(.svc-hero-subtitle) { color: #c9d6cd !important; }
+.hero :global(.svc-back-link) { color: #c9d6cd !important; }
+.heroCta { background: var(--zh-gold) !important; border-color: var(--zh-gold) !important; color: var(--zh-ink) !important; font-weight: 700; }
+.heroCta:focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 4px; }
+.byline { color: var(--zh-cream); }
+.contents { border-top-color: rgb(244 239 226 / 22%); }
+.contents a { color: var(--zh-cream); }
+.heroImage { border-radius: 2px; box-shadow: none; }
+
+/* Key points: a readable numbered list instead of eight identical boxes */
+.root :global(.svc-keypoints-title),
+.root :global(.svc-columns-heading) { font-family: var(--font-serif-tc); font-weight: 700; color: var(--zh-ink); }
+.root :global(.svc-keypoints-list li) {
+  position: relative; padding: 22px 0 22px 64px; margin: 0; border: none; border-radius: 0; background: none;
+  border-top: 1px solid #dbe1d7; font-size: 16.5px; line-height: 1.9; color: #2c3a33; max-width: 42em;
+}
+.root :global(.svc-keypoints-list li:last-child) { border-bottom: 1px solid #dbe1d7; }
+.root :global(.svc-keypoints-list li::before) {
+  top: 20px; left: 0; font-family: var(--font-serif-tc); font-size: 28px; line-height: 1.2; color: var(--zh-gold); font-weight: 700;
+}
+.root :global(.svc-review-note) { border-left-color: var(--zh-gold); }
+
+/* Sidebar: name, role, photo and actions only; the full profile lives on the lawyer page */
+.root :global(.svc-sidebar-card--attorney .authority-card-summary),
+.root :global(.svc-sidebar-card--attorney .authority-card-block) { display: none; }
+.root :global(.svc-sidebar-card--attorney .authority-card-name) { font-family: var(--font-serif-tc); font-size: 20px; }
+
+@media (max-width: 767px) {
+  .hero:global(.svc-hero) { padding: 40px 0; }
+  .root :global(.svc-keypoints-list li) { padding-left: 48px; font-size: 16px; }
+  .root :global(.svc-keypoints-list li::before) { font-size: 22px; }
+}
+/* The shared ServiceDetail module paints the hero after this file; win explicitly. */
+.hero.hero:global(.svc-hero) { background: var(--zh-ink) !important; }

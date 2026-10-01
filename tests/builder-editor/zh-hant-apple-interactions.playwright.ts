@@ -126,8 +126,13 @@ for (const motion of ['no-preference', 'reduce'] as const) {
         await page.emulateMedia({ reducedMotion: motion });
         await page.setViewportSize({ width: 390, height: 844 });
         await page.goto(path, { waitUntil: 'load' });
-
         const row = page.locator(rowSelector).first();
+        // The focus helper attaches on hydration; Tab before that would test the browser alone.
+        await expect.poll(
+          () => row.evaluate((element) => Object.keys(element).some((key) => key.startsWith('__reactFiber'))),
+          { timeout: 30_000 },
+        ).toBe(true);
+        await page.waitForTimeout(300);
         await row.scrollIntoViewIfNeeded();
         await focusItem(row, 0);
         await pressUntilFocusIn(page, row, 1, 'Tab', browserName);
@@ -138,3 +143,26 @@ for (const motion of ['no-preference', 'reduce'] as const) {
     }
   });
 }
+
+test.describe('zh-hant Apple pass — language suggestion keeps the first screen clear', () => {
+  test('an English browser sees the hint only after the hero, above the phone consultation bar', async ({ page }) => {
+    test.setTimeout(120_000);
+    await preparePage(page);
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('/zh-hant', { waitUntil: 'load' });
+    await page.waitForTimeout(2000);
+    // navigator.languages is en-US in these projects, so the hint applies to /zh-hant.
+    await expect(page.locator('.locale-suggestion')).toHaveCount(0);
+
+    await page.evaluate(() => {
+      const hero = document.getElementById('hero');
+      if (hero) window.scrollTo(0, hero.getBoundingClientRect().bottom + window.scrollY + 400);
+    });
+    const hint = page.locator('.locale-suggestion');
+    await expect(hint).toBeVisible({ timeout: 10_000 });
+    const bar = page.locator("#zh-hant-home nav[data-hero-visible='false']");
+    await expect(bar).toBeVisible({ timeout: 10_000 });
+    const [hintBox, barBox] = await Promise.all([hint.boundingBox(), bar.boundingBox()]);
+    expect(hintBox && barBox ? hintBox.y + hintBox.height : Infinity).toBeLessThanOrEqual((barBox?.y ?? 0) + 1);
+  });
+});

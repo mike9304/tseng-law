@@ -33,7 +33,7 @@
 .note { margin: 18px 0 0; padding: 12px 14px; border-left: 4px solid var(--en-signal); border-radius: 0 12px 12px 0; background: var(--en-mist); font-size: 14.5px; line-height: 1.55; color: var(--en-text); }
 .advisory { margin-top: auto; padding-top: 18px; font-size: 14.5px; line-height: 1.55; color: var(--en-text); }
 .advisory p { margin: 0; }
-.advisory a { color: var(--en-ink); font-weight: 700; }
+.advisory a { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-ink); font-weight: 700; }
 .tier a:focus-visible { outline: 3px solid var(--en-ink); outline-offset: 2px; }
 .tier[data-fee='consultation'] a:focus-visible { outline-color: #fff; }
 

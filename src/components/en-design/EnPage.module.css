@@ -170,7 +170,7 @@
 .root[data-en-design][id] :global(.page-header .breadcrumb) { display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; }
 .root[data-en-design][id] :global(.page-header .breadcrumb),
 .root[data-en-design][id] :global(.page-header .breadcrumb *) { color: rgb(255 255 255 / 80%); }
-.root[data-en-design][id] :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgb(255 255 255 / 40%); }
+.root[data-en-design][id] :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgb(255 255 255 / 40%); }
 .root[data-en-design][id] :global(.page-header .breadcrumb a:hover) { color: #fff; text-decoration-color: var(--en-signal); }
 .root[data-en-design][id] :global(.page-header .section-label) {
   display: inline-flex;

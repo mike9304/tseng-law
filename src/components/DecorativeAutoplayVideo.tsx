@@ -132,22 +132,23 @@ export function handleDecorativeVideoCanPlay(
 export type DecorativeVideoSourceKey = 'mobile' | 'desktop';
 
 /**
- * Poster and control visibility. Readiness belongs to one mounted encoding: after a breakpoint change
- * the replacement element shows the poster until it has a frame (WebKit leaves a paused replacement at
- * readyState 1). The control, once shown, stays so Play/Replay works on a replacement still loading.
+ * Poster and control visibility. Readiness belongs to one mounted <video> element: every breakpoint
+ * change mounts a new one (mountId + 1), which shows the poster until its own canplay (WebKit leaves a
+ * paused replacement at readyState 1, also after a round trip back to the first encoding). The control,
+ * once shown, stays so Play/Replay works on a replacement still loading; a media error withdraws it.
  */
 export function resolveDecorativeVideoPresentation({
   shouldMountVideo,
-  readySource,
-  sourceKey,
+  readyMountId,
+  mountId,
   controlRevealed,
 }: {
   shouldMountVideo: boolean;
-  readySource: DecorativeVideoSourceKey | null;
-  sourceKey: DecorativeVideoSourceKey;
+  readyMountId: number | null;
+  mountId: number;
   controlRevealed: boolean;
 }): { videoReady: boolean; showControl: boolean } {
-  const videoReady = shouldMountVideo && readySource === sourceKey;
+  const videoReady = shouldMountVideo && readyMountId === mountId;
   return { videoReady, showControl: shouldMountVideo && (videoReady || controlRevealed) };
 }
 
@@ -270,7 +271,7 @@ export function DecorativeAutoplayVideo({
   const [idleReady, setIdleReady] = useState(false);
   const [nearViewport, setNearViewport] = useState(false);
   const [inViewport, setInViewport] = useState(false);
-  const [readySource, setReadySource] = useState<DecorativeVideoSourceKey | null>(null);
+  const [readyMountId, setReadyMountId] = useState<number | null>(null);
   const [controlRevealed, setControlRevealed] = useState(false);
   // Which encoding to mount, measured with matchMedia after hydration. WebKit 26.4 evaluates
   // <source media> as false before layout when the video is inserted by script, so it played the
@@ -445,6 +446,9 @@ export function DecorativeAutoplayVideo({
   }) && isDecorativeVideoSourceViewportResolved(hasMobileVideo, sourceViewportMobile);
   const useMobileSources = shouldUseMobileDecorativeVideoSources(hasMobileVideo, sourceViewportMobile);
   const sourceKey: DecorativeVideoSourceKey = useMobileSources ? 'mobile' : 'desktop';
+  // The <video> is keyed by its encoding; count mounts so readiness never carries over to a new element.
+  const [mount, setMount] = useState<{ sourceKey: DecorativeVideoSourceKey; id: number }>({ sourceKey, id: 0 });
+  if (mount.sourceKey !== sourceKey) setMount({ sourceKey, id: mount.id + 1 });
 
   useEffect(() => {
     const video = videoRef.current;
@@ -463,8 +467,8 @@ export function DecorativeAutoplayVideo({
       : { fill: true as const };
   const { videoReady: isVideoReady, showControl } = resolveDecorativeVideoPresentation({
     shouldMountVideo,
-    readySource,
-    sourceKey,
+    readyMountId,
+    mountId: mount.id,
     controlRevealed,
   });
   const controlLabel = resolveDecorativeVideoControlLabel(
@@ -540,7 +544,7 @@ export function DecorativeAutoplayVideo({
           tabIndex={-1}
           preload="metadata"
           onCanPlay={() => {
-            setReadySource(sourceKey);
+            setReadyMountId(mount.id);
             setControlRevealed(true);
             handleDecorativeVideoCanPlay(videoRef.current, {
               inViewport,
@@ -552,7 +556,11 @@ export function DecorativeAutoplayVideo({
               setPlaybackState({ userPaused: false, ended: true });
             }
           }}
-          onError={() => setReadySource(null)}
+          onError={() => {
+            // No retry path for a failed source: back to the poster, without a control that cannot play.
+            setReadyMountId(null);
+            setControlRevealed(false);
+          }}
         >
           {useMobileSources && mobileMp4Src ? (
             <source

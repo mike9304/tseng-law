@@ -35,7 +35,9 @@ export default function LocaleSuggestion({ locale }: { locale: string }) {
   const slugsByLocale = usePublicColumnSlugs();
   const pathname = usePathname() ?? '';
   const [target, setTarget] = useState<{ locale: string; href: string } | null>(null);
-  const [clearOfHero, setClearOfHero] = useState(false);
+  // Path on which the hint is clear of the first screen; tied to the path so a client-side
+  // navigation never shows it over the next page's hero for a frame.
+  const [clearPath, setClearPath] = useState<string | null>(null);
 
   useEffect(() => {
     if (!slugsByLocale || isLocaleSuggestionDismissed()) return;
@@ -58,25 +60,22 @@ export default function LocaleSuggestion({ locale }: { locale: string }) {
     setTarget({ locale: next, href });
   }, [locale, pathname, slugsByLocale]);
 
-  // Pages that open on a first screen (#hero) keep it clear: the hint waits until the hero has left
-  // the viewport (Fable 2026-10-01: on the zh-hant home at 390 it covered the search bar).
+  // Pages that open on a first screen (#hero) keep it clear: the hint shows only while the hero is out
+  // of the viewport (Fable 2026-10-01: on the zh-hant home at 390 it covered the search bar), hides
+  // again when the visitor scrolls back up, and starts over after a client-side navigation.
   useEffect(() => {
     if (!target) return;
     const hero = document.getElementById('hero');
     if (!hero || typeof IntersectionObserver === 'undefined') {
-      setClearOfHero(true);
+      setClearPath(pathname);
       return;
     }
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry?.isIntersecting) return;
-      setClearOfHero(true);
-      observer.disconnect();
-    });
+    const observer = new IntersectionObserver(([entry]) => setClearPath(entry?.isIntersecting ? null : pathname));
     observer.observe(hero);
     return () => observer.disconnect();
-  }, [target]);
+  }, [target, pathname]);
 
-  if (!target || !clearOfHero) return null;
+  if (!target || clearPath !== pathname) return null;
   const copy = COPY[target.locale];
   return (
     <aside className="locale-suggestion" lang={target.locale} data-locale-suggestion={target.locale}>

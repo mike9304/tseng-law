@@ -40,12 +40,16 @@ test.describe('zh-hant Apple pass — decorative video across breakpoint changes
     await control.click();
     await expect(control).toHaveAttribute('aria-label', '播放影片');
 
-    await page.setViewportSize({ width: 844, height: 390 });
-    await expect.poll(() => player.evaluate((root) => root.querySelector('video')?.currentSrc ?? '')).not.toContain('portrait');
-    await page.waitForTimeout(1500);
-    expect(await videoPaused(player)).toBe(true);
-    expect(await backgroundIsPainted(player)).toBe(true);
-    await expect(control).toHaveAttribute('aria-label', '播放影片');
+    const currentSrc = () => player.evaluate((root) => root.querySelector('video')?.currentSrc ?? '');
+    // Round trip without playing: landscape, then back to portrait (a new element of the first encoding).
+    for (const [size, portrait] of [[{ width: 844, height: 390 }, false], [{ width: 390, height: 844 }, true]] as const) {
+      await page.setViewportSize(size);
+      await expect.poll(currentSrc).toMatch(portrait ? /portrait/ : /^(?!.*portrait).+/);
+      await page.waitForTimeout(1500);
+      expect(await videoPaused(player)).toBe(true);
+      expect(await backgroundIsPainted(player)).toBe(true);
+      await expect(control).toHaveAttribute('aria-label', '播放影片');
+    }
 
     await control.click();
     await expect.poll(() => videoPaused(player), { timeout: 20_000 }).toBe(false);
@@ -69,15 +73,35 @@ test.describe('zh-hant Apple pass — decorative video across breakpoint changes
     });
     await expect(control).toHaveAttribute('aria-label', '重新播放影片', { timeout: 20_000 });
 
-    await page.setViewportSize({ width: 390, height: 844 });
-    await player.scrollIntoViewIfNeeded();
-    await page.waitForTimeout(1500);
-    expect(await backgroundIsPainted(player)).toBe(true);
-    await expect(control).toBeVisible();
-    await expect(control).toHaveAttribute('aria-label', '重新播放影片');
+    for (const size of [{ width: 390, height: 844 }, { width: 1440, height: 900 }]) {
+      await page.setViewportSize(size);
+      await player.scrollIntoViewIfNeeded();
+      await page.waitForTimeout(1500);
+      expect(await backgroundIsPainted(player)).toBe(true);
+      await expect(control).toBeVisible();
+      await expect(control).toHaveAttribute('aria-label', '重新播放影片');
+    }
 
     await control.click();
     await expect.poll(() => videoPaused(player), { timeout: 20_000 }).toBe(false);
+  });
+
+  test('a media error returns to the poster without a control that cannot play', async ({ page }) => {
+    test.setTimeout(120_000);
+    await preparePage(page);
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/zh-hant', { waitUntil: 'load' });
+
+    const player = page.locator('#hero .decorative-autoplay-video').first();
+    const control = player.locator('.decorative-autoplay-video__control');
+    await expect(control).toHaveAttribute('aria-label', '暫停影片', { timeout: 30_000 });
+    await player.evaluate((root) => {
+      const video = root.querySelector('video');
+      if (video) video.src = '/videos/__missing-decorative-video__.mp4';
+    });
+    await expect(control).toHaveCount(0, { timeout: 15_000 });
+    await expect(player).toHaveAttribute('data-video-ready', 'false');
+    expect(await backgroundIsPainted(player)).toBe(true);
   });
 });
 
@@ -164,5 +188,24 @@ test.describe('zh-hant Apple pass — language suggestion keeps the first screen
     await expect(bar).toBeVisible({ timeout: 10_000 });
     const [hintBox, barBox] = await Promise.all([hint.boundingBox(), bar.boundingBox()]);
     expect(hintBox && barBox ? hintBox.y + hintBox.height : Infinity).toBeLessThanOrEqual((barBox?.y ?? 0) + 1);
+
+    // Back to the first screen: the hint steps aside again.
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await expect(hint).toHaveCount(0, { timeout: 10_000 });
+  });
+
+  test('after a client-side navigation to the home, the hint stays off its first screen', async ({ page }) => {
+    test.setTimeout(120_000);
+    await preparePage(page);
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/zh-hant/columns', { waitUntil: 'load' });
+    const hint = page.locator('.locale-suggestion');
+    await expect(hint).toBeVisible({ timeout: 15_000 });
+
+    await page.locator('a.header-logo, header a[href="/zh-hant"]').first().click();
+    await page.waitForURL(/\/zh-hant\/?$/);
+    await expect(page.locator('#hero')).toBeVisible({ timeout: 20_000 });
+    await page.waitForTimeout(1000);
+    await expect(hint).toHaveCount(0);
   });
 });

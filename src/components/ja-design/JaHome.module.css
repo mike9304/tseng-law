@@ -339,6 +339,10 @@
   transition: color 0.25s ease, text-decoration-color 0.25s ease;
 }
 .root:global(#ja-home) :global(#practice .services-detail-card:hover .services-detail-more) { color: var(--ja-shu-deep) !important; text-decoration-color: var(--ja-shu); }
+.root:global(#ja-home) :global(#practice .container > p a.link-underline),
+.root:global(#ja-home) :global(#about .split-content > a.link-underline),
+.root:global(#ja-home) :global(#results .home-results-link) { display: inline-flex; align-items: center; min-height: 44px; }
+.root:global(#ja-home) :global(#insights .card-stretched-link) { padding-block: 2px; }
 .root:global(#ja-home) :global(#practice .container > p:not(.section-lede)) { grid-column: 1 / -1; margin: 28px 0 0; padding: 0; background: none; border: 0; font-size: 15px; color: var(--ja-sub); }
 
 /* ---------- 4 · Columns: read first ---------- */
@@ -465,7 +469,13 @@
     .root:global(#ja-home) :global(#practice .services-card-grid),
     .root:global(#ja-home) :global(#insights .insights-featured),
     .root:global(#ja-home) :global(#stats .stats-grid) { position: relative; }
-    .root:global(#ja-home) :global(#stats .stat-number) { animation: ja-rise 1s var(--ja-ease) none; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+    .root:global(#ja-home) :global(#stats .stat-number),
+    .root:global(#ja-home) :global(.section-title),
+    .root:global(#ja-home) :global([data-overseas-entry='full'] ul > li),
+    .root:global(#ja-home) :global(#practice .services-card-grid-item),
+    .root:global(#ja-home) :global(#insights .insights-featured),
+    .root:global(#ja-home) :global(#about .split-image),
+    .root:global(#ja-home) :global(#faq .faq-item) { animation: ja-rise 1s var(--ja-ease) none; animation-timeline: view(); animation-range: entry 0% entry 45%; }
   }
 }
 
@@ -498,5 +508,7 @@
   .root:global(#ja-home) :global(#practice .services-card-grid-item:nth-child(even)) { border-left: 0; }
   .root:global(#ja-home) :global(#practice .services-detail-card) { padding: 28px 4px 26px; }
   .root:global(#ja-home) :global(#stats .stat-card + .stat-card) { border-left: 0; }
-  .root:global(#ja-home) :global(#about .split-image)::after { inset: 14px -10px -14px 14px; }
+  .root:global(#ja-home) :global(#about .split-image) { margin-bottom: 14px; }
+  .root:global(#ja-home) :global(#about .split-image)::after { inset: 14px 0 -14px 14px; }
+  .root:global(#ja-home) :global(#faq .faq-question button) { font-size: 16px; }
 }

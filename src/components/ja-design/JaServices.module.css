@@ -62,3 +62,6 @@
   .root:global(#ja-services) :global(.services-detail-card) { grid-template-columns: minmax(0, 1fr); padding: 28px 0; }
   .root:global(#ja-services) :global(.services-detail-header)::before { font-size: 40px; margin-bottom: 10px; }
 }
+
+/* Inline text links in running copy: the padding enlarges the hit area to 44px without changing the line box. */
+.root:global(#ja-services) :global(.services-bento .container > p a) { padding-block: 12px; }

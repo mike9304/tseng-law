@@ -64,3 +64,7 @@
   .root:global(#ja-contact) :global(.consultation-guide-section .legal-card + .legal-card) { border-left: 0; border-top: 1px solid var(--ja-line); }
   .root:global(#ja-contact) > :global(section.section:nth-child(2) > .container > form) { padding: 22px 16px; }
 }
+
+/* Consent checkbox: the whole row is the 44px target, the box itself is a little larger. */
+.root:global(#ja-contact) > :global(section.section:nth-child(2) form label:has(input[type='checkbox'])) { display: flex; align-items: center; gap: 12px; min-height: 44px; }
+.root:global(#ja-contact) > :global(section.section:nth-child(2) form input[type='checkbox']) { width: 24px; height: 24px; margin: 0; accent-color: var(--ja-ink); }

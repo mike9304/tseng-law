@@ -1,0 +1,83 @@
+/* ===== Apple pass (2026-10-01, zh pages lane / Opus 5.5) =====
+   Shared tokens and page header for the zh-hant pages that join the Apple system after the first wave (videos,
+   search, privacy, disclaimer, accessibility, login). Same values as the services, pricing and lawyers headers:
+   a white band, the 13px breadcrumb, a large sans H1, a muted lede, English eyebrows hidden, pill buttons.
+   Used together with each page's own module on a zh-only wrapper that carries data-zh-hant-design. */
+.shell[data-zh-hant-design] {
+  --ap-gray: #f5f5f7;
+  --ap-text: #1d1d1f;
+  --ap-muted: #6e6e73;
+  --ap-line: #e3e3e8;
+  --ap-accent: #0a7a55;
+  --ap-ink: #16382d;
+  --ap-ink-deep: #0d231b;
+  --ap-radius: 28px;
+  --ap-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-body: var(--font-sans);
+  --text-heading: var(--ap-text);
+  --text-secondary: var(--ap-muted);
+  background: #fff;
+  color: var(--ap-text);
+  font-family: var(--font-sans);
+}
+
+/* ---------- Page header ---------- */
+.shell[data-zh-hant-design] :global(.page-header) {
+  padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
+  background: #fff;
+  color: var(--ap-text);
+  border-bottom: none;
+}
+.shell[data-zh-hant-design] :global(.page-header)::before,
+.shell[data-zh-hant-design] :global(.page-header)::after { display: none !important; }
+.shell[data-zh-hant-design] :global(.page-header [data-page-header-slot='copy']) { max-width: none; }
+/* VIDEOS, SEARCH, PRIVACY, DISCLAIMER, ACCESSIBILITY: a Chinese page carries no English eyebrow. */
+.shell[data-zh-hant-design] :global(.page-header .section-label) { display: none !important; }
+.shell[data-zh-hant-design] :global(.page-header .breadcrumb),
+.shell[data-zh-hant-design] :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; letter-spacing: 0; }
+/* 44px tap target for 首頁 without moving the trail (padding offset by a negative margin). */
+.shell[data-zh-hant-design] :global(.page-header .breadcrumb a) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin: -10px -9px;
+  padding: 0 9px;
+  text-decoration: none;
+}
+.shell[data-zh-hant-design] :global(.page-header .breadcrumb a:hover) { color: var(--ap-accent); text-decoration: underline; text-underline-offset: 4px; }
+.shell[data-zh-hant-design] :global(.page-header-title),
+.shell[data-zh-hant-design] :global(.page-header-title *) {
+  color: var(--ap-text) !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700;
+}
+.shell[data-zh-hant-design] :global(.page-header-title) {
+  max-width: 14em;
+  margin: 18px 0 0;
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+.shell[data-zh-hant-design] :global(.page-header .section-lede) {
+  max-width: 34em;
+  margin: 22px 0 0;
+  color: var(--ap-muted);
+  font-family: var(--font-sans);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+.shell[data-zh-hant-design] :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+
+/* Pills, like the home and the other zh subpages. */
+.shell[data-zh-hant-design] :global(.button) { border-radius: 999px !important; }
+
+@media (max-width: 767px) {
+  .shell[data-zh-hant-design] { --ap-radius: 22px; }
+  .shell[data-zh-hant-design] :global(.page-header) { padding: 56px 0 40px; }
+  .shell[data-zh-hant-design] :global(.page-header .section-lede) { font-size: 18px; }
+}

@@ -530,3 +530,95 @@
   .root:global(#ja-home) :global(#about .split-image)::after { inset: 14px 0 -14px 14px; }
   .root:global(#ja-home) :global(#faq .faq-question button) { font-size: 16px; }
 }
+
+/* ======================================================================================================
+   Round 2 (Opus 5.5 ja lane, 2026-10-01): critic fixes — a seal on the seam, a graded plate, one rhythm,
+   quieter practice rows, a facts accent, a single closing action.
+   ====================================================================================================== */
+
+/* The plate: richer grade, a soft inner shadow on its left edge, and the firm's seal stamped on the seam. */
+.heroMediaImage { filter: contrast(1.08) saturate(1.14); }
+.root:global(#ja-home) :global(#hero [data-hero-slot='media-frame'])::after {
+  content: ''; position: absolute; z-index: 2; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgb(23 20 15 / 24%) 0, rgb(23 20 15 / 0%) 26%), linear-gradient(180deg, rgb(23 20 15 / 0%) 62%, rgb(23 20 15 / 16%) 100%);
+}
+.root:global(#ja-home) :global(#hero .container.hero-inner)::after {
+  content: ''; position: absolute; z-index: 4; pointer-events: none;
+  left: calc(62.28% - clamp(44px, 4vw, 64px)); top: 44%;
+  width: clamp(88px, 8vw, 128px); aspect-ratio: 1; border-radius: 50%;
+  background: var(--ja-paper) url('/images/brand/hovering-seal-official.png') 50% 50% / 68% no-repeat;
+  box-shadow: 0 0 0 6px var(--ja-paper), 0 18px 40px -16px rgb(27 24 20 / 45%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes ja-stamp { 0% { opacity: 0; transform: scale(1.4) rotate(-8deg); } 60% { opacity: 1; transform: scale(0.96) rotate(1deg); } 100% { opacity: 1; transform: none; } }
+  .root:global(#ja-home) :global(#hero .container.hero-inner)::after { animation: ja-stamp 0.9s var(--ja-ease) 1.1s both; }
+}
+/* Very wide windows: the two halves sit in a centred 1760px frame instead of stretching to the glass. */
+@media (min-width: 1800px) {
+  .root:global(#ja-home) :global(#hero .container.hero-inner) { max-width: 1760px; margin-inline: auto; }
+  .root:global(#ja-home) :global(#hero .container.hero-inner)::after { left: calc(50% - 880px + 1760px * 0.6228 - 64px); }
+  .root:global(#ja-home) :global(#hero .hero-copy) { padding-left: 64px; }
+}
+@media (max-width: 899px) {
+  .root:global(#ja-home) :global(#hero .container.hero-inner)::after {
+    left: auto; right: var(--ja-hero-pad); top: 16px; width: 64px; box-shadow: 0 0 0 4px var(--ja-paper), 0 12px 28px -14px rgb(27 24 20 / 45%);
+  }
+  .root:global(#ja-home) :global(#hero [data-hero-slot='media-frame']) { height: clamp(140px, 22vw, 220px); }
+}
+@media (max-width: 599px) {
+  .root:global(#ja-home) :global(#hero [data-hero-slot='media-frame']) { height: clamp(140px, 38vw, 200px); }
+  .root:global(#ja-home) :global(#hero .hero-copy) { padding-top: 18px; padding-bottom: 20px; }
+  .root:global(#ja-home) :global(#hero a[data-hero-slot='byline']) { min-height: 36px; margin-top: 0; }
+  .root:global(#ja-home) :global(#hero .hero-search-wrapper) { padding: 14px 0 16px; }
+}
+
+/* One rhythm for the sections below the first screen. */
+.root:global(#ja-home) :global(.section) { padding-block: clamp(64px, 8vw, 120px); }
+.root:global(#ja-home) :global([data-overseas-entry='full']) { padding-block: clamp(64px, 8vw, 120px) clamp(28px, 3vw, 40px); }
+.personal { padding-bottom: clamp(64px, 8vw, 120px); }
+
+/* Needs: the lead tile gets the terrace in sumi tone so its lower half is not empty. */
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li:first-child > a) {
+  background:
+    linear-gradient(180deg, #1b1814 0, #1b1814 34%, rgb(27 24 20 / 72%) 68%, rgb(27 24 20 / 40%) 100%),
+    url('/images/editorial/ja-tea-terrace-morning-hero.webp') 62% 80% / cover no-repeat, var(--ja-ink);
+}
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li:first-child > a:hover) {
+  background:
+    linear-gradient(180deg, #2a251f 0, #2a251f 34%, rgb(42 37 31 / 72%) 68%, rgb(42 37 31 / 40%) 100%),
+    url('/images/editorial/ja-tea-terrace-morning-hero.webp') 62% 80% / cover no-repeat, #2a251f;
+}
+
+/* Practice areas: one quiet ruled row per area (number, title, a two-line summary, the link). */
+.root:global(#ja-home) :global(#practice .services-card-grid) { grid-template-columns: minmax(0, 1fr); }
+.root:global(#ja-home) :global(#practice .services-card-grid-item:not(:nth-child(3n + 1))) { border-left: 0; }
+.root:global(#ja-home) :global(#practice .services-detail-card) {
+  display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.6fr); align-items: center; gap: 12px clamp(24px, 4vw, 64px); padding: 26px 16px 26px 14px;
+  box-shadow: inset 0 0 0 0 var(--ja-shu) !important; transition: background 0.4s var(--ja-ease), box-shadow 0.4s var(--ja-ease);
+}
+.root:global(#ja-home) :global(#practice .services-detail-card:hover) { box-shadow: inset 4px 0 0 0 var(--ja-shu) !important; }
+.root:global(#ja-home) :global(#practice .services-detail-header) { display: flex !important; align-items: baseline; gap: 20px; }
+.root:global(#ja-home) :global(#practice .services-detail-header)::before { margin: 0; font-size: 28px; min-width: 2ch; }
+.root:global(#ja-home) :global(#practice .services-detail-body) { flex-direction: row; align-items: center; gap: clamp(16px, 2.4vw, 36px); }
+.root:global(#ja-home) :global(#practice .services-detail-desc) { flex: 1; min-width: 0; font-size: 14.5px; line-height: 1.85; }
+.root:global(#ja-home) :global(#practice .services-detail-more) { margin-top: 0; white-space: nowrap; }
+@media (max-width: 767px) {
+  .root:global(#ja-home) :global(#practice .services-detail-card) { grid-template-columns: minmax(0, 1fr); padding: 22px 4px; }
+  .root:global(#ja-home) :global(#practice .services-detail-body) { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .root:global(#ja-home) :global(#practice .services-detail-header)::before { font-size: 24px; }
+}
+
+/* Facts: a vermilion tick on every numeral column, so the row carries the accent. */
+.root:global(#ja-home) :global(#stats .stat-card) { position: relative; }
+.root:global(#ja-home) :global(#stats .stat-card)::before { content: ''; position: absolute; top: -2px; left: clamp(16px, 2vw, 32px); width: 56px; height: 2px; background: var(--ja-shu); }
+
+/* Closing: one vermilion action, the address and the guide as quiet text links, the disclaimer as a footnote. */
+.root:global(#ja-home) :global(.home-contact-actions) { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 32px; }
+.root:global(#ja-home) :global(.home-contact-cta .button.secondary) {
+  min-height: 44px; padding: 0; border: 0; border-radius: 0; background: transparent; color: rgb(255 255 255 / 86%);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; text-decoration-color: rgb(255 255 255 / 40%);
+}
+.root:global(#ja-home) :global(.home-contact-cta .button.secondary:hover) { background: transparent; color: #fff; text-decoration-color: #fff; }
+.root:global(#ja-home) :global(.home-contact-cta .container > :not([data-builder-node-key='copy']):not(.home-contact-actions)) {
+  margin-top: 28px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / 18%); font-size: 13px; line-height: 1.9; color: rgb(255 255 255 / 66%);
+}

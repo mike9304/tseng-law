@@ -37,6 +37,9 @@ import {
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './LawyerProfile.module.css';
 import zhStyles from './ZhHantLawyerProfile.module.css';
+import jaStyles from './JaLawyerProfile.module.css';
+import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
 
 export const dynamic = 'force-dynamic';
 
@@ -395,6 +398,10 @@ export default async function LawyerProfilePage(
       ) : null}
     </>
   );
+  if (locale === 'ja') {
+    // ja design (Opus 5.5 ja lane): same blocks; 履歴書-style rows from the ja profile/team modules.
+    return <JaPageShell page="lawyer-profile" className={`${jaStyles.root} ${jaTeamStyles.team}`}>{content}</JaPageShell>;
+  }
   // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside a scoped wrapper for the zh-hant profile styling.
   return locale === 'zh-hant'
     ? <div className={zhStyles.root} id="zh-hant-lawyer-profile" data-zh-hant-design="lawyer-profile">{content}</div>

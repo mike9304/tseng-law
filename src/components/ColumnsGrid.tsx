@@ -503,6 +503,7 @@ export default function ColumnsGrid({
   hrefBase,
   recommendedTitleOverride,
   featuredSlugs,
+  openingSlugs,
   topicOrder,
 }: {
   locale: PublicLocale8;
@@ -512,8 +513,10 @@ export default function ColumnsGrid({
   hrefBase?: string;
   /** Heading for the locale-first section (issue board uses its own wording). */
   recommendedTitleOverride?: string;
-  /** Optional editorial picks for the opening section (in order); remaining slots fall back to the newest recommended posts. */
+  /** Optional editorial picks for the opening section (zh-hant), in order; remaining slots fall back to the newest recommended posts. */
   featuredSlugs?: readonly string[];
+  /** Optional curated slugs for the opening section, in order and shown in full (ja design). Takes precedence over featuredSlugs. */
+  openingSlugs?: readonly string[];
   /** Optional order of the topic sections; topics not listed keep their default order after the listed ones. */
   topicOrder?: readonly ColumnTopic[];
 }) {
@@ -527,13 +530,17 @@ export default function ColumnsGrid({
   );
   const posts = useMemo(() => [...recommended, ...nonRecommended], [recommended, nonRecommended]);
   const openingPosts = useMemo(() => {
+    if (openingSlugs?.length) {
+      const bySlug = new Map(posts.map((post) => [post.slug, post] as const));
+      return openingSlugs.map((slug) => bySlug.get(slug)).filter((post): post is ColumnListItem => Boolean(post));
+    }
     if (!featuredSlugs || featuredSlugs.length === 0) return recommended.slice(0, COLUMN_TOPIC_SECTION_PREVIEW);
     const picked = featuredSlugs
       .map((slug) => posts.find((post) => post.slug === slug))
       .filter((post): post is ColumnListItem => Boolean(post));
     const fill = recommended.filter((post) => !picked.includes(post));
     return [...picked, ...fill].slice(0, COLUMN_TOPIC_SECTION_PREVIEW);
-  }, [featuredSlugs, posts, recommended]);
+  }, [featuredSlugs, openingSlugs, posts, recommended]);
   const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
   const labels = categoryFilterLabels(locale);
   const byline =

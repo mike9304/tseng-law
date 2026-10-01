@@ -8,6 +8,9 @@ import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell'
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { getAllIssuePosts } from '@/lib/columns';
 import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaColumnsStyles from '@/components/ja-design/JaColumns.module.css';
+import { JA_COLUMN_TOPIC_ORDER, JA_PINNED_COLUMN_SLUGS } from '@/components/ja-design/ja-arrangement';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
@@ -329,11 +332,14 @@ export default async function ColumnsPage(
           posts={toColumnListItems(posts)}
           initialFilters={toColumnGridFilters(searchParams)}
           featuredSlugs={locale === 'zh-hant' ? ZH_HANT_FEATURED_COLUMN_SLUGS : undefined}
-          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : undefined}
+          // ja design: cornerstone picks for the top Japanese needs, then themes in Japanese demand order.
+          openingSlugs={locale === 'ja' ? JA_PINNED_COLUMN_SLUGS : undefined}
+          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : locale === 'ja' ? JA_COLUMN_TOPIC_ORDER : undefined}
         />
       ) : null}
       <EnAcquisitionGuideLinks locale={locale} />
     </>
   );
+  if (locale === 'ja') return <JaPageShell page="columns" className={jaColumnsStyles.root}>{body}</JaPageShell>;
   return locale === 'zh-hant' ? <ZhHantColumnsShell>{body}</ZhHantColumnsShell> : body;
 }

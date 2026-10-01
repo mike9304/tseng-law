@@ -1,0 +1,58 @@
+/*
+ * ja lawyer profile (Opus 5.5 ja lane, 2026-10-01). Same profile data and links; square photo
+ * with a green top rule, the four summary points as a numbered ruled grid, and the info
+ * cards (基本情報・取扱業務・関連・外部・学歴・経歴) as 履歴書-style panels.
+ */
+.root:global(#ja-lawyer-profile) :global(.section.section--light) { background: #fff; padding: clamp(48px, 5vw, 80px) 0 clamp(64px, 6vw, 104px); }
+
+/* Hero card */
+.root:global(#ja-lawyer-profile) :global(.profile-hero-card) {
+  grid-template-columns: minmax(0, min(21rem, 38%)) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px);
+  padding: 0 0 clamp(36px, 4vw, 56px); border-bottom: 1px solid var(--ja-line);
+}
+.root:global(#ja-lawyer-profile) :global(.profile-hero-photo) { border-radius: 0; border-top: 3px solid var(--ja-green); }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-photo img) { border-radius: 0; }
+.root:global(#ja-lawyer-profile) :global(.section-title.profile-hero-title) {
+  font-size: clamp(28px, 2.6vw, 36px); letter-spacing: 0.12em; padding-bottom: 16px;
+}
+.root:global(#ja-lawyer-profile) :global(.profile-hero-role) { font-size: 15px; font-weight: 700; letter-spacing: 0.14em; color: var(--ja-gold-text); }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-body .split-text) { font-size: 16px; line-height: 2.05; color: var(--ja-text); max-width: 40em; }
+.root:global(#ja-lawyer-profile) :global(.profile-chip) {
+  border-radius: 0; border: 1px solid var(--ja-line-strong); background: var(--ja-paper); color: var(--ja-ink);
+  font-size: 13.5px; letter-spacing: 0.1em; min-height: 36px;
+}
+.root:global(#ja-lawyer-profile) :global(a.button.profile-hero-cta) { border-radius: 2px; min-height: 52px; padding-inline: 32px; letter-spacing: 0.12em; }
+
+/* Four summary points: numbered, ruled 2×2 */
+.root:global(#ja-lawyer-profile) :global(.profile-proof-grid) {
+  counter-reset: ja-proof; gap: 0; margin-top: 0; border-bottom: 1px solid var(--ja-line);
+}
+.root:global(#ja-lawyer-profile) :global(.profile-proof-card) {
+  counter-increment: ja-proof; display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start;
+  padding: 24px 24px 24px 0; border: 0; border-top: 1px solid var(--ja-line); border-radius: 0; box-shadow: none; background: transparent;
+}
+.root:global(#ja-lawyer-profile) :global(.profile-proof-card)::before {
+  content: counter(ja-proof, decimal-leading-zero); position: static; width: auto; height: auto; background: none; transform: none;
+  font-family: Georgia, 'Times New Roman', serif; font-size: 20px; line-height: 1.5; color: var(--ja-gold-text);
+}
+.root:global(#ja-lawyer-profile) :global(.profile-proof-text) { margin: 0; font-size: 15.5px; line-height: 1.95; color: var(--ja-text); }
+
+/* Info cards */
+.root:global(#ja-lawyer-profile) :global(.profile-card-grid) { gap: 24px; margin-top: 40px; }
+.root:global(#ja-lawyer-profile) :global(.profile-info-card) {
+  padding: 0 0 8px; border: 0; border-top: 2px solid var(--ja-ink); border-radius: 0; box-shadow: none; background: transparent;
+}
+.root:global(#ja-lawyer-profile) :global(.profile-card-title) {
+  margin: 0; padding: 14px 0 12px; border-bottom: 1px solid var(--ja-line); font-size: 17px; font-weight: 700; letter-spacing: 0.14em; color: var(--ja-ink);
+}
+.root:global(#ja-lawyer-profile) :global(.profile-info-card .attorney-list li),
+.root:global(#ja-lawyer-profile) :global(.profile-link-list li) { padding-block: 10px; border-bottom: 1px dashed var(--ja-line); }
+.root:global(#ja-lawyer-profile) :global(.profile-link-list) { list-style: none; margin: 0; padding: 0; }
+.root:global(#ja-lawyer-profile) :global(.profile-link-list a) { display: inline-flex; min-height: 28px; align-items: center; font-size: 15px; color: var(--ja-green); }
+
+@media (max-width: 767px) {
+  .root:global(#ja-lawyer-profile) :global(.profile-hero-card) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#ja-lawyer-profile) :global(.profile-hero-photo) { max-width: 240px; }
+  .root:global(#ja-lawyer-profile) :global(.profile-proof-card) { padding-right: 0; grid-template-columns: 36px minmax(0, 1fr); }
+  .root:global(#ja-lawyer-profile) :global(a.button.profile-hero-cta) { width: 100%; justify-content: center; }
+}

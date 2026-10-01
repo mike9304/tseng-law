@@ -1,0 +1,75 @@
+/*
+ * ja columns index (Opus 5.5 ja lane, 2026-10-01). ColumnsGrid / IssueBoardTabs markup unchanged
+ * (only the ja opening picks and topic order are passed in). Reads like a newspaper 目次:
+ * underline board tabs, square theme chips, the six cornerstone picks as a two-column list with
+ * small thumbnails, then numbered theme sections with compact text-first cards.
+ */
+
+/* Board tabs */
+.root:global(#ja-columns) :global([data-issue-board-tabs]) { padding-top: 0; padding-bottom: 0; border-bottom: 1px solid var(--ja-line); }
+.root:global(#ja-columns) :global([data-issue-board-tabs] nav.columns-filters .columns-filter-btn) {
+  border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: transparent; color: var(--ja-sub);
+  min-height: 56px; padding: 0 4px; margin-right: 28px; font-size: 15.5px; font-weight: 700; letter-spacing: 0.1em;
+}
+.root:global(#ja-columns) :global([data-issue-board-tabs] nav.columns-filters .columns-filter-btn.active) { border-bottom-color: var(--ja-green); color: var(--ja-ink); background: transparent; }
+
+.root:global(#ja-columns) :global(section.section.section--light) { background: #fff; }
+
+/* Search + theme chips */
+.root:global(#ja-columns) :global(.columns-search-label) { font-size: 13px; letter-spacing: 0.2em; color: var(--ja-gold-text); }
+.root:global(#ja-columns) :global(.columns-search-input) { min-height: 52px; border-radius: 0; border-color: var(--ja-line-strong); font-size: 16px; }
+.root:global(#ja-columns) :global(.columns-search-submit) { min-height: 52px; padding-inline: 28px; border-radius: 0; background: var(--ja-green); border-color: var(--ja-green); color: #fff; letter-spacing: 0.12em; }
+.root:global(#ja-columns) :global(.columns-topic-nav) { gap: 0; border-top: 1px solid var(--ja-line); border-left: 1px solid var(--ja-line); }
+.root:global(#ja-columns) :global(.columns-topic-nav .columns-filter-btn) {
+  margin: 0; min-height: 48px; padding: 0 18px; border: 0; border-right: 1px solid var(--ja-line); border-bottom: 1px solid var(--ja-line);
+  border-radius: 0; background: #fff; color: var(--ja-ink); font-size: 14.5px; letter-spacing: 0.06em;
+}
+.root:global(#ja-columns) :global(.columns-topic-nav .columns-filter-btn:hover) { background: var(--ja-paper); }
+.root:global(#ja-columns) :global(.columns-topic-nav .columns-filter-btn.active) { background: var(--ja-green); color: #fff; }
+.root:global(#ja-columns) :global(.columns-topic-nav .columns-filter-btn.active .columns-filter-count) { color: #fff; }
+.root:global(#ja-columns) :global(.columns-filter-count) { color: var(--ja-gold-text); font-variant-numeric: tabular-nums; }
+
+/* Section headers: numbered themes */
+.root:global(#ja-columns) :global(.columns-topic-sections) { counter-reset: ja-topic; }
+.root:global(#ja-columns) :global(.columns-topic-section) { padding: 44px 0; border-bottom: 1px solid var(--ja-line); }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-topic-section]) { counter-increment: ja-topic; }
+.root:global(#ja-columns) :global(.columns-topic-header) { align-items: baseline; gap: 16px; padding-bottom: 14px; margin-bottom: 22px; border-bottom: 2px solid var(--ja-ink); }
+.root:global(#ja-columns) :global(.columns-topic-title) { font-size: clamp(20px, 1.9vw, 25px); font-weight: 700; letter-spacing: 0.1em; color: var(--ja-ink); font-feature-settings: 'palt' 1; }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-topic-section] .columns-topic-title)::before {
+  content: counter(ja-topic, decimal-leading-zero); margin-right: 14px; font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--ja-gold-text);
+}
+.root:global(#ja-columns) :global(.columns-topic-count) { color: var(--ja-sub); letter-spacing: 0.1em; }
+.root:global(#ja-columns) :global(.columns-topic-more) { margin-top: 18px; color: var(--ja-green); font-weight: 700; letter-spacing: 0.06em; min-height: 44px; }
+
+/* Cards (shared) */
+.root:global(#ja-columns) :global(.columns-card) { border-radius: 0; box-shadow: none; background: transparent; }
+.root:global(#ja-columns) :global(.columns-card-img) { border-radius: 0; }
+.root:global(#ja-columns) :global(.columns-category-badge), .root:global(#ja-columns) :global(.columns-card-datechip) { border-radius: 0; }
+.root:global(#ja-columns) :global(.columns-card-title) { font-size: 17px; line-height: 1.65; letter-spacing: 0.05em; color: var(--ja-ink); }
+.root:global(#ja-columns) :global(.columns-card-summary) { font-size: 14.5px; line-height: 1.9; color: var(--ja-sub); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.root:global(#ja-columns) :global(.columns-card-byline) { color: var(--ja-gold-text); letter-spacing: 0.08em; }
+.root:global(#ja-columns) :global(.columns-card:focus-visible) { outline: 3px solid var(--ja-green); outline-offset: 4px; }
+
+/* Opening picks: two-column 目次 with small thumbnails */
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended]) { padding-top: 36px; background: transparent; }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-topic-header) { border-bottom-color: var(--ja-green); border-bottom-width: 3px; }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-grid) {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px;
+}
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card) {
+  display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 0 20px; align-items: start;
+  padding: 20px 0; border-bottom: 1px solid var(--ja-line);
+}
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-img) { aspect-ratio: 4 / 3; width: 100%; height: auto; }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-image-meta) { display: none; }
+.root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-body) { padding: 0; }
+
+@media (max-width: 900px) {
+  .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-grid) { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+  .root:global(#ja-columns) :global([data-issue-board-tabs] nav.columns-filters .columns-filter-btn) { margin-right: 18px; font-size: 14.5px; }
+  .root:global(#ja-columns) :global(.columns-topic-nav .columns-filter-btn) { padding: 0 12px; font-size: 13.5px; }
+  .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card) { grid-template-columns: 112px minmax(0, 1fr); gap: 0 14px; padding: 16px 0; }
+  .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-summary) { display: none; }
+}

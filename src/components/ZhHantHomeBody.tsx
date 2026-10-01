@@ -60,7 +60,7 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
     ...heroOverrides,
     'section-label': '昊鼎國際法律事務所',
     headline: '先聽您說完，\n再談怎麼做。',
-    subtitle: '台灣律師團隊承辦車禍、離婚、繼承、勞資爭議與刑事案件，請先來信說明案情。',
+    subtitle: '車禍、離婚、繼承、勞資爭議與刑事案件，請先來信簡述案情，律師看過後回信。',
   };
   return (
     <div className={styles.home} id="zh-hant-home" data-zh-hant-design="home">

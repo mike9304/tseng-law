@@ -17,6 +17,8 @@ import ServicesBento from '@/components/ServicesBento';
 import ZhHantServicesBody from '@/components/ZhHantServicesBody';
 import ZhHantPricingBody from '@/components/zh-hant-pricing/ZhHantPricingBody';
 import ZhHantAboutBody from '@/components/zh-hant-about/ZhHantAboutBody';
+import ZhHantTeam from '@/components/zh-hant-team/ZhHantTeam';
+import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
@@ -209,7 +211,7 @@ export function LawyersLegacyPageBody({
   const showSeo = locale === 'ja'
     || isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.seo');
 
-  return (
+  const body = (
     <>
       {showSeo ? (
         <>
@@ -270,10 +272,16 @@ export function LawyersLegacyPageBody({
       {showHero ? (
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
-      {showRepeater ? <AttorneyProfileSection locale={locale} showIntro={false} /> : null}
+      {showRepeater ? (
+        locale === 'zh-hant' ? <ZhHantTeam showIntro={false} /> : <AttorneyProfileSection locale={locale} showIntro={false} />
+      ) : null}
       {showRepeater ? <AttorneyFactSummary locale={locale} /> : null}
     </>
   );
+  // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside a scoped wrapper for the green header and team styling.
+  return locale === 'zh-hant'
+    ? <div className={zhLawyersStyles.root} id="zh-hant-lawyers" data-zh-hant-design="lawyers">{body}</div>
+    : body;
 }
 
 export function FaqLegacyPageBody({ locale }: { locale: Locale }) {

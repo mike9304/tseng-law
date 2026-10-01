@@ -43,38 +43,8 @@
 .entry p { margin: 0; font-size: 16.5px; line-height: 1.95; color: #2f3d36; }
 .entryLead p { font-family: var(--font-serif-tc); font-size: 19px; line-height: 1.9; color: var(--zh-ink); }
 
-/* Team (shared AttorneyProfileSection, restyled inside the zh-hant about page only) */
-.root:global(#zh-hant-about) .team :global(.attorney-team-section) { background: var(--zh-paper); padding: 88px 0; }
-.root:global(#zh-hant-about) .team :global(.section-title) { font-family: var(--font-serif-tc); font-size: clamp(30px, 3vw, 40px); line-height: 1.4; color: var(--zh-ink); }
-.root:global(#zh-hant-about) .team :global(.section-lede) { font-size: 17px; color: #4d5b54; margin-bottom: 40px; }
-.root:global(#zh-hant-about) .team :global(.attorney-group-title) { font-family: var(--font-serif-tc); font-size: 22px; color: var(--zh-ink); margin: 0 0 16px; }
-.root:global(#zh-hant-about) .team :global(.attorney-group-badge) { background: var(--zh-ink); color: var(--zh-cream); font-family: inherit; font-size: 13px; letter-spacing: 0.1em; padding: 4px 12px; border-radius: 2px; }
 
-.root:global(#zh-hant-about) .team :global(.attorney-card--lead) { background: #fff; border: none; border-top: 4px solid var(--zh-ink); border-radius: 2px; box-shadow: 0 18px 40px rgb(22 56 45 / 8%); padding: 0; overflow: hidden; }
-.root:global(#zh-hant-about) .team :global(.attorney-card--lead > div:first-child) { display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.6fr); gap: 0; align-items: stretch; }
-.root:global(#zh-hant-about) .team :global(.attorney-card-photo--lead) { position: relative; width: 100%; height: 100%; min-height: 460px; aspect-ratio: auto; border-radius: 0; margin: 0; }
-.root:global(#zh-hant-about) .team :global(.attorney-card--lead > div:first-child > div:last-child) { padding: 40px 44px; min-width: 0; }
-.root:global(#zh-hant-about) .team :global(.attorney-card-name--lead) { font-family: var(--font-serif-tc); font-size: clamp(32px, 3vw, 42px); color: var(--zh-ink); }
-.root:global(#zh-hant-about) .team :global(.attorney-card--lead .attorney-card-info) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 28px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--zh-line); }
-.root:global(#zh-hant-about) .team :global(.attorney-card--lead .attorney-card-actions) { grid-column: 1 / -1; }
-.root:global(#zh-hant-about) .team :global(.attorney-card-label) { font-size: 13px; letter-spacing: 0.12em; color: #6b5a33; font-weight: 700; margin-bottom: 8px; }
-.root:global(#zh-hant-about) .team :global(.attorney-list li) { font-size: 15px; line-height: 1.8; color: #2f3d36; }
 
-.root:global(#zh-hant-about) .team :global(.attorney-staff-wrap),
-.root:global(#zh-hant-about) .team :global(.attorney-partner-wrap) { margin-top: 56px; }
-.root:global(#zh-hant-about) .team :global(.attorney-staff-grid) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.root:global(#zh-hant-about) .team :global(.attorney-card--sub) { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--zh-line); border-radius: 2px; padding: 0; overflow: hidden; height: 100%; }
-.root:global(#zh-hant-about) .team :global(.attorney-card--sub > div:first-child) { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 18px; align-items: center; padding: 24px 24px 0; }
-.root:global(#zh-hant-about) .team :global(.attorney-card-photo--sub) { position: relative; width: 112px; height: 140px; aspect-ratio: auto; border-radius: 2px; margin: 0; }
-.root:global(#zh-hant-about) .team :global(.attorney-card--sub .attorney-card-name) { font-family: var(--font-serif-tc); font-size: 24px; color: var(--zh-ink); }
-.root:global(#zh-hant-about) .team :global(.attorney-card--sub .attorney-card-info) { padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 16px; flex: 1 1 auto; }
-.root:global(#zh-hant-about) .team :global(.attorney-card--sub .attorney-card-actions) { margin-top: auto; }
-.root:global(#zh-hant-about) .team :global(.attorney-partner-wrap .attorney-card--sub) { max-width: calc((100% - 40px) / 3 * 2 + 20px); }
-.root:global(#zh-hant-about) .team :global(.attorney-partner-wrap .attorney-card--sub .attorney-card-info) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 24px; }
-.root:global(#zh-hant-about) .team :global(.attorney-partner-wrap .attorney-card-actions) { grid-column: 1 / -1; }
-.root:global(#zh-hant-about) .team :global(.attorney-card-cta) { min-height: 44px; }
-.root:global(#zh-hant-about) .team :global(.attorney-card-cta:focus-visible),
-.root:global(#zh-hant-about) .team :global(.attorney-card a:focus-visible) { outline: 3px solid var(--zh-ink); outline-offset: 3px; }
 
 /* Compact contact band */
 .contact { padding: 80px 0; background: var(--zh-ink); color: var(--zh-cream); }
@@ -100,9 +70,6 @@
   .facts { grid-column: 1; grid-row: 3; }
   .firmGrid { grid-template-columns: minmax(0, 1fr); }
   .firmAside { position: static; }
-  .root:global(#zh-hant-about) .team :global(.attorney-card--lead .attorney-card-info) { grid-template-columns: minmax(0, 1fr); }
-  .root:global(#zh-hant-about) .team :global(.attorney-staff-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .root:global(#zh-hant-about) .team :global(.attorney-partner-wrap .attorney-card--sub) { max-width: none; }
   .contactGrid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 767px) {
@@ -115,16 +82,6 @@
   .entry { grid-template-columns: minmax(0, 1fr); padding: 0 0 28px 22px; }
   .entryYear:empty { display: none; }
   .entryLead p { font-size: 17.5px; }
-  .root:global(#zh-hant-about) .team :global(.attorney-team-section) { padding: 56px 0; }
-  .root:global(#zh-hant-about) .team :global(.attorney-card--lead > div:first-child) { grid-template-columns: minmax(0, 1fr); }
-  .root:global(#zh-hant-about) .team :global(.attorney-card-photo--lead) { min-height: 0; aspect-ratio: 4 / 5; }
-  .root:global(#zh-hant-about) .team :global(.attorney-card--lead > div:first-child > div:last-child) { padding: 28px 22px; }
-  .root:global(#zh-hant-about) .team :global(.attorney-staff-grid) { grid-template-columns: minmax(0, 1fr); }
-  .root:global(#zh-hant-about) .team :global(.attorney-card--sub > div:first-child) { grid-template-columns: 84px minmax(0, 1fr); gap: 14px; padding: 20px 20px 0; }
-  .root:global(#zh-hant-about) .team :global(.attorney-card-photo--sub) { width: 84px; height: 105px; }
-  .root:global(#zh-hant-about) .team :global(.attorney-card--sub .attorney-card-email) { font-size: 13px; overflow-wrap: anywhere; }
-  .root:global(#zh-hant-about) .team :global(.attorney-card--sub .attorney-card-info) { padding: 18px 20px 20px; }
-  .root:global(#zh-hant-about) .team :global(.attorney-partner-wrap .attorney-card--sub .attorney-card-info) { grid-template-columns: minmax(0, 1fr); }
   .contact { padding: 56px 0; }
   .contactActions :global(.button) { width: 100%; justify-content: center; }
   .officeList li { grid-template-columns: minmax(0, 1fr); gap: 2px; }

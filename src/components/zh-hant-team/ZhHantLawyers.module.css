@@ -1,0 +1,28 @@
+/* zh-hant lawyers list, second pass (son7-87 / Opus 5.5, 2026-10-01): green header, team (ZhHantTeam), fact band. */
+.root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
+
+.root:global(#zh-hant-lawyers) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 64px; border-bottom: none; }
+.root:global(#zh-hant-lawyers) :global(.page-header-title),
+.root:global(#zh-hant-lawyers) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
+.root:global(#zh-hant-lawyers) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
+.root:global(#zh-hant-lawyers) :global(.page-header .section-label) { color: var(--zh-gold); }
+.root:global(#zh-hant-lawyers) :global(.page-header .section-label::before) { background: var(--zh-gold); }
+.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb),
+.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
+.root:global(#zh-hant-lawyers) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+
+/* Basic facts about the lead attorney: three columns on a green band */
+.root:global(#zh-hant-lawyers) :global(#attorney-facts) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0; }
+.root:global(#zh-hant-lawyers) :global(#attorney-facts .container) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 48px; }
+.root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title) { grid-column: 1 / -1; margin: 0 0 8px; font-family: var(--font-serif-tc); font-size: clamp(28px, 2.8vw, 36px); color: var(--zh-cream); }
+.root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-section) { border-top: 1px solid rgb(244 239 226 / 30%); padding-top: 18px; margin: 0; }
+.root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-label) { font-size: 13px; letter-spacing: 0.14em; color: var(--zh-gold); font-weight: 700; margin-bottom: 10px; }
+.root:global(#zh-hant-lawyers) :global(#attorney-facts p) { margin: 0; font-size: 16.5px; line-height: 1.85; color: var(--zh-cream); }
+
+@media (max-width: 1000px) {
+  .root:global(#zh-hant-lawyers) :global(#attorney-facts .container) { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+  .root:global(#zh-hant-lawyers) :global(.page-header) { padding: 40px 0 44px; }
+  .root:global(#zh-hant-lawyers) :global(#attorney-facts) { padding: 52px 0; }
+}

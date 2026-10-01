@@ -1,11 +1,11 @@
 import PageHeader from '@/components/PageHeader';
-import AttorneyProfileSection from '@/components/AttorneyProfileSection';
 import { pageCopy } from '@/data/page-copy';
 import { firmIntroductionContent } from '@/data/firm-introduction';
 import { siteContent } from '@/data/site-content';
 import { teamContent } from '@/data/team-members';
 import ZhHantFirmIntro from './ZhHantFirmIntro';
 import ZhHantAboutContact from './ZhHantAboutContact';
+import ZhHantTeam from '@/components/zh-hant-team/ZhHantTeam';
 import styles from './ZhHantAbout.module.css';
 
 const founded = firmIntroductionContent['zh-hant'].paragraphs[0]?.match(/(\d{4})年/)?.[1];
@@ -44,9 +44,7 @@ export default function ZhHantAboutBody() {
         </nav>
       </PageHeader>
       <ZhHantFirmIntro />
-      <div id="team" className={styles.team}>
-        <AttorneyProfileSection locale="zh-hant" />
-      </div>
+      <ZhHantTeam />
       <ZhHantAboutContact />
     </div>
   );

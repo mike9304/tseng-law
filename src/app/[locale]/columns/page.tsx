@@ -4,6 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
+import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
@@ -247,13 +248,14 @@ export default async function ColumnsPage(
       },
     });
 
-    return (
+    const publishedBody = (
       <>
         <IssueBoardTabs locale={locale} active="expert" />
         <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />
         <EnAcquisitionGuideLinks locale={locale} />
       </>
     );
+    return locale === 'zh-hant' ? <ZhHantColumnsShell>{publishedBody}</ZhHantColumnsShell> : publishedBody;
   }
 
   const copy = pageCopy[locale].insights;
@@ -279,7 +281,7 @@ export default async function ColumnsPage(
   const showRepeater = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.repeater');
   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.seo');
 
-  return (
+  const body = (
     <>
       {showSeo ? (
         <>
@@ -312,4 +314,5 @@ export default async function ColumnsPage(
       <EnAcquisitionGuideLinks locale={locale} />
     </>
   );
+  return locale === 'zh-hant' ? <ZhHantColumnsShell>{body}</ZhHantColumnsShell> : body;
 }

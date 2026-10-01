@@ -14,6 +14,7 @@ vi.mock('next/image', () => ({
 
 import ColumnsGrid, { type ColumnListItem } from '@/components/ColumnsGrid';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
+import { ColumnsLegacyPageBody } from '@/app/[locale]/(legacy)/legacy-page-bodies';
 import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 
 function post(slug: string, topic: ColumnListItem['topic'], audience?: string[]): ColumnListItem {
@@ -96,5 +97,15 @@ describe('zh-hant columns curation (domestic readers first)', () => {
     const slugs = [...opening.matchAll(/href="\/zh-hant\/columns\/([^"]+)"/g)].map((m) => m[1]);
     expect(slugs).toEqual([...ZH_HANT_FEATURED_COLUMN_SLUGS]);
     for (const slug of ZH_HANT_FEATURED_COLUMN_SLUGS) expect(html).toContain(`/zh-hant/columns/${slug}`);
+  });
+
+  it('published builder path: the zh-hant columns body renders the board switch under its header with the curation', () => {
+    nav.params = new URLSearchParams();
+    const html = renderToStaticMarkup(<ColumnsLegacyPageBody locale="zh-hant" posts={[]} />);
+    expect(html).toContain('data-issue-board-tab="expert"');
+    expect(html).toContain('data-issue-board-tab="issues"');
+    expect(html.indexOf('page-header')).toBeLessThan(html.indexOf('data-issue-board-tabs'));
+    const ko = renderToStaticMarkup(<ColumnsLegacyPageBody locale="ko" posts={[]} />);
+    expect(ko).not.toContain('data-issue-board-tab="expert"');
   });
 });

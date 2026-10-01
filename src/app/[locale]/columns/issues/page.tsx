@@ -6,6 +6,7 @@ import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
 import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
+import { EnIssuesShell } from '@/components/en-design/EnColumns';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { ISSUE_BOARD_LOCALES, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
 import { getAiAuthorCopy } from '@/lib/ai-authored-columns';
@@ -66,7 +67,8 @@ export default async function IssueBoardPage(props: {
           })),
         })}
       />
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+      {/* en: the eyebrow names the parent section ("Insights"), as the board tabs below do. */}
+      <PageHeader locale={locale} label={locale === 'en' ? copy.columns : copy.label} title={copy.title} description={copy.description} />
       {locale === 'zh-hant' ? <ZhHantBoardSwitch active="issues" issueCount={posts.length} /> : <IssueBoardTabs locale={locale} active="issues" />}
       <ColumnsGrid
         locale={locale}
@@ -85,5 +87,7 @@ export default async function IssueBoardPage(props: {
     </>
   );
   // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside the columns shell (header, tabs, grid styling).
-  return locale === 'zh-hant' ? <ZhHantColumnsShell>{body}</ZhHantColumnsShell> : body;
+  if (locale === 'zh-hant') return <ZhHantColumnsShell>{body}</ZhHantColumnsShell>;
+  // en redesign (Opus 5.5 en lane): same blocks inside the en wrapper with the en columns-index styling.
+  return locale === 'en' ? <EnIssuesShell>{body}</EnIssuesShell> : body;
 }

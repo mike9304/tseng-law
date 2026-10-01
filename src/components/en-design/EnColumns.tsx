@@ -17,6 +17,18 @@ export function EnColumnsShell({ children }: { children: ReactNode }) {
 }
 
 /**
+ * en "Taiwan Law in the News" board: the same blocks (header, board tabs, ColumnsGrid) in the en
+ * wrapper with the columns-index styling, so both tabs of the Insights section look alike.
+ */
+export function EnIssuesShell({ children }: { children: ReactNode }) {
+  return (
+    <EnPageShell page="issues">
+      <div className={styles.columns}>{children}</div>
+    </EnPageShell>
+  );
+}
+
+/**
  * Header panel: one starting guide per reader situation (labels are the situation labels used
  * across the English pages; each link is an existing English column with its own title).
  * Desktop shows the list open beside the H1; phones get the same list collapsed in a

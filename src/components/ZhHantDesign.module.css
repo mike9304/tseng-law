@@ -317,8 +317,9 @@
   .home:global(#zh-hant-home) :global(#practice .services-card-grid) { grid-template-columns: minmax(0, 1fr); }
   .home:global(#zh-hant-home) :global(.services-detail-header) { display: flex; }
 
+  /* Sticky inside the home wrapper (not fixed): it rides up with the end of the page body, so it never covers the footer. */
   .mobileCta {
-    position: fixed; inset: auto 0 0 0; z-index: 60;
+    position: sticky; bottom: 0; z-index: 60;
     display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 8px;
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
     background: #fff; border-top: 1px solid #dfe5dc; box-shadow: 0 -6px 18px rgb(22 56 45 / 10%);
@@ -329,8 +330,7 @@
   }
   .mobileCtaPrimary { background: var(--zh-ink); color: #fff; }
   .mobileCtaSecondary { border: 1px solid #c8d2c6; color: var(--zh-ink); background: #fff; }
-  .mobileCtaPrimary:focus-visible, .mobileCtaSecondary:focus-visible { outline: 3px solid var(--zh-gold); outline-offset: 2px; }
-  .home:global(#zh-hant-home) { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  .mobileCtaPrimary:focus-visible, .mobileCtaSecondary:focus-visible { outline: 3px solid var(--zh-ink); outline-offset: 3px; }
 }
 
 /* Second pass: the editorial hero module colours its title/byline more specifically; keep text legible on green. */
@@ -360,5 +360,11 @@
 
 /* Fable S1: keep keyboard focus clear of the fixed mobile consultation bar. */
 @media (max-width: 767px) {
-  .home:global(#zh-hant-home) :is(:global(a), :global(button), :global(input), :global(summary), :global([tabindex])) { scroll-margin-bottom: calc(88px + env(safe-area-inset-bottom)); }
+  .home:global(#zh-hant-home) :is(:global(a), :global(button), :global(input), :global(summary), :global(iframe), :global([tabindex])) { scroll-margin-bottom: calc(88px + env(safe-area-inset-bottom)); }
 }
+
+/* Astra MUSTs: the shared editorial kicker colour (--gold-dim) is too dark on green, and the
+   default focus outline is green-on-green. Dark zh-hant surfaces use cream rings. */
+.home:global(#zh-hant-home) :global(.hero[data-presentation='editorial']) { --gold-dim: var(--zh-gold); }
+.home:global(#zh-hant-home) :is(:global(.hero), :global(.section--dark)) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+.home:global(#zh-hant-home) :global(.hero .hero-search-wrapper) :focus-visible { outline-color: var(--zh-ink); }

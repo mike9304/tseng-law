@@ -118,3 +118,7 @@
 }
 /* The shared ServiceDetail module paints the hero after this file; win explicitly. */
 .hero.hero:global(.svc-hero) { background: var(--zh-ink) !important; }
+
+/* Visible focus on the green hero (default ring is green-on-green). */
+/* (0,3,1): beats the shared module's later .hero .svc-back-link:focus-visible. */
+.hero:global(.svc-hero) :is(a, button):focus-visible { outline: 3px solid var(--zh-cream, #f4efe2); outline-offset: 3px; }

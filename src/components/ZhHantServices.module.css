@@ -144,3 +144,6 @@
   .practiceNav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-inline: 24px; }
   .practiceNav a { flex: 0 0 auto; }
 }
+
+/* Visible focus on the green page header (default ring is green-on-green). */
+.root:global(#zh-hant-services) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream, #f4efe2); outline-offset: 3px; }

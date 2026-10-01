@@ -65,9 +65,9 @@
 }
 @media (max-width: 767px) {
   .root:global(#zh-hant-contact) :global(.page-header) { padding: 40px 0 48px; }
-  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) { padding: 24px 20px; box-shadow: 8px 8px 0 rgb(212 185 122 / 35%); margin-right: 8px; }
+  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) { padding: 24px clamp(14px, 4.5vw, 20px); box-shadow: 8px 8px 0 rgb(212 185 122 / 35%); margin-right: 8px; }
   .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button) { flex: 1 1 100%; justify-content: center; }
-  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__address) { font-size: clamp(18px, 5.3vw, 21px); overflow-wrap: normal; }
+  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__address) { font-size: clamp(16px, 5.3vw, 21px); overflow-wrap: anywhere; }
   .main { padding: 40px 0; }
   .root:global(#zh-hant-contact) :global(p[role='note'] + .contact-grid),
   .root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid) { grid-template-columns: minmax(0, 1fr); }

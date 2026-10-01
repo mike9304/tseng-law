@@ -53,7 +53,7 @@ export default function ServicesBento({
   presentation?: 'editorial';
   /** Optional short scenario labels per service slug (zh-hant home design). Omitted elsewhere. */
   scenarioTags?: Readonly<Record<string, readonly string[]>>;
-  /** Optional display order by service slug (zh-hant home, ja design). Icons and anchors keep each service's own index. Omitted elsewhere. */
+  /** Optional display order by service slug (zh-hant home, ja and en designs). Icons and anchors keep each service's own index. Omitted elsewhere. */
   order?: readonly string[];
 }) {
   const { services } = siteContent[locale];

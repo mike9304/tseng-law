@@ -137,6 +137,7 @@ export default function HeroSearch({
   omitLandmarkId = false,
   trustContent,
   persistentQuickMenus = false,
+  media,
 }: {
   locale: SiteLocale;
   scrollHref?: string;
@@ -146,6 +147,8 @@ export default function HeroSearch({
   omitLandmarkId?: boolean;
   trustContent?: ReactNode;
   persistentQuickMenus?: boolean;
+  /** Editorial only: replaces the hero photo in the media frame (en home design). Omitted elsewhere. */
+  media?: ReactNode;
 }) {
   const hero = siteContent[locale].hero;
   const HeroHeading = headingLevel === 2 ? 'h2' : 'h1';
@@ -281,7 +284,7 @@ export default function HeroSearch({
             {trustContent ?? <HeroTrustStrip locale={locale} tone="light" />}
           </div>
           <div className={styles.heroMediaFrame} data-hero-slot="media-frame">
-            <HeroMediaBackground locale={locale} />
+            {media ?? <HeroMediaBackground locale={locale} />}
           </div>
         </div>
         <div className={`hero-search-wrapper ${styles.searchBand}`}>

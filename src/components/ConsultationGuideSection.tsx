@@ -131,6 +131,11 @@ const guideCopy = {
   },
 } as const;
 
+/** Read-only access for the en design (contact page and home process block reuse the same copy). */
+export function getConsultationGuideCopy(locale: SiteLocale) {
+  return guideCopy[locale];
+}
+
 export default function ConsultationGuideSection({ locale }: { locale: SiteLocale }) {
   const content = guideCopy[locale];
 

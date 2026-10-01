@@ -1,0 +1,150 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { getPricingContent } from '@/components/PricingCards';
+import { getConsultationGuideCopy } from '@/components/ConsultationGuideSection';
+import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import { pageCopy } from '@/data/page-copy';
+import { resolveEnSituations } from './en-design-data';
+import styles from './EnHome.module.css';
+
+/**
+ * Hero side panel for the en home (replaces the building photo): who the reader will speak
+ * with, how, and what the first consultation costs. Every value restates existing data:
+ * attorney profile (name, role, image, languages), pricing (consultation price, unit and
+ * details) and the office time zone stated on the home and contact pages.
+ */
+export function EnHeroBrief() {
+  const profile = getAttorneyProfile('en', primaryAttorneySlug);
+  const consultation = getPricingContent('en').items.find((item) => item.icon === 'consultation');
+  if (!profile) return null;
+  const displayName = profile.heading ?? profile.name;
+  return (
+    <div className={styles.brief} data-en-hero-brief>
+      <div className={styles.briefPerson}>
+        <Image src={profile.image} alt={displayName} width={96} height={96} className={styles.briefPhoto} sizes="96px" />
+        <div>
+          <p className={styles.briefName}>{displayName}</p>
+          <p className={styles.briefRole}>{profile.role}</p>
+        </div>
+      </div>
+      <dl className={styles.briefFacts}>
+        <div>
+          <dt>Languages</dt>
+          <dd>{profile.languages.join(', ')}</dd>
+        </div>
+        {consultation ? (
+          <>
+            <div>
+              <dt>Meet</dt>
+              <dd>{consultation.details[0]}</dd>
+            </div>
+            <div>
+              <dt>{consultation.title}</dt>
+              <dd>
+                <span className={styles.briefPrice}>{consultation.price}</span> {consultation.unit}
+                <small>{consultation.details[3]}</small>
+              </dd>
+            </div>
+          </>
+        ) : null}
+        <div>
+          <dt>Time zone</dt>
+          <dd>Taipei (GMT+8)</dd>
+        </div>
+      </dl>
+      <div className={styles.briefLinks}>
+        <Link href={`/en/lawyers/${profile.slug}`}>View Lawyer Profile <span aria-hidden>→</span></Link>
+        <Link href="/en/pricing">{pageCopy.en.pricing.title} <span aria-hidden>→</span></Link>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * "Living or working in Taiwan": the individual situations English-speaking readers most often
+ * bring, each linked to the existing practice-area or topic page and to existing English guides.
+ */
+export function EnSituationIndex({ posts }: { posts: readonly { slug: string; title: string }[] }) {
+  const situations = resolveEnSituations(posts);
+  return (
+    <section className={styles.situations} aria-labelledby="en-situations-title" data-en-situations>
+      <div className={styles.situationsHead}>
+        <p className={styles.eyebrow}>Start here</p>
+        <h2 id="en-situations-title" className={styles.sectionTitle}>Living or working in Taiwan</h2>
+      </div>
+      <ol className={styles.situationGrid}>
+        {situations.map((situation, index) => (
+          <li key={situation.id} className={styles.situation} data-en-situation={situation.id}>
+            <span className={styles.situationNo} aria-hidden>{String(index + 1).padStart(2, '0')}</span>
+            <h3 className={styles.situationTitle}>{situation.label}</h3>
+            {situation.guideLinks.length > 0 ? (
+              <ul className={styles.situationGuides}>
+                {situation.guideLinks.slice(0, 2).map((guide) => (
+                  <li key={guide.slug}><Link href={guide.href}>{guide.title}</Link></li>
+                ))}
+              </ul>
+            ) : null}
+            <Link href={situation.href} className={styles.situationMore}>
+              {situation.hrefLabel} <span aria-hidden>→</span>
+            </Link>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+/**
+ * Process and fees in one block: the consultation flow and preparation list from the contact
+ * guide copy, and the four fees from the pricing data (amounts and units unchanged).
+ */
+export function EnProcessAndFees() {
+  const guide = getConsultationGuideCopy('en');
+  const flow = guide.cards.find((card) => card.title === 'Consultation flow');
+  const prepare = guide.cards.find((card) => card.title === 'Useful materials to prepare');
+  const pricing = getPricingContent('en');
+  return (
+    <section className={styles.process} id="process" aria-labelledby="en-process-title" data-en-process>
+      <div className="container">
+        <div className={styles.processHead}>
+          <p className={styles.eyebrow}>{guide.label}</p>
+          <h2 id="en-process-title" className={styles.sectionTitle}>{guide.title}</h2>
+          <p className={styles.sectionLede}>{guide.description}</p>
+        </div>
+        <div className={styles.processGrid}>
+          {flow ? (
+            <div className={styles.processCol}>
+              <h3 className={styles.colTitle}>{flow.title}</h3>
+              <ol className={styles.steps}>
+                {flow.items.map((item, index) => (
+                  <li key={item}><span className={styles.stepNo} aria-hidden>{index + 1}</span><span>{item}</span></li>
+                ))}
+              </ol>
+            </div>
+          ) : null}
+          {prepare ? (
+            <div className={styles.processCol}>
+              <h3 className={styles.colTitle}>{prepare.title}</h3>
+              <ul className={styles.checklist}>
+                {prepare.items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+          ) : null}
+          <div className={`${styles.processCol} ${styles.feeCol}`}>
+            <h3 className={styles.colTitle}>{pageCopy.en.pricing.title}</h3>
+            <p className={styles.feeCurrency}>{pricing.currency}</p>
+            <ul className={styles.feeList}>
+              {pricing.items.map((item) => (
+                <li key={item.icon}>
+                  <span className={styles.feeName}>{item.title}</span>
+                  <span className={styles.feeAmount}>{item.price}{item.unit ? <small> {item.unit}</small> : null}</span>
+                </li>
+              ))}
+            </ul>
+            <Link href="/en/pricing" className={styles.feeMore}>{pageCopy.en.pricing.title} <span aria-hidden>→</span></Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -98,7 +98,11 @@ const EXPECTED_SEQUENCE = [
   'insights',
   ...ENGLISH_HOME_LANDMARK_ORDER.filter((id) => id !== 'hero' && id !== 'insights'),
 ];
-const ENGLISH_HOME_SEQUENCE = EXPECTED_SEQUENCE;
+// en redesign (2026-10-01): the English home has its own arrangement for English-speaking
+// readers — "start here" situations right under the hero, then practice areas, attorney,
+// latest insights; the decorative heritage interlude is not part of it. Guidance homes keep
+// EXPECTED_SEQUENCE (asserted below).
+const ENGLISH_HOME_SEQUENCE = ['hero', 'practice', 'about', 'insights', 'results', 'stats', 'faq', 'offices', 'contact'];
 
 function fixturePost(index: number): ColumnPost {
   return {
@@ -148,7 +152,7 @@ describe('guidance home matches the English home composition', () => {
         faqItems={[]}
       />,
     );
-    expectLandmarksOnce(markup, 'en');
+    expectLandmarksOnce(markup, 'en', ['heritage']);
     expect(homeLandmarkSequence(markup)).toEqual(ENGLISH_HOME_SEQUENCE);
     // Archive is not wrapped in a scroll reveal on the English home.
     const archiveAt = markup.search(/<section\b[^>]*\bid="insights"/);
@@ -396,13 +400,15 @@ describe('the existing four languages keep their exact home markup', () => {
       // attorney and cases; trust facts (stats) follow the cases. The decorative heritage interlude
       // is not part of the zh-hant home.
       // ja design (2026-10-01): needs block first, then practice areas and the pinned column
-      // archive; no heritage interlude on the ja home either.
-      expectLandmarksOnce(markup, locale, locale === 'zh-hant' || locale === 'ja' ? ['heritage'] : []);
+      // archive; en design (2026-10-01): its own sequence. No heritage interlude on either.
+      expectLandmarksOnce(markup, locale, locale === 'zh-hant' || locale === 'ja' || locale === 'en' ? ['heritage'] : []);
       expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'zh-hant'
         ? ['hero', 'practice', 'insights', 'about', 'results', 'stats', 'faq', 'offices', 'contact']
         : locale === 'ja'
           ? ['hero', 'practice', 'insights', 'about', 'stats', 'results', 'faq', 'offices', 'contact']
-          : EXPECTED_SEQUENCE);
+          : locale === 'en'
+            ? ENGLISH_HOME_SEQUENCE
+            : EXPECTED_SEQUENCE);
     }
   });
 });

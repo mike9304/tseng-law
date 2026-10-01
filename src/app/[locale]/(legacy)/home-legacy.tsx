@@ -20,6 +20,7 @@ import jaHomeStyles from '@/components/ja-design/JaHome.module.css';
 import { JA_PINNED_COLUMN_SLUGS, JA_SERVICE_ORDER } from '@/components/ja-design/ja-arrangement';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import { getOrganizationName } from '@/lib/seo';
+import EnHomeBody from '@/components/en-design/EnHomeBody';
 import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
@@ -81,18 +82,14 @@ export function LegacyHomePageBody({
 }) {
   if (locale === 'zh-hant') return <ZhHantHomeBody posts={posts} faqItems={faqItems} />;
   if (locale === 'ja') return jaHomeBody(posts, faqItems);
+  if (locale === 'en') return <EnHomeBody posts={posts} faqItems={faqItems} />;
   return (
     <div className={homeEditorialStyles.root}>
       <HeroSearch locale={locale} presentation="editorial" />
       {/* Same place as the Korean home: the column archive sits right under
           the hero and is visible without waiting for a scroll reveal. */}
       <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
-      {/* ja renders its own order above (jaHomeBody); only en reaches this entry block now. */}
-      {locale === 'en' ? (
-        <Reveal>
-          <EnAcquisitionGuideLinks locale={locale} variant="full" />
-        </Reveal>
-      ) : null}
+      {/* ja and en render their own home bodies above (jaHomeBody, EnHomeBody); the shared body no longer carries their entry block. */}
       <Reveal>
         <ServicesBento locale={locale} id="practice" variant="default" presentation="editorial" />
       </Reveal>

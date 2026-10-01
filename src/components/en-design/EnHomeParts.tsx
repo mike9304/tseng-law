@@ -114,55 +114,57 @@ export function EnProcessAndFees() {
   const pricing = getPricingContent('en');
   return (
     <section className={styles.process} id="process" aria-labelledby="en-process-title" data-en-process>
-      <div className="container">
+      <div className={`container ${styles.processLayout}`}>
         <div className={styles.processHead}>
           <p className={styles.eyebrow}>{guide.label}</p>
           <h2 id="en-process-title" className={styles.sectionTitle}>{guide.title}</h2>
           <p className={styles.sectionLede}>{guide.description}</p>
         </div>
-        <div className={styles.processGrid}>
+        <div className={styles.processBody}>
           {flow ? (
-            <div className={styles.processCol}>
+            <div className={`${styles.processCol} ${styles.flowCol}`}>
               <h3 className={styles.colTitle}>{flow.title}</h3>
               <ol className={styles.steps}>
                 {flow.items.map((item, index) => (
-                  <li key={item}><span className={styles.stepNo} aria-hidden>{index + 1}</span><span>{item}</span></li>
+                  <li key={item}><span className={styles.stepNo} aria-hidden>{String(index + 1).padStart(2, '0')}</span><span>{item}</span></li>
                 ))}
               </ol>
             </div>
           ) : null}
-          {prepare ? (
-            <div className={styles.processCol}>
-              <h3 className={styles.colTitle}>{prepare.title}</h3>
-              <ul className={styles.checklist}>
-                {prepare.items.map((item) => <li key={item}>{item}</li>)}
+          <div className={styles.processPair}>
+            {prepare ? (
+              <div className={`${styles.processCol} ${styles.prepareCol}`}>
+                <h3 className={styles.colTitle}>{prepare.title}</h3>
+                <ul className={styles.checklist}>
+                  {prepare.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+            ) : null}
+            <div className={`${styles.processCol} ${styles.feeCol}`}>
+              <h3 className={styles.colTitle}>{pageCopy.en.pricing.title}</h3>
+              <p className={styles.feeCurrency}>{pricing.currency}</p>
+              <ul className={styles.feeList}>
+                {pricing.items.map((item) => (
+                  // Fees with conditions (capital/shareholder limits, extra charges) are not
+                  // abbreviated here: their titles link to the full entry on the fees page.
+                  FEES_WITH_CONDITIONS.has(item.icon) ? (
+                    <li key={item.icon}>
+                      <Link href={`/en/pricing#fee-${item.icon}`} className={styles.feeLink}>
+                        {item.title} <span aria-hidden>→</span>
+                      </Link>
+                    </li>
+                  ) : (
+                    <li key={item.icon}>
+                      <span className={styles.feeName}>{item.title}</span>
+                      <span className={styles.feeAmount}>{item.price}{item.unit ? <small> {item.unit}</small> : null}</span>
+                      {item.icon === 'consultation' && item.details[3] ? <span className={styles.feeNote}>{item.details[3]}</span> : null}
+                    </li>
+                  )
+                ))}
               </ul>
+              <p className={styles.feeDisclaimer}>{pricing.disclaimer}</p>
+              <Link href="/en/pricing" className={styles.feeMore}>{pageCopy.en.pricing.title} <span aria-hidden>→</span></Link>
             </div>
-          ) : null}
-          <div className={`${styles.processCol} ${styles.feeCol}`}>
-            <h3 className={styles.colTitle}>{pageCopy.en.pricing.title}</h3>
-            <p className={styles.feeCurrency}>{pricing.currency}</p>
-            <ul className={styles.feeList}>
-              {pricing.items.map((item) => (
-                // Fees with conditions (capital/shareholder limits, extra charges) are not
-                // abbreviated here: their titles link to the full entry on the fees page.
-                FEES_WITH_CONDITIONS.has(item.icon) ? (
-                  <li key={item.icon}>
-                    <Link href={`/en/pricing#fee-${item.icon}`} className={styles.feeLink}>
-                      {item.title} <span aria-hidden>→</span>
-                    </Link>
-                  </li>
-                ) : (
-                  <li key={item.icon}>
-                    <span className={styles.feeName}>{item.title}</span>
-                    <span className={styles.feeAmount}>{item.price}{item.unit ? <small> {item.unit}</small> : null}</span>
-                    {item.icon === 'consultation' && item.details[3] ? <span className={styles.feeNote}>{item.details[3]}</span> : null}
-                  </li>
-                )
-              ))}
-            </ul>
-            <p className={styles.feeDisclaimer}>{pricing.disclaimer}</p>
-            <Link href="/en/pricing" className={styles.feeMore}>{pageCopy.en.pricing.title} <span aria-hidden>→</span></Link>
           </div>
         </div>
       </div>

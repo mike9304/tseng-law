@@ -27277,3 +27277,32 @@ html[dir='rtl'] .guidance-answer {
 .site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-lawyer-profile, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns, #zh-hant-column, [data-zh-hant-design='service-detail']) .button {
   border-radius: 2px !important;
 }
+
+/* =====================================================================================================
+   en design chrome (en lane, 2026-10-01): the en wrapper cannot reach the shared header and footer, so the
+   two shared pieces that carried the green palette are re-skinned for English only (ink, yellow signal).
+   ===================================================================================================== */
+.site[data-locale='en'] .header .nav-cta.button {
+  border-radius: 999px;
+  padding-inline: 1.15rem;
+  background: #0a0b0d;
+  border-color: #0a0b0d;
+  color: #fff;
+}
+.site[data-locale='en'] .header .nav-cta.button:hover,
+.site[data-locale='en'] .header .nav-cta.button:focus-visible {
+  background: #ffc61a;
+  border-color: #ffc61a;
+  color: #0a0b0d;
+}
+.site[data-locale='en'] .header .header-accent-line { background: #ffc61a; }
+.site[data-locale='en'] .footer-skyline { display: none; }
+.site[data-locale='en'] footer.site-footer {
+  background: #0a0b0d;
+  color: #f4f2ec;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+}
+.site[data-locale='en'] footer.site-footer .footer-offices,
+.site[data-locale='en'] footer.site-footer .footer-main,
+.site[data-locale='en'] footer.site-footer .footer-copyright-row,
+.site[data-locale='en'] footer.site-footer .footer-bottom-bar { border-color: rgb(255 255 255 / 14%); background: transparent; }

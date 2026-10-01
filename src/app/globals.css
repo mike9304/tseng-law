@@ -27278,28 +27278,28 @@ html[dir='rtl'] .guidance-answer {
   border-radius: 2px !important;
 }
 
-/* ja shell (Opus 5.5 ja lane, 2026-10-01): pages that render the ja design (data-ja-design wrapper) carry the
+/* ja shell (Opus 5.5 ja lane, 2026-10-01; round 2 re-keyed to the locale): every ja page, wrapped or not, carries the
    間 palette — sumi ink and one vermilion — into the shared header action and footer. Other locales never match. */
-.site:has([data-ja-design]) .header .nav-cta,
-body:has([data-ja-design]) .drawer .drawer-footer .button:not(.secondary):not(.ghost) {
+.site[data-locale='ja'] .header .nav-cta,
+html[lang='ja'] body .drawer .drawer-footer .button:not(.secondary):not(.ghost) {
   border-radius: 999px;
   background: #c8102e;
   border-color: #c8102e;
   color: #fff;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
-.site:has([data-ja-design]) .header .nav-cta:hover,
-.site:has([data-ja-design]) .header .nav-cta:focus-visible,
-body:has([data-ja-design]) .drawer .drawer-footer .button:not(.secondary):not(.ghost):hover {
+.site[data-locale='ja'] .header .nav-cta:hover,
+.site[data-locale='ja'] .header .nav-cta:focus-visible,
+html[lang='ja'] body .drawer .drawer-footer .button:not(.secondary):not(.ghost):hover {
   background: #a50d26;
   border-color: #a50d26;
 }
-.site:has([data-ja-design]) .site-footer { background: #17140f; }
+.site[data-locale='ja'] .site-footer { background: #17140f; }
 
 /* ja shell tokens (Opus 5.5 ja lane): the header, its overlays (mega panel, language picker, mobile menu, search page) and the
-   footer sit outside the ja wrapper, so the 間 palette is remapped on <body> whenever the page renders the ja design.
+   footer sit outside the ja wrapper, so the 間 palette is remapped on <body> for every ja page (html[lang='ja']).
    Other locales never match. Keep in step with the token block in JaDesign.module.css. */
-body:has([data-ja-design]) {
+html[lang='ja'] body {
   --purple: #1b1814;
   --purple-light: #3b352d;
   --purple-dark: #0e0c09;
@@ -27385,103 +27385,103 @@ body:has([data-ja-design]) {
 
 /* ja shell chrome (Opus 5.5 ja lane): PublicChrome.module.css hard-codes the green ink, so the header, mega panel,
    mobile drawer, language picker overlay and footer text are re-pointed to sumi and one vermilion here. ja design pages only. */
-body:has([data-ja-design]) .header { border-bottom-color: #e6e0d4; color: #1b1814; }
-body:has([data-ja-design]) .header .header-utility,
-body:has([data-ja-design]) .header .utility-lang,
-body:has([data-ja-design]) .header .header-search-btn,
-body:has([data-ja-design]) .header .mobile-toggle { border-color: #e6e0d4; }
-body:has([data-ja-design]) .header .header-accent-line { background: #e6e0d4; }
-body:has([data-ja-design]) .header .logo-kr,
-body:has([data-ja-design]) .header .nav-link,
-body:has([data-ja-design]) .header .header-search-btn,
-body:has([data-ja-design]) .header .mobile-toggle,
-body:has([data-ja-design]) .header .mega-links a,
-body:has([data-ja-design]) .drawer .drawer-nav-link,
-body:has([data-ja-design]) .drawer .logo-kr { color: #1b1814; }
-body:has([data-ja-design]) .header .utility-nav > a,
-body:has([data-ja-design]) .header .utility-nav > * > a,
-body:has([data-ja-design]) .header .utility-nav > * > button,
-body:has([data-ja-design]) .header .utility-lang > a,
-body:has([data-ja-design]) .header .utility-lang .locale-flag-switcher-link { color: #38332c; }
-body:has([data-ja-design]) .header .nav-link:hover,
-body:has([data-ja-design]) .header .nav-link:focus-visible,
-body:has([data-ja-design]) .header .nav-item.active .nav-link,
-body:has([data-ja-design]) .header .nav-link[aria-current='page'],
-body:has([data-ja-design]) .header .nav-link[aria-current='page']:hover,
-body:has([data-ja-design]) .header .utility-nav > a:hover,
-body:has([data-ja-design]) .header .utility-nav > * > a:hover,
-body:has([data-ja-design]) .header .utility-nav > * > button:hover,
-body:has([data-ja-design]) .header .utility-lang .locale-flag-switcher-link:hover,
-body:has([data-ja-design]) .header .header-search-btn:focus-visible,
-body:has([data-ja-design]) .header .mega-title,
-body:has([data-ja-design]) .header .mega-view-all,
-body:has([data-ja-design]) .header .mega-links a:hover,
-body:has([data-ja-design]) .header .mega-links a:focus-visible { color: #1b1814; }
-body:has([data-ja-design]) .header .nav-link:hover,
-body:has([data-ja-design]) .header .nav-item.active .nav-link { background: rgba(27, 24, 20, 0.05); }
-body:has([data-ja-design]) .header .nav-link[aria-current='page'],
-body:has([data-ja-design]) .header .nav-link[aria-current='page']:hover,
-body:has([data-ja-design]) .header .nav-link[aria-current='page']:focus-visible { box-shadow: inset 0 -2px 0 #c8102e; background: transparent; }
-body:has([data-ja-design]) .header .nav-indicator { background: #c8102e; }
-body:has([data-ja-design]) .header .nav-link:focus-visible,
-body:has([data-ja-design]) .header .header-search-btn:focus-visible { outline-color: #c8102e; border-color: #1b1814; }
-body:has([data-ja-design]) .header .mega-description { color: #5a544a; }
-body:has([data-ja-design]) .header .mega-panel { background: #f2eee5; border-bottom-color: #d8d0c0; }
-body:has([data-ja-design]) .header .mega-links li { border-color: #d8d0c0; }
-body:has([data-ja-design]) .drawer#public-mobile-nav-drawer { background: rgba(27, 24, 20, 0.5); }
-body:has([data-ja-design]) [class*='GlobalLanguagePicker_overlay'] { background: rgba(27, 24, 20, 0.5); }
-body:has([data-ja-design]) .footer .office-link,
-body:has([data-ja-design]) .site-footer .office-link,
-body:has([data-ja-design]) .site-footer .office-link-address,
-body:has([data-ja-design]) .site-footer .footer-main-note,
-body:has([data-ja-design]) .site-footer .footer-link-list a,
-body:has([data-ja-design]) .site-footer .footer-legal-links a,
-body:has([data-ja-design]) .site-footer .social-label,
-body:has([data-ja-design]) .site-footer .footer-copyright-row { color: #d9d3c6; }
-body:has([data-ja-design]) .site-footer .footer-locale-switch .locale-flag-switcher-link { color: #ece7dc; }
-body:has([data-ja-design]) .footer-skyline { background: linear-gradient(180deg, #faf8f4 0%, #f2eee5 100%); }
-body:has([data-ja-design]) .footer-skyline .skyline-image img { filter: grayscale(100%) sepia(0.12) contrast(1.02) brightness(0.99); }
-body:has([data-ja-design]) { background: linear-gradient(180deg, #faf8f4 0%, #fff 220px); }
+html[lang='ja'] body .header { border-bottom-color: #e6e0d4; color: #1b1814; }
+html[lang='ja'] body .header .header-utility,
+html[lang='ja'] body .header .utility-lang,
+html[lang='ja'] body .header .header-search-btn,
+html[lang='ja'] body .header .mobile-toggle { border-color: #e6e0d4; }
+html[lang='ja'] body .header .header-accent-line { background: #e6e0d4; }
+html[lang='ja'] body .header .logo-kr,
+html[lang='ja'] body .header .nav-link,
+html[lang='ja'] body .header .header-search-btn,
+html[lang='ja'] body .header .mobile-toggle,
+html[lang='ja'] body .header .mega-links a,
+html[lang='ja'] body .drawer .drawer-nav-link,
+html[lang='ja'] body .drawer .logo-kr { color: #1b1814; }
+html[lang='ja'] body .header .utility-nav > a,
+html[lang='ja'] body .header .utility-nav > * > a,
+html[lang='ja'] body .header .utility-nav > * > button,
+html[lang='ja'] body .header .utility-lang > a,
+html[lang='ja'] body .header .utility-lang .locale-flag-switcher-link { color: #38332c; }
+html[lang='ja'] body .header .nav-link:hover,
+html[lang='ja'] body .header .nav-link:focus-visible,
+html[lang='ja'] body .header .nav-item.active .nav-link,
+html[lang='ja'] body .header .nav-link[aria-current='page'],
+html[lang='ja'] body .header .nav-link[aria-current='page']:hover,
+html[lang='ja'] body .header .utility-nav > a:hover,
+html[lang='ja'] body .header .utility-nav > * > a:hover,
+html[lang='ja'] body .header .utility-nav > * > button:hover,
+html[lang='ja'] body .header .utility-lang .locale-flag-switcher-link:hover,
+html[lang='ja'] body .header .header-search-btn:focus-visible,
+html[lang='ja'] body .header .mega-title,
+html[lang='ja'] body .header .mega-view-all,
+html[lang='ja'] body .header .mega-links a:hover,
+html[lang='ja'] body .header .mega-links a:focus-visible { color: #1b1814; }
+html[lang='ja'] body .header .nav-link:hover,
+html[lang='ja'] body .header .nav-item.active .nav-link { background: rgba(27, 24, 20, 0.05); }
+html[lang='ja'] body .header .nav-link[aria-current='page'],
+html[lang='ja'] body .header .nav-link[aria-current='page']:hover,
+html[lang='ja'] body .header .nav-link[aria-current='page']:focus-visible { box-shadow: inset 0 -2px 0 #c8102e; background: transparent; }
+html[lang='ja'] body .header .nav-indicator { background: #c8102e; }
+html[lang='ja'] body .header .nav-link:focus-visible,
+html[lang='ja'] body .header .header-search-btn:focus-visible { outline-color: #c8102e; border-color: #1b1814; }
+html[lang='ja'] body .header .mega-description { color: #5a544a; }
+html[lang='ja'] body .header .mega-panel { background: #f2eee5; border-bottom-color: #d8d0c0; }
+html[lang='ja'] body .header .mega-links li { border-color: #d8d0c0; }
+html[lang='ja'] body .drawer#public-mobile-nav-drawer { background: rgba(27, 24, 20, 0.5); }
+html[lang='ja'] body [class*='GlobalLanguagePicker_overlay'] { background: rgba(27, 24, 20, 0.5); }
+html[lang='ja'] body .footer .office-link,
+html[lang='ja'] body .site-footer .office-link,
+html[lang='ja'] body .site-footer .office-link-address,
+html[lang='ja'] body .site-footer .footer-main-note,
+html[lang='ja'] body .site-footer .footer-link-list a,
+html[lang='ja'] body .site-footer .footer-legal-links a,
+html[lang='ja'] body .site-footer .social-label,
+html[lang='ja'] body .site-footer .footer-copyright-row { color: #d9d3c6; }
+html[lang='ja'] body .site-footer .footer-locale-switch .locale-flag-switcher-link { color: #ece7dc; }
+html[lang='ja'] body .footer-skyline { background: linear-gradient(180deg, #faf8f4 0%, #f2eee5 100%); }
+html[lang='ja'] body .footer-skyline .skyline-image img { filter: grayscale(100%) sepia(0.12) contrast(1.02) brightness(0.99); }
+html[lang='ja'] body { background: linear-gradient(180deg, #faf8f4 0%, #fff 220px); }
 
 /* ja round 2 (Opus 5.5 ja lane, 2026-10-01). Everything below is gated on the ja design wrapper. */
 
 /* Japanese line breaking: break between phrases, never inside one (word-break: auto-phrase where supported; elsewhere the
    normal strict CJK breaking stays). The :not(#_) hook lifts specificity above the older per-element resets. */
-body:has([data-ja-design]) :is([data-ja-design], .site-footer, .header .mega-panel, .drawer):not(#_) :not(#_):not(input):not(textarea):not(a[href^='mailto:']) {
+html[lang='ja'] body :is([data-ja-design], .site-footer, .header .mega-panel, .drawer):not(#_) :not(#_):not(input):not(textarea):not(a[href^='mailto:']) {
   word-break: auto-phrase;
   overflow-wrap: anywhere;
   line-break: strict;
 }
-body:has([data-ja-design]) :is([data-ja-design], .site-footer) :is(p, li, dd, .faq-answer, .section-lede):not(#_) { text-wrap: pretty; }
+html[lang='ja'] body :is([data-ja-design], .site-footer) :is(p, li, dd, .faq-answer, .section-lede):not(#_) { text-wrap: pretty; }
 
 /* The old pencil skyline of Taiwanese landmarks contradicts the 間 pages; the sumi footer starts straight under the content. */
-body:has([data-ja-design]) .footer-skyline { display: none; }
+html[lang='ja'] body .footer-skyline { display: none; }
 
 /* Breadcrumb hit area on phones: 44px tall without changing the visual rhythm. */
 @media (max-width: 767px) {
-  body:has([data-ja-design]) [data-ja-design] a.breadcrumb-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 4px; margin-inline: -4px; }
+  html[lang='ja'] body [data-ja-design] a.breadcrumb-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 4px; margin-inline: -4px; }
 }
 
 /* Mobile drawer: logo and wordmark in one row, nav in the desktop order. */
-body:has([data-ja-design]) .drawer .drawer-header .drawer-brand { display: inline-flex; align-items: center; gap: 12px; flex-direction: row; }
-body:has([data-ja-design]) .drawer .drawer-nav { display: flex; flex-direction: column; }
-body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/services'] { order: 1; }
-body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/lawyers'] { order: 2; }
-body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/pricing'] { order: 3; }
-body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/columns'] { order: 4; }
-body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/traffic-accidents'] { order: 5; }
-body:has([data-ja-design]) .drawer .drawer-nav-link[href$='/videos'] { order: 6; }
-body:has([data-ja-design]) .drawer .drawer-nav-link[href*='/contact'] { order: 7; }
+html[lang='ja'] body .drawer .drawer-header .drawer-brand { display: inline-flex; align-items: center; gap: 12px; flex-direction: row; }
+html[lang='ja'] body .drawer .drawer-nav { display: flex; flex-direction: column; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/services'] { order: 1; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/lawyers'] { order: 2; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/pricing'] { order: 3; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/columns'] { order: 4; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/traffic-accidents'] { order: 5; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/videos'] { order: 6; }
+html[lang='ja'] body .drawer .drawer-nav-link[href*='/contact'] { order: 7; }
 
 /* Language picker: the current tile keeps 日本語 on one line, right-to-left entries sit on the left of their cell. */
-body:has([data-ja-design]) [class*='GlobalLanguagePicker_autonym'] { flex-wrap: wrap; }
-body:has([data-ja-design]) [class*='GlobalLanguagePicker_item'][dir='rtl'] { direction: ltr; justify-items: start; text-align: left; }
+html[lang='ja'] body [class*='GlobalLanguagePicker_autonym'] { flex-wrap: wrap; }
+html[lang='ja'] body [class*='GlobalLanguagePicker_item'][dir='rtl'] { direction: ltr; justify-items: start; text-align: left; }
 
 /* Mega panel: a short lead plus the email action fills the empty left half. */
-body:has([data-ja-design]) .header .mega-panel .mega-intro::after {
+html[lang='ja'] body .header .mega-panel .mega-intro::after {
   content: ''; display: block; width: min(100%, 360px); height: 120px; margin-top: 28px; border-left: 6px solid #c8102e;
   background: url('/images/editorial/ja-tea-terrace-morning-hero.webp') 50% 66% / cover no-repeat;
 }
 /* Shared editorial rules force word-break: normal on the practice summaries; phrase breaks win on ja pages. */
-html[lang='ja'] body:has([data-ja-design]) [data-ja-design] :is(.services-detail-desc, .services-card-summary):not(#_) { word-break: auto-phrase; line-break: strict; }
-body:has([data-ja-design]) [class*='GlobalLanguagePicker_badge'] { margin-inline-start: 0; }
+html[lang='ja'] html[lang='ja'] body [data-ja-design] :is(.services-detail-desc, .services-card-summary):not(#_) { word-break: auto-phrase; line-break: strict; }
+html[lang='ja'] body [class*='GlobalLanguagePicker_badge'] { margin-inline-start: 0; }

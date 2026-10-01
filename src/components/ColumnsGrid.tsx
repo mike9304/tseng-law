@@ -806,7 +806,7 @@ export default function ColumnsGrid({
         )}
         {!hasActiveFilters && posts.length > 0 ? (
           <div className="columns-topic-sections" data-columns-grouped="true" data-columns-visible-count={posts.length}>
-            {recommended.length > 0 ? (
+            {openingPosts.length > 0 ? (
               <section
                 className="columns-topic-section"
                 aria-labelledby="columns-recommended"

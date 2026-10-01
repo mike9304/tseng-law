@@ -7,15 +7,17 @@ import styles from '../ZhHantDesign.module.css';
  * zh-hant home: how a Taiwanese reader goes from a first email to retaining the firm, beside the four
  * offices. Each step restates existing site facts — no new claims:
  * 1 public-contact.ts (first contact: case summary and contact details only; sensitive data later),
- * 2 PricingCards zh-hant (「確認案件內容後提供報價」, 一般法律諮詢 NT$ 3,000／1小時),
+ * 2 PricingCards zh-hant (「確認案件內容後提供報價」, 一般法律諮詢 NT$ 3,000／1小時, and the disclaimer's
+ *   basic-rate qualification 「實際費用可能依案件性質、複雜程度及急迫性調整」),
  * 3 PricingCards zh-hant disclaimer (「確切費用於初次諮詢後以書面報價」),
- * 4 team-members zh-hant description and the four consultation languages.
+ * 4 legal-pages zh-hant 「正式委任關係須經案件評估及雙方確認後，始行成立」 (a quote is not engagement),
+ *   team-members zh-hant description and the four consultation languages.
  */
 const STEPS = [
   { title: '來信說明', text: '以電子郵件寄出案件或業務概要與聯絡方式；身分證字號、帳戶等敏感資料，請等律師指示後再提供。' },
-  { title: '確認案件內容', text: '確認案件內容後提供報價。一般法律諮詢為 NT$\u00a03,000／1小時。' },
+  { title: '確認案件內容', text: '確認案件內容後提供報價。一般法律諮詢為 NT$\u00a03,000／1小時；以上為基本收費標準，實際費用可能依案件性質、複雜程度及急迫性調整。' },
   { title: '書面報價', text: '確切費用於初次諮詢後以書面報價。' },
-  { title: '律師承辦', text: '由曾雋崴律師帶領的團隊承辦，可用中文、韓文、日文或英文溝通。' },
+  { title: '確認委任與承辦', text: '正式委任關係須經案件評估及雙方確認後，始行成立；之後由曾雋崴律師帶領的團隊承辦，可用中文、韓文、日文或英文溝通。' },
 ] as const;
 
 export default function ZhHantEngagement() {

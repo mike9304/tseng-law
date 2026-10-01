@@ -52,7 +52,7 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
   const overrides = {
     ...heroOverrides,
     'section-label': '昊鼎國際法律事務所',
-    subtitle: '車禍、離婚與繼承、勞資爭議與刑事案件的台灣律師團隊，台北、台中、高雄、屏東均設有據點。',
+    subtitle: '律師團隊承辦車禍、離婚、繼承、勞資爭議與刑事案件，事務所在台北、台中、高雄及屏東設有據點。',
   };
   return (
     <div className={styles.home} id="zh-hant-home" data-zh-hant-design="home">

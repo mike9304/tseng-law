@@ -40,5 +40,8 @@ describe('zh-hant arrangement for Taiwanese readers (2026-10-01)', () => {
     for (const office of ['台北所', '台中所', '高雄所', '屏東所']) expect(html).toContain(office);
     expect(html).not.toMatch(/Tel:|tel:|\d{2,3}-\d{3,4}-\d{4}/);
     expect(html).toContain('確切費用於初次諮詢後以書面報價');
+    // A quotation is not engagement (legal-pages zh-hant) and the fee keeps its basic-rate qualification.
+    expect(html).toContain('正式委任關係須經案件評估及雙方確認後，始行成立');
+    expect(html).toContain('實際費用可能依案件性質、複雜程度及急迫性調整');
   });
 });

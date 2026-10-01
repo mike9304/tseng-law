@@ -85,4 +85,16 @@ describe('zh-hant columns curation (domestic readers first)', () => {
     expect(html).toContain('專業專欄');
     expect(html).toContain('時事法律解析');
   });
+
+  it('still shows curated picks when no post is recommended for the locale (Astra D1)', () => {
+    nav.params = new URLSearchParams();
+    const plain = posts.map(({ audience: _audience, ...rest }) => rest);
+    const html = renderToStaticMarkup(
+      <ColumnsGrid locale="zh-hant" posts={plain} featuredSlugs={ZH_HANT_FEATURED_COLUMN_SLUGS} topicOrder={ZH_HANT_COLUMN_TOPIC_ORDER} />,
+    );
+    const opening = html.split('data-columns-recommended="zh-hant"')[1]?.split('</section>')[0] ?? '';
+    const slugs = [...opening.matchAll(/href="\/zh-hant\/columns\/([^"]+)"/g)].map((m) => m[1]);
+    expect(slugs).toEqual([...ZH_HANT_FEATURED_COLUMN_SLUGS]);
+    for (const slug of ZH_HANT_FEATURED_COLUMN_SLUGS) expect(html).toContain(`/zh-hant/columns/${slug}`);
+  });
 });

@@ -164,6 +164,25 @@ describe('public-page entry integration', () => {
 });
 
 describe('published current9 editorial render', () => {
+  it('redesigns only stock zh-hant, keeps one hero and prioritizes services without mutating the canvas', async () => {
+    const resolved = publishedHomeResolved('zh-hant');
+    const original = JSON.stringify(resolved.canvas);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved }));
+    expect(html).toContain('data-zh-hant-design="home"');
+    expect((html.match(/<h1\b/g) ?? [])).toHaveLength(1);
+    expect(html.indexOf('id="practice"')).toBeLessThan(html.indexOf('id="insights"'));
+    expect(html).toContain('申請電子郵件諮詢');
+    expect(html).toContain('我們可以如何協助您？');
+    expect(html).toContain('class="hero-quick-menu"');
+    expect(html).toContain('常見問題');
+    expect(html).toContain('href="/zh-hant/columns"');
+    expect(JSON.stringify(resolved.canvas)).toBe(original);
+    for (const locale of ['ko', 'en'] as const) {
+      const other = renderToStaticMarkup(await PublishedSitePageView({ resolved: publishedHomeResolved(locale) }));
+      expect(other).not.toContain('data-zh-hant-design');
+    }
+  });
+
   it('keeps all nine wrappers, editorial order, wired hero/services presentation, heritage once, destinations and full service copy', async () => {
     const resolved = publishedHomeResolved('ko');
     const hero = resolved.canvas.nodes.find((node) => node.id === 'home-hero')!;
@@ -288,8 +307,14 @@ describe('published July editorial hero strings', () => {
     expect(julyStyle).toContain('padding-top: 72px');
     expect(julyStyle).toContain("data-node-id='home-attorney-root'");
     expect(julyStyle).not.toContain('home-case-results-root');
-    expect(html).toContain('data-anchor="mobile-parity-home-hero"');
+    expect(html).toContain('data-zh-hant-design="home"');
+    expect((html.match(/<h1\b/g) ?? [])).toHaveLength(1);
+    expect(html.indexOf('id="practice"')).toBeLessThan(html.indexOf('id="insights"'));
     expect(html).toContain('data-presentation="editorial"');
+    expect(visibleText(html)).toContain(contentString(canvas.nodes.find((node) => node.id === 'home-attorney-intro-1'), ['text']));
+    for (const node of canvas.nodes.filter((node) => /^home-faq-item-\d+-(question-text|answer)$/.test(node.id))) {
+      expect(visibleText(html)).toContain(contentString(node, ['text']));
+    }
     const titleText = contentString(canvas.nodes.find((node) => node.id === 'home-hero-title'), ['text', 'label']);
     const labelText = contentString(canvas.nodes.find((node) => node.id === 'home-hero-label'), ['text', 'label']);
     const subtitleText = contentString(canvas.nodes.find((node) => node.id === 'home-hero-subtitle'), ['text', 'label']);
@@ -413,31 +438,16 @@ describe('published July office reading order', () => {
       .map((match) => match[1]);
   }
 
-  it('puts stock desktop office buttons in visual reading order without changing identity or the mobile branch', async () => {
+  it('uses one accessible office tab set for the redesigned stock home without mutating the stored branches', async () => {
     const canvas = await julyCanvas();
     const before = structuredClone(canvas);
     const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: publishedHomeResolved('zh-hant', canvas) }));
 
     expect(html).toContain('data-home-editorial="july"');
-    expect(officeContainerIds(html)).toEqual([
-      'home-offices-label', 'home-offices-title', 'home-offices-tabs',
-      'home-offices-layout-0', 'home-offices-layout-1', 'home-offices-layout-2', 'home-offices-layout-3',
-    ]);
-    expect(officeIds(html)).toEqual([
-      'home-offices-tab-0', 'home-offices-tab-1', 'home-offices-tab-2', 'home-offices-tab-3',
-    ]);
-    for (const [index, label] of ['台中', '高雄', '台北', '屏東'].entries()) {
-      const tab = nodeMarkup(html, `home-offices-tab-${index}`);
-      expect(visibleText(tab)).toContain(label);
-      expect(/<button\b[^>]*class="[^"]*\bactive\b/.test(tab)).toBe(index === 0);
-      const layoutOpeningTag = nodeMarkup(html, `home-offices-layout-${index}`).split('>')[0];
-      expect(/\bstyle="[^"]*display:none/.test(layoutOpeningTag)).toBe(index !== 0);
-    }
-    const mobile = canvas.nodes.find((node) => node.anchorName === 'mobile-parity-home-offices');
-    if (!mobile) throw new Error('Missing July mobile office composite');
-    const mobileTabs = [...nodeMarkup(html, mobile.id).matchAll(/<button\b([^>]*\brole="tab"[^>]*)>([\s\S]*?)<\/button>/g)];
-    expect(mobileTabs.map((match) => visibleText(match[2]).trim())).toEqual(['台北', '台中', '高雄', '屏東']);
-    expect(mobileTabs.filter((match) => match[1].includes('aria-selected="true"')).map((match) => visibleText(match[2]).trim()))
+    expect(html).toContain('data-zh-hant-design="home"');
+    const tabs = [...stripNonRenderedMarkup(html).matchAll(/<button\b([^>]*\brole="tab"[^>]*)>([\s\S]*?)<\/button>/g)];
+    expect(tabs.map((match) => visibleText(match[2]).trim())).toEqual(['台北', '台中', '高雄', '屏東']);
+    expect(tabs.filter((match) => match[1].includes('aria-selected="true"')).map((match) => visibleText(match[2]).trim()))
       .toEqual(['台北']);
     expect(canvas).toEqual(before);
   });

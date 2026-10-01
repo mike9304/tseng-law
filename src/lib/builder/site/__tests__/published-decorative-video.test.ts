@@ -417,17 +417,16 @@ describe('exact stock ZH decorative hero alternatives', () => {
     expect(node).toEqual(before);
   });
 
-  it('renders all three actual stock images as decorative through the public page, retaining the original document', async () => {
+  it('renders one decorative stock hero in the redesign, retaining the original three images in storage', async () => {
     const doc = stockZhHome(); const before = structuredClone(doc);
     const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: stockPublishedHome(doc) }));
-    for (const id of stockHeroImageIds) {
-      const fragment = renderedImageFragment(html, id);
-      expect(fragment).toMatch(/<img\b[^>]*\balt=""/);
-      expect(fragment).not.toContain(`alt="${stockHeroAlt}"`);
-    }
+    expect(html).toContain('data-zh-hant-design="home"');
+    const hero = html.slice(html.indexOf('<section'), html.indexOf('</section>'));
+    expect((hero.match(/class="hero-media"/g) ?? [])).toHaveLength(1);
+    expect(hero).toMatch(/<img\b[^>]*\balt=""/);
+    expect(hero).not.toContain(`alt="${stockHeroAlt}"`);
     expect(html).toContain(PUBLISHED_HOME_HERO_POSTER);
-    expect(html).toContain('/images/hero-bg-02.webp');
-    expect(html).toContain('/images/hero-bg-03.webp');
+    expect(doc.nodes.filter((node) => stockHeroImageIds.includes(node.id))).toHaveLength(3);
     expect(doc).toEqual(before);
   });
 

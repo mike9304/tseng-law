@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, type MouseEvent as ReactMouseEvent } from 'react';
+import { useState, useRef, useEffect, type MouseEvent as ReactMouseEvent, type ReactNode } from 'react';
 import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
@@ -135,6 +135,8 @@ export default function HeroSearch({
   presentation,
   quickMenus,
   omitLandmarkId = false,
+  trustContent,
+  persistentQuickMenus = false,
 }: {
   locale: SiteLocale;
   scrollHref?: string;
@@ -142,6 +144,8 @@ export default function HeroSearch({
   presentation?: 'editorial';
   quickMenus?: ReadonlyArray<{ label: string; href: string }>;
   omitLandmarkId?: boolean;
+  trustContent?: ReactNode;
+  persistentQuickMenus?: boolean;
 }) {
   const hero = siteContent[locale].hero;
   const HeroHeading = headingLevel === 2 ? 'h2' : 'h1';
@@ -230,8 +234,8 @@ export default function HeroSearch({
     </div>
   );
 
-  const quickMenu = focused ? (
-    <nav className="hero-quick-menu">
+  const quickMenu = focused || persistentQuickMenus ? (
+    <nav className="hero-quick-menu" aria-label={hero.searchPlaceholder}>
       {menus.map((item) => (
         <Link key={item.href} href={item.href} className="hero-quick-menu-item" onClick={() => setFocused(false)}>
           <svg viewBox="0 0 24 24" className="hero-quick-menu-icon" aria-hidden>
@@ -274,7 +278,7 @@ export default function HeroSearch({
               </Link>
             ) : null}
             {ctaGroup('light')}
-            <HeroTrustStrip locale={locale} tone="light" />
+            {trustContent ?? <HeroTrustStrip locale={locale} tone="light" />}
           </div>
           <div className={styles.heroMediaFrame}>
             <HeroMediaBackground locale={locale} />

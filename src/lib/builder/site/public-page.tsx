@@ -34,6 +34,9 @@ import {
 import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-hant-home-offices';
 import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead, omitOverlayOwnedDesktopLandmarkIds } from '@/lib/builder/canvas/home-zh-hant-parity';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
+import ZhHantHomeBody from '@/components/ZhHantHomeBody';
+import { faqContent } from '@/data/faq-content';
+import { readZhHantStockHomeCopy } from '@/lib/builder/site/zh-hant-stock-home-copy';
 import {
   CURRENT9_PUBLISHED_HOME_EDITORIAL_CSS,
   JULY_PUBLISHED_HOME_EDITORIAL_CSS,
@@ -879,6 +882,13 @@ export async function PublishedSitePageView({
     !current9PublishedHomeEditorial && slugPath === '' && legacyZhTabletParity
       ? deriveJulyHeroEditorialPresentation(normalizedHomeCanvas, locale)
       : null;
+  // Existing exact stock fingerprints protect authored canvases. This is a
+  // read-only presentation; storage, source nodes and other locales are retained.
+  const redesignedZhHome = locale === 'zh-hant' && slugPath === ''
+    && Boolean(current9PublishedHomeEditorial || (legacyZhTabletParity && julyPublishedHomeEditorial));
+  const stockZhCopy = redesignedZhHome && legacyZhTabletParity
+    ? readZhHantStockHomeCopy(normalizedHomeCanvas)
+    : null;
   const publishedNodes = omitOverlayOwnedDesktopLandmarkIds(
     projectLegacyZhHantHomeOffices(normalizedHomeCanvas.nodes, locale, isHomePage),
   );
@@ -2483,7 +2493,7 @@ export async function PublishedSitePageView({
         <style data-builder-legacy-editorial-composite="true" dangerouslySetInnerHTML={{ __html: LEGACY_EDITORIAL_COMPOSITE_LAYOUT_CSS }} />
       ) : null}
       <div
-        className={['builder-pub-main', current9PublishedHomeEditorial ? homeEditorialStyles.root : undefined].filter(Boolean).join(' ')}
+        className={['builder-pub-main', current9PublishedHomeEditorial && !redesignedZhHome ? homeEditorialStyles.root : undefined].filter(Boolean).join(' ')}
         data-builder-zh-tablet-parity={legacyZhTabletParity ? 'true' : undefined}
         data-builder-legacy-columns-flow={hasLegacyColumnsScaffold(canvas, locale, slugPath) ? 'true' : undefined}
         data-builder-legacy-editorial-composite={legacyEditorialCompositeLayout ? 'true' : undefined}
@@ -2497,7 +2507,7 @@ export async function PublishedSitePageView({
           maxWidth: hasTopLevelComposite ? undefined : 1280,
           margin: '0 auto',
           position: 'relative',
-          minHeight: current9PublishedHomeEditorial || legacyEditorialCompositeLayout || selfSizingFlowOnlyPage
+          minHeight: redesignedZhHome || current9PublishedHomeEditorial || legacyEditorialCompositeLayout || selfSizingFlowOnlyPage
             ? undefined
             : Math.max(publishedContentHeight, 720),
           // Light mode: inherit color/background/font from body so the
@@ -2513,7 +2523,15 @@ export async function PublishedSitePageView({
               : undefined,
         }}
       >
-        {renderedTopLevelNodes.flatMap((node) => {
+        {redesignedZhHome ? (
+          <ZhHantHomeBody
+            posts={mapColumnPostsToHomeInsights(resolved.columnPosts)}
+            faqItems={stockZhCopy?.faqItems.length ? stockZhCopy.faqItems : resolved.faqItems.length > 0 ? resolved.faqItems : faqContent['zh-hant']}
+            heroOverrides={julyPublishedHomeEditorial?.overrides}
+            quickMenus={julyPublishedHomeEditorial?.quickMenus}
+            attorneyIntro={stockZhCopy?.attorneyIntro}
+          />
+        ) : renderedTopLevelNodes.flatMap((node) => {
           const renderedNode = renderPublishedNode(node, true);
           if (node.id !== heritageInterludeInsertionNodeId) {
             return [renderedNode];

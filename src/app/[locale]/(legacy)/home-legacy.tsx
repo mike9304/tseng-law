@@ -13,6 +13,7 @@ import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import Reveal from '@/components/Reveal';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
+import ZhHantHomeBody from '@/components/ZhHantHomeBody';
 import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
@@ -72,6 +73,7 @@ export function LegacyHomePageBody({
   posts: HomeInsightArchivePosts;
   faqItems: FAQItem[];
 }) {
+  if (locale === 'zh-hant') return <ZhHantHomeBody posts={posts} faqItems={faqItems} />;
   return (
     <div className={homeEditorialStyles.root}>
       <HeroSearch locale={locale} presentation="editorial" />

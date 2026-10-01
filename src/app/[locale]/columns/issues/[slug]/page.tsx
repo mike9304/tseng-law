@@ -46,7 +46,7 @@ function guideLinksFor(locale: IssueBoardLocale, post: ColumnPost): GuideLink[] 
       : post.topic === 'litigation'
         ? { href: '/ja/services#civil', label: '台湾の民事紛争' }
         : { href: '/ja/services', label: '取扱業務' };
-    return [service, { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' }, { href: '/ja/columns', label: '専門コラム' }];
+    return [service, { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' }, { href: '/ja/columns', label: '実務コラム' }];
   }
   const label = (ko: string, zh: string, en: string) => (locale === 'ko' ? ko : locale === 'zh-hant' ? zh : en);
   const lawyer = { href: `/${locale}/taiwan-lawyer`, label: label('대만 변호사', '台灣律師', 'Taiwan Lawyer') };

@@ -100,7 +100,7 @@ export const issueBoardCopy: Record<IssueBoardLocale, IssueBoardCopy> = {
     label: '時事解説コラム',
     title: '時事解説コラム',
     description: '最近のニュースを手がかりに、日本の読者に関わる台湾法のポイントを簡潔に解説します。各記事は公開日時点の情報に基づきます。',
-    expertTab: '専門コラム',
+    expertTab: '実務コラム',
     sectionTitle: '日本の読者向けの最新解説',
     teaserTitle: '最新の時事解説コラム',
     viewAll: '時事解説コラムをすべて見る',

@@ -32,6 +32,7 @@ export default function ServicesBento({
   tone = 'light',
   showHeader = true,
   presentation,
+  scenarioTags,
 }: {
   locale: SiteLocale;
   id?: string;
@@ -39,6 +40,8 @@ export default function ServicesBento({
   tone?: 'light' | 'dark';
   showHeader?: boolean;
   presentation?: 'editorial';
+  /** Optional short scenario labels per service slug (zh-hant home design). Omitted elsewhere. */
+  scenarioTags?: Readonly<Record<string, readonly string[]>>;
 }) {
   const { services } = siteContent[locale];
   const editorial = presentation === 'editorial';
@@ -105,6 +108,11 @@ export default function ServicesBento({
                     <p className="services-detail-desc services-card-summary">
                       {editorial ? item.description : compactServiceSummary(item.description)}
                     </p>
+                    {scenarioTags && serviceSlugs[index] && scenarioTags[serviceSlugs[index]]?.length ? (
+                      <ul className="services-card-tags" aria-label={`${item.title}：常見情境`}>
+                        {scenarioTags[serviceSlugs[index]].map((tag) => <li key={tag}>{tag}</li>)}
+                      </ul>
+                    ) : null}
                     {serviceSlugs[index] && (
                       <Link
                         href={`/${locale}/services/${serviceSlugs[index]}`}

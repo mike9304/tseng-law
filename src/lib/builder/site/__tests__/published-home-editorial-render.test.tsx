@@ -320,9 +320,16 @@ describe('published July editorial hero strings', () => {
     const subtitleText = contentString(canvas.nodes.find((node) => node.id === 'home-hero-subtitle'), ['text', 'label']);
     const columnsLabel = contentString(canvas.nodes.find((node) => node.id === 'home-hero-columns-link'), ['label', 'text']);
     expect(visibleText(html)).toContain(titleText);
-    expect(visibleText(html)).toContain(labelText);
+    // zh-hant second pass (2026-10-01): the projected home shows the firm name as its kicker
+    // instead of the saved English label. Display-only; the saved canvas keeps its text.
+    expect(labelText).toBe('TAIWAN LEGAL');
+    expect(visibleText(html)).toContain('昊鼎國際法律事務所');
+    expect(visibleText(html)).not.toContain(labelText);
     expect(visibleText(html)).toContain(subtitleText);
-    expect(visibleText(html)).toContain(columnsLabel);
+    // The saved columns-link label belonged to the removed wayfinding strip; the columns
+    // section still links the archive.
+    expect(columnsLabel).toBe('查看專欄內容');
+    expect(html).toContain('href="/zh-hant/columns"');
     const compositeHero = renderToStaticMarkup(
       <BuilderSurfaceProvider
         nodeId={parityHero.id}

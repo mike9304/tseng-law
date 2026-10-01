@@ -82,10 +82,10 @@ function homeLandmarkSequence(markup: string): string[] {
     .map((entry) => entry.id);
 }
 
-function expectLandmarksOnce(markup: string, label: string) {
+function expectLandmarksOnce(markup: string, label: string, absent: readonly string[] = []) {
   const report = homeLandmarkReport(markup);
   for (const entry of report) {
-    expect(entry.count, `${label} ${entry.id}`).toBe(1);
+    expect(entry.count, `${label} ${entry.id}`).toBe(absent.includes(entry.id) ? 0 : 1);
   }
 }
 
@@ -392,9 +392,11 @@ describe('the existing four languages keep their exact home markup', () => {
           faqItems={[]}
         />,
       );
-      expectLandmarksOnce(markup, locale);
+      // zh-hant second pass (2026-10-01): trust facts (stats) follow the hero and the
+      // decorative heritage interlude is not part of the zh-hant home.
+      expectLandmarksOnce(markup, locale, locale === 'zh-hant' ? ['heritage'] : []);
       expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'zh-hant'
-        ? ['hero', 'practice', 'about', 'results', 'stats', 'insights', 'heritage', 'faq', 'offices', 'contact']
+        ? ['hero', 'stats', 'practice', 'about', 'results', 'insights', 'faq', 'offices', 'contact']
         : EXPECTED_SEQUENCE);
     }
   });

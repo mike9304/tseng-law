@@ -24,6 +24,8 @@
 .team:global([data-ja-design]) :global(.attorney-card-name a:hover) { text-decoration: underline; text-underline-offset: 6px; }
 .team:global([data-ja-design]) :global(.attorney-card-role) { margin-top: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; color: var(--ja-gold-text); }
 .team:global([data-ja-design]) :global(.attorney-card-email) { font-size: 14px; color: var(--ja-green); letter-spacing: 0.02em; }
+.team:global([data-ja-design]) :global(.attorney-card-email),
+.team:global([data-ja-design]) :global(.attorney-card-name a) { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* 履歴書 rows */
 .team:global([data-ja-design]) :global(.attorney-card-section) {

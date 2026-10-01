@@ -27,6 +27,15 @@
 .root:global(#ja-home) :global(#hero .hero-cta-primary) { border-radius: 2px; min-height: 54px; padding-inline: 32px; letter-spacing: 0.12em; background: var(--ja-green); border-color: var(--ja-green); }
 .root:global(#ja-home) :global(#hero .locale-home-paths a) { border-radius: 2px; }
 .root:global(#ja-home) :global(#hero .hero-trust-strip) { padding-top: 14px; border-top: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global(#hero .hero-trust-strip),
+.root:global(#ja-home) :global(#hero .hero-trust-item),
+.root:global(#ja-home) :global(#hero .hero-trust-item a) { color: var(--ja-sub); }
+/* Tap targets: the byline, the review link and the text links in the home sections get a 44px box */
+.root:global(#ja-home) :global(#hero [data-hero-slot='byline']),
+.root:global(#ja-home) :global(#hero .hero-trust-item a),
+.root:global(#ja-home) :global(#about .split-content > a.link-underline),
+.root:global(#ja-home) :global(#results .home-results-link) { display: inline-flex; align-items: center; min-height: 44px; }
+.root:global(#ja-home) :global(#insights .insights-controls button) { min-height: 44px; min-width: 64px; border-radius: 2px; }
 .root:global(#ja-home) :global(#hero [data-hero-slot='media-frame']) {
   border-radius: 0; box-shadow: none; background: #fff; border: 1px solid var(--ja-line); outline: 10px solid #fff; outline-offset: 0;
 }
@@ -122,6 +131,22 @@
 
 /* ---------- FAQ (Q markers) ---------- */
 .root:global(#ja-home) :global(#faq) { background: var(--ja-paper); }
+
+/* ---------- Closing contact band: paper instead of the shared dark gradient ---------- */
+.root:global(#ja-home) :global(.home-contact-cta) {
+  background: var(--ja-paper); background-image: none; color: var(--ja-ink);
+  border-top: 3px solid var(--ja-green); border-bottom: 5px double var(--ja-line-strong);
+}
+.root:global(#ja-home) :global(.home-contact-cta)::before,
+.root:global(#ja-home) :global(.home-contact-cta)::after { display: none; }
+.root:global(#ja-home) :global(.home-contact-cta .section-label) { color: var(--ja-gold-text); }
+.root:global(#ja-home) :global(.home-contact-cta .section-label)::before { background: var(--ja-green); }
+.root:global(#ja-home) :global(.home-contact-cta .section-title) { color: var(--ja-ink); font-family: var(--ja-gothic); }
+.root:global(#ja-home) :global(.home-contact-cta .section-title)::after { background: linear-gradient(90deg, var(--ja-green) 0 64px, var(--ja-line) 64px 100%); }
+.root:global(#ja-home) :global(.home-contact-cta .section-lede) { color: var(--ja-sub); }
+.root:global(#ja-home) :global(.home-contact-cta .button.ghost) { background: var(--ja-green); border-color: var(--ja-green); color: #fff; }
+.root:global(#ja-home) :global(.home-contact-cta .button.secondary) { background: #fff; border-color: var(--ja-green); color: var(--ja-green); }
+.root:global(#ja-home) :global(.home-contact-cta) :focus-visible { outline-color: var(--ja-green) !important; }
 
 /* ---------- Offices ---------- */
 .root:global(#ja-home) :global(#offices .tab-button) { border-radius: 0; letter-spacing: 0.08em; min-height: 48px; }

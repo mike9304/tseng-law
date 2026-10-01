@@ -32,6 +32,10 @@
 .contentsLabel { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--ja-gold-text); }
 .heroCta:global(.button) { justify-content: center; width: 100%; min-height: 50px; }
 .byline { font-size: 14px; letter-spacing: 0.04em; color: var(--ja-green); }
+.byline { display: inline-flex; align-items: center; min-height: 44px; }
+.hero.hero :global(.svc-back-link) { display: inline-flex; align-items: center; min-height: 44px; }
+.article.article :global(.svc-keypoints-list a) { display: inline-flex; align-items: center; min-height: 44px; }
+.article.article :global(a.authority-card-name) { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* Article */
 .article.article:global(.svc-article) { padding: clamp(44px, 5vw, 80px) 0 clamp(56px, 6vw, 96px); background: #fff; }

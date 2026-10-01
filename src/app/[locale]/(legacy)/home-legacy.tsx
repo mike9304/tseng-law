@@ -87,7 +87,8 @@ export function LegacyHomePageBody({
       {/* Same place as the Korean home: the column archive sits right under
           the hero and is visible without waiting for a scroll reveal. */}
       <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
-      {locale === 'en' || locale === 'ja' ? (
+      {/* ja renders its own order above (jaHomeBody); only en reaches this entry block now. */}
+      {locale === 'en' ? (
         <Reveal>
           <EnAcquisitionGuideLinks locale={locale} variant="full" />
         </Reveal>

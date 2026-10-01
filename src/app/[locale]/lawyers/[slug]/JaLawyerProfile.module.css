@@ -48,7 +48,9 @@
 .root:global(#ja-lawyer-profile) :global(.profile-info-card .attorney-list li),
 .root:global(#ja-lawyer-profile) :global(.profile-link-list li) { padding-block: 10px; border-bottom: 1px dashed var(--ja-line); }
 .root:global(#ja-lawyer-profile) :global(.profile-link-list) { list-style: none; margin: 0; padding: 0; }
-.root:global(#ja-lawyer-profile) :global(.profile-link-list a) { display: inline-flex; min-height: 28px; align-items: center; font-size: 15px; color: var(--ja-green); }
+.root:global(#ja-lawyer-profile) :global(.profile-link-list a),
+.root:global(#ja-lawyer-profile) :global(.profile-hero-body .attorney-card-email) { display: inline-flex; min-height: 44px; align-items: center; font-size: 15px; color: var(--ja-green); }
+.root:global(#ja-lawyer-profile) :global(.profile-info-card .profile-link-list li) { padding-block: 0; }
 
 @media (max-width: 767px) {
   .root:global(#ja-lawyer-profile) :global(.profile-hero-card) { grid-template-columns: minmax(0, 1fr); }

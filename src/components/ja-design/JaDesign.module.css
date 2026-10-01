@@ -116,10 +116,28 @@
   background: #fff; border: 1px solid var(--ja-green); color: var(--ja-green);
 }
 
-/* Focus: a 3px green ring on light surfaces, white on dark ones */
-.root:global([data-ja-design]) :focus-visible { outline: 3px solid var(--ja-green); outline-offset: 3px; }
-.root:global([data-ja-design]) :global([data-tone='dark']) :focus-visible,
-.root:global([data-ja-design]) :global(.section--dark) :focus-visible { outline-color: #fff; }
+/* Shared dark bands (e.g. the home case result) keep light text: the generic ink/green rules above
+   must not land on a dark background. */
+.root:global([data-ja-design]) :global([data-tone='dark'] .section-label),
+.root:global([data-ja-design]) :global(.section--dark .section-label) { color: #d4b97a; }
+.root:global([data-ja-design]) :global([data-tone='dark'] .section-label)::before,
+.root:global([data-ja-design]) :global(.section--dark .section-label)::before { background: #d4b97a; }
+.root:global([data-ja-design]) :global([data-tone='dark'] .section-title) { color: #f3f6f3; }
+.root:global([data-ja-design]) :global([data-tone='dark'] .section-title)::after { background: linear-gradient(90deg, #d4b97a 0 64px, rgb(255 255 255 / 22%) 64px 100%); }
+.root:global([data-ja-design]) :global([data-tone='dark'] .section-lede) { color: #d7e0d8; }
+.root:global([data-ja-design]) :global([data-tone='dark'] .button.ghost) { background: #fff; border-color: #fff; color: var(--ja-green); }
+.root:global([data-ja-design]) :global([data-tone='dark'] .button.secondary) { background: transparent; border-color: #fff; color: #fff; }
+
+/* Office tab extras (review link) get a 44px tap box */
+.root:global([data-ja-design]) :global(.office-taipei-extra a) { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Focus: one 3px ring for every control — green on light surfaces, white on the dark bands.
+   !important because several shared components set their own (often white) rings. The service and
+   column heroes still carry data-tone="dark" from the shared markup but are paper in ja. */
+.root:global([data-ja-design]) :focus-visible { outline: 3px solid var(--ja-green) !important; outline-offset: 3px !important; }
+.root:global([data-ja-design]) :global([data-tone='dark']) :focus-visible { outline-color: #fff !important; }
+.root:global([data-ja-design]) :global(.svc-hero[data-tone='dark']) :focus-visible,
+.root:global([data-ja-design]) :global(.blog-hero[data-tone='dark']) :focus-visible { outline-color: var(--ja-green) !important; }
 
 @media (max-width: 767px) {
   .root:global([data-ja-design]) :global(.page-header > .container),

@@ -42,6 +42,8 @@
 .root:global(#ja-column) :global(.blog-hero .blog-meta time),
 .root:global(#ja-column) :global(.blog-hero .blog-meta span) { color: var(--ja-sub); font-size: 13.5px; letter-spacing: 0.06em; }
 .root:global(#ja-column) :global(.blog-hero .blog-meta a) { color: var(--ja-green); }
+.root:global(#ja-column) :global(.blog-hero .blog-meta a),
+.root:global(#ja-column) :global(.blog-sidebar a.authority-card-name) { display: inline-flex; align-items: center; min-height: 44px; }
 .root:global(#ja-column) :global(.blog-hero) :focus-visible { outline: 3px solid var(--ja-green); outline-offset: 3px; }
 
 /* Article */

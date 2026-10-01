@@ -156,7 +156,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       '查核、限期改正與行政處分',
       '依整體表現綜合判斷',
       '網紅、評論者與銷售夥伴',
-      '上市前的確認順序',
+      '產品登錄、PIF 與廣告的分別檢視',
       '官方資料',
     ]);
   });
@@ -281,7 +281,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
   it('keeps the six-step premarket order', () => {
     const readinessSection =
       parsed.content
-        .split('### 上市前的確認順序')[1]
+        .split('### 產品登錄、PIF 與廣告的分別檢視')[1]
         ?.split('### 官方資料')[0] ?? '';
     const sequence = [
       '決定直接設立台灣子公司、分公司，或委由台灣進口業者負責進口及銷售',
@@ -346,8 +346,11 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       },
     ]);
     expect(raw.trimEnd()).toMatch(
-      new RegExp(`${disclaimer}\\n\\n\\*\\*曾雋崴律師（Wei Tseng）\\*\\*$`),
+      new RegExp(`${disclaimer}\\n\\n曾雋崴律師（Wei Tseng）$`),
     );
+    expect(raw).not.toContain('**');
+    expect(raw).toContain('應確認現行主管機關經濟部投資審議司的指引');
+    expect(raw).toContain('核心的責任主體都是化粧品製造或輸入業者。');
     expect(parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0).toBeGreaterThan(
       2_500,
     );
@@ -360,7 +363,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     const hanCount = visibleText.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(hanCount / 400);
 
-    expect(hanCount).toBe(3_777);
+    expect(hanCount).toBe(3_734);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

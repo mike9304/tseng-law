@@ -320,9 +320,10 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     expect(raw).toContain(disclaimer);
     expect(raw.trimEnd()).toMatch(
       new RegExp(
-        `${disclaimer}\\n\\n\\*\\*曾雋崴律師\\（Wei Tseng\\）\\*\\*$`,
+        `${disclaimer}\\n\\n曾雋崴律師\\（Wei Tseng\\）$`,
       ),
     );
+    expect(raw).not.toContain('**');
     const relatedSection =
       parsed.content.split('## 相關服務\n\n')[1]?.split(`\n\n---\n\n${disclaimer}`)[0]
       ?? '';
@@ -343,7 +344,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     const visibleHanCount = publicText.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(4_320);
+    expect(visibleHanCount).toBe(4_260);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
   });

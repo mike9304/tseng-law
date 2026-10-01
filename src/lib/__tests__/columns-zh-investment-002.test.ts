@@ -30,7 +30,7 @@ const insolvencyParagraph =
   '解散後的清算並非只有在公司資產大於負債時才能進行。依《公司法》第89條，公司財產不足以清償債務時，清算人應即聲請宣告破產。應依資不抵債、無力清償、擔保、租稅債務及債權人人數，個別判斷能否繼續通常清算。';
 const disclaimer =
   '本文僅提供台灣公司結束及公司財產處理的一般法律資訊與教育資料，不構成特定案件的法律意見。適當的解散、清算、減資、停業程序及稅務申報，可能因公司種類、章程、財務狀況、債權人、外國投資及個別交易而異；在實際決議或移轉資金前，仍應就具體案件另行確認。';
-const author = '**曾雋崴律師（Wei Tseng）**';
+const author = '曾雋崴律師（Wei Tseng）';
 
 const faq = [
   {
@@ -192,24 +192,27 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     }
 
     const stepLeads = [
-      '1. **結束前的現況調查。**',
-      '2. **依公司種類作成解散決議。**',
-      '3. **於期限內申請解散變更登記。**',
-      '4. **辦理解散時點的當期決算申報。**',
-      '5. **確定清算人並進行法院及債權人相關程序。**',
-      '6. **確定可供分配的剩餘財產。**',
-      '7. **完結清算並辦理最後申報。**',
+      '1. 結束前的現況調查。',
+      '2. 依公司種類作成解散決議。',
+      '3. 於期限內申請解散變更登記。',
+      '4. 辦理解散時點的當期決算申報。',
+      '5. 確定清算人並進行法院及債權人相關程序。',
+      '6. 確定可供分配的剩餘財產。',
+      '7. 完結清算並辦理最後申報。',
     ];
-
-    for (const lead of stepLeads) {
-      expect(raw).toContain(lead);
-      expect(post?.content).toContain(lead);
-    }
 
     const section2 = parsed.content
       .split('## 2. 永久結束公司的程序')[1]
       ?.split('## 3.')[0];
-    expect(section2?.match(/^\d+\. \*\*/gm)).toHaveLength(7);
+    for (const lead of stepLeads) {
+      expect(raw).toContain(`\n${lead}`);
+      expect(post?.content).toContain(`\n${lead}`);
+      expect(raw).not.toContain(`${lead} `);
+    }
+    expect(
+      Array.from(section2?.matchAll(/^(\d+\. [^。\n]+。)/gm) ?? [], (match) => match[1]),
+    ).toEqual(stepLeads);
+    expect(section2).not.toContain('**');
     expect(parsed.content).not.toContain('### ');
   });
 
@@ -217,7 +220,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     const correctedPhrases = [
       '若選擇永久結束，應辦理解散登記與清算，整理公司的契約、債權、債務、稅捐及剩餘財產。',
       '本文分別說明結束台灣公司時經常混淆的公司財產、已繳股款、減資、解散、清算、破產聲請、剩餘財產分配及停業。',
-      '1. **結束前的現況調查。** 取得公司章程、股東名簿、最新登記事項、會計帳簿、財務報表及稅務申報資料。',
+      '1. 結束前的現況調查。取得公司章程、股東名簿、最新登記事項、會計帳簿、財務報表及稅務申報資料。',
       '並非所有公司均適用相同的文件與順序',
       '應避免事後將出資改記為借款的做法',
       '清算人應編造財產目錄及資產負債表、了結公司現存事務，收取尚未受償的債權，並決定資產的保全及變現方式。',
@@ -347,7 +350,8 @@ describe('Traditional Chinese investment column 002 — company exit and capital
         `${disclaimer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n${author.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`,
       ),
     );
-    expect(raw.trimEnd()).toMatch(/\*\*曾雋崴律師（Wei Tseng）\*\*$/);
+    expect(raw.trimEnd()).toMatch(/\n\n曾雋崴律師（Wei Tseng）$/);
+    expect(raw).not.toContain('**');
   });
 
   it('freezes the exact visible Han count and derives read_time at 400 Han per minute', () => {

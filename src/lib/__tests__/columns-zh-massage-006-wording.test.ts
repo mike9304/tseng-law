@@ -58,6 +58,22 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     expect(raw).not.toContain('申請大法官釋憲');
   });
 
+  it('dates Interpretation No. 649 and its sunset instead of ending the restriction in 2003', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '這項限制實施了很長一段時間。經營理髮廳的林先生僱用了兩名非視障員工提供洗髮及按摩服務，被警方查獲。',
+    );
+    expect(raw).toContain(
+      '他們不服處罰提起的行政訴訟，是臺北高等行政法院2003年（民國92年度）的案件。',
+    );
+    expect(raw).toContain(
+      '最後，大法官在2008年10月31日公布[釋字第649號解釋](https://cons.judicial.gov.tw/docdata.aspx?fid=100&id=310830)，宣告將按摩業限於視障者的法條違憲，並要求該規定自解釋公布之日起，至遲於屆滿三年時失其效力。',
+    );
+    expect(raw).not.toContain('這項限制持續到2003年');
+    expect(raw).not.toContain('**');
+  });
+
   it('uses the historical 1980 statute name 殘障福利法', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

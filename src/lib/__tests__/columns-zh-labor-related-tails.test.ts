@@ -15,15 +15,16 @@ const targets = [
   {
     slug: 'taiwan-labor-severance-law',
     filename: '008-taiwan-labor-severance-law.md',
-    finalBodyParagraph: '大家在台灣也要保護好自己的權益。',
-    visibleHanCount: 1_601,
+    finalBodyParagraph: '符合資遣費請求要件時，\n\n雇主應依法給付。',
+    visibleHanCount: 1_759,
     readTime: '5分鐘閱讀',
   },
   {
     slug: 'taiwan-voluntary-resignation-severance',
     filename: '009-taiwan-voluntary-resignation-severance.md',
-    finalBodyParagraph: '大多數情況下，事先做好準備的一方才能保障自己的權利。',
-    visibleHanCount: 646,
+    finalBodyParagraph:
+      '勞資雙方的30日期限，都從知悉相關情形之日起算；勞工依第14條第1項第6款終止時，也可以從知悉損害結果之日起算。',
+    visibleHanCount: 743,
     readTime: '2分鐘閱讀',
   },
 ];
@@ -59,6 +60,7 @@ describe('Traditional Chinese labor columns 008 and 009 — related tails', () =
         '/zh-hant/services/labor',
       ]);
       expect(relatedTail).not.toMatch(/\/(?:ko|ja|en)\//);
+      expect(raw).not.toContain('**');
     });
 
     it(`aligns ${target.slug} metadata with its final visible body`, () => {

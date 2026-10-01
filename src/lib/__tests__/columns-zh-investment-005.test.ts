@@ -22,7 +22,7 @@ const headings = [
   '3. 公司籌備處帳戶何時可以轉換為正式的公司帳戶？',
   '4. 轉換為正式帳戶後，可以立即使用網路銀行嗎？',
   '5. 台灣公司聘僱韓國人時，應確認哪些工作許可要件？',
-  '辦理程序前的確認',
+  '匯款、帳戶轉換與聘僱許可的時程',
   '官方資料',
   '相關服務',
 ];
@@ -174,16 +174,19 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     }
   });
 
-  it('locks the first-employee rule and second-employee managerial thresholds', () => {
+  it('locks the first-employee rule, the Article 39 employer test, and the Article 38(2) over-one rule', () => {
     const required = [
       '就「一般僑外投資事業主管工作」而言，第一位員工不適用下述「專門性或技術性工作」之標準',
       '自第二位員工起有限制',
       '並不會僅因具有外國國籍，就產生不受限制的聘僱名額',
       '台灣法所稱的公司或分公司「經理人」',
       '合計持有超過股份總數或資本總額三分之一',
-      '第一位外國人不受學歷、經歷、平均薪資及雇主資本額、營業額標準限制',
-      '自第二位外國人起，其相關學歷與經歷、平均薪資，以及雇主的資本額與營業額，均依專門性或技術性工作的標準辦理',
-      '自第二位外國人起，雇主方面須符合現行資格標準之一',
+      '在此管理職類別中，雇主依審查標準第38條第1項第1款至第3款聘僱的第一位外國人，不必另符合第二章專門性或技術性工作的學歷、經歷及平均薪資標準，但雇主仍須具備第39條所定條件之一。',
+      '依第38條第2項，聘僱人數超過一人時，其外國人、雇主資格或其他資格，均應符合第二章規定。',
+      '第39條的雇主條件，從聘僱第一位外國籍主管起就要符合。設立未滿一年的公司，以下列任一項為標準：',
+      '聘僱超過一人時應符合的第二章雇主條件，門檻可能高於上述金額。',
+      '例如第36條對設立未滿一年的本國公司，要求實收資本額達新臺幣500萬元以上、營業額達新臺幣1,000萬元以上、進出口實績總額達美金100萬元以上或代理佣金達美金40萬元以上之一',
+      '實際適用第二章哪一條規定，視申請的工作類別而定，請向主管機關確認。',
       '實收資本額或在台營運資金達新臺幣50萬元以上',
       '營業額達新臺幣300萬元以上',
       '進出口實績達美金50萬元以上',
@@ -233,6 +236,10 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       '也不能因此將第一位外國人視為不受限制',
       '第一位外國人所放寬的，僅為專門性或技術性工作的學歷、經歷及平均薪資標準',
       '職位與出資關係、雇主資格、申請及工作許可仍為必要',
+      '第一位外國人不受學歷、經歷、平均薪資及雇主資本額、營業額標準限制',
+      '自第二位外國人起，其相關學歷與經歷、平均薪資，以及雇主的資本額與營業額，均依專門性或技術性工作的標準辦理',
+      '自第二位外國人起，雇主方面須符合現行資格標準之一',
+      '**',
       '一般至少需要手機號碼',
       '使用期間須滿6個月以上',
       '曾俊瑋',
@@ -259,7 +266,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     for (const phrase of forbidden) {
       expect(raw).not.toContain(phrase);
     }
-    expect(raw).toContain('曾雋崴律師（Wei Tseng）');
+    expect(raw.trimEnd().endsWith('\n\n曾雋崴律師（Wei Tseng）')).toBe(true);
     expect(raw).not.toMatch(
       /[\p{Script=Hangul}\p{Script=Hiragana}\p{Script=Katakana}]/u,
     );
@@ -272,7 +279,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_699);
+    expect(visibleHanCount).toBe(3_829);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

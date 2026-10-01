@@ -158,7 +158,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
       `依[《消費者保護法》第7條](${lawUrls[0]})，提供服務的企業經營者於提供服務時，應確保服務符合當時科技或專業水準可合理期待的安全性。`,
       '這項規定不表示只要有人在健身房受傷，企業經營者或教練就當然負責。個案仍須判斷注意義務的具體內容、是否違反該義務、違反義務與傷害間的因果關係、實際損害、可能的抗辯，以及雙方提出的證據。',
       '個案中可能涉及的損害項目包括：',
-      '4. **勞動能力減損**：如有持續性障礙，法院可能綜合醫療或鑑定資料、勞動能力減損程度、職業、收入及可工作期間，判斷賠償範圍。單一鑑定所認定的減損比例不會自動決定賠償金額，也不能當然以退休年齡作為損失計算終點。',
+      '4. 勞動能力減損：如有持續性障礙，法院可能綜合醫療或鑑定資料、勞動能力減損程度、職業、收入及可工作期間，判斷賠償範圍。單一鑑定所認定的減損比例不會自動決定賠償金額，也不能當然以退休年齡作為損失計算終點。',
       '請求權人仍須就責任、因果關係、損害發生及金額提出相關證明。',
       '健身房投保責任保險，本身並不表示健身房或教練負有法律責任，也不能直接決定應支付的金額。保險的承保範圍、保額、除外責任或免責條款、事故與傷害間的因果關係，以及各項損害是否必要及其金額認定，都可能成為爭點。',
       '保險人的審查結果、健身房提出的和解方案或受傷者主張的金額，都不當然等同於法院最終可能認定的賠償金額。是否適合透過保險理賠或協商處理，仍應配合承保範圍、現有證據、期限及當事人的實際需求個別評估。',
@@ -235,13 +235,13 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
 
   it('covers every permitted damage category and qualified Article 51 multiplier', () => {
     const requiredDamageRules = [
-      '**醫療費用**',
-      '**必要的看護或照護費用**',
-      '**必要的交通費用**',
-      '**勞動能力減損**',
-      '**休養期間的工作收入損失**',
-      '**非財產上損害**',
-      '**懲罰性賠償金**',
+      '\n1. 醫療費用：',
+      '\n2. 必要的看護或照護費用：',
+      '\n3. 必要的交通費用：',
+      '\n4. 勞動能力減損：',
+      '\n5. 休養期間的工作收入損失：',
+      '\n6. 非財產上損害：',
+      '\n7. 懲罰性賠償金：',
       '單一鑑定所認定的減損比例不會自動決定賠償金額，也不能當然以退休年齡作為損失計算終點。',
       '得請求實際損害額五倍以下；因重大過失者，為三倍以下；因過失者，為一倍以下。',
       '仍取決於法定要件、個案證據與法院判斷。',
@@ -251,6 +251,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
     for (const rule of requiredDamageRules) {
       expect(raw).toContain(rule);
     }
+    expect(raw).not.toContain('**');
   });
 
   it('keeps insurance, procedures, and closing advice properly qualified', () => {
@@ -309,7 +310,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
     }
 
     expect(raw).toContain(
-      `![${finalMedia.caption}](${imagePrefix}${finalMedia.image})\n\n**${finalMedia.caption}**`,
+      `![${finalMedia.caption}](${imagePrefix}${finalMedia.image})\n\n${finalMedia.caption}\n\n`,
     );
     expect(countOccurrences(raw, finalMedia.caption)).toBe(2);
     expect(raw).not.toContain('[![');

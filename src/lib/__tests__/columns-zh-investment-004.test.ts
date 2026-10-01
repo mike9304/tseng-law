@@ -30,7 +30,7 @@ const faq3Answer =
   '分公司不是獨立的發行公司，因此不能成為在台灣上市的主體。子公司若要上市，應符合公司法與證券交易所規定的要件。租稅優惠不會僅因組織形式而一律決定。《產業創新條例》第10條之1的投資抵減等，應個別確認適用對象投資、申請期限、抵減方式、重複適用與稅額上限。';
 const disclaimer =
   '本文為說明台灣子公司與外國公司分公司一般差異的教育目的資料，並非就個別案件提供的法律、稅務諮詢。適用的法令與稅務處理，可能因投資人與本公司所在地、事業內容、交易與資金流向、協定適用要件及主管機關最新實務而不同；執行設立、投資、簽約、分配股利或匯款前，請確認最新官方資料與個別情形。';
-const author = '**曾雋崴律師（Wei Tseng）**';
+const author = '曾雋崴律師（Wei Tseng）';
 
 const faq = [
   {
@@ -49,7 +49,7 @@ const faq = [
 
 const officialLinks = [
   '[全國法規資料庫—公司法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
-  '[全國法規資料庫—加值型及非加值型營業稅法第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
+  '[全國法規資料庫—各類所得扣繳率標準第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
   '[全國法規資料庫—所得稅法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)',
   '[財政部稅務入口網—營利所得扣繳說明](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)',
   '[財政部主管法規查詢系統—外商在我國境內分公司之盈餘課稅釋疑](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)',
@@ -177,14 +177,14 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       '台灣《公司法》第1條將依公司法組織、登記、設立，並以營利為目的的法人，規定為公司。',
       '依此設立的台灣子公司，是與外國母公司區別的台灣法人。',
       '有限公司股東依《公司法》第99條第1項，原則上以其出資額為限對公司負責。',
-      '股東濫用法人格，致公司難以清償特定債務，且其濫用情節重大時，得於必要範圍內負責',
+      '但第99條第2項設有例外：股東濫用公司之法人地位，致公司負擔特定債務且清償顯有困難，其情節重大而有必要者，該股東應負清償之責。',
       '依《公司法》第371條，外國公司未辦理分公司登記，不得以外國公司名義在台灣營業。',
       '依第372條，外國公司應專撥其台灣分公司營業所用資金，並指定在台灣境內的負責人。',
       '該資金是供台灣營業的本公司資金，而非分公司的股份或出資額。',
       '台灣分公司的債務就是外國公司的債務',
       '《公司法》第378條申請廢止分公司登記',
       '不會僅因申請而消失',
-      '依《公司法》第379條，分公司登記的廢止，不影響債權人權利與外國公司義務。',
+      '主管機關依《公司法》第379條第1項廢止分公司登記時，依同條第2項，也不影響債權人之權利及外國公司之義務。',
       '依《公司法》第380條，應清算在台灣營業與分公司所生的權利義務。',
       '清算後仍未清償的債務，由外國公司繼續負擔。',
       '台灣子公司是獨立法人，因此不採外國公司分公司的廢止登記，而是依公司法上解散及清算程序。',
@@ -239,8 +239,9 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       '2025年1月1日至2029年12月31日',
       '同一課稅年度投資新臺幣一百萬元以上二十億元以下的公司或有限合夥',
       '全新的智慧機械、5G系統、資通安全產品或服務、人工智慧產品或服務，以及節能減碳相關硬體、軟體、技術或技術服務',
-      '在該年度投資額最高5%內，自該課稅年度的營利事業所得稅額抵減',
-      '將投資額最高3%，在三年內每年抵減',
+      '抵減方式須擇一適用，一經擇定不得變更：',
+      '於支出金額5%限度內，抵減當年度應納營利事業所得稅額',
+      '於支出金額3%限度內，自當年度起三年內抵減各年度應納營利事業所得稅額',
       '以該年度營利事業所得稅額的30%為限',
       '第10條的研究發展相關抵減與第10條之1',
     ];
@@ -320,7 +321,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(5_000);
-    expect(visibleHanCount).toBe(7_931);
+    expect(visibleHanCount).toBe(7_935);
     expect(calculatedMinutes).toBe(20);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
@@ -357,6 +358,11 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       '許認可',
       '投資稅額控除',
       '曾俊瑋',
+      '得於必要範圍內負責',
+      '加值型及非加值型營業稅法第10條',
+      '在該年度投資額最高5%內',
+      '將投資額最高3%，在三年內每年抵減',
+      '**',
       '/ko/',
       '/ja/',
       '/en/',

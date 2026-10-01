@@ -737,6 +737,10 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
     ]);
     expect(countOccurrences(section, approvedQ7WorkInabilityClause)).toBe(1);
     expect(section).not.toContain(staleQ7TemporaryWorkInabilityClause);
+    expect(section).toContain('\n- 受傷：依民法第193條，');
+    expect(section).toContain('\n- 死亡：依民法第192條，');
+    expect(section).toContain('\n- 財產：依民法第196條，');
+    expect(raw).not.toContain('**');
   });
 
   it('locks Q8 medical evidence supplementation, claim changes, and the narrow Article 504 fee caveat', () => {

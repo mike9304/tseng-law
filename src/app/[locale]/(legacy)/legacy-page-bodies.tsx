@@ -31,6 +31,7 @@ import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css'
 import EnServicesBody from '@/components/en-design/EnServicesBody';
 import EnPricingBody from '@/components/en-design/EnPricingBody';
 import EnAboutBody from '@/components/en-design/EnAboutBody';
+import EnContactBody from '@/components/en-design/EnContactBody';
 import { EnLawyersGlance, EnLawyersShell } from '@/components/en-design/EnLawyers';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
@@ -123,6 +124,7 @@ export function ServicesLegacyPageBody({
 
 export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   if (locale === 'zh-hant') return <ZhHantContactBody />;
+  if (locale === 'en') return <EnContactBody />;
   const copy = pageCopy[locale].contact;
   const blocks = (
     <>

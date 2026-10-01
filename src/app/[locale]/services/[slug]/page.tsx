@@ -39,6 +39,10 @@ import styles from './ServiceDetail.module.css';
 import zhStyles from './ZhHantServiceDetail.module.css';
 import jaStyles from './JaServiceDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import enStyles from './EnServiceDetail.module.css';
+import EnPageShell, { EnGlance } from '@/components/en-design/EnPageShell';
+import { EN_SERVICE_EXTRA_COLUMNS } from '@/components/en-design/en-design-data';
+import { getPricingContent } from '@/components/PricingCards';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
 import { typesetTitle } from '@/lib/ko-middot';
 
@@ -256,7 +260,11 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
   const description = summarize(area.intro);
   const t = copy[locale];
 
-  const columns = area.columnSlugs
+  // en: the newer English guides for this practice area come first (arrangement only).
+  const columnSlugs = locale === 'en'
+    ? [...new Set([...(EN_SERVICE_EXTRA_COLUMNS[area.slug] ?? []), ...area.columnSlugs])]
+    : area.columnSlugs;
+  const columns = columnSlugs
     .map((slug) => getColumnPost(slug, locale))
     .filter((c): c is NonNullable<typeof c> => c != null);
 
@@ -272,6 +280,8 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
   // ja design (Opus 5.5 ja lane, 2026-10-01): paper hero with an in-page index, numbered key points.
   const ja = locale === 'ja';
   const jaIndexLabel = 'このページの内容';
+  const en = locale === 'en';
+  const enConsultation = en ? getPricingContent('en').items.find((item) => item.icon === 'consultation') : undefined;
   const heroCopy = (
     <>
       <Link href={`/${locale}/services`} className="svc-back-link">{t.backLabel}</Link>
@@ -280,7 +290,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
     </>
   );
   const contactCard = (
-    <div className={`svc-sidebar-card ${styles.contactCard}${zhHant ? ` ${zhStyles.contactPanel}` : ''}`}>
+    <div className={`svc-sidebar-card ${styles.contactCard}${zhHant ? ` ${zhStyles.contactPanel}` : ''}${en ? ` ${enStyles.contactPanel}` : ''}`}>
       <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
       <p className="svc-sidebar-text">{t.contactDesc}</p>
       <a
@@ -333,7 +343,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
         </>
       ) : null}
       {showHero ? (
-        <section className={`svc-hero ${styles.hero}${zhHant ? ` ${zhStyles.hero}` : ''}${ja ? ` ${jaStyles.hero}` : ''}`} data-tone="dark" data-zh-hant-design={zhHant ? 'service-detail' : undefined}>
+        <section className={`svc-hero ${styles.hero}${zhHant ? ` ${zhStyles.hero}` : ''}${ja ? ` ${jaStyles.hero}` : ''}${en ? ` ${enStyles.hero}` : ''}`} data-tone="dark" data-zh-hant-design={zhHant ? 'service-detail' : undefined}>
           <div className={`container svc-hero-inner ${styles.heroInner}${ja ? ` ${jaStyles.heroInner}` : ''}`}>
             {zhHant ? (
               <>
@@ -365,13 +375,40 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                   {attorney ? <Link href={`/${locale}/lawyers/${attorney.slug}`} className={jaStyles.byline}>{attorney.name} · {attorney.role}</Link> : null}
                 </div>
               </>
+            ) : en ? (
+              <>
+                <div className={enStyles.heroCopy}>
+                  {heroCopy}
+                  <div className={enStyles.heroActions}>
+                    <a href={getConsultationPublicMailto(locale)} className={enStyles.heroCta} aria-label={`${t.contactLabel}: ${CONSULTATION_EMAIL}`}>
+                      {t.contactBtn} <span aria-hidden>→</span>
+                    </a>
+                    {showBody && points.length > 0 ? <a href="#service-keypoints" className={enStyles.jump}>{t.keyPointsLabel} <span aria-hidden>↓</span></a> : null}
+                    {showBody && columns.length > 0 ? <a href="#service-columns" className={enStyles.jump}>{t.columnsLabel.split(' —')[0]} <span aria-hidden>↓</span></a> : null}
+                  </div>
+                </div>
+                {attorney ? (
+                  <EnGlance
+                    items={[
+                      { term: 'Lead attorney', value: <Link href={`/${locale}/lawyers/${attorney.slug}`}>{attorney.name}</Link>, note: attorney.role },
+                      { term: 'Languages', value: attorney.languages.join(', ') },
+                      ...(enConsultation
+                        ? [
+                            { term: 'Meet', value: enConsultation.details[0] ?? '' },
+                            { term: enConsultation.title, value: `${enConsultation.price} ${enConsultation.unit}`.trim(), note: enConsultation.details[3] },
+                          ]
+                        : []),
+                    ]}
+                  />
+                ) : null}
+              </>
             ) : heroCopy}
           </div>
         </section>
       ) : null}
 
       {showBody ? (
-        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}${ja ? ` ${jaStyles.article}` : ''}`}>
+        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}${ja ? ` ${jaStyles.article}` : ''}${en ? ` ${enStyles.article}` : ''}`}>
           <div className={`container svc-container ${styles.layout}`}>
             {zhHant ? contactCard : null}
             <div className={`svc-body ${styles.body}`}>
@@ -405,7 +442,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               ) : null}
 
               {points.length > 0 && (
-                <div className="svc-keypoints" id={zhHant || ja ? 'service-keypoints' : undefined}>
+                <div className="svc-keypoints" id={zhHant || ja || en ? 'service-keypoints' : undefined}>
                   <h2 className="svc-keypoints-title">{t.keyPointsLabel}</h2>
                   <ul className="svc-keypoints-list">
                     {points.map((point, i) => (
@@ -416,7 +453,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               )}
 
               {columns.length > 0 && (
-                <div className="svc-columns-section" id={zhHant || ja ? 'service-columns' : undefined}>
+                <div className="svc-columns-section" id={zhHant || ja || en ? 'service-columns' : undefined}>
                   <h2 className="svc-columns-heading">{t.columnsLabel}</h2>
                   <div className={`svc-columns-grid ${styles.columnsGrid}`}>
                     {columns.map((col) => (
@@ -475,5 +512,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
       ) : null}
     </>
   );
-  return ja ? <JaPageShell page="service-detail" className={jaStyles.root}>{content}</JaPageShell> : content;
+  // ja and en redesigns (Opus 5.5 lanes, 2026-10-01): same blocks inside each locale's scoped wrapper.
+  if (ja) return <JaPageShell page="service-detail" className={jaStyles.root}>{content}</JaPageShell>;
+  return en ? <EnPageShell page="service-detail">{content}</EnPageShell> : content;
 }

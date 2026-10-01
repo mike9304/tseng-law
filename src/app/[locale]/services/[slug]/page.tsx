@@ -37,6 +37,8 @@ import CivilCommercialBlock from '@/components/CivilCommercialBlock';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './ServiceDetail.module.css';
 import zhStyles from './ZhHantServiceDetail.module.css';
+import jaStyles from './JaServiceDetail.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
 import { typesetTitle } from '@/lib/ko-middot';
 
@@ -267,6 +269,9 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
   const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.body');
   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.seo');
   const zhHant = locale === 'zh-hant';
+  // ja design (Opus 5.5 ja lane, 2026-10-01): paper hero with an in-page index, numbered key points.
+  const ja = locale === 'ja';
+  const jaIndexLabel = 'このページの内容';
   const heroCopy = (
     <>
       <Link href={`/${locale}/services`} className="svc-back-link">{t.backLabel}</Link>
@@ -288,7 +293,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
     </div>
   );
 
-  return (
+  const content = (
     <>
       {showSeo ? (
         <>
@@ -328,8 +333,8 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
         </>
       ) : null}
       {showHero ? (
-        <section className={`svc-hero ${styles.hero}${zhHant ? ` ${zhStyles.hero}` : ''}`} data-tone="dark" data-zh-hant-design={zhHant ? 'service-detail' : undefined}>
-          <div className={`container svc-hero-inner ${styles.heroInner}`}>
+        <section className={`svc-hero ${styles.hero}${zhHant ? ` ${zhStyles.hero}` : ''}${ja ? ` ${jaStyles.hero}` : ''}`} data-tone="dark" data-zh-hant-design={zhHant ? 'service-detail' : undefined}>
+          <div className={`container svc-hero-inner ${styles.heroInner}${ja ? ` ${jaStyles.heroInner}` : ''}`}>
             {zhHant ? (
               <>
                 <div className={zhStyles.heroCopy}>
@@ -345,13 +350,28 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                   <Image src="/images/editorial/taichung-courthouse-civic-daylight-v2.webp" alt="" width={960} height={640} sizes="(max-width: 767px) 100vw, 38vw" priority />
                 </div>
               </>
+            ) : ja ? (
+              <>
+                <div className={jaStyles.heroCopy}>{heroCopy}</div>
+                <div className={jaStyles.heroPanel}>
+                  <nav className={jaStyles.contents} aria-label={jaIndexLabel}>
+                    <p className={jaStyles.contentsLabel} aria-hidden>{jaIndexLabel}</p>
+                    <ol>
+                      {showBody && points.length > 0 ? <li><a href="#service-keypoints">{t.keyPointsLabel}</a></li> : null}
+                      {showBody && columns.length > 0 ? <li><a href="#service-columns">{t.columnsLabel}</a></li> : null}
+                    </ol>
+                  </nav>
+                  <a href={getConsultationPublicMailto(locale)} className={`button ${jaStyles.heroCta}`}>{t.contactBtn}</a>
+                  {attorney ? <Link href={`/${locale}/lawyers/${attorney.slug}`} className={jaStyles.byline}>{attorney.name} · {attorney.role}</Link> : null}
+                </div>
+              </>
             ) : heroCopy}
           </div>
         </section>
       ) : null}
 
       {showBody ? (
-        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}`}>
+        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}${ja ? ` ${jaStyles.article}` : ''}`}>
           <div className={`container svc-container ${styles.layout}`}>
             {zhHant ? contactCard : null}
             <div className={`svc-body ${styles.body}`}>
@@ -385,7 +405,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               ) : null}
 
               {points.length > 0 && (
-                <div className="svc-keypoints" id={zhHant ? 'service-keypoints' : undefined}>
+                <div className="svc-keypoints" id={zhHant || ja ? 'service-keypoints' : undefined}>
                   <h2 className="svc-keypoints-title">{t.keyPointsLabel}</h2>
                   <ul className="svc-keypoints-list">
                     {points.map((point, i) => (
@@ -396,7 +416,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               )}
 
               {columns.length > 0 && (
-                <div className="svc-columns-section" id={zhHant ? 'service-columns' : undefined}>
+                <div className="svc-columns-section" id={zhHant || ja ? 'service-columns' : undefined}>
                   <h2 className="svc-columns-heading">{t.columnsLabel}</h2>
                   <div className={`svc-columns-grid ${styles.columnsGrid}`}>
                     {columns.map((col) => (
@@ -455,4 +475,5 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
       ) : null}
     </>
   );
+  return ja ? <JaPageShell page="service-detail" className={jaStyles.root}>{content}</JaPageShell> : content;
 }

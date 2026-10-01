@@ -26,6 +26,7 @@ import JaPageShell from '@/components/ja-design/JaPageShell';
 import jaAboutStyles from '@/components/ja-design/JaAbout.module.css';
 import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
 import jaContactStyles from '@/components/ja-design/JaContact.module.css';
+import JaServicesBody from '@/components/ja-design/JaServicesBody';
 import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
@@ -100,6 +101,7 @@ export function ServicesLegacyPageBody({
   const showRepeater = locale === 'ja'
     || isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.repeater');
   if (locale === 'zh-hant') return <ZhHantServicesBody showHero={showHero} showRepeater={showRepeater} />;
+  if (locale === 'ja') return <JaServicesBody showHero={showHero} showRepeater={showRepeater} />;
   return (
     <>
       {showHero ? (

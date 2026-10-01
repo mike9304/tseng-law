@@ -25,6 +25,16 @@ function compactServiceSummary(description: string, maxLength = 120): string {
   return `${text.slice(0, end).trimEnd()}…`;
 }
 
+function orderServiceEntries<T>(items: readonly T[], slugs: readonly string[], order?: readonly string[]) {
+  const entries = items.map((item, index) => ({ item, index }));
+  if (!order?.length) return entries;
+  const rank = (index: number) => {
+    const position = order.indexOf(slugs[index] ?? '');
+    return position === -1 ? order.length + index : position;
+  };
+  return [...entries].sort((a, b) => rank(a.index) - rank(b.index));
+}
+
 export default function ServicesBento({
   locale,
   id,
@@ -43,7 +53,7 @@ export default function ServicesBento({
   presentation?: 'editorial';
   /** Optional short scenario labels per service slug (zh-hant home design). Omitted elsewhere. */
   scenarioTags?: Readonly<Record<string, readonly string[]>>;
-  /** Optional display order by service slug (zh-hant home). Anchors, icons and links stay tied to each item. */
+  /** Optional display order by service slug (zh-hant home, ja design). Icons and anchors keep each service's own index. Omitted elsewhere. */
   order?: readonly string[];
 }) {
   const { services } = siteContent[locale];
@@ -89,17 +99,7 @@ export default function ServicesBento({
           </>
         ) : null}
         <div className="services-detail-list services-card-grid">
-          {services.items
-            .map((item, index) => ({ item, index }))
-            .sort((a, b) => {
-              if (!order || order.length === 0) return a.index - b.index;
-              const rank = (i: number) => {
-                const at = order.indexOf(serviceSlugs[i] ?? '');
-                return at === -1 ? order.length + i : at;
-              };
-              return rank(a.index) - rank(b.index);
-            })
-            .map(({ item, index }) => {
+          {orderServiceEntries(services.items, serviceSlugs, order).map(({ item, index }) => {
             const anchor = item.href.split('#')[1];
             const aliases = aliasAnchors.get(index) ?? [];
             return (

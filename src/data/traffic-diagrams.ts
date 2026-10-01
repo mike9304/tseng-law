@@ -69,7 +69,7 @@ export const TRAFFIC_DIAGRAMS = {
         alt: '平坦道路上，同向有兩個車道；灰綠色2號小客車跟在磚紅色1號小客車後方。2號車變換燈光一次，1號車亮右方向燈表示允讓後，2號車打左方向燈，駛入左側車道超越。拉開距離後，2號車打右方向燈回到原車道；最後定格時，兩車已前後分開，行駛於同一車道。',
         legend: '1號・磚紅色小客車：起初在前方行駛、允讓後車超越的車輛。2號・灰綠色小客車：從後方超車的車輛。橘色閃光是方向燈；2號車前方的一次亮光是變換燈光的示意。',
         caption: '2號車先變換燈光一次，待1號車亮右方向燈表示允讓，再打左方向燈，保持至少半公尺的側向間隔，從左側超越。行至安全距離後，2號車打右方向燈駛回原車道。',
-        assumption: '假設示例：本動畫並非重現實際案件或判決，也不作為肇事責任判斷。速度、距離與時間均為說明用假設值；半公尺則是第101條規定的最小側向間隔。本例假設沒有其他禁止超車的條件，不能僅憑警示與允讓，就在禁止超車的情況下超車。',
+        assumption: '假設示例：本動畫並非重現實際案件或判決，也不作為肇事責任判斷。速度、距離與時間均為說明用假設值；半公尺則是道路交通安全規則第101條規定的最小側向間隔。本例假設沒有其他禁止超車的條件，不能僅憑警示與允讓，就在禁止超車的情況下超車。',
       },
       en: {
         alt: 'Two passenger cars travel on a flat road with two lanes in the same direction: brick-red car 1 leads, with grey-green car 2 behind. Car 2 flashes its headlights once; car 1 signals right to yield. Car 2 signals left, passes in the left lane, then signals right and returns to its original lane after opening a gap. The final still shows both cars in the same lane, with car 2 ahead and space between them.',

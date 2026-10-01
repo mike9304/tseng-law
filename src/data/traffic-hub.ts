@@ -64,7 +64,7 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
   },
   'zh-hant': {
     visualTitle: '前車允讓後，如何完成超車',
-    visualText: '兩輛小客車示範第101條的警示、允讓、從左側超越及返回原車道的順序。這是假設示例，並非實際案件；速度、距離與時間均為說明用假設值，不作為判斷肇事責任的依據。',
+    visualText: '兩輛小客車示範道路交通安全規則第101條的警示、允讓、從左側超越及返回原車道的順序。這是假設示例，並非實際案件；速度、距離與時間均為說明用假設值，不作為判斷肇事責任的依據。',
     nav: '交通事故', kicker: '車禍與法律', title: '台灣車禍之後，\n從現場處理到損害賠償',
     description: '台灣車禍的後續處理，牽涉警方資料、醫療費用、保險與和解。若即將前往美國、日本或韓國，離台後的聯絡和後續程序也要一併安排。',
     read: '閱讀專欄', columns: '台灣車禍法律專欄',
@@ -76,7 +76,7 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     countriesTitle: '事故發生地不同，處理程序也不同',
     countriesIntro: '本站以台灣車禍的處理程序為主。事故若發生在美國、日本或韓國，後續處理可從下列官方資料和當地法律諮詢著手。',
     countries: [
-      { id: 'tw', name: '台灣', text: '現場處理、過失、保險、和解與損害賠償，台灣交通事故專欄都有更完整的說明。', linkLabel: '台灣交通事故問答', href: '/columns/taiwan-traffic-accident-procedure' },
+      { id: 'tw', name: '台灣', text: '現場處理、過失、保險、和解與損害賠償，台灣車禍法律專欄都有更完整的說明。', linkLabel: '台灣交通事故問答', href: '/columns/taiwan-traffic-accident-procedure' },
       { id: 'us', name: '美國', text: '報案與保險程序要看事故發生在哪一州。此處連結的是加州指引，並非全美通用的規則。', linkLabel: '加州 DMV 事故指引', href: 'https://www.dmv.ca.gov/portal/dmv-virtual-office/accident-reporting/' },
       { id: 'jp', name: '日本', text: '在日本發生的車禍，可先查閱當地警方的資料；台灣的報案或和解程序不能直接套用。', linkLabel: '大阪府警察車禍處理指引', href: 'https://www.police.pref.osaka.lg.jp/kotsu/anzen/trafficrules/22200.html' },
       { id: 'kr', name: '韓國', text: '現場處置與報案可查韓國道路交通法；醫療、保險與賠償，仍須按個案處理。', linkLabel: '韓國道路交通法第54條', href: 'https://www.law.go.kr/법령/도로교통법/제54조' },

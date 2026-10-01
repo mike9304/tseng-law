@@ -29,6 +29,7 @@ import jaContactStyles from '@/components/ja-design/JaContact.module.css';
 import JaServicesBody from '@/components/ja-design/JaServicesBody';
 import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
 import EnServicesBody from '@/components/en-design/EnServicesBody';
+import EnPricingBody from '@/components/en-design/EnPricingBody';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
@@ -344,6 +345,7 @@ export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
 export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
   if (locale === 'zh-hant') return <ZhHantPricingBody />;
   if (locale === 'ja') return <JaPricingBody />;
+  if (locale === 'en') return <EnPricingBody />;
   const copy = pageCopy[locale].pricing;
   return (
     <>

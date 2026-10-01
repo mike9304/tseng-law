@@ -7,6 +7,7 @@ import {
 } from '@/lib/consultation/public-contact';
 import ZhHantPricingSchedule from '@/components/zh-hant-pricing/ZhHantPricingSchedule';
 import JaPricingTable from '@/components/ja-design/JaPricingTable';
+import EnPricingTiers from '@/components/en-design/EnPricingTiers';
 import styles from './PricingCards.module.css';
 
 export type PricingItem = {
@@ -286,6 +287,7 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
   const data = pricingData[locale];
   if (locale === 'zh-hant') return <ZhHantPricingSchedule data={data} />;
   if (locale === 'ja') return <JaPricingTable data={data} />;
+  if (locale === 'en') return <EnPricingTiers data={data} />;
 
   return (
     <section className={`section pricing-section ${styles.root}`}>

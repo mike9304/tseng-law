@@ -229,7 +229,13 @@ export function formatDedupePlan(plan, mode = 'dry-run') {
 function parseArgs(argv) {
   const options = { apply: false, help: false, siteId: DEFAULT_SITE_ID, backupDir: DEFAULT_BACKUP_DIR };
   for (const arg of argv) {
-    if (arg === '--apply') options.apply = true;
+    // Superseded 2026-10-01: the stock zh-hant home is rendered through a read-only
+    // display projection (public-page.tsx), and GPT-6 Astra found that rebuilding the
+    // composites here can drop newer published edits (config.overrides, visible
+    // flags). Dry-run stays available for inspection; writes are disabled.
+    if (arg === '--apply') {
+      throw new Error('--apply is disabled: superseded by the read-only zh-hant stock-home projection.');
+    }
     else if (arg === '--dry-run') options.apply = false;
     else if (arg === '--help' || arg === '-h') options.help = true;
     else if (arg.startsWith('--site=')) options.siteId = arg.slice('--site='.length);

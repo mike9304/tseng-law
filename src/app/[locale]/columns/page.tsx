@@ -5,6 +5,9 @@ import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
 import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
+import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
+import { getAllIssuePosts } from '@/lib/columns';
+import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
@@ -250,7 +253,8 @@ export default async function ColumnsPage(
 
     const publishedBody = (
       <>
-        <IssueBoardTabs locale={locale} active="expert" />
+        {/* zh-hant: the board switch renders inside the published columns body, right under its header. */}
+        {locale === 'zh-hant' ? null : <IssueBoardTabs locale={locale} active="expert" />}
         <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />
         <EnAcquisitionGuideLinks locale={locale} />
       </>
@@ -309,8 +313,25 @@ export default async function ColumnsPage(
       {showHero ? (
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
-      <IssueBoardTabs locale={locale} active="expert" />
-      {showRepeater ? <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} /> : null}
+      {locale === 'zh-hant'
+        ? (
+          <ZhHantBoardSwitch
+            active="expert"
+            expertCount={posts.length}
+            issueCount={getAllIssuePosts('zh-hant').length}
+            latestIssues={getAllIssuePosts('zh-hant').slice(0, 3).map(({ slug, title }) => ({ slug, title }))}
+          />
+        )
+        : <IssueBoardTabs locale={locale} active="expert" />}
+      {showRepeater ? (
+        <ColumnsGrid
+          locale={locale}
+          posts={toColumnListItems(posts)}
+          initialFilters={toColumnGridFilters(searchParams)}
+          featuredSlugs={locale === 'zh-hant' ? ZH_HANT_FEATURED_COLUMN_SLUGS : undefined}
+          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : undefined}
+        />
+      ) : null}
       <EnAcquisitionGuideLinks locale={locale} />
     </>
   );

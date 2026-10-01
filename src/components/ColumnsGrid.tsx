@@ -502,6 +502,8 @@ export default function ColumnsGrid({
   initialFilters = {},
   hrefBase,
   recommendedTitleOverride,
+  featuredSlugs,
+  topicOrder,
 }: {
   locale: PublicLocale8;
   posts: ColumnListItem[];
@@ -510,6 +512,10 @@ export default function ColumnsGrid({
   hrefBase?: string;
   /** Heading for the locale-first section (issue board uses its own wording). */
   recommendedTitleOverride?: string;
+  /** Optional editorial picks for the opening section (in order); remaining slots fall back to the newest recommended posts. */
+  featuredSlugs?: readonly string[];
+  /** Optional order of the topic sections; topics not listed keep their default order after the listed ones. */
+  topicOrder?: readonly ColumnTopic[];
 }) {
   const listHref = hrefBase ?? `/${locale}/columns`;
   // Posts recommended to this locale's readers come first (also in filtered
@@ -520,7 +526,14 @@ export default function ColumnsGrid({
     [locale, incomingPosts, recommendedTitle],
   );
   const posts = useMemo(() => [...recommended, ...nonRecommended], [recommended, nonRecommended]);
-  const openingPosts = recommended.slice(0, COLUMN_TOPIC_SECTION_PREVIEW);
+  const openingPosts = useMemo(() => {
+    if (!featuredSlugs || featuredSlugs.length === 0) return recommended.slice(0, COLUMN_TOPIC_SECTION_PREVIEW);
+    const picked = featuredSlugs
+      .map((slug) => posts.find((post) => post.slug === slug))
+      .filter((post): post is ColumnListItem => Boolean(post));
+    const fill = recommended.filter((post) => !picked.includes(post));
+    return [...picked, ...fill].slice(0, COLUMN_TOPIC_SECTION_PREVIEW);
+  }, [featuredSlugs, posts, recommended]);
   const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
   const labels = categoryFilterLabels(locale);
   const byline =
@@ -634,12 +647,15 @@ export default function ColumnsGrid({
       }
       buckets.get(key)!.push(post);
     }
+    const defaultTopics = Object.keys(topicLabels) as ColumnTopic[];
     const canonical: string[] = topicMode
-      ? (Object.keys(topicLabels) as ColumnTopic[])
+      ? (topicOrder && topicOrder.length > 0
+        ? [...topicOrder.filter((topic) => defaultTopics.includes(topic)), ...defaultTopics.filter((topic) => !topicOrder.includes(topic))]
+        : defaultTopics)
       : ['formation', 'legal', 'case'];
     return canonical.filter((key) => buckets.has(key)).map((key) => ({ key, posts: buckets.get(key)! }));
     // eslint-disable-next-line react-hooks/exhaustive-deps -- labels/topicOf derive from locale
-  }, [posts, topicMode, uiLocale]);
+  }, [posts, topicMode, uiLocale, topicOrder]);
   const groupLabel = (key: string): string =>
     topicMode ? topicLabels[key as ColumnTopic] : labels[key as ColumnCategory];
   const topicChips: { id: ColumnTopic | 'all'; label: string; count: number }[] = [

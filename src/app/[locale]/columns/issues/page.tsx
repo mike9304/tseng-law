@@ -5,6 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
 import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
+import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { ISSUE_BOARD_LOCALES, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
 import { getAiAuthorCopy } from '@/lib/ai-authored-columns';
@@ -66,7 +67,7 @@ export default async function IssueBoardPage(props: {
         })}
       />
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
-      <IssueBoardTabs locale={locale} active="issues" />
+      {locale === 'zh-hant' ? <ZhHantBoardSwitch active="issues" issueCount={posts.length} /> : <IssueBoardTabs locale={locale} active="issues" />}
       <ColumnsGrid
         locale={locale}
         posts={toColumnListItems(posts)}

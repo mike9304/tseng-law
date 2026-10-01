@@ -19,6 +19,8 @@ import ZhHantPricingBody from '@/components/zh-hant-pricing/ZhHantPricingBody';
 import ZhHantAboutBody from '@/components/zh-hant-about/ZhHantAboutBody';
 import ZhHantTeam from '@/components/zh-hant-team/ZhHantTeam';
 import ZhHantContactBody from '@/components/zh-hant-contact/ZhHantContactBody';
+import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
+import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
@@ -358,8 +360,15 @@ export function ColumnsLegacyPageBody({
       {showHero ? (
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
+      {locale === 'zh-hant' ? <ZhHantBoardSwitch active="expert" expertCount={posts.length} /> : null}
       {showRepeater ? (
-        <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} />
+        <ColumnsGrid
+          locale={locale}
+          posts={toColumnListItems(posts)}
+          initialFilters={toColumnGridFilters(searchParams)}
+          featuredSlugs={locale === 'zh-hant' ? ZH_HANT_FEATURED_COLUMN_SLUGS : undefined}
+          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : undefined}
+        />
       ) : null}
     </>
   );

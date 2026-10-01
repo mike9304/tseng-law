@@ -89,6 +89,19 @@
 }
 .root[data-en-design][id] :global(.page-header) :focus-visible { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 
+.root[data-en-design][id] :global(.section-label) {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--en-sans);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--en-signal-text);
+}
+.root[data-en-design][id] :global(.section-label)::before { content: ''; position: static; flex: none; width: 12px; height: 12px; margin: 0; background: var(--en-signal); opacity: 1; }
+
 /* At a glance: a fact sheet beside the H1 (facts restate this page's own data) */
 .glance {
   margin: 0;

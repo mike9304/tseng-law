@@ -40,6 +40,9 @@ import zhStyles from './ZhHantLawyerProfile.module.css';
 import jaStyles from './JaLawyerProfile.module.css';
 import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import enStyles from './EnLawyerProfile.module.css';
+import EnPageShell, { EnEmailButton, EnGlance } from '@/components/en-design/EnPageShell';
+import { getPricingContent } from '@/components/PricingCards';
 
 export const dynamic = 'force-dynamic';
 
@@ -254,12 +257,23 @@ export default async function LawyerProfilePage(
           label={locale === 'en' ? profile.role : labels.pageLabel}
           title={profile.heading ?? profile.title}
           description={profile.lede ?? profile.description}
-        />
+        >
+          {locale === 'en' ? (
+            <EnGlance
+              items={[
+                { term: 'Languages', value: profile.languages.join(', ') },
+                { term: 'Meet', value: getPricingContent('en').items.find((item) => item.icon === 'consultation')?.details[0] ?? '' },
+                { term: 'Email', value: <a href={getConsultationPublicMailto(locale)}>{profile.email}</a> },
+              ]}
+              actions={<EnEmailButton label={labels.contact} />}
+            />
+          ) : null}
+        </PageHeader>
       ) : null}
 
       {showBody ? (
         <>
-          <section className={`section section--light ${styles.root}`}>
+          <section className={`section section--light ${styles.root}${locale === 'en' ? ` ${enStyles.body}` : ''}`}>
             <div className={`container ${styles.container}`}>
               <div className={`profile-hero-card ${styles.heroCard}`}>
                 <div className={`profile-hero-photo ${styles.heroPhoto}`}>
@@ -403,7 +417,11 @@ export default async function LawyerProfilePage(
     return <JaPageShell page="lawyer-profile" className={`${jaStyles.root} ${jaTeamStyles.team}`}>{content}</JaPageShell>;
   }
   // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside a scoped wrapper for the zh-hant profile styling.
-  return locale === 'zh-hant'
-    ? <div className={zhStyles.root} id="zh-hant-lawyer-profile" data-zh-hant-design="lawyer-profile">{content}</div>
+  if (locale === 'zh-hant') {
+    return <div className={zhStyles.root} id="zh-hant-lawyer-profile" data-zh-hant-design="lawyer-profile">{content}</div>;
+  }
+  // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper.
+  return locale === 'en'
+    ? <EnPageShell page="lawyer-profile"><div className={enStyles.profile}>{content}</div></EnPageShell>
     : content;
 }

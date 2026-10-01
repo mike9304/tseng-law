@@ -28,6 +28,8 @@ import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
 import jaContactStyles from '@/components/ja-design/JaContact.module.css';
 import JaServicesBody from '@/components/ja-design/JaServicesBody';
 import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
+import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
+import zhVideosStyles from '@/components/zh-hant-pages/ZhHantVideos.module.css';
 import EnServicesBody from '@/components/en-design/EnServicesBody';
 import EnPricingBody from '@/components/en-design/EnPricingBody';
 import EnAboutBody from '@/components/en-design/EnAboutBody';
@@ -427,13 +429,22 @@ export function VideosLegacyPageBody({
   locale: SiteLocale;
 }) {
   const copy = pageCopy[locale].videos;
-  return (
+  const body = (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <AttorneyMediaHubView locale={locale} columnCount={columnCount} />
       <VideoChannel locale={locale} />
     </>
   );
+  // zh-hant Apple pass (2026-10-01): the same blocks inside a scoped wrapper; other locales render unchanged.
+  if (locale === 'zh-hant') {
+    return (
+      <div className={`${zhPageShellStyles.shell} ${zhVideosStyles.root}`} id="zh-hant-videos" data-zh-hant-design="videos">
+        {body}
+      </div>
+    );
+  }
+  return body;
 }
 
 export function PrivacyLegacyPageBody({ locale }: { locale: SiteLocale }) {

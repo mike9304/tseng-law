@@ -27296,6 +27296,46 @@ html[dir='rtl'] .guidance-answer {
   color: #0a0b0d;
 }
 .site[data-locale='en'] .header .header-accent-line { background: #ffc61a; }
+.site[data-locale='en'] .header .nav-cta.button { background: #ffc61a; border-color: #ffc61a; color: #0a0b0d; font-weight: 700; }
+.site[data-locale='en'] .header .nav-cta.button:hover,
+.site[data-locale='en'] .header .nav-cta.button:focus-visible { background: #ffd54d; border-color: #ffd54d; color: #0a0b0d; }
+
+/* en header (en lane round 2): ink bar so the night first screen is not cut by a white seam, one slim utility row,
+   the primary links visible on desktop, Inter Tight wordmark. Colours only; the shared header markup and its fit logic are untouched. */
+.site[data-locale='en'] header.header[data-public-site-header],
+.site[data-locale='en'] header.header[data-public-site-header].scrolled { background: #0a0b0d; border-bottom-color: rgb(255 255 255 / 14%); color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-utility { background: #0a0b0d; border-bottom: 1px solid rgb(255 255 255 / 12%); }
+.site[data-locale='en'] header.header[data-public-site-header] .header-main { background: #0a0b0d; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav { min-height: 0; padding-block: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > a,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button { min-height: 36px; color: rgb(255 255 255 / 82%); background: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a:focus-visible,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button:focus-visible { color: #fff; background: rgb(255 255 255 / 10%); }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-lang { border-color: rgb(255 255 255 / 24%); background: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .logo-kr { color: #fff; font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-size: 1.0625rem; font-weight: 700; letter-spacing: -0.005em; }
+.site[data-locale='en'] header.header[data-public-site-header] [data-header-content-fit-probe] > span:first-child > span:last-child { font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-size: 1.0625rem; font-weight: 700; letter-spacing: -0.005em; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-logo { min-height: 44px; }
+.site[data-locale='en'] footer.site-footer .footer-main-brand { font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link { color: rgb(255 255 255 / 88%); font-size: 0.9rem; font-weight: 600; padding-inline: 0.5rem; border-radius: 999px; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-list,
+.site[data-locale='en'] header.header[data-public-site-header] [data-header-content-fit-probe] > span:nth-child(2) { gap: 0.1rem; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link:focus-visible,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-item.active .nav-link { color: #fff; background: rgb(255 255 255 / 10%); }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-indicator { background: #ffc61a; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-search-btn,
+.site[data-locale='en'] header.header[data-public-site-header] .icon-button { border-color: rgb(255 255 255 / 28%); background: transparent; color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-search-btn:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .icon-button:hover { background: rgb(255 255 255 / 12%); }
+.site[data-locale='en'] header.header[data-public-site-header] :focus-visible { outline: 3px solid #ffc61a; outline-offset: 2px; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-menu { background: #f4f2ec; border-bottom: 1px solid #dedbd1; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-title { font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; color: #0a0b0d; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-description { color: #565b62; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a { color: #0a0b0d; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover { color: #0a0b0d; background: #ebe8df; }
 .site[data-locale='en'] .footer-skyline { display: none; }
 .site[data-locale='en'] footer.site-footer {
   background: #0a0b0d;

@@ -33,7 +33,7 @@ describe('animated traffic diagrams', () => {
       }
     }
   });
-  it('ships bounded MP4/WebM loops and WebP posters for every diagram', () => {
+  it('ships bounded MP4/WebM videos and valid posters for every diagram', () => {
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
       if (diagram.kind === 'still') {
         for (const src of [diagram.poster, diagram.mobilePoster]) {
@@ -55,12 +55,20 @@ describe('animated traffic diagrams', () => {
       }
       for (const src of [diagram.poster, diagram.mobilePoster]) {
         const bytes = fs.readFileSync(publicFile(src));
-        expect(bytes.length, src).toBeLessThan(100 * 1024);
-        expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
+        if (diagram.id === 'bus-braking-hypothetical') {
+          // Preserve the independently reviewed 3D poster originals.
+          expect(bytes.length, src).toBeLessThan(1.3 * 1024 * 1024);
+          expect(bytes.subarray(0, 8).toString('hex'), src).toBe('89504e470d0a1a0a');
+        } else {
+          expect(bytes.length, src).toBeLessThan(100 * 1024);
+          expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
+        }
       }
       expect(diagram.durationSeconds).toBeGreaterThanOrEqual(4);
       if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical', 'chain-collision-hypothetical', 'starting-entry-hypothetical'].includes(diagram.id)) {
         expect(diagram.durationSeconds).toBe(12);
+      } else if (diagram.id === 'bus-braking-hypothetical') {
+        expect(diagram.durationSeconds).toBe(16);
       } else {
         expect(diagram.durationSeconds).toBeLessThanOrEqual(diagram.id === 'flashing-red-yellow-hypothetical' ? 28 : 8);
       }
@@ -70,6 +78,12 @@ describe('animated traffic diagrams', () => {
   it('labels every locale as a hypothetical example', () => {
     const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
+      if (diagram.id === 'bus-braking-hypothetical') {
+        expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
+        expect(diagram.copy['zh-hant']?.assumption).toBe('概念示意，非本案重建');
+        expect(diagram.copy['zh-hant']?.caption).toContain('沒有呈現跌倒或受傷');
+        continue;
+      }
       if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical', 'chain-collision-hypothetical', 'starting-entry-hypothetical', 'flashing-red-yellow-hypothetical'].includes(diagram.id)) {
         expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
         expect(diagram.copy['zh-hant']?.assumption).toContain(diagram.id === 'chain-collision-hypothetical' ? '左右兩側是兩條假設時間軸' : diagram.id === 'starting-entry-hypothetical' ? '本例不是新竹或臺中判決的重建' : '假設示意，非事故重建');

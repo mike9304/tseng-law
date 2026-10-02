@@ -45,6 +45,7 @@ function post(overrides: Partial<ColumnPost> & { slug: string }): ColumnPost {
 
 const EXPECTED_ORDER: Record<SiteLocale, string[]> = {
   'zh-hant': [
+    'taiwan-bus-sudden-braking-passenger-carrier-liability',
     'taiwan-chain-rear-end-first-impact-evidence',
     'taiwan-roadside-starting-parking-exit-liability',
     'taiwan-car-door-opening-motorcycle-liability',

@@ -8,7 +8,7 @@ const base = process.env.BOARD_BASE || 'http://127.0.0.1:3000';
 const phase = process.env.BOARD_PHASE || 'local';
 const out = path.resolve(process.env.TRAFFIC_BOARD_EVIDENCE_DIR || '.omo/evidence/traffic-board');
 fs.mkdirSync(out, { recursive: true });
-const expected = { 'zh-hant': 10, ko: 4, en: 4, ja: 3 };
+const expected = { 'zh-hant': 11, ko: 4, en: 4, ja: 3 };
 const results = [];
 function check(ok, msg) { if (!ok) throw new Error(msg); }
 for (const [engine, launcher] of [['chromium',chromium], ['webkit',webkit], ['firefox',firefox]]) {

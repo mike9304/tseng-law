@@ -81,7 +81,7 @@ export default function TrafficManualVideo(props: Props) {
     <div ref={frame} className="decorative-autoplay-video" data-manual-video
       data-video-mounted={requested ? 'true' : 'false'} data-video-ready={ready ? 'true' : 'false'}>
       <picture>
-        <source media={props.mobileMediaQuery} srcSet={props.mobilePoster} type="image/webp" />
+        <source media={props.mobileMediaQuery} srcSet={props.mobilePoster} />
         <Image src={props.poster} alt={props.alt} width={props.width} height={props.height}
           sizes={props.sizes} loading="lazy" className="decorative-autoplay-video__poster" />
       </picture>

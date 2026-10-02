@@ -27,7 +27,10 @@ const EXPECTED: Record<IssueBoardLocale, number[]> = {
 
 function issueFiles(locale: IssueBoardLocale): string[] {
   const dir = path.join(process.cwd(), ISSUE_CONTENT_ROOT, locale);
-  return fs.existsSync(dir) ? fs.readdirSync(dir).filter((file) => file.endsWith('.md')).sort() : [];
+  // Scoped to the 2026-09-30 batch; later batches have their own issue-board-YYYYMMDD tests.
+  return fs.existsSync(dir)
+    ? fs.readdirSync(dir).filter((file) => file.startsWith('ISSUE-20260930-') && file.endsWith('.md')).sort()
+    : [];
 }
 
 const cases = ISSUE_BOARD_LOCALES.flatMap((locale) =>

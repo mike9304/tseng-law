@@ -156,7 +156,7 @@ describe('reviewed column videos in the traffic board', () => {
   it('includes the native video in its reviewed language and source only', () => {
     const article = post({ slug: 'taiwan-traffic-accident-procedure', tags: ['traffic-procedure'] });
     expect(toTrafficBoardItem(article, 'ko', 'column')?.hasVideo).toBe(true);
-    expect(toTrafficBoardItem(article, 'en', 'column')?.hasVideo).toBe(false);
+    expect(toTrafficBoardItem(article, 'en', 'column')?.hasVideo).toBe(true);
     expect(toTrafficBoardItem(article, 'ko', 'issue')?.hasVideo).toBe(false);
     const items = buildTrafficCollection('ko', { columns: [article], issues: [] });
     expect(filterTrafficBoardItems(items, { q: '', subject: null, video: true })).toHaveLength(1);
@@ -192,11 +192,11 @@ describe('loadTrafficCollection (published files)', () => {
     expect(bySlug.get('taiwan-overtaking-accident-liability')?.aiAuthored).toBe(false);
     expect(bySlug.get('taiwan-overtaking-accident-liability')?.hasVideo).toBe(true);
     expect(bySlug.get('taiwan-accident-police-records')?.hasVideo).toBe(false);
-    expect(bySlug.get('taiwan-traffic-accident-procedure')?.hasVideo).toBe(false);
+    expect(bySlug.get('taiwan-traffic-accident-procedure')?.hasVideo).toBe(true);
     for (const item of items) {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
-      expect(item.hasVideo, item.slug).toBe(Boolean(diagram && diagram.kind !== 'still'));
+      expect(item.hasVideo, item.slug).toBe(item.slug === 'taiwan-traffic-accident-procedure' || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');
     }
   });

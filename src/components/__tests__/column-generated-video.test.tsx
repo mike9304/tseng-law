@@ -21,9 +21,31 @@ describe('reviewed column videos', () => {
   });
 
   it('does not attach a video to an unreviewed language, article or issue with the same slug', () => {
-    expect(getColumnGeneratedVideo('en', 'taiwan-traffic-accident-procedure')).toBeNull();
+    expect(getColumnGeneratedVideo('fr', 'taiwan-traffic-accident-procedure')).toBeNull();
     expect(getColumnGeneratedVideo('ko', 'taiwan-overtaking-accident-liability')).toBeNull();
     expect(getColumnGeneratedVideo('ko', 'taiwan-traffic-accident-procedure', 'issue')).toBeNull();
     expect(renderToStaticMarkup(<ColumnGeneratedVideo locale="ko" slug="unrelated-article" />)).toBe('');
+  });
+
+  it.each([
+    ['en', 'not actual accident footage'],
+    ['zh-hant', '非真實事故影像'],
+    ['ja', '実際の事故映像ではありません'],
+  ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
+    expect(html).toContain(`rear-end-simulation-v2-${locale}.mp4`);
+    expect(html).toContain(disclosure);
+    expect(html).not.toContain('실제 사고 기록');
+  });
+
+  it.each([
+    ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v2-zh-hant', '橙色車'],
+    ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-v1-zh-hant', '銀色中間車'],
+  ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="zh-hant" slug={slug} />);
+    expect(html).toContain(`${id}.mp4`);
+    expect(html).toContain(detail);
+    expect(getColumnGeneratedVideo('en', slug)).toBeNull();
+    expect(getColumnGeneratedVideo('zh-hant', slug, 'issue')).toBeNull();
   });
 });

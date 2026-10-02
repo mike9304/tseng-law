@@ -99,11 +99,16 @@ describe('TrafficBoard SSR', () => {
     expect(html).toContain('&lt;script&gt;');
   });
 
-  it('marks video only for playable diagrams', async () => {
+  it('marks playable diagrams and reviewed generated scenes as videos', async () => {
     const html = await render('ja');
     expect(html.match(/data-traffic-board-row/g)).toHaveLength(3);
-    // ja: only the overtaking column has a registered video diagram.
-    expect(html.match(/data-traffic-board-video/g)).toHaveLength(1);
+    // ja: overtaking has a video diagram; accident procedure has a reviewed scene.
+    expect(html.match(/data-traffic-board-video/g)).toHaveLength(2);
+    const filtered = await render('ja', { video: '1' });
+    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(2);
+    expect(filtered).toContain('href="/ja/columns/taiwan-overtaking-accident-liability"');
+    expect(filtered).toContain('href="/ja/columns/taiwan-traffic-accident-procedure"');
+    expect(filtered).not.toContain('href="/ja/columns/taiwan-accident-police-records"');
   });
 });
 

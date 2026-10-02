@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+// Package a reviewed scene for direct playback. This does not approve or register it.
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import sharp from 'sharp';
+
+const args = Object.fromEntries(process.argv.slice(2).map(arg => {
+  const at = arg.indexOf('=');
+  if (!arg.startsWith('--') || at < 3) throw new Error('Use --name=value arguments');
+  return [arg.slice(2, at), arg.slice(at + 1)];
+}));
+const labels = {
+  ko: ['AI 재현 · 실제 사고 영상 아님', 'AI-GENERATED SIMULATION', 'Apple SD Gothic Neo'],
+  en: ['AI-GENERATED SCENE', 'Not real accident footage', 'Arial'],
+  'zh-hant': ['AI 情境示意 · 非真實事故影像', 'AI-GENERATED SIMULATION', 'PingFang TC'],
+  ja: ['AI生成の架空映像 · 実際の事故映像ではありません', 'AI-GENERATED SIMULATION', 'Hiragino Sans'],
+};
+if (!args.input || !/^[a-z0-9][a-z0-9-]+$/.test(args.id || '') || !labels[args.locale]) {
+  throw new Error('--input=<local mp4> --id=<versioned-asset-id> --locale=<ko|en|zh-hant|ja> required');
+}
+const input = path.resolve(args.input);
+const stem = `${args.id}-${args.locale}`;
+const publicRoot = path.resolve(args.public || 'public');
+const output = path.join(publicRoot, 'videos/columns', `${stem}.mp4`);
+const poster = path.join(publicRoot, 'images/column-videos', `${stem}.jpg`);
+await fs.access(input);
+for (const file of [output, poster]) {
+  try { await fs.access(file); throw new Error(`Refusing to overwrite an existing asset: ${file}`); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
+  await fs.mkdir(path.dirname(file), { recursive: true });
+}
+const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'column-video-label-'));
+try {
+  const [title, subtitle, font] = labels[args.locale];
+  const overlay = path.join(temp, 'label.png');
+  const svg = `<svg width="780" height="92" xmlns="http://www.w3.org/2000/svg"><rect width="780" height="92" rx="7" fill="#101714" fill-opacity="0.8"/><text x="20" y="36" font-family="${font}, sans-serif" font-size="26" fill="white">${title}</text><text x="20" y="69" font-family="Arial, sans-serif" font-size="19" fill="white">${subtitle}</text></svg>`;
+  await sharp(Buffer.from(svg)).png().toFile(overlay);
+  execFileSync('ffmpeg', ['-v', 'error', '-i', input, '-i', overlay, '-filter_complex', '[0:v:0][1:v]overlay=24:24:format=auto,format=yuv420p[v]', '-map', '[v]', '-an', '-c:v', 'libx264', '-crf', '22', '-preset', 'slow', '-movflags', '+faststart', output], { stdio: 'inherit' });
+  execFileSync('ffmpeg', ['-v', 'error', '-i', output, '-frames:v', '1', '-q:v', '3', poster], { stdio: 'inherit' });
+  const probe = JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration,size:stream=index,codec_name,codec_type,width,height,nb_frames', '-of', 'json', output], { encoding: 'utf8' }));
+  if (probe.streams.length !== 1 || probe.streams[0].codec_type !== 'video') throw new Error('Expected a silent video-only output');
+  const sha256 = crypto.createHash('sha256').update(await fs.readFile(output)).digest('hex');
+  const result = { id: stem, input, output, poster, sha256, label: title, ...probe, status: 'packaged-awaiting-final-visual-review' };
+  if (args.report) await fs.writeFile(path.resolve(args.report), JSON.stringify(result, null, 2) + '\n');
+  console.log(JSON.stringify(result, null, 2));
+} finally {
+  await fs.rm(temp, { recursive: true, force: true });
+}

@@ -4,6 +4,7 @@ import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
+import { ZH_VIDEO_CONTROL_ICONS } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';
@@ -38,6 +39,7 @@ export default function VideoChannel({ locale }: { locale: SiteLocale }) {
                   height={420}
                   sizes="(max-width: 800px) 100vw, 50vw"
                   controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
+                  controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
                 />
               ) : (
                 <Image
@@ -73,6 +75,7 @@ export default function VideoChannel({ locale }: { locale: SiteLocale }) {
                     height={80}
                     sizes="120px"
                     controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
+                    controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
                   />
                 </div>
                 <div>

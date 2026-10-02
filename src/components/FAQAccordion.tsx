@@ -6,6 +6,7 @@ import { chromeSiteLocale } from '@/lib/public-site-chrome';
 import type { PublicLocale8 } from '@/lib/public-guidance';
 import type { FAQItem } from '@/data/faq-content';
 import SectionLabel from '@/components/SectionLabel';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import styles from './FAQAccordion.module.css';
@@ -82,7 +83,7 @@ export default function FAQAccordion({
                   >
                     <span>{formatFaqQuestion(item.question)}</span>
                     <span className={`faq-arrow ${styles.indicator}`} aria-hidden>
-                      {isOpen ? '-' : '+'}
+                      {locale === 'zh-hant' ? <ZhHantMonoIcon name={isOpen ? 'minus' : 'plus'} size={20} /> : isOpen ? '-' : '+'}
                     </span>
                   </button>
                 </h3>

@@ -1,5 +1,6 @@
 import type { SiteLocale } from '@/lib/locales';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
+import { ZH_VIDEO_CONTROL_ICONS } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import {
   DECORATIVE_VIDEO_CONTROL_LABELS,
   type DecorativeVideoControlLabels,
@@ -162,6 +163,7 @@ export default function HomeCaseResultsSplit({
           sizes="(max-width: 900px) 100vw, 52vw"
           loop={false}
           controlLabels={controlLabels}
+          controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
         />
       </div>
       <div className="split-content home-results-content" data-builder-node-key="copy">

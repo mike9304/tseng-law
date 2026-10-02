@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import { chromeSiteLocale } from '@/lib/public-site-chrome';
 import type { PublicLocale8 } from '@/lib/public-guidance';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 
 const scrollTopLabels: Record<SiteLocale, string> = {
   ko: '상단으로 이동',
@@ -66,7 +67,7 @@ export default function ScrollTopButton({ locale }: { locale: PublicLocale8 }) {
         })
       }
     >
-      ↑
+      {locale === 'zh-hant' ? <ZhHantMonoIcon name="arrow-up" size={20} /> : '↑'}
     </button>
   );
 }

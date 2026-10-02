@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from '../ZhHantDesign.module.css';
 
 /**
@@ -56,7 +57,7 @@ export default function ZhHantAudienceDoors() {
             <p className={styles.doorText}>{door.text}</p>
             <p className={styles.doorLinks}>
               {door.links.map((link) => (
-                <Link key={link.href} href={link.href}>{link.label}<span aria-hidden> ›</span></Link>
+                <Link key={link.href} href={link.href}>{link.label}<ZhHantMonoIcon name="chevron-right" size={14} strokePx={1.75} className={styles.trail} /></Link>
               ))}
             </p>
           </li>

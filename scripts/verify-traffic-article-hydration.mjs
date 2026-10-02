@@ -53,7 +53,7 @@ const proxy = http.createServer((request, response) => {
 await new Promise((resolve) => proxy.listen(0, '127.0.0.1', resolve));
 const base = `http://127.0.0.1:${proxy.address().port}`;
 const check = (ok, message) => { if (!ok) throw new Error(message); };
-const slugs = ['taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
+const slugs = ['taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
 try {
   for (const [engine, launcher] of [['chromium', chromium], ['firefox', firefox]]) {
     const browser = await launcher.launch({ headless: true });
@@ -80,7 +80,7 @@ try {
           const schema = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(n => JSON.parse(n.textContent)).find(n => n['@type'] === 'Article'));
           check(schema.headline === title, 'Article structured data');
           check(await page.locator('[data-column-byline=ai]').count() === 1, 'AI byline');
-          step = 'reload'; await page.reload({ waitUntil: 'networkidle' }); await record();
+          step = 'reload'; await Promise.all([page.waitForEvent('load'), page.evaluate(() => window.location.reload())]); await record();
           check(row.visits.at(-1).title === title, 'reload preserves title');
           step = 'hub'; await page.locator('.blog-hero a[href="/zh-hant/traffic-accidents#articles"]').click();
           await page.waitForURL('**/zh-hant/traffic-accidents#articles'); await record();
@@ -104,13 +104,18 @@ try {
         check(response.status() === 200, 'noJS HTTP');
         check(await page.locator('.blog-body').isVisible() && (await page.locator('.blog-body').innerText()).length > 1000, 'visible server article without JavaScript');
         check(await page.locator('script[type="application/ld+json"]').count() >= 2, 'server structured data');
-        check(await page.locator('[data-traffic-diagram] img').first().isVisible(), 'server poster');
-        await page.locator('[data-traffic-diagram] summary').click();
-        check(await page.locator('[data-traffic-diagram] details').getAttribute('open') !== null, 'native stages without JavaScript');
-        if (slug === 'taiwan-accident-stop-dialogue-hit-and-run-evidence') {
-          check(await page.locator('[data-traffic-diagram-description]').isVisible(), 'static timeline full text without JavaScript');
-          check(await page.locator('[data-traffic-diagram] video').count() === 0, 'no empty video player');
-        } else check(await page.locator('[data-traffic-diagram-stages] img').count() === 4, 'four server stages');
+        if (slug === 'taiwan-borrowed-car-owner-driver-key-custody-liability') {
+          check(await page.locator('.blog-body table tbody tr').count() === 4, 'four server-rendered responsibility roles');
+          check(await page.locator('video, [data-traffic-diagram]').count() === 0, 'no unapproved media');
+        } else {
+          check(await page.locator('[data-traffic-diagram] img').first().isVisible(), 'server poster');
+          await page.locator('[data-traffic-diagram] summary').click();
+          check(await page.locator('[data-traffic-diagram] details').getAttribute('open') !== null, 'native stages without JavaScript');
+          if (slug === 'taiwan-accident-stop-dialogue-hit-and-run-evidence') {
+            check(await page.locator('[data-traffic-diagram-description]').isVisible(), 'static timeline full text without JavaScript');
+            check(await page.locator('[data-traffic-diagram] video').count() === 0, 'no empty video player');
+          } else check(await page.locator('[data-traffic-diagram-stages] img').count() === 4, 'four server stages');
+        }
         row.pass = true;
       } catch (error) { row.error = String(error); }
       results.push(row); console.log(JSON.stringify(row)); await context.close();

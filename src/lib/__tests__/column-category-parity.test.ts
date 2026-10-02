@@ -55,7 +55,7 @@ describe('column category parity with English', () => {
       const fileCount = readdirSync(dir).filter((file) => file.endsWith('.md')).length;
       expect(posts.length).toBe(fileCount);
       expect(posts.length).toBeGreaterThan(0);
-      const translated = posts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
+      const translated = posts.filter((post) => !isNativeOrExpertiseNativeSlug(locale, post.slug));
       const mismatches = translated
         .filter((post) => english.get(post.slug) !== post.category)
         .map((post) => `${post.slug}: ${post.category} (en: ${english.get(post.slug)})`);

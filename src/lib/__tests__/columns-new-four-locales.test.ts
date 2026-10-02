@@ -14,7 +14,7 @@ import { getLanguageAlternates } from '@/lib/seo';
 import {
   expertiseSlugsFor,
   isExpertiseColumnSlug20260930,
-  isNativeLocaleColumnSlug,
+  isNativeOrExpertiseNativeSlug,
 } from './native-locale-columns';
 
 const GYM_SLUG = 'taiwan-gym-injury-lawsuit';
@@ -175,7 +175,7 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
       GAP_COLUMN_SLUGS_20260929.length + expertiseSlugsFor('ko').length,
     );
     // Vietnamese-only native columns have no Korean counterpart by design.
-    const translatedViPosts = viPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
+    const translatedViPosts = viPosts.filter((post) => !isNativeOrExpertiseNativeSlug('vi', post.slug));
     expect(translatedViPosts.length + koOnlyGapSlugs.length).toBe(koPosts.length);
     expect(viPosts.some((post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug))).toBe(false);
     for (const viPost of translatedViPosts) {

@@ -190,6 +190,12 @@ export const DOMESTIC_ZH_COLUMN_FILES_20261001 = {
   ],
 } as const;
 
+/** Two independently authored audience columns; neither has a Korean twin. */
+export const COUNTRY_COLUMN_FILES_20261002 = {
+  vi: ['070-taiwan-employer-broker-passport-arc-return.md'],
+  ja: ['071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md'],
+} as const;
+
 /** Every 2026-09-30 column file of `locale` (041–048 expertise + 050 traffic) plus the 2026-10-01 051, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
@@ -199,6 +205,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((EXPERTISE_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -221,6 +228,7 @@ export function expertiseSlugsFor(locale: string): string[] {
 export function archiveLeadSlugsFor(locale: string): string[] {
   const newest: readonly string[] = [
     ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   const newer: readonly string[] = [
     ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -236,7 +244,10 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Publication date of an archive-lead slug: 2026-10-01 for the newer column(s), otherwise 2026-09-30. */
 export function archiveLeadPublicationDate(slug: string): string {
-  const newest = Object.values(EXPERTISE_COLUMN_FILES_20261002).flat().map(slugOf);
+  const newest = [
+    ...Object.values(EXPERTISE_COLUMN_FILES_20261002),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261002),
+  ].flat().map(slugOf);
   if (newest.includes(slug)) return '2026-10-02';
   const newer = [
     ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
@@ -272,6 +283,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(EXPERTISE_COLUMN_FILES_20261001),
     ...Object.values(DOMESTIC_ZH_COLUMN_FILES_20261001),
     ...Object.values(EXPERTISE_COLUMN_FILES_20261002),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261002),
   ].flat().map(slugOf),
 );
 

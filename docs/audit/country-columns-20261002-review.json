@@ -1,0 +1,519 @@
+{
+  "date": "2026-10-02",
+  "writer": {
+    "surface": "local Codex CLI 0.159.2",
+    "runtime_model": "gpt-6-astra",
+    "authentication": "existing ChatGPT subscription"
+  },
+  "reviewer": {
+    "surface": "local Claude Code 2.1.287",
+    "runtime_model": "claude-opus-5-5",
+    "authentication": "existing claude.ai Max subscription"
+  },
+  "approved_files": [
+    {
+      "locale": "vi",
+      "file": "src/content/columns-vi/070-taiwan-employer-broker-passport-arc-return.md",
+      "sha256": "9340e02fe85b847cc7576f2359e8eb51639e5ab38e3550e65f2e13b3c902e04a",
+      "writer_model": "gpt-6-astra",
+      "reviewer_model": "claude-opus-5-5",
+      "verdict": "APPROVE",
+      "round": "r2",
+      "review_response_sha256": "b370091afa19ed3c8a45dd5d8a5816823db68071cfdc5c85f8a811f1652503c6"
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md",
+      "sha256": "906f7a9d0f43a088611c64f73001d78fbea4813a45c9e69e41d03724912f414a",
+      "writer_model": "gpt-6-astra",
+      "reviewer_model": "claude-opus-5-5",
+      "verdict": "APPROVE",
+      "round": "r3",
+      "review_response_sha256": "d93181277bf9beaad45be83b816440b37b4572beee03a676e7e4db9eac0dfcea"
+    }
+  ],
+  "review_r1": {
+    "reviewer_role": "independent source and editorial reviewer",
+    "articles": [
+      {
+        "locale": "vi",
+        "slug": "taiwan-employer-broker-passport-arc-return",
+        "title": "Khi chủ thuê hoặc môi giới ở Đài Loan không trả hộ chiếu, thẻ ARC",
+        "summary": "Luật Dịch vụ việc làm quy định riêng cho chủ thuê và công ty môi giới. Giấy tờ chỉ được giữ tạm thời khi hỗ trợ làm thủ tục và phải có sự đồng ý của người lao động; vi phạm bị phạt 60.000–300.000 Đài tệ. Có thể gọi 1955 miễn phí để hỏi trước hoặc khiếu nại.",
+        "topic": "labor",
+        "read_time": "3 phút đọc",
+        "body": "Theo [Điều 57, điểm 8 Luật Dịch vụ việc làm (就業服務法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57), chủ thuê không được giữ trái phép hoặc chiếm đoạt hộ chiếu, giấy tờ cư trú hay tài sản của người lao động nước ngoài mà mình thuê.\n\nCông ty môi giới việc làm tư nhân và nhân viên của công ty chịu quy định riêng tại [Điều 40, khoản 1, điểm 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=40): khi làm dịch vụ việc làm, họ không được giữ giấy phép, giấy tờ tùy thân hoặc giấy tờ liên quan trái ý muốn của người lao động hoặc chủ thuê.\n\n## Giao giấy tờ để làm thủ tục không có nghĩa là để họ giữ lâu dài\n\nTheo [hướng dẫn của Cục Phát triển lực lượng lao động (WDA)](https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39983afcf0199a7d950f5673e), bạn có quyền tự giữ hộ chiếu, thẻ cư trú (ARC) và giấy phép làm việc của mình. Chủ thuê hoặc môi giới không được giữ các giấy tờ này nếu bạn không đồng ý. Họ chỉ được giữ tạm thời khi hỗ trợ những việc như làm thủ tục cư trú hoặc khám sức khỏe, và phải có sự đồng ý của bạn. Vì vậy, đồng ý giao giấy tờ cho một thủ tục không có nghĩa là đồng ý để họ giữ lâu dài.\n\nKhi giao bản gốc, bạn nên hỏi rõ ai nhận, dùng cho thủ tục nào và dự kiến khi nào trả. Nếu đã giao mà chưa nhận lại, hãy yêu cầu trả bản gốc; nếu họ nói vẫn cần giữ, hãy hỏi thủ tục đang ở bước nào.\n\n## Khi yêu cầu trả lại bị từ chối\n\nBạn nên ghi lại người đang giữ giấy tờ, ngày giao, lý do họ nêu, thời điểm bạn yêu cầu trả và câu trả lời nhận được. Nếu công ty môi giới nói chủ thuê đang giữ, hoặc ngược lại, hãy ghi rõ ai đã nói điều đó; khi chưa biết ai giữ thì không cần đoán.\n\nNếu gửi yêu cầu bằng tin nhắn, hãy nêu rõ bạn muốn nhận lại bản gốc hộ chiếu hay thẻ ARC. Giữ lại các tin nhắn, giấy giao nhận hoặc giấy đồng ý mà bạn đang có. Nếu trước đó chỉ trao đổi bằng lời, bạn có thể tự ghi lại ngày và nội dung, tách phần mình nhớ với phần có tin nhắn xác nhận.\n\nVi phạm Điều 57, điểm 8 hoặc Điều 40, khoản 1, điểm 10 bị phạt tiền từ 60.000 đến 300.000 Đài tệ theo [Điều 67, khoản 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=67). Người làm dịch vụ việc làm mà không có giấy phép, nếu giữ giấy tờ trái ý muốn như mô tả tại Điều 40, khoản 1, điểm 10, cũng bị phạt theo khung này (khoản 2). Đây là tiền phạt hành chính nộp cho nhà nước, không phải tiền trả cho người lao động; việc bên kia bị phạt cũng không tự đưa giấy tờ trở lại tay bạn. Khi trình bày sự việc, hãy nói rõ bạn muốn nhận lại bản gốc.\n\n## Có thể hỏi 1955 trước khi khiếu nại\n\n1955 là đường dây tư vấn và khiếu nại miễn phí do Bộ Lao động thiết lập. Theo [hướng dẫn của WDA về 1955](https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b334636019b34927f8003da), nếu chưa rõ quyền lợi của mình có bị xâm phạm hay không và chưa muốn khiếu nại ngay, bạn có thể gọi 1955 hoặc dùng dịch vụ tư vấn qua chat trực tuyến trước. Không cần có đủ các ghi chép nêu trên mới được hỏi. Khi gọi, hãy nêu loại giấy tờ bị giữ, người giữ nếu biết, việc bạn đã yêu cầu trả và phản hồi nhận được.\n\nHướng dẫn này cũng nêu rằng theo luật lao động, thông tin khiếu nại phải được giữ bí mật; công chức tự ý tiết lộ có thể bị xử lý hành chính, hình sự và phải bồi thường dân sự nếu gây thiệt hại. Nếu lo chủ thuê hoặc môi giới biết việc mình liên hệ, bạn có thể nói rõ lo ngại đó khi gọi.\n\nYêu cầu trả giấy tờ không đồng nghĩa với được chấp thuận chuyển chủ thuê hoặc gia hạn cư trú. Nếu đang có vấn đề về hợp đồng, giấy phép làm việc hay hạn cư trú, hãy hỏi riêng từng việc; khiếu nại về giấy tờ không thay thế thủ tục hoặc thời hạn cư trú.",
+        "verdict": "APPROVE_REVISED",
+        "findings": [
+          {
+            "severity": "minor",
+            "before": "Chủ thuê hoặc môi giới giữ hộ chiếu, thẻ ARC: yêu cầu trả lại giấy tờ ở Đài Loan",
+            "problem": "Title shape (topic + colon + task) repeats the colon pattern used by all three recent VI titles (038, 039, 040). Content is accurate; the form is the repeated element.",
+            "after": "Khi chủ thuê hoặc môi giới ở Đài Loan không trả hộ chiếu, thẻ ARC",
+            "preserved": "Both actors (employer, broker), both documents, Taiwan jurisdiction, the return problem; no broader claim than the body."
+          },
+          {
+            "severity": "minor",
+            "before": "Chủ thuê không được giữ trái phép hoặc chiếm giữ hộ chiếu, giấy tờ cư trú của người lao động nước ngoài do mình tuyển dụng.",
+            "problem": "§57(8) reads 非法扣留或侵占所聘僱外國人之護照、居留證件或財物. 侵占 is misappropriation (chiếm đoạt), not mere holding (chiếm giữ); 財物 (property) was omitted; 所聘僱 means employed, which 'tuyển dụng' (recruit) renders loosely. The citation also sat in a separate sentence.",
+            "after": "Theo [Điều 57, điểm 8 Luật Dịch vụ việc làm (就業服務法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57), chủ thuê không được giữ trái phép hoặc chiếm đoạt hộ chiếu, giấy tờ cư trú hay tài sản của người lao động nước ngoài mà mình thuê.",
+            "preserved": "Employer as actor; 'unlawful' (非法) qualifier kept, so not every handover is a violation; prohibition modality (không được = 不得)."
+          },
+          {
+            "severity": "minor",
+            "before": "Quy định này nằm tại [Điều 57, điểm 8 Luật Dịch vụ việc làm của Đài Loan (就業服務法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57).",
+            "problem": "Citation-only sentence; it duplicates the rule sentence's reference and adds no fact. This is the empty duplication in the first two paragraphs.",
+            "after": "deleted (citation merged into the first sentence)",
+            "preserved": "Statute name, Chinese title, article, point and link all kept in the merged sentence."
+          },
+          {
+            "severity": "minor",
+            "before": "Đối với công ty môi giới việc làm tư nhân và nhân viên của công ty, luật cấm giữ giấy phép, giấy tờ tùy thân hoặc giấy tờ liên quan trái với ý muốn của người lao động khi thực hiện dịch vụ việc làm.",
+            "problem": "§40(1)(10) reads 違反雇主或勞工之意思; the draft dropped the employer's will. The separate follow-up citation sentence also duplicated the reference.",
+            "after": "Công ty môi giới việc làm tư nhân và nhân viên của công ty chịu quy định riêng tại [Điều 40, khoản 1, điểm 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=40): khi làm dịch vụ việc làm, họ không được giữ giấy phép, giấy tờ tùy thân hoặc giấy tờ liên quan trái ý muốn của người lao động hoặc chủ thuê.",
+            "preserved": "Actor distinction (agency and staff vs employer under §57); the 'against will' standard rather than 'unlawful'; scope limited to employment-service business; three document categories."
+          },
+          {
+            "severity": "minor",
+            "before": "Đây là quy định riêng tại [Điều 40, khoản 1, điểm 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=40).",
+            "problem": "Citation-only sentence, duplicating the reference.",
+            "after": "deleted (merged into the agency rule sentence)",
+            "preserved": "Article, paragraph, point, link, and the 'separate rule' framing ('chịu quy định riêng')."
+          },
+          {
+            "severity": "minor",
+            "before": "Bạn có quyền tự giữ bản gốc hộ chiếu và thẻ cư trú ARC.",
+            "problem": "The WDA notice lists passport, residence certificate and employment permit (聘僱許可函); the permit was omitted. The source for the right was not attributed in the sentence itself.",
+            "after": "Theo [hướng dẫn của Cục Phát triển lực lượng lao động (WDA)](https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39983afcf0199a7d950f5673e), bạn có quyền tự giữ hộ chiếu, thẻ cư trú (ARC) và giấy phép làm việc của mình. Chủ thuê hoặc môi giới không được giữ các giấy tờ này nếu bạn không đồng ý.",
+            "preserved": "The worker's right to keep their own documents, now attributed to WDA guidance rather than presented as statute text; the no-consent prohibition from the same notice.",
+            "source_url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39983afcf0199a7d950f5673e"
+          },
+          {
+            "severity": "minor",
+            "before": "Theo [hướng dẫn của Cục Phát triển lực lượng lao động (WDA)](https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39983afcf0199a7d950f5673e), chủ thuê hoặc môi giới chỉ được tạm giữ để hỗ trợ thủ tục cư trú, khám sức khỏe và phải được bạn đồng ý.",
+            "problem": "Source says 協助辦理居留及健康檢查等; the 等 makes the list non-exhaustive. The draft read as a closed list of two purposes.",
+            "after": "Họ chỉ được giữ tạm thời khi hỗ trợ những việc như làm thủ tục cư trú hoặc khám sức khỏe, và phải có sự đồng ý của bạn.",
+            "preserved": "All three conditions together: assistance purpose, short-term (短暫), and the worker's consent."
+          },
+          {
+            "severity": "minor",
+            "before": "Chữ ký đồng ý giao giấy tờ cho một thủ tục không cho phép họ giữ vô thời hạn hoặc mặc nhiên từ chối trả lại.",
+            "problem": "It assumes a signed consent exists. 'Mặc nhiên từ chối trả lại' states a legal conclusion the sources do not address. The supportable point is that WDA allows only short-term holding.",
+            "after": "Vì vậy, đồng ý giao giấy tờ cho một thủ tục không có nghĩa là đồng ý để họ giữ lâu dài.",
+            "preserved": "Distinction between voluntary temporary handling and retention beyond that; no new deadline invented."
+          },
+          {
+            "severity": "minor",
+            "before": "Đây là cách làm rõ mục đích và thời gian giữ giấy tờ, không phải thời hạn trả giấy tờ do bài viết tự đặt ra.",
+            "problem": "Metacommentary about the article's authoring that does not help the reader. The questions themselves do not imply a statutory deadline, and the supplied sources state none.",
+            "after": "deleted",
+            "preserved": "No return deadline is stated anywhere in the body; 'dự kiến khi nào trả' is framed as a question to the holder."
+          },
+          {
+            "severity": "material",
+            "before": "Những ghi chép này là gợi ý để trình bày sự việc rõ hơn, không phải danh mục giấy tờ bắt buộc phải có đủ mới được hỏi hoặc khiếu nại.",
+            "problem": "It implies an assurance about what a formal complaint does or does not require, which no supplied source covers. The 1955 notice supports only that a worker may consult first when unsure.",
+            "after": "Không cần có đủ các ghi chép nêu trên mới được hỏi.",
+            "preserved": "Records stay advisory; reassurance is limited to consulting 1955, which the WDA 1955 notice supports.",
+            "source_url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b334636019b34927f8003da"
+          },
+          {
+            "severity": "material",
+            "before": "Hành vi vi phạm các quy định nêu trên có thể bị phạt hành chính từ 60.000 đến 300.000 Đài tệ theo [Điều 67](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=67).",
+            "problem": "§67(1) uses 處 (shall be fined); 'có thể' weakens the statutory modality. The draft also omitted §67(2), which applies the same range to unlicensed persons doing employment-service business who violate §40(1)(10). That matters for workers dealing with informal intermediaries.",
+            "after": "Vi phạm Điều 57, điểm 8 hoặc Điều 40, khoản 1, điểm 10 bị phạt tiền từ 60.000 đến 300.000 Đài tệ theo [Điều 67, khoản 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=67). Người làm dịch vụ việc làm mà không có giấy phép, nếu giữ giấy tờ trái ý muốn như mô tả tại Điều 40, khoản 1, điểm 10, cũng bị phạt theo khung này (khoản 2).",
+            "preserved": "NT$60,000–300,000 range, both predicate provisions, administrative fine (罰鍰); no specific amount predicted for any case.",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=67"
+          },
+          {
+            "severity": "minor",
+            "before": "Đây là tiền phạt đối với bên vi phạm, không phải khoản tiền tự động trả cho người lao động.",
+            "problem": "'Tự động' implies the fine might sometimes go to the worker. A 罰鍰 is an administrative fine payable to the state.",
+            "after": "Đây là tiền phạt hành chính nộp cho nhà nước, không phải tiền trả cho người lao động; việc bên kia bị phạt cũng không tự đưa giấy tờ trở lại tay bạn.",
+            "preserved": "Fine is distinct from compensation; worker receives none of it; the penalty does not by itself return the documents."
+          },
+          {
+            "severity": "minor",
+            "before": "Khi trình bày sự việc, bạn nên nói rõ yêu cầu nhận lại bản gốc; việc xử phạt và việc trả giấy tờ là những vấn đề cần phân biệt.",
+            "problem": "The second clause restates the preceding sentence abstractly.",
+            "after": "Khi trình bày sự việc, hãy nói rõ bạn muốn nhận lại bản gốc.",
+            "preserved": "Advice to state the return request explicitly; the penalty/return distinction now sits in the preceding sentence."
+          },
+          {
+            "severity": "material",
+            "before": "1955 là đường dây miễn phí của Bộ Lao động, có hỗ trợ tiếng Việt để tư vấn và tiếp nhận khiếu nại.",
+            "problem": "The linked WDA 1955 notice supports 'free', 'Ministry of Labor', and 'consultation plus complaint'. It is published in Vietnamese but does not state that the hotline serves callers in Vietnamese. A source-linked sentence should not claim more than its source.",
+            "after": "1955 là đường dây tư vấn và khiếu nại miễn phí do Bộ Lao động thiết lập.",
+            "preserved": "Free, Ministry of Labor, dual consultation/complaint function, consult-before-complaint option (with online chat added from the same notice).",
+            "source_url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b334636019b34927f8003da"
+          },
+          {
+            "severity": "minor",
+            "before": "Nếu lo chủ thuê hoặc môi giới biết việc mình liên hệ, bạn có thể hỏi cách xử lý thông tin và nêu cụ thể điều mình lo ngại.",
+            "problem": "The cited 1955 notice directly addresses this worry: complaint information must be kept confidential, and leaking officials face liability. The draft omitted that sourced fact.",
+            "after": "Hướng dẫn này cũng nêu rằng theo luật lao động, thông tin khiếu nại phải được giữ bí mật; công chức tự ý tiết lộ có thể bị xử lý hành chính, hình sự và phải bồi thường dân sự nếu gây thiệt hại. Nếu lo chủ thuê hoặc môi giới biết việc mình liên hệ, bạn có thể nói rõ lo ngại đó khi gọi.",
+            "preserved": "Stated as a legal duty ('phải được giữ bí mật'), not a guarantee that the other side will never learn; no outcome promised.",
+            "source_url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b334636019b34927f8003da"
+          },
+          {
+            "severity": "minor",
+            "before": "Tác giả: legal-ai-assistant (AI). Ngày đăng: 02/10/2026.",
+            "problem": "Technical byline repeats what the site's localized AI author box and publication date already show.",
+            "after": "deleted",
+            "preserved": "AI authorship stays disclosed via frontmatter author: legal-ai-assistant and the site AI author box; publication date 2026-10-02 stays in frontmatter. No attorney identity added."
+          }
+        ],
+        "source_checks": [
+          {
+            "claim": "Employer may not unlawfully withhold or misappropriate a foreign employee's passport, residence documents or property.",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57",
+            "assessment": "Accurate after revision. §57 opener 雇主聘僱外國人不得有下列情事 with point 八 非法扣留或侵占所聘僱外國人之護照、居留證件或財物. Modality 不得 is rendered as 'không được'. The 非法 qualifier is preserved."
+          },
+          {
+            "claim": "Private employment-service agencies and staff may not retain permit, identity or related documents against the will of the employer or worker.",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=40",
+            "assessment": "Accurate after revision. Point 十: 違反雇主或勞工之意思，留置許可文件、身分證件或其他相關文件; subject 私立就業服務機構及其從業人員從事就業服務業務. Point 三 (job-seeker ID documents) is not relied on. The body quotes no Chinese statutory text beyond names; the paraphrase matches the supplied wording."
+          },
+          {
+            "claim": "NT$60,000–300,000 fine for §57(8) and §40(1)(10); same for unlicensed service providers violating §40(1)(10).",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=67",
+            "assessment": "Accurate. §67(1) lists 第四十條第一項…第十款 and 第五十七條…第八款, 處新臺幣六萬元以上三十萬元以下罰鍰. §67(2) covers 未經許可從事就業服務業務違反第四十條第一項…第十款. The modality is mandatory (處), so 'có thể' was removed."
+          },
+          {
+            "claim": "The fine is paid to the state, not to the worker.",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=67",
+            "assessment": "Follows from the nature of 罰鍰 as an administrative fine. §67 does not name a payee in the supplied text, so this rests on the legal character of the sanction rather than an express sentence."
+          },
+          {
+            "claim": "Worker's right to keep passport, ARC and employment permit; temporary holding only when assisting with residence, health check etc., and only with consent.",
+            "source_url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39983afcf0199a7d950f5673e",
+            "assessment": "Accurate after revision. WDA LINE@ notice (published 2025-10-08, updated 2026-10-02) lists 護照、居留證及聘僱許可函, 只有在協助辦理居留及健康檢查等，才可以短暫保管，且還要經過本人同意. It is guidance, so it is attributed to WDA rather than to statute. It sets no day count."
+          },
+          {
+            "claim": "1955 is a free Ministry of Labor consultation and complaint line; workers may consult (including by online chat) before deciding to complain; complaint data must be kept confidential.",
+            "source_url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b334636019b34927f8003da",
+            "assessment": "Accurate. The notice states 免費諮詢申訴專線, 結合了諮詢及申訴, 可先撥打專線或使用線上文字客服諮詢, and 申訴的資料都要予以保密 with liability for leaking officials. It does not state Vietnamese-language service on the line, so that clause was removed."
+          }
+        ],
+        "opening_deletion_audit": [
+          {
+            "sentence": "Theo [Điều 57, điểm 8 Luật Dịch vụ việc làm (就業服務法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57), chủ thuê không được giữ trái phép hoặc chiếm đoạt hộ chiếu, giấy tờ cư trú hay tài sản của người lao động nước ngoài mà mình thuê.",
+            "decision": "KEEP",
+            "information_lost_if_deleted": "The employer-specific prohibition, its 'unlawful' standard, the covered items (passport, residence documents, property), and the only citation to §57(8)."
+          },
+          {
+            "sentence": "Công ty môi giới việc làm tư nhân và nhân viên của công ty chịu quy định riêng tại [Điều 40, khoản 1, điểm 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=40): khi làm dịch vụ việc làm, họ không được giữ giấy phép, giấy tờ tùy thân hoặc giấy tờ liên quan trái ý muốn của người lao động hoặc chủ thuê.",
+            "decision": "KEEP",
+            "information_lost_if_deleted": "The separate agency/staff rule, its different 'against the will' standard, the employment-service scope, and the only citation to §40(1)(10); without it the penalty paragraph's reference to §40 has no antecedent."
+          }
+        ],
+        "recent_three_comparison": "040, 039 and 038 all open with an imagined scene (late-night domestic violence, a press-machine injury, a frozen bank card) and only then state the law. This piece opens with the two actor-specific rules and no scene. Those three use 7–9 H2 headings ending in 'Nguồn tham khảo chính thức' and close with a long URL list plus a 'Ngày kiểm tra' line, with a generic validity caveat in 040 and 038. This piece has three H2s, cites sources inline, and ends on the substantive point that a document complaint does not replace employer-transfer or residence procedures. One functional overlap remains: like 039 ('Giấy tờ nên giữ…', 'Gọi ai giúp…'), it has a record-keeping passage and a hotline section. Here they are prose tied to the document-return dispute rather than a checklist, so I kept them. All three recent titles use a colon pattern, so the title was changed to a 'Khi…' clause. The earlier VI overstay article is not duplicated; residence is mentioned only to separate it from this dispute.",
+        "unresolved_material_findings": [],
+        "limitations": [
+          "Review relies only on the supplied excerpts of §40, §57, §67 and the two WDA LINE@ notices; no live retrieval or check for amendments after 2026-10-02 was performed.",
+          "Whether the 1955 line takes calls in Vietnamese was not verifiable from the linked source and was removed from the body. If the site wants to state it, an official 1955 language-service source must be added and checked in the post-integration review.",
+          "The statement that the fine is paid to the state relies on the nature of 罰鍰, not an express sentence in the supplied text.",
+          "Vietnamese fluency and register were assessed by an AI model; no human native-speaker or lawyer review was performed, and none should be claimed.",
+          "Frontmatter (author legal-ai-assistant, category 'Thông tin pháp luật Đài Loan', topic labor, date 2026-10-02, hero /images/placeholder-article-hero.jpg) was not visible in the draft and must be confirmed in the full-Markdown review before publication."
+        ]
+      },
+      {
+        "locale": "ja",
+        "slug": "taiwan-entry-japan-heated-tobacco-vapes-duty-free",
+        "title": "日本で買った加熱式たばこは台湾の「免税200本」の対象か",
+        "summary": "日本で買った加熱式たばこは、台湾の免税枠200本の対象にならず、持ち込みもできません。2026年2月1日からの免税枠で加熱式たばこが対象になるのは承認済み製品だけで、電子たばこは輸入禁止です。違反には新台湾ドル5万〜500万元の過料があります。",
+        "topic": "other",
+        "read_time": "約3分",
+        "body": "日本で購入した加熱式たばこは、台湾の免税枠200本の対象にならず、本数にかかわらず持ち込めません。[基隆税関が2026年7月7日に更新した案内](https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd)は、衛生福利部の承認を受けた加熱式たばことその構成部品は海外では販売されておらず同一の品目もない、という国民健康署の説明を示したうえで、海外で買った加熱式たばこを持ち込まないよう求めています。\n\n台湾では加熱式たばこは指定たばこ（指定菸品）に当たり、健康リスク評価審査を経て衛生福利部の承認を受けた製品とその必要な構成部品でなければ輸入できません。電子たばことその構成部品は、輸入そのものが禁止されています（[菸害防制法第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=15)第1項第2号・第3号）。\n\n日本台湾交流協会も、[日本で広く使われている加熱式たばこは台湾に持ち込めないとして](https://www.koryu.or.jp/restricted/cigarette/)、機内預けの荷物に入れることも含めて注意を促しています。日本を出るときに台湾へ持って行ってほしいと頼まれても、応じないよう求めています。\n\n## 免税200本は、承認済み製品を選んだ場合の枠です\n\n同じ税関案内によると、2026年2月1日から、20歳以上の入境旅客が自分で使うために持ち込めるたばこの免税数量は、紙巻きたばこ200本、葉巻25本、刻みたばこ1ポンド、承認済み加熱式たばこ200本のうちいずれか一つです。四つから一つを選ぶ方式なので、たとえば紙巻きたばこ200本と承認済み加熱式たばこ200本を両方とも免税で持ち込むことはできません。\n\n台湾の免税店で承認済みの加熱式たばこや紙巻きたばこを買った場合も、持ち込む本数がこの免税数量を超えないか確認が必要です。同案内は、台湾の免税店や適法な販売ルートで売られる承認済み製品には、法令に基づく中国語のニコチン・タール含有量表示や健康警告があると説明しています。ただし、中国語表示があるというだけで承認済み製品とは限りません。\n\n## 誤って持ってきた場合の申告と処分\n\n製造・輸入業者以外の者が電子たばこや未承認の加熱式たばこ、それらの構成部品を輸入した場合、新台湾ドル5万元以上500万元以下の過料（罰鍰）が科され、期限を定めた改善・回収・廃棄または返送も命じられます。期限までに従わなければ、繰り返し処罰されます（[菸害防制法第26条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=26)第2項）。これは行政上の過料で、刑事罰の罰金ではありません。500万元は上限で、違反すれば必ずその額になるわけではありません。基隆税関は、海外の加熱式たばこを持ち込むと税関に差し押さえられ、地方政府に移送されて処分を受けるおそれがあると説明しています。\n\n持ち込めるか分からないときは、通関前に紅線檯（レッドラインカウンター）で税関職員に確認してください。交流協会は、誤って持ち込んだ場合は到着時にこのカウンターで申告し、職員の指示に従うよう案内しており、申告せずに税関検査で見つかると、違法と知らなかった場合でも処罰されるとしています。一方で、申告したからといって、処分を受けないことや持ち込みが認められることが保証されるわけではありません。",
+        "verdict": "APPROVE_REVISED",
+        "findings": [
+          {
+            "severity": "material",
+            "before": "日本で買った製品を、紙巻きたばこと同じ感覚で免税枠に入れて持ち込むことはできません。",
+            "problem": "This answers the title question only in the fourth sentence. Read as written, it says the product cannot go into the duty-free allowance, which could suggest it may still be imported by paying duty. Per §15 and the July 7 notice, the product cannot be imported at all. 「同じ感覚で」 is also vague.",
+            "after": "日本で購入した加熱式たばこは、台湾の免税枠200本の対象にならず、本数にかかわらず持ち込めません。",
+            "preserved": "Japan-purchased products excluded; the conclusion is anchored to the July 7 customs notice in the very next sentence.",
+            "source_url": "https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd"
+          },
+          {
+            "severity": "minor",
+            "before": "2026年7月7日付の[基隆税関の案内](https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd)では、台湾で承認済みの加熱式たばこと同一の商品は海外で販売されていないとされています。",
+            "problem": "The page shows 更新日期：115-07-07, an update date rather than necessarily an issue date. The statement originates from the 國民健康署 as quoted by customs. The draft also left out the notice's operative request not to bring foreign heated tobacco.",
+            "after": "[基隆税関が2026年7月7日に更新した案内](https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd)は、衛生福利部の承認を受けた加熱式たばことその構成部品は海外では販売されておらず同一の品目もない、という国民健康署の説明を示したうえで、海外で買った加熱式たばこを持ち込まないよう求めています。",
+            "preserved": "Date anchor, the approved-product/overseas statement, and its attribution, without asserting future status. The quotation is paraphrased, not quoted at length."
+          },
+          {
+            "severity": "minor",
+            "before": "加熱式たばこは、台湾の衛生福利部による健康リスク評価の承認が必要で、未承認の製品やその使用に必要な構成部品は輸入できません（[菸害防制法第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=15)）。",
+            "problem": "§15(1)(3) says 指定菸品或其必要之組合元件; 「その使用に必要な」 adds a gloss not in the text. The designated-product category (指定菸品), which explains why approval exists, was not named.",
+            "after": "台湾では加熱式たばこは指定たばこ（指定菸品）に当たり、健康リスク評価審査を経て衛生福利部の承認を受けた製品とその必要な構成部品でなければ輸入できません。",
+            "preserved": "Approval requirement, approving authority, review type, and coverage of necessary components; prohibition modality (不得 → できません)."
+          },
+          {
+            "severity": "minor",
+            "before": "電子たばことその構成部品は台湾への持ち込みが禁止されています。",
+            "problem": "Correct, but the sentence carried no citation and opened the article before the reader's question was answered.",
+            "after": "電子たばことその構成部品は、輸入そのものが禁止されています（[菸害防制法第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=15)第1項第2号・第3号）。",
+            "preserved": "Absolute import ban on e-cigarettes and components, distinct from the approval route for heated tobacco; both sub-items cited."
+          },
+          {
+            "severity": "minor",
+            "before": "それぞれの枠を足し合わせる制度ではありません。",
+            "problem": "Accurate (四者擇一) but abstract; a concrete combination makes the limit clear.",
+            "after": "四つから一つを選ぶ方式なので、たとえば紙巻きたばこ200本と承認済み加熱式たばこ200本を両方とも免税で持ち込むことはできません。",
+            "preserved": "Four-way alternative; the statement is limited to duty-free treatment and says nothing about duty-paid quantities."
+          },
+          {
+            "severity": "minor",
+            "before": "台湾の免税店で購入した承認済み製品を持って再入境する場合も、承認の対象となる製品かどうかと、免税数量の範囲内かどうかを分けて確認します。",
+            "problem": "The source refers to buying at 國內免稅商店 and watching the quantity limit; it does not frame this as re-entry. Products bought in Taiwan duty-free are approved by premise, so the 'check approval separately' step is circular.",
+            "after": "台湾の免税店で承認済みの加熱式たばこや紙巻きたばこを買った場合も、持ち込む本数がこの免税数量を超えないか確認が必要です。",
+            "preserved": "Quantity limit applies to Taiwan duty-free purchases; both heated tobacco and cigarettes mentioned as in the source."
+          },
+          {
+            "severity": "minor",
+            "before": "預け荷物に入れればよいという意味でもありません。",
+            "problem": "A negative paraphrase of Koryu's point that sits apart from its source; the Koryu sentence itself states it directly.",
+            "after": "日本台湾交流協会も、[日本で広く使われている加熱式たばこは台湾に持ち込めないとして](https://www.koryu.or.jp/restricted/cigarette/)、機内預けの荷物に入れることも含めて注意を促しています。日本を出るときに台湾へ持って行ってほしいと頼まれても、応じないよう求めています。",
+            "preserved": "Checked-baggage point; Koryu's request to refuse carry requests added from the same page.",
+            "source_url": "https://www.koryu.or.jp/restricted/cigarette/"
+          },
+          {
+            "severity": "minor",
+            "before": "この注意喚起は、承認済み製品の免税枠を説明する上記の税関案内と併せて読む必要があります。",
+            "problem": "Metacommentary about how sources relate. The tension (Koryu's blanket wording vs the 2026 approved-product exception) belongs in the review record; the body now cites Koryu only for the Japan-product point, which is consistent with customs.",
+            "after": "deleted",
+            "preserved": "No reader-facing fact lost; the approved-product exception is stated in its own section."
+          },
+          {
+            "severity": "minor",
+            "before": "加熱式たばこをすべて一律に禁止と扱うことも、日本で買った製品に200本の枠が使えると考えることも、条件を取り違えています。",
+            "problem": "Restates the article's conclusions as a scolding summary. Both points are already explicit elsewhere.",
+            "after": "deleted",
+            "preserved": "Japan-bought product exclusion (opening) and approved-product duty-free option (H2 section) both retained."
+          },
+          {
+            "severity": "material",
+            "before": "製造・輸入業者以外の個人が、電子たばこや未承認の加熱式たばこなどを違法に輸入した場合、行政上の過料は新台湾ドル5万元から500万元です（[菸害防制法第26条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=26)）。",
+            "problem": "§26(2) says 製造或輸入業者以外之人 (any person, not only individuals) and mandates both the fine and orders (處…並令其…). It also provides 屆期未…者，按次處罰, which the draft omitted. The following sentence 「同条は…命令も規定しています」 weakened the order to a mere mention.",
+            "after": "製造・輸入業者以外の者が電子たばこや未承認の加熱式たばこ、それらの構成部品を輸入した場合、新台湾ドル5万元以上500万元以下の過料（罰鍰）が科され、期限を定めた改善・回収・廃棄または返送も命じられます。期限までに従わなければ、繰り返し処罰されます（[菸害防制法第26条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=26)第2項）。",
+            "preserved": "5万〜500万 range, administrative character, non-manufacturer/importer scope; no claim that the traveler can choose return shipment.",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=26"
+          },
+          {
+            "severity": "minor",
+            "before": "同条は期限を定めた改善、回収、廃棄または返送の命令も規定しています。",
+            "problem": "Merged into the penalty sentence with mandatory modality and the repeat-penalty rule.",
+            "after": "deleted (merged)",
+            "preserved": "All four order types retained."
+          },
+          {
+            "severity": "minor",
+            "before": "持ち込みの可否が分からないときは、通関前に赤色の申告カウンター（紅線檯）で税関職員に確認してください（[基隆税関の案内](https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd)）。",
+            "problem": "「赤色の申告カウンター」 is not the term Japanese travelers will see; Koryu uses レッドラインカウンター. The customs notice's seizure/transfer statement and Koryu's 'ignorance is no defense when undeclared' point were missing, though both are directly relevant to the declaration decision.",
+            "after": "持ち込めるか分からないときは、通関前に紅線檯（レッドラインカウンター）で税関職員に確認してください。",
+            "preserved": "Pre-clearance inquiry at the red line, as the customs notice requests; non-guarantee sentence kept unchanged in substance."
+          },
+          {
+            "severity": "minor",
+            "before": "執筆：legal-ai-assistant（AI）。公開日：2026年10月2日。",
+            "problem": "Technical byline repeats the site's localized AI author box and publication date.",
+            "after": "deleted",
+            "preserved": "AI authorship stays disclosed via frontmatter author: legal-ai-assistant and the site AI author box; date 2026-10-02 in frontmatter. No attorney identity added."
+          },
+          {
+            "severity": "minor",
+            "before": "承認済み加熱式たばこの免税枠は、日本で購入した製品の持ち込み許可を意味しません。電子たばこの輸入禁止、承認と数量の条件、通関前の確認先を整理します。",
+            "problem": "The second sentence previews the article (「整理します」) instead of giving facts; the summary also did not state the direct answer or the penalty range.",
+            "after": "日本で買った加熱式たばこは、台湾の免税枠200本の対象にならず、持ち込みもできません。2026年2月1日からの免税枠で加熱式たばこが対象になるのは承認済み製品だけで、電子たばこは輸入禁止です。違反には新台湾ドル5万〜500万元の過料があります。",
+            "preserved": "Effective date, approved-only condition, e-cigarette ban, penalty range; not broader than the body."
+          },
+          {
+            "severity": "minor",
+            "before": "topic: general",
+            "problem": "'general' is not in the site taxonomy.",
+            "after": "topic: other",
+            "preserved": "Category 台湾法律情報 unchanged."
+          }
+        ],
+        "source_checks": [
+          {
+            "claim": "E-cigarettes and components are banned from import; heated tobacco is a designated product importable only if approved after health-risk review, along with necessary components.",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=15",
+            "assessment": "Accurate. §15(1): 任何人不得製造、輸入…, item 二 類菸品或其組合元件, item 三 未…經核定通過健康風險評估審查之指定菸品或其必要之組合元件. 「任何人」 covers travelers. §15(2) also bans use; this is outside the article's scope and not added. The body contains no direct Chinese statutory quotation beyond the term 指定菸品, which matches."
+          },
+          {
+            "claim": "As of the notice updated 2026-07-07, approved heated tobacco is not sold abroad, so overseas-bought heated tobacco should not be brought in; seized items are transferred to local government for adjudication.",
+            "source_url": "https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd",
+            "assessment": "Accurate. L98 cites 國民健康署: 在國外沒有販售也沒有相同品項, 即目前國外並無經衛福部核定…的加熱菸產品, and warns of 遭海關查扣後移送地方政府依法裁處. L101: 切勿自國外購買電子煙、加熱菸及其組合元件攜帶入境. Page shows 更新日期 115-07-07, so the body says 更新."
+          },
+          {
+            "claim": "From 2026-02-01, travelers aged 20+ may bring, for personal use and duty-free, one of: 200 cigarettes, 25 cigars, 1 lb tobacco, or 200 approved heated sticks.",
+            "source_url": "https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd",
+            "assessment": "Accurate. L100: 自115年2月1日起，年滿20歲入境旅客，得攜帶自用免稅菸品數量為捲菸200支或雪茄25支或菸絲1磅或…指定菸品（加熱菸）200支，四者擇一. It is based on MOF's amendment of 入境旅客攜帶行李物品報驗稅放辦法第11條. The 得 (may) modality is kept as 「持ち込める」."
+          },
+          {
+            "claim": "Approved products sold in Taiwan duty-free/legal channels carry Chinese nicotine/tar labeling and health warnings.",
+            "source_url": "https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd",
+            "assessment": "Accurate per L98 (citing §9, §10 and the labeling regulation). The body adds that a Chinese label alone does not establish approval. That is a logical necessary-versus-sufficient caution, not a source statement."
+          },
+          {
+            "claim": "Non-manufacturer/importer violators: NT$50,000–5,000,000 administrative fine plus orders to remedy, recall, destroy or return; repeat penalties if not complied.",
+            "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=26",
+            "assessment": "Accurate after revision. §26(2): 製造或輸入業者以外之人…處新臺幣五萬元以上五百萬元以下罰鍰，並令其限期改善、回收、銷毀或退運；屆期未…者，按次處罰. 罰鍰 is an administrative fine, not a criminal 罰金. There is no guaranteed immunity for declaring."
+          },
+          {
+            "claim": "Koryu: Japanese heated tobacco cannot be brought in (including checked baggage); refuse carry requests; if brought by mistake, declare at the red line and follow instructions; undeclared items found on inspection are punished even without knowledge of illegality.",
+            "source_url": "https://www.koryu.or.jp/restricted/cigarette/",
+            "assessment": "Accurately paraphrased. Two caveats are kept out of the body. First, Koryu's opening bullet (旅客は加熱式たばこを持ち込んではならない) is undated in the excerpt and broader than the 2026 customs rule allowing approved products. Second, Koryu uses 罰金, whereas §26(2) imposes 罰鍰 (過料). The body therefore cites Koryu only for the Japan-product and arrival-procedure points, and uses the statute for the penalty character."
+          }
+        ],
+        "opening_deletion_audit": [
+          {
+            "sentence": "日本で購入した加熱式たばこは、台湾の免税枠200本の対象にならず、本数にかかわらず持ち込めません。",
+            "decision": "KEEP",
+            "information_lost_if_deleted": "The direct answer to the title question, and that the bar is on import itself, not only on duty-free treatment, regardless of quantity."
+          },
+          {
+            "sentence": "[基隆税関が2026年7月7日に更新した案内](https://web.customs.gov.tw/keelung/singlehtml/179?cntId=a1acc24970b645088e400aa84e3a54dd)は、衛生福利部の承認を受けた加熱式たばことその構成部品は海外では販売されておらず同一の品目もない、という国民健康署の説明を示したうえで、海外で買った加熱式たばこを持ち込まないよう求めています。",
+            "decision": "KEEP",
+            "information_lost_if_deleted": "The factual basis and date anchor for the opening answer, the attribution to 國民健康署, and customs' express request."
+          },
+          {
+            "sentence": "台湾では加熱式たばこは指定たばこ（指定菸品）に当たり、健康リスク評価審査を経て衛生福利部の承認を受けた製品とその必要な構成部品でなければ輸入できません。",
+            "decision": "KEEP",
+            "information_lost_if_deleted": "The legal category, the approval requirement and authority, and the coverage of necessary components; this explains why non-approval means non-importability."
+          },
+          {
+            "sentence": "電子たばことその構成部品は、輸入そのものが禁止されています（[菸害防制法第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070021&flno=15)第1項第2号・第3号）。",
+            "decision": "KEEP",
+            "information_lost_if_deleted": "The absolute e-cigarette ban (no approval route), distinct from heated tobacco, and the only §15 citation."
+          }
+        ],
+        "recent_three_comparison": "067 and 066 both open with a statute citation and its requirements, and 058 opens with a practical step (identify the seller). This piece opens with the direct answer to its title question and puts the §15 rule second. It shares a statute-forward second paragraph with 067 and 066, which suits a prohibition article. 067 has five H2s, 066 four and 058 three, each ending with a reference-list heading (参照した公式資料／参照資料). This piece has two H2s and no source list, since links are inline. Endings: 067 and 066 close with a URL list and 確認日, and 058 with a firm-contact paragraph. This piece ends on the substantive limit that declaring does not guarantee no penalty, with no promotional or consultation line. Titles: 067, 066 and 058 are noun phrases (two with colons). This title is a question that the first sentence answers, so the form is not repeated.",
+        "unresolved_material_findings": [],
+        "limitations": [
+          "Review relies only on the supplied excerpts of 菸害防制法 §15 and §26, the full 2026-07-07 Keelung customs notice, and the Koryu page excerpt; no live retrieval or later-update check was performed.",
+          "The Koryu excerpt is undated and partly predates the 2026 approved-product allowance; it is used only for points consistent with the customs notice.",
+          "Whether any approved product later becomes sold abroad was not checked; the opening is anchored to the 2026-07-07 notice.",
+          "Japanese naturalness was assessed by an AI model; no human native-speaker or lawyer review was performed, and none should be claimed.",
+          "Frontmatter (author legal-ai-assistant, category 台湾法律情報, topic other, date 2026-10-02, hero /images/placeholder-article-hero.jpg) must be confirmed in the full-Markdown review before publication."
+        ]
+      }
+    ],
+    "overall_verdict": "APPROVE_REVISED for both articles. Material issues fixed: VI penalty modality and §67(2) coverage, VI 1955 language claim unsupported by its link, VI unsupported complaint-requirement assurance, JP opening that understated the import ban, and JP §26(2) orders and repeat-penalty omission. No unresolved material findings remain in the body text. Publication still requires the planned confirmation review of the full integrated Markdown and frontmatter; this verdict is not an automatic PASS.",
+    "review_scope": "Substantive source check of every legal and factual claim in both bodies, titles and summaries against the supplied statutory texts (就業服務法 §40, §57, §67; 菸害防制法 §15, §26), the two WDA LINE@ notices, the full 2026-07-07 Keelung customs notice and the Koryu excerpt. Also covered: statutory modality, actor distinctions, amounts and dates; editorial review under the supplied style policy, including opening-sentence deletion audits, metacommentary removal, a bold-markup check (none found), removal of the duplicate in-body AI byline (frontmatter AI authorship retained), and comparison with the three supplied recent same-language columns. Not covered: live source retrieval, frontmatter and rendering, human native or legal review."
+  },
+  "review_r2": {
+    "overall_verdict": "APPROVE",
+    "articles": [
+      {
+        "locale": "vi",
+        "file_path": "src/content/columns-vi/070-taiwan-employer-broker-passport-arc-return.md",
+        "reviewed_sha256": "9340e02fe85b847cc7576f2359e8eb51639e5ab38e3550e65f2e13b3c902e04a",
+        "verdict": "APPROVE",
+        "substantive_checks": [
+          "§57(8): employer may not illegally withhold or seize the foreign worker's passport, residence document or property. Matches the body.",
+          "§40(1)(10): private employment service agencies and their staff may not retain permits, identity documents or related documents against the will of the worker or employer. The actor and the 'trái ý muốn' condition are both preserved.",
+          "§67(1): NT$60,000–300,000 fine expressly lists §40(1)(10) and §57(8). §67(2): unlicensed persons engaging in employment services who violate §40(1)(10) are fined under the same range. Both are stated correctly.",
+          "Fine is described as an administrative 罰鍰 paid to the state, with no claim that it returns documents or compensates the worker. This is accurate and properly limited.",
+          "Temporary holding only for residence or health-check assistance, with the worker's consent, is attributed to the WDA LINE@ notice, which supports it. The summary's 'chỉ được giữ tạm thời … phải có sự đồng ý' matches that notice.",
+          "1955 is a free consultation and complaint line set up by MOL, per the WDA 1955 notice. The option to consult by phone or online chat before filing is also from that notice.",
+          "New lazypg page: Vietnamese service (越南語), 24-hour service and free calls from mobile, landline or payphone are all verified (L103, L113, L123). The attribution sentence is accurate.",
+          "Confidentiality paragraph: possible administrative and criminal liability for officials, plus civil compensation if damage results. The modality ('có thể') matches the source.",
+          "Last paragraph keeps the document return request separate from employer transfer, residence extension and work permit matters. It promises no outcome."
+        ],
+        "integration_checks": [
+          "Frontmatter: title, summary, published/lastmod 2026-10-02 and date_display are consistent. Category is in Vietnamese and topic is labor. The existing placeholder hero is kept. Audience is vi and author is legal-ai-assistant.",
+          "No duplicate in-body byline and no claim of lawyer or native-speaker review.",
+          "No **, __, <strong> or <b> anywhere in the title, summary or body.",
+          "All five statutory and WDA links match the source key, plus the new lazypg link. Each link sits beside the claim it supports.",
+          "No invented consultation service or firm contact. The only contact pointer is the official 1955 line.",
+          "Opening sentence deletion test: the first two paragraphs carry distinct actor-specific rules (employer and broker), so neither can be removed. There is no generic hook, unlike the scenario openings of the recent VI columns 038–040.",
+          "This is an independent Vietnamese-audience piece, not a translation of the JA article."
+        ],
+        "findings": [],
+        "remaining_material_findings": 0,
+        "scope_limitations": [
+          "Sources checked only as supplied excerpts and the coordinator-provided pages; no live retrieval.",
+          "Vietnamese naturalness assessed by a model, not a native reviewer.",
+          "No lawyer review; rendering/build not assessed."
+        ]
+      },
+      {
+        "locale": "ja",
+        "file_path": "src/content/columns-ja/071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md",
+        "reviewed_sha256": "52a821a4f57d61c906897c998bc1ce4406a27e99f29c8a82488c48e0bd6765f9",
+        "verdict": "APPROVE",
+        "substantive_checks": [
+          "Not bringing Japan-bought heated tobacco: supported by the Keelung notice L98 (HPA states approved items are neither sold abroad nor identical to foreign items) and by Koryu. The Taipei 2026-05-20 notice (only domestic duty-free, approved products) is consistent.",
+          "§15(1)(2)/(3): e-cigarettes (類菸品) and their components are banned from import. Designated products need approved health-risk assessment, and the 必要な構成部品 qualifier is preserved in paragraph 2.",
+          "Allowance from 2026-02-01: travelers aged 20+, for own use, may bring 200 cigarettes, 25 cigars, 1 lb cut tobacco or 200 approved heated tobacco units, choosing one of the four. The non-cumulation example is correct.",
+          "The domestic duty-free quantity check and the Chinese labeling statements are attributed to the Keelung notice L98/L100.",
+          "§26(2): applies to 製造或輸入業者以外之人. Fine is NT$50,000–5,000,000 罰鍰. Mandatory orders are 限期改善・回収・銷毀・退運, with 按次處罰 for non-compliance. The actor, range, orders and repeat penalty are all present. Administrative versus criminal is correctly distinguished, and 500万 is stated as a ceiling.",
+          "Customs seizure and transfer to local government is attributed to Keelung, with 'おそれ' modality.",
+          "The summary omits the fine range rather than stating it unqualified. It is not broader than the body or the sources.",
+          "The 'ignorance' statement is explicitly attributed to 交流協会 and limited to undeclared items found at inspection. It is not a blanket legal guarantee. The next sentence also disclaims that declaring guarantees no penalty or entry.",
+          "Red-line counter inquiry before clearance matches Keelung L101. The declaration-on-arrival instruction is attributed to Koryu."
+        ],
+        "integration_checks": [
+          "Frontmatter: 2026-10-02 published/lastmod/date_display. Category 台湾法律情報 and topic other. Existing placeholder hero and audience ja. Author is legal-ai-assistant.",
+          "No bold markup in any form, no in-body AI byline duplication, and no lawyer or native review claim.",
+          "Repeated customs and Koryu links sit beside the allowance and red-line claims they support. The §15 and §26 links point to the correct pcode/flno.",
+          "No invented consultation service; unlike JA 058, it has no firm contact paragraph.",
+          "Opening paragraph gives the answer directly with its source. Headings differ in pattern from JA 066/067/058. The article ends without a recap.",
+          "This is an independent Japanese-audience piece, not a translation of the VI article."
+        ],
+        "findings": [
+          {
+            "severity": "minor",
+            "exact_text": "製造・輸入業者以外の者が電子たばこや未承認の加熱式たばこ、それらの構成部品を輸入した場合",
+            "reason": "§26(2) via §26(1)(2) covers only the 必要之組合元件 of unapproved designated products, whereas e-cigarette components are covered without that qualifier. 'それらの構成部品' slightly broadens the heated-tobacco side. Paragraph 2 already states the correct scope, and the customs notice title uses similarly broad wording, so reader harm is low.",
+            "required_fix": "Optional: 「電子たばことその構成部品、または未承認の加熱式たばことその必要な構成部品を輸入した場合」."
+          }
+        ],
+        "remaining_material_findings": 0,
+        "scope_limitations": [
+          "Health authority page fetch failed. No contrary post-July change was found per the coordinator, but real-time completeness of future law is not claimed.",
+          "Japanese naturalness assessed by a model, not a native reviewer.",
+          "No lawyer review; rendering/build not assessed."
+        ]
+      }
+    ],
+    "review_scope": "Full integrated frontmatter and body of both files were read against the statutory texts (就業服務法 §40, §57, §67; 菸害防制法 §15, §26), the WDA documents notice, the WDA 1955 notice, the WDA 1955 lazypg page, the full Keelung 2026-07-07 notice, the Taipei 2026-05-20 notice, the Koryu page and the full editorial policy. Checks covered the post-R1 changes, title and summary scope, actor and fine conditions, modality, attribution, bold markup, authorship, citations and comparison with the recent same-locale openings. The R1 summary was treated as non-authoritative. No live retrieval, tools or human legal/native review were used. The SHA256 values are copied from the supplied identifiers, not recomputed."
+  },
+  "review_r3": {
+    "overall_verdict": "APPROVE",
+    "locale": "ja",
+    "file_path": "src/content/columns-ja/071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md",
+    "reviewed_sha256": "906f7a9d0f43a088611c64f73001d78fbea4813a45c9e69e41d03724912f414a",
+    "changed_sentence_check": "「電子たばことその構成部品、または未承認の加熱式たばことその必要な構成部品を輸入した場合」 now matches the supplied statutes. §15(1)(2) covers 類菸品或其組合元件, meaning all components, and §15(1)(3) covers unapproved 指定菸品或其必要之組合元件. §26(1)(1) and §26(1)(2) mirror that split, and §26(2) applies them to 製造或輸入業者以外之人. The sentence keeps the subject (業者以外の者), the NT$50,000–5,000,000 罰鍰 range, the order to improve, recall, destroy or return within a deadline, and 按次處罰. The previous minor finding is resolved, and nothing in the sentence narrows or broadens the law.",
+    "full_file_check": "Read the whole file against §15, §26, the complete Keelung customs notice and the Koryu excerpt. Checked: the title and summary are no broader than the body; the first paragraph gives the answer directly; the customs update date (115-07-07 = 2026-07-07) and the 國健署 statement are attributed correctly; §15(1)(2)/(3) is cited with the correct component scope; the Koryu points (checked baggage, refusing requests on leaving Japan, red-line declaration, punishment even without knowledge) are reflected accurately; the duty-free start date (115-02-01 = 2026-02-01), age 20+, personal use, and the four quantities as a choose-one allowance are correct; the duty-free-shop quantity caution and the Chinese-labelling point match the notice, and the added caveat that a Chinese label alone does not prove approval is a sound inference; the penalty is described as administrative and as a maximum; seizure and referral to the local government is presented as a risk ('おそれ'); the red-line consultation and the caveat that declaring does not guarantee outcomes are both present. Policy checks: no bold, <strong>, <b> or __ emphasis; no preview sentences, preachy title or recap ending; natural です・ます body; obligation, possibility and recommendation are kept distinct; the source links stay attached to the claims they support; author: legal-ai-assistant is preserved; no invented experience or credentials.",
+    "remaining_material_findings": 0,
+    "remaining_minor_findings": [],
+    "scope_limitations": [
+      "Review is limited to the supplied statute and customs/Koryu excerpts; the live sources were not re-fetched and the SHA256 was not recomputed.",
+      "§15(2), which prohibits use, is not mentioned in the article; this was treated as an editorial choice, not an error.",
+      "Japanese naturalness was judged by the model and is not a native-speaker or lawyer review.",
+      "Render/build was out of scope per instruction."
+    ]
+  },
+  "integration_changes": [
+    {
+      "locale": "vi",
+      "before": "1955 là đường dây tư vấn và khiếu nại miễn phí do Bộ Lao động thiết lập.",
+      "after": "1955 là đường dây tư vấn và khiếu nại miễn phí do Bộ Lao động thiết lập. [Trang giới thiệu chính thức của 1955](https://fw.wda.gov.tw/wda-employer/home/lazypg/index) xác nhận có tư vấn bằng tiếng Việt, phục vụ 24 giờ mỗi ngày và không thu phí cuộc gọi.",
+      "reason": "Add verified official hotline page expressly stating Vietnamese service,24h andfreecalls."
+    },
+    {
+      "locale": "ja",
+      "before": "日本で買った加熱式たばこは、台湾の免税枠200本の対象にならず、持ち込みもできません。2026年2月1日からの免税枠で加熱式たばこが対象になるのは承認済み製品だけで、電子たばこは輸入禁止です。違反には新台湾ドル5万〜500万元の過料があります。",
+      "after": "日本で買った加熱式たばこは台湾へ持ち込めません。200本の免税枠は承認済み製品が対象で、20歳以上の旅客の自用などが条件です。電子たばことその構成部品は輸入禁止です。",
+      "reason": "Keep the summary concise and avoid giving the non-business fine range without its actor qualification; full qualified penalty remains in body."
+    },
+    {
+      "locale": "ja",
+      "reason": "Repeat already-verified source links beside allowance and red-channel claims; wording unchanged."
+    }
+  ]
+}

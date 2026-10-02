@@ -1230,3 +1230,76 @@
 /* Page header hairlines */
 :global(.site[data-locale='zh-hant']) .pageHeader:global(.page-header) { border-bottom-color: #e3e3e8; }
 :global(.site[data-locale='zh-hant']) .pageHeader:global(.page-header)::after { background: #e3e3e8; }
+
+/* Footer: graphite #1d1d1f (operator decision; the light #f5f5f7 alternative is in the report). Text #f5f5f7 /
+   #a1a1a6, hairlines white 12%, focus rings 3px white. Above it, the skyline band sits on #f5f5f7. */
+:global(.site[data-locale='zh-hant']) .skyline:global(.footer-skyline) { background: #f5f5f7; border-top-color: #e3e3e8; }
+:global(.site[data-locale='zh-hant']) .footer:global(.site-footer) {
+  background: #1d1d1f;
+  color: #f5f5f7;
+  border-top-color: transparent;
+}
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-offices),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-main),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-copyright-row) { border-color: rgb(255 255 255 / 12%); }
+:global(.site[data-locale='zh-hant']) .footer :global(.office-label),
+:global(.site[data-locale='zh-hant']) .footer :global(.office-link-name),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-main-brand),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-label),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-link-title) { color: #f5f5f7; }
+:global(.site[data-locale='zh-hant']) .footer :global(.office-link),
+:global(.site[data-locale='zh-hant']) .footer :global(.office-link-address),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-main-note),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-link-list) a,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-legal-links) a,
+:global(.site[data-locale='zh-hant']) .footer :global(.social-label),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-copyright-row) { color: #a1a1a6; }
+:global(.site[data-locale='zh-hant']) .footer :global(.office-link):hover,
+:global(.site[data-locale='zh-hant']) .footer :global(.office-link):focus-visible,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-link-list) a:hover,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-link-list) a:focus-visible,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-legal-links) a:hover,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-legal-links) a:focus-visible { color: #f5f5f7; }
+:global(.site[data-locale='zh-hant']) .footer :global(.office-link + .office-link)::before { background: rgb(255 255 255 / 20%); }
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-link) { color: #f5f5f7; text-decoration-color: rgb(245 245 247 / 45%); }
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-link):hover,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-link):focus-visible { color: #fff; text-decoration-color: currentColor; }
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-copy) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 16px 18px;
+  border-color: transparent;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 10%);
+  color: #f5f5f7;
+}
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-copy):hover,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-copy):focus-visible {
+  border-color: transparent;
+  background: rgb(255 255 255 / 18%);
+  color: #fff;
+}
+/* The language menu opens as a white sheet: its options read #1d1d1f (they inherited the footer's light text). */
+:global(.site[data-locale='zh-hant']) .footer .localeSwitcher :global(.locale-flag-switcher-link),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-locale-switch) :global(.locale-flag-switcher-link),
+:global(.site[data-locale='zh-hant']) .footer .localeSwitcher :global(a[aria-current='page']),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-locale-switch) :global(a[aria-current='page']) { color: #1d1d1f; }
+:global(.site[data-locale='zh-hant']) .footer :global(.social-icon) {
+  border-color: transparent;
+  background: rgb(255 255 255 / 10%);
+  color: #f5f5f7;
+}
+:global(.site[data-locale='zh-hant']) .footer :global(.social-icon):hover,
+:global(.site[data-locale='zh-hant']) .footer :global(.social-icon):focus-visible {
+  border-color: transparent;
+  background: rgb(255 255 255 / 18%);
+  color: #fff;
+}
+:global(.site[data-locale='zh-hant']) .footer :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+/* Hover is a colour change only; the ivory hover outlines of the shared footer stay off in zh-hant. */
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-link-list) a:hover:not(:focus-visible),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-link):hover:not(:focus-visible),
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-consultation-email-copy):hover:not(:focus-visible),
+:global(.site[data-locale='zh-hant']) .footer :global(.social-icon):hover:not(:focus-visible) { outline: none; }
+:global(.site[data-locale='zh-hant']) .skyline :global(.skyline-image) img { filter: grayscale(100%) contrast(1.02) brightness(0.96); }

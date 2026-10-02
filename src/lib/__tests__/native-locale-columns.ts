@@ -192,7 +192,7 @@ export const DOMESTIC_ZH_COLUMN_FILES_20261001 = {
 
 /** Independently authored audience columns, including a domestic Taiwan addition. */
 export const COUNTRY_COLUMN_FILES_20261002 = {
-  'zh-hant': ['072-taiwan-lane-change-side-rear-collision-liability.md'],
+  'zh-hant': ['072-taiwan-lane-change-side-rear-collision-liability.md', '073-taiwan-right-turn-car-straight-motorcycle-evidence.md'],
   vi: ['070-taiwan-employer-broker-passport-arc-return.md'],
   ja: ['071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md'],
 } as const;

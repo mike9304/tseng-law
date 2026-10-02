@@ -1,0 +1,71 @@
+{
+  "source_review_status": {
+    "status": "READY_FOR_INTEGRATION",
+    "publication_authorized_by_this_review": false,
+    "independent_reviewer_model": "claude-fable-5-1",
+    "independent_r2_verdict": "READY",
+    "unresolved_serious_findings": 0,
+    "r2_reviewed_candidate_sha256": "1a3a512a5603a664ca3e90a152bd085a6c822dc9f55499d67a37538b944972c3",
+    "final_manuscript_sha256": "4027f07e1664ee7473af10d76e910bc99f130a9c061ed3a43907a3539187009e",
+    "post_r2_changes": "Only reviewer-proposed nonblocking wording clarifications: article 2 definition, official-news grammar, claimant-qualified heading, source attribution of large-vehicle safety advice; step-3 alt clarified. See post-r2-minor.patch and revision-log.md. Final byte hash was checked by the editorial Codex, not computed by Claude.",
+    "remaining_limits": [
+      "Judgment finality and related criminal outcome not verified; no such claim made.",
+      "Late-signal official news supplies no case number or full judgment.",
+      "Article number, publication date, hero photo and registry identifiers remain with site integrator.",
+      "Production playback and accessibility behavior remain to be checked in site integration."
+    ]
+  },
+  "actual_model_ledger": {
+    "author": {
+      "requested_model": "gpt-6-astra",
+      "observed_model": [
+        "gpt-6-astra"
+      ],
+      "auth_mode": "Chatgpt",
+      "cli": "0.159.2",
+      "turn_completed": true,
+      "draft_sha256": "d35d48b3bdd8e70b9a70f5e13c741c37d00b3408ed2db1b6aa664a340bf55a08"
+    },
+    "editor": "Codex current execution thread; exact model label not independently queried",
+    "review_rounds": [
+      {
+        "round": "r1",
+        "requested_alias": "fable",
+        "observed_models": [
+          "claude-fable-5-1"
+        ],
+        "is_error": false,
+        "subtype": "success",
+        "num_turns": 3,
+        "duration_ms": 329147,
+        "verdict": "REVISION_REQUIRED",
+        "raw_result": "reviews/claude-r1.json",
+        "verbatim_text": "reviews/claude-r1.raw.md"
+      },
+      {
+        "round": "r2",
+        "requested_alias": "fable",
+        "observed_models": [
+          "claude-fable-5-1"
+        ],
+        "is_error": false,
+        "subtype": "success",
+        "num_turns": 3,
+        "duration_ms": 121681,
+        "verdict": "READY",
+        "raw_result": "reviews/claude-r2.json",
+        "verbatim_text": "reviews/claude-r2.raw.md"
+      }
+    ],
+    "billing_route": "Existing ChatGPT login and Claude Max claude.ai login confirmed; API-key variables unset for Claude invocation. No new keys, API billing, top-up or payment setup."
+  },
+  "integrated_manifests": [
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/073-taiwan-right-turn-car-straight-motorcycle-evidence.md",
+      "sha256": "4230914ff97bb04291481e1abfd54477e2b5bef7ad2bf9d774efd309c9f2d64a",
+      "reviewed_body_sha256": "02bf0893ca7987a91a449fd7b2288684b7d6e99f7f51e38cb525f5df3565a58c"
+    }
+  ],
+  "post_review_diff_checked": true
+}

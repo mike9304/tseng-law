@@ -59,7 +59,7 @@ describe('animated traffic diagrams', () => {
         expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
       }
       expect(diagram.durationSeconds).toBeGreaterThanOrEqual(4);
-      if (diagram.id === 'lane-change-hypothetical') {
+      if (['lane-change-hypothetical', 'right-turn-hypothetical'].includes(diagram.id)) {
         expect(diagram.durationSeconds).toBe(12);
       } else {
         expect(diagram.durationSeconds).toBeLessThanOrEqual(8);
@@ -70,7 +70,7 @@ describe('animated traffic diagrams', () => {
   it('labels every locale as a hypothetical example', () => {
     const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
-      if (diagram.id === 'lane-change-hypothetical') {
+      if (['lane-change-hypothetical', 'right-turn-hypothetical'].includes(diagram.id)) {
         expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
         expect(diagram.copy['zh-hant']?.assumption).toContain('假設示意，非事故重建');
         continue;
@@ -113,6 +113,34 @@ describe('animated traffic diagrams', () => {
     }
     // A native-only figure must never leak Chinese copy onto another locale.
     expect(renderToStaticMarkup(<TrafficDiagramFigure diagramId="lane-change-hypothetical" locale="en" />)).toBe('');
+  });
+
+  it('serves the right-turn illustration as a manual player with complete static explanations', () => {
+    const post = getColumnPost('taiwan-right-turn-car-straight-motorcycle-evidence', 'zh-hant')!;
+    expect(post.diagramVideo?.id).toBe('right-turn-hypothetical');
+    expect(splitColumnContentAfterHeading(post.content, post.diagramVideo!.afterHeading!)).not.toBeNull();
+    const diagram = TRAFFIC_DIAGRAMS['right-turn-hypothetical'];
+    expect(diagram.playback).toBe('manual');
+    const html = renderToStaticMarkup(<TrafficDiagramFigure diagramId="right-turn-hypothetical" locale="zh-hant" />);
+    expect(html).toContain('data-manual-video');
+    expect(html).toContain('播放影片');
+    expect(html).not.toContain('<video');
+    expect(html).not.toContain('.mp4');
+    expect(html).not.toContain('.webm');
+    expect(html).toContain(diagram.copy['zh-hant'].assumption);
+    expect(html).toContain(diagram.copy['zh-hant'].videoDescription);
+    expect(diagram.stills).toHaveLength(4);
+    for (const [index, still] of diagram.stills.entries()) {
+      expect(html).toContain(still.mobilePoster);
+      expect(html).toContain(diagram.copy['zh-hant'].stages.alts[index]);
+      for (const src of [still.poster, still.mobilePoster]) {
+        const bytes = fs.readFileSync(publicFile(src));
+        expect(bytes.length).toBeLessThan(100 * 1024);
+        expect(bytes.subarray(8, 12).toString()).toBe('WEBP');
+      }
+    }
+    expect(renderToStaticMarkup(<TrafficDiagramFigure diagramId="right-turn-hypothetical" locale="en" />)).toBe('');
+    expect(trafficColumnSlugsFor('zh-hant')).not.toContain(post.slug);
   });
 
   it('keeps the withdrawn overtaking-012 reconstruction out of the registry and public assets', () => {

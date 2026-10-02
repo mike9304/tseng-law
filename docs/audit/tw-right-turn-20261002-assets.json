@@ -1,0 +1,133 @@
+{
+  "source_bundle_library_id": "libfile_15b1f47057848191a90bedd003e04266",
+  "media": [
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/video/tw-right-turn-mobile.mp4",
+      "path": "/videos/traffic/tw-right-turn-mobile.mp4",
+      "sha256": "aca4b01da9b33999b1a07425be8be3c9c2f4b532b3f60afbd482733fb6545ccb",
+      "bytes": 585097,
+      "transformation": "none"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/video/tw-right-turn-mobile.webm",
+      "path": "/videos/traffic/tw-right-turn-mobile.webm",
+      "sha256": "4bf393cbe3f110c5228364e8380c150d584a76247dc74116d3d7d312b67632b6",
+      "bytes": 355313,
+      "transformation": "none"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/video/tw-right-turn.mp4",
+      "path": "/videos/traffic/tw-right-turn.mp4",
+      "sha256": "2dcd2b70f42fe151db01833e92199317a30c92e932a02f596e02292a861757a5",
+      "bytes": 625378,
+      "transformation": "none"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/video/tw-right-turn.webm",
+      "path": "/videos/traffic/tw-right-turn.webm",
+      "sha256": "2f88cd8918a4a817dfa663a1ab42d98bd1f904654fc92df8a6658333cf839801",
+      "bytes": 396328,
+      "transformation": "none"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-poster-mobile.webp",
+      "path": "/images/traffic/tw-right-turn-poster-mobile.webp",
+      "sha256": "b1ae9ce4006f39c25acef599b579acd30a697024e5837d2ec41ccd817cd1ecd5",
+      "bytes": 46656,
+      "transformation": "none"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-poster.webp",
+      "path": "/images/traffic/tw-right-turn-poster.webp",
+      "sha256": "11fb3df59720c84ccb4814318327a1e8cab6c18559efbaec27f078e161e21f4a",
+      "bytes": 60686,
+      "transformation": "none"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-01-mobile.png",
+      "path": "/images/traffic/tw-right-turn-step-01-mobile.webp",
+      "source_sha256": "aa5e1ca56315440f6fbdcd5ce4579eb6be9d328c99f576c8c16f46416bce3c65",
+      "sha256": "0ac55708eb806840e5f655ce285a5747b4dc8f8f06c190ad7e0f95eb1c610b4c",
+      "bytes": 45018,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-01.png",
+      "path": "/images/traffic/tw-right-turn-step-01.webp",
+      "source_sha256": "60789042bd78aabb88673fbc410ef8654745f0b936d90b6ccf4f8ef21127da0c",
+      "sha256": "e1e8abd4de2074a61e4107f523a9ea6170f62b2994877e7fa1b41f8a79a0acae",
+      "bytes": 58932,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-02-mobile.png",
+      "path": "/images/traffic/tw-right-turn-step-02-mobile.webp",
+      "source_sha256": "1014eb2f89f328679cf9fa030d011a84f4035b878577fccae15df9e82df3c73d",
+      "sha256": "548ae3befb27dc6b7d4ae7357f205cbb492e3cb7024005ef4f4f8f1d41b83b1e",
+      "bytes": 46766,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-02.png",
+      "path": "/images/traffic/tw-right-turn-step-02.webp",
+      "source_sha256": "cb86c88197c67e6dd6a7da63af55d8247eaea8d2cb50de83c3f85a80a8ec454a",
+      "sha256": "c992b43ad50b95b7a6ee206f37b08adf5ec62b452fd4ba3c5b2e51e24f12ebce",
+      "bytes": 61452,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-03-mobile.png",
+      "path": "/images/traffic/tw-right-turn-step-03-mobile.webp",
+      "source_sha256": "452f25d1e119b7de26bc0b6157044635304979d3cca656e10776c1cd14543b1b",
+      "sha256": "eacbba4950efac93ce67f1fb9f624f9d6e3c36b6bc4993318764667c025c773e",
+      "bytes": 48494,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-03.png",
+      "path": "/images/traffic/tw-right-turn-step-03.webp",
+      "source_sha256": "e720702af9b6fdd1e17160ce3492bc8a58fcc5225b2f3251757af6b7d1928541",
+      "sha256": "d1f31eaa8369e5bb210ae13de58bfeefce0e91ab24356d68073c20da924d572a",
+      "bytes": 61690,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-04-mobile.png",
+      "path": "/images/traffic/tw-right-turn-step-04-mobile.webp",
+      "source_sha256": "4ec4279b7608bc3f8fac095961f15a08a0391e637120190915f9a712c6793f1c",
+      "sha256": "b1ae9ce4006f39c25acef599b579acd30a697024e5837d2ec41ccd817cd1ecd5",
+      "bytes": 46656,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    },
+    {
+      "source": "/Users/son7/Documents/Codex/2026-10-02/task-5/deliverables/tw-right-turn/stills/tw-right-turn-step-04.png",
+      "path": "/images/traffic/tw-right-turn-step-04.webp",
+      "source_sha256": "69a4b05f8c6459052036748dd917f31102ef659a51a4a730a62227061e0c4099",
+      "sha256": "11fb3df59720c84ccb4814318327a1e8cab6c18559efbaec27f078e161e21f4a",
+      "bytes": 60686,
+      "transformation": "WebP format encoding only, original dimensions/composition"
+    }
+  ],
+  "hero": [
+    {
+      "path": "/images/columns/20261002/tseng-law-right-turn-scooter-hero-ai-20261002-1600x900.webp",
+      "sha256": "cf1f5834c606284b8a4b718efea3f7b2f7632c08713e8ddb46588f7d9c92505a",
+      "bytes": 227288,
+      "pixels": [
+        1600,
+        900
+      ],
+      "source_library_file_id": "libfile_00e05cad433c8191b6ebb1633e948d1b"
+    },
+    {
+      "path": "/images/columns/20261002/tseng-law-right-turn-scooter-hero-ai-20261002-1600x900.jpg",
+      "sha256": "dc6c85b30489258d1c9353fbe5733bbfdc09f02a502fd59b41677323ec2bf3a9",
+      "bytes": 364838,
+      "pixels": [
+        1600,
+        900
+      ],
+      "source_library_file_id": "libfile_00e05cad433c8191b6ebb1633e948d1b"
+    }
+  ]
+}

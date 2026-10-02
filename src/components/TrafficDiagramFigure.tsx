@@ -1,4 +1,5 @@
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
+import TrafficManualVideo from '@/components/TrafficManualVideo';
 import Image from 'next/image';
 import type { CSSProperties } from 'react';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
@@ -37,6 +38,7 @@ export default function TrafficDiagramFigure({
   const copy = diagram.copy[locale];
   if (!copy) return null;
   const captionId = `traffic-diagram-${diagram.id}-caption`;
+  const VideoPlayer = diagram.kind !== 'still' && diagram.playback === 'manual' ? TrafficManualVideo : DecorativeAutoplayVideo;
   const aspectRatios = {
     '--diagram-aspect': `${diagram.width} / ${diagram.height}`,
     '--diagram-mobile-aspect': `${diagram.mobileWidth} / ${diagram.mobileHeight}`,
@@ -50,7 +52,7 @@ export default function TrafficDiagramFigure({
       <div className={diagram.kind === 'still' ? styles.stillFrame : styles.frame} style={aspectRatios}>
         {diagram.kind === 'still' ? (
           <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" />
-        ) : <DecorativeAutoplayVideo
+        ) : <VideoPlayer
           mp4Src={diagram.mp4}
           webmSrc={diagram.webm}
           poster={diagram.poster}
@@ -70,6 +72,7 @@ export default function TrafficDiagramFigure({
         <span className={styles.legend}>{copy.legend}</span>
         <span className={styles.text}>{copy.caption}</span>
         <span className={styles.assumption} data-traffic-diagram-assumption>{copy.assumption}</span>
+        {copy.videoDescription ? <span className={styles.text} data-traffic-video-description>{copy.videoDescription}</span> : null}
         {enlarge ? (
           <a className={styles.enlarge} href={enlarge.href} target="_blank" rel="noopener noreferrer">
             {enlarge.label} ↗

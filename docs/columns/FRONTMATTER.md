@@ -118,6 +118,15 @@ set a 40:27 desktop frame and a 4:5 mobile frame. Optional `stills` plus
 or data saving disables video. For these figures the playback button sits
 below the media so it cannot obscure embedded labels.
 
+`right-turn-hypothetical` uses optional registry `playback: 'manual'`: the
+server renders a responsive poster and a play button, with no video source
+until explicit activation. It supports native keyboard activation, pause,
+offscreen/hidden-tab pause and WebM/MP4 fallback. A viewport breakpoint or a
+switch to reduced motion/Save-Data restores the poster and removes the video.
+Explicit play remains available under those preferences. Existing automatic
+diagrams keep their behavior. Its full reviewed `videoDescription` is also
+rendered as HTML beside the legend, caption and required assumptions.
+
 ## 칼럼별 Blender 도해
 
 교통사고 허브의 각 칼럼은 해당 글을 설명하는 도해를 하나씩 연결한다. 특정 사건의 미동의 재현물을 재사용하지 않는다. 본문 Markdown 이미지를 전역 허용하는 방식도 사용하지 않는다.

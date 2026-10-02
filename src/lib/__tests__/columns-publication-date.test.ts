@@ -89,6 +89,7 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '070': '2026-10-02', // Vietnamese document-return column
   '071': '2026-10-02', // Japanese heated-tobacco entry column
   '072': '2026-10-02', // Taiwan domestic lane-change column
+  '073': '2026-10-02', // Taiwan domestic right-turn evidence column
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

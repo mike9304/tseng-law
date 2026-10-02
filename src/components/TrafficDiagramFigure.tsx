@@ -45,7 +45,7 @@ export default function TrafficDiagramFigure({
   } as CSSProperties;
   return (
     <figure
-      className={[styles.figure, diagram.stills && styles.withStages, className].filter(Boolean).join(' ')}
+      className={[styles.figure, diagram.stills && styles.withStages, diagram.kind !== 'still' && diagram.playbackTools && styles.withPlaybackTools, className].filter(Boolean).join(' ')}
       data-traffic-diagram={diagram.id}
       aria-describedby={captionId}
     >
@@ -66,6 +66,8 @@ export default function TrafficDiagramFigure({
           height={diagram.height}
           rootMargin="200px 0px"
           controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
+          playbackTools={diagram.playbackTools}
+          describedBy={captionId}
         />}
       </div>
       <figcaption id={captionId} className={styles.caption}>

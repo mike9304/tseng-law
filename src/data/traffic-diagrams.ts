@@ -2,6 +2,8 @@ import type { SiteLocale } from '@/lib/locales';
 import { TRAFFIC_STILL_DIAGRAMS } from './traffic-still-diagrams';
 import { TW_LANE_CHANGE_DIAGRAM } from './tw-lane-change-diagram';
 import { TW_RIGHT_TURN_DIAGRAM } from './tw-right-turn-diagram';
+import { TW_FLASHING_JUNCTION_DIAGRAM } from './tw-flashing-junction-diagram';
+import { TW_DOORING_DIAGRAM } from './tw-dooring-diagram';
 
 /**
  * Animated Blender diagrams for the traffic-accident pages.
@@ -38,7 +40,7 @@ export type TrafficDiagram = {
   mobileHeight: number;
   copy: Partial<Record<TrafficDiagramLocale, TrafficDiagramCopy>>;
   stills?: readonly { poster: string; mobilePoster: string }[];
-} & ({ kind: 'still' } | { kind?: 'video'; playback?: 'manual'; mp4: string; webm: string; mobileMp4: string; mobileWebm: string; durationSeconds: number });
+} & ({ kind: 'still' } | { kind?: 'video'; playback?: 'manual'; playbackTools?: boolean; mp4: string; webm: string; mobileMp4: string; mobileWebm: string; durationSeconds: number });
 
 export const TRAFFIC_DIAGRAM_MOBILE_QUERY = '(max-width: 640px)';
 
@@ -51,6 +53,8 @@ export const TRAFFIC_DIAGRAMS = {
   ...TRAFFIC_STILL_DIAGRAMS,
   'lane-change-hypothetical': TW_LANE_CHANGE_DIAGRAM,
   'right-turn-hypothetical': TW_RIGHT_TURN_DIAGRAM,
+  'flashing-red-yellow-hypothetical': TW_FLASHING_JUNCTION_DIAGRAM,
+  'dooring-hypothetical': TW_DOORING_DIAGRAM,
   'passing-hypothetical': {
     kind: 'video',
     id: 'passing-hypothetical',

@@ -1,0 +1,186 @@
+[
+  {
+    "number": 74,
+    "slug": "taiwan-flashing-red-yellow-intersection-liability",
+    "source": "/Users/son7/Documents/Codex/2026-10-02/task-8/deliverables/tw-flashing-signals/manuscript.zh-Hant.md",
+    "sourceHash": "752254cf3217aa7239572c38ea6665934b7f5c40a88fcc0f61fb5396426a525a",
+    "bodyUnchanged": true,
+    "heroLibraryId": "libfile_b11e74d259108191b68d30b3198c1fb0",
+    "heroSha256": "b52b2f0dd47d6c558672f5b60c434509d2c9c4b9a18f794b599359491591e6df",
+    "assets": [
+      {
+        "path": "public/videos/traffic/tw-flashing-junction.mp4",
+        "sha256": "60362db50bf89a09d4423d5550367880668f8618b03f0dbc4abe32179dfe81ba",
+        "unchanged": true
+      },
+      {
+        "path": "public/videos/traffic/tw-flashing-junction.webm",
+        "sha256": "872b3db3dbd137659b37c1fc9c23496cba562b6e1e7a07dd52a568cae7108512",
+        "unchanged": true
+      },
+      {
+        "path": "public/videos/traffic/tw-flashing-junction-mobile.mp4",
+        "sha256": "4d522a9efed3281337dc156ec59069527a4179e83cfce06d382eadcd26894f37",
+        "unchanged": true
+      },
+      {
+        "path": "public/videos/traffic/tw-flashing-junction-mobile.webm",
+        "sha256": "371806780d80719817938037db3d396e597462c4110fd7f8bc1f84822db60863",
+        "unchanged": true
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-poster.webp",
+        "sha256": "312bf747d37df7e703e3c9fcf950433b4d794b9a0f4cbd0abec8ab6726cba207",
+        "bytes": 72128,
+        "optimization": "same-size WebP re-encoding quality78"
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-poster-mobile.webp",
+        "sha256": "326f3729a5720fef9ba68f721eeb06e55cea6f3cecf697730edcc730155ab590",
+        "bytes": 70654,
+        "optimization": "same-size WebP re-encoding quality78"
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-01.webp",
+        "sha256": "3493fde2d20c4a3505a911b77633d243928c945c87a2ac3f98f5ed16993bf82b",
+        "bytes": 78358
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-01-mobile.webp",
+        "sha256": "b86c940296ce988a084ea0bda48cae2a22f31192506cbf5dceb1ffab1adf9f7a",
+        "bytes": 76320
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-02.webp",
+        "sha256": "d931b78a31b96f40fd5999cd474e4d1f2911f155a0eb2a5d9f8dce5858a550c9",
+        "bytes": 82628
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-02-mobile.webp",
+        "sha256": "2c0fd0d960d249d3787b880da37b2cfd6d1a245b78561636319c57fc755120c9",
+        "bytes": 79218
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-03.webp",
+        "sha256": "d5d3415b2657316eefc6ab447e5f0fe3ba51a77e67d0aa0740d05741bc08b272",
+        "bytes": 83150
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-03-mobile.webp",
+        "sha256": "5050cfaf0b87fac1bbcb5bcb8d8bfe2803844a155c437471ea3023682e15565b",
+        "bytes": 78596
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-04.webp",
+        "sha256": "26cff0f8d94f5228299c3813883fdc83211b77cdcc98dfee22af7fe2100de3d0",
+        "bytes": 79982
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-04-mobile.webp",
+        "sha256": "f0bec5e0c698a0349f63638772f3f60a79519b6c6eb07d710a82a058112d6bd2",
+        "bytes": 77232
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-05.webp",
+        "sha256": "2f5aecac686779db7ec0cb47c22242930915ed8036a1b10f60dc0a13ca7f36e0",
+        "bytes": 80716
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-05-mobile.webp",
+        "sha256": "45c9cfa6ef43c5833dabf4ec97809d5c8bf3028877478325e60a0f56d4c53911",
+        "bytes": 77984
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-06.webp",
+        "sha256": "05d1abd57d32d24a676c4a2bebf70d04a5352f48f72e28e0e2b8b9087d1a164b",
+        "bytes": 83144
+      },
+      {
+        "path": "public/images/traffic/tw-flashing-junction-step-06-mobile.webp",
+        "sha256": "816ef2fefb919adb6c6e8990b8dfccd9f6e72cc4c2c2fb99975a891dd9aee9f9",
+        "bytes": 81684
+      }
+    ]
+  },
+  {
+    "number": 75,
+    "slug": "taiwan-car-door-opening-motorcycle-liability",
+    "source": "/Users/son7/Documents/Codex/2026-10-02/task-10/deliverables/tw-dooring-column/article/taiwan-car-door-opening-motorcycle-liability.zh-Hant.md",
+    "sourceHash": "dd82b04aebfe18f0bc641568c192724da7398d5798c6818602dbff5084520f12",
+    "bodyUnchanged": true,
+    "heroLibraryId": "libfile_34333f71cd1481919a2f598a646c5d81",
+    "heroSha256": "b9351d048529b3d380e4fc88b11334421c2e21dec5c2a1a923552ca3459daf36",
+    "assets": [
+      {
+        "path": "public/videos/traffic/tw-dooring.mp4",
+        "sha256": "30e648513632ed596382f96f70a92cad31787138bf5a21d371315829e1996212",
+        "unchanged": true
+      },
+      {
+        "path": "public/videos/traffic/tw-dooring.webm",
+        "sha256": "c3a7bf3a27e12c02a9b3a9546abfe191a6e9778bf37fe8ae25a76334f71a267b",
+        "unchanged": true
+      },
+      {
+        "path": "public/videos/traffic/tw-dooring-mobile.mp4",
+        "sha256": "1e8c70eea52b5777b8e56fe7dbcede34bb833c4b05aa49447e195348741a65e9",
+        "unchanged": true
+      },
+      {
+        "path": "public/videos/traffic/tw-dooring-mobile.webm",
+        "sha256": "928e1a1582734d50c2e37884091d4f0a70e85da15b0d191df8e220f8a3c42963",
+        "unchanged": true
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-poster.webp",
+        "sha256": "aa655ba14fcb59fd8fb1d707eb1c079f521bcb3d44f91e5434b37c347e3683e3",
+        "bytes": 69370
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-poster-mobile.webp",
+        "sha256": "248ef993b6d7e304e236213a0f96f14d71d342022b31422a74903c3eb4666189",
+        "bytes": 53542
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-01.webp",
+        "sha256": "a659e9b7a1075e6af08e40e7bcb08019135ee825a9fa47e8f4895897b1a11012",
+        "bytes": 53832
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-01-mobile.webp",
+        "sha256": "84d9cfb240ae819c9317317a4798edf20421b7d037e28847eaf6cf64d33bfba5",
+        "bytes": 39468
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-02.webp",
+        "sha256": "f91251eda158552d57817b9b3b8ae8739972d1d90d2e082b731a9d08b7ce1d3c",
+        "bytes": 56036
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-02-mobile.webp",
+        "sha256": "d16208bc4abd266b06dc37bf7bc0dde2e1c572d95ba62a97b95555f1fae0e840",
+        "bytes": 41872
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-03.webp",
+        "sha256": "04b5cba360c8cc56a71a7401d27c401b8d8d70fc5f2cd73bceb8e3624ce335aa",
+        "bytes": 57428
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-03-mobile.webp",
+        "sha256": "3ebee2e075b0b08800b0d58e66f3a6caf46515be863b22feb475243a3350a56e",
+        "bytes": 44786
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-04.webp",
+        "sha256": "a51f364218f769dda98b73cba21c66f2f96bd48f56388e2c82377827b2081e26",
+        "bytes": 57456
+      },
+      {
+        "path": "public/images/traffic/tw-dooring-step-04-mobile.webp",
+        "sha256": "229ea29cad5a5e8ede82dbe6034fc5d1020e935802f37e1c66bcaabb1e2eea33",
+        "bytes": 44302
+      }
+    ]
+  }
+]

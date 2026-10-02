@@ -59,10 +59,10 @@ describe('animated traffic diagrams', () => {
         expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
       }
       expect(diagram.durationSeconds).toBeGreaterThanOrEqual(4);
-      if (['lane-change-hypothetical', 'right-turn-hypothetical'].includes(diagram.id)) {
+      if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical'].includes(diagram.id)) {
         expect(diagram.durationSeconds).toBe(12);
       } else {
-        expect(diagram.durationSeconds).toBeLessThanOrEqual(8);
+        expect(diagram.durationSeconds).toBeLessThanOrEqual(diagram.id === 'flashing-red-yellow-hypothetical' ? 28 : 8);
       }
     }
   });
@@ -70,7 +70,7 @@ describe('animated traffic diagrams', () => {
   it('labels every locale as a hypothetical example', () => {
     const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
-      if (['lane-change-hypothetical', 'right-turn-hypothetical'].includes(diagram.id)) {
+      if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical', 'flashing-red-yellow-hypothetical'].includes(diagram.id)) {
         expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
         expect(diagram.copy['zh-hant']?.assumption).toContain('假設示意，非事故重建');
         continue;
@@ -141,6 +141,33 @@ describe('animated traffic diagrams', () => {
     }
     expect(renderToStaticMarkup(<TrafficDiagramFigure diagramId="right-turn-hypothetical" locale="en" />)).toBe('');
     expect(trafficColumnSlugsFor('zh-hant')).not.toContain(post.slug);
+  });
+
+
+  it.each([
+    ['taiwan-flashing-red-yellow-intersection-liability', 'flashing-red-yellow-hypothetical', 6],
+    ['taiwan-car-door-opening-motorcycle-liability', 'dooring-hypothetical', 4],
+  ] as const)('keeps %s readable and controllable without autoplay', (slug, id, count) => {
+    const post = getColumnPost(slug, 'zh-hant')!;
+    expect(post.diagramVideo?.id).toBe(id);
+    expect(splitColumnContentAfterHeading(post.content, post.diagramVideo!.afterHeading!)).not.toBeNull();
+    const diagram = TRAFFIC_DIAGRAMS[id];
+    const html = renderToStaticMarkup(<TrafficDiagramFigure diagramId={id} locale="zh-hant" />);
+    expect(html).not.toContain('<video');
+    expect(html).toContain('從頭播放');
+    expect(html).toContain('重複播放');
+    expect(html).toContain('影片時間');
+    expect(html).toContain(diagram.copy['zh-hant'].assumption);
+    expect(diagram.stills).toHaveLength(count);
+    expect(diagram.copy['zh-hant'].stages.alts).toHaveLength(count);
+    for (const still of diagram.stills) {
+      for (const src of [still.poster, still.mobilePoster]) {
+        const bytes = fs.readFileSync(publicFile(src));
+        expect(bytes.subarray(8, 12).toString()).toBe('WEBP');
+        expect(bytes.length).toBeLessThan(100 * 1024);
+      }
+    }
+    expect(renderToStaticMarkup(<TrafficDiagramFigure diagramId={id} locale="en" />)).toBe('');
   });
 
   it('keeps the withdrawn overtaking-012 reconstruction out of the registry and public assets', () => {

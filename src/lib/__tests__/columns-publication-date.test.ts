@@ -89,6 +89,8 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '070': '2026-10-02', // Vietnamese document-return column
   '071': '2026-10-02', // Japanese heated-tobacco entry column
   '072': '2026-10-02', // Taiwan domestic lane-change column
+  '074': '2026-10-02',
+  '075': '2026-10-02',
   '073': '2026-10-02', // Taiwan domestic right-turn evidence column
 };
 

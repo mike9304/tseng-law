@@ -47,3 +47,26 @@
 @media (max-width: 640px) {
   .frame { aspect-ratio: var(--diagram-mobile-aspect, 4 / 5); }
 }
+
+/* Manual, seekable teaching clips keep every control below the uncropped frame. */
+.frame :global(.decorative-autoplay-video__poster),
+.frame :global(.decorative-autoplay-video__video) { object-fit: contain; }
+.withPlaybackTools .frame { margin-bottom: 116px; }
+.withPlaybackTools :global(.traffic-manual-tools) {
+  position: absolute; inset: auto 0 -108px; display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: flex-end; gap: 8px;
+  color: #233e36; pointer-events: auto; font-size: 13px;
+}
+.withPlaybackTools :global(.traffic-manual-tools button),
+.withPlaybackTools :global(.traffic-manual-tools > label) {
+  min-height: 44px; display: inline-flex; align-items: center; gap: 6px;
+}
+.withPlaybackTools :global(.traffic-manual-tools button) {
+  position: static; border: 1px solid #526052; border-radius: 4px;
+  padding: 8px 12px; background: #fff; color: #233e36; cursor: pointer;
+}
+.withPlaybackTools :global(.traffic-manual-tools input[type='checkbox']) { width: 18px; height: 18px; }
+.withPlaybackTools :global(.traffic-manual-tools__seek) { flex: 1 0 100%; gap: 8px; }
+.withPlaybackTools :global(.traffic-manual-tools__seek input) { flex: 1; min-width: 50px; min-height: 44px; }
+.withPlaybackTools :global(.traffic-manual-tools__seek output) { min-width: 65px; text-align: right; }
+.withPlaybackTools :global(.traffic-manual-tools :focus-visible) { outline: 3px solid #a47b25; outline-offset: 3px; }

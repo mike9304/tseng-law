@@ -9,6 +9,8 @@ type Props = {
   poster: string; mobilePoster: string; mobileMediaQuery: string;
   width: number; height: number; alt: string; sizes: string;
   controlLabels: DecorativeVideoControlLabels;
+  playbackTools?: boolean;
+  describedBy?: string;
 };
 
 /** User-initiated diagrams: no media source or request before explicit play. */
@@ -20,6 +22,9 @@ export default function TrafficManualVideo(props: Props) {
   const [mobile, setMobile] = useState(false);
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [looping, setLooping] = useState(false);
+  const [duration, setDuration] = useState(0);
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
     const viewport = window.matchMedia(props.mobileMediaQuery);
@@ -31,10 +36,13 @@ export default function TrafficManualVideo(props: Props) {
     } }).connection;
     const reset = () => {
       video.current?.pause();
-      setPlaying(false); setReady(false); setRequested(false);
+      setPlaying(false); setReady(false); setRequested(false); setTime(0);
     };
     const preferenceChanged = () => { if (motion.matches || connection?.saveData) reset(); };
     const visibilityChanged = () => { if (document.hidden) video.current?.pause(); };
+    const stages = frame.current?.closest('figure')?.querySelector('details');
+    const stagesChanged = () => { if (stages?.open) video.current?.pause(); };
+    stages?.addEventListener('toggle', stagesChanged);
     const observer = new IntersectionObserver(([entry]) => {
       inViewport.current = entry.isIntersecting;
       if (!entry.isIntersecting) video.current?.pause();
@@ -50,6 +58,7 @@ export default function TrafficManualVideo(props: Props) {
       motion.removeEventListener('change', preferenceChanged);
       connection?.removeEventListener?.('change', preferenceChanged);
       document.removeEventListener('visibilitychange', visibilityChanged);
+      stages?.removeEventListener('toggle', stagesChanged);
     };
   }, [props.mobileMediaQuery]);
 
@@ -64,6 +73,10 @@ export default function TrafficManualVideo(props: Props) {
     }
   };
   const label = playing ? props.controlLabels.pause : props.controlLabels.play;
+  const restart = () => {
+    if (!requested) { toggle(); return; }
+    if (video.current) { video.current.currentTime = 0; void video.current.play().catch(() => setPlaying(false)); }
+  };
   return (
     <div ref={frame} className="decorative-autoplay-video" data-manual-video
       data-video-mounted={requested ? 'true' : 'false'} data-video-ready={ready ? 'true' : 'false'}>
@@ -73,7 +86,10 @@ export default function TrafficManualVideo(props: Props) {
           sizes={props.sizes} loading="lazy" className="decorative-autoplay-video__poster" />
       </picture>
       {requested ? <video ref={video} className="decorative-autoplay-video__video"
-        aria-hidden="true" tabIndex={-1} muted playsInline loop autoPlay preload="none"
+        aria-label={props.alt} aria-describedby={props.describedBy} tabIndex={-1} muted playsInline loop={props.playbackTools ? looping : true} autoPlay preload="none"
+        onLoadedMetadata={() => setDuration(video.current?.duration ?? 0)}
+        onTimeUpdate={() => setTime(video.current?.currentTime ?? 0)}
+        onEnded={() => setPlaying(false)}
         onPlaying={() => {
           if (document.hidden || !inViewport.current) { video.current?.pause(); return; }
           setReady(true); setPlaying(true);
@@ -83,10 +99,21 @@ export default function TrafficManualVideo(props: Props) {
         <source src={mobile ? props.mobileWebmSrc : props.webmSrc} type="video/webm" />
         <source src={mobile ? props.mobileMp4Src : props.mp4Src} type="video/mp4" />
       </video> : null}
+      <div className={props.playbackTools ? 'traffic-manual-tools' : undefined}>
       <button type="button" className="decorative-autoplay-video__control" aria-label={label} onClick={toggle}>
         <span aria-hidden="true" className="decorative-autoplay-video__control-icon">{playing ? 'Ⅱ' : '▶'}</span>
         <span>{label}</span>
       </button>
+      {props.playbackTools ? <>
+        <button type="button" onClick={restart}>從頭播放</button>
+        <label><input type="checkbox" checked={looping} onChange={event => setLooping(event.target.checked)} /> 重複播放</label>
+        <label className="traffic-manual-tools__seek">影片時間
+          <input type="range" aria-label="影片時間" min={0} max={duration || 1} step={0.1} value={time} disabled={!requested || !duration}
+            onChange={event => { const next=Number(event.target.value); if(video.current) video.current.currentTime=next; setTime(next); }} />
+          <output>{Math.floor(time)} / {Math.round(duration)} 秒</output>
+        </label>
+      </> : null}
+      </div>
     </div>
   );
 }

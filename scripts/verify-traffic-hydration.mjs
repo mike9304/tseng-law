@@ -18,9 +18,12 @@ const phase = process.env.TRAFFIC_HYDRATION_PHASE || 'local';
 fs.mkdirSync(out, { recursive: true });
 const results = [];
 const documentResponses = [];
+// Own upstream sockets so aborted navigations cannot keep this test process alive.
+const upstreamAgent = new http.Agent({ keepAlive: true });
 const proxy = http.createServer((request, response) => {
   const incoming = http.request(new URL(request.url, upstream), {
     method: request.method,
+    agent: upstreamAgent,
     headers: { ...request.headers, host: upstream.host, 'accept-encoding': 'identity' },
   }, (received) => {
     const headers = { ...received.headers };
@@ -44,7 +47,9 @@ const proxy = http.createServer((request, response) => {
     });
     received.on('error', () => response.destroy());
   });
+  response.on('close', () => incoming.destroy());
   incoming.on('error', (error) => {
+    if (response.destroyed) return;
     if (!response.headersSent) response.writeHead(502);
     response.end(String(error));
   });
@@ -64,11 +69,12 @@ try {
         let step = 'initial';
         page.on('pageerror', (error) => row.errors.push({ step, url: page.url(), message: error.message }));
         const record = async () => {
-          await page.waitForLoadState('networkidle');
+          await page.waitForLoadState('load');
+          await page.waitForTimeout(300);
           row.visits.push({ step, url: page.url(), rows: await page.locator('[data-traffic-board-row]').count() });
         };
         try {
-          const initial = await page.goto(`${base}/zh-hant/traffic-accidents`, { waitUntil: 'networkidle' });
+          const initial = await page.goto(`${base}/zh-hant/traffic-accidents`, { waitUntil: 'load' });
           check(initial.status() === 200, 'initial HTTP');
           const count = await page.locator('[data-traffic-board-row]').count();
           check(count > 0, 'server-rendered list is populated');
@@ -77,7 +83,7 @@ try {
           check(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://tseng-law.com/zh-hant/traffic-accidents', 'canonical preserved');
           await record();
           step = 'reload';
-          await page.reload({ waitUntil: 'networkidle' });
+          await page.reload({ waitUntil: 'load' });
           await record();
           check(row.visits.at(-1).rows === count, 'reload preserves list');
           step = 'filter';
@@ -93,7 +99,7 @@ try {
           await record();
           check(await page.locator('[data-traffic-board-empty]').count() === 1, 'empty state');
           step = 'back';
-          await page.goBack({ waitUntil: 'networkidle' });
+          await page.goBack({ waitUntil: 'load' });
           await record();
           check(row.visits.at(-1).rows === filteredCount, 'back preserves filter');
           step = 'clear';
@@ -130,6 +136,7 @@ try {
     console.log(JSON.stringify(row));
   } finally { await browser.close(); }
 } finally {
+  upstreamAgent.destroy();
   proxy.closeAllConnections();
   await new Promise((resolve) => proxy.close(resolve));
   fs.writeFileSync(path.join(out, `${phase}-hydration-results.json`), JSON.stringify({ results, documentResponses }, null, 2));

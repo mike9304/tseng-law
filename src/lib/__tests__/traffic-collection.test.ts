@@ -45,6 +45,7 @@ function post(overrides: Partial<ColumnPost> & { slug: string }): ColumnPost {
 
 const EXPECTED_ORDER: Record<SiteLocale, string[]> = {
   'zh-hant': [
+    'taiwan-car-repair-cost-estimate-parts-depreciation',
     'taiwan-borrowed-car-owner-driver-key-custody-liability',
     'taiwan-accident-stop-dialogue-hit-and-run-evidence',
     'taiwan-bus-sudden-braking-passenger-carrier-liability',
@@ -143,7 +144,7 @@ describe('isTrafficVideoDiagram', () => {
 });
 
 describe('loadTrafficCollection (published files)', () => {
-  it('lists 13 zh-hant / 4 ko / 4 en / 3 ja articles, newest first, without another language fallback', async () => {
+  it('lists 14 zh-hant / 4 ko / 4 en / 3 ja articles, newest first, without another language fallback', async () => {
     for (const locale of siteLocales) {
       const items = await loadTrafficCollection(locale, fileSources);
       expect(items.map((item) => item.slug), locale).toEqual(EXPECTED_ORDER[locale]);

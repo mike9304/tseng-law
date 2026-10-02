@@ -18,9 +18,12 @@ const phase = process.env.ARTICLE_HYDRATION_PHASE || 'local';
 fs.mkdirSync(out, { recursive: true });
 const results = [];
 const documentResponses = [];
+// Own upstream sockets so aborted navigations cannot keep this test process alive.
+const upstreamAgent = new http.Agent({ keepAlive: true });
 const proxy = http.createServer((request, response) => {
   const incoming = http.request(new URL(request.url, upstream), {
     method: request.method,
+    agent: upstreamAgent,
     headers: { ...request.headers, host: upstream.host, 'accept-encoding': 'identity' },
   }, (received) => {
     const headers = { ...received.headers };
@@ -44,7 +47,9 @@ const proxy = http.createServer((request, response) => {
     });
     received.on('error', () => response.destroy());
   });
+  response.on('close', () => incoming.destroy());
   incoming.on('error', (error) => {
+    if (response.destroyed) return;
     if (!response.headersSent) response.writeHead(502);
     response.end(String(error));
   });
@@ -53,7 +58,7 @@ const proxy = http.createServer((request, response) => {
 await new Promise((resolve) => proxy.listen(0, '127.0.0.1', resolve));
 const base = `http://127.0.0.1:${proxy.address().port}`;
 const check = (ok, message) => { if (!ok) throw new Error(message); };
-const slugs = ['taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
+const slugs = ['taiwan-car-repair-cost-estimate-parts-depreciation', 'taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
 try {
   for (const [engine, launcher] of [['chromium', chromium], ['firefox', firefox]]) {
     const browser = await launcher.launch({ headless: true });
@@ -104,8 +109,8 @@ try {
         check(response.status() === 200, 'noJS HTTP');
         check(await page.locator('.blog-body').isVisible() && (await page.locator('.blog-body').innerText()).length > 1000, 'visible server article without JavaScript');
         check(await page.locator('script[type="application/ld+json"]').count() >= 2, 'server structured data');
-        if (slug === 'taiwan-borrowed-car-owner-driver-key-custody-liability') {
-          check(await page.locator('.blog-body table tbody tr').count() === 4, 'four server-rendered responsibility roles');
+        if (['taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-car-repair-cost-estimate-parts-depreciation'].includes(slug)) {
+          check(await page.locator('.blog-body table tbody tr').count() === 4, 'four server-rendered table rows');
           check(await page.locator('video, [data-traffic-diagram]').count() === 0, 'no unapproved media');
         } else {
           check(await page.locator('[data-traffic-diagram] img').first().isVisible(), 'server poster');
@@ -122,6 +127,7 @@ try {
     }
   } finally { await browser.close(); }
 } finally {
+  upstreamAgent.destroy();
   proxy.closeAllConnections(); await new Promise(resolve => proxy.close(resolve));
   fs.writeFileSync(path.join(out, `${phase}-article-hydration-results.json`), JSON.stringify({ results, documentResponses }, null, 2));
 }

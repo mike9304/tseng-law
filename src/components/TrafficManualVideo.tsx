@@ -7,7 +7,7 @@ import type { DecorativeVideoControlLabels } from './decorative-video-controls';
 type Props = {
   mp4Src: string; webmSrc: string; mobileMp4Src: string; mobileWebmSrc: string;
   poster: string; mobilePoster: string; mobileMediaQuery: string;
-  width: number; height: number; alt: string; sizes: string;
+  width: number; height: number; alt: string; posterAlt?: string; sizes: string;
   controlLabels: DecorativeVideoControlLabels;
   playbackTools?: boolean;
   describedBy?: string;
@@ -82,7 +82,7 @@ export default function TrafficManualVideo(props: Props) {
       data-video-mounted={requested ? 'true' : 'false'} data-video-ready={ready ? 'true' : 'false'}>
       <picture>
         <source media={props.mobileMediaQuery} srcSet={props.mobilePoster} />
-        <Image src={props.poster} alt={props.alt} width={props.width} height={props.height}
+        <Image src={props.poster} alt={props.posterAlt ?? props.alt} width={props.width} height={props.height}
           sizes={props.sizes} loading="lazy" className="decorative-autoplay-video__poster" />
       </picture>
       {requested ? <video ref={video} className="decorative-autoplay-video__video"

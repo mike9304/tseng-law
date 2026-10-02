@@ -1,0 +1,25 @@
+.section { margin-block: 40px; }
+.section h2 { scroll-margin-top: 100px; }
+.section .disclosure { margin: 16px 0; padding: 12px 16px; border-left: 3px solid #9f8752; background: #f2f5f2; color: #233e36; font-size: 16px; line-height: 1.8; }
+.figure { margin: 0; }
+.player { --observation-aspect: 4 / 3; }
+.player :global(.decorative-autoplay-video) { position: relative; inset: auto; height: auto; overflow: visible; }
+.player :global(.decorative-autoplay-video__poster) { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: var(--observation-aspect); object-fit: contain; }
+.player :global(.decorative-autoplay-video__video) { height: auto; aspect-ratio: var(--observation-aspect); object-fit: contain; }
+.player picture { display: block; }
+.player :global(.traffic-manual-tools) { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 12px; color: #233e36; font-size: 16px; pointer-events: auto; }
+.player :global(.traffic-manual-tools button),
+.player :global(.traffic-manual-tools > label) { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; font: inherit; }
+.player :global(.traffic-manual-tools button) { position: static; max-width: 100%; border: 1px solid #526052; border-radius: 4px; padding: 8px 12px; background: #fff; color: #233e36; box-shadow: none; cursor: pointer; }
+.player :global(.traffic-manual-tools input[type='checkbox']) { width: 20px; height: 20px; }
+.player :global(.traffic-manual-tools__seek) { flex: 1 0 100%; }
+.player :global(.traffic-manual-tools__seek input) { flex: 1; min-width: 40px; min-height: 44px; }
+.player :global(.traffic-manual-tools__seek output) { min-width: 64px; text-align: right; }
+.player :global(.traffic-manual-tools :focus-visible),
+.description summary:focus-visible { outline: 3px solid #a47b25; outline-offset: 3px; }
+.section .caption p, .description p { font-size: 16px; line-height: 1.9; color: #233e36; margin: 16px 0; }
+.description summary { min-height: 44px; display: list-item; cursor: pointer; color: #294f3e; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 640px) { .player { --observation-aspect: 4 / 5; } }
+@media (prefers-reduced-motion: reduce) {
+  .player :global(.decorative-autoplay-video__poster), .player :global(.decorative-autoplay-video__video) { transition: none; }
+}

@@ -1,11 +1,13 @@
 import { describe, expect, it, vi } from 'vitest';
 import type { ReactElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import ColumnDetailView from '../ColumnDetailView';
 import type { ColumnDetailViewProps } from '../ColumnDetailView';
 
-const state = vi.hoisted(() => ({ body: false, seo: false }));
+const state = vi.hoisted(() => ({ body: false, seo: false, slug: 'visibility-fixture' }));
 vi.mock('@/lib/consultation/columns-blob-reader', () => ({
   getAllColumnPostsIncludingBlob: async () => [{
-    slug: 'visibility-fixture', title: 'Published traffic title', tags: ['traffic-accidents'],
+    slug: state.slug, title: 'Published traffic title', tags: ['traffic-accidents'],
     date: '2026-10-02', dateDisplay: '2026年10月2日', readTime: '', category: 'legal', categoryLabel: '',
     featuredImage: '', summary: 'Public summary', content: '## HIDDEN_HEADING\n\nHIDDEN_BODY',
     faq: [{ q: 'HIDDEN_FAQ_QUESTION', a: 'HIDDEN_FAQ_ANSWER' }],
@@ -18,14 +20,28 @@ vi.mock('@/lib/builder/dynamic-template-drafts', () => ({
     key.endsWith('.body') ? state.body : key.endsWith('.seo') ? state.seo : true,
 }));
 
-async function props(body: boolean, seo: boolean) {
-  state.body = body; state.seo = seo;
+async function props(body: boolean, seo: boolean, slug = 'visibility-fixture') {
+  state.body = body; state.seo = seo; state.slug = slug;
   const { default: Page } = await import('../page');
-  const element = await Page({ params: Promise.resolve({ locale: 'zh-hant', slug: 'visibility-fixture' }) });
+  const element = await Page({ params: Promise.resolve({ locale: 'zh-hant', slug }) });
   return (element as ReactElement<ColumnDetailViewProps>).props;
 }
 
 describe('traffic column view publication visibility', () => {
+  it('keeps the observation behind body visibility and on its reviewed language/article only', async () => {
+    const slug = 'taiwan-right-turn-car-straight-motorcycle-evidence';
+    const hidden = await props(false, false, slug);
+    expect(renderToStaticMarkup(<ColumnDetailView {...hidden} />)).not.toContain('data-traffic-observation');
+    const shown = await props(true, true, slug);
+    const html = renderToStaticMarkup(<ColumnDetailView {...shown} />);
+    expect(html).toContain('data-traffic-observation="right-turn"');
+    expect(html).toContain('data-traffic-diagram="stop-dialogue-timeline"');
+    expect(html).toContain('HIDDEN_BODY');
+    expect(html).toContain('id="right-turn-observation"');
+    expect(html).not.toContain('<video');
+    expect(renderToStaticMarkup(<ColumnDetailView {...shown} urlLocale="en" />)).not.toContain('data-traffic-observation');
+    expect(renderToStaticMarkup(<ColumnDetailView {...shown} post={{ ...shown.post, slug: 'another-column' }} />)).not.toContain('data-traffic-observation');
+  });
   it('does not serialize hidden body, heading or FAQ text when body and schemas are off', async () => {
     const data = await props(false, false);
     expect(JSON.stringify(data)).not.toContain('HIDDEN_');

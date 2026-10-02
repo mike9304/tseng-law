@@ -2,6 +2,8 @@ import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import { trafficHubCopy } from '@/data/traffic-hub';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
+import RightTurnObservation from '@/components/RightTurnObservation';
+import { hasRightTurnObservation, RIGHT_TURN_OBSERVATION } from '@/data/right-turn-observation';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import AiAuthorBox from '@/components/AiAuthorBox';
 import RecommendedForYou from '@/components/RecommendedForYou';
@@ -49,6 +51,10 @@ export type ColumnDetailViewProps = {
 
 /** Shared SSR view. Data loading and publication decisions stay in the server route. */
 export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, aiAuthor, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography }: ColumnDetailViewProps) {
+  const showObservation = showBody && hasRightTurnObservation(urlLocale, post.slug);
+  const visibleToc = showObservation
+    ? [...tocEntries, { id: RIGHT_TURN_OBSERVATION.id, text: RIGHT_TURN_OBSERVATION.title }]
+    : tocEntries;
   const content = (
     <>
       {showSeo ? (
@@ -116,8 +122,8 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
               data-column-typography={typography.presetId}
               style={typography.cssVars as CSSProperties}
             >
-              {tocEntries.length >= MIN_TOC_SECTIONS ? (
-                <ColumnToc entries={tocEntries} label={t.tocLabel} />
+              {visibleToc.length >= MIN_TOC_SECTIONS ? (
+                <ColumnToc entries={visibleToc} label={t.tocLabel} />
               ) : null}
               {diagramVideo && diagramSplit ? (
                 <>
@@ -137,6 +143,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                   <ColumnContent content={post.content} locale={locale} />
                 </>
               )}
+              {showObservation ? <RightTurnObservation /> : null}
               {showBody && showFaq ? (
                 <section className="column-faq" aria-label={t.faqHeading}>
                   <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>

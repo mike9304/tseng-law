@@ -13,7 +13,7 @@
   --ap-ink-deep: #0d231b;
   --ap-radius: 28px;
   --ap-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   --text-heading: var(--ap-text);
   --text-secondary: var(--ap-muted);

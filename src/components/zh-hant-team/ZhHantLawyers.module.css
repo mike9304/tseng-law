@@ -142,7 +142,7 @@
    The home's font stack; a shorter header bottom and team top so the lead portrait enters the first screen;
    基本資料 on the home's last-call gradient (no pure black, no #1d1d1f tiles). */
 .root:global(#zh-hant-lawyers) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }

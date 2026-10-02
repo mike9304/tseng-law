@@ -1,5 +1,5 @@
 .root:global(#zh-hant-services) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
   font-size: 16px;

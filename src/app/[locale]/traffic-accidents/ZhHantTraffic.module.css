@@ -26,7 +26,7 @@
   --ap-ink-deep: #0d231b;
   --ap-radius: 28px;
   --ap-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --tr-gutter: var(--page-gutter, clamp(1.1rem, 4vw, 3.25rem));
   --tr-max: var(--max-width, 1200px);
   /* Left/right inset of a full-bleed band: content lines up with the header logo (x=113 at 1440, 18 at 390). */

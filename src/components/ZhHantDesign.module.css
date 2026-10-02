@@ -1,6 +1,6 @@
 /* An explicit zh-hant presentation root; editor and other locales never opt in. */
 .home:global(#zh-hant-home) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   --zh-paper: #f5f3ed;
   font-family: var(--font-sans);

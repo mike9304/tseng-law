@@ -517,7 +517,7 @@ a.switchCard:hover, .switchCard:not(.switchActive):hover { border-color: transpa
 /* ===== Apple pass — critique fixes (2026-10-01, columns lane) ===== */
 /* One font stack with the home (PingFang TC first). */
 .root:global(#zh-hant-columns) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }

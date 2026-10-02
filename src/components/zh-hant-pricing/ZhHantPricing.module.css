@@ -356,7 +356,7 @@
    a 聯絡方式 › secondary link, bottom-anchored tile bodies (no dead area under short lists), quieter header board
    and amounts, and phone edges on the logo line. Later rules win over the Apple pass above. */
 .root:global(#zh-hant-pricing) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }

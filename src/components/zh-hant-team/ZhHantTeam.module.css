@@ -210,7 +210,7 @@
    One tile rule on both pages (gray band, white tiles), the home's font stack, 52px email pills,
    and the single partner card spans the full row (identity left, three columns of facts right). */
 .team:global(#team) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   --team-band: var(--ap-gray);
   --team-tile: #fff;

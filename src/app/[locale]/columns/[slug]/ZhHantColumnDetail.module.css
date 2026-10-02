@@ -356,10 +356,13 @@
 }
 
 /* ===== Apple pass — critique fixes (2026-10-01, columns lane) ===== */
-/* One font stack with the home (PingFang TC first). */
+/* The column reads in the device's own Traditional Chinese face (--font-reading-zh, globals.css): title, table of
+   contents, body and sidebar. With the webfont in the stack, phones without PingFang fetched dozens of unicode-range
+   slices while scrolling and relaid the article out at each one (stutter and jumps, 2026-10-02). */
 .root:global(#zh-hant-column) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-  --font-body: var(--font-sans);
+  --font-sans: var(--font-reading-zh);
+  --font-body: var(--font-reading-zh);
+  --font-body-zh: var(--font-reading-zh);
   font-family: var(--font-sans);
 }
 /* The sidebar is sticky, so a view() reveal kept its cards half transparent for thousands of pixels: no reveal there. */

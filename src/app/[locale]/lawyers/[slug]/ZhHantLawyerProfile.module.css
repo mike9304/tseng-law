@@ -433,7 +433,7 @@
 /* ===== Apple pass, critic fixes (2026-10-01) ===== */
 /* Type: the home's stack (PingFang TC first) for every element on this page, H1 included. */
 .root:global(#zh-hant-lawyer-profile) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }

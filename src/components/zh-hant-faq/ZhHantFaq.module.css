@@ -275,7 +275,7 @@
 /* One type stack and one content edge with the home and the header: PingFang TC first (as #zh-hant-home), and the
    site container min(1200px, 100% - 2 * gutter) so the H1, the explorer and the header logo share x = 113 at 1440. */
 .root:global(#zh-hant-faq) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }

@@ -316,7 +316,7 @@
    3. Bands alternate header white → firm white (gray tiles) → team gray (white tiles, same as /lawyers) → dark close.
    4. The closing band is the home's last call: centered title, white pill + outlined email pill, offices below. */
 .root:global(#zh-hant-about) {
-  --font-sans: 'PingFang TC', var(--font-noto-sans-tc-loaded, 'Noto Sans TC'), 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }

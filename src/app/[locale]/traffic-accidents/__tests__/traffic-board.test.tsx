@@ -97,12 +97,13 @@ describe('TrafficBoard SSR', () => {
 
 describe('traffic hub route', () => {
   const page = fs.readFileSync(path.join(process.cwd(), 'src/app/[locale]/traffic-accidents/page.tsx'), 'utf8');
+  const view = fs.readFileSync(path.join(process.cwd(), 'src/app/[locale]/traffic-accidents/TrafficPageView.tsx'), 'utf8');
 
   it('no longer reads the deprecated static slug list and renders the board above the video', () => {
     expect(page).not.toMatch(/trafficColumnSlugsFor\(/);
     expect(page).toContain('loadTrafficCollection');
-    expect(page.indexOf('id="articles"')).toBeGreaterThan(-1);
-    expect(page.indexOf('id="articles"')).toBeLessThan(page.indexOf('<TrafficDiagramFigure'));
+    expect(view.indexOf('id="articles"')).toBeGreaterThan(-1);
+    expect(view.indexOf('id="articles"')).toBeLessThan(view.indexOf('<TrafficDiagramFigure'));
     expect(page).toMatch(/export const dynamic = 'force-dynamic'/);
     expect(page).toContain('buildCollectionPageJsonLd');
   });

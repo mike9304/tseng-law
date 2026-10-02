@@ -3,6 +3,10 @@
   "recordedAt": "2026-10-01",
   "columns": [
     {
+      "locale": "zh-hant",
+      "slug": "taiwan-lane-change-side-rear-collision-liability"
+    },
+    {
       "locale": "ko",
       "slug": "taiwanese-spouse-divorce-agreement-registration"
     },

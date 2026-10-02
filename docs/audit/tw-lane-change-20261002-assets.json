@@ -1,0 +1,80 @@
+{
+  "provenance": "Original user-supplied Blender scene; unsupported desktop punctuation corrected in copied compose source; same raw renders/timeline.",
+  "desktop_aspect_ratio": "40/27",
+  "mobile_aspect_ratio": "4/5",
+  "duration_seconds": 12,
+  "fps": 24,
+  "has_audio": false,
+  "assets": [
+    {
+      "file": "public/videos/traffic/tw-lane-change-mobile.webm",
+      "bytes": 385208,
+      "sha256": "b4459f1b2bf8ab1ead338e863942169ef6dacd505bb33c5d1b43ed5e12d3e9e1"
+    },
+    {
+      "file": "public/videos/traffic/tw-lane-change-mobile.mp4",
+      "bytes": 639693,
+      "sha256": "33ba36c2dd75650c9bf032dae6991217b48431e1c79905d0e744ba2b7bb5b980"
+    },
+    {
+      "file": "public/videos/traffic/tw-lane-change.mp4",
+      "bytes": 716478,
+      "sha256": "40cb7752c49511b7b584365da8fd9302a9d031537eb93dd873117d8bfc26e631"
+    },
+    {
+      "file": "public/videos/traffic/tw-lane-change.webm",
+      "bytes": 443594,
+      "sha256": "6fb13939866dfda60cb2522d8e9620fa95d60dedcdfbaab41d5a362277ad7a0e"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-02.webp",
+      "bytes": 63188,
+      "sha256": "c5a5776faad020abf61b898a2ddf15d87600c0682f7b2f36a9b2aef837292931"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-02-mobile.webp",
+      "bytes": 43214,
+      "sha256": "1dac41055fcf8298add5cca5f9a6a2d13e7cabfb402c3788aea16ecbdae06642"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-03.webp",
+      "bytes": 63014,
+      "sha256": "91159709e4d62d5a8b3527770d4012849c3dc53ea07741aa6756afbf0acec9bd"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-01-mobile.webp",
+      "bytes": 37240,
+      "sha256": "3b129635e134f04fc565718528aa831398a53d2b3941cc3ff0ea4b1df5c7b1c2"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-04.webp",
+      "bytes": 62264,
+      "sha256": "7f029660be8a56173bfbd1c78978c00a65ffb4b1f7a3b8213f30f188f10cf334"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-04-mobile.webp",
+      "bytes": 41486,
+      "sha256": "ceaae5680131b6f8e1f5484823cf4db8f5807921349768d47f5eb17707670ad2"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-03-mobile.webp",
+      "bytes": 42538,
+      "sha256": "7b5de749bced2708cf1a165f51c7acddd72d05d887a4937af24e6be7c59c41ba"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-poster.webp",
+      "bytes": 62264,
+      "sha256": "7f029660be8a56173bfbd1c78978c00a65ffb4b1f7a3b8213f30f188f10cf334"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-poster-mobile.webp",
+      "bytes": 41486,
+      "sha256": "ceaae5680131b6f8e1f5484823cf4db8f5807921349768d47f5eb17707670ad2"
+    },
+    {
+      "file": "public/images/traffic/tw-lane-change-step-01.webp",
+      "bytes": 58746,
+      "sha256": "ebf43a5e99fbc2ef01ff3167eb1baf6626b8895e474f414b1ddb89b435c1588f"
+    }
+  ]
+}

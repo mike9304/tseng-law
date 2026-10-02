@@ -1,5 +1,6 @@
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import Image from 'next/image';
+import type { CSSProperties } from 'react';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import {
   TRAFFIC_DIAGRAMS,
@@ -34,14 +35,19 @@ export default function TrafficDiagramFigure({
 }) {
   const diagram: TrafficDiagram = (TRAFFIC_DIAGRAMS as Record<string, TrafficDiagram>)[diagramId];
   const copy = diagram.copy[locale];
+  if (!copy) return null;
   const captionId = `traffic-diagram-${diagram.id}-caption`;
+  const aspectRatios = {
+    '--diagram-aspect': `${diagram.width} / ${diagram.height}`,
+    '--diagram-mobile-aspect': `${diagram.mobileWidth} / ${diagram.mobileHeight}`,
+  } as CSSProperties;
   return (
     <figure
-      className={[styles.figure, className].filter(Boolean).join(' ')}
+      className={[styles.figure, diagram.stills && styles.withStages, className].filter(Boolean).join(' ')}
       data-traffic-diagram={diagram.id}
       aria-describedby={captionId}
     >
-      <div className={diagram.kind === 'still' ? styles.stillFrame : styles.frame}>
+      <div className={diagram.kind === 'still' ? styles.stillFrame : styles.frame} style={aspectRatios}>
         {diagram.kind === 'still' ? (
           <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" />
         ) : <DecorativeAutoplayVideo
@@ -54,6 +60,8 @@ export default function TrafficDiagramFigure({
           mobileMediaQuery={TRAFFIC_DIAGRAM_MOBILE_QUERY}
           alt={copy.alt}
           sizes={sizes}
+          width={diagram.width}
+          height={diagram.height}
           rootMargin="200px 0px"
           controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
         />}
@@ -68,6 +76,22 @@ export default function TrafficDiagramFigure({
           </a>
         ) : null}
       </figcaption>
+      {diagram.stills && copy.stages ? (
+        <details className={styles.stages} data-traffic-diagram-stages>
+          <summary>{copy.stages.label}</summary>
+          <ol className={styles.stageList}>
+            {diagram.stills.map((stage, index) => (
+              <li key={stage.poster}>
+                <picture>
+                  <source media={TRAFFIC_DIAGRAM_MOBILE_QUERY} srcSet={stage.mobilePoster} />
+                  <Image src={stage.poster} alt={copy.stages!.alts[index]} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" unoptimized />
+                </picture>
+                <p>{copy.stages!.alts[index]}</p>
+              </li>
+            ))}
+          </ol>
+        </details>
+      ) : null}
     </figure>
   );
 }

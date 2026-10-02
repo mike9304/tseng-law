@@ -1,5 +1,6 @@
 import type { SiteLocale } from '@/lib/locales';
 import { TRAFFIC_STILL_DIAGRAMS } from './traffic-still-diagrams';
+import { TW_LANE_CHANGE_DIAGRAM } from './tw-lane-change-diagram';
 
 /**
  * Animated Blender diagrams for the traffic-accident pages.
@@ -22,6 +23,7 @@ export type TrafficDiagramCopy = {
   legend: string;
   caption: string;
   assumption: string;
+  stages?: { label: string; alts: readonly string[] };
 };
 
 export type TrafficDiagram = {
@@ -32,7 +34,8 @@ export type TrafficDiagram = {
   height: number;
   mobileWidth: number;
   mobileHeight: number;
-  copy: Record<TrafficDiagramLocale, TrafficDiagramCopy>;
+  copy: Partial<Record<TrafficDiagramLocale, TrafficDiagramCopy>>;
+  stills?: readonly { poster: string; mobilePoster: string }[];
 } & ({ kind: 'still' } | { kind?: 'video'; mp4: string; webm: string; mobileMp4: string; mobileWebm: string; durationSeconds: number });
 
 export const TRAFFIC_DIAGRAM_MOBILE_QUERY = '(max-width: 640px)';
@@ -44,6 +47,7 @@ export const TRAFFIC_DIAGRAM_MOBILE_QUERY = '(max-width: 640px)';
  */
 export const TRAFFIC_DIAGRAMS = {
   ...TRAFFIC_STILL_DIAGRAMS,
+  'lane-change-hypothetical': TW_LANE_CHANGE_DIAGRAM,
   'passing-hypothetical': {
     kind: 'video',
     id: 'passing-hypothetical',

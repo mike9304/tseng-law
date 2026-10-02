@@ -59,15 +59,24 @@ describe('animated traffic diagrams', () => {
         expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
       }
       expect(diagram.durationSeconds).toBeGreaterThanOrEqual(4);
-      expect(diagram.durationSeconds).toBeLessThanOrEqual(8);
+      if (diagram.id === 'lane-change-hypothetical') {
+        expect(diagram.durationSeconds).toBe(12);
+      } else {
+        expect(diagram.durationSeconds).toBeLessThanOrEqual(8);
+      }
     }
   });
 
   it('labels every locale as a hypothetical example', () => {
     const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
+      if (diagram.id === 'lane-change-hypothetical') {
+        expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
+        expect(diagram.copy['zh-hant']?.assumption).toContain('假設示意，非事故重建');
+        continue;
+      }
       for (const locale of siteLocales) {
-        const copy = diagram.copy[locale];
+        const copy = diagram.copy[locale]!;
         if (diagram.kind === 'still') {
           expect(copy.assumption.length).toBeGreaterThan(15);
         } else {
@@ -77,6 +86,33 @@ describe('animated traffic diagrams', () => {
         expect(copy.alt.length).toBeGreaterThan(20);
       }
     }
+  });
+
+  it('keeps the native Taiwan illustration distinct, readable without animation, and out of the existing hub', () => {
+    const post = getColumnPost('taiwan-lane-change-side-rear-collision-liability', 'zh-hant')!;
+    expect(post.diagramVideo?.id).toBe('lane-change-hypothetical');
+    expect(splitColumnContentAfterHeading(post.content, post.diagramVideo!.afterHeading!)).not.toBeNull();
+    expect(trafficColumnSlugsFor('zh-hant')).not.toContain(post.slug);
+    const html = renderToStaticMarkup(<TrafficDiagramFigure diagramId="lane-change-hypothetical" locale="zh-hant" />);
+    expect(html).not.toContain('<video');
+    expect(html).toContain('--diagram-aspect:1600 / 1080');
+    expect(html).toContain('--diagram-mobile-aspect:1080 / 1350');
+    expect(html).toContain('data-traffic-diagram-stages');
+    const diagram = TRAFFIC_DIAGRAMS['lane-change-hypothetical'];
+    expect(diagram.stills).toHaveLength(4);
+    expect(diagram.copy['zh-hant'].stages.alts).toHaveLength(4);
+    for (const [index, still] of diagram.stills.entries()) {
+      expect(html).toContain(still.poster);
+      expect(html).toContain(still.mobilePoster);
+      expect(html).toContain(diagram.copy['zh-hant'].stages.alts[index]);
+      for (const src of [still.poster, still.mobilePoster]) {
+        const bytes = fs.readFileSync(publicFile(src));
+        expect(bytes.length).toBeLessThan(100 * 1024);
+        expect(bytes.subarray(8, 12).toString()).toBe('WEBP');
+      }
+    }
+    // A native-only figure must never leak Chinese copy onto another locale.
+    expect(renderToStaticMarkup(<TrafficDiagramFigure diagramId="lane-change-hypothetical" locale="en" />)).toBe('');
   });
 
   it('keeps the withdrawn overtaking-012 reconstruction out of the registry and public assets', () => {

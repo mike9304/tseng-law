@@ -4,7 +4,7 @@
 .frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: var(--diagram-aspect, 16 / 9);
   overflow: hidden;
   border-radius: 3px;
   background: #eef3ec;
@@ -12,6 +12,13 @@
 .frame :global(.decorative-autoplay-video__control) {
   top: 12px;
   right: 12px;
+}
+.withStages .frame { overflow: visible; margin-bottom: 52px; }
+.withStages .frame :global(.decorative-autoplay-video) { overflow: visible; }
+.withStages .frame :global(.decorative-autoplay-video__control) {
+  top: auto;
+  bottom: -44px;
+  right: 0;
 }
 .caption {
   display: flex;
@@ -31,6 +38,12 @@
 }
 .enlarge { color: #294f3e; text-underline-offset: 5px; align-self: flex-start; }
 .enlarge:focus-visible { outline: 3px solid #a47b25; outline-offset: 5px; }
+.stages { margin-top: 16px; color: #294f3e; }
+.stages summary { cursor: pointer; text-underline-offset: 4px; text-decoration: underline; }
+.stages summary:focus-visible { outline: 3px solid #a47b25; outline-offset: 5px; }
+.stageList { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 24px; }
+.stageList img { display: block; width: 100%; height: auto; }
+.stageList p { margin: 8px 0 0; font-size: 14px; line-height: 1.8; }
 @media (max-width: 640px) {
-  .frame { aspect-ratio: 4 / 5; }
+  .frame { aspect-ratio: var(--diagram-mobile-aspect, 4 / 5); }
 }

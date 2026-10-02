@@ -1,0 +1,365 @@
+{
+  "status": "APPROVE",
+  "date": "2026-10-02",
+  "file": "src/content/columns-zh/072-taiwan-lane-change-side-rear-collision-liability.md",
+  "sha256": "e7b8cdf6d424da7c9df086f945194a4c2df9ec38bbbbe2d6667c1a44e475ae03",
+  "writer_actual_model": "gpt-6-astra",
+  "writer_run": {
+    "started_at": "2026-10-02T03:23:37.914744+00:00",
+    "finished_at": "2026-10-02T03:26:25.838930+00:00",
+    "exit_code": 0,
+    "requested_model": "gpt-6-astra",
+    "auth_route": "existing ChatGPT login; no provider/API key configured by this task",
+    "agent_messages": 1,
+    "tool_events": 0,
+    "response_sha256": "e4b0e7dafe6ffcbe0b097d46cf04673514449d8efdd47dcca19894c1a017ee47",
+    "turn_events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 51555,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5295,
+          "reasoning_output_tokens": 1034
+        }
+      }
+    ],
+    "actual_runtime_model": "gpt-6-astra",
+    "actual_model_evidence": "writer-stderr.log runtime model=\"gpt-6-astra\""
+  },
+  "draft_opening_deletion_audit": [
+    {
+      "sentence": "汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成。",
+      "information_lost_if_deleted": "會失去義務主體、打燈方向、開始時點及持續至完成的要求。"
+    },
+    {
+      "sentence": "[道路交通安全規則第109條第2項第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=109&pcode=K0040013)沒有規定打燈幾秒後就能直接切入。",
+      "information_lost_if_deleted": "會失去方向燈義務的具體出處，以及不存在固定秒數通行許可的界限。"
+    },
+    {
+      "sentence": "汽車在同向二車道以上的道路行駛，應遵守標誌、標線；計算車道數時，不含車種專用車道、機車優先道及慢車道。",
+      "information_lost_if_deleted": "會失去第98條的道路適用範圍、車道計算排除項目及標誌標線義務。"
+    },
+    {
+      "sentence": "在此範圍內變換車道，即使已打方向燈，仍應讓直行車先行，並注意安全距離，這是[第98條第1項第6款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=98&pcode=K0040013)的要求。",
+      "information_lost_if_deleted": "會失去變換車道的禮讓與安全距離義務，以及打燈不能取代這兩項義務的說明。"
+    }
+  ],
+  "draft_recent_three_comparison": "069以外籍受僱者的調解資格開場，標題依爭議類型、申請程序及居留排列，末段要求提供文件並列聯絡資料；本稿從打燈的起訖義務開始，依跨線動態、避事故換道及反應時間展開，以保留連續影像的具體理由收束。068以扶養費執行名義開場，標題依特別規定、外國裁判及境外財產排列，末段轉入海外委任；本稿只處理台灣駕駛的換道擦撞，不延伸跨境程序。067前兩段區分公司內外責任，標題依身分、請求權人、時效及證據排列，末段列諮詢資料與聯絡方式；本稿把行車義務與賠償分擔的區別放在具體判決之後，不另設泛用「證據」或諮詢標題。三篇皆另列官方資料，本稿將來源放在相關主張旁，結尾僅附作者及日期資訊。既有四篇交通文章涵蓋事故總論、超車、警方資料申請及左轉對直行機車，本稿不重述其程序、請求項目或比例比較。",
+  "draft_style_edits": [
+    {
+      "before": "變換車道前應顯示欲變換方向的方向燈，而且方向燈應持續顯示至變換車道完成。",
+      "problem": "未明示義務主體，並在同句重複「方向燈應」。",
+      "after": "汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成。",
+      "meaning_preserved": "保留應履行的義務、欲變換方向、事前顯示及持續至完成四項條件。"
+    },
+    {
+      "before": "該案影像中的一秒，不應被理解為直行車在法律上可以免責的固定時間門檻。",
+      "problem": "「不應被理解為」使句子迂迴，具體案件經過與法律門檻的區別可以直接表達。",
+      "after": "這裡的一秒是該案影像中的具體經過，不是直行車免責的法定門檻。",
+      "meaning_preserved": "保留一秒僅屬該案事實、不能推廣為免責標準的限制。"
+    }
+  ],
+  "claim_map": [
+    {
+      "claim": "變換車道前應顯示欲變換方向的方向燈，並持續至完成。",
+      "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=109&pcode=K0040013",
+      "qualification": "第109條第2項第2款；條文未設定打燈後即可切入的固定秒數。"
+    },
+    {
+      "claim": "適用第98條的變換車道行為，應讓直行車先行並注意安全距離。",
+      "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=98&pcode=K0040013",
+      "qualification": "限汽車在同向二車道以上道路；車道數不含車種專用車道、機車優先道及慢車道，仍須遵守標誌、標線。"
+    },
+    {
+      "claim": "機車變換車道的禮讓與安全距離規定見第99條第1項第3款。",
+      "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=99&pcode=K0040013",
+      "qualification": "須連同該項序文理解：先依標誌、標線，無標誌或標線時依該項各款行駛；示意圖未呈現機車。"
+    },
+    {
+      "claim": "被害人與有過失時，法院得減輕賠償金額或免除之。",
+      "source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001",
+      "qualification": "須對損害發生或擴大有過失；並非一有違規就自動減賠，也非固定比例。"
+    },
+    {
+      "claim": "381號判決未因換道需求免除義務，並因直行方過失減輕賠償30%。",
+      "source_url": "https://data.judicial.gov.tw/opendl/JDocFile/PCEV/114%2C%E6%9D%BF%E5%B0%8F%2C381%2C20251231%2C1.pdf",
+      "qualification": "打燈是被告抗辯；比例限本案，確定狀態未查證。"
+    },
+    {
+      "claim": "3532號判決依影像所示動線及反應時間，認直行汽車無肇事因素。",
+      "source_url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCEV,114,%E6%9D%BF%E5%B0%8F,3532,20260109,1",
+      "qualification": "屬轉彎斜切案件；一秒不是免責門檻，確定狀態未查證。"
+    },
+    {
+      "claim": "接觸部位與單張跨線畫面不足以單獨判斷全部責任，須核對連續動線及反應證據。",
+      "source_url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCEV,114,%E6%9D%BF%E5%B0%8F,3532,20260109,1",
+      "qualification": "此為依判決證據分析方式提出的實務整理，並非判決另設的法定認定標準。"
+    }
+  ],
+  "integration_changes": [
+    {
+      "before": "作者：legal-ai-assistant（AI 撰寫）｜發布日期：2026年10月2日｜資料核對基準：2026年10月2日，依提供的法條與判決文本。",
+      "after": "如需就事故[諮詢律師](/zh-hant/contact)，可先整理事故地點、時間、是否有人受傷、警方處理資料、保險往來，以及目前是否已進入調解或訴訟。",
+      "reason": "AI/date identity belongs to verified frontmatter and site byline; add authorized domestic consultation context. Full source verification by primary Codex is documented in audit."
+    }
+  ],
+  "asset_provenance": "Original supplied Blender source/render. Desktop unsupported separator ・ replaced with / in copied compose.py and re-encoded. Original task-4 source files untouched. Stage images derived to WebP from the same original renders.",
+  "protected_paths": "Original checkout, 063–069, first two published articles, traffic-hub.ts and existing four traffic articles unchanged.",
+  "registry_sha256": "dc2d36d4b66c90b3670ae48da5d735dfa0d42cb2f0c9cc36d86e2c72413e1612",
+  "final_opening_deletion_audit": [
+    {
+      "sentence": "汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成（道路交通安全規則第109條第2項第2款）。",
+      "information_lost_if_deleted": "The only statement of the signal timing duty (before the change, through completion) and its source. It answers the title's 打了方向燈 premise directly."
+    },
+    {
+      "sentence": "條文沒有規定打燈幾秒後就能直接切入。",
+      "information_lost_if_deleted": "The negative fact that no seconds-based safe harbor exists. Without it, readers may infer that signaling for some period licenses the move."
+    },
+    {
+      "sentence": "汽車在同向二車道以上的道路行駛，應遵守標誌、標線；計算車道數時，不含車種專用車道、機車優先道及慢車道。",
+      "information_lost_if_deleted": "The 98(1) scope condition and its lane-count exclusions, plus the duty to follow signs and markings. Without it, 「在此範圍內」 in the next sentence has no referent."
+    },
+    {
+      "sentence": "在此範圍內變換車道，即使已打方向燈，仍應讓直行車先行，並注意安全距離，這是第98條第1項第6款的要求。",
+      "information_lost_if_deleted": "The core rule that signaling does not displace the yield and safe-distance duty, with its source. The whole article rests on this sentence."
+    }
+  ],
+  "final_recent_three_comparison": "067, 068 and 069 all open with a statute link, and 067 and 068 open with the statute name itself. This article opens with the driver's duty as subject, and the citation follows in parentheses. Its first paragraph is two sentences and states a negative fact (no seconds threshold) that answers the title's premise, not an eligibility or enforceability rule. Their headings are topical noun phrases (「向哪裡申請、調解成立的效力」「請求權時效」「證據」「參考的官方資料」). This article's headings are claims tied to its own issue: 「車輪跨線以後，還要看兩車怎麼移動」「為了繞過前方事故，仍須禮讓」「直行車有沒有時間避開，要回到影像順序」. All three end the same way: a document request, the named lawyer's email and address, a bulleted official-source list, and 確認日. This article ends with evidence-preservation advice followed by one consultation sentence linking only /zh-hant/contact. It names no lawyer, has no address block, and has no separate source list because citations sit beside their claims. The structure does not reuse their template.",
+  "existing_four_traffic_comparison": "003 is a 20-question Q&A covering the whole accident process (scene, damages, insurance, criminal liability). It does not address the lane-change signal and yield duty or side-rear contact. 012 covers overtaking under §101 within the same lane and returning to the original path. This article covers a lane change under 98(1)(6) and 109(2)(2), a different rule, and opens on signal timing, not overtaking judgment. 050 covers police records and online applications and includes leaving-Taiwan arrangements. This article has no records-procedure or cross-border content. 051 is a left-turn car versus straight motorcycle case, with 70/60/50% apportionments in the title and body. This article uses the turning-motorcycle case 3532 only as a labelled contrast about video sequence and reaction time. It presents 381's 30% as that case's result only and puts no percentages in the title or headings. None of the four duplicates this topic.",
+  "substantive_review": {
+    "decision": "REVISE",
+    "actual_scope": "I reviewed only the supplied text: the frontmatter, every body sentence, and the zh-hant diagram copy. I checked them against the supplied official excerpts of 道路交通安全規則第98、99、109條 and 民法第217條, and the supplied full texts of 114年度板小字第381號 and 第3532號. I did not open any URL, image, or video. I did not see the titles and headings of the four existing traffic articles, so I could not check for duplication against them. The article holds up on the main legal points. Modality matches the sources: 應 for the 98/109 duties and 得 for 217. It does not invent a seconds threshold, does not set a lane-change completion test, and does not apply a fixed fault ratio. It keeps duty separate from fault allocation. It frames 3532 as a turning/diagonal-entry case, gives no 1-second legal standard, and does not mention the 19,650→13,881 parts-depreciation reduction. It contains no bold, no claim of human review, and no cross-border framing. The consultation inputs are optional and the only link is /zh-hant/contact. Revision is still required for six reasons: (1) the source note says neither case's court-reviewed video was viewed, but 381 involved no video review; (2) the 30% sentence is unclear, and it does not say plainly that the ratio is case-specific; (3) the 381 paragraph does not say that the court made no finding on whether the defendant signaled, which is the article's title question; (4) '車尾被撞' in the title widens the scope toward rear-end collisions, but the body and the case concern the side-rear body; (5) the evidence advice uses 應, which reads as a legal duty; (6) several sentences are clipped or awkward. I made no change to the diagram copy. Its alt text, legend, caption, stages, and the mandatory assumption are hypothetical and concrete, and none presents itself as the actual case: there is no obstacle, contact, injury, damage, fault percentage, measured speed, or legal distance. The legend states that A and B are not the parties. The assumption is preserved character for character. The slug, file, path, diagram id, and diagram_after heading are unchanged.",
+    "findings": [
+      {
+        "severity": "medium",
+        "before": "兩案的引用均依判決文字，未直接檢視法院勘驗的原始影像，也未確認判決是否確定。",
+        "problem": "This is a factual mismatch. Only 3532 records a court review of video. In 381 the court relied on the defendant's police statement and the review board opinion, so the sentence suggests 381 involved video review.",
+        "after": "兩案內容均依判決文字整理；第3532號判決勘驗的原始影像，本文未直接檢視，兩案判決是否已確定也未確認。",
+        "meaning_preserved": "Still discloses that the author did not see the underlying video and did not verify finality for either case. Video review is now attributed only to 3532."
+      },
+      {
+        "severity": "medium",
+        "before": "這是該案結果，不能依接觸部位套用。",
+        "problem": "It is unclear what 'this' refers to, and '不能依接觸部位套用' is not natural Chinese. The scope note requires an explicit statement that 30% belongs to this case only and is not a rule for rear-side contact.",
+        "after": "這個比例是該案的結果，不是側後方碰撞的固定比例。",
+        "meaning_preserved": "30% is the court's discretionary reduction in 381. It is not a general apportionment rule for this contact position."
+      },
+      {
+        "severity": "medium",
+        "before": "已打燈、必須換道所以無責任，是被告的抗辯。法院認定其未禮讓及注意安全距離，換道需求也不免除義務；並採覆議會主、次因意見，認直行駕駛未注意車前狀況，減輕賠償30%。",
+        "problem": "The fragment that opens as the sentence's subject is clipped. The title asks about signaling, but the paragraph never says that the 理由要領 contains no finding on whether the defendant signaled. '採覆議會主、次因意見' overstates the court's reasoning: the court said the opinion was consistent, then decided contributory fault 綜合雙方過失情節及相關事證. '未禮讓及注意' can be read ambiguously.",
+        "after": "被告抗辯必須換道才能前進，且已打方向燈，所以沒有肇事責任；這是被告的主張，判決理由並未另外認定被告是否打燈。法院認為，被告變換車道時未讓左側直行車先行、未注意安全距離，即有過失，換道的需要也不免除這項義務。判決提到的新北市車輛行車事故鑑定覆議會意見，以被告為肇事主因、直行駕駛未注意車前狀況為肇事次因；法院綜合雙方過失情節，將被告的賠償責任酌減30%。",
+        "meaning_preserved": "Signaling and necessity remain defendant arguments. The court's yield and safe-distance holding stands, as does the holding that the need to change lanes does not waive the duty. The review board's 主因/次因 opinion, the 30% reduction, and the straight driver's failure to watch ahead are kept. No amounts are added."
+      },
+      {
+        "severity": "medium",
+        "before": "變換車道擦撞：打了方向燈、車尾被撞，就沒有責任嗎？",
+        "problem": "'車尾被撞' points readers toward rear-end collisions (追撞), which raise a different question about following distance. The body and case 381 concern the side-rear body (左後車身) during a lane change, so the title promises a wider scope than the article covers.",
+        "after": "變換車道擦撞：打了方向燈、車身後側被撞，就沒有責任嗎？",
+        "meaning_preserved": "Same question, same lane-change scope and slug; it now matches the side-rear contact that the body discusses."
+      },
+      {
+        "severity": "low",
+        "before": "車尾或側後方受撞，不能單獨決定責任，還須核對移動過程、相對位置及反應餘裕。",
+        "problem": "Aligns the summary with the corrected title scope.",
+        "after": "車身後側或側後方受撞，不能單獨決定責任，還須核對移動過程、相對位置及反應餘裕。",
+        "meaning_preserved": "Same caveat that contact position alone does not decide liability."
+      },
+      {
+        "severity": "low",
+        "before": "新北地院板橋簡易庭2025年12月31日的114年度板小字第381號判決記載，被告警詢稱，為避開前方事故向左換道，尚未完成時，左後車身與他車右前車頭碰撞。",
+        "problem": "The first mention uses an abbreviated court name. '被告警詢稱' is clipped. '他車' hides the fact that the other car was the straight-moving car on the left.",
+        "after": "臺灣新北地方法院板橋簡易庭2025年12月31日的114年度板小字第381號判決記載，被告於警詢時表示，因前方有事故而向左變換車道，尚未完成時，其左後車身與左方直行車的右前車頭碰撞。",
+        "meaning_preserved": "Same date, case number, and police-statement content: the accident ahead, the leftward change, the unfinished change, and left-rear contact with the other car's right-front. It is still reported as the defendant's statement."
+      },
+      {
+        "severity": "low",
+        "before": "汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成。[道路交通安全規則第109條第2項第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=109&pcode=K0040013)沒有規定打燈幾秒後就能直接切入。",
+        "problem": "The citation is attached to the negative sentence rather than to the duty it supports. Moving it beside the duty keeps the citation next to its claim. It also avoids starting the article with a statute name, the opening pattern of 067 and 068.",
+        "after": "汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成（[道路交通安全規則第109條第2項第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=109&pcode=K0040013)）。條文沒有規定打燈幾秒後就能直接切入。",
+        "meaning_preserved": "The duty to signal before the change and through its completion keeps 應. The statement that no seconds are prescribed is kept."
+      },
+      {
+        "severity": "low",
+        "before": "應先遵守哪項行車義務，與損害賠償最後如何分擔，是不同問題。",
+        "problem": "'應先' wrongly suggests an order of duties. The point is to separate the duty from the allocation of fault.",
+        "after": "駕駛人負有哪項行車義務，與損害賠償最後如何分擔，是不同問題。",
+        "meaning_preserved": "The duty versus fault-allocation distinction is unchanged."
+      },
+      {
+        "severity": "low",
+        "before": "調解或訴訟中若要主張對方來得及減速，應把這項主張對應到影像中可辨識的距離、持續時間與車輛動作；若認為自己已完成變換車道，也應保留橫移前後的連續片段。原始檔另行保存，提出說明時標出時間點，才能讓對方與法院核對同一段經過。",
+        "problem": "This is practical advice, but 應 reads in Taiwanese legal text as a legal obligation. The policy requires keeping obligation and recommendation distinct. '才能' overstates necessity.",
+        "after": "調解或訴訟中若要主張對方來得及減速，宜把這項主張對應到影像中可辨識的距離、持續時間與車輛動作；若認為自己已完成變換車道，也宜保留橫移前後的連續片段。原始檔另行保存，提出說明時標出時間點，方便對方與法院核對同一段經過。",
+        "meaning_preserved": "The same evidence steps remain: link the claim to distance, duration, and movement; keep continuous footage; preserve the original file; mark timestamps. Only the strength is corrected from duty to advice."
+      }
+    ],
+    "revised_article_markdown": "---\ntitle: \"變換車道擦撞：打了方向燈、車身後側被撞，就沒有責任嗎？\"\nsummary: \"方向燈應在變換車道前顯示，並持續至完成；變換車道者仍須讓直行車先行、注意安全距離。車身後側或側後方受撞，不能單獨決定責任，還須核對移動過程、相對位置及反應餘裕。\"\npublished: \"2026-10-02\"\nlastmod: \"2026-10-02\"\ndate_display: \"2026年10月2日\"\nread_time: \"約5分鐘閱讀\"\ncategories: [\"台灣車禍法律\"]\ntopic: \"litigation\"\nfeatured_image: \"/images/placeholder-article-hero.jpg\"\naudience: [\"zh-hant\"]\nauthor: \"legal-ai-assistant\"\ndiagram: \"lane-change-hypothetical\"\ndiagram_after: \"車輪跨線以後，還要看兩車怎麼移動\"\n---\n\n汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成（[道路交通安全規則第109條第2項第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=109&pcode=K0040013)）。條文沒有規定打燈幾秒後就能直接切入。\n\n汽車在同向二車道以上的道路行駛，應遵守標誌、標線；計算車道數時，不含車種專用車道、機車優先道及慢車道。在此範圍內變換車道，即使已打方向燈，仍應讓直行車先行，並注意安全距離，這是[第98條第1項第6款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=98&pcode=K0040013)的要求。\n\n機車另須依[第99條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=99&pcode=K0040013)先遵守標誌、標線；無標誌或標線時，依該項各款行駛，其中第3款也要求變換車道時讓直行車先行並注意安全距離。下方示意僅有兩輛小客車。\n\n## 車輪跨線以後，還要看兩車怎麼移動\n\n側後方的碰撞痕跡可以協助核對接觸位置，卻不能單憑這個位置，認定變換車道尚未完成，或反過來認定已完成、只剩後車的責任。還要連同兩車原本的位置、橫向移動過程、接近的時間與距離，以及煞車或閃避的反應一起判斷。\n\n示意中的橙色 A 車由右向左移動，藍綠色 B 車維持左側車道直行，畫面在接觸前停止。車輪跨線、車身橫跨兩車道，是圖中呈現的不同位置；不能只靠其中一格，訂出法律上何時完成變換車道的精確界線，也不能拿動畫停留的時間當成安全等待時間。\n\n實際爭議若是「我早就進入車道，對方才撞上來」，可從連續影像核對：車身何時開始橫移、進入多少、之後是否仍在橫移，以及另一車何時有機會察覺並反應。單張車損照片通常無法交代這些先後關係。\n\n## 為了繞過前方事故，仍須禮讓\n\n臺灣新北地方法院板橋簡易庭2025年12月31日的114年度板小字第381號判決記載，被告於警詢時表示，因前方有事故而向左變換車道，尚未完成時，其左後車身與左方直行車的右前車頭碰撞。被告抗辯必須換道才能前進，且已打方向燈，所以沒有肇事責任；這是被告的主張，判決理由並未另外認定被告是否打燈。法院認為，被告變換車道時未讓左側直行車先行、未注意安全距離，即有過失，換道的需要也不免除這項義務。判決提到的新北市車輛行車事故鑑定覆議會意見，以被告為肇事主因、直行駕駛未注意車前狀況為肇事次因；法院綜合雙方過失情節，將被告的賠償責任酌減30%。這個比例是該案的結果，不是側後方碰撞的固定比例。[判決原文](https://data.judicial.gov.tw/opendl/JDocFile/PCEV/114%2C%E6%9D%BF%E5%B0%8F%2C381%2C20251231%2C1.pdf)\n\n駕駛人負有哪項行車義務，與損害賠償最後如何分擔，是不同問題。依[民法第217條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)，被害人對損害的發生或擴大也有過失時，法院得減輕賠償金額，或免除之。因此，直行車有優先通行的地位，不等於在每件事故中都沒有過失；也不能只因事故發生，就推定直行駕駛一定能避免。\n\n## 直行車有沒有時間避開，要回到影像順序\n\n同庭2026年1月9日的114年度板小字第3532號判決，處理的是機車從巷口左轉、經對向車道斜切後向右靠近直行汽車的事故，適用第99條第2項及第102條第1項第7款，並非一般同向變換車道案件。法院勘驗影像，認汽車始終直行，機車最後靠近至碰撞僅一秒，汽車無法立即閃避；騎士指稱超速、事故時駕照已遭吊銷等，也未獲證實，法院認汽車無肇事因素。[判決原文](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCEV,114,%E6%9D%BF%E5%B0%8F,3532,20260109,1)\n\n這裡的一秒是該案影像中的具體經過，不是直行車免責的法定門檻。兩案內容均依判決文字整理；第3532號判決勘驗的原始影像，本文未直接檢視，兩案判決是否已確定也未確認。\n\n調解或訴訟中若要主張對方來得及減速，宜把這項主張對應到影像中可辨識的距離、持續時間與車輛動作；若認為自己已完成變換車道，也宜保留橫移前後的連續片段。原始檔另行保存，提出說明時標出時間點，方便對方與法院核對同一段經過。只留下碰撞瞬間，往往也把判斷反應餘裕所需的前段畫面刪掉了。\n\n如需就事故[諮詢律師](/zh-hant/contact)，可先整理事故地點、時間、是否有人受傷、警方處理資料、保險往來，以及目前是否已進入調解或訴訟。\n",
+    "revised_diagram_copy": null,
+    "opening_deletion_audit": [
+      {
+        "sentence": "汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成（[道路交通安全規則第109條第2項第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=109&pcode=K0040013)）。",
+        "information_lost_if_deleted": "The article would lose the legal duty, its start (before the change) and end (through completion), and the only citation for 109(2)(2). That duty answers the 打了方向燈 part of the title."
+      },
+      {
+        "sentence": "條文沒有規定打燈幾秒後就能直接切入。",
+        "information_lost_if_deleted": "The article would lose the point that no seconds threshold exists. Without it, readers could assume a waiting period that makes a lane change lawful."
+      },
+      {
+        "sentence": "汽車在同向二車道以上的道路行駛，應遵守標誌、標線；計算車道數時，不含車種專用車道、機車優先道及慢車道。",
+        "information_lost_if_deleted": "The article would lose the scope condition of 98(1): same-direction roads with two or more lanes, and which lanes are excluded from the count. It would also lose the duty to follow signs and markings. Without this, 98(1)(6) would read as applying to every road."
+      },
+      {
+        "sentence": "在此範圍內變換車道，即使已打方向燈，仍應讓直行車先行，並注意安全距離，這是[第98條第1項第6款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=98&pcode=K0040013)的要求。",
+        "information_lost_if_deleted": "The article would lose its core answer: signaling does not displace the separate duties to yield and keep a safe distance. It would also lose the citation for 98(1)(6)."
+      }
+    ],
+    "recent_three_comparison": "Openings: 067 begins '[公司法第23條]第1項規定…', 068 begins '依[家事事件法第186條]…', and 069 begins with the foreign employee as subject, then gives 依據是[勞資爭議處理法]. This article starts with the driver's duty as subject, places the citation in a parenthesis, and answers the title's signaling question within its first two sentences. Headings: the three earlier articles use noun-topic headings ('誰是公司負責人', '請求權時效', '對方在國外時') and all end with '參考的官方資料'. This article's headings state its claims about lane-change facts ('車輪跨線以後，還要看兩車怎麼移動', '直行車有沒有時間避開，要回到影像順序'), and it has no source-list section because citations sit inline. Endings: all three earlier articles end with an email/address block for 曾雋崴律師 plus a source list and 確認日, and 068 and 069 also link to the overseas-hiring column. This article ends with one optional, domestic-only sentence of consultation inputs linking /zh-hant/contact, with no email, address, overseas link, or repeated metadata. One overlap remains: 067 also ends by listing documents to provide. Here the list is specific to the accident and explicitly optional, so I see no need to rewrite it.",
+    "remaining_limitations": [
+      "I did not see the titles or headings of the four existing traffic articles. My judgment that this article does not duplicate them rests only on the scope described in the brief.",
+      "Neither judgment's finality has been verified, and the article discloses this. I did not view either PDF or page myself; I relied on the text supplied by the main agent.",
+      "In 3532 the article says the rider's license claim was 未獲證實. The court in fact cited a police reply showing the license was revoked on 2024-01-08, after the accident. The wording is accurate but understates this. I left it because adding the detail would lengthen the contrast paragraph without serving the lane-change point.",
+      "The article does not address whether 道路交通安全規則's definition of 汽車 brings motorcycles under 98 as well as 99. '機車另須' does not assert either way, and I did not verify the definitions clause.",
+      "The naturalness of the Taiwanese Mandarin was judged by an AI model, not by a native or human legal reviewer, and should not be described as human-reviewed.",
+      "I reviewed the diagram copy as text only; I did not inspect the media files. Geometry, the absence of contact, and the reduced-motion/saveData still-image fallback rely on the primary agent's inspection and the ongoing browser integration test."
+    ]
+  },
+  "final_review": {
+    "decision": "APPROVE",
+    "article_sha256": "e7b8cdf6d424da7c9df086f945194a4c2df9ec38bbbbe2d6667c1a44e475ae03",
+    "registry_sha256": "dc2d36d4b66c90b3670ae48da5d735dfa0d42cb2f0c9cc36d86e2c72413e1612",
+    "remaining_findings": [],
+    "resolved_findings": [
+      "Title now reads 「打了方向燈、車身後側被撞，就沒有責任嗎？」. It matches the left-rear body contact in case 381 and no longer points readers toward rear-end following-distance (追撞) cases. Slug and lane-change scope are unchanged.",
+      "Summary changed from 「車身後側或側後方」 to 「車身後側」. This removes a synonym only. The caveat that contact position alone cannot decide liability is preserved, and the summary keeps 應 for the signal duty and 須 for yield and safe distance, so it is no broader than the body.",
+      "The 109(2)(2) citation now sits in parentheses directly after the signal duty it supports. 「條文沒有規定打燈幾秒後就能直接切入」 is a separate sentence and invents no seconds threshold. The article opens with the driver's duty, not a statute name.",
+      "First mention of 381 uses the full court name 臺灣新北地方法院板橋簡易庭 and the correct date 2025年12月31日. The police statement is attributed as 「被告於警詢時表示」. The other car is identified as 左方直行車, and the contact is the defendant's 左後車身 against its 右前車頭. All match the PDF.",
+      "Case 381 facts and arguments are now separate from the holdings, in two paragraphs. Necessity and signaling are labelled as the defendant's 主張. 「判決理由並未另外認定被告是否打燈」 is accurate: the 理由要領 contains no finding on signaling.",
+      "The holdings paragraph tracks the judgment. It states the 98(1)(6) yield and safe-distance negligence and that the need to change lanes does not waive the duty. It attributes the 主因/次因 opinion to the 覆議會 as cited in the judgment, and says the court itself 綜合雙方過失情節 to reduce by 30%. It no longer says the court 'adopted' the board opinion.",
+      "The 30% is now explicitly limited to that case: 「這個比例是該案的結果，不是側後方碰撞的固定比例」. No amounts are introduced.",
+      "「應先遵守哪項行車義務」 became 「駕駛人負有哪項行車義務」. This removes the false ordering of duties and keeps the duty-versus-allocation distinction. 217(1) is stated with 得減輕…或免除之, the straight driver is not called universally faultless, and the opposite presumption (that the straight driver could always have avoided the collision) is also rejected.",
+      "Case 3532 is correctly dated 2026年1月9日 and characterized as a turning, diagonal-entry case under 99(2) and 102(1)(7), expressly not an ordinary same-direction lane change. The one second is tied to that case's video and disclaimed as a legal threshold. The rider's overspeed and license assertions are stated as unproven. The 19,650→13,881 parts-depreciation reduction is not mentioned, so it cannot be confused with fault allocation.",
+      "The video disclosure now attributes video review only to 3532: 「第3532號判決勘驗的原始影像，本文未直接檢視」. Finality is stated as unverified for both cases, and neither is called 確定判決 or 判例.",
+      "Evidence advice now uses 宜 instead of 應, and 「方便」 replaces 「才能」. Practical recommendations are no longer phrased as legal obligations, while the statutory duties elsewhere keep 應."
+    ],
+    "opening_deletion_audit": [
+      {
+        "sentence": "汽車駕駛人應在變換車道前顯示欲變換方向的方向燈，並持續顯示至變換車道完成（道路交通安全規則第109條第2項第2款）。",
+        "information_lost_if_deleted": "The only statement of the signal timing duty (before the change, through completion) and its source. It answers the title's 打了方向燈 premise directly."
+      },
+      {
+        "sentence": "條文沒有規定打燈幾秒後就能直接切入。",
+        "information_lost_if_deleted": "The negative fact that no seconds-based safe harbor exists. Without it, readers may infer that signaling for some period licenses the move."
+      },
+      {
+        "sentence": "汽車在同向二車道以上的道路行駛，應遵守標誌、標線；計算車道數時，不含車種專用車道、機車優先道及慢車道。",
+        "information_lost_if_deleted": "The 98(1) scope condition and its lane-count exclusions, plus the duty to follow signs and markings. Without it, 「在此範圍內」 in the next sentence has no referent."
+      },
+      {
+        "sentence": "在此範圍內變換車道，即使已打方向燈，仍應讓直行車先行，並注意安全距離，這是第98條第1項第6款的要求。",
+        "information_lost_if_deleted": "The core rule that signaling does not displace the yield and safe-distance duty, with its source. The whole article rests on this sentence."
+      }
+    ],
+    "recent_three_comparison": "067, 068 and 069 all open with a statute link, and 067 and 068 open with the statute name itself. This article opens with the driver's duty as subject, and the citation follows in parentheses. Its first paragraph is two sentences and states a negative fact (no seconds threshold) that answers the title's premise, not an eligibility or enforceability rule. Their headings are topical noun phrases (「向哪裡申請、調解成立的效力」「請求權時效」「證據」「參考的官方資料」). This article's headings are claims tied to its own issue: 「車輪跨線以後，還要看兩車怎麼移動」「為了繞過前方事故，仍須禮讓」「直行車有沒有時間避開，要回到影像順序」. All three end the same way: a document request, the named lawyer's email and address, a bulleted official-source list, and 確認日. This article ends with evidence-preservation advice followed by one consultation sentence linking only /zh-hant/contact. It names no lawyer, has no address block, and has no separate source list because citations sit beside their claims. The structure does not reuse their template.",
+    "existing_four_traffic_comparison": "003 is a 20-question Q&A covering the whole accident process (scene, damages, insurance, criminal liability). It does not address the lane-change signal and yield duty or side-rear contact. 012 covers overtaking under §101 within the same lane and returning to the original path. This article covers a lane change under 98(1)(6) and 109(2)(2), a different rule, and opens on signal timing, not overtaking judgment. 050 covers police records and online applications and includes leaving-Taiwan arrangements. This article has no records-procedure or cross-border content. 051 is a left-turn car versus straight motorcycle case, with 70/60/50% apportionments in the title and body. This article uses the turning-motorcycle case 3532 only as a labelled contrast about video sequence and reaction time. It presents 381's 30% as that case's result only and puts no percentages in the title or headings. None of the four duplicates this topic.",
+    "remaining_limitations": [
+      "Reviewed only the supplied texts without tools. The hashes are echoed as provided, not independently computed.",
+      "The reviewer did not see the Blender video, stills, or poster, nor the underlying dashcam footage in 3532. Media accuracy and accessibility rest on the primary agent's inspection and tests. Caption consistency was checked against the article text only.",
+      "Finality of both judgments is unverified, as the article discloses.",
+      "This is AI authoring and AI review only. There has been no human, native-speaker, or Taiwan-lawyer review, and none should be claimed.",
+      "Minor non-material nuance: case 381's 四 independently finds the straight driver negligent (未注意車前狀況). The article conveys this through 「法院綜合雙方過失情節」 rather than a separate sentence. This is accurate and no change is required."
+    ]
+  },
+  "review_runs": [
+    {
+      "started_at": "2026-10-02T03:28:03.084574+00:00",
+      "finished_at": "2026-10-02T03:28:05.185650+00:00",
+      "exit_code": 1,
+      "requested_model_alias": "opus",
+      "actual_model_usage": {},
+      "is_error": true,
+      "result_type": "success",
+      "num_turns": 1,
+      "auth_route": "existing claude.ai Max subscription confirmed before execution; no API key or extra usage enabled by this task",
+      "response_characters": 59,
+      "response_sha256": "a360c217bccdd49e21de630b67840cfa1976f7025e2d874349614633f3224fa3",
+      "permission_denials": []
+    },
+    {
+      "started_at": "2026-10-02T03:50:05.065492+00:00",
+      "finished_at": "2026-10-02T03:53:16.643507+00:00",
+      "exit_code": 0,
+      "requested_model_alias": "opus",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 2,
+          "outputTokens": 21442,
+          "cacheReadInputTokens": 535,
+          "cacheCreationInputTokens": 29052,
+          "webSearchRequests": 0,
+          "costUSD": 0.661371,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 14236,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "is_error": false,
+      "result_type": "success",
+      "num_turns": 1,
+      "auth_route": "existing claude.ai Max subscription confirmed before execution; no API key or extra usage enabled by this task",
+      "response_characters": 13584,
+      "response_sha256": "542463ec923093b363ac6d02ec5e869d682bb1a56d70dfc251a2cc0c29fd9ad1",
+      "permission_denials": []
+    },
+    {
+      "started_at": "2026-10-02T03:54:58.059047+00:00",
+      "finished_at": "2026-10-02T03:55:47.796022+00:00",
+      "exit_code": 0,
+      "requested_model_alias": "opus",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 2,
+          "outputTokens": 5102,
+          "cacheReadInputTokens": 2184,
+          "cacheCreationInputTokens": 32362,
+          "webSearchRequests": 0,
+          "costUSD": 0.3613808,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 2395,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "is_error": false,
+      "result_type": "success",
+      "num_turns": 1,
+      "auth_route": "existing claude.ai Max subscription confirmed before execution; no API key or extra usage enabled by this task",
+      "response_characters": 6771,
+      "response_sha256": "5639210bb9fe66040b9b5178c12a27d01c45df8d10601774436745d61284bc85",
+      "permission_denials": []
+    }
+  ],
+  "post_review_primary_edits": {
+    "changes": [
+      {
+        "before": "車身後側或側後方受撞",
+        "after": "車身後側受撞",
+        "reason": "Remove synonymous repetition in reviewer-proposed summary; keep side-rear scope."
+      },
+      {
+        "before": "381 facts/arguments and court findings in one paragraph",
+        "after": "Separate facts/arguments and findings into adjacent paragraphs; unchanged wording/citation",
+        "reason": "Make the asserted facts versus holding easier to distinguish."
+      }
+    ],
+    "sha256": "e7b8cdf6d424da7c9df086f945194a4c2df9ec38bbbbe2d6667c1a44e475ae03"
+  },
+  "source_verification": "Primary Codex directly fetched official laws on 2026-10-02, downloaded and read all pages of case381 PDF, read official court text of case3532. Models reviewed supplied text. Finality and original dashcam footage not independently verified."
+}

@@ -89,6 +89,15 @@ heading is given or found. Captions, including the illustrative-assumption
 note, live in the registry per locale (ko, zh-hant, en, ja). Builder/Blob copies
 keep the field from the .md file.
 
+A native-only column may register copy only for its own locale; the figure
+renders nothing in a locale without reviewed copy. Shared hub illustrations
+still require all four locales. `lane-change-hypothetical` is a Taiwan-only
+example and is not added to the existing traffic hub. Its actual dimensions
+set a 40:27 desktop frame and a 4:5 mobile frame. Optional `stills` plus
+`copy.stages` provide four expandable static views, also available when motion
+or data saving disables video. For these figures the playback button sits
+below the media so it cannot obscure embedded labels.
+
 ## 칼럼별 Blender 도해
 
 교통사고 허브의 각 칼럼은 해당 글을 설명하는 도해를 하나씩 연결한다. 특정 사건의 미동의 재현물을 재사용하지 않는다. 본문 Markdown 이미지를 전역 허용하는 방식도 사용하지 않는다.

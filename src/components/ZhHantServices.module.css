@@ -553,3 +553,15 @@
   .groupGrid:has(> :only-child) { margin-inline: 0; padding-inline: 0; }
   .contact { padding-inline: var(--svc-gutter); }
 }
+
+/* ===== Monoline icons and neutral accents (2026-10-02): the practice glyph is a 48px ZhHantMonoIcon in #1d1d1f
+   with no box (48 + 2px keeps the title where the 44px box + 6px put it). ===== */
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 2px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--ap-text);
+}

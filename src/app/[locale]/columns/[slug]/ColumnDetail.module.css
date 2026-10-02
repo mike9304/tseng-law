@@ -292,6 +292,7 @@
 .article :global(.column-table-wrap) :global(th),
 .article :global(.column-table-wrap) :global(td) {
   min-width: 9rem;
+  vertical-align: top;
   white-space: normal;
   overflow-wrap: break-word;
 }

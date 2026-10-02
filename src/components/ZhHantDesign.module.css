@@ -1088,3 +1088,21 @@
   .mobileCta { transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s linear 0s; }
   .mobileCta[data-hero-visible='true'] { transition: opacity 0.25s ease, transform 0.3s ease, visibility 0s linear 0.3s; }
 }
+
+/* =====================================================================================================
+   Monoline icons and neutral accents (2026-10-02). Operator: 「대만페이지는 전체 색감을 다시 정했으니까 초록색
+   아이콘들 이런거도 다 다시 디자인해야지 심플세련 느낌으로」. Icons are ZhHantMonoIcon in #1d1d1f with no box;
+   the ink #16382d stays on what you press. Layout, hero, copy and the ink pills are unchanged. Later rules win.
+   ===================================================================================================== */
+/* Practice tiles: a 48px monoline glyph (2px line), no box; 48 + 18px keeps the title where the 44px box + 22px
+   put it. The shared card hover no longer turns the icon gold. */
+.home:global(#zh-hant-home) :global(.service-icon) {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 0 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: var(--ap-text);
+}
+.home:global(#zh-hant-home) :global(.services-detail-card:hover .service-icon),
+.home:global(#zh-hant-home) :global(.services-detail-card:focus-within .service-icon) { border-color: transparent; background: none; color: var(--ap-text); }

@@ -27333,3 +27333,15 @@ html[dir='rtl'] .guidance-answer {
   visibility: visible;
   transition-delay: 0s;
 }
+
+/* =====================================================================================================
+   zh-hant · monoline icons and a neutral palette (2026-10-02)
+   Operator: 「대만페이지는 전체 색감을 다시 정했으니까 초록색 아이콘들 이런거도 다 다시 디자인해야지 심플세련 느낌으로」.
+   Icons are ZhHantMonoIcon (src/components/zh-hant-icons): one line on a 24px grid, currentColor, no box.
+   ===================================================================================================== */
+.zh-mono {
+  display: inline-block;
+  flex: none;
+  vertical-align: -0.125em;
+  overflow: visible;
+}

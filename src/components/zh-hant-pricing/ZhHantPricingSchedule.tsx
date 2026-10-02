@@ -1,5 +1,5 @@
 import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
-import PricingIcon from '@/components/PricingIcon';
+import ZhHantMonoIcon, { ZH_FEE_ICON } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import type { PricingContent } from '@/components/PricingCards';
 import {
   getConsultationCtaLabel,
@@ -30,7 +30,7 @@ export default function ZhHantPricingSchedule({ data }: { data: PricingContent }
             {data.items.map((item) => (
               <article key={item.icon} id={`fee-${item.icon}`} className={styles.row} data-fee={item.icon}>
                 <div className={styles.rowHead}>
-                  <span className={styles.rowIcon} aria-hidden><PricingIcon name={item.icon} /></span>
+                  <span className={styles.rowIcon} aria-hidden><ZhHantMonoIcon name={ZH_FEE_ICON[item.icon]} size={48} /></span>
                   <h2 className={styles.rowTitle}>{item.title}</h2>
                   <p className={styles.rowPrice}>
                     <span className={styles.amount}>{item.price}</span>

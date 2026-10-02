@@ -13,6 +13,7 @@ import ZhHantEngagement from '@/components/zh-hant-home/ZhHantEngagement';
 import ZhHantHeroMedia from '@/components/zh-hant-home/ZhHantHeroMedia';
 import ZhHantHeroTrust from '@/components/zh-hant-home/ZhHantHeroTrust';
 import ZhHantPracticeFocus from '@/components/zh-hant-home/ZhHantPracticeFocus';
+import ZhHantMonoIcon, { ZH_PRACTICE_ICON } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 import { ZH_HANT_DOMESTIC_SERVICE_ORDER, ZH_HANT_SERVICE_SCENARIOS } from '@/components/zh-hant-home/zh-hant-service-scenarios';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
@@ -78,7 +79,15 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
         />
       </BuilderSurfaceProvider>
       <ZhHantAudienceDoors />
-      <ServicesBento locale="zh-hant" id="practice" variant="default" presentation="editorial" scenarioTags={ZH_HANT_SERVICE_SCENARIOS} order={ZH_HANT_DOMESTIC_SERVICE_ORDER} />
+      <ServicesBento
+        locale="zh-hant"
+        id="practice"
+        variant="default"
+        presentation="editorial"
+        scenarioTags={ZH_HANT_SERVICE_SCENARIOS}
+        order={ZH_HANT_DOMESTIC_SERVICE_ORDER}
+        renderIcon={(index) => <ZhHantMonoIcon name={ZH_PRACTICE_ICON[index] ?? 'company'} size={48} />}
+      />
       <ZhHantPracticeFocus />
       <InsightsArchiveSection locale="zh-hant" posts={posts} presentation="editorial" pinnedSlugs={ZH_HANT_FEATURED_COLUMN_SLUGS} />
       <ZhHantEngagement />

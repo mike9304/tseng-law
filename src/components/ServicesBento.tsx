@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { EN_HOME_SERVICES_ASSISTANCE } from '@/data/en-service-scope';
@@ -44,6 +45,7 @@ export default function ServicesBento({
   presentation,
   scenarioTags,
   order,
+  renderIcon,
 }: {
   locale: SiteLocale;
   id?: string;
@@ -55,6 +57,8 @@ export default function ServicesBento({
   scenarioTags?: Readonly<Record<string, readonly string[]>>;
   /** Optional display order by service slug (zh-hant home, ja and en designs). Icons and anchors keep each service's own index. Omitted elsewhere. */
   order?: readonly string[];
+  /** Optional icon per service index (zh-hant home: the monoline set). Omitted elsewhere, so ServicePracticeIcon renders as before. */
+  renderIcon?: (index: number) => ReactNode;
 }) {
   const { services } = siteContent[locale];
   const editorial = presentation === 'editorial';
@@ -113,7 +117,7 @@ export default function ServicesBento({
                 >
                   <div className="services-detail-header services-card-header">
                     <span className="service-icon" aria-hidden>
-                      <ServicePracticeIcon index={index} />
+                      {renderIcon ? renderIcon(index) : <ServicePracticeIcon index={index} />}
                     </span>
                     <HeadingTag className="services-detail-title">{item.title}</HeadingTag>
                   </div>

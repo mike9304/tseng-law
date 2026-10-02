@@ -58,7 +58,7 @@ const proxy = http.createServer((request, response) => {
 await new Promise((resolve) => proxy.listen(0, '127.0.0.1', resolve));
 const base = `http://127.0.0.1:${proxy.address().port}`;
 const check = (ok, message) => { if (!ok) throw new Error(message); };
-const slugs = ['taiwan-racing-no-contact-joint-tort-liability', 'taiwan-retaliatory-driving-rear-ended-intentional-injury', 'taiwan-car-repair-rental-cost-repair-period-evidence', 'taiwan-accident-family-care-necessity-period', 'taiwan-car-accident-work-loss-rest-note', 'taiwan-accident-assessment-secondary-cause-compensation-ratio', 'taiwan-mediation-delayed-injury-rescission', 'taiwan-car-repair-cost-estimate-parts-depreciation', 'taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
+const slugs = ['taiwan-truck-blocking-multiple-dashcam-evidence', 'taiwan-racing-no-contact-joint-tort-liability', 'taiwan-retaliatory-driving-rear-ended-intentional-injury', 'taiwan-car-repair-rental-cost-repair-period-evidence', 'taiwan-accident-family-care-necessity-period', 'taiwan-car-accident-work-loss-rest-note', 'taiwan-accident-assessment-secondary-cause-compensation-ratio', 'taiwan-mediation-delayed-injury-rescission', 'taiwan-car-repair-cost-estimate-parts-depreciation', 'taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
 try {
   for (const [engine, launcher] of [['chromium', chromium], ['firefox', firefox]]) {
     const browser = await launcher.launch({ headless: true });
@@ -109,7 +109,11 @@ try {
         check(response.status() === 200, 'noJS HTTP');
         check(await page.locator('.blog-body').isVisible() && (await page.locator('.blog-body').innerText()).length > 1000, 'visible server article without JavaScript');
         check(await page.locator('script[type="application/ld+json"]').count() >= 2, 'server structured data');
-        if (slug === 'taiwan-racing-no-contact-joint-tort-liability') {
+        if (slug === 'taiwan-truck-blocking-multiple-dashcam-evidence') {
+          check((await page.locator('.blog-body').innerText()).includes('未確認後續上訴及確定狀態'), 'unverified finality remains visible');
+          check(await page.locator('.blog-body table tbody tr').count() === 4, 'four reviewed camera rows');
+          check(await page.locator('video, [data-traffic-diagram]').count() === 0, 'no unproduced video');
+        } else if (slug === 'taiwan-racing-no-contact-joint-tort-liability') {
           check((await page.locator('.blog-body').innerText()).includes('尚無法確認確定狀態'), 'unverified finality remains visible');
           check(await page.locator('video, [data-traffic-diagram]').count() === 0, 'no unproduced video');
         } else if (slug === 'taiwan-retaliatory-driving-rear-ended-intentional-injury') {

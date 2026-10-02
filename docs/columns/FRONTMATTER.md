@@ -93,6 +93,10 @@ Generated editorial images must not be described as actual client photos,
 evidence, or reconstructions of cited judgments. The caption is separate from
 any Blender diagram's hypothetical assumptions.
 
+## 교통사고 게시판 분류
+
+교통사고 칼럼을 새로 게시할 때는 `tags: ["traffic-accidents"]`를 지정한다. 더 좁은 분류는 `traffic-procedure`, `traffic-evidence`, `traffic-liability`, `traffic-compensation` 중 하나를 함께 쓴다. 파일과 CMS의 공개 글은 같은 언어의 `/traffic-accidents` 게시판에 자동 포함된다. 제목 단어로 분류하거나 기존 고정 slug 목록에 추가하지 않는다. 기존 글의 URL은 유지한다. [분류 기준과 검증 방법](./TRAFFIC-COLLECTION.md)을 따른다.
+
 ## `diagram_video` (animated traffic diagrams)
 
 ```yaml

@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
-import { isTrafficColumnSlug, trafficHubCopy } from '@/data/traffic-hub';
+import { trafficHubCopy } from '@/data/traffic-hub';
+import { resolveTrafficSubject } from '@/lib/traffic-collection';
 import { isTrafficDiagramId, isTrafficDiagramLocale, splitColumnContentAfterHeading } from '@/data/traffic-diagrams';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import { notFound } from 'next/navigation';
@@ -180,7 +181,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   const modifiedDate = parseColumnPublicationDate(post.date);
   const publicationDate = getColumnPublicationDate(post);
   const showTrafficUpdate = urlLocale in trafficHubCopy
-    && isTrafficColumnSlug(post.slug, urlLocale)
+    && resolveTrafficSubject(post) !== null
     && Boolean(modifiedDate && publicationDate && modifiedDate !== publicationDate);
 
   const currentIndex = allPosts.indexOf(post);
@@ -273,8 +274,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // first), then this locale's recommended columns, then the rest. The client
   // may reorder by session interests (sessionStorage only).
   const otherPosts = prioritizeRecommendedColumns(urlLocale, allPosts.filter((p) => p.slug !== post.slug));
-  const isTrafficColumn = isTrafficColumnSlug(post.slug, urlLocale);
-  const recommendedItems = (isTrafficColumn ? otherPosts.filter((p) => isTrafficColumnSlug(p.slug, urlLocale)) : [
+  const isTrafficColumn = resolveTrafficSubject(post) !== null;
+  const recommendedItems = (isTrafficColumn ? otherPosts.filter((p) => resolveTrafficSubject(p) !== null) : [
     ...otherPosts.filter((p) => p.topic && p.topic === post.topic),
     ...otherPosts.filter((p) => !p.topic || p.topic !== post.topic),
   ])
@@ -365,8 +366,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           </div>
           <div className="container blog-hero-inner">
             <Link href={`/${urlLocale}/columns`} className="blog-back-link">{t.backLabel}</Link>
-            {urlLocale in trafficHubCopy && isTrafficColumnSlug(post.slug, urlLocale) ? (
-              <Link href={`/${urlLocale}/traffic-accidents`} className="blog-back-link" style={{ marginInlineStart: '1.5rem' }}>
+            {urlLocale in trafficHubCopy && isTrafficColumn ? (
+              <Link href={`/${urlLocale}/traffic-accidents#articles`} className="blog-back-link" style={{ marginInlineStart: '1.5rem' }}>
                 {trafficHubCopy[urlLocale as keyof typeof trafficHubCopy].nav} →
               </Link>
             ) : null}

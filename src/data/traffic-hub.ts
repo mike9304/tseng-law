@@ -3,6 +3,11 @@ import type { SiteLocale } from '@/lib/locales';
 export const TRAFFIC_PATH = '/traffic-accidents';
 /** Hypothetical animated diagram shown on the hub (src/data/traffic-diagrams.ts). */
 export const TRAFFIC_DIAGRAM_ID = 'passing-hypothetical' as const;
+/**
+ * @deprecated Legacy static list, kept for backwards-compatible tests and
+ * `isTrafficColumnSlug`. The hub route no longer reads it: the board is built
+ * from tags and the reviewed legacy slug map in src/lib/traffic-collection.ts.
+ */
 export const TRAFFIC_COLUMN_SLUGS = [
   'taiwan-accident-police-records',
   'taiwan-traffic-accident-procedure',
@@ -12,8 +17,9 @@ export const TRAFFIC_COLUMN_SLUGS = [
 /**
  * Traffic columns released Korean-first (column routine: ko → zh-Hant → en).
  * A slug is listed only for locales whose file already exists, so the hub never
- * falls back to another language. Add a locale here when its translation ships.
- * Newest first.
+ * falls back to another language. Newest first.
+ * @deprecated Legacy, no longer read by the hub; new traffic posts are included
+ * by tag (docs/columns/TRAFFIC-COLLECTION.md), not by editing this list.
  */
 export const TRAFFIC_LOCALE_COLUMN_SLUGS: Partial<Record<SiteLocale, readonly string[]>> = {
   ko: ['taiwan-left-turn-vs-straight-motorcycle'],
@@ -21,7 +27,7 @@ export const TRAFFIC_LOCALE_COLUMN_SLUGS: Partial<Record<SiteLocale, readonly st
   en: ['taiwan-left-turn-vs-straight-motorcycle'],
 };
 
-/** Hub order for `locale`: locale-specific releases first, then the four-locale core. */
+/** @deprecated Legacy hub order (see TRAFFIC_COLUMN_SLUGS); use loadTrafficCollection for the hub. */
 export function trafficColumnSlugsFor(locale: string): readonly string[] {
   const extra = (TRAFFIC_LOCALE_COLUMN_SLUGS as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   return [...extra, ...TRAFFIC_COLUMN_SLUGS];

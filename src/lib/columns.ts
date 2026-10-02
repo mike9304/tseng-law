@@ -13,6 +13,7 @@ import {
 } from './public-guidance';
 import { insightsArchive } from '../data/insights-archive';
 import { resolveColumnTopic } from './column-topics';
+import { normalizeColumnTags } from './column-tags';
 import {
   formatColumnPublicationDate,
   parseColumnPublicationDate,
@@ -468,7 +469,7 @@ function parseColumnPostsFromDir(
         categoryLabel: categoryLabelFn(cat, locale),
         topic: resolveColumnTopic(slug, data.topic, cat),
         blogCategory: cat === 'formation' ? 'company-formation' : 'general',
-        tags: [],
+        tags: normalizeColumnTags(data.tags),
         featuredImage,
         ...(featuredImageAlt ? { featuredImageAlt } : {}),
         ...(featuredImageCaption ? { featuredImageCaption } : {}),

@@ -176,7 +176,9 @@ function legacyPostToColumnDocument(post: ColumnPost & { locale: Locale }): Colu
       freshness: 'fresh',
       category: post.category,
       blogCategory: post.category,
-      tags: [post.categoryLabel].filter(Boolean),
+      // The public reader overlays this legacy bundle on the file post. Keep
+      // explicit collection tags, otherwise newly tagged files disappear from hubs.
+      tags: unique([...(post.tags ?? []), post.categoryLabel].filter(Boolean)),
       author: {
         name: post.locale === 'zh-hant' ? '曾雋崴律師' : post.locale === 'en' ? 'Attorney Wei Tseng' : '증준외 변호사',
         title: post.locale === 'zh-hant' ? '台灣律師' : post.locale === 'en' ? 'Taiwan Attorney' : '대만 변호사',

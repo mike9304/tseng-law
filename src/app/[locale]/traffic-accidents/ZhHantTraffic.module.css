@@ -7,24 +7,8 @@
 .zh h1 { font-family: var(--font-serif-tc); font-weight: 700; letter-spacing: 0.03em; }
 .zh h2 { font-weight: 700; letter-spacing: 0.02em; }
 .zh h3 { font-weight: 700; letter-spacing: 0.01em; }
-
-/* Column cards: even three-column grid with an ink rule, three-line summaries */
-.zh :global(#articles) > div:last-child { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.zh :global(#articles) > div:last-child > a { border-top: 3px solid var(--zh-ink); border-radius: 2px; }
-.zh :global(#articles) > div:last-child > a h3 { font-size: 20px; margin-top: 4px; color: var(--zh-ink); }
-.zh :global(#articles) > div:last-child > a p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-
-@media (max-width: 960px) {
-  .zh :global(#articles) > div:last-child { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 600px) {
-  .zh :global(#articles) > div:last-child { grid-template-columns: minmax(0, 1fr); }
-}
-
-/* Fable R6 S2: exactly four columns → 2 × 2 instead of 3 + 1. */
-@media (min-width: 961px) {
-  .zh :global(#articles) > div:last-child:has(> a:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+/* The #articles card grid rules were removed on 2026-10-02: the section now holds the list board
+   (TrafficBoard.module.css), which takes its colours from the Apple-pass variables below. */
 
 /* ===== Apple pass (2026-10-01, zh pages lane / Opus 5.5) =====
    The hub in the language of the zh-hant home and the other Apple subpages (services, pricing, about): a white
@@ -172,8 +156,8 @@
   color: var(--ap-muted);
 }
 
-/* Columns: gray tiles on white; three across from 1200px (see Narrow screens), two across for 2 or 4 columns. */
-.zh:global(#zh-hant-traffic) :global(#articles) { background: #fff; }
+/* Columns: the list board on white, directly under the white page header, so the band starts closer to it. */
+.zh:global(#zh-hant-traffic) :global(#articles) { background: #fff; padding-top: clamp(16px, 3vw, 40px); }
 .zh:global(#zh-hant-traffic) :global(#articles) > div:first-child {
   align-items: flex-end;
   gap: 12px 32px;
@@ -189,46 +173,10 @@
   text-decoration: none;
 }
 .zh:global(#zh-hant-traffic) :global(#articles) > div:first-child > a:hover { text-decoration: underline; text-underline-offset: 5px; }
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child:has(> a:nth-child(2):last-child),
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child:has(> a:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child:has(> a:only-child) { grid-template-columns: minmax(0, 1fr); }
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a {
-  gap: 14px;
-  padding: clamp(32px, 3vw, 40px) clamp(28px, 2.6vw, 36px) 28px;
-  border: none;
-  border-top: none;
-  border-radius: var(--ap-radius);
-  background: var(--ap-gray);
-  color: var(--ap-text);
-  text-decoration: none;
-  transition: translate 0.6s var(--ap-ease), box-shadow 0.6s var(--ap-ease);
-}
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a:hover,
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a:focus-visible {
-  border: none;
-  background: var(--ap-gray);
-  translate: 0 -4px;
-  box-shadow: 0 22px 44px rgb(0 0 0 / 9%);
-}
-/* Titles keep a phrase and its closing mark together (keep-all in Blink, below), so a run such as 台灣超車事故的責任如何判斷？
-   (14 glyphs) cannot break and would leave 「？」 alone on a line when it is a pixel too wide (390 phones, 1280 three
-   across). The tile is a size container; the title steps down just enough for a 14-glyph run to share one line. */
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a { container-type: inline-size; }
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a h3 {
-  margin: 0;
-  font-size: clamp(22px, 1.9vw, 26px);
-  font-size: max(18px, min(clamp(22px, 1.9vw, 26px), 100cqi / 14.3));
-  line-height: 1.4;
-  color: var(--ap-text);
-}
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a p { margin: 0; color: var(--ap-muted); font-size: 16px; line-height: 1.8; }
-.zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a > span {
-  margin-top: auto;
-  padding-top: 8px;
-  color: var(--ap-accent);
-  font-size: 16px;
-  font-weight: 600;
+/* Long zh-hant titles in the list wrap like the rest of the hub (see the kinsoku rules at the end); a
+   three-line summary fits the wider list row on desktop. */
+@media (min-width: 768px) {
+  .zh:global(#zh-hant-traffic) :global(#articles) [data-traffic-board-row] p:not(:last-child) { -webkit-line-clamp: 3; }
 }
 
 /* Country guides: white tiles on gray. */
@@ -300,7 +248,6 @@
 @keyframes zhRiseIn { from { opacity: 0; transform: translateY(48px) scale(0.98); } to { opacity: 1; transform: none; } }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a,
     .zh:global(#zh-hant-traffic) section[aria-labelledby='countries-title'] article {
       animation: zhRiseIn linear both;
       animation-timeline: view();
@@ -310,11 +257,9 @@
 }
 
 /* ---------- Narrow screens ---------- */
-/* Three column tiles (and four country tiles) across only from 1200px: below that a third of the band leaves ~240px
-   for a title and a quarter splits link labels such as 大阪府警察車禍處理指引 ↗ (1024). */
+/* Four country tiles across only from 1200px: below that a quarter splits link labels such as
+   大阪府警察車禍處理指引 ↗ (1024). */
 @media (max-width: 1199px) {
-  .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a:nth-child(3):last-child { grid-column: 1 / -1; }
   .zh:global(#zh-hant-traffic) section[aria-labelledby='countries-title'] > div:last-child { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 767px) {
@@ -325,11 +270,7 @@
   .zh:global(#zh-hant-traffic) > section a[href='#articles'] { width: 100%; }
   .zh:global(#zh-hant-traffic) > section a[href$='/contact'] { justify-content: center; }
   .zh:global(#zh-hant-traffic) > div > section { padding-block: 72px; }
-  .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child,
-  .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child:has(> a:nth-child(2):last-child),
-  .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child:has(> a:nth-child(4):last-child),
   .zh:global(#zh-hant-traffic) section[aria-labelledby='countries-title'] > div:last-child { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child > a { padding: 30px 24px 22px; }
   .zh:global(#zh-hant-traffic) section[aria-labelledby='countries-title'] article { padding: 28px 24px 18px; }
   .zh:global(#zh-hant-traffic) figure[data-traffic-diagram] [data-traffic-diagram-assumption] { padding: 12px 16px; }
   .zh:global(#zh-hant-traffic) section[aria-labelledby='contact-title'] { padding: 88px var(--tr-gutter); }
@@ -345,6 +286,9 @@
 @supports (word-break: auto-phrase) {
   .zh:global(#zh-hant-traffic) :is(h1, h2, h3) { word-break: keep-all; }
 }
+/* The compact list has narrower title columns than the former cards. Allow
+   normal Chinese line breaking so closing punctuation stays with its phrase. */
+.zh:global(#zh-hant-traffic) :global([data-traffic-board]) h3 { word-break: normal; overflow-wrap: normal; }
 /* Taiwan keeps the hub's emphasis: the tile that links into our own columns is the dark ink tile. */
 .zh:global(#zh-hant-traffic) section[aria-labelledby='countries-title'] article:has(> a[href*='/columns/']) { background: var(--ap-ink); }
 .zh:global(#zh-hant-traffic) section[aria-labelledby='countries-title'] article:has(> a[href*='/columns/']) h3 { color: #fff; }
@@ -357,9 +301,4 @@
   .zh:global(#zh-hant-traffic) section[aria-labelledby='contact-title'] { align-items: stretch; text-align: left; }
   /* 台灣車禍法律諮詢 (8 glyphs, one keep-all run) stays on one line down to 345px instead of leaving 詢 alone. */
   .zh:global(#zh-hant-traffic) section[aria-labelledby='contact-title'] h2 { margin: 0; font-size: clamp(32px, 10vw, 40px); }
-}
-/* Three across: 22px (the spec's tile-title size), stepping down only where a 14-glyph run such as
-   台灣超車事故的責任如何判斷？ would otherwise leave its 「？」 alone (1200–1300px). */
-@media (min-width: 1200px) {
-  .zh:global(#zh-hant-traffic) :global(#articles) > div:last-child:not(:has(> a:nth-child(2):last-child)):not(:has(> a:nth-child(4):last-child)) > a h3 { font-size: 22px; font-size: max(18px, min(22px, 100cqi / 14.3)); }
 }

@@ -1,7 +1,8 @@
 import type { SiteContent } from '@/data/site-content';
 import { siteContent } from '@/data/site-content';
 import { guidanceFooterCopy } from '@/data/international-guidance-offices';
-import { guidanceContent } from '@/data/international-guidance-content';
+// Generated chrome-only projection; body translations remain server-side.
+import guidanceContent from '@/data/guidance-chrome.json';
 import type { SiteLocale } from '@/lib/locales';
 import {
   GUIDANCE_PAGE_KEYS,

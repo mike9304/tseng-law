@@ -1,0 +1,1127 @@
+{
+  "vi": {
+    "nav": {
+      "home": "Trang chủ",
+      "services": "Lĩnh vực dịch vụ",
+      "about": "Về văn phòng",
+      "lawyers": "Luật sư",
+      "pricing": "Phạm vi và chi phí",
+      "contact": "Liên hệ",
+      "faq": "Câu hỏi thường gặp",
+      "privacy": "Quyền riêng tư",
+      "disclaimer": "Tuyên bố miễn trừ trách nhiệm",
+      "columns": "Bài viết"
+    },
+    "languageLabel": "Ngôn ngữ của trang",
+    "skipLink": "Bỏ qua phần điều hướng, đến nội dung chính",
+    "menuLabel": "Trình đơn",
+    "contactCta": "Gửi yêu cầu tư vấn",
+    "footerNotice": "Trang tiếng Việt này chỉ cung cấp thông tin hướng dẫn chung về công việc của văn phòng theo pháp luật Đài Loan. Đây không phải ý kiến pháp lý cho vụ việc cụ thể, và việc gửi thông tin qua trang này không tự nó tạo lập quan hệ giữa luật sư và khách hàng.",
+    "pages": {
+      "home": {
+        "title": "Dịch vụ pháp lý tại Đài Loan — hướng dẫn bằng tiếng Việt",
+        "description": "Giới thiệu chung bằng tiếng Việt về phạm vi công việc của Hovering International Law Firm tại Đài Loan, ngôn ngữ tư vấn và cách bắt đầu liên hệ."
+      }
+    }
+  },
+  "id": {
+    "nav": {
+      "home": "Beranda",
+      "services": "Bidang layanan",
+      "about": "Tentang kantor",
+      "lawyers": "Advokat",
+      "pricing": "Lingkup dan biaya",
+      "contact": "Kontak",
+      "faq": "Pertanyaan umum",
+      "privacy": "Kebijakan privasi",
+      "disclaimer": "Penafian",
+      "columns": "Artikel"
+    },
+    "languageLabel": "Bahasa",
+    "skipLink": "Lewati navigasi, langsung ke isi utama",
+    "menuLabel": "Menu navigasi",
+    "contactCta": "Kirim permintaan konsultasi",
+    "footerNotice": "Halaman berbahasa Indonesia ini hanya memuat panduan umum tentang pekerjaan kantor kami menurut hukum Taiwan. Ini bukan nasihat hukum untuk perkara tertentu, dan mengirim pesan melalui halaman ini dengan sendirinya tidak membentuk hubungan antara advokat dan klien.",
+    "pages": {
+      "home": {
+        "title": "Layanan hukum di Taiwan — panduan berbahasa Indonesia",
+        "description": "Penjelasan umum dalam bahasa Indonesia mengenai lingkup pekerjaan Hovering International Law Firm di Taiwan, bahasa konsultasi, dan cara memulai kontak."
+      }
+    }
+  },
+  "th": {
+    "nav": {
+      "home": "หน้าแรก",
+      "services": "สาขางานที่ให้บริการ",
+      "about": "เกี่ยวกับสำนักงาน",
+      "lawyers": "ทนายความ",
+      "pricing": "ขอบเขตและค่าใช้จ่าย",
+      "contact": "ติดต่อ",
+      "faq": "คำถามที่พบบ่อย",
+      "privacy": "ความเป็นส่วนตัว",
+      "disclaimer": "ข้อจำกัดความรับผิด",
+      "columns": "บทความ"
+    },
+    "languageLabel": "ภาษาที่แสดง",
+    "skipLink": "ข้ามเมนู ไปยังเนื้อหาหลัก",
+    "menuLabel": "เมนู",
+    "contactCta": "ส่งเรื่องเพื่อขอคำปรึกษา",
+    "footerNotice": "หน้าภาษาไทยเหล่านี้เป็นข้อมูลแนะนำทั่วไปเกี่ยวกับงานของสำนักงานภายใต้กฎหมายไต้หวันเท่านั้น ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะราย และการส่งข้อความผ่านหน้านี้ไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความโดยอัตโนมัติ",
+    "pages": {
+      "home": {
+        "title": "บริการทางกฎหมายในไต้หวัน — ข้อมูลแนะนำภาษาไทย",
+        "description": "คำอธิบายทั่วไปเป็นภาษาไทยเกี่ยวกับขอบเขตงานของ Hovering International Law Firm ในไต้หวัน ภาษาที่ใช้ให้คำปรึกษา และวิธีเริ่มต้นติดต่อ"
+      }
+    }
+  },
+  "fil": {
+    "nav": {
+      "home": "Pangunahing pahina",
+      "services": "Mga serbisyo",
+      "about": "Tungkol sa tanggapan",
+      "lawyers": "Mga abogado",
+      "pricing": "Saklaw at bayarin",
+      "contact": "Makipag-ugnayan",
+      "faq": "Mga madalas itanong",
+      "privacy": "Patakaran sa pagkapribado",
+      "disclaimer": "Paunawa at limitasyon",
+      "columns": "Mga artikulo"
+    },
+    "languageLabel": "Wika ng pahina",
+    "skipLink": "Laktawan ang menu, dumiretso sa pangunahing nilalaman",
+    "menuLabel": "Menu ng mga pahina",
+    "contactCta": "Ipadala ang katanungan",
+    "footerNotice": "Ang pahinang ito sa Filipino ay pangkalahatang gabay lamang tungkol sa gawain ng tanggapan sa ilalim ng batas ng Taiwan. Hindi ito legal na payo para sa isang tiyak na usapin, at ang pagpapadala ng mensahe sa pahinang ito ay hindi bumubuo ng ugnayan ng abogado at kliyente.",
+    "pages": {
+      "home": {
+        "title": "Mga serbisyong legal sa Taiwan — gabay sa Filipino",
+        "description": "Pangkalahatang paliwanag sa Filipino tungkol sa saklaw ng gawain ng Hovering International Law Firm sa Taiwan, ang mga wika ng konsultasyon, at kung paano magsimulang makipag-ugnayan."
+      }
+    }
+  },
+  "ar": {
+    "nav": {
+      "home": "الصفحة الرئيسية",
+      "services": "مجالات الخدمات",
+      "about": "عن المكتب",
+      "lawyers": "المحامون",
+      "pricing": "النطاق والأتعاب",
+      "contact": "التواصل",
+      "faq": "الأسئلة الشائعة",
+      "privacy": "سياسة الخصوصية",
+      "disclaimer": "إخلاء المسؤولية",
+      "columns": "المقالات"
+    },
+    "languageLabel": "لغة العرض",
+    "skipLink": "تخطَّ شريط التنقل وانتقل إلى المحتوى الرئيسي",
+    "menuLabel": "القائمة",
+    "contactCta": "إرسال طلب استشارة",
+    "footerNotice": "هذه الصفحة العربية تقدّم إرشادًا عامًا فقط عن عمل المكتب وفق القانون التايواني. وهي ليست رأيًا قانونيًا في قضية بعينها، كما أن إرسال معلومات عبر هذه الصفحة لا يُنشئ بذاته علاقة بين المحامي والموكّل.",
+    "pages": {
+      "home": {
+        "title": "الخدمات القانونية في تايوان — إرشاد باللغة العربية",
+        "description": "صفحة إرشادية عربية. تعريف عام بنطاق عمل Hovering International Law Firm في تايوان، وبلغات الاستشارة، وبكيفية بدء التواصل."
+      }
+    }
+  },
+  "de": {
+    "nav": {
+      "home": "Startseite",
+      "services": "Tätigkeitsfelder",
+      "about": "Die Kanzlei",
+      "lawyers": "Anwältinnen und Anwälte",
+      "pricing": "Umfang und Kosten",
+      "contact": "Kontakt",
+      "faq": "Häufige Fragen",
+      "privacy": "Datenschutz",
+      "disclaimer": "Haftungsausschluss",
+      "columns": "Beiträge"
+    },
+    "languageLabel": "Anzeigesprache",
+    "skipLink": "Navigation überspringen und zum Inhalt springen",
+    "menuLabel": "Menü",
+    "contactCta": "Beratungsanfrage senden",
+    "footerNotice": "Diese deutsche Seite enthält nur allgemeine Hinweise zur Arbeit der Kanzlei nach taiwanesischem Recht. Sie ist keine Rechtsberatung für einen konkreten Fall, und das Absenden einer Nachricht begründet für sich kein Mandatsverhältnis.",
+    "pages": {
+      "home": {
+        "title": "Rechtsdienstleistungen in Taiwan — Hinweise auf Deutsch",
+        "description": "Allgemeine Erläuterungen auf Deutsch zum Tätigkeitsbereich von Hovering International Law Firm in Taiwan, zu den Beratungssprachen und zum ersten Kontakt."
+      }
+    }
+  },
+  "es": {
+    "nav": {
+      "home": "Inicio",
+      "services": "Áreas de trabajo",
+      "about": "El despacho",
+      "lawyers": "Abogados",
+      "pricing": "Alcance y honorarios",
+      "contact": "Contacto",
+      "faq": "Preguntas frecuentes",
+      "privacy": "Privacidad",
+      "disclaimer": "Aviso legal",
+      "columns": "Artículos"
+    },
+    "languageLabel": "Idioma de la página",
+    "skipLink": "Saltar la navegación e ir al contenido",
+    "menuLabel": "Menú",
+    "contactCta": "Enviar una solicitud de consulta",
+    "footerNotice": "Esta página en español solo ofrece orientación general sobre el trabajo del despacho según el derecho de Taiwán. No es asesoramiento jurídico para un asunto concreto, y el envío de un mensaje no crea por sí solo una relación entre abogado y cliente.",
+    "pages": {
+      "home": {
+        "title": "Servicios jurídicos en Taiwán — orientación en español",
+        "description": "Explicación general en español sobre el alcance de Hovering International Law Firm en Taiwán, los idiomas de consulta y el primer contacto."
+      }
+    }
+  },
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "services": "Domaines d’activité",
+      "about": "Le cabinet",
+      "lawyers": "Avocates et avocats",
+      "pricing": "Étendue et honoraires",
+      "contact": "Contact",
+      "faq": "Questions fréquentes",
+      "privacy": "Confidentialité",
+      "disclaimer": "Avertissement",
+      "columns": "Articles"
+    },
+    "languageLabel": "Langue d’affichage",
+    "skipLink": "Passer la navigation et aller au contenu",
+    "menuLabel": "Menu",
+    "contactCta": "Envoyer une demande de consultation",
+    "footerNotice": "Cette page en français ne contient que des indications générales sur le travail du cabinet selon le droit de Taïwan. Elle n’est pas un avis juridique pour une affaire concrète, et l’envoi d’un message ne crée pas, à lui seul, une relation entre l’avocate ou l’avocat et le client.",
+    "pages": {
+      "home": {
+        "title": "Services juridiques à Taïwan — indications en français",
+        "description": "Explications générales en français sur le champ d’activité de Hovering International Law Firm à Taïwan, les langues de consultation et le premier contact."
+      }
+    }
+  },
+  "pt": {
+    "nav": {
+      "home": "Início",
+      "services": "Áreas de atividade",
+      "about": "O escritório",
+      "lawyers": "Advogadas e advogados",
+      "pricing": "Âmbito e honorários",
+      "contact": "Contacto",
+      "faq": "Perguntas frequentes",
+      "privacy": "Privacidade",
+      "disclaimer": "Aviso legal",
+      "columns": "Artigos"
+    },
+    "languageLabel": "Língua da página",
+    "skipLink": "Saltar a navegação e ir para o conteúdo",
+    "menuLabel": "Menu",
+    "contactCta": "Enviar um pedido de consulta",
+    "footerNotice": "Esta página em português contém apenas indicações gerais sobre o trabalho do escritório segundo o direito de Taiwan. Não é um parecer jurídico para um caso concreto, e o envio de uma mensagem não cria, por si só, uma relação entre advogada ou advogado e cliente.",
+    "pages": {
+      "home": {
+        "title": "Serviços jurídicos em Taiwan — indicações em português",
+        "description": "Explicação geral em português sobre o âmbito de Hovering International Law Firm em Taiwan, as línguas de consulta e o primeiro contacto."
+      }
+    }
+  },
+  "zh-hans": {
+    "nav": {
+      "home": "首页",
+      "services": "业务领域",
+      "about": "事务所",
+      "lawyers": "律师",
+      "pricing": "范围与费用",
+      "contact": "联系",
+      "faq": "常见问题",
+      "privacy": "隐私",
+      "disclaimer": "免责声明",
+      "columns": "文章"
+    },
+    "languageLabel": "显示语言",
+    "skipLink": "跳过导航，前往正文",
+    "menuLabel": "页面目录",
+    "contactCta": "提交咨询请求",
+    "footerNotice": "本简体中文页面仅提供关于本所依台湾法律所从事工作的一般说明。它不是针对具体案件的法律意见。仅提交表单，本身并不成立律师与委托人关系。",
+    "pages": {
+      "home": {
+        "title": "台湾法律服务 — 简体中文说明",
+        "description": "以简体中文说明 Hovering International Law Firm 在台湾的业务范围、咨询语言与初次联系。"
+      }
+    }
+  },
+  "ms": {
+    "nav": {
+      "home": "Laman utama",
+      "services": "Bidang kerja",
+      "about": "Firma",
+      "lawyers": "Peguam",
+      "pricing": "Skop dan kos",
+      "contact": "Hubungi",
+      "faq": "Soalan lazim",
+      "privacy": "Privasi",
+      "disclaimer": "Penafian",
+      "columns": "Rencana"
+    },
+    "languageLabel": "Bahasa paparan",
+    "skipLink": "Langkau navigasi dan pergi ke kandungan",
+    "menuLabel": "Menu",
+    "contactCta": "Hantar permintaan perundingan",
+    "footerNotice": "Halaman bahasa Melayu ini hanya memberikan maklumat am tentang kerja firma menurut undang-undang Taiwan. Ia bukan nasihat undang-undang bagi suatu kes tertentu, dan penghantaran mesej dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.",
+    "pages": {
+      "home": {
+        "title": "Perkhidmatan undang-undang di Taiwan — maklumat dalam bahasa Melayu",
+        "description": "Penjelasan am dalam bahasa Melayu tentang bidang kerja Hovering International Law Firm di Taiwan, bahasa perundingan, dan hubungan pertama."
+      }
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "services": "Услуги",
+      "about": "Фирма",
+      "lawyers": "Адвокаты",
+      "pricing": "Стоимость",
+      "contact": "Контакты",
+      "faq": "Частые вопросы",
+      "privacy": "Данные",
+      "disclaimer": "Предупреждение",
+      "columns": "Материалы"
+    },
+    "languageLabel": "Язык отображения",
+    "skipLink": "Пропустить навигацию и перейти к содержанию",
+    "menuLabel": "Каталог страниц",
+    "contactCta": "Отправить запрос на консультацию",
+    "footerNotice": "Эта русскоязычная страница содержит лишь общие сведения о работе фирмы по праву Тайваня. Это не юридическая консультация по конкретному делу, и отправка сообщения сама по себе не создаёт отношений между адвокатом и доверителем.",
+    "pages": {
+      "home": {
+        "title": "Юридические услуги на Тайване — сведения на русском языке",
+        "description": "Общие пояснения на русском языке о сфере работы Hovering International Law Firm на Тайване, о языках консультации и о первом обращении."
+      }
+    }
+  },
+  "tr": {
+    "nav": {
+      "home": "Ana sayfa",
+      "services": "Çalışma alanları",
+      "about": "Büro",
+      "lawyers": "Avukatlar",
+      "pricing": "Kapsam ve ücret",
+      "contact": "İletişim",
+      "faq": "Sık sorulan sorular",
+      "privacy": "Gizlilik",
+      "disclaimer": "Sorumluluk reddi",
+      "columns": "Yazılar"
+    },
+    "languageLabel": "Görüntüleme dili",
+    "skipLink": "Gezinmeyi atlayıp içeriğe geçin",
+    "menuLabel": "Menü",
+    "contactCta": "Görüşme talebi gönderin",
+    "footerNotice": "Bu Türkçe sayfa, firmanın Tayvan hukukuna göre yürüttüğü çalışma hakkında yalnızca genel bilgi verir. Belirli bir dosya için hukuki görüş değildir ve bir ileti göndermek kendi başına avukat ile müvekkil arasında ilişki kurmaz.",
+    "pages": {
+      "home": {
+        "title": "Tayvan’da hukuki hizmetler — Türkçe bilgi",
+        "description": "Hovering International Law Firm’in Tayvan’daki çalışma alanı, görüşme dilleri ve ilk iletişim hakkında Türkçe genel açıklama."
+      }
+    }
+  },
+  "it": {
+    "nav": {
+      "home": "Home",
+      "services": "Servizi",
+      "about": "Lo studio",
+      "lawyers": "Avvocati",
+      "pricing": "Costi",
+      "contact": "Contatti",
+      "faq": "Domande",
+      "privacy": "Privacy",
+      "disclaimer": "Avvertenze",
+      "columns": "Articoli"
+    },
+    "languageLabel": "Lingua di visualizzazione",
+    "skipLink": "Saltare la navigazione e andare al contenuto",
+    "menuLabel": "Menu",
+    "contactCta": "Inviare una richiesta di consulenza",
+    "footerNotice": "Questa pagina in italiano contiene soltanto indicazioni generali sul lavoro dello studio secondo il diritto di Taiwan. Non è una consulenza legale per un caso concreto, e l’invio di un messaggio non costituisce di per sé un rapporto tra avvocata o avvocato e cliente.",
+    "pages": {
+      "home": {
+        "title": "Servizi legali a Taiwan — indicazioni in italiano",
+        "description": "Spiegazioni generali in italiano sull’ambito di lavoro di Hovering International Law Firm a Taiwan, sulle lingue di consulenza e sul primo contatto."
+      }
+    }
+  },
+  "nl": {
+    "nav": {
+      "home": "Home",
+      "services": "Diensten",
+      "about": "Het kantoor",
+      "lawyers": "Advocaten",
+      "pricing": "Kosten",
+      "contact": "Contact",
+      "faq": "Vragen",
+      "privacy": "Privacy",
+      "disclaimer": "Voorbehoud",
+      "columns": "Artikelen"
+    },
+    "languageLabel": "Weergavetaal",
+    "skipLink": "Navigatie overslaan en naar de inhoud gaan",
+    "menuLabel": "Pagina-overzicht",
+    "contactCta": "Een verzoek om advies sturen",
+    "footerNotice": "Deze Nederlandstalige pagina bevat alleen algemene toelichting over het werk van het kantoor volgens Taiwanees recht. Het is geen juridisch advies voor een concreet dossier, en het versturen van een bericht schept op zich geen relatie tussen advocaat en cliënt.",
+    "pages": {
+      "home": {
+        "title": "Rechtsdiensten in Taiwan — toelichting in het Nederlands",
+        "description": "Algemene uitleg in het Nederlands over het werkterrein van Hovering International Law Firm in Taiwan, de consultatietalen en het eerste contact."
+      }
+    }
+  },
+  "pl": {
+    "nav": {
+      "home": "Strona główna",
+      "services": "Usługi",
+      "about": "Kancelaria",
+      "lawyers": "Adwokaci",
+      "pricing": "Koszty",
+      "contact": "Kontakt",
+      "faq": "Pytania",
+      "privacy": "Prywatność",
+      "disclaimer": "Zastrzeżenia",
+      "columns": "Artykuły"
+    },
+    "languageLabel": "Język wyświetlania",
+    "skipLink": "Pomiń nawigację i przejdź do treści",
+    "menuLabel": "Spis stron",
+    "contactCta": "Wyślij wniosek o konsultację",
+    "footerNotice": "Ta strona po polsku zawiera jedynie ogólne informacje o pracy kancelarii według prawa Tajwanu. Nie jest poradą prawną w konkretnej sprawie, a wysłanie wiadomości samo w sobie nie tworzy stosunku między adwokatem a klientem.",
+    "pages": {
+      "home": {
+        "title": "Usługi prawne na Tajwanie — informacje po polsku",
+        "description": "Ogólne wyjaśnienia po polsku o zakresie pracy Hovering International Law Firm na Tajwanie, o językach konsultacji i o pierwszym kontakcie."
+      }
+    }
+  },
+  "hi": {
+    "nav": {
+      "home": "मुखपृष्ठ",
+      "services": "सेवाएँ",
+      "about": "हमारे बारे में",
+      "lawyers": "अधिवक्ता",
+      "pricing": "लागत",
+      "contact": "संपर्क",
+      "faq": "सामान्य प्रश्न",
+      "privacy": "गोपनीयता",
+      "disclaimer": "अस्वीकरण",
+      "columns": "लेख"
+    },
+    "languageLabel": "प्रदर्शन भाषा",
+    "skipLink": "नेविगेशन छोड़कर मुख्य सामग्री पर जाएँ",
+    "menuLabel": "पृष्ठ सूची",
+    "contactCta": "परामर्श अनुरोध भेजें",
+    "footerNotice": "यह हिंदी पृष्ठ ताइवान के कानून के अनुसार कार्यालय के कार्य की केवल सामान्य जानकारी देता है। यह किसी ठोस मामले की कानूनी राय नहीं है, और संदेश भेजना अपने आप अधिवक्ता और मुवक्किल के बीच संबंध नहीं बनाता।",
+    "pages": {
+      "home": {
+        "title": "ताइवान में कानूनी सेवाएँ — हिंदी में जानकारी",
+        "description": "Hovering International Law Firm के ताइवान में कार्य-क्षेत्र, परामर्श भाषाओं और प्रथम संपर्क पर हिंदी में सामान्य स्पष्टीकरण।"
+      }
+    }
+  },
+  "sv": {
+    "nav": {
+      "home": "Hem",
+      "services": "Tjänster",
+      "about": "Byrån",
+      "lawyers": "Advokater",
+      "pricing": "Kostnader",
+      "contact": "Kontakt",
+      "faq": "Frågor",
+      "privacy": "Integritet",
+      "disclaimer": "Friskrivning",
+      "columns": "Artiklar"
+    },
+    "languageLabel": "Visningsspråk",
+    "skipLink": "Hoppa över navigeringen och gå till innehållet",
+    "menuLabel": "Meny",
+    "contactCta": "Skicka en begäran om rådgivning",
+    "footerNotice": "Den här sidan på svenska ger bara allmän vägledning om byråns arbete enligt Taiwans rätt. Den är inte juridisk rådgivning för ett konkret ärende, och att skicka ett meddelande skapar i sig inte ett förhållande mellan advokat och klient.",
+    "pages": {
+      "home": {
+        "title": "Juridiska tjänster i Taiwan — vägledning på svenska",
+        "description": "Allmänna förklaringar på svenska om Hovering International Law Firms arbetsområde i Taiwan, rådgivningsspråken och den första kontakten."
+      }
+    }
+  },
+  "da": {
+    "nav": {
+      "home": "Hjem",
+      "services": "Ydelser",
+      "about": "Kontoret",
+      "lawyers": "Advokater",
+      "pricing": "Omkostninger",
+      "contact": "Kontakt",
+      "faq": "Spørgsmål",
+      "privacy": "Privatliv",
+      "disclaimer": "Forbehold",
+      "columns": "Artikler"
+    },
+    "languageLabel": "Visningssprog",
+    "skipLink": "Spring navigationen over og gå til indholdet",
+    "menuLabel": "Menu",
+    "contactCta": "Send en anmodning om rådgivning",
+    "footerNotice": "Denne side på dansk indeholder kun almindelige vejledninger om kontorets arbejde efter Taiwans ret. Den er ikke juridisk rådgivning for en konkret sag, og afsendelse af en meddelelse skaber i sig selv ikke et forhold mellem advokat og klient.",
+    "pages": {
+      "home": {
+        "title": "Juridiske ydelser i Taiwan — vejledninger på dansk",
+        "description": "Almindelige forklaringer på dansk om arbejdsområdet hos Hovering International Law Firm i Taiwan, rådgivningssprogene og den første kontakt."
+      }
+    }
+  },
+  "nb": {
+    "nav": {
+      "home": "Hjem",
+      "services": "Tjenester",
+      "about": "Kontoret",
+      "lawyers": "Advokater",
+      "pricing": "Kostnader",
+      "contact": "Kontakt",
+      "faq": "Spørsmål",
+      "privacy": "Personvern",
+      "disclaimer": "Forbehold",
+      "columns": "Artikler"
+    },
+    "languageLabel": "Visningsspråk",
+    "skipLink": "Hopp over navigasjonen og gå til innholdet",
+    "menuLabel": "Meny",
+    "contactCta": "Send en forespørsel om rådgivning",
+    "footerNotice": "Denne siden på norsk inneholder bare alminnelige veiledninger om kontorets arbeid etter Taiwans rett. Den er ikke juridisk rådgivning for en konkret sak, og å sende en melding skaper i seg selv ikke et klientforhold.",
+    "pages": {
+      "home": {
+        "title": "Juridiske tjenester i Taiwan — veiledninger på norsk",
+        "description": "Alminnelige forklaringer på norsk om arbeidsområdet til Hovering International Law Firm i Taiwan, rådgivningsspråkene og den første kontakten."
+      }
+    }
+  },
+  "fi": {
+    "nav": {
+      "home": "Etusivu",
+      "services": "Palvelut",
+      "about": "Toimisto",
+      "lawyers": "Asianajajat",
+      "pricing": "Palkkiot",
+      "contact": "Yhteystiedot",
+      "faq": "Usein kysyttyä",
+      "privacy": "Tietosuoja",
+      "disclaimer": "Vastuuvapaus",
+      "columns": "Artikkelit"
+    },
+    "languageLabel": "Näyttökieli",
+    "skipLink": "Ohita navigointi ja siirry sisältöön",
+    "menuLabel": "Valikko",
+    "contactCta": "Lähetä yhteydenottopyyntö",
+    "footerNotice": "Tämä suomenkielinen sivu sisältää vain yleisiä ohjeita toimiston työstä Taiwanin oikeuden mukaan. Se ei ole oikeudellista neuvontaa yksittäisessä asiassa, eikä viestin lähettäminen yksinään synnytä suhdetta asianajajan ja päämiehen välillä.",
+    "pages": {
+      "home": {
+        "title": "Oikeudelliset palvelut Taiwanissa — ohjeita suomeksi",
+        "description": "Yleisiä selityksiä suomeksi Hovering International Law Firm -toimiston työalasta Taiwanissa, neuvontakielistä ja ensimmäisestä yhteydenotosta."
+      }
+    }
+  },
+  "cs": {
+    "nav": {
+      "home": "Úvod",
+      "services": "Služby",
+      "about": "Kancelář",
+      "lawyers": "Advokáti",
+      "pricing": "Náklady",
+      "contact": "Kontakt",
+      "faq": "Otázky",
+      "privacy": "Soukromí",
+      "disclaimer": "Upozornění",
+      "columns": "Články"
+    },
+    "languageLabel": "Jazyk zobrazení",
+    "skipLink": "Přeskočit navigaci a přejít k obsahu",
+    "menuLabel": "Přehled stránek",
+    "contactCta": "Odeslat žádost o posouzení",
+    "footerNotice": "Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle tchajwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.",
+    "pages": {
+      "home": {
+        "title": "Právní služby na Tchaj-wanu — informace v češtině",
+        "description": "Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích konzultace a o prvním kontaktu."
+      }
+    }
+  },
+  "hu": {
+    "nav": {
+      "home": "Kezdőlap",
+      "services": "Szolgáltatások",
+      "about": "Az iroda",
+      "lawyers": "Ügyvédek",
+      "pricing": "Költségek",
+      "contact": "Kapcsolat",
+      "faq": "Kérdések",
+      "privacy": "Adatvédelem",
+      "disclaimer": "Jogi közlemény",
+      "columns": "Cikkek"
+    },
+    "languageLabel": "Megjelenítés nyelve",
+    "skipLink": "Ugrás a tartalomra",
+    "menuLabel": "Oldalak áttekintése",
+    "contactCta": "Megkeresés elküldése",
+    "footerNotice": "Ez a magyar oldal csak általános tájékoztatást ad az iroda tajvani jog szerinti munkájáról. Nem jogi tanácsadás egyedi ügyben, és egy üzenet elküldése önmagában nem hoz létre ügyvéd–ügyfél viszonyt.",
+    "pages": {
+      "home": {
+        "title": "Jogi szolgáltatások Tajvanon – magyar nyelvű tájékoztatás",
+        "description": "Általános magyar nyelvű ismertetés a Hovering International Law Firm tajvani munkájának köréről, a tanácsadás nyelveiről és az első kapcsolatfelvételről."
+      }
+    }
+  },
+  "ro": {
+    "nav": {
+      "home": "Acasă",
+      "services": "Servicii",
+      "about": "Cabinetul",
+      "lawyers": "Avocați",
+      "pricing": "Costuri",
+      "contact": "Contact",
+      "faq": "Întrebări",
+      "privacy": "Date personale",
+      "disclaimer": "Note juridice",
+      "columns": "Articole"
+    },
+    "languageLabel": "Limba de afișare",
+    "skipLink": "Treceți la conținut",
+    "menuLabel": "Lista paginilor",
+    "contactCta": "Trimiteți o solicitare",
+    "footerNotice": "Această pagină în limba română conține doar informații generale despre activitatea cabinetului potrivit dreptului taiwanez. Nu este consultanță juridică pentru un caz concret, iar trimiterea unui mesaj nu creează prin ea însăși o relație între avocat și client.",
+    "pages": {
+      "home": {
+        "title": "Servicii juridice în Taiwan — informații în limba română",
+        "description": "Explicații generale în limba română despre aria de lucru a Hovering International Law Firm în Taiwan, despre limbile de consultanță și despre primul contact."
+      }
+    }
+  },
+  "uk": {
+    "nav": {
+      "home": "Головна",
+      "services": "Послуги",
+      "about": "Фірма",
+      "lawyers": "Адвокати",
+      "pricing": "Вартість",
+      "contact": "Контакти",
+      "faq": "Часті питання",
+      "privacy": "Захист даних",
+      "disclaimer": "Застереження",
+      "columns": "Статті"
+    },
+    "languageLabel": "Мова відображення",
+    "skipLink": "Пропустити навігацію та перейти до змісту",
+    "menuLabel": "Перелік сторінок",
+    "contactCta": "Надіслати запит на розгляд",
+    "footerNotice": "Ця сторінка українською містить лише загальні відомості про роботу фірми за правом Тайваню. Це не юридична консультація в конкретній справі, і саме лише надсилання повідомлення не створює відносин між адвокатом і клієнтом.",
+    "pages": {
+      "home": {
+        "title": "Юридичні послуги на Тайвані — відомості українською",
+        "description": "Загальні пояснення українською про обсяг роботи Hovering International Law Firm на Тайвані, про мови консультації та про перше звернення."
+      }
+    }
+  },
+  "el": {
+    "nav": {
+      "home": "Αρχική",
+      "services": "Υπηρεσίες",
+      "about": "Το γραφείο",
+      "lawyers": "Δικηγόροι",
+      "pricing": "Κόστος",
+      "contact": "Επικοινωνία",
+      "faq": "Ερωτήσεις",
+      "privacy": "Απόρρητο",
+      "disclaimer": "Αποποίηση",
+      "columns": "Άρθρα"
+    },
+    "languageLabel": "Γλώσσα εμφάνισης",
+    "skipLink": "Παράλειψη πλοήγησης και μετάβαση στο περιεχόμενο",
+    "menuLabel": "Κατάλογος σελίδων",
+    "contactCta": "Αποστολή αιτήματος για εξέταση",
+    "footerNotice": "Αυτή η σελίδα στα ελληνικά περιέχει μόνο γενικές πληροφορίες για την εργασία του γραφείου κατά το δίκαιο της Ταϊβάν. Δεν αποτελεί νομική συμβουλή για συγκεκριμένη υπόθεση, και η αποστολή ενός μηνύματος δεν δημιουργεί από μόνη της σχέση δικηγόρου και εντολέα.",
+    "pages": {
+      "home": {
+        "title": "Νομικές υπηρεσίες στην Ταϊβάν — πληροφορίες στα ελληνικά",
+        "description": "Γενικές εξηγήσεις στα ελληνικά για το αντικείμενο της εντολής της Hovering International Law Firm στην Ταϊβάν, για τις γλώσσες της συμβουλευτικής και για την πρώτη επικοινωνία."
+      }
+    }
+  },
+  "he": {
+    "nav": {
+      "home": "דף הבית",
+      "services": "תחומים",
+      "about": "המשרד",
+      "lawyers": "עורכי דין",
+      "pricing": "עלויות",
+      "contact": "יצירת קשר",
+      "faq": "שאלות",
+      "privacy": "פרטיות",
+      "disclaimer": "הסתייגויות",
+      "columns": "מאמרים"
+    },
+    "languageLabel": "שפת התצוגה",
+    "skipLink": "דילוג על הניווט ומעבר לתוכן",
+    "menuLabel": "רשימת העמודים",
+    "contactCta": "שליחת פנייה לבדיקה",
+    "footerNotice": "עמוד זה בעברית כולל מידע כללי בלבד על עבודת המשרד לפי דין טאיוואן. אין בו ייעוץ משפטי בעניין מסוים, ושליחת הודעה כשלעצמה אינה יוצרת יחסי עורך דין–לקוח.",
+    "pages": {
+      "home": {
+        "title": "שירותים משפטיים בטאיוואן — מידע בעברית",
+        "description": "הסברים כלליים בעברית על היקף העבודה של Hovering International Law Firm בטאיוואן, על שפות הייעוץ ועל הפנייה הראשונה."
+      }
+    }
+  },
+  "bn": {
+    "nav": {
+      "home": "মূলপাতা",
+      "services": "সেবাসমূহ",
+      "about": "পরিচিতি",
+      "lawyers": "আইনজীবী",
+      "pricing": "ব্যয়",
+      "contact": "যোগাযোগ",
+      "faq": "প্রশ্নোত্তর",
+      "privacy": "গোপনীয়তা",
+      "disclaimer": "অস্বীকৃতি",
+      "columns": "প্রবন্ধ"
+    },
+    "languageLabel": "প্রদর্শনের ভাষা",
+    "skipLink": "নেভিগেশন এড়িয়ে মূল বিষয়ে যান",
+    "menuLabel": "পাতার তালিকা",
+    "contactCta": "পরামর্শের অনুরোধ পাঠান",
+    "footerNotice": "এই বাংলা পাতা তাইওয়ানের আইন অনুসারে কার্যালয়ের কাজের কেবল সাধারণ তথ্য দেয়। এটি কোনো নির্দিষ্ট মামলার আইনি মতামত নয়, আর বার্তা পাঠালেই আইনজীবী ও মক্কেলের সম্পর্ক তৈরি হয় না।",
+    "pages": {
+      "home": {
+        "title": "তাইওয়ানে আইনি সেবা — বাংলায় নির্দেশনা",
+        "description": "Hovering International Law Firm-এর তাইওয়ানে কর্মক্ষেত্র, পরামর্শের ভাষা ও প্রথম যোগাযোগ নিয়ে বাংলায় সাধারণ ব্যাখ্যা।"
+      }
+    }
+  },
+  "ur": {
+    "nav": {
+      "home": "صفحہ اول",
+      "services": "خدمات",
+      "about": "ہمارے بارے میں",
+      "lawyers": "وکلا",
+      "pricing": "لاگت",
+      "contact": "رابطہ",
+      "faq": "عام سوالات",
+      "privacy": "رازداری",
+      "disclaimer": "دستبرداری",
+      "columns": "مضامین"
+    },
+    "languageLabel": "صفحے کی زبان",
+    "skipLink": "نیویگیشن چھوڑ کر اصل مواد پر جائیں",
+    "menuLabel": "مینو",
+    "contactCta": "مشورے کی درخواست بھیجیں",
+    "footerNotice": "یہ اردو صفحہ تائیوان کے قانون کے مطابق دفتر کے کام کی صرف عام معلومات دیتا ہے۔ یہ کسی مخصوص معاملے کی قانونی رائے نہیں ہے، اور پیغام بھیجنے سے بذاتِ خود وکیل اور موکل کا تعلق قائم نہیں ہوتا۔",
+    "pages": {
+      "home": {
+        "title": "تائیوان میں قانونی خدمات — اردو میں معلومات",
+        "description": "Hovering International Law Firm کے تائیوان میں کام کے دائرے، مشورے کی زبانوں اور پہلے رابطے پر اردو میں عام وضاحت۔"
+      }
+    }
+  },
+  "fa": {
+    "nav": {
+      "home": "صفحهٔ اصلی",
+      "services": "خدمات",
+      "about": "دربارهٔ ما",
+      "lawyers": "وکلا",
+      "pricing": "هزینه",
+      "contact": "تماس",
+      "faq": "پرسش‌ها",
+      "privacy": "حریم خصوصی",
+      "disclaimer": "سلب مسئولیت",
+      "columns": "نوشتار"
+    },
+    "languageLabel": "زبان نمایش",
+    "skipLink": "پرش از ناوبری و رفتن به محتوای اصلی",
+    "menuLabel": "فهرست",
+    "contactCta": "ارسال درخواست مشاوره",
+    "footerNotice": "این صفحهٔ فارسی فقط اطلاعات عمومی دربارهٔ کار دفتر طبق قانون تایوان می‌دهد. این متن نظر حقوقی دربارهٔ پرونده‌ای مشخص نیست و فرستادن پیام به‌تنهایی رابطهٔ میان وکیل و موکل پدید نمی‌آورد.",
+    "pages": {
+      "home": {
+        "title": "خدمات حقوقی در تایوان — راهنما به فارسی",
+        "description": "توضیح عمومی به فارسی دربارهٔ محدودهٔ کار Hovering International Law Firm در تایوان، زبان‌های مشاوره، و نخستین تماس."
+      }
+    }
+  },
+  "ta": {
+    "nav": {
+      "home": "முகப்பு",
+      "services": "சேவைகள்",
+      "about": "அலுவலகம்",
+      "lawyers": "வழக்கறிஞர்கள்",
+      "pricing": "செலவு",
+      "contact": "தொடர்பு",
+      "faq": "வினாக்கள்",
+      "privacy": "தனியுரிமை",
+      "disclaimer": "மறுப்புரை",
+      "columns": "கட்டுரைகள்"
+    },
+    "languageLabel": "காட்சி மொழி",
+    "skipLink": "வழிசெலுத்தலைத் தவிர்த்து முதன்மை உள்ளடக்கத்திற்குச் செல்லவும்",
+    "menuLabel": "பக்கப் பட்டியல்",
+    "contactCta": "ஆலோசனைக் கோரிக்கை அனுப்பவும்",
+    "footerNotice": "இந்தத் தமிழ்ப் பக்கம் தைவான் சட்டத்தின்படி அலுவலகத்தின் பணி குறித்த பொதுவான தகவலை மட்டுமே தருகிறது. இது ஒரு குறிப்பிட்ட வழக்கின் சட்டக் கருத்து அல்ல; ஒரு செய்தியை அனுப்புவதால் வழக்கறிஞருக்கும் வாடிக்கையாளருக்கும் இடையே உறவு ஏற்படுவதில்லை.",
+    "pages": {
+      "home": {
+        "title": "தைவானில் சட்டச் சேவைகள் — தமிழில் குறிப்புகள்",
+        "description": "Hovering International Law Firm-இன் தைவான் பணிப் பிரிவு, ஆலோசனை மொழிகள் மற்றும் முதல் தொடர்பு குறித்து தமிழில் பொதுவான விளக்கம்."
+      }
+    }
+  },
+  "ne": {
+    "nav": {
+      "home": "गृहपृष्ठ",
+      "services": "सेवाहरू",
+      "about": "हाम्रो बारे",
+      "lawyers": "अधिवक्ता",
+      "pricing": "लागत",
+      "contact": "सम्पर्क",
+      "faq": "प्रश्नोत्तर",
+      "privacy": "गोपनीयता",
+      "disclaimer": "अस्वीकरण",
+      "columns": "लेख"
+    },
+    "languageLabel": "देखाइने भाषा",
+    "skipLink": "नेभिगेसन छाडेर मुख्य सामग्रीमा जानुहोस्",
+    "menuLabel": "सामग्री सूची",
+    "contactCta": "परामर्श अनुरोध पठाउनुहोस्",
+    "footerNotice": "यो नेपाली पृष्ठले ताइवानको कानुनअनुसार फर्मले गर्ने कामको सामान्य जानकारी मात्र दिन्छ। यो कुनै खास मुद्दाको कानुनी राय होइन, र सन्देश पठाउँदैमा अधिवक्ता र पक्षकारबीच सम्बन्ध जन्मँदैन।",
+    "pages": {
+      "home": {
+        "title": "ताइवानमा कानुनी सेवा — नेपालीमा जानकारी",
+        "description": "Hovering International Law Firm को ताइवानमा कार्यक्षेत्र, परामर्श भाषा र पहिलो सम्पर्कबारे नेपालीमा सामान्य व्याख्या।"
+      }
+    }
+  },
+  "my": {
+    "nav": {
+      "home": "ပင်မ",
+      "services": "ဝန်ဆောင်မှု",
+      "about": "ရုံးအကြောင်း",
+      "lawyers": "ရှေ့နေများ",
+      "pricing": "ကုန်ကျစရိတ်",
+      "contact": "ဆက်သွယ်",
+      "faq": "မေးခွန်း",
+      "privacy": "ကိုယ်ရေးလုံခြုံမှု",
+      "disclaimer": "သတိပေးချက်",
+      "columns": "ဆောင်းပါး"
+    },
+    "languageLabel": "ပြထားသော ဘာသာစကား",
+    "skipLink": "လမ်းညွှန်ကိုကျော်၍ အကြောင်းအရာသို့ သွားရန်",
+    "menuLabel": "စာမျက်နှာများ",
+    "contactCta": "တိုင်ပင်ရန် တောင်းဆိုချက် ပေးပို့ပါ",
+    "footerNotice": "ဤမြန်မာစာမျက်နှာများသည် ထိုင်ဝမ်ဥပဒေအရ ရုံး၏လုပ်ငန်းအကြောင်း အထွေထွေလမ်းညွှန်ချက်သာ ဖြစ်သည်။ တိကျသောအမှုအတွက် ဥပဒေအကြံဉာဏ် မဟုတ်သည့်အပြင် စာပေးပို့ရုံဖြင့် ရှေ့နေနှင့်အမှုသည် ဆက်ဆံရေး မဖြစ်ပေါ်ပါ။",
+    "pages": {
+      "home": {
+        "title": "ထိုင်ဝမ်ရှိ ဥပဒေဝန်ဆောင်မှု — မြန်မာဘာသာ လမ်းညွှန်",
+        "description": "Hovering International Law Firm ၏ ထိုင်ဝမ်ရှိ လုပ်ငန်းနယ်ပယ်၊ တိုင်ပင်ဆွေးနွေးသည့် ဘာသာစကားများနှင့် ပထမဆက်သွယ်ပုံအကြောင်း မြန်မာဘာသာဖြင့် အထွေထွေရှင်းလင်းချက်။"
+      }
+    }
+  },
+  "km": {
+    "nav": {
+      "home": "ទំព័រដើម",
+      "services": "វិស័យសេវា",
+      "about": "ការិយាល័យ",
+      "lawyers": "មេធាវី",
+      "pricing": "វិសាលភាព និងថ្លៃ",
+      "contact": "ទំនាក់ទំនង",
+      "faq": "សំណួរញឹកញាប់",
+      "privacy": "ឯកជនភាព",
+      "disclaimer": "សេចក្ដីបដិសេធ",
+      "columns": "អត្ថបទ"
+    },
+    "languageLabel": "ភាសាបង្ហាញ",
+    "skipLink": "រំលងការរុករក ទៅកាន់ខ្លឹមសារសំខាន់",
+    "menuLabel": "ម៉ឺនុយ",
+    "contactCta": "ផ្ញើសំណើពិគ្រោះយោបល់",
+    "footerNotice": "ទំព័រភាសាខ្មែរទាំងនេះផ្ដល់តែព័ត៌មានណែនាំទូទៅអំពីការងាររបស់ការិយាល័យតាមច្បាប់តៃវ៉ាន់។ នេះមិនមែនជាយោបល់ផ្លូវច្បាប់សម្រាប់រឿងជាក់លាក់ទេ ហើយការផ្ញើសារតែមួយមុខមិនបង្កើតទំនាក់ទំនងមេធាវីនិងអតិថិជនឡើយ។",
+    "pages": {
+      "home": {
+        "title": "សេវាផ្លូវច្បាប់នៅតៃវ៉ាន់ — សេចក្ដីណែនាំជាភាសាខ្មែរ",
+        "description": "ការពន្យល់ទូទៅជាភាសាខ្មែរអំពីវិសាលភាពការងាររបស់ Hovering International Law Firm នៅតៃវ៉ាន់ ភាសានៃការពិគ្រោះយោបល់ និងរបៀបចាប់ផ្ដើមទំនាក់ទំនង។"
+      }
+    }
+  },
+  "mn": {
+    "nav": {
+      "home": "Нүүр хуудас",
+      "services": "Үйлчилгээ",
+      "about": "Фирм",
+      "lawyers": "Өмгөөлөгч",
+      "pricing": "Хэмжээ, хөлс",
+      "contact": "Холбоо",
+      "faq": "Асуулт хариулт",
+      "privacy": "Нууцлал",
+      "disclaimer": "Хариуцлагаас татгалзах",
+      "columns": "Нийтлэл"
+    },
+    "languageLabel": "Харуулах хэл",
+    "skipLink": "Навигацийг алгасаад агуулга руу орох",
+    "menuLabel": "Хуудсын жагсаалт",
+    "contactCta": "Зөвлөгөөний хүсэлт илгээх",
+    "footerNotice": "Энэ монгол хуудас нь фирмийн Тайванийн эрх зүйн дагуух ажлын ерөнхий мэдээлэл юм. Энэ нь тодорхой хэргийн эрх зүйн зөвлөгөө биш бөгөөд мессеж илгээх нь өөрөө өмгөөлөгч ба үйлчлүүлэгчийн харилцаа үүсгэхгүй.",
+    "pages": {
+      "home": {
+        "title": "Тайвань дахь эрх зүйн үйлчилгээ — монгол хэлээрх мэдээлэл",
+        "description": "Hovering International Law Firm-ийн Тайвань дахь ажлын хүрээ, зөвлөгөөний хэл, анхны холбоо барих тухай монгол хэлээрх ерөнхий тайлбар."
+      }
+    }
+  },
+  "sk": {
+    "nav": {
+      "home": "Domov",
+      "services": "Právne služby",
+      "about": "Kancelária",
+      "lawyers": "Náš tím",
+      "pricing": "Odmena",
+      "contact": "Napíšte nám",
+      "faq": "Časté otázky",
+      "privacy": "Ochrana údajov",
+      "disclaimer": "Upozornenie",
+      "columns": "Príspevky"
+    },
+    "languageLabel": "Jazyk zobrazenia",
+    "skipLink": "Preskočiť navigáciu a prejsť k obsahu",
+    "menuLabel": "Prehľad stránok",
+    "contactCta": "Odoslať žiadosť o posúdenie",
+    "footerNotice": "Táto slovenská stránka prináša iba všeobecné informácie o práci kancelárie podľa taiwanského práva. Nie je právnou radou k jednotlivému prípadu a samotné odoslanie správy nezakladá vzťah medzi advokátkou alebo advokátom a klientom.",
+    "pages": {
+      "home": {
+        "title": "Právne služby na Taiwane — informácie v slovenčine",
+        "description": "Všeobecné vysvetlenie v slovenčine o rozsahu práce Hovering International Law Firm na Taiwane, o jazykoch konzultácie a o prvom kontakte."
+      }
+    }
+  },
+  "bg": {
+    "nav": {
+      "home": "Начало",
+      "services": "Направления",
+      "about": "Кантората",
+      "lawyers": "Екипът",
+      "pricing": "Обхват и цена",
+      "contact": "Контакт",
+      "faq": "Въпроси",
+      "privacy": "Поверителност",
+      "disclaimer": "Правна бележка",
+      "columns": "Статии"
+    },
+    "languageLabel": "Език на показване",
+    "skipLink": "Прескочете навигацията и преминете към съдържанието",
+    "menuLabel": "Страници",
+    "contactCta": "Изпратете запитване за консултация",
+    "footerNotice": "Тази страница на български съдържа само общи сведения за работата на кантората по тайванско право. Тя не е правна консултация по конкретно дело и самото изпращане на съобщение не създава отношения между адвокатка или адвокат и клиент.",
+    "pages": {
+      "home": {
+        "title": "Правни услуги в Тайван — сведения на български",
+        "description": "Общи пояснения на български за сферата на работа на Hovering International Law Firm в Тайван, за езиците на консултация и за първото обръщение."
+      }
+    }
+  },
+  "hr": {
+    "nav": {
+      "home": "Naslovnica",
+      "services": "Područja rada",
+      "about": "O uredu",
+      "lawyers": "Odvjetnici",
+      "pricing": "Troškovi",
+      "contact": "Kontakt",
+      "faq": "Pitanja",
+      "privacy": "Osobni podaci",
+      "disclaimer": "Odgovornost",
+      "columns": "Članci"
+    },
+    "languageLabel": "Jezik prikaza",
+    "skipLink": "Preskočite navigaciju i prijeđite na sadržaj",
+    "menuLabel": "Popis stranica",
+    "contactCta": "Pošaljite zahtjev za pregled",
+    "footerNotice": "Ova hrvatska stranica sadrži samo opće informacije o radu ureda prema tajvanskom pravu. Nije pravni savjet za pojedini slučaj, a samo slanje poruke ne uspostavlja odnos između odvjetnice ili odvjetnika i klijenta.",
+    "pages": {
+      "home": {
+        "title": "Pravne usluge na Tajvanu — informacije na hrvatskom",
+        "description": "Opće objašnjenje na hrvatskom o opsegu rada Hovering International Law Firm na Tajvanu, o jezicima savjetovanja i o prvom kontaktu."
+      }
+    }
+  },
+  "sr": {
+    "nav": {
+      "home": "Početna",
+      "services": "Usluge",
+      "about": "Kancelarija",
+      "lawyers": "Advokati",
+      "pricing": "Troškovi",
+      "contact": "Kontakt",
+      "faq": "Pitanja",
+      "privacy": "Privatnost",
+      "disclaimer": "Odricanje",
+      "columns": "Članci"
+    },
+    "languageLabel": "Jezik prikaza",
+    "skipLink": "Preskočite navigaciju i pređite na sadržaj",
+    "menuLabel": "Pregled stranica",
+    "contactCta": "Pošaljite zahtev za ocenu",
+    "footerNotice": "Ova srpska stranica sadrži samo opšte informacije o radu kancelarije po tajvanskom pravu. Nije pravni savet za pojedinačan slučaj, a samo slanje poruke ne zasniva odnos između advokatkinje ili advokata i klijenta.",
+    "pages": {
+      "home": {
+        "title": "Pravne usluge na Tajvanu — informacije na srpskom",
+        "description": "Opšte objašnjenje na srpskom o obimu rada Hovering International Law Firm na Tajvanu, o jezicima konsultacije i o prvom kontaktu."
+      }
+    }
+  },
+  "sl": {
+    "nav": {
+      "home": "Domov",
+      "services": "Področja",
+      "about": "Pisarna",
+      "lawyers": "Odvetniki",
+      "pricing": "Stroški",
+      "contact": "Stik",
+      "faq": "Vprašanja",
+      "privacy": "Zasebnost",
+      "disclaimer": "Omejitev",
+      "columns": "Članki"
+    },
+    "languageLabel": "Jezik prikaza",
+    "skipLink": "Preskočite navigacijo in pojdite na vsebino",
+    "menuLabel": "Meni",
+    "contactCta": "Pošljite prošnjo za pregled",
+    "footerNotice": "Ta slovenska stran vsebuje le splošne informacije o delu pisarne po tajvanskem pravu. Ni pravni nasvet za posamezno zadevo in samo pošiljanje sporočila ne vzpostavi razmerja med odvetnico ali odvetnikom in stranko.",
+    "pages": {
+      "home": {
+        "title": "Pravne storitve na Tajvanu — napotki v slovenščini",
+        "description": "Splošna pojasnila v slovenščini o obsegu dela Hovering International Law Firm na Tajvanu, o jezikih posveta in o prvem stiku."
+      }
+    }
+  },
+  "lt": {
+    "nav": {
+      "home": "Pradžia",
+      "services": "Paslaugos",
+      "about": "Kontora",
+      "lawyers": "Advokatai",
+      "pricing": "Išlaidos",
+      "contact": "Kontaktai",
+      "faq": "Klausimai",
+      "privacy": "Privatumas",
+      "disclaimer": "Atsakomybė",
+      "columns": "Straipsniai"
+    },
+    "languageLabel": "Rodymo kalba",
+    "skipLink": "Praleisti naršymą ir eiti prie turinio",
+    "menuLabel": "Puslapių sąrašas",
+    "contactCta": "Pateikti prašymą įvertinti",
+    "footerNotice": "Šiame lietuviškame puslapyje pateikiama tik bendra informacija apie kontoros darbą pagal Taivano teisę. Tai nėra teisinė konsultacija konkrečioje byloje, o vien pats pranešimo išsiuntimas nesukuria advokato ir kliento santykių.",
+    "pages": {
+      "home": {
+        "title": "Teisinės paslaugos Taivane — informacija lietuvių kalba",
+        "description": "Bendra informacija lietuvių kalba apie Hovering International Law Firm darbo Taivane apimtį, konsultacijos kalbas ir pirmąjį kreipimąsi."
+      }
+    }
+  },
+  "lv": {
+    "nav": {
+      "home": "Sākums",
+      "services": "Pakalpojumi",
+      "about": "Par mums",
+      "lawyers": "Advokāti",
+      "pricing": "Izmaksas",
+      "contact": "Saziņa",
+      "faq": "Jautājumi",
+      "privacy": "Privātums",
+      "disclaimer": "Atruna",
+      "columns": "Raksti"
+    },
+    "languageLabel": "Lapas valoda",
+    "skipLink": "Izlaist navigāciju un pāriet pie satura",
+    "menuLabel": "Izvēlne",
+    "contactCta": "Nosūtīt izvērtēšanas pieteikumu",
+    "footerNotice": "Šī latviešu lapa sniedz tikai vispārīgu informāciju par biroja darbu saskaņā ar Taivānas tiesībām. Tā nav juridisks padoms konkrētā lietā, un ziņojuma nosūtīšana pati par sevi nerada attiecības starp advokāti vai advokātu un klientu.",
+    "pages": {
+      "home": {
+        "title": "Juridiskie pakalpojumi Taivānā — informācija latviešu valodā",
+        "description": "Vispārīgs skaidrojums latviešu valodā par Hovering International Law Firm darba jomu Taivānā, par konsultācijas valodām un par pirmo saziņu."
+      }
+    }
+  },
+  "et": {
+    "nav": {
+      "home": "Avaleht",
+      "services": "Teenused",
+      "about": "Büroo",
+      "lawyers": "Advokaadid",
+      "pricing": "Tasud",
+      "contact": "Kontakt",
+      "faq": "Küsimused",
+      "privacy": "Privaatsus",
+      "disclaimer": "Lahtiütlus",
+      "columns": "Artiklid"
+    },
+    "languageLabel": "Lehe keel",
+    "skipLink": "Jätke navigeerimine vahele ja minge sisu juurde",
+    "menuLabel": "Menüü",
+    "contactCta": "Saatke läbivaatamistaotlus",
+    "footerNotice": "See eestikeelne leht sisaldab ainult üldist teavet büroo töö kohta Taiwani õiguse järgi. See ei ole õigusnõu üksiku asja kohta ja teate saatmine iseenesest ei tekita suhet advokaadi ja kliendi vahel.",
+    "pages": {
+      "home": {
+        "title": "Õigusteenused Taiwanis — juhised eesti keeles",
+        "description": "Üldine seletus eesti keeles büroo Hovering International Law Firm’i töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese pöördumise kohta."
+      }
+    }
+  },
+  "ca": {
+    "nav": {
+      "home": "Inici",
+      "services": "Serveis",
+      "about": "El despatx",
+      "lawyers": "Advocats",
+      "pricing": "Honoraris",
+      "contact": "Contacte",
+      "faq": "Preguntes",
+      "privacy": "Privadesa",
+      "disclaimer": "Avís legal",
+      "columns": "Articles"
+    },
+    "languageLabel": "Idioma de la pàgina",
+    "skipLink": "Saltar la navegació i anar al contingut",
+    "menuLabel": "Menú",
+    "contactCta": "Enviar una sol·licitud de consulta",
+    "footerNotice": "Aquesta pàgina en català només ofereix orientació general sobre el treball del despatx segons el dret de Taiwan. No és assessorament jurídic per a un assumpte concret, i l’enviament d’un missatge no crea per si sol una relació entre advocada o advocat i client.",
+    "pages": {
+      "home": {
+        "title": "Serveis jurídics a Taiwan — orientació en català",
+        "description": "Explicació general en català sobre l’abast de Hovering International Law Firm a Taiwan, els idiomes de consulta i el primer contacte."
+      }
+    }
+  },
+  "is": {
+    "nav": {
+      "home": "Forsíða",
+      "services": "Þjónusta",
+      "about": "Skrifstofan",
+      "lawyers": "Lögmenn",
+      "pricing": "Kostnaður",
+      "contact": "Hafa samband",
+      "faq": "Spurningar",
+      "privacy": "Persónuvernd",
+      "disclaimer": "Fyrirvari",
+      "columns": "Greinar"
+    },
+    "languageLabel": "Birtingartungumál",
+    "skipLink": "Sleppa valmynd og fara í efnið",
+    "menuLabel": "Valmynd",
+    "contactCta": "Senda beiðni um ráðgjöf",
+    "footerNotice": "Þessi síða á íslensku inniheldur aðeins almennar leiðbeiningar um störf skrifstofunnar samkvæmt rétti Taívan. Hún er ekki lögfræðileg ráðgjöf í tilteknu máli og sending skilaboða stofnar ein og sér ekki samband milli lögmanns og skjólstæðings.",
+    "pages": {
+      "home": {
+        "title": "Lögfræðiþjónusta á Taívan — leiðbeiningar á íslensku",
+        "description": "Almennar skýringar á íslensku um starfssvið Hovering International Law Firm á Taívan, tungumál ráðgjafarinnar og fyrsta samband."
+      }
+    }
+  }
+}

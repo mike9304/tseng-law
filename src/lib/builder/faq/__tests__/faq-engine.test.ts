@@ -1,7 +1,7 @@
 import { mkdtemp, rm } from 'fs/promises';
 import os from 'os';
 import path from 'path';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { faqContent } from '@/data/faq-content';
 import {
   createFaqItem,
@@ -11,6 +11,9 @@ import {
   listFaqSearchDocs,
   loadFaqItem,
   saveFaqItem,
+  seedFaqItems,
+  normalizeFaqItem,
+  slugifyFaqQuestion,
 } from '@/lib/builder/faq/faq-engine';
 
 let root = '';
@@ -125,5 +128,36 @@ describe('native FAQ engine', () => {
     });
     expect(hit?.body).toContain('검색 색인 본문');
     expect(draftHit).toBeUndefined();
+  });
+});
+
+
+describe('stable public FAQ addresses', () => {
+  it('preserves Korean text and yields unique seed anchors across requests', () => {
+    const clock = vi.spyOn(Date, 'now').mockReturnValue(1000);
+    try {
+      const first = seedFaqItems().filter(item => item.locale === 'ko').map(item => item.slug);
+      clock.mockReturnValue(2000);
+      expect(seedFaqItems().filter(item => item.locale === 'ko').map(item => item.slug)).toEqual(first);
+      expect(new Set(first).size).toBe(first.length);
+      expect(slugifyFaqQuestion('상담은 어떻게 하나요?')).toBe('상담은-어떻게-하나요');
+      expect(slugifyFaqQuestion('Café advice')).toBe('cafe-advice');
+      expect(slugifyFaqQuestion('台湾での会社設立はどのような手続きで進みますか')).toBe('台湾て-の会社設立はと-のような手続きて-進みますか');
+      expect(slugifyFaqQuestion('상담 방법'.normalize('NFD'))).toBe(slugifyFaqQuestion('상담 방법'));
+      expect(normalizeFaqItem({ question: '변경된 질문', slug: 'existing-custom-url' }).slug).toBe('existing-custom-url');
+      const fallback = slugifyFaqQuestion('⚖️');
+      clock.mockReturnValue(3000);
+      expect(slugifyFaqQuestion('⚖️')).toBe(fallback);
+      expect(slugifyFaqQuestion('📞')).not.toBe(fallback);
+    } finally { clock.mockRestore(); }
+  });
+  it('links every indexed FAQ to an anchor from a later public request', async () => {
+    const clock = vi.spyOn(Date, 'now').mockReturnValue(1000);
+    try {
+      const docs = await listFaqSearchDocs('ko');
+      clock.mockReturnValue(2000);
+      const anchors = new Set((await listFaqItems({ locale: 'ko' })).map(item => item.slug));
+      for (const doc of docs) expect(anchors.has(decodeURIComponent(new URL(doc.url, 'https://tseng-law.com').hash.slice(1)))).toBe(true);
+    } finally { clock.mockRestore(); }
   });
 });

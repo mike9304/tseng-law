@@ -32,7 +32,6 @@ vi.mock('@/components/builder/canvas/PageSwitcher', async () => {
 
 vi.mock('next/dynamic', async () => {
   const React = await import('react');
-  let dynamicIndex = 0;
   let pageComponent: ComponentType<Record<string, unknown>> | null = null;
   let releaseRequested = false;
   const pageSubscribers = new Set<(
@@ -42,14 +41,14 @@ vi.mock('next/dynamic', async () => {
   return {
     default: (
       loader: () => Promise<{ default: ComponentType<Record<string, unknown>> }>,
-      options: { loading: ComponentType },
+      options?: { loading?: ComponentType },
     ) => {
-      const currentIndex = dynamicIndex;
-      dynamicIndex += 1;
-
-      if (currentIndex !== 0) {
+      // Other widgets may register dynamic imports before this rail. Select
+      // the page panel by its loader, never global module evaluation order.
+      if (!String(loader).includes('PageSwitcher')) {
         return function DeferredPanel() {
-          return <options.loading />;
+          const Loading = options?.loading;
+          return Loading ? <Loading /> : null;
         };
       }
 
@@ -91,7 +90,8 @@ vi.mock('next/dynamic', async () => {
           };
         }, []);
 
-        return Component ? <Component {...props} /> : <options.loading />;
+        const Loading = options?.loading;
+        return Component ? <Component {...props} /> : Loading ? <Loading /> : null;
       };
     },
   };

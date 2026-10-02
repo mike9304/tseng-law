@@ -16,6 +16,7 @@ type DocumentLocaleState = {
 type DocumentLocaleSyncProps = {
   language: DocumentLanguage;
   fontClassName: string;
+  fontStylesheets?: readonly string[];
   managedFontClassNames: readonly string[];
 };
 
@@ -48,9 +49,19 @@ export function getSynchronizedDocumentLocaleState(
 export default function DocumentLocaleSync({
   language,
   fontClassName,
+  fontStylesheets,
   managedFontClassNames,
 }: DocumentLocaleSyncProps) {
   useEffect(() => {
+    // The root layout persists across client navigation. Keep previously loaded
+    // families cached and attach only styles needed by the new document language.
+    for (const href of fontStylesheets ?? []) {
+      if (Array.from(document.querySelectorAll<HTMLLinkElement>('link[rel="stylesheet"]')).some(link => link.getAttribute('href') === href)) continue;
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }
     const root = document.documentElement;
     const nextState = getSynchronizedDocumentLocaleState(
       root.className,
@@ -64,7 +75,7 @@ export default function DocumentLocaleSync({
     // leaving /ar for /vi would keep a right-to-left document.
     root.dir = nextState.direction;
     root.className = nextState.className;
-  }, [fontClassName, language, managedFontClassNames]);
+  }, [fontClassName, fontStylesheets, language, managedFontClassNames]);
 
   return null;
 }

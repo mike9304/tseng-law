@@ -1,0 +1,336 @@
+import {
+  Noto_Sans,
+  Noto_Sans_Arabic,
+  Noto_Sans_Bengali,
+  Noto_Sans_Khmer,
+  Noto_Sans_Myanmar,
+  Noto_Sans_Tamil,
+  Noto_Sans_Devanagari,
+  Noto_Sans_Hebrew,
+  Noto_Sans_KR,
+  Noto_Sans_JP,
+  Noto_Sans_SC,
+  Noto_Sans_TC,
+  Noto_Sans_Thai,
+  Noto_Serif_KR,
+  Noto_Serif_JP,
+  Noto_Serif_SC,
+  Noto_Serif_TC,
+} from 'next/font/google';
+
+/**
+ * Public font payload — Cross-Strait Editorial Ledger.
+ * Locale-gated: each page receives only the active sans + serif pair.
+ * EN intentionally shares the KR pair for visual cohesion.
+ *
+ * Variable Noto files cover the public CSS weight matrix:
+ * - sans 400/500/600/700 (body, UI, H2/H3, buttons; no public 300)
+ * - serif 500/600/700 (closed display allowlist; no light faces)
+ *
+ * Guidance locales (vi/id/th/fil) add self-hosted Noto Sans Thai and
+ * latin/Vietnamese Noto Sans; Arabic (ar, right-to-left) adds Noto Sans
+ * Arabic paired with the same latin face for Latin names and numerals.
+ * No extra runtime font CDN.
+ */
+
+const sansKorean = Noto_Sans_KR({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-kr-loaded',
+});
+
+const serifKorean = Noto_Serif_KR({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-serif-kr-loaded',
+});
+
+const sansTraditionalChinese = Noto_Sans_TC({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-tc-loaded',
+});
+
+const serifTraditionalChinese = Noto_Serif_TC({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-serif-tc-loaded',
+});
+
+const sansSimplifiedChinese = Noto_Sans_SC({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-sc-loaded',
+});
+
+const serifSimplifiedChinese = Noto_Serif_SC({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-serif-sc-loaded',
+});
+
+const sansJapanese = Noto_Sans_JP({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-jp-loaded',
+});
+
+const serifJapanese = Noto_Serif_JP({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-serif-jp-loaded',
+});
+
+const sansThai = Noto_Sans_Thai({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-thai-loaded',
+});
+
+const sansArabic = Noto_Sans_Arabic({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-arabic-loaded',
+  subsets: ['arabic'],
+});
+
+const sansDevanagari = Noto_Sans_Devanagari({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-devanagari-loaded',
+  subsets: ['devanagari'],
+});
+
+const sansHebrew = Noto_Sans_Hebrew({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-hebrew-loaded',
+  subsets: ['hebrew'],
+});
+
+const sansBengali = Noto_Sans_Bengali({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-bengali-loaded',
+  subsets: ['bengali'],
+});
+
+const sansTamil = Noto_Sans_Tamil({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-tamil-loaded',
+  subsets: ['tamil'],
+});
+
+const sansMyanmar = Noto_Sans_Myanmar({
+  display: 'swap',
+  preload: false,
+  weight: ['400', '500', '700'],
+  variable: '--font-noto-sans-myanmar-loaded',
+  subsets: ['myanmar'],
+});
+
+const sansKhmer = Noto_Sans_Khmer({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-khmer-loaded',
+  subsets: ['khmer'],
+});
+
+const sansLatin = Noto_Sans({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-latin-loaded',
+  // Greek joins the shared face for `el`; without it the page falls back to a
+  // system serif and the locale looks unstyled.
+  subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic', 'greek'],
+});
+
+export type DocumentLanguage =
+  | 'ko'
+  | 'zh-Hant'
+  | 'en'
+  | 'ja'
+  | 'vi'
+  | 'id'
+  | 'th'
+  | 'fil'
+  | 'ar'
+  | 'de'
+  | 'es'
+  | 'fr'
+  | 'pt'
+  | 'zh-Hans'
+  | 'ms'
+  | 'ru'
+  | 'tr'
+  | 'it'
+  | 'nl'
+  | 'pl'
+  | 'hi'
+  | 'sv'
+  | 'da'
+  | 'nb'
+  | 'fi'
+  | 'cs'
+  | 'hu'
+  | 'ro'
+  | 'uk'
+  | 'el'
+  | 'he'
+  | 'bn'
+  | 'ur'
+  | 'fa'
+  | 'my'
+  | 'ta'
+  | 'ne'
+  | 'km'
+  | 'mn'
+  | 'sk'
+  | 'bg'
+  | 'hr'
+  | 'sr'
+  | 'sl'
+  | 'lt'
+  | 'lv'
+  | 'et'
+  | 'ca'
+  | 'is';
+
+const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
+const traditionalChineseFontClassName = [
+  sansTraditionalChinese.variable,
+  serifTraditionalChinese.variable,
+].join(' ');
+const simplifiedChineseFontClassName = [
+  sansSimplifiedChinese.variable,
+  serifSimplifiedChinese.variable,
+].join(' ');
+const japaneseFontClassName = [sansJapanese.variable, serifJapanese.variable].join(' ');
+const thaiFontClassName = [sansThai.variable, sansLatin.variable].join(' ');
+const arabicFontClassName = [sansArabic.variable, sansLatin.variable].join(' ');
+const hindiFontClassName = [sansDevanagari.variable, sansLatin.variable].join(' ');
+const hebrewFontClassName = [sansHebrew.variable, sansLatin.variable].join(' ');
+const bengaliFontClassName = [sansBengali.variable, sansLatin.variable].join(' ');
+const tamilFontClassName = [sansTamil.variable, sansLatin.variable].join(' ');
+const myanmarFontClassName = [sansMyanmar.variable, sansLatin.variable].join(' ');
+const khmerFontClassName = [sansKhmer.variable, sansLatin.variable].join(' ');
+const latinExtendedFontClassName = sansLatin.variable;
+
+/**
+ * CSS-variable class names for the active locale pair.
+ * Must be applied where `:root` semantic tokens can resolve (typically `<html>`),
+ * not as body-only variables referenced from `:root`.
+ */
+export function getLocaleFontClassName(language: DocumentLanguage): string {
+  if (language === 'zh-Hant') {
+    return traditionalChineseFontClassName;
+  }
+  if (language === 'zh-Hans') {
+    return simplifiedChineseFontClassName;
+  }
+  if (language === 'ja') {
+    return japaneseFontClassName;
+  }
+  if (language === 'th') {
+    return thaiFontClassName;
+  }
+  if (language === 'ar' || language === 'ur' || language === 'fa') {
+    return arabicFontClassName;
+  }
+  if (language === 'hi' || language === 'ne') {
+    return hindiFontClassName;
+  }
+  if (language === 'bn') {
+    return bengaliFontClassName;
+  }
+  if (language === 'ta') {
+    return tamilFontClassName;
+  }
+  if (language === 'my') {
+    return myanmarFontClassName;
+  }
+  if (language === 'km') {
+    return khmerFontClassName;
+  }
+  if (language === 'he') {
+    return hebrewFontClassName;
+  }
+  if (
+    language === 'vi'
+    || language === 'id'
+    || language === 'fil'
+    || language === 'de'
+    || language === 'es'
+    || language === 'fr'
+    || language === 'pt'
+    || language === 'ms'
+    || language === 'ru'
+    || language === 'tr'
+    || language === 'it'
+    || language === 'nl'
+    || language === 'pl'
+    || language === 'sv'
+    || language === 'da'
+    || language === 'nb'
+    || language === 'fi'
+    || language === 'cs'
+    || language === 'hu'
+    || language === 'ro'
+    || language === 'uk'
+    || language === 'el'
+    || language === 'mn'
+    || language === 'sk'
+    || language === 'bg'
+    || language === 'hr'
+    || language === 'sr'
+    || language === 'sl'
+    || language === 'lt'
+    || language === 'lv'
+    || language === 'et'
+    || language === 'ca'
+    || language === 'is'
+  ) {
+    return latinExtendedFontClassName;
+  }
+  // Korean and English retain their existing shared pair.
+  return koreanFontClassName;
+}
+
+export function getManagedLocaleFontClassNames(): string[] {
+  return Array.from(
+    new Set(
+      [
+        koreanFontClassName,
+        traditionalChineseFontClassName,
+        simplifiedChineseFontClassName,
+        japaneseFontClassName,
+        thaiFontClassName,
+        arabicFontClassName,
+        hindiFontClassName,
+        hebrewFontClassName,
+        bengaliFontClassName,
+        tamilFontClassName,
+        myanmarFontClassName,
+        khmerFontClassName,
+        latinExtendedFontClassName,
+      ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
+    ),
+  );
+}

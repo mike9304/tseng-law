@@ -305,7 +305,7 @@
           "expectedOccurrences": 1
         },
         {
-          "sourcePath": "src/lib/builder/components/socialEmbed/index.tsx",
+          "sourcePath": "src/lib/builder/components/socialEmbed/Render.tsx",
           "sourcePattern": "builder-social-embed-unavailable",
           "expectedOccurrences": 1
         }
@@ -315,11 +315,11 @@
       "surfaceKind": "rendered-placeholder",
       "visibleDisclosureAnchors": [
         {
-          "sourcePath": "src/lib/builder/components/socialEmbed/index.tsx",
+          "sourcePath": "src/lib/builder/components/socialEmbed/Render.tsx",
           "sourcePattern": "copy\\.socialEmbed\\.unavailable(?:Title|Message)",
           "expectedOccurrences": 2,
           "renderedSelector": "[data-builder-demo-disclosure=\"social-embed-placeholder\"]",
-          "productSourcePath": "src/lib/builder/components/socialEmbed/index.tsx",
+          "productSourcePath": "src/lib/builder/components/socialEmbed/Render.tsx",
           "productSourcePattern": "data-builder-demo-disclosure=\"social-embed-placeholder\"",
           "productExpectedOccurrences": 2,
           "sourceReferencePattern": "data-builder-demo-disclosure",

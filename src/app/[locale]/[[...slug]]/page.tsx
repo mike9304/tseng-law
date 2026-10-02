@@ -26,7 +26,7 @@ import {
   isGuidanceLocale4,
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
-import { getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
+import { buildAbsoluteUrl, DEFAULT_SOCIAL_IMAGE_PATH, getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -91,6 +91,13 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
       siteName: brandName,
       locale: getOpenGraphLocale(locale),
       type: 'website',
+      images: [{ url: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE_PATH), width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${page.title} | ${brandName}`,
+      description: page.description,
+      images: [buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE_PATH)],
     },
     robots: { index: true, follow: true },
   };

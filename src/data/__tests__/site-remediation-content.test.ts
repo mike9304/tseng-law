@@ -187,19 +187,21 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
   it('1-7 removes external font links and connects next/font variables to the site tokens', () => {
     const layout = readFileSync(path.join(root, 'src/app/layout.tsx'), 'utf8');
     const fonts = readFileSync(path.join(root, 'src/app/fonts.ts'), 'utf8');
+    const fontSource = readFileSync(path.join(root, 'scripts/font-source.ts'), 'utf8');
     const css = readFileSync(path.join(root, 'src/app/globals.css'), 'utf8');
     const publicPage = readFileSync(path.join(root, 'src/lib/builder/site/public-page.tsx'), 'utf8');
 
     expect(layout).not.toContain('fonts.googleapis.com');
+    expect(layout).toContain('getLocaleFontStylesheets(language)');
     expect(publicPage).not.toContain('fonts.googleapis.com');
     expect(publicPage).not.toContain('fontsUrl');
-    expect(fonts).toContain("display: 'swap'");
-    expect(fonts).toContain('preload: false');
+    expect(fontSource).toContain("display: 'swap'");
+    expect(fontSource).toContain('preload: false');
     // Locale-gated Noto pairs on <html> so :root semantic tokens resolve
-    expect(fonts).toContain('Noto_Sans_KR');
-    expect(fonts).toContain('Noto_Sans_TC');
-    expect(fonts).toContain('Noto_Serif_KR');
-    expect(fonts).toContain('Noto_Serif_TC');
+    expect(fontSource).toContain('Noto_Sans_KR');
+    expect(fontSource).toContain('Noto_Sans_TC');
+    expect(fontSource).toContain('Noto_Serif_KR');
+    expect(fontSource).toContain('Noto_Serif_TC');
     expect(fonts).toContain('getLocaleFontClassName');
     expect(fonts).toContain('getManagedLocaleFontClassNames');
     expect(fonts).not.toContain('Cormorant_Garamond');

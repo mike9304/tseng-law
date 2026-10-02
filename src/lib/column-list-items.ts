@@ -1,4 +1,3 @@
-import type { ColumnPost } from '@/lib/column-post';
 import type { ColumnListItem } from '@/components/ColumnsGrid';
 
 /**
@@ -6,7 +5,7 @@ import type { ColumnListItem } from '@/components/ColumnsGrid';
  * receives is serialized into the page payload; full article bodies (`content`,
  * FAQ, typography) were being shipped for every column and never used.
  */
-export function toColumnListItems(posts: readonly ColumnPost[]): ColumnListItem[] {
+export function toColumnListItems(posts: readonly ColumnListItem[]): ColumnListItem[] {
   return posts.map((post) => ({
     slug: post.slug,
     title: post.title,

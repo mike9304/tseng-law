@@ -1,3 +1,4 @@
+import { extractVisibleNodeText } from './visible-text';
 import { createLazyRead } from './lazy-read.mjs';
 import { isBuilderOwnedSlug } from '@/lib/builder/site/public-route-ownership';
 import { readPublishedPageCanvas } from '@/lib/builder/site/published-canvas';
@@ -31,31 +32,8 @@ export class SearchCurrentDataUnavailableError extends Error {
  * projects into a single index source.
  */
 
-function extractTextFromNode(node: BuilderCanvasNode): string {
-  const content = (node as { content?: Record<string, unknown> }).content;
-  if (!content) return '';
-  const out: string[] = [];
-  const visit = (value: unknown): void => {
-    if (!value) return;
-    if (typeof value === 'string') {
-      const trimmed = value.trim();
-      if (trimmed.length > 0 && trimmed.length < 2000) out.push(trimmed);
-      return;
-    }
-    if (Array.isArray(value)) {
-      for (const item of value) visit(item);
-      return;
-    }
-    if (typeof value === 'object') {
-      for (const v of Object.values(value as Record<string, unknown>)) visit(v);
-    }
-  };
-  visit(content);
-  return out.join('\n');
-}
-
 function extractTextFromDocument(nodes: BuilderCanvasNode[]): string {
-  return nodes.map(extractTextFromNode).filter((s) => s.length > 0).join('\n');
+  return nodes.map(extractVisibleNodeText).filter((s) => s.length > 0).join('\n');
 }
 
 function isSearchablePage(page: BuilderPageMeta, locale: Locale): boolean {

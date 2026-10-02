@@ -15,6 +15,7 @@ import {
   DEFAULT_FAQ_CATEGORIES,
   getFaqCategoryLabel,
   sortFaqItems,
+  slugifyFaqQuestion,
   type BuilderFaqCategory,
   type BuilderFaqItem,
   type FaqListQuery,
@@ -28,7 +29,7 @@ export type {
   FaqSortBy,
   FaqStatus,
 } from './faq-shared';
-export { DEFAULT_FAQ_CATEGORIES, getFaqCategoryLabel, sortFaqItems };
+export { DEFAULT_FAQ_CATEGORIES, getFaqCategoryLabel, sortFaqItems, slugifyFaqQuestion };
 
 type FaqBackend = 'blob' | 'file';
 type StoredFaqItem = BuilderFaqItem & { deleted?: boolean };
@@ -142,17 +143,6 @@ function safeTrim(value: unknown, max: number): string {
 
 function normalizeStatus(status: unknown): FaqStatus {
   return status === 'draft' ? 'draft' : 'published';
-}
-
-export function slugifyFaqQuestion(question: string): string {
-  const slug = question
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9가-힣一-龥ぁ-んァ-ン]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 80);
-  return slug || `faq-${Date.now()}`;
 }
 
 export function makeFaqId(): string {

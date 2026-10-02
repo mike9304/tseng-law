@@ -1,3 +1,4 @@
+import { toColumnListItems } from '@/lib/column-list-items';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { checkAccess } from '@/lib/builder/members/members-engine';
 // allow: SIZE_OK - pre-existing public page renderer; legacy composites share published dataset preload wiring here.
@@ -12,7 +13,7 @@ import {
 } from '@/lib/builder/site/persistence';
 import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
 import { readPublishedPageCanvas } from '@/lib/builder/site/published-canvas';
-import { getComponent } from '@/lib/builder/components/registry';
+import { getPublicComponent as getComponent } from '@/lib/builder/components/public-registry';
 import InsightsArchiveSection from '@/components/InsightsArchiveSection';
 import { mapColumnPostsToHomeInsights } from '@/lib/insights/home-insight-posts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
@@ -155,7 +156,6 @@ import {
 } from '@/lib/builder/animations/animation-render';
 import { resolveBuilderAppWidgetRuntimeForNode } from '@/lib/builder/apps/widgets';
 import { resolveLiveChatSettings } from '@/lib/builder/live-chat/app-settings';
-import '@/lib/builder/components/registry';
 import {
   applyBuilderDatasetBindingToNode,
   resolveBuilderDatasetBindingRecordCount,
@@ -1187,10 +1187,13 @@ export async function PublishedSitePageView({
     const canRenderAppWidget = !appRuntime || appRuntime.status === 'enabled';
     const compositeDatasetProps = renderedNode.kind === 'composite'
       ? {
-        datasetPreviewTargets,
-        columnPosts: resolved.columnPosts,
-        faqCategories: resolved.faqCategories,
-        faqItems: resolved.faqItems,
+        // Serialize only the data this client composite actually renders.
+        datasetPreviewTargets: renderedNode.content.componentKey === 'insights-archive' ? datasetPreviewTargets : undefined,
+        columnPosts: ['insights-archive', 'legacy-page-columns'].includes(renderedNode.content.componentKey)
+          ? toColumnListItems(resolved.columnPosts) : undefined,
+        columnCount: renderedNode.content.componentKey === 'legacy-page-videos' ? resolved.columnPosts.length : undefined,
+        faqCategories: renderedNode.content.componentKey === 'legacy-page-faq' ? resolved.faqCategories : undefined,
+        faqItems: renderedNode.content.componentKey === 'legacy-page-faq' ? resolved.faqItems : undefined,
         searchParams,
         ...publishedHomeEditorialCompositeProps(renderedNode, {
           current9: Boolean(current9PublishedHomeEditorial),

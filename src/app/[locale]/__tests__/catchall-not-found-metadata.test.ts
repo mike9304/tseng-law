@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { GUIDANCE_LOCALES_4, GUIDANCE_PAGE_KEYS } from '@/lib/public-guidance';
+import { buildAbsoluteUrl, DEFAULT_SOCIAL_IMAGE_PATH } from '@/lib/seo';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import MainSiteCatchAllPage, { generateMetadata } from '../[[...slug]]/page';
 
@@ -84,5 +86,18 @@ describe('catchall missing-page metadata', () => {
     expect(metadata.robots).toEqual({ index: true, follow: true });
     expect(metadata.openGraph).toEqual({ title: 'Published social title', locale: ogLocale });
     expect(resolvers.legacyMetadata).not.toHaveBeenCalled();
+  });
+});
+
+
+describe('guidance social previews', () => {
+  it.each(GUIDANCE_LOCALES_4)('provides an image on every %s core page', async locale => {
+    for (const key of GUIDANCE_PAGE_KEYS.filter(key => key !== 'columns')) {
+      const metadata = await generateMetadata({ params: Promise.resolve({ locale, slug: key === 'home' ? [] : [key] }) });
+      expect(metadata.openGraph?.images).toEqual(expect.arrayContaining([expect.objectContaining({ url: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE_PATH) })]));
+      expect(metadata.twitter).toMatchObject({ card: 'summary_large_image', images: [buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE_PATH)] });
+      expect(metadata.alternates?.canonical).toBe(`https://tseng-law.com/${locale}${key === 'home' ? '' : `/${key}`}`);
+      expect(metadata.robots).toEqual({ index: true, follow: true });
+    }
   });
 });

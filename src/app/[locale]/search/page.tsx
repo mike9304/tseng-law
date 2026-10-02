@@ -31,8 +31,9 @@ const SEARCH_TAB_KIND: Record<string, SearchDocKind | 'all'> = {
   all: 'all',
   page: 'page',
   pages: 'page',
-  services: 'page',
-  videos: 'page',
+  // Historic overlay categories do not describe the page-kind collection.
+  services: 'all',
+  videos: 'all',
   blog: 'blog',
   columns: 'blog',
   insights: 'blog',
@@ -104,14 +105,14 @@ export default async function SearchPage(
   });
   const visibleKindIds: Array<SearchDocKind | 'all'> = ['all', ...availableKinds];
 
-  const results = hits.slice(0, 12);
+  const results = hits;
   const totalLabel = locale === 'ko'
-    ? `총 ${hits.length}건`
+    ? `${hits.length === 50 ? '상위' : '총'} ${hits.length}건`
     : locale === 'zh-hant'
-      ? `共 ${hits.length} 筆`
+      ? `${hits.length === 50 ? '前' : '共'} ${hits.length} 筆`
       : locale === 'ja'
-        ? `全 ${hits.length} 件`
-        : `Total ${hits.length}`;
+        ? `${hits.length === 50 ? '上位' : '全'} ${hits.length} 件`
+        : `${hits.length === 50 ? 'Top' : 'Total'} ${hits.length}`;
   const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = visibleKindIds.map((id) => ({
     id,
     label: searchKindLabel(id, locale),

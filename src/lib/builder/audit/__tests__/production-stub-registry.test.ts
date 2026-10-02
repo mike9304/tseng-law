@@ -1493,7 +1493,7 @@ describe('production stub registry', () => {
   });
 
   const SOCIAL_COPY_PATH = 'src/lib/builder/components/social-widgets-copy.ts';
-  const SOCIAL_EMBED_PATH = 'src/lib/builder/components/socialEmbed/index.tsx';
+  const SOCIAL_EMBED_PATH = 'src/lib/builder/components/socialEmbed/Render.tsx';
 
   function readRealSocialEntry(): ProductionStubEntry {
     const manifestPath = path.resolve(process.cwd(), 'docs/stub-registry/production-stubs.json');

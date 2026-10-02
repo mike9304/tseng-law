@@ -30,6 +30,7 @@ vi.mock('next/navigation', () => ({
 
 vi.mock('@/app/fonts', () => ({
   getLocaleFontClassName: () => 'font-mock',
+  getLocaleFontStylesheets: () => [],
   getManagedLocaleFontClassNames: () => ['font-managed'],
 }));
 

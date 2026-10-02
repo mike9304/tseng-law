@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import type { ReactNode } from 'react';
 import { getSearchEngineVerification, getSiteUrl } from '@/lib/seo';
-import { getLocaleFontClassName, type DocumentLanguage } from './fonts';
+import { getLocaleFontClassName, getLocaleFontStylesheets, type DocumentLanguage } from './fonts';
 import { isRtlDocumentLanguage, resolvePublicDocumentLanguage } from '@/lib/public-guidance';
 
 const searchEngineVerification = getSearchEngineVerification();
@@ -68,6 +68,8 @@ export default async function RootLayout({
   return (
     <html lang={language} dir={direction} className={fontClassName} suppressHydrationWarning>
       <head>
+        {getLocaleFontStylesheets(language).map(href => <link key={`preload:${href}`} rel="preload" as="style" href={href} />)}
+        {getLocaleFontStylesheets(language).map(href => <link key={href} rel="stylesheet" href={href} />)}
         {isLocaleHome ? (
           <link
             rel="preload"

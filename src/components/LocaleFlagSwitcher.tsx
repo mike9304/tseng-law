@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { InquiryCopyLocale } from '@/data/international-inquiry-copy';
 import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
-import { guidanceContent } from '@/data/international-guidance-content';
+// Generated chrome-only projection; body translations remain server-side.
+import guidanceContent from '@/data/guidance-chrome.json';
 import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { buildLocalePath, stripLocaleFromPath } from '@/lib/path-utils';
 import {

@@ -1,166 +1,24 @@
-import {
-  Noto_Sans,
-  Noto_Sans_Arabic,
-  Noto_Sans_Bengali,
-  Noto_Sans_Khmer,
-  Noto_Sans_Myanmar,
-  Noto_Sans_Tamil,
-  Noto_Sans_Devanagari,
-  Noto_Sans_Hebrew,
-  Noto_Sans_KR,
-  Noto_Sans_JP,
-  Noto_Sans_SC,
-  Noto_Sans_TC,
-  Noto_Sans_Thai,
-  Noto_Serif_KR,
-  Noto_Serif_JP,
-  Noto_Serif_SC,
-  Noto_Serif_TC,
-} from 'next/font/google';
+import fontStylesheets from '@/data/font-stylesheets.json';
 
-/**
- * Public font payload — Cross-Strait Editorial Ledger.
- * Locale-gated: each page receives only the active sans + serif pair.
- * EN intentionally shares the KR pair for visual cohesion.
- *
- * Variable Noto files cover the public CSS weight matrix:
- * - sans 400/500/600/700 (body, UI, H2/H3, buttons; no public 300)
- * - serif 500/600/700 (closed display allowlist; no light faces)
- *
- * Guidance locales (vi/id/th/fil) add self-hosted Noto Sans Thai and
- * latin/Vietnamese Noto Sans; Arabic (ar, right-to-left) adds Noto Sans
- * Arabic paired with the same latin face for Latin names and numerals.
- * No extra runtime font CDN.
- */
-
-const sansKorean = Noto_Sans_KR({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-kr-loaded',
-});
-
-const serifKorean = Noto_Serif_KR({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-serif-kr-loaded',
-});
-
-const sansTraditionalChinese = Noto_Sans_TC({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-tc-loaded',
-});
-
-const serifTraditionalChinese = Noto_Serif_TC({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-serif-tc-loaded',
-});
-
-const sansSimplifiedChinese = Noto_Sans_SC({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-sc-loaded',
-});
-
-const serifSimplifiedChinese = Noto_Serif_SC({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-serif-sc-loaded',
-});
-
-const sansJapanese = Noto_Sans_JP({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-jp-loaded',
-});
-
-const serifJapanese = Noto_Serif_JP({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-serif-jp-loaded',
-});
-
-const sansThai = Noto_Sans_Thai({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-thai-loaded',
-});
-
-const sansArabic = Noto_Sans_Arabic({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-arabic-loaded',
-  subsets: ['arabic'],
-});
-
-const sansDevanagari = Noto_Sans_Devanagari({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-devanagari-loaded',
-  subsets: ['devanagari'],
-});
-
-const sansHebrew = Noto_Sans_Hebrew({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-hebrew-loaded',
-  subsets: ['hebrew'],
-});
-
-const sansBengali = Noto_Sans_Bengali({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-bengali-loaded',
-  subsets: ['bengali'],
-});
-
-const sansTamil = Noto_Sans_Tamil({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-tamil-loaded',
-  subsets: ['tamil'],
-});
-
-const sansMyanmar = Noto_Sans_Myanmar({
-  display: 'swap',
-  preload: false,
-  weight: ['400', '500', '700'],
-  variable: '--font-noto-sans-myanmar-loaded',
-  subsets: ['myanmar'],
-});
-
-const sansKhmer = Noto_Sans_Khmer({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-khmer-loaded',
-  subsets: ['khmer'],
-});
-
-const sansLatin = Noto_Sans({
-  display: 'swap',
-  preload: false,
-  weight: 'variable',
-  variable: '--font-noto-sans-latin-loaded',
-  // Greek joins the shared face for `el`; without it the page falls back to a
-  // system serif and the locale looks unstyled.
-  subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic', 'greek'],
-});
+// Same Noto faces, Unicode subsets and fallback metrics as the prior next/font
+// build. Standalone stylesheets let each page load only its active families.
+const sansKorean = { variable: '--font-noto-sans-kr-loaded' };
+const serifKorean = { variable: '--font-noto-serif-kr-loaded' };
+const sansTraditionalChinese = { variable: '--font-noto-sans-tc-loaded' };
+const serifTraditionalChinese = { variable: '--font-noto-serif-tc-loaded' };
+const sansSimplifiedChinese = { variable: '--font-noto-sans-sc-loaded' };
+const serifSimplifiedChinese = { variable: '--font-noto-serif-sc-loaded' };
+const sansJapanese = { variable: '--font-noto-sans-jp-loaded' };
+const serifJapanese = { variable: '--font-noto-serif-jp-loaded' };
+const sansThai = { variable: '--font-noto-sans-thai-loaded' };
+const sansArabic = { variable: '--font-noto-sans-arabic-loaded' };
+const sansDevanagari = { variable: '--font-noto-sans-devanagari-loaded' };
+const sansHebrew = { variable: '--font-noto-sans-hebrew-loaded' };
+const sansBengali = { variable: '--font-noto-sans-bengali-loaded' };
+const sansTamil = { variable: '--font-noto-sans-tamil-loaded' };
+const sansMyanmar = { variable: '--font-noto-sans-myanmar-loaded' };
+const sansKhmer = { variable: '--font-noto-sans-khmer-loaded' };
+const sansLatin = { variable: '--font-noto-sans-latin-loaded' };
 
 export type DocumentLanguage =
   | 'ko'
@@ -333,4 +191,9 @@ export function getManagedLocaleFontClassNames(): string[] {
       ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
     ),
   );
+}
+
+/** Content-hashed, self-hosted stylesheets for this page's script only. */
+export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
+  return getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
 }

@@ -52,7 +52,7 @@ import {
   getOrganizationName,
 } from '@/lib/seo';
 import type { Locale, SiteLocale } from '@/lib/locales';
-import type { ColumnPost } from '@/lib/columns';
+import type { ColumnListItem } from '@/components/ColumnsGrid';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import InternationalInquiryForm from '@/components/InternationalInquiryForm';
 import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
@@ -385,7 +385,7 @@ export function ColumnsLegacyPageBody({
   visibleBlockIds,
 }: {
   locale: SiteLocale;
-  posts: ColumnPost[];
+  posts: ColumnListItem[];
   searchParams?: ColumnsSearchParams;
   visibleBlockIds?: string[];
 }) {

@@ -6,7 +6,16 @@ import type { BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
 import type { ColumnPost } from '@/lib/columns';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import HeroSearch from '@/components/HeroSearch';
+import EditSurface from '../EditSurface';
 import CompositeRender, { compositeFallbackCopy } from '../Render';
+
+// renderToStaticMarkup does not wait for lazy editor imports. Exercise the
+// real editing surface synchronously here; the browser smoke covers loading.
+vi.mock('next/dynamic', () => ({
+  default: () => function SynchronousEditorSurface(props: React.ComponentProps<typeof EditSurface>) {
+    return <EditSurface {...props} />;
+  },
+}));
 
 vi.mock('next/navigation', () => ({
   usePathname: () => '/ko/faq',

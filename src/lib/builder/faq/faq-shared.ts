@@ -135,3 +135,22 @@ export function sortFaqItems(items: BuilderFaqItem[], sortBy: FaqSortBy = 'manua
     || a.question.localeCompare(b.question),
   );
 }
+
+export function slugifyFaqQuestion(question: string): string {
+  const slug = question
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    // Recompose Hangul only; preserve established Japanese/other seed anchors.
+    .replace(/[\u1100-\u11ff]+/g, (syllable) => syllable.normalize('NFC'))
+    .toLowerCase()
+    .replace(/[^a-z0-9가-힣一-龥ぁ-んァ-ン]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80);
+  if (slug) return slug;
+  // Non-letter questions still need the same anchor on independent requests.
+  let hash = 2166136261;
+  for (const character of question.normalize('NFKC')) {
+    hash = Math.imul(hash ^ character.codePointAt(0)!, 16777619);
+  }
+  return `faq-${(hash >>> 0).toString(36)}`;
+}

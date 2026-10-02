@@ -23,7 +23,12 @@ export default function SearchOverlay({
   locale: Locale;
 }) {
   const content = siteContent[locale].search;
-  const [activeTab, setActiveTab] = useState(content.tabs[0].id);
+  const tabs = useMemo(() => [
+    { id: 'all', label: locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : 'All' },
+    { id: 'page', label: locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : 'Pages' },
+    ...content.tabs.filter(tab => tab.id === 'insights' || tab.id === 'faq'),
+  ], [content.tabs, locale]);
+  const [activeTab, setActiveTab] = useState('all');
   const [query, setQuery] = useState('');
   const tabPanelId = `${locale}-search-overlay-panel`;
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -32,19 +37,21 @@ export default function SearchOverlay({
   const closedByNavigationRef = useRef(false);
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const index = useMemo(() => getSearchIndex(locale), [locale]);
-  const activeCategory = activeTab as SearchCategory;
+  const activeCategory = activeTab === 'all' || activeTab === 'page' ? undefined : activeTab as SearchCategory;
   const results = useMemo(
-    () => filterSearchIndex(index, query, activeCategory).slice(0, 6),
-    [index, query, activeCategory]
+    () => filterSearchIndex(index, query, activeCategory)
+      .filter(item => activeTab !== 'page' || item.category === 'services' || item.category === 'videos')
+      .slice(0, 6),
+    [index, query, activeCategory, activeTab]
   );
 
   useEffect(() => {
     if (!open) return;
     closedByNavigationRef.current = false;
     openerRef.current = resolvePublishedOverlayOpener();
-    setActiveTab(content.tabs[0].id);
+    setActiveTab('all');
     setQuery('');
-  }, [open, content.tabs]);
+  }, [open]);
 
   usePublishedOverlayFocus({
     open,
@@ -90,19 +97,19 @@ export default function SearchOverlay({
   const handleTabKeyDown = useCallback((event: ReactKeyboardEvent<HTMLButtonElement>, index: number) => {
     let nextIndex: number | null = null;
     if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-      nextIndex = (index + 1) % content.tabs.length;
+      nextIndex = (index + 1) % tabs.length;
     } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-      nextIndex = (index - 1 + content.tabs.length) % content.tabs.length;
+      nextIndex = (index - 1 + tabs.length) % tabs.length;
     } else if (event.key === 'Home') {
       nextIndex = 0;
     } else if (event.key === 'End') {
-      nextIndex = content.tabs.length - 1;
+      nextIndex = tabs.length - 1;
     }
 
     if (nextIndex === null) return;
     event.preventDefault();
-    activateTab(content.tabs[nextIndex].id, true);
-  }, [activateTab, content.tabs]);
+    activateTab(tabs[nextIndex].id, true);
+  }, [activateTab, tabs]);
 
   if (!open) return null;
 
@@ -112,7 +119,7 @@ export default function SearchOverlay({
   const tabListLabel = locale === 'ko' ? '검색 카테고리' : locale === 'zh-hant' ? '搜尋分類' : 'Search categories';
   const suggestionItems = content.suggestions.length ? content.suggestions : siteContent[locale].hero.keywords;
   const tabLabel =
-    content.tabs.find((tab) => tab.id === activeTab)?.label ?? content.tabs[0]?.label ?? '';
+    tabs.find((tab) => tab.id === activeTab)?.label ?? tabs[0]?.label ?? '';
 
   const overlay = (
     <div
@@ -160,7 +167,7 @@ export default function SearchOverlay({
           </button>
         </form>
         <div className="search-tabs" role="tablist" aria-label={tabListLabel}>
-          {content.tabs.map((tab, index) => (
+          {tabs.map((tab, index) => (
             <button
               key={tab.id}
               id={`${locale}-search-overlay-tab-${tab.id}`}

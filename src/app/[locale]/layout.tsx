@@ -16,6 +16,7 @@ import LocaleSuggestion from '@/components/LocaleSuggestion';
 import { publicColumnSwitcherData } from '@/lib/column-language-links';
 import {
   getLocaleFontClassName,
+  getLocaleFontStylesheets,
   getManagedLocaleFontClassNames,
   type DocumentLanguage,
 } from '@/app/fonts';
@@ -134,6 +135,7 @@ export default async function LocaleLayout(
         <DocumentLocaleSync
           language={language}
           fontClassName={getLocaleFontClassName(language)}
+          fontStylesheets={getLocaleFontStylesheets(language)}
           managedFontClassNames={getManagedLocaleFontClassNames()}
         />
         <CinematicRouteShell
@@ -159,6 +161,7 @@ export default async function LocaleLayout(
       <DocumentLocaleSync
         language={language}
         fontClassName={getLocaleFontClassName(language)}
+        fontStylesheets={getLocaleFontStylesheets(language)}
         managedFontClassNames={getManagedLocaleFontClassNames()}
       />
       <JsonLd data={buildWebsiteJsonLd(locale)} />

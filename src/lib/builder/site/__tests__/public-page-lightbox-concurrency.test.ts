@@ -25,8 +25,8 @@ vi.mock('next/navigation', () => ({
   useSearchParams: () => new URLSearchParams(),
 }));
 
-vi.mock('@/lib/builder/components/registry', () => ({
-  getComponent: vi.fn(),
+vi.mock('@/lib/builder/components/public-registry', () => ({
+  getPublicComponent: vi.fn(),
 }));
 
 vi.mock('@/lib/builder/site/persistence', () => ({

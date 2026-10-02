@@ -27423,3 +27423,121 @@ html[lang='zh-Hant'] body {
   overflow: visible;
 }
 
+/* 3 · Chrome drawn by global classes. The search overlay is portaled to <body>, so it is scoped by html[lang]. */
+html[lang='zh-Hant'] .search-overlay {
+  background: rgb(0 0 0 / 40%);
+}
+html[lang='zh-Hant'] .search-panel {
+  border: 1px solid #e3e3e8;
+  border-radius: 18px;
+  box-shadow: 0 24px 64px rgb(0 0 0 / 18%);
+}
+html[lang='zh-Hant'] .search-bar {
+  border-color: #86868b;
+  box-shadow: none;
+}
+html[lang='zh-Hant'] .search-bar:focus-within {
+  border-color: #16382d;
+  box-shadow: 0 0 0 3px rgb(22 56 45 / 14%);
+}
+html[lang='zh-Hant'] .search-input {
+  caret-color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-tabs button,
+html[lang='zh-Hant'] .search-tabs a {
+  border-color: #e3e3e8;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-tabs .active {
+  border-color: #1d1d1f;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-tabs button:hover,
+html[lang='zh-Hant'] .search-tabs button:focus-visible,
+html[lang='zh-Hant'] .search-tabs a:hover,
+html[lang='zh-Hant'] .search-tabs a:focus-visible {
+  border-color: #1d1d1f;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .chip {
+  border-color: #e3e3e8;
+  border-radius: 999px;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .chip:hover,
+html[lang='zh-Hant'] .chip:focus-visible {
+  border-color: #d2d2d7;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-panel .section-label::before {
+  content: none;
+}
+html[lang='zh-Hant'] .search-panel .section-label {
+  color: #6e6e73;
+}
+
+/* Native clear button of every search field: an iOS-style filled disc with a cut-out x, 24px target,
+   #6e6e73 (5.07:1 on white); white 72% on the dark hero. A mask, so forced colours repaint it below. */
+html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 6px;
+  cursor: pointer;
+  background-color: #6e6e73;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cmask id='m'%3E%3Crect width='24' height='24' fill='white'/%3E%3Cpath d='M8.75 8.75l6.5 6.5M15.25 8.75l-6.5 6.5' stroke='black' stroke-width='1.9' stroke-linecap='round'/%3E%3C/mask%3E%3Ccircle cx='12' cy='12' r='10.5' fill='black' mask='url(%23m)'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cmask id='m'%3E%3Crect width='24' height='24' fill='white'/%3E%3Cpath d='M8.75 8.75l6.5 6.5M15.25 8.75l-6.5 6.5' stroke='black' stroke-width='1.9' stroke-linecap='round'/%3E%3C/mask%3E%3Ccircle cx='12' cy='12' r='10.5' fill='black' mask='url(%23m)'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+}
+html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button:hover {
+  background-color: #1d1d1f;
+}
+html[lang='zh-Hant'] .hero input[type='search']::-webkit-search-cancel-button {
+  background-color: rgb(255 255 255 / 72%);
+}
+html[lang='zh-Hant'] .hero input[type='search']::-webkit-search-cancel-button:hover {
+  background-color: #fff;
+}
+@media (forced-colors: active) {
+  html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button {
+    forced-color-adjust: none;
+    background-color: currentColor;
+  }
+}
+
+/* Mega panels: white with a hairline, links #1d1d1f, chevrons #86868b (decorative; the link text names it). */
+.site[data-locale='zh-hant'] .mega-panel {
+  background: #fff;
+  border-bottom-color: #e3e3e8;
+}
+.site[data-locale='zh-hant'] .mega-title {
+  color: #1d1d1f;
+}
+.site[data-locale='zh-hant'] .mega-links li {
+  border-color: #e3e3e8;
+}
+.site[data-locale='zh-hant'] .mega-links a {
+  color: #1d1d1f;
+}
+.site[data-locale='zh-hant'] .mega-chevron {
+  display: inline-flex;
+  color: #86868b;
+}
+.site[data-locale='zh-hant'] .mega-links a:hover .mega-chevron,
+.site[data-locale='zh-hant'] .mega-links a:focus-visible .mega-chevron {
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-panel header .icon-button {
+  min-height: 44px;
+  padding-inline: 1rem;
+  border-color: #e3e3e8;
+  border-radius: 999px;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-panel header .icon-button:hover,
+html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
+  border-color: #d2d2d7;
+  background: #f5f5f7;
+}

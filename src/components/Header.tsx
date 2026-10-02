@@ -17,6 +17,7 @@ import {
 import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import SearchOverlay from '@/components/SearchOverlay';
 import MobileNavDrawer from '@/components/MobileNavDrawer';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import SmartLink from '@/components/SmartLink';
 import styles from './PublicChrome.module.css';
 import { installResponsiveHeaderFocus } from './responsive-header-focus';
@@ -461,6 +462,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
 export default function Header({ locale }: { locale: PublicLocale8 }) {
   const content = publicSiteContent(locale);
   const isGuidance = isGuidanceLocale4(locale);
+  // zh-hant draws its header glyphs from the monoline set; other locales keep the markup below.
+  const zhIcons = locale === 'zh-hant';
   const chromeLocale = chromeSiteLocale(locale);
   const guidanceSearch = guidanceSearchLink(locale);
   const brandText =
@@ -1052,10 +1055,14 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
                 onClick={(event) => openSearchFromHeader(event.currentTarget)}
                 aria-label={searchLabel}
               >
-                <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
-                  <circle cx="11" cy="11" r="7.2" />
-                  <line x1="16.5" y1="16.5" x2="21" y2="21" />
-                </svg>
+                {zhIcons ? (
+                  <ZhHantMonoIcon name="search" size={20} />
+                ) : (
+                  <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
+                    <circle cx="11" cy="11" r="7.2" />
+                    <line x1="16.5" y1="16.5" x2="21" y2="21" />
+                  </svg>
+                )}
               </button>
             )}
             <Link className="button nav-cta" href={content.nav.cta.href}>
@@ -1070,11 +1077,15 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
               aria-expanded={drawerOpen}
               aria-controls="public-mobile-nav-drawer"
             >
-              <svg className={styles.menuIcon} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <line x1="4" y1="7" x2="20" y2="7" />
-                <line x1="4" y1="12" x2="20" y2="12" />
-                <line x1="4" y1="17" x2="20" y2="17" />
-              </svg>
+              {zhIcons ? (
+                <ZhHantMonoIcon name="menu" size={24} />
+              ) : (
+                <svg className={styles.menuIcon} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <line x1="4" y1="7" x2="20" y2="7" />
+                  <line x1="4" y1="12" x2="20" y2="12" />
+                  <line x1="4" y1="17" x2="20" y2="17" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -1117,7 +1128,11 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
                     <li key={`${panel.key}-${link.href}`}>
                       <SmartLink href={link.href}>
                         <span>{link.label}</span>
-                        <span className="mega-chevron">›</span>
+                        {zhIcons ? (
+                          <span className="mega-chevron" aria-hidden="true"><ZhHantMonoIcon name="chevron-right" size={12} strokePx={1.5} /></span>
+                        ) : (
+                          <span className="mega-chevron">›</span>
+                        )}
                       </SmartLink>
                     </li>
                   ))}

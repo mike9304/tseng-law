@@ -8,6 +8,7 @@ import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
 import { publicSiteContent } from '@/lib/public-site-chrome';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
 import { isSiteLocale } from '@/lib/locales';
 
@@ -190,7 +191,7 @@ export default function MobileNavDrawer({
             )}
           </Link>
           <button className={`icon-button ${styles.drawerClose}`} type="button" onClick={onClose} aria-label={closeLabel} ref={closeButtonRef}>
-            ×
+            {locale === 'zh-hant' ? <ZhHantMonoIcon name="close" size={20} /> : '×'}
           </button>
         </div>
         <div className="drawer-utilities">

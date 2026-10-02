@@ -267,3 +267,25 @@
 html[dir='rtl'] .currentLabel {
   letter-spacing: 0;
 }
+
+/* =====================================================================================================
+   zh-hant · neutral panel and monoline icons (2026-10-02). The panel is portaled to <body>, outside
+   .site, so the scope is html[lang='zh-Hant']. Colours that come from tokens already follow the zh token
+   layer in globals.css; these are the literals and shapes. Glyphs are ZhHantMonoIcon (zh-hant branch).
+   ===================================================================================================== */
+:global(html[lang='zh-Hant']) .overlay { background: rgb(0 0 0 / 40%); }
+:global(html[lang='zh-Hant']) .close {
+  border-radius: 999px;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+:global(html[lang='zh-Hant']) .close:hover,
+:global(html[lang='zh-Hant']) .close:focus-visible { background: #e8e8ed; }
+:global(html[lang='zh-Hant']) .item[aria-current='page'] {
+  background: #f5f5f7;
+  box-shadow: none;
+}
+:global(html[lang='zh-Hant']) .badge {
+  background: #fff;
+  color: #6e6e73;
+}

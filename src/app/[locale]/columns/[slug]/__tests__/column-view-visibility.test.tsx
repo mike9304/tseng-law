@@ -9,6 +9,7 @@ vi.mock('@/lib/consultation/columns-blob-reader', () => ({
     date: '2026-10-02', dateDisplay: '2026年10月2日', readTime: '', category: 'legal', categoryLabel: '',
     featuredImage: '', summary: 'Public summary', content: '## HIDDEN_HEADING\n\nHIDDEN_BODY',
     faq: [{ q: 'HIDDEN_FAQ_QUESTION', a: 'HIDDEN_FAQ_ANSWER' }],
+    diagramVideo: { id: 'stop-dialogue-timeline', afterHeading: 'HIDDEN_HEADING' },
   }],
 }));
 vi.mock('@/lib/builder/dynamic-template-drafts', () => ({
@@ -30,6 +31,8 @@ describe('traffic column view publication visibility', () => {
     expect(JSON.stringify(data)).not.toContain('HIDDEN_');
     expect(data.tocEntries).toEqual([]);
     expect(data.faqItems).toEqual([]);
+    expect(data.diagramVideo).toBeNull();
+    expect(data.diagramSplit).toBeNull();
     expect(data.faqJsonLd).toBeNull();
     expect(data.articleJsonLd).toEqual({});
     expect(data.breadcrumbJsonLd).toEqual({});
@@ -38,6 +41,7 @@ describe('traffic column view publication visibility', () => {
   it('keeps explicitly published FAQ schema while withholding hidden body fields', async () => {
     const data = await props(false, true);
     expect(data.post.content).toBe('');
+    expect(data.diagramVideo).toBeNull();
     expect(data.tocEntries).toEqual([]);
     expect(data.faqItems).toEqual([]);
     expect(JSON.stringify(data.faqJsonLd)).toContain('HIDDEN_FAQ_QUESTION');
@@ -46,7 +50,8 @@ describe('traffic column view publication visibility', () => {
 
   it('renders published body and FAQ without sending disabled schemas', async () => {
     const data = await props(true, false);
-    expect(data.post.content).toContain('HIDDEN_BODY');
+    expect(data.diagramSplit?.join('\n')).toContain('HIDDEN_BODY');
+    expect(data.diagramVideo).toEqual({ id: 'stop-dialogue-timeline', locale: 'zh-hant' });
     expect(data.tocEntries[0].text).toBe('HIDDEN_HEADING');
     expect(data.faqItems[0].q).toBe('HIDDEN_FAQ_QUESTION');
     expect(data.faqJsonLd).toBeNull();

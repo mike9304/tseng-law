@@ -7,6 +7,7 @@ import { TW_DOORING_DIAGRAM } from './tw-dooring-diagram';
 import { TW_STARTING_ENTRY_DIAGRAM } from './tw-starting-entry-diagram';
 import { TW_CHAIN_COLLISION_DIAGRAM } from './tw-chain-collision-diagram';
 import { TW_BUS_BRAKING_DIAGRAM } from './tw-bus-braking-diagram';
+import { TW_STOP_DIALOGUE_DIAGRAM } from './tw-stop-dialogue-diagram';
 
 /**
  * Animated Blender diagrams for the traffic-accident pages.
@@ -30,6 +31,7 @@ export type TrafficDiagramCopy = {
   caption: string;
   assumption: string;
   videoDescription?: string;
+  longDescription?: { label: string; paragraphs: readonly string[] };
   stages?: { label: string; alts: readonly string[] };
 };
 
@@ -61,6 +63,7 @@ export const TRAFFIC_DIAGRAMS = {
   'starting-entry-hypothetical': TW_STARTING_ENTRY_DIAGRAM,
   'chain-collision-hypothetical': TW_CHAIN_COLLISION_DIAGRAM,
   'bus-braking-hypothetical': TW_BUS_BRAKING_DIAGRAM,
+  'stop-dialogue-timeline': TW_STOP_DIALOGUE_DIAGRAM,
   'passing-hypothetical': {
     kind: 'video',
     id: 'passing-hypothetical',

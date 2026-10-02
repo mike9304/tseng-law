@@ -41,6 +41,8 @@
 .stages { margin-top: 16px; color: #294f3e; }
 .stages summary { cursor: pointer; text-underline-offset: 4px; text-decoration: underline; }
 .stages summary:focus-visible { outline: 3px solid #a47b25; outline-offset: 5px; }
+.longDescription { font-size: 16px; line-height: 1.9; color: #233e36; }
+.longDescription p { margin: 14px 0; }
 .stageList { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 24px; }
 .stageList img { display: block; width: 100%; height: auto; }
 .stageList p { margin: 8px 0 0; font-size: 14px; line-height: 1.8; }

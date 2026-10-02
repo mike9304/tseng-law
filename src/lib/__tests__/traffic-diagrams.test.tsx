@@ -38,7 +38,8 @@ describe('animated traffic diagrams', () => {
       if (diagram.kind === 'still') {
         for (const src of [diagram.poster, diagram.mobilePoster]) {
           const bytes = fs.readFileSync(publicFile(src));
-          expect(bytes.length, src).toBeLessThan(120 * 1024);
+          // Lossless document timelines retain legible text in a tall mobile image.
+          expect(bytes.length, src).toBeLessThan((diagram.id === 'stop-dialogue-timeline' ? 300 : 120) * 1024);
           expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
         }
         continue;
@@ -78,6 +79,12 @@ describe('animated traffic diagrams', () => {
   it('labels every locale as a hypothetical example', () => {
     const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
+      if (diagram.id === 'stop-dialogue-timeline') {
+        expect(diagram.kind).toBe('still');
+        expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
+        expect(diagram.copy['zh-hant']?.assumption).toContain('本文未取得原始CCTV或逐字錄音');
+        continue;
+      }
       if (diagram.id === 'bus-braking-hypothetical') {
         expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
         expect(diagram.copy['zh-hant']?.assumption).toBe('概念示意，非本案重建');

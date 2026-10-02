@@ -53,7 +53,7 @@ const proxy = http.createServer((request, response) => {
 await new Promise((resolve) => proxy.listen(0, '127.0.0.1', resolve));
 const base = `http://127.0.0.1:${proxy.address().port}`;
 const check = (ok, message) => { if (!ok) throw new Error(message); };
-const slugs = ['taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability'];
+const slugs = ['taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
 try {
   for (const [engine, launcher] of [['chromium', chromium], ['firefox', firefox]]) {
     const browser = await launcher.launch({ headless: true });
@@ -107,7 +107,10 @@ try {
         check(await page.locator('[data-traffic-diagram] img').first().isVisible(), 'server poster');
         await page.locator('[data-traffic-diagram] summary').click();
         check(await page.locator('[data-traffic-diagram] details').getAttribute('open') !== null, 'native stages without JavaScript');
-        check(await page.locator('[data-traffic-diagram-stages] img').count() === 4, 'four server stages');
+        if (slug === 'taiwan-accident-stop-dialogue-hit-and-run-evidence') {
+          check(await page.locator('[data-traffic-diagram-description]').isVisible(), 'static timeline full text without JavaScript');
+          check(await page.locator('[data-traffic-diagram] video').count() === 0, 'no empty video player');
+        } else check(await page.locator('[data-traffic-diagram-stages] img').count() === 4, 'four server stages');
         row.pass = true;
       } catch (error) { row.error = String(error); }
       results.push(row); console.log(JSON.stringify(row)); await context.close();

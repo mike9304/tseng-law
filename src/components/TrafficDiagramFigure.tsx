@@ -51,7 +51,12 @@ export default function TrafficDiagramFigure({
     >
       <div className={diagram.kind === 'still' ? styles.stillFrame : styles.frame} style={aspectRatios}>
         {diagram.kind === 'still' ? (
-          <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" />
+          diagram.mobilePoster !== diagram.poster ? (
+            <picture>
+              <source media={TRAFFIC_DIAGRAM_MOBILE_QUERY} srcSet={diagram.mobilePoster} width={diagram.mobileWidth} height={diagram.mobileHeight} />
+              <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" unoptimized />
+            </picture>
+          ) : <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" />
         ) : <VideoPlayer
           mp4Src={diagram.mp4}
           webmSrc={diagram.webm}
@@ -81,6 +86,14 @@ export default function TrafficDiagramFigure({
           </a>
         ) : null}
       </figcaption>
+      {copy.longDescription ? (
+        <details className={styles.stages} data-traffic-diagram-description>
+          <summary>{copy.longDescription.label}</summary>
+          <div className={styles.longDescription}>
+            {copy.longDescription.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+          </div>
+        </details>
+      ) : null}
       {diagram.stills && copy.stages ? (
         <details className={styles.stages} data-traffic-diagram-stages>
           <summary>{copy.stages.label}</summary>

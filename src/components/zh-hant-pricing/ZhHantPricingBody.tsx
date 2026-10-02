@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import PricingCards, { getPricingContent } from '@/components/PricingCards';
 import { pageCopy } from '@/data/page-copy';
 import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
@@ -40,7 +41,7 @@ export default function ZhHantPricingBody() {
             {data.ctaLabel}
           </a>
           {/* Secondary header link (spec: existing links only) — the header nav's own 聯絡方式 entry. */}
-          <Link href="/zh-hant/contact" className={styles.headerLink}>聯絡方式<span aria-hidden> ›</span></Link>
+          <Link href="/zh-hant/contact" className={styles.headerLink}>聯絡方式<ZhHantMonoIcon name="chevron-right" size={14} strokePx={1.75} className={styles.trail} /></Link>
         </div>
       </PageHeader>
       <PricingCards locale="zh-hant" />

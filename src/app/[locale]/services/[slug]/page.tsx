@@ -46,6 +46,7 @@ import { EN_SERVICE_EXTRA_COLUMNS } from '@/components/en-design/en-design-data'
 import { getPricingContent } from '@/components/PricingCards';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
 import { typesetTitle } from '@/lib/ko-middot';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 
 export const dynamic = 'force-dynamic';
 
@@ -353,8 +354,8 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                   <a href={getConsultationPublicMailto(locale)} className={`button ${zhStyles.heroCta}`}>{t.contactBtn} <span aria-hidden>↗</span></a>
                   {attorney ? <Link href={`/${locale}/lawyers/${attorney.slug}`} className={zhStyles.byline}>{attorney.name} · {attorney.role}</Link> : null}
                   <nav className={zhStyles.contents} aria-label={t.breadcrumbServices}>
-                    {showBody && points.length > 0 ? <a href="#service-keypoints">{t.keyPointsLabel} <span aria-hidden>↓</span></a> : null}
-                    {showBody && columns.length > 0 ? <a href="#service-columns">{t.columnsLabel} <span aria-hidden>↓</span></a> : null}
+                    {showBody && points.length > 0 ? <a href="#service-keypoints">{t.keyPointsLabel}<ZhHantMonoIcon name="arrow-down" size={16} strokePx={1.5} /></a> : null}
+                    {showBody && columns.length > 0 ? <a href="#service-columns">{t.columnsLabel}<ZhHantMonoIcon name="arrow-down" size={16} strokePx={1.5} /></a> : null}
                   </nav>
                 </div>
                 <div className={zhStyles.heroImage}>

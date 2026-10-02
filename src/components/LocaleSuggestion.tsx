@@ -65,7 +65,8 @@ export default function LocaleSuggestion({ locale }: { locale: string }) {
   // client-side navigation.
   useEffect(() => {
     if (!target) return;
-    const hero = document.getElementById('hero');
+    // Pages without #hero can mark the end of their first screen with data-locale-hint-after.
+    const hero = document.getElementById('hero') ?? document.querySelector<HTMLElement>('[data-locale-hint-after]');
     const site = document.querySelector<HTMLElement>('.site[data-cinematic-intro-visible]');
     let heroInView = Boolean(hero);
     const update = () => {

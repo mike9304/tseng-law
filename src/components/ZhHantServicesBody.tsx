@@ -22,7 +22,8 @@ export default function ZhHantServicesBody({ showHero, showRepeater }: { showHer
           <div className={styles.heroVisual}>
             <Image src="/images/editorial/taichung-courthouse-civic-daylight-v2.webp" alt="" width={960} height={640} sizes="(max-width: 767px) 100vw, 42vw" priority />
           </div>
-          <div className={styles.heroActions}>
+          {/* The practice chip bar sits at the foot of the first screen; the language hint waits until this row has scrolled away. */}
+          <div className={styles.heroActions} data-locale-hint-after="">
             <a href={getConsultationPublicMailto('zh-hant')} className="button">申請電子郵件諮詢 <span aria-hidden>↗</span></a>
             {attorney ? <Link href={`/zh-hant/lawyers/${attorney.slug}`}>{attorney.name} · {attorney.role}</Link> : null}
           </div>

@@ -60,7 +60,9 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
     ...heroOverrides,
     'section-label': '昊鼎國際法律事務所',
     headline: '先聽您說完，\n再談怎麼做。',
-    subtitle: '車禍、離婚、繼承、勞資爭議與刑事案件，請先來信簡述案情，律師看過後回信。',
+    // U+200B after each 、 and ， gives Safari explicit break points: with keep-all it otherwise treats the
+    // run as one word and breaks it anywhere (「請先來／信」 at 390). Chromium already breaks there.
+    subtitle: '車禍、\u200b離婚、\u200b繼承、\u200b勞資爭議與刑事案件，\u200b請先來信簡述案情，\u200b律師看過後回信。',
   };
   return (
     <div className={styles.home} id="zh-hant-home" data-zh-hant-design="home">

@@ -43,7 +43,7 @@
 .profile :global(#faq),
 .profile :global(.section--gray[data-faq-layout='split']) { background: var(--en-mist); border-top: 3px solid var(--en-ink); }
 .profile :global([data-faq-layout='split'] h2) { font-family: var(--en-sans) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
-.profile :global([data-faq-layout='split'] button) { font-family: var(--en-sans); font-size: 17px; font-weight: 700; color: var(--en-ink); }
+.profile :global([data-faq-layout='split'] button) { font-family: var(--en-sans); }
 .profile :global([data-faq-layout='split']) :focus-visible { outline: 3px solid var(--en-ink); outline-offset: 2px; }
 
 @media (max-width: 1000px) {

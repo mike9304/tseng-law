@@ -12,7 +12,7 @@ import { landingContent } from '@/app/[locale]/korean-lawyer-in-taiwan/content';
 const root = process.cwd();
 const pagePaths = [
   'src/app/[locale]/services/[slug]/page.tsx',
-  'src/app/[locale]/columns/[slug]/page.tsx',
+  'src/app/[locale]/columns/[slug]/ColumnDetailView.tsx',
   'src/app/[locale]/lawyers/[slug]/page.tsx',
   'src/app/[locale]/korean-lawyer-in-taiwan/page.tsx',
   'src/app/[locale]/guides/taiwan-company-setup/page.tsx',

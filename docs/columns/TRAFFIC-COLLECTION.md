@@ -47,3 +47,5 @@ tags: ["traffic-accidents", "traffic-liability"]
 서버 실행 후 `BOARD_BASE=http://127.0.0.1:3000 node scripts/verify-traffic-board.mjs`로 Chromium·WebKit·Firefox, 모바일 390px·320px, 접근성, 원래 글 링크, 관련글, 빈 검색, 필터 해제, 뒤로가기, JavaScript 없는 검색을 확인한다. 브라우저가 설치되어 있어야 한다. 결과는 `.omo/evidence/traffic-board/`에 저장된다. 이 스크립트도 현재 발행 수(zh-hant 11, ko 4, en 4, ja 3)를 검증하므로 새 글을 게시할 때 함께 갱신한다. 실제 Safari/iOS 기기나 스크린리더 검증을 대신하지 않는다.
 
 프로덕션 빌드 서버에서 `TRAFFIC_HYDRATION_BASE=http://127.0.0.1:3000 node scripts/verify-traffic-hydration.mjs`도 실행한다. 이 로컬 전용 검사는 HTML을 변경하지 않고 작은 조각으로 전달하여 느린 스트리밍 중 초기 로드·새로고침·필터·빈 검색·뒤로가기·해제와 JavaScript 없는 목록을 확인한다. 원격 사이트의 스크립트 가로채기나 오류 무시는 사용하지 않는다. `TrafficPageView`는 서버에서 읽은 공개 목록 데이터를 받아 서버와 브라우저 양쪽에서 같은 화면을 렌더링한다. 서버 목록·구조화 데이터와 JavaScript 없는 검색을 유지해야 한다.
+
+교통 글 페이지를 수정할 때는 `ARTICLE_HYDRATION_BASE=http://127.0.0.1:3000 node scripts/verify-traffic-article-hydration.mjs`로077/078의느린초기로딩·새로고침·허브/뒤로가기와no-JS본문/단계/구조화데이터를검사한다. CMS템플릿에서숨긴본문/FAQ/목차나비활성SEO데이터가클라이언트props에실리지않아야하며 `column-view-visibility.test.tsx`로공개조건을검증한다.

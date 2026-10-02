@@ -5,7 +5,7 @@ import * as ts from 'typescript';
 
 const css = readFileSync(path.join(process.cwd(), 'src/app/globals.css'), 'utf8');
 const columnPage = readFileSync(
-  path.join(process.cwd(), 'src/app/[locale]/columns/[slug]/page.tsx'),
+  path.join(process.cwd(), 'src/app/[locale]/columns/[slug]/ColumnDetailView.tsx'),
   'utf8',
 );
 

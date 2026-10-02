@@ -73,7 +73,7 @@ describe('audience frontmatter recommendations', () => {
     const ko = getAllColumnPosts('ko');
     expect(prioritizeRecommendedColumns('ko', [...ko].reverse())[0]?.slug).toBe(expertiseSlugsFor('ko').at(-1));
     expect(prioritizeRecommendedColumns('zh-hant', [...getAllColumnPosts('zh-hant')].reverse())[0]?.slug)
-      .toBe(expertiseSlugsFor('zh-hant').at(-1));
+      .toBe('taiwan-bus-sudden-braking-passenger-carrier-liability');
   });
 
   it('puts own-audience columns before shared ones, each newest first', () => {

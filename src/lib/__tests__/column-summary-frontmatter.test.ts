@@ -192,7 +192,8 @@ describe('English column corpus summaries', () => {
         if (
           /^(019|020|021|022|023|024|025|026|027|028|029|030|031)-/.test(name) ||
           isNativeLocaleColumnFile(name) ||
-          isExpertiseColumnFile20260930(name)
+          isExpertiseColumnFile20260930(name) ||
+          (relativeDir === 'src/content/columns-zh' && /^(076|077|078)-/.test(name))
         ) {
           expect(matter(raw).data.summary, `${relativeDir}/${name}`).toBeTruthy();
         } else {

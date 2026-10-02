@@ -1,14 +1,10 @@
-import type { CSSProperties } from 'react';
+import ColumnDetailView, { type ColumnDetailViewProps } from './ColumnDetailView';
+import TrafficColumnView from './TrafficColumnView';
 import type { Metadata } from 'next';
 import { trafficHubCopy } from '@/data/traffic-hub';
 import { resolveTrafficSubject } from '@/lib/traffic-collection';
 import { isTrafficDiagramId, isTrafficDiagramLocale, splitColumnContentAfterHeading } from '@/data/traffic-diagrams';
-import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
-import AiAuthorBox from '@/components/AiAuthorBox';
-import RecommendedForYou from '@/components/RecommendedForYou';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
 import {
   AI_COLUMN_ATTORNEY_HEADING,
@@ -21,36 +17,19 @@ import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { getAllColumnPosts, getColumnPost, getColumnPublicationDate, parseColumnPublicationDate } from '@/lib/columns';
 import { columnAlternateLocales } from '@/lib/column-language-links';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
-import ColumnContent from '@/components/ColumnContent';
-import ColumnToc from '@/components/ColumnToc';
 import { extractColumnToc } from '@/lib/column-toc';
-import JsonLd from '@/components/JsonLd';
 import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
 } from '@/lib/builder/dynamic-template-drafts';
-import {
-  CONSULTATION_EMAIL,
-  getConsultationPublicMailto,
-} from '@/lib/consultation/public-contact';
 import { resolveTypography } from '@/lib/builder/columns/typography';
 import type { ColumnTypography } from '@/lib/builder/columns/types';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
-import styles from './ColumnDetail.module.css';
-import zhStyles from './ZhHantColumnDetail.module.css';
-import jaStyles from './JaColumnDetail.module.css';
-import JaPageShell from '@/components/ja-design/JaPageShell';
-import enStyles from './EnColumnDetail.module.css';
-import EnPageShell from '@/components/en-design/EnPageShell';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
-import { typesetTitle } from '@/lib/ko-middot';
 
 export const dynamic = 'force-dynamic';
-
-/** Show "In this article" only when a column has at least this many level-2 sections. */
-const MIN_TOC_SECTIONS = 3;
 
 const copy: Record<SiteLocale, {
   backLabel: string;
@@ -317,237 +296,76 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         : undefined),
   );
 
-  const content = (
-    <>
-      {showSeo ? (
-        <>
-          <JsonLd
-            data={buildBreadcrumbJsonLd(locale, [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
-              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights', path: `/${urlLocale}/columns` },
-              { name: post.title, path: `/${urlLocale}/columns/${post.slug}` },
-            ])}
-          />
-          <JsonLd
-            data={buildArticleJsonLd({
-              locale: urlLocale,
-              title: post.title,
-              description: post.summary,
-              path: `/${urlLocale}/columns/${post.slug}`,
-              image: post.featuredImage,
-              datePublished: post.publicationDate || post.date,
-              dateModified: post.date,
-              authorName: aiAuthor ? aiAuthor.label : authorName,
-              authorUrl: authorHref,
-              authorEntity: aiAuthored ? buildAiAuthorJsonLd(urlLocale) : undefined,
-              authorSameAs: [
-                'https://www.hoveringlaw.com.tw/en/wei.html',
-                'https://www.wei-wei-lawyer.com/lawyertseng',
-                'https://www.youtube.com/@weilawyer',
-                'https://blog.naver.com/wei_lawyer/223461663913',
-              ],
-              authorAlternateNames: ['증준외', '曾雋崴', 'Wei Tseng'],
-              articleSection: post.categoryLabel,
-            })}
-          />
-        </>
-      ) : null}
-      {showSeo && faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
-      {showHero ? (
-        <section className={`blog-hero ${styles.hero}${urlLocale === 'vi' && post.featuredImageCaption ? ` ${styles.imageFocusedHero}` : ''}`} data-tone="dark">
-          <div className="blog-hero-bg">
-            {/* Blurred copy fills the frame so the contained photo never sits in flat letterbox bars
-                (contain keeps text-bearing thumbnails uncropped). */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={post.featuredImage} alt="" aria-hidden="true" className={styles.heroBackdrop} />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={post.featuredImage} alt={post.featuredImageAlt || post.title} aria-describedby={post.featuredImageCaption ? 'column-image-caption' : undefined} className="blog-hero-img" />
-            <div className="blog-hero-overlay" />
-          </div>
-          <div className="container blog-hero-inner">
-            <Link href={`/${urlLocale}/columns`} className="blog-back-link">{t.backLabel}</Link>
-            {urlLocale in trafficHubCopy && isTrafficColumn ? (
-              <Link href={`/${urlLocale}/traffic-accidents#articles`} className="blog-back-link" style={{ marginInlineStart: '1.5rem' }}>
-                {trafficHubCopy[urlLocale as keyof typeof trafficHubCopy].nav} →
-              </Link>
-            ) : null}
-            <span className="blog-category-badge">{post.categoryLabel}</span>
-            <h1 className="blog-hero-title">{typesetTitle(locale, post.title)}</h1>
-            <div className="blog-meta">
-              {aiAuthor ? (
-                <span data-column-byline="ai">{aiAuthor.label}</span>
-              ) : (
-                <Link href={authorHref} className="link-underline">
-                  {authorName}
-                </Link>
-              )}
-              <time>{post.dateDisplay || post.date}</time>
-              {showTrafficUpdate ? (
-                <time dateTime={modifiedDate} data-column-updated>
-                  {{ ko: '수정', 'zh-hant': '更新', en: 'Updated', ja: '更新' }[urlLocale as keyof typeof trafficHubCopy]} {modifiedDate}
-                </time>
-              ) : null}
-              {post.readTime ? <span>{post.readTime}</span> : null}
-            </div>
-          </div>
-        </section>
-      ) : null}
-
-      {showHero && post.featuredImageCaption ? (
-        <div className="container">
-          <p id="column-image-caption" className={styles.imageCaption} data-column-image-caption>{post.featuredImageCaption}</p>
-        </div>
-      ) : null}
-
-      {showBody ? (
-        <article className={`blog-article ${styles.article}`}>
-          <div className="container blog-container">
-            <div
-              className={`blog-body ${typography.className}`}
-              data-column-typography={typography.presetId}
-              style={typography.cssVars as CSSProperties}
-            >
-              {tocEntries.length >= MIN_TOC_SECTIONS ? (
-                <ColumnToc entries={tocEntries} label={t.tocLabel} />
-              ) : null}
-              {diagramVideo && diagramSplit ? (
-                <>
-                  <ColumnContent content={diagramSplit[0]} locale={locale} />
-                  <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
-                  <ColumnContent
-                    content={diagramSplit[1]}
-                    locale={locale}
-                    sectionIdOffset={extractColumnToc(diagramSplit[0]).length}
-                  />
-                </>
-              ) : (
-                <>
-                  {diagramVideo ? (
-                    <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
-                  ) : null}
-                  <ColumnContent content={post.content} locale={locale} />
-                </>
-              )}
-              {showBody && showFaq ? (
-                <section className="column-faq" aria-label={t.faqHeading}>
-                  <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>
-                  <dl className="column-faq-list">
-                    {faqItems.map((item, index) => (
-                      <div className="column-faq-item" key={`${index}-${item.q}`}>
-                        <dt className="column-faq-question">{item.q}</dt>
-                        <dd className="column-faq-answer">{item.a}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </section>
-              ) : null}
-              {aiAuthored ? <AiAuthorBox locale={urlLocale} /> : null}
-              <RecommendedForYou
-                locale={urlLocale}
-                hrefBase={`/${urlLocale}/columns`}
-                items={recommendedItems}
-                currentSlug={post.slug}
-                currentTopic={post.topic}
-                preserveOrder={isTrafficColumn}
-              />
-            </div>
-            <aside className="blog-sidebar">
-              <div className="blog-sidebar-card">
-                <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
-                <p className="blog-sidebar-text">{t.consultationText}</p>
-                <a
-                  href={getConsultationPublicMailto(locale)}
-                  className="button blog-sidebar-btn"
-                  aria-label={`${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
-                >
-                  {t.consultationButton}
-                </a>
-              </div>
-              <div className="blog-sidebar-card blog-sidebar-card--attorney">
-                <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
-              </div>
-              <div className="blog-sidebar-card">
-                <h3 className="blog-sidebar-title">{t.guideTitle}</h3>
-                <ul className="blog-related-list">
-                  {guideLinks.map((item) => (
-                    <li key={item.href}>
-                      <Link href={item.href} className="blog-related-link">
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </aside>
-          </div>
-        </article>
-      ) : null}
-
-      {/* Prev / Next Navigation */}
-      {showBody && (prevPost || nextPost) && (
-        <nav className={`container column-post-nav ${styles.postNav}`} style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'stretch',
-          gap: '1rem',
-          padding: '2rem 1rem',
-          maxWidth: 900,
-          margin: '0 auto 2rem',
-        }}>
-          {prevPost ? (
-            <Link
-              href={`/${urlLocale}/columns/${prevPost.slug}`}
-              style={{
-                flex: 1,
-                padding: '1rem 1.25rem',
-                borderRadius: 8,
-                border: '1px solid #e5e7eb',
-                textDecoration: 'none',
-                color: '#1f2937',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.25rem',
-                transition: 'border-color 0.15s',
-              }}
-            >
-              <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{prevLabel}</span>
-              <span style={{ fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.4 }}>{prevPost.title}</span>
-            </Link>
-          ) : <span style={{ flex: 1 }} />}
-          {nextPost ? (
-            <Link
-              href={`/${urlLocale}/columns/${nextPost.slug}`}
-              style={{
-                flex: 1,
-                padding: '1rem 1.25rem',
-                borderRadius: 8,
-                border: '1px solid #e5e7eb',
-                textDecoration: 'none',
-                color: '#1f2937',
-                textAlign: 'right',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-end',
-                gap: '0.25rem',
-                transition: 'border-color 0.15s',
-              }}
-            >
-              <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{nextLabel}</span>
-              <span style={{ fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.4 }}>{nextPost.title}</span>
-            </Link>
-          ) : <span style={{ flex: 1 }} />}
-        </nav>
-      )}
-    </>
-  );
-  // ja design (Opus 5.5 ja lane): same article inside the ja wrapper (paper header, framed photo plate).
-  if (locale === 'ja') return <JaPageShell page="column" className={jaStyles.root}>{content}</JaPageShell>;
-  // zh-hant second pass (son7-87 / Opus 5.5): same article inside a scoped wrapper for the split hero and sidebar styling.
-  if (locale === 'zh-hant') {
-    return <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="column">{content}</div>;
-  }
-  // en redesign (Opus 5.5 en lane): same article inside the scoped en wrapper (only the /en/ route, not guidance locales).
-  return urlLocale === 'en'
-    ? <EnPageShell page="column"><div className={`${enStyles.detail} en-column`}>{content}</div></EnPageShell>
-    : content;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
+    { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights', path: `/${urlLocale}/columns` },
+    { name: post.title, path: `/${urlLocale}/columns/${post.slug}` },
+  ]);
+  const articleJsonLd = buildArticleJsonLd({
+    locale: urlLocale,
+    title: post.title,
+    description: post.summary,
+    path: `/${urlLocale}/columns/${post.slug}`,
+    image: post.featuredImage,
+    datePublished: post.publicationDate || post.date,
+    dateModified: post.date,
+    authorName: aiAuthor ? aiAuthor.label : authorName,
+    authorUrl: authorHref,
+    authorEntity: aiAuthored ? buildAiAuthorJsonLd(urlLocale) : undefined,
+    authorSameAs: [
+      'https://www.hoveringlaw.com.tw/en/wei.html',
+      'https://www.wei-wei-lawyer.com/lawyertseng',
+      'https://www.youtube.com/@weilawyer',
+      'https://blog.naver.com/wei_lawyer/223461663913',
+    ],
+    authorAlternateNames: ['증준외', '曾雋崴', 'Wei Tseng'],
+    articleSection: post.categoryLabel,
+  });
+  const viewProps: ColumnDetailViewProps = {
+    locale,
+    urlLocale,
+    post: {
+      slug: post.slug,
+      title: post.title,
+      categoryLabel: post.categoryLabel,
+      featuredImage: post.featuredImage,
+      featuredImageAlt: post.featuredImageAlt,
+      featuredImageCaption: post.featuredImageCaption,
+      dateDisplay: post.dateDisplay,
+      date: post.date,
+      readTime: post.readTime,
+      content: showBody && !diagramSplit ? post.content : '',
+      topic: post.topic,
+    },
+    prevPost: showBody && prevPost ? { slug: prevPost.slug, title: prevPost.title } : null,
+    nextPost: showBody && nextPost ? { slug: nextPost.slug, title: nextPost.title } : null,
+    t,
+    tocEntries: showBody ? tocEntries : [],
+    diagramVideo: showBody ? diagramVideo : null,
+    diagramSplit: showBody ? diagramSplit : null,
+    authorName,
+    authorHref,
+    aiAuthored,
+    aiAuthor: aiAuthor ? { label: aiAuthor.label } : null,
+    attorneyHeading,
+    guideLinks: showBody ? guideLinks : [],
+    recommendedItems: showBody ? recommendedItems : [],
+    isTrafficColumn,
+    showTrafficUpdate,
+    modifiedDate,
+    prevLabel,
+    nextLabel,
+    faqItems: showBody ? faqItems : [],
+    showFaq,
+    faqJsonLd: showSeo ? faqJsonLd : null,
+    breadcrumbJsonLd: showSeo ? breadcrumbJsonLd : {},
+    articleJsonLd: showSeo ? articleJsonLd : {},
+    showHero,
+    showBody,
+    showSeo,
+    typography,
+  };
+  // Traffic columns hydrate a synchronous view from complete public data, while
+  // retaining server HTML and leaving other columns on the server-view path.
+  return isTrafficColumn ? <TrafficColumnView {...viewProps} /> : <ColumnDetailView {...viewProps} />;
 }

@@ -152,7 +152,8 @@ describe('Japanese column locale integrity', () => {
     expect(detailSource).toContain('const authorProfilePath = getAttorneyProfilePath(locale);');
     expect(detailSource).toContain('buildBreadcrumbJsonLd(locale,');
     expect(detailSource).toContain('const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;');
-    expect(detailSource).toContain('href={getConsultationPublicMailto(locale)}');
+    const viewSource = readFileSync(new URL('../../app/[locale]/columns/[slug]/ColumnDetailView.tsx', import.meta.url), 'utf8');
+    expect(viewSource).toContain('href={getConsultationPublicMailto(locale)}');
     expect(detailSource).toContain("locale === 'ja' ? 'ホーム' : 'Home'");
     expect(detailSource).not.toContain('const linkLocale');
     expect(detailSource).not.toContain('getAttorneyProfilePath(toBuilderLocale(locale))');

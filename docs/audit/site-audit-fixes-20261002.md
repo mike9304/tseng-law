@@ -3,6 +3,8 @@
 Scope: findings from the production audit of tseng-law.com. Work started from
 `28e23176e` in an isolated worktree; the unrelated dirty primary worktree was not
 modified. Codex performs the final review under the user's 2026-10-01 instruction.
+The fix branch was rebased onto `5c4ce6677`, preserving the newly published
+Chinese repair-cost column and its tests.
 
 ## Changes
 
@@ -14,7 +16,7 @@ modified. Codex performs the final review under the user's 2026-10-01 instructio
 - Korean FAQ seed anchors are stable across requests and unique in the current
   corpus. Punctuation-only questions use a deterministic fallback. Stored slugs
   and established Japanese seed anchors retain their existing addresses.
-- All 405 guidance subpages (45 languages × 9 pages) have Open Graph and Twitter
+- All 405 guidance pages (45 languages × 9 pages) have Open Graph and Twitter
   images. Existing canonical, language-alternate and robots rules are preserved.
 - Column counts and English home highlight text meet the checked contrast rules.
 - The client navigation/footer use a 60KB projection of the approximately 1.9MB
@@ -34,6 +36,8 @@ modified. Codex performs the final review under the user's 2026-10-01 instructio
 Evidence directory on Mac Studio: `/Users/son7/tseng-law-audits/2026-10-02/`.
 
 - Clean production build, lint/type validation and whitespace checks passed.
+- All 405 guidance URLs returned HTTP 200 with both social-image meta tags in
+  their actual HTML (`fixes-metadata.json`).
 - Renderer suites: 166 files, 1,557 tests passed. Font/remediation suites: 396
   tests passed. Final search/FAQ/metadata/projection/registry suite: 69 passed.
 - The full unit run passed 13,605 tests. Its 12 failures were investigated:
@@ -60,6 +64,30 @@ the broad smoke expects the retired `hero-search-bar overlap` home markup;
 composite surface click is intercepted by its selected canvas wrapper. These
 are not claimed fixed by the public-site audit changes. Temporary probes and
 their traces are retained in the evidence directory, not added as passing tests.
+
+## Mobile performance comparison
+
+Single paired localhost runs, same mobile configuration, Lighthouse 12.6.1
+with actual DevTools network/CPU throttling rather than Lantern estimates:
+
+| Page | Score before → after | LCP before → after | TBT before → after |
+|---|---|---|---|
+| Home | 43 → 59 | 5.421s → 3.815s | 706ms → 507ms |
+| Contact | 53 → 73 | 5.630s → 3.839s | 343ms → 151ms |
+
+CLS remained unchanged. CSS and JavaScript transfers fell from approximately
+1.73MB to 1.03MB (697,612 bytes, 40%). Contact total transfer fell from 3,064,049
+to 2,365,369 bytes. Home video transfer finished at different points, so its
+total-byte comparison is not treated as exact.
+
+Both final runs emitted Lighthouse's maximum-load-time warning, without runtime
+errors; paint was at about 3.8s and document load at 15–17s. An unfinished metrics
+request was present, but the warning's sole cause is not established. Scores
+remain below 90 and are not a claim that every performance opportunity is solved.
+The original Lantern localhost estimates inverted despite lower observed render
+times, because different font requests completed before the first paint; those
+simulated scores are retained in evidence but not used to claim an improvement.
+See `devtools-comparison.json` and the four `devtools-*.report.{json,html}` files.
 
 ## Public copy review
 

@@ -78,6 +78,14 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '061': '2026-10-01',
   '062': '2026-10-01',
   '051': '2026-10-01', // Korean-first traffic column (left turn vs straight motorcycle)
+  // Expertise columns 063–069 (2026-10-02 weekday routine).
+  '063': '2026-10-02',
+  '064': '2026-10-02',
+  '065': '2026-10-02',
+  '066': '2026-10-02',
+  '067': '2026-10-02',
+  '068': '2026-10-02',
+  '069': '2026-10-02',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

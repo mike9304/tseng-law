@@ -143,6 +143,45 @@ export const EXPERTISE_COLUMN_FILES_20261001 = {
  * (zh-hant only, no Korean twin): inheritance renunciation, public insult / defamation
  * complaints, unpaid overtime pay. Same day as 052–059, so they join the same-day helpers.
  */
+
+/**
+ * Expertise columns 063–069 (2026-10-02 weekday routine). Locale-specific like 052–059.
+ * KO+EN+ZH-Hant for all seven; JA for 066 FX remittance and 067 company responsible person.
+ */
+export const EXPERTISE_COLUMN_FILES_20261002 = {
+  ko: [
+    '063-taiwan-gift-tax-foreigners.md',
+    '064-taiwan-warning-account-foreigners.md',
+    '065-taiwan-rental-deposit-foreign-tenant.md',
+    '066-taiwan-fx-remittance-declaration.md',
+    '067-taiwan-company-responsible-person-liability.md',
+    '068-taiwan-child-support-enforcement-cross-border.md',
+    '069-taiwan-labor-mediation-foreign-employee.md',
+  ],
+  en: [
+    '063-taiwan-gift-tax-foreigners.md',
+    '064-taiwan-warning-account-foreigners.md',
+    '065-taiwan-rental-deposit-foreign-tenant.md',
+    '066-taiwan-fx-remittance-declaration.md',
+    '067-taiwan-company-responsible-person-liability.md',
+    '068-taiwan-child-support-enforcement-cross-border.md',
+    '069-taiwan-labor-mediation-foreign-employee.md',
+  ],
+  ja: [
+    '066-taiwan-fx-remittance-declaration.md',
+    '067-taiwan-company-responsible-person-liability.md',
+  ],
+  'zh-hant': [
+    '063-taiwan-gift-tax-foreigners.md',
+    '064-taiwan-warning-account-foreigners.md',
+    '065-taiwan-rental-deposit-foreign-tenant.md',
+    '066-taiwan-fx-remittance-declaration.md',
+    '067-taiwan-company-responsible-person-liability.md',
+    '068-taiwan-child-support-enforcement-cross-border.md',
+    '069-taiwan-labor-mediation-foreign-employee.md',
+  ],
+} as const;
+
 export const DOMESTIC_ZH_COLUMN_FILES_20261001 = {
   'zh-hant': [
     '060-taiwan-inheritance-renunciation-debt.md',
@@ -159,6 +198,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERTISE_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -179,18 +219,25 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const newest: readonly string[] = [
+    ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const newer: readonly string[] = [
     ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERTISE_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   // Same calendar day → source (filename) order, matching sortColumnPostsNewestFirst.
+  const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  return [...newerSlugs, ...expertiseSlugsFor(locale).filter((slug) => !newerSlugs.includes(slug))];
+  const head = [...newestSlugs, ...newerSlugs];
+  return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
 /** Publication date of an archive-lead slug: 2026-10-01 for the newer column(s), otherwise 2026-09-30. */
 export function archiveLeadPublicationDate(slug: string): string {
+  const newest = Object.values(EXPERTISE_COLUMN_FILES_20261002).flat().map(slugOf);
+  if (newest.includes(slug)) return '2026-10-02';
   const newer = [
     ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
     ...Object.values(EXPERTISE_COLUMN_FILES_20261001),
@@ -224,6 +271,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
     ...Object.values(EXPERTISE_COLUMN_FILES_20261001),
     ...Object.values(DOMESTIC_ZH_COLUMN_FILES_20261001),
+    ...Object.values(EXPERTISE_COLUMN_FILES_20261002),
   ].flat().map(slugOf),
 );
 

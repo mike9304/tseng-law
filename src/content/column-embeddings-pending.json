@@ -337,6 +337,90 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-unpaid-overtime-pay"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-gift-tax-foreigners"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-warning-account-foreigners"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-rental-deposit-foreign-tenant"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-fx-remittance-declaration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-company-responsible-person-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-child-support-enforcement-cross-border"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-labor-mediation-foreign-employee"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-gift-tax-foreigners"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-warning-account-foreigners"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-rental-deposit-foreign-tenant"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-fx-remittance-declaration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-company-responsible-person-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-child-support-enforcement-cross-border"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-labor-mediation-foreign-employee"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-gift-tax-foreigners"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-warning-account-foreigners"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-rental-deposit-foreign-tenant"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-fx-remittance-declaration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-company-responsible-person-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-child-support-enforcement-cross-border"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-labor-mediation-foreign-employee"
     }
   ]
 }

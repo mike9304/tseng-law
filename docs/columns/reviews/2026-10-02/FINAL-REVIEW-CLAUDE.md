@@ -21,3 +21,6 @@ See SELF-CHECK.md. Especially: gift-tax brackets for the gift year; warning-acco
 
 ## Overall
 **PASS — deploy**
+
+---
+Note (2026-10-02, later): the above was a self-check because the Claude run returned empty output. It is superseded by the actual Claude Code (opus) final review in `REVIEW-063-069-claude-2026-10-02.md`, which found and fixed multiple issues before PASS.

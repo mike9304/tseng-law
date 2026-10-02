@@ -201,11 +201,12 @@ describe('sitemap column lastModified', () => {
       // 2026-10-01 traffic column 051 ships in ko, zh-hant and en and adds 3 URLs.
       // 2026-10-01 expertise columns 052-059 add 24 URLs (ko 6, en 8, ja 3, zh-hant 7).
       // 2026-10-01 zh-hant-only domestic columns 060-062 add 3 URLs (zh-hant 3).
+      // 2026-10-02 expertise columns 063-069 add 23 URLs (ko 7, en 7, zh-hant 7, ja 2).
       beforeFiltering:
-        497 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        520 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        488 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        511 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });

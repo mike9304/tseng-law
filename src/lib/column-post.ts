@@ -24,6 +24,10 @@ export interface ColumnPost {
   authorName?: string;
   tags?: string[];
   featuredImage: string;
+  featuredImageAlt?: string;
+  featuredImageCaption?: string;
+  /** Optional social-share rendition of the same representative image. */
+  socialImage?: string;
   content: string;
   summary: string;
   /** Optional shorter title for <title>/og:title. Display/H1 title stays `title`. */

@@ -1,0 +1,108 @@
+{
+  "base_commit": "c792e855fa706b89d930d526381a614340ee1647",
+  "generation_tool": "OpenAI image generation tool (backend model not exposed)",
+  "articles": [
+    {
+      "locale": "vi",
+      "file": "src/content/columns-vi/070-taiwan-employer-broker-passport-arc-return.md",
+      "stem": "vi-passport-arc-return",
+      "alt": "Bàn tay người lao động sắp xếp hộ chiếu, thẻ cư trú và phong bì hồ sơ trên bàn tư vấn.",
+      "caption": "Hình minh họa do AI tạo, không phải ảnh khách hàng, giấy tờ hay vụ việc có thật.",
+      "assets": [
+        {
+          "path": "/images/columns/20261002/vi-passport-arc-return.webp",
+          "bytes": 115864,
+          "pixels": [
+            1600,
+            900
+          ],
+          "sha256": "9a2680299bcb25b3aa6e3181363f7d1c751444ffaf5efdf9e029a33db6fc0bad",
+          "library_file_id": "libfile_d690281f23bc819188e93b30bb4da8b0"
+        },
+        {
+          "path": "/images/columns/20261002/vi-passport-arc-return.jpg",
+          "bytes": 223680,
+          "pixels": [
+            1600,
+            900
+          ],
+          "sha256": "27d4d0a46ca7f3e1a98a56e7c55f30ae9c2faa856fdb61ece60e80e3c7d6105c",
+          "library_file_id": "libfile_4fa1dfc1a1848191bdd5f2db9170f09b"
+        }
+      ],
+      "approved_raw_sha256": "9340e02fe85b847cc7576f2359e8eb51639e5ab38e3550e65f2e13b3c902e04a",
+      "approved_body_sha256": "54ca1de4670a2851954c6fa78e926ec231bd2ae26bb189c80f2265d63c63670b",
+      "integrated_raw_sha256": "180e6fb6a3819696442b0e4ee717087d8884568cfcbc8350b0d287c5e9d6cf43",
+      "body_unchanged": true,
+      "slug": "taiwan-employer-broker-passport-arc-return"
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md",
+      "stem": "ja-taiwan-airport-tobacco",
+      "alt": "空港の検査台に置かれた手荷物と、無地の機器・箱・旅券が入ったトレー。",
+      "caption": "AI生成のイメージです。実在の書類や事例を写したものではなく、特定の製品や、その製品を台湾に持ち込めることを示すものでもありません。",
+      "assets": [
+        {
+          "path": "/images/columns/20261002/ja-taiwan-airport-tobacco.webp",
+          "bytes": 156640,
+          "pixels": [
+            1600,
+            900
+          ],
+          "sha256": "13980cbd2694d76687fb55f64d52fb3cc6cdf26a9b4dcc2f7c50a44b252d528b",
+          "library_file_id": "libfile_51b3cb8c78288191be9af8e2ad0547d7"
+        },
+        {
+          "path": "/images/columns/20261002/ja-taiwan-airport-tobacco.jpg",
+          "bytes": 263085,
+          "pixels": [
+            1600,
+            900
+          ],
+          "sha256": "0f4c87e3a9778bd006682137738cf8871b24d0845427db2d33a0b9de3987c6d2",
+          "library_file_id": "libfile_2714e12d2bf4819181c3ece18999a5fd"
+        }
+      ],
+      "approved_raw_sha256": "906f7a9d0f43a088611c64f73001d78fbea4813a45c9e69e41d03724912f414a",
+      "approved_body_sha256": "59bf1a73b9a0f83566f422c87a3b717b157946ff1250cd3fd980526c68da8a81",
+      "integrated_raw_sha256": "80f95ee76d2d8fd1d4bc5f3d751966fa6b13aba758d21f557c9889cd574ed5df",
+      "body_unchanged": true,
+      "slug": "taiwan-entry-japan-heated-tobacco-vapes-duty-free"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/072-taiwan-lane-change-side-rear-collision-liability.md",
+      "stem": "tseng-law-lane-change-hero-ai-20261002-1600x900",
+      "alt": "AI 情境示意：雨後市區道路上，銀色轎車亮起左方向燈，另一輛車在左側車道前方行駛，兩車之間可見白色虛線。",
+      "caption": "變換車道前的道路情境。AI 生成示意圖，非真實事故照片或證據，不代表個案肇事責任判斷。",
+      "assets": [
+        {
+          "path": "/images/columns/20261002/tseng-law-lane-change-hero-ai-20261002-1600x900.webp",
+          "bytes": 205812,
+          "pixels": [
+            1600,
+            900
+          ],
+          "sha256": "ffaafae63ac0b325797d399d02e6687bb78d1accad0d5870255a7f4f5e6008c2",
+          "library_file_id": "libfile_d8353b22bcac8191a4aeaac0d23c3e6b"
+        },
+        {
+          "path": "/images/columns/20261002/tseng-law-lane-change-hero-ai-20261002-1600x900.jpg",
+          "bytes": 352233,
+          "pixels": [
+            1600,
+            900
+          ],
+          "sha256": "3b8a9a9aa711f1ee2dd62b2841bcef1001cd79fafcdfcf18970fe17b2df0ccf3",
+          "transformation": "JPEG re-encoding only; same composition and dimensions"
+        }
+      ],
+      "approved_raw_sha256": "e7b8cdf6d424da7c9df086f945194a4c2df9ec38bbbbe2d6667c1a44e475ae03",
+      "approved_body_sha256": "b02681ade13d86772663e9803a75daa57ef23feb85116ef41b3d6651bb035f75",
+      "integrated_raw_sha256": "379c79760be5e55000a03f9c11bcd9cbf9868350cb320c1e969ea5e45aaa1035",
+      "body_unchanged": true,
+      "slug": "taiwan-lane-change-side-rear-collision-liability"
+    }
+  ]
+}

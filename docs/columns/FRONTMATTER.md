@@ -73,6 +73,26 @@ author: "legal-ai-assistant"
 ---
 ```
 
+## Representative image descriptions
+
+```yaml
+featured_image: "/images/columns/example.webp"
+featured_image_alt: "A concise description in the article's language."
+featured_image_caption: "Disclose generated illustrations and their limits here."
+social_image: "/images/columns/example.jpg"
+```
+
+These optional fields supply the hero and list image alt, a visible caption
+below the hero, and an alternate rendition for Open Graph and Twitter cards.
+The social rendition must show the same image. Its alt uses
+`featured_image_alt`. File-derived builder records retain these descriptions
+only while their representative image matches the file image; a different CMS
+image does not inherit an old caption or social rendition. Without these fields,
+existing rendering is preserved.
+Generated editorial images must not be described as actual client photos,
+evidence, or reconstructions of cited judgments. The caption is separate from
+any Blender diagram's hypothetical assumptions.
+
 ## `diagram_video` (animated traffic diagrams)
 
 ```yaml

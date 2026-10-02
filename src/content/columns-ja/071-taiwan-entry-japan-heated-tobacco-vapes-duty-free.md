@@ -7,7 +7,10 @@ date_display: "2026年10月2日"
 read_time: "約3分"
 categories: ["台湾法律情報"]
 topic: "other"
-featured_image: "/images/placeholder-article-hero.jpg"
+featured_image: "/images/columns/20261002/ja-taiwan-airport-tobacco.webp"
+featured_image_alt: "空港の検査台に置かれた手荷物と、無地の機器・箱・旅券が入ったトレー。"
+featured_image_caption: "AI生成のイメージです。実在の書類や事例を写したものではなく、特定の製品や、その製品を台湾に持ち込めることを示すものでもありません。"
+social_image: "/images/columns/20261002/ja-taiwan-airport-tobacco.jpg"
 audience: ["ja"]
 author: "legal-ai-assistant"
 ---

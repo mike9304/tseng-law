@@ -352,6 +352,14 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
         ...(post.aiAuthored ?? file.aiAuthored ? { aiAuthored: true } : {}),
         ...(post.columnNumber ?? file.columnNumber ? { columnNumber: post.columnNumber ?? file.columnNumber } : {}),
         ...(post.diagramVideo ?? file.diagramVideo ? { diagramVideo: post.diagramVideo ?? file.diagramVideo } : {}),
+        // File-derived builder records do not carry image descriptions. Only
+        // backfill when the image is identical; a CMS replacement must never
+        // inherit the old image's caption, alt or social rendition.
+        ...(post.featuredImage === file.featuredImage ? {
+          ...(post.featuredImageAlt ?? file.featuredImageAlt ? { featuredImageAlt: post.featuredImageAlt ?? file.featuredImageAlt } : {}),
+          ...(post.featuredImageCaption ?? file.featuredImageCaption ? { featuredImageCaption: post.featuredImageCaption ?? file.featuredImageCaption } : {}),
+          ...(post.socialImage ?? file.socialImage ? { socialImage: post.socialImage ?? file.socialImage } : {}),
+        } : {}),
       }
       : {};
     merged.push(faq || Object.keys(fileMeta).length ? { ...post, ...fileMeta, ...(faq ? { faq } : {}) } : post);

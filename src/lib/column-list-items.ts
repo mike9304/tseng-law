@@ -20,6 +20,7 @@ export function toColumnListItems(posts: readonly ColumnPost[]): ColumnListItem[
     authorName: post.authorName,
     tags: post.tags,
     featuredImage: post.featuredImage,
+    ...(post.featuredImageAlt ? { featuredImageAlt: post.featuredImageAlt } : {}),
     summary: post.summary,
     publicationDate: post.publicationDate,
     audience: post.audience,

@@ -5,10 +5,52 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
 import { expertiseSlugsFor } from '@/lib/__tests__/native-locale-columns';
+import { getColumnPost } from '@/lib/columns';
 
 describe('published column copies keep file-only recommendation metadata', () => {
   afterEach(() => {
     vi.unstubAllEnvs();
+  });
+
+  it.each([true, false])('backfills image descriptions only for the same image (same=%s)', async (sameImage) => {
+    const root = await mkdtemp(path.join(tmpdir(), 'tseng-column-image-'));
+    const slug = 'taiwan-lane-change-side-rear-collision-liability';
+    const file = getColumnPost(slug, 'zh-hant')!;
+    expect(file.featuredImageAlt).toBeTruthy();
+    try {
+      const localeDir = path.join(root, 'zh-hant');
+      await mkdir(localeDir, { recursive: true });
+      await writeFile(path.join(localeDir, `${slug}.published.json`), JSON.stringify({
+        version: 1, slug, locale: 'zh-hant', title: file.title,
+        summary: 'Published copy', bodyMarkdown: 'Published body', bodyHtml: '<p>Published body</p>',
+        linkedSlugs: {}, frontmatter: {
+          category: 'legal', featuredImage: sameImage ? file.featuredImage : '/images/different-cms-image.webp',
+          lastmod: '2026-10-02T00:00:00.000Z', dateDisplay: '2026年10月2日',
+          readTime: '1分鐘', tags: [], author: { name: 'Legal AI Assistant' },
+          attorneyReviewStatus: 'pending', freshness: 'fresh', blogCategory: 'general',
+        },
+        draft: false, revision: 1, updatedAt: '2026-10-02T00:00:00.000Z', updatedBy: 'image-backfill-test',
+      }));
+      vi.stubEnv('CONSULTATION_COLUMNS_DIR', root);
+      vi.stubEnv('BUILDER_COLUMNS_BACKEND', 'local');
+      vi.stubEnv('BLOB_READ_WRITE_TOKEN', '');
+      vi.stubEnv('BUILDER_USE_BLOB_IN_DEV', '');
+      vi.stubEnv('CONSULTATION_LOG_BACKEND', '');
+      vi.stubEnv('NODE_ENV', 'development');
+      const post = (await getAllColumnPostsIncludingBlob('zh-hant')).find(p => p.slug === slug)!;
+      expect(post.content).toBe('Published body');
+      if (sameImage) {
+        expect(post.featuredImageAlt).toBe(file.featuredImageAlt);
+        expect(post.featuredImageCaption).toBe(file.featuredImageCaption);
+        expect(post.socialImage).toBe(file.socialImage);
+      } else {
+        expect(post.featuredImageAlt).toBeUndefined();
+        expect(post.featuredImageCaption).toBeUndefined();
+        expect(post.socialImage).toBeUndefined();
+      }
+    } finally {
+      await rm(root, { recursive: true, force: true });
+    }
   });
 
   it('backfills audience, AI author and column number from the file copy', async () => {

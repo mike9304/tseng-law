@@ -115,7 +115,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
       description: post.summary,
       path: `/columns/${post.slug}`,
       keywords: [post.title, post.categoryLabel, 'Taiwan law'],
-      images: post.featuredImage,
+      images: post.featuredImageAlt ? { url: post.socialImage || post.featuredImage, alt: post.featuredImageAlt } : post.socialImage || post.featuredImage,
       type: 'article',
       noindex: false,
       alternateLocales: columnAlternateLocales(post.slug, params.locale),
@@ -154,7 +154,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
             ? '台湾法律'
             : 'Taiwan law',
     ],
-    images: post.featuredImage,
+    images: post.featuredImageAlt ? { url: post.socialImage || post.featuredImage, alt: post.featuredImageAlt } : post.socialImage || post.featuredImage,
     type: 'article',
     noindex: false,
     alternateLocales: columnAlternateLocales(post.slug, locale),
@@ -353,14 +353,14 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       ) : null}
       {showSeo && faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       {showHero ? (
-        <section className={`blog-hero ${styles.hero}`} data-tone="dark">
+        <section className={`blog-hero ${styles.hero}${urlLocale === 'vi' && post.featuredImageCaption ? ` ${styles.imageFocusedHero}` : ''}`} data-tone="dark">
           <div className="blog-hero-bg">
             {/* Blurred copy fills the frame so the contained photo never sits in flat letterbox bars
                 (contain keeps text-bearing thumbnails uncropped). */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={post.featuredImage} alt="" aria-hidden="true" className={styles.heroBackdrop} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={post.featuredImage} alt={post.title} className="blog-hero-img" />
+            <img src={post.featuredImage} alt={post.featuredImageAlt || post.title} aria-describedby={post.featuredImageCaption ? 'column-image-caption' : undefined} className="blog-hero-img" />
             <div className="blog-hero-overlay" />
           </div>
           <div className="container blog-hero-inner">
@@ -390,6 +390,12 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
             </div>
           </div>
         </section>
+      ) : null}
+
+      {showHero && post.featuredImageCaption ? (
+        <div className="container">
+          <p id="column-image-caption" className={styles.imageCaption} data-column-image-caption>{post.featuredImageCaption}</p>
+        </div>
       ) : null}
 
       {showBody ? (

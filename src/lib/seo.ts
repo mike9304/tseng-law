@@ -425,7 +425,7 @@ export function buildSeoMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: socialImages.map((image) => image.url),
+      images: socialImages.map((image) => image.alt ? { url: image.url, alt: image.alt } : image.url),
     },
     robots: noindex
       ? {

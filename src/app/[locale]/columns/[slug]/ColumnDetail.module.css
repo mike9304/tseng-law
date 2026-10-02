@@ -567,3 +567,38 @@
     margin-bottom: 0.55rem;
   }
 }
+.imageCaption {
+  margin: 0;
+  padding: 12px 0 0;
+  color: #62666b;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Opt-in Vietnamese photo header: keep the topic image clear of the title. */
+.hero.imageFocusedHero:global(.blog-hero) {
+  flex-direction: column;
+  align-items: stretch;
+  background: var(--purple-dark, #0d221a);
+}
+
+.imageFocusedHero :global(.blog-hero-inner) {
+  order: 1;
+  width: min(1200px, calc(100% - 2 * var(--page-gutter, 24px)));
+  padding: 36px 0 28px;
+}
+
+.imageFocusedHero :global(.blog-hero-bg) {
+  order: 2;
+  position: relative;
+  inset: auto;
+  width: min(1200px, calc(100% - 2 * var(--page-gutter, 24px)));
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 28px;
+}
+
+.imageFocusedHero :global(.blog-hero-overlay),
+.imageFocusedHero .heroBackdrop {
+  display: none;
+}

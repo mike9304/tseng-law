@@ -7,7 +7,10 @@ date_display: "2026年10月2日"
 read_time: "約5分鐘閱讀"
 categories: ["台灣車禍法律"]
 topic: "litigation"
-featured_image: "/images/placeholder-article-hero.jpg"
+featured_image: "/images/columns/20261002/tseng-law-lane-change-hero-ai-20261002-1600x900.webp"
+featured_image_alt: "AI 情境示意：雨後市區道路上，銀色轎車亮起左方向燈，另一輛車在左側車道前方行駛，兩車之間可見白色虛線。"
+featured_image_caption: "變換車道前的道路情境。AI 生成示意圖，非真實事故照片或證據，不代表個案肇事責任判斷。"
+social_image: "/images/columns/20261002/tseng-law-lane-change-hero-ai-20261002-1600x900.jpg"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 diagram: "lane-change-hypothetical"

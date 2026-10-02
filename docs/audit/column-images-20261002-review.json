@@ -1,0 +1,157 @@
+{
+  "initial_review": {
+    "verdict": "REVISE",
+    "scope": "Text-only review of the alt and caption strings for the three listed images. I did not inspect pixels, so I cannot confirm that the alt text matches the image content. Article bodies, legal articles and Blender captions were not reviewed and are not changed.",
+    "items": [
+      {
+        "locale": "vi",
+        "stem": "vi-passport-arc-return",
+        "verdict": "APPROVE",
+        "findings": [
+          "The alt text is grammatical and neutral. 'thẻ cư trú' is an acceptable plain rendering of ARC for this audience.",
+          "The caption clearly says the image is AI-generated and is not a real client, document or case. The scope of 'không phải ảnh ... có thật' reads naturally.",
+          "There is no bold, no invented experience, and no claim about evidence or legal outcome."
+        ],
+        "replacements": null
+      },
+      {
+        "locale": "ja",
+        "stem": "ja-taiwan-airport-tobacco",
+        "verdict": "REVISE",
+        "findings": [
+          {
+            "field": "alt",
+            "original": "空港の検査台に置かれた手荷物と、無地の機器・箱・旅券が入ったトレー。",
+            "issue": "None. The alt text is grammatical, and '無地の機器' correctly avoids naming a real product.",
+            "action": "keep"
+          },
+          {
+            "field": "caption",
+            "original": "AI生成のイメージです。実在の書類・事件や、台湾への持ち込みが認められた製品を示すものではありません。",
+            "issue": "'台湾への持ち込みが認められた製品を示すものではありません' can be read two ways. One reading is 'this does not show products that are permitted', which implies the devices shown are prohibited items. That would be a false description, because the devices are generic and unbranded, and the article's subject is a regulatory distinction. The intended meaning is that the image does not depict any specific product and does not indicate that any product may be brought into Taiwan. Separately, '事件' leans toward criminal or incident cases in Japanese. '事例' fits better for 'not a real case', but this is minor.",
+            "preserved": "The AI-generated disclosure, and the statements that the image is not a real document or case and does not indicate import permission.",
+            "replacement": "AI生成のイメージです。実在の書類や事例を写したものではなく、特定の製品や、その製品を台湾に持ち込めることを示すものでもありません。"
+          }
+        ]
+      },
+      {
+        "locale": "zh-hant",
+        "stem": "tseng-law-lane-change-hero-ai-20261002-1600x900",
+        "verdict": "APPROVE",
+        "findings": [
+          "The alt text is grammatical in Taiwanese usage (方向燈, 車道, 虛線). It describes the positions of the two vehicles without assigning fault. The 'AI 情境示意' prefix is a little redundant with the caption, but it is harmless and helps screen-reader users, so it is not material.",
+          "The caption separates three things: the image is an AI illustration, it is not a real accident photo or evidence, and it does not represent a liability determination for any individual case. This is accurate and appropriately limited.",
+          "Not rewritten, per the instruction to leave the supplied TW text alone unless there is a material problem."
+        ],
+        "replacements": null
+      }
+    ],
+    "cross_checks": {
+      "bold_or_strong_markup": "none found in any of the three alt or caption strings",
+      "ai_disclosure_present": "all three captions",
+      "false_evidence_or_approval_claims": "none, except the JA caption ambiguity described above",
+      "unverified": "Whether each alt text matches the actual pixels, for example 雨後, 銀色轎車, 左方向燈, 旅券, and the presence of the trays and envelopes."
+    }
+  },
+  "final_review": {
+    "verdict": "APPROVE",
+    "scope": "Text-only review of the final alt and caption strings for the three images. I did not inspect pixels, re-review article bodies, or verify hashes, byte counts or the body_unchanged flags. VI and TW strings were checked only for consistency with the prior approval.",
+    "items": [
+      {
+        "locale": "vi",
+        "stem": "vi-passport-arc-return",
+        "verdict": "APPROVE",
+        "findings": [
+          "The alt and caption match the text approved in the prior review. No new issues."
+        ]
+      },
+      {
+        "locale": "ja",
+        "stem": "ja-taiwan-airport-tobacco",
+        "verdict": "APPROVE",
+        "findings": [
+          "The caption matches the recommended replacement character for character.",
+          "The ambiguity is resolved. The caption no longer implies that the depicted devices are prohibited or permitted. It states three separate things: the image is AI-generated, it does not show a real document or case, and it does not depict a specific product or indicate that any product may be brought into Taiwan.",
+          "'事件' has been replaced with '事例'.",
+          "The alt text is unchanged from the version approved earlier."
+        ],
+        "preserved": "AI-generated disclosure; not a real document or case; no indication of import permission."
+      },
+      {
+        "locale": "zh-hant",
+        "stem": "tseng-law-lane-change-hero-ai-20261002-1600x900",
+        "verdict": "APPROVE",
+        "findings": [
+          "The alt and caption are consistent with the prior approval. The redundant 'AI 情境示意' prefix in the alt remains a non-material note."
+        ]
+      }
+    ],
+    "cross_checks": {
+      "bold_or_strong_markup": "none in any alt or caption string",
+      "ai_disclosure_present": "all three captions",
+      "false_evidence_or_approval_claims": "none",
+      "remaining_findings": "none material",
+      "unverified": "Whether the alt text matches the actual pixels (for example 雨後, 銀色轎車, 左方向燈, 旅券, trays, envelopes). This review also does not stand in for legal verification or publication approval."
+    }
+  },
+  "runs": [
+    {
+      "started_at": "2026-10-02T04:17:59.986629+00:00",
+      "finished_at": "2026-10-02T04:18:28.296806+00:00",
+      "exit_code": 0,
+      "requested_model_alias": "opus",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 2,
+          "outputTokens": 2741,
+          "cacheReadInputTokens": 535,
+          "cacheCreationInputTokens": 10285,
+          "webSearchRequests": 0,
+          "costUSD": 0.137215,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 1432,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "is_error": false,
+      "result_type": "success",
+      "num_turns": 1,
+      "auth_route": "existing claude.ai Max subscription confirmed before execution; no API key or extra usage enabled by this task",
+      "response_characters": 3471,
+      "response_sha256": "968c831f21634fb11e7431c167afb771b6f3ee69a577763e1d34cc696560ece7",
+      "permission_denials": []
+    },
+    {
+      "started_at": "2026-10-02T04:20:41.408089+00:00",
+      "finished_at": "2026-10-02T04:20:58.606617+00:00",
+      "exit_code": 0,
+      "requested_model_alias": "opus",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 2,
+          "outputTokens": 1102,
+          "cacheReadInputTokens": 2182,
+          "cacheCreationInputTokens": 9971,
+          "webSearchRequests": 0,
+          "costUSD": 0.10225240000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 348,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "is_error": false,
+      "result_type": "success",
+      "num_turns": 1,
+      "auth_route": "existing claude.ai Max subscription confirmed before execution; no API key or extra usage enabled by this task",
+      "response_characters": 2062,
+      "response_sha256": "186f184161c1af875d7c4548a3e974eb91429e2545cba8210f091284d1c38df6",
+      "permission_denials": []
+    }
+  ]
+}

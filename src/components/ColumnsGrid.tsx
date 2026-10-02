@@ -101,6 +101,7 @@ export interface ColumnListItem {
   authorName?: string;
   tags?: string[];
   featuredImage: string;
+  featuredImageAlt?: string;
   summary: string;
   publicationDate?: string;
   audience?: string[];
@@ -692,7 +693,7 @@ export default function ColumnsGrid({
   const renderCard = (post: ColumnListItem) => (
     <Link key={post.slug} href={`${listHref}/${post.slug}`} className="columns-card" data-column-topic={topicMode ? topicOf(post) : post.category}>
       <div className="columns-card-img">
-        <Image src={post.featuredImage} alt={post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+        <Image src={post.featuredImage} alt={post.featuredImageAlt || post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
         <div className="columns-card-image-overlay" />
         <div className="columns-card-image-meta">
           <span className="columns-category-badge columns-category-badge--image">{topicMode ? topicLabels[topicOf(post)] : post.categoryLabel}</span>

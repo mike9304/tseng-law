@@ -28,6 +28,16 @@ async function props(body: boolean, seo: boolean, slug = 'visibility-fixture') {
 }
 
 describe('traffic column view publication visibility', () => {
+  it('keeps the generated clip behind body visibility without removing the article', async () => {
+    const slug = 'taiwan-traffic-accident-procedure';
+    const hidden = await props(false, false, slug);
+    expect(renderToStaticMarkup(<ColumnDetailView {...hidden} urlLocale="ko" />)).not.toContain('data-column-generated-video');
+    const shown = await props(true, true, slug);
+    const html = renderToStaticMarkup(<ColumnDetailView {...shown} urlLocale="ko" />);
+    expect(html).toContain('data-column-generated-video="rear-end-simulation-v2-ko"');
+    expect(html).toContain('HIDDEN_BODY');
+    expect(html).toContain('data-traffic-diagram="stop-dialogue-timeline"');
+  });
   it('keeps the observation behind body visibility and on its reviewed language/article only', async () => {
     const slug = 'taiwan-right-turn-car-straight-motorcycle-evidence';
     const hidden = await props(false, false, slug);

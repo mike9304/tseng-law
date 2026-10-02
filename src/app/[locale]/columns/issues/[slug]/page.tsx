@@ -4,6 +4,7 @@ import Link from 'next/link';
 import AiAuthorBox from '@/components/AiAuthorBox';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import ColumnContent from '@/components/ColumnContent';
+import ColumnGeneratedVideo from '@/components/ColumnGeneratedVideo';
 import ColumnToc from '@/components/ColumnToc';
 import JsonLd from '@/components/JsonLd';
 import RecommendedForYou from '@/components/RecommendedForYou';
@@ -180,6 +181,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           <div className="blog-body">
             <p className={boardStyles.dateNote} data-issue-date-note>{t.dateNote}</p>
             {tocEntries.length >= MIN_TOC_SECTIONS ? <ColumnToc entries={tocEntries} label={t.tocLabel} /> : null}
+            <ColumnGeneratedVideo locale={locale} slug={post.slug} source="issue" />
             <ColumnContent content={post.content} locale={shell} />
             {faqItems.length > 0 ? (
               <section className="column-faq" aria-label={t.faqHeading}>

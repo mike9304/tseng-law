@@ -8,6 +8,7 @@ import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import AiAuthorBox from '@/components/AiAuthorBox';
 import RecommendedForYou from '@/components/RecommendedForYou';
 import ColumnContent from '@/components/ColumnContent';
+import ColumnGeneratedVideo from '@/components/ColumnGeneratedVideo';
 import ColumnToc from '@/components/ColumnToc';
 import { extractColumnToc, type ColumnTocEntry } from '@/lib/column-toc';
 import JsonLd from '@/components/JsonLd';
@@ -125,6 +126,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
               {visibleToc.length >= MIN_TOC_SECTIONS ? (
                 <ColumnToc entries={visibleToc} label={t.tocLabel} />
               ) : null}
+              <ColumnGeneratedVideo locale={urlLocale} slug={post.slug} />
               {diagramVideo && diagramSplit ? (
                 <>
                   <ColumnContent content={diagramSplit[0]} locale={locale} />

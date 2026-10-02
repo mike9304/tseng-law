@@ -17,6 +17,7 @@ import {
   isTrafficVideoDiagram,
   parseTrafficBoardQuery,
   resolveTrafficSubject,
+  toTrafficBoardItem,
   type TrafficBoardItem,
 } from '../traffic-collection';
 import { loadTrafficCollection, type TrafficCollectionSources } from '../traffic-collection-server';
@@ -147,6 +148,17 @@ describe('isTrafficVideoDiagram', () => {
     expect(isTrafficVideoDiagram('not-a-diagram')).toBe(false);
     expect(isTrafficVideoDiagram(undefined)).toBe(false);
     expect(isTrafficVideoDiagram('__proto__')).toBe(false);
+  });
+});
+
+describe('reviewed column videos in the traffic board', () => {
+  it('includes the native video in its reviewed language and source only', () => {
+    const article = post({ slug: 'taiwan-traffic-accident-procedure', tags: ['traffic-procedure'] });
+    expect(toTrafficBoardItem(article, 'ko', 'column')?.hasVideo).toBe(true);
+    expect(toTrafficBoardItem(article, 'en', 'column')?.hasVideo).toBe(false);
+    expect(toTrafficBoardItem(article, 'ko', 'issue')?.hasVideo).toBe(false);
+    const items = buildTrafficCollection('ko', { columns: [article], issues: [] });
+    expect(filterTrafficBoardItems(items, { q: '', subject: null, video: true })).toHaveLength(1);
   });
 });
 

@@ -21,6 +21,7 @@ import { normalizeColumnTags } from './column-tags';
 import type { SiteLocale } from './locales';
 import { TRAFFIC_PATH } from '@/data/traffic-hub';
 import { TRAFFIC_DIAGRAMS, isTrafficDiagramId, type TrafficDiagram } from '@/data/traffic-diagrams';
+import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 
 export const TRAFFIC_SUBJECTS = ['procedure', 'evidence', 'liability', 'compensation', 'general'] as const;
 export type TrafficSubject = (typeof TRAFFIC_SUBJECTS)[number];
@@ -132,7 +133,7 @@ export function toTrafficBoardItem(post: ColumnPost, locale: SiteLocale, source:
     readTime: post.readTime,
     image: safeImage(post.featuredImage),
     aiAuthored: isAiAuthoredColumn(post),
-    hasVideo: isTrafficVideoDiagram(post.diagramVideo?.id),
+    hasVideo: isTrafficVideoDiagram(post.diagramVideo?.id) || Boolean(getColumnGeneratedVideo(locale, post.slug, source)),
     ...(post.columnNumber !== undefined ? { columnNumber: post.columnNumber } : {}),
   };
 }

@@ -1,0 +1,28 @@
+.figure {
+  margin: 2rem 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.player {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 0.25rem;
+}
+
+.caption {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: inherit;
+  overflow-wrap: anywhere;
+}
+
+.title {
+  font-size: 1rem;
+}

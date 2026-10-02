@@ -24,6 +24,7 @@ import {
   resolvePublishedOverlayOpener,
   usePublishedOverlayFocus,
 } from '@/components/builder/published/overlayFocus';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './GlobalLanguagePicker.module.css';
 
 export type GlobalLanguagePickerProps = {
@@ -57,7 +58,9 @@ function resolvePickerInertRoot(): HTMLElement | null {
   return siteRoot instanceof HTMLElement ? siteRoot : null;
 }
 
-function GlobeIcon() {
+/** zh-hant draws the globe, check and close from the monoline set; other locales keep the glyphs below. */
+function GlobeIcon({ zh }: { zh: boolean }) {
+  if (zh) return <ZhHantMonoIcon name="globe" size={20} />;
   return (
     <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden>
       <circle cx="12" cy="12" r="9" />
@@ -67,7 +70,8 @@ function GlobeIcon() {
   );
 }
 
-function CheckIcon() {
+function CheckIcon({ zh }: { zh: boolean }) {
+  if (zh) return <ZhHantMonoIcon name="check" size={14} strokePx={1.75} />;
   return (
     <svg className={styles.check} viewBox="0 0 16 16" aria-hidden>
       <polyline points="2.5 8.5 6.2 12.2 13.5 3.8" />
@@ -94,6 +98,7 @@ export function GlobalLanguagePickerView({
   onClose: () => void;
 }) {
   const copy = LANGUAGE_PICKER_COPY[locale];
+  const zhIcons = locale === 'zh-hant';
   const titleId = useId();
   const currentAutonym =
     PUBLIC_LANGUAGE_REGISTRY.find((entry) => entry.locale === locale)?.autonym ?? locale;
@@ -221,7 +226,7 @@ export function GlobalLanguagePickerView({
             onClick={handleClose}
             aria-label={copy.close}
           >
-            ×
+            {zhIcons ? <ZhHantMonoIcon name="close" size={20} /> : '×'}
           </button>
         </div>
         <div className={styles.regions}>
@@ -259,7 +264,7 @@ export function GlobalLanguagePickerView({
                         onClick={handleClose}
                       >
                         <span className={styles.autonym}>
-                          {isCurrent ? <CheckIcon /> : null}
+                          {isCurrent ? <CheckIcon zh={zhIcons} /> : null}
                           {entry.autonym}
                           {isCurrent ? (
                             <span className={styles.badge}>{copy.current}</span>
@@ -291,7 +296,7 @@ export function GlobalLanguagePickerView({
           aria-label={`${copy.open}: ${currentAutonym}`}
           onClick={open ? handleClose : handleOpen}
         >
-          <GlobeIcon />
+          <GlobeIcon zh={zhIcons} />
           <span className={styles.currentLabel}>{currentAutonym}</span>
         </button>
       </div>

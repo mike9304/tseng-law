@@ -44,4 +44,4 @@ tags: ["traffic-accidents", "traffic-liability"]
 
 `npm run test:unit -- src/lib/__tests__/traffic-collection.test.ts src/lib/__tests__/traffic-collection-cms.test.ts 'src/app/[locale]/traffic-accidents/__tests__/traffic-board.test.tsx'`로 파일·CMS 변환 경계와 목록을 검증한다. 새 글을 게시하면 현재 발행 목록을 확인하고 테스트의 언어별 예상 목록도 갱신한다.
 
-서버 실행 후 `BOARD_BASE=http://127.0.0.1:3000 node scripts/verify-traffic-board.mjs`로 Chromium·WebKit·Firefox, 모바일 390px·320px, 접근성, 원래 글 링크, 관련글, 빈 검색, 필터 해제, 뒤로가기, JavaScript 없는 검색을 확인한다. 브라우저가 설치되어 있어야 한다. 결과는 `.omo/evidence/traffic-board/`에 저장된다. 이 스크립트도 현재 발행 수(zh-hant 9, ko 4, en 4, ja 3)를 검증하므로 새 글을 게시할 때 함께 갱신한다. 실제 Safari/iOS 기기나 스크린리더 검증을 대신하지 않는다.
+서버 실행 후 `BOARD_BASE=http://127.0.0.1:3000 node scripts/verify-traffic-board.mjs`로 Chromium·WebKit·Firefox, 모바일 390px·320px, 접근성, 원래 글 링크, 관련글, 빈 검색, 필터 해제, 뒤로가기, JavaScript 없는 검색을 확인한다. 브라우저가 설치되어 있어야 한다. 결과는 `.omo/evidence/traffic-board/`에 저장된다. 이 스크립트도 현재 발행 수(zh-hant 10, ko 4, en 4, ja 3)를 검증하므로 새 글을 게시할 때 함께 갱신한다. 실제 Safari/iOS 기기나 스크린리더 검증을 대신하지 않는다.

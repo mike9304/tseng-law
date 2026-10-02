@@ -1,0 +1,116 @@
+{
+  "slug": "taiwan-chain-rear-end-first-impact-evidence",
+  "title": "連環追撞的第一下：中間車先撞，還是被推向前車？",
+  "originalManuscriptSha256": "3f5319481e89dbcf9c18dc80b396043f5d3e3ea8a461c212b7bc6546eb4d1955",
+  "preservedSubstantiveBodySha256": "d896402a939cfbf7a6598c005b845b5ffcdd6d4f33a50542e7d275c1ddc0ecaf",
+  "integratedFileSha256": "3ab101b82bd6473c6b130535714f510929d55da5b5f90e1257d51bbec36752f6",
+  "heroSha256": "96df696614cb91dc4a7592e742c8e713c5f59dbf539c8b79f22339d632da2e5b",
+  "packagingOnly": "Title/byline/hero image/caption were moved to existing frontmatter fields. All text from the first substantive paragraph through the final official-source list is byte-identical.",
+  "reviewedMedia": {
+    "hero": {
+      "alt": "AI生成情境圖：市區道路上可見深灰、銀色與白色三輛小客車的車尾，車身之間沒有可見接觸。",
+      "caption": "AI生成情境圖，非真實事故照片。三車之間有間隔，畫面沒有碰撞或車損；靜止畫面無法判斷車輛正在移動或已停住，也不能證明停車合法或車距安全。",
+      "long_description": "AI生成的市區道路情境圖，從車輛後方觀看。近處為深灰色轎車，較遠處可見銀色掀背車與白色轎車；三車車尾均朝向觀看者，車身之間沒有可見接觸。路旁為行道樹與住宅大樓，道路上有白色標線。此圖未提供真實事故地點、量測資料或接觸過程，不以此圖認定車道歸屬、接觸順序、安全車距、移動或煞停狀態及任何人的責任。",
+      "path": "media/hero/tseng-law-chain-rear-end-hero-1600x900.webp"
+    },
+    "diagram": {
+      "alt": "假設示意：左右兩條時間軸各有由上而下排列的A前車、B中間車與C後車；左側B先碰A，右側C先碰B，兩側最後三車位置相同。非事故重建。",
+      "caption": "假設示意，非事故重建。左右兩側是兩條假設時間軸，不是兩條相鄰的真實車道；數字只代表本假設中的接觸順序，最終位置不能證明先後。車距、停格時間與播放節奏均為說明安排，並非實測數值或法定標準。",
+      "long_description": "12秒無聲圖解動畫，分橫版與直版。畫面左右各有一條標為「時間軸①B先接觸A」與「時間軸②C先接觸B」的直向示意道路，兩側都是假設，不是兩條相鄰的真實車道，也不是六輛車的事故。每側由上而下是橙色A前車、藍綠色B中間車、紫色C後車。動畫依「01三車初始位置、02第一處接觸、03第二處接觸、04最終位置相同」推進。時間軸①：B先與A接觸，接觸點標示黃色圓圈與數字1；之後C與B接觸，標示2。時間軸②：C先與B接觸，標示1；B與C一起前移，再由B與A接觸，標示2。最後兩側三車位置刻意相同。畫面標示「數字：本假設中的接觸順序」與「假設示意，非事故重建」；橫版另註明「兩條時間軸皆為假設」、「最終位置不能證明先後」，直版標題為「相同終點，不同接觸順序」，並註明「兩種假設，不能據此認定案情」。之後車輛淡出，畫面重設回初始位置。動畫不模擬真實速度、煞車、車損或碰撞物理；停格不代表有效煞停，淡出重設也不是車輛倒退；它不是任何判決的事故重建。",
+      "stage_alts": [
+        "兩條時間軸均顯示 A 前車、B 中間車與 C 後車，三車之間有間隔。這是兩個說明假設的共同起始圖。假設示意，非事故重建。",
+        "時間軸①的 B 已接觸 A，C 尚在後方；時間軸②的 C 已接觸 B，B 與 A 仍有間隔。數字一表示第一處接觸。假設示意，非事故重建。",
+        "時間軸①的 C 隨後接觸 B；時間軸②的 B 在 C 接觸後隨 C 一起前移，再接觸 A。數字二表示第二處接觸。假設示意，非事故重建。",
+        "兩條時間軸的最終三車位置相同，接觸順序卻不同。此共同終點是刻意安排的說明，不是證據，也不作過失比例或損害金額判定。假設示意，非事故重建。"
+      ]
+    },
+    "assumptions": [
+      "情境照片為AI生成，非真實事故照片，不證明停車合法、安全車距或煞停過程。",
+      "動畫左右兩側是兩條假設時間軸，不是兩條相鄰的真實車道，也不是六車事故。",
+      "A、B、C只是示意標記，不代表任何判決的當事人或車輛。",
+      "接觸點旁的數字只代表本假設中的接觸順序。",
+      "兩側最終位置是刻意畫成相同，用以說明終點不能單獨證明先後。",
+      "動畫不模擬真實速度、距離、煞車、車損或碰撞物理。",
+      "停格不表示有效煞停；淡出後重設回起點不是車輛倒退。",
+      "兩條時間軸的差別不是只改變一個變數，也不是任何判決的證據重建。",
+      "車距、停格時間與播放節奏不是實測公尺、事故秒數或法定標準，也不能據此計算責任比例或損害。"
+    ]
+  },
+  "assets": [
+    {
+      "path": "/images/columns/20261002/tseng-law-chain-rear-end-hero-1600x900.webp",
+      "bytes": 234932,
+      "sha256": "96df696614cb91dc4a7592e742c8e713c5f59dbf539c8b79f22339d632da2e5b"
+    },
+    {
+      "path": "/videos/traffic/tw-chain-collision.webm",
+      "bytes": 634170,
+      "sha256": "8afb95a83ad01b7d183e3baf29dc83f9a8e9fe1dbe779633af223c0f35063a4c"
+    },
+    {
+      "path": "/videos/traffic/tw-chain-collision-mobile.mp4",
+      "bytes": 585326,
+      "sha256": "2f4a54bf4c09fba466382f9a373990c970a1203e84d632ee59133e7bfaf17f4a"
+    },
+    {
+      "path": "/videos/traffic/tw-chain-collision-mobile.webm",
+      "bytes": 599873,
+      "sha256": "1992e43109c5e226c84d7b5d69bcf2824d8840d391707094967c7af73f3cbf27"
+    },
+    {
+      "path": "/videos/traffic/tw-chain-collision.mp4",
+      "bytes": 644499,
+      "sha256": "0a8dc2b6f78db61452fd60bf6c50be0d80be5b13c5670db748321a67e29e273e"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-04-mobile.png",
+      "bytes": 581580,
+      "sha256": "504cbb60ad45458ef315ebe90b1aa3d876c683bbfbc7e871cd19bb7987d61b77"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-01-mobile.png",
+      "bytes": 597641,
+      "sha256": "42610b80d5397ad269035c86d52ca2c18ef5224ae1cea9871e44bac0d0fefccc"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-poster-mobile.webp",
+      "bytes": 79146,
+      "sha256": "f74038233cb67053d6763efb70ca3a4f4306d2779a0f5bf828446129d3303b08"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-03-mobile.png",
+      "bytes": 581842,
+      "sha256": "c651c5c8407a836e4db6ade255a78db39e4af0c36605270428f10db8d5538628"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-04.png",
+      "bytes": 645248,
+      "sha256": "62fe673dfa43bd440b8273299441a359e2a9860c2195a17becf3e72b5319f7cb"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-02-mobile.png",
+      "bytes": 593982,
+      "sha256": "5ddc23859f70ddc93b0edb815ff2b2b072503567ebe04d37e757b17ae935d8d7"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-02.png",
+      "bytes": 658438,
+      "sha256": "0686bd029eecca5c9977c68b9dda4f1a20dc63e66727aaf584b9417103b426c9"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-03.png",
+      "bytes": 645286,
+      "sha256": "1bd5bb064b9eb90a396de9fe45ce3b083eebcef2385967ed32d05b0c2d0e8bb9"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-poster.webp",
+      "bytes": 94374,
+      "sha256": "e5653184a35f91b5d4c238e4f29f99df1d155c0e639020127bf02d1646253741"
+    },
+    {
+      "path": "/images/traffic/tw-chain-collision-step-01.png",
+      "bytes": 666167,
+      "sha256": "136eb0d7ce7dc9fb01e7d26544abe2e116608917fc1933234b0635da85f3915d"
+    }
+  ]
+}

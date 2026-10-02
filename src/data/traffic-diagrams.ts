@@ -5,6 +5,7 @@ import { TW_RIGHT_TURN_DIAGRAM } from './tw-right-turn-diagram';
 import { TW_FLASHING_JUNCTION_DIAGRAM } from './tw-flashing-junction-diagram';
 import { TW_DOORING_DIAGRAM } from './tw-dooring-diagram';
 import { TW_STARTING_ENTRY_DIAGRAM } from './tw-starting-entry-diagram';
+import { TW_CHAIN_COLLISION_DIAGRAM } from './tw-chain-collision-diagram';
 
 /**
  * Animated Blender diagrams for the traffic-accident pages.
@@ -57,6 +58,7 @@ export const TRAFFIC_DIAGRAMS = {
   'flashing-red-yellow-hypothetical': TW_FLASHING_JUNCTION_DIAGRAM,
   'dooring-hypothetical': TW_DOORING_DIAGRAM,
   'starting-entry-hypothetical': TW_STARTING_ENTRY_DIAGRAM,
+  'chain-collision-hypothetical': TW_CHAIN_COLLISION_DIAGRAM,
   'passing-hypothetical': {
     kind: 'video',
     id: 'passing-hypothetical',

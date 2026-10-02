@@ -8,7 +8,7 @@ const base = process.env.BOARD_BASE || 'http://127.0.0.1:3000';
 const phase = process.env.BOARD_PHASE || 'local';
 const out = path.resolve(process.env.TRAFFIC_BOARD_EVIDENCE_DIR || '.omo/evidence/traffic-board');
 fs.mkdirSync(out, { recursive: true });
-const expected = { 'zh-hant': 9, ko: 4, en: 4, ja: 3 };
+const expected = { 'zh-hant': 10, ko: 4, en: 4, ja: 3 };
 const results = [];
 function check(ok, msg) { if (!ok) throw new Error(msg); }
 for (const [engine, launcher] of [['chromium',chromium], ['webkit',webkit], ['firefox',firefox]]) {
@@ -52,14 +52,14 @@ for (const [engine, launcher] of [['chromium',chromium], ['webkit',webkit], ['fi
         check(related.length>0&&related.every(h=>row.hrefs.includes(h)),'related articles stay in traffic collection');
         await page.goBack({waitUntil:'networkidle'}); check(await page.locator('[data-traffic-board-row]').count()===expected['zh-hant'],'back to collection');
         await page.locator('[data-traffic-board] a[href*="subject=evidence"]').click(); await page.waitForLoadState('networkidle');
-        check(await page.locator('[data-traffic-board-row]').count()===2,'subject count');
+        check(await page.locator('[data-traffic-board-row]').count()===3,'subject count');
         await page.locator('[data-traffic-board] a[href*="video=1"]').click(); await page.waitForLoadState('networkidle');
-        check(await page.locator('[data-traffic-board-row]').count()===1,'combined video count');
+        check(await page.locator('[data-traffic-board-row]').count()===2,'combined video count');
         await page.locator('#traffic-board-q').fill('zzzz-no-match'); await page.locator('[data-traffic-board] button[type=submit]').click(); await page.waitForLoadState('networkidle');
         check(await page.locator('[data-traffic-board-empty]').count()===1,'empty');
         check(page.url().includes('subject=evidence')&&page.url().includes('video=1'),'search preserves filters');
         await page.reload({waitUntil:'networkidle'}); check(await page.locator('#traffic-board-q').inputValue()==='zzzz-no-match','query refresh');
-        await page.goBack({waitUntil:'networkidle'}); check(await page.locator('[data-traffic-board-row]').count()===1,'back filter');
+        await page.goBack({waitUntil:'networkidle'}); check(await page.locator('[data-traffic-board-row]').count()===2,'back filter');
         await page.locator('[data-traffic-board-clear]').first().click(); await page.waitForLoadState('networkidle');
         check(await page.locator('[data-traffic-board-row]').count()===expected['zh-hant'],'reset');
         await page.locator('#traffic-board-q').fill('方向燈'); await page.locator('[data-traffic-board] button[type=submit]').click(); await page.waitForLoadState('networkidle');

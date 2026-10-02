@@ -1106,3 +1106,49 @@
 }
 .home:global(#zh-hant-home) :global(.services-detail-card:hover .service-icon),
 .home:global(#zh-hant-home) :global(.services-detail-card:focus-within .service-icon) { border-color: transparent; background: none; color: var(--ap-text); }
+/* Glyphs that follow link text (chevrons, arrows): a small gap; the links are inline-flex, so they centre. */
+.trail { margin-left: 3px; }
+.trailArrow { margin-left: 0; }
+
+/* First screen: the search magnifier joins the 1.5px family at its old 22px size; the video control glyphs
+   (pause, play solid; replay outline) are white instead of gold. */
+.home:global(#zh-hant-home) :global(.hero .hero-search-btn svg) { stroke-width: 1.65; }
+.home:global(#zh-hant-home) :global(.hero .decorative-autoplay-video__control-icon) { display: inline-flex; color: #fff; }
+
+/* Bento doors: the dark tile is neutral under its photograph. */
+.doorDark { background: #1d1d1f; }
+.doorDark::after { background: linear-gradient(180deg, rgb(0 0 0 / 6%) 0%, rgb(0 0 0 / 30%) 34%, rgb(0 0 0 / 70%) 58%, rgb(0 0 0 / 88%) 100%); }
+
+/* Columns: the thumbnail placeholder behind each list image is neutral. */
+.home:global(#zh-hant-home) :global(.insights-list-thumb) { background: linear-gradient(140deg, #f5f5f7, #e8e8ed); }
+
+/* How to retain: solid numerals in #1d1d1f (Apple's own big numbers), no green gradient. */
+.engagementNo {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--ap-text);
+  -webkit-text-fill-color: currentColor;
+}
+
+/* The dark chapter: labels #a1a1a6, the case link white, the figures white to silver. */
+.home:global(#zh-hant-home) :global(#results .section-label) { color: #a1a1a6 !important; }
+.home:global(#zh-hant-home) :global(#results .link-underline) { color: #fff; }
+.home:global(#zh-hant-home) :global(#results .link-underline)::after { background: currentColor; }
+.home:global(#zh-hant-home) :global(#results .home-results-media),
+.home:global(#zh-hant-home) :global(#results .home-results-media-fallback) { background: #1d1d1f; }
+.home:global(#zh-hant-home) :global(.stat-number) { background: linear-gradient(180deg, #ffffff 10%, #a1a1a6 100%); -webkit-background-clip: text; background-clip: text; }
+
+/* Offices: no ink bar on the card; secondary text #6e6e73; the phone and review links are ink with a quiet
+   underline at rest (they sit inside text, so colour alone would not mark them). */
+.home:global(#zh-hant-home) :global(#offices .office-card)::before { content: none; }
+.home:global(#zh-hant-home) :global(#offices .office-map-fallback-kicker) { color: var(--ap-muted); }
+
+/* Last call: one flat black, like the dark chapter above it. */
+.home:global(#zh-hant-home) :global(#contact) { background: #000 !important; border-color: transparent; }
+
+/* Phones: the sticky consultation bar's hairlines are neutral. */
+@media (max-width: 767px) {
+  .mobileCta { border-top-color: #e3e3e8; box-shadow: 0 -6px 18px rgb(0 0 0 / 8%); }
+  .mobileCtaSecondary { border-color: #e3e3e8; color: var(--ap-ink); }
+}

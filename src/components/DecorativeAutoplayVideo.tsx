@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import {
   DECORATIVE_VIDEO_CONTROL_LABELS,
   type DecorativeVideoControlLabels,
@@ -53,6 +53,14 @@ export type DecorativeAutoplayVideoProps = {
   rootMargin?: string;
   loop?: boolean;
   controlLabels: DecorativeVideoControlLabels;
+  /** Optional glyphs for the control (zh-hant: the monoline set). Without them the control shows Ⅱ ▶ ↻ as before. */
+  controlIcons?: DecorativeVideoControlIcons;
+};
+
+export type DecorativeVideoControlIcons = {
+  pause: ReactNode;
+  play: ReactNode;
+  replay: ReactNode;
 };
 
 export type DecorativeVideoPlaybackState = {
@@ -256,6 +264,7 @@ export function DecorativeAutoplayVideo({
   rootMargin = '320px 0px',
   loop = true,
   controlLabels = DECORATIVE_VIDEO_CONTROL_LABELS.ko,
+  controlIcons,
 }: DecorativeAutoplayVideoProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLImageElement>(null);
@@ -588,7 +597,9 @@ export function DecorativeAutoplayVideo({
           onClick={handleControlClick}
         >
           <span aria-hidden="true" className="decorative-autoplay-video__control-icon">
-            {playbackState.ended ? '↻' : playbackState.userPaused ? '▶' : 'Ⅱ'}
+            {controlIcons
+              ? (playbackState.ended ? controlIcons.replay : playbackState.userPaused ? controlIcons.play : controlIcons.pause)
+              : (playbackState.ended ? '↻' : playbackState.userPaused ? '▶' : 'Ⅱ')}
           </span>
           <span>{controlLabel}</span>
         </button>

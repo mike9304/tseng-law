@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { siteContent } from '@/data/site-content';
 import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from '../ZhHantDesign.module.css';
 
 /**
@@ -40,7 +41,7 @@ export default function ZhHantEngagement() {
             <a href={getConsultationPublicMailto('zh-hant')} className="button" aria-label={`申請電子郵件諮詢 — ${getConsultationCtaLabel('zh-hant')}`}>
               申請電子郵件諮詢
             </a>
-            <Link href="/zh-hant/pricing" className={styles.engagementMore}>收費標準 <span aria-hidden>→</span></Link>
+            <Link href="/zh-hant/pricing" className={styles.engagementMore}>收費標準<ZhHantMonoIcon name="arrow-right" size={18} strokePx={1.6} className={styles.trailArrow} /></Link>
           </div>
         </div>
         <div className={styles.engagementOffices}>

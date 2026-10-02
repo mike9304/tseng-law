@@ -106,7 +106,6 @@
 .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button:hover) { background: var(--ap-ink-deep); transform: translateY(-1px); }
 .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button.secondary) { background: #fff; border-color: #fff; color: var(--ap-ink); }
 .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button.secondary:hover) { background: #fff; border-color: var(--ap-ink); }
-.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__status:empty) { display: none; }
 .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__note) { margin: 10px 0 0; color: var(--ap-muted); font-size: 14.5px; line-height: 1.8; text-align: left; }
 .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .contact-email-actions__note) { flex: 1 0 100%; margin-top: 0; }
 /* A hairline between the actions and the notes (the first note follows the status line). */

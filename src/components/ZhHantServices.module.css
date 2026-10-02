@@ -267,7 +267,7 @@
   font-weight: 600;
   text-decoration: none;
 }
-.heroActions > a:last-child:not(:global(.button))::after { content: '›'; margin-left: 6px; font-size: 1.15em; line-height: 1; }
+.heroActions > a:last-child:not(:global(.button))::after { content: '›'; content: '›' / ''; margin-left: 6px; font-size: 1.15em; line-height: 1; }
 .heroActions > a:last-child:not(:global(.button)):hover { text-decoration: underline; text-underline-offset: 5px; }
 .heroVisual { aspect-ratio: 5 / 4; border-radius: var(--ap-radius); background: var(--ap-gray); }
 .heroVisual img { object-position: 50% 60%; }

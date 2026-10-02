@@ -182,7 +182,7 @@
   line-height: 1.4;
   text-decoration: none;
 }
-.hero .byline::after { content: '\203A'; margin-left: 6px; font-size: 1.15em; line-height: 1; transition: transform 0.3s var(--ap-ease); }
+.hero .byline::after { content: '\203A'; content: '\203A' / ''; margin-left: 6px; font-size: 1.15em; line-height: 1; transition: transform 0.3s var(--ap-ease); }
 .hero .byline:hover { text-decoration: underline; text-underline-offset: 5px; }
 .hero .byline:hover::after { transform: translateX(3px); }
 /* In-page jumps: quiet grey pills, like Apple's chapter links. */
@@ -325,6 +325,7 @@
 }
 .root :global(.svc-keypoints:not([id]):not([data-ml-civil-commercial]) li a)::after {
   content: '\203A' !important;
+  content: '\203A' / '' !important;
   position: static !important;
   width: auto !important;
   height: auto !important;

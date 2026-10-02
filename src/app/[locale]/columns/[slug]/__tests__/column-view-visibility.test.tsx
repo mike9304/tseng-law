@@ -42,13 +42,15 @@ describe('traffic column view publication visibility', () => {
     const slug = 'taiwan-right-turn-car-straight-motorcycle-evidence';
     const hidden = await props(false, false, slug);
     expect(renderToStaticMarkup(<ColumnDetailView {...hidden} />)).not.toContain('data-traffic-observation');
+    expect(renderToStaticMarkup(<ColumnDetailView {...hidden} />)).not.toContain('data-column-generated-video');
     const shown = await props(true, true, slug);
     const html = renderToStaticMarkup(<ColumnDetailView {...shown} />);
     expect(html).toContain('data-traffic-observation="right-turn"');
     expect(html).toContain('data-traffic-diagram="stop-dialogue-timeline"');
     expect(html).toContain('HIDDEN_BODY');
     expect(html).toContain('id="right-turn-observation"');
-    expect(html).not.toContain('<video');
+    expect(html.match(/<video\b/g)).toHaveLength(1);
+    expect(html).toContain('data-column-generated-video="right-turn-scooter-v1-zh-hant"');
     expect(renderToStaticMarkup(<ColumnDetailView {...shown} urlLocale="en" />)).not.toContain('data-traffic-observation');
     expect(renderToStaticMarkup(<ColumnDetailView {...shown} post={{ ...shown.post, slug: 'another-column' }} />)).not.toContain('data-traffic-observation');
   });

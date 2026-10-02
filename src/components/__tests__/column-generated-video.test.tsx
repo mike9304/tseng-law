@@ -41,11 +41,28 @@ describe('reviewed column videos', () => {
   it.each([
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v2-zh-hant', '橙色車'],
     ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-v1-zh-hant', '銀色中間車'],
+    ['taiwan-roadside-starting-parking-exit-liability', 'roadside-start-v1-zh-hant', '橙色車'],
+    ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-scooter-v1-zh-hant', '機車'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="zh-hant" slug={slug} />);
     expect(html).toContain(`${id}.mp4`);
     expect(html).toContain(detail);
     expect(getColumnGeneratedVideo('en', slug)).toBeNull();
     expect(getColumnGeneratedVideo('zh-hant', slug, 'issue')).toBeNull();
+  });
+
+  it.each([
+    ['ko', '실제 임대 매물이 아닙니다'],
+    ['en', 'not an actual rental listing'],
+    ['zh-hant', '非實際出租物件'],
+    ['ja', '実際の賃貸物件ではありません'],
+  ])('labels the business-premises illustration correctly in %s', (locale, disclosure) => {
+    const slug = 'taiwan-company-setup-pitch-location';
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
+    expect(html).toContain(`business-premises-v1-${locale}.mp4`);
+    expect(html).toContain(disclosure);
+    expect(html).not.toContain('accident footage');
+    expect(getColumnGeneratedVideo('fr', slug)).toBeNull();
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
   });
 });

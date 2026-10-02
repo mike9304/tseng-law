@@ -12,6 +12,13 @@ const cases = [
   })),
   { locale: 'zh-hant', slug: 'taiwan-lane-change-side-rear-collision-liability', id: 'lane-change-v2-zh-hant', duration: 6, contactTime: 3.8, disclosure: '非真實事故或本文判決的重建' },
   { locale: 'zh-hant', slug: 'taiwan-chain-rear-end-first-impact-evidence', id: 'chain-rear-end-v1-zh-hant', duration: 8, contactTime: 5.8, disclosure: '這只是「後車先碰中間車」的一種設定' },
+  { locale: 'zh-hant', slug: 'taiwan-roadside-starting-parking-exit-liability', id: 'roadside-start-v1-zh-hant', duration: 6, contactTime: 4.2, disclosure: '非本文判決或真實事故的重建' },
+  { locale: 'zh-hant', slug: 'taiwan-right-turn-car-straight-motorcycle-evidence', id: 'right-turn-scooter-v1-zh-hant', duration: 6, contactTime: 4.2, disclosure: '非真實事故或本文案件的重建' },
+  ...['ko', 'en', 'zh-hant', 'ja'].map(locale => ({
+    locale, slug: 'taiwan-company-setup-pitch-location', id: `business-premises-v1-${locale}`,
+    duration: 6, contactTime: 4.2, traffic: false,
+    disclosure: { ko: '실제 임대 매물이 아닙니다', en: 'not an actual rental listing', 'zh-hant': '非實際出租物件', ja: '実際の賃貸物件ではありません' }[locale],
+  })),
 ];
 await fs.mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true });
@@ -85,18 +92,27 @@ try {
         frameWidth: document.querySelector('[data-column-generated-video]').getBoundingClientRect().width,
         bodyTextLength: document.querySelector('.blog-body')?.innerText.length || 0,
         diagramCount: document.querySelectorAll('[data-traffic-diagram]').length,
+        bodyImageCount: document.querySelectorAll('.blog-body img').length,
       }));
       assert.ok(layout.scrollWidth <= layout.width + 1, `Horizontal overflow: ${JSON.stringify(layout)}`);
       assert.ok(layout.frameWidth <= layout.width);
       assert.ok(layout.bodyTextLength > 500);
-      assert.ok(layout.diagramCount >= 1);
+      if (item.traffic === false) {
+        assert.equal(layout.diagramCount, 0);
+        assert.ok(layout.bodyImageCount >= 3, 'Existing premises article images were removed');
+      } else {
+        assert.ok(layout.diagramCount >= 1);
+      }
       await video.evaluate(element => { element.currentTime = element.duration - 0.4; });
       await video.press('Space');
       await page.waitForFunction(() => document.querySelector('[data-column-generated-video] video')?.ended);
 
       if (process.env.COLUMN_VIDEO_QA_SKIP_BOARD !== '1') {
-        await page.goto(`${base}/${item.locale}/traffic-accidents?video=1&q=${encodeURIComponent(heading.slice(0, 60))}`, { waitUntil: 'load' });
-        assert.ok(await page.locator(`a[href="${article}"]`).count() > 0, 'Video filter omitted the new native video');
+        const board = await page.goto(`${base}/${item.locale}/traffic-accidents?video=1&q=${encodeURIComponent(heading.slice(0, 60))}`, { waitUntil: 'load' });
+        assert.equal(board?.status(), 200);
+        const count = await page.locator(`a[href="${article}"]`).count();
+        if (item.traffic === false) assert.equal(count, 0, 'Non-traffic video entered the traffic collection');
+        else assert.ok(count > 0, 'Video filter omitted the new native video');
       }
       results.push({ viewport, article, id: item.id, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true });
     }

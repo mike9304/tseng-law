@@ -35,7 +35,7 @@
   --ap-text: #1d1d1f;
   --ap-muted: #6e6e73;
   --ap-line: #e3e3e8;
-  --ap-accent: #0a7a55;
+  --ap-accent: #16382d; /* 2026-10-02: links and text actions take the action ink */
   --ap-ink: #16382d;
   --ap-ink-deep: #0d231b;
   --ap-radius: 28px;

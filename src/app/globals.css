@@ -27330,10 +27330,96 @@ html[dir='rtl'] .guidance-answer {
    zh-hant · monoline icons and a neutral palette (2026-10-02)
    Operator: 「대만페이지는 전체 색감을 다시 정했으니까 초록색 아이콘들 이런거도 다 다시 디자인해야지 심플세련 느낌으로」.
    Icons are ZhHantMonoIcon (src/components/zh-hant-icons): one line on a 24px grid, currentColor, no box.
+   What does not move is neutral: #1d1d1f text and icons, #6e6e73 secondary text, #e3e3e8 lines, #f5f5f7 fills,
+   black bands and #1d1d1f dark tiles. The ink #16382d stays only on what you press: primary pills, text links,
+   open or selected states, focus rings and the consent checkbox.
+   Scope: html[lang='zh-Hant'] (the token layer has to reach the language picker and the search overlay, which
+   are portaled to <body>), .site[data-locale='zh-hant'] and the zh page roots. ko / ja / en never match.
    ===================================================================================================== */
+
+/* 1 · Tokens. The :root values stay for ko / ja / en. Aliases declared on :root with var() (--accent, --navy,
+   --primary, --text, --text-primary, --bg-white …) resolve against these, so they follow too. */
+html[lang='zh-Hant'],
+html[lang='zh-hant'] {
+  --purple-light: #0d231b;
+  --purple-bg: #f5f5f7;
+  --purple-border: #e3e3e8;
+  --wine: #86868b;
+  --wine-light: #aeaeb2;
+  --wine-dark: #6e6e73;
+  --wine-muted: #aeaeb2;
+  --warm-bg: #f5f5f7;
+  --warm-bg-alt: #f5f5f7;
+  --warm-border: #e3e3e8;
+  --warm-surface: #f5f5f7;
+  --warm-muted: #d2d2d7;
+  --warm-text: #6e6e73;
+  --warm-text-dark: #6e6e73;
+  --cream: #f5f5f7;
+  --off-white: #f5f5f7;
+  --gray-50: #f5f5f7;
+  --gray-100: #f5f5f7;
+  --gray-200: #e8e8ed;
+  --gray-300: #d2d2d7;
+  --gray-400: #aeaeb2;
+  --gray-500: #86868b;
+  --gray-600: #6e6e73;
+  --gray-700: #424245;
+  --gray-800: #1d1d1f;
+  --gray-900: #1d1d1f;
+  --text-heading: #1d1d1f;
+  --text-body: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-caption: #86868b;
+  --text-meta: #6e6e73;
+  --text-link: #16382d;
+  --text-link-hover: #0d231b;
+  --dark-bg: #1d1d1f;
+  --dark-bg-secondary: #000;
+  --dark-card: #2c2c2e;
+  --dark-text: #f5f5f7;
+  --dark-text-secondary: #a1a1a6;
+  --border-light: #e3e3e8;
+  --border-medium: #d2d2d7;
+  --border-dark: #424245;
+  --divider: #e3e3e8;
+  --editorial-rule: rgb(0 0 0 / 10%);
+  --editorial-rule-strong: #d2d2d7;
+  --ink-deep: #1d1d1f;
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 5%), 0 1px 2px rgb(0 0 0 / 2.5%);
+  --shadow-md: 0 6px 14px rgb(0 0 0 / 6%), 0 2px 4px rgb(0 0 0 / 2.5%);
+  --shadow-lg: 0 14px 32px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 4%);
+  --shadow-xl: 0 24px 48px rgb(0 0 0 / 10%), 0 10px 20px rgb(0 0 0 / 5%);
+  --shadow-card-hover: 0 16px 34px rgb(0 0 0 / 10%), 0 6px 14px rgb(0 0 0 / 5%);
+}
+
+html[lang='zh-Hant'] ::selection {
+  background: rgb(0 0 0 / 14%);
+  color: inherit;
+}
+
+/* Focus: the global 2px #234d3c ring becomes 3px ink; :where() keeps the weight low, so component rings
+   (ink, or white on dark surfaces) still win. */
+html[lang='zh-Hant'] :where(:focus-visible) {
+  outline: 3px solid #16382d;
+  outline-offset: 3px;
+}
+
+/* The body's moss radial wash goes; the page is plain white. */
+html[lang='zh-Hant'] body {
+  background: #fff;
+}
+
+/* zh pages set --text-secondary on [data-zh-hant-design] (was #4f5b55, a green grey). */
+.site [data-zh-hant-design] {
+  --text-secondary: #6e6e73;
+}
+
+/* 2 · The icon component */
 .zh-mono {
   display: inline-block;
   flex: none;
   vertical-align: -0.125em;
   overflow: visible;
 }
+

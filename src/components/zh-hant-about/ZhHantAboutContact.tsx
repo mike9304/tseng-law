@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteContent } from '@/data/site-content';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import {
   getConsultationCtaLabel,
   getConsultationPublicEmail,
@@ -27,7 +28,7 @@ export default function ZhHantAboutContact() {
             <a href={mailto} className={styles.contactEmail}>{getConsultationPublicEmail()}</a>
           </div>
           <p className={styles.contactMoreWrap}>
-            <Link href="/zh-hant/contact" className={styles.contactMore}>聯絡方式 <span aria-hidden>›</span></Link>
+            <Link href="/zh-hant/contact" className={styles.contactMore}>聯絡方式<ZhHantMonoIcon name="chevron-right" size={14} strokePx={1.75} /></Link>
           </p>
         </div>
         <div className={styles.offices}>

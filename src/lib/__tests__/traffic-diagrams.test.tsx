@@ -59,7 +59,7 @@ describe('animated traffic diagrams', () => {
         expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
       }
       expect(diagram.durationSeconds).toBeGreaterThanOrEqual(4);
-      if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical'].includes(diagram.id)) {
+      if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical', 'starting-entry-hypothetical'].includes(diagram.id)) {
         expect(diagram.durationSeconds).toBe(12);
       } else {
         expect(diagram.durationSeconds).toBeLessThanOrEqual(diagram.id === 'flashing-red-yellow-hypothetical' ? 28 : 8);
@@ -70,9 +70,9 @@ describe('animated traffic diagrams', () => {
   it('labels every locale as a hypothetical example', () => {
     const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
-      if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical', 'flashing-red-yellow-hypothetical'].includes(diagram.id)) {
+      if (['lane-change-hypothetical', 'right-turn-hypothetical', 'dooring-hypothetical', 'starting-entry-hypothetical', 'flashing-red-yellow-hypothetical'].includes(diagram.id)) {
         expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);
-        expect(diagram.copy['zh-hant']?.assumption).toContain('假設示意，非事故重建');
+        expect(diagram.copy['zh-hant']?.assumption).toContain(diagram.id === 'starting-entry-hypothetical' ? '本例不是新竹或臺中判決的重建' : '假設示意，非事故重建');
         continue;
       }
       for (const locale of siteLocales) {

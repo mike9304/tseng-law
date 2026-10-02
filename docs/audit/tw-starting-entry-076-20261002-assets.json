@@ -1,0 +1,84 @@
+{
+  "slug": "taiwan-roadside-starting-parking-exit-liability",
+  "originalManuscriptSha256": "d55e0f57cfccda81d8dfffdc697f13840d160ea477c821863f289fb71c629d4d",
+  "preservedBodySha256": "03c711f1506f0d90a64fc2726f583e722d9d0ad8086930de27fec0226c8aea2d",
+  "integratedFileSha256": "d1e7618d75d1a91cc64885c13e5839247d2c9c2169d5a7e8d83b9f38ccdebffe",
+  "heroSha256": "b891ad9efbe8582c39c5af70ddf4ceab90385691cbfd95551cf705318254eb1e",
+  "assets": [
+    {
+      "path": "/images/columns/20261002/driveway-yield-ai-hero-1600x900.webp",
+      "bytes": 401498,
+      "sha256": "b891ad9efbe8582c39c5af70ddf4ceab90385691cbfd95551cf705318254eb1e"
+    },
+    {
+      "path": "/videos/traffic/tw-starting-entry-mobile.mp4",
+      "bytes": 716974,
+      "sha256": "c2d9ac91b4707766593424cecb76165a65f73ef8a5b13ae99936b5fc7ae1302b"
+    },
+    {
+      "path": "/videos/traffic/tw-starting-entry.webm",
+      "bytes": 613572,
+      "sha256": "726cc48b369a726351248431c74baf080d4b1430d52069b79ba5add659a01a1c"
+    },
+    {
+      "path": "/videos/traffic/tw-starting-entry-mobile.webm",
+      "bytes": 559828,
+      "sha256": "8a6fb021d4f4217c6070d0aad20e5c3fe1d860d848338a2a6b8087f98538d6ea"
+    },
+    {
+      "path": "/videos/traffic/tw-starting-entry.mp4",
+      "bytes": 774087,
+      "sha256": "0d07256de462b873c12fd3a6be61e4e02ae77c6076108453529b09cf202dd6bf"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-03-mobile.png",
+      "bytes": 579163,
+      "sha256": "04b3fc37748548165fc24b0c185c24a4b9cd2f22e84f31da89614245e99c891f"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-03.png",
+      "bytes": 654863,
+      "sha256": "7bb9b4eac3a49b59e05e28c11c519ea1598b45af5a3d1764a0f3395fa97bf8d3"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-poster.webp",
+      "bytes": 82734,
+      "sha256": "e54f53539e92cbc48acb6efc061c40f7434a8042cead042be86b9324e5727d84"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-02.png",
+      "bytes": 664716,
+      "sha256": "2739ac9e36c163dae17d0146f64ff10ee4ecbad16650ed2a0f44f93bd46e0460"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-04-mobile.png",
+      "bytes": 568184,
+      "sha256": "be50a861bca0cc31c6ca601f048934ea9485947b1af251f6f552db65691a01a0"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-01.png",
+      "bytes": 664322,
+      "sha256": "b3bafbc2ad73039cb2821af9870a1036a103c887493769c02b524dd67a9e8182"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-01-mobile.png",
+      "bytes": 587580,
+      "sha256": "2d0b2da1973add52a603bf961a587528516450c789d26554d2fd357ba64287a9"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-04.png",
+      "bytes": 643941,
+      "sha256": "10ecec40066efe5b51284cea9835d82386a6540434d325c92e9a35922cf01db5"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-poster-mobile.webp",
+      "bytes": 64338,
+      "sha256": "89077e8b525d88f6849f8fb613e06deff039e66b24d2d3ca84b7026033f14958"
+    },
+    {
+      "path": "/images/traffic/tw-starting-entry-step-02-mobile.png",
+      "bytes": 587839,
+      "sha256": "1f49f678fec749a90cf11a4854a84f2392ba57358e01a944a62c2df0a9764eb2"
+    }
+  ]
+}

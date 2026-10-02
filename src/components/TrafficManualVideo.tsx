@@ -95,7 +95,13 @@ export default function TrafficManualVideo(props: Props) {
           setReady(true); setPlaying(true);
         }}
         onPause={() => setPlaying(false)}
-        onError={() => { setReady(false); setPlaying(false); setRequested(false); }}>
+        onError={event => {
+          // React also delivers <source> errors here. Let the browser try the
+          // next source before returning to the poster; unmounting on a WebM
+          // failure would cancel an otherwise playable MP4 fallback.
+          if (event.target !== event.currentTarget && event.target !== event.currentTarget.lastElementChild) return;
+          setReady(false); setPlaying(false); setRequested(false);
+        }}>
         <source src={mobile ? props.mobileWebmSrc : props.webmSrc} type="video/webm" />
         <source src={mobile ? props.mobileMp4Src : props.mp4Src} type="video/mp4" />
       </video> : null}

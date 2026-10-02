@@ -8,7 +8,7 @@ const base = process.env.BOARD_BASE || 'http://127.0.0.1:3000';
 const phase = process.env.BOARD_PHASE || 'local';
 const out = path.resolve(process.env.TRAFFIC_BOARD_EVIDENCE_DIR || '.omo/evidence/traffic-board');
 fs.mkdirSync(out, { recursive: true });
-const expected = { 'zh-hant': 8, ko: 4, en: 4, ja: 3 };
+const expected = { 'zh-hant': 9, ko: 4, en: 4, ja: 3 };
 const results = [];
 function check(ok, msg) { if (!ok) throw new Error(msg); }
 for (const [engine, launcher] of [['chromium',chromium], ['webkit',webkit], ['firefox',firefox]]) {
@@ -44,13 +44,13 @@ for (const [engine, launcher] of [['chromium',chromium], ['webkit',webkit], ['fi
       if (await page.locator('[data-locale-suggestion] button').isVisible()) await page.locator('[data-locale-suggestion] button').click();
       if(engine==='chromium') await page.locator('#articles').screenshot({path:path.join(out,`${phase}-${locale}-${width}.png`)});
       if(engine==='chromium'&&width===390&&locale==='zh-hant') {
-        await page.locator('[data-traffic-board-row] h3 a').first().click(); await page.waitForLoadState('networkidle');
+        await page.locator('[data-traffic-board-row] h3 a[href$="/taiwan-car-door-opening-motorcycle-liability"]').click(); await page.waitForLoadState('networkidle');
         check(page.url().includes('/columns/taiwan-car-door-opening-motorcycle-liability'),'article click');
         check(await page.locator('[data-traffic-diagram="dooring-hypothetical"]').count()===1,'article video figure');
         check(await page.locator('.blog-hero a[href="/zh-hant/traffic-accidents#articles"]').count()===1,'return to traffic collection');
         const related=await page.locator('[data-recommended-for-you="column"] a[href*="/columns/"]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')));
         check(related.length>0&&related.every(h=>row.hrefs.includes(h)),'related articles stay in traffic collection');
-        await page.goBack({waitUntil:'networkidle'}); check(await page.locator('[data-traffic-board-row]').count()===8,'back to collection');
+        await page.goBack({waitUntil:'networkidle'}); check(await page.locator('[data-traffic-board-row]').count()===expected['zh-hant'],'back to collection');
         await page.locator('[data-traffic-board] a[href*="subject=evidence"]').click(); await page.waitForLoadState('networkidle');
         check(await page.locator('[data-traffic-board-row]').count()===2,'subject count');
         await page.locator('[data-traffic-board] a[href*="video=1"]').click(); await page.waitForLoadState('networkidle');
@@ -61,7 +61,7 @@ for (const [engine, launcher] of [['chromium',chromium], ['webkit',webkit], ['fi
         await page.reload({waitUntil:'networkidle'}); check(await page.locator('#traffic-board-q').inputValue()==='zzzz-no-match','query refresh');
         await page.goBack({waitUntil:'networkidle'}); check(await page.locator('[data-traffic-board-row]').count()===1,'back filter');
         await page.locator('[data-traffic-board-clear]').first().click(); await page.waitForLoadState('networkidle');
-        check(await page.locator('[data-traffic-board-row]').count()===8,'reset');
+        check(await page.locator('[data-traffic-board-row]').count()===expected['zh-hant'],'reset');
         await page.locator('#traffic-board-q').fill('方向燈'); await page.locator('[data-traffic-board] button[type=submit]').click(); await page.waitForLoadState('networkidle');
         check(await page.locator('[data-traffic-board-row]').count()>0,'positive search');
         row.flows='article click, back, subject, video, combined, empty, reload, back filter, clear, positive search';
@@ -77,11 +77,11 @@ for (const [engine, launcher] of [['chromium',chromium], ['webkit',webkit], ['fi
 const browser=await chromium.launch({headless:true}); const context=await browser.newContext({javaScriptEnabled:false,reducedMotion:'reduce',viewport:{width:390,height:844}});const page=await context.newPage();
 try {
  await page.goto(`${base}/zh-hant/traffic-accidents`,{waitUntil:'load'});
- check(await page.locator('[data-traffic-board-row]').count()===8,'no-js initial');
+ check(await page.locator('[data-traffic-board-row]').count()===expected['zh-hant'],'no-js initial');
  await page.locator('#traffic-board-q').fill('警方'); await Promise.all([page.waitForURL(/q=/), page.locator('[data-traffic-board] button[type=submit]').click()]); await page.waitForLoadState('networkidle');
  check(await page.locator('[data-traffic-board-row]').count()>0,'no-js search');
  await Promise.all([page.waitForURL(u=>!u.searchParams.has('q')),page.locator('[data-traffic-board-clear]').first().click()]); await page.waitForLoadState('networkidle');
- check(await page.locator('[data-traffic-board-row]').count()===8,'no-js reset');results.push({noJs:true,pass:true});
+ check(await page.locator('[data-traffic-board-row]').count()===expected['zh-hant'],'no-js reset');results.push({noJs:true,pass:true});
 }catch(e){results.push({noJs:true,error:String(e)});}finally{await browser.close();}
 fs.writeFileSync(path.join(out,`${phase}-browser-results.json`),JSON.stringify(results,null,2));
 console.log('Passed',results.filter(r=>r.pass).length,'/',results.length);

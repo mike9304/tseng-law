@@ -70,3 +70,9 @@
 .withPlaybackTools :global(.traffic-manual-tools__seek input) { flex: 1; min-width: 50px; min-height: 44px; }
 .withPlaybackTools :global(.traffic-manual-tools__seek output) { min-width: 65px; text-align: right; }
 .withPlaybackTools :global(.traffic-manual-tools :focus-visible) { outline: 3px solid #a47b25; outline-offset: 3px; }
+
+/* At 320px the playback controls wrap to two rows plus the seek row. */
+@media (max-width: 360px) {
+  .withPlaybackTools .frame { margin-bottom: 164px; }
+  .withPlaybackTools :global(.traffic-manual-tools) { bottom: -156px; }
+}

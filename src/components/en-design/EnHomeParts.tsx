@@ -24,7 +24,7 @@ export function EnHeroTrust() {
       {profile && displayName ? (
         <Link href={`/en/lawyers/${profile.slug}`} className={styles.heroByline} aria-label={`${displayName}, ${profile.role}`}>
           <Image src={profile.image} alt="" width={96} height={96} className={styles.heroBylinePhoto} sizes="48px" />
-          <span>
+          <span className={styles.heroBylineText}>
             <span className={styles.heroBylineName}>{displayName}</span>
             <span className={styles.heroBylineRole}>{profile.role}</span>
           </span>

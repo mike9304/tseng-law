@@ -27,12 +27,19 @@ const STYLE_VALUE_LINE = new RegExp(
   'i',
 );
 const MARKDOWN_RULE_LINE = /^(?:\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)*\|?|-{3,}|\*{3,}|_{3,})$/;
+// Builder node names, tag names and layout keywords that ride along in page bodies
+// (e.g. "faq-answer", "p", "home faq question 8", "absolute", "heroSearch").
+const BUILDER_TOKEN_LINE = new RegExp(
+  '^(?:p|div|span|section|article|header|footer|nav|main|aside|figure|figcaption|h[1-6]|ul|ol|li|a|img|button|strong|em|br|hr|table|thead|tbody|tr|td|th'
+  + '|absolute|relative|fixed|sticky|static|block|inline|inline-block|inline-flex|flex|grid|hidden|visible|wrap|nowrap|row|column|stretch|baseline|pointer'
+  + '|[a-z][a-z0-9]*(?:[-_][a-z0-9]+)+|[a-z]+[A-Z][A-Za-z0-9]+|[a-z]+(?: [a-z]+){1,4} \\d+)$',
+);
 
 function excerptSource(text: string): string {
   return text
     .split('\n')
     .map((line) => line.trim())
-    .filter((line) => line.length > 0 && !STYLE_VALUE_LINE.test(line) && !MARKDOWN_RULE_LINE.test(line))
+    .filter((line) => line.length > 0 && !STYLE_VALUE_LINE.test(line) && !MARKDOWN_RULE_LINE.test(line) && !BUILDER_TOKEN_LINE.test(line))
     .map((line) => line
       .replace(/^>\s?/, '')
       .replace(/^#{1,6}\s+/, '')

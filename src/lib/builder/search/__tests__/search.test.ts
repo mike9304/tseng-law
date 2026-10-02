@@ -104,6 +104,20 @@ describe('search result excerpts', () => {
     expect(hit.highlights[0]).not.toMatch(/#0f172a|system-ui|sans-serif|\bregular\b|\bleft\b|16px/);
   });
 
+  it('leave builder node names, tag names and layout keywords out of the excerpt', () => {
+    const doc: SearchDoc = {
+      id: 'page:zh-hant:faq',
+      kind: 'page',
+      locale: 'zh-hant',
+      title: '首頁',
+      url: '/zh-hant',
+      body: 'faq-answer\np\nhome faq question 8\nabsolute\nheroSearch\n超車事故等過失判斷複雜的案件，建議尋求律師協助。\nflex\nsection',
+    };
+    const [hit] = runSearchQuery({ index: buildSearchIndex([doc]), query: '超車', locale: 'zh-hant' });
+    expect(hit.highlights[0]).toContain('超車');
+    expect(hit.highlights[0]).not.toMatch(/faq-answer|home faq question|\babsolute\b|heroSearch|\bflex\b|\bsection\b|(^|\s)p(\s|$)/);
+  });
+
   it('show column markdown as plain text', () => {
     const doc: SearchDoc = {
       id: 'blog:zh-hant:traffic',

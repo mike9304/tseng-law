@@ -1,4 +1,4 @@
-# R4 right-turn observation publication — 2026-10-03 UTC
+# R4 right-turn observation publication — 2026-10-03 KST (2026-10-02 UTC)
 
 The existing native zh-hant right-turn column now has a separate AI observation section after its original body. It preserves the 12-second orange-car A/teal-motorcycle B diagram, article source, canonical, official links, author, FAQ and structured data. No new article, translation, legal conclusion or replacement of the diagram is introduced.
 

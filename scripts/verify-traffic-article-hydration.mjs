@@ -58,7 +58,7 @@ const proxy = http.createServer((request, response) => {
 await new Promise((resolve) => proxy.listen(0, '127.0.0.1', resolve));
 const base = `http://127.0.0.1:${proxy.address().port}`;
 const check = (ok, message) => { if (!ok) throw new Error(message); };
-const slugs = ['taiwan-accident-family-care-necessity-period', 'taiwan-car-accident-work-loss-rest-note', 'taiwan-accident-assessment-secondary-cause-compensation-ratio', 'taiwan-mediation-delayed-injury-rescission', 'taiwan-car-repair-cost-estimate-parts-depreciation', 'taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
+const slugs = ['taiwan-car-repair-rental-cost-repair-period-evidence', 'taiwan-accident-family-care-necessity-period', 'taiwan-car-accident-work-loss-rest-note', 'taiwan-accident-assessment-secondary-cause-compensation-ratio', 'taiwan-mediation-delayed-injury-rescission', 'taiwan-car-repair-cost-estimate-parts-depreciation', 'taiwan-borrowed-car-owner-driver-key-custody-liability', 'taiwan-chain-rear-end-first-impact-evidence', 'taiwan-bus-sudden-braking-passenger-carrier-liability', 'taiwan-accident-stop-dialogue-hit-and-run-evidence'];
 try {
   for (const [engine, launcher] of [['chromium', chromium], ['firefox', firefox]]) {
     const browser = await launcher.launch({ headless: true });
@@ -109,7 +109,11 @@ try {
         check(response.status() === 200, 'noJS HTTP');
         check(await page.locator('.blog-body').isVisible() && (await page.locator('.blog-body').innerText()).length > 1000, 'visible server article without JavaScript');
         check(await page.locator('script[type="application/ld+json"]').count() >= 2, 'server structured data');
-        if (slug === 'taiwan-accident-family-care-necessity-period') {
+        if (slug === 'taiwan-car-repair-rental-cost-repair-period-evidence') {
+          check(await page.locator('.blog-body table').count() === 0, 'self-contained reviewed prose; optional worksheets not published');
+          check((await page.locator('.blog-body').innerText()).includes('本文未確認是否上訴'), 'first-instance limitations remain visible');
+          check(await page.locator('video, [data-traffic-diagram]').count() === 0, 'no unproduced media');
+        } else if (slug === 'taiwan-accident-family-care-necessity-period') {
           check(await page.locator('.blog-body table').count() === 1, 'one reviewed care-stage table');
           check(await page.locator('.blog-body table thead th').count() === 3, 'three care-stage headers');
           check(await page.locator('.blog-body table tbody tr').count() === 3, 'three reviewed care stages');

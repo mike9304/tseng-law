@@ -190,6 +190,8 @@ export interface ColumnDocumentBundle {
   published: ColumnDocument | null;
   preferred: ColumnDocument | null;
   backend: 'blob' | 'file';
+  /** Calendar date from listColumnBundles' markdown fallback only; never taken from a stored CMS payload. */
+  filePublicationDate?: string;
 }
 
 export interface ColumnListItem {

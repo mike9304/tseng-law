@@ -72,14 +72,24 @@ export async function listAllBlogPosts(locale: Locale): Promise<BlogPost[]> {
  */
 export async function listBlogPosts(locale: Locale): Promise<BlogPost[]> {
   const now = Date.now();
+  // File columns use Taiwan publication days. Interpreting a date-only value as
+  // midnight UTC otherwise hides an already-published article until 08:00 Taipei.
+  // Keep its original metadata; only this eligibility comparison uses the calendar day.
+  const parts = new Intl.DateTimeFormat('en', {
+    timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(now);
+  const today = ['year', 'month', 'day']
+    .map(type => parts.find(part => part.type === type)!.value).join('-');
   const bundles = await listColumnBundles(locale);
   return bundles
+    .filter(({ published, filePublicationDate }) => {
+      if (!published) return false;
+      if (filePublicationDate) return filePublicationDate <= today;
+      const publishedAt = published.frontmatter.publishedAt;
+      return !publishedAt || Date.parse(publishedAt) <= now;
+    })
     .map((bundle) => bundle.published)
     .filter((doc): doc is ColumnDocument => Boolean(doc))
     .filter((doc) => !isInternalColumnPost(doc))
-    .filter((doc) => {
-      const publishedAt = doc.frontmatter.publishedAt;
-      return !publishedAt || Date.parse(publishedAt) <= now;
-    })
     .map(columnToBlogPost);
 }

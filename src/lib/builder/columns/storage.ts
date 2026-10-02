@@ -400,7 +400,14 @@ export async function listColumnBundles(locale: Locale): Promise<ColumnDocumentB
     const published = storedPublished ?? (legacyPost
       ? legacyPostToColumnDocument({ ...legacyPost, locale })
       : null);
-    return { slug, locale, draft, published, preferred: draft ?? published, backend: bundleBackend };
+    return {
+      slug, locale, draft, published, preferred: draft ?? published, backend: bundleBackend,
+      // A file's publication day is editorial metadata, not a CMS scheduling timestamp.
+      // Stored overrides must keep their exact schedule even when a file has the same slug.
+      ...(!storedPublished && legacyPost?.publicationDate
+        ? { filePublicationDate: legacyPost.publicationDate }
+        : {}),
+    };
   }));
   return bundles
     .filter((bundle) => bundle.preferred)

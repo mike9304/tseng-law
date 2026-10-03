@@ -1,4 +1,5 @@
 import generalAccidentCaptions from './general-accident-video-captions.json';
+import overtakingCaptions from './overtaking-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -17,6 +18,22 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  // Independent two-car illustration, not a reconstruction of the article's case.
+  ...Object.fromEntries(Object.entries(overtakingCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `overtaking-cutback-v2-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-overtaking-accident-liability`,
+      {
+        id,
+        src: `/videos/columns/${id}.mp4`,
+        poster: `/images/column-videos/${id}.jpg`,
+        width: 1280,
+        height: 720,
+        ...caption,
+      },
+    ];
+  })),
   // These explicit translations share the reviewed scene, with their own captions.
   // The slug and source remain fixed; this is not a fallback for other articles.
   ...Object.fromEntries(Object.entries(generalAccidentCaptions).map(([locale, caption]) => [

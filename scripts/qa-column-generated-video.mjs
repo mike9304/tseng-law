@@ -5,7 +5,18 @@ import { chromium } from '@playwright/test';
 const base = process.env.COLUMN_VIDEO_QA_BASE || 'http://127.0.0.1:4548';
 const out = process.env.COLUMN_VIDEO_QA_OUT || '/tmp/column-generated-video-qa';
 const generalAccidentCaptions = JSON.parse(await fs.readFile(new URL('../src/data/general-accident-video-captions.json', import.meta.url), 'utf8'));
+const overtakingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/overtaking-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(overtakingCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-overtaking-accident-liability',
+      id: `overtaking-cutback-v2-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `overtaking-cutback-v2-${locale}`, duration: 4, contactTime: 0.5,
+      expectedDiagrams: nativeLocale ? 1 : 0, trafficBoard: nativeLocale,
+      disclosure: caption.disclosure,
+    };
+  }),
   ...['ko', 'en', 'zh-hant', 'ja'].map(locale => ({
     locale, slug: 'taiwan-traffic-accident-procedure', id: `rear-end-simulation-v3-${locale}`,
     duration: 4, contactTime: 1.1,
@@ -171,9 +182,9 @@ try {
       }
       results.push({ viewport, article, locale: item.locale, id: item.id, evidenceStem, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
     }
-    const unreviewed = await page.goto(`${base}/nl/columns/taiwan-overtaking-accident-liability`, { waitUntil: 'load' });
+    const unreviewed = await page.goto(`${base}/ko/columns/taiwan-accident-police-records`, { waitUntil: 'load' });
     assert.equal(unreviewed?.status(), 200);
-    assert.equal(await page.locator('[data-column-generated-video]').count(), 0, 'Unreviewed locale inherited video');
+    assert.equal(await page.locator('[data-column-generated-video]').count(), 0, 'Unreviewed article inherited video');
     await context.close();
   }
   const ranges = [];
@@ -185,7 +196,7 @@ try {
     ranges.push({ id: item.id, status: mp4.status });
   }
   assert.equal(findings.length, 0, findings.join('\n'));
-  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, base, checkedAt: new Date().toISOString(), findings, results, ranges, unreviewedLocaleExcluded: true }, null, 2));
+  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, base, checkedAt: new Date().toISOString(), findings, results, ranges, unreviewedLocaleExcluded: true, unreviewedArticleLanguagePage: '/ko/columns/taiwan-accident-police-records' }, null, 2));
   console.log(JSON.stringify({ ok: true, base, out, journeys: results.length, assets: ranges.length }));
 } catch (error) {
   await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: false, base, error: String(error), findings, results }, null, 2));

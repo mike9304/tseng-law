@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
+import JaPageShell from '@/components/ja-design/JaPageShell';
 import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
@@ -13,6 +14,7 @@ import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module
 import zhSearchStyles from './ZhHantSearch.module.css';
 import EnPageShell from '@/components/en-design/EnPageShell';
 import enStyles from '@/components/en-design/EnSearch.module.css';
+import jaSearchStyles from './JaSearch.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -194,6 +196,8 @@ export default async function SearchPage(
       </div>
     );
   }
+  // ja: the shared 間 shell carries the palette and page header treatment.
+  if (locale === 'ja') return <JaPageShell page="search" className={jaSearchStyles.root}>{body}</JaPageShell>;
   // en (Clear Night inner pages): the same search body inside the en wrapper; other locales render it as before.
   return locale === 'en'
     ? <EnPageShell page="search"><div className={enStyles.search}>{body}</div></EnPageShell>

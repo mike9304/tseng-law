@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import { ZH_VIDEO_CONTROL_ICONS } from '@/components/zh-hant-icons/ZhHantMonoIcon';
@@ -122,6 +123,7 @@ export default function HomeCaseResultsSplit({
   omitLandmarkId = false,
   override,
   hideMedia = false,
+  media,
 }: {
   locale: SiteLocale;
   presentation?: 'editorial';
@@ -129,6 +131,8 @@ export default function HomeCaseResultsSplit({
   override?: HomeCaseResultsOverride;
   /** true (en home design): type only — no poster, no courtroom loop is rendered or loaded. Default false. */
   hideMedia?: boolean;
+  /** Optional media slot (ja design). `null` renders no media column; omitted: the courtroom plate as before. */
+  media?: ReactNode | null;
 }) {
   const copy = override ?? copyByLocale[locale];
   // WO-X1 (EN-16): EN/JA point at the write-up of this very case instead of
@@ -146,7 +150,7 @@ export default function HomeCaseResultsSplit({
       data-tone="dark"
       data-results-media={hideMedia ? 'none' : undefined}
     >
-      {hideMedia ? null : (
+      {hideMedia || media === null ? null : media !== undefined ? media : (
       <div
         className="split-image home-results-media"
         data-builder-node-key="media"

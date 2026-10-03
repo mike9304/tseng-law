@@ -8,6 +8,8 @@ import { resolveSafeNextPath } from '@/lib/safe-next';
 import { buildSeoMetadata } from '@/lib/seo';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
 import zhLoginStyles from '@/components/zh-hant-pages/ZhHantLogin.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
 
 const LOGIN_DESCRIPTIONS: Record<SiteLocale, string> = {
   ko: '회원 계정에 로그인합니다.',
@@ -58,6 +60,8 @@ export default async function MemberLoginPage(
       </div>
     );
   }
+  // ja 昊 V2 inner pages (2026-10-02): the same sign-in block inside the ja wrapper (JaLegal.module.css).
+  if (locale === 'ja') return <JaPageShell page="login" className={jaLegalStyles.root}>{body}</JaPageShell>;
   // en redesign (Opus 5.5 en lane): the same sign-in form in the en wrapper (en type and ink palette).
   return locale === 'en' ? <EnPageShell page="login">{body}</EnPageShell> : body;
 }

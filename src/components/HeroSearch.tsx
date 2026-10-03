@@ -113,6 +113,23 @@ const jaHeroTitlePhrases: Record<string, readonly string[]> = {
   '台湾の会社設立・労務・紛争を、日本語で。': ['台湾の会社設立・', '労務・', '紛争を、', '日本語で。'],
 };
 
+// ja only: keep the audience noun phrase 在台日本人の方 on one line (text unchanged, only wrapped in a no-break span).
+function JaNoBreakPhrases({ locale, text }: { locale: SiteLocale; text: string }) {
+  const phrase = '在台日本人の方';
+  if (locale !== 'ja' || !text.includes(phrase)) return <>{text}</>;
+  const parts = text.split(phrase);
+  return (
+    <>
+      {parts.map((part, index) => (
+        <span key={index} style={{ display: 'contents' }}>
+          {index > 0 ? <span style={{ whiteSpace: 'nowrap' }}>{phrase}</span> : null}
+          {part}
+        </span>
+      ))}
+    </>
+  );
+}
+
 function HeroTitleBody({ locale, title }: { locale: SiteLocale; title: string }) {
   const phrases = locale === 'ja' ? jaHeroTitlePhrases[title] : undefined;
   if (!phrases) return <>{title}</>;
@@ -298,7 +315,7 @@ export default function HeroSearch({
             </SectionLabel>
             {titleSurface}
             <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
-              {keyedSubtitle ?? <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>}
+              {keyedSubtitle ?? <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}><JaNoBreakPhrases locale={locale} text={hero.subtitle} /></SurfaceText>}
             </p>
             {lead ? (
               <Link href={profilePath} className={styles.byline} data-hero-slot="byline">
@@ -340,7 +357,7 @@ export default function HeroSearch({
           </SectionLabel>
           {titleSurface}
           <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
-            <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
+            <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}><JaNoBreakPhrases locale={locale} text={hero.subtitle} /></SurfaceText>
           </p>
           {ctaGroup('dark')}
           <HeroTrustStrip locale={locale} tone="dark" />

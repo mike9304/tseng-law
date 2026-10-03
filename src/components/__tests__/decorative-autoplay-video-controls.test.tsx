@@ -124,7 +124,7 @@ describe('DecorativeAutoplayVideo playback controls', () => {
       path.join(process.cwd(), 'src/components/DecorativeAutoplayVideo.tsx'),
       'utf8',
     );
-    expect(source).toContain('}, [inViewport, playbackState, shouldMountVideo, useMobileSources]);');
+    expect(source).toContain('}, [inViewport, paused, playbackState, shouldMountVideo, useMobileSources]);');
     expect(source).toContain('handleDecorativeVideoCanPlay(videoRef.current, {');
   });
 

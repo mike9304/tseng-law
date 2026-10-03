@@ -7,7 +7,7 @@ import { AboutLegacyPageBody } from '../legacy-page-bodies';
 import { getLegacyPageMetadata, renderLegacyPage } from '../index';
 import AttorneyProfileSection from '@/components/AttorneyProfileSection';
 import ContactBlocks from '@/components/ContactBlocks';
-import FirmIntroductionSection from '@/components/FirmIntroductionSection';
+import JaAboutFirm from '@/components/ja-design/JaAboutFirm';
 import { pageCopy } from '@/data/page-copy';
 
 const SITE_URL = 'https://tseng-law.com';
@@ -103,7 +103,8 @@ describe('Japanese About integration', () => {
     const body = AboutLegacyPageBody({ locale: 'ja' }) as ReactElement<{ children: ReactNode }>;
     const children = Children.toArray(body.props.children) as ReactElement<{ locale?: string }>[];
     const localeChildren = [
-      children.find(({ type }) => type === FirmIntroductionSection),
+      // ja 昊 V2 (2026-10-02): the firm block is the ja firm section over the same firmIntroductionContent.ja.
+      children.find(({ type }) => type === JaAboutFirm),
       children.find(({ type }) => type === AttorneyProfileSection),
       children.find(({ type }) => type === ContactBlocks),
     ];

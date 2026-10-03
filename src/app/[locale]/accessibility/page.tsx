@@ -8,6 +8,8 @@ import { legalPageContent } from '@/data/legal-pages';
 import LegalPageSections from '@/components/LegalPageSections';
 import JsonLd from '@/components/JsonLd';
 import { buildBreadcrumbJsonLd, buildSeoMetadata } from '@/lib/seo';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -39,7 +41,7 @@ export default async function AccessibilityPage(props: { params: Promise<{ local
   const locale = normalizeSiteLocale(params.locale);
   const content = legalPageContent[locale].accessibility;
 
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -59,4 +61,6 @@ export default async function AccessibilityPage(props: { params: Promise<{ local
       <LegalPageSections locale={locale} content={content} />
     </>
   );
+  // ja 昊 V2 inner pages (2026-10-02): the same blocks inside the ja wrapper (JaLegal.module.css).
+  return locale === 'ja' ? <JaPageShell page="accessibility" className={jaLegalStyles.root}>{body}</JaPageShell> : body;
 }

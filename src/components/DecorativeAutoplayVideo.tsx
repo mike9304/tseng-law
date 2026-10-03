@@ -53,6 +53,17 @@ export type DecorativeAutoplayVideoProps = {
   rootMargin?: string;
   loop?: boolean;
   controlLabels: DecorativeVideoControlLabels;
+  /**
+   * Optional: hold playback as if the video were out of view (e.g. while a
+   * scroll stage covers it with the poster). Omitted: unchanged behaviour.
+   */
+  paused?: boolean;
+  /**
+   * Optional: serve the pre-encoded poster file as is instead of through the
+   * image optimizer (avoids a cold re-encode of an above-the-fold poster).
+   * Omitted: next/image optimisation as before.
+   */
+  posterUnoptimized?: boolean;
   /** Optional glyphs for the control (zh-hant: the monoline set). Without them the control shows Ⅱ ▶ ↻ as before. */
   controlIcons?: DecorativeVideoControlIcons;
 };
@@ -265,6 +276,8 @@ export function DecorativeAutoplayVideo({
   loop = true,
   controlLabels = DECORATIVE_VIDEO_CONTROL_LABELS.ko,
   controlIcons,
+  paused = false,
+  posterUnoptimized = false,
 }: DecorativeAutoplayVideoProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLImageElement>(null);
@@ -466,11 +479,11 @@ export function DecorativeAutoplayVideo({
     if (!shouldMountVideo || !video) return;
 
     syncDecorativeVideoPlayback(video, {
-      inViewport,
+      inViewport: inViewport && !paused,
       ...playbackState,
     });
     // useMobileSources keys the <video>: re-apply the state to the replacement element.
-  }, [inViewport, playbackState, shouldMountVideo, useMobileSources]);
+  }, [inViewport, paused, playbackState, shouldMountVideo, useMobileSources]);
 
   const imageSizing =
     typeof width === 'number' && typeof height === 'number'
@@ -492,7 +505,7 @@ export function DecorativeAutoplayVideo({
     if (!video) return;
 
     setPlaybackState(
-      runDecorativeVideoControlActivation(video, playbackState, inViewport),
+      runDecorativeVideoControlActivation(video, playbackState, inViewport && !paused),
     );
   };
 
@@ -523,6 +536,7 @@ export function DecorativeAutoplayVideo({
           // poster eager/high-priority without emitting that unconditional
           // preload.
           priority={false}
+          {...(posterUnoptimized ? { unoptimized: true } : {})}
           fetchPriority={priority ? 'high' : undefined}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
@@ -558,7 +572,7 @@ export function DecorativeAutoplayVideo({
             setReadyMountId(mount.id);
             setControlRevealed(true);
             handleDecorativeVideoCanPlay(videoRef.current, {
-              inViewport,
+              inViewport: inViewport && !paused,
               ...playbackState,
             });
           }}

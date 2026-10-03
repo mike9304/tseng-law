@@ -40,6 +40,11 @@ import zhStyles from './ZhHantLawyerProfile.module.css';
 import jaStyles from './JaLawyerProfile.module.css';
 import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import JaPageRail from '@/components/ja-design/JaPageRail';
+import JaProfileHeader from '@/components/ja-design/JaProfileHeader';
+
+/** Existing label of the in-page index on the ja service pages (CONCEPT-V2 §13.2). */
+const JA_PROFILE_INDEX_LABEL = 'このページの内容';
 import enStyles from './EnLawyerProfile.module.css';
 import EnPageShell, { EnEmailButton, EnGlance } from '@/components/en-design/EnPageShell';
 import { getPricingContent } from '@/components/PricingCards';
@@ -251,7 +256,16 @@ export default async function LawyerProfilePage(
         </>
       ) : null}
 
-      {showHero ? (
+      {showHero && locale === 'ja' ? (
+        // ja 昊 V2 (2026-10-02): the profile header is a night tile with the portrait (same title, lede, breadcrumb).
+        <JaProfileHeader
+          title={profile.heading ?? profile.title}
+          lede={profile.lede ?? profile.description}
+          image={profile.image}
+          imageAlt={profile.imageAltText}
+          focalPoint={profile.imageFocalPoint}
+        />
+      ) : showHero ? (
         <PageHeader
           locale={locale}
           label={locale === 'en' ? profile.role : labels.pageLabel}
@@ -275,6 +289,20 @@ export default async function LawyerProfilePage(
         <>
           <section className={`section section--light ${styles.root}${locale === 'en' ? ` ${enStyles.body}` : ''}`}>
             <div className={`container ${styles.container}`}>
+              {locale === 'ja' ? (
+                <JaPageRail
+                  className={jaStyles.rail}
+                  label={JA_PROFILE_INDEX_LABEL}
+                  items={[
+                    { id: 'profile-facts', label: labels.facts },
+                    { id: 'profile-matters', label: labels.matters },
+                    { id: 'profile-links', label: labels.internalLinks },
+                    { id: 'profile-external', label: labels.externalProfiles },
+                    { id: 'profile-education', label: labels.education },
+                    { id: 'profile-experience', label: labels.experience },
+                  ]}
+                />
+              ) : null}
               <div className={`profile-hero-card ${styles.heroCard}`}>
                 <div className={`profile-hero-photo ${styles.heroPhoto}`}>
                   <Image
@@ -340,7 +368,7 @@ export default async function LawyerProfilePage(
               </div>
 
               <div className={`profile-card-grid ${styles.cardGrid}`}>
-                <article className={`profile-info-card ${styles.infoCard}`}>
+                <article className={`profile-info-card ${styles.infoCard}`} id={locale === 'ja' ? 'profile-facts' : undefined}>
                   <h3 className="profile-card-title">{labels.facts}</h3>
                   <ul className="attorney-list">
                     {profile.practiceAreas.map((item) => (
@@ -349,7 +377,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className={`profile-info-card ${styles.infoCard}`}>
+                <article className={`profile-info-card ${styles.infoCard}`} id={locale === 'ja' ? 'profile-matters' : undefined}>
                   <h3 className="profile-card-title">{labels.matters}</h3>
                   <ul className="attorney-list">
                     {profile.notableMatters.map((item) => (
@@ -358,7 +386,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className={`profile-info-card ${styles.infoCard}`}>
+                <article className={`profile-info-card ${styles.infoCard}`} id={locale === 'ja' ? 'profile-links' : undefined}>
                   <h3 className="profile-card-title">{labels.internalLinks}</h3>
                   <ul className="profile-link-list">
                     {profile.internalLinks.map((item) => (
@@ -371,7 +399,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className={`profile-info-card ${styles.infoCard}`}>
+                <article className={`profile-info-card ${styles.infoCard}`} id={locale === 'ja' ? 'profile-external' : undefined}>
                   <h3 className="profile-card-title">{labels.externalProfiles}</h3>
                   <ul className="profile-link-list">
                     {profile.externalProfiles.map((item) => (
@@ -386,7 +414,7 @@ export default async function LawyerProfilePage(
               </div>
 
               <div className={`profile-card-grid ${styles.cardGrid}`}>
-                <article className={`profile-info-card ${styles.infoCard}`}>
+                <article className={`profile-info-card ${styles.infoCard}`} id={locale === 'ja' ? 'profile-education' : undefined}>
                   <h3 className="profile-card-title">{labels.education}</h3>
                   <ul className="attorney-list">
                     {profile.education.map((item) => (
@@ -395,7 +423,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className={`profile-info-card ${styles.infoCard}`}>
+                <article className={`profile-info-card ${styles.infoCard}`} id={locale === 'ja' ? 'profile-experience' : undefined}>
                   <h3 className="profile-card-title">{labels.experience}</h3>
                   <ul className="attorney-list">
                     {profile.experience.map((item) => (

@@ -10,6 +10,8 @@ import {
 import styles from './NotFound.module.css';
 import EnPageShell from '@/components/en-design/EnPageShell';
 import enStyles from '@/components/en-design/EnNotFound.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
 import { GuidanceNotFoundBody } from '@/components/GuidancePageBody';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
@@ -67,6 +69,8 @@ export default async function LocalizedNotFound() {
       </div>
     </section>
   );
+  // ja 昊 V2 inner pages (2026-10-02): the same 404 block inside the ja wrapper (JaLegal.module.css).
+  if (locale === 'ja') return <JaPageShell page="not-found" className={jaLegalStyles.root}>{body}</JaPageShell>;
   // en (Clear Night inner pages): the same 404 body inside the en wrapper; other locales render it as before.
   return locale === 'en'
     ? <EnPageShell page="not-found"><div className={enStyles.notFound}>{body}</div></EnPageShell>

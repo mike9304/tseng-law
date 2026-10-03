@@ -17,6 +17,8 @@ import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import styles from './IntentLandingPage.module.css';
 import EnPageShell from '@/components/en-design/EnPageShell';
 import enStyles from '@/components/en-design/EnLanding.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLandingStyles from '@/components/ja-design/JaLanding.module.css';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 import {
   getConsultationCtaLabel,
@@ -886,6 +888,8 @@ export default function IntentLandingPage({
       </div>
     );
   }
+  // ja 昊 V2 inner pages (2026-10-02): same blocks inside the ja wrapper, restyled by JaLanding.module.css.
+  if (locale === 'ja') return <JaPageShell page="landing" className={jaLandingStyles.root}>{body}</JaPageShell>;
   // en (Clear Night inner pages): the same landing body inside the en wrapper; other locales render it as before.
   return locale === 'en'
     ? <EnPageShell page="landing"><div className={enStyles.landing}>{body}</div></EnPageShell>

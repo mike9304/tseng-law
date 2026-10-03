@@ -1,0 +1,475 @@
+/*
+ * ja traffic-accident hub, 昊 V2 (2026-10-04; CONCEPT-V2 §3, §7, §9) on the filterable board.
+ * TrafficPageView renders the shared blocks inside JaPageShell page="traffic" (#ja-traffic) with these classes
+ * in place of traffic.module.css on ja only; copy, links, JSON-LD and the board's GET filters are unchanged.
+ * - Header: quiet Japanese label, the two authored lines of the H1 as two Mincho tiers, lede, the existing
+ *   vermilion pill and a chevron text link, then the patterned-glass band (JaHeaderBand, JaPagesV2).
+ * - Board (TrafficBoard markup, styled through its data hooks): a filled search pill, 44 px subject chips and the
+ *   video toggle chip, a quiet result count, and every result as a type-led glyph tile (subject, date, read time,
+ *   the title, a three-line summary, one pale kanji of its subject; the decorative thumbnail is not shown).
+ * - The looping diagram in a rounded media tile with a 44 px round pause control; captions as a reading column.
+ * - The four country notes as tiles (Taiwan, which links into our own columns, as the night tile).
+ * - The consult block as the dusk closing tile (JaClosingTile).
+ * Every selector is scoped under .root#ja-traffic; motion is transform/opacity only and only with motion allowed.
+ */
+.root:global(#ja-traffic) {
+  /* section edge as padding (§3.1): 100 at 1440, 240 at 1920, the V2 gutter below 1200 */
+  --tr-edge: max(var(--page-gutter), calc((100% - var(--max-width)) / 2));
+  --tr-card-pad: 36px;
+  --tr-glyph: clamp(240px, 20vw, 320px);
+}
+.root:global(#ja-traffic) .page { background: var(--ja-stage); color: var(--ja-text); }
+
+/* ---------- Header (§9): label, two-tier Mincho H1, lede, pill + chevron link, then the band ---------- */
+.root:global(#ja-traffic) .hero { padding: clamp(28px, 3.4vw, 56px) 0 0; background: var(--ja-stage); }
+.root:global(#ja-traffic) .inner { width: min(var(--max-width), calc(100% - var(--page-gutter) * 2)); margin-inline: auto; }
+.root:global(#ja-traffic) .kicker {
+  margin: 0 0 clamp(16px, 2.4vw, 36px);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--ja-grey);
+}
+.root:global(#ja-traffic) .title {
+  margin: 0;
+  font-family: var(--ja-mincho);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  /* the authored line break is the boundary between the two tier blocks */
+  white-space: normal;
+}
+.root:global(#ja-traffic) .titleLead { display: block; font-size: clamp(48px, 6.6vw, 112px); line-height: 1.12; }
+.root:global(#ja-traffic) .titleSub { display: block; margin-top: 0.5em; font-size: clamp(26px, 3.1vw, 52px); line-height: 1.3; }
+.root:global(#ja-traffic) .intro {
+  max-width: 34em;
+  margin: clamp(18px, 2.2vw, 32px) 0 0;
+  font-size: clamp(17px, 1.55vw, 22px);
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  color: var(--ja-text);
+}
+.root:global(#ja-traffic) .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin-top: clamp(24px, 3vw, 40px); }
+@media (prefers-reduced-motion: no-preference) {
+  .root:global(#ja-traffic) .title { animation: trRise 800ms var(--ja-ease-reveal) both; }
+  .root:global(#ja-traffic) .intro,
+  .root:global(#ja-traffic) .actions { animation: trFade 600ms var(--ja-ease) 260ms both; }
+}
+
+/* ---------- Bands under the header: full width, content inset by the V2 edge ---------- */
+.root:global(#ja-traffic) .body { width: 100%; margin: 0; padding: 0; }
+.root:global(#ja-traffic) .board,
+.root:global(#ja-traffic) .visual,
+.root:global(#ja-traffic) .countriesSection { padding-inline: var(--tr-edge); }
+/* html pads anchor jumps by the header height; the band's own top padding is the breathing room after a filter link. */
+.root:global(#ja-traffic) .board { padding-top: clamp(48px, 5vw, 80px); scroll-margin-top: 0; }
+.root:global(#ja-traffic) .visual { padding-top: var(--ja-sec); }
+.root:global(#ja-traffic) .countriesSection { padding-block: var(--ja-sec); }
+.root:global(#ja-traffic) :is(.heading, .visualIntro, .countriesSection) h2 {
+  margin: 0;
+  font-family: var(--ja-gothic);
+  font-size: clamp(30px, 3.9vw, 56px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  text-wrap: balance;
+}
+.root:global(#ja-traffic) .heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 32px;
+  margin: 0 0 clamp(28px, 3.4vw, 48px);
+}
+.root:global(#ja-traffic) :is(.visualIntro p, .sectionIntro) {
+  max-width: 34em;
+  margin: 16px 0 0;
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  color: var(--ja-text);
+}
+
+/* ---------- Board (TrafficBoard markup through its data hooks) ---------- */
+.root:global(#ja-traffic) :global([data-traffic-board]) {
+  --tb-ink: var(--ja-ink);
+  --tb-accent: var(--ja-ink);
+  --tb-text: var(--ja-text);
+  --tb-muted: var(--ja-grey);
+  --tb-line: var(--ja-rule);
+  --tb-tint: var(--ja-tile);
+  gap: clamp(20px, 2.2vw, 32px);
+}
+/* search: a filled pill and the sumi submit, as on /ja/search and /ja/columns */
+.root:global(#ja-traffic) :global([data-traffic-board] > form label) {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ja-grey);
+}
+.root:global(#ja-traffic) :global([data-traffic-board] > form > div) { max-width: 760px; gap: 8px; }
+.root:global(#ja-traffic) :global([data-traffic-board] > form input[type='search']) {
+  min-height: 56px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--ja-tile);
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  color: var(--ja-ink);
+}
+.root:global(#ja-traffic) :global([data-traffic-board] > form input[type='search'])::placeholder { color: var(--ja-grey); opacity: 1; }
+.root:global(#ja-traffic) :global([data-traffic-board] > form input[type='search']:focus) { border-color: var(--ja-ink); background: #fff; }
+.root:global(#ja-traffic) :global([data-traffic-board] > form button) {
+  min-width: 88px;
+  min-height: 56px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--ja-ink);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+@media (hover: hover) { .root:global(#ja-traffic) :global([data-traffic-board] > form button:hover) { background: var(--ja-text); } }
+
+/* filters: the subject legend as a quiet label, 44 px filled chips (sumi when current), the video toggle chip */
+.root:global(#ja-traffic) :global([data-traffic-board] > nav) { gap: 12px 8px; }
+.root:global(#ja-traffic) :global([data-traffic-board] > nav > p) { margin: 0 12px 0 0; font-size: 17px; font-weight: 600; letter-spacing: 0.02em; color: var(--ja-grey); }
+.root:global(#ja-traffic) :global([data-traffic-board] > nav a) {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ja-tile);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ja-ink);
+  transition: background-color 200ms linear;
+}
+@media (hover: hover) { .root:global(#ja-traffic) :global([data-traffic-board] > nav a:hover) { background: var(--ja-tile-press); } }
+.root:global(#ja-traffic) :global([data-traffic-board] > nav a[aria-current='true']) { background: var(--ja-ink); color: #fff; }
+.root:global(#ja-traffic) :global([data-traffic-board] > nav a > span:not([aria-hidden])) { font-size: 15px; font-weight: 500; color: var(--ja-grey); }
+.root:global(#ja-traffic) :global([data-traffic-board] > nav a[aria-current='true'] > span:not([aria-hidden])) { color: rgb(255 255 255 / 0.76); }
+.root:global(#ja-traffic) :global([data-traffic-board] > nav > a > span[aria-hidden]) { width: 18px; height: 18px; border-width: 1.5px; border-radius: 6px; font-size: 12px; }
+@media (min-width: 768px) {
+  .root:global(#ja-traffic) :global([data-traffic-board] > nav > a) { margin-left: auto; }
+}
+
+/* result count and the clear link: quiet type, no rules */
+.root:global(#ja-traffic) :global([data-traffic-board] > nav + div) { align-items: center; padding: 0; border: 0; }
+.root:global(#ja-traffic) :global([data-traffic-board] [role='status']) { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: 0.04em; color: var(--ja-grey); }
+.root:global(#ja-traffic) :global([data-traffic-board] a:is([data-traffic-board-clear], [data-traffic-board-empty] a)) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ja-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* results: type-led glyph tiles */
+.root:global(#ja-traffic) :global([data-traffic-board] > ul) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ja-gap); }
+.root:global(#ja-traffic) :global([data-traffic-board-row]) {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: clamp(320px, 27vw, 400px);
+  padding: var(--tr-card-pad);
+  border: 0;
+  border-radius: var(--ja-r);
+  background: var(--ja-tile);
+  transition: scale 300ms var(--ja-ease), background-color 200ms linear;
+}
+@media (hover: hover) { .root:global(#ja-traffic) :global([data-traffic-board-row]:hover) { scale: 1.015; } }
+.root:global(#ja-traffic) :global([data-traffic-board-row]:active) { background: var(--ja-tile-press); }
+/* the thumbnail is decorative (aria-hidden, alt ''); the glyph tile is type-led, so it is not shown */
+.root:global(#ja-traffic) :global([data-traffic-board-row] > div:first-child[aria-hidden]) { display: none; }
+.root:global(#ja-traffic) :global([data-traffic-board-row] > div:last-child) { display: flex; flex: 1 1 auto; flex-direction: column; gap: 0; }
+.root:global(#ja-traffic) :global([data-traffic-board-row] h3) {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  font-size: clamp(21px, 1.8vw, 26px);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+.root:global(#ja-traffic) :global([data-traffic-board-row]:hover h3 a) { text-decoration: none; }
+.root:global(#ja-traffic) :global([data-traffic-board-row] h3 + p:not(:last-child)) {
+  margin: 14px 0 0;
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  color: var(--ja-text);
+  /* a clamped excerpt fills its lines (the site-wide pretty wrapping leaves narrow tiles ragged) */
+  text-wrap: wrap;
+  -webkit-line-clamp: 3;
+}
+/* subject, date, read time and the video mark read first, as the tile's top line */
+.root:global(#ja-traffic) :global([data-traffic-board-row] > div:last-child > p:last-child) {
+  order: -1;
+  gap: 2px 14px;
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ja-grey);
+}
+.root:global(#ja-traffic) :global([data-traffic-board-row] > div:last-child > p:last-child > span:first-child) {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  font-weight: 600;
+  color: var(--ja-ink);
+}
+.root:global(#ja-traffic) :global([data-traffic-board-video]) { font-weight: 600; color: var(--ja-ink); }
+/* one pale kanji of the subject, bleeding off the corner, under the text (decorative, empty alt) */
+.root:global(#ja-traffic) :global([data-traffic-board-row])::before {
+  content: '交' / '';
+  position: absolute;
+  right: -0.1em;
+  bottom: -0.3em;
+  z-index: -1;
+  font-family: var(--ja-mincho);
+  font-size: var(--tr-glyph);
+  font-weight: 600;
+  line-height: 1;
+  color: rgb(20 18 16 / 0.055);
+  pointer-events: none;
+}
+.root:global(#ja-traffic) :global([data-ja-subject='procedure'])::before { content: '手' / ''; }
+.root:global(#ja-traffic) :global([data-ja-subject='evidence'])::before { content: '証' / ''; }
+.root:global(#ja-traffic) :global([data-ja-subject='liability'])::before { content: '責' / ''; }
+.root:global(#ja-traffic) :global([data-ja-subject='compensation'])::before { content: '償' / ''; }
+/* the whole tile is the title link's hit area, so the focus ring goes round the tile */
+@supports selector(:has(a)) {
+  .root:global(#ja-traffic) :global([data-traffic-board-row] h3 a:focus-visible) { outline: none !important; }
+  .root:global(#ja-traffic) :global([data-traffic-board-row]:has(h3 a:focus-visible)) { outline: 3px solid var(--ja-ink); outline-offset: 3px; }
+}
+.root:global(#ja-traffic) :global([data-traffic-board-empty]) { padding: var(--tr-card-pad); border-radius: var(--ja-r); background: var(--ja-tile); }
+.root:global(#ja-traffic) :global([data-traffic-board-empty] p) { margin: 0 0 8px; font-size: 19px; line-height: 1.8; color: var(--ja-text); }
+
+/* ---------- The looping diagram and its captions in one media tile: the white film sits inset on the fill ---------- */
+.root:global(#ja-traffic) .visual :global(figure[data-traffic-diagram]) {
+  --tr-media-inset: clamp(10px, 1.4vw, 20px);
+  margin: clamp(28px, 3vw, 44px) 0 0;
+  padding: var(--tr-media-inset);
+  border-radius: var(--ja-r);
+  background: var(--ja-tile);
+}
+.root:global(#ja-traffic) .visual :global(figure[data-traffic-diagram] > div:first-child) {
+  overflow: clip;
+  border-radius: calc(var(--ja-r) - var(--tr-media-inset));
+  background: #fff;
+}
+.root:global(#ja-traffic) .visual :global(figcaption) {
+  display: grid;
+  gap: 10px;
+  max-width: 46em;
+  margin: 0;
+  padding: clamp(20px, 2.4vw, 32px) clamp(10px, 1.6vw, 24px) clamp(10px, 1.2vw, 16px);
+  font-size: 17px;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  color: var(--ja-text);
+}
+.root:global(#ja-traffic) .visual :global(figcaption > span) { color: var(--ja-text); font-weight: 400; }
+.root:global(#ja-traffic) .visual :global(figcaption [data-traffic-diagram-assumption]) {
+  margin-top: 6px;
+  padding: 16px 22px;
+  border: 0;
+  border-radius: 18px;
+  background: #fff;
+}
+/* pause control (§7.1): a 44 px round control at the lower left of the tile, the label kept for assistive tech */
+.root:global(#ja-traffic) .visual :global(.decorative-autoplay-video__control) {
+  inset: auto auto 24px 24px;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  gap: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(20 18 16 / 0.55);
+  box-shadow: none;
+  color: #fff;
+}
+.root:global(#ja-traffic) .visual :global(.decorative-autoplay-video__control:hover) { background: rgb(20 18 16 / 0.72); color: #fff; }
+.root:global(#ja-traffic) .visual :global(.decorative-autoplay-video__control:focus-visible) { box-shadow: 0 0 0 2px #fff; }
+.root:global(#ja-traffic) .visual :global(.decorative-autoplay-video__control-icon) { min-width: 0; color: #fff; font-size: 15px; }
+.root:global(#ja-traffic) .visual :global(.decorative-autoplay-video__control > span:last-child) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Country notes as tiles; Taiwan (our own columns) as the night tile ---------- */
+.root:global(#ja-traffic) .countries { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--ja-gap); margin-top: clamp(28px, 3.4vw, 48px); }
+.root:global(#ja-traffic) .countries article {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(28px, 2.6vw, 36px);
+  border-radius: var(--ja-r);
+  background: var(--ja-tile);
+}
+.root:global(#ja-traffic) .countries h3 {
+  margin: 0;
+  font-size: clamp(22px, 2.1vw, 30px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+}
+.root:global(#ja-traffic) .countries p { margin: 12px 0 20px; font-size: 17px; line-height: 1.8; color: var(--ja-text); }
+/* short notes in narrow tiles fill their lines (WebKit's pretty wrapping leaves them half empty); :not(#_) lifts this
+   above the site-wide ja pretty rule in globals.css */
+.root:global(#ja-traffic) .countries p:not(#_) { text-wrap: wrap; }
+.root:global(#ja-traffic) .countries a {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: auto;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ja-ink);
+  text-decoration: none;
+}
+@media (hover: hover) { .root:global(#ja-traffic) .countries a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; } }
+.root:global(#ja-traffic) .countries .taiwan { background: var(--ja-night); }
+.root:global(#ja-traffic) .countries .taiwan h3,
+.root:global(#ja-traffic) .countries .taiwan a { color: #fff; }
+.root:global(#ja-traffic) .countries .taiwan p { color: var(--ja-night-text); }
+.root:global(#ja-traffic) .countries .taiwan a::after { background: #fff; }
+.root:global(#ja-traffic) .countries .taiwan a:focus-visible { outline-color: #fff !important; }
+
+/* ---------- The consult block in the dusk closing tile ---------- */
+.root:global(#ja-traffic) .closingTitle {
+  margin: 0;
+  font-size: clamp(26px, 2.8vw, 40px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  text-wrap: balance;
+}
+.root:global(#ja-traffic) .closingText { max-width: 30em; margin: 16px 0 0; font-size: 17px; line-height: 1.85; color: var(--ja-text); }
+.root:global(#ja-traffic) .closingAction { display: flex; margin-top: clamp(24px, 3vw, 40px); }
+@media (min-width: 768px) { .root:global(#ja-traffic) .closingAction { width: fit-content; } }
+
+/* ---------- Narrower screens ---------- */
+/* below 1200 a third of the content is too narrow for a title and its summary: two tiles a row */
+@media (max-width: 1199px) {
+  .root:global(#ja-traffic) .countries,
+  .root:global(#ja-traffic) :global([data-traffic-board] > ul) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* the closing copy stays left of the dusk light square while the tile is a landscape frame */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .root:global(#ja-traffic) :is(.closingTitle, .closingText) { max-width: min(30em, 52%); }
+}
+@media (max-width: 1023px) {
+  .root:global(#ja-traffic) { --tr-card-pad: 30px; }
+}
+@media (max-width: 767px) {
+  .root:global(#ja-traffic) { --tr-card-pad: 24px; --tr-glyph: 200px; }
+  /* 台湾で交通事故に stays on one line down to 320 px (even beside a classic scrollbar); the second tier keeps
+     its authored line whole */
+  .root:global(#ja-traffic) .titleLead { font-size: clamp(30px, 10vw, 40px); line-height: 1.2; }
+  .root:global(#ja-traffic) .titleSub { margin-top: 0.6em; font-size: clamp(20px, 6.1vw, 24px); }
+  .root:global(#ja-traffic) .intro { font-size: 17px; }
+  .root:global(#ja-traffic) .actions { flex-direction: column; align-items: stretch; gap: 8px; }
+  .root:global(#ja-traffic) .actions > a:last-child { justify-content: center; }
+  /* the whole placeholder fits beside the button at 320 (16 px keeps iOS from zooming on focus) */
+  .root:global(#ja-traffic) :global([data-traffic-board] > form input[type='search']) { padding: 0 18px; font-size: 16px; }
+  .root:global(#ja-traffic) :global([data-traffic-board] > form button) { min-width: 0; padding: 0 18px; }
+  .root:global(#ja-traffic) :global([data-traffic-board] > nav > p) { flex: 1 0 100%; margin: 0; }
+  .root:global(#ja-traffic) :global([data-traffic-board] > ul),
+  .root:global(#ja-traffic) .countries { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#ja-traffic) :global([data-traffic-board-row]) { min-height: 0; }
+  /* one tile per row: the whole title shows */
+  .root:global(#ja-traffic) :global([data-traffic-board-row] h3) { display: block; overflow: visible; -webkit-line-clamp: none; }
+  .root:global(#ja-traffic) :global([data-traffic-board-row] h3 + p:not(:last-child)) { -webkit-line-clamp: 4; }
+  .root:global(#ja-traffic) .visual :global(.decorative-autoplay-video__control) { inset: auto auto 16px 16px; }
+  .root:global(#ja-traffic) .visual :global(figcaption [data-traffic-diagram-assumption]) { padding: 14px 16px; border-radius: 14px; }
+}
+
+/* ---------- Fusuma entrances (§8.4): fill-mode none, so captures, print and reduced motion show the final state ---------- */
+@supports (animation-timeline: view()) {
+  /* three tiles a row: the first from the left, the third from the right; four country tiles: two and two */
+  @media (prefers-reduced-motion: no-preference) and (min-width: 1200px) {
+    .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(3n + 1)),
+    .root:global(#ja-traffic) .countries article:is(:nth-child(4n + 1), :nth-child(4n + 2)) {
+      animation: trSlideL linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(3n)),
+    .root:global(#ja-traffic) .countries article:is(:nth-child(4n + 3), :nth-child(4n)) {
+      animation: trSlideR linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+  /* two tiles a row */
+  @media (prefers-reduced-motion: no-preference) and (min-width: 768px) and (max-width: 1199px) {
+    .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(odd)),
+    .root:global(#ja-traffic) .countries article:nth-child(odd) {
+      animation: trSlideL linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(even)),
+    .root:global(#ja-traffic) .countries article:nth-child(even) {
+      animation: trSlideR linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) and (max-width: 767px) {
+    .root:global(#ja-traffic) :global([data-traffic-board] > ul > li),
+    .root:global(#ja-traffic) .countries article {
+      animation: trSlideLs linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+}
+@keyframes trRise { from { opacity: 0.15; translate: 0 0.14em; } to { opacity: 1; translate: 0 0; } }
+@keyframes trFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes trSlideL { from { translate: -40px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
+@keyframes trSlideR { from { translate: 40px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
+@keyframes trSlideLs { from { translate: -16px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
+
+@media (forced-colors: active) {
+  .root:global(#ja-traffic) .countries article,
+  .root:global(#ja-traffic) :global([data-traffic-board-row]),
+  .root:global(#ja-traffic) :global([data-traffic-board-empty]) { border: 1px solid CanvasText; }
+}

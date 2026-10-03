@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import { getColumnPost, getAllColumnPosts } from '../columns';
-import { buildTrafficCollection } from '../traffic-collection';
+import { buildTrafficCollection, filterTrafficBoardItems } from '../traffic-collection';
+import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 
 const slug = 'taiwan-borrowed-car-owner-driver-key-custody-liability';
 
@@ -29,13 +30,19 @@ describe('reviewed borrowed-car liability column', () => {
     expect(body).toContain('施行日期由行政院另定');
   });
 
-  it('includes only one native liability article, with the approved photo and reviewed film', () => {
+  it('includes the reviewed long film only on the native liability article', () => {
     const matches = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] }).filter(p => p.slug === slug);
     expect(matches).toHaveLength(1);
     expect(matches[0]).toMatchObject({ subject: 'liability', hasVideo: true, columnNumber: 80, aiAuthored: true });
+    expect(filterTrafficBoardItems(matches, { q: '', subject: 'liability', video: true })).toHaveLength(1);
+    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('borrowed-car-film-v1-zh-hant');
+    expect(getColumnGeneratedVideo('zh-hant', slug, 'issue')).toBeNull();
     const post = getColumnPost(slug, 'zh-hant')!;
     expect(post.diagramVideo).toBeUndefined();
     expect(post.featuredImage).toBe('/images/columns/20261002/borrowed-car-liability-hero-1600x900.webp');
-    for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
+    for (const locale of ['ko', 'en', 'ja'] as const) {
+      expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
+      expect(getColumnGeneratedVideo(locale, slug)).toBeNull();
+    }
   });
 });

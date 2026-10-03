@@ -246,18 +246,21 @@ describe('every column in every language', () => {
     }
   });
 
-  it('sends each language only its own columns, far less than the whole index', () => {
-    const wholeIndex = JSON.stringify(
-      Object.fromEntries(PUBLIC_LOCALES_8.map((locale) => [
-        locale,
-        versions.filter((version) => version.locale === locale).map((version) => version.slug),
-      ])),
-    ).length;
+  it('sends each language only its own columns with compact translation clusters', () => {
     for (const [locale, index] of indexes) {
+      const ownSlugs = versions.filter((version) => version.locale === locale).map((version) => version.slug);
       expect(Object.keys(index.columns).sort(), locale).toEqual(
-        versions.filter((version) => version.locale === locale).map((version) => version.slug).sort(),
+        [...ownSlugs].sort(),
       );
-      expect(JSON.stringify(index).length, locale).toBeLessThan(wholeIndex / 8);
+      // Compare equivalent data for this language: native articles need not
+      // be distributed evenly across the public languages.
+      const expandedIndex = {
+        locale,
+        columns: Object.fromEntries(ownSlugs.map((slug) => [slug, fileBackedCluster.get(slug)!])),
+      };
+      expect(JSON.stringify(index).length, locale).toBeLessThan(
+        JSON.stringify(expandedIndex).length,
+      );
     }
   });
 });

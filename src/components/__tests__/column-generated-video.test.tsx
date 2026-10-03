@@ -300,7 +300,7 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
   });
 
-  it.each(['ko', 'ja', 'en', 'zh-hant'])('plays the replacement cut-in once with manual controls (%s)', (locale) => {
+  it.each(['ko', 'ja', 'en', 'zh-hant'])('preserves one non-looping film and the manual component default for road-rage videos (%s)', (locale) => {
     const slug = 'taiwan-road-rage-freeway-cut-in-sentence-reduced';
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
     expect(html).toContain(`freeway-cut-in-film-v1-${locale}.mp4`);

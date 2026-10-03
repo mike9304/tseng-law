@@ -175,6 +175,14 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '165': '2026-10-03',
   '166': '2026-10-03',
   '167': '2026-10-03',
+  '201': '2026-10-04',
+  '202': '2026-10-04',
+  '203': '2026-10-04', // road-rage series: taiwan-road-rage-52-seconds-subtracted-case (all four locales)
+  '194': '2026-10-04', // road-rage series: taiwan-road-rage-freeway-chase-own-dashcam-too (all four locales)
+  '191': '2026-10-04', // road-rage series: taiwan-road-rage-driver-stopped-route-66s-fast-lane (all four locales)
+  '188': '2026-10-04', // road-rage series: taiwan-road-rage-started-did-not-matter-driver-blocked (all four locales)
+  '189': '2026-10-04',
+  '190': '2026-10-04',
   // semiconductor lane b06
   '168': '2026-10-04',
   '169': '2026-10-04',
@@ -182,6 +190,33 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '171': '2026-10-04',
   '172': '2026-10-04',
   '173': '2026-10-04',
+  // Taiwan-first editorial batch004.
+  '174': '2026-10-04',
+  '175': '2026-10-04',
+  '176': '2026-10-04',
+  '177': '2026-10-04',
+  '178': '2026-10-04',
+  '179': '2026-10-04',
+  '180': '2026-10-04',
+  // Taiwan-first editorial batch005.
+  '181': '2026-10-04',
+  '182': '2026-10-04',
+  '183': '2026-10-04',
+  '184': '2026-10-04',
+  '185': '2026-10-04',
+  '186': '2026-10-04',
+  '187': '2026-10-04',
+  // semiconductor lane b08
+  '192': '2026-10-04',
+  '193': '2026-10-04',
+  // family lane b08
+  '195': '2026-10-04',
+  '196': '2026-10-04',
+  '197': '2026-10-04',
+  // family lane b09
+  '198': '2026-10-04',
+  '199': '2026-10-04',
+  '200': '2026-10-04',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

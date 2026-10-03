@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "왼쪽 차로의 탑차가 앞으로 끼어들며 제동하는 장면",
+    "description": "흰색 소형 탑차가 왼쪽 차로에서 촬영 차량 앞으로 빠르게 들어옵니다. 제동등이 켜지고 간격이 줄어든 뒤, 탑차는 도로 오른쪽 가까이 계속 달립니다. 두 차는 충돌하지 않습니다. 소리 없는 약 15초 영상으로, 반복 재생됩니다.",
+    "disclosure": "AI로 만든 독립적인 가상 장면이며, 실제 블랙박스 영상이나 본문에 나온 네 차례 끼어들기·세 차례 급제동의 재현이 아닙니다. 화면으로 실제 속도·간격, 자동제동 작동 여부, 고의 또는 법적 책임을 판단할 수 없습니다."
+  },
+  "en": {
+    "title": "A box truck cuts in from the left and brakes",
+    "description": "A small white box truck moves quickly from the left lane into the path of the camera car. Its brake lights come on and the gap narrows, then it continues near the right edge of the road. The vehicles do not collide. The silent clip lasts about 15 seconds and loops.",
+    "disclosure": "This independent fictional scene was generated with AI. It is not real dashcam footage or a reconstruction of the four cut-ins and three sudden braking events described in the article. It cannot establish actual speed, distance, automatic braking activation, intent or legal responsibility."
+  },
+  "ja": {
+    "title": "左の車線からトラックが割り込み、ブレーキをかける場面",
+    "description": "白い小型トラックが左の車線から撮影車の前へ素早く入ります。ブレーキランプが点灯して車間が縮まり、その後は道路の右端近くを走り続けます。2台は衝突しません。無音の約15秒の動画で、繰り返し再生されます。",
+    "disclosure": "AIで作成した独立した架空の場面です。実際のドライブレコーダー映像でも、本文にある4回の割り込みと3回の急ブレーキの再現でもありません。実際の速度や車間、自動ブレーキの作動、故意、法的責任は、この映像から判断できません。"
+  },
+  "zh-hant": {
+    "title": "小貨車從左側車道切入前方，亮起煞車燈",
+    "description": "白色廂型小貨車迅速從左側車道切到攝影車前方。煞車燈亮起，車距縮短，之後小貨車沿道路右緣附近繼續行駛。兩車沒有碰撞。這段無聲影片長約15秒，會循環播放。",
+    "disclosure": "這是AI生成的獨立假想場景，不是真實行車紀錄器影像，也不是本文4次切入、3次急煞車的重建。不能從畫面認定實際車速、車距、自動煞車是否啟動、故意或法律責任。"
+  }
+}

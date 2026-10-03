@@ -1,0 +1,12 @@
+# Roadside gestures and key-storage videos
+
+Reviewed by Codex on 2026-10-04. Scope: the Traditional Chinese article-language pairs for columns 079 and 080. The original legal text, conditions, citations and the static stop-dialogue timeline remain unchanged. This is model review, not native-speaker or legal-professional certification.
+
+- Codex generated both first-frame images, then Grok 4.7 generated one four-second video per image. All 97 frames of each raw clip were directly inspected, plus five native-size action frames. No retiming.
+- The roadside scene shows two adults gesturing in sequence while staying in place. The car/scooter scene is explicitly independent of the source's two-scooter incident. Silence and visible gestures do not establish dialogue, injury status, agreement to leave or liability.
+- The key scene shows placement, release and withdrawal while the drawer remains open. Release occurs later than requested in the prompt, so the caption gives no invented timestamp. It does not establish actual access, permission, locks or owner/keeper responsibility.
+- A 460 px AI label partly covered the left adult's head. That unpublished package was archived, and the same raw file was repackaged with a 340 px Traditional Chinese scene label. The smaller minimum is limited to that short label; other labels retain the 460 px minimum. Both final labels, action stills and posters were directly checked. All original frame timestamps and full decode passed.
+- Sentence-deletion review: the action sentences specify order, release, remaining in place and the open drawer; the duration sentence adds the silent format; disclosures preserve the distinction between illustration and evidence. No decorative bold markup. Compared first two substantive paragraphs, headings and endings of same-language columns 191, 190 and 189; no copied generic introduction or promotional ending.
+- Existing road-rage series videos, including the separately restored 15-second loops, are preserved. They remain in a separate source/provenance/motion review queue.
+
+Exact image provenance, raw inspection, source/caption hashes and packaging evidence: `/Users/son7/tseng-law-column-videos/qa/dialogue-keys-approvals/`, `dialogue-keys-editorial-review.json`, `stop-dialogue-v1/` and `key-custody-v1/`. Tests, clean build, local/public browser playback and deployment evidence are recorded separately before publication is counted. No YouTube upload.

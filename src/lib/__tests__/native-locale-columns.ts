@@ -292,15 +292,65 @@ export const ROAD_RAGE_COLUMN_FILES_20261003 = {
   'zh-hant': ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md', '109-taiwan-road-rage-baseball-bat-fracture-damages.md', '122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md'],
 } as const;
 
-/** Native semiconductor and traffic columns published 2026-10-04. */
+/** Native semiconductor, traffic and reviewed Taiwan-first editorial columns published 2026-10-04. */
 export const COUNTRY_COLUMN_FILES_20261004 = {
-  ko: ['168-taiwan-gold-card-semiconductor-talent-korean-engineers.md'],
-  en: ['170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md'],
-  ja: ['169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md'],
+  ko: [
+    '168-taiwan-gold-card-semiconductor-talent-korean-engineers.md',
+    '180-taiwan-unpaid-invoice-settlement-release-korean.md', // reviewed editorial batch004
+    '187-taiwan-trademark-nonuse-three-years-korean-brand.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
+    '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '192-taiwan-export-control-entity-list-korean-traders.md', // semiconductor lane b08
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '197-taiwan-remaining-property-claim-asset-tracing.md', // family lane b08
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+  ],
+  en: [
+    '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
+    '179-taiwan-landlord-entry-rental-home-repairs.md', // reviewed editorial batch004
+    '186-taiwan-personal-data-access-copy-request.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
+    '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '200-taiwan-protection-order-foreign-resident.md', // family lane b09
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+  ],
+  ja: [
+    '202-taiwan-post-employment-non-compete-compensation-japanese.md', // reviewed daily Japan/Vietnam pair
+    '169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md',
+    '178-taiwan-hotel-luggage-loss-custody-japanese.md', // reviewed editorial batch004
+    '185-taiwan-hotel-typhoon-cancellation-refund-japanese.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
+    '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '193-taiwan-science-park-entry-japanese-semiconductor-companies.md', // semiconductor lane b08
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+  ],
   'zh-hant': [
     '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
     '172-taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence.md',
     '173-taiwan-manhole-pothole-road-authority-utility-internal-recourse.md',
+    '174-home-leak-defect-notice-repair-evidence-taiwan.md', // reviewed editorial batch004
+    '175-contractor-employee-status-control-work-taiwan.md', // reviewed editorial batch004
+    '176-private-loan-joint-guarantor-first-demand-taiwan.md', // reviewed editorial batch004
+    '177-parent-home-gift-care-obligation-evidence-taiwan.md', // reviewed editorial batch004
+    '181-annual-leave-dates-employer-scheduling-taiwan.md', // reviewed editorial batch005
+    '182-rental-electricity-average-price-bill-taiwan.md', // reviewed editorial batch005
+    '183-limited-company-shareholder-books-inspection-taiwan.md', // reviewed editorial batch005
+    '184-handwritten-will-typed-print-signature-taiwan.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
+    '189-taiwan-repaired-car-diminished-value-appraisal-evidence.md',
+    '190-taiwan-pursuit-fatal-self-crash-vacated-judgment.md',
+    '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '195-reserved-share-will-inheritance-dispute.md', // family lane b08
+    '196-separation-cohabitation-duty-taiwan.md', // family lane b08
+    '198-alimony-after-divorce-civil-code-1057.md', // family lane b09
+    '199-child-surname-change-after-divorce.md', // family lane b09
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+  ],
+  vi: [
+    '203-taiwan-change-employer-broker-jobbuying-fees.md', // reviewed daily Japan/Vietnam pair
   ],
 } as const;
 

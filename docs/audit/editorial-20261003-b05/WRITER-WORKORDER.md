@@ -1,0 +1,23 @@
+# Batch005 writer workorder
+
+Authorization: user asked for as many high-quality site-related columns as feasible, Taiwan first, with native-audience JA/EN/KO alongside, until explicitly stopped. Draft outside the active release checkout. Root selects source-supported topics before writing.
+
+Apply the repository EDITORIAL-VOICE and FRAUD-EDITORIAL-POLICY, the actual attorney writing sample already consulted, and prior source/voice correction lessons. Do not invent personal cases, attorney authorship/review, outcomes, demand data, or a current trend. Each language serves its own audience question; no mechanical translation. Practical suggestions must be distinguishable from legal duties. Preserve material conditions, exceptions, dates, institution-specific limits and non-final court status.
+
+Per assigned slug, own only drafts/<locale>-<slug>.md and evidence/<locale>-<slug>.md. You are not alone; preserve other workers' files. No repository edits, article numbers, commit, deployment, runner/config/process actions. Evidence includes actual opened primary URLs, operative/current or historical dates, per-claim mapping, source gaps/failures, voice self-review, body/draft SHA and actual-image verification. Do not claim approval by a human attorney or native speaker.
+
+Write a concrete answer from the first paragraph. A summary should provide useful substance instead of promising what the article will explain. Avoid assuming a reader intends to lie, delete records or manipulate procedure; describe the correct route and preserve precise legal warnings. Use a calm, specific lawyer-like voice with varied structure, no formulaic wrap-up, empty reassurance or keyword stuffing. Do not pad to hit a quota.
+
+Use current locale frontmatter, single native audience, internal author legal-ai-assistant and source-linked body. No public AI writer byline or invented human byline. Keep illustrative AI image caption. Existing EN SEO rule: when title + ` | Hovering Law` exceeds60characters, seoTitle must be30–45characters; otherwise omit seoTitle. Actual publication day/date_display/lastmod must be reconciled before release, especially across midnight; source-check dates remain actual dates.
+
+Future image path: /images/columns/editorial-20261003-b05/<slug>.png. Alt/caption are provisional until direct image viewing; provisional notes belong in evidence, not public prose. Assets are fictional illustrations, not records of an actual client/property/case.
+
+Selected main7 after root personally read every main brief and its limits at23:58KST. TOPIC-BRIEFS SHA4d3a9eb2c4bf445344f33a66bdfc8b03ee2fb0a4f9b9c4843564f9c92c788b9a. Backups remain unassigned. Do not write the unavailable original JA enactment-history claim or automatic refund for every flight cancellation. Use the currently hosted operative text and verify the exact clauses actually cited. No invented case narratives are needed for these seven topics.
+
+OWNERS: review_fraud_zh = ZH annual-leave-dates-employer-scheduling-taiwan; batch002_write_zh_property = ZH rental-electricity-average-price-bill-taiwan; repair_semi_zh = ZH limited-company-shareholder-books-inspection-taiwan and handwritten-will-typed-print-signature-taiwan; review_fraud_ja_legal = JA taiwan-hotel-typhoon-cancellation-refund-japanese; batch002_write_en = EN taiwan-personal-data-access-copy-request; repair_semi_ko_ja = KO taiwan-trademark-nonuse-three-years-korean-brand.
+
+Before freezing, actually compute EN summary JavaScript string length:150–160 inclusive. The existing SEO display suffix is15 characters; obey the30–45 seoTitle rule where required and <=60 combined. Recheck image alt/caption only after actual original viewing. Source/legal and voice approvals refer to final hashes.
+
+Publication metadata is provisional until release day in Asia/Taipei is checked by root. Root must explicitly reconcile the date if KST midnight crosses; Taiwan-based public site date may still be the previous date. Do not change actual source-access, source-enactment, court, or image-generation dates to match publication. Initial drafts may use2026-10-03 pending reconciliation.
+
+Media prompts are root-owned IMAGE-PROMPTS.json. Media packager owns images/IMAGE-MANIFEST.json/IMAGE-QA.md only, preserves originals and records actual hashes/dimensions/visual findings. Writers alone adjust their assigned final metadata after viewing. Every article receives independent legal/source and voice review, bounded author corrections, final-SHA checks, source-matched integration, suitable existing tests, clean build, desktop/narrow layout and actual production readback. Macro remains active until user stops.

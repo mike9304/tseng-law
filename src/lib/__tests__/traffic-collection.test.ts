@@ -46,6 +46,12 @@ function post(overrides: Partial<ColumnPost> & { slug: string }): ColumnPost {
 
 const EXPECTED_ORDER: Record<SiteLocale, string[]> = {
   'zh-hant': [
+    'taiwan-road-rage-52-seconds-subtracted-case',
+    'taiwan-road-rage-freeway-chase-own-dashcam-too',
+    'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
+    'taiwan-pursuit-fatal-self-crash-vacated-judgment',
+    'taiwan-repaired-car-diminished-value-appraisal-evidence',
+    'taiwan-road-rage-started-did-not-matter-driver-blocked',
     'taiwan-manhole-pothole-road-authority-utility-internal-recourse',
     'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence',
     'taiwan-road-rage-reversing-into-tailgater-no-self-defense',
@@ -84,9 +90,9 @@ const EXPECTED_ORDER: Record<SiteLocale, string[]> = {
     'taiwan-overtaking-accident-liability',
     'taiwan-traffic-accident-procedure',
   ],
-  ko: ['taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
-  en: ['taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
-  ja: ['taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
+  ko: ['taiwan-road-rage-52-seconds-subtracted-case', 'taiwan-road-rage-freeway-chase-own-dashcam-too', 'taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
+  en: ['taiwan-road-rage-52-seconds-subtracted-case', 'taiwan-road-rage-freeway-chase-own-dashcam-too', 'taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
+  ja: ['taiwan-road-rage-52-seconds-subtracted-case', 'taiwan-road-rage-freeway-chase-own-dashcam-too', 'taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
 };
 
 describe('normalizeColumnTags', () => {
@@ -179,7 +185,7 @@ describe('reviewed column videos in the traffic board', () => {
 });
 
 describe('loadTrafficCollection (published files)', () => {
-  it('lists 37 zh-hant / 7 ko / 7 en / 6 ja articles, newest first, without another language fallback', async () => {
+  it('lists 43 zh-hant / 11 ko / 11 en / 10 ja articles, newest first, without another language fallback', async () => {
     for (const locale of siteLocales) {
       const items = await loadTrafficCollection(locale, fileSources);
       expect(items.map((item) => item.slug), locale).toEqual(EXPECTED_ORDER[locale]);
@@ -211,7 +217,7 @@ describe('loadTrafficCollection (published files)', () => {
     for (const item of items) {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
-      const reviewedSceneWithoutDiagram = [
+      const reviewedGeneratedScene = [
         'taiwan-ambulance-red-light-emergency-priority-negligence',
         'taiwan-bus-stop-illegal-parking-no-contact-criminal-causation',
         'taiwan-accident-stop-dialogue-hit-and-run-evidence',
@@ -242,8 +248,12 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-manhole-pothole-road-authority-utility-internal-recourse',
         'taiwan-accident-family-care-necessity-period',
         'taiwan-car-accident-work-loss-rest-note',
+        'taiwan-road-rage-started-did-not-matter-driver-blocked',
+        'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
+        'taiwan-road-rage-freeway-chase-own-dashcam-too',
+        'taiwan-road-rage-52-seconds-subtracted-case',
       ].includes(item.slug);
-      expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
+      expect(item.hasVideo, item.slug).toBe(reviewedGeneratedScene || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');
     }
   });

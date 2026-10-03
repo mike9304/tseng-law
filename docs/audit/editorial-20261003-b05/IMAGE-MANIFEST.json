@@ -1,0 +1,472 @@
+{
+  "schema_version": 1,
+  "batch": "editorial-20261003-b05",
+  "recorded_at": "2026-10-04T00:07:44+09:00",
+  "status": "all_seven_images_ready",
+  "batch_complete": true,
+  "expected_assets": 7,
+  "packaged_assets": 7,
+  "pending_assets": 0,
+  "remaining_media_status": "The approved KO retry is packaged as the seventh image. The rejected initial KO generation remains preserved and unused.",
+  "scope": "Seven accepted images. Local copy and visual QA only; no root prompt/result, source-image, draft, evidence, repository or publication changes.",
+  "prompt_records": [
+    {
+      "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+      "sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55"
+    },
+    {
+      "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPT-RETRY-KO.json",
+      "sha256": "ac321354b94ef39191dea64388c1b1e359908cc06ade8061a78d5cdeb711064d"
+    }
+  ],
+  "generation_results_record": {
+    "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-RESULTS.json",
+    "sha256_at_packaging": "1302e1d7a054caaf8180e2d884cbdc58594758a486ed5aeb61d25a0bf5ec572e"
+  },
+  "generation_results_snapshot_at_packaging": {
+    "batch": "005",
+    "generationMethod": "image_gen",
+    "records": [
+      {
+        "slug": "annual-leave-dates-employer-scheduling-taiwan",
+        "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-c70760a4-1bd1-438f-a478-a907045b4575.png",
+        "rootViewed": true,
+        "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "reason": ""
+      },
+      {
+        "slug": "rental-electricity-average-price-bill-taiwan",
+        "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-22013d5e-72fc-4d77-b22f-a93a2706b881.png",
+        "rootViewed": true,
+        "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "reason": ""
+      },
+      {
+        "slug": "limited-company-shareholder-books-inspection-taiwan",
+        "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-133bffe2-075d-49ae-a1d5-147d327bce24.png",
+        "rootViewed": true,
+        "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "reason": ""
+      },
+      {
+        "slug": "handwritten-will-typed-print-signature-taiwan",
+        "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-90653534-ddd5-48c7-a3cd-47c7a6babdcf.png",
+        "rootViewed": true,
+        "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "reason": ""
+      },
+      {
+        "slug": "taiwan-hotel-typhoon-cancellation-refund-japanese",
+        "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-2161a2fc-8625-40de-9c26-04f01e8aff35.png",
+        "rootViewed": true,
+        "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "reason": ""
+      },
+      {
+        "slug": "taiwan-personal-data-access-copy-request",
+        "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-57f9fba1-48f6-4e9c-a16b-3691d0cfdfa4.png",
+        "rootViewed": true,
+        "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "reason": ""
+      },
+      {
+        "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+        "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-8abeaa12-d26a-4b2f-acfb-6a1aa040905c.png",
+        "rootViewed": true,
+        "rootDecision": "REJECTED_REGENERATE",
+        "reason": "Unrequested split-panel symbols/scales falsely suggest automatic legal outcomes. Preserve as rejected original."
+      }
+    ]
+  },
+  "history": [
+    {
+      "recorded_at": "2026-10-04T00:07:44+09:00",
+      "status": "provisional_six_ready_ko_retry_pending",
+      "packaged_assets": 6,
+      "pending_assets": 1,
+      "batch_complete": false
+    },
+    {
+      "recorded_at": "2026-10-04T00:19:09+09:00",
+      "status": "all_seven_images_ready",
+      "packaged_assets": 7,
+      "pending_assets": 0,
+      "batch_complete": true,
+      "completion_scope": "Image packaging only.",
+      "added_slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+      "selected_retry_source": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-07df2d69-ca0c-4123-9a7a-77fbd4ab166d.png",
+      "selected_retry_sha256": "28018c48fa4e96b735fd975f8704ad78f2fcaf3a0c015275d6b46e86160c3297",
+      "rejected_source_preserved": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-8abeaa12-d26a-4b2f-acfb-6a1aa040905c.png",
+      "preservation": "Original six asset records, prior history and unused generation record are unchanged; the complete provisional-six QA remains an unchanged prefix."
+    }
+  ],
+  "assets": [
+    {
+      "slug": "annual-leave-dates-employer-scheduling-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/review_fraud_zh",
+      "status": "provisional_six_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-c70760a4-1bd1-438f-a478-a907045b4575.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/images/annual-leave-dates-employer-scheduling-taiwan.png",
+      "relative_path": "images/annual-leave-dates-employer-scheduling-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b05/annual-leave-dates-employer-scheduling-taiwan.png",
+      "sha256": "72fa92b1d4ca86a014e4acf6a8c8caf2697a746303c3d70a04918d25d4d9e58e",
+      "bytes": 1780466,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Full byte equality and SHA-256 equality with selected original.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+        "prompt_record_sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55",
+        "prompt_record_created_at": "2026-10-03T23:59:46.793587+09:00",
+        "prompt_record_slug": "annual-leave-dates-employer-scheduling-taiwan",
+        "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A close view of one adult hand arranging two muted-color blank removable paper tabs on an abstract monthly paper calendar on a modest office desk, beside a closed notebook and a small plant. Calendar grid has no dates, weekday names or writing. Leave the tabs at an unfinished choice, not a supervisor ordering workers. Warm cream and muted coral tones.",
+        "transparent_background": false,
+        "results_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-RESULTS.json",
+        "results_record_sha256_at_packaging": "1302e1d7a054caaf8180e2d884cbdc58594758a486ed5aeb61d25a0bf5ec572e",
+        "root_viewed": true,
+        "root_decision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-c70760a4-1bd1-438f-a478-a907045b4575.png"
+      },
+      "packaging_edits": "None; copied unchanged.",
+      "neutral_description_en": "A hand adjusts an orange paper tab on a blank calendar grid beside a green tab. A closed notebook, pen, plant and extra paper tabs sit on the desk.",
+      "recommended_alt_zh_hant": "一隻手在沒有日期文字的桌曆格線上調整橘色紙條，旁邊已有一張綠色紙條；桌上放著筆記本、筆與盆栽。",
+      "recommended_caption_zh_hant": "AI生成的示意畫面，並非真實排班、請假申請或核准紀錄。",
+      "visual_qa": {
+        "method": "Selected original opened directly with view_image before description; copied image is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The calendar has a grid without visible dates or weekday labels. One orange tab is held by the hand and a green tab rests on the grid. No person's face or actual leave form is visible.",
+        "interpretation_limits": "The image does not establish leave dates, the number of leave days, an employer's order, a request or an approval.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, official document, financial record or case photograph.",
+        "status": "Writer must confirm final alt/caption after viewing; six-image packaging stage only."
+      }
+    },
+    {
+      "slug": "rental-electricity-average-price-bill-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/batch002_write_zh_property",
+      "status": "provisional_six_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-22013d5e-72fc-4d77-b22f-a93a2706b881.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/images/rental-electricity-average-price-bill-taiwan.png",
+      "relative_path": "images/rental-electricity-average-price-bill-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b05/rental-electricity-average-price-bill-taiwan.png",
+      "sha256": "658b7e09773e1c1bc6046160a39cbac719f3928cff09da89c939b1fd0280085d",
+      "bytes": 1903905,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Full byte equality and SHA-256 equality with selected original.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+        "prompt_record_sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55",
+        "prompt_record_created_at": "2026-10-03T23:59:46.793587+09:00",
+        "prompt_record_slug": "rental-electricity-average-price-bill-taiwan",
+        "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A Taiwanese rental-room hallway in gentle daylight: a small generic electricity meter on a neutral wall in the upper right, its display soft and unreadable, and the tenant's hands holding a folded unbranded bill in the foreground left. Show only abstract pale rules on the bill, no text or account details. Quiet teal and warm off-white colors. Not a dangerous electrical repair; no exposed wires.",
+        "transparent_background": false,
+        "results_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-RESULTS.json",
+        "results_record_sha256_at_packaging": "1302e1d7a054caaf8180e2d884cbdc58594758a486ed5aeb61d25a0bf5ec572e",
+        "root_viewed": true,
+        "root_decision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-22013d5e-72fc-4d77-b22f-a93a2706b881.png"
+      },
+      "packaging_edits": "None; copied unchanged.",
+      "neutral_description_en": "A person holds a folded sheet with pale grey and teal blocks in a hallway beside a wall-mounted electricity meter. Doors and plants appear along the hall.",
+      "recommended_alt_zh_hant": "一人在走廊上拿著帶有灰綠色線條和區塊的摺頁紙張，旁邊牆上裝有電表，後方可見房門與盆栽。",
+      "recommended_caption_zh_hant": "AI生成的示意畫面，紙張與電表顯示均為虛構，並非真實帳單、用電度數、電價或案件紀錄。",
+      "visual_qa": {
+        "method": "Selected original opened directly with view_image before description; copied image is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The paper contains abstract rules, blocks and a chart-like pattern. The meter has a small display with faint digit-like marks; these are not a verified meter reading or amount. The scene shows no exposed wiring or electrical repair.",
+        "interpretation_limits": "Do not describe the paper as an actual bill or infer electricity use, a tariff, an average price, a charge, overbilling or a legal calculation from the meter display or chart.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, official document, financial record or case photograph.",
+        "status": "Writer must confirm final alt/caption after viewing; six-image packaging stage only."
+      }
+    },
+    {
+      "slug": "limited-company-shareholder-books-inspection-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/repair_semi_zh",
+      "status": "provisional_six_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-133bffe2-075d-49ae-a1d5-147d327bce24.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/images/limited-company-shareholder-books-inspection-taiwan.png",
+      "relative_path": "images/limited-company-shareholder-books-inspection-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b05/limited-company-shareholder-books-inspection-taiwan.png",
+      "sha256": "03da51b7bb87859cdac0c864cfab7fdd4cac2655fe0ba46c478477e3c1f9052f",
+      "bytes": 1839796,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Full byte equality and SHA-256 equality with selected original.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+        "prompt_record_sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55",
+        "prompt_record_created_at": "2026-10-03T23:59:46.793587+09:00",
+        "prompt_record_slug": "limited-company-shareholder-books-inspection-taiwan",
+        "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A quiet small-company meeting table with an open abstract ledger and a gray document binder, and two people's hands at opposite sides reviewing pages together. No figures, writing, company name, stamps or signatures on the ledger, only faint structured lines. The scene suggests reviewing information; no handshake, cash, document removal or accusation. Muted ink blue and walnut colors.",
+        "transparent_background": false,
+        "results_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-RESULTS.json",
+        "results_record_sha256_at_packaging": "1302e1d7a054caaf8180e2d884cbdc58594758a486ed5aeb61d25a0bf5ec572e",
+        "root_viewed": true,
+        "root_decision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-133bffe2-075d-49ae-a1d5-147d327bce24.png"
+      },
+      "packaging_edits": "None; copied unchanged.",
+      "neutral_description_en": "Two people review open grid-like pages at a wooden table. One points with a pen while the other holds a loose sheet above the open book. A grey binder, notebook and cup sit nearby.",
+      "recommended_alt_zh_hant": "兩人在木桌前查看攤開的表格頁面，一人持筆指向紙面，桌上另有灰色資料夾和筆記本。",
+      "recommended_caption_zh_hant": "AI生成的概念示意圖，人物與文件均為虛構，並非真實公司帳冊、股東查閱或案件紀錄。",
+      "visual_qa": {
+        "method": "Selected original opened directly with view_image before description; copied image is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "Only torsos and hands are visible. The open book and loose sheets contain faint abstract grid layouts, without identifiable company details or readable account figures. The image does not show removal of records, cash or a handshake.",
+        "interpretation_limits": "The papers are not authenticated company books. Do not infer shareholder status, an authorized inspection, disclosure of confidential records, wrongdoing or an inspection outcome.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, official document, financial record or case photograph.",
+        "status": "Writer must confirm final alt/caption after viewing; six-image packaging stage only."
+      }
+    },
+    {
+      "slug": "handwritten-will-typed-print-signature-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/repair_semi_zh",
+      "status": "provisional_six_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-90653534-ddd5-48c7-a3cd-47c7a6babdcf.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/images/handwritten-will-typed-print-signature-taiwan.png",
+      "relative_path": "images/handwritten-will-typed-print-signature-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b05/handwritten-will-typed-print-signature-taiwan.png",
+      "sha256": "15e78ec008d211ef2a0acb49f1ae632a6382cfa94ece1128f5923e703cbfbe44",
+      "bytes": 1841222,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Full byte equality and SHA-256 equality with selected original.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+        "prompt_record_sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55",
+        "prompt_record_created_at": "2026-10-03T23:59:46.793587+09:00",
+        "prompt_record_slug": "handwritten-will-typed-print-signature-taiwan",
+        "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A reflective home desk in afternoon light, a fountain pen laid beside a cream paper containing only soft unrecognizable abstract strokes, with a closed laptop placed farther away. One older adult hand rests near the pen without signing anything. No actual will clauses, family photos, names, letters, date or signature. Minimal composition with warm ivory, olive and wood.",
+        "transparent_background": false,
+        "results_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-RESULTS.json",
+        "results_record_sha256_at_packaging": "1302e1d7a054caaf8180e2d884cbdc58594758a486ed5aeb61d25a0bf5ec572e",
+        "root_viewed": true,
+        "root_decision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-90653534-ddd5-48c7-a3cd-47c7a6babdcf.png"
+      },
+      "packaging_edits": "None; copied unchanged.",
+      "neutral_description_en": "A hand rests near a fountain pen beside a cream sheet with soft landscape-like artwork and abstract lines. A closed laptop, books and a cup sit farther back on the wooden desk.",
+      "recommended_alt_zh_hant": "木桌上放著帶有淡色圖畫紋理的紙和鋼筆，一隻手停在筆旁，後方是闔上的筆電、書本和杯子。",
+      "recommended_caption_zh_hant": "AI生成的概念示意圖，紙上的圖樣不是文字遺囑，並非真實遺囑、簽署紀錄或案件照片。",
+      "visual_qa": {
+        "method": "Selected original opened directly with view_image before description; copied image is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The cream sheet contains painterly landscape-like shapes and abstract strokes, not a written will. No writing or signing action, signature, date or will clause is visible on that sheet. The person's face is outside the frame.",
+        "interpretation_limits": "Do not call the sheet a handwritten, typed, printed or executed will. The artwork and nearby pen do not establish testamentary intent, capacity, formal validity or a signature.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, official document, financial record or case photograph.",
+        "status": "Writer must confirm final alt/caption after viewing; six-image packaging stage only."
+      }
+    },
+    {
+      "slug": "taiwan-hotel-typhoon-cancellation-refund-japanese",
+      "locale": "ja",
+      "writer_agent": "/root/review_fraud_ja_legal",
+      "status": "provisional_six_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-2161a2fc-8625-40de-9c26-04f01e8aff35.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/images/taiwan-hotel-typhoon-cancellation-refund-japanese.png",
+      "relative_path": "images/taiwan-hotel-typhoon-cancellation-refund-japanese.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b05/taiwan-hotel-typhoon-cancellation-refund-japanese.png",
+      "sha256": "9c1e5e0592d29f656e40d1f675fba7f7ff513af8128361af77fdd9c339761368",
+      "bytes": 2193598,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Full byte equality and SHA-256 equality with selected original.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+        "prompt_record_sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55",
+        "prompt_record_created_at": "2026-10-03T23:59:46.793587+09:00",
+        "prompt_record_slug": "taiwan-hotel-typhoon-cancellation-refund-japanese",
+        "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. An interior view beside a rain-speckled window, with a small travel suitcase and a seated traveler's hand holding an abstract unbranded reservation paper. Outside is an indistinct Taiwan city skyline under gray rain, no recognizable real disaster or airport. No departure board, canceled-flight signs, typhoon map, hotel logo or refund approval. Slate blue, soft amber lamplight, composed not alarmist.",
+        "transparent_background": false,
+        "results_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-RESULTS.json",
+        "results_record_sha256_at_packaging": "1302e1d7a054caaf8180e2d884cbdc58594758a486ed5aeb61d25a0bf5ec572e",
+        "root_viewed": true,
+        "root_decision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-2161a2fc-8625-40de-9c26-04f01e8aff35.png"
+      },
+      "packaging_edits": "None; copied unchanged.",
+      "neutral_description_en": "A seated person holds a sheet bearing a plane icon, abstract lines and a small landscape image beside a rain-speckled window. A suitcase stands nearby, with a blurred city skyline outside and a lamp and cup inside.",
+      "recommended_alt_ja": "雨粒のついた窓のそばで、人物が飛行機のアイコンと抽象的な線がある紙を持っています。横にスーツケースが置かれています。",
+      "recommended_caption_ja": "AI生成の架空の場面です。紙面や窓外の景色は実際の予約、欠航、台風被害や返金決定を示すものではありません。",
+      "visual_qa": {
+        "method": "Selected original opened directly with view_image before description; copied image is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The plane icon is visible on the fictional paper, but there is no readable booking number, cancellation notice, flight status or refund approval. The person's face is outside the frame. Rain and the skyline are illustrative scene elements.",
+        "interpretation_limits": "The paper and rainy window are not evidence of a real reservation, canceled flight, typhoon, transport disruption, hotel closure or entitlement to a refund.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, official document, financial record or case photograph.",
+        "status": "Writer must confirm final alt/caption after viewing; six-image packaging stage only."
+      }
+    },
+    {
+      "slug": "taiwan-personal-data-access-copy-request",
+      "locale": "en",
+      "writer_agent": "/root/batch002_write_en",
+      "status": "provisional_six_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-57f9fba1-48f6-4e9c-a16b-3691d0cfdfa4.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/images/taiwan-personal-data-access-copy-request.png",
+      "relative_path": "images/taiwan-personal-data-access-copy-request.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b05/taiwan-personal-data-access-copy-request.png",
+      "sha256": "54c36b5614231c32dff235393524ecf146e84ec6e74fb58400fd4dcdcc3ef4cf",
+      "bytes": 1874302,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Full byte equality and SHA-256 equality with selected original.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+        "prompt_record_sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55",
+        "prompt_record_created_at": "2026-10-03T23:59:46.793587+09:00",
+        "prompt_record_slug": "taiwan-personal-data-access-copy-request",
+        "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A calm home workspace with a laptop showing softly blurred abstract stacked data cards, a blank folder and a person's hands preparing notes beside it. The screen has no legible UI, letters, icons for completed approval or deletion, account information or personal photographs. No ID card or password imagery. Muted violet-gray and pale wood, editorial spaciousness.",
+        "transparent_background": false,
+        "results_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-RESULTS.json",
+        "results_record_sha256_at_packaging": "1302e1d7a054caaf8180e2d884cbdc58594758a486ed5aeb61d25a0bf5ec572e",
+        "root_viewed": true,
+        "root_decision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-57f9fba1-48f6-4e9c-a16b-3691d0cfdfa4.png"
+      },
+      "packaging_edits": "None; copied unchanged.",
+      "neutral_description_en": "A person holds a pen over an open notebook beside a laptop displaying abstract stacked panels. A plain folder lies on the desk, with books, a cup and plants nearby and a resting cat in the background.",
+      "recommended_alt_en": "A person holds a pen over an open notebook beside a laptop displaying abstract stacked panels, with a plain folder on the desk.",
+      "recommended_caption_en": "AI-generated fictional illustration. The screen and papers are abstract and do not contain a real personal-data record, completed access request or official response.",
+      "visual_qa": {
+        "method": "Selected original opened directly with view_image before description; copied image is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "Only the person's hands and torso are visible. The laptop screen contains abstract cards and lines over a scenic background, without readable account data or an identifiable service interface. No identity card, password or approval/deletion confirmation is shown.",
+        "interpretation_limits": "Do not describe the screen as an official portal, actual personal-data record, submitted access request, completed disclosure or deletion result.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, official document, financial record or case photograph.",
+        "status": "Writer must confirm final alt/caption after viewing; six-image packaging stage only."
+      }
+    },
+    {
+      "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+      "locale": "ko",
+      "writer_agent": "/root/repair_semi_ko_ja",
+      "status": "ready_approved_retry",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-07df2d69-ca0c-4123-9a7a-77fbd4ab166d.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/images/taiwan-trademark-nonuse-three-years-korean-brand.png",
+      "relative_path": "images/taiwan-trademark-nonuse-three-years-korean-brand.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b05/taiwan-trademark-nonuse-three-years-korean-brand.png",
+      "sha256": "28018c48fa4e96b735fd975f8704ad78f2fcaf3a0c015275d6b46e86160c3297",
+      "bytes": 1964305,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Full byte equality and SHA-256 equality with approved retry original.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPT-RETRY-KO.json",
+        "prompt_record_sha256": "ac321354b94ef39191dea64388c1b1e359908cc06ade8061a78d5cdeb711064d",
+        "prompt_record_slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+        "prompt": "Create one single continuous photographic still life, wide 16:9. A modest product studio table in warm natural window light. Two unbranded plain cardboard packages, one deep forest-green and one cream, sit beside a few entirely blank label samples and a loosely stacked set of pale shipping papers with only soft unreadable gray rules. At the far right, the hands of one adult calmly compare a package to a paper; no face. Shallow depth of field, restrained editorial photography, realistic materials, clean natural composition. The entire canvas depicts this one physical tabletop scene. There is no graphic panel, collage, diagram, arrow, check mark, warning, legal scale, gavel, badge, map, caption, readable text, trademark, registration number, signature, barcode or logo anywhere. This is a fictional neutral illustration of reviewing product packaging and records, without any suggested approval or legal result.",
+        "transparent_background": false,
+        "retry_reason": "Initial output had unrequested outcome diagram and legal props; preserved as rejected original.",
+        "results_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-KO-RETRY-RESULT.json",
+        "results_record_sha256_at_packaging": "70c9c3f5d1eba670ed316fa1bbcc1cad843d608ac76cbfeea4fa02308b0a3c25",
+        "root_viewed": true,
+        "root_decision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+        "root_observation": "Single tabletop photograph with three plain green/cream packages, blank hanging labels, abstract papers and hands; no split diagram, legal props, warning or approval graphic. Not proof of actual sales or trademark use.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-07df2d69-ca0c-4123-9a7a-77fbd4ab166d.png",
+        "replaces_rejected_source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-8abeaa12-d26a-4b2f-acfb-6a1aa040905c.png"
+      },
+      "packaging_edits": "None; copied unchanged.",
+      "neutral_description_en": "A person holds a plain green box in one hand and a paper with faint grey lines in the other. Two more plain boxes, three blank hanging tags and a stack of abstract papers sit on a wooden table in one continuous scene.",
+      "recommended_alt_ko": "한 사람이 초록색 상자와 회색 선이 있는 종이를 들고 있습니다. 탁자 위에는 표시 없는 상자 두 개와 빈 태그, 종이 묶음이 놓여 있습니다.",
+      "recommended_caption_ko": "AI로 만든 가상의 설명용 이미지입니다. 포장·태그·종이는 실제 상표 사용이나 판매 실적, 등록·취소 결정을 입증하는 자료가 아닙니다.",
+      "visual_qa": {
+        "method": "Approved retry original opened directly with view_image before description; copied image is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "Three packages are visible in total: two green and one cream, including the green package held by the person. The tags are blank and the papers show abstract grey lines. Only hands and part of the torso are visible. The image is a single tabletop scene without split panels, scales, arrows, check marks or approval graphics. The prompt requested two packages, but the description follows the three actually visible.",
+        "interpretation_limits": "The packages, blank tags and abstract papers do not prove actual sales, trademark use, registration, non-use, cancellation or any legal result. Do not identify them as real business records, shipping evidence or a registration certificate.",
+        "fictional_disclosure": "AI-generated fictional conceptual illustration, not actual trademark evidence, sales records, clients or a case photograph.",
+        "status": "Ready for writer final alt/caption review and later integration."
+      }
+    }
+  ],
+  "unused_generations": [
+    {
+      "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-8abeaa12-d26a-4b2f-acfb-6a1aa040905c.png",
+      "sha256": "d431a3b2bc19884aac765dfb0aea6c1ec709084a534260f9354900c3847a896d",
+      "bytes": 1961488,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "status": "rejected_original_preserved_not_packaged",
+      "root_decision": "REJECTED_REGENERATE",
+      "root_rejection_reason": "Unrequested split-panel symbols/scales falsely suggest automatic legal outcomes. Preserve as rejected original.",
+      "viewed_by_packager": false,
+      "packaging_decision": "Excluded under parent instruction; original preserved, no target image written.",
+      "generation": {
+        "method": "image_gen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-PROMPTS.json",
+        "prompt_record_sha256": "1f6006e1375ff25ed23d1e39c5a3a829507ec03bde835a993f7befab3a940a55",
+        "prompt_record_slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+        "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A small unbranded product display in a business studio: two simple packaging boxes, blank label samples and a stack of abstract shipping papers, with one adult hand comparing packaging to the documents. No recognizable trademark, brand name, registration certificate, registration number, price, sales figures, barcode or signature. A conceptual review scene, not proof of past sales. Dark evergreen and warm cream accents.",
+        "transparent_background": false
+      },
+      "replacement_status": "Awaiting parent approval of a regenerated KO image; no replacement is selected by this six-ready record."
+    }
+  ],
+  "updated_at": "2026-10-04T00:19:09+09:00",
+  "completion_scope": "Image packaging only; final article reviews, integration and publication remain separate.",
+  "retry_result_record": {
+    "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/IMAGE-GENERATION-KO-RETRY-RESULT.json",
+    "sha256_at_packaging": "70c9c3f5d1eba670ed316fa1bbcc1cad843d608ac76cbfeea4fa02308b0a3c25",
+    "snapshot": {
+      "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-07df2d69-ca0c-4123-9a7a-77fbd4ab166d.png",
+      "rootViewed": true,
+      "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+      "observation": "Single tabletop photograph with three plain green/cream packages, blank hanging labels, abstract papers and hands; no split diagram, legal props, warning or approval graphic. Not proof of actual sales or trademark use."
+    }
+  },
+  "preservation_at_retry_append": {
+    "prior_manifest_sha256": "d6422549a04fa545ee6c12735b72b6724cdf39e2f3e4f92097532b408c3f8bee",
+    "prior_qa_prefix_bytes": 12469,
+    "prior_qa_prefix_sha256": "f4a6c3b763d65c22177931b696b1348170c5220b25382e50085a86992d4d9d01",
+    "prior_six_asset_records_canonical_sha256": "095fb8a266e6d76e4118d057e6d789d74525e84d496fd5d7a894b49a1f198e2e",
+    "prior_unused_generation_records_canonical_sha256": "c51cb83c676445bf525d59e48abd5709c227841f012e9435e17879091eff4c2a",
+    "prior_history_canonical_sha256": "520cb70b223d378c97095c73963b9d3723c60802481b782376ef9a1c00e420a7",
+    "prior_six_image_sha256": {
+      "annual-leave-dates-employer-scheduling-taiwan": "72fa92b1d4ca86a014e4acf6a8c8caf2697a746303c3d70a04918d25d4d9e58e",
+      "rental-electricity-average-price-bill-taiwan": "658b7e09773e1c1bc6046160a39cbac719f3928cff09da89c939b1fd0280085d",
+      "limited-company-shareholder-books-inspection-taiwan": "03da51b7bb87859cdac0c864cfab7fdd4cac2655fe0ba46c478477e3c1f9052f",
+      "handwritten-will-typed-print-signature-taiwan": "15e78ec008d211ef2a0acb49f1ae632a6382cfa94ece1128f5923e703cbfbe44",
+      "taiwan-hotel-typhoon-cancellation-refund-japanese": "9c1e5e0592d29f656e40d1f675fba7f7ff513af8128361af77fdd9c339761368",
+      "taiwan-personal-data-access-copy-request": "54c36b5614231c32dff235393524ecf146e84ec6e74fb58400fd4dcdcc3ef4cf"
+    }
+  },
+  "retry_replacements": [
+    {
+      "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+      "rejected_source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-8abeaa12-d26a-4b2f-acfb-6a1aa040905c.png",
+      "rejected_sha256": "d431a3b2bc19884aac765dfb0aea6c1ec709084a534260f9354900c3847a896d",
+      "approved_retry_source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-07df2d69-ca0c-4123-9a7a-77fbd4ab166d.png",
+      "approved_retry_sha256": "28018c48fa4e96b735fd975f8704ad78f2fcaf3a0c015275d6b46e86160c3297",
+      "status": "replacement_approved_and_packaged_rejected_original_unused"
+    }
+  ]
+}

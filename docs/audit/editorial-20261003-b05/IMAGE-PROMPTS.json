@@ -1,0 +1,48 @@
+{
+  "batch": "005",
+  "createdAt": "2026-10-03T23:59:46.793587+09:00",
+  "scenes": [
+    {
+      "slug": "annual-leave-dates-employer-scheduling-taiwan",
+      "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A close view of one adult hand arranging two muted-color blank removable paper tabs on an abstract monthly paper calendar on a modest office desk, beside a closed notebook and a small plant. Calendar grid has no dates, weekday names or writing. Leave the tabs at an unfinished choice, not a supervisor ordering workers. Warm cream and muted coral tones.",
+      "transparent_background": false,
+      "status": "ready_for_generation"
+    },
+    {
+      "slug": "rental-electricity-average-price-bill-taiwan",
+      "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A Taiwanese rental-room hallway in gentle daylight: a small generic electricity meter on a neutral wall in the upper right, its display soft and unreadable, and the tenant's hands holding a folded unbranded bill in the foreground left. Show only abstract pale rules on the bill, no text or account details. Quiet teal and warm off-white colors. Not a dangerous electrical repair; no exposed wires.",
+      "transparent_background": false,
+      "status": "ready_for_generation"
+    },
+    {
+      "slug": "limited-company-shareholder-books-inspection-taiwan",
+      "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A quiet small-company meeting table with an open abstract ledger and a gray document binder, and two people's hands at opposite sides reviewing pages together. No figures, writing, company name, stamps or signatures on the ledger, only faint structured lines. The scene suggests reviewing information; no handshake, cash, document removal or accusation. Muted ink blue and walnut colors.",
+      "transparent_background": false,
+      "status": "ready_for_generation"
+    },
+    {
+      "slug": "handwritten-will-typed-print-signature-taiwan",
+      "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A reflective home desk in afternoon light, a fountain pen laid beside a cream paper containing only soft unrecognizable abstract strokes, with a closed laptop placed farther away. One older adult hand rests near the pen without signing anything. No actual will clauses, family photos, names, letters, date or signature. Minimal composition with warm ivory, olive and wood.",
+      "transparent_background": false,
+      "status": "ready_for_generation"
+    },
+    {
+      "slug": "taiwan-hotel-typhoon-cancellation-refund-japanese",
+      "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. An interior view beside a rain-speckled window, with a small travel suitcase and a seated traveler's hand holding an abstract unbranded reservation paper. Outside is an indistinct Taiwan city skyline under gray rain, no recognizable real disaster or airport. No departure board, canceled-flight signs, typhoon map, hotel logo or refund approval. Slate blue, soft amber lamplight, composed not alarmist.",
+      "transparent_background": false,
+      "status": "ready_for_generation"
+    },
+    {
+      "slug": "taiwan-personal-data-access-copy-request",
+      "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A calm home workspace with a laptop showing softly blurred abstract stacked data cards, a blank folder and a person's hands preparing notes beside it. The screen has no legible UI, letters, icons for completed approval or deletion, account information or personal photographs. No ID card or password imagery. Muted violet-gray and pale wood, editorial spaciousness.",
+      "transparent_background": false,
+      "status": "ready_for_generation"
+    },
+    {
+      "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+      "prompt": "Create a wide 16:9 editorial illustration for a Taiwan law-firm knowledge column. Refined warm natural photography with a subtle painterly texture, calm credible editorial mood, soft daylight, restrained colors, thoughtful composition. This must be a fictional conceptual scene, not evidence of a real case. No text, no legible letters, no digits, no real logos, no seals, no signatures, no barcodes, no watermarks. Avoid gavels, justice scales, padlocks, red warning symbols, split-screen before-and-after layouts and infographic arrows. No identifiable faces. A small unbranded product display in a business studio: two simple packaging boxes, blank label samples and a stack of abstract shipping papers, with one adult hand comparing packaging to the documents. No recognizable trademark, brand name, registration certificate, registration number, price, sales figures, barcode or signature. A conceptual review scene, not proof of past sales. Dark evergreen and warm cream accents.",
+      "transparent_background": false,
+      "status": "ready_for_generation"
+    }
+  ]
+}

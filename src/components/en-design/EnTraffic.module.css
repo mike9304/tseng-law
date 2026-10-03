@@ -152,3 +152,7 @@ figure.figure { margin: 56px 0 0; border-radius: 28px; background: var(--en-tile
   .contact { gap: 32px; padding-block: 96px; }
   .contact > a { width: 100%; }
 }
+/* 320: keep "Traffic accidents in Taiwan ↓" on one line inside the full-width pill. */
+@media (max-width: 359px) {
+  .actions > a:first-child { padding-inline: 12px; }
+}

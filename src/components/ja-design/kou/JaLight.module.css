@@ -28,7 +28,7 @@
 /* ---------- C3 numbers ---------- */
 .numbers { position: relative; padding-block: var(--ja-section); }
 .numbersHead { max-width: calc((100% - 11 * var(--ja-gap)) * 8 / 12 + 7 * var(--ja-gap)); }
-.numbersLede { margin-top: 28px; }
+.numbersHead .numbersLede { margin-top: 28px; }
 .row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

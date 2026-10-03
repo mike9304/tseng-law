@@ -36,6 +36,7 @@ export const JA_KEEP_UNITS = [
 ] as const;
 
 const HIRAGANA = /[ぁ-ゟ]/;
+const KANJI = /[\u4e00-\u9fff\u3005]/;
 const AFTER = /[、。・：，．！？」』）〕】\]）]/;
 const OPENING = /[「『（〔【\[（]/;
 const WORD_START = /[一-鿿々゠-ヿA-Za-z0-9０-９Ａ-Ｚａ-ｚ−]/;
@@ -62,7 +63,9 @@ export function splitJaPhrases(text: string, keep: readonly string[] = []): stri
     if (locked[i] || NEVER_BEFORE.test(next)) continue;
     const breakAfterPunct = AFTER.test(prev);
     const breakAfterKana = HIRAGANA.test(prev) && (WORD_START.test(next) || OPENING.test(next));
-    if (breakAfterPunct || breakAfterKana) {
+    // An honorific prefix (ご相談, お見積り) starts a new phrase after a particle: 日本語で|ご相談ください。
+    const breakBeforeHonorific = HIRAGANA.test(prev) && (next === 'ご' || next === 'お') && KANJI.test(text[i + 1] ?? '');
+    if (breakAfterPunct || breakAfterKana || breakBeforeHonorific) {
       phrases.push(text.slice(start, i));
       start = i;
     }

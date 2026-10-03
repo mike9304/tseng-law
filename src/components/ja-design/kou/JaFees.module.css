@@ -1,0 +1,169 @@
+/* C8 「目安」 and C9 「光の線」 (CONCEPT-V2 §5 C8, C9, §8.7). Prices never move; tiles slide in; the beam draws. */
+
+/* ---------- C8 fees ---------- */
+.section { position: relative; padding-block: var(--ja-section); background: var(--ja-stage); }
+.title { max-width: 14em; }
+.titleLine { display: block; }
+.tableLabel { margin: 20px 0 0; font-size: 17px; font-weight: 500; line-height: 1.5; color: var(--ja-grey); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--ja-gap);
+  margin-top: 56px;
+}
+.tile { display: flex; flex-direction: column; gap: 12px; }
+.f1 { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px var(--ja-gap); align-items: start; }
+.f1Left { grid-column: 1 / span 6; display: flex; flex-direction: column; gap: 12px; }
+.f1Right { grid-column: 7 / -1; }
+.f2 { grid-column: 1 / span 6; }
+.f3 { grid-column: 7 / span 6; }
+.f4 { grid-column: 1 / span 6; }
+.notes { grid-column: 7 / span 6; align-self: end; padding: 8px 8px 8px 16px; }
+.notes p { margin: 0 0 12px; font-size: 17px; line-height: 1.85; color: var(--ja-grey); }
+.itemTitle { margin: 0; font-family: var(--ja-sans); font-size: clamp(22px, 2.1vw, 30px); font-weight: 700; line-height: 1.4; color: var(--ja-ink); }
+.price {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: baseline;
+  gap: 0 0.12em;
+  margin: 8px 0 0;
+  font-family: var(--ja-display);
+  font-size: var(--ja-fs-num-fee);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums proportional-nums;
+  color: var(--ja-ink);
+}
+.prefix { font-size: 0.36em; letter-spacing: 0.02em; }
+.unit { margin-left: 0.15em; font-size: 0.3em; letter-spacing: 0.02em; }
+.priceWord { font-size: min(var(--ja-fs-word), 72px); line-height: 1.1; letter-spacing: 0.02em; }
+.rule { display: block; width: 72px; height: 3px; margin: 10px 0 8px; background: var(--ja-shu); transform-origin: left center; }
+.scope { margin: 0 0 20px; font-size: 21px; font-weight: 600; line-height: 1.6; color: var(--ja-ink); }
+.spec { display: grid; gap: 16px; margin: 0; }
+.specRow { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; align-items: baseline; }
+.specLabel { font-size: 17px; font-weight: 600; line-height: 1.6; color: var(--ja-grey); }
+.specValue { margin: 0; font-size: 21px; font-weight: 500; line-height: 1.6; color: var(--ja-ink); }
+.details { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.details li { font-size: 19px; line-height: 1.7; color: var(--ja-text); }
+.note { margin: 8px 0 0; font-size: 17px; line-height: 1.85; color: var(--ja-text); }
+.split { display: grid; gap: 16px; }
+.subTiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.subTile { padding: 20px; border-radius: 20px; background: #fff; }
+.subTitle { margin: 0 0 10px; font-size: 17px; font-weight: 700; color: var(--ja-ink); }
+
+@media (max-width: 1023px) {
+  .f1Left { grid-column: 1 / -1; }
+  .f1Right { grid-column: 1 / -1; }
+  .f2, .f3, .f4, .notes { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .grid { margin-top: 36px; }
+  .specRow { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .specValue, .scope { font-size: 18px; }
+  .details li { font-size: 17px; }
+  .notes { padding: 8px 4px; }
+  .subTiles { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- C9 flow ---------- */
+.flow { position: relative; background: var(--ja-paper-lit); --runway: 0px; }
+.flowStage { position: relative; overflow: clip; isolation: isolate; }
+.flowLight { display: none; }
+.flowLightImg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.flowInner { position: relative; z-index: 1; padding-block: var(--ja-section); }
+.flowTitle { margin-bottom: 64px; }
+.track { position: relative; }
+.trackRule { position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: rgb(20 18 16 / 0.14); }
+.beam { position: absolute; inset: 0; background: var(--ja-shu); transform-origin: top center; }
+.stations { position: relative; display: grid; gap: 56px; margin: 0; padding: 0 0 0 44px; list-style: none; }
+.station { position: relative; min-width: 0; }
+.marker {
+  position: absolute;
+  left: -44px;
+  top: 4px;
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--ja-ink);
+  background: var(--ja-paper-lit);
+}
+.lit { position: absolute; inset: -2px; background: var(--ja-shu); }
+.stepLabel { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; line-height: 1.5; color: var(--ja-text); }
+.stepTitle { margin: 8px 0 0; font-family: var(--ja-sans); font-size: clamp(22px, 2vw, 28px); font-weight: 700; line-height: 1.4; color: var(--ja-ink); }
+.stepLine { margin: 12px 0 0; max-width: 24em; font-size: 19px; line-height: 1.8; color: var(--ja-text); }
+.stepNote { margin: 10px 0 0; max-width: 26em; font-size: 17px; line-height: 1.8; color: var(--ja-text); }
+.flowCta { margin-top: 24px; }
+@media (max-width: 767px) {
+  .stepLine { font-size: 17px; }
+  .flowCta { display: flex; width: 100%; }
+  .flowTitle { margin-bottom: 40px; }
+}
+
+/* horizontal track from 1024 px (pinned or not) */
+@media (min-width: 1024px) {
+  .trackRule { left: 0; right: 0; top: 7px; bottom: auto; width: auto; height: 2px; }
+  .beam { transform-origin: left center; }
+  .stations { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ja-gap); padding: 40px 0 0; }
+  .marker { left: 0; top: -40px; }
+  .s2 .marker { left: 0; }
+  .s3 { display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+  .s3 .marker { left: auto; right: 0; }
+  .s3 .flowCta { min-height: 60px; padding-inline: 34px; }
+}
+
+/* reveal: the line draws as the chapter passes (all widths), stations light in turn */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .beam { animation: jaFlowDraw linear both; animation-timeline: view(); animation-range: entry 30% cover 60%; }
+    @media (max-width: 1023px) { .beam { animation-name: jaFlowDrawY; } }
+  }
+}
+
+/* pinned beam stage: ≥ 1024 px, ≥ 620 px tall, motion allowed */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-width: 1024px) and (min-height: 620px) {
+    .flowPinned {
+      --runway: calc((100svh - var(--hdr)) * 1.1);
+      height: calc(100svh - var(--hdr) + var(--runway));
+      view-timeline: --jaFlow block;
+      view-timeline-inset: var(--hdr) 0px;
+    }
+    .flowPinned .flowStage { position: sticky; top: var(--hdr); height: calc(100svh - var(--hdr)); display: grid; align-items: center; }
+    .flowPinned .flowInner { padding-block: 48px; }
+    .flowPinned .flowLight { display: block; position: absolute; inset: 0; z-index: 0; }
+    .flowPinned .flowLightImg { will-change: transform; animation: jaFlowPaper linear both; animation-timeline: --jaFlow; animation-range: contain 0% contain 100%; }
+    .flowPinned .marker { background: transparent; }
+    .flowPinned .beam { animation: jaFlowDraw linear both; animation-timeline: --jaFlow; animation-range: contain 5% contain 80%; }
+    .flowPinned .s1 .lit { animation: jaFlowFade linear both; animation-timeline: --jaFlow; animation-range: contain 4% contain 8%; }
+    .flowPinned .s2 .lit { animation: jaFlowFade linear both; animation-timeline: --jaFlow; animation-range: contain 40% contain 44%; }
+    .flowPinned .s3 .lit { animation: jaFlowFade linear both; animation-timeline: --jaFlow; animation-range: contain 76% contain 80%; }
+  }
+}
+/* Firefox: the same stage in steps */
+@media (min-width: 1024px) {
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned { --runway: calc((100svh - var(--hdr)) * 1.1); height: calc(100svh - var(--hdr) + var(--runway)); }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned .flowStage { position: sticky; top: var(--hdr); height: calc(100svh - var(--hdr)); display: grid; align-items: center; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned .flowInner { padding-block: 48px; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned .flowLight { display: block; position: absolute; inset: 0; z-index: 0; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned .flowLightImg { scale: 1.14; translate: -4% 0; transition: scale 900ms var(--ja-ease), translate 900ms var(--ja-ease); }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned[data-step='1'] .flowLightImg { scale: 1.09; translate: -1% 0; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned[data-step='2'] .flowLightImg { scale: 1.04; translate: 2% 0; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned .marker { background: transparent; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned :is(.beam, .lit) { transition: scale 700ms var(--ja-ease), opacity 400ms var(--ja-ease); }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned .beam { scale: 0.05 1; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned :is(.s2, .s3) .lit { opacity: 0; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned[data-step='1'] .beam { scale: 0.5 1; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned[data-step='1'] .s2 .lit { opacity: 1; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned[data-step='2'] .beam { scale: 1 1; }
+  :global(#ja-home[data-ja-motion='steps']) .flowPinned[data-step='2'] :is(.s2, .s3) .lit { opacity: 1; }
+}
+
+@keyframes jaFlowDraw { from { scale: 0 1; } to { scale: 1 1; } }
+@keyframes jaFlowDrawY { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes jaFlowFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes jaFlowPaper { from { scale: 1.14; translate: -4% 0; } to { scale: 1.04; translate: 2% 0; } }
+
+@media (forced-colors: active) { .beam, .lit, .rule { background: Highlight; } }
+@media print { .flowPinned { height: auto !important; } .flowPinned .flowStage { position: relative !important; height: auto !important; } }

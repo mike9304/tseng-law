@@ -255,3 +255,6 @@ a.tile:active { background: var(--ja-tile-press); }
 }
 .marker[data-first] { top: 0; height: calc(50svh - var(--hdr) + var(--runway, 0px) * var(--b)); }
 .marker[data-last] { height: auto; bottom: 0; }
+
+/* Headings phrase-split after hydration (JaPhraseEnhancer). */
+.root :global([data-ja-ph]) { word-break: keep-all !important; overflow-wrap: anywhere; }

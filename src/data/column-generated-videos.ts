@@ -8,8 +8,6 @@ import trafficFilms from './traffic-column-films.json';
 import formationDocumentsCaptions from './formation-documents-video-captions.json';
 import cosmeticsCheckCaptions from './cosmetics-check-video-captions.json';
 import branchModelsCaptions from './branch-models-video-captions.json';
-import truckCutInCaptions from './truck-cut-in-video-captions.json';
-import batApproachCaptions from './bat-approach-video-captions.json';
 import familyCareCaptions from './family-care-video-captions.json';
 import workRecordsCaptions from './work-records-video-captions.json';
 import alleyBicycleCaptions from './alley-bicycle-video-captions.json';
@@ -67,13 +65,6 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
       { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
     ];
   })),
-  ...Object.fromEntries(Object.entries(batApproachCaptions).map(([locale, caption]) => {
-    const id = `bat-approach-v1-${locale}`;
-    return [
-      `column/${locale}/taiwan-road-rage-baseball-bat-fracture-damages`,
-      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
-    ];
-  })),
   ...Object.fromEntries(Object.entries(familyCareCaptions).map(([locale, caption]) => {
     const id = `family-care-v1-${locale}`;
     return [
@@ -85,14 +76,6 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     const id = `work-records-v1-${locale}`;
     return [
       `column/${locale}/taiwan-car-accident-work-loss-rest-note`,
-      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
-    ];
-  })),
-  ...Object.fromEntries(Object.entries(truckCutInCaptions).map(([locale, caption]) => {
-    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
-    const id = `truck-cut-in-v1-${assetLocale}`;
-    return [
-      `column/${locale}/taiwan-road-rage-freeway-cut-in-sentence-reduced`,
       { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
     ];
   })),
@@ -545,46 +528,6 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     description: 'ガラス扉の内側からカメラがゆっくり進み、何も置かれていない室内、柱、奥のドアを映します。音声のない6秒の映像です。',
     disclosure: 'AIで作成した架空の空間で、実際の賃貸物件ではありません。建物の用途・登記・許認可の資料は映っておらず、ここで飲食店を営業できることを示す映像ではありません。',
   },
-  'column/ko/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
-    id: 'reverse-impact-v1-ko',
-    src: '/videos/columns/reverse-impact-v1-ko.mp4',
-    poster: '/images/column-videos/reverse-impact-v1-ko.jpg',
-    width: 1280,
-    height: 720,
-    title: '앞차가 후진해 뒤차에 부딪히는 장면',
-    description: '파란 앞차가 빠르게 후진해 흰 뒤차의 앞부분에 부딪힙니다. 접촉 뒤 흰 차의 보닛과 범퍼가 변형되고, 두 차가 맞닿은 채 멈춥니다. 소리 없는 약 4초 영상입니다.',
-    disclosure: 'AI로 만든 가상의 주간 장면입니다. 실제 사고 영상이나 본문 속 야간의 반복 충돌을 재현한 영상이 아닙니다. 영상만으로 실제 속도, 운전자의 의도, 정당방위 성립 여부를 판단할 수 없습니다.',
-  },
-  'column/ja/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
-    id: 'reverse-impact-v1-ja',
-    src: '/videos/columns/reverse-impact-v1-ja.mp4',
-    poster: '/images/column-videos/reverse-impact-v1-ja.jpg',
-    width: 1280,
-    height: 720,
-    title: '前の車がバックして後ろの車にぶつかる場面',
-    description: '青い前方車が素早くバックし、白い後方車の前部にぶつかります。接触後、白い車のボンネットとバンパーが変形し、2台は接したまま止まります。無音の約4秒の映像です。',
-    disclosure: 'AIで生成した架空の昼間の場面です。実際の事故映像でも、本文で扱う夜間の繰り返しの衝突を再現した映像でもありません。この映像から実際の速度、運転者の意図、正当防衛の成否を判断することはできません。',
-  },
-  'column/en/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
-    id: 'reverse-impact-v1-en',
-    src: '/videos/columns/reverse-impact-v1-en.mp4',
-    poster: '/images/column-videos/reverse-impact-v1-en.jpg',
-    width: 1280,
-    height: 720,
-    title: 'The car ahead reverses into the car behind',
-    description: 'The blue car reverses sharply into the front of the white car behind it. The white car’s bonnet and bumper deform after contact, and both cars settle with their bumpers touching. The silent clip lasts about four seconds.',
-    disclosure: 'Fictional AI-generated daytime scene. It is not real footage or a reconstruction of the repeated nighttime collisions described in the article. The animation does not establish actual speed, a driver’s intent or whether self-defence applies.',
-  },
-  'column/zh-hant/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
-    id: 'reverse-impact-v1-zh-hant',
-    src: '/videos/columns/reverse-impact-v1-zh-hant.mp4',
-    poster: '/images/column-videos/reverse-impact-v1-zh-hant.jpg',
-    width: 1280,
-    height: 720,
-    title: '前車倒退，撞上後車前端',
-    description: '藍色前車迅速倒退，撞上白色後車的前端。接觸後，白車的引擎蓋與保險桿變形，兩車保持接觸並停住。這是約4秒的無聲影片。',
-    disclosure: 'AI生成的獨立日間假想場景，不是真實事故影像，也不是本文夜間多次倒車撞擊的重建。影片不能用來判斷實際車速、駕駛意圖或正當防衛是否成立。',
-  },
   'column/ko/taiwan-road-rage-started-did-not-matter-driver-blocked': {
     id: 'road-rage-started-did-not-matter-driver-blocked-v3-ko',
     src: '/videos/columns/road-rage-started-did-not-matter-driver-blocked-v3-ko.mp4',
@@ -627,6 +570,138 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     title: '持棍者朝敞開的車門伸出手臂',
     description: '白天的下坡路上，一個人拿著長棍站在灰色轎車敞開的車門旁，朝車門伸出另一隻手臂，隨後放下。視角緩緩靠近，人與車在畫面中逐漸變大。這段無聲影片長約15秒，會循環播放。',
     disclosure: '這是 AI 生成的虛構場景，不是行車紀錄器實拍影像，也不是判決所載事實的重現。畫面中的距離、速度與時間安排僅供示意，不能用來判斷任何真實案件的過失或責任。',
+    loop: true,
+  },
+  'column/ko/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
+    id: 'road-rage-reversing-into-tailgater-no-self-defense-v3-ko',
+    src: '/videos/columns/road-rage-reversing-into-tailgater-no-self-defense-v3-ko.mp4',
+    poster: '/images/column-videos/road-rage-reversing-into-tailgater-no-self-defense-v3-ko.jpg',
+    width: 1280,
+    height: 720,
+    title: '앞차와의 간격이 벌어졌다가 다시 좁아지는 장면',
+    description: '밤의 젖은 시내 도로에서 브레이크등을 켠 짙은 색 세단과의 간격이 벌어졌다가 다시 좁아집니다. 앞차가 가까이 있는 동안 옆 차로의 차들이 지나가고, 앞쪽 신호등이 빨간불에서 초록불로 바뀝니다. 소리 없는 약 15초 분량의 영상으로, 재생 버튼을 누르면 반복 재생됩니다.',
+    disclosure: 'AI로 만든 가상의 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실의 재현이 아닙니다. 깜빡이는 REC 표시는 연출이며, 카운터는 재생 경과 시간을 보여 줍니다. 영상 속 거리와 속도, 동작의 시점과 간격은 설명을 위한 예시이므로 실제 사건의 과실을 판단하는 근거로 사용할 수 없습니다.',
+    loop: true,
+  },
+  'column/ja/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
+    id: 'road-rage-reversing-into-tailgater-no-self-defense-v3-ja',
+    src: '/videos/columns/road-rage-reversing-into-tailgater-no-self-defense-v3-ja.mp4',
+    poster: '/images/column-videos/road-rage-reversing-into-tailgater-no-self-defense-v3-ja.jpg',
+    width: 1280,
+    height: 720,
+    title: '前の車との間隔が開き、再び縮まる場面',
+    description: '夜の濡れた市街地の道路で、ブレーキランプを点けた黒っぽいセダンとの車間が開き、その後また縮まります。前の車がすぐ近くにいる間に隣の車線をほかの車が通り過ぎ、前方の信号が赤から青に変わります。無音の約15秒の動画で、再生ボタンを押すと繰り返し再生されます。',
+    disclosure: 'AIで生成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。点滅するRECマークは演出で、カウンターは再生開始からの経過時間を示しています。距離・速度・動作のタイミングは説明のための例であり、実際の事件の過失を判断する根拠には使えません。',
+    loop: true,
+  },
+  'column/en/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
+    id: 'road-rage-reversing-into-tailgater-no-self-defense-v3-en',
+    src: '/videos/columns/road-rage-reversing-into-tailgater-no-self-defense-v3-en.mp4',
+    poster: '/images/column-videos/road-rage-reversing-into-tailgater-no-self-defense-v3-en.jpg',
+    width: 1280,
+    height: 720,
+    title: 'The gap to the car ahead widens, then narrows',
+    description: 'On a wet city road at night, the gap to a dark sedan with its brake lights on widens, then narrows again. The sedan stays close ahead as other vehicles pass in the neighbouring lanes and the traffic lights ahead change from red to green. The silent clip lasts about 15 seconds and loops once you press play.',
+    disclosure: 'This fictional scene was generated by AI; it is neither dashcam footage nor a reconstruction of the facts found in the judgment. The blinking REC marker is an added visual effect, and the counter shows elapsed playback time. Distances, speeds and timing are illustrative and cannot be used to judge fault in any real case.',
+    loop: true,
+  },
+  'column/zh-hant/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
+    id: 'road-rage-reversing-into-tailgater-no-self-defense-v3-zh-hant',
+    src: '/videos/columns/road-rage-reversing-into-tailgater-no-self-defense-v3-zh-hant.mp4',
+    poster: '/images/column-videos/road-rage-reversing-into-tailgater-no-self-defense-v3-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '與前車的距離先拉開，再縮短',
+    description: '夜間的市區道路路面潮濕，前方一輛深色轎車亮著煞車燈，兩車距離先拉開，再縮短。前車仍在近處，其他車輛陸續從旁邊的車道駛過，前方號誌也由紅燈轉為綠燈。這是一段無聲、約15秒的影片，按下播放後會循環播放。',
+    disclosure: '這是AI生成的虛構場景，不是行車紀錄器實拍影像，也不是判決認定事實的重現。閃爍的REC標示是後製效果，計時器顯示的是影片播放經過的時間。車距、速度與動作的時間安排僅供示意，不能用來判斷任何真實案件的過失責任。',
+    loop: true,
+  },
+  'column/ko/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v3-ko',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v3-ko.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v3-ko.jpg',
+    width: 1280,
+    height: 720,
+    title: '흰색 탑차가 좌우로 틀다가 바로 앞 차로로 끼어드는 장면',
+    description: '바로 앞을 달리던 흰색 소형 탑차가 오른쪽으로 크게 틀었다가 다시 왼쪽으로 꺾어 들어와 정면 차로에 자리 잡습니다. 이후 탑차는 후미등을 켠 채 앞에서 달리고, 촬영 차량은 일정한 간격을 두고 뒤따르며 양옆 차로의 차들도 그대로 흘러갑니다. 소리 없는 약 15초 길이의 영상이며, 화면에 들어오면 자동으로 재생되며 반복됩니다.',
+    disclosure: 'AI로 만든 가상 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실을 재현한 것이 아닙니다. 영상 속 거리·속도·시간 간격은 이해를 돕기 위해 임의로 정한 것이어서 실제 사건의 과실을 판단하는 근거로 쓸 수 없습니다.',
+    loop: true,
+  },
+  'column/ja/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v3-ja',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v3-ja.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v3-ja.jpg',
+    width: 1280,
+    height: 720,
+    title: '白い箱型トラックが左右に振れてから前の車線に割り込む場面',
+    description: 'すぐ前を走っていた白い箱型の小型トラックが右へ大きく向きを変えたあと、左へ切り返して正面の車線に収まります。その後トラックは後部ランプを点けたまま前を走り、撮影車両は一定の車間をあけて後ろを進みます。左右の車線の車もそのまま流れていきます。音声のない約15秒の映像で、画面に入ると自動で再生され、繰り返し流れます。',
+    disclosure: 'AIで生成した架空の場面であり、実際のドライブレコーダー映像でも、判決が認定した事実を再現したものでもありません。距離や速度、タイミングは説明のために仮に設定したもので、実際の事件の過失を判断する材料にはなりません。',
+    loop: true,
+  },
+  'column/en/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v3-en',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v3-en.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v3-en.jpg',
+    width: 1280,
+    height: 720,
+    title: 'A white box truck swings right, then cuts back into the lane ahead',
+    description: 'A white box truck just ahead swings sharply to the right, then turns back left and settles into the lane directly in front. It carries on ahead with its rear lights on while the camera car follows at a steady distance and traffic in the other lanes keeps moving. The clip is silent, about 15 seconds long, and starts automatically when visible, then loops.',
+    disclosure: 'This is a fictional AI-generated scene, not dashcam footage and not a reconstruction of the facts found in the judgment. Distances, speeds and timing are illustrative only and cannot be used to judge fault in any real case.',
+    loop: true,
+  },
+  'column/zh-hant/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v3-zh-hant',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v3-zh-hant.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v3-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '白色廂型小貨車左右擺動後切入正前方車道',
+    description: '正前方的白色廂型小貨車先大幅往右偏，再往左切回，停在正前方車道上。之後小貨車亮著尾燈在前方行駛，拍攝車輛保持固定車距跟在後面，兩側車道的車輛也照常行駛。這段影片沒有聲音，長約15秒，進入畫面時會自動播放並循環。',
+    disclosure: '這是AI生成的虛構畫面，不是行車紀錄器實錄，也不是依判決認定事實所做的重建。畫面中的距離、車速與時間都只是示意，不能用來判斷任何真實案件的過失責任。',
+    loop: true,
+  },
+  'column/ko/taiwan-road-rage-baseball-bat-fracture-damages': {
+    id: 'road-rage-baseball-bat-fracture-damages-v3-ko',
+    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-ko.mp4',
+    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-ko.jpg',
+    width: 1280,
+    height: 720,
+    title: '야구방망이를 든 남성이 골목 한가운데로 나와 멈춰 서는 장면',
+    description: '해 질 무렵 주택가 골목에서, 짙은 회색 해치백 옆에 있던 남성이 야구방망이를 아래로 든 채 차 옆을 서성이다가 골목 한가운데로 나와 카메라 앞쪽에 멈춰 섭니다. 마지막에는 등을 보인 채 서 있고, 앞차는 후미등을 켠 채 그 자리에 서 있습니다. 소리 없는 약 15초 길이의 영상이며, 화면에 들어오면 자동으로 재생되며 반복됩니다.',
+    disclosure: 'AI로 만든 가상의 장면이며, 실제 블랙박스 영상도 판결이 인정한 사실을 재현한 영상도 아닙니다. 화면의 녹화(REC) 표시와 경과 시간은 연출이고, 영상 속 거리·속도·시간은 예시일 뿐이어서 실제 사건에서 누구의 잘못인지 판단하는 근거가 될 수 없습니다.',
+    loop: true,
+  },
+  'column/ja/taiwan-road-rage-baseball-bat-fracture-damages': {
+    id: 'road-rage-baseball-bat-fracture-damages-v3-ja',
+    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-ja.mp4',
+    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-ja.jpg',
+    width: 1280,
+    height: 720,
+    title: 'バットを持った男性が路地の中ほどに出て立ち止まる場面',
+    description: '夕暮れの住宅街の路地で、濃いグレーのハッチバックの横にいた男性が、バットを下げたまま車のそばを行き来したあと、路地の中ほどに出てカメラの手前で立ち止まります。最後は背中を向けたまま立っており、前の車はテールランプを点けたままその場から動きません。音声のない約15秒の映像で、画面に入ると自動で再生され、繰り返し流れます。',
+    disclosure: 'AIで生成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。画面の録画（REC）表示と経過時間は演出であり、映像中の距離・速度・タイミングはあくまで例示のため、実際の事件で誰に非があるかを判断する材料にはなりません。',
+    loop: true,
+  },
+  'column/en/taiwan-road-rage-baseball-bat-fracture-damages': {
+    id: 'road-rage-baseball-bat-fracture-damages-v3-en',
+    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-en.mp4',
+    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-en.jpg',
+    width: 1280,
+    height: 720,
+    title: 'A man holding a baseball bat steps into the middle of the lane and stops',
+    description: 'At dusk in a residential lane, a man beside a stopped dark grey hatchback paces by the car with a baseball bat held low, then steps into the middle of the lane and stops in front of the camera, ending with his back turned. The hatchback stays put with its tail lights on. The clip is silent, about 15 seconds long, and starts automatically when visible, then loops.',
+    disclosure: 'This is a fictional AI-generated scene, not dashcam footage and not a reconstruction of the facts found in the judgment. The REC marker and elapsed-time counter are added for effect, and the distances, speeds and timing shown are illustrative only; they cannot be used to judge fault in any real case.',
+    loop: true,
+  },
+  'column/zh-hant/taiwan-road-rage-baseball-bat-fracture-damages': {
+    id: 'road-rage-baseball-bat-fracture-damages-v3-zh-hant',
+    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-zh-hant.mp4',
+    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '手持球棒的男子走到巷道中央後停下',
+    description: '黃昏的住宅區巷道裡，原本站在深灰色掀背車旁的男子，球棒垂在身側，在車旁來回走動後走到巷道中央，停在鏡頭前方，最後背對鏡頭站著。掀背車亮著尾燈，停在原地沒有移動。本片無聲，長約15秒，進入畫面時會自動播放並循環。',
+    disclosure: '本片為AI生成的虛構場景，不是行車紀錄器實錄，也不是判決認定事實的重現。畫面上的錄影（REC）標示與計時僅為效果，片中的距離、速度與時間皆為示意，不能用來判斷任何真實案件的責任歸屬。',
     loop: true,
   },
 };

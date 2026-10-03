@@ -12,9 +12,7 @@ const precisionPartsCaptions = JSON.parse(await fs.readFile(new URL('../src/data
 const gymPauseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/gym-pause-video-captions.json', import.meta.url), 'utf8'));
 const formationDocumentsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/formation-documents-video-captions.json', import.meta.url), 'utf8'));
 const cosmeticsCheckCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cosmetics-check-video-captions.json', import.meta.url), 'utf8'));
-const truckCutInCaptions = JSON.parse(await fs.readFile(new URL('../src/data/truck-cut-in-video-captions.json', import.meta.url), 'utf8'));
 const branchModelsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/branch-models-video-captions.json', import.meta.url), 'utf8'));
-const batApproachCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bat-approach-video-captions.json', import.meta.url), 'utf8'));
 const familyCareCaptions = JSON.parse(await fs.readFile(new URL('../src/data/family-care-video-captions.json', import.meta.url), 'utf8'));
 const workRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/work-records-video-captions.json', import.meta.url), 'utf8'));
 const alleyBicycleCaptions = JSON.parse(await fs.readFile(new URL('../src/data/alley-bicycle-video-captions.json', import.meta.url), 'utf8'));
@@ -26,10 +24,6 @@ const allCases = [
   { locale: 'zh-hant', slug: 'taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction', id: 'settlement-records-v1-zh-hant', duration: 4, contactTime: 57 / 24, expectedDiagrams: 0, disclosure: settlementRecordsCaptions['zh-hant'].disclosure },
   { locale: 'zh-hant', slug: 'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence', id: 'alley-bicycle-v2-zh-hant', duration: 4, contactTime: 7 / 24, expectedDiagrams: 0, disclosure: alleyBicycleCaptions['zh-hant'].disclosure },
   { locale: 'zh-hant', slug: 'taiwan-manhole-pothole-road-authority-utility-internal-recourse', id: 'pothole-scooter-v2-zh-hant', duration: 4, contactTime: 3 / 24, expectedDiagrams: 0, disclosure: potholeScooterCaptions['zh-hant'].disclosure },
-  ...Object.entries(batApproachCaptions).map(([locale, caption]) => ({
-    locale, slug: 'taiwan-road-rage-baseball-bat-fracture-damages', id: `bat-approach-v1-${locale}`,
-    duration: 4, contactTime: 2.0, expectedDiagrams: 0, disclosure: caption.disclosure,
-  })),
   ...Object.entries(familyCareCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-accident-family-care-necessity-period', id: `family-care-v1-${locale}`,
     duration: 4, contactTime: 2.6, expectedDiagrams: 0, disclosure: caption.disclosure,
@@ -38,14 +32,6 @@ const allCases = [
     locale, slug: 'taiwan-car-accident-work-loss-rest-note', id: `work-records-v1-${locale}`,
     duration: 4, contactTime: 3.1, expectedDiagrams: 0, disclosure: caption.disclosure,
   })),
-  ...Object.entries(truckCutInCaptions).map(([locale, caption]) => {
-    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
-    return {
-      locale, slug: 'taiwan-road-rage-freeway-cut-in-sentence-reduced', id: `truck-cut-in-v1-${nativeLocale ? locale : 'en'}`,
-      evidenceStem: `truck-cut-in-v1-${locale}`, duration: 4, contactTime: 1.0,
-      expectedDiagrams: 0, disclosure: caption.disclosure,
-    };
-  }),
   ...Object.entries(branchModelsCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
     return {
@@ -54,11 +40,6 @@ const allCases = [
       traffic: false, trafficBoard: nativeLocale, minBodyImages: 3, disclosure: caption.disclosure,
     };
   }),
-  ...['ko', 'en', 'ja', 'zh-hant'].map(locale => ({
-    locale, slug: 'taiwan-road-rage-reversing-into-tailgater-no-self-defense',
-    id: `reverse-impact-v1-${locale}`, duration: 4, contactTime: 0.833333, expectedDiagrams: 0,
-    disclosure: { ko: '야간의 반복 충돌을 재현한 영상이 아닙니다', en: 'repeated nighttime collisions', ja: '夜間の繰り返しの衝突', 'zh-hant': '不是本文夜間多次倒車撞擊的重建' }[locale],
-  })),
   { locale: 'zh-hant', slug: 'taiwan-motorway-blocking-no-collision-public-danger', id: 'motorway-brake-v2-zh-hant', duration: 4, contactTime: 0.9, expectedDiagrams: 0, disclosure: '不能用來判斷實際車速、距離、故意或刑事責任' },
   ...Object.entries(cosmeticsCheckCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);

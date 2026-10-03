@@ -14,6 +14,8 @@ const allCases = [
   { locale: 'zh-hant', slug: 'taiwan-chain-rear-end-first-impact-evidence', id: 'chain-rear-end-v2-zh-hant', duration: 4, contactTime: 1.2, disclosure: '這只是「後車先碰中間車」的一種設定' },
   { locale: 'zh-hant', slug: 'taiwan-roadside-starting-parking-exit-liability', id: 'roadside-start-v3-zh-hant', duration: 4, contactTime: 0.6, disclosure: '非本文判決或真實事故的重建' },
   { locale: 'zh-hant', slug: 'taiwan-right-turn-car-straight-motorcycle-evidence', id: 'right-turn-scooter-v2-zh-hant', duration: 4, contactTime: 1.5, disclosure: '非真實事故或本文案件的重建' },
+  { locale: 'zh-hant', slug: 'taiwan-car-repair-cost-estimate-parts-depreciation', id: 'repair-workshop-v1-zh-hant', evidenceStem: 'repair-cost-zh-hant', duration: 6, contactTime: 3, expectedDiagrams: 0, disclosure: '非本文判決車輛或真實受損紀錄' },
+  { locale: 'zh-hant', slug: 'taiwan-car-repair-rental-cost-repair-period-evidence', id: 'repair-workshop-v1-zh-hant', evidenceStem: 'repair-period-zh-hant', duration: 6, contactTime: 3, expectedDiagrams: 0, disclosure: '非本文案件的車輛或維修紀錄' },
   ...['ko', 'en', 'zh-hant', 'ja'].map(locale => ({
     locale, slug: 'taiwan-company-setup-pitch-location', id: `business-premises-v1-${locale}`,
     duration: 6, contactTime: 4.2, traffic: false,
@@ -37,6 +39,7 @@ try {
       if (message.type() === 'error' && /hydration|Minified React|unique.*key/i.test(message.text())) findings.push(message.text());
     });
     for (const item of cases) {
+      const evidenceStem = item.evidenceStem || item.id;
       const article = `/${item.locale}/columns/${item.slug}`;
       const response = await page.goto(`${base}${article}`, { waitUntil: 'load' });
       assert.equal(response?.status(), 200);
@@ -67,7 +70,7 @@ try {
       const poster = await page.request.get(initial.poster);
       assert.equal(poster.status(), 200);
       assert.match(poster.headers()['content-type'], /image\/jpeg/);
-      await page.screenshot({ path: `${out}/${item.id}-poster-${viewport.width}.png` });
+      await page.screenshot({ path: `${out}/${evidenceStem}-poster-${viewport.width}.png` });
 
       // Exercise the browser's native keyboard control, including reduced-motion mode.
       await video.focus();
@@ -91,7 +94,7 @@ try {
         const element = document.querySelector('[data-column-generated-video] video');
         return element && !element.seeking && element.readyState >= 2 && element.currentTime >= seconds - 0.1;
       }, item.contactTime);
-      await page.screenshot({ path: `${out}/${item.id}-contact-${viewport.width}.png` });
+      await page.screenshot({ path: `${out}/${evidenceStem}-contact-${viewport.width}.png` });
       const layout = await page.evaluate(() => ({
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
         frameWidth: document.querySelector('[data-column-generated-video]').getBoundingClientRect().width,
@@ -105,6 +108,8 @@ try {
       if (item.traffic === false) {
         assert.equal(layout.diagramCount, 0);
         assert.ok(layout.bodyImageCount >= 3, 'Existing premises article images were removed');
+      } else if (item.expectedDiagrams !== undefined) {
+        assert.equal(layout.diagramCount, item.expectedDiagrams);
       } else {
         assert.ok(layout.diagramCount >= 1);
       }
@@ -136,7 +141,7 @@ try {
     await context.close();
   }
   const ranges = [];
-  for (const item of cases) {
+  for (const item of new Map(cases.map(item => [item.id, item])).values()) {
     const mp4 = await fetch(`${base}/videos/columns/${item.id}.mp4`, { headers: { Range: 'bytes=0-1023' } });
     assert.equal(mp4.status, 206);
     assert.match(mp4.headers.get('content-type') || '', /video\/mp4/);

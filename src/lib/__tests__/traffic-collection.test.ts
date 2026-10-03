@@ -197,7 +197,12 @@ describe('loadTrafficCollection (published files)', () => {
     for (const item of items) {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
-      expect(item.hasVideo, item.slug).toBe(item.slug === 'taiwan-traffic-accident-procedure' || Boolean(diagram && diagram.kind !== 'still'));
+      const reviewedSceneWithoutDiagram = [
+        'taiwan-traffic-accident-procedure',
+        'taiwan-car-repair-cost-estimate-parts-depreciation',
+        'taiwan-car-repair-rental-cost-repair-period-evidence',
+      ].includes(item.slug);
+      expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');
     }
   });

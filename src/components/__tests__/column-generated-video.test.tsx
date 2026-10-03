@@ -43,6 +43,8 @@ describe('reviewed column videos', () => {
     ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-v2-zh-hant', '銀色中間車'],
     ['taiwan-roadside-starting-parking-exit-liability', 'roadside-start-v3-zh-hant', '橙色車'],
     ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-scooter-v2-zh-hant', '機車'],
+    ['taiwan-car-repair-cost-estimate-parts-depreciation', 'repair-workshop-v1-zh-hant', '零件是否需更換'],
+    ['taiwan-car-repair-rental-cost-repair-period-evidence', 'repair-workshop-v1-zh-hant', '修理需要幾天'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="zh-hant" slug={slug} />);
     expect(html).toContain(`${id}.mp4`);

@@ -5,6 +5,7 @@ import logisticsCaptions from './logistics-video-captions.json';
 import precisionPartsCaptions from './precision-parts-video-captions.json';
 import gymPauseCaptions from './gym-pause-video-captions.json';
 import trafficFilms from './traffic-column-films.json';
+import formationDocumentsCaptions from './formation-documents-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -28,6 +29,24 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-racing-no-contact-joint-tort-liability': {
+    id: 'adjacent-rear-end-v3-zh-hant',
+    src: '/videos/columns/adjacent-rear-end-v3-zh-hant.mp4',
+    poster: '/images/column-videos/adjacent-rear-end-v3-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '藍車追撞銀色車，鄰線紅車未接觸',
+    description: '藍色轎車短距離前進，撞上銀色車的後端，引擎蓋隨即變形。鄰線紅車保持停住，沒有接觸另外兩車。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立假想場景，非本文夜間競駛事故的重建。畫面未呈現競駛、變換車道、第四輛車或傷亡經過，不能用來認定競駛、因果關係或共同侵權責任。',
+  },
+  ...Object.fromEntries(Object.entries(formationDocumentsCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `formation-documents-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-company-establishment-basics`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   'column/zh-hant/taiwan-bus-sudden-braking-passenger-carrier-liability': {
     id: 'bus-braking-v4-zh-hant',
     src: '/videos/columns/bus-braking-v4-zh-hant.mp4',

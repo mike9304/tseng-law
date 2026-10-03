@@ -30,13 +30,13 @@ describe('reviewed joint-tort liability column', () => {
     expect(body).toContain('本案兩人實際應如何分擔，這兩份判決並未判定');
   });
 
-  it('automatically joins the liability collection without a false video or language copy', () => {
+  it('includes the reviewed fictional video without inventing language copies', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(p => p.slug === slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: 'liability', hasVideo: false, columnNumber: 88, aiAuthored: true });
+    expect(matches[0]).toMatchObject({ subject: 'liability', hasVideo: true, columnNumber: 88, aiAuthored: true });
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'liability', q: '共同原因' })).map(p => p.slug)).toEqual([slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'liability', video: '1' })).some(p => p.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'liability', video: '1' })).some(p => p.slug === slug)).toBe(true);
     expect(getColumnPost(slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     expect(pendingEmbeddings.columns.filter(p => p.slug === slug)).toEqual([{ locale: 'zh-hant', slug }]);
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);

@@ -10,7 +10,17 @@ const businessPremisesCaptions = JSON.parse(await fs.readFile(new URL('../src/da
 const logisticsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/logistics-video-captions.json', import.meta.url), 'utf8'));
 const precisionPartsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/precision-parts-video-captions.json', import.meta.url), 'utf8'));
 const gymPauseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/gym-pause-video-captions.json', import.meta.url), 'utf8'));
+const formationDocumentsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/formation-documents-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-racing-no-contact-joint-tort-liability', id: 'adjacent-rear-end-v3-zh-hant', duration: 4, contactTime: 0.333333, expectedDiagrams: 0, disclosure: '不能用來認定競駛、因果關係或共同侵權責任' },
+  ...Object.entries(formationDocumentsCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-company-establishment-basics', id: `formation-documents-v1-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `formation-documents-v1-${locale}`, duration: 6, contactTime: 3.5,
+      traffic: false, trafficBoard: nativeLocale, minBodyImages: 3, disclosure: caption.disclosure,
+    };
+  }),
   { locale: 'zh-hant', slug: 'taiwan-bus-sudden-braking-passenger-carrier-liability', id: 'bus-braking-v4-zh-hant', duration: 4, contactTime: 0.25, expectedDiagrams: 1, disclosure: '不能用來判斷傷勢、駕駛過失或客運公司的法律責任' },
   ...Object.entries(gymPauseCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
@@ -138,7 +148,7 @@ try {
       assert.equal(initial.controls, true);
       assert.equal(initial.autoplay, false);
       assert.equal(initial.loop, item.loop === true);
-      assert.equal(initial.preload, 'none');
+      assert.equal(initial.preload, item.traffic === false ? 'none' : 'metadata');
       assert.equal(initial.playsInline, true);
       assert.equal(initial.playbackRate, 1);
       assert.equal(new URL(initial.src).origin, new URL(base).origin);
@@ -222,7 +232,7 @@ try {
       }
       results.push({ viewport, article, locale: item.locale, id: item.id, evidenceStem, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
     }
-    const unreviewed = await page.goto(`${base}/ko/columns/taiwan-accident-police-records`, { waitUntil: 'load' });
+    const unreviewed = await page.goto(`${base}/ko/columns/taiwan-company-establishment-advanced-1`, { waitUntil: 'load' });
     assert.equal(unreviewed?.status(), 200);
     assert.equal(await page.locator('[data-column-generated-video]').count(), 0, 'Unreviewed article inherited video');
     await context.close();
@@ -236,7 +246,7 @@ try {
     ranges.push({ id: item.id, status: mp4.status });
   }
   assert.equal(findings.length, 0, findings.join('\n'));
-  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, base, checkedAt: new Date().toISOString(), findings, results, ranges, unreviewedLocaleExcluded: true, unreviewedArticleLanguagePage: '/ko/columns/taiwan-accident-police-records' }, null, 2));
+  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, base, checkedAt: new Date().toISOString(), findings, results, ranges, unreviewedLocaleExcluded: true, unreviewedArticleLanguagePage: '/ko/columns/taiwan-company-establishment-advanced-1' }, null, 2));
   console.log(JSON.stringify({ ok: true, base, out, journeys: results.length, assets: ranges.length }));
 } catch (error) {
   await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: false, base, error: String(error), findings, results }, null, 2));

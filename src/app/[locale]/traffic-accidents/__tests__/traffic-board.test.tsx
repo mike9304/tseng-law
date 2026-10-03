@@ -115,16 +115,16 @@ describe('TrafficBoard SSR', () => {
   it('marks playable diagrams and reviewed generated scenes as videos', async () => {
     const html = await render('ja');
     expect(html.match(/data-traffic-board-row/g)).toHaveLength(6);
-    // ja: overtaking has a video diagram; accident procedure has a reviewed scene.
-    expect(html.match(/data-traffic-board-video/g)).toHaveLength(5);
+    // All six Japanese entries now have a reviewed scene or film.
+    expect(html.match(/data-traffic-board-video/g)).toHaveLength(6);
     const filtered = await render('ja', { video: '1' });
-    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(5);
+    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(6);
     expect(filtered).toContain('href="/ja/columns/taiwan-overtaking-accident-liability"');
     expect(filtered).toContain('href="/ja/columns/taiwan-traffic-accident-procedure"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-reversing-into-tailgater-no-self-defense"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-baseball-bat-fracture-damages"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-freeway-cut-in-sentence-reduced"');
-    expect(filtered).not.toContain('href="/ja/columns/taiwan-accident-police-records"');
+    expect(filtered).toContain('href="/ja/columns/taiwan-accident-police-records"');
   });
 });
 

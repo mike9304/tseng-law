@@ -8,6 +8,8 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import styles from './NotFound.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
+import enStyles from '@/components/en-design/EnNotFound.module.css';
 import { GuidanceNotFoundBody } from '@/components/GuidancePageBody';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
@@ -46,7 +48,7 @@ export default async function LocalizedNotFound() {
   const locale = await requestLocale();
   const copy = notFoundCopyByLocale[locale];
 
-  return (
+  const body = (
     <section className={`not-found-page ${styles.root}`} aria-labelledby="not-found-title">
       <div className="container not-found-card">
         <p className="not-found-code" aria-hidden="true">404</p>
@@ -65,4 +67,8 @@ export default async function LocalizedNotFound() {
       </div>
     </section>
   );
+  // en (Clear Night inner pages): the same 404 body inside the en wrapper; other locales render it as before.
+  return locale === 'en'
+    ? <EnPageShell page="not-found"><div className={enStyles.notFound}>{body}</div></EnPageShell>
+    : body;
 }

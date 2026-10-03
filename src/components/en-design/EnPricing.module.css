@@ -1,70 +1,126 @@
-/* en pricing rate card (Opus 5.5 en lane, 2026-10-01). Tokens come from EnPage.module.css (.root). */
-.schedule { padding: clamp(48px, 6vw, 88px) 0 clamp(64px, 8vw, 112px); background: var(--en-mist); }
-.currency { margin: 0 0 14px; font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--en-muted); }
-.tiers { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
-/* Each fee is one wide module: title and price on the left, what it covers on the right. */
-.tier { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 0 clamp(32px, 5vw, 80px); align-items: start; min-width: 0; padding: clamp(26px, 3vw, 40px); border: 1px solid var(--en-line); border-radius: 24px; background: #fff; scroll-margin-top: calc(var(--header-offset-desktop, 112px) + 16px); }
-.tier[data-fee='consultation'] { background: var(--en-ink); border-color: var(--en-ink); color: #fff; }
-.tierHead { display: grid; align-content: start; gap: 14px; padding: 0; margin: 0; border: none; }
-.tierBody { min-width: 0; padding-top: 4px; }
-.tierIcon { display: inline-flex; width: 48px; height: 48px; padding: 11px; border-radius: 14px; background: var(--en-signal); color: var(--en-ink); }
-.tierIcon svg { width: 100%; height: 100%; }
-.tierTitle { margin: 0; font-family: var(--en-display) !important; font-size: clamp(20px, 1.8vw, 24px); font-weight: 800; line-height: 1.25; letter-spacing: -0.015em; color: var(--en-ink); }
-.tier[data-fee='consultation'] .tierTitle { color: #fff; }
-.tierPrice { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; margin: 6px 0 0; }
-.amount { display: inline-flex; align-items: baseline; gap: 0.14em; white-space: nowrap; font-family: var(--en-display); font-size: clamp(44px, 5.4vw, 76px); font-weight: 800; line-height: 1; letter-spacing: -0.04em; color: var(--en-ink); font-variant-numeric: tabular-nums; }
-.cur { font-family: var(--en-mono); font-size: 0.3em; font-weight: 500; letter-spacing: 0.04em; color: var(--en-muted); }
-.tier[data-fee='consultation'] .cur { color: rgb(255 255 255 / 76%); }
-.amountText { font-size: clamp(30px, 3.4vw, 46px); letter-spacing: -0.03em; white-space: normal; }
-.tier[data-fee='consultation'] .amount { color: var(--en-signal); }
-.unit { font-size: 16px; font-weight: 600; color: var(--en-muted); }
-.tier[data-fee='consultation'] .unit { color: rgb(255 255 255 / 80%); }
-.details { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
-.details li { position: relative; padding-left: 26px; font-size: 15.5px; line-height: 1.55; color: var(--en-text); }
-.details li::before {
-  content: '';
-  position: absolute;
-  left: 2px;
-  top: 0.4em;
-  width: 12px;
-  height: 6px;
-  border-left: 2.5px solid var(--en-ink);
-  border-bottom: 2.5px solid var(--en-ink);
-  transform: rotate(-45deg);
+/* en pricing, Clear Night (CONCEPT-V2 12.3 and S5 at page scale; en-pages lane 2026-10-03). Tokens from EnPage.module.css. */
+
+.schedule { padding: 120px 0 160px; background: #000; color: var(--en-white); }
+.currency { margin: 0 0 64px; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.4; color: var(--en-grey); }
+
+/* Consultation: title and numeral in cols 1-6, its four conditions beside it in cols 8-12 at reading size. */
+.consultation {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  align-items: end;
 }
-.tier[data-fee='consultation'] .details li { color: #f1f2f4; }
-.tier[data-fee='consultation'] .details li::before { border-color: var(--en-signal); }
-.note { margin: 20px 0 0; padding: 12px 14px; border-left: 4px solid var(--en-signal); border-radius: 0 12px 12px 0; background: var(--en-mist); font-size: 14.5px; line-height: 1.55; color: var(--en-text); }
-.advisory { padding-top: 18px; font-size: 14.5px; line-height: 1.55; color: var(--en-text); }
-.advisory p { margin: 0; }
-.advisory a { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-ink); font-weight: 700; }
-.tier a:focus-visible { outline: 3px solid var(--en-ink); outline-offset: 2px; }
-.tier[data-fee='consultation'] a:focus-visible { outline-color: #fff; }
+.consultationLead { grid-column: 1 / span 7; min-width: 0; }
+.consultationTitle { margin: 0 0 16px; font-family: var(--en-display) !important; font-size: 28px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; color: var(--en-white); }
+.consultationPrice { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.2em; margin: 0; font-family: var(--en-display); color: var(--en-white); }
+.feeNumeral { font-size: var(--en-t-fee); font-weight: 700; line-height: 0.9; letter-spacing: -0.04em; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.cur { font-size: 0.32em; font-weight: 600; letter-spacing: 0; color: var(--en-grey); vertical-align: 0.15em; }
+.num { color: var(--en-white); }
+.unit { margin-left: 0.25em; font-family: var(--en-display); font-size: 28px; font-weight: 600; letter-spacing: -0.01em; color: var(--en-grey); white-space: nowrap; }
+.consultationDetails {
+  grid-column: 8 / span 5;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0 0 6px;
+  list-style: none;
+}
+.consultationDetails li { margin: 0; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.4; color: var(--en-pale); }
+.consultationNote { grid-column: 1 / -1; margin: 0; font-size: 19px; color: var(--en-grey); }
 
-.terms { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 32px 56px; align-items: start; margin-top: 48px; }
-.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
-.steps li { position: relative; display: flex; flex-direction: column; gap: 10px; padding-right: 12px; font-size: 15.5px; font-weight: 800; color: var(--en-ink); }
-.steps li:not(:last-child)::after { content: ''; position: absolute; top: 17px; left: 46px; right: 10px; height: 2px; background: var(--en-line); }
-.stepNo { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--en-ink); color: #fff; font-family: var(--en-mono); font-size: 15px; font-weight: 500; }
-.disclaimer p { margin: 0 0 10px; font-size: 15.5px; line-height: 1.65; color: var(--en-text); }
+/* One 2 px drawn line between the consultation and the other fees. */
+.line { height: 2px; margin: 64px 0 96px; background: rgb(255 255 255 / 28%); }
 
-.cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; margin-top: 48px; padding: clamp(28px, 3vw, 44px); background: var(--en-ink); color: #fff; border-radius: 24px; }
-.ctaNote { margin: 0; font-size: 17px; color: #d3d6da; }
-.ctaEmail { margin: 8px 0 0; font-family: var(--en-mono); font-size: clamp(17px, 2vw, 24px); font-weight: 500; overflow-wrap: anywhere; }
-.ctaEmail a { color: #fff; text-decoration: underline; text-decoration-color: var(--en-signal); text-decoration-thickness: 3px; text-underline-offset: 6px; }
-.ctaButton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 12px 28px; border: 2px solid var(--en-signal); border-radius: 999px; background: var(--en-signal); color: var(--en-ink); font-size: 16.5px; font-weight: 700; text-decoration: none; }
-.ctaButton:hover { background: #ffd54d; border-color: #ffd54d; color: var(--en-ink); }
-.cta a:focus-visible { outline: 3px solid var(--en-signal); outline-offset: 3px; }
+/* Litigation, company setup and retainer: three columns whose title, price, details and note rows line up. */
+.others {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0 48px;
+}
+.fee {
+  display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
+  align-content: start;
+  gap: 0;
+  min-width: 0;
+}
+.feeTitle { margin: 0 0 14px; font-family: var(--en-display) !important; font-size: 24px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; color: var(--en-white); text-wrap: balance; }
+.feePrice { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.25em; margin: 0 0 24px; font-family: var(--en-display); color: var(--en-white); }
+.priceNumeral { font-size: var(--en-t-price); font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.priceText { font-size: clamp(32px, 2.78vw, 40px); line-height: 1.05; }
+.priceNumeral.priceText { font-size: clamp(32px, 2.78vw, 40px); }
+.feeUnit { margin-left: 0.2em; font-family: var(--en-text); font-size: 21px; font-weight: 500; color: var(--en-grey); white-space: nowrap; }
+.feeDetails { display: grid; align-content: start; gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+.feeDetails li { margin: 0; font-family: var(--en-text); font-size: 19px; font-weight: 400; line-height: 1.45; color: var(--en-grey); }
+.feeNote { margin: 0; font-family: var(--en-text); font-size: 19px; font-weight: 400; line-height: 1.45; color: var(--en-grey); }
+.advisory { margin-top: 20px; }
+.advisory p { margin: 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-grey); }
+.advisory a { display: inline; color: var(--en-white); font-weight: 600; text-decoration: none; }
+.advisory a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.advisory a:focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
 
-@media (max-width: 1000px) {
-  .tier { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .terms { grid-template-columns: minmax(0, 1fr); }
+/* Baseline disclaimer at 28 px, its second sentence in white; the currency note; the quote steps. */
+.terms { display: grid; gap: 24px; max-width: 980px; margin-top: 120px; }
+.disclaimer { margin: 0; font-family: var(--en-display); font-size: var(--en-t-callout); font-weight: 600; line-height: 1.32; letter-spacing: -0.01em; color: var(--en-grey); text-wrap: pretty; }
+.disclaimerKey { color: var(--en-white); }
+.currencyNote { margin: 0; max-width: 760px; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-grey); }
+.steps { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 0; margin: 8px 0 0; padding: 0; list-style: none; }
+.steps li { display: inline-flex; align-items: center; margin: 0; font-family: var(--en-text); font-size: 19px; font-weight: 600; color: var(--en-pale); }
+.steps li + li::before { content: '\2192'; margin: 0 0.75em; font-family: var(--en-display); font-weight: 400; color: var(--en-grey-2); }
+
+/* CTA: the blue pill, its booking note and the address. */
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; margin-top: 72px; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--en-action);
+  color: #fff;
+  font-family: var(--en-text);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 100ms var(--en-ease);
+}
+.pill:hover { background: var(--en-action-hover); color: #fff; }
+.pill:active { background: var(--en-action-pressed); scale: 0.98; }
+.pill:focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+.ctaCopy { display: grid; gap: 2px; }
+.ctaNote { margin: 0; font-family: var(--en-text); font-size: 17px; font-weight: 500; line-height: 1.45; color: var(--en-grey); }
+.ctaEmail { margin: 0; font-family: var(--en-text); font-size: 19px; font-weight: 600; }
+.ctaEmail a { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-white); text-decoration: none; }
+.ctaEmail a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.ctaEmail a:focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+
+@media (max-width: 1023px) {
+  .consultationDetails li { font-size: 19px; }
+  .feeDetails li,
+  .feeNote { font-size: 17px; }
+  .disclaimer { font-size: 21px; }
+}
+@media (max-width: 899px) {
+  .consultation { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .consultationLead,
+  .consultationDetails { grid-column: 1 / -1; }
+  .others { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; gap: 64px; }
+  .fee { grid-row: auto; grid-template-rows: none; }
+  .fee .feeNote:empty { display: none; }
 }
 @media (max-width: 767px) {
-  .schedule { padding: 40px 0 64px; }
-  .tiers { grid-template-columns: minmax(0, 1fr); }
-  .tier { padding: 24px 20px; }
-  .steps li { font-size: 14px; }
-  .cta { padding: 24px 20px; }
-  .ctaButton { width: 100%; }
+  .schedule { padding: 72px 0 96px; }
+  .currency { margin-bottom: 40px; font-size: 17px; }
+  .consultationTitle { font-size: 24px; }
+  .unit { font-size: 21px; }
+  .consultationDetails li { font-size: 17px; }
+  .line { margin: 48px 0 64px; }
+  .terms { margin-top: 80px; }
+  .currencyNote { font-size: 17px; }
+  .steps li { font-size: 17px; }
+  .cta { margin-top: 48px; }
+  .pill { display: block; width: 100%; padding: 15px 24px; font-size: 17px; line-height: 1.5; text-align: center; }
 }

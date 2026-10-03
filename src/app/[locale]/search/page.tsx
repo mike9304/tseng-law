@@ -11,6 +11,8 @@ import type { SearchDocKind } from '@/lib/builder/search/types';
 import styles from './SearchPage.module.css';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
 import zhSearchStyles from './ZhHantSearch.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
+import enStyles from '@/components/en-design/EnSearch.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -192,5 +194,8 @@ export default async function SearchPage(
       </div>
     );
   }
-  return body;
+  // en (Clear Night inner pages): the same search body inside the en wrapper; other locales render it as before.
+  return locale === 'en'
+    ? <EnPageShell page="search"><div className={enStyles.search}>{body}</div></EnPageShell>
+    : body;
 }

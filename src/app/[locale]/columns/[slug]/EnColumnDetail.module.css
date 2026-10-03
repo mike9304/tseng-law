@@ -1,96 +1,202 @@
 /*
- * en column detail (Opus 5.5 en lane, 2026-10-01). Article body typography stays with the column
- * typography preset; the hero becomes a white briefing header with the photo below it, and the
- * TOC, FAQ, sidebar and post navigation take the en look. Scoped to #en-column.
+ * en column detail and news article, Clear Night (CONCEPT-V2 12.3; en-pages lane 2026-10-03). Scoped to #en-column and
+ * #en-issue. The title card is black (back link, topic as grey text, H1, the meta line, then the column's own image in
+ * a 21:9 frame); the article reads on paper at a 68ch measure. Content, sources and FAQ are unchanged.
  */
+.detail { composes: paper from '../../../../components/en-design/EnPagesV2.module.css'; }
 
-/* Hero: text first on white, photo in flow below (no darkening overlay or blurred backdrop) */
-.detail:global(.en-column) :global(.blog-hero) { display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding: clamp(24px, 3vw, 40px) 0 clamp(32px, 4vw, 56px); color: #fff; background: radial-gradient(60% 90% at 88% 10%, rgb(255 198 26 / 16%) 0%, rgb(255 198 26 / 0%) 60%), linear-gradient(90deg, #07090b 0%, rgb(7 9 11 / 90%) 55%, rgb(7 9 11 / 55%) 100%), url('/images/editorial/en-night-taxi-hero.webp') 96% 16% / 190% auto no-repeat, #07090b; }
-.detail:global(.en-column) :global(.blog-hero .blog-hero-inner) { order: 1; align-self: center; width: min(1200px, 100%); padding-top: 0; padding-bottom: 32px; }
-.detail:global(.en-column) :global(.blog-hero .blog-hero-bg) {
+/* ---------- Title card ---------- */
+.detail.detail:global(.en-column) :global(.blog-hero) {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 0;
+  margin: 0;
+  padding: 56px 0 96px;
+  background: #000;
+  color: var(--en-white);
+}
+.detail.detail:global(.en-column) :global(.blog-hero .blog-hero-inner) { order: 1; width: min(1200px, calc(100% - 40px)); margin: 0 auto; padding: 0 0 56px; }
+.detail.detail:global(.en-column) :global(.blog-hero .blog-hero-bg) {
   order: 2;
   position: relative;
   inset: auto;
   width: min(1200px, calc(100% - 40px));
+  height: auto;
   margin: 0 auto;
-  aspect-ratio: 21 / 8;
+  aspect-ratio: 21 / 9;
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 16%); border-radius: 24px;
-  background: #14171b;
+  border: 0;
+  border-radius: 28px;
+  background: #17181b;
+  clip-path: inset(0 round 28px);
 }
-.detail:global(.en-column) :global(.blog-hero .blog-hero-bg img[aria-hidden='true']),
-.detail:global(.en-column) :global(.blog-hero .blog-hero-overlay) { display: none; }
-.detail:global(.en-column) :global(.blog-hero .blog-hero-img) { width: 100%; height: 100%; object-fit: cover; }
-.detail:global(.en-column) :global(.blog-hero .blog-back-link) {
+.detail.detail:global(.en-column) :global(.blog-hero .blog-hero-bg img[aria-hidden='true']),
+.detail.detail:global(.en-column) :global(.blog-hero .blog-hero-overlay) { display: none; }
+.detail.detail:global(.en-column) :global(.blog-hero .blog-hero-img) { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.8) brightness(0.82) contrast(1.05); }
+.detail.detail:global(.en-column) :global(.blog-hero .blog-back-link) {
+  display: inline-flex;
+  align-items: center;
   min-height: 44px;
-  padding: 8px 14px;
-  border: 1px solid rgb(255 255 255 / 34%);
-  border-radius: 999px;
-  background: rgb(255 255 255 / 8%);
-  color: #fff;
+  margin: 0 0 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: 17px;
   font-weight: 600;
+  text-decoration: none;
 }
-.detail:global(.en-column) :global(.blog-hero .blog-back-link:hover) { border-color: var(--en-signal); background: var(--en-signal); color: var(--en-ink); }
-.detail:global(.en-column) :global(.blog-hero .blog-category-badge) { border: none; border-radius: 999px; background: var(--en-signal); color: var(--en-ink); font-family: var(--en-mono); font-weight: 500; letter-spacing: 0.06em; }
-.detail:global(.en-column) :global(.blog-hero h1.blog-hero-title) {
-  max-width: 21em;
-  margin: 18px 0 16px;
+.detail.detail:global(.en-column) :global(.blog-hero .blog-back-link:hover) { background: none; color: #fff; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+/* Topic: 14 px grey text, not a pill. */
+.detail.detail:global(.en-column) :global(.blog-hero .blog-category-badge) {
+  display: block;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--en-grey);
+  font-family: var(--en-text);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.detail.detail:global(.en-column) :global(.blog-hero h1.blog-hero-title) {
+  max-width: 20em;
+  margin: 12px 0 24px;
   font-family: var(--en-display) !important;
-  font-size: clamp(34px, 3.8vw, 58px);
-  font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -0.032em;
-  color: #fff;
+  font-size: clamp(36px, 4.44vw, 64px);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.026em;
+  color: var(--en-white);
   text-shadow: none;
   text-wrap: balance;
 }
-.detail:global(.en-column) :global(.blog-hero .blog-meta),
-.detail:global(.en-column) :global(.blog-hero .blog-meta a),
-.detail:global(.en-column) :global(.blog-hero .blog-meta time),
-.detail:global(.en-column) :global(.blog-hero .blog-meta span) { color: #d3d6da; font-size: 14.5px; font-weight: 500; }
-.detail:global(.en-column) :global(.blog-hero .blog-meta a) { display: inline-flex; align-items: center; min-height: 44px; color: #fff; text-decoration: underline; text-underline-offset: 4px; }
-.detail:global(.en-column) :global(.blog-hero) :focus-visible { outline: 3px solid var(--en-signal); outline-offset: 3px; }
+.detail.detail:global(.en-column) :global(.blog-hero .blog-meta) { display: flex; flex-wrap: wrap; align-items: center; gap: 0; margin: 0; }
+.detail.detail:global(.en-column) :global(.blog-hero .blog-meta > *),
+.detail.detail:global(.en-column) :global(.blog-hero .blog-meta a) { color: var(--en-grey); font-family: var(--en-text); font-size: 17px; font-weight: 500; }
+.detail.detail:global(.en-column) :global(.blog-hero .blog-meta > :not(:last-child))::after { content: '·'; margin: 0 0.5em; color: var(--en-grey-2); }
+.detail.detail:global(.en-column) :global(.blog-hero .blog-meta a) { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-white); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.detail.detail:global(.en-column) :global(.blog-hero) :focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
 
-/* Article */
-.detail:global(.en-column) :global(.blog-article) { padding-top: 48px; background: #fff; }
-.detail:global(.en-column) :global(.blog-container) { gap: 56px; }
-.detail:global(.en-column) :global(.blog-body h2) { color: var(--en-ink); font-weight: 800; letter-spacing: -0.02em; }
-.detail:global(.en-column) :global(.blog-body h3) { color: var(--en-ink); font-weight: 800; }
-.detail:global(.en-column) :global(.column-toc) { padding: 20px 24px; border: 1px solid var(--en-line); border-radius: 20px; background: var(--en-mist); }
-.detail:global(.en-column) :global(.column-toc-label) { font-family: var(--en-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--en-muted); }
-.detail:global(.en-column) :global(.column-toc-link) { color: var(--en-ink); font-weight: 700; }
-.detail:global(.en-column) :global(.column-faq) { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--en-ink); }
-.detail:global(.en-column) :global(.column-faq-item) { padding: 16px 0; border-bottom: 1px solid var(--en-line); }
-.detail:global(.en-column) :global(.column-faq-question) { display: grid; grid-template-columns: 2.2em minmax(0, 1fr); gap: 10px; font-weight: 800; color: var(--en-ink); }
-.detail:global(.en-column) :global(.column-faq-question)::before { content: 'Q'; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: var(--en-ink); color: #fff; font-size: 14px; }
-.detail:global(.en-column) :global(.column-faq-answer) { margin: 10px 0 0 calc(2.2em + 10px); padding: 14px 18px; border-left: 4px solid var(--en-signal); border-radius: 0 16px 16px 0; background: var(--en-mist); color: var(--en-text); }
-
-/* Sidebar: consultation first in the en panel look */
-.detail:global(.en-column) :global(.blog-sidebar-card) { border-radius: 0; box-shadow: none; }
-.detail:global(.en-column) :global(.blog-sidebar > .blog-sidebar-card:first-child) { border: none; border: 1px solid var(--en-line); border-radius: 24px; background: var(--en-mist); }
-.detail:global(.en-column) :global(.blog-sidebar-title) { font-family: var(--en-display) !important; font-weight: 800; color: var(--en-ink); }
-.detail:global(.en-column) :global(.blog-sidebar > .blog-sidebar-card:first-child .button) { min-height: 52px; border: 2px solid var(--en-ink); border-radius: 999px; background: var(--en-ink); color: #fff; font-weight: 700; }
-.detail:global(.en-column) :global(.blog-related-link) { display: inline-flex; min-height: 44px; align-items: center; color: var(--en-ink); font-weight: 700; }
-.detail:global(.en-column) :global(.blog-article a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
-
-/* Previous / next (inline-styled links: border and radius need !important) */
-.detail:global(.en-column) :global(.column-post-nav a) { border: none !important; border-top: 1px solid var(--en-ink) !important; border-radius: 0 !important; background: var(--en-mist); color: var(--en-ink) !important; }
-.detail:global(.en-column) :global(.column-post-nav a span:first-child) { color: var(--en-muted) !important; font-weight: 700; }
-.detail:global(.en-column) :global(.column-post-nav a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
-
-@media (max-width: 1240px) {
-  .detail:global(.en-column) :global(.blog-hero .blog-hero-inner) { padding-inline: 20px; }
+/* ---------- Article on paper ---------- */
+.detail.detail:global(.en-column) :global(.blog-article) { padding: 96px 0 120px; background: #fff; color: var(--en-ink); }
+.detail.detail:global(.en-column) :global(.blog-container) { gap: 80px; }
+.detail.detail:global(.en-column) :global(.blog-body) { min-width: 0; color: var(--en-ink); }
+.detail.detail:global(.en-column) :global(.blog-body .column-markdown > *),
+.detail.detail:global(.en-column) :global(.blog-body .column-faq),
+.detail.detail:global(.en-column) :global(.blog-body .column-toc) { max-width: 68ch; }
+.detail.detail:global(.en-column) :global(.blog-body p),
+.detail.detail:global(.en-column) :global(.blog-body li) { font-family: var(--en-text); font-size: 19px; line-height: 1.7; color: var(--en-ink); }
+.detail.detail:global(.en-column) :global(.blog-body h2) {
+  margin-top: 64px;
+  font-family: var(--en-display) !important;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--en-ink);
 }
-@media (max-width: 767px) {
-  .detail:global(.en-column) :global(.blog-hero) { padding-top: 24px; }
-  .detail:global(.en-column) :global(.blog-hero .blog-hero-bg) { width: 100%; aspect-ratio: 16 / 9; }
-  .detail:global(.en-column) :global(.blog-hero h1.blog-hero-title) { font-size: clamp(30px, 8.6vw, 38px); }
-  .detail:global(.en-column) :global(.blog-article) { padding-top: 32px; }
-  .detail:global(.en-column) :global(.column-faq-answer) { margin-left: 0; }
+.detail.detail:global(.en-column) :global(.blog-body h3) { font-family: var(--en-display) !important; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -0.012em; color: var(--en-ink); }
+.detail.detail:global(.en-column) :global(.blog-body a) { color: var(--en-focus-paper); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.detail.detail:global(.en-column) :global(.blog-body blockquote) { margin-inline: 0; padding: 4px 0 4px 24px; border-left: 2px solid #d2d2d7; color: var(--en-ink-2); }
+.detail.detail:global(.en-column) :global(.blog-body table) { font-size: 17px; }
+
+/* "In this article": stays in the content, a quiet block on #f2f2f4. */
+.detail.detail:global(.en-column) :global(.column-toc) { margin: 0 0 56px; padding: 28px 32px; border: 0; border-radius: 18px; background: var(--en-paper-2); }
+.detail.detail:global(.en-column) :global(.column-toc-label) { margin: 0 0 8px; font-family: var(--en-text); font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--en-ink-3); }
+.detail.detail:global(.en-column) :global(.column-toc-list) { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.detail.detail:global(.en-column) :global(.column-toc-list li) { margin: 0; padding: 0; font-size: 17px; line-height: 1.4; }
+.detail.detail:global(.en-column) :global(.column-toc-list li)::before { content: none; }
+.detail.detail:global(.en-column) :global(.blog-body .column-toc a.column-toc-link) { display: flex; align-items: center; min-height: 44px; padding-block: 6px; color: var(--en-ink); font-family: var(--en-text); font-size: 17px; font-weight: 600; text-decoration: none; }
+.detail.detail:global(.en-column) :global(.blog-body .column-toc a.column-toc-link:hover) { color: var(--en-focus-paper); text-decoration: underline; text-underline-offset: 4px; }
+
+/* FAQ: question rows without Q badges or rules. */
+.detail.detail:global(.en-column) :global(.column-faq) { margin-top: 88px; padding: 0; border: 0; }
+.detail.detail:global(.en-column) :global(.column-faq-heading) { margin: 0 0 24px; font-size: 32px; }
+.detail.detail:global(.en-column) :global(.column-faq-list) { display: grid; gap: 32px; margin: 0; }
+.detail.detail:global(.en-column) :global(.column-faq-item) { margin: 0; padding: 0; border: 0; }
+.detail.detail:global(.en-column) :global(.column-faq-question) { display: block; margin: 0; font-family: var(--en-text); font-size: 21px; font-weight: 600; line-height: 1.35; color: var(--en-ink); }
+.detail.detail:global(.en-column) :global(.column-faq-question)::before { content: none; display: none; }
+.detail.detail:global(.en-column) :global(.column-faq-answer) { margin: 10px 0 0; padding: 0; border: 0; border-radius: 0; background: none; font-family: var(--en-text); font-size: 19px; line-height: 1.65; color: var(--en-ink-2); }
+
+/* News articles: the date note as a quiet block, not a ruled callout. */
+.detail.detail:global(.en-column) :global(.blog-body > p[class*='dateNote']) { max-width: 68ch; margin: 0 0 32px; padding: 20px 24px; border: 0; border-radius: 18px; background: var(--en-paper-2); font-size: 17px; line-height: 1.5; color: var(--en-ink-2); }
+
+/* Related reading: type-led cards. */
+.detail.detail:global(.en-column) :global(.recommended-for-you) { max-width: none; margin-top: 88px; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-title) { margin: 0 0 20px; font-family: var(--en-display) !important; font-size: 24px; font-weight: 700; color: var(--en-ink); }
+.detail.detail:global(.en-column) :global(.recommended-for-you-grid) { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-grid > li) {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 24px 28px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--en-paper-2);
+  box-shadow: none;
+  transition: background-color 300ms var(--en-ease);
 }
-.detail :global(.column-toc-link) { display: inline-block; padding-block: 4px; }
-/* Phones: every "In this article" entry is a 44px target (one-line entries measured 31px at 390). */
+.detail.detail:global(.en-column) :global(.recommended-for-you-grid > li:hover) { background: #ebebed; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-grid > li)::before { content: none; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-grid > li > img) { display: none; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-card-title) { margin: 0; font-family: var(--en-display) !important; font-size: 21px; font-weight: 650; line-height: 1.3; letter-spacing: -0.01em; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-card-title a) { display: inline; padding: 0; background: none; color: var(--en-ink); text-decoration: none; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-card-title a)::after { content: ''; position: absolute; inset: 0; border-radius: 18px; }
+.detail.detail:global(.en-column) :global(.recommended-for-you-card-meta) { margin: 8px 0 0; font-family: var(--en-text); font-size: 14px; line-height: 1.45; color: var(--en-ink-3); }
+
+/* ---------- Rail: Book Consultation block, attorney mini card, related topics ---------- */
+.detail.detail:global(.en-column) :global(.blog-sidebar) { display: grid; align-content: start; gap: 16px; }
+.detail.detail:global(.en-column) :global(.blog-sidebar-card) { margin: 0; padding: 28px; border: 0; border-radius: 18px; background: var(--en-paper-2); box-shadow: none; }
+.detail.detail:global(.en-column) :global(.blog-sidebar-title) { margin: 0 0 8px; font-family: var(--en-display) !important; font-size: 21px; font-weight: 700; color: var(--en-ink); }
+.detail.detail:global(.en-column) :global(.blog-sidebar-text) { font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-ink-2); }
+.detail.detail:global(.en-column) :global(.blog-sidebar a.button.blog-sidebar-btn) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin-top: 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--en-action);
+  color: #fff;
+  font-family: var(--en-text);
+  font-size: 17px;
+  font-weight: 600;
+}
+.detail.detail:global(.en-column) :global(.blog-sidebar a.button.blog-sidebar-btn:hover) { background: var(--en-action-hover); }
+.detail.detail:global(.en-column) :global(.blog-related-list) { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.detail.detail:global(.en-column) :global(.blog-related-link) { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-focus-paper); font-family: var(--en-text); font-size: 17px; font-weight: 600; }
+.detail.detail:global(.en-column) :global(.blog-article a:focus-visible),
+.detail.detail:global(.en-column) :global(.column-post-nav a:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 3px; }
+@media (min-width: 1280px) {
+  .detail.detail:global(.en-column) :global(.blog-sidebar) { position: sticky; top: calc(var(--en-hdr) + 32px); align-self: start; }
+}
+
+/* ---------- Previous / next (the links carry inline styles, so border and radius need !important) ---------- */
+.detail.detail:global(.en-column) :global(.column-post-nav) { padding: 0 0 120px; background: #fff; }
+.detail.detail:global(.en-column) :global(.column-post-nav a) { border: 0 !important; border-radius: 18px !important; background: var(--en-paper-2) !important; color: var(--en-ink) !important; }
+.detail.detail:global(.en-column) :global(.column-post-nav a span:first-child) { color: var(--en-ink-3) !important; font-family: var(--en-text); font-size: 14px !important; font-weight: 600; }
+.detail.detail:global(.en-column) :global(.column-post-nav a span + span) { font-family: var(--en-text); font-size: 17px !important; font-weight: 600; }
+
 @media (max-width: 767px) {
-  .detail :global(.column-toc-link) { display: flex; align-items: center; min-height: 44px; padding-block: 6px; }
-  .detail:global(.en-column) :global(.column-toc-list) { gap: 2px; }
+  .detail.detail:global(.en-column) :global(.blog-hero) { padding: 32px 0 64px; }
+  .detail.detail:global(.en-column) :global(.blog-hero .blog-hero-inner) { padding-bottom: 32px; }
+  .detail.detail:global(.en-column) :global(.blog-hero .blog-hero-bg) { aspect-ratio: 16 / 9; border-radius: 18px; clip-path: inset(0 round 18px); }
+  .detail.detail:global(.en-column) :global(.blog-hero .blog-meta > *) { font-size: 15px; }
+  .detail.detail:global(.en-column) :global(.blog-article) { padding: 64px 0 88px; }
+  .detail.detail:global(.en-column) :global(.blog-body p),
+  .detail.detail:global(.en-column) :global(.blog-body li) { font-size: 17px; }
+  .detail.detail:global(.en-column) :global(.blog-body h2),
+  .detail.detail:global(.en-column) :global(.column-faq-heading) { font-size: 26px; }
+  .detail.detail:global(.en-column) :global(.column-toc) { padding: 20px 20px 12px; }
+  .detail.detail:global(.en-column) :global(.column-faq-question) { font-size: 19px; }
+  .detail.detail:global(.en-column) :global(.column-faq-answer) { font-size: 17px; }
 }

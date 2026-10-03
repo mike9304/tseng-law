@@ -32,7 +32,7 @@ export default function ColumnVideoPlayer({ startWhenVisible, chapters, ...props
       onLoadedMetadata={event => { updateChapter(event.currentTarget.currentTime); props.onLoadedMetadata?.(event); }}
     />
     {chapter ? <div className={styles.chapter} data-column-video-chapter={chapterIndex + 1}>
-      <span className={styles.chapterHeading}>{String(chapterIndex + 1).padStart(2, '0')} / {chapters?.length} · {chapter.title}</span>
+      <span className={styles.chapterHeading}><bdi dir="ltr">{String(chapterIndex + 1).padStart(2, '0')} / {chapters?.length}</bdi> · {chapter.title}</span>
       <span>{chapter.text}</span>
     </div> : null}
   </>;

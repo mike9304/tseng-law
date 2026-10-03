@@ -89,6 +89,14 @@ try {
       const layout = await page.evaluate(() => ({ overflow: document.documentElement.scrollWidth > innerWidth + 1, lang: document.documentElement.lang, text: document.querySelector('.blog-body')?.textContent?.length || 0 }));
       assert.ok(!layout.overflow && layout.text > 500);
       assert.equal(layout.lang.toLowerCase(), locale.toLowerCase());
+      const expectedDirection = ['ar', 'fa', 'he', 'ur'].includes(locale) ? 'rtl' : 'ltr';
+      const chapterLayout = await figure.locator('[data-column-video-chapter]').evaluate(el => {
+        const style = getComputedStyle(el);
+        return { direction: style.direction, leftBorder: parseFloat(style.borderLeftWidth), rightBorder: parseFloat(style.borderRightWidth) };
+      });
+      assert.equal(chapterLayout.direction, expectedDirection);
+      assert.equal(expectedDirection === 'rtl' ? chapterLayout.rightBorder : chapterLayout.leftBorder, 3);
+      layout.chapter = chapterLayout;
       assert.deepEqual(pageErrors, []);
       results.push({ key, width, url, initial, automaticStartWithoutGesture: true, manualPausePreserved: true, nativeKeyboardSeek: true, playedWholeFilmAtNormalSpeed: true, elapsed, layout, pageErrors });
       console.log(JSON.stringify({ key, width, ok: true, elapsed }));

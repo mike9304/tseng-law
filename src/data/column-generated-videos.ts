@@ -2,6 +2,7 @@ import generalAccidentCaptions from './general-accident-video-captions.json';
 import overtakingCaptions from './overtaking-video-captions.json';
 import businessPremisesCaptions from './business-premises-video-captions.json';
 import logisticsCaptions from './logistics-video-captions.json';
+import precisionPartsCaptions from './precision-parts-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -20,6 +21,24 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-retaliatory-driving-rear-ended-intentional-injury': {
+    id: 'braking-scooter-v2-zh-hant',
+    src: '/videos/columns/braking-scooter-v2-zh-hant.mp4',
+    poster: '/images/column-videos/braking-scooter-v2-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '機車碰上貨車後端，騎士隨車側倒',
+    description: '機車迅速接近前方貨車，接觸後機車傾倒、騎士向前側方滑落，貨車向前移開。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立假想場景，非本文案件或原始行車影像的重建。畫面未呈現爭執、丟擲物品等前因；接觸與倒地動作不能用來認定故意、傷勢或責任比例。',
+  },
+  ...Object.fromEntries(Object.entries(precisionPartsCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `precision-parts-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-semiconductor-market-entry`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   'column/zh-hant/taiwan-parking-wheelstop-latch-service-safety-causation': {
     id: 'parking-contact-v1-zh-hant',
     src: '/videos/columns/parking-contact-v1-zh-hant.mp4',

@@ -15,13 +15,13 @@ describe('reviewed retaliatory-driving liability column', () => {
     expect(body).toContain('本案兩件刑事裁判沒有裁出雙方的民事責任比例');
   });
 
-  it('automatically joins the liability collection without a false video or language copy', () => {
+  it('joins the liability collection with the reviewed scene and without false language copies', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(p => p.slug === slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: 'liability', hasVideo: false, columnNumber: 87, aiAuthored: true });
+    expect(matches[0]).toMatchObject({ subject: 'liability', hasVideo: true, columnNumber: 87, aiAuthored: true });
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'liability', q: '傷害故意' })).map(p => p.slug)).toEqual([slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'liability', video: '1' })).some(p => p.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'liability', video: '1' })).some(p => p.slug === slug)).toBe(true);
     expect(getColumnPost(slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
   });

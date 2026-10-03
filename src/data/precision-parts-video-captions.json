@@ -1,0 +1,247 @@
+{
+  "ko": {
+    "title": "보호 케이스에서 작업 매트로 부품 옮기기",
+    "description": "장갑을 낀 두 손이 금속 링 하나를 꺼내 파란 매트에 내려놓습니다. 6초 무음 영상입니다.",
+    "disclosure": "AI로 만든 가상 장면입니다. 본문의 예비 부품·현장 지원 업무를 설명하기 위한 예시이며, 실제 반도체 공장이나 작업 절차를 재현한 영상은 아닙니다."
+  },
+  "en": {
+    "title": "Moving a part from its protective case to a work mat",
+    "description": "Two gloved hands lift a single metal ring from its case and set it on a blue mat. This six-second clip has no sound.",
+    "disclosure": "This fictional AI-generated scene illustrates the article’s spare-parts and on-site support context. It does not depict an actual semiconductor factory or reproduce a working procedure."
+  },
+  "ja": {
+    "title": "保護ケースから作業マットへ部品を移す",
+    "description": "手袋を着けた両手で金属製のリングを一つ取り出し、青いマットに置きます。音声のない6秒の映像です。",
+    "disclosure": "AIで作成した架空の場面です。本文で扱う予備部品や現地支援の業務をイメージするための例であり、実在する半導体工場や作業手順の再現ではありません。"
+  },
+  "zh-hant": {
+    "title": "從保護箱取出零件，放到工作墊上",
+    "description": "戴著手套的雙手取出一個金屬環，放在藍色工作墊上。這是6秒無聲影片。",
+    "disclosure": "AI生成的假想場景，用來說明本文備品與現場支援的業務情境，並非實際半導體工廠或作業程序的重建。"
+  },
+  "ar": {
+    "title": "نقل قطعة من حقيبتها الواقية إلى حصيرة العمل",
+    "description": "ترفع يدان مرتديتان قفازين حلقة معدنية واحدة من الحقيبة وتضعانها على حصيرة زرقاء. مدة المقطع ست ثوانٍ وهو بلا صوت.",
+    "disclosure": "مشهد خيالي مولّد بالذكاء الاصطناعي، يوضّح سياق قطع الغيار والدعم الميداني الوارد في المقال. لا يصوّر مصنعًا حقيقيًا لأشباه الموصلات ولا يعيد تمثيل إجراء عمل."
+  },
+  "bg": {
+    "title": "Преместване на детайл от защитен куфар върху работна подложка",
+    "description": "Две ръце с ръкавици изваждат един метален пръстен от куфара и го поставят върху синя подложка. Видеото е шестсекундно и без звук.",
+    "disclosure": "Измислена сцена, създадена с изкуствен интелект, която илюстрира темата за резервните части и поддръжката на място в статията. Не показва реална фабрика за полупроводници и не възпроизвежда работна процедура."
+  },
+  "bn": {
+    "title": "সুরক্ষিত বাক্স থেকে কাজের ম্যাটে একটি যন্ত্রাংশ রাখা",
+    "description": "দস্তানা পরা দুই হাতে বাক্স থেকে একটি ধাতব রিং তুলে নীল ম্যাটে রাখা হয়। ছয় সেকেন্ডের ভিডিওটিতে কোনো শব্দ নেই।",
+    "disclosure": "এটি AI দিয়ে তৈরি কাল্পনিক দৃশ্য। নিবন্ধে আলোচিত অতিরিক্ত যন্ত্রাংশ ও স্থানীয় সহায়তার কাজ বোঝাতে এটি ব্যবহার করা হয়েছে। এটি কোনো বাস্তব সেমিকন্ডাক্টর কারখানা বা কাজের পদ্ধতির পুনর্নির্মাণ নয়।"
+  },
+  "ca": {
+    "title": "Traslladar una peça de l’estoig protector a una estora de treball",
+    "description": "Dues mans amb guants treuen un sol anell metàl·lic de l’estoig i el deixen sobre una estora blava. El vídeo dura sis segons i no té so.",
+    "disclosure": "Escena fictícia generada amb IA que il·lustra el context de recanvis i assistència sobre el terreny de l’article. No mostra una fàbrica real de semiconductors ni reprodueix un procediment de treball."
+  },
+  "cs": {
+    "title": "Přemístění součástky z ochranného kufříku na pracovní podložku",
+    "description": "Dvě ruce v rukavicích vyjmou z kufříku jeden kovový prstenec a položí jej na modrou podložku. Šestisekundové video je bez zvuku.",
+    "disclosure": "Fiktivní scéna vytvořená pomocí AI ilustruje téma náhradních dílů a podpory na místě probírané v článku. Nezobrazuje skutečnou továrnu na polovodiče ani nereprodukuje pracovní postup."
+  },
+  "da": {
+    "title": "En del flyttes fra sin beskyttelseskuffert til en arbejdsmåtte",
+    "description": "To hænder med handsker løfter én metalring ud af kufferten og lægger den på en blå måtte. Klippet varer seks sekunder og er uden lyd.",
+    "disclosure": "Fiktiv scene skabt med AI som illustration til artiklens omtale af reservedele og support på stedet. Den viser ikke en virkelig halvlederfabrik og gengiver ikke en arbejdsprocedure."
+  },
+  "de": {
+    "title": "Ein Bauteil aus dem Schutzkoffer auf die Arbeitsmatte legen",
+    "description": "Zwei Hände mit Handschuhen heben einen einzelnen Metallring aus dem Koffer und legen ihn auf eine blaue Matte. Der sechssekündige Clip hat keinen Ton.",
+    "disclosure": "Die fiktive, KI-generierte Szene veranschaulicht die im Artikel angesprochene Ersatzteilversorgung und Unterstützung vor Ort. Sie zeigt keine reale Halbleiterfabrik und bildet kein Arbeitsverfahren nach."
+  },
+  "el": {
+    "title": "Μεταφορά εξαρτήματος από προστατευτική θήκη σε τάπητα εργασίας",
+    "description": "Δύο χέρια με γάντια βγάζουν έναν μεταλλικό δακτύλιο από τη θήκη και τον τοποθετούν σε μπλε τάπητα. Το βίντεο διαρκεί έξι δευτερόλεπτα και δεν έχει ήχο.",
+    "disclosure": "Φανταστική σκηνή δημιουργημένη με τεχνητή νοημοσύνη, που εικονογραφεί το πλαίσιο ανταλλακτικών και επιτόπιας υποστήριξης του άρθρου. Δεν δείχνει πραγματικό εργοστάσιο ημιαγωγών ούτε αναπαριστά διαδικασία εργασίας."
+  },
+  "es": {
+    "title": "Pasar una pieza de su estuche protector a una alfombrilla de trabajo",
+    "description": "Dos manos con guantes sacan un único aro metálico del estuche y lo colocan sobre una alfombrilla azul. El vídeo dura seis segundos y no tiene sonido.",
+    "disclosure": "Escena ficticia generada con IA que ilustra el contexto de repuestos y asistencia presencial del artículo. No muestra una fábrica real de semiconductores ni reproduce un procedimiento de trabajo."
+  },
+  "et": {
+    "title": "Detaili tõstmine kaitsekohvrist töömatile",
+    "description": "Kaks kinnastatud kätt tõstavad kohvrist ühe metallrõnga ja asetavad selle sinisele matile. Kuuesekundiline video on helita.",
+    "disclosure": "Tehisintellektiga loodud väljamõeldud stseen illustreerib artiklis käsitletud varuosade ja kohapealse toe teemat. See ei kujuta tegelikku pooljuhttehast ega taasesita tööprotseduuri."
+  },
+  "fa": {
+    "title": "انتقال یک قطعه از کیف محافظ به زیرانداز کار",
+    "description": "دو دستِ دستکش‌پوش یک حلقهٔ فلزی را از کیف بیرون می‌آورند و روی زیرانداز آبی می‌گذارند. این ویدئوی شش‌ثانیه‌ای صدا ندارد.",
+    "disclosure": "این صحنهٔ خیالی با هوش مصنوعی ساخته شده و برای تصویرسازی موضوع قطعات یدکی و پشتیبانی در محل در مقاله است. صحنه، کارخانهٔ واقعی نیمه‌رسانا یا بازسازی یک روش کاری نیست."
+  },
+  "fi": {
+    "title": "Osan siirtäminen suojalaukusta työmatolle",
+    "description": "Kaksi käsineisiin puettua kättä nostaa laukusta yhden metallirenkaan ja laskee sen siniselle matolle. Kuuden sekunnin video on äänetön.",
+    "disclosure": "Tekoälyllä luotu kuvitteellinen kohtaus havainnollistaa artikkelin varaosia ja paikan päällä annettavaa tukea koskevaa aihetta. Se ei esitä todellista puolijohdetehdasta eikä toista työmenetelmää."
+  },
+  "fil": {
+    "title": "Paglipat ng piyesa mula sa proteksiyon nitong kahon papunta sa sapin sa mesa",
+    "description": "Dalawang kamay na may guwantes ang kumukuha ng isang metal na singsing mula sa kahon at naglalapag nito sa asul na sapin. Anim na segundo ang video at wala itong tunog.",
+    "disclosure": "Kathang-isip na eksenang ginawa gamit ang AI para ilarawan ang mga ekstrang piyesa at suporta sa lugar na tinatalakay sa artikulo. Hindi ito nagpapakita ng tunay na pabrika ng semiconductor o muling pagsasagawa ng isang pamamaraan ng trabaho."
+  },
+  "fr": {
+    "title": "Déplacer une pièce de son coffret de protection vers un tapis de travail",
+    "description": "Deux mains gantées sortent un seul anneau métallique du coffret et le posent sur un tapis bleu. Cette vidéo de six secondes est sans son.",
+    "disclosure": "Cette scène fictive générée par IA illustre le contexte des pièces de rechange et de l’assistance sur site abordé dans l’article. Elle ne montre pas une véritable usine de semi-conducteurs et ne reproduit pas une procédure de travail."
+  },
+  "he": {
+    "title": "העברת חלק מתיק מגן למשטח עבודה",
+    "description": "שתי ידיים עטויות כפפות מוציאות טבעת מתכת אחת מהתיק ומניחות אותה על משטח כחול. זהו סרטון באורך שש שניות ללא קול.",
+    "disclosure": "סצנה בדיונית שנוצרה בבינה מלאכותית להמחשת נושא חלקי החילוף והתמיכה באתר הנדון במאמר. היא אינה מציגה מפעל אמיתי למוליכים למחצה ואינה משחזרת נוהל עבודה."
+  },
+  "hi": {
+    "title": "सुरक्षात्मक केस से पुर्जा कार्य-मैट पर रखना",
+    "description": "दस्ताने पहने दो हाथ केस से एक धातु का छल्ला निकालकर नीली मैट पर रखते हैं। छह सेकंड के इस वीडियो में आवाज़ नहीं है।",
+    "disclosure": "यह AI से बनाया गया काल्पनिक दृश्य है, जो लेख में बताए गए अतिरिक्त पुर्जों और मौके पर सहायता के काम को दर्शाता है। यह किसी वास्तविक सेमीकंडक्टर कारखाने या कार्य-प्रक्रिया का पुनर्निर्माण नहीं है।"
+  },
+  "hr": {
+    "title": "Premještanje dijela iz zaštitnog kovčega na radnu podlogu",
+    "description": "Dvije ruke u rukavicama vade jedan metalni prsten iz kovčega i polažu ga na plavu podlogu. Video traje šest sekundi i nema zvuka.",
+    "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom ilustrira temu rezervnih dijelova i podrške na lokaciji iz članka. Ne prikazuje stvarnu tvornicu poluvodiča niti rekonstruira radni postupak."
+  },
+  "hu": {
+    "title": "Alkatrész áthelyezése védőtáskából a munkafelületre",
+    "description": "Két kesztyűs kéz kiemel egyetlen fémgyűrűt a táskából, és a kék alátétre helyezi. A hat másodperces videó néma.",
+    "disclosure": "Mesterséges intelligenciával létrehozott, kitalált jelenet a cikkben tárgyalt pótalkatrészek és helyszíni támogatás szemléltetésére. Nem mutat be valódi félvezetőgyárat, és nem rekonstruál munkafolyamatot."
+  },
+  "id": {
+    "title": "Memindahkan komponen dari kotak pelindung ke alas kerja",
+    "description": "Dua tangan bersarung tangan mengangkat satu cincin logam dari kotak dan meletakkannya di alas biru. Video berdurasi enam detik ini tidak bersuara.",
+    "disclosure": "Adegan fiktif buatan AI ini menggambarkan konteks suku cadang dan dukungan di lokasi dalam artikel. Adegan ini tidak menampilkan pabrik semikonduktor nyata atau merekonstruksi prosedur kerja."
+  },
+  "is": {
+    "title": "Hluti færður úr hlífðartösku á vinnumottu",
+    "description": "Tvær hanskaklæddar hendur lyfta einum málmhring úr töskunni og leggja hann á bláa mottu. Myndskeiðið er sex sekúndur og án hljóðs.",
+    "disclosure": "Ímynduð sena gerð með gervigreind til að sýna samhengi varahluta og þjónustu á staðnum sem greinin fjallar um. Hún sýnir ekki raunverulega hálfleiðaraverksmiðju og endurgerir ekki vinnuferli."
+  },
+  "it": {
+    "title": "Spostare un componente dalla custodia protettiva al tappetino da lavoro",
+    "description": "Due mani con i guanti estraggono un solo anello metallico dalla custodia e lo posano su un tappetino blu. Il video dura sei secondi ed è privo di audio.",
+    "disclosure": "Scena di fantasia generata con IA per illustrare il tema dei ricambi e dell’assistenza sul posto trattato nell’articolo. Non mostra una vera fabbrica di semiconduttori né riproduce una procedura di lavoro."
+  },
+  "km": {
+    "title": "ផ្លាស់ទីគ្រឿងបន្លាស់ពីប្រអប់ការពារទៅកម្រាលការងារ",
+    "description": "ដៃទាំងពីរដែលពាក់ស្រោមដៃលើកចិញ្ចៀនលោហៈមួយចេញពីប្រអប់ ហើយដាក់លើកម្រាលពណ៌ខៀវ។ វីដេអូនេះមានរយៈពេលប្រាំមួយវិនាទី និងគ្មានសំឡេង។",
+    "disclosure": "នេះជាឈុតស្រមៃដែលបង្កើតដោយ AI ដើម្បីបង្ហាញបរិបទគ្រឿងបន្លាស់ និងការគាំទ្រនៅទីតាំងដែលអត្ថបទបានពិភាក្សា។ វាមិនបង្ហាញរោងចក្រផលិតសឺមីកុងឌុចទ័រពិត ឬបង្កើតឡើងវិញនូវនីតិវិធីការងារទេ។"
+  },
+  "lt": {
+    "title": "Detalės perkėlimas iš apsauginio lagaminėlio ant darbo kilimėlio",
+    "description": "Dvi rankos su pirštinėmis iškelia iš lagaminėlio vieną metalinį žiedą ir padeda jį ant mėlyno kilimėlio. Šešių sekundžių vaizdo įrašas yra be garso.",
+    "disclosure": "Dirbtiniu intelektu sukurta išgalvota scena iliustruoja straipsnyje aptariamą atsarginių dalių ir pagalbos vietoje temą. Ji nerodo tikros puslaidininkių gamyklos ir neatkuria darbo procedūros."
+  },
+  "lv": {
+    "title": "Detaļas pārvietošana no aizsargkofera uz darba paklājiņu",
+    "description": "Divas rokas cimdos izceļ no kofera vienu metāla gredzenu un noliek to uz zila paklājiņa. Sešu sekunžu video ir bez skaņas.",
+    "disclosure": "Ar mākslīgo intelektu radīta izdomāta aina ilustrē rakstā aplūkoto rezerves daļu un atbalsta uz vietas tēmu. Tā nerāda īstu pusvadītāju rūpnīcu un neatveido darba procedūru."
+  },
+  "mn": {
+    "title": "Эд ангийг хамгаалалтын хайрцгаас ажлын дэвсгэрт шилжүүлэх",
+    "description": "Бээлийтэй хоёр гар хайрцгаас нэг металл цагираг гаргаж, цэнхэр дэвсгэр дээр тавина. Энэ нь зургаан секундийн дуугүй бичлэг юм.",
+    "disclosure": "AI-аар бүтээсэн зохиомол дүрслэл бөгөөд нийтлэлд дурдсан сэлбэг болон газар дээрх дэмжлэгийн ажлыг жишээгээр харуулна. Бодит хагас дамжуулагчийн үйлдвэр эсвэл ажлын горимыг сэргээн үзүүлээгүй."
+  },
+  "ms": {
+    "title": "Memindahkan komponen dari bekas pelindung ke alas kerja",
+    "description": "Dua tangan bersarung tangan mengangkat satu gelang logam dari bekas dan meletakkannya di atas alas biru. Video enam saat ini tidak mempunyai bunyi.",
+    "disclosure": "Adegan rekaan yang dijana AI ini menggambarkan konteks alat ganti dan sokongan di lokasi dalam artikel. Ia tidak memaparkan kilang semikonduktor sebenar atau membina semula prosedur kerja."
+  },
+  "my": {
+    "title": "အစိတ်အပိုင်းကို အကာအကွယ်သေတ္တာမှ အလုပ်ခင်းပေါ်သို့ ရွှေ့ခြင်း",
+    "description": "လက်အိတ်ဝတ်ထားသော လက်နှစ်ဖက်က သတ္တုကွင်းတစ်ခုကို သေတ္တာထဲမှ ထုတ်ယူပြီး အပြာရောင်အခင်းပေါ်တွင် ချထားသည်။ ဤဗီဒီယိုသည် ခြောက်စက္ကန့်ကြာပြီး အသံမပါပါ။",
+    "disclosure": "ဤသည်မှာ ဆောင်းပါးတွင် ဆွေးနွေးထားသော အပိုပစ္စည်းနှင့် လုပ်ငန်းခွင်ပံ့ပိုးမှုကို ဥပမာပြရန် AI ဖြင့် ဖန်တီးထားသည့် စိတ်ကူးယဉ်မြင်ကွင်းဖြစ်သည်။ တကယ့်ဆီမီးကွန်ဒတ်တာစက်ရုံ သို့မဟုတ် လုပ်ငန်းလုပ်ဆောင်ပုံကို ပြန်လည်ပုံဖော်ထားခြင်း မဟုတ်ပါ။"
+  },
+  "nb": {
+    "title": "En del flyttes fra beskyttelseskofferten til en arbeidsmatte",
+    "description": "To hender med hansker løfter én metallring ut av kofferten og legger den på en blå matte. Klippet varer i seks sekunder og er uten lyd.",
+    "disclosure": "En oppdiktet scene laget med KI for å illustrere artikkelens omtale av reservedeler og støtte på stedet. Den viser ikke en virkelig halvlederfabrikk og gjengir ikke en arbeidsprosedyre."
+  },
+  "ne": {
+    "title": "सुरक्षात्मक बाकसबाट पार्टपुर्जा काम गर्ने म्याटमा सार्दै",
+    "description": "पञ्जा लगाएका दुई हातले बाकसबाट एउटा धातुको घेरा निकालेर नीलो म्याटमा राख्छन्। छ सेकेन्डको यो भिडियोमा आवाज छैन।",
+    "disclosure": "यो AI बाट बनाइएको काल्पनिक दृश्य हो। यसले लेखमा उल्लेख गरिएका जगेडा पार्टपुर्जा र कार्यस्थलमै दिइने सहयोगको प्रसङ्ग देखाउँछ। यो वास्तविक अर्धचालक कारखाना वा कार्यविधिको पुनर्निर्माण होइन।"
+  },
+  "nl": {
+    "title": "Een onderdeel uit de beschermkoffer op een werkmat leggen",
+    "description": "Twee gehandschoende handen tillen één metalen ring uit de koffer en leggen die op een blauwe mat. De video duurt zes seconden en heeft geen geluid.",
+    "disclosure": "Deze fictieve, met AI gemaakte scène illustreert het onderwerp reserveonderdelen en ondersteuning op locatie uit het artikel. Ze toont geen echte halfgeleiderfabriek en reconstrueert geen werkprocedure."
+  },
+  "pl": {
+    "title": "Przeniesienie części z walizki ochronnej na matę roboczą",
+    "description": "Dwie dłonie w rękawiczkach wyjmują z walizki jeden metalowy pierścień i kładą go na niebieskiej macie. Sześciosekundowy film nie ma dźwięku.",
+    "disclosure": "Fikcyjna scena wygenerowana przez AI ilustruje omawiany w artykule temat części zamiennych i wsparcia na miejscu. Nie przedstawia rzeczywistej fabryki półprzewodników ani nie odtwarza procedury pracy."
+  },
+  "pt": {
+    "title": "Passar uma peça da caixa de proteção para um tapete de trabalho",
+    "description": "Duas mãos com luvas retiram um único anel metálico da caixa e colocam-no num tapete azul. O vídeo dura seis segundos e não tem som.",
+    "disclosure": "Cena fictícia gerada com IA para ilustrar o contexto de peças sobresselentes e apoio no local referido no artigo. Não mostra uma fábrica real de semicondutores nem reproduz um procedimento de trabalho."
+  },
+  "ro": {
+    "title": "Mutarea unei piese din cutia de protecție pe un covoraș de lucru",
+    "description": "Două mâini cu mănuși scot un singur inel metalic din cutie și îl așază pe un covoraș albastru. Clipul durează șase secunde și nu are sunet.",
+    "disclosure": "Scenă fictivă generată cu IA, care ilustrează contextul pieselor de schimb și al asistenței la fața locului din articol. Nu prezintă o fabrică reală de semiconductori și nu reproduce o procedură de lucru."
+  },
+  "ru": {
+    "title": "Перемещение детали из защитного кейса на рабочий коврик",
+    "description": "Две руки в перчатках вынимают из кейса одно металлическое кольцо и кладут его на синий коврик. Шестисекундное видео не содержит звука.",
+    "disclosure": "Вымышленная сцена создана с помощью ИИ для иллюстрации темы запасных частей и выездной поддержки, рассматриваемой в статье. Она не показывает реальный завод полупроводников и не воспроизводит рабочую процедуру."
+  },
+  "sk": {
+    "title": "Premiestnenie súčiastky z ochranného kufríka na pracovnú podložku",
+    "description": "Dve ruky v rukaviciach vyberú z kufríka jeden kovový prstenec a položia ho na modrú podložku. Šesťsekundové video je bez zvuku.",
+    "disclosure": "Fiktívna scéna vytvorená pomocou AI ilustruje tému náhradných dielov a podpory na mieste rozoberanú v článku. Nezobrazuje skutočnú továreň na polovodiče ani nereprodukuje pracovný postup."
+  },
+  "sl": {
+    "title": "Prenos dela iz zaščitnega kovčka na delovno podlogo",
+    "description": "Dve roki v rokavicah vzameta iz kovčka en kovinski obroč in ga položita na modro podlogo. Šestsekundni posnetek je brez zvoka.",
+    "disclosure": "Izmišljeni prizor, ustvarjen z umetno inteligenco, ponazarja temo rezervnih delov in podpore na lokaciji iz članka. Ne prikazuje resnične tovarne polprevodnikov in ne poustvarja delovnega postopka."
+  },
+  "sr": {
+    "title": "Премештање дела из заштитног кофера на радну подлогу",
+    "description": "Две руке у рукавицама ваде један метални прстен из кофера и стављају га на плаву подлогу. Видео траје шест секунди и нема звука.",
+    "disclosure": "Измишљена сцена направљена вештачком интелигенцијом илуструје тему резервних делова и подршке на локацији из чланка. Не приказује стварну фабрику полупроводника нити реконструише радни поступак."
+  },
+  "sv": {
+    "title": "En del flyttas från skyddsväskan till en arbetsmatta",
+    "description": "Två händer med handskar lyfter en enda metallring ur väskan och lägger den på en blå matta. Klippet är sex sekunder långt och saknar ljud.",
+    "disclosure": "En fiktiv scen skapad med AI som illustration till artikelns ämne reservdelar och stöd på plats. Den visar ingen verklig halvledarfabrik och återskapar ingen arbetsprocedur."
+  },
+  "ta": {
+    "title": "பாதுகாப்புப் பெட்டியிலிருந்து வேலை விரிப்புக்கு ஒரு பாகத்தை மாற்றுதல்",
+    "description": "கையுறை அணிந்த இரு கைகள் பெட்டியிலிருந்து ஓர் உலோக வளையத்தை எடுத்து நீல விரிப்பில் வைக்கின்றன. ஆறு விநாடிகள் கொண்ட இந்தக் காணொளியில் ஒலி இல்லை.",
+    "disclosure": "இது AI உருவாக்கிய கற்பனைக் காட்சி. கட்டுரையில் கூறப்பட்டுள்ள உதிரிப் பாகங்கள் மற்றும் தளத்தில் வழங்கப்படும் ஆதரவுப் பணிகளை விளக்குகிறது. இது உண்மையான குறைக்கடத்தித் தொழிற்சாலையையோ வேலை நடைமுறையையோ மீளுருவாக்கவில்லை."
+  },
+  "th": {
+    "title": "ย้ายชิ้นส่วนจากกล่องป้องกันไปวางบนแผ่นรองทำงาน",
+    "description": "มือสองข้างที่สวมถุงมือหยิบวงแหวนโลหะหนึ่งชิ้นออกจากกล่อง แล้ววางบนแผ่นรองสีน้ำเงิน วิดีโอนี้มีความยาวหกวินาทีและไม่มีเสียง",
+    "disclosure": "ฉากสมมติที่สร้างด้วย AI เพื่อประกอบเรื่องอะไหล่และการสนับสนุนหน้างานในบทความ ไม่ใช่ภาพโรงงานเซมิคอนดักเตอร์จริงหรือการจำลองขั้นตอนการทำงาน"
+  },
+  "tr": {
+    "title": "Bir parçayı koruyucu çantadan çalışma matına taşımak",
+    "description": "Eldivenli iki el, çantadan tek bir metal halka çıkarıp mavi matın üzerine bırakır. Altı saniyelik bu videoda ses yoktur.",
+    "disclosure": "Yapay zekâyla oluşturulan bu kurmaca sahne, makaledeki yedek parça ve yerinde destek konusunu görselleştirir. Gerçek bir yarı iletken fabrikasını göstermez veya bir çalışma prosedürünü yeniden canlandırmaz."
+  },
+  "uk": {
+    "title": "Перенесення деталі із захисного кейса на робочий килимок",
+    "description": "Дві руки в рукавичках виймають із кейса одне металеве кільце та кладуть його на синій килимок. Шестисекундне відео не має звуку.",
+    "disclosure": "Вигадана сцена, створена за допомогою ШІ, ілюструє тему запасних частин і підтримки на місці, розглянуту в статті. Вона не показує справжній завод напівпровідників і не відтворює робочу процедуру."
+  },
+  "ur": {
+    "title": "حفاظتی کیس سے پرزے کو کام کی چٹائی پر منتقل کرنا",
+    "description": "دستانے پہنے دو ہاتھ کیس سے ایک دھاتی حلقہ نکال کر نیلی چٹائی پر رکھتے ہیں۔ چھ سیکنڈ کی اس ویڈیو میں آواز نہیں ہے۔",
+    "disclosure": "یہ AI سے بنایا گیا خیالی منظر ہے جو مضمون میں زیرِ بحث اضافی پرزوں اور موقع پر معاونت کے کام کی مثال پیش کرتا ہے۔ یہ کسی حقیقی سیمی کنڈکٹر فیکٹری یا کام کے طریقۂ کار کی بازتخلیق نہیں ہے۔"
+  },
+  "vi": {
+    "title": "Chuyển linh kiện từ hộp bảo vệ sang tấm lót làm việc",
+    "description": "Hai bàn tay đeo găng lấy một vòng kim loại ra khỏi hộp và đặt lên tấm lót màu xanh lam. Video dài sáu giây và không có âm thanh.",
+    "disclosure": "Cảnh giả định do AI tạo để minh họa nội dung về phụ tùng dự phòng và hỗ trợ tại chỗ trong bài viết. Đây không phải hình ảnh nhà máy bán dẫn thực tế hay bản tái hiện quy trình làm việc."
+  },
+  "zh-hans": {
+    "title": "从保护箱取出零件，放到工作垫上",
+    "description": "戴着手套的双手取出一个金属环，放在蓝色工作垫上。这是6秒无声视频。",
+    "disclosure": "AI生成的假想场景，用于说明本文备件与现场支持的业务情境，并非实际半导体工厂或作业程序的重建。"
+  }
+}

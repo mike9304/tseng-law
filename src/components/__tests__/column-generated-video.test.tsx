@@ -103,6 +103,7 @@ describe('reviewed column videos', () => {
   });
 
   it.each([
+    ['taiwan-retaliatory-driving-rear-ended-intentional-injury', 'braking-scooter-v2-zh-hant', '不能用來認定故意、傷勢或責任比例'],
     ['taiwan-parking-wheelstop-latch-service-safety-causation', 'parking-contact-v1-zh-hant', '畫面中的車輪擋未被碰到'],
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v3-zh-hant', '橙色車'],
     ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-impact-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],

@@ -8,7 +8,17 @@ const generalAccidentCaptions = JSON.parse(await fs.readFile(new URL('../src/dat
 const overtakingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/overtaking-video-captions.json', import.meta.url), 'utf8'));
 const businessPremisesCaptions = JSON.parse(await fs.readFile(new URL('../src/data/business-premises-video-captions.json', import.meta.url), 'utf8'));
 const logisticsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/logistics-video-captions.json', import.meta.url), 'utf8'));
+const precisionPartsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/precision-parts-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-retaliatory-driving-rear-ended-intentional-injury', id: 'braking-scooter-v2-zh-hant', duration: 4, contactTime: 0.875, expectedDiagrams: 0, disclosure: '接觸與倒地動作不能用來認定故意、傷勢或責任比例' },
+  ...Object.entries(precisionPartsCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-semiconductor-market-entry', id: `precision-parts-v1-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `precision-parts-v1-${locale}`, duration: 6, contactTime: 4.5,
+      traffic: false, trafficBoard: nativeLocale, minBodyImages: 2, disclosure: caption.disclosure,
+    };
+  }),
   { locale: 'zh-hant', slug: 'taiwan-parking-wheelstop-latch-service-safety-causation', id: 'parking-contact-v1-zh-hant', duration: 4, contactTime: 0.5, expectedDiagrams: 0, disclosure: '非本文先碰車輪擋、前移後再倒車的兩段操作重建' },
   ...Object.entries(logisticsCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);

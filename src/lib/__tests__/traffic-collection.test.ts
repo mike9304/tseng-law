@@ -207,6 +207,7 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-retaliatory-driving-rear-ended-intentional-injury',
         'taiwan-traffic-accident-procedure',
         'taiwan-car-repair-cost-estimate-parts-depreciation',
         'taiwan-car-repair-rental-cost-repair-period-evidence',

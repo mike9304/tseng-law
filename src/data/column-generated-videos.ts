@@ -3,6 +3,7 @@ import overtakingCaptions from './overtaking-video-captions.json';
 import businessPremisesCaptions from './business-premises-video-captions.json';
 import logisticsCaptions from './logistics-video-captions.json';
 import precisionPartsCaptions from './precision-parts-video-captions.json';
+import gymPauseCaptions from './gym-pause-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -21,6 +22,24 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-bus-sudden-braking-passenger-carrier-liability': {
+    id: 'bus-braking-v4-zh-hant',
+    src: '/videos/columns/bus-braking-v4-zh-hant.mp4',
+    poster: '/images/column-videos/bus-braking-v4-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '乘客向前失衡，倒在公車走道上',
+    description: '一名已失去平衡的乘客向前倒下，雙手先碰地，身體隨即側倒在走道上。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立假想場景，非本文案件或原始車內影像的重建。畫面從乘客失衡後開始，未呈現車外原因或完整煞車過程，不能用來判斷傷勢、駕駛過失或客運公司的法律責任。',
+  },
+  ...Object.fromEntries(Object.entries(gymPauseCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `gym-pause-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-gym-injury-lawsuit`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   'column/zh-hant/taiwan-retaliatory-driving-rear-ended-intentional-injury': {
     id: 'braking-scooter-v2-zh-hant',
     src: '/videos/columns/braking-scooter-v2-zh-hant.mp4',

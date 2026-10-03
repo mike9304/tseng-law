@@ -9,7 +9,19 @@ const overtakingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/ove
 const businessPremisesCaptions = JSON.parse(await fs.readFile(new URL('../src/data/business-premises-video-captions.json', import.meta.url), 'utf8'));
 const logisticsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/logistics-video-captions.json', import.meta.url), 'utf8'));
 const precisionPartsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/precision-parts-video-captions.json', import.meta.url), 'utf8'));
+const gymPauseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/gym-pause-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-bus-sudden-braking-passenger-carrier-liability', id: 'bus-braking-v4-zh-hant', duration: 4, contactTime: 0.25, expectedDiagrams: 1, disclosure: '不能用來判斷傷勢、駕駛過失或客運公司的法律責任' },
+  ...Object.entries(gymPauseCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-gym-injury-lawsuit', id: `gym-pause-v1-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `gym-pause-v1-${locale}`, duration: 6, contactTime: 4.5,
+      // The existing loader strips inline markdown images; this count covers
+      // the three related-article images also present on the current public page.
+      traffic: false, trafficBoard: nativeLocale, minBodyImages: 3, disclosure: caption.disclosure,
+    };
+  }),
   { locale: 'zh-hant', slug: 'taiwan-retaliatory-driving-rear-ended-intentional-injury', id: 'braking-scooter-v2-zh-hant', duration: 4, contactTime: 0.875, expectedDiagrams: 0, disclosure: '接觸與倒地動作不能用來認定故意、傷勢或責任比例' },
   ...Object.entries(precisionPartsCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);

@@ -27478,11 +27478,13 @@ html[lang='en'] .search-panel { background: #08090b; color: #f5f5f7; border: 1px
 html[lang='en'] .search-panel header strong { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.02em; font-size: 1.3rem; }
 html[lang='en'] .search-panel .icon-button { background: rgb(255 255 255 / 12%); border: 0; border-radius: 999px; color: #f5f5f7; }
 html[lang='en'] .search-panel .icon-button:hover { background: rgb(255 255 255 / 20%); }
-html[lang='en'] .search-panel .search-bar { background: rgb(20 20 22 / 82%); border: 1px solid rgb(255 255 255 / 24%); border-radius: 32px; box-shadow: none; }
+html[lang='en'] .search-panel .search-bar { grid-template-columns: minmax(0, 1fr) auto; background: rgb(20 20 22 / 82%); border: 1px solid rgb(255 255 255 / 24%); border-radius: 32px; box-shadow: none; }
 html[lang='en'] .search-panel .search-bar:focus-within { border-color: #4ea1ff; box-shadow: 0 0 0 3px rgb(78 161 255 / 28%); }
-html[lang='en'] .search-panel .search-input { color: #f5f5f7; }
+html[lang='en'] .search-panel .search-input { width: 100%; min-width: 0; color: #f5f5f7; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+/* the pill around the field shows focus (blue border and ring), so the field itself draws no second ring */
+html[lang='en'] .search-panel .search-bar:focus-within .search-input:focus-visible { outline: none; box-shadow: none; }
 html[lang='en'] .search-panel .search-input::placeholder { color: #a1a1a6; }
-html[lang='en'] .search-panel .search-submit { background: #0066d6; color: #fff; border-radius: 999px; font-weight: 600; padding-inline: 1.5rem; }
+html[lang='en'] .search-panel .search-submit { min-height: 44px; background: #0066d6; color: #fff; border-radius: 999px; font-weight: 600; padding-inline: 1.25rem; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
 html[lang='en'] .search-panel .search-submit:hover { background: #0a6ee6; color: #fff; }
 html[lang='en'] .search-panel .search-tabs button,
 html[lang='en'] .search-panel .search-tabs a { background: transparent; border-color: transparent; color: #a1a1a6; }
@@ -27506,7 +27508,7 @@ html[lang='en'] [class*='GlobalLanguagePicker_title'] { color: #f5f5f7; font-fam
 html[lang='en'] [class*='GlobalLanguagePicker_close'] { color: #f5f5f7; border: 0; background: rgb(255 255 255 / 12%); border-radius: 999px; }
 html[lang='en'] [class*='GlobalLanguagePicker_close']:hover,
 html[lang='en'] [class*='GlobalLanguagePicker_close']:focus-visible { background: rgb(255 255 255 / 20%); }
-html[lang='en'] [class*='GlobalLanguagePicker_regionTitle'] { color: #86868b; font-family: 'EN Inter', 'EN Inter Fallback', var(--font-body), system-ui, sans-serif; }
+html[lang='en'] [class*='GlobalLanguagePicker_regionTitle'] { color: #86868b; font-family: 'EN Inter', 'EN Inter Fallback', var(--font-body), system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; }
 html[lang='en'] [class*='GlobalLanguagePicker_item']:hover,
 html[lang='en'] [class*='GlobalLanguagePicker_item']:focus-visible { background: rgb(255 255 255 / 8%); }
 html[lang='en'] [class*='GlobalLanguagePicker_item'][aria-current='page'] { background: rgb(255 255 255 / 12%); box-shadow: none; }

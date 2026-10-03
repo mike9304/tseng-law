@@ -1,6 +1,7 @@
 import generalAccidentCaptions from './general-accident-video-captions.json';
 import overtakingCaptions from './overtaking-video-captions.json';
 import businessPremisesCaptions from './business-premises-video-captions.json';
+import logisticsCaptions from './logistics-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -19,6 +20,24 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-parking-wheelstop-latch-service-safety-causation': {
+    id: 'parking-contact-v1-zh-hant',
+    src: '/videos/columns/parking-contact-v1-zh-hant.mp4',
+    poster: '/images/column-videos/parking-contact-v1-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '倒車後，車尾碰到防護柵門閂',
+    description: '藍色小客車短距離倒車，車尾碰到固定的門閂後停住，煞車燈保持亮起。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立假想場景，非本文先碰車輪擋、前移後再倒車的兩段操作重建。畫面中的車輪擋未被碰到；不能據此推定實際車速、設施尺寸、警示是否足夠或任何一方的法律責任。',
+  },
+  ...Object.fromEntries(Object.entries(logisticsCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `logistics-dock-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-logistics-business-setup`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   'column/zh-hant/taiwan-flying-object-truck-origin-dashcam-evidence': {
     id: 'flying-metal-v4-zh-hant',
     src: '/videos/columns/flying-metal-v4-zh-hant.mp4',

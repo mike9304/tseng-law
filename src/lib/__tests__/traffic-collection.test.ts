@@ -217,6 +217,7 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-lowered-height-gantry-state-compensation-driver-fault',
         'taiwan-flying-object-truck-origin-dashcam-evidence',
         'taiwan-road-rage-baseball-bat-fracture-damages',
+        'taiwan-parking-wheelstop-latch-service-safety-causation',
       ].includes(item.slug);
       expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');

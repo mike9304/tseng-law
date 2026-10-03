@@ -4,18 +4,18 @@ import { buildTrafficCollection, filterTrafficBoardItems, parseTrafficBoardQuery
 import pending from '@/content/column-embeddings-pending.json';
 
 const cases = [
-  ['taiwan-parking-wheelstop-latch-service-safety-causation', '鎖扣', 97],
-  ['taiwan-motorway-blocking-no-collision-public-danger', '國道', 98],
+  ['taiwan-parking-wheelstop-latch-service-safety-causation', '鎖扣', 97, true],
+  ['taiwan-motorway-blocking-no-collision-public-danger', '國道', 98, false],
 ] as const;
 
 describe('reviewed parking and motorway publication batch', () => {
-  it.each(cases)('includes %s exactly once in liability and search without a fabricated video', (slug, query, number) => {
+  it.each(cases)('includes %s exactly once with its reviewed video flag', (slug, query, number, hasVideo) => {
     const items = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     expect(items.filter(item => item.slug === slug)).toMatchObject([
-      { subject: 'liability', hasVideo: false, columnNumber: number, aiAuthored: true },
+      { subject: 'liability', hasVideo, columnNumber: number, aiAuthored: true },
     ]);
     expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ subject: 'liability', q: query })).map(item => item.slug)).toContain(slug);
-    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(item => item.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(item => item.slug === slug)).toBe(hasVideo);
     expect(getColumnPost(slug, 'zh-hant')?.diagramVideo).toBeUndefined();
   });
 

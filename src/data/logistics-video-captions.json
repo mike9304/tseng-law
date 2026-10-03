@@ -1,0 +1,247 @@
+{
+  "ko": {
+    "title": "창고 하역장 앞에 멈추는 화물차",
+    "description": "화물차가 창고 쪽으로 후진하다가 제동등을 켜고 멈춥니다. 6초짜리 무음 영상입니다.",
+    "disclosure": "AI로 만든 가상 장면입니다. 실제 업체를 촬영한 영상이 아니며, 사업자 신원·운송계약·허가 상태를 보여주지 않습니다."
+  },
+  "en": {
+    "title": "A truck reverses toward a loading dock",
+    "description": "The box truck backs toward the warehouse, brakes and stops. This is a silent six-second clip.",
+    "disclosure": "Fictional AI-generated scene, not footage of an actual business. It does not establish an operator’s identity, transport contracts or licensing status."
+  },
+  "ja": {
+    "title": "倉庫の荷さばき場の前で止まるトラック",
+    "description": "トラックが倉庫に向かって後退し、ブレーキランプを点灯して止まります。6秒間の無音映像です。",
+    "disclosure": "AIで作成した架空の場面です。実在する事業者の撮影記録ではなく、運送事業者の身元、運送契約、許可の有無を示すものではありません。"
+  },
+  "zh-hant": {
+    "title": "貨車倒退至倉庫裝卸平台前停下",
+    "description": "廂型貨車向倉庫倒車，亮起煞車燈後停住。這是6秒無聲影片。",
+    "disclosure": "AI生成的假想場景，非實際業者的拍攝紀錄。畫面無法證明營運者身分、運送契約內容或許可狀態。"
+  },
+  "ar": {
+    "title": "شاحنة تتراجع نحو رصيف التحميل",
+    "description": "تتراجع الشاحنة نحو المستودع، ثم تضيء مصابيح الفرامل وتتوقف. مقطع صامت مدته ست ثوانٍ.",
+    "disclosure": "مشهد خيالي مولّد بالذكاء الاصطناعي، وليس تصويرًا لمنشأة فعلية. لا يثبت هوية المشغّل أو عقود النقل أو وضع الترخيص."
+  },
+  "bg": {
+    "title": "Камион се движи назад към товарна рампа",
+    "description": "Камионът се приближава на заден ход до склада, задейства спирачките и спира. Шестсекундно видео без звук.",
+    "disclosure": "Измислена сцена, създадена с изкуствен интелект, а не запис на реално предприятие. Тя не установява самоличността на оператора, договорите за превоз или наличието на разрешение."
+  },
+  "bn": {
+    "title": "গুদামের লোডিং প্ল্যাটফর্মের দিকে পেছাচ্ছে ট্রাক",
+    "description": "ট্রাকটি গুদামের দিকে পেছায়, ব্রেক লাইট জ্বলে ওঠে এবং ট্রাক থামে। ছয় সেকেন্ডের শব্দহীন ভিডিও।",
+    "disclosure": "এটি AI দিয়ে তৈরি কাল্পনিক দৃশ্য, কোনো বাস্তব প্রতিষ্ঠানের ধারণ করা ভিডিও নয়। এটি পরিচালকের পরিচয়, পরিবহন চুক্তি বা অনুমতির অবস্থা প্রমাণ করে না।"
+  },
+  "ca": {
+    "title": "Un camió recula cap al moll de càrrega",
+    "description": "El camió recula cap al magatzem, frena i s’atura. Vídeo de sis segons sense so.",
+    "disclosure": "Escena fictícia generada amb IA, no una gravació d’una empresa real. No acredita la identitat de l’operador, els contractes de transport ni la situació de les autoritzacions."
+  },
+  "cs": {
+    "title": "Nákladní vůz couvá k nakládací rampě",
+    "description": "Vůz couvá ke skladu, rozsvítí brzdová světla a zastaví. Šestisekundové video bez zvuku.",
+    "disclosure": "Fiktivní scéna vytvořená pomocí AI, nikoli záznam skutečného podniku. Nedokládá totožnost provozovatele, přepravní smlouvy ani stav povolení."
+  },
+  "da": {
+    "title": "En lastbil bakker mod læsserampen",
+    "description": "Lastbilen bakker mod lageret, bremser og standser. Videoen varer seks sekunder og er uden lyd.",
+    "disclosure": "Fiktiv scene skabt med AI, ikke en optagelse fra en faktisk virksomhed. Den dokumenterer ikke operatørens identitet, transportaftaler eller tilladelser."
+  },
+  "de": {
+    "title": "Ein Lkw setzt zur Laderampe zurück",
+    "description": "Der Lkw fährt rückwärts zum Lagergebäude, bremst und hält an. Sechs Sekunden ohne Ton.",
+    "disclosure": "Fiktive, mit KI erzeugte Szene, keine Aufnahme eines realen Betriebs. Sie belegt weder die Identität des Betreibers noch Transportverträge oder den Genehmigungsstatus."
+  },
+  "el": {
+    "title": "Φορτηγό κινείται με όπισθεν προς τη ράμπα φόρτωσης",
+    "description": "Το φορτηγό πλησιάζει την αποθήκη με όπισθεν, φρενάρει και σταματά. Βίντεο έξι δευτερολέπτων χωρίς ήχο.",
+    "disclosure": "Φανταστική σκηνή δημιουργημένη με τεχνητή νοημοσύνη, όχι λήψη πραγματικής επιχείρησης. Δεν αποδεικνύει την ταυτότητα του φορέα εκμετάλλευσης, τις συμβάσεις μεταφοράς ή την κατάσταση αδειοδότησης."
+  },
+  "es": {
+    "title": "Un camión retrocede hacia el muelle de carga",
+    "description": "El camión retrocede hacia el almacén, frena y se detiene. Vídeo de seis segundos sin sonido.",
+    "disclosure": "Escena ficticia generada con IA, no una grabación de una empresa real. No acredita la identidad del operador, los contratos de transporte ni el estado de las autorizaciones."
+  },
+  "et": {
+    "title": "Veoauto tagurdab laadimisrambi poole",
+    "description": "Veoauto tagurdab lao poole, pidurdab ja peatub. Kuuesekundiline helita video.",
+    "disclosure": "Tehisintellektiga loodud väljamõeldud stseen, mitte tegeliku ettevõtte salvestis. See ei tõenda käitaja isikut, veolepinguid ega lubade olemasolu."
+  },
+  "fa": {
+    "title": "عقب رفتن کامیون به‌سوی سکوی بارگیری",
+    "description": "کامیون به‌سوی انبار عقب می‌رود، چراغ ترمز روشن می‌شود و می‌ایستد. ویدیوی شش‌ثانیه‌ای بدون صداست.",
+    "disclosure": "صحنه‌ای خیالی ساخته‌شده با هوش مصنوعی است، نه فیلم یک کسب‌وکار واقعی. هویت بهره‌بردار، قراردادهای حمل یا وضعیت مجوز را ثابت نمی‌کند."
+  },
+  "fi": {
+    "title": "Kuorma-auto peruuttaa lastauslaituria kohti",
+    "description": "Kuorma-auto peruuttaa varastoa kohti, jarruttaa ja pysähtyy. Äänetön video kestää kuusi sekuntia.",
+    "disclosure": "Tekoälyllä luotu kuvitteellinen kohtaus, ei tallenne todellisesta yrityksestä. Se ei osoita toimijan henkilöllisyyttä, kuljetussopimuksia tai lupien tilannetta."
+  },
+  "fil": {
+    "title": "Umaatras ang trak patungo sa plataporma ng kargahan",
+    "description": "Umaatras ang trak patungo sa bodega, umiilaw ang mga brake light at humihinto ito. Anim na segundong video na walang tunog.",
+    "disclosure": "Kathang-isip na tagpong ginawa gamit ang AI, hindi kuha ng isang tunay na negosyo. Hindi nito pinatutunayan ang pagkakakilanlan ng operator, mga kontrata sa transportasyon o katayuan ng lisensiya."
+  },
+  "fr": {
+    "title": "Un camion recule vers le quai de chargement",
+    "description": "Le camion recule vers l’entrepôt, freine et s’arrête. Vidéo de six secondes sans son.",
+    "disclosure": "Scène fictive générée par IA, et non prise de vues d’une entreprise réelle. Elle ne prouve ni l’identité de l’exploitant, ni les contrats de transport, ni la situation des autorisations."
+  },
+  "he": {
+    "title": "משאית נוסעת לאחור לעבר רציף הטעינה",
+    "description": "המשאית נוסעת לאחור לעבר המחסן, אורות הבלמים נדלקים והיא נעצרת. סרטון בן שש שניות ללא קול.",
+    "disclosure": "סצנה בדיונית שנוצרה בבינה מלאכותית, ולא צילום של עסק אמיתי. היא אינה מוכיחה את זהות המפעיל, את חוזי ההובלה או את מצב הרישוי."
+  },
+  "hi": {
+    "title": "लोडिंग प्लेटफ़ॉर्म की ओर पीछे जाता ट्रक",
+    "description": "ट्रक गोदाम की ओर पीछे जाता है, ब्रेक लाइट जलती है और वह रुक जाता है। छह सेकंड का बिना आवाज़ वाला वीडियो।",
+    "disclosure": "यह AI से बनाया गया काल्पनिक दृश्य है, किसी वास्तविक व्यवसाय की रिकॉर्डिंग नहीं। इससे संचालक की पहचान, परिवहन अनुबंध या अनुमति की स्थिति प्रमाणित नहीं होती।"
+  },
+  "hr": {
+    "title": "Kamion vozi unatrag prema utovarnoj rampi",
+    "description": "Kamion vozi unatrag prema skladištu, koči i zaustavlja se. Video traje šest sekundi i nema zvuka.",
+    "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom, a ne snimka stvarnog poduzeća. Ne dokazuje identitet prijevoznika, ugovore o prijevozu ni status dozvola."
+  },
+  "hu": {
+    "title": "Teherautó tolat a rakodórámpa felé",
+    "description": "A teherautó a raktár felé tolat, fékez és megáll. Hat másodperces, hang nélküli videó.",
+    "disclosure": "Mesterséges intelligenciával létrehozott, kitalált jelenet, nem egy valódi vállalkozás felvétele. Nem igazolja az üzemeltető személyazonosságát, a fuvarozási szerződéseket vagy az engedélyek állapotát."
+  },
+  "id": {
+    "title": "Truk mundur menuju dok pemuatan",
+    "description": "Truk mundur menuju gudang, mengerem, lalu berhenti. Video tanpa suara berdurasi enam detik.",
+    "disclosure": "Adegan fiktif buatan AI, bukan rekaman usaha nyata. Video ini tidak membuktikan identitas operator, kontrak pengangkutan, atau status perizinan."
+  },
+  "is": {
+    "title": "Vörubíll bakkar að vörupalli",
+    "description": "Vörubíllinn bakkar að vöruhúsinu, hemlar og stöðvast. Sex sekúndna myndskeið án hljóðs.",
+    "disclosure": "Uppspunnið atriði búið til með gervigreind, ekki upptaka af raunverulegu fyrirtæki. Það staðfestir hvorki hver rekstraraðilinn er, flutningssamninga né stöðu leyfa."
+  },
+  "it": {
+    "title": "Un camion arretra verso la banchina di carico",
+    "description": "Il camion arretra verso il magazzino, frena e si ferma. Video di sei secondi senza audio.",
+    "disclosure": "Scena immaginaria generata con IA, non una ripresa di un’impresa reale. Non dimostra l’identità dell’operatore, i contratti di trasporto o lo stato delle autorizzazioni."
+  },
+  "km": {
+    "title": "រថយន្តដឹកទំនិញថយក្រោយទៅកាន់កន្លែងលើកដាក់ទំនិញ",
+    "description": "រថយន្តដឹកទំនិញថយក្រោយទៅកាន់ឃ្លាំង ភ្លើងហ្វ្រាំងភ្លឺ ហើយរថយន្តឈប់។ វីដេអូគ្មានសំឡេងរយៈពេលប្រាំមួយវិនាទី។",
+    "disclosure": "នេះជាឈុតឆាកស្រមៃដែលបង្កើតដោយ AI មិនមែនជាការថតអាជីវកម្មពិតទេ។ វាមិនបញ្ជាក់អត្តសញ្ញាណអ្នកប្រតិបត្តិការ កិច្ចសន្យាដឹកជញ្ជូន ឬស្ថានភាពលិខិតអនុញ្ញាតឡើយ។"
+  },
+  "lt": {
+    "title": "Sunkvežimis atbulomis artėja prie pakrovimo rampos",
+    "description": "Sunkvežimis važiuoja atbulomis link sandėlio, stabdo ir sustoja. Šešių sekundžių vaizdo įrašas be garso.",
+    "disclosure": "DI sukurta išgalvota scena, o ne tikros įmonės veiklos įrašas. Ji nepatvirtina veiklos vykdytojo tapatybės, vežimo sutarčių ar leidimų būklės."
+  },
+  "lv": {
+    "title": "Kravas auto atpakaļgaitā tuvojas iekraušanas rampai",
+    "description": "Kravas auto atpakaļgaitā brauc pie noliktavas, bremzē un apstājas. Sešu sekunžu video bez skaņas.",
+    "disclosure": "Ar mākslīgo intelektu radīta izdomāta aina, nevis reāla uzņēmuma ieraksts. Tā nepierāda operatora identitāti, pārvadājuma līgumus vai atļauju statusu."
+  },
+  "mn": {
+    "title": "Ачааны машин ачих тавцан руу ухарна",
+    "description": "Ачааны машин агуулах руу ухарч, тоормосны гэрэл нь асан зогсоно. Зургаан секундийн дуугүй бичлэг.",
+    "disclosure": "Хиймэл оюунаар бүтээсэн зохиомол дүр зураг бөгөөд бодит компанийн бичлэг биш. Үйл ажиллагаа эрхлэгчийн хэн болох, тээврийн гэрээ эсвэл зөвшөөрлийн төлөвийг нотлохгүй."
+  },
+  "ms": {
+    "title": "Lori mengundur ke arah pelantar pemunggahan",
+    "description": "Lori mengundur ke arah gudang, membrek dan berhenti. Video enam saat tanpa bunyi.",
+    "disclosure": "Adegan rekaan yang dijana dengan AI, bukan rakaman perniagaan sebenar. Ia tidak membuktikan identiti pengendali, kontrak pengangkutan atau status lesen."
+  },
+  "my": {
+    "title": "ကုန်တင်ကားက ကုန်တင်ချစင်ဘက်သို့ နောက်ဆုတ်လာသည်",
+    "description": "ကုန်တင်ကားက ဂိုဒေါင်ဘက်သို့ နောက်ဆုတ်လာပြီး ဘရိတ်မီးလင်းကာ ရပ်တန့်သည်။ ခြောက်စက္ကန့်ကြာ အသံမပါသော ဗီဒီယိုဖြစ်သည်။",
+    "disclosure": "AI ဖြင့် ဖန်တီးထားသော စိတ်ကူးယဉ်မြင်ကွင်းဖြစ်ပြီး တကယ့်လုပ်ငန်းတစ်ခုကို ရိုက်ကူးထားခြင်း မဟုတ်ပါ။ လုပ်ငန်းရှင်၏ အထောက်အထား၊ သယ်ယူပို့ဆောင်ရေးစာချုပ်များ သို့မဟုတ် လိုင်စင်အခြေအနေကို သက်သေမပြပါ။"
+  },
+  "nb": {
+    "title": "En lastebil rygger mot lasterampen",
+    "description": "Lastebilen rygger mot lageret, bremser og stanser. Videoen varer seks sekunder og er uten lyd.",
+    "disclosure": "Fiktiv scene laget med KI, ikke et opptak av en faktisk virksomhet. Den dokumenterer ikke operatørens identitet, transportavtaler eller tillatelser."
+  },
+  "ne": {
+    "title": "लोडिङ प्लेटफर्मतर्फ पछाडि जाँदै गरेको ट्रक",
+    "description": "ट्रक गोदामतर्फ पछाडि जान्छ, ब्रेक बत्ती बल्छ र रोकिन्छ। छ सेकेन्डको आवाजरहित भिडियो।",
+    "disclosure": "यो AI बाट बनाइएको काल्पनिक दृश्य हो, वास्तविक व्यवसायको रेकर्डिङ होइन। यसले सञ्चालकको पहिचान, ढुवानी सम्झौता वा अनुमतिको अवस्था प्रमाणित गर्दैन।"
+  },
+  "nl": {
+    "title": "Een vrachtwagen rijdt achteruit naar het laadperron",
+    "description": "De vrachtwagen rijdt achteruit naar het magazijn, remt en stopt. Zes seconden video zonder geluid.",
+    "disclosure": "Fictieve scène gemaakt met AI, geen opname van een echt bedrijf. Ze toont niet aan wie de exploitant is, welke vervoerscontracten gelden of wat de vergunningstatus is."
+  },
+  "pl": {
+    "title": "Ciężarówka cofa w stronę rampy załadunkowej",
+    "description": "Ciężarówka cofa w stronę magazynu, hamuje i zatrzymuje się. Sześć sekund nagrania bez dźwięku.",
+    "disclosure": "Fikcyjna scena wygenerowana przez AI, a nie nagranie rzeczywistego przedsiębiorstwa. Nie potwierdza tożsamości operatora, umów przewozu ani stanu zezwoleń."
+  },
+  "pt": {
+    "title": "Um camião recua até ao cais de carga",
+    "description": "O camião recua em direção ao armazém, trava e para. Vídeo de seis segundos sem som.",
+    "disclosure": "Cena fictícia gerada com IA, não uma gravação de uma empresa real. Não comprova a identidade do operador, os contratos de transporte nem a situação das autorizações."
+  },
+  "ro": {
+    "title": "Un camion merge în marșarier spre rampa de încărcare",
+    "description": "Camionul se apropie în marșarier de depozit, frânează și se oprește. Clip de șase secunde, fără sunet.",
+    "disclosure": "Scenă fictivă generată cu IA, nu o filmare a unei întreprinderi reale. Nu dovedește identitatea operatorului, contractele de transport sau situația autorizațiilor."
+  },
+  "ru": {
+    "title": "Грузовик движется задним ходом к погрузочной платформе",
+    "description": "Грузовик сдаёт назад к складу, тормозит и останавливается. Шестисекундное видео без звука.",
+    "disclosure": "Вымышленная сцена, созданная ИИ, а не съёмка реального предприятия. Она не подтверждает личность оператора, договоры перевозки или статус разрешений."
+  },
+  "sk": {
+    "title": "Nákladné vozidlo cúva k nakladacej rampe",
+    "description": "Vozidlo cúva k skladu, rozsvieti brzdové svetlá a zastaví. Šesťsekundové video bez zvuku.",
+    "disclosure": "Fiktívna scéna vytvorená pomocou AI, nie záznam skutočného podniku. Nedokladá totožnosť prevádzkovateľa, prepravné zmluvy ani stav povolení."
+  },
+  "sl": {
+    "title": "Tovornjak vzvratno vozi proti nakladalni rampi",
+    "description": "Tovornjak vzvratno vozi proti skladišču, zavre in se ustavi. Šestsekundni posnetek brez zvoka.",
+    "disclosure": "Izmišljen prizor, ustvarjen z umetno inteligenco, ne posnetek resničnega podjetja. Ne dokazuje identitete izvajalca, prevoznih pogodb ali stanja dovoljenj."
+  },
+  "sr": {
+    "title": "Kamion ide unazad prema utovarnoj rampi",
+    "description": "Kamion ide unazad prema skladištu, koči i zaustavlja se. Video traje šest sekundi i nema zvuka.",
+    "disclosure": "Izmišljena scena napravljena pomoću veštačke inteligencije, a ne snimak stvarnog preduzeća. Ne dokazuje identitet prevoznika, ugovore o prevozu ni status dozvola."
+  },
+  "sv": {
+    "title": "En lastbil backar mot lastkajen",
+    "description": "Lastbilen backar mot lagret, bromsar och stannar. Filmen är sex sekunder lång och saknar ljud.",
+    "disclosure": "Fiktiv scen skapad med AI, inte en inspelning av ett verkligt företag. Den styrker inte operatörens identitet, transportavtal eller tillståndsstatus."
+  },
+  "ta": {
+    "title": "ஏற்றும் மேடையை நோக்கிப் பின்னோக்கிச் செல்லும் லாரி",
+    "description": "லாரி கிடங்கை நோக்கிப் பின்னோக்கிச் சென்று, பிரேக் விளக்குகள் எரிய நிற்கிறது. ஆறு நொடிகள் நீளமுள்ள ஒலியற்ற காணொளி.",
+    "disclosure": "இது AI மூலம் உருவாக்கப்பட்ட கற்பனைக் காட்சி; உண்மையான நிறுவனத்தின் பதிவு அல்ல. நிறுவனத்தை இயக்குபவரின் அடையாளம், போக்குவரத்து ஒப்பந்தங்கள் அல்லது அனுமதி நிலையை இது நிரூபிக்காது."
+  },
+  "th": {
+    "title": "รถบรรทุกถอยเข้าหาแท่นขนถ่ายสินค้า",
+    "description": "รถบรรทุกถอยเข้าหาคลังสินค้า ไฟเบรกสว่างขึ้นแล้วรถหยุด วิดีโอไม่มีเสียงยาวหกวินาที",
+    "disclosure": "ฉากสมมติที่สร้างด้วย AI ไม่ใช่ภาพถ่ายของกิจการจริง ภาพนี้ไม่ยืนยันตัวตนผู้ประกอบการ สัญญาขนส่ง หรือสถานะใบอนุญาต"
+  },
+  "tr": {
+    "title": "Kamyon yükleme rampasına doğru geri gidiyor",
+    "description": "Kamyon depoya doğru geri gider, fren yapar ve durur. Altı saniyelik sessiz video.",
+    "disclosure": "Yapay zekâyla oluşturulmuş kurgusal bir sahnedir; gerçek bir işletmenin kaydı değildir. İşletmecinin kimliğini, taşıma sözleşmelerini veya izin durumunu kanıtlamaz."
+  },
+  "uk": {
+    "title": "Вантажівка рухається заднім ходом до навантажувальної платформи",
+    "description": "Вантажівка здає назад до складу, гальмує й зупиняється. Шестисекундне відео без звуку.",
+    "disclosure": "Вигадана сцена, створена ШІ, а не зйомка реального підприємства. Вона не підтверджує особу оператора, договори перевезення чи стан дозволів."
+  },
+  "ur": {
+    "title": "لوڈنگ پلیٹ فارم کی طرف پیچھے جاتا ٹرک",
+    "description": "ٹرک گودام کی طرف پیچھے جاتا ہے، بریک کی بتیاں جلتی ہیں اور وہ رک جاتا ہے۔ چھ سیکنڈ کی بے آواز ویڈیو۔",
+    "disclosure": "یہ AI سے بنایا گیا فرضی منظر ہے، کسی حقیقی کاروبار کی ریکارڈنگ نہیں۔ اس سے آپریٹر کی شناخت، نقل و حمل کے معاہدے یا لائسنس کی حیثیت ثابت نہیں ہوتی۔"
+  },
+  "vi": {
+    "title": "Xe tải lùi về phía bệ bốc dỡ hàng",
+    "description": "Xe tải lùi về phía nhà kho, phanh rồi dừng lại. Video không tiếng dài sáu giây.",
+    "disclosure": "Cảnh giả định do AI tạo, không phải hình ảnh ghi lại một doanh nghiệp thực tế. Video không chứng minh danh tính đơn vị vận hành, hợp đồng vận chuyển hay tình trạng giấy phép."
+  },
+  "zh-hans": {
+    "title": "货车倒退至仓库装卸平台前停下",
+    "description": "厢式货车向仓库倒车，刹车灯亮起后停住。这是6秒无声视频。",
+    "disclosure": "AI生成的虚构场景，并非实际企业的拍摄记录。画面无法证明运营者身份、运输合同内容或许可状态。"
+  }
+}

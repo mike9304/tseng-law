@@ -6,8 +6,20 @@ import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 import generalAccidentCaptions from '@/data/general-accident-video-captions.json';
 import overtakingCaptions from '@/data/overtaking-video-captions.json';
 import businessPremisesCaptions from '@/data/business-premises-video-captions.json';
+import logisticsCaptions from '@/data/logistics-video-captions.json';
 
 describe('reviewed column videos', () => {
+  it.each(Object.entries(logisticsCaptions))('keeps the logistics scene and %s caption on the reviewed logistics column', (locale, caption) => {
+    const slug = 'taiwan-logistics-business-setup';
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
+    expect(html).toContain(`logistics-dock-v1-${assetLocale}.mp4`);
+    for (const value of Object.values(caption)) expect(html).toContain(renderToStaticMarkup(<>{value}</>));
+    expect(html).toContain('controls=""');
+    expect(html).not.toMatch(/autoplay|loop=/i);
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+    expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
+  });
   it('renders the reviewed local clip with controls, description and an AI disclosure', () => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="ko" slug="taiwan-traffic-accident-procedure" />);
     expect(html).toContain('<video');
@@ -91,6 +103,7 @@ describe('reviewed column videos', () => {
   });
 
   it.each([
+    ['taiwan-parking-wheelstop-latch-service-safety-causation', 'parking-contact-v1-zh-hant', '畫面中的車輪擋未被碰到'],
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v3-zh-hant', '橙色車'],
     ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-impact-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],
     ['taiwan-flying-object-truck-origin-dashcam-evidence', 'flying-metal-v4-zh-hant', '畫面未交代來源，也未呈現貨車掉落物品'],

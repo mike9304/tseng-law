@@ -7,7 +7,17 @@ const out = process.env.COLUMN_VIDEO_QA_OUT || '/tmp/column-generated-video-qa';
 const generalAccidentCaptions = JSON.parse(await fs.readFile(new URL('../src/data/general-accident-video-captions.json', import.meta.url), 'utf8'));
 const overtakingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/overtaking-video-captions.json', import.meta.url), 'utf8'));
 const businessPremisesCaptions = JSON.parse(await fs.readFile(new URL('../src/data/business-premises-video-captions.json', import.meta.url), 'utf8'));
+const logisticsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/logistics-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-parking-wheelstop-latch-service-safety-causation', id: 'parking-contact-v1-zh-hant', duration: 4, contactTime: 0.5, expectedDiagrams: 0, disclosure: '非本文先碰車輪擋、前移後再倒車的兩段操作重建' },
+  ...Object.entries(logisticsCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-logistics-business-setup', id: `logistics-dock-v1-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `logistics-dock-v1-${locale}`, duration: 6, contactTime: 4.6,
+      traffic: false, trafficBoard: nativeLocale, minBodyImages: 2, disclosure: caption.disclosure,
+    };
+  }),
   { locale: 'zh-hant', slug: 'taiwan-flying-object-truck-origin-dashcam-evidence', id: 'flying-metal-v4-zh-hant', duration: 4, contactTime: 0.25, expectedDiagrams: 0, disclosure: '畫面未交代來源，也未呈現貨車掉落物品' },
   ...Object.entries(businessPremisesCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-company-setup-pitch-location', id: 'business-premises-v1-en',
@@ -162,7 +172,7 @@ try {
       assert.equal(layout.textDirection, ['ar', 'fa', 'he', 'ur'].includes(item.locale) ? 'rtl' : 'ltr');
       if (item.traffic === false) {
         assert.equal(layout.diagramCount, 0);
-        assert.ok(layout.bodyImageCount >= 3, 'Existing premises article images were removed');
+        assert.ok(layout.bodyImageCount >= (item.minBodyImages ?? 3), 'Existing article images were removed');
       } else if (item.expectedDiagrams !== undefined) {
         assert.equal(layout.diagramCount, item.expectedDiagrams);
       } else {

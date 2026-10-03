@@ -1,20 +1,16 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
-import PageHeader from '@/components/PageHeader';
-import JaPageShell from '@/components/ja-design/JaPageShell';
-import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { buildSeoMetadata } from '@/lib/seo';
 import { searchCurrentPublication } from '@/lib/builder/search/current-search';
 import type { SearchDocKind } from '@/lib/builder/search/types';
-import styles from './SearchPage.module.css';
+import SearchPageView, { type SearchPageViewProps } from './SearchPageView';
+import JaSearchView from './JaSearchView';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
 import zhSearchStyles from './ZhHantSearch.module.css';
 import EnPageShell from '@/components/en-design/EnPageShell';
 import enStyles from '@/components/en-design/EnSearch.module.css';
-import jaSearchStyles from './JaSearch.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -122,72 +118,29 @@ export default async function SearchPage(
     label: searchKindLabel(id, locale),
   }));
 
-  const body = (
-    <>
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
-        <form className={`search-bar ${styles.searchBar}`} action={`/${locale}/search`} method="get">
-          <input
-            className="search-input"
-            type="search"
-            name="q"
-            defaultValue={query}
-            maxLength={MAX_SEARCH_QUERY_LENGTH}
-            aria-label={content.search.title}
-            placeholder={content.search.placeholder}
-          />
-          <input type="hidden" name="tab" value={activeKind} />
-          <button className="search-submit" type="submit">
-            {content.search.title}
-          </button>
-        </form>
-      </PageHeader>
-      <section className={`section search-results-section ${styles.results}`}>
-        <div className="container">
-          <div className="search-tabs">
-            {tabs.map((tab) => (
-              <Link
-                key={tab.id}
-                className={`tab-button ${activeKind === tab.id ? 'active' : ''}`}
-                href={`/${locale}/search?q=${encodeURIComponent(query)}&tab=${tab.id}`}
-              >
-                {tab.label}
-              </Link>
-            ))}
-          </div>
-          {query && <div className="search-results-total">{totalLabel}</div>}
-          <div className="list-rows">
-            {!query ? (
-              <p className="search-empty" data-search-initial="true">{initialLabel}</p>
-            ) : results.length ? (
-              results.map((hit) => (
-                <div key={hit.doc.id} className="list-row">
-                  <div className="list-meta">{resultKindLabel(hit.doc.kind, locale)}</div>
-                  <div>
-                    <SmartLink className="link-underline" href={hit.doc.url}>
-                      {hit.doc.title}
-                    </SmartLink>
-                    <p className="search-results-desc">{hit.highlights[0] || hit.doc.summary}</p>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="search-empty">{emptyLabel}</div>
-            )}
-          </div>
-          <div className="search-results-suggested">
-            <div className="section-label">{suggestedLabel}</div>
-            <div className="chip-group">
-              {content.search.suggestions.map((item) => (
-                <Link key={item} className="chip" href={`/${locale}/search?q=${encodeURIComponent(item)}`}>
-                  {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+  const viewProps: SearchPageViewProps = {
+    locale,
+    copy: { label: copy.label, title: copy.title, description: copy.description },
+    search: { title: content.search.title, placeholder: content.search.placeholder, suggestions: content.search.suggestions },
+    query,
+    maxQueryLength: MAX_SEARCH_QUERY_LENGTH,
+    activeKind,
+    tabs,
+    // Only the displayed hit fields cross the Japanese client boundary. Search
+    // documents, full bodies, scores and publication internals remain server-side.
+    results: results.map((hit) => ({
+      id: hit.doc.id,
+      kindLabel: resultKindLabel(hit.doc.kind, locale),
+      url: hit.doc.url,
+      title: hit.doc.title,
+      description: hit.highlights[0] || hit.doc.summary,
+    })),
+    totalLabel,
+    emptyLabel,
+    initialLabel,
+    suggestedLabel,
+  };
+  const body = locale === 'ja' ? <JaSearchView {...viewProps} /> : <SearchPageView {...viewProps} />;
   // zh-hant Apple pass (2026-10-01): the same page inside a scoped wrapper; other locales render unchanged.
   if (locale === 'zh-hant') {
     return (
@@ -197,7 +150,8 @@ export default async function SearchPage(
     );
   }
   // ja: the shared 間 shell carries the palette and page header treatment.
-  if (locale === 'ja') return <JaPageShell page="search" className={jaSearchStyles.root}>{body}</JaPageShell>;
+  // ja: the 昊 V2 shell is rendered inside JaSearchView (one synchronous client view).
+  if (locale === 'ja') return body;
   // en (Clear Night inner pages): the same search body inside the en wrapper; other locales render it as before.
   return locale === 'en'
     ? <EnPageShell page="search"><div className={enStyles.search}>{body}</div></EnPageShell>

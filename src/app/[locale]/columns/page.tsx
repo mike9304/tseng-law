@@ -8,9 +8,7 @@ import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell'
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { getAllIssuePosts } from '@/lib/columns';
 import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
-import JaPageShell from '@/components/ja-design/JaPageShell';
-import jaColumnsStyles from '@/components/ja-design/JaColumns.module.css';
-import { JA_COLUMN_TOPIC_ORDER, JA_PINNED_COLUMN_SLUGS } from '@/components/ja-design/ja-arrangement';
+import JaColumnsView from './JaColumnsView';
 import { EnColumnsShell, EnColumnsStartHere } from '@/components/en-design/EnColumns';
 import { EN_COLUMN_TOPIC_ORDER, EN_RECOMMENDED_COLUMN_ORDER } from '@/components/en-design/en-design-data';
 import { toColumnListItems } from '@/lib/column-list-items';
@@ -291,31 +289,44 @@ export default async function ColumnsPage(
   const showRepeater = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.repeater');
   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.seo');
 
+  const breadcrumbJsonLd = showSeo ? buildBreadcrumbJsonLd(locale, [
+    { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${locale}` },
+    { name: copy.title, path: `/${locale}/columns` },
+  ]) : null;
+  const collectionJsonLd = showSeo ? buildCollectionPageJsonLd({
+    locale,
+    path: `/${locale}/columns`,
+    name: copy.title,
+    description: copy.description,
+    items: posts.slice(0, 20).map((post) => ({
+      name: isAiAuthoredColumn(post) ? post.title : `${post.title} · ${byline}`,
+      path: `/${locale}/columns/${post.slug}`,
+      description: post.summary,
+    })),
+  }) : null;
+
+  if (locale === 'ja') {
+    // Keep the wrapper and its children in one synchronous SSR view. Streaming
+    // this archive as server-element children can resume hydration inside its
+    // already-claimed wrapper. Pass only completed, visibility-filtered data.
+    return <JaColumnsView
+      title={copy.title}
+      description={copy.description}
+      label={headerLabel.ja}
+      showHero={showHero}
+      showRepeater={showRepeater}
+      showIssueTabs={getAllIssuePosts('ja').length > 0}
+      posts={showRepeater ? toColumnListItems(posts) : []}
+      initialFilters={toColumnGridFilters(searchParams)}
+      breadcrumbJsonLd={breadcrumbJsonLd}
+      collectionJsonLd={collectionJsonLd}
+    />;
+  }
+
   const body = (
     <>
-      {showSeo ? (
-        <>
-          <JsonLd
-            data={buildBreadcrumbJsonLd(locale, [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${locale}` },
-              { name: copy.title, path: `/${locale}/columns` },
-            ])}
-          />
-          <JsonLd
-            data={buildCollectionPageJsonLd({
-              locale,
-              path: `/${locale}/columns`,
-              name: copy.title,
-              description: copy.description,
-              items: posts.slice(0, 20).map((post) => ({
-                name: isAiAuthoredColumn(post) ? post.title : `${post.title} · ${byline}`,
-                path: `/${locale}/columns/${post.slug}`,
-                description: post.summary,
-              })),
-            })}
-          />
-        </>
-      ) : null}
+      {breadcrumbJsonLd ? <JsonLd data={breadcrumbJsonLd} /> : null}
+      {collectionJsonLd ? <JsonLd data={collectionJsonLd} /> : null}
       {showHero ? (
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description}>
           {locale === 'en' ? <EnColumnsStartHere posts={posts} /> : null}
@@ -337,16 +348,13 @@ export default async function ColumnsPage(
           posts={toColumnListItems(posts)}
           initialFilters={toColumnGridFilters(searchParams)}
           featuredSlugs={locale === 'zh-hant' ? ZH_HANT_FEATURED_COLUMN_SLUGS : undefined}
-          // ja design: cornerstone picks for the top Japanese needs, then themes in Japanese demand order.
-          openingSlugs={locale === 'ja' ? JA_PINNED_COLUMN_SLUGS : undefined}
-          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : locale === 'ja' ? JA_COLUMN_TOPIC_ORDER : locale === 'en' ? EN_COLUMN_TOPIC_ORDER : undefined}
+          topicOrder={locale === 'zh-hant' ? ZH_HANT_COLUMN_TOPIC_ORDER : locale === 'en' ? EN_COLUMN_TOPIC_ORDER : undefined}
           recommendedOrder={locale === 'en' ? EN_RECOMMENDED_COLUMN_ORDER : undefined}
         />
       ) : null}
       <EnAcquisitionGuideLinks locale={locale} />
     </>
   );
-  if (locale === 'ja') return <JaPageShell page="columns" className={jaColumnsStyles.root}>{body}</JaPageShell>;
   if (locale === 'zh-hant') return <ZhHantColumnsShell>{body}</ZhHantColumnsShell>;
   return locale === 'en' ? <EnColumnsShell>{body}</EnColumnsShell> : body;
 }

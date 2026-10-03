@@ -2255,6 +2255,8 @@
     border-radius: 50%;
     background: var(--en-lamp);
     box-shadow: 0 0 16px 4px rgb(255 181 71 / 55%);
+    /* final state by default (engines without scroll timelines); the scroll animation starts it at 0 */
+    translate: calc(100cqi - 10px) 0;
   }
   .trackTicks { position: relative; height: 20px; margin: 12px 0 0; padding: 0; list-style: none; }
   .trackTicks li {

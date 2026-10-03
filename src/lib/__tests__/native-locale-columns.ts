@@ -220,6 +220,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '116-taiwan-trade-secrets-act-criminal-civil-korean-companies.md', // semiconductor lane b04
     '134-taiwan-national-security-act-core-key-technology-korean-engineers.md', // reviewed fraud/semiconductor release
     '143-taiwan-unpaid-invoice-fraud-or-contract.md', // reviewed fraud/semiconductor release
+    '144-taiwan-protection-order-domestic-violence-korean-spouse.md', // family lane b05
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',

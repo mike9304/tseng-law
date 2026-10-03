@@ -1,0 +1,43 @@
+/*
+ * en legal pages (privacy, disclaimer, accessibility; Opus 5.5 en lane, 2026-10-01): the shared
+ * LegalPageSections markup and wording inside the en wrapper. The header comes from EnPage.module.css;
+ * here only the effective date, the paper section and the card type follow the en system.
+ */
+/* The effective date reads as a meta line under the description, not as a second column. */
+:global(#en-legal) .legal :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+:global(#en-legal) .legal :global(.page-header [data-page-header-slot='children']) { grid-column: 1; width: auto; margin: -8px 0 0; }
+.legal :global(.page-header .legal-effective-date) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  margin: 0;
+  padding: 8px 18px;
+  border: 1px solid var(--en-line-dark);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 6%);
+  font-family: var(--en-mono);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: rgb(255 255 255 / 88%);
+}
+.legal :global(section.section.legal-page-section) { padding: clamp(40px, 5vw, 72px) 0 clamp(56px, 7vw, 104px); background: var(--en-mist); }
+.legal :global(.legal-page-section .contact-grid) { gap: 16px; }
+.legal :global(.legal-page-section .card.legal-card) {
+  gap: 14px;
+  padding: clamp(24px, 2.6vw, 34px);
+  border: 1px solid var(--en-line);
+  border-radius: 24px;
+  background: #fff;
+}
+.legal :global(.legal-page-section .card.legal-card:hover),
+.legal :global(.legal-page-section .card.legal-card:focus-within) { border-color: var(--en-line); }
+.legal :global(.legal-page-section .card-title) {
+  font-size: clamp(21px, 1.8vw, 25px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+  color: var(--en-ink);
+}
+.legal :global(.legal-page-section .legal-card-list li)::before { border-radius: 0; background: var(--en-signal); }

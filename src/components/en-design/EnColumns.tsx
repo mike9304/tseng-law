@@ -17,6 +17,18 @@ export function EnColumnsShell({ children }: { children: ReactNode }) {
 }
 
 /**
+ * en "Taiwan Law in the News" board: the same blocks (header, board tabs, ColumnsGrid) in the en
+ * wrapper with the columns-index styling, so both tabs of the Insights section look alike.
+ */
+export function EnIssuesShell({ children }: { children: ReactNode }) {
+  return (
+    <EnPageShell page="issues">
+      <div className={styles.columns}>{children}</div>
+    </EnPageShell>
+  );
+}
+
+/**
  * Header panel: one starting guide per reader situation (labels are the situation labels used
  * across the English pages; each link is an existing English column with its own title).
  * Desktop shows the list open beside the H1; phones get the same list collapsed in a
@@ -25,9 +37,9 @@ export function EnColumnsShell({ children }: { children: ReactNode }) {
 export function EnColumnsStartHere({ posts }: { posts: readonly { slug: string; title: string }[] }) {
   const rows = resolveEnSituations(posts).filter((situation) => situation.guideLinks.length > 0);
   if (rows.length === 0) return null;
-  const list = (
+  const renderRows = (items: typeof rows) => (
     <ol className={styles.startList}>
-      {rows.map((situation) => (
+      {items.map((situation) => (
         <li key={situation.id}>
           <span className={styles.startLabel}>{situation.label}</span>
           <Link href={situation.guideLinks[0].href}>{situation.guideLinks[0].title}</Link>
@@ -35,11 +47,20 @@ export function EnColumnsStartHere({ posts }: { posts: readonly { slug: string; 
       ))}
     </ol>
   );
+  const list = renderRows(rows);
+  const firstRows = rows.slice(0, 4);
+  const moreRows = rows.slice(4);
   return (
     <>
       <nav className={`${styles.start} ${styles.startDesktop}`} aria-label="Start here">
         <p className={styles.startTitle}>Start here</p>
-        {list}
+        {renderRows(firstRows)}
+        {moreRows.length > 0 ? (
+          <details className={styles.startMore}>
+            <summary>{moreRows.length} more situations</summary>
+            {renderRows(moreRows)}
+          </details>
+        ) : null}
       </nav>
       <details className={`${styles.start} ${styles.startMobile}`}>
         <summary className={styles.startSummary}>

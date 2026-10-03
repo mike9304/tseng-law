@@ -13,36 +13,36 @@
   background: transparent;
   box-shadow: none;
 }
-.body :global(.profile-hero-photo) { border-radius: 0; border-top: 6px solid var(--en-signal); min-height: 420px; }
-.body :global(.profile-hero-body .section-label) { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--en-signal-text); }
-.body :global(.profile-hero-body .section-label)::before { content: ''; position: static; width: 12px; height: 12px; margin: 0; background: var(--en-signal); opacity: 1; }
-.body :global(h2.profile-hero-title) { font-family: var(--en-sans) !important; font-size: clamp(32px, 3.2vw, 44px) !important; font-weight: 800; line-height: 1.1; letter-spacing: -0.028em; color: var(--en-ink); }
-.body :global(.profile-hero-role) { font-weight: 700; color: var(--en-signal-text); }
+.body :global(.profile-hero-photo) { border-radius: 0; border: 1px solid var(--en-line); border-radius: 24px; min-height: 420px; }
+.body :global(.profile-hero-body .section-label) { display: inline-flex; align-items: center; gap: 10px; font-family: var(--en-mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--en-ink); }
+.body :global(.profile-hero-body .section-label)::before { content: ''; position: static; width: 10px; height: 10px; margin: 0; background: var(--en-signal); opacity: 1; }
+.body :global(h2.profile-hero-title) { font-family: var(--en-display) !important; font-size: clamp(32px, 3.2vw, 44px) !important; font-weight: 800; line-height: 1.1; letter-spacing: -0.028em; color: var(--en-ink); }
+.body :global(.profile-hero-role) { font-weight: 700; color: var(--en-ink); }
 .body :global(.profile-hero-body .attorney-card-email) { display: inline-flex; align-items: center; min-height: 44px; }
 .body :global(.profile-summary-list .split-text) { font-size: 17px; line-height: 1.65; color: var(--en-text); }
 .body :global(.profile-summary-list .split-text:first-child) { font-size: 19px; font-weight: 500; color: var(--en-ink); }
-.body :global(.profile-chip) { border: 1.5px solid var(--en-ink); border-radius: 4px; background: #fff; color: var(--en-ink); font-weight: 700; }
-.body :global(.profile-hero-cta) { min-height: 52px; border: 2px solid var(--en-ink); border-radius: 4px; background: var(--en-ink); color: #fff; font-weight: 700; }
+.body :global(.profile-chip) { border: 1.5px solid var(--en-ink); border-radius: 999px; background: #fff; color: var(--en-ink); font-weight: 700; }
+.body :global(.profile-hero-cta) { min-height: 52px; border: 2px solid var(--en-ink); border-radius: 999px; background: var(--en-ink); color: #fff; font-weight: 700; }
 
 /* Proof points: four ruled fact tiles */
-.body :global(.profile-proof-grid) { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0 0 48px; border-top: 3px solid var(--en-ink); counter-reset: en-proof; }
+.body :global(.profile-proof-grid) { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0 0 48px; border-top: 1px solid var(--en-ink); counter-reset: en-proof; }
 .body :global(.profile-proof-card) { padding: 20px 22px 22px 0; border: none; border-right: 1px solid var(--en-line); border-radius: 0; background: transparent; box-shadow: none; counter-increment: en-proof; }
 .body :global(.profile-proof-card + .profile-proof-card) { padding-left: 22px; }
 .body :global(.profile-proof-card:last-child) { border-right: none; }
-.body :global(.profile-proof-card)::before { content: counter(en-proof, decimal-leading-zero); display: block; margin-bottom: 8px; font-size: 14px; font-weight: 800; color: var(--en-signal-text); font-variant-numeric: tabular-nums; }
+.body :global(.profile-proof-card)::before { content: counter(en-proof, decimal-leading-zero); display: block; margin-bottom: 8px; font-size: 14px; font-weight: 800; color: var(--en-ink); font-variant-numeric: tabular-nums; }
 .body :global(.profile-proof-text) { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--en-text); }
 
 /* Info cards */
 .body :global(.profile-card-grid) { gap: 20px; margin-bottom: 20px; }
-.body :global(.profile-info-card) { padding: 22px 24px; border: none; border-top: 4px solid var(--en-ink); border-radius: 0; background: var(--en-mist); box-shadow: none; }
-.body :global(.profile-card-title) { font-family: var(--en-sans) !important; font-size: 20px; font-weight: 800; color: var(--en-ink); }
+.body :global(.profile-info-card) { padding: 22px 24px; border: 1px solid var(--en-line); border-radius: 24px; background: var(--en-mist); box-shadow: none; }
+.body :global(.profile-card-title) { font-family: var(--en-display) !important; font-size: 20px; font-weight: 800; color: var(--en-ink); }
 .body :global(.profile-link-list a) { display: inline-flex; align-items: center; min-height: 40px; color: var(--en-ink); font-weight: 700; }
 .body :global(a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
 
 /* FAQ below the profile */
 .profile :global(#faq),
-.profile :global(.section--gray[data-faq-layout='split']) { background: var(--en-mist); border-top: 3px solid var(--en-ink); }
-.profile :global([data-faq-layout='split'] h2) { font-family: var(--en-sans) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
+.profile :global(.section--gray[data-faq-layout='split']) { background: var(--en-mist); border-top: 1px solid var(--en-ink); }
+.profile :global([data-faq-layout='split'] h2) { font-family: var(--en-display) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
 .profile :global([data-faq-layout='split'] button) { font-family: var(--en-sans); }
 .profile :global([data-faq-layout='split']) :focus-visible { outline: 3px solid var(--en-ink); outline-offset: 2px; }
 

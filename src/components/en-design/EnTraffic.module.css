@@ -1,0 +1,329 @@
+/*
+ * en traffic-accident hub (Opus 5.5 en lane, 2026-10-01): "Night Dispatch" for /en/traffic-accidents.
+ * The hub markup (src/app/[locale]/traffic-accidents/page.tsx + traffic.module.css) is shared with every
+ * locale and stays as it is; only the /en/ route renders inside EnPageShell + `.traffic`, so none of these
+ * rules can reach another locale. The hub's own class names are private to its CSS module, so the rules
+ * follow its fixed structure and ids: the hero is the first section, then #articles and one
+ * aria-labelledby section each for the diagram, the country guides and the contact panel.
+ * Tokens (--en-*) come from EnPage.module.css (.root).
+ */
+
+/* ---------- Page ---------- */
+.traffic > div { padding-bottom: clamp(56px, 7vw, 104px); background: #fff; color: var(--en-text); }
+.traffic > div > section:first-child > div,
+.traffic > div > div {
+  width: min(var(--max-width, 1200px), calc(100% - (var(--page-gutter, 20px) * 2)));
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+.traffic > div p { line-height: 1.6; }
+
+/* ---------- Hero: the en page header (night plate, mono eyebrow, grotesk H1, pill actions) ---------- */
+.traffic > div > section:first-child {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(56px, 7.5vw, 112px) 0 clamp(56px, 7vw, 100px);
+  background:
+    radial-gradient(55% 80% at 86% 24%, rgb(255 198 26 / 14%) 0%, rgb(255 198 26 / 0%) 62%),
+    linear-gradient(90deg, #07090b 0%, rgb(7 9 11 / 94%) 38%, rgb(7 9 11 / 62%) 72%, rgb(7 9 11 / 40%) 100%),
+    url('/images/editorial/en-night-taxi-hero.webp') 72% 64% / cover no-repeat,
+    #07090b;
+  color: #fff;
+}
+/* One signal-yellow rule closes the header, as on the other en inner pages. */
+.traffic > div > section:first-child::after { content: ''; position: absolute; inset: auto 0 0 0; height: 3px; background: var(--en-signal); pointer-events: none; }
+.traffic > div > section:first-child > div > p:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 clamp(18px, 2.4vw, 30px);
+  font-family: var(--en-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 88%);
+}
+.traffic > div > section:first-child > div > p:first-child::before { content: ''; flex: none; width: 10px; height: 10px; background: var(--en-signal); }
+.traffic > div > section:first-child > div > p:first-child::after { content: ''; flex: none; width: 56px; height: 2px; background: var(--en-signal); }
+.traffic > div > section:first-child h1 {
+  max-width: none;
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: clamp(40px, 4.45vw, 68px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.036em;
+  color: #fff;
+  text-shadow: none;
+}
+.traffic > div > section:first-child h1 + p {
+  max-width: 37em;
+  margin: clamp(18px, 2.2vw, 28px) 0 clamp(28px, 3vw, 40px);
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.6;
+  color: #d3d6da;
+}
+.traffic > div > section:first-child h1 + p + div { gap: 12px; }
+.traffic > div > section:first-child h1 + p + div > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-family: var(--en-sans);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: transform 0.3s var(--en-ease), background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.traffic > div > section:first-child h1 + p + div > a:first-child { border: 2px solid var(--en-signal); background: var(--en-signal); color: var(--en-ink); }
+.traffic > div > section:first-child h1 + p + div > a:first-child:hover { border-color: #ffd54d; background: #ffd54d; color: var(--en-ink); }
+.traffic > div > section:first-child h1 + p + div > a:last-child:not(:first-child) { border: 2px solid rgb(255 255 255 / 62%); background: transparent; color: #fff; }
+.traffic > div > section:first-child h1 + p + div > a:last-child:not(:first-child):hover { border-color: #fff; background: #fff; color: var(--en-ink); }
+.traffic > div > section:first-child a:focus-visible { outline: 3px solid var(--en-signal); outline-offset: 3px; }
+
+/* ---------- Section headings ---------- */
+.traffic > div > div h2 {
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: clamp(32px, 3.7vw, 54px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.032em;
+  color: var(--en-ink);
+  text-wrap: balance;
+}
+
+/* ---------- Diagram: title and note side by side, framed loop, caption as a two-column spec ---------- */
+.traffic section[aria-labelledby='visual-title'] { padding-top: clamp(64px, 8vw, 112px); }
+.traffic section[aria-labelledby='visual-title'] > div:first-child {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px clamp(32px, 5vw, 80px);
+  align-items: end;
+  max-width: none;
+}
+.traffic section[aria-labelledby='visual-title'] > div:first-child > p { margin: 0; font-size: clamp(16.5px, 1.3vw, 18px); color: var(--en-muted); }
+.traffic figure[data-traffic-diagram] { margin: clamp(28px, 3.5vw, 44px) 0 0; }
+.traffic figure[data-traffic-diagram] > div:first-child { border: 1px solid var(--en-line); border-radius: 24px; background: var(--en-mist-strong); }
+.traffic figure[data-traffic-diagram] :global(.decorative-autoplay-video__control) {
+  top: 16px;
+  right: 16px;
+  border-color: rgb(255 255 255 / 34%);
+  background: rgb(10 11 13 / 86%);
+  box-shadow: none;
+  color: #fff;
+}
+.traffic figure[data-traffic-diagram] :global(.decorative-autoplay-video__control:hover) { border-color: var(--en-signal); background: var(--en-ink); color: #fff; }
+.traffic figure[data-traffic-diagram] :global(.decorative-autoplay-video__control-icon) { color: var(--en-signal); }
+.traffic figure[data-traffic-diagram] :global(.decorative-autoplay-video__control:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
+.traffic figure[data-traffic-diagram] figcaption {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px clamp(24px, 3vw, 48px);
+  max-width: none;
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--en-muted);
+}
+.traffic figure[data-traffic-diagram] figcaption > strong { grid-column: 1 / -1; font-weight: 600; color: var(--en-ink); }
+.traffic figure[data-traffic-diagram] figcaption > [data-traffic-diagram-assumption] {
+  align-self: start;
+  padding: 12px 16px;
+  border-left: 4px solid var(--en-signal);
+  border-radius: 0 14px 14px 0;
+  background: var(--en-mist);
+  color: var(--en-text);
+}
+
+/* ---------- Articles: a paper band of crisp cards ---------- */
+.traffic :global(#articles) {
+  margin-top: clamp(64px, 8vw, 112px);
+  padding: clamp(56px, 7vw, 96px) 0;
+  background: var(--en-mist);
+  /* Full-bleed band from inside the hub's container; neither property adds scrollable overflow. */
+  box-shadow: 0 0 0 100vmax var(--en-mist);
+  clip-path: inset(0 -100vmax);
+  scroll-margin-top: 120px;
+}
+.traffic :global(#articles) > div:first-child { align-items: end; gap: 16px 24px; margin-bottom: clamp(24px, 3vw, 40px); }
+.traffic :global(#articles) > div:first-child > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 20px;
+  border: 2px solid var(--en-ink);
+  border-radius: 999px;
+  color: var(--en-ink);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.traffic :global(#articles) > div:first-child > a:hover { background: var(--en-ink); color: #fff; }
+.traffic :global(#articles) > div:last-child { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+/* Exactly four articles: 2 x 2 instead of 3 + 1. */
+.traffic :global(#articles) > div:last-child:has(> a:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.traffic :global(#articles) > div:last-child > a {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 2.4vw, 32px) clamp(22px, 2.2vw, 30px) 26px;
+  border: 1px solid var(--en-line);
+  border-radius: 24px;
+  background: #fff;
+  color: var(--en-text);
+  transition: transform 0.5s var(--en-ease), box-shadow 0.4s ease, border-color 0.3s ease;
+}
+.traffic :global(#articles) > div:last-child > a:hover { border-color: var(--en-ink); background: #fff; box-shadow: 0 18px 40px rgb(10 11 13 / 10%); }
+.traffic :global(#articles) > div:last-child > a h3 {
+  margin: 0 0 12px;
+  font-size: clamp(21px, 1.8vw, 25px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.024em;
+  color: var(--en-ink);
+  text-wrap: balance;
+}
+.traffic :global(#articles) > div:last-child > a p { margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: var(--en-muted); }
+.traffic :global(#articles) > div:last-child > a > span {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--en-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--en-signal);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+.traffic :global(#articles) a:focus-visible { outline: 3px solid var(--en-ink); outline-offset: 4px; }
+
+/* ---------- Where the accident happened: four modules, Taiwan (first) in ink ---------- */
+.traffic section[aria-labelledby='countries-title'] { padding-top: clamp(64px, 8vw, 112px); }
+.traffic section[aria-labelledby='countries-title'] > p { max-width: 44em; margin: 16px 0 clamp(28px, 3.5vw, 44px); font-size: clamp(16.5px, 1.3vw, 18px); color: var(--en-muted); }
+.traffic section[aria-labelledby='countries-title'] > div { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.traffic section[aria-labelledby='countries-title'] > div > article {
+  padding: 26px 24px 20px;
+  border: 1px solid var(--en-line);
+  border-radius: 24px;
+  background: #fff;
+}
+.traffic section[aria-labelledby='countries-title'] > div > article:first-child { border-color: var(--en-ink); background: var(--en-ink); color: #fff; }
+.traffic section[aria-labelledby='countries-title'] > div > article h3 { margin: 0; font-size: clamp(22px, 1.8vw, 26px); font-weight: 700; line-height: 1.15; letter-spacing: -0.024em; color: var(--en-ink); }
+.traffic section[aria-labelledby='countries-title'] > div > article:first-child h3 { color: #fff; }
+.traffic section[aria-labelledby='countries-title'] > div > article p { margin: 12px 0 18px; font-size: 15px; line-height: 1.6; color: var(--en-muted); }
+.traffic section[aria-labelledby='countries-title'] > div > article:first-child p { color: #c9ccd1; }
+.traffic section[aria-labelledby='countries-title'] > div > article a {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: auto;
+  color: var(--en-ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: var(--en-signal);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  text-wrap: pretty;
+}
+.traffic section[aria-labelledby='countries-title'] > div > article:first-child a { color: #fff; }
+.traffic section[aria-labelledby='countries-title'] a:focus-visible { outline: 3px solid var(--en-ink); outline-offset: 3px; }
+.traffic section[aria-labelledby='countries-title'] > div > article:first-child a:focus-visible { outline-color: var(--en-signal); }
+
+/* ---------- Contact: an ink panel with the night plate ---------- */
+.traffic section[aria-labelledby='contact-title'] {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  gap: 24px clamp(32px, 5vw, 72px);
+  align-items: end;
+  justify-content: space-between;
+  margin-top: clamp(64px, 8vw, 112px);
+  padding: clamp(32px, 4.6vw, 64px);
+  border-radius: 28px;
+  background:
+    linear-gradient(90deg, #0a0b0d 0%, rgb(10 11 13 / 90%) 52%, rgb(10 11 13 / 52%) 100%),
+    url('/images/editorial/en-night-taxi-hero.webp') 70% 55% / cover no-repeat,
+    var(--en-ink);
+  color: #fff;
+}
+.traffic section[aria-labelledby='contact-title'] h2 { color: #fff; font-size: clamp(30px, 3.4vw, 48px); }
+.traffic section[aria-labelledby='contact-title'] p { max-width: 40em; margin: 16px 0 0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65; color: #d3d6da; }
+.traffic section[aria-labelledby='contact-title'] > a {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 28px;
+  border: 2px solid var(--en-signal);
+  border-radius: 999px;
+  background: var(--en-signal);
+  color: var(--en-ink);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: transform 0.3s var(--en-ease), background-color 0.2s ease, border-color 0.2s ease;
+}
+.traffic section[aria-labelledby='contact-title'] > a:hover { border-color: #ffd54d; background: #ffd54d; color: var(--en-ink); }
+.traffic section[aria-labelledby='contact-title'] a:focus-visible { outline: 3px solid var(--en-signal); outline-offset: 3px; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .traffic section[aria-labelledby='countries-title'] > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 1000px) {
+  .traffic :global(#articles) > div:last-child,
+  .traffic :global(#articles) > div:last-child:has(> a:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Three articles on two columns: the newest takes the full row. */
+  .traffic :global(#articles) > div:last-child:has(> a:nth-child(3):last-child) > a:first-child { grid-column: 1 / -1; }
+  .traffic section[aria-labelledby='visual-title'] > div:first-child { grid-template-columns: minmax(0, 1fr); align-items: start; }
+}
+@media (max-width: 960px) {
+  .traffic section[aria-labelledby='contact-title'] { align-items: flex-start; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 767px) {
+  .traffic > div > section:first-child {
+    padding: 40px 0 44px;
+    background:
+      linear-gradient(180deg, rgb(7 9 11 / 72%) 0%, rgb(7 9 11 / 88%) 46%, #07090b 100%),
+      url('/images/editorial/en-night-taxi-hero-portrait.webp') 50% 30% / cover no-repeat,
+      #07090b;
+  }
+  .traffic > div > section:first-child > div > p:first-child::after { display: none; }
+  .traffic > div > section:first-child h1 { font-size: clamp(32px, 9.4vw, 44px); line-height: 1.04; letter-spacing: -0.034em; }
+  .traffic > div > section:first-child h1 + p { font-size: 16.5px; }
+  .traffic > div > section:first-child h1 + p + div { flex-direction: column; align-items: stretch; }
+  .traffic > div > div h2 { font-size: clamp(28px, 8vw, 36px); }
+  .traffic figure[data-traffic-diagram] > div:first-child { border-radius: 18px; }
+  .traffic figure[data-traffic-diagram] figcaption { grid-template-columns: minmax(0, 1fr); font-size: 14.5px; }
+  .traffic :global(#articles) > div:first-child { flex-direction: column; align-items: flex-start; }
+  .traffic :global(#articles) > div:last-child,
+  .traffic :global(#articles) > div:last-child:has(> a:nth-child(4):last-child),
+  .traffic section[aria-labelledby='countries-title'] > div { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .traffic :global(#articles) > div:last-child > a { padding: 24px 22px 22px; border-radius: 20px; }
+  .traffic section[aria-labelledby='countries-title'] > div > article { border-radius: 20px; }
+  .traffic section[aria-labelledby='contact-title'] { padding: 32px 22px; border-radius: 22px; background: linear-gradient(180deg, #0a0b0d 0%, rgb(10 11 13 / 92%) 60%, rgb(10 11 13 / 78%) 100%), url('/images/editorial/en-night-taxi-hero-portrait.webp') 50% 70% / cover no-repeat, var(--en-ink); }
+  .traffic section[aria-labelledby='contact-title'] > a { align-self: stretch; }
+}
+
+/* Hover lift only when the visitor has not asked for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .traffic > div > section:first-child h1 + p + div > a:first-child:hover,
+  .traffic section[aria-labelledby='contact-title'] > a:hover { transform: translateY(-2px); }
+  .traffic :global(#articles) > div:last-child > a:hover { transform: translateY(-4px); }
+}

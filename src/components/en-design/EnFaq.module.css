@@ -3,10 +3,10 @@
 .faq :global([data-public-faq-explorer='true'] > *) { max-width: 900px; }
 .faq :global([data-public-faq-explorer='true'] > :first-child) { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 24px; align-items: end; max-width: none; margin: 0 0 20px; }
 .faq :global([data-public-faq-explorer='true'] > :first-child label) { display: grid; gap: 8px; font-size: 15px; font-weight: 800; color: var(--en-ink); }
-.faq :global([data-public-faq-explorer='true'] > :first-child input) { min-height: 58px; padding: 0 18px; border: 2px solid var(--en-ink); border-radius: 4px; font-size: 17px; background: #fff; }
+.faq :global([data-public-faq-explorer='true'] > :first-child input) { min-height: 58px; padding: 0 18px; border: 2px solid var(--en-ink); border-radius: 999px; font-size: 17px; background: #fff; }
 .faq :global([data-public-faq-explorer='true'] > :first-child input:focus-visible) { outline: 3px solid var(--en-signal); outline-offset: 2px; }
-.faq :global([data-public-faq-explorer='true'] [role='status']) { min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 4px; background: var(--en-mist); font-size: 15px; font-weight: 700; color: var(--en-ink); }
-.faq :global([data-public-faq-explorer='true'] > [role='group']) { display: flex; flex-wrap: wrap; gap: 0; margin: 0 0 28px; border-bottom: 2px solid var(--en-ink); }
+.faq :global([data-public-faq-explorer='true'] [role='status']) { min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 999px; background: var(--en-mist); font-size: 15px; font-weight: 700; color: var(--en-ink); }
+.faq :global([data-public-faq-explorer='true'] > [role='group']) { display: flex; flex-wrap: wrap; gap: 0; margin: 0 0 28px; border-bottom: 1px solid var(--en-ink); }
 .faq :global([data-public-faq-explorer='true'] > [role='group'] > a) {
   display: inline-flex;
   align-items: center;
@@ -43,10 +43,10 @@
   text-align: left;
   color: var(--en-ink);
 }
-.faq :global([data-public-faq-explorer='true'] h3 button)::before { content: 'Q'; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 4px; background: var(--en-ink); color: #fff; font-size: 15px; font-weight: 800; }
-.faq :global([data-public-faq-explorer='true'] h3 button small) { display: block; margin-bottom: 4px; font-size: 12.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--en-signal-text); }
+.faq :global([data-public-faq-explorer='true'] h3 button)::before { content: 'Q'; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: var(--en-ink); color: #fff; font-size: 15px; font-weight: 800; }
+.faq :global([data-public-faq-explorer='true'] h3 button small) { display: block; margin-bottom: 4px; font-size: 12.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--en-ink); }
 .faq :global([data-public-faq-explorer='true'] h3 button:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 2px; }
-.faq :global([data-public-faq-explorer='true'] [role='region']) { position: relative; margin: 0 0 22px calc(2.4em + 12px); padding: 18px 22px; border-left: 4px solid var(--en-sage); background: var(--en-mist); font-size: 17px; line-height: 1.7; color: var(--en-text); }
+.faq :global([data-public-faq-explorer='true'] [role='region']) { position: relative; margin: 0 0 22px calc(2.4em + 12px); padding: 18px 22px; border-left: 4px solid var(--en-signal); border-radius: 0 16px 16px 0; background: #fff; font-size: 17px; line-height: 1.7; color: var(--en-text); }
 .faq :global([data-public-faq-explorer='true'] [role='region'] p) { margin: 0; font-size: 17px; line-height: 1.7; }
 .faq :global([data-public-faq-explorer='true'] a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 2px; }
 

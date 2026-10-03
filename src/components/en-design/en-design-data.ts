@@ -7,6 +7,13 @@
  * research in the en redesign report (~/tseng-zh-hant-pass2-20261001/locale-en/REPORT.md).
  */
 
+/**
+ * The hero's email button label (HeroSearch `emailConsultationCtaLabels.en`), repeated by the S4 pill with
+ * the same mailto and accessible-name pattern. HeroSearch is a client module, so its constant cannot be read
+ * from these server components; en tests pin both strings together.
+ */
+export const EN_EMAIL_CONSULTATION_CTA = 'Request an Email Consultation';
+
 /** Practice-area order on English pages (service slugs from data/service-details.ts). */
 export const EN_SERVICE_ORDER = ['labor', 'family', 'criminal', 'civil', 'investment', 'ip'] as const;
 

@@ -27333,3 +27333,250 @@ html[dir='rtl'] .guidance-answer {
   visibility: visible;
   transition-delay: 0s;
 }
+
+/* =====================================================================================================
+   en "Clear Night" chrome (en lane, 2026-10-02; CONCEPT-V2 sections 8-10). The en wrapper cannot reach the
+   shared header, footer and portaled overlays, so they are re-skinned here for English only: black bars,
+   one blue action colour (#0066d6) on every email button, blue focus rings (#4ea1ff), Inter Tight display,
+   Inter text, EN Glyphs for typed arrows. Colours, type and sizes only; the shared markup is untouched.
+   ===================================================================================================== */
+@font-face { font-family: 'EN Inter Tight'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-tight-latin-var.woff2') format('woff2'); }
+@font-face { font-family: 'EN Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-latin-wght.woff2') format('woff2'); }
+/* Typed arrows (U+2190, U+2192, U+2197) render as the en chevron drawn from the EnChevron paths (0.4 KB). */
+@font-face { font-family: 'EN Glyphs'; font-display: block; unicode-range: U+2190, U+2192, U+2197; src: url('/fonts/en/en-glyphs.woff2') format('woff2'); }
+/* Metric-matched fallbacks (fontTools, from the files above) so a late swap does not move line breaks. */
+@font-face { font-family: 'EN Inter Tight Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'); font-weight: 100 900; size-adjust: 95.09%; ascent-override: 101.88%; descent-override: 25.37%; line-gap-override: 0%; }
+@font-face { font-family: 'EN Inter Fallback'; src: local('Arial'), local('ArialMT'); font-weight: 100 549; size-adjust: 106.04%; ascent-override: 91.36%; descent-override: 22.75%; line-gap-override: 0%; }
+@font-face { font-family: 'EN Inter Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'); font-weight: 550 900; size-adjust: 101.25%; ascent-override: 95.68%; descent-override: 23.82%; line-gap-override: 0%; }
+
+/* en type: Inter replaces the Latin of Noto Sans KR as the body face (the Korean stack stays behind it for
+   inline CJK terms); no serif anywhere. Pages outside the en wrapper keep their layout and take these faces. */
+.site[data-locale='en'] {
+  --font-body: 'EN Glyphs', 'EN Inter', 'EN Inter Fallback', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading-en: 'EN Glyphs', 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif;
+  --font-display-en: var(--font-heading-en);
+  --en-chrome-action: #0066d6;
+  --en-chrome-action-hover: #0a6ee6;
+  --en-chrome-action-pressed: #005bbf;
+  --en-chrome-focus: #4ea1ff;
+}
+
+/* ---------- Header: black bar, one hairline, blue email pill ---------- */
+.site[data-locale='en'] header.header[data-public-site-header],
+.site[data-locale='en'] header.header[data-public-site-header].scrolled { background: #000; border-bottom-color: rgb(255 255 255 / 10%); color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-utility { background: #000; border-bottom: 1px solid rgb(255 255 255 / 8%); }
+.site[data-locale='en'] header.header[data-public-site-header] .header-main { background: #000; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-accent-line { display: none; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav { min-height: 0; padding-block: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > a,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button { min-height: 36px; color: #a1a1a6; background: transparent; border-color: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a:focus-visible,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button:focus-visible { color: #f5f5f7; background: rgb(255 255 255 / 8%); }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-lang { border-color: transparent; background: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .logo-kr,
+.site[data-locale='en'] header.header[data-public-site-header] [data-header-content-fit-probe] > span:first-child > span:last-child { color: #f5f5f7; font-family: var(--font-heading-en); font-size: 1.0625rem; font-weight: 700; letter-spacing: -0.012em; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-logo { min-height: 44px; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link { position: relative; color: #d2d2d7; font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; letter-spacing: 0; padding-inline: 0.55rem; border-radius: 999px; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-list,
+.site[data-locale='en'] header.header[data-public-site-header] [data-header-content-fit-probe] > span:nth-child(2) { gap: 0.1rem; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link:focus-visible,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-item.active .nav-link { color: #fff; background: rgb(255 255 255 / 8%); }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page'],
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']:focus-visible { box-shadow: none; color: #fff; }
+/* current page: a 2px white underline (never a second accent colour) */
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']::after { content: ''; position: absolute; left: 0.55rem; right: 0.55rem; bottom: 7px; height: 2px; border-radius: 2px; background: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-indicator { background: rgb(255 255 255 / 60%); }
+.site[data-locale='en'] header.header[data-public-site-header] .header-search-btn,
+.site[data-locale='en'] header.header[data-public-site-header] .icon-button { border-color: transparent; background: transparent; color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-search-btn:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .icon-button:hover { background: rgb(255 255 255 / 12%); }
+.site[data-locale='en'] .header .nav-cta.button {
+  border-radius: 999px;
+  padding-inline: 1.2rem;
+  min-height: 44px;
+  background: var(--en-chrome-action);
+  border-color: var(--en-chrome-action);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  box-shadow: none;
+  transition: background-color 100ms cubic-bezier(0, 0, 0.5, 1), border-color 100ms cubic-bezier(0, 0, 0.5, 1);
+}
+.site[data-locale='en'] .header .nav-cta.button:hover { background: var(--en-chrome-action-hover); border-color: var(--en-chrome-action-hover); color: #fff; }
+.site[data-locale='en'] .header .nav-cta.button:active { background: var(--en-chrome-action-pressed); border-color: var(--en-chrome-action-pressed); }
+.site[data-locale='en'] .header .nav-cta.button:focus-visible { background: var(--en-chrome-action); border-color: var(--en-chrome-action); color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] :focus-visible { outline: 3px solid var(--en-chrome-focus); outline-offset: 3px; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-menu { background: transparent; border-bottom: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-panel { background: #08090b; border-bottom: 1px solid rgb(255 255 255 / 10%); color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-title { font-family: var(--font-heading-en); font-weight: 700; letter-spacing: -0.026em; color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-description { color: #a1a1a6; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links li { border-color: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a { color: #d2d2d7; font-family: var(--font-body); font-weight: 500; letter-spacing: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:focus-visible { color: #fff; background: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-chevron { color: #86868b; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover .mega-chevron,
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:focus-visible .mega-chevron { color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-view-all { color: #fff; font-weight: 600; }
+
+/* Narrowest phones (320 px): the seal, the two-line name and both icon buttons share one 64 px row instead of
+   wrapping the buttons onto a second row (the header measured 113 px at 320 px). The shared module wraps them
+   with a seven-class selector, so these en-only rules repeat classes to outrank it without !important. */
+@media (max-width: 359px) {
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main > .header-main-inner.header-main-inner { flex-wrap: nowrap; align-items: center; column-gap: 8px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-logo.header-logo { flex: 1 1 auto; width: auto; min-width: 0; gap: 8px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-actions.header-actions { flex: none; width: auto; gap: 0; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-mark.logo-mark { width: 36px; height: 36px; flex: none; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-mark.logo-mark img { width: 36px; height: 36px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-kr.logo-kr { font-size: 13.5px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-actions.header-actions > button { width: 44px; min-width: 44px; height: 44px; min-height: 44px; }
+}
+
+/* ---------- Footer: black, grey links that turn white, sentence-case titles, 44 px targets ---------- */
+.site[data-locale='en'] .footer-skyline { display: none; }
+.site[data-locale='en'] footer.site-footer { background: #000; color: #f5f5f7; border-top: 1px solid rgb(255 255 255 / 10%); }
+.site[data-locale='en'] footer.site-footer .footer-offices,
+.site[data-locale='en'] footer.site-footer .footer-main,
+.site[data-locale='en'] footer.site-footer .footer-copyright-row,
+.site[data-locale='en'] footer.site-footer .footer-bottom-bar { border-color: rgb(255 255 255 / 10%); background: transparent; }
+.site[data-locale='en'] footer.site-footer .footer-link-title { text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-size: 14px; font-weight: 600; color: #86868b; }
+.site[data-locale='en'] footer.site-footer .footer-link-list a,
+.site[data-locale='en'] footer.site-footer .footer-legal-links a,
+.site[data-locale='en'] footer.site-footer .office-link { display: inline-flex; align-items: center; min-height: 44px; color: #a1a1a6; font-size: 17px; text-decoration: none; }
+.site[data-locale='en'] footer.site-footer .office-link { display: grid; font-size: 14px; }
+.site[data-locale='en'] footer.site-footer .footer-legal-links a { font-size: 14px; }
+.site[data-locale='en'] footer.site-footer .office-link-name { color: #d2d2d7; font-size: 17px; font-weight: 600; }
+.site[data-locale='en'] footer.site-footer .office-link-address { color: #86868b; font-size: 14px; }
+.site[data-locale='en'] footer.site-footer .office-label { color: #86868b; font-size: 14px; font-weight: 600; }
+.site[data-locale='en'] footer.site-footer .office-link + .office-link::before { background: rgb(255 255 255 / 12%); }
+.site[data-locale='en'] footer.site-footer .footer-link-list a:hover,
+.site[data-locale='en'] footer.site-footer .footer-link-list a:focus-visible,
+.site[data-locale='en'] footer.site-footer .footer-legal-links a:hover,
+.site[data-locale='en'] footer.site-footer .footer-legal-links a:focus-visible { color: #fff; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.site[data-locale='en'] footer.site-footer .office-link:hover .office-link-name,
+.site[data-locale='en'] footer.site-footer .office-link:focus-visible .office-link-name { color: #fff; }
+.site[data-locale='en'] footer.site-footer .footer-main-brand { font-family: var(--font-heading-en); font-weight: 700; letter-spacing: -0.022em; color: #f5f5f7; }
+.site[data-locale='en'] footer.site-footer .footer-main-intro,
+.site[data-locale='en'] footer.site-footer .footer-main-note,
+.site[data-locale='en'] footer.site-footer .footer-copyright-row { color: #86868b; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-label { color: #86868b; font-size: 14px; letter-spacing: 0; text-transform: none; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-link { color: #f5f5f7; font-size: 19px; font-weight: 600; text-decoration: none; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-link:hover,
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-link:focus-visible { color: #fff; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-copy { min-height: 44px; padding-inline: 18px; border: 0; border-radius: 999px; background: rgb(255 255 255 / 12%); color: #fff; font-size: 16px; font-weight: 600; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-copy:hover { background: rgb(255 255 255 / 18%); }
+.site[data-locale='en'] footer.site-footer .social-icon { width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgb(255 255 255 / 12%); color: #fff; }
+.site[data-locale='en'] footer.site-footer .social-icon:hover,
+.site[data-locale='en'] footer.site-footer .social-icon:focus-visible { background: rgb(255 255 255 / 20%); color: #fff; }
+.site[data-locale='en'] footer.site-footer .social-label { color: #86868b; }
+.site[data-locale='en'] footer.site-footer :focus-visible { outline: 3px solid var(--en-chrome-focus); outline-offset: 3px; }
+/* Back to top: a 44 px white-on-black circle in the right gutter, clear of the 1200 px content column. */
+.site[data-locale='en'] .scroll-top {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 50%;
+  background: rgb(0 0 0 / 78%);
+  color: #f5f5f7;
+  font-family: var(--font-body);
+  font-size: 17px;
+  box-shadow: none;
+}
+.site[data-locale='en'] .scroll-top:hover,
+.site[data-locale='en'] .scroll-top:focus-visible { background: #1c1d21; border-color: rgb(255 255 255 / 40%); color: #fff; box-shadow: none; }
+.site[data-locale='en'] .scroll-top:focus-visible { outline: 3px solid var(--en-chrome-focus); outline-offset: 3px; }
+@media (min-width: 1360px) {
+  .site[data-locale='en'] .scroll-top { right: max(16px, calc((100vw - 1200px) / 2 - 76px)); }
+}
+
+/* =====================================================================================================
+   en overlays: the mobile sheet, the search modal and the language picker are portaled to <body> (outside
+   .site), so they are scoped by html[lang='en']. Night panel, Inter faces, blue primary actions and focus.
+   ===================================================================================================== */
+html[lang='en'] :is(#public-mobile-nav-drawer, .search-panel, [class*='GlobalLanguagePicker_panel']) {
+  font-family: 'EN Glyphs', 'EN Inter', 'EN Inter Fallback', var(--font-body);
+}
+/* mobile sheet */
+html[lang='en'] #public-mobile-nav-drawer { background: rgb(0 0 0 / 62%); }
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-panel.drawer-panel { background: #000; color: #f5f5f7; border-left: 1px solid rgb(255 255 255 / 10%); }
+html[lang='en'] #public-mobile-nav-drawer .drawer-header,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link { border-color: rgb(255 255 255 / 10%); }
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-brand .logo-kr.logo-kr,
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-brand .logo-kr.logo-kr span { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.012em; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.022em; font-size: clamp(1.45rem, 6.4vw, 1.85rem); }
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link:focus-visible { color: #fff; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+html[lang='en'] #public-mobile-nav-drawer .icon-button,
+html[lang='en'] #public-mobile-nav-drawer .chip,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav a,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav button { background: rgb(255 255 255 / 12%); border-color: transparent; color: #f5f5f7; border-radius: 999px; }
+html[lang='en'] #public-mobile-nav-drawer .icon-button:hover,
+html[lang='en'] #public-mobile-nav-drawer .chip:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav a:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav button:hover { background: rgb(255 255 255 / 20%); color: #fff; border-color: transparent; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button { background: #0066d6; border-color: #0066d6; color: #fff; font-weight: 600; border-radius: 999px; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button:hover { background: #0a6ee6; border-color: #0a6ee6; color: #fff; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button:active { background: #005bbf; border-color: #005bbf; }
+html[lang='en'] #public-mobile-nav-drawer :focus-visible { outline: 3px solid #4ea1ff; outline-offset: 3px; }
+
+/* search modal */
+html[lang='en'] .search-overlay { background: rgb(0 0 0 / 66%); }
+html[lang='en'] .search-panel { background: #08090b; color: #f5f5f7; border: 1px solid rgb(255 255 255 / 10%); border-radius: 28px; box-shadow: 0 30px 80px rgb(0 0 0 / 55%); }
+html[lang='en'] .search-panel header strong { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.02em; font-size: 1.3rem; }
+html[lang='en'] .search-panel .icon-button { background: rgb(255 255 255 / 12%); border: 0; border-radius: 999px; color: #f5f5f7; }
+html[lang='en'] .search-panel .icon-button:hover { background: rgb(255 255 255 / 20%); }
+html[lang='en'] .search-panel .search-bar { grid-template-columns: minmax(0, 1fr) auto; background: rgb(20 20 22 / 82%); border: 1px solid rgb(255 255 255 / 24%); border-radius: 32px; box-shadow: none; }
+html[lang='en'] .search-panel .search-bar:focus-within { border-color: #4ea1ff; box-shadow: 0 0 0 3px rgb(78 161 255 / 28%); }
+html[lang='en'] .search-panel .search-input { width: 100%; min-width: 0; color: #f5f5f7; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+/* the pill around the field shows focus (blue border and ring), so the field itself draws no second ring */
+html[lang='en'] .search-panel .search-bar:focus-within .search-input:focus-visible { outline: none; box-shadow: none; }
+html[lang='en'] .search-panel .search-input::placeholder { color: #a1a1a6; }
+html[lang='en'] .search-panel .search-submit { min-height: 44px; background: #0066d6; color: #fff; border-radius: 999px; font-weight: 600; padding-inline: 1.25rem; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
+html[lang='en'] .search-panel .search-submit:hover { background: #0a6ee6; color: #fff; }
+html[lang='en'] .search-panel .search-tabs button,
+html[lang='en'] .search-panel .search-tabs a { background: transparent; border-color: transparent; color: #a1a1a6; }
+html[lang='en'] .search-panel .search-tabs .active { background: transparent; border-color: transparent; color: #fff; font-weight: 600; box-shadow: inset 0 -2px 0 #f5f5f7; border-radius: 0; }
+html[lang='en'] .search-panel .search-tabs button:hover,
+html[lang='en'] .search-panel .search-tabs button:focus-visible { color: #fff; }
+html[lang='en'] .search-panel .chip { background: rgb(255 255 255 / 12%); border-color: transparent; color: #f5f5f7; border-radius: 999px; }
+html[lang='en'] .search-panel .chip:hover,
+html[lang='en'] .search-panel .chip:focus-visible { background: rgb(255 255 255 / 20%); border-color: transparent; color: #fff; }
+html[lang='en'] .search-panel .section-label { color: #86868b; letter-spacing: 0; text-transform: none; }
+html[lang='en'] .search-panel .section-label::before { display: none; }
+html[lang='en'] .search-panel .search-result { color: #f5f5f7; border-color: rgb(255 255 255 / 10%); }
+html[lang='en'] .search-panel .search-result-meta,
+html[lang='en'] .search-panel .search-empty { color: #a1a1a6; }
+html[lang='en'] .search-panel :focus-visible { outline: 3px solid #4ea1ff; outline-offset: 3px; }
+
+/* language picker (CSS module classes, matched by their stable file-name prefix) */
+html[lang='en'] [class*='GlobalLanguagePicker_overlay'] { background: rgb(0 0 0 / 70%); }
+html[lang='en'] [class*='GlobalLanguagePicker_panel'] { background: #08090b; color: #f5f5f7; border: 1px solid rgb(255 255 255 / 10%); border-radius: 28px; box-shadow: 0 30px 80px rgb(0 0 0 / 55%); }
+html[lang='en'] [class*='GlobalLanguagePicker_title'] { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.026em; }
+html[lang='en'] [class*='GlobalLanguagePicker_close'] { color: #f5f5f7; border: 0; background: rgb(255 255 255 / 12%); border-radius: 999px; }
+html[lang='en'] [class*='GlobalLanguagePicker_close']:hover,
+html[lang='en'] [class*='GlobalLanguagePicker_close']:focus-visible { background: rgb(255 255 255 / 20%); }
+html[lang='en'] [class*='GlobalLanguagePicker_regionTitle'] { color: #86868b; font-family: 'EN Inter', 'EN Inter Fallback', var(--font-body), system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+html[lang='en'] [class*='GlobalLanguagePicker_item']:hover,
+html[lang='en'] [class*='GlobalLanguagePicker_item']:focus-visible { background: rgb(255 255 255 / 8%); }
+html[lang='en'] [class*='GlobalLanguagePicker_item'][aria-current='page'] { background: rgb(255 255 255 / 12%); box-shadow: none; }
+/* RTL languages (Urdu, Arabic, Persian, Hebrew) sit at the start of their cell like every other language; the label text itself keeps rtl. */
+html[lang='en'] [class*='GlobalLanguagePicker_item'][dir='rtl'] { direction: ltr; text-align: left; }
+html[lang='en'] [class*='GlobalLanguagePicker_item'][dir='rtl'] [class*='GlobalLanguagePicker_autonym'] { direction: rtl; unicode-bidi: isolate; justify-self: start; }
+html[lang='en'] [class*='GlobalLanguagePicker_autonym'] { color: #f5f5f7; flex-wrap: wrap; }
+html[lang='en'] [class*='GlobalLanguagePicker_englishName'] { color: #a1a1a6; }
+html[lang='en'] [class*='GlobalLanguagePicker_notice'] { color: #a1a1a6; }
+html[lang='en'] [class*='GlobalLanguagePicker_badge'] { background: rgb(255 255 255 / 14%); color: #f5f5f7; margin-inline-start: 0; }
+html[lang='en'] [class*='GlobalLanguagePicker_panel'] :focus-visible { outline: 3px solid #4ea1ff; outline-offset: 3px; }
+html[lang='en'] .search-panel .icon-button,
+html[lang='en'] .search-panel .search-tabs button,
+html[lang='en'] .search-panel .search-tabs a,
+html[lang='en'] .search-panel .chip { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }

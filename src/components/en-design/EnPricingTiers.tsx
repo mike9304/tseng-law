@@ -17,6 +17,18 @@ import styles from './EnPricing.module.css';
 /** Quote flow labels: restate the litigation note and the disclaimer ("in writing after the initial consultation"). */
 const QUOTE_STEPS = ['Book a consultation', 'Case review', 'Written quote'] as const;
 
+/** "NT$ 50,000" becomes a small mono currency prefix on the number's baseline; a text price ("Request a Quote") stays a smaller title. */
+function PriceAmount({ price }: { price: string }) {
+  const match = /^(NT\$)\s*(\d[\d,]*)$/.exec(price.trim());
+  if (!match) return <span className={`${styles.amount} ${styles.amountText}`}>{price}</span>;
+  return (
+    <span className={styles.amount}>
+      <span className={styles.cur}>{match[1]}</span>{' '}
+      <span className={styles.num}>{match[2]}</span>
+    </span>
+  );
+}
+
 export default function EnPricingTiers({ data }: { data: PricingContent }) {
   const mailto = getConsultationPublicMailto('en');
   return (
@@ -30,15 +42,17 @@ export default function EnPricingTiers({ data }: { data: PricingContent }) {
                 <span className={styles.tierIcon} aria-hidden><PricingIcon name={item.icon} /></span>
                 <h2 className={styles.tierTitle}>{item.title}</h2>
                 <p className={styles.tierPrice}>
-                  <span className={styles.amount}>{item.price}</span>
+                  <PriceAmount price={item.price} />
                   {item.unit ? <span className={styles.unit}>{item.unit}</span> : null}
                 </p>
               </header>
-              <ul className={styles.details}>
-                {item.details.map((detail) => <li key={detail}>{detail}</li>)}
-              </ul>
-              {item.note ? <p className={styles.note}>{item.note}</p> : null}
-              {item.icon === 'retainer' ? <div className={styles.advisory}><CorporateAdvisoryLink locale="en" /></div> : null}
+              <div className={styles.tierBody}>
+                <ul className={styles.details}>
+                  {item.details.map((detail) => <li key={detail}>{detail}</li>)}
+                </ul>
+                {item.note ? <p className={styles.note}>{item.note}</p> : null}
+                {item.icon === 'retainer' ? <div className={styles.advisory}><CorporateAdvisoryLink locale="en" /></div> : null}
+              </div>
             </article>
           ))}
         </div>

@@ -14,7 +14,7 @@ import styles from './EnPage.module.css';
  */
 export default function EnPageShell({ page, children }: { page: string; children: ReactNode }) {
   return (
-    <div className={styles.root} id={`en-${page}`} data-en-design={page}>
+    <div className={`${styles.root}`} id={`en-${page}`} data-en-design={page}>
       {children}
     </div>
   );

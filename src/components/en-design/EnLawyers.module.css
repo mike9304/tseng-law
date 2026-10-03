@@ -1,11 +1,18 @@
 /* en team page (Opus 5.5 en lane, 2026-10-01). Team cards: EnAbout.module.css (.team). */
 .lawyers :global(.attorney-team-section) { border-top: none; padding-top: 56px; }
-.lawyers :global(.attorney-facts-section) { padding: 72px 0 88px; background: #fff; border-top: 3px solid var(--en-ink); }
-.lawyers :global(.attorney-facts-section .section-title) { font-family: var(--en-sans) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; color: var(--en-ink); }
+.lawyers :global(.attorney-facts-section) { padding: 72px 0 88px; background: #fff; border-top: 1px solid var(--en-ink); }
+.lawyers :global(.attorney-facts-section .section-title) { font-family: var(--en-display) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; color: var(--en-ink); }
 .lawyers :global(.attorney-facts-section .attorney-card-section) { display: grid; grid-template-columns: minmax(10em, 0.35fr) minmax(0, 1fr); gap: 6px 32px; padding: 18px 0; border-top: 1px solid var(--en-line); }
 .lawyers :global(.attorney-facts-section .attorney-card-section p) { margin: 0; font-size: 16.5px; line-height: 1.65; color: var(--en-text); }
 @media (max-width: 767px) {
   .lawyers :global(.attorney-team-section) { padding-top: 40px; }
   .lawyers :global(.attorney-facts-section) { padding: 48px 0 56px; }
   .lawyers :global(.attorney-facts-section .attorney-card-section) { grid-template-columns: minmax(0, 1fr); }
+}
+/* Three staff cards share one row at wide sizes (no lone card with an empty half-row). */
+@media (min-width: 1200px) {
+  .lawyers :global(.attorney-staff-grid) { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .lawyers :global(.attorney-staff-grid .attorney-card--sub) { align-content: start; }
+  .lawyers :global(.attorney-staff-grid .attorney-card--sub [class*='identity']) { grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
+  .lawyers :global(.attorney-staff-grid .attorney-card--sub .attorney-card-photo--sub) { width: 112px; height: 140px; }
 }

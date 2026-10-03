@@ -148,6 +148,9 @@
   scrollbar-width: none;
 }
 .localNavList::-webkit-scrollbar { display: none; }
+.localNavList[data-overflow='true'] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); padding-right: 40px; }
+/* The wrapper's `p { text-wrap: pretty }` would reset the wrap mode, so the title states nowrap again. */
+.v2.v2[data-en-design][id] .localNavTitle { flex: none; text-wrap: nowrap; white-space: nowrap; }
 .localNavList li { flex: none; scroll-snap-align: start; }
 .localNavLink {
   position: relative;

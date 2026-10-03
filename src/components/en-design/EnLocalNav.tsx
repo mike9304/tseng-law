@@ -14,13 +14,35 @@ export default function EnLocalNav({
   title,
   items,
   label = 'On this page',
+  hideMissing = false,
 }: {
   title: string;
   items: readonly EnLocalNavItem[];
   label?: string;
+  /** Drop anchors whose target is not on the page after mount (sections a client list renders conditionally). */
+  hideMissing?: boolean;
 }) {
   const [active, setActive] = useState<string | null>(null);
+  const [present, setPresent] = useState<ReadonlySet<string> | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (!hideMissing) return;
+    setPresent(new Set(items.filter((item) => document.getElementById(item.href.slice(1))).map((item) => item.href)));
+  }, [hideMissing, items]);
+  const shown = present ? items.filter((item) => present.has(item.href)) : items;
+  const [overflowing, setOverflowing] = useState(false);
+
+  // Fade the trailing edge only when the anchors do not fit (they scroll sideways, never wrap).
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list || typeof ResizeObserver === 'undefined') return undefined;
+    const measure = () => setOverflowing(list.scrollWidth > list.clientWidth + 1);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(list);
+    return () => observer.disconnect();
+  }, [shown.length]);
 
   useEffect(() => {
     if (typeof IntersectionObserver === 'undefined') return undefined;
@@ -53,9 +75,9 @@ export default function EnLocalNav({
   return (
     <nav className={v2.localNav} aria-label={label} data-en-local-nav>
       <div className={`container ${v2.localNavInner}`}>
-        <p className={v2.localNavTitle}>{title}</p>
-        <ul className={v2.localNavList} ref={listRef}>
-          {items.map((item) => (
+        {title ? <p className={v2.localNavTitle}>{title}</p> : null}
+        <ul className={v2.localNavList} ref={listRef} data-overflow={overflowing ? 'true' : undefined}>
+          {shown.map((item) => (
             <li key={item.href}>
               <a href={item.href} className={v2.localNavLink} aria-current={active === item.href ? 'true' : undefined}>
                 {item.label}

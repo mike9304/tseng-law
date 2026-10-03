@@ -2,6 +2,9 @@ import type { FAQItem } from '@/data/faq-content';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import JaHero from './JaHero';
 import JaSukashi from './JaSukashi';
+import JaLightField from './JaLightField';
+import JaNeeds from './JaNeeds';
+import JaNumbers from './JaNumbers';
 import JaMotion from './JaMotion';
 import k from './JaKou.module.css';
 
@@ -30,6 +33,10 @@ export default function JaHomeBody({ posts, faqItems }: { posts: readonly JaHome
       <link rel="preload" href="/fonts/ja-kou-display.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <JaHero />
       <JaSukashi />
+      <JaLightField>
+        <JaNeeds />
+        <JaNumbers />
+      </JaLightField>
       <JaMotion rootId="ja-home" />
     </JaPageShell>
   );

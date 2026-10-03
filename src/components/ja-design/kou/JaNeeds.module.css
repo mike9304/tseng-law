@@ -72,6 +72,8 @@
 .t5 { grid-column: 5 / span 4; grid-row: 3; }
 .t6 { grid-column: 9 / span 4; grid-row: 3; }
 .t7 { grid-column: 1 / -1; grid-row: 4; }
+/* The personal-paths tile sits after the entry section and the search (WO-G6 keeps the six hub links alone). */
+.personalBlock { margin-top: var(--ja-gap); }
 .tile {
   flex: 1;
   display: flex;

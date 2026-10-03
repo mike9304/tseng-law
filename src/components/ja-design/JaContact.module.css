@@ -1,69 +1,60 @@
 /*
- * ja contact (Opus 5.5 ja lane, 2026-10-01). Same six blocks and copy; the email actions sit
- * beside the title, the form gets a framed お問い合わせフォーム panel, the guide reads as
- * three numbered columns and the contact blocks as ruled panels on paper.
+ * ja contact, 昊 V2 (2026-10-02; CONCEPT-V2 §9). Same six blocks and copy, no pin. The email address is the
+ * header's hero element (sans 600 at display size, set so it never breaks inside the address), with the existing
+ * pill and copy action; the dusk band follows. The form sits on a white tile over warm paper, the guide reads as
+ * three tiles, the email band and the contact blocks as tiles, and the offices keep their tabs and Tel lines.
  */
-.root:global(#ja-contact) { display: flex; flex-direction: column; }
 
-/* Header email actions: white card on the right of the paper header */
+/* ---------- Header: the email address at display size ---------- */
+.root:global(#ja-contact) :global(.page-header.page-header--with-content > .container) { grid-template-columns: minmax(0, 1fr); }
 .root:global(#ja-contact) :global(.page-header [data-page-header-slot='children']) {
-  align-self: start; background: #fff; border: 1px solid var(--ja-line); border-top: 2px solid var(--ja-ink); padding: 26px 28px;
+  grid-column: 1; grid-row: 2; align-self: start; margin-top: clamp(32px, 4vw, 56px); padding: 0; border: 0; background: none;
 }
-.root:global(#ja-contact) :global(.contact-email-actions) { max-width: none; margin: 0; }
-.root:global(#ja-contact) :global(.contact-email-actions__label) { font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--ja-gold-text); }
-.root:global(#ja-contact) :global(.contact-email-actions__address) { font-size: clamp(19px, 1.8vw, 22px); font-weight: 700; letter-spacing: 0.04em; color: var(--ja-green); overflow-wrap: anywhere; }
-.root:global(#ja-contact) :global(.contact-email-actions p) { line-height: 1.85; }
-.root:global(#ja-contact) :global(.contact-email-actions .contact-email-actions__row) { grid-template-columns: minmax(0, 1fr); gap: 10px; }
-.root:global(#ja-contact) :global(.contact-email-actions .contact-email-actions__row .button) { border-radius: 999px; width: 100%; }
-
-/* Form: framed panel */
-.root:global(#ja-contact) > :global(section.section:nth-child(2)) { background: #fff; padding: clamp(48px, 5vw, 80px) 0; }
-.root:global(#ja-contact) > :global(section.section:nth-child(2) > .container > form) {
-  max-width: 920px; margin-inline: auto; padding: clamp(24px, 3vw, 44px); background: var(--ja-paper); border: 1px solid var(--ja-line); border-top: 2px solid var(--ja-ink);
+.root:global(#ja-contact) :global(.contact-email-actions) { max-width: none; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; }
+.root:global(#ja-contact) :global(.contact-email-actions__label) { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: 0.04em; color: var(--ja-grey); }
+.root:global(#ja-contact) :global(.contact-email-actions__address) {
+  margin: 8px 0 0;
+  font-family: var(--ja-gothic);
+  font-size: clamp(24px, 4.4vw, 64px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0;
+  color: var(--ja-ink);
+  white-space: nowrap;
 }
-.root:global(#ja-contact) > :global(section.section:nth-child(2) form h2) { font-size: clamp(22px, 2vw, 26px); letter-spacing: 0.1em; color: var(--ja-ink); }
-.root:global(#ja-contact) > :global(section.section:nth-child(2) form label) { letter-spacing: 0.08em; }
-.root:global(#ja-contact) > :global(section.section:nth-child(2) form :is(input:not([type='checkbox']), select, textarea)) { border-radius: 0; border-color: var(--ja-line-strong); background: #fff; }
-.root:global(#ja-contact) > :global(section.section:nth-child(2) form button[type='submit']) { border-radius: 999px; letter-spacing: 0.12em; min-height: 52px; }
-
-/* Guide: three numbered columns */
-.root:global(#ja-contact) :global(.consultation-guide-section) { background: var(--ja-paper); }
-.root:global(#ja-contact) :global(.consultation-guide-section .contact-grid) { counter-reset: ja-guide; gap: 0; border-top: 1px solid var(--ja-line-strong); border-bottom: 1px solid var(--ja-line-strong); }
-.root:global(#ja-contact) :global(.consultation-guide-section .legal-card) {
-  counter-increment: ja-guide; position: relative; padding: 28px 28px 28px; background: transparent; border: 0;
+.root:global(#ja-contact) :global(.contact-email-actions .contact-email-actions__row) {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin-top: clamp(20px, 2.4vw, 32px);
 }
-.root:global(#ja-contact) :global(.consultation-guide-section .legal-card + .legal-card) { border-left: 1px solid var(--ja-line); }
-.root:global(#ja-contact) :global(.consultation-guide-section .legal-card .card-title)::before {
-  content: counter(ja-guide, decimal-leading-zero); display: block; margin-bottom: 10px;
-  font-family: var(--ja-mincho); font-size: 20px; font-weight: 400; letter-spacing: 0.08em; color: var(--ja-shu);
+.root:global(#ja-contact) :global(.contact-email-actions .contact-email-actions__row .button) { width: auto; }
+.root:global(#ja-contact) :global(.contact-email-actions__note) { max-width: 40em; margin: 12px 0 0; font-size: 17px; line-height: 1.85; color: var(--ja-text); }
+.root:global(#ja-contact) :global(.contact-email-actions [role='status']:empty) { display: none; }
+
+/* ---------- Form on a white tile ---------- */
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2)) { background: var(--ja-stage-warm); }
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) > .container > form) {
+  max-width: 920px;
+  margin-inline: auto;
+  padding: var(--ja-pad);
+  border: 0;
+  border-radius: var(--ja-r);
+  background: #fff;
 }
-.root:global(#ja-contact) :global(.consultation-guide-section .card-title) { font-size: 18px; font-weight: 700; letter-spacing: 0.08em; }
-
-/* Email consultation band */
-.root:global(#ja-contact) :global(.messenger-chat-section) { background: #fff; }
-.root:global(#ja-contact) :global(.messenger-card) { border-radius: 0; border: 1px solid var(--ja-line); border-left: 4px solid var(--ja-green); box-shadow: none; }
-.root:global(#ja-contact) :global(.messenger-features) { border-radius: 0; }
-
-/* Contact blocks */
-.root:global(#ja-contact) :global(.reveal > section.section:not(.consultation-guide-section)) { background: var(--ja-paper); }
-.root:global(#ja-contact) :global(.contact-grid .card:not(.legal-card)) { padding: 24px 26px; border-top: 2px solid var(--ja-green); }
-.root:global(#ja-contact) :global(.contact-grid .card-title) { font-size: 17px; font-weight: 700; letter-spacing: 0.08em; color: var(--ja-ink); }
-
-/* Offices */
-.root:global(#ja-contact) :global(#offices .tab-button) { border-radius: 0; letter-spacing: 0.08em; min-height: 48px; }
-.root:global(#ja-contact) :global(#offices .office-card) { border-top: 2px solid var(--ja-ink); }
-
-@media (max-width: 1000px) {
-  .root:global(#ja-contact) :global(.page-header.page-header--with-content > .container) { grid-template-columns: 44px minmax(0, 1fr); }
-  .root:global(#ja-contact) :global(.page-header [data-page-header-slot='children']) { grid-column: 2; grid-row: auto; margin-top: 28px; }
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) form h2) {
+  margin: 0 0 12px; font-size: clamp(26px, 2.6vw, 36px); font-weight: 700; letter-spacing: 0.02em; color: var(--ja-ink);
 }
-@media (max-width: 767px) {
-  .root:global(#ja-contact) :global(.page-header.page-header--with-content > .container) { grid-template-columns: minmax(0, 1fr); }
-  .root:global(#ja-contact) :global(.page-header [data-page-header-slot='children']) { grid-column: 1; padding: 22px 18px; }
-  .root:global(#ja-contact) :global(.consultation-guide-section .legal-card) { padding: 24px 4px; }
-  .root:global(#ja-contact) :global(.consultation-guide-section .legal-card + .legal-card) { border-left: 0; border-top: 1px solid var(--ja-line); }
-  .root:global(#ja-contact) > :global(section.section:nth-child(2) > .container > form) { padding: 22px 16px; }
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) form label) { font-size: 17px; font-weight: 600; letter-spacing: 0.02em; color: var(--ja-ink); }
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) form :is(input:not([type='checkbox']), select)) {
+  min-height: 52px; border: 1px solid var(--ja-line-strong); border-radius: 14px; background: #fff; font-size: 17px;
 }
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) form textarea) { border: 1px solid var(--ja-line-strong); border-radius: 14px; background: #fff; font-size: 17px; }
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) form :is(input, select, textarea):focus-visible) { border-color: var(--ja-ink); }
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) form button[type='submit']) {
+  min-height: 56px; padding-inline: 32px; border: 0; border-radius: 999px; background: var(--ja-shu); color: #fff; font-size: 17px; font-weight: 700;
+}
+@media (hover: hover) {
+  .root:global(#ja-contact) > :global(section.section:nth-of-type(2) form button[type='submit']:hover) { background: var(--ja-shu-hover); }
+}
+.root:global(#ja-contact) > :global(section.section:nth-of-type(2) form aside) { border: 0; border-radius: 20px; background: var(--ja-tile); }
 
 /* Consent checkbox: the row is 44px tall and the label reaches over the box, so the box has a 44px target
    (the form markup keeps the input beside its label, not inside it). */
@@ -71,13 +62,51 @@
 .root:global(#ja-contact) :global([class*='_consentRow'] input[type='checkbox']) { width: 24px; height: 24px; margin: 0; accent-color: var(--ja-ink); }
 .root:global(#ja-contact) :global([class*='_consentLabel'])::before { content: ''; position: absolute; left: -10px; top: 0; width: 46px; height: 100%; }
 
-/* Map placeholder in sumi and one vermilion pin (the shared facade is green) */
+/* ---------- ご相談前の確認事項: three tiles ---------- */
+.root:global(#ja-contact) :global(.consultation-guide-section.section) { background: var(--ja-stage); }
+@media (min-width: 1024px) {
+  .root:global(#ja-contact) :global(.consultation-guide-section .contact-grid) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.root:global(#ja-contact) :global(.consultation-guide-section .legal-card .card-title)::before { content: none; }
+
+/* ---------- メールでのご相談 ---------- */
+.root:global(#ja-contact) :global(.messenger-chat-section) { padding-block: 0 var(--ja-sec); background: var(--ja-stage); }
+.root:global(#ja-contact) :global(.messenger-header .section-label-text) { display: none; }
+.root:global(#ja-contact) :global(.messenger-grid) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ja-gap); max-width: none; margin-top: clamp(24px, 3vw, 40px); }
+.root:global(#ja-contact) :global(.messenger-grid > *) { grid-column: auto; min-width: 0; }
+.root:global(#ja-contact) :global(.messenger-card) {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 0;
+  padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); background: var(--ja-tile); box-shadow: none; color: var(--ja-ink); text-decoration: none;
+}
+.root:global(#ja-contact) :global(.messenger-card-platform) { margin: 0; font-size: 17px; font-weight: 600; color: var(--ja-grey); }
+.root:global(#ja-contact) :global(.messenger-card-desc) { margin: 6px 0 0; font-size: clamp(20px, 2vw, 28px); font-weight: 600; color: var(--ja-ink); overflow-wrap: anywhere; }
+.root:global(#ja-contact) :global(.messenger-card-arrow) { display: none; }
+.root:global(#ja-contact) :global(.messenger-card)::after {
+  content: ''; flex: none; width: 10px; height: 16px; background: var(--ja-shu);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M2 2l6 6-6 6' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M2 2l6 6-6 6' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.root:global(#ja-contact) :global(.messenger-features) { padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); background: var(--ja-tile); }
+.root:global(#ja-contact) :global(.messenger-features-title) { margin: 0 0 12px; font-size: 17px; font-weight: 600; color: var(--ja-grey); }
+.root:global(#ja-contact) :global(.messenger-features-list) { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.root:global(#ja-contact) :global(.messenger-features-list li) { font-size: 17px; line-height: 1.7; color: var(--ja-ink); }
+.root:global(#ja-contact) :global(.messenger-check) { display: none; }
+
+/* ---------- Contact blocks and offices ---------- */
+.root:global(#ja-contact) :global(.reveal > section.section) { background: var(--ja-stage); }
+.root:global(#ja-contact) :global(#offices) { background: var(--ja-stage-warm); }
+.root:global(#ja-contact) :global(#offices .office-card) { border: 0; border-radius: var(--ja-r); }
 .root:global(#ja-contact) :global(#offices .office-map-fallback) {
   background:
-    linear-gradient(22deg, transparent 0 43%, rgb(27 24 20 / 10%) 44% 46%, transparent 47% 100%),
-    linear-gradient(132deg, transparent 0 52%, rgb(200 16 46 / 14%) 53% 55%, transparent 56% 100%),
-    repeating-linear-gradient(0deg, rgb(27 24 20 / 6%) 0 1px, transparent 1px 44px),
-    repeating-linear-gradient(90deg, rgb(27 24 20 / 5%) 0 1px, transparent 1px 52px), var(--ja-paper);
+    linear-gradient(22deg, transparent 0 43%, rgb(20 18 16 / 8%) 44% 46%, transparent 47% 100%),
+    linear-gradient(132deg, transparent 0 52%, rgb(20 18 16 / 6%) 53% 55%, transparent 56% 100%),
+    var(--ja-tile);
 }
-.root:global(#ja-contact) :global(#offices .office-map-fallback)::after { background: var(--ja-shu); box-shadow: 0 0 0 7px rgb(200 16 46 / 16%); }
-.root:global(#ja-contact) :global(#offices .office-map-fallback-panel) { border-color: var(--ja-line-strong); background: #fff; }
+.root:global(#ja-contact) :global(#offices .office-map-fallback)::after { background: var(--ja-ink); box-shadow: none; }
+.root:global(#ja-contact) :global(#offices .office-map-fallback-panel) { border: 0; border-radius: 20px; background: #fff; }
+
+@media (max-width: 767px) {
+  .root:global(#ja-contact) :global(.contact-email-actions__address) { font-size: 6.6vw; }
+  .root:global(#ja-contact) :global(.messenger-grid) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#ja-contact) :global(.contact-email-actions .contact-email-actions__row .button:not(.secondary)) { width: 100%; justify-content: center; }
+}

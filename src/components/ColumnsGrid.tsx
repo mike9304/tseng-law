@@ -861,7 +861,9 @@ export default function ColumnsGrid({
                       onClick={() => selectTopic(group.key as ColumnTopic, 'push')}
                       data-columns-topic-more={group.key}
                     >
-                      {topicCopy.viewAll(groupLabel(group.key), group.posts.length)} →
+                      {topicCopy.viewAll(groupLabel(group.key), group.posts.length)}
+                      {/* ja 昊 V2: the chevron is drawn in CSS instead of the arrow glyph */}
+                      {locale === 'ja' ? null : ' →'}
                     </button>
                   ) : null}
                 </section>

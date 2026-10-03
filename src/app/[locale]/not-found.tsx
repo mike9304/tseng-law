@@ -8,6 +8,8 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import styles from './NotFound.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
 import { GuidanceNotFoundBody } from '@/components/GuidancePageBody';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
@@ -46,7 +48,7 @@ export default async function LocalizedNotFound() {
   const locale = await requestLocale();
   const copy = notFoundCopyByLocale[locale];
 
-  return (
+  const section = (
     <section className={`not-found-page ${styles.root}`} aria-labelledby="not-found-title">
       <div className="container not-found-card">
         <p className="not-found-code" aria-hidden="true">404</p>
@@ -65,4 +67,6 @@ export default async function LocalizedNotFound() {
       </div>
     </section>
   );
+  // ja 昊 V2 inner pages (2026-10-02): the same 404 block inside the ja wrapper (JaLegal.module.css).
+  return locale === 'ja' ? <JaPageShell page="not-found" className={jaLegalStyles.root}>{section}</JaPageShell> : section;
 }

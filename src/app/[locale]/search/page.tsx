@@ -12,6 +12,7 @@ import type { SearchDocKind } from '@/lib/builder/search/types';
 import styles from './SearchPage.module.css';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
 import zhSearchStyles from './ZhHantSearch.module.css';
+import jaSearchStyles from './JaSearch.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -194,5 +195,5 @@ export default async function SearchPage(
     );
   }
   // ja: the shared 間 shell carries the palette and page header treatment; other locales render as before.
-  return locale === 'ja' ? <JaPageShell page="search">{body}</JaPageShell> : body;
+  return locale === 'ja' ? <JaPageShell page="search" className={jaSearchStyles.root}>{body}</JaPageShell> : body;
 }

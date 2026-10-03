@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import type { PublicLocale8 } from '@/lib/public-guidance';
 import styles from './PublicChrome.module.css';
 import { typesetTitle } from '@/lib/ko-middot';
+import JaHeaderBand from '@/components/ja-design/JaHeaderBand';
 
 const JA_PROTECTED_TERM = '弁護士';
 const EN_PROTECTED_TERM = 'Korea-Taiwan';
@@ -65,6 +66,8 @@ export default function PageHeader({
         </div>
         {children ? <div className={styles.pageHeaderChildren} data-page-header-slot="children">{children}</div> : null}
       </div>
+      {/* ja only (昊 V2 inner pages): decorative framed light band; other locales render nothing here. */}
+      {locale === 'ja' ? <JaHeaderBand /> : null}
     </section>
   );
 }

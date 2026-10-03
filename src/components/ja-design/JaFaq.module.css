@@ -1,56 +1,137 @@
 /*
- * ja FAQ (Opus 5.5 ja lane, 2026-10-01). FaqPublicExplorer markup unchanged; laid out by its
- * data attribute and roles: search and a vertical 目次-style category rail on the left,
- * questions on the right with Q／A markers, the convention Japanese readers expect.
+ * ja FAQ, 昊 V2 (2026-10-02; CONCEPT-V2 §9 and C10). FaqPublicExplorer markup unchanged; laid out by its data
+ * attribute and roles. The live count (its own status line, so it follows every filter) stands at display size,
+ * the search is a filled pill, the categories are 44 px chips, and the questions are plain rows: no rules, no
+ * Q／A markers; hover and the open row fill with the tile colour.
  */
 .root:global(#ja-faq) :global([data-public-faq-explorer='true']) {
-  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr); gap: 20px clamp(40px, 5vw, 72px); align-items: start;
-  max-width: 1200px; margin: clamp(48px, 5vw, 72px) auto 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px var(--ja-gap);
+  align-items: start;
+  width: min(var(--max-width), calc(100% - var(--page-gutter) * 2));
+  max-width: none;
+  margin: 0 auto;
+  padding-block: clamp(56px, 6vw, 104px) var(--ja-sec);
 }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :first-child) { grid-column: 1; grid-row: 1; grid-template-columns: minmax(0, 1fr); max-width: none; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] input) { border-radius: 0; border-color: var(--ja-line-strong); }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :first-child) {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  justify-self: stretch;
+}
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='status']) {
+  order: -1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  white-space: nowrap;
+  text-align: left;
+  align-self: flex-start;
+  justify-self: start;
+  font-family: var(--ja-mincho);
+  font-size: clamp(40px, 4.4vw, 64px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-variant-numeric: lining-nums proportional-nums;
+  color: var(--ja-ink);
+}
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] label) { display: grid; gap: 10px; width: 100%; max-width: none; margin: 0; padding: 0; align-self: stretch; text-align: left; font-size: 17px; font-weight: 600; color: var(--ja-grey); }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] input[type='search']) {
+  width: 100%;
+  min-height: 56px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--ja-tile);
+  font-size: 17px;
+  color: var(--ja-ink);
+}
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] input[type='search']:focus) { border-color: var(--ja-ink); background: #fff; }
+
+/* Category chips */
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group']) {
-  grid-column: 1; grid-row: 2; display: flex; flex-direction: column; align-items: stretch; gap: 0;
-  padding: 0; border-top: 2px solid var(--ja-ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) {
-  display: flex; align-items: center; justify-content: flex-start; min-height: 48px; padding: 10px 12px;
-  border: 0; border-bottom: 1px solid var(--ja-line); border-radius: 0; background: transparent;
-  font-size: 15px; letter-spacing: 0.08em; color: var(--ja-text); text-align: left;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ja-tile);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ja-ink);
+  text-decoration: none;
+  transition: background-color 200ms linear;
 }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a)::before { content: '›'; margin-right: 10px; color: var(--ja-gold-text); font-weight: 700; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a:hover) { background: var(--ja-paper); }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[aria-current]),
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[class*='categoryActive']) {
-  background: var(--ja-green); color: #fff; font-weight: 700;
-}
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[class*='categoryActive'])::before { color: #fff; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 2; grid-row: 1 / span 3; min-width: 0; border-top: 2px solid var(--ja-ink); }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a)::before { content: none; }
+@media (hover: hover) { .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a:hover) { background: var(--ja-tile-press); } }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[aria-current]) { background: var(--ja-ink); color: #fff; }
 
-/* Q / A markers */
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button) { position: relative; padding: 22px 8px 22px 52px; font-size: 17px; line-height: 1.7; letter-spacing: 0.05em; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button)::before {
-  content: 'Q'; position: absolute; left: 4px; top: 20px; display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; color: var(--ja-shu); font-family: var(--ja-mincho); font-size: 24px; font-weight: 600;
+/* Question rows */
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :last-child) { width: 100%; max-width: none; min-width: 0; margin: 0; padding: 0; border: 0; display: grid; gap: 4px; justify-self: stretch; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] article) {
+  margin: 0; border: 0; border-radius: 20px; background: transparent; transition: background-color 200ms linear;
+  scroll-margin-top: calc(var(--hdr) + 24px);
 }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button small) { color: var(--ja-gold-text); letter-spacing: 0.12em; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region']) { position: relative; padding: 4px 8px 24px 52px; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'])::before {
-  content: 'A'; position: absolute; left: 4px; top: 4px; display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; color: var(--ja-sub); font-family: var(--ja-mincho); font-size: 24px; font-weight: 600;
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] article:has(button[aria-expanded='true'])) { background: var(--ja-tile); }
+@media (hover: hover) { .root:global(#ja-faq) :global([data-public-faq-explorer='true'] article:hover) { background: var(--ja-tile); } }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] article > span:last-child:empty) { display: none; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3) { margin: 0; font-size: inherit; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  min-height: 64px;
+  padding: 20px 20px 20px 28px;
+  border: 0;
+  background: transparent;
+  font-size: clamp(18px, 1.5vw, 21px);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--ja-ink);
+  text-align: left;
 }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'] p) { margin: 0 0 12px; font-size: 16px; line-height: 2; color: var(--ja-text); max-width: 40em; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button)::before { content: none; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button small) {
+  display: block; margin-bottom: 4px; font-size: 15px; font-weight: 600; letter-spacing: 0.04em; color: var(--ja-grey);
+}
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button > span:last-child) {
+  display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;
+  border: 0; border-radius: 0; background: none; box-shadow: none;
+  font-size: 28px; font-weight: 300; line-height: 1; color: var(--ja-ink);
+}
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region']) { padding: 0 28px 28px; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'])::before { content: none; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'] p) { max-width: 38em; margin: 0; font-size: 18px; line-height: 1.9; color: var(--ja-text); }
 
-@media (max-width: 900px) {
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(0, 1fr); margin: 32px auto 56px; }
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group']) { flex-direction: row; flex-wrap: wrap; gap: 8px; border-top: 0; }
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { border: 1px solid var(--ja-line-strong); min-height: 44px; padding: 8px 14px; }
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a)::before { display: none; }
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 1; grid-row: auto; }
+@media (min-width: 1024px) {
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: repeat(12, minmax(0, 1fr)); row-gap: 32px; }
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :first-child) { grid-column: 1 / span 4; grid-row: 1; }
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > [role='group']) { grid-column: 1 / span 4; grid-row: 2; }
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 5 / -1; grid-row: 1 / span 3; }
 }
 @media (max-width: 767px) {
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button) { font-size: 16px; padding-left: 46px; }
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button)::before,
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'])::before { width: 28px; height: 28px; font-size: 20px; }
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region']) { padding-left: 46px; }
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button) { padding: 18px 12px 18px 20px; font-size: 18px; }
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region']) { padding: 0 20px 24px; }
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'] p) { font-size: 17px; }
 }

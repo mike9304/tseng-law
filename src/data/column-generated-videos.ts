@@ -29,6 +29,16 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-ambulance-red-light-emergency-priority-negligence': {
+    id: 'ambulance-scooter-v6-zh-hant',
+    src: '/videos/columns/ambulance-scooter-v6-zh-hant.mp4',
+    poster: '/images/column-videos/ambulance-scooter-v6-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '側倒的機車滑向救護車',
+    description: '畫面從騎士失去平衡後開始。側倒的機車滑向救護車，碰到側面後停住；騎士與機車分離，滑到旁邊。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立假想場景，非本文事故或法院勘驗影像的重建。畫面只有一名騎士，未呈現乘客、號誌、警笛聲、勤務或傷勢，不能據以判斷優先通行權或肇事責任。',
+  },
   'column/zh-hant/taiwan-racing-no-contact-joint-tort-liability': {
     id: 'adjacent-rear-end-v3-zh-hant',
     src: '/videos/columns/adjacent-rear-end-v3-zh-hant.mp4',

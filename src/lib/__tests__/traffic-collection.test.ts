@@ -210,6 +210,7 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-ambulance-red-light-emergency-priority-negligence',
         'taiwan-racing-no-contact-joint-tort-liability',
         'taiwan-accident-police-records',
         'taiwan-retaliatory-driving-rear-ended-intentional-injury',

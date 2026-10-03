@@ -19,7 +19,11 @@ const familyCareCaptions = JSON.parse(await fs.readFile(new URL('../src/data/fam
 const workRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/work-records-video-captions.json', import.meta.url), 'utf8'));
 const alleyBicycleCaptions = JSON.parse(await fs.readFile(new URL('../src/data/alley-bicycle-video-captions.json', import.meta.url), 'utf8'));
 const potholeScooterCaptions = JSON.parse(await fs.readFile(new URL('../src/data/pothole-scooter-video-captions.json', import.meta.url), 'utf8'));
+const passengerSkidCaptions = JSON.parse(await fs.readFile(new URL('../src/data/passenger-skid-video-captions.json', import.meta.url), 'utf8'));
+const settlementRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/settlement-records-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse', id: 'passenger-skid-v4-zh-hant', duration: 4, contactTime: 8 / 24, expectedDiagrams: 0, disclosure: passengerSkidCaptions['zh-hant'].disclosure },
+  { locale: 'zh-hant', slug: 'taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction', id: 'settlement-records-v1-zh-hant', duration: 4, contactTime: 57 / 24, expectedDiagrams: 0, disclosure: settlementRecordsCaptions['zh-hant'].disclosure },
   { locale: 'zh-hant', slug: 'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence', id: 'alley-bicycle-v2-zh-hant', duration: 4, contactTime: 7 / 24, expectedDiagrams: 0, disclosure: alleyBicycleCaptions['zh-hant'].disclosure },
   { locale: 'zh-hant', slug: 'taiwan-manhole-pothole-road-authority-utility-internal-recourse', id: 'pothole-scooter-v2-zh-hant', duration: 4, contactTime: 3 / 24, expectedDiagrams: 0, disclosure: potholeScooterCaptions['zh-hant'].disclosure },
   ...Object.entries(batApproachCaptions).map(([locale, caption]) => ({

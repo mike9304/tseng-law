@@ -38,6 +38,8 @@ describe('reviewed repair-cost depreciation column', () => {
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', q: '折舊' })).map(p => p.slug)).toEqual([slug]);
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', video: '1' })).map(p => p.slug)).toEqual([
       'taiwan-road-rage-baseball-bat-fracture-damages',
+      'taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction',
+      'taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse',
       'taiwan-car-repair-rental-cost-repair-period-evidence',
       'taiwan-accident-family-care-necessity-period',
       'taiwan-car-accident-work-loss-rest-note',

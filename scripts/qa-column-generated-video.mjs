@@ -16,6 +16,8 @@ const allCases = [
   { locale: 'zh-hant', slug: 'taiwan-right-turn-car-straight-motorcycle-evidence', id: 'right-turn-scooter-v2-zh-hant', duration: 4, contactTime: 1.5, disclosure: '非真實事故或本文案件的重建' },
   { locale: 'zh-hant', slug: 'taiwan-car-repair-cost-estimate-parts-depreciation', id: 'repair-workshop-v1-zh-hant', evidenceStem: 'repair-cost-zh-hant', duration: 6, contactTime: 3, expectedDiagrams: 0, disclosure: '非本文判決車輛或真實受損紀錄' },
   { locale: 'zh-hant', slug: 'taiwan-car-repair-rental-cost-repair-period-evidence', id: 'repair-workshop-v1-zh-hant', evidenceStem: 'repair-period-zh-hant', duration: 6, contactTime: 3, expectedDiagrams: 0, disclosure: '非本文案件的車輛或維修紀錄' },
+  { locale: 'zh-hant', slug: 'taiwan-truck-blocking-multiple-dashcam-evidence', id: 'truck-blocking-v2-zh-hant', duration: 4, contactTime: 0.6, expectedDiagrams: 0, disclosure: '非本文判決或四組原始影像的重建' },
+  { locale: 'zh-hant', slug: 'taiwan-car-door-opening-motorcycle-liability', id: 'car-door-v2-zh-hant', duration: 4, contactTime: 1.6, disclosure: '非本文兩件判決的重建' },
   ...['ko', 'en', 'zh-hant', 'ja'].map(locale => ({
     locale, slug: 'taiwan-company-setup-pitch-location', id: `business-premises-v1-${locale}`,
     duration: 6, contactTime: 4.2, traffic: false,

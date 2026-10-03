@@ -45,6 +45,8 @@ describe('reviewed column videos', () => {
     ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-scooter-v2-zh-hant', '機車'],
     ['taiwan-car-repair-cost-estimate-parts-depreciation', 'repair-workshop-v1-zh-hant', '零件是否需更換'],
     ['taiwan-car-repair-rental-cost-repair-period-evidence', 'repair-workshop-v1-zh-hant', '修理需要幾天'],
+    ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
+    ['taiwan-car-door-opening-motorcycle-liability', 'car-door-v2-zh-hant', '騎士失去平衡'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="zh-hant" slug={slug} />);
     expect(html).toContain(`${id}.mp4`);

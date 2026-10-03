@@ -775,7 +775,7 @@
   font-size: 19px;
   font-weight: 600;
   line-height: 1.55;
-  text-wrap: wrap; /* the h3's balance split 諮|詢 on phones */
+  text-wrap: pretty; /* short questions: no one-character widows (辦？) */
   transition: color 0.25s ease;
 }
 .root:global(#zh-hant-intent) :global(section[data-faq-layout] .faq-question button:hover) { background: transparent; color: var(--ap-ink); }

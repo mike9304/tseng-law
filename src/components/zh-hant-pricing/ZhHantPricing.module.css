@@ -236,7 +236,7 @@
   line-height: 1.08;
   letter-spacing: -0.01em;
   color: var(--ap-ink);
-  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -255,7 +255,7 @@
   font-weight: 800;
   line-height: 1;
   color: var(--ap-ink);
-  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

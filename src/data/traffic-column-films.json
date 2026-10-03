@@ -4671,5 +4671,477 @@
         "text": "2026年10月4日官方歷審仍列一審判決、裁定及本件二審，未列後續三審。 新聞稿載仍得上訴；清單沒有後續裁判，不等於已證實確定或執行完畢。"
       }
     ]
+  },
+  "column/fr/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-fr",
+    "src": "/videos/columns/traffic-procedure-film-v1-fr.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-fr.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Les pièces à conserver après un accident de la route",
+    "description": "Ce film muet de 80 secondes présente la mise en sécurité, le signalement, les photos, la conservation des originaux, les soins, les frais de réparation, la perte de revenus et les conditions d’un accord.",
+    "disclosure": "Personnages et scènes fictifs générés par IA, sans images d’un accident réel. Les véhicules, lieux et horaires sont illustratifs. Le film résume certaines parties de l’article ; il ne prouve ni une faute, ni la nécessité de soins, ni le montant d’une indemnisation dans un cas particulier.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "La collision",
+        "text": "Un choc arrière pousse la voiture blanche à l’arrêt. Cette scène fictive ne permet pas d’établir une faute réelle."
+      },
+      {
+        "start": 10,
+        "title": "Sécurité et signalement",
+        "text": "Sécurisez les lieux, portez secours et signalez l’accident. Déplacer les véhicules dépend des blessures et des lieux."
+      },
+      {
+        "start": 20,
+        "title": "Photos des lieux",
+        "text": "Photographiez positions, dégâts et marquages au sol. Veillez à votre sécurité pendant les prises de vue."
+      },
+      {
+        "start": 30,
+        "title": "Conserver les originaux",
+        "text": "Gardez photos, vidéos originales et documents de police. L’analyse préliminaire de la police ne fixe pas les parts de faute."
+      },
+      {
+        "start": 40,
+        "title": "Le dossier médical",
+        "text": "Conservez les symptômes notés, dossiers médicaux et reçus. Il faut vérifier la nécessité des soins et leur lien avec l’accident."
+      },
+      {
+        "start": 50,
+        "title": "Les réparations",
+        "text": "Comparez photos des dégâts, devis et factures de réparation. Documentez les frais et leur lien avec l’accident."
+      },
+      {
+        "start": 60,
+        "title": "La perte réelle de revenus",
+        "text": "Rassemblez pièces médicales, présences, congés et paie. Le repos conseillé ne prouve pas, à lui seul, une perte de revenus."
+      },
+      {
+        "start": 70,
+        "title": "Les conditions de l’accord",
+        "text": "Vérifiez échéances, assurance et demandes abandonnées. Avant de signer, examinez les droits réservés et les soins futurs."
+      }
+    ]
+  },
+  "column/de/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-de",
+    "src": "/videos/columns/traffic-procedure-film-v1-de.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-de.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Unterlagen nach einem Verkehrsunfall",
+    "description": "Der 80-sekündige Stummfilm zeigt Absicherung und Meldung, Unfallfotos, Originalunterlagen, Behandlung, Reparaturkosten, Verdienstausfall und die Prüfung eines Vergleichs.",
+    "disclosure": "Fiktive, mit KI erzeugte Personen und Szenen; keine echten Unfallaufnahmen. Fahrzeuge, Orte und Zeiten dienen der Veranschaulichung. Der Film fasst Teile des Artikels zusammen. Er beweist weder Verschulden noch die medizinische Notwendigkeit oder einen Entschädigungsbetrag im Einzelfall.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Der Aufprall",
+        "text": "Ein Aufprall von hinten schiebt das stehende weiße Auto vor. Diese fiktive Szene beweist kein Verschulden in einem echten Fall."
+      },
+      {
+        "start": 10,
+        "title": "Absichern und melden",
+        "text": "Sichern Sie die Stelle, leisten Sie Hilfe und melden Sie den Unfall. Ob Fahrzeuge bewegt werden, hängt von Verletzungen und Lage ab."
+      },
+      {
+        "start": 20,
+        "title": "Fotos am Unfallort",
+        "text": "Halten Sie Fahrzeugpositionen, Schäden und Markierungen fest. Achten Sie beim Fotografieren auf Ihre Sicherheit."
+      },
+      {
+        "start": 30,
+        "title": "Originale aufbewahren",
+        "text": "Bewahren Sie Originalfotos, Videos und Polizeiunterlagen auf. Die polizeiliche Voranalyse legt keine Verschuldensanteile fest."
+      },
+      {
+        "start": 40,
+        "title": "Ärztliche Unterlagen",
+        "text": "Bewahren Sie Angaben zu Beschwerden, Befunde und Belege auf. Notwendigkeit der Behandlung und Unfallbezug sind zu prüfen."
+      },
+      {
+        "start": 50,
+        "title": "Reparaturunterlagen",
+        "text": "Vergleichen Sie Schadensfotos, Kostenvoranschläge und Rechnungen. Belegen Sie die Reparaturkosten und ihren Bezug zum Unfall."
+      },
+      {
+        "start": 60,
+        "title": "Tatsächlicher Verdienstausfall",
+        "text": "Prüfen Sie Arzt-, Arbeitszeit-, Urlaubs- und Lohnunterlagen zusammen. Eine Ruheempfehlung allein beweist noch keinen Verdienstausfall."
+      },
+      {
+        "start": 70,
+        "title": "Bedingungen des Vergleichs",
+        "text": "Prüfen Sie Zahlungstermine, Versicherung und Anspruchsverzicht. Vor Unterschrift: vorbehaltene Ansprüche und künftige Behandlung."
+      }
+    ]
+  },
+  "column/es/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-es",
+    "src": "/videos/columns/traffic-procedure-film-v1-es.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-es.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Documentos que conservar tras un accidente de tráfico",
+    "description": "Este vídeo de 80 segundos sin sonido recorre la seguridad y el aviso del accidente, las fotos, los originales, la atención médica, las reparaciones, la pérdida de ingresos y la revisión del acuerdo.",
+    "disclosure": "Personas y escenas ficticias generadas con IA, no imágenes de un accidente real. Vehículos, lugares y tiempos son ilustrativos. El vídeo resume partes del artículo; no prueba la culpa, la necesidad de tratamiento ni la indemnización de un caso concreto.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "La colisión",
+        "text": "Un impacto trasero empuja el coche blanco detenido. Esta escena ficticia no permite atribuir la culpa de un caso real."
+      },
+      {
+        "start": 10,
+        "title": "Seguridad y aviso",
+        "text": "Ponga a salvo a las personas, preste ayuda y avise del accidente. Mover los vehículos depende de las lesiones y del lugar."
+      },
+      {
+        "start": 20,
+        "title": "Fotos del lugar",
+        "text": "Fotografíe posiciones de los vehículos, daños y marcas viales. Mantenga la seguridad al tomar fotografías."
+      },
+      {
+        "start": 30,
+        "title": "Conservar los originales",
+        "text": "Guarde fotos, grabaciones originales y documentos policiales. El análisis policial preliminar no fija los porcentajes de culpa."
+      },
+      {
+        "start": 40,
+        "title": "Documentación médica",
+        "text": "Conserve registros de síntomas, informes médicos y recibos. Valore la necesidad del tratamiento y su vínculo con el accidente."
+      },
+      {
+        "start": 50,
+        "title": "Documentación de reparación",
+        "text": "Compare fotos de daños, presupuestos y facturas de reparación. Documente los costes y su relación con el accidente."
+      },
+      {
+        "start": 60,
+        "title": "La pérdida real de ingresos",
+        "text": "Reúna informes médicos, asistencia, permisos y nóminas. Recomendar reposo no prueba, por sí solo, la pérdida de ingresos."
+      },
+      {
+        "start": 70,
+        "title": "Condiciones del acuerdo",
+        "text": "Revise plazos de pago, seguro y reclamaciones renunciadas. Antes de firmar, revise derechos reservados y tratamientos futuros."
+      }
+    ]
+  },
+  "column/pt/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-pt",
+    "src": "/videos/columns/traffic-procedure-film-v1-pt.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-pt.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Documentos após um acidente de trânsito",
+    "description": "Este vídeo de 80 segundos sem som mostra a segurança e a comunicação do acidente, fotos, arquivos originais, atendimento médico, reparos, perda de renda e análise do acordo.",
+    "disclosure": "Pessoas e cenas fictícias geradas por IA, sem imagens de um acidente real. Veículos, locais e tempos são ilustrativos. O vídeo resume partes do artigo; não prova a culpa, a necessidade de tratamento nem o valor da indenização em um caso concreto.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "A colisão",
+        "text": "Uma batida traseira empurra o carro branco parado. Esta cena fictícia não permite atribuir culpa em um caso real."
+      },
+      {
+        "start": 10,
+        "title": "Segurança e comunicação",
+        "text": "Garanta a segurança, preste socorro e comunique o acidente. Mover os veículos depende das lesões e das condições do local."
+      },
+      {
+        "start": 20,
+        "title": "Fotos do local",
+        "text": "Registre posições dos veículos, danos e marcas na via. Cuide da sua segurança ao tirar as fotos."
+      },
+      {
+        "start": 30,
+        "title": "Preservar os originais",
+        "text": "Guarde fotos, gravações originais e documentos policiais. A análise preliminar da polícia não fixa os percentuais de culpa."
+      },
+      {
+        "start": 40,
+        "title": "Documentos médicos",
+        "text": "Guarde registros de sintomas, prontuários e recibos. É preciso avaliar a necessidade do tratamento e o nexo com o acidente."
+      },
+      {
+        "start": 50,
+        "title": "Documentos do reparo",
+        "text": "Compare fotos dos danos, orçamentos e comprovantes de reparo. Documente os custos e a ligação deles com o acidente."
+      },
+      {
+        "start": 60,
+        "title": "A perda efetiva de renda",
+        "text": "Reúna documentos médicos, frequência, licenças e pagamentos. A recomendação de repouso, sozinha, não prova perda de renda."
+      },
+      {
+        "start": 70,
+        "title": "As condições do acordo",
+        "text": "Confira prazos, seguro e pedidos de que se abre mão. Antes de assinar, reveja direitos reservados e tratamentos futuros."
+      }
+    ]
+  },
+  "column/fr/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-fr",
+    "src": "/videos/columns/overtaking-evidence-film-v1-fr.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-fr.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Dépassement : conditions et preuves après une collision",
+    "description": "Ce film muet de 100 secondes présente les restrictions au dépassement, les signaux et distances, une collision fictive lors du rabattement, les photos des dégâts, les originaux et l’examen des lieux, du temps et des fautes.",
+    "disclosure": "Personnes, véhicules et documents fictifs générés par IA. Le contact entre deux voitures est distinct du cas anonyme de moto décrit dans l’article. Il ne prouve pas le respect des signaux, du passage cédé ou des distances ; les modèles ne sont pas étalonnés. Les photos des dégâts sont prises plus tard sur un parking et ne montrent pas les positions lors de l’accident. Le film résume certaines conditions de l’article 101 et la vérification des preuves ; consultez l’article et le texte officiel pour l’ensemble des conditions.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Avant de dépasser",
+        "text": "Vérifiez interdictions, marquages, état de la route et circulation. Interdit si un véhicule arrive en face ou si au moins deux se suivent devant."
+      },
+      {
+        "start": 10,
+        "title": "Signaler dans la même voie",
+        "text": "Si c’est permis : deux brefs coups de klaxon ou un appel de phares. Attendez qu’on cède le passage ; ne forcez pas par des signaux répétés."
+      },
+      {
+        "start": 20,
+        "title": "Écart latéral et rabattement",
+        "text": "Clignotant gauche, dépassement à gauche avec au moins 0,5 m d’écart. Après une distance sûre, clignotant droit et retour dans la voie initiale."
+      },
+      {
+        "start": 30,
+        "title": "Un rabattement fictif trop tôt",
+        "text": "La voiture se rabat sans laisser assez d’espace devant l’autre. Ce contact ne fixe pas les parts de faute d’un accident réel."
+      },
+      {
+        "start": 40,
+        "title": "Les dégâts et le véhicule entier",
+        "text": "Photographiez dégâts et voiture entière depuis un endroit sûr. Comparez les points de contact des deux véhicules avec les originaux."
+      },
+      {
+        "start": 50,
+        "title": "Les originaux avant et après",
+        "text": "Gardez les séquences continues, fichiers originaux et données horaires. Un extrait du choc seul peut omettre les signaux et mouvements précédents."
+      },
+      {
+        "start": 60,
+        "title": "La route au moment du choc",
+        "text": "Examinez les voies, panneaux, marquages et obstacles à la vue. Les photos actuelles correspondent-elles aux lieux lors de l’accident ?"
+      },
+      {
+        "start": 70,
+        "title": "Signaux, entrée dans la voie, contact",
+        "text": "Vérifiez leur ordre avant le choc dans les enregistrements originaux. Ne chiffrez pas vitesse ou distance sans base de mesure fiable."
+      },
+      {
+        "start": 80,
+        "title": "Les éléments relatifs à la faute",
+        "text": "Une infraction seule ne fixe pas un pourcentage de faute. Examinez visibilité, temps, évitement possible et preuves défavorables."
+      },
+      {
+        "start": 90,
+        "title": "Les faits propres à chaque cas",
+        "text": "La conclusion du cas anonyme dépend de ses faits particuliers. Examinez votre affaire avec ses preuves et le droit en vigueur."
+      }
+    ]
+  },
+  "column/de/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-de",
+    "src": "/videos/columns/overtaking-evidence-film-v1-de.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-de.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Überholen: Voraussetzungen und Beweise nach dem Unfall",
+    "description": "Der 100-sekündige Stummfilm zeigt Überholverbote, Signale und Abstände, einen fiktiven Unfall beim Einscheren, Schadensfotos, Originalaufnahmen und die Prüfung von Straßenlage, Zeitablauf und Verschulden.",
+    "disclosure": "Fiktive Personen, Fahrzeuge und Unterlagen, mit KI erzeugt. Der Kontakt zweier Autos stellt nicht den anonymen Motorradfall des Artikels dar. Er belegt weder korrekte Signale noch das Gewähren der Vorbeifahrt oder ausreichende Abstände; die Modelle sind nicht kalibriert. Schadensfotos entstehen später auf einem Parkplatz und zeigen keine ursprünglichen Unfallpositionen. Der Film fasst ausgewählte Vorgaben aus Artikel 101 und die Beweisprüfung zusammen. Sämtliche Voraussetzungen stehen im Artikel und in der amtlichen Regelung.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Vor dem Überholen",
+        "text": "Prüfen Sie Überholverbote, Markierungen, Straße und Verkehr. Nicht bei nahendem Gegenverkehr oder mindestens zwei Autos in Reihe vorn."
+      },
+      {
+        "start": 10,
+        "title": "Signale im selben Fahrstreifen",
+        "text": "Wo erlaubt: zweimal kurz hupen oder einmal die Scheinwerfer aufblenden. Aufs Platzmachen warten; nicht mit wiederholten Signalen erzwingen."
+      },
+      {
+        "start": 20,
+        "title": "Seitenabstand und Einscheren",
+        "text": "Links blinken, links überholen und mindestens 0,5 m Abstand halten. Erst bei sicherem Abstand rechts blinken und in die alte Spur zurück."
+      },
+      {
+        "start": 30,
+        "title": "Fiktives zu frühes Einscheren",
+        "text": "Das überholende Auto schert ohne genügend Abstand nach vorn ein. Diese Szene bestimmt keine Verschuldensanteile in einem echten Fall."
+      },
+      {
+        "start": 40,
+        "title": "Schäden und das ganze Fahrzeug",
+        "text": "Fotografieren Sie Schäden und das ganze Auto an einem sicheren Ort. Gleichen Sie Kontaktstellen beider Fahrzeuge mit Originalunterlagen ab."
+      },
+      {
+        "start": 50,
+        "title": "Originale vor und nach dem Aufprall",
+        "text": "Sichern Sie durchgehende Aufnahmen, Originaldateien und Zeitangaben. Ein Ausschnitt nur vom Aufprall kann frühere Signale und Bewegungen auslassen."
+      },
+      {
+        "start": 60,
+        "title": "Straßenzustand zum Unfallzeitpunkt",
+        "text": "Prüfen Sie Fahrstreifen, Schilder, Markierungen und Sichtbehinderungen. Entsprechen heutige Fotos den Bedingungen zur Unfallzeit?"
+      },
+      {
+        "start": 70,
+        "title": "Signale, Spurwechsel und Kontakt",
+        "text": "Prüfen Sie die Reihenfolge vor dem Aufprall anhand der Originale. Keine Zahlen zu Tempo oder Abstand ohne verlässliche Messgrundlage."
+      },
+      {
+        "start": 80,
+        "title": "Beweise zum Verschulden",
+        "text": "Ein Verkehrsverstoß allein legt keinen festen Verschuldensanteil fest. Prüfen Sie Sicht, Zeit, Vermeidbarkeit und auch ungünstige Beweise."
+      },
+      {
+        "start": 90,
+        "title": "Jeder Fall hat eigene Tatsachen",
+        "text": "Das Ergebnis des anonymen Falls beruht auf dessen konkreten Tatsachen. Prüfen Sie Ihren Fall anhand seiner Beweise und des geltenden Rechts."
+      }
+    ]
+  },
+  "column/es/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-es",
+    "src": "/videos/columns/overtaking-evidence-film-v1-es.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-es.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Adelantamiento: condiciones y pruebas tras una colisión",
+    "description": "Este vídeo de 100 segundos sin sonido muestra restricciones, señales y distancias, una colisión ficticia al volver al carril, fotos de daños, grabaciones originales y revisión de la vía, los tiempos y la culpa.",
+    "disclosure": "Personas, vehículos y documentos ficticios generados con IA. El contacto entre dos coches es distinto del caso anónimo de motocicleta del artículo. No prueba el cumplimiento de señales, cesión del paso o distancias; los modelos no están calibrados. Las fotos de daños se toman después en un aparcamiento y no muestran las posiciones originales del accidente. El vídeo resume algunas condiciones del artículo 101 y la revisión de pruebas; consulte el artículo y la norma oficial para conocer todas las condiciones.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Antes de adelantar",
+        "text": "Revise señales de prohibición, marcas viales, vía y tráfico. No adelante si viene tráfico de frente o hay dos o más coches en fila delante."
+      },
+      {
+        "start": 10,
+        "title": "Aviso en el mismo carril",
+        "text": "Si está permitido: dos toques breves de bocina o una ráfaga de luces. Espere a que le dejen pasar; no lo fuerce repitiendo señales."
+      },
+      {
+        "start": 20,
+        "title": "Separación lateral y regreso",
+        "text": "Señalice a la izquierda y pase por la izquierda, a 0,5 m como mínimo. Tras lograr distancia segura, señalice a la derecha y vuelva a su carril."
+      },
+      {
+        "start": 30,
+        "title": "Un regreso prematuro ficticio",
+        "text": "El coche vuelve al carril sin dejar suficiente espacio por delante. Este contacto no fija los porcentajes de culpa de un caso real."
+      },
+      {
+        "start": 40,
+        "title": "Daños y vehículo completo",
+        "text": "Fotografíe los daños y el coche entero desde un lugar seguro. Compare los puntos de contacto de ambos vehículos con los originales."
+      },
+      {
+        "start": 50,
+        "title": "Originales de antes y después",
+        "text": "Conserve grabaciones continuas, archivos originales y datos horarios. Un recorte solo del choque puede omitir señales y movimientos previos."
+      },
+      {
+        "start": 60,
+        "title": "La vía en el momento del choque",
+        "text": "Revise carriles, señales, marcas y obstáculos a la visibilidad. Compruebe si las fotos actuales reflejan el estado de la vía aquel día."
+      },
+      {
+        "start": 70,
+        "title": "Señales, entrada al carril y contacto",
+        "text": "Establezca su orden antes del impacto con las grabaciones originales. No asigne velocidades ni distancias sin una base de medición fiable."
+      },
+      {
+        "start": 80,
+        "title": "Pruebas sobre la culpa",
+        "text": "Una infracción no determina por sí sola un porcentaje fijo de culpa. Valore visibilidad, tiempo, posibilidad de evitarlo y pruebas desfavorables."
+      },
+      {
+        "start": 90,
+        "title": "Los hechos de cada caso",
+        "text": "La conclusión del caso anónimo depende de sus hechos concretos. Revise su caso según sus pruebas y la legislación vigente."
+      }
+    ]
+  },
+  "column/pt/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-pt",
+    "src": "/videos/columns/overtaking-evidence-film-v1-pt.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-pt.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Ultrapassagem: condições e provas após a colisão",
+    "description": "Este vídeo de 100 segundos sem som reúne restrições, sinais e distâncias, uma colisão fictícia na volta à faixa, fotos dos danos, gravações originais e análise da via, dos tempos e da culpa.",
+    "disclosure": "Pessoas, veículos e documentos fictícios gerados por IA. O contato entre dois carros é separado do caso anônimo de motocicleta do artigo. Não comprova o cumprimento dos sinais, da cessão de passagem ou das distâncias; os modelos não são calibrados. As fotos dos danos são feitas depois em um estacionamento e não mostram as posições originais do acidente. O vídeo resume alguns requisitos do artigo 101 e a análise das provas; consulte o artigo e a norma oficial para conhecer todas as condições.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Antes de ultrapassar",
+        "text": "Confira proibições, marcas na via, condições da estrada e tráfego. Não ultrapasse com tráfego vindo de frente ou dois ou mais carros em fila à frente."
+      },
+      {
+        "start": 10,
+        "title": "Aviso na mesma faixa",
+        "text": "Onde permitido: dois toques curtos de buzina ou um sinal de faróis. Espere que o outro dê passagem; não force com sinais repetidos."
+      },
+      {
+        "start": 20,
+        "title": "Distância lateral e retorno",
+        "text": "Sinalize à esquerda e passe pela esquerda, a pelo menos 0,5 m. Com distância segura, sinalize à direita e volte à faixa original."
+      },
+      {
+        "start": 30,
+        "title": "Um retorno precoce fictício",
+        "text": "O carro volta à faixa sem deixar espaço suficiente à frente. Esse contato não determina os percentuais de culpa de um caso real."
+      },
+      {
+        "start": 40,
+        "title": "Danos e veículo inteiro",
+        "text": "Fotografe os danos e o carro inteiro em um local seguro. Compare os pontos de contato dos dois veículos com os registros originais."
+      },
+      {
+        "start": 50,
+        "title": "Originais de antes e depois",
+        "text": "Preserve gravações contínuas, arquivos originais e dados de horário. Um recorte só da colisão pode omitir sinais e movimentos anteriores."
+      },
+      {
+        "start": 60,
+        "title": "A via no momento do acidente",
+        "text": "Confira faixas, placas, marcas e obstáculos à visão. Veja se as fotos atuais correspondem à via na data do acidente."
+      },
+      {
+        "start": 70,
+        "title": "Sinais, entrada na faixa e contato",
+        "text": "Confira a ordem antes do impacto nas gravações originais. Não atribua velocidade ou distância sem base confiável de medição."
+      },
+      {
+        "start": 80,
+        "title": "Provas sobre a culpa",
+        "text": "Uma infração, sozinha, não define um percentual fixo de culpa. Analise visão, tempo, possibilidade de evitar e provas desfavoráveis."
+      },
+      {
+        "start": 90,
+        "title": "Os fatos de cada caso",
+        "text": "A conclusão do caso anônimo depende dos fatos daquele caso. Analise o seu caso com base nas provas e na legislação vigente."
+      }
+    ]
   }
 }

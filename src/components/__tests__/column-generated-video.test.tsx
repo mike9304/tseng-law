@@ -9,6 +9,8 @@ import businessPremisesCaptions from '@/data/business-premises-video-captions.js
 import logisticsCaptions from '@/data/logistics-video-captions.json';
 import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
+const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt'];
+
 describe('reviewed column videos', () => {
   it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
     const slug = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
@@ -54,7 +56,7 @@ describe('reviewed column videos', () => {
     expect(renderToStaticMarkup(<ColumnGeneratedVideo locale="ko" slug="unrelated-article" />)).toBe('');
   });
 
-  it.each(Object.entries(generalAccidentCaptions))('serves the reviewed shared scene with the %s caption only on the general article', (locale, caption) => {
+  it.each(Object.entries(generalAccidentCaptions).filter(([locale]) => !longFilmLocales.includes(locale)))('serves the reviewed shared scene with the %s caption only on the general article', (locale, caption) => {
     const slug = 'taiwan-traffic-accident-procedure';
     const asset = getColumnGeneratedVideo(locale, slug);
     expect(asset?.src).toBe('/videos/columns/rear-end-simulation-v3-en.mp4');
@@ -68,7 +70,7 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')?.src).not.toBe(asset?.src);
   });
 
-  it.each(Object.entries(overtakingCaptions).filter(([locale]) => !['ko', 'en', 'zh-hant', 'ja'].includes(locale)))('renders the overtaking illustration with its %s caption without applying it to other content', (locale, caption) => {
+  it.each(Object.entries(overtakingCaptions).filter(([locale]) => !longFilmLocales.includes(locale)))('renders the overtaking illustration with its %s caption without applying it to other content', (locale, caption) => {
     const slug = 'taiwan-overtaking-accident-liability';
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
     const asset = getColumnGeneratedVideo(locale, slug);
@@ -90,6 +92,10 @@ describe('reviewed column videos', () => {
     ['en', 'separate from the anonymous motorcycle case'],
     ['ja', '匿名のオートバイ事故とは別'],
     ['zh-hant', '並非重現本文匿名機車事故'],
+    ['fr', 'distinct du cas anonyme de moto'],
+    ['de', 'nicht den anonymen Motorradfall'],
+    ['es', 'distinto del caso anónimo de motocicleta'],
+    ['pt', 'separado do caso anônimo de motocicleta'],
   ])('serves one 100-second overtaking film with case boundaries and ten chapters in %s', (locale, disclosure) => {
     const slug = 'taiwan-overtaking-accident-liability';
     const asset = getColumnGeneratedVideo(locale, slug);
@@ -111,20 +117,20 @@ describe('reviewed column videos', () => {
     ['en', 'not actual accident footage'],
     ['zh-hant', '非真實事故影像'],
     ['ja', '実際の事故映像ではありません'],
-    ['fr', 'Scène fictive générée par IA'],
-    ['de', 'Fiktive, KI-generierte Szene'],
-    ['es', 'Escena ficticia generada con IA'],
-    ['pt', 'Cena fictícia gerada por IA'],
+    ['fr', 'Personnages et scènes fictifs générés par IA'],
+    ['de', 'Fiktive, mit KI erzeugte Personen und Szenen'],
+    ['es', 'Personas y escenas ficticias generadas con IA'],
+    ['pt', 'Pessoas e cenas fictícias geradas por IA'],
     ['it', 'Scena fittizia generata con IA'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
-    const id = ['en', 'zh-hant', 'ja'].includes(locale) ? 'traffic-procedure-film-v1' : 'rear-end-simulation-v3';
+    const id = longFilmLocales.includes(locale) ? 'traffic-procedure-film-v1' : 'rear-end-simulation-v3';
     expect(html).toContain(`${id}-${locale}.mp4`);
     expect(html).toContain(disclosure);
     expect(html).not.toContain('실제 사고 기록');
   });
 
-  it.each(['ko', 'en', 'zh-hant', 'ja'])('serves one assembled 80-second film with eight scenes in %s', locale => {
+  it.each(longFilmLocales)('serves one assembled 80-second film with eight scenes in %s', locale => {
     const asset = getColumnGeneratedVideo(locale, 'taiwan-traffic-accident-procedure');
     expect(asset?.durationSeconds).toBe(80);
     expect(asset?.sceneCount).toBe(8);

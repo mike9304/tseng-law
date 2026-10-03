@@ -525,6 +525,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-motorway-blocking-no-collision-public-danger"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-road-rage-freeway-cut-in-sentence-reduced"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-road-rage-freeway-cut-in-sentence-reduced"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-road-rage-freeway-cut-in-sentence-reduced"
     }
   ]
 }

@@ -9,6 +9,8 @@ export type ColumnGeneratedVideoAsset = {
   title: string;
   description: string;
   disclosure: string;
+  /** Repeat the short clip after the reader starts it. Never autoplays. */
+  loop?: boolean;
 };
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
@@ -242,6 +244,50 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     title: '空き店舗の入口から室内を見る',
     description: 'ガラス扉の内側からカメラがゆっくり進み、何も置かれていない室内、柱、奥のドアを映します。音声のない6秒の映像です。',
     disclosure: 'AIで作成した架空の空間で、実際の賃貸物件ではありません。建物の用途・登記・許認可の資料は映っておらず、ここで飲食店を営業できることを示す映像ではありません。',
+  },
+  'column/ko/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v1-ko',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v1-ko.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v1-ko.jpg',
+    width: 1280,
+    height: 720,
+    title: '흰색 탑차가 앞 차로로 끼어든 뒤 간격이 급히 좁혀지는 장면',
+    description: '왼쪽 차로와의 경계선에 걸쳐 달리던 흰색 소형 탑차가 오른쪽으로 비스듬히 틀어 바로 앞 차로로 들어옵니다. 양옆 차로의 차들이 그대로 달리는 가운데 탑차가 후미등을 켠 채 정면을 막아서고, 간격이 빠르게 좁혀져 마지막에는 화물칸 뒷문이 시야 한가운데를 가득 채웁니다. 소리 없는 약 5초 길이의 영상이며, 재생하면 처음부터 반복해서 나옵니다.',
+    disclosure: 'AI로 만든 가상 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실을 재현한 것이 아닙니다. 영상 속 거리·속도·시간 간격은 이해를 돕기 위해 임의로 정한 것이어서 실제 사건의 과실을 판단하는 근거로 쓸 수 없습니다.',
+    loop: true,
+  },
+  'column/ja/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v1-ja',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v1-ja.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v1-ja.jpg',
+    width: 1280,
+    height: 720,
+    title: '白い箱型トラックが前の車線に割り込み、車間が急に詰まる場面',
+    description: '左側の車線との境界線にまたがって走っていた白い箱型の小型トラックが、右へ斜めに向きを変えてすぐ前の車線に入ってきます。左右の車線の車がそのまま走る中、トラックは後部ランプを点けたまま正面をふさぎ、車間がみるみる詰まって、最後は荷室の後部扉が視界の中央いっぱいに広がります。音声のない約5秒の映像で、再生すると最初からくり返し流れます。',
+    disclosure: 'AIで生成した架空の場面であり、実際のドライブレコーダー映像でも、判決が認定した事実を再現したものでもありません。距離や速度、タイミングは説明のために仮に設定したもので、実際の事件の過失を判断する材料にはなりません。',
+    loop: true,
+  },
+  'column/en/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v1-en',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v1-en.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v1-en.jpg',
+    width: 1280,
+    height: 720,
+    title: 'A white box truck cuts into the lane ahead and the gap closes fast',
+    description: 'A white box truck straddling the line with the left lane angles to the right and moves into the lane directly ahead. As cars in the side lanes carry on, the truck settles in front with its rear lights on and the gap shrinks quickly until its rear doors fill the middle of the view. The clip is silent, about 5 seconds long, and loops once played.',
+    disclosure: 'This is a fictional AI-generated scene, not dashcam footage and not a reconstruction of the facts found in the judgment. Distances, speeds and timing are illustrative only and cannot be used to judge fault in any real case.',
+    loop: true,
+  },
+  'column/zh-hant/taiwan-road-rage-freeway-cut-in-sentence-reduced': {
+    id: 'road-rage-freeway-cut-in-sentence-reduced-v1-zh-hant',
+    src: '/videos/columns/road-rage-freeway-cut-in-sentence-reduced-v1-zh-hant.mp4',
+    poster: '/images/column-videos/road-rage-freeway-cut-in-sentence-reduced-v1-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '白色廂型小貨車切入前方車道、車距急速縮短的畫面',
+    description: '原本跨在左側車道線上的白色廂型小貨車往右斜切，駛入正前方車道。兩側車道的車輛照常行駛，小貨車亮著尾燈擋在正前方，車距迅速縮短，最後車廂後門幾乎占滿畫面中央。這段影片沒有聲音，長約5秒，按下播放後會反覆循環。',
+    disclosure: '這是AI生成的虛構畫面，不是行車紀錄器實錄，也不是依判決認定事實所做的重建。畫面中的距離、車速與時間都只是示意，不能用來判斷任何真實案件的過失責任。',
+    loop: true,
   },
 };
 

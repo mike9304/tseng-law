@@ -19,7 +19,8 @@ import {
   absentOptionalColumnLocales,
   presentOptionalColumnLocales,
 } from '@/data/__tests__/column-alternate-expectations';
-import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
+import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003,
+  ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 
 const sourceMocks = vi.hoisted(() => ({
   readAttorneyProfileSourceRecords: vi.fn<
@@ -208,12 +209,14 @@ describe('sitemap column lastModified', () => {
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
+          + Object.values(ROAD_RAGE_COLUMN_FILES_20261003).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
         511 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
+          + Object.values(ROAD_RAGE_COLUMN_FILES_20261003).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });

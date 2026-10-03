@@ -71,7 +71,7 @@ try {
       assert.equal(initial.currentTime, 0);
       assert.equal(initial.controls, true);
       assert.equal(initial.autoplay, false);
-      assert.equal(initial.loop, false);
+      assert.equal(initial.loop, item.loop === true);
       assert.equal(initial.preload, 'none');
       assert.equal(initial.playsInline, true);
       assert.equal(initial.playbackRate, 1);

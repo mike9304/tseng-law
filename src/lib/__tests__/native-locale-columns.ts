@@ -237,6 +237,14 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
   ],
 } as const;
 
+/** Road-rage judgment series (2026-10-03), published in all four locales with a reviewed looping dashcam-style AI clip. */
+export const ROAD_RAGE_COLUMN_FILES_20261003 = {
+  ko: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
+  en: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
+  ja: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
+  'zh-hant': ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
+} as const;
+
 /** Registered locale-specific batches through 2026-10-03, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
@@ -248,6 +256,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((ROAD_RAGE_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -268,8 +277,10 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const latest: readonly string[] =
-    (COUNTRY_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const latest: readonly string[] = [
+    ...((COUNTRY_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((ROAD_RAGE_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const newest: readonly string[] = [
     ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -289,7 +300,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-03). */
 export function archiveLeadPublicationDate(slug: string): string {
-  const latest = Object.values(COUNTRY_COLUMN_FILES_20261003).flat().map(slugOf);
+  const latest = [...Object.values(COUNTRY_COLUMN_FILES_20261003), ...Object.values(ROAD_RAGE_COLUMN_FILES_20261003)].flat().map(slugOf);
   if (latest.includes(slug)) return '2026-10-03';
   const newest = [
     ...Object.values(EXPERTISE_COLUMN_FILES_20261002),
@@ -332,6 +343,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(EXPERTISE_COLUMN_FILES_20261002),
     ...Object.values(COUNTRY_COLUMN_FILES_20261002),
     ...Object.values(COUNTRY_COLUMN_FILES_20261003),
+    ...Object.values(ROAD_RAGE_COLUMN_FILES_20261003),
   ].flat().map(slugOf),
 );
 

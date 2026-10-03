@@ -20,6 +20,7 @@ export default function ColumnGeneratedVideo({ locale, slug, source = 'column' }
         controls
         playsInline
         muted
+        loop={video.loop === true ? true : undefined}
         preload="none"
         aria-label={video.title}
         aria-describedby={captionId}

@@ -76,4 +76,16 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo('fr', slug)).toBeNull();
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
   });
+
+  it.each(['ko', 'ja', 'en', 'zh-hant'])('loops the reviewed road-rage dashcam scene only after the reader presses play (%s)', (locale) => {
+    const slug = 'taiwan-road-rage-freeway-cut-in-sentence-reduced';
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
+    expect(html).toContain(`road-rage-freeway-cut-in-sentence-reduced-v1-${locale}.mp4`);
+    expect(html).toContain('loop=""');
+    expect(html).toContain('controls=""');
+    expect(html).toContain('preload="none"');
+    expect(html).not.toMatch(/autoplay/i);
+    expect(html).toContain('data-column-video-disclosure');
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+  });
 });

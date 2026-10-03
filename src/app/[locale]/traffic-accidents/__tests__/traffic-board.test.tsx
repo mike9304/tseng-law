@@ -36,6 +36,7 @@ describe('TrafficBoard SSR', () => {
     expect(html).toContain('subject=compensation');
     expect(html).toContain('href="/zh-hant/traffic-accidents?video=1#articles"');
     for (const slug of [
+      'taiwan-road-rage-two-second-stop-taipei-not-enough',
       'taiwan-road-rage-52-seconds-subtracted-case',
       'taiwan-road-rage-freeway-chase-own-dashcam-too',
       'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
@@ -82,7 +83,7 @@ describe('TrafficBoard SSR', () => {
     ]) {
       expect(html).toContain(`href="/zh-hant/columns/${slug}"`);
     }
-    expect(html.match(/data-traffic-board-row/g)).toHaveLength(43);
+    expect(html.match(/data-traffic-board-row/g)).toHaveLength(44);
     expect(html).toMatch(/<time datetime="2026-10-02">/i);
     expect(html).toContain('約7分鐘閱讀');
     expect(html).not.toContain('法律AI助理');
@@ -112,7 +113,7 @@ describe('TrafficBoard SSR', () => {
     expect(empty).toContain('value="不存在的關鍵字"');
 
     const unknown = await render('zh-hant', { subject: 'nonsense', page: '3' });
-    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(43);
+    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(44);
   });
 
   it('escapes the search value', async () => {
@@ -123,13 +124,14 @@ describe('TrafficBoard SSR', () => {
 
   it('marks playable diagrams and reviewed generated scenes as videos', async () => {
     const html = await render('ja');
-    expect(html.match(/data-traffic-board-row/g)).toHaveLength(10);
+    expect(html.match(/data-traffic-board-row/g)).toHaveLength(11);
     // All six Japanese entries now have a reviewed scene or film.
-    expect(html.match(/data-traffic-board-video/g)).toHaveLength(10);
+    expect(html.match(/data-traffic-board-video/g)).toHaveLength(11);
     const filtered = await render('ja', { video: '1' });
-    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(10);
+    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(11);
     expect(filtered).toContain('href="/ja/columns/taiwan-overtaking-accident-liability"');
     expect(filtered).toContain('href="/ja/columns/taiwan-traffic-accident-procedure"');
+    expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-two-second-stop-taipei-not-enough"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-52-seconds-subtracted-case"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-freeway-chase-own-dashcam-too"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-driver-stopped-route-66s-fast-lane"');

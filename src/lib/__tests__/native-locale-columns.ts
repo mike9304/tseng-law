@@ -304,6 +304,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
     '197-taiwan-remaining-property-claim-asset-tracing.md', // family lane b08
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+    '204-taiwan-road-rage-two-second-stop-taipei-not-enough.md', // road-rage series (all four locales)
   ],
   en: [
     '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
@@ -314,6 +315,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
     '200-taiwan-protection-order-foreign-resident.md', // family lane b09
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+    '204-taiwan-road-rage-two-second-stop-taipei-not-enough.md', // road-rage series (all four locales)
   ],
   ja: [
     '202-taiwan-post-employment-non-compete-compensation-japanese.md', // reviewed daily Japan/Vietnam pair
@@ -325,6 +327,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '193-taiwan-science-park-entry-japanese-semiconductor-companies.md', // semiconductor lane b08
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+    '204-taiwan-road-rage-two-second-stop-taipei-not-enough.md', // road-rage series (all four locales)
   ],
   'zh-hant': [
     '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
@@ -348,6 +351,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '198-alimony-after-divorce-civil-code-1057.md', // family lane b09
     '199-child-surname-change-after-divorce.md', // family lane b09
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+    '204-taiwan-road-rage-two-second-stop-taipei-not-enough.md', // road-rage series (all four locales)
   ],
   vi: [
     '203-taiwan-change-employer-broker-jobbuying-fees.md', // reviewed daily Japan/Vietnam pair

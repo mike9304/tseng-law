@@ -211,6 +211,7 @@ describe('loadTrafficCollection (published files)', () => {
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
         'taiwan-racing-no-contact-joint-tort-liability',
+        'taiwan-car-accident-work-loss-rest-note',
         'taiwan-accident-police-records',
         'taiwan-retaliatory-driving-rear-ended-intentional-injury',
         'taiwan-traffic-accident-procedure',

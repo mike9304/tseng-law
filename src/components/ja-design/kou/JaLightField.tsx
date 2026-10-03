@@ -11,14 +11,16 @@ import l from './JaLight.module.css';
 export default function JaLightField({ children }: { children: ReactNode }) {
   return (
     <div className={l.wrap} data-ja-light="">
-      <div className={l.field} aria-hidden="true">
-        <picture>
-          <source media="(max-width: 767px)" srcSet={KOU.wall.morningMobile} type="image/webp" />
-          <source srcSet={`${KOU.wall.morning960} 960w, ${KOU.wall.morning} 1920w`} sizes="100vw" type="image/webp" />
-          {/* eslint-disable-next-line @next/next/no-img-element -- pre-encoded webp still, served as is */}
-          <img className={l.still} src={KOU.wall.morning} alt="" width={1920} height={1080} loading="lazy" decoding="async" />
-        </picture>
-        <JaSequence className={l.canvas} />
+      <div className={l.track} aria-hidden="true">
+        <div className={l.field}>
+          <picture>
+            <source media="(max-width: 767px)" srcSet={KOU.wall.morningMobile} type="image/webp" />
+            <source srcSet={`${KOU.wall.morning960} 960w, ${KOU.wall.morning} 1920w`} sizes="100vw" type="image/webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element -- pre-encoded webp still, served as is */}
+            <img className={l.still} src={KOU.wall.morning} alt="" width={1920} height={1080} loading="lazy" decoding="async" />
+          </picture>
+          <JaSequence className={l.canvas} />
+        </div>
       </div>
       <div className={l.content}>{children}</div>
     </div>

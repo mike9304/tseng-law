@@ -11,7 +11,8 @@
   gap: var(--ja-gap);
   margin-top: 56px;
 }
-.tile { display: flex; flex-direction: column; gap: 12px; }
+.tile { display: flex; flex-direction: column; gap: 12px; container-type: inline-size; }
+.f1Left { container-type: inline-size; }
 .f1 { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px var(--ja-gap); align-items: start; }
 .f1Left { grid-column: 1 / span 6; display: flex; flex-direction: column; gap: 12px; }
 .f1Right { grid-column: 7 / -1; }
@@ -29,10 +30,12 @@
   gap: 0 0.12em;
   margin: 8px 0 0;
   font-family: var(--ja-display);
-  font-size: var(--ja-fs-num-fee);
+  font-size: min(var(--ja-fs-num-fee), 19cqi);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.02em;
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
   font-variant-numeric: lining-nums proportional-nums;
   color: var(--ja-ink);
 }

@@ -3,12 +3,12 @@
  * The wall is a sticky backdrop (layout, not motion); the canvas sequence draws the light walking across it.
  */
 .wrap { position: relative; isolation: isolate; background: #e9ecef; }
+/* The sticky wall lives in an absolute track the size of the wrapper, so it can never slide past the wrapper's end. */
+.track { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .field {
   position: sticky;
   top: var(--hdr);
-  z-index: 0;
   height: calc(100svh - var(--hdr));
-  margin-bottom: calc((100svh - var(--hdr)) * -1);
   overflow: clip;
 }
 .field picture { position: absolute; inset: 0; display: block; }
@@ -91,4 +91,4 @@
   .textRow { margin-top: 56px; font-size: 17px; }
 }
 @media (forced-colors: active) { .rule { background: Highlight; } .shadow { display: none; } }
-@media print { .field { display: none; } }
+@media print { .track { display: none; } }

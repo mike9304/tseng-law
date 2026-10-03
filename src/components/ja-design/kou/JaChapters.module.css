@@ -434,12 +434,11 @@
 
 /* =========================== C12 closing: dusk =========================== */
 .closing { position: relative; isolation: isolate; --runway: 0px; background: #fff3ea; }
+.backdropTrack { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .backdrop {
   position: sticky;
   top: var(--hdr);
-  z-index: 0;
   height: calc(100svh - var(--hdr));
-  margin-bottom: calc((100svh - var(--hdr)) * -1);
   overflow: clip;
 }
 .backdrop picture { position: absolute; inset: 0; display: block; }
@@ -584,4 +583,4 @@
 @media (max-width: 899px) and (prefers-reduced-motion: no-preference) {
   .capsule { transition: translate 300ms var(--ja-ease), opacity 300ms var(--ja-ease); }
 }
-@media print { .capsule { display: none !important; } .backdrop { display: none; } }
+@media print { .capsule { display: none !important; } .backdropTrack { display: none; } }

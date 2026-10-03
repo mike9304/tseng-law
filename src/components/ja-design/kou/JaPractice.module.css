@@ -15,6 +15,7 @@
 .indexList {
   writing-mode: vertical-rl;
   display: flex;
+  flex-direction: column; /* in vertical-rl the block axis runs right to left: one vertical line per area */
   gap: 18px;
   margin: 0;
   padding: 0;
@@ -87,6 +88,7 @@
   }
   .indexList {
     writing-mode: horizontal-tb;
+    flex-direction: row;
     gap: 4px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;

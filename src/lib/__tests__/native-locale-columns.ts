@@ -292,12 +292,16 @@ export const ROAD_RAGE_COLUMN_FILES_20261003 = {
   'zh-hant': ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md', '109-taiwan-road-rage-baseball-bat-fracture-damages.md', '122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md'],
 } as const;
 
-/** Native semiconductor board columns published 2026-10-04 (batch b06). */
+/** Native semiconductor and traffic columns published 2026-10-04. */
 export const COUNTRY_COLUMN_FILES_20261004 = {
   ko: ['168-taiwan-gold-card-semiconductor-talent-korean-engineers.md'],
   en: ['170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md'],
   ja: ['169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md'],
-  'zh-hant': ['171-taiwan-ic-design-cross-border-patent-licensing-disputes.md'],
+  'zh-hant': [
+    '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
+    '172-taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence.md',
+    '173-taiwan-manhole-pothole-road-authority-utility-internal-recourse.md',
+  ],
 } as const;
 
 /** Registered locale-specific batches through 2026-10-04, in filename order. */

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import { getColumnPost, getAllColumnPosts } from '../columns';
@@ -15,13 +16,15 @@ describe('reviewed rental-repair compensation column', () => {
     expect(body).toContain('不能據此宣稱租期與修車日期已逐日吻合');
   });
 
-  it('automatically joins the compensation collection without a false video or language copy', () => {
+  it('automatically joins the compensation collection with its reviewed video and no language copy', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(p => p.slug === slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: 'compensation', hasVideo: false, columnNumber: 86, aiAuthored: true });
+    expect(matches[0]).toMatchObject({ subject: 'compensation', hasVideo: true, columnNumber: 86, aiAuthored: true });
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', q: '租車單' })).map(p => p.slug)).toEqual([slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', video: '1' })).some(p => p.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', video: '1' })).some(p => p.slug === slug)).toBe(true);
+    // 2026-10-03: reviewed generated video; no diagram frontmatter.
+    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('repair-workshop-v1-zh-hant');
     expect(getColumnPost(slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
   });

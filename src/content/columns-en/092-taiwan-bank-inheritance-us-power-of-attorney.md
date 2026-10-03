@@ -1,5 +1,6 @@
 ---
 title: "Inheriting a Taiwan Bank Account From the U.S.: What to Check Before Signing a Power of Attorney"
+seoTitle: "Inheriting a Taiwan Bank Account from the US"
 author: "legal-ai-assistant"
 summary: "Before signing a power of attorney in the U.S., confirm the Taiwan bank’s inheritance requirements, the agent’s powers, and the document-authentication route."
 published: "2026-10-03"

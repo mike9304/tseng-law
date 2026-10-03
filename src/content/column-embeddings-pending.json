@@ -1,6 +1,6 @@
 {
   "reason": "API embedding calls are not authorized. These published columns use the existing public text-search index; genuine vectors may be backfilled only with future authorization.",
-  "recordedAt": "2026-10-01",
+  "recordedAt": "2026-10-03",
   "columns": [
     {
       "locale": "zh-hant",
@@ -461,6 +461,54 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-gas-station-tanker-reversing-beeper-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-roadside-starting-parking-exit-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-chain-rear-end-first-impact-evidence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-bus-sudden-braking-passenger-carrier-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-accident-stop-dialogue-hit-and-run-evidence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-borrowed-car-owner-driver-key-custody-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-car-repair-cost-estimate-parts-depreciation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-mediation-delayed-injury-rescission"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-accident-assessment-secondary-cause-compensation-ratio"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-car-accident-work-loss-rest-note"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-accident-family-care-necessity-period"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-car-repair-rental-cost-repair-period-evidence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-retaliatory-driving-rear-ended-intentional-injury"
     }
   ]
 }

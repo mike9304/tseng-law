@@ -192,12 +192,45 @@ export const DOMESTIC_ZH_COLUMN_FILES_20261001 = {
 
 /** Independently authored audience columns, including a domestic Taiwan addition. */
 export const COUNTRY_COLUMN_FILES_20261002 = {
-  'zh-hant': ['072-taiwan-lane-change-side-rear-collision-liability.md', '073-taiwan-right-turn-car-straight-motorcycle-evidence.md', '074-taiwan-flashing-red-yellow-intersection-liability.md', '075-taiwan-car-door-opening-motorcycle-liability.md'],
+  'zh-hant': [
+    '072-taiwan-lane-change-side-rear-collision-liability.md',
+    '073-taiwan-right-turn-car-straight-motorcycle-evidence.md',
+    '074-taiwan-flashing-red-yellow-intersection-liability.md',
+    '075-taiwan-car-door-opening-motorcycle-liability.md',
+    '076-taiwan-roadside-starting-parking-exit-liability.md',
+    '077-taiwan-chain-rear-end-first-impact-evidence.md',
+    '078-taiwan-bus-sudden-braking-passenger-carrier-liability.md',
+    '079-taiwan-accident-stop-dialogue-hit-and-run-evidence.md',
+    '080-taiwan-borrowed-car-owner-driver-key-custody-liability.md',
+    '081-taiwan-car-repair-cost-estimate-parts-depreciation.md',
+    '082-taiwan-mediation-delayed-injury-rescission.md',
+    '083-taiwan-accident-assessment-secondary-cause-compensation-ratio.md',
+    '084-taiwan-car-accident-work-loss-rest-note.md',
+  ],
   vi: ['070-taiwan-employer-broker-passport-arc-return.md'],
   ja: ['071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md'],
 } as const;
 
-/** Every 2026-09-30 column file of `locale` (041–048 expertise + 050 traffic) plus the 2026-10-01 051, in filename order. */
+/** Native audience and traffic columns published 2026-10-03 (085–093). */
+export const COUNTRY_COLUMN_FILES_20261003 = {
+  'ko': [
+    '091-taiwan-distributor-trademark-registration-korean-brand.md',
+  ],
+  'en': [
+    '092-taiwan-bank-inheritance-us-power-of-attorney.md',
+  ],
+  'zh-hant': [
+    '085-taiwan-accident-family-care-necessity-period.md',
+    '086-taiwan-car-repair-rental-cost-repair-period-evidence.md',
+    '087-taiwan-retaliatory-driving-rear-ended-intentional-injury.md',
+    '088-taiwan-racing-no-contact-joint-tort-liability.md',
+    '089-taiwan-truck-blocking-multiple-dashcam-evidence.md',
+    '090-green-light-red-light-pedestrian-third-person.md',
+    '093-taiwan-gas-station-tanker-reversing-beeper-liability.md',
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-03, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -207,6 +240,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -222,11 +256,13 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date: the 2026-10-01 column(s) in source
- * (filename) order, then the 2026-09-30 batch in source order. Use this for newest-first ordering assertions;
+ * Archive lead of `locale`, newest first by date through 2026-10-03, with same-day
+ * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const latest: readonly string[] =
+    (COUNTRY_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const newest: readonly string[] = [
     ...((EXPERTISE_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -237,14 +273,17 @@ export function archiveLeadSlugsFor(locale: string): string[] {
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   // Same calendar day → source (filename) order, matching sortColumnPostsNewestFirst.
+  const latestSlugs = [...latest].sort().map(slugOf);
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  const head = [...newestSlugs, ...newerSlugs];
+  const head = [...latestSlugs, ...newestSlugs, ...newerSlugs];
   return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
-/** Publication date of an archive-lead slug: 2026-10-01 for the newer column(s), otherwise 2026-09-30. */
+/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-03). */
 export function archiveLeadPublicationDate(slug: string): string {
+  const latest = Object.values(COUNTRY_COLUMN_FILES_20261003).flat().map(slugOf);
+  if (latest.includes(slug)) return '2026-10-03';
   const newest = [
     ...Object.values(EXPERTISE_COLUMN_FILES_20261002),
     ...Object.values(COUNTRY_COLUMN_FILES_20261002),
@@ -285,6 +324,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(DOMESTIC_ZH_COLUMN_FILES_20261001),
     ...Object.values(EXPERTISE_COLUMN_FILES_20261002),
     ...Object.values(COUNTRY_COLUMN_FILES_20261002),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261003),
   ].flat().map(slugOf),
 );
 

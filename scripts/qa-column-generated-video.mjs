@@ -17,6 +17,12 @@ const allCases = [
     trafficBoard: false,
     disclosure: { fr: 'Scène fictive générée par IA', de: 'Fiktive, KI-generierte Szene', es: 'Escena ficticia generada con IA', pt: 'Cena fictícia gerada por IA', it: 'Scena fittizia generata con IA' }[locale],
   })),
+  ...['ko', 'en', 'zh-hant'].map(locale => ({
+    locale, slug: 'taiwan-left-turn-vs-straight-motorcycle', id: `left-turn-scooter-v1-${locale}`,
+    duration: 4, contactTime: 1.2, expectedDiagrams: 1,
+    disclosure: { ko: '비접촉 사고를 재현한 영상이 아닙니다', en: 'not a reconstruction of any judgment', 'zh-hant': '不是文中無接觸摔車案的重建' }[locale],
+  })),
+  { locale: 'zh-hant', slug: 'taiwan-flashing-red-yellow-intersection-liability', id: 'flashing-intersection-v1-zh-hant', duration: 4, contactTime: 1.2, expectedDiagrams: 1, disclosure: '與文內兩段式示意圖是不同設定' },
   { locale: 'zh-hant', slug: 'green-light-red-light-pedestrian-third-person', id: 'pedestrian-third-person-v1-zh-hant', duration: 4, contactTime: 1.15, expectedDiagrams: 0, disclosure: '非本文夜間事故或法院勘驗影像的重建' },
   { locale: 'zh-hant', slug: 'taiwan-gas-station-tanker-reversing-beeper-liability', id: 'tanker-reversing-v1-zh-hant', duration: 4, contactTime: 0.8, expectedDiagrams: 0, disclosure: '非本文凌晨事故或判決勘驗影像的重建' },
   { locale: 'zh-hant', slug: 'taiwan-lane-change-side-rear-collision-liability', id: 'lane-change-v3-zh-hant', duration: 4, contactTime: 0.85, disclosure: '非真實事故或本文判決的重建' },

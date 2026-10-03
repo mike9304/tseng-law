@@ -754,5 +754,261 @@
         "text": "即使對方負全部過失，損害項目仍須證明。 事故關聯、數額及已領給付的扣除另行核對。"
       }
     ]
+  },
+  "column/ko/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-ko",
+    "src": "/videos/columns/overtaking-evidence-film-v1-ko.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "추월 조건과 사고 뒤 확인할 증거",
+    "description": "추월 금지 조건과 신호·간격, 가상의 복귀 중 접촉, 손상 사진과 원본 영상 보존, 도로·시간·과실 자료 검토를 잇는 100초 무음 영상입니다.",
+    "disclosure": "AI로 만든 가상 인물·차량·자료입니다. 두 승용차의 접촉은 본문의 익명 오토바이 사고와 별개인 설명용 설정입니다. 신호·양보·거리 요건을 실제로 충족했다는 증거가 아니며, 모형의 간격은 실측값이 아닙니다. 손상 촬영은 이후 주차장에서 하는 장면으로 사고 당시 차량 위치를 보여 주지 않습니다. 영상은 제101조의 일부 요건과 자료 확인 과정을 요약하며, 전체 요건은 본문과 공식 규정에서 확인해야 합니다.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "추월 전에 확인할 조건",
+        "text": "추월 금지 표지·표시와 도로·교통 상황을 먼저 확인합니다. 마주 오는 차량이 접근하거나 앞차 두 대 이상이 연속 주행하면 추월할 수 없습니다."
+      },
+      {
+        "start": 10,
+        "title": "같은 차로의 추월 신호",
+        "text": "추월이 허용될 때 짧은 경적 두 번 또는 전조등 한 번으로 알립니다. 앞차의 양보를 기다리고 반복 신호로 양보를 강요하지 않습니다."
+      },
+      {
+        "start": 20,
+        "title": "측면 간격과 복귀 순서",
+        "text": "좌측 신호를 켜고 앞차 왼쪽으로 0.5m 이상 간격을 두어 지나갑니다. 안전거리를 확보한 뒤 우측 신호를 켜고 원래 차로로 복귀합니다."
+      },
+      {
+        "start": 30,
+        "title": "복귀 중 접촉한 가상 장면",
+        "text": "앞서 간 차량이 충분한 거리를 두지 않고 차로로 돌아옵니다. 이 접촉 장면만으로 실제 사건의 과실 비율을 정할 수는 없습니다."
+      },
+      {
+        "start": 40,
+        "title": "손상 부위와 차량 전체",
+        "text": "안전한 장소에서 손상 부위와 전체 차량을 기록합니다. 어느 차량의 어느 부분이 닿았는지 원본 자료와 맞춰 봅니다."
+      },
+      {
+        "start": 50,
+        "title": "충돌 전후의 원본 영상",
+        "text": "연속 영상과 원본 파일·시간 정보를 보존합니다. 충돌 장면만 잘라 보면 앞선 신호와 차량 움직임을 놓칠 수 있습니다."
+      },
+      {
+        "start": 60,
+        "title": "사고 당시의 도로 상태",
+        "text": "차로 구성과 표지·표시, 시야를 가린 요소를 확인합니다. 현재 사진과 사고 당시의 도로 상태가 같은지도 살펴봅니다."
+      },
+      {
+        "start": 70,
+        "title": "신호·진입·접촉의 순서",
+        "text": "충돌 전 신호와 차로 진입·접촉 순서를 원본으로 확인합니다. 속도·거리는 영상의 기준 자료 없이 숫자로 단정하지 않습니다."
+      },
+      {
+        "start": 80,
+        "title": "과실을 판단할 자료",
+        "text": "위반 여부만으로 과실 비율이 정해지지는 않습니다. 시야·시간·회피 가능성과 불리한 자료도 함께 검토합니다."
+      },
+      {
+        "start": 90,
+        "title": "사례의 결론과 개별 검토",
+        "text": "익명 사례의 결론은 그 사건의 사실관계에 한정됩니다. 자신의 사건은 증거와 최신 법령을 바탕으로 검토합니다."
+      }
+    ]
+  },
+  "column/en/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-en",
+    "src": "/videos/columns/overtaking-evidence-film-v1-en.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Overtaking conditions and evidence after a collision",
+    "description": "This silent 100-second film connects overtaking restrictions, signals and spacing, a fictional cut-back collision, damage photographs, original recordings and review of road conditions, timing and fault.",
+    "disclosure": "Fictional AI-generated people, vehicles and records. The two-car contact is separate from the anonymous motorcycle case in the article. It does not prove compliance with signaling, yielding or distance requirements; the models are not calibrated. Damage photographs are taken later in a parking area and do not show original crash positions. The film summarizes selected Article 101 requirements and evidence checks; consult the article and official rule for all conditions.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Check before overtaking",
+        "text": "Check no-overtaking signs, markings, road and traffic conditions. Do not overtake with approaching traffic or two or more cars in line ahead."
+      },
+      {
+        "start": 10,
+        "title": "Same-lane warning and yielding",
+        "text": "Where allowed: two short horn sounds or flash the headlights once. Wait for the front driver to yield; do not force yielding with repeated signals."
+      },
+      {
+        "start": 20,
+        "title": "Side clearance and the return",
+        "text": "Signal left and pass on the left, leaving at least 0.5 m clearance. Gain a safe distance, then signal right and return to the original lane."
+      },
+      {
+        "start": 30,
+        "title": "A fictional cut-back collision",
+        "text": "The passing car returns before leaving enough space ahead. This contact alone cannot determine fault shares in a real case."
+      },
+      {
+        "start": 40,
+        "title": "Damage and the whole vehicle",
+        "text": "Photograph damaged areas and the whole car in a safe place. Compare contact points on both vehicles with original records."
+      },
+      {
+        "start": 50,
+        "title": "Original footage before and after",
+        "text": "Preserve continuous recordings, original files and time information. A crash-only extract can omit earlier signals and vehicle movements."
+      },
+      {
+        "start": 60,
+        "title": "Road conditions at the time",
+        "text": "Check lane layout, signs, markings and obstructions to the view. Check whether current photographs match conditions when the crash occurred."
+      },
+      {
+        "start": 70,
+        "title": "Signals, lane entry and contact",
+        "text": "Use original recordings to establish the sequence before impact. Do not assign speeds or distances without a reliable basis for measurement."
+      },
+      {
+        "start": 80,
+        "title": "Evidence relevant to fault",
+        "text": "A traffic violation alone does not set a fixed percentage of fault. Review visibility, timing, possible avoidance and unfavorable evidence too."
+      },
+      {
+        "start": 90,
+        "title": "Read each case on its facts",
+        "text": "The anonymous case's conclusion depends on its particular facts. Review your own case using its evidence and the current law."
+      }
+    ]
+  },
+  "column/ja/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-ja",
+    "src": "/videos/columns/overtaking-evidence-film-v1-ja.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-ja.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "追越しの条件と事故後に確認する証拠",
+    "description": "追越しの禁止条件と合図・間隔、車線復帰時の架空の接触、損傷の撮影、原本の保存、道路・時間・過失に関する資料の確認をたどる100秒の無音映像です。",
+    "disclosure": "人物・車両・資料はAIで作成した架空の設定です。乗用車2台の接触は、本文の匿名のオートバイ事故とは別の説明用場面です。合図・進路を譲る行為・距離の要件を満たした証拠ではなく、模型の間隔も実測値ではありません。損傷の撮影は後日の駐車場で行う設定で、事故当時の車両位置を示しません。第101条の一部の要件と資料確認を要約した映像のため、全要件は本文と公式規定で確認してください。",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "追越し前の条件確認",
+        "text": "追越し禁止の標識・標示と道路・交通の状況を確認します。 対向車が接近する場合や、前方に2台以上が連続して走る場合は追越し禁止です。"
+      },
+      {
+        "start": 10,
+        "title": "同一車線での合図と譲り",
+        "text": "追越しが許される場合、短い警音2回か前照灯の合図1回で知らせます。 前車が進路を譲るのを待ち、合図の繰返しで強要しません。"
+      },
+      {
+        "start": 20,
+        "title": "側方間隔と復帰の順序",
+        "text": "左の合図を出し、前車の左側を0.5m以上の間隔で通過します。 安全な距離を確保してから右の合図を出し、元の車線に戻ります。"
+      },
+      {
+        "start": 30,
+        "title": "車線復帰時の架空の接触",
+        "text": "追越し車が十分な距離を取らずに元の車線へ戻ります。 この接触場面だけで実際の事件の過失割合は決められません。"
+      },
+      {
+        "start": 40,
+        "title": "損傷箇所と車両全体",
+        "text": "安全な場所で損傷箇所と車両全体を撮影します。 両車のどの部分が接触したのか、原本の資料と照合します。"
+      },
+      {
+        "start": 50,
+        "title": "衝突前後の映像の原本",
+        "text": "連続した映像と元のファイル・時刻情報を保存します。 衝突部分だけの切抜きでは、直前の合図や車の動きを見落とします。"
+      },
+      {
+        "start": 60,
+        "title": "事故当時の道路状況",
+        "text": "車線の構成、標識・標示、視界を遮る物を確認します。 現在の写真が事故当時の道路状況と一致するかも調べます。"
+      },
+      {
+        "start": 70,
+        "title": "合図・進入・接触の順序",
+        "text": "原本の映像で、衝突前の合図と車線進入・接触の順序を確認します。 測定の根拠なしに、速度や距離を数値で断定しません。"
+      },
+      {
+        "start": 80,
+        "title": "過失判断に必要な資料",
+        "text": "交通違反の有無だけで過失割合が決まるわけではありません。 視界・時間・回避の可能性と、不利な資料も併せて検討します。"
+      },
+      {
+        "start": 90,
+        "title": "事例の結論と個別の検討",
+        "text": "匿名事例の結論は、その事件の具体的な事実に基づきます。 自分の事件は、その証拠と最新の法令を基に検討します。"
+      }
+    ]
+  },
+  "column/zh-hant/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-zh-hant",
+    "src": "/videos/columns/overtaking-evidence-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "超車條件與事故後應確認的證據",
+    "description": "這段100秒無聲影片依序呈現超車限制、示警與間隔、假想的回切碰撞、車損拍照、原始影像保存，以及道路、時間與過失資料的檢視。",
+    "disclosure": "人物、車輛與資料均由AI生成。兩部轎車的接觸是獨立的假想情境，並非重現本文匿名機車事故。畫面不能證明示警、允讓或距離要件已獲遵守，模型間隔也不是實測值。車損拍照設定在事後的停車場，並非事故原始車位。影片摘要第101條部分要件與資料檢視流程，完整條件仍須閱讀本文及官方規定。",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "超車前先確認條件",
+        "text": "先查看禁止超車的標誌、標線及道路、交通狀況。 對向有來車交會或前行車連貫兩輛以上時，不得超車。"
+      },
+      {
+        "start": 10,
+        "title": "同一車道的示警與允讓",
+        "text": "在允許超車的情況下，先短按喇叭兩次或變換燈光一次。 等前車允讓後才超越，不得連續示警迫使前車讓路。"
+      },
+      {
+        "start": 20,
+        "title": "側向間隔與駛回順序",
+        "text": "顯示左方向燈，從前車左側保持半公尺以上間隔超過。 到達安全距離後，再顯示右方向燈駛回原行路線。"
+      },
+      {
+        "start": 30,
+        "title": "假想的回切接觸",
+        "text": "超越車尚未留出足夠距離，就駛回原行路線。 單憑這段接觸畫面，不能認定真實案件的過失比例。"
+      },
+      {
+        "start": 40,
+        "title": "損傷部位與全車照片",
+        "text": "在安全地點拍下損傷部位及車輛全貌。 比對兩車的接觸位置，並核對原始資料。"
+      },
+      {
+        "start": 50,
+        "title": "保存碰撞前後的原始影像",
+        "text": "保留連續影像、原始檔案與時間資訊。 只截取碰撞片段，可能漏掉先前的示警與車輛動態。"
+      },
+      {
+        "start": 60,
+        "title": "事故當時的道路狀況",
+        "text": "確認車道配置、標誌標線及遮蔽視線的因素。 也要查明目前照片是否符合事故當時的路況。"
+      },
+      {
+        "start": 70,
+        "title": "示警、切入與接觸的順序",
+        "text": "以原始影像確認碰撞前示警、進入車道及接觸的先後。 欠缺可靠的測量基礎時，不宜直接推定速度或距離數值。"
+      },
+      {
+        "start": 80,
+        "title": "判斷過失所需的資料",
+        "text": "有無違規，並不直接決定固定的過失比例。 視線、時間、避讓可能性及不利資料都應一併檢視。"
+      },
+      {
+        "start": 90,
+        "title": "案例結論與個別檢視",
+        "text": "匿名案例的結論，限於該案的具體事實。 自己的案件仍須依證據與最新法令個別判斷。"
+      }
+    ]
   }
 }

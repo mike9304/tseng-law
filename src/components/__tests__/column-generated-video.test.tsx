@@ -56,7 +56,7 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')?.src).not.toBe(asset?.src);
   });
 
-  it.each(Object.entries(overtakingCaptions))('renders the overtaking illustration with its %s caption without applying it to other content', (locale, caption) => {
+  it.each(Object.entries(overtakingCaptions).filter(([locale]) => !['ko', 'en', 'zh-hant', 'ja'].includes(locale)))('renders the overtaking illustration with its %s caption without applying it to other content', (locale, caption) => {
     const slug = 'taiwan-overtaking-accident-liability';
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
     const asset = getColumnGeneratedVideo(locale, slug);
@@ -71,6 +71,28 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
     expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')?.src).not.toBe(asset?.src);
     expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
+  });
+
+  it.each([
+    ['ko', '익명 오토바이 사고와 별개'],
+    ['en', 'separate from the anonymous motorcycle case'],
+    ['ja', '匿名のオートバイ事故とは別'],
+    ['zh-hant', '並非重現本文匿名機車事故'],
+  ])('serves one 100-second overtaking film with case boundaries and ten chapters in %s', (locale, disclosure) => {
+    const slug = 'taiwan-overtaking-accident-liability';
+    const asset = getColumnGeneratedVideo(locale, slug);
+    expect(asset?.src).toBe(`/videos/columns/overtaking-evidence-film-v1-${locale}.mp4`);
+    expect(asset?.durationSeconds).toBe(100);
+    expect(asset?.sceneCount).toBe(10);
+    expect(asset?.chapters?.map(chapter => chapter.start)).toEqual([0, 10, 20, 30, 40, 50, 60, 70, 80, 90]);
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} autoPlay />);
+    expect(html.match(/<video/g)).toHaveLength(1);
+    expect(html).toContain('controls=""');
+    expect(html).toContain('muted=""');
+    expect(html).toContain('data-column-video-chapter="1"');
+    expect(html).toContain(disclosure);
+    expect(html).not.toContain('loop=');
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
   });
 
   it.each([

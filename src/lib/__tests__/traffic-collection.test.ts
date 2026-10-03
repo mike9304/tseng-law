@@ -204,6 +204,7 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-car-repair-rental-cost-repair-period-evidence',
         'taiwan-truck-blocking-multiple-dashcam-evidence',
         'taiwan-gas-station-tanker-reversing-beeper-liability',
+        'green-light-red-light-pedestrian-third-person',
       ].includes(item.slug);
       expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');

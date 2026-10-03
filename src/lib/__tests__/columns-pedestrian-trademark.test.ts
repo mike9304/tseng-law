@@ -8,11 +8,11 @@ const trademark = 'taiwan-distributor-trademark-registration-korean-brand';
 const inheritance = 'taiwan-bank-inheritance-us-power-of-attorney';
 
 describe('native pedestrian and Korean trademark publication', () => {
-  it('classifies the pedestrian case once as liability without an invented video', () => {
+  it('classifies the pedestrian case once as liability with its reviewed generated video', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
-    expect(collection.filter(p => p.slug === pedestrian)).toMatchObject([{ subject: 'liability', hasVideo: false, columnNumber: 90, aiAuthored: true }]);
+    expect(collection.filter(p => p.slug === pedestrian)).toMatchObject([{ subject: 'liability', hasVideo: true, columnNumber: 90, aiAuthored: true }]);
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'liability', q: '第三人' })).map(p => p.slug)).toContain(pedestrian);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ video: '1' })).some(p => p.slug === pedestrian)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ video: '1' })).some(p => p.slug === pedestrian)).toBe(true);
     expect(getColumnPost(pedestrian, 'zh-hant')?.diagramVideo).toBeUndefined();
   });
 

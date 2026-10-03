@@ -32,6 +32,10 @@ const sceneLabels = {
 const context = args.context || 'traffic';
 if (!['traffic', 'scene'].includes(context)) throw new Error('--context must be traffic or scene');
 const labels = context === 'scene' ? sceneLabels : trafficLabels;
+const labelWidth = Number(args['label-width'] || 780);
+if (!Number.isInteger(labelWidth) || labelWidth < 460 || labelWidth > 1232) {
+  throw new Error('--label-width must be an integer from 460 to 1232 pixels');
+}
 if (!args.input || !/^[a-z0-9][a-z0-9-]+$/.test(args.id || '') || !labels[args.locale]) {
   throw new Error(`--input=<local mp4> --id=<versioned-asset-id> --locale=<${Object.keys(labels).join('|')}> required`);
 }
@@ -50,7 +54,7 @@ const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'column-video-label-'));
 try {
   const [title, subtitle, font] = labels[args.locale];
   const overlay = path.join(temp, 'label.png');
-  const svg = `<svg width="780" height="92" xmlns="http://www.w3.org/2000/svg"><rect width="780" height="92" rx="7" fill="#101714" fill-opacity="0.8"/><text x="20" y="36" font-family="${font}, sans-serif" font-size="26" fill="white">${title}</text><text x="20" y="69" font-family="Arial, sans-serif" font-size="19" fill="white">${subtitle}</text></svg>`;
+  const svg = `<svg width="${labelWidth}" height="92" xmlns="http://www.w3.org/2000/svg"><rect width="${labelWidth}" height="92" rx="7" fill="#101714" fill-opacity="0.8"/><text x="20" y="36" font-family="${font}, sans-serif" font-size="26" fill="white">${title}</text><text x="20" y="69" font-family="Arial, sans-serif" font-size="19" fill="white">${subtitle}</text></svg>`;
   await sharp(Buffer.from(svg)).png().toFile(overlay);
   // Preserve the complete source frame when the generator returns a slightly different ratio.
   execFileSync('ffmpeg', ['-v', 'error', '-i', input, '-i', overlay, '-filter_complex', '[0:v:0]scale=1280:720:force_original_aspect_ratio=decrease:flags=lanczos,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1[base];[base][1:v]overlay=24:24:format=auto,format=yuv420p[v]', '-map', '[v]', '-an', '-c:v', 'libx264', '-crf', '22', '-preset', 'slow', '-movflags', '+faststart', output], { stdio: 'inherit' });
@@ -58,7 +62,7 @@ try {
   const probe = JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration,size:stream=index,codec_name,codec_type,width,height,nb_frames', '-of', 'json', output], { encoding: 'utf8' }));
   if (probe.streams.length !== 1 || probe.streams[0].codec_type !== 'video' || probe.streams[0].width !== 1280 || probe.streams[0].height !== 720) throw new Error('Expected a silent 1280x720 video-only output');
   const sha256 = crypto.createHash('sha256').update(await fs.readFile(output)).digest('hex');
-  const result = { id: stem, input, output, poster, sha256, context, label: title, ...probe, status: 'packaged-awaiting-final-visual-review' };
+  const result = { id: stem, input, output, poster, sha256, context, label: title, labelWidth, ...probe, status: 'packaged-awaiting-final-visual-review' };
   if (args.report) await fs.writeFile(path.resolve(args.report), JSON.stringify(result, null, 2) + '\n');
   console.log(JSON.stringify(result, null, 2));
 } finally {

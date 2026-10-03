@@ -103,6 +103,16 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     description: 'Un’auto blu scuro arriva rapidamente da sinistra e tampona un’auto bianca ferma. Il cofano dell’auto blu si deforma; l’auto bianca viene spinta in avanti e poi si ferma. Il video dura quattro secondi ed è senza audio.',
     disclosure: 'Scena fittizia generata con IA, non la ripresa di un incidente reale. Strada, velocità, distanze e momento dell’urto sono scelte illustrative e non consentono di stabilire la responsabilità in un caso concreto.',
   },
+  'column/zh-hant/green-light-red-light-pedestrian-third-person': {
+    id: 'pedestrian-third-person-v1-zh-hant',
+    src: '/videos/columns/pedestrian-third-person-v1-zh-hant.mp4',
+    poster: '/images/column-videos/pedestrian-third-person-v1-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '車頭碰上穿越斑馬線的行人，行人隨後倒地',
+    description: '銀色轎車向畫面右側行駛，車頭碰到正在穿越斑馬線的行人後停住。行人失去平衡，雙手撐地、坐倒路面；另外兩人留在對側人行道上。這是4秒無聲影片。',
+    disclosure: 'AI生成的白天假想場景，非本文夜間事故或法院勘驗影像的重建。路形、人物位置、碰撞部位及動作時間均為設定；畫面未呈現號誌，不能用來認定燈號、駕駛視線、反應時間、實際傷勢或法律責任。',
+  },
   'column/zh-hant/taiwan-gas-station-tanker-reversing-beeper-liability': {
     id: 'tanker-reversing-v1-zh-hant',
     src: '/videos/columns/tanker-reversing-v1-zh-hant.mp4',

@@ -356,7 +356,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: 'A white box truck cuts into the lane ahead and the gap closes fast',
-    description: 'A white box truck straddling the line with the left lane angles to the right and moves into the lane directly ahead. As cars in the side lanes carry on, the truck settles in front with its rear lights on and the gap shrinks quickly until its rear doors fill the middle of the view. The clip is silent, about 5 seconds long, and loops once played.',
+    description: 'A white box truck straddling the line between the lane ahead and the lane to its left angles to the right and moves fully into the lane directly ahead. As cars in the side lanes carry on, the truck settles in front with its rear lights on and the gap shrinks quickly until its rear doors fill the middle of the view. The clip is silent, about 5 seconds long, and loops once played.',
     disclosure: 'This is a fictional AI-generated scene, not dashcam footage and not a reconstruction of the facts found in the judgment. Distances, speeds and timing are illustrative only and cannot be used to judge fault in any real case.',
     loop: true,
   },

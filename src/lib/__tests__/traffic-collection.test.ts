@@ -238,6 +238,8 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-road-rage-baseball-bat-fracture-damages',
         'taiwan-parking-wheelstop-latch-service-safety-causation',
         'taiwan-road-rage-reversing-into-tailgater-no-self-defense',
+        'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence',
+        'taiwan-manhole-pothole-road-authority-utility-internal-recourse',
         'taiwan-accident-family-care-necessity-period',
         'taiwan-car-accident-work-loss-rest-note',
       ].includes(item.slug);

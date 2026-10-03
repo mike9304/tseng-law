@@ -9,13 +9,13 @@ const articles = [
 ] as const;
 
 describe('video timing and road maintenance columns', () => {
-  it.each(articles)('finds $slug once in its native subject, without a video or translated fallback', (a) => {
+  it.each(articles)('finds $slug once in its native subject, with its reviewed film and no translated fallback', (a) => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(post => post.slug === a.slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: a.subject, columnNumber: a.number, hasVideo: false, publicationDate: '2026-10-04' });
+    expect(matches[0]).toMatchObject({ subject: a.subject, columnNumber: a.number, hasVideo: true, publicationDate: '2026-10-04' });
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: a.subject, q: matches[0].title })).map(post => post.slug)).toEqual([a.slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ video: '1' })).some(post => post.slug === a.slug)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ video: '1' })).some(post => post.slug === a.slug)).toBe(true);
     expect(pending.columns.filter(post => post.slug === a.slug)).toEqual([{ locale: 'zh-hant', slug: a.slug }]);
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(post => post.slug === a.slug)).toBe(false);
   });

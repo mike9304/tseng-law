@@ -6,7 +6,13 @@ import { chromium } from '@playwright/test';
 const base = process.env.TRAFFIC_FILM_QA_BASE || 'http://127.0.0.1:4598';
 const out = process.env.TRAFFIC_FILM_QA_OUT || '/tmp/traffic-film-qa';
 const registry = JSON.parse(await fs.readFile(new URL('../src/data/traffic-column-films.json', import.meta.url), 'utf8'));
-const films = Object.fromEntries(Object.entries(registry).filter(([key]) => !process.env.TRAFFIC_FILM_QA_SLUG || key.endsWith(`/${process.env.TRAFFIC_FILM_QA_SLUG}`)));
+const selectedLocales = process.env.TRAFFIC_FILM_QA_LOCALES?.split(',').map(value => value.trim()).filter(Boolean);
+const films = Object.fromEntries(Object.entries(registry).filter(([key]) =>
+  (!process.env.TRAFFIC_FILM_QA_SLUG || key.endsWith(`/${process.env.TRAFFIC_FILM_QA_SLUG}`)) &&
+  (!selectedLocales || selectedLocales.includes(key.split('/')[1]))
+));
+const concurrency = Number(process.env.TRAFFIC_FILM_QA_CONCURRENCY || 8);
+assert.ok(Number.isInteger(concurrency) && concurrency >= 1 && concurrency <= 8, 'QA concurrency must be 1–8');
 assert.ok(Object.keys(films).length, 'No film matched the QA selection');
 await fs.mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true });
@@ -14,7 +20,7 @@ const results = [];
 const failures = [];
 const jobs = Object.entries(films).flatMap(([key, film]) => [1440, 390].map(width => ({ key, film, width })));
 try {
-  await Promise.all(jobs.map(async ({ key, film, width }) => {
+  const runJob = async ({ key, film, width }) => {
     const [source, locale, slug] = key.split('/');
     const url = `${base}/${locale}/columns/${source === 'issue' ? 'issues/' : ''}${slug}`;
     const stem = `${film.id}-${width}`;
@@ -92,6 +98,10 @@ try {
       await page.screenshot({ path: `${out}/${stem}-failure.png` }).catch(() => {});
       console.log(JSON.stringify(failures.at(-1)));
     } finally { await context.close(); }
+  };
+  let nextJob = 0;
+  await Promise.all(Array.from({ length: Math.min(concurrency, jobs.length) }, async () => {
+    while (nextJob < jobs.length) await runJob(jobs[nextJob++]);
   }));
   const assets = [];
   for (const film of Object.values(films)) {
@@ -118,6 +128,6 @@ try {
   await video.press('Space');
   await page.waitForFunction(() => document.querySelector('[data-column-generated-video] video')?.currentTime > 0.2);
   await context.close();
-  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: failures.length === 0, base, checkedAt: new Date().toISOString(), results, failures, assets, reducedMotionManualPlayback: true }, null, 2));
+  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: failures.length === 0, base, checkedAt: new Date().toISOString(), concurrency, selectedLocales, results, failures, assets, reducedMotionManualPlayback: true }, null, 2));
   assert.deepEqual(failures, []);
 } finally { await browser.close(); }

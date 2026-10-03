@@ -68,7 +68,10 @@ try {
       await video.press('Space');
       const started = Date.now();
       for (let chapter = 1; chapter <= film.sceneCount; chapter++) {
-        await page.waitForFunction(({ id, time }) => document.querySelector(`[data-column-generated-video="${id}"] video`)?.currentTime >= time, { id: film.id, time: (chapter - 1) * 10 + 4 }, { timeout: 20000 });
+        const start = film.chapters[chapter - 1].start;
+        const end = film.chapters[chapter]?.start ?? film.durationSeconds;
+        const sampleTime = start + Math.min(4, (end - start) / 2);
+        await page.waitForFunction(({ id, time }) => document.querySelector(`[data-column-generated-video="${id}"] video`)?.currentTime >= time, { id: film.id, time: sampleTime }, { timeout: 20000 });
         const caption = figure.locator(`[data-column-video-chapter="${chapter}"]`);
         assert.ok((await caption.textContent()).includes(film.chapters[chapter - 1].text));
         assert.ok(await caption.evaluate(el => parseFloat(getComputedStyle(el).fontSize) >= 16));

@@ -1,18 +1,43 @@
-/* en team page (Opus 5.5 en lane, 2026-10-01). Team cards: EnAbout.module.css (.team). */
-.lawyers :global(.attorney-team-section) { border-top: none; padding-top: 56px; }
-.lawyers :global(.attorney-facts-section) { padding: 72px 0 88px; background: #fff; border-top: 1px solid var(--en-ink); }
-.lawyers :global(.attorney-facts-section .section-title) { font-family: var(--en-display) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; color: var(--en-ink); }
-.lawyers :global(.attorney-facts-section .attorney-card-section) { display: grid; grid-template-columns: minmax(10em, 0.35fr) minmax(0, 1fr); gap: 6px 32px; padding: 18px 0; border-top: 1px solid var(--en-line); }
-.lawyers :global(.attorney-facts-section .attorney-card-section p) { margin: 0; font-size: 16.5px; line-height: 1.65; color: var(--en-text); }
-@media (max-width: 767px) {
-  .lawyers :global(.attorney-team-section) { padding-top: 40px; }
-  .lawyers :global(.attorney-facts-section) { padding: 48px 0 56px; }
-  .lawyers :global(.attorney-facts-section .attorney-card-section) { grid-template-columns: minmax(0, 1fr); }
+/* en team page, Clear Night (CONCEPT-V2 12.3; en-pages lane 2026-10-03). Team cards: EnAbout.module.css (.team). */
+
+/* Title card, then the band (moved after it by order; it is decorative), then the team and the key facts. */
+.lawyers { display: flex; flex-direction: column; }
+.lawyers > * { order: 2; min-width: 0; }
+.lawyers > :global(.page-header) { order: 0; }
+.lawyers > .bandSlot { order: 1; }
+
+.lawyers.lawyers :global(.attorney-team-section) { padding-top: 120px; }
+.lawyers.lawyers :global(.attorney-team-section .container) > :first-child { margin-top: 0; }
+
+/* "Attorney Wei Tseng — Key Facts" as a credits list on black: label 14 grey, value 21, no rules. */
+.lawyers.lawyers :global(.attorney-facts-section) { padding: 160px 0; background: #000; border: 0; color: var(--en-white); }
+.lawyers.lawyers :global(.attorney-facts-section .section-title) {
+  margin: 0 0 64px;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-m2);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  color: var(--en-white);
 }
-/* Three staff cards share one row at wide sizes (no lone card with an empty half-row). */
-@media (min-width: 1200px) {
-  .lawyers :global(.attorney-staff-grid) { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
-  .lawyers :global(.attorney-staff-grid .attorney-card--sub) { align-content: start; }
-  .lawyers :global(.attorney-staff-grid .attorney-card--sub [class*='identity']) { grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
-  .lawyers :global(.attorney-staff-grid .attorney-card--sub .attorney-card-photo--sub) { width: 112px; height: 140px; }
+.lawyers.lawyers :global(.attorney-facts-section .attorney-card-section) {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.lawyers.lawyers :global(.attorney-facts-section .attorney-card-section + .attorney-card-section) { margin-top: 40px; }
+.lawyers.lawyers :global(.attorney-facts-section .attorney-card-label) { grid-column: 1 / span 3; margin: 0; padding-top: 5px; font-family: var(--en-text); font-size: 14px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--en-grey-2); }
+.lawyers.lawyers :global(.attorney-facts-section .attorney-card-section p) { grid-column: 4 / span 9; margin: 0; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-white); }
+
+@media (max-width: 767px) {
+  .lawyers.lawyers :global(.attorney-team-section) { padding-top: 72px; }
+  .lawyers.lawyers :global(.attorney-facts-section) { padding: 96px 0; }
+  .lawyers.lawyers :global(.attorney-facts-section .section-title) { margin-bottom: 40px; }
+  .lawyers.lawyers :global(.attorney-facts-section .attorney-card-section) { grid-template-columns: minmax(0, 1fr); }
+  .lawyers.lawyers :global(.attorney-facts-section .attorney-card-label),
+  .lawyers.lawyers :global(.attorney-facts-section .attorney-card-section p) { grid-column: 1 / -1; }
+  .lawyers.lawyers :global(.attorney-facts-section .attorney-card-section p) { font-size: 17px; }
 }

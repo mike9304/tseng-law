@@ -457,6 +457,10 @@
     {
       "locale": "en",
       "slug": "taiwan-bank-inheritance-us-power-of-attorney"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-gas-station-tanker-reversing-beeper-liability"
     }
   ]
 }

@@ -201,7 +201,20 @@
 
 /* ---------- Section rhythm and type (§3.3) ---------- */
 .v.v[data-ja-v2] :global(.section) { padding-block: var(--ja-sec); }
-.v.v[data-ja-v2] :global(.section-label) { display: none; }
+/* English eyebrows (ABOUT, SERVICES, OUR TEAM …) are hidden on ja (D7); Japanese section labels stay as quiet labels. */
+.v.v[data-ja-v2] :global(.section-label[data-builder-surface-key='section-label']) { display: none; }
+.v.v[data-ja-v2] :global(.section-label) {
+  display: block;
+  margin: 0 0 16px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ja-grey);
+}
+.v.v[data-ja-v2] :global(.section-label)::before { display: none; }
+/* Shared blocks wrapped in <Reveal> show at once on V2 pages; the page's own entrances take over. */
+:global(html.js) .v.v[data-ja-v2] :global(.reveal),
+:global(html.js) .v.v[data-ja-v2] :global(.reveal-stagger > *) { opacity: 1; transform: none; pointer-events: auto; transition: none; }
 .v.v[data-ja-v2] :global(.section-title) {
   margin: 0 0 clamp(20px, 2.4vw, 36px);
   padding: 0;
@@ -252,6 +265,8 @@
   color: var(--ja-ink);
   font-size: 19px;
   font-weight: 600;
+  justify-content: flex-start;
+  text-align: left;
 }
 .v.v[data-ja-v2] :global(:is(.button.secondary, .button.ghost, .button--outline)):hover { background: transparent; color: var(--ja-ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .v.v[data-ja-v2] :global(:is(.button.secondary, .button.ghost, .button--outline))::after,
@@ -432,6 +447,42 @@ a.tile:active { background: var(--ja-tile-press); }
 @media (forced-colors: active) {
   .tile { border: 1px solid CanvasText; }
   .railLink::after { background: Highlight; }
+}
+
+/* ---------- Contact blocks (ContactBlocks on about and contact): tiles ---------- */
+.v.v[data-ja-v2] :global(.contact-grid) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ja-gap);
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+.v.v[data-ja-v2] :global(.contact-grid > .card) {
+  margin: 0;
+  padding: var(--ja-pad);
+  border: 0;
+  border-radius: var(--ja-r);
+  box-shadow: none;
+  background: var(--ja-tile);
+}
+.v.v[data-ja-v2] :global(.contact-grid .card-title) {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--ja-ink);
+}
+.v.v[data-ja-v2] :global(.contact-grid .card-copy) { margin: 0 0 8px; font-size: 17px; line-height: 1.8; color: var(--ja-text); }
+.v.v[data-ja-v2] :global(.contact-list) { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.v.v[data-ja-v2] :global(.contact-list li) { margin: 0; padding: 0; font-size: 17px; line-height: 1.8; color: var(--ja-text); }
+.v.v[data-ja-v2] :global(.contact-list li)::before { content: none; }
+.v.v[data-ja-v2] :global(.contact-grid a.link-underline) { color: var(--ja-ink); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+@media (max-width: 767px) { .v.v[data-ja-v2] :global(.contact-grid) { grid-template-columns: minmax(0, 1fr); } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .v.v[data-ja-v2] :global(.contact-grid > .card:nth-child(odd)) { animation: jaSlideL linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+    .v.v[data-ja-v2] :global(.contact-grid > .card:nth-child(even)) { animation: jaSlideR linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+  }
 }
 
 /* ---------- Closing tile (dusk light) ---------- */

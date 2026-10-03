@@ -1,55 +1,111 @@
 /*
- * ja about (Opus 5.5 ja lane, 2026-10-01). FirmIntroductionSection / AttorneyProfileSection /
- * ContactBlocks markup unchanged: the firm story becomes a two-column 沿革 layout (identity on
- * the left, dated paragraphs on a gold rule on the right); contact blocks become ruled panels.
+ * ja about, 昊 V2 (2026-10-02; CONCEPT-V2 §9). The name as two giant kanji tiles (昊 lit by the noon wall,
+ * 鼎 on the plain tile), then the history with each year at display size beside its own paragraph.
+ * Team tiles come from JaTeam.module.css, contact tiles from JaPagesV2.module.css.
  */
-.root:global(#ja-about) :global(.firm-intro-section) { background: #fff; padding: clamp(56px, 6vw, 96px) 0; }
-.root:global(#ja-about) :global(.firm-intro-section > .container > .section-label) { margin-bottom: 18px; }
-.root:global(#ja-about) :global(.firm-intro-card) {
-  display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); grid-template-rows: auto auto auto 1fr;
-  gap: 0 clamp(32px, 5vw, 72px); padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent;
+.root { --about-year: clamp(88px, 11vw, 160px); }
+
+.firm { padding-block: var(--ja-sec); }
+.firmTitle {
+  margin: 0;
+  font-size: clamp(30px, 3.9vw, 56px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
 }
-.root:global(#ja-about) :global(.firm-intro-logo-wrap) { grid-column: 1; grid-row: 1; margin: 8px 0 32px 8px; }
-.root:global(#ja-about) :global(.firm-intro-logo-wrap) { position: relative; width: 132px; height: 132px; padding: 0; background: transparent; }
-/* The green logo card is replaced by the red seal on paper; the image stays in the DOM (alt text) but is not painted. */
-.root:global(#ja-about) :global(.firm-intro-logo-wrap img) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-.root:global(#ja-about) :global(.firm-intro-logo-wrap)::before {
-  content: ''; position: absolute; inset: 0; border-radius: 50%; background: #fff url('/images/brand/hovering-seal-official.png') 50% 50% / 68% no-repeat;
-  box-shadow: 0 0 0 1px var(--ja-line-strong), 0 0 0 7px var(--ja-paper), 0 0 0 8px var(--ja-shu);
+.firmLede { margin: 20px 0 0; max-width: 34em; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.85; color: var(--ja-text); }
+
+/* 昊 / 鼎 */
+.names { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ja-gap); margin-top: clamp(40px, 5vw, 72px); }
+.name {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  display: grid;
+  align-content: space-between;
+  min-height: clamp(300px, 38vw, 560px);
+  margin: 0;
+  padding: var(--ja-pad);
+  border-radius: var(--ja-r);
+  background: var(--ja-tile);
 }
-.root:global(#ja-about) :global(.firm-intro-title) {
-  grid-column: 1; grid-row: 2; margin: 0 0 14px; font-size: clamp(24px, 2.2vw, 30px); font-weight: 700; letter-spacing: 0.1em; color: var(--ja-ink);
+.nameSky { background: #eef0f1; }
+.nameLight {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url('/images/editorial/ja-kou-wall-noon.webp') 46% 40% / cover no-repeat;
 }
-.root:global(#ja-about) :global(.firm-intro-subtitle) { grid-column: 1; grid-row: 3; margin: 0; font-size: 15px; line-height: 1.95; color: var(--ja-sub); }
-.root:global(#ja-about) :global(.firm-intro-source) { grid-column: 1; grid-row: 4; align-self: start; margin: 20px 0 0; font-size: 13px; }
-.root:global(#ja-about) :global(.firm-intro-source a) { color: var(--ja-sub); }
-.root:global(#ja-about) :global(.firm-intro-source a) { display: inline-flex; align-items: center; min-height: 44px; }
-.root:global(#ja-about) :global(.firm-intro-body) {
-  grid-column: 2; grid-row: 1 / span 4; position: relative; margin: 0; padding-left: 32px; border-left: 1px solid var(--ja-gold);
+.glyph {
+  font-family: var(--ja-mincho);
+  font-size: clamp(120px, 25vw, 360px);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ja-ink);
 }
-.root:global(#ja-about) :global(.firm-intro-body p) { position: relative; margin: 0 0 24px; font-size: 15.5px; line-height: 2; color: var(--ja-text); }
-.root:global(#ja-about) :global(.firm-intro-body p:last-child) { margin-bottom: 0; }
-.root:global(#ja-about) :global(.firm-intro-body p)::before {
-  content: ''; position: absolute; left: -37px; top: 0.72em; width: 9px; height: 9px; background: #fff; border: 2px solid var(--ja-gold);
+.caption {
+  margin-top: 24px;
+  font-size: clamp(19px, 1.8vw, 26px);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--ja-ink);
 }
 
-/* Contact blocks: paper band, ruled cards */
-.root:global(#ja-about) :global(.reveal > .section) { background: var(--ja-paper); }
-.root:global(#ja-about) :global(.contact-grid) { gap: 20px; }
-.root:global(#ja-about) :global(.contact-grid .card) { padding: 26px 28px; border-top: 2px solid var(--ja-green); }
-.root:global(#ja-about) :global(.contact-grid .card-title) { font-size: 18px; font-weight: 700; letter-spacing: 0.08em; color: var(--ja-ink); }
+/* History */
+.history { margin-top: clamp(56px, 7vw, 112px); }
+.entry {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--ja-gap);
+  align-items: start;
+  padding-block: clamp(28px, 3.4vw, 48px);
+}
+.yearCol { grid-column: 1 / span 5; }
+.year {
+  margin: 0;
+  font-family: var(--ja-mincho);
+  font-size: var(--about-year);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-variant-numeric: lining-nums proportional-nums;
+  color: var(--ja-ink);
+}
+.rule { display: block; width: 72px; height: 3px; margin-top: 22px; background: var(--ja-shu); transform-origin: left; }
+.text {
+  grid-column: 6 / span 7;
+  max-width: 34em;
+  margin: 0;
+  font-size: clamp(17px, 1.35vw, 19px);
+  line-height: 1.95;
+  color: var(--ja-text);
+}
+.source { margin: clamp(24px, 3vw, 40px) 0 0; }
+.source a { font-size: 17px; color: var(--ja-grey); }
 
-@media (max-width: 900px) {
-  .root:global(#ja-about) :global(.firm-intro-card) { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
-  .root:global(#ja-about) :global(.firm-intro-logo-wrap),
-  .root:global(#ja-about) :global(.firm-intro-title),
-  .root:global(#ja-about) :global(.firm-intro-subtitle),
-  .root:global(#ja-about) :global(.firm-intro-source),
-  .root:global(#ja-about) :global(.firm-intro-body) { grid-column: 1; grid-row: auto; }
-  .root:global(#ja-about) :global(.firm-intro-body) { margin-top: 28px; padding-left: 24px; }
-  .root:global(#ja-about) :global(.firm-intro-body p)::before { left: -29px; }
-  .root:global(#ja-about) :global(.firm-intro-source) { order: 5; }
+@media (max-width: 1023px) {
+  .entry { grid-template-columns: minmax(0, 1fr); row-gap: 20px; }
+  .yearCol, .text { grid-column: 1; }
 }
 @media (max-width: 767px) {
-  .root:global(#ja-about) :global(.contact-grid .card) { padding: 22px 18px; }
+  .root { --about-year: 88px; }
+  .names { gap: 12px; }
+  .name { min-height: 240px; }
+  .glyph { font-size: 34vw; }
+  .caption { font-size: 17px; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rule { animation: aboutDraw linear both; animation-timeline: view(); animation-range: entry 40% cover 40%; }
+    .nameLight { animation: aboutSettle linear both; animation-timeline: view(); animation-range: entry 0% cover 50%; }
+  }
+}
+@keyframes aboutDraw { from { scale: 0 1; } to { scale: 1 1; } }
+@keyframes aboutSettle { from { scale: 1.08; translate: 0 3%; } to { scale: 1; translate: 0 0; } }
+@media (forced-colors: active) {
+  .name { border: 1px solid CanvasText; }
+  .rule { background: Highlight; }
 }

@@ -91,7 +91,7 @@ describe('intent landing EN/JA contact paths', () => {
     },
   );
 
-  it.each(['ko', 'zh-hant'] as const)(
+  it.each(['ko'] as const)(
     'keeps the %s page header as keyword chips without the EN/JA header contact actions',
     (locale) => {
       const html = renderLanding(locale, 'taiwan-lawyer');
@@ -102,6 +102,25 @@ describe('intent landing EN/JA contact paths', () => {
       expect(header).not.toContain('Email about your Taiwan matter');
       expect(header).not.toContain('台湾の法律問題をメールで相談');
       expect(header).not.toContain(`href="/${locale}/pricing"`);
+    },
+  );
+
+  // zh-hant Apple pass (2026-10-03): the zh header carries its own email pill and 收費標準 link
+  // (ZhHantIntentHeaderActions, existing labels), like the other zh pages; the EN/JA block stays out.
+  it.each(generalIntentPageSlugs)(
+    'gives the zh-hant %s header the zh email action and keyword chips, not the EN/JA header block',
+    (slug) => {
+      const html = renderLanding('zh-hant', slug);
+      const header = pageHeaderHtml(html);
+
+      expect(html).toContain('id="zh-hant-intent"');
+      expect(header).toContain('intent-chip');
+      expect(header).toContain(`href="${htmlHref(getConsultationPublicMailto('zh-hant'))}"`);
+      expect(header).toContain('>電子郵件諮詢</a>');
+      expect(header).toContain('href="/zh-hant/pricing"');
+      expect(header).not.toContain('class="contact-email-actions"');
+      expect(header).not.toContain('Email about your Taiwan matter');
+      expect(header).not.toContain('台湾の法律問題をメールで相談');
     },
   );
 });

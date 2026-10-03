@@ -23,7 +23,14 @@ const stopDialogueCaptions = JSON.parse(await fs.readFile(new URL('../src/data/s
 const keyCustodyCaptions = JSON.parse(await fs.readFile(new URL('../src/data/key-custody-video-captions.json', import.meta.url), 'utf8'));
 const reverseDashcamCaptions = JSON.parse(await fs.readFile(new URL('../src/data/reverse-dashcam-video-captions.json', import.meta.url), 'utf8'));
 const cutInDashcamCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cut-in-dashcam-video-captions.json', import.meta.url), 'utf8'));
+const batThreatLoopCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bat-threat-loop-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(batThreatLoopCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-road-rage-baseball-bat-fracture-damages',
+    id: `road-rage-baseball-bat-fracture-damages-v4-${locale}`,
+    duration: 15.041667, contactTime: 4.5, expectedDiagrams: 0, loop: true,
+    disclosure: caption.disclosure,
+  })),
   ...Object.entries(cutInDashcamCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-road-rage-freeway-cut-in-sentence-reduced',
     id: `road-rage-freeway-cut-in-sentence-reduced-v4-${locale}`,

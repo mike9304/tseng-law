@@ -1,0 +1,25 @@
+# Lane-change and chain-collision films
+
+Each Traditional Chinese column receives one 94-second silent MP4, composed of a native four-second event and nine distinct ten-second explanations. Codex generated new reference images for a parked car's indicator and a comparison of front/rear recordings; Grok 4.7 generated the new ten-second shots. The previously reviewed Grok event sources were copied without altering their speed. Existing articles and their separate technical diagrams remain unchanged.
+
+Both full source articles were read. Relevant current primary provisions were checked: Road Traffic Safety Rules [109](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=109), [98](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=98), [99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=99), [94](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94), and [Civil Code 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217). The films add no case-specific award, percentage or finality claim, and do not reconstruct the cited judgments. The original court discussions remain in the articles.
+
+| Reviewed material | Issue | Final treatment | Meaning preserved |
+| --- | --- | --- | --- |
+| Lane-change indicator | A separate lamp shot could be mistaken for proof of signaling in the event. | Explicitly describe the shot as a different parked-car example. Keep signaling before and until completion, with no invented seconds-to-enter rule. | Signaling alone does not establish yielding or safe entry. |
+| Road and vehicle scope | An abbreviated yielding rule could omit the Article 98 road-count conditions or apply it indiscriminately to motorcycles. | Retain the two-or-more same-direction-lanes condition, excluded lane categories and sign/marking rules. Disclose the motorcycle Article 99 distinction. | The film's event depicts passenger cars only. |
+| Impact point and reaction | Rear-corner damage, one second or a prior percentage could become a universal fault test. | Require continuous relative-position and reaction evidence; keep missing information uncertain and preserve conditional reduction or exemption under Article 217. | Neither lane-change completion nor a fixed share follows from one frame. |
+| Chain sequence | The opening might imply that the last car always causes every contact. | Label it as one hypothetical sequence. Distinguish each visible contact, later displacement, damage provenance, memory and observations. | The alternative order remains possible; the final positions alone do not establish the first impact. |
+| Following and braking | Fixed spacing or stopping could imply immunity; the sudden-event exception could disappear. | Preserve Article 94's intended-overtaking exception, no fixed metres, no coercive following, sudden-necessity exception and advance-warning/duty-to-watch requirements. | Middle vehicles still have distinct duties toward front and rear traffic. |
+| Recording comparison | Separate camera times could be treated as synchronized. | Retain originals, sources and filenames; mark clock differences and work on copies. | A sound or bodily jolt count does not establish the contact count. |
+
+New clips were visually sampled throughout at 2 fps. The parked-indicator clip has a slight camera pullback, rather than the requested perfectly fixed camera; its car remains stationary and its indicator pulses. Both four-second event sources were re-inspected at 5 fps and retain the earlier 97-frame review provenance. Full final ten-chapter sheets and actual 390px lane chapter-2 and 1440px chain chapter-3 screenshots were read. No new every-frame human-review claim is made. Article hashes match the review ledgers and approved attribution edits remain intact. No decorative bold was introduced.
+
+Both final files fully decoded as H.264, 1280×720, 24 fps, 2,256 frames, exactly 94 seconds, no audio. Body captions remain 36 px in the files. 365 tests passed in 28 files and a clean `.next-lane-chain-films` build passed. `qa/local-lane-change/report.json` and `qa/local-chain-rear-end/report.json` record four complete desktop/mobile journeys: gesture-free autoplay, all ten synchronized captions, native pause/seek and preserved manual pause, reduced-motion manual playback, no errors or overflow, matching whole-file SHA-256 and HTTP 206 ranges. Controls temporarily cover burned-in text; the separate caption stays at least 16 px. The existing language toast can overlap the lower disclosure.
+
+| Film | Bytes | SHA-256 |
+| --- | ---: | --- |
+| Lane change | 10,575,936 | `e8bc69d056fb043aeb7e18c182112a66483bf8b81da3ff048237110761825486` |
+| Chain rear-end | 10,856,212 | `7730b77b43670e3b900eac321911f2cc7c00a380c15443aab51487bc51cf2805` |
+
+Evidence root: `/Users/son7/tseng-law-traffic-films`. Codex completed local final review. Production is still pending the explicit approval requested after automatic review rejected publication; no push or deployment is represented here.

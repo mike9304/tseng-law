@@ -12,6 +12,8 @@ import {
   type TrafficBoardItem,
   type TrafficBoardQuery,
 } from '@/lib/traffic-collection';
+import JaWrap from '@/components/ja-design/JaWrap';
+import jaV2 from '@/components/ja-design/JaPagesV2.module.css';
 import styles from './TrafficBoard.module.css';
 
 /**
@@ -35,6 +37,8 @@ export default function TrafficBoard({ locale, items, query }: {
   const filtered = Boolean(query.q || query.subject || query.video);
   const showVideoFilter = query.video || items.some((item) => item.hasVideo);
   const clearHref = buildTrafficBoardHref(locale, {});
+  // ja only (昊 V2 tiles): titles break between phrases (<wbr> + keep-all); other locales render as before.
+  const ja = locale === 'ja';
 
   return (
     <div className={styles.board} data-traffic-board>
@@ -88,14 +92,15 @@ export default function TrafficBoard({ locale, items, query }: {
       {results.length ? (
         <ul className={styles.list}>
           {results.map((item) => (
-            <li key={item.key} className={styles.row} data-traffic-board-row>
+            // ja only: the subject picks the pale glyph of the ja tile (JaTraffic.module.css); other locales render no attribute.
+            <li key={item.key} className={styles.row} data-traffic-board-row data-ja-subject={ja ? item.subject : undefined}>
               <div className={styles.thumb} aria-hidden="true">
                 {item.image ? (
                   <Image src={item.image} alt="" width={320} height={180} sizes="(max-width: 600px) 96px, 200px" loading="lazy" unoptimized={!item.image.startsWith('/')} />
                 ) : null}
               </div>
               <div className={styles.body}>
-                <h3 className={styles.title}><a href={item.href}>{item.title}</a></h3>
+                <h3 className={ja ? `${styles.title} ${jaV2.ph}` : styles.title}><a href={item.href}>{ja ? <JaWrap text={item.title} /> : item.title}</a></h3>
                 {item.summary ? <p className={styles.summary}>{item.summary}</p> : null}
                 <p className={styles.meta}>
                   <span className={styles.subject}>{subjectLabels[item.subject]}</span>

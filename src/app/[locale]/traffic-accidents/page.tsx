@@ -6,6 +6,7 @@ import { getColumnPost } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
 import { TRAFFIC_DIAGRAM_ID, TRAFFIC_PATH, trafficColumnSlugsFor, trafficHubCopy } from '@/data/traffic-hub';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import JaHeaderBand from '@/components/ja-design/JaHeaderBand';
 import jaTrafficStyles from '@/components/ja-design/JaTraffic.module.css';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import styles from './traffic.module.css';
@@ -24,6 +25,7 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
   if (!isSiteLocale(locale)) notFound();
   const copy = trafficHubCopy[locale];
   const posts = trafficColumnSlugsFor(locale).map(slug => getColumnPost(slug, locale));
+  const ja = locale === 'ja';
   const page = (
     <div className={locale === 'zh-hant' ? `${styles.page} ${zhStyles.zh}` : styles.page}>
       <section className={styles.hero}>
@@ -32,10 +34,12 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
           <h1>{copy.title}</h1>
           <p className={styles.intro}>{copy.description}</p>
           <div className={styles.actions}>
-            <a className={styles.primary} href="#articles">{copy.columns} ↓</a>
-            <Link className={styles.secondary} href={`/${locale}/contact`}>{copy.contact} →</Link>
+            <a className={styles.primary} href="#articles">{copy.columns}{ja ? null : ' ↓'}</a>
+            <Link className={styles.secondary} href={`/${locale}/contact`}>{copy.contact}{ja ? null : ' →'}</Link>
           </div>
         </div>
+        {/* ja 昊 V2 (2026-10-02): the framed patterned-glass band under the header; arrows become CSS chevrons on ja */}
+        {ja ? <JaHeaderBand /> : null}
       </section>
       <div className={styles.container}>
         <section className={styles.visual} aria-labelledby="visual-title">
@@ -43,10 +47,10 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
           <TrafficDiagramFigure diagramId={TRAFFIC_DIAGRAM_ID} locale={locale} />
         </section>
         <section className={styles.section} id="articles" aria-labelledby="articles-title">
-          <div className={styles.heading}><h2 id="articles-title">{copy.columns}</h2><Link href={`/${locale}/columns`}>{copy.allColumns} →</Link></div>
+          <div className={styles.heading}><h2 id="articles-title">{copy.columns}</h2><Link href={`/${locale}/columns`}>{copy.allColumns}{ja ? null : ' →'}</Link></div>
           <div className={styles.articles}>{posts.map((post) => post && (
             <Link className={styles.article} key={post.slug} href={`/${locale}/columns/${post.slug}`}>
-              <h3>{post.title}</h3><p>{post.summary}</p><span className={styles.read}>{copy.read} →</span>
+              <h3>{post.title}</h3><p>{post.summary}</p><span className={styles.read}>{copy.read}{ja ? null : ' →'}</span>
             </Link>
           ))}</div>
         </section>
@@ -55,14 +59,14 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
           <div className={styles.countries}>{copy.countries.map(country => (
             <article key={country.id} className={country.id === 'tw' ? styles.taiwan : undefined}>
               <h3>{country.name}</h3><p>{country.text}</p>
-              {country.href.startsWith('/') ? <Link href={`/${locale}${country.href}`}>{country.linkLabel} →</Link>
+              {country.href.startsWith('/') ? <Link href={`/${locale}${country.href}`}>{country.linkLabel}{ja ? null : ' →'}</Link>
                 : <a href={country.href} target="_blank" rel="noopener noreferrer">{country.linkLabel} ↗</a>}
             </article>
           ))}</div>
         </section>
         <section className={styles.contact} aria-labelledby="contact-title">
           <div><h2 id="contact-title">{copy.contactTitle}</h2><p>{copy.contactText}</p></div>
-          <Link className={styles.primary} href={`/${locale}/contact`}>{copy.contact} →</Link>
+          <Link className={styles.primary} href={`/${locale}/contact`}>{copy.contact}{ja ? null : ' →'}</Link>
         </section>
       </div>
     </div>

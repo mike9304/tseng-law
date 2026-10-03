@@ -7,6 +7,7 @@ const out = process.env.COLUMN_VIDEO_QA_OUT || '/tmp/column-generated-video-qa';
 const generalAccidentCaptions = JSON.parse(await fs.readFile(new URL('../src/data/general-accident-video-captions.json', import.meta.url), 'utf8'));
 const overtakingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/overtaking-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-lowered-height-gantry-state-compensation-driver-fault', id: 'gantry-impact-v1-zh-hant', duration: 4, contactTime: 0.4, expectedDiagrams: 0, disclosure: '並非本文貨櫃車事故或現場設施的重建' },
   ...Object.entries(overtakingCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
     return {

@@ -91,6 +91,7 @@ describe('reviewed column videos', () => {
 
   it.each([
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v3-zh-hant', '橙色車'],
+    ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-impact-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],
     ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-v2-zh-hant', '銀色中間車'],
     ['taiwan-roadside-starting-parking-exit-liability', 'roadside-start-v3-zh-hant', '橙色車'],
     ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-scooter-v2-zh-hant', '機車'],

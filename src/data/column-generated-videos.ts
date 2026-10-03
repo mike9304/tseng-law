@@ -18,6 +18,16 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-lowered-height-gantry-state-compensation-driver-fault': {
+    id: 'gantry-impact-v1-zh-hant',
+    src: '/videos/columns/gantry-impact-v1-zh-hant.mp4',
+    poster: '/images/column-videos/gantry-impact-v1-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '貨廂上緣撞上限高橫桿，貨車隨後停住',
+    description: '藍色駕駛室先從橫桿下方通過，白色貨廂的前端上緣隨即撞上橫桿、向內折損。貨車亮起煞車燈後停住。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立假想場景，並非本文貨櫃車事故或現場設施的重建。車型、橫桿高度、道路與動作時間均為設定，畫面未呈現事故前的高度調整或警示過程，不能用來判斷實際淨高、警示是否足夠或責任比例。',
+  },
   // Independent two-car illustration, not a reconstruction of the article's case.
   ...Object.fromEntries(Object.entries(overtakingCaptions).map(([locale, caption]) => {
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';

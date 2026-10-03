@@ -386,22 +386,30 @@
 @media (min-width: 768px) { .root:global(#ja-traffic) .closingAction { width: fit-content; } }
 
 /* ---------- Narrower screens ---------- */
+/* below 1200 a third of the content is too narrow for a title and its summary: two tiles a row */
 @media (max-width: 1199px) {
-  .root:global(#ja-traffic) .countries { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .root:global(#ja-traffic) .countries,
+  .root:global(#ja-traffic) :global([data-traffic-board] > ul) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* the closing copy stays left of the dusk light square while the tile is a landscape frame */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .root:global(#ja-traffic) :is(.closingTitle, .closingText) { max-width: min(30em, 52%); }
 }
 @media (max-width: 1023px) {
   .root:global(#ja-traffic) { --tr-card-pad: 30px; }
-  .root:global(#ja-traffic) :global([data-traffic-board] > ul) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 767px) {
   .root:global(#ja-traffic) { --tr-card-pad: 24px; --tr-glyph: 200px; }
-  /* 台湾で交通事故に stays on one line down to 320 px; the second tier keeps its authored line whole */
-  .root:global(#ja-traffic) .titleLead { font-size: clamp(32px, 10.4vw, 40px); line-height: 1.2; }
+  /* 台湾で交通事故に stays on one line down to 320 px (even beside a classic scrollbar); the second tier keeps
+     its authored line whole */
+  .root:global(#ja-traffic) .titleLead { font-size: clamp(30px, 10vw, 40px); line-height: 1.2; }
   .root:global(#ja-traffic) .titleSub { margin-top: 0.6em; font-size: clamp(20px, 6.1vw, 24px); }
   .root:global(#ja-traffic) .intro { font-size: 17px; }
   .root:global(#ja-traffic) .actions { flex-direction: column; align-items: stretch; gap: 8px; }
   .root:global(#ja-traffic) .actions > a:last-child { justify-content: center; }
-  .root:global(#ja-traffic) :global([data-traffic-board] > form button) { min-width: 0; padding: 0 20px; }
+  /* the whole placeholder fits beside the button at 320 (16 px keeps iOS from zooming on focus) */
+  .root:global(#ja-traffic) :global([data-traffic-board] > form input[type='search']) { padding: 0 18px; font-size: 16px; }
+  .root:global(#ja-traffic) :global([data-traffic-board] > form button) { min-width: 0; padding: 0 18px; }
   .root:global(#ja-traffic) :global([data-traffic-board] > nav > p) { flex: 1 0 100%; margin: 0; }
   .root:global(#ja-traffic) :global([data-traffic-board] > ul),
   .root:global(#ja-traffic) .countries { grid-template-columns: minmax(0, 1fr); }
@@ -415,14 +423,30 @@
 
 /* ---------- Fusuma entrances (§8.4): fill-mode none, so captures, print and reduced motion show the final state ---------- */
 @supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
+  /* three tiles a row: the first from the left, the third from the right; four country tiles: two and two */
+  @media (prefers-reduced-motion: no-preference) and (min-width: 1200px) {
     .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(3n + 1)),
-    .root:global(#ja-traffic) .countries article:nth-child(odd) {
+    .root:global(#ja-traffic) .countries article:is(:nth-child(4n + 1), :nth-child(4n + 2)) {
       animation: trSlideL linear none;
       animation-timeline: view();
       animation-range: entry 0% entry 70%;
     }
     .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(3n)),
+    .root:global(#ja-traffic) .countries article:is(:nth-child(4n + 3), :nth-child(4n)) {
+      animation: trSlideR linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+  /* two tiles a row */
+  @media (prefers-reduced-motion: no-preference) and (min-width: 768px) and (max-width: 1199px) {
+    .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(odd)),
+    .root:global(#ja-traffic) .countries article:nth-child(odd) {
+      animation: trSlideL linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    .root:global(#ja-traffic) :global([data-traffic-board] > ul > li:nth-child(even)),
     .root:global(#ja-traffic) .countries article:nth-child(even) {
       animation: trSlideR linear none;
       animation-timeline: view();

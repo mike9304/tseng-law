@@ -2955,5 +2955,421 @@
         "text": "寫清直接看見的動作、聽見的聲音，與對速度、動機的推測，資料依法取得。 這是整理建議而非法定清單；另案刑事罪名或刑度，不能補上本案的結論。"
       }
     ]
+  },
+  "column/zh-hant/taiwan-road-rage-freeway-cut-in-sentence-reduced": {
+    "id": "freeway-cut-in-film-v1-zh-hant",
+    "src": "/videos/columns/freeway-cut-in-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/freeway-cut-in-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "林口逼車案：十二秒截圖與四十日拘役",
+    "description": "174秒無聲影片以一段4秒假想及十七段10秒說明，串起匝道標誌、相互爭道證據、量刑上訴與易科罰金條件。",
+    "disclosure": "所有道路、人物、車輛、螢幕、訪談與文件都是各自獨立的AI虛構示例，非林口案現場或卷證。開場僅一次切入減速，沒有重建四次切入、三次急煞、計程車動作或自動煞車；螢幕、紙本圖片不是案件截圖，訪談不是實際警詢。不能由畫面量測車速、校準時鐘或判斷責任。說明依公開判決文字，未取得原始影片與車輛數據；未核實後續上訴、確定或執行。",
+    "durationSeconds": 174,
+    "sceneCount": 18,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "貨車切入後，車距迅速縮短",
+        "text": "開場僅是一次切入與減速的AI假想。 並非林口案重建，也不能證明自動煞車。"
+      },
+      {
+        "start": 4,
+        "title": "爭道之前，已有匝道標誌",
+        "text": "法院認定：2024年2月22日，貨車左轉、計程車右轉進入北上林口交流道口。 貨車明知左轉車應走匝道內側，仍切到外線計程車前方；道路畫面僅為示例。"
+      },
+      {
+        "start": 14,
+        "title": "四次切入、三次急煞，是判決記載",
+        "text": "進入往五股的高速公路後，貨車強行切入四次、急煞三次，並靠近併行迫使讓道。 113審訴716採用起訴書事實；114上訴5567沿用，影片沒有逐次重建。"
+      },
+      {
+        "start": 24,
+        "title": "自動煞車的確認方式，判決未交代",
+        "text": "判決記載計程車感應車輛靠近而啟動自動煞車，但未說明如何查證。 本文未取得作動紀錄、車輛數據或原始影像；不能替判決補上技術鑑定。"
+      },
+      {
+        "start": 34,
+        "title": "證據包含供述、影像與勘驗筆錄",
+        "text": "起訴書列雙方供述、兩張違規通知單、計程車影像與採證照片、檢方勘驗筆錄。 一審另補被告在庭自白；桌上資料與螢幕均為獨立假想，不是卷證。"
+      },
+      {
+        "start": 44,
+        "title": "約十二秒截圖，拍到兩車互不禮讓",
+        "text": "二審引偵卷勘驗筆錄截圖：15:07:56至15:08:08許，兩車爭道、貼近車身。 本段只示意比對資料，未使用或重建本案截圖，也不是法院重新播放影片。"
+      },
+      {
+        "start": 54,
+        "title": "警詢說法，與法院採信範圍分開",
+        "text": "貨車駕駛稱計程車由路肩靠近、貼行約30秒及1至2分，另有3至5次超車。 這些細節是其說法；法院認互相爭道有據，不表示逐項認定其全部敘述。"
+      },
+      {
+        "start": 64,
+        "title": "時刻與鏡頭來源，仍有資料界限",
+        "text": "犯罪事實記約15:10，截圖約15:08；判決未解釋差異，也未指明截圖出自哪車。 不能擅自校準時鐘、計算車速，或把證據清單當成完整影像已公開。"
+      },
+      {
+        "start": 74,
+        "title": "一審認罪後，仍判四月徒刑",
+        "text": "被告偵查時否認，至準備程序認罪；新北地院採簡式審判程序。 2025年3月6日判有期徒刑四月；當時尚未和解，易科罰金以新臺幣1,000元／日。"
+      },
+      {
+        "start": 84,
+        "title": "公共危險與強制，依法處斷",
+        "text": "法院認第185條第1項公共往來危險、304條第1項強制，一行為從較重之185條。 密接多次動作依同一犯意論接續一罪；不是把切入次數直接相加成刑期。"
+      },
+      {
+        "start": 94,
+        "title": "上訴只爭刑度，未重審有罪事實",
+        "text": "被告明示僅爭量刑，依刑訴第348條第3項，二審沿用原判事實、證據與罪名。 改判較輕的刑，不是認定可以逼車，也不是無罪。"
+      },
+      {
+        "start": 104,
+        "title": "計程車的動作，也影響量刑",
+        "text": "二審以截圖與警詢供述相符，認雙方爭道、互不禮讓，貼近阻止對方超車。 被害人對糾紛發生也有部分責任；這是量刑評價，沒有裁定民事比例。"
+      },
+      {
+        "start": 114,
+        "title": "一審漏看的，是對方也在爭道",
+        "text": "第57條要求以行為人責任為基礎，合看動機、刺激、義務違反等一切情狀。 認罪與未和解，一審已考慮；二審指出的是漏看被害人行車，並非新達成和解。"
+      },
+      {
+        "start": 124,
+        "title": "四月徒刑，改為四十日拘役",
+        "text": "2026年1月14日，高院只撤銷刑的部分，改判拘役40日，並非有期徒刑40日。 兩審都認駕駛危及他人安全；同類爭道不保證都獲減刑。"
+      },
+      {
+        "start": 134,
+        "title": "四萬元，只是全數折算的金額",
+        "text": "二審定如易科罰金，以新臺幣1,000元折算一日；40日全數折算為40,000元。 這不是已繳罰金或已給被害人賠償，本文未取得後續執行資料。"
+      },
+      {
+        "start": 144,
+        "title": "易科罰金，須符合第41條",
+        "text": "最重本刑五年以下之罪，宣告六月以下徒刑或拘役者，得依規定易科罰金。 難收矯正之效或難維持法秩序者除外；列出折算標準不等於已准予執行。"
+      },
+      {
+        "start": 154,
+        "title": "行政處分與確定情形，未能確認",
+        "text": "兩張違規單對象、適用條文未載；第43條是背景，兩份刑判未以它裁罰。 二審載送達後20日上訴告知；本文未核實後續上訴、確定或計程車另案處分。"
+      },
+      {
+        "start": 164,
+        "title": "把爭道前後都保留在紀錄裡",
+        "text": "保存原始影片、拍攝來源、檔案時間及前後經過；另列直接所見與各方說法。 對方逼近時自己的動作也可能被記錄；本段整理示例不替代個案證據。"
+      }
+    ]
+  },
+  "column/ko/taiwan-road-rage-freeway-cut-in-sentence-reduced": {
+    "id": "freeway-cut-in-film-v1-ko",
+    "src": "/videos/columns/freeway-cut-in-film-v1-ko.mp4",
+    "poster": "/images/column-videos/freeway-cut-in-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "린커우 끼어들기: 12초 캡처와 구류 40일",
+    "description": "174초 무음 영상입니다. 4초 가상 장면과 10초 장면 17개를 이어 진입로 표지, 양측 운전, 형량 항소와 벌금 전환 조건을 설명합니다.",
+    "disclosure": "도로·인물·차량·화면·면담·서류는 각각 독립된 AI 가상 예시이며 린커우 사건 현장이나 증거가 아닙니다. 도입은 한 번의 끼어들기와 감속만 보여주며 네 번의 끼어들기, 세 번의 급제동, 택시의 동작이나 자동 제동을 재현하지 않습니다. 화면과 인쇄 사진은 사건 캡처가 아니고 면담은 실제 경찰 조사도 아닙니다. 영상으로 속도·시각 보정·책임을 판단할 수 없습니다. 공개 판결에 따른 설명이며 원본 영상과 차량 데이터는 확보하지 않았습니다. 후속 상소·확정·집행은 확인되지 않았습니다.",
+    "durationSeconds": 174,
+    "sceneCount": 18,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "끼어든 화물차와 좁아지는 간격",
+        "text": "도입은 한 번의 끼어들기와 감속을 그린 AI 가상 장면입니다. 린커우 사건 재현이나 자동 제동의 증거가 아닙니다."
+      },
+      {
+        "start": 4,
+        "title": "진입로 표지에서 시작된 사실관계",
+        "text": "2024년 2월 22일, 화물차는 좌회전하고 택시는 우회전해 북행 린커우 진입로에 들어왔습니다. 법원은 화물차가 안쪽 차로 표지를 알면서 바깥 택시 앞으로 들어갔다고 인정했습니다."
+      },
+      {
+        "start": 14,
+        "title": "네 번 끼어들고 세 번 급제동",
+        "text": "법원은 우구 방향에서 네 번의 끼어들기, 세 번의 급제동과 붙어 달린 운전을 인정했습니다. 1심 113審訴716이 채택한 기소장 사실을 2심도 유지했습니다. 영상은 이를 재현하지 않습니다."
+      },
+      {
+        "start": 24,
+        "title": "자동 제동을 어떻게 확인했는지는 미상",
+        "text": "판결에는 접근 감지에 따른 택시 자동 제동이 기록돼 있지만, 확인 방법은 적혀 있지 않습니다. 작동 로그·차량 데이터·원본 영상은 미확보입니다. 기술 감정이 있었다고 단정할 수 없습니다."
+      },
+      {
+        "start": 34,
+        "title": "진술과 영상, 검찰의 검증 조서",
+        "text": "기소장에는 양측 진술, 위반 통지서 두 장, 택시 영상·채증 사진과 검찰 검증 조서가 적혀 있습니다. 1심은 법정 자백을 추가했습니다. 화면과 서류는 실제 기록이 아닌 가상 소품입니다."
+      },
+      {
+        "start": 44,
+        "title": "약 12초의 캡처에 함께 남은 두 차",
+        "text": "2심은 15:07:56~15:08:08 무렵의 수사기록 캡처에서 두 차가 양보하지 않고 붙었다고 봤습니다. 이 장면은 자료 대조 예시입니다. 사건 캡처나 법원의 영상 재생을 재현하지 않았습니다."
+      },
+      {
+        "start": 54,
+        "title": "운전자 설명을 전부 사실로 옮기지 않기",
+        "text": "운전자는 택시가 갓길에서 접근해 약 30초와 1~2분 붙었고 3~5번 추월했다고 진술했습니다. 법원은 상호 진로 다툼을 인정했습니다. 운전자의 세부 설명을 모두 채택했다는 뜻은 아닙니다."
+      },
+      {
+        "start": 64,
+        "title": "시각 차이와 촬영 출처의 한계",
+        "text": "범죄사실은 약 15:10, 캡처는 약 15:08입니다. 시각 차이와 촬영 차량은 판결에 없습니다. 임의로 시계를 맞추거나 속도를 계산할 수 없습니다. 증거 목록은 원본 공개를 뜻하지 않습니다."
+      },
+      {
+        "start": 74,
+        "title": "1심 인정 후에도 징역 4개월",
+        "text": "수사 때 부인하던 피고인은 준비절차에서 인정했고, 신베이지법은 간이 공판으로 심리했습니다. 2025년 3월 6일 징역 4개월. 미합의 상태였고, 벌금 전환은 하루 1,000대만달러 기준입니다."
+      },
+      {
+        "start": 84,
+        "title": "도로의 위험과 안전 운전 방해",
+        "text": "형법 제185조 제1항과 제304조 제1항의 두 죄가 한 행위로 성립해 무거운 제185조로 처벌했습니다. 같은 고의로 가까운 시간에 반복한 동작은 한 죄로 봤습니다. 횟수를 형량에 합산하지 않습니다."
+      },
+      {
+        "start": 94,
+        "title": "형량만 다툰 항소",
+        "text": "형사소송법 제348조 제3항에 따라 2심은 1심의 사실·증거·죄명을 토대로 형만 심리했습니다. 형을 낮춘 것이 위협 운전을 허용하거나 무죄를 선고했다는 뜻은 아닙니다."
+      },
+      {
+        "start": 104,
+        "title": "택시가 양보하지 않은 사정",
+        "text": "2심은 캡처와 경찰 진술을 대조해, 두 차가 양보하지 않고 상대 추월을 막으려 붙었다고 봤습니다. 피해자도 분쟁 발생에 일부 책임이 있다는 양형 판단입니다. 민사 과실 비율은 정하지 않았습니다."
+      },
+      {
+        "start": 114,
+        "title": "1심이 빠뜨린 상대 차량의 운전",
+        "text": "형법 제57조는 행위자 책임을 기초로 동기·자극·의무 위반 등 모든 사정을 살피도록 합니다. 인정과 미합의는 1심도 고려했습니다. 누락된 것은 택시의 운전이었고 새 합의는 없었습니다."
+      },
+      {
+        "start": 124,
+        "title": "징역 4개월에서 구류 40일로",
+        "text": "2026년 1월 14일 고등법원은 형 부분만 파기해 구류 40일로 바꿨습니다. 징역 40일이 아닙니다. 두 법원 모두 타인을 위험하게 한 운전으로 봤습니다. 비슷한 다툼의 감형을 보장하지 않습니다."
+      },
+      {
+        "start": 134,
+        "title": "전부 전환할 때의 4만 대만달러",
+        "text": "2심은 벌금 전환 시 하루 1,000대만달러를 정했습니다. 40일 전부라면 4만 대만달러입니다. 이미 낸 벌금이나 피해자 배상액이 아닙니다. 후속 집행 자료는 확보하지 않았습니다."
+      },
+      {
+        "start": 144,
+        "title": "벌금 전환에는 제41조 조건이 있습니다",
+        "text": "최고형이 5년 이하인 죄로 6개월 이하 징역 또는 구류를 선고받으면 법에 따라 전환할 수 있습니다. 교정 효과나 법질서 유지가 어려우면 예외입니다. 환산 기준이 실제 집행 허가를 뜻하지 않습니다."
+      },
+      {
+        "start": 154,
+        "title": "행정처분과 확정 여부는 확인되지 않음",
+        "text": "위반 통지서 두 장의 대상·근거는 미상입니다. 제43조는 배경이며 이 판결의 제재는 아닙니다. 2심은 송달 후 20일 상소를 안내합니다. 후속 상소·확정·택시의 별도 처분은 미확인입니다."
+      },
+      {
+        "start": 164,
+        "title": "다투기 전후의 기록을 함께 보관",
+        "text": "원본 영상, 촬영 출처, 시각과 전후 경위를 보관하고 직접 본 내용과 각자의 설명을 나눠 적습니다. 상대가 다가올 때 자신의 움직임도 기록될 수 있습니다. 이 정리 장면은 개별 사건 증거가 아닙니다."
+      }
+    ]
+  },
+  "column/en/taiwan-road-rage-freeway-cut-in-sentence-reduced": {
+    "id": "freeway-cut-in-film-v1-en",
+    "src": "/videos/columns/freeway-cut-in-film-v1-en.mp4",
+    "poster": "/images/column-videos/freeway-cut-in-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Linkou cut-ins: screenshots and a reduced sentence",
+    "description": "A silent 174-second film joins a four-second fictional opening and seventeen ten-second scenes on the ramp sign, both drivers’ conduct, sentence-only appeal and fine-conversion conditions.",
+    "disclosure": "Every road, person, vehicle, screen, interview and document is an independent AI-generated illustration, not the Linkou location or court evidence. The opening shows one cut-in and slowing sequence, not the four cut-ins, three brakes, taxi movements or automatic-braking activation. Screens and printed images are not case screenshots, and the conversation is not a police interview. These images establish no speed, clock calibration or liability. Explanations follow public judgments; no original recording or vehicle data was obtained. Later appeals, finality and execution remain unverified.",
+    "durationSeconds": 174,
+    "sceneCount": 18,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "A cut-in closes the gap",
+        "text": "The opening is one fictional AI-generated cut-in and slowing sequence. It does not reconstruct Linkou or prove automatic braking."
+      },
+      {
+        "start": 4,
+        "title": "A lane sign at the ramp entrance",
+        "text": "22 February 2024: the truck turned left, the taxi right into the northbound Linkou ramp. The court found the truck ignored the inner-lane sign to enter ahead of the taxi."
+      },
+      {
+        "start": 14,
+        "title": "Four cut-ins and three hard brakes",
+        "text": "The courts found four cut-ins, three hard brakes and parallel crowding toward Wugu. The appeal kept the indictment facts adopted at trial. This film does not replay them."
+      },
+      {
+        "start": 24,
+        "title": "Automatic braking: method unstated",
+        "text": "The judgments say the taxi sensed an approaching vehicle and braked automatically. Verification is unexplained. We obtained no vehicle log, data or original footage."
+      },
+      {
+        "start": 34,
+        "title": "Statements, recordings and inspection",
+        "text": "Evidence: statements, two notices, taxi footage, photos and an inspection record. The trial added a courtroom admission. These screens and documents are fictional."
+      },
+      {
+        "start": 44,
+        "title": "About twelve seconds of screenshots",
+        "text": "15:07:56–15:08:08 screenshots showed both cars crowding and refusing to yield. This illustrates comparison, not case screenshots or a courtroom video replay."
+      },
+      {
+        "start": 54,
+        "title": "An account is not every finding",
+        "text": "Driver’s claim: shoulder use, crowding for 30 seconds and 1–2 minutes, 3–5 passes. The court accepted mutual lane contesting, not expressly every claimed detail."
+      },
+      {
+        "start": 64,
+        "title": "Unexplained times and camera source",
+        "text": "The facts say about 15:10; images show about 15:08. The difference is unexplained. Camera source is unstated. Do not infer calibrated clocks or measured speed."
+      },
+      {
+        "start": 74,
+        "title": "Four months at first instance",
+        "text": "The defendant denied it in investigation, then admitted it for a simplified trial. 6 March 2025: four months’ prison, convertible at NT$1,000/day; no settlement."
+      },
+      {
+        "start": 84,
+        "title": "Two offences arising from one act",
+        "text": "Articles 185(1) and 304(1): one act, sentenced under the heavier Article 185. Closely repeated acts sharing one intent were treated as one offence."
+      },
+      {
+        "start": 94,
+        "title": "The appeal concerned sentence only",
+        "text": "Under Criminal Procedure Article 348(3), only sentence was appealed. The trial’s facts and offence remained. A lower sentence did not mean acquittal."
+      },
+      {
+        "start": 104,
+        "title": "The taxi’s conduct affected sentence",
+        "text": "Images supported the police account: both drivers crowded to prevent overtaking. The victim shared responsibility for the dispute in sentencing, not a civil fault ratio."
+      },
+      {
+        "start": 114,
+        "title": "What the first court missed",
+        "text": "Article 57 weighs all circumstances: motive, provocation and duties among them. Admission and no settlement were already weighed. The taxi’s conduct was omitted."
+      },
+      {
+        "start": 124,
+        "title": "Forty days of detention",
+        "text": "14 January 2026: four months’ imprisonment became 40 days’ detention. The conduct remained dangerous. A similar dispute does not guarantee reduction."
+      },
+      {
+        "start": 134,
+        "title": "NT$40,000 if fully converted",
+        "text": "If converted at NT$1,000/day, all 40 days would amount to NT$40,000. This proves no payment or victim compensation. Later execution is unverified."
+      },
+      {
+        "start": 144,
+        "title": "Conversion has statutory conditions",
+        "text": "Article 41: crime maximum ≤5 years; sentence ≤6 months’ prison or detention. Conversion is excluded if correction or legal order would suffer."
+      },
+      {
+        "start": 154,
+        "title": "Other penalties and finality unknown",
+        "text": "Traffic-notice recipients and grounds are unstated; Article 43 is only background. Appeal notice: 20 days from service. Later appeals and finality are unverified."
+      },
+      {
+        "start": 164,
+        "title": "Keep the surrounding sequence",
+        "text": "Keep original files, sources, times and context; separate observation from accounts. Your response may also be recorded. These props are not case evidence."
+      }
+    ]
+  },
+  "column/ja/taiwan-road-rage-freeway-cut-in-sentence-reduced": {
+    "id": "freeway-cut-in-film-v1-ja",
+    "src": "/videos/columns/freeway-cut-in-film-v1-ja.mp4",
+    "poster": "/images/column-videos/freeway-cut-in-film-v1-ja.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "林口の割り込み：画像と拘役四十日",
+    "description": "4秒の架空映像と17本の10秒場面をつないだ174秒の無音映像です。入口の標識、双方の運転、刑だけの控訴と易科罰金の条件を説明します。",
+    "disclosure": "道路・人物・車両・画面・面談・書類はそれぞれ独立したAIの架空例で、林口事件の現場や証拠ではありません。冒頭は一度の割り込みと減速だけで、四回の割り込み、三回の急ブレーキ、タクシーの動作や自動ブレーキを再現していません。画面や写真は事件の画像ではなく、面談は実際の警察供述でもありません。速度、時刻の補正、責任はこの映像から判断できません。公開判決に基づく説明で、元映像と車両データは取得していません。その後の上訴・確定・執行は未確認です。",
+    "durationSeconds": 174,
+    "sceneCount": 18,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "割り込みで縮まる車間",
+        "text": "冒頭は一度の割り込みと減速を描いたAIの架空映像です。 林口事件の再現や、自動ブレーキの作動を証明する映像ではありません。"
+      },
+      {
+        "start": 4,
+        "title": "入口にあった車線の標識",
+        "text": "2024年2月22日、北行き林口入口へ左折のトラックと右折のタクシー。 トラックは内側通行の標識を無視し、外側のタクシー前方へ入りました。"
+      },
+      {
+        "start": 14,
+        "title": "割り込み四回、急ブレーキ三回",
+        "text": "五股方面で割り込み四回、急ブレーキ三回、接近並走を裁判所が認定。 一審が採用した起訴状の事実を二審も維持。映像は各動作の再現ではありません。"
+      },
+      {
+        "start": 24,
+        "title": "自動ブレーキの確認方法は不明",
+        "text": "タクシーの自動ブレーキ作動は判決にありますが、確認方法は不明です。 作動ログ・車両データ・元映像は未取得。技術鑑定があったとは言えません。"
+      },
+      {
+        "start": 34,
+        "title": "供述と映像、検察の勘験調書",
+        "text": "証拠は双方の供述、違反通知書二枚、タクシー映像・写真と検察の勘験調書。 一審は法廷の自白を追加。ここに映る画面や書類は架空の小道具です。"
+      },
+      {
+        "start": 44,
+        "title": "約十二秒に写った双方の動き",
+        "text": "二審は15:07:56〜15:08:08ごろの画像から、相互の進路争いを認定。 資料比較の例で、事件の画像や法廷での映像再生の再現ではありません。"
+      },
+      {
+        "start": 54,
+        "title": "供述の細部と認定を分ける",
+        "text": "トラック側は路肩走行、約30秒と1〜2分の接近、3〜5回の追い越しを供述。 裁判所は相互の進路争いを認めましたが、供述の細部すべての認定ではありません。"
+      },
+      {
+        "start": 64,
+        "title": "時刻の差と撮影元の限界",
+        "text": "事実は約15:10、画像は約15:08。判決は差と撮影元を示していません。 時計補正や速度の算出はできません。証拠一覧は元映像の公開を意味しません。"
+      },
+      {
+        "start": 74,
+        "title": "一審では有期徒刑四か月",
+        "text": "捜査では否認、準備手続で認めた被告人。新北地院は簡式審判程序で審理。 2025年3月6日、徒刑四か月。未和解で、易科罰金は1日1,000台湾ドル。"
+      },
+      {
+        "start": 84,
+        "title": "一つの行為が二つの罪に該当",
+        "text": "刑法185条1項と304条1項に該当し、重い公衆往来安全妨害罪で処断。 同じ犯意の近接した反復動作を一罪とし、回数を刑期に単純加算していません。"
+      },
+      {
+        "start": 94,
+        "title": "控訴の対象は刑だけ",
+        "text": "刑訴348条3項により、一審の事実・証拠・罪名を前提に刑だけを審理。 軽い刑への変更は、無罪や相手に迫る運転の許可を意味しません。"
+      },
+      {
+        "start": 104,
+        "title": "タクシーの運転も量刑に反映",
+        "text": "二審は画像と供述を対照し、双方が相手の追い越しを阻もうと接近したと認定。 被害者にも紛争発生の一部責任があるとの量刑評価で、民事割合ではありません。"
+      },
+      {
+        "start": 114,
+        "title": "一審が考慮しなかった事情",
+        "text": "刑法57条は行為者の責任を基礎に、動機・刺激・義務違反などを考慮させます。 自白と未和解は一審も考慮済み。欠けたのはタクシーの運転で、和解はありません。"
+      },
+      {
+        "start": 124,
+        "title": "四か月の徒刑から四十日の拘役へ",
+        "text": "2026年1月14日、高院は刑だけを破棄し拘役40日に変更。徒刑ではありません。 危険な運転との評価は維持。同種の争いでも減刑が保証されるわけではありません。"
+      },
+      {
+        "start": 134,
+        "title": "四万台湾ドルは全日数を換算した額",
+        "text": "易科罰金は1日1,000台湾ドル。40日全部なら40,000台湾ドルです。 支払済みの罰金や被害者への賠償ではなく、後の執行状況は未確認です。"
+      },
+      {
+        "start": 144,
+        "title": "易科罰金には41条の条件がある",
+        "text": "41条は上限五年以下の罪で、六月以下の徒刑か拘役の宣告を対象とします。 矯正効果や法秩序維持が難しい場合は例外。換算基準は執行結果を示しません。"
+      },
+      {
+        "start": 154,
+        "title": "別の処分と確定状況は不明",
+        "text": "違反通知書の対象・根拠は不明。43条は背景で、この判決の処分ではありません。 送達後20日以内の上訴案内あり。後の上訴・確定やタクシーの処分は未確認です。"
+      },
+      {
+        "start": 164,
+        "title": "進路を争う前後も保存する",
+        "text": "元のファイル、撮影元、時刻と前後の経緯を保存し、見聞と各人の説明を分けます。 迫られた側の動きも記録され得ます。この資料整理は事件の証拠ではありません。"
+      }
+    ]
   }
 }

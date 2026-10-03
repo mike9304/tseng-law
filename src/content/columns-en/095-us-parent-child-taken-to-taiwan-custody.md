@@ -1,0 +1,100 @@
+---
+title: "When the other parent keeps your child in Taiwan: what a Taiwan family court can do"
+seoTitle: "Child Taken to Taiwan: Custody for US Parents"
+summary: "Taiwan is not a Hague Abduction Convention party. How its family courts decide custody, when they order a child moved, and how they treat U.S. custody orders."
+published: "2026-10-03"
+lastmod: "2026-10-03"
+date_display: "October 3, 2026"
+read_time: "9 min read"
+categories:
+  - "Taiwan Legal Information"
+topic: "family"
+featured_image: "../images/095-us-parent-child-taken-to-taiwan-custody/featured-01.webp"
+faq:
+  - q: "Can I file a Hague Convention return application in Taiwan?"
+    a: "No. As of October 3, 2026, the U.S. State Department lists Taiwan as not a party to the Hague Abduction Convention and not a U.S. treaty partner under it, and Taiwan's Constitutional Court has said Taiwan cannot apply the Convention's prompt-return procedure. The route in Taiwan is a custody petition in the family court where the child lives, together with any provisional measures that court grants."
+  - q: "Will Taiwan enforce my U.S. custody order?"
+    a: "Not automatically. Taiwan recognizes a final foreign judgment or ruling only if none of the refusal grounds in Code of Civil Procedure Article 402 or Non-Contentious Matters Act Article 49 applies, and compulsory enforcement of a foreign judgment also needs a Taiwan court judgment permitting it (Compulsory Enforcement Act Article 4-1). The State Department itself warns that a U.S. custody order may not be valid and enforceable in the country where the child is."
+  - q: "Can a Taiwan court order my child sent back to the United States while the custody case is pending?"
+    a: "It can issue provisional orders, but in Judgment 111-Hsien-Pan-8 (2022) the Constitutional Court held that an order sending a child to another country before the main ruling needs a best-interests analysis, a chance for the child to speak and attention to continuity in the child's life. Unless there is a very urgent and strong necessity, it said, a court should not make a child move abroad in the meantime. The Court did not decide who should have the child in that case, and no outcome can be promised in yours."
+audience: ["en"]
+author: "legal-ai-assistant"
+---
+
+# When the other parent keeps your child in Taiwan: what a Taiwan family court can do
+
+If your child has been taken to Taiwan, or kept there after a visit, there is no Hague application to file. As of October 3, 2026, the U.S. State Department lists Taiwan as neither a party to the Hague Abduction Convention nor a U.S. treaty partner under it, and Taiwan's Constitutional Court said in 2022 that, because Taiwan is not a party, it cannot apply the Convention's procedure for the prompt return of children between contracting states. What remains is an international custody case in a Taiwan family court, decided on the child's best interests, plus whatever help your own government can give.
+
+## No Hague application, and what the State Department can still do
+
+The State Department's Office of Children's Issues helps parents in cases involving countries that are not Hague partners. Its Taiwan page says the office can provide information about country-specific options for pursuing the child's return or access, and may coordinate with authorities about the child's welfare. It gives no legal advice, and neither does the American Institute in Taiwan, which posts a list of local attorneys without endorsing any of them. The Institute also describes a 2019 memorandum with Taiwan's representative office in the United States as a way to facilitate communication between the State Department's Bureau of Consular Affairs and Taiwan's Ministry of Health and Welfare. The description mentions no return procedure.
+
+The same page warns that a U.S. custody order “may not be valid and enforceable in the country in which the child is located,” and that attempts to remove the child to the United States on your own may endanger the child, prejudice later court efforts and lead to arrest. A custody court looks at all the circumstances, and how each parent acted after the move is one of them.
+
+## Starting the custody case
+
+Custody petitions go to the family court where the child lives. [Family Act Article 104](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=104) gives the court of the child's domicile or residence exclusive venue over petitions to set or change custody and support and to order a child handed over, so where the child lives, not which passport the child holds, decides which Taiwan court hears the case.
+
+A Taiwan divorce is not a prerequisite. [Civil Code Article 1055](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055) covers custody on divorce, and [Article 1089-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1089-1) applies the same rules to parents who have lived apart for six months or more, with an exception where there is a legitimate reason they cannot live together. Which country's law governs is a separate question. [Article 55 of the choice-of-law act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=55) points to the child's national law. A child with several nationalities is assigned the one with the closest connection (Article 2), and for a U.S. national Article 5 sends the court to the U.S. rules on which law applies. For a child with both U.S. and Taiwan nationality, a Taiwan lawyer has to analyze which one the court will treat as closest.
+
+The case starts in court mediation. [Article 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=23) requires it in every family case except the Category D matters listed in Article 3, such as guardianship declarations and protection orders, and custody petitions are not among them. According to the Judicial Yuan's procedure guide, what parties say or concede in mediation cannot be the basis of a later ruling, and family hearings are generally closed to the public. A parent abroad can ask to take part by video under [Article 12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=12), although under Article 13 the court may order a party to appear in person. Two related questions have their own columns: [planning a child's life across two countries after a divorce](/en/columns/taiwanese-spouse-divorce-cross-border-parenting) and [cross-border child support](/en/columns/taiwan-child-support-enforcement-cross-border).
+
+## What the court weighs
+
+[Civil Code Article 1055-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055-1) directs the court to decide on the child's best interests after weighing all the circumstances. It singles out the child's age, health, wishes and developmental needs, each parent's circumstances and attitude toward raising the child, the emotional bonds between the child and each parent, and whether either parent has obstructed the other's exercise of parental rights. The court may rely on social-worker or family-investigator reports and on information it asks police, tax authorities, banks and schools to gather. The child is heard too: [Article 108](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=108) of the Family Act requires the court to give the child a chance to express views in a way that suits the child's age and maturity, and Article 109 lets it appoint a procedural guardian.
+
+Because obstruction is a listed factor, the circumstances of the move, and whether the child has been allowed to speak with you since, can matter. But Taiwan cannot apply the Convention's return procedure, so a wrongful removal enters the analysis as one fact among many, not as a ground for automatic return.
+
+If domestic violence is part of the history on either side, say so early. Under [Domestic Violence Prevention Act Article 43](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=43), where violence has occurred the court presumes that custody by the perpetrator is unfavorable to the child, and a protection order under Article 14 can itself set temporary custody. A parent who says they moved the child for safety reasons will be heard, and a parent accused of violence should expect the claim to be investigated.
+
+## Provisional orders, and the limit the Constitutional Court set
+
+While the main case runs, a parent can ask for provisional measures under [Family Act Article 85](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=85). The Judicial Yuan's [rules on provisional measures](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010056&flno=7) list what a court may order in custody cases before the final ruling: payment of the child's necessary costs, handing over items and documents the child needs, a ban on taking the child out of a specified place or out of Taiwan, a parenting-time schedule, and other suitable temporary measures. The court must weigh the child's best interests and handle the request promptly and with priority, but it may act only where an immediate order is needed to secure the main petition (Article 4 of the rules), and an appeal does not suspend the order unless the court says so ([Family Act Article 91](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=91)). An exit ban cuts both ways for a parent who hopes to bring the child home, because it keeps the child in Taiwan too.
+
+The order a left-behind parent usually wants is one that hands the child back and sends the child to the country the child was brought from. The Constitutional Court reviewed such an order in [Judgment 111-Hsien-Pan-8](https://cons.judicial.gov.tw/docdata.aspx?fid=38&id=340546) (May 27, 2022). A child born in Taiwan had gone abroad with one parent for a visit, stayed about a year, and was then brought back to Taiwan by the other parent. The parent abroad applied for a provisional order, and on October 31, 2019 the Taipei District Court ordered the child handed over and allowed to go abroad pending the custody ruling (108年度家暫字第46號). An appeal and a further appeal failed, but the Constitutional Court set aside the Supreme Court's final ruling (111年度台簡抗字第13號) and sent the matter back, for three reasons.
+
+First, the child must be heard. Before an order that hands a child over, the court has to give a child who can express a view the chance to do so, in or outside the courtroom and in a suitable way. A procedural guardian's statement does not replace this, nor does the court reading statements the child gave in other proceedings.
+
+Second, continuity counts. Taiwan cannot apply the Convention's return procedure, the Court said, but the Convention's provisions confirm that stability in a child's surroundings and the child's own wishes are principles recognized internationally. A court has to consider what a change of country means for the child's language, daily habits, schooling and relationships. In that case the child had lived in Taiwan for nearly three years, against about one year abroad, and the appeal court had not considered whether Taiwan had become the child's new habitual residence.
+
+Third, unless there is a very urgent and strong necessity, a court should not make a child leave the place where the child has been living for another country before the main ruling is final. The Court's examples were a parent who is harming the child, a parent who has lost the ability to care for the child with no prospect of recovering it soon, and an epidemic or war that makes the current home unsafe. The Court said expressly that it was not deciding who should have the child.
+
+For a parent in the United States, the practical reading is that delay works against the parent who waits, because the Court treats the length of the child's stay as a factor, and that a court will look hard at an order uprooting a child who has settled in Taiwan. The case also shows how long a contested matter can run. The provisional-order application was filed in March 2019 and the Supreme Court ruled on it in February 2022. The main custody petition, filed in December 2017, had its first-instance ruling in January 2022 and was still on appeal when the Constitutional Court ruled. That case had several rounds of appeals and is no forecast for yours.
+
+## Where a U.S. custody order fits
+
+A U.S. custody order does not operate in Taiwan by itself. [Code of Civil Procedure Article 402](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=402) denies recognition to a final foreign judgment if the foreign court lacked jurisdiction under Taiwan law, if a defendant who lost without appearing was served neither lawfully in that country in good time nor through judicial assistance under Taiwan law, if the judgment or proceedings offend Taiwan's public order or good morals, or if there is no mutual recognition between the two jurisdictions. Its second paragraph applies the same grounds to a foreign court's final rulings. Custody is a family non-contentious matter in Taiwan, and [Non-Contentious Matters Act Article 49](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=49) has its own version for final foreign non-contentious rulings: no jurisdiction under Taiwan law, late service of the starting papers on a Taiwan-national party, conflict with public order or good morals, and no mutual recognition unless the ruling is not unfavorable to Taiwan nationals. Which provision applies can depend on the form of the order.
+
+Both provisions require a final decision. Since U.S. custody orders can usually be modified and temporary orders are common, whether yours qualifies depends on the order and on proof of finality from the issuing court. Recognition is also separate from enforcement: for a foreign final judgment, [Compulsory Enforcement Act Article 4-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010004&flno=4-1) requires a Taiwan judgment permitting enforcement first (the general procedure is in [Enforcing a Foreign Judgment Against Assets in Taiwan](/en/columns/enforce-foreign-judgment-in-taiwan)), and how that applies to a ruling that orders a child handed over is a question for Taiwan counsel before anyone plans around it. Several grounds also turn on how the U.S. case was run, so proof that the other parent was properly served, and a clear basis for the U.S. court's jurisdiction, both matter.
+
+On the U.S. side, most states have enacted a version of the Uniform Child Custody Jurisdiction and Enforcement Act. California's, [Family Code section 3405](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=3405), tells its courts to treat a foreign country as if it were a state for jurisdiction purposes and to recognize foreign custody determinations made in substantial conformity with the Act's jurisdictional standards. A U.S. court with jurisdiction can therefore issue orders about a child who is physically in Taiwan, but they do not bind a Taiwan court, and a U.S. court may in turn have to decide whether to recognize a Taiwan order. Whether to file at home, in Taiwan or both is a question for lawyers in each place, because orders pointing in different directions are a real possibility.
+
+## Evidence, deadlines and what to expect
+
+Take a hypothetical, not a real case: a father agrees by text message to a three-week summer visit to Taiwan with a return flight on a set date, the date passes, and the mother writes that the child is staying. The messages agreeing to the dates, the return ticket, the child's U.S. school and medical records, any custody order or parenting plan, and the messages and call logs since the day the child was due back all matter. They show where the child's life was centered, whether the move was agreed and whether both parents have stayed in contact with the child. Because the court can also gather its own information from schools, police and welfare agencies, records that match your account carry more weight than the account alone.
+
+Expect to need Chinese translations of English records. Under [Code of Civil Procedure Article 356](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=356), a court decides for itself whether a foreign public document is genuine, but one certified by a Taiwan embassy, consulate or other representative agency in that country is presumed genuine, so ask a Taiwan lawyer which route to use for U.S. court records before ordering certified copies.
+
+Deadlines are short and run from service. An appeal against a family court's ruling must be filed within a fixed ten days after the ruling is served ([Family Act Article 93](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=93)). A three-judge panel hears it, and a further appeal to the Supreme Court lies only where the panel clearly misapplied the law ([Article 94](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=94)). The Judicial Yuan's guide says a lawyer must act for you at the Supreme Court stage. If you live abroad, make sure whoever receives your court mail in Taiwan passes it to your lawyer the same day. No fixed schedule can be given, and this column is general information, not a prediction of how a court will rule on your facts.
+
+## Talking to a Taiwan lawyer
+
+Instructing a lawyer from abroad is covered in [Hiring a Taiwan lawyer from abroad](/en/columns/hire-taiwan-lawyer-from-abroad). You can write to Attorney Wei Tseng (曾雋崴) at Hovering International Law Firm: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The Taipei office is at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan (103 臺北市大同區承德路一段35號7樓之2). A short summary is enough for a first look: where the child lives now, the child's nationalities and whether the child has Taiwan household registration, the date and circumstances of the move, any U.S. order, and any case filed in either country.
+
+## Official sources
+
+- [Civil Code Articles 1055, 1055-1, 1069-1 and 1089-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055).
+- [Family Act Articles 3, 12, 13, 23, 85, 91, 93, 94, 104, 108 and 109](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048).
+- [Rules on the Types and Methods of Provisional Measures in Family Non-Contentious Matters, Articles 4 and 7](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056).
+- [Act Governing the Choice of Law in Civil Matters Involving Foreign Elements, Articles 2, 5 and 55](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007).
+- [Code of Civil Procedure Articles 356 and 402](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=402).
+- [Non-Contentious Matters Act Article 49](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=49).
+- [Compulsory Enforcement Act Article 4-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010004&flno=4-1).
+- [Domestic Violence Prevention Act Articles 14 and 43](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050071).
+- [Constitutional Court Judgment 111-Hsien-Pan-8 (111年憲判字第8號), May 27, 2022](https://cons.judicial.gov.tw/docdata.aspx?fid=38&id=340546).
+- [Judicial Yuan family procedure guide](https://www.judicial.gov.tw/tw/cp-165-123027-1420b-1.html), last updated December 2019.
+- [U.S. State Department, Taiwan International Parental Child Abduction Information](https://travel.state.gov/content/travel/en/International-Parental-Child-Abduction/International-Parental-Child-Abduction-Country-Information/Taiwan.html).
+- [American Institute in Taiwan, International Parental Child Abduction](https://web-archive-2022.ait.org.tw/u-s-citizen-services/international-parental-child-abduction/index.html), 2022 archive copy.
+- [California Family Code section 3405](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=3405), as one state's version of the UCCJEA.
+
+Checked: October 3, 2026

@@ -211,13 +211,18 @@ export const COUNTRY_COLUMN_FILES_20261002 = {
   ja: ['071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md'],
 } as const;
 
-/** Native audience and traffic columns published 2026-10-03 (085–093). */
+/** Native audience, traffic and family-law columns published 2026-10-03 (085–096). */
 export const COUNTRY_COLUMN_FILES_20261003 = {
   'ko': [
     '091-taiwan-distributor-trademark-registration-korean-brand.md',
+    '094-korea-divorce-recognition-taiwan-household-registration.md', // family lane b01
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
+    '095-us-parent-child-taken-to-taiwan-custody.md', // family lane b01
+  ],
+  'ja': [
+    '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',

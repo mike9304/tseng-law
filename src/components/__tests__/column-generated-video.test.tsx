@@ -9,7 +9,7 @@ import businessPremisesCaptions from '@/data/business-premises-video-captions.js
 import logisticsCaptions from '@/data/logistics-video-captions.json';
 import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
-const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'sk', 'hu', 'hr', 'sl', 'sr', 'bg', 'ru', 'uk', 'el', 'tr', 'lt', 'lv', 'et', 'is', 'fil', 'id', 'ms', 'vi', 'mn', 'zh-hans'];
+const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'sk', 'hu', 'hr', 'sl', 'sr', 'bg', 'ru', 'uk', 'el', 'tr', 'lt', 'lv', 'et', 'is', 'fil', 'id', 'ms', 'vi', 'mn', 'zh-hans', 'bn', 'hi', 'km', 'my', 'ne', 'ta', 'th'];
 
 describe('reviewed column videos', () => {
   it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
@@ -126,6 +126,13 @@ describe('reviewed column videos', () => {
     ['vi', 'tách biệt với vụ xe máy ẩn danh'],
     ['mn', 'нийтлэл дэх нэрийг нууцалсан мотоциклын хэргээс тусдаа'],
     ['zh-hans', '并非重现本文的匿名摩托车事故'],
+    ['bn', 'নিবন্ধের নাম-গোপন মোটরসাইকেল মামলা থেকে আলাদা'],
+    ['hi', 'लेख के अनाम मोटरसाइकिल मामले से अलग'],
+    ['km', 'ដាច់ដោយឡែកពីករណីម៉ូតូអនាមិកក្នុងអត្ថបទ'],
+    ['my', 'ဆောင်းပါးပါ အမည်ဖျောက်ထားသည့် ဆိုင်ကယ်အမှုနှင့် သီးခြားဖြစ်သည်'],
+    ['ne', 'लेखमा नाम गोप्य राखिएको मोटरसाइकल मुद्दाभन्दा अलग'],
+    ['ta', 'கட்டுரையின் பெயர் மறைக்கப்பட்ட மோட்டார் சைக்கிள் வழக்கிலிருந்து தனியானது'],
+    ['th', 'แยกจากคดีรถจักรยานยนต์ที่ปกปิดชื่อในบทความ'],
   ])('serves one 100-second overtaking film with case boundaries and ten chapters in %s', (locale, disclosure) => {
     const slug = 'taiwan-overtaking-accident-liability';
     const asset = getColumnGeneratedVideo(locale, slug);
@@ -181,6 +188,13 @@ describe('reviewed column videos', () => {
     ['vi', 'Nhân vật và cảnh hư cấu do AI tạo'],
     ['mn', 'Хиймэл оюунаар бүтээсэн зохиомол хүмүүс, үйл явдал'],
     ['zh-hans', 'AI生成的虚构人物与场景'],
+    ['bn', 'AI-তৈরি কাল্পনিক মানুষ ও দৃশ্য'],
+    ['hi', 'AI से बनाए गए काल्पनिक लोग और दृश्य'],
+    ['km', 'មនុស្ស និងឈុតប្រឌិតបង្កើតដោយ AI'],
+    ['my', 'AI ဖန်တီးထားသော စိတ်ကူးယဉ်လူများနှင့် မြင်ကွင်းများ'],
+    ['ne', 'AI ले बनाएका काल्पनिक व्यक्ति र दृश्य'],
+    ['ta', 'AI உருவாக்கிய கற்பனை நபர்களும் காட்சிகளும்'],
+    ['th', 'บุคคลและฉากสมมติที่สร้างด้วย AI'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
     const id = longFilmLocales.includes(locale) ? 'traffic-procedure-film-v1' : 'rear-end-simulation-v3';

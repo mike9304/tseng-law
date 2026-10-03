@@ -29,13 +29,13 @@ describe('reviewed delayed-injury mediation column', () => {
     expect(body).toContain('判決沒有交代實際送達日');
   });
 
-  it('automatically joins the procedure collection without a false video or language copy', () => {
+  it('automatically joins the procedure collection with its reviewed film and no language copy', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(p => p.slug === slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: 'procedure', hasVideo: false, columnNumber: 82, aiAuthored: true });
+    expect(matches[0]).toMatchObject({ subject: 'procedure', hasVideo: true, columnNumber: 82, aiAuthored: true });
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'procedure', q: '遲發性' })).map(p => p.slug)).toEqual([slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'procedure', video: '1' })).some(p => p.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'procedure', video: '1' })).some(p => p.slug === slug)).toBe(true);
     expect(getColumnPost(slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
   });

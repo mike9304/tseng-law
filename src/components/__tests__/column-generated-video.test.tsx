@@ -130,6 +130,8 @@ describe('reviewed column videos', () => {
     ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-scooter-v2-zh-hant', '機車'],
     ['taiwan-car-repair-cost-estimate-parts-depreciation', 'repair-cost-film-v1-zh-hant', '零件比較只是示意'],
     ['taiwan-car-repair-rental-cost-repair-period-evidence', 'rental-period-film-v1-zh-hant', '代步需要'],
+    ['taiwan-mediation-delayed-injury-rescission', 'mediation-injury-film-v1-zh-hant', '新診斷不會讓已成立的調解自動失效'],
+    ['taiwan-accident-assessment-secondary-cause-compensation-ratio', 'assessment-evidence-film-v1-zh-hant', '不能拿來估速'],
     ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
     ['taiwan-car-door-opening-motorcycle-liability', 'car-door-v2-zh-hant', '騎士失去平衡'],
     ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-v1-zh-hant', '非本文凌晨事故'],

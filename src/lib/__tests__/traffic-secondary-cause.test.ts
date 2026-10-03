@@ -29,13 +29,13 @@ describe('reviewed secondary-cause compensation column', () => {
     expect(body).toContain('不是法院的結論');
   });
 
-  it('automatically joins the evidence collection without a false video or language copy', () => {
+  it('automatically joins the evidence collection with its reviewed film and no language copy', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(p => p.slug === slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: 'evidence', hasVideo: false, columnNumber: 83, aiAuthored: true });
+    expect(matches[0]).toMatchObject({ subject: 'evidence', hasVideo: true, columnNumber: 83, aiAuthored: true });
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'evidence', q: '次因' })).map(p => p.slug)).toEqual([slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'evidence', video: '1' })).some(p => p.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'evidence', video: '1' })).some(p => p.slug === slug)).toBe(true);
     expect(getColumnPost(slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
   });

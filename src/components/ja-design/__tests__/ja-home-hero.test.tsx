@@ -1,6 +1,6 @@
 import { existsSync, statSync } from 'node:fs';
 import path from 'node:path';
-import { Children, type ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -13,11 +13,14 @@ vi.mock('next/image', () => ({
   default: (props: { alt: string; src: string }) => <span data-img={props.alt} data-src={props.src} />,
 }));
 
-import HeroSearch from '@/components/HeroSearch';
 import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
 import JaHeroMedia, { JA_HERO_MEDIA } from '@/components/ja-design/JaHeroMedia';
 import JaHeroTrust, { JA_HERO_READ_LABEL } from '@/components/ja-design/JaHeroTrust';
 import { heroTrustCopy } from '@/components/HeroTrustStrip';
+import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
+import JaHero, { JA_HERO_CTA_LABEL, splitJaHeroTitle } from '@/components/ja-design/kou/JaHero';
+import { siteContent } from '@/data/site-content';
+import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 
 const pub = (file: string) => path.join(process.cwd(), 'public', file);
 
@@ -46,24 +49,23 @@ describe('ja home first screen (Apple pass)', () => {
     for (const fact of heroTrustCopy.ja.facts) expect(html).toContain(fact);
   });
 
-  it('passes media, trust and six search chips to HeroSearch without changing its locale or presentation', () => {
-    const body = LegacyHomePageBody({ locale: 'ja', posts: [], faqItems: [] }) as ReactElement<{ children: ReactElement[] }>;
-    const first = Children.toArray(body.props.children)[0] as ReactElement<{ children: ReactElement }>;
-    const hero = first.props.children as ReactElement<{
-      locale: string;
-      presentation: string;
-      persistentQuickMenus?: boolean;
-      quickMenus?: { label: string; href: string }[];
-      media?: ReactElement;
-      trustContent?: ReactElement;
-    }>;
-    expect(hero.type).toBe(HeroSearch);
-    expect(hero.props).toMatchObject({ locale: 'ja', presentation: 'editorial', persistentQuickMenus: true });
-    expect(hero.props.media?.type).toBe(JaHeroMedia);
-    expect(hero.props.trustContent?.type).toBe(JaHeroTrust);
-    expect(hero.props.quickMenus).toHaveLength(6);
-    for (const chip of hero.props.quickMenus ?? []) {
-      expect(chip.href).toBe(`/ja/search?q=${encodeURIComponent(chip.label)}`);
-    }
+  it('renders the 昊 hero with the existing H1, sub, byline, email action and reading path (ja home V2)', () => {
+    const body = LegacyHomePageBody({ locale: 'ja', posts: [], faqItems: [] }) as ReactElement;
+    expect(body.type).toBe(JaHomeBody);
+    const html = renderToStaticMarkup(<JaHero />);
+    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? '';
+    expect(h1.replace(/<[^>]+>/g, '')).toBe(siteContent.ja.hero.title);
+    expect(splitJaHeroTitle(siteContent.ja.hero.title)).toEqual(['台湾の会社設立・労務・紛争を、', '日本語で。']);
+    expect(html).toContain(`href="${getConsultationPublicMailto('ja').replace(/&/g, '&amp;')}"`);
+    expect(html).toContain(`aria-label="${JA_HERO_CTA_LABEL} — ${getConsultationCtaLabel('ja')}"`);
+    expect(html).toContain('href="/ja/columns"');
+    expect(html).toContain(JA_HERO_READ_LABEL);
+    expect(html).toContain('href="/ja/lawyers/wei-tseng"');
+    expect(html).not.toMatch(/<(b|strong)\b/);
+    expect(html).not.toContain('下へスクロール');
+    // The first screen keeps the hero media decorative; the film is a client child with the ja stills.
+    expect(html).toContain('/images/editorial/ja-kou-hero-light.webp');
+    expect(html).toContain('/images/editorial/ja-kou-hero-light-mobile.webp');
   });
 });

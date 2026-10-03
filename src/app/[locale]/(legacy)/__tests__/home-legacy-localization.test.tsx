@@ -15,6 +15,8 @@ import {
   mapColumnPostsToHomeInsights,
 } from '@/app/[locale]/(legacy)/home-legacy';
 import { getAllColumnPosts } from '@/lib/columns';
+import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
+import JaOffices from '@/components/ja-design/kou/JaOffices';
 import type { SiteLocale } from '@/lib/locales';
 
 const HANGUL = /[\uac00-\ud7af]/;
@@ -57,17 +59,17 @@ const contactCopy = {
 } as const;
 
 function findOfficeMapElement() {
-  const body = LegacyHomePageBody({ locale: 'ja', posts: [], faqItems: [] });
-  const reveal = Children.toArray(body.props.children).find((candidate) => {
-    if (!isValidElement<{ children?: ReactElement }>(candidate)) return false;
-    return isValidElement(candidate.props.children) && candidate.props.children.type === OfficeMapTabs;
-  });
-
-  expect(isValidElement<{ children: ReactElement<{ locale: SiteLocale }> }>(reveal)).toBe(true);
-  if (!isValidElement<{ children: ReactElement<{ locale: SiteLocale }> }>(reveal)) {
-    throw new Error('Japanese OfficeMapTabs composition was not found');
-  }
-  return reveal.props.children;
+  // ja design (昊, 2026-10-03): the ja home is JaHomeBody; its offices chapter (JaOffices) wraps OfficeMapTabs.
+  const body = LegacyHomePageBody({ locale: 'ja', posts: [], faqItems: [] }) as ReactElement<{ posts: unknown; faqItems: unknown }>;
+  expect(body.type).toBe(JaHomeBody);
+  const home = JaHomeBody(body.props as Parameters<typeof JaHomeBody>[0]) as ReactElement<{ children: ReactElement[] }>;
+  const offices = Children.toArray(home.props.children).find(
+    (candidate) => isValidElement(candidate) && candidate.type === JaOffices,
+  );
+  if (!isValidElement(offices)) throw new Error('Japanese OfficeMapTabs composition was not found');
+  const wrapper = JaOffices() as ReactElement<{ children: ReactElement<{ locale: SiteLocale }> }>;
+  expect(isValidElement(wrapper.props.children)).toBe(true);
+  return wrapper.props.children;
 }
 
 describe('legacy home insight localization', () => {

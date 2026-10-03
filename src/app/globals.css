@@ -27371,6 +27371,19 @@ html[dir='rtl'] .guidance-answer {
 .site[data-locale='en'] header.header[data-public-site-header] .mega-links a:focus-visible .mega-chevron { color: #fff; }
 .site[data-locale='en'] header.header[data-public-site-header] .mega-view-all { color: #fff; font-weight: 600; }
 
+/* Narrowest phones (320 px): the seal, the two-line name and both icon buttons share one 64 px row instead of
+   wrapping the buttons onto a second row (the header measured 113 px at 320 px). The shared module wraps them
+   with a seven-class selector, so these en-only rules repeat classes to outrank it without !important. */
+@media (max-width: 359px) {
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main > .header-main-inner.header-main-inner { flex-wrap: nowrap; align-items: center; column-gap: 8px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-logo.header-logo { flex: 1 1 auto; width: auto; min-width: 0; gap: 8px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-actions.header-actions { flex: none; width: auto; gap: 0; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-mark.logo-mark { width: 36px; height: 36px; flex: none; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-mark.logo-mark img { width: 36px; height: 36px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-kr.logo-kr { font-size: 13.5px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-actions.header-actions > button { width: 44px; min-width: 44px; height: 44px; min-height: 44px; }
+}
+
 /* ---------- Footer: black, grey links that turn white, sentence-case titles, 44 px targets ---------- */
 .site[data-locale='en'] .footer-skyline { display: none; }
 .site[data-locale='en'] footer.site-footer { background: #000; color: #f5f5f7; border-top: 1px solid rgb(255 255 255 / 10%); }

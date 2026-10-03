@@ -632,6 +632,10 @@
   .home[data-en-design][id] :global(.hero .hero-cta-actions),
   .home[data-en-design][id] :global(.hero .hero-cta-primary) { width: 100%; }
   .home[data-en-design][id] :global(.hero .hero-cta-primary) { padding: 0 20px; font-size: 17px; }
+}
+@media (max-width: 359px) {
+  .home[data-en-design][id] :global(.hero .hero-cta-primary) { padding: 0 14px; font-size: 16px; }
+  .home[data-en-design][id] :global(.hero .hero-cta-primary)::after { margin-left: 8px; }
   .heroReadLink { grid-row: 4; grid-column: 1 !important; margin: 8px 0 0; }
   .home[data-en-design][id] :global(.hero .hero-copy > .section-label) { grid-row: 5; }
   .heroByline { grid-row: 6; }

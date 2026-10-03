@@ -28,6 +28,7 @@
 /* ---------- C3 numbers ---------- */
 .numbers { position: relative; padding-block: var(--ja-section); }
 .numbersHead { max-width: calc((100% - 11 * var(--ja-gap)) * 8 / 12 + 7 * var(--ja-gap)); }
+@media (max-width: 1023px) { .numbersHead { max-width: none; } }
 .numbersHead .numbersLede { margin-top: 28px; }
 .row {
   display: grid;

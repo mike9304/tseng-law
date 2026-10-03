@@ -131,7 +131,7 @@
 }
 @media (max-width: 767px) {
   .attorney :global(#about.split-section) { grid-template-columns: minmax(0, 1fr); }
-  .attorney :global(#about .split-image) { grid-column: 1; grid-row: 1; aspect-ratio: 4 / 5 !important; }
+  .attorney :global(#about .split-image) { grid-column: 1; grid-row: 1; justify-self: stretch !important; width: 100% !important; aspect-ratio: 4 / 5 !important; }
   .attorney :global(#about .split-image img) {
     -webkit-mask-image: linear-gradient(to top, transparent 0, #000 30%);
     mask-image: linear-gradient(to top, transparent 0, #000 30%);
@@ -523,7 +523,8 @@
 }
 .closingContent :global(#contact .home-contact-actions + .section-lede) { margin-top: 16px; font-size: 15px; line-height: 1.75; color: var(--ja-text); }
 @media (max-width: 1023px) {
-  .closingContent :global(#contact > .container) { width: 70%; }
+  .closingContent :global(#contact.home-contact-cta) { background: #ffeee2 !important; }
+  .closingContent :global(#contact > .container) { width: 100%; max-width: 40em; }
 }
 @media (max-width: 767px) {
   .afternoon { object-position: 50% 100%; }

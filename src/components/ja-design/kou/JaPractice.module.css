@@ -2,6 +2,7 @@
 .section { position: relative; padding-block: var(--ja-section); background: var(--ja-stage); }
 .section:global(#practice) { min-height: 0; height: auto; padding-block: var(--ja-section); }
 .head { max-width: calc((100% - 11 * var(--ja-gap)) * 8 / 12 + 7 * var(--ja-gap)); }
+@media (max-width: 1023px) { .head { max-width: none; } }
 .head .lede { margin-top: 24px; }
 .layout {
   display: grid;

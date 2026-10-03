@@ -27334,7 +27334,7 @@ html[dir='rtl'] .guidance-answer {
   transition-delay: 0s;
 }
 
-/* ==============================================================================================
+/* =====================================================================================================
    zh-hant · monoline icons and a neutral palette (2026-10-02)
    Operator: 「대만페이지는 전체 색감을 다시 정했으니까 초록색 아이콘들 이런거도 다 다시 디자인해야지 심플세련 느낌으로」.
    Icons are ZhHantMonoIcon (src/components/zh-hant-icons): one line on a 24px grid, currentColor, no box.
@@ -27879,7 +27879,6 @@ html[lang='en'] .search-panel .icon-button,
 html[lang='en'] .search-panel .search-tabs button,
 html[lang='en'] .search-panel .search-tabs a,
 html[lang='en'] .search-panel .chip { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
-=======
 /* ja shell (Opus 5.5 ja lane, 2026-10-01; round 2 re-keyed to the locale): every ja page, wrapped or not, carries the
    間 palette — sumi ink and one vermilion — into the shared header action and footer. Other locales never match. */
 .site[data-locale='ja'] .header .nav-cta,

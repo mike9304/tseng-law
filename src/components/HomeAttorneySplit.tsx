@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import type { SiteLocale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
@@ -81,11 +82,14 @@ export default function HomeAttorneySplit({
   presentation,
   omitLandmarkId = false,
   override,
+  beforeSummary,
 }: {
   locale: SiteLocale;
   presentation?: 'editorial';
   omitLandmarkId?: boolean;
   override?: HomeAttorneyOverride;
+  /** Optional slot rendered directly above the summary paragraph (ja design). Omitted: nothing is rendered. */
+  beforeSummary?: ReactNode;
 }) {
   const copy = copyByLocale[locale];
   const profilePath = override?.href ?? getAttorneyProfilePath(locale);
@@ -147,6 +151,7 @@ export default function HomeAttorneySplit({
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[3]}>
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[3]}>{intro[1]}</SurfaceText>
         </p>
+        {beforeSummary ?? null}
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[4]}>
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[4]}>{summary}</SurfaceText>
         </p>

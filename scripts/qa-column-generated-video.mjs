@@ -21,7 +21,14 @@ const passengerSkidCaptions = JSON.parse(await fs.readFile(new URL('../src/data/
 const settlementRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/settlement-records-video-captions.json', import.meta.url), 'utf8'));
 const stopDialogueCaptions = JSON.parse(await fs.readFile(new URL('../src/data/stop-dialogue-video-captions.json', import.meta.url), 'utf8'));
 const keyCustodyCaptions = JSON.parse(await fs.readFile(new URL('../src/data/key-custody-video-captions.json', import.meta.url), 'utf8'));
+const reverseDashcamCaptions = JSON.parse(await fs.readFile(new URL('../src/data/reverse-dashcam-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(reverseDashcamCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-road-rage-reversing-into-tailgater-no-self-defense',
+    id: `road-rage-reversing-into-tailgater-no-self-defense-v4-${locale}`,
+    duration: 15.041667, contactTime: 26 / 24, expectedDiagrams: 0, loop: true,
+    disclosure: caption.disclosure,
+  })),
   { locale: 'zh-hant', slug: 'taiwan-accident-stop-dialogue-hit-and-run-evidence', id: 'stop-dialogue-v1-zh-hant', duration: 4, contactTime: 53 / 24, expectedDiagrams: 1, disclosure: stopDialogueCaptions['zh-hant'].disclosure },
   { locale: 'zh-hant', slug: 'taiwan-borrowed-car-owner-driver-key-custody-liability', id: 'key-custody-v1-zh-hant', duration: 4, contactTime: 65 / 24, expectedDiagrams: 0, disclosure: keyCustodyCaptions['zh-hant'].disclosure },
   { locale: 'zh-hant', slug: 'taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse', id: 'passenger-skid-v4-zh-hant', duration: 4, contactTime: 8 / 24, expectedDiagrams: 0, disclosure: passengerSkidCaptions['zh-hant'].disclosure },
@@ -259,12 +266,36 @@ try {
         const element = document.querySelector('[data-column-generated-video] video');
         return element && !element.seeking && element.currentTime < 0.1;
       });
+      if (item.loop) {
+        // A looping player never emits `ended`. Observe the real time wrap
+        // without disabling the product's loop setting or changing its speed.
+        await video.evaluate(element => {
+          element.dataset.qaLoopObserved = 'false';
+          let previousTime = 0;
+          const observeLoop = () => {
+            if (previousTime > element.duration - 0.6 && element.currentTime < 0.6) {
+              element.dataset.qaLoopObserved = 'true';
+              element.removeEventListener('timeupdate', observeLoop);
+            }
+            previousTime = element.currentTime;
+          };
+          element.addEventListener('timeupdate', observeLoop);
+        });
+      }
       const replayStartedAt = performance.now();
       await video.press('Space');
-      await page.waitForFunction(() => document.querySelector('[data-column-generated-video] video')?.ended, undefined, { timeout: 20000 });
+      await page.waitForFunction(loop => {
+        const element = document.querySelector('[data-column-generated-video] video');
+        return loop ? element?.dataset.qaLoopObserved === 'true' : element?.ended;
+      }, item.loop === true, { timeout: (item.duration + 8) * 1000 });
       const replaySeconds = (performance.now() - replayStartedAt) / 1000;
       assert.ok(replaySeconds >= item.duration - 0.2, 'The clip did not play through at its native rate');
       assert.equal(await video.evaluate(element => element.playbackRate), 1);
+      assert.equal(await video.evaluate(element => element.loop), item.loop === true);
+      if (item.loop) {
+        await video.press('Space');
+        assert.equal(await video.evaluate(element => element.paused), true);
+      }
 
       if (process.env.COLUMN_VIDEO_QA_SKIP_BOARD !== '1' && item.trafficBoard !== false) {
         const board = await page.goto(`${base}/${item.locale}/traffic-accidents?video=1&q=${encodeURIComponent(heading.slice(0, 60))}`, { waitUntil: 'load' });
@@ -273,7 +304,7 @@ try {
         if (item.traffic === false) assert.equal(count, 0, 'Non-traffic video entered the traffic collection');
         else assert.ok(count > 0, 'Video filter omitted the new native video');
       }
-      results.push({ viewport, article, locale: item.locale, id: item.id, evidenceStem, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
+      results.push({ viewport, article, locale: item.locale, id: item.id, evidenceStem, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: item.loop !== true, loopWrapped: item.loop === true, completedNativeCycle: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
     }
     const unreviewed = await page.goto(`${base}/ko/columns/taiwan-company-establishment-advanced-1`, { waitUntil: 'load' });
     assert.equal(unreviewed?.status(), 200);

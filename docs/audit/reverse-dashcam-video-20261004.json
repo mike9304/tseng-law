@@ -1,0 +1,357 @@
+{
+  "reviewedAt": "2026-10-03T20:48:53.984614+00:00",
+  "reviewer": "Codex",
+  "scope": "Four article-122 video replacements, native 15.041667 seconds / 24 fps / loop true; article bodies unchanged.",
+  "generationToolCall": "call-ba54c945-5ba5-4a82-9171-23d06bb6f0ce-0",
+  "rawSha256": "26950aade4e8ede489a91fa901b65663f86a99bd85d2483f4cd4b3d3a6ea4e3c",
+  "all361RawFramesDirectlyInspected": true,
+  "retiming": false,
+  "localBrowserAndPublicPlayback": "Pending; this record approves scene/copy only. Operational evidence is stored under /Users/son7/tseng-law-column-videos/qa/reverse-dashcam-*.",
+  "references": [
+    {
+      "locale": "ko",
+      "file": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+      "sha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af",
+      "firstTwoParagraphs": [
+        "대만법상 법정재산제가 적용되는 부부가 이혼할 때, 잔여재산분배청구(剩餘財產分配請求權)는 두 사람의 혼인 후 순재산 차액을 정산하는 청구입니다. 각자 남아 있는 혼인 후 재산에서 혼인 중 진 채무를 공제하므로 자신의 재산과 채무도 확인해야 합니다. 상속·증여 등 무상으로 받은 재산과 위자료는 제외하고, 원칙적으로 차액을 절반씩 나누되 불공평한 사정이 있으면 법원이 분배액을 조정하거나 면제할 수 있습니다. [대만 민법 제1030조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1030-1)",
+        "한국에 사는 부부에 대해서도 대만 법원은 부부재산의 준거법을 서면 합의, 공통 본국법·주소지법 등의 기준으로 정하므로, 대만인 배우자가 있다는 사실만으로 대만법 적용을 단정할 수 없습니다. 적용 법과 재산제도의 선택은 [기존 부부재산제 칼럼](/ko/columns/taiwan-marital-property-regime-international-couples)에 설명돼 있습니다. [섭외민사법률적용법 제48조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=48), [민법 제1005조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1005)"
+      ],
+      "headings": [
+        "어느 날짜의 잔액과 가치를 확인할 것인가",
+        "재산 목록에는 금액 옆에 날짜와 출처가 필요합니다",
+        "상대가 자료를 주지 않을 때의 법원 조사와 문서제출",
+        "이미 빠져나간 돈은 언제 다시 계산에 넣을 수 있나",
+        "가압류에는 재산 차액과 집행 위험을 각각 설명해야 합니다",
+        "자료가 모일 때까지 시효가 기다려 주지는 않습니다",
+        "참고한 공식 자료"
+      ],
+      "ending": "호정(昊鼎)국제법률사무소에 대만 재산분배 상담을 문의하려면, 혼인·이혼 관련 문서와 알고 있는 재산 목록, 이미 받은 법원 문서를 정리해 증준외(曾雋崴) 변호사의 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 연락할 수 있습니다. 사무소 주소는 103 臺北市大同區承德路一段35號7樓之2입니다."
+    },
+    {
+      "locale": "ko",
+      "file": "src/content/columns/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+      "sha256": "49248a8abf4f7b20ea9fef27549591a20c2e196d6f79eea0925ae48c3943d5dc",
+      "firstTwoParagraphs": [
+        "2023년 7월 3일 오전 11시 56분 31초, 국도 1호선 남쪽 방향 타이산(泰山)~린커우(林口)·구이산(龜山) 구간에서 백색 차가 가장 안쪽 차로의 3분의 2 지점까지 비스듬히 들어갔습니다. 32초에는 그 차로 왼쪽에서 흑색 승용차가 갑자기 나타나 백색 차를 앞질렀습니다. 흑색 차는 33초와 35초에 브레이크등을 켰고, 백색 차는 더 이상 차로를 바꾸지 않았습니다. 백색 차 블랙박스에는 11시 56분 26초 시속 101km, 차로 변경을 시도하던 29초 81km, 36초 74km가 표시됐습니다([臺灣高等法院 114年度上訴字第5220號, 2026년 2월 25일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1)).",
+        "이 장면은 백색 차 운전자가 항소하면서 직접 낸 자기 블랙박스 영상에 담겨 있었습니다. 흑색 차가 양보하지 않고 가속하더니 일부러 브레이크까지 밟았는데도 자신은 비켜 줬으니, 경주할 생각이었다면 왜 양보했겠느냐는 주장이었습니다. 대만고등법원은 이 영상을 검증(勘驗)하고 다르게 읽었습니다. 흑색 차가 길을 내주지 않아 충돌할 뻔했던 백색 차 운전자가 불쾌해져 흑색 차의 움직임을 주시하게 된 것은 상식에 어긋나지 않고, 그가 이 영상을 낸 것은 두 차 사이에 운전 분쟁(行車糾紛)이 있었다는 점을 더 분명히 보여 준다는 것입니다([臺灣高等法院 114年度上訴字第5220號, 2026년 2월 25일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1))."
+      ],
+      "headings": [
+        "흑색 차 블랙박스에 남은 추격",
+        "41B 출구에서 다툼은 끝났을까",
+        "151km는 누구의 블랙박스 숫자였나",
+        "비상등과 두 번의 브레이크",
+        "다른 차에는 영향이 없었다는 주장",
+        "징역 5개월과 하루 1,000대만달러",
+        "최고법원이 다시 보지 않은 것",
+        "블랙박스는 양쪽을 모두 찍는다",
+        "출처"
+      ],
+      "ending": "상대 앞에서 두 번 밟은 브레이크는 비상등을 켰더라도 앞에 정체가 있었다는 증거가 없으면 '방어적 제동'으로 인정되지 않았고, 상대가 차로를 바꿔 들어올 때 속도를 줄이지 않은 점도 잘못으로 지적됐습니다. 블랙박스 속도 표시에 오차가 있다고 다투려면 그 수치를 믿을 수 없는 구체적인 근거가 필요하다는 점도 고등법원의 판단에서 드러납니다([最高法院 115年度台上字第2709號, 2026년 8월 27일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C115%2C%E5%8F%B0%E4%B8%8A%2C2709%2C20260827%2C1), [臺灣高等法院 114年度上訴字第5220號, 2026년 2월 25일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1))."
+    },
+    {
+      "locale": "ko",
+      "file": "src/content/columns/192-taiwan-export-control-entity-list-korean-traders.md",
+      "sha256": "cd0cf3163d6f776d09fa1eb9e1020ea13c8629f706791eb753608530fea86475",
+      "firstTwoParagraphs": [
+        "대만 경제부 국제무역서는 2025년 6월 10일 전략성 첨단기술 물품(戰略性高科技貨品, SHTC) 수출 실체관리명단에 601개 대상을 추가했다고 밝혔습니다. 6월 15일 발표에는 화웨이와 중신국제(SMIC)도 포함됐습니다. 국제무역서가 밝힌 직접적인 효과는 대만 업체가 명단 대상에 수출하려면 수출허가증을 먼저 받아야 하고, 허가 없이 출고하려는 물품은 세관이 통과시키지 않는다는 것입니다. [대만 국제무역서 2025년 6월 15일 발표](https://www.trade.gov.tw/Pages/Detail.aspx?nodeID=40&pid=802558)",
+        "국제무역서는 2026년 6월에도 실체명단에 대상을 추가하고 일부를 삭제했다고 발표했습니다. 2026년 10월 4일 현재 한국 반도체 유통사나 장비업체가 계약을 검토한다면 당시 기사에 적힌 회사명만으로 현재 등재 여부를 판단하기보다 [국제무역서의 실체명단 검색 도구](https://publicinfo.trade.gov.tw/icp/entities)에서 거래 상대의 정확한 명칭과 주소를 다시 대조해야 합니다. [2026년 6월 9일 명단 변경 발표](https://www.trade.gov.tw/Pages/Detail.aspx?nodeid=40&pid=816591)"
+      ],
+      "headings": [
+        "명단 등재는 사전허가 문제입니다",
+        "품목 분류와 거래 상대 조회는 각각 필요합니다",
+        "대만에서 나가는 물건과 대만을 지나가는 물건",
+        "견본 수출과 계약 변경의 허가 조건",
+        "위반의 결과는 목적지와 행위에 따라 다릅니다",
+        "참고 자료"
+      ],
+      "ending": "한국 기업이 대만 출고나 재수출이 포함된 거래를 검토할 때는 호정(昊鼎)국제법률사무소 증준외(曾雋崴) 변호사에게 비밀이 아닌 물품 사양과 이동 경로, 계약 당사자의 개요부터 보내 상담 범위를 정할 수 있습니다. 이메일은 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 타이베이 사무실 주소는 103 臺北市大同區承德路一段35號7樓之2입니다."
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+      "sha256": "90991f491152cc99204798d5a7a6548e094c25e54d35123447721b5da2246515",
+      "firstTwoParagraphs": [
+        "At 11:58:40 a.m. on July 3, 2023, a white car ahead of a black car flashed its hazard lights and braked on southbound National Freeway No. 1, along the Taishan–Linkou–Guishan stretch. Its brake lights came on again at 11:58:41. The black car braked urgently; the cars came close to colliding. The courts found that the braking was part of a continuing chase. ([Taiwan High Court, 114年度上訴字第5220號, February 25, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1); [New Taipei District Court, 113年度訴字第756號, April 30, 2025](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCDM%2C113%2C%E8%A8%B4%2C756%2C20250430%2C1))",
+        "The black car's dashcam had displayed 151 km/h shortly before that encounter. The white car's driver later challenged the use of the other vehicle's extreme readings against him: his car appeared only occasionally, he argued, and its precise speed was missing. The Supreme Court rejected his appeal. His own dashcam was also part of the evidence. ([Taiwan High Court, 114年度上訴字第5220號, February 25, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1); [Supreme Court, 115年度台上字第2709號, August 27, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C115%2C%E5%8F%B0%E4%B8%8A%2C2709%2C20260827%2C1))"
+      ],
+      "headings": [
+        "The numbers belonged to different cars",
+        "The route through exit 41B",
+        "Two drivers, danger to everyone else",
+        "Five months for each driver",
+        "Sources"
+      ],
+      "ending": "The useful distinction is between what a recording displays and what the whole sequence supports. This case does not make every speeding incident an Article 185 offence, or let another car's speed display automatically establish yours. It supports preserving the sequence before and after the disputed manoeuvre and identifying which camera supplied each reading. Here, the white-car driver's recording showed the black car overtaking and braking first. It also showed his own subsequent acceleration. Both parts counted. ([Taiwan High Court, 114年度上訴字第5220號, February 25, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1); [New Taipei District Court, 113年度訴字第756號, April 30, 2025](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCDM%2C113%2C%E8%A8%B4%2C756%2C20250430%2C1))"
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md",
+      "sha256": "90f71679756610130fa7b73959c032febfc639065c24dc7c4e335ecff15406ab",
+      "firstTwoParagraphs": [
+        "At 7:47:10 p.m. on March 10, 2025, two cars were stopped in the inner overtaking lane of eastbound Route 66 in Taoyuan's Yangmei District. The leading driver had braked abruptly, forcing the following car to stop too. Nothing ahead required emergency braking. This was an expressway with a 90 km/h speed limit and no streetlights on that stretch. These are the facts in the indictment that the court incorporated into its judgment. [Taoyuan District Court, 115年度訴字第868號, June 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1).",
+        "The leading car remained there until 7:50:06 p.m.—a span of 2 minutes 56 seconds. Its driver got out and knocked on the other car's window. The defendant's explanation during the investigation was that the driver behind had flashed high beams at them. There were few cars about, the defendant said, so they had forced a stop to question the other driver about aggressive driving. [Taoyuan District Court, 115年度訴字第868號, June 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1)."
+      ],
+      "headings": [
+        "The traffic that still had to pass",
+        "A road can become dangerous without being damaged",
+        "Three months, with a daily conversion rate",
+        "What the passing cars add to the story",
+        "Sources"
+      ],
+      "ending": "For someone driving or riding in Taiwan, the evidence suggests a practical reason to retain the stretch of dashcam recording after an encounter, as well as the moment it starts. Here, the cars passing on the right helped demonstrate the danger created by the stop. A clip limited to the confrontation could omit evidence of how the stop affected passing traffic. That is an evidential lesson from this case, not a recording requirement imposed by the court. [Taoyuan District Court, 115年度訴字第868號, June 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1)."
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/188-taiwan-road-rage-started-did-not-matter-driver-blocked.md",
+      "sha256": "1023d3a23eedcb1f74384ff31ffa24799609cc35d703ab51823f0e20293701db",
+      "firstTwoParagraphs": [
+        "A passenger car changes lanes and stops in front of another in the lane that leads from the Nangang exit of a freeway interchange towards Jiuzong Road. Its driver gets out holding an unidentified stick-like object. The car behind drives on for six minutes. Then the first car is on the left of the double yellow line in the frame, travelling against the flow of traffic, before it moves back into the right-hand lane. When the second car goes to turn left, the first follows it into the turn and blocks its way, and both come to a halt in the middle of the road. The driver gets out again, this time holding a wooden baseball bat, and says:",
+        "An expletive, then \"What do you mean by honking? Who are you honking at?\" ([Shilin District Court 115年度易字第383號, June 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLDM%2C115%2C%E6%98%93%2C383%2C20260626%2C1))."
+      ],
+      "headings": [
+        "What the inspection recorded, and where it is silent",
+        "A defence built on stopping rather than crowding",
+        "The question the court left unanswered",
+        "Two offences found, one named in the sentence",
+        "What the judgment settles and what it leaves open",
+        "For the driver who is blocked, and the driver who gets out",
+        "Sources"
+      ],
+      "ending": "For the driver who feels provoked, the judgment shows what did not help. The defendant admitted the wrong-way overtake, and the court counted it as part of the crowding. Calling the manoeuvre stopping instead of crowding changed nothing, and neither did the claims that the complainant had muttered through an open window or crowded first. Walking up to the other car with a bat in hand was treated as a threat without any finding that the bat was swung. The bat was confiscated, and the denial counted against the defendant at sentencing ([Shilin District Court 115年度易字第383號, June 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLDM%2C115%2C%E6%98%93%2C383%2C20260626%2C1))."
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+      "sha256": "1a6166935fe7c58d957941ed0d9431c101793190c84320b4db1458b29c7ed45f",
+      "firstTwoParagraphs": [
+        "2023年7月3日正午、国道1号の南行き、泰山から林口・亀山へ向かう区間。白い乗用車は、黒い乗用車の後ろを走っていました。白い車のドライブレコーダーは12時00分00秒に時速89キロ、02秒からは101キロを表示します。白い車が左の車線へ移ると、右前方の黒い車も左ウインカーを出しました。白い車は減速せず、表示は123キロ。08秒には両車がさらに内側の車線へ移り、09秒に衝突しました。一審が白い車の映像を調べて記した場面です。[臺灣新北地方法院113年度訴字第756號刑事判決（2025年4月30日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCDM%2C113%2C%E8%A8%B4%2C756%2C20250430%2C1)",
+        "ところが、白い車の運転者は最高法院への上訴で、極端な速度の数字はすべて黒い車のドラレコに出たものだと争いました。相手の猛スピードを根拠に、自分まで競い合っていたと推定してよいのか。この反論に対し、判決が参照したのは、2台それぞれの映像と、その中で入れ替わる車の位置でした。[最高法院115年度台上字第2709號刑事判決（2026年8月27日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C115%2C%E5%8F%B0%E4%B8%8A%2C2709%2C20260827%2C1)"
+      ],
+      "headings": [
+        "151キロの画面に、もう1台が戻ってくる",
+        "41B出口へそれても、追走は続いていたのか",
+        "ブレーキ灯だけでは、踏んだ理由まで映らない",
+        "争ったのは2台でも、危険は2台の中に収まらない",
+        "2人に5か月、最高法院が退けた上訴",
+        "出典"
+      ],
+      "ending": "なお、この3件が判断したのは刑事責任です。警察の違反通知書は証拠として出てきますが、行政上の制裁金の確定額や免許・ナンバープレートの処分結果、民事の修理費や過失割合までは示されていません。ここに書かれている5か月と1日1,000台湾元から、それらの結論を推測することはできません。[最高法院115年度台上字第2709號刑事判決（2026年8月27日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C115%2C%E5%8F%B0%E4%B8%8A%2C2709%2C20260827%2C1)"
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/193-taiwan-science-park-entry-japanese-semiconductor-companies.md",
+      "sha256": "7bedd708e7d4af77e058bf0f6e3c70fbcdbe656caa69783dff1e3b1aa5cd18ba",
+      "firstTwoParagraphs": [
+        "台湾の科学園区への入居は、空いている工場を借りるだけでは決まりません。半導体装置の開発、材料の製造、顧客向けの技術サービスなど、台湾拠点が何を行うかによって申請する事業区分が変わり、管理局の審査を受けます。根拠となるのは、科學園區設置管理條例の[第4条と第5条](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160004)です。",
+        "2026年10月4日時点で、同条例の最終改正日は2018年6月6日です。本文には主管機関として「科技部」と残っていますが、[法令沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=H0160004)にある2022年7月27日の管轄変更により、現在は國家科學及技術委員會（国科会）が担当します。新竹・中部・南部の各管理局への相談では、候補の園区名に加え、台湾で行う製造・研究・販売・保守の範囲を示すことになります。"
+      ],
+      "headings": [
+        "研究開発拠点と販売拠点では、審査の出発点が違う",
+        "三つの管理局の申請資料と審査の流れ",
+        "投資承認後は、保証金と登記の期限が進む",
+        "土地の賃借と工場建物では権利関係が異なる",
+        "保税の開始条件と、顧客への納入時の扱い",
+        "管理局との関係は、操業開始後も続く",
+        "参考資料"
+      ],
+      "ending": "科学園区への進出や拠点契約について相談をご希望の場合は、昊鼎国際法律事務所のパートナー弁護士、曾雋崴（Wei Tseng）へ、まず機密情報を含まない概要を[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)にお送りいただけます。台北事務所：103 臺北市大同區承德路一段35號7樓之2。"
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md",
+      "sha256": "d51beaf452634e5e1ccd204ce0452c59b6c2f2dac6254ed0e4add4433ea3b3e3",
+      "firstTwoParagraphs": [
+        "2025年3月10日19時40分ごろ、桃園市楊梅区の台66線で、乗用車2台が西から東へ走っていました。道路は「快速公路」と呼ばれる自動車専用道路です。後ろの車は、ゆっくり走る前の車を追い越そうとしましたが、道を譲ってもらえず、ハイビームを点滅させました。すると前の車は、急ブレーキをかける事情がないのに、内側の追越車線で突然停止しました。後ろの車も止まらざるを得ませんでした。裁判所が犯罪事実として採用した、添付起訴状の記述です。[臺灣桃園地方法院115年度訴字第868號・2026年6月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1)",
+        "前の車が追越車線に止まっていたのは、19時47分10秒から19時50分6秒まで。記載された時刻から計算すると2分56秒です。運転者は車を降り、後ろの車の窓ガラスをたたきました。その区間には街灯がなく、制限速度は時速90キロでした。[臺灣桃園地方法院115年度訴字第868號・2026年6月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1)"
+      ],
+      "headings": [
+        "理由を聞くための停車に、懲役3か月",
+        "ドラレコが捉えた、右側を通る車の動き",
+        "車が少なくても、追突の危険は残る",
+        "窓をたたいた行為とは、判断が分かれている",
+        "出典"
+      ],
+      "ending": "この事件で危険を具体的に示したのは、当事者同士の説明に加え、右側を通った車の減速とハザードランプでした。この証拠評価からは、台湾で同じようなトラブルの録画を残す際、相手が止まった瞬間だけでなく、周囲の車が通過する間も含めて保存する意味が読み取れます。[臺灣桃園地方法院115年度訴字第868號・2026年6月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1)"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/196-separation-cohabitation-duty-taiwan.md",
+      "sha256": "1cc155808a1cd39ab6d55a09a6733e5b2c605a1bebc1e1d59f984cf3cc0febd8",
+      "firstTwoParagraphs": [
+        "請配偶分擔家庭生活費用，不必先花光自己的存款。最高法院在[113年度台簡抗字第117號民事裁定](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C113%2C%E5%8F%B0%E7%B0%A1%E6%8A%97%2C117%2C20240516%2C1)中，就要求原法院重新區分家庭生活費用與夫妻間扶養的要件。",
+        "分居期間能請求哪些費用、多少金額，仍須看分開住的原因、原先的分擔安排與現在的支出用途。以下以適用台灣法的婚姻為前提；與外籍配偶分隔兩地者，同居、生活費與離婚還須分別判斷適用哪一國法律。"
+      ],
+      "headings": [
+        "同居義務有例外，住所也不是由一方說了算",
+        "請求履行同居，不能把人強行帶回家",
+        "最高法院為何要求重審分居生活費",
+        "分擔比例要算進家務，支出也要分清用途",
+        "還沒決定離婚，也能處理家用爭議",
+        "分居年數不是固定的離婚門檻",
+        "配偶住海外，款項性質會影響適用的法律",
+        "參考的官方資料"
+      ],
+      "ending": "如果需要就分居期間的同居要求或家用請求諮詢，可來信昊鼎國際法律事務所曾雋崴律師：[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，簡述雙方國籍、居住地、分居原因及目前的付款安排。事務所地址：103 臺北市大同區承德路一段35號7樓之2。"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/195-reserved-share-will-inheritance-dispute.md",
+      "sha256": "d7a75683c44dad82399d0e869e6a800ecfb0dde228d32bbe7832c1de5345a9cf",
+      "firstTwoParagraphs": [
+        "遺囑把房子或存款留給某一位家人，其他繼承人少分、甚至沒有分到，不會單憑這件事就使整份遺囑無效。[民法第1187條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1187)允許遺囑人在特留分保障的範圍內安排遺產；分配侵害特留分時，[第1225條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1225)提供的是就不足部分扣減的途徑。",
+        "特留分是符合資格的繼承人受法律保障的最低份額，不等於原本依法可以分到的全部「應繼分」。認為遺囑不是立遺囑人寫的，和承認遺囑是本人寫的、但主張自己分到的遺產不足特留分，是兩種不同的爭議；向法院提出的請求與證據也不同。"
+      ],
+      "headings": [
+        "自書遺囑的形式，與分配內容分開判斷",
+        "特留分按應繼分計算",
+        "沒分到某項財產，未必少於特留分",
+        "扣減要向誰表示，期間從何時開始",
+        "遺囑執行人負責執行，不能替家人裁決爭議",
+        "家人在海外，遺囑方式與繼承法律未必相同",
+        "家事調解可以談分配，也要把履行方式寫清楚",
+        "參考的官方資料"
+      ],
+      "ending": "有遺產爭議需要個別評估時，可將完整遺囑、繼承關係資料、財產及債務清單，連同移轉紀錄與已往來的通知，交由昊鼎國際法律事務所曾雋崴律師確認：承德路辦公室地址為103 臺北市大同區承德路一段35號7樓之2，電子郵件 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+      "sha256": "d6d8a8802638997d6c63d109ed198a2b027ede058cc8611cd963f6b80a6b44cd",
+      "firstTwoParagraphs": [
+        "2023年7月3日中午12時，國道一號南下，泰山至林口、龜山路段，白色小客車跟在黑車後方，自己的行車紀錄器顯示時速89公里。兩秒後，白車加速、往左變換車道；右前方的黑車也打左方向燈切過來。白車沒有減速，仍以紀錄器所示的時速123公里行駛。12時0分8秒，兩車又往內側車道切，下一秒發生碰撞。一審認定，黑車變換車道時未禮讓後方白車先行；也認定白車在對方切入時持續高速行駛，兩人都涉及妨害公眾往來安全。[臺灣新北地方法院113年度訴字第756號刑事判決，2025年4月30日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCDM%2C113%2C%E8%A8%B4%2C756%2C20250430%2C1)",
+        "這段碰撞前的影像，後來成了白車駕駛上訴時的一個爭點。他認為，黑車紀錄器上的高速數字，不能拿來證明自己也在競駛。高院卻指出，一審認定他這段車速的資料，正是他自己提出的行車紀錄器。[臺灣高等法院114年度上訴字第5220號刑事判決，2026年2月25日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1)"
+      ],
+      "headings": [
+        "同一段路，兩部紀錄器",
+        "黑車往41B出口走，糾紛就結束了嗎",
+        "別的車還在走，法院為何仍認定公共危險",
+        "五個月刑期，三次判決",
+        "資料來源"
+      ],
+      "ending": "對要用行車紀錄器說明經過的駕駛，這案提供了一個具體做法：保留爭執前後的連續影像，整理時分清哪一部車的檔案、哪一秒的數字、哪一個看得見的動作。這是從法院比對方式得出的建議，並非判決新增的法定義務。白車交出的影片既拍到黑車先超越、煞車，也留下自己後來加速的過程；主張前方塞車而煞車時，前方路況與整段互動也都會被拿來核對。只看對方切入的一瞬間，無法完整說明法院在這件案子裡看到的追逐。[臺灣高等法院114年度上訴字第5220號刑事判決，2026年2月25日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E8%A8%B4%2C5220%2C20260225%2C1)"
+    }
+  ],
+  "edits": [
+    {
+      "locale": "ko",
+      "source": {
+        "key": "ko/column/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "locale": "ko",
+        "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "file": "src/content/columns/122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md",
+        "url": "https://tseng-law.com/ko/columns/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "sourceSha256": "8bf2aab4b729823f79d988d99e2e5275e4b3f55edc1573f7e64e83f2adb5a8c0"
+      },
+      "before": {
+        "title": "앞차와의 간격이 벌어졌다가 다시 좁아지는 장면",
+        "description": "밤의 젖은 시내 도로에서 브레이크등을 켠 짙은 색 세단과의 간격이 벌어졌다가 다시 좁아집니다. 앞차가 가까이 있는 동안 옆 차로의 차들이 지나가고, 앞쪽 신호등이 빨간불에서 초록불로 바뀝니다. 소리 없는 약 15초 분량의 영상으로, 재생 버튼을 누르면 반복 재생됩니다.",
+        "disclosure": "AI로 만든 가상의 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실의 재현이 아닙니다. 깜빡이는 REC 표시는 연출이며, 카운터는 재생 경과 시간을 보여 줍니다. 영상 속 거리와 속도, 동작의 시점과 간격은 설명을 위한 예시이므로 실제 사건의 과실을 판단하는 근거로 사용할 수 없습니다."
+      },
+      "after": {
+        "title": "앞차가 후진해 뒤차를 들이받는 장면",
+        "description": "짙은색 세단이 빠르게 후진해 멈춰 있던 촬영 차량의 앞부분을 들이받습니다. 보닛이 조금 꺾인 뒤 두 차는 맞닿은 채 멈춥니다. 소리 없는 약 15초 영상으로, 반복 재생됩니다.",
+        "disclosure": "AI로 만든 독립적인 가상 장면이며, 실제 블랙박스 영상이나 본문에 나온 세 차례 충돌의 재현이 아닙니다. 화면 속 움직임과 손상으로 실제 사건의 속도, 고의 또는 정당방위 여부를 판단할 수 없습니다."
+      },
+      "problemAndReason": "Previous clip showed only a widening/narrowing gap and had an added REC counter; those descriptions do not match the new visible reverse collision.",
+      "meaningPreserved": "Legal body, case facts, citations, authorship and AI disclosure preserved; caption changed only to describe the newly inspected independent fictional scene. No real speed, intent, injury or self-defence finding added.",
+      "sentenceDeletionReview": [
+        "Action sentence supplies the visible reverse and contact; retain.",
+        "Crease/rest sentence adds observed aftermath; retain.",
+        "Duration/silence/loop sentence explains playback; retain.",
+        "Disclosure distinguishes one fictional contact from the three case collisions and retains limits; retain."
+      ],
+      "sameLanguageComparison": "Three same-language openings/headings/endings compared. Caption starts with the observed action, omits dates/speeds and a generic legal lesson; does not borrow their narrative opening or closing appeal."
+    },
+    {
+      "locale": "en",
+      "source": {
+        "key": "en/column/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "locale": "en",
+        "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "file": "src/content/columns-en/122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md",
+        "url": "https://tseng-law.com/en/columns/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "sourceSha256": "f46a35553250caf9c4330cbc2fface037eba74c3c92643091343fa0609a20a2b"
+      },
+      "before": {
+        "title": "The gap to the car ahead widens, then narrows",
+        "description": "On a wet city road at night, the gap to a dark sedan with its brake lights on widens, then narrows again. The sedan stays close ahead as other vehicles pass in the neighbouring lanes and the traffic lights ahead change from red to green. The silent clip lasts about 15 seconds and loops once you press play.",
+        "disclosure": "This fictional scene was generated by AI; it is neither dashcam footage nor a reconstruction of the facts found in the judgment. The blinking REC marker is an added visual effect, and the counter shows elapsed playback time. Distances, speeds and timing are illustrative and cannot be used to judge fault in any real case."
+      },
+      "after": {
+        "title": "The car ahead reverses into the car behind",
+        "description": "A dark sedan reverses quickly into the front of the stationary camera car. A small crease forms in the hood, and the cars remain at rest, touching. The silent clip lasts about 15 seconds and loops.",
+        "disclosure": "This independent fictional scene was generated with AI. It is not real dashcam footage or a reconstruction of the three collisions described in the article. The movement and damage shown cannot establish actual speed, intent or self-defence in the case."
+      },
+      "problemAndReason": "Previous clip showed only a widening/narrowing gap and had an added REC counter; those descriptions do not match the new visible reverse collision.",
+      "meaningPreserved": "Legal body, case facts, citations, authorship and AI disclosure preserved; caption changed only to describe the newly inspected independent fictional scene. No real speed, intent, injury or self-defence finding added.",
+      "sentenceDeletionReview": [
+        "Action sentence supplies the visible reverse and contact; retain.",
+        "Crease/rest sentence adds observed aftermath; retain.",
+        "Duration/silence/loop sentence explains playback; retain.",
+        "Disclosure distinguishes one fictional contact from the three case collisions and retains limits; retain."
+      ],
+      "sameLanguageComparison": "Three same-language openings/headings/endings compared. Caption starts with the observed action, omits dates/speeds and a generic legal lesson; does not borrow their narrative opening or closing appeal."
+    },
+    {
+      "locale": "ja",
+      "source": {
+        "key": "ja/column/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "locale": "ja",
+        "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "file": "src/content/columns-ja/122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md",
+        "url": "https://tseng-law.com/ja/columns/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "sourceSha256": "c3b69068ffa425e8cd47003d9444acefd5ab7c0a6ca2cb6c2466e894fc254d77"
+      },
+      "before": {
+        "title": "前の車との間隔が開き、再び縮まる場面",
+        "description": "夜の濡れた市街地の道路で、ブレーキランプを点けた黒っぽいセダンとの車間が開き、その後また縮まります。前の車がすぐ近くにいる間に隣の車線をほかの車が通り過ぎ、前方の信号が赤から青に変わります。無音の約15秒の動画で、再生ボタンを押すと繰り返し再生されます。",
+        "disclosure": "AIで生成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。点滅するRECマークは演出で、カウンターは再生開始からの経過時間を示しています。距離・速度・動作のタイミングは説明のための例であり、実際の事件の過失を判断する根拠には使えません。"
+      },
+      "after": {
+        "title": "前の車が後退し、後ろの車に衝突する場面",
+        "description": "濃い色のセダンが素早く後退し、停止している撮影車の前部に衝突します。ボンネットが少し折れ曲がり、2台は接触したまま止まります。無音の約15秒の動画で、繰り返し再生されます。",
+        "disclosure": "AIで作成した独立した架空の場面です。実際のドライブレコーダー映像でも、本文にある3回の衝突の再現でもありません。映像の動きや損傷から、実際の事件の速度、故意、正当防衛の成否は判断できません。"
+      },
+      "problemAndReason": "Previous clip showed only a widening/narrowing gap and had an added REC counter; those descriptions do not match the new visible reverse collision.",
+      "meaningPreserved": "Legal body, case facts, citations, authorship and AI disclosure preserved; caption changed only to describe the newly inspected independent fictional scene. No real speed, intent, injury or self-defence finding added.",
+      "sentenceDeletionReview": [
+        "Action sentence supplies the visible reverse and contact; retain.",
+        "Crease/rest sentence adds observed aftermath; retain.",
+        "Duration/silence/loop sentence explains playback; retain.",
+        "Disclosure distinguishes one fictional contact from the three case collisions and retains limits; retain."
+      ],
+      "sameLanguageComparison": "Three same-language openings/headings/endings compared. Caption starts with the observed action, omits dates/speeds and a generic legal lesson; does not borrow their narrative opening or closing appeal."
+    },
+    {
+      "locale": "zh-hant",
+      "source": {
+        "key": "zh-hant/column/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "locale": "zh-hant",
+        "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "file": "src/content/columns-zh/122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md",
+        "url": "https://tseng-law.com/zh-hant/columns/taiwan-road-rage-reversing-into-tailgater-no-self-defense",
+        "sourceSha256": "8dacce19968145d00eacff36e36934e37f42b5465c69d9cbad1ce63de4b423fa"
+      },
+      "before": {
+        "title": "與前車的距離先拉開，再縮短",
+        "description": "夜間的市區道路路面潮濕，前方一輛深色轎車亮著煞車燈，兩車距離先拉開，再縮短。前車仍在近處，其他車輛陸續從旁邊的車道駛過，前方號誌也由紅燈轉為綠燈。這是一段無聲、約15秒的影片，按下播放後會循環播放。",
+        "disclosure": "這是AI生成的虛構場景，不是行車紀錄器實拍影像，也不是判決認定事實的重現。閃爍的REC標示是後製效果，計時器顯示的是影片播放經過的時間。車距、速度與動作的時間安排僅供示意，不能用來判斷任何真實案件的過失責任。"
+      },
+      "after": {
+        "title": "前車倒退，撞上停在後方的車",
+        "description": "深色轎車迅速倒退，撞上靜止的攝影車前端。引擎蓋出現小幅凹折，兩車接觸後停住。這段無聲影片長約15秒，會循環播放。",
+        "disclosure": "這是AI生成的獨立假想場景，不是真實行車紀錄器影像，也不是本文三次倒車碰撞的重建。不能從畫面中的動作或損傷，認定實際案件的車速、故意或正當防衛是否成立。"
+      },
+      "problemAndReason": "Previous clip showed only a widening/narrowing gap and had an added REC counter; those descriptions do not match the new visible reverse collision.",
+      "meaningPreserved": "Legal body, case facts, citations, authorship and AI disclosure preserved; caption changed only to describe the newly inspected independent fictional scene. No real speed, intent, injury or self-defence finding added.",
+      "sentenceDeletionReview": [
+        "Action sentence supplies the visible reverse and contact; retain.",
+        "Crease/rest sentence adds observed aftermath; retain.",
+        "Duration/silence/loop sentence explains playback; retain.",
+        "Disclosure distinguishes one fictional contact from the three case collisions and retains limits; retain."
+      ],
+      "sameLanguageComparison": "Three same-language openings/headings/endings compared. Caption starts with the observed action, omits dates/speeds and a generic legal lesson; does not borrow their narrative opening or closing appeal."
+    }
+  ],
+  "upstreamStyleComparison": "Included new ko 197 and zh-hant 195/196; visible-action captions retain no generic consulting ending or legal-advice introduction."
+}

@@ -203,12 +203,13 @@ describe('loadTrafficCollection (published files)', () => {
     expect(bySlug.get('taiwan-car-door-opening-motorcycle-liability')?.aiAuthored).toBe(true);
     expect(bySlug.get('taiwan-overtaking-accident-liability')?.aiAuthored).toBe(false);
     expect(bySlug.get('taiwan-overtaking-accident-liability')?.hasVideo).toBe(true);
-    expect(bySlug.get('taiwan-accident-police-records')?.hasVideo).toBe(false);
+    expect(bySlug.get('taiwan-accident-police-records')?.hasVideo).toBe(true);
     expect(bySlug.get('taiwan-traffic-accident-procedure')?.hasVideo).toBe(true);
     for (const item of items) {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-accident-police-records',
         'taiwan-retaliatory-driving-rear-ended-intentional-injury',
         'taiwan-traffic-accident-procedure',
         'taiwan-car-repair-cost-estimate-parts-depreciation',

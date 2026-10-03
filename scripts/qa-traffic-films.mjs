@@ -5,7 +5,9 @@ import { chromium } from '@playwright/test';
 
 const base = process.env.TRAFFIC_FILM_QA_BASE || 'http://127.0.0.1:4598';
 const out = process.env.TRAFFIC_FILM_QA_OUT || '/tmp/traffic-film-qa';
-const films = JSON.parse(await fs.readFile(new URL('../src/data/traffic-column-films.json', import.meta.url), 'utf8'));
+const registry = JSON.parse(await fs.readFile(new URL('../src/data/traffic-column-films.json', import.meta.url), 'utf8'));
+const films = Object.fromEntries(Object.entries(registry).filter(([key]) => !process.env.TRAFFIC_FILM_QA_SLUG || key.endsWith(`/${process.env.TRAFFIC_FILM_QA_SLUG}`)));
+assert.ok(Object.keys(films).length, 'No film matched the QA selection');
 await fs.mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const results = [];

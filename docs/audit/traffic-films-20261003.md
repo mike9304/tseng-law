@@ -32,3 +32,5 @@ Local evidence includes targeted unit/render tests, ESLint, production build, fu
 An initial browser-test failure was a test assumption: Chromium's right arrow advanced 0.8 seconds for an 80-second file, less than the test's assumed two seconds. A focused probe demonstrated pause, keyboard seeking, end-key seeking and timeline clicking all worked. The test now checks actual forward movement and preserves the paused state.
 
 Deployment and public verification are recorded in the task evidence and handoff after publication; this document alone is not a deployment claim.
+
+First batch published as `64dac3f6e362c229a370262a9c228e3c23ff586e`, Vercel `dpl_6REdLHKmo5Ho9WpB4VmVwg72JwGD`, production Ready with `tseng-law.com` attached. Public browser verification passed all eight normal-speed desktop/mobile journeys and the four asset SHA-256/range checks. Existing traffic autoplay and non-traffic manual playback also passed on the public site. Evidence: `qa/public-general/report.json`, `qa/general-deployment.json`, `qa/regression-public.json` under the task evidence folder.

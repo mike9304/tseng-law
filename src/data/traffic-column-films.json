@@ -214,5 +214,221 @@
         "text": "支払時期、保険金の扱い、放棄する請求を読みます。 署名前に留保する請求と今後の治療の範囲を確認します。"
       }
     ]
+  },
+  "column/ko/taiwan-accident-police-records": {
+    "id": "police-records-film-v1-ko",
+    "src": "/videos/columns/police-records-film-v1-ko.mp4",
+    "poster": "/images/column-videos/police-records-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "사고 기록을 남기고 경찰 자료와 위임 범위를 확인하는 과정",
+    "description": "현장 기록, 경찰 자료의 신청 시점과 온라인 신청 조건, 대리 권한, 출국 전 연락 준비를 보여주는 80초 무음 영상입니다.",
+    "disclosure": "AI로 만든 가상 인물·기관·화면입니다. 실제 사고나 실제 신청 절차를 촬영한 영상이 아닙니다. 신청 화면은 설명용이며 공식 사이트를 재현하지 않았습니다. 구체적인 의무·신청 조건·기한은 본문과 공식 안내에서 확인해야 합니다.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "구호와 신고",
+        "text": "부상·사망 사고의 운전자는 구호·신고·증거 보존 의무가 있습니다. 먼저 현장의 안전을 확보합니다."
+      },
+      {
+        "start": 10,
+        "title": "안전한 현장 기록",
+        "text": "차량 위치·파손·차로 표시·신호와 주변 상황을 남깁니다. 안전하게 촬영할 수 있을 때만 사진을 찍습니다."
+      },
+      {
+        "start": 20,
+        "title": "원본과 사건 정보",
+        "text": "블랙박스 원본과 사건을 특정할 정보를 보관합니다. 진료기록과 영수증은 날짜순으로 정리합니다."
+      },
+      {
+        "start": 30,
+        "title": "경찰 연락과 서류",
+        "text": "현장에서 당사자 등록연락서를 신청할 수 있습니다. 담당 경찰관의 연락처와 사건 정보를 확인합니다."
+      },
+      {
+        "start": 40,
+        "title": "자료별 신청 시점",
+        "text": "현장도·사진은 사고 7일 뒤, 초보분석판정표는 30일 뒤부터. 신청 가능 시점이며 당일 발급이 보장되는 것은 아닙니다."
+      },
+      {
+        "start": 50,
+        "title": "온라인 신청 조건",
+        "text": "경찰이 현장에 출동했고 부상·사망자가 있는 사고가 대상입니다. 물적 피해만 있거나 본인확인이 어려우면 담당 기관에 문의합니다."
+      },
+      {
+        "start": 60,
+        "title": "위임 범위",
+        "text": "대리 수령에는 위임장, 소송 대리인의 합의에는 특별수권이 필요합니다. 형사 고소는 대리인을 선임해도 본인 출석을 요구할 수 있습니다."
+      },
+      {
+        "start": 70,
+        "title": "출국 전 확인",
+        "text": "문서 수령 방법·연락처·예정된 출석일을 확인합니다. 경찰 자료 대기 기간과 고소·청구 기한은 별개입니다."
+      }
+    ]
+  },
+  "column/en/taiwan-accident-police-records": {
+    "id": "police-records-film-v1-en",
+    "src": "/videos/columns/police-records-film-v1-en.mp4",
+    "poster": "/images/column-videos/police-records-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Recording a crash and arranging police records and representation",
+    "description": "An 80-second silent film about scene records, application times and online eligibility, authorization, and contact arrangements before leaving Taiwan.",
+    "disclosure": "The people, office and screens are fictional and AI-generated, not footage of a real accident or application. The illustrative form does not reproduce the official website. Consult the article and official guidance for the applicable duties, eligibility and deadlines.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Assistance and reporting",
+        "text": "After injury or death, drivers must assist, notify police and preserve evidence. Make the scene safe first."
+      },
+      {
+        "start": 10,
+        "title": "Record the scene safely",
+        "text": "Photograph vehicle positions, damage, markings, signals and surroundings. Take photographs only when it is safe to do so."
+      },
+      {
+        "start": 20,
+        "title": "Original files and case details",
+        "text": "Preserve original dashcam files and information identifying the case. Arrange medical records and receipts by date."
+      },
+      {
+        "start": 30,
+        "title": "Police contacts and records",
+        "text": "The participant registration sheet can be requested at the scene. Keep the handling officer’s contact information and the case details."
+      },
+      {
+        "start": 40,
+        "title": "When requests can begin",
+        "text": "Scene plans/photos: after 7 days. Preliminary analysis: after 30 days. These are application times, not guaranteed delivery dates."
+      },
+      {
+        "start": 50,
+        "title": "National portal eligibility",
+        "text": "Police must have attended, and someone must have been injured or killed. For property-only cases or authentication problems, contact the police unit."
+      },
+      {
+        "start": 60,
+        "title": "Scope of authority",
+        "text": "An agent needs collection authorization and special authority for a civil-court settlement. A criminal complainant may still have to attend, even with an agent."
+      },
+      {
+        "start": 70,
+        "title": "Before leaving Taiwan",
+        "text": "Confirm document receipt, contact details and scheduled appearances. Waiting for police records is separate from complaint and claim deadlines."
+      }
+    ]
+  },
+  "column/zh-hant/taiwan-accident-police-records": {
+    "id": "police-records-film-v1-zh-hant",
+    "src": "/videos/columns/police-records-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/police-records-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "事故紀錄、警方資料申請與離台前的安排",
+    "description": "這段80秒無聲影片呈現現場紀錄、各項警方資料的申請時間、線上申請條件、委任權限，以及離台前的聯絡安排。",
+    "disclosure": "人物、機關與畫面均為AI生成的假想情境，並非真實事故或申辦過程。表單畫面僅供說明，未重建官方網站。具體義務、申請條件與期限，仍須對照本文及官方說明。",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "救護與報警",
+        "text": "事故有人受傷或死亡時，駕駛人應救護、通知警方並保存證據。 先確保現場安全。"
+      },
+      {
+        "start": 10,
+        "title": "安全記錄現場",
+        "text": "拍下車輛位置、受損處、車道標線、號誌與周邊情況。 只有能安全拍攝時，才進行拍照。"
+      },
+      {
+        "start": 20,
+        "title": "原始檔與案件資訊",
+        "text": "保留行車紀錄器原始檔及可辨識案件的資訊。 病歷與收據按日期整理。"
+      },
+      {
+        "start": 30,
+        "title": "警方聯絡與資料",
+        "text": "事故現場可申請道路交通事故當事人登記聯單。 記下處理員警的聯絡方式及案件資訊。"
+      },
+      {
+        "start": 40,
+        "title": "各項資料的申請時間",
+        "text": "事故7日後可申請現場圖、照片；30日後可申請初步分析研判表。 這是申請起始時間，不保證當天就能領到。"
+      },
+      {
+        "start": 50,
+        "title": "線上申請的條件",
+        "text": "須當場通知警方到場處理，而且有人受傷或死亡。 只有財損或無法完成身分驗證，可向處理機關詢問申請方式。"
+      },
+      {
+        "start": 60,
+        "title": "委任權限",
+        "text": "代領須附委託書；訴訟代理人代為和解須受特別委任。 刑事告訴人即使委任代理人，仍可能被要求親自到場。"
+      },
+      {
+        "start": 70,
+        "title": "離台前的安排",
+        "text": "確認文書收受方式、聯絡資料及已排定的到場日期。 等待警方資料與告訴、請求期限是兩回事。"
+      }
+    ]
+  },
+  "column/ja/taiwan-accident-police-records": {
+    "id": "police-records-film-v1-ja",
+    "src": "/videos/columns/police-records-film-v1-ja.mp4",
+    "poster": "/images/column-videos/police-records-film-v1-ja.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "事故の記録、警察資料の申請と帰国前の準備",
+    "description": "現場記録、警察資料の申請時期とオンライン申請の条件、代理権、帰国前の連絡準備を示す80秒の無音映像です。",
+    "disclosure": "人物・窓口・画面はAIで作成した架空の場面です。実際の事故や申請手続を撮影したものではありません。フォームは説明用で、公式サイトの再現ではありません。具体的な義務・申請条件・期限は本文と公式案内をご確認ください。",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "救護と通報",
+        "text": "負傷者・死亡者のいる事故では、運転者に救護・通報・証拠保全が求められます。 まず現場の安全を確保します。"
+      },
+      {
+        "start": 10,
+        "title": "安全に現場を記録",
+        "text": "車両の位置、損傷、車線表示、信号と周囲の状況を残します。 写真は安全に撮影できる場合に限ります。"
+      },
+      {
+        "start": 20,
+        "title": "元データと事件情報",
+        "text": "ドライブレコーダーの元データと事件を特定する情報を保存します。 診療記録と領収書は日付順にまとめます。"
+      },
+      {
+        "start": 30,
+        "title": "警察の連絡先と資料",
+        "text": "事故現場で「道路交通事故當事人登記聯單」を申請できます。 担当警察官の連絡先と事件情報を控えます。"
+      },
+      {
+        "start": 40,
+        "title": "資料ごとの申請時期",
+        "text": "現場図・写真は事故から7日後、初步分析研判表は30日後から。 申請できる時期であり、即日交付の保証ではありません。"
+      },
+      {
+        "start": 50,
+        "title": "オンライン申請の条件",
+        "text": "警察が現場で処理し、負傷者または死亡者のいる事故が対象です。 物損のみの場合や本人確認が難しい場合は、担当機関に確認します。"
+      },
+      {
+        "start": 60,
+        "title": "委任の範囲",
+        "text": "第三者の受取りには委任状、訴訟代理人の和解には特別委任が必要です。 刑事告訴では代理人がいても本人の出頭を求められることがあります。"
+      },
+      {
+        "start": 70,
+        "title": "帰国前の確認",
+        "text": "書類の受取方法、連絡先、予定された出頭日を確認します。 警察資料を待つ期間と告訴・請求の期限は別の問題です。"
+      }
+    ]
   }
 }

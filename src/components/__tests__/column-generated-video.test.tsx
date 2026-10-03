@@ -37,7 +37,7 @@ describe('reviewed column videos', () => {
 
   it('does not attach a video to an unreviewed language, article or issue with the same slug', () => {
     expect(getColumnGeneratedVideo('eo', 'taiwan-traffic-accident-procedure')).toBeNull();
-    expect(getColumnGeneratedVideo('ko', 'taiwan-accident-police-records')).toBeNull();
+    expect(getColumnGeneratedVideo('eo', 'taiwan-accident-police-records')).toBeNull();
     expect(getColumnGeneratedVideo('ko', 'taiwan-traffic-accident-procedure', 'issue')).toBeNull();
     expect(renderToStaticMarkup(<ColumnGeneratedVideo locale="ko" slug="unrelated-article" />)).toBe('');
   });
@@ -53,7 +53,7 @@ describe('reviewed column videos', () => {
     expect(html).toContain('aria-describedby="column-video-rear-end-simulation-v3-en-caption"');
     expect(html).not.toContain('This is a fictional AI-generated scene');
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
-    expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')).toBeNull();
+    expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')?.src).not.toBe(asset?.src);
   });
 
   it.each(Object.entries(overtakingCaptions))('renders the overtaking illustration with its %s caption without applying it to other content', (locale, caption) => {
@@ -69,7 +69,7 @@ describe('reviewed column videos', () => {
     expect(html).toContain('controls=""');
     expect(html).not.toMatch(/autoplay|loop=/i);
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
-    expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')).toBeNull();
+    expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')?.src).not.toBe(asset?.src);
     expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
   });
 
@@ -152,7 +152,7 @@ describe('reviewed column videos', () => {
     expect(html).toContain('controls=""');
     expect(html).not.toMatch(/autoplay|loop=/i);
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
-    expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')).toBeNull();
+    expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')?.src).not.toBe(asset?.src);
     expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
   });
 
@@ -171,7 +171,7 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
   });
 
-  it.each(['ko', 'ja', 'en', 'zh-hant'])('loops the reviewed road-rage dashcam scene only after the reader presses play (%s)', (locale) => {
+  it.each(['ko', 'ja', 'en', 'zh-hant'])('preserves native looping and the manual component default for road-rage videos (%s)', (locale) => {
     const slug = 'taiwan-road-rage-freeway-cut-in-sentence-reduced';
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
     expect(html).toContain(`road-rage-freeway-cut-in-sentence-reduced-v3-${locale}.mp4`);
@@ -181,5 +181,20 @@ describe('reviewed column videos', () => {
     expect(html).not.toMatch(/autoplay/i);
     expect(html).toContain('data-column-video-disclosure');
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+  });
+
+  it.each(['ko', 'en', 'zh-hant', 'ja'])('serves a distinct 80-second police-records film in %s', locale => {
+    const slug = 'taiwan-accident-police-records';
+    const asset = getColumnGeneratedVideo(locale, slug);
+    expect(asset?.src).toBe(`/videos/columns/police-records-film-v1-${locale}.mp4`);
+    expect(asset?.durationSeconds).toBe(80);
+    expect(asset?.chapters).toHaveLength(8);
+    expect(asset?.chapters?.[7].start).toBe(70);
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} autoPlay />);
+    expect(html.match(/<video/g)).toHaveLength(1);
+    expect(html).toContain('data-column-video-chapter="1"');
+    expect(html).toContain('data-column-video-disclosure');
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+    expect(getColumnGeneratedVideo('fr', slug)).toBeNull();
   });
 });

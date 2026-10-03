@@ -712,7 +712,14 @@
   background: rgb(255 255 255 / 30%);
 }
 .captionLead { margin: 14px 0 0 26px; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.4; }
-.captionLead a { color: var(--en-pale); text-decoration: none; }
+/* the guide link keeps its line box and gets a 44 px hit area (it is one 21 px line on wide screens) */
+.captionLead a {
+  display: inline-block;
+  padding-block: max(0px, calc((44px - 1.4em) / 2));
+  margin-block: min(0px, calc((1.4em - 44px) / 2));
+  color: var(--en-pale);
+  text-decoration: none;
+}
 .captionFoot { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 28px; margin: 10px 0 0 26px; }
 .captionMore {
   display: inline-flex;
@@ -1894,6 +1901,10 @@
   text-decoration: none;
 }
 .home[data-en-design][id] :global(#offices .office-map-fallback-link:focus-visible) { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+/* Once the map has painted it covers the facade; a keyboard visitor who reaches the facade's link still sees it:
+   the facade comes above the map, with its lines and pin dropped so the map stays visible around the panel. */
+.home[data-en-design][id] :global(#offices .office-map-fallback:focus-within) { z-index: 2; background: none; }
+.home[data-en-design][id] :global(#offices .office-map-fallback:focus-within)::after { display: none; }
 .home[data-en-design][id] :global(#offices .office-card) {
   grid-column: 8 / -1;
   display: flex;

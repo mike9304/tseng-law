@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import ColumnGeneratedVideo from '@/components/ColumnGeneratedVideo';
 import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
+import generalAccidentCaptions from '@/data/general-accident-video-captions.json';
 
 describe('reviewed column videos', () => {
   it('renders the reviewed local clip with controls, description and an AI disclosure', () => {
@@ -21,10 +22,24 @@ describe('reviewed column videos', () => {
   });
 
   it('does not attach a video to an unreviewed language, article or issue with the same slug', () => {
-    expect(getColumnGeneratedVideo('nl', 'taiwan-traffic-accident-procedure')).toBeNull();
+    expect(getColumnGeneratedVideo('eo', 'taiwan-traffic-accident-procedure')).toBeNull();
     expect(getColumnGeneratedVideo('ko', 'taiwan-overtaking-accident-liability')).toBeNull();
     expect(getColumnGeneratedVideo('ko', 'taiwan-traffic-accident-procedure', 'issue')).toBeNull();
     expect(renderToStaticMarkup(<ColumnGeneratedVideo locale="ko" slug="unrelated-article" />)).toBe('');
+  });
+
+  it.each(Object.entries(generalAccidentCaptions))('serves the reviewed shared scene with the %s caption only on the general article', (locale, caption) => {
+    const slug = 'taiwan-traffic-accident-procedure';
+    const asset = getColumnGeneratedVideo(locale, slug);
+    expect(asset?.src).toBe('/videos/columns/rear-end-simulation-v3-en.mp4');
+    expect(asset?.title).toBe(caption.title);
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
+    expect(html).toContain('data-column-video-disclosure');
+    expect(html).not.toMatch(/autoplay|loop=/i);
+    expect(html).toContain('aria-describedby="column-video-rear-end-simulation-v3-en-caption"');
+    expect(html).not.toContain('This is a fictional AI-generated scene');
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+    expect(getColumnGeneratedVideo(locale, 'taiwan-overtaking-accident-liability')).toBeNull();
   });
 
   it.each([

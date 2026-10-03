@@ -4,6 +4,7 @@ import { chromium } from '@playwright/test';
 
 const base = process.env.COLUMN_VIDEO_QA_BASE || 'http://127.0.0.1:4548';
 const out = process.env.COLUMN_VIDEO_QA_OUT || '/tmp/column-generated-video-qa';
+const generalAccidentCaptions = JSON.parse(await fs.readFile(new URL('../src/data/general-accident-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
   ...['ko', 'en', 'zh-hant', 'ja'].map(locale => ({
     locale, slug: 'taiwan-traffic-accident-procedure', id: `rear-end-simulation-v3-${locale}`,
@@ -16,6 +17,11 @@ const allCases = [
     // These file-backed column languages do not publish a traffic-board route.
     trafficBoard: false,
     disclosure: { fr: 'Scène fictive générée par IA', de: 'Fiktive, KI-generierte Szene', es: 'Escena ficticia generada con IA', pt: 'Cena fictícia gerada por IA', it: 'Scena fittizia generata con IA' }[locale],
+  })),
+  ...Object.entries(generalAccidentCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-traffic-accident-procedure', id: 'rear-end-simulation-v3-en',
+    evidenceStem: `rear-end-v3-int-${locale}`, duration: 4, contactTime: 1.1,
+    expectedDiagrams: 0, trafficBoard: false, disclosure: caption.disclosure,
   })),
   ...['ko', 'en', 'zh-hant'].map(locale => ({
     locale, slug: 'taiwan-left-turn-vs-straight-motorcycle', id: `left-turn-scooter-v1-${locale}`,
@@ -41,7 +47,10 @@ const allCases = [
 ];
 const selectedIds = new Set((process.env.COLUMN_VIDEO_QA_IDS || '').split(',').filter(Boolean));
 for (const id of selectedIds) assert.ok(allCases.some(item => item.id === id), `Unknown video QA id: ${id}`);
-const cases = selectedIds.size ? allCases.filter(item => selectedIds.has(item.id)) : allCases;
+const selectedLocales = new Set((process.env.COLUMN_VIDEO_QA_LOCALES || '').split(',').filter(Boolean));
+for (const locale of selectedLocales) assert.ok(allCases.some(item => item.locale === locale), `Unknown video QA locale: ${locale}`);
+const cases = allCases.filter(item => (!selectedIds.size || selectedIds.has(item.id)) && (!selectedLocales.size || selectedLocales.has(item.locale)));
+assert.ok(cases.length > 0, 'No video QA cases selected');
 await fs.mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const results = [];
@@ -117,16 +126,21 @@ try {
       if (await languageHintClose.isVisible()) await languageHintClose.click();
       await figure.evaluate(element => element.scrollIntoView({ block: 'center', behavior: 'instant' }));
       await page.screenshot({ path: `${out}/${evidenceStem}-contact-${viewport.width}.png` });
+      await figure.screenshot({ path: `${out}/${evidenceStem}-figure-${viewport.width}.png` });
       const layout = await page.evaluate(() => ({
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
         frameWidth: document.querySelector('[data-column-generated-video]').getBoundingClientRect().width,
         bodyTextLength: document.querySelector('.blog-body')?.innerText.length || 0,
         diagramCount: document.querySelectorAll('[data-traffic-diagram]').length,
         bodyImageCount: document.querySelectorAll('.blog-body img').length,
+        documentLanguage: document.documentElement.lang,
+        textDirection: getComputedStyle(document.querySelector('[data-column-generated-video]')).direction,
       }));
       assert.ok(layout.scrollWidth <= layout.width + 1, `Horizontal overflow: ${JSON.stringify(layout)}`);
       assert.ok(layout.frameWidth <= layout.width);
       assert.ok(layout.bodyTextLength > 500);
+      assert.equal(layout.documentLanguage.toLowerCase(), item.locale.toLowerCase());
+      assert.equal(layout.textDirection, ['ar', 'fa', 'he', 'ur'].includes(item.locale) ? 'rtl' : 'ltr');
       if (item.traffic === false) {
         assert.equal(layout.diagramCount, 0);
         assert.ok(layout.bodyImageCount >= 3, 'Existing premises article images were removed');
@@ -155,9 +169,9 @@ try {
         if (item.traffic === false) assert.equal(count, 0, 'Non-traffic video entered the traffic collection');
         else assert.ok(count > 0, 'Video filter omitted the new native video');
       }
-      results.push({ viewport, article, id: item.id, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
+      results.push({ viewport, article, locale: item.locale, id: item.id, evidenceStem, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
     }
-    const unreviewed = await page.goto(`${base}/nl/columns/taiwan-traffic-accident-procedure`, { waitUntil: 'load' });
+    const unreviewed = await page.goto(`${base}/nl/columns/taiwan-overtaking-accident-liability`, { waitUntil: 'load' });
     assert.equal(unreviewed?.status(), 200);
     assert.equal(await page.locator('[data-column-generated-video]').count(), 0, 'Unreviewed locale inherited video');
     await context.close();

@@ -1,3 +1,5 @@
+import generalAccidentCaptions from './general-accident-video-captions.json';
+
 export type ColumnVideoSource = 'column' | 'issue';
 
 export type ColumnGeneratedVideoAsset = {
@@ -15,6 +17,19 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  // These explicit translations share the reviewed scene, with their own captions.
+  // The slug and source remain fixed; this is not a fallback for other articles.
+  ...Object.fromEntries(Object.entries(generalAccidentCaptions).map(([locale, caption]) => [
+    `column/${locale}/taiwan-traffic-accident-procedure`,
+    {
+      id: 'rear-end-simulation-v3-en',
+      src: '/videos/columns/rear-end-simulation-v3-en.mp4',
+      poster: '/images/column-videos/rear-end-simulation-v3-en.jpg',
+      width: 1280,
+      height: 720,
+      ...caption,
+    },
+  ])),
   'column/ko/taiwan-traffic-accident-procedure': {
     id: 'rear-end-simulation-v3-ko',
     src: '/videos/columns/rear-end-simulation-v3-ko.mp4',

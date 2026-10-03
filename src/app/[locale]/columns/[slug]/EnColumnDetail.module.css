@@ -1,7 +1,7 @@
 /*
  * en column detail and news article, Clear Night (CONCEPT-V2 12.3; en-pages lane 2026-10-03). Scoped to #en-column and
- * #en-issue. The title card is black (back link, topic as grey text, H1, byline, then the column's own image in a
- * 21:9 frame); the article reads on paper at a 68ch measure. Content, sources, FAQ and the AI label are unchanged.
+ * #en-issue. The title card is black (back link, topic as grey text, H1, the meta line, then the column's own image in
+ * a 21:9 frame); the article reads on paper at a 68ch measure. Content, sources and FAQ are unchanged.
  */
 .detail { composes: paper from '../../../../components/en-design/EnPagesV2.module.css'; }
 
@@ -81,7 +81,6 @@
 .detail.detail:global(.en-column) :global(.blog-hero .blog-meta) { display: flex; flex-wrap: wrap; align-items: center; gap: 0; margin: 0; }
 .detail.detail:global(.en-column) :global(.blog-hero .blog-meta > *),
 .detail.detail:global(.en-column) :global(.blog-hero .blog-meta a) { color: var(--en-grey); font-family: var(--en-text); font-size: 17px; font-weight: 500; }
-.detail.detail:global(.en-column) :global(.blog-hero .blog-meta > :first-child) { color: var(--en-pale); }
 .detail.detail:global(.en-column) :global(.blog-hero .blog-meta > :not(:last-child))::after { content: '·'; margin: 0 0.5em; color: var(--en-grey-2); }
 .detail.detail:global(.en-column) :global(.blog-hero .blog-meta a) { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-white); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
 .detail.detail:global(.en-column) :global(.blog-hero) :focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
@@ -127,14 +126,8 @@
 .detail.detail:global(.en-column) :global(.column-faq-question)::before { content: none; display: none; }
 .detail.detail:global(.en-column) :global(.column-faq-answer) { margin: 10px 0 0; padding: 0; border: 0; border-radius: 0; background: none; font-family: var(--en-text); font-size: 19px; line-height: 1.65; color: var(--en-ink-2); }
 
-/* AI author note: label kept at 14 px or more, on #f2f2f4. */
-/* The aside carries inline colours, so its fill and border need !important. */
-.detail.detail:global(.en-column) :global(.column-ai-author) { max-width: 68ch; margin-top: 72px; padding: 24px 28px; border: 0 !important; border-radius: 18px !important; background: var(--en-paper-2) !important; }
 /* News articles: the date note as a quiet block, not a ruled callout. */
 .detail.detail:global(.en-column) :global(.blog-body > p[class*='dateNote']) { max-width: 68ch; margin: 0 0 32px; padding: 20px 24px; border: 0; border-radius: 18px; background: var(--en-paper-2); font-size: 17px; line-height: 1.5; color: var(--en-ink-2); }
-.detail.detail:global(.en-column) :global(.column-ai-author p),
-.detail.detail:global(.en-column) :global(.column-ai-author span) { font-size: max(14px, 1em); color: var(--en-ink-2); }
-.detail.detail:global(.en-column) :global(.column-ai-author strong) { color: var(--en-ink); }
 
 /* Related reading: type-led cards. */
 .detail.detail:global(.en-column) :global(.recommended-for-you) { max-width: none; margin-top: 88px; }

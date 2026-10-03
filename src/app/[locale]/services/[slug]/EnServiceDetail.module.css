@@ -117,6 +117,7 @@
 .article.article :global(.svc-keypoints-list li)::before,
 .article.article :global(.svc-keypoints-list li)::marker { content: none; display: none; }
 .article.article :global(.svc-keypoints-list a) { color: var(--en-focus-paper); }
+.article.article :global(.svc-keypoints-list li > a.link-underline:only-child) { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* Related columns: type-led paper cards (#f2f2f4, radius 18, titles 21, meta 14). */
 .article.article :global(.svc-columns-section) { margin: 120px 0 0; }

@@ -138,7 +138,7 @@
 .columns.columns :global(#columns-recommended) { font-size: var(--en-t-m2); line-height: 1.06; letter-spacing: -0.022em; }
 .columns.columns :global(.columns-topic-count) { font-family: var(--en-text); font-size: 17px; font-weight: 500; color: var(--en-grey); }
 
-/* Type-led cards (component 4): no thumbnails; topic and date as 14 px meta above the byline. */
+/* Type-led cards (component 4): no thumbnails; topic and date as 14 px meta, then title, summary and meta. */
 .columns.columns :global(.columns-grid) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .columns.columns :global(.columns-card) {
   position: relative;
@@ -168,7 +168,6 @@
 .columns.columns :global(.columns-card .columns-card-meta) { order: 3; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0; margin: 24px 0 0; font-family: var(--en-text); font-size: 14px; color: var(--en-grey-2); }
 .columns.columns :global(.columns-card .columns-card-meta > *) { font-size: 14px; color: var(--en-grey); }
 .columns.columns :global(.columns-card .columns-card-meta > * + *)::before { content: '·'; margin: 0 0.5em; color: var(--en-grey-2); }
-.columns.columns :global(.columns-card .columns-card-byline) { color: var(--en-pale); font-weight: 500; }
 .columns.columns :global(.columns-card .columns-card-title) {
   order: 1;
   margin: 0;
@@ -253,7 +252,6 @@
 .issues.issues :global(.columns-card .columns-card-summary) { color: var(--en-ink-2); }
 .issues.issues :global(.columns-card .columns-card-meta > *),
 .issues.issues :global(.columns-card .columns-card-image-meta > *) { color: var(--en-ink-3); }
-.issues.issues :global(.columns-card .columns-card-byline) { color: var(--en-ink-2); }
 .issues.issues :global(.columns-topic-more) { color: var(--en-focus-paper); }
 .issues.issues :global(a:focus-visible),
 .issues.issues :global(button:focus-visible),

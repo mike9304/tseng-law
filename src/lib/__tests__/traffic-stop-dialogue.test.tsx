@@ -25,11 +25,11 @@ describe('reviewed accident departure column', () => {
     expect(createHash('sha256').update(original).digest('hex')).toBe('b800295ca45dbe742e6d88d73784027754f299e9713bd41efc225d575ecd96b8');
   });
 
-  it('automatically includes the native post as evidence, without a video badge or duplicate', () => {
+  it('automatically includes the native post as evidence with its reviewed film and no duplicate', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(post => post.slug === slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: 'evidence', hasVideo: false, columnNumber: 79 });
+    expect(matches[0]).toMatchObject({ subject: 'evidence', hasVideo: true, columnNumber: 79 });
     expect(isTrafficVideoDiagram(id)).toBe(false);
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(post => post.slug === slug)).toBe(false);
   });

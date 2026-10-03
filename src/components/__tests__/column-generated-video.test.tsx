@@ -157,6 +157,7 @@ describe('reviewed column videos', () => {
     ['taiwan-borrowed-car-owner-driver-key-custody-liability', 'borrowed-car-film-v1-zh-hant', '鎖櫃只是保管方式的示意，不是免責保證'],
     ['taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse', 'passenger-insurance-film-v1-zh-hant', '並非本文雨夜自摔事故的重建或原始證據'],
     ['taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction', 'uninsured-fund-film-v1-zh-hant', '約定金額不等於實際收款'],
+    ['taiwan-accident-stop-dialogue-hit-and-run-evidence', 'stop-dialogue-film-v1-zh-hant', '不能證明沒有人受傷、已同意離場或已履行全部法定義務'],
     ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
     ['taiwan-car-door-opening-motorcycle-liability', 'car-door-v2-zh-hant', '騎士失去平衡'],
     ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-v1-zh-hant', '非本文凌晨事故'],

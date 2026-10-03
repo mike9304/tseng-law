@@ -13,6 +13,11 @@ const gymPauseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/gym-p
 const formationDocumentsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/formation-documents-video-captions.json', import.meta.url), 'utf8'));
 const cosmeticsCheckCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cosmetics-check-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...['ko', 'en', 'ja', 'zh-hant'].map(locale => ({
+    locale, slug: 'taiwan-road-rage-reversing-into-tailgater-no-self-defense',
+    id: `reverse-impact-v1-${locale}`, duration: 4, contactTime: 0.833333, expectedDiagrams: 0,
+    disclosure: { ko: '야간의 반복 충돌을 재현한 영상이 아닙니다', en: 'repeated nighttime collisions', ja: '夜間の繰り返しの衝突', 'zh-hant': '不是本文夜間多次倒車撞擊的重建' }[locale],
+  })),
   { locale: 'zh-hant', slug: 'taiwan-motorway-blocking-no-collision-public-danger', id: 'motorway-brake-v2-zh-hant', duration: 4, contactTime: 0.9, expectedDiagrams: 0, disclosure: '不能用來判斷實際車速、距離、故意或刑事責任' },
   ...Object.entries(cosmeticsCheckCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);

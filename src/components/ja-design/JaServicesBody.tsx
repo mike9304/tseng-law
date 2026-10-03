@@ -50,10 +50,11 @@ export default function JaServicesBody({ showHero, showRepeater }: { showHero: b
             <JaPageRail className={styles.rail} label={JA_SERVICES_INDEX_LABEL} items={areas.map((area) => ({ id: area.anchor, label: area.title }))} />
             <div className={styles.blocks}>
               {areas.map((area) => (
-                <div key={area.slug} className={styles.blockWrap}>
+                <div key={area.slug} className={`${styles.blockWrap} ${v2.fusR}`}>
                   {area.aliases.map((alias) => <span key={alias} id={alias} className={styles.alias} aria-hidden />)}
-                  <article id={area.anchor} className={`${styles.block} ${v2.fusR}`}>
-                    <h2 className={styles.blockTitle}>{area.title}</h2>
+                  {/* same card and title classes as ServicesBento, so the list keeps its structure contract */}
+                  <article id={area.anchor} className="services-detail-card services-card">
+                    <h2 className="services-detail-title">{area.title}</h2>
                     <p className={styles.blockText}>{area.description}</p>
                     <Link href={`/ja/services/${area.slug}`} className={v2.chev} aria-label={`${area.title}: ${DETAIL_LABEL}`}>
                       {DETAIL_LABEL}

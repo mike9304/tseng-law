@@ -39,6 +39,8 @@ import styles from './ServiceDetail.module.css';
 import zhStyles from './ZhHantServiceDetail.module.css';
 import jaStyles from './JaServiceDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import JaPageRail from '@/components/ja-design/JaPageRail';
+import JaHeaderBand from '@/components/ja-design/JaHeaderBand';
 import enStyles from './EnServiceDetail.module.css';
 import EnPageShell, { EnGlance } from '@/components/en-design/EnPageShell';
 import { EN_SERVICE_EXTRA_COLUMNS } from '@/components/en-design/en-design-data';
@@ -361,16 +363,15 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                 </div>
               </>
             ) : ja ? (
+              // ja 昊 V2 (2026-10-02): title block, the existing action and byline; the in-page index moves
+              // beside the body as the vertical 目次 (JaPageRail) and the morning band follows the hero.
               <>
-                <div className={jaStyles.heroCopy}>{heroCopy}</div>
+                <div className={jaStyles.heroCopy}>
+                  <Link href={`/${locale}/services`} className={`svc-back-link ${jaStyles.back}`}>{t.backLabel}</Link>
+                  <h1 className="svc-hero-title">{protectJapaneseHeadingUnits(area.title)}</h1>
+                  <p className="svc-hero-subtitle">{area.subtitle}</p>
+                </div>
                 <div className={jaStyles.heroPanel}>
-                  <nav className={jaStyles.contents} aria-label={jaIndexLabel}>
-                    <p className={jaStyles.contentsLabel} aria-hidden>{jaIndexLabel}</p>
-                    <ol>
-                      {showBody && points.length > 0 ? <li><a href="#service-keypoints">{t.keyPointsLabel}</a></li> : null}
-                      {showBody && columns.length > 0 ? <li><a href="#service-columns">{t.columnsLabel}</a></li> : null}
-                    </ol>
-                  </nav>
                   <a href={getConsultationPublicMailto(locale)} className={`button ${jaStyles.heroCta}`}>{t.contactBtn}</a>
                   {attorney ? <Link href={`/${locale}/lawyers/${attorney.slug}`} className={jaStyles.byline}>{attorney.name} · {attorney.role}</Link> : null}
                 </div>
@@ -404,13 +405,24 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               </>
             ) : heroCopy}
           </div>
+          {ja ? <JaHeaderBand /> : null}
         </section>
       ) : null}
 
       {showBody ? (
-        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}${ja ? ` ${jaStyles.article}` : ''}${en ? ` ${enStyles.article}` : ''}`}>
+        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}${ja ? ` ${jaStyles.article}` : ''}${en ? ` ${enStyles.article}` : ''}`} data-ja-area={ja ? area.slug : undefined}>
           <div className={`container svc-container ${styles.layout}`}>
             {zhHant ? contactCard : null}
+            {ja && ((points.length > 0) || columns.length > 0) ? (
+              <JaPageRail
+                className={jaStyles.rail}
+                label={jaIndexLabel}
+                items={[
+                  ...(points.length > 0 ? [{ id: 'service-keypoints', label: t.keyPointsLabel }] : []),
+                  ...(columns.length > 0 ? [{ id: 'service-columns', label: t.columnsLabel.split(' —')[0] }] : []),
+                ]}
+              />
+            ) : null}
             <div className={`svc-body ${styles.body}`}>
               <p className="svc-intro">{area.intro}</p>
               {area.slug === 'investment' ? (

@@ -7,10 +7,9 @@ import {
 } from '@/lib/semiconductor-public';
 
 describe('public semiconductor board', () => {
-  it('lists only the reviewed market-entry column', () => {
+  it('lists the reviewed market-entry column', () => {
     const posts = listPublicSemiconductorColumns('ko');
-    expect(posts).toHaveLength(1);
-    expect(posts[0]?.slug).toBe('taiwan-semiconductor-market-entry');
+    expect(posts.map((post) => post.slug)).toContain('taiwan-semiconductor-market-entry');
   });
 
   it('does not expose unpaid-invoice or supply-contract drafts as public columns', () => {

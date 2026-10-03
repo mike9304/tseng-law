@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {
   listPublicSemiconductorColumns,
+  semiconductorColumnBadge,
   semiconductorGuideCopy,
 } from '@/lib/semiconductor-public';
 import {
@@ -38,7 +39,7 @@ export default function SemiconductorGuidePublic({ locale }: { locale: SiteLocal
                   className="svc-col-card"
                   data-semiconductor-public-column={post.slug}
                 >
-                  <span className="svc-col-badge">{copy.topicLabel}</span>
+                  <span className="svc-col-badge">{semiconductorColumnBadge(post, locale)}</span>
                   <h3 className="svc-col-card-title">{post.title}</h3>
                   <p className="svc-col-card-summary">{post.summary}</p>
                   <span className="svc-col-card-link">{copy.readMore}</span>

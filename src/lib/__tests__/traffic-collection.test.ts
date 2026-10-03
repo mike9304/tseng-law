@@ -228,6 +228,7 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-bus-stop-illegal-parking-no-contact-criminal-causation',
         'taiwan-ambulance-red-light-emergency-priority-negligence',
         'taiwan-racing-no-contact-joint-tort-liability',
+        'taiwan-car-accident-work-loss-rest-note',
         'taiwan-accident-police-records',
         'taiwan-retaliatory-driving-rear-ended-intentional-injury',
         'taiwan-traffic-accident-procedure',

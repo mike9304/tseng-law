@@ -74,6 +74,7 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
           scrollHref="#practice"
           quickMenus={SEARCH_CHIPS}
           persistentQuickMenus
+          showHomePaths={false}
           media={<ZhHantHeroMedia />}
           trustContent={<ZhHantHeroTrust />}
         />

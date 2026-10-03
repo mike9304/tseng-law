@@ -138,6 +138,7 @@ export default function HeroSearch({
   trustContent,
   persistentQuickMenus = false,
   media,
+  showHomePaths = true,
 }: {
   locale: SiteLocale;
   scrollHref?: string;
@@ -149,6 +150,11 @@ export default function HeroSearch({
   persistentQuickMenus?: boolean;
   /** Editorial only: replaces the hero photo in the media frame (en home design). Omitted elsewhere. */
   media?: ReactNode;
+  /**
+   * Renders the company-setup / dispute path links under the CTA (default). The zh-hant home passes false:
+   * its domestic hero never shows them, and hiding them with CSS left unreachable links in the markup.
+   */
+  showHomePaths?: boolean;
 }) {
   const hero = siteContent[locale].hero;
   const HeroHeading = headingLevel === 2 ? 'h2' : 'h1';
@@ -233,7 +239,7 @@ export default function HeroSearch({
           {emailConsultationCtaLabels[locale]}
         </a>
       </div>
-      <LocaleHomePathNav locale={locale} tone={tone} />
+      {showHomePaths ? <LocaleHomePathNav locale={locale} tone={tone} /> : null}
     </div>
   );
 

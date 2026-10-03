@@ -1,22 +1,104 @@
 /*
- * ja media page (/ja/videos, nav メディア; Opus 5.5 ja lane, round 2). The shared page header, chips and buttons come from
- * JaDesign.module.css; this file squares the hub cards and channel tiles and takes the shadows off, so the page matches
- * the hairline cards elsewhere. Copy, links and images unchanged. Scoped under #ja-videos.
+ * ja media page (/ja/videos, nav メディア), 昊 V2 (2026-10-02; CONCEPT-V2 §9). Copy, links, images and the four
+ * figures unchanged (they stay at their current size, no display numerals, until O1 is settled). The profile
+ * block becomes the night tile with the portrait, the figures and the channel/topic/case lists become tiles,
+ * and the channel section shows the featured video and the channel links as tiles. Scoped under #ja-videos.
  */
-.root:global(#ja-videos) :global(.media-hub-card),
-.root:global(#ja-videos) :global(.media-stat-card),
-.root:global(#ja-videos) :global(.media-hub-profile),
-.root:global(#ja-videos) :global(.video-feature),
-.root:global(#ja-videos) :global(.video-item) { border-radius: 0; box-shadow: none; border: 1px solid var(--ja-line); background: #fff; }
-.root:global(#ja-videos) :global(.media-hub-profile) { background: #fff; }
-.root:global(#ja-videos) :global(.media-hub-photo),
-.root:global(#ja-videos) :global(.video-feature-media),
-.root:global(#ja-videos) :global(.video-feature-image),
-.root:global(#ja-videos) :global(.video-thumb) { border-radius: 0; box-shadow: none; }
+.root:global(#ja-videos) :global(.media-hub-section.section) { padding-block: clamp(56px, 6vw, 104px) var(--ja-sec); background: var(--ja-stage); }
+
+/* Profile: night tile */
+.root:global(#ja-videos) :global(.media-hub-hero) { display: grid; gap: var(--ja-gap); margin: 0; padding: 0; border: 0; background: none; }
+.root:global(#ja-videos) :global(.media-hub-profile) {
+  position: relative; isolation: isolate; overflow: clip; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 40%); gap: 0; align-items: stretch;
+  min-height: clamp(460px, 40vw, 600px); margin: 0; padding: 0; border: 0; border-radius: var(--ja-r); box-shadow: none; background: var(--ja-night); color: var(--ja-night-text);
+}
+.root:global(#ja-videos) :global(.media-hub-photo) {
+  position: relative; grid-column: 2; grid-row: 1; width: 100%; height: 100%; min-height: 100%; max-width: none; aspect-ratio: auto; margin: 0; border: 0; border-radius: 0; overflow: clip; background: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 26%), linear-gradient(to top, transparent 0, #000 14%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0, #000 26%), linear-gradient(to top, transparent 0, #000 14%);
+  mask-composite: intersect;
+}
+.root:global(#ja-videos) :global(.media-hub-photo img) { object-fit: cover; object-position: 50% 18%; }
+.root:global(#ja-videos) :global(.media-hub-copy) { grid-column: 1; grid-row: 1; align-self: center; padding: clamp(36px, 5vw, 72px); }
+.root:global(#ja-videos) :global(.media-hub-copy .section-label) { color: var(--ja-night-text); }
+.root:global(#ja-videos) :global(.media-hub-copy .section-title) { margin: 0 0 16px; font-size: clamp(28px, 3.4vw, 48px); color: #fff; }
+.root:global(#ja-videos) :global(.media-hub-copy .section-lede) { max-width: 30em; margin: 0; font-size: clamp(17px, 1.35vw, 19px); color: var(--ja-night-text); }
+.root:global(#ja-videos) :global(.media-hub-role) { margin: 20px 0 0; font-size: 17px; font-weight: 600; color: #fff; }
+.root:global(#ja-videos) :global(.media-hub-actions) { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 28px; }
+.root:global(#ja-videos) :global(.media-hub-actions a.button.button--outline) { color: #fff; }
+.root:global(#ja-videos) :global(.media-hub-actions a.button.button--outline)::after { background: #fff; }
+.root:global(#ja-videos) :global(.media-hub-profile) :focus-visible { outline-color: #fff !important; }
+
+/* The four figures: tiles, figures at their existing size */
+.root:global(#ja-videos) :global(.media-hub-stats) { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--ja-gap); margin: 0; }
+.root:global(#ja-videos) :global(.media-stat-card) { margin: 0; padding: 24px 28px; border: 0; border-radius: 22px; background: var(--ja-tile); box-shadow: none; }
 .root:global(#ja-videos) :global(.media-stat-value) { font-family: var(--ja-mincho); font-weight: 600; color: var(--ja-ink); }
-.root:global(#ja-videos) :global(.media-stat-label) { color: var(--ja-shu-deep); }
-.root:global(#ja-videos) :global(.media-hub-section) { background: var(--ja-paper); }
-.root:global(#ja-videos) :global(section.section.alt) { background: var(--ja-paper-2); }
-.root:global(#ja-videos) :global(.media-hub-card) { padding-block: 8px; }
-.root:global(#ja-videos) :global(.video-grid > .card),
-.root:global(#ja-videos) :global(.video-list > *) { border-radius: 0; box-shadow: none; border-color: var(--ja-line); }
+.root:global(#ja-videos) :global(.media-stat-label) { margin-top: 4px; font-size: 15px; font-weight: 600; color: var(--ja-text); }
+
+/* Channel, topic and case lists: tiles */
+.root:global(#ja-videos) :global(.media-hub-grid) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ja-gap); margin-top: var(--ja-gap); }
+.root:global(#ja-videos) :global(.media-hub-card) { margin: 0; padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); background: var(--ja-tile); box-shadow: none; }
+.root:global(#ja-videos) :global(.media-hub-card--wide) { grid-column: 1 / -1; }
+.root:global(#ja-videos) :global(.media-hub-card .profile-card-title) { margin: 0 0 16px; padding: 0; border: 0; font-size: clamp(20px, 1.8vw, 24px); font-weight: 700; color: var(--ja-ink); }
+.root:global(#ja-videos) :global(.media-hub-card .attorney-list) { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.root:global(#ja-videos) :global(.media-hub-card .attorney-list li) { margin: 0; padding: 0; border: 0; font-size: 18px; line-height: 1.75; color: var(--ja-text); }
+.root:global(#ja-videos) :global(.media-hub-card .attorney-list li)::before,
+.root:global(#ja-videos) :global(.media-hub-card .attorney-list li)::marker { content: none; }
+.root:global(#ja-videos) :global(.media-hub-card .profile-link-list) { display: grid; margin: 0; padding: 0; list-style: none; }
+.root:global(#ja-videos) :global(.media-hub-card .profile-link-list li) { margin: 0; padding: 0; border: 0; }
+.root:global(#ja-videos) :global(.media-hub-card .profile-link-list a) { display: inline-flex; align-items: center; min-height: 44px; font-size: 18px; font-weight: 600; color: var(--ja-ink); }
+
+/* Channel section */
+.root:global(#ja-videos) :global(#videos.section) { padding-block: var(--ja-sec); background: var(--ja-stage-warm); }
+.root:global(#ja-videos) :global(#videos .section-label) { display: none; }
+.root:global(#ja-videos) :global(#videos .ornament-divider) { display: none; }
+.root:global(#ja-videos) :global(#videos .section-title) { margin-bottom: 16px; }
+.root:global(#ja-videos) :global(.video-grid) { gap: var(--ja-gap); margin-top: clamp(32px, 4vw, 56px); }
+.root:global(#ja-videos) :global(.video-grid > .card) { padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); background: #fff; box-shadow: none; }
+.root:global(#ja-videos) :global(.video-grid > .card .card-mark) { display: none; }
+.root:global(#ja-videos) :global(.video-feature-media) { overflow: clip; border-radius: 20px; }
+.root:global(#ja-videos) :global(.video-feature-image) { border-radius: 20px; }
+.root:global(#ja-videos) :global(.video-feature-title) { margin: 16px 0 8px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 700; color: var(--ja-ink); }
+.root:global(#ja-videos) :global(.video-feature-meta) { font-size: 15px; color: var(--ja-text); }
+.root:global(#ja-videos) :global(.video-grid > .card a.link-underline) { display: inline-flex; align-items: center; min-height: 44px; font-size: 17px; font-weight: 600; color: var(--ja-ink); }
+.root:global(#ja-videos) :global(.video-list) { display: grid; gap: 12px; }
+.root:global(#ja-videos) :global(.video-list > .video-item) {
+  display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: center; min-height: 104px; margin: 0; padding: 16px;
+  border: 0; border-radius: 22px; background: #fff; box-shadow: none; color: var(--ja-ink); text-decoration: none; transition: scale 300ms var(--ja-ease);
+}
+@media (hover: hover) { .root:global(#ja-videos) :global(.video-list > a.video-item:hover) { scale: 1.015; background: #fff; } }
+.root:global(#ja-videos) :global(.video-thumb) { width: 120px; height: 80px; border-radius: 14px; object-fit: cover; }
+.root:global(#ja-videos) :global(.video-item-title) { font-size: 17px; font-weight: 700; line-height: 1.55; color: var(--ja-ink); }
+.root:global(#ja-videos) :global(.video-item-meta) { margin-top: 4px; font-size: 15px; color: var(--ja-text); }
+
+@media (max-width: 1023px) {
+  .root:global(#ja-videos) :global(.media-hub-profile) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#ja-videos) :global(.media-hub-photo) {
+    grid-column: 1; grid-row: 1; height: clamp(360px, 70vw, 520px); min-height: 0;
+    -webkit-mask-image: linear-gradient(to top, transparent 0, #000 30%);
+    mask-image: linear-gradient(to top, transparent 0, #000 30%);
+  }
+  .root:global(#ja-videos) :global(.media-hub-copy) { grid-column: 1; grid-row: 2; margin-top: -56px; padding: 0 28px 32px; position: relative; }
+  .root:global(#ja-videos) :global(.media-hub-stats) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .root:global(#ja-videos) :global(.media-hub-grid) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#ja-videos) :global(.media-hub-copy) { padding: 0 24px 28px; }
+  .root:global(#ja-videos) :global(.media-hub-actions a.button:not(.button--outline)) { width: 100%; justify-content: center; }
+  .root:global(#ja-videos) :global(.video-list > .video-item) { grid-template-columns: 88px minmax(0, 1fr); }
+  .root:global(#ja-videos) :global(.video-thumb) { width: 88px; height: 60px; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .root:global(#ja-videos) :global(.media-hub-photo img) { animation: vidSettle linear both; animation-timeline: view(); animation-range: entry 0% cover 50%; }
+    .root:global(#ja-videos) :global(.media-hub-grid > :nth-child(odd)) { animation: vidSlideL linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+    .root:global(#ja-videos) :global(.media-hub-grid > :nth-child(even)) { animation: vidSlideR linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+  }
+}
+@keyframes vidSettle { from { scale: 1.06; } to { scale: 1; } }
+@keyframes vidSlideL { from { translate: -40px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
+@keyframes vidSlideR { from { translate: 40px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
+@media (forced-colors: active) {
+  .root:global(#ja-videos) :global(:is(.media-hub-profile, .media-stat-card, .media-hub-card, .video-grid > .card, .video-list > .video-item)) { border: 1px solid CanvasText; }
+}

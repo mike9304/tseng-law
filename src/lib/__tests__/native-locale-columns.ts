@@ -325,6 +325,8 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '183-limited-company-shareholder-books-inspection-taiwan.md', // reviewed editorial batch005
     '184-handwritten-will-typed-print-signature-taiwan.md', // reviewed editorial batch005
     '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
+    '189-taiwan-repaired-car-diminished-value-appraisal-evidence.md',
+    '190-taiwan-pursuit-fatal-self-crash-vacated-judgment.md',
   ],
 } as const;
 

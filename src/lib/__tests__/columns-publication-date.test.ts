@@ -176,6 +176,8 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '166': '2026-10-03',
   '167': '2026-10-03',
   '188': '2026-10-04', // road-rage series: taiwan-road-rage-started-did-not-matter-driver-blocked (all four locales)
+  '189': '2026-10-04',
+  '190': '2026-10-04',
   // semiconductor lane b06
   '168': '2026-10-04',
   '169': '2026-10-04',

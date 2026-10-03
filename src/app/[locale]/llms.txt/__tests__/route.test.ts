@@ -174,7 +174,8 @@ describe('/[locale]/llms.txt', () => {
     for (const otherLocale of siteLocales.filter((candidate) => candidate !== locale)) {
       expect(body).not.toContain(`${canonicalOrigin}/${otherLocale}/columns/`);
     }
-    expect(body).not.toMatch(/\/(?:admin|login|account|api|private)(?:\/|\b)/iu);
+    // A public article such as /columns/private-loan-... is not a private route.
+    expect(body).not.toMatch(/https:\/\/tseng-law\.com\/(?:[a-z-]+\/)?(?:admin(?:-[\w-]+)?|login|account|api|private)(?:[/?#)]|$)/iu);
     expect(body).not.toContain('mailto:');
     expect(body).not.toMatch(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/u);
     expect(body).not.toMatch(/(?:\+?\d[\d ().-]{7,}\d)/u);

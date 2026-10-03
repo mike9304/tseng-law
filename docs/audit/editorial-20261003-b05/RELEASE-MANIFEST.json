@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "status": "integrated_source_frozen_awaiting_root_qa_and_co_release",
-  "baseCommit": "447f05c7",
-  "baseCommitNote": "Actual clean B05 integration baseline after root rebase onto e1a37685 and preservation of B04 date-refresh commit. B04 manifest historical66d base remains untouched. Combined release is root-owned.",
+  "baseCommit": "4c27dbd0",
+  "baseCommitNote": "Current upstream release base after root started a normal merge preserving both histories. Working-tree reconciliation input is5478e021; root merge commit and independent QA/build remain pending. Prior integration bases/snapshots stay in history.",
   "recordedAt": "2026-10-04T01:48:54+09:00",
   "recordedAtTaipei": "2026-10-04T00:48:54+08:00",
   "recordedAtUtc": "2026-10-03T16:48:54+00:00",
-  "scope": "Exactly40 B05 product paths: approved article7, accepted PNG7, ledger21, manifest/audit2 and additive registries3. Twenty ledgers exact; only voice audit copy removes one final LF with inverse proof. B04 and incoming/runtime/test/helper bytes are preserved.",
+  "scope": "Current B05 assigned files179-185: seven approved Oct4 articles, seven unchanged images, twenty-one unchanged audit copies, manifest/audit2 and shared registries3 =40 paths versus incoming4c27. Joint B04+B05 own scope76. Existing voice-copy1LF normalization and prior integration history are unchanged.",
   "repositorySnapshot": {
     "path": "/Users/son7/Projects/tseng-law-fraud-editorial-20261003",
     "head": "2fcfc68f06c246a78caff84551bf666fc4a9150f",
@@ -28,13 +28,13 @@
   },
   "articles": [
     {
-      "number": 175,
+      "number": 179,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "annual-leave-dates-employer-scheduling-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/drafts/zh-hant-annual-leave-dates-employer-scheduling-taiwan.md",
-      "destination": "src/content/columns-zh/175-annual-leave-dates-employer-scheduling-taiwan.md",
+      "destination": "src/content/columns-zh/179-annual-leave-dates-employer-scheduling-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/annual-leave-dates-employer-scheduling-taiwan",
       "sha256": "20a552849dfdac6059e5421f9da59d73d24e80641a98a95649538eaf944324b8",
       "sourceSha256": "20a552849dfdac6059e5421f9da59d73d24e80641a98a95649538eaf944324b8",
@@ -77,13 +77,13 @@
       "voiceReviewCopySha256": "2ed4238cd7a539d30de5cc209af92bdd66c7397e5fa17c6c41d466e08f2400a3"
     },
     {
-      "number": 176,
+      "number": 180,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "rental-electricity-average-price-bill-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/drafts/zh-hant-rental-electricity-average-price-bill-taiwan.md",
-      "destination": "src/content/columns-zh/176-rental-electricity-average-price-bill-taiwan.md",
+      "destination": "src/content/columns-zh/180-rental-electricity-average-price-bill-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/rental-electricity-average-price-bill-taiwan",
       "sha256": "8c138752c9cac8efddb137a1a2d3c797219ef518142e114068fe44306a0f2696",
       "sourceSha256": "8c138752c9cac8efddb137a1a2d3c797219ef518142e114068fe44306a0f2696",
@@ -126,13 +126,13 @@
       "voiceReviewCopySha256": "2ed4238cd7a539d30de5cc209af92bdd66c7397e5fa17c6c41d466e08f2400a3"
     },
     {
-      "number": 177,
+      "number": 181,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "limited-company-shareholder-books-inspection-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/drafts/zh-hant-limited-company-shareholder-books-inspection-taiwan.md",
-      "destination": "src/content/columns-zh/177-limited-company-shareholder-books-inspection-taiwan.md",
+      "destination": "src/content/columns-zh/181-limited-company-shareholder-books-inspection-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/limited-company-shareholder-books-inspection-taiwan",
       "sha256": "f090d3efa295ffef10c7e67c526df936d859a2b932612de594518d35b3732519",
       "sourceSha256": "f090d3efa295ffef10c7e67c526df936d859a2b932612de594518d35b3732519",
@@ -175,13 +175,13 @@
       "voiceReviewCopySha256": "2ed4238cd7a539d30de5cc209af92bdd66c7397e5fa17c6c41d466e08f2400a3"
     },
     {
-      "number": 178,
+      "number": 182,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "handwritten-will-typed-print-signature-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/drafts/zh-hant-handwritten-will-typed-print-signature-taiwan.md",
-      "destination": "src/content/columns-zh/178-handwritten-will-typed-print-signature-taiwan.md",
+      "destination": "src/content/columns-zh/182-handwritten-will-typed-print-signature-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/handwritten-will-typed-print-signature-taiwan",
       "sha256": "85a70f86d213090db354fd6ddc21d2965c2b6c34df7f99f830178309c41ae2ad",
       "sourceSha256": "85a70f86d213090db354fd6ddc21d2965c2b6c34df7f99f830178309c41ae2ad",
@@ -224,13 +224,13 @@
       "voiceReviewCopySha256": "2ed4238cd7a539d30de5cc209af92bdd66c7397e5fa17c6c41d466e08f2400a3"
     },
     {
-      "number": 179,
+      "number": 183,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "ja",
       "slug": "taiwan-hotel-typhoon-cancellation-refund-japanese",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/drafts/ja-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
-      "destination": "src/content/columns-ja/179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+      "destination": "src/content/columns-ja/183-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
       "url": "https://tseng-law.com/ja/columns/taiwan-hotel-typhoon-cancellation-refund-japanese",
       "sha256": "3198cd71bceb934cd87721d1272e37899bea058059f5ac9f351851cba75c9934",
       "sourceSha256": "3198cd71bceb934cd87721d1272e37899bea058059f5ac9f351851cba75c9934",
@@ -273,13 +273,13 @@
       "voiceReviewCopySha256": "2ed4238cd7a539d30de5cc209af92bdd66c7397e5fa17c6c41d466e08f2400a3"
     },
     {
-      "number": 180,
+      "number": 184,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "en",
       "slug": "taiwan-personal-data-access-copy-request",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/drafts/en-taiwan-personal-data-access-copy-request.md",
-      "destination": "src/content/columns-en/180-taiwan-personal-data-access-copy-request.md",
+      "destination": "src/content/columns-en/184-taiwan-personal-data-access-copy-request.md",
       "url": "https://tseng-law.com/en/columns/taiwan-personal-data-access-copy-request",
       "sha256": "b9eaae0327cd4099ef922df690ae3b8dc42103c4ddabd04ff405b20f6aabc668",
       "sourceSha256": "b9eaae0327cd4099ef922df690ae3b8dc42103c4ddabd04ff405b20f6aabc668",
@@ -325,13 +325,13 @@
       "voiceReviewCopySha256": "2ed4238cd7a539d30de5cc209af92bdd66c7397e5fa17c6c41d466e08f2400a3"
     },
     {
-      "number": 181,
+      "number": 185,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "ko",
       "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/drafts/ko-taiwan-trademark-nonuse-three-years-korean-brand.md",
-      "destination": "src/content/columns/181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+      "destination": "src/content/columns/185-taiwan-trademark-nonuse-three-years-korean-brand.md",
       "url": "https://tseng-law.com/ko/columns/taiwan-trademark-nonuse-three-years-korean-brand",
       "sha256": "5c9b97aa5d6351a0857ac3ea111b28b0edb7a03f4eaffd6feaa74a496b431ef1",
       "sourceSha256": "5c9b97aa5d6351a0857ac3ea111b28b0edb7a03f4eaffd6feaa74a496b431ef1",
@@ -667,13 +667,13 @@
   "registryChanges": [
     {
       "path": "src/content/column-embeddings-pending.json",
-      "snapshotCommit": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
-      "observedWorkingTreeSha256": "997b6aaad849d245b94607f0a94ee456ea3dd093fc9322fe27f9539b4e45c912",
-      "observedBeforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
-      "observedHeadSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
-      "snapshotNote": "Actual B05 bytes before/after at clean baseline447f05c7 after incominge1a37685 rebase. All B04 and incoming entries preserved.",
-      "afterSha256": "997b6aaad849d245b94607f0a94ee456ea3dd093fc9322fe27f9539b4e45c912",
-      "status": "integrated",
+      "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+      "observedHeadSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+      "observedBeforeSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+      "beforeSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+      "observedWorkingTreeSha256": "ba0ecc04c1d9fb1602e4ec90039e78617d7e8d838dce78a9c1a2c5559d4eb1be",
+      "afterSha256": "ba0ecc04c1d9fb1602e4ec90039e78617d7e8d838dce78a9c1a2c5559d4eb1be",
+      "status": "integrated_merge_union",
       "plannedAdditions": [
         {
           "locale": "zh-hant",
@@ -700,101 +700,80 @@
           "slug": "taiwan-trademark-nonuse-three-years-korean-brand"
         }
       ],
-      "forCurrentApprovedPublicationDateOnly": true,
-      "publicationDateChangeRequiresReplan": true,
-      "entriesBefore": 186,
-      "entriesAfter": 192,
-      "entriesAdded": 6,
-      "preparationSnapshotCommit": "2fcfc68f06c246a78caff84551bf666fc4a9150f",
-      "preparationObservedBeforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
-      "beforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
-      "allPriorEntriesAndBytesPreservedByExactInverse": true
+      "entriesAddedByThisBatch": 6,
+      "jointEntriesBefore": 183,
+      "jointEntriesAfter": 195,
+      "jointEntriesAdded": 12,
+      "allIncomingEntriesPreserved": true,
+      "jointInverseRestoresEntireOriginBytes": true,
+      "inverseOriginSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+      "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
     },
     {
       "path": "src/lib/__tests__/native-locale-columns.ts",
-      "snapshotCommit": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
-      "observedWorkingTreeSha256": "4a611bb2f5412a47a97b5cc3053796d96d25b04011ca3d7ad26f452c17cc433e",
-      "observedBeforeSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
-      "observedHeadSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
-      "snapshotNote": "Actual B05 bytes before/after at clean baseline447f05c7 after incominge1a37685 rebase. All B04 and incoming entries preserved.",
-      "afterSha256": "4a611bb2f5412a47a97b5cc3053796d96d25b04011ca3d7ad26f452c17cc433e",
-      "status": "integrated",
+      "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+      "observedHeadSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+      "observedBeforeSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+      "beforeSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+      "observedWorkingTreeSha256": "f881e733bd12c206c7e6775036ad8b8dc40f23e5e30f0bf218a06b5382a6cc8e",
+      "afterSha256": "f881e733bd12c206c7e6775036ad8b8dc40f23e5e30f0bf218a06b5382a6cc8e",
+      "status": "integrated_merge_union",
       "plannedAdditions": [
         {
           "locale": "zh-hant",
-          "filename": "175-annual-leave-dates-employer-scheduling-taiwan.md",
+          "filename": "179-annual-leave-dates-employer-scheduling-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "zh-hant",
-          "filename": "176-rental-electricity-average-price-bill-taiwan.md",
+          "filename": "180-rental-electricity-average-price-bill-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "zh-hant",
-          "filename": "177-limited-company-shareholder-books-inspection-taiwan.md",
+          "filename": "181-limited-company-shareholder-books-inspection-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "zh-hant",
-          "filename": "178-handwritten-will-typed-print-signature-taiwan.md",
+          "filename": "182-handwritten-will-typed-print-signature-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "ja",
-          "filename": "179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+          "filename": "183-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "en",
-          "filename": "180-taiwan-personal-data-access-copy-request.md",
+          "filename": "184-taiwan-personal-data-access-copy-request.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "ko",
-          "filename": "181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+          "filename": "185-taiwan-trademark-nonuse-three-years-korean-brand.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         }
       ],
-      "forCurrentApprovedPublicationDateOnly": true,
-      "publicationDateChangeRequiresReplan": true,
-      "requiredFixtureSupport": "Existing Oct4 group and helpers came from approved B04 date refresh. Only seven filename lines were appended. Helper logic and prior test repair are unchanged.",
-      "entriesAdded": 7,
-      "preparationSnapshotCommit": "2fcfc68f06c246a78caff84551bf666fc4a9150f",
-      "preparationObservedBeforeSha256": "7872c8ecc983d950a3b3f1573ec344469ec9d45cabd2d6b93c6b8a3ffdd4bc01",
-      "beforeSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
-      "allPriorEntriesAndBytesPreservedByExactInverse": true
+      "entriesAddedByThisBatch": 7,
+      "jointEntriesBefore": 4,
+      "jointEntriesAfter": 18,
+      "jointEntriesAdded": 14,
+      "allIncomingEntriesPreserved": true,
+      "jointInverseRestoresEntireOriginBytes": true,
+      "inverseOriginSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+      "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
     },
     {
       "path": "src/lib/__tests__/columns-publication-date.test.ts",
-      "snapshotCommit": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
-      "observedWorkingTreeSha256": "6425f52c8ecadf657baa991c45aace2106823e51528d7e63a6540a78e89610d5",
-      "observedBeforeSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
-      "observedHeadSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
-      "snapshotNote": "Actual B05 bytes before/after at clean baseline447f05c7 after incominge1a37685 rebase. All B04 and incoming entries preserved.",
-      "afterSha256": "6425f52c8ecadf657baa991c45aace2106823e51528d7e63a6540a78e89610d5",
-      "status": "integrated",
+      "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+      "observedHeadSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+      "observedBeforeSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+      "beforeSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+      "observedWorkingTreeSha256": "d53036645a56f8b12573891b3733ac807646e2f3f53ecef1e25935e874ee2c49",
+      "afterSha256": "d53036645a56f8b12573891b3733ac807646e2f3f53ecef1e25935e874ee2c49",
+      "status": "integrated_merge_union",
       "plannedAdditions": [
-        {
-          "number": "175",
-          "date": "2026-10-04",
-          "group": "VERIFIED_PUBLICATION_DATES"
-        },
-        {
-          "number": "176",
-          "date": "2026-10-04",
-          "group": "VERIFIED_PUBLICATION_DATES"
-        },
-        {
-          "number": "177",
-          "date": "2026-10-04",
-          "group": "VERIFIED_PUBLICATION_DATES"
-        },
-        {
-          "number": "178",
-          "date": "2026-10-04",
-          "group": "VERIFIED_PUBLICATION_DATES"
-        },
         {
           "number": "179",
           "date": "2026-10-04",
@@ -809,15 +788,36 @@
           "number": "181",
           "date": "2026-10-04",
           "group": "VERIFIED_PUBLICATION_DATES"
+        },
+        {
+          "number": "182",
+          "date": "2026-10-04",
+          "group": "VERIFIED_PUBLICATION_DATES"
+        },
+        {
+          "number": "183",
+          "date": "2026-10-04",
+          "group": "VERIFIED_PUBLICATION_DATES"
+        },
+        {
+          "number": "184",
+          "date": "2026-10-04",
+          "group": "VERIFIED_PUBLICATION_DATES"
+        },
+        {
+          "number": "185",
+          "date": "2026-10-04",
+          "group": "VERIFIED_PUBLICATION_DATES"
         }
       ],
-      "forCurrentApprovedPublicationDateOnly": true,
-      "publicationDateChangeRequiresReplan": true,
-      "entriesAdded": 7,
-      "preparationSnapshotCommit": "2fcfc68f06c246a78caff84551bf666fc4a9150f",
-      "preparationObservedBeforeSha256": "344988464180efe9d03cbac11813dd4634a7925e1b714a90c85f37c93b2902f7",
-      "beforeSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
-      "allPriorEntriesAndBytesPreservedByExactInverse": true
+      "entriesAddedByThisBatch": 7,
+      "jointEntriesBefore": 151,
+      "jointEntriesAfter": 165,
+      "jointEntriesAdded": 14,
+      "allIncomingEntriesPreserved": true,
+      "jointInverseRestoresEntireOriginBytes": true,
+      "inverseOriginSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+      "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
     }
   ],
   "plannedAuditDocument": "docs/audit/editorial-20261003-b05.md",
@@ -877,13 +877,13 @@
     "public/images/columns/editorial-20261003-b05/taiwan-personal-data-access-copy-request.png",
     "public/images/columns/editorial-20261003-b05/taiwan-trademark-nonuse-three-years-korean-brand.png",
     "src/content/column-embeddings-pending.json",
-    "src/content/columns-en/180-taiwan-personal-data-access-copy-request.md",
-    "src/content/columns-ja/179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
-    "src/content/columns-zh/175-annual-leave-dates-employer-scheduling-taiwan.md",
-    "src/content/columns-zh/176-rental-electricity-average-price-bill-taiwan.md",
-    "src/content/columns-zh/177-limited-company-shareholder-books-inspection-taiwan.md",
-    "src/content/columns-zh/178-handwritten-will-typed-print-signature-taiwan.md",
-    "src/content/columns/181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+    "src/content/columns-en/184-taiwan-personal-data-access-copy-request.md",
+    "src/content/columns-ja/183-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+    "src/content/columns-zh/179-annual-leave-dates-employer-scheduling-taiwan.md",
+    "src/content/columns-zh/180-rental-electricity-average-price-bill-taiwan.md",
+    "src/content/columns-zh/181-limited-company-shareholder-books-inspection-taiwan.md",
+    "src/content/columns-zh/182-handwritten-will-typed-print-signature-taiwan.md",
+    "src/content/columns/185-taiwan-trademark-nonuse-three-years-korean-brand.md",
     "src/lib/__tests__/columns-publication-date.test.ts",
     "src/lib/__tests__/native-locale-columns.ts"
   ],
@@ -1017,7 +1017,7 @@
     "enSeoTitleLengthCalculated": 36,
     "enSeoTitleWithSiteSuffixLengthCalculated": 51,
     "metadataLengthCalculationIsNotRepositoryTest": true,
-    "testsRun": false,
+    "testsRun": true,
     "buildRun": false,
     "browserOrHttpVerificationRun": false,
     "dateDeltaInverseWholeShaVerified": 7,
@@ -1093,21 +1093,32 @@
         "public/images/columns/editorial-20261003-b05/taiwan-personal-data-access-copy-request.png",
         "public/images/columns/editorial-20261003-b05/taiwan-trademark-nonuse-three-years-korean-brand.png",
         "src/content/column-embeddings-pending.json",
-        "src/content/columns-en/180-taiwan-personal-data-access-copy-request.md",
-        "src/content/columns-ja/179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
-        "src/content/columns-zh/175-annual-leave-dates-employer-scheduling-taiwan.md",
-        "src/content/columns-zh/176-rental-electricity-average-price-bill-taiwan.md",
-        "src/content/columns-zh/177-limited-company-shareholder-books-inspection-taiwan.md",
-        "src/content/columns-zh/178-handwritten-will-typed-print-signature-taiwan.md",
-        "src/content/columns/181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+        "src/content/columns-en/184-taiwan-personal-data-access-copy-request.md",
+        "src/content/columns-ja/183-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+        "src/content/columns-zh/179-annual-leave-dates-employer-scheduling-taiwan.md",
+        "src/content/columns-zh/180-rental-electricity-average-price-bill-taiwan.md",
+        "src/content/columns-zh/181-limited-company-shareholder-books-inspection-taiwan.md",
+        "src/content/columns-zh/182-handwritten-will-typed-print-signature-taiwan.md",
+        "src/content/columns/185-taiwan-trademark-nonuse-three-years-korean-brand.md",
         "src/lib/__tests__/columns-publication-date.test.ts",
         "src/lib/__tests__/native-locale-columns.ts"
       ]
     },
     "currentHashAliasVerification": {
-      "aliasesChecked": 190,
+      "aliasesCheckedForThisBatch": 199,
       "mismatches": 0,
-      "normalizedVoiceSourceAndCopyHashesSeparatelyVerified": true
+      "normalizedVoiceSourceAndCopyHashesSeparatelyVerified": true,
+      "checkedAtUtc": "2026-10-03T17:24:33.441646+00:00",
+      "historyExcludedIntentionally": true
+    },
+    "narrowMergeTests": {
+      "suiteFiles": 5,
+      "testsPassed": 70,
+      "testsFailed": 0,
+      "elapsedSeconds": 16.551,
+      "eslintExitCode": 0,
+      "diffCheckExitCode": 0,
+      "independentFullQaAndBuild": "pending"
     }
   },
   "normalizationPolicy": "Only voice-r1.md audit copy removes its single extra EOF LF. Sourcee437f5cf remains unchanged; copy2ed4238c plus one LF exactly reconstructs source. Other20 ledgers exact; article/image bytes unchanged.",
@@ -1138,7 +1149,7 @@
     "independentLegalAndVoiceApprovalStatus": "APPROVE all7; MUST0; final report source hashes in reviewProvenance",
     "historicalPendingStatusNote": "Copied date-delta reports were frozen before independent approvals and preserve their then-pending status. Current R2 reviews and this packet record the later completed approvals; historical bytes are unchanged."
   },
-  "baseCommitFull": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
+  "baseCommitFull": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
   "preparationPacket": {
     "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/RELEASE-PREPARE.json",
     "sha256": "786ed487eb20076db4fdb6dac0378243d69a8c2bc8eeed92556947d5d7178dd4",
@@ -1177,7 +1188,7 @@
     "frontmatterSlugCollisionCheck": true,
     "note": "First pre-copy attempt detected remote movement before any write. Root reviewed incoming21files and rebased, then issued new clean447f authorization."
   },
-  "assignedNumberRange": "175-181",
+  "assignedNumberRange": "179-185",
   "auditDocument": "docs/audit/editorial-20261003-b05.md",
   "manifestDestination": "docs/audit/editorial-20261003-b05/RELEASE-MANIFEST.json",
   "actualIntegrationCounts": {
@@ -1220,43 +1231,545 @@
   "registryInverseProof": [
     {
       "path": "src/content/column-embeddings-pending.json",
-      "beforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
-      "afterSha256": "997b6aaad849d245b94607f0a94ee456ea3dd093fc9322fe27f9539b4e45c912",
-      "exactRemovalOfAdditionsRestoresBeforeBytes": true,
-      "entriesAdded": 6
+      "originSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+      "currentSha256": "ba0ecc04c1d9fb1602e4ec90039e78617d7e8d838dce78a9c1a2c5559d4eb1be",
+      "jointInverseWholeBytesVerified": true,
+      "note": "Remove current B04+B05 additions together; historical B05-only inverse remains in preMerge4c27History."
     },
     {
       "path": "src/lib/__tests__/native-locale-columns.ts",
-      "beforeSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
-      "afterSha256": "4a611bb2f5412a47a97b5cc3053796d96d25b04011ca3d7ad26f452c17cc433e",
-      "exactRemovalOfAdditionsRestoresBeforeBytes": true,
-      "entriesAdded": 7
+      "originSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+      "currentSha256": "f881e733bd12c206c7e6775036ad8b8dc40f23e5e30f0bf218a06b5382a6cc8e",
+      "jointInverseWholeBytesVerified": true,
+      "note": "Remove current B04+B05 additions together; historical B05-only inverse remains in preMerge4c27History."
     },
     {
       "path": "src/lib/__tests__/columns-publication-date.test.ts",
-      "beforeSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
-      "afterSha256": "6425f52c8ecadf657baa991c45aace2106823e51528d7e63a6540a78e89610d5",
-      "exactRemovalOfAdditionsRestoresBeforeBytes": true,
-      "entriesAdded": 7
+      "originSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+      "currentSha256": "d53036645a56f8b12573891b3733ac807646e2f3f53ecef1e25935e874ee2c49",
+      "jointInverseWholeBytesVerified": true,
+      "note": "Remove current B04+B05 additions together; historical B05-only inverse remains in preMerge4c27History."
     }
   ],
   "b04Preservation": {
     "manifestPath": "docs/audit/editorial-20261003-b04/RELEASE-MANIFEST.json",
-    "manifestSha256": "913275ac71160423188d5bdfd0912e5a7c38e09f0f165baa61c08befe93f0ef1",
-    "historicalBaseInB04ManifestPreserved": "66d064cb2c29601bc4e29be990844e595d2d9607",
-    "unchangedB04PathsExcludingSharedRegistries": 36,
+    "manifestSha256": "3b3ab1993a75b45cec0b030261cd9e06a56b6bd7f36452f379e087b7bbdf4191",
+    "priorIntegrationSnapshotPreservedIn": "preMerge4c27History.b04Preservation",
+    "originalB04ArticleAndImageBytesUnchanged": 14,
+    "b04LedgerCopiesUnchanged": 19,
+    "b04FilenameAndAuditMetadataReconciliationAuthorized": true,
     "protectedTestRepair": {
       "path": "src/lib/__tests__/column-language-links.test.tsx",
       "sha256": "8ea766894692f8edfff79f348a5ce69f3e600096615ee4c8cc6de42015565677"
-    },
-    "allExistingRegistryBytesRestoredByExactInverse": true
+    }
   },
   "coReleaseScopeObservation": {
-    "currentUpstreamBase": "e1a37685b8b6c14ff863e05d396e835bebfe9bd8",
+    "currentUpstreamBase": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+    "inputOwnHead": "5478e021c31aa381854dd45fafc2d5c805ad7bee",
     "b04Paths": 39,
     "b05Paths": 40,
     "sharedRegistryPaths": 3,
     "combinedUniquePaths": 76,
-    "note": "Actual union count relative to current incoming base, with B04 manifest untouched. Root owns final co-release commit/publication."
+    "sitemapMatchesOriginAndAddsNoOwnPath": true,
+    "note": "Actual working-tree path union against origin/main plus untracked own renamed files, before root stages/commits the merge."
+  },
+  "preMerge4c27History": {
+    "baseCommit": "447f05c7",
+    "baseCommitFull": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
+    "baseCommitNote": "Actual clean B05 integration baseline after root rebase onto e1a37685 and preservation of B04 date-refresh commit. B04 manifest historical66d base remains untouched. Combined release is root-owned.",
+    "scope": "Exactly40 B05 product paths: approved article7, accepted PNG7, ledger21, manifest/audit2 and additive registries3. Twenty ledgers exact; only voice audit copy removes one final LF with inverse proof. B04 and incoming/runtime/test/helper bytes are preserved.",
+    "registryChanges": [
+      {
+        "path": "src/content/column-embeddings-pending.json",
+        "snapshotCommit": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
+        "observedWorkingTreeSha256": "997b6aaad849d245b94607f0a94ee456ea3dd093fc9322fe27f9539b4e45c912",
+        "observedBeforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
+        "observedHeadSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
+        "snapshotNote": "Actual B05 bytes before/after at clean baseline447f05c7 after incominge1a37685 rebase. All B04 and incoming entries preserved.",
+        "afterSha256": "997b6aaad849d245b94607f0a94ee456ea3dd093fc9322fe27f9539b4e45c912",
+        "status": "integrated",
+        "plannedAdditions": [
+          {
+            "locale": "zh-hant",
+            "slug": "annual-leave-dates-employer-scheduling-taiwan"
+          },
+          {
+            "locale": "zh-hant",
+            "slug": "rental-electricity-average-price-bill-taiwan"
+          },
+          {
+            "locale": "zh-hant",
+            "slug": "limited-company-shareholder-books-inspection-taiwan"
+          },
+          {
+            "locale": "zh-hant",
+            "slug": "handwritten-will-typed-print-signature-taiwan"
+          },
+          {
+            "locale": "en",
+            "slug": "taiwan-personal-data-access-copy-request"
+          },
+          {
+            "locale": "ko",
+            "slug": "taiwan-trademark-nonuse-three-years-korean-brand"
+          }
+        ],
+        "forCurrentApprovedPublicationDateOnly": true,
+        "publicationDateChangeRequiresReplan": true,
+        "entriesBefore": 186,
+        "entriesAfter": 192,
+        "entriesAdded": 6,
+        "preparationSnapshotCommit": "2fcfc68f06c246a78caff84551bf666fc4a9150f",
+        "preparationObservedBeforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
+        "beforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
+        "allPriorEntriesAndBytesPreservedByExactInverse": true
+      },
+      {
+        "path": "src/lib/__tests__/native-locale-columns.ts",
+        "snapshotCommit": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
+        "observedWorkingTreeSha256": "4a611bb2f5412a47a97b5cc3053796d96d25b04011ca3d7ad26f452c17cc433e",
+        "observedBeforeSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
+        "observedHeadSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
+        "snapshotNote": "Actual B05 bytes before/after at clean baseline447f05c7 after incominge1a37685 rebase. All B04 and incoming entries preserved.",
+        "afterSha256": "4a611bb2f5412a47a97b5cc3053796d96d25b04011ca3d7ad26f452c17cc433e",
+        "status": "integrated",
+        "plannedAdditions": [
+          {
+            "locale": "zh-hant",
+            "filename": "175-annual-leave-dates-employer-scheduling-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "zh-hant",
+            "filename": "176-rental-electricity-average-price-bill-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "zh-hant",
+            "filename": "177-limited-company-shareholder-books-inspection-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "zh-hant",
+            "filename": "178-handwritten-will-typed-print-signature-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "ja",
+            "filename": "179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "en",
+            "filename": "180-taiwan-personal-data-access-copy-request.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "ko",
+            "filename": "181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          }
+        ],
+        "forCurrentApprovedPublicationDateOnly": true,
+        "publicationDateChangeRequiresReplan": true,
+        "requiredFixtureSupport": "Existing Oct4 group and helpers came from approved B04 date refresh. Only seven filename lines were appended. Helper logic and prior test repair are unchanged.",
+        "entriesAdded": 7,
+        "preparationSnapshotCommit": "2fcfc68f06c246a78caff84551bf666fc4a9150f",
+        "preparationObservedBeforeSha256": "7872c8ecc983d950a3b3f1573ec344469ec9d45cabd2d6b93c6b8a3ffdd4bc01",
+        "beforeSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
+        "allPriorEntriesAndBytesPreservedByExactInverse": true
+      },
+      {
+        "path": "src/lib/__tests__/columns-publication-date.test.ts",
+        "snapshotCommit": "447f05c71fa04cd0a66a6404e8b06e03c7ef6de4",
+        "observedWorkingTreeSha256": "6425f52c8ecadf657baa991c45aace2106823e51528d7e63a6540a78e89610d5",
+        "observedBeforeSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
+        "observedHeadSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
+        "snapshotNote": "Actual B05 bytes before/after at clean baseline447f05c7 after incominge1a37685 rebase. All B04 and incoming entries preserved.",
+        "afterSha256": "6425f52c8ecadf657baa991c45aace2106823e51528d7e63a6540a78e89610d5",
+        "status": "integrated",
+        "plannedAdditions": [
+          {
+            "number": "175",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "176",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "177",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "178",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "179",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "180",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "181",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          }
+        ],
+        "forCurrentApprovedPublicationDateOnly": true,
+        "publicationDateChangeRequiresReplan": true,
+        "entriesAdded": 7,
+        "preparationSnapshotCommit": "2fcfc68f06c246a78caff84551bf666fc4a9150f",
+        "preparationObservedBeforeSha256": "344988464180efe9d03cbac11813dd4634a7925e1b714a90c85f37c93b2902f7",
+        "beforeSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
+        "allPriorEntriesAndBytesPreservedByExactInverse": true
+      }
+    ],
+    "verification": {
+      "sourceArticleHashesMatchFinalVoiceAndLegal": 7,
+      "sourceEvidenceHashesMatchFinalVoiceAndLegal": 7,
+      "finalReviewHashesMatchRootFreeze": 4,
+      "sourceImageBytesHashesDimensionsMatch": 7,
+      "sourcePromptsMatchImageManifest": 7,
+      "sourceAcceptedResultRecordsMatch": 7,
+      "sourceRejectedOriginalHashVerified": 1,
+      "sourceLedgerArtifactsChecked": 21,
+      "sourceArticlesWhitespaceClean": 7,
+      "ledgerOriginalsAlreadyWhitespaceClean": 20,
+      "ledgerCopiesRequiringWhitespaceNormalization": 1,
+      "plannedNormalizationInverseVerified": true,
+      "whitespaceSourceFindings": [
+        {
+          "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/reviews/voice-r1.md",
+          "output": "/Users/son7/tseng-fraud-editorial-20261003/batch-005/reviews/voice-r1.md:229: new blank line at EOF.",
+          "exitCode": 3
+        }
+      ],
+      "normalizationPerformed": true,
+      "copiedArticles": 7,
+      "copiedImages": 7,
+      "copiedLedgerArtifacts": 21,
+      "registryMutations": 3,
+      "enSummaryLengthCalculated": 155,
+      "enSeoTitleLengthCalculated": 36,
+      "enSeoTitleWithSiteSuffixLengthCalculated": 51,
+      "metadataLengthCalculationIsNotRepositoryTest": true,
+      "testsRun": false,
+      "buildRun": false,
+      "browserOrHttpVerificationRun": false,
+      "dateDeltaInverseWholeShaVerified": 7,
+      "dateDeltaEvidencePrefixVerified": 7,
+      "currentDatedReviewApprovalsMatched": 7,
+      "copiedArticlesByteIdentical": 7,
+      "copiedImageByteMatches": 7,
+      "ledgerCopiesByteIdentical": 20,
+      "ledgerCopiesWhitespaceNormalized": 1,
+      "nativeRegistryAdded": 7,
+      "publicationDatesAdded": 7,
+      "pendingEmbeddingsAdded": 6,
+      "pendingEmbeddingsLocales": [
+        "zh-hant",
+        "en",
+        "ko"
+      ],
+      "semiconductorBoardAdded": 0,
+      "allExistingRegistryEntriesAndBytesPreservedByInverse": true,
+      "sourceAndDestinationMetadataPathsMatch": 7,
+      "sourceFreezeVerifiedAt": "2026-10-04T01:48:54+09:00",
+      "sourceFreezeVerifiedAtTaipei": "2026-10-04T00:48:54+08:00",
+      "gitDiffCheck": {
+        "command": "git diff --check",
+        "exitCode": 0,
+        "warnings": 0
+      },
+      "newFilesWhitespaceCheck": {
+        "command": "git diff --no-index --check -- /dev/null <each new text file>",
+        "newTextFilesChecked": 30,
+        "warnings": 0,
+        "pngFilesVerifiedByBytesHashDimensions": 7
+      },
+      "scopeCheck": {
+        "existingFilesChanged": 3,
+        "newArticleFiles": 7,
+        "newImageFiles": 7,
+        "newLedgerFiles": 21,
+        "newManifestAndAudit": 2,
+        "newFilesTotal": 37,
+        "totalChangedOrNewFiles": 40,
+        "unexpectedChangedOrUntrackedFiles": 0,
+        "conflictMarkers": 0,
+        "paths": [
+          "docs/audit/editorial-20261003-b05.md",
+          "docs/audit/editorial-20261003-b05/B05publication-date-delta.json",
+          "docs/audit/editorial-20261003-b05/B05publication-date-delta.md",
+          "docs/audit/editorial-20261003-b05/IMAGE-GENERATION-KO-RETRY-RESULT.json",
+          "docs/audit/editorial-20261003-b05/IMAGE-GENERATION-RESULTS.json",
+          "docs/audit/editorial-20261003-b05/IMAGE-MANIFEST.json",
+          "docs/audit/editorial-20261003-b05/IMAGE-PROMPT-RETRY-KO.json",
+          "docs/audit/editorial-20261003-b05/IMAGE-PROMPTS.json",
+          "docs/audit/editorial-20261003-b05/IMAGE-QA.md",
+          "docs/audit/editorial-20261003-b05/RELEASE-MANIFEST.json",
+          "docs/audit/editorial-20261003-b05/TOPIC-BRIEFS.md",
+          "docs/audit/editorial-20261003-b05/WRITER-WORKORDER.md",
+          "docs/audit/editorial-20261003-b05/evidence/en-taiwan-personal-data-access-copy-request.md",
+          "docs/audit/editorial-20261003-b05/evidence/ja-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+          "docs/audit/editorial-20261003-b05/evidence/ko-taiwan-trademark-nonuse-three-years-korean-brand.md",
+          "docs/audit/editorial-20261003-b05/evidence/zh-hant-annual-leave-dates-employer-scheduling-taiwan.md",
+          "docs/audit/editorial-20261003-b05/evidence/zh-hant-handwritten-will-typed-print-signature-taiwan.md",
+          "docs/audit/editorial-20261003-b05/evidence/zh-hant-limited-company-shareholder-books-inspection-taiwan.md",
+          "docs/audit/editorial-20261003-b05/evidence/zh-hant-rental-electricity-average-price-bill-taiwan.md",
+          "docs/audit/editorial-20261003-b05/reviews/legal-en-ko-r1.md",
+          "docs/audit/editorial-20261003-b05/reviews/legal-ja-r1.md",
+          "docs/audit/editorial-20261003-b05/reviews/legal-zh-r1.md",
+          "docs/audit/editorial-20261003-b05/reviews/voice-r1.md",
+          "public/images/columns/editorial-20261003-b05/annual-leave-dates-employer-scheduling-taiwan.png",
+          "public/images/columns/editorial-20261003-b05/handwritten-will-typed-print-signature-taiwan.png",
+          "public/images/columns/editorial-20261003-b05/limited-company-shareholder-books-inspection-taiwan.png",
+          "public/images/columns/editorial-20261003-b05/rental-electricity-average-price-bill-taiwan.png",
+          "public/images/columns/editorial-20261003-b05/taiwan-hotel-typhoon-cancellation-refund-japanese.png",
+          "public/images/columns/editorial-20261003-b05/taiwan-personal-data-access-copy-request.png",
+          "public/images/columns/editorial-20261003-b05/taiwan-trademark-nonuse-three-years-korean-brand.png",
+          "src/content/column-embeddings-pending.json",
+          "src/content/columns-en/180-taiwan-personal-data-access-copy-request.md",
+          "src/content/columns-ja/179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+          "src/content/columns-zh/175-annual-leave-dates-employer-scheduling-taiwan.md",
+          "src/content/columns-zh/176-rental-electricity-average-price-bill-taiwan.md",
+          "src/content/columns-zh/177-limited-company-shareholder-books-inspection-taiwan.md",
+          "src/content/columns-zh/178-handwritten-will-typed-print-signature-taiwan.md",
+          "src/content/columns/181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+          "src/lib/__tests__/columns-publication-date.test.ts",
+          "src/lib/__tests__/native-locale-columns.ts"
+        ]
+      },
+      "currentHashAliasVerification": {
+        "aliasesChecked": 190,
+        "mismatches": 0,
+        "normalizedVoiceSourceAndCopyHashesSeparatelyVerified": true
+      }
+    },
+    "assignedNumberRange": "175-181",
+    "plannedRepositoryPaths": [
+      "docs/audit/editorial-20261003-b05.md",
+      "docs/audit/editorial-20261003-b05/B05publication-date-delta.json",
+      "docs/audit/editorial-20261003-b05/B05publication-date-delta.md",
+      "docs/audit/editorial-20261003-b05/IMAGE-GENERATION-KO-RETRY-RESULT.json",
+      "docs/audit/editorial-20261003-b05/IMAGE-GENERATION-RESULTS.json",
+      "docs/audit/editorial-20261003-b05/IMAGE-MANIFEST.json",
+      "docs/audit/editorial-20261003-b05/IMAGE-PROMPT-RETRY-KO.json",
+      "docs/audit/editorial-20261003-b05/IMAGE-PROMPTS.json",
+      "docs/audit/editorial-20261003-b05/IMAGE-QA.md",
+      "docs/audit/editorial-20261003-b05/RELEASE-MANIFEST.json",
+      "docs/audit/editorial-20261003-b05/TOPIC-BRIEFS.md",
+      "docs/audit/editorial-20261003-b05/WRITER-WORKORDER.md",
+      "docs/audit/editorial-20261003-b05/evidence/en-taiwan-personal-data-access-copy-request.md",
+      "docs/audit/editorial-20261003-b05/evidence/ja-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+      "docs/audit/editorial-20261003-b05/evidence/ko-taiwan-trademark-nonuse-three-years-korean-brand.md",
+      "docs/audit/editorial-20261003-b05/evidence/zh-hant-annual-leave-dates-employer-scheduling-taiwan.md",
+      "docs/audit/editorial-20261003-b05/evidence/zh-hant-handwritten-will-typed-print-signature-taiwan.md",
+      "docs/audit/editorial-20261003-b05/evidence/zh-hant-limited-company-shareholder-books-inspection-taiwan.md",
+      "docs/audit/editorial-20261003-b05/evidence/zh-hant-rental-electricity-average-price-bill-taiwan.md",
+      "docs/audit/editorial-20261003-b05/reviews/legal-en-ko-r1.md",
+      "docs/audit/editorial-20261003-b05/reviews/legal-ja-r1.md",
+      "docs/audit/editorial-20261003-b05/reviews/legal-zh-r1.md",
+      "docs/audit/editorial-20261003-b05/reviews/voice-r1.md",
+      "public/images/columns/editorial-20261003-b05/annual-leave-dates-employer-scheduling-taiwan.png",
+      "public/images/columns/editorial-20261003-b05/handwritten-will-typed-print-signature-taiwan.png",
+      "public/images/columns/editorial-20261003-b05/limited-company-shareholder-books-inspection-taiwan.png",
+      "public/images/columns/editorial-20261003-b05/rental-electricity-average-price-bill-taiwan.png",
+      "public/images/columns/editorial-20261003-b05/taiwan-hotel-typhoon-cancellation-refund-japanese.png",
+      "public/images/columns/editorial-20261003-b05/taiwan-personal-data-access-copy-request.png",
+      "public/images/columns/editorial-20261003-b05/taiwan-trademark-nonuse-three-years-korean-brand.png",
+      "src/content/column-embeddings-pending.json",
+      "src/content/columns-en/180-taiwan-personal-data-access-copy-request.md",
+      "src/content/columns-ja/179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+      "src/content/columns-zh/175-annual-leave-dates-employer-scheduling-taiwan.md",
+      "src/content/columns-zh/176-rental-electricity-average-price-bill-taiwan.md",
+      "src/content/columns-zh/177-limited-company-shareholder-books-inspection-taiwan.md",
+      "src/content/columns-zh/178-handwritten-will-typed-print-signature-taiwan.md",
+      "src/content/columns/181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+      "src/lib/__tests__/columns-publication-date.test.ts",
+      "src/lib/__tests__/native-locale-columns.ts"
+    ],
+    "registryInverseProof": [
+      {
+        "path": "src/content/column-embeddings-pending.json",
+        "beforeSha256": "2d30bb4c73f6a9c31a8ef2ed02586085584d79716ebb14dc0180b76629130efc",
+        "afterSha256": "997b6aaad849d245b94607f0a94ee456ea3dd093fc9322fe27f9539b4e45c912",
+        "exactRemovalOfAdditionsRestoresBeforeBytes": true,
+        "entriesAdded": 6
+      },
+      {
+        "path": "src/lib/__tests__/native-locale-columns.ts",
+        "beforeSha256": "502652c8324b38b73b93881e0f417a74c852ae7ba90d50f57b35a3c767577338",
+        "afterSha256": "4a611bb2f5412a47a97b5cc3053796d96d25b04011ca3d7ad26f452c17cc433e",
+        "exactRemovalOfAdditionsRestoresBeforeBytes": true,
+        "entriesAdded": 7
+      },
+      {
+        "path": "src/lib/__tests__/columns-publication-date.test.ts",
+        "beforeSha256": "0891ce930ca052b71ea6b0ca86ff032124a09b09044462b96ce3f0e5dace3771",
+        "afterSha256": "6425f52c8ecadf657baa991c45aace2106823e51528d7e63a6540a78e89610d5",
+        "exactRemovalOfAdditionsRestoresBeforeBytes": true,
+        "entriesAdded": 7
+      }
+    ],
+    "b04Preservation": {
+      "manifestPath": "docs/audit/editorial-20261003-b04/RELEASE-MANIFEST.json",
+      "manifestSha256": "913275ac71160423188d5bdfd0912e5a7c38e09f0f165baa61c08befe93f0ef1",
+      "historicalBaseInB04ManifestPreserved": "66d064cb2c29601bc4e29be990844e595d2d9607",
+      "unchangedB04PathsExcludingSharedRegistries": 36,
+      "protectedTestRepair": {
+        "path": "src/lib/__tests__/column-language-links.test.tsx",
+        "sha256": "8ea766894692f8edfff79f348a5ce69f3e600096615ee4c8cc6de42015565677"
+      },
+      "allExistingRegistryBytesRestoredByExactInverse": true
+    },
+    "coReleaseScopeObservation": {
+      "currentUpstreamBase": "e1a37685b8b6c14ff863e05d396e835bebfe9bd8",
+      "b04Paths": 39,
+      "b05Paths": 40,
+      "sharedRegistryPaths": 3,
+      "combinedUniquePaths": 76,
+      "note": "Actual union count relative to current incoming base, with B04 manifest untouched. Root owns final co-release commit/publication."
+    },
+    "articleNumberAndDestination": [
+      {
+        "number": 175,
+        "destination": "src/content/columns-zh/175-annual-leave-dates-employer-scheduling-taiwan.md",
+        "sha256": "20a552849dfdac6059e5421f9da59d73d24e80641a98a95649538eaf944324b8"
+      },
+      {
+        "number": 176,
+        "destination": "src/content/columns-zh/176-rental-electricity-average-price-bill-taiwan.md",
+        "sha256": "8c138752c9cac8efddb137a1a2d3c797219ef518142e114068fe44306a0f2696"
+      },
+      {
+        "number": 177,
+        "destination": "src/content/columns-zh/177-limited-company-shareholder-books-inspection-taiwan.md",
+        "sha256": "f090d3efa295ffef10c7e67c526df936d859a2b932612de594518d35b3732519"
+      },
+      {
+        "number": 178,
+        "destination": "src/content/columns-zh/178-handwritten-will-typed-print-signature-taiwan.md",
+        "sha256": "85a70f86d213090db354fd6ddc21d2965c2b6c34df7f99f830178309c41ae2ad"
+      },
+      {
+        "number": 179,
+        "destination": "src/content/columns-ja/179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+        "sha256": "3198cd71bceb934cd87721d1272e37899bea058059f5ac9f351851cba75c9934"
+      },
+      {
+        "number": 180,
+        "destination": "src/content/columns-en/180-taiwan-personal-data-access-copy-request.md",
+        "sha256": "b9eaae0327cd4099ef922df690ae3b8dc42103c4ddabd04ff405b20f6aabc668"
+      },
+      {
+        "number": 181,
+        "destination": "src/content/columns/181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+        "sha256": "5c9b97aa5d6351a0857ac3ea111b28b0edb7a03f4eaffd6feaa74a496b431ef1"
+      }
+    ],
+    "manifestSha256": "a9ea7ba6e95704b6f84a462a627448a4d411d39e847ed45a43959d27a23bc630",
+    "inputHead": "5478e021c31aa381854dd45fafc2d5c805ad7bee",
+    "note": "Immutable pre-merge observation. Original draft/image/review bytes and prior integration/date/QA history remain unchanged."
+  },
+  "merge4c27Reconciliation": {
+    "recordedAtUtc": "2026-10-03T17:24:33.441646+00:00",
+    "method": "normal merge initiated by root; worker filesystem renumber and exact registry union",
+    "inputOwnHead": "5478e021c31aa381854dd45fafc2d5c805ad7bee",
+    "incomingHead": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+    "assignedNumberRange": "179-185",
+    "renames": [
+      {
+        "batch": "b05",
+        "oldNumber": 175,
+        "newNumber": 179,
+        "source": "src/content/columns-zh/175-annual-leave-dates-employer-scheduling-taiwan.md",
+        "destination": "src/content/columns-zh/179-annual-leave-dates-employer-scheduling-taiwan.md",
+        "sha256": "20a552849dfdac6059e5421f9da59d73d24e80641a98a95649538eaf944324b8",
+        "slug": "annual-leave-dates-employer-scheduling-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b05",
+        "oldNumber": 176,
+        "newNumber": 180,
+        "source": "src/content/columns-zh/176-rental-electricity-average-price-bill-taiwan.md",
+        "destination": "src/content/columns-zh/180-rental-electricity-average-price-bill-taiwan.md",
+        "sha256": "8c138752c9cac8efddb137a1a2d3c797219ef518142e114068fe44306a0f2696",
+        "slug": "rental-electricity-average-price-bill-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b05",
+        "oldNumber": 177,
+        "newNumber": 181,
+        "source": "src/content/columns-zh/177-limited-company-shareholder-books-inspection-taiwan.md",
+        "destination": "src/content/columns-zh/181-limited-company-shareholder-books-inspection-taiwan.md",
+        "sha256": "f090d3efa295ffef10c7e67c526df936d859a2b932612de594518d35b3732519",
+        "slug": "limited-company-shareholder-books-inspection-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b05",
+        "oldNumber": 178,
+        "newNumber": 182,
+        "source": "src/content/columns-zh/178-handwritten-will-typed-print-signature-taiwan.md",
+        "destination": "src/content/columns-zh/182-handwritten-will-typed-print-signature-taiwan.md",
+        "sha256": "85a70f86d213090db354fd6ddc21d2965c2b6c34df7f99f830178309c41ae2ad",
+        "slug": "handwritten-will-typed-print-signature-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b05",
+        "oldNumber": 179,
+        "newNumber": 183,
+        "source": "src/content/columns-ja/179-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+        "destination": "src/content/columns-ja/183-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+        "sha256": "3198cd71bceb934cd87721d1272e37899bea058059f5ac9f351851cba75c9934",
+        "slug": "taiwan-hotel-typhoon-cancellation-refund-japanese",
+        "locale": "ja"
+      },
+      {
+        "batch": "b05",
+        "oldNumber": 180,
+        "newNumber": 184,
+        "source": "src/content/columns-en/180-taiwan-personal-data-access-copy-request.md",
+        "destination": "src/content/columns-en/184-taiwan-personal-data-access-copy-request.md",
+        "sha256": "b9eaae0327cd4099ef922df690ae3b8dc42103c4ddabd04ff405b20f6aabc668",
+        "slug": "taiwan-personal-data-access-copy-request",
+        "locale": "en"
+      },
+      {
+        "batch": "b05",
+        "oldNumber": 181,
+        "newNumber": 185,
+        "source": "src/content/columns/181-taiwan-trademark-nonuse-three-years-korean-brand.md",
+        "destination": "src/content/columns/185-taiwan-trademark-nonuse-three-years-korean-brand.md",
+        "sha256": "5c9b97aa5d6351a0857ac3ea111b28b0edb7a03f4eaffd6feaa74a496b431ef1",
+        "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+        "locale": "ko"
+      }
+    ],
+    "articleBytesUnchanged": 7,
+    "imageBytesUnchanged": 7,
+    "ledgerCopiesUnchanged": 21,
+    "sitemapOriginSha256": "38a02c6208627e399dd4cae31f78171b525d629d3a2bff2dc3c1d8ddbfe53f91",
+    "incomingFourArticlesFourImagesAndBoardPreserved": true,
+    "conflictMarkersRemainingInWorktree": 0,
+    "unmergedIndexEntriesAwaitRootStage": 3,
+    "externalEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/merge-4c27-reconciliation.md",
+    "externalEvidenceSha256": "fefc3ab6561f4fd40a7bca9ccaae4495412a726512aa9fff57eb142d68bc9fc8",
+    "externalStructuredEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/merge-4c27-reconciliation.json",
+    "finalMergeCommitIndependentQaBuildPublication": "pending"
   }
 }

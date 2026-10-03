@@ -209,16 +209,16 @@ describe('sitemap column lastModified', () => {
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
-          + Object.values(COUNTRY_COLUMN_FILES_20261004).flat().length
           + Object.values(ROAD_RAGE_COLUMN_FILES_20261003).flat().length
+          + Object.values(COUNTRY_COLUMN_FILES_20261004).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
         511 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
-          + Object.values(COUNTRY_COLUMN_FILES_20261004).flat().length
           + Object.values(ROAD_RAGE_COLUMN_FILES_20261003).flat().length
+          + Object.values(COUNTRY_COLUMN_FILES_20261004).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });

@@ -220,6 +220,7 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-accident-assessment-secondary-cause-compensation-ratio',
         'taiwan-accident-family-care-necessity-period',
         'taiwan-racing-no-contact-joint-tort-liability',
+        'taiwan-motorway-blocking-no-collision-public-danger',
         'taiwan-car-accident-work-loss-rest-note',
         'taiwan-accident-police-records',
         'taiwan-retaliatory-driving-rear-ended-intentional-injury',

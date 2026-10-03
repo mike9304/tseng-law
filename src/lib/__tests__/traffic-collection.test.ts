@@ -210,6 +210,8 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-ambulance-red-light-emergency-priority-negligence',
+        'taiwan-bus-stop-illegal-parking-no-contact-criminal-causation',
         'taiwan-accident-stop-dialogue-hit-and-run-evidence',
         'taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse',
         'taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction',

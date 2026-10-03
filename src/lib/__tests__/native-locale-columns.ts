@@ -227,6 +227,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
     '111-tsmc-kumamoto-jasm-taiwan-outbound-investment-rules.md', // semiconductor lane b01
+    '115-japan-kyogi-rikon-recognition-taiwan.md', // family lane b04
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',
@@ -246,6 +247,8 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '105-child-support-calculation-taiwan-court.md', // family lane b02
     '106-remaining-property-distribution-calculation.md', // family lane b03
     '107-child-custody-best-interests-social-worker-report.md', // family lane b03
+    '113-domestic-violence-protection-order-application-evidence.md', // family lane b04
+    '114-divorce-agreement-terms-before-signing.md', // family lane b04
   ],
 } as const;
 

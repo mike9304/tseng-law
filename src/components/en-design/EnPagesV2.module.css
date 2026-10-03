@@ -264,6 +264,47 @@
 @media (hover: hover) { .card:hover { background: var(--en-tile-hi); } }
 .paper .card { border-radius: 18px; clip-path: inset(0 round 18px); }
 
+/* ---------- FAQAccordion on paper (profile, service detail, landing pages): S9 rows in ink ---------- */
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout]) { background: #fff; color: #1d1d1f; border: 0; }
+/* The "FAQ" eyebrow repeats its H2 (CONCEPT-V2 21), so it is not shown. */
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .section-label) { display: none; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .section-title) { font-size: var(--en-t-l2); line-height: 1.04; letter-spacing: -0.024em; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-list) { display: grid; gap: 12px; border: 0; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-item) { padding: 0 24px; border: 0; border-radius: 18px; background: transparent; box-shadow: none; transition: background-color 300ms var(--en-ease); }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-item:has(.is-open)) { background: #f2f2f4; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-question button) {
+  min-height: 64px;
+  padding: 18px 0;
+  font-family: var(--en-text);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  color: #1d1d1f;
+}
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-arrow) {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 5%);
+  color: #1d1d1f;
+  font-family: var(--en-text);
+  font-size: 22px;
+  font-weight: 400;
+}
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-answer) { font-family: var(--en-text); font-size: 19px; line-height: 1.6; color: #3a3a3c; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-question button:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 2px; }
+@media (max-width: 767px) {
+  .v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-item) { padding: 0 16px; }
+  .v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-question button) { font-size: 19px; }
+  .v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-answer) { font-size: 17px; }
+}
+
 /* ---------- Section frame ---------- */
 .section { padding: 160px 0; }
 .sectionNight { background: var(--en-night); }

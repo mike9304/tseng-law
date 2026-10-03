@@ -10,17 +10,11 @@ import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
-import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import Reveal from '@/components/Reveal';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import ZhHantHomeBody from '@/components/ZhHantHomeBody';
-import JaPageShell from '@/components/ja-design/JaPageShell';
-import JaPersonalPaths from '@/components/ja-design/JaPersonalPaths';
-import jaHomeStyles from '@/components/ja-design/JaHome.module.css';
-import { JA_PINNED_COLUMN_SLUGS, JA_SERVICE_ORDER } from '@/components/ja-design/ja-arrangement';
-import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
-import { getOrganizationName } from '@/lib/seo';
 import EnHomeBody from '@/components/en-design/EnHomeBody';
+import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
 import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
@@ -81,7 +75,7 @@ export function LegacyHomePageBody({
   faqItems: FAQItem[];
 }) {
   if (locale === 'zh-hant') return <ZhHantHomeBody posts={posts} faqItems={faqItems} />;
-  if (locale === 'ja') return jaHomeBody(posts, faqItems);
+  if (locale === 'ja') return <JaHomeBody posts={posts} faqItems={faqItems} />;
   if (locale === 'en') return <EnHomeBody posts={posts} faqItems={faqItems} />;
   return (
     <div className={homeEditorialStyles.root}>
@@ -113,51 +107,6 @@ export function LegacyHomePageBody({
         <HomeContactCta locale={locale} />
       </Reveal>
     </div>
-  );
-}
-
-/**
- * ja home (Opus 5.5 ja lane, 2026-10-01). Same components and copy as the shared legacy home,
- * re-ordered for Japanese readers: needs first (the 日系企業 entry block, then a row of
- * individual matters), practice areas in Japanese demand order, cornerstone columns pinned to
- * the top of the archive, then attorney, facts, case, FAQ, offices and contact. The decorative
- * heritage video band is left out of ja. A plain function (not a component) so the returned
- * element exposes its sections directly, like the shared body.
- */
-function jaHomeBody(posts: HomeInsightArchivePosts, faqItems: FAQItem[]) {
-  return (
-    <JaPageShell page="home" className={jaHomeStyles.root}>
-      {/* Display-only: the kicker reads as the firm name (the stock label is English). */}
-      <BuilderSurfaceProvider nodeId="home-hero" mode="published" overrides={{ 'section-label': getOrganizationName('ja') }} selectedSurfaceKey={null}>
-        <HeroSearch locale="ja" presentation="editorial" scrollHref="#overseas-entry-full-heading" />
-      </BuilderSurfaceProvider>
-      <Reveal>
-        <EnAcquisitionGuideLinks locale="ja" variant="full" />
-      </Reveal>
-      <JaPersonalPaths />
-      <Reveal>
-        <ServicesBento locale="ja" id="practice" variant="default" presentation="editorial" order={JA_SERVICE_ORDER} />
-      </Reveal>
-      <InsightsArchiveSection locale="ja" posts={posts} presentation="editorial" pinnedSlugs={JA_PINNED_COLUMN_SLUGS} />
-      <Reveal>
-        <HomeAttorneySplit locale="ja" presentation="editorial" />
-      </Reveal>
-      <Reveal>
-        <HomeStatsSection locale="ja" plainLede />
-      </Reveal>
-      <Reveal>
-        <HomeCaseResultsSplit locale="ja" presentation="editorial" />
-      </Reveal>
-      <Reveal>
-        <FAQAccordion locale="ja" items={faqItems} id="faq" sectionClassName="section section--gray" layout="split" />
-      </Reveal>
-      <Reveal>
-        <OfficeMapTabs locale="ja" id="offices" sectionClassName="section section--light" presentation="editorial" />
-      </Reveal>
-      <Reveal>
-        <HomeContactCta locale="ja" />
-      </Reveal>
-    </JaPageShell>
   );
 }
 

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import {
@@ -120,11 +121,14 @@ export default function HomeCaseResultsSplit({
   presentation,
   omitLandmarkId = false,
   override,
+  media,
 }: {
   locale: SiteLocale;
   presentation?: 'editorial';
   omitLandmarkId?: boolean;
   override?: HomeCaseResultsOverride;
+  /** Optional media slot (ja design). `null` renders no media column; omitted: the courtroom plate as before. */
+  media?: ReactNode | null;
 }) {
   const copy = override ?? copyByLocale[locale];
   // WO-X1 (EN-16): EN/JA point at the write-up of this very case instead of
@@ -141,29 +145,31 @@ export default function HomeCaseResultsSplit({
       id={omitLandmarkId ? undefined : 'results'}
       data-tone="dark"
     >
-      <div
-        className="split-image home-results-media"
-        data-builder-node-key="media"
-      >
-        <span className="home-results-media-fallback" aria-hidden />
-        <DecorativeAutoplayVideo
-          className="home-results-media-player"
-          imageClassName="home-results-media-img"
-          videoClassName="home-results-media-video"
-          webmSrc={HOME_RESULTS_EDITORIAL_VIDEO_WEBM_SRC}
-          mp4Src={HOME_RESULTS_EDITORIAL_VIDEO_MP4_SRC}
-          poster={HOME_RESULTS_EDITORIAL_IMAGE_SRC}
-          mobileWebmSrc={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC}
-          mobileMp4Src={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC}
-          mobilePoster={HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC}
-          alt={copy.imageAlt}
-          width={HOME_RESULTS_EDITORIAL_IMAGE_WIDTH}
-          height={HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT}
-          sizes="(max-width: 900px) 100vw, 52vw"
-          loop={false}
-          controlLabels={controlLabels}
-        />
-      </div>
+      {media === null ? null : media !== undefined ? media : (
+        <div
+          className="split-image home-results-media"
+          data-builder-node-key="media"
+        >
+          <span className="home-results-media-fallback" aria-hidden />
+          <DecorativeAutoplayVideo
+            className="home-results-media-player"
+            imageClassName="home-results-media-img"
+            videoClassName="home-results-media-video"
+            webmSrc={HOME_RESULTS_EDITORIAL_VIDEO_WEBM_SRC}
+            mp4Src={HOME_RESULTS_EDITORIAL_VIDEO_MP4_SRC}
+            poster={HOME_RESULTS_EDITORIAL_IMAGE_SRC}
+            mobileWebmSrc={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC}
+            mobileMp4Src={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC}
+            mobilePoster={HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC}
+            alt={copy.imageAlt}
+            width={HOME_RESULTS_EDITORIAL_IMAGE_WIDTH}
+            height={HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT}
+            sizes="(max-width: 900px) 100vw, 52vw"
+            loop={false}
+            controlLabels={controlLabels}
+          />
+        </div>
+      )}
       <div className="split-content home-results-content" data-builder-node-key="copy">
         <div
           className="section-label home-results-label"

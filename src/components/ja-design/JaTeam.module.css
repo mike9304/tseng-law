@@ -41,11 +41,11 @@
 .team:global([data-ja-design]) :global(.attorney-list li)::before { content: '・'; position: absolute; left: 0; color: var(--ja-green); }
 .team:global([data-ja-design]) :global(.attorney-list li)::marker { content: ''; }
 .team:global([data-ja-design]) :global(.attorney-card-actions) { margin-top: 20px; gap: 12px; }
-.team:global([data-ja-design]) :global(.attorney-card-cta) { min-height: 46px; border-radius: 2px; letter-spacing: 0.08em; }
+.team:global([data-ja-design]) :global(.attorney-card-cta) { min-height: 46px; border-radius: 999px; letter-spacing: 0.08em; }
 .team:global([data-ja-design]) :global(.attorney-card-actions .attorney-card-cta:first-child) { background: var(--ja-green); border-color: var(--ja-green); color: #fff; }
 
 /* Lead attorney: wide photo column, generous type */
-.team:global([data-ja-design]) :global(.attorney-card--lead) { padding: 0; border-top: 3px solid var(--ja-green); }
+.team:global([data-ja-design]) :global(.attorney-card--lead) { padding: 0; border-top: 2px solid var(--ja-ink); }
 .team:global([data-ja-design]) :global(.attorney-card--lead .attorney-card-photo--lead) { margin: 0; }
 .team:global([data-ja-design]) :global(.attorney-card-name--lead) { font-size: clamp(26px, 2.4vw, 32px); }
 

@@ -9,8 +9,16 @@
 .hero.hero:global(.svc-hero),
 .hero.hero:global(.svc-hero[data-tone='dark']) {
   background: var(--ja-paper); color: var(--ja-ink);
-  border-top: 3px solid var(--ja-green); border-bottom: 5px double var(--ja-line-strong);
-  padding: clamp(40px, 5vw, 72px) 0 clamp(36px, 4.5vw, 64px);
+  border-top: 0; border-bottom: 1px solid var(--ja-line-strong);
+  position: relative; --ja-strip: clamp(48px, 5vw, 80px);
+  padding: clamp(48px, 5.6vw, 88px) 0 calc(clamp(44px, 5vw, 76px) + var(--ja-strip));
+}
+.hero.hero:global(.svc-hero)::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: var(--ja-strip); border-top: 1px solid var(--ja-line-strong); pointer-events: none;
+  background:
+    linear-gradient(var(--ja-shu), var(--ja-shu)) max(32px, calc((100% - 1144px) / 2)) 0 / 96px 4px no-repeat,
+    linear-gradient(180deg, rgb(250 248 244 / 34%), rgb(250 248 244 / 0%) 60%),
+    url('/images/editorial/ja-tea-terrace-morning-hero.webp') 50% 68% / cover no-repeat;
 }
 .heroInner.heroInner:global(.svc-hero-inner) {
   display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); gap: 32px clamp(32px, 5vw, 80px); align-items: start;
@@ -19,15 +27,15 @@
 .hero.hero :global(.svc-back-link) { margin-bottom: 18px; font-size: 13.5px; letter-spacing: 0.06em; color: var(--ja-sub); }
 .hero.hero :global(h1.svc-hero-title) {
   max-width: 17em; margin: 0 0 16px; font-family: var(--ja-mincho); font-weight: 600;
-  font-size: clamp(30px, 3.2vw, 46px); line-height: 1.45; letter-spacing: 0.08em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
+  font-size: clamp(34px, 4.6vw, 68px); line-height: 1.3; word-break: auto-phrase; letter-spacing: 0.05em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
 }
 .hero.hero :global(.svc-hero-subtitle) { max-width: 36em; font-size: 16.5px; line-height: 2; letter-spacing: 0.05em; color: var(--ja-sub); }
 
-.heroPanel { display: grid; gap: 16px; padding: 24px 26px; background: #fff; border: 1px solid var(--ja-line); border-top: 3px solid var(--ja-green); }
+.heroPanel { display: grid; gap: 16px; padding: 24px 26px; background: #fff; border: 1px solid var(--ja-line); border-top: 2px solid var(--ja-ink); }
 .contents ol { list-style: none; margin: 0; padding: 0; counter-reset: ja-contents; }
 .contents li { counter-increment: ja-contents; border-bottom: 1px dashed var(--ja-line); }
 .contents a { display: flex; align-items: center; gap: 12px; min-height: 46px; color: var(--ja-ink); font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-decoration: none; }
-.contents a::before { content: counter(ja-contents, decimal-leading-zero); font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 14px; color: var(--ja-gold-text); }
+.contents a::before { content: counter(ja-contents, decimal-leading-zero); font-family: var(--ja-mincho); font-weight: 400; font-size: 14px; color: var(--ja-shu); }
 .contents a:hover { text-decoration: underline; text-underline-offset: 5px; }
 .contentsLabel { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--ja-gold-text); }
 .heroCta:global(.button) { justify-content: center; width: 100%; min-height: 50px; }
@@ -37,6 +45,10 @@
 .article.article :global(.svc-keypoints-list a) { display: inline-flex; align-items: center; min-height: 44px; }
 .article.article :global(a.authority-card-name) { display: inline-flex; align-items: center; min-height: 44px; }
 .article.article :global(.authority-card a:not(.button)) { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Inline text links in running copy: the padding enlarges the hit area to 44px without changing the line box. */
+.article.article :global(.svc-review-note a),
+.article.article :global(.svc-intro a) { padding-block: 12px; }
 
 /* Article */
 .article.article:global(.svc-article) { padding: clamp(44px, 5vw, 80px) 0 clamp(56px, 6vw, 96px); background: #fff; }
@@ -62,7 +74,7 @@
 }
 .article.article :global(.svc-keypoints-list li)::before {
   content: counter(ja-point, decimal-leading-zero); position: static; width: auto; height: auto; background: none; border-radius: 0;
-  font-family: Georgia, 'Times New Roman', serif; font-size: 20px; line-height: 1.6; color: var(--ja-gold-text);
+  font-family: var(--ja-mincho); font-size: 20px; line-height: 1.6; color: var(--ja-shu);
 }
 
 /* Related columns: ruled rows with a small thumbnail */
@@ -82,15 +94,18 @@
 
 /* Sidebar: consultation card first (not sticky: the sidebar is taller than the viewport) */
 .article.article :global(.svc-sidebar-card) { border-radius: 0; border-color: var(--ja-line); padding: 22px 22px; }
-.article.article :global(.svc-sidebar-card:first-child) { border-top: 3px solid var(--ja-green); background: var(--ja-paper); }
+.article.article :global(.svc-sidebar-card:first-child) { border-top: 2px solid var(--ja-ink); background: var(--ja-paper); }
 .article.article :global(.svc-sidebar-title) { font-size: 17px; letter-spacing: 0.1em; color: var(--ja-ink); }
 .article.article :global(.svc-sidebar-text) { font-size: 14.5px; line-height: 1.9; color: var(--ja-text); }
-.article.article :global(.svc-sidebar-btn) { border-radius: 2px; letter-spacing: 0.1em; }
+.article.article :global(.svc-sidebar-card a.button.svc-sidebar-btn) { border-radius: 999px; letter-spacing: 0.1em; transition: background 0.3s var(--ja-ease), border-color 0.3s var(--ja-ease); }
+.article.article :global(.svc-sidebar-card a.button.svc-sidebar-btn:hover) { background: var(--ja-shu); border-color: var(--ja-shu); color: #fff; }
 .article.article :global(.svc-related-link) { font-size: 14px; line-height: 1.75; color: var(--ja-green); }
 .article.article :global(.authority-card),
 .article.article :global(.authority-chip),
 .article.article :global(.authority-card-photo),
 .article.article :global(.authority-card-photo img) { border-radius: 0; }
+/* the attorney card sits inside a sidebar card: drop its own frame so the two do not double up */
+.article.article :global(.svc-sidebar-card .authority-card) { border: 0; padding: 0; box-shadow: none; background: transparent; }
 
 @media (max-width: 1100px) {
   .article.article :global(.svc-container) { grid-template-columns: minmax(0, 1fr) 300px; }

@@ -1,0 +1,22 @@
+/*
+ * ja media page (/ja/videos, nav メディア; Opus 5.5 ja lane, round 2). The shared page header, chips and buttons come from
+ * JaDesign.module.css; this file squares the hub cards and channel tiles and takes the shadows off, so the page matches
+ * the hairline cards elsewhere. Copy, links and images unchanged. Scoped under #ja-videos.
+ */
+.root:global(#ja-videos) :global(.media-hub-card),
+.root:global(#ja-videos) :global(.media-stat-card),
+.root:global(#ja-videos) :global(.media-hub-profile),
+.root:global(#ja-videos) :global(.video-feature),
+.root:global(#ja-videos) :global(.video-item) { border-radius: 0; box-shadow: none; border: 1px solid var(--ja-line); background: #fff; }
+.root:global(#ja-videos) :global(.media-hub-profile) { background: #fff; }
+.root:global(#ja-videos) :global(.media-hub-photo),
+.root:global(#ja-videos) :global(.video-feature-media),
+.root:global(#ja-videos) :global(.video-feature-image),
+.root:global(#ja-videos) :global(.video-thumb) { border-radius: 0; box-shadow: none; }
+.root:global(#ja-videos) :global(.media-stat-value) { font-family: var(--ja-mincho); font-weight: 600; color: var(--ja-ink); }
+.root:global(#ja-videos) :global(.media-stat-label) { color: var(--ja-shu-deep); }
+.root:global(#ja-videos) :global(.media-hub-section) { background: var(--ja-paper); }
+.root:global(#ja-videos) :global(section.section.alt) { background: var(--ja-paper-2); }
+.root:global(#ja-videos) :global(.media-hub-card) { padding-block: 8px; }
+.root:global(#ja-videos) :global(.video-grid > .card),
+.root:global(#ja-videos) :global(.video-list > *) { border-radius: 0; box-shadow: none; border-color: var(--ja-line); }

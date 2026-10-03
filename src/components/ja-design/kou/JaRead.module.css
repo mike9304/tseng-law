@@ -1,0 +1,264 @@
+/*
+ * C5 「午後の光」 (CONCEPT-V2 §5 C5; amendment: the afternoon light pans in and settles while the stage is pinned;
+ * the cards slide in like fusuma). Static frame: the band with the still, then the gallery.
+ */
+.section { position: relative; background: var(--ja-stage); }
+.section:global(#insights) { min-height: 0; height: auto; padding: 0; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- interlude ---------- */
+.interlude { position: relative; --runway: 0px; }
+.stage {
+  position: relative;
+  display: grid;
+  align-items: center;
+  height: clamp(560px, calc(100svh - var(--hdr)), 960px);
+  overflow: clip;
+  isolation: isolate;
+  background: #f3efe6;
+}
+.media { position: absolute; inset: 0; z-index: 0; }
+.mediaDesktop, .film { position: absolute; inset: 0; }
+.mediaStill { position: absolute; inset: 0; display: none; }
+.filmImage {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: 100% 50%;
+  transform-origin: 62% 50%;
+}
+.film :global(.decorative-autoplay-video__control) {
+  position: absolute;
+  z-index: 2;
+  left: auto;
+  right: max(32px, calc((100% - 1440px) / 2 + 32px));
+  top: auto;
+  bottom: 32px;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(20 18 16 / 0.55);
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+}
+.film :global(.decorative-autoplay-video__control) > span:not(:global(.decorative-autoplay-video__control-icon)) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.film :global(.decorative-autoplay-video__control):focus-visible { outline-color: #fff !important; box-shadow: 0 0 0 2px var(--ja-ink); }
+.copy { position: relative; z-index: 1; }
+.title {
+  max-width: 50%;
+  margin: 0;
+  font-family: var(--ja-sans);
+  font-size: var(--ja-fs-h2-film);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+}
+.titleLine { display: block; }
+.copy .lede { max-width: min(26em, 50%); margin-top: 28px; }
+
+@media (max-width: 1023px) {
+  .mediaDesktop { display: none; }
+  .mediaStill { display: block; }
+  .title, .copy .lede { max-width: 60%; }
+}
+@media (max-width: 767px) {
+  .stage { align-items: start; height: clamp(520px, calc(100svh - var(--hdr)), 760px); }
+  .filmImage { object-position: 50% 100%; transform-origin: 50% 80%; }
+  .copy { padding-top: 48px; }
+  .title, .copy .lede { max-width: none; }
+}
+
+/* pinned: the light pans in from the right and settles (WebKit, Chromium) */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-height: 620px) {
+    .interlude {
+      --runway: calc(100svh - var(--hdr));
+      height: calc(100svh - var(--hdr) + var(--runway));
+      view-timeline: --jaRead block;
+      view-timeline-inset: var(--hdr) 0px;
+    }
+    .stage { position: sticky; top: var(--hdr); height: calc(100svh - var(--hdr)); }
+    .filmImage {
+      will-change: transform;
+      animation: jaReadPan linear both;
+      animation-timeline: --jaRead;
+      animation-range: entry 40% contain 100%;
+    }
+    .copy {
+      animation: jaReadRise linear none;
+      animation-timeline: --jaRead;
+      animation-range: entry 0% entry 90%;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) and (min-height: 620px) and (max-width: 767px) {
+    .interlude { --runway: calc((100svh - var(--hdr)) * 0.6); }
+  }
+}
+/* Firefox: the same in steps */
+:global(#ja-home[data-ja-motion='steps']) .interlude { --runway: calc(100svh - var(--hdr)); height: calc(100svh - var(--hdr) + var(--runway)); }
+@media (max-width: 767px) { :global(#ja-home[data-ja-motion='steps']) .interlude { --runway: calc((100svh - var(--hdr)) * 0.6); } }
+:global(#ja-home[data-ja-motion='steps']) .stage { position: sticky; top: var(--hdr); height: calc(100svh - var(--hdr)); }
+:global(#ja-home[data-ja-motion='steps']) .filmImage { scale: 1.24; translate: 8% 0; transition: scale 900ms var(--ja-ease), translate 900ms var(--ja-ease); }
+:global(#ja-home[data-ja-motion='steps']) .interlude[data-step='1'] .filmImage { scale: 1.1; translate: 3% 0; }
+:global(#ja-home[data-ja-motion='steps']) .interlude[data-step='2'] .filmImage { scale: 1; translate: 0 0; }
+
+@keyframes jaReadPan { from { scale: 1.24; translate: 8% 0; } to { scale: 1; translate: 0 0; } }
+@keyframes jaReadRise { from { opacity: 0.2; translate: 0 56px; } to { opacity: 1; translate: 0 0; } }
+
+/* ---------- gallery ---------- */
+.gallery { position: relative; padding-block: 120px 140px; view-timeline: --jaGalIn block; }
+.galleryHead { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.eyebrow { margin: 0 0 12px; font-size: 22px; font-weight: 600; line-height: 1.4; color: var(--ja-ink); }
+.count { display: flex; align-items: baseline; gap: 16px; margin: 0; }
+.countValue {
+  font-family: var(--ja-display);
+  font-size: var(--ja-fs-num-count);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-variant-numeric: lining-nums proportional-nums;
+  color: var(--ja-ink);
+}
+.countLabel { font-size: 22px; font-weight: 600; color: var(--ja-text); }
+
+.galleryBody { position: relative; margin-top: 48px; timeline-scope: --jaGal; }
+.track {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: max(var(--ja-edge), calc((100% - 1440px) / 2));
+  scrollbar-width: none;
+  scroll-timeline: --jaGal x;
+}
+.track::-webkit-scrollbar { display: none; }
+.track:focus-visible { outline-offset: -3px !important; }
+.list {
+  display: flex;
+  gap: var(--ja-gap);
+  width: max-content;
+  margin: 0;
+  padding: 8px max(var(--ja-edge), calc((100vw - 1440px) / 2)) 8px;
+  list-style: none;
+}
+.item { flex: none; width: 460px; scroll-snap-align: start; }
+.card {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+  padding: 40px;
+  border-radius: 32px;
+  background: var(--ja-tile);
+  color: var(--ja-text);
+  overflow: clip;
+  isolation: isolate;
+  text-decoration: none;
+  transition: scale 300ms var(--ja-ease);
+}
+@media (hover: hover) { .card:hover { scale: 1.015; } }
+.glyph {
+  position: absolute;
+  right: -0.12em;
+  bottom: -0.2em;
+  z-index: -1;
+  font-family: var(--ja-display);
+  font-size: 520px;
+  font-weight: 600;
+  line-height: 1;
+  color: rgb(20 18 16 / 0.055);
+  pointer-events: none;
+}
+.cardMeta { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; font-size: 17px; line-height: 1.5; }
+.cardTopic { font-weight: 600; color: var(--ja-ink); }
+.cardDate { color: var(--ja-grey); }
+.cardTitle {
+  display: -webkit-box;
+  margin: 20px 0 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  font-family: var(--ja-sans);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.cardAuthor { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: auto 0 0; padding-top: 20px; font-size: 17px; line-height: 1.5; color: var(--ja-text); }
+.cardRead { color: var(--ja-grey); }
+.cardAll { justify-content: flex-end; background: var(--ja-ink); color: #fff; }
+.allLabel { display: inline-flex; align-items: center; gap: 12px; font-size: 32px; font-weight: 700; line-height: 1.35; color: #fff; }
+.allChev { color: #fff; }
+.cardAll:focus-visible { outline-color: var(--ja-ink) !important; }
+
+.controls { display: flex; align-items: center; gap: 24px; margin-top: 32px; padding-inline: max(var(--ja-edge), calc((100% - 1440px) / 2)); }
+.progress { display: none; flex: 1; height: 2px; background: var(--ja-rule); overflow: hidden; }
+.progress > i { display: block; height: 100%; background: var(--ja-shu); transform-origin: left center; }
+.paddles { display: flex; gap: 12px; margin-left: auto; }
+.paddle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ja-ink);
+  box-shadow: 0 0 0 1px rgb(20 18 16 / 0.14);
+  cursor: pointer;
+}
+.paddle:disabled { opacity: 0.35; cursor: default; }
+@media (hover: none), (max-width: 1023px) { .paddles { display: none; } }
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .progress { display: block; }
+    .progress > i { animation: jaReadGal linear both; animation-timeline: --jaGal; }
+  }
+}
+@keyframes jaReadGal { from { scale: 0.2 1; } to { scale: 1 1; } }
+
+/* cards slide in like fusuma, staggered, as the gallery enters */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .item { animation: jaReadCard linear none; animation-timeline: --jaGalIn; animation-range: entry 15% cover 45%; }
+    .item:nth-child(2) { --card-from: 220px; }
+    .item:nth-child(3) { --card-from: 340px; }
+    .item:nth-child(n + 4) { --card-from: 460px; }
+  }
+}
+@keyframes jaReadCard { from { translate: var(--card-from, 120px) 0; opacity: 0.15; } to { translate: 0 0; opacity: 1; } }
+
+@media (min-width: 1800px) { .item { width: 520px; } .card { height: 600px; } }
+@media (max-width: 1199px) { .item { width: 400px; } .card { height: 520px; } }
+@media (max-width: 1023px) { .item { width: 360px; } .card { height: 480px; padding: 36px; } .gallery { padding-block: 100px 120px; } }
+@media (max-width: 767px) {
+  .gallery { padding-block: 72px 88px; }
+  .galleryHead { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .eyebrow { font-size: 19px; }
+  .countLabel { font-size: 19px; }
+  .galleryBody { margin-top: 32px; }
+  .item { width: 82vw; }
+  .card { height: 440px; padding: 28px; border-radius: 22px; }
+  .glyph { font-size: 360px; }
+  .cardTitle { font-size: 22px; }
+  .cardMeta, .cardAuthor { font-size: 15px; }
+  .allLabel { font-size: 26px; }
+}
+@media (forced-colors: active) { .card { border: 1px solid CanvasText; } .progress > i { background: Highlight; } }

@@ -139,6 +139,7 @@ export default function OfficeMapTabs({
   labelSurfaceId = 'section-label',
   titleSurfaceId = 'headline',
   presentation,
+  splitTabSuffix = false,
 }: {
   locale: PublicLocale8;
   id?: string;
@@ -147,6 +148,11 @@ export default function OfficeMapTabs({
   labelSurfaceId?: string;
   titleSurfaceId?: string;
   presentation?: 'editorial';
+  /**
+   * Optional (ja design): wrap the trailing office label (「事務所」) of each tab in its own span so the
+   * visible tab can show the city alone while the accessible name stays the full label. Omitted: unchanged markup.
+   */
+  splitTabSuffix?: boolean;
 }) {
   const guidance = isGuidanceLocale4(locale) ? guidanceOfficeCopy[locale] : null;
   const offices = taiwanOfficesFor(locale, guidance);
@@ -236,7 +242,12 @@ export default function OfficeMapTabs({
               aria-selected={office.id === current.id}
               onClick={() => setActiveId(office.id)}
             >
-              {office.title}
+              {splitTabSuffix && office.title.endsWith(officeLabel) && office.title.length > officeLabel.length ? (
+                <>
+                  <span className="tab-button-city">{office.title.slice(0, -officeLabel.length)}</span>
+                  <span className="tab-button-suffix">{officeLabel}</span>
+                </>
+              ) : office.title}
             </button>
           ))}
         </div>

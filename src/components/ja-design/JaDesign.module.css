@@ -1,46 +1,130 @@
 /*
- * ja design system (Opus 5.5 ja lane, 2026-10-01).
- * Shared layer for every Japanese page wrapper (`[data-ja-design]`): 生成り paper,
- * sumi-green ink, hairline 罫線 and a gold double rule, Mincho only on the H1
- * (globals allowlist), Gothic H2/H3 with palt + generous 字間, vertical page labels.
- * Deliberately unlike the zh-hant green editorial pages (dark green bands, cream board).
+ * ja design system (Opus 5.5 ja lane, 2026-10-01; Apple pass 2026-10-01).
+ * Concept 「間」: warm 生成り paper, sumi ink and one vermilion (朱) accent taken from the firm's red seal,
+ * hairline 罫線, generous 余白. Mincho only on the H1 (globals allowlist), Gothic H2/H3 with palt + 字間.
+ * The token names keep their earlier spelling (--ja-green = the primary ink, --ja-gold-text = the accent text
+ * colour) so that every page module follows when the palette moves.
+ * Deliberately unlike the zh-hant home (dawn video, white type) and the en home.
  * Every selector is scoped under `.root[data-ja-design]`; other locales never render it.
  */
 .root {
-  --ja-ink: #1c2622;
-  --ja-text: #2f3a35;
-  --ja-sub: #4f5c55;
-  --ja-green: #16382d;
-  --ja-green-2: #24503f;
-  --ja-green-tint: #e9efe9;
-  --ja-gold: #9f8752;
-  --ja-gold-text: #6c5829;
-  --ja-paper: #f7f5ef;
-  --ja-paper-2: #efebe1;
-  --ja-line: #dcd6c8;
-  --ja-line-strong: #b6ac95;
+  /* 昊 V2 values (CONCEPT-V2 §3.2, 2026-10-03): white page, sumi #141210, text #2B2824, grey #66615A. */
+  color-scheme: light;
+  --ja-ink: #141210;
+  --ja-text: #2b2824;
+  --ja-sub: #66615a;
+  --ja-green: #1b1814;
+  --ja-green-2: #3b352d;
+  --ja-green-tint: #f1ede4;
+  --ja-shu: #c8102e;
+  --ja-shu-deep: #a50d26;
+  --ja-gold: #c8102e;
+  --ja-gold-text: #4a443b;
+  --ja-paper: #ffffff;
+  --ja-paper-2: #f4f2ee;
+  --ja-line: #e4e0d8;
+  --ja-line-strong: #d6d1c7;
+  --ja-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --ja-mincho: var(--font-heading-ja);
   --ja-gothic: var(--font-body-ja);
   --ja-measure: 38em;
+  /* Remap the site's green-tinted palette to warm paper and sumi inside the ja wrapper, so every shared
+     component (forms, cards, tables, chips) follows the 間 palette without a rule of its own. */
+  --purple: #1b1814;
+  --purple-light: #3b352d;
+  --purple-dark: #0e0c09;
+  --purple-bg: #f1ede4;
+  --purple-border: #dcd5c6;
+  --primary: #1b1814;
+  --gold: #c8102e;
+  --gold-light: #e0384f;
+  --gold-dim: #a50d26;
+  --warm-bg: #f4f2ee;
+  --warm-bg-alt: #ebe6da;
+  --warm-border: #d8d0c0;
+  --warm-surface: #e8e2d6;
+  --warm-muted: #ddd6c7;
+  --warm-text: #5a544a;
+  --warm-text-dark: #38332c;
+  --off-white: #ffffff;
+  --cream: #fbfaf7;
+  --gray-50: #f7f4ee;
+  --gray-100: #ede9df;
+  --gray-200: #e2ddd0;
+  --gray-300: #cdc6b6;
+  --gray-400: #a39b8b;
+  --gray-500: #7a7266;
+  --gray-600: #5d564c;
+  --gray-700: #433e36;
+  --gray-800: #2d2a24;
+  --gray-900: #1b1814;
+  --text-heading: #1b1814;
+  --text-body: #38332c;
+  --text-secondary: #5a544a;
+  --text-caption: #8a8274;
+  --text-meta: #5a544a;
+  --text-link: #1b1814;
+  --text-link-hover: #a50d26;
+  --dark-bg: #17140f;
+  --dark-bg-secondary: #100d0a;
+  --dark-card: #221e18;
+  --dark-text: #f5f1e8;
+  --dark-text-secondary: #cfc8ba;
+  --border-light: #e6e0d4;
+  --border-medium: #cdc4b2;
+  --border-dark: #2e2922;
+  --divider: #ece7dc;
+  /* aliases resolved at :root in globals.css do not follow the remap above; rebind the ones the shared blocks use */
+  --accent: #1b1814;
+  --accent-strong: #0e0c09;
+  --accent-purple: #1b1814;
+  --accent-purple-light: #3b352d;
+  --accent-purple-dark: #0e0c09;
+  --accent-purple-bg: #f1ede4;
+  --accent-purple-border: #dcd5c6;
+  --accent-gold: #c8102e;
+  --accent-gold-light: #e0384f;
+  --accent-gold-dim: #a50d26;
+  --highlight: #c8102e;
+  --border-purple: #dcd5c6;
+  --line: #e6e0d4;
+  --line-strong: #cdc4b2;
+  --ink-strong: #1b1814;
+  --ink: #1b1814;
+  --ink-muted: #38332c;
+  --ink-subtle: #5a544a;
+  --text: #38332c;
+  --text-strong: #1b1814;
+  --text-muted: #5a544a;
+  --text-primary: #1b1814;
+  --surface-tint: #faf8f4;
+  --surface-elevated: #f7f4ee;
+  --surface-hero: #faf8f4;
+  --bg-off-white: #faf8f4;
+  --bg-cream: #f4f0e7;
+  --bg-light-purple: #f7f4ee;
+  --shadow-sm: 0 1px 3px rgba(27, 24, 20, 0.05);
+  --shadow-md: 0 6px 14px rgba(27, 24, 20, 0.06);
+  --shadow-lg: 0 14px 32px rgba(27, 24, 20, 0.08);
+  --shadow-card-hover: 0 16px 34px rgba(27, 24, 20, 0.1);
   color: var(--ja-text);
   letter-spacing: 0.04em;
   line-break: strict;
   overflow-wrap: anywhere;
 }
 
-/* ---------- Page header: paper, green top rule, vertical label, double rule ---------- */
+/* ---------- Page header: paper, vertical label on a vermilion hairline, large Mincho H1, one hairline underneath ---------- */
 .root:global([data-ja-design]) :global(.page-header) {
+  position: relative;
   background: var(--ja-paper);
-  border-top: 3px solid var(--ja-green);
+  border-top: 0;
   border-bottom: 0;
-  padding: clamp(48px, 5.5vw, 76px) 0 clamp(44px, 5vw, 68px);
+  padding: clamp(52px, 6vw, 92px) 0 clamp(48px, 5.4vw, 80px);
 }
+.root:global([data-ja-design]) :global(.page-header)::before { display: none; }
 .root:global([data-ja-design]) :global(.page-header)::after {
-  height: 5px;
-  background: transparent;
-  border-top: 1px solid var(--ja-line-strong);
-  border-bottom: 1px solid var(--ja-line-strong);
-  opacity: 1;
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; border: 0; opacity: 1;
+  background: var(--ja-line-strong);
 }
 .root:global([data-ja-design]) :global(.page-header > .container) {
   display: grid;
@@ -55,7 +139,7 @@
 }
 .root:global([data-ja-design]) :global(.page-header [data-page-header-slot='copy']) { display: contents; }
 .root:global([data-ja-design]) :global(.page-header .breadcrumb) {
-  grid-column: 2; grid-row: 1; margin: 0 0 18px; font-size: 13px; letter-spacing: 0.06em; color: var(--ja-sub);
+  grid-column: 2; grid-row: 1; margin: 0 0 22px; font-size: 13px; letter-spacing: 0.06em; color: var(--ja-sub);
 }
 .root:global([data-ja-design]) :global(.page-header .breadcrumb a) { color: var(--ja-sub); }
 /* Breadcrumb links are ~41×23px: an invisible hit area makes each at least 44px tall and wide. */
@@ -65,28 +149,37 @@
 .root:global([data-ja-design]) :global(.page-header .section-label) {
   grid-column: 1; grid-row: 1 / span 3; align-self: start; justify-self: center;
   writing-mode: vertical-rl; text-orientation: mixed;
-  margin: 2px 0 0; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.34em; color: var(--ja-gold-text);
+  margin: 2px 0 0; gap: 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.4em; color: var(--ja-ink);
 }
 .root:global([data-ja-design]) :global(.page-header .section-label)::before {
-  width: 1px; height: 40px; background: var(--ja-gold); opacity: 1; border-radius: 0;
+  width: 1px; height: 48px; background: var(--ja-shu); opacity: 1; border-radius: 0; transform-origin: top;
 }
 .root:global([data-ja-design]) :global(.page-header .page-header-title) {
-  grid-column: 2; grid-row: 2; margin: 0 0 18px; max-width: 18em;
-  font-family: var(--ja-mincho); font-weight: 600; font-size: clamp(32px, 3.3vw, 50px);
-  line-height: 1.42; letter-spacing: 0.08em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
+  grid-column: 2; grid-row: 2; margin: 0 0 22px; max-width: 16em;
+  font-family: var(--ja-mincho); font-weight: 600; font-size: clamp(36px, 5vw, 76px);
+  line-height: 1.26; letter-spacing: 0.04em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
+  word-break: auto-phrase; text-wrap: balance;
 }
 .root:global([data-ja-design]) :global(.page-header .section-lede) {
   grid-column: 2; grid-row: 3; margin: 0; max-width: var(--ja-measure);
-  font-size: 16.5px; line-height: 2; letter-spacing: 0.05em; color: var(--ja-sub);
+  font-size: clamp(15.5px, 1.2vw, 17.5px); line-height: 2; letter-spacing: 0.05em; color: var(--ja-sub);
 }
 .root:global([data-ja-design]) :global(.page-header [data-page-header-slot='children']) {
   grid-column: 3; grid-row: 1 / -1; align-self: start; margin: 0; min-width: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes ja-hdr-draw { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes ja-hdr-drawx { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes ja-hdr-rise { from { opacity: 0; transform: translateY(0.3em); } to { opacity: 1; transform: none; } }
+  .root:global([data-ja-design]) :global(.page-header .section-label)::before { animation: ja-hdr-draw 1s var(--ja-ease) 0.1s both; }
+  .root:global([data-ja-design]) :global(.page-header .page-header-title) { animation: ja-hdr-rise 0.9s var(--ja-ease) 0.12s both; }
+  .root:global([data-ja-design]) :global(.page-header .section-lede) { animation: ja-hdr-rise 0.9s var(--ja-ease) 0.26s both; }
 }
 
 /* ---------- Section typography ---------- */
 .root:global([data-ja-design]) :global(.section-title) {
   position: relative; padding-bottom: 18px; margin-bottom: 22px;
-  font-size: clamp(23px, 2.1vw, 29px); line-height: 1.55; font-weight: 700;
+  font-size: clamp(25px, 2.5vw, 36px); line-height: 1.45; font-weight: 700;
   letter-spacing: 0.07em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
 }
 .root:global([data-ja-design]) :global(.section-title)::after {
@@ -109,15 +202,17 @@
   border-radius: 0; border: 1px solid var(--ja-line); box-shadow: none; background: #fff;
 }
 .root:global([data-ja-design]) :global(.button) {
-  border-radius: 2px; letter-spacing: 0.08em; font-weight: 700; min-height: 48px;
+  border-radius: 999px; letter-spacing: 0.08em; font-weight: 700; min-height: 52px; padding-inline: 28px;
+  transition: background 0.3s var(--ja-ease), color 0.3s var(--ja-ease), border-color 0.3s var(--ja-ease), transform 0.35s var(--ja-ease);
 }
 .root:global([data-ja-design]) :global(.button:not(.secondary)) {
-  background: var(--ja-green); border-color: var(--ja-green); color: #fff;
+  background: var(--ja-shu); border-color: var(--ja-shu); color: #fff;
 }
-.root:global([data-ja-design]) :global(.button:not(.secondary):hover) { background: var(--ja-green-2); border-color: var(--ja-green-2); }
+.root:global([data-ja-design]) :global(.button:not(.secondary):hover) { background: var(--ja-shu-deep); border-color: var(--ja-shu-deep); }
 .root:global([data-ja-design]) :global(.button.secondary) {
-  background: #fff; border: 1px solid var(--ja-green); color: var(--ja-green);
+  background: #fff; border: 1px solid var(--ja-line-strong); color: var(--ja-ink);
 }
+.root:global([data-ja-design]) :global(.button.secondary:hover) { border-color: var(--ja-ink); background: var(--ja-ink); color: #fff; }
 
 /* Shared dark bands (e.g. the home case result) keep light text: the generic ink/green rules above
    must not land on a dark background. */
@@ -155,10 +250,24 @@
     grid-column: 1; grid-row: auto; writing-mode: horizontal-tb; justify-self: start; align-self: auto;
     margin: 0 0 10px; letter-spacing: 0.24em;
   }
-  .root:global([data-ja-design]) :global(.page-header .section-label)::before { width: 28px; height: 1px; }
+  .root:global([data-ja-design]) :global(.page-header .section-label)::before { width: 28px; height: 1px; transform-origin: left; animation-name: ja-hdr-drawx; }
   .root:global([data-ja-design]) :global(.page-header .page-header-title) {
-    grid-column: 1; grid-row: auto; font-size: clamp(28px, 7.6vw, 34px); letter-spacing: 0.06em; margin-bottom: 14px;
+    grid-column: 1; grid-row: auto; font-size: clamp(30px, 8.4vw, 42px); letter-spacing: 0.04em; margin-bottom: 14px;
   }
   .root:global([data-ja-design]) :global(.page-header .section-lede) { grid-column: 1; grid-row: auto; font-size: 15.5px; line-height: 1.95; }
   .root:global([data-ja-design]) :global(.page-header [data-page-header-slot='children']) { grid-column: 1; grid-row: auto; margin-top: 24px; }
+}
+
+
+/* ---------- Round 2: the home's terrace carried into every page header as a slim plate, vermilion tab on its edge ---------- */
+.root:global([data-ja-design]) :global(.page-header) { --ja-strip: clamp(56px, 5.6vw, 88px); padding-bottom: calc(clamp(48px, 5.4vw, 80px) + var(--ja-strip)); }
+.root:global([data-ja-design]) :global(.page-header)::after {
+  height: var(--ja-strip); border-top: 1px solid var(--ja-line-strong);
+  background:
+    linear-gradient(var(--ja-shu), var(--ja-shu)) max(32px, calc((100% - 1144px) / 2)) 0 / 96px 4px no-repeat,
+    linear-gradient(180deg, rgb(250 248 244 / 34%), rgb(250 248 244 / 0%) 60%),
+    url('/images/editorial/ja-tea-terrace-morning-hero.webp') 50% 68% / cover no-repeat;
+}
+@media (max-width: 767px) {
+  .root:global([data-ja-design]) :global(.page-header) { --ja-strip: 48px; }
 }

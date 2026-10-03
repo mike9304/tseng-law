@@ -27333,3 +27333,246 @@ html[dir='rtl'] .guidance-answer {
   visibility: visible;
   transition-delay: 0s;
 }
+
+/* ja shell (Opus 5.5 ja lane, 2026-10-01; round 2 re-keyed to the locale): every ja page, wrapped or not, carries the
+   間 palette — sumi ink and one vermilion — into the shared header action and footer. Other locales never match. */
+.site[data-locale='ja'] .header .nav-cta,
+html[lang='ja'] body .drawer .drawer-footer .button:not(.secondary):not(.ghost) {
+  border-radius: 999px;
+  background: #c8102e;
+  border-color: #c8102e;
+  color: #fff;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.site[data-locale='ja'] .header .nav-cta:hover,
+.site[data-locale='ja'] .header .nav-cta:focus-visible,
+html[lang='ja'] body .drawer .drawer-footer .button:not(.secondary):not(.ghost):hover {
+  background: #a50d26;
+  border-color: #a50d26;
+}
+.site[data-locale='ja'] .site-footer { background: #141210; }
+
+/* ja shell tokens (Opus 5.5 ja lane; 昊 V2 values 2026-10-03, CONCEPT-V2 §3.2): the header, its overlays (mega panel, language picker, mobile menu, search page) and the
+   footer sit outside the ja wrapper, so the 間 palette is remapped on <body> for every ja page (html[lang='ja']).
+   Other locales never match. Keep in step with the token block in JaDesign.module.css. */
+html[lang='ja'] body {
+  --purple: #141210;
+  --purple-light: #3b352d;
+  --purple-dark: #0e0c09;
+  --purple-bg: #f1ede4;
+  --purple-border: #dcd5c6;
+  --primary: #141210;
+  --gold: #c8102e;
+  --gold-light: #e0384f;
+  --gold-dim: #a50d26;
+  --warm-bg: #f4f2ee;
+  --warm-bg-alt: #ebe6da;
+  --warm-border: #d8d0c0;
+  --warm-surface: #e8e2d6;
+  --warm-muted: #ddd6c7;
+  --warm-text: #66615a;
+  --warm-text-dark: #2b2824;
+  --off-white: #ffffff;
+  --cream: #fbfaf7;
+  --gray-50: #f7f4ee;
+  --gray-100: #ede9df;
+  --gray-200: #e2ddd0;
+  --gray-300: #cdc6b6;
+  --gray-400: #a39b8b;
+  --gray-500: #7a7266;
+  --gray-600: #5d564c;
+  --gray-700: #433e36;
+  --gray-800: #2d2a24;
+  --gray-900: #141210;
+  --text-heading: #141210;
+  --text-body: #2b2824;
+  --text-secondary: #66615a;
+  --text-caption: #8a8274;
+  --text-meta: #66615a;
+  --text-link: #141210;
+  --text-link-hover: #a50d26;
+  --dark-bg: #141210;
+  --dark-bg-secondary: #100d0a;
+  --dark-card: #221e18;
+  --dark-text: #f5f1e8;
+  --dark-text-secondary: #cfc8ba;
+  --border-light: #e4e0d8;
+  --border-medium: #d6d1c7;
+  --border-dark: #2e2922;
+  --divider: #ece7dc;
+  /* aliases resolved at :root in globals.css do not follow the remap above; rebind the ones the shared blocks use */
+  --accent: #141210;
+  --accent-strong: #0e0c09;
+  --accent-purple: #141210;
+  --accent-purple-light: #3b352d;
+  --accent-purple-dark: #0e0c09;
+  --accent-purple-bg: #f1ede4;
+  --accent-purple-border: #dcd5c6;
+  --accent-gold: #c8102e;
+  --accent-gold-light: #e0384f;
+  --accent-gold-dim: #a50d26;
+  --highlight: #c8102e;
+  --border-purple: #dcd5c6;
+  --line: #e4e0d8;
+  --line-strong: #d6d1c7;
+  --ink-strong: #141210;
+  --ink: #141210;
+  --ink-muted: #2b2824;
+  --ink-subtle: #66615a;
+  --text: #2b2824;
+  --text-strong: #141210;
+  --text-muted: #66615a;
+  --text-primary: #141210;
+  --surface-tint: #ffffff;
+  --surface-elevated: #f7f4ee;
+  --surface-hero: #ffffff;
+  --bg-off-white: #ffffff;
+  --bg-cream: #fbfaf7;
+  --bg-light-purple: #f7f4ee;
+  --shadow-sm: 0 1px 3px rgba(27, 24, 20, 0.05);
+  --shadow-md: 0 6px 14px rgba(27, 24, 20, 0.06);
+  --shadow-lg: 0 14px 32px rgba(27, 24, 20, 0.08);
+  --shadow-card-hover: 0 16px 34px rgba(27, 24, 20, 0.1);
+  --wine: #c8102e;
+  --wine-light: #e0384f;
+  --wine-dark: #a50d26;
+  --wine-muted: #a39b8b;
+}
+
+/* ja shell chrome (Opus 5.5 ja lane): PublicChrome.module.css hard-codes the green ink, so the header, mega panel,
+   mobile drawer, language picker overlay and footer text are re-pointed to sumi and one vermilion here. ja design pages only. */
+html[lang='ja'] body .header { border-bottom-color: #e6e0d4; color: #1b1814; }
+html[lang='ja'] body .header .header-utility,
+html[lang='ja'] body .header .utility-lang,
+html[lang='ja'] body .header .header-search-btn,
+html[lang='ja'] body .header .mobile-toggle { border-color: #e6e0d4; }
+html[lang='ja'] body .header .header-accent-line { background: #e6e0d4; }
+html[lang='ja'] body .header .logo-kr,
+html[lang='ja'] body .header .nav-link,
+html[lang='ja'] body .header .header-search-btn,
+html[lang='ja'] body .header .mobile-toggle,
+html[lang='ja'] body .header .mega-links a,
+html[lang='ja'] body .drawer .drawer-nav-link,
+html[lang='ja'] body .drawer .logo-kr { color: #1b1814; }
+html[lang='ja'] body .header .utility-nav > a,
+html[lang='ja'] body .header .utility-nav > * > a,
+html[lang='ja'] body .header .utility-nav > * > button,
+html[lang='ja'] body .header .utility-lang > a,
+html[lang='ja'] body .header .utility-lang .locale-flag-switcher-link { color: #38332c; }
+html[lang='ja'] body .header .nav-link:hover,
+html[lang='ja'] body .header .nav-link:focus-visible,
+html[lang='ja'] body .header .nav-item.active .nav-link,
+html[lang='ja'] body .header .nav-link[aria-current='page'],
+html[lang='ja'] body .header .nav-link[aria-current='page']:hover,
+html[lang='ja'] body .header .utility-nav > a:hover,
+html[lang='ja'] body .header .utility-nav > * > a:hover,
+html[lang='ja'] body .header .utility-nav > * > button:hover,
+html[lang='ja'] body .header .utility-lang .locale-flag-switcher-link:hover,
+html[lang='ja'] body .header .header-search-btn:focus-visible,
+html[lang='ja'] body .header .mega-title,
+html[lang='ja'] body .header .mega-view-all,
+html[lang='ja'] body .header .mega-links a:hover,
+html[lang='ja'] body .header .mega-links a:focus-visible { color: #1b1814; }
+html[lang='ja'] body .header .nav-link:hover,
+html[lang='ja'] body .header .nav-item.active .nav-link { background: rgba(27, 24, 20, 0.05); }
+html[lang='ja'] body .header .nav-link[aria-current='page'],
+html[lang='ja'] body .header .nav-link[aria-current='page']:hover,
+html[lang='ja'] body .header .nav-link[aria-current='page']:focus-visible { box-shadow: inset 0 -2px 0 #c8102e; background: transparent; }
+html[lang='ja'] body .header .nav-indicator { background: #c8102e; }
+html[lang='ja'] body .header .nav-link:focus-visible,
+html[lang='ja'] body .header .header-search-btn:focus-visible { outline-color: #c8102e; border-color: #1b1814; }
+html[lang='ja'] body .header .mega-description { color: #5a544a; }
+html[lang='ja'] body .header .mega-panel { background: #fff; border-bottom-color: #e4e0d8; }
+html[lang='ja'] body .header .mega-links li { border-color: #d8d0c0; }
+html[lang='ja'] body .drawer#public-mobile-nav-drawer { background: rgba(27, 24, 20, 0.5); }
+html[lang='ja'] body [class*='GlobalLanguagePicker_overlay'] { background: rgba(27, 24, 20, 0.5); }
+html[lang='ja'] body .footer .office-link,
+html[lang='ja'] body .site-footer .office-link,
+html[lang='ja'] body .site-footer .office-link-address,
+html[lang='ja'] body .site-footer .footer-main-note,
+html[lang='ja'] body .site-footer .footer-link-list a,
+html[lang='ja'] body .site-footer .footer-legal-links a,
+html[lang='ja'] body .site-footer .social-label,
+html[lang='ja'] body .site-footer .footer-copyright-row { color: #d9d3c6; }
+html[lang='ja'] body .site-footer .footer-locale-switch .locale-flag-switcher-link { color: #ece7dc; }
+html[lang='ja'] body .footer-skyline { background: linear-gradient(180deg, #faf8f4 0%, #f2eee5 100%); }
+html[lang='ja'] body .footer-skyline .skyline-image img { filter: grayscale(100%) sepia(0.12) contrast(1.02) brightness(0.99); }
+html[lang='ja'] body { background: #fff; }
+
+/* ja round 2 (Opus 5.5 ja lane, 2026-10-01). Everything below is gated on the ja design wrapper. */
+
+/* Japanese line breaking: break between phrases, never inside one (word-break: auto-phrase where supported; elsewhere the
+   normal strict CJK breaking stays). The :not(#_) hook lifts specificity above the older per-element resets. */
+html[lang='ja'] body :is([data-ja-design], .site-footer, .header .mega-panel, .drawer):not(#_) :not(#_):not(input):not(textarea):not(a[href^='mailto:']) {
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+html[lang='ja'] body :is([data-ja-design], .site-footer) :is(p, li, dd, .faq-answer, .section-lede):not(#_) { text-wrap: pretty; }
+
+/* The old pencil skyline of Taiwanese landmarks contradicts the 間 pages; the sumi footer starts straight under the content. */
+html[lang='ja'] body .footer-skyline { display: none; }
+
+/* Breadcrumb hit area on phones: 44px tall without changing the visual rhythm. */
+@media (max-width: 767px) {
+  html[lang='ja'] body [data-ja-design] a.breadcrumb-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 4px; margin-inline: -4px; }
+}
+
+/* Mobile drawer: logo and wordmark in one row, nav in the desktop order. */
+html[lang='ja'] body .drawer .drawer-header .drawer-brand { display: inline-flex; align-items: center; gap: 12px; flex-direction: row; }
+html[lang='ja'] body .drawer .drawer-nav { display: flex; flex-direction: column; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/services'] { order: 1; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/lawyers'] { order: 2; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/pricing'] { order: 3; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/columns'] { order: 4; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/traffic-accidents'] { order: 5; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/videos'] { order: 6; }
+html[lang='ja'] body .drawer .drawer-nav-link[href*='/contact'] { order: 7; }
+
+/* Language picker: the current tile keeps 日本語 on one line, right-to-left entries sit on the left of their cell. */
+html[lang='ja'] body [class*='GlobalLanguagePicker_autonym'] { flex-wrap: wrap; }
+html[lang='ja'] body [class*='GlobalLanguagePicker_item'][dir='rtl'] { direction: ltr; justify-items: start; text-align: left; }
+
+/* Mega panel: a short lead plus the email action fills the empty left half. */
+html[lang='ja'] body .header .mega-panel .mega-intro::after {
+  content: ''; display: block; width: min(100%, 360px); height: 120px; margin-top: 28px; border-radius: 20px;
+  background: url('/images/editorial/ja-kou-wall-morning-960.webp') 40% 40% / cover no-repeat;
+}
+/* Shared editorial rules force word-break: normal on the practice summaries; phrase breaks win on ja pages. */
+html[lang='ja'] html[lang='ja'] body [data-ja-design] :is(.services-detail-desc, .services-card-summary):not(#_) { word-break: auto-phrase; line-break: strict; }
+html[lang='ja'] body [class*='GlobalLanguagePicker_badge'] { margin-inline-start: 0; }
+
+/* ja 昊 chrome (Opus 5.5 home lane, 2026-10-03; CONCEPT-V2 §5 footer, §7.1, §7.9). ja pages only. */
+/* Footer: the sumi night; no fine print under 15 px except the legal line. */
+html[lang='ja'] body .site-footer :is(a, p, li, span, address, button):not(.footer-copyright-row, .footer-copyright-row *) { font-size: max(15px, 1em); }
+html[lang='ja'] body .site-footer .footer-copyright-row { font-size: 14px; }
+/* Back to top: a 48 px white circle with a sumi arrow; never focusable while hidden; hidden while the ja hero is in view. */
+html[lang='ja'] body .scroll-top {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  color: #141210;
+  font-size: 20px;
+  box-shadow: 0 6px 20px rgb(20 18 16 / 0.14), 0 0 0 1px rgb(20 18 16 / 0.08);
+}
+html[lang='ja'] body .scroll-top:hover,
+html[lang='ja'] body .scroll-top:focus-visible { background: #fff; color: #141210; box-shadow: 0 8px 24px rgb(20 18 16 / 0.18), 0 0 0 1px rgb(20 18 16 / 0.12); }
+html[lang='ja'] body .scroll-top:focus-visible { outline: 3px solid #141210; outline-offset: 3px; }
+html[lang='ja'] body .scroll-top:not([data-visible='true']) { visibility: hidden; }
+html[lang='ja'] body:has(#ja-home[data-hero-in-view='true']) .scroll-top { opacity: 0; visibility: hidden; pointer-events: none; }
+/* Phone capsule (JaCapsule): focused elements never end up under it. */
+@media (max-width: 899px) {
+  html[lang='ja']:has(#ja-home) { scroll-padding-bottom: 84px; }
+  html[lang='ja'] body:has(#ja-home) .scroll-top { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}
+/* Search overlay and language picker: white panels, sumi text, one vermilion. */
+html[lang='ja'] body .search-overlay { background: rgb(20 18 16 / 0.5); }
+html[lang='ja'] body .search-overlay .search-panel { background: #fff; border-radius: 28px; color: #2b2824; }
+html[lang='ja'] body .search-overlay .search-submit { background: #141210; color: #fff; border-color: #141210; }
+html[lang='ja'] body .search-overlay .search-tabs .active { color: #141210; box-shadow: inset 0 -2px 0 #c8102e; }
+html[lang='ja'] body .search-overlay .chip { min-height: 44px; border-radius: 999px; background: #f4f2ee; border-color: transparent; color: #141210; }
+/* Header: white, one hairline; the drawer reads like the footer's day counterpart. */
+html[lang='ja'] body .header { background: #fff; border-bottom-color: #e4e0d8; }
+html[lang='ja'] body .drawer .drawer-nav-link { font-size: 19px; min-height: 52px; }
+

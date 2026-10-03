@@ -349,6 +349,8 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 44px;
   min-height: 52px;
   font-size: 17px;
   font-weight: 700;
@@ -482,6 +484,88 @@ a.tile:active { background: var(--ja-tile-press); }
   @media (prefers-reduced-motion: no-preference) {
     .v.v[data-ja-v2] :global(.contact-grid > .card:nth-child(odd)) { animation: jaSlideL linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
     .v.v[data-ja-v2] :global(.contact-grid > .card:nth-child(even)) { animation: jaSlideR linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+  }
+}
+
+/* ---------- Night tile header (lawyer profile) ---------- */
+.nightHead { padding: clamp(24px, 3vw, 48px) 0 0; }
+.nightTile {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  display: grid;
+  grid-template-columns: minmax(0, 54fr) minmax(0, 46fr);
+  width: min(var(--max-width), calc(100% - var(--page-gutter) * 2));
+  min-height: clamp(560px, 50vw, 720px);
+  margin-inline: auto;
+  border-radius: var(--ja-r);
+  background: var(--ja-night);
+  color: var(--ja-night-text);
+}
+.nightPortrait {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 26%), linear-gradient(to top, transparent 0, #000 14%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0, #000 26%), linear-gradient(to top, transparent 0, #000 14%);
+  mask-composite: intersect;
+}
+.nightCopy {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  padding: clamp(36px, 5vw, 72px);
+}
+.v.v[data-ja-v2] .nightCopy :global(.breadcrumb) { display: flex; flex-wrap: wrap; align-items: center; column-gap: 10px; margin: 0 0 24px; font-size: 15px; }
+.v.v[data-ja-v2] .nightCopy :global(.breadcrumb) :is(a, span) { color: var(--ja-night-text); }
+.v.v[data-ja-v2] .nightTitle {
+  margin: 0;
+  font-family: var(--ja-mincho);
+  font-size: clamp(36px, 4.4vw, 72px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: #fff;
+}
+.nightTitlePart { display: inline-block; white-space: nowrap; }
+.nightN1 { margin-top: clamp(28px, 3.4vw, 48px); }
+.nightN1Value {
+  margin: 0;
+  font-family: var(--ja-mincho);
+  font-size: clamp(96px, 10vw, 160px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.nightRule { display: block; width: 72px; height: 3px; margin-top: 18px; background: var(--ja-shu); transform-origin: left; }
+.nightN1Label { margin: 14px 0 0; font-size: 17px; font-weight: 600; color: #fff; }
+.nightLede { max-width: 30em; margin: clamp(20px, 2.4vw, 32px) 0 0; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.9; color: var(--ja-night-text); }
+.v.v[data-ja-v2] .nightTile :focus-visible { outline-color: #fff !important; }
+@media (max-width: 1023px) {
+  .nightTile { grid-template-columns: minmax(0, 1fr); }
+  .nightPortrait {
+    grid-column: 1; grid-row: 1; height: clamp(400px, 70vw, 560px);
+    -webkit-mask-image: linear-gradient(to top, transparent 0, #000 30%);
+    mask-image: linear-gradient(to top, transparent 0, #000 30%);
+  }
+  .nightCopy { grid-row: 2; margin-top: -64px; padding: 0 28px 36px; }
+}
+@media (max-width: 767px) {
+  .v.v[data-ja-v2] .nightTitle { font-size: 32px; }
+  .nightN1Value { font-size: 96px; }
+  .nightCopy { padding: 0 24px 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .v.v[data-ja-v2] .nightTitle { animation: jaRiseIn 800ms var(--ja-ease-reveal) both; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .nightPortrait :global(img) { animation: jaSettle linear both; animation-timeline: view(); animation-range: entry 0% cover 50%; }
+    .nightRule { animation: jaDraw linear both; animation-timeline: view(); animation-range: entry 40% cover 40%; }
   }
 }
 

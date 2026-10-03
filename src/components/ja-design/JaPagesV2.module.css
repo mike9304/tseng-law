@@ -160,8 +160,8 @@
 }
 .v.v:global(#ja-services) .band, .v.v:global(#ja-service-detail) .band, .v.v:global(#ja-pricing) .band,
 .v.v:global(#ja-about) .band, .v.v:global(#ja-lawyers) .band, .v.v:global(#ja-videos) .band, .v.v:global(#ja-contact) .band,
-.v.v:global(#ja-faq) .band, .v.v:global(#ja-columns) .band, .v.v:global(#ja-traffic) .band { display: block; }
-.v:global(#ja-services), .v:global(#ja-service-detail), .v:global(#ja-pricing) {
+.v.v:global(#ja-faq) .band, .v.v:global(#ja-columns) .band, .v.v:global(#ja-traffic) .band, .v.v:global(#ja-landing) .band { display: block; }
+.v:global(#ja-services), .v:global(#ja-service-detail), .v:global(#ja-pricing), .v:global(#ja-landing) {
   --ja-band-img: url('/images/editorial/ja-kou-wall-morning.webp');
   --ja-band-pos: 50% 46%;
 }
@@ -179,7 +179,7 @@
 }
 @media (max-width: 767px) {
   .v.v[data-ja-v2] .band { height: auto; aspect-ratio: 4 / 3; margin-top: 32px; }
-  .v:global(#ja-services), .v:global(#ja-service-detail), .v:global(#ja-pricing) { --ja-band-img: url('/images/editorial/ja-kou-wall-morning-960.webp'); }
+  .v:global(#ja-services), .v:global(#ja-service-detail), .v:global(#ja-pricing), .v:global(#ja-landing) { --ja-band-img: url('/images/editorial/ja-kou-wall-morning-960.webp'); }
   .v:global(#ja-about), .v:global(#ja-lawyers), .v:global(#ja-videos) { --ja-band-img: url('/images/editorial/ja-kou-wall-noon-960.webp'); }
   .v:global(#ja-faq), .v:global(#ja-columns), .v:global(#ja-traffic) { --ja-band-img: url('/images/editorial/ja-kou-patterned-glass-960.webp'); --ja-band-pos: 78% 50%; }
   .v:global(#ja-contact) { --ja-band-img: url('/images/editorial/ja-kou-dusk-light-960.webp'); --ja-band-pos: 74% 50%; }

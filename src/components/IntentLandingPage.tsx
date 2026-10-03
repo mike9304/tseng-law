@@ -15,6 +15,8 @@ import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import styles from './IntentLandingPage.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLandingStyles from '@/components/ja-design/JaLanding.module.css';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 import {
   getConsultationCtaLabel,
@@ -537,7 +539,7 @@ export default function IntentLandingPage({
     })),
   };
 
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -872,4 +874,6 @@ export default function IntentLandingPage({
       </section>
     </>
   );
+  // ja 昊 V2 inner pages (2026-10-02): same blocks inside the ja wrapper, restyled by JaLanding.module.css.
+  return locale === 'ja' ? <JaPageShell page="landing" className={jaLandingStyles.root}>{body}</JaPageShell> : body;
 }

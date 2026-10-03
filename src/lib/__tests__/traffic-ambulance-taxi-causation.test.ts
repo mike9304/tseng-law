@@ -59,9 +59,9 @@ describe('reviewed ambulance and bus-stop causation publications', () => {
     const collection = buildTrafficCollection('zh-hant', {columns: getAllColumnPosts('zh-hant'), issues: []});
     const matches = collection.filter(p => p.slug === a.slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({subject: 'liability', hasVideo: a.number === 120, columnNumber: a.number, aiAuthored: true});
+    expect(matches[0]).toMatchObject({subject: 'liability', hasVideo: true, columnNumber: a.number, aiAuthored: true});
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({subject: 'liability', q: matches[0].title})).map(p => p.slug)).toEqual([a.slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({video: '1'})).some(p => p.slug === a.slug)).toBe(a.number === 120);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({video: '1'})).some(p => p.slug === a.slug)).toBe(true);
     expect(getColumnPost(a.slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     expect(pending.columns.filter(p => p.slug === a.slug)).toEqual([{locale: 'zh-hant', slug: a.slug}]);
     for (const locale of ['ko','en','ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === a.slug)).toBe(false);

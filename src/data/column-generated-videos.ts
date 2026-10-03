@@ -29,6 +29,16 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-bus-stop-illegal-parking-no-contact-criminal-causation': {
+    id: 'bus-stop-v2-zh-hant',
+    src: '/videos/columns/bus-stop-v2-zh-hant.mp4',
+    poster: '/images/column-videos/bus-stop-v2-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '公車旁的機車側倒滑離貨車',
+    description: '畫面從機車側倒、騎士已失去平衡時開始，隨後兩者沿路面滑開。後方公車與站區內的黃色計程車保持停住。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立日間假想場景，非本文夜間事故或六路行車紀錄器的重建。影片未呈現先前變換車道、後座乘客、傷亡或現場實測位置，不能據以認定違停、因果關係、刑責或賠償比例。',
+  },
   'column/zh-hant/taiwan-ambulance-red-light-emergency-priority-negligence': {
     id: 'ambulance-scooter-v6-zh-hant',
     src: '/videos/columns/ambulance-scooter-v6-zh-hant.mp4',

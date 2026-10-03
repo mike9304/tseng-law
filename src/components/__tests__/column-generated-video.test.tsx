@@ -119,6 +119,7 @@ describe('reviewed column videos', () => {
   });
 
   it.each([
+    ['taiwan-bus-stop-illegal-parking-no-contact-criminal-causation', 'bus-stop-v2-zh-hant', '未呈現先前變換車道、後座乘客、傷亡或現場實測位置'],
     ['taiwan-ambulance-red-light-emergency-priority-negligence', 'ambulance-scooter-v6-zh-hant', '未呈現乘客、號誌、警笛聲、勤務或傷勢'],
     ['taiwan-bus-sudden-braking-passenger-carrier-liability', 'bus-braking-v4-zh-hant', '未呈現車外原因或完整煞車過程'],
     ['taiwan-retaliatory-driving-rear-ended-intentional-injury', 'braking-scooter-v2-zh-hant', '不能用來認定故意、傷勢或責任比例'],

@@ -308,6 +308,30 @@
   .v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-answer) { font-size: 17px; }
 }
 
+/* ---------- Attorney authority card on paper (column rail, landing pages): a compact mini card, no chips ---------- */
+.v2.v2[data-en-design][id] .paper :global(.authority-card) { display: grid; gap: 16px; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-eyebrow) { margin: 0; font-family: var(--en-text); font-size: 14px; font-weight: 500; letter-spacing: 0; text-transform: none; color: #6e6e73; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-heading) { margin: -8px 0 0; font-family: var(--en-display); font-size: 21px; font-weight: 700; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-top) { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; align-items: start; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-photo) { position: relative; width: 72px; height: 72px; border-radius: 18px; overflow: hidden; background: #15130a; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-photo img) { object-fit: cover; object-position: 50% 15%; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-name) { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--en-display); font-size: 19px; font-weight: 700; color: #1d1d1f; text-decoration: none; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-role) { margin: 0; font-family: var(--en-text); font-size: 14px; color: #6e6e73; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-summary) { grid-column: 1 / -1; margin: 4px 0 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: #515154; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-label) { margin: 0 0 6px; font-family: var(--en-text); font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; color: #6e6e73; }
+.v2.v2[data-en-design][id] .paper :global(.authority-chip-list) { display: block; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-chip) { display: inline; padding: 0; border: 0; border-radius: 0; background: none; font-size: 17px; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-chip + .authority-chip)::before { content: ' · '; color: #86868b; }
+.v2.v2[data-en-design][id] .paper :global(.authority-link-list) { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.v2.v2[data-en-design][id] .paper :global(.authority-link-list a) { display: inline-flex; align-items: center; min-height: 44px; color: #0058c4; font-family: var(--en-text); font-size: 17px; font-weight: 600; text-decoration: none; }
+.v2.v2[data-en-design][id] .paper :global(.authority-link-list a[target='_blank'])::after { content: '\2197'; margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions) { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions a.button) { min-height: 44px; padding: 0 22px; border: 0; border-radius: 999px; font-family: var(--en-text); font-size: 16px; font-weight: 600; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions a.button.button--outline),
+.v2.v2[data-en-design][id] .paper :global(.blog-sidebar .authority-card-actions a.button) { padding: 0; background: none; color: #0058c4; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions a.button.button--outline)::after,
+.v2.v2[data-en-design][id] .paper :global(.blog-sidebar .authority-card-actions a.button)::after { content: '\2192'; margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
+
 /* ---------- Section frame ---------- */
 .section { padding: 160px 0; }
 .sectionNight { background: var(--en-night); }

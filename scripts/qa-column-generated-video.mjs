@@ -12,7 +12,25 @@ const precisionPartsCaptions = JSON.parse(await fs.readFile(new URL('../src/data
 const gymPauseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/gym-pause-video-captions.json', import.meta.url), 'utf8'));
 const formationDocumentsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/formation-documents-video-captions.json', import.meta.url), 'utf8'));
 const cosmeticsCheckCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cosmetics-check-video-captions.json', import.meta.url), 'utf8'));
+const truckCutInCaptions = JSON.parse(await fs.readFile(new URL('../src/data/truck-cut-in-video-captions.json', import.meta.url), 'utf8'));
+const branchModelsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/branch-models-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(truckCutInCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-road-rage-freeway-cut-in-sentence-reduced', id: `truck-cut-in-v1-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `truck-cut-in-v1-${locale}`, duration: 4, contactTime: 1.0,
+      expectedDiagrams: 0, disclosure: caption.disclosure,
+    };
+  }),
+  ...Object.entries(branchModelsCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-company-subsidiary-vs-branch', id: `branch-models-v1-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `branch-models-v1-${locale}`, duration: 6, contactTime: 4.5,
+      traffic: false, trafficBoard: nativeLocale, minBodyImages: 3, disclosure: caption.disclosure,
+    };
+  }),
   ...['ko', 'en', 'ja', 'zh-hant'].map(locale => ({
     locale, slug: 'taiwan-road-rage-reversing-into-tailgater-no-self-defense',
     id: `reverse-impact-v1-${locale}`, duration: 4, contactTime: 0.833333, expectedDiagrams: 0,

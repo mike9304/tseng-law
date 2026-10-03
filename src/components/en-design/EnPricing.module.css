@@ -122,5 +122,5 @@
   .currencyNote { font-size: 17px; }
   .steps li { font-size: 17px; }
   .cta { margin-top: 48px; }
-  .pill { width: 100%; padding: 0 24px; font-size: 17px; }
+  .pill { display: block; width: 100%; padding: 15px 24px; font-size: 17px; line-height: 1.5; text-align: center; }
 }

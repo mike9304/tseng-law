@@ -331,7 +331,7 @@
   .closing { padding: 96px 0; }
   .closingText { font-size: 17px; }
   .closingEmail { font-size: 22px; }
-  .pill { padding: 0 24px; font-size: 17px; }
+  .pill { display: block; padding: 15px 24px; font-size: 17px; line-height: 1.5; text-align: center; }
   .closingActions > .pill,
   .titleActions > .pill,
   .v2.v2[data-en-design][id] :global(.page-header) .pill { width: 100%; }

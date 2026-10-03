@@ -270,18 +270,19 @@
   .columns.columns :global(section.section:not(.page-header)) { padding: 64px 0 96px; }
   .columns.columns :global(.columns-search-input) { min-height: 56px; padding: 0 100px 0 22px; border-radius: 28px; font-size: 17px; }
   .columns.columns :global(.columns-search-submit) { top: 6px; right: 6px; }
-  .columns.columns :global(.columns-topic-nav) { flex-wrap: nowrap; gap: 0 22px; margin: 16px -20px 64px; padding: 0 20px; overflow-x: auto; scrollbar-width: none; }
+  /* Bleed to the viewport edge by the container's own gutter (--page-gutter, 17.6 px at 390); a fixed 20 px overflowed by 2.4 px. */
+  .columns.columns :global(.columns-topic-nav) { flex-wrap: nowrap; gap: 0 22px; margin: 16px calc(-1 * var(--page-gutter)) 64px; padding: 0 var(--page-gutter); overflow-x: auto; scrollbar-width: none; }
   .columns.columns :global(.columns-topic-nav .columns-filter-btn) { flex: none; white-space: nowrap; }
   .columns.columns :global(.columns-topic-sections) { gap: 80px; }
   /* Rows of cards that snap sideways (component 16). */
   .columns.columns :global(.columns-grid) {
     display: flex;
     gap: 12px;
-    margin: 0 -20px;
-    padding: 0 20px 4px;
+    margin: 0 calc(-1 * var(--page-gutter));
+    padding: 0 var(--page-gutter) 4px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: 20px;
+    scroll-padding-inline: var(--page-gutter);
     scrollbar-width: none;
   }
   .columns.columns :global(.columns-grid::-webkit-scrollbar) { display: none; }

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import c from './JaChapters.module.css';
 
 /**
+ * Also marks the home wrapper while the hero is in view (`data-hero-in-view`), so the back-to-top button stays hidden.
+ *
  * Phone capsule 「メールで相談」 (CONCEPT-V2 §7.9): a fixed link below 900 px, shown only while neither the hero, the
  * closing (#contact) nor the footer is in view. `inert` and aria-hidden while hidden, so it never takes focus unseen.
  */
@@ -19,15 +21,22 @@ export default function JaCapsule({ href, label, ariaLabel }: { href: string; la
       document.querySelector('footer'),
     ].filter((el): el is HTMLElement => Boolean(el));
     const visible = new Set<Element>();
+    const home = document.getElementById('ja-home');
+    const hero = document.getElementById('hero');
     const io = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) visible.add(entry.target);
         else visible.delete(entry.target);
       }
       setShown(visible.size === 0);
+      // The shared back-to-top button stays hidden while the hero is in view (globals.css, ja only).
+      if (home && hero) home.dataset.heroInView = visible.has(hero) ? 'true' : 'false';
     });
     targets.forEach((target) => io.observe(target));
-    return () => io.disconnect();
+    return () => {
+      io.disconnect();
+      if (home) delete home.dataset.heroInView;
+    };
   }, []);
 
   useEffect(() => {

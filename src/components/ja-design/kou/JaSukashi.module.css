@@ -115,7 +115,7 @@
 @keyframes jaSukashiRise { from { opacity: 0; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
 
 /* ---------- the six pairs ---------- */
-.summary { position: relative; padding-block: 120px; background: var(--ja-paper-lit); }
+.summary { position: relative; padding-block: 120px; background: var(--ja-paper-lit); overflow-x: clip; }
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

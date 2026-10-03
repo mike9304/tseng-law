@@ -230,10 +230,10 @@ a.tile:active { background: var(--ja-tile-press); }
 /* ---------- motion helpers (all gated; base state is final and readable) ---------- */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .fromLeft { animation: jaKouSlideL linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
-    .fromRight { animation: jaKouSlideR linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
-    .rise { animation: jaKouRise linear both; animation-timeline: view(); animation-range: entry 0% entry 70%; }
-    .draw { transform-origin: left center; animation: jaKouDraw linear both; animation-timeline: view(); animation-range: entry 40% cover 45%; }
+    .fromLeft { animation: jaKouSlideL linear none; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+    .fromRight { animation: jaKouSlideR linear none; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+    .rise { animation: jaKouRise linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+    .draw { transform-origin: left center; animation: jaKouDraw linear none; animation-timeline: view(); animation-range: entry 40% cover 45%; }
   }
 }
 @keyframes jaKouSlideL { from { translate: calc(-1 * var(--fusuma, 72px)) 0; opacity: 0.2; } to { translate: 0 0; opacity: 1; } }

@@ -1,5 +1,5 @@
 /* C2 「光の升目」 (CONCEPT-V2 §5 C2): washi tiles over the moving light field; fusuma slides on entry (JaKou .fromLeft/.fromRight). */
-.section { position: relative; padding-block: var(--ja-section); }
+.section { position: relative; padding-block: var(--ja-section); overflow-x: clip; }
 .head {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));

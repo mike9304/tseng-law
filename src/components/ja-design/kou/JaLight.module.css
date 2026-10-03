@@ -79,7 +79,7 @@
 
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .ruleDraw { animation: jaLightDraw linear both; animation-timeline: view(); animation-range: entry 40% cover 45%; }
+    .ruleDraw { animation: jaLightDraw linear none; animation-timeline: view(); animation-range: entry 40% cover 45%; }
   }
 }
 @keyframes jaLightDraw { from { scale: 0 1; } to { scale: 1 1; } }

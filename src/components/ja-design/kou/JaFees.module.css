@@ -1,7 +1,7 @@
 /* C8 「目安」 and C9 「光の線」 (CONCEPT-V2 §5 C8, C9, §8.7). Prices never move; tiles slide in; the beam draws. */
 
 /* ---------- C8 fees ---------- */
-.section { position: relative; padding-block: var(--ja-section); background: var(--ja-stage); }
+.section { position: relative; padding-block: var(--ja-section); background: var(--ja-stage); overflow-x: clip; }
 .title { max-width: 14em; }
 .titleLine { display: block; }
 .tableLabel { margin: 20px 0 0; font-size: 17px; font-weight: 500; line-height: 1.5; color: var(--ja-grey); }

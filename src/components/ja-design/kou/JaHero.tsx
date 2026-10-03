@@ -80,7 +80,7 @@ export default function JaHero() {
             </p>
             {lead ? (
               <Link href={getAttorneyProfilePath('ja')} className={h.byline} data-hero-slot="byline">
-                <span className={h.name}>{lead.name}</span> · {lead.role}
+                <span className={h.name}>{lead.name}</span> · <JaKeepUnits text={lead.role} keep={['パートナー弁護士']} />
               </Link>
             ) : null}
             <div className={h.actions}>

@@ -63,7 +63,7 @@ export default function JaRead({ posts, columnCount }: { posts: readonly ReadPos
                 controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS.ja}
               />
             </div>
-            <picture className={r.mediaStill} aria-hidden="true">
+            <picture className={r.mediaStill}>
               <source media="(max-width: 767px)" srcSet={KOU.glass.posterMobile} type="image/webp" />
               <source srcSet={`${KOU.glass.poster960} 960w, ${KOU.glass.poster} 1920w`} sizes="100vw" type="image/webp" />
               {/* eslint-disable-next-line @next/next/no-img-element -- pre-encoded webp still, served as is */}

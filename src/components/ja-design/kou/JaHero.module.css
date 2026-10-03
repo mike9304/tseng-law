@@ -108,16 +108,17 @@
   text-wrap: pretty;
 }
 .byline {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   min-height: 44px;
-  margin-top: 6px;
+  box-sizing: border-box;
+  padding-block: 10px;
+  margin-top: 0;
   font-size: 17px;
   line-height: 1.5;
   color: var(--ja-text);
   text-decoration: none;
 }
-.name { font-weight: 600; color: var(--ja-ink); }
+.name { font-weight: 600; color: var(--ja-ink); white-space: nowrap; }
 @media (hover: hover) { .byline:hover { text-decoration: underline; text-underline-offset: 4px; } }
 .actions {
   display: flex;

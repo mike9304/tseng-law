@@ -8,9 +8,11 @@
  * Every selector is scoped under `.root[data-ja-design]`; other locales never render it.
  */
 .root {
-  --ja-ink: #1b1814;
-  --ja-text: #38332c;
-  --ja-sub: #5a544a;
+  /* 昊 V2 values (CONCEPT-V2 §3.2, 2026-10-03): white page, sumi #141210, text #2B2824, grey #66615A. */
+  color-scheme: light;
+  --ja-ink: #141210;
+  --ja-text: #2b2824;
+  --ja-sub: #66615a;
   --ja-green: #1b1814;
   --ja-green-2: #3b352d;
   --ja-green-tint: #f1ede4;
@@ -18,10 +20,10 @@
   --ja-shu-deep: #a50d26;
   --ja-gold: #c8102e;
   --ja-gold-text: #4a443b;
-  --ja-paper: #faf8f4;
-  --ja-paper-2: #f2eee5;
-  --ja-line: #e6e0d4;
-  --ja-line-strong: #cdc4b2;
+  --ja-paper: #ffffff;
+  --ja-paper-2: #f4f2ee;
+  --ja-line: #e4e0d8;
+  --ja-line-strong: #d6d1c7;
   --ja-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --ja-mincho: var(--font-heading-ja);
   --ja-gothic: var(--font-body-ja);
@@ -37,15 +39,15 @@
   --gold: #c8102e;
   --gold-light: #e0384f;
   --gold-dim: #a50d26;
-  --warm-bg: #f2eee5;
+  --warm-bg: #f4f2ee;
   --warm-bg-alt: #ebe6da;
   --warm-border: #d8d0c0;
   --warm-surface: #e8e2d6;
   --warm-muted: #ddd6c7;
   --warm-text: #5a544a;
   --warm-text-dark: #38332c;
-  --off-white: #faf8f4;
-  --cream: #f4f0e7;
+  --off-white: #ffffff;
+  --cream: #fbfaf7;
   --gray-50: #f7f4ee;
   --gray-100: #ede9df;
   --gray-200: #e2ddd0;

@@ -14,6 +14,17 @@ import h from './JaHero.module.css';
 export default function JaHeroFilm() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
+  // <source media> on <video> is ignored by some engines (WebKit 26 in our checks played the 16:9 file on phones),
+  // so the film picks its file here; the video mounts only after hydration, by when this is settled.
+  const [phone, setPhone] = useState(false);
+
+  useEffect(() => {
+    const query = window.matchMedia(KOU.hero.mobileQuery);
+    const update = () => setPhone(query.matches);
+    update();
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
 
   useEffect(() => {
     const wrap = wrapRef.current;
@@ -41,10 +52,8 @@ export default function JaHeroFilm() {
         videoClassName={h.video}
         poster={KOU.hero.poster}
         mobilePoster={KOU.hero.posterMobile}
-        mp4Src={KOU.hero.mp4}
-        webmSrc={KOU.hero.webm}
-        mobileMp4Src={KOU.hero.mp4Mobile}
-        mobileWebmSrc={KOU.hero.webmMobile}
+        mp4Src={phone ? KOU.hero.mp4Mobile : KOU.hero.mp4}
+        webmSrc={phone ? KOU.hero.webmMobile : KOU.hero.webm}
         mobileMediaQuery={KOU.hero.mobileQuery}
         alt=""
         sizes="100vw"

@@ -30,7 +30,7 @@ export default function JaFlow({ id = 'ja-flow', pinned = true }: { id?: string;
     >
       <div className={f.flowStage}>
         {pinned ? (
-          <picture className={f.flowLight} aria-hidden="true">
+          <picture className={f.flowLight}>
             <source srcSet={`${KOU.sukashi.c960} 960w, ${KOU.sukashi.c} 1920w`} sizes="100vw" type="image/webp" />
             {/* eslint-disable-next-line @next/next/no-img-element -- pre-encoded webp still, served as is (T-C reused) */}
             <img className={f.flowLightImg} src={KOU.sukashi.c} alt="" width={1920} height={1080} loading="lazy" decoding="async" />

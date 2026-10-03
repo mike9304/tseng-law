@@ -116,4 +116,4 @@ NDAで対象にする「秘密情報」と、この法定の営業秘密は分�
 - [涉外民事法律適用法第20条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20)。法務部全國法規資料庫。法律行為に基づく債権債務関係の準拠法。
 - [仲裁法・全条文（第49条・第50条を含む）](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020001)、[第1条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=1)、[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=23)、[第39条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=39)、[第47条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=47)。法務部全國法規資料庫、最終改正2015年12月2日。仲裁合意、非公開手続、保全、外国仲裁判断の承認。
 
-*AIが作成した一般的な情報であり、個別案件への法律助言ではありません。資料は2026年10月3日（韓国時間）に確認しました。*
+*一般的な情報であり、個別案件への法律助言ではありません。資料は2026年10月3日（韓国時間）に確認しました。*

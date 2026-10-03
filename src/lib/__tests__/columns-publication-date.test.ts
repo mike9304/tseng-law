@@ -145,6 +145,18 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '120': '2026-10-03',
   '121': '2026-10-03',
   '122': '2026-10-03', // road-rage series: taiwan-road-rage-reversing-into-tailgater-no-self-defense (all four locales)
+  // Reviewed fraud and semiconductor release.
+  '133': '2026-10-03',
+  '134': '2026-10-03',
+  '135': '2026-10-03',
+  '136': '2026-10-03',
+  '137': '2026-10-03',
+  '138': '2026-10-03',
+  '139': '2026-10-03',
+  '140': '2026-10-03',
+  '141': '2026-10-03',
+  '142': '2026-10-03',
+  '143': '2026-10-03',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

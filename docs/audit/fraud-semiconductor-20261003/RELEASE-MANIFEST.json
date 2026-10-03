@@ -1,0 +1,444 @@
+{
+  "status": "integration_ready_for_release_verification",
+  "baseCommit": "b3a339d4",
+  "recordedAt": "2026-10-03T11:54:56+00:00",
+  "scope": "11 reviewed articles, 11 original images, required registries and immutable review/evidence copies; no publication by integration worker",
+  "articles": [
+    {
+      "number": 133,
+      "kind": "semiconductor",
+      "locale": "zh-hant",
+      "slug": "taiwan-semiconductor-overseas-fab-core-key-technology-review",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/b01-zh-hant.md",
+      "destination": "src/content/columns-zh/133-taiwan-semiconductor-overseas-fab-core-key-technology-review.md",
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-semiconductor-overseas-fab-core-key-technology-review",
+      "sha256": "57aa6fbe4afd21771e273ea6649759b4693e5307e8389e96547fea0e3aae04b5",
+      "imageSource": "/Users/son7/Projects/tseng-law-semi-b01-20261003/public/images/blog/semiconductor/taiwan-semiconductor-overseas-fab-core-key-technology-review/featured-01.webp",
+      "imageDestination": "public/images/blog/semiconductor/taiwan-semiconductor-overseas-fab-core-key-technology-review/featured-01.webp",
+      "imageUrl": "https://tseng-law.com/images/blog/semiconductor/taiwan-semiconductor-overseas-fab-core-key-technology-review/featured-01.webp",
+      "imageSha256": "263cced06f2a859420f70f49407f3a79ff7fd239ffa579a7cb4637d26cec77df",
+      "sourceSha256": "57aa6fbe4afd21771e273ea6649759b4693e5307e8389e96547fea0e3aae04b5",
+      "destinationSha256": "57aa6fbe4afd21771e273ea6649759b4693e5307e8389e96547fea0e3aae04b5",
+      "bytes": 32136,
+      "imageBytes": 34990
+    },
+    {
+      "number": 134,
+      "kind": "semiconductor",
+      "locale": "ko",
+      "slug": "taiwan-national-security-act-core-key-technology-korean-engineers",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/ko.md",
+      "destination": "src/content/columns/134-taiwan-national-security-act-core-key-technology-korean-engineers.md",
+      "url": "https://tseng-law.com/ko/columns/taiwan-national-security-act-core-key-technology-korean-engineers",
+      "sha256": "a2bd9c36eb2e9faa08393c6cc634566afccd0470f13b3617af8ce2f89c5d459a",
+      "imageSource": "/Users/son7/Projects/tseng-law-semi-b03-20261003/public/images/blog/semiconductor/taiwan-national-security-act-core-key-technology-korean-engineers/featured-01.webp",
+      "imageDestination": "public/images/blog/semiconductor/taiwan-national-security-act-core-key-technology-korean-engineers/featured-01.webp",
+      "imageUrl": "https://tseng-law.com/images/blog/semiconductor/taiwan-national-security-act-core-key-technology-korean-engineers/featured-01.webp",
+      "imageSha256": "ce8acdf3e3b1c15386b9643b98815b9cda174368c990c82f43b5448ed3b54e9f",
+      "sourceSha256": "a2bd9c36eb2e9faa08393c6cc634566afccd0470f13b3617af8ce2f89c5d459a",
+      "destinationSha256": "a2bd9c36eb2e9faa08393c6cc634566afccd0470f13b3617af8ce2f89c5d459a",
+      "bytes": 28631,
+      "imageBytes": 34878
+    },
+    {
+      "number": 135,
+      "kind": "semiconductor",
+      "locale": "ja",
+      "slug": "japanese-equipment-maker-engineers-taiwan-work-permit",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/ja.md",
+      "destination": "src/content/columns-ja/135-japanese-equipment-maker-engineers-taiwan-work-permit.md",
+      "url": "https://tseng-law.com/ja/columns/japanese-equipment-maker-engineers-taiwan-work-permit",
+      "sha256": "19ab26761d3a8d999b0ef2e33f33f3d68b6d39e49172fe47b444b6cb21b99161",
+      "imageSource": "/Users/son7/Projects/tseng-law-semi-b03-20261003/public/images/blog/semiconductor/japanese-equipment-maker-engineers-taiwan-work-permit/featured-01.webp",
+      "imageDestination": "public/images/blog/semiconductor/japanese-equipment-maker-engineers-taiwan-work-permit/featured-01.webp",
+      "imageUrl": "https://tseng-law.com/images/blog/semiconductor/japanese-equipment-maker-engineers-taiwan-work-permit/featured-01.webp",
+      "imageSha256": "134135a9333ab9dd729bc63f8c6ba21abaebe49fccc50c007ac1b2659b7bd6bb",
+      "sourceSha256": "19ab26761d3a8d999b0ef2e33f33f3d68b6d39e49172fe47b444b6cb21b99161",
+      "destinationSha256": "19ab26761d3a8d999b0ef2e33f33f3d68b6d39e49172fe47b444b6cb21b99161",
+      "bytes": 40353,
+      "imageBytes": 41462
+    },
+    {
+      "number": 136,
+      "kind": "semiconductor",
+      "locale": "en",
+      "slug": "taiwan-export-controls-shtc-entity-list-us-ear-compliance",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/en.md",
+      "destination": "src/content/columns-en/136-taiwan-export-controls-shtc-entity-list-us-ear-compliance.md",
+      "url": "https://tseng-law.com/en/columns/taiwan-export-controls-shtc-entity-list-us-ear-compliance",
+      "sha256": "904703a8f4f094c3c2cc65c167708a6212254236d07650d95dff50bd3dbd1a4c",
+      "imageSource": "/Users/son7/Projects/tseng-law-semi-b03-20261003/public/images/blog/semiconductor/taiwan-export-controls-shtc-entity-list-us-ear-compliance/featured-01.webp",
+      "imageDestination": "public/images/blog/semiconductor/taiwan-export-controls-shtc-entity-list-us-ear-compliance/featured-01.webp",
+      "imageUrl": "https://tseng-law.com/images/blog/semiconductor/taiwan-export-controls-shtc-entity-list-us-ear-compliance/featured-01.webp",
+      "imageSha256": "067148ac51b7758ca1c3b7cdfe63a93d5a5480713c4538d5d0a28f270afed645",
+      "sourceSha256": "904703a8f4f094c3c2cc65c167708a6212254236d07650d95dff50bd3dbd1a4c",
+      "destinationSha256": "904703a8f4f094c3c2cc65c167708a6212254236d07650d95dff50bd3dbd1a4c",
+      "bytes": 36158,
+      "imageBytes": 30098
+    },
+    {
+      "number": 137,
+      "kind": "semiconductor",
+      "locale": "zh-hant",
+      "slug": "taiwan-engineer-job-change-trade-secret-national-security-judgments",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/zh-hant.md",
+      "destination": "src/content/columns-zh/137-taiwan-engineer-job-change-trade-secret-national-security-judgments.md",
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-engineer-job-change-trade-secret-national-security-judgments",
+      "sha256": "e84a46e7c03bb0434eb60d12b648ba106e152b9fc3b55bba3c10648ad6ae219c",
+      "imageSource": "/Users/son7/Projects/tseng-law-semi-b03-20261003/public/images/blog/semiconductor/taiwan-engineer-job-change-trade-secret-national-security-judgments/featured-01.webp",
+      "imageDestination": "public/images/blog/semiconductor/taiwan-engineer-job-change-trade-secret-national-security-judgments/featured-01.webp",
+      "imageUrl": "https://tseng-law.com/images/blog/semiconductor/taiwan-engineer-job-change-trade-secret-national-security-judgments/featured-01.webp",
+      "imageSha256": "c893d99c1081eb70acaa6c2ad4be1ea014ee33303ff7862562c7c72ea8b49dea",
+      "sourceSha256": "e84a46e7c03bb0434eb60d12b648ba106e152b9fc3b55bba3c10648ad6ae219c",
+      "destinationSha256": "e84a46e7c03bb0434eb60d12b648ba106e152b9fc3b55bba3c10648ad6ae219c",
+      "bytes": 35333,
+      "imageBytes": 24216
+    },
+    {
+      "number": 138,
+      "kind": "fraud",
+      "locale": "zh-hant",
+      "slug": "cash-investment-courier-receipt-fraud-taiwan",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/drafts/zh-hant-cash-investment-courier-receipt-fraud-taiwan.md",
+      "destination": "src/content/columns-zh/138-cash-investment-courier-receipt-fraud-taiwan.md",
+      "url": "https://tseng-law.com/zh-hant/columns/cash-investment-courier-receipt-fraud-taiwan",
+      "sha256": "0062392fec357f62985bd4367dd8cdebe62d45f124584ad343f06ef826485089",
+      "imageSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-2e9238d5-0afb-4297-b803-1e19cd22d239.png",
+      "imageDestination": "public/images/columns/fraud-20261003/cash-investment-courier-receipt-fraud-taiwan.png",
+      "imageUrl": "https://tseng-law.com/images/columns/fraud-20261003/cash-investment-courier-receipt-fraud-taiwan.png",
+      "imageSha256": "82bb7dd0eaa41cc9671b4a731e612845c5dd3c40dc2fdad1443e3bfff8ecc0b9",
+      "sourceSha256": "0062392fec357f62985bd4367dd8cdebe62d45f124584ad343f06ef826485089",
+      "destinationSha256": "0062392fec357f62985bd4367dd8cdebe62d45f124584ad343f06ef826485089",
+      "bytes": 7170,
+      "imageBytes": 1875005
+    },
+    {
+      "number": 139,
+      "kind": "fraud",
+      "locale": "zh-hant",
+      "slug": "land-registration-alert-property-fraud-taiwan",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/drafts/zh-hant-land-registration-alert-property-fraud-taiwan.md",
+      "destination": "src/content/columns-zh/139-land-registration-alert-property-fraud-taiwan.md",
+      "url": "https://tseng-law.com/zh-hant/columns/land-registration-alert-property-fraud-taiwan",
+      "sha256": "0eb7442b9cc4b6510411bedcf6310ae933e874494768ccb49764ddcd6d3c1ebd",
+      "imageSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-0308af4c-8f55-4b48-b933-42c36bf86f69.png",
+      "imageDestination": "public/images/columns/fraud-20261003/land-registration-alert-property-fraud-taiwan.png",
+      "imageUrl": "https://tseng-law.com/images/columns/fraud-20261003/land-registration-alert-property-fraud-taiwan.png",
+      "imageSha256": "2e447d13bc6d239783e9f299947d3ba8c3bc6a409507407edbd0a185f50eeb53",
+      "sourceSha256": "0eb7442b9cc4b6510411bedcf6310ae933e874494768ccb49764ddcd6d3c1ebd",
+      "destinationSha256": "0eb7442b9cc4b6510411bedcf6310ae933e874494768ccb49764ddcd6d3c1ebd",
+      "bytes": 7532,
+      "imageBytes": 1831568
+    },
+    {
+      "number": 140,
+      "kind": "fraud",
+      "locale": "zh-hant",
+      "slug": "fake-lawyer-scam-recovery-fee-taiwan",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/drafts/zh-hant-fake-lawyer-scam-recovery-fee-taiwan.md",
+      "destination": "src/content/columns-zh/140-fake-lawyer-scam-recovery-fee-taiwan.md",
+      "url": "https://tseng-law.com/zh-hant/columns/fake-lawyer-scam-recovery-fee-taiwan",
+      "sha256": "1e90362a24cbf2c7041a1abbea20771769a49263d57d45d0fa4faa25bcbbea2e",
+      "imageSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-9deeb99b-e152-4900-bd5e-71320e0bd5a0.png",
+      "imageDestination": "public/images/columns/fraud-20261003/fake-lawyer-scam-recovery-fee-taiwan.png",
+      "imageUrl": "https://tseng-law.com/images/columns/fraud-20261003/fake-lawyer-scam-recovery-fee-taiwan.png",
+      "imageSha256": "8bfd40e7de58b1409e2b7a8a65696b0b0864df575aae28ed9ca46ae1b8241d14",
+      "sourceSha256": "1e90362a24cbf2c7041a1abbea20771769a49263d57d45d0fa4faa25bcbbea2e",
+      "destinationSha256": "1e90362a24cbf2c7041a1abbea20771769a49263d57d45d0fa4faa25bcbbea2e",
+      "bytes": 7970,
+      "imageBytes": 2261985
+    },
+    {
+      "number": 141,
+      "kind": "fraud",
+      "locale": "ja",
+      "slug": "taiwan-rental-deposit-before-viewing-fraud",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/drafts/ja-taiwan-rental-deposit-before-viewing-fraud.md",
+      "destination": "src/content/columns-ja/141-taiwan-rental-deposit-before-viewing-fraud.md",
+      "url": "https://tseng-law.com/ja/columns/taiwan-rental-deposit-before-viewing-fraud",
+      "sha256": "1660efd3f155d6c73157db3d20bb6d2365234be5f64a5d2418dd6a6984867a33",
+      "imageSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-e83d1074-2bab-434b-a8b4-e169c329def9.png",
+      "imageDestination": "public/images/columns/fraud-20261003/taiwan-rental-deposit-before-viewing-fraud.png",
+      "imageUrl": "https://tseng-law.com/images/columns/fraud-20261003/taiwan-rental-deposit-before-viewing-fraud.png",
+      "imageSha256": "6a94893d88c44742b4058bef0d6e5c5765efa7cc7d13afbe8383f6b454e70be8",
+      "sourceSha256": "1660efd3f155d6c73157db3d20bb6d2365234be5f64a5d2418dd6a6984867a33",
+      "destinationSha256": "1660efd3f155d6c73157db3d20bb6d2365234be5f64a5d2418dd6a6984867a33",
+      "bytes": 9544,
+      "imageBytes": 1789969
+    },
+    {
+      "number": 142,
+      "kind": "fraud",
+      "locale": "en",
+      "slug": "taiwan-supplier-bank-account-change-bec",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/drafts/en-taiwan-supplier-bank-account-change-bec.md",
+      "destination": "src/content/columns-en/142-taiwan-supplier-bank-account-change-bec.md",
+      "url": "https://tseng-law.com/en/columns/taiwan-supplier-bank-account-change-bec",
+      "sha256": "ac8293d32ca6c2c9ba29e31771c949ad21b27f912bd9bb93835756b3e90627bc",
+      "imageSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-7faa49a9-5d36-4363-9967-8d2b744e265b.png",
+      "imageDestination": "public/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "imageUrl": "https://tseng-law.com/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "imageSha256": "24468029d4f12cbc80b79b8290a743e9115f9299ea8f07274caa233c7b180e50",
+      "sourceSha256": "ac8293d32ca6c2c9ba29e31771c949ad21b27f912bd9bb93835756b3e90627bc",
+      "destinationSha256": "ac8293d32ca6c2c9ba29e31771c949ad21b27f912bd9bb93835756b3e90627bc",
+      "bytes": 7080,
+      "imageBytes": 1723929
+    },
+    {
+      "number": 143,
+      "kind": "fraud",
+      "locale": "ko",
+      "slug": "taiwan-unpaid-invoice-fraud-or-contract",
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/drafts/ko-taiwan-unpaid-invoice-fraud-or-contract.md",
+      "destination": "src/content/columns/143-taiwan-unpaid-invoice-fraud-or-contract.md",
+      "url": "https://tseng-law.com/ko/columns/taiwan-unpaid-invoice-fraud-or-contract",
+      "sha256": "a9f2130de685542fa6132c206f9ecf70eafbd94436da68c01db2d278106788d8",
+      "imageSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-0c3f0de5-e0af-42c3-a35a-5e2f0dba9908.png",
+      "imageDestination": "public/images/columns/fraud-20261003/taiwan-unpaid-invoice-fraud-or-contract.png",
+      "imageUrl": "https://tseng-law.com/images/columns/fraud-20261003/taiwan-unpaid-invoice-fraud-or-contract.png",
+      "imageSha256": "97697607095a2bff54802d1861934ae2441452be56437f7f36b90b6adf000a39",
+      "sourceSha256": "a9f2130de685542fa6132c206f9ecf70eafbd94436da68c01db2d278106788d8",
+      "destinationSha256": "a9f2130de685542fa6132c206f9ecf70eafbd94436da68c01db2d278106788d8",
+      "bytes": 12047,
+      "imageBytes": 1951437
+    }
+  ],
+  "ledgerCopies": [
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/evidence/en-taiwan-supplier-bank-account-change-bec.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/evidence/en-taiwan-supplier-bank-account-change-bec.md",
+      "sha256": "4805669cc6ee3055de4e564f518db279b46eac78cad75dbb6bcd657284eb680d"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/evidence/ja-taiwan-rental-deposit-before-viewing-fraud.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/evidence/ja-taiwan-rental-deposit-before-viewing-fraud.md",
+      "sha256": "7f88a5a81d5bc9a59b4b0c529c2ca864a1616d9fcff0c3f406fe6b19174e6704"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/evidence/ko-taiwan-unpaid-invoice-fraud-or-contract.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/evidence/ko-taiwan-unpaid-invoice-fraud-or-contract.md",
+      "sha256": "7dc65aedff707c7ab3c80baaf990f63239ce51bc724428898a03c572439f9cc1"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/evidence/zh-hant-cash-investment-courier-receipt-fraud-taiwan.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/evidence/zh-hant-cash-investment-courier-receipt-fraud-taiwan.md",
+      "sha256": "ce44134930659cbdf50acabf4d4d8561bdc22fb39e8bc7106398c1b944f53062"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/evidence/zh-hant-fake-lawyer-scam-recovery-fee-taiwan.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/evidence/zh-hant-fake-lawyer-scam-recovery-fee-taiwan.md",
+      "sha256": "528db40296746d87d0785965b6bf6600538f91959652b9d2b1648ac279b899ce"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/evidence/zh-hant-land-registration-alert-property-fraud-taiwan.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/evidence/zh-hant-land-registration-alert-property-fraud-taiwan.md",
+      "sha256": "c9ecff4ab3ea4d30c9ad95f4e2c4d44d5e0f02afac6f13184a1d52e30193e521"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/b01-zh-hant-evidence.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/semiconductor-repairs/b01-zh-hant-evidence.md",
+      "sha256": "6c2f1576ec00ade18b073153a4760bedaee2bfdfcda8c8edf17c27a770b6c0a8"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/en-evidence.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/semiconductor-repairs/en-evidence.md",
+      "sha256": "bd2a3e70d7eb60248eef74dccf9699b837a7003fa56acc3c17be411b0643539f",
+      "sourceSha256": "40fcf65e9bd013e989d3bcffd2c4bea994ba19c1a6184b9a0c75740c56b462ba",
+      "normalization": "Removed two trailing Markdown hard-break spaces on each of lines 150 and 164; wording and line order retained."
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/zh-hant-evidence.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/semiconductor-repairs/zh-hant-evidence.md",
+      "sha256": "f90aa9608eccb13fa9dc190aaa9c825b7762e78d04654a226bf7df969d063c01"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/reviews/fraud-voice-r1.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/reviews/fraud-voice-r1.md",
+      "sha256": "865f88d5d748262d0085c6966ce904bb76a0c386076d33d7059b2a942bcbb0a5",
+      "sourceSha256": "e6ea5eff3545552b5720775af0bf0479dfd9d82cc2979070a3b0523b469ff2b2",
+      "normalization": "Removed one extra blank line at EOF; retained one final newline."
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/reviews/fraud-zh-legal-r1.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/reviews/fraud-zh-legal-r1.md",
+      "sha256": "fc0ddcebba3fb3211b5ab319cb57435027a626250f8e848bc5a666e982cfed14"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/reviews/fraud-ja-legal-r1.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/reviews/fraud-ja-legal-r1.md",
+      "sha256": "9f4594242681ef7c818c2dcd76c02e7be002773c22a329c888835f4c95837222"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/reviews/fraud-ko-en-legal-r1.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/reviews/fraud-ko-en-legal-r1.md",
+      "sha256": "e48606d3807081672f1486b6f5a6268df3a9e87a00c088beac816427193ff0d4"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/reviews/semiconductor-b01-zh-final.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/reviews/semiconductor-b01-zh-final.md",
+      "sha256": "bc2404d4812e7eefcb69b8d4ac4d2c961393fd50e47689e5b3404f6e13f1bece"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/ko-evidence.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/semiconductor-repairs/ko-evidence.md",
+      "sha256": "1ae2196d07cc6f0a215d811ab2c957e5be63bb3ff062b2182bc7d917ff1945cf"
+    },
+    {
+      "source": "/Users/son7/tseng-fraud-editorial-20261003/semiconductor-repairs/ja-evidence.md",
+      "destination": "docs/audit/fraud-semiconductor-20261003/semiconductor-repairs/ja-evidence.md",
+      "sha256": "f8a482efacf196aee2bad789d64e2232c8a1605069e52ed0b81a07d93012c521"
+    }
+  ],
+  "verification": {
+    "copiedArticlesByteIdentical": 11,
+    "copiedImageByteMatches": 11,
+    "nativeRegistryAdded": 11,
+    "publicationDatesAdded": 11,
+    "pendingEmbeddingsAdded": 9,
+    "pendingEmbeddingsLocales": [
+      "ko",
+      "en",
+      "zh-hant"
+    ],
+    "semiconductorBoardAdded": 5,
+    "allExistingRegistryEntriesPreserved": true,
+    "scopedVitest": {
+      "command": "npm run test:unit -- src/lib/__tests__/columns-publication-date.test.ts src/lib/__tests__/column-native-date-display.test.ts src/lib/__tests__/columns-new-four-locales.test.ts src/lib/__tests__/columns-en-content.test.ts src/lib/__tests__/columns-ja-content.test.ts src/lib/__tests__/columns-zh-content.test.ts src/lib/__tests__/column-seo-title-frontmatter.test.ts src/lib/__tests__/column-summary-frontmatter.test.ts src/lib/__tests__/column-emphasis.test.ts src/lib/__tests__/column-language-links.test.tsx src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx src/lib/__tests__/column-publication-search-boundary.test.ts src/lib/__tests__/column-embeddings-content-sync.test.ts src/lib/__tests__/column-pending-text-search.test.ts src/lib/__tests__/semiconductor-public-board.test.ts src/lib/__tests__/semiconductor-drafts-public-surface.test.ts src/lib/__tests__/column-image-descriptions.test.ts src/lib/__tests__/column-topics.test.ts src/lib/__tests__/column-category-parity.test.ts src/app/__tests__/sitemap.test.ts --maxWorkers=2",
+      "exitCode": 0,
+      "testFilesPassed": 20,
+      "testsPassed": 214,
+      "durationSeconds": 20.49,
+      "baseCommit": "64dac3f6",
+      "startTimeLocal": "21:10:53"
+    },
+    "ledgerCopiesByteIdentical": 14,
+    "parallelQaObservedTrackedChanges": [
+      "next-env.d.ts"
+    ],
+    "parallelQaNote": "Observed after coordinator started full QA; integration worker did not modify or revert these files.",
+    "gitDiffCheck": {
+      "command": "git diff --check",
+      "exitCode": 0
+    },
+    "buildAndLiveVerification": "owned by release coordinator; not performed by integration worker",
+    "initialScopedVitest": {
+      "command": "npm run test:unit -- src/lib/__tests__/columns-publication-date.test.ts src/lib/__tests__/column-native-date-display.test.ts src/lib/__tests__/columns-new-four-locales.test.ts src/lib/__tests__/columns-en-content.test.ts src/lib/__tests__/columns-ja-content.test.ts src/lib/__tests__/columns-zh-content.test.ts src/lib/__tests__/column-seo-title-frontmatter.test.ts src/lib/__tests__/column-summary-frontmatter.test.ts src/lib/__tests__/column-emphasis.test.ts src/lib/__tests__/column-language-links.test.tsx src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx src/lib/__tests__/column-publication-search-boundary.test.ts src/lib/__tests__/column-embeddings-content-sync.test.ts src/lib/__tests__/column-pending-text-search.test.ts src/lib/__tests__/semiconductor-public-board.test.ts src/lib/__tests__/semiconductor-drafts-public-surface.test.ts src/lib/__tests__/column-image-descriptions.test.ts src/lib/__tests__/column-topics.test.ts src/lib/__tests__/column-category-parity.test.ts src/app/__tests__/sitemap.test.ts --maxWorkers=2",
+      "exitCode": 0,
+      "testFilesPassed": 20,
+      "testsPassed": 214,
+      "durationSeconds": 18.15
+    },
+    "initialIntegrationTrackedChangesOnlyInFourRegistries": true,
+    "ledgerCopiesOriginallyByteIdentical": 16,
+    "ledgerCopiesWhitespaceNormalized": 2,
+    "rebaseIntegrity": {
+      "baseCommit": "130fe5be",
+      "articleSourceDestinationApprovedShaMatches": 11,
+      "imageShaMatches": 11,
+      "ledgerDestinationShaMatches": 16,
+      "ledgerSourceShaMatches": 16,
+      "incomingRoadRageFilesUnchanged": 4,
+      "conflictMarkersRemaining": 0,
+      "tests": "Delegated to QA worker; integration worker did not repeat tests for this rebase."
+    }
+  },
+  "semiconductorBoards": [
+    {
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/semiconductor",
+      "routeSource": "src/app/[locale]/semiconductor/page.tsx",
+      "registry": "src/data/semiconductor-board-columns.json",
+      "addedSlugs": [
+        "taiwan-national-security-act-core-key-technology-korean-engineers"
+      ]
+    },
+    {
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/semiconductor",
+      "routeSource": "src/app/[locale]/semiconductor/page.tsx",
+      "registry": "src/data/semiconductor-board-columns.json",
+      "addedSlugs": [
+        "japanese-equipment-maker-engineers-taiwan-work-permit"
+      ]
+    },
+    {
+      "locale": "en",
+      "url": "https://tseng-law.com/en/semiconductor",
+      "routeSource": "src/app/[locale]/semiconductor/page.tsx",
+      "registry": "src/data/semiconductor-board-columns.json",
+      "addedSlugs": [
+        "taiwan-export-controls-shtc-entity-list-us-ear-compliance"
+      ]
+    },
+    {
+      "locale": "zh-hant",
+      "url": "https://tseng-law.com/zh-hant/semiconductor",
+      "routeSource": "src/app/[locale]/semiconductor/page.tsx",
+      "registry": "src/data/semiconductor-board-columns.json",
+      "addedSlugs": [
+        "taiwan-engineer-job-change-trade-secret-national-security-judgments",
+        "taiwan-semiconductor-overseas-fab-core-key-technology-review"
+      ]
+    }
+  ],
+  "registryChanges": [
+    {
+      "path": "src/content/column-embeddings-pending.json",
+      "beforeSha256": "698b09e960b844a26cdaf67a644135fa009aeb7b20b05f69aa6973933961fe45",
+      "afterSha256": "0856aa5e0b222ee092d90c0e0807382263aaa570549c110202d9c70f10db4fef"
+    },
+    {
+      "path": "src/data/semiconductor-board-columns.json",
+      "beforeSha256": "a06cc0e409429e899f4590d3ccdb352e1abf99a0856da626c33e56958c7f04f7",
+      "afterSha256": "ff885d00379822e728c78bf7818a608ecfdc883661f735300c1418a997f101ad"
+    },
+    {
+      "path": "src/lib/__tests__/native-locale-columns.ts",
+      "beforeSha256": "55bfcf276770a1296c9d5f7745af307dc0a7843d2375c9c0a0a1e1b2c29a1db1",
+      "afterSha256": "8c097e19289257353199f7ad8a918e9bbe1c3dea493cf4ccda33ed9b6e1697ad"
+    },
+    {
+      "path": "src/lib/__tests__/columns-publication-date.test.ts",
+      "beforeSha256": "3aab38fe8f4cb07aa6b4c9a32a33456aa443d16bc648c2ca4c1be51322600b97",
+      "afterSha256": "0b44f21309b710c8c3528414b413e86aef1e3827f4741d8b4bd099032fdeeb74"
+    }
+  ],
+  "initialBaseCommit": "7816ec28",
+  "integrationRenumbering": {
+    "reason": "Coordinator rebased onto 130fe5be, which registered road-rage column 122 in four locales; incoming articles and registrations preserved. Coordinator assigned an isolated 133-143 block.",
+    "previousRange": "122-132",
+    "currentRange": "133-143",
+    "articleBytesAndSlugsUnchanged": 11,
+    "imageBytesUnchanged": 11,
+    "ledgerCurrentCopyHashesUnchanged": 16,
+    "sourceLedgerHashesUnchanged": 16,
+    "incomingRoadRageFilesUnchanged": 4,
+    "registryUnionPreserved": true
+  },
+  "integrationRenumberingHistory": [
+    {
+      "reason": "Coordinator fast-forwarded to 64dac3f6, which registered traffic columns 120 and 121; both incoming articles and registrations preserved.",
+      "previousRange": "120-130",
+      "currentRange": "122-132",
+      "articleBytesAndSlugsUnchanged": 11,
+      "imageBytesUnchanged": 11,
+      "ledgerBytesUnchanged": 16,
+      "incomingTrafficFilesUnchanged": 2,
+      "registryUnionPreserved": true
+    }
+  ],
+  "baseUpdates": [
+    {
+      "previousBaseCommit": "130fe5be",
+      "baseCommit": "b3a339d4",
+      "reason": "Coordinator rebased onto incoming video/support data, generated-video QA script and traffic-test corrections. No reviewed article/image/ledger payload overlaps.",
+      "articleNumberRange": "133-143",
+      "articleSourceDestinationApprovedShaMatches": 11,
+      "imageShaMatches": 11,
+      "ledgerDestinationShaMatches": 16,
+      "ledgerSourceShaMatches": 16,
+      "incomingPathsPreserved": 16,
+      "testsAndBuild": "Owned by QA/release coordinator; no repeated test or build run by metadata worker."
+    }
+  ]
+}

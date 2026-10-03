@@ -633,6 +633,42 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-semiconductor-overseas-fab-core-key-technology-review"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-national-security-act-core-key-technology-korean-engineers"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-export-controls-shtc-entity-list-us-ear-compliance"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-engineer-job-change-trade-secret-national-security-judgments"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "cash-investment-courier-receipt-fraud-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "land-registration-alert-property-fraud-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "fake-lawyer-scam-recovery-fee-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-supplier-bank-account-change-bec"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-unpaid-invoice-fraud-or-contract"
     }
   ]
 }

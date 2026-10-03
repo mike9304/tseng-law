@@ -218,6 +218,8 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '094-korea-divorce-recognition-taiwan-household-registration.md', // family lane b01
     '110-korean-supplier-tsmc-vendor-qualification-contract.md', // semiconductor lane b01
     '116-taiwan-trade-secrets-act-criminal-civil-korean-companies.md', // semiconductor lane b04
+    '134-taiwan-national-security-act-core-key-technology-korean-engineers.md', // reviewed fraud/semiconductor release
+    '143-taiwan-unpaid-invoice-fraud-or-contract.md', // reviewed fraud/semiconductor release
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
@@ -225,12 +227,16 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '108-us-divorce-decree-recognition-taiwan.md', // family lane b02+b03 ship
     '112-micron-taiwan-trade-secret-cases-lessons-for-us-companies.md', // semiconductor lane b01
     '118-tsmc-arizona-chips-act-taiwan-outbound-approval.md', // semiconductor lane b04
+    '136-taiwan-export-controls-shtc-entity-list-us-ear-compliance.md', // reviewed fraud/semiconductor release
+    '142-taiwan-supplier-bank-account-change-bec.md', // reviewed fraud/semiconductor release
   ],
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
     '111-tsmc-kumamoto-jasm-taiwan-outbound-investment-rules.md', // semiconductor lane b01
     '115-japan-kyogi-rikon-recognition-taiwan.md', // family lane b04
     '117-japanese-materials-supplier-taiwan-nda-trade-secrets.md', // semiconductor lane b04
+    '135-japanese-equipment-maker-engineers-taiwan-work-permit.md', // reviewed fraud/semiconductor release
+    '141-taiwan-rental-deposit-before-viewing-fraud.md', // reviewed fraud/semiconductor release
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',
@@ -255,6 +261,11 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '119-taiwan-semiconductor-employees-overseas-assignment-labor-law.md', // semiconductor lane b04
     '120-taiwan-ambulance-red-light-emergency-priority-negligence.md',
     '121-taiwan-bus-stop-illegal-parking-no-contact-criminal-causation.md',
+    '133-taiwan-semiconductor-overseas-fab-core-key-technology-review.md', // reviewed fraud/semiconductor release
+    '137-taiwan-engineer-job-change-trade-secret-national-security-judgments.md', // reviewed fraud/semiconductor release
+    '138-cash-investment-courier-receipt-fraud-taiwan.md', // reviewed fraud/semiconductor release
+    '139-land-registration-alert-property-fraud-taiwan.md', // reviewed fraud/semiconductor release
+    '140-fake-lawyer-scam-recovery-fee-taiwan.md', // reviewed fraud/semiconductor release
   ],
 } as const;
 

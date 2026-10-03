@@ -139,4 +139,4 @@ A車駕駛說，停車輕碰是想「請他不要追了」。這個目的、倒�
 - [道路交通安全規則第94條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94)
 - [道路交通管理處罰條例第43條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43)（背景說明，兩份判決均未適用）
 
-本文由法律AI助理依據公開判決書與法規撰寫，資料確認日：2026-10-03。
+本文依據公開判決書與法規撰寫，資料確認日：2026-10-03。

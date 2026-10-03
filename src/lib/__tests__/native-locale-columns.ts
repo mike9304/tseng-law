@@ -311,6 +311,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '200-taiwan-protection-order-foreign-resident.md', // family lane b09
   ],
   ja: [
     '169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md',
@@ -340,6 +341,8 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
     '195-reserved-share-will-inheritance-dispute.md', // family lane b08
     '196-separation-cohabitation-duty-taiwan.md', // family lane b08
+    '198-alimony-after-divorce-civil-code-1057.md', // family lane b09
+    '199-child-surname-change-after-divorce.md', // family lane b09
   ],
 } as const;
 

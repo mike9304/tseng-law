@@ -210,6 +210,10 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '195': '2026-10-04',
   '196': '2026-10-04',
   '197': '2026-10-04',
+  // family lane b09
+  '198': '2026-10-04',
+  '199': '2026-10-04',
+  '200': '2026-10-04',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

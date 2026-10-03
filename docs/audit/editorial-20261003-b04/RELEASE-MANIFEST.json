@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
   "status": "date_refreshed_source_frozen_narrow_tests_passed_awaiting_root_co_release_qa",
-  "baseCommit": "4c27dbd0",
-  "baseCommitNote": "Current upstream release base after root started a normal merge preserving both histories. Working-tree reconciliation input is5478e021; root merge commit and independent QA/build remain pending. Prior integration bases/snapshots stay in history.",
+  "baseCommit": "a9b5f10a",
+  "baseCommitNote": "Current upstream a9b5 after root began a normal merge preserving both histories. Worker inputHEAD7e72; incoming traffic172/173 and videos preserved. Prior release/merge bases and approved byte history remain immutable; final root merge commit and independent QA/build pending.",
   "recordedAt": "2026-10-04T01:25:14+09:00",
   "recordedAtTaipei": "2026-10-04T00:25:14+08:00",
   "recordedAtUtc": "2026-10-03T16:25:14+00:00",
-  "scope": "Current B04 assigned files172-178: seven approved Oct4 articles, seven unchanged images, nineteen unchanged audit copies, manifest/audit2, shared registries3 and prior language-links test1 =39 paths versus incoming4c27. Joint B04+B05 own scope76; sitemap matches incoming exactly. Original36/37/39/77 observations are historical.",
+  "scope": "Current B04 assigned files174-180: approved article7, unchanged image7 and ledger19, manifest/audit2, shared registries3 and previous language-links test1 =39 paths versus incominga9b5. Joint own scope76. Original scopes and mappings remain historical.",
   "articles": [
     {
-      "number": 172,
+      "number": 174,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "home-leak-defect-notice-repair-evidence-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/drafts/zh-hant-home-leak-defect-notice-repair-evidence-taiwan.md",
-      "destination": "src/content/columns-zh/172-home-leak-defect-notice-repair-evidence-taiwan.md",
+      "destination": "src/content/columns-zh/174-home-leak-defect-notice-repair-evidence-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/home-leak-defect-notice-repair-evidence-taiwan",
       "sha256": "101a2d561218222b8f7701b048c038dcb8b6e74ac36fb773980fedcd4f33dc80",
       "sourceSha256": "101a2d561218222b8f7701b048c038dcb8b6e74ac36fb773980fedcd4f33dc80",
@@ -56,13 +56,13 @@
       "publicationDateDeltaSha256": "d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38"
     },
     {
-      "number": 173,
+      "number": 175,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "contractor-employee-status-control-work-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/drafts/zh-hant-contractor-employee-status-control-work-taiwan.md",
-      "destination": "src/content/columns-zh/173-contractor-employee-status-control-work-taiwan.md",
+      "destination": "src/content/columns-zh/175-contractor-employee-status-control-work-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/contractor-employee-status-control-work-taiwan",
       "sha256": "79f88bb0b8f3f76992cd51d1fafc3e240158b4dd2270956c00162bda47fbbc81",
       "sourceSha256": "79f88bb0b8f3f76992cd51d1fafc3e240158b4dd2270956c00162bda47fbbc81",
@@ -103,13 +103,13 @@
       "publicationDateDeltaSha256": "d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38"
     },
     {
-      "number": 174,
+      "number": 176,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "private-loan-joint-guarantor-first-demand-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/drafts/zh-hant-private-loan-joint-guarantor-first-demand-taiwan.md",
-      "destination": "src/content/columns-zh/174-private-loan-joint-guarantor-first-demand-taiwan.md",
+      "destination": "src/content/columns-zh/176-private-loan-joint-guarantor-first-demand-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/private-loan-joint-guarantor-first-demand-taiwan",
       "sha256": "7cb00e2151da58e1098fac5a29fb535db6d45adcfc7a092a7ff4abc7dab7df7e",
       "sourceSha256": "7cb00e2151da58e1098fac5a29fb535db6d45adcfc7a092a7ff4abc7dab7df7e",
@@ -150,13 +150,13 @@
       "publicationDateDeltaSha256": "d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38"
     },
     {
-      "number": 175,
+      "number": 177,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "zh-hant",
       "slug": "parent-home-gift-care-obligation-evidence-taiwan",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/drafts/zh-hant-parent-home-gift-care-obligation-evidence-taiwan.md",
-      "destination": "src/content/columns-zh/175-parent-home-gift-care-obligation-evidence-taiwan.md",
+      "destination": "src/content/columns-zh/177-parent-home-gift-care-obligation-evidence-taiwan.md",
       "url": "https://tseng-law.com/zh-hant/columns/parent-home-gift-care-obligation-evidence-taiwan",
       "sha256": "4cf5fa53e8c0481bf04844ed9ddfcf7455026aad1a4b91a96a9122c2f912b2b2",
       "sourceSha256": "4cf5fa53e8c0481bf04844ed9ddfcf7455026aad1a4b91a96a9122c2f912b2b2",
@@ -197,13 +197,13 @@
       "publicationDateDeltaSha256": "d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38"
     },
     {
-      "number": 176,
+      "number": 178,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "ja",
       "slug": "taiwan-hotel-luggage-loss-custody-japanese",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/drafts/ja-taiwan-hotel-luggage-loss-custody-japanese.md",
-      "destination": "src/content/columns-ja/176-taiwan-hotel-luggage-loss-custody-japanese.md",
+      "destination": "src/content/columns-ja/178-taiwan-hotel-luggage-loss-custody-japanese.md",
       "url": "https://tseng-law.com/ja/columns/taiwan-hotel-luggage-loss-custody-japanese",
       "sha256": "f7ca172bf0e6b6c91d0913ac6970b26ac192daacdfdc3fc50544e20947b3f447",
       "sourceSha256": "f7ca172bf0e6b6c91d0913ac6970b26ac192daacdfdc3fc50544e20947b3f447",
@@ -244,13 +244,13 @@
       "publicationDateDeltaSha256": "d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38"
     },
     {
-      "number": 177,
+      "number": 179,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "en",
       "slug": "taiwan-landlord-entry-rental-home-repairs",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/drafts/en-taiwan-landlord-entry-rental-home-repairs.md",
-      "destination": "src/content/columns-en/177-taiwan-landlord-entry-rental-home-repairs.md",
+      "destination": "src/content/columns-en/179-taiwan-landlord-entry-rental-home-repairs.md",
       "url": "https://tseng-law.com/en/columns/taiwan-landlord-entry-rental-home-repairs",
       "sha256": "68f62599bb6548db73112a6f6a5304d15e596a725f51472fdafe19b6645d078f",
       "sourceSha256": "68f62599bb6548db73112a6f6a5304d15e596a725f51472fdafe19b6645d078f",
@@ -297,13 +297,13 @@
       "publicationDateDeltaSha256": "d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38"
     },
     {
-      "number": 178,
+      "number": 180,
       "numberStatus": "assigned_in_release",
       "kind": "editorial",
       "locale": "ko",
       "slug": "taiwan-unpaid-invoice-settlement-release-korean",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/drafts/ko-taiwan-unpaid-invoice-settlement-release-korean.md",
-      "destination": "src/content/columns/178-taiwan-unpaid-invoice-settlement-release-korean.md",
+      "destination": "src/content/columns/180-taiwan-unpaid-invoice-settlement-release-korean.md",
       "url": "https://tseng-law.com/ko/columns/taiwan-unpaid-invoice-settlement-release-korean",
       "sha256": "ae9fc852f7da4409fe9d7b59d140d4785ac40aa8c91e91258129a8c508f135e2",
       "sourceSha256": "ae9fc852f7da4409fe9d7b59d140d4785ac40aa8c91e91258129a8c508f135e2",
@@ -597,12 +597,12 @@
   "registryChanges": [
     {
       "path": "src/content/column-embeddings-pending.json",
-      "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
-      "observedHeadSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
-      "observedBeforeSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
-      "beforeSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
-      "observedWorkingTreeSha256": "ba0ecc04c1d9fb1602e4ec90039e78617d7e8d838dce78a9c1a2c5559d4eb1be",
-      "afterSha256": "ba0ecc04c1d9fb1602e4ec90039e78617d7e8d838dce78a9c1a2c5559d4eb1be",
+      "snapshotCommit": "a9b5f10aeb47e1ae7ab37159cf3d1b60f15f7803",
+      "observedHeadSha256": "19a58900206b114680bfccb6372d994dd3ed8a0f06be950100b5bde592899e5f",
+      "observedBeforeSha256": "19a58900206b114680bfccb6372d994dd3ed8a0f06be950100b5bde592899e5f",
+      "beforeSha256": "19a58900206b114680bfccb6372d994dd3ed8a0f06be950100b5bde592899e5f",
+      "observedWorkingTreeSha256": "d1cf140293f07618b84c6d56bd0d26320925131760f06dc90219ca5fcaf76e5e",
+      "afterSha256": "d1cf140293f07618b84c6d56bd0d26320925131760f06dc90219ca5fcaf76e5e",
       "status": "integrated_merge_union",
       "plannedAdditions": [
         {
@@ -631,89 +631,79 @@
         }
       ],
       "entriesAddedByThisBatch": 6,
-      "jointEntriesBefore": 183,
-      "jointEntriesAfter": 195,
+      "jointEntriesBefore": 185,
+      "jointEntriesAfter": 197,
       "jointEntriesAdded": 12,
       "allIncomingEntriesPreserved": true,
       "jointInverseRestoresEntireOriginBytes": true,
-      "inverseOriginSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
-      "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
+      "inverseOriginSha256": "19a58900206b114680bfccb6372d994dd3ed8a0f06be950100b5bde592899e5f",
+      "snapshotNote": "Current a9b5 exact union; remove both own batches together to reconstruct origin bytes. Previous integration/date/4c27 snapshots and inverse proofs remain in history."
     },
     {
       "path": "src/lib/__tests__/native-locale-columns.ts",
-      "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
-      "observedHeadSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
-      "observedBeforeSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
-      "beforeSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
-      "observedWorkingTreeSha256": "f881e733bd12c206c7e6775036ad8b8dc40f23e5e30f0bf218a06b5382a6cc8e",
-      "afterSha256": "f881e733bd12c206c7e6775036ad8b8dc40f23e5e30f0bf218a06b5382a6cc8e",
+      "snapshotCommit": "a9b5f10aeb47e1ae7ab37159cf3d1b60f15f7803",
+      "observedHeadSha256": "8cc01912a32b009f31ca039d330ddcf97dc6b55193be23694e33d829df4dfd4f",
+      "observedBeforeSha256": "8cc01912a32b009f31ca039d330ddcf97dc6b55193be23694e33d829df4dfd4f",
+      "beforeSha256": "8cc01912a32b009f31ca039d330ddcf97dc6b55193be23694e33d829df4dfd4f",
+      "observedWorkingTreeSha256": "b2f0a3f205a595320d9d726e56c492c59d48d12762961e32b953ea3f255306cc",
+      "afterSha256": "b2f0a3f205a595320d9d726e56c492c59d48d12762961e32b953ea3f255306cc",
       "status": "integrated_merge_union",
       "plannedAdditions": [
         {
           "locale": "zh-hant",
-          "filename": "172-home-leak-defect-notice-repair-evidence-taiwan.md",
+          "filename": "174-home-leak-defect-notice-repair-evidence-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "zh-hant",
-          "filename": "173-contractor-employee-status-control-work-taiwan.md",
+          "filename": "175-contractor-employee-status-control-work-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "zh-hant",
-          "filename": "174-private-loan-joint-guarantor-first-demand-taiwan.md",
+          "filename": "176-private-loan-joint-guarantor-first-demand-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "zh-hant",
-          "filename": "175-parent-home-gift-care-obligation-evidence-taiwan.md",
+          "filename": "177-parent-home-gift-care-obligation-evidence-taiwan.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "ja",
-          "filename": "176-taiwan-hotel-luggage-loss-custody-japanese.md",
+          "filename": "178-taiwan-hotel-luggage-loss-custody-japanese.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "en",
-          "filename": "177-taiwan-landlord-entry-rental-home-repairs.md",
+          "filename": "179-taiwan-landlord-entry-rental-home-repairs.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         },
         {
           "locale": "ko",
-          "filename": "178-taiwan-unpaid-invoice-settlement-release-korean.md",
+          "filename": "180-taiwan-unpaid-invoice-settlement-release-korean.md",
           "group": "COUNTRY_COLUMN_FILES_20261004"
         }
       ],
       "entriesAddedByThisBatch": 7,
-      "jointEntriesBefore": 4,
-      "jointEntriesAfter": 18,
+      "jointEntriesBefore": 6,
+      "jointEntriesAfter": 20,
       "jointEntriesAdded": 14,
       "allIncomingEntriesPreserved": true,
       "jointInverseRestoresEntireOriginBytes": true,
-      "inverseOriginSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
-      "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
+      "inverseOriginSha256": "8cc01912a32b009f31ca039d330ddcf97dc6b55193be23694e33d829df4dfd4f",
+      "snapshotNote": "Current a9b5 exact union; remove both own batches together to reconstruct origin bytes. Previous integration/date/4c27 snapshots and inverse proofs remain in history."
     },
     {
       "path": "src/lib/__tests__/columns-publication-date.test.ts",
-      "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
-      "observedHeadSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
-      "observedBeforeSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
-      "beforeSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
-      "observedWorkingTreeSha256": "d53036645a56f8b12573891b3733ac807646e2f3f53ecef1e25935e874ee2c49",
-      "afterSha256": "d53036645a56f8b12573891b3733ac807646e2f3f53ecef1e25935e874ee2c49",
+      "snapshotCommit": "a9b5f10aeb47e1ae7ab37159cf3d1b60f15f7803",
+      "observedHeadSha256": "1d36d0221ab2707c19b358a27202a3eca7726df52c45dfdcce76dc9181ebcb9e",
+      "observedBeforeSha256": "1d36d0221ab2707c19b358a27202a3eca7726df52c45dfdcce76dc9181ebcb9e",
+      "beforeSha256": "1d36d0221ab2707c19b358a27202a3eca7726df52c45dfdcce76dc9181ebcb9e",
+      "observedWorkingTreeSha256": "b2a5fb54a267151618d1ffda5c9b1499cc179aa34d2ceb95d2877cd79c4503ad",
+      "afterSha256": "b2a5fb54a267151618d1ffda5c9b1499cc179aa34d2ceb95d2877cd79c4503ad",
       "status": "integrated_merge_union",
       "plannedAdditions": [
-        {
-          "number": "172",
-          "date": "2026-10-04",
-          "group": "VERIFIED_PUBLICATION_DATES"
-        },
-        {
-          "number": "173",
-          "date": "2026-10-04",
-          "group": "VERIFIED_PUBLICATION_DATES"
-        },
         {
           "number": "174",
           "date": "2026-10-04",
@@ -738,16 +728,26 @@
           "number": "178",
           "date": "2026-10-04",
           "group": "VERIFIED_PUBLICATION_DATES"
+        },
+        {
+          "number": "179",
+          "date": "2026-10-04",
+          "group": "VERIFIED_PUBLICATION_DATES"
+        },
+        {
+          "number": "180",
+          "date": "2026-10-04",
+          "group": "VERIFIED_PUBLICATION_DATES"
         }
       ],
       "entriesAddedByThisBatch": 7,
-      "jointEntriesBefore": 151,
-      "jointEntriesAfter": 165,
+      "jointEntriesBefore": 153,
+      "jointEntriesAfter": 167,
       "jointEntriesAdded": 14,
       "allIncomingEntriesPreserved": true,
       "jointInverseRestoresEntireOriginBytes": true,
-      "inverseOriginSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
-      "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
+      "inverseOriginSha256": "1d36d0221ab2707c19b358a27202a3eca7726df52c45dfdcce76dc9181ebcb9e",
+      "snapshotNote": "Current a9b5 exact union; remove both own batches together to reconstruct origin bytes. Previous integration/date/4c27 snapshots and inverse proofs remain in history."
     }
   ],
   "expectedIntegrationCounts": {
@@ -871,7 +871,7 @@
     "enSummaryLengthCalculated": 152,
     "enSeoTitleWithSiteSuffixLengthCalculated": 52,
     "metadataLengthCalculationIsNotRepositoryTest": true,
-    "testsRun": true,
+    "testsRun": false,
     "buildRun": false,
     "browserOrHttpVerificationRun": false,
     "copiedArticlesByteIdentical": 7,
@@ -922,13 +922,13 @@
         "docs/audit/editorial-20261003-b04/reviews/legal-ja-r1.md",
         "docs/audit/editorial-20261003-b04/reviews/legal-zh-r1.md",
         "docs/audit/editorial-20261003-b04/reviews/voice-r1.md",
-        "src/content/columns-en/177-taiwan-landlord-entry-rental-home-repairs.md",
-        "src/content/columns-ja/176-taiwan-hotel-luggage-loss-custody-japanese.md",
-        "src/content/columns-zh/172-home-leak-defect-notice-repair-evidence-taiwan.md",
-        "src/content/columns-zh/173-contractor-employee-status-control-work-taiwan.md",
-        "src/content/columns-zh/174-private-loan-joint-guarantor-first-demand-taiwan.md",
-        "src/content/columns-zh/175-parent-home-gift-care-obligation-evidence-taiwan.md",
-        "src/content/columns/178-taiwan-unpaid-invoice-settlement-release-korean.md",
+        "src/content/columns-en/179-taiwan-landlord-entry-rental-home-repairs.md",
+        "src/content/columns-ja/178-taiwan-hotel-luggage-loss-custody-japanese.md",
+        "src/content/columns-zh/174-home-leak-defect-notice-repair-evidence-taiwan.md",
+        "src/content/columns-zh/175-contractor-employee-status-control-work-taiwan.md",
+        "src/content/columns-zh/176-private-loan-joint-guarantor-first-demand-taiwan.md",
+        "src/content/columns-zh/177-parent-home-gift-care-obligation-evidence-taiwan.md",
+        "src/content/columns/180-taiwan-unpaid-invoice-settlement-release-korean.md",
         "src/lib/__tests__/columns-publication-date.test.ts",
         "src/lib/__tests__/native-locale-columns.ts"
       ],
@@ -959,26 +959,21 @@
       }
     },
     "narrowMergeTests": {
-      "suiteFiles": 5,
-      "testsPassed": 70,
-      "testsFailed": 0,
-      "elapsedSeconds": 16.551,
-      "eslintExitCode": 0,
-      "diffCheckExitCode": 0,
-      "independentFullQaAndBuild": "pending"
+      "runForCurrentMerge": false,
+      "reason": "Root assigned current product tests/build to independent QA; previous run is retained in preMergeA9b5History.verification."
     },
     "currentHashAliasVerification": {
       "aliasesCheckedForThisBatch": 190,
       "mismatches": 0,
       "normalizedVoiceSourceAndCopyHashesSeparatelyVerified": true,
-      "checkedAtUtc": "2026-10-03T17:24:33.441646+00:00",
+      "checkedAtUtc": "2026-10-03T17:57:02.851324+00:00",
       "historyExcludedIntentionally": true
     }
   },
   "normalizationPolicy": "Current19 audit source/destination copies are byte-identical and whitespace-clean; normalization0. Preserve originals and historical review/date-delta records.",
   "existingPolicies": "Use existing FRAUD-EDITORIAL-POLICY.md and EDITORIAL-VOICE.md; no policy/runtime/UI/dependency changes.",
   "qaHandoff": "Root owns commit, B05 separately authorized integration, combined full QA, clean build, desktop/mobile and actual production readback. This worker ran only four relevant existing suites and two-file ESLint; no assertion weakened or deleted, no runtime/build/runner/Git mutation. Prior QA failure/repair history preserved.",
-  "baseCommitFull": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+  "baseCommitFull": "a9b5f10aeb47e1ae7ab37159cf3d1b60f15f7803",
   "preparationPacket": {
     "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/RELEASE-PREPARE.json",
     "sha256": "7a93e67277dae941b2b335b07fb1a8f614b86b99883b4f7bb82ba886f5b4a5ff",
@@ -1060,7 +1055,7 @@
     "contentIntegrationFiles": 38,
     "additionalExistingTestFiles": 1,
     "totalFilesSinceReleaseBase": 39,
-    "releaseBaseCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+    "releaseBaseCommit": "a9b5f10aeb47e1ae7ab37159cf3d1b60f15f7803",
     "paths": [
       "docs/audit/editorial-20261003-b04.md",
       "docs/audit/editorial-20261003-b04/B04publication-date-delta.json",
@@ -1091,13 +1086,13 @@
       "public/images/columns/editorial-20261003-b04/taiwan-landlord-entry-rental-home-repairs.png",
       "public/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
       "src/content/column-embeddings-pending.json",
-      "src/content/columns-en/177-taiwan-landlord-entry-rental-home-repairs.md",
-      "src/content/columns-ja/176-taiwan-hotel-luggage-loss-custody-japanese.md",
-      "src/content/columns-zh/172-home-leak-defect-notice-repair-evidence-taiwan.md",
-      "src/content/columns-zh/173-contractor-employee-status-control-work-taiwan.md",
-      "src/content/columns-zh/174-private-loan-joint-guarantor-first-demand-taiwan.md",
-      "src/content/columns-zh/175-parent-home-gift-care-obligation-evidence-taiwan.md",
-      "src/content/columns/178-taiwan-unpaid-invoice-settlement-release-korean.md",
+      "src/content/columns-en/179-taiwan-landlord-entry-rental-home-repairs.md",
+      "src/content/columns-ja/178-taiwan-hotel-luggage-loss-custody-japanese.md",
+      "src/content/columns-zh/174-home-leak-defect-notice-repair-evidence-taiwan.md",
+      "src/content/columns-zh/175-contractor-employee-status-control-work-taiwan.md",
+      "src/content/columns-zh/176-private-loan-joint-guarantor-first-demand-taiwan.md",
+      "src/content/columns-zh/177-parent-home-gift-care-obligation-evidence-taiwan.md",
+      "src/content/columns/180-taiwan-unpaid-invoice-settlement-release-korean.md",
       "src/lib/__tests__/column-language-links.test.tsx",
       "src/lib/__tests__/columns-publication-date.test.ts",
       "src/lib/__tests__/native-locale-columns.ts"
@@ -2510,16 +2505,16 @@
     "inputHead": "5478e021c31aa381854dd45fafc2d5c805ad7bee",
     "note": "Immutable pre-merge observation. Original draft/image/review bytes and prior integration/date/QA history remain unchanged."
   },
-  "assignedNumberRange": "172-178",
+  "assignedNumberRange": "174-180",
   "coReleaseScopeObservation": {
-    "currentUpstreamBase": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
-    "inputOwnHead": "5478e021c31aa381854dd45fafc2d5c805ad7bee",
+    "currentUpstreamBase": "a9b5f10aeb47e1ae7ab37159cf3d1b60f15f7803",
+    "inputOwnHead": "7e72ba11811ff3edfdd8092db07348076de23fac",
     "b04Paths": 39,
     "b05Paths": 40,
     "sharedRegistryPaths": 3,
     "combinedUniquePaths": 76,
     "sitemapMatchesOriginAndAddsNoOwnPath": true,
-    "note": "Actual working-tree path union against origin/main plus untracked own renamed files, before root stages/commits the merge."
+    "note": "Actual worktree difference versus origin/main plus14 untracked own renamed files; root stage/merge commit pending."
   },
   "merge4c27Reconciliation": {
     "recordedAtUtc": "2026-10-03T17:24:33.441646+00:00",
@@ -2610,5 +2605,503 @@
     "externalEvidenceSha256": "fefc3ab6561f4fd40a7bca9ccaae4495412a726512aa9fff57eb142d68bc9fc8",
     "externalStructuredEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/merge-4c27-reconciliation.json",
     "finalMergeCommitIndependentQaBuildPublication": "pending"
+  },
+  "preMergeA9b5History": {
+    "baseCommit": "4c27dbd0",
+    "baseCommitFull": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+    "baseCommitNote": "Current upstream release base after root started a normal merge preserving both histories. Working-tree reconciliation input is5478e021; root merge commit and independent QA/build remain pending. Prior integration bases/snapshots stay in history.",
+    "scope": "Current B04 assigned files172-178: seven approved Oct4 articles, seven unchanged images, nineteen unchanged audit copies, manifest/audit2, shared registries3 and prior language-links test1 =39 paths versus incoming4c27. Joint B04+B05 own scope76; sitemap matches incoming exactly. Original36/37/39/77 observations are historical.",
+    "registryChanges": [
+      {
+        "path": "src/content/column-embeddings-pending.json",
+        "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+        "observedHeadSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+        "observedBeforeSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+        "beforeSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+        "observedWorkingTreeSha256": "ba0ecc04c1d9fb1602e4ec90039e78617d7e8d838dce78a9c1a2c5559d4eb1be",
+        "afterSha256": "ba0ecc04c1d9fb1602e4ec90039e78617d7e8d838dce78a9c1a2c5559d4eb1be",
+        "status": "integrated_merge_union",
+        "plannedAdditions": [
+          {
+            "locale": "zh-hant",
+            "slug": "home-leak-defect-notice-repair-evidence-taiwan"
+          },
+          {
+            "locale": "zh-hant",
+            "slug": "contractor-employee-status-control-work-taiwan"
+          },
+          {
+            "locale": "zh-hant",
+            "slug": "private-loan-joint-guarantor-first-demand-taiwan"
+          },
+          {
+            "locale": "zh-hant",
+            "slug": "parent-home-gift-care-obligation-evidence-taiwan"
+          },
+          {
+            "locale": "en",
+            "slug": "taiwan-landlord-entry-rental-home-repairs"
+          },
+          {
+            "locale": "ko",
+            "slug": "taiwan-unpaid-invoice-settlement-release-korean"
+          }
+        ],
+        "entriesAddedByThisBatch": 6,
+        "jointEntriesBefore": 183,
+        "jointEntriesAfter": 195,
+        "jointEntriesAdded": 12,
+        "allIncomingEntriesPreserved": true,
+        "jointInverseRestoresEntireOriginBytes": true,
+        "inverseOriginSha256": "63c7a37f5219e5187e9d26be9c686bb8b3b3480128bdbf90cb3a9ceb73085480",
+        "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
+      },
+      {
+        "path": "src/lib/__tests__/native-locale-columns.ts",
+        "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+        "observedHeadSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+        "observedBeforeSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+        "beforeSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+        "observedWorkingTreeSha256": "f881e733bd12c206c7e6775036ad8b8dc40f23e5e30f0bf218a06b5382a6cc8e",
+        "afterSha256": "f881e733bd12c206c7e6775036ad8b8dc40f23e5e30f0bf218a06b5382a6cc8e",
+        "status": "integrated_merge_union",
+        "plannedAdditions": [
+          {
+            "locale": "zh-hant",
+            "filename": "172-home-leak-defect-notice-repair-evidence-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "zh-hant",
+            "filename": "173-contractor-employee-status-control-work-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "zh-hant",
+            "filename": "174-private-loan-joint-guarantor-first-demand-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "zh-hant",
+            "filename": "175-parent-home-gift-care-obligation-evidence-taiwan.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "ja",
+            "filename": "176-taiwan-hotel-luggage-loss-custody-japanese.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "en",
+            "filename": "177-taiwan-landlord-entry-rental-home-repairs.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          },
+          {
+            "locale": "ko",
+            "filename": "178-taiwan-unpaid-invoice-settlement-release-korean.md",
+            "group": "COUNTRY_COLUMN_FILES_20261004"
+          }
+        ],
+        "entriesAddedByThisBatch": 7,
+        "jointEntriesBefore": 4,
+        "jointEntriesAfter": 18,
+        "jointEntriesAdded": 14,
+        "allIncomingEntriesPreserved": true,
+        "jointInverseRestoresEntireOriginBytes": true,
+        "inverseOriginSha256": "44019389740cb2b9f73eff59d319a1227c2d34d9fe8efca99b4a90fa5276b51f",
+        "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
+      },
+      {
+        "path": "src/lib/__tests__/columns-publication-date.test.ts",
+        "snapshotCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+        "observedHeadSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+        "observedBeforeSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+        "beforeSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+        "observedWorkingTreeSha256": "d53036645a56f8b12573891b3733ac807646e2f3f53ecef1e25935e874ee2c49",
+        "afterSha256": "d53036645a56f8b12573891b3733ac807646e2f3f53ecef1e25935e874ee2c49",
+        "status": "integrated_merge_union",
+        "plannedAdditions": [
+          {
+            "number": "172",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "173",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "174",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "175",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "176",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "177",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          },
+          {
+            "number": "178",
+            "date": "2026-10-04",
+            "group": "VERIFIED_PUBLICATION_DATES"
+          }
+        ],
+        "entriesAddedByThisBatch": 7,
+        "jointEntriesBefore": 151,
+        "jointEntriesAfter": 165,
+        "jointEntriesAdded": 14,
+        "allIncomingEntriesPreserved": true,
+        "jointInverseRestoresEntireOriginBytes": true,
+        "inverseOriginSha256": "1781d0d6e1fab8c730803693df6f43c755d6eb8bc8df9f2e2844a0e2ebc51d0d",
+        "snapshotNote": "Current merged registry snapshot; original per-batch integration/date-refresh snapshots and inverse records remain in preMerge4c27History. Remove both own batches together to reconstruct origin bytes."
+      }
+    ],
+    "verification": {
+      "sourceArticleHashesMatchFinalVoiceAndLegal": 7,
+      "sourceEvidenceHashesMatchFinalVoiceAndLegal": 7,
+      "finalReviewHashesMatchRootFreeze": 4,
+      "sourceImageBytesHashesDimensionsMatch": 7,
+      "sourcePromptsMatchImageManifest": 7,
+      "sourceLedgerArtifactsChecked": 19,
+      "sourceArticlesWhitespaceClean": 7,
+      "ledgerOriginalsAlreadyWhitespaceClean": 19,
+      "ledgerCopiesRequiringWhitespaceNormalization": 0,
+      "normalizationPerformed": false,
+      "copiedArticles": 7,
+      "copiedImages": 7,
+      "copiedLedgerArtifacts": 19,
+      "registryMutations": 3,
+      "enSummaryLengthCalculated": 152,
+      "enSeoTitleWithSiteSuffixLengthCalculated": 52,
+      "metadataLengthCalculationIsNotRepositoryTest": true,
+      "testsRun": true,
+      "buildRun": false,
+      "browserOrHttpVerificationRun": false,
+      "copiedArticlesByteIdentical": 7,
+      "copiedImageByteMatches": 7,
+      "ledgerCopiesByteIdentical": 19,
+      "ledgerCopiesWhitespaceNormalized": 0,
+      "nativeRegistryAdded": 7,
+      "publicationDatesAdded": 7,
+      "pendingEmbeddingsAdded": 6,
+      "pendingEmbeddingsLocales": [
+        "ko",
+        "en",
+        "zh-hant"
+      ],
+      "semiconductorBoardAdded": 0,
+      "allExistingRegistryEntriesPreserved": true,
+      "gitDiffCheck": {
+        "command": "git diff --check",
+        "exitCode": 0,
+        "warnings": 0
+      },
+      "newFilesWhitespaceCheck": {
+        "command": "git diff --no-index --check -- /dev/null <each current ledger>",
+        "ledgerFilesChecked": 19,
+        "warnings": 0,
+        "pngFilesVerifiedByBytesHashDimensions": 7
+      },
+      "sourceAndDestinationMetadataPathsMatch": 7,
+      "scopeCheck": {
+        "dateRefreshExistingFilesChanged": 22,
+        "newDateLedgerFiles": 2,
+        "totalChangedOrNewFiles": 24,
+        "unexpectedChangedOrUntrackedFiles": 0,
+        "conflictMarkers": 0,
+        "paths": [
+          "docs/audit/editorial-20261003-b04.md",
+          "docs/audit/editorial-20261003-b04/B04publication-date-delta.json",
+          "docs/audit/editorial-20261003-b04/B04publication-date-delta.md",
+          "docs/audit/editorial-20261003-b04/RELEASE-MANIFEST.json",
+          "docs/audit/editorial-20261003-b04/evidence/en-taiwan-landlord-entry-rental-home-repairs.md",
+          "docs/audit/editorial-20261003-b04/evidence/ja-taiwan-hotel-luggage-loss-custody-japanese.md",
+          "docs/audit/editorial-20261003-b04/evidence/ko-taiwan-unpaid-invoice-settlement-release-korean.md",
+          "docs/audit/editorial-20261003-b04/evidence/zh-hant-contractor-employee-status-control-work-taiwan.md",
+          "docs/audit/editorial-20261003-b04/evidence/zh-hant-home-leak-defect-notice-repair-evidence-taiwan.md",
+          "docs/audit/editorial-20261003-b04/evidence/zh-hant-parent-home-gift-care-obligation-evidence-taiwan.md",
+          "docs/audit/editorial-20261003-b04/evidence/zh-hant-private-loan-joint-guarantor-first-demand-taiwan.md",
+          "docs/audit/editorial-20261003-b04/reviews/legal-en-ko-r1.md",
+          "docs/audit/editorial-20261003-b04/reviews/legal-ja-r1.md",
+          "docs/audit/editorial-20261003-b04/reviews/legal-zh-r1.md",
+          "docs/audit/editorial-20261003-b04/reviews/voice-r1.md",
+          "src/content/columns-en/177-taiwan-landlord-entry-rental-home-repairs.md",
+          "src/content/columns-ja/176-taiwan-hotel-luggage-loss-custody-japanese.md",
+          "src/content/columns-zh/172-home-leak-defect-notice-repair-evidence-taiwan.md",
+          "src/content/columns-zh/173-contractor-employee-status-control-work-taiwan.md",
+          "src/content/columns-zh/174-private-loan-joint-guarantor-first-demand-taiwan.md",
+          "src/content/columns-zh/175-parent-home-gift-care-obligation-evidence-taiwan.md",
+          "src/content/columns/178-taiwan-unpaid-invoice-settlement-release-korean.md",
+          "src/lib/__tests__/columns-publication-date.test.ts",
+          "src/lib/__tests__/native-locale-columns.ts"
+        ],
+        "cumulativePublicationPaths": 39
+      },
+      "sourceFreezeVerifiedAt": "2026-10-04T01:25:14+09:00",
+      "sourceFreezeVerifiedAtTaipei": "2026-10-04T00:25:14+08:00",
+      "currentDateDeltaInverseWholeMatches": 7,
+      "currentDateDeltaBodyMatches": 7,
+      "narrowTests": {
+        "command": "npx vitest run src/lib/__tests__/columns-publication-date.test.ts src/lib/__tests__/column-native-date-display.test.ts src/lib/__tests__/expertise-columns-20260930.test.ts src/lib/__tests__/column-language-links.test.tsx",
+        "exitCode": 0,
+        "testFilesPassed": 4,
+        "testsPassed": 70,
+        "testsFailed": 0,
+        "durationSeconds": 7.99,
+        "outputSummary": [
+          "columns-publication-date.test.ts: 12 passed",
+          "column-native-date-display.test.ts: 6 passed",
+          "expertise-columns-20260930.test.ts: 37 passed",
+          "column-language-links.test.tsx: 15 passed",
+          "Test Files 4 passed (4); Tests70 passed (70)"
+        ],
+        "lint": {
+          "command": "npx eslint --max-warnings=0 src/lib/__tests__/native-locale-columns.ts src/lib/__tests__/columns-publication-date.test.ts",
+          "exitCode": 0,
+          "warnings": 0
+        }
+      },
+      "narrowMergeTests": {
+        "suiteFiles": 5,
+        "testsPassed": 70,
+        "testsFailed": 0,
+        "elapsedSeconds": 16.551,
+        "eslintExitCode": 0,
+        "diffCheckExitCode": 0,
+        "independentFullQaAndBuild": "pending"
+      },
+      "currentHashAliasVerification": {
+        "aliasesCheckedForThisBatch": 190,
+        "mismatches": 0,
+        "normalizedVoiceSourceAndCopyHashesSeparatelyVerified": true,
+        "checkedAtUtc": "2026-10-03T17:24:33.441646+00:00",
+        "historyExcludedIntentionally": true
+      }
+    },
+    "finalPublicationScope": {
+      "contentIntegrationFiles": 38,
+      "additionalExistingTestFiles": 1,
+      "totalFilesSinceReleaseBase": 39,
+      "releaseBaseCommit": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+      "paths": [
+        "docs/audit/editorial-20261003-b04.md",
+        "docs/audit/editorial-20261003-b04/B04publication-date-delta.json",
+        "docs/audit/editorial-20261003-b04/B04publication-date-delta.md",
+        "docs/audit/editorial-20261003-b04/IMAGE-MANIFEST.json",
+        "docs/audit/editorial-20261003-b04/IMAGE-PROMPTS-01.json",
+        "docs/audit/editorial-20261003-b04/IMAGE-PROMPTS-02.json",
+        "docs/audit/editorial-20261003-b04/IMAGE-QA.md",
+        "docs/audit/editorial-20261003-b04/RELEASE-MANIFEST.json",
+        "docs/audit/editorial-20261003-b04/TOPIC-BRIEFS.md",
+        "docs/audit/editorial-20261003-b04/WRITER-WORKORDER.md",
+        "docs/audit/editorial-20261003-b04/evidence/en-taiwan-landlord-entry-rental-home-repairs.md",
+        "docs/audit/editorial-20261003-b04/evidence/ja-taiwan-hotel-luggage-loss-custody-japanese.md",
+        "docs/audit/editorial-20261003-b04/evidence/ko-taiwan-unpaid-invoice-settlement-release-korean.md",
+        "docs/audit/editorial-20261003-b04/evidence/zh-hant-contractor-employee-status-control-work-taiwan.md",
+        "docs/audit/editorial-20261003-b04/evidence/zh-hant-home-leak-defect-notice-repair-evidence-taiwan.md",
+        "docs/audit/editorial-20261003-b04/evidence/zh-hant-parent-home-gift-care-obligation-evidence-taiwan.md",
+        "docs/audit/editorial-20261003-b04/evidence/zh-hant-private-loan-joint-guarantor-first-demand-taiwan.md",
+        "docs/audit/editorial-20261003-b04/reviews/legal-en-ko-r1.md",
+        "docs/audit/editorial-20261003-b04/reviews/legal-ja-r1.md",
+        "docs/audit/editorial-20261003-b04/reviews/legal-zh-r1.md",
+        "docs/audit/editorial-20261003-b04/reviews/voice-r1.md",
+        "public/images/columns/editorial-20261003-b04/contractor-employee-status-control-work-taiwan.png",
+        "public/images/columns/editorial-20261003-b04/home-leak-defect-notice-repair-evidence-taiwan.png",
+        "public/images/columns/editorial-20261003-b04/parent-home-gift-care-obligation-evidence-taiwan.png",
+        "public/images/columns/editorial-20261003-b04/private-loan-joint-guarantor-first-demand-taiwan.png",
+        "public/images/columns/editorial-20261003-b04/taiwan-hotel-luggage-loss-custody-japanese.png",
+        "public/images/columns/editorial-20261003-b04/taiwan-landlord-entry-rental-home-repairs.png",
+        "public/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+        "src/content/column-embeddings-pending.json",
+        "src/content/columns-en/177-taiwan-landlord-entry-rental-home-repairs.md",
+        "src/content/columns-ja/176-taiwan-hotel-luggage-loss-custody-japanese.md",
+        "src/content/columns-zh/172-home-leak-defect-notice-repair-evidence-taiwan.md",
+        "src/content/columns-zh/173-contractor-employee-status-control-work-taiwan.md",
+        "src/content/columns-zh/174-private-loan-joint-guarantor-first-demand-taiwan.md",
+        "src/content/columns-zh/175-parent-home-gift-care-obligation-evidence-taiwan.md",
+        "src/content/columns/178-taiwan-unpaid-invoice-settlement-release-korean.md",
+        "src/lib/__tests__/column-language-links.test.tsx",
+        "src/lib/__tests__/columns-publication-date.test.ts",
+        "src/lib/__tests__/native-locale-columns.ts"
+      ],
+      "contentIntegrationCountsAboveAreHistoricalAndUnchanged": true,
+      "historicalOriginalScopeFiles": 37
+    },
+    "currentPublicationCounts": {
+      "articles": 7,
+      "images": 7,
+      "ledgerCopies": 19,
+      "manifestAndAudit": 2,
+      "newFilesSinceCurrentUpstreamBase": 35,
+      "registryFilesInCumulativeRelease": 3,
+      "additionalExistingTestRepairFiles": 1,
+      "totalFilesSinceCurrentUpstreamBase": 39,
+      "dateRefreshChangedPaths": 24,
+      "dateRefreshRegistryFilesChanged": 2,
+      "dateRefreshPendingEmbeddingFileChanged": false,
+      "historicalOriginalIntegrationFiles": 36,
+      "historicalAfterTestRepairFiles": 37
+    },
+    "assignedNumberRange": "172-178",
+    "coReleaseScopeObservation": {
+      "currentUpstreamBase": "4c27dbd017087fe27dfd24e1e95f0054d4b5f939",
+      "inputOwnHead": "5478e021c31aa381854dd45fafc2d5c805ad7bee",
+      "b04Paths": 39,
+      "b05Paths": 40,
+      "sharedRegistryPaths": 3,
+      "combinedUniquePaths": 76,
+      "sitemapMatchesOriginAndAddsNoOwnPath": true,
+      "note": "Actual working-tree path union against origin/main plus untracked own renamed files, before root stages/commits the merge."
+    },
+    "articleNumberAndDestination": [
+      {
+        "number": 172,
+        "destination": "src/content/columns-zh/172-home-leak-defect-notice-repair-evidence-taiwan.md",
+        "sha256": "101a2d561218222b8f7701b048c038dcb8b6e74ac36fb773980fedcd4f33dc80"
+      },
+      {
+        "number": 173,
+        "destination": "src/content/columns-zh/173-contractor-employee-status-control-work-taiwan.md",
+        "sha256": "79f88bb0b8f3f76992cd51d1fafc3e240158b4dd2270956c00162bda47fbbc81"
+      },
+      {
+        "number": 174,
+        "destination": "src/content/columns-zh/174-private-loan-joint-guarantor-first-demand-taiwan.md",
+        "sha256": "7cb00e2151da58e1098fac5a29fb535db6d45adcfc7a092a7ff4abc7dab7df7e"
+      },
+      {
+        "number": 175,
+        "destination": "src/content/columns-zh/175-parent-home-gift-care-obligation-evidence-taiwan.md",
+        "sha256": "4cf5fa53e8c0481bf04844ed9ddfcf7455026aad1a4b91a96a9122c2f912b2b2"
+      },
+      {
+        "number": 176,
+        "destination": "src/content/columns-ja/176-taiwan-hotel-luggage-loss-custody-japanese.md",
+        "sha256": "f7ca172bf0e6b6c91d0913ac6970b26ac192daacdfdc3fc50544e20947b3f447"
+      },
+      {
+        "number": 177,
+        "destination": "src/content/columns-en/177-taiwan-landlord-entry-rental-home-repairs.md",
+        "sha256": "68f62599bb6548db73112a6f6a5304d15e596a725f51472fdafe19b6645d078f"
+      },
+      {
+        "number": 178,
+        "destination": "src/content/columns/178-taiwan-unpaid-invoice-settlement-release-korean.md",
+        "sha256": "ae9fc852f7da4409fe9d7b59d140d4785ac40aa8c91e91258129a8c508f135e2"
+      }
+    ],
+    "manifestSha256": "3b3ab1993a75b45cec0b030261cd9e06a56b6bd7f36452f379e087b7bbdf4191",
+    "inputHead": "7e72ba11811ff3edfdd8092db07348076de23fac",
+    "rootReportedQaAtInputHead": {
+      "commit": "7e72ba11811ff3edfdd8092db07348076de23fac",
+      "testsPassed": 526,
+      "buildPages": 2065,
+      "httpChecks": 644,
+      "uiChecks": 28,
+      "currentMergeCoverageClaimed": false
+    },
+    "note": "Immutable prior mapping/hash snapshot. Existing 4c27 and original publication/date/QA records remain unchanged; these checks do not cover the new merge."
+  },
+  "mergeA9b5Reconciliation": {
+    "recordedAtUtc": "2026-10-03T17:57:02.851324+00:00",
+    "inputOwnHead": "7e72ba11811ff3edfdd8092db07348076de23fac",
+    "incomingHead": "a9b5f10aeb47e1ae7ab37159cf3d1b60f15f7803",
+    "assignedNumberRange": "174-180",
+    "renames": [
+      {
+        "batch": "b04",
+        "oldNumber": 172,
+        "newNumber": 174,
+        "source": "src/content/columns-zh/172-home-leak-defect-notice-repair-evidence-taiwan.md",
+        "destination": "src/content/columns-zh/174-home-leak-defect-notice-repair-evidence-taiwan.md",
+        "sha256": "101a2d561218222b8f7701b048c038dcb8b6e74ac36fb773980fedcd4f33dc80",
+        "slug": "home-leak-defect-notice-repair-evidence-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b04",
+        "oldNumber": 173,
+        "newNumber": 175,
+        "source": "src/content/columns-zh/173-contractor-employee-status-control-work-taiwan.md",
+        "destination": "src/content/columns-zh/175-contractor-employee-status-control-work-taiwan.md",
+        "sha256": "79f88bb0b8f3f76992cd51d1fafc3e240158b4dd2270956c00162bda47fbbc81",
+        "slug": "contractor-employee-status-control-work-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b04",
+        "oldNumber": 174,
+        "newNumber": 176,
+        "source": "src/content/columns-zh/174-private-loan-joint-guarantor-first-demand-taiwan.md",
+        "destination": "src/content/columns-zh/176-private-loan-joint-guarantor-first-demand-taiwan.md",
+        "sha256": "7cb00e2151da58e1098fac5a29fb535db6d45adcfc7a092a7ff4abc7dab7df7e",
+        "slug": "private-loan-joint-guarantor-first-demand-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b04",
+        "oldNumber": 175,
+        "newNumber": 177,
+        "source": "src/content/columns-zh/175-parent-home-gift-care-obligation-evidence-taiwan.md",
+        "destination": "src/content/columns-zh/177-parent-home-gift-care-obligation-evidence-taiwan.md",
+        "sha256": "4cf5fa53e8c0481bf04844ed9ddfcf7455026aad1a4b91a96a9122c2f912b2b2",
+        "slug": "parent-home-gift-care-obligation-evidence-taiwan",
+        "locale": "zh-hant"
+      },
+      {
+        "batch": "b04",
+        "oldNumber": 176,
+        "newNumber": 178,
+        "source": "src/content/columns-ja/176-taiwan-hotel-luggage-loss-custody-japanese.md",
+        "destination": "src/content/columns-ja/178-taiwan-hotel-luggage-loss-custody-japanese.md",
+        "sha256": "f7ca172bf0e6b6c91d0913ac6970b26ac192daacdfdc3fc50544e20947b3f447",
+        "slug": "taiwan-hotel-luggage-loss-custody-japanese",
+        "locale": "ja"
+      },
+      {
+        "batch": "b04",
+        "oldNumber": 177,
+        "newNumber": 179,
+        "source": "src/content/columns-en/177-taiwan-landlord-entry-rental-home-repairs.md",
+        "destination": "src/content/columns-en/179-taiwan-landlord-entry-rental-home-repairs.md",
+        "sha256": "68f62599bb6548db73112a6f6a5304d15e596a725f51472fdafe19b6645d078f",
+        "slug": "taiwan-landlord-entry-rental-home-repairs",
+        "locale": "en"
+      },
+      {
+        "batch": "b04",
+        "oldNumber": 178,
+        "newNumber": 180,
+        "source": "src/content/columns/178-taiwan-unpaid-invoice-settlement-release-korean.md",
+        "destination": "src/content/columns/180-taiwan-unpaid-invoice-settlement-release-korean.md",
+        "sha256": "ae9fc852f7da4409fe9d7b59d140d4785ac40aa8c91e91258129a8c508f135e2",
+        "slug": "taiwan-unpaid-invoice-settlement-release-korean",
+        "locale": "ko"
+      }
+    ],
+    "articleBytesUnchanged": 7,
+    "imageBytesUnchanged": 7,
+    "ledgerCopiesUnchanged": 19,
+    "incoming31PathsPreservedBy28ExactCopiesAnd3Unions": true,
+    "testsRun": false,
+    "buildRun": false,
+    "previousQaAppliesOnlyTo7e72": true,
+    "worktreeConflictMarkers": 0,
+    "unmergedIndexPathsAwaitRootStage": 3,
+    "externalEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/merge-a9b5-reconciliation.md",
+    "externalEvidenceSha256": "438eb54273db5a202dbdd0105a51bb042a18a566f6bc5cacba9a2fb07a22ea2f",
+    "externalStructuredEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/merge-a9b5-reconciliation.json",
+    "rootCommitAndIndependentQa": "pending"
   }
 }

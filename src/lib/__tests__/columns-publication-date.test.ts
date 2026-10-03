@@ -175,6 +175,11 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '165': '2026-10-03',
   '166': '2026-10-03',
   '167': '2026-10-03',
+  // semiconductor lane b06
+  '168': '2026-10-04',
+  '169': '2026-10-04',
+  '170': '2026-10-04',
+  '171': '2026-10-04',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

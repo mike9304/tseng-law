@@ -89,7 +89,7 @@
   column-gap: var(--ja-gap);
   align-items: end;
 }
-.v.v[data-ja-v2] :global(.page-header [data-page-header-slot='copy']) { display: block; grid-column: 1; grid-row: 1; min-width: 0; }
+.v.v[data-ja-v2] :global(.page-header [data-page-header-slot='copy']) { display: block; grid-column: 1; grid-row: 1; min-width: 0; max-width: none; width: auto; }
 .v.v[data-ja-v2] :global(.page-header .section-label) { display: none; }
 .v.v[data-ja-v2] :global(.page-header .breadcrumb) {
   display: flex;

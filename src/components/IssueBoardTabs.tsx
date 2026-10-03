@@ -53,7 +53,7 @@ export default function IssueBoardTabs({
               </li>
             ))}
           </ul>
-          <Link href={boardHref} className="link-underline">{copy.viewAll} →</Link>
+          <Link href={boardHref} className="link-underline">{copy.viewAll}{locale === 'ja' ? null : ' →'}</Link>
         </div>
       ) : null}
     </div>

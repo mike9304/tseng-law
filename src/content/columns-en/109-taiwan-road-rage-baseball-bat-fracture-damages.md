@@ -122,4 +122,4 @@ Statutes
 - [民事訴訟法 第385條 (Code of Civil Procedure, Article 385)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=385)
 - [勞動基準法 第54條 (Labor Standards Act, Article 54)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=54)
 
-This column draws on public court judgments and statutes. Sources checked on 3 October 2026.
+This column was written by the site's Legal AI Assistant from public court judgments and statutes. Sources checked on 3 October 2026.

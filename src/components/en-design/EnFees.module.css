@@ -254,6 +254,8 @@
 }
 
 @media (max-width: 1023px) {
+  .consultation { display: block; }
+  .consultationDetails { margin-top: 28px; padding: 0; }
   .consultationDetails li { font-size: 19px; }
   .others { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; row-gap: 56px; }
   .fee { grid-row: auto; grid-template-rows: none; }
@@ -266,8 +268,7 @@
 }
 @media (max-width: 767px) {
   .currency { font-size: 17px; }
-  .consultation { display: block; margin-top: 48px; }
-  .consultationDetails { margin-top: 28px; padding: 0; }
+  .consultation { margin-top: 48px; }
   .consultationDetails li { font-size: 17px; }
   .line { margin-top: 48px; }
   .others { margin-top: 56px; row-gap: 48px; }

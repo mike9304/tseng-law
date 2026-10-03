@@ -632,10 +632,6 @@
   .home[data-en-design][id] :global(.hero .hero-cta-actions),
   .home[data-en-design][id] :global(.hero .hero-cta-primary) { width: 100%; }
   .home[data-en-design][id] :global(.hero .hero-cta-primary) { padding: 0 20px; font-size: 17px; }
-}
-@media (max-width: 359px) {
-  .home[data-en-design][id] :global(.hero .hero-cta-primary) { padding: 0 14px; font-size: 16px; }
-  .home[data-en-design][id] :global(.hero .hero-cta-primary)::after { margin-left: 8px; }
   .heroReadLink { grid-row: 4; grid-column: 1 !important; margin: 8px 0 0; }
   .home[data-en-design][id] :global(.hero .hero-copy > .section-label) { grid-row: 5; }
   .heroByline { grid-row: 6; }
@@ -647,6 +643,17 @@
   .home[data-en-design][id] :global(.hero .hero-search-bar) { max-width: none; height: 56px; border-radius: 28px !important; padding-left: 22px !important; }
   .home[data-en-design][id] :global(.hero .hero-quick-menu) { gap: 0 24px; }
   .home[data-en-design][id] :global(.hero .hero-quick-menu-item) { font-size: 17px; }
+}
+@media (max-width: 359px) {
+  .home[data-en-design][id] :global(.hero .hero-cta-primary) { padding: 0 14px; font-size: 16px; }
+  .home[data-en-design][id] :global(.hero .hero-cta-primary)::after { margin-left: 8px; }
+}
+/* Without a pinned film (reduced motion, short screens) the search bridge needs no runway around it. */
+@media (prefers-reduced-motion: reduce), (max-height: 699px) {
+  .home[data-en-design][id] :global(.hero .hero-search-wrapper) { margin-top: 120px; padding-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) and (max-width: 767px), (max-height: 699px) and (max-width: 767px) {
+  .home[data-en-design][id] :global(.hero .hero-search-wrapper) { margin-top: 96px; }
 }
 
 /* =====================================================================================================

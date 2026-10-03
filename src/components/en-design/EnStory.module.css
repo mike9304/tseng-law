@@ -993,6 +993,14 @@
   font-weight: 600;
   text-decoration: none;
 }
+/* Inline links in the two closing lines: a 44 px hit area that leaves the line box unchanged */
+.home[data-en-design][id] :global(#practice .services-assistance-note a),
+.home[data-en-design][id] :global(#practice .container > p:last-child a) {
+  display: inline-block;
+  padding-block: max(0px, calc((44px - 1.45em) / 2));
+  margin-block: min(0px, calc((1.45em - 44px) / 2));
+  line-height: 1.45;
+}
 @media (hover: hover) {
   .home[data-en-design][id] :global(#practice .services-run-title a:hover),
   .home[data-en-design][id] :global(#practice .services-run-more:hover),
@@ -1939,6 +1947,7 @@
   font-weight: 600;
   text-decoration: none;
 }
+.home[data-en-design][id] :global(#offices .office-rating-text) { font-size: inherit; }
 .home[data-en-design][id] :global(#offices .office-gallery) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .home[data-en-design][id] :global(#offices .office-gallery-item) { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 14px; background: #1c1d21; }
 .home[data-en-design][id] :global(#offices .office-map-fallback-kicker) { color: var(--en-grey); }

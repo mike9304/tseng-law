@@ -9,7 +9,7 @@ import businessPremisesCaptions from '@/data/business-premises-video-captions.js
 import logisticsCaptions from '@/data/logistics-video-captions.json';
 import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
-const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'sk', 'hu', 'hr', 'sl', 'sr', 'bg'];
+const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'sk', 'hu', 'hr', 'sl', 'sr', 'bg', 'ru', 'uk', 'el', 'tr', 'lt', 'lv', 'et', 'is'];
 
 describe('reviewed column videos', () => {
   it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
@@ -112,6 +112,14 @@ describe('reviewed column videos', () => {
     ['sl', 'ločen od anonimizirane zadeve z motorjem'],
     ['sr', 'odvojen je od anonimizovanog predmeta s motociklom'],
     ['bg', 'отделен от анонимизираното дело с мотоциклет'],
+    ['ru', 'не является реконструкцией анонимного дела о мотоцикле'],
+    ['uk', 'не є реконструкцією анонімної справи про мотоцикл'],
+    ['el', 'χωριστή από την ανωνυμοποιημένη υπόθεση μοτοσικλέτας'],
+    ['tr', 'yazıdaki anonim motosiklet davasından ayrıdır'],
+    ['lt', 'atskiras nuo straipsnio anonimizuotos motociklo bylos'],
+    ['lv', 'atsevišķa no raksta anonimizētās motocikla lietas'],
+    ['et', 'eraldi artikli anonüümitud mootorrattaasjast'],
+    ['is', 'aðskilin frá nafnlausa mótorhjólamálinu'],
   ])('serves one 100-second overtaking film with case boundaries and ten chapters in %s', (locale, disclosure) => {
     const slug = 'taiwan-overtaking-accident-liability';
     const asset = getColumnGeneratedVideo(locale, slug);
@@ -153,6 +161,14 @@ describe('reviewed column videos', () => {
     ['sl', 'Osebe in prizori so izmišljeni ter ustvarjeni z umetno inteligenco'],
     ['sr', 'Osobe i scene su izmišljene i stvorene veštačkom inteligencijom'],
     ['bg', 'Измислени лица и сцени, създадени с изкуствен интелект'],
+    ['ru', 'Вымышленные люди и сцены, созданные ИИ'],
+    ['uk', 'Вигадані люди та сцени, створені ШІ'],
+    ['el', 'Φανταστικά πρόσωπα και σκηνές που δημιουργήθηκαν με τεχνητή νοημοσύνη'],
+    ['tr', 'Kişiler ve sahneler yapay zekâ ile üretilmiş kurgudur'],
+    ['lt', 'Dirbtinio intelekto sukurti išgalvoti žmonės ir scenos'],
+    ['lv', 'Izdomātas personas un ainas, kas radītas ar mākslīgo intelektu'],
+    ['et', 'Tehisintellekti loodud väljamõeldud inimesed ja stseenid'],
+    ['is', 'Skáldað fólk og senur búin til með gervigreind'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
     const id = longFilmLocales.includes(locale) ? 'traffic-procedure-film-v1' : 'rear-end-simulation-v3';

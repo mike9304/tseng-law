@@ -1,5 +1,5 @@
-import ColumnDetailView, { type ColumnDetailViewProps } from './ColumnDetailView';
-import TrafficColumnView from './TrafficColumnView';
+import type { ColumnDetailViewProps } from './ColumnDetailView';
+import PublicColumnView from './PublicColumnView';
 import type { Metadata } from 'next';
 import { trafficHubCopy } from '@/data/traffic-hub';
 import { resolveTrafficSubject } from '@/lib/traffic-collection';
@@ -365,7 +365,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     showSeo,
     typography,
   };
-  // Traffic columns hydrate a synchronous view from complete public data, while
-  // retaining server HTML and leaving other columns on the server-view path.
-  return isTrafficColumn ? <TrafficColumnView {...viewProps} /> : <ColumnDetailView {...viewProps} />;
+  // Every column hydrates the same synchronous view from complete public data.
+  // SSR and the server's publication/visibility decisions remain intact.
+  return <PublicColumnView {...viewProps} />;
 }

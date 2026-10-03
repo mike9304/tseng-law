@@ -13,6 +13,22 @@ import type { ReactNode } from 'react';
  * headings only — metadata, JSON-LD and alt text keep the raw string.
  */
 export function typesetTitle(locale: string, text: string): ReactNode {
+  // A long Traditional Chinese clause may use emergency wrapping under the
+  // article's keep-all typography. Keep its closing punctuation with the last
+  // character, just as Korean middle dots stay with their preceding character.
+  // Spans preserve the exact visible/copyable string without control characters.
+  if (locale === 'zh-hant' && /[，。！？；：、」』）】》〉]/u.test(text)) {
+    const parts: ReactNode[] = [];
+    const punctuation = /([^\s，。！？；：、」』）】》〉])[，。！？；：、」』）】》〉]+/gu;
+    let end = 0;
+    for (const match of text.matchAll(punctuation)) {
+      if (match.index > end) parts.push(text.slice(end, match.index));
+      parts.push(<span key={match.index} style={{ whiteSpace: 'nowrap' }}>{match[0]}</span>);
+      end = match.index + match[0].length;
+    }
+    if (end < text.length) parts.push(text.slice(end));
+    return parts;
+  }
   if (locale !== 'ko' || !text.includes('·')) return text;
   const out: ReactNode[] = [];
   const pattern = /(\S)·/gu;

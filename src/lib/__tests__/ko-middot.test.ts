@@ -29,3 +29,20 @@ describe('Korean middle-dot title typesetting', () => {
     expect(typesetTitle('ko', '대만 회사 설립')).toBe('대만 회사 설립');
   });
 });
+
+describe('Traditional Chinese closing punctuation', () => {
+  it('keeps closing punctuation attached while preserving every title character', () => {
+    const title = '綠燈撞上闖紅燈行人，為什麼駕駛仍有過失？先讓過兩人，卻漏看第三人';
+    const markup = html('zh-hant', title);
+    expect(textOf(markup)).toBe(title);
+    expect(markup).toContain('<span style="white-space:nowrap">人，</span>');
+    expect(markup).toContain('<span style="white-space:nowrap">失？</span>');
+    expect(textOf(html('zh-hant', '注意：先停，再看！'))).toBe('注意：先停，再看！');
+  });
+
+  it('preserves other locales and titles without closing punctuation', () => {
+    expect(typesetTitle('ja', '歩行者、車')).toBe('歩行者、車');
+    expect(typesetTitle('en', 'A question?')).toBe('A question?');
+    expect(typesetTitle('zh-hant', '車禍法律')).toBe('車禍法律');
+  });
+});

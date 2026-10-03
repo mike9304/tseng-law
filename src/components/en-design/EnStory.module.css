@@ -778,9 +778,10 @@
 @media (max-width: 1023px) {
   .captions { grid-template-columns: minmax(0, 1fr); }
 }
+/* Phones: the S1 pause control sits left of the fixed back-to-top button (right 16, bottom 16), never under it. */
 @media (max-width: 767px) {
   .reel[data-reel='city'] .film { aspect-ratio: 4 / 5; border-radius: 18px; margin: 40px auto 56px; }
-  .reel[data-reel='city'] .film :global(.decorative-autoplay-video__control) { bottom: 16px; right: 16px; }
+  .reel[data-reel='city'] .film :global(.decorative-autoplay-video__control) { bottom: 16px; right: 72px; }
   .captionTitle { font-size: 30px; padding-left: 22px; }
   .captionLead { margin-left: 22px; font-size: 17px; }
   .captionFoot { margin-left: 22px; gap: 0 24px; }
@@ -1801,7 +1802,8 @@
   .home[data-en-design][id] :global(#faq .faq-list) { margin-top: 48px; }
 }
 @media (max-width: 767px) {
-  .home[data-en-design][id] :global(#faq .faq-question button) { padding: 14px 20px; font-size: 19px; }
+  /* the right padding keeps the "+" clear of the fixed 44 px back-to-top button (right 16, bottom 16) */
+  .home[data-en-design][id] :global(#faq .faq-question button) { padding: 14px 60px 14px 20px; font-size: 19px; }
   .home[data-en-design][id] :global(#faq .faq-answer-wrap) { padding: 0 20px 22px; }
 }
 
@@ -2286,7 +2288,7 @@
 
 @media (prefers-reduced-motion: no-preference) and (min-height: 700px) and (max-width: 767px) {
   .reel[data-reel='city'] .scrimLeft { background: linear-gradient(0deg, rgb(0 0 0 / 86%), rgb(0 0 0 / 60%) 45%, rgb(0 0 0 / 35%) 100%); }
-  .reel[data-reel='city'] .film :global(.decorative-autoplay-video__control) { bottom: 16px; right: 16px; }
+  .reel[data-reel='city'] .film :global(.decorative-autoplay-video__control) { bottom: 16px; right: 72px; }
   .caption { min-height: 36svh; justify-content: flex-end; padding-bottom: 8svh; }
   .focusStage { height: 220svh; }
   .stageMarker[data-stage-marker='1'] { top: calc(50svh - var(--en-hdr) + 0.35 * (220svh - var(--en-stage))); }

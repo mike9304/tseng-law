@@ -16,7 +16,13 @@ export default function ColumnVideoPlayer({ startWhenVisible, chapters, ...props
   }, [startWhenVisible, props.src]);
 
   const updateChapter = (time: number) => {
-    if (chapters?.length) setChapterIndex(Math.max(0, chapters.findLastIndex(chapter => chapter.start <= time)));
+    if (!chapters?.length) return;
+    let index = 0;
+    for (let candidate = 1; candidate < chapters.length; candidate++) {
+      if (chapters[candidate].start > time) break;
+      index = candidate;
+    }
+    setChapterIndex(index);
   };
   const chapter = chapters?.[chapterIndex];
   return <>

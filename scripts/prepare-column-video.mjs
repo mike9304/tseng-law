@@ -33,8 +33,9 @@ const context = args.context || 'traffic';
 if (!['traffic', 'scene'].includes(context)) throw new Error('--context must be traffic or scene');
 const labels = context === 'scene' ? sceneLabels : trafficLabels;
 const labelWidth = Number(args['label-width'] || 780);
-if (!Number.isInteger(labelWidth) || labelWidth < 460 || labelWidth > 1232) {
-  throw new Error('--label-width must be an integer from 460 to 1232 pixels');
+const minLabelWidth = context === 'scene' && args.locale === 'zh-hant' ? 320 : 460;
+if (!Number.isInteger(labelWidth) || labelWidth < minLabelWidth || labelWidth > 1232) {
+  throw new Error(`--label-width must be an integer from ${minLabelWidth} to 1232 pixels`);
 }
 if (!args.input || !/^[a-z0-9][a-z0-9-]+$/.test(args.id || '') || !labels[args.locale]) {
   throw new Error(`--input=<local mp4> --id=<versioned-asset-id> --locale=<${Object.keys(labels).join('|')}> required`);

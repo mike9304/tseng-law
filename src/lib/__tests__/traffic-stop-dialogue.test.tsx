@@ -3,7 +3,8 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import { getColumnPost, getAllColumnPosts } from '../columns';
-import { buildTrafficCollection, isTrafficVideoDiagram } from '../traffic-collection';
+import { buildTrafficCollection, filterTrafficBoardItems, isTrafficVideoDiagram } from '../traffic-collection';
+import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 import { splitColumnContentAfterHeading } from '@/data/traffic-diagrams';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 
@@ -25,13 +26,19 @@ describe('reviewed accident departure column', () => {
     expect(createHash('sha256').update(original).digest('hex')).toBe('b800295ca45dbe742e6d88d73784027754f299e9713bd41efc225d575ecd96b8');
   });
 
-  it('automatically includes the native post as evidence, without a video badge or duplicate', () => {
+  it('includes one native evidence post with the reviewed dialogue video and its static timeline', () => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(post => post.slug === slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: 'evidence', hasVideo: false, columnNumber: 79 });
+    expect(matches[0]).toMatchObject({ subject: 'evidence', hasVideo: true, columnNumber: 79 });
+    expect(filterTrafficBoardItems(matches, { q: '', subject: 'evidence', video: true })).toHaveLength(1);
+    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('stop-dialogue-v1-zh-hant');
+    expect(getColumnGeneratedVideo('zh-hant', slug, 'issue')).toBeNull();
     expect(isTrafficVideoDiagram(id)).toBe(false);
-    for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(post => post.slug === slug)).toBe(false);
+    for (const locale of ['ko', 'en', 'ja'] as const) {
+      expect(getAllColumnPosts(locale).some(post => post.slug === slug)).toBe(false);
+      expect(getColumnGeneratedVideo(locale, slug)).toBeNull();
+    }
   });
 
   it('server-renders a responsive static image and the complete accessible description without a player', () => {

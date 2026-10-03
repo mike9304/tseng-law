@@ -14,6 +14,8 @@ import alleyBicycleCaptions from './alley-bicycle-video-captions.json';
 import potholeScooterCaptions from './pothole-scooter-video-captions.json';
 import passengerSkidCaptions from './passenger-skid-video-captions.json';
 import settlementRecordsCaptions from './settlement-records-video-captions.json';
+import stopDialogueCaptions from './stop-dialogue-video-captions.json';
+import keyCustodyCaptions from './key-custody-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -37,6 +39,20 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(stopDialogueCaptions).map(([locale, caption]) => {
+    const id = `stop-dialogue-v1-${locale}`;
+    return [
+      `column/${locale}/taiwan-accident-stop-dialogue-hit-and-run-evidence`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(keyCustodyCaptions).map(([locale, caption]) => {
+    const id = `key-custody-v1-${locale}`;
+    return [
+      `column/${locale}/taiwan-borrowed-car-owner-driver-key-custody-liability`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   ...Object.fromEntries(Object.entries(passengerSkidCaptions).map(([locale, caption]) => {
     const id = `passenger-skid-v4-${locale}`;
     return [

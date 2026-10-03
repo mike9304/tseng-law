@@ -215,7 +215,9 @@ describe('loadTrafficCollection (published files)', () => {
     for (const item of items) {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
-      const reviewedSceneWithoutDiagram = [
+      const reviewedGeneratedScene = [
+        'taiwan-accident-stop-dialogue-hit-and-run-evidence',
+        'taiwan-borrowed-car-owner-driver-key-custody-liability',
         'taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse',
         'taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction',
         'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence',
@@ -243,7 +245,7 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-road-rage-started-did-not-matter-driver-blocked',
         'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
       ].includes(item.slug);
-      expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
+      expect(item.hasVideo, item.slug).toBe(reviewedGeneratedScene || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');
     }
   });

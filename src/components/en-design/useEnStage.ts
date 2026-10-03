@@ -56,8 +56,30 @@ export function useEnSaveData(getRoot: ElementGetter) {
 }
 
 /**
+ * Watches zero-size markers and reports how many have passed the middle of the viewport. The observed
+ * band runs from far above the viewport down to its middle, so a marker counts as passed from the moment
+ * it crosses the middle until the page scrolls back past it, even after a long jump (End key, anchor link,
+ * fast fling) that never lets it sit inside a narrow band. Callbacks fire only at crossings.
+ */
+function observePassed(markers: HTMLElement[], onChange: (passed: number) => void) {
+  const passed = new Set<Element>();
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) passed.add(entry.target);
+        else passed.delete(entry.target);
+      });
+      onChange(passed.size);
+    },
+    { rootMargin: '100000px 0px -50% 0px' },
+  );
+  markers.forEach((marker) => observer.observe(marker));
+  return observer;
+}
+
+/**
  * S3 "lit run": switches the practice list between the stack (server default) and the run, and marks
- * the active item from six scroll markers or from keyboard focus.
+ * the active item from six scroll markers (28svh apart) or from keyboard focus.
  */
 export function useEnRun(getSection: ElementGetter) {
   useEffect(() => {
@@ -84,18 +106,8 @@ export function useEnRun(getSection: ElementGetter) {
         return;
       }
       setActive(0);
-      if (typeof IntersectionObserver === 'undefined') return;
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            const index = Number((entry.target as HTMLElement).dataset.stageMarker);
-            if (Number.isFinite(index)) setActive(index);
-          });
-        },
-        { rootMargin: '-45% 0px -45% 0px' },
-      );
-      markers.forEach((marker) => observer?.observe(marker));
+      if (typeof IntersectionObserver === 'undefined' || !markers.length) return;
+      observer = observePassed(markers, (passed) => setActive(Math.min(items.length - 1, Math.max(0, passed - 1))));
     };
     const onFocus = (event: FocusEvent) => {
       if (section.getAttribute('data-en-run') !== 'on') return;
@@ -124,26 +136,15 @@ export function useEnSteps(getStage: ElementGetter) {
     const apply = () => {
       observer?.disconnect();
       observer = null;
-      if (!query.matches || typeof IntersectionObserver === 'undefined') {
+      if (!query.matches || typeof IntersectionObserver === 'undefined' || !markers.length) {
         stage.setAttribute('data-steps', 'all');
+        stage.removeAttribute('data-step');
         return;
       }
       stage.setAttribute('data-steps', 'stepped');
-      if (!stage.getAttribute('data-step')) stage.setAttribute('data-step', '1');
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            const marker = entry.target as HTMLElement;
-            const index = Number(marker.dataset.stageMarker);
-            if (!Number.isFinite(index)) return;
-            // A marker crossing the middle band downwards selects its step; crossing back up selects the one before.
-            if (entry.isIntersecting) stage.setAttribute('data-step', String(index + 1));
-            else if (entry.boundingClientRect.top > window.innerHeight / 2) stage.setAttribute('data-step', String(Math.max(1, index)));
-          });
-        },
-        { rootMargin: '-45% 0px -45% 0px' },
-      );
-      markers.forEach((marker) => observer?.observe(marker));
+      stage.setAttribute('data-step', '1');
+      // Marker 0 sits at the top of the stage, markers 1 and 2 at 35 % and 70 % of the pinned range.
+      observer = observePassed(markers, (passed) => stage.setAttribute('data-step', String(Math.min(markers.length, Math.max(1, passed)))));
     };
     apply();
     query.addEventListener('change', apply);

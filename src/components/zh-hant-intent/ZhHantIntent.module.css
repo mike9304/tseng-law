@@ -36,6 +36,9 @@
 }
 
 /* ---------- Shared: bands, titles, no eyebrows or ornaments ---------- */
+/* Body text fills its lines, the norm for Chinese text. The site-wide p/li text-wrap: pretty made WebKit end
+   lines three to five characters early in every tile; only the large key-point lines keep pretty (below). */
+.root:global(#zh-hant-intent) :is(p, li, dd) { text-wrap: wrap; }
 .root:global(#zh-hant-intent) :global(.section) {
   padding-block: var(--ap-band);
   border: none;
@@ -60,7 +63,6 @@
 }
 .root:global(#zh-hant-intent) :global(.section-title)::before,
 .root:global(#zh-hant-intent) :global(.section-title)::after { content: none; display: none; }
-.root:global(#zh-hant-intent) :is(p, li, dd) { text-wrap: wrap; }
 .root:global(#zh-hant-intent) :global(.intent-article-list) {
   display: grid;
   gap: 0;
@@ -353,6 +355,7 @@
   font-size: clamp(18px, 1.55vw, 21px);
   font-weight: 400;
   line-height: 1.7;
+  text-wrap: pretty;
 }
 .root:global(#zh-hant-intent) :global(.intent-main > .intent-panel:first-child .intent-article-list > li)::before {
   content: counter(zh-point, decimal-leading-zero);
@@ -898,6 +901,14 @@
   .root:global(#zh-hant-intent) :global(.intent-main > .intent-panel:first-child) { grid-template-columns: minmax(0, 1fr); }
   .root:global(#zh-hant-intent) :global(.intent-sidebar .authority-card) { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
 }
+/* Tablets: two columns; with three tiles the first spans the row (a small bento) instead of leaving one alone. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .root:global(#zh-hant-intent) :global(.grid-bento.contact-grid),
+  .root:global(#zh-hant-intent) :global(.svc-columns-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .root:global(#zh-hant-intent) :global(.grid-bento.contact-grid > :first-child:nth-last-child(3)),
+  .root:global(#zh-hant-intent) :global(.svc-columns-grid > :first-child:nth-last-child(3)) { grid-column: 1 / -1; }
+  .root:global(#zh-hant-intent) :global(.svc-columns-grid > :first-child:nth-last-child(3) .svc-col-card-media) { aspect-ratio: 21 / 9; }
+}
 @media (max-width: 900px) {
   .root:global(#zh-hant-intent) :global(.intent-subgrid) { grid-template-columns: minmax(0, 1fr); }
   .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(2)) { grid-template-columns: minmax(0, 1fr); justify-items: start; }
@@ -914,6 +925,7 @@
     text-wrap: wrap;
   }
   .root:global(#zh-hant-intent) :global(.section-title) { text-wrap: wrap; }
+  .root:global(#zh-hant-intent) :global(.intent-main > .intent-panel:first-child .intent-article-list > li) { text-wrap: wrap; }
   .root:global(#zh-hant-intent) :global(.page-header .section-lede) { margin-top: 16px; font-size: 18px; }
   .root .headerActions { width: 100%; gap: 4px 24px; }
   .root .headerPrimary { flex: 1 1 100%; }

@@ -122,3 +122,18 @@ KO-S3 대체 접근 실행 증거: Python `urllib.request.urlopen`으로 TLS 검
 독립 실행 증거: Python으로 각 변경 후 문구가 한 번만 존재함을 확인하고 그 한 곳을 이전 문구로 역치환했다. EN 전체 SHA는 직전 승인본 `802ebb91ffbb2fb6828ce6dc71c71c1f06bfb39d7a8aefa11b0a2eba4f57e900`, KO 전체 SHA는 직전 승인본 `11e9d7b91d3c37441d783d46c25d5a9c9f3a6c3a6d4ab0d2d8dca2585b6a28b0`와 각각 일치했다. 두 assertion 모두 PASS, exit 0. 따라서 EN은 summary 외 모든 바이트가, KO는 45행 한 문장 외 모든 바이트가 보존됐다. KO evidence도 V03 기록을 제외한 기존 부분이 이전 evidence SHA와 일치함을 별도로 확인했다.
 
 이번에는 새 공식 출처 조사, 이미지 재열람, 빌드·화면·배포 확인을 수행하지 않았다. 두 문장 밖의 주장과 출처는 R1에서 확인한 내용이 그대로 보존됐으므로 기존 법률·출처 승인을 이 최신 SHA에 이어 적용한다. 원고·evidence·저장소를 수정하지 않았다. 이 검수서의 R1 이전 내용은 SHA `0181ca41ab32a06df2f1888175b48ec33c36a72685f778808542dd6da3d94364` 상태로 보존하고 이 R2만 추가한다. 변호사 검토·집필 인증이나 게시 승인을 뜻하지 않는다.
+
+## R3 — QA92364938 EN summary 길이 축약 검수 (2026-10-03)
+
+최종 EN 판정: APPROVE. MUST 0, SHOULD 0. 대상은 `drafts/en-parcel-pickup-job-scam-bank-cards-taiwan.md:5`의 `Original job instructions` → `Job instructions` 축약 한 곳이다. KO는 R2의 승인과 입력 SHA를 유지한다.
+
+| 입력 | 이번 승인 SHA256 |
+|---|---|
+| `drafts/en-parcel-pickup-job-scam-bank-cards-taiwan.md` | `2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d` |
+| `evidence/en-parcel-pickup-job-scam-bank-cards-taiwan.md` | `bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6` |
+
+최종 summary는 153자로 직접 계산했다. 업무 지시·메시지·배송 기록이 당시 인식과 행동 확인에 도움이 될 수 있다는 의미와 `can help establish`의 제한을 보존한다. ‘Original’이 요약에서 빠졌다고 본문의 원본 보존 안내가 없어지거나 복사본의 증명력을 보장하는 것은 아니다. 고의의 인식·의욕 및 예견·수용, 실제 역할 검토, 자동 유죄·면책 부정은 변경되지 않았다. 공개 근거에 새로운 주장·조건·결과 보장을 추가하지 않으므로 기존 법률·출처 승인에 영향을 주지 않는다.
+
+독립 실행 증거: 최종 파일과 evidence의 SHA를 직접 계산했고 인계값과 일치했다. summary 한 곳을 이전 문구로 역치환한 전체 원고 SHA는 직전 승인본 `8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1`과 정확히 일치했다. raw body SHA `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`도 일치했다. Python assertion 결과 `SUMMARY_ONLY_DELTA: PASS`, exit 0. 본문·SEO·제목·날짜·미디어·그 밖의 metadata에는 변경이 없다.
+
+evidence의 QA92364938 변경 기록을 직접 읽었다. 새 웹 조사·이미지 재열람·통합 QA·배포 검증은 이번 좁은 변경분 검수에 포함하지 않았다. 원고·evidence·저장소·B04 검수서는 수정하지 않았고, 기존 B03 검수서 SHA `54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e`의 내용을 보존해 이 R3만 추가한다. 실제 변호사 검토나 게시 승인을 뜻하지 않는다.

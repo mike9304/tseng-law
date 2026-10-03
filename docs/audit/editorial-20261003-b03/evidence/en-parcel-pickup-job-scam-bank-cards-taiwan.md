@@ -148,3 +148,17 @@ root의 코퍼스 검사 지적에 따라 `/src/lib/__tests__/column-seo-title-f
 - 변경 전 evidence SHA: `e424ef9f62488a2fc95ddcc0de20b5fea9921e49c1f6f50dfd2dbddaaa96926f`. 이 값은 변경 이력이며 현재 evidence의 자기 해시가 아니다.
 
 Python으로 이전 바이트 SHA를 먼저 확인하고 summary 한 줄을 역치환했을 때 이전 원고 전체 바이트와 SHA가 정확히 복원됨을 검사했다. raw body SHA는 `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`로 불변이다. 비교 출력 `result: PASS`, `only_summary_changed: true`, `inverse_restores_prior_draft: true`, 종료코드 0. 제목/H1, 40자 SEO(접미사 포함 55자), 날짜, 본문, 미디어 alt/caption, 출처는 모두 그대로다. 자료가 당시 인식과 행위를 파악하는 데 도움이 된다는 뜻이며 증명 결과·무죄·유죄를 보장하지 않는다. 새 법률 주장을 추가하지 않았고 문체·법률 검수자에게 최종 해시를 전달한다. 검수 승인·통합·배포는 이번 자체 수정으로 주장하지 않는다.
+
+## 2026-10-03 QA92364938 — summary 160자 제한 최소 수정
+
+root가 전달한 QA92364938의 유일한 실패는 원고 L5 영어 summary가 162자로 160자 제한을 넘는다는 것이었다. 실제 파일을 읽어 162자를 확인하고, root가 지정한 `Original job instructions` → `Job instructions`만 반영했다. 새 법률 주장이나 본문 수정은 없다.
+
+- 변경 전 summary: `A paid parcel-pickup job can involve other people's bank cards. Original job instructions, messages and delivery records can help establish what you knew and did.` — 162자.
+- 변경 후 summary: `A paid parcel-pickup job can involve other people's bank cards. Job instructions, messages and delivery records can help establish what you knew and did.` — 153자.
+- 변경 전 원고 SHA: `8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1`.
+- 변경 전 evidence SHA: `5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a`. 이 값은 이전 이력이며 현재 파일의 자기 해시가 아니다.
+- 변경 후 최종 원고 SHA: `2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d`.
+
+Python `Path.read_bytes`, `hashlib.sha256`, 문자 길이 및 줄별 비교로 검증했다. 현재 summary 한 줄을 이전 문구로 역치환한 전체 파일 SHA가 이전 `8e38e51d…75351b1`과 정확히 일치했다. 출력 `result: PASS`, `changed_lines: [5]`, `summary_length: 153`, `only_summary_changed: true`, exit 0. raw body SHA도 `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`로 불변이다. 본문·SEO·제목·미디어·날짜·그 밖의 모든 메타데이터를 그대로 보존했다. 기존 원본 자료 보존에 관한 본문 설명도 바뀌지 않았다.
+
+두 담당 파일만 수정하고 동결했다. 저장소 복사·Git·QA 전체 재실행·배포는 수행하지 않았다. root의 병합 및 독립 delta 검수를 위해 최종 원고/evidence 해시를 전달한다.

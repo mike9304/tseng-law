@@ -222,3 +222,21 @@ V03의 보안 안내 강도 변화와 V12의 제195조 적용 범위는 R1에서
 evidence의 해당 수정 이력과 최종 전달 해시를 읽고 현재 파일에서 해시를 다시 계산했다. EN은 summary 변경과 별도로 앞서 승인한 SEO 한 줄 변경이 유지된다. 일곱 편 모두 R1 때 읽은 AI 가상 장면 caption·alt와 내부 author를 유지하며, 새 경험·변호사/원어민 검수 주장·광고·장식용 굵은 강조를 추가하지 않았다.
 
 R1 본문을 정확히 보존했다. R2 직전 R1 파일 SHA-256은 `416860437f84d6aa10ba0519079045668dc80ba43609dee93e02e68c9a33551e`다. 이번 확인에는 새 공식 출처 검색, 이미지 실물 재검사, 렌더링·테스트·빌드·배포 검증이 포함되지 않는다.
+
+## R3 — EN summary 길이 조정 후 최종 문체 승인 (2026-10-03)
+
+문체 판정: APPROVE. 남은 MUST 0건·SHOULD 0건이다. 앞선 R1·R2를 보존하고 EN의 최종 승인 해시만 아래 값으로 갱신한다. 나머지 여섯 편의 승인은 그대로다.
+
+- 원고: `en-parcel-pickup-job-scam-bank-cards-taiwan.md:5`.
+- 최종 원고 SHA-256: `2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d`.
+- 최종 evidence SHA-256: `bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6`.
+
+새 summary:
+
+> A paid parcel-pickup job can involve other people's bank cards. Job instructions, messages and delivery records can help establish what you knew and did.
+
+`Original job instructions`를 `Job instructions`로 줄인 한 구절뿐이다. 162자였던 summary는 153자다. 소포 수령 업무의 위험과 당시 인식·행동을 판단할 자료의 역할을 자연스럽게 설명하고, 목차 예고·결과 보장·새 법적 주장을 만들지 않는다. 원본 기록을 보존하라는 본문 안내는 그대로 있으므로 이 요약의 수식어 삭제가 그 안내를 약화시키지 않는다.
+
+이전 snapshot에 이 치환만 적용한 원문과 현재 파일 전체가 정확히 일치했다. 변경 행은 L5뿐이고, 역치환한 전체 SHA는 이전 승인본 `8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1`이다. raw body SHA `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`가 유지된다. 본문·제목·SEO·날짜·author·이미지 문구·외부 출처·기타 metadata에는 변화가 없다. 작성자 evidence의 QA92364938 사유와 변경 기록도 읽었다.
+
+이 append 전 검토서 SHA `0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac`의 전체 내용을 보존했다. 원고·evidence·repo는 수정하지 않았다. 이 승인은 좁은 문체 delta와 파일 대조 결과이며 전체 QA 재실행·빌드·배포나 새로운 법률/이미지 검수를 뜻하지 않는다.

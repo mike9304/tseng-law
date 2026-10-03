@@ -3,8 +3,8 @@
   "status": "integrated_source_frozen_awaiting_qa",
   "baseCommit": "895e4914",
   "baseCommitNote": "Actual integration base after root confirmed B02 live and authorized this 35-file scope.",
-  "recordedAt": "2026-10-03T23:41:18+09:00",
-  "recordedAtUtc": "2026-10-03T14:41:18+00:00",
+  "recordedAt": "2026-10-03T23:59:04+09:00",
+  "recordedAtUtc": "2026-10-03T14:59:04+00:00",
   "scope": "Seven approved Taiwan-first editorial articles and seven original PNGs, sixteen source-linked audit copies, release manifest/audit and three additive registries. Only the voice-review copy loses one extra terminal LF; every source remains unchanged. Root/QA owns tests, build, release and live readback.",
   "articles": [
     {
@@ -32,7 +32,7 @@
       "legalReviewSha256": "23ccd5f23ba468d56d535e391f725188f2137d330f582e6aefbc42f9d17247fa",
       "legalVerdict": "APPROVE; MUST 0",
       "voiceReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
-      "voiceReviewSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+      "voiceReviewSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
       "voiceVerdict": "R2 APPROVE; MUST 0; SHOULD 0",
       "imageSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/images/job-scam-payroll-account-atm-card-taiwan.png",
       "imageOriginalSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-b5e0fc11-2d8a-4957-a1b1-c1e9aa53c2fe.png",
@@ -46,8 +46,8 @@
       "promptRecord": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-PROMPTS.json",
       "promptRecordSha256": "b7d5362348a6df82f08872eb37ec626a4282ff7ec32156b728dc51ce98364c4b",
       "promptSlug": "job-scam-payroll-account-atm-card-taiwan",
-      "voiceReviewExpectedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "voiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed"
+      "voiceReviewExpectedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "voiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
     },
     {
       "number": 162,
@@ -74,7 +74,7 @@
       "legalReviewSha256": "23ccd5f23ba468d56d535e391f725188f2137d330f582e6aefbc42f9d17247fa",
       "legalVerdict": "APPROVE; MUST 0",
       "voiceReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
-      "voiceReviewSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+      "voiceReviewSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
       "voiceVerdict": "R2 APPROVE; MUST 0; SHOULD 0",
       "imageSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/images/fake-customer-service-cancel-installment-atm-taiwan.png",
       "imageOriginalSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-6a284488-d7be-4c36-8df0-1d99cf787d08.png",
@@ -88,8 +88,8 @@
       "promptRecord": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-PROMPTS.json",
       "promptRecordSha256": "b7d5362348a6df82f08872eb37ec626a4282ff7ec32156b728dc51ce98364c4b",
       "promptSlug": "fake-customer-service-cancel-installment-atm-taiwan",
-      "voiceReviewExpectedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "voiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed"
+      "voiceReviewExpectedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "voiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
     },
     {
       "number": 163,
@@ -116,7 +116,7 @@
       "legalReviewSha256": "23ccd5f23ba468d56d535e391f725188f2137d330f582e6aefbc42f9d17247fa",
       "legalVerdict": "APPROVE; MUST 0",
       "voiceReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
-      "voiceReviewSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+      "voiceReviewSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
       "voiceVerdict": "R2 APPROVE; MUST 0; SHOULD 0",
       "imageSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/images/gym-closure-prepaid-installments-taiwan.png",
       "imageOriginalSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-f0b7855a-4f1c-4b54-be9e-48157429c254.png",
@@ -130,8 +130,8 @@
       "promptRecord": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-PROMPTS.json",
       "promptRecordSha256": "b7d5362348a6df82f08872eb37ec626a4282ff7ec32156b728dc51ce98364c4b",
       "promptSlug": "gym-closure-prepaid-installments-taiwan",
-      "voiceReviewExpectedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "voiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed"
+      "voiceReviewExpectedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "voiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
     },
     {
       "number": 164,
@@ -158,7 +158,7 @@
       "legalReviewSha256": "23ccd5f23ba468d56d535e391f725188f2137d330f582e6aefbc42f9d17247fa",
       "legalVerdict": "APPROVE; MUST 0",
       "voiceReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
-      "voiceReviewSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+      "voiceReviewSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
       "voiceVerdict": "R2 APPROVE; MUST 0; SHOULD 0",
       "imageSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/images/promissory-note-enforcement-undisbursed-loan-taiwan.png",
       "imageOriginalSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-e07e1ec5-d2d1-4a38-a863-1ae029e9f588.png",
@@ -172,8 +172,8 @@
       "promptRecord": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-PROMPTS.json",
       "promptRecordSha256": "b7d5362348a6df82f08872eb37ec626a4282ff7ec32156b728dc51ce98364c4b",
       "promptSlug": "promissory-note-enforcement-undisbursed-loan-taiwan",
-      "voiceReviewExpectedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "voiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed"
+      "voiceReviewExpectedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "voiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
     },
     {
       "number": 165,
@@ -200,7 +200,7 @@
       "legalReviewSha256": "930f8e2dc351293ad1a94cef76fd5456d5bda82ea411169042119975def10e6e",
       "legalVerdict": "APPROVE; MUST 0",
       "voiceReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
-      "voiceReviewSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+      "voiceReviewSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
       "voiceVerdict": "R2 APPROVE; MUST 0; SHOULD 0",
       "imageSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/images/taiwan-issued-card-unauthorized-charge-dispute-japanese.png",
       "imageOriginalSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-c16a9882-c07e-472a-9161-b959da1c0cb7.png",
@@ -214,8 +214,8 @@
       "promptRecord": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-PROMPTS.json",
       "promptRecordSha256": "b7d5362348a6df82f08872eb37ec626a4282ff7ec32156b728dc51ce98364c4b",
       "promptSlug": "taiwan-issued-card-unauthorized-charge-dispute-japanese",
-      "voiceReviewExpectedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "voiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed"
+      "voiceReviewExpectedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "voiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
     },
     {
       "number": 166,
@@ -226,24 +226,24 @@
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/drafts/en-parcel-pickup-job-scam-bank-cards-taiwan.md",
       "destination": "src/content/columns-en/166-parcel-pickup-job-scam-bank-cards-taiwan.md",
       "url": "https://tseng-law.com/en/columns/parcel-pickup-job-scam-bank-cards-taiwan",
-      "sha256": "8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1",
-      "sourceSha256": "8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1",
-      "expectedDestinationSha256": "8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1",
-      "destinationSha256": "8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1",
-      "bytes": 7141,
+      "sha256": "2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d",
+      "sourceSha256": "2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d",
+      "expectedDestinationSha256": "2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d",
+      "destinationSha256": "2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d",
+      "bytes": 7132,
       "copyStatus": "copied_byte_identical",
       "published": "2026-10-03",
       "lastmod": "2026-10-03",
       "dateDisplay": "October 3, 2026",
       "internalAuthor": "legal-ai-assistant",
       "evidenceSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/evidence/en-parcel-pickup-job-scam-bank-cards-taiwan.md",
-      "evidenceSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
+      "evidenceSha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
       "legalReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/legal-en-ko-r1.md",
-      "legalReviewSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
-      "legalVerdict": "APPROVE; MUST 0",
+      "legalReviewSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+      "legalVerdict": "R3 APPROVE; MUST 0; SHOULD 0",
       "voiceReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
-      "voiceReviewSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
-      "voiceVerdict": "R2 APPROVE; MUST 0; SHOULD 0",
+      "voiceReviewSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
+      "voiceVerdict": "R3 APPROVE; MUST 0; SHOULD 0",
       "imageSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/images/parcel-pickup-job-scam-bank-cards-taiwan.png",
       "imageOriginalSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-caefbf3e-3330-4c4e-8ae7-6b6dd86d9da7.png",
       "imageDestination": "public/images/columns/editorial-20261003-b03/parcel-pickup-job-scam-bank-cards-taiwan.png",
@@ -256,8 +256,8 @@
       "promptRecord": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-PROMPTS.json",
       "promptRecordSha256": "b7d5362348a6df82f08872eb37ec626a4282ff7ec32156b728dc51ce98364c4b",
       "promptSlug": "parcel-pickup-job-scam-bank-cards-taiwan",
-      "voiceReviewExpectedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "voiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed"
+      "voiceReviewExpectedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "voiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
     },
     {
       "number": 167,
@@ -281,10 +281,10 @@
       "evidenceSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/evidence/ko-taiwan-secondhand-seller-payment-verification-scam-korean.md",
       "evidenceSha256": "a2bb3a571b8adb3108fcc9fc18a7133e9c4eb92830ee3d27d80421cb6feb5072",
       "legalReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/legal-en-ko-r1.md",
-      "legalReviewSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
+      "legalReviewSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
       "legalVerdict": "APPROVE; MUST 0",
       "voiceReviewSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
-      "voiceReviewSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+      "voiceReviewSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
       "voiceVerdict": "R2 APPROVE; MUST 0; SHOULD 0",
       "imageSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/images/taiwan-secondhand-seller-payment-verification-scam-korean.png",
       "imageOriginalSource": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-fc7aa76f-62f7-4e91-b992-44c768e562b6.png",
@@ -298,8 +298,8 @@
       "promptRecord": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-PROMPTS.json",
       "promptRecordSha256": "b7d5362348a6df82f08872eb37ec626a4282ff7ec32156b728dc51ce98364c4b",
       "promptSlug": "taiwan-secondhand-seller-payment-verification-scam-korean",
-      "voiceReviewExpectedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "voiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed"
+      "voiceReviewExpectedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "voiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
     }
   ],
   "ledgerCopies": [
@@ -372,12 +372,12 @@
       "role": "evidence",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/evidence/en-parcel-pickup-job-scam-bank-cards-taiwan.md",
       "destination": "docs/audit/editorial-20261003-b03/evidence/en-parcel-pickup-job-scam-bank-cards-taiwan.md",
-      "sourceSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
-      "sha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
-      "expectedDestinationSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
-      "destinationSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
-      "sourceBytes": 26228,
-      "bytes": 26228,
+      "sourceSha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
+      "sha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
+      "expectedDestinationSha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
+      "destinationSha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
+      "sourceBytes": 28198,
+      "bytes": 28198,
       "copyStatus": "copied_byte_identical",
       "normalization": null
     },
@@ -424,12 +424,12 @@
       "role": "legal-review",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/legal-en-ko-r1.md",
       "destination": "docs/audit/editorial-20261003-b03/reviews/legal-en-ko-r1.md",
-      "sourceSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
-      "sha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
-      "expectedDestinationSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
-      "destinationSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
-      "sourceBytes": 21482,
-      "bytes": 21482,
+      "sourceSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+      "sha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+      "expectedDestinationSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+      "destinationSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+      "sourceBytes": 23711,
+      "bytes": 23711,
       "copyStatus": "copied_byte_identical",
       "normalization": null
     },
@@ -437,22 +437,22 @@
       "role": "voice-review",
       "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
       "destination": "docs/audit/editorial-20261003-b03/reviews/voice-r1.md",
-      "sourceSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
-      "sha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "expectedDestinationSha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "destinationSha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
-      "sourceBytes": 25956,
-      "bytes": 25955,
+      "sourceSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
+      "sha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "expectedDestinationSha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "destinationSha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "sourceBytes": 27976,
+      "bytes": 27975,
       "copyStatus": "copied_with_recorded_eof_normalization",
       "normalization": {
         "status": "applied_copy_only",
-        "reason": "git diff --no-index --check reports new blank line at EOF",
-        "operation": "Remove exactly one extra terminal LF, preserving one final newline. Preserve the original review source and all readable text.",
+        "reason": "Final R3 source has one extra terminal LF reported by git diff --no-index --check; source retained.",
+        "operation": "Remove exactly one extra terminal LF from repository copy, preserving one final newline and all readable text.",
         "removedBytes": 1,
-        "sourceSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
-        "expectedNormalizedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
+        "sourceSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
+        "expectedNormalizedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
         "copyPlusOneLfRestoresSourceBytes": true,
-        "inverseRestoredSourceSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac"
+        "inverseRestoredSourceSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca"
       }
     },
     {
@@ -716,19 +716,24 @@
     "mediaBatchPathIsProvenanceNotPublicationDate": true,
     "integrationKstDate": "2026-10-03",
     "actualReleaseDateStillNeedsConfirmation": true,
-    "freezeKstDate": "2026-10-03"
+    "freezeKstDate": "2026-10-03",
+    "publicationDateDecisionAuthority": "Root confirms actual publication date at push using Asia/Taipei site business day and records decision separately in QA/contract.",
+    "actualPublicationDateTimeZone": "Asia/Taipei",
+    "publishedPreservedPendingRootDecision": "2026-10-03",
+    "kstMidnightHandling": "KST midnight remains a review prompt, not an automatic metadata rewrite; root explicitly keeps 2026-10-03 until the separate Asia/Taipei publication-date decision."
   },
   "reviewProvenance": {
     "finalLegalReviewSourceHashes": {
       "legal-zh-r1.md": "23ccd5f23ba468d56d535e391f725188f2137d330f582e6aefbc42f9d17247fa",
       "legal-ja-r1.md": "930f8e2dc351293ad1a94cef76fd5456d5bda82ea411169042119975def10e6e",
-      "legal-en-ko-r1.md": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e"
+      "legal-en-ko-r1.md": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34"
     },
-    "finalVoiceReviewSourceHash": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
-    "voiceFinalSection": "R2 — 13개 수정 후 최종 동결 재검수",
-    "finalArticleAndEvidenceHashesTakenFrom": "reviews/voice-r1.md final R2 table, independently matched to source files and assigned final legal reports",
+    "finalVoiceReviewSourceHash": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
+    "voiceFinalSection": "R3 EN summary delta APPROVE; other six R2 approvals retained",
+    "finalArticleAndEvidenceHashesTakenFrom": "Voice R2 table with the final EN R3 override, matched to source files and corresponding final legal reports.",
     "jaOptionalSuggestion": "The legal report retains a non-blocking optional interest-rate wording suggestion; its non-adoption is documented and the final legal verdict remains APPROVE.",
-    "humanAttorneyOrNativeSpeakerCertificationClaimed": false
+    "humanAttorneyOrNativeSpeakerCertificationClaimed": false,
+    "finalVoiceReviewCopyHash": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465"
   },
   "mediaProvenance": {
     "manifestSource": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/IMAGE-MANIFEST.json",
@@ -753,7 +758,6 @@
     "ledgerOriginalsAlreadyWhitespaceClean": 15,
     "ledgerCopiesRequiringWhitespaceNormalization": 1,
     "normalizationPerformed": true,
-    "plannedNormalizedVoiceCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
     "copiedArticles": 7,
     "copiedImages": 7,
     "copiedLedgerArtifacts": 16,
@@ -836,7 +840,43 @@
         "src/lib/__tests__/native-locale-columns.ts"
       ]
     },
-    "sourceFreezeVerifiedAt": "2026-10-03T23:43:25+09:00"
+    "sourceFreezeVerifiedAt": "2026-10-03T23:59:04+09:00",
+    "previousSourceFreezeVerifiedAt": "2026-10-03T23:43:25+09:00",
+    "normalizedVoiceCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+    "metadataRepair": {
+      "articleFilesChanged": 1,
+      "summaryLinesChanged": 1,
+      "evidenceCopiesUpdated": 1,
+      "reviewCopiesUpdated": 2,
+      "manifestAndAuditUpdated": 2,
+      "totalFilesChanged": 6,
+      "bodyAndOtherMetadataUnchanged": true,
+      "otherArticleEvidencePairsUnchanged": 6,
+      "imagesUnchanged": 7,
+      "registryFilesAndSnapshotsUnchanged": true,
+      "gitDiffCheck": {
+        "command": "git diff --check",
+        "exitCode": 0,
+        "warnings": 0
+      },
+      "scopePaths": [
+        "docs/audit/editorial-20261003-b03.md",
+        "docs/audit/editorial-20261003-b03/RELEASE-MANIFEST.json",
+        "docs/audit/editorial-20261003-b03/evidence/en-parcel-pickup-job-scam-bank-cards-taiwan.md",
+        "docs/audit/editorial-20261003-b03/reviews/legal-en-ko-r1.md",
+        "docs/audit/editorial-20261003-b03/reviews/voice-r1.md",
+        "src/content/columns-en/166-parcel-pickup-job-scam-bank-cards-taiwan.md"
+      ],
+      "unexpectedChangedOrUntrackedFiles": 0,
+      "sourceDestinationArticleMatches": 7,
+      "sourceDestinationImageMatches": 7,
+      "ledgerSourceAndDestinationHashesVerified": 16,
+      "ledgerExactCopies": 15,
+      "ledgerNormalizedCopies": 1,
+      "voiceSourceCopyOneLfInverseProof": true,
+      "finalApprovalAndSharedHashReferencesMatch": true,
+      "verifiedAt": "2026-10-03T23:59:04+09:00"
+    }
   },
   "existingPolicies": "Use existing FRAUD-EDITORIAL-POLICY.md and EDITORIAL-VOICE.md without policy/runtime/UI/dependency changes.",
   "qaHandoff": "Root/QA owns scoped tests, full QA as appropriate, clean build, desktop/mobile and production body/source/image/list/sitemap readback. Derive a B03-specific QA manifest/run; never overwrite B02 QA results or infer success from B02.",
@@ -887,5 +927,126 @@
     "publicationDatesAdded": 7,
     "semiconductorBoardsAdded": 0,
     "note": "Preparation files themselves remain outside the repository. There is no IMAGE-EDITS.json for B03; no edits were supplied or performed for these seven selected originals."
-  }
+  },
+  "approvedMetadataRevisions": [
+    {
+      "articleNumber": 166,
+      "field": "summary",
+      "line": 5,
+      "trigger": "Root-reported QA92364938 summary length 162 > 160; existing QA failure evidence is preserved outside the repository.",
+      "previousApprovedArticleSha256": "8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1",
+      "currentApprovedArticleSha256": "2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d",
+      "previousSummary": "A paid parcel-pickup job can involve other people's bank cards. Original job instructions, messages and delivery records can help establish what you knew and did.",
+      "currentSummary": "A paid parcel-pickup job can involve other people's bank cards. Job instructions, messages and delivery records can help establish what you knew and did.",
+      "previousSummaryCharacters": 162,
+      "currentSummaryCharacters": 153,
+      "previousEvidenceSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
+      "currentEvidenceSha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
+      "previousLegalReviewSourceSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
+      "currentLegalReviewSourceSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+      "previousVoiceReviewSourceSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+      "previousVoiceReviewCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
+      "currentVoiceReviewSourceSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
+      "currentVoiceReviewCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+      "previousManifestSha256": "0ecfb0ad02fc52ca74eb4ab77eba6c1ee0a3c0d50dfaeb3ad3cab73a5bdd6ae1",
+      "sourceLegalAndVoiceVerdicts": "R3 APPROVE; MUST 0",
+      "previousApprovalAndNormalizationHistoryPreserved": true,
+      "ledgerRevisions": [
+        {
+          "previous": {
+            "role": "evidence",
+            "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/evidence/en-parcel-pickup-job-scam-bank-cards-taiwan.md",
+            "destination": "docs/audit/editorial-20261003-b03/evidence/en-parcel-pickup-job-scam-bank-cards-taiwan.md",
+            "sourceSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
+            "sha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
+            "expectedDestinationSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
+            "destinationSha256": "5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a",
+            "sourceBytes": 26228,
+            "bytes": 26228,
+            "copyStatus": "copied_byte_identical",
+            "normalization": null
+          },
+          "currentSourceSha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
+          "currentDestinationSha256": "bcd86ffbe2b2b981b678ce9f916b719b7895cf6283f49043d378935815513bf6",
+          "currentNormalization": null
+        },
+        {
+          "previous": {
+            "role": "legal-review",
+            "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/legal-en-ko-r1.md",
+            "destination": "docs/audit/editorial-20261003-b03/reviews/legal-en-ko-r1.md",
+            "sourceSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
+            "sha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
+            "expectedDestinationSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
+            "destinationSha256": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e",
+            "sourceBytes": 21482,
+            "bytes": 21482,
+            "copyStatus": "copied_byte_identical",
+            "normalization": null
+          },
+          "currentSourceSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+          "currentDestinationSha256": "281b05222fe5ac829d921b6d112541a154a33acef0e65d554a06d748ba589b34",
+          "currentNormalization": null
+        },
+        {
+          "previous": {
+            "role": "voice-review",
+            "source": "/Users/son7/tseng-fraud-editorial-20261003/batch-003/reviews/voice-r1.md",
+            "destination": "docs/audit/editorial-20261003-b03/reviews/voice-r1.md",
+            "sourceSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+            "sha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
+            "expectedDestinationSha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
+            "destinationSha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
+            "sourceBytes": 25956,
+            "bytes": 25955,
+            "copyStatus": "copied_with_recorded_eof_normalization",
+            "normalization": {
+              "status": "applied_copy_only",
+              "reason": "git diff --no-index --check reports new blank line at EOF",
+              "operation": "Remove exactly one extra terminal LF, preserving one final newline. Preserve the original review source and all readable text.",
+              "removedBytes": 1,
+              "sourceSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+              "expectedNormalizedCopySha256": "8ec6e6cf3dc3dc2de4b824aaf7a05c202dd719c66f10c49cc89579be92cb82ed",
+              "copyPlusOneLfRestoresSourceBytes": true,
+              "inverseRestoredSourceSha256": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac"
+            }
+          },
+          "currentSourceSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
+          "currentDestinationSha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+          "currentNormalization": {
+            "status": "applied_copy_only",
+            "reason": "Final R3 source has one extra terminal LF reported by git diff --no-index --check; source retained.",
+            "operation": "Remove exactly one extra terminal LF from repository copy, preserving one final newline and all readable text.",
+            "removedBytes": 1,
+            "sourceSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca",
+            "expectedNormalizedCopySha256": "b084eaa91722ba475b681ecde481bd1e2b15aafd2a7946f21defffd427a6b465",
+            "copyPlusOneLfRestoresSourceBytes": true,
+            "inverseRestoredSourceSha256": "db3bd66637d40b3cc4c70e3e6ba9c18a40bb1bbcbbfab7082164f85f01e4cdca"
+          }
+        }
+      ],
+      "wholeFileInverseReplacementMatchesPreviousApprovedSha": true,
+      "rawBodySha256": "d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd",
+      "bodyExtraction": "s.split(b'---', 2)[2]",
+      "bodySeoImagesDatesAndAllOtherMetadataUnchanged": true,
+      "otherArticleEvidencePairsUnchanged": 6,
+      "allImagesUnchanged": 7,
+      "allRegistryFilesUnchanged": 3,
+      "headBeforeRepair": "9236493837f512fed553b594670c60fbe5f1a1fb",
+      "recordedAt": "2026-10-03T23:57:54+09:00",
+      "testsRunByRepairWorker": false,
+      "previousReviewProvenance": {
+        "finalLegalReviewSourceHashes": {
+          "legal-zh-r1.md": "23ccd5f23ba468d56d535e391f725188f2137d330f582e6aefbc42f9d17247fa",
+          "legal-ja-r1.md": "930f8e2dc351293ad1a94cef76fd5456d5bda82ea411169042119975def10e6e",
+          "legal-en-ko-r1.md": "54555a5ef49660205bab7dbd410b11f56cb1f3a5bcbd795375a65f55e75dd47e"
+        },
+        "finalVoiceReviewSourceHash": "0f5b8f403e052df904f7f1b6f0cb41e13e8c6b004f9f8a5942ce3d13939454ac",
+        "voiceFinalSection": "R2 — 13개 수정 후 최종 동결 재검수",
+        "finalArticleAndEvidenceHashesTakenFrom": "reviews/voice-r1.md final R2 table, independently matched to source files and assigned final legal reports",
+        "jaOptionalSuggestion": "The legal report retains a non-blocking optional interest-rate wording suggestion; its non-adoption is documented and the final legal verdict remains APPROVE.",
+        "humanAttorneyOrNativeSpeakerCertificationClaimed": false
+      }
+    }
+  ]
 }

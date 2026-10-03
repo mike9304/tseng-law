@@ -2,7 +2,7 @@
 title: "A Parcel-Pickup Job in Taiwan: Whose Package Are You Collecting?"
 seoTitle: "Taiwan Parcel Jobs: Bank-Card Scam Risks"
 slug: "parcel-pickup-job-scam-bank-cards-taiwan"
-summary: "A paid parcel-pickup job can involve other people's bank cards. Original job instructions, messages and delivery records can help establish what you knew and did."
+summary: "A paid parcel-pickup job can involve other people's bank cards. Job instructions, messages and delivery records can help establish what you knew and did."
 published: "2026-10-03"
 lastmod: "2026-10-03"
 date_display: "October 3, 2026"

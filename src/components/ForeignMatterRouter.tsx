@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { getForeignMatterRouter } from '@/data/foreign-matter-router';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import type { SiteLocale } from '@/lib/locales';
 import styles from './ForeignMatterRouter.module.css';
 
@@ -18,7 +19,7 @@ export default function ForeignMatterRouter({ locale }: { locale: SiteLocale }) 
             <Link key={matter.href} href={`/${locale}/${matter.href}`} className={styles.card}>
               <h3>{matter.title}</h3>
               <p>{matter.description}</p>
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">{locale === 'zh-hant' ? <ZhHantMonoIcon name="arrow-right" size={20} /> : '↗'}</span>
             </Link>
           ))}
         </div>

@@ -114,4 +114,4 @@ social_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-
 - [民事訴訟法 第385條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=385)
 - [勞動基準法 第54條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=54)
 
-이 글은 법률 AI 어시스턴트가 공개 판결문과 법령을 바탕으로 작성했습니다. 자료 확인일: 2026-10-03.
+이 글은 공개 판결문과 법령을 바탕으로 작성했습니다. 자료 확인일: 2026-10-03.

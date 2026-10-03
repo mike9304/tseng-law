@@ -179,7 +179,8 @@
 }
 @media (max-width: 767px) { .localNav { height: 48px; } }
 @media (max-height: 499px) { .localNav { display: none; } }
-.v2.v2[data-en-design][id] :is(section[id], [id]:is(h2, h3), article[id]) { scroll-margin-top: calc(var(--en-hdr) + 52px + 16px); }
+/* html already reserves --header-offset-desktop (scroll-padding-top): subtract it so the header is not counted twice. */
+.v2.v2[data-en-design][id] :is(section[id], [id]:is(h2, h3), article[id]) { scroll-margin-top: calc(var(--en-hdr) + 52px + 16px - var(--header-offset-desktop, 96px)); }
 
 /* ---------- Pills (component 1, 3) and text link (component 2) ---------- */
 .pill,

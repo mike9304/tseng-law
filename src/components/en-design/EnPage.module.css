@@ -460,7 +460,8 @@
 @media (max-height: 499px) { .localNav { display: none; } }
 @media (max-width: 1023px) { .localNavTitle { display: none; } }
 @media (max-width: 767px) { .localNav { height: 48px; } }
-.root[data-en-design][id] :is(section[id], [id]:is(h2, h3)) { scroll-margin-top: calc(var(--en-hdr) + 52px + 16px); }
+/* html already reserves --header-offset-desktop (scroll-padding-top): subtract it so the header is not counted twice. */
+.root[data-en-design][id] :is(section[id], [id]:is(h2, h3)) { scroll-margin-top: calc(var(--en-hdr) + 52px + 16px - var(--header-offset-desktop, 96px)); }
 
 /* ---------- Inner band (component 8g): one image per page, full bleed, hard bottom edge ---------- */
 .innerBand { position: relative; height: clamp(200px, 28vw, 440px); overflow: hidden; background: #000; }

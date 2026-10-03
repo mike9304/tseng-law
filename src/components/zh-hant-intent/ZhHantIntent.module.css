@@ -918,9 +918,11 @@
   .root:global(#zh-hant-intent) { --ap-radius: 22px; --ap-band: 72px; --ap-title: clamp(26px, 7.8vw, 34px); }
   .root:global(#zh-hant-intent) :global(.page-header) { padding: 48px 0 44px; }
   /* Up to eight characters per line, filled greedily: balance split 設|立 and 台|灣 in the longer titles. */
+  .root:global(#zh-hant-intent) :global(.page-header > .container) { container-type: inline-size; }
   .root:global(#zh-hant-intent) :global(.page-header-title) {
     max-width: none;
     font-size: min(48px, calc((100vw - 2 * var(--page-gutter, 20px)) / 8.4));
+    font-size: min(48px, calc(100cqi / 8.4)); /* the header column, not the viewport (classic scrollbars) */
     line-height: 1.14;
     text-wrap: wrap;
   }

@@ -103,4 +103,4 @@ All sources below were opened and checked October 3, 2026 (Taiwan time).
 - Taiwan Ministry of Justice, Laws & Regulations Database, [Trade Secrets Act, Article 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2), current text checked October 3, 2026.
 - Taiwan National Science and Technology Council, [Announcement of national core critical technologies and trade-secret protection](https://www.nstc.gov.tw/folksonomy/detail/ab71317e-c22e-467a-b3a0-7515aa2bfe6e?l=ch), December 5, 2023.
 
-*AI-prepared general information, not individualized legal advice. Sources checked October 3, 2026 (Taiwan time).*
+*General information, not individualized legal advice. Sources checked October 3, 2026 (Taiwan time).*

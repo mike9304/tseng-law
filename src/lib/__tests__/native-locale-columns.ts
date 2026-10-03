@@ -218,6 +218,11 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '094-korea-divorce-recognition-taiwan-household-registration.md', // family lane b01
     '110-korean-supplier-tsmc-vendor-qualification-contract.md', // semiconductor lane b01
     '116-taiwan-trade-secrets-act-criminal-civil-korean-companies.md', // semiconductor lane b04
+    '134-taiwan-national-security-act-core-key-technology-korean-engineers.md', // reviewed fraud/semiconductor release
+    '143-taiwan-unpaid-invoice-fraud-or-contract.md', // reviewed fraud/semiconductor release
+    '144-taiwan-protection-order-domestic-violence-korean-spouse.md', // family lane b05
+    '160-lost-korean-passport-taiwan-return-travel-documents.md', // reviewed editorial batch002
+    '167-taiwan-secondhand-seller-payment-verification-scam-korean.md', // reviewed editorial batch003
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
@@ -225,12 +230,20 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '108-us-divorce-decree-recognition-taiwan.md', // family lane b02+b03 ship
     '112-micron-taiwan-trade-secret-cases-lessons-for-us-companies.md', // semiconductor lane b01
     '118-tsmc-arizona-chips-act-taiwan-outbound-approval.md', // semiconductor lane b04
+    '136-taiwan-export-controls-shtc-entity-list-us-ear-compliance.md', // reviewed fraud/semiconductor release
+    '142-taiwan-supplier-bank-account-change-bec.md', // reviewed fraud/semiconductor release
+    '159-immigration-officer-impersonation-arc-taiwan.md', // reviewed editorial batch002
+    '166-parcel-pickup-job-scam-bank-cards-taiwan.md', // reviewed editorial batch003
   ],
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
     '111-tsmc-kumamoto-jasm-taiwan-outbound-investment-rules.md', // semiconductor lane b01
     '115-japan-kyogi-rikon-recognition-taiwan.md', // family lane b04
     '117-japanese-materials-supplier-taiwan-nda-trade-secrets.md', // semiconductor lane b04
+    '135-japanese-equipment-maker-engineers-taiwan-work-permit.md', // reviewed fraud/semiconductor release
+    '141-taiwan-rental-deposit-before-viewing-fraud.md', // reviewed fraud/semiconductor release
+    '158-taiwan-hotel-booking-extra-payment-phishing.md', // reviewed editorial batch002
+    '165-taiwan-issued-card-unauthorized-charge-dispute-japanese.md', // reviewed editorial batch003
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',
@@ -255,6 +268,19 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '119-taiwan-semiconductor-employees-overseas-assignment-labor-law.md', // semiconductor lane b04
     '120-taiwan-ambulance-red-light-emergency-priority-negligence.md',
     '121-taiwan-bus-stop-illegal-parking-no-contact-criminal-causation.md',
+    '133-taiwan-semiconductor-overseas-fab-core-key-technology-review.md', // reviewed fraud/semiconductor release
+    '137-taiwan-engineer-job-change-trade-secret-national-security-judgments.md', // reviewed fraud/semiconductor release
+    '138-cash-investment-courier-receipt-fraud-taiwan.md', // reviewed fraud/semiconductor release
+    '139-land-registration-alert-property-fraud-taiwan.md', // reviewed fraud/semiconductor release
+    '140-fake-lawyer-scam-recovery-fee-taiwan.md', // reviewed fraud/semiconductor release
+    '154-family-voice-impersonation-transfer-taiwan.md', // reviewed editorial batch002
+    '155-secondhand-concert-ticket-screenshot-taiwan.md', // reviewed editorial batch002
+    '156-presale-home-payee-developer-agent-taiwan.md', // reviewed editorial batch002
+    '157-unordered-cash-on-delivery-parcel-taiwan.md', // reviewed editorial batch002
+    '161-job-scam-payroll-account-atm-card-taiwan.md', // reviewed editorial batch003
+    '162-fake-customer-service-cancel-installment-atm-taiwan.md', // reviewed editorial batch003
+    '163-gym-closure-prepaid-installments-taiwan.md', // reviewed editorial batch003
+    '164-promissory-note-enforcement-undisbursed-loan-taiwan.md', // reviewed editorial batch003
   ],
 } as const;
 
@@ -266,7 +292,19 @@ export const ROAD_RAGE_COLUMN_FILES_20261003 = {
   'zh-hant': ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md', '109-taiwan-road-rage-baseball-bat-fracture-damages.md', '122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md'],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-03, in filename order. */
+/** Native semiconductor and traffic columns published 2026-10-04. */
+export const COUNTRY_COLUMN_FILES_20261004 = {
+  ko: ['168-taiwan-gold-card-semiconductor-talent-korean-engineers.md'],
+  en: ['170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md'],
+  ja: ['169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md'],
+  'zh-hant': [
+    '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
+    '172-taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence.md',
+    '173-taiwan-manhole-pothole-road-authority-utility-internal-recourse.md',
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-04, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -278,6 +316,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261002 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((ROAD_RAGE_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261004 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -293,11 +332,13 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-03, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-04, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const current: readonly string[] =
+    (COUNTRY_COLUMN_FILES_20261004 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const latest: readonly string[] = [
     ...((COUNTRY_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((ROAD_RAGE_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -312,15 +353,18 @@ export function archiveLeadSlugsFor(locale: string): string[] {
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   // Same calendar day → source (filename) order, matching sortColumnPostsNewestFirst.
+  const currentSlugs = [...current].sort().map(slugOf);
   const latestSlugs = [...latest].sort().map(slugOf);
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  const head = [...latestSlugs, ...newestSlugs, ...newerSlugs];
+  const head = [...currentSlugs, ...latestSlugs, ...newestSlugs, ...newerSlugs];
   return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-03). */
+/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-04). */
 export function archiveLeadPublicationDate(slug: string): string {
+  const current = Object.values(COUNTRY_COLUMN_FILES_20261004).flat().map(slugOf);
+  if (current.includes(slug)) return '2026-10-04';
   const latest = [...Object.values(COUNTRY_COLUMN_FILES_20261003), ...Object.values(ROAD_RAGE_COLUMN_FILES_20261003)].flat().map(slugOf);
   if (latest.includes(slug)) return '2026-10-03';
   const newest = [
@@ -365,6 +409,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261002),
     ...Object.values(COUNTRY_COLUMN_FILES_20261003),
     ...Object.values(ROAD_RAGE_COLUMN_FILES_20261003),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261004),
   ].flat().map(slugOf),
 );
 

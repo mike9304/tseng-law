@@ -7,8 +7,20 @@ import generalAccidentCaptions from '@/data/general-accident-video-captions.json
 import overtakingCaptions from '@/data/overtaking-video-captions.json';
 import businessPremisesCaptions from '@/data/business-premises-video-captions.json';
 import logisticsCaptions from '@/data/logistics-video-captions.json';
+import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
 describe('reviewed column videos', () => {
+  it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
+    const slug = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
+    expect(html).toContain(`cosmetics-check-v1-${assetLocale}.mp4`);
+    for (const value of Object.values(caption)) expect(html).toContain(renderToStaticMarkup(<>{value}</>));
+    expect(html).toContain('controls=""');
+    expect(html).not.toMatch(/autoplay|loop=/i);
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+    expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
+  });
   it.each(Object.entries(logisticsCaptions))('keeps the logistics scene and %s caption on the reviewed logistics column', (locale, caption) => {
     const slug = 'taiwan-logistics-business-setup';
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
@@ -141,6 +153,9 @@ describe('reviewed column videos', () => {
   });
 
   it.each([
+    ['taiwan-bus-stop-illegal-parking-no-contact-criminal-causation', 'bus-stop-causation-film-v1-zh-hant', '六個原始鏡頭未取得'],
+    ['taiwan-motorway-blocking-no-collision-public-danger', 'motorway-blocking-film-v1-zh-hant', '與判決凌晨反覆攔擋不同'],
+    ['taiwan-ambulance-red-light-emergency-priority-negligence', 'ambulance-priority-film-v1-zh-hant', '不能證明勤務合法或責任'],
     ['taiwan-bus-sudden-braking-passenger-carrier-liability', 'bus-passenger-film-v1-zh-hant', '未呈現車外原因或完整煞車過程'],
     ['taiwan-retaliatory-driving-rear-ended-intentional-injury', 'retaliatory-injury-film-v1-zh-hant', '不能用來認定故意、傷勢或責任比例'],
     ['taiwan-parking-wheelstop-latch-service-safety-causation', 'parking-facility-film-v1-zh-hant', '畫面中的車輪擋未被碰到'],
@@ -206,11 +221,11 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
   });
 
-  it.each(['ko', 'ja', 'en', 'zh-hant'])('preserves native looping and the manual component default for road-rage videos (%s)', (locale) => {
+  it.each(['ko', 'ja', 'en', 'zh-hant'])('plays the replacement cut-in once with manual controls (%s)', (locale) => {
     const slug = 'taiwan-road-rage-freeway-cut-in-sentence-reduced';
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
-    expect(html).toContain(`road-rage-freeway-cut-in-sentence-reduced-v3-${locale}.mp4`);
-    expect(html).toContain('loop=""');
+    expect(html).toContain(`truck-cut-in-v1-${locale}.mp4`);
+    expect(html).not.toContain('loop=');
     expect(html).toContain('controls=""');
     expect(html).toContain('preload="none"');
     expect(html).not.toMatch(/autoplay/i);

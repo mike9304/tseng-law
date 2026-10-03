@@ -1,0 +1,17 @@
+# Batch002 writing contract
+
+User: keep producing as much quality site-related content as feasible until stopped. Taiwan clients first, native audience needs, sources and images. Quantity never overrides verified legal/factual accuracy.
+
+Read `TOPIC-BRIEFS.md`, the full current `docs/columns/EDITORIAL-VOICE.md` and `docs/columns/FRAUD-EDITORIAL-POLICY.md` in `/Users/son7/Projects/tseng-law-fraud-editorial-20261003`. Read the actual approved first-batch locale articles and compare the most recent three openings/headings/endings. Preserve current author-display policy: internal `author: legal-ai-assistant`, no public AI-author byline/footer, no invented attorney/native approval, retain generated-image notice. Attorney tone is precise facts/actors/conditions, not an invented personal consultation history.
+
+Each assigned topic needs direct primary-source browsing before drafting. Search-result snippets or an official homepage are not adequate claim evidence. Keep jurisdiction, dates, conditions, exceptions, amounts, discretion and guarantees precise. Source uncertainty means narrow the claim or hold the topic, not confident filler. Do not make every suspicious contact automatically a crime. Distinguish actual public events from an expressly hypothetical example. No unsupported prevalence/statistics.
+
+Outputs ONLY in this batch directory: `drafts/<locale>-<slug>.md` and `evidence/<locale>-<slug>.md`. You own only assigned files; other agents are active. Never revert or modify others' changes. Do not edit repository source/registries, first-batch frozen articles, media, driver/config/state, commits or external publication. No git add/commit/push.
+
+Draft frontmatter follows the current locale columns: title, seoTitle, summary, actual published/lastmod date and localized date_display/read_time, appropriate category/topic/tags, one native audience, internal author. Use no numeric filename prefix yet. Expected image path `/images/columns/editorial-20261003-b02/<slug>.png`; image content/alt is provisional until actual image inspection. Mark that provisional status in evidence, not in public prose. The final caption must identify an illustrative AI image and exclude actual persons/documents/events as relevant. Do not invent image details.
+
+Prose: direct native-language question or concrete situation, specific analysis/actions, links by the supporting claim plus a short source list and verified date. No decorative bold, generic three-step template, generic conclusion, sales guarantees or excessive repetitive disclaimer. A modest internal link to relevant existing material or the locale contact page is useful only where it answers the next practical need. Do not pad to a word target; resolve the stated question fully.
+
+Evidence ledger: audience/why separate, duplication check with existing paths, every material legal/factual claim and supporting exact source URL/body/date/conditions, checked date, interpretations/advice distinguished from legal requirement, unresolved limits. Keep source quotations brief. Include opening/headings/ending comparison with recent3 locale posts and writer's own redline rationale. Report all sources actually opened and any access failures honestly.
+
+Independent legal/source and voice review will follow; a writer's self-check is not final approval. Return draft/evidence paths, SHA256, source count, unresolved items and a short description of the proposed image scene. Do not report attorney/native review.

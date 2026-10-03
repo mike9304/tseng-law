@@ -142,4 +142,4 @@ author: "legal-ai-assistant"
 - 法務部全國法規資料庫，[《全民健康保險法施行細則》第36條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060002&flno=36-1)：2024年12月23日起不再依原規定辦理停保及過渡安排。
 - 法務部全國法規資料庫，《營業秘密法》[第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2)、[第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=10)。
 
-*本文由AI依公開資料撰寫，提供一般法律資訊，不是個別案件的法律意見。資料查核日：2026年10月3日（韓國標準時間）。*
+*本文依公開資料撰寫，提供一般法律資訊，不是個別案件的法律意見。資料查核日：2026年10月3日（韓國標準時間）。*

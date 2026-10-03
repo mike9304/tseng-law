@@ -1,0 +1,164 @@
+# Batch003 EN — parcel pickup job / bank cards: writer evidence
+
+작성·원문 확인일: 2026-10-03. 작성자: `/root/batch002_write_en`.
+
+대상 원고: `drafts/en-parcel-pickup-job-scam-bank-cards-taiwan.md`.
+
+초안 동결 SHA-256: `6cbe7c6ca5fd17c6656761bed372755bce5321517cc0ce596691b28c2d44672e`.
+
+이미지 설명 확정 후 최종 원고 SHA-256: `55df4f26722918f877ed8d00d9760ef7eb3aa985b4b638f57a6b8b1e139ec21d`.
+
+SEO 길이 수정 단계 원고 SHA-256: `802ebb91ffbb2fb6828ce6dc71c71c1f06bfb39d7a8aefa11b0a2eba4f57e900`. 위 미디어 확정본에서 SEO 한 줄만 바뀐 이력이다.
+
+V01 summary 수정 후 현재 통합 대상 원고 SHA-256: `8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1`. 최종 추가 기록의 summary 역치환 증거를 참조한다.
+
+상태: 작성자 자체 점검과 실제 이미지 설명 확정 완료, 독립 법률·출처 검수 및 문체 검수 대기. 본문은 초안 동결 당시와 동일하다. 렌더링은 아직 하지 않았다. 변호사나 원어민 검수 인증 또는 발행 승인이 아니다. 아래 초안 점검 이력에 이어 마지막 절에 이미지 변경 증거를 남겼다.
+
+## 독자와 이번 글의 판단
+
+대만에서 일자리를 알아보며 영어 정보를 읽는 사람이다. 국적·모국어·특정 체류 유형을 가정하지 않는다. 낯선 고용주의 지시로 다른 사람의 소포를 수령·전달하는 일을 수락할지, 의심이 생겼다면 이미 받은 소포와 기록을 어떻게 다룰지가 질문이다. 자기 계좌를 넘기는 사람이나 주문하지 않은 착불 물품을 받은 소비자가 중심이 아니다.
+
+영어판을 별도로 쓴 이유는 구직자가 중국어 구인·지시 원문을 영어로 정리하더라도 원문과 번역을 함께 보존하고, 당시 이해와 이후 알게 된 사실을 구별할 필요가 있기 때문이다. 외국인이 주요 표적이라는 통계, 영어만 쓰면 피해가 더 크다는 주장, 미국 신고 절차를 넣지 않았다.
+
+`batch-003/WRITER-WORKORDER.md`, 담당 `TOPIC-BRIEFS.md` 제6항, `batch-002/WRITER-WORKORDER.md`, 저장소의 현행 `FRAUD-EDITORIAL-POLICY.md`, `EDITORIAL-VOICE.md`, `AGENTS.md`를 읽었다. 본인의 편집 파일 두 개만 소유하며 repo·번호·registry·media·driver·설정·다른 작성자의 파일을 변경하지 않았다.
+
+실제 문체 표본 DOCX의 `word/document.xml` 첫 5문단과 `docProps/core.xml`을 직접 읽었다. 파일 SHA `bc5721bdb532ef883986b9caf40c0ebefd0ed78dd7576048d3189483548ffd5d`가 정책과 일치했다. 누가 어떤 업무를 맡고 어떤 자료로 판단하는지를 먼저 설명하는 방식을 참고했다. 표본의 메타데이터를 이 신규 글의 인간 작성·검토 증거로 사용하지 않았다.
+
+## 실제 열람한 1차 자료
+
+검색 결과 요약을 사실 근거로 사용하지 않았다. 아래 4개 인용 URL은 모두 web open으로 실제 본문을 읽었다. 추가로 L0의 전체 법률 페이지에서 법률 단위 개정일과 관련 총칙 본문을 확인했다. 확인 범위를 페이지 전체의 법률 검수로 확대하지 않는다.
+
+| ID | 직접 URL·발행 주체·관할 | 날짜와 읽은 범위 | 사용할 수 있는 범위·제한 |
+|---|---|---|---|
+| P1 | [彰化縣警察局 少年警察隊, 暑期打工要小心，求職防詐最安心](https://www.chpb.gov.tw/jpb/Announcement/C122100?ID=08326175-b0a9-47df-bcb1-a06424020df6&PageType=1), Taiwan | 본문 게시 114-06-27 = 2025-06-27. 본문에서 고액·간단 업무·현금 일급 등과 소포 대리 수령을 주의할 구인 표현으로 열거하고, 확인·증거 보존 및 의심 시 165 또는 경찰 신고를 안내한 부분을 읽음. | 예방 안내이다. 실제 피해 사건·2026년 신규 수법·국적별 빈도 통계가 아니다. 사이트 footer 115-09-23을 기사 게시일로 쓰지 않았다. 경찰의 단순화된 공범 경고를 모든 구직자의 유죄 기준으로 확대하지 않음. |
+| C1 | [臺灣臺中地方法院 114年度金訴字第3427、4336號判決新聞稿](https://www.judicial.gov.tw/tw/cp-1888-1546044-094be-1.html), Judicial Yuan / Taichung District Court, Taiwan | 게시 115-05-15 = 2026-05-15. 첫 문장의 당일 선고, 사실 요약, 이유 ①–③, 논죄, 양형, 몰수, 마지막 제6항 항소 가능 표시까지 기사 본문 직접 읽음. | 공개된 1심 판결 보도자료이며 판결문 전문이나 항소심 판결을 열람한 것이 아니다. 편의점·臺中捷運站 보관함 수령 후 臺南으로 국내 전달. 피해자가 속아 보낸 ATM 카드가 담김. 행위 당시 조사관이라는 특수 경력·수사 훈련, 보수와 전달 경로를 함께 고려한 고의·공동정범 판단. 국외 운송 사례로 변형하지 않음. |
+| L13 | [中華民國刑法 제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=13), Ministry of Justice, Taiwan | 현행 단일 조문의 두 항을 직접 읽음. 법규 편집 마감은 115-09-24 = 2026-09-24로 표시됨. | 사실을 알고 그 발생을 의도하는 고의 및 발생을 예견하면서 그 발생이 본의에 반하지 않는 고의의 두 구조. 단순 의심·주의의무 위반이나 알 수 있었음만으로 고의를 단정하지 않음. 영문은 중국어 원문의 설명용 의역이며 공식 영문 조문 인용이라고 표시하지 않음. |
+| L30 | [中華民國刑法 제30조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=30), Ministry of Justice, Taiwan | 현행 단일 조문의 두 항을 직접 읽음. 법규 편집 마감은 2026-09-24. | 타인의 범죄 실행을 돕는 幫助犯 규정. 원고는 그 존재를 설명하고 실제 역할·인식을 따로 보도록 한다. 제2항의 감경은 재량이므로 필수 감형이나 가벼운 결과를 약속하지 않으며 형량 자체를 쓰지 않음. |
+| L0 | [中華民國刑法 전체 조문 페이지](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0000001), Ministry of Justice, Taiwan | 법률 단위 개정일 115-07-22 = 2026-07-22와 총칙의 관련 본문 확인. 제13·30조의 직접 인용 근거는 위 단일 조문 페이지임. | 2026-07-22를 제13조나 제30조 자체의 개정일·시행일로 주장하지 않음. 개별 조문의 별도 개정일은 단일 조문 페이지에 표시되지 않음. 모든 조문의 연혁·효력을 검토했다고 기록하지 않음. |
+
+접근 실패로 해결되지 않은 인용 출처는 없다. 첫 출력에서 경찰·단일 조문의 본문이 충분히 나오지 않아 해당 본문 위치를 다시 open하여 전문을 읽었다. C1 첨부 DOCX/ODT/PDF나 판결문 전문은 열지 않았다. 이후 항소 여부나 확정 여부를 검색으로 확인했다고도 주장하지 않는다. 그래서 본문은 보도자료가 발표 당시 항소 가능하다고 했다는 범위만 말한다.
+
+## 주장 대조표
+
+행 번호는 위 동결 SHA의 원고 기준이다. 실무 제안은 법정 의무나 공식 기관의 정해진 처리 절차가 아니다.
+
+| 원고 위치 | 주장·제안 | 근거 및 제한 |
+|---|---|---|
+| 제목·summary, L22 | 다른 사람의 소포 운반을 수락하기 전에 고용주·내용물·연결 관계를 확인할 필요; 픽업 코드만으로 고용주 권한은 확인되지 않음 | P1의 확인 권고와 C1을 바탕으로 한 작성자의 제한적 실무 제안. 픽업 코드의 기술적 발급 조건이나 모든 플랫폼의 신원 심사 수준은 주장하지 않음. |
+| L24 | P1이 소포 대리 수령·고액 간단 업무를 경고; 정상 배송 자체는 자동 범죄가 아님 | 첫 문장은 P1 실제 본문. 후반은 L13·L30 및 C1의 개별 사실 판단에 따른 한계 설명. 외국인 특별 표적·발생 증가·형식적인 구인만으로 유죄라는 문장 없음. |
+| L28–32 | 회사의 별도 연락 경로로 채용 담당자와 일자리 확인, 서면 업무 범위·발송인·수취인·경로·보수 설명, 불명확하면 수령을 거절하고 상담 | P1의 확인 권고를 구체화한 작성자의 제안. 회사 등기 확인만으로 합법성 보장, 법정 KYC, 특정 플랫폼이 제공하는 조회 기능으로 표시하지 않음. 수령하거나 개봉해서 조사하라고 하지 않음. |
+| L36 | 법원·사건번호·1심·선고 발표일·국내 수령/전달·타인의 ATM 카드·후속 사기 이용 | C1의 첫 문장·사실 요약·게시 날짜. 법원 공개자료임을 문단 첫 문장에 연결. 카드가 이미 의심된다는 구직자의 가상 진술이나 사무소 사건으로 바꾸지 않음. |
+| L38 | 행위 당시 조사관, 훈련·경력·보수·전달 방식의 종합 판단, 고의·공동정범 판단 및 항소 가능 | C1 이유 ①–③와 제6항. 판결문의 모든 사실이나 항소 결과를 검토했다고 하지 않음. 액수·피해자 수·형량을 제외하여 불필요한 세부 결론으로 확장하지 않음. |
+| L40 | 특수 경력이 추론에 포함됨; 다른 구직자의 인식은 이 사건으로 확정할 수 없음; 자기 계좌를 빌려주지 않아도 운반 관여가 쟁점이 될 수 있음 | C1에 대한 명시적 제한과 좁은 해석. 카드 운반만으로 책임이 성립한다는 명제를 만들지 않음. |
+| L44 | 제13조의 직접 고의와 예견·수용 구조; 경고 신호 자체와 실제 고의의 증명을 구분 | L13. 영어의 “accepting that outcome”은 本意에 반하지 않음의 독자용 의역이다. 단순 과실을 고의로 바꾸거나, 법률 위반임을 알았어야 한다는 별도 요건을 붙이지 않음. |
+| L46 | 제30조의 방조 규정, 방조/공동정범 구분은 실제 역할과 인식을 검토 | L30의 방조 규정 + C1의 구체적 공동정범 판단. 제30조 한 조문만으로 모든 공동정범 요건을 설명했다는 의미가 아님. “just delivery”는 법적 결론을 대신하지 못한다는 해석. |
+| L48 | 처음 지시, 이후 변경, 질문·답변과 시점을 원문으로 남길 필요 | 사실관계 정리를 위한 작성자 제안. 기록만 제출하면 면책, 정해진 입증책임·증거능력·보관기간이 생긴다는 주장 없음. 기존 기록 수정·삭제를 권하지 않음. |
+| L52 | 의심 시 165/경찰 접촉; 추가 수령을 멈추고 실제 소포 보유 여부를 설명해 처리 지침 문의; 개봉·폐기·추가 전달하지 않기 | 첫 문장은 P1 공식 안내. 나머지는 처리 절차가 확인되지 않은 상태의 보수적인 실무 제안이며 특정 법 조문의 보관 의무라고 하지 않음. 경찰 지침 없이 반송하거나 타인에게 넘기라고 하지 않음. 165 영어 제공 시간·상담 방식은 확인하거나 약속하지 않음. |
+| L54 | 채용 원문·계정명·연락처·운송·수령·보수 기록 및 원문/번역 함께 보존; 들은 이름과 실제 확인한 신원 구별 | P1의 증거 보존 권고를 구체화한 작성자의 자료 정리 제안. 신원 추적·몰래 녹음·통신자료 접근·운송업체의 자료 보관기간 등은 말하지 않음. |
+| L56 | 대만 형사 변호사에게 본인 지위 검토 요청; 조사 통지를 받았다면 별도 관련 글 연결 | 자료 준비·조력 요청 제안. 무혐의·면책·환급·체류 보호를 약속하지 않음. 연결한 033의 구체 법률 결론을 이 글의 확인된 사실로 다시 인용하지 않음. |
+| L60–64 | 검토일·실제 출처 종류·항소 후속 미확인 | 수행 범위 그대로. 본문 인용 고유 URL 4개와 출처 목록 대응. |
+
+## 기존 글·최근 도입 비교
+
+읽기 기준 checkout: `/Users/son7/Projects/tseng-law-fraud-editorial-20261003`, 실제 `git rev-parse HEAD` 출력 `825bc81698e7318b69a15555741a77c03b362206`. 이 체크아웃의 metadata와 파일 내용 비교이며 현재 운영사이트의 게시 순서를 새로 전수 감사한 기록은 아니다.
+
+내용이 가까운 다음 글 전문을 읽었다.
+
+- `src/content/columns-en/142-taiwan-supplier-bank-account-change-bec.md`: 회사 송금 지시 변경, 채무 변제·원본 이메일이 중심이다. 이번 글은 구직자 자신의 행위·인식과 타인의 소포 운반이 중심이다. 송금 회수·민법 309/310을 재사용하지 않는다.
+- `src/content/columns-en/064-taiwan-warning-account-foreigners.md`: 본인 계좌가 제한된 후의 통지 기관·해제·잔액 반환이다. 이번 글은 계좌를 제공하지 않은 운반자도 검토 대상이 될 수 있다는 전 단계의 질문이다. 경시계좌 해제 절차를 추가하지 않는다.
+- `src/content/columns-en/033-taiwan-police-questioning-foreigner-rights.md`: 출석 통지 후 지위·조사·통역·변호인 등이다. 이번 글은 채용·수령·지시 변경에 따른 행동과 기록까지 다루고, 실제 조사 단계만 내부 링크로 연결한다. 취업허가·체류 결과는 옮기지 않는다.
+- `batch-002/drafts/en-immigration-officer-impersonation-arc-taiwan.md`: 전화로 주장하는 행정기관과 실제 신청 절차 확인이 중심이다. 같은 `Suppose a caller…` 도입과 연락처 분기 표를 반복하지 않았다. 이번 글에는 원고 속 가상 인물·가상의 수임 사건을 만들지 않았다.
+
+현 checkout의 `published` 내림차순, 같은 날짜는 파일 번호 내림차순으로 추린 최근 3개 EN 파일에서 첫 두 문단·전체 소제목·출처 직전 끝 두 문단을 별도로 추출해 직접 읽었다. 136/122 전체 본문을 이 비교에서 전수 검증했다고 기록하지 않는다.
+
+| 비교 글 | 확인한 도입·구성·마무리 | 이번 글의 선택 |
+|---|---|---|
+| 142 BEC, 2026-10-03 | 익숙한 메일과 새 계좌 승인 구별 → 연락 채널/변제/은행/원본 → chronology와 2차 지급 요청 검토 | 원문 보존이라는 공통 실무는 남기되, 송금 확인·누가 손실을 부담하는지가 아니라 최초 구인과 이후 운반 지시를 중심에 둠. 끝은 자금 회수·재지급이 아니라 소포 처리 문의와 조사 자료 연결. |
+| 136 export controls, 2026-10-03 | 실제 목록 갱신일·허가 규정 → 양국 체계별 길고 상세한 설명 → 가상 거래·연락처/허브 | 외국어 독자를 미국 회사로 좁히거나 국가별 법률 체계를 복제하지 않음. 좁은 대만 구직자 판단 하나를 약 745단어로 처리. |
+| 122 road rage, 2026-10-03 | 실제 사건의 시각·차량 동작 → 영상/항변/죄명/양형 → 행동과 법원 증거 평가 | 법원 사건은 도입을 장악하지 않고 중간의 짧은 사례로 배치. 항소 가능 상태를 명시하고 일반 구직자의 고의를 사건으로 대신 판단하지 않음. |
+
+직접 중복 검색: EN 칼럼과 batch-002 drafts에 제안 slug 및 `parcel.pickup|bank.card collection`을 `rg -n`으로 검색한 결과 일치 없음(exit 1). 이는 완전한 의미 중복 판별을 대신하지 않으므로 위 본문 비교와 함께 사용했다. 다른 언어 전체를 이번 작성자가 새로 전수 읽었다는 뜻은 아니다.
+
+## 첫 두 문단 삭제 검사와 실제 수정
+
+| 문장 | 삭제하면 없어지는 내용 | 판단 |
+|---|---|---|
+| L22 첫 문장 | 수령 전 발송인·고용주·내용물 관계를 확인하는 바로 그 결정 | 유지. 제목만 다시 말하는 문장이 아니라 확인할 관계를 제시함. |
+| L22 두 번째 문장 | 수령용 코드가 채용 상대나 업무를 증명하는 자료와 다르다는 설명 | 유지. 앞 문장의 확인을 코드 제시로 대체하지 않도록 연결함. |
+| L24 첫 문장 | 실제 경찰 안내의 발행일·소포 수령 구인·높은 보수라는 출처 근거 | 유지. 새 유행이나 외국인 표적 통계로 쓰지 않음. |
+| L24 두 번째 문장 | 정상 배송을 자동 범죄로 확대하지 않는 범위와 인식·역할 판단 | 유지. 경고 표현만으로 독자를 가해자로 단정하는 읽기를 제한함. |
+
+실제 자체 수정 기록:
+
+1. `It recommends verification and preserving evidence.` → 앞뒤의 확인 권고와 후반 증거 보존을 다시 예고하는 짧은 중복 → 도입에서 삭제 → 경찰의 실제 확인·보존 권고는 출처와 후반 행동에 남고 법률 강도·조건 변화 없음.
+2. `Article 13 covers both knowingly intending the facts …` → “intending the facts”라는 명사구가 읽기 어려움 → 현재 L44의 주어 `a person`과 `know / intend` 및 별도 예견·수용 문장으로 수정 → 고의의 두 구조·수용 요건을 보존.
+3. `pause further collections and contact …, as the Changhua warning advises` → 경찰이 “추가 수령 중지”까지 명시했다는 오독 가능 → L52 첫 문장에는 실제 기관 연락 안내만 인용하고, 중지·보존·처리 문의는 다음 문장으로 분리 → 공식 지침과 작성자의 제안 사이의 범위가 더 정확해짐.
+
+수정 전 실제 최초 저장 원고 SHA는 `b1af13e27a147fd6a175e6c53e0ab6b661541ae37d37fa7c59c805c5f4a17fbf`였다. 위 수정 후 동결 SHA는 문서 상단 값이다. 제목·소제목은 원고의 개별 질문을 표현하며 기계적 3단계·FAQ·요약 결론을 추가하지 않았다. 마무리는 원고에 필요한 조사 단계의 다음 자료만 연결한다.
+
+## 수행한 확인 및 이미지 제안
+
+실행한 작성자 점검: Python으로 실제 원고 SHA-256, inline URL 중복 제거 수, 장식용 bold 패턴, 링크를 가시 텍스트로 바꾼 본문 단어 수를 계산했다. 출력은 본문과 소제목 745단어, 고유 외부 URL 4개, `DECORATIVE_BOLD False`, 종료코드 0이었다. `urllib.request.urlopen`으로 내부 링크의 운영 URL `https://tseng-law.com/en/columns/taiwan-police-questioning-foreigner-rights`를 열어 HTTP 200 및 같은 최종 URL을 확인했다. 이 확인은 링크 접근성만이며 그 글의 모든 법률 사실을 새로 검증한 것은 아니다.
+
+추가로 현재 repo에서 읽기 전용 Node 검사로 `gray-matter`를 사용해 원고 frontmatter를 파싱했다. 필수 필드 16개, 내부 작성자, 단일 EN audience, 날짜, slug와 이미지 파일명, bold 부재 및 evidence의 실제 원고 SHA 대응을 검사하여 `result: PASS`, `frontmatter: parsed`, 외부 출처 4개, 종료코드 0을 관찰했다. 이 작성자 검사는 저장소 테스트·빌드·독립 검수를 대신하지 않는다.
+
+초안 동결 당시에는 이미지 원본을 생성·열람하지 않았다. 당시 제안 장면: 이름·라벨·바코드가 없는 밀봉 소포 옆에서 구직자의 손이 휴대전화의 일반적인 메시지 화면을 확인하는 조용한 실내 장면. 화면은 실제 회사·경찰·물류 앱이 아니며 읽을 수 있는 이름·계좌·픽업 코드를 넣지 않는다. 소포 속에 실제 카드가 보이는 연출, 범인처럼 보이는 인물, 현행 사건 재현은 피한다. 초안의 alt는 예정 문구였으며 실제 생성 장면에 맞춰 아래와 같이 변경했다. caption의 AI·가상 장면 고지는 보존했다.
+
+남은 범위: 독립 법률/출처·문체 검수, 실제 이미지와 alt/caption 대조, root의 게시일 재확인·통합·빌드·화면 검수. 범위를 좁힌 현재 본문의 중대한 미확인 사실은 없다. 항소 후속·외국인 피해 통계·국외 배송·취업허가/체류 결과·특정 결과 보장은 포함하지 않았으며, 이를 확인된 것으로 취급하지 않는다. 검수 지적 전까지 원고·evidence 두 파일을 동결한다.
+
+## 2026-10-03 이미지 실물 확인 및 최종 metadata 변경
+
+root가 제공한 원본을 작성자가 `view_image`로 직접 열어 보았다.
+
+- 원본: `/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-caefbf3e-3330-4c4e-8ae7-6b6dd86d9da7.png`
+- 이미지 SHA-256: `27a3e5c6ed750122bb617602496bdee90c84149928e872669104180aa2c84cd4`
+- PNG 크기: 1672×941, 1,892,163 bytes. PNG IHDR과 실제 파일 바이트를 읽어 확인했다.
+- 예정 공개 경로: `/images/columns/editorial-20261003-b03/parcel-pickup-job-scam-bank-cards-taiwan.png` — 원고의 경로는 변경하지 않았다. 패키지 복사·manifest는 다른 담당 범위이며 이번 작성자가 수행했다고 기록하지 않는다.
+
+실제로 보이는 장면은 초록색 택배 보관함 옆에서 밀봉된 무표기 상자를 들고, 다른 손의 휴대전화는 몸 옆으로 내린 사람의 뒷모습이다. 카드·계좌·픽업 코드나 읽을 수 있는 채용 메시지는 보이지 않는다. 따라서 초안의 “request to verify the delivery instructions”를 실제 화면에 표시된 내용처럼 유지하지 않았다. 성별·국적·실제 직업·범죄 관여를 이미지로 판단하지 않는다.
+
+확정 alt: `A person seen from behind holds a sealed parcel beside green parcel lockers, with a mobile phone lowered at their side.`
+
+확정 caption: `AI-generated fictional scene beside parcel lockers; it does not depict an actual job applicant, employer, shipment or reported incident.`
+
+변경 범위는 원고 L16·L17의 alt/caption 두 줄뿐이다. Python으로 두 줄을 초안 문구로 역치환해 전체 파일 SHA가 최초 동결 `6cbe7c6ca5fd17c6656761bed372755bce5321517cc0ce596691b28c2d44672e`와 정확히 같아짐을 확인했다. raw body(두 번째 frontmatter 구분자 뒤의 LF를 포함한 바이트)도 변경 전후 동일하며 SHA는 `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`다. 실행 결과 `result: PASS`, `only_alt_caption_changed: true`, 종료코드 0. 제목·날짜·출처·법률 본문·기타 frontmatter를 변경하지 않았다.
+
+원고 최종 SHA는 `55df4f26722918f877ed8d00d9760ef7eb3aa985b4b638f57a6b8b1e139ec21d`이며, 이번 변경 직전 evidence SHA `46e598c62198d15355f739b8a62b53888af5499e9f3b8652c602878d5b343dce`는 이력으로 보존한다. 위 초안 잔여 범위 중 작성자의 실물·alt/caption 대조는 완료됐고, 독립 검수·통합·빌드·페이지 렌더링은 여전히 별도다. 추가 법률 조사를 수행하거나 법률 검수를 승인했다고 주장하지 않는다. 두 담당 파일을 이 최종 상태로 다시 동결한다.
+
+## 2026-10-03 EN SEO 길이 제한의 최소 수정
+
+root의 코퍼스 검사 지적에 따라 `/src/lib/__tests__/column-seo-title-frontmatter.test.ts`의 EN 규칙을 직접 읽었다. 표시 제목과 ` | Hovering Law`를 합쳐 60자를 넘을 때만 별도 `seoTitle`이 필요하며, 그 값은 30자 이상이고 suffix 포함 60자 이하(따라서 45자 이하)여야 한다. 표시 제목이 짧으면 `seoTitle` 필드는 없어야 한다. 이번 표시 제목은 긴 경우이므로 한 줄을 줄였다.
+
+- 수정 전 L3: `seoTitle: "Taiwan Parcel-Pickup Jobs and Bank-Card Scam Risks"`.
+- 수정 후 L3: `seoTitle: "Taiwan Parcel Jobs: Bank-Card Scam Risks"`.
+- 새 값은 40자, suffix 포함 55자다. 본문의 소포 운반·타인 카드·사기 위험 범위를 그대로 요약하며 새 법률 주장을 추가하지 않는다.
+
+수정 전 원고 SHA `55df4f26722918f877ed8d00d9760ef7eb3aa985b4b638f57a6b8b1e139ec21d`를 실제 바이트로 확인했다. 수정 후 SEO 한 줄만 역치환했을 때 그 전체 SHA와 정확히 일치하며, raw body SHA도 `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`로 불변이다. Python 출력 `result: PASS`, `only_seoTitle_changed: true`, 종료코드 0. 화면 제목·H1·미디어·날짜·법률 본문·나머지 frontmatter는 변경하지 않았다.
+
+최종 원고 SHA `802ebb91ffbb2fb6828ce6dc71c71c1f06bfb39d7a8aefa11b0a2eba4f57e900`. 이전 evidence SHA `20b2d8689cc2d9977b982dd15981ab19552b325f04046c89690757ca28f85469`는 이력이다. 법률 검수자와 문체 검수자에게 이 최종 SHA와 변경 범위를 전달한다. 저장소 코퍼스 테스트 재실행·복사·배포는 통합 담당 범위이며 이 작성자가 완료했다고 주장하지 않는다.
+
+## 2026-10-03 voice R1 V01 summary 한 문장 최소 수정
+
+독립 문체 보고서 `reviews/voice-r1.md` SHA `416860437f84d6aa10ba0519079045668dc80ba43609dee93e02e68c9a33551e`의 V01과 root 지시에 따라 원고 L5 summary만 수정했다. 글에서 다룰 내용을 예고하던 둘째 문장을 당시 인식·행동을 확인할 자료의 역할로 바꿨다.
+
+- 변경 전: `summary: "A paid parcel-pickup job can involve other people's bank cards. What to check before accepting, how intent matters, and what to preserve if you already collected a package."`
+- 변경 후: `summary: "A paid parcel-pickup job can involve other people's bank cards. Original job instructions, messages and delivery records can help establish what you knew and did."`
+- 변경 전 원고 SHA: `802ebb91ffbb2fb6828ce6dc71c71c1f06bfb39d7a8aefa11b0a2eba4f57e900`
+- 변경 후 현재 통합 대상 원고 SHA: `8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1`
+- 변경 전 evidence SHA: `e424ef9f62488a2fc95ddcc0de20b5fea9921e49c1f6f50dfd2dbddaaa96926f`. 이 값은 변경 이력이며 현재 evidence의 자기 해시가 아니다.
+
+Python으로 이전 바이트 SHA를 먼저 확인하고 summary 한 줄을 역치환했을 때 이전 원고 전체 바이트와 SHA가 정확히 복원됨을 검사했다. raw body SHA는 `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`로 불변이다. 비교 출력 `result: PASS`, `only_summary_changed: true`, `inverse_restores_prior_draft: true`, 종료코드 0. 제목/H1, 40자 SEO(접미사 포함 55자), 날짜, 본문, 미디어 alt/caption, 출처는 모두 그대로다. 자료가 당시 인식과 행위를 파악하는 데 도움이 된다는 뜻이며 증명 결과·무죄·유죄를 보장하지 않는다. 새 법률 주장을 추가하지 않았고 문체·법률 검수자에게 최종 해시를 전달한다. 검수 승인·통합·배포는 이번 자체 수정으로 주장하지 않는다.
+
+## 2026-10-03 QA92364938 — summary 160자 제한 최소 수정
+
+root가 전달한 QA92364938의 유일한 실패는 원고 L5 영어 summary가 162자로 160자 제한을 넘는다는 것이었다. 실제 파일을 읽어 162자를 확인하고, root가 지정한 `Original job instructions` → `Job instructions`만 반영했다. 새 법률 주장이나 본문 수정은 없다.
+
+- 변경 전 summary: `A paid parcel-pickup job can involve other people's bank cards. Original job instructions, messages and delivery records can help establish what you knew and did.` — 162자.
+- 변경 후 summary: `A paid parcel-pickup job can involve other people's bank cards. Job instructions, messages and delivery records can help establish what you knew and did.` — 153자.
+- 변경 전 원고 SHA: `8e38e51d2c9e2916518c5434f20c2870576458214e9f95a748374eaec75351b1`.
+- 변경 전 evidence SHA: `5ca9b3b91bf6e17eb28daf3d88c62d320e9fe5c952b24e517cf2868c53e0fe5a`. 이 값은 이전 이력이며 현재 파일의 자기 해시가 아니다.
+- 변경 후 최종 원고 SHA: `2a6e5fb2520100eb181fea55b7b2226c445eadc63bdbe4e053e89245c323fa2d`.
+
+Python `Path.read_bytes`, `hashlib.sha256`, 문자 길이 및 줄별 비교로 검증했다. 현재 summary 한 줄을 이전 문구로 역치환한 전체 파일 SHA가 이전 `8e38e51d…75351b1`과 정확히 일치했다. 출력 `result: PASS`, `changed_lines: [5]`, `summary_length: 153`, `only_summary_changed: true`, exit 0. raw body SHA도 `d146d43400bb1def38d4bb269aad29cedae511a06a674c2602f80313dbc424dd`로 불변이다. 본문·SEO·제목·미디어·날짜·그 밖의 모든 메타데이터를 그대로 보존했다. 기존 원본 자료 보존에 관한 본문 설명도 바뀌지 않았다.
+
+두 담당 파일만 수정하고 동결했다. 저장소 복사·Git·QA 전체 재실행·배포는 수행하지 않았다. root의 병합 및 독립 delta 검수를 위해 최종 원고/evidence 해시를 전달한다.

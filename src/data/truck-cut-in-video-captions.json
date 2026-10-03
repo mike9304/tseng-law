@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "화물차가 끼어들어 제동하자 뒤차가 가까이 멈추는 장면",
+    "description": "왼쪽 차로의 흰색 화물차가 앞쪽 차로로 빠르게 들어오고 뒤쪽 붉은 등이 밝아집니다. 두 차량 사이가 좁아지며 화면이 흔들린 뒤 멈춥니다. 충돌은 보이지 않는 4초 무음 영상입니다.",
+    "disclosure": "AI로 만든 독립된 가상 장면입니다. 본문의 반복 끼어들기·급제동이나 택시의 움직임을 재현하지 않았습니다. 자동제동 작동, 실제 속도·거리, 고의 또는 형사책임을 판단하는 자료가 아닙니다."
+  },
+  "en": {
+    "title": "A truck cuts in and brakes as the following car stops close behind",
+    "description": "A white box truck moves quickly from the left lane into the lane ahead and its red rear lamps brighten. The gap closes, the view jolts and both vehicles stop. No collision is visible. Silent 4-second clip.",
+    "disclosure": "An independent AI-generated fictional scene. It does not reconstruct the repeated cut-ins, hard braking or taxi movements in the article. It cannot establish automatic brake activation, actual speed or distance, intent or criminal responsibility."
+  },
+  "ja": {
+    "title": "割り込んで制動するトラックの後ろで、後続車が近距離で止まる",
+    "description": "左車線の白いトラックが素早く前方へ入り、後部の赤いランプが明るくなります。車間が縮まり、画面が揺れてから止まります。衝突は見えません。4秒の無音映像です。",
+    "disclosure": "AIで生成した独立した架空の場面です。本文の繰り返しの割り込み・急制動やタクシーの動きを再現したものではありません。自動ブレーキの作動、実際の速度・距離、故意や刑事責任を判断する資料ではありません。"
+  },
+  "zh-hant": {
+    "title": "貨車切入後煞車，後車近距離停住",
+    "description": "左側車道的白色貨車快速切入前方，後方紅燈隨即變亮。車距縮短，畫面晃動後停住，沒有可見碰撞。這是4秒無聲影片。",
+    "disclosure": "AI生成的獨立假想場景，未重建本文反覆切入、急煞或計程車的行進過程。不能據此判斷自動煞車是否啟動、實際速度與距離、故意或刑事責任。"
+  }
+}

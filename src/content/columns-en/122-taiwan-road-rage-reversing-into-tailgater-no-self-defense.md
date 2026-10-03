@@ -127,4 +127,4 @@ Statutes
 - [道路交通安全規則 第94條 (Road Traffic Safety Rules, Article 94)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94)
 - [道路交通管理處罰條例 第43條 (Road Traffic Management and Penalty Act, Article 43)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43) (background only; not applied in either judgment)
 
-This column was written by the site's Legal AI Assistant from public court judgments and statutes. Sources checked on 3 October 2026.
+This column was written from public court judgments and statutes. Sources checked on 3 October 2026.

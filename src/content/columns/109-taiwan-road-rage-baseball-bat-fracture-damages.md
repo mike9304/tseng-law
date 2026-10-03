@@ -15,7 +15,7 @@ featured_image_alt: "AI로 만든 가상 장면입니다. 해 질 무렵 오토�
 featured_image_caption: "멈춘 차 옆에 야구방망이를 들고 선 남성을 그린 AI 생성 가상 장면입니다. 실제 사진도, 판결에 나온 사건을 재현한 것도 아닙니다."
 social_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
 ---
-# 운전 시비 끝에 휘두른 야구방망이, 징역 7개월과 따로 매겨진 배상금 207만여 대만달러 ([基隆地方法院 114年度訴字第502號, 2025. 12. 4.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KLDV%2C114%2C%E8%A8%B4%2C502%2C20251204%2C1))
+# 운전 시비 끝에 휘두른 야구방망이, 징역 7개월과 따로 매겨진 배상금 207만여 대만달러
 
 2024년 11월 7일 오후 6시쯤, 대만 지룽시(基隆市) 안러구(安樂區)의 한 골목 앞에서 두 사람 사이에 운전 문제로 시비가 붙었습니다. 말다툼 끝에 한 사람이 야구방망이로 상대를 공격했고, 상대는 오른쪽 자뼈(척골)와 오른쪽 무릎뼈(슬개골)가 부러졌습니다([지룽지방법원 114년도 易字 제159호 형사판결, 2025. 4. 9.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KLDM%2C114%2C%E6%98%93%2C159%2C20250409%2C1)).
 

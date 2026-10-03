@@ -143,9 +143,9 @@ describe('reviewed column videos', () => {
   it.each([
     ['taiwan-bus-sudden-braking-passenger-carrier-liability', 'bus-passenger-film-v1-zh-hant', '未呈現車外原因或完整煞車過程'],
     ['taiwan-retaliatory-driving-rear-ended-intentional-injury', 'braking-scooter-v2-zh-hant', '不能用來認定故意、傷勢或責任比例'],
-    ['taiwan-parking-wheelstop-latch-service-safety-causation', 'parking-contact-v1-zh-hant', '畫面中的車輪擋未被碰到'],
+    ['taiwan-parking-wheelstop-latch-service-safety-causation', 'parking-facility-film-v1-zh-hant', '畫面中的車輪擋未被碰到'],
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-film-v1-zh-hant', '橙色車'],
-    ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-impact-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],
+    ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-height-film-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],
     ['taiwan-flying-object-truck-origin-dashcam-evidence', 'flying-object-film-v1-zh-hant', '畫面未交代來源，也未呈現貨車掉落物品'],
     ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-film-v1-zh-hant', '銀色中間車'],
     ['taiwan-roadside-starting-parking-exit-liability', 'roadside-start-film-v1-zh-hant', '橙色車'],

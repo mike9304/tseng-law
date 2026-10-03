@@ -4,8 +4,11 @@ import businessPremisesCaptions from './business-premises-video-captions.json';
 import logisticsCaptions from './logistics-video-captions.json';
 import precisionPartsCaptions from './precision-parts-video-captions.json';
 import gymPauseCaptions from './gym-pause-video-captions.json';
+import trafficFilms from './traffic-column-films.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
+
+export type ColumnVideoChapter = { start: number; title: string; text: string };
 
 export type ColumnGeneratedVideoAsset = {
   id: string;
@@ -16,8 +19,11 @@ export type ColumnGeneratedVideoAsset = {
   title: string;
   description: string;
   disclosure: string;
-  /** Repeat the short clip after the reader starts it. Never autoplays. */
+  /** Native looping is independent of the traffic page's first-view autoplay. */
   loop?: boolean;
+  durationSeconds?: number;
+  sceneCount?: number;
+  chapters?: ColumnVideoChapter[];
 };
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
@@ -414,7 +420,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: '흰색 탑차가 좌우로 틀다가 바로 앞 차로로 끼어드는 장면',
-    description: '바로 앞을 달리던 흰색 소형 탑차가 오른쪽으로 크게 틀었다가 다시 왼쪽으로 꺾어 들어와 정면 차로에 자리 잡습니다. 이후 탑차는 후미등을 켠 채 앞에서 달리고, 촬영 차량은 일정한 간격을 두고 뒤따르며 양옆 차로의 차들도 그대로 흘러갑니다. 소리 없는 약 15초 길이의 영상이며, 재생하면 처음부터 반복해서 나옵니다.',
+    description: '바로 앞을 달리던 흰색 소형 탑차가 오른쪽으로 크게 틀었다가 다시 왼쪽으로 꺾어 들어와 정면 차로에 자리 잡습니다. 이후 탑차는 후미등을 켠 채 앞에서 달리고, 촬영 차량은 일정한 간격을 두고 뒤따르며 양옆 차로의 차들도 그대로 흘러갑니다. 소리 없는 약 15초 길이의 영상이며, 화면에 들어오면 자동으로 재생되며 반복됩니다.',
     disclosure: 'AI로 만든 가상 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실을 재현한 것이 아닙니다. 영상 속 거리·속도·시간 간격은 이해를 돕기 위해 임의로 정한 것이어서 실제 사건의 과실을 판단하는 근거로 쓸 수 없습니다.',
     loop: true,
   },
@@ -425,7 +431,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: '白い箱型トラックが左右に振れてから前の車線に割り込む場面',
-    description: 'すぐ前を走っていた白い箱型の小型トラックが右へ大きく向きを変えたあと、左へ切り返して正面の車線に収まります。その後トラックは後部ランプを点けたまま前を走り、撮影車両は一定の車間をあけて後ろを進みます。左右の車線の車もそのまま流れていきます。音声のない約15秒の映像で、再生すると繰り返し流れます。',
+    description: 'すぐ前を走っていた白い箱型の小型トラックが右へ大きく向きを変えたあと、左へ切り返して正面の車線に収まります。その後トラックは後部ランプを点けたまま前を走り、撮影車両は一定の車間をあけて後ろを進みます。左右の車線の車もそのまま流れていきます。音声のない約15秒の映像で、画面に入ると自動で再生され、繰り返し流れます。',
     disclosure: 'AIで生成した架空の場面であり、実際のドライブレコーダー映像でも、判決が認定した事実を再現したものでもありません。距離や速度、タイミングは説明のために仮に設定したもので、実際の事件の過失を判断する材料にはなりません。',
     loop: true,
   },
@@ -436,7 +442,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: 'A white box truck swings right, then cuts back into the lane ahead',
-    description: 'A white box truck just ahead swings sharply to the right, then turns back left and settles into the lane directly in front. It carries on ahead with its rear lights on while the camera car follows at a steady distance and traffic in the other lanes keeps moving. The clip is silent, about 15 seconds long, and loops once played.',
+    description: 'A white box truck just ahead swings sharply to the right, then turns back left and settles into the lane directly in front. It carries on ahead with its rear lights on while the camera car follows at a steady distance and traffic in the other lanes keeps moving. The clip is silent, about 15 seconds long, and starts automatically when visible, then loops.',
     disclosure: 'This is a fictional AI-generated scene, not dashcam footage and not a reconstruction of the facts found in the judgment. Distances, speeds and timing are illustrative only and cannot be used to judge fault in any real case.',
     loop: true,
   },
@@ -447,7 +453,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: '白色廂型小貨車左右擺動後切入正前方車道',
-    description: '正前方的白色廂型小貨車先大幅往右偏，再往左切回，停在正前方車道上。之後小貨車亮著尾燈在前方行駛，拍攝車輛保持固定車距跟在後面，兩側車道的車輛也照常行駛。這段影片沒有聲音，長約15秒，按下播放後會反覆循環。',
+    description: '正前方的白色廂型小貨車先大幅往右偏，再往左切回，停在正前方車道上。之後小貨車亮著尾燈在前方行駛，拍攝車輛保持固定車距跟在後面，兩側車道的車輛也照常行駛。這段影片沒有聲音，長約15秒，進入畫面時會自動播放並循環。',
     disclosure: '這是AI生成的虛構畫面，不是行車紀錄器實錄，也不是依判決認定事實所做的重建。畫面中的距離、車速與時間都只是示意，不能用來判斷任何真實案件的過失責任。',
     loop: true,
   },
@@ -458,7 +464,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: '야구방망이를 든 남성이 골목 한가운데로 나와 멈춰 서는 장면',
-    description: '해 질 무렵 주택가 골목에서, 짙은 회색 해치백 옆에 있던 남성이 야구방망이를 아래로 든 채 차 옆을 서성이다가 골목 한가운데로 나와 카메라 앞쪽에 멈춰 섭니다. 마지막에는 등을 보인 채 서 있고, 앞차는 후미등을 켠 채 그 자리에 서 있습니다. 소리 없는 약 15초 길이의 영상이며, 재생하면 처음부터 반복해서 나옵니다.',
+    description: '해 질 무렵 주택가 골목에서, 짙은 회색 해치백 옆에 있던 남성이 야구방망이를 아래로 든 채 차 옆을 서성이다가 골목 한가운데로 나와 카메라 앞쪽에 멈춰 섭니다. 마지막에는 등을 보인 채 서 있고, 앞차는 후미등을 켠 채 그 자리에 서 있습니다. 소리 없는 약 15초 길이의 영상이며, 화면에 들어오면 자동으로 재생되며 반복됩니다.',
     disclosure: 'AI로 만든 가상의 장면이며, 실제 블랙박스 영상도 판결이 인정한 사실을 재현한 영상도 아닙니다. 화면의 녹화(REC) 표시와 경과 시간은 연출이고, 영상 속 거리·속도·시간은 예시일 뿐이어서 실제 사건에서 누구의 잘못인지 판단하는 근거가 될 수 없습니다.',
     loop: true,
   },
@@ -469,7 +475,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: 'バットを持った男性が路地の中ほどに出て立ち止まる場面',
-    description: '夕暮れの住宅街の路地で、濃いグレーのハッチバックの横にいた男性が、バットを下げたまま車のそばを行き来したあと、路地の中ほどに出てカメラの手前で立ち止まります。最後は背中を向けたまま立っており、前の車はテールランプを点けたままその場から動きません。音声のない約15秒の映像で、再生すると繰り返し流れます。',
+    description: '夕暮れの住宅街の路地で、濃いグレーのハッチバックの横にいた男性が、バットを下げたまま車のそばを行き来したあと、路地の中ほどに出てカメラの手前で立ち止まります。最後は背中を向けたまま立っており、前の車はテールランプを点けたままその場から動きません。音声のない約15秒の映像で、画面に入ると自動で再生され、繰り返し流れます。',
     disclosure: 'AIで生成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。画面の録画（REC）表示と経過時間は演出であり、映像中の距離・速度・タイミングはあくまで例示のため、実際の事件で誰に非があるかを判断する材料にはなりません。',
     loop: true,
   },
@@ -480,7 +486,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: 'A man holding a baseball bat steps into the middle of the lane and stops',
-    description: 'At dusk in a residential lane, a man beside a stopped dark grey hatchback paces by the car with a baseball bat held low, then steps into the middle of the lane and stops in front of the camera, ending with his back turned. The hatchback stays put with its tail lights on. The clip is silent, about 15 seconds long, and loops once played.',
+    description: 'At dusk in a residential lane, a man beside a stopped dark grey hatchback paces by the car with a baseball bat held low, then steps into the middle of the lane and stops in front of the camera, ending with his back turned. The hatchback stays put with its tail lights on. The clip is silent, about 15 seconds long, and starts automatically when visible, then loops.',
     disclosure: 'This is a fictional AI-generated scene, not dashcam footage and not a reconstruction of the facts found in the judgment. The REC marker and elapsed-time counter are added for effect, and the distances, speeds and timing shown are illustrative only; they cannot be used to judge fault in any real case.',
     loop: true,
   },
@@ -491,7 +497,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     width: 1280,
     height: 720,
     title: '手持球棒的男子走到巷道中央後停下',
-    description: '黃昏的住宅區巷道裡，原本站在深灰色掀背車旁的男子，球棒垂在身側，在車旁來回走動後走到巷道中央，停在鏡頭前方，最後背對鏡頭站著。掀背車亮著尾燈，停在原地沒有移動。本片無聲，長約15秒，按下播放後會重複循環。',
+    description: '黃昏的住宅區巷道裡，原本站在深灰色掀背車旁的男子，球棒垂在身側，在車旁來回走動後走到巷道中央，停在鏡頭前方，最後背對鏡頭站著。掀背車亮著尾燈，停在原地沒有移動。本片無聲，長約15秒，進入畫面時會自動播放並循環。',
     disclosure: '本片為AI生成的虛構場景，不是行車紀錄器實錄，也不是判決認定事實的重現。畫面上的錄影（REC）標示與計時僅為效果，片中的距離、速度與時間皆為示意，不能用來判斷任何真實案件的責任歸屬。',
     loop: true,
   },
@@ -502,5 +508,8 @@ export function getColumnGeneratedVideo(
   slug: string,
   source: ColumnVideoSource = 'column',
 ): ColumnGeneratedVideoAsset | null {
-  return REVIEWED_COLUMN_VIDEOS[`${source}/${locale}/${slug}`] ?? null;
+  const key = `${source}/${locale}/${slug}`;
+  return (trafficFilms as Readonly<Record<string, ColumnGeneratedVideoAsset>>)[key]
+    ?? REVIEWED_COLUMN_VIDEOS[key]
+    ?? null;
 }

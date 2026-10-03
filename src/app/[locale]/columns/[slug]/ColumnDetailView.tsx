@@ -124,7 +124,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
               {visibleToc.length >= MIN_TOC_SECTIONS ? (
                 <ColumnToc entries={visibleToc} label={t.tocLabel} />
               ) : null}
-              <ColumnGeneratedVideo locale={urlLocale} slug={post.slug} />
+              <ColumnGeneratedVideo locale={urlLocale} slug={post.slug} autoPlay={isTrafficColumn} />
               {diagramVideo && diagramSplit ? (
                 <>
                   <ColumnContent content={diagramSplit[0]} locale={locale} />

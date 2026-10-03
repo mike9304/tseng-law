@@ -1,17 +1,21 @@
 import { getColumnGeneratedVideo, type ColumnVideoSource } from '@/data/column-generated-videos';
+import ColumnVideoPlayer from './ColumnVideoPlayer';
 import styles from './ColumnGeneratedVideo.module.css';
 
-export default function ColumnGeneratedVideo({ locale, slug, source = 'column' }: {
+export default function ColumnGeneratedVideo({ locale, slug, source = 'column', autoPlay = false }: {
   locale: string;
   slug: string;
   source?: ColumnVideoSource;
+  autoPlay?: boolean;
 }) {
   const video = getColumnGeneratedVideo(locale, slug, source);
   if (!video) return null;
   const captionId = `column-video-${video.id}-caption`;
   return (
     <figure className={styles.figure} data-column-generated-video={video.id}>
-      <video
+      <ColumnVideoPlayer
+        startWhenVisible={autoPlay}
+        chapters={video.chapters}
         className={styles.player}
         src={video.src}
         poster={video.poster}
@@ -21,7 +25,7 @@ export default function ColumnGeneratedVideo({ locale, slug, source = 'column' }
         playsInline
         muted
         loop={video.loop === true ? true : undefined}
-        preload="none"
+        preload={autoPlay ? 'metadata' : 'none'}
         aria-label={video.title}
         aria-describedby={captionId}
       />

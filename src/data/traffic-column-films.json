@@ -1,0 +1,218 @@
+{
+  "column/ko/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-ko",
+    "src": "/videos/columns/traffic-procedure-film-v1-ko.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "교통사고 뒤 현장 기록과 배상 자료를 준비하는 과정",
+    "description": "추돌 뒤 안전 확보와 신고, 현장 사진, 원본 자료 보존, 진료, 수리비와 소득 자료, 합의 검토까지 이어지는 80초 무음 영상입니다.",
+    "disclosure": "AI로 만든 가상 인물과 장면이며 실제 사고 기록이 아닙니다. 차량·장소·시간은 설명을 위한 설정입니다. 영상은 본문의 주요 자료 준비 과정을 요약하며 개별 사고의 과실, 치료 필요성이나 배상액을 판단하는 증거가 아닙니다.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "사고 발생",
+        "text": "멈춘 흰색 차량을 뒤차가 추돌합니다. 이 장면만으로 실제 사고의 책임을 정할 수 없습니다."
+      },
+      {
+        "start": 10,
+        "title": "안전 확보와 신고",
+        "text": "안전을 확보하고 필요한 구호·신고 조치를 합니다. 차량 이동은 인명 피해 여부와 현장 상황에 따라 판단합니다."
+      },
+      {
+        "start": 20,
+        "title": "현장 사진",
+        "text": "차량 위치·파손·도로 표시를 함께 남깁니다. 사진 촬영보다 현장 안전이 먼저입니다."
+      },
+      {
+        "start": 30,
+        "title": "원본 자료 보존",
+        "text": "사진·영상 원본과 경찰 자료를 정리합니다. 초보분석판정표가 과실 비율을 확정하지는 않습니다."
+      },
+      {
+        "start": 40,
+        "title": "진료와 치료 자료",
+        "text": "증상·진료기록·영수증을 보관합니다. 치료의 필요성과 사고와의 관계도 확인합니다."
+      },
+      {
+        "start": 50,
+        "title": "차량 수리 자료",
+        "text": "파손 사진과 수리 견적·영수증을 대조합니다. 수리비와 사고 관련성을 자료로 설명합니다."
+      },
+      {
+        "start": 60,
+        "title": "실제 소득 감소",
+        "text": "진료·근무·휴가·급여 자료를 함께 정리합니다. 휴식 권고만으로 실제 소득 감소가 입증되지는 않습니다."
+      },
+      {
+        "start": 70,
+        "title": "합의 범위와 지급 조건",
+        "text": "지급 시기·보험금 처리·포기하는 청구를 읽습니다. 서명 전 남길 청구와 향후 치료 범위를 확인합니다."
+      }
+    ]
+  },
+  "column/en/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-en",
+    "src": "/videos/columns/traffic-procedure-film-v1-en.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "From the crash scene to records for a compensation claim",
+    "description": "This silent 80-second film follows safety and reporting, scene photographs, original records, medical care, repair and income records, and review of settlement terms.",
+    "disclosure": "Fictional AI-generated people and scenes, not actual accident footage. Vehicles, locations and timing are illustrative. The film summarizes parts of the article; it is not evidence of fault, medical necessity or compensation in an individual case.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "The collision",
+        "text": "A rear-end impact pushes the stopped white car forward. This illustration cannot establish fault in a real case."
+      },
+      {
+        "start": 10,
+        "title": "Safety and reporting",
+        "text": "Secure safety, provide needed help and report the crash. Moving vehicles depends on injuries and site conditions."
+      },
+      {
+        "start": 20,
+        "title": "Photograph the scene",
+        "text": "Record vehicle positions, damage and road markings. Stay safe while collecting photographs."
+      },
+      {
+        "start": 30,
+        "title": "Preserve original records",
+        "text": "Keep original photos, recordings and police documents. The police preliminary analysis does not fix fault shares."
+      },
+      {
+        "start": 40,
+        "title": "Medical records",
+        "text": "Keep symptom records, medical notes and receipts. Treatment must be assessed for need and accident linkage."
+      },
+      {
+        "start": 50,
+        "title": "Repair records",
+        "text": "Compare damage photos, estimates and repair receipts. Document the repair costs and their link to the crash."
+      },
+      {
+        "start": 60,
+        "title": "Actual lost income",
+        "text": "Compare medical, attendance, leave and payroll records. Advice to rest alone does not prove actual income loss."
+      },
+      {
+        "start": 70,
+        "title": "Settlement terms",
+        "text": "Check payment timing, insurance and claims being released. Review reserved claims and future treatment before signing."
+      }
+    ]
+  },
+  "column/zh-hant/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-zh-hant",
+    "src": "/videos/columns/traffic-procedure-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "從事故現場到求償資料的整理過程",
+    "description": "這段80秒無聲影片依序呈現安全與報案、現場拍照、原始資料保存、就醫、修車與收入資料，以及和解條款的確認。",
+    "disclosure": "人物與場景均由AI生成，非真實事故影像。車輛、地點與時間為說明而設定。影片摘要呈現本文部分資料準備流程，不能作為認定個案過失、治療必要性或賠償金額的證據。",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "事故發生",
+        "text": "後車追撞，停住的白色轎車被推向前方。 這段假想畫面不能認定真實事故的責任。"
+      },
+      {
+        "start": 10,
+        "title": "安全與報案",
+        "text": "確保安全，採取必要救護與報案措施。 是否移車須依人員傷亡及現場情況處理。"
+      },
+      {
+        "start": 20,
+        "title": "現場拍照",
+        "text": "一併記錄車輛位置、損傷及道路標線。 蒐集照片時，仍須先確保自身安全。"
+      },
+      {
+        "start": 30,
+        "title": "保存原始資料",
+        "text": "整理照片、影片原檔與警方資料。 初步分析研判表並不確定過失比例。"
+      },
+      {
+        "start": 40,
+        "title": "就醫與治療資料",
+        "text": "保留症狀、病歷、診斷及醫療收據。 治療必要性及與事故的關聯也須說明。"
+      },
+      {
+        "start": 50,
+        "title": "車輛修復資料",
+        "text": "比對車損照片、估價單與修理收據。 用資料說明修理費用及其與事故的關聯。"
+      },
+      {
+        "start": 60,
+        "title": "實際收入減少",
+        "text": "一併整理醫療、出勤、請假及薪資資料。 僅有休養建議，並不足以證明實際收入損失。"
+      },
+      {
+        "start": 70,
+        "title": "和解範圍與付款條件",
+        "text": "看清付款時間、保險金處理及放棄的請求。 簽署前確認保留請求及後續治療的範圍。"
+      }
+    ]
+  },
+  "column/ja/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-ja",
+    "src": "/videos/columns/traffic-procedure-film-v1-ja.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-ja.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "事故現場の記録から賠償請求の資料整理まで",
+    "description": "安全確保と通報、現場撮影、原本の保存、受診、修理費と収入の資料、示談条件の確認をたどる80秒の無音映像です。",
+    "disclosure": "人物と場面はAIで作成した架空の設定で、実際の事故映像ではありません。車両・場所・時間は説明用です。本文にある資料準備の一部を示す映像であり、個別事件の過失、治療の必要性や賠償額を判断する証拠にはなりません。",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "事故の発生",
+        "text": "後続車が追突し、停止中の白い車が押し出されます。 この架空の場面で実際の事故の責任は判断できません。"
+      },
+      {
+        "start": 10,
+        "title": "安全確保と通報",
+        "text": "安全を確保し、必要な救護と通報を行います。 車両の移動は、死傷者の有無や現場の状況で異なります。"
+      },
+      {
+        "start": 20,
+        "title": "現場の撮影",
+        "text": "車両の位置、損傷、道路標示を記録します。 写真を撮る際も、現場での安全を優先します。"
+      },
+      {
+        "start": 30,
+        "title": "原本の保存",
+        "text": "写真・映像の原本と警察の資料を整理します。 警察の初歩的な分析で過失割合が確定するわけではありません。"
+      },
+      {
+        "start": 40,
+        "title": "受診と治療の資料",
+        "text": "症状の記録、診療記録、領収書を残します。 治療の必要性と事故との関係も確認します。"
+      },
+      {
+        "start": 50,
+        "title": "車両修理の資料",
+        "text": "損傷写真と修理見積書・領収書を照合します。 修理費と事故との関係を資料で説明します。"
+      },
+      {
+        "start": 60,
+        "title": "実際の収入減少",
+        "text": "診療・勤務・休暇・給与の資料を整理します。 休養の指示だけで実際の収入減少は立証できません。"
+      },
+      {
+        "start": 70,
+        "title": "示談の範囲と支払条件",
+        "text": "支払時期、保険金の扱い、放棄する請求を読みます。 署名前に留保する請求と今後の治療の範囲を確認します。"
+      }
+    ]
+  }
+}

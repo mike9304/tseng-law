@@ -28,7 +28,7 @@ describe('reviewed column videos', () => {
     expect(html).not.toMatch(/autoplay/i);
     expect(html).not.toContain('loop=');
     expect(html).toContain('preload="none"');
-    expect(html).toContain('src="/videos/columns/rear-end-simulation-v3-ko.mp4"');
+    expect(html).toContain('src="/videos/columns/traffic-procedure-film-v1-ko.mp4"');
     expect(html).not.toContain('<iframe');
     expect(html).toContain('실제 사고 기록이 아닙니다');
     const describedBy = html.match(/aria-describedby="([^"]+)"/)![1];
@@ -84,9 +84,25 @@ describe('reviewed column videos', () => {
     ['it', 'Scena fittizia generata con IA'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
-    expect(html).toContain(`rear-end-simulation-v3-${locale}.mp4`);
+    const id = ['en', 'zh-hant', 'ja'].includes(locale) ? 'traffic-procedure-film-v1' : 'rear-end-simulation-v3';
+    expect(html).toContain(`${id}-${locale}.mp4`);
     expect(html).toContain(disclosure);
     expect(html).not.toContain('실제 사고 기록');
+  });
+
+  it.each(['ko', 'en', 'zh-hant', 'ja'])('serves one assembled 80-second film with eight scenes in %s', locale => {
+    const asset = getColumnGeneratedVideo(locale, 'taiwan-traffic-accident-procedure');
+    expect(asset?.durationSeconds).toBe(80);
+    expect(asset?.sceneCount).toBe(8);
+    expect(asset?.src).toBe(`/videos/columns/traffic-procedure-film-v1-${locale}.mp4`);
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" autoPlay />);
+    expect(html.match(/<video/g)).toHaveLength(1);
+    expect(html).toContain('preload="metadata"');
+    expect(html).toContain('muted=""');
+    expect(html).toContain('controls=""');
+    expect(html).not.toContain('loop=');
+    expect(html).toContain('data-column-video-chapter="1"');
+    expect(html).toContain(asset?.chapters?.[0].title);
   });
 
   it.each([

@@ -14,7 +14,22 @@ const formationDocumentsCaptions = JSON.parse(await fs.readFile(new URL('../src/
 const cosmeticsCheckCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cosmetics-check-video-captions.json', import.meta.url), 'utf8'));
 const truckCutInCaptions = JSON.parse(await fs.readFile(new URL('../src/data/truck-cut-in-video-captions.json', import.meta.url), 'utf8'));
 const branchModelsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/branch-models-video-captions.json', import.meta.url), 'utf8'));
+const batApproachCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bat-approach-video-captions.json', import.meta.url), 'utf8'));
+const familyCareCaptions = JSON.parse(await fs.readFile(new URL('../src/data/family-care-video-captions.json', import.meta.url), 'utf8'));
+const workRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/work-records-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(batApproachCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-road-rage-baseball-bat-fracture-damages', id: `bat-approach-v1-${locale}`,
+    duration: 4, contactTime: 2.0, expectedDiagrams: 0, disclosure: caption.disclosure,
+  })),
+  ...Object.entries(familyCareCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-accident-family-care-necessity-period', id: `family-care-v1-${locale}`,
+    duration: 4, contactTime: 2.6, expectedDiagrams: 0, disclosure: caption.disclosure,
+  })),
+  ...Object.entries(workRecordsCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-car-accident-work-loss-rest-note', id: `work-records-v1-${locale}`,
+    duration: 4, contactTime: 3.1, expectedDiagrams: 0, disclosure: caption.disclosure,
+  })),
   ...Object.entries(truckCutInCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
     return {

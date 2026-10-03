@@ -9,6 +9,9 @@ import formationDocumentsCaptions from './formation-documents-video-captions.jso
 import cosmeticsCheckCaptions from './cosmetics-check-video-captions.json';
 import branchModelsCaptions from './branch-models-video-captions.json';
 import truckCutInCaptions from './truck-cut-in-video-captions.json';
+import batApproachCaptions from './bat-approach-video-captions.json';
+import familyCareCaptions from './family-care-video-captions.json';
+import workRecordsCaptions from './work-records-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -32,6 +35,27 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(batApproachCaptions).map(([locale, caption]) => {
+    const id = `bat-approach-v1-${locale}`;
+    return [
+      `column/${locale}/taiwan-road-rage-baseball-bat-fracture-damages`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(familyCareCaptions).map(([locale, caption]) => {
+    const id = `family-care-v1-${locale}`;
+    return [
+      `column/${locale}/taiwan-accident-family-care-necessity-period`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(workRecordsCaptions).map(([locale, caption]) => {
+    const id = `work-records-v1-${locale}`;
+    return [
+      `column/${locale}/taiwan-car-accident-work-loss-rest-note`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   ...Object.fromEntries(Object.entries(truckCutInCaptions).map(([locale, caption]) => {
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
     const id = `truck-cut-in-v1-${assetLocale}`;
@@ -488,50 +512,6 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     title: '空き店舗の入口から室内を見る',
     description: 'ガラス扉の内側からカメラがゆっくり進み、何も置かれていない室内、柱、奥のドアを映します。音声のない6秒の映像です。',
     disclosure: 'AIで作成した架空の空間で、実際の賃貸物件ではありません。建物の用途・登記・許認可の資料は映っておらず、ここで飲食店を営業できることを示す映像ではありません。',
-  },
-  'column/ko/taiwan-road-rage-baseball-bat-fracture-damages': {
-    id: 'road-rage-baseball-bat-fracture-damages-v3-ko',
-    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-ko.mp4',
-    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-ko.jpg',
-    width: 1280,
-    height: 720,
-    title: '야구방망이를 든 남성이 골목 한가운데로 나와 멈춰 서는 장면',
-    description: '해 질 무렵 주택가 골목에서, 짙은 회색 해치백 옆에 있던 남성이 야구방망이를 아래로 든 채 차 옆을 서성이다가 골목 한가운데로 나와 카메라 앞쪽에 멈춰 섭니다. 마지막에는 등을 보인 채 서 있고, 앞차는 후미등을 켠 채 그 자리에 서 있습니다. 소리 없는 약 15초 길이의 영상이며, 화면에 들어오면 자동으로 재생되며 반복됩니다.',
-    disclosure: 'AI로 만든 가상의 장면이며, 실제 블랙박스 영상도 판결이 인정한 사실을 재현한 영상도 아닙니다. 화면의 녹화(REC) 표시와 경과 시간은 연출이고, 영상 속 거리·속도·시간은 예시일 뿐이어서 실제 사건에서 누구의 잘못인지 판단하는 근거가 될 수 없습니다.',
-    loop: true,
-  },
-  'column/ja/taiwan-road-rage-baseball-bat-fracture-damages': {
-    id: 'road-rage-baseball-bat-fracture-damages-v3-ja',
-    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-ja.mp4',
-    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-ja.jpg',
-    width: 1280,
-    height: 720,
-    title: 'バットを持った男性が路地の中ほどに出て立ち止まる場面',
-    description: '夕暮れの住宅街の路地で、濃いグレーのハッチバックの横にいた男性が、バットを下げたまま車のそばを行き来したあと、路地の中ほどに出てカメラの手前で立ち止まります。最後は背中を向けたまま立っており、前の車はテールランプを点けたままその場から動きません。音声のない約15秒の映像で、画面に入ると自動で再生され、繰り返し流れます。',
-    disclosure: 'AIで生成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。画面の録画（REC）表示と経過時間は演出であり、映像中の距離・速度・タイミングはあくまで例示のため、実際の事件で誰に非があるかを判断する材料にはなりません。',
-    loop: true,
-  },
-  'column/en/taiwan-road-rage-baseball-bat-fracture-damages': {
-    id: 'road-rage-baseball-bat-fracture-damages-v3-en',
-    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-en.mp4',
-    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-en.jpg',
-    width: 1280,
-    height: 720,
-    title: 'A man holding a baseball bat steps into the middle of the lane and stops',
-    description: 'At dusk in a residential lane, a man beside a stopped dark grey hatchback paces by the car with a baseball bat held low, then steps into the middle of the lane and stops in front of the camera, ending with his back turned. The hatchback stays put with its tail lights on. The clip is silent, about 15 seconds long, and starts automatically when visible, then loops.',
-    disclosure: 'This is a fictional AI-generated scene, not dashcam footage and not a reconstruction of the facts found in the judgment. The REC marker and elapsed-time counter are added for effect, and the distances, speeds and timing shown are illustrative only; they cannot be used to judge fault in any real case.',
-    loop: true,
-  },
-  'column/zh-hant/taiwan-road-rage-baseball-bat-fracture-damages': {
-    id: 'road-rage-baseball-bat-fracture-damages-v3-zh-hant',
-    src: '/videos/columns/road-rage-baseball-bat-fracture-damages-v3-zh-hant.mp4',
-    poster: '/images/column-videos/road-rage-baseball-bat-fracture-damages-v3-zh-hant.jpg',
-    width: 1280,
-    height: 720,
-    title: '手持球棒的男子走到巷道中央後停下',
-    description: '黃昏的住宅區巷道裡，原本站在深灰色掀背車旁的男子，球棒垂在身側，在車旁來回走動後走到巷道中央，停在鏡頭前方，最後背對鏡頭站著。掀背車亮著尾燈，停在原地沒有移動。本片無聲，長約15秒，進入畫面時會自動播放並循環。',
-    disclosure: '本片為AI生成的虛構場景，不是行車紀錄器實錄，也不是判決認定事實的重現。畫面上的錄影（REC）標示與計時僅為效果，片中的距離、速度與時間皆為示意，不能用來判斷任何真實案件的責任歸屬。',
-    loop: true,
   },
   'column/ko/taiwan-road-rage-reversing-into-tailgater-no-self-defense': {
     id: 'reverse-impact-v1-ko',

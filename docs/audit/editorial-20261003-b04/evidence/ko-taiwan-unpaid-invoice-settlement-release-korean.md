@@ -122,3 +122,18 @@
 - 이 append 전 evidence SHA256: `495f01bc43572c7d3731f61d08c8a345c9e4a93d831cdc9736d3ad1e1b703a23`. 위 claim ledger와 삭제 검사에서 적은 본문 행 번호는 alt 한 줄 추가로 최종 원고에서 모두 1씩 증가한다. L21의 조건 명시 외 내용 변화는 없다.
 - 최종 Node 검사 exit 0: alt/caption을 포함한 필수 metadata 누락 0, 내부 author·단일 ko audience 정확, 굵은 강조 0, H1 1, 공식 출처 URL 8. 이미지 바이트 일치 및 두 단계 역치환 검증 통과.
 - 작성자 단계에서 남은 자료 접근·이미지 설명 미해결은 없다. 독립 법률·출처/문체 검수와 root의 통합·게시 gate는 아직 남아 있다. 실제 법률가·원어민 승인 또는 운영 게시 완료를 뜻하지 않는다.
+
+## B04 게시 예정일 조정 — 2026-10-04 Asia/Taipei
+
+기록 시각: `2026-10-04T01:06:43+09:00` KST / `2026-10-04T00:06:43+08:00` Asia/Taipei. 대만 자정 경과와 B04·B05 공동 발행 계획에 따라 root가 B04의 게시 예정일 세 필드만 2026-10-04로 조정하도록 지시했다. 실제 통합·게시가 완료됐다는 기록이 아니다.
+
+- 변경 범위: frontmatter `published`, `lastmod`, `date_display`뿐이며 변경 행은 4, 5, 6이다.
+- `published`/`lastmod`: `2026-10-03` → `2026-10-04`; `date_display`: `2026년 10월 3일` → `2026년 10월 4일`.
+- 이전 승인 전체 원고 SHA-256: `1e22e35ae0227cadcb32375007619557329a4f1481d56e86f2f8cc0c3b749e0c`.
+- 날짜 조정 후 전체 원고 SHA-256: `ae9fc852f7da4409fe9d7b59d140d4785ac40aa8c91e91258129a8c508f135e2`.
+- 변경 전·후 raw 본문 SHA-256: 모두 `5821b4f2e3e9d2909e1a92c06042bb1b037a56fe25b4c533aecf557d9815ec80`. 계산 범위는 `bytes.split(b'---', 2)[2]`로 frontmatter 종료 뒤의 개행과 출처 목록을 포함한다. 본문 전체 bytes가 같다.
+- 세 필드를 원래 값으로 역치환하면 이전 원고 전체 bytes와 SHA `1e22e35ae0227cadcb32375007619557329a4f1481d56e86f2f8cc0c3b749e0c`가 정확히 복원된다. 날짜 세 줄을 제외한 frontmatter도 전체 bytes가 같다. 제목·summary·SEO·법률 조건·실제 source-check/access 날짜·기관 공고/시행/사건일·내부 author·이미지 경로/alt/caption은 그대로다.
+- 기존 evidence 전체 22851 bytes를 prefix로 보존했다. 이전 evidence SHA-256: `e11f63c987cdfc60de03fdf01deef70cbe10bf160b54a4bb43bf1529d7583c6f`. 이 절만 뒤에 추가했으며 현재 evidence SHA는 별도 `B04publication-date-delta.json`에 기록한다.
+- 기존 최종 법률 검토서 SHA `c5b18a45c1a19c8c0547ddf84abbf7cc01c145c34abbbb1e9bebd3ef1d00ebca`, 문체 검토서 SHA `30207419b45017e2e901054e4982219a926b6abf19a721ce8216800241a5fffe`는 변경 전 원고 승인 이력이다. 새 전체 SHA에 대한 독립 법률·문체 delta 승인은 대기 중이며 이 작업자가 대신 승인하지 않는다. 검토서는 변경하지 않았다.
+
+실행한 Python 검증은 변경 행3개, 본문·그 외 metadata bytes 불변, 세 필드 역치환 전체 SHA 복원, 기존 evidence prefix 불변을 각각 assert 확인했다. 기존 준비 패킷과 모든 미디어 원본/사본은 변경하지 않았다. 이 검증은 새 자료 열람·repository test·build·화면·운영 검증이나 발행 완료를 뜻하지 않는다. 실제 source-check/access 날짜는 원래 기록을 유지했다.

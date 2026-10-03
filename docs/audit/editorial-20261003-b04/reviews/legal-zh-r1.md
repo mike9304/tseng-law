@@ -212,3 +212,40 @@ ALL_FOUR_DRAFTS_AND_EVIDENCE_SHA_PASS
 | 돌봄 부담 증여 | `0005830b9498a817704ae7c85b770f5f8aa7fb9f8eed52718537c1b293971941` | `e95e94431e800a8fa816072fe59acf8e545a4cecee24883c5d4abf0c96c9ab41` | APPROVE |
 
 검수자의 이번 쓰기 범위는 이 보고서의 R2 추가뿐이다. 원고·evidence·이미지·저장소는 변경하지 않았다. 기존 판결의 후속 심급/확정 미확인이라는 한계는 유지되며, 새 검수 장애나 미해결 법적 수정 요청은 없다. 이 승인도 B04 ZH 네 편의 위 파일에 한정한다.
+
+## R3 — 게시 예정일 세 필드 변경 독립 검수 — 2026-10-04 Asia/Taipei
+
+검수 시각은 2026-10-03 16:08:31 UTC, 2026-10-04 00:08:31 Asia/Taipei / 01:08:31 KST다. 통합 담당자의 최종 변경 기록 전달 후 검수했다. 예정 게시일은 대만 시간 2026-10-04이며, 실제 게시·배포가 이루어졌다는 확인은 아니다.
+
+직접 읽고 해시를 계산한 변경 기록:
+
+- B04publication-date-delta.json: d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38.
+- B04publication-date-delta.md: 2d640f68e5c9ed71c3cfcf1d5f1dab7ec167207a0f10497b0c252847498afe2c. 이 파일은 전달된 해시와 현재 바이트 일치를 확인했으며 주장의 직접 검토는 JSON의 해당 네 항목과 실제 원고·evidence 추가 문단을 대상으로 했다.
+
+네 ZH 원고의 변경은 frontmatter의 published, lastmod, date_display뿐이다. 날짜 값은 2026-10-03에서 2026-10-04로, 표시는 2026年10月3日에서 2026年10月4日로 바뀌었다. 변경 행은 근로자성 글만 L4·L5·L6, 나머지 세 편은 L5·L6·L7이다.
+
+| 원고 | 새 draft SHA-256 | 새 evidence SHA-256 |
+|---|---|---|
+| 누수 | 101a2d561218222b8f7701b048c038dcb8b6e74ac36fb773980fedcd4f33dc80 | 1c1b3b83c9822757f2cafafce2dc5f9b6cdeb89c8b56ad7a662818393c6e8a36 |
+| 근로자성 | 79f88bb0b8f3f76992cd51d1fafc3e240158b4dd2270956c00162bda47fbbc81 | 9d449e3b3dbb0c2dbcb274aa9ad9bc5a2a337b9f3c83cc59b8bd1d7f8a1ef0ac |
+| 사적 차용 보증 | 7cb00e2151da58e1098fac5a29fb535db6d45adcfc7a092a7ff4abc7dab7df7e | 202b13a3cf98d2a0f6a7317dff85e6e6604f4d7f4f87e452062909533bd6edac |
+| 돌봄 부담 증여 | 4cf5fa53e8c0481bf04844ed9ddfcf7455026aad1a4b91a96a9122c2f912b2b2 | f38a8cae5e9b69bc9d2832cbac6cb24fc532cf8774efb4ebb9dd66d75cc2d6a1 |
+
+검수자가 현재 파일 원시바이트로 새 해시를 직접 계산했다. 변경 기록의 자체 PASS 주장에 의존하지 않고, 위 세 필드만 frontmatter에서 역치환한 전체 원고가 이 보고서 R2의 기존 승인 해시와 각각 일치하는지도 별도 상수로 assert 확인했다. 변경 행의 실제 필드명 집합도 위 세 개뿐이었다.
+
+| 원고 | 불변 raw 본문 SHA-256 | 보존된 기존 evidence prefix bytes |
+|---|---|---:|
+| 누수 | 39d136b370c43fa0783887e5c2a4422130d5be276538792452667250aa62f79d | 23058 |
+| 근로자성 | c17e95fc7c375a6d62229c8bfe131332ca2e2e68ebe52b47a59c962a5d753677 | 20717 |
+| 사적 차용 보증 | 24aaa004a66e86a55c2827620ca5a04fa9f396ccd00f50f8c80fa67a1bf50202 | 20213 |
+| 돌봄 부담 증여 | 22a9832eb669a3b07aa77afb6a79276c927d2611586ba592aef3cbcf40d5788e | 22136 |
+
+본문 정의는 bytes.split(b'---', 2)[2]로 종료 delimiter 뒤의 개행 및 출처 목록까지 포함한다. evidence는 위 길이의 기존 prefix가 R2 승인값과 일치했고, 날짜 변경을 기록한 추가 문단을 네 편 모두 실제로 읽었다. 법률·문체 변경의 기존 이력, 원문 접근 실패/한계 및 실제 확인일을 덮어쓰지 않았다.
+
+실행 결과는 네 DATE_DELTA_PASS와 B04_MANIFESTS_ZH4_REVERSE_BODY_EVIDENCE_PREFIX_IMAGE_PASS, Python exit0다. 추가로 네 PNG의 현재 SHA를 R1·R2에서 직접 확인했던 이미지 해시 상수와 각각 비교해 ALL_FOUR_PNG_EQUAL_PRIOR_REVIEW_SHA_PASS, exit0를 확인했다. 따라서 기존 시각 검수를 새 그림에 전용한 것이 아니다.
+
+법률 본문·조건·예외·기산점·판결 사실·심급 한계, 실제 source-check/access 날짜, 기관 발표·시행·사건일, 출처 URL, 제목·요약·그 외 frontmatter, 내부 author와 audience, 이미지 경로·alt·caption은 불변이다. 게시 예정일을 자료 조회일로 바꾸거나 기존 판결이 확정됐다고 새로 표시하지 않았다. 변경되지 않은 법률 원문의 반복 열람은 수행하지 않았고, 수행했다고 주장하지 않는다.
+
+R3 판정: 위 새 SHA의 B04 ZH 네 편 모두 APPROVE. MUST0 / SHOULD0. R2까지의 법률·출처 판정을 유지하며 이 표가 날짜 변경 후 통합에 사용할 최신 ZH 입력이다. 해당 법률 검수의 원래 한계와 별도 실제 게시·빌드·반응형 화면·운영 검증 범위는 그대로다.
+
+이 보고서의 기존 32,162 bytes, SHA f4fc8cc907900e54abcdd431282c764ba72b97d01535c1b8bc9b42a349d9404f를 앞부분에 그대로 보존하고 R3만 추가했다. 검수자는 원고·evidence·이미지·변경 기록·저장소를 수정하지 않았다.

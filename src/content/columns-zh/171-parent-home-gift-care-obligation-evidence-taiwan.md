@@ -2,9 +2,9 @@
 title: "贈屋後說好的照顧沒有履行：如何證明當初附了什麼負擔"
 slug: "parent-home-gift-care-obligation-evidence-taiwan"
 summary: "房屋已贈與子女，若以照顧約定未履行主張撤銷，必須分清贈與的事實、雙方同意的負擔，以及未履行的內容。主張撤銷與請求返還也有區別，不能只憑家人失和就認定房屋應當交回。"
-published: "2026-10-03"
-lastmod: "2026-10-03"
-date_display: "2026年10月3日"
+published: "2026-10-04"
+lastmod: "2026-10-04"
+date_display: "2026年10月4日"
 read_time: "約5分鐘閱讀"
 categories: ["台灣法律資訊"]
 topic: "family"

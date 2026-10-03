@@ -151,3 +151,18 @@
 - Python으로 alt 한 줄을 이전 문구로 역치환했을 때 원고 전체 SHA가 변경 전 값으로 정확히 복원되었고, 본문 바이트 SHA도 일치했다. 출력 `alt-only exact restoration and body-byte verification PASS`, exit0.
 - PyYAML이 이 실행환경에 없어 YAML parser 검증은 수행하지 못했다. 필드 문자열·금지서식·날짜·번체 오타 확인은 완료했으나 parser/build 확인으로 대체하지 않는다.
 - 독립 법률·출처 및 문체 검수에 넘길 최종본이다. 자체 검수 뒤 미해결 중대한 사실 오류는 확인하지 못했으며, FL092317 DB 접근 실패·개별 사건 미검토·미배포 한계는 위 기록을 유지한다.
+
+## B04 게시 예정일 조정 — 2026-10-04 Asia/Taipei
+
+기록 시각: `2026-10-04T01:06:43+09:00` KST / `2026-10-04T00:06:43+08:00` Asia/Taipei. 대만 자정 경과와 B04·B05 공동 발행 계획에 따라 root가 B04의 게시 예정일 세 필드만 2026-10-04로 조정하도록 지시했다. 실제 통합·게시가 완료됐다는 기록이 아니다.
+
+- 변경 범위: frontmatter `published`, `lastmod`, `date_display`뿐이며 변경 행은 4, 5, 6이다.
+- `published`/`lastmod`: `2026-10-03` → `2026-10-04`; `date_display`: `2026年10月3日` → `2026年10月4日`.
+- 이전 승인 전체 원고 SHA-256: `601a9538e7fd2825ca50d472609d1033de031c0f33e575ab08787947318918f1`.
+- 날짜 조정 후 전체 원고 SHA-256: `79f88bb0b8f3f76992cd51d1fafc3e240158b4dd2270956c00162bda47fbbc81`.
+- 변경 전·후 raw 본문 SHA-256: 모두 `c17e95fc7c375a6d62229c8bfe131332ca2e2e68ebe52b47a59c962a5d753677`. 계산 범위는 `bytes.split(b'---', 2)[2]`로 frontmatter 종료 뒤의 개행과 출처 목록을 포함한다. 본문 전체 bytes가 같다.
+- 세 필드를 원래 값으로 역치환하면 이전 원고 전체 bytes와 SHA `601a9538e7fd2825ca50d472609d1033de031c0f33e575ab08787947318918f1`가 정확히 복원된다. 날짜 세 줄을 제외한 frontmatter도 전체 bytes가 같다. 제목·summary·SEO·법률 조건·실제 source-check/access 날짜·기관 공고/시행/사건일·내부 author·이미지 경로/alt/caption은 그대로다.
+- 기존 evidence 전체 20717 bytes를 prefix로 보존했다. 이전 evidence SHA-256: `74cde19227855d42c2991d12aabe1659fe2dc0223e4177484a74b96f7a07805c`. 이 절만 뒤에 추가했으며 현재 evidence SHA는 별도 `B04publication-date-delta.json`에 기록한다.
+- 기존 최종 법률 검토서 SHA `f4fc8cc907900e54abcdd431282c764ba72b97d01535c1b8bc9b42a349d9404f`, 문체 검토서 SHA `30207419b45017e2e901054e4982219a926b6abf19a721ce8216800241a5fffe`는 변경 전 원고 승인 이력이다. 새 전체 SHA에 대한 독립 법률·문체 delta 승인은 대기 중이며 이 작업자가 대신 승인하지 않는다. 검토서는 변경하지 않았다.
+
+실행한 Python 검증은 변경 행3개, 본문·그 외 metadata bytes 불변, 세 필드 역치환 전체 SHA 복원, 기존 evidence prefix 불변을 각각 assert 확인했다. 기존 준비 패킷과 모든 미디어 원본/사본은 변경하지 않았다. 이 검증은 새 자료 열람·repository test·build·화면·운영 검증이나 발행 완료를 뜻하지 않는다. 실제 source-check/access 날짜는 원래 기록을 유지했다.

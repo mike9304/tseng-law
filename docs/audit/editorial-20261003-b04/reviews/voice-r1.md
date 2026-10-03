@@ -328,3 +328,46 @@ root가 질문한 보증 L37의 `不要只看簽名欄旁邊的四個字，而�
 | `zh-hant-private-loan-joint-guarantor-first-demand-taiwan.md` | APPROVE | `601b32f5b43b2542ad378291f5302866971bcb570733ff6df80d1d0ca45d4180` | `8b3a189f53970b4eca1a771317d412c0cf6bbef73c13a5b015a5d2f8c0d526ac` |
 
 최종 표는 위 해시의 문체 승인을 모은 것이며, 법률·이미지 실물·렌더링·빌드·배포의 승인을 대신하지 않는다. 원고·evidence·repo는 변경하지 않았다. 이 append 전 검토서 SHA `63eba55e2aaa00d0b592aabaa1ecbdfd64016910d8c12d2647715c1a0cf78765`의 전체 내용을 보존했다.
+
+## B04 게시 예정일 3필드 변경 — 독립 문체 delta 승인
+
+대상은 `B04publication-date-delta.json` SHA `d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38` 및 동명 Markdown SHA `2d640f68e5c9ed71c3cfcf1d5f1dab7ec167207a0f10497b0c252847498afe2c`에 기록된 7편이다. 두 기록을 전문 읽고 실제 원고·evidence·패키지 PNG를 다시 읽어 독립 대조했다. 비교 기준은 변경 직전에 직접 확보한 기존 승인 원고 7편과 evidence의 전체 SHA·byte 수이며, 원고 역치환 bytes도 해당 사전 snapshot 전체와 비교했다.
+
+변경은 각 원고 frontmatter의 `published`, `lastmod`, `date_display` 세 필드뿐이다. 앞의 두 값은 모두 `2026-10-03`에서 `2026-10-04`로, 표시일은 ZH·JA `2026年10月4日`, EN `October 4, 2026`, KO `2026년 10월 4일`로 바뀌었다. 날짜 표기는 각 언어에서 자연스럽고, root가 정한 Asia/Taipei 10월 4일 공동 발행 계획과 맞는다. 기록상 예정 발행일을 조정한 것이며, 이 승인은 실제 발행이 완료되었다는 뜻이 아니다.
+
+### 직접 실행한 범위 검증
+
+`python3`에서 7편의 실제 파일을 읽고 다음을 `assert`한 결과 `allSeven: PASS`, exit 0을 확인했다.
+
+- 실제 새 draft/evidence SHA가 delta JSON의 값과 일치한다.
+- 원고당 변경 행은 정확히 세 개이며, 지정된 frontmatter 날짜 필드의 이전·이후 값과 행 번호가 일치한다.
+- 세 날짜 행을 사전 snapshot 값으로 되돌리면 이전 승인 원고의 전체 bytes와 SHA가 정확히 복원된다.
+- `bytes.split(b'---', 2)[2]`로 얻은 본문 전체 및 날짜 세 필드 이외의 frontmatter bytes가 변경 전과 같다. 따라서 제목·summary·SEO·내부 author·이미지 경로/alt/caption, 본문 조건·예외·기한·출처와 실제 source-check/access 날짜도 그대로다.
+- evidence의 기존 전체 byte 수만큼 읽은 prefix SHA가 사전 snapshot 및 이전 승인 evidence SHA와 일치한다. 각 파일 뒤에 추가한 날짜 변경 절도 전문 읽었다. 이전 자료 확인일을 게시일로 바꾸거나 새 법률 검토·발행 완료를 주장하지 않는다.
+- 패키지 PNG 7개를 실제 읽어 SHA를 계산했고, 변경 직전 별도 snapshot 및 JSON의 이미지 SHA와 모두 일치했다. 이는 이미지 바이트 보존 확인이며, 이번 delta 검수에서 이미지를 새로 화면에 열어 본 것은 아니다.
+
+| 원고 | 실제 변경 행 | 역치환으로 복원한 기존 전체 원고 SHA-256 | 보존한 evidence prefix bytes | 결과 |
+|---|---|---|---|---|
+| `zh-hant-home-leak-defect-notice-repair-evidence-taiwan.md` | 5, 6, 7 | `211230acc5d35e830be4574b7a55fca31043d2d2a648199bab13224100ea7b3e` | 23058 | PASS |
+| `zh-hant-contractor-employee-status-control-work-taiwan.md` | 4, 5, 6 | `601a9538e7fd2825ca50d472609d1033de031c0f33e575ab08787947318918f1` | 20717 | PASS |
+| `zh-hant-private-loan-joint-guarantor-first-demand-taiwan.md` | 5, 6, 7 | `601b32f5b43b2542ad378291f5302866971bcb570733ff6df80d1d0ca45d4180` | 20213 | PASS |
+| `zh-hant-parent-home-gift-care-obligation-evidence-taiwan.md` | 5, 6, 7 | `0005830b9498a817704ae7c85b770f5f8aa7fb9f8eed52718537c1b293971941` | 22136 | PASS |
+| `ja-taiwan-hotel-luggage-loss-custody-japanese.md` | 5, 6, 7 | `b94444cc0cac1237b94510198862aad5c937ee82147ece2975013856f9904c13` | 21963 | PASS |
+| `en-taiwan-landlord-entry-rental-home-repairs.md` | 6, 7, 8 | `8073439f8279b4ce9f7ff6205fc19c7231420441d65fed389bdbb15add6b5b46` | 24348 | PASS |
+| `ko-taiwan-unpaid-invoice-settlement-release-korean.md` | 4, 5, 6 | `1e22e35ae0227cadcb32375007619557329a4f1481d56e86f2f8cc0c3b749e0c` | 22851 | PASS |
+
+### 날짜 변경 후 최종 B04 7편 승인 SHA-256
+
+| 원고 | 문체 판정 | 최종 원고 SHA-256 | 최종 evidence SHA-256 |
+|---|---|---|---|
+| `zh-hant-home-leak-defect-notice-repair-evidence-taiwan.md` | APPROVE | `101a2d561218222b8f7701b048c038dcb8b6e74ac36fb773980fedcd4f33dc80` | `1c1b3b83c9822757f2cafafce2dc5f9b6cdeb89c8b56ad7a662818393c6e8a36` |
+| `zh-hant-contractor-employee-status-control-work-taiwan.md` | APPROVE | `79f88bb0b8f3f76992cd51d1fafc3e240158b4dd2270956c00162bda47fbbc81` | `9d449e3b3dbb0c2dbcb274aa9ad9bc5a2a337b9f3c83cc59b8bd1d7f8a1ef0ac` |
+| `zh-hant-private-loan-joint-guarantor-first-demand-taiwan.md` | APPROVE | `7cb00e2151da58e1098fac5a29fb535db6d45adcfc7a092a7ff4abc7dab7df7e` | `202b13a3cf98d2a0f6a7317dff85e6e6604f4d7f4f87e452062909533bd6edac` |
+| `zh-hant-parent-home-gift-care-obligation-evidence-taiwan.md` | APPROVE | `4cf5fa53e8c0481bf04844ed9ddfcf7455026aad1a4b91a96a9122c2f912b2b2` | `f38a8cae5e9b69bc9d2832cbac6cb24fc532cf8774efb4ebb9dd66d75cc2d6a1` |
+| `ja-taiwan-hotel-luggage-loss-custody-japanese.md` | APPROVE | `f7ca172bf0e6b6c91d0913ac6970b26ac192daacdfdc3fc50544e20947b3f447` | `53016097d62a847bf0214a794826507443d40e550ccec033c97d240010408f16` |
+| `en-taiwan-landlord-entry-rental-home-repairs.md` | APPROVE | `68f62599bb6548db73112a6f6a5304d15e596a725f51472fdafe19b6645d078f` | `02cbff5a274907fffa6402eaa5041e1d0040248bae34111c4da2a748a73f7b36` |
+| `ko-taiwan-unpaid-invoice-settlement-release-korean.md` | APPROVE | `ae9fc852f7da4409fe9d7b59d140d4785ac40aa8c91e91258129a8c508f135e2` | `b2182f23a6a2fba69ebaf5d1dcf0399aaa7950ca9391e84c743ca1133f56c36b` |
+
+일곱 편 모두 APPROVE. 남은 문체 MUST 0 / SHOULD 0이다. 기존 원고의 문체 승인 내용은 그대로 유지하며, 이번 재검수 범위는 날짜 세 필드 및 나머지 바이트 보존이다. 변경되지 않은 법률 근거를 재조사하거나 법률·화면·빌드·통합·발행 승인을 대신하지 않았다.
+
+이 절을 추가하기 전 검토서 전체 39855 bytes, SHA `30207419b45017e2e901054e4982219a926b6abf19a721ce8216800241a5fffe`를 prefix로 그대로 보존했다. 변경한 파일은 이 검토서 하나뿐이며, 원고·evidence·미디어·repo·Git은 변경하지 않았다.

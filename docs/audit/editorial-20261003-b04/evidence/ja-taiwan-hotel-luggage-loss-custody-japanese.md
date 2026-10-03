@@ -94,3 +94,18 @@
 - 참고자료 앞 실질 본문 SHA는 수정 전후 동일: `a5b3a49b90ef9b6a3148c2bdba2257f1cd208b6c94952cfedef69d8c8cea13d9`. 전체 frontmatter 이후 문자열 SHA는 출처 말미 삭제를 반영하여 `0765db258398b892b860e2367d0e4455c9bb542af8a64a15e7a888c8ddbb81f3` → `3718397fbce1f0ec17f5cb93131ed85489673a99909a749d06200c62724d9f9c`. 이를 실질 본문 법률 변경으로 기록하지 않는다.
 - 본문 산정 1,351자·summary 98자는 유지되며 전체 원고는 57행에서 55행이 되었다. 공개 인용 URL은 5개 조문으로 줄었고, 전체 법률 URL(S6)은 evidence에만 남는다. 앞선 R1 ledger의 57행 메타데이터 항목은 이 변경 이력을 따른다.
 - Evidence는 수정 전 SHA `e3e913ce8f679d1bc550b792699268117072afb039adf35fb994b21f33633583`의 전체 바이트를 접두부로 보존하고 이 기록만 append했다. 현재 draft/evidence를 동결하고 root·`write_fraud_en`·`editorial_inventory`에게 새 SHA와 정확한 delta를 전달한다. 법률 심사는 진행 중이며 이번 작성자 검증을 독립 승인으로 표시하지 않는다. 저장소·공유 파일·이미지 원본은 변경하지 않았다.
+
+## B04 게시 예정일 조정 — 2026-10-04 Asia/Taipei
+
+기록 시각: `2026-10-04T01:06:43+09:00` KST / `2026-10-04T00:06:43+08:00` Asia/Taipei. 대만 자정 경과와 B04·B05 공동 발행 계획에 따라 root가 B04의 게시 예정일 세 필드만 2026-10-04로 조정하도록 지시했다. 실제 통합·게시가 완료됐다는 기록이 아니다.
+
+- 변경 범위: frontmatter `published`, `lastmod`, `date_display`뿐이며 변경 행은 5, 6, 7이다.
+- `published`/`lastmod`: `2026-10-03` → `2026-10-04`; `date_display`: `2026年10月3日` → `2026年10月4日`.
+- 이전 승인 전체 원고 SHA-256: `b94444cc0cac1237b94510198862aad5c937ee82147ece2975013856f9904c13`.
+- 날짜 조정 후 전체 원고 SHA-256: `f7ca172bf0e6b6c91d0913ac6970b26ac192daacdfdc3fc50544e20947b3f447`.
+- 변경 전·후 raw 본문 SHA-256: 모두 `3718397fbce1f0ec17f5cb93131ed85489673a99909a749d06200c62724d9f9c`. 계산 범위는 `bytes.split(b'---', 2)[2]`로 frontmatter 종료 뒤의 개행과 출처 목록을 포함한다. 본문 전체 bytes가 같다.
+- 세 필드를 원래 값으로 역치환하면 이전 원고 전체 bytes와 SHA `b94444cc0cac1237b94510198862aad5c937ee82147ece2975013856f9904c13`가 정확히 복원된다. 날짜 세 줄을 제외한 frontmatter도 전체 bytes가 같다. 제목·summary·SEO·법률 조건·실제 source-check/access 날짜·기관 공고/시행/사건일·내부 author·이미지 경로/alt/caption은 그대로다.
+- 기존 evidence 전체 21963 bytes를 prefix로 보존했다. 이전 evidence SHA-256: `49025c09ab6b6cd17c2ac52f7126d7f20705c0ff1dbee64a1e5be98fe09f1876`. 이 절만 뒤에 추가했으며 현재 evidence SHA는 별도 `B04publication-date-delta.json`에 기록한다.
+- 기존 최종 법률 검토서 SHA `414f1016e6d2fc57f88be2d68df5ca3eac0981aa62166da77f137d8c0a6c4bf3`, 문체 검토서 SHA `30207419b45017e2e901054e4982219a926b6abf19a721ce8216800241a5fffe`는 변경 전 원고 승인 이력이다. 새 전체 SHA에 대한 독립 법률·문체 delta 승인은 대기 중이며 이 작업자가 대신 승인하지 않는다. 검토서는 변경하지 않았다.
+
+실행한 Python 검증은 변경 행3개, 본문·그 외 metadata bytes 불변, 세 필드 역치환 전체 SHA 복원, 기존 evidence prefix 불변을 각각 assert 확인했다. 기존 준비 패킷과 모든 미디어 원본/사본은 변경하지 않았다. 이 검증은 새 자료 열람·repository test·build·화면·운영 검증이나 발행 완료를 뜻하지 않는다. 실제 source-check/access 날짜는 원래 기록을 유지했다.

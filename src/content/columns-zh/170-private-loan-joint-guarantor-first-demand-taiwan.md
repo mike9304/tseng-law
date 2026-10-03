@@ -2,9 +2,9 @@
 title: "替親友的私人借款簽連帶保證，債權人可以先找我嗎？"
 slug: "private-loan-joint-guarantor-first-demand-taiwan"
 summary: "私人借款到期未還，連帶保證人可能被直接求償，無須先對借款人的財產執行。普通保證的先訴抗辯另有法定例外；責任金額、主債務人的抗辯與代償後的權利，仍須分別核對。"
-published: "2026-10-03"
-lastmod: "2026-10-03"
-date_display: "2026年10月3日"
+published: "2026-10-04"
+lastmod: "2026-10-04"
+date_display: "2026年10月4日"
 read_time: "約5分鐘閱讀"
 categories: ["台灣法律資訊"]
 topic: "litigation"

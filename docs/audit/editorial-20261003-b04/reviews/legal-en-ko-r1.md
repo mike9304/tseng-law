@@ -125,3 +125,25 @@ KO 적용 한계: 개별 합의의 해제권 행사·원채권 회복 요건, �
 독립 실행 증거: 최종 원고·evidence SHA가 인계값과 일치함을 직접 확인했다. 새 summary 한 곳을 이전 문구로 역치환한 전체 SHA는 R1 승인본 `dfe34f8e598f4554241cffd4f9851a5a7cb7ac61eacd5eabcaaa60d5313acd85`와 정확히 일치했다. raw body SHA `2df3601635c502686c95184988aa339d8974e811b03692b97d3fd03a333b70f4`도 일치했다. Python 출력 `EN_SUMMARY_ONLY_DELTA: PASS`, exit 0. 본문·SEO·제목·날짜·이미지 경로·alt·caption 및 나머지 metadata는 불변이다.
 
 evidence의 R2 변경 기록을 직접 읽었다. 새 웹 조사·이미지 재열람·통합 QA·배포 확인은 이번 변경분 검수에 포함하지 않았다. 원고·evidence·저장소는 수정하지 않았으며, 기존 B04 검수서 SHA `17bd46a323354f95a9cbc2b37f77513896f69ab1dbdac650c9a7ed4e190fbfe4`의 내용을 보존하고 이 R2만 추가한다. 변호사 검토·집필 인증이나 게시 승인을 뜻하지 않는다.
+
+
+## R3 — EN·KO 발행 날짜 세 필드 변경 검수 (2026-10-04, Asia/Taipei)
+
+판정: EN APPROVE, KO APPROVE. MUST 0, SHOULD 0, replacement 없음. 이번 승인은 아래 새 입력 SHA의 날짜 변경분에 한정한다. R1·R2의 법률·출처 검수 내용과 한계는 유지한다. 변호사의 집필·검토 인증, 통합 QA 완료 또는 실제 게시 확인을 뜻하지 않는다.
+
+| 원고 | 새 draft SHA256 | 새 evidence SHA256 |
+|---|---|---|
+| EN `drafts/en-taiwan-landlord-entry-rental-home-repairs.md` | `68f62599bb6548db73112a6f6a5304d15e596a725f51472fdafe19b6645d078f` | `02cbff5a274907fffa6402eaa5041e1d0040248bae34111c4da2a748a73f7b36` |
+| KO `drafts/ko-taiwan-unpaid-invoice-settlement-release-korean.md` | `ae9fc852f7da4409fe9d7b59d140d4785ac40aa8c91e91258129a8c508f135e2` | `b2182f23a6a2fba69ebaf5d1dcf0399aaa7950ca9391e84c743ca1133f56c36b` |
+
+검수 입력은 `B04publication-date-delta.json` SHA256 `d2fe3fc72964f4a7d0c2adb6fe91976f23946c6fbf5d88fd087259f7cb509c38`이며, 실제 원고·evidence·이미지 파일을 직접 읽어 명세와 독립 대조했다. 확인 시각은 2026-10-03 16:10:55 UTC(대만 2026-10-04 00:10:55) 이후다. 명세의 예정 발행일 2026-10-04 및 최소 발행 시각 `2026-10-04T00:00:00+08:00`은 대만 날짜와 맞는다. 명세의 `actualPublicationPerformed`는 false로, 이 보고서도 실제 게시 사실을 주장하지 않는다.
+
+변경 위치는 EN 6·7·8행과 KO 4·5·6행이다. 두 글 모두 `published`, `lastmod`를 2026-10-03에서 2026-10-04로, `date_display`를 해당 언어의 10월 3일에서 10월 4일 표현으로 바꿨다. 해당 세 필드만 메모리에서 역치환한 전체 원고 SHA가 각각 기존 승인본 EN `8073439f8279b4ce9f7ff6205fc19c7231420441d65fed389bdbb15add6b5b46`, KO `1e22e35ae0227cadcb32375007619557329a4f1481d56e86f2f8cc0c3b749e0c`와 정확히 일치한다. 줄별 대조에서도 변경은 각각 세 줄뿐이다. 따라서 제목·요약·SEO·내부 author·이미지 경로·alt·caption을 포함한 나머지 metadata와 본문·공식 링크·면책 범위가 보존된다.
+
+본문 해시는 frontmatter 닫힘 뒤 전체 바이트(`bytes.split(b'---', 2)[2]`)로 확인했다. EN `2df3601635c502686c95184988aa339d8974e811b03692b97d3fd03a333b70f4`, KO `5821b4f2e3e9d2909e1a92c06042bb1b037a56fe25b4c533aecf557d9815ec80`로 기존 승인값과 같다. EN 65행의 `Sources checked on 3 October 2026.`, KO 74행의 `자료 확인일: 2026년 10월 3일.`도 그대로다. 발행 날짜 변경이 공식 자료의 시행일·발행일이나 실제 조회일을 바꾸지 않는다. 새로운 법률 판단이나 근거를 추가하지 않았으므로 기존 법률 조사를 반복하지 않았다.
+
+EN evidence의 처음 24,348바이트 SHA는 기존 전체 evidence SHA `f60683d3e4c500689649fb4ee4823984f5f1f666360500da52a50de251a3965e`와 일치한다. KO evidence의 처음 22,851바이트 SHA도 기존 전체 SHA `e11f63c987cdfc60de03fdf01deef70cbe10bf160b54a4bb43bf1529d7583c6f`와 일치한다. 추가된 날짜 이력만 각각 2,600·2,606바이트이며, 해당 추가 부분도 명세의 append SHA와 일치했다. 이전 출처 조회·법률 판단·수정 내역이 그대로 남아 있다.
+
+실제 PNG 파일 SHA는 EN `c85fda0df1d4766ac83e63c4be451a861481a03b2ed792c9ada80945a1f4a5f1`, KO `583778392ca2de359c18532a7e6ec367c48202fbe05292c0695cbf668c4c9f81`로 불변이다. 이미지 bytes와 모든 설명 metadata가 보존되므로 R1의 실물 이미지 검토가 계속 적용되며, 이번 날짜 변경 검수에서 이미지 재생성·재열람은 하지 않았다.
+
+독립 실행 증거: `python3`에서 `pathlib`·`hashlib`·`json`으로 실제 입력 전체 해시, frontmatter 세 필드 역치환, 줄별 변경, 본문 해시, evidence 기존 prefix 및 append 해시, 이미지 해시와 실제 자료 확인일 문장을 assertion으로 검사했다. 출력 `EN B04_DATE_ONLY_DELTA: PASS`, `KO B04_DATE_ONLY_DELTA: PASS`, exit 0. 이 보고서도 기존 23,221바이트 전체 prefix SHA `c5b18a45c1a19c8c0547ddf84abbf7cc01c145c34abbbb1e9bebd3ef1d00ebca`를 보존하고 R3만 추가했다. 원고·evidence·manifest·저장소·테스트는 수정하지 않았다.

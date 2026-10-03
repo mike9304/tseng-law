@@ -821,6 +821,10 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-export-control-entity-list-korean-traders"
     }
   ]
 }

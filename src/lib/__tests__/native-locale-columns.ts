@@ -300,6 +300,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '187-taiwan-trademark-nonuse-three-years-korean-brand.md', // reviewed editorial batch005
     '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '192-taiwan-export-control-entity-list-korean-traders.md', // semiconductor lane b08
   ],
   en: [
     '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
@@ -314,6 +315,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '185-taiwan-hotel-typhoon-cancellation-refund-japanese.md', // reviewed editorial batch005
     '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '193-taiwan-science-park-entry-japanese-semiconductor-companies.md', // semiconductor lane b08
   ],
   'zh-hant': [
     '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',

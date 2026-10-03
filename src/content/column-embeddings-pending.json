@@ -585,6 +585,14 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-road-rage-baseball-bat-fracture-damages"
+    },
+    {
+      "locale": "ko",
+      "slug": "korean-supplier-tsmc-vendor-qualification-contract"
+    },
+    {
+      "locale": "en",
+      "slug": "micron-taiwan-trade-secret-cases-lessons-for-us-companies"
     }
   ]
 }

@@ -216,14 +216,17 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
   'ko': [
     '091-taiwan-distributor-trademark-registration-korean-brand.md',
     '094-korea-divorce-recognition-taiwan-household-registration.md', // family lane b01
+    '110-korean-supplier-tsmc-vendor-qualification-contract.md', // semiconductor lane b01
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
     '095-us-parent-child-taken-to-taiwan-custody.md', // family lane b01
     '108-us-divorce-decree-recognition-taiwan.md', // family lane b02+b03 ship
+    '112-micron-taiwan-trade-secret-cases-lessons-for-us-companies.md', // semiconductor lane b01
   ],
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
+    '111-tsmc-kumamoto-jasm-taiwan-outbound-investment-rules.md', // semiconductor lane b01
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',

@@ -142,7 +142,7 @@ describe('reviewed column videos', () => {
 
   it.each([
     ['taiwan-bus-sudden-braking-passenger-carrier-liability', 'bus-passenger-film-v1-zh-hant', '未呈現車外原因或完整煞車過程'],
-    ['taiwan-retaliatory-driving-rear-ended-intentional-injury', 'braking-scooter-v2-zh-hant', '不能用來認定故意、傷勢或責任比例'],
+    ['taiwan-retaliatory-driving-rear-ended-intentional-injury', 'retaliatory-injury-film-v1-zh-hant', '不能用來認定故意、傷勢或責任比例'],
     ['taiwan-parking-wheelstop-latch-service-safety-causation', 'parking-facility-film-v1-zh-hant', '畫面中的車輪擋未被碰到'],
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-film-v1-zh-hant', '橙色車'],
     ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-height-film-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],
@@ -158,7 +158,7 @@ describe('reviewed column videos', () => {
     ['taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse', 'passenger-insurance-film-v1-zh-hant', '並非本文雨夜自摔事故的重建或原始證據'],
     ['taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction', 'uninsured-fund-film-v1-zh-hant', '約定金額不等於實際收款'],
     ['taiwan-accident-stop-dialogue-hit-and-run-evidence', 'stop-dialogue-film-v1-zh-hant', '不能證明沒有人受傷、已同意離場或已履行全部法定義務'],
-    ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
+    ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-multiple-cameras-film-v1-zh-hant', '未取得案件影片'],
     ['taiwan-car-door-opening-motorcycle-liability', 'door-opening-film-v1-zh-hant', '騎士失去平衡'],
     ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-film-v1-zh-hant', '非本文凌晨事故'],
     ['green-light-red-light-pedestrian-third-person', 'pedestrian-third-person-film-v1-zh-hant', '非本文夜間事故'],

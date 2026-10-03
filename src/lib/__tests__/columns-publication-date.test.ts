@@ -120,6 +120,8 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '099': '2026-10-03', // road-rage series: freeway cut-in sentence reduced (all four locales)
   '100': '2026-10-03',
   '101': '2026-10-03',
+  '102': '2026-10-03',
+  '103': '2026-10-03',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

@@ -302,6 +302,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
     '192-taiwan-export-control-entity-list-korean-traders.md', // semiconductor lane b08
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '197-taiwan-remaining-property-claim-asset-tracing.md', // family lane b08
   ],
   en: [
     '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
@@ -337,6 +338,8 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '190-taiwan-pursuit-fatal-self-crash-vacated-judgment.md',
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '195-reserved-share-will-inheritance-dispute.md', // family lane b08
+    '196-separation-cohabitation-duty-taiwan.md', // family lane b08
   ],
 } as const;
 

@@ -15,6 +15,8 @@ import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import styles from './IntentLandingPage.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
+import enStyles from '@/components/en-design/EnLanding.module.css';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 import {
   getConsultationCtaLabel,
@@ -537,7 +539,7 @@ export default function IntentLandingPage({
     })),
   };
 
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -872,4 +874,8 @@ export default function IntentLandingPage({
       </section>
     </>
   );
+  // en (Clear Night inner pages): the same landing body inside the en wrapper; other locales render it as before.
+  return locale === 'en'
+    ? <EnPageShell page="landing"><div className={enStyles.landing}>{body}</div></EnPageShell>
+    : body;
 }

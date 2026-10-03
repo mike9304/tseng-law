@@ -272,8 +272,37 @@
   .v.v[data-ja-v2] .chev:hover::after { translate: 4px 0; }
 }
 
+/* Primary pill rendered by the ja page components themselves */
+.v.v[data-ja-v2] .pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ja-shu);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 100ms linear, scale 200ms var(--ja-ease);
+}
+@media (hover: hover) { .v.v[data-ja-v2] .pill:hover { background: var(--ja-shu-hover); color: #fff; } }
+.v.v[data-ja-v2] .pill:active { scale: 0.98; }
+@media (max-width: 767px) {
+  .v.v[data-ja-v2] .pillBlock { width: 100%; min-height: 52px; padding-inline: 16px; font-size: 16px; }
+}
+
 /* ---------- Tiles (§7.2): fills only, rounded, no border, no shadow ---------- */
 .v.v[data-ja-v2] :global(.card) { border: 0; border-radius: var(--ja-r); box-shadow: none; background: var(--ja-tile); }
+
+/* ---------- Japanese display strings: break only where JaWrap put a <wbr> (the :not(#_) hooks lift this
+   above the site-wide ja auto-phrase rule in globals.css) ---------- */
+.v.v[data-ja-v2] .ph:not(#_):not(#_):not(#_) { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* ---------- Reading measure for long legal text ---------- */
 .v.v[data-ja-v2] :global(:is(p, li, dd)) { line-break: strict; }
@@ -405,6 +434,48 @@ a.tile:active { background: var(--ja-tile-press); }
   .railLink::after { background: Highlight; }
 }
 
+/* ---------- Closing tile (dusk light) ---------- */
+.closing { padding-block: 0 var(--ja-sec); }
+.closingFrame {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  width: min(var(--max-width), calc(100% - var(--page-gutter) * 2));
+  min-height: clamp(380px, 34vw, 520px);
+  margin-inline: auto;
+  border-radius: var(--ja-r);
+  background: #fdf3ea;
+  display: grid;
+  align-items: center;
+}
+.closingLight {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('/images/editorial/ja-kou-dusk-light.webp') 72% 50% / cover no-repeat;
+}
+.closingBody {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  padding: clamp(36px, 5vw, 72px);
+  color: var(--ja-text);
+}
+@media (max-width: 767px) {
+  .closingFrame { min-height: 0; align-items: start; }
+  .closingLight { background-image: url('/images/editorial/ja-kou-dusk-light-mobile.webp'); background-position: 50% 100%; }
+  .closingBody { padding: 32px 24px 300px; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .closingLight {
+      animation: jaSettle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
+  }
+}
+
 /* ---------- Motion recipes ---------- */
 @keyframes jaRiseIn { from { opacity: 0.15; translate: 0 0.14em; } to { opacity: 1; translate: 0 0; } }
 @keyframes jaFadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -415,6 +486,7 @@ a.tile:active { background: var(--ja-tile-press); }
 @keyframes jaSlideLs { from { translate: -16px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
 @keyframes jaSlideRs { from { translate: 16px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
 @keyframes jaDraw { from { scale: 0 1; } to { scale: 1 1; } }
+@keyframes jaSettle { from { scale: 1.04; } to { scale: 1; } }
 
 /* Fusuma entrances (§8.4): left-column tiles slide in from the left, right-column ones from the right,
    fill-mode none so captures, print and reduced motion show the final state. The tile selectors of every

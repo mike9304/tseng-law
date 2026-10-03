@@ -222,6 +222,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '143-taiwan-unpaid-invoice-fraud-or-contract.md', // reviewed fraud/semiconductor release
     '144-taiwan-protection-order-domestic-violence-korean-spouse.md', // family lane b05
     '160-lost-korean-passport-taiwan-return-travel-documents.md', // reviewed editorial batch002
+    '167-taiwan-secondhand-seller-payment-verification-scam-korean.md', // reviewed editorial batch003
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
@@ -232,6 +233,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '136-taiwan-export-controls-shtc-entity-list-us-ear-compliance.md', // reviewed fraud/semiconductor release
     '142-taiwan-supplier-bank-account-change-bec.md', // reviewed fraud/semiconductor release
     '159-immigration-officer-impersonation-arc-taiwan.md', // reviewed editorial batch002
+    '166-parcel-pickup-job-scam-bank-cards-taiwan.md', // reviewed editorial batch003
   ],
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
@@ -241,6 +243,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '135-japanese-equipment-maker-engineers-taiwan-work-permit.md', // reviewed fraud/semiconductor release
     '141-taiwan-rental-deposit-before-viewing-fraud.md', // reviewed fraud/semiconductor release
     '158-taiwan-hotel-booking-extra-payment-phishing.md', // reviewed editorial batch002
+    '165-taiwan-issued-card-unauthorized-charge-dispute-japanese.md', // reviewed editorial batch003
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',
@@ -274,6 +277,10 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '155-secondhand-concert-ticket-screenshot-taiwan.md', // reviewed editorial batch002
     '156-presale-home-payee-developer-agent-taiwan.md', // reviewed editorial batch002
     '157-unordered-cash-on-delivery-parcel-taiwan.md', // reviewed editorial batch002
+    '161-job-scam-payroll-account-atm-card-taiwan.md', // reviewed editorial batch003
+    '162-fake-customer-service-cancel-installment-atm-taiwan.md', // reviewed editorial batch003
+    '163-gym-closure-prepaid-installments-taiwan.md', // reviewed editorial batch003
+    '164-promissory-note-enforcement-undisbursed-loan-taiwan.md', // reviewed editorial batch003
   ],
 } as const;
 

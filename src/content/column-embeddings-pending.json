@@ -697,6 +697,30 @@
     {
       "locale": "ko",
       "slug": "lost-korean-passport-taiwan-return-travel-documents"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "job-scam-payroll-account-atm-card-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "fake-customer-service-cancel-installment-atm-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "gym-closure-prepaid-installments-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "promissory-note-enforcement-undisbursed-loan-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "parcel-pickup-job-scam-bank-cards-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-secondhand-seller-payment-verification-scam-korean"
     }
   ]
 }

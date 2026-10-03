@@ -144,6 +144,7 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '119': '2026-10-03',
   '120': '2026-10-03',
   '121': '2026-10-03',
+  '122': '2026-10-03', // road-rage series: taiwan-road-rage-reversing-into-tailgater-no-self-defense (all four locales)
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

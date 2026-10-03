@@ -621,6 +621,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-bus-stop-illegal-parking-no-contact-criminal-causation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-road-rage-reversing-into-tailgater-no-self-defense"
     }
   ]
 }

@@ -211,7 +211,7 @@ export const COUNTRY_COLUMN_FILES_20261002 = {
   ja: ['071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md'],
 } as const;
 
-/** Native audience, traffic and family-law columns published 2026-10-03 (085–096). */
+/** Native audience, traffic and family-law columns published 2026-10-03 (085–098). */
 export const COUNTRY_COLUMN_FILES_20261003 = {
   'ko': [
     '091-taiwan-distributor-trademark-registration-korean-brand.md',
@@ -232,6 +232,8 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '089-taiwan-truck-blocking-multiple-dashcam-evidence.md',
     '090-green-light-red-light-pedestrian-third-person.md',
     '093-taiwan-gas-station-tanker-reversing-beeper-liability.md',
+    '097-taiwan-parking-wheelstop-latch-service-safety-causation.md',
+    '098-taiwan-motorway-blocking-no-collision-public-danger.md',
   ],
 } as const;
 

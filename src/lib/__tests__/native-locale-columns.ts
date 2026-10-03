@@ -221,6 +221,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '134-taiwan-national-security-act-core-key-technology-korean-engineers.md', // reviewed fraud/semiconductor release
     '143-taiwan-unpaid-invoice-fraud-or-contract.md', // reviewed fraud/semiconductor release
     '144-taiwan-protection-order-domestic-violence-korean-spouse.md', // family lane b05
+    '160-lost-korean-passport-taiwan-return-travel-documents.md', // reviewed editorial batch002
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
@@ -230,6 +231,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '118-tsmc-arizona-chips-act-taiwan-outbound-approval.md', // semiconductor lane b04
     '136-taiwan-export-controls-shtc-entity-list-us-ear-compliance.md', // reviewed fraud/semiconductor release
     '142-taiwan-supplier-bank-account-change-bec.md', // reviewed fraud/semiconductor release
+    '159-immigration-officer-impersonation-arc-taiwan.md', // reviewed editorial batch002
   ],
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
@@ -238,6 +240,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '117-japanese-materials-supplier-taiwan-nda-trade-secrets.md', // semiconductor lane b04
     '135-japanese-equipment-maker-engineers-taiwan-work-permit.md', // reviewed fraud/semiconductor release
     '141-taiwan-rental-deposit-before-viewing-fraud.md', // reviewed fraud/semiconductor release
+    '158-taiwan-hotel-booking-extra-payment-phishing.md', // reviewed editorial batch002
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',
@@ -267,6 +270,10 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '138-cash-investment-courier-receipt-fraud-taiwan.md', // reviewed fraud/semiconductor release
     '139-land-registration-alert-property-fraud-taiwan.md', // reviewed fraud/semiconductor release
     '140-fake-lawyer-scam-recovery-fee-taiwan.md', // reviewed fraud/semiconductor release
+    '154-family-voice-impersonation-transfer-taiwan.md', // reviewed editorial batch002
+    '155-secondhand-concert-ticket-screenshot-taiwan.md', // reviewed editorial batch002
+    '156-presale-home-payee-developer-agent-taiwan.md', // reviewed editorial batch002
+    '157-unordered-cash-on-delivery-parcel-taiwan.md', // reviewed editorial batch002
   ],
 } as const;
 

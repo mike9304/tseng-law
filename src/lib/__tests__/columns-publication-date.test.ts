@@ -159,6 +159,14 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '143': '2026-10-03',
   // family lane b05
   '144': '2026-10-03',
+  // Taiwan-first editorial batch002.
+  '154': '2026-10-03',
+  '155': '2026-10-03',
+  '156': '2026-10-03',
+  '157': '2026-10-03',
+  '158': '2026-10-03',
+  '159': '2026-10-03',
+  '160': '2026-10-03',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

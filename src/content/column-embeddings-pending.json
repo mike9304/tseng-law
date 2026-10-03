@@ -673,6 +673,30 @@
     {
       "locale": "ko",
       "slug": "taiwan-protection-order-domestic-violence-korean-spouse"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "family-voice-impersonation-transfer-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "secondhand-concert-ticket-screenshot-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "presale-home-payee-developer-agent-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "unordered-cash-on-delivery-parcel-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "immigration-officer-impersonation-arc-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "lost-korean-passport-taiwan-return-travel-documents"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-10-03",
+  "tool": "image_gen.imagegen",
+  "edits": [
+    {
+      "slug": "unordered-cash-on-delivery-parcel-taiwan",
+      "path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-bbd8b19e-f05a-43f3-b831-4eb106fb70ff.png",
+      "prompt": "Edit the supplied fictional editorial image into a 16:9 legal-column hero photograph. Preserve the warm apartment doorway, unmarked parcel with blank shipping label, closed wallet and phone, and quiet pause before paying. Reframe lower and closer so BOTH people are visible only from shoulders down: no eyes, nose, mouth, chin, or identifying face anywhere. Hands and torsos only. The recipient's hand should rest on the closed wallet while the courier's hand holds the box edge. Keep anatomically natural hands. Do not add text, logos, barcodes, QR codes, uniforms bearing a company name, or identity documents. Photorealistic, subdued elegant cream and green palette. No alarm symbols or sensationalism."
+    },
+    {
+      "slug": "taiwan-hotel-booking-extra-payment-phishing",
+      "path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-ca0c169a-e752-44d0-92a4-8db1d185ceb1.png",
+      "prompt": "Edit the supplied fictional Taiwan travel editorial image into a refined 16:9 hero photograph. Reframe the shot to SHOW ONLY HANDS AND TORSO from below the shoulders, NO face or chin anywhere. Preserve hotel desk, luggage and softly blurred Taipei view. Show hands comparing a generic unreadable booking confirmation with a smartphone lying on the desk and a landline handset set aside. Remove readable text, logos, identifiable hotel or platform branding, real payment-interface reproduction and any actual passport/card/booking identifiers. The phone display should contain only indistinct simple gray shapes, no legible letters and no QR. Quietly checking before an additional payment, no dramatic fear or red warning symbols. Natural anatomy and documentary-quality lighting."
+    },
+    {
+      "slug": "presale-home-payee-developer-agent-taiwan",
+      "path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-6939de69-2450-47d0-b762-13d231c37d67.png",
+      "prompt": "Make one precise change to the supplied fictional presale-home contract consultation image: remove the entire foreground sheet with the building-person-bank icons and arrows, leaving uninterrupted clean wooden tabletop in that area. This image must not imply a legally prescribed payment flow. Preserve the adult hands and torsos with no faces, architectural scale model, ordinary floor plan, unreadable contract sheets on folders, soft warm light and neutral green palette. Remove all readable text/logos if any; do not introduce new diagrams, symbols, seals, bank names or text. Maintain original 16:9 wide editorial photograph composition."
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "batch": "editorial-20261003-b02",
+  "recorded_at": "2026-10-03T21:48:35+09:00",
+  "scope": "Local packaging and visual QA of the seven parent-selected images; no repository integration or publication is asserted.",
+  "prompt_records": [
+    {
+      "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+      "sha256": "6f9d864d13fc533e81242f8814c149e7ece417df5c9277c000700020c86b0405"
+    },
+    {
+      "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-EDITS.json",
+      "sha256": "df74d3b1af57b7c2077f8f95aaabf0aa2a2913660e3c1e34935013885abedfcb"
+    }
+  ],
+  "selection_source": "Parent agent /root supplied the seven selected generation output paths.",
+  "assets": [
+    {
+      "slug": "family-voice-impersonation-transfer-taiwan",
+      "locale": "zh-hant",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-492b6bd9-79e5-4d6e-9c90-febdcd53593b.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/images/family-voice-impersonation-transfer-taiwan.png",
+      "relative_path": "images/family-voice-impersonation-transfer-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b02/family-voice-impersonation-transfer-taiwan.png",
+      "sha256": "fc2cd1fb67c5d9d6edbaae43fb7542f8cc200448a69dc9c77b9f4ec0f47faacc",
+      "bytes": 1965352,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Exact byte equality and SHA-256 equality with selected source.",
+      "generation": {
+        "tool": "built-in image_gen",
+        "transparent_background": false,
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+        "scene": "At a modest apartment breakfast table, an adult's hand rests beside a smartphone displaying only a simple abstract audio waveform. A second ordinary telephone handset is being lifted to make an independent call. A teacup and a softly out-of-focus family photo frame whose figures cannot be identified suggest family context. No cash, police, sinister hooded figures or glowing red alerts. Focus on pausing to verify a familiar voice.",
+        "prompt": "Create one landscape 16:9 editorial photograph-style illustration for a thoughtful Taiwan law-firm column. A fictional, staged explanatory scene, not evidence of an actual case. Quiet contemporary Taiwan setting, warm natural daylight, restrained cream, wood and muted green palette, realistic objects and anatomy, professional without stock-photo theatrics, no fearmongering. No legible words, numbers, names, addresses, brands, institutional emblems, real identity documents, recognizable faces, watermarks, scannable QR or barcodes. Compose the key objects in the central safe area so mobile cropping still works. No headline text or graphic border. At a modest apartment breakfast table, an adult's hand rests beside a smartphone displaying only a simple abstract audio waveform. A second ordinary telephone handset is being lifted to make an independent call. A teacup and a softly out-of-focus family photo frame whose figures cannot be identified suggest family context. No cash, police, sinister hooded figures or glowing red alerts. Focus on pausing to verify a familiar voice.",
+        "initial_output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-492b6bd9-79e5-4d6e-9c90-febdcd53593b.png",
+        "initial_output_sha256": "fc2cd1fb67c5d9d6edbaae43fb7542f8cc200448a69dc9c77b9f4ec0f47faacc"
+      },
+      "edit": null,
+      "recommended_alt": "一人坐在木桌前拿起室內電話聽筒，桌上手機顯示波形，旁邊放著茶杯和模糊的相框。",
+      "recommended_caption": "AI生成的示意畫面，並非真實人物、通話紀錄或案件影像。",
+      "visual_qa": {
+        "method": "Selected source opened with view_image; copied output is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observation": "A person holds a corded telephone receiver. A smartphone with a waveform, a mug and a blurred family-style photo frame are on the table. Part of the nose, mouth and chin is visible; this is not a fully face-free crop.",
+        "face_visibility": "Partial face is visible.",
+        "qr_like_pattern_visible": false,
+        "qr_decoding_test": "Not performed. No assertion of code validity or scannability.",
+        "status": "Ready for writer integration with the fictional-image caption."
+      }
+    },
+    {
+      "slug": "secondhand-concert-ticket-screenshot-taiwan",
+      "locale": "zh-hant",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-972cbf8a-0e05-4828-a181-4bfa10c99845.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/images/secondhand-concert-ticket-screenshot-taiwan.png",
+      "relative_path": "images/secondhand-concert-ticket-screenshot-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b02/secondhand-concert-ticket-screenshot-taiwan.png",
+      "sha256": "135b12737f54df79f34c8cca4d44aff3512234334ca1fc5090a293897aa354d2",
+      "bytes": 1907778,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Exact byte equality and SHA-256 equality with selected source.",
+      "generation": {
+        "tool": "built-in image_gen",
+        "transparent_background": false,
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+        "scene": "A close tabletop view: a smartphone displays a generic blurred ticket-shaped rectangle with a small unscannable abstract block pattern, beside two plain ticket-sized paper slips, a simple pen and an empty envelope. A young adult's natural hand points toward the discrepancy between the screen and the paper. Soft distant colored stage lights reflected in a window hint at a concert. No actual ticket, venue, artist, event name or valid barcode.",
+        "prompt": "Create one landscape 16:9 editorial photograph-style illustration for a thoughtful Taiwan law-firm column. A fictional, staged explanatory scene, not evidence of an actual case. Quiet contemporary Taiwan setting, warm natural daylight, restrained cream, wood and muted green palette, realistic objects and anatomy, professional without stock-photo theatrics, no fearmongering. No legible words, numbers, names, addresses, brands, institutional emblems, real identity documents, recognizable faces, watermarks, scannable QR or barcodes. Compose the key objects in the central safe area so mobile cropping still works. No headline text or graphic border. A close tabletop view: a smartphone displays a generic blurred ticket-shaped rectangle with a small unscannable abstract block pattern, beside two plain ticket-sized paper slips, a simple pen and an empty envelope. A young adult's natural hand points toward the discrepancy between the screen and the paper. Soft distant colored stage lights reflected in a window hint at a concert. No actual ticket, venue, artist, event name or valid barcode.",
+        "initial_output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-972cbf8a-0e05-4828-a181-4bfa10c99845.png",
+        "initial_output_sha256": "135b12737f54df79f34c8cca4d44aff3512234334ca1fc5090a293897aa354d2"
+      },
+      "edit": null,
+      "recommended_alt": "一人指向手機上帶有方塊圖樣的票券樣式畫面，桌上放著兩張票券樣式的紙張、筆和信封，窗外有模糊的舞台燈光。",
+      "recommended_caption": "AI生成的示意畫面。畫面中的票券與手機介面為虛構，並非實際票券、購票憑證或案件證據。",
+      "visual_qa": {
+        "method": "Selected source opened with view_image; copied output is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observation": "A person points at a ticket-like phone display with a QR-like square pattern. Two ticket-shaped paper slips, a pen and an envelope lie on the table; blurred colored lights are visible through the window. Mouth and chin are visible. No claim is made that the block pattern is valid, invalid, scannable or unscannable.",
+        "face_visibility": "Partial face is visible.",
+        "qr_like_pattern_visible": true,
+        "qr_decoding_test": "Not performed. No assertion of code validity or scannability.",
+        "status": "Ready for writer integration with the fictional-image caption."
+      }
+    },
+    {
+      "slug": "presale-home-payee-developer-agent-taiwan",
+      "locale": "zh-hant",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-2cb3bae1-ea07-4a71-9445-7aad2b50642d.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/images/presale-home-payee-developer-agent-taiwan.png",
+      "relative_path": "images/presale-home-payee-developer-agent-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b02/presale-home-payee-developer-agent-taiwan.png",
+      "sha256": "80e5129460591aa556f0753cc92c249ec3923f40e38c0afb49e3199e20292775",
+      "bytes": 1817172,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Exact byte equality and SHA-256 equality with selected source.",
+      "generation": {
+        "tool": "built-in image_gen",
+        "transparent_background": false,
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+        "scene": "A daylight apartment sales discussion shown only through objects and two adults' hands: a small neutral architectural model of an apartment building, three unbranded folders with blank diagram-like paperwork, and a plain payment-instruction sheet being compared with a contract. No money changing hands, signatures, bank numbers, seals or agency logos. The visual question is how the developer, agent and payment recipient connect.",
+        "prompt": "Create one landscape 16:9 editorial photograph-style illustration for a thoughtful Taiwan law-firm column. A fictional, staged explanatory scene, not evidence of an actual case. Quiet contemporary Taiwan setting, warm natural daylight, restrained cream, wood and muted green palette, realistic objects and anatomy, professional without stock-photo theatrics, no fearmongering. No legible words, numbers, names, addresses, brands, institutional emblems, real identity documents, recognizable faces, watermarks, scannable QR or barcodes. Compose the key objects in the central safe area so mobile cropping still works. No headline text or graphic border. A daylight apartment sales discussion shown only through objects and two adults' hands: a small neutral architectural model of an apartment building, three unbranded folders with blank diagram-like paperwork, and a plain payment-instruction sheet being compared with a contract. No money changing hands, signatures, bank numbers, seals or agency logos. The visual question is how the developer, agent and payment recipient connect.",
+        "initial_output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-6939de69-2450-47d0-b762-13d231c37d67.png",
+        "initial_output_sha256": "02a892b5d203b37d09b08bea95777fa66b69e327fd8c5369ea4f49c976367725"
+      },
+      "edit": {
+        "tool": "image_gen.imagegen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-EDITS.json",
+        "recorded_at": "2026-10-03",
+        "input_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-6939de69-2450-47d0-b762-13d231c37d67.png",
+        "input_sha256": "02a892b5d203b37d09b08bea95777fa66b69e327fd8c5369ea4f49c976367725",
+        "prompt": "Make one precise change to the supplied fictional presale-home contract consultation image: remove the entire foreground sheet with the building-person-bank icons and arrows, leaving uninterrupted clean wooden tabletop in that area. This image must not imply a legally prescribed payment flow. Preserve the adult hands and torsos with no faces, architectural scale model, ordinary floor plan, unreadable contract sheets on folders, soft warm light and neutral green palette. Remove all readable text/logos if any; do not introduce new diagrams, symbols, seals, bank names or text. Maintain original 16:9 wide editorial photograph composition.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-2cb3bae1-ea07-4a71-9445-7aad2b50642d.png",
+        "output_sha256": "80e5129460591aa556f0753cc92c249ec3923f40e38c0afb49e3199e20292775"
+      },
+      "recommended_alt": "兩人坐在擺有公寓模型的木桌旁，一人握筆、另一人指著文件；桌上另有建築示意圖與平面圖。",
+      "recommended_caption": "AI生成的示意畫面，並非真實建案、契約或付款指示，也不表示法定付款流程。",
+      "visual_qa": {
+        "method": "Selected source opened with view_image; copied output is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observation": "Two people are shown as torsos and hands beside a neutral apartment model, folders, an architectural rendering and a floor plan. The foreground sheet with payment-flow icons and arrows has been removed in the selected edit; clean wooden tabletop remains there. The image does not establish a legally prescribed payment flow.",
+        "face_visibility": "Faces are outside the selected frame.",
+        "qr_like_pattern_visible": false,
+        "qr_decoding_test": "Not performed. No assertion of code validity or scannability.",
+        "status": "Ready for writer integration with the fictional-image caption."
+      }
+    },
+    {
+      "slug": "unordered-cash-on-delivery-parcel-taiwan",
+      "locale": "zh-hant",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-80a1af53-39bd-4657-a1ee-c367e7965156.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/images/unordered-cash-on-delivery-parcel-taiwan.png",
+      "relative_path": "images/unordered-cash-on-delivery-parcel-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b02/unordered-cash-on-delivery-parcel-taiwan.png",
+      "sha256": "f1e0dc0c4bca419acc3cf95525470a39e512e04fb968116d137c03241295b13a",
+      "bytes": 1973045,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Exact byte equality and SHA-256 equality with selected source.",
+      "generation": {
+        "tool": "built-in image_gen",
+        "transparent_background": false,
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+        "scene": "A Taiwan apartment doorway with a small plain sealed parcel on a narrow entrance table. An adult resident keeps a closed wallet beside a smartphone while checking whether someone at home placed an order. Another adult's hand is visible near the parcel, without uniforms or brand identity. The parcel has only a blank label and no barcode or writing. Calm pause before payment, no visible cash or implied criminal identity.",
+        "prompt": "Create one landscape 16:9 editorial photograph-style illustration for a thoughtful Taiwan law-firm column. A fictional, staged explanatory scene, not evidence of an actual case. Quiet contemporary Taiwan setting, warm natural daylight, restrained cream, wood and muted green palette, realistic objects and anatomy, professional without stock-photo theatrics, no fearmongering. No legible words, numbers, names, addresses, brands, institutional emblems, real identity documents, recognizable faces, watermarks, scannable QR or barcodes. Compose the key objects in the central safe area so mobile cropping still works. No headline text or graphic border. A Taiwan apartment doorway with a small plain sealed parcel on a narrow entrance table. An adult resident keeps a closed wallet beside a smartphone while checking whether someone at home placed an order. Another adult's hand is visible near the parcel, without uniforms or brand identity. The parcel has only a blank label and no barcode or writing. Calm pause before payment, no visible cash or implied criminal identity.",
+        "initial_output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-bbd8b19e-f05a-43f3-b831-4eb106fb70ff.png",
+        "initial_output_sha256": "5c60d055f19445ef55ab2db62bbbe2f002fcc350c99bac7c075727b3b2f14933"
+      },
+      "edit": {
+        "tool": "image_gen.imagegen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-EDITS.json",
+        "recorded_at": "2026-10-03",
+        "input_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-bbd8b19e-f05a-43f3-b831-4eb106fb70ff.png",
+        "input_sha256": "5c60d055f19445ef55ab2db62bbbe2f002fcc350c99bac7c075727b3b2f14933",
+        "prompt": "Edit the supplied fictional editorial image into a 16:9 legal-column hero photograph. Preserve the warm apartment doorway, unmarked parcel with blank shipping label, closed wallet and phone, and quiet pause before paying. Reframe lower and closer so BOTH people are visible only from shoulders down: no eyes, nose, mouth, chin, or identifying face anywhere. Hands and torsos only. The recipient's hand should rest on the closed wallet while the courier's hand holds the box edge. Keep anatomically natural hands. Do not add text, logos, barcodes, QR codes, uniforms bearing a company name, or identity documents. Photorealistic, subdued elegant cream and green palette. No alarm symbols or sensationalism.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-80a1af53-39bd-4657-a1ee-c367e7965156.png",
+        "output_sha256": "f1e0dc0c4bca419acc3cf95525470a39e512e04fb968116d137c03241295b13a"
+      },
+      "recommended_alt": "玄關木桌上放著貼有空白標籤的紙箱、手機和闔上的皮夾；一人的手按著皮夾，另一人的手扶著紙箱。",
+      "recommended_caption": "AI生成的示意畫面，人物與包裹均為虛構，並非真實物流業者、訂單或案件影像。",
+      "visual_qa": {
+        "method": "Selected source opened with view_image; copied output is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observation": "At a doorway, one hand rests on a closed wallet and another on a plain parcel with a blank label. A smartphone lies nearby. The selected edit crops both people below their faces. No cash exchange is visible and no person is identified as an offender.",
+        "face_visibility": "Faces are outside the selected frame.",
+        "qr_like_pattern_visible": false,
+        "qr_decoding_test": "Not performed. No assertion of code validity or scannability.",
+        "status": "Ready for writer integration with the fictional-image caption."
+      }
+    },
+    {
+      "slug": "taiwan-hotel-booking-extra-payment-phishing",
+      "locale": "ja",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-d2bd69e3-2ff5-4e8d-b287-1ad5dccf3ed8.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/images/taiwan-hotel-booking-extra-payment-phishing.png",
+      "relative_path": "images/taiwan-hotel-booking-extra-payment-phishing.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b02/taiwan-hotel-booking-extra-payment-phishing.png",
+      "sha256": "5b47d490ee11332688674afaf1f4b9157da348f79449ec21a28f6a00e9e7c1c9",
+      "bytes": 1831620,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Exact byte equality and SHA-256 equality with selected source.",
+      "generation": {
+        "tool": "built-in image_gen",
+        "transparent_background": false,
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+        "scene": "A quiet fictional Taipei hotel room with a neatly made bed, small suitcase and travel pouch in the background. On a desk, a traveler compares a plain printed reservation-shaped sheet with a smartphone showing a generic abstract payment-message layout; another hand holds a telephone handset to verify with the accommodation. Nothing legible, no real hotel or booking platform branding. Show uncertainty and verification, not a confirmed crime.",
+        "prompt": "Create one landscape 16:9 editorial photograph-style illustration for a thoughtful Taiwan law-firm column. A fictional, staged explanatory scene, not evidence of an actual case. Quiet contemporary Taiwan setting, warm natural daylight, restrained cream, wood and muted green palette, realistic objects and anatomy, professional without stock-photo theatrics, no fearmongering. No legible words, numbers, names, addresses, brands, institutional emblems, real identity documents, recognizable faces, watermarks, scannable QR or barcodes. Compose the key objects in the central safe area so mobile cropping still works. No headline text or graphic border. A quiet fictional Taipei hotel room with a neatly made bed, small suitcase and travel pouch in the background. On a desk, a traveler compares a plain printed reservation-shaped sheet with a smartphone showing a generic abstract payment-message layout; another hand holds a telephone handset to verify with the accommodation. Nothing legible, no real hotel or booking platform branding. Show uncertainty and verification, not a confirmed crime.",
+        "initial_output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-ca0c169a-e752-44d0-92a4-8db1d185ceb1.png",
+        "initial_output_sha256": "184b5adf2919aae1fb5692a7b605f65b2c35166f8ac229e0c1b421f5b40315b4"
+      },
+      "edit": {
+        "tool": "image_gen.imagegen",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-EDITS.json",
+        "recorded_at": "2026-10-03",
+        "input_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-ca0c169a-e752-44d0-92a4-8db1d185ceb1.png",
+        "input_sha256": "184b5adf2919aae1fb5692a7b605f65b2c35166f8ac229e0c1b421f5b40315b4",
+        "prompt": "Edit the supplied fictional Taiwan travel editorial image into a refined 16:9 hero photograph. Reframe the shot to SHOW ONLY HANDS AND TORSO from below the shoulders, NO face or chin anywhere. Preserve hotel desk, luggage and softly blurred Taipei view. Show hands comparing a generic unreadable booking confirmation with a smartphone lying on the desk and a landline handset set aside. Remove readable text, logos, identifiable hotel or platform branding, real payment-interface reproduction and any actual passport/card/booking identifiers. The phone display should contain only indistinct simple gray shapes, no legible letters and no QR. Quietly checking before an additional payment, no dramatic fear or red warning symbols. Natural anatomy and documentary-quality lighting.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-d2bd69e3-2ff5-4e8d-b287-1ad5dccf3ed8.png",
+        "output_sha256": "5b47d490ee11332688674afaf1f4b9157da348f79449ec21a28f6a00e9e7c1c9"
+      },
+      "recommended_alt": "ベッドとスーツケースのある室内で、人物が部屋の写真を載せた紙を持ち、机上のスマートフォンを指しています。横に固定電話が置かれています。",
+      "recommended_caption": "AI生成の架空の場面です。実在する宿泊施設、予約確認書、決済画面や被害事例を示すものではありません。",
+      "visual_qa": {
+        "method": "Selected source opened with view_image; copied output is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observation": "A torso and hands are visible in a hotel-like room. One hand holds a sheet with a room image while another points at the phone. A landline, cup, notepad and travel pouch sit on the desk, with luggage and a bed behind it. The selected edit contains no visible face or chin. The receiver is on the phone base, not being held; the alt follows the selected image rather than the initial prompt.",
+        "face_visibility": "Face and chin are outside the selected frame.",
+        "qr_like_pattern_visible": false,
+        "qr_decoding_test": "Not performed. No assertion of code validity or scannability.",
+        "status": "Ready for writer integration with the fictional-image caption."
+      }
+    },
+    {
+      "slug": "immigration-officer-impersonation-arc-taiwan",
+      "locale": "en",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-b6bed0fe-c799-4132-b589-2e0ed97f7ffa.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/images/immigration-officer-impersonation-arc-taiwan.png",
+      "relative_path": "images/immigration-officer-impersonation-arc-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b02/immigration-officer-impersonation-arc-taiwan.png",
+      "sha256": "766c46e3f2c1ed9cfd64820287f73e9076ab94a19cada6ef0c6e0a7a9c9b0d35",
+      "bytes": 1792058,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Exact byte equality and SHA-256 equality with selected source.",
+      "generation": {
+        "tool": "built-in image_gen",
+        "transparent_background": false,
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+        "scene": "An adult foreign resident in a bright neutral home office is shown only from the shoulder down, using an ordinary telephone while checking a plain folder and an abstract government-service contact layout on a laptop. An opaque neutral card sleeve lies closed on the desk; no real ARC, passport, seals or official document reproduction. Calm independent verification of an unexpected immigration-related contact.",
+        "prompt": "Create one landscape 16:9 editorial photograph-style illustration for a thoughtful Taiwan law-firm column. A fictional, staged explanatory scene, not evidence of an actual case. Quiet contemporary Taiwan setting, warm natural daylight, restrained cream, wood and muted green palette, realistic objects and anatomy, professional without stock-photo theatrics, no fearmongering. No legible words, numbers, names, addresses, brands, institutional emblems, real identity documents, recognizable faces, watermarks, scannable QR or barcodes. Compose the key objects in the central safe area so mobile cropping still works. No headline text or graphic border. An adult foreign resident in a bright neutral home office is shown only from the shoulder down, using an ordinary telephone while checking a plain folder and an abstract government-service contact layout on a laptop. An opaque neutral card sleeve lies closed on the desk; no real ARC, passport, seals or official document reproduction. Calm independent verification of an unexpected immigration-related contact.",
+        "initial_output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-b6bed0fe-c799-4132-b589-2e0ed97f7ffa.png",
+        "initial_output_sha256": "766c46e3f2c1ed9cfd64820287f73e9076ab94a19cada6ef0c6e0a7a9c9b0d35"
+      },
+      "edit": null,
+      "recommended_alt": "A person holds a telephone receiver and an open folder beside a laptop showing a building icon and generic contact symbols. A closed card holder rests on the desk.",
+      "recommended_caption": "AI-generated illustrative scene. The person, documents and contact screen are fictional; this is not an official immigration website, identity document or record of an actual case.",
+      "visual_qa": {
+        "method": "Selected source opened with view_image; copied output is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observation": "A person with a partially visible chin holds a telephone receiver and a folder. The laptop contains a generic building icon and contact symbols. A closed card holder, notebook and mug sit on the desk. No actual ARC or passport is shown; the generic screen is not described as an official agency website.",
+        "face_visibility": "Part of the chin/lower jaw is visible.",
+        "qr_like_pattern_visible": false,
+        "qr_decoding_test": "Not performed. No assertion of code validity or scannability.",
+        "status": "Ready for writer integration with the fictional-image caption."
+      }
+    },
+    {
+      "slug": "lost-korean-passport-taiwan-return-travel-documents",
+      "locale": "ko",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-46b90f33-8475-4ee7-af7c-3a6956e03297.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/images/lost-korean-passport-taiwan-return-travel-documents.png",
+      "relative_path": "images/lost-korean-passport-taiwan-return-travel-documents.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b02/lost-korean-passport-taiwan-return-travel-documents.png",
+      "sha256": "ed8bf5f21d965305a877ccc7da7c2937009bc6007b7fac8ad837636e59830776",
+      "bytes": 2006842,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Exact byte equality and SHA-256 equality with selected source.",
+      "generation": {
+        "tool": "built-in image_gen",
+        "transparent_background": false,
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-002/IMAGE-PROMPTS.json",
+        "scene": "An open travel bag and an empty dark-green passport sleeve on a clean airport-style counter, beside a plain unprinted boarding-card-shaped slip, a pen and a smartphone. One adult hand carefully checks the empty sleeve while the other arranges blank paperwork. Soft travel-hall background, no airline or country insignia, no passport document or identity data. Convey practical preparation after losing a travel document, without panic.",
+        "prompt": "Create one landscape 16:9 editorial photograph-style illustration for a thoughtful Taiwan law-firm column. A fictional, staged explanatory scene, not evidence of an actual case. Quiet contemporary Taiwan setting, warm natural daylight, restrained cream, wood and muted green palette, realistic objects and anatomy, professional without stock-photo theatrics, no fearmongering. No legible words, numbers, names, addresses, brands, institutional emblems, real identity documents, recognizable faces, watermarks, scannable QR or barcodes. Compose the key objects in the central safe area so mobile cropping still works. No headline text or graphic border. An open travel bag and an empty dark-green passport sleeve on a clean airport-style counter, beside a plain unprinted boarding-card-shaped slip, a pen and a smartphone. One adult hand carefully checks the empty sleeve while the other arranges blank paperwork. Soft travel-hall background, no airline or country insignia, no passport document or identity data. Convey practical preparation after losing a travel document, without panic.",
+        "initial_output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-46b90f33-8475-4ee7-af7c-3a6956e03297.png",
+        "initial_output_sha256": "ed8bf5f21d965305a877ccc7da7c2937009bc6007b7fac8ad837636e59830776"
+      },
+      "edit": null,
+      "recommended_alt": "공항처럼 보이는 공간의 카운터에서 한 사람이 빈 초록색 여권 커버를 펼쳐 들고 있습니다. 옆에는 열린 여행 가방, 종이, 펜과 휴대전화가 놓여 있습니다.",
+      "recommended_caption": "AI로 만든 설명용 이미지입니다. 실제 인물·여권·항공권·여행증명서나 분실 사례를 촬영한 사진이 아닙니다.",
+      "visual_qa": {
+        "method": "Selected source opened with view_image; copied output is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observation": "An adult torso and hands are visible at an airport-like counter, holding an empty dark-green passport sleeve. An open travel bag, blank papers and card-shaped slip, pen and smartphone sit nearby. No passport or travel document is represented as an issued or valid document.",
+        "face_visibility": "Face is outside the selected frame.",
+        "qr_like_pattern_visible": false,
+        "qr_decoding_test": "Not performed. No assertion of code validity or scannability.",
+        "status": "Ready for writer integration with the fictional-image caption."
+      }
+    }
+  ]
+}

@@ -745,6 +745,30 @@
     {
       "locale": "ko",
       "slug": "taiwan-unpaid-invoice-settlement-release-korean"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "annual-leave-dates-employer-scheduling-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "rental-electricity-average-price-bill-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "limited-company-shareholder-books-inspection-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "handwritten-will-typed-print-signature-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-personal-data-access-copy-request"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-trademark-nonuse-three-years-korean-brand"
     }
   ]
 }

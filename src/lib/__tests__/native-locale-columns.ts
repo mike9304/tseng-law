@@ -288,18 +288,25 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
 export const COUNTRY_COLUMN_FILES_20261004 = {
   'ko': [
     '174-taiwan-unpaid-invoice-settlement-release-korean.md', // reviewed editorial batch004
+    '181-taiwan-trademark-nonuse-three-years-korean-brand.md', // reviewed editorial batch005
   ],
   'en': [
     '173-taiwan-landlord-entry-rental-home-repairs.md', // reviewed editorial batch004
+    '180-taiwan-personal-data-access-copy-request.md', // reviewed editorial batch005
   ],
   'ja': [
     '172-taiwan-hotel-luggage-loss-custody-japanese.md', // reviewed editorial batch004
+    '179-taiwan-hotel-typhoon-cancellation-refund-japanese.md', // reviewed editorial batch005
   ],
   'zh-hant': [
     '168-home-leak-defect-notice-repair-evidence-taiwan.md', // reviewed editorial batch004
     '169-contractor-employee-status-control-work-taiwan.md', // reviewed editorial batch004
     '170-private-loan-joint-guarantor-first-demand-taiwan.md', // reviewed editorial batch004
     '171-parent-home-gift-care-obligation-evidence-taiwan.md', // reviewed editorial batch004
+    '175-annual-leave-dates-employer-scheduling-taiwan.md', // reviewed editorial batch005
+    '176-rental-electricity-average-price-bill-taiwan.md', // reviewed editorial batch005
+    '177-limited-company-shareholder-books-inspection-taiwan.md', // reviewed editorial batch005
+    '178-handwritten-will-typed-print-signature-taiwan.md', // reviewed editorial batch005
   ],
 } as const;
 

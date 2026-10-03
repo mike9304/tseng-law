@@ -1,0 +1,55 @@
+{
+  "batch": "005",
+  "generationMethod": "image_gen",
+  "records": [
+    {
+      "slug": "annual-leave-dates-employer-scheduling-taiwan",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-c70760a4-1bd1-438f-a478-a907045b4575.png",
+      "rootViewed": true,
+      "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+      "reason": ""
+    },
+    {
+      "slug": "rental-electricity-average-price-bill-taiwan",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-22013d5e-72fc-4d77-b22f-a93a2706b881.png",
+      "rootViewed": true,
+      "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+      "reason": ""
+    },
+    {
+      "slug": "limited-company-shareholder-books-inspection-taiwan",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-133bffe2-075d-49ae-a1d5-147d327bce24.png",
+      "rootViewed": true,
+      "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+      "reason": ""
+    },
+    {
+      "slug": "handwritten-will-typed-print-signature-taiwan",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-90653534-ddd5-48c7-a3cd-47c7a6babdcf.png",
+      "rootViewed": true,
+      "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+      "reason": ""
+    },
+    {
+      "slug": "taiwan-hotel-typhoon-cancellation-refund-japanese",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-2161a2fc-8625-40de-9c26-04f01e8aff35.png",
+      "rootViewed": true,
+      "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+      "reason": ""
+    },
+    {
+      "slug": "taiwan-personal-data-access-copy-request",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-57f9fba1-48f6-4e9c-a16b-3691d0cfdfa4.png",
+      "rootViewed": true,
+      "rootDecision": "ACCEPT_CONCEPTUAL_ILLUSTRATION",
+      "reason": ""
+    },
+    {
+      "slug": "taiwan-trademark-nonuse-three-years-korean-brand",
+      "original": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-8abeaa12-d26a-4b2f-acfb-6a1aa040905c.png",
+      "rootViewed": true,
+      "rootDecision": "REJECTED_REGENERATE",
+      "reason": "Unrequested split-panel symbols/scales falsely suggest automatic legal outcomes. Preserve as rejected original."
+    }
+  ]
+}

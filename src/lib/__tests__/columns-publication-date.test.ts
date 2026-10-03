@@ -183,6 +183,14 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '172': '2026-10-04',
   '173': '2026-10-04',
   '174': '2026-10-04',
+  // Taiwan-first editorial batch005.
+  '175': '2026-10-04',
+  '176': '2026-10-04',
+  '177': '2026-10-04',
+  '178': '2026-10-04',
+  '179': '2026-10-04',
+  '180': '2026-10-04',
+  '181': '2026-10-04',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

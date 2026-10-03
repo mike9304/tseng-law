@@ -3907,5 +3907,521 @@
         "text": "元映像と前後の経緯、診断・領収書、介護、所得・仕事の記録を保存します。 これは資料整理の提案です。架空の人物・書類・画面は事件の証拠ではありません。"
       }
     ]
+  },
+  "column/zh-hant/taiwan-road-rage-reversing-into-tailgater-no-self-defense": {
+    "id": "reversing-defense-film-v1-zh-hant",
+    "src": "/videos/columns/reversing-defense-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/reversing-defense-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "倒車撞後車：三次撞擊與未成立的正當防衛",
+    "description": "224秒無聲影片由4秒假想開場與22段10秒說明組成，串起畫面時序、雙方說法、公共危險與正當防衛要件、五個月徒刑及案件界限。",
+    "disclosure": "全部人物、車輛、道路、電話、照片、螢幕與文件均為各自獨立的AI虛構示例，非新北環河快速道路事件、原始影像或卷證。開場是白天單次倒車碰撞，不是本案夜間三次撞擊；不能量測速度、重建力學或證明故意。五張照片與面談沒有還原勘驗或警詢，電話也不是實際報案。說明依公開判決文字，未取得兩車原檔、原音或完整卷宗；畫面時刻未另校驗，後續上訴、確定與執行未確認。",
+    "durationSeconds": 224,
+    "sceneCount": 23,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "前車後退，碰上後車",
+        "text": "開場是白天一次倒車碰撞的AI假想；本案則發生於夜間、共有三次撞擊。 車輛、地點與動作並非案件重建，不能量測速度或推定故意。"
+      },
+      {
+        "start": 4,
+        "title": "夜間快速道路，還有其他來車",
+        "text": "2023年1月21日晚，A車在新北環河快速道路、新北大橋往三重方向行駛。 判決提及單向引道、單線匝道及其他車流；本段道路不是實際現場。"
+      },
+      {
+        "start": 14,
+        "title": "法院勘驗的是B車行車紀錄器",
+        "text": "新北地院於2024年11月7日當庭勘驗B車檔案，附有筆錄與截圖。 高院引用畫面時刻；本文未取得原檔，也未校驗時鐘或車速。"
+      },
+      {
+        "start": 24,
+        "title": "先鳴笛，接著減速，再閃大燈",
+        "text": "畫面22:14:02，B鳴笛約兩秒；A於22:14:17急減速，B於22:14:22–23閃燈。 閃燈晚五秒是依判決時刻排序，法院未另論該五秒；照片僅為假想。"
+      },
+      {
+        "start": 34,
+        "title": "兩次減速、五次停車、三次撞擊",
+        "text": "高院整理22:14:17至22:17:45，逾三分鐘的連續危險駕駛。 三次倒撞為22:15:44–45、22:17:02–05、22:17:37–45；並非本片重演。"
+      },
+      {
+        "start": 44,
+        "title": "恐懼與輕碰，是A車駕駛的辯解",
+        "text": "A不爭執動作及車損，但稱被追、害怕，才緩慢推擠以警告；仍否認犯罪。 B則指A切入、驟停與阻路。法院以供述、勘驗及其他證據相互核對。"
+      },
+      {
+        "start": 54,
+        "title": "畫面結束前，兩車分道",
+        "text": "22:21:03，A右轉、B直行，A未再出現；此前A曾消失後再出現。 被追到萬華是A的說法，判決未認定該段；不能替缺少的影像補故事。"
+      },
+      {
+        "start": 64,
+        "title": "兩車錄影與車損資料互相補強",
+        "text": "卷內有兩車影像及檢方勘驗、B車照片、估價單、警方電話及受理紀錄。 證據名稱不表示完整原件已公開；本片螢幕、照片與文件均為假想。"
+      },
+      {
+        "start": 74,
+        "title": "第185條要求具體往來危險",
+        "text": "法院認快速道路上的反覆驟停與倒撞，足使其他人車難以安全通行。 不必已有實害，但仍須具體危險；不是任何不禮讓都成立本罪。"
+      },
+      {
+        "start": 84,
+        "title": "第94條保留突發狀況例外",
+        "text": "非遇突發狀況須減速，不得任意急減速、煞車或停在車道中；亦不得危險駕駛。 前車須減速暫停，應先以燈光或手勢告知；後車也須隨時注意前車。"
+      },
+      {
+        "start": 94,
+        "title": "故意，來自本案情境的判斷",
+        "text": "法院考量駕駛多年、快速車流與反覆動作，認其知道危及後車及其他用路人。 此為個案推論，沒有測得撞擊速度，也不靠這段假想影片判定心理。"
+      },
+      {
+        "start": 104,
+        "title": "車損與碰撞位置相符",
+        "text": "B車前方保險桿、引擎蓋與車殼受損，照片及估價單與撞擊位置相符。 法院由同處三次撞擊等認定故意毀損；第354條成立，不因稱輕碰即排除。"
+      },
+      {
+        "start": 114,
+        "title": "對車施力，也可能妨害人的權利",
+        "text": "法院認驟停、倒撞雖作用於車，仍對B駕駛產生心理強制，妨害行駛權利。 依304條第1項成立強制；不以直接碰觸人體或完全控制自由為必要。"
+      },
+      {
+        "start": 124,
+        "title": "十次動作，如何評價為一罪",
+        "text": "密接時地的動作論接續一罪；一行為同犯185、304、354條，從較重185條處斷。 不是每一次減速、停車與碰撞，各自累加五個月。"
+      },
+      {
+        "start": 134,
+        "title": "正當防衛須有現在不法侵害",
+        "text": "刑法23條以防衛自己或他人權利、排除現在不法侵害為前提；過當得減免刑。 本案法院認客觀上無此侵害，不是先認有防衛，再判防衛過當。"
+      },
+      {
+        "start": 144,
+        "title": "本案鳴笛、閃燈被認為示警",
+        "text": "法院以A在前、B在後及整段時序，認B未妨害A自由行駛，不採正當防衛。 這不是所有鳴笛都合法，或後車永不可能侵害前車的通則。"
+      },
+      {
+        "start": 154,
+        "title": "B車立即報警的說法有佐證",
+        "text": "B稱受逼車即報警，檢方勘驗筆錄中的錄音譯文支持該說法。 電話場景不是本案通話；本文未取得原始錄音，也未另驗證報案時刻。"
+      },
+      {
+        "start": 164,
+        "title": "A的反告，不起訴不等於民事無責",
+        "text": "A反告B涉185、304、305條；判決記檢方認犯罪嫌疑不足而不起訴。 這是刑事處理結果，未定民事過失比例或所有交通違規。"
+      },
+      {
+        "start": 174,
+        "title": "一審判有期徒刑五個月",
+        "text": "113訴513於2025年3月25日判五個月，如易科罰金以1,000元／日折算。 量刑合看危險、車損、未認罪、未和解賠償等；不是同類案固定刑期。"
+      },
+      {
+        "start": 184,
+        "title": "易科罰金有第41條的限制",
+        "text": "最高本刑五年以下、宣告六月以下徒刑或拘役，得依規定折算。 難收矯正效果或難維持法秩序者除外；本案標準不表示已繳納或准予執行。"
+      },
+      {
+        "start": 194,
+        "title": "高院駁回的是無罪上訴",
+        "text": "114上訴3183於2025年11月12日維持原判，認第57條量刑未失衡或濫權。 此案爭執犯罪成立及刑度，與只爭刑度的上訴不同。"
+      },
+      {
+        "start": 204,
+        "title": "估價單不是民事賠償判決",
+        "text": "兩判決未列估價金額，也未判賠修理費或民事比例。 第43條行政處分僅為背景；兩判決未適用，是否另受裁罰未明。"
+      },
+      {
+        "start": 214,
+        "title": "後續確定與執行仍未核實",
+        "text": "高院載送達後20日可上訴，本文未確認後續上訴、確定或執行。 建議保留兩車完整原檔、聲音、拍攝來源及前後經過；假想資料不能替代。"
+      }
+    ]
+  },
+  "column/ko/taiwan-road-rage-reversing-into-tailgater-no-self-defense": {
+    "id": "reversing-defense-film-v1-ko",
+    "src": "/videos/columns/reversing-defense-film-v1-ko.mp4",
+    "poster": "/images/column-videos/reversing-defense-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "뒤차에 후진 충돌: 세 번의 충돌과 정당방위 판단",
+    "description": "4초 가상 도입과 10초 장면 22개를 이은 224초 무음 영상입니다. 사건 순서, 양측 주장, 통행 위험과 정당방위, 징역 5개월 및 판결 범위를 설명합니다.",
+    "disclosure": "인물·차량·도로·전화·사진·화면·문서는 각각 독립된 AI 가상 예시입니다. 신베이 환허 쾌속도로 사건이나 실제 영상·증거가 아닙니다. 도입은 낮의 한 차례 후진 충돌이며 사건의 야간 세 차례 충돌을 재현하지 않습니다. 속도·충격·고의를 판단할 수 없습니다. 사진 다섯 장과 면담은 법정 검증이나 경찰 조사 재현이 아니고 전화도 실제 신고가 아닙니다. 공개 판결에 따른 설명이며 양측 원본 영상·음성·전체 기록은 확보하지 않았습니다. 화면 시각을 별도 검증하지 않았고 후속 상소·확정·집행은 미확인입니다.",
+    "durationSeconds": 224,
+    "sceneCount": 23,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "앞차가 후진해 뒤차에 닿는 장면",
+        "text": "도입은 낮의 한 차례 후진 충돌을 그린 AI 가상 장면입니다. 실제 사건은 밤에 세 번 충돌했습니다. 차량·장소·동작은 사건 재현이 아닙니다. 이 영상으로 속도나 고의를 판단할 수 없습니다."
+      },
+      {
+        "start": 4,
+        "title": "밤에도 다른 차가 오가던 쾌속도로",
+        "text": "2023년 1월 21일 밤, A차는 신베이 환허 쾌속도로의 신베이대교에서 싼충 방향으로 달렸습니다. 판결은 일방통행 연결로, 한 차로 진입로와 다른 차량을 언급합니다. 화면은 실제 현장이 아닙니다."
+      },
+      {
+        "start": 14,
+        "title": "법원이 검증한 B차 블랙박스",
+        "text": "신베이지법은 2024년 11월 7일 B차 영상을 법정에서 검증하고 조서와 캡처를 남겼습니다. 2심은 화면 시각을 인용했습니다. 원본은 미확보이며 시계·차량 속도도 검증하지 않았습니다."
+      },
+      {
+        "start": 24,
+        "title": "경적 뒤 급감속, 그 뒤 상향등",
+        "text": "화면 22:14:02 B차 경적 약 2초, 22:14:17 A차 급감속, 22:14:22~23 B차 상향등입니다. 5초 차이는 판결 시각을 정렬한 결과이며 법원이 따로 논증하지 않았습니다. 사진은 가상입니다."
+      },
+      {
+        "start": 34,
+        "title": "급감속 두 번, 정지 다섯 번, 충돌 세 번",
+        "text": "2심은 22:14:17부터 22:17:45까지 3분 넘게 이어진 위험 운전으로 정리했습니다. 후진 충돌 시각은 22:15:44~45, 22:17:02~05, 22:17:37~45입니다. 화면은 재현이 아닙니다."
+      },
+      {
+        "start": 44,
+        "title": "두려워 가볍게 밀었다는 주장",
+        "text": "A는 동작·파손을 인정하되, 쫓기는 두려움에 경고하려 천천히 밀었다며 범죄를 부인했습니다. B는 끼어들기·급정지·길막기를 진술했습니다. 법원은 양측 설명을 영상·다른 증거와 대조했습니다."
+      },
+      {
+        "start": 54,
+        "title": "두 차가 갈라진 화면 시각",
+        "text": "22:21:03 A 우회전·B 직진 뒤 A는 다시 나오지 않았습니다. 이전엔 사라졌다 재등장했습니다. 완화까지 쫓겼다는 A의 말은 판결에 별도 인정이 없습니다. 없는 영상 내용을 덧붙이지 않습니다."
+      },
+      {
+        "start": 64,
+        "title": "두 차의 영상과 파손 자료",
+        "text": "양측 영상·검찰 검증 조서, B차 파손 사진과 견적, 경찰 전화·접수 기록을 함께 살폈습니다. 증거 목록이 원본 전체의 공개를 뜻하지 않습니다. 화면·사진·문서는 가상 소품입니다."
+      },
+      {
+        "start": 74,
+        "title": "제185조의 구체적 통행 위험",
+        "text": "법원은 반복 급정지·후진 충돌이 쾌속도로의 안전한 통행을 위험하게 했다고 봤습니다. 실제 피해가 없어도 되지만 구체적 위험은 필요합니다. 단순한 비양보만으로 성립하지 않습니다."
+      },
+      {
+        "start": 84,
+        "title": "제94조의 돌발 상황 예외",
+        "text": "감속해야 하는 돌발 상황 외에는 임의 급감속·제동·차로 정지와 위험한 운전을 금지합니다. 앞차는 감속·정지를 등화·손짓으로 예고해야 하며 뒤차도 앞차 움직임을 살펴야 합니다."
+      },
+      {
+        "start": 94,
+        "title": "법원이 고의를 인정한 사정",
+        "text": "법원은 운전 경험, 빠른 차 흐름과 반복 동작으로 다른 차량의 위험을 알았다고 판단했습니다. 개별 사건의 추론입니다. 충돌 속도를 측정한 것도, 이 가상 장면에서 마음을 읽은 것도 아닙니다."
+      },
+      {
+        "start": 104,
+        "title": "파손 부위와 충돌 위치의 일치",
+        "text": "B차 앞 범퍼·보닛·차체 파손을 사진·견적으로 확인했고, 영상의 충돌 부위와 맞았습니다. 동일 부위 세 번 충돌 등으로 제354조 고의 손괴를 인정했습니다. 가벼웠다는 주장은 배척했습니다."
+      },
+      {
+        "start": 114,
+        "title": "차에 가한 힘이 사람의 권리를 방해",
+        "text": "법원은 차를 향한 급정지·후진도 B 운전자에게 심리적 강제를 가해 통행을 방해했다고 봤습니다. 제304조 제1항 강제죄입니다. 직접 몸에 접촉하거나 자유를 완전히 억압할 필요는 없습니다."
+      },
+      {
+        "start": 124,
+        "title": "열 번의 동작을 한 행위로 평가",
+        "text": "가까운 시간·장소의 동작을 한 죄로 묶고, 제185·304·354조 중 무거운 제185조로 처벌했습니다. 감속·정지·충돌마다 징역 5개월을 각각 더한 것이 아닙니다."
+      },
+      {
+        "start": 134,
+        "title": "정당방위에는 현재의 부당한 침해가 필요",
+        "text": "제23조는 현재의 부당한 침해에 맞서 자신·타인의 권리를 지키는 행위를 처벌하지 않습니다. 과잉방위는 감면할 수 있습니다. 이 사건은 객관적 침해 자체가 없다는 판단입니다."
+      },
+      {
+        "start": 144,
+        "title": "이 사건 경적·상향등은 경고로 판단",
+        "text": "법원은 A가 앞, B가 뒤인 위치와 전체 경과를 보고 B가 A의 주행을 방해하지 않았다고 봤습니다. 경적이 항상 적법하다거나 뒤차는 앞차를 침해할 수 없다는 일반 원칙을 정한 것은 아닙니다."
+      },
+      {
+        "start": 154,
+        "title": "곧바로 신고했다는 진술과 녹취",
+        "text": "B가 위협 운전을 당하자 신고했다는 진술은 검찰 검증 조서의 녹취로 뒷받침됐습니다. 전화 장면은 당시 통화가 아닙니다. 원음이나 신고 시각을 별도로 확인하지 않았습니다."
+      },
+      {
+        "start": 164,
+        "title": "A의 맞고소는 혐의 부족으로 불기소",
+        "text": "판결은 A가 B를 제185·304·305조로 고소했지만 검찰이 혐의 부족으로 불기소했다고 적었습니다. 형사처리 결과입니다. 민사 과실 비율이나 모든 교통 위반 여부를 정하지 않았습니다."
+      },
+      {
+        "start": 174,
+        "title": "1심 징역 5개월과 환산 기준",
+        "text": "113訴513은 2025년 3월 25일 징역 5개월, 벌금 전환 시 하루 1,000대만달러를 선고했습니다. 위험·파손·범죄 부인·미합의·미배상 등을 함께 고려했습니다. 같은 유형의 고정 형량이 아닙니다."
+      },
+      {
+        "start": 184,
+        "title": "벌금 전환의 제41조 조건",
+        "text": "최고형 5년 이하인 죄로 6개월 이하 징역 또는 구류를 선고받으면 법에 따라 전환할 수 있습니다. 교정 효과·법질서 유지가 어려우면 예외입니다. 환산 기준이 납부나 집행 허가를 뜻하지 않습니다."
+      },
+      {
+        "start": 194,
+        "title": "무죄를 구한 항소를 기각",
+        "text": "114上訴3183은 2025년 11월 12일 원심을 유지하고 제57조상 양형 재량에 문제가 없다고 봤습니다. 범죄 성립과 형을 살핀 항소입니다. 형량만 대상으로 한 항소와는 다릅니다."
+      },
+      {
+        "start": 204,
+        "title": "견적서와 민사배상 판결은 다릅니다",
+        "text": "두 판결은 견적 금액을 밝히거나 수리비 배상·민사 비율을 정하지 않았습니다. 교통 제43조는 배경 설명이며 두 판결의 적용 근거가 아닙니다. 별도 행정처분은 미확인입니다."
+      },
+      {
+        "start": 214,
+        "title": "후속 상소·확정·집행은 미확인",
+        "text": "2심은 송달 후 20일 상소를 안내하지만, 그 뒤 상소·확정·집행 여부는 확인하지 못했습니다. 양측 전체 원본·소리·촬영 출처·전후 경위의 보관을 권합니다. 가상 자료로 대신할 수 없습니다."
+      }
+    ]
+  },
+  "column/en/taiwan-road-rage-reversing-into-tailgater-no-self-defense": {
+    "id": "reversing-defense-film-v1-en",
+    "src": "/videos/columns/reversing-defense-film-v1-en.mp4",
+    "poster": "/images/column-videos/reversing-defense-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Reversing into the rear car: why self-defence failed",
+    "description": "A silent 224-second film combines one four-second fictional opening with 22 ten-second scenes on chronology, accounts, traffic danger, self-defence, the five-month sentence and the limits of the judgments.",
+    "disclosure": "All people, vehicles, roads, calls, photos, screens and documents are independent AI illustrations, not the Huanhe Expressway incident or its evidence. The opening is one daytime reversing contact, not three nighttime collisions. It establishes no speed, mechanics or intent. The five photos and conversations do not recreate the inspection or police interviews, and the phone scene is not the actual report. Explanations follow public judgments; neither original recording, original audio nor the full case file was obtained. Screen times were not independently calibrated. Later appeals, finality and execution remain unverified.",
+    "durationSeconds": 224,
+    "sceneCount": 23,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "The front car reverses into the rear car",
+        "text": "The opening is one fictional daytime contact; the case involved three at night. Vehicles and movements are not a reconstruction or a measure of speed or intent."
+      },
+      {
+        "start": 4,
+        "title": "Other vehicles on the expressway at night",
+        "text": "On 21 January 2023, A drove on New Taipei’s Huanhe Expressway toward Sanchong. One-way bridge approaches, a single-lane ramp and other traffic are case facts."
+      },
+      {
+        "start": 14,
+        "title": "The court inspected B’s dashcam",
+        "text": "New Taipei District Court viewed B’s file on 7 November 2024 and made a record. The appeal cites screen times. We obtained no original file or clock calibration."
+      },
+      {
+        "start": 24,
+        "title": "Horn, slowdown, then high beams",
+        "text": "B honked at 22:14:02; A slowed at 22:14:17; B flashed at 22:14:22–23. The five-second gap follows listed times, not a separate finding. Photos are fictional."
+      },
+      {
+        "start": 34,
+        "title": "Two slowdowns, five stops, three contacts",
+        "text": "The appeal describes danger lasting over three minutes, from 22:14:17 to 22:17:45. Reversing contacts: 22:15:44–45, 22:17:02–05 and 22:17:37–45, not replayed here."
+      },
+      {
+        "start": 44,
+        "title": "Fear and a gentle push: A’s account",
+        "text": "A accepted the movements and damage, but claimed fear and a slow warning push. B described cut-ins, stops and blockage. The court compared accounts with evidence."
+      },
+      {
+        "start": 54,
+        "title": "The cars part at 22:21:03",
+        "text": "A turned right; B went straight. A did not return to view after that separation. No separate finding addressed A’s Wanhua claim. Do not fill gaps in the footage."
+      },
+      {
+        "start": 64,
+        "title": "Both recordings and damage records",
+        "text": "Evidence: both cameras, inspection records, photos, an estimate and police logs. Listing evidence is not publishing originals. Every screen and paper here is fictional."
+      },
+      {
+        "start": 74,
+        "title": "Article 185 requires concrete traffic danger",
+        "text": "The court found repeated stops and reversing endangered safe passage on this road. No actual harm is required, but concrete danger is, beyond mere discourtesy."
+      },
+      {
+        "start": 84,
+        "title": "Article 94 retains the emergency exception",
+        "text": "No arbitrary sharp slowing, braking or lane stop, except when emergencies require. Signal needed slowing or stops by lights or hand; the rear driver must watch."
+      },
+      {
+        "start": 94,
+        "title": "Intent was inferred from this context",
+        "text": "The court weighed driving experience, fast traffic and repeated risky moves. It inferred awareness of risk to others, not a measured impact speed or this animation."
+      },
+      {
+        "start": 104,
+        "title": "The damage matched the contact area",
+        "text": "B’s front damage matched the photos, estimate and inspected contact area. Three contacts at that spot supported intentional damage under Article 354."
+      },
+      {
+        "start": 114,
+        "title": "Force on a car can constrain its driver",
+        "text": "The court found stops and reversing coerced B’s driver and obstructed road use. Article 304(1) did not require bodily contact or complete control of the person."
+      },
+      {
+        "start": 124,
+        "title": "Ten movements, one continuing act",
+        "text": "Closely linked moves were treated as one act breaching Articles 185, 304 and 354. The heaviest, Article 185, applied: not five months for every movement."
+      },
+      {
+        "start": 134,
+        "title": "Self-defence needs a present unlawful attack",
+        "text": "Article 23 excuses defence of rights against a present unlawful attack. Excess may mitigate or excuse. Here there was no attack, not excess defence."
+      },
+      {
+        "start": 144,
+        "title": "The horn and beams were warnings in this case",
+        "text": "The court relied on positions and sequence to find B had not obstructed A’s driving. Not every honk is lawful, nor is every act by a rear driver harmless."
+      },
+      {
+        "start": 154,
+        "title": "Recorded audio supported B’s police call",
+        "text": "An inspection transcript supported B’s account of calling police immediately. This is not that call. We obtained no original audio or independently verified call time."
+      },
+      {
+        "start": 164,
+        "title": "A’s counter-complaint was not prosecuted",
+        "text": "A accused B under Articles 185, 304 and 305; prosecution found too little evidence. That criminal outcome did not set civil fault shares or decide all traffic violations."
+      },
+      {
+        "start": 174,
+        "title": "Five months at first instance",
+        "text": "Case 113訴513, 25 March 2025: five months, convertible at NT$1,000 per day. The court weighed danger, damage, denial and no settlement or compensation."
+      },
+      {
+        "start": 184,
+        "title": "Article 41 limits fine conversion",
+        "text": "It covers offences capped at five years, with up to six months’ prison or detention. Correction or legal-order concerns can bar conversion. The stated rate is not payment."
+      },
+      {
+        "start": 194,
+        "title": "The acquittal appeal was dismissed",
+        "text": "On 12 November 2025, case 114上訴3183 upheld the conviction and sentence. It found no Article 57 sentencing abuse; this was not a sentence-only appeal."
+      },
+      {
+        "start": 204,
+        "title": "A repair estimate is not a damages award",
+        "text": "Neither judgment states the estimate’s amount, awards repairs or fixes civil shares. Traffic Article 43 is background only; separate administrative penalties are unverified."
+      },
+      {
+        "start": 214,
+        "title": "Later finality and execution remain unknown",
+        "text": "The appeal gives 20 days from service to appeal; later proceedings are unverified. Keep both full files, audio, sources and context; fictional props cannot replace them."
+      }
+    ]
+  },
+  "column/ja/taiwan-road-rage-reversing-into-tailgater-no-self-defense": {
+    "id": "reversing-defense-film-v1-ja",
+    "src": "/videos/columns/reversing-defense-film-v1-ja.mp4",
+    "poster": "/images/column-videos/reversing-defense-film-v1-ja.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "後車への後退衝突：三回の接触と正当防衛の判断",
+    "description": "4秒の架空の冒頭と22本の10秒場面をつなぐ224秒の無音映像です。時系列、双方の説明、往来の危険、正当防衛、徒刑五か月と判決の範囲を説明します。",
+    "disclosure": "人物・車両・道路・電話・写真・画面・書類は独立したAIの架空例で、新北環河快速道路事件や実際の証拠ではありません。冒頭は昼の一回の後退衝突で、本件の夜の三回の衝突を再現していません。速度・力学・故意は判断できません。写真五枚や面談は勘験・警察供述の再現ではなく、電話も実際の通報ではありません。公開判決に基づく説明で、双方の元映像・音声や全記録は未取得です。画面時刻は独自に校正せず、後続の上訴・確定・執行も未確認です。",
+    "durationSeconds": 224,
+    "sceneCount": 23,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "前の車が後退して後ろの車に接触",
+        "text": "冒頭は昼間の一回の架空衝突です。事件は夜間で三回の衝突でした。 車両や動作は事件再現ではなく、速度や故意を示す証拠でもありません。"
+      },
+      {
+        "start": 4,
+        "title": "夜も車が往来する快速道路",
+        "text": "2023年1月21日夜、Aは新北環河快速道路を三重方面へ走行。 一方通行の橋の取付道、一車線ランプと他車が存在。画面は現場ではありません。"
+      },
+      {
+        "start": 14,
+        "title": "法廷で確認したB車の映像",
+        "text": "新北地方法院は2024年11月7日にB車の映像を勘験し、調書と画像を作成。 控訴審は画面時刻を引用。元映像は未取得で、時計や速度は未検証です。"
+      },
+      {
+        "start": 24,
+        "title": "警笛、減速、その後にパッシング",
+        "text": "22:14:02にBの警笛、22:14:17にAが減速、22:14:22〜23にBが閃光。 五秒差は記載時刻の整理で、裁判所の別の論証ではありません。写真は架空です。"
+      },
+      {
+        "start": 34,
+        "title": "急減速二回、停止五回、後退衝突三回",
+        "text": "危険運転は22:14:17〜22:17:45の三分以上と控訴審が整理。 衝突時刻は22:15:44〜45、22:17:02〜05、22:17:37〜45。再現ではありません。"
+      },
+      {
+        "start": 44,
+        "title": "怖くて軽く押したというAの説明",
+        "text": "Aは動作と車損を争わず、怖さから警告のためゆっくり押したと主張しました。 Bは割り込み・停止・進路妨害を供述。裁判所は両者の説明を証拠と照合。"
+      },
+      {
+        "start": 54,
+        "title": "22:21:03に二台は別方向へ",
+        "text": "Aは右折、Bは直進し、その後Aは映りません。以前には消えた後に再登場。 萬華まで追われたというAの主張は別途認定されていません。続きを補いません。"
+      },
+      {
+        "start": 64,
+        "title": "双方の録画と車の損傷資料",
+        "text": "両車の映像・検察の勘験、写真、見積書、警察の電話・受理記録もあります。 証拠一覧は元資料の全面公開を意味しません。画面と書類は架空です。"
+      },
+      {
+        "start": 74,
+        "title": "185条には具体的な往来の危険が必要",
+        "text": "裁判所は快速道路での反復停止・後退が、安全な通行を危険にしたと判断。 実害は不要でも具体的な危険が必要です。単に譲らないだけとは区別します。"
+      },
+      {
+        "start": 84,
+        "title": "94条は突発的な状況を除外する",
+        "text": "減速が必要な突発事態以外、むやみな急減速・制動・車線内停止は禁止です。 前車は必要な減速・停止を灯火や手で予告し、後車も前車の動きに注意します。"
+      },
+      {
+        "start": 94,
+        "title": "故意を認めた事件の事情",
+        "text": "裁判所は運転経験、速い交通の流れ、反復動作から、他車への危険の認識を判断。 事件ごとの推論で、速度の測定やこの架空映像からの認定ではありません。"
+      },
+      {
+        "start": 104,
+        "title": "車の損傷と衝突箇所の一致",
+        "text": "Bの前部バンパー・ボンネット・車体の損傷を、写真や見積書と照合しました。 同じ場所への三回の接触などから354条の故意の毀損を認めました。"
+      },
+      {
+        "start": 114,
+        "title": "車への力でも運転者の権利を妨げる",
+        "text": "停止や後退がBの運転者に心理的な強制を及ぼし、走行を妨害したと判断。 304条1項は、人体への直接接触や自由の完全な抑圧を必要としません。"
+      },
+      {
+        "start": 124,
+        "title": "十回の動作を一つの継続行為に",
+        "text": "近接した動作を一行為とし、185・304・354条に該当すると評価。 最も重い185条で処断。動作ごとに五か月を加算したわけではありません。"
+      },
+      {
+        "start": 134,
+        "title": "正当防衛には現在の不法侵害が必要",
+        "text": "23条は現在の不法侵害から自己・他人の権利を守る行為を罰しません。 防衛過剰は減免可能。本件は侵害自体がないと判断した事件です。"
+      },
+      {
+        "start": 144,
+        "title": "本件の警笛と閃光は警告と評価",
+        "text": "裁判所は前後の位置と全経過から、BがAの自由な走行を妨げていないと認定。 すべての警笛が合法、後車は前車を侵害できない、という一般則ではありません。"
+      },
+      {
+        "start": 154,
+        "title": "Bの通報を裏付けた録音の書き起こし",
+        "text": "Bはあおられて直ちに通報したと供述し、検察の勘験調書の録音訳文が裏付けました。 画面は実際の通話ではありません。元音声や独自の通報時刻確認はありません。"
+      },
+      {
+        "start": 164,
+        "title": "Aの逆告訴は嫌疑不十分で不起訴",
+        "text": "Aは185・304・305条でBを告訴。検察は嫌疑不十分として不起訴にしました。 刑事処理の結果であり、民事過失割合やすべての交通違反を決めていません。"
+      },
+      {
+        "start": 174,
+        "title": "一審の有期徒刑五か月",
+        "text": "113訴513は2025年3月25日、五か月と易科罰金1日1,000台湾ドルを宣告。 危険・車損・否認・未和解・未賠償などを考慮。同種事件の固定刑ではありません。"
+      },
+      {
+        "start": 184,
+        "title": "易科罰金に適用する41条",
+        "text": "法定刑の上限五年以下の罪で、六月以下の徒刑または拘役の宣告が対象です。 矯正効果や法秩序の維持が困難なら例外。換算基準は納付の証明ではありません。"
+      },
+      {
+        "start": 194,
+        "title": "無罪を求めた控訴を棄却",
+        "text": "114上訴3183は2025年11月12日、一審の有罪と刑を維持しました。 57条の量刑裁量に問題なしと判断。刑だけを対象とした控訴ではありません。"
+      },
+      {
+        "start": 204,
+        "title": "見積書は民事賠償の判決ではない",
+        "text": "両判決は見積額を示さず、修理費の賠償や民事割合を決めていません。 交通43条は参考で、両判決は未適用。別途の行政処分は未確認です。"
+      },
+      {
+        "start": 214,
+        "title": "その後の確定・執行は未確認",
+        "text": "高院は送達後20日の上訴を案内。後続の上訴・確定・執行は未確認です。 両車の元映像・音声・撮影元と前後を保存する提案です。架空資料では代用不可。"
+      }
+    ]
   }
 }

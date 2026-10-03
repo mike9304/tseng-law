@@ -246,16 +246,16 @@
   letter-spacing: 0.04em;
   box-shadow: none;
 }
-.v.v[data-ja-v2] :global(.button:not(.secondary):not(.ghost):not(.button--outline)) {
+.v.v[data-ja-v2] :global(.button:where(:not(.secondary, .ghost, .button--outline))) {
   background: var(--ja-shu);
   border-color: var(--ja-shu);
   color: #fff;
   transition: background-color 100ms linear, scale 200ms var(--ja-ease);
 }
 @media (hover: hover) {
-  .v.v[data-ja-v2] :global(.button:not(.secondary):not(.ghost):not(.button--outline):hover) { background: var(--ja-shu-hover); border-color: var(--ja-shu-hover); color: #fff; }
+  .v.v[data-ja-v2] :global(.button:where(:not(.secondary, .ghost, .button--outline)):hover) { background: var(--ja-shu-hover); border-color: var(--ja-shu-hover); color: #fff; }
 }
-.v.v[data-ja-v2] :global(.button:not(.secondary):not(.ghost):not(.button--outline):active) { scale: 0.98; }
+.v.v[data-ja-v2] :global(.button:where(:not(.secondary, .ghost, .button--outline)):active) { scale: 0.98; }
 /* secondary actions read as text links with a vermilion chevron, never outline pills */
 .v.v[data-ja-v2] :global(:is(.button.secondary, .button.ghost, .button--outline)) {
   min-height: 44px;
@@ -635,6 +635,66 @@ a.tile:active { background: var(--ja-tile-press); }
   .v.v[data-ja-v2] :global(.faq-answer-wrap) { padding: 0 20px 24px; }
   .v.v[data-ja-v2] :global(.faq-answer) { font-size: 17px; }
 }
+
+/* ---------- Offices (OfficeMapTabs, C11 without the split labels): large type tabs, a tile panel ---------- */
+.v.v[data-ja-v2] :global(.office-tabs) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px clamp(20px, 3vw, 48px);
+  margin: 0 0 clamp(24px, 3vw, 40px);
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.v.v[data-ja-v2] :global(.office-tabs .tab-button) {
+  position: relative;
+  min-height: 56px;
+  padding: 0 0 8px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-size: clamp(22px, 2.6vw, 40px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ja-grey);
+}
+.v.v[data-ja-v2] :global(.office-tabs .tab-button)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: var(--ja-shu);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 300ms var(--ja-ease);
+}
+.v.v[data-ja-v2] :global(.office-tabs .tab-button.active) { color: var(--ja-ink); }
+.v.v[data-ja-v2] :global(.office-tabs .tab-button.active)::after { scale: 1 1; }
+@media (hover: hover) { .v.v[data-ja-v2] :global(.office-tabs .tab-button:hover) { color: var(--ja-ink); background: none; } }
+.v.v[data-ja-v2] :global(.office-layout) { gap: var(--ja-gap); }
+.v.v[data-ja-v2] :global(.office-map-wrap) { overflow: clip; border: 0; border-radius: var(--ja-r); }
+.v.v[data-ja-v2] :global(.office-card) { padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); background: var(--ja-tile); box-shadow: none; }
+.v.v[data-ja-v2] :global(.office-card .card-title) { margin: 0 0 8px; font-size: clamp(24px, 2.4vw, 32px); font-weight: 700; color: var(--ja-ink); }
+.v.v[data-ja-v2] :global(.office-card .card-copy) { font-size: clamp(17px, 1.4vw, 21px); line-height: 1.75; color: var(--ja-text); }
+.v.v[data-ja-v2] :global(.office-card .button.office-map-link) {
+  min-height: 44px; padding: 0; border: 0; background: none; color: var(--ja-ink); font-size: 19px; font-weight: 600; justify-content: flex-start;
+}
+.v.v[data-ja-v2] :global(.office-card .button.office-map-link)::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 13px;
+  margin-inline-start: 9px;
+  background: var(--ja-shu);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M2 2l6 6-6 6' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M2 2l6 6-6 6' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.v.v[data-ja-v2] :global(.office-gallery-item) { border-radius: 20px; overflow: clip; }
+.v.v[data-ja-v2] :global(.office-korea .card-copy) { font-size: 19px; line-height: 1.8; color: var(--ja-text); }
+@media (prefers-reduced-motion: reduce) { .v.v[data-ja-v2] :global(.office-tabs .tab-button)::after { transition: none; } }
 
 /* ---------- Closing tile (dusk light) ---------- */
 .closing { padding-block: 0 var(--ja-sec); }

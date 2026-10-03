@@ -301,6 +301,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
     '192-taiwan-export-control-entity-list-korean-traders.md', // semiconductor lane b08
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
   ],
   en: [
     '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
@@ -308,6 +309,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '186-taiwan-personal-data-access-copy-request.md', // reviewed editorial batch005
     '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
   ],
   ja: [
     '169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md',
@@ -316,6 +318,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
     '193-taiwan-science-park-entry-japanese-semiconductor-companies.md', // semiconductor lane b08
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
   ],
   'zh-hant': [
     '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
@@ -333,6 +336,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '189-taiwan-repaired-car-diminished-value-appraisal-evidence.md',
     '190-taiwan-pursuit-fatal-self-crash-vacated-judgment.md',
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
+    '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
   ],
 } as const;
 

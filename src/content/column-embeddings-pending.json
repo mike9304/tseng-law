@@ -825,6 +825,18 @@
     {
       "locale": "ko",
       "slug": "taiwan-export-control-entity-list-korean-traders"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too"
     }
   ]
 }

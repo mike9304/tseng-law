@@ -5,6 +5,8 @@ import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import { resolveSafeNextPath } from '@/lib/safe-next';
 import { buildSeoMetadata } from '@/lib/seo';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
 
 const LOGIN_DESCRIPTIONS: Record<SiteLocale, string> = {
   ko: '회원 계정에 로그인합니다.',
@@ -46,5 +48,7 @@ export default async function MemberLoginPage(
   const member = await getCurrentSiteMember();
   if (member) redirect(nextPath);
 
-  return <MemberAuthClient locale={locale} nextPath={nextPath} />;
+  const body = <MemberAuthClient locale={locale} nextPath={nextPath} />;
+  // ja 昊 V2 inner pages (2026-10-02): the same sign-in block inside the ja wrapper (JaLegal.module.css).
+  return locale === 'ja' ? <JaPageShell page="login" className={jaLegalStyles.root}>{body}</JaPageShell> : body;
 }

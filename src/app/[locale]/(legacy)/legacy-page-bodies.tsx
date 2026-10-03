@@ -25,6 +25,7 @@ import JaPricingBody from '@/components/ja-design/JaPricingBody';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import jaAboutStyles from '@/components/ja-design/JaAbout.module.css';
 import JaAboutFirm from '@/components/ja-design/JaAboutFirm';
+import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
 import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
 import jaContactStyles from '@/components/ja-design/JaContact.module.css';
 import JaServicesBody from '@/components/ja-design/JaServicesBody';
@@ -440,7 +441,7 @@ export function VideosLegacyPageBody({
 
 export function PrivacyLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const content = legalPageContent[locale].privacy;
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -460,11 +461,13 @@ export function PrivacyLegacyPageBody({ locale }: { locale: SiteLocale }) {
       <LegalPageSections locale={locale} content={content} />
     </>
   );
+  // ja 昊 V2 inner pages (2026-10-02): the same blocks inside the ja wrapper (JaLegal.module.css).
+  return locale === 'ja' ? <JaPageShell page="privacy" className={jaLegalStyles.root}>{body}</JaPageShell> : body;
 }
 
 export function DisclaimerLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const content = legalPageContent[locale].disclaimer;
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -484,6 +487,8 @@ export function DisclaimerLegacyPageBody({ locale }: { locale: SiteLocale }) {
       <LegalPageSections locale={locale} content={content} />
     </>
   );
+  // ja 昊 V2 inner pages (2026-10-02): the same blocks inside the ja wrapper (JaLegal.module.css).
+  return locale === 'ja' ? <JaPageShell page="disclaimer" className={jaLegalStyles.root}>{body}</JaPageShell> : body;
 }
 
 function isTemplateBlockVisible(visibleBlockIds: string[] | undefined, blockId: string): boolean {

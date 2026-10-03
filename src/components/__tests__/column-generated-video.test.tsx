@@ -159,10 +159,10 @@ describe('reviewed column videos', () => {
     ['taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction', 'uninsured-fund-film-v1-zh-hant', '約定金額不等於實際收款'],
     ['taiwan-accident-stop-dialogue-hit-and-run-evidence', 'stop-dialogue-film-v1-zh-hant', '不能證明沒有人受傷、已同意離場或已履行全部法定義務'],
     ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
-    ['taiwan-car-door-opening-motorcycle-liability', 'car-door-v2-zh-hant', '騎士失去平衡'],
+    ['taiwan-car-door-opening-motorcycle-liability', 'door-opening-film-v1-zh-hant', '騎士失去平衡'],
     ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-v1-zh-hant', '非本文凌晨事故'],
     ['green-light-red-light-pedestrian-third-person', 'pedestrian-third-person-v1-zh-hant', '非本文夜間事故'],
-    ['taiwan-flashing-red-yellow-intersection-liability', 'flashing-intersection-v1-zh-hant', '與文內兩段式示意圖是不同設定'],
+    ['taiwan-flashing-red-yellow-intersection-liability', 'flashing-intersection-film-v1-zh-hant', '與文內兩段式示意圖是不同設定'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="zh-hant" slug={slug} />);
     expect(html).toContain(`${id}.mp4`);

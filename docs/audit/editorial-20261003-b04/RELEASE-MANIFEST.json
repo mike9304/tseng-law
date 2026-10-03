@@ -935,5 +935,63 @@
     "publicationDatesAdded": 7,
     "semiconductorBoardsAdded": 0,
     "note": "B04 has two separate original prompt JSONs, so the media/audit ledger count is one greater than B03. External preparation files are not counted as product copies."
+  },
+  "postIntegrationRepairs": [
+    {
+      "file": "src/lib/__tests__/column-language-links.test.tsx",
+      "reason": "Per-locale compact payload was compared to one eighth of the whole-corpus slug list; Taiwan-first native publishing invalidated this distribution assumption, not locale correctness.",
+      "oldSha256": "2d4da57b7b6e93bcbf91459a89d01dd7337ba6dc939ca4263150862735dc1b0f",
+      "newSha256": "8ea766894692f8edfff79f348a5ce69f3e600096615ee4c8cc6de42015565677",
+      "scope": "One existing test block; exact own-slug equality and all14 other route/translation/hreflang/render tests preserved. Compare same-locale compact versus independently expanded equivalent translation data; no new arbitrary threshold. Runtime unchanged.",
+      "workerVerification": "original failure reproduced; whole single suite15/15, file ESLint and diff-check exit0",
+      "rootCodeReview": "Root read runtime and exact test diff; accepts semantic repair. Independent QA on the next clean commit and fresh build remain pending.",
+      "externalEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/size-test-repair.md",
+      "externalEvidenceSha256": "13e6543a816257ac9046efa2b7f5d475bc3c70bee1ca4e130e698c032a73703c"
+    }
+  ],
+  "finalPublicationScope": {
+    "contentIntegrationFiles": 36,
+    "additionalExistingTestFiles": 1,
+    "totalFilesSinceReleaseBase": 37,
+    "paths": [
+      "docs/audit/editorial-20261003-b04.md",
+      "docs/audit/editorial-20261003-b04/IMAGE-MANIFEST.json",
+      "docs/audit/editorial-20261003-b04/IMAGE-PROMPTS-01.json",
+      "docs/audit/editorial-20261003-b04/IMAGE-PROMPTS-02.json",
+      "docs/audit/editorial-20261003-b04/IMAGE-QA.md",
+      "docs/audit/editorial-20261003-b04/RELEASE-MANIFEST.json",
+      "docs/audit/editorial-20261003-b04/TOPIC-BRIEFS.md",
+      "docs/audit/editorial-20261003-b04/WRITER-WORKORDER.md",
+      "docs/audit/editorial-20261003-b04/evidence/en-taiwan-landlord-entry-rental-home-repairs.md",
+      "docs/audit/editorial-20261003-b04/evidence/ja-taiwan-hotel-luggage-loss-custody-japanese.md",
+      "docs/audit/editorial-20261003-b04/evidence/ko-taiwan-unpaid-invoice-settlement-release-korean.md",
+      "docs/audit/editorial-20261003-b04/evidence/zh-hant-contractor-employee-status-control-work-taiwan.md",
+      "docs/audit/editorial-20261003-b04/evidence/zh-hant-home-leak-defect-notice-repair-evidence-taiwan.md",
+      "docs/audit/editorial-20261003-b04/evidence/zh-hant-parent-home-gift-care-obligation-evidence-taiwan.md",
+      "docs/audit/editorial-20261003-b04/evidence/zh-hant-private-loan-joint-guarantor-first-demand-taiwan.md",
+      "docs/audit/editorial-20261003-b04/reviews/legal-en-ko-r1.md",
+      "docs/audit/editorial-20261003-b04/reviews/legal-ja-r1.md",
+      "docs/audit/editorial-20261003-b04/reviews/legal-zh-r1.md",
+      "docs/audit/editorial-20261003-b04/reviews/voice-r1.md",
+      "public/images/columns/editorial-20261003-b04/contractor-employee-status-control-work-taiwan.png",
+      "public/images/columns/editorial-20261003-b04/home-leak-defect-notice-repair-evidence-taiwan.png",
+      "public/images/columns/editorial-20261003-b04/parent-home-gift-care-obligation-evidence-taiwan.png",
+      "public/images/columns/editorial-20261003-b04/private-loan-joint-guarantor-first-demand-taiwan.png",
+      "public/images/columns/editorial-20261003-b04/taiwan-hotel-luggage-loss-custody-japanese.png",
+      "public/images/columns/editorial-20261003-b04/taiwan-landlord-entry-rental-home-repairs.png",
+      "public/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "src/content/column-embeddings-pending.json",
+      "src/content/columns-en/173-taiwan-landlord-entry-rental-home-repairs.md",
+      "src/content/columns-ja/172-taiwan-hotel-luggage-loss-custody-japanese.md",
+      "src/content/columns-zh/168-home-leak-defect-notice-repair-evidence-taiwan.md",
+      "src/content/columns-zh/169-contractor-employee-status-control-work-taiwan.md",
+      "src/content/columns-zh/170-private-loan-joint-guarantor-first-demand-taiwan.md",
+      "src/content/columns-zh/171-parent-home-gift-care-obligation-evidence-taiwan.md",
+      "src/content/columns/174-taiwan-unpaid-invoice-settlement-release-korean.md",
+      "src/lib/__tests__/column-language-links.test.tsx",
+      "src/lib/__tests__/columns-publication-date.test.ts",
+      "src/lib/__tests__/native-locale-columns.ts"
+    ],
+    "contentIntegrationCountsAboveAreHistoricalAndUnchanged": true
   }
 }

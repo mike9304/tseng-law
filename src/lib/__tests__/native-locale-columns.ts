@@ -316,6 +316,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
   ],
   ja: [
+    '202-taiwan-post-employment-non-compete-compensation-japanese.md', // reviewed daily Japan/Vietnam pair
     '169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md',
     '178-taiwan-hotel-luggage-loss-custody-japanese.md', // reviewed editorial batch004
     '185-taiwan-hotel-typhoon-cancellation-refund-japanese.md', // reviewed editorial batch005
@@ -347,6 +348,9 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '198-alimony-after-divorce-civil-code-1057.md', // family lane b09
     '199-child-surname-change-after-divorce.md', // family lane b09
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
+  ],
+  vi: [
+    '203-taiwan-change-employer-broker-jobbuying-fees.md', // reviewed daily Japan/Vietnam pair
   ],
 } as const;
 

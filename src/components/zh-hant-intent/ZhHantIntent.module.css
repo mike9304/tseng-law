@@ -258,6 +258,7 @@
   color: var(--ap-muted);
   font-size: 16px;
   line-height: 1.75;
+  text-wrap: pretty; /* one to three short lines: no one-character widows (序。) */
 }
 .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a > span) {
   position: static;

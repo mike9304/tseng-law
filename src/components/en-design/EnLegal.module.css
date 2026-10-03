@@ -1,43 +1,42 @@
 /*
- * en legal pages (privacy, disclaimer, accessibility; Opus 5.5 en lane, 2026-10-01): the shared
- * LegalPageSections markup and wording inside the en wrapper. The header comes from EnPage.module.css;
- * here only the effective date, the paper section and the card type follow the en system.
+ * en legal pages (privacy, disclaimer, accessibility), Clear Night (CONCEPT-V2 12.3: title card, then the paper
+ * reading layout of the column detail without the rail; en-pages lane 2026-10-03). Wording unchanged.
  */
-/* The effective date reads as a meta line under the description, not as a second column. */
-:global(#en-legal) .legal :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
-:global(#en-legal) .legal :global(.page-header [data-page-header-slot='children']) { grid-column: 1; width: auto; margin: -8px 0 0; }
-.legal :global(.page-header .legal-effective-date) {
-  display: inline-flex;
-  align-items: center;
-  min-height: 40px;
-  margin: 0;
-  padding: 8px 18px;
-  border: 1px solid var(--en-line-dark);
-  border-radius: 999px;
-  background: rgb(255 255 255 / 6%);
-  font-family: var(--en-mono);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 0.04em;
-  color: rgb(255 255 255 / 88%);
-}
-.legal :global(section.section.legal-page-section) { padding: clamp(40px, 5vw, 72px) 0 clamp(56px, 7vw, 104px); background: var(--en-mist); }
-.legal :global(.legal-page-section .contact-grid) { gap: 16px; }
-.legal :global(.legal-page-section .card.legal-card) {
-  gap: 14px;
-  padding: clamp(24px, 2.6vw, 34px);
-  border: 1px solid var(--en-line);
-  border-radius: 24px;
-  background: #fff;
-}
-.legal :global(.legal-page-section .card.legal-card:hover),
-.legal :global(.legal-page-section .card.legal-card:focus-within) { border-color: var(--en-line); }
-.legal :global(.legal-page-section .card-title) {
-  font-size: clamp(21px, 1.8vw, 25px);
+.legal { composes: paper from './EnPagesV2.module.css'; }
+
+/* Effective date in the title card: plain grey text, not a pill. */
+.legal.legal :global(.legal-effective-date) { display: block; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; font-family: var(--en-text); font-size: 17px; font-weight: 500; letter-spacing: 0; color: var(--en-grey); }
+
+/* Reading layout: one column at 68ch, headings at 32, text at 19/1.7, no cards or rules. */
+.legal.legal :global(section.legal-page-section) { padding: 96px 0 160px; background: #fff; border: 0; color: var(--en-ink); }
+.legal.legal :global(.legal-page-section .grid-bento) { display: grid; grid-template-columns: minmax(0, 1fr); gap: 72px; max-width: 68ch; margin: 0; }
+.legal.legal :global(.legal-page-section .legal-card) { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: var(--en-ink); transform: none; opacity: 1; }
+.legal.legal :global(.legal-page-section .legal-card)::before,
+.legal.legal :global(.legal-page-section .legal-card)::after { content: none; display: none; }
+.legal.legal :global(.legal-page-section .card-title) {
+  margin: 0 0 20px;
+  font-family: var(--en-display) !important;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.022em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   color: var(--en-ink);
+  text-wrap: balance;
 }
-.legal :global(.legal-page-section .legal-card-list li)::before { border-radius: 0; background: var(--en-signal); }
+.legal.legal :global(.legal-page-section .legal-card-copy) { display: grid; gap: 16px; }
+.legal.legal :global(.legal-page-section .legal-card-copy p),
+.legal.legal :global(.legal-page-section .legal-card-list li) { margin: 0; font-family: var(--en-text); font-size: 19px; line-height: 1.7; color: var(--en-ink); }
+.legal.legal :global(.legal-page-section .legal-card-list) { display: grid; gap: 8px; margin: 16px 0 0; padding: 0 0 0 1.2em; list-style: disc; }
+.legal.legal :global(.legal-page-section .legal-card-list li)::before { content: none; display: none; }
+.legal.legal :global(.legal-page-section .legal-card-list li)::marker { color: var(--en-ink-3); }
+.legal.legal :global(.legal-page-section a) { color: var(--en-focus-paper); text-decoration: underline; text-underline-offset: 3px; }
+.legal.legal :global(.legal-page-section a:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 3px; }
+
+@media (max-width: 767px) {
+  .legal.legal :global(.legal-effective-date) { font-size: 15px; }
+  .legal.legal :global(section.legal-page-section) { padding: 64px 0 96px; }
+  .legal.legal :global(.legal-page-section .grid-bento) { gap: 56px; }
+  .legal.legal :global(.legal-page-section .card-title) { font-size: 26px; }
+  .legal.legal :global(.legal-page-section .legal-card-copy p),
+  .legal.legal :global(.legal-page-section .legal-card-list li) { font-size: 17px; }
+}

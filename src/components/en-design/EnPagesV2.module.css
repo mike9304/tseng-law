@@ -361,6 +361,62 @@
 .v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control-icon) { margin: 0; color: #fff; font-size: 14px; line-height: 1; }
 .v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 3px; }
 
+/* ---------- Member sign-in (/en/login): title card on black, the form on a paper card ---------- */
+.v2.v2:global(#en-login) :global(section[class*='authPage']) { min-height: 0; padding: 72px 0 160px; background: #000; color: var(--en-white); }
+.v2.v2:global(#en-login) :global(section[class*='authPanel']) {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 48px;
+  align-items: start;
+  width: min(1200px, calc(100% - 40px));
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.v2.v2:global(#en-login) :global(div[class*='authIntro']) { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: var(--en-white); }
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > p:first-child) { margin: 0 0 16px; font-family: var(--en-text); font-size: var(--en-t-label); font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--en-grey); }
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > p:first-child)::before,
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > p:first-child)::after { content: none; display: none; }
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] h1) {
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-xl);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.028em;
+  color: var(--en-white);
+  text-wrap: balance;
+}
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > span) { display: block; max-width: 640px; margin: 28px 0 0; font-family: var(--en-text); font-size: var(--en-t-lead); font-weight: 500; line-height: 1.36; color: var(--en-grey); }
+.v2.v2:global(#en-login) :global(form[class*='authForm']) {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 40px;
+  border: 0;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: none;
+  color: #1d1d1f;
+}
+.v2.v2:global(#en-login) :global(form[class*='authForm'] label) { display: grid; gap: 8px; font-family: var(--en-text); font-size: 17px; font-weight: 600; color: #1d1d1f; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] input) { min-height: 56px; padding: 0 16px; border: 1px solid #86868b; border-radius: 14px; background: #fff; color: #1d1d1f; font-family: var(--en-text); font-size: 17px; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] input:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 2px; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] button) { min-height: 56px; margin-top: 8px; border: 0; border-radius: 999px; background: var(--en-action); color: #fff; font-family: var(--en-text); font-size: 18px; font-weight: 600; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] button:hover) { background: var(--en-action-hover); }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] button:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 3px; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] p) { margin: 0; font-family: var(--en-text); font-size: 17px; color: #515154; }
+@media (max-width: 899px) {
+  .v2.v2:global(#en-login) :global(section[class*='authPanel']) { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+}
+@media (max-width: 767px) {
+  .v2.v2:global(#en-login) :global(section[class*='authPage']) { padding: 40px 0 96px; }
+  .v2.v2:global(#en-login) :global(form[class*='authForm']) { padding: 24px; border-radius: 18px; }
+}
+
 /* ---------- Section frame ---------- */
 .section { padding: 160px 0; }
 .sectionNight { background: var(--en-night); }

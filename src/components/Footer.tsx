@@ -201,13 +201,15 @@ export default function Footer({
           />
         </div>
       </section>
+      {/* Footer links do not prefetch: entering the footer used to prefetch every sitemap route (about 7.8 MB
+          across locales). Navigation still works; the target loads on click. */}
       <footer className={`site-footer ${styles.footer}`}>
         <div className="footer-offices">
           <div className="container">
             <nav className="office-links" aria-label={officeQuickLinksLabel}>
               <span className="office-label">{officeLabel}</span>
               {offices.map((office) => (
-                <Link key={office.label} href={office.href} className="office-link">
+                <Link key={office.label} href={office.href} className="office-link" prefetch={false}>
                   <span className="office-link-name">{office.label}</span>
                   <span className="office-link-address">{renderOfficeAddress(office.address)}</span>
                 </Link>
@@ -251,7 +253,7 @@ export default function Footer({
                         {link.label}
                       </a>
                     ) : (
-                      <Link key={link.href} href={link.href}>
+                      <Link key={link.href} href={link.href} prefetch={false}>
                         {link.label}
                       </Link>
                     )
@@ -265,7 +267,7 @@ export default function Footer({
           <div className="container footer-bottom-grid">
             <div className="footer-legal-links">
               {legalLinks.map((item) => (
-                <Link key={item.label} href={item.href}>
+                <Link key={item.label} href={item.href} prefetch={false}>
                   {item.label}
                 </Link>
               ))}

@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "차로에 끼어든 스쿠터가 멈추는 장면",
+    "description": "붉은 스쿠터가 왼쪽에서 촬영 차량의 차로로 들어옵니다. 잠시 주행한 뒤 브레이크등이 밝아지고, 스쿠터와 뒤따르던 촬영 차량이 멈춥니다. 운전자는 두 발을 내려 지탱하고 왼쪽 뒤를 돌아본 뒤 다시 앞을 봅니다.",
+    "disclosure": "AI로 만든 15초 무음 반복 영상입니다. 실제 블랙박스나 칼럼의 두 사건을 재현한 영상이 아닙니다. 사건의 시간·동승자·뒤차의 추월 경위를 재현하지 않으며, 충돌이나 넘어짐도 표현하지 않았습니다. 실제 속도·제동 및 정차 시간·고의·법적 책임을 판단하는 근거로 쓸 수 없습니다."
+  },
+  "en": {
+    "title": "A scooter enters the lane and brakes to a stop",
+    "description": "A red scooter moves in from the left ahead of the camera car. After continuing forward, its brake lamp brightens and both vehicles come to a stop. The rider puts both feet down, looks back over the left shoulder and then faces forward again.",
+    "disclosure": "AI-generated, silent 15-second loop. This fictional scene is not actual dashcam footage or a reconstruction of either case in the article. It does not reproduce the case timings, passenger or the camera car’s overtake, and shows no contact or fall. It cannot establish actual speed, braking or stopping time, intent or legal responsibility."
+  },
+  "ja": {
+    "title": "車線に入ったスクーターがブレーキをかけて止まる場面",
+    "description": "赤いスクーターが左側から撮影車両の前に入り、しばらく走った後、ブレーキランプを明るく点灯させて止まります。撮影車両も後方で停止します。運転者は両足を下ろし、左後方を振り返ってから、再び前を向きます。",
+    "disclosure": "AIで生成した、音声のない15秒の繰り返し動画です。実際のドライブレコーダー映像でも、記事にある二つの事件の再現でもありません。事件の時間経過・同乗者・後続車の追越しは再現せず、衝突や転倒も描いていません。この映像から実際の速度・減速や停止の時間・故意の有無・法的責任を判断することはできません。"
+  },
+  "zh-hant": {
+    "title": "機車切入車道後煞車停下",
+    "description": "紅色機車從左側切入拍攝車輛前方，繼續行駛一段後，煞車燈轉亮並停下，拍攝車輛也在後方停止。騎士放下雙腳，回頭往左後方看，再轉回前方。",
+    "disclosure": "本片為 AI 生成的 15 秒無聲循環影片，並非真實行車紀錄器畫面，也不是文中任一案件的重現。影片未重現案發時序、乘客或後車超車過程，亦未呈現碰撞或摔車，不能據此判斷實際車速、煞停與停留時間、是否出於故意或法律責任。"
+  }
+}

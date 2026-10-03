@@ -25,7 +25,14 @@ const reverseDashcamCaptions = JSON.parse(await fs.readFile(new URL('../src/data
 const cutInDashcamCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cut-in-dashcam-video-captions.json', import.meta.url), 'utf8'));
 const batThreatLoopCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bat-threat-loop-video-captions.json', import.meta.url), 'utf8'));
 const laneBlockExitCaptions = JSON.parse(await fs.readFile(new URL('../src/data/lane-block-exit-video-captions.json', import.meta.url), 'utf8'));
+const bridgeScooterBrakeCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bridge-scooter-brake-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(bridgeScooterBrakeCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-road-rage-two-second-stop-taipei-not-enough',
+    id: `road-rage-two-second-stop-taipei-not-enough-v4-${locale}`,
+    duration: 15.041667, contactTime: 10, expectedDiagrams: 0, loop: true,
+    disclosure: caption.disclosure,
+  })),
   ...Object.entries(laneBlockExitCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-road-rage-started-did-not-matter-driver-blocked',
     id: `road-rage-started-did-not-matter-driver-blocked-v4-${locale}`,

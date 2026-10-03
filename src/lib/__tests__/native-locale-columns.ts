@@ -298,16 +298,19 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '168-taiwan-gold-card-semiconductor-talent-korean-engineers.md',
     '180-taiwan-unpaid-invoice-settlement-release-korean.md', // reviewed editorial batch004
     '187-taiwan-trademark-nonuse-three-years-korean-brand.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
   ],
   en: [
     '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
     '179-taiwan-landlord-entry-rental-home-repairs.md', // reviewed editorial batch004
     '186-taiwan-personal-data-access-copy-request.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
   ],
   ja: [
     '169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md',
     '178-taiwan-hotel-luggage-loss-custody-japanese.md', // reviewed editorial batch004
     '185-taiwan-hotel-typhoon-cancellation-refund-japanese.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
   ],
   'zh-hant': [
     '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
@@ -321,6 +324,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '182-rental-electricity-average-price-bill-taiwan.md', // reviewed editorial batch005
     '183-limited-company-shareholder-books-inspection-taiwan.md', // reviewed editorial batch005
     '184-handwritten-will-typed-print-signature-taiwan.md', // reviewed editorial batch005
+    '188-taiwan-road-rage-started-did-not-matter-driver-blocked.md', // road-rage series (all four locales)
   ],
 } as const;
 

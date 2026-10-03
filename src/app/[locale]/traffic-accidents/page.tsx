@@ -6,7 +6,7 @@ import { getColumnPost } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
 import { TRAFFIC_DIAGRAM_ID, TRAFFIC_PATH, trafficColumnSlugsFor, trafficHubCopy } from '@/data/traffic-hub';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
-import EnPageShell from '@/components/en-design/EnPageShell';
+import EnPageShell, { EnBand } from '@/components/en-design/EnPageShell';
 import styles from './traffic.module.css';
 import zhStyles from './ZhHantTraffic.module.css';
 import enStyles from '@/components/en-design/EnTraffic.module.css';
@@ -68,5 +68,8 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
     </div>
   );
   // en redesign (Opus 5.5 en lane): the same hub markup inside the scoped en wrapper; only en-scoped CSS changes.
-  return locale === 'en' ? <EnPageShell page="traffic"><div className={enStyles.traffic}>{body}</div></EnPageShell> : body;
+  // en (Clear Night inner pages): the drops band is placed after the title card by CSS order (decorative, nothing focusable).
+  return locale === 'en'
+    ? <EnPageShell page="traffic"><div className={enStyles.traffic}><div className={enStyles.bandSlot}><EnBand name="drops" /></div>{body}</div></EnPageShell>
+    : body;
 }

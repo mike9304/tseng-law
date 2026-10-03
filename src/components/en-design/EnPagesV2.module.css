@@ -332,6 +332,35 @@
 .v2.v2[data-en-design][id] .paper :global(.authority-card-actions a.button.button--outline)::after,
 .v2.v2[data-en-design][id] .paper :global(.blog-sidebar .authority-card-actions a.button)::after { content: '\2192'; margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
 
+/* ---------- Pause control on inner-page loops (component 9): a 44 px circle, label kept for screen readers ---------- */
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control) {
+  position: absolute;
+  inset: auto 16px 16px auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 50%);
+  box-shadow: none;
+  color: #fff;
+}
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control > span:not(.decorative-autoplay-video__control-icon)) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control-icon) { margin: 0; color: #fff; font-size: 14px; line-height: 1; }
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+
 /* ---------- Section frame ---------- */
 .section { padding: 160px 0; }
 .sectionNight { background: var(--en-night); }

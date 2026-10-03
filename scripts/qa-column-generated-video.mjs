@@ -11,7 +11,17 @@ const logisticsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/logi
 const precisionPartsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/precision-parts-video-captions.json', import.meta.url), 'utf8'));
 const gymPauseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/gym-pause-video-captions.json', import.meta.url), 'utf8'));
 const formationDocumentsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/formation-documents-video-captions.json', import.meta.url), 'utf8'));
+const cosmeticsCheckCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cosmetics-check-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-motorway-blocking-no-collision-public-danger', id: 'motorway-brake-v2-zh-hant', duration: 4, contactTime: 0.9, expectedDiagrams: 0, disclosure: '不能用來判斷實際車速、距離、故意或刑事責任' },
+  ...Object.entries(cosmeticsCheckCaptions).map(([locale, caption]) => {
+    const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);
+    return {
+      locale, slug: 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide', id: `cosmetics-check-v1-${nativeLocale ? locale : 'en'}`,
+      evidenceStem: `cosmetics-check-v1-${locale}`, duration: 6, contactTime: 2.5,
+      traffic: false, trafficBoard: nativeLocale, minBodyImages: 3, disclosure: caption.disclosure,
+    };
+  }),
   { locale: 'zh-hant', slug: 'taiwan-bus-stop-illegal-parking-no-contact-criminal-causation', id: 'bus-stop-v2-zh-hant', duration: 4, contactTime: 0.166667, expectedDiagrams: 0, disclosure: '不能據以認定違停、因果關係、刑責或賠償比例' },
   { locale: 'zh-hant', slug: 'taiwan-ambulance-red-light-emergency-priority-negligence', id: 'ambulance-scooter-v6-zh-hant', duration: 4, contactTime: 0.625, expectedDiagrams: 0, disclosure: '不能據以判斷優先通行權或肇事責任' },
   { locale: 'zh-hant', slug: 'taiwan-racing-no-contact-joint-tort-liability', id: 'adjacent-rear-end-v3-zh-hant', duration: 4, contactTime: 0.333333, expectedDiagrams: 0, disclosure: '不能用來認定競駛、因果關係或共同侵權責任' },

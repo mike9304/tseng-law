@@ -5,7 +5,7 @@ import pending from '@/content/column-embeddings-pending.json';
 
 const cases = [
   ['taiwan-parking-wheelstop-latch-service-safety-causation', '鎖扣', 97, true],
-  ['taiwan-motorway-blocking-no-collision-public-danger', '國道', 98, false],
+  ['taiwan-motorway-blocking-no-collision-public-danger', '國道', 98, true],
 ] as const;
 
 describe('reviewed parking and motorway publication batch', () => {

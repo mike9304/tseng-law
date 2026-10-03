@@ -7,8 +7,20 @@ import generalAccidentCaptions from '@/data/general-accident-video-captions.json
 import overtakingCaptions from '@/data/overtaking-video-captions.json';
 import businessPremisesCaptions from '@/data/business-premises-video-captions.json';
 import logisticsCaptions from '@/data/logistics-video-captions.json';
+import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
 describe('reviewed column videos', () => {
+  it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
+    const slug = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
+    expect(html).toContain(`cosmetics-check-v1-${assetLocale}.mp4`);
+    for (const value of Object.values(caption)) expect(html).toContain(renderToStaticMarkup(<>{value}</>));
+    expect(html).toContain('controls=""');
+    expect(html).not.toMatch(/autoplay|loop=/i);
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+    expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
+  });
   it.each(Object.entries(logisticsCaptions))('keeps the logistics scene and %s caption on the reviewed logistics column', (locale, caption) => {
     const slug = 'taiwan-logistics-business-setup';
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
@@ -120,6 +132,7 @@ describe('reviewed column videos', () => {
 
   it.each([
     ['taiwan-bus-stop-illegal-parking-no-contact-criminal-causation', 'bus-stop-v2-zh-hant', '未呈現先前變換車道、後座乘客、傷亡或現場實測位置'],
+    ['taiwan-motorway-blocking-no-collision-public-danger', 'motorway-brake-v2-zh-hant', '未呈現反覆攔擋或其他車流'],
     ['taiwan-ambulance-red-light-emergency-priority-negligence', 'ambulance-scooter-v6-zh-hant', '未呈現乘客、號誌、警笛聲、勤務或傷勢'],
     ['taiwan-bus-sudden-braking-passenger-carrier-liability', 'bus-braking-v4-zh-hant', '未呈現車外原因或完整煞車過程'],
     ['taiwan-retaliatory-driving-rear-ended-intentional-injury', 'braking-scooter-v2-zh-hant', '不能用來認定故意、傷勢或責任比例'],

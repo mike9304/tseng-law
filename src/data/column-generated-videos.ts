@@ -6,6 +6,7 @@ import precisionPartsCaptions from './precision-parts-video-captions.json';
 import gymPauseCaptions from './gym-pause-video-captions.json';
 import trafficFilms from './traffic-column-films.json';
 import formationDocumentsCaptions from './formation-documents-video-captions.json';
+import cosmeticsCheckCaptions from './cosmetics-check-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -29,6 +30,24 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-motorway-blocking-no-collision-public-danger': {
+    id: 'motorway-brake-v2-zh-hant',
+    src: '/videos/columns/motorway-brake-v2-zh-hant.mp4',
+    poster: '/images/column-videos/motorway-brake-v2-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '前車切入後煞車，後車近距離停住',
+    description: '藍色轎車向左移入前方，煞車燈隨後亮起。鏡頭與前車的距離迅速縮短，最後停住，沒有可見碰撞。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立日間假想場景，非本文夜間攔擋案件或原始行車影像的重建。畫面只呈現一次切入與煞停，未呈現反覆攔擋或其他車流，不能用來判斷實際車速、距離、故意或刑事責任。',
+  },
+  ...Object.fromEntries(Object.entries(cosmeticsCheckCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `cosmetics-check-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   'column/zh-hant/taiwan-bus-stop-illegal-parking-no-contact-criminal-causation': {
     id: 'bus-stop-v2-zh-hant',
     src: '/videos/columns/bus-stop-v2-zh-hant.mp4',

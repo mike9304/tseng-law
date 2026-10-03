@@ -25,6 +25,8 @@ import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 import { LITIGATION_SITUATION_NAV } from '@/data/multilingual-international-v2';
 import ForeignMatterRouter from '@/components/ForeignMatterRouter';
 import { getForeignMatterRouter } from '@/data/foreign-matter-router';
+import ZhHantIntentHeaderActions from '@/components/zh-hant-intent/ZhHantIntentHeaderActions';
+import zhStyles from '@/components/zh-hant-intent/ZhHantIntent.module.css';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -537,7 +539,7 @@ export default function IntentLandingPage({
     })),
   };
 
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -575,6 +577,7 @@ export default function IntentLandingPage({
       <JsonLd data={faqSchema} />
 
       <PageHeader locale={locale} label={page.label} title={page.title} description={page.description}>
+        {locale === 'zh-hant' ? <ZhHantIntentHeaderActions contactLabel={l.contact} pricingLabel={l.pricing} /> : null}
         {isSiteLocale(locale) && slug === 'taiwan-litigation-lawyer' ? (
           <nav
             className="intent-situation-nav"
@@ -871,5 +874,14 @@ export default function IntentLandingPage({
         </div>
       </section>
     </>
+  );
+
+  // zh-hant: one wrapper scopes the Apple-language styles (zh-hant-intent/ZhHantIntent.module.css); other locales unchanged.
+  return locale === 'zh-hant' ? (
+    <div id="zh-hant-intent" className={zhStyles.root} data-zh-hant-design="intent">
+      {body}
+    </div>
+  ) : (
+    body
   );
 }

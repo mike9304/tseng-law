@@ -210,6 +210,7 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-borrowed-car-owner-driver-key-custody-liability',
         'taiwan-mediation-delayed-injury-rescission',
         'taiwan-accident-assessment-secondary-cause-compensation-ratio',
         'taiwan-accident-family-care-necessity-period',

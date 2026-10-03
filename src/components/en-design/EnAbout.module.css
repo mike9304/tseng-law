@@ -159,10 +159,13 @@
 .team.team :global(.attorney-list li)::before,
 .team.team :global(.attorney-list li)::marker { content: none; }
 .team.team :global(.attorney-card--lead .attorney-list li) { font-size: 19px; }
-.team.team :global(.attorney-card-actions) { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 0 32px; margin: 0; padding: 0; border: 0; }
+.team.team :global(.attorney-card-actions) { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 0 32px; margin: 0; padding: 0; border: 0; }
 .team.team :global(.attorney-card-actions a.attorney-card-cta.button) {
   display: inline-flex;
+  flex: none;
   align-items: center;
+  justify-content: flex-start;
+  width: auto;
   min-height: 44px;
   padding: 0;
   border: 0;

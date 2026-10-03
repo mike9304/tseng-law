@@ -1023,6 +1023,20 @@
       "rootCodeReview": "Root read runtime and exact test diff; accepts semantic repair. Independent QA on the next clean commit and fresh build remain pending.",
       "externalEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/size-test-repair.md",
       "externalEvidenceSha256": "13e6543a816257ac9046efa2b7f5d475bc3c70bee1ca4e130e698c032a73703c"
+    },
+    {
+      "file": "src/app/__tests__/sitemap.test.ts",
+      "reason": "The existing 2026-10-04 country fixture contains14 approved B04+B05 articles but was omitted from the sitemap expected-total import and both count expressions.",
+      "oldSha256": "f27d0adacbf1f771c3a364f54ca6dcf4ad3ff494ab09c5b2a45be62161391232",
+      "newSha256": "87a97e247363ce943e8d56c4becdee2712c967460eaf946057e85f0a8b268daa",
+      "scope": "Import the existing COUNTRY_COLUMN_FILES_20261004 fixture, include its flattened length in both expected totals, and update only the date-range comment; removed:9 and every EN/hreflang/native assertion preserved. No runtime/content/media/fixture changes.",
+      "inputCommit": "852f01b1441d779aece740bbd50ba924a87bd921",
+      "inverseRestoreSha256": "f27d0adacbf1f771c3a364f54ca6dcf4ad3ff494ab09c5b2a45be62161391232",
+      "inverseWholeBytesEqual": true,
+      "workerVerification": "Existing sitemap suite35/35 passed, file ESLint and diff-check exit0; original joint failure525/526 and20.025seconds preserved.",
+      "independentQaAndBuild": "Pending on the next clean commit; current joint release was not built by this repair.",
+      "externalEvidence": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/qa/sitemap-date-group-repair.md",
+      "externalEvidenceSha256": "c13d93afdfbad4973275f17a55eae91bacf2f1f01970991a949b40e7be1a9948"
     }
   ],
   "finalPublicationScope": {
@@ -2090,5 +2104,22 @@
     "dateRefreshPendingEmbeddingFileChanged": false,
     "historicalOriginalIntegrationFiles": 36,
     "historicalAfterTestRepairFiles": 37
+  },
+  "jointPublicationScopeAfterSitemapRepair": {
+    "inputCommit": "852f01b1441d779aece740bbd50ba924a87bd921",
+    "b04HistoricalPaths": 39,
+    "b05IntegratedPaths": 40,
+    "sharedRegistryPaths": 3,
+    "jointPathsBeforeRepair": 76,
+    "additionalExistingTestPaths": [
+      "src/app/__tests__/sitemap.test.ts"
+    ],
+    "jointPathsAfterRepair": 77,
+    "historicalB04ScopeAndB05ManifestPreserved": true,
+    "note": "This additive joint-scope record supersedes no historical integration/date-refresh count; original B04 39-path and B05 40-path snapshots remain unchanged. Incoming remote movement is for root rebase after this repair.",
+    "upstreamAtScopeObservation": "e1a37685b8b6c14ff863e05d396e835bebfe9bd8",
+    "scopeObservationOnly": true,
+    "requiresRecalculationAfterRootRebase": true,
+    "rootIncomingNotice": "Root reports incoming4c27dbd017087fe27dfd24e1e95f0054d4b5f939 contains the same sitemap test correction and four articles using168-171. Root will rebase and separately authorize filename/registry/manifest reconciliation;77 is the pre-rebase observation only."
   }
 }

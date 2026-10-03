@@ -19,7 +19,7 @@ import {
   absentOptionalColumnLocales,
   presentOptionalColumnLocales,
 } from '@/data/__tests__/column-alternate-expectations';
-import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003,
+import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_COLUMN_FILES_20261004,
   ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 
 const sourceMocks = vi.hoisted(() => ({
@@ -203,12 +203,13 @@ describe('sitemap column lastModified', () => {
       // 2026-10-01 expertise columns 052-059 add 24 URLs (ko 6, en 8, ja 3, zh-hant 7).
       // 2026-10-01 zh-hant-only domestic columns 060-062 add 3 URLs (zh-hant 3).
       // 2026-10-02 expertise columns 063-069 add 23 URLs (ko 7, en 7, zh-hant 7, ja 2).
-      // The 2026-10-02–03 audience/traffic batches add one URL per core-locale file; VI is counted above.
+      // The 2026-10-02–04 audience/traffic batches add one URL per core-locale file; VI is counted above.
       beforeFiltering:
         520 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
+          + Object.values(COUNTRY_COLUMN_FILES_20261004).flat().length
           + Object.values(ROAD_RAGE_COLUMN_FILES_20261003).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
@@ -216,6 +217,7 @@ describe('sitemap column lastModified', () => {
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
+          + Object.values(COUNTRY_COLUMN_FILES_20261004).flat().length
           + Object.values(ROAD_RAGE_COLUMN_FILES_20261003).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,

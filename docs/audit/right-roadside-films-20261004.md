@@ -1,0 +1,25 @@
+# Right-turn and roadside-start films
+
+The Traditional Chinese right-turn column receives a 114-second silent MP4 (one native four-second event plus eleven distinct ten-second explanations); the roadside-start column receives a 94-second MP4 (four seconds plus nine ten-second explanations). New Codex images guided Grok 4.7 shots of road-layout recording and a garage sightline. Accepted earlier scenes support the evidence sequence without loops, slowed playback or repeated holds. Existing article text and separate technical diagrams remain unchanged.
+
+Both complete source articles were read. Current primary Road Traffic Safety Rules [102](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102), [99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=99), [99-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=99-1), [94](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94), [89](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=89), [2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=2), Road Traffic Management and Penalty Act [3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=3), and Civil Code [217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217) were checked. Relevant official reasons in TCDM 113 交易 22 (2025-02-25) and CPEV 112 竹北簡 512 (2024-08-14) were read for the roadside discussion. No court award, fault percentage, finality or original-footage claim is added.
+
+| Reviewed material | Issue | Final treatment | Meaning preserved |
+| --- | --- | --- | --- |
+| Right-turn preparation | A short caption could omit distances, lane alternatives or exceptions. | Retain the 30-metre signal/hand signal requirement, outer/right-turn/slow-lane alternatives, turning at the intersection, 30–60-metre slow-lane entry and divider/control conditions. | Signal duration does not establish a measured distance or yielding. |
+| Motorcycle path | Being to the right could be treated as automatically unlawful. | Preserve sign/marking priority, Article 99 road conditions and Article 99-1 vehicle distinction. | The first camera appearance is not necessarily the first presence. |
+| Event provenance | A silver passenger-car scene could be confused with the article's truck case. | Disclose an independent AI fiction, missing earlier maneuvers and unavailable distance calibration. | No reenactment, speed measurement, injury diagnosis or fixed liability share. |
+| Pulling away | Indicator use could imply an unconditional right to enter. | Keep all pre-start checks and yielding, distinguish roadside start from a signal stop, and examine reaction opportunities. | Priority still requires care where avoidance is possible. |
+| Garage and road status | All private garages could be treated as exempt or as public intersections. | Separate location classification, public access, specific traffic-rule applicability and general care. | Criminal acquittal does not automatically establish civil immunity. |
+| Mirror shot | The camera or a visible mirror could be treated as the driver's actual view. | Disclose camera/eye-position differences, glare and obstruction; the illustrative garage is empty. | A mirror's presence alone proves no usable sightline. |
+
+New source clips were visually sampled throughout at 2 fps; native four-second events were re-inspected at 5 fps and retain earlier 97-frame review provenance. Both final chapter sheets and the 390px right-turn chapter-2 and 1440px roadside chapter-6 browser screenshots were read. Articles' SHA-256 values still match the review ledgers; approved attribution edits remain intact. No decorative bold was introduced.
+
+Both final files fully decode as H.264, 1280×720, 24 fps without audio: right-turn 2,736 frames, 114 seconds; roadside 2,256 frames, 94 seconds. Burned-in body captions are at least 31px and 34px respectively. 365 tests passed in 28 files and a clean `.next-right-roadside-films` production build passed. Four complete normal-speed desktop/mobile journeys passed in `qa/local-right-turn/report.json` and `qa/local-roadside-start/report.json`: no-gesture autoplay, all synchronized chapter captions, pause/seek, preserved manual pause, reduced-motion manual playback, no overflow or page errors, matching whole-file hashes and HTTP 206 byte ranges. Native controls can cover burned-in captions while focused; the separate caption remains readable at 16px or larger. The existing language toast may cover the lower disclosure.
+
+| Film | Bytes | SHA-256 |
+| --- | ---: | --- |
+| Right turn | 14,286,545 | `115260b722dac745078b791cda79e0bc2a2e47ca87d5cdee75b301dea6d39968` |
+| Roadside start | 11,028,654 | `161eaa550ee141c96eb5aab34332a4242d43e7ae3fa2ff42720492150e4cd918` |
+
+Evidence root: `/Users/son7/tseng-law-traffic-films`. Codex local final review is complete. Production remains pending the explicit approval requested after automatic review rejected publication; this record represents no push or deployment.

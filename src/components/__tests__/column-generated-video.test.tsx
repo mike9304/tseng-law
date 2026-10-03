@@ -128,13 +128,13 @@ describe('reviewed column videos', () => {
   });
 
   it.each([
-    ['ko', '비접촉 사고를 재현한 영상이 아닙니다'],
-    ['en', 'not a reconstruction of any judgment'],
-    ['zh-hant', '不是文中無接觸摔車案的重建'],
+    ['ko', '신베이 사건에서 두 차량이 접촉했다는 뜻이 아닙니다'],
+    ['en', 'not court exhibits or reconstructions'],
+    ['zh-hant', '不代表三重案曾發生兩車碰撞'],
   ])('keeps the left-turn collision separate from cited cases in %s', (locale, disclosure) => {
     const slug = 'taiwan-left-turn-vs-straight-motorcycle';
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
-    expect(html).toContain(`left-turn-scooter-v1-${locale}.mp4`);
+    expect(html).toContain(`left-turn-film-v1-${locale}.mp4`);
     expect(html).toContain(disclosure);
     expect(getColumnGeneratedVideo('ja', slug)).toBeNull();
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
@@ -161,7 +161,7 @@ describe('reviewed column videos', () => {
     ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
     ['taiwan-car-door-opening-motorcycle-liability', 'door-opening-film-v1-zh-hant', '騎士失去平衡'],
     ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-v1-zh-hant', '非本文凌晨事故'],
-    ['green-light-red-light-pedestrian-third-person', 'pedestrian-third-person-v1-zh-hant', '非本文夜間事故'],
+    ['green-light-red-light-pedestrian-third-person', 'pedestrian-third-person-film-v1-zh-hant', '非本文夜間事故'],
     ['taiwan-flashing-red-yellow-intersection-liability', 'flashing-intersection-film-v1-zh-hant', '與文內兩段式示意圖是不同設定'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="zh-hant" slug={slug} />);

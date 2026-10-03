@@ -1719,5 +1719,331 @@
         "text": "先核對責任與各項損害，再按法律依據核算既有給付，避免重複。 判決請求遭駁回，不必然代表沒有過失；須讀理由，也須區分民事與刑事。"
       }
     ]
+  },
+  "column/zh-hant/taiwan-left-turn-vs-straight-motorcycle": {
+    "id": "left-turn-film-v1-zh-hant",
+    "src": "/videos/columns/left-turn-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/left-turn-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "左轉讓行、三件民事比例與鑑定程序",
+    "description": "134秒無聲影片以4秒假想接觸及十三段10秒說明，連成單一檔案，核對轉彎路徑、速度證據、三件民事判決與鑑定、覆議條件。",
+    "disclosure": "全部人物、車輛、道路、診療、文件及螢幕為AI生成的獨立虛構示例，並非所引判決或原始證據。開場呈現接觸，不代表三重案曾發生兩車碰撞，也不能證明實際車速、傷勢或責任。判決章節依公開文字說明，畫面不屬於該案。70%、60%、50%均為各案的汽車過失認定，不能套用；本文保留各判決來源。",
+    "durationSeconds": 134,
+    "sceneCount": 14,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "左轉路徑與對向機車交會",
+        "text": "這是左轉汽車與對向機車的假想接觸。 不是本文任何一件判決的事故重建。"
+      },
+      {
+        "start": 4,
+        "title": "左轉前的距離、車道與讓行",
+        "text": "路口前三十公尺顯示方向燈或手勢，換入內側或左轉車道。 到路口中心處左轉，不得占用來車道搶先轉；轉彎車須讓直行車先行。"
+      },
+      {
+        "start": 14,
+        "title": "道路管制要按現場核對",
+        "text": "遵守號誌與交通指揮，兩者並用時以指揮為準，也須依現場標誌標線。 機車轉彎先依標誌標線；無此指示時，依第102條及機車另定規則行駛。"
+      },
+      {
+        "start": 24,
+        "title": "撞點不能獨自證明轉彎完成",
+        "text": "連同現場圖、停止線、倒地位置與接觸前路徑核對。 安全後拍攝，補拍註明日期；後側車損不直接決定責任。"
+      },
+      {
+        "start": 34,
+        "title": "保留進入路口前的連續畫面",
+        "text": "核對雙方何時進入、亮燈、開始轉向、煞車或閃避。 只截碰撞瞬間，可能漏掉讓行經過、遮擋及號誌時相。"
+      },
+      {
+        "start": 44,
+        "title": "速度判斷需要尺度與時間",
+        "text": "測速須核對原始影格、時間差、可驗證的距離依據及方法限制。 此處為獨立測距示意，沒有量出開場速度；目測很快不能代替證明。"
+      },
+      {
+        "start": 54,
+        "title": "三重案：急煞倒地仍有因果",
+        "text": "114重簡1080未記載兩車碰撞；法院認左轉與急煞倒地有因果關係。 並考量騎士超速，分配汽車70%、騎士30%；不是所有無碰撞事故的比例。"
+      },
+      {
+        "start": 64,
+        "title": "雲林案：超速與闖紅燈未獲證明",
+        "text": "114簡80核對號誌時相與影像，認兩車均綠燈進入；另認騎士未注意車前。 法院分配汽車60%、騎士40%，不是只憑當事人的時間、距離推測。"
+      },
+      {
+        "start": 74,
+        "title": "臺中案：保險公司車損代位上訴",
+        "text": "115簡上93採速度量測，將汽車70%、騎士30%改為各50%。 這是該案車損代位求償的判斷；不能把比例或速度套到其他事故。"
+      },
+      {
+        "start": 84,
+        "title": "主因、次因不是固定百分比",
+        "text": "鑑定分析駕駛行為、資料及原因；民事過失比例由法院依個案判斷。 被害人對損害發生或擴大也有過失時，法院得減輕或免除賠償。"
+      },
+      {
+        "start": 94,
+        "title": "鑑定先核對受理範圍",
+        "text": "須為警方處理的法定道路事故，依第3條申請、移送或司法囑託。 已鑑定者不再受理；已進入偵查或審判者，須由司法機關囑託。"
+      },
+      {
+        "start": 104,
+        "title": "六個月限制有適用範圍",
+        "text": "申請或警、憲機關移送，距事故超過六個月原則不受理。 因天災或其他不可歸責事由遲誤者例外；不是一切司法囑託都套此期限。"
+      },
+      {
+        "start": 114,
+        "title": "覆議從收件翌日起算",
+        "text": "收受鑑定意見書翌日起三十日內，敘明理由申請覆議，以一次為限。 已進入司法程序者，應向該管司法機關聲請轉送。"
+      },
+      {
+        "start": 124,
+        "title": "民事比例與刑事、行政責任分開",
+        "text": "騎士也有過失，不會自動消除轉彎者自己的刑事或行政責任。 各自仍須符合要件；保留原檔與來源，缺少的測距、號誌或視線資料明確列出。"
+      }
+    ]
+  },
+  "column/ko/taiwan-left-turn-vs-straight-motorcycle": {
+    "id": "left-turn-film-v1-ko",
+    "src": "/videos/columns/left-turn-film-v1-ko.mp4",
+    "poster": "/images/column-videos/left-turn-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "좌회전 양보, 세 판결의 과실 비율과 감정 절차",
+    "description": "4초 가상 접촉 장면과 10초 설명 장면 13개를 한 파일로 이은 134초 무음 영상입니다. 회전 경로, 속도 증거, 세 민사 판결과 감정·복의 조건을 설명합니다.",
+    "disclosure": "인물·차량·도로·진료·문서·화면은 모두 별도로 만든 AI 가상 장면이며 판결의 실제 사고나 원본 증거가 아닙니다. 첫 접촉 장면은 신베이 사건에서 두 차량이 접촉했다는 뜻이 아닙니다. 속도·상해·책임을 증명하지 않습니다. 판결 설명은 공개 문서에 근거하며 배경 영상은 해당 사건과 무관합니다. 자동차 과실 70%·60%·50%는 각 사건의 판단입니다. 판결 출처는 본문에 있습니다.",
+    "durationSeconds": 134,
+    "sceneCount": 14,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "좌회전 경로와 맞은편 오토바이",
+        "text": "좌회전 차와 오토바이가 접촉하는 가상 장면입니다. 본문의 어느 판결도 재현하지 않았습니다."
+      },
+      {
+        "start": 4,
+        "title": "30m 전 신호와 좌회전 위치",
+        "text": "교차로 30m 전 방향등이나 수신호 후 안쪽·좌회전 차로로 옮겨야 합니다. 교차로 중심에서 돌고 맞은편 차로를 차지해 먼저 돌면 안 됩니다. 직진에 양보해야 합니다."
+      },
+      {
+        "start": 14,
+        "title": "현장 신호·표지와 차종 규칙",
+        "text": "신호와 교통 지휘를 따르고, 병행 시 지휘가 우선합니다. 현장 표지·표선도 따릅니다. 오토바이 회전은 표지·표선이 우선이며, 없으면 제102조와 별도 오토바이 규칙을 따릅니다."
+      },
+      {
+        "start": 24,
+        "title": "충돌 부위만으로 회전 완료를 판단하지 않습니다",
+        "text": "현장도, 정지선, 넘어진 위치와 접촉 전 경로를 함께 봅니다. 안전해진 뒤 촬영하고 보충 사진의 날짜를 적습니다. 뒤쪽 손상만으로 과실을 정할 수 없습니다."
+      },
+      {
+        "start": 34,
+        "title": "교차로 진입 전 영상도 보존합니다",
+        "text": "양쪽의 진입, 방향등, 회전 시작, 제동과 회피를 연속해서 확인합니다. 충돌 순간만 남기면 양보 경위, 가림 현상이나 신호 주기를 놓칠 수 있습니다."
+      },
+      {
+        "start": 44,
+        "title": "속도에는 거리·시간 근거가 필요합니다",
+        "text": "원본 프레임, 시간 차, 검증 가능한 거리 기준과 측정 한계를 확인합니다. 이 측정 장면은 별도 가상 예시입니다. 첫 장면의 실제 속도를 측정한 것이 아닙니다."
+      },
+      {
+        "start": 54,
+        "title": "신베이 사례: 접촉 기록 없이도 인과관계 인정",
+        "text": "114重簡1080은 좌회전에 따른 급제동·넘어짐의 인과관계를 인정했습니다. 오토바이 과속도 고려해 자동차 70%, 오토바이 30%로 정했습니다. 다른 사건의 기준은 아닙니다."
+      },
+      {
+        "start": 64,
+        "title": "윈린 사례: 과속·신호 위반 주장은 입증되지 않음",
+        "text": "114簡80은 신호 주기와 영상을 맞춰 양쪽의 녹색 신호 진입을 인정했습니다. 오토바이 전방주시 과실도 인정해 자동차 60%, 오토바이 40%로 정했습니다."
+      },
+      {
+        "start": 74,
+        "title": "타이중 사례: 보험사의 차량 손해 대위청구",
+        "text": "115簡上93은 속도 측정 근거를 검토해 70 대 30을 50 대 50으로 바꿨습니다. 자동차 대 오토바이의 비율이며, 해당 사건의 속도나 비율을 다른 사고에 적용할 수 없습니다."
+      },
+      {
+        "start": 84,
+        "title": "주원인·부원인은 고정된 배상 비율이 아닙니다",
+        "text": "감정은 행위·자료와 원인을 분석하고, 법원은 사건별 민사 과실을 판단합니다. 피해자 과실이 손해 발생·확대에 기여했다면 법원은 배상을 줄이거나 면제할 수 있습니다."
+      },
+      {
+        "start": 94,
+        "title": "감정 접수 조건",
+        "text": "경찰이 처리한 법정 도로 사고여야 하며 제3조의 신청·이송·사법기관 촉탁 경로를 따릅니다. 이미 감정한 사고는 제외됩니다. 수사·재판 중인 사건은 사법기관 촉탁이 필요합니다."
+      },
+      {
+        "start": 104,
+        "title": "6개월 제한과 예외",
+        "text": "신청이나 경찰·헌병 이송이 사고 후 6개월을 넘으면 원칙적으로 접수하지 않습니다. 천재지변 등 책임 없는 지연은 예외입니다. 모든 사법기관 촉탁에 같은 기한이 붙지는 않습니다."
+      },
+      {
+        "start": 114,
+        "title": "복의 신청: 받은 다음 날부터 30일",
+        "text": "감정의견서를 받은 다음 날부터 30일 안에 이유를 적어 복의를 신청할 수 있습니다. 한 번만 가능하며, 이미 사법절차 중이라면 담당 사법기관을 통해 이송을 신청해야 합니다."
+      },
+      {
+        "start": 124,
+        "title": "민사 배상과 형사·행정 책임",
+        "text": "오토바이 과실이 있어도 좌회전 운전자의 형사·행정 책임이 자동으로 없어지지는 않습니다. 각 책임의 요건을 따로 봅니다. 원본과 출처를 보존하고 거리·신호·시야 자료의 빈칸을 적습니다."
+      }
+    ]
+  },
+  "column/en/taiwan-left-turn-vs-straight-motorcycle": {
+    "id": "left-turn-film-v1-en",
+    "src": "/videos/columns/left-turn-film-v1-en.mp4",
+    "poster": "/images/column-videos/left-turn-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Left turns, three civil fault findings and appraisal procedure",
+    "description": "One silent 134-second file joins a four-second fictional contact with thirteen distinct ten-second explanations of turning paths, speed evidence, three civil cases and appraisal/review conditions.",
+    "disclosure": "All people, vehicles, roads, consultations, documents and screens are independent AI-generated fiction, not court exhibits or reconstructions. The opening contact does not imply contact in the New Taipei case. It proves no speed, injury or fault. Case chapters summarize public judgments over unrelated illustrative scenes. The 70%, 60% and 50% car-driver findings belong to those cases only; judgment links remain in the article.",
+    "durationSeconds": 134,
+    "sceneCount": 14,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "A left turn meets an oncoming scooter",
+        "text": "A fictional car–scooter contact. This does not reconstruct a judgment in the article."
+      },
+      {
+        "start": 4,
+        "title": "Signal, position and yield",
+        "text": "Signal or hand-signal 30 m before; enter the inner or left-turn lane. Turn at the centre; do not cut into oncoming traffic to turn first. Yield to straight traffic."
+      },
+      {
+        "start": 14,
+        "title": "Check controls and vehicle rules",
+        "text": "Follow signals, signs and markings; an officer directing traffic takes priority. Motorcycle turns follow signs/markings; otherwise Article 102 and motorcycle rules apply."
+      },
+      {
+        "start": 24,
+        "title": "Damage alone does not prove a completed turn",
+        "text": "Compare the scene plan, stop line, fall location and earlier vehicle paths. Take photos when safe; date later photos. Rear-side damage does not decide fault alone."
+      },
+      {
+        "start": 34,
+        "title": "Keep the approach, not only the impact",
+        "text": "Check entry, signaling, turn onset, braking and avoidance in continuous footage. An impact-only excerpt may omit yielding, blocked views or the relevant signal phase."
+      },
+      {
+        "start": 44,
+        "title": "Speed needs a distance and time basis",
+        "text": "Check original frames, elapsed time, verified distance references and method limits. This separate measurement scene does not measure the opening crash or prove its speed."
+      },
+      {
+        "start": 54,
+        "title": "New Taipei: a fall without recorded contact",
+        "text": "114 Chong Jian 1080 linked the left turn to emergency braking and the fall. Considering rider speeding, the court assigned car 70%, rider 30%—for that case only."
+      },
+      {
+        "start": 64,
+        "title": "Yunlin: alleged speeding was not proved",
+        "text": "114 Jian 80 matched signal phases and video: both vehicles entered on green. It also found rider inattention and assigned car 60%, rider 40%, on that evidence."
+      },
+      {
+        "start": 74,
+        "title": "Taichung: the insurer's vehicle-damage appeal",
+        "text": "115 Jian Shang 93 considered measured speed and changed 70:30 to 50:50. Shares are car:rider. Neither those shares nor that measured speed govern other crashes."
+      },
+      {
+        "start": 84,
+        "title": "Cause labels do not set civil percentages",
+        "text": "Appraisals examine conduct and evidence; courts assess civil fault for each case. Contributory fault in causing or increasing damage may reduce or eliminate compensation."
+      },
+      {
+        "start": 94,
+        "title": "Appraisal eligibility comes first",
+        "text": "It must be a police-handled statutory-road accident, via an Article 3 application/referral. Already-appraised cases are excluded. Investigation or trial requires a judicial commission."
+      },
+      {
+        "start": 104,
+        "title": "The six-month limit has defined scope",
+        "text": "Applications or police/military-police referrals over six months are generally refused. Natural disasters or other blameless delay are exceptions; judicial commissions differ."
+      },
+      {
+        "start": 114,
+        "title": "One review, within thirty days",
+        "text": "Give reasons within 30 days starting the day after receiving the appraisal opinion. Only one review is allowed; cases in judicial proceedings go through that authority."
+      },
+      {
+        "start": 124,
+        "title": "Civil shares and separate sanctions",
+        "text": "Rider fault does not automatically cancel the turning driver’s criminal or traffic liability. Each has its own conditions. Keep originals and sources; identify missing evidence."
+      }
+    ]
+  },
+  "column/zh-hant/green-light-red-light-pedestrian-third-person": {
+    "id": "pedestrian-third-person-film-v1-zh-hant",
+    "src": "/videos/columns/pedestrian-third-person-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/pedestrian-third-person-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "第三名行人、A柱視線與判決如何看證據",
+    "description": "這段114秒無聲影片把4秒白天假想接觸與十一段10秒說明連成單一檔案，核對暫停讓行、觀察位置、判決時間與測速資料，以及第三審的審查範圍。",
+    "disclosure": "所有人物、車輛、道路、文件與螢幕均為AI生成。開場是白天的獨立虛構情境，非本文夜間事故；沒有重現前兩人、機車、汽車與第三人的完整先後。後續停車觀察及測距也未還原原案視野或重做鑑定。畫面不能證明號誌、實際注意方向、可用反應時間、車速、重傷或罪責。判決章節依公開文字說明，並未取得原始錄影與完整卷證；各裁判來源保留在本文。",
+    "durationSeconds": 114,
+    "sceneCount": 12,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "先過兩人，仍要看後續來人",
+        "text": "車前與另一名行人接觸，是獨立假想。 不是本文夜間事故的影像或重建。"
+      },
+      {
+        "start": 4,
+        "title": "判決記載：前兩人後的第三人",
+        "text": "臺南二審記載先過兩人、接著機車，再是汽車與第三名行人接觸。 影片未重現該順序；法院所認事實須回到判決與原始證據。"
+      },
+      {
+        "start": 14,
+        "title": "減速與暫停讓行不同",
+        "text": "行近行人穿越道，遇行人穿越，無論有無指揮或號誌，均應暫停讓行。 駕駛仍須注意車前並採必要安全措施；綠燈不直接消除這些義務。"
+      },
+      {
+        "start": 24,
+        "title": "A柱與觀察位置要實際核對",
+        "text": "這是停車時改變觀察位置的示意，鏡頭並非駕駛人的眼睛。 柱子可能遮擋，仍須查遮住哪裡、多久及當時能否調整觀察。"
+      },
+      {
+        "start": 34,
+        "title": "看向哪裡，不全由影像決定",
+        "text": "本案往左注意前兩人的認定，也依駕駛自己的陳述。 不能說監視器直接拍到他的眼神；畫面、陳述與法院推論要分開。"
+      },
+      {
+        "start": 44,
+        "title": "三至四秒，不等於完整反應時間",
+        "text": "判決記載第三人開始穿越至碰撞約三至四秒。 還須核對何時可能看見、距離及遮擋；不足一秒是辯方主張，不是已採認事實。"
+      },
+      {
+        "start": 54,
+        "title": "照明與位置一起核對",
+        "text": "二審結合照明、視距、位置與行人動向，認有注意及避免可能。 現在補拍或攝影機看得見，都不能單獨證明事故時駕駛看得見。"
+      },
+      {
+        "start": 64,
+        "title": "低速也須檢查避免可能",
+        "text": "該案鑑定估汽車約21.8、行人約11.5公里／小時，法院採為判斷資料。 這是個案估算，不是免責門檻；測距示意也沒有重做該案鑑定。"
+      },
+      {
+        "start": 74,
+        "title": "行人違規與駕駛過失並存",
+        "text": "法院認行人闖紅燈為主因，也認駕駛違反義務並與重傷有因果關係。 不能從碰撞直接推定犯罪；仍須檢驗具體注意可能、違反義務與因果關係。"
+      },
+      {
+        "start": 84,
+        "title": "最高法院保留讓行義務",
+        "text": "113台上756指出讓行義務不靠「絕對路權」標籤成立，仍適用於違規穿越者。 並非行人永遠正確；第三審依合法上訴要件駁回，沒有重作影像勘驗。"
+      },
+      {
+        "start": 94,
+        "title": "撤銷改判、緩刑都不是無罪",
+        "text": "二審比較新舊法後改判有期徒刑四月、緩刑二年；另列易科罰金標準。 緩刑為暫不執行，標準不代表已繳罰金；刑事主次因也不是民事固定比例。"
+      },
+      {
+        "start": 104,
+        "title": "把證據來源與缺口留下來",
+        "text": "保留完整原檔、各鏡頭時間、位置與測量依據，副本另作標記。 區分本人陳述、可辨識畫面及推論；缺少視線或進路資料，就明確註明。"
+      }
+    ]
   }
 }

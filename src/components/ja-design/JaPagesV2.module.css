@@ -531,6 +531,7 @@ a.tile:active { background: var(--ja-tile-press); }
   color: #fff;
 }
 .nightTitlePart { display: inline-block; white-space: nowrap; }
+@media (max-width: 379px) { .nightTitlePart { display: inline; white-space: normal; } }
 .nightN1 { margin-top: clamp(28px, 3.4vw, 48px); }
 .nightN1Value {
   margin: 0;

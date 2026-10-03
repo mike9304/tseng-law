@@ -601,6 +601,18 @@
     {
       "locale": "zh-hant",
       "slug": "divorce-agreement-terms-before-signing"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-trade-secrets-act-criminal-civil-korean-companies"
+    },
+    {
+      "locale": "en",
+      "slug": "tsmc-arizona-chips-act-taiwan-outbound-approval"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-semiconductor-employees-overseas-assignment-labor-law"
     }
   ]
 }

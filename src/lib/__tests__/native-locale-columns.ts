@@ -217,17 +217,20 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '091-taiwan-distributor-trademark-registration-korean-brand.md',
     '094-korea-divorce-recognition-taiwan-household-registration.md', // family lane b01
     '110-korean-supplier-tsmc-vendor-qualification-contract.md', // semiconductor lane b01
+    '116-taiwan-trade-secrets-act-criminal-civil-korean-companies.md', // semiconductor lane b04
   ],
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
     '095-us-parent-child-taken-to-taiwan-custody.md', // family lane b01
     '108-us-divorce-decree-recognition-taiwan.md', // family lane b02+b03 ship
     '112-micron-taiwan-trade-secret-cases-lessons-for-us-companies.md', // semiconductor lane b01
+    '118-tsmc-arizona-chips-act-taiwan-outbound-approval.md', // semiconductor lane b04
   ],
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
     '111-tsmc-kumamoto-jasm-taiwan-outbound-investment-rules.md', // semiconductor lane b01
     '115-japan-kyogi-rikon-recognition-taiwan.md', // family lane b04
+    '117-japanese-materials-supplier-taiwan-nda-trade-secrets.md', // semiconductor lane b04
   ],
   'zh-hant': [
     '085-taiwan-accident-family-care-necessity-period.md',
@@ -249,6 +252,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '107-child-custody-best-interests-social-worker-report.md', // family lane b03
     '113-domestic-violence-protection-order-application-evidence.md', // family lane b04
     '114-divorce-agreement-terms-before-signing.md', // family lane b04
+    '119-taiwan-semiconductor-employees-overseas-assignment-labor-law.md', // semiconductor lane b04
   ],
 } as const;
 

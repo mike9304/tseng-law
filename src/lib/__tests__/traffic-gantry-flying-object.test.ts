@@ -5,7 +5,7 @@ import pending from '@/content/column-embeddings-pending.json';
 
 const cases = [
   ['taiwan-lowered-height-gantry-state-compensation-driver-fault', '限高', 100, 'liability', true],
-  ['taiwan-flying-object-truck-origin-dashcam-evidence', '鐵片', 101, 'evidence', false],
+  ['taiwan-flying-object-truck-origin-dashcam-evidence', '鐵片', 101, 'evidence', true],
 ] as const;
 
 describe('reviewed gantry and flying-object publication batch', () => {

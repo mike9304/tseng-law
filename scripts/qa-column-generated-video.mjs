@@ -6,7 +6,14 @@ const base = process.env.COLUMN_VIDEO_QA_BASE || 'http://127.0.0.1:4548';
 const out = process.env.COLUMN_VIDEO_QA_OUT || '/tmp/column-generated-video-qa';
 const generalAccidentCaptions = JSON.parse(await fs.readFile(new URL('../src/data/general-accident-video-captions.json', import.meta.url), 'utf8'));
 const overtakingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/overtaking-video-captions.json', import.meta.url), 'utf8'));
+const businessPremisesCaptions = JSON.parse(await fs.readFile(new URL('../src/data/business-premises-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-flying-object-truck-origin-dashcam-evidence', id: 'flying-metal-v4-zh-hant', duration: 4, contactTime: 0.25, expectedDiagrams: 0, disclosure: '畫面未交代來源，也未呈現貨車掉落物品' },
+  ...Object.entries(businessPremisesCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-company-setup-pitch-location', id: 'business-premises-v1-en',
+    evidenceStem: `business-premises-v1-${locale}`, duration: 6, contactTime: 4.2,
+    traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
   { locale: 'zh-hant', slug: 'taiwan-lowered-height-gantry-state-compensation-driver-fault', id: 'gantry-impact-v1-zh-hant', duration: 4, contactTime: 0.4, expectedDiagrams: 0, disclosure: '並非本文貨櫃車事故或現場設施的重建' },
   ...Object.entries(overtakingCaptions).map(([locale, caption]) => {
     const nativeLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale);

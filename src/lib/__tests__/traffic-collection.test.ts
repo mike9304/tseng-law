@@ -214,6 +214,7 @@ describe('loadTrafficCollection (published files)', () => {
         'green-light-red-light-pedestrian-third-person',
         'taiwan-road-rage-freeway-cut-in-sentence-reduced',
         'taiwan-lowered-height-gantry-state-compensation-driver-fault',
+        'taiwan-flying-object-truck-origin-dashcam-evidence',
       ].includes(item.slug);
       expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');

@@ -5,6 +5,7 @@ import ColumnGeneratedVideo from '@/components/ColumnGeneratedVideo';
 import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 import generalAccidentCaptions from '@/data/general-accident-video-captions.json';
 import overtakingCaptions from '@/data/overtaking-video-captions.json';
+import businessPremisesCaptions from '@/data/business-premises-video-captions.json';
 
 describe('reviewed column videos', () => {
   it('renders the reviewed local clip with controls, description and an AI disclosure', () => {
@@ -92,6 +93,7 @@ describe('reviewed column videos', () => {
   it.each([
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v3-zh-hant', '橙色車'],
     ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-impact-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],
+    ['taiwan-flying-object-truck-origin-dashcam-evidence', 'flying-metal-v4-zh-hant', '畫面未交代來源，也未呈現貨車掉落物品'],
     ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-v2-zh-hant', '銀色中間車'],
     ['taiwan-roadside-starting-parking-exit-liability', 'roadside-start-v3-zh-hant', '橙色車'],
     ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-scooter-v2-zh-hant', '機車'],
@@ -110,6 +112,19 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo('zh-hant', slug, 'issue')).toBeNull();
   });
 
+  it.each(Object.entries(businessPremisesCaptions))('keeps the shared shop illustration and %s caption on the reviewed premises article', (locale, caption) => {
+    const slug = 'taiwan-company-setup-pitch-location';
+    const asset = getColumnGeneratedVideo(locale, slug);
+    expect(asset?.src).toBe('/videos/columns/business-premises-v1-en.mp4');
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
+    for (const value of Object.values(caption)) expect(html).toContain(renderToStaticMarkup(<>{value}</>));
+    expect(html).toContain('controls=""');
+    expect(html).not.toMatch(/autoplay|loop=/i);
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+    expect(getColumnGeneratedVideo(locale, 'taiwan-accident-police-records')).toBeNull();
+    expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
+  });
+
   it.each([
     ['ko', '실제 임대 매물이 아닙니다'],
     ['en', 'not an actual rental listing'],
@@ -121,7 +136,7 @@ describe('reviewed column videos', () => {
     expect(html).toContain(`business-premises-v1-${locale}.mp4`);
     expect(html).toContain(disclosure);
     expect(html).not.toContain('accident footage');
-    expect(getColumnGeneratedVideo('fr', slug)).toBeNull();
+    expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
     expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
   });
 

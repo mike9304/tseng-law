@@ -1,5 +1,6 @@
 import generalAccidentCaptions from './general-accident-video-captions.json';
 import overtakingCaptions from './overtaking-video-captions.json';
+import businessPremisesCaptions from './business-premises-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -18,6 +19,28 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-flying-object-truck-origin-dashcam-evidence': {
+    id: 'flying-metal-v4-zh-hant',
+    src: '/videos/columns/flying-metal-v4-zh-hant.mp4',
+    poster: '/images/column-videos/flying-metal-v4-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    title: '金屬片撞上引擎蓋後，向左彈出畫面',
+    description: '行車視角中，一片金屬片迅速撞上銀色引擎蓋左側，翻轉後從畫面左緣離開。引擎蓋留下凹痕與刮痕，前方貨車繼續行駛。這是4秒無聲影片。',
+    disclosure: 'AI生成的獨立假想場景，非本文兩件判決或原始行車影像的重建。金屬片在開場時已位於空中，畫面未交代來源，也未呈現貨車掉落物品；不能據此判斷物品來自哪輛車、是否為貨物或零件，或認定法律責任。',
+  },
+  // Explicit reviewed translations share the existing fictional shop scene.
+  ...Object.fromEntries(Object.entries(businessPremisesCaptions).map(([locale, caption]) => [
+    `column/${locale}/taiwan-company-setup-pitch-location`,
+    {
+      id: 'business-premises-v1-en',
+      src: '/videos/columns/business-premises-v1-en.mp4',
+      poster: '/images/column-videos/business-premises-v1-en.jpg',
+      width: 1280,
+      height: 720,
+      ...caption,
+    },
+  ])),
   'column/zh-hant/taiwan-lowered-height-gantry-state-compensation-driver-fault': {
     id: 'gantry-impact-v1-zh-hant',
     src: '/videos/columns/gantry-impact-v1-zh-hant.mp4',

@@ -248,10 +248,10 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
 
 /** Road-rage judgment series (2026-10-03), published in all four locales with a reviewed looping dashcam-style AI clip. */
 export const ROAD_RAGE_COLUMN_FILES_20261003 = {
-  ko: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
-  en: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
-  ja: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
-  'zh-hant': ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md'],
+  ko: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md', '109-taiwan-road-rage-baseball-bat-fracture-damages.md'],
+  en: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md', '109-taiwan-road-rage-baseball-bat-fracture-damages.md'],
+  ja: ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md', '109-taiwan-road-rage-baseball-bat-fracture-damages.md'],
+  'zh-hant': ['099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md', '109-taiwan-road-rage-baseball-bat-fracture-damages.md'],
 } as const;
 
 /** Registered locale-specific batches through 2026-10-03, in filename order. */

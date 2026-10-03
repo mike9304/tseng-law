@@ -118,6 +118,7 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '097': '2026-10-03',
   '098': '2026-10-03',
   '099': '2026-10-03', // road-rage series: freeway cut-in sentence reduced (all four locales)
+  '109': '2026-10-03', // road-rage series: baseball bat after a driving dispute — 7 months + civil damages (all four locales)
   '100': '2026-10-03',
   '101': '2026-10-03',
   '102': '2026-10-03',

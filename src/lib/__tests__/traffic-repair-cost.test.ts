@@ -39,10 +39,12 @@ describe('reviewed repair-cost depreciation column', () => {
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', video: '1' })).map(p => p.slug)).toEqual([
       'taiwan-road-rage-baseball-bat-fracture-damages',
       'taiwan-car-repair-rental-cost-repair-period-evidence',
+      'taiwan-accident-family-care-necessity-period',
+      'taiwan-car-accident-work-loss-rest-note',
       slug,
     ]);
     // 2026-10-03: reviewed generated video; no diagram frontmatter.
-    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('repair-workshop-v1-zh-hant');
+    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('repair-cost-film-v1-zh-hant');
     expect(getColumnPost(slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
   });

@@ -42,7 +42,7 @@ describe('reviewed rental-repair compensation column', () => {
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', q: '租車單' })).map(p => p.slug)).toEqual([slug]);
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: 'compensation', video: '1' })).some(p => p.slug === slug)).toBe(true);
     // 2026-10-03: reviewed generated video; no diagram frontmatter.
-    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('repair-workshop-v1-zh-hant');
+    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('rental-period-film-v1-zh-hant');
     expect(getColumnPost(slug, 'zh-hant')!.diagramVideo).toBeUndefined();
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === slug)).toBe(false);
   });

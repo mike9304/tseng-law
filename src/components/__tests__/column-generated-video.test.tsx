@@ -240,6 +240,7 @@ describe('reviewed column videos', () => {
   });
 
   it.each([
+    ['taiwan-repaired-car-diminished-value-appraisal-evidence', 'diminished-value-film-v1-zh-hant', '2%、70%與金額僅屬各該案件'],
     ['taiwan-bus-stop-illegal-parking-no-contact-criminal-causation', 'bus-stop-causation-film-v1-zh-hant', '六個原始鏡頭未取得'],
     ['taiwan-motorway-blocking-no-collision-public-danger', 'motorway-blocking-film-v1-zh-hant', '與判決凌晨反覆攔擋不同'],
     ['taiwan-ambulance-red-light-emergency-priority-negligence', 'ambulance-priority-film-v1-zh-hant', '不能證明勤務合法或責任'],
@@ -278,6 +279,22 @@ describe('reviewed column videos', () => {
     expect(asset?.durationSeconds).toBe(94);
     expect(asset?.sceneCount).toBe(10);
     expect(asset?.chapters?.map(chapter => chapter.start)).toEqual([0, 4, 14, 24, 34, 44, 54, 64, 74, 84]);
+  });
+
+  it.each([
+    ['ko', '1심의 상소·확정 여부는 확인되지 않았습니다'],
+    ['en', 'any later appeal or finality remains unverified'],
+    ['ja', 'その後の上訴・確定は未確認です'],
+    ['zh-hant', '一審是否上訴或確定仍未確認'],
+  ])('keeps the two-stop film and first-instance limits in %s', (locale, disclosure) => {
+    const slug = 'taiwan-road-rage-started-did-not-matter-driver-blocked';
+    const asset = getColumnGeneratedVideo(locale, slug);
+    expect(asset).toMatchObject({ durationSeconds: 140, sceneCount: 14, id: `two-stops-film-v1-${locale}` });
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} autoPlay />);
+    expect(html.match(/<video/g)).toHaveLength(1);
+    expect(html).toContain(disclosure);
+    expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+    expect(getColumnGeneratedVideo('fr', slug)).toBeNull();
   });
 
   it.each(Object.entries(businessPremisesCaptions))('keeps the shared shop illustration and %s caption on the reviewed premises article', (locale, caption) => {

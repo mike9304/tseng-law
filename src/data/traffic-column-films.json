@@ -9981,5 +9981,435 @@
         "text": "نام چھپائے گئے مقدمے کا نتیجہ اسی کے خاص حقائق پر منحصر ہے۔ اپنا مقدمہ اس کے ثبوت اور موجودہ قانون کے مطابق جانچیں۔"
       }
     ]
+  },
+  "column/zh-hant/taiwan-road-rage-started-did-not-matter-driver-blocked": {
+    "id": "two-stops-film-v1-zh-hant",
+    "src": "/videos/columns/two-stops-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/two-stops-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "兩次攔車、六分鐘行駛與持棒威嚇的判斷",
+    "description": "140秒無聲影片分開說明兩次攔車、其間的行駛、物品辨識、被告辯解、強制與恐嚇的競合，以及一審刑度和證據範圍。",
+    "disclosure": "人物、車輛、場地、文件和螢幕都是AI生成的獨立假想情境，不是士林案重建或原始錄影。開場沒有揮棒或擊打；畫面不能補足判決未載的日期、停車時間或動作，也不是法院證據。字幕依本文與公開判決整理，一審是否上訴或確定仍未確認。",
+    "durationSeconds": 140,
+    "sceneCount": 14,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "持棒站在車旁的假想",
+        "text": "男子持下垂球棒站在車旁，沒有揮棒、擊打或接觸。 本段是AI情境，並非士林案的當事人或兩次攔車重建。"
+      },
+      {
+        "start": 10,
+        "title": "判決記載兩次阻擋行進",
+        "text": "士林地院115易383於2026年6月26日認定兩次攔車。 理由主要依告訴人行車紀錄器的勘驗；本片沒有原始錄影。"
+      },
+      {
+        "start": 20,
+        "title": "六分鐘是繼續行駛的時間",
+        "text": "第一次停車之後，告訴人又繼續行駛六分鐘。 不是被攔停六分鐘；判決未寫各次停車持續多久。"
+      },
+      {
+        "start": 30,
+        "title": "第一個物品沒有明確辨識",
+        "text": "勘驗記載第一次是不明棒狀物，第二次才是木頭棒球棍。 不能把第一次的物品也直接認定為同一支球棒。"
+      },
+      {
+        "start": 40,
+        "title": "逆向超車後，再次擋住轉彎",
+        "text": "判決記載車輛從雙黃線左側逆向超車，再跟隨左轉攔阻。 圖面與照片只是說明材料，不能量測本案位置或距離。"
+      },
+      {
+        "start": 50,
+        "title": "對方先逼車，是被告的說法",
+        "text": "被告稱對方先逼車，自己只是攔車，並未恐嚇。 法院沒有認定誰先挑起爭執，而以被告自身行為作判斷。"
+      },
+      {
+        "start": 60,
+        "title": "持棒走近與前後情境一起看",
+        "text": "法院從客觀理性第三人立場，合看攔車、持棒走近與辱罵。 認為妨害行動自由並使人害怕；判決未記載揮棒打人。"
+      },
+      {
+        "start": 70,
+        "title": "證據清單與具體勘驗要區分",
+        "text": "清單另有路口錄影、截圖、供述及扣押資料。 列有某份資料，不等於判決已逐段說明它證明了什麼。"
+      },
+      {
+        "start": 80,
+        "title": "強制與恐嚇，兩罪都成立",
+        "text": "法院認定同時符合刑法304條第1項強制罪與305條恐嚇罪。 不能因主文只寫強制罪，就說恐嚇部分獲判無罪。"
+      },
+      {
+        "start": 90,
+        "title": "連續行為，從較重的罪處罰",
+        "text": "法院把接續動作視為一行為，再依55條想像競合處理。 從較重的強制罪處罰，沒有把兩罪刑度直接相加。"
+      },
+      {
+        "start": 100,
+        "title": "三月徒刑與每日換算基準",
+        "text": "一審判有期徒刑三月，如易科罰金，以1,000元折算一日。 金額是刑罰換算基準；判決沒有寫實際繳納或總額。"
+      },
+      {
+        "start": 110,
+        "title": "扣案球棒一支宣告沒收",
+        "text": "法院認定球棒為被告所有、供犯罪所用，依38條第2項沒收。 這是本案的沒收判斷，不能補寫球棒曾擊中人或車。"
+      },
+      {
+        "start": 120,
+        "title": "調解未成，不代表已定賠償",
+        "text": "被告有調解意願，但方案差距太大；法院將此列入量刑考量。 本件未判民事賠償金額，也未確定交通行政處分。"
+      },
+      {
+        "start": 130,
+        "title": "一審範圍與完整前後錄影",
+        "text": "判決可上訴；後續上訴、確定與執行未確認。 保存完整原檔有助核對前後情境；並非所有停車都構成同罪。"
+      }
+    ]
+  },
+  "column/ko/taiwan-road-rage-started-did-not-matter-driver-blocked": {
+    "id": "two-stops-film-v1-ko",
+    "src": "/videos/columns/two-stops-film-v1-ko.mp4",
+    "poster": "/images/column-videos/two-stops-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "두 차례 진로 차단과 방망이를 든 행동의 판단",
+    "description": "140초 무음 영상으로 두 차례 진로 차단과 사이의 주행, 물건 식별, 피고인의 주장, 강제·협박죄의 관계, 1심 형량과 증거 범위를 설명합니다.",
+    "disclosure": "인물·차량·장소·서류·화면은 AI로 만든 독립된 가상 장면입니다. 스린 사건의 재현이나 원본 블랙박스가 아닙니다. 첫 장면은 방망이를 휘두르거나 때리지 않습니다. 판결에 없는 날짜·정차 시간·행동을 영상으로 보충할 수 없습니다. 자막은 본문과 공개 판결을 요약하며, 1심의 상소·확정 여부는 확인되지 않았습니다.",
+    "durationSeconds": 140,
+    "sceneCount": 14,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "차 옆에 방망이를 들고 선 가상 장면",
+        "text": "남성은 방망이를 아래로 들고 서며 휘두르거나 때리지 않습니다. 스린 사건의 실제 인물이나 두 차례 진로 차단을 재현한 영상이 아닙니다."
+      },
+      {
+        "start": 10,
+        "title": "판결에 적힌 두 차례 진로 차단",
+        "text": "스린지법 115易383은 2026년 6월 26일 두 차례 차단을 인정했습니다. 주된 근거는 고소인 블랙박스 검증입니다. 이 영상에는 원본이 없습니다."
+      },
+      {
+        "start": 20,
+        "title": "6분은 계속 주행한 시간",
+        "text": "첫 정차 뒤 고소인의 차는 6분 동안 계속 달렸습니다. 6분간 막혀 있었다는 뜻이 아닙니다. 각 정차 시간은 적혀 있지 않습니다."
+      },
+      {
+        "start": 30,
+        "title": "첫 물건은 무엇인지 특정되지 않음",
+        "text": "첫 장면은 정체불명의 막대, 두 번째는 나무 야구방망이로 적혔습니다. 처음부터 같은 방망이였다고 단정할 수 없습니다."
+      },
+      {
+        "start": 40,
+        "title": "역주행 추월 뒤 좌회전 진로도 차단",
+        "text": "판결은 이중 황색선 왼쪽으로 추월하고 좌회전을 따라 막았다고 적었습니다. 도면과 사진은 설명용이며 실제 위치나 거리를 측정한 자료가 아닙니다."
+      },
+      {
+        "start": 50,
+        "title": "상대가 먼저였다는 것은 피고인 주장",
+        "text": "피고인은 상대가 먼저 위협 운전을 했고 자신은 세웠을 뿐이라고 했습니다. 법원은 누가 먼저였는지 확정하지 않고 피고인의 행동을 판단했습니다."
+      },
+      {
+        "start": 60,
+        "title": "방망이와 앞뒤 맥락을 함께 판단",
+        "text": "법원은 합리적인 제3자의 시각에서 진로 차단·접근·욕설을 함께 봤습니다. 행동의 자유와 안전을 침해했다고 보았고, 타격을 인정한 내용은 없습니다."
+      },
+      {
+        "start": 70,
+        "title": "증거 목록과 구체적인 검증은 구별",
+        "text": "목록에는 교차로 영상·캡처·진술·압수 자료도 있습니다. 자료가 있다는 것만으로 무엇을 입증했는지 모두 설명된 것은 아닙니다."
+      },
+      {
+        "start": 80,
+        "title": "강제죄와 협박죄 모두 인정",
+        "text": "법원은 형법 304조 1항 강제죄와 305조 협박죄를 모두 인정했습니다. 주문에 강제죄만 있다고 협박이 무죄라는 뜻은 아닙니다."
+      },
+      {
+        "start": 90,
+        "title": "이어진 행동을 한 행위로 판단",
+        "text": "이어진 동작을 한 행위로 보고 형법 55조의 상상적 경합을 적용했습니다. 더 무거운 강제죄로 처벌했으며 두 형량을 더하지 않았습니다."
+      },
+      {
+        "start": 100,
+        "title": "징역 3개월과 하루 환산 기준",
+        "text": "1심은 징역 3개월, 벌금으로 대신할 경우 하루 1,000대만달러를 정했습니다. 교통 과태료가 아닌 형벌 환산 기준입니다. 실제 납부와 총액은 안 나옵니다."
+      },
+      {
+        "start": 110,
+        "title": "압수된 야구방망이 한 개 몰수",
+        "text": "피고인 소유로 범행에 쓴 물건이어서 형법 38조 2항에 따라 몰수했습니다. 이 판단으로 방망이가 사람이나 차를 때렸다는 사실을 보탤 수는 없습니다."
+      },
+      {
+        "start": 120,
+        "title": "조정 실패와 배상 판결은 다름",
+        "text": "조정 의향은 있었으나 제안 차이가 컸다는 사정을 양형에 고려했습니다. 민사 배상액이나 교통 행정처분을 정한 판결은 아닙니다."
+      },
+      {
+        "start": 130,
+        "title": "1심의 범위와 앞뒤 원본 기록",
+        "text": "상소 가능한 1심이며 이후 상소·확정·집행은 확인되지 않았습니다. 앞뒤 원본은 맥락 대조에 도움이 됩니다. 모든 정차가 같은 죄는 아닙니다."
+      }
+    ]
+  },
+  "column/en/taiwan-road-rage-started-did-not-matter-driver-blocked": {
+    "id": "two-stops-film-v1-en",
+    "src": "/videos/columns/two-stops-film-v1-en.mp4",
+    "poster": "/images/column-videos/two-stops-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Two blocked routes, six minutes of driving and a bat",
+    "description": "A silent 140-second film distinguishes the two stops, intervening driving, object identification, the defence, the two offences and the limits of the first-instance judgment.",
+    "disclosure": "People, vehicles, places, documents and screens are separate AI-generated fictional illustrations. This is not a reconstruction of the Shilin case or original dashcam footage. The opening shows no swing or strike. Images cannot supply dates, stopping times or actions missing from the judgment. Captions summarize the article and public judgment; any later appeal or finality remains unverified.",
+    "durationSeconds": 140,
+    "sceneCount": 14,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "A fictional roadside confrontation",
+        "text": "The man holds the bat down; no swing, strike or contact is shown. This is not the Shilin case or a reconstruction of its two stops."
+      },
+      {
+        "start": 10,
+        "title": "The judgment describes two obstructions",
+        "text": "Shilin case 115易383 was decided on June 26, 2026. It relied mainly on the complainant's dashcam; this film has no original footage."
+      },
+      {
+        "start": 20,
+        "title": "Six minutes of continued driving",
+        "text": "After the first stop, the complainant drove on for six minutes. That is not a six-minute blockage. Neither stop's duration is stated."
+      },
+      {
+        "start": 30,
+        "title": "The first object was unidentified",
+        "text": "The first object was a stick-like item; the second was a wooden bat. The text does not identify both as the same bat."
+      },
+      {
+        "start": 40,
+        "title": "Wrong-way overtaking and another block",
+        "text": "The judgment describes crossing left of double yellow lines, then blocking a turn. The diagrams and photos are illustrative, not measurements of this case."
+      },
+      {
+        "start": 50,
+        "title": "Who started it was a defence claim",
+        "text": "The defendant said the other driver crowded first and denied making threats. The court left who started it undecided and assessed the defendant's own acts."
+      },
+      {
+        "start": 60,
+        "title": "The bat and the surrounding conduct",
+        "text": "The court assessed the blocking, approach and curse as a reasonable third person. It found interference and fear; the reasons record no bat strike."
+      },
+      {
+        "start": 70,
+        "title": "Listed evidence and specific findings",
+        "text": "The list also names CCTV, screenshots, accounts and seizure records. Listing a source does not explain everything that source established."
+      },
+      {
+        "start": 80,
+        "title": "Both coercion and threats were found",
+        "text": "The court applied Criminal Code Articles 304(1) and 305. Naming only coercion in the order did not mean acquittal on the threat."
+      },
+      {
+        "start": 90,
+        "title": "One act, punished under the heavier offence",
+        "text": "The court treated the connected conduct as one act and applied Article 55. It punished coercion as the heavier offence, without adding two sentences."
+      },
+      {
+        "start": 100,
+        "title": "Three months and a daily conversion rate",
+        "text": "The sentence was three months; fine conversion was set at NT$1,000 per day. This is a criminal conversion rate. Actual payment and a total were not stated."
+      },
+      {
+        "start": 110,
+        "title": "One seized bat was confiscated",
+        "text": "The court applied Article 38(2): the defendant owned and used it in the offence. That finding does not establish that the bat hit a person or a car."
+      },
+      {
+        "start": 120,
+        "title": "Failed mediation did not set damages",
+        "text": "Terms were too far apart despite willingness to mediate; sentencing considered this. The judgment set no civil damages amount or final traffic sanction."
+      },
+      {
+        "start": 130,
+        "title": "A first-instance ruling and the full record",
+        "text": "An appeal was possible. Later appeal, finality and execution remain unverified. Keep the original context; the ruling does not criminalize every stop."
+      }
+    ]
+  },
+  "column/ja/taiwan-road-rage-started-did-not-matter-driver-blocked": {
+    "id": "two-stops-film-v1-ja",
+    "src": "/videos/columns/two-stops-film-v1-ja.mp4",
+    "poster": "/images/column-videos/two-stops-film-v1-ja.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "二度の進路妨害、六分間の走行とバットの評価",
+    "description": "140秒の無音映像で、二度の停車とその間の走行、物の識別、被告人の説明、強制と脅迫の関係、一審の刑と証拠の範囲を整理します。",
+    "disclosure": "人物・車両・場所・書類・画面はAIで作った独立した架空の場面です。士林事件の再現や元の車載映像ではありません。冒頭にバットを振る動作や殴打はありません。判決にない日時・停車時間・行動を画像で補えません。字幕は本文と公開判決の要約で、その後の上訴・確定は未確認です。",
+    "durationSeconds": 140,
+    "sceneCount": 14,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "車の横でバットを持つ架空の場面",
+        "text": "男性はバットを下げて持ち、振ったり、人や車に当てたりしません。 士林事件の当事者や、二度の進路妨害を再現した映像ではありません。"
+      },
+      {
+        "start": 10,
+        "title": "判決に記された二度の妨害",
+        "text": "士林地院115易383は2026年6月26日、二度の進路妨害を認定。 主な根拠は告訴人の車載映像の勘驗です。本片に元映像はありません。"
+      },
+      {
+        "start": 20,
+        "title": "六分は走り続けた時間",
+        "text": "最初の停車後、告訴人の車は六分間走り続けました。 六分間止められた意味ではなく、各停車の長さは記されていません。"
+      },
+      {
+        "start": 30,
+        "title": "最初の物は特定されていない",
+        "text": "最初は不明な棒状の物、二度目は木製の野球バットと記されています。 最初から同じバットだったと断定することはできません。"
+      },
+      {
+        "start": 40,
+        "title": "逆走で追い越し、左折先もふさいだ",
+        "text": "判決は二重黄線の左側での追越しと、左折に続く妨害を記しました。 図面と写真は説明用で、本件の位置や距離を測ったものではありません。"
+      },
+      {
+        "start": 50,
+        "title": "相手が先だったという弁解",
+        "text": "被告人は相手が先にあおり、自分は止めただけで脅していないと説明。 裁判所は発端を確定せず、被告人自身の行動を評価しました。"
+      },
+      {
+        "start": 60,
+        "title": "バットと前後の状況を合わせて見る",
+        "text": "裁判所は理性的な第三者の視点で、妨害・接近・罵声を検討しました。 自由の妨害と恐怖を認めていますが、バットで殴った記載はありません。"
+      },
+      {
+        "start": 70,
+        "title": "証拠の一覧と具体的な検証",
+        "text": "一覧には監視映像、静止画、供述、押収資料もあります。 資料が載っていても、それが何を証明したか全て説明されたとは限りません。"
+      },
+      {
+        "start": 80,
+        "title": "強制と脅迫の両方が成立",
+        "text": "裁判所は刑法304条1項の強制罪と305条の脅迫罪を認定しました。 主文が強制罪だけでも、脅迫について無罪とした意味ではありません。"
+      },
+      {
+        "start": 90,
+        "title": "一つの行為を重い罪で処罰",
+        "text": "続いた動作を一行為とし、刑法55条の想像競合を適用しました。 重い強制罪で処罰し、二つの刑を足したわけではありません。"
+      },
+      {
+        "start": 100,
+        "title": "三か月の刑と一日の換算基準",
+        "text": "一審は三か月の有期徒刑、易科罰金は一日1,000台湾元としました。 刑の換算基準で、実際の納付や総額は記されていません。"
+      },
+      {
+        "start": 110,
+        "title": "押収されたバット一本を没収",
+        "text": "被告人の所有物で犯罪に使われたため、刑法38条2項を適用しました。 この判断から、人や車を殴った事実まで付け加えることはできません。"
+      },
+      {
+        "start": 120,
+        "title": "調停の不成立と賠償は別",
+        "text": "調停の意思はあっても提案の隔たりが大きく、この事情も量刑で考慮。 民事賠償額や交通の行政処分を確定した判決ではありません。"
+      },
+      {
+        "start": 130,
+        "title": "一審の範囲と前後の元映像",
+        "text": "上訴できる一審判断で、その後の上訴・確定・執行は未確認です。 前後の原本保存は検証に役立ちます。全ての停車を同罪とする判決ではありません。"
+      }
+    ]
+  },
+  "column/zh-hant/taiwan-repaired-car-diminished-value-appraisal-evidence": {
+    "id": "diminished-value-film-v1-zh-hant",
+    "src": "/videos/columns/diminished-value-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/diminished-value-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "修復後價差、鑑價前提與14,700元的計算",
+    "description": "160秒無聲影片依嘉義案說明必要修復、價差證明、個案2%與70%的計算、利息及鑑價費，並與臺北案採認的報告作對照。",
+    "disclosure": "車輛、人物、維修空間、文件及螢幕均是AI生成的獨立假想情境，並非兩案實車、原始報告或鑑定過程。影片沒有替畫面中的車估價，也不重建事故。字幕依本文及公開裁判整理；2%、70%與金額僅屬各該案件，不能當成通用費率或已收款證明。",
+    "durationSeconds": 160,
+    "sceneCount": 16,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "修好後，交易價值是否仍減少",
+        "text": "車輛物理上修好，不當然表示事故造成的市場價差已消失。 開場只是假想查看車況，沒有進行本案鑑價或證明任何價差。"
+      },
+      {
+        "start": 10,
+        "title": "實際修法與必要修法要區分",
+        "text": "嘉義案車主採換門方式修復，法院仍審查換整片是否必要。 自己選擇的修法，不當然成為對方必須負擔全部損失的基礎。"
+      },
+      {
+        "start": 20,
+        "title": "一審駁回，二審部分改判",
+        "text": "車主請求52,000元價差及15,000元鑑價費，合計67,000元。 嘉義114簡上104於2025年12月17日，部分改判本金14,700元。"
+      },
+      {
+        "start": 30,
+        "title": "鋁合金車門，不表示只能換新",
+        "text": "車廠說明須看受損位置、範圍；也曾因安全疑慮建議換新。 法院合看照片與函覆，仍認不足證明整片更換是必要修復。"
+      },
+      {
+        "start": 40,
+        "title": "報告的換門前提，與法院不同",
+        "text": "私人報告按換門估算，未回答若以維修處理應如何估算價差。 法院未直接採報告全額，不等於認定完全沒有價值損失。"
+      },
+      {
+        "start": 50,
+        "title": "修理、剩餘價差與用車損失",
+        "text": "修復費、修復後的價差、必要替代交通或營業損失，分別證明。 同一損失不能重複計算；營收也不能直接當成淨損失。"
+      },
+      {
+        "start": 60,
+        "title": "修好後，原始受損較難回復",
+        "text": "照片、工單及修復前後資料，有助核對受損程度與處理方式。 本案難再精確估算以維修方式處理後的車況與剩餘價差。"
+      },
+      {
+        "start": 70,
+        "title": "先證明損害，再處理數額困難",
+        "text": "民訴222條第2項：損害已證明，數額不能證明或顯有重大困難。 法院才審酌情況定數額；不是只報一個金額就免除損害證明。"
+      },
+      {
+        "start": 80,
+        "title": "車齡約三月與個案2%",
+        "text": "法院考量出廠至事故約三月、損傷不重，與重大事故車有別。 據此酌定2%價值減損，並非所有事故車都固定折價2%。"
+      },
+      {
+        "start": 90,
+        "title": "先算21,000元價差",
+        "text": "正常車況市值1,050,000元 × 本案2% ＝ 21,000元。 這是責任分配前的交易價值減損，不是最後判賠本金。"
+      },
+      {
+        "start": 100,
+        "title": "再乘騎士應負擔的70%",
+        "text": "21,000元 × 70% ＝ 14,700元；70%是本案機車騎士責任。 汽車駕駛與違停者同列次因，不能把其餘30%全算給車主。"
+      },
+      {
+        "start": 110,
+        "title": "本金另加判決所命利息",
+        "text": "二審准14,700元，自2025年2月4日起至清償日按年息5%計。 這是判決給付內容，不是已收款紀錄，也不是一律從事故日計息。"
+      },
+      {
+        "start": 120,
+        "title": "15,000元鑑價費未獲准",
+        "text": "報告的修復前提不同，未能證明法院審查的價差。 法院認非本案伸張權利的必要支出，欠缺相當因果關係。"
+      },
+      {
+        "start": 130,
+        "title": "另一案的報告獲採，理由不同",
+        "text": "臺北115北簡1444採95,000元價差及必要鑑價費6,000元。 報告詳列車況、修復、年份、里程與照片；其他判賠項目另計。"
+      },
+      {
+        "start": 140,
+        "title": "私人鑑價並非一概無用",
+        "text": "報告須對應爭點與資料；收據本身不能證明支出的必要性。 民訴277條原則上要求主張者舉證，仍保留法律及顯失公平例外。"
+      },
+      {
+        "start": 150,
+        "title": "保存基礎資料，分清判決範圍",
+        "text": "留存原照、工單、收據、估價條件與各項請求；不保證必定獲賠。 嘉義二審載不得上訴；未另查確定日。臺北一審後續確定未確認。"
+      }
+    ]
   }
 }

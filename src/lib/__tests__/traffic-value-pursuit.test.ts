@@ -5,20 +5,21 @@ import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 import pending from '@/content/column-embeddings-pending.json';
 
 const articles = [
-  { slug: 'taiwan-repaired-car-diminished-value-appraisal-evidence', number: 189, subject: 'compensation' },
-  { slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', number: 190, subject: 'liability' },
+  { slug: 'taiwan-repaired-car-diminished-value-appraisal-evidence', number: 189, subject: 'compensation', film: 'diminished-value-film-v1-zh-hant' },
+  { slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', number: 190, subject: 'liability', film: null },
 ] as const;
 
 describe('reviewed diminished value and vacated pursuit judgment columns', () => {
-  it.each(articles)('includes $slug once in native search and its subject without a false video badge', (a) => {
+  it.each(articles)('includes $slug once in native search with its reviewed video availability', (a) => {
     const items = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = items.filter(p => p.slug === a.slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ columnNumber: a.number, subject: a.subject, hasVideo: false, publicationDate: '2026-10-04' });
+    expect(matches[0]).toMatchObject({ columnNumber: a.number, subject: a.subject, hasVideo: Boolean(a.film), publicationDate: '2026-10-04' });
     expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ subject: a.subject, q: matches[0].title })).map(p => p.slug)).toEqual([a.slug]);
-    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(p => p.slug === a.slug)).toBe(false);
+    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(p => p.slug === a.slug)).toBe(Boolean(a.film));
     expect(pending.columns.filter(p => p.slug === a.slug)).toEqual([{ locale: 'zh-hant', slug: a.slug }]);
-    expect(getColumnGeneratedVideo('zh-hant', a.slug)).toBeNull();
+    if (a.film) expect(getColumnGeneratedVideo('zh-hant', a.slug)?.id).toBe(a.film);
+    else expect(getColumnGeneratedVideo('zh-hant', a.slug)).toBeNull();
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === a.slug)).toBe(false);
   });
 

@@ -218,6 +218,7 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedGeneratedScene = [
+        'taiwan-repaired-car-diminished-value-appraisal-evidence',
         'taiwan-ambulance-red-light-emergency-priority-negligence',
         'taiwan-bus-stop-illegal-parking-no-contact-criminal-causation',
         'taiwan-accident-stop-dialogue-hit-and-run-evidence',

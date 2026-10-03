@@ -155,6 +155,72 @@ export function useEnSteps(getStage: ElementGetter) {
   }, [getStage]);
 }
 
+/**
+ * One film at a time (CONCEPT-V2 11, 18.6). The shared player pauses a film only once it has left the
+ * viewport, so during the hand-off from the S0 film to the S1 film both would play. The film with more
+ * visible height leads; any other film that plays is paused and marked as held, and a held film resumes
+ * when it leads again unless the visitor paused it (its control then offers "Play" or "Replay").
+ */
+export function useEnOneFilm(getRoot: ElementGetter) {
+  useEffect(() => {
+    const root = getRoot();
+    if (!root || typeof IntersectionObserver === 'undefined') return undefined;
+    const films = Array.from(root.querySelectorAll<HTMLElement>('[data-film]'));
+    if (films.length < 2) return undefined;
+    const visible = new Map<Element, number>();
+    let lead: HTMLElement | null = null;
+    const visitorPaused = (film: HTMLElement) =>
+      /^(Play|Replay)/.test(film.querySelector('.decorative-autoplay-video__control')?.getAttribute('aria-label') ?? '');
+    const hold = (video: HTMLVideoElement) => {
+      video.dataset.enHeld = '';
+      video.pause();
+    };
+    const settle = () => {
+      let best: HTMLElement | null = null;
+      let bestHeight = 0;
+      films.forEach((film) => {
+        const height = visible.get(film) ?? 0;
+        if (height > bestHeight) {
+          bestHeight = height;
+          best = film;
+        }
+      });
+      lead = best;
+      films.forEach((film) => {
+        const video = film.querySelector('video');
+        if (!video) return;
+        if (film !== lead) {
+          if (!video.paused) hold(video);
+        } else if (video.dataset.enHeld !== undefined) {
+          delete video.dataset.enHeld;
+          if (!visitorPaused(film)) void video.play().catch(() => undefined);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => visible.set(entry.target, entry.isIntersecting ? entry.intersectionRect.height : 0));
+        settle();
+      },
+      { threshold: Array.from({ length: 21 }, (_, i) => i / 20) },
+    );
+    films.forEach((film) => observer.observe(film));
+    // The shared player calls play() when its film enters the viewport; a film that does not lead is held at once.
+    const onPlay = (event: Event) => {
+      const video = event.target;
+      if (!(video instanceof HTMLVideoElement)) return;
+      const film = video.closest<HTMLElement>('[data-film]');
+      if (!film || !lead || film === lead || !films.includes(film)) return;
+      hold(video);
+    };
+    root.addEventListener('play', onPlay, true);
+    return () => {
+      observer.disconnect();
+      root.removeEventListener('play', onPlay, true);
+    };
+  }, [getRoot]);
+}
+
 /** Browsers without scroll timelines (Firefox): the S0 curtain opens with a class toggle from a sentinel 20svh down. */
 export function useEnCurtainFallback(getReel: ElementGetter) {
   useEffect(() => {

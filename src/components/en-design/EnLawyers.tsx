@@ -1,25 +1,29 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
-import EnPageShell, { EnClosingBand, EnEmailButton, EnGlance } from './EnPageShell';
+import EnPageShell, { EnBand, EnClosingBand, EnEmailButton, EnGlance } from './EnPageShell';
 import { enOfficeNames } from './EnAboutBody';
 import aboutStyles from './EnAbout.module.css';
 import styles from './EnLawyers.module.css';
 
 /**
- * en team page (Opus 5.5 en lane, 2026-10-01): same blocks (JSON-LD, header, team cards,
- * key facts) inside the en wrapper; the team cards share the about-page styling.
+ * en team page (CONCEPT-V2 12.3, Clear Night): the same blocks (JSON-LD, title card, team, key facts) inside the
+ * en wrapper. The clear-street band (B3) is placed after the title card by CSS order only (it is decorative and
+ * holds nothing focusable), so the shared page body stays as it is. The team uses the about-page styling.
  */
 export function EnLawyersShell({ children }: { children: ReactNode }) {
   return (
     <EnPageShell page="lawyers">
-      <div className={`${aboutStyles.team} ${styles.lawyers}`}>{children}</div>
+      <div className={`${aboutStyles.team} ${styles.lawyers}`}>
+        <div className={styles.bandSlot}><EnBand name="clear" /></div>
+        {children}
+      </div>
       <EnClosingBand id="en-lawyers-closing" />
     </EnPageShell>
   );
 }
 
-/** Header fact sheet: lead attorney, languages and offices from the existing profile and contact data. */
+/** Credits row: lead attorney, languages and offices from the existing profile and contact data. */
 export function EnLawyersGlance() {
   const profile = getAttorneyProfile('en', primaryAttorneySlug);
   if (!profile) return null;

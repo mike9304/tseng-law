@@ -9,7 +9,7 @@ import { teamContent } from '@/data/team-members';
 import SectionLabel from '@/components/SectionLabel';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
 import { homeHeroTextSurfaceIds } from '@/lib/builder/registry';
-import { SurfaceText } from '@/lib/builder/surface-context';
+import { SurfaceText, useBuilderSurfaceContext } from '@/lib/builder/surface-context';
 import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
@@ -139,6 +139,7 @@ export default function HeroSearch({
   persistentQuickMenus = false,
   media,
   showHomePaths = true,
+  subtitleKeyPhrase,
 }: {
   locale: SiteLocale;
   scrollHref?: string;
@@ -155,6 +156,11 @@ export default function HeroSearch({
    * its domestic hero never shows them, and hiding them with CSS left unreachable links in the markup.
    */
   showHomePaths?: boolean;
+  /**
+   * Editorial only (en home design): when the rendered subtitle starts with this phrase, the phrase is
+   * wrapped in `<span data-hero-key>` so it can be set apart by colour. Omitted elsewhere (plain text).
+   */
+  subtitleKeyPhrase?: string;
 }) {
   const hero = siteContent[locale].hero;
   const HeroHeading = headingLevel === 2 ? 'h2' : 'h1';
@@ -166,6 +172,19 @@ export default function HeroSearch({
   const lead = teamContent[locale].members[0];
   const profilePath = getAttorneyProfilePath(locale);
   const searchInputId = `hero-search-${locale}`;
+  const { overrides: surfaceOverrides } = useBuilderSurfaceContext();
+  const renderedSubtitle = surfaceOverrides[homeHeroTextSurfaceIds[2]] ?? hero.subtitle;
+  const keyedSubtitle = editorial
+    && subtitleKeyPhrase
+    && typeof renderedSubtitle === 'string'
+    && renderedSubtitle.startsWith(subtitleKeyPhrase)
+    ? (
+      <>
+        <span data-hero-key="">{subtitleKeyPhrase}</span>
+        {renderedSubtitle.slice(subtitleKeyPhrase.length)}
+      </>
+    )
+    : null;
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -279,7 +298,7 @@ export default function HeroSearch({
             </SectionLabel>
             {titleSurface}
             <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
-              <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
+              {keyedSubtitle ?? <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>}
             </p>
             {lead ? (
               <Link href={profilePath} className={styles.byline} data-hero-slot="byline">

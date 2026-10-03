@@ -1,62 +1,268 @@
-/* en contact (Opus 5.5 en lane, 2026-10-01). Tokens come from EnPage.module.css (.root). Shared component markup unchanged. */
+/* en contact, Clear Night (CONCEPT-V2 12.3; en-pages lane 2026-10-03). Tokens from EnPage.module.css; paper from EnPagesV2. */
 
-/* Email panel in the header slot (ContactEmailActions) */
-.contact :global(.page-header .contact-email-actions) { margin: 0; padding: 22px 24px; border-top: 6px solid var(--en-signal); border-radius: 0; background: var(--en-mist); box-shadow: none; text-align: left; }
-.contact :global(.page-header .contact-email-actions__label) { font-size: 12.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--en-muted); }
-.contact :global(.page-header .contact-email-actions__address) { font-size: clamp(20px, 2vw, 26px); font-weight: 800; color: var(--en-ink); overflow-wrap: anywhere; }
-.contact :global(.page-header .contact-email-actions__row) { gap: 10px; }
-.contact :global(.page-header .contact-email-actions__row a),
-.contact :global(.page-header .contact-email-actions__row button) { min-height: 48px; border-radius: 4px; font-weight: 700; }
-.contact :global(.page-header .contact-email-actions__row a) { border: 2px solid var(--en-ink); background: var(--en-ink); color: #fff; }
-.contact :global(.page-header .contact-email-actions__row button) { border: 2px solid var(--en-ink); background: #fff; color: var(--en-ink); }
-.contact :global(.page-header .contact-email-actions__note) { font-size: 15px; line-height: 1.6; color: var(--en-text); }
+/* ---------- Title card: copy left, the official email block right (below on phones), no plate ---------- */
+@media (min-width: 1024px) {
+  .contact.contact.contact :global(section.page-header > div.container) { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 24px 48px; align-items: start; }
+  .contact.contact.contact :global(section.page-header [data-page-header-slot='children']) { margin: 0; padding-top: 72px; }
+}
+.contact.contact :global(.page-header .contact-email-actions) {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  text-align: left;
+  color: var(--en-white);
+}
+.contact.contact :global(.page-header .contact-email-actions__label) { margin: 0; font-family: var(--en-text); font-size: 17px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--en-grey); }
+.contact.contact :global(.page-header .contact-email-actions__address) {
+  margin: 8px 0 0;
+  font-family: var(--en-display);
+  font-size: var(--en-t-case);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--en-white);
+  overflow-wrap: anywhere;
+}
+.contact.contact :global(.page-header .contact-email-actions__row) { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin: 28px 0 0; }
+.contact.contact :global(.page-header .contact-email-actions__row a.button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 56px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--en-action);
+  color: #fff;
+  font-family: var(--en-text);
+  font-size: 18px;
+  font-weight: 600;
+}
+.contact.contact :global(.page-header .contact-email-actions__row a.button:hover) { background: var(--en-action-hover); }
+.contact.contact :global(.page-header .contact-email-actions__row a.button)::after { content: '\2192'; margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
+/* "Copy email address": a white text button, not a second pill. */
+.contact.contact :global(.page-header .contact-email-actions__row button.button) {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: 17px;
+  font-weight: 600;
+}
+.contact.contact :global(.page-header .contact-email-actions__row button.button:hover) { background: none; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.contact.contact :global(.page-header .contact-email-actions__row button.button *) { color: inherit; }
+.contact.contact :global(.page-header .contact-email-actions__status) { margin: 8px 0 0; font-size: 17px; color: var(--en-pale); }
+.contact.contact :global(.page-header .contact-email-actions__note) { max-width: 600px; margin: 12px 0 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-grey); }
+.contact.contact :global(.page-header .contact-email-actions__row + p) { margin-top: 24px; }
+.contact.contact :global(.page-header .contact-email-actions) :focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
 
-/* Form beside the checklist */
-.split { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 40px 56px; align-items: start; padding-block: 64px 80px; }
-.formCol { min-width: 0; padding-top: 20px; border-top: 3px solid var(--en-ink); }
-.formCol :global(form h2) { font-family: var(--en-sans) !important; font-size: clamp(28px, 2.8vw, 38px); font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
-.formCol :global(input),
-.formCol :global(select),
-.formCol :global(textarea) { min-height: 48px; border: 1.5px solid #9fb0a3; border-radius: 4px; font-size: 16px; }
-.formCol :global(input:focus-visible),
-.formCol :global(select:focus-visible),
-.formCol :global(textarea:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 1px; border-color: var(--en-ink); }
-.formCol :global(button[type='submit']) { min-height: 52px; border: 2px solid var(--en-ink); border-radius: 4px; background: var(--en-ink); color: #fff; font-weight: 700; }
-.formCol :global(button[type='submit']:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
+/* ---------- Paper body ---------- */
+.paper { padding-top: 1px; }
+.contact.contact .paper :global(.section-label),
+.contact.contact .paper :global(.section-label-text) { display: none; }
+.contact.contact .paper :global(h2.section-title) {
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-m2) !important;
+  font-weight: 700;
+  line-height: 1.06 !important;
+  letter-spacing: -0.022em;
+  color: var(--en-ink);
+}
+.contact.contact .paper :global(.section-lede) { max-width: 760px; margin: 20px 0 0; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-ink-2); }
+.contact.contact .paper :global(.ornament-divider) { display: none; }
+.contact.contact .paper :global(a:focus-visible),
+.contact.contact .paper :global(button:focus-visible),
+.contact.contact .paper :global(input:focus-visible),
+.contact.contact .paper :global(select:focus-visible),
+.contact.contact .paper :global(textarea:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 2px; }
+
+/* Form beside the guide */
+.split { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px 72px; align-items: start; padding-block: 120px; }
+.formCol { min-width: 0; }
+.contact.contact .formCol :global(form) { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: var(--en-ink); }
+.contact.contact .formCol :global(form h2) {
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-m2);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  color: var(--en-ink);
+}
+.contact.contact .formCol :global(form h2 + p) { margin: 16px 0 32px; font-family: var(--en-text); font-size: 19px; line-height: 1.5; color: var(--en-ink-2); }
+.contact.contact .formCol :global(label) { font-family: var(--en-text); font-size: 17px; font-weight: 600; color: var(--en-ink); }
+.contact.contact .formCol :global(input:not([type='checkbox']):not([type='hidden'])),
+.contact.contact .formCol :global(select) {
+  min-height: 56px;
+  padding: 0 16px;
+  border: 1px solid var(--en-field);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--en-ink);
+  font-family: var(--en-text);
+  font-size: 17px;
+}
+.contact.contact .formCol :global(textarea) { min-height: 200px; padding: 14px 16px; border: 1px solid var(--en-field); border-radius: 14px; background: #fff; color: var(--en-ink); font-family: var(--en-text); font-size: 17px; line-height: 1.5; }
+.contact.contact .formCol :global(input[type='checkbox']) { width: 24px; height: 24px; min-height: 0; accent-color: var(--en-action); }
+.contact.contact .formCol :global(form a) { color: var(--en-focus-paper); font-weight: 600; }
+.contact.contact .formCol :global(form aside) { margin: 0; padding: 20px 24px; border: 0; border-radius: 18px; background: var(--en-paper-2); }
+.contact.contact .formCol :global(form aside p) { margin: 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-ink-2); }
+.contact.contact .formCol :global(button[type='submit']) {
+  min-height: 56px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--en-action);
+  color: #fff;
+  font-family: var(--en-text);
+  font-size: 18px;
+  font-weight: 600;
+}
+.contact.contact .formCol :global(button[type='submit']:hover) { background: var(--en-action-hover); }
+
+/* "Before You Contact Us": headed lists, no card boxes. */
 .guideCol { min-width: 0; }
-.guideCol :global(.consultation-guide-section) { padding: 24px 24px 8px; background: var(--en-mist); border-top: 6px solid var(--en-signal); }
-.guideCol :global(.consultation-guide-section .container) { width: auto; max-width: none; padding: 0; margin: 0; }
-.guideCol :global(.consultation-guide-section .section-label) { margin-bottom: 8px; }
-.guideCol :global(.consultation-guide-section h2.section-title) { margin: 0 0 8px; font-family: var(--en-sans) !important; font-size: 26px !important; font-weight: 800; line-height: 1.2 !important; letter-spacing: -0.02em; color: var(--en-ink); }
-.guideCol :global(.consultation-guide-section .section-lede) { font-size: 15.5px; line-height: 1.6; color: var(--en-text); }
-.guideCol :global(.consultation-guide-section .ornament-divider) { display: none; }
-.guideCol :global(.consultation-guide-section .contact-grid) { display: block; margin-top: 12px; }
-.guideCol :global(.consultation-guide-section .legal-card) { padding: 16px 0; border: none; border-top: 1px solid var(--en-line); border-radius: 0; background: transparent; box-shadow: none; transform: none; }
-.guideCol :global(.consultation-guide-section .card-title) { margin: 0 0 8px; font-family: var(--en-sans) !important; font-size: 17px; font-weight: 800; color: var(--en-ink); }
-.guideCol :global(.consultation-guide-section .legal-card-list li) { font-size: 15px; line-height: 1.55; color: var(--en-text); }
+.contact.contact .guideCol :global(.consultation-guide-section) { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; }
+.contact.contact .guideCol :global(.consultation-guide-section .container) { width: auto; max-width: none; margin: 0; padding: 0; }
+.contact.contact .guideCol :global(.consultation-guide-section h2.section-title) { font-size: var(--en-t-m) !important; line-height: 1.12 !important; letter-spacing: -0.015em; }
+.contact.contact .guideCol :global(.consultation-guide-section .section-lede) { margin-top: 16px; font-size: 19px; }
+.contact.contact .guideCol :global(.consultation-guide-section .contact-grid) { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; margin-top: 48px; }
+.contact.contact .guideCol :global(.consultation-guide-section .contact-grid .legal-card) { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; transform: none; }
+.contact.contact .guideCol :global(.consultation-guide-section .card-title) { margin: 0 0 12px; font-family: var(--en-display) !important; font-size: 21px; font-weight: 700; letter-spacing: -0.01em; color: var(--en-ink); }
+.contact.contact .guideCol :global(.consultation-guide-section .legal-card-list) { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.contact.contact .guideCol :global(.consultation-guide-section .legal-card-list li) { margin: 0; padding: 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-ink-2); }
+.contact.contact .guideCol :global(.consultation-guide-section .legal-card-list li)::before { content: none; display: none; }
 
-/* Email/AI section, inquiry types, offices */
-.contact :global(.messenger-chat-section) { padding-block: 72px; background: #fff; border-top: 3px solid var(--en-ink); }
-.contact :global(.messenger-chat-section h2.section-title) { font-family: var(--en-sans) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
-.contact :global(.messenger-card) { border-radius: 0; border-top: 4px solid var(--en-ink); box-shadow: none; }
-.contact :global(.messenger-card:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
-.contact :global(.messenger-features) { border-radius: 0; background: var(--en-mist); }
-.contact :global(.messenger-features li) { color: var(--en-text); }
-.contact :global(#offices .office-rating-link) { display: inline-flex; align-items: center; min-height: 44px; }
-.contact > :global(section.section:not(.page-header):not(#offices):not(.messenger-chat-section)) { background: var(--en-mist); border-top: 3px solid var(--en-ink); }
-.contact :global(.contact-grid .card) { border: none; border-top: 4px solid var(--en-ink); border-radius: 0; background: #fff; box-shadow: none; }
-.contact :global(.contact-grid .card-title) { font-family: var(--en-sans) !important; font-weight: 800; color: var(--en-ink); }
-.contact :global(#offices) { border-top: 3px solid var(--en-ink); }
-.contact :global(#offices h2.section-title) { font-family: var(--en-sans) !important; font-weight: 800; letter-spacing: -0.025em; color: var(--en-ink); }
-.contact :global(#offices .office-card) { border-radius: 0; box-shadow: none; }
-.contact :global(a:focus-visible),
-.contact :global(button:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 3px; }
+/* Email and AI section */
+.contact.contact :global(.messenger-chat-section) { padding: 120px 0; background: #fff; border: 0; }
+.contact.contact :global(.messenger-grid) { display: grid; gap: 24px; max-width: 900px; margin-top: 48px; }
+.contact.contact :global(.messenger-card) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
+  border: 0;
+  border-radius: 28px;
+  background: var(--en-paper-2);
+  box-shadow: none;
+  color: var(--en-ink);
+  text-decoration: none;
+  transition: background-color 300ms var(--en-ease);
+}
+.contact.contact :global(.messenger-card:hover) { background: #ebebed; transform: none; }
+.contact.contact :global(.messenger-card-platform) { margin: 0; font-family: var(--en-text); font-size: 14px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--en-ink-3); }
+.contact.contact :global(.messenger-card-desc) { margin: 4px 0 0; font-family: var(--en-display); font-size: var(--en-t-m); font-weight: 700; letter-spacing: -0.015em; color: var(--en-ink); overflow-wrap: anywhere; }
+.contact.contact :global(.messenger-card-arrow) { font-family: var(--en-display); font-size: 28px; color: var(--en-ink); }
+.contact.contact :global(.messenger-features) { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; }
+.contact.contact :global(.messenger-features-title) { margin: 0 0 12px; font-family: var(--en-display) !important; font-size: 21px; font-weight: 700; color: var(--en-ink); }
+.contact.contact :global(.messenger-features-list) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 32px; margin: 0; padding: 0; list-style: none; }
+.contact.contact :global(.messenger-features-list li) { margin: 0; padding: 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-ink-2); }
+.contact.contact :global(.messenger-features-list li)::before { content: none; display: none; }
 
-@media (max-width: 1000px) {
-  .split { grid-template-columns: minmax(0, 1fr); }
+/* Inquiry types and office address cards (ContactBlocks) */
+.contact.contact .paper > :global(.reveal > section.section),
+.contact.contact .paper > :global(section.section:not(.messenger-chat-section):not(#offices)) { padding: 120px 0; background: #fff; border: 0; color: var(--en-ink); }
+.contact.contact .paper :global(.contact-grid:not(.legal-card-grid)) { gap: 16px; margin: 32px 0 0; }
+.contact.contact .paper :global(.contact-grid .card:not(.legal-card):not(.office-card)) {
+  padding: 32px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--en-paper-2);
+  box-shadow: none;
+  color: var(--en-ink);
+  transform: none;
+}
+.contact.contact .paper :global(.contact-grid .card-title) { font-family: var(--en-display) !important; font-size: 21px; font-weight: 700; color: var(--en-ink); }
+.contact.contact .paper :global(.contact-grid p),
+.contact.contact .paper :global(.contact-grid li) { font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-ink-2); }
+.contact.contact .paper :global(.contact-label-spaced) { margin-top: 72px; }
+
+/* Offices (OfficeMapTabs) */
+.contact.contact :global(#offices) { padding: 120px 0 160px; background: #fff; border: 0; }
+.contact.contact :global(#offices .office-tabs) { display: flex; flex-wrap: wrap; gap: 0 28px; margin: 40px 0 32px; border: 0; }
+.contact.contact :global(#offices .tab-button) {
+  position: relative;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--en-ink-3);
+  font-family: var(--en-text);
+  font-size: 19px;
+  font-weight: 600;
+}
+.contact.contact :global(#offices .tab-button.active) { color: var(--en-ink); }
+.contact.contact :global(#offices .tab-button.active)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 2px; background: var(--en-ink); }
+.contact.contact :global(#offices .office-layout) { gap: 24px; }
+.contact.contact :global(#offices .office-map-wrap) { border: 0; border-radius: 28px; overflow: hidden; background: #1d1d1f; box-shadow: none; }
+.contact.contact :global(#offices .office-map-fallback) { background: #1d1d1f; }
+.contact.contact :global(#offices .office-map-fallback)::after { background: var(--en-lamp); border-color: #1d1d1f; box-shadow: 0 0 0 8px rgb(255 181 71 / 20%), 0 0 40px 8px rgb(255 181 71 / 30%); }
+.contact.contact :global(#offices .office-map-fallback-panel) { padding: 20px 24px; border: 0; border-radius: 18px; background: rgb(255 255 255 / 10%); box-shadow: none; color: #fff; }
+.contact.contact :global(#offices .office-map-fallback-panel *) { color: #fff; }
+.contact.contact :global(#offices .office-map-fallback-kicker) { font-family: var(--en-text); font-size: 14px; letter-spacing: 0; text-transform: none; color: rgb(255 255 255 / 72%) !important; }
+.contact.contact :global(#offices .office-map-fallback-link) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: rgb(255 255 255 / 14%); color: #fff; font-weight: 600; text-decoration: none; }
+.contact.contact :global(#offices .office-card) { padding: 40px; border: 0; border-radius: 28px; background: var(--en-paper-2); box-shadow: none; color: var(--en-ink); }
+.contact.contact :global(#offices .office-card .section-label) { display: none; }
+.contact.contact :global(#offices .office-card .card-title) { margin: 0 0 8px; font-family: var(--en-display) !important; font-size: 28px; font-weight: 700; color: var(--en-ink); }
+.contact.contact :global(#offices .office-card .card-copy) { font-family: var(--en-text); font-size: 19px; line-height: 1.5; color: var(--en-ink-2); }
+.contact.contact :global(#offices .office-card a.button.office-map-link) { min-height: 44px; padding: 0 22px; border: 0; border-radius: 999px; background: #e8e8ed; color: var(--en-ink); font-size: 16px; font-weight: 600; }
+.contact.contact :global(#offices .office-card a.button.office-map-link:hover) { background: #dedee3; color: var(--en-ink); }
+.contact.contact :global(#offices .office-rating-link) { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-focus-paper); font-weight: 600; }
+.contact.contact :global(#offices .office-gallery-item) { border: 0; border-radius: 14px; overflow: hidden; background: #e8e8ed; }
+.contact.contact :global(#offices .office-korea .card-copy) { font-family: var(--en-text); font-size: 17px; color: var(--en-ink-3); }
+
+@media (max-width: 1023px) {
+  .split { grid-template-columns: minmax(0, 1fr); gap: 96px; }
 }
 @media (max-width: 767px) {
-  .split { padding-block: 40px 56px; gap: 32px; }
-  .guideCol :global(.consultation-guide-section) { padding: 20px 18px 4px; }
-  .contact :global(.messenger-chat-section) { padding-block: 48px; }
+  .split { padding-block: 72px; gap: 72px; }
+  .contact.contact .paper :global(.section-lede),
+  .contact.contact .formCol :global(form h2 + p),
+  .contact.contact .guideCol :global(.consultation-guide-section .section-lede) { font-size: 17px; }
+  .contact.contact :global(.page-header .contact-email-actions__row a.button) { display: block; width: 100%; padding: 16px 24px; font-size: 16px; line-height: 1.5; text-align: center; }
+  .contact.contact :global(.page-header .contact-email-actions__address) { font-size: 26px; }
+  .contact.contact :global(.messenger-chat-section),
+  .contact.contact .paper > :global(.reveal > section.section),
+  .contact.contact .paper > :global(section.section:not(.messenger-chat-section):not(#offices)) { padding: 72px 0; }
+  .contact.contact :global(.messenger-card) { padding: 24px; border-radius: 18px; }
+  .contact.contact :global(.messenger-features-list) { grid-template-columns: minmax(0, 1fr); }
+  .contact.contact :global(#offices) { padding: 72px 0 96px; }
+  .contact.contact :global(#offices .office-tabs) { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .contact.contact :global(#offices .tab-button) { flex: none; font-size: 17px; }
+  .contact.contact :global(#offices .office-map-wrap) { border-radius: 18px; }
+  .contact.contact :global(#offices .office-card) { padding: 24px; border-radius: 18px; }
 }
+
+/* The AI intake guide card: its link is a text link (one pill per screen). */
+.contact.contact .paper :global(.contact-grid .card a.button.secondary) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--en-focus-paper);
+  font-family: var(--en-text);
+  font-size: 17px;
+  font-weight: 600;
+}
+.contact.contact .paper :global(.contact-grid .card a.button.secondary)::after { content: '\2192'; margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
+.contact.contact .paper :global(.contact-grid .card a.button.secondary:hover) { background: none; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }

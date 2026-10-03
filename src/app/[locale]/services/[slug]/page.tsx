@@ -41,7 +41,8 @@ import ZhHantSnapRowFocus from '@/components/zh-hant-home/ZhHantSnapRowFocus';
 import jaStyles from './JaServiceDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import enStyles from './EnServiceDetail.module.css';
-import EnPageShell, { EnGlance } from '@/components/en-design/EnPageShell';
+import EnPageShell, { EnBand, EnGlance } from '@/components/en-design/EnPageShell';
+import EnLocalNav from '@/components/en-design/EnLocalNav';
 import { EN_SERVICE_EXTRA_COLUMNS } from '@/components/en-design/en-design-data';
 import { getPricingContent } from '@/components/PricingCards';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
@@ -407,6 +408,18 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
             ) : heroCopy}
           </div>
         </section>
+      ) : null}
+
+      {/* en (Clear Night inner pages): the rooftops band under the title card, then the local nav to the two sections. */}
+      {en && showHero ? <EnBand name="rooftops" /> : null}
+      {en && showBody && (points.length > 0 || columns.length > 0) ? (
+        <EnLocalNav
+          title={area.title}
+          items={[
+            ...(points.length > 0 ? [{ href: '#service-keypoints' as const, label: t.keyPointsLabel }] : []),
+            ...(columns.length > 0 ? [{ href: '#service-columns' as const, label: t.columnsLabel.split(' —')[0] }] : []),
+          ]}
+        />
       ) : null}
 
       {showBody ? (

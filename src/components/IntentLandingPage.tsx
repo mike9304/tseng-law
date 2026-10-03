@@ -15,6 +15,8 @@ import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import styles from './IntentLandingPage.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
+import enStyles from '@/components/en-design/EnLanding.module.css';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 import {
   getConsultationCtaLabel,
@@ -876,12 +878,16 @@ export default function IntentLandingPage({
     </>
   );
 
-  // zh-hant: one wrapper scopes the Apple-language styles (zh-hant-intent/ZhHantIntent.module.css); other locales unchanged.
-  return locale === 'zh-hant' ? (
-    <div id="zh-hant-intent" className={zhStyles.root} data-zh-hant-design="intent">
-      {body}
-    </div>
-  ) : (
-    body
-  );
+  // zh-hant: one wrapper scopes the Apple-language styles (zh-hant-intent/ZhHantIntent.module.css).
+  if (locale === 'zh-hant') {
+    return (
+      <div id="zh-hant-intent" className={zhStyles.root} data-zh-hant-design="intent">
+        {body}
+      </div>
+    );
+  }
+  // en (Clear Night inner pages): the same landing body inside the en wrapper; other locales render it as before.
+  return locale === 'en'
+    ? <EnPageShell page="landing"><div className={enStyles.landing}>{body}</div></EnPageShell>
+    : body;
 }

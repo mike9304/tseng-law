@@ -2,9 +2,11 @@ import type { SiteLocale } from '@/lib/locales';
 import type { LegalPageContent } from '@/data/legal-pages';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
+import EnPageShell from '@/components/en-design/EnPageShell';
 import styles from './LegalPageSections.module.css';
 import zhPageShellStyles from './zh-hant-pages/ZhHantPageShell.module.css';
 import zhLegalStyles from './zh-hant-pages/ZhHantLegal.module.css';
+import enStyles from './en-design/EnLegal.module.css';
 
 export default function LegalPageSections({
   locale,
@@ -59,5 +61,6 @@ export default function LegalPageSections({
       </div>
     );
   }
-  return body;
+  // en redesign (Opus 5.5 en lane): the same legal sections in the en wrapper (en header and type, wording unchanged).
+  return locale === 'en' ? <EnPageShell page="legal"><div className={enStyles.legal}>{body}</div></EnPageShell> : body;
 }

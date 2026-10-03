@@ -5,7 +5,9 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { getAllColumnPosts, getAllIssuePosts, getColumnPost } from '@/lib/columns';
 import { parseTrafficBoardQuery } from '@/lib/traffic-collection';
 import { loadTrafficCollection, type TrafficCollectionSources } from '@/lib/traffic-collection-server';
+import { trafficHubCopy } from '@/data/traffic-hub';
 import TrafficBoard from '../TrafficBoard';
+import TrafficPageView from '../TrafficPageView';
 
 vi.mock('next/image', () => ({
   // eslint-disable-next-line @next/next/no-img-element
@@ -140,6 +142,37 @@ describe('TrafficBoard SSR', () => {
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-baseball-bat-fracture-damages"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-freeway-cut-in-sentence-reduced"');
     expect(filtered).toContain('href="/ja/columns/taiwan-accident-police-records"');
+  });
+});
+
+describe('en traffic hub (Clear Night)', () => {
+  async function renderView(locale: 'ko' | 'zh-hant' | 'en' | 'ja', params: Record<string, string> = {}) {
+    const items = await loadTrafficCollection(locale, fileSources);
+    return renderToStaticMarkup(
+      <TrafficPageView locale={locale} items={items} query={parseTrafficBoardQuery(params)} copy={trafficHubCopy[locale]} collectionJsonLd={{ '@type': 'CollectionPage' }} />,
+    );
+  }
+
+  it('renders /en/ inside the en shell: title card, drops band, board, diagram, guides, then the closing card', async () => {
+    const html = await renderView('en', { subject: 'liability' });
+    expect(html).toMatch(/^<div[^>]*id="en-traffic"[^>]*data-en-design="traffic"/);
+    expect(html.match(/<h1[\s>]/g)).toHaveLength(1);
+    const order = ['<h1', 'data-en-band="drops"', 'id="articles"', 'data-traffic-board', 'data-traffic-diagram=', 'id="countries-title"', 'id="contact-title"']
+      .map((marker) => html.indexOf(marker));
+    expect(order.every((index) => index > -1)).toBe(true);
+    expect([...order].sort((a, b) => a - b)).toEqual(order);
+    expect(html).toContain('href="/en/traffic-accidents?subject=liability#articles" aria-current="true"');
+    expect(html).toMatch(/<input type="hidden" name="subject" value="liability"/);
+    expect(html).not.toMatch(/<(b|strong)[\s>]/);
+    expect(html).not.toMatch(/Legal AI Assistant|Written by/);
+  });
+
+  it('keeps ko, zh-hant and ja out of the en shell', async () => {
+    for (const locale of ['ko', 'zh-hant', 'ja'] as const) {
+      const html = await renderView(locale);
+      expect(html).not.toContain('data-en-design');
+      expect(html).not.toContain('data-en-band');
+    }
   });
 });
 

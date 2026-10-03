@@ -49,6 +49,11 @@ const copyByLocale = {
   },
 } as const;
 
+/** The home attorney copy for a locale (label, title, summary, link label). The en home design renders the same copy in its own stage. */
+export function getHomeAttorneyCopy(locale: SiteLocale) {
+  return copyByLocale[locale];
+}
+
 function protectAboutHeadingUnit(title: string, unit: string) {
   const index = title.indexOf(unit);
   if (index < 0) return title;

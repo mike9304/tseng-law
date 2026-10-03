@@ -25,12 +25,15 @@ export default function HomeStatsSection({
   stats: statsOverride,
   omitLandmarkId = false,
   plainLede = false,
+  countUp = true,
 }: {
   locale: SiteLocale;
   stats?: HomeStatsModel;
   omitLandmarkId?: boolean;
   /** Skip the per-word highlight spans when the lede length differs by language. */
   plainLede?: boolean;
+  /** false (en home design): the figures stay static text; they never count up on screen. Default true. */
+  countUp?: boolean;
 }) {
   const stats = statsOverride ?? siteContent[locale].stats;
   // SSR + first paint show real targets so bots / no-JS never see 0/0/0/0.
@@ -60,7 +63,7 @@ export default function HomeStatsSection({
   }, [stats.items]);
 
   useEffect(() => {
-    if (!hydrated) return;
+    if (!hydrated || !countUp) return;
     const root = rootRef.current;
     if (!root) return;
     if (typeof IntersectionObserver === 'undefined') return;
@@ -76,7 +79,7 @@ export default function HomeStatsSection({
     );
     observer.observe(root);
     return () => observer.disconnect();
-  }, [hydrated, locale]);
+  }, [hydrated, locale, countUp]);
 
   useEffect(() => {
     if (!started || !hydrated) return;

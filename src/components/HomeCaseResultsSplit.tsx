@@ -121,11 +121,14 @@ export default function HomeCaseResultsSplit({
   presentation,
   omitLandmarkId = false,
   override,
+  hideMedia = false,
 }: {
   locale: SiteLocale;
   presentation?: 'editorial';
   omitLandmarkId?: boolean;
   override?: HomeCaseResultsOverride;
+  /** true (en home design): type only — no poster, no courtroom loop is rendered or loaded. Default false. */
+  hideMedia?: boolean;
 }) {
   const copy = override ?? copyByLocale[locale];
   // WO-X1 (EN-16): EN/JA point at the write-up of this very case instead of
@@ -141,7 +144,9 @@ export default function HomeCaseResultsSplit({
       className="section section--dark split-section split--img-left home-results-panel home-results-panel--editorial"
       id={omitLandmarkId ? undefined : 'results'}
       data-tone="dark"
+      data-results-media={hideMedia ? 'none' : undefined}
     >
+      {hideMedia ? null : (
       <div
         className="split-image home-results-media"
         data-builder-node-key="media"
@@ -166,6 +171,7 @@ export default function HomeCaseResultsSplit({
           controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
         />
       </div>
+      )}
       <div className="split-content home-results-content" data-builder-node-key="copy">
         <div
           className="section-label home-results-label"

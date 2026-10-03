@@ -20,6 +20,8 @@ import type { SiteLocale } from '@/lib/locales';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from '../../[slug]/ColumnDetail.module.css';
 import zhStyles from '../../[slug]/ZhHantColumnDetail.module.css';
+import enStyles from '../../[slug]/EnColumnDetail.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
 import boardStyles from '@/components/IssueBoard.module.css';
 
 export const dynamic = 'force-dynamic';
@@ -251,7 +253,11 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
     </>
   );
   // zh-hant second pass (son7-87 / Opus 5.5): same article inside the zh-hant column-detail wrapper (split hero, sidebar).
-  return locale === 'zh-hant'
-    ? <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="issue">{content}</div>
+  if (locale === 'zh-hant') {
+    return <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="issue">{content}</div>;
+  }
+  // en redesign (Opus 5.5 en lane): same article inside the en column-detail wrapper (night briefing hero, en sidebar).
+  return locale === 'en'
+    ? <EnPageShell page="issue"><div className={`${enStyles.detail} en-column`}>{content}</div></EnPageShell>
     : content;
 }

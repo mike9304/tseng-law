@@ -12,18 +12,25 @@ import {
   type TrafficBoardItem,
   type TrafficBoardQuery,
 } from '@/lib/traffic-collection';
-import styles from './TrafficBoard.module.css';
+import boardStyles from './TrafficBoard.module.css';
+
+const DEFAULT_THUMB_SIZES = '(max-width: 600px) 96px, 200px';
 
 /**
  * Server-rendered traffic article board. Search is a GET form and every filter
  * is a plain link, so it works without JavaScript and the state survives
  * refresh, sharing and back navigation. Only list fields reach the markup.
+ * `classes` and `thumbSizes` are optional skins (only the en page passes them); the defaults keep the board's
+ * own CSS module and image sizes, so every other locale renders exactly as before.
  */
-export default function TrafficBoard({ locale, items, query }: {
+export default function TrafficBoard({ locale, items, query, classes, thumbSizes = DEFAULT_THUMB_SIZES }: {
   locale: SiteLocale;
   items: readonly TrafficBoardItem[];
   query: TrafficBoardQuery;
+  classes?: Readonly<Record<string, string>>;
+  thumbSizes?: string;
 }) {
+  const styles = classes ?? boardStyles;
   const copy = TRAFFIC_BOARD_COPY[locale];
   const subjectLabels = TRAFFIC_SUBJECT_LABELS[locale];
   const results = filterTrafficBoardItems(items, query);
@@ -91,7 +98,7 @@ export default function TrafficBoard({ locale, items, query }: {
             <li key={item.key} className={styles.row} data-traffic-board-row>
               <div className={styles.thumb} aria-hidden="true">
                 {item.image ? (
-                  <Image src={item.image} alt="" width={320} height={180} sizes="(max-width: 600px) 96px, 200px" loading="lazy" unoptimized={!item.image.startsWith('/')} />
+                  <Image src={item.image} alt="" width={320} height={180} sizes={thumbSizes} loading="lazy" unoptimized={!item.image.startsWith('/')} />
                 ) : null}
               </div>
               <div className={styles.body}>

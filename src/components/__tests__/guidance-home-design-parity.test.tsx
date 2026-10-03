@@ -101,8 +101,9 @@ const EXPECTED_SEQUENCE = [
 // en redesign (2026-10-01): the English home has its own arrangement for English-speaking
 // readers — "start here" situations right under the hero, then practice areas, attorney,
 // latest insights; the decorative heritage interlude is not part of it. Guidance homes keep
-// EXPECTED_SEQUENCE (asserted below).
-const ENGLISH_HOME_SEQUENCE = ['hero', 'practice', 'about', 'insights', 'results', 'stats', 'faq', 'offices', 'contact'];
+// EXPECTED_SEQUENCE (asserted below). Clear Night (CONCEPT-V2, 2026-10-02): the figures from the attorney
+// profile close the attorney chapter, so "stats" follows "about" and comes before the insights.
+const ENGLISH_HOME_SEQUENCE = ['hero', 'practice', 'about', 'stats', 'insights', 'results', 'faq', 'offices', 'contact'];
 
 function fixturePost(index: number): ColumnPost {
   return {

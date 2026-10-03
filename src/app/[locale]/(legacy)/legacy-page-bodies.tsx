@@ -37,6 +37,7 @@ import EnContactBody from '@/components/en-design/EnContactBody';
 import { EnColumnsStartHere } from '@/components/en-design/EnColumns';
 import { EN_COLUMN_TOPIC_ORDER, EN_RECOMMENDED_COLUMN_ORDER } from '@/components/en-design/en-design-data';
 import { EnLawyersGlance, EnLawyersShell } from '@/components/en-design/EnLawyers';
+import { EnVideosShell } from '@/components/en-design/EnVideos';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
@@ -444,7 +445,8 @@ export function VideosLegacyPageBody({
       </div>
     );
   }
-  return body;
+  // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper, closed by the en contact band.
+  return locale === 'en' ? <EnVideosShell>{body}</EnVideosShell> : body;
 }
 
 export function PrivacyLegacyPageBody({ locale }: { locale: SiteLocale }) {

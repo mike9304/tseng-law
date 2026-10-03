@@ -6,6 +6,10 @@
  */
 
 /* ---------- Legal pages ---------- */
+/* 「プライバシーポリシー」 is one ten-character word: on phones the H1 is sized so it never splits. */
+@media (max-width: 767px) {
+  .root.root[data-ja-v2] :global(.page-header .page-header-title) { font-size: min(40px, 8.6vw); }
+}
 .root.root[data-ja-v2] :global(.page-header.page-header--with-content > .container) { grid-template-columns: minmax(0, 1fr) !important; }
 .root.root[data-ja-v2] :global(.page-header [data-page-header-slot='children']) { grid-column: 1 !important; grid-row: 2 !important; margin-top: 20px !important; }
 .root.root[data-ja-v2] :global(.legal-effective-date) { margin: 0; padding: 0; border: 0; background: none; font-size: 15px; font-weight: 500; color: var(--ja-grey); }

@@ -39,8 +39,8 @@ describe('reviewed column videos', () => {
   });
 
   it.each([
-    ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v2-zh-hant', '橙色車'],
-    ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-v1-zh-hant', '銀色中間車'],
+    ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-v3-zh-hant', '橙色車'],
+    ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-v2-zh-hant', '銀色中間車'],
     ['taiwan-roadside-starting-parking-exit-liability', 'roadside-start-v1-zh-hant', '橙色車'],
     ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-scooter-v1-zh-hant', '機車'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {

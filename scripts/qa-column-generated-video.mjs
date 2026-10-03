@@ -10,8 +10,8 @@ const allCases = [
     duration: 4, contactTime: 1.1,
     disclosure: { ko: 'AI로 만든 가상 장면', en: 'fictional AI-generated scene', 'zh-hant': 'AI生成的假想場景', ja: 'AIで作成した架空の場面' }[locale],
   })),
-  { locale: 'zh-hant', slug: 'taiwan-lane-change-side-rear-collision-liability', id: 'lane-change-v2-zh-hant', duration: 6, contactTime: 3.8, disclosure: '非真實事故或本文判決的重建' },
-  { locale: 'zh-hant', slug: 'taiwan-chain-rear-end-first-impact-evidence', id: 'chain-rear-end-v1-zh-hant', duration: 8, contactTime: 5.8, disclosure: '這只是「後車先碰中間車」的一種設定' },
+  { locale: 'zh-hant', slug: 'taiwan-lane-change-side-rear-collision-liability', id: 'lane-change-v3-zh-hant', duration: 4, contactTime: 0.85, disclosure: '非真實事故或本文判決的重建' },
+  { locale: 'zh-hant', slug: 'taiwan-chain-rear-end-first-impact-evidence', id: 'chain-rear-end-v2-zh-hant', duration: 4, contactTime: 1.2, disclosure: '這只是「後車先碰中間車」的一種設定' },
   { locale: 'zh-hant', slug: 'taiwan-roadside-starting-parking-exit-liability', id: 'roadside-start-v1-zh-hant', duration: 6, contactTime: 4.2, disclosure: '非本文判決或真實事故的重建' },
   { locale: 'zh-hant', slug: 'taiwan-right-turn-car-straight-motorcycle-evidence', id: 'right-turn-scooter-v1-zh-hant', duration: 6, contactTime: 4.2, disclosure: '非真實事故或本文案件的重建' },
   ...['ko', 'en', 'zh-hant', 'ja'].map(locale => ({

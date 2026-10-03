@@ -13,7 +13,7 @@ describe('reviewed column videos', () => {
     expect(html).not.toMatch(/autoplay/i);
     expect(html).not.toContain('loop=');
     expect(html).toContain('preload="none"');
-    expect(html).toContain('src="/videos/columns/rear-end-simulation-v2-ko.mp4"');
+    expect(html).toContain('src="/videos/columns/rear-end-simulation-v3-ko.mp4"');
     expect(html).not.toContain('<iframe');
     expect(html).toContain('실제 사고 기록이 아닙니다');
     const describedBy = html.match(/aria-describedby="([^"]+)"/)![1];
@@ -33,7 +33,7 @@ describe('reviewed column videos', () => {
     ['ja', '実際の事故映像ではありません'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
-    expect(html).toContain(`rear-end-simulation-v2-${locale}.mp4`);
+    expect(html).toContain(`rear-end-simulation-v3-${locale}.mp4`);
     expect(html).toContain(disclosure);
     expect(html).not.toContain('실제 사고 기록');
   });

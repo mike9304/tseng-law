@@ -34,7 +34,7 @@ describe('traffic column view publication visibility', () => {
     expect(renderToStaticMarkup(<ColumnDetailView {...hidden} urlLocale="ko" />)).not.toContain('data-column-generated-video');
     const shown = await props(true, true, slug);
     const html = renderToStaticMarkup(<ColumnDetailView {...shown} urlLocale="ko" />);
-    expect(html).toContain('data-column-generated-video="rear-end-simulation-v2-ko"');
+    expect(html).toContain('data-column-generated-video="rear-end-simulation-v3-ko"');
     expect(html).toContain('HIDDEN_BODY');
     expect(html).toContain('data-traffic-diagram="stop-dialogue-timeline"');
   });

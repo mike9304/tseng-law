@@ -4,10 +4,10 @@ import { chromium } from '@playwright/test';
 
 const base = process.env.COLUMN_VIDEO_QA_BASE || 'http://127.0.0.1:4548';
 const out = process.env.COLUMN_VIDEO_QA_OUT || '/tmp/column-generated-video-qa';
-const cases = [
+const allCases = [
   ...['ko', 'en', 'zh-hant', 'ja'].map(locale => ({
-    locale, slug: 'taiwan-traffic-accident-procedure', id: `rear-end-simulation-v2-${locale}`,
-    duration: 7, contactTime: 4.6,
+    locale, slug: 'taiwan-traffic-accident-procedure', id: `rear-end-simulation-v3-${locale}`,
+    duration: 4, contactTime: 1.1,
     disclosure: { ko: 'AI로 만든 가상 장면', en: 'fictional AI-generated scene', 'zh-hant': 'AI生成的假想場景', ja: 'AIで作成した架空の場面' }[locale],
   })),
   { locale: 'zh-hant', slug: 'taiwan-lane-change-side-rear-collision-liability', id: 'lane-change-v2-zh-hant', duration: 6, contactTime: 3.8, disclosure: '非真實事故或本文判決的重建' },
@@ -20,6 +20,9 @@ const cases = [
     disclosure: { ko: '실제 임대 매물이 아닙니다', en: 'not an actual rental listing', 'zh-hant': '非實際出租物件', ja: '実際の賃貸物件ではありません' }[locale],
   })),
 ];
+const selectedIds = new Set((process.env.COLUMN_VIDEO_QA_IDS || '').split(',').filter(Boolean));
+for (const id of selectedIds) assert.ok(allCases.some(item => item.id === id), `Unknown video QA id: ${id}`);
+const cases = selectedIds.size ? allCases.filter(item => selectedIds.has(item.id)) : allCases;
 await fs.mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const results = [];
@@ -48,6 +51,7 @@ try {
         paused: element.paused, currentTime: element.currentTime, controls: element.controls,
         autoplay: element.autoplay, loop: element.loop, preload: element.preload,
         playsInline: element.playsInline, poster: element.poster, src: element.src,
+        playbackRate: element.playbackRate,
       }));
       assert.equal(initial.paused, true);
       assert.equal(initial.currentTime, 0);
@@ -56,6 +60,7 @@ try {
       assert.equal(initial.loop, false);
       assert.equal(initial.preload, 'none');
       assert.equal(initial.playsInline, true);
+      assert.equal(initial.playbackRate, 1);
       assert.equal(new URL(initial.src).origin, new URL(base).origin);
       assert.equal(new URL(initial.src).pathname, `/videos/columns/${item.id}.mp4`);
       assert.ok((await figure.innerText()).includes(item.disclosure));
@@ -103,9 +108,18 @@ try {
       } else {
         assert.ok(layout.diagramCount >= 1);
       }
-      await video.evaluate(element => { element.currentTime = element.duration - 0.4; });
+      // Replay the entire clip at its native rate so motion revisions are exercised in real time.
+      await video.evaluate(element => { element.currentTime = 0; });
+      await page.waitForFunction(() => {
+        const element = document.querySelector('[data-column-generated-video] video');
+        return element && !element.seeking && element.currentTime < 0.1;
+      });
+      const replayStartedAt = performance.now();
       await video.press('Space');
-      await page.waitForFunction(() => document.querySelector('[data-column-generated-video] video')?.ended);
+      await page.waitForFunction(() => document.querySelector('[data-column-generated-video] video')?.ended, undefined, { timeout: 20000 });
+      const replaySeconds = (performance.now() - replayStartedAt) / 1000;
+      assert.ok(replaySeconds >= item.duration - 0.2, 'The clip did not play through at its native rate');
+      assert.equal(await video.evaluate(element => element.playbackRate), 1);
 
       if (process.env.COLUMN_VIDEO_QA_SKIP_BOARD !== '1') {
         const board = await page.goto(`${base}/${item.locale}/traffic-accidents?video=1&q=${encodeURIComponent(heading.slice(0, 60))}`, { waitUntil: 'load' });
@@ -114,7 +128,7 @@ try {
         if (item.traffic === false) assert.equal(count, 0, 'Non-traffic video entered the traffic collection');
         else assert.ok(count > 0, 'Video filter omitted the new native video');
       }
-      results.push({ viewport, article, id: item.id, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true });
+      results.push({ viewport, article, id: item.id, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds });
     }
     const unreviewed = await page.goto(`${base}/fr/columns/taiwan-traffic-accident-procedure`, { waitUntil: 'load' });
     assert.equal(unreviewed?.status(), 200);

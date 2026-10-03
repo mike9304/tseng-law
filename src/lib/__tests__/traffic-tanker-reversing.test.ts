@@ -6,13 +6,13 @@ import pending from '@/content/column-embeddings-pending.json';
 const slug = 'taiwan-gas-station-tanker-reversing-beeper-liability';
 
 describe('native tanker reversing publication', () => {
-  it('appears once in liability and text search without an invented video', () => {
+  it('appears once in liability and text search with its reviewed native video', () => {
     const items = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     expect(items.filter(item => item.slug === slug)).toMatchObject([
-      { subject: 'liability', hasVideo: false, columnNumber: 93, aiAuthored: true },
+      { subject: 'liability', hasVideo: true, columnNumber: 93, aiAuthored: true },
     ]);
     expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ subject: 'liability', q: '蜂鳴器' })).map(item => item.slug)).toContain(slug);
-    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(item => item.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(item => item.slug === slug)).toBe(true);
     expect(getColumnPost(slug, 'zh-hant')?.diagramVideo).toBeUndefined();
   });
 

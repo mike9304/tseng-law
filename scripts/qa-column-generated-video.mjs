@@ -10,6 +10,14 @@ const allCases = [
     duration: 4, contactTime: 1.1,
     disclosure: { ko: 'AI로 만든 가상 장면', en: 'fictional AI-generated scene', 'zh-hant': 'AI生成的假想場景', ja: 'AIで作成した架空の場面' }[locale],
   })),
+  ...['fr', 'de', 'es', 'pt', 'it'].map(locale => ({
+    locale, slug: 'taiwan-traffic-accident-procedure', id: `rear-end-simulation-v3-${locale}`,
+    duration: 4, contactTime: 1.1, expectedDiagrams: 0,
+    // These file-backed column languages do not publish a traffic-board route.
+    trafficBoard: false,
+    disclosure: { fr: 'Scène fictive générée par IA', de: 'Fiktive, KI-generierte Szene', es: 'Escena ficticia generada con IA', pt: 'Cena fictícia gerada por IA', it: 'Scena fittizia generata con IA' }[locale],
+  })),
+  { locale: 'zh-hant', slug: 'taiwan-gas-station-tanker-reversing-beeper-liability', id: 'tanker-reversing-v1-zh-hant', duration: 4, contactTime: 0.8, expectedDiagrams: 0, disclosure: '非本文凌晨事故或判決勘驗影像的重建' },
   { locale: 'zh-hant', slug: 'taiwan-lane-change-side-rear-collision-liability', id: 'lane-change-v3-zh-hant', duration: 4, contactTime: 0.85, disclosure: '非真實事故或本文判決的重建' },
   { locale: 'zh-hant', slug: 'taiwan-chain-rear-end-first-impact-evidence', id: 'chain-rear-end-v2-zh-hant', duration: 4, contactTime: 1.2, disclosure: '這只是「後車先碰中間車」的一種設定' },
   { locale: 'zh-hant', slug: 'taiwan-roadside-starting-parking-exit-liability', id: 'roadside-start-v3-zh-hant', duration: 4, contactTime: 0.6, disclosure: '非本文判決或真實事故的重建' },
@@ -96,6 +104,11 @@ try {
         const element = document.querySelector('[data-column-generated-video] video');
         return element && !element.seeking && element.readyState >= 2 && element.currentTime >= seconds - 0.1;
       }, item.contactTime);
+      // Close the existing language suggestion and center the entire figure so
+      // the visual review can read the caption as well as the player.
+      const languageHintClose = page.locator('[data-locale-suggestion] button');
+      if (await languageHintClose.isVisible()) await languageHintClose.click();
+      await figure.evaluate(element => element.scrollIntoView({ block: 'center', behavior: 'instant' }));
       await page.screenshot({ path: `${out}/${evidenceStem}-contact-${viewport.width}.png` });
       const layout = await page.evaluate(() => ({
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
@@ -128,16 +141,16 @@ try {
       assert.ok(replaySeconds >= item.duration - 0.2, 'The clip did not play through at its native rate');
       assert.equal(await video.evaluate(element => element.playbackRate), 1);
 
-      if (process.env.COLUMN_VIDEO_QA_SKIP_BOARD !== '1') {
+      if (process.env.COLUMN_VIDEO_QA_SKIP_BOARD !== '1' && item.trafficBoard !== false) {
         const board = await page.goto(`${base}/${item.locale}/traffic-accidents?video=1&q=${encodeURIComponent(heading.slice(0, 60))}`, { waitUntil: 'load' });
         assert.equal(board?.status(), 200);
         const count = await page.locator(`a[href="${article}"]`).count();
         if (item.traffic === false) assert.equal(count, 0, 'Non-traffic video entered the traffic collection');
         else assert.ok(count > 0, 'Video filter omitted the new native video');
       }
-      results.push({ viewport, article, id: item.id, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds });
+      results.push({ viewport, article, id: item.id, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
     }
-    const unreviewed = await page.goto(`${base}/fr/columns/taiwan-traffic-accident-procedure`, { waitUntil: 'load' });
+    const unreviewed = await page.goto(`${base}/nl/columns/taiwan-traffic-accident-procedure`, { waitUntil: 'load' });
     assert.equal(unreviewed?.status(), 200);
     assert.equal(await page.locator('[data-column-generated-video]').count(), 0, 'Unreviewed locale inherited video');
     await context.close();

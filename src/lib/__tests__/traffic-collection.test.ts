@@ -203,6 +203,7 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-car-repair-cost-estimate-parts-depreciation',
         'taiwan-car-repair-rental-cost-repair-period-evidence',
         'taiwan-truck-blocking-multiple-dashcam-evidence',
+        'taiwan-gas-station-tanker-reversing-beeper-liability',
       ].includes(item.slug);
       expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');

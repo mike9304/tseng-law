@@ -17,6 +17,11 @@ const trafficLabels = {
   en: ['AI-GENERATED SCENE', 'Not real accident footage', 'Arial'],
   'zh-hant': ['AI 情境示意 · 非真實事故影像', 'AI-GENERATED SIMULATION', 'PingFang TC'],
   ja: ['AI生成の架空映像 · 実際の事故映像ではありません', 'AI-GENERATED SIMULATION', 'Hiragino Sans'],
+  fr: ['SCÈNE GÉNÉRÉE PAR IA', 'Accident fictif', 'Arial'],
+  de: ['KI-GENERIERTE SZENE', 'Kein echter Unfall', 'Arial'],
+  es: ['ESCENA GENERADA CON IA', 'Accidente ficticio', 'Arial'],
+  pt: ['CENA GERADA POR IA', 'Acidente fictício', 'Arial'],
+  it: ['SCENA GENERATA CON IA', 'Incidente fittizio', 'Arial'],
 };
 const sceneLabels = {
   ko: ['AI 생성 가상 장면', 'AI-GENERATED SCENE', 'Apple SD Gothic Neo'],
@@ -28,7 +33,7 @@ const context = args.context || 'traffic';
 if (!['traffic', 'scene'].includes(context)) throw new Error('--context must be traffic or scene');
 const labels = context === 'scene' ? sceneLabels : trafficLabels;
 if (!args.input || !/^[a-z0-9][a-z0-9-]+$/.test(args.id || '') || !labels[args.locale]) {
-  throw new Error('--input=<local mp4> --id=<versioned-asset-id> --locale=<ko|en|zh-hant|ja> required');
+  throw new Error(`--input=<local mp4> --id=<versioned-asset-id> --locale=<${Object.keys(labels).join('|')}> required`);
 }
 const input = path.resolve(args.input);
 const stem = `${args.id}-${args.locale}`;

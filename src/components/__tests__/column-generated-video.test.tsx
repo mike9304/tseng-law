@@ -21,7 +21,7 @@ describe('reviewed column videos', () => {
   });
 
   it('does not attach a video to an unreviewed language, article or issue with the same slug', () => {
-    expect(getColumnGeneratedVideo('fr', 'taiwan-traffic-accident-procedure')).toBeNull();
+    expect(getColumnGeneratedVideo('nl', 'taiwan-traffic-accident-procedure')).toBeNull();
     expect(getColumnGeneratedVideo('ko', 'taiwan-overtaking-accident-liability')).toBeNull();
     expect(getColumnGeneratedVideo('ko', 'taiwan-traffic-accident-procedure', 'issue')).toBeNull();
     expect(renderToStaticMarkup(<ColumnGeneratedVideo locale="ko" slug="unrelated-article" />)).toBe('');
@@ -31,6 +31,11 @@ describe('reviewed column videos', () => {
     ['en', 'not actual accident footage'],
     ['zh-hant', '非真實事故影像'],
     ['ja', '実際の事故映像ではありません'],
+    ['fr', 'Scène fictive générée par IA'],
+    ['de', 'Fiktive, KI-generierte Szene'],
+    ['es', 'Escena ficticia generada con IA'],
+    ['pt', 'Cena fictícia gerada por IA'],
+    ['it', 'Scena fittizia generata con IA'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
     expect(html).toContain(`rear-end-simulation-v3-${locale}.mp4`);
@@ -47,6 +52,7 @@ describe('reviewed column videos', () => {
     ['taiwan-car-repair-rental-cost-repair-period-evidence', 'repair-workshop-v1-zh-hant', '修理需要幾天'],
     ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
     ['taiwan-car-door-opening-motorcycle-liability', 'car-door-v2-zh-hant', '騎士失去平衡'],
+    ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-v1-zh-hant', '非本文凌晨事故'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="zh-hant" slug={slug} />);
     expect(html).toContain(`${id}.mp4`);

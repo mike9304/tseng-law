@@ -9,7 +9,7 @@ import businessPremisesCaptions from '@/data/business-premises-video-captions.js
 import logisticsCaptions from '@/data/logistics-video-captions.json';
 import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
-const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt'];
+const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi'];
 
 describe('reviewed column videos', () => {
   it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
@@ -96,6 +96,14 @@ describe('reviewed column videos', () => {
     ['de', 'nicht den anonymen Motorradfall'],
     ['es', 'distinto del caso anónimo de motocicleta'],
     ['pt', 'separado do caso anônimo de motocicleta'],
+    ['it', 'distinto dal caso anonimo di motocicletta'],
+    ['nl', 'los van de anonieme motorzaak'],
+    ['ca', 'independent del cas anònim de motocicleta'],
+    ['ro', 'separat de cazul anonim de motocicletă'],
+    ['sv', 'skild från artikelns anonyma motorcykelfall'],
+    ['da', 'adskilt fra artiklens anonyme motorcykelsag'],
+    ['nb', 'atskilt fra artikkelens anonyme motorsykkelsak'],
+    ['fi', 'erillinen artikkelin anonymisoidusta moottoripyörätapauksesta'],
   ])('serves one 100-second overtaking film with case boundaries and ten chapters in %s', (locale, disclosure) => {
     const slug = 'taiwan-overtaking-accident-liability';
     const asset = getColumnGeneratedVideo(locale, slug);
@@ -121,7 +129,14 @@ describe('reviewed column videos', () => {
     ['de', 'Fiktive, mit KI erzeugte Personen und Szenen'],
     ['es', 'Personas y escenas ficticias generadas con IA'],
     ['pt', 'Pessoas e cenas fictícias geradas por IA'],
-    ['it', 'Scena fittizia generata con IA'],
+    ['it', 'Persone e scene immaginarie create con IA'],
+    ['nl', 'Fictieve personen en scènes gemaakt met AI'],
+    ['ca', 'Persones i escenes fictícies generades amb IA'],
+    ['ro', 'Persoane și scene fictive generate cu IA'],
+    ['sv', 'Fiktiva personer och scener skapade med AI'],
+    ['da', 'Fiktive personer og scener skabt med AI'],
+    ['nb', 'Fiktive personer og scener laget med KI'],
+    ['fi', 'Henkilöt ja kohtaukset ovat tekoälyn luomaa fiktiota'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
     const id = longFilmLocales.includes(locale) ? 'traffic-procedure-film-v1' : 'rear-end-simulation-v3';

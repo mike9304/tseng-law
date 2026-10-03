@@ -5143,5 +5143,949 @@
         "text": "A conclusão do caso anônimo depende dos fatos daquele caso. Analise o seu caso com base nas provas e na legislação vigente."
       }
     ]
+  },
+  "column/sv/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-sv",
+    "src": "/videos/columns/traffic-procedure-film-v1-sv.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-sv.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Handlingar efter en trafikolycka",
+    "description": "Denna ljudlösa film på 80 sekunder visar säkerhet och anmälan, foton, originalfiler, vård, reparationer, inkomstförlust och granskning av en förlikning.",
+    "disclosure": "Fiktiva personer och scener skapade med AI, inte bilder från en verklig olycka. Fordon, platser och tider är exempel. Filmen sammanfattar delar av artikeln och bevisar inte vållande, vårdbehov eller ersättningsbelopp i ett enskilt fall.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Kollisionen",
+        "text": "En påkörning bakifrån skjuter den stillastående vita bilen framåt. Denna fiktiva scen visar inte vem som vållat en verklig olycka."
+      },
+      {
+        "start": 10,
+        "title": "Säkerhet och anmälan",
+        "text": "Säkra platsen, ge den hjälp som behövs och anmäl olyckan. Om fordon får flyttas beror på personskador och läget på platsen."
+      },
+      {
+        "start": 20,
+        "title": "Foton från platsen",
+        "text": "Dokumentera fordonens lägen, skador och vägmarkeringar. Tänk på säkerheten när du fotograferar."
+      },
+      {
+        "start": 30,
+        "title": "Spara originalen",
+        "text": "Spara originalfoton, inspelningar och polisens handlingar. Polisens preliminära analys fastställer inte vållandeandelar."
+      },
+      {
+        "start": 40,
+        "title": "Medicinska handlingar",
+        "text": "Spara anteckningar om symtom, journaler och kvitton. Bedöm vårdens nödvändighet och samband med olyckan."
+      },
+      {
+        "start": 50,
+        "title": "Underlag för reparation",
+        "text": "Jämför skadefoton, kostnadsförslag och reparationskvitton. Styrk kostnaderna och deras samband med olyckan."
+      },
+      {
+        "start": 60,
+        "title": "Faktisk inkomstförlust",
+        "text": "Samla vård-, närvaro-, ledighets- och löneunderlag. Ett råd om vila bevisar inte ensamt en faktisk inkomstförlust."
+      },
+      {
+        "start": 70,
+        "title": "Förlikningens villkor",
+        "text": "Kontrollera betalningstid, försäkring och krav som avstås. Granska förbehållna krav och framtida vård innan du skriver under."
+      }
+    ]
+  },
+  "column/da/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-da",
+    "src": "/videos/columns/traffic-procedure-film-v1-da.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-da.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Dokumenter efter en trafikulykke",
+    "description": "Denne lydløse film på 80 sekunder viser sikkerhed og anmeldelse, fotos, originalfiler, behandling, reparation, indtægtstab og gennemgang af et forlig.",
+    "disclosure": "Fiktive personer og scener skabt med AI, ikke optagelser af en virkelig ulykke. Køretøjer, steder og tider er illustrative. Filmen opsummerer dele af artiklen og beviser ikke skyld, behandlingsbehov eller erstatningsbeløb i en konkret sag.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Sammenstødet",
+        "text": "En påkørsel bagfra skubber den standsede hvide bil frem. Denne fiktive scene fastslår ikke skyld i en virkelig sag."
+      },
+      {
+        "start": 10,
+        "title": "Sikkerhed og anmeldelse",
+        "text": "Sikr stedet, giv nødvendig hjælp, og anmeld ulykken. Flytning af køretøjer afhænger af personskader og forholdene på stedet."
+      },
+      {
+        "start": 20,
+        "title": "Fotos fra stedet",
+        "text": "Dokumentér køretøjernes placering, skader og vejmarkeringer. Pas på din sikkerhed, mens du tager billeder."
+      },
+      {
+        "start": 30,
+        "title": "Gem originalerne",
+        "text": "Gem originale fotos, optagelser og politiets dokumenter. Politiets foreløbige analyse fastlægger ikke skyldandele."
+      },
+      {
+        "start": 40,
+        "title": "Lægelige dokumenter",
+        "text": "Gem notater om symptomer, journaler og kvitteringer. Vurdér behandlingens nødvendighed og sammenhæng med ulykken."
+      },
+      {
+        "start": 50,
+        "title": "Dokumenter om reparation",
+        "text": "Sammenhold skadefotos, tilbud og reparationsregninger. Dokumentér udgifterne og deres sammenhæng med ulykken."
+      },
+      {
+        "start": 60,
+        "title": "Faktisk indtægtstab",
+        "text": "Saml lægelige oplysninger, fremmøde, fravær og lønoplysninger. En anbefaling om hvile beviser ikke alene et faktisk indtægtstab."
+      },
+      {
+        "start": 70,
+        "title": "Forligets betingelser",
+        "text": "Tjek betalingstid, forsikring og krav, der gives afkald på. Gennemgå forbeholdte krav og fremtidig behandling før underskrift."
+      }
+    ]
+  },
+  "column/nb/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-nb",
+    "src": "/videos/columns/traffic-procedure-film-v1-nb.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-nb.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Dokumenter etter en trafikkulykke",
+    "description": "Denne lydløse filmen på 80 sekunder viser sikkerhet og varsling, bilder, originalfiler, behandling, reparasjon, inntektstap og gjennomgang av et forlik.",
+    "disclosure": "Fiktive personer og scener laget med KI, ikke opptak av en virkelig ulykke. Kjøretøy, steder og tider er illustrasjoner. Filmen oppsummerer deler av artikkelen og beviser ikke skyld, behandlingsbehov eller erstatningsbeløp i en konkret sak.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Sammenstøtet",
+        "text": "En påkjørsel bakfra skyver den stillestående hvite bilen frem. Denne fiktive scenen fastslår ikke skyld i en virkelig sak."
+      },
+      {
+        "start": 10,
+        "title": "Sikkerhet og varsling",
+        "text": "Sikre stedet, gi nødvendig hjelp og varsle om ulykken. Flytting av kjøretøy avhenger av personskader og forholdene på stedet."
+      },
+      {
+        "start": 20,
+        "title": "Bilder fra stedet",
+        "text": "Dokumenter kjøretøyenes plassering, skader og veimerking. Ta hensyn til sikkerheten når du fotograferer."
+      },
+      {
+        "start": 30,
+        "title": "Bevar originalene",
+        "text": "Bevar originale bilder, opptak og politidokumenter. Politiets foreløpige analyse fastsetter ikke skyldandeler."
+      },
+      {
+        "start": 40,
+        "title": "Medisinske dokumenter",
+        "text": "Ta vare på symptomnotater, journaler og kvitteringer. Vurder behovet for behandling og sammenhengen med ulykken."
+      },
+      {
+        "start": 50,
+        "title": "Dokumenter om reparasjon",
+        "text": "Sammenlign skadebilder, pristilbud og reparasjonsregninger. Dokumenter kostnadene og sammenhengen med ulykken."
+      },
+      {
+        "start": 60,
+        "title": "Faktisk inntektstap",
+        "text": "Samle medisinske opplysninger, fremmøte, fravær og lønnsdata. Et råd om hvile beviser ikke alene et faktisk inntektstap."
+      },
+      {
+        "start": 70,
+        "title": "Forlikets vilkår",
+        "text": "Sjekk betalingstid, forsikring og krav som frafalles. Gjennomgå forbeholdte krav og fremtidig behandling før du signerer."
+      }
+    ]
+  },
+  "column/fi/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-fi",
+    "src": "/videos/columns/traffic-procedure-film-v1-fi.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-fi.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Asiakirjat liikenneonnettomuuden jälkeen",
+    "description": "Äänetön 80 sekunnin video näyttää turvallisuustoimet, ilmoituksen, kuvat, alkuperäistiedostot, hoidon, korjaukset, ansionmenetyksen ja sovinnon tarkistamisen.",
+    "disclosure": "Henkilöt ja kohtaukset ovat tekoälyn luomaa fiktiota, eivät aidon onnettomuuden tallenteita. Ajoneuvot, paikat ja ajat ovat havainnollistavia. Video tiivistää osia artikkelista eikä osoita yksittäisen tapauksen tuottamusta, hoidon tarpeellisuutta tai korvauksen määrää.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Törmäys",
+        "text": "Peräänajo työntää pysähtynyttä valkoista autoa eteenpäin. Tämä kuvitteellinen kohtaus ei osoita tuottamusta aidossa tapauksessa."
+      },
+      {
+        "start": 10,
+        "title": "Turvallisuus ja ilmoitus",
+        "text": "Varmista turvallisuus, anna tarvittava apu ja ilmoita onnettomuudesta. Ajoneuvojen siirtäminen riippuu vammoista ja paikan olosuhteista."
+      },
+      {
+        "start": 20,
+        "title": "Kuvat tapahtumapaikalta",
+        "text": "Tallenna ajoneuvojen sijainnit, vauriot ja tiemerkinnät. Huolehdi turvallisuudesta myös kuvatessasi."
+      },
+      {
+        "start": 30,
+        "title": "Säilytä alkuperäiset",
+        "text": "Säilytä alkuperäiset kuvat, tallenteet ja poliisin asiakirjat. Poliisin alustava arvio ei ratkaise tuottamusosuuksia."
+      },
+      {
+        "start": 40,
+        "title": "Hoitoasiakirjat",
+        "text": "Säilytä oiremerkinnät, potilasasiakirjat ja kuitit. Hoidon tarpeellisuus ja yhteys onnettomuuteen on arvioitava."
+      },
+      {
+        "start": 50,
+        "title": "Korjausasiakirjat",
+        "text": "Vertaa vauriokuvia, kustannusarvioita ja korjauslaskuja. Osoita korjauskulut ja niiden yhteys onnettomuuteen."
+      },
+      {
+        "start": 60,
+        "title": "Todellinen ansionmenetys",
+        "text": "Kokoa hoito-, työaika-, poissaolo- ja palkkatiedot. Pelkkä leposuositus ei osoita todellista ansionmenetystä."
+      },
+      {
+        "start": 70,
+        "title": "Sovinnon ehdot",
+        "text": "Tarkista maksuajat, vakuutus ja vaatimukset, joista luovutaan. Tarkista säilytettävät vaatimukset ja tuleva hoito ennen allekirjoitusta."
+      }
+    ]
+  },
+  "column/it/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-it",
+    "src": "/videos/columns/traffic-procedure-film-v1-it.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-it.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Documenti da conservare dopo un incidente stradale",
+    "description": "Questo video muto di 80 secondi mostra sicurezza e segnalazione, foto, conservazione degli originali, cure, riparazioni, perdita di reddito e verifica dell’accordo.",
+    "disclosure": "Persone e scene immaginarie create con IA, non riprese di un incidente reale. Veicoli, luoghi e tempi sono illustrativi. Il video riassume parti dell’articolo; non prova la colpa, la necessità delle cure o il risarcimento in un singolo caso.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "La collisione",
+        "text": "Un urto da dietro spinge in avanti l’auto bianca ferma. Questa scena immaginaria non prova la colpa in un caso reale."
+      },
+      {
+        "start": 10,
+        "title": "Sicurezza e segnalazione",
+        "text": "Mettetevi al sicuro, prestate soccorso e segnalate l’incidente. Spostare i veicoli dipende dalle lesioni e dalle condizioni del luogo."
+      },
+      {
+        "start": 20,
+        "title": "Foto sul posto",
+        "text": "Documentate posizioni dei veicoli, danni e segnaletica a terra. Scattate le foto senza mettere a rischio la vostra sicurezza."
+      },
+      {
+        "start": 30,
+        "title": "Conservare gli originali",
+        "text": "Conservate foto, registrazioni originali e documenti di polizia. L’analisi preliminare della polizia non fissa le quote di colpa."
+      },
+      {
+        "start": 40,
+        "title": "Documenti medici",
+        "text": "Conservate annotazioni dei sintomi, cartelle cliniche e ricevute. Vanno valutati necessità delle cure e legame con l’incidente."
+      },
+      {
+        "start": 50,
+        "title": "Documenti delle riparazioni",
+        "text": "Confrontate foto dei danni, preventivi e fatture di riparazione. Documentate i costi e il loro legame con l’incidente."
+      },
+      {
+        "start": 60,
+        "title": "La perdita effettiva di reddito",
+        "text": "Riunite documenti medici, presenze, congedi e buste paga. Il solo riposo consigliato non prova una perdita reale di reddito."
+      },
+      {
+        "start": 70,
+        "title": "Le condizioni dell’accordo",
+        "text": "Verificate scadenze, assicurazione e pretese cui si rinuncia. Prima di firmare, esaminate diritti riservati e cure future."
+      }
+    ]
+  },
+  "column/nl/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-nl",
+    "src": "/videos/columns/traffic-procedure-film-v1-nl.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-nl.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Documenten na een verkeersongeval",
+    "description": "Deze stille film van 80 seconden toont veiligheid en melding, foto's, originele bestanden, medische zorg, reparatiekosten, inkomensverlies en de beoordeling van een schikking.",
+    "disclosure": "Fictieve personen en scènes gemaakt met AI, geen beelden van een echt ongeval. Voertuigen, locaties en tijden dienen ter illustratie. De film vat delen van het artikel samen en bewijst geen schuld, medische noodzaak of schadebedrag in een concrete zaak.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "De botsing",
+        "text": "Een klap van achteren duwt de stilstaande witte auto vooruit. Deze fictieve scène bewijst geen schuld bij een echt ongeval."
+      },
+      {
+        "start": 10,
+        "title": "Veiligheid en melding",
+        "text": "Zorg voor veiligheid, verleen hulp en meld het ongeval. Voertuigen verplaatsen hangt af van letsel en de situatie ter plaatse."
+      },
+      {
+        "start": 20,
+        "title": "Foto's van de plaats",
+        "text": "Leg voertuigposities, schade en wegmarkeringen vast. Let tijdens het fotograferen op uw veiligheid."
+      },
+      {
+        "start": 30,
+        "title": "Originelen bewaren",
+        "text": "Bewaar originele foto's, opnamen en politiedocumenten. De voorlopige politieanalyse legt geen schuldpercentages vast."
+      },
+      {
+        "start": 40,
+        "title": "Medische documenten",
+        "text": "Bewaar notities over klachten, medische dossiers en bonnen. Beoordeel de noodzaak van de zorg en het verband met het ongeval."
+      },
+      {
+        "start": 50,
+        "title": "Reparatiedocumenten",
+        "text": "Vergelijk schadefoto's, offertes en reparatiefacturen. Onderbouw de kosten en het verband met het ongeval."
+      },
+      {
+        "start": 60,
+        "title": "Werkelijk inkomensverlies",
+        "text": "Leg medische stukken naast werk-, verlof- en loongegevens. Alleen een rustadvies bewijst nog geen werkelijk inkomensverlies."
+      },
+      {
+        "start": 70,
+        "title": "Voorwaarden van de schikking",
+        "text": "Controleer betalingstermijnen, verzekering en claims waarvan u afziet. Bekijk vóór ondertekening voorbehouden claims en toekomstige zorg."
+      }
+    ]
+  },
+  "column/ca/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-ca",
+    "src": "/videos/columns/traffic-procedure-film-v1-ca.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-ca.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Documents després d’un accident de trànsit",
+    "description": "Aquest vídeo sense so de 80 segons mostra seguretat i avís, fotografies, originals, atenció mèdica, reparacions, pèrdua d’ingressos i revisió de l’acord.",
+    "disclosure": "Persones i escenes fictícies generades amb IA, no imatges d’un accident real. Vehicles, llocs i temps són il·lustratius. El vídeo resumeix parts de l’article; no prova la culpa, la necessitat de tractament ni la indemnització d’un cas concret.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "La col·lisió",
+        "text": "Un impacte per darrere empeny el cotxe blanc aturat. Aquesta escena fictícia no permet atribuir la culpa d’un cas real."
+      },
+      {
+        "start": 10,
+        "title": "Seguretat i avís",
+        "text": "Assegureu el lloc, presteu auxili i aviseu de l’accident. Moure els vehicles depèn de les lesions i de les condicions del lloc."
+      },
+      {
+        "start": 20,
+        "title": "Fotos del lloc",
+        "text": "Fotografieu posicions dels vehicles, danys i marques viàries. Prioritzeu la seguretat mentre feu les fotografies."
+      },
+      {
+        "start": 30,
+        "title": "Conservar els originals",
+        "text": "Guardeu fotos, gravacions originals i documents policials. L’anàlisi policial preliminar no fixa els percentatges de culpa."
+      },
+      {
+        "start": 40,
+        "title": "Documents mèdics",
+        "text": "Conserveu registres de símptomes, informes mèdics i rebuts. Cal valorar la necessitat del tractament i el nexe amb l’accident."
+      },
+      {
+        "start": 50,
+        "title": "Documents de reparació",
+        "text": "Compareu fotos dels danys, pressupostos i factures de reparació. Documenteu els costos i la seva relació amb l’accident."
+      },
+      {
+        "start": 60,
+        "title": "La pèrdua real d’ingressos",
+        "text": "Reuniu documents mèdics, assistència, permisos i nòmines. Recomanar repòs no prova, per si sol, la pèrdua d’ingressos."
+      },
+      {
+        "start": 70,
+        "title": "Condicions de l’acord",
+        "text": "Reviseu terminis de pagament, assegurança i renúncies a reclamar. Abans de signar, examineu drets reservats i tractaments futurs."
+      }
+    ]
+  },
+  "column/ro/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-ro",
+    "src": "/videos/columns/traffic-procedure-film-v1-ro.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-ro.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Documente de păstrat după un accident rutier",
+    "description": "Filmul fără sunet de 80 de secunde prezintă siguranța și anunțarea, fotografiile, originalele, îngrijirea medicală, reparațiile, pierderea veniturilor și verificarea acordului.",
+    "disclosure": "Persoane și scene fictive generate cu IA, nu imagini ale unui accident real. Vehiculele, locurile și timpii sunt ilustrativi. Filmul rezumă părți ale articolului; nu dovedește culpa, necesitatea tratamentului sau despăgubirea într-un caz concret.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Coliziunea",
+        "text": "Un impact din spate împinge mașina albă oprită. Această scenă fictivă nu dovedește culpa într-un caz real."
+      },
+      {
+        "start": 10,
+        "title": "Siguranță și anunțare",
+        "text": "Asigurați zona, acordați ajutor și anunțați accidentul. Mutarea vehiculelor depinde de răni și de condițiile de la fața locului."
+      },
+      {
+        "start": 20,
+        "title": "Fotografii de la fața locului",
+        "text": "Înregistrați pozițiile vehiculelor, daunele și marcajele rutiere. Păstrați-vă siguranța când faceți fotografii."
+      },
+      {
+        "start": 30,
+        "title": "Păstrarea originalelor",
+        "text": "Păstrați fotografii, înregistrări originale și acte ale poliției. Analiza preliminară a poliției nu fixează procentele de culpă."
+      },
+      {
+        "start": 40,
+        "title": "Documentele medicale",
+        "text": "Păstrați notițe despre simptome, fișe medicale și chitanțe. Trebuie verificate necesitatea tratamentului și legătura cu accidentul."
+      },
+      {
+        "start": 50,
+        "title": "Documentele reparației",
+        "text": "Comparați fotografii ale daunelor, devize și facturi de reparație. Documentați costurile și legătura lor cu accidentul."
+      },
+      {
+        "start": 60,
+        "title": "Pierderea efectivă de venituri",
+        "text": "Reuniți acte medicale, pontaje, concedii și documente salariale. Repausul recomandat nu dovedește singur pierderea veniturilor."
+      },
+      {
+        "start": 70,
+        "title": "Condițiile acordului",
+        "text": "Verificați termenele, asigurarea și pretențiile abandonate. Înainte de semnare, verificați drepturile rezervate și tratamentele viitoare."
+      }
+    ]
+  },
+  "column/nb/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-nb",
+    "src": "/videos/columns/overtaking-evidence-film-v1-nb.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-nb.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Forbikjøring: vilkår og bevis etter en kollisjon",
+    "description": "Denne lydløse filmen på 100 sekunder viser forbud, signaler og avstander, en fiktiv kollisjon ved retur til feltet, skadebilder, originaler og vurdering av vei, tidsforløp og skyld.",
+    "disclosure": "Fiktive personer, kjøretøy og dokumenter laget med KI. Kontakten mellom to biler er atskilt fra artikkelens anonyme motorsykkelsak. Den beviser ikke at krav til signaler, å slippe forbi eller avstand er oppfylt; modellene er ikke kalibrert. Skadebilder tas senere på en parkeringsplass og viser ikke de opprinnelige ulykkesposisjonene. Filmen oppsummerer utvalgte vilkår i artikkel 101 og kontroll av bevis; les artikkelen og den offisielle regelen for alle vilkår.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Før forbikjøringen",
+        "text": "Sjekk forbikjøringsforbud, oppmerking, vei og trafikk. Ikke kjør forbi ved møtende trafikk eller minst to kjøretøy i rekke foran."
+      },
+      {
+        "start": 10,
+        "title": "Varsel i samme kjørefelt",
+        "text": "Der det er tillatt: to korte hornsignaler eller ett blink med frontlyktene. Vent til den foran slipper deg forbi; ikke tving med gjentatte signaler."
+      },
+      {
+        "start": 20,
+        "title": "Sideavstand og retur",
+        "text": "Blink til venstre og passér til venstre med minst 0,5 m mellomrom. Ved trygg avstand: blink til høyre og gå tilbake til opprinnelig felt."
+      },
+      {
+        "start": 30,
+        "title": "En fiktiv for tidlig retur",
+        "text": "Bilen går tilbake uten nok plass foran den andre bilen. Denne kontakten bestemmer ikke skyldandelene i en virkelig sak."
+      },
+      {
+        "start": 40,
+        "title": "Skader og hele kjøretøyet",
+        "text": "Fotografer skadene og hele bilen fra et trygt sted. Sammenlign kontaktpunktene på begge kjøretøy med originalmaterialet."
+      },
+      {
+        "start": 50,
+        "title": "Originaler før og etter",
+        "text": "Bevar sammenhengende opptak, originalfiler og tidsopplysninger. Et klipp av bare sammenstøtet kan utelate tidligere signaler og bevegelser."
+      },
+      {
+        "start": 60,
+        "title": "Veien da ulykken skjedde",
+        "text": "Sjekk felt, skilt, oppmerking og sikthindringer. Stemmer dagens bilder med forholdene på ulykkestidspunktet?"
+      },
+      {
+        "start": 70,
+        "title": "Signaler, feltskifte og kontakt",
+        "text": "Kontroller rekkefølgen før sammenstøtet i originalopptakene. Ikke fastslå fart eller avstand uten et pålitelig målegrunnlag."
+      },
+      {
+        "start": 80,
+        "title": "Bevis om skyld",
+        "text": "Et regelbrudd alene fastsetter ikke en bestemt skyldandel. Vurder sikt, tid, mulighet for å unngå ulykken og også ugunstige bevis."
+      },
+      {
+        "start": 90,
+        "title": "Hver saks egne fakta",
+        "text": "Konklusjonen i den anonyme saken bygger på dens konkrete fakta. Vurder din egen sak ut fra bevisene og gjeldende rett."
+      }
+    ]
+  },
+  "column/fi/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-fi",
+    "src": "/videos/columns/overtaking-evidence-film-v1-fi.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-fi.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Ohitus: edellytykset ja todisteet törmäyksen jälkeen",
+    "description": "Äänetön 100 sekunnin video näyttää kiellot, merkit ja etäisyydet, kuvitteellisen törmäyksen kaistalle palattaessa, vauriokuvat, alkuperäistallenteet sekä tien, ajoituksen ja tuottamuksen arvioinnin.",
+    "disclosure": "Henkilöt, ajoneuvot ja asiakirjat ovat tekoälyn luomaa fiktiota. Kahden auton kosketus on erillinen artikkelin anonymisoidusta moottoripyörätapauksesta. Se ei osoita merkinanto-, väistämis- tai etäisyysvaatimusten täyttymistä; malleja ei ole kalibroitu. Vauriokuvat otetaan myöhemmin pysäköintialueella, eivätkä ne näytä alkuperäisiä onnettomuusasemia. Video tiivistää joitakin 101 artiklan ehtoja ja todisteiden tarkistusta; kaikki ehdot löytyvät artikkelista ja virallisesta säännöksestä.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Ennen ohitusta",
+        "text": "Tarkista ohituskiellot, merkinnät, tie ja liikenne. Älä ohita vastaantulijan lähestyessä tai jos edessä ajaa vähintään kaksi jonossa."
+      },
+      {
+        "start": 10,
+        "title": "Varoitus samalla kaistalla",
+        "text": "Kun sallittua: kaksi lyhyttä äänimerkkiä tai yksi ajovalojen väläytys. Odota edellä ajavan väistämistä; älä pakota toistuvilla merkeillä."
+      },
+      {
+        "start": 20,
+        "title": "Sivuväli ja paluu",
+        "text": "Vilkuta vasemmalle, ohita vasemmalta ja jätä vähintään 0,5 m väli. Turvallisen välin jälkeen vilkuta oikealle ja palaa alkuperäiselle kaistalle."
+      },
+      {
+        "start": 30,
+        "title": "Kuvitteellinen liian varhainen paluu",
+        "text": "Auto palaa kaistalle jättämättä tarpeeksi tilaa toisen auton eteen. Tämä kosketus ei ratkaise todellisen tapauksen tuottamusosuuksia."
+      },
+      {
+        "start": 40,
+        "title": "Vauriot ja koko ajoneuvo",
+        "text": "Kuvaa vauriot ja koko auto turvallisessa paikassa. Vertaa molempien ajoneuvojen kosketuskohtia alkuperäisaineistoon."
+      },
+      {
+        "start": 50,
+        "title": "Alkuperäiset ennen ja jälkeen",
+        "text": "Säilytä yhtenäiset tallenteet, alkuperäistiedostot ja aikaleimat. Pelkkä törmäyskatkelma voi jättää aiemmat merkit ja liikkeet pois."
+      },
+      {
+        "start": 60,
+        "title": "Tie onnettomuushetkellä",
+        "text": "Tarkista kaistat, liikennemerkit, tiemerkinnät ja näköesteet. Vastaavatko nykyiset kuvat onnettomuushetken olosuhteita?"
+      },
+      {
+        "start": 70,
+        "title": "Merkit, kaistalle siirtyminen, kosketus",
+        "text": "Tarkista tapahtumajärjestys ennen törmäystä alkuperäistallenteista. Älä anna nopeus- tai etäisyyslukuja ilman luotettavaa mittausperustaa."
+      },
+      {
+        "start": 80,
+        "title": "Tuottamusta koskevat todisteet",
+        "text": "Rikkomus ei yksin määrää kiinteää tuottamusosuutta. Arvioi näkyvyys, aika, väistämismahdollisuus ja myös epäedulliset todisteet."
+      },
+      {
+        "start": 90,
+        "title": "Jokaisen tapauksen omat tosiseikat",
+        "text": "Anonymisoidun tapauksen päätelmä perustuu juuri sen tosiseikkoihin. Arvioi oma tapauksesi todisteiden ja voimassa olevan lain perusteella."
+      }
+    ]
+  },
+  "column/sv/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-sv",
+    "src": "/videos/columns/overtaking-evidence-film-v1-sv.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-sv.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Omkörning: villkor och bevis efter en kollision",
+    "description": "Denna ljudlösa film på 100 sekunder visar förbud, signaler och avstånd, en fiktiv kollision vid återgång till körfältet, skadefoton, original och granskning av väg, tid och vållande.",
+    "disclosure": "Fiktiva personer, fordon och handlingar skapade med AI. Kontakten mellan två bilar är skild från artikelns anonyma motorcykelfall. Den bevisar inte att regler om signaler, att lämna plats eller avstånd har följts; modellerna är inte kalibrerade. Skadefoton tas senare på en parkering och visar inte fordonens ursprungliga lägen. Filmen sammanfattar vissa villkor i artikel 101 och beviskontroller; läs artikeln och den officiella regeln för samtliga villkor.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Före omkörningen",
+        "text": "Kontrollera omkörningsförbud, markeringar, väg och trafik. Kör inte om vid mötande fordon eller minst två fordon i rad framför."
+      },
+      {
+        "start": 10,
+        "title": "Signal i samma körfält",
+        "text": "Där det är tillåtet: två korta tutningar eller en blinkning med helljuset. Vänta tills bilen framför lämnar plats; tvinga inte med upprepade signaler."
+      },
+      {
+        "start": 20,
+        "title": "Sidoavstånd och återgång",
+        "text": "Blinka vänster, passera till vänster med minst 0,5 m mellanrum. Först vid säkert avstånd: blinka höger och återgå till ursprungligt körfält."
+      },
+      {
+        "start": 30,
+        "title": "En fiktiv för tidig återgång",
+        "text": "Bilen går tillbaka utan att lämna tillräckligt utrymme framför den andra. Denna kontakt fastställer inte vållandeandelar i ett verkligt fall."
+      },
+      {
+        "start": 40,
+        "title": "Skador och hela fordonet",
+        "text": "Fotografera skadorna och hela bilen på en säker plats. Jämför kontaktpunkter på båda fordonen med originalunderlagen."
+      },
+      {
+        "start": 50,
+        "title": "Original före och efter",
+        "text": "Spara sammanhängande inspelningar, originalfiler och tidsuppgifter. Ett klipp av bara krocken kan utelämna tidigare signaler och rörelser."
+      },
+      {
+        "start": 60,
+        "title": "Vägen vid olyckstillfället",
+        "text": "Kontrollera körfält, skyltar, markeringar och sikthinder. Stämmer dagens foton med förhållandena när olyckan inträffade?"
+      },
+      {
+        "start": 70,
+        "title": "Signaler, körfältsbyte och kontakt",
+        "text": "Kontrollera ordningen före krocken i originalinspelningarna. Ange inte hastighet eller avstånd utan tillförlitlig mätgrund."
+      },
+      {
+        "start": 80,
+        "title": "Bevis om vållande",
+        "text": "En överträdelse ensam ger inte en fast vållandeandel. Bedöm sikt, tid, möjlighet att undvika och även ofördelaktiga bevis."
+      },
+      {
+        "start": 90,
+        "title": "Varje falls egna fakta",
+        "text": "Slutsatsen i det anonyma fallet beror på just dess omständigheter. Pröva ditt eget fall utifrån dess bevis och gällande rätt."
+      }
+    ]
+  },
+  "column/da/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-da",
+    "src": "/videos/columns/overtaking-evidence-film-v1-da.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-da.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Overhaling: betingelser og beviser efter en kollision",
+    "description": "Denne lydløse film på 100 sekunder viser forbud, signaler og afstande, en fiktiv kollision ved tilbagekørsel i vognbanen, skadefotos, originaler og vurdering af vej, tid og skyld.",
+    "disclosure": "Fiktive personer, køretøjer og dokumenter skabt med AI. Kontakten mellem to biler er adskilt fra artiklens anonyme motorcykelsag. Den beviser ikke, at krav om signaler, at give plads eller afstand er opfyldt; modellerne er ikke kalibrerede. Skadefotos tages senere på en parkeringsplads og viser ikke de oprindelige ulykkespositioner. Filmen opsummerer udvalgte betingelser i artikel 101 og beviskontrol; læs artiklen og den officielle regel for alle betingelser.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Før overhaling",
+        "text": "Tjek overhalingsforbud, markeringer, vej og trafik. Overhal ikke ved modkørende, der nærmer sig, eller mindst to biler i række foran."
+      },
+      {
+        "start": 10,
+        "title": "Signal i samme vognbane",
+        "text": "Hvor tilladt: to korte hornsignaler eller ét blink med forlygterne. Vent, til den forankørende giver plads; tving ikke med gentagne signaler."
+      },
+      {
+        "start": 20,
+        "title": "Sideafstand og tilbagekørsel",
+        "text": "Blink til venstre, og passér til venstre med mindst 0,5 m afstand. Ved sikker afstand: blink til højre, og kør tilbage i den oprindelige bane."
+      },
+      {
+        "start": 30,
+        "title": "En fiktiv for tidlig tilbagekørsel",
+        "text": "Bilen kører ind uden tilstrækkelig plads foran den anden. Denne kontakt fastlægger ikke skyldandele i en virkelig sag."
+      },
+      {
+        "start": 40,
+        "title": "Skader og hele køretøjet",
+        "text": "Fotografér skader og hele bilen fra et sikkert sted. Sammenhold begge bilers kontaktpunkter med originalmaterialet."
+      },
+      {
+        "start": 50,
+        "title": "Originaler før og efter",
+        "text": "Gem sammenhængende optagelser, originalfiler og tidsoplysninger. Et klip kun af sammenstødet kan udelade tidligere signaler og bevægelser."
+      },
+      {
+        "start": 60,
+        "title": "Vejen på ulykkestidspunktet",
+        "text": "Tjek vognbaner, skilte, markeringer og hindringer for udsynet. Svarer nutidige fotos til forholdene, da ulykken skete?"
+      },
+      {
+        "start": 70,
+        "title": "Signaler, baneskift og kontakt",
+        "text": "Kontrollér rækkefølgen før stødet i de originale optagelser. Fastslå ikke fart eller afstand uden et pålideligt målegrundlag."
+      },
+      {
+        "start": 80,
+        "title": "Beviser om skyld",
+        "text": "En overtrædelse alene fastsætter ikke en fast skyldprocent. Vurdér udsyn, tid, undvigemuligheder og også ugunstige beviser."
+      },
+      {
+        "start": 90,
+        "title": "Hver sags egne fakta",
+        "text": "Konklusionen i den anonyme sag afhænger af netop dens fakta. Vurdér din egen sag ud fra dens beviser og gældende ret."
+      }
+    ]
+  },
+  "column/ca/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-ca",
+    "src": "/videos/columns/overtaking-evidence-film-v1-ca.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-ca.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Avançament: condicions i proves després d’una col·lisió",
+    "description": "Aquest vídeo sense so de 100 segons presenta restriccions, senyals i distàncies, una col·lisió fictícia en tornar al carril, fotos dels danys, originals i revisió de la via, els temps i la culpa.",
+    "disclosure": "Persones, vehicles i documents ficticis generats amb IA. El contacte entre dos cotxes és independent del cas anònim de motocicleta de l’article. No prova el compliment dels senyals, de la cessió del pas ni de les distàncies; els models no estan calibrats. Les fotos dels danys es fan després en un aparcament i no mostren les posicions originals de l’accident. El vídeo resumeix alguns requisits de l’article 101 i la revisió de proves; consulteu l’article i la norma oficial per conèixer totes les condicions.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Abans d’avançar",
+        "text": "Reviseu prohibicions, marques viàries, estat de la via i trànsit. No avanceu si s’acosta trànsit de cara o hi ha almenys dos vehicles en fila davant."
+      },
+      {
+        "start": 10,
+        "title": "Avís al mateix carril",
+        "text": "Si és permès: dos tocs curts de clàxon o un senyal dels fars. Espereu que us cedeixin el pas; no el forceu amb senyals repetits."
+      },
+      {
+        "start": 20,
+        "title": "Separació lateral i retorn",
+        "text": "Intermitent esquerre i pas per l’esquerra amb almenys 0,5 m d’espai. Amb una distància segura, intermitent dret i retorn al carril original."
+      },
+      {
+        "start": 30,
+        "title": "Un retorn prematur fictici",
+        "text": "El cotxe torna al carril sense deixar prou espai davant de l’altre. Aquest contacte no fixa els percentatges de culpa d’un cas real."
+      },
+      {
+        "start": 40,
+        "title": "Danys i vehicle sencer",
+        "text": "Fotografieu els danys i tot el cotxe des d’un lloc segur. Compareu els punts de contacte dels dos vehicles amb els originals."
+      },
+      {
+        "start": 50,
+        "title": "Originals d’abans i després",
+        "text": "Conserveu gravacions contínues, arxius originals i dades horàries. Un retall només del xoc pot ometre senyals i moviments previs."
+      },
+      {
+        "start": 60,
+        "title": "La via en el moment del xoc",
+        "text": "Reviseu carrils, senyals, marques i obstacles a la visibilitat. Comproveu si les fotos actuals reflecteixen la via el dia de l’accident."
+      },
+      {
+        "start": 70,
+        "title": "Senyals, entrada al carril i contacte",
+        "text": "Comproveu l’ordre abans de l’impacte a les gravacions originals. No assigneu velocitats ni distàncies sense una base de mesura fiable."
+      },
+      {
+        "start": 80,
+        "title": "Proves sobre la culpa",
+        "text": "Una infracció no determina per si sola un percentatge fix de culpa. Valoreu visibilitat, temps, possibilitat d’evitar i proves desfavorables."
+      },
+      {
+        "start": 90,
+        "title": "Els fets de cada cas",
+        "text": "La conclusió del cas anònim depèn dels seus fets concrets. Examineu el vostre cas segons les proves i la normativa vigent."
+      }
+    ]
+  },
+  "column/ro/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-ro",
+    "src": "/videos/columns/overtaking-evidence-film-v1-ro.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-ro.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Depășirea: condiții și probe după o coliziune",
+    "description": "Filmul fără sunet de 100 de secunde prezintă interdicții, semnale și distanțe, o coliziune fictivă la revenirea pe bandă, fotografii ale daunelor, originale și analiza drumului, timpilor și culpei.",
+    "disclosure": "Persoane, vehicule și documente fictive generate cu IA. Contactul dintre două mașini este separat de cazul anonim de motocicletă din articol. Nu dovedește respectarea semnalelor, a cedării trecerii sau a distanțelor; modelele nu sunt calibrate. Fotografiile daunelor sunt făcute ulterior într-o parcare și nu arată pozițiile inițiale ale accidentului. Filmul rezumă unele cerințe ale articolului 101 și verificarea probelor; consultați articolul și norma oficială pentru toate condițiile.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Înainte de depășire",
+        "text": "Verificați interdicțiile, marcajele, drumul și traficul. Nu depășiți cu trafic venind din față sau cel puțin două vehicule în șir înainte."
+      },
+      {
+        "start": 10,
+        "title": "Avertizare pe aceeași bandă",
+        "text": "Unde e permis: două semnale scurte de claxon sau un semnal cu farurile. Așteptați cedarea trecerii; nu o forțați prin semnale repetate."
+      },
+      {
+        "start": 20,
+        "title": "Distanță laterală și revenire",
+        "text": "Semnalizați stânga și treceți pe stânga, la cel puțin 0,5 m. La distanță sigură, semnalizați dreapta și reveniți pe banda inițială."
+      },
+      {
+        "start": 30,
+        "title": "O revenire prematură fictivă",
+        "text": "Mașina revine fără a lăsa destul spațiu în fața celeilalte. Acest contact nu stabilește procentele de culpă ale unui caz real."
+      },
+      {
+        "start": 40,
+        "title": "Daunele și vehiculul întreg",
+        "text": "Fotografiați daunele și întreaga mașină dintr-un loc sigur. Comparați punctele de contact ale ambelor vehicule cu originalele."
+      },
+      {
+        "start": 50,
+        "title": "Originale de dinainte și de după",
+        "text": "Păstrați înregistrări continue, fișiere originale și date de timp. Doar secvența impactului poate omite semnale și mișcări anterioare."
+      },
+      {
+        "start": 60,
+        "title": "Drumul la momentul accidentului",
+        "text": "Verificați benzile, indicatoarele, marcajele și obstacolele vizuale. Verificați dacă fotografiile actuale reflectă drumul din ziua accidentului."
+      },
+      {
+        "start": 70,
+        "title": "Semnale, intrare pe bandă, contact",
+        "text": "Stabiliți ordinea de dinaintea impactului din înregistrările originale. Nu atribuiți viteze sau distanțe fără o bază de măsurare fiabilă."
+      },
+      {
+        "start": 80,
+        "title": "Probe privind culpa",
+        "text": "O încălcare nu fixează singură un procent de culpă. Analizați vizibilitatea, timpul, evitarea posibilă și probele nefavorabile."
+      },
+      {
+        "start": 90,
+        "title": "Faptele fiecărui caz",
+        "text": "Concluzia cazului anonim depinde de faptele sale concrete. Examinați propriul caz pe baza probelor și a legislației în vigoare."
+      }
+    ]
+  },
+  "column/it/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-it",
+    "src": "/videos/columns/overtaking-evidence-film-v1-it.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-it.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Sorpasso: condizioni e prove dopo la collisione",
+    "description": "Questo video muto di 100 secondi mostra divieti, segnali e distanze, una collisione immaginaria al rientro, foto dei danni, originali e verifica di strada, tempi e colpa.",
+    "disclosure": "Persone, veicoli e documenti immaginari creati con IA. Il contatto fra due auto è distinto dal caso anonimo di motocicletta dell’articolo. Non prova il rispetto di segnali, cessione del passo o distanze; i modelli non sono calibrati. Le foto dei danni sono scattate dopo, in un parcheggio, e non mostrano le posizioni originarie dell’incidente. Il video riassume alcune condizioni dell’articolo 101 e la verifica delle prove; consultate l’articolo e la norma ufficiale per tutte le condizioni.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Prima di sorpassare",
+        "text": "Verificate divieti, segnaletica, condizioni stradali e traffico. Vietato con veicoli in arrivo di fronte o almeno due in fila davanti."
+      },
+      {
+        "start": 10,
+        "title": "Avviso nella stessa corsia",
+        "text": "Dove consentito: due brevi colpi di clacson o un lampeggio dei fari. Aspettate che chi precede ceda il passo; non forzatelo con segnali ripetuti."
+      },
+      {
+        "start": 20,
+        "title": "Distanza laterale e rientro",
+        "text": "Freccia a sinistra, sorpasso a sinistra con almeno 0,5 m di distanza. Raggiunta una distanza sicura, freccia a destra e rientro nella corsia."
+      },
+      {
+        "start": 30,
+        "title": "Un rientro prematuro immaginario",
+        "text": "L’auto rientra senza lasciare abbastanza spazio davanti all’altra. Questo contatto non stabilisce le quote di colpa di un caso reale."
+      },
+      {
+        "start": 40,
+        "title": "Danni e veicolo intero",
+        "text": "Fotografate i danni e l’intera auto da un luogo sicuro. Confrontate i punti di contatto dei due veicoli con gli originali."
+      },
+      {
+        "start": 50,
+        "title": "Gli originali prima e dopo",
+        "text": "Conservate riprese continue, file originali e informazioni temporali. Il solo estratto dell’urto può omettere segnali e movimenti precedenti."
+      },
+      {
+        "start": 60,
+        "title": "La strada al momento dell’urto",
+        "text": "Verificate corsie, segnali, strisce e ostacoli alla visibilità. Le foto attuali corrispondono alle condizioni al momento dell’incidente?"
+      },
+      {
+        "start": 70,
+        "title": "Segnali, ingresso e contatto",
+        "text": "Verificate la sequenza prima dell’urto nelle riprese originali. Non indicate velocità o distanze senza una base di misura affidabile."
+      },
+      {
+        "start": 80,
+        "title": "Le prove sulla colpa",
+        "text": "Una violazione non fissa da sola una percentuale di colpa. Valutate visibilità, tempi, possibilità di evitare e prove sfavorevoli."
+      },
+      {
+        "start": 90,
+        "title": "I fatti di ciascun caso",
+        "text": "La conclusione del caso anonimo dipende dai suoi fatti specifici. Esaminate il vostro caso in base alle prove e al diritto vigente."
+      }
+    ]
+  },
+  "column/nl/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-nl",
+    "src": "/videos/columns/overtaking-evidence-film-v1-nl.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-nl.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Inhalen: voorwaarden en bewijs na een botsing",
+    "description": "Deze stille film van 100 seconden toont inhaalverboden, signalen en afstanden, een fictieve botsing bij het invoegen, schadefoto's, originele opnamen en onderzoek van weg, tijdverloop en schuld.",
+    "disclosure": "Fictieve personen, voertuigen en documenten gemaakt met AI. Het contact tussen twee auto's staat los van de anonieme motorzaak in het artikel. Het bewijst niet dat aan signalering, ruimte geven of afstandseisen is voldaan; de modellen zijn niet gekalibreerd. Schadefoto's worden later op een parkeerplaats gemaakt en tonen niet de oorspronkelijke ongevalsposities. De film vat enkele voorwaarden van artikel 101 en bewijscontroles samen; raadpleeg het artikel en de officiële regel voor alle voorwaarden.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Voor het inhalen",
+        "text": "Controleer inhaalverboden, markeringen, weg en verkeer. Niet inhalen bij naderende tegenliggers of minstens twee auto's op een rij voor u."
+      },
+      {
+        "start": 10,
+        "title": "Waarschuwing op dezelfde rijstrook",
+        "text": "Waar toegestaan: tweemaal kort claxonneren of één koplampsignaal. Wacht tot de voorligger ruimte geeft; dwing dit niet af met herhaalde signalen."
+      },
+      {
+        "start": 20,
+        "title": "Zijafstand en terugkeren",
+        "text": "Geef links richting en passeer links met minstens 0,5 m tussenruimte. Na veilige afstand: rechts richting aangeven en terug naar de eigen rijstrook."
+      },
+      {
+        "start": 30,
+        "title": "Fictief te vroeg invoegen",
+        "text": "De auto voegt in zonder voldoende ruimte voor de andere auto. Dit contact bepaalt geen schuldpercentages in een echte zaak."
+      },
+      {
+        "start": 40,
+        "title": "Schade en het hele voertuig",
+        "text": "Fotografeer schade en de hele auto op een veilige plek. Vergelijk contactpunten van beide voertuigen met de originele gegevens."
+      },
+      {
+        "start": 50,
+        "title": "Originele beelden voor en na",
+        "text": "Bewaar doorlopende opnamen, originele bestanden en tijdgegevens. Een fragment van alleen de klap kan eerdere signalen en bewegingen missen."
+      },
+      {
+        "start": 60,
+        "title": "De weg ten tijde van het ongeval",
+        "text": "Controleer rijstroken, borden, markeringen en zichtbelemmeringen. Komen huidige foto's overeen met de omstandigheden tijdens het ongeval?"
+      },
+      {
+        "start": 70,
+        "title": "Signalen, rijstrookwissel en contact",
+        "text": "Controleer de volgorde vóór de botsing in de originele opnamen. Geen snelheden of afstanden vaststellen zonder betrouwbare meetbasis."
+      },
+      {
+        "start": 80,
+        "title": "Bewijs over schuld",
+        "text": "Een overtreding alleen legt geen vast schuldpercentage op. Beoordeel zicht, tijd, uitwijkmogelijkheden en ook ongunstig bewijs."
+      },
+      {
+        "start": 90,
+        "title": "De feiten van elke zaak",
+        "text": "De conclusie in de anonieme zaak geldt voor de feiten van die zaak. Beoordeel uw eigen zaak aan de hand van het bewijs en het geldende recht."
+      }
+    ]
   }
 }

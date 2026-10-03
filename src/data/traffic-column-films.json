@@ -3371,5 +3371,541 @@
         "text": "元のファイル、撮影元、時刻と前後の経緯を保存し、見聞と各人の説明を分けます。 迫られた側の動きも記録され得ます。この資料整理は事件の証拠ではありません。"
       }
     ]
+  },
+  "column/zh-hant/taiwan-road-rage-baseball-bat-fracture-damages": {
+    "id": "bat-injury-film-v1-zh-hant",
+    "src": "/videos/columns/bat-injury-film-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/bat-injury-film-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "球棒傷害案：七月徒刑與208萬元民事賠償",
+    "description": "234秒無聲影片以4秒假想開場與23段10秒場景，分別說明傷害罪、證據、五項損害、利息與假執行。",
+    "disclosure": "所有人物、道路、車輛、醫療與照護場景、文件、螢幕都是各自獨立的AI假想，不是基隆事件重建、卷證或實際病患。開場沒有擊打或接觸，不表示持棒者是駕駛。右膝支架的會談不是臺大醫院的私鑑定，也不是醫療或運動指導。說明依公開判決，未取得原始錄影、病歷或114上易1128全文；傷害案確定係依民事判決記載，民事確定、清償與執行仍未確認。",
+    "durationSeconds": 234,
+    "sceneCount": 24,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "持球棒走近，未呈現毆打",
+        "text": "開場是AI假想：男子持下垂球棒走近，沒有擊打或接觸。 不是基隆案重建，也不能由此認定駕駛、傷勢或責任。"
+      },
+      {
+        "start": 4,
+        "title": "爭執後，右手前臂與右膝骨折",
+        "text": "法院認定：2024年11月7日18時許，基隆安樂區行車糾紛後持球棒傷人。 被害人右側尺骨、右側髕骨骨折；診療畫面不是本人或病歷。"
+      },
+      {
+        "start": 14,
+        "title": "開車的友人，與持棒者不同",
+        "text": "另案115上易1045記載：當時友人駕車載持棒者。 這是2026年8月18日的竊盜案判決，不是本件傷害上訴判決。"
+      },
+      {
+        "start": 24,
+        "title": "一片光碟、八張截圖、四張照片",
+        "text": "起訴書另列自白、被害人陳述、證人與診斷證明，法院補入法庭自白。 未取得原始影像，拍攝來源、片長及時間對照未明；畫面都是假想資料。"
+      },
+      {
+        "start": 34,
+        "title": "認罪後，法院採簡式審判程序",
+        "text": "114易159記載被告認罪，法院告知程序並聽取檢察官、被告意見。 法定重罪及高院一審案件不適用；符合條件仍須法院裁定。"
+      },
+      {
+        "start": 44,
+        "title": "傷害罪判七月，不是固定刑度",
+        "text": "基隆地院2025年4月9日依刑法277條第1項判有期徒刑七月。 法院合看自白、傷勢、素行等；當時尚未和解賠償。"
+      },
+      {
+        "start": 54,
+        "title": "球棒未宣告沒收，是本案裁量",
+        "text": "球棒未扣案，被告稱已丟棄；法院考量執行效果、困難及司法資源。 依38條之2第2項未宣告沒收，不表示丟棄犯案工具即可免沒收。"
+      },
+      {
+        "start": 64,
+        "title": "民事判決確認傷害案已確定",
+        "text": "114訴502調取刑案卷宗，記載114上易1128駁回上訴、七月徒刑確定。 未取得該上訴判決全文；別案竊盜無罪，不是撤銷本件傷害有罪。"
+      },
+      {
+        "start": 74,
+        "title": "七月超過通常易科罰金門檻",
+        "text": "這筆單一七月徒刑超過第41條通常六月門檻，不能照該規定換罰金或社會勞動。 判決也未宣告緩刑；未取得後續服刑或執行資料。"
+      },
+      {
+        "start": 84,
+        "title": "被告缺席，不等於全額照准",
+        "text": "被告合法受通知未到庭、未提書狀；無第386條障礙，法院依原告聲請一造辯論。 法院仍逐項審查請求與證據，沒有將全部請求照單全收。"
+      },
+      {
+        "start": 94,
+        "title": "請求482萬，判賠約208萬",
+        "text": "2025年12月4日，114訴502就請求新臺幣4,824,227元，准許2,079,598元。 另有利息；這是判決給付額，不是已收到的款項。"
+      },
+      {
+        "start": 104,
+        "title": "醫療與器材：98,427元",
+        "text": "住院門診83,415元、器材12,932元、復健2,080元，合計98,427元。 法院核對診斷與單據，認與傷勢相符、必要且相當。"
+      },
+      {
+        "start": 114,
+        "title": "家人照護，按半日請求45,000元",
+        "text": "診斷及傷況支持一個月全日協助；原告僅按半日1,500元、30日請求。 家人未收費仍可評價勞力；此為本案採認，並非現行統一日價。"
+      },
+      {
+        "start": 124,
+        "title": "薪資損失：151,200元",
+        "text": "月薪42,000元，休養三月加復健三月各減兩成：42,000×3＋42,000×20%×3。 法院核對診斷、勞保與所得；不能僅由休養建議推定薪資損失。"
+      },
+      {
+        "start": 134,
+        "title": "私鑑定評估工作能力減損12%",
+        "text": "臺大醫院2025年9月19日評估，經檢查、病史及工作內容調整，法院採認12%。 這不是法院囑託鑑定，也非主張的兩成減損；本段不是鑑定或測量。"
+      },
+      {
+        "start": 144,
+        "title": "未來能力損失：1,284,971元",
+        "text": "以42,000元月薪、12%計，年損失60,480元；法院從2025年2月7日起計。 算至2062年1月9日滿65歲，扣中間利息，准1,284,971元，未准3,729,600元。"
+      },
+      {
+        "start": 154,
+        "title": "折現與利息，計算目的不同",
+        "text": "霍夫曼式以單利5%扣中間利息，首期不扣；公開係數經遮蔽，不能照抄驗算。 65歲是本案採用的強制退休基準；勞基法54條容許勞雇協商延後。"
+      },
+      {
+        "start": 164,
+        "title": "慰撫金：請求80萬，准50萬",
+        "text": "法院合看毆打、手術與長期復健之痛，關節可能永久受損及雙方經濟狀況。 認50萬元相當，並非骨折的固定價目，也不是醫療上已確診永久障礙。"
+      },
+      {
+        "start": 174,
+        "title": "刑責與損害賠償分別判斷",
+        "text": "民法184、193、195條是侵害身體健康、增加需要、能力減損與慰撫金的依據。 民事法院調閱刑案並審查各項損害；徒刑不抵銷已判的民事給付義務。"
+      },
+      {
+        "start": 184,
+        "title": "年息5%，從送達翌日起算",
+        "text": "判准2,079,598元自2025年3月29日起至清償日止，按年息5%計算。 這是起訴狀繕本送達翌日，不是事故日，也不是前述折現扣息。"
+      },
+      {
+        "start": 194,
+        "title": "被告43%、原告57%是訴訟費用",
+        "text": "判決令被告負擔43%的訴訟費用，剩餘由原告負擔。 這不是行車過失或傷害責任比例，不能用來縮減主文判賠額。"
+      },
+      {
+        "start": 204,
+        "title": "假執行的擔保，不是賠償已付款",
+        "text": "原告供693,000元擔保後得假執行；被告預供2,079,598元可免假執行。 擔保與清償不同，也不表示判決已確定或實際執行。"
+      },
+      {
+        "start": 214,
+        "title": "民事確定、清償與交通處分未明",
+        "text": "判決載送達後20日可上訴；本文未確認後續民事上訴、確定或清償。 判決未依民法217條分配過失，也未裁定交通罰鍰；勿補成零過失結論。"
+      },
+      {
+        "start": 224,
+        "title": "把影像與各項損害資料分別留存",
+        "text": "保存原始影片、完整前後經過、診斷單據、實際照護、收入及工作資料。 這是資料整理建議；假想人物、紙本與螢幕不能補成案件證據。"
+      }
+    ]
+  },
+  "column/ko/taiwan-road-rage-baseball-bat-fracture-damages": {
+    "id": "bat-injury-film-v1-ko",
+    "src": "/videos/columns/bat-injury-film-v1-ko.mp4",
+    "poster": "/images/column-videos/bat-injury-film-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "방망이 상해 사건: 징역 7개월과 약 208만 달러 배상",
+    "description": "4초 가상 도입과 10초 장면 23개를 이은 234초 무음 영상입니다. 상해죄, 증거, 다섯 손해 항목, 이자와 가집행을 구분해 설명합니다.",
+    "disclosure": "인물·도로·차량·진료·돌봄·문서·화면은 각각 독립된 AI 가상 예시입니다. 지룽 사건 재현, 사건 증거나 실제 환자가 아닙니다. 도입에 타격·접촉은 없으며 방망이를 든 사람이 운전자라고 보여주는 장면도 아닙니다. 오른쪽 무릎 보조기 상담은 실제 사적 감정이나 의료·운동 지도가 아닙니다. 공개 판결을 설명하며 원본 녹화, 진료기록과 114上易1128 전문은 확보하지 않았습니다. 형사 확정은 민사판결의 기록에 따릅니다. 민사 확정·변제·집행은 미확인입니다.",
+    "durationSeconds": 234,
+    "sceneCount": 24,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "방망이를 내리고 다가오는 장면",
+        "text": "도입은 방망이를 아래로 든 남성이 다가오는 AI 가상 장면입니다. 타격과 접촉은 없습니다. 지룽 사건 재현이 아니며 운전자, 부상이나 책임을 이 화면으로 정할 수 없습니다."
+      },
+      {
+        "start": 4,
+        "title": "오른쪽 아래팔과 무릎의 골절",
+        "text": "법원은 2024년 11월 7일 18시경, 지룽 안러구에서 운전 시비 뒤 방망이 폭행을 인정했습니다. 피해자는 오른쪽 척골과 슬개골이 골절됐습니다. 진료 장면은 실제 환자나 기록이 아닙니다."
+      },
+      {
+        "start": 14,
+        "title": "운전한 지인과 가해자는 달랐습니다",
+        "text": "별도 판결 115上易1045에는 당시 지인이 운전하고 가해자가 타고 있었다고 적혀 있습니다. 2026년 8월 18일의 절도 사건 판결입니다. 상해 사건의 항소심과 구분해야 합니다."
+      },
+      {
+        "start": 24,
+        "title": "영상 디스크 1장, 캡처 8장, 사진 4장",
+        "text": "기소장은 자백, 피해자·증인 진술과 진단서도 열거했고, 법원은 법정 자백을 추가했습니다. 원본 영상은 미확보입니다. 촬영 출처·길이·시각 대조는 불명이며 화면 자료는 가상입니다."
+      },
+      {
+        "start": 34,
+        "title": "유죄 인정 후 간이 공판으로 심리",
+        "text": "114易159는 인정 진술 뒤 절차를 알리고 검사와 피고인의 의견을 들었다고 기록합니다. 법정 중죄와 고등법원 1심 사건 등은 제외됩니다. 요건을 갖춰도 법원의 결정이 필요합니다."
+      },
+      {
+        "start": 44,
+        "title": "상해죄 징역 7개월이라는 판단",
+        "text": "지룽지법은 2025년 4월 9일 형법 제277조 제1항으로 징역 7개월을 선고했습니다. 인정, 부상 정도와 전력 등을 함께 고려했습니다. 당시 합의·배상은 없었습니다."
+      },
+      {
+        "start": 54,
+        "title": "방망이를 몰수하지 않은 이유",
+        "text": "미압수 방망이를 버렸다는 진술에, 법원은 집행 효과·어려움과 사법 자원을 고려했습니다. 제38조의2 제2항에 따른 개별 판단입니다. 버리면 언제나 몰수가 면제되는 것은 아닙니다."
+      },
+      {
+        "start": 64,
+        "title": "민사판결이 확인한 형사 확정",
+        "text": "114訴502는 형사기록을 확인해 114上易1128의 항소 기각과 징역 7개월 확정을 적었습니다. 해당 항소심 전문은 미확보입니다. 별도 절도 사건 무죄가 상해 유죄를 취소한 것은 아닙니다."
+      },
+      {
+        "start": 74,
+        "title": "7개월은 통상 벌금 전환 범위 밖",
+        "text": "제41조의 통상 6개월 기준을 넘는 단일 7개월형은 벌금·사회노동 전환 대상이 아닙니다. 판결은 집행유예도 선고하지 않았습니다. 이후 복역이나 집행 경과는 확인하지 못했습니다."
+      },
+      {
+        "start": 84,
+        "title": "결석해도 손해 증거를 심리합니다",
+        "text": "적법한 통지를 받은 피고가 출석·서면 제출을 하지 않았고, 제386조상 장애도 없었습니다. 법원은 원고 신청에 따라 한쪽 변론으로 심리하되, 청구 항목과 증거를 각각 살폈습니다."
+      },
+      {
+        "start": 94,
+        "title": "청구 약 482만, 인정 약 208만",
+        "text": "2025년 12월 4일 판결은 청구 4,824,227대만달러 중 2,079,598대만달러와 이자를 인정했습니다. 지급을 명한 금액입니다. 피해자가 이미 받은 돈이라는 뜻은 아닙니다."
+      },
+      {
+        "start": 104,
+        "title": "치료와 보조기 비용 98,427달러",
+        "text": "입원·외래 83,415, 의료기구 12,932, 재활 2,080대만달러를 합한 98,427대만달러입니다. 법원은 진단서·영수증을 대조해 부상과 관련된 필요하고 상당한 지출로 인정했습니다."
+      },
+      {
+        "start": 114,
+        "title": "가족 돌봄 45,000달러",
+        "text": "한 달 종일 도움이 필요했지만 원고는 반일 요율 1,500대만달러에 30일을 곱해 청구했습니다. 가족이 돈을 받지 않아도 노동 가치를 인정할 수 있습니다. 이 요율은 현행 공통 가격이 아닙니다."
+      },
+      {
+        "start": 124,
+        "title": "소득 감소 151,200달러",
+        "text": "월급 42,000대만달러에 휴식 3개월과 재활 3개월의 20% 감소를 더했습니다. 42,000×3＋42,000×20%×3입니다. 진단·노동보험·소득 자료로 확인했습니다."
+      },
+      {
+        "start": 134,
+        "title": "사적으로 의뢰한 감정의 감소율 12%",
+        "text": "타이완대학병원이 2025년 9월 19일 신체·병력·업무로 평가한 12%를 법원이 채택했습니다. 법원 의뢰 감정은 아닙니다. 주장한 20%와도 다릅니다. 이 장면은 실제 검사나 평가가 아닙니다."
+      },
+      {
+        "start": 144,
+        "title": "장래 노동능력 손실 1,284,971달러",
+        "text": "월급 42,000×12%×12로 연 60,480대만달러. 법원은 2025년 2월 7일부터 계산했습니다. 2062년 1월 9일 65세까지 이자를 공제해 1,284,971달러를 인정하고 초과 청구는 기각했습니다."
+      },
+      {
+        "start": 154,
+        "title": "장래 손실의 할인과 지연이자",
+        "text": "호프만 단리 5%로 중간이자를 공제했고 첫 지급분은 제외했습니다. 공개 계수는 가려졌습니다. 65세는 이 사건 계산 기준입니다. 노동기준법 제54조는 노사 합의로 정년을 늦출 수 있게 합니다."
+      },
+      {
+        "start": 164,
+        "title": "위자료 80만 청구에 50만 인정",
+        "text": "법원은 폭행, 수술·장기 재활의 고통, 영구 관절 손상 가능성과 양측 경제 사정을 고려했습니다. 50만 대만달러는 사건별 판단입니다. 골절의 정액 배상이나 영구장애의 확진이 아닙니다."
+      },
+      {
+        "start": 174,
+        "title": "형사처벌과 민사배상은 각각 판단",
+        "text": "민법 제184·193·195조에 따라 신체·건강 침해, 늘어난 필요, 능력 감소와 위자료를 판단했습니다. 민사법원은 형사기록과 손해 증거를 확인했습니다. 징역이 민사 지급 의무를 대신하지 않습니다."
+      },
+      {
+        "start": 184,
+        "title": "송달 다음 날부터 연 5% 이자",
+        "text": "2,079,598대만달러에 2025년 3월 29일부터 갚는 날까지 연 5% 이자를 명했습니다. 소장 부본 송달 다음 날이 기준입니다. 사고 날짜나 장래 손실에서 공제한 이자와 구분합니다."
+      },
+      {
+        "start": 194,
+        "title": "43 대 57은 소송비용의 분담",
+        "text": "판결은 소송비용의 43%를 피고가, 나머지 57%를 원고가 부담하도록 했습니다. 운전 과실이나 상해 책임 비율이 아니므로 이 비율로 판결의 배상액을 다시 줄이지 않습니다."
+      },
+      {
+        "start": 204,
+        "title": "가집행 담보는 변제와 다릅니다",
+        "text": "가집행 담보는 원고 693,000, 피고가 이를 피하는 담보는 2,079,598대만달러입니다. 담보가 배상금 지급이나 판결 확정을 뜻하지는 않습니다. 실제 집행 여부도 미확인입니다."
+      },
+      {
+        "start": 214,
+        "title": "민사 확정과 지급은 미확인",
+        "text": "판결은 송달 후 20일 항소를 안내합니다. 후속 민사 항소·확정·지급은 확인하지 못했습니다. 제217조 과실 비율과 교통 벌금은 판단하지 않았습니다. 피해자 무과실을 인정한 것은 아닙니다."
+      },
+      {
+        "start": 224,
+        "title": "영상과 손해 항목별 자료 보관",
+        "text": "원본 영상과 전후 경위, 진단·영수증, 실제 돌봄, 소득·업무 자료를 각각 보관합니다. 자료 준비를 위한 제안입니다. 가상 인물과 문서·화면은 실제 사건의 증거가 아닙니다."
+      }
+    ]
+  },
+  "column/en/taiwan-road-rage-baseball-bat-fracture-damages": {
+    "id": "bat-injury-film-v1-en",
+    "src": "/videos/columns/bat-injury-film-v1-en.mp4",
+    "poster": "/images/column-videos/bat-injury-film-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Bat assault: seven months and NT$2.08 million in damages",
+    "description": "A silent 234-second film connects a four-second fictional opening with 23 ten-second scenes on assault, evidence, five heads of loss, interest and provisional enforcement.",
+    "disclosure": "All people, roads, vehicles, medical and care scenes, documents and screens are independent AI illustrations, not the Keelung incident, court evidence or actual patients. The opening contains no strike or contact and does not identify the man as the driver. The right-knee-brace discussion is not the private hospital assessment or medical or exercise advice. Explanations follow public judgments; no original recording, medical file or full appeal 114上易1128 was obtained. Criminal finality follows the civil judgment’s record; civil finality, payment and execution remain unverified.",
+    "durationSeconds": 234,
+    "sceneCount": 24,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "A lowered bat, with no strike shown",
+        "text": "The AI-fiction opening shows a man approaching with a lowered bat. No strike or contact occurs. It identifies no real driver, injury or liability."
+      },
+      {
+        "start": 4,
+        "title": "Fractures of the right forearm and knee",
+        "text": "The court found a bat assault after a Keelung road dispute on 7 November 2024. At about 18:00 in Anle: right ulna and patella fractures. Clinic scenes are fictional."
+      },
+      {
+        "start": 14,
+        "title": "The friend drove; the attacker rode along",
+        "text": "Separate case 115上易1045 records a friend driving the attacker that evening. That theft judgment, dated 18 August 2026, is not the assault appeal."
+      },
+      {
+        "start": 24,
+        "title": "One disc, eight screenshots, four photos",
+        "text": "The indictment also lists admissions, victim and witness accounts, and a diagnosis. The trial added an admission. No original footage, source or timing was verified."
+      },
+      {
+        "start": 34,
+        "title": "A guilty admission and simplified trial",
+        "text": "The court ordered a simplified trial after notice and hearing the parties’ views. Statutory serious crimes and High Court first-instance cases are excluded."
+      },
+      {
+        "start": 44,
+        "title": "Seven months for the assault",
+        "text": "On 9 April 2025, Keelung District Court imposed seven months under Article 277(1). It weighed admission, injuries and record, among other factors. No settlement yet."
+      },
+      {
+        "start": 54,
+        "title": "Why confiscation was not ordered",
+        "text": "The unseized bat was reportedly discarded. The court weighed execution and cost. Its Article 38-2(2) decision does not mean discarding a weapon defeats confiscation."
+      },
+      {
+        "start": 64,
+        "title": "The civil court confirmed criminal finality",
+        "text": "Case 114訴502 checked the criminal file: appeal 114上易1128 was dismissed. It records seven months as final. The separate theft acquittal did not reverse it."
+      },
+      {
+        "start": 74,
+        "title": "Seven months exceeds the usual threshold",
+        "text": "This single term exceeds Article 41’s usual six-month fine or community-work limit. No suspended sentence was ordered. Later imprisonment or execution is unverified."
+      },
+      {
+        "start": 84,
+        "title": "Absence did not secure the whole claim",
+        "text": "The notified defendant neither attended nor filed; no Article 386 bar was found. At the claimant’s request, the court heard one side, still checking each loss."
+      },
+      {
+        "start": 94,
+        "title": "NT$4.82 million claimed; NT$2.08 million awarded",
+        "text": "On 4 December 2025: NT$2,079,598 allowed from the NT$4,824,227 claim. Interest was added. An order to pay does not establish that money was received."
+      },
+      {
+        "start": 104,
+        "title": "Medical and equipment costs: NT$98,427",
+        "text": "Hospital visits: NT$83,415; equipment: NT$12,932; rehabilitation: NT$2,080. The court matched diagnoses and receipts to necessary, reasonable injury costs."
+      },
+      {
+        "start": 114,
+        "title": "Family care: NT$45,000",
+        "text": "Full-day help was needed; the claim used a half-day rate: NT$1,500×30 days. Unpaid family labour had value. The court’s rate is not a current universal tariff."
+      },
+      {
+        "start": 124,
+        "title": "Lost wages: NT$151,200",
+        "text": "At NT$42,000/month: three months off plus three months with a 20% wage loss. 42,000×3 + 42,000×20%×3, checked with medical, insurance and income records."
+      },
+      {
+        "start": 134,
+        "title": "A private assessment of 12% capacity loss",
+        "text": "NTU Hospital assessed examination, history and work factors on 19 September 2025. The court accepted 12%, not the claimed 20%. This was not a court-appointed report."
+      },
+      {
+        "start": 144,
+        "title": "Future capacity loss: NT$1,284,971",
+        "text": "NT$42,000×12%×12 gives NT$60,480/year; the court started on 7 February 2025. To age 65 on 9 January 2062: NT$1,284,971 discounted, not NT$3,729,600."
+      },
+      {
+        "start": 154,
+        "title": "Discounting differs from interest on the award",
+        "text": "Hoffmann discounting used 5% simple interest, except the first payment. Factors are redacted. Age 65 was used; retirement may be postponed by agreement."
+      },
+      {
+        "start": 164,
+        "title": "Non-economic harm: NT$500,000",
+        "text": "The court weighed surgery, long rehabilitation, possible joint harm and finances. It allowed NT$500,000 of NT$800,000: no fixed fracture tariff or confirmed disability."
+      },
+      {
+        "start": 174,
+        "title": "Criminal punishment and civil loss",
+        "text": "Civil Code Articles 184, 193 and 195 supported injury costs, capacity loss and harm. The court checked criminal records and losses. Prison does not discharge damages."
+      },
+      {
+        "start": 184,
+        "title": "5% yearly interest from the day after service",
+        "text": "NT$2,079,598 bears 5% annual interest from 29 March 2025 until payment. The date follows service of the complaint, not the assault or future-loss discount."
+      },
+      {
+        "start": 194,
+        "title": "43% and 57% concern litigation costs",
+        "text": "The defendant bears 43% of litigation costs; the claimant bears the remaining 57%. These are not traffic-fault shares and do not reduce the damages ordered."
+      },
+      {
+        "start": 204,
+        "title": "Security for provisional enforcement",
+        "text": "The claimant may enforce with NT$693,000 security; the defendant may avoid it by lodging NT$2,079,598. Security is not payment, finality or verified enforcement."
+      },
+      {
+        "start": 214,
+        "title": "Civil finality and payment remain unverified",
+        "text": "The judgment gives 20 days after service to appeal; later civil events are unknown. No Article 217 allocation or traffic fine was decided. Do not infer zero victim fault."
+      },
+      {
+        "start": 224,
+        "title": "Preserve recordings and records of each loss",
+        "text": "Keep original files, surrounding events, medical bills, care, income and work records. These are suggestions. Fictional people and props are not case evidence."
+      }
+    ]
+  },
+  "column/ja/taiwan-road-rage-baseball-bat-fracture-damages": {
+    "id": "bat-injury-film-v1-ja",
+    "src": "/videos/columns/bat-injury-film-v1-ja.mp4",
+    "poster": "/images/column-videos/bat-injury-film-v1-ja.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "バットによる傷害：徒刑七か月と約208万ドルの賠償",
+    "description": "4秒の架空の冒頭と23本の10秒場面をつなぐ234秒の無音映像です。傷害罪、証拠、五つの損害、利息、仮執行を分けて説明します。",
+    "disclosure": "人物・道路・車両・診療・介護・書類・画面はそれぞれ独立したAIの架空例です。基隆事件の再現、事件証拠や実際の患者ではありません。冒頭に打撃や接触はなく、バットを持つ人を運転者と示すものでもありません。右膝装具の会話は実際の私的鑑定、医療・運動指導ではありません。公開判決による説明で、元映像、診療記録や114上易1128全文は未取得です。刑事の確定は民事判決の記録に基づき、民事の確定・弁済・執行は未確認です。",
+    "durationSeconds": 234,
+    "sceneCount": 24,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "下げたバットを持って近づく",
+        "text": "冒頭はAIの架空映像です。打撃や接触はありません。 基隆事件の再現ではなく、運転者や傷害を示す証拠でもありません。"
+      },
+      {
+        "start": 4,
+        "title": "右前腕と右膝の骨折",
+        "text": "認定は2024年11月7日18時ごろ、基隆市安楽区での殴打です。 運転上の争い後、右尺骨・右膝蓋骨を骨折。診療風景は架空です。"
+      },
+      {
+        "start": 14,
+        "title": "運転した友人と加害者は別人",
+        "text": "別件115上易1045は、友人が加害者を乗せて運転したと記します。 2026年8月18日の窃盗事件判決で、傷害事件の控訴審ではありません。"
+      },
+      {
+        "start": 24,
+        "title": "ディスク一枚、画像八枚、写真四枚",
+        "text": "起訴状は自白、被害者・証人の供述、診断書も列挙しています。 一審は法廷の自白を追加。元映像、撮影元や時刻の照合は未確認です。"
+      },
+      {
+        "start": 34,
+        "title": "有罪の陳述後に簡式審判程序",
+        "text": "114易159は手続を告知し、検察官・被告人の意見を聴きました。 法定の重大犯罪や高院一審事件は除外され、裁判所の決定が必要です。"
+      },
+      {
+        "start": 44,
+        "title": "傷害罪で有期徒刑七か月",
+        "text": "2025年4月9日、基隆地方法院は刑法277条1項を適用しました。 自白、傷害、前歴などを考慮。当時、和解も賠償もありませんでした。"
+      },
+      {
+        "start": 54,
+        "title": "バットの没収を命じなかった理由",
+        "text": "未押収で、被告人は捨てたと供述。裁判所は執行効果や費用を考慮。 38条の2第2項の個別判断で、廃棄すれば没収を免れるわけではありません。"
+      },
+      {
+        "start": 64,
+        "title": "民事判決が確認した刑事の確定",
+        "text": "114訴502は記録を調べ、114上易1128の控訴棄却と七か月確定を記載。 その控訴判決全文は未取得。別件窃盗の無罪が傷害有罪を覆してはいません。"
+      },
+      {
+        "start": 74,
+        "title": "七か月は通常の換算基準を超える",
+        "text": "単独の七か月刑は41条の通常の六月基準を超え、罰金・社会労働に換えられません。 執行猶予も宣告されていません。その後の服役や執行は未確認です。"
+      },
+      {
+        "start": 84,
+        "title": "欠席でも請求全額が通るわけではない",
+        "text": "適法な通知後も被告は欠席・書面未提出。386条の障害もありませんでした。 原告の申立てで一方の弁論により審理し、損害と証拠は個別に調べました。"
+      },
+      {
+        "start": 94,
+        "title": "請求約482万、認容約208万",
+        "text": "2025年12月4日、4,824,227台湾ドル中2,079,598ドルを認容。 別に利息があります。支払命令の額であり、受領済みという意味ではありません。"
+      },
+      {
+        "start": 104,
+        "title": "医療・器具費98,427台湾ドル",
+        "text": "入院外来83,415、器具12,932、リハビリ2,080ドルの合計です。 診断と領収書を照合し、傷害に関連する必要・相当な費用と認めました。"
+      },
+      {
+        "start": 114,
+        "title": "家族介護費45,000台湾ドル",
+        "text": "一か月の終日介助が必要でしたが、請求は半日1,500ドル×30日でした。 無償の家族介護も金銭評価の対象です。この日額は現行の統一料金ではありません。"
+      },
+      {
+        "start": 124,
+        "title": "賃金減少151,200台湾ドル",
+        "text": "月給42,000ドル。休養三か月とリハビリ三か月の二割減少を認定。 42,000×3＋42,000×20%×3。診断、労働保険、所得を確認しました。"
+      },
+      {
+        "start": 134,
+        "title": "私的鑑定の労働能力減少12%",
+        "text": "台湾大学病院は2025年9月19日、診察・病歴・仕事内容から評価。 裁判所は主張の20%ではなく12%を採用。裁判所が嘱託した鑑定ではありません。"
+      },
+      {
+        "start": 144,
+        "title": "将来の能力損失1,284,971ドル",
+        "text": "42,000×12%×12で年60,480ドル。2025年2月7日から計算。 2062年1月9日、65歳までを割り引き、3,729,600ドルの請求を減額。"
+      },
+      {
+        "start": 154,
+        "title": "将来損失の割引と支払利息",
+        "text": "ホフマン式の単利5%で中間利息を控除し、初回は控除していません。 公開係数は伏せ字です。65歳を用いましたが、合意による定年延長は可能です。"
+      },
+      {
+        "start": 164,
+        "title": "慰謝料80万の請求に50万を認容",
+        "text": "手術・長いリハビリの苦痛、関節の永久損傷の可能性、双方の経済事情を考慮。 骨折の定額料金でも、永久障害が医学的に確定したという意味でもありません。"
+      },
+      {
+        "start": 174,
+        "title": "刑罰と民事賠償は別に判断",
+        "text": "民法184・193・195条により、身体健康の侵害、必要費、能力損失などを審理。 民事裁判所は刑事記録と損害を確認。服役しても賠償義務の代わりにはなりません。"
+      },
+      {
+        "start": 184,
+        "title": "送達翌日から年5%の利息",
+        "text": "2,079,598ドルに、2025年3月29日から完済まで年5%を付しました。 訴状副本の送達翌日です。事件の日や、将来損失の割引とは区別します。"
+      },
+      {
+        "start": 194,
+        "title": "43対57は訴訟費用の負担",
+        "text": "訴訟費用は被告43%、残り57%は原告の負担とされました。 運転過失や傷害責任の割合ではなく、認容賠償額を減らす比率でもありません。"
+      },
+      {
+        "start": 204,
+        "title": "仮執行の担保と弁済は別",
+        "text": "原告は693,000ドルの担保で仮執行でき、被告は2,079,598ドルの担保で回避可能。 担保は賠償金の支払や判決確定を意味しません。実際の執行も未確認です。"
+      },
+      {
+        "start": 214,
+        "title": "民事の確定と支払は未確認",
+        "text": "判決末尾は送達後20日の控訴を案内。その後の民事控訴・確定・支払は未確認です。 217条の過失配分や交通罰金は未判断。被害者無過失の認定ではありません。"
+      },
+      {
+        "start": 224,
+        "title": "映像と損害ごとの資料を残す",
+        "text": "元映像と前後の経緯、診断・領収書、介護、所得・仕事の記録を保存します。 これは資料整理の提案です。架空の人物・書類・画面は事件の証拠ではありません。"
+      }
+    ]
   }
 }

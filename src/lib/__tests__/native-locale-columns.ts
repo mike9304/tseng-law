@@ -303,6 +303,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '192-taiwan-export-control-entity-list-korean-traders.md', // semiconductor lane b08
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
     '197-taiwan-remaining-property-claim-asset-tracing.md', // family lane b08
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
   ],
   en: [
     '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
@@ -312,6 +313,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
     '200-taiwan-protection-order-foreign-resident.md', // family lane b09
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
   ],
   ja: [
     '169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md',
@@ -321,6 +323,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md', // road-rage series (all four locales)
     '193-taiwan-science-park-entry-japanese-semiconductor-companies.md', // semiconductor lane b08
     '194-taiwan-road-rage-freeway-chase-own-dashcam-too.md', // road-rage series (all four locales)
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
   ],
   'zh-hant': [
     '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
@@ -343,6 +346,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '196-separation-cohabitation-duty-taiwan.md', // family lane b08
     '198-alimony-after-divorce-civil-code-1057.md', // family lane b09
     '199-child-surname-change-after-divorce.md', // family lane b09
+    '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
   ],
 } as const;
 

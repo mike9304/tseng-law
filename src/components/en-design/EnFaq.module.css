@@ -1,60 +1,141 @@
-/* en FAQ (Opus 5.5 en lane, 2026-10-01). FaqPublicExplorer markup unchanged; layout via its data attribute and roles. */
-.faq :global([data-public-faq-explorer='true']) { display: block; max-width: 1200px; margin: 0 auto; padding: 48px 20px 72px; }
-.faq :global([data-public-faq-explorer='true'] > *) { max-width: 900px; }
-.faq :global([data-public-faq-explorer='true'] > :first-child) { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 24px; align-items: end; max-width: none; margin: 0 0 20px; }
-.faq :global([data-public-faq-explorer='true'] > :first-child label) { display: grid; gap: 8px; font-size: 15px; font-weight: 800; color: var(--en-ink); }
-.faq :global([data-public-faq-explorer='true'] > :first-child input) { min-height: 58px; padding: 0 18px; border: 2px solid var(--en-ink); border-radius: 999px; font-size: 17px; background: #fff; }
-.faq :global([data-public-faq-explorer='true'] > :first-child input:focus-visible) { outline: 3px solid var(--en-signal); outline-offset: 2px; }
-.faq :global([data-public-faq-explorer='true'] [role='status']) { min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 999px; background: var(--en-mist); font-size: 15px; font-weight: 700; color: var(--en-ink); }
-.faq :global([data-public-faq-explorer='true'] > [role='group']) { display: flex; flex-wrap: wrap; gap: 0; margin: 0 0 28px; border-bottom: 1px solid var(--en-ink); }
-.faq :global([data-public-faq-explorer='true'] > [role='group'] > a) {
-  display: inline-flex;
-  align-items: center;
-  min-height: 48px;
-  margin: 0 22px -2px 0;
-  padding: 0 2px;
-  border: none;
-  border-bottom: 4px solid transparent;
-  border-radius: 0;
-  background: transparent;
-  color: var(--en-text);
-  font-size: 15.5px;
-  font-weight: 700;
-}
-.faq :global([data-public-faq-explorer='true'] > [role='group'] > a:hover) { color: var(--en-ink); border-bottom-color: var(--en-line); }
-.faq :global([data-public-faq-explorer='true'] > [role='group'] > a[aria-current='page']) { color: var(--en-ink); border-bottom-color: var(--en-signal); background: transparent; }
-.faq :global([data-public-faq-explorer='true'] > :last-child) { border-top: none; }
-.faq :global([data-public-faq-explorer='true'] article) { border-bottom: 1px solid var(--en-line); }
-.faq :global([data-public-faq-explorer='true'] article > span) { display: none; }
-.faq :global([data-public-faq-explorer='true'] h3) { margin: 0; }
-.faq :global([data-public-faq-explorer='true'] h3 button) {
+/*
+ * en FAQ, Clear Night (CONCEPT-V2 12.3; en-pages lane 2026-10-03). FaqPublicExplorer markup, search, filters and
+ * FAQ JSON-LD unchanged. The search and the category tabs continue the black title card (the tabs stick under the
+ * site header as the page's local nav); the questions read on paper.
+ */
+.faq { composes: paper from './EnPagesV2.module.css'; }
+
+.faq.faq :global(section[data-public-faq-explorer='true']) { display: block; width: min(1200px, calc(100% - 40px)); max-width: none; margin: 0 auto; padding: 0 0 120px; }
+
+/* Search on black (component 11) */
+.faq.faq :global([data-public-faq-explorer='true'] > :first-child) {
   display: grid;
-  grid-template-columns: 2.4em minmax(0, 1fr) auto;
-  gap: 12px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 32px;
+  align-items: end;
+  max-width: none;
+  margin: 0;
+  padding: 16px 0 40px;
+  background: #000;
+  box-shadow: 0 0 0 100vmax #000;
+  clip-path: inset(-2px -100vmax 0);
+}
+.faq.faq :global([data-public-faq-explorer='true'] > :first-child label) { display: grid; gap: 10px; max-width: 760px; font-family: var(--en-text); font-size: 17px; font-weight: 600; color: var(--en-grey); }
+.faq.faq :global([data-public-faq-explorer='true'] > :first-child input) {
   width: 100%;
   min-height: 64px;
-  padding: 20px 0;
-  font-family: var(--en-sans);
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1.4;
+  padding: 0 28px;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 32px;
+  background: rgb(20 20 22 / 82%);
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: 19px;
+}
+.faq.faq :global([data-public-faq-explorer='true'] > :first-child input::placeholder) { color: var(--en-grey); }
+.faq.faq :global([data-public-faq-explorer='true'] > :first-child input:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 2px; }
+.faq.faq :global([data-public-faq-explorer='true'] [role='status']) { display: inline-flex; align-items: center; min-height: 64px; padding: 0; border: 0; border-radius: 0; background: none; font-family: var(--en-text); font-size: 17px; font-weight: 500; color: var(--en-grey); }
+
+/* Category text tabs: a black bar that sticks under the site header (local nav, 12.2). */
+.faq.faq :global([data-public-faq-explorer='true'] > [role='group']) {
+  position: sticky;
+  top: var(--en-hdr);
+  z-index: 5;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0 28px;
+  max-width: none;
+  height: 52px;
+  margin: 0 0 72px;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border: 0;
+  background: #000;
+  box-shadow: 0 0 0 100vmax #000, 0 1px 0 100vmax rgb(255 255 255 / 10%);
+  clip-path: inset(-2px -100vmax -1px);
+}
+.faq.faq :global([data-public-faq-explorer='true'] > [role='group']::-webkit-scrollbar) { display: none; }
+.faq.faq :global([data-public-faq-explorer='true'] > [role='group'] > *) {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--en-grey);
+  font-family: var(--en-text);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.faq.faq :global([data-public-faq-explorer='true'] > [role='group'] > a:hover),
+.faq.faq :global([data-public-faq-explorer='true'] > [role='group'] > a[aria-current='page']) { color: #fff; background: none; }
+.faq.faq :global([data-public-faq-explorer='true'] > [role='group'] > a[aria-current='page'])::after { content: ''; position: absolute; left: 0; right: 0; bottom: 3px; height: 2px; background: #fff; }
+.faq.faq :global([data-public-faq-explorer='true'] > [role='group'] > *:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: -3px; }
+
+/* Questions on paper: category 14 grey, question 24 Inter 600 ink, answer 19; the open item on #f2f2f4. */
+.faq.faq :global([data-public-faq-explorer='true'] > :last-child) { display: grid; gap: 8px; max-width: 900px; border: 0; }
+.faq.faq :global([data-public-faq-explorer='true'] article) { margin: 0; padding: 0 28px; border: 0; border-radius: 18px; background: transparent; transition: background-color 300ms var(--en-ease); }
+.faq.faq :global([data-public-faq-explorer='true'] article:has(button[aria-expanded='true'])) { background: var(--en-paper-2); }
+.faq.faq :global([data-public-faq-explorer='true'] article > span:last-child:empty) { display: none; }
+.faq.faq :global([data-public-faq-explorer='true'] h3) { margin: 0; }
+.faq.faq :global([data-public-faq-explorer='true'] h3 button) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  min-height: 72px;
+  padding: 22px 0;
+  border: 0;
+  background: none;
+  font-family: var(--en-text);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
   letter-spacing: -0.01em;
   text-align: left;
   color: var(--en-ink);
 }
-.faq :global([data-public-faq-explorer='true'] h3 button)::before { content: 'Q'; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: var(--en-ink); color: #fff; font-size: 15px; font-weight: 800; }
-.faq :global([data-public-faq-explorer='true'] h3 button small) { display: block; margin-bottom: 4px; font-size: 12.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--en-ink); }
-.faq :global([data-public-faq-explorer='true'] h3 button:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 2px; }
-.faq :global([data-public-faq-explorer='true'] [role='region']) { position: relative; margin: 0 0 22px calc(2.4em + 12px); padding: 18px 22px; border-left: 4px solid var(--en-signal); border-radius: 0 16px 16px 0; background: #fff; font-size: 17px; line-height: 1.7; color: var(--en-text); }
-.faq :global([data-public-faq-explorer='true'] [role='region'] p) { margin: 0; font-size: 17px; line-height: 1.7; }
-.faq :global([data-public-faq-explorer='true'] a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 2px; }
+.faq.faq :global([data-public-faq-explorer='true'] h3 button)::before { content: none; display: none; }
+.faq.faq :global([data-public-faq-explorer='true'] h3 button small) { display: block; margin: 0 0 6px; font-family: var(--en-text); font-size: 14px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--en-ink-3); }
+.faq.faq :global([data-public-faq-explorer='true'] h3 button > span[aria-hidden]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 5%);
+  color: var(--en-ink);
+  font-size: 22px;
+  font-weight: 400;
+}
+.faq.faq :global([data-public-faq-explorer='true'] h3 button:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 2px; border-radius: 12px; }
+.faq.faq :global([data-public-faq-explorer='true'] [role='region']) { margin: 0; padding: 0 68px 28px 0; border: 0; border-radius: 0; background: none; }
+.faq.faq :global([data-public-faq-explorer='true'] [role='region'] p) { margin: 0; font-family: var(--en-text); font-size: 19px; line-height: 1.6; color: #3a3a3c; }
+.faq.faq :global([data-public-faq-explorer='true'] [role='region'] a) { color: var(--en-focus-paper); font-weight: 600; }
+.faq.faq :global([data-public-faq-explorer='true'] a:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 2px; }
 
 @media (max-width: 767px) {
-  .faq :global([data-public-faq-explorer='true']) { padding: 32px 16px 48px; }
-  .faq :global([data-public-faq-explorer='true'] > :first-child) { grid-template-columns: minmax(0, 1fr); }
-  .faq :global([data-public-faq-explorer='true'] > [role='group'] > a) { margin-right: 16px; font-size: 15px; }
-  .faq :global([data-public-faq-explorer='true'] h3 button) { grid-template-columns: 2em minmax(0, 1fr) auto; font-size: 16.5px; }
-  .faq :global([data-public-faq-explorer='true'] h3 button)::before { width: 28px; height: 28px; font-size: 14px; }
-  .faq :global([data-public-faq-explorer='true'] [role='region']) { margin-left: 0; font-size: 16px; }
+  .faq.faq :global([data-public-faq-explorer='true']) { width: calc(100% - 40px); padding-bottom: 72px; }
+  .faq.faq :global([data-public-faq-explorer='true'] > :first-child) { grid-template-columns: minmax(0, 1fr); padding-bottom: 24px; }
+  .faq.faq :global([data-public-faq-explorer='true'] > :first-child input) { min-height: 56px; padding: 0 22px; border-radius: 28px; font-size: 17px; }
+  .faq.faq :global([data-public-faq-explorer='true'] [role='status']) { min-height: 0; }
+  .faq.faq :global([data-public-faq-explorer='true'] > [role='group']) { height: 48px; gap: 0 22px; margin-bottom: 48px; }
+  .faq.faq :global([data-public-faq-explorer='true'] article) { padding: 0 16px; }
+  .faq.faq :global([data-public-faq-explorer='true'] h3 button) { gap: 16px; font-size: 19px; min-height: 64px; padding: 18px 0; }
+  .faq.faq :global([data-public-faq-explorer='true'] [role='region']) { padding-right: 0; }
+  .faq.faq :global([data-public-faq-explorer='true'] [role='region'] p) { font-size: 17px; }
+}
+@media (max-height: 499px) {
+  .faq.faq :global([data-public-faq-explorer='true'] > [role='group']) { position: static; }
 }

@@ -1,0 +1,262 @@
+/*
+ * C0 「光の印」 (CONCEPT-V2 §5 C0, §6, §8.1; amendment 2026-10-02: the image itself moves).
+ * Base styles are the final, readable first screen. Pinned push-in only with motion allowed and ≥ 620 px of height:
+ * scroll timelines in WebKit/Chromium, IntersectionObserver steps (data-ja-motion="steps") in Firefox.
+ */
+.hero {
+  position: relative;
+  --runway: 0px;
+  --hero-zoom: 1.16;
+  --hero-pan-x: -3%;
+  --hero-pan-y: -2%;
+  --hero-origin: 78% 64%;
+  background: var(--ja-stage);
+}
+.stage {
+  position: relative;
+  display: grid;
+  align-items: center;
+  height: clamp(560px, calc(100svh - var(--hdr)), 1100px);
+  isolation: isolate;
+  overflow: clip;
+  background: var(--ja-stage);
+}
+.mediaWrap { position: absolute; inset: 0; z-index: 0; }
+.media { position: absolute; inset: 0; --poster-o: 1; }
+.media :global(picture) { position: absolute; inset: 0; display: block; }
+.poster,
+.video {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: 72% 58%;
+}
+.poster { z-index: 1; opacity: var(--poster-o); }
+.video { z-index: 0; }
+.media :global(.decorative-autoplay-video__control) {
+  position: absolute;
+  z-index: 2;
+  left: max(32px, calc((100% - 1440px) / 2 + 32px));
+  right: auto;
+  top: auto;
+  bottom: 32px;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(20 18 16 / 0.55);
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  box-shadow: none;
+  cursor: pointer;
+}
+.media :global(.decorative-autoplay-video__control) > span:not(:global(.decorative-autoplay-video__control-icon)) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.media :global(.decorative-autoplay-video__control):focus-visible { outline-color: #fff !important; box-shadow: 0 0 0 2px var(--ja-ink); }
+
+.copy {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(1080px, 60vw);
+  margin-inline-start: max(var(--ja-edge), calc((100% - 1440px) / 2));
+  margin-block-end: 48px;
+}
+.title {
+  margin: 0;
+  font-family: var(--ja-display);
+  font-weight: 600;
+  font-size: calc(var(--ja-fs-hero2) * 0.6);
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  text-wrap: balance;
+}
+.tier1 {
+  display: block;
+  font-size: var(--ja-fs-hero1);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tier2 {
+  display: block;
+  margin-top: 0.1em;
+  font-size: var(--ja-fs-hero2);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.sub {
+  max-width: 33em;
+  margin: clamp(20px, 3.2svh, 32px) 0 0;
+  font-size: clamp(17px, 1.45vw, 24px);
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: var(--ja-text);
+  text-wrap: pretty;
+}
+.byline {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 6px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ja-text);
+  text-decoration: none;
+}
+.name { font-weight: 600; color: var(--ja-ink); }
+@media (hover: hover) { .byline:hover { text-decoration: underline; text-underline-offset: 4px; } }
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 28px;
+  margin-top: clamp(14px, 2.4svh, 24px);
+}
+@media (min-width: 1800px) { .cta { min-height: 60px; padding-inline: 34px; } }
+.pathNav { display: none; }
+.veil {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: var(--ja-paper-unlit);
+  opacity: 0;
+  pointer-events: none;
+}
+.pauseSentinel {
+  position: absolute;
+  left: 0;
+  top: calc(var(--runway) * 0.55);
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+/* ---------- phones and portrait tablets: copy on top, the light square below it ---------- */
+@media (max-width: 899px) {
+  .hero { --hero-zoom: 1.12; --hero-pan-x: -2.5%; --hero-pan-y: -1.5%; --hero-origin: 72% 82%; }
+  .stage { align-items: start; }
+  .poster, .video { object-position: 50% 80%; }
+  .copy { width: auto; margin-inline: var(--ja-edge); margin-block-end: 0; padding-top: 32px; }
+  .media :global(.decorative-autoplay-video__control) { left: 16px; bottom: 16px; }
+}
+@media (max-width: 767px) {
+  .copy { padding-top: 28px; }
+  .sub { margin-top: 18px; }
+  .actions { flex-direction: column; align-items: stretch; gap: 4px; margin-top: 14px; }
+  .cta { width: 100%; }
+  .read { align-self: flex-start; }
+}
+@media (max-width: 359px), (max-height: 600px) and (max-width: 767px) {
+  .copy { padding-top: 18px; }
+  .sub { margin-top: 12px; font-size: 16px; line-height: 1.65; }
+  .byline { margin-top: 0; font-size: 15px; }
+  .actions { margin-top: 8px; }
+}
+
+/* ---------- load: once, time-based ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .media[data-video-ready='true'] { --poster-o: 0; }
+  .poster { transition: opacity 600ms var(--ja-ease); }
+  .tier1 { animation: jaHeroRise 700ms var(--ja-ease-reveal) both; }
+  .tier2 { animation: jaHeroRise 800ms var(--ja-ease-reveal) 80ms both; }
+  .sub, .byline, .actions { animation: jaHeroFade 600ms var(--ja-ease) 420ms both; }
+}
+
+/* ---------- scroll: pinned push into the light (WebKit, Chromium) ---------- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-height: 620px) {
+    .hero {
+      --runway: calc(100svh - var(--hdr));
+      height: calc(100svh - var(--hdr) + var(--runway));
+      view-timeline: --jaHero block;
+      view-timeline-inset: var(--hdr) 0px;
+    }
+    .stage { position: sticky; top: var(--hdr); height: calc(100svh - var(--hdr)); }
+    .video {
+      transform-origin: var(--hero-origin);
+      will-change: transform;
+      animation: jaHeroPush linear both;
+      animation-timeline: --jaHero;
+      animation-range: contain 0% contain 100%;
+    }
+    .poster {
+      transform-origin: var(--hero-origin);
+      will-change: transform, opacity;
+      animation: jaHeroPush linear both, jaHeroPosterBack linear both;
+      animation-timeline: --jaHero, --jaHero;
+      animation-range: contain 0% contain 100%, contain 20% contain 55%;
+    }
+    .hero:not(:focus-within) .copy {
+      animation: jaHeroCopyOut linear both;
+      animation-timeline: --jaHero;
+      animation-range: contain 0% contain 42%;
+    }
+    .hero:not(:focus-within) .veil {
+      animation: jaHeroFade linear both;
+      animation-timeline: --jaHero;
+      animation-range: contain 72% contain 100%;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) and (min-height: 620px) and (max-width: 899px) {
+    .hero { --runway: calc((100svh - var(--hdr)) * 0.6); }
+  }
+}
+
+/* ---------- Firefox: the same push in three steps (JaMotion writes data-step) ---------- */
+:global(#ja-home[data-ja-motion='steps']) .hero {
+  --runway: calc(100svh - var(--hdr));
+  height: calc(100svh - var(--hdr) + var(--runway));
+}
+@media (max-width: 899px) {
+  :global(#ja-home[data-ja-motion='steps']) .hero { --runway: calc((100svh - var(--hdr)) * 0.6); }
+}
+:global(#ja-home[data-ja-motion='steps']) .stage { position: sticky; top: var(--hdr); height: calc(100svh - var(--hdr)); }
+:global(#ja-home[data-ja-motion='steps']) :is(.poster, .video) {
+  transform-origin: var(--hero-origin);
+  transition: scale 900ms var(--ja-ease), translate 900ms var(--ja-ease), opacity 600ms var(--ja-ease);
+}
+:global(#ja-home[data-ja-motion='steps']) .hero[data-step='1'] :is(.poster, .video) {
+  scale: calc((var(--hero-zoom) + 1) / 2);
+  translate: calc(var(--hero-pan-x) / 2) calc(var(--hero-pan-y) / 2);
+}
+:global(#ja-home[data-ja-motion='steps']) .hero[data-step='2'] :is(.poster, .video) {
+  scale: var(--hero-zoom);
+  translate: var(--hero-pan-x) var(--hero-pan-y);
+}
+:global(#ja-home[data-ja-motion='steps']) .copy,
+:global(#ja-home[data-ja-motion='steps']) .veil { transition: opacity 600ms var(--ja-ease), translate 600ms var(--ja-ease); }
+:global(#ja-home[data-ja-motion='steps']) .hero[data-step='2']:not(:focus-within) .copy { opacity: 0; translate: 0 -48px; pointer-events: none; }
+
+@keyframes jaHeroPush {
+  from { scale: 1; translate: 0 0; }
+  to { scale: var(--hero-zoom); translate: var(--hero-pan-x) var(--hero-pan-y); }
+}
+@keyframes jaHeroPosterBack { from { opacity: var(--poster-o); } to { opacity: 1; } }
+@keyframes jaHeroCopyOut {
+  0% { opacity: 1; translate: 0 0; pointer-events: auto; }
+  80% { pointer-events: auto; }
+  82% { pointer-events: none; }
+  100% { opacity: 0; translate: 0 -48px; pointer-events: none; }
+}
+@keyframes jaHeroRise { from { opacity: 0.15; translate: 0 0.14em; } to { opacity: 1; translate: 0 0; } }
+@keyframes jaHeroFade { from { opacity: 0; } to { opacity: 1; } }
+
+@media print {
+  .hero { height: auto !important; }
+  .stage { position: relative !important; height: auto; min-height: 560px; }
+  .video, .veil, .mediaWrap :global(.decorative-autoplay-video__control) { display: none !important; }
+}

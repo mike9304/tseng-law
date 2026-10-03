@@ -1,0 +1,165 @@
+/*
+ * C1 「透かし」 (CONCEPT-V2 §5 C1, §8.2; amendment: the washi itself moves — it drifts up and settles from 1.14 to 1
+ * while the light rises behind it). Static frame (reduced motion, no JS, short screens): a 60svh band on the lit
+ * paper with the H2, then the full pair grid. Runway and term states need JaMotion (data-ja-motion, data-step).
+ */
+.section { position: relative; background: var(--ja-paper-lit); --L: 45svh; --runway: 0px; }
+@media (max-width: 767px) { .section { --L: 40svh; } }
+
+.runway { position: relative; }
+.sticky {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 60svh;
+  overflow: clip;
+  isolation: isolate;
+}
+.lights { position: absolute; inset: 0; z-index: 0; }
+.lights picture { position: absolute; inset: 0; display: block; }
+.light { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.lightA, .lightB { opacity: 0; }
+.inner { position: relative; z-index: 1; padding-block: 64px; }
+.measure { container-type: inline-size; display: grid; }
+.title {
+  grid-area: 1 / 1;
+  align-self: center;
+  margin: 0;
+  font-family: var(--ja-sans);
+  font-size: var(--ja-fs-stage-h2);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  transition: opacity 500ms var(--ja-ease);
+}
+.terms { display: none; }
+.term { grid-area: 1 / 1; opacity: 0; transition: opacity 500ms var(--ja-ease); }
+.eyebrow { margin: 0 0 24px; font-size: 17px; font-weight: 600; line-height: 1.5; color: var(--ja-text); }
+.word {
+  --ja-term-cap: 220px;
+  margin: 0;
+  font-family: var(--ja-display);
+  font-weight: 600;
+  font-size: min(var(--ja-term-cap), calc(100cqi / var(--len) * 0.92));
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: var(--ja-ink);
+  transform-origin: left center;
+}
+.rule { display: block; width: 64px; height: 3px; margin: 32px 0 28px; background: var(--ja-shu); transform-origin: left center; }
+.rendering {
+  margin: 0;
+  font-size: var(--ja-fs-render);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: var(--ja-ink);
+}
+@media (max-width: 1199px) { .word { --ja-term-cap: 200px; } }
+@media (max-width: 1023px) { .word { --ja-term-cap: 168px; } }
+@media (max-width: 767px) { .word { --ja-term-cap: 120px; } .eyebrow { margin-bottom: 16px; } .rule { margin: 24px 0 20px; } }
+
+/* ---------- pinned stage (JaMotion present) ---------- */
+:global(#ja-home[data-ja-motion]) .section { --runway: calc(5 * var(--L)); }
+:global(#ja-home[data-ja-motion]) .runway { height: calc(100svh - var(--hdr) + var(--runway)); }
+:global(#ja-home[data-ja-motion]) .sticky { position: sticky; top: var(--hdr); height: calc(100svh - var(--hdr)); min-height: 0; }
+:global(#ja-home[data-ja-motion]) .lightA { opacity: 1; }
+:global(#ja-home[data-ja-motion]) .lightC { opacity: 0; }
+:global(#ja-home[data-ja-motion]) .lights { will-change: transform; transform-origin: 50% 60%; }
+:global(#ja-home[data-ja-motion]) .terms { display: grid; grid-area: 1 / 1; pointer-events: none; }
+:global(#ja-home[data-ja-motion]) .section:not([data-step='0']):not([data-step='static']) .title { opacity: 0; }
+.section[data-step='1'] .t1,
+.section[data-step='2'] .t2,
+.section[data-step='3'] .t3,
+.section[data-step='4'] .t4 { opacity: 1; }
+:is(.section[data-step='1'] .t1, .section[data-step='2'] .t2, .section[data-step='3'] .t3, .section[data-step='4'] .t4) .word {
+  animation: jaSukashiRecede 900ms var(--ja-ease) 300ms both;
+}
+:is(.section[data-step='1'] .t1, .section[data-step='2'] .t2, .section[data-step='3'] .t3, .section[data-step='4'] .t4) .rule {
+  animation: jaSukashiDraw 600ms var(--ja-ease) 400ms both;
+}
+:is(.section[data-step='1'] .t1, .section[data-step='2'] .t2, .section[data-step='3'] .t3, .section[data-step='4'] .t4) .rendering {
+  animation: jaSukashiRise 800ms var(--ja-ease-reveal) 500ms both;
+}
+
+/* the paper moves: WebKit/Chromium follow the scroll continuously */
+@supports (animation-timeline: view()) {
+  :global(#ja-home[data-ja-motion='timeline']) .runway { view-timeline: --jaSukashi block; view-timeline-inset: var(--hdr) 0px; }
+  :global(#ja-home[data-ja-motion='timeline']) .lights {
+    animation: jaSukashiPaper linear both; animation-timeline: --jaSukashi; animation-range: contain 0% contain 100%;
+  }
+  :global(#ja-home[data-ja-motion='timeline']) .lightB {
+    animation: jaSukashiFade linear both; animation-timeline: --jaSukashi; animation-range: contain 0% contain 40%;
+  }
+  :global(#ja-home[data-ja-motion='timeline']) .lightC {
+    animation: jaSukashiFade linear both; animation-timeline: --jaSukashi; animation-range: contain 35% contain 75%;
+  }
+}
+/* Firefox: the same in steps */
+:global(#ja-home[data-ja-motion='steps']) .lights { scale: 1.14; translate: 0 4%; transition: scale 900ms var(--ja-ease), translate 900ms var(--ja-ease); }
+:global(#ja-home[data-ja-motion='steps']) :is(.lightB, .lightC) { transition: opacity 700ms var(--ja-ease); }
+:global(#ja-home[data-ja-motion='steps']) .section:is([data-step='2'], [data-step='3'], [data-step='4']) .lightB { opacity: 1; }
+:global(#ja-home[data-ja-motion='steps']) .section:is([data-step='3'], [data-step='4']) .lightC { opacity: 1; }
+:global(#ja-home[data-ja-motion='steps']) .section[data-step='1'] .lights { scale: 1.1; translate: 0 2%; }
+:global(#ja-home[data-ja-motion='steps']) .section[data-step='2'] .lights { scale: 1.06; translate: 0 0.5%; }
+:global(#ja-home[data-ja-motion='steps']) .section[data-step='3'] .lights { scale: 1.03; translate: 0 -1%; }
+:global(#ja-home[data-ja-motion='steps']) .section[data-step='4'] .lights { scale: 1; translate: 0 -2%; }
+
+@keyframes jaSukashiPaper { from { scale: 1.14; translate: 0 4%; } to { scale: 1; translate: 0 -2%; } }
+@keyframes jaSukashiFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes jaSukashiRecede { from { opacity: 1; scale: 1; } to { opacity: 0.55; scale: 0.96; } }
+@keyframes jaSukashiDraw { from { scale: 0 1; } to { scale: 1 1; } }
+@keyframes jaSukashiRise { from { opacity: 0; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
+
+/* ---------- the six pairs ---------- */
+.summary { position: relative; padding-block: 120px; background: var(--ja-paper-lit); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--ja-gap);
+  margin: 0;
+}
+.pair {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 36px 36px 28px;
+  border-radius: var(--ja-r);
+  background: rgb(255 255 255 / 0.72);
+  container-type: inline-size;
+}
+.pairTerm {
+  margin: 0;
+  font-family: var(--ja-display);
+  font-weight: 600;
+  font-size: min(72px, calc(100cqi / var(--len) * 0.92));
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: var(--ja-ink);
+}
+.pairRendering { margin: 0; font-size: 24px; font-weight: 700; line-height: 1.4; color: var(--ja-ink); }
+.pairLink { margin: auto 0 0; padding-top: 8px; }
+.link { align-items: flex-start; font-size: 17px; line-height: 1.55; }
+.link > span { min-width: 0; }
+.link svg { margin-top: 0.3em; }
+.more { margin: 28px 0 0; display: flex; justify-content: flex-end; }
+@media (max-width: 1023px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pairRendering { font-size: 21px; }
+}
+@media (max-width: 767px) {
+  .summary { padding-block: 88px; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .pair { padding: 28px 24px 20px; }
+  .pairTerm { font-size: min(48px, calc(100cqi / var(--len) * 0.92)); }
+  .pairRendering { font-size: 19px; }
+  .more { justify-content: flex-start; }
+}
+@media (forced-colors: active) { .pair { border: 1px solid CanvasText; } .rule { background: Highlight; } }
+@media print { .terms { display: none !important; } .runway { height: auto !important; } .sticky { position: relative !important; height: auto !important; } }

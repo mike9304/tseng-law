@@ -1,0 +1,257 @@
+/*
+ * ja home 「昊 — 光の升目」 (CONCEPT-V2 + operator amendment 2026-10-02; Opus 5.5 home lane, 2026-10-03).
+ * Tokens (§3.2, §3.3), grid (§3.1) and the shared primitives of the home chapters. Applied to the ja home wrapper
+ * (#ja-home, data-ja-design="home"); nothing here can match another locale (the class only exists in ja markup).
+ */
+
+/* Display face: Noto Serif JP 600 (OFL 1.1), subset to the home's display glyphs (ja-kou-display.glyphs.txt). */
+@font-face {
+  font-family: 'JaKouDisplay';
+  src: url('/fonts/ja-kou-display.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+.root {
+  color-scheme: light;
+  --hdr: var(--header-offset-desktop, 137px);
+  --ja-edge: 100px;
+  --ja-gap: 20px;
+  --ja-section: 160px;
+  --ja-r: 32px;
+  --ja-tile-pad: 48px;
+
+  --ja-stage: #ffffff;
+  --ja-stage-warm: #fbfaf7;
+  --ja-tile: #f4f2ee;
+  --ja-tile-press: #eeebe5;
+  --ja-washi: rgb(255 255 255 / 0.84);
+  --ja-washi-lead: rgb(255 255 255 / 0.7);
+  --ja-paper-unlit: #d9d5cd;
+  --ja-paper-lit: #fbecd0;
+  --ja-ink: #141210;
+  --ja-text: #2b2824;
+  --ja-grey: #66615a;
+  --ja-grey-soft: #8a857d;
+  --ja-shu: #c8102e;
+  --ja-shu-hover: #b30e29;
+  --ja-shu-ink: #a50d26;
+  --ja-night: #19170b;
+  --ja-night-text: #d8d1c5;
+  --ja-rule: #e4e0d8;
+  --ja-ease: cubic-bezier(0, 0, 0.5, 1);
+  --ja-ease-reveal: cubic-bezier(0.2, 0, 0, 1);
+
+  --ja-display: 'JaKouDisplay', var(--font-noto-serif-jp-loaded, 'Hiragino Mincho ProN'), 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --ja-sans: var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans CJK JP', sans-serif;
+
+  --ja-fs-hero2: clamp(64px, min(10.8vw, 19svh), 208px);
+  --ja-fs-hero1: clamp(20px, 2.5vw, 44px);
+  --ja-fs-stage-h2: clamp(40px, 5.4vw, 80px);
+  --ja-fs-render: clamp(26px, 3.9vw, 56px);
+  --ja-fs-h2: clamp(34px, 5vw, 80px);
+  --ja-fs-h2-film: clamp(40px, 6.1vw, 96px);
+  --ja-fs-num-xl: clamp(144px, 16.7vw, 240px);
+  --ja-fs-num-l: clamp(112px, 12.5vw, 180px);
+  --ja-fs-num-n1: clamp(112px, 13.9vw, 200px);
+  --ja-fs-num-fee: clamp(64px, 8.4vw, 120px);
+  --ja-fs-num-count: clamp(112px, 11vw, 160px);
+  --ja-fs-word: clamp(48px, 6.7vw, 96px);
+  --ja-fs-tab: clamp(36px, 6.1vw, 88px);
+  --ja-fs-h3-lead: clamp(26px, 2.5vw, 36px);
+  --ja-fs-h3: clamp(22px, 2.1vw, 30px);
+  --ja-fs-lede: clamp(19px, 1.65vw, 24px);
+  --ja-fs-label: clamp(18px, 1.5vw, 22px);
+  --ja-fs-cap: clamp(17px, 1.3vw, 19px);
+  --ja-fs-body: 18px;
+  --ja-fs-meta: 17px;
+
+  position: relative;
+  background: var(--ja-stage);
+  color: var(--ja-text);
+  font-family: var(--ja-sans);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 1199px) {
+  .root { --ja-edge: 64px; --ja-section: 140px; --ja-tile-pad: 44px; }
+}
+@media (max-width: 1023px) {
+  .root { --ja-edge: 40px; --ja-gap: 16px; --ja-section: 120px; --ja-r: 26px; --ja-tile-pad: 36px; }
+}
+@media (max-width: 767px) {
+  .root {
+    --ja-edge: 20px; --ja-gap: 12px; --ja-section: 88px; --ja-r: 22px; --ja-tile-pad: 24px;
+    --ja-fs-hero2: clamp(56px, 17.6vw, 92px);
+    --ja-fs-hero1: clamp(18px, 5.13vw, 24px);
+    --ja-fs-stage-h2: clamp(26px, 8.4vw, 44px);
+    --ja-fs-render: 28px;
+    --ja-fs-h2: 34px;
+    --ja-fs-h2-film: 40px;
+    --ja-fs-num-xl: 144px;
+    --ja-fs-num-l: 112px;
+    --ja-fs-num-n1: 112px;
+    --ja-fs-num-fee: 64px;
+    --ja-fs-num-count: 112px;
+    --ja-fs-word: 48px;
+    --ja-fs-tab: 36px;
+    --ja-fs-h3-lead: 24px;
+    --ja-fs-h3: 22px;
+    --ja-fs-lede: 17px;
+    --ja-fs-label: 17px;
+    --ja-fs-cap: 17px;
+    --ja-fs-body: 17px;
+    --ja-fs-meta: 15px;
+  }
+}
+@media (max-width: 359px) {
+  .root { --ja-fs-num-xl: 120px; --ja-fs-num-l: 96px; --ja-fs-num-n1: 96px; --ja-fs-num-count: 96px; }
+}
+
+/* ---------- layout ---------- */
+.wrap {
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: max(var(--ja-edge), calc((100% - 1440px) / 2));
+}
+.section { padding-block: var(--ja-section); }
+
+/* ---------- type primitives ---------- */
+.ph { word-break: keep-all; overflow-wrap: anywhere; }
+.h2 {
+  margin: 0;
+  font-family: var(--ja-sans);
+  font-size: var(--ja-fs-h2);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'palt' 1;
+  color: var(--ja-ink);
+  text-wrap: balance;
+}
+.lede {
+  margin: 0;
+  max-width: 34em;
+  font-size: var(--ja-fs-lede);
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: var(--ja-text);
+  text-wrap: pretty;
+}
+.key { color: var(--ja-ink); }
+.eyebrow {
+  margin: 0;
+  font-size: var(--ja-fs-label);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ja-text);
+}
+.vh {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- actions ---------- */
+.pill {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--ja-shu);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 100ms linear, scale 160ms var(--ja-ease);
+}
+.pill:active { scale: 0.98; }
+@media (hover: hover) { .pill:hover { background: var(--ja-shu-hover); color: #fff; } }
+@media (max-width: 767px) { .pill { min-height: 52px; } }
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--ja-ink);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.textLink svg { flex: none; color: var(--ja-shu); transition: translate 300ms var(--ja-ease); }
+@media (hover: hover) {
+  .textLink:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  .textLink:hover svg { translate: 4px 0; }
+}
+@media (max-width: 767px) { .textLink { font-size: 17px; } }
+
+/* Focus: 3 px sumi outer ring with a 2 px white inner ring on light; white on photographs and the night tile. */
+.root :focus-visible {
+  outline: 3px solid var(--ja-ink) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 2px #fff;
+}
+.root .onDark :focus-visible { outline-color: #fff !important; box-shadow: 0 0 0 2px var(--ja-ink); }
+
+/* ---------- tiles ---------- */
+.tile {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  min-width: 0;
+  padding: var(--ja-tile-pad);
+  border-radius: var(--ja-r);
+  background: var(--ja-tile);
+  color: var(--ja-text);
+  isolation: isolate;
+  overflow: clip;
+  text-decoration: none;
+  transition: scale 300ms var(--ja-ease), background-color 300ms var(--ja-ease);
+}
+a.tile:active { background: var(--ja-tile-press); }
+@media (hover: hover) { a.tile:hover { scale: 1.015; } }
+@media (forced-colors: active) { .tile { border: 1px solid CanvasText; } }
+
+/* ---------- motion helpers (all gated; base state is final and readable) ---------- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .fromLeft { animation: jaKouSlideL linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+    .fromRight { animation: jaKouSlideR linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+    .rise { animation: jaKouRise linear both; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+    .draw { transform-origin: left center; animation: jaKouDraw linear both; animation-timeline: view(); animation-range: entry 40% cover 45%; }
+  }
+}
+@keyframes jaKouSlideL { from { translate: calc(-1 * var(--fusuma, 72px)) 0; opacity: 0.2; } to { translate: 0 0; opacity: 1; } }
+@keyframes jaKouSlideR { from { translate: var(--fusuma, 72px) 0; opacity: 0.2; } to { translate: 0 0; opacity: 1; } }
+@keyframes jaKouRise { from { translate: 0 40px; opacity: 0.2; } to { translate: 0 0; opacity: 1; } }
+@keyframes jaKouDraw { from { scale: 0 1; } to { scale: 1 1; } }
+@media (max-width: 767px) { .root { --fusuma: 28px; } }
+
+@media print {
+  .root * { animation: none !important; transition: none !important; }
+}
+
+/* ---------- stage markers (JaStageMarkers / JaMotion) ---------- */
+.markers { position: absolute; inset: 0; pointer-events: none; visibility: hidden; }
+.marker {
+  position: absolute; left: 0; width: 1px;
+  top: calc(50svh - var(--hdr) + var(--runway, 0px) * var(--a));
+  height: calc(var(--runway, 0px) * (var(--b) - var(--a)));
+}
+.marker[data-first] { top: 0; height: calc(50svh - var(--hdr) + var(--runway, 0px) * var(--b)); }
+.marker[data-last] { height: auto; bottom: 0; }

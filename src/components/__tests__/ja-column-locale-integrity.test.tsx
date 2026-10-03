@@ -164,7 +164,7 @@ describe('Japanese column locale integrity', () => {
     expect(detailSource).toContain('resolveTypography(\n    toBuilderLocale(locale),');
 
     expect(listSource).toContain('buildBreadcrumbJsonLd(locale,');
-    expect(listSource).toContain('locale,\n              path: `/${locale}/columns`,');
+    expect(listSource).toMatch(/locale,\s+path: `\/\$\{locale\}\/columns`,/);
     expect(listSource).toContain("locale === 'ja' ? 'ホーム' : 'Home'");
     expect(listSource).not.toContain('buildBreadcrumbJsonLd(toBuilderLocale(locale)');
     expect(listSource).not.toContain('locale: toBuilderLocale(locale),');

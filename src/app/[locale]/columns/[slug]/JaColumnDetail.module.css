@@ -4,7 +4,7 @@
  * the meta line, then the article's own photo as an inset 16:9 plate in the light-print grade (static filter
  * plus a 25 % #F6EFE5 multiply layer, so the generated rooms read as one calm set). The body: 18 px / 2.0 at a
  * 36em measure, sans H2 at 32 px, the 目次 as a sticky side index from 1280 px and a tile above the body
- * below that, tables scrolling inside rounded tiles, the AI author box and FAQ as tiles, related columns as
+ * below that, tables scrolling inside rounded tiles, the FAQ as tiles, related columns as
  * small glyph cards; then the consultation card as a dusk tile and the attorney as a night tile.
  */
 .root:global(#ja-column) { --col-measure: 36em; }
@@ -129,13 +129,12 @@
   font-size: 17px; line-height: 1.8; color: var(--ja-text);
 }
 
-/* Column FAQ, AI author box, related columns */
+/* Column FAQ and related columns (no AI-author styling: public AI bylines are removed on main, 2026-10-03) */
 .root:global(#ja-column) :global(.column-faq) { margin-top: clamp(48px, 6vw, 80px); }
 .root:global(#ja-column) :global(.column-faq-list) { display: grid; gap: 8px; margin: 0; }
 .root:global(#ja-column) :global(.column-faq-item) { margin: 0; padding: 24px 28px; border: 0; border-radius: 20px; background: var(--ja-tile); }
 .root:global(#ja-column) :global(.column-faq-question) { margin: 0 0 8px; font-size: 19px; font-weight: 600; line-height: 1.6; color: var(--ja-ink); }
 .root:global(#ja-column) :global(.column-faq-answer) { margin: 0; font-size: 18px; line-height: 1.9; color: var(--ja-text); }
-.root:global(#ja-column) :global(.column-ai-author) { margin-top: clamp(40px, 5vw, 64px); padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); background: var(--ja-tile); box-shadow: none; }
 .root:global(#ja-column) :global(.recommended-for-you) { margin-top: clamp(56px, 7vw, 96px); padding: 0; border: 0; background: none; }
 .root:global(#ja-column) :global(.recommended-for-you-title) { margin: 0 0 24px; font-size: clamp(24px, 2.4vw, 32px); font-weight: 700; color: var(--ja-ink); }
 .root:global(#ja-column) :global(.recommended-for-you-grid) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }

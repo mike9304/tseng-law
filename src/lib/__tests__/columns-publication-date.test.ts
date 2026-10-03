@@ -122,6 +122,12 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '101': '2026-10-03',
   '102': '2026-10-03',
   '103': '2026-10-03',
+  // Family-law ship b02+b03: zh-hant 104–107 and en 108.
+  '104': '2026-10-03',
+  '105': '2026-10-03',
+  '106': '2026-10-03',
+  '107': '2026-10-03',
+  '108': '2026-10-03',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

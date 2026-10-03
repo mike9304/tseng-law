@@ -211,7 +211,7 @@ export const COUNTRY_COLUMN_FILES_20261002 = {
   ja: ['071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md'],
 } as const;
 
-/** Native audience, traffic and family-law columns published 2026-10-03 (085–098, 100–103). */
+/** Native audience, traffic and family-law columns published 2026-10-03 (085–108). */
 export const COUNTRY_COLUMN_FILES_20261003 = {
   'ko': [
     '091-taiwan-distributor-trademark-registration-korean-brand.md',
@@ -220,6 +220,7 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
   'en': [
     '092-taiwan-bank-inheritance-us-power-of-attorney.md',
     '095-us-parent-child-taken-to-taiwan-custody.md', // family lane b01
+    '108-us-divorce-decree-recognition-taiwan.md', // family lane b02+b03 ship
   ],
   'ja': [
     '096-taiwan-protection-order-japanese-spouse.md', // family lane b01
@@ -238,6 +239,10 @@ export const COUNTRY_COLUMN_FILES_20261003 = {
     '101-taiwan-flying-object-truck-origin-dashcam-evidence.md',
     '102-taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse.md',
     '103-taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction.md',
+    '104-judicial-divorce-grounds-civil-code-1052.md', // family lane b02
+    '105-child-support-calculation-taiwan-court.md', // family lane b02
+    '106-remaining-property-distribution-calculation.md', // family lane b03
+    '107-child-custody-best-interests-social-worker-report.md', // family lane b03
   ],
 } as const;
 

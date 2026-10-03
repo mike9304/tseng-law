@@ -210,6 +210,7 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-accident-family-care-necessity-period',
         'taiwan-racing-no-contact-joint-tort-liability',
         'taiwan-car-accident-work-loss-rest-note',
         'taiwan-accident-police-records',

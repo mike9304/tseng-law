@@ -290,8 +290,10 @@
   .closing { padding: 96px 0; }
   .closingText { font-size: 17px; }
   .closingEmail { font-size: 22px; }
+  .pill { padding: 0 24px; font-size: 17px; }
   .closingActions > .pill,
-  .titleActions > .pill { width: 100%; }
+  .titleActions > .pill,
+  .v2.v2[data-en-design][id] :global(.page-header) .pill { width: 100%; }
   .card { padding: 24px; border-radius: 18px; clip-path: inset(0 round 18px); }
 }
 

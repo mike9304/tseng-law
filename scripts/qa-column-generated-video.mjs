@@ -22,7 +22,14 @@ const settlementRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/d
 const stopDialogueCaptions = JSON.parse(await fs.readFile(new URL('../src/data/stop-dialogue-video-captions.json', import.meta.url), 'utf8'));
 const keyCustodyCaptions = JSON.parse(await fs.readFile(new URL('../src/data/key-custody-video-captions.json', import.meta.url), 'utf8'));
 const reverseDashcamCaptions = JSON.parse(await fs.readFile(new URL('../src/data/reverse-dashcam-video-captions.json', import.meta.url), 'utf8'));
+const cutInDashcamCaptions = JSON.parse(await fs.readFile(new URL('../src/data/cut-in-dashcam-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(cutInDashcamCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-road-rage-freeway-cut-in-sentence-reduced',
+    id: `road-rage-freeway-cut-in-sentence-reduced-v4-${locale}`,
+    duration: 15.041667, contactTime: 2, expectedDiagrams: 0, loop: true,
+    disclosure: caption.disclosure,
+  })),
   ...Object.entries(reverseDashcamCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-road-rage-reversing-into-tailgater-no-self-defense',
     id: `road-rage-reversing-into-tailgater-no-self-defense-v4-${locale}`,

@@ -189,7 +189,7 @@ describe('reviewed column videos', () => {
   it.each(['ko', 'ja', 'en', 'zh-hant'])('preserves native looping and the manual component default for road-rage videos (%s)', (locale) => {
     const slug = 'taiwan-road-rage-freeway-cut-in-sentence-reduced';
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
-    expect(html).toContain(`road-rage-freeway-cut-in-sentence-reduced-v3-${locale}.mp4`);
+    expect(html).toContain(`road-rage-freeway-cut-in-sentence-reduced-v4-${locale}.mp4`);
     expect(html).toContain('loop=""');
     expect(html).toContain('controls=""');
     expect(html).toContain('preload="none"');

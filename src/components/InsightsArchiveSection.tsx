@@ -16,7 +16,7 @@ import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import { interleaveColumnsByTopic, type ColumnTopic } from '@/lib/column-topics';
 import { splitRecommendedColumns } from '@/lib/column-audience';
 import RecommendedForYou from '@/components/RecommendedForYou';
-import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
+import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import {
   INSIGHTS_IMAGE_FALLBACK,
   resolveInsightsImageSrc,
@@ -289,9 +289,9 @@ export default function InsightsArchiveSection({
               </div>
               {/* Whole card opens the column: one stretched link on the title,
                   no other interactive element inside the card. */}
-              <span className="insights-byline">
-                {isAiAuthoredColumn(featured) ? getAiAuthorCopy(locale).label : authorLabel}
-              </span>
+              {!isAiAuthoredColumn(featured) ? (
+                <span className="insights-byline">{authorLabel}</span>
+              ) : null}
               <h3 className="insights-featured-title">
                 <SmartLink className="card-stretched-link" href={`/${locale}/columns/${featured.slug}`}>
                   {protectInsightTitle(featured.title)}
@@ -360,9 +360,9 @@ export default function InsightsArchiveSection({
                       </time>
                       {post.readTime ? <span className="insights-readtime">{post.readTime}</span> : null}
                     </div>
-                    <span className="insights-byline">
-                      {isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : authorLabel}
-                    </span>
+                    {!isAiAuthoredColumn(post) ? (
+                      <span className="insights-byline">{authorLabel}</span>
+                    ) : null}
                     <h4 className="insights-list-title">
                       <SmartLink className="card-stretched-link" href={`/${locale}/columns/${post.slug}`}>
                         {protectInsightTitle(post.title)}

@@ -135,4 +135,4 @@ All sources below were opened and checked on October 3, 2026 (KST). Taiwan court
 - Ministry of Justice, Trade Secrets Act: [Article 13-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=13-1), [Article 13-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=13-2), [Article 13-3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=13-3) and [Article 13-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=13-4): criminal offenses, complaints and employer fines.
 - Ministry of Justice, Trade Secrets Act: [Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=14), [Article 14-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=14-1) and [legislative history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080028): confidentiality protections and amendment dates; latest amendment listed January 15, 2020.
 
-*AI-prepared general information, not individualized legal advice. Sources checked October 3, 2026 (KST).*
+*General information, not individualized legal advice. Sources checked October 3, 2026 (KST).*

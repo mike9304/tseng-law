@@ -8,7 +8,6 @@ import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell'
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { ISSUE_BOARD_LOCALES, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
-import { getAiAuthorCopy } from '@/lib/ai-authored-columns';
 import { issueBoardCopy, issueBoardPath } from '@/data/issue-board';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
@@ -60,7 +59,7 @@ export default async function IssueBoardPage(props: {
           name: copy.title,
           description: copy.description,
           items: posts.slice(0, 20).map((post) => ({
-            name: `${post.title} · ${getAiAuthorCopy(locale).label}`,
+            name: post.title,
             path: `${boardPath}/${post.slug}`,
             description: post.summary,
           })),

@@ -10,7 +10,25 @@ describe('reviewed family-care compensation column', () => {
   it('preserves the exact reviewed body, case amounts and qualifications', () => {
     const file = fs.readFileSync(`src/content/columns-zh/085-${slug}.md`, 'utf8');
     const body = file.slice(file.indexOf('\n---\n') + 5);
-    expect(createHash('sha256').update(body).digest('hex')).toBe('ef6305aed4de829f3cbfcff02462e73c9a21dfba80d7eaadbc785cd0b5c44d41');
+    // Undo only the exact AI attribution removal approved on 2026-10-03;
+    // the original reviewed-body hash still protects every other byte.
+    const approvedAttributionChanges = [
+      [
+        "本文依官方公開資料撰寫，供一般法律資訊參考，不取代個案法律意見。法規查閱日：2026年10月2日。上述兩件二審判決末尾均載明不得上訴；本文未另取得確定證明書或查核非常救濟程序。",
+        "本文由法律AI助理依官方公開資料撰寫，供一般法律資訊參考，不取代個案法律意見。法規查閱日：2026年10月2日。上述兩件二審判決末尾均載明不得上訴；本文未另取得確定證明書或查核非常救濟程序。",
+      ],
+      [
+        "# 家人照顧能請求車禍看護費嗎？先分清照護需求與期間\n\n\n",
+        "# 家人照顧能請求車禍看護費嗎？先分清照護需求與期間\n\n作者：法律AI助理（legal-ai-assistant）\n\n",
+      ],
+    ] as const;
+    let reviewedBody = body;
+    for (const [approvedText, reviewedText] of approvedAttributionChanges) {
+      expect(body.split(approvedText)).toHaveLength(2);
+      expect(body).not.toContain(reviewedText);
+      reviewedBody = reviewedBody.replace(approvedText, reviewedText);
+    }
+    expect(createHash('sha256').update(reviewedBody).digest('hex')).toBe('ef6305aed4de829f3cbfcff02462e73c9a21dfba80d7eaadbc785cd0b5c44d41');
     expect(body).toContain('本文未另取得確定證明書或查核非常救濟程序');
     expect(body).toContain('並非全國統一或現行行情');
   });

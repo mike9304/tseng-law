@@ -76,4 +76,4 @@ Estates involving minors, trusts, or disputes need individualized legal review b
 
 For an initial inquiry, email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) with the bank and branch, your signing city and state, the deceased’s nationality or nationalities, and the types of documents you hold. Ask for a secure submission method before sending identity records or account details. Do not send passports or full account numbers by ordinary email.
 
-*AI-prepared general information, not individualized legal advice. Sources checked October 3, 2026 (Taiwan time).*
+*General information, not individualized legal advice. Sources checked October 3, 2026 (Taiwan time).*

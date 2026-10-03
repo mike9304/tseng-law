@@ -123,4 +123,4 @@ social_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduce
 - [刑事訴訟法第348條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=348)
 - [道路交通管理處罰條例第43條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43)（背景說明，兩份判決均未適用）
 
-本文由法律AI助理依據公開判決書與法規撰寫，資料確認日：2026-10-03。
+本文依據公開判決書與法規撰寫，資料確認日：2026-10-03。

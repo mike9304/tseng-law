@@ -10,7 +10,25 @@ describe('reviewed work-loss compensation column', () => {
   it('preserves the exact reviewed body, case amounts and qualifications', () => {
     const file = fs.readFileSync(`src/content/columns-zh/084-${slug}.md`, 'utf8');
     const body = file.slice(file.indexOf('\n---\n') + 5);
-    expect(createHash('sha256').update(body).digest('hex')).toBe('ee1cf6e9a4a641e6fea57cb526e0452ccda22e7677fa9158742b9cb7f67bf885');
+    // Undo only the exact AI attribution removal approved on 2026-10-03;
+    // the original reviewed-body hash still protects every other byte.
+    const approvedAttributionChanges = [
+      [
+        "註：本文依公開官方資料撰寫，供一般法律資訊參考。法規查閱日為2026年10月2日。兩案後續是否上訴、是否確定均未確認；臺中案判決末另有附條件的第三審上訴教示。個案認定仍取決於實際事證。",
+        "註：本文由法律AI助理依公開官方資料撰寫，供一般法律資訊參考。法規查閱日為2026年10月2日。兩案後續是否上訴、是否確定均未確認；臺中案判決末另有附條件的第三審上訴教示。個案認定仍取決於實際事證。",
+      ],
+      [
+        "# 診斷書寫「宜休養」，車禍工作損失就能照算嗎？\n\n\n",
+        "# 診斷書寫「宜休養」，車禍工作損失就能照算嗎？\n\n作者：法律AI助理\n\n",
+      ],
+    ] as const;
+    let reviewedBody = body;
+    for (const [approvedText, reviewedText] of approvedAttributionChanges) {
+      expect(body.split(approvedText)).toHaveLength(2);
+      expect(body).not.toContain(reviewedText);
+      reviewedBody = reviewedBody.replace(approvedText, reviewedText);
+    }
+    expect(createHash('sha256').update(reviewedBody).digest('hex')).toBe('ee1cf6e9a4a641e6fea57cb526e0452ccda22e7677fa9158742b9cb7f67bf885');
     expect(body).toContain('兩案後續是否上訴、是否確定均未確認');
     expect(body).toContain('它是這件歷史案件依卷證及對造同意形成的計算基礎');
   });

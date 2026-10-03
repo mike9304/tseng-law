@@ -72,7 +72,7 @@ export const semiconductorGuideCopy: Record<
     kicker: '반도체 기업 실무가이드',
     title: '대만과 거래하는 반도체 기업을 위한 법무 안내',
     description:
-      '대만에 진출하려는 소재·부품·장비 기업을 위한 실무가이드입니다. 대만 반도체 산업과 거래하는 기업의 법률·사업 문제를 다루며, 일부 칼럼은 본 사무소의 법률 AI 어시스턴트가 공개 자료를 바탕으로 작성했습니다. 글마다 작성자를 표시합니다.',
+      '대만에 진출하려는 소재·부품·장비 기업을 위한 실무가이드입니다. 대만 반도체 산업과 거래하는 기업의 법률·사업 문제를 다루며, 일부 칼럼은 공개 자료를 바탕으로 작성했습니다.',
     columnsHeading: '공개 칼럼',
     topicLabel: '대만 진출·인력',
     readMore: '칼럼 보기 →',
@@ -89,7 +89,7 @@ export const semiconductorGuideCopy: Record<
     kicker: '半導體企業實務指南',
     title: '與台灣交易的半導體企業法務指引',
     description:
-      '寫給規劃進入台灣市場的材料、零組件及設備企業。本頁專欄討論台灣半導體供應鏈企業面臨的法律與經營問題，部分文章由本所法律AI助理依公開資料撰寫，每篇皆標明撰文者。',
+      '寫給規劃進入台灣市場的材料、零組件及設備企業。本頁專欄討論台灣半導體供應鏈企業面臨的法律與經營問題，部分文章依公開資料撰寫。',
     columnsHeading: '公開專欄',
     topicLabel: '進入台灣市場與人力配置',
     readMore: '閱讀專欄 →',
@@ -105,7 +105,7 @@ export const semiconductorGuideCopy: Record<
     kicker: 'Semiconductor practice guide',
     title: 'Legal guidance for semiconductor companies dealing with Taiwan',
     description:
-      "A practice guide for materials, components, and equipment companies planning Taiwan entry. Its columns cover legal and business issues for companies in Taiwan's semiconductor ecosystem; some are prepared by our Legal AI Assistant from public sources, and each article shows who prepared it.",
+      "A practice guide for materials, components, and equipment companies planning Taiwan entry. Its columns cover legal and business issues for companies in Taiwan's semiconductor ecosystem; some are prepared from public sources.",
     columnsHeading: 'Published columns',
     topicLabel: 'Taiwan entry and staffing',
     readMore: 'Open column →',
@@ -122,7 +122,7 @@ export const semiconductorGuideCopy: Record<
     kicker: '半導体企業実務ガイド',
     title: '台湾と取引する半導体企業向けの法務案内',
     description:
-      '台湾進出を検討する材料・部品・装置企業向けの実務ガイドです。台湾の半導体産業と取引する企業の法務・事業上の課題を取り上げており、一部のコラムは当事務所の法律AIアシスタントが公開情報をもとに作成しています。各記事に作成者を明記しています。',
+      '台湾進出を検討する材料・部品・装置企業向けの実務ガイドです。台湾の半導体産業と取引する企業の法務・事業上の課題を取り上げており、一部のコラムは公開情報をもとに作成しています。',
     columnsHeading: '公開コラム',
     topicLabel: '台湾進出・人材',
     readMore: 'コラムを読む →',

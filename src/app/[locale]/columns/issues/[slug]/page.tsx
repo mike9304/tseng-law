@@ -8,7 +8,7 @@ import ColumnGeneratedVideo from '@/components/ColumnGeneratedVideo';
 import ColumnToc from '@/components/ColumnToc';
 import JsonLd from '@/components/JsonLd';
 import RecommendedForYou from '@/components/RecommendedForYou';
-import { AI_COLUMN_ATTORNEY_HEADING, buildAiAuthorJsonLd, getAiAuthorCopy } from '@/lib/ai-authored-columns';
+import { AI_COLUMN_ATTORNEY_HEADING } from '@/lib/ai-authored-columns';
 import { getAllIssuePosts, isIssueBoardLocale, type ColumnPost, type IssueBoardLocale } from '@/lib/columns';
 import { extractColumnToc } from '@/lib/column-toc';
 import { getConsultationPublicMailto, CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
@@ -94,7 +94,6 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
   const shell = shellLocale(locale);
   const boardPath = issueBoardPath(locale);
   const articlePath = `${boardPath}/${post.slug}`;
-  const aiAuthor = getAiAuthorCopy(locale);
   const tocEntries = locale === 'vi' ? [] : extractColumnToc(post.content);
   const faqItems = post.faq ?? [];
   const faqJsonLd = faqItems.length > 0 ? buildFaqJsonLd(faqItems, locale) : null;
@@ -151,8 +150,6 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           image: post.featuredImage,
           datePublished: post.publicationDate || post.date,
           dateModified: post.date,
-          authorName: aiAuthor.label,
-          authorEntity: buildAiAuthorJsonLd(locale),
           articleSection: t.label,
         })}
       />
@@ -170,7 +167,6 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           <span className="blog-category-badge">{t.label}</span>
           <h1 className="blog-hero-title">{post.title}</h1>
           <div className="blog-meta">
-            <span data-column-byline="ai">{aiAuthor.label}</span>
             <time dateTime={post.publicationDate || post.date}>{post.dateDisplay || post.date}</time>
             {post.readTime ? <span>{post.readTime}</span> : null}
           </div>

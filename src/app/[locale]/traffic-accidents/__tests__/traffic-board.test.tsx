@@ -74,7 +74,7 @@ describe('TrafficBoard SSR', () => {
     expect(html.match(/data-traffic-board-row/g)).toHaveLength(32);
     expect(html).toMatch(/<time datetime="2026-10-02">/i);
     expect(html).toContain('約7分鐘閱讀');
-    expect(html).toContain('法律AI助理');
+    expect(html).not.toContain('法律AI助理');
     // No clear-all link without an active filter.
     expect(html).not.toContain('data-traffic-board-clear');
   });

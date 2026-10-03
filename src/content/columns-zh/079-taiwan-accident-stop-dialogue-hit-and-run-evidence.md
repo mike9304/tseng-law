@@ -71,4 +71,4 @@ diagram_after: "法院看的，是交談前後一整段過程"
 
 警方文件的申請方式，可接著看[在台灣發生車禍，警方資料怎麼申請？](https://tseng-law.com/zh-hant/columns/taiwan-accident-police-records)；和解範圍及後續程序，另見[交通事故應對Q&A](https://tseng-law.com/zh-hant/columns/taiwan-traffic-accident-procedure)。
 
-本文由AI助理依公開官方資料整理，供一般資訊參考，不是個案法律意見。法規查閱日：2026年10月2日。
+本文依公開官方資料整理，供一般資訊參考，不是個案法律意見。法規查閱日：2026年10月2日。

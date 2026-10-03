@@ -11,7 +11,21 @@ describe('reviewed repair-cost depreciation column', () => {
   it('preserves the exact reviewed body, case amounts and qualifications', () => {
     const file = fs.readFileSync(`src/content/columns-zh/081-${slug}.md`, 'utf8');
     const body = file.slice(file.indexOf('\n---\n') + 5);
-    expect(createHash('sha256').update(body).digest('hex')).toBe('b99475456c846c65240c749cc8e26c08fb189ef7d28b1d6e706b68897bcda728');
+    // Undo only the exact AI attribution removal approved on 2026-10-03;
+    // the original reviewed-body hash still protects every other byte.
+    const approvedAttributionChanges = [
+      [
+        "本文依公開判決與法規整理，資料查核日為2026年10月2日。判決所列證據內容依判決記載說明，未另取得訴訟卷內照片、完整估價單或筆錄。個案是否成立及可請求金額，仍須依實際資料判斷。",
+        "本文由法律AI助理依公開判決與法規整理，資料查核日為2026年10月2日。判決所列證據內容依判決記載說明，未另取得訴訟卷內照片、完整估價單或筆錄。個案是否成立及可請求金額，仍須依實際資料判斷。",
+      ],
+    ] as const;
+    let reviewedBody = body;
+    for (const [approvedText, reviewedText] of approvedAttributionChanges) {
+      expect(body.split(approvedText)).toHaveLength(2);
+      expect(body).not.toContain(reviewedText);
+      reviewedBody = reviewedBody.replace(approvedText, reviewedText);
+    }
+    expect(createHash('sha256').update(reviewedBody).digest('hex')).toBe('b99475456c846c65240c749cc8e26c08fb189ef7d28b1d6e706b68897bcda728');
     expect(body).toContain('是否上訴、是否確定，尚未確認');
     expect(body).toContain('判決未另列金額');
   });

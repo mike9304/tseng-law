@@ -101,7 +101,6 @@ export default function TrafficBoard({ locale, items, query }: {
                   <span className={styles.subject}>{subjectLabels[item.subject]}</span>
                   {item.publicationDate ? <time dateTime={item.publicationDate}>{item.dateDisplay || item.publicationDate}</time> : null}
                   {item.readTime ? <span>{item.readTime}</span> : null}
-                  {item.aiAuthored ? <span className={styles.ai}>{copy.aiAuthor}</span> : null}
                   {item.hasVideo ? <span className={styles.video} data-traffic-board-video><span aria-hidden="true">▶</span> {copy.video}</span> : null}
                 </p>
               </div>

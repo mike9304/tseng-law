@@ -12,7 +12,21 @@ describe('reviewed multi-camera evidence column', () => {
   it('preserves the exact reviewed body, case amounts and qualifications', () => {
     const file = fs.readFileSync(`src/content/columns-zh/089-${slug}.md`, 'utf8');
     const body = file.slice(file.indexOf('\n---\n') + 5);
-    expect(createHash('sha256').update(body).digest('hex')).toBe('15dac09279a6a073a6bababfb5a6b485c53a070df084ecfad113bb4c98273822');
+    // Undo only the exact AI attribution removal approved on 2026-10-03;
+    // the original reviewed-body hash still protects every other byte.
+    const approvedAttributionChanges = [
+      [
+        "本文依公開判決與官方法規整理，僅供一般資訊參考。查核日：2026-10-03（臺灣）；法規資料庫所示整編截止日：2026-09-24。",
+        "撰文：法律AI助理。本文依公開判決與官方法規整理，僅供一般資訊參考。查核日：2026-10-03（臺灣）；法規資料庫所示整編截止日：2026-09-24。",
+      ],
+    ] as const;
+    let reviewedBody = body;
+    for (const [approvedText, reviewedText] of approvedAttributionChanges) {
+      expect(body.split(approvedText)).toHaveLength(2);
+      expect(body).not.toContain(reviewedText);
+      reviewedBody = reviewedBody.replace(approvedText, reviewedText);
+    }
+    expect(createHash('sha256').update(reviewedBody).digest('hex')).toBe('15dac09279a6a073a6bababfb5a6b485c53a070df084ecfad113bb4c98273822');
     expect(body).toContain('未確認後續上訴及確定狀態');
     expect(body).toContain('這是交通裁罰的行政訴訟，不是刑事傷害罪判決，也沒有分配兩車的民事賠償比例');
   });

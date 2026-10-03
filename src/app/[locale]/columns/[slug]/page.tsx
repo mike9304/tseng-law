@@ -8,8 +8,6 @@ import { notFound } from 'next/navigation';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
 import {
   AI_COLUMN_ATTORNEY_HEADING,
-  buildAiAuthorJsonLd,
-  getAiAuthorCopy,
   isAiAuthoredColumn,
 } from '@/lib/ai-authored-columns';
 import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
@@ -202,10 +200,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         : locale === 'ja'
           ? '曾雋崴弁護士'
           : 'Attorney Wei Tseng';
-  // AI-written columns: no attorney byline or review claim; the Legal AI
-  // Assistant author box closes the article instead.
+  // Retain provenance so AI-written columns never inherit an attorney byline.
   const aiAuthored = isAiAuthoredColumn(post);
-  const aiAuthor = aiAuthored ? getAiAuthorCopy(urlLocale) : null;
   const attorneyHeading = aiAuthored
     ? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en
     : t.attorneyHeading;
@@ -309,9 +305,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     image: post.featuredImage,
     datePublished: post.publicationDate || post.date,
     dateModified: post.date,
-    authorName: aiAuthor ? aiAuthor.label : authorName,
+    authorName: aiAuthored ? undefined : authorName,
     authorUrl: authorHref,
-    authorEntity: aiAuthored ? buildAiAuthorJsonLd(urlLocale) : undefined,
     authorSameAs: [
       'https://www.hoveringlaw.com.tw/en/wei.html',
       'https://www.wei-wei-lawyer.com/lawyertseng',
@@ -346,7 +341,6 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     authorName,
     authorHref,
     aiAuthored,
-    aiAuthor: aiAuthor ? { label: aiAuthor.label } : null,
     attorneyHeading,
     guideLinks: showBody ? guideLinks : [],
     recommendedItems: showBody ? recommendedItems : [],

@@ -10,7 +10,21 @@ describe('reviewed borrowed-car liability column', () => {
   it('preserves the exact reviewed body including factual and legal qualifications', () => {
     const file = fs.readFileSync(`src/content/columns-zh/080-${slug}.md`, 'utf8');
     const body = file.slice(file.indexOf('\n---\n') + 5);
-    expect(createHash('sha256').update(body).digest('hex')).toBe('53052322e19d5345c3de5cf6633995e673f2d9719a34e2a89dd367fd1cfd8d54');
+    // Undo only the exact AI attribution removal approved on 2026-10-03;
+    // the original reviewed-body hash still protects every other byte.
+    const approvedAttributionChanges = [
+      [
+        "本文依公開法規與裁判整理，提供一般法律資訊；個別案件仍須依其事實、證據及適用法規判斷。",
+        "本文依公開法規與裁判整理，由法律AI助理撰寫，提供一般法律資訊；個別案件仍須依其事實、證據及適用法規判斷。",
+      ],
+    ] as const;
+    let reviewedBody = body;
+    for (const [approvedText, reviewedText] of approvedAttributionChanges) {
+      expect(body.split(approvedText)).toHaveLength(2);
+      expect(body).not.toContain(reviewedText);
+      reviewedBody = reviewedBody.replace(approvedText, reviewedText);
+    }
+    expect(createHash('sha256').update(reviewedBody).digest('hex')).toBe('53052322e19d5345c3de5cf6633995e673f2d9719a34e2a89dd367fd1cfd8d54');
     expect(body).toContain('未確認是否確定');
     expect(body).toContain('施行日期由行政院另定');
   });

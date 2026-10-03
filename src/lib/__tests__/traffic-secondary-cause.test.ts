@@ -10,7 +10,21 @@ describe('reviewed secondary-cause compensation column', () => {
   it('preserves the exact reviewed body, case amounts and qualifications', () => {
     const file = fs.readFileSync(`src/content/columns-zh/083-${slug}.md`, 'utf8');
     const body = file.slice(file.indexOf('\n---\n') + 5);
-    expect(createHash('sha256').update(body).digest('hex')).toBe('37192731d8ff9f738d94a0ca3dac52ad0af7bdfad25cfaf199f2134cfef45852');
+    // Undo only the exact AI attribution removal approved on 2026-10-03;
+    // the original reviewed-body hash still protects every other byte.
+    const approvedAttributionChanges = [
+      [
+        "資料說明：本文依上述公開民事判決及2026年10月2日查得的官方法規整理。未確認本件民事判決是否上訴或已確定；判決中提及其他刑事裁判的部分，不據此擴張為其他案件的結論。本文未取得原始監視器影片，影像內容均以判決記載為據。本文經資料核對，供一般法律資訊參考，個案仍須依完整資料判斷。",
+        "資料說明：本文依上述公開民事判決及2026年10月2日查得的官方法規整理。未確認本件民事判決是否上訴或已確定；判決中提及其他刑事裁判的部分，不據此擴張為其他案件的結論。本文未取得原始監視器影片，影像內容均以判決記載為據。本文由 AI 協助撰寫與資料核對，供一般法律資訊參考，個案仍須依完整資料判斷。",
+      ],
+    ] as const;
+    let reviewedBody = body;
+    for (const [approvedText, reviewedText] of approvedAttributionChanges) {
+      expect(body.split(approvedText)).toHaveLength(2);
+      expect(body).not.toContain(reviewedText);
+      reviewedBody = reviewedBody.replace(approvedText, reviewedText);
+    }
+    expect(createHash('sha256').update(reviewedBody).digest('hex')).toBe('37192731d8ff9f738d94a0ca3dac52ad0af7bdfad25cfaf199f2134cfef45852');
     expect(body).toContain('未確認本件民事判決是否上訴或已確定');
     expect(body).toContain('不是法院的結論');
   });

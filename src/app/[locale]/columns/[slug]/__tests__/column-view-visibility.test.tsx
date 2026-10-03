@@ -30,6 +30,21 @@ async function props(body: boolean, seo: boolean, slug = 'visibility-fixture', t
 }
 
 describe('public column view publication visibility', () => {
+  it('omits AI bylines and schema authors while retaining article text and the disclaimer', async () => {
+    const data = await props(true, true, 'taiwan-exit-ban-foreigners', false);
+    const html = renderToStaticMarkup(<ColumnDetailView {...data} />);
+    expect(data.articleJsonLd).not.toHaveProperty('author');
+    expect(html).toContain('HIDDEN_BODY');
+    expect(html).toContain('data-column-disclaimer="true"');
+    expect(html).not.toMatch(/data-column-byline|data-column-ai-author|法律AI助理|法律AIアシスタント|Legal AI Assistant/);
+    const meta = html.match(/class="blog-meta">([\s\S]*?)<\/div>/)?.[1];
+    expect(meta).toBeDefined();
+    expect(meta).not.toContain('曾雋崴');
+    const attorney = await props(true, true, 'taiwan-divorce-lawsuit-qna', false);
+    expect(attorney.articleJsonLd.author).toMatchObject({ '@type': 'Person', name: '曾雋崴律師' });
+    expect(renderToStaticMarkup(<ColumnDetailView {...attorney} />)).toMatch(/class="blog-meta"><a[^>]*>曾雋崴律師<\/a>/);
+  });
+
   it('keeps the generated clip behind body visibility without removing the article', async () => {
     const slug = 'taiwan-traffic-accident-procedure';
     const hidden = await props(false, false, slug);

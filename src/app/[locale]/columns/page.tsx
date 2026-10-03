@@ -16,7 +16,7 @@ import { EN_COLUMN_TOPIC_ORDER, EN_RECOMMENDED_COLUMN_ORDER } from '@/components
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
-import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
+import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { pageCopy } from '@/data/page-copy';
 import { toBuilderLocale } from '@/lib/locales';
@@ -201,7 +201,7 @@ export default async function ColumnsPage(
             name: copy.title,
             description: copy.description,
             items: posts.slice(0, 20).map((post) => ({
-              name: `${post.title} · ${isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : byline}`,
+              name: isAiAuthoredColumn(post) ? post.title : `${post.title} · ${byline}`,
               path: `/${locale}/columns/${post.slug}`,
               description: post.summary,
             })),
@@ -308,7 +308,7 @@ export default async function ColumnsPage(
               name: copy.title,
               description: copy.description,
               items: posts.slice(0, 20).map((post) => ({
-                name: `${post.title} · ${isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : byline}`,
+                name: isAiAuthoredColumn(post) ? post.title : `${post.title} · ${byline}`,
                 path: `/${locale}/columns/${post.slug}`,
                 description: post.summary,
               })),

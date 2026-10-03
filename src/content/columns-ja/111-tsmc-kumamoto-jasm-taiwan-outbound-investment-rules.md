@@ -89,4 +89,4 @@ JASMは[2021年11月のTSMCとソニーセミコンダクタソリューショ�
 - [2026年改訂後の技術一覧は42項目](https://www.tipo.gov.tw/tw/tradesecrets/888-80830.html)。経済部智慧財產局、2026年3月11日。確認日：2026年10月3日。
 - [國家安全法第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030028&flno=3)、[營業秘密法第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2)・[第10条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=10)。法務部全國法規資料庫。確認日：2026年10月3日。
 
-*AIが作成した一般的な法制度情報であり、個別案件への法律助言ではありません。資料は2026年10月3日（台湾時間）に確認しました。*
+*一般的な法制度情報であり、個別案件への法律助言ではありません。資料は2026年10月3日（台湾時間）に確認しました。*

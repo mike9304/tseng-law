@@ -109,4 +109,4 @@ Statutes
 - [刑事訴訟法 第348條 (Code of Criminal Procedure, Article 348)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=348)
 - [道路交通管理處罰條例 第43條 (Road Traffic Management and Penalty Act, Article 43)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43) (background only; not applied in either judgment)
 
-This column was written by the site's Legal AI Assistant from public court judgments and statutes. Sources checked on 3 October 2026.
+This column draws on public court judgments and statutes. Sources checked on 3 October 2026.

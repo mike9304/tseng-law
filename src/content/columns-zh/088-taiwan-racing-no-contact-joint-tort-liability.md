@@ -51,4 +51,4 @@ social_image: "/images/columns/20261003/joint-liability-hero.webp"
 
 本次取得的[官方歷審資料](https://judgment.judicial.gov.tw/FJUD/printHistory.aspx?id=ULDV%2c112%2c%e7%b0%a1%e4%b8%8a%2c86%2c112%2c%e7%b0%a1%e4%b8%8a%2c86%2c20250319%2c2&d=20250319)共有六筆，最後一筆為2025年3月19日判決，未列更晚紀錄；這不等於判決已確定。該判決末頁仍載有受限制的第三審救濟。依[民事訴訟法第436條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=436-2)及[第436條之3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=436-3)，須符合上訴利益門檻，以適用法規顯有錯誤為理由，並經原裁判法院許可，且涉及的法律見解須具有原則上重要性。本文討論上述兩份民事判決，未取得確定證明或後續上訴資料，尚無法確認確定狀態。[上訴審判決末頁](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=ULDV%2C112%2C%E7%B0%A1%E4%B8%8A%2C86%2C20250319%2C2)
 
-本文由AI協作撰寫並核對所列公開資料。公開來源擷取日期為2026年10月2日（UTC），臺灣核對日期為2026年10月3日；全國法規資料庫顯示的法規整編截止日為2026年9月24日。
+本文依所列公開資料撰寫並核對。公開來源擷取日期為2026年10月2日（UTC），臺灣核對日期為2026年10月3日；全國法規資料庫顯示的法規整編截止日為2026年9月24日。

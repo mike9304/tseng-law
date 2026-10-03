@@ -1,8 +1,8 @@
 /**
  * Columns written by AI models (drafted, cross-reviewed and revised by AI
  * lanes; see the commit history of 019–040). They must not be bylined or
- * marked up as written or reviewed by the attorney. Instead they carry the
- * "Legal AI Assistant" author box at the end of the article.
+ * marked up as written or reviewed by the attorney. Keep this internal
+ * provenance even though public author attribution is omitted.
  *
  * 001–017 are the attorney's own columns imported from the original site, and
  * 018 was published as an attorney-reviewed text, so they keep the attorney
@@ -49,61 +49,21 @@ export function isAiAuthoredColumn(
   return slugOrPost.aiAuthored === true || AI_AUTHORED_COLUMN_SLUGS.has(slugOrPost.slug);
 }
 
-export const LEGAL_AI_ASSISTANT_AVATAR = '/images/authors/legal-ai-assistant.webp';
-
-type AiAuthorCopy = { label: string; heading: string; note: string };
-
-const AI_AUTHOR_COPY: Record<string, AiAuthorCopy> = {
-  ko: {
-    label: '법률 AI 어시스턴트',
-    heading: '작성',
-    note: '이 글은 일반적인 정보를 드리기 위해 AI 어시스턴트가 작성했으며, 개별 사안에 대한 법률 자문이 아닙니다.',
-  },
-  en: {
-    label: 'Legal AI Assistant',
-    heading: 'Written by',
-    note: 'This article was prepared by an AI assistant for general information and is not legal advice on any individual matter.',
-  },
-  ja: {
-    label: '法律AIアシスタント',
-    heading: '執筆',
-    note: 'この記事は一般的な情報提供を目的としてAIアシスタントが作成したもので、個別の事案についての法的助言ではありません。',
-  },
-  'zh-hant': {
-    label: '法律AI助理',
-    heading: '撰文',
-    note: '本文由AI助理撰寫，僅供一般資訊參考，並非針對個別案件的法律意見。',
-  },
-  'zh-hans': {
-    label: '法律AI助手',
-    heading: '撰文',
-    note: '本文由AI助手撰写，仅供一般信息参考，并非针对个案的法律意见。',
-  },
-  vi: {
-    label: 'Trợ lý AI pháp lý',
-    heading: 'Tác giả',
-    note: 'Bài viết này do trợ lý AI soạn để cung cấp thông tin chung, không phải là tư vấn pháp lý cho trường hợp cụ thể.',
-  },
-  id: {
-    label: 'Asisten AI Hukum',
-    heading: 'Penulis',
-    note: 'Artikel ini disusun oleh asisten AI sebagai informasi umum dan bukan nasihat hukum untuk kasus tertentu.',
-  },
-  th: {
-    label: 'ผู้ช่วย AI ด้านกฎหมาย',
-    heading: 'ผู้เขียน',
-    note: 'บทความนี้จัดทำโดยผู้ช่วย AI เพื่อให้ข้อมูลทั่วไป และไม่ใช่คำแนะนำทางกฎหมายสำหรับกรณีเฉพาะ',
-  },
-  fil: {
-    label: 'Legal AI Assistant',
-    heading: 'Isinulat ng',
-    note: 'Inihanda ng isang AI assistant ang artikulong ito bilang pangkalahatang impormasyon at hindi ito legal na payo para sa isang partikular na kaso.',
-  },
+/** General-information notice retained independently of author attribution. */
+const COLUMN_DISCLAIMER: Record<string, string> = {
+  ko: '이 글은 일반적인 정보 제공을 위한 것이며, 개별 사안에 대한 법률 자문이 아닙니다.',
+  en: 'This article provides general information and is not legal advice on any individual matter.',
+  ja: 'この記事は一般的な情報提供を目的としたもので、個別の事案についての法的助言ではありません。',
+  'zh-hant': '本文僅供一般資訊參考，並非針對個別案件的法律意見。',
+  'zh-hans': '本文仅供一般信息参考，并非针对个案的法律意见。',
+  vi: 'Bài viết này cung cấp thông tin chung, không phải là tư vấn pháp lý cho trường hợp cụ thể.',
+  id: 'Artikel ini memberikan informasi umum dan bukan nasihat hukum untuk kasus tertentu.',
+  th: 'บทความนี้ให้ข้อมูลทั่วไป และไม่ใช่คำแนะนำทางกฎหมายสำหรับกรณีเฉพาะ',
+  fil: 'Ang artikulong ito ay nagbibigay ng pangkalahatang impormasyon at hindi ito legal na payo para sa isang partikular na kaso.',
 };
 
-/** Localized author copy; falls back to English for locales without a translation. */
-export function getAiAuthorCopy(locale: string): AiAuthorCopy {
-  return AI_AUTHOR_COPY[locale] ?? AI_AUTHOR_COPY.en;
+export function getColumnDisclaimer(locale: string): string {
+  return COLUMN_DISCLAIMER[locale] ?? COLUMN_DISCLAIMER.en;
 }
 
 /** Sidebar heading for the attorney card on AI-written columns (no review claim). */
@@ -113,13 +73,3 @@ export const AI_COLUMN_ATTORNEY_HEADING: Record<string, string> = {
   en: 'Consulting Attorney',
   ja: 'ご相談いただける弁護士',
 };
-
-/** schema.org author entity for AI-written columns (not a Person, no attorney review). */
-export function buildAiAuthorJsonLd(locale: string) {
-  const copy = getAiAuthorCopy(locale);
-  return {
-    '@type': 'Organization',
-    name: copy.label,
-    description: copy.note,
-  };
-}

@@ -66,4 +66,4 @@ social_image: "/images/columns/20261003/vehicle-hood-damage-1600x900.webp"
 
 本文未取得原始行車影像，案情取自法院勘驗及判決記載。截至2026年10月3日，[臺南案歷審](https://judgment.judicial.gov.tw/FJUD/printHistory.aspx?id=TNDV%2c115%2c%e6%96%b0%e7%b0%a1%2c286%2c115%2c%e6%96%b0%e7%b0%a1%2c286%2c20260617%2c1&d=20260617)與[新竹案歷審](https://judgment.judicial.gov.tw/FJUD/printHistory.aspx?id=SCDV%2c112%2c%e7%ab%b9%e5%8c%97%e5%b0%8f%2c358%2c112%2c%e7%ab%b9%e5%8c%97%e5%b0%8f%2c358%2c20230831%2c1&d=20230831)均僅列一筆第一審裁判；未取得確定證明或後續裁判，尚未確認判決確定。
 
-本文由AI協助整理，依公開裁判與法規撰寫，屬一般法律資訊，不代表個案法律意見。
+本文依公開裁判與法規撰寫，屬一般法律資訊，不代表個案法律意見。

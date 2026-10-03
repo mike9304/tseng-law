@@ -11,10 +11,17 @@ const slug = 'taiwan-accident-stop-dialogue-hit-and-run-evidence';
 const id = 'stop-dialogue-timeline';
 
 describe('reviewed accident departure column', () => {
-  it('preserves the independently reviewed manuscript when removing only its duplicate H1', () => {
+  it('preserves the independently reviewed manuscript after removing its duplicate H1 and the approved AI attribution', () => {
     const file = fs.readFileSync(`src/content/columns-zh/079-${slug}.md`, 'utf8');
     const body = file.split('---\n').slice(2).join('---\n').replace(/^\n/, '');
-    const original = '# 車禍後停下交談才離開，為何還有肇事逃逸爭議？\n\n' + body;
+    const approvedSourceNote = '本文依公開官方資料整理，供一般資訊參考，不是個案法律意見。法規查閱日：2026年10月2日。';
+    const reviewedSourceNote = '本文由AI助理依公開官方資料整理，供一般資訊參考，不是個案法律意見。法規查閱日：2026年10月2日。';
+    expect(body.split(approvedSourceNote)).toHaveLength(2);
+    expect(body).not.toContain(reviewedSourceNote);
+    // Restore only the exact attribution removed by the 2026-10-03 request so
+    // the original manuscript hash still protects every other byte.
+    const original = '# 車禍後停下交談才離開，為何還有肇事逃逸爭議？\n\n'
+      + body.replace(approvedSourceNote, reviewedSourceNote);
     expect(createHash('sha256').update(original).digest('hex')).toBe('b800295ca45dbe742e6d88d73784027754f299e9713bd41efc225d575ecd96b8');
   });
 

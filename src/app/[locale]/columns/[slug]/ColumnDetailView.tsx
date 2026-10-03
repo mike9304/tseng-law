@@ -36,7 +36,7 @@ export type ColumnDetailViewProps = {
   diagramVideo: { id: TrafficDiagramId; locale: TrafficDiagramLocale } | null;
   diagramSplit: [string, string] | null;
   authorName: string; authorHref: string;
-  aiAuthored: boolean; aiAuthor: { label: string } | null;
+  aiAuthored: boolean;
   attorneyHeading: string;
   guideLinks: { href: string; label: string }[];
   recommendedItems: Pick<ColumnPost, 'slug' | 'title' | 'featuredImage' | 'topic' | 'dateDisplay' | 'readTime'>[];
@@ -51,7 +51,7 @@ export type ColumnDetailViewProps = {
 };
 
 /** Shared SSR view. Data loading and publication decisions stay in the server route. */
-export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, aiAuthor, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography }: ColumnDetailViewProps) {
+export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography }: ColumnDetailViewProps) {
   const showObservation = showBody && hasRightTurnObservation(urlLocale, post.slug);
   const visibleToc = showObservation
     ? [...tocEntries, { id: RIGHT_TURN_OBSERVATION.id, text: RIGHT_TURN_OBSERVATION.title }]
@@ -90,13 +90,11 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
             <span className="blog-category-badge">{post.categoryLabel}</span>
             <h1 className="blog-hero-title">{typesetTitle(locale, post.title)}</h1>
             <div className="blog-meta">
-              {aiAuthor ? (
-                <span data-column-byline="ai">{aiAuthor.label}</span>
-              ) : (
+              {!aiAuthored ? (
                 <Link href={authorHref} className="link-underline">
                   {authorName}
                 </Link>
-              )}
+              ) : null}
               <time>{post.dateDisplay || post.date}</time>
               {showTrafficUpdate ? (
                 <time dateTime={modifiedDate} data-column-updated>

@@ -56,6 +56,5 @@ A柱抗辯也是如此。法院認為，駕駛應知道車輛結構可能影響�
 
 本案駕駛看見了前兩個人。法院追問的，是他為什麼只減速而未暫停，以及兩人走過以後，是否仍能看見、避讓下一個人。綠燈是這段經過的一部分；要回答有沒有過失，還得把第三人出現前後的過程看完整。
 
-法律AI助理撰文
 
 法規查核：2026年10月3日。本文以公開裁判記載為據，未檢視原始影像或完整卷證。事故時規範與判決適用版本已另作核對；現行[第94條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94)、[第103條第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=103)、[刑法第284條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=284)及[第86條第1項第5款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=86)與本文相關的核心規定相符。第103條現另有行人優先區規定，第86條其他款次亦已修正，不能將判決附錄當成現行全部條文。

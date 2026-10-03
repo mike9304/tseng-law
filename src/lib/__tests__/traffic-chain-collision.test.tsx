@@ -14,7 +14,21 @@ describe('reviewed chain-collision publication', () => {
   it('keeps the approved body and replacement hero bytes intact while adding publication metadata', () => {
     const raw = fs.readFileSync(`src/content/columns-zh/077-${slug}.md`, 'utf8');
     const body = raw.slice(raw.indexOf('\n---\n') + 5).replace(/^\n/, '');
-    expect(sha(body)).toBe('d896402a939cfbf7a6598c005b845b5ffcdd6d4f33a50542e7d275c1ddc0ecaf');
+    // Undo only the exact AI attribution removal approved on 2026-10-03;
+    // the original reviewed-body hash still protects every other byte.
+    const approvedAttributionChanges = [
+      [
+        "本文依公開官方資料撰寫，僅供一般法律資訊參考，不是個案法律意見。未直接檢視兩案原始影像或完整卷證；個案責任仍須依具體事證判斷。",
+        "本文由法律AI助理依公開官方資料撰寫，僅供一般法律資訊參考，不是個案法律意見。未直接檢視兩案原始影像或完整卷證；個案責任仍須依具體事證判斷。",
+      ],
+    ] as const;
+    let reviewedBody = body;
+    for (const [approvedText, reviewedText] of approvedAttributionChanges) {
+      expect(body.split(approvedText)).toHaveLength(2);
+      expect(body).not.toContain(reviewedText);
+      reviewedBody = reviewedBody.replace(approvedText, reviewedText);
+    }
+    expect(sha(reviewedBody)).toBe('d896402a939cfbf7a6598c005b845b5ffcdd6d4f33a50542e7d275c1ddc0ecaf');
     const post = getColumnPost(slug, 'zh-hant')!;
     expect(sha(fs.readFileSync(`public${post.featuredImage}`))).toBe('96df696614cb91dc4a7592e742c8e713c5f59dbf539c8b79f22339d632da2e5b');
     expect(post.featuredImageAlt).toBe('AI生成情境圖：市區道路上可見深灰、銀色與白色三輛小客車的車尾，車身之間沒有可見接觸。');

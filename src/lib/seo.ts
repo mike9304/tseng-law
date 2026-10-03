@@ -50,11 +50,11 @@ type ArticleJsonLdInput = {
   image?: string;
   datePublished?: string;
   dateModified?: string;
-  authorName: string;
+  authorName?: string;
   authorUrl?: string;
   authorSameAs?: string[];
   authorAlternateNames?: string[];
-  /** Replaces the default Person author (used for AI-written columns). */
+  /** Optional explicit author; omit authorName and authorEntity for unbylined articles. */
   authorEntity?: Record<string, unknown>;
   articleSection?: string;
 };
@@ -647,14 +647,16 @@ export function buildArticleJsonLd({
     dateModified,
     mainEntityOfPage: buildAbsoluteUrl(path),
     articleSection,
-    author: authorEntity ?? {
-      '@type': 'Person',
-      '@id': authorUrl ? `${buildAbsoluteUrl(authorUrl)}#person` : undefined,
-      name: authorName,
-      url: authorUrl ? buildAbsoluteUrl(authorUrl) : undefined,
-      sameAs: authorSameAs,
-      alternateName: authorAlternateNames,
-    },
+    ...(authorEntity || authorName ? {
+      author: authorEntity ?? {
+        '@type': 'Person',
+        '@id': authorUrl ? `${buildAbsoluteUrl(authorUrl)}#person` : undefined,
+        name: authorName,
+        url: authorUrl ? buildAbsoluteUrl(authorUrl) : undefined,
+        sameAs: authorSameAs,
+        alternateName: authorAlternateNames,
+      },
+    } : {}),
     publisher: {
       '@type': 'Organization',
       name: organizationName[chromeSiteLocale(locale)],

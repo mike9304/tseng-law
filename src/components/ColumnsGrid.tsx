@@ -19,7 +19,7 @@ import {
   type ColumnTopic,
 } from '@/lib/column-topics';
 import { RECOMMENDED_SECTION_TITLE, splitRecommendedColumns } from '@/lib/en-recommended-columns';
-import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
+import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import styles from './ColumnsGrid.module.css';
 import { typesetTitle } from '@/lib/ko-middot';
 
@@ -702,7 +702,7 @@ export default function ColumnsGrid({
       </div>
       <div className="columns-card-body">
         <div className="columns-card-meta">
-          <span className="columns-card-byline">{isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : post.authorName || byline}</span>
+          {!isAiAuthoredColumn(post) ? <span className="columns-card-byline">{post.authorName || byline}</span> : null}
           {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
         </div>
         <h3 className="columns-card-title">{typesetTitle(locale, post.title)}</h3>

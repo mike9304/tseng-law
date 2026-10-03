@@ -70,4 +70,4 @@ social_image: "/images/columns/20261003/motorcycle-passenger-hero-1600x900.webp"
 
 核對的重點，是保險公司付了哪些款項、騎士依法應負哪些責任，以及追討範圍是否與兩者相符。
 
-本文由法律AI助理依公開判決及官方資料撰寫，提供一般法律資訊，並非個別案件的法律意見。未取得原始事故影像或卷證。法規查核日為2026年10月3日；本文所述本法第7、9、11、13、29條及第27條第3項，與事故時、判決時版本相同。[事故時版本](https://law.fsc.gov.tw/LawContentHistory.aspx?hid=702&id=FL006889)、[判決時版本](https://law.fsc.gov.tw/LawContentHistory.aspx?hid=862&id=FL006889)
+本文依公開判決及官方資料撰寫，提供一般法律資訊，並非個別案件的法律意見。未取得原始事故影像或卷證。法規查核日為2026年10月3日；本文所述本法第7、9、11、13、29條及第27條第3項，與事故時、判決時版本相同。[事故時版本](https://law.fsc.gov.tw/LawContentHistory.aspx?hid=702&id=FL006889)、[判決時版本](https://law.fsc.gov.tw/LawContentHistory.aspx?hid=862&id=FL006889)

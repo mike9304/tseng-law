@@ -75,4 +75,4 @@ social_image: "/images/columns/20261003/tanker-column-hero-1600x900.webp"
 
 法規核對：依官方[道路交通安全規則沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=K0040013)，比對案發時的[2019年3月29日修正版本](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=K0040013&lnndate=20190329&lser=001)、民事判決時的[2021年9月23日版本](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=K0040013&lnndate=20210923&lser=001)與本次查得現行條文，第94條及第110條全文相同；依[民法沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)及[保險法沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0390002)，本文引用的民法第191條之2、第217條與保險法第53條，自案發至查核日未修正。
 
-本文由法律AI助理依公開官方判決與法規整理，未取得原始影片及訴訟卷證，供一般法律資訊參考。查核日為2026年10月3日；全國法規資料庫頁面所示整編截止日為2026年9月24日。兩案上訴及確定情形均未確認。
+本文依公開官方判決與法規整理，未取得原始影片及訴訟卷證，供一般法律資訊參考。查核日為2026年10月3日；全國法規資料庫頁面所示整編截止日為2026年9月24日。兩案上訴及確定情形均未確認。

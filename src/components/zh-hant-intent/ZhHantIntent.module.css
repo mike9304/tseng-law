@@ -60,6 +60,7 @@
 }
 .root:global(#zh-hant-intent) :global(.section-title)::before,
 .root:global(#zh-hant-intent) :global(.section-title)::after { content: none; display: none; }
+.root:global(#zh-hant-intent) :is(p, li, dd) { text-wrap: wrap; }
 .root:global(#zh-hant-intent) :global(.intent-article-list) {
   display: grid;
   gap: 0;
@@ -130,7 +131,6 @@
   font-family: var(--font-sans);
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.6;
-  text-wrap: pretty;
 }
 .root:global(#zh-hant-intent) :global(.page-header [data-page-header-slot='children']) {
   display: flex;
@@ -212,7 +212,6 @@
   color: var(--ap-muted);
   font-size: clamp(17px, 1.5vw, 21px);
   line-height: 1.7;
-  text-wrap: pretty;
 }
 .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1)) {
   display: grid;
@@ -238,6 +237,12 @@
   translate: 0 -4px;
   border-color: transparent;
   box-shadow: 0 22px 44px rgb(0 0 0 / 9%);
+}
+/* The home's practice glyph family (ZhHantMonoIcon, no box), neutral. */
+.root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a > svg) {
+  flex: none;
+  margin: 0 0 22px;
+  color: var(--ap-text);
 }
 .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a h3) {
   margin: 0 0 10px;
@@ -348,7 +353,6 @@
   font-size: clamp(18px, 1.55vw, 21px);
   font-weight: 400;
   line-height: 1.7;
-  text-wrap: pretty;
 }
 .root:global(#zh-hant-intent) :global(.intent-main > .intent-panel:first-child .intent-article-list > li)::before {
   content: counter(zh-point, decimal-leading-zero);
@@ -380,7 +384,6 @@
   color: var(--ap-text);
   font-size: 16.5px;
   line-height: 1.75;
-  text-wrap: pretty;
 }
 .root:global(#zh-hant-intent) :global(.intent-subgrid .intent-article-list > li:first-child),
 .root:global(#zh-hant-intent) :global(.intent-triple-grid .intent-article-list > li:first-child) { padding-top: 0; border-top: none; }
@@ -676,7 +679,6 @@
   font-weight: 700;
   line-height: 1.5;
   color: var(--ap-text);
-  text-wrap: pretty;
 }
 .root:global(#zh-hant-intent) :global(.svc-col-card-summary) {
   display: -webkit-box;
@@ -770,7 +772,7 @@
   font-size: 19px;
   font-weight: 600;
   line-height: 1.55;
-  text-wrap: pretty;
+  text-wrap: wrap; /* the h3's balance split 諮|詢 on phones */
   transition: color 0.25s ease;
 }
 .root:global(#zh-hant-intent) :global(section[data-faq-layout] .faq-question button:hover) { background: transparent; color: var(--ap-ink); }
@@ -826,7 +828,6 @@
   font-size: clamp(17px, 1.5vw, 21px);
   line-height: 1.7;
   text-align: center;
-  text-wrap: pretty;
 }
 .root:global(#zh-hant-intent) :global(.intent-cta-card .section-lede + .section-lede) { max-width: 44em; margin-top: 14px; font-size: 15px; line-height: 1.75; }
 .root:global(#zh-hant-intent) :global(.intent-cta-actions) {
@@ -903,9 +904,16 @@
   .root:global(#zh-hant-intent) :global(section[data-faq-layout] .section-title) { max-width: none; }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-intent) { --ap-radius: 22px; --ap-band: 72px; --ap-title: clamp(28px, 8vw, 34px); }
+  .root:global(#zh-hant-intent) { --ap-radius: 22px; --ap-band: 72px; --ap-title: clamp(26px, 7.8vw, 34px); }
   .root:global(#zh-hant-intent) :global(.page-header) { padding: 48px 0 44px; }
-  .root:global(#zh-hant-intent) :global(.page-header-title) { font-size: clamp(40px, 11.4vw, 48px); line-height: 1.12; }
+  /* Up to eight characters per line, filled greedily: balance split 設|立 and 台|灣 in the longer titles. */
+  .root:global(#zh-hant-intent) :global(.page-header-title) {
+    max-width: none;
+    font-size: min(48px, calc((100vw - 2 * var(--page-gutter, 20px)) / 8.4));
+    line-height: 1.14;
+    text-wrap: wrap;
+  }
+  .root:global(#zh-hant-intent) :global(.section-title) { text-wrap: wrap; }
   .root:global(#zh-hant-intent) :global(.page-header .section-lede) { margin-top: 16px; font-size: 18px; }
   .root .headerActions { width: 100%; gap: 4px 24px; }
   .root .headerPrimary { flex: 1 1 100%; }
@@ -915,15 +923,16 @@
   .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1)) { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a) {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    column-gap: 16px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 14px;
     align-items: center;
     min-height: 0;
-    padding: 22px 22px 22px 24px;
+    padding: 20px 18px 20px 20px;
   }
-  .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a h3) { grid-column: 1; margin-bottom: 4px; font-size: 19px; }
-  .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a p) { grid-column: 1; font-size: 15px; line-height: 1.7; }
-  .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a > span) { grid-column: 2; grid-row: 1 / span 2; align-self: center; margin: 0; padding: 0; }
+  .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a > svg) { grid-column: 1; grid-row: 1 / span 2; align-self: center; width: 28px; height: 28px; margin: 0; }
+  .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a h3) { grid-column: 2; margin-bottom: 4px; font-size: 19px; }
+  .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a p) { grid-column: 2; font-size: 14.5px; line-height: 1.7; }
+  .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(1) > a > span) { grid-column: 3; grid-row: 1 / span 2; align-self: center; margin: 0; padding: 0; }
   .root:global(#zh-hant-intent) :global(#matter-router > .container > div:nth-of-type(2)) { margin-top: 12px; padding: 28px 24px; gap: 24px; }
   .root:global(#zh-hant-intent) :global(#matter-router .button) { width: 100%; justify-content: center; }
 

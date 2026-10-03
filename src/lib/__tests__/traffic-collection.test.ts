@@ -210,6 +210,8 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse',
+        'taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction',
         'taiwan-borrowed-car-owner-driver-key-custody-liability',
         'taiwan-mediation-delayed-injury-rescission',
         'taiwan-accident-assessment-secondary-cause-compensation-ratio',

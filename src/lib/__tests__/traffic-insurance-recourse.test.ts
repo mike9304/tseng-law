@@ -9,13 +9,13 @@ const cases = [
 ] as const;
 
 describe('reviewed passenger recourse and uninsured settlement publication batch', () => {
-  it.each(cases)('includes %s once in its reviewed subject and search, without a video badge', (slug, query, number, subject) => {
+  it.each(cases)('includes %s once in its reviewed subject, search and video filter', (slug, query, number, subject) => {
     const items = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     expect(items.filter(item => item.slug === slug)).toMatchObject([
-      { subject, hasVideo: false, columnNumber: number, aiAuthored: true },
+      { subject, hasVideo: true, columnNumber: number, aiAuthored: true },
     ]);
     expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ subject, q: query })).map(item => item.slug)).toContain(slug);
-    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(item => item.slug === slug)).toBe(false);
+    expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(item => item.slug === slug)).toBe(true);
     expect(getColumnPost(slug, 'zh-hant')?.diagramVideo).toBeUndefined();
   });
 

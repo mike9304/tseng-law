@@ -36,6 +36,8 @@ describe('TrafficBoard SSR', () => {
     expect(html).toContain('subject=compensation');
     expect(html).toContain('href="/zh-hant/traffic-accidents?video=1#articles"');
     for (const slug of [
+      'taiwan-flying-object-truck-origin-dashcam-evidence',
+      'taiwan-lowered-height-gantry-state-compensation-driver-fault',
       'taiwan-road-rage-freeway-cut-in-sentence-reduced',
       'taiwan-motorway-blocking-no-collision-public-danger',
       'taiwan-parking-wheelstop-latch-service-safety-causation',
@@ -66,7 +68,7 @@ describe('TrafficBoard SSR', () => {
     ]) {
       expect(html).toContain(`href="/zh-hant/columns/${slug}"`);
     }
-    expect(html.match(/data-traffic-board-row/g)).toHaveLength(27);
+    expect(html.match(/data-traffic-board-row/g)).toHaveLength(29);
     expect(html).toMatch(/<time datetime="2026-10-02">/i);
     expect(html).toContain('約7分鐘閱讀');
     expect(html).toContain('法律AI助理');
@@ -84,7 +86,7 @@ describe('TrafficBoard SSR', () => {
 
   it('applies URL filters and offers clear-all and an empty state', async () => {
     const filtered = await render('zh-hant', { subject: 'evidence' });
-    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(6);
+    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(7);
     expect(filtered).toContain('aria-current="true"');
     expect(filtered).toMatch(/<input type="hidden" name="subject" value="evidence"/);
     expect(filtered).toContain('href="/zh-hant/traffic-accidents#articles" data-traffic-board-clear');
@@ -95,7 +97,7 @@ describe('TrafficBoard SSR', () => {
     expect(empty).toContain('value="不存在的關鍵字"');
 
     const unknown = await render('zh-hant', { subject: 'nonsense', page: '3' });
-    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(27);
+    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(29);
   });
 
   it('escapes the search value', async () => {

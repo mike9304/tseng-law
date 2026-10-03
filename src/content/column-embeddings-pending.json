@@ -537,6 +537,14 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-road-rage-freeway-cut-in-sentence-reduced"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-lowered-height-gantry-state-compensation-driver-fault"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-flying-object-truck-origin-dashcam-evidence"
     }
   ]
 }

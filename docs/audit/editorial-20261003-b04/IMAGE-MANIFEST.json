@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "batch": "editorial-20261003-b04",
+  "recorded_at": "2026-10-03T23:09:18+09:00",
+  "status": "all_seven_images_ready",
+  "batch_complete": true,
+  "expected_assets": 7,
+  "packaged_assets": 7,
+  "pending_assets": 0,
+  "remaining_media_status": "All seven selected images are generated, directly viewed and packaged. No topic media remains pending in this manifest.",
+  "scope": "All seven B04 images. Local copy, visual inspection and writer metadata suggestions only; no repository, draft, evidence, source-image or publication changes.",
+  "prompt_records": [
+    {
+      "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-01.json",
+      "sha256": "f06ac062ef6202e09d5a1b8634c89a4cf5019855a5202fbd195d87578f811699"
+    },
+    {
+      "path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-02.json",
+      "sha256": "8f897dbc60f4849d81014569ce65c0078d2fd343dd748d3f66ea9de9eb8c06ca"
+    }
+  ],
+  "assets": [
+    {
+      "slug": "home-leak-defect-notice-repair-evidence-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/batch002_write_zh_property",
+      "status": "first_two_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-6969c030-49fc-4e59-aa6b-f20bafa9b2a0.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/images/home-leak-defect-notice-repair-evidence-taiwan.png",
+      "relative_path": "images/home-leak-defect-notice-repair-evidence-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b04/home-leak-defect-notice-repair-evidence-taiwan.png",
+      "sha256": "86a13f2c630a0125762aecd4f348a0b365beb758b67f3ddda4b4d8d321472cbb",
+      "bytes": 1899200,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Source and copy compared byte-for-byte, with matching SHA-256.",
+      "generation": {
+        "selection_source": "Parent agent /root supplied and visually approved the selected generation output.",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-01.json",
+        "prompt_record_sha256": "f06ac062ef6202e09d5a1b8634c89a4cf5019855a5202fbd195d87578f811699",
+        "prompt_record_slug": "home-leak-defect-notice-repair-evidence-taiwan",
+        "prompt_record_date": "2026-10-03",
+        "prompt": "Create one high-quality editorial photograph-style illustration, landscape 16:9, 1672x941. For a thoughtful Taiwan law-firm article about discovering a water leak after taking possession of an apartment, documenting the condition and notifying a seller. A quiet contemporary Taiwanese apartment corner after rain: warm off-white plaster wall meeting a window soffit with a modest irregular damp patch and a few subtle water trails, an unbranded simple wooden side table nearby, soft daylight filtered through a window, muted forest-green and natural cream accents. In the near foreground only an adult's hands and part of a neutral sleeve holding a smartphone toward the damp area to document it; phone screen mainly glare, no readable UI or personal data. Composition shows the wall condition clearly and still feels calm and dignified, photographic textures, realistic hands, editorial depth of field, broad lateral breathing room. Do not imply any particular source or cause of the leak: no exposed plumbing, collapsed structure, massive flood, infestation or mold diagnosis. No identifiable faces, real property address, logos, watermark, titles, legal seals, readable documents, timestamps or text. Fictional illustrative scene, not a reconstruction of an actual dispute. Do not use judge gavels, scales or alarm graphics.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-6969c030-49fc-4e59-aa6b-f20bafa9b2a0.png"
+      },
+      "packaging_edits": "None; original bytes preserved.",
+      "neutral_description_en": "A person holds a smartphone toward an irregular water-marked patch on the wall below a window. The glass has droplets, and a wooden side table with a plant and cup stands nearby. Only the person's hands, sleeves and part of the torso are visible.",
+      "recommended_alt_zh_hant": "一人拿著手機對準窗下帶有不規則水痕的牆面，旁邊的木桌上放著盆栽和杯子。",
+      "recommended_caption_zh_hant": "AI生成的示意畫面，並非真實房屋、客戶或案件照片，也不表示已判定水痕的成因。",
+      "visual_qa": {
+        "method": "Directly opened selected source with view_image before describing it. Packaged copy is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The wall has an irregular darker patch and thin vertical water trails. The phone shows a view of the window and wall without readable personal data. No face, property address, official document or readable timestamp is visible.",
+        "interpretation_limits": "The image does not establish the origin, cause, age or legal responsibility for the water marks. Do not describe a plumbing defect, structural defect, mold diagnosis, intentional concealment or an actual disputed property.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, property, document, dispute or case photograph.",
+        "status": "Ready for writer review of alt/caption and later integration."
+      }
+    },
+    {
+      "slug": "contractor-employee-status-control-work-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/review_fraud_zh",
+      "status": "first_two_ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-d48b9fa7-5cd9-452c-8c4e-cf09c92b94eb.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/images/contractor-employee-status-control-work-taiwan.png",
+      "relative_path": "images/contractor-employee-status-control-work-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b04/contractor-employee-status-control-work-taiwan.png",
+      "sha256": "626ea5f8834b1895b64a1523b8883b0e005e841248e83a98cd1987507c063063",
+      "bytes": 1873776,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Source and copy compared byte-for-byte, with matching SHA-256.",
+      "generation": {
+        "selection_source": "Parent agent /root supplied and visually approved the selected generation output.",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-01.json",
+        "prompt_record_sha256": "f06ac062ef6202e09d5a1b8634c89a4cf5019855a5202fbd195d87578f811699",
+        "prompt_record_slug": "contractor-employee-status-control-work-taiwan",
+        "prompt_record_date": "2026-10-03",
+        "prompt": "Create one refined editorial photograph-style illustration, landscape 16:9, 1672x941, for a Taiwan law-firm article about whether a work relationship is employment or independent contracting, based on actual working arrangements. In a modest bright Taiwanese shared office, show a three-quarter overhead view of a desk where an adult, visible only from below the shoulders with natural hands, compares two ordinary sheets: one unbranded contract-like page with indistinct grey lines and one weekly work-schedule-like page with subtle muted grey and green blocks. A plain closed laptop, a pen and a simple blank access-card sleeve sit nearby, with a potted plant softly blurred in the background. Warm ivory paper, dark wood, restrained forest-green accents, natural midday window light, realistic documentary photography, interesting uncluttered composition with clear differences between documents, no dramatic confrontation. No readable words, dates, names, pay amounts, signatures, logos, company badges, legal seals, QR codes, smartphone screens or identifiable faces. Do not show a real labor dispute or imply that a schedule alone decides employment status. Fictional conceptual image, no captions, watermarks, justice scales, gavels or infographic arrows.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-d48b9fa7-5cd9-452c-8c4e-cf09c92b94eb.png"
+      },
+      "packaging_edits": "None; original bytes preserved.",
+      "neutral_description_en": "A person holds two papers at a wooden office desk: one with grey lines and one with a grid of muted grey and green blocks. A closed laptop, pen, notebook and blank card holder sit nearby, with a plant and another seated person in the background.",
+      "recommended_alt_zh_hant": "一人在辦公桌前拿著兩張紙，一張有灰色橫線，另一張是帶有灰綠色區塊的表格；桌上放著闔上的筆電、筆、筆記本和空白證件套。",
+      "recommended_caption_zh_hant": "AI生成的概念示意圖，人物與文件均為虛構，並非真實勞資爭議或案件紀錄。",
+      "visual_qa": {
+        "method": "Directly opened selected source with view_image before describing it. Packaged copy is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The main person's hands and forearms are visible; no facial features are shown. The background person is seen from behind with the head outside the frame. The two sheets contain abstract lines and a schedule-like grid, with no readable names, dates, pay figures, signatures or identifiable company details.",
+        "interpretation_limits": "The papers are fictional layouts, not authenticated contracts, work schedules or official findings. The grid alone does not establish employment status. Do not describe the image as a real labor dispute or a decision by a court or labor authority.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, property, document, dispute or case photograph.",
+        "status": "Ready for writer review of alt/caption and later integration."
+      }
+    },
+    {
+      "slug": "private-loan-joint-guarantor-first-demand-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/repair_semi_zh",
+      "status": "ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-b8525c18-0571-4c34-8b84-f1e456bf2dc7.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/images/private-loan-joint-guarantor-first-demand-taiwan.png",
+      "relative_path": "images/private-loan-joint-guarantor-first-demand-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b04/private-loan-joint-guarantor-first-demand-taiwan.png",
+      "sha256": "bd06894bcd1ce3bd42c03173ebef7015ebe7b154a34c56513a6d8d8b688b0559",
+      "bytes": 1961519,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Source and copy compared byte-for-byte, with matching SHA-256.",
+      "generation": {
+        "selection_source": "Parent agent /root supplied and visually approved the selected generation output.",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-02.json",
+        "prompt_record_sha256": "8f897dbc60f4849d81014569ce65c0078d2fd343dd748d3f66ea9de9eb8c06ca",
+        "prompt_record_slug": "private-loan-joint-guarantor-first-demand-taiwan",
+        "prompt": "Create one original landscape editorial photograph-style fictional illustration, 1672x941, for a restrained Taiwanese legal information website. Natural window light, realistic materials, muted ivory, wood and moss-green palette; dignified everyday context. No logos, readable text, legible numerals, real documents, signatures, official screens, watermarks or identifiable faces. No implication this is an actual client, property, dispute, evidence or lawyer. At a quiet cafe, close side view of two adult friends reviewing a single generic loan-like paper before signature, one hand indicates a second empty signature area and the other holds a pen still above the table. Their faces are outside frame. Two cups and a small neutral closed notebook. The paper contains only indistinct pale grey strokes. Convey thoughtful review of a guarantor's role, not signing in progress or debt collection. Balanced wide composition, varied natural depth.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-b8525c18-0571-4c34-8b84-f1e456bf2dc7.png"
+      },
+      "packaging_edits": "None; original bytes preserved.",
+      "neutral_description_en": "Two people sit at a wooden cafe table with a single paper between them. One points at its pale grey lines while the other holds a pen above it. Two cups and a closed notebook are on the table; faces are outside the frame.",
+      "recommended_alt_zh_hant": "兩人坐在木桌前查看一張帶有灰色線條的紙，一人指著紙面，另一人將筆停在紙上方；桌上放著兩個杯子和闔上的筆記本。",
+      "recommended_caption_zh_hant": "AI生成的示意畫面，人物與文件均為虛構，並非真實借貸、保證契約或案件紀錄。",
+      "visual_qa": {
+        "method": "Directly opened selected source with view_image before describing it. Packaged copy is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The paper contains abstract pale strokes without identifiable names or readable loan terms. The pen is held above the sheet and no completed signature is visible. No face, bank data or official seal is shown.",
+        "interpretation_limits": "The scene does not establish an actual loan, guarantee, signature, debt or demand for payment. Do not identify the people as real borrowers, guarantors, creditors or lawyers.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, property, document, dispute or case photograph.",
+        "status": "Ready for writer review of alt/caption and later integration."
+      }
+    },
+    {
+      "slug": "parent-home-gift-care-obligation-evidence-taiwan",
+      "locale": "zh-hant",
+      "writer_agent": "/root/repair_semi_zh",
+      "status": "ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-7cabd26b-9bee-4e47-a01c-dcad02343b4a.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/images/parent-home-gift-care-obligation-evidence-taiwan.png",
+      "relative_path": "images/parent-home-gift-care-obligation-evidence-taiwan.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b04/parent-home-gift-care-obligation-evidence-taiwan.png",
+      "sha256": "01f5dde2bbe15399674ab797b92a75e4b7e44bf7b18f382c5af27f63f300410d",
+      "bytes": 2004847,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Source and copy compared byte-for-byte, with matching SHA-256.",
+      "generation": {
+        "selection_source": "Parent agent /root supplied and visually approved the selected generation output.",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-02.json",
+        "prompt_record_sha256": "8f897dbc60f4849d81014569ce65c0078d2fd343dd748d3f66ea9de9eb8c06ca",
+        "prompt_record_slug": "parent-home-gift-care-obligation-evidence-taiwan",
+        "prompt": "Create one original landscape editorial photograph-style fictional illustration, 1672x941, for a restrained Taiwanese legal information website. Natural window light, realistic materials, muted ivory, wood and moss-green palette; dignified everyday context. No logos, readable text, legible numerals, real documents, signatures, official screens, watermarks or identifiable faces. No implication this is an actual client, property, dispute, evidence or lawyer. At a lived-in Taiwanese dining table, an older parent's hands and an adult child's hands calmly compare a blank weekly planner and an abstract agreement page, with a simple house key set between them. A softly blurred domestic doorway and houseplant behind. No visible face. Suggest discussion of living arrangements and care promised when giving a home, without portraying abuse, a medical condition, a real transfer or court event. Distinct editorial framing from slightly above.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-7cabd26b-9bee-4e47-a01c-dcad02343b4a.png"
+      },
+      "packaging_edits": "None; original bytes preserved.",
+      "neutral_description_en": "Two people sit at a dining table with an open planner, a sheet bearing a simple house icon and pale grey lines, and a key with a house-shaped keyring. One hand points at the planner while the other person holds a pen above the sheet; cups and a domestic doorway are nearby.",
+      "recommended_alt_zh_hant": "兩人在餐桌前查看攤開的計畫本與一張帶有房屋圖示的紙，桌上放著鑰匙和杯子。",
+      "recommended_caption_zh_hant": "AI生成的概念示意圖，人物與文件均為虛構，並非真實贈與契約、照護紀錄或案件照片。",
+      "visual_qa": {
+        "method": "Directly opened selected source with view_image before describing it. Packaged copy is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "The framing shows hands and torsos, with a small portion of neck or lower chin at the top edge rather than a full identifiable face. The planner is largely blank, and the sheet contains abstract marks and a decorative house icon. No signed deed, official seal or verified care record is shown.",
+        "interpretation_limits": "Do not infer the people's actual family relationship, a completed home transfer, a binding care agreement, mistreatment or a medical condition. The key and house icon are scene elements, not proof of ownership.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, property, document, dispute or case photograph.",
+        "status": "Ready for writer review of alt/caption and later integration."
+      }
+    },
+    {
+      "slug": "taiwan-hotel-luggage-loss-custody-japanese",
+      "locale": "ja",
+      "writer_agent": "/root/review_fraud_ja_legal",
+      "status": "ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-00e45500-885a-4c22-aa7b-33b8492d8b30.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/images/taiwan-hotel-luggage-loss-custody-japanese.png",
+      "relative_path": "images/taiwan-hotel-luggage-loss-custody-japanese.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b04/taiwan-hotel-luggage-loss-custody-japanese.png",
+      "sha256": "7a769a5dd4fd9493bb5afdefd13456940bc9b5110ee3245b6e9eb0069fb8cbca",
+      "bytes": 1926898,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Source and copy compared byte-for-byte, with matching SHA-256.",
+      "generation": {
+        "selection_source": "Parent agent /root supplied and visually approved the selected generation output.",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-02.json",
+        "prompt_record_sha256": "8f897dbc60f4849d81014569ce65c0078d2fd343dd748d3f66ea9de9eb8c06ca",
+        "prompt_record_slug": "taiwan-hotel-luggage-loss-custody-japanese",
+        "prompt": "Create one original landscape editorial photograph-style fictional illustration, 1672x941, for a restrained Taiwanese legal information website. Natural window light, realistic materials, muted ivory, wood and moss-green palette; dignified everyday context. No logos, readable text, legible numerals, real documents, signatures, official screens, watermarks or identifiable faces. No implication this is an actual client, property, dispute, evidence or lawyer. A fictional tasteful Taiwan hotel luggage-storage counter, a plain moss-green carry-on suitcase and small unbranded bag behind the counter, traveler's hand in foreground holding a simple blank cream baggage claim tag. No staff faces, guest name, room number, passport or brand. Quiet warm lobby materials and distant shelving. Show documented custody of luggage, without depicting theft or claiming these are missing belongings. Wide eye-level composition.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-00e45500-885a-4c22-aa7b-33b8492d8b30.png"
+      },
+      "packaging_edits": "None; original bytes preserved.",
+      "neutral_description_en": "A hand holds a blank cream tag in front of a counter in a warm lobby-like setting. A green suitcase and a small bag stand behind the counter, with shelving, plants and other bags in the background.",
+      "recommended_alt_ja": "無地のタグを持つ手の向こうに、緑色のスーツケースと小さなバッグが置かれたカウンターが見えます。",
+      "recommended_caption_ja": "AI生成の架空の場面です。実在する宿泊施設、荷物の預かり証、紛失事故や相談事例を示す写真ではありません。",
+      "visual_qa": {
+        "method": "Directly opened selected source with view_image before describing it. Packaged copy is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "Only the hand and sleeve are visible. The tag has no readable name, room number, barcode or identifying text. No passport, staff face or named hotel is shown.",
+        "interpretation_limits": "The tag is an illustrative blank tag, not an issued baggage receipt. The image does not prove that custody was accepted, a specific item was lost, theft occurred or a hotel accepted liability.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, property, document, dispute or case photograph.",
+        "status": "Ready for writer review of alt/caption and later integration."
+      }
+    },
+    {
+      "slug": "taiwan-landlord-entry-rental-home-repairs",
+      "locale": "en",
+      "writer_agent": "/root/batch002_write_en",
+      "status": "ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-b4ebe108-ddcd-472a-a546-a2af21281401.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/images/taiwan-landlord-entry-rental-home-repairs.png",
+      "relative_path": "images/taiwan-landlord-entry-rental-home-repairs.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b04/taiwan-landlord-entry-rental-home-repairs.png",
+      "sha256": "c85fda0df1d4766ac83e63c4be451a861481a03b2ed792c9ada80945a1f4a5f1",
+      "bytes": 1835988,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Source and copy compared byte-for-byte, with matching SHA-256.",
+      "generation": {
+        "selection_source": "Parent agent /root supplied and visually approved the selected generation output.",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-02.json",
+        "prompt_record_sha256": "8f897dbc60f4849d81014569ce65c0078d2fd343dd748d3f66ea9de9eb8c06ca",
+        "prompt_record_slug": "taiwan-landlord-entry-rental-home-repairs",
+        "prompt": "Create one original landscape editorial photograph-style fictional illustration, 1672x941, for a restrained Taiwanese legal information website. Natural window light, realistic materials, muted ivory, wood and moss-green palette; dignified everyday context. No logos, readable text, legible numerals, real documents, signatures, official screens, watermarks or identifiable faces. No implication this is an actual client, property, dispute, evidence or lawyer. Inside a modest bright Taiwan rental apartment facing a fully closed entrance door. In foreground a resident's hand holds a smartphone displaying only abstract calendar blocks without legible interface details; a plain paper calendar rests on a small entry shelf next to an unmarked key tray. No person entering or lurking, no crime scene. A subtle toolbox, closed, by interior wall suggests a scheduled maintenance visit to be agreed. Thoughtful residential setting with depth and airy negative space.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-b4ebe108-ddcd-472a-a546-a2af21281401.png"
+      },
+      "packaging_edits": "None; original bytes preserved.",
+      "neutral_description_en": "A person holds a phone showing colored calendar-like blocks inside a home facing a closed green entrance door. A desk calendar and keys sit on an entry table, with a closed toolbox beside the wall.",
+      "recommended_alt_en": "A person holds a phone showing colored calendar-like blocks inside a home facing a closed green entrance door. A desk calendar, keys and a closed toolbox are nearby.",
+      "recommended_caption_en": "AI-generated fictional scene. The room and calendar displays do not depict an actual rental dispute, entry incident or confirmed repair appointment.",
+      "visual_qa": {
+        "method": "Directly opened selected source with view_image before describing it. Packaged copy is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "No face or entering person is visible. The phone and paper calendar contain fictional grid layouts and small illustrative marks. The toolbox is closed, and the door remains shut; no completed repair or appointment is depicted.",
+        "interpretation_limits": "Do not identify the person as an actual tenant or landlord, describe an intrusion, or claim that the calendar establishes permission, a legally required notice period or a confirmed repair appointment.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, property, document, dispute or case photograph.",
+        "status": "Ready for writer review of alt/caption and later integration."
+      }
+    },
+    {
+      "slug": "taiwan-unpaid-invoice-settlement-release-korean",
+      "locale": "ko",
+      "writer_agent": "/root/repair_semi_ko_ja",
+      "status": "ready",
+      "source_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-76e09e31-0a62-4eaf-b0f1-bc9ff4dbe540.png",
+      "packaged_path": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/images/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "relative_path": "images/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "intended_public_path": "/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "sha256": "583778392ca2de359c18532a7e6ec367c48202fbe05292c0695cbf668c4c9f81",
+      "bytes": 1746023,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_bytes_unchanged": true,
+      "copy_verification": "Source and copy compared byte-for-byte, with matching SHA-256.",
+      "generation": {
+        "selection_source": "Parent agent /root supplied and visually approved the selected generation output.",
+        "prompt_record": "/Users/son7/tseng-fraud-editorial-20261003/batch-004/IMAGE-PROMPTS-02.json",
+        "prompt_record_sha256": "8f897dbc60f4849d81014569ce65c0078d2fd343dd748d3f66ea9de9eb8c06ca",
+        "prompt_record_slug": "taiwan-unpaid-invoice-settlement-release-korean",
+        "prompt": "Create one original landscape editorial photograph-style fictional illustration, 1672x941, for a restrained Taiwanese legal information website. Natural window light, realistic materials, muted ivory, wood and moss-green palette; dignified everyday context. No logos, readable text, legible numerals, real documents, signatures, official screens, watermarks or identifiable faces. No implication this is an actual client, property, dispute, evidence or lawyer. A small export-business office in Taiwan, close oblique view of hands comparing an abstract settlement document with a separate payment schedule of simple blank rows, pen laid down rather than signing. In the soft background a few clean unmarked shipping cartons and daylight hint at a real trading business. No visible company name, monetary value, bank account, face or readable paperwork. Convey checking when a release takes effect, not a completed payment or court decision. Refined editorial photograph.",
+        "output_path": "/Users/son7/.codex/generated_images/01a10169-8632-72c2-aea0-63c905035c9f/exec-76e09e31-0a62-4eaf-b0f1-bc9ff4dbe540.png"
+      },
+      "packaging_edits": "None; original bytes preserved.",
+      "neutral_description_en": "Two people at an office desk compare a sheet of pale grey lines with a separate table-like sheet. One points at the first sheet, while a pen rests on the desk. Plain cartons and a softly blurred port view appear in the background.",
+      "recommended_alt_ko": "상자가 놓인 사무실 책상에서 두 사람이 회색 선이 있는 종이와 표 형태의 종이를 살펴보고 있습니다. 펜은 책상 위에 놓여 있습니다.",
+      "recommended_caption_ko": "AI로 만든 가상의 설명용 이미지입니다. 실제 기업·거래·합의서·지급 내역이나 사건 사진이 아닙니다.",
+      "visual_qa": {
+        "method": "Directly opened selected source with view_image before describing it. Packaged copy is byte-identical.",
+        "reviewed_by": "Codex image-packaging worker /root/write_fraud_ja",
+        "observations": "Hands and torsos are visible, with no face. The papers contain abstract lines and a table-like layout rather than readable company names, amounts, bank details or signed terms. The pen lies on the table, and no money transfer or signing is shown.",
+        "interpretation_limits": "Do not call the papers an executed settlement or verified payment schedule, identify a real business or port, or imply completed payment, an effective release or a court decision.",
+        "fictional_disclosure": "AI-generated conceptual illustration, not a real client, property, document, dispute or case photograph.",
+        "status": "Ready for writer review of alt/caption and later integration."
+      }
+    }
+  ],
+  "history": [
+    {
+      "recorded_at": "2026-10-03T23:09:18+09:00",
+      "status": "first_two_ready_remaining_topic_media_not_yet_generated",
+      "batch_complete": false,
+      "packaged_assets": 2,
+      "pending_assets": 5,
+      "remaining_media_status": "Not yet generated as of this packaging record; no completion is asserted for the remaining five topics.",
+      "manifest_sha256_before_extension": "e557a7d8a2db642f9ab63713f2a4528a90579c7800fae16724465c0caaac6f43",
+      "qa_sha256_before_extension": "855fb3a8273f0337f2e47bb763883acd82147044135077e8b5e2cb8f9742b1cb",
+      "qa_prefix_bytes_preserved": 5595,
+      "first_two_asset_records_canonical_sha256": "9a704e4063fa1c9e0b82f085349bcaf015aab30052ac276846f7524e32d4d55a",
+      "first_two_image_sha256": {
+        "home-leak-defect-notice-repair-evidence-taiwan": "86a13f2c630a0125762aecd4f348a0b365beb758b67f3ddda4b4d8d321472cbb",
+        "contractor-employee-status-control-work-taiwan": "626ea5f8834b1895b64a1523b8883b0e005e841248e83a98cd1987507c063063"
+      }
+    },
+    {
+      "recorded_at": "2026-10-03T23:22:16+09:00",
+      "status": "all_seven_images_ready",
+      "packaged_assets": 7,
+      "pending_assets": 0,
+      "added_slugs": [
+        "private-loan-joint-guarantor-first-demand-taiwan",
+        "parent-home-gift-care-obligation-evidence-taiwan",
+        "taiwan-hotel-luggage-loss-custody-japanese",
+        "taiwan-landlord-entry-rental-home-repairs",
+        "taiwan-unpaid-invoice-settlement-release-korean"
+      ],
+      "preservation": "The first two asset records and PNG bytes are unchanged. IMAGE-QA.md preserves the complete first-two record as an unchanged prefix and appends this extension."
+    }
+  ],
+  "updated_at": "2026-10-03T23:22:16+09:00",
+  "completion_scope": "Image packaging only; article reviews, integration and publication are separate."
+}

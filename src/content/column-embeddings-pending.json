@@ -809,6 +809,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-pursuit-fatal-self-crash-vacated-judgment"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane"
     }
   ]
 }

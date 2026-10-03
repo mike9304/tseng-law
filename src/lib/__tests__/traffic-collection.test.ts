@@ -46,6 +46,7 @@ function post(overrides: Partial<ColumnPost> & { slug: string }): ColumnPost {
 
 const EXPECTED_ORDER: Record<SiteLocale, string[]> = {
   'zh-hant': [
+    'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
     'taiwan-pursuit-fatal-self-crash-vacated-judgment',
     'taiwan-repaired-car-diminished-value-appraisal-evidence',
     'taiwan-road-rage-started-did-not-matter-driver-blocked',
@@ -87,9 +88,9 @@ const EXPECTED_ORDER: Record<SiteLocale, string[]> = {
     'taiwan-overtaking-accident-liability',
     'taiwan-traffic-accident-procedure',
   ],
-  ko: ['taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
-  en: ['taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
-  ja: ['taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
+  ko: ['taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
+  en: ['taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-left-turn-vs-straight-motorcycle', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
+  ja: ['taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'taiwan-road-rage-started-did-not-matter-driver-blocked', 'taiwan-road-rage-reversing-into-tailgater-no-self-defense', 'taiwan-road-rage-baseball-bat-fracture-damages', 'taiwan-road-rage-freeway-cut-in-sentence-reduced', 'taiwan-accident-police-records', 'taiwan-overtaking-accident-liability', 'taiwan-traffic-accident-procedure'],
 };
 
 describe('normalizeColumnTags', () => {
@@ -182,7 +183,7 @@ describe('reviewed column videos in the traffic board', () => {
 });
 
 describe('loadTrafficCollection (published files)', () => {
-  it('lists 40 zh-hant / 8 ko / 8 en / 7 ja articles, newest first, without another language fallback', async () => {
+  it('lists 41 zh-hant / 9 ko / 9 en / 8 ja articles, newest first, without another language fallback', async () => {
     for (const locale of siteLocales) {
       const items = await loadTrafficCollection(locale, fileSources);
       expect(items.map((item) => item.slug), locale).toEqual(EXPECTED_ORDER[locale]);
@@ -240,6 +241,7 @@ describe('loadTrafficCollection (published files)', () => {
         'taiwan-accident-family-care-necessity-period',
         'taiwan-car-accident-work-loss-rest-note',
         'taiwan-road-rage-started-did-not-matter-driver-blocked',
+        'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
       ].includes(item.slug);
       expect(item.hasVideo, item.slug).toBe(reviewedSceneWithoutDiagram || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');

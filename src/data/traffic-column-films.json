@@ -7975,5 +7975,713 @@
         "text": "Niðurstaða nafnlausa málsins takmarkast við staðreyndir þess. Skoðaðu eigið mál út frá gögnum og gildandi lögum."
       }
     ]
+  },
+  "column/fil/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-fil",
+    "src": "/videos/columns/traffic-procedure-film-v1-fil.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-fil.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Mga dokumento matapos ang aksidente",
+    "description": "Ipinapakita ng 80 segundong bidyong ito na walang tunog ang kaligtasan at pag-uulat, mga larawan, orihinal na rekord, paggamot, pagkukumpuni, nawalang kita at pagsusuri ng kasunduan.",
+    "disclosure": "Mga kathang tao at eksenang ginawa ng AI, hindi kuha ng tunay na aksidente. Pang-ilustrasyon ang mga sasakyan, lugar at oras. Binubuod ng bidyo ang ilang bahagi ng artikulo; hindi nito pinatutunayan ang kapabayaan, pangangailangan ng paggamot o halaga ng kabayaran sa isang tiyak na kaso.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Ang banggaan",
+        "text": "Itinulak ng bangga sa likod ang nakahintong puting kotse pasulong. Hindi tinutukoy ng kathang eksena ang kapabayaan sa tunay na kaso."
+      },
+      {
+        "start": 10,
+        "title": "Kaligtasan at pag-uulat",
+        "text": "Tiyakin ang kaligtasan, magbigay ng kailangang tulong at iulat ang aksidente. Paglipat ng sasakyan: ayon sa pinsala sa katawan at kalagayan sa lugar."
+      },
+      {
+        "start": 20,
+        "title": "Mga larawan ng lugar",
+        "text": "Itala ang posisyon ng sasakyan, pinsala at mga marka sa kalsada. Panatilihin ang kaligtasan habang kumukuha ng larawan."
+      },
+      {
+        "start": 30,
+        "title": "Mga orihinal na rekord",
+        "text": "Ingatan ang orihinal na larawan, bidyo at dokumento ng pulisya. Hindi itinatakda ng paunang ulat ng pulisya ang proporsyon ng kapabayaan."
+      },
+      {
+        "start": 40,
+        "title": "Mga dokumentong medikal",
+        "text": "Ingatan ang tala ng sintomas, rekord ng paggamot at mga resibo. Suriin ang pangangailangan ng paggamot at kaugnayan nito sa aksidente."
+      },
+      {
+        "start": 50,
+        "title": "Mga rekord ng pagkukumpuni",
+        "text": "Ihambing ang larawan ng pinsala, tantiya at resibo ng pagkukumpuni. Patunayan ang gastos at kaugnayan nito sa aksidente."
+      },
+      {
+        "start": 60,
+        "title": "Aktuwal na nawalang kita",
+        "text": "Ihambing ang rekord ng paggamot, pagpasok, pagliban at sahod. Hindi sapat ang payong magpahinga upang patunayan ang nawalang kita."
+      },
+      {
+        "start": 70,
+        "title": "Mga kundisyon ng kasunduan",
+        "text": "Suriin ang takdang bayaran, seguro at mga paghahabol na tatalikuran. Bago pumirma, suriin ang nakalaang paghahabol at paggamot sa hinaharap."
+      }
+    ]
+  },
+  "column/id/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-id",
+    "src": "/videos/columns/traffic-procedure-film-v1-id.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-id.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Dokumen setelah kecelakaan lalu lintas",
+    "description": "Film tanpa suara berdurasi 80 detik ini menampilkan keselamatan dan pelaporan, foto, rekaman asli, pengobatan, perbaikan, kehilangan penghasilan dan pemeriksaan perdamaian.",
+    "disclosure": "Tokoh dan adegan fiktif buatan AI, bukan rekaman kecelakaan nyata. Kendaraan, tempat dan waktu bersifat ilustratif. Film merangkum bagian tertentu dari artikel; tidak membuktikan kelalaian, kebutuhan pengobatan atau besarnya ganti rugi dalam perkara tertentu.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Tabrakan",
+        "text": "Benturan dari belakang mendorong mobil putih yang berhenti ke depan. Adegan fiktif ini tidak menentukan kelalaian dalam perkara nyata."
+      },
+      {
+        "start": 10,
+        "title": "Keselamatan dan pelaporan",
+        "text": "Amankan lokasi, berikan bantuan yang perlu dan laporkan kecelakaan. Pemindahan kendaraan bergantung pada cedera dan kondisi lokasi."
+      },
+      {
+        "start": 20,
+        "title": "Foto lokasi kejadian",
+        "text": "Rekam posisi kendaraan, kerusakan dan marka jalan. Jaga keselamatan saat mengambil foto."
+      },
+      {
+        "start": 30,
+        "title": "Bahan asli",
+        "text": "Simpan foto asli, rekaman dan dokumen kepolisian. Analisis awal polisi tidak menetapkan proporsi kelalaian."
+      },
+      {
+        "start": 40,
+        "title": "Dokumen medis",
+        "text": "Simpan catatan gejala, rekam medis dan kuitansi. Nilai kebutuhan pengobatan dan kaitannya dengan kecelakaan."
+      },
+      {
+        "start": 50,
+        "title": "Dokumen perbaikan",
+        "text": "Bandingkan foto kerusakan, perkiraan biaya dan kuitansi perbaikan. Buktikan biaya dan kaitannya dengan kecelakaan."
+      },
+      {
+        "start": 60,
+        "title": "Penghasilan yang benar-benar hilang",
+        "text": "Bandingkan rekam medis, kehadiran, cuti dan data gaji. Anjuran istirahat saja tidak membuktikan kehilangan penghasilan."
+      },
+      {
+        "start": 70,
+        "title": "Ketentuan perdamaian",
+        "text": "Periksa waktu pembayaran, asuransi dan tuntutan yang dilepaskan. Sebelum tanda tangan, cek tuntutan yang dicadangkan dan pengobatan mendatang."
+      }
+    ]
+  },
+  "column/ms/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-ms",
+    "src": "/videos/columns/traffic-procedure-film-v1-ms.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-ms.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Dokumen selepas kemalangan jalan raya",
+    "description": "Filem senyap selama 80 saat ini menunjukkan keselamatan dan laporan, foto, rakaman asal, rawatan, pembaikan, kehilangan pendapatan dan semakan penyelesaian.",
+    "disclosure": "Watak dan adegan rekaan yang dijana AI, bukan rakaman kemalangan sebenar. Kenderaan, tempat dan masa adalah untuk ilustrasi. Filem merumuskan bahagian tertentu artikel; ia tidak membuktikan kecuaian, keperluan rawatan atau jumlah pampasan dalam kes tertentu.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Perlanggaran",
+        "text": "Hentaman dari belakang menolak kereta putih yang berhenti ke hadapan. Adegan rekaan ini tidak menentukan kecuaian dalam kes sebenar."
+      },
+      {
+        "start": 10,
+        "title": "Keselamatan dan laporan",
+        "text": "Pastikan keselamatan, beri bantuan yang perlu dan laporkan kemalangan. Pemindahan kenderaan bergantung pada kecederaan dan keadaan lokasi."
+      },
+      {
+        "start": 20,
+        "title": "Foto tempat kejadian",
+        "text": "Rekod kedudukan kenderaan, kerosakan dan tanda jalan. Jaga keselamatan semasa mengambil foto."
+      },
+      {
+        "start": 30,
+        "title": "Bahan asal",
+        "text": "Simpan foto asal, rakaman dan dokumen polis. Analisis awal polis tidak menetapkan nisbah kecuaian."
+      },
+      {
+        "start": 40,
+        "title": "Dokumen perubatan",
+        "text": "Simpan catatan gejala, rekod perubatan dan resit. Nilai keperluan rawatan dan kaitannya dengan kemalangan."
+      },
+      {
+        "start": 50,
+        "title": "Dokumen pembaikan",
+        "text": "Bandingkan foto kerosakan, anggaran dan resit pembaikan. Buktikan kos dan kaitannya dengan kemalangan."
+      },
+      {
+        "start": 60,
+        "title": "Kehilangan pendapatan sebenar",
+        "text": "Bandingkan rekod perubatan, kehadiran, cuti dan gaji. Saranan berehat sahaja tidak membuktikan kehilangan pendapatan."
+      },
+      {
+        "start": 70,
+        "title": "Syarat penyelesaian",
+        "text": "Semak masa bayaran, insurans dan tuntutan yang dilepaskan. Sebelum tandatangan, semak tuntutan yang dikekalkan dan rawatan masa depan."
+      }
+    ]
+  },
+  "column/vi/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-vi",
+    "src": "/videos/columns/traffic-procedure-film-v1-vi.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-vi.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Hồ sơ sau tai nạn giao thông",
+    "description": "Video không tiếng dài 80 giây này thể hiện an toàn và trình báo, ảnh chụp, bản ghi gốc, điều trị, sửa chữa, mất thu nhập và kiểm tra thỏa thuận.",
+    "disclosure": "Nhân vật và cảnh hư cấu do AI tạo, không phải bản ghi tai nạn thật. Xe, địa điểm và thời gian chỉ để minh họa. Video tóm tắt một số phần của bài viết; không chứng minh lỗi, sự cần thiết của điều trị hay mức bồi thường trong vụ việc cụ thể.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Va chạm",
+        "text": "Cú đâm từ phía sau đẩy chiếc xe trắng đang dừng về phía trước. Cảnh hư cấu này không xác định lỗi trong vụ việc thật."
+      },
+      {
+        "start": 10,
+        "title": "An toàn và trình báo",
+        "text": "Bảo đảm an toàn, trợ giúp khi cần và trình báo tai nạn. Di chuyển xe tùy thuộc thương tích và điều kiện hiện trường."
+      },
+      {
+        "start": 20,
+        "title": "Ảnh hiện trường",
+        "text": "Ghi lại vị trí xe, hư hỏng và vạch kẻ đường. Giữ an toàn trong lúc chụp ảnh."
+      },
+      {
+        "start": 30,
+        "title": "Tài liệu gốc",
+        "text": "Lưu ảnh gốc, bản ghi và văn bản của cảnh sát. Phân tích sơ bộ của cảnh sát không ấn định tỷ lệ lỗi."
+      },
+      {
+        "start": 40,
+        "title": "Hồ sơ y tế",
+        "text": "Lưu ghi chép triệu chứng, hồ sơ y tế và biên lai. Xem xét sự cần thiết của điều trị và liên hệ với tai nạn."
+      },
+      {
+        "start": 50,
+        "title": "Hồ sơ sửa chữa",
+        "text": "Đối chiếu ảnh hư hỏng, báo giá và hóa đơn sửa chữa. Chứng minh chi phí và liên hệ của chúng với tai nạn."
+      },
+      {
+        "start": 60,
+        "title": "Thu nhập thực tế bị mất",
+        "text": "Đối chiếu hồ sơ y tế, chấm công, nghỉ phép và tiền lương. Chỉ khuyến nghị nghỉ ngơi chưa chứng minh thu nhập bị mất."
+      },
+      {
+        "start": 70,
+        "title": "Điều khoản thỏa thuận",
+        "text": "Kiểm tra hạn trả tiền, bảo hiểm và các yêu cầu từ bỏ. Trước khi ký, xem xét yêu cầu bảo lưu và điều trị tương lai."
+      }
+    ]
+  },
+  "column/mn/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-mn",
+    "src": "/videos/columns/traffic-procedure-film-v1-mn.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-mn.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Ослын дараах баримтууд",
+    "description": "Дуугүй 80 секундийн энэ бичлэгт аюулгүй байдал, мэдэгдэл, гэрэл зураг, эх бичлэг, эмчилгээ, засвар, орлогын алдагдал болон эвлэрлийн нөхцөлийг шалгах явцыг үзүүлнэ.",
+    "disclosure": "Хиймэл оюунаар бүтээсэн зохиомол хүмүүс, үйл явдал; бодит ослын бичлэг биш. Машин, газар, цаг нь тайлбарлах зориулалттай. Бичлэг нийтлэлийн зарим хэсгийг хураангуйлсан бөгөөд тодорхой хэргийн гэм буруу, эмчилгээний шаардлага, нөхөн төлбөрийн хэмжээг нотлохгүй.",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Мөргөлдөөн",
+        "text": "Арын мөргөлдөөн зогсож буй цагаан машиныг урагш түлхэнэ. Энэ зохиомол дүрслэл бодит хэргийн гэм бурууг тогтоохгүй."
+      },
+      {
+        "start": 10,
+        "title": "Аюулгүй байдал ба мэдэгдэл",
+        "text": "Аюулгүй байдлыг хангаж, шаардлагатай тусламж үзүүлэн ослыг мэдэгдэнэ. Машиныг шилжүүлэх эсэх нь гэмтэл, газрын нөхцөлөөс хамаарна."
+      },
+      {
+        "start": 20,
+        "title": "Ослын газрын гэрэл зураг",
+        "text": "Машины байрлал, эвдрэл, замын тэмдэглэгээг гэрэл зургаар үлдээнэ. Зураг авахдаа аюулгүй байдлыг хангана."
+      },
+      {
+        "start": 30,
+        "title": "Эх материал",
+        "text": "Эх гэрэл зураг, бичлэг, цагдаагийн баримтыг хадгална. Цагдаагийн урьдчилсан дүгнэлт гэм буруугийн хувийг тогтоохгүй."
+      },
+      {
+        "start": 40,
+        "title": "Эмнэлгийн баримт",
+        "text": "Шинж тэмдгийн тэмдэглэл, эмнэлгийн түүх, төлбөрийн баримтыг хадгална. Эмчилгээ шаардлагатай эсэх, осолтой холбоотой эсэхийг шалгана."
+      },
+      {
+        "start": 50,
+        "title": "Засварын баримт",
+        "text": "Эвдрэлийн зураг, үнийн санал, засварын баримтыг харьцуулна. Зардал болон осолтой холбоог нь нотолно."
+      },
+      {
+        "start": 60,
+        "title": "Бодит орлогын алдагдал",
+        "text": "Эмнэлгийн баримт, ирц, чөлөө, цалингийн мэдээллийг харьцуулна. Амрах зөвлөгөө дангаараа орлого буурсныг нотлохгүй."
+      },
+      {
+        "start": 70,
+        "title": "Эвлэрлийн нөхцөл",
+        "text": "Төлбөрийн хугацаа, даатгал, татгалзах нэхэмжлэлийг шалгана. Гарын үсэг зурахаас өмнө хадгалах нэхэмжлэл, цаашдын эмчилгээг нягтална."
+      }
+    ]
+  },
+  "column/zh-hans/taiwan-traffic-accident-procedure": {
+    "id": "traffic-procedure-film-v1-zh-hans",
+    "src": "/videos/columns/traffic-procedure-film-v1-zh-hans.mp4",
+    "poster": "/images/column-videos/traffic-procedure-film-v1-zh-hans.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "交通事故后的资料与处理步骤",
+    "description": "这段80秒无声影片依次呈现安全与通报、现场照片、原始记录、就医、维修、收入损失及和解条款核对。",
+    "disclosure": "AI生成的虚构人物与场景，并非真实事故影像。车辆、地点和时间仅供说明。影片概括文章的部分内容，不能证明具体案件的过失、治疗必要性或赔偿金额。",
+    "durationSeconds": 80,
+    "sceneCount": 8,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "追尾碰撞",
+        "text": "后方撞击将停着的白色车辆推向前方。 这段虚构场景不能认定真实案件的过失。"
+      },
+      {
+        "start": 10,
+        "title": "安全与通报",
+        "text": "先确保安全，提供必要救助并通报事故。 能否移动车辆，须依伤亡情况与现场条件判断。"
+      },
+      {
+        "start": 20,
+        "title": "现场照片",
+        "text": "记录车辆位置、受损部位及道路标线。 拍照时也须注意自身安全。"
+      },
+      {
+        "start": 30,
+        "title": "保留原始资料",
+        "text": "保存原始照片、录像及警方文书。 警方的初步分析不决定过失比例。"
+      },
+      {
+        "start": 40,
+        "title": "就医记录",
+        "text": "保存症状记录、病历及医疗收据。 核对治疗必要性及其与事故的因果关系。"
+      },
+      {
+        "start": 50,
+        "title": "维修资料",
+        "text": "比对受损照片、维修估价单和收据。 证明支出的费用及其与事故的关联。"
+      },
+      {
+        "start": 60,
+        "title": "实际收入损失",
+        "text": "一并核对病历、出勤、请假与薪资资料。 休息建议本身不能证明实际收入损失。"
+      },
+      {
+        "start": 70,
+        "title": "和解条款",
+        "text": "核对付款时间、保险及放弃请求的范围。 签署前确认保留请求与后续治疗安排。"
+      }
+    ]
+  },
+  "column/fil/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-fil",
+    "src": "/videos/columns/overtaking-evidence-film-v1-fil.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-fil.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Mga kundisyon sa paglampas at ebidensya ng banggaan",
+    "description": "Pinag-uugnay ng 100 segundong tahimik na bidyo ang mga bawal sa paglampas, senyas at agwat, kathang banggaan sa maagang pagbalik, larawan ng pinsala, orihinal na rekord at pagsusuri ng kalsada, oras at kapabayaan.",
+    "disclosure": "Mga kathang tao, sasakyan at dokumentong ginawa ng AI. Hiwalay ang pagdikit ng dalawang kotse sa anonimong kaso ng motorsiklo sa artikulo. Hindi ito patunay ng pagsunod sa senyas, pagbibigay-daan at distansya; hindi naka-calibrate ang mga modelo. Kinukuhanan ang pinsala sa paradahan kalaunan, hindi sa orihinal na posisyon noong aksidente. Ilang kundisyon ng Artikulo 101 at pagsusuri ng ebidensya lang ang buod; nasa artikulo at opisyal na tuntunin ang lahat ng kundisyon.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Bago lumampas",
+        "text": "Suriin ang pagbabawal, marka, kalsada at daloy ng trapiko. Bawal kung may kasalubong o 2 o higit pang sasakyang sunod-sunod sa unahan."
+      },
+      {
+        "start": 10,
+        "title": "Senyas sa iisang lane",
+        "text": "Kung pinapayagan: 2 maikling busina o isang kislap ng ilaw sa unahan. Hintayin ang pagbibigay-daan; huwag mamilit sa paulit-ulit na senyas."
+      },
+      {
+        "start": 20,
+        "title": "Agwat sa gilid at pagbalik",
+        "text": "Sumenyas pakaliwa; lumampas sa kaliwa nang may agwat na hindi bababa sa 0.5 m. Sa ligtas na distansya: kanang senyas at balik sa orihinal na lane."
+      },
+      {
+        "start": 30,
+        "title": "Kathang banggaan",
+        "text": "Bumabalik ang lumampas na kotse nang kulang ang distansya. Hindi sapat ang eksenang ito upang itakda ang kapabayaan sa tunay na kaso."
+      },
+      {
+        "start": 40,
+        "title": "Pinsala at buong sasakyan",
+        "text": "Sa ligtas na lugar, itala ang pinsala at ang buong sasakyan. Ihambing ang mga bahaging nagdikit sa orihinal na ebidensya."
+      },
+      {
+        "start": 50,
+        "title": "Bago at matapos ang bangga",
+        "text": "Ingatan ang tuloy-tuloy na bidyo, orihinal na file at datos ng oras. Kung banggaan lang ang kuha, maaaring mawala ang naunang senyas at galaw."
+      },
+      {
+        "start": 60,
+        "title": "Kalsada noong aksidente",
+        "text": "Suriin ang mga lane, karatula, marka at sagabal sa tanaw. Tugma ba ang larawan ngayon sa kalagayan noong aksidente?"
+      },
+      {
+        "start": 70,
+        "title": "Senyas, pagpasok, pagdikit",
+        "text": "Sa orihinal, suriin ang sunod ng senyas, pagpasok sa lane at pagdikit. Huwag magtakda ng bilis at layo nang walang maaasahang batayan ng sukat."
+      },
+      {
+        "start": 80,
+        "title": "Ebidensya ng kapabayaan",
+        "text": "Hindi nagtatakda ng tiyak na proporsyon ang paglabag lamang. Suriin ang tanaw, oras, pag-iwas at ebidensyang hindi pabor sa iyo."
+      },
+      {
+        "start": 90,
+        "title": "Pasya sa tiyak na kaso",
+        "text": "Limitado sa mga pangyayari nito ang pasya ng anonimong kaso. Suriin ang sariling kaso ayon sa ebidensya at kasalukuyang batas."
+      }
+    ]
+  },
+  "column/id/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-id",
+    "src": "/videos/columns/overtaking-evidence-film-v1-id.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-id.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Syarat mendahului dan bukti setelah tabrakan",
+    "description": "Film tanpa suara berdurasi 100 detik ini menghubungkan larangan mendahului, isyarat dan jarak, tabrakan fiktif saat terlalu cepat kembali, foto kerusakan, rekaman asli serta penilaian jalan, waktu dan kelalaian.",
+    "disclosure": "Tokoh, kendaraan dan dokumen fiktif buatan AI. Kontak dua mobil terpisah dari perkara sepeda motor anonim dalam artikel. Adegan ini tidak membuktikan kepatuhan pada syarat isyarat, pemberian jalan dan jarak; model tidak dikalibrasi. Kerusakan difoto kemudian di tempat parkir, bukan pada posisi awal saat kecelakaan. Film merangkum sebagian syarat Pasal 101 dan pemeriksaan bukti; seluruh syarat ada dalam artikel dan peraturan resmi.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Syarat sebelum mendahului",
+        "text": "Periksa larangan mendahului, marka, jalan dan lalu lintas. Dilarang jika kendaraan lawan mendekat atau minimal 2 beriringan di depan."
+      },
+      {
+        "start": 10,
+        "title": "Isyarat pada jalur yang sama",
+        "text": "Jika diizinkan: dua bunyi klakson pendek atau satu kedipan lampu utama. Tunggu pemberian jalan; jangan memaksa dengan isyarat berulang."
+      },
+      {
+        "start": 20,
+        "title": "Jarak samping dan kembali",
+        "text": "Nyalakan sein kiri; lewati dari kiri dengan jarak minimal 0,5 m. Setelah jarak aman tercapai: sein kanan dan kembali ke jalur semula."
+      },
+      {
+        "start": 30,
+        "title": "Kontak fiktif",
+        "text": "Mobil yang mendahului kembali tanpa jarak yang memadai. Kontak ini saja tidak menentukan proporsi kelalaian perkara nyata."
+      },
+      {
+        "start": 40,
+        "title": "Kerusakan dan seluruh mobil",
+        "text": "Di tempat aman, rekam kerusakan dan seluruh kendaraan. Cocokkan bagian kedua mobil yang bersentuhan dengan bukti asli."
+      },
+      {
+        "start": 50,
+        "title": "Sebelum dan sesudah benturan",
+        "text": "Simpan rekaman utuh, berkas asli dan data waktu. Potongan benturan saja bisa menghilangkan isyarat dan gerakan sebelumnya."
+      },
+      {
+        "start": 60,
+        "title": "Jalan saat kecelakaan",
+        "text": "Periksa jalur, rambu, marka dan penghalang pandangan. Apakah foto saat ini sesuai kondisi ketika kecelakaan terjadi?"
+      },
+      {
+        "start": 70,
+        "title": "Isyarat, masuk, kontak",
+        "text": "Periksa urutan isyarat, masuk jalur dan kontak pada rekaman asli. Jangan tentukan angka kecepatan dan jarak tanpa dasar ukur yang andal."
+      },
+      {
+        "start": 80,
+        "title": "Bukti kelalaian",
+        "text": "Pelanggaran saja tidak menetapkan proporsi kelalaian yang tetap. Nilai pandangan, waktu, peluang menghindar dan bukti yang merugikan."
+      },
+      {
+        "start": 90,
+        "title": "Kesimpulan perkara tertentu",
+        "text": "Kesimpulan perkara anonim terbatas pada fakta perkara itu. Nilai perkara Anda berdasarkan bukti dan hukum yang berlaku."
+      }
+    ]
+  },
+  "column/ms/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-ms",
+    "src": "/videos/columns/overtaking-evidence-film-v1-ms.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-ms.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Syarat memotong dan bukti selepas perlanggaran",
+    "description": "Filem senyap selama 100 saat ini menghubungkan larangan memotong, isyarat dan jarak, perlanggaran rekaan ketika kembali terlalu awal, foto kerosakan, rakaman asal serta penilaian jalan, masa dan kecuaian.",
+    "disclosure": "Watak, kenderaan dan dokumen rekaan yang dijana AI. Sentuhan dua kereta berasingan daripada kes motosikal tanpa nama dalam artikel. Ia tidak membuktikan pematuhan syarat isyarat, pemberian laluan dan jarak; model tidak ditentukur. Kerosakan dirakam kemudian di tempat letak kereta, bukan pada kedudukan asal semasa kemalangan. Filem merumuskan beberapa syarat perkara 101 dan semakan bukti; semua syarat terdapat dalam artikel dan peraturan rasmi.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Syarat sebelum memotong",
+        "text": "Semak larangan, tanda dan jalan; jika kenderaan lawan mendekat, jangan potong. Memotong juga dilarang apabila 2 atau lebih kenderaan berderet di hadapan."
+      },
+      {
+        "start": 10,
+        "title": "Isyarat pada lorong sama",
+        "text": "Jika dibenarkan: dua hon pendek atau satu kelipan lampu besar. Tunggu laluan diberi; jangan paksa dengan isyarat berulang."
+      },
+      {
+        "start": 20,
+        "title": "Jarak sisi dan kembali",
+        "text": "Pasang isyarat kiri; potong dari kiri dengan jarak sekurang-kurangnya 0.5 m. Selepas jarak selamat dicapai: isyarat kanan dan kembali ke lorong asal."
+      },
+      {
+        "start": 30,
+        "title": "Sentuhan rekaan",
+        "text": "Kereta yang memotong kembali tanpa jarak yang mencukupi. Sentuhan ini sahaja tidak menentukan nisbah kecuaian kes sebenar."
+      },
+      {
+        "start": 40,
+        "title": "Kerosakan dan seluruh kereta",
+        "text": "Di tempat selamat, rekod kerosakan dan seluruh kenderaan. Padankan bahagian kedua-dua kereta yang bersentuh dengan bukti asal."
+      },
+      {
+        "start": 50,
+        "title": "Sebelum dan selepas hentaman",
+        "text": "Simpan rakaman berterusan, fail asal dan data masa. Petikan hentaman sahaja boleh menghilangkan isyarat dan gerakan sebelumnya."
+      },
+      {
+        "start": 60,
+        "title": "Jalan ketika kemalangan",
+        "text": "Semak lorong, papan tanda, tanda jalan dan halangan pandangan. Adakah foto sekarang sepadan dengan keadaan ketika kemalangan?"
+      },
+      {
+        "start": 70,
+        "title": "Isyarat, masuk, sentuhan",
+        "text": "Semak urutan isyarat, masuk lorong dan sentuhan dalam rakaman asal. Jangan tetapkan angka kelajuan dan jarak tanpa asas ukuran yang boleh dipercayai."
+      },
+      {
+        "start": 80,
+        "title": "Bukti kecuaian",
+        "text": "Pelanggaran peraturan sahaja tidak menetapkan nisbah kecuaian tetap. Nilai pandangan, masa, peluang mengelak dan bukti yang tidak memihak."
+      },
+      {
+        "start": 90,
+        "title": "Kesimpulan kes tertentu",
+        "text": "Kesimpulan kes tanpa nama terhad kepada fakta kes itu. Nilai kes sendiri berdasarkan bukti dan undang-undang yang berkuat kuasa."
+      }
+    ]
+  },
+  "column/vi/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-vi",
+    "src": "/videos/columns/overtaking-evidence-film-v1-vi.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-vi.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Điều kiện vượt xe và chứng cứ sau va chạm",
+    "description": "Video không tiếng dài 100 giây này nối các điều kiện cấm vượt, tín hiệu và khoảng cách, va chạm hư cấu khi trở về làn quá sớm, ảnh hư hỏng, bản ghi gốc và đánh giá đường, thời gian và lỗi.",
+    "disclosure": "Nhân vật, xe và tài liệu hư cấu do AI tạo. Va chạm giữa hai ô tô tách biệt với vụ xe máy ẩn danh trong bài viết. Cảnh này không chứng minh đã tuân thủ điều kiện về tín hiệu, nhường đường và khoảng cách; mô hình không được hiệu chuẩn. Hư hỏng được chụp sau đó tại bãi đỗ, không thể hiện vị trí ban đầu khi tai nạn xảy ra. Video tóm tắt một số yêu cầu của Điều 101 và việc kiểm tra chứng cứ; toàn bộ điều kiện nằm trong bài viết và quy định chính thức.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Điều kiện trước khi vượt",
+        "text": "Kiểm tra cấm vượt, vạch đường, đường sá và giao thông. Cấm vượt khi xe ngược chiều tới gần hoặc từ 2 xe chạy nối tiếp phía trước."
+      },
+      {
+        "start": 10,
+        "title": "Tín hiệu trong cùng làn",
+        "text": "Khi được phép: hai tiếng còi ngắn hoặc một lần nháy đèn trước. Chờ xe trước nhường đường; không ép bằng tín hiệu lặp lại."
+      },
+      {
+        "start": 20,
+        "title": "Khoảng cách bên và trở về",
+        "text": "Bật xi nhan trái; vượt bên trái với khoảng cách ít nhất 0,5 m. Khi đủ khoảng cách an toàn: xi nhan phải và trở về làn ban đầu."
+      },
+      {
+        "start": 30,
+        "title": "Va chạm hư cấu",
+        "text": "Xe vừa vượt trở về làn khi chưa đủ khoảng cách. Riêng va chạm này không xác định tỷ lệ lỗi trong vụ việc thật."
+      },
+      {
+        "start": 40,
+        "title": "Hư hỏng và toàn bộ xe",
+        "text": "Ở nơi an toàn, ghi lại hư hỏng và toàn bộ xe. Đối chiếu điểm tiếp xúc của hai xe với tài liệu gốc."
+      },
+      {
+        "start": 50,
+        "title": "Trước và sau va chạm",
+        "text": "Lưu video liên tục, tệp gốc và dữ liệu thời gian. Chỉ cắt đoạn va chạm có thể bỏ sót tín hiệu và chuyển động trước đó."
+      },
+      {
+        "start": 60,
+        "title": "Đường vào lúc tai nạn",
+        "text": "Kiểm tra làn đường, biển báo, vạch kẻ và vật cản tầm nhìn. Ảnh hiện nay có khớp điều kiện khi tai nạn xảy ra không?"
+      },
+      {
+        "start": 70,
+        "title": "Tín hiệu, vào làn, tiếp xúc",
+        "text": "Kiểm tra thứ tự tín hiệu, vào làn và tiếp xúc trên bản gốc. Không chốt số về tốc độ và khoảng cách khi thiếu căn cứ đo đáng tin."
+      },
+      {
+        "start": 80,
+        "title": "Chứng cứ về lỗi",
+        "text": "Vi phạm riêng lẻ không ấn định tỷ lệ lỗi cố định. Xem xét tầm nhìn, thời gian, khả năng tránh và cả chứng cứ bất lợi."
+      },
+      {
+        "start": 90,
+        "title": "Kết luận theo từng vụ",
+        "text": "Kết luận của vụ ẩn danh chỉ giới hạn ở tình tiết vụ đó. Đánh giá vụ của mình theo chứng cứ và pháp luật hiện hành."
+      }
+    ]
+  },
+  "column/mn/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-mn",
+    "src": "/videos/columns/overtaking-evidence-film-v1-mn.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-mn.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Гүйцэж түрүүлэх нөхцөл ба мөргөлдөөний нотолгоо",
+    "description": "Дуугүй 100 секундийн энэ бичлэгт гүйцэж түрүүлэх хориг, дохио, зай, хэт эрт буцах үеийн зохиомол мөргөлдөөн, эвдрэлийн зураг, эх бичлэг, зам, цаг, гэм бурууг шалгах явцыг холбоно.",
+    "disclosure": "Хиймэл оюунаар бүтээсэн зохиомол хүмүүс, машин, баримтууд. Хоёр машины шүргэлцэл нь нийтлэл дэх нэрийг нууцалсан мотоциклын хэргээс тусдаа. Дохио, зам тавих, зайны шаардлагыг хангасныг нотлохгүй; загварууд хэмжилтэд тохируулагдаагүй. Эвдрэлийг дараа нь зогсоолд авч буй тул ослын үеийн анхны байрлалыг харуулахгүй. Бичлэг 101 дүгээр зүйлийн зарим нөхцөл болон нотлох баримтын шалгалтыг хураангуйлна; бүх нөхцөлийг нийтлэл, албан ёсны дүрмээс үзнэ.",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Гүйцэхийн өмнөх нөхцөл",
+        "text": "Гүйцэж түрүүлэх хориг, тэмдэглэгээ, зам, хөдөлгөөнийг шалгана. Эсрэг машин ойртвол, эсвэл урд дор хаяж 2 машин цуварвал гүйцэхгүй."
+      },
+      {
+        "start": 10,
+        "title": "Ижил эгнээний дохио",
+        "text": "Зөвшөөрсөн үед: хоёр богино дуут дохио эсвэл урд гэрлээр нэг дохио. Зам тавихыг хүлээнэ; давтан дохиогоор шахахгүй."
+      },
+      {
+        "start": 20,
+        "title": "Хажуугийн зай ба буцах",
+        "text": "Зүүн дохио өгч, зүүн талаар хамгийн багадаа 0.5 м зайтай өнгөрнө. Аюулгүй зай авсны дараа баруун дохио өгч анхны эгнээнд буцна."
+      },
+      {
+        "start": 30,
+        "title": "Зохиомол шүргэлцэл",
+        "text": "Гүйцсэн машин хангалттай зай авалгүй эгнээндээ буцна. Энэ шүргэлцэл дангаараа бодит хэргийн гэм буруугийн хувийг тогтоохгүй."
+      },
+      {
+        "start": 40,
+        "title": "Эвдрэл ба бүтэн машин",
+        "text": "Аюулгүй газарт эвдрэл болон машиныг бүтнээр нь зураглана. Хоёр машины шүргэлцсэн хэсгийг эх баримттай тулгана."
+      },
+      {
+        "start": 50,
+        "title": "Мөргөлдөөний өмнө ба дараа",
+        "text": "Тасралтгүй бичлэг, эх файл, цагийн мэдээллийг хадгална. Зөвхөн мөргөлдөөнийг таслахад өмнөх дохио, хөдөлгөөн орхигдож болно."
+      },
+      {
+        "start": 60,
+        "title": "Ослын үеийн зам",
+        "text": "Эгнээ, тэмдэг, тэмдэглэгээ, харагдах орчны саадыг шалгана. Одоогийн зураг ослын үеийн нөхцөлтэй таарч байна уу?"
+      },
+      {
+        "start": 70,
+        "title": "Дохио, орох, шүргэлцэх",
+        "text": "Дохио, эгнээнд орох, шүргэлцэх дарааллыг эх бичлэгээс шалгана. Найдвартай хэмжих суурьгүйгээр хурд, зайг тоогоор тогтоохгүй."
+      },
+      {
+        "start": 80,
+        "title": "Гэм буруугийн нотолгоо",
+        "text": "Зөрчил дангаараа гэм буруугийн тогтмол хувийг тогтоохгүй. Харагдах орчин, цаг, зайлсхийх боломж, таагүй баримтыг ч үнэлнэ."
+      },
+      {
+        "start": 90,
+        "title": "Тухайн хэргийн дүгнэлт",
+        "text": "Нэрийг нууцалсан хэргийн дүгнэлт тухайн баримтаар хязгаарлагдана. Өөрийн хэргийг нотолгоо, хүчин төгөлдөр хуулиар үнэлнэ."
+      }
+    ]
+  },
+  "column/zh-hans/taiwan-overtaking-accident-liability": {
+    "id": "overtaking-evidence-film-v1-zh-hans",
+    "src": "/videos/columns/overtaking-evidence-film-v1-zh-hans.mp4",
+    "poster": "/images/column-videos/overtaking-evidence-film-v1-zh-hans.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "超车条件与事故后的证据核对",
+    "description": "这段100秒无声影片串联超车禁止条件、信号与间距、虚构的过早返回车道碰撞、损伤照片、原始录像以及道路、时间和过失资料核对。",
+    "disclosure": "AI生成的虚构人物、车辆与资料。两辆轿车的接触并非重现本文的匿名摩托车事故。画面不能证明已满足信号、让行与距离要求，模型间距也不是实测值。损伤拍摄设定在事后的停车场，不表示事故当时的车辆位置。影片仅概括第101条的部分要求和资料核对过程，完整条件须参照正文与官方规定。",
+    "durationSeconds": 100,
+    "sceneCount": 10,
+    "chapters": [
+      {
+        "start": 0,
+        "title": "超车前的条件",
+        "text": "先核对禁止超车的标志、标线及道路交通状况。 对向来车接近或前方两辆以上车辆连续行驶时，不得超车。"
+      },
+      {
+        "start": 10,
+        "title": "同一车道的超车信号",
+        "text": "允许超车时，短鸣喇叭两次或变换前照灯一次。 等待前车让行，不得反复发信号强迫让路。"
+      },
+      {
+        "start": 20,
+        "title": "侧向间距与返回顺序",
+        "text": "开启左转向灯，从前车左侧保持至少0.5米间距通过。 确保安全距离后，开启右转向灯返回原车道。"
+      },
+      {
+        "start": 30,
+        "title": "虚构的返回车道接触",
+        "text": "超车车辆尚未留足距离就返回车道。 仅凭这段接触画面，不能确定真实案件的过失比例。"
+      },
+      {
+        "start": 40,
+        "title": "损伤部位与车辆全貌",
+        "text": "在安全地点记录损伤部位和整辆车。 将两车的接触部位与原始资料比对。"
+      },
+      {
+        "start": 50,
+        "title": "碰撞前后的原始录像",
+        "text": "保留连续录像、原始文件及时间信息。 只截取碰撞瞬间，可能遗漏此前的信号和车辆动作。"
+      },
+      {
+        "start": 60,
+        "title": "事故当时的道路",
+        "text": "核对车道配置、标志标线及遮挡视野的因素。 确认现时照片是否符合事故当时的道路条件。"
+      },
+      {
+        "start": 70,
+        "title": "信号、进入与接触顺序",
+        "text": "依据原始录像核对信号、进入车道及接触顺序。 缺少可靠测量依据时，不把速度与距离断定为具体数字。"
+      },
+      {
+        "start": 80,
+        "title": "判断过失的资料",
+        "text": "是否违规，本身并不决定固定的过失比例。 一并审查视野、时间、回避可能性及不利资料。"
+      },
+      {
+        "start": 90,
+        "title": "案例结论与个案审查",
+        "text": "匿名案例的结论仅限于该案事实。 自己的案件仍须依据证据与现行法律具体审查。"
+      }
+    ]
   }
 }

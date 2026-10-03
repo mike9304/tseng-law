@@ -9,7 +9,7 @@ import businessPremisesCaptions from '@/data/business-premises-video-captions.js
 import logisticsCaptions from '@/data/logistics-video-captions.json';
 import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
-const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'sk', 'hu', 'hr', 'sl', 'sr', 'bg', 'ru', 'uk', 'el', 'tr', 'lt', 'lv', 'et', 'is'];
+const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'sk', 'hu', 'hr', 'sl', 'sr', 'bg', 'ru', 'uk', 'el', 'tr', 'lt', 'lv', 'et', 'is', 'fil', 'id', 'ms', 'vi', 'mn', 'zh-hans'];
 
 describe('reviewed column videos', () => {
   it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
@@ -120,6 +120,12 @@ describe('reviewed column videos', () => {
     ['lv', 'atsevišķa no raksta anonimizētās motocikla lietas'],
     ['et', 'eraldi artikli anonüümitud mootorrattaasjast'],
     ['is', 'aðskilin frá nafnlausa mótorhjólamálinu'],
+    ['fil', 'Hiwalay ang pagdikit ng dalawang kotse sa anonimong kaso ng motorsiklo'],
+    ['id', 'terpisah dari perkara sepeda motor anonim'],
+    ['ms', 'berasingan daripada kes motosikal tanpa nama'],
+    ['vi', 'tách biệt với vụ xe máy ẩn danh'],
+    ['mn', 'нийтлэл дэх нэрийг нууцалсан мотоциклын хэргээс тусдаа'],
+    ['zh-hans', '并非重现本文的匿名摩托车事故'],
   ])('serves one 100-second overtaking film with case boundaries and ten chapters in %s', (locale, disclosure) => {
     const slug = 'taiwan-overtaking-accident-liability';
     const asset = getColumnGeneratedVideo(locale, slug);
@@ -169,6 +175,12 @@ describe('reviewed column videos', () => {
     ['lv', 'Izdomātas personas un ainas, kas radītas ar mākslīgo intelektu'],
     ['et', 'Tehisintellekti loodud väljamõeldud inimesed ja stseenid'],
     ['is', 'Skáldað fólk og senur búin til með gervigreind'],
+    ['fil', 'Mga kathang tao at eksenang ginawa ng AI'],
+    ['id', 'Tokoh dan adegan fiktif buatan AI'],
+    ['ms', 'Watak dan adegan rekaan yang dijana AI'],
+    ['vi', 'Nhân vật và cảnh hư cấu do AI tạo'],
+    ['mn', 'Хиймэл оюунаар бүтээсэн зохиомол хүмүүс, үйл явдал'],
+    ['zh-hans', 'AI生成的虚构人物与场景'],
   ])('uses a reviewed %s label and caption on the general accident article', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" />);
     const id = longFilmLocales.includes(locale) ? 'traffic-procedure-film-v1' : 'rear-end-simulation-v3';

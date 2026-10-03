@@ -146,7 +146,7 @@ describe('reviewed column videos', () => {
     ['taiwan-parking-wheelstop-latch-service-safety-causation', 'parking-contact-v1-zh-hant', '畫面中的車輪擋未被碰到'],
     ['taiwan-lane-change-side-rear-collision-liability', 'lane-change-film-v1-zh-hant', '橙色車'],
     ['taiwan-lowered-height-gantry-state-compensation-driver-fault', 'gantry-impact-v1-zh-hant', '畫面未呈現事故前的高度調整或警示過程'],
-    ['taiwan-flying-object-truck-origin-dashcam-evidence', 'flying-metal-v4-zh-hant', '畫面未交代來源，也未呈現貨車掉落物品'],
+    ['taiwan-flying-object-truck-origin-dashcam-evidence', 'flying-object-film-v1-zh-hant', '畫面未交代來源，也未呈現貨車掉落物品'],
     ['taiwan-chain-rear-end-first-impact-evidence', 'chain-rear-end-film-v1-zh-hant', '銀色中間車'],
     ['taiwan-roadside-starting-parking-exit-liability', 'roadside-start-film-v1-zh-hant', '橙色車'],
     ['taiwan-right-turn-car-straight-motorcycle-evidence', 'right-turn-film-v1-zh-hant', '機車'],
@@ -160,7 +160,7 @@ describe('reviewed column videos', () => {
     ['taiwan-accident-stop-dialogue-hit-and-run-evidence', 'stop-dialogue-film-v1-zh-hant', '不能證明沒有人受傷、已同意離場或已履行全部法定義務'],
     ['taiwan-truck-blocking-multiple-dashcam-evidence', 'truck-blocking-v2-zh-hant', '四組原始影像'],
     ['taiwan-car-door-opening-motorcycle-liability', 'door-opening-film-v1-zh-hant', '騎士失去平衡'],
-    ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-v1-zh-hant', '非本文凌晨事故'],
+    ['taiwan-gas-station-tanker-reversing-beeper-liability', 'tanker-reversing-film-v1-zh-hant', '非本文凌晨事故'],
     ['green-light-red-light-pedestrian-third-person', 'pedestrian-third-person-film-v1-zh-hant', '非本文夜間事故'],
     ['taiwan-flashing-red-yellow-intersection-liability', 'flashing-intersection-film-v1-zh-hant', '與文內兩段式示意圖是不同設定'],
   ])('keeps the scenario for %s on its reviewed article and language', (slug, id, detail) => {

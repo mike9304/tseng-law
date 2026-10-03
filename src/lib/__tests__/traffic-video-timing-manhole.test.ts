@@ -2,22 +2,27 @@ import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '../columns';
 import { buildTrafficCollection, filterTrafficBoardItems, parseTrafficBoardQuery } from '../traffic-collection';
 import pending from '@/content/column-embeddings-pending.json';
+import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 
 const articles = [
-  { slug: 'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence', number: 172, subject: 'evidence' },
-  { slug: 'taiwan-manhole-pothole-road-authority-utility-internal-recourse', number: 173, subject: 'liability' },
+  { slug: 'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence', number: 172, subject: 'evidence', videoId: 'alley-bicycle-v2-zh-hant' },
+  { slug: 'taiwan-manhole-pothole-road-authority-utility-internal-recourse', number: 173, subject: 'liability', videoId: 'pothole-scooter-v2-zh-hant' },
 ] as const;
 
 describe('video timing and road maintenance columns', () => {
-  it.each(articles)('finds $slug once in its native subject, without a video or translated fallback', (a) => {
+  it.each(articles)('finds $slug once in its native subject with its reviewed video and no translated fallback', (a) => {
     const collection = buildTrafficCollection('zh-hant', { columns: getAllColumnPosts('zh-hant'), issues: [] });
     const matches = collection.filter(post => post.slug === a.slug);
     expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({ subject: a.subject, columnNumber: a.number, hasVideo: false, publicationDate: '2026-10-04' });
+    expect(matches[0]).toMatchObject({ subject: a.subject, columnNumber: a.number, hasVideo: true, publicationDate: '2026-10-04' });
     expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ subject: a.subject, q: matches[0].title })).map(post => post.slug)).toEqual([a.slug]);
-    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ video: '1' })).some(post => post.slug === a.slug)).toBe(false);
+    expect(filterTrafficBoardItems(collection, parseTrafficBoardQuery({ video: '1' })).some(post => post.slug === a.slug)).toBe(true);
+    expect(getColumnGeneratedVideo('zh-hant', a.slug)?.id).toBe(a.videoId);
     expect(pending.columns.filter(post => post.slug === a.slug)).toEqual([{ locale: 'zh-hant', slug: a.slug }]);
-    for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(post => post.slug === a.slug)).toBe(false);
+    for (const locale of ['ko', 'en', 'ja'] as const) {
+      expect(getAllColumnPosts(locale).some(post => post.slug === a.slug)).toBe(false);
+      expect(getColumnGeneratedVideo(locale, a.slug)).toBeNull();
+    }
   });
 
   it('keeps the appealed first-instance and video timing limitations together', () => {

@@ -12,6 +12,8 @@ import truckCutInCaptions from './truck-cut-in-video-captions.json';
 import batApproachCaptions from './bat-approach-video-captions.json';
 import familyCareCaptions from './family-care-video-captions.json';
 import workRecordsCaptions from './work-records-video-captions.json';
+import alleyBicycleCaptions from './alley-bicycle-video-captions.json';
+import potholeScooterCaptions from './pothole-scooter-video-captions.json';
 
 export type ColumnVideoSource = 'column' | 'issue';
 
@@ -35,6 +37,20 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(alleyBicycleCaptions).map(([locale, caption]) => {
+    const id = `alley-bicycle-v2-${locale}`;
+    return [
+      `column/${locale}/taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(potholeScooterCaptions).map(([locale, caption]) => {
+    const id = `pothole-scooter-v2-${locale}`;
+    return [
+      `column/${locale}/taiwan-manhole-pothole-road-authority-utility-internal-recourse`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   ...Object.fromEntries(Object.entries(batApproachCaptions).map(([locale, caption]) => {
     const id = `bat-approach-v1-${locale}`;
     return [

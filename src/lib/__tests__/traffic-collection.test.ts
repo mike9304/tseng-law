@@ -212,6 +212,8 @@ describe('loadTrafficCollection (published files)', () => {
       const diagramId = getColumnPost(item.slug, 'zh-hant')?.diagramVideo?.id;
       const diagram = diagramId ? (TRAFFIC_DIAGRAMS as Record<string, { kind?: string }>)[diagramId] : undefined;
       const reviewedSceneWithoutDiagram = [
+        'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence',
+        'taiwan-manhole-pothole-road-authority-utility-internal-recourse',
         'taiwan-motorway-blocking-no-collision-public-danger',
         'taiwan-bus-stop-illegal-parking-no-contact-criminal-causation',
         'taiwan-ambulance-red-light-emergency-priority-negligence',

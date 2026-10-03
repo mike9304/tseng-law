@@ -17,7 +17,11 @@ const branchModelsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/b
 const batApproachCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bat-approach-video-captions.json', import.meta.url), 'utf8'));
 const familyCareCaptions = JSON.parse(await fs.readFile(new URL('../src/data/family-care-video-captions.json', import.meta.url), 'utf8'));
 const workRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/work-records-video-captions.json', import.meta.url), 'utf8'));
+const alleyBicycleCaptions = JSON.parse(await fs.readFile(new URL('../src/data/alley-bicycle-video-captions.json', import.meta.url), 'utf8'));
+const potholeScooterCaptions = JSON.parse(await fs.readFile(new URL('../src/data/pothole-scooter-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence', id: 'alley-bicycle-v2-zh-hant', duration: 4, contactTime: 7 / 24, expectedDiagrams: 0, disclosure: alleyBicycleCaptions['zh-hant'].disclosure },
+  { locale: 'zh-hant', slug: 'taiwan-manhole-pothole-road-authority-utility-internal-recourse', id: 'pothole-scooter-v2-zh-hant', duration: 4, contactTime: 3 / 24, expectedDiagrams: 0, disclosure: potholeScooterCaptions['zh-hant'].disclosure },
   ...Object.entries(batApproachCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-road-rage-baseball-bat-fracture-damages', id: `bat-approach-v1-${locale}`,
     duration: 4, contactTime: 2.0, expectedDiagrams: 0, disclosure: caption.disclosure,

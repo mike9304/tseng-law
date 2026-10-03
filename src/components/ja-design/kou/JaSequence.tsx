@@ -64,6 +64,7 @@ export default function JaSequence({ className }: { className?: string }) {
       if (index >= 0 && index !== drawn) {
         context.drawImage(frames[index] as HTMLImageElement, 0, 0, set.width, set.height);
         drawn = index;
+        canvas.dataset.frame = String(index);
         if (canvas.dataset.ready !== 'true') canvas.dataset.ready = 'true';
       }
       const rounded = Math.round(p * 200) / 200;

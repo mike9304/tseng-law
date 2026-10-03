@@ -7,7 +7,7 @@ import c from './JaChapters.module.css';
  * Also marks the home wrapper while the hero is in view (`data-hero-in-view`), so the back-to-top button stays hidden.
  *
  * Phone capsule 「メールで相談」 (CONCEPT-V2 §7.9): a fixed link below 900 px, shown only while neither the hero, the
- * closing (#contact) nor the footer is in view. `inert` and aria-hidden while hidden, so it never takes focus unseen.
+ * flow (whose own email action ends it), the closing (#contact) nor the footer is in view. `inert` and aria-hidden while hidden, so it never takes focus unseen.
  */
 export default function JaCapsule({ href, label, ariaLabel }: { href: string; label: string; ariaLabel: string }) {
   const ref = useRef<HTMLAnchorElement>(null);
@@ -18,6 +18,7 @@ export default function JaCapsule({ href, label, ariaLabel }: { href: string; la
     const targets = [
       document.getElementById('hero'),
       document.getElementById('contact'),
+      document.getElementById('ja-flow'),
       document.querySelector('footer'),
     ].filter((el): el is HTMLElement => Boolean(el));
     const visible = new Set<Element>();

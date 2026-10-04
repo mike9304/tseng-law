@@ -6,7 +6,7 @@ import pending from '@/content/column-embeddings-pending.json';
 
 const articles = [
   { slug: 'taiwan-repaired-car-diminished-value-appraisal-evidence', number: 189, subject: 'compensation', film: 'diminished-value-film-v1-zh-hant' },
-  { slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', number: 190, subject: 'liability', film: 'pursuit-vacatur-film-v1-zh-hant' },
+  { slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', number: 190, subject: 'liability', film: 'pursuit-vacatur-film-v2-zh-hant' },
 ] as const;
 
 describe('reviewed diminished value and vacated pursuit judgment columns', () => {
@@ -36,6 +36,12 @@ describe('reviewed diminished value and vacated pursuit judgment columns', () =>
     const film = getColumnGeneratedVideo('zh-hant', articles[1].slug)!;
     expect(film.chapters?.[0].title).toContain('一審九年已撤銷');
     expect(film.chapters?.[0].text).toContain('不是實體無罪');
+    expect(film).toMatchObject({ durationSeconds: 3937 / 24, sceneCount: 17 });
+    expect(film.chapters?.[0].title).toContain('自摔假想');
+    expect(film.chapters?.[1].title).toContain('一審九年已撤銷');
+    expect(film.chapters?.slice(1).map(chapter => chapter.start)).toEqual(
+      Array.from({ length: 16 }, (_, chapter) => chapter * 10 + 97 / 24),
+    );
     expect(film.disclosure).toContain('不是確定有罪結論');
     expect(post.content.replace(/^# .*\n\n/, '')).toMatch(/^> 本文討論的一審九年有罪判決，已經被撤銷。/);
     expect(post.summary).toContain('因被告死亡遭撤銷');

@@ -1,0 +1,501 @@
+{
+  "createdAt": "2026-10-04T09:03:05.266886+00:00",
+  "status": "assembly-and-content-reviewed",
+  "problem": "Five explanation films superseded previously reviewed action clips in the single-player resolver.",
+  "implementation": "The original 97 action frames now precede all original explanatory frames inside each versioned v2 film. No re-encoding, retiming, loop, frozen padding or source overwrites.",
+  "allDecodedFramesVerifiedIdentical": true,
+  "films": [
+    {
+      "key": "column/zh-hant/taiwan-pursuit-fatal-self-crash-vacated-judgment",
+      "id": "pursuit-vacatur-film-v2-zh-hant",
+      "src": "/videos/columns/pursuit-vacatur-film-v2-zh-hant.mp4",
+      "poster": "/images/column-videos/pursuit-vacatur-film-v2-zh-hant.jpg",
+      "sha256": "bf2b194610586657c45175625d679ebac2c87013491fceb04c9afd4548be35b1",
+      "posterSha256": "fc6b4950ebc4178ad5abaf799703a0e02750f6688cc1d47c543a833b6f749638",
+      "bytes": 20023469,
+      "durationSeconds": 164.04166666666666,
+      "frameCount": 3937,
+      "prefixFrames": 97,
+      "prefixSeconds": 4.041666666666667,
+      "prefixId": "pursuit-self-skid-v1-zh-hant",
+      "prefixSha256": "9cdc20fe007932fb7158dd4042b7969501ed7776fa4cc07cc454f27517987dea",
+      "explanationId": "pursuit-vacatur-film-v1-zh-hant",
+      "explanationSha256": "ff4bf085d9660c8b75f98eac130ba307f0e57eca1f3d94d009f886651f6e6c65",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-zh/190-taiwan-pursuit-fatal-self-crash-vacated-judgment.md",
+        "sha256": "cd8be82612d5950bdc3d3d0fc6e8fe1f15960bc98d85ef5113dbea6c99b3098d"
+      },
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "duration": "164.041667",
+        "nb_frames": "3937",
+        "pix_fmt": "yuv420p"
+      },
+      "allDecodedFramesExactlyPreserved": true,
+      "nativeFrameTimestampsContiguous": true,
+      "frameMd5Files": [
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/pursuit-self-skid-v1-zh-hant.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/pursuit-vacatur-film-v1-zh-hant.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/pursuit-vacatur-film-v2-zh-hant.framemd5"
+      ],
+      "retimed": false,
+      "reencoded": false,
+      "status": "assembled-awaiting-caption-and-browser-review"
+    },
+    {
+      "key": "column/zh-hant/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "id": "own-dashcam-film-v2-zh-hant",
+      "src": "/videos/columns/own-dashcam-film-v2-zh-hant.mp4",
+      "poster": "/images/column-videos/own-dashcam-film-v2-zh-hant.jpg",
+      "sha256": "c50a0902202d102482b5a65d89ca5cab3c71a43aaed0903541b54d5f4117c9d4",
+      "posterSha256": "0856958cd982221688850b84df342e36bbc2f7a5b3242a835e55ed6b89c21f6b",
+      "bytes": 17677730,
+      "durationSeconds": 184.04166666666666,
+      "frameCount": 4417,
+      "prefixFrames": 97,
+      "prefixSeconds": 4.041666666666667,
+      "prefixId": "own-dashcam-cut-in-v2-zh-hant",
+      "prefixSha256": "7a07032e2dbea9739090dc11b6c3a19cff66c2aa9618b44df59450704abc1dad",
+      "explanationId": "own-dashcam-film-v1-zh-hant",
+      "explanationSha256": "7099f1bc35e1c50c14d47c18ed1c5341137e1c84a398cf2b34b82241ce6547f7",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-zh/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "d6d8a8802638997d6c63d109ed198a2b027ede058cc8611cd963f6b80a6b44cd"
+      },
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "duration": "184.041667",
+        "nb_frames": "4417",
+        "pix_fmt": "yuv420p"
+      },
+      "allDecodedFramesExactlyPreserved": true,
+      "nativeFrameTimestampsContiguous": true,
+      "frameMd5Files": [
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-cut-in-v2-zh-hant.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v1-zh-hant.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-zh-hant.framemd5"
+      ],
+      "retimed": false,
+      "reencoded": false,
+      "status": "assembled-awaiting-caption-and-browser-review"
+    },
+    {
+      "key": "column/ko/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "id": "own-dashcam-film-v2-ko",
+      "src": "/videos/columns/own-dashcam-film-v2-ko.mp4",
+      "poster": "/images/column-videos/own-dashcam-film-v2-ko.jpg",
+      "sha256": "54e698f6166fd67af94edf44d101842e5f82a3aad645db2143befd5d801f1f08",
+      "posterSha256": "1796638c0e39b98cddb5bfb564672505fca474ade4eae2bc4459548f05be6608",
+      "bytes": 17595965,
+      "durationSeconds": 184.04166666666666,
+      "frameCount": 4417,
+      "prefixFrames": 97,
+      "prefixSeconds": 4.041666666666667,
+      "prefixId": "own-dashcam-cut-in-v2-ko",
+      "prefixSha256": "ab341e2890ac64091e1db652b16a4a4b8108dc4b3c3b1327a5e3cc7b06a552d0",
+      "explanationId": "own-dashcam-film-v1-ko",
+      "explanationSha256": "54658e78d4259bad14452b7ccde8fa271ae75e46fe012f6e91f9be3c06ad0425",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "49248a8abf4f7b20ea9fef27549591a20c2e196d6f79eea0925ae48c3943d5dc"
+      },
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "duration": "184.041667",
+        "nb_frames": "4417",
+        "pix_fmt": "yuv420p"
+      },
+      "allDecodedFramesExactlyPreserved": true,
+      "nativeFrameTimestampsContiguous": true,
+      "frameMd5Files": [
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-cut-in-v2-ko.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v1-ko.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-ko.framemd5"
+      ],
+      "retimed": false,
+      "reencoded": false,
+      "status": "assembled-awaiting-caption-and-browser-review"
+    },
+    {
+      "key": "column/en/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "id": "own-dashcam-film-v2-en",
+      "src": "/videos/columns/own-dashcam-film-v2-en.mp4",
+      "poster": "/images/column-videos/own-dashcam-film-v2-en.jpg",
+      "sha256": "54b2cfd984a79d0598bb88433eadd3bd6e1477d7a80fec3bdf40eac2b5f8d8bd",
+      "posterSha256": "7c627e60bf9b391ce8bc7eed0dc7d95c606fd33873c3a9c9874c786931c5fcbb",
+      "bytes": 17382358,
+      "durationSeconds": 184.04166666666666,
+      "frameCount": 4417,
+      "prefixFrames": 97,
+      "prefixSeconds": 4.041666666666667,
+      "prefixId": "own-dashcam-cut-in-v2-en",
+      "prefixSha256": "f8f3b9411be8899971b463f171e204280755fa350dc0d4483b197808ebfd2d14",
+      "explanationId": "own-dashcam-film-v1-en",
+      "explanationSha256": "7795a682f24eb4f8ad4458e9ae8ea185c8729c941d5fce218458d3798c5d2d9c",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-en/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "90991f491152cc99204798d5a7a6548e094c25e54d35123447721b5da2246515"
+      },
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "duration": "184.041667",
+        "nb_frames": "4417",
+        "pix_fmt": "yuv420p"
+      },
+      "allDecodedFramesExactlyPreserved": true,
+      "nativeFrameTimestampsContiguous": true,
+      "frameMd5Files": [
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-cut-in-v2-en.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v1-en.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-en.framemd5"
+      ],
+      "retimed": false,
+      "reencoded": false,
+      "status": "assembled-awaiting-caption-and-browser-review"
+    },
+    {
+      "key": "column/ja/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "id": "own-dashcam-film-v2-ja",
+      "src": "/videos/columns/own-dashcam-film-v2-ja.mp4",
+      "poster": "/images/column-videos/own-dashcam-film-v2-ja.jpg",
+      "sha256": "c73ea6325f0cbaa4ae4da85e354b13cedbc00154b3c9532f615b9cc3cddc365c",
+      "posterSha256": "0545b32a79639a8733e2c0d4b49d24ad2bfca8a7370b865c7be97fc649489fa9",
+      "bytes": 17606170,
+      "durationSeconds": 184.04166666666666,
+      "frameCount": 4417,
+      "prefixFrames": 97,
+      "prefixSeconds": 4.041666666666667,
+      "prefixId": "own-dashcam-cut-in-v2-ja",
+      "prefixSha256": "b0ddb96fa2173f0811b464a8bba478c38de3871dbd0d9c6155cec1ef251b01f7",
+      "explanationId": "own-dashcam-film-v1-ja",
+      "explanationSha256": "0f5de75fa62d1e19b946deb2a6bff8d16eda6c6df00a11a82c5ffd22a72ee5bf",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-ja/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "1a6166935fe7c58d957941ed0d9431c101793190c84320b4db1458b29c7ed45f"
+      },
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "duration": "184.041667",
+        "nb_frames": "4417",
+        "pix_fmt": "yuv420p"
+      },
+      "allDecodedFramesExactlyPreserved": true,
+      "nativeFrameTimestampsContiguous": true,
+      "frameMd5Files": [
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-cut-in-v2-ja.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v1-ja.framemd5",
+        "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-ja.framemd5"
+      ],
+      "retimed": false,
+      "reencoded": false,
+      "status": "assembled-awaiting-caption-and-browser-review"
+    }
+  ],
+  "editorialReview": [
+    {
+      "key": "column/zh-hant/taiwan-pursuit-fatal-self-crash-vacated-judgment",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-zh/190-taiwan-pursuit-fatal-self-crash-vacated-judgment.md",
+        "sha256": "cd8be82612d5950bdc3d3d0fc6e8fe1f15960bc98d85ef5113dbea6c99b3098d"
+      },
+      "changes": [
+        {
+          "field": "title",
+          "before": "追逐後自摔致死：先讀一審已撤銷的程序結果",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "機車自摔假想與一審撤銷的程序結果",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "description",
+          "before": "160秒無聲影片先交代被告死亡、二審撤銷並不受理，再以已撤銷一審為限，區分早先碰撞、後段未接觸追逐、故意與死亡因果的證據。",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "前約4秒是機車在碎石路肩滑倒的AI假想，後接160秒說明。先交代被告死亡、二審撤銷並不受理，再以已撤銷一審為限，區分早先碰撞、後段未接觸追逐、故意與死亡因果的證據。",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "disclosure",
+          "before": "人物、道路、車輛、醫療及文件都是AI假想，沒有重演追撞、摔車或死亡，也沒有本案原始影音。臺南一審九年徒刑已由二審撤銷；被告死亡後判公訴不受理，並非實體無罪判決。後續字幕中的一審分析只是介紹已撤銷判決的理由，不是確定有罪結論；畫面不能證明速度、故意、傷勢或因果關係。",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "開頭僅為機車未與後車接觸而滑倒的AI假想，沒有呈現先前碰撞、追逐全程、身體撞樹或傷亡結果。人物、道路、車輛、醫療及文件均為假想，沒有本案原始影音。臺南一審九年徒刑已由二審撤銷；被告死亡後判公訴不受理，並非實體無罪判決。後續字幕中的一審分析只是介紹已撤銷判決的理由，不是確定有罪結論；畫面不能證明速度、故意、傷勢或因果關係。",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        }
+      ],
+      "firstTwoParagraphDeletionCheck": "The description identifies the action/explanation order and duration. The disclosure distinguishes fictional movement from case evidence, limits what is depicted and retains the procedural outcome; deleting either loses context.",
+      "reviewScope": "Codex editorial review of the five changed captions and first chapters; no native-speaker or legal-professional certification."
+    },
+    {
+      "key": "column/zh-hant/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-zh/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "d6d8a8802638997d6c63d109ed198a2b027ede058cc8611cd963f6b80a6b44cd"
+      },
+      "changes": [
+        {
+          "field": "title",
+          "before": "151公里屬於哪一台車：兩份錄影與連續追逐",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "切入碰撞假想與151公里記錄的來源",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "description",
+          "before": "180秒無聲影片區分黑白兩車的速度來源、位置、時鐘差異、41B路徑與煞車說法，再說明具體危險、五個月刑度及第三審的法律審範圍。",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "前約4秒呈現一次假想碰撞，後接180秒說明，區分黑白兩車的速度來源、位置、時鐘差異、41B路徑與煞車說法，再說明具體危險、五個月刑度及第三審的法律審範圍。",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "disclosure",
+          "before": "AI生成的人物、設備、道路、文件及螢幕均為獨立假想，沒有本案原始行車紀錄器或精確事故重建。畫面不測量兩車速度、車距或時間，數字只引自字幕所述判決。法院分別檢查兩車錄影；151公里不是白車獨立測得的精確速度。最高法院駁回的是白車駕駛不合法的第三審上訴，不是從頭重作事實審。",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "開頭約4秒是AI假想，從變換車道途中開始，只呈現一次碰撞，未重現本文的反覆追逐、煞車、出口路徑或周圍車流。碰撞角度與車損不是本案測量結果，不能用來判斷兩名駕駛的責任。 AI生成的人物、設備、道路、文件及螢幕均為獨立假想，沒有本案原始行車紀錄器或精確事故重建。畫面不測量兩車速度、車距或時間，數字只引自字幕所述判決。法院分別檢查兩車錄影；151公里不是白車獨立測得的精確速度。最高法院駁回的是白車駕駛不合法的第三審上訴，不是從頭重作事實審。",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        }
+      ],
+      "firstTwoParagraphDeletionCheck": "The description identifies the action/explanation order and duration. The disclosure distinguishes fictional movement from case evidence, limits what is depicted and retains the procedural outcome; deleting either loses context.",
+      "reviewScope": "Codex editorial review of the five changed captions and first chapters; no native-speaker or legal-professional certification."
+    },
+    {
+      "key": "column/ko/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "49248a8abf4f7b20ea9fef27549591a20c2e196d6f79eea0925ae48c3943d5dc"
+      },
+      "changes": [
+        {
+          "field": "title",
+          "before": "시속 151km는 어느 차의 기록인가: 두 영상과 연속 추격",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "끼어들기 충돌 예시와 시속 151km 기록의 출처",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "description",
+          "before": "180초 무음 영상으로 두 차량의 속도 출처, 위치와 시계 차이, 41B 출구와 제동 주장을 구분하고, 구체적 위험과 징역 5개월, 대법원 심사의 범위를 설명합니다.",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "약 4초의 가상 충돌 장면 뒤에 180초의 설명이 이어집니다. 두 차량의 속도 출처, 위치와 시계 차이, 41B 출구와 제동 주장을 구분하고, 구체적 위험과 징역 5개월, 대법원 심사의 범위를 설명합니다.",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "disclosure",
+          "before": "인물·장비·도로·문서·화면은 AI로 만든 독립된 가상 자료입니다. 사건의 원본 블랙박스나 정밀 재현이 아닙니다. 화면으로 속도·차간 거리·시간을 측정하지 않으며 숫자는 자막에 적힌 판결 기록에서 가져왔습니다. 법원은 두 차의 영상을 각각 검토했습니다. 시속 151km는 흰 차에서 따로 측정한 정확한 속도가 아닙니다. 대법원은 흰 차 운전자의 부적법한 상고를 기각했으며 사실심을 처음부터 다시 하지 않았습니다.",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "첫 약 4초는 차로 변경 도중부터 한 번의 충돌만 보여 주는 AI 가상 장면입니다. 본문의 반복 추격·급제동·출구 경로·주변 교통량을 재현하지 않았으며, 충돌 각도와 차량 손상도 실제 사건의 측정값이 아닙니다. 이 장면으로 두 운전자의 책임을 판단할 수 없습니다. 인물·장비·도로·문서·화면은 AI로 만든 독립된 가상 자료입니다. 사건의 원본 블랙박스나 정밀 재현이 아닙니다. 화면으로 속도·차간 거리·시간을 측정하지 않으며 숫자는 자막에 적힌 판결 기록에서 가져왔습니다. 법원은 두 차의 영상을 각각 검토했습니다. 시속 151km는 흰 차에서 따로 측정한 정확한 속도가 아닙니다. 대법원은 흰 차 운전자의 부적법한 상고를 기각했으며 사실심을 처음부터 다시 하지 않았습니다.",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        }
+      ],
+      "firstTwoParagraphDeletionCheck": "The description identifies the action/explanation order and duration. The disclosure distinguishes fictional movement from case evidence, limits what is depicted and retains the procedural outcome; deleting either loses context.",
+      "reviewScope": "Codex editorial review of the five changed captions and first chapters; no native-speaker or legal-professional certification."
+    },
+    {
+      "key": "column/en/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-en/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "90991f491152cc99204798d5a7a6548e094c25e54d35123447721b5da2246515"
+      },
+      "changes": [
+        {
+          "field": "title",
+          "before": "Whose camera showed 151 km/h? Two recordings and a continuous chase",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "A fictional cut-in collision and the source of the 151 km/h reading",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "description",
+          "before": "A silent 180-second film separates the cars' speed sources, positions, clocks, the 41B exit and braking claims, then explains concrete danger, five-month sentences and the Supreme Court's legal review.",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "A four-second fictional collision leads into the 180-second explanation of the cars’ speed sources, positions, clocks, the 41B exit and braking claims, concrete danger, five-month sentences and the Supreme Court’s legal review.",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "disclosure",
+          "before": "People, equipment, roads, documents and screens are separate AI-generated illustrations, not the case's original dashcam footage or a precise reconstruction. The images do not measure speed, distance or time; numbers come from the judgments described in the captions. The courts examined both recordings. The 151 km/h display was not an independently measured exact speed for the white car. The Supreme Court dismissed that driver's legally deficient appeal; it did not retry the facts.",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "The opening four seconds show one fictional AI collision beginning during a lane change. They do not recreate the repeated chase, braking, exit route or surrounding traffic. Contact angle and vehicle damage are not measurements of the actual incident, and the scene cannot establish either driver’s liability. People, equipment, roads, documents and screens are separate AI-generated illustrations, not the case's original dashcam footage or a precise reconstruction. The images do not measure speed, distance or time; numbers come from the judgments described in the captions. The courts examined both recordings. The 151 km/h display was not an independently measured exact speed for the white car. The Supreme Court dismissed that driver's legally deficient appeal; it did not retry the facts.",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        }
+      ],
+      "firstTwoParagraphDeletionCheck": "The description identifies the action/explanation order and duration. The disclosure distinguishes fictional movement from case evidence, limits what is depicted and retains the procedural outcome; deleting either loses context.",
+      "reviewScope": "Codex editorial review of the five changed captions and first chapters; no native-speaker or legal-professional certification."
+    },
+    {
+      "key": "column/ja/taiwan-road-rage-freeway-chase-own-dashcam-too",
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-column-videos-20261003/src/content/columns-ja/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+        "sha256": "1a6166935fe7c58d957941ed0d9431c101793190c84320b4db1458b29c7ed45f"
+      },
+      "changes": [
+        {
+          "field": "title",
+          "before": "151キロはどの車の記録か：二つの映像と続いた追走",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "割込み衝突の架空例と、151キロの記録の出典",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "description",
+          "before": "180秒の無音映像で、速度の出典、車の位置、時計の差、41B出口と制動の主張を分け、具体的危険、各5か月の刑、最高法院の法律審を整理します。",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "約4秒の架空の衝突場面に、180秒の説明が続きます。速度の出典、車の位置、時計の差、41B出口と制動の主張を分け、具体的危険、各5か月の刑、最高法院の法律審を整理します。",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        },
+        {
+          "field": "disclosure",
+          "before": "人物・機器・道路・書類・画面はAIで作った独立した架空の資料です。本件の元映像や精密な再現ではありません。画面から速度・車間距離・時間を測定せず、数字は字幕に示す判決の記録に基づきます。裁判所は両車の映像を別々に確認しました。151キロは白い車で独立に測定した正確な速度ではありません。最高法院は白い車の運転者の不適法な上訴を棄却し、事実審を最初からやり直したわけではありません。",
+          "problem": "Described the former explanation-only film; the restored fictional action must be described explicitly.",
+          "after": "冒頭の約4秒は、車線変更の途中から一度の衝突を示すAIの架空場面です。本文の繰り返された追走・制動、出口の経路や周囲の交通量は再現していません。衝突角度や車両の損傷も本件の測定値ではなく、この場面から両運転者の責任は判断できません。 人物・機器・道路・書類・画面はAIで作った独立した架空の資料です。本件の元映像や精密な再現ではありません。画面から速度・車間距離・時間を測定せず、数字は字幕に示す判決の記録に基づきます。裁判所は両車の映像を別々に確認しました。151キロは白い車で独立に測定した正確な速度ではありません。最高法院は白い車の運転者の不適法な上訴を棄却し、事実審を最初からやり直したわけではありません。",
+          "preserved": "All existing explanation chapter titles/text and case-specific figures, conditions and procedural limits remain unchanged."
+        }
+      ],
+      "firstTwoParagraphDeletionCheck": "The description identifies the action/explanation order and duration. The disclosure distinguishes fictional movement from case evidence, limits what is depicted and retains the procedural outcome; deleting either loses context.",
+      "reviewScope": "Codex editorial review of the five changed captions and first chapters; no native-speaker or legal-professional certification."
+    }
+  ],
+  "directVisualAndEditorialReview": {
+    "checkedAt": "2026-10-04T09:06:34.197714+00:00",
+    "joinSheetsViewed": [
+      {
+        "path": "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-en-join-review.jpg",
+        "sha256": "e8c5f87b485b9def20c5b649e24148ecc297d572ddf6ce3fb5666048cfa6115d"
+      },
+      {
+        "path": "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-ja-join-review.jpg",
+        "sha256": "469758c4548efd521064465e3dcbecf1098e1d25e355220eb9c31a074ba4ef65"
+      },
+      {
+        "path": "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-ko-join-review.jpg",
+        "sha256": "cd77743e78ab6cae98f240987083032be8fd8616fe399b1db26d423c9f0b6508"
+      },
+      {
+        "path": "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/own-dashcam-film-v2-zh-hant-join-review.jpg",
+        "sha256": "173dc76d05c32750f42746620f410ac741b81b12537650222b8a3baa038ef419"
+      },
+      {
+        "path": "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/pursuit-vacatur-film-v2-zh-hant-join-review.jpg",
+        "sha256": "c9954f6276093f77064a83ee96a71ced1a6a532d6f5f0985e41dd96bf86ee88d"
+      }
+    ],
+    "directVisualSampleCount": 60,
+    "scope": "12 decoded frame samples per film, including native action/contact, frames96/97 at the cut, and the final frame. Earlier 97-frame action reviews and whole explanation reviews reused with exact file and decoded-frame hashes. No fresh all-frame human review of the full explanations.",
+    "findings": [
+      "Black car closes rapidly; one localized rear-corner impact/deformation between frames4 and8, subsequent short separation and settling; no ghost duplicate in these samples.",
+      "Scooter leans and falls between frames4 and8, rider and scooter slide onto gravel, camera car stays separated; no tree impact or injury outcome shown.",
+      "Frame97 begins the complete original explanation directly, with no blank or padded transition. All five language labels and final explanatory frames remain legible at source size.",
+      "All output decoded frames and native timestamps match the two reviewed inputs in sequence."
+    ],
+    "editorialReferences": "/Users/son7/tseng-law-column-videos/qa/action-prefix-films/editorial-references.json",
+    "editorialComparison": "Compared the new five video descriptions/first chapters/disclosures with openings, headings and endings of three latest locally published articles in each relevant language (12 references; same-date ties resolved by filename). New captions describe the depicted action and explanation order, use no generic introduction, title command, promotion or outcome guarantee. All 88 prior explanatory chapter titles/text preserved."
+  },
+  "editorialReferenceFiles": [
+    {
+      "path": "src/content/columns/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "d6e3af70fa8e44d42db7953c59a9f291b3ad149cb3a5f6b90de4cf6f4a37d0bd",
+      "locale": "ko"
+    },
+    {
+      "path": "src/content/columns/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "fdc5b485a3d035770140a30a938ca4acd138654ca9f6e51a78fe43b1b4dbb14b",
+      "locale": "ko"
+    },
+    {
+      "path": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+      "sha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af",
+      "locale": "ko"
+    },
+    {
+      "path": "src/content/columns-en/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "f453c5793f3e263fda3c724ea209fe69d8f14ce959d1192aaeb22e568b0fd820",
+      "locale": "en"
+    },
+    {
+      "path": "src/content/columns-en/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "6771fe209dedeae03a73d1d1f28ff60cda625ad46febe468fa35b4e0b5a36754",
+      "locale": "en"
+    },
+    {
+      "path": "src/content/columns-en/200-taiwan-protection-order-foreign-resident.md",
+      "sha256": "cfe574b3f0efc0d55eb80bc485c893318179e3ae8e61769ad04e400b7991f3a3",
+      "locale": "en"
+    },
+    {
+      "path": "src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "f6dc7f531b01426f5fb800e88cbe140c6a8aee6d570bc25d4166de7f1da905cd",
+      "locale": "ja"
+    },
+    {
+      "path": "src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+      "sha256": "57f9847db0e103e8c2045f5fed18489c106131be298ef8ff53d4d3ae2a5d7c3e",
+      "locale": "ja"
+    },
+    {
+      "path": "src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "ce3246410a7f780b6da753b44e3e701f19bf38877bc62031057bf7fea3a3f663",
+      "locale": "ja"
+    },
+    {
+      "path": "src/content/columns-zh/206-taiwan-freeway-warning-triangle-time-ability-evidence.md",
+      "sha256": "96624c962547cb572988f15f664f514d42f729fd7f85805ead4b1b4936a01767",
+      "locale": "zh-hant"
+    },
+    {
+      "path": "src/content/columns-zh/205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md",
+      "sha256": "7dbfb065c476d6871ccb196fd5f92a136542b516dad9fcbc53454caeb699794f",
+      "locale": "zh-hant"
+    },
+    {
+      "path": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+      "locale": "zh-hant"
+    }
+  ],
+  "verification": {
+    "fullSuiteInitial": {
+      "command": "node node_modules/vitest/vitest.mjs run",
+      "filesPassed": 1415,
+      "filesFailed": 2,
+      "testsPassed": 14091,
+      "testsFailed": 12,
+      "skipped": 14,
+      "todo": 1,
+      "failureCause": "Child test processes used broken Homebrew Node25 (missing libllhttp.9.3.dylib), while the test runner used Node24."
+    },
+    "correctedPathRetest": {
+      "files": 4,
+      "testsPassed": 411,
+      "exitCode": 0,
+      "scope": "Both initially failing files plus both edited video/pursuit test files. PATH now selects the same working Node24 for child processes. No application code changed for this environment issue.",
+      "log": "/Users/son7/tseng-law-column-videos/qa/action-prefix-films-tests-retry.log"
+    },
+    "lint": {
+      "exitCode": 0
+    },
+    "media": {
+      "decodedFrameEquality": "All five concatenated films match both full input frame sequences; consecutive 24fps timestamps.",
+      "retiming": false,
+      "reencoding": false
+    },
+    "nextEvidence": "Local clean-build and native browser checks, followed by production deployment/playback, are recorded under /Users/son7/tseng-law-column-videos/qa/."
+  }
+}

@@ -14,9 +14,15 @@ const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'i
 describe('reviewed column videos', () => {
   it.each(['ko', 'en', 'ja', 'zh-hant'])('shows the combined chase film as one player when a supplementary clip also exists in %s', locale => {
     const slug = 'taiwan-road-rage-freeway-chase-own-dashcam-too';
-    const filmId = `own-dashcam-film-v1-${locale}`;
+    const filmId = `own-dashcam-film-v2-${locale}`;
     const collisionId = `own-dashcam-cut-in-v2-${locale}`;
-    expect(getColumnGeneratedVideo(locale, slug)).toMatchObject({ id: filmId, durationSeconds: 180 });
+    const film = getColumnGeneratedVideo(locale, slug)!;
+    expect(film).toMatchObject({ id: filmId, durationSeconds: 4417 / 24, sceneCount: 19 });
+    expect(film.chapters).toHaveLength(19);
+    expect(film.chapters?.[0].start).toBe(0);
+    expect(film.chapters?.slice(1).map(chapter => chapter.start)).toEqual(
+      Array.from({ length: 18 }, (_, chapter) => chapter * 10 + 97 / 24),
+    );
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} autoPlay />);
     expect(html.match(/<video/g)).toHaveLength(1);
     expect(html).not.toContain('loop=');
@@ -327,13 +333,13 @@ describe('reviewed column videos', () => {
 
   it.each(['zh-hant', 'ko', 'en', 'ja'])('uses one full non-looping film for the three final road-rage columns in %s', locale => {
     const cases = [
-      ['taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'night-stop-film-v1', 140],
-      ['taiwan-road-rage-freeway-chase-own-dashcam-too', 'own-dashcam-film-v1', 180],
-      ['taiwan-road-rage-52-seconds-subtracted-case', 'red-light-film-v1', 180],
+      ['taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'night-stop-film-v1', 140, 14],
+      ['taiwan-road-rage-freeway-chase-own-dashcam-too', 'own-dashcam-film-v2', 4417 / 24, 19],
+      ['taiwan-road-rage-52-seconds-subtracted-case', 'red-light-film-v1', 180, 18],
     ] as const;
-    for (const [slug, id, durationSeconds] of cases) {
+    for (const [slug, id, durationSeconds, sceneCount] of cases) {
       const asset = getColumnGeneratedVideo(locale, slug)!;
-      expect(asset).toMatchObject({ id: `${id}-${locale}`, durationSeconds, sceneCount: durationSeconds / 10 });
+      expect(asset).toMatchObject({ id: `${id}-${locale}`, durationSeconds, sceneCount });
       const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} autoPlay />);
       expect(html.match(/<video/g)).toHaveLength(1);
       expect(html).toContain('muted=""');

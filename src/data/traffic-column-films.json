@@ -10413,94 +10413,99 @@
     ]
   },
   "column/zh-hant/taiwan-pursuit-fatal-self-crash-vacated-judgment": {
-    "id": "pursuit-vacatur-film-v1-zh-hant",
-    "src": "/videos/columns/pursuit-vacatur-film-v1-zh-hant.mp4",
-    "poster": "/images/column-videos/pursuit-vacatur-film-v1-zh-hant.jpg",
+    "id": "pursuit-vacatur-film-v2-zh-hant",
+    "src": "/videos/columns/pursuit-vacatur-film-v2-zh-hant.mp4",
+    "poster": "/images/column-videos/pursuit-vacatur-film-v2-zh-hant.jpg",
     "width": 1280,
     "height": 720,
-    "title": "追逐後自摔致死：先讀一審已撤銷的程序結果",
-    "description": "160秒無聲影片先交代被告死亡、二審撤銷並不受理，再以已撤銷一審為限，區分早先碰撞、後段未接觸追逐、故意與死亡因果的證據。",
-    "disclosure": "人物、道路、車輛、醫療及文件都是AI假想，沒有重演追撞、摔車或死亡，也沒有本案原始影音。臺南一審九年徒刑已由二審撤銷；被告死亡後判公訴不受理，並非實體無罪判決。後續字幕中的一審分析只是介紹已撤銷判決的理由，不是確定有罪結論；畫面不能證明速度、故意、傷勢或因果關係。",
-    "durationSeconds": 160,
-    "sceneCount": 16,
+    "title": "機車自摔假想與一審撤銷的程序結果",
+    "description": "前約4秒是機車在碎石路肩滑倒的AI假想，後接160秒說明。先交代被告死亡、二審撤銷並不受理，再以已撤銷一審為限，區分早先碰撞、後段未接觸追逐、故意與死亡因果的證據。",
+    "disclosure": "開頭僅為機車未與後車接觸而滑倒的AI假想，沒有呈現先前碰撞、追逐全程、身體撞樹或傷亡結果。人物、道路、車輛、醫療及文件均為假想，沒有本案原始影音。臺南一審九年徒刑已由二審撤銷；被告死亡後判公訴不受理，並非實體無罪判決。後續字幕中的一審分析只是介紹已撤銷判決的理由，不是確定有罪結論；畫面不能證明速度、故意、傷勢或因果關係。",
+    "durationSeconds": 164.04166666666666,
+    "sceneCount": 17,
     "chapters": [
       {
         "start": 0,
+        "title": "自摔假想；一審九年已撤銷",
+        "text": "此AI示例只呈現未接觸滑倒。本案因被告死亡判公訴不受理，不是實體無罪。"
+      },
+      {
+        "start": 4.041666666666667,
         "title": "先看結果：一審九年已撤銷",
         "text": "臺南高分院114國審上訴2於2025年7月9日撤銷原判決。 因被告死亡，判公訴不受理；不是維持九年，也不是實體無罪。"
       },
       {
-        "start": 10,
+        "start": 14.041666666666668,
         "title": "被告死亡發生在上訴期間",
         "text": "一審於2024年11月29日判傷害致死九年；被告於2025年7月5日死亡。 二審因死亡處理程序，後續場景只介紹已撤銷一審的證據分析。"
       },
       {
-        "start": 20,
+        "start": 24.041666666666668,
         "title": "道路情境，沒有重演致死追逐",
         "text": "畫面只是汽車與機車在一般道路前進的AI假想，沒有接觸或摔倒。 不是本案路段、車距、速度或騎士的真實動作。"
       },
       {
-        "start": 30,
+        "start": 34.041666666666664,
         "title": "早先有接觸，後段不能混為一談",
         "text": "一審記載首次輕撞機車尾部，之後另一次朝人行駛被閃開。 最後追逐自摔的階段沒有撞上，不能說整件事從未接觸。"
       },
       {
-        "start": 40,
+        "start": 44.041666666666664,
         "title": "第一次倒地未證明受傷",
         "text": "一審就先前倒地，未認已有可證明的身體傷害。 先前行為與後續追逐須分段核對，不能把最後傷勢移到第一次。"
       },
       {
-        "start": 50,
+        "start": 54.041666666666664,
         "title": "後段追近與失控的先後",
         "text": "已撤銷一審認為，持續加速逼近使騎士高速前進，後來滑倒撞樹。 這是該審的因果評價；本片時間線與人物不能替代原始證據。"
       },
       {
-        "start": 60,
+        "start": 64.04166666666667,
         "title": "傷害故意與殺人故意不同",
         "text": "一審未確信殺人故意，卻認為有容任對方受傷的不確定故意。 不能由駕駛表情、追車一詞或死亡結果直接推定殺人故意。"
       },
       {
-        "start": 70,
+        "start": 74.04166666666667,
         "title": "未直接撞上，仍須分析因果",
         "text": "一審結合追逐壓迫、先前行為及死亡結果，採傷害致死評價。 不表示所有未接觸自摔都由後車負責，也不是現仍有效的有罪結論。"
       },
       {
-        "start": 80,
+        "start": 84.04166666666667,
         "title": "原有車速、砂石與樹木也被考量",
         "text": "一審指出騎士本已有相當車速，路旁砂石與樹木也影響死亡結果。 不能把原因簡化為單一車距；畫面道路不代表本案現場。"
       },
       {
-        "start": 90,
+        "start": 94.04166666666667,
         "title": "法醫資料回答的是死亡原因",
         "text": "一審綜合法醫及受傷資料，未把施用毒品列為主要死因。 死亡原因不等於故意的證明；不能拿本案數值當安全騎乘標準。"
       },
       {
-        "start": 100,
+        "start": 104.04166666666667,
         "title": "78公里是汽車的記錄數值",
         "text": "一審所述最高時速78公里出自追逐汽車的行車紀錄器。 不是機車經獨立量測的精確速度，也不是本片實際行進速度。"
       },
       {
-        "start": 110,
+        "start": 114.04166666666667,
         "title": "不利與有利因素都在理由中",
         "text": "一審亦提到先前衝突、追逐中曾減速、倒地後未立即施救等情節。 不得只挑單一片段推定全部責任；九年刑度本身已隨原判決撤銷。"
       },
       {
-        "start": 120,
+        "start": 124.04166666666667,
         "title": "死亡導致不受理的程序判決",
         "text": "刑訴303條第5款規定，被告死亡應諭知不受理。 本件二審撤銷一審後依此處理，沒有改判被告實體無罪。"
       },
       {
-        "start": 130,
+        "start": 134.04166666666666,
         "title": "不受理沒有確認一審全部理由",
         "text": "二審的程序結果沒有重新肯定或否定全部故意與因果分析。 二審仍告知送達後20日可上訴；後續上訴或確定未確認。"
       },
       {
-        "start": 140,
+        "start": 144.04166666666666,
         "title": "刑事程序結果與民事問題分開",
         "text": "這份二審沒有判民事賠償金額，也沒有處理交通行政處分。 不能從死亡不受理直接推定所有民事權利義務都已消失。"
       },
       {
-        "start": 150,
+        "start": 154.04166666666666,
         "title": "核對歷審，再整理原始證據",
         "text": "閱讀判決日期、審級與歷審結果；保存完整影像、現場及醫療資料。 本片只摘要本文，不補寫現場測量、原音或未確認的民事結果。"
       }
@@ -10843,416 +10848,436 @@
     ]
   },
   "column/zh-hant/taiwan-road-rage-freeway-chase-own-dashcam-too": {
-    "id": "own-dashcam-film-v1-zh-hant",
-    "src": "/videos/columns/own-dashcam-film-v1-zh-hant.mp4",
-    "poster": "/images/column-videos/own-dashcam-film-v1-zh-hant.jpg",
+    "id": "own-dashcam-film-v2-zh-hant",
+    "src": "/videos/columns/own-dashcam-film-v2-zh-hant.mp4",
+    "poster": "/images/column-videos/own-dashcam-film-v2-zh-hant.jpg",
     "width": 1280,
     "height": 720,
-    "title": "151公里屬於哪一台車：兩份錄影與連續追逐",
-    "description": "180秒無聲影片區分黑白兩車的速度來源、位置、時鐘差異、41B路徑與煞車說法，再說明具體危險、五個月刑度及第三審的法律審範圍。",
-    "disclosure": "AI生成的人物、設備、道路、文件及螢幕均為獨立假想，沒有本案原始行車紀錄器或精確事故重建。畫面不測量兩車速度、車距或時間，數字只引自字幕所述判決。法院分別檢查兩車錄影；151公里不是白車獨立測得的精確速度。最高法院駁回的是白車駕駛不合法的第三審上訴，不是從頭重作事實審。",
-    "durationSeconds": 180,
-    "sceneCount": 18,
+    "title": "切入碰撞假想與151公里記錄的來源",
+    "description": "前約4秒呈現一次假想碰撞，後接180秒說明，區分黑白兩車的速度來源、位置、時鐘差異、41B路徑與煞車說法，再說明具體危險、五個月刑度及第三審的法律審範圍。",
+    "disclosure": "開頭約4秒是AI假想，從變換車道途中開始，只呈現一次碰撞，未重現本文的反覆追逐、煞車、出口路徑或周圍車流。碰撞角度與車損不是本案測量結果，不能用來判斷兩名駕駛的責任。 AI生成的人物、設備、道路、文件及螢幕均為獨立假想，沒有本案原始行車紀錄器或精確事故重建。畫面不測量兩車速度、車距或時間，數字只引自字幕所述判決。法院分別檢查兩車錄影；151公里不是白車獨立測得的精確速度。最高法院駁回的是白車駕駛不合法的第三審上訴，不是從頭重作事實審。",
+    "durationSeconds": 184.04166666666666,
+    "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
+        "title": "假想場景：撞上前車後角",
+        "text": "AI生成的碰撞示例，不是本案速度或兩名駕駛過失的證明。"
+      },
+      {
+        "start": 4.041666666666667,
         "title": "兩台相機，兩份原始資料",
         "text": "裝置、記憶卡和檔案先區分來源；開場只是AI整理資料的假想。 不是本案設備或真實錄影，不能由螢幕讀出案件速度。"
       },
       {
-        "start": 10,
+        "start": 14.041666666666668,
         "title": "先分顯示數值與畫中車輛位置",
         "text": "本案兩車在2023年7月3日行經國道一號南向，後來發生碰撞。 某車相機的速度顯示，和畫中另一車的移動，是不同種類的證據。"
       },
       {
-        "start": 20,
+        "start": 24.041666666666668,
         "title": "151公里來自黑車的畫面",
         "text": "高院記載黑車11時58分21秒顯示151公里，稍後白車出現在前方。 白車位置可供相對速度推論，但不能直接當成白車精確實測151公里。"
       },
       {
-        "start": 30,
+        "start": 34.041666666666664,
         "title": "白車自己的89、101、123公里",
         "text": "白車錄影顯示正午從89加至101、123公里；一審另批評其未減速。 高院指出白車速度也有自車錄影依據，並非全由黑車數字移用。"
       },
       {
-        "start": 40,
+        "start": 44.041666666666664,
         "title": "早一段也記錄白車加速",
         "text": "高院勘驗白車自提影片，記載11時57分5秒顯示125公里。 同片既拍到黑車先超車煞車，也拍到白車後來追上；兩段都被評價。"
       },
       {
-        "start": 50,
+        "start": 54.041666666666664,
         "title": "反覆變換車道與位置關係",
         "text": "一審整理黑車至少七次變換車道，合看兩車追逐、逼近及間距。 圖面與照片是說明材料，不是校正過的本案路徑測量。"
       },
       {
-        "start": 60,
+        "start": 64.04166666666667,
         "title": "兩份畫面的秒數不能直接對齊",
         "text": "一審黑車欄寫接觸在12時0分7秒，白車欄則寫9秒。 來源時間記載不同，不能未經核對就拼成秒數一致的連續錄影。"
       },
       {
-        "start": 70,
+        "start": 74.04166666666667,
         "title": "41B旁的103公里與50公里速限",
         "text": "高院記載黑車經41B出口區，畫面顯示103公里、匝道速限50公里。 不是說所有路段均限50；本片一般道路也不是該處實景。"
       },
       {
-        "start": 80,
+        "start": 84.04166666666667,
         "title": "法院認為追逐沒有因此中斷",
         "text": "黑車未從右側出口離開，回到主線時白車仍在旁；法院合看時空連結。 這是本案行進證據的判斷，不是碰到出口就一定中斷或一定連續。"
       },
       {
-        "start": 90,
+        "start": 94.04166666666667,
         "title": "防禦性煞車的說法未獲採",
         "text": "白車稱前方減速而煞車；法院認沒有證據顯示須短時間連續急停。 煞車燈只顯示動作，原因仍須連同追逐、路況和其他證據判斷。"
       },
       {
-        "start": 100,
+        "start": 104.04166666666667,
         "title": "質疑數值，要指出具體問題",
         "text": "黑車辯護人提衛星與橋梁誤差，高院指未說明本機數值何以不可信。 法院也依追逐畫面判斷；不是認證所有行車紀錄器一律沒有誤差。"
       },
       {
-        "start": 110,
+        "start": 114.04166666666667,
         "title": "別車仍在行駛，不等於沒有危險",
         "text": "兩人主張其他車正常通行；法院則記載車多、間距不大及危險追逐。 這不是道路只有兩台車的認定，也不只看最後誰先切入。"
       },
       {
-        "start": 120,
+        "start": 124.04166666666667,
         "title": "第185條仍須具體危險",
         "text": "法院合看高速、任意換道及不足間距，認已達隨時可能肇害的狀態。 不以第三人已受傷為必要，但不是任何超速或換道都成立本罪。"
       },
       {
-        "start": 130,
+        "start": 134.04166666666666,
         "title": "兩人各五月，日額各1,000元",
         "text": "新北113訴756於2025年4月30日判兩人各五月，定易科罰金日額。 1,000元是每日換算基準，不是另加交通罰鍰，也未查實際繳納。"
       },
       {
-        "start": 140,
+        "start": 144.04166666666666,
         "title": "高院駁回兩人的第二審上訴",
         "text": "114上訴5220於2026年2月25日維持原判決及刑度。 合看危險、否認態度和個人情況；五月不是同類事件的固定刑。"
       },
       {
-        "start": 150,
+        "start": 154.04166666666666,
         "title": "最高法院審的是法律上訴理由",
         "text": "115台上2709於2026年8月27日駁回白車上訴；黑車此前已確定。 依377條，重複事實爭執不是適法第三審理由；沒有從頭重作事實審。"
       },
       {
-        "start": 160,
+        "start": 164.04166666666666,
         "title": "刑事判決未決定民事比例",
         "text": "卷內有交通違規通知，但行政處分確定結果未載；民事損害也未裁判。 不能用五月或日額1,000元，推定修理費、過失比例或牌照結果。"
       },
       {
-        "start": 170,
+        "start": 174.04166666666666,
         "title": "原檔也保留對自己不利的前後",
         "text": "保留每台相機的來源、完整檔案、顯示時間與有疑義的數值。 自提影片可能同時支持與不利於自己的說法；整理資料不保證結論。"
       }
     ]
   },
   "column/ko/taiwan-road-rage-freeway-chase-own-dashcam-too": {
-    "id": "own-dashcam-film-v1-ko",
-    "src": "/videos/columns/own-dashcam-film-v1-ko.mp4",
-    "poster": "/images/column-videos/own-dashcam-film-v1-ko.jpg",
+    "id": "own-dashcam-film-v2-ko",
+    "src": "/videos/columns/own-dashcam-film-v2-ko.mp4",
+    "poster": "/images/column-videos/own-dashcam-film-v2-ko.jpg",
     "width": 1280,
     "height": 720,
-    "title": "시속 151km는 어느 차의 기록인가: 두 영상과 연속 추격",
-    "description": "180초 무음 영상으로 두 차량의 속도 출처, 위치와 시계 차이, 41B 출구와 제동 주장을 구분하고, 구체적 위험과 징역 5개월, 대법원 심사의 범위를 설명합니다.",
-    "disclosure": "인물·장비·도로·문서·화면은 AI로 만든 독립된 가상 자료입니다. 사건의 원본 블랙박스나 정밀 재현이 아닙니다. 화면으로 속도·차간 거리·시간을 측정하지 않으며 숫자는 자막에 적힌 판결 기록에서 가져왔습니다. 법원은 두 차의 영상을 각각 검토했습니다. 시속 151km는 흰 차에서 따로 측정한 정확한 속도가 아닙니다. 대법원은 흰 차 운전자의 부적법한 상고를 기각했으며 사실심을 처음부터 다시 하지 않았습니다.",
-    "durationSeconds": 180,
-    "sceneCount": 18,
+    "title": "끼어들기 충돌 예시와 시속 151km 기록의 출처",
+    "description": "약 4초의 가상 충돌 장면 뒤에 180초의 설명이 이어집니다. 두 차량의 속도 출처, 위치와 시계 차이, 41B 출구와 제동 주장을 구분하고, 구체적 위험과 징역 5개월, 대법원 심사의 범위를 설명합니다.",
+    "disclosure": "첫 약 4초는 차로 변경 도중부터 한 번의 충돌만 보여 주는 AI 가상 장면입니다. 본문의 반복 추격·급제동·출구 경로·주변 교통량을 재현하지 않았으며, 충돌 각도와 차량 손상도 실제 사건의 측정값이 아닙니다. 이 장면으로 두 운전자의 책임을 판단할 수 없습니다. 인물·장비·도로·문서·화면은 AI로 만든 독립된 가상 자료입니다. 사건의 원본 블랙박스나 정밀 재현이 아닙니다. 화면으로 속도·차간 거리·시간을 측정하지 않으며 숫자는 자막에 적힌 판결 기록에서 가져왔습니다. 법원은 두 차의 영상을 각각 검토했습니다. 시속 151km는 흰 차에서 따로 측정한 정확한 속도가 아닙니다. 대법원은 흰 차 운전자의 부적법한 상고를 기각했으며 사실심을 처음부터 다시 하지 않았습니다.",
+    "durationSeconds": 184.04166666666666,
+    "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
+        "title": "가상 장면: 앞차 뒷모서리와 충돌",
+        "text": "AI로 만든 충돌 예시입니다. 실제 사건의 속도·과실을 재현한 장면은 아닙니다."
+      },
+      {
+        "start": 4.041666666666667,
         "title": "카메라 두 대, 출처가 다른 원본",
         "text": "장비·메모리 카드·파일의 출처를 나눕니다. 첫 장면은 AI 가상 자료 정리입니다. 실제 장비나 영상이 아니므로 화면에서 사건 차량의 속도를 읽을 수 없습니다."
       },
       {
-        "start": 10,
+        "start": 14.041666666666668,
         "title": "표시된 속도와 다른 차의 위치를 구분",
         "text": "두 차는 2023년 7월 3일 국도 1호 남쪽 방향을 달리다 나중에 충돌했습니다. 카메라 차량의 속도 표시와 화면 속 다른 차의 움직임은 서로 다른 증거입니다."
       },
       {
-        "start": 20,
+        "start": 24.041666666666668,
         "title": "151km는 검은 차 영상의 표시",
         "text": "고등법원은 검은 차의 11시 58분 21초 화면에 151km가 표시됐다고 적었습니다. 뒤이어 앞에 나타난 흰 차의 위치만으로 그 차도 정확히 151km였다고 할 수 없습니다."
       },
       {
-        "start": 30,
+        "start": 34.041666666666664,
         "title": "흰 차 영상에도 89·101·123km",
         "text": "흰 차 영상은 정오 무렵 89km에서 101·123km로 가속한 기록을 담았습니다. 1심은 감속하지 않은 점도 지적했습니다. 속도 근거가 검은 차 영상에만 있지 않습니다."
       },
       {
-        "start": 40,
+        "start": 44.041666666666664,
         "title": "그보다 앞선 흰 차의 125km 기록",
         "text": "고등법원은 흰 차가 낸 영상의 11시 57분 5초에 125km가 표시됐다고 적었습니다. 검은 차의 선행 추월·제동과 이후 흰 차가 따라잡는 모습이 함께 판단 대상이 됐습니다."
       },
       {
-        "start": 50,
+        "start": 54.041666666666664,
         "title": "반복된 차로 변경과 두 차의 위치",
         "text": "1심은 검은 차의 최소 7차례 차로 변경과 추격·접근·차간 거리를 함께 보았습니다. 도면과 사진은 설명용이며 사건 경로를 보정해 측정한 자료가 아닙니다."
       },
       {
-        "start": 60,
+        "start": 64.04166666666667,
         "title": "서로 다른 영상의 초를 바로 맞출 수 없음",
         "text": "1심 기록의 접촉 시각은 검은 차 영상 12시 0분 7초, 흰 차 영상 9초로 다릅니다. 각 출처의 시각을 확인하지 않고 초 단위로 일치하는 연속 영상으로 붙일 수 없습니다."
       },
       {
-        "start": 70,
+        "start": 74.04166666666667,
         "title": "41B의 103km와 연결로 제한 50km",
         "text": "고등법원은 검은 차의 41B 출구 구간에 103km 표시와 50km 제한이 있었다고 적었습니다. 모든 구간의 제한속도가 50km라는 뜻은 아닙니다. 화면 속 도로도 실제 현장이 아닙니다."
       },
       {
-        "start": 80,
+        "start": 84.04166666666667,
         "title": "출구 부근에서도 추격이 이어졌다는 판단",
         "text": "검은 차는 오른쪽 출구로 나가지 않았고 본선에 돌아왔을 때도 흰 차가 옆에 있었습니다. 법원은 시공간의 연결을 보았습니다. 출구가 언제나 추격을 끊거나 잇는 기준은 아닙니다."
       },
       {
-        "start": 90,
+        "start": 94.04166666666667,
         "title": "방어를 위해 제동했다는 설명은 불채택",
         "text": "흰 차는 앞차 감속 때문이라고 했지만, 법원은 잇단 급제동이 필요했다는 증거를 찾지 못했습니다. 제동등은 동작을 보여 줍니다. 이유는 추격 경위·도로 상태·다른 증거와 함께 판단합니다."
       },
       {
-        "start": 100,
+        "start": 104.04166666666667,
         "title": "측정값을 다투려면 구체적인 문제를 제시",
         "text": "검은 차 측은 위성·교량 오차를 제기했지만, 고등법원은 해당 값의 문제 설명이 없다고 보았습니다. 법원은 추격 영상도 근거로 삼았습니다. 모든 블랙박스에 오차가 없다는 인증은 아닙니다."
       },
       {
-        "start": 110,
+        "start": 114.04166666666667,
         "title": "다른 차가 지나갔다고 위험이 사라지지 않음",
         "text": "두 운전자는 다른 차의 정상 통행을 주장했지만, 법원은 많은 차량·좁은 간격·추격을 보았습니다. 도로에 두 차만 있었다는 판단도, 마지막에 누가 먼저 끼어들었는지만 본 판단도 아닙니다."
       },
       {
-        "start": 120,
+        "start": 124.04166666666667,
         "title": "형법 185조는 구체적인 위험을 요구",
         "text": "법원은 고속 주행·임의 차로 변경·부족한 간격으로 언제든 사고가 날 상태였다고 보았습니다. 제3자의 실제 부상은 필수가 아니지만 모든 과속이나 차로 변경이 이 죄에 해당하지는 않습니다."
       },
       {
-        "start": 130,
+        "start": 134.04166666666666,
         "title": "각 징역 5개월, 하루 1,000대만달러",
         "text": "신베이 113訴756은 2025년 4월 30일 두 사람에게 각 5개월과 벌금 환산 기준을 정했습니다. 1,000대만달러는 하루 환산액이며 별도 교통 과태료가 아닙니다. 실제 납부는 미확인입니다."
       },
       {
-        "start": 140,
+        "start": 144.04166666666666,
         "title": "고등법원은 두 사람의 항소를 기각",
         "text": "114上訴5220은 2026년 2월 25일 원심의 판단과 형량을 유지했습니다. 위험·부인 태도·개인 사정을 고려했습니다. 유사 사건마다 5개월이라는 고정형은 아닙니다."
       },
       {
-        "start": 150,
+        "start": 154.04166666666666,
         "title": "대법원은 법률상 상고 이유를 심사",
         "text": "115台上2709는 2026년 8월 27일 흰 차의 상고를 기각했습니다. 검은 차는 앞서 확정됐습니다. 377조상 사실 다툼의 반복은 적법한 상고 이유가 아닙니다. 사실심을 다시 하지 않았습니다."
       },
       {
-        "start": 160,
+        "start": 164.04166666666666,
         "title": "형사 판결은 민사 과실 비율을 정하지 않음",
         "text": "기록에 교통 위반 통지는 있지만 확정된 행정처분 결과는 없고 민사 손해도 판단하지 않았습니다. 징역 5개월이나 하루 1,000대만달러로 수리비·과실 비율·번호판 처분을 추정할 수 없습니다."
       },
       {
-        "start": 170,
+        "start": 174.04166666666666,
         "title": "자신에게 불리한 전후 장면도 원본에 보존",
         "text": "카메라마다 출처·전체 파일·표시 시각과 의문이 있는 수치를 함께 남깁니다. 직접 낸 영상이 설명을 뒷받침하면서 불리하게 작용할 수도 있습니다. 결과를 보장하지 않습니다."
       }
     ]
   },
   "column/en/taiwan-road-rage-freeway-chase-own-dashcam-too": {
-    "id": "own-dashcam-film-v1-en",
-    "src": "/videos/columns/own-dashcam-film-v1-en.mp4",
-    "poster": "/images/column-videos/own-dashcam-film-v1-en.jpg",
+    "id": "own-dashcam-film-v2-en",
+    "src": "/videos/columns/own-dashcam-film-v2-en.mp4",
+    "poster": "/images/column-videos/own-dashcam-film-v2-en.jpg",
     "width": 1280,
     "height": 720,
-    "title": "Whose camera showed 151 km/h? Two recordings and a continuous chase",
-    "description": "A silent 180-second film separates the cars' speed sources, positions, clocks, the 41B exit and braking claims, then explains concrete danger, five-month sentences and the Supreme Court's legal review.",
-    "disclosure": "People, equipment, roads, documents and screens are separate AI-generated illustrations, not the case's original dashcam footage or a precise reconstruction. The images do not measure speed, distance or time; numbers come from the judgments described in the captions. The courts examined both recordings. The 151 km/h display was not an independently measured exact speed for the white car. The Supreme Court dismissed that driver's legally deficient appeal; it did not retry the facts.",
-    "durationSeconds": 180,
-    "sceneCount": 18,
+    "title": "A fictional cut-in collision and the source of the 151 km/h reading",
+    "description": "A four-second fictional collision leads into the 180-second explanation of the cars’ speed sources, positions, clocks, the 41B exit and braking claims, concrete danger, five-month sentences and the Supreme Court’s legal review.",
+    "disclosure": "The opening four seconds show one fictional AI collision beginning during a lane change. They do not recreate the repeated chase, braking, exit route or surrounding traffic. Contact angle and vehicle damage are not measurements of the actual incident, and the scene cannot establish either driver’s liability. People, equipment, roads, documents and screens are separate AI-generated illustrations, not the case's original dashcam footage or a precise reconstruction. The images do not measure speed, distance or time; numbers come from the judgments described in the captions. The courts examined both recordings. The 151 km/h display was not an independently measured exact speed for the white car. The Supreme Court dismissed that driver's legally deficient appeal; it did not retry the facts.",
+    "durationSeconds": 184.04166666666666,
+    "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
+        "title": "Fictional scene: one rear-corner impact",
+        "text": "AI-generated illustration. It does not reproduce this case’s speed or establish either driver’s fault."
+      },
+      {
+        "start": 4.041666666666667,
         "title": "Two cameras, two original sources",
         "text": "Keep devices, memory cards and files separate by source. This AI filing scene shows no real case equipment or measurable case speed."
       },
       {
-        "start": 10,
+        "start": 14.041666666666668,
         "title": "A speed display and another car's position",
         "text": "The two cars drove south on National Freeway 1 on July 3, 2023 and later collided. A camera car's speed display and another car's movement are different evidence."
       },
       {
-        "start": 20,
+        "start": 24.041666666666668,
         "title": "151 km/h appeared on the black car's video",
         "text": "The High Court recorded 151 km/h at 11:58:21; the white car appeared ahead later. Positions suggest relative speed, not an exact 151 km/h for the white car."
       },
       {
-        "start": 30,
+        "start": 34.041666666666664,
         "title": "The white car's own 89, 101 and 123 km/h",
         "text": "Its video showed acceleration from 89 to 101 and 123 km/h around noon. The trial court also noted no slowdown; the evidence was not just the other camera."
       },
       {
-        "start": 40,
+        "start": 44.041666666666664,
         "title": "An earlier 125 km/h on the white car's video",
         "text": "The High Court recorded 125 km/h at 11:57:05 in the video that driver submitted. It showed both the black car's earlier pass and braking, and the white car catching up."
       },
       {
-        "start": 50,
+        "start": 54.041666666666664,
         "title": "Repeated lane changes and relative positions",
         "text": "The trial court counted at least seven black-car lane changes during the chase. These diagrams and photos are illustrative, not calibrated case measurements."
       },
       {
-        "start": 60,
+        "start": 64.04166666666667,
         "title": "Two recordings with different seconds",
         "text": "Trial record: black-car contact at 12:00:07; white-car contact at 12:00:09. Those timestamps cannot be joined into a synchronized sequence without checking."
       },
       {
-        "start": 70,
+        "start": 74.04166666666667,
         "title": "103 km/h at 41B and a 50 km/h ramp limit",
         "text": "The High Court noted a 103 km/h display and a 50 km/h limit in the exit area. It did not apply a 50 km/h limit to every section; this road image is fictional."
       },
       {
-        "start": 80,
+        "start": 84.04166666666667,
         "title": "The court found the chase continued",
         "text": "The black car rejoined instead of exiting, still beside the white car. That was a finding on this route, not a rule that every exit breaks or joins a chase."
       },
       {
-        "start": 90,
+        "start": 94.04166666666667,
         "title": "The defensive-braking explanation failed",
         "text": "White cited slower traffic; the court found no need for repeated hard stops. Brake lights show actions. Causes need the chase, road and other evidence."
       },
       {
-        "start": 100,
+        "start": 104.04166666666667,
         "title": "A challenge to speed needs a specific basis",
         "text": "Black's defence cited satellites and bridges but no specific flaw in its readings. The court also used chase footage; it did not certify every dashcam as error-free."
       },
       {
-        "start": 110,
+        "start": 114.04166666666667,
         "title": "Passing traffic did not remove the danger",
         "text": "Drivers cited normal traffic; the court noted many cars, close gaps and risk. It did not find an empty road or decide the case solely by who cut in last."
       },
       {
-        "start": 120,
+        "start": 124.04166666666667,
         "title": "Article 185 still requires concrete danger",
         "text": "High speed, arbitrary lane changes and short gaps created an imminent accident risk. Third-party injury was not required; not all speeding or lane changes qualify."
       },
       {
-        "start": 130,
+        "start": 134.04166666666666,
         "title": "Five months each; NT$1,000 per day",
         "text": "New Taipei 113訴756, April 30, 2025: five months each, with daily fine conversion. NT$1,000 was a conversion rate, not an extra traffic fine or verified payment."
       },
       {
-        "start": 140,
+        "start": 144.04166666666666,
         "title": "The High Court dismissed both appeals",
         "text": "Case 114上訴5220 upheld the convictions and sentences on February 25, 2026. It weighed danger, denial and personal circumstances; five months is not a fixed tariff."
       },
       {
-        "start": 150,
+        "start": 154.04166666666666,
         "title": "The Supreme Court reviewed legal grounds",
         "text": "115台上2709 dismissed white's appeal on August 27, 2026; black's case was final. Article 377 required legal grounds, not a retrial of repeated factual disputes."
       },
       {
-        "start": 160,
+        "start": 164.04166666666666,
         "title": "No civil liability percentage was decided",
         "text": "The files included traffic notices, but no final administrative outcome or civil award. Sentence length and daily rate do not set repair costs, fault or plate sanctions."
       },
       {
-        "start": 170,
+        "start": 174.04166666666666,
         "title": "Keep the context that may hurt your account",
         "text": "Preserve each source, full file, displayed clock and specifically disputed reading. Your video may help some claims and hurt others. Filing it promises no result."
       }
     ]
   },
   "column/ja/taiwan-road-rage-freeway-chase-own-dashcam-too": {
-    "id": "own-dashcam-film-v1-ja",
-    "src": "/videos/columns/own-dashcam-film-v1-ja.mp4",
-    "poster": "/images/column-videos/own-dashcam-film-v1-ja.jpg",
+    "id": "own-dashcam-film-v2-ja",
+    "src": "/videos/columns/own-dashcam-film-v2-ja.mp4",
+    "poster": "/images/column-videos/own-dashcam-film-v2-ja.jpg",
     "width": 1280,
     "height": 720,
-    "title": "151キロはどの車の記録か：二つの映像と続いた追走",
-    "description": "180秒の無音映像で、速度の出典、車の位置、時計の差、41B出口と制動の主張を分け、具体的危険、各5か月の刑、最高法院の法律審を整理します。",
-    "disclosure": "人物・機器・道路・書類・画面はAIで作った独立した架空の資料です。本件の元映像や精密な再現ではありません。画面から速度・車間距離・時間を測定せず、数字は字幕に示す判決の記録に基づきます。裁判所は両車の映像を別々に確認しました。151キロは白い車で独立に測定した正確な速度ではありません。最高法院は白い車の運転者の不適法な上訴を棄却し、事実審を最初からやり直したわけではありません。",
-    "durationSeconds": 180,
-    "sceneCount": 18,
+    "title": "割込み衝突の架空例と、151キロの記録の出典",
+    "description": "約4秒の架空の衝突場面に、180秒の説明が続きます。速度の出典、車の位置、時計の差、41B出口と制動の主張を分け、具体的危険、各5か月の刑、最高法院の法律審を整理します。",
+    "disclosure": "冒頭の約4秒は、車線変更の途中から一度の衝突を示すAIの架空場面です。本文の繰り返された追走・制動、出口の経路や周囲の交通量は再現していません。衝突角度や車両の損傷も本件の測定値ではなく、この場面から両運転者の責任は判断できません。 人物・機器・道路・書類・画面はAIで作った独立した架空の資料です。本件の元映像や精密な再現ではありません。画面から速度・車間距離・時間を測定せず、数字は字幕に示す判決の記録に基づきます。裁判所は両車の映像を別々に確認しました。151キロは白い車で独立に測定した正確な速度ではありません。最高法院は白い車の運転者の不適法な上訴を棄却し、事実審を最初からやり直したわけではありません。",
+    "durationSeconds": 184.04166666666666,
+    "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
+        "title": "架空の場面：前車の後部の角に衝突",
+        "text": "AIで作った衝突の例です。本件の速度や両運転者の過失を示す映像ではありません。"
+      },
+      {
+        "start": 4.041666666666667,
         "title": "二台のカメラと、出典が異なる原本",
         "text": "機器、カードとファイルを出典別に整理。冒頭はAIの架空の場面です。 本件の機器や映像ではなく、画面から事件の車の速度を読み取ることはできません。"
       },
       {
-        "start": 10,
+        "start": 14.041666666666668,
         "title": "速度表示と、別の車の位置を区別",
         "text": "両車は2023年7月3日、国道1号を南へ走行し、その後に衝突しました。 カメラを載せた車の速度表示と、映った別の車の動きは異なる種類の証拠です。"
       },
       {
-        "start": 20,
+        "start": 24.041666666666668,
         "title": "151キロは黒い車の映像の表示",
         "text": "高等法院は11時58分21秒の151キロ表示と、その後に前方へ現れた白い車を記録。 位置から相対速度は推論できても、白い車の正確な実測151キロとはいえません。"
       },
       {
-        "start": 30,
+        "start": 34.041666666666664,
         "title": "白い車にも89、101、123キロの記録",
         "text": "白い車の映像は正午ごろ、89キロから101、123キロへ加速した様子を示しました。 一審は減速しなかった点も指摘。速度の根拠は黒い車の数字だけではありません。"
       },
       {
-        "start": 40,
+        "start": 44.041666666666664,
         "title": "その前にも白い車の125キロ表示",
         "text": "高等法院は白い車側が提出した映像の11時57分5秒に125キロの表示を記録。 黒い車の先の追越し・制動と、白い車が追いつく動きの両方を評価しました。"
       },
       {
-        "start": 50,
+        "start": 54.041666666666664,
         "title": "繰り返す車線変更と二台の位置",
         "text": "一審は黒い車の少なくとも7回の車線変更と、追走・接近・車間を合わせて検討。 図面と写真は説明用であり、本件の経路を補正して測定した資料ではありません。"
       },
       {
-        "start": 60,
+        "start": 64.04166666666667,
         "title": "二つの映像の秒数は直接そろわない",
         "text": "一審の接触時刻は、黒い車の欄では12時0分7秒、白い車の欄では9秒です。 出典ごとの時計を確認せず、秒単位で一致する連続映像には組み合わせられません。"
       },
       {
-        "start": 70,
+        "start": 74.04166666666667,
         "title": "41Bの103キロと、ランプの制限50キロ",
         "text": "高等法院は41B出口付近の103キロ表示と、ランプの制限50キロを記録しました。 全区間が制限50キロではありません。画面の一般道路も実際の現場ではありません。"
       },
       {
-        "start": 80,
+        "start": 84.04166666666667,
         "title": "出口付近でも追走は続いたとの判断",
         "text": "黒い車は右の出口へ出ず、本線へ戻る際も白い車が横にいたと判断。 時空間の連続性を検討。出口が必ず追走を切る・つなぐという規則ではありません。"
       },
       {
-        "start": 90,
+        "start": 94.04166666666667,
         "title": "防御のための制動という説明は不採用",
         "text": "白い車側は前方の減速を理由に挙げましたが、裁判所は連続急制動の必要性を認めず。 制動灯は動作を示します。理由は追走、道路状況とほかの証拠で判断します。"
       },
       {
-        "start": 100,
+        "start": 104.04166666666667,
         "title": "速度の疑問には具体的な問題が必要",
         "text": "黒い車側は衛星や橋の誤差を主張。本機の具体的問題は示さずと高等法院は指摘。 追走映像も根拠です。全ドラレコに誤差がないと認証したのではありません。"
       },
       {
-        "start": 110,
+        "start": 114.04166666666667,
         "title": "ほかの車の通行だけでは危険は消えない",
         "text": "周囲の正常な通行という主張に対し、裁判所は交通量、狭い間隔と追走を記録。 二台しかいないとの認定ではなく、最後の割込みだけで決めたのでもありません。"
       },
       {
-        "start": 120,
+        "start": 124.04166666666667,
         "title": "刑法185条は具体的危険を要する",
         "text": "高速走行、任意の車線変更と不足する車間から、具体的な事故の危険を認定。 第三者の負傷は不要ですが、全ての速度超過や車線変更が同罪ではありません。"
       },
       {
-        "start": 130,
+        "start": 134.04166666666666,
         "title": "各五か月、換算は一日1,000台湾元",
         "text": "新北113訴756は2025年4月30日、二人に各五か月と易科罰金の日額を定めました。 1,000台湾元は一日の換算基準で、別の交通過料ではありません。納付は未確認です。"
       },
       {
-        "start": 140,
+        "start": 144.04166666666666,
         "title": "高等法院は二人の第二審上訴を棄却",
         "text": "114上訴5220は2026年2月25日、原判決と刑を維持しました。 危険、否認の態度、個人の事情を考慮。類似事件の刑が常に五か月ではありません。"
       },
       {
-        "start": 150,
+        "start": 154.04166666666666,
         "title": "最高法院は法律上の上訴理由を審査",
         "text": "115台上2709は2026年8月27日、白い車側の上訴を棄却。黒い車側は先に確定。 377条は法令違反を要求。事実の争いを初めから審理し直していません。"
       },
       {
-        "start": 160,
+        "start": 164.04166666666666,
         "title": "刑事判決は民事の過失割合を未判断",
         "text": "交通違反通知はありますが、行政処分の確定結果や民事損害の判断はありません。 五か月や日額1,000元から、修理費、過失割合、ナンバー処分は推定できません。"
       },
       {
-        "start": 170,
+        "start": 174.04166666666666,
         "title": "自分に不利な前後も原本に残す",
         "text": "各カメラの出典、全体のファイル、表示時刻と疑問のある数値を合わせて保存します。 自分の映像が説明を支える一方、不利に働くこともあります。結果は保証しません。"
       }

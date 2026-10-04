@@ -37,7 +37,14 @@ const fundsPaperworkCaptions = JSON.parse(await fs.readFile(new URL('../src/data
 const employmentMeetingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-meeting-video-captions.json', import.meta.url), 'utf8'));
 const employmentRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-records-video-captions.json', import.meta.url), 'utf8'));
 const employmentTermComparisonCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-term-comparison-video-captions.json', import.meta.url), 'utf8'));
+const familyDocumentSortingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/family-document-sorting-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(familyDocumentSortingCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-divorce-lawsuit-qna',
+    id: `family-document-sorting-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `family-document-sorting-v1-${locale}`, duration: 4.041667, contactTime: 1,
+    expectedDiagrams: 0, minBodyImages: 2, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
   ...Object.entries(employmentTermComparisonCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-mandatory-employment-period',
     id: `employment-term-comparison-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,

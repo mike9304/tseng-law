@@ -1,3 +1,4 @@
+import familyDocumentSortingCaptions from './family-document-sorting-video-captions.json';
 import employmentTermComparisonCaptions from './employment-term-comparison-video-captions.json';
 import employmentMeetingCaptions from './employment-meeting-video-captions.json';
 import employmentRecordsCaptions from './employment-records-video-captions.json';
@@ -90,6 +91,14 @@ const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsse
 };
 
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(familyDocumentSortingCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `family-document-sorting-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-divorce-lawsuit-qna`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   ...Object.fromEntries(Object.entries(employmentTermComparisonCaptions).map(([locale, caption]) => {
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
     const id = `employment-term-comparison-v1-${assetLocale}`;

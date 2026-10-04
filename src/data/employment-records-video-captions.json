@@ -18,5 +18,55 @@
     "title": "把表格紙放到打開的資料夾上",
     "description": "一人把一張表格紙放在打開的資料夾中的文件上。左手收回桌面，右手停在紙張邊緣。",
     "disclosure": "約四秒的AI生成虛構畫面。紙張不是真實的出勤或薪資紀錄，也不表示欠薪事實、資遣費請求成立或給付結果。"
+  },
+  "ar": {
+    "title": "وضع ورقة ذات جدول على ملف مفتوح",
+    "description": "يضع شخص ورقة ذات جدول فوق الأوراق في ملف مفتوح. تعود يده اليسرى إلى المكتب وتبقى اليمنى عند حافة الورقة.",
+    "disclosure": "مشهد خيالي مدته نحو أربع ثوانٍ أُنشئ بالذكاء الاصطناعي. الأوراق ليست سجلات حضور أو رواتب حقيقية، ولا تثبت أجوراً غير مدفوعة أو صحة مطالبة أو دفع بدل إنهاء الخدمة."
+  },
+  "bg": {
+    "title": "Поставяне на лист с таблица върху отворена папка",
+    "description": "Човек поставя един лист с таблица върху документите в отворена папка. Лявата му ръка се връща на бюрото, а дясната остава до ръба на листа.",
+    "disclosure": "Измислена сцена с продължителност около четири секунди, създадена с AI. Листовете не са истински отчети за присъствие или заплати и не доказват неизплатено възнаграждение, основателен иск или изплащане на обезщетение."
+  },
+  "bn": {
+    "title": "খোলা ফোল্ডারে ছক আঁকা কাগজ রাখা",
+    "description": "একজন ব্যক্তি ছক আঁকা একটি কাগজ খোলা ফোল্ডারের নথিগুলোর ওপর রাখেন। বাঁ হাত টেবিলে ফিরিয়ে আনেন এবং ডান হাত কাগজের কিনারায় রাখেন।",
+    "disclosure": "AI দিয়ে তৈরি প্রায় চার সেকেন্ডের কাল্পনিক দৃশ্য। কাগজগুলো আসল উপস্থিতি বা বেতনের নথি নয় এবং বকেয়া মজুরি, দাবির বৈধতা বা ছাঁটাই-ক্ষতিপূরণ প্রদান প্রমাণ করে না।"
+  },
+  "ca": {
+    "title": "Col·locar un full amb una taula en una carpeta oberta",
+    "description": "Una persona posa un full amb una taula damunt dels papers d’una carpeta oberta. La mà esquerra torna a l’escriptori i la dreta queda a la vora del full.",
+    "disclosure": "Escena fictícia d’uns quatre segons generada amb IA. Els papers no són registres reals d’assistència o de nòmines i no acrediten salaris impagats, la validesa d’una reclamació ni el pagament d’una indemnització per acomiadament."
+  },
+  "cs": {
+    "title": "Položení listu s tabulkou do otevřené složky",
+    "description": "Člověk položí jeden list s tabulkou na papíry v otevřené složce. Levou ruku vrátí na stůl a pravou nechá u okraje listu.",
+    "disclosure": "Fiktivní scéna o délce přibližně čtyř sekund vytvořená pomocí AI. Papíry nejsou skutečnými záznamy docházky ani mezd a neprokazují nevyplacenou mzdu, oprávněný nárok ani výplatu odstupného."
+  },
+  "da": {
+    "title": "Et ark med en tabel lægges i en åben mappe",
+    "description": "En person lægger et ark med en tabel oven på papirerne i en åben mappe. Venstre hånd vender tilbage til bordet, mens højre hånd bliver ved arkets kant.",
+    "disclosure": "En fiktiv scene på cirka fire sekunder skabt med AI. Papirerne er ikke virkelige fremmøde- eller lønoplysninger og dokumenterer ikke ubetalt løn, et berettiget krav eller udbetaling af godtgørelse ved afskedigelse."
+  },
+  "de": {
+    "title": "Ein Blatt mit einer Tabelle kommt in die offene Mappe",
+    "description": "Eine Person legt ein Blatt mit einer Tabelle auf die Papiere in einer offenen Mappe. Die linke Hand kehrt auf den Tisch zurück, die rechte bleibt am Blattrand.",
+    "disclosure": "Eine etwa vier Sekunden lange, mit KI erzeugte fiktive Szene. Die Papiere sind keine echten Anwesenheits- oder Lohnunterlagen und belegen weder ausstehenden Lohn noch einen berechtigten Anspruch oder eine Abfindungszahlung."
+  },
+  "el": {
+    "title": "Τοποθέτηση φύλλου με πίνακα σε ανοιχτό φάκελο",
+    "description": "Ένα άτομο βάζει ένα φύλλο με πίνακα πάνω στα χαρτιά ενός ανοιχτού φακέλου. Το αριστερό χέρι επιστρέφει στο γραφείο και το δεξί μένει στην άκρη του φύλλου.",
+    "disclosure": "Φανταστική σκηνή περίπου τεσσάρων δευτερολέπτων, δημιουργημένη με τεχνητή νοημοσύνη. Τα χαρτιά δεν είναι πραγματικά αρχεία παρουσίας ή μισθοδοσίας και δεν αποδεικνύουν απλήρωτες αποδοχές, βάσιμη αξίωση ή καταβολή αποζημίωσης απόλυσης."
+  },
+  "es": {
+    "title": "Una hoja con una tabla se coloca en una carpeta abierta",
+    "description": "Una persona coloca una hoja con una tabla sobre los papeles de una carpeta abierta. La mano izquierda vuelve al escritorio y la derecha permanece en el borde de la hoja.",
+    "disclosure": "Escena ficticia de unos cuatro segundos generada con IA. Los papeles no son registros reales de asistencia o nóminas y no acreditan salarios impagados, una reclamación válida ni el pago de una indemnización por despido."
+  },
+  "et": {
+    "title": "Tabeliga leht pannakse avatud kausta",
+    "description": "Inimene asetab ühe tabeliga lehe avatud kaustas olevate paberite peale. Vasak käsi liigub tagasi lauale ja parem jääb lehe serva juurde.",
+    "disclosure": "Umbes neljasekundiline väljamõeldud stseen, mis on loodud tehisintellektiga. Paberid ei ole tegelikud kohaloleku- ega palgaandmed ning need ei tõenda maksmata töötasu, põhjendatud nõuet ega lahkumishüvitise maksmist."
   }
 }

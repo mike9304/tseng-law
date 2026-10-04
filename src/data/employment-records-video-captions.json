@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "표가 그려진 종이를 파일 위에 놓는 장면",
+    "description": "한 사람이 표가 그려진 종이 한 장을 열린 파일 위에 올려놓습니다. 왼손을 거두고 오른손을 종이 가장자리에 둡니다.",
+    "disclosure": "AI로 만든 약 4초의 가상 장면입니다. 실제 근태·급여 자료가 아니며, 임금 체불이나 퇴직금 청구·지급 결과를 보여주지 않습니다."
+  },
+  "en": {
+    "title": "Placing a grid sheet on an open folder",
+    "description": "The person moves one grid sheet onto the papers in an open folder. Their left hand returns to the desk while the right rests at the sheet’s edge.",
+    "disclosure": "A fictional, approximately four-second scene generated with AI. The papers are not actual attendance or payroll records and do not establish unpaid wages, a valid claim or a severance payment."
+  },
+  "ja": {
+    "title": "表のある紙を開いたファイルに置く",
+    "description": "机に向かう人が、表のある紙を開いたファイルの書類の上に置きます。左手を机に戻し、右手を紙の端に添えます。",
+    "disclosure": "AIで生成した約4秒の架空の場面です。実際の勤怠記録や給与明細ではなく、賃金の未払い、資遣費の請求や支払いの結果を示すものでもありません。"
+  },
+  "zh-hant": {
+    "title": "把表格紙放到打開的資料夾上",
+    "description": "一人把一張表格紙放在打開的資料夾中的文件上。左手收回桌面，右手停在紙張邊緣。",
+    "disclosure": "約四秒的AI生成虛構畫面。紙張不是真實的出勤或薪資紀錄，也不表示欠薪事實、資遣費請求成立或給付結果。"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "면담 중 서류를 돌려주는 장면",
+    "description": "오른쪽에 앉은 사람이 종이를 맞은편으로 밀어 돌려줍니다. 종이를 놓은 뒤 손을 펜 옆으로 거둡니다.",
+    "disclosure": "AI로 만든 약 4초의 가상 면담입니다. 실제 의뢰인·서류나 서명, 해고 또는 퇴직금 지급 결과를 보여주지 않습니다."
+  },
+  "en": {
+    "title": "A paper is returned across the meeting table",
+    "description": "The person on the right slides one sheet back toward the person opposite. After releasing it, they draw their hand back beside the pen.",
+    "disclosure": "A fictional, approximately four-second scene generated with AI. It does not show a real client, authentic employment records, a signature, an actual termination or a severance payment."
+  },
+  "ja": {
+    "title": "面談の席で書類を返す場面",
+    "description": "右側に座る人が、向かいの人へ紙を滑らせて返します。紙から手を離し、ペンの横に戻します。",
+    "disclosure": "AIで生成した約4秒の架空の面談場面です。実在の依頼者、実際の書類や署名、解雇、資遣費の支払いを示すものではありません。"
+  },
+  "zh-hant": {
+    "title": "面談時把文件推回對方",
+    "description": "右側的人把一張紙推回對面。放開紙張後，把手移回筆旁。",
+    "disclosure": "約四秒的AI生成虛構面談。不呈現真實當事人、實際文件、簽署、解僱或資遣費給付結果。"
+  }
+}

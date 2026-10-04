@@ -1,0 +1,484 @@
+{
+  "reviewedAt": "2026-10-04T07:21:05.782572+00:00",
+  "reviewer": "Codex",
+  "scope": "Two new fictional scenes on 8 individually reviewed pages in 4 locales; remaining 90 labor-severance language pages remain pending.",
+  "workflow": "Codex generated and directly reviewed each first image and derived end image. Grok4.7 made one reference_to_video call per scene. All 97 native frames per clip inspected, with selected full-resolution hand/paper checks.",
+  "retiming": false,
+  "youtubeUploaded": false,
+  "nativeOrLegalProfessionalReview": false,
+  "labelPolicy": "KO/EN/JA/zh-hant labels rendered in the corresponding media; each of the eight pages has a complete localized caption and AI disclosure.",
+  "editorialRules": {
+    "file": "docs/columns/EDITORIAL-VOICE.md",
+    "sha256": "f4736c269436ceaf94c4d726cf9a1687d6b8b1df4823cd14f84afd7a17ed3e2c",
+    "fullTextRead": true
+  },
+  "sceneReviews": {
+    "employment-meeting": {
+      "reviewedAt": "2026-10-04T07:17:41.763788+00:00",
+      "reviewer": "Codex",
+      "verdict": "approved-for-packaging",
+      "rawSha256": "afcc82a097b096a7051c2f29049cbef9b89dd1cb90e1dec845bdc00457736ae6",
+      "decodedFrames": 97,
+      "allFramesViewed": true,
+      "method": "Direct inspection of all seven16-frame contact sheets and four selected native-resolution frames. Records sheets02–05 were re-opened after a truncated tool response; the truncated output was not credited.",
+      "contactSheets": [
+        "/Users/son7/tseng-law-column-videos/qa/employment-meeting-v1/all-frames-01.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-meeting-v1/all-frames-02.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-meeting-v1/all-frames-03.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-meeting-v1/all-frames-04.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-meeting-v1/all-frames-05.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-meeting-v1/all-frames-06.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-meeting-v1/all-frames-07.jpg"
+      ],
+      "nativeDuration": 4.041667,
+      "retiming": false,
+      "loop": false,
+      "selectedNativeFramesZeroBased": [
+        8,
+        16,
+        21,
+        28
+      ],
+      "motion": "The employee slides a single opaque sheet left toward the other adult during roughly 0.17–0.75 seconds, releases it at about0.83 seconds, withdraws the moving hand and settles both hands beside the pen by about1.33 seconds. The manager keeps two clasped hands; the settled pose continues through4 seconds.",
+      "limitations": "Faint lines vary slightly and the moving fingers soften with motion blur. No extra hands, duplicated or translucent paper, discontinuous slide, signing or money observed.",
+      "scope": "Fictional document handling only; no authentic employment record, real client, signature, dismissal finding, wage arrears finding or severance entitlement/payment.",
+      "browserPlayback": "Pending packaging and local browser review."
+    },
+    "employment-records": {
+      "reviewedAt": "2026-10-04T07:17:41.764734+00:00",
+      "reviewer": "Codex",
+      "verdict": "approved-for-packaging",
+      "rawSha256": "299206a3395777121574bcc6785938199e21f3e813255340df2c23ca46f30415",
+      "decodedFrames": 97,
+      "allFramesViewed": true,
+      "method": "Direct inspection of all seven16-frame contact sheets and four selected native-resolution frames. Records sheets02–05 were re-opened after a truncated tool response; the truncated output was not credited.",
+      "contactSheets": [
+        "/Users/son7/tseng-law-column-videos/qa/employment-records-v1/all-frames-01.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-records-v1/all-frames-02.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-records-v1/all-frames-03.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-records-v1/all-frames-04.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-records-v1/all-frames-05.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-records-v1/all-frames-06.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-records-v1/all-frames-07.jpg"
+      ],
+      "nativeDuration": 4.041667,
+      "retiming": false,
+      "loop": false,
+      "selectedNativeFramesZeroBased": [
+        8,
+        13,
+        18,
+        24
+      ],
+      "motion": "The single landscape sheet moves right over the open folder. The left hand releases by roughly0.33 seconds and returns to the desk; the right hand keeps the lower-right edge and lowers the sheet onto the stack, settling by roughly1.3 seconds. Two hands remain coherent, with the final pose held through4 seconds.",
+      "limitations": "Fine vertical grid lines fade in the moving frames and return as the sheet settles; this is not a faithful reproduction of an authentic record. No duplicated hands, vanishing or translucent sheet, teleport or readable personal information observed.",
+      "scope": "Fictional document handling only; no authentic employment record, real client, signature, dismissal finding, wage arrears finding or severance entitlement/payment.",
+      "browserPlayback": "Pending packaging and local browser review."
+    }
+  },
+  "generation": {
+    "employment-meeting": {
+      "ingestedAt": "2026-10-04T07:09:46.280947+00:00",
+      "scene": "employment-meeting",
+      "version": "v1",
+      "generator": "Grok 4.7 reference_to_video",
+      "toolCallId": "call-caf37858-ff0d-4e51-b73a-ba1740c874cf-0",
+      "sessionId": "01a105ba-e1d8-7931-9f63-b18b298c5871",
+      "sourcePath": "/Users/son7/.grok/sessions/%2FUsers%2Fson7%2Ftseng-law-column-videos/01a105ba-e1d8-7931-9f63-b18b298c5871/videos/1.mp4",
+      "rawPath": "/Users/son7/tseng-law-column-videos/assets/employment-meeting/grok-v1.mp4",
+      "sha256": "afcc82a097b096a7051c2f29049cbef9b89dd1cb90e1dec845bdc00457736ae6",
+      "job": "/Users/son7/tseng-law-column-videos/jobs/employment-meeting-v1.ndjson",
+      "promptFile": "/Users/son7/tseng-law-column-videos/jobs/employment-meeting-v1.txt",
+      "toolInput": {
+        "prompt": "One continuous fixed-camera real-time workplace meeting shot. The sage-cardigan employee on the right slides the one existing lined sheet LEFT about one sheet-width toward the manager, releases it and withdraws the touching hand to rest near the other hand and black pen. Manager hands stay clasped and stationary. Finish this one clear paper-return motion by 1.6667 seconds, then keep the end pose with tiny natural motion through4 seconds. Preserve exactly two anonymous adults, four coherent hands, the solid opaque sheet, faint lines, folder, pen, blank badge and camera. Physical continuous sliding only: no fade, dissolve, ghosting, extra paper or limbs, teleport, signing, writing, money, approval or case outcome. Do not move the camera. Fictional unsigned-paper return, not a real dismissal or legal finding.",
+        "aspect_ratio": "16:9",
+        "duration": 4,
+        "resolution_name": "720p",
+        "first_frame": "/Users/son7/tseng-law-column-videos/assets/employment-meeting/first-frame-v1.png",
+        "keyframes": [
+          {
+            "image": "/Users/son7/tseng-law-column-videos/assets/employment-meeting/end-frame-v1.png",
+            "timestamp_s": 1.666667
+          }
+        ],
+        "last_frame": "/Users/son7/tseng-law-column-videos/assets/employment-meeting/end-frame-v1.png"
+      },
+      "discoveryTools": [],
+      "decodedFrames": 97,
+      "frameRate": "24/1",
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 4.041667,
+      "review": "pending direct visual inspection; not approved or published",
+      "retiming": false,
+      "auxiliaryFailures": []
+    },
+    "employment-records": {
+      "ingestedAt": "2026-10-04T07:09:47.057232+00:00",
+      "scene": "employment-records",
+      "version": "v1",
+      "generator": "Grok 4.7 reference_to_video",
+      "toolCallId": "call-554dd5c0-fad9-4176-8e14-bdd217d7efe6-0",
+      "sessionId": "01a105ba-e301-7b02-8997-5300c9eeb95e",
+      "sourcePath": "/Users/son7/.grok/sessions/%2FUsers%2Fson7%2Ftseng-law-column-videos/01a105ba-e301-7b02-8997-5300c9eeb95e/videos/1.mp4",
+      "rawPath": "/Users/son7/tseng-law-column-videos/assets/employment-records/grok-v1.mp4",
+      "sha256": "299206a3395777121574bcc6785938199e21f3e813255340df2c23ca46f30415",
+      "job": "/Users/son7/tseng-law-column-videos/jobs/employment-records-v1.ndjson",
+      "promptFile": "/Users/son7/tseng-law-column-videos/jobs/employment-records-v1.txt",
+      "toolInput": {
+        "prompt": "One continuous fixed-camera real-time desk shot. The person moves the single held landscape grid sheet smoothly RIGHT and lowers it onto the existing paper stack in the open teal folder. Keep the grid sheet landscape throughout, do not rotate into portrait or change its shape or grid. The left hand releases and withdraws to the left desk; the right hand settles at the lower-right edge of the placed sheet. Complete this one paper-placement action by1.6667 seconds, then hold the settled pose with tiny natural motion through4 seconds. Preserve exactly one adult, two coherent hands, stable sweater, folder, existing sheets, notebook, pen, mug, blank badge and camera. No extra sheets, money, signatures, readable text, vanishing objects, translucent paper, dissolve, zoom or cut. Generic fictional work-record organization, no actual earnings or completed claim.",
+        "aspect_ratio": "16:9",
+        "duration": 4,
+        "resolution_name": "720p",
+        "first_frame": "/Users/son7/tseng-law-column-videos/assets/employment-records/first-frame-v1.png",
+        "keyframes": [
+          {
+            "image": "/Users/son7/tseng-law-column-videos/assets/employment-records/end-frame-v1.png",
+            "timestamp_s": 1.666667
+          }
+        ],
+        "last_frame": "/Users/son7/tseng-law-column-videos/assets/employment-records/end-frame-v1.png"
+      },
+      "discoveryTools": [],
+      "decodedFrames": 97,
+      "frameRate": "24/1",
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 4.041667,
+      "review": "pending direct visual inspection; not approved or published",
+      "retiming": false,
+      "auxiliaryFailures": []
+    }
+  },
+  "captionReviews": [
+    {
+      "articleKey": "en/column/taiwan-labor-severance-law",
+      "sourceFile": "src/content/columns-en/008-taiwan-labor-severance-law.md",
+      "sourceSha256": "4e10115d13e7c5e71ef920249b828682d4235ec8f92be7b4a83a2172e385ac65",
+      "captionLanguage": "en",
+      "caption": {
+        "title": "A paper is returned across the meeting table",
+        "description": "The person on the right slides one sheet back toward the person opposite. After releasing it, they draw their hand back beside the pen.",
+        "disclosure": "A fictional, approximately four-second scene generated with AI. It does not show a real client, authentic employment records, a signature, an actual termination or a severance payment."
+      },
+      "captionSha256": "e92eec021e3238f0be25e16a857afd8b68cc28e8ce56d6a426854c5248b3b56e",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "A paper is returned across the meeting table",
+        "description": "The person on the right slides one sheet back toward the person opposite. After releasing it, they draw their hand back beside the pen.",
+        "disclosure": "A fictional, approximately four-second scene generated with AI. It does not show a real client, authentic employment records, a signature, an actual termination or a severance payment."
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-en/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "f453c5793f3e263fda3c724ea209fe69d8f14ce959d1192aaeb22e568b0fd820",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-en/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "6771fe209dedeae03a73d1d1f28ff60cda625ad46febe468fa35b4e0b5a36754",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-en/200-taiwan-protection-order-foreign-resident.md",
+          "sourceSha256": "cfe574b3f0efc0d55eb80bc485c893318179e3ae8e61769ad04e400b7991f3a3",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full English source and FAQ read. Korea is a labeled comparison, not every foreign jurisdiction. Broad only-employer-dismissal/no-voluntary-resignation assertions in opening/FAQ must not be copied into caption. Preserve distinct statutory grounds and pension-scheme calculations, distinguish fictional meeting from actual client B case and actual severance payment. No claim that filming proves dismissal, or that recording is automatically lawful.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ja/column/taiwan-labor-severance-law",
+      "sourceFile": "src/content/columns-ja/008-taiwan-labor-severance-law.md",
+      "sourceSha256": "044664827b55ef1ef68d023dea91637c1434a5d5ce8ddac6337ddf8700ae0048",
+      "captionLanguage": "ja",
+      "caption": {
+        "title": "面談の席で書類を返す場面",
+        "description": "右側に座る人が、向かいの人へ紙を滑らせて返します。紙から手を離し、ペンの横に戻します。",
+        "disclosure": "AIで生成した約4秒の架空の面談場面です。実在の依頼者、実際の書類や署名、解雇、資遣費の支払いを示すものではありません。"
+      },
+      "captionSha256": "7615b27fca57363953d44726aec974730a4ac96f08e263b46ede5e5927872b86",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "面談の席で書類を返す場面",
+        "description": "右側に座る人が、向かいの人へ紙を滑らせて返します。紙から手を離し、ペンの横に戻します。",
+        "disclosure": "AIで生成した約4秒の架空の面談場面です。実在の依頼者、実際の書類や署名、解雇、資遣費の支払いを示すものではありません。"
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "f6dc7f531b01426f5fb800e88cbe140c6a8aee6d570bc25d4166de7f1da905cd",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+          "sourceSha256": "57f9847db0e103e8c2045f5fed18489c106131be298ef8ff53d4d3ae2a5d7c3e",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "ce3246410a7f780b6da753b44e3e701f19bf38877bc62031057bf7fea3a3f663",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full Japanese source and FAQ read. Korean comparison is labeled. Broad opening/FAQ no-voluntary-resignation assertion must not be copied into a universal caption. Preserve Art11/12 distinctions, old/new pension formula conditions, fictional-versus-real-client separation, and no guaranteed severance result or recording-legality claim.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ko/column/taiwan-labor-severance-law",
+      "sourceFile": "src/content/columns/008-taiwan-labor-severance-law.md",
+      "sourceSha256": "b3a30a747e796c637d31819636f3ea47f0646947d10486ece5cb861344bc11ab",
+      "captionLanguage": "ko",
+      "caption": {
+        "title": "면담 중 서류를 돌려주는 장면",
+        "description": "오른쪽에 앉은 사람이 종이를 맞은편으로 밀어 돌려줍니다. 종이를 놓은 뒤 손을 펜 옆으로 거둡니다.",
+        "disclosure": "AI로 만든 약 4초의 가상 면담입니다. 실제 의뢰인·서류나 서명, 해고 또는 퇴직금 지급 결과를 보여주지 않습니다."
+      },
+      "captionSha256": "19e2583768dab946701fea916528b5a0f302d8ecb0451d0e1b10ddc47f904eb8",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "면담 중 서류를 돌려주는 장면",
+        "description": "오른쪽에 앉은 사람이 종이를 맞은편으로 밀어 돌려줍니다. 종이를 놓은 뒤 손을 펜 옆으로 거둡니다.",
+        "disclosure": "AI로 만든 약 4초의 가상 면담입니다. 실제 의뢰인·서류나 서명, 해고 또는 퇴직금 지급 결과를 보여주지 않습니다."
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "d6e3af70fa8e44d42db7953c59a9f291b3ad149cb3a5f6b90de4cf6f4a37d0bd",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "fdc5b485a3d035770140a30a938ca4acd138654ca9f6e51a78fe43b1b4dbb14b",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+          "sourceSha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full Korean body and FAQ read. Opening/FAQ generalizes employee-initiated termination; do not copy a universal no-severance rule into the caption. Body distinguishes Art11 economic dismissal, Art12 disciplinary dismissal, Art17 old-scheme and retirement ordinance Art12 new-scheme calculations, and a pressured pay-cut/signing case. Media must not present the fictional meeting as a real client or prove entitlement, dismissal legality, successful payout, or permission to record.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "zh-hant/column/taiwan-labor-severance-law",
+      "sourceFile": "src/content/columns-zh/008-taiwan-labor-severance-law.md",
+      "sourceSha256": "adc5724802f6d3cef0edb52dc8202278ae3a80be4fb6d22d25bdfa60591d3795",
+      "captionLanguage": "zh-hant",
+      "caption": {
+        "title": "面談時把文件推回對方",
+        "description": "右側的人把一張紙推回對面。放開紙張後，把手移回筆旁。",
+        "disclosure": "約四秒的AI生成虛構面談。不呈現真實當事人、實際文件、簽署、解僱或資遣費給付結果。"
+      },
+      "captionSha256": "8b02ea68146124e5deed2c97b3379f66f67d773b57738e0149321c01fca3e5c9",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "面談時把文件推回對方",
+        "description": "右側的人把一張紙推回對面。放開紙張後，把手移回筆旁。",
+        "disclosure": "約四秒的AI生成虛構面談。不呈現真實當事人、實際文件、簽署、解僱或資遣費給付結果。"
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-zh/206-taiwan-freeway-warning-triangle-time-ability-evidence.md",
+          "sourceSha256": "96624c962547cb572988f15f664f514d42f729fd7f85805ead4b1b4936a01767",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-zh/205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md",
+          "sourceSha256": "7dbfb065c476d6871ccb196fd5f92a136542b516dad9fcbc53454caeb699794f",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full Traditional Chinese source and FAQ read. More qualified than KO/EN/JA: expressly distinguishes Art15/18 ordinary resignation, Art11 employer termination and Art14 employee termination; Art12 requires enumerated grounds, serious breach and specified30-day employer limit. Ending conditional on entitlement, not automatic severance. Do not flatten these distinctions into captions or portray actual client B, proved dismissal or successful payout.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "en/column/taiwan-voluntary-resignation-severance",
+      "sourceFile": "src/content/columns-en/009-taiwan-voluntary-resignation-severance.md",
+      "sourceSha256": "70d09b482f06914a85117cc22b72bd218881aebd6b2540dccdde232e8e99188e",
+      "captionLanguage": "en",
+      "caption": {
+        "title": "Placing a grid sheet on an open folder",
+        "description": "The person moves one grid sheet onto the papers in an open folder. Their left hand returns to the desk while the right rests at the sheet’s edge.",
+        "disclosure": "A fictional, approximately four-second scene generated with AI. The papers are not actual attendance or payroll records and do not establish unpaid wages, a valid claim or a severance payment."
+      },
+      "captionSha256": "af5414e0b7bf635aab733a88f5ba7e82e9c79a4d554a7b73226a0a3f9285627d",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "Placing a grid sheet on an open folder",
+        "description": "The person moves one grid sheet onto the papers in an open folder. Their left hand returns to the desk while the right rests at the sheet’s edge.",
+        "disclosure": "A fictional, approximately four-second scene generated with AI. The papers are not actual attendance or payroll records and do not establish unpaid wages, a valid claim or a severance payment."
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-en/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "f453c5793f3e263fda3c724ea209fe69d8f14ce959d1192aaeb22e568b0fd820",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-en/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "6771fe209dedeae03a73d1d1f28ff60cda625ad46febe468fa35b4e0b5a36754",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-en/200-taiwan-protection-order-foreign-resident.md",
+          "sourceSha256": "cfe574b3f0efc0d55eb80bc485c893318179e3ae8e61769ad04e400b7991f3a3",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full English source read. General voluntary-resignation rule has Art14 exceptions; item1/6 awareness and resulting-harm timing conditions are specified in body. Summary shortens the deadline statement; do not generalize every case to30 days. Do not portray ordinary resignation as guaranteeing payment or infer employer illegality from a generic payroll/document scene.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ja/column/taiwan-voluntary-resignation-severance",
+      "sourceFile": "src/content/columns-ja/009-taiwan-voluntary-resignation-severance.md",
+      "sourceSha256": "4bc088963a538a544dba14e287fe01740f15fb8143d5af3c374ece5924362b27",
+      "captionLanguage": "ja",
+      "caption": {
+        "title": "表のある紙を開いたファイルに置く",
+        "description": "机に向かう人が、表のある紙を開いたファイルの書類の上に置きます。左手を机に戻し、右手を紙の端に添えます。",
+        "disclosure": "AIで生成した約4秒の架空の場面です。実際の勤怠記録や給与明細ではなく、賃金の未払い、資遣費の請求や支払いの結果を示すものでもありません。"
+      },
+      "captionSha256": "c6422e3b9ef634ab3cddc04aaf26e2f6cea5f383945bafd8184f6ca53aa4cda2",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "表のある紙を開いたファイルに置く",
+        "description": "机に向かう人が、表のある紙を開いたファイルの書類の上に置きます。左手を机に戻し、右手を紙の端に添えます。",
+        "disclosure": "AIで生成した約4秒の架空の場面です。実際の勤怠記録や給与明細ではなく、賃金の未払い、資遣費の請求や支払いの結果を示すものでもありません。"
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "f6dc7f531b01426f5fb800e88cbe140c6a8aee6d570bc25d4166de7f1da905cd",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+          "sourceSha256": "57f9847db0e103e8c2045f5fed18489c106131be298ef8ff53d4d3ae2a5d7c3e",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "ce3246410a7f780b6da753b44e3e701f19bf38877bc62031057bf7fea3a3f663",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full Japanese source read. Preserve Art14 grounds and Art17 reference, items1/6 and harm-awareness30-day conditions. Existing related-article links point to Korean pages; do not alter source links in this video task. Caption must only describe visible actions, not a completed claim, payment or a legal finding.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ko/column/taiwan-voluntary-resignation-severance",
+      "sourceFile": "src/content/columns/009-taiwan-voluntary-resignation-severance.md",
+      "sourceSha256": "a63a7e756e16dbfc1537e31d10b3fd0c55718fe7a963a0674827309083182445",
+      "captionLanguage": "ko",
+      "caption": {
+        "title": "표가 그려진 종이를 파일 위에 놓는 장면",
+        "description": "한 사람이 표가 그려진 종이 한 장을 열린 파일 위에 올려놓습니다. 왼손을 거두고 오른손을 종이 가장자리에 둡니다.",
+        "disclosure": "AI로 만든 약 4초의 가상 장면입니다. 실제 근태·급여 자료가 아니며, 임금 체불이나 퇴직금 청구·지급 결과를 보여주지 않습니다."
+      },
+      "captionSha256": "3414929e8dff53d9e0fe892dcbb73167dcd6ec96c34db7168c6a3317efeb7b03",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "표가 그려진 종이를 파일 위에 놓는 장면",
+        "description": "한 사람이 표가 그려진 종이 한 장을 열린 파일 위에 올려놓습니다. 왼손을 거두고 오른손을 종이 가장자리에 둡니다.",
+        "disclosure": "AI로 만든 약 4초의 가상 장면입니다. 실제 근태·급여 자료가 아니며, 임금 체불이나 퇴직금 청구·지급 결과를 보여주지 않습니다."
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "d6e3af70fa8e44d42db7953c59a9f291b3ad149cb3a5f6b90de4cf6f4a37d0bd",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "fdc5b485a3d035770140a30a938ca4acd138654ca9f6e51a78fe43b1b4dbb14b",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+          "sourceSha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full Korean body read. Art14 employee-initiated termination exceptions and its use of Art17 are distinct from ordinary voluntary resignation. Art14 items1/6 have specified 30-day conditions. Caption must not turn these into a universal resignation payout or deadline, depict a completed claim or imply real payroll evidence.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "zh-hant/column/taiwan-voluntary-resignation-severance",
+      "sourceFile": "src/content/columns-zh/009-taiwan-voluntary-resignation-severance.md",
+      "sourceSha256": "47b4a40ea8f832bbca5102b8dc5d9ac8e883ab943d5a349c6d0ebf4ede2606a9",
+      "captionLanguage": "zh-hant",
+      "caption": {
+        "title": "把表格紙放到打開的資料夾上",
+        "description": "一人把一張表格紙放在打開的資料夾中的文件上。左手收回桌面，右手停在紙張邊緣。",
+        "disclosure": "約四秒的AI生成虛構畫面。紙張不是真實的出勤或薪資紀錄，也不表示欠薪事實、資遣費請求成立或給付結果。"
+      },
+      "captionSha256": "2047b30fb1e954e015f191da80faf6fd84723a840453b0f7482d94c63b0e98d8",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic records, signature, dismissal, wage arrears, entitlement or severance payment.",
+      "replacement": {
+        "title": "把表格紙放到打開的資料夾上",
+        "description": "一人把一張表格紙放在打開的資料夾中的文件上。左手收回桌面，右手停在紙張邊緣。",
+        "disclosure": "約四秒的AI生成虛構畫面。紙張不是真實的出勤或薪資紀錄，也不表示欠薪事實、資遣費請求成立或給付結果。"
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible paper return or placement; removing the next action clause loses the hand release and settling action; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-zh/206-taiwan-freeway-warning-triangle-time-ability-evidence.md",
+          "sourceSha256": "96624c962547cb572988f15f664f514d42f729fd7f85805ead4b1b4936a01767",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-zh/205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md",
+          "sourceSha256": "7dbfb065c476d6871ccb196fd5f92a136542b516dad9fcbc53454caeb699794f",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        },
+        {
+          "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/company-advanced/wave1-editorial-references.json: own-dashcam-cut-in-editorial-reference.json: prior directly reviewed excerpt, hash rechecked"
+        }
+      ],
+      "sourceReview": "Full Traditional Chinese source read. Expressly distinguishes Art14 from Art15. Includes additional Art14(3) exceptions for items2/4 (agent contract ended or treatment under health rules), item1/6 worker deadlines and employer Art12 limits; outcome depends on lawful termination, effectiveness and case facts. These qualifiers differ from shorter translations. Caption will describe fictional visible action only, not confer entitlement or universal30-day advice.",
+      "verdict": "approved-for-integration"
+    }
+  ],
+  "localAndPublicVerification": "Pending at integration; see external labor-severance-wave1 release evidence."
+}

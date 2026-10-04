@@ -1,3 +1,5 @@
+import employmentMeetingCaptions from './employment-meeting-video-captions.json';
+import employmentRecordsCaptions from './employment-records-video-captions.json';
 import premisesLeaseCaptions from './premises-lease-video-captions.json';
 import fundsPaperworkCaptions from './funds-paperwork-video-captions.json';
 import pursuitSelfSkidCaptions from './pursuit-self-skid-video-captions.json';
@@ -87,6 +89,22 @@ const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsse
 };
 
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(employmentMeetingCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `employment-meeting-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-labor-severance-law`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(employmentRecordsCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `employment-records-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-voluntary-resignation-severance`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   ...Object.fromEntries(Object.entries(premisesLeaseCaptions).map(([locale, caption]) => {
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
     const id = `premises-lease-v1-${assetLocale}`;

@@ -34,7 +34,21 @@ const ownDashcamCutInCaptions = JSON.parse(await fs.readFile(new URL('../src/dat
 const pursuitSelfSkidCaptions = JSON.parse(await fs.readFile(new URL('../src/data/pursuit-self-skid-video-captions.json', import.meta.url), 'utf8'));
 const premisesLeaseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/premises-lease-video-captions.json', import.meta.url), 'utf8'));
 const fundsPaperworkCaptions = JSON.parse(await fs.readFile(new URL('../src/data/funds-paperwork-video-captions.json', import.meta.url), 'utf8'));
+const employmentMeetingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-meeting-video-captions.json', import.meta.url), 'utf8'));
+const employmentRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-records-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(employmentMeetingCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-labor-severance-law',
+    id: `employment-meeting-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `employment-meeting-v1-${locale}`, duration: 4.041667, contactTime: 1,
+    expectedDiagrams: 0, minBodyImages: 2, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
+  ...Object.entries(employmentRecordsCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-voluntary-resignation-severance',
+    id: `employment-records-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `employment-records-v1-${locale}`, duration: 4.041667, contactTime: 1,
+    expectedDiagrams: 0, minBodyImages: 2, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
   ...Object.entries(premisesLeaseCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-company-establishment-advanced-1',
     id: `premises-lease-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,

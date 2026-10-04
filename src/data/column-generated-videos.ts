@@ -1,3 +1,4 @@
+import inheritanceRecordEnvelopeCaptions from './inheritance-record-envelope-video-captions.json';
 import familyDocumentSortingCaptions from './family-document-sorting-video-captions.json';
 import employmentTermComparisonCaptions from './employment-term-comparison-video-captions.json';
 import employmentMeetingCaptions from './employment-meeting-video-captions.json';
@@ -91,6 +92,14 @@ const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsse
 };
 
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(inheritanceRecordEnvelopeCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `inheritance-record-envelope-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-inheritance-custody-analysis`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   ...Object.fromEntries(Object.entries(familyDocumentSortingCaptions).map(([locale, caption]) => {
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
     const id = `family-document-sorting-v1-${assetLocale}`;

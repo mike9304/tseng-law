@@ -38,7 +38,14 @@ const employmentMeetingCaptions = JSON.parse(await fs.readFile(new URL('../src/d
 const employmentRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-records-video-captions.json', import.meta.url), 'utf8'));
 const employmentTermComparisonCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-term-comparison-video-captions.json', import.meta.url), 'utf8'));
 const familyDocumentSortingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/family-document-sorting-video-captions.json', import.meta.url), 'utf8'));
+const inheritanceRecordEnvelopeCaptions = JSON.parse(await fs.readFile(new URL('../src/data/inheritance-record-envelope-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(inheritanceRecordEnvelopeCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-inheritance-custody-analysis',
+    id: `inheritance-record-envelope-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `inheritance-record-envelope-v1-${locale}`, duration: 4.041667, contactTime: 1,
+    expectedDiagrams: 0, minBodyImages: 2, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
   ...Object.entries(familyDocumentSortingCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-divorce-lawsuit-qna',
     id: `family-document-sorting-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,

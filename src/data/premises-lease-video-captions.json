@@ -148,5 +148,100 @@
     "title": "Pelan ruang disorong ke seberang meja",
     "description": "Seorang pelawat menyorong pelan ruang di atas meja ke arah orang di hadapannya. Orang itu meletakkan tangan pada tepi kertas.",
     "disclosure": "Adegan rekaan yang dihasilkan dengan AI, sepanjang kira-kira empat saat. Adegan ini tidak memaparkan klien sebenar atau hartanah tertentu, penandatanganan perjanjian sewa, kelulusan bank atau permit untuk menjalankan perniagaan."
+  },
+  "nb": {
+    "title": "Plantegningen skyves over bordet",
+    "description": "En besøkende skyver en plantegning over bordet. Personen på den andre siden legger hånden på kanten av arket.",
+    "disclosure": "Fiktiv scene på omtrent fire sekunder, laget med kunstig intelligens. Den viser ikke faktiske klienter eller en bestemt eiendom, signering av leieavtale, bankgodkjenning eller driftstillatelse."
+  },
+  "nl": {
+    "title": "Een plattegrond schuift over tafel",
+    "description": "Een bezoeker schuift een plattegrond over tafel. De persoon aan de overkant legt een hand op de rand van het papier.",
+    "disclosure": "Fictieve scène van ongeveer vier seconden, gemaakt met AI. De scène toont geen echte cliënten of een specifiek pand, en ook geen ondertekening van een huurcontract, bankgoedkeuring of bedrijfsvergunning."
+  },
+  "pl": {
+    "title": "Plan pomieszczenia przesuwa się po stole",
+    "description": "Gość przesuwa plan pomieszczenia po stole. Osoba siedząca naprzeciwko kładzie dłoń na brzegu kartki.",
+    "disclosure": "Fikcyjna scena wygenerowana przez AI trwa około czterech sekund. Nie przedstawia rzeczywistych klientów ani konkretnej nieruchomości, podpisania umowy najmu, zgody banku ani zezwolenia na prowadzenie działalności."
+  },
+  "pt": {
+    "title": "Uma planta desliza sobre a mesa",
+    "description": "Um visitante desliza uma planta sobre a mesa. A pessoa sentada em frente pousa a mão na borda da folha.",
+    "disclosure": "Cena fictícia de cerca de quatro segundos, criada com inteligência artificial. Não representa clientes reais nem um imóvel específico, a assinatura de um contrato de arrendamento, uma aprovação bancária ou uma licença de atividade."
+  },
+  "ro": {
+    "title": "Planul unui spațiu este împins pe masă",
+    "description": "Un vizitator împinge planul unui spațiu pe masă, spre persoana din față. Aceasta pune mâna pe marginea foii.",
+    "disclosure": "Scenă fictivă de aproximativ patru secunde, generată cu inteligență artificială. Nu prezintă clienți reali sau un imobil anume, semnarea unui contract de închiriere, aprobarea unei bănci ori o autorizație de funcționare."
+  },
+  "ru": {
+    "title": "План помещения передвигают по столу",
+    "description": "Посетитель двигает план помещения по столу. Человек напротив кладёт руку на край листа.",
+    "disclosure": "Вымышленная сцена длительностью около четырёх секунд, созданная с помощью ИИ. Она не изображает реальных клиентов или конкретный объект недвижимости, подписание договора аренды, одобрение банка или разрешение на ведение деятельности."
+  },
+  "sk": {
+    "title": "Pôdorys sa posúva po stole",
+    "description": "Návštevník posunie pôdorys po stole. Osoba sediaca oproti položí ruku na okraj papiera.",
+    "disclosure": "Vymyslená scéna vytvorená umelou inteligenciou trvá približne štyri sekundy. Nezobrazuje skutočných klientov ani konkrétnu nehnuteľnosť, podpis nájomnej zmluvy, schválenie bankou alebo povolenie na podnikanie."
+  },
+  "sl": {
+    "title": "Tloris zdrsne po mizi",
+    "description": "Obiskovalec potisne tloris po mizi. Oseba na drugi strani položi roko na rob papirja.",
+    "disclosure": "Izmišljeni prizor, ustvarjen z umetno inteligenco, traja približno štiri sekunde. Ne prikazuje resničnih strank ali določene nepremičnine, podpisa najemne pogodbe, odobritve banke ali dovoljenja za opravljanje dejavnosti."
+  },
+  "sr": {
+    "title": "Plan prostorije se pomera preko stola",
+    "description": "Gost gura plan prostorije preko stola. Osoba naspram njega stavlja ruku na ivicu papira.",
+    "disclosure": "Izmišljena scena napravljena pomoću veštačke inteligencije traje oko četiri sekunde. Ne prikazuje stvarne klijente ili konkretnu nepokretnost, potpisivanje ugovora o zakupu, odobrenje banke ili dozvolu za obavljanje delatnosti."
+  },
+  "sv": {
+    "title": "En planritning skjuts över bordet",
+    "description": "En besökare skjuter en planritning över bordet. Personen mittemot lägger handen på papperets kant.",
+    "disclosure": "Fiktiv scen på cirka fyra sekunder, skapad med AI. Den visar inte verkliga klienter eller en bestämd fastighet, undertecknande av ett hyresavtal, bankgodkännande eller verksamhetstillstånd."
+  },
+  "tr": {
+    "title": "Yerleşim planı masanın üzerinden kaydırılıyor",
+    "description": "Ziyaretçi bir yerleşim planını masanın üzerinde karşısındaki kişiye doğru kaydırır. Karşıdaki kişi elini kâğıdın kenarına koyar.",
+    "disclosure": "Yapay zekâyla oluşturulmuş, yaklaşık dört saniyelik kurgusal bir sahnedir. Gerçek müvekkilleri veya belirli bir taşınmazı, kira sözleşmesi imzalanmasını, banka onayını ya da faaliyet iznini göstermez."
+  },
+  "uk": {
+    "title": "План приміщення пересувають по столу",
+    "description": "Відвідувач пересуває план приміщення по столу. Людина навпроти кладе руку на край аркуша.",
+    "disclosure": "Вигадана сцена тривалістю близько чотирьох секунд, створена за допомогою ШІ. Вона не зображує реальних клієнтів або конкретний об’єкт нерухомості, підписання договору оренди, схвалення банку чи дозвіл на ведення діяльності."
+  },
+  "vi": {
+    "title": "Đẩy bản vẽ mặt bằng qua bàn",
+    "description": "Người đến gặp đẩy bản vẽ mặt bằng trên bàn về phía người ngồi đối diện. Người đối diện đặt tay lên mép giấy.",
+    "disclosure": "Cảnh hư cấu dài khoảng bốn giây, được tạo bằng AI. Cảnh này không mô tả khách hàng thật hay một bất động sản cụ thể, việc ký hợp đồng thuê, sự chấp thuận của ngân hàng hoặc giấy phép kinh doanh."
+  },
+  "zh-hans": {
+    "title": "把平面图推向桌子对面",
+    "description": "来访者沿桌面把平面图推向对面的人。对方把手放在纸张边缘。",
+    "disclosure": "约四秒的AI生成虚构画面。不呈现真实客户或特定房产，也不展示签订租约、银行核准或营业许可。"
+  },
+  "my": {
+    "title": "အခန်းဖွဲ့စည်းပုံကို စားပွဲတစ်ဖက်သို့ လျှောပို့ခြင်း",
+    "description": "လာရောက်တွေ့ဆုံသူက အခန်းဖွဲ့စည်းပုံပါ စာရွက်ကို စားပွဲပေါ်မှတစ်ဆင့် တစ်ဖက်သို့ လျှောပို့သည်။ မျက်နှာချင်းဆိုင်ရှိသူက စာရွက်အနားတွင် လက်တင်သည်။",
+    "disclosure": "ဉာဏ်ရည်တု (AI) ဖြင့် ဖန်တီးထားသော လေးစက္ကန့်ခန့် ကြာသည့် စိတ်ကူးယဉ်မြင်ကွင်း ဖြစ်သည်။ ဤမြင်ကွင်းတွင် အမှန်တကယ် အမှုသည်များ သို့မဟုတ် သီးခြား အိမ်ခြံမြေတစ်ခု၊ အငှားစာချုပ် လက်မှတ်ထိုးခြင်း၊ ဘဏ်၏ အတည်ပြုချက် သို့မဟုတ် လုပ်ငန်းလုပ်ကိုင်ခွင့်တို့ကို မပြထားပါ။"
+  },
+  "ne": {
+    "title": "टेबलमा कोठाको नक्सा सारिँदै",
+    "description": "भेट्न आएको व्यक्तिले कोठाको नक्सा टेबलमा अगाडि सार्छ। अगाडि बसेको व्यक्तिले कागजको छेउमा हात राख्छ।",
+    "disclosure": "AI बाट बनाइएको करिब चार सेकेन्डको काल्पनिक दृश्य हो। यसमा वास्तविक सेवाग्राही वा कुनै निश्चित सम्पत्ति, भाडा सम्झौतामा हस्ताक्षर, बैंकको स्वीकृति वा व्यवसाय सञ्चालन अनुमति देखाइएको छैन।"
+  },
+  "ta": {
+    "title": "மேசையின் குறுக்கே தள வரைபடத்தை நகர்த்துதல்",
+    "description": "சந்திக்க வந்தவர் தள வரைபடத்தை மேசையின் மீது எதிரில் இருப்பவரை நோக்கி நகர்த்துகிறார். எதிரில் இருப்பவர் காகிதத்தின் ஓரத்தில் கையை வைக்கிறார்.",
+    "disclosure": "AI மூலம் உருவாக்கப்பட்ட, சுமார் நான்கு வினாடிகள் நீளமுள்ள கற்பனைக் காட்சி. உண்மையான வாடிக்கையாளர்களையோ குறிப்பிட்ட சொத்தையோ, வாடகை ஒப்பந்தத்தில் கையொப்பமிடுவதையோ, வங்கியின் ஒப்புதலையோ தொழில் நடத்துவதற்கான அனுமதியையோ இது காட்டவில்லை."
+  },
+  "th": {
+    "title": "เลื่อนผังพื้นที่ข้ามโต๊ะ",
+    "description": "ผู้มาติดต่อเลื่อนผังพื้นที่บนโต๊ะไปทางคนที่นั่งอยู่ฝั่งตรงข้าม อีกฝ่ายวางมือบนขอบกระดาษ",
+    "disclosure": "ฉากสมมติที่สร้างด้วย AI ความยาวประมาณสี่วินาที ไม่ได้แสดงลูกความจริงหรืออสังหาริมทรัพย์แห่งใดโดยเฉพาะ การลงนามสัญญาเช่า การอนุมัติจากธนาคาร หรือใบอนุญาตประกอบกิจการ"
+  },
+  "ur": {
+    "title": "میز پر کمرے کا نقشہ آگے سرکانا",
+    "description": "ملنے آنے والا شخص کمرے کا نقشہ میز پر آگے سرکاتا ہے۔ سامنے بیٹھا شخص کاغذ کے کنارے پر ہاتھ رکھتا ہے۔",
+    "disclosure": "یہ مصنوعی ذہانت (AI) سے بنایا گیا تقریباً چار سیکنڈ کا فرضی منظر ہے۔ اس میں حقیقی موکل یا کوئی مخصوص جائیداد، کرایہ نامے پر دستخط، بینک کی منظوری یا کاروبار چلانے کا اجازت نامہ نہیں دکھایا گیا۔"
   }
 }

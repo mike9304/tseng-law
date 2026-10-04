@@ -1,3 +1,4 @@
+import warningTriangleRearEndCaptions from './warning-triangle-rear-end-video-captions.json';
 import detachedTireImpactCaptions from './detached-tire-impact-video-captions.json';
 import fastLaneStopCaptions from './fast-lane-stop-video-captions.json';
 import scooterLaneBlockCaptions from './scooter-lane-block-video-captions.json';
@@ -47,6 +48,14 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-freeway-warning-triangle-time-ability-evidence': {
+    id: 'warning-triangle-rear-end-v2-zh-hant',
+    src: '/videos/columns/warning-triangle-rear-end-v2-zh-hant.mp4',
+    poster: '/images/column-videos/warning-triangle-rear-end-v2-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...warningTriangleRearEndCaptions['zh-hant'],
+  },
   'column/zh-hant/taiwan-detached-tire-delayed-treatment-criminal-injury-causation': {
     id: 'detached-tire-impact-v3-zh-hant',
     src: '/videos/columns/detached-tire-impact-v3-zh-hant.mp4',

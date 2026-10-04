@@ -1,0 +1,205 @@
+{
+  "reviewedAt": "2026-10-04T02:45:21.330082+00:00",
+  "reviewer": "Codex",
+  "scope": "New video on article206 zh-hant only; legal article body unchanged.",
+  "workflow": "Codex images first, then Grok4.7 reference_to_video; first CLI attempt failed before tool execution because its model identifier was unavailable; v2 used the verified grok-4.7 identifier.",
+  "generationToolCall": "call-d2ee04b7-b5cd-43e2-85bc-2855fb30219c-0",
+  "rawSha256": "2827a88c1ea1871240ef6a430a6dab6500ce785286a836a264ea41c080214cc8",
+  "retiming": false,
+  "allRawFramesDirectlyInspected": true,
+  "decodedFrames": 145,
+  "rawVisualReview": {
+    "reviewedAt": "2026-10-04T02:44:26.302285+00:00",
+    "reviewer": "Codex direct inspection",
+    "verdict": "approved-for-packaging",
+    "rawSha256": "2827a88c1ea1871240ef6a430a6dab6500ce785286a836a264ea41c080214cc8",
+    "decodedFrames": 145,
+    "allFramesViewed": true,
+    "frameRange": [
+      0,
+      144
+    ],
+    "sheetsViewed": [
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-01.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-02.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-03.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-04.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-05.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-06.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-07.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-08.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-09.jpg",
+      "/Users/son7/tseng-law-column-videos/qa/warning-triangle-rear-end-v2/all-frames-10.jpg"
+    ],
+    "fullResolutionFramesViewed": [
+      14,
+      16,
+      20,
+      24,
+      48,
+      144
+    ],
+    "observations": [
+      "Gap closes briskly over roughly the first0.6seconds.",
+      "At about0.625–0.83seconds, rear bumper and grey hood reach contact, local dent and hood ridge appear with a short viewpoint dip/jolt.",
+      "Front sedan shifts forward and settles by about2seconds; both remain in the lane without later floating or another impact.",
+      "No person, injury, smoke, added vehicle or unreadable scene text."
+    ],
+    "limitations": [
+      "Localized bumper trim and plate-detail interpolation remains generative; this is not physical crash analysis or a real-case reconstruction.",
+      "Red rear lights are visible and cannot illustrate the actual vehicle’s electrical/hazard-light state.",
+      "Neither initial A–B impact nor full three-car sequence, warning sign and driver movements, injuries or exact case intervals is shown."
+    ],
+    "retiming": false,
+    "loop": false,
+    "published": false
+  },
+  "referenceReviews": [
+    {
+      "reviewedAt": "2026-10-04T02:30:49.961375+00:00",
+      "original": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-c289881e-0ef7-44bb-a966-db1551e942a2.png",
+      "copy": "/Users/son7/tseng-law-column-videos/assets/warning-triangle-rear-end/first-frame-v1.png",
+      "sha256": "4373f94421ac64c608bbb06f41b9a4f7d2c0291e8c98a73da999ad371a962829",
+      "directlyViewed": true,
+      "observations": [
+        "Fixed forward dashcam framing, grey hood visible, charcoal sedan close ahead in the left freeway lane.",
+        "Three coherent lanes, left median and narrow shoulder, no people or warning triangle, no collision yet.",
+        "Taillight lenses are red; still image does not establish electrical state or motion."
+      ],
+      "decision": "approved as fictional pre-impact reference only",
+      "notActualCaseEvidence": true
+    },
+    {
+      "reviewedAt": "2026-10-04T02:33:23.662889+00:00",
+      "original": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-59705639-ac4c-4755-a769-7dee7891ca4b.png",
+      "copy": "/Users/son7/tseng-law-column-videos/assets/warning-triangle-rear-end/impact-frame-v1.png",
+      "sha256": "19abff5d19640cb1b53705522b8d6a628b4cd8c1d144ccac0c4b4e96f7f0f917",
+      "directlyViewed": true,
+      "observations": [
+        "Same sedan now fills the central foreground, its lower rear bumper touches the leading grey hood edge.",
+        "Fresh localized central bumper dent and slight raised hood crease; rear window and roof intact, no people or fire.",
+        "Background geometry consistent enough for a fictional short advance; no case speed, distance or electrical-failure claim."
+      ],
+      "decision": "approved as fictional impact reference"
+    },
+    {
+      "reviewedAt": "2026-10-04T02:37:20.852082+00:00",
+      "original": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-522d7775-5b22-48ec-9f2f-4cc4dbac7710.png",
+      "copy": "/Users/son7/tseng-law-column-videos/assets/warning-triangle-rear-end/end-frame-v1.png",
+      "sha256": "0b8e940f030b66f1245b68bd1ceccb19cb5718c4574dc6b878a71cbd85573974",
+      "directlyViewed": true,
+      "observations": [
+        "Same sedan slightly ahead, small visible separation from hood, tires grounded and coherent left lane.",
+        "Existing central bumper dent and grey hood ridge remain; road and median sharp for stationary endpoint.",
+        "Rear red lights appear illuminated; clip must not represent actual case electrical or hazard-light operation."
+      ],
+      "decision": "approved as fictional stopped aftermath"
+    }
+  ],
+  "captionReview": {
+    "reviewedAt": "2026-10-04T02:44:26.302285+00:00",
+    "reviewer": "Codex",
+    "verdict": "approved-for-integration",
+    "locale": "zh-hant",
+    "replacement": {
+      "title": "內側車道停車後的追撞示意",
+      "description": "後車迅速接近停在內側車道的前車，追撞後鏡頭短暫晃動，車體接觸處出現變形，兩車隨後停住。",
+      "disclosure": "本片為 AI 生成的6秒無聲示意影片，並非真實行車紀錄器畫面或本案重現。影片只呈現兩車追撞，未呈現本案前次碰撞、三車連環追撞全程、下車示警或警告標誌的取放。道路、燈號、車損、距離與時間均為虛構，不能用來判斷當事人是否有時間或能力完成示警，也不代表本案刑事責任的結論。"
+    },
+    "sourceScope": "Exact article206 read in full, including source list, and hash bound. Film illustrates only generic two-car contact. It does not reconstruct the earlier impact, full A/B/C chain, driver warning actions, warning-light functionality,92/96-second intervals,125-second judicial estimate, injuries or legal findings. Article body unchanged.",
+    "changes": [
+      {
+        "original": "內側車道停車後的追撞示意",
+        "problem": "None after frame review; specific scene title without general legal conclusion.",
+        "revision": "retained",
+        "meaningPreserved": true
+      },
+      {
+        "original": "Draft description and disclosure",
+        "problem": "Must not imply this two-car scene establishes real warning opportunity or electrical condition.",
+        "revision": "Retain explicit fictional lights/timing, unshown full chain and warning actions, and no case-liability inference.",
+        "meaningPreserved": true
+      }
+    ],
+    "sameLanguageReferences": "warning-triangle-rear-end-editorial-reference.json",
+    "style": "Concrete visible action, no generic introduction or decorative bold.",
+    "remainingMaterialFindings": []
+  },
+  "references": [
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+      "firstTwoParagraphs": [
+        "2025年6月3日上午7時14分，台北市萬華區一處路口，小客車打著左方向燈，讓左側一輛黑色休旅車先過。左側後方又有白車靠近，小客車煞停約兩秒，等白車通過後重新起步。後車的行車紀錄器錄下這段過程，也成了駕駛被檢舉的證據。法院的疑問是：這兩秒的暫停，能排除是為了避免碰撞嗎？[臺北高等行政法院高等庭115年度交上字第76號判決，2026年8月24日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)",
+        "同年11月25日下午5時13分，文山區一座橋上，機車從一般車道向右切入機慢車道，來到拍攝車輛前方。略煞車、再加速之後，機車在三秒內煞至停止，騎士回頭看，後車向左繞過。這次法院認定，影像裡沒有必須立即停下的突發狀況。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+      ],
+      "headings": [
+        "同一款處罰，爭的是為什麼停",
+        "後車的速度顯示，留下另一種解釋",
+        "撤銷處分，不是准許兩秒鐘的煞停",
+        "橋上的喇叭，響在機車切入前後",
+        "兩份判決對「惡意」說得不一樣",
+        "想停下來處理，和非立刻停不可",
+        "資料來源"
+      ],
+      "ending": "機車案留下的具體做法是：在仍能穩定操控、沒有立即煞停必要的情況下，即使因喇叭或疑似擦撞受驚，想確認車損或報警，仍應漸進減速、穩定車身、留意前後左右車流，確認安全後靠邊，或駛至不妨礙交通的安全處所。需要處理一場爭執，並不等於需要在後車面前立刻停下。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)",
+      "extractionNote": "Substantive opening and ending prose; byline/source definitions/disclosure remain preserved in the article."
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "9d6c2d5012e0fef908882e57f8f1029d3bf8d26370a41e683b41ec31d0a55250",
+      "firstTwoParagraphs": [
+        "2024年（民國113年）7月28日傍晚6點58分左右，新北市中和區。一輛自用小客車在路上迴轉，對向剛好駛來一輛機車，騎士沒有讓汽車先轉，還按喇叭示警。汽車駕駛隨即加速追趕，在一處交岔路口前追上機車，以逼車方式迫使機車停在道路中央，接著開窗對騎士罵了「幹你娘老雞掰」等語。",
+        "號誌轉為綠燈後，汽車仍擋在前方。騎士繞到汽車右側想直行離開，汽車駕駛發現後就往右前方開，讓機車無法前進；看騎士沒有其他動作，汽車才開走。這段經過汽車駕駛並不爭執，一審與二審也都認定屬實（[臺灣新北地方法院114年度易字第637號，2025年7月31日，收錄於高院判決附件](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)；[臺灣高等法院114年度上易字第2198號，2026年1月27日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。"
+      ],
+      "headings": [
+        "兩支鏡頭，兩套時間",
+        "「兩側還是有空間」與「法益侵害難認輕微」",
+        "一審：路夠寬，紅燈的52秒不算",
+        "高院：「無禮且不當」，但不具刑罰的可非難性",
+        "那句髒話，和憲法法庭113年憲判字第3號",
+        "兩審結果與不得上訴",
+        "無罪的範圍，只到刑法為止",
+        "法院用上的，是畫面裡的號誌和那次迴轉",
+        "資料來源"
+      ],
+      "ending": "另一個細節是那次迴轉。騎士最後迴轉離開了現場；在刑事判斷上，兩審法院都把這次迴轉當成騎士當時還有路可走的根據。在這份判決裡，強制罪看的不只是被擋了多久，也看當下有沒有其他路可以走。",
+      "extractionNote": "Substantive opening and ending prose; byline/source definitions/disclosure remain preserved in the article."
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/199-child-surname-change-after-divorce.md",
+      "sha256": "beaade3b84aa628af5a53e4df2c6dbf98165d1b9d40a4fc2dd34be3398048fab",
+      "firstTwoParagraphs": [
+        "離婚後，即使孩子一直與母親同住，並由母親單獨行使親權，也不會因此自動改從母姓。依[民法第1059條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1059)，未成年子女出生登記後，父母可以書面約定改姓；無法取得另一方同意時，則可依離婚等法定事由向法院聲請，由法院審查改姓是否符合子女利益。",
+        "以下以已辦出生登記、適用台灣民法的未成年子女為主；從母姓改為父姓，也適用相同規則。若孩子有外國國籍、長住海外，或尚未在台設籍，須先釐清適用法律與登記途徑，不能只憑父母其中一人是台灣人，就直接套用所有程序。"
+      ],
+      "headings": [
+        "約定改姓須父母書面同意，單獨親權不能取代",
+        "離婚是聲請事由，改姓的利益仍須另外說明",
+        "彰化地院：母親取得單獨親權，改姓聲請仍被駁回",
+        "改姓對孩子的影響，以及孩子表達意見的機會",
+        "約定書與確定裁定，是不同的戶政登記依據",
+        "外籍父母與海外文件，還有準據法及驗證問題",
+        "滿18歲後，子女可以自行決定改從父姓或母姓",
+        "參考的官方資料"
+      ],
+      "ending": "如需就子女改姓或海外文件安排諮詢，可來信昊鼎國際法律事務所曾雋崴律師：[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，簡述孩子年齡、國籍、居住地、親權安排與對方是否同意。地址：103 臺北市大同區承德路一段35號7樓之2。",
+      "extractionNote": "Substantive opening and ending prose; byline/source definitions/disclosure remain preserved in the article."
+    }
+  ],
+  "articleBindings": [
+    {
+      "key": "zh-hant/column/taiwan-freeway-warning-triangle-time-ability-evidence",
+      "file": "src/content/columns-zh/206-taiwan-freeway-warning-triangle-time-ability-evidence.md",
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-freeway-warning-triangle-time-ability-evidence",
+      "sourceSha256": "96624c962547cb572988f15f664f514d42f729fd7f85805ead4b1b4936a01767",
+      "locale": "zh-hant",
+      "slug": "taiwan-freeway-warning-triangle-time-ability-evidence"
+    }
+  ],
+  "localBrowserAndPublicPlayback": "Pending at integration. Release evidence: /Users/son7/tseng-law-column-videos/qa/production-warning-triangle-rear-end-release.json.",
+  "youtubeUploaded": false
+}

@@ -1,3 +1,5 @@
+import premisesLeaseCaptions from './premises-lease-video-captions.json';
+import fundsPaperworkCaptions from './funds-paperwork-video-captions.json';
 import pursuitSelfSkidCaptions from './pursuit-self-skid-video-captions.json';
 import ownDashcamCutInCaptions from './own-dashcam-cut-in-video-captions.json';
 import warningTriangleRearEndCaptions from './warning-triangle-rear-end-video-captions.json';
@@ -85,6 +87,22 @@ const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsse
 };
 
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(premisesLeaseCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `premises-lease-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-company-establishment-advanced-1`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(fundsPaperworkCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `funds-paperwork-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-company-establishment-advanced-2`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
   'column/zh-hant/taiwan-pursuit-fatal-self-crash-vacated-judgment': {
     id: 'pursuit-self-skid-v1-zh-hant',
     src: '/videos/columns/pursuit-self-skid-v1-zh-hant.mp4',

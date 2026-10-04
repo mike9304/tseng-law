@@ -1,0 +1,52 @@
+{
+  "ko": {
+    "title": "임대 공간 도면을 건네는 장면",
+    "description": "방문자가 탁자 위 도면을 옆으로 밀어 건네고, 맞은편 사람이 도면 끝에 손을 얹습니다.",
+    "disclosure": "AI로 만든 약 4초의 가상 장면입니다. 실제 고객이나 특정 임대 공간을 촬영한 영상이 아니며, 임대차계약 체결·은행 승인·영업 허가를 보여 주지 않습니다."
+  },
+  "en": {
+    "title": "Passing a floor plan across the table",
+    "description": "A visitor slides a floor plan across the table. The person opposite rests a hand on its edge.",
+    "disclosure": "A fictional AI-generated scene lasting about four seconds. It does not depict actual clients or a specific property, a signed lease, bank approval or permission to operate."
+  },
+  "ja": {
+    "title": "借りる場所の間取り図を渡す場面",
+    "description": "訪問者が机の上の間取り図を相手の方へ滑らせ、向かいの人が図面の端に手を添えます。",
+    "disclosure": "AIで作成した約4秒の架空の場面です。実際の依頼者や特定の物件を撮影したものではなく、賃貸借契約の締結、銀行の承認、営業許可を示すものでもありません。"
+  },
+  "zh-hant": {
+    "title": "把場所平面圖遞到對方面前",
+    "description": "來訪者將桌上的平面圖推向對方，對方把手輕放在圖紙邊緣。",
+    "disclosure": "這是AI生成、長約4秒的假想場景，並非實際客戶或特定物件的影像，也未呈現租約簽訂、銀行核准或營業許可。"
+  },
+  "ar": {
+    "title": "تمرير مخطط المكان عبر الطاولة",
+    "description": "يدفع الزائر مخطط المكان على الطاولة نحو الشخص المقابل، الذي يضع يده على حافة الورقة.",
+    "disclosure": "مشهد خيالي مولّد بالذكاء الاصطناعي، مدته نحو أربع ثوانٍ. لا يصوّر عملاء حقيقيين أو عقارًا محددًا، ولا يُظهر إبرام عقد إيجار أو موافقة بنك أو ترخيصًا بمزاولة النشاط."
+  },
+  "bg": {
+    "title": "Предаване на план на помещението",
+    "description": "Посетителят плъзга план на помещението по масата към човека отсреща, който поставя ръка върху края на листа.",
+    "disclosure": "Измислена сцена, създадена с изкуствен интелект, с продължителност около четири секунди. Не показва действителни клиенти или конкретен имот, сключване на договор за наем, банково одобрение или разрешение за дейност."
+  },
+  "bn": {
+    "title": "টেবিলের ওপর দিয়ে ঘরের নকশা এগিয়ে দেওয়া",
+    "description": "দর্শনার্থী টেবিলের ওপর রাখা ঘরের নকশাটি সামনের ব্যক্তির দিকে ঠেলে দেন। সেই ব্যক্তি কাগজের প্রান্তে হাত রাখেন।",
+    "disclosure": "AI দিয়ে তৈরি প্রায় চার সেকেন্ডের কাল্পনিক দৃশ্য। এতে প্রকৃত গ্রাহক বা নির্দিষ্ট কোনো সম্পত্তি দেখানো হয়নি। ইজারা চুক্তি সম্পাদন, ব্যাংকের অনুমোদন বা ব্যবসা পরিচালনার অনুমতিও দেখানো হয়নি।"
+  },
+  "ca": {
+    "title": "Passar un plànol del local per damunt de la taula",
+    "description": "La persona que ha vingut a la consulta fa lliscar un plànol del local cap a la persona que té al davant, que posa la mà a la vora del full.",
+    "disclosure": "Escena fictícia generada amb IA, d’uns quatre segons. No representa clients reals ni un immoble concret, ni mostra la signatura d’un arrendament, l’aprovació d’un banc o una autorització per exercir l’activitat."
+  },
+  "cs": {
+    "title": "Předání půdorysu prostor",
+    "description": "Návštěvník posune půdorys po stole k osobě naproti, která položí ruku na okraj listu.",
+    "disclosure": "Fiktivní scéna vytvořená pomocí AI, dlouhá přibližně čtyři sekundy. Nezobrazuje skutečné klienty ani konkrétní nemovitost, uzavření nájemní smlouvy, schválení bankou nebo povolení k provozu."
+  },
+  "da": {
+    "title": "En plantegning rækkes over bordet",
+    "description": "Den besøgende skubber en plantegning hen over bordet mod personen overfor, som lægger en hånd på papirets kant.",
+    "disclosure": "En fiktiv scene skabt med AI, som varer cirka fire sekunder. Den viser hverken virkelige klienter eller en bestemt ejendom, indgåelse af en lejeaftale, bankens godkendelse eller tilladelse til at drive virksomhed."
+  }
+}

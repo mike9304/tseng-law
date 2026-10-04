@@ -1,0 +1,52 @@
+{
+  "ko": {
+    "title": "자금 관련 서류를 탁자에 놓는 장면",
+    "description": "방문자가 들고 있던 서류 한 장을 두 서류철 사이에 내려놓습니다. 맞은편 사람은 종이 가장자리에 손을 댑니다.",
+    "disclosure": "AI로 만든 약 4초의 가상 장면입니다. 실제 고객이나 은행 서류를 촬영한 영상이 아니며, 송금 완료·계좌 개설·은행 승인을 보여 주지 않습니다."
+  },
+  "en": {
+    "title": "Placing a funding record on the table",
+    "description": "A visitor lowers one sheet onto the table between two folders. The person opposite places a hand at the edge of the paper.",
+    "disclosure": "A fictional AI-generated scene lasting about four seconds. It does not depict actual clients or bank documents, a completed transfer, an opened account or bank approval."
+  },
+  "ja": {
+    "title": "資金関係の書類を机に置く場面",
+    "description": "訪問者が持っていた書類を2冊のファイルの間に置きます。向かいの人は紙の端に手を添えます。",
+    "disclosure": "AIで作成した約4秒の架空の場面です。実際の依頼者や銀行書類を撮影したものではなく、送金の完了、口座開設、銀行の承認を示すものでもありません。"
+  },
+  "zh-hant": {
+    "title": "把資金資料放到桌上",
+    "description": "來訪者把手中的一張資料放到兩個資料夾之間，對方把手放在紙張邊緣。",
+    "disclosure": "這是AI生成、長約4秒的假想場景，並非實際客戶或銀行文件的影像，也未呈現匯款完成、帳戶開立或銀行核准。"
+  },
+  "ar": {
+    "title": "وضع مستند متعلق بالأموال على الطاولة",
+    "description": "يضع الزائر ورقة واحدة على الطاولة بين ملفين، ويضع الشخص المقابل يده عند حافتها.",
+    "disclosure": "مشهد خيالي مولّد بالذكاء الاصطناعي، مدته نحو أربع ثوانٍ. لا يصوّر عملاء حقيقيين أو مستندات مصرفية فعلية، ولا يُظهر إتمام تحويل أو فتح حساب أو موافقة بنك."
+  },
+  "bg": {
+    "title": "Поставяне на документ за средствата на масата",
+    "description": "Посетителят поставя един лист на масата между две папки. Човекът отсреща слага ръка до края на листа.",
+    "disclosure": "Измислена сцена, създадена с изкуствен интелект, с продължителност около четири секунди. Не показва действителни клиенти или банкови документи, извършен превод, открита сметка или банково одобрение."
+  },
+  "bn": {
+    "title": "তহবিলসংক্রান্ত কাগজ টেবিলে রাখা",
+    "description": "দর্শনার্থী হাতে থাকা কাগজটি টেবিলের দুই ফোল্ডারের মাঝে নামিয়ে রাখেন। সামনের ব্যক্তি কাগজের প্রান্তে হাত রাখেন।",
+    "disclosure": "AI দিয়ে তৈরি প্রায় চার সেকেন্ডের কাল্পনিক দৃশ্য। এতে প্রকৃত গ্রাহক বা আসল ব্যাংকের নথি দেখানো হয়নি। অর্থ পাঠানো সম্পন্ন হওয়া, হিসাব খোলা বা ব্যাংকের অনুমোদনও দেখানো হয়নি।"
+  },
+  "ca": {
+    "title": "Un document sobre els fons, entre dues carpetes",
+    "description": "La persona que ha vingut a la consulta deixa un full sobre la taula, entre dues carpetes. La persona que té al davant posa la mà a la vora del paper.",
+    "disclosure": "Escena fictícia generada amb IA, d’uns quatre segons. No representa clients reals ni documents bancaris autèntics, ni mostra una transferència completada, l’obertura d’un compte o l’aprovació d’un banc."
+  },
+  "cs": {
+    "title": "Položení dokladu o finančních prostředcích na stůl",
+    "description": "Návštěvník položí jeden list na stůl mezi dvě složky. Osoba naproti přiloží ruku k okraji papíru.",
+    "disclosure": "Fiktivní scéna vytvořená pomocí AI, dlouhá přibližně čtyři sekundy. Nezobrazuje skutečné klienty ani pravé bankovní dokumenty, dokončený převod, otevření účtu nebo schválení bankou."
+  },
+  "da": {
+    "title": "Et dokument om midlerne lægges på bordet",
+    "description": "Den besøgende lægger et ark på bordet mellem to mapper. Personen overfor lægger en hånd ved papirets kant.",
+    "disclosure": "En fiktiv scene skabt med AI, som varer cirka fire sekunder. Den viser hverken virkelige klienter eller ægte bankdokumenter, en gennemført overførsel, en åbnet konto eller bankens godkendelse."
+  }
+}

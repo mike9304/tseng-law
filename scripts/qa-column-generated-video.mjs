@@ -32,7 +32,21 @@ const detachedTireImpactCaptions = JSON.parse(await fs.readFile(new URL('../src/
 const warningTriangleRearEndCaptions = JSON.parse(await fs.readFile(new URL('../src/data/warning-triangle-rear-end-video-captions.json', import.meta.url), 'utf8'));
 const ownDashcamCutInCaptions = JSON.parse(await fs.readFile(new URL('../src/data/own-dashcam-cut-in-video-captions.json', import.meta.url), 'utf8'));
 const pursuitSelfSkidCaptions = JSON.parse(await fs.readFile(new URL('../src/data/pursuit-self-skid-video-captions.json', import.meta.url), 'utf8'));
+const premisesLeaseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/premises-lease-video-captions.json', import.meta.url), 'utf8'));
+const fundsPaperworkCaptions = JSON.parse(await fs.readFile(new URL('../src/data/funds-paperwork-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(premisesLeaseCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-company-establishment-advanced-1',
+    id: `premises-lease-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `premises-lease-v1-${locale}`, duration: 4.041667, contactTime: 1,
+    expectedDiagrams: 0, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
+  ...Object.entries(fundsPaperworkCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-company-establishment-advanced-2',
+    id: `funds-paperwork-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `funds-paperwork-v1-${locale}`, duration: 4.041667, contactTime: 1,
+    expectedDiagrams: 0, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
   { locale: 'zh-hant', slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', id: 'pursuit-self-skid-v1-zh-hant', duration: 4.041667, contactTime: 1, expectedDiagrams: 0, disclosure: pursuitSelfSkidCaptions['zh-hant'].disclosure },
   // Preserve the original native looping clips beside the additional collision.
   {"locale": "ko", "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too", "id": "road-rage-freeway-chase-own-dashcam-too-v3-ko", "duration": 15.041667, "contactTime": 7, "expectedDiagrams": 0, "loop": true, "disclosure": "AI"},
@@ -366,7 +380,7 @@ try {
       }
       results.push({ viewport, article, locale: item.locale, id: item.id, evidenceStem, initial, playing, layout, nativeKeyboardControls: true, reachedEnd: item.loop !== true, loopWrapped: item.loop === true, completedNativeCycle: true, fullReplayAtNativeRate: true, replaySeconds, trafficBoard: item.trafficBoard === false ? 'not-published-for-this-locale' : process.env.COLUMN_VIDEO_QA_SKIP_BOARD === '1' ? 'skipped' : 'checked' });
     }
-    const unreviewed = await page.goto(`${base}/ko/columns/taiwan-company-establishment-advanced-1`, { waitUntil: 'load' });
+    const unreviewed = await page.goto(`${base}/ko/columns/withdraw-capital-taiwan-company`, { waitUntil: 'load' });
     assert.equal(unreviewed?.status(), 200);
     assert.equal(await page.locator('[data-column-generated-video]').count(), 0, 'Unreviewed article inherited video');
     await context.close();
@@ -380,7 +394,7 @@ try {
     ranges.push({ id: item.id, status: mp4.status });
   }
   assert.equal(findings.length, 0, findings.join('\n'));
-  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, base, checkedAt: new Date().toISOString(), findings, results, ranges, unreviewedLocaleExcluded: true, unreviewedArticleLanguagePage: '/ko/columns/taiwan-company-establishment-advanced-1' }, null, 2));
+  await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, base, checkedAt: new Date().toISOString(), findings, results, ranges, unreviewedLocaleExcluded: true, unreviewedArticleLanguagePage: '/ko/columns/withdraw-capital-taiwan-company' }, null, 2));
   console.log(JSON.stringify({ ok: true, base, out, journeys: results.length, assets: ranges.length }));
 } catch (error) {
   await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: false, base, error: String(error), findings, results }, null, 2));

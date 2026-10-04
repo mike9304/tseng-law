@@ -12,6 +12,22 @@ import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 const longFilmLocales = ['ko', 'en', 'zh-hant', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ca', 'ro', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'sk', 'hu', 'hr', 'sl', 'sr', 'bg', 'ru', 'uk', 'el', 'tr', 'lt', 'lv', 'et', 'is', 'fil', 'id', 'ms', 'vi', 'mn', 'zh-hans', 'bn', 'hi', 'km', 'my', 'ne', 'ta', 'th', 'ar', 'fa', 'he', 'ur'];
 
 describe('reviewed column videos', () => {
+  it.each(['ko', 'en', 'ja', 'zh-hant'])('adds the reviewed collision without replacing the existing looping clip in %s', locale => {
+    const slug = 'taiwan-road-rage-freeway-chase-own-dashcam-too';
+    const originalId = `road-rage-freeway-chase-own-dashcam-too-v3-${locale}`;
+    const collisionId = `own-dashcam-cut-in-v2-${locale}`;
+    expect(getColumnGeneratedVideo(locale, slug)).toMatchObject({ id: originalId, loop: true });
+    const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} autoPlay />);
+    expect(html.match(/<video/g)).toHaveLength(2);
+    expect(html.match(/loop=""/g)).toHaveLength(1);
+    for (const id of [originalId, collisionId]) {
+      expect(html).toContain(`/videos/columns/${id}.mp4`);
+      expect(html).toContain(`aria-describedby="column-video-${id}-caption"`);
+      expect(html).toContain(`id="column-video-${id}-caption"`);
+    }
+    expect(renderToStaticMarkup(<ColumnGeneratedVideo locale="fr" slug={slug} />)).toBe('');
+    expect(renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} source="issue" />)).toBe('');
+  });
   it.each(Object.entries(cosmeticsCheckCaptions))('keeps the cosmetics scene and %s caption on the reviewed cosmetics column', (locale, caption) => {
     const slug = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';

@@ -1,3 +1,4 @@
+import ownDashcamCutInCaptions from './own-dashcam-cut-in-video-captions.json';
 import warningTriangleRearEndCaptions from './warning-triangle-rear-end-video-captions.json';
 import detachedTireImpactCaptions from './detached-tire-impact-video-captions.json';
 import fastLaneStopCaptions from './fast-lane-stop-video-captions.json';
@@ -47,6 +48,41 @@ export type ColumnGeneratedVideoAsset = {
 };
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
+const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/ko/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-ko',
+    src: '/videos/columns/own-dashcam-cut-in-v2-ko.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-ko.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['ko'],
+  },
+  'column/en/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-en',
+    src: '/videos/columns/own-dashcam-cut-in-v2-en.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-en.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['en'],
+  },
+  'column/ja/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-ja',
+    src: '/videos/columns/own-dashcam-cut-in-v2-ja.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-ja.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['ja'],
+  },
+  'column/zh-hant/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-zh-hant',
+    src: '/videos/columns/own-dashcam-cut-in-v2-zh-hant.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['zh-hant'],
+  },
+};
+
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
   'column/zh-hant/taiwan-freeway-warning-triangle-time-ability-evidence': {
     id: 'warning-triangle-rear-end-v2-zh-hant',
@@ -876,4 +912,15 @@ export function getColumnGeneratedVideo(
   return (trafficFilms as Readonly<Record<string, ColumnGeneratedVideoAsset>>)[key]
     ?? REVIEWED_COLUMN_VIDEOS[key]
     ?? null;
+}
+
+/** Additional reviewed scenes do not replace an article's existing primary video. */
+export function getColumnGeneratedVideos(
+  locale: string,
+  slug: string,
+  source: ColumnVideoSource = 'column',
+): ColumnGeneratedVideoAsset[] {
+  const primary = getColumnGeneratedVideo(locale, slug, source);
+  const additional = ADDITIONAL_COLUMN_VIDEOS[`${source}/${locale}/${slug}`];
+  return [primary, additional].filter((video): video is ColumnGeneratedVideoAsset => Boolean(video));
 }

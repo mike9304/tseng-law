@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "차선을 걸친 앞차와의 충돌",
+    "description": "뒤차가 오른쪽 앞에서 차선을 걸친 검은 차에 빠르게 접근해 뒷모서리와 부딪칩니다. 충돌 순간 화면이 짧게 흔들리고 차체가 찌그러진 뒤 두 차가 멈춥니다.",
+    "disclosure": "AI로 만든 4초 무음 가상 영상입니다. 실제 블랙박스 영상이나 이 사건의 재현이 아닙니다. 차로 변경 도중부터 한 번의 충돌만 보여 주며, 본문의 반복 추격·급제동·출구 경로와 주변 교통량을 재현하지 않았습니다. 속도·거리·시간·충돌 각도·차량 손상은 실제 사건을 측정한 값이 아니며, 이 장면으로 두 운전자의 책임을 판단할 수 없습니다."
+  },
+  "en": {
+    "title": "Collision with a car entering the lane",
+    "description": "The following car quickly closes the gap and hits the rear corner of a black car straddling the lane line ahead-right. The view jolts briefly, the bodywork dents, and both cars stop.",
+    "disclosure": "This four-second silent AI-generated scene is fictional. It is not real dashcam footage or a reconstruction of this case. It begins during a lane change and shows one collision, not the repeated chase, braking, exit route or surrounding traffic described in the article. Speed, distance, timing, contact angle and vehicle damage are not measurements of the actual incident. The scene cannot establish either driver’s liability."
+  },
+  "ja": {
+    "title": "車線をまたぐ前車との衝突",
+    "description": "右前方で車線をまたぐ黒い車に後続車が急接近し、その後部の角に衝突します。画面が一瞬揺れ、接触部分の車体が変形した後、両車が止まります。",
+    "disclosure": "AIで生成した4秒の無音の架空映像です。実際のドラレコ映像や本件の再現ではありません。車線変更の途中から一度の接触だけを示し、本文の繰り返された追走・制動、出口の経路や周囲の交通量は再現していません。速度・距離・時刻・衝突角度・車両の損傷は本件の測定値ではなく、この映像から両運転者の責任を判断することはできません。"
+  },
+  "zh-hant": {
+    "title": "與跨著車道線的前車碰撞",
+    "description": "後車迅速接近右前方跨著車道線的黑車，撞上其後角。接觸時畫面短暫晃動，車體局部變形，兩車隨後停住。",
+    "disclosure": "本片為 AI 生成的4秒無聲假想影片，並非真實行車紀錄器畫面或本案重現。影片從變換車道途中開始，只呈現一次碰撞，未重現本文的反覆追逐、煞車、出口路徑或周圍車流。速度、距離、時間、碰撞角度與車損都不是本案的測量結果，不能用來判斷兩名駕駛的責任。"
+  }
+}

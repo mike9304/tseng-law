@@ -30,7 +30,19 @@ const scooterLaneBlockCaptions = JSON.parse(await fs.readFile(new URL('../src/da
 const fastLaneStopCaptions = JSON.parse(await fs.readFile(new URL('../src/data/fast-lane-stop-video-captions.json', import.meta.url), 'utf8'));
 const detachedTireImpactCaptions = JSON.parse(await fs.readFile(new URL('../src/data/detached-tire-impact-video-captions.json', import.meta.url), 'utf8'));
 const warningTriangleRearEndCaptions = JSON.parse(await fs.readFile(new URL('../src/data/warning-triangle-rear-end-video-captions.json', import.meta.url), 'utf8'));
+const ownDashcamCutInCaptions = JSON.parse(await fs.readFile(new URL('../src/data/own-dashcam-cut-in-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  // Preserve the original native looping clips beside the additional collision.
+  {"locale": "ko", "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too", "id": "road-rage-freeway-chase-own-dashcam-too-v3-ko", "duration": 15.041667, "contactTime": 7, "expectedDiagrams": 0, "loop": true, "disclosure": "AI"},
+  {"locale": "en", "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too", "id": "road-rage-freeway-chase-own-dashcam-too-v3-en", "duration": 15.041667, "contactTime": 7, "expectedDiagrams": 0, "loop": true, "disclosure": "AI"},
+  {"locale": "ja", "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too", "id": "road-rage-freeway-chase-own-dashcam-too-v3-ja", "duration": 15.041667, "contactTime": 7, "expectedDiagrams": 0, "loop": true, "disclosure": "AI"},
+  {"locale": "zh-hant", "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too", "id": "road-rage-freeway-chase-own-dashcam-too-v3-zh-hant", "duration": 15.041667, "contactTime": 7, "expectedDiagrams": 0, "loop": true, "disclosure": "AI"},
+  ...Object.entries(ownDashcamCutInCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-road-rage-freeway-chase-own-dashcam-too',
+    id: `own-dashcam-cut-in-v2-${locale}`,
+    duration: 4.041667, contactTime: 0.666667, expectedDiagrams: 0,
+    disclosure: caption.disclosure,
+  })),
   { locale: 'zh-hant', slug: 'taiwan-freeway-warning-triangle-time-ability-evidence', id: 'warning-triangle-rear-end-v2-zh-hant', duration: 6.041667, contactTime: 1, expectedDiagrams: 0, disclosure: warningTriangleRearEndCaptions['zh-hant'].disclosure },
   { locale: 'zh-hant', slug: 'taiwan-detached-tire-delayed-treatment-criminal-injury-causation', id: 'detached-tire-impact-v3-zh-hant', duration: 6.041667, contactTime: 1, expectedDiagrams: 0, disclosure: detachedTireImpactCaptions['zh-hant'].disclosure },
   ...Object.entries(fastLaneStopCaptions).map(([locale, caption]) => ({
@@ -258,10 +270,10 @@ try {
       // Exercise the browser's native keyboard control, including reduced-motion mode.
       await video.focus();
       await video.press('Space');
-      await page.waitForFunction(() => {
-        const element = document.querySelector('[data-column-generated-video] video');
+      await page.waitForFunction(id => {
+        const element = document.querySelector(`[data-column-generated-video="${id}"] video`);
         return element && !element.paused && element.currentTime > 0.7;
-      }, undefined, { timeout: 20000 });
+      }, item.id, { timeout: 20000 });
       const playing = await video.evaluate(element => ({
         currentTime: element.currentTime, duration: element.duration, paused: element.paused,
         width: element.videoWidth, height: element.videoHeight, error: element.error?.message || null,
@@ -273,10 +285,10 @@ try {
       await video.press('Space');
       assert.equal(await video.evaluate(element => element.paused), true);
       await video.evaluate((element, seconds) => { element.currentTime = seconds; }, item.contactTime);
-      await page.waitForFunction(seconds => {
-        const element = document.querySelector('[data-column-generated-video] video');
+      await page.waitForFunction(({ id, seconds }) => {
+        const element = document.querySelector(`[data-column-generated-video="${id}"] video`);
         return element && !element.seeking && element.readyState >= 2 && element.currentTime >= seconds - 0.1;
-      }, item.contactTime);
+      }, { id: item.id, seconds: item.contactTime });
       // Close the existing language suggestion and center the entire figure so
       // the visual review can read the caption as well as the player.
       const languageHintClose = page.locator('[data-locale-suggestion] button');
@@ -284,15 +296,15 @@ try {
       await figure.evaluate(element => element.scrollIntoView({ block: 'center', behavior: 'instant' }));
       await page.screenshot({ path: `${out}/${evidenceStem}-contact-${viewport.width}.png` });
       await figure.screenshot({ path: `${out}/${evidenceStem}-figure-${viewport.width}.png` });
-      const layout = await page.evaluate(() => ({
+      const layout = await page.evaluate(id => ({
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
-        frameWidth: document.querySelector('[data-column-generated-video]').getBoundingClientRect().width,
+        frameWidth: document.querySelector(`[data-column-generated-video="${id}"]`).getBoundingClientRect().width,
         bodyTextLength: document.querySelector('.blog-body')?.innerText.length || 0,
         diagramCount: document.querySelectorAll('[data-traffic-diagram]').length,
         bodyImageCount: document.querySelectorAll('.blog-body img').length,
         documentLanguage: document.documentElement.lang,
-        textDirection: getComputedStyle(document.querySelector('[data-column-generated-video]')).direction,
-      }));
+        textDirection: getComputedStyle(document.querySelector(`[data-column-generated-video="${id}"]`)).direction,
+      }), item.id);
       assert.ok(layout.scrollWidth <= layout.width + 1, `Horizontal overflow: ${JSON.stringify(layout)}`);
       assert.ok(layout.frameWidth <= layout.width);
       assert.ok(layout.bodyTextLength > 500);
@@ -308,10 +320,10 @@ try {
       }
       // Replay the entire clip at its native rate so motion revisions are exercised in real time.
       await video.evaluate(element => { element.currentTime = 0; });
-      await page.waitForFunction(() => {
-        const element = document.querySelector('[data-column-generated-video] video');
+      await page.waitForFunction(id => {
+        const element = document.querySelector(`[data-column-generated-video="${id}"] video`);
         return element && !element.seeking && element.currentTime < 0.1;
-      });
+      }, item.id);
       if (item.loop) {
         // A looping player never emits `ended`. Observe the real time wrap
         // without disabling the product's loop setting or changing its speed.
@@ -330,10 +342,10 @@ try {
       }
       const replayStartedAt = performance.now();
       await video.press('Space');
-      await page.waitForFunction(loop => {
-        const element = document.querySelector('[data-column-generated-video] video');
+      await page.waitForFunction(({ id, loop }) => {
+        const element = document.querySelector(`[data-column-generated-video="${id}"] video`);
         return loop ? element?.dataset.qaLoopObserved === 'true' : element?.ended;
-      }, item.loop === true, { timeout: (item.duration + 8) * 1000 });
+      }, { id: item.id, loop: item.loop === true }, { timeout: (item.duration + 8) * 1000 });
       const replaySeconds = (performance.now() - replayStartedAt) / 1000;
       assert.ok(replaySeconds >= item.duration - 0.2, 'The clip did not play through at its native rate');
       assert.equal(await video.evaluate(element => element.playbackRate), 1);

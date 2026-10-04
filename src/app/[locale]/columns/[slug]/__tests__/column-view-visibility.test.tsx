@@ -68,7 +68,7 @@ describe('public column view publication visibility', () => {
     expect(html).toContain('HIDDEN_BODY');
     expect(html).toContain('id="right-turn-observation"');
     expect(html.match(/<video\b/g)).toHaveLength(1);
-    expect(html).toContain('data-column-generated-video="right-turn-scooter-v2-zh-hant"');
+    expect(html).toContain('data-column-generated-video="right-turn-film-v1-zh-hant"');
     expect(renderToStaticMarkup(<ColumnDetailView {...shown} urlLocale="en" />)).not.toContain('data-traffic-observation');
     expect(renderToStaticMarkup(<ColumnDetailView {...shown} post={{ ...shown.post, slug: 'another-column' }} />)).not.toContain('data-traffic-observation');
   });

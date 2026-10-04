@@ -39,7 +39,14 @@ const employmentRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/d
 const employmentTermComparisonCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-term-comparison-video-captions.json', import.meta.url), 'utf8'));
 const familyDocumentSortingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/family-document-sorting-video-captions.json', import.meta.url), 'utf8'));
 const inheritanceRecordEnvelopeCaptions = JSON.parse(await fs.readFile(new URL('../src/data/inheritance-record-envelope-video-captions.json', import.meta.url), 'utf8'));
+const massageShoulderReleaseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/massage-shoulder-release-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(massageShoulderReleaseCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-massage-history-law',
+    id: `massage-shoulder-release-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `massage-shoulder-release-v1-${locale}`, duration: 4.041667, contactTime: 2.4,
+    expectedDiagrams: 0, minBodyImages: 3, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
   ...Object.entries(inheritanceRecordEnvelopeCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-inheritance-custody-analysis',
     id: `inheritance-record-envelope-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,

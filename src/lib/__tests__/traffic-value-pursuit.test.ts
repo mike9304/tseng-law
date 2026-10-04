@@ -6,7 +6,7 @@ import pending from '@/content/column-embeddings-pending.json';
 
 const articles = [
   { slug: 'taiwan-repaired-car-diminished-value-appraisal-evidence', number: 189, subject: 'compensation', film: 'diminished-value-film-v1-zh-hant' },
-  { slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', number: 190, subject: 'liability', film: null },
+  { slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', number: 190, subject: 'liability', film: 'pursuit-vacatur-film-v1-zh-hant' },
 ] as const;
 
 describe('reviewed diminished value and vacated pursuit judgment columns', () => {
@@ -33,6 +33,10 @@ describe('reviewed diminished value and vacated pursuit judgment columns', () =>
 
   it('opens with vacatur, preserves appeal uncertainty and resolves every source citation', () => {
     const post = getColumnPost(articles[1].slug, 'zh-hant')!;
+    const film = getColumnGeneratedVideo('zh-hant', articles[1].slug)!;
+    expect(film.chapters?.[0].title).toContain('一審九年已撤銷');
+    expect(film.chapters?.[0].text).toContain('不是實體無罪');
+    expect(film.disclosure).toContain('不是確定有罪結論');
     expect(post.content.replace(/^# .*\n\n/, '')).toMatch(/^> 本文討論的一審九年有罪判決，已經被撤銷。/);
     expect(post.summary).toContain('因被告死亡遭撤銷');
     for (const phrase of ['二審也沒有作成實體無罪判斷', '不能描述成「全程沒有碰到」', '本案一審未明引第17條', '最高時速78公里，來自被告汽車', '並不是「不得上訴」', '本文未取得確定證明或後續上訴資料']) expect(post.content).toContain(phrase);

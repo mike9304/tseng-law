@@ -310,6 +310,26 @@ describe('reviewed column videos', () => {
     expect(getColumnGeneratedVideo('eo', slug)).toBeNull();
   });
 
+  it.each(['zh-hant', 'ko', 'en', 'ja'])('uses one full non-looping film for the three final road-rage columns in %s', locale => {
+    const cases = [
+      ['taiwan-road-rage-driver-stopped-route-66s-fast-lane', 'night-stop-film-v1', 140],
+      ['taiwan-road-rage-freeway-chase-own-dashcam-too', 'own-dashcam-film-v1', 180],
+      ['taiwan-road-rage-52-seconds-subtracted-case', 'red-light-film-v1', 180],
+    ] as const;
+    for (const [slug, id, durationSeconds] of cases) {
+      const asset = getColumnGeneratedVideo(locale, slug)!;
+      expect(asset).toMatchObject({ id: `${id}-${locale}`, durationSeconds, sceneCount: durationSeconds / 10 });
+      const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} autoPlay />);
+      expect(html.match(/<video/g)).toHaveLength(1);
+      expect(html).toContain('muted=""');
+      expect(html).toContain('controls=""');
+      expect(html).not.toContain('loop=');
+      expect(html).toContain(renderToStaticMarkup(<>{asset.disclosure}</>));
+      expect(getColumnGeneratedVideo(locale, slug, 'issue')).toBeNull();
+      expect(getColumnGeneratedVideo('fr', slug)).toBeNull();
+    }
+  });
+
   it.each([
     ['ko', '실제 임대 매물이 아닙니다'],
     ['en', 'not an actual rental listing'],

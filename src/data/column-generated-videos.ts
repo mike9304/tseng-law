@@ -1,3 +1,4 @@
+import detachedTireImpactCaptions from './detached-tire-impact-video-captions.json';
 import fastLaneStopCaptions from './fast-lane-stop-video-captions.json';
 import scooterLaneBlockCaptions from './scooter-lane-block-video-captions.json';
 import bridgeScooterBrakeCaptions from './bridge-scooter-brake-video-captions.json';
@@ -46,6 +47,14 @@ export type ColumnGeneratedVideoAsset = {
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-detached-tire-delayed-treatment-criminal-injury-causation': {
+    id: 'detached-tire-impact-v3-zh-hant',
+    src: '/videos/columns/detached-tire-impact-v3-zh-hant.mp4',
+    poster: '/images/column-videos/detached-tire-impact-v3-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...detachedTireImpactCaptions['zh-hant'],
+  },
   ...Object.fromEntries(Object.entries(stopDialogueCaptions).map(([locale, caption]) => {
     const id = `stop-dialogue-v1-${locale}`;
     return [

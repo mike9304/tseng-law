@@ -28,7 +28,9 @@ const laneBlockExitCaptions = JSON.parse(await fs.readFile(new URL('../src/data/
 const bridgeScooterBrakeCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bridge-scooter-brake-video-captions.json', import.meta.url), 'utf8'));
 const scooterLaneBlockCaptions = JSON.parse(await fs.readFile(new URL('../src/data/scooter-lane-block-video-captions.json', import.meta.url), 'utf8'));
 const fastLaneStopCaptions = JSON.parse(await fs.readFile(new URL('../src/data/fast-lane-stop-video-captions.json', import.meta.url), 'utf8'));
+const detachedTireImpactCaptions = JSON.parse(await fs.readFile(new URL('../src/data/detached-tire-impact-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-detached-tire-delayed-treatment-criminal-injury-causation', id: 'detached-tire-impact-v3-zh-hant', duration: 6.041667, contactTime: 1, expectedDiagrams: 0, disclosure: detachedTireImpactCaptions['zh-hant'].disclosure },
   ...Object.entries(fastLaneStopCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
     id: `road-rage-driver-stopped-route-66s-fast-lane-v4-${locale}`,

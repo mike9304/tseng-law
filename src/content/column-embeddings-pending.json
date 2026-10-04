@@ -893,6 +893,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-freeway-warning-triangle-time-ability-evidence"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-semiconductor-shift-work-labor-law-korean-subsidiary"
+    },
+    {
+      "locale": "en",
+      "slug": "us-taiwan-double-taxation-semiconductor-expansion"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-semiconductor-foreign-talent-recruitment-law"
     }
   ]
 }

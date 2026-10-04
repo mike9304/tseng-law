@@ -118,5 +118,130 @@
     "title": "Blaði rennt til baka yfir fundarborðið",
     "description": "Manneskjan hægra megin rennir einu blaði aftur til manneskjunnar á móti. Hún sleppir blaðinu og dregur höndina aftur að pennanum.",
     "disclosure": "Um fjögurra sekúndna skálduð sena, búin til með gervigreind. Hún sýnir ekki raunverulegan skjólstæðing, ósvikin vinnuskjöl, undirritun, raunveruleg starfslok eða greiðslu starfslokabóta."
+  },
+  "it": {
+    "title": "Un foglio restituito dall’altro lato del tavolo",
+    "description": "La persona a destra fa scivolare un foglio verso la persona di fronte per restituirglielo. Lo lascia e ritira la mano accanto alla penna.",
+    "disclosure": "Scena immaginaria di circa quattro secondi generata con l’IA. Non mostra un cliente reale, documenti di lavoro autentici, una firma, l’effettiva cessazione di un rapporto di lavoro o il pagamento di un’indennità di licenziamento."
+  },
+  "km": {
+    "title": "ការរុញក្រដាសត្រឡប់ទៅម្ខាងទៀតនៃតុ",
+    "description": "អ្នកអង្គុយខាងស្តាំរុញក្រដាសមួយសន្លឹកត្រឡប់ទៅអ្នកអង្គុយទល់មុខ។ បន្ទាប់ពីលែងក្រដាស គាត់ដកដៃមកដាក់ក្បែរប៊ិចវិញ។",
+    "disclosure": "ឈុតស្រមៃប្រវែងប្រហែលបួនវិនាទី ដែលបង្កើតដោយ AI។ ឈុតនេះមិនបង្ហាញអតិថិជនពិត ឯកសារការងារពិត ការចុះហត្ថលេខា ការបញ្ចប់ទំនាក់ទំនងការងារពិតប្រាកដ ឬការបង់ប្រាក់បំណាច់ពេលបញ្ចប់ការងារទេ។"
+  },
+  "lt": {
+    "title": "Lapas grąžinamas per susitikimų stalą",
+    "description": "Dešinėje sėdintis asmuo pastumia vieną lapą atgal priešais sėdinčiam žmogui. Paleidęs lapą, atitraukia ranką prie rašiklio.",
+    "disclosure": "Maždaug keturių sekundžių išgalvota scena, sukurta dirbtiniu intelektu. Joje nerodomas tikras klientas, autentiški darbo dokumentai, pasirašymas, tikras darbo santykių nutraukimas ar išeitinės išmokos mokėjimas."
+  },
+  "lv": {
+    "title": "Lapa tiek pastumta atpakaļ pāri galdam",
+    "description": "Labajā pusē sēdošais cilvēks pastumj vienu lapu atpakaļ pretī sēdošajam. Viņš atlaiž lapu un atvelk roku pie pildspalvas.",
+    "disclosure": "Aptuveni četras sekundes gara izdomāta aina, kas radīta ar mākslīgo intelektu. Tajā nav attēlots īsts klients, autentiski darba dokumenti, parakstīšana, reāla darba attiecību izbeigšana vai atlaišanas pabalsta izmaksa."
+  },
+  "mn": {
+    "title": "Ширээний нөгөө тал руу цаас буцаах",
+    "description": "Баруун талд сууж буй хүн нэг хуудас цаасыг өөдөөс нь суугаа хүн рүү буцаан гулсуулна. Цаасыг тавьсны дараа гараа үзэгний дэргэд буцааж авна.",
+    "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундийн зохиомол үзэгдэл. Бодит үйлчлүүлэгч, жинхэнэ хөдөлмөрийн баримт, гарын үсэг зурах үйлдэл, хөдөлмөрийн харилцааг үнэхээр дуусгавар болгосон явдал эсвэл ажлаас чөлөөлсний тэтгэмж олгосон үйл явдлыг харуулаагүй."
+  },
+  "ms": {
+    "title": "Sehelai kertas dipulangkan ke seberang meja",
+    "description": "Orang di sebelah kanan menyorong sehelai kertas kembali kepada orang di hadapannya. Dia melepaskan kertas itu lalu menarik tangannya ke sisi pen.",
+    "disclosure": "Adegan rekaan kira-kira empat saat yang dijana dengan AI. Adegan ini tidak menunjukkan klien sebenar, dokumen pekerjaan tulen, tandatangan, penamatan hubungan pekerjaan yang benar-benar berlaku atau pembayaran pampasan pemberhentian kerja."
+  },
+  "my": {
+    "title": "စားပွဲတစ်ဖက်သို့ စာရွက်ပြန်ပေးခြင်း",
+    "description": "ညာဘက်တွင် ထိုင်နေသူက စာရွက်တစ်ရွက်ကို မျက်နှာချင်းဆိုင်ထိုင်နေသူထံ ပြန်တွန်းပေးသည်။ စာရွက်ကို လွှတ်ပြီးနောက် လက်ကို ဘောပင်ဘေးသို့ ပြန်ရုပ်လိုက်သည်။",
+    "disclosure": "AI ဖြင့် ဖန်တီးထားသော လေးစက္ကန့်ခန့်ကြာ စိတ်ကူးယဉ်မြင်ကွင်းဖြစ်သည်။ တကယ့်အမှုသည်၊ အလုပ်အကိုင်ဆိုင်ရာ စာရွက်စာတမ်းအစစ်၊ လက်မှတ်ထိုးခြင်း၊ အလုပ်ခန့်ထားမှု အမှန်တကယ်ရပ်စဲခြင်း သို့မဟုတ် အလုပ်ရပ်စဲမှု နစ်နာကြေးပေးချေခြင်းကို မဖော်ပြထားပါ။"
+  },
+  "nb": {
+    "title": "Et ark skyves tilbake over møtebordet",
+    "description": "Personen til høyre skyver ett ark tilbake mot personen på den andre siden. Etter å ha sluppet arket trekker personen hånden tilbake ved siden av pennen.",
+    "disclosure": "En oppdiktet scene på omtrent fire sekunder, laget med KI. Den viser ikke en virkelig klient, ekte arbeidsdokumenter, en signering, et faktisk opphør av et arbeidsforhold eller utbetaling av sluttvederlag."
+  },
+  "ne": {
+    "title": "बैठकको टेबलमा कागज फिर्ता सार्दै",
+    "description": "दायाँपट्टि बसेको व्यक्तिले एउटा कागज सामुन्ने बसेको व्यक्तितिर फिर्ता सार्छ। कागज छोडेपछि आफ्नो हात कलमको छेउमा फर्काउँछ।",
+    "disclosure": "AI बाट बनाइएको करिब चार सेकेन्डको काल्पनिक दृश्य हो। यसले वास्तविक सेवाग्राही, सक्कली रोजगारसम्बन्धी कागजात, हस्ताक्षर, रोजगार सम्बन्धको वास्तविक अन्त्य वा रोजगार अन्त्य हुँदाको क्षतिपूर्ति भुक्तानी देखाउँदैन।"
+  },
+  "nl": {
+    "title": "Een vel papier terugschuiven over de tafel",
+    "description": "De persoon rechts schuift één vel terug naar de persoon aan de overkant. Daarna laat die persoon het vel los en legt de hand weer naast de pen.",
+    "disclosure": "Een fictieve scène van ongeveer vier seconden, gemaakt met AI. Ze toont geen echte cliënt, authentieke arbeidsdocumenten, ondertekening, daadwerkelijke beëindiging van een dienstverband of betaling van een ontslagvergoeding."
+  },
+  "pl": {
+    "title": "Kartka przesunięta z powrotem na drugą stronę stołu",
+    "description": "Osoba po prawej przesuwa jedną kartkę z powrotem do osoby naprzeciwko. Puszcza ją i cofa rękę obok długopisu.",
+    "disclosure": "Fikcyjna scena trwająca około czterech sekund, wygenerowana przez AI. Nie przedstawia prawdziwego klienta, autentycznych dokumentów pracowniczych, podpisywania, faktycznego rozwiązania stosunku pracy ani wypłaty odprawy."
+  },
+  "pt": {
+    "title": "Uma folha devolvida para o outro lado da mesa",
+    "description": "A pessoa à direita desliza uma folha de volta para quem está à sua frente. Solta a folha e recolhe a mão para junto da caneta.",
+    "disclosure": "Cena fictícia de aproximadamente quatro segundos, gerada por IA. Não mostra um cliente real, documentos de trabalho autênticos, assinatura, encerramento efetivo de uma relação de trabalho ou pagamento de indenização por desligamento."
+  },
+  "ro": {
+    "title": "O foaie este înapoiată peste masa de ședință",
+    "description": "Persoana din dreapta împinge o foaie înapoi spre persoana din fața sa. Îi dă drumul și își retrage mâna lângă pix.",
+    "disclosure": "Scenă fictivă de aproximativ patru secunde, generată cu IA. Nu prezintă un client real, documente de muncă autentice, o semnare, încetarea efectivă a unui raport de muncă sau plata unei compensații la concediere."
+  },
+  "ru": {
+    "title": "Лист возвращают через стол для переговоров",
+    "description": "Человек справа пододвигает один лист обратно к сидящему напротив. Отпустив лист, он отводит руку к лежащей рядом ручке.",
+    "disclosure": "Вымышленная сцена длительностью около четырёх секунд, созданная с помощью ИИ. Она не показывает реального клиента, подлинные трудовые документы, подписание, фактическое прекращение трудовых отношений или выплату выходного пособия."
+  },
+  "sk": {
+    "title": "Vrátenie listu papiera cez rokovací stôl",
+    "description": "Osoba vpravo posunie jeden list papiera späť k osobe oproti. Pustí ho a stiahne ruku k peru.",
+    "disclosure": "Vymyslená scéna dlhá približne štyri sekundy, vytvorená umelou inteligenciou. Nezobrazuje skutočného klienta, pravé pracovné dokumenty, podpisovanie, skutočné skončenie pracovného pomeru ani vyplatenie odstupného."
+  },
+  "sl": {
+    "title": "Vračanje lista čez mizo za sestanke",
+    "description": "Oseba na desni potisne en list nazaj proti osebi nasproti. List spusti in umakne roko ob pisalo.",
+    "disclosure": "Približno štiri sekunde dolg izmišljen prizor, ustvarjen z umetno inteligenco. Ne prikazuje resnične stranke, pristnih delovnih dokumentov, podpisovanja, dejanskega prenehanja delovnega razmerja ali izplačila odpravnine."
+  },
+  "sr": {
+    "title": "Vraćanje lista preko stola za sastanke",
+    "description": "Osoba sa desne strane gura jedan list nazad ka osobi preko puta. Pušta list i povlači ruku pored hemijske olovke.",
+    "disclosure": "Izmišljena scena od približno četiri sekunde, napravljena pomoću veštačke inteligencije. Ne prikazuje stvarnog klijenta, autentične radne dokumente, potpisivanje, stvarni prestanak radnog odnosa niti isplatu otpremnine."
+  },
+  "sv": {
+    "title": "Ett papper skjuts tillbaka över mötesbordet",
+    "description": "Personen till höger skjuter tillbaka ett papper mot personen på andra sidan. Personen släpper papperet och lägger handen bredvid pennan igen.",
+    "disclosure": "En påhittad scen på ungefär fyra sekunder, skapad med AI. Den visar inte en verklig klient, äkta anställningshandlingar, en underskrift, en faktiskt avslutad anställning eller utbetalning av avgångsvederlag."
+  },
+  "ta": {
+    "title": "மேசையின் மறுபுறம் காகிதத்தைத் திருப்பித் தருதல்",
+    "description": "வலப்புறம் அமர்ந்திருப்பவர் ஒரு தாளை எதிரில் அமர்ந்திருப்பவரை நோக்கித் திருப்பித் தள்ளுகிறார். அதை விட்டுவிட்டு, கையைப் பேனாவின் அருகே திரும்ப வைக்கிறார்.",
+    "disclosure": "AI மூலம் உருவாக்கப்பட்ட, சுமார் நான்கு விநாடிகள் நீளமுள்ள கற்பனைக் காட்சி. உண்மையான வாடிக்கையாளர், உண்மையான வேலைவாய்ப்பு ஆவணங்கள், கையொப்பமிடுதல், உண்மையில் வேலை உறவு முடிவடைதல் அல்லது பணிநீக்க இழப்பீடு வழங்கப்படுதல் ஆகியவற்றை இது காட்டவில்லை."
+  },
+  "th": {
+    "title": "เลื่อนกระดาษคืนไปอีกฝั่งของโต๊ะ",
+    "description": "คนที่นั่งด้านขวาเลื่อนกระดาษหนึ่งแผ่นคืนให้คนที่นั่งตรงข้าม แล้วปล่อยกระดาษและดึงมือกลับมาไว้ข้างปากกา",
+    "disclosure": "ฉากสมมติยาวประมาณสี่วินาที สร้างด้วย AI ไม่ได้แสดงลูกความจริง เอกสารการจ้างงานจริง การลงนาม การสิ้นสุดความสัมพันธ์การจ้างงานที่เกิดขึ้นจริง หรือการจ่ายค่าชดเชยเมื่อเลิกจ้าง"
+  },
+  "tr": {
+    "title": "Bir kâğıdı masanın karşı tarafına geri kaydırmak",
+    "description": "Sağda oturan kişi bir yaprak kâğıdı karşısındakine doğru geri kaydırır. Kâğıdı bıraktıktan sonra elini kalemin yanına çeker.",
+    "disclosure": "Yapay zekâyla oluşturulmuş, yaklaşık dört saniyelik kurmaca bir sahnedir. Gerçek bir müvekkili, gerçek çalışma belgelerini, imza atılmasını, fiilen sona eren bir iş ilişkisini veya işten ayrılma tazminatı ödenmesini göstermez."
+  },
+  "uk": {
+    "title": "Аркуш повертають через стіл для зустрічей",
+    "description": "Людина праворуч підсуває один аркуш назад до людини навпроти. Відпускає його й відводить руку до ручки, що лежить поруч.",
+    "disclosure": "Вигадана сцена тривалістю приблизно чотири секунди, створена за допомогою ШІ. Вона не показує реального клієнта, справжніх трудових документів, підписання, фактичного припинення трудових відносин або виплати вихідної допомоги."
+  },
+  "ur": {
+    "title": "میز کے پار کاغذ واپس کرنا",
+    "description": "دائیں جانب بیٹھا شخص ایک کاغذ سامنے بیٹھے شخص کی طرف واپس سرکاتا ہے۔ پھر کاغذ چھوڑ کر اپنا ہاتھ قلم کے پاس واپس لے آتا ہے۔",
+    "disclosure": "AI سے بنایا گیا تقریباً چار سیکنڈ کا فرضی منظر ہے۔ اس میں کوئی حقیقی موکل، ملازمت کی اصل دستاویزات، دستخط، ملازمت کے تعلق کا حقیقی خاتمہ یا برطرفی کے معاوضے کی ادائیگی نہیں دکھائی گئی۔"
+  },
+  "vi": {
+    "title": "Đẩy tờ giấy trả lại qua bàn họp",
+    "description": "Người ngồi bên phải đẩy một tờ giấy trả lại cho người đối diện. Sau khi buông tờ giấy, người này rút tay về cạnh cây bút.",
+    "disclosure": "Cảnh giả định dài khoảng bốn giây, được tạo bằng AI. Cảnh không thể hiện khách hàng thật, hồ sơ lao động thật, việc ký tên, chấm dứt quan hệ lao động trên thực tế hay chi trả trợ cấp thôi việc."
+  },
+  "zh-hans": {
+    "title": "把一张纸推回桌子对面",
+    "description": "右侧的人把一张纸推回给对面的人，松开纸张后，将手收回到笔的旁边。",
+    "disclosure": "这是AI生成的约四秒虚构场景，未呈现真实客户、真实劳动资料、签署行为、实际终止劳动关系或支付资遣费。"
   }
 }

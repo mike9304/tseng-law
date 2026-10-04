@@ -118,5 +118,130 @@
     "title": "Blað með töflu lagt í opna möppu",
     "description": "Manneskja leggur blað með töflu ofan á pappírana í opinni möppu. Vinstri höndin fer aftur á borðið en sú hægri helst við blaðbrúnina.",
     "disclosure": "Um fjögurra sekúndna skálduð sena, búin til með gervigreind. Blöðin eru ekki raunverulegar mætingar- eða launaskrár og sanna hvorki vangoldin laun, réttmæti kröfu né greiðslu starfslokabóta."
+  },
+  "it": {
+    "title": "Un foglio con una tabella posato nella cartella aperta",
+    "description": "Una persona posa un foglio con una tabella sui documenti di una cartella aperta. La mano sinistra torna sul tavolo, mentre la destra resta sul bordo del foglio.",
+    "disclosure": "Scena immaginaria di circa quattro secondi generata con l’IA. I fogli non sono registri autentici delle presenze o delle retribuzioni e non dimostrano stipendi non pagati, la fondatezza di una richiesta o il pagamento di un’indennità di licenziamento."
+  },
+  "km": {
+    "title": "ការដាក់ក្រដាសមានតារាងលើសឺមីដែលបើក",
+    "description": "មនុស្សម្នាក់ដាក់ក្រដាសមានតារាងមួយសន្លឹកលើក្រដាសក្នុងសឺមីដែលបើក។ ដៃឆ្វេងត្រឡប់មកលើតុ ខណៈដៃស្តាំនៅជិតគែមក្រដាស។",
+    "disclosure": "ឈុតស្រមៃប្រវែងប្រហែលបួនវិនាទី ដែលបង្កើតដោយ AI។ ក្រដាសទាំងនេះមិនមែនជាកំណត់ត្រាវត្តមាន ឬប្រាក់ឈ្នួលពិតទេ ហើយមិនបញ្ជាក់ពីប្រាក់ឈ្នួលមិនទាន់បើក សិទ្ធិទាមទារដែលមានមូលដ្ឋាន ឬការបង់ប្រាក់បំណាច់ពេលបញ្ចប់ការងារទេ។"
+  },
+  "lt": {
+    "title": "Lapas su lentele dedamas į atverstą aplanką",
+    "description": "Asmuo padeda lapą su lentele ant atverstame aplanke esančių popierių. Kairė ranka grįžta ant stalo, o dešinė lieka prie lapo krašto.",
+    "disclosure": "Maždaug keturių sekundžių išgalvota scena, sukurta dirbtiniu intelektu. Popieriai nėra tikri darbo laiko ar atlyginimo įrašai ir neįrodo neišmokėto atlyginimo, reikalavimo pagrįstumo ar išeitinės išmokos sumokėjimo."
+  },
+  "lv": {
+    "title": "Lapa ar tabulu tiek nolikta atvērtā mapē",
+    "description": "Cilvēks noliek lapu ar tabulu uz papīriem atvērtā mapē. Kreisā roka atgriežas uz galda, bet labā paliek pie lapas malas.",
+    "disclosure": "Aptuveni četras sekundes gara izdomāta aina, kas radīta ar mākslīgo intelektu. Papīri nav īsti darba laika vai algu uzskaites dokumenti un nepierāda neizmaksātu algu, prasījuma pamatotību vai atlaišanas pabalsta izmaksu."
+  },
+  "mn": {
+    "title": "Хүснэгттэй хуудсыг нээлттэй хавтсанд тавих",
+    "description": "Нэг хүн хүснэгттэй хуудсыг нээлттэй хавтас дахь цааснууд дээр тавина. Зүүн гар нь ширээн дээр буцаж, баруун гар нь хуудасны ирмэгийн дэргэд үлдэнэ.",
+    "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундийн зохиомол үзэгдэл. Эдгээр цаас нь бодит ирц, цалингийн бүртгэл биш бөгөөд цалин төлөөгүй, шаардлага үндэслэлтэй эсвэл ажлаас чөлөөлсний тэтгэмж олгосон гэдгийг нотлохгүй."
+  },
+  "ms": {
+    "title": "Helaian dengan jadual diletakkan dalam folder terbuka",
+    "description": "Seseorang meletakkan helaian dengan jadual di atas kertas dalam folder terbuka. Tangan kirinya kembali ke meja, manakala tangan kanannya kekal di tepi helaian.",
+    "disclosure": "Adegan rekaan kira-kira empat saat yang dijana dengan AI. Kertas itu bukan rekod kehadiran atau gaji sebenar dan tidak membuktikan gaji tertunggak, kesahan tuntutan atau pembayaran pampasan pemberhentian kerja."
+  },
+  "my": {
+    "title": "ဖွင့်ထားသောဖိုင်တွဲပေါ် ဇယားပါစာရွက်တင်ခြင်း",
+    "description": "လူတစ်ဦးက ဇယားပါစာရွက်တစ်ရွက်ကို ဖွင့်ထားသောဖိုင်တွဲထဲရှိ စာရွက်များပေါ် တင်သည်။ ဘယ်လက်က စားပွဲပေါ်သို့ ပြန်ရောက်ပြီး ညာလက်က စာရွက်အစွန်းနားတွင် ကျန်နေသည်။",
+    "disclosure": "AI ဖြင့် ဖန်တီးထားသော လေးစက္ကန့်ခန့်ကြာ စိတ်ကူးယဉ်မြင်ကွင်းဖြစ်သည်။ ဤစာရွက်များသည် တကယ့်အလုပ်တက်ရောက်မှု သို့မဟုတ် လစာမှတ်တမ်းများ မဟုတ်ပါ။ လစာမပေးရသေးကြောင်း၊ တောင်းဆိုချက်ခိုင်လုံကြောင်း သို့မဟုတ် အလုပ်ရပ်စဲမှု နစ်နာကြေးပေးချေထားကြောင်း သက်သေမပြနိုင်ပါ။"
+  },
+  "nb": {
+    "title": "Et ark med tabell legges i en åpen mappe",
+    "description": "En person legger et ark med en tabell oppå papirene i en åpen mappe. Venstre hånd går tilbake til bordet, mens høyre hånd blir ved kanten av arket.",
+    "disclosure": "En oppdiktet scene på omtrent fire sekunder, laget med KI. Papirene er ikke ekte oppmøte- eller lønnsregistre og dokumenterer ikke ubetalt lønn, et berettiget krav eller utbetaling av sluttvederlag."
+  },
+  "ne": {
+    "title": "खुला फोल्डरमा तालिका भएको कागज राख्दै",
+    "description": "एक व्यक्तिले तालिका भएको कागज खुला फोल्डरभित्रका कागजमाथि राख्छ। बायाँ हात टेबलमा फर्कन्छ र दायाँ हात कागजको छेउमा रहन्छ।",
+    "disclosure": "AI बाट बनाइएको करिब चार सेकेन्डको काल्पनिक दृश्य हो। यी कागज वास्तविक हाजिरी वा तलब अभिलेख होइनन्। यिनले तलब बाँकी रहेको, दाबी जायज भएको वा रोजगार अन्त्य हुँदाको क्षतिपूर्ति भुक्तानी भएको प्रमाण दिँदैनन्।"
+  },
+  "nl": {
+    "title": "Een vel met een tabel in een open map leggen",
+    "description": "Een persoon legt een vel met een tabel op de papieren in een open map. De linkerhand gaat terug naar het bureau, terwijl de rechterhand bij de rand van het vel blijft.",
+    "disclosure": "Een fictieve scène van ongeveer vier seconden, gemaakt met AI. De papieren zijn geen echte aanwezigheids- of loonadministratie en bewijzen geen achterstallig loon, een gegronde vordering of betaling van een ontslagvergoeding."
+  },
+  "pl": {
+    "title": "Kartka z tabelą położona w otwartej teczce",
+    "description": "Osoba kładzie kartkę z tabelą na papierach w otwartej teczce. Lewa ręka wraca na stół, a prawa pozostaje przy brzegu kartki.",
+    "disclosure": "Fikcyjna scena trwająca około czterech sekund, wygenerowana przez AI. Kartki nie są prawdziwymi ewidencjami obecności ani wynagrodzeń i nie dowodzą zaległej wypłaty, zasadności roszczenia ani wypłaty odprawy."
+  },
+  "pt": {
+    "title": "Uma folha com tabela colocada numa pasta aberta",
+    "description": "Uma pessoa coloca uma folha com tabela sobre os papéis de uma pasta aberta. A mão esquerda volta à mesa, enquanto a direita fica na borda da folha.",
+    "disclosure": "Cena fictícia de aproximadamente quatro segundos, gerada por IA. Os papéis não são registros reais de presença ou de salários e não comprovam salários em atraso, a validade de uma reivindicação ou o pagamento de indenização por desligamento."
+  },
+  "ro": {
+    "title": "O foaie cu tabel este așezată într-un dosar deschis",
+    "description": "O persoană așază o foaie cu tabel peste hârtiile dintr-un dosar deschis. Mâna stângă revine pe masă, iar cea dreaptă rămâne la marginea foii.",
+    "disclosure": "Scenă fictivă de aproximativ patru secunde, generată cu IA. Hârtiile nu sunt evidențe reale de prezență sau salarizare și nu dovedesc salarii neachitate, temeinicia unei cereri sau plata unei compensații la concediere."
+  },
+  "ru": {
+    "title": "Лист с таблицей кладут в открытую папку",
+    "description": "Человек кладёт один лист с таблицей поверх бумаг в открытой папке. Левая рука возвращается на стол, а правая остаётся у края листа.",
+    "disclosure": "Вымышленная сцена длительностью около четырёх секунд, созданная с помощью ИИ. Бумаги не являются реальными табелями посещаемости или зарплатными документами и не доказывают задолженность по зарплате, обоснованность требования или выплату выходного пособия."
+  },
+  "sk": {
+    "title": "Položenie listu s tabuľkou do otvoreného priečinka",
+    "description": "Osoba položí list s tabuľkou na papiere v otvorenom priečinku. Ľavá ruka sa vráti na stôl, pravá zostáva pri okraji listu.",
+    "disclosure": "Vymyslená scéna dlhá približne štyri sekundy, vytvorená umelou inteligenciou. Papiere nie sú skutočnými záznamami dochádzky ani miezd a nedokazujú nevyplatenú mzdu, oprávnenosť nároku ani vyplatenie odstupného."
+  },
+  "sl": {
+    "title": "Polaganje lista s tabelo v odprto mapo",
+    "description": "Oseba položi list s tabelo na papirje v odprti mapi. Leva roka se vrne na mizo, desna pa ostane ob robu lista.",
+    "disclosure": "Približno štiri sekunde dolg izmišljen prizor, ustvarjen z umetno inteligenco. Papirji niso resnične evidence prisotnosti ali plač in ne dokazujejo neizplačane plače, utemeljenosti zahtevka ali izplačila odpravnine."
+  },
+  "sr": {
+    "title": "Stavljanje lista sa tabelom u otvorenu fasciklu",
+    "description": "Osoba stavlja list sa tabelom preko papira u otvorenoj fascikli. Leva ruka se vraća na sto, a desna ostaje uz ivicu lista.",
+    "disclosure": "Izmišljena scena od približno četiri sekunde, napravljena pomoću veštačke inteligencije. Papiri nisu stvarne evidencije dolazaka ili zarada i ne dokazuju neisplaćenu zaradu, osnovanost zahteva niti isplatu otpremnine."
+  },
+  "sv": {
+    "title": "Ett ark med en tabell läggs i en öppen mapp",
+    "description": "En person lägger ett ark med en tabell ovanpå papperen i en öppen mapp. Vänster hand återgår till bordet, medan höger hand stannar vid arkets kant.",
+    "disclosure": "En påhittad scen på ungefär fyra sekunder, skapad med AI. Papperen är inga riktiga närvaro- eller löneunderlag och styrker inte obetald lön, ett berättigat krav eller utbetalning av avgångsvederlag."
+  },
+  "ta": {
+    "title": "திறந்த கோப்புறையில் அட்டவணை உள்ள தாளை வைத்தல்",
+    "description": "ஒருவர் அட்டவணை உள்ள ஒரு தாளைத் திறந்த கோப்புறையிலுள்ள காகிதங்களின் மேல் வைக்கிறார். இடது கை மீண்டும் மேசைக்கு வருகிறது; வலது கை தாளின் விளிம்பருகே இருக்கிறது.",
+    "disclosure": "AI மூலம் உருவாக்கப்பட்ட, சுமார் நான்கு விநாடிகள் நீளமுள்ள கற்பனைக் காட்சி. இந்தத் தாள்கள் உண்மையான வருகை அல்லது ஊதியப் பதிவுகள் அல்ல. நிலுவை ஊதியம், ஒரு கோரிக்கையின் செல்லுபடித்தன்மை அல்லது பணிநீக்க இழப்பீடு வழங்கப்பட்டதை இவை நிரூபிக்கவில்லை."
+  },
+  "th": {
+    "title": "วางกระดาษที่มีตารางลงในแฟ้มที่เปิดอยู่",
+    "description": "คนหนึ่งวางกระดาษที่มีตารางลงบนเอกสารในแฟ้มที่เปิดอยู่ มือซ้ายกลับมาวางบนโต๊ะ ส่วนมือขวายังคงอยู่ข้างขอบกระดาษ",
+    "disclosure": "ฉากสมมติยาวประมาณสี่วินาที สร้างด้วย AI กระดาษเหล่านี้ไม่ใช่บันทึกการเข้างานหรือค่าจ้างจริง และไม่ได้พิสูจน์ว่ามีค่าจ้างค้างจ่าย ข้อเรียกร้องมีมูล หรือมีการจ่ายค่าชดเชยเมื่อเลิกจ้าง"
+  },
+  "tr": {
+    "title": "Tablolu bir yaprağı açık dosyaya yerleştirmek",
+    "description": "Bir kişi tablolu bir yaprağı açık dosyadaki kâğıtların üzerine koyar. Sol eli masaya dönerken sağ eli yaprağın kenarında kalır.",
+    "disclosure": "Yapay zekâyla oluşturulmuş, yaklaşık dört saniyelik kurmaca bir sahnedir. Kâğıtlar gerçek devam veya ücret kayıtları değildir; ödenmemiş ücreti, bir talebin haklılığını ya da işten ayrılma tazminatı ödendiğini kanıtlamaz."
+  },
+  "uk": {
+    "title": "Аркуш із таблицею кладуть у відкриту папку",
+    "description": "Людина кладе аркуш із таблицею поверх паперів у відкритій папці. Ліва рука повертається на стіл, а права залишається біля краю аркуша.",
+    "disclosure": "Вигадана сцена тривалістю приблизно чотири секунди, створена за допомогою ШІ. Папери не є справжніми записами обліку відвідувань чи зарплати й не доводять заборгованості із зарплати, обґрунтованості вимоги або виплати вихідної допомоги."
+  },
+  "ur": {
+    "title": "کھلے فولڈر میں جدول والا کاغذ رکھنا",
+    "description": "ایک شخص جدول والا کاغذ کھلے فولڈر میں موجود کاغذوں پر رکھتا ہے۔ بایاں ہاتھ واپس میز پر آتا ہے جبکہ دایاں ہاتھ کاغذ کے کنارے کے پاس رہتا ہے۔",
+    "disclosure": "AI سے بنایا گیا تقریباً چار سیکنڈ کا فرضی منظر ہے۔ یہ کاغذ حاضری یا تنخواہ کا حقیقی ریکارڈ نہیں ہیں اور بقایا اجرت، کسی دعوے کے درست ہونے یا برطرفی کے معاوضے کی ادائیگی کا ثبوت نہیں دیتے۔"
+  },
+  "vi": {
+    "title": "Đặt tờ giấy có bảng vào bìa hồ sơ đang mở",
+    "description": "Một người đặt tờ giấy có bảng lên các giấy tờ trong bìa hồ sơ đang mở. Tay trái trở về mặt bàn, còn tay phải ở cạnh mép giấy.",
+    "disclosure": "Cảnh giả định dài khoảng bốn giây, được tạo bằng AI. Các tờ giấy không phải hồ sơ chấm công hay tiền lương thật, cũng không chứng minh có lương chưa trả, yêu cầu có căn cứ hay việc chi trả trợ cấp thôi việc."
+  },
+  "zh-hans": {
+    "title": "把带表格的纸放进打开的文件夹",
+    "description": "一人把一张带表格的纸放到打开的文件夹内的纸张上。左手收回桌面，右手留在纸张边缘。",
+    "disclosure": "这是AI生成的约四秒虚构场景。纸张不是实际出勤或薪资记录，不能证明有欠薪、请求成立或已支付资遣费。"
   }
 }

@@ -36,7 +36,14 @@ const premisesLeaseCaptions = JSON.parse(await fs.readFile(new URL('../src/data/
 const fundsPaperworkCaptions = JSON.parse(await fs.readFile(new URL('../src/data/funds-paperwork-video-captions.json', import.meta.url), 'utf8'));
 const employmentMeetingCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-meeting-video-captions.json', import.meta.url), 'utf8'));
 const employmentRecordsCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-records-video-captions.json', import.meta.url), 'utf8'));
+const employmentTermComparisonCaptions = JSON.parse(await fs.readFile(new URL('../src/data/employment-term-comparison-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(employmentTermComparisonCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-mandatory-employment-period',
+    id: `employment-term-comparison-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,
+    evidenceStem: `employment-term-comparison-v1-${locale}`, duration: 4.041667, contactTime: 1,
+    expectedDiagrams: 0, minBodyImages: 2, traffic: false, trafficBoard: false, disclosure: caption.disclosure,
+  })),
   ...Object.entries(employmentMeetingCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-labor-severance-law',
     id: `employment-meeting-v1-${['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en'}`,

@@ -1,0 +1,262 @@
+{
+  "reviewedAt": "2026-10-04T10:23:21.570936+00:00",
+  "reviewer": "Codex",
+  "scope": "One new fictional document-comparison scene on 4 individually reviewed pages in 4 locales; remaining45language pages remain pending.",
+  "workflow": "Codex generated and directly reviewed one starting image. Grok4.7 made exactly one reference_to_video call from it. All97native frames inspected in contact sheets, plus four native-resolution hand checks. No end image or retiming used.",
+  "retiming": false,
+  "youtubeUploaded": false,
+  "nativeOrLegalProfessionalReview": false,
+  "labelPolicy": "KO/EN/JA/zh-hant labels rendered in the corresponding media; each of the four pages has a complete localized caption and AI disclosure.",
+  "editorialRules": {
+    "file": "docs/columns/EDITORIAL-VOICE.md",
+    "sha256": "f4736c269436ceaf94c4d726cf9a1687d6b8b1df4823cd14f84afd7a17ed3e2c",
+    "fullTextRead": true
+  },
+  "sceneReviews": {
+    "employment-term-comparison": {
+      "reviewedAt": "2026-10-04T10:20:11.788314+00:00",
+      "reviewer": "Codex",
+      "verdict": "approved-for-packaging",
+      "rawSha256": "dbe47b7b469dd226215a8335d1eae45ddc96139ec333530b6cf5a9ae22a68b5b",
+      "decodedFrames": 97,
+      "allFramesViewed": true,
+      "method": "Direct inspection of all seven 16-frame contact sheets, followed by four native-resolution frames numbered019,026,051,060 (one-based).",
+      "contactSheets": [
+        "/Users/son7/tseng-law-column-videos/qa/employment-term-comparison-v1/all-frames-01.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-term-comparison-v1/all-frames-02.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-term-comparison-v1/all-frames-03.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-term-comparison-v1/all-frames-04.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-term-comparison-v1/all-frames-05.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-term-comparison-v1/all-frames-06.jpg",
+        "/Users/son7/tseng-law-column-videos/qa/employment-term-comparison-v1/all-frames-07.jpg"
+      ],
+      "selectedNativeFramesZeroBased": [
+        18,
+        25,
+        50,
+        59
+      ],
+      "motion": "Right index first shifts slightly within the left grid, then crosses the gap briskly around0.625–1.042seconds to point on the right lined sheet. It holds the point until about1.8seconds, curls and withdraws to the lower edge byabout2.4seconds, then settles through4.0seconds. Left hand, sheets, folder and pen remain stable.",
+      "limitations": "The generic grid and rule thickness vary slightly during interpolation; this is not an authentic document. Natural motion blur affects the right hand during the move. No duplicate or detached hand, new text, extra paper, signature, payment or outcome observed.",
+      "nativeDuration": 4.041667,
+      "retiming": false,
+      "loop": false,
+      "scope": "Fictional comparison of document symbols only.",
+      "browserPlayback": "Pending packaging and local browser review."
+    }
+  },
+  "generation": {
+    "employment-term-comparison": {
+      "ingestedAt": "2026-10-04T10:19:10.843462+00:00",
+      "scene": "employment-term-comparison",
+      "version": "v1",
+      "generator": "Grok 4.7 reference_to_video",
+      "toolCallId": "call-cf806ee5-a4cf-4480-9215-22d5ec027d97-0",
+      "sessionId": "01a1066b-bb12-7590-b2d9-43163f132551",
+      "sourcePath": "/Users/son7/.grok/sessions/%2FUsers%2Fson7%2Ftseng-law-column-videos/01a1066b-bb12-7590-b2d9-43163f132551/videos/1.mp4",
+      "rawPath": "/Users/son7/tseng-law-column-videos/assets/employment-term-comparison/grok-v1.mp4",
+      "sha256": "dbe47b7b469dd226215a8335d1eae45ddc96139ec333530b6cf5a9ae22a68b5b",
+      "job": "/Users/son7/tseng-law-column-videos/jobs/employment-term-comparison-v1.ndjson",
+      "promptFile": "/Users/son7/tseng-law-column-videos/jobs/employment-term-comparison-v1.txt",
+      "toolInput": {
+        "prompt": "One continuous fixed-camera real-time desk shot starting exactly from the supplied frame. The right index finger lifts slightly off the LEFT grid sheet, moves briskly across the gap, and points once to a lower line of the RIGHT lined sheet by1.25 seconds. Then relax the right hand at the lower edge of the right sheet by2 seconds; keep small natural breathing and finger motion through4 seconds. The left hand remains beside the left sheet. Both sheets, their grid and rules, teal folder and capped pen stay fixed and opaque. Preserve exactly one adult, two anatomically coherent hands and stable navy sweater. A clear practical compare-two-documents gesture at normal human speed, no slow motion. No writing, signing, new text, extra hands or papers, paper movement, money, transformations, camera movement, zoom, cut or dissolve. Fictional document comparison only; no legal result or real records.",
+        "aspect_ratio": "16:9",
+        "duration": 4,
+        "resolution_name": "720p",
+        "first_frame": "/Users/son7/tseng-law-column-videos/assets/employment-term-comparison/first-frame-v1.png"
+      },
+      "discoveryTools": [],
+      "decodedFrames": 97,
+      "frameRate": "24/1",
+      "width": 1264,
+      "height": 720,
+      "durationSeconds": 4.041667,
+      "review": "pending direct visual inspection; not approved or published",
+      "retiming": false,
+      "auxiliaryFailures": []
+    }
+  },
+  "captionReviews": [
+    {
+      "articleKey": "en/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-en/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "eb43dbd7507ef0e4bf7453f07704ccc1def37d4e09362b2ded2af187f995a397",
+      "captionLanguage": "en",
+      "caption": {
+        "title": "Comparing two documents at a desk",
+        "description": "A person moves their right index finger from the grid on the left sheet to a line on the right sheet. After pointing briefly, they lower the hand to the bottom edge of the right sheet.",
+        "disclosure": "AI-generated fictional illustration of comparing documents for a minimum service period clause. The blank grid and lines are not authentic contract, training or payment records and do not establish a clause’s validity or any amount owed."
+      },
+      "captionSha256": "5d661b7370a1e0b10b935854ba567b5ae8ff93eb7bf7b89ef86362828c9f2d23",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic contract/training/payment records, enforceable clause or established repayment amount.",
+      "replacement": {
+        "title": "Comparing two documents at a desk",
+        "description": "A person moves their right index finger from the grid on the left sheet to a line on the right sheet. After pointing briefly, they lower the hand to the bottom edge of the right sheet.",
+        "disclosure": "AI-generated fictional illustration of comparing documents for a minimum service period clause. The blank grid and lines are not authentic contract, training or payment records and do not establish a clause’s validity or any amount owed."
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible movement from grid to lined sheet; removing the next action clause loses the hand lowering to the paper edge; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-en/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "f453c5793f3e263fda3c724ea209fe69d8f14ce959d1192aaeb22e568b0fd820",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns-en/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "6771fe209dedeae03a73d1d1f28ff60cda625ad46febe468fa35b4e0b5a36754",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns-en/200-taiwan-protection-order-foreign-resident.md",
+          "sourceSha256": "cfe574b3f0efc0d55eb80bc485c893318179e3ae8e61769ad04e400b7991f3a3",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:16:55.551901+00:00",
+        "method": "Full source including front matter, four FAQs, all eleven sections, official links, related links and closing notice/byline directly read. English truncated middle recovered with lines65–115; remaining lines161–EOF also read. Traditional Chinese read in two complete consecutive chunks.",
+        "review": "Article distinguishes funded professional technical training OR reasonable compensation, followed by a separate reasonableness/proportionality review. Routine, onboarding and mandatory training cannot be silently equated with qualifying training. Repayment, period already served, termination attribution and resignation notice are separate issues. Scene will only show comparing two fictional documents; no signature, transfer of money, debt amount, completed claim, authentic employer records or legal outcome. Source interpretation for scene planning; no independent current-law verification claimed."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ja/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-ja/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "1eddbe39da865e7d4d9c67abe174f3552ddf0b8dee50ccb056ef3152844fb6f7",
+      "captionLanguage": "ja",
+      "caption": {
+        "title": "2枚の資料を指で示して照合する場面",
+        "description": "左の表を指していた右手の人差し指を、右の罫線入りの紙へ移します。しばらく指で示した後、右手を紙の下端に下ろします。",
+        "disclosure": "AIで生成した架空の場面です。最低勤務期間条項に関する資料の照合を表すもので、実際の契約・研修・支払いの記録ではありません。条項の有効性や返還額を示すものではありません。"
+      },
+      "captionSha256": "e237939a0022940161be8ab490226aa02a182013f51495f440778267a8222c0a",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic contract/training/payment records, enforceable clause or established repayment amount.",
+      "replacement": {
+        "title": "2枚の資料を指で示して照合する場面",
+        "description": "左の表を指していた右手の人差し指を、右の罫線入りの紙へ移します。しばらく指で示した後、右手を紙の下端に下ろします。",
+        "disclosure": "AIで生成した架空の場面です。最低勤務期間条項に関する資料の照合を表すもので、実際の契約・研修・支払いの記録ではありません。条項の有効性や返還額を示すものではありません。"
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible movement from grid to lined sheet; removing the next action clause loses the hand lowering to the paper edge; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "f6dc7f531b01426f5fb800e88cbe140c6a8aee6d570bc25d4166de7f1da905cd",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+          "sourceSha256": "57f9847db0e103e8c2045f5fed18489c106131be298ef8ff53d4d3ae2a5d7c3e",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "ce3246410a7f780b6da753b44e3e701f19bf38877bc62031057bf7fea3a3f663",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:04:08.449215+00:00",
+        "method": "Full Japanese front matter/FAQ and complete 11-section article through final notice and byline directly read.",
+        "review": "Japanese source retains alternative paid-specialist-training or reasonable-compensation grounds, separate reasonableness review, routine-training exclusions, proportionate unserved-term repayment, non-attributable termination distinction, and resignation notice as separate from repayment. Future scene/caption must describe a fictional document action without implying a valid penalty, training qualification, proven payment, automatic debt or specific notice requirement. This is source reading for scene planning, not independent verification of current law."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ko/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "33e143a80380dd63cdcd9767e03e117589dbaf3b024217f1bc247ed2355739c1",
+      "captionLanguage": "ko",
+      "caption": {
+        "title": "두 서류를 차례로 짚어 대조하는 장면",
+        "description": "왼쪽 표를 짚던 오른손 검지를 오른쪽 줄이 있는 종이로 옮깁니다. 잠시 짚은 뒤 손을 오른쪽 종이의 아래쪽 가장자리에 내려놓습니다.",
+        "disclosure": "AI로 만든 가상 장면입니다. 최소 근무기간 약정의 자료 대조를 표현한 것으로, 실제 계약·교육·지급 기록이 아닙니다. 약정의 효력이나 반환 금액을 보여주지 않습니다."
+      },
+      "captionSha256": "c7e85d82bc6d4cc3f5a0093adf9b5f6c6c8012aa9c1564c8daa4bd7a1c1e5a57",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic contract/training/payment records, enforceable clause or established repayment amount.",
+      "replacement": {
+        "title": "두 서류를 차례로 짚어 대조하는 장면",
+        "description": "왼쪽 표를 짚던 오른손 검지를 오른쪽 줄이 있는 종이로 옮깁니다. 잠시 짚은 뒤 손을 오른쪽 종이의 아래쪽 가장자리에 내려놓습니다.",
+        "disclosure": "AI로 만든 가상 장면입니다. 최소 근무기간 약정의 자료 대조를 표현한 것으로, 실제 계약·교육·지급 기록이 아닙니다. 약정의 효력이나 반환 금액을 보여주지 않습니다."
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible movement from grid to lined sheet; removing the next action clause loses the hand lowering to the paper edge; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "d6e3af70fa8e44d42db7953c59a9f291b3ad149cb3a5f6b90de4cf6f4a37d0bd",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sourceSha256": "fdc5b485a3d035770140a30a938ca4acd138654ca9f6e51a78fe43b1b4dbb14b",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+          "sourceSha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:02:39.408659+00:00",
+        "method": "Full Korean source including front matter, FAQ, all 11 sections, cited links and closing notice directly read. Source interpretation for visual planning; no independent current-law verification claimed.",
+        "review": "Source separates paid professional training OR reasonable compensation as alternative bases, then a distinct proportionality review; signature alone is not decisive. Routine/onboarding/mandatory training is distinguished. Advance-benefit repayment is proportional to unserved term; no worker-attributable termination, training-cost recovery, resignation notice and separate damages require distinct analysis. A documentary illustration must not imply a valid penalty, authentic contract, payment, real client, specific notice days or an automatic debt."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "zh-hant/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-zh/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "32000684d23eebdc9792071805ab62fa47ae47f6b034b1bd2fd0d148a61fa3fb",
+      "captionLanguage": "zh-hant",
+      "caption": {
+        "title": "並排核對兩張資料",
+        "description": "右手食指從左側紙張的表格移到右側紙張的橫線上，短暫指示後，再將手放在右側紙張的下緣。",
+        "disclosure": "本片為 AI 生成的假想場景，示意核對最低服務年限約定的相關資料。空白表格與橫線並非真實契約、培訓或付款紀錄，也不代表約定有效或已確定返還金額。"
+      },
+      "captionSha256": "e7ad2b80d23ce9c33f45af9fc0b99ca3a6875b1050b5be9e7977513b0a96b547",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The added scene needs a specific action description and AI-fiction disclosure, without implying a real client, authentic contract/training/payment records, enforceable clause or established repayment amount.",
+      "replacement": {
+        "title": "並排核對兩張資料",
+        "description": "右手食指從左側紙張的表格移到右側紙張的橫線上，短暫指示後，再將手放在右側紙張的下緣。",
+        "disclosure": "本片為 AI 生成的假想場景，示意核對最低服務年限約定的相關資料。空白表格與橫線並非真實契約、培訓或付款紀錄，也不代表約定有效或已確定返還金額。"
+      },
+      "meaningPreservation": "Existing legal body, conditions, numbers, quotations, author metadata and links remain byte-for-byte unchanged. New caption describes only the inspected action and scene limitations.",
+      "deletionCheck": "Removing the action sentence loses the visible movement from grid to lined sheet; removing the next action clause loses the hand lowering to the paper edge; removing disclosure loses AI status and limits. No introductory promise or promotional conclusion is included.",
+      "styleComparison": "Concrete participant/action opening rather than copying the recent articles’ legal-question introduction, admonition headings or consultation ending. Three unchanged same-language opening/headings/ending references reused with hashes verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-zh/206-taiwan-freeway-warning-triangle-time-ability-evidence.md",
+          "sourceSha256": "96624c962547cb572988f15f664f514d42f729fd7f85805ead4b1b4936a01767",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns-zh/205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md",
+          "sourceSha256": "7dbfb065c476d6871ccb196fd5f92a136542b516dad9fcbc53454caeb699794f",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        },
+        {
+          "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sourceSha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave1-editorial-references.json: unchanged earlier direct reading; SHA verified 2026-10-04T10:20:11.788314+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:16:55.551901+00:00",
+        "method": "Full Traditional Chinese source directly read in consecutive lines1–100 and101–EOF, including front matter/four FAQs, all eleven sections, official links and closing notice/byline.",
+        "review": "Article distinguishes funded professional technical training OR reasonable compensation, followed by a separate reasonableness/proportionality review. Routine, onboarding and mandatory training cannot be silently equated with qualifying training. Repayment, period already served, termination attribution and resignation notice are separate issues. Scene will only show comparing two fictional documents; no signature, transfer of money, debt amount, completed claim, authentic employer records or legal outcome. Source interpretation for scene planning; no independent current-law verification claimed."
+      },
+      "verdict": "approved-for-integration"
+    }
+  ],
+  "localAndPublicVerification": "Pending at integration; see external minimum-service-term-wave1 release evidence."
+}

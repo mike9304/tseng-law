@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "두 서류를 차례로 짚어 대조하는 장면",
+    "description": "왼쪽 표를 짚던 오른손 검지를 오른쪽 줄이 있는 종이로 옮깁니다. 잠시 짚은 뒤 손을 오른쪽 종이의 아래쪽 가장자리에 내려놓습니다.",
+    "disclosure": "AI로 만든 가상 장면입니다. 최소 근무기간 약정의 자료 대조를 표현한 것으로, 실제 계약·교육·지급 기록이 아닙니다. 약정의 효력이나 반환 금액을 보여주지 않습니다."
+  },
+  "en": {
+    "title": "Comparing two documents at a desk",
+    "description": "A person moves their right index finger from the grid on the left sheet to a line on the right sheet. After pointing briefly, they lower the hand to the bottom edge of the right sheet.",
+    "disclosure": "AI-generated fictional illustration of comparing documents for a minimum service period clause. The blank grid and lines are not authentic contract, training or payment records and do not establish a clause’s validity or any amount owed."
+  },
+  "ja": {
+    "title": "2枚の資料を指で示して照合する場面",
+    "description": "左の表を指していた右手の人差し指を、右の罫線入りの紙へ移します。しばらく指で示した後、右手を紙の下端に下ろします。",
+    "disclosure": "AIで生成した架空の場面です。最低勤務期間条項に関する資料の照合を表すもので、実際の契約・研修・支払いの記録ではありません。条項の有効性や返還額を示すものではありません。"
+  },
+  "zh-hant": {
+    "title": "並排核對兩張資料",
+    "description": "右手食指從左側紙張的表格移到右側紙張的橫線上，短暫指示後，再將手放在右側紙張的下緣。",
+    "disclosure": "本片為 AI 生成的假想場景，示意核對最低服務年限約定的相關資料。空白表格與橫線並非真實契約、培訓或付款紀錄，也不代表約定有效或已確定返還金額。"
+  }
+}

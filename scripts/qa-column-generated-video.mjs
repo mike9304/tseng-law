@@ -27,7 +27,14 @@ const batThreatLoopCaptions = JSON.parse(await fs.readFile(new URL('../src/data/
 const laneBlockExitCaptions = JSON.parse(await fs.readFile(new URL('../src/data/lane-block-exit-video-captions.json', import.meta.url), 'utf8'));
 const bridgeScooterBrakeCaptions = JSON.parse(await fs.readFile(new URL('../src/data/bridge-scooter-brake-video-captions.json', import.meta.url), 'utf8'));
 const scooterLaneBlockCaptions = JSON.parse(await fs.readFile(new URL('../src/data/scooter-lane-block-video-captions.json', import.meta.url), 'utf8'));
+const fastLaneStopCaptions = JSON.parse(await fs.readFile(new URL('../src/data/fast-lane-stop-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  ...Object.entries(fastLaneStopCaptions).map(([locale, caption]) => ({
+    locale, slug: 'taiwan-road-rage-driver-stopped-route-66s-fast-lane',
+    id: `road-rage-driver-stopped-route-66s-fast-lane-v4-${locale}`,
+    duration: 15.041667, contactTime: 10, expectedDiagrams: 0, loop: true,
+    disclosure: caption.disclosure,
+  })),
   ...Object.entries(scooterLaneBlockCaptions).map(([locale, caption]) => ({
     locale, slug: 'taiwan-road-rage-52-seconds-subtracted-case',
     id: `road-rage-52-seconds-subtracted-case-v4-${locale}`,

@@ -68,5 +68,55 @@
     "title": "Två dokument jämförs på ett skrivbord",
     "description": "En person flyttar höger pekfinger från rutnätet på det vänstra arket till en linje på det högra. Efter att ha pekat en kort stund sänker personen handen till det högra arkets nederkant.",
     "disclosure": "Fiktiv scen skapad med AI som visar en jämförelse av dokument om minsta tjänstgöringstid. Det tomma rutnätet och linjerna är inte äkta avtals-, utbildnings- eller betalningsunderlag. De visar varken att ett avtalsvillkor är giltigt eller att ett visst belopp ska betalas."
+  },
+  "ar": {
+    "title": "مقارنة مستندين على مكتب",
+    "description": "ينقل شخص سبابة يده اليمنى من الشبكة على الورقة اليسرى إلى سطر على الورقة اليمنى. وبعد الإشارة إليه لبرهة، يخفض يده إلى الحافة السفلية للورقة اليمنى.",
+    "disclosure": "مشهد خيالي مولّد بالذكاء الاصطناعي يوضّح مقارنة مستندات تتعلق باتفاق الحد الأدنى لمدة العمل. الشبكة الفارغة والسطور ليست سجلات حقيقية لعقد أو تدريب أو دفعات، ولا تثبت نفاذ أي بند أو مبلغًا مستحقًا."
+  },
+  "bg": {
+    "title": "Съпоставяне на два документа върху бюро",
+    "description": "Човек премества показалеца на дясната си ръка от таблицата на левия лист към линия на десния. След като я посочи за кратко, спуска ръката до долния ръб на десния лист.",
+    "disclosure": "Измислена сцена, създадена с ИИ, която показва съпоставяне на документи по клауза за минимален срок на работа. Празната таблица и линиите не представляват истински договори или документи за обучение и плащания. Те не установяват действителността на клаузата или размера на дължима сума."
+  },
+  "bn": {
+    "title": "ডেস্কে রাখা দুটি নথি মিলিয়ে দেখা",
+    "description": "একজন ব্যক্তি ডান হাতের তর্জনী বাম পাশের কাগজের ছক থেকে ডান পাশের কাগজের একটি লাইনে সরান। কিছুক্ষণ ইশারা করার পর তিনি হাতটি ডান পাশের কাগজের নিচের প্রান্তে নামিয়ে রাখেন।",
+    "disclosure": "ন্যূনতম সেবার মেয়াদসংক্রান্ত নথি মিলিয়ে দেখার এই কাল্পনিক দৃশ্যটি AI দিয়ে তৈরি। ফাঁকা ছক ও রেখাগুলো প্রকৃত চুক্তি, প্রশিক্ষণ বা অর্থ প্রদানের নথি নয়। এগুলো কোনো শর্তের বৈধতা বা পাওনা অর্থের পরিমাণ প্রমাণ করে না।"
+  },
+  "ca": {
+    "title": "Comparació de dos documents sobre un escriptori",
+    "description": "Una persona mou l’índex de la mà dreta de la quadrícula del full esquerre a una línia del full dret. Després d’assenyalar-la breument, abaixa la mà fins a la vora inferior del full dret.",
+    "disclosure": "Escena fictícia generada amb IA que il·lustra la comparació de documents relatius a un pacte de període mínim de treball. La quadrícula buida i les línies no són documents autèntics de contractació, formació o pagament, ni acrediten la validesa del pacte o cap import degut."
+  },
+  "cs": {
+    "title": "Porovnání dvou dokumentů na psacím stole",
+    "description": "Člověk přesune ukazovák pravé ruky z mřížky na levém listu na řádek na pravém listu. Chvíli na něj ukazuje a pak spustí ruku ke spodnímu okraji pravého listu.",
+    "disclosure": "Fiktivní scéna vytvořená pomocí AI znázorňuje porovnávání dokumentů k ujednání o minimální době trvání pracovního poměru. Prázdná mřížka a řádky nejsou skutečnými smluvními, školicími ani platebními doklady. Neprokazují platnost ujednání ani dlužnou částku."
+  },
+  "et": {
+    "title": "Kahe dokumendi võrdlemine töölaual",
+    "description": "Inimene liigutab parema käe nimetissõrme vasaku lehe ruudustikult parema lehe ühele joonele. Pärast lühikest osutamist langetab ta käe parema lehe alumise serva juurde.",
+    "disclosure": "Tehisintellektiga loodud väljamõeldud stseen kujutab minimaalse töötamise aja kokkuleppega seotud dokumentide võrdlemist. Tühi ruudustik ja jooned ei ole tegelikud lepingu-, koolitus- ega maksedokumendid. Need ei tõenda kokkuleppe kehtivust ega võlgnetavat summat."
+  },
+  "fil": {
+    "title": "Paghahambing ng dalawang dokumento sa mesa",
+    "description": "Inililipat ng isang tao ang hintuturo ng kanang kamay mula sa mga kahon sa kaliwang papel patungo sa isang linya sa kanang papel. Matapos itong ituro sandali, ibinababa niya ang kamay sa may ibabang gilid ng kanang papel.",
+    "disclosure": "Kathang-isip na tagpong ginawa gamit ang AI upang ilarawan ang paghahambing ng mga dokumento tungkol sa kasunduan sa pinakamababang panahon ng paglilingkod. Ang mga bakanteng kahon at linya ay hindi tunay na rekord ng kontrata, pagsasanay o pagbabayad. Hindi pinatutunayan ng mga ito ang bisa ng kasunduan o ang halagang dapat bayaran."
+  },
+  "el": {
+    "title": "Σύγκριση δύο εγγράφων πάνω σε ένα γραφείο",
+    "description": "Ένα άτομο μετακινεί τον δείκτη του δεξιού χεριού από το πλέγμα στο αριστερό φύλλο σε μια γραμμή στο δεξί. Αφού τη δείξει για λίγο, χαμηλώνει το χέρι στο κάτω άκρο του δεξιού φύλλου.",
+    "disclosure": "Φανταστική σκηνή που δημιουργήθηκε με AI και δείχνει τη σύγκριση εγγράφων σχετικά με ένα σύμφωνο ελάχιστης περιόδου υπηρεσίας. Το κενό πλέγμα και οι γραμμές δεν είναι πραγματικά συμβατικά έγγραφα ή αρχεία κατάρτισης και πληρωμών. Δεν αποδεικνύουν την ισχύ του συμφώνου ούτε κάποιο οφειλόμενο ποσό."
+  },
+  "fa": {
+    "title": "مقایسهٔ دو سند روی میز",
+    "description": "فردی انگشت اشارهٔ دست راستش را از جدول برگهٔ سمت چپ به یکی از خطوط برگهٔ سمت راست می‌برد. پس از اشاره‌ای کوتاه، دستش را پایین می‌آورد و کنار لبهٔ پایینی برگهٔ سمت راست می‌گذارد.",
+    "disclosure": "این صحنهٔ خیالی با هوش مصنوعی ساخته شده و مقایسهٔ اسناد مربوط به توافق حداقل مدت خدمت را نشان می‌دهد. جدول خالی و خطوط، اسناد واقعی قرارداد، آموزش یا پرداخت نیستند و اعتبار هیچ شرطی یا مبلغ بدهی را اثبات نمی‌کنند."
+  },
+  "he": {
+    "title": "השוואת שני מסמכים על שולחן",
+    "description": "אדם מעביר את האצבע המורה של ידו הימנית מהטבלה שעל הדף השמאלי אל שורה בדף הימני. לאחר הצבעה קצרה, הוא מוריד את ידו אל הקצה התחתון של הדף הימני.",
+    "disclosure": "סצנה בדיונית שנוצרה באמצעות AI וממחישה השוואת מסמכים הקשורים להסכם תקופת עבודה מינימלית. הטבלה הריקה והשורות אינן מסמכי חוזה, הכשרה או תשלום אמיתיים. הן אינן מוכיחות את תוקף ההסכם או סכום כלשהו לתשלום."
   }
 }

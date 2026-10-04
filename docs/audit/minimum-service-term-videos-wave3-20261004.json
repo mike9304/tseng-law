@@ -1,0 +1,475 @@
+{
+  "reviewedAt": "2026-10-04T11:18:04.473267+00:00",
+  "reviewer": "Codex",
+  "scope": "Existing document-comparison scene extended to ten reviewed language pages of one minimum-service-period article. Fourteen previously published captions and all media are unchanged. No article body, registry or player changes.",
+  "previousRelease": "/Users/son7/tseng-law-column-videos/qa/production-minimum-service-term-wave2-release.json",
+  "previousPublicationCommit": "f8818312fc71d216c4a05ebc43975d66f2f9e264",
+  "mediaReview": "Prior direct review of all 97 native frames, four full-resolution frames and packaged label is reused with unchanged raw and packaged asset SHA. No new generation or fresh all-frame review claimed.",
+  "rawMediaSha256": "dbe47b7b469dd226215a8335d1eae45ddc96139ec333530b6cf5a9ae22a68b5b",
+  "mediaSha256": {
+    "employment-term-comparison-v1-en": "96ca5019b14dd3e9916859c5ec850411e106c34c46512db6e1422d14a061d47a"
+  },
+  "retiming": false,
+  "youtubeUploaded": false,
+  "nativeOrLegalProfessionalReview": false,
+  "labelPolicy": "Ten added languages use the unchanged English-labeled clip with a complete localized title, action description and AI-fiction disclosure on the page.",
+  "editorialRules": {
+    "file": "docs/columns/EDITORIAL-VOICE.md",
+    "sha256": "f4736c269436ceaf94c4d726cf9a1687d6b8b1df4823cd14f84afd7a17ed3e2c",
+    "fullTextRead": true
+  },
+  "captionReviews": [
+    {
+      "articleKey": "ar/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-ar/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "f7d5cad83835b6315f846e85cd39a0b49dfdbddd77b9b4451bb29655773e0067",
+      "captionLanguage": "ar",
+      "caption": {
+        "title": "مقارنة مستندين على مكتب",
+        "description": "ينقل شخص سبابة يده اليمنى من الشبكة على الورقة اليسرى إلى سطر على الورقة اليمنى. وبعد الإشارة إليه لبرهة، يخفض يده إلى الحافة السفلية للورقة اليمنى.",
+        "disclosure": "مشهد خيالي مولّد بالذكاء الاصطناعي يوضّح مقارنة مستندات تتعلق باتفاق الحد الأدنى لمدة العمل. الشبكة الفارغة والسطور ليست سجلات حقيقية لعقد أو تدريب أو دفعات، ولا تثبت نفاذ أي بند أو مبلغًا مستحقًا."
+      },
+      "captionSha256": "a00381a3560f75bc83ce75e7405f67081f50940704409440e8a707be78ed25af",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "مقارنة مستندين على مكتب",
+        "description": "ينقل شخص سبابة يده اليمنى من الشبكة على الورقة اليسرى إلى سطر على الورقة اليمنى. وبعد الإشارة إليه لبرهة، يخفض يده إلى الحافة السفلية للورقة اليمنى.",
+        "disclosure": "مشهد خيالي مولّد بالذكاء الاصطناعي يوضّح مقارنة مستندات تتعلق باتفاق الحد الأدنى لمدة العمل. الشبكة الفارغة والسطور ليست سجلات حقيقية لعقد أو تدريب أو دفعات، ولا تثبت نفاذ أي بند أو مبلغًا مستحقًا."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-ar/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "66ef8863868d6988ed807eec7f0c8f58533fb2a055b2831d52375a7af8199181",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave2-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-ar/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "bddbc6f46e3d05bc6316e449e0805b814f91bcdc07bc912c5332450e439ace9a",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-ar/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "c851647ae3ca499cd35bd7ba3a4152c814c43a5745fd77bf7b67b93137802e58",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:54:25.660452+00:00",
+        "method": "Full Arabic source read in lines 1–100 and 101–EOF; truncated training-cost passage recovered with lines 50–80. Includes front matter, four FAQs, all eleven sections, both eight-item checklists, official/related links and final notice/byline.",
+        "review": "Uses الحد الأدنى لمدة العمل. Source preserves paid specialist technical training OR reasonable compensation as alternative grounds, followed by distinct reasonableness and proportionality review. Ordinary/mandatory training, advance benefits, unserved-term repayment, non-attributable termination and resignation notice are separate. Chronological comparison of contract, training and payment evidence supports the fictional two-sheet gesture. No actual payment, valid clause or debt amount may be inferred from blank grid and lines. Source interpretation for media planning only; no independent current-law or native-speaker certification. Caption, style, display and publication still pending."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "bg/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-bg/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "ffcba481a099666768e115122efb2f00f2649e43252ef23b67a6acd05a944cab",
+      "captionLanguage": "bg",
+      "caption": {
+        "title": "Съпоставяне на два документа върху бюро",
+        "description": "Човек премества показалеца на дясната си ръка от таблицата на левия лист към линия на десния. След като я посочи за кратко, спуска ръката до долния ръб на десния лист.",
+        "disclosure": "Измислена сцена, създадена с ИИ, която показва съпоставяне на документи по клауза за минимален срок на работа. Празната таблица и линиите не представляват истински договори или документи за обучение и плащания. Те не установяват действителността на клаузата или размера на дължима сума."
+      },
+      "captionSha256": "20aa15fd88e2829b77a186f793465aadf0f5f5c53aa017c8a34c36a8cce0b821",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "Съпоставяне на два документа върху бюро",
+        "description": "Човек премества показалеца на дясната си ръка от таблицата на левия лист към линия на десния. След като я посочи за кратко, спуска ръката до долния ръб на десния лист.",
+        "disclosure": "Измислена сцена, създадена с ИИ, която показва съпоставяне на документи по клауза за минимален срок на работа. Празната таблица и линиите не представляват истински договори или документи за обучение и плащания. Те не установяват действителността на клаузата или размера на дължима сума."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-bg/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "db704dae1053f4418601385f2bf3d0f9a27a2c0af1df3f4d47157bac63d2bf81",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave2-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-bg/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "5d54ead1e12629124af5eb3843774bdcc59aadcef8624e164769bac5ae372abe",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-bg/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "268de806016d0e4d3002dbd4b09d518024bce20e83d19091396245f9fd3df0b9",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:54:25.660452+00:00",
+        "method": "Full Bulgarian source read in lines 1–90, 91–140 and 141–EOF; truncated transition into training section recovered with lines 43–57. Includes front matter, four FAQs, all eleven sections, both eight-item checklists, official/related links and final notice/byline.",
+        "review": "Uses минимален срок на работа. Source preserves paid specialist technical training OR reasonable compensation as alternative grounds, followed by distinct reasonableness and proportionality review. Ordinary/mandatory training, advance benefits, unserved-term repayment, non-attributable termination and resignation notice are separate. Chronological comparison of contract, training and payment evidence supports the fictional two-sheet gesture. No actual payment, valid clause or debt amount may be inferred from blank grid and lines. Source interpretation for media planning only; no independent current-law or native-speaker certification. Caption, style, display and publication still pending."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "bn/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-bn/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "ee1b53b3844af6f600c0c8680c3600a7ffcc7f98095da670858cc13e31e3e589",
+      "captionLanguage": "bn",
+      "caption": {
+        "title": "ডেস্কে রাখা দুটি নথি মিলিয়ে দেখা",
+        "description": "একজন ব্যক্তি ডান হাতের তর্জনী বাম পাশের কাগজের ছক থেকে ডান পাশের কাগজের একটি লাইনে সরান। কিছুক্ষণ ইশারা করার পর তিনি হাতটি ডান পাশের কাগজের নিচের প্রান্তে নামিয়ে রাখেন।",
+        "disclosure": "ন্যূনতম সেবার মেয়াদসংক্রান্ত নথি মিলিয়ে দেখার এই কাল্পনিক দৃশ্যটি AI দিয়ে তৈরি। ফাঁকা ছক ও রেখাগুলো প্রকৃত চুক্তি, প্রশিক্ষণ বা অর্থ প্রদানের নথি নয়। এগুলো কোনো শর্তের বৈধতা বা পাওনা অর্থের পরিমাণ প্রমাণ করে না।"
+      },
+      "captionSha256": "c3cc21e55a2e2ed320a5f0fe8efb97d1f8187949bcc30044df15ac2a7c47ec85",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "ডেস্কে রাখা দুটি নথি মিলিয়ে দেখা",
+        "description": "একজন ব্যক্তি ডান হাতের তর্জনী বাম পাশের কাগজের ছক থেকে ডান পাশের কাগজের একটি লাইনে সরান। কিছুক্ষণ ইশারা করার পর তিনি হাতটি ডান পাশের কাগজের নিচের প্রান্তে নামিয়ে রাখেন।",
+        "disclosure": "ন্যূনতম সেবার মেয়াদসংক্রান্ত নথি মিলিয়ে দেখার এই কাল্পনিক দৃশ্যটি AI দিয়ে তৈরি। ফাঁকা ছক ও রেখাগুলো প্রকৃত চুক্তি, প্রশিক্ষণ বা অর্থ প্রদানের নথি নয়। এগুলো কোনো শর্তের বৈধতা বা পাওনা অর্থের পরিমাণ প্রমাণ করে না।"
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-bn/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "06519ce1376a2f1dadde7a8e51e23c6ad5f20e33153402926f750f1698ab4753",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave2-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-bn/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "a0da2547f86fb1b8e0897798d4c4163c353f784f889de200773aeadb49d81388",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-bn/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "8c29184daea91f6ffeba59cfb00f05e84bef9fd723d8b03ea8eab25ea51b656f",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:55:41.997074+00:00",
+        "method": "Full Bengali source directly read without truncation in consecutive lines 1–50, 51–100, 101–150 and 151–EOF, including front matter/four FAQs, all eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "Uses ন্যূনতম সেবার মেয়াদ. Keeps paid specialist training OR reasonable consideration as alternatives followed by a separate reasonableness test, not automatic validity from a signature. Routine/mandatory training, proportional unserved-period benefit repayment, termination attribution and resignation notice remain separate. Chronological document comparison supports the approved fictional two-sheet pointing gesture. Blank paper symbols must not establish authentic records, valid clauses, payments or debts. Source interpretation only; no independent current-law or native-speaker certification. Caption/style/browser/publication pending."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ca/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-ca/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "680b654069bf90bd26fc4ab9a246e41365b1e52ddc622726e6a172538d700ef0",
+      "captionLanguage": "ca",
+      "caption": {
+        "title": "Comparació de dos documents sobre un escriptori",
+        "description": "Una persona mou l’índex de la mà dreta de la quadrícula del full esquerre a una línia del full dret. Després d’assenyalar-la breument, abaixa la mà fins a la vora inferior del full dret.",
+        "disclosure": "Escena fictícia generada amb IA que il·lustra la comparació de documents relatius a un pacte de període mínim de treball. La quadrícula buida i les línies no són documents autèntics de contractació, formació o pagament, ni acrediten la validesa del pacte o cap import degut."
+      },
+      "captionSha256": "87c081a9f2bd4474b01ff2864e70903af2ccfbd005855fb7001fe33a76014432",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "Comparació de dos documents sobre un escriptori",
+        "description": "Una persona mou l’índex de la mà dreta de la quadrícula del full esquerre a una línia del full dret. Després d’assenyalar-la breument, abaixa la mà fins a la vora inferior del full dret.",
+        "disclosure": "Escena fictícia generada amb IA que il·lustra la comparació de documents relatius a un pacte de període mínim de treball. La quadrícula buida i les línies no són documents autèntics de contractació, formació o pagament, ni acrediten la validesa del pacte o cap import degut."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-ca/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "5cd5a3a95506a61ff31cee5bd2eb4b156c5f750d4c5de0d395c984820b401030",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave2-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-ca/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "4531883e10119e1eec88f61f07f26cfaad0986195fdfda33f48758a028a458c2",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-ca/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "d4eabd80ad093ec7e784c602b0d9c4e453476cccc098d617818e7d6c033a7ab5",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:58:52.662102+00:00",
+        "method": "Full source directly read without truncation in consecutive lines 1–100 and 101–EOF, including front matter/four FAQs, all eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "Catalan període mínim de treball keeps employer-funded specialist technical training OR reasonable compensation, with a separate reasonableness/proportionality test. Routine/mandatory training and actual cost evidence are distinguished, as are proportional unserved-period benefit repayment, termination attribution and resignation notice. The chronological comparison of contract, training and payment records fits the approved two-sheet gesture. Captions must not certify authentic records, valid clauses, payments or debt amounts. Source interpretation only; no independent current-law or native-speaker certification. Caption/style/browser/publication pending."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "cs/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-cs/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "81acedcef3a46409b6037be83c6a47dd7131d2199b41040e8f55ddaa0423a2db",
+      "captionLanguage": "cs",
+      "caption": {
+        "title": "Porovnání dvou dokumentů na psacím stole",
+        "description": "Člověk přesune ukazovák pravé ruky z mřížky na levém listu na řádek na pravém listu. Chvíli na něj ukazuje a pak spustí ruku ke spodnímu okraji pravého listu.",
+        "disclosure": "Fiktivní scéna vytvořená pomocí AI znázorňuje porovnávání dokumentů k ujednání o minimální době trvání pracovního poměru. Prázdná mřížka a řádky nejsou skutečnými smluvními, školicími ani platebními doklady. Neprokazují platnost ujednání ani dlužnou částku."
+      },
+      "captionSha256": "830a8aeac180f89f90cf155294b4dbb601f2f2141979d6e6041027d9b5557d2d",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "Porovnání dvou dokumentů na psacím stole",
+        "description": "Člověk přesune ukazovák pravé ruky z mřížky na levém listu na řádek na pravém listu. Chvíli na něj ukazuje a pak spustí ruku ke spodnímu okraji pravého listu.",
+        "disclosure": "Fiktivní scéna vytvořená pomocí AI znázorňuje porovnávání dokumentů k ujednání o minimální době trvání pracovního poměru. Prázdná mřížka a řádky nejsou skutečnými smluvními, školicími ani platebními doklady. Neprokazují platnost ujednání ani dlužnou částku."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-cs/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "ed07cb2274846a6c79fbf232bf21ef63c8227426f779f257a980c0c6c26642d7",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave2-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-cs/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "55e673e8235b5ce4c3c5a7ea19215db56c2f0bc31b94e78e915a73df3860c47c",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-cs/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "e62a602c2dfeb0322a7ff36df9533a1f268f51c89348528493ac4c8b4da9a749",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T10:58:52.662102+00:00",
+        "method": "Full source directly read without truncation in consecutive lines 1–100 and 101–EOF, including front matter/four FAQs, all eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "Czech minimální doba trvání pracovního poměru keeps employer-funded specialist technical training OR reasonable compensation, with a separate reasonableness/proportionality test. Routine/mandatory training and actual cost evidence are distinguished, as are proportional unserved-period benefit repayment, termination attribution and resignation notice. The chronological comparison of contract, training and payment records fits the approved two-sheet gesture. Captions must not certify authentic records, valid clauses, payments or debt amounts. Source interpretation only; no independent current-law or native-speaker certification. Caption/style/browser/publication pending."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "el/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-el/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "1debc0a780afe74eb0f4b12c991fa72ff5c05c1ec57ad6fedd0df43eda64edf8",
+      "captionLanguage": "el",
+      "caption": {
+        "title": "Σύγκριση δύο εγγράφων πάνω σε ένα γραφείο",
+        "description": "Ένα άτομο μετακινεί τον δείκτη του δεξιού χεριού από το πλέγμα στο αριστερό φύλλο σε μια γραμμή στο δεξί. Αφού τη δείξει για λίγο, χαμηλώνει το χέρι στο κάτω άκρο του δεξιού φύλλου.",
+        "disclosure": "Φανταστική σκηνή που δημιουργήθηκε με AI και δείχνει τη σύγκριση εγγράφων σχετικά με ένα σύμφωνο ελάχιστης περιόδου υπηρεσίας. Το κενό πλέγμα και οι γραμμές δεν είναι πραγματικά συμβατικά έγγραφα ή αρχεία κατάρτισης και πληρωμών. Δεν αποδεικνύουν την ισχύ του συμφώνου ούτε κάποιο οφειλόμενο ποσό."
+      },
+      "captionSha256": "93b19052160dbd34ba177e8b0a516974ab0179215297160b8a2a269f8b8d9163",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "Σύγκριση δύο εγγράφων πάνω σε ένα γραφείο",
+        "description": "Ένα άτομο μετακινεί τον δείκτη του δεξιού χεριού από το πλέγμα στο αριστερό φύλλο σε μια γραμμή στο δεξί. Αφού τη δείξει για λίγο, χαμηλώνει το χέρι στο κάτω άκρο του δεξιού φύλλου.",
+        "disclosure": "Φανταστική σκηνή που δημιουργήθηκε με AI και δείχνει τη σύγκριση εγγράφων σχετικά με ένα σύμφωνο ελάχιστης περιόδου υπηρεσίας. Το κενό πλέγμα και οι γραμμές δεν είναι πραγματικά συμβατικά έγγραφα ή αρχεία κατάρτισης και πληρωμών. Δεν αποδεικνύουν την ισχύ του συμφώνου ούτε κάποιο οφειλόμενο ποσό."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-el/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "185568a7b8814715c11ae0d9a781cb5309794f72d391a11bbbe62f40b3ed89b0",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave2-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-el/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "35e5da247c84b7d955d006eb598e0e10d1c81260a851b8a9a3b7e41520aa0138",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-el/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "2978045af1a631e86a2778f96b317678d23d7df80181b0c3d0f928b924772e66",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T11:11:00.217305+00:00",
+        "method": "Full Greek source directly read without truncation in lines 1–50, 51–100, 101–150 and 151–EOF, including front matter/four FAQs, eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "Uses σύμφωνο ελάχιστης περιόδου υπηρεσίας. Article preserves alternative funded specialist technical training OR reasonable compensation, followed by a distinct reasonableness review; ordinary/mandatory training is distinguished. Advance-benefit repayment, unserved-period proportion, termination attribution and resignation notice are separate. Chronological comparison of contract/training/payment evidence fits the fictional two-sheet gesture without proving authentic records, valid clauses, payment or amounts owed. Source interpretation for illustration only; no independent current-law or native-speaker certification."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "et/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-et/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "b4915688c92bbcd7f6544e724449f0bd0fc5c19fbf0a7f533245fb822d70b0b9",
+      "captionLanguage": "et",
+      "caption": {
+        "title": "Kahe dokumendi võrdlemine töölaual",
+        "description": "Inimene liigutab parema käe nimetissõrme vasaku lehe ruudustikult parema lehe ühele joonele. Pärast lühikest osutamist langetab ta käe parema lehe alumise serva juurde.",
+        "disclosure": "Tehisintellektiga loodud väljamõeldud stseen kujutab minimaalse töötamise aja kokkuleppega seotud dokumentide võrdlemist. Tühi ruudustik ja jooned ei ole tegelikud lepingu-, koolitus- ega maksedokumendid. Need ei tõenda kokkuleppe kehtivust ega võlgnetavat summat."
+      },
+      "captionSha256": "75a80eab99690987467a1f97e6af4bcc58364cd59dd07edf2c96c6e7325bbf3e",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "Kahe dokumendi võrdlemine töölaual",
+        "description": "Inimene liigutab parema käe nimetissõrme vasaku lehe ruudustikult parema lehe ühele joonele. Pärast lühikest osutamist langetab ta käe parema lehe alumise serva juurde.",
+        "disclosure": "Tehisintellektiga loodud väljamõeldud stseen kujutab minimaalse töötamise aja kokkuleppega seotud dokumentide võrdlemist. Tühi ruudustik ja jooned ei ole tegelikud lepingu-, koolitus- ega maksedokumendid. Need ei tõenda kokkuleppe kehtivust ega võlgnetavat summat."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-et/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "e9d4eaa950ab074278ca6b0c19098825e26040c627856196e2a59cab4b7cefc0",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave2-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-et/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "fb321dcfd7109f8785eca143522e021a14109e2759051f365b4f14a3823d5c73",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-et/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "fc23cc596ea9a4ccb6be3b817f70333c2dc08901ddc615f4c96823ab22a82539",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T11:01:35.193160+00:00",
+        "method": "Full Estonian source directly read without truncation in consecutive lines 1–100 and 101–EOF, including front matter/four FAQs, all eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "Uses minimaalse töötamise aja kokkulepe. Distinguishes funded professional training OR reasonable compensation and separate proportionality, ordinary/mandatory training exclusions, unserved-period advance-benefit repayment, termination attribution and resignation notice. The actual contract, training, payment and chronological employment evidence must be compared; the fictional grid-to-lined-sheet gesture only represents that comparison. Repeated parenthetical legal terms in the existing body do not require adding legal conclusions to the caption. No authentic records, valid debt or notice numbers should be implied. Source interpretation only; no independent current-law or native-speaker certification. Caption/style/browser/publication pending."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "fa/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-fa/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "56d416588c7e3107c2e837bea778d97044d686418940f00f57c271e1f6841eb9",
+      "captionLanguage": "fa",
+      "caption": {
+        "title": "مقایسهٔ دو سند روی میز",
+        "description": "فردی انگشت اشارهٔ دست راستش را از جدول برگهٔ سمت چپ به یکی از خطوط برگهٔ سمت راست می‌برد. پس از اشاره‌ای کوتاه، دستش را پایین می‌آورد و کنار لبهٔ پایینی برگهٔ سمت راست می‌گذارد.",
+        "disclosure": "این صحنهٔ خیالی با هوش مصنوعی ساخته شده و مقایسهٔ اسناد مربوط به توافق حداقل مدت خدمت را نشان می‌دهد. جدول خالی و خطوط، اسناد واقعی قرارداد، آموزش یا پرداخت نیستند و اعتبار هیچ شرطی یا مبلغ بدهی را اثبات نمی‌کنند."
+      },
+      "captionSha256": "73bc2c8d4fc2afe473abde9018afe8c3fc85b9ca1ab0ec2f60d8ff4205eafef9",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "مقایسهٔ دو سند روی میز",
+        "description": "فردی انگشت اشارهٔ دست راستش را از جدول برگهٔ سمت چپ به یکی از خطوط برگهٔ سمت راست می‌برد. پس از اشاره‌ای کوتاه، دستش را پایین می‌آورد و کنار لبهٔ پایینی برگهٔ سمت راست می‌گذارد.",
+        "disclosure": "این صحنهٔ خیالی با هوش مصنوعی ساخته شده و مقایسهٔ اسناد مربوط به توافق حداقل مدت خدمت را نشان می‌دهد. جدول خالی و خطوط، اسناد واقعی قرارداد، آموزش یا پرداخت نیستند و اعتبار هیچ شرطی یا مبلغ بدهی را اثبات نمی‌کنند."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-fa/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "0da238e1f82d24bea7b63c6e0f8e75e905e37875c97c6d955ee58da41bb687b4",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave3-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-fa/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "1399e7d09c3a6c027dd84d07c79ee546d935704705b9adbed1b2146cd838b9cd",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-fa/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "29b61b949d2b119ffbdfc80d915a0a13cc4b0842450e9d25f4e6255a582ffdbc",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T11:11:43.353313+00:00",
+        "method": "Full Persian source directly read without truncation in lines 1–100 and 101–EOF, including front matter/four FAQs, eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "Uses توافق حداقل مدت خدمت. Separates funded specialist training OR reasonable consideration, followed by reasonableness/proportionality; mere signature is not validity. Routine/mandatory training, proportional unserved-period advance repayment, termination attribution and resignation notice are separate issues. Chronological contract/training/payment comparison fits the fictional paper gesture without authentic records, a signature, payment, valid clause or debt amount. Source interpretation for illustration only; no independent current-law or native-speaker certification."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "fil/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-fil/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "0122c4e706b61f3d8c419278de847ed8970e43f97c3f90df180e6f2be11917b4",
+      "captionLanguage": "fil",
+      "caption": {
+        "title": "Paghahambing ng dalawang dokumento sa mesa",
+        "description": "Inililipat ng isang tao ang hintuturo ng kanang kamay mula sa mga kahon sa kaliwang papel patungo sa isang linya sa kanang papel. Matapos itong ituro sandali, ibinababa niya ang kamay sa may ibabang gilid ng kanang papel.",
+        "disclosure": "Kathang-isip na tagpong ginawa gamit ang AI upang ilarawan ang paghahambing ng mga dokumento tungkol sa kasunduan sa pinakamababang panahon ng paglilingkod. Ang mga bakanteng kahon at linya ay hindi tunay na rekord ng kontrata, pagsasanay o pagbabayad. Hindi pinatutunayan ng mga ito ang bisa ng kasunduan o ang halagang dapat bayaran."
+      },
+      "captionSha256": "1ab46f85523768cd8e86ec52ae4864809af2cf46eb740865a793a628b582dbad",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "Paghahambing ng dalawang dokumento sa mesa",
+        "description": "Inililipat ng isang tao ang hintuturo ng kanang kamay mula sa mga kahon sa kaliwang papel patungo sa isang linya sa kanang papel. Matapos itong ituro sandali, ibinababa niya ang kamay sa may ibabang gilid ng kanang papel.",
+        "disclosure": "Kathang-isip na tagpong ginawa gamit ang AI upang ilarawan ang paghahambing ng mga dokumento tungkol sa kasunduan sa pinakamababang panahon ng paglilingkod. Ang mga bakanteng kahon at linya ay hindi tunay na rekord ng kontrata, pagsasanay o pagbabayad. Hindi pinatutunayan ng mga ito ang bisa ng kasunduan o ang halagang dapat bayaran."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-fil/023-baby-taiwan-nationality-birth-registration.md",
+          "sourceSha256": "01f362d9066de6360d7bf6c05e93fdd6ab3dee92f49b56f1ec70769fc80b6ea6",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave3-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-fil/022-marrying-taiwanese-national-registration-checklist.md",
+          "sourceSha256": "3dedfb7e9601faf56e8e185fb950023475072e4beaed91af814ac5424a613d23",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave3-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-fil/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+          "sourceSha256": "bbc41671ae51baae13f9b3b4e0cd6dac6b6e43cd395e7ab9ff7b8a6b82109680",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave3-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T11:02:15.080886+00:00",
+        "method": "Full Filipino source directly read without truncation in consecutive lines 1–100 and 101–EOF, including front matter/four FAQs, all eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "Uses kasunduan sa pinakamababang panahon ng paglilingkod. Funded specialist training OR reasonable compensation are alternative grounds followed by distinct reasonableness and proportionality. Routine/mandatory training, proportional unserved-period advance repayment, termination attribution and resignation notice remain distinct. Article asks readers to compare chronological contract, training and payment evidence; the fictional two-sheet gesture fits without proving an actual contract, training, payment, enforceable clause or amount owed. Source interpretation only; no independent current-law or native-speaker certification. Caption/style/browser/publication pending."
+      },
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "he/column/taiwan-mandatory-employment-period",
+      "sourceFile": "src/content/columns-he/014-taiwan-mandatory-employment-period.md",
+      "sourceSha256": "a83244ffe4651aa731b83266078012cf6fd92574305e821a21091a897565be98",
+      "captionLanguage": "he",
+      "caption": {
+        "title": "השוואת שני מסמכים על שולחן",
+        "description": "אדם מעביר את האצבע המורה של ידו הימנית מהטבלה שעל הדף השמאלי אל שורה בדף הימני. לאחר הצבעה קצרה, הוא מוריד את ידו אל הקצה התחתון של הדף הימני.",
+        "disclosure": "סצנה בדיונית שנוצרה באמצעות AI וממחישה השוואת מסמכים הקשורים להסכם תקופת עבודה מינימלית. הטבלה הריקה והשורות אינן מסמכי חוזה, הכשרה או תשלום אמיתיים. הן אינן מוכיחות את תוקף ההסכם או סכום כלשהו לתשלום."
+      },
+      "captionSha256": "9789269f5a4bfdc73d1c240c310ae36646e80f2896f4316700bc1bdd63d19135",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "The new scene needs a concrete account of the right index finger moving between two sheets, with explicit AI-fiction status. An authentic-record, valid-clause or established-debt claim would exceed the visible action.",
+      "replacement": {
+        "title": "השוואת שני מסמכים על שולחן",
+        "description": "אדם מעביר את האצבע המורה של ידו הימנית מהטבלה שעל הדף השמאלי אל שורה בדף הימני. לאחר הצבעה קצרה, הוא מוריד את ידו אל הקצה התחתון של הדף הימני.",
+        "disclosure": "סצנה בדיונית שנוצרה באמצעות AI וממחישה השוואת מסמכים הקשורים להסכם תקופת עבודה מינימלית. הטבלה הריקה והשורות אינן מסמכי חוזה, הכשרה או תשלום אמיתיים. הן אינן מוכיחות את תוקף ההסכם או סכום כלשהו לתשלום."
+      },
+      "meaningPreservation": "The caption describes pointing from the left grid to a line on the right sheet, then lowering the hand to its bottom edge. It does not say the hand returns to an initial resting position there. The disclosure preserves AI fiction and denies authentic contract, training or payment records and any established validity or amount owed. Existing legal text, numbers, conditions, exceptions, sources and author notices are unchanged.",
+      "deletionCheck": "Both action sentences identify separate visible movements. Disclosure clauses identify AI fiction, the article context, and the documentary and legal limits. No generic introduction or promotional ending is added.",
+      "styleComparison": "Uses a visible participant and action instead of repeating recent articles’ general introductions, numbered legal headings, advance announcements or consultation endings. Three same-language opening/headings/ending references reviewed directly or reused with unchanged SHA and prior reading evidence.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-he/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "7d07108350ec6c3836c47e967951c023adb4dd5ff0f44cd121f0e1bf3eb50764",
+          "readEvidence": "/Users/son7/tseng-law-column-videos/qa/labor-severance/wave3-editorial-references.json: prior direct excerpt reading reused after current SHA verification 2026-10-04T10:59:41.510054+00:00"
+        },
+        {
+          "file": "src/content/columns-he/015-taiwan-company-setup-pitch-location.md",
+          "sourceSha256": "95452c214ddcc2e2e3a37bb725b66e52f0942203686cbb307567e362312f8d80",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        },
+        {
+          "file": "src/content/columns-he/013-taiwan-company-establishment-advanced-1.md",
+          "sourceSha256": "6c868df809fdea5617246d65b4c8a212c2adb32b6661a8258d199030fb2ca45a",
+          "readEvidence": "Codex directly read complete extracted opening, available Markdown headings and ending in two untruncated batches in this turn at 2026-10-04T11:00:25.761057+00:00"
+        }
+      ],
+      "sourceReview": {
+        "readAt": "2026-10-04T11:16:09.426975+00:00",
+        "method": "Full Hebrew source directly read without truncation in lines 1–100 and 101–EOF, including front matter/four FAQs, eleven sections, both checklists, official/related links and final notice/byline.",
+        "review": "The Hebrew article distinguishes specialist training actually funded by the employer or reasonable compensation as alternative grounds, followed by an independent reasonableness assessment. A signature alone, routine or mandatory training, prepaid benefit, penalty, wage deduction, notice and worker-attributable termination are not interchangeable. Comparing contract, training and payment records fits this scene, while its blank fictional sheets cannot authenticate records, validate the agreement or establish a debt. The caption describes the right index finger moving from the left grid to the right sheet and lowering to its bottom edge; it does not invent signatures, payments or legal outcomes."
+      },
+      "verdict": "approved-for-integration"
+    }
+  ],
+  "referenceSelection": "Three recent same-language columns excluding target: recorded publication date if present, otherwise source modification date as an explicit selection proxy, then filename. Modification dates do not establish publication chronology. Earlier direct reads reused only after unchanged SHA verification.",
+  "localAndPublicVerification": "Pending at integration; see external minimum-service-term-wave3 release evidence."
+}

@@ -48,5 +48,55 @@
     "title": "En plantegning rækkes over bordet",
     "description": "Den besøgende skubber en plantegning hen over bordet mod personen overfor, som lægger en hånd på papirets kant.",
     "disclosure": "En fiktiv scene skabt med AI, som varer cirka fire sekunder. Den viser hverken virkelige klienter eller en bestemt ejendom, indgåelse af en lejeaftale, bankens godkendelse eller tilladelse til at drive virksomhed."
+  },
+  "de": {
+    "title": "Ein Grundriss wird über den Tisch geschoben",
+    "description": "Ein Besucher schiebt einen Grundriss über den Tisch. Die Person gegenüber legt eine Hand an den Rand des Blatts.",
+    "disclosure": "Eine etwa vier Sekunden lange, mit KI erzeugte fiktive Szene. Sie zeigt keine tatsächlichen Mandanten und kein bestimmtes Objekt, keinen abgeschlossenen Mietvertrag, keine Bankgenehmigung und keine Betriebserlaubnis."
+  },
+  "el": {
+    "title": "Μια κάτοψη περνά στην άλλη πλευρά του τραπεζιού",
+    "description": "Ένας επισκέπτης σπρώχνει την κάτοψη πάνω στο τραπέζι προς το άτομο απέναντί του, που ακουμπά το χέρι στην άκρη του χαρτιού.",
+    "disclosure": "Φανταστική σκηνή περίπου τεσσάρων δευτερολέπτων, δημιουργημένη με τεχνητή νοημοσύνη. Δεν απεικονίζει πραγματικούς πελάτες ή συγκεκριμένο ακίνητο, ούτε υπογραφή μίσθωσης, έγκριση τράπεζας ή άδεια λειτουργίας."
+  },
+  "es": {
+    "title": "Un plano del local pasa al otro lado de la mesa",
+    "description": "Una persona que acude a la consulta desliza un plano por la mesa. Quien está enfrente apoya una mano en el borde del papel.",
+    "disclosure": "Escena ficticia de unos cuatro segundos, generada con IA. No representa a clientes reales ni un inmueble concreto, ni muestra la firma de un arrendamiento, una aprobación bancaria o un permiso de actividad."
+  },
+  "et": {
+    "title": "Ruumiplaan lükatakse üle laua",
+    "description": "Külastaja lükkab ruumiplaani üle laua vastas istuva inimese poole. Too asetab käe paberi servale.",
+    "disclosure": "Tehisintellektiga loodud väljamõeldud stseen kestab umbes neli sekundit. See ei kujuta tegelikke kliente ega kindlat kinnisvaraobjekti, üürilepingu sõlmimist, panga heakskiitu ega tegevusluba."
+  },
+  "fa": {
+    "title": "فرستادن نقشهٔ فضا به آن سوی میز",
+    "description": "مراجعه‌کننده نقشهٔ فضا را روی میز به سمت فرد مقابل هل می‌دهد. فرد مقابل دستش را روی لبهٔ کاغذ می‌گذارد.",
+    "disclosure": "این صحنهٔ خیالی با هوش مصنوعی ساخته شده و حدود چهار ثانیه طول می‌کشد. مشتری واقعی یا ملک مشخصی را نشان نمی‌دهد و تصویری از انعقاد اجاره‌نامه، تأیید بانک یا مجوز فعالیت نیست."
+  },
+  "fi": {
+    "title": "Pohjapiirros liukuu pöydän yli",
+    "description": "Vierailija liu’uttaa pohjapiirroksen pöydän yli. Vastapäätä istuva henkilö laskee kätensä paperin reunalle.",
+    "disclosure": "Tekoälyllä luotu kuvitteellinen kohtaus kestää noin neljä sekuntia. Se ei esitä todellisia asiakkaita tai tiettyä kiinteistöä, vuokrasopimuksen tekemistä, pankin hyväksyntää tai toimilupaa."
+  },
+  "fil": {
+    "title": "Pag-abot ng plano ng lugar sa kabilang panig ng mesa",
+    "description": "Itinutulak ng bisita ang plano sa ibabaw ng mesa patungo sa taong kaharap niya. Ipinapatong naman nito ang kamay sa gilid ng papel.",
+    "disclosure": "Kathang-isip na eksenang ginawa gamit ang AI, na humigit-kumulang apat na segundo ang haba. Hindi nito ipinapakita ang tunay na mga kliyente o isang partikular na ari-arian, ang pagpirma ng kontrata sa upa, pag-apruba ng bangko o pahintulot na magpatakbo ng negosyo."
+  },
+  "fr": {
+    "title": "Un plan du local glisse sur la table",
+    "description": "Une personne venue en consultation fait glisser un plan vers la personne assise en face, qui pose une main sur le bord de la feuille.",
+    "disclosure": "Scène fictive d’environ quatre secondes, générée par IA. Elle ne représente ni de véritables clients ni un bien précis, et ne montre pas la signature d’un bail, un accord bancaire ou une autorisation d’exercer."
+  },
+  "he": {
+    "title": "תרשים החלל עובר לצד השני של השולחן",
+    "description": "אדם שהגיע לפגישה מחליק תרשים על פני השולחן לעבר מי שיושב מולו. האדם שממול מניח יד על שפת הדף.",
+    "disclosure": "סצנה בדיונית באורך כארבע שניות, שנוצרה בבינה מלאכותית. היא אינה מציגה לקוחות אמיתיים או נכס מסוים, חתימה על חוזה שכירות, אישור בנק או היתר להפעלת עסק."
+  },
+  "hi": {
+    "title": "मेज़ के पार परिसर का नक्शा देना",
+    "description": "मिलने आया व्यक्ति मेज़ पर रखा नक्शा सामने बैठे व्यक्ति की ओर सरकाता है। सामने वाला व्यक्ति कागज़ के किनारे पर हाथ रखता है।",
+    "disclosure": "यह AI से बनाया गया लगभग चार सेकंड का काल्पनिक दृश्य है। इसमें वास्तविक ग्राहक या कोई खास संपत्ति, किरायानामे पर हस्ताक्षर, बैंक की मंज़ूरी या कारोबार चलाने की अनुमति नहीं दिखाई गई है।"
   }
 }

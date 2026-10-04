@@ -48,5 +48,55 @@
     "title": "Et dokument om midlerne lægges på bordet",
     "description": "Den besøgende lægger et ark på bordet mellem to mapper. Personen overfor lægger en hånd ved papirets kant.",
     "disclosure": "En fiktiv scene skabt med AI, som varer cirka fire sekunder. Den viser hverken virkelige klienter eller ægte bankdokumenter, en gennemført overførsel, en åbnet konto eller bankens godkendelse."
+  },
+  "de": {
+    "title": "Ein Dokument zu den Geldmitteln wird auf den Tisch gelegt",
+    "description": "Ein Besucher legt ein Blatt zwischen zwei Mappen auf den Tisch. Die Person gegenüber legt eine Hand an den Rand des Papiers.",
+    "disclosure": "Eine etwa vier Sekunden lange, mit KI erzeugte fiktive Szene. Sie zeigt keine tatsächlichen Mandanten oder echten Bankunterlagen, keine abgeschlossene Überweisung, kein eröffnetes Konto und keine Bankgenehmigung."
+  },
+  "el": {
+    "title": "Ένα έγγραφο για τα κεφάλαια τοποθετείται στο τραπέζι",
+    "description": "Ένας επισκέπτης αφήνει ένα φύλλο χαρτιού στο τραπέζι ανάμεσα σε δύο φακέλους. Το άτομο απέναντι ακουμπά το χέρι στην άκρη του χαρτιού.",
+    "disclosure": "Φανταστική σκηνή περίπου τεσσάρων δευτερολέπτων, δημιουργημένη με τεχνητή νοημοσύνη. Δεν απεικονίζει πραγματικούς πελάτες ή γνήσια τραπεζικά έγγραφα, ούτε ολοκληρωμένη μεταφορά χρημάτων, άνοιγμα λογαριασμού ή έγκριση τράπεζας."
+  },
+  "es": {
+    "title": "Un documento sobre los fondos, entre dos carpetas",
+    "description": "Una persona que acude a la consulta deja una hoja en la mesa, entre dos carpetas. Quien está enfrente coloca una mano en el borde del papel.",
+    "disclosure": "Escena ficticia de unos cuatro segundos, generada con IA. No representa a clientes reales ni documentos bancarios auténticos, ni muestra una transferencia completada, la apertura de una cuenta o una aprobación bancaria."
+  },
+  "et": {
+    "title": "Rahalisi vahendeid käsitlev dokument pannakse lauale",
+    "description": "Külastaja asetab ühe paberilehe lauale kahe kausta vahele. Vastas istuv inimene paneb käe paberi servale.",
+    "disclosure": "Tehisintellektiga loodud väljamõeldud stseen kestab umbes neli sekundit. See ei kujuta tegelikke kliente ega ehtsaid pangadokumente, tehtud rahaülekannet, konto avamist ega panga heakskiitu."
+  },
+  "fa": {
+    "title": "گذاشتن برگه‌ای دربارهٔ وجوه روی میز",
+    "description": "مراجعه‌کننده یک برگه را روی میز، میان دو پوشه، می‌گذارد. فرد مقابل دستش را روی لبهٔ کاغذ قرار می‌دهد.",
+    "disclosure": "این صحنهٔ خیالی با هوش مصنوعی ساخته شده و حدود چهار ثانیه طول می‌کشد. مشتری یا مدرک بانکی واقعی را نشان نمی‌دهد و تصویری از انتقال انجام‌شدهٔ وجه، افتتاح حساب یا تأیید بانک نیست."
+  },
+  "fi": {
+    "title": "Varoja koskeva asiakirja lasketaan pöydälle",
+    "description": "Vierailija laskee yhden paperiarkin pöydälle kahden kansion väliin. Vastapäätä istuva henkilö asettaa kätensä paperin reunalle.",
+    "disclosure": "Tekoälyllä luotu kuvitteellinen kohtaus kestää noin neljä sekuntia. Se ei esitä todellisia asiakkaita tai aitoja pankkiasiakirjoja, toteutunutta tilisiirtoa, avattua tiliä tai pankin hyväksyntää."
+  },
+  "fil": {
+    "title": "Paglalagay ng dokumento tungkol sa pondo sa mesa",
+    "description": "Ibinababa ng bisita ang isang papel sa mesa, sa pagitan ng dalawang folder. Inilalagay ng taong kaharap niya ang kamay sa gilid ng papel.",
+    "disclosure": "Kathang-isip na eksenang ginawa gamit ang AI, na humigit-kumulang apat na segundo ang haba. Hindi nito ipinapakita ang tunay na mga kliyente o dokumento ng bangko, isang nakumpletong padala ng pera, pagbubukas ng account o pag-apruba ng bangko."
+  },
+  "fr": {
+    "title": "Un document sur les fonds est posé entre deux dossiers",
+    "description": "Une personne venue en consultation pose une feuille sur la table, entre deux dossiers. La personne en face place une main sur le bord du papier.",
+    "disclosure": "Scène fictive d’environ quatre secondes, générée par IA. Elle ne représente ni de véritables clients ni des documents bancaires authentiques, et ne montre pas un virement effectué, l’ouverture d’un compte ou un accord bancaire."
+  },
+  "he": {
+    "title": "מסמך הנוגע לכספים מונח על השולחן",
+    "description": "אדם שהגיע לפגישה מניח דף אחד על השולחן, בין שתי תיקיות. האדם שממול מניח יד על שפת הנייר.",
+    "disclosure": "סצנה בדיונית באורך כארבע שניות, שנוצרה בבינה מלאכותית. היא אינה מציגה לקוחות אמיתיים או מסמכי בנק אותנטיים, העברת כספים שהושלמה, פתיחת חשבון או אישור בנק."
+  },
+  "hi": {
+    "title": "धनराशि से जुड़ा कागज़ मेज़ पर रखना",
+    "description": "मिलने आया व्यक्ति एक कागज़ मेज़ पर दो फ़ोल्डरों के बीच रखता है। सामने बैठा व्यक्ति कागज़ के किनारे पर हाथ रखता है।",
+    "disclosure": "यह AI से बनाया गया लगभग चार सेकंड का काल्पनिक दृश्य है। इसमें वास्तविक ग्राहक या बैंक के असली दस्तावेज़, पूरा हुआ धन हस्तांतरण, खाता खुलना या बैंक की मंज़ूरी नहीं दिखाई गई है।"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "차로를 옮겨 스쿠터 앞에 다시 멈추는 차",
+    "description": "은색 승용차가 오른쪽에서 스쿠터 앞 차로로 빠르게 들어와 멈춥니다. 차와 촬영 시점이 오른쪽 차로로 이동한 뒤, 승용차는 다시 앞에서 멈췄다가 전방으로 멀어집니다. 충돌은 없습니다.",
+    "disclosure": "AI로 만든 15초 무음 반복 영상입니다. 실제 블랙박스나 사건 재현 영상이 아닙니다. 칼럼의 신호 대기·정차 시간, 서로 다른 카메라의 시각, 유턴과 대화 과정을 재현하지 않았습니다. 화면의 도로·거리·속도·시간으로 실제 사건의 고의나 법적 책임을 판단할 수 없습니다."
+  },
+  "en": {
+    "title": "A car changes lanes and stops ahead of a scooter twice",
+    "description": "A silver sedan cuts in from the right and stops ahead of the scooter camera. The car and viewpoint move into the lane to the right, where the sedan stops again before driving away. No collision is shown.",
+    "disclosure": "AI-generated, silent 15-second loop. This fictional scene is not actual dashcam footage or a reconstruction of the incident. It does not reproduce the signal wait, stopping duration, different camera clocks, U-turns or dialogue described in the article. The depicted road, distances, speeds and timing cannot establish intent or legal responsibility in the actual case."
+  },
+  "ja": {
+    "title": "車線を移り、スクーターの前で再び止まる車",
+    "description": "銀色のセダンが右側からスクーターの前に入り、停止します。車と撮影視点が右側の車線へ移ると、セダンは再び前方で止まり、その後、前へ走り去ります。衝突は描いていません。",
+    "disclosure": "AIで生成した、音声のない15秒の繰り返し動画です。実際のドライブレコーダー映像でも、事件の再現でもありません。記事にある信号待ちや停止の時間、カメラごとに異なる時刻、Uターンや会話の経過は再現していません。描かれた道路・距離・速度・時間から、実際の事件の故意や法的責任を判断することはできません。"
+  },
+  "zh-hant": {
+    "title": "轎車變換車道，再次停在機車前方",
+    "description": "銀色轎車從右側切入機車前方並停下。接著，轎車與拍攝視角移向右側車道，轎車再次停在前方，之後往前駛離。影片未呈現碰撞。",
+    "disclosure": "本片為 AI 生成的 15 秒無聲循環影片，並非真實行車紀錄器畫面或案發過程重現。影片未重現文中的停等紅燈與停留時間、不同攝影設備的時刻、迴轉或對話過程。不能依片中的道路、距離、車速及時間安排，判斷實際案件的故意或法律責任。"
+  }
+}

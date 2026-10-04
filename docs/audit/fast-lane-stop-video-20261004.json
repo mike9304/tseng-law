@@ -1,0 +1,433 @@
+{
+  "reviewedAt": "2026-10-04T01:24:49.298348+00:00",
+  "reviewer": "Codex",
+  "scope": "Four article191 media replacements; native 15.041667 seconds / 24 fps / loop true. Legal article bodies unchanged.",
+  "workflow": "Codex generated and directly inspected initial and stopped reference images before Grok4.7 reference_to_video.",
+  "generationToolCall": "call-bbffcfa3-894c-4bd0-b571-3f0d7e42532c-0",
+  "rawSha256": "9a57d88dbd5b097f8a27c7f2c9e6da29a5f16c105dde4a52ad76ddc132666983",
+  "retiming": false,
+  "all361RawFramesDirectlyInspected": true,
+  "nativeDetailFramesZeroBased": [
+    0,
+    48,
+    96,
+    180,
+    240,
+    360
+  ],
+  "referenceImageReview": {
+    "reviewedAt": "2026-10-04T00:40:59.139199+00:00",
+    "generator": "Codex image_gen",
+    "source": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-f9361619-bf1b-4589-8e44-997d22d931b4.png",
+    "reference": "/Users/son7/tseng-law-column-videos/assets/fast-lane-stop/first-frame-v1.png",
+    "sha256": "ea57084a5b4924cb559504aba2329be3a16a1de75315cace81c074d38bbf3d74",
+    "prompt": "/Users/son7/tseng-law-column-videos/jobs/fast-lane-stop-first-frame-v1.txt",
+    "reviewer": "Codex direct full image inspection",
+    "observed": "One charcoal SUV ahead in the left lane and rear-facing hatchback farther ahead right; left median barrier and right guardrail, coherent two-lane road, no streetlights.",
+    "fictional": true,
+    "approvedForAnimation": true,
+    "exactMeasuredDistanceClaim": false
+  },
+  "stoppedAnchorReview": {
+    "reviewedAt": "2026-10-04T00:42:48.872296+00:00",
+    "generator": "Codex image_gen edit",
+    "source": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-b9a92569-1dff-425f-aeb6-4cdc44f0c0c9.png",
+    "reference": "/Users/son7/tseng-law-column-videos/assets/fast-lane-stop/stopped-v1.png",
+    "sha256": "114c7e4f6ec73bb8eb603f0fb3b72f601415349bd616f72e66ae189405427b88",
+    "prompt": "/Users/son7/tseng-law-column-videos/jobs/fast-lane-stop-stopped-v1.txt",
+    "reviewer": "Codex direct full image inspection",
+    "observed": "Same SUV significantly closer, rear-facing and entirely visible in left lane, all three brake lights bright; visible gap and no damage; median and two-lane geometry consistent, hatchback rear-facing farther ahead right.",
+    "fictional": true,
+    "approvedForAnimation": true
+  },
+  "observedAction": [
+    "The charcoal SUV is already travelling in the left lane. Its centre brake lamp brightens at about 0.8 seconds, the following camera closes the gap briefly, and both settle to a stop by about 2 seconds.",
+    "From about 2 seconds to the end, the SUV stays in the same lane with bright brake lamps and a clear gap to the camera car. The road and left median remain stable apart from small camera/texture changes.",
+    "The small car ahead to the right faces and travels away. All 361 frames preserve the same-direction two-lane road, concrete median on the left and guardrail on the right, without an extra lane, oncoming traffic, collision or driver exiting."
+  ],
+  "observedLimitations": [
+    "This illustrates only an abrupt stop in an unlit inner expressway lane. It does not reconstruct the real 2-minute-56-second stop, count the 27 passing vehicles or four hazard signals, or depict the later exit and window knock.",
+    "Vehicle shapes, gaps, road geometry and timing are fictional, with minor generated texture/camera variation. No measured speed, exact braking distance or physical-device certification is inferred.",
+    "The 15-second video restarts visibly when looped; no seamless-loop claim. Final labelled playback and exact source/caption verification remain pending."
+  ],
+  "captionReview": [
+    {
+      "locale": "ko",
+      "oldRegistry": "  'column/ko/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {\n    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-ko',\n    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-ko.mp4',\n    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-ko.jpg',\n    width: 1280,\n    height: 720,\n    title: '앞 SUV의 브레이크등이 밝아지고 간격이 좁아지는 장면',\n    description: '밤의 다차로 도로에서 앞서가는 짙은 회색 SUV와의 간격이 잠시 벌어졌다가, SUV의 브레이크등이 밝아지면서 다시 좁아집니다. 이후 브레이크등이 어두워지며 SUV는 계속 달리고, 흰색과 검은색 차량들이 옆을 지나갑니다. 소리가 없는 약 15초 길이의 영상이며, 재생 버튼을 누르면 반복 재생됩니다.',\n    disclosure: 'AI로 만든 가상 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실을 재현한 영상이 아닙니다. 깜빡이는 REC와 경과 시간 표시는 덧붙인 화면 효과입니다. 영상 속 거리와 속도, 동작이 일어나는 시점은 설명을 위한 설정이며, 실제 사건의 과실을 판단하는 근거로 쓸 수 없습니다.',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "밤의 추월차로에서 갑자기 멈추는 앞차",
+        "description": "짙은 회색 SUV의 브레이크등이 켜지고 앞차가 빠르게 멈춥니다. 뒤따르는 촬영 차량도 간격을 남기고 정차합니다. 오른쪽 차로의 작은 차는 같은 방향으로 멀어지며, 충돌은 없습니다.",
+        "disclosure": "AI로 만든 15초 무음 반복 영상입니다. 실제 블랙박스나 사건 재현 영상이 아닙니다. 칼럼의 2분 56초 정차, 차량 27대의 감속과 4대의 비상등, 운전자의 하차·창문 두드림은 재현하지 않았습니다. 화면의 속도·거리·시간은 실제 사건의 측정값이나 법적 판단 근거가 아닙니다."
+      },
+      "problem": "Prior clip/copy describes widening and closing gaps, continued driving, passing vehicles and REC/timer effects. The new approved video instead shows abrupt braking followed by a stationary hold.",
+      "reason": "Name the visible abrupt stop in the unlit inner lane, the camera vehicle stopping with a gap, and the small same-direction car to the right. No collision, driver exit or passing-vehicle count is invented.",
+      "meaningPreservation": "Article191 body, 2m56 timeline, 27 slowing vehicles/four hazard signals, prosecutor inspection attribution, sentence/conversion terms and first-instance/finality limitations remain unchanged. The disclosure identifies which parts are omitted; it supplies no new legal conclusion.",
+      "firstParagraphDeletionCheck": "Each sentence adds a visible event or clarifies no collision; the title names the scene instead of repeating the article’s legal outcome.",
+      "secondParagraphDeletionCheck": "AI origin, silent 15-second loop and distinction from actual evidence remain explicit. Omitted duration, traffic counts and driver conduct keep the illustration within its verified scope.",
+      "sameLanguageComparison": [
+        {
+          "file": "src/content/columns/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sha256": "d6e3af70fa8e44d42db7953c59a9f291b3ad149cb3a5f6b90de4cf6f4a37d0bd"
+        },
+        {
+          "file": "src/content/columns/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sha256": "fdc5b485a3d035770140a30a938ca4acd138654ca9f6e51a78fe43b1b4dbb14b"
+        },
+        {
+          "file": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+          "sha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af"
+        }
+      ],
+      "reviewLimit": "Codex language/content review, not native-speaker or legal-professional certification."
+    },
+    {
+      "locale": "en",
+      "oldRegistry": "  'column/en/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {\n    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-en',\n    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-en.mp4',\n    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-en.jpg',\n    width: 1280,\n    height: 720,\n    title: 'An SUV\\'s brake lights brighten as the gap closes',\n    description: 'On a multi-lane road at night, a dark gray SUV ahead first moves farther away, then its brake lights brighten and the gap closes. Its brake lights then dim as it continues along the road, with white and black vehicles passing alongside. This silent clip is about 15 seconds long and loops once you press play.',\n    disclosure: 'This is a fictional AI-generated scene, not dashcam footage or a reconstruction of the facts in the judgment. The blinking REC marker and elapsed-time counter are added visual effects. Distances, speeds and timing are illustrative only and cannot be used to judge fault in any real case.',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "An abrupt stop in an unlit overtaking lane",
+        "description": "The dark SUV’s brake lights brighten and it stops sharply. The following camera car brakes and stops with space between the vehicles. A small car in the right lane continues away in the same direction. No collision is shown.",
+        "disclosure": "AI-generated, silent 15-second loop, not actual dashcam footage or a reconstruction of the incident. It does not reproduce the 2-minute-56-second stop, the 27 slowing vehicles and four sets of hazard lights, or the driver getting out and knocking on a window. The depicted speeds, distances and timing are fictional, not measurements or evidence for a legal finding in the actual case."
+      },
+      "problem": "Prior clip/copy describes widening and closing gaps, continued driving, passing vehicles and REC/timer effects. The new approved video instead shows abrupt braking followed by a stationary hold.",
+      "reason": "Name the visible abrupt stop in the unlit inner lane, the camera vehicle stopping with a gap, and the small same-direction car to the right. No collision, driver exit or passing-vehicle count is invented.",
+      "meaningPreservation": "Article191 body, 2m56 timeline, 27 slowing vehicles/four hazard signals, prosecutor inspection attribution, sentence/conversion terms and first-instance/finality limitations remain unchanged. The disclosure identifies which parts are omitted; it supplies no new legal conclusion.",
+      "firstParagraphDeletionCheck": "Each sentence adds a visible event or clarifies no collision; the title names the scene instead of repeating the article’s legal outcome.",
+      "secondParagraphDeletionCheck": "AI origin, silent 15-second loop and distinction from actual evidence remain explicit. Omitted duration, traffic counts and driver conduct keep the illustration within its verified scope.",
+      "sameLanguageComparison": [
+        {
+          "file": "src/content/columns-en/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sha256": "f453c5793f3e263fda3c724ea209fe69d8f14ce959d1192aaeb22e568b0fd820"
+        },
+        {
+          "file": "src/content/columns-en/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sha256": "6771fe209dedeae03a73d1d1f28ff60cda625ad46febe468fa35b4e0b5a36754"
+        },
+        {
+          "file": "src/content/columns-en/200-taiwan-protection-order-foreign-resident.md",
+          "sha256": "cfe574b3f0efc0d55eb80bc485c893318179e3ae8e61769ad04e400b7991f3a3"
+        }
+      ],
+      "reviewLimit": "Codex language/content review, not native-speaker or legal-professional certification."
+    },
+    {
+      "locale": "ja",
+      "oldRegistry": "  'column/ja/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {\n    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-ja',\n    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-ja.mp4',\n    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-ja.jpg',\n    width: 1280,\n    height: 720,\n    title: 'ブレーキランプが光るSUVとの車間が詰まる場面',\n    description: '夜の道路で、前を走る濃いグレーのSUVとの車間がいったん広がったあと、ブレーキランプが明るくなり、車間が再び詰まります。やがてランプの光が弱まり、SUVが走り続ける横を白や黒の車が通り過ぎます。音声のない約15秒の映像で、再生ボタンを押すと繰り返し再生されます。',\n    disclosure: 'AIで生成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。点滅するRECマークと経過時間の表示は、あとから加えた画面上の演出です。映像内の距離・速度・動作のタイミングは説明用の設定であり、実際の事件で過失を判断する根拠にはなりません。',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "街灯のない追越車線で急停止する前走車",
+        "description": "濃いグレーのSUVのブレーキランプが明るくなり、車が急停止します。撮影している後続車も車間を残して止まります。右側の車線の小型車は同じ方向へ遠ざかります。衝突は描いていません。",
+        "disclosure": "AIで生成した、音声のない15秒の繰り返し動画です。実際のドライブレコーダー映像でも、事件の再現でもありません。記事にある2分56秒の停車、27台の減速と4台のハザードランプ、運転者の降車や窓をたたく行為は再現していません。描かれた速度・距離・時間は、実際の事件の測定値や法的判断の根拠ではありません。"
+      },
+      "problem": "Prior clip/copy describes widening and closing gaps, continued driving, passing vehicles and REC/timer effects. The new approved video instead shows abrupt braking followed by a stationary hold.",
+      "reason": "Name the visible abrupt stop in the unlit inner lane, the camera vehicle stopping with a gap, and the small same-direction car to the right. No collision, driver exit or passing-vehicle count is invented.",
+      "meaningPreservation": "Article191 body, 2m56 timeline, 27 slowing vehicles/four hazard signals, prosecutor inspection attribution, sentence/conversion terms and first-instance/finality limitations remain unchanged. The disclosure identifies which parts are omitted; it supplies no new legal conclusion.",
+      "firstParagraphDeletionCheck": "Each sentence adds a visible event or clarifies no collision; the title names the scene instead of repeating the article’s legal outcome.",
+      "secondParagraphDeletionCheck": "AI origin, silent 15-second loop and distinction from actual evidence remain explicit. Omitted duration, traffic counts and driver conduct keep the illustration within its verified scope.",
+      "sameLanguageComparison": [
+        {
+          "file": "src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sha256": "f6dc7f531b01426f5fb800e88cbe140c6a8aee6d570bc25d4166de7f1da905cd"
+        },
+        {
+          "file": "src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+          "sha256": "57f9847db0e103e8c2045f5fed18489c106131be298ef8ff53d4d3ae2a5d7c3e"
+        },
+        {
+          "file": "src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+          "sha256": "ce3246410a7f780b6da753b44e3e701f19bf38877bc62031057bf7fea3a3f663"
+        }
+      ],
+      "reviewLimit": "Codex language/content review, not native-speaker or legal-professional certification."
+    },
+    {
+      "locale": "zh-hant",
+      "oldRegistry": "  'column/zh-hant/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {\n    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-zh-hant',\n    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-zh-hant.mp4',\n    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-zh-hant.jpg',\n    width: 1280,\n    height: 720,\n    title: '前方休旅車煞車燈亮起，車距縮短',\n    description: '夜間的多車道道路上，與前方深灰色休旅車的距離先拉開，接著它的煞車燈變亮，車距逐漸縮短。煞車燈隨後變暗，休旅車繼續前進，白色與黑色車輛從旁駛過。本片無聲，長約15秒，按下播放後會循環播放。',\n    disclosure: '這是AI生成的虛構場景，不是行車紀錄器實錄，也不是判決認定事實的重現。閃爍的REC標示與經過時間計數器，都是後製加上的畫面效果。片中的距離、速度與動作發生的時間點僅供示意，不能用來判斷任何實際案件的過失責任。',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "前車突然停在沒有路燈的內線車道",
+        "description": "深灰色休旅車的煞車燈亮起，隨即急停。後方拍攝車輛也煞停，兩車之間仍留有距離。右側車道的小車繼續同向駛遠，畫面沒有碰撞。",
+        "disclosure": "本片為 AI 生成的 15 秒無聲循環影片，並非真實行車紀錄器畫面或案發過程重現。影片未重現文中的2分56秒停車、27輛車減速與4輛車亮起警示燈，也未呈現駕駛下車敲窗。片中的車速、距離及時間安排均為虛構，不能當作實際案件的測量結果或法律判斷依據。"
+      },
+      "problem": "Prior clip/copy describes widening and closing gaps, continued driving, passing vehicles and REC/timer effects. The new approved video instead shows abrupt braking followed by a stationary hold.",
+      "reason": "Name the visible abrupt stop in the unlit inner lane, the camera vehicle stopping with a gap, and the small same-direction car to the right. No collision, driver exit or passing-vehicle count is invented.",
+      "meaningPreservation": "Article191 body, 2m56 timeline, 27 slowing vehicles/four hazard signals, prosecutor inspection attribution, sentence/conversion terms and first-instance/finality limitations remain unchanged. The disclosure identifies which parts are omitted; it supplies no new legal conclusion.",
+      "firstParagraphDeletionCheck": "Each sentence adds a visible event or clarifies no collision; the title names the scene instead of repeating the article’s legal outcome.",
+      "secondParagraphDeletionCheck": "AI origin, silent 15-second loop and distinction from actual evidence remain explicit. Omitted duration, traffic counts and driver conduct keep the illustration within its verified scope.",
+      "sameLanguageComparison": [
+        {
+          "file": "src/content/columns-zh/206-taiwan-freeway-warning-triangle-time-ability-evidence.md",
+          "sha256": "96624c962547cb572988f15f664f514d42f729fd7f85805ead4b1b4936a01767"
+        },
+        {
+          "file": "src/content/columns-zh/205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md",
+          "sha256": "7dbfb065c476d6871ccb196fd5f92a136542b516dad9fcbc53454caeb699794f"
+        },
+        {
+          "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+          "sha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b"
+        }
+      ],
+      "reviewLimit": "Codex language/content review, not native-speaker or legal-professional certification."
+    }
+  ],
+  "references": [
+    {
+      "locale": "ko",
+      "file": "src/content/columns/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "d6e3af70fa8e44d42db7953c59a9f291b3ad149cb3a5f6b90de4cf6f4a37d0bd",
+      "firstTwoParagraphs": [
+        "2025년 11월 25일 오후 5시 13분, 타이베이시 원산구(文山區)의 한 다리 위였습니다. 오토바이 한 대가 일반 차로에서 오른쪽 機慢車道(오토바이와 저속 차량이 다니는 차로)로 넘어와 그 차로를 달리던 차량 바로 앞에 들어섰습니다. 살짝 제동했다가 다시 속도를 낸 오토바이는 곧 3초 만에 멈춰 섰고, 운전자는 뒤를 돌아봤습니다. 뒤차는 왼쪽으로 비켜 오토바이를 앞질렀고, 두 사람 사이에 욕설이 오갔습니다. ([臺北高等行政法院 地方行政訴訟庭 115年度交字第54號, 2026년 5월 26일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1))",
+        "다섯 달 앞선 6월 3일 오전 7시 14분, 타이베이시 완화구(萬華區)의 교차로에서는 영업용 승용차(營業小客車) 한 대가 왼쪽 방향지시등을 켜고 차로를 바꾸려던 참이었습니다. 왼쪽 차로의 검은색 SUV를 먼저 보낸 뒤 그 차로 뒤쪽에서 흰색 차량이 다가오자 약 2초 멈췄고, 흰색 차량이 지나가자 다시 출발했습니다. 바로 뒤에 붙어 오던 차량의 운전자가 블랙박스 영상을 내며 경찰에 신고했습니다. ([臺北高等行政法院 高等行政訴訟庭 115年度交上字第76號, 2026년 8월 24일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1))"
+      ],
+      "headings": [
+        "흰색 차량이 다가오던 2초",
+        "입법 기록 속 '상향등 한두 번'",
+        "다리 위 3초, 법정에서 재생된 영상",
+        "경적이 울린 시점과 접촉을 주장한 위치",
+        "두 판결이 엇갈리게 쓴 한 문장",
+        "신고 영상에 담긴 감속과 접촉 여부",
+        "출처"
+      ],
+      "ending": "대만에서 운전하거나 오토바이를 타다 경적이나 접촉 때문에 멈춰야겠다고 느낄 때, 오토바이 사건 판결이 제시한 방법은 서서히 감속하고 주변을 살핀 뒤 길가나 교통을 방해하지 않는 곳에 세우는 것이었습니다. 상대의 차로 이용이 잘못됐다는 주장도, 나중에 경찰을 부르자고 한 일도 다른 차 바로 앞에서 급히 멈춰야 했다는 근거로 받아들여지지 않았습니다. ([臺北高等行政法院 地方行政訴訟庭 115年度交字第54號, 2026년 5월 26일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1))"
+    },
+    {
+      "locale": "ko",
+      "file": "src/content/columns/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "fdc5b485a3d035770140a30a938ca4acd138654ca9f6e51a78fe43b1b4dbb14b",
+      "firstTwoParagraphs": [
+        "2024년 7월 28일 저녁 6시 58분쯤, 신베이시 중허구(中和區)의 한 도로에서 승용차 한 대가 유턴을 하고 있었습니다. 맞은편에서 오던 오토바이는 승용차가 먼저 유턴하도록 양보하지 않고 경고하듯 경적을 울렸습니다. 승용차 운전자는 곧바로 속도를 높여 오토바이를 뒤쫓았고, 교차로 앞에서 따라잡자 차를 들이밀어 오토바이를 도로 한가운데에 멈춰 세웠습니다. 그리고 창문을 열고 「幹你娘老雞掰」라고 욕했습니다. 상대의 어머니를 끌어들인 상스러운 욕설로, 대만고등법원도 이 말을 \"粗鄙低俗(거칠고 저속하다)\"고 표현했습니다([臺灣高等法院 114年度上易字第2198號, 2026. 1. 27.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)).",
+        "신호가 초록불로 바뀐 뒤에도 승용차는 비켜 주지 않았습니다. 오토바이 운전자가 승용차 오른쪽으로 돌아 직진하려 하자 승용차가 오른쪽 앞으로 움직여 다시 막았고, 오토바이 운전자가 더는 다른 행동을 하지 않는 것을 보고서야 자리를 떴습니다. 여기까지는 운전자도 다투지 않았고, 1심과 2심이 그대로 사실로 인정했습니다([臺灣新北地方法院 114年度易字第637號, 2025. 7. 31., 고등법원 판결문 附件 수록](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1) · [臺灣高等法院 114年度上易字第2198號, 2026. 1. 27.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)). 그런데도 두 법원은 모두 무죄로 판단했습니다. 법원은 영상 속 시간을 초 단위로 셌습니다."
+      ],
+      "headings": [
+        "블랙박스와 교차로 CCTV에 남은 1분 54초",
+        "검사와 운전자가 다툰 지점",
+        "빨간불 52초를 뺀 이유",
+        "욕설은 왜 처벌되지 않았나",
+        "1심과 2심의 결과",
+        "형사 무죄와 교통 과태료는 별개",
+        "영상 속에서 법원이 센 것",
+        "판결과 법령 출처"
+      ],
+      "ending": "강제죄 판단에서 법원이 살핀 것은 영상에 찍힌 시각과 도로의 폭이었습니다. 앞을 막아선 시점과 오토바이가 빠져나간 시점, 그 사이 신호가 빨간불이던 구간, 빠져나갈 차로가 있었는지가 판단을 갈랐습니다. 신호 시간은 오토바이 블랙박스 화면 위쪽에 찍힌 신호등으로 계산됐고, 차 문을 열고 욕하는 장면도 블랙박스에 남아 있었습니다. 대만에서 운전하거나 오토바이를 타다 이런 일을 겪었다면 원본 영상을 지우지 않고 보관해 두는 것이 사실관계를 다툴 출발점이 됩니다. 판결문이 블랙박스와 CCTV의 시각 차이를 적어 둔 데서 보듯, 기기 시계가 실제 시각과 어긋날 수 있다는 점도 염두에 둘 만합니다([臺灣新北地方法院 114年度易字第637號, 2025. 7. 31., 고등법원 판결문 附件 수록](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)).\n\n오토바이 운전자가 유턴해 떠난 사실은 이 판결에서 빠져나갈 공간이 있었다는 근거로 쓰였습니다([臺灣高等法院 114年度上易字第2198號, 2026. 1. 27.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)).",
+      "extractionNote": "Compared substantive ending prose; citations, list contents, source definitions and author/disclosure text remain unchanged in source."
+    },
+    {
+      "locale": "ko",
+      "file": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+      "sha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af",
+      "firstTwoParagraphs": [
+        "대만법상 법정재산제가 적용되는 부부가 이혼할 때, 잔여재산분배청구(剩餘財產分配請求權)는 두 사람의 혼인 후 순재산 차액을 정산하는 청구입니다. 각자 남아 있는 혼인 후 재산에서 혼인 중 진 채무를 공제하므로 자신의 재산과 채무도 확인해야 합니다. 상속·증여 등 무상으로 받은 재산과 위자료는 제외하고, 원칙적으로 차액을 절반씩 나누되 불공평한 사정이 있으면 법원이 분배액을 조정하거나 면제할 수 있습니다. [대만 민법 제1030조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1030-1)",
+        "한국에 사는 부부에 대해서도 대만 법원은 부부재산의 준거법을 서면 합의, 공통 본국법·주소지법 등의 기준으로 정하므로, 대만인 배우자가 있다는 사실만으로 대만법 적용을 단정할 수 없습니다. 적용 법과 재산제도의 선택은 [기존 부부재산제 칼럼](/ko/columns/taiwan-marital-property-regime-international-couples)에 설명돼 있습니다. [섭외민사법률적용법 제48조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=48), [민법 제1005조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1005)"
+      ],
+      "headings": [
+        "어느 날짜의 잔액과 가치를 확인할 것인가",
+        "재산 목록에는 금액 옆에 날짜와 출처가 필요합니다",
+        "상대가 자료를 주지 않을 때의 법원 조사와 문서제출",
+        "이미 빠져나간 돈은 언제 다시 계산에 넣을 수 있나",
+        "가압류에는 재산 차액과 집행 위험을 각각 설명해야 합니다",
+        "자료가 모일 때까지 시효가 기다려 주지는 않습니다",
+        "참고한 공식 자료"
+      ],
+      "ending": "호정(昊鼎)국제법률사무소에 대만 재산분배 상담을 문의하려면, 혼인·이혼 관련 문서와 알고 있는 재산 목록, 이미 받은 법원 문서를 정리해 증준외(曾雋崴) 변호사의 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 연락할 수 있습니다. 사무소 주소는 103 臺北市大同區承德路一段35號7樓之2입니다."
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "f453c5793f3e263fda3c724ea209fe69d8f14ce959d1192aaeb22e568b0fd820",
+      "firstTwoParagraphs": [
+        "At about 7:14 a.m. on June 3, 2025, a car at a junction on a multilane road in Taipei's Wanhua District signalled left. It let a black SUV pass in the next lane. Then a white vehicle approached from behind in that lane, and the car stopped for about two seconds. The motorist following closely behind submitted a dashcam recording to report the stop. ([Taipei High Administrative Court, High Administrative Litigation Division, 115年度交上字第76號, August 24, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1))",
+        "That recording eventually helped undo the penalties. The first-instance court cancelled an NT$24,000 fine, a road-safety course requirement and a six-month suspension of the car's plates. The traffic authority appealed and lost. These were administrative traffic proceedings, not a criminal acquittal or a damages award. ([Taipei High Administrative Court, High Administrative Litigation Division, 115年度交上字第76號, August 24, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1))"
+      ],
+      "headings": [
+        "The speed display belonged to the vehicle behind",
+        "On a bridge, the rider could still accelerate",
+        "The courts described intent differently",
+        "Sources"
+      ],
+      "ending": "For a driver or rider shaken by a horn or suspected contact, the court in the motorcycle case gave a specific alternative where an immediate stop was unnecessary: slow progressively, stabilise the vehicle, watch the surrounding traffic, and pull over once safe or reach somewhere that does not obstruct traffic. Wanting to inspect damage or involve police did not excuse creating another danger while stopping. ([Taipei High Administrative Court, Local Administrative Litigation Division, 115年度交字第54號, May 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1))"
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "6771fe209dedeae03a73d1d1f28ff60cda625ad46febe468fa35b4e0b5a36754",
+      "firstTwoParagraphs": [
+        "A scooter rider sounded the horn as a car made a U-turn on a road with two lanes in each direction in Zhonghe, New Taipei, at about 6:58 pm on July 28, 2024. The oncoming rider had not waited for the car to turn first. The driver accelerated after the scooter, overtook it and blocked it near an intersection, forcing the rider to stop in the middle of the road. The driver then swore at the rider. [Taiwan High Court, 114年度上易字第2198號, January 27, 2026, including the attached first-instance judgment](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1).",
+        "When the light turned green, the rider tried to pass on the right. The car moved forward and right, blocking that route too. The driver did not dispute those movements or the swearing. [Taiwan High Court, 114年度上易字第2198號, January 27, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)."
+      ],
+      "headings": [
+        "Two cameras, two clocks",
+        "The argument over room to escape",
+        "The swearing had its own legal threshold",
+        "The rest of the recording still matters"
+      ],
+      "ending": "For someone driving or riding in Taiwan, the useful evidential lesson is to retain the full recording, including the signal changes and departure, and note any clock discrepancy when describing events. That is a practical inference from this case, not a new legal requirement. The footage of the car cutting across the scooter showed the confrontation; the seconds and space around it helped explain the acquittal. [New Taipei District Court, 114年度易字第637號, July 31, 2025, attached judgment](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)."
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/200-taiwan-protection-order-foreign-resident.md",
+      "sha256": "cfe574b3f0efc0d55eb80bc485c893318179e3ae8e61769ad04e400b7991f3a3",
+      "firstTwoParagraphs": [
+        "You can seek a Taiwan protection order against an abusive spouse without first filing for divorce. The Domestic Violence Prevention Act gives victims access to protection orders without a nationality restriction, and expressly covers spouses and former spouses. A criminal conviction is not a prerequisite. ([Articles 3 and 10](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0050071))",
+        "If you are in immediate danger, contact local police and seek a safe place rather than wait for court paperwork. Taiwan's Ministry of Health and Welfare also operates a round-the-clock protection hotline with English interpretation; its [official service page](https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html) provides access details."
+      ],
+      "headings": [
+        "Protection reaches beyond physical injury",
+        "Which order can be requested, and by whom?",
+        "The order needs to address where contact happens",
+        "Filing without exposing a safe address",
+        "Children and breaches of the order",
+        "A protection order does not renew an ARC",
+        "Official sources"
+      ],
+      "ending": "For advice on coordinating a protection application with parenting or residence issues, contact Attorney Wei Tseng (曾雋崴) at Hovering International Law Firm: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taipei office: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan."
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "f6dc7f531b01426f5fb800e88cbe140c6a8aee6d570bc25d4166de7f1da905cd",
+      "firstTwoParagraphs": [
+        "2025年6月3日、午前7時14分ごろ。台北市万華区の交差点で、乗用車が左のウインカーを出し、隣の車線を走る黒いSUVを先に通しました。続いて左後方から白い車が近づくと、乗用車はブレーキをかけて停止。約2秒後、白い車が通過すると再び走り出しました。すぐ後ろを走っていた車の映像が、この停止をめぐる通報の証拠になりました。[臺北高等行政法院高等庭115年度交上字第76號判決（2026年8月24日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)",
+        "臺北市交通事件裁決所が科したのは、2万4,000台湾元の制裁金、道路交通安全講習、車のナンバープレートの6か月停止でした。運転者は取消しを求めて行政訴訟を起こし、一審で二つの処分がともに取り消されます。裁決所は上訴しましたが、二審も取消しを維持しました。[臺北高等行政法院高等庭115年度交上字第76號判決（2026年8月24日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)"
+      ],
+      "headings": [
+        "通報映像に残っていた、止まる前の速度",
+        "約2秒なら許される、という判決ではない",
+        "橋の上では、クラクションの後に止まった",
+        "「悪意」の説明は一致していない",
+        "相手の走り方と、自分が止まる場所",
+        "出典"
+      ],
+      "ending": "接触したか確認したい、警察を呼びたい。その必要を感じた場合について、この判決が示したのは、徐々に減速して車体を安定させ、前後左右を見て、安全を確認してから路肩や交通を妨げない場所へ止まるという対応でした。これは、直ちに停止しなければ危険な場合まで走り続けよという意味ではありません。映像上、まだ安定して走れていたこのバイクについて、裁判所は停止するまでの方法と場所を問いました。[臺北高等行政法院地方庭115年度交字第54號判決（2026年5月26日）、事実及び理由五（二）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+      "sha256": "57f9847db0e103e8c2045f5fed18489c106131be298ef8ff53d4d3ae2a5d7c3e",
+      "firstTwoParagraphs": [
+        "転職先が決まった後、今の会社から「退職後2年間は同業他社で働けない」と言われたら、まず署名済みの契約書と補償の条件を確認してください。署名していることだけで制限の有効性は決まりません。反対に、補償の支払いに疑問があるからといって、入社予定日までに争いが解決するとも限りません。",
+        "台湾法でいう「離職後競業禁止」は、退職後の一定期間、競合する仕事などを制限する合意です。日本語では退職後の競業避止義務と呼びます。台湾の労働基準法（勞動基準法）第9条の1は、その合意に4つの要件を求めています。[労働基準法第9条の1](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001)"
+      ],
+      "headings": [
+        "署名済みでも、4つの要件を満たす必要があります",
+        "「2年以内」でも、制限の範囲を確認します",
+        "補償は「基本給の半分」で決めるものではありません",
+        "入社予定日から逆算し、会社の主張を書面で確かめます",
+        "秘密保持義務や最低勤務期間とは分けて考えます",
+        "手元にそろえたい資料"
+      ],
+      "ending": [
+        "最初にそろえるべきなのは、署名済み条項、旧職と新職の内容、補償の計算根拠です。この3点を並べると、「会社が求める制限」「実際に予定する仕事」「その制限に対する補償」のどこに食い違いがあるかを具体的に確認できます。",
+        "本稿は一般的な制度の説明です。資料確認日：2026年10月4日（台湾時間）。"
+      ]
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "ce3246410a7f780b6da753b44e3e701f19bf38877bc62031057bf7fea3a3f663",
+      "firstTwoParagraphs": [
+        "2024年7月28日午後6時58分ごろ、新北市中和区の片側2車線の道路で、乗用車がUターンしようとしていました。対向してきたバイクはそのUターンを先に通さず、警告のクラクションを鳴らします。車は加速して追いかけ、交差点の手前でバイクの前に出ると、道路の中央で停車させました。運転者は窓を開け、相手に暴言を浴びせます。",
+        "青信号になっても車は前を塞いだままです。バイクが右側から回り込んで直進しようとすると、車も右前方へ動いて再び進路を塞ぎます。相手がそれ以上動かないのを見て、車はようやく立ち去りました。ここまでの行動は車の運転者も争っておらず、裁判所が認定しています（[臺灣高等法院114年度上易字第2198號、2026年1月27日、附件の一審判決を含む](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。"
+      ],
+      "headings": [
+        "二つの映像に映った、最後のUターン",
+        "進める隙間があれば、強制ではないのか",
+        "赤信号の間は、そもそも前へ進めなかった",
+        "暴言を認めても、侮辱罪には届かなかった",
+        "二つの無罪と、この判決が答えていないこと"
+      ],
+      "ending": "この判決の証拠の扱いからすると、台湾で同じような妨害に遭ったときは、前後を含む映像が役立ちます。信号の変化や車線、立ち去るまでの動きが分かる元の映像を残しておけば、裁判所が今回検討した事情を確かめられます。表示時刻が合っていない映像どうしは、時刻をそのまま並べても正しい経過になるとは限りません。本件では一方の映像が52秒の赤信号を、もう一方が約1分54秒の経過とUターンを示しました。妨害の瞬間だけでは、こうした事情は捉えきれません（[臺灣新北地方法院114年度易字第637號、2025年7月31日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/206-taiwan-freeway-warning-triangle-time-ability-evidence.md",
+      "sha256": "96624c962547cb572988f15f664f514d42f729fd7f85805ead4b1b4936a01767",
+      "firstTwoParagraphs": [
+        "06:06:48，駕駛手裡還拿著車輛故障標誌，距離自己的車尾約二十公尺。他舉牌向後方來車示警；下一秒閃往內側路肩，再下一秒，後車撞上他的車。後車駕駛送醫後死亡。",
+        "這段經過，記在彰化地院判決所附的監視器勘驗筆錄裡。駕駛確實還沒有把標誌放到規定的位置，車子的雙黃燈也沒有亮。法院仍判無罪，二審維持。理由落在一個更具體的問題：事故留下的時間與車況，是否讓他有可能完成法律要求的動作？〔[一審，第5至8頁、附件第10至12頁][trial]；[二審，第6至11頁][appeal]〕"
+      ],
+      "headings": [
+        "先撞上前車的過失，與後來死亡的刑責",
+        "有義務，還要查當時做不做得到",
+        "九十二秒從停定算起，兩次碰撞則隔了九十六秒",
+        "雙黃燈沒亮，不等於已證明駕駛能讓它亮",
+        "初次鑑定與覆議分歧，法院追問的是時間條件",
+        "兩審維持無罪，仍不能直接寫成無罪確定",
+        "留下證據之前，先離開持續暴露的危險"
+      ],
+      "ending": "本案真正影響判斷的，是「有沒有時間、機件是否容許」被具體留下來。標誌尚在手中，是畫面裡的一個事實；要由這個事實走到過失致死的刑責，仍須證明當時有能力履行卻未履行，以及犯罪成立所需的其餘條件。",
+      "extractionNote": "Compared substantive ending prose; citations, list contents, source definitions and author/disclosure text remain unchanged in source."
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md",
+      "sha256": "7dbfb065c476d6871ccb196fd5f92a136542b516dad9fcbc53454caeb699794f",
+      "firstTwoParagraphs": [
+        "輪胎從快速道路另一側滾來，撞上小客車，前座兩個安全氣囊瞬間爆開。駕駛當場向警方說沒有受傷，六天後才就醫。這段時間差，成了刑事審判的重要爭點。",
+        "一審已認定曳引車駕駛對輪胎脫落有過失，卻認為證據不足以證明車內兩人的傷害及其與事故的關係，因此判無罪。二審取得醫院回函，將 X 光顯示的肋骨骨折、後續回診、精神科診斷，以及車損和行車影像放在一起判斷，撤銷原判決，改判有期徒刑四月。改判的關鍵，在於這些證據如何補足傷害與事故之間的連結。〔[一審，理由四至五][j1]；[二審，理由貳二㈢、肆及主文][j2]〕"
+      ],
+      "headings": [
+        "一審無罪，並沒有否定駕駛的檢查義務",
+        "臨時補胎時已察覺異常，為什麼仍須複查？",
+        "六天後才看醫師，二審如何認定傷勢與事故有關？",
+        "沒有外傷，精神上的傷害如何判斷？",
+        "四個月徒刑與最高法院駁回，各代表什麼？",
+        "事故後，哪些紀錄最能幫助釐清爭點？"
+      ],
+      "ending": "以上是依本案爭點整理的資料保存建議。身體或精神不適應由醫療專業人員評估，不宜為蒐證而拖延就醫，也不宜自行替症狀命名。對這件判決最有用的理解，是看清法院如何把具體的檢查疏失，連到已有證據支持的身心傷害；每一段連結，都需要自己的依據。",
+      "extractionNote": "Compared substantive ending prose; citations, list contents, source definitions and author/disclosure text remain unchanged in source."
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+      "firstTwoParagraphs": [
+        "2025年6月3日上午7時14分，台北市萬華區一處路口，小客車打著左方向燈，讓左側一輛黑色休旅車先過。左側後方又有白車靠近，小客車煞停約兩秒，等白車通過後重新起步。後車的行車紀錄器錄下這段過程，也成了駕駛被檢舉的證據。法院的疑問是：這兩秒的暫停，能排除是為了避免碰撞嗎？[臺北高等行政法院高等庭115年度交上字第76號判決，2026年8月24日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)",
+        "同年11月25日下午5時13分，文山區一座橋上，機車從一般車道向右切入機慢車道，來到拍攝車輛前方。略煞車、再加速之後，機車在三秒內煞至停止，騎士回頭看，後車向左繞過。這次法院認定，影像裡沒有必須立即停下的突發狀況。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+      ],
+      "headings": [
+        "同一款處罰，爭的是為什麼停",
+        "後車的速度顯示，留下另一種解釋",
+        "撤銷處分，不是准許兩秒鐘的煞停",
+        "橋上的喇叭，響在機車切入前後",
+        "兩份判決對「惡意」說得不一樣",
+        "想停下來處理，和非立刻停不可",
+        "資料來源"
+      ],
+      "ending": "機車案留下的具體做法是：在仍能穩定操控、沒有立即煞停必要的情況下，即使因喇叭或疑似擦撞受驚，想確認車損或報警，仍應漸進減速、穩定車身、留意前後左右車流，確認安全後靠邊，或駛至不妨礙交通的安全處所。需要處理一場爭執，並不等於需要在後車面前立刻停下。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+    }
+  ],
+  "articleBindings": [
+    {
+      "locale": "ko",
+      "file": "src/content/columns/191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md",
+      "sourceSha256": "1f7c40f0d31ab80049ad2b30e99f9de4bc4ea2333917969c23b151b53739861a",
+      "key": "ko/column/taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "url": "https://tseng-law.com/ko/columns/taiwan-road-rage-driver-stopped-route-66s-fast-lane"
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md",
+      "sourceSha256": "90f71679756610130fa7b73959c032febfc639065c24dc7c4e335ecff15406ab",
+      "key": "en/column/taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "url": "https://tseng-law.com/en/columns/taiwan-road-rage-driver-stopped-route-66s-fast-lane"
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md",
+      "sourceSha256": "d51beaf452634e5e1ccd204ce0452c59b6c2f2dac6254ed0e4add4433ea3b3e3",
+      "key": "ja/column/taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "url": "https://tseng-law.com/ja/columns/taiwan-road-rage-driver-stopped-route-66s-fast-lane"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md",
+      "sourceSha256": "94e8b22063d34926598ea65bba9288b81d464d15e2a8ad6dcc8f00af605d8733",
+      "key": "zh-hant/column/taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "slug": "taiwan-road-rage-driver-stopped-route-66s-fast-lane",
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-road-rage-driver-stopped-route-66s-fast-lane"
+    }
+  ],
+  "localBrowserAndPublicPlayback": "Pending at integration. Release evidence: /Users/son7/tseng-law-column-videos/qa/production-fast-lane-stop-release.json.",
+  "youtubeUploaded": false
+}

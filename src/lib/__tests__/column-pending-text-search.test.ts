@@ -13,8 +13,14 @@ vi.mock('@/lib/builder/portfolio/portfolio-engine', () => ({ listPortfolioSearch
 describe('columns awaiting authorized embedding backfill', () => {
   it('are discoverable through the actual file-column collector and text engine without embedding calls', async () => {
     const index = buildSearchIndex(await collectAllSearchDocs());
+    const postsByLocale = new Map<string, ReturnType<typeof getAllColumnPosts>>();
     for (const { locale, slug } of pending.columns) {
-      const post = getAllColumnPosts(locale as Locale).find(column => column.slug === slug)!;
+      let posts = postsByLocale.get(locale);
+      if (!posts) {
+        posts = getAllColumnPosts(locale as Locale);
+        postsByLocale.set(locale, posts);
+      }
+      const post = posts.find(column => column.slug === slug)!;
       const hits = runSearchQuery({ index, query: post.title, locale: locale as Locale, limit: 50, kinds: ['blog'] });
       expect(hits.some(hit => hit.doc.url === `/${locale}/columns/${slug}`), `${locale}:${slug}`).toBe(true);
     }

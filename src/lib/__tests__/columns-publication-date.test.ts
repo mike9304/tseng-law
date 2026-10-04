@@ -176,6 +176,8 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '166': '2026-10-03',
   '167': '2026-10-03',
   '204': '2026-10-04', // road-rage series: taiwan-road-rage-two-second-stop-taipei-not-enough (all four locales)
+  '205': '2026-10-04',
+  '206': '2026-10-04',
   '201': '2026-10-04',
   '202': '2026-10-04',
   '203': '2026-10-04', // road-rage series: taiwan-road-rage-52-seconds-subtracted-case (all four locales)

@@ -1,6 +1,6 @@
 # Final four traffic topics: thirteen local films
 
-Status: content, media, tests, build and full browser verification passed. This batch is ready for separate publication approval; it has not been published and is excluded from the already fulfilled additional 143 approval.
+Status: content, media, tests, build and full browser verification passed. The original user request includes publication. Codex withdrew its unnecessary separate approval gate after the user asked why these thirteen had not been uploaded. Final production integration is recorded below; public deployment verification is tracked in the external evidence directory.
 
 The videos extend four existing article topics into one MP4 per native language page. They use different native 10-second shots within each film, at 24fps, with localized burned-in text, matching browser chapters, a permanent AI illustration label, muted automatic start and native controls. There is no loop, retiming or still-frame padding. Each original article is unchanged.
 
@@ -39,3 +39,11 @@ All 216 final chapter samples were visually read after the last copy change. All
 - Manifest: qa/publication-final-thirteen-manifest.json. Source reviews: qa/{pursuit-vacatur,night-stop,own-dashcam,red-light}-content-review.json.
 
 Codex performed this review. No external lawyer/native-speaker review or Fable approval is claimed. The original production article 204 and its incoming short video remain preserved outside the frozen 165-page batch.
+
+## Production integration after the user's follow-up
+
+Merged production main `1de3e0d89`, retaining incoming company/employment videos, articles 204–206 and reviewed short scene assets. The incoming multi-video resolver appended a short collision clip beside the 180-second film in four languages. Existing tests reproduced the duplicate-player regression. The resolver now returns the single combined film when that article/language has one; other reviewed registrations and the supplementary-scene fallback remain intact. Assertions cover the single player, correct media/caption IDs, no loop and no additional standalone clip.
+
+Three incoming assertions still said articles 205/206 had no videos, despite their reviewed production registrations. Updated those tests to assert the exact registered video IDs and correct search filter inclusion; article text and production assets are unchanged.
+
+Integration validation: 774 tests in 54 files pass, clean `.next-publication-final-thirteen` build passes, all 330 desktop/mobile autoplay/layout checks pass with exactly one generated player per page, and all eight affected 180-second full-playback journeys pass. Manual pause, native seeking, four served media hashes/ranges and reduced-motion manual playback pass. Four final browser figures were visually inspected. All 165 frozen source and video hashes remain unchanged. Evidence: `qa/final-thirteen-release-tests-final.log`, `qa/final-thirteen-release-build.log`, `qa/local-final-165-release-layout/report.json`, `qa/local-final-thirteen-release-full/report.json`, and `qa/final-thirteen-release-integrity.json` under `/Users/son7/tseng-law-traffic-films`.

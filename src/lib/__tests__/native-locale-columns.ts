@@ -352,6 +352,8 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '199-child-surname-change-after-divorce.md', // family lane b09
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
     '204-taiwan-road-rage-two-second-stop-taipei-not-enough.md', // road-rage series (all four locales)
+    '205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md',
+    '206-taiwan-freeway-warning-triangle-time-ability-evidence.md',
   ],
   vi: [
     '203-taiwan-change-employer-broker-jobbuying-fees.md', // reviewed daily Japan/Vietnam pair

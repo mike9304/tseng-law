@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "title": "밤의 추월차로에서 갑자기 멈추는 앞차",
+    "description": "짙은 회색 SUV의 브레이크등이 켜지고 앞차가 빠르게 멈춥니다. 뒤따르는 촬영 차량도 간격을 남기고 정차합니다. 오른쪽 차로의 작은 차는 같은 방향으로 멀어지며, 충돌은 없습니다.",
+    "disclosure": "AI로 만든 15초 무음 반복 영상입니다. 실제 블랙박스나 사건 재현 영상이 아닙니다. 칼럼의 2분 56초 정차, 차량 27대의 감속과 4대의 비상등, 운전자의 하차·창문 두드림은 재현하지 않았습니다. 화면의 속도·거리·시간은 실제 사건의 측정값이나 법적 판단 근거가 아닙니다."
+  },
+  "en": {
+    "title": "An abrupt stop in an unlit overtaking lane",
+    "description": "The dark SUV’s brake lights brighten and it stops sharply. The following camera car brakes and stops with space between the vehicles. A small car in the right lane continues away in the same direction. No collision is shown.",
+    "disclosure": "AI-generated, silent 15-second loop, not actual dashcam footage or a reconstruction of the incident. It does not reproduce the 2-minute-56-second stop, the 27 slowing vehicles and four sets of hazard lights, or the driver getting out and knocking on a window. The depicted speeds, distances and timing are fictional, not measurements or evidence for a legal finding in the actual case."
+  },
+  "ja": {
+    "title": "街灯のない追越車線で急停止する前走車",
+    "description": "濃いグレーのSUVのブレーキランプが明るくなり、車が急停止します。撮影している後続車も車間を残して止まります。右側の車線の小型車は同じ方向へ遠ざかります。衝突は描いていません。",
+    "disclosure": "AIで生成した、音声のない15秒の繰り返し動画です。実際のドライブレコーダー映像でも、事件の再現でもありません。記事にある2分56秒の停車、27台の減速と4台のハザードランプ、運転者の降車や窓をたたく行為は再現していません。描かれた速度・距離・時間は、実際の事件の測定値や法的判断の根拠ではありません。"
+  },
+  "zh-hant": {
+    "title": "前車突然停在沒有路燈的內線車道",
+    "description": "深灰色休旅車的煞車燈亮起，隨即急停。後方拍攝車輛也煞停，兩車之間仍留有距離。右側車道的小車繼續同向駛遠，畫面沒有碰撞。",
+    "disclosure": "本片為 AI 生成的 15 秒無聲循環影片，並非真實行車紀錄器畫面或案發過程重現。影片未重現文中的2分56秒停車、27輛車減速與4輛車亮起警示燈，也未呈現駕駛下車敲窗。片中的車速、距離及時間安排均為虛構，不能當作實際案件的測量結果或法律判斷依據。"
+  }
+}

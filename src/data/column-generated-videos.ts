@@ -1,3 +1,13 @@
+import employmentMeetingCaptions from './employment-meeting-video-captions.json';
+import employmentRecordsCaptions from './employment-records-video-captions.json';
+import premisesLeaseCaptions from './premises-lease-video-captions.json';
+import fundsPaperworkCaptions from './funds-paperwork-video-captions.json';
+import pursuitSelfSkidCaptions from './pursuit-self-skid-video-captions.json';
+import ownDashcamCutInCaptions from './own-dashcam-cut-in-video-captions.json';
+import warningTriangleRearEndCaptions from './warning-triangle-rear-end-video-captions.json';
+import detachedTireImpactCaptions from './detached-tire-impact-video-captions.json';
+import fastLaneStopCaptions from './fast-lane-stop-video-captions.json';
+import scooterLaneBlockCaptions from './scooter-lane-block-video-captions.json';
 import bridgeScooterBrakeCaptions from './bridge-scooter-brake-video-captions.json';
 import laneBlockExitCaptions from './lane-block-exit-video-captions.json';
 import batThreatLoopCaptions from './bat-threat-loop-video-captions.json';
@@ -43,7 +53,98 @@ export type ColumnGeneratedVideoAsset = {
 };
 
 /** Only reviewed article/language pairs belong here. Never infer coverage from a shared slug. */
+const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/ko/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-ko',
+    src: '/videos/columns/own-dashcam-cut-in-v2-ko.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-ko.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['ko'],
+  },
+  'column/en/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-en',
+    src: '/videos/columns/own-dashcam-cut-in-v2-en.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-en.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['en'],
+  },
+  'column/ja/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-ja',
+    src: '/videos/columns/own-dashcam-cut-in-v2-ja.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-ja.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['ja'],
+  },
+  'column/zh-hant/taiwan-road-rage-freeway-chase-own-dashcam-too': {
+    id: 'own-dashcam-cut-in-v2-zh-hant',
+    src: '/videos/columns/own-dashcam-cut-in-v2-zh-hant.mp4',
+    poster: '/images/column-videos/own-dashcam-cut-in-v2-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...ownDashcamCutInCaptions['zh-hant'],
+  },
+};
+
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...Object.fromEntries(Object.entries(employmentMeetingCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `employment-meeting-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-labor-severance-law`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(employmentRecordsCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `employment-records-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-voluntary-resignation-severance`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(premisesLeaseCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `premises-lease-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-company-establishment-advanced-1`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  ...Object.fromEntries(Object.entries(fundsPaperworkCaptions).map(([locale, caption]) => {
+    const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
+    const id = `funds-paperwork-v1-${assetLocale}`;
+    return [
+      `column/${locale}/taiwan-company-establishment-advanced-2`,
+      { id, src: `/videos/columns/${id}.mp4`, poster: `/images/column-videos/${id}.jpg`, width: 1280, height: 720, ...caption },
+    ];
+  })),
+  'column/zh-hant/taiwan-pursuit-fatal-self-crash-vacated-judgment': {
+    id: 'pursuit-self-skid-v1-zh-hant',
+    src: '/videos/columns/pursuit-self-skid-v1-zh-hant.mp4',
+    poster: '/images/column-videos/pursuit-self-skid-v1-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...pursuitSelfSkidCaptions['zh-hant'],
+  },
+  'column/zh-hant/taiwan-freeway-warning-triangle-time-ability-evidence': {
+    id: 'warning-triangle-rear-end-v2-zh-hant',
+    src: '/videos/columns/warning-triangle-rear-end-v2-zh-hant.mp4',
+    poster: '/images/column-videos/warning-triangle-rear-end-v2-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...warningTriangleRearEndCaptions['zh-hant'],
+  },
+  'column/zh-hant/taiwan-detached-tire-delayed-treatment-criminal-injury-causation': {
+    id: 'detached-tire-impact-v3-zh-hant',
+    src: '/videos/columns/detached-tire-impact-v3-zh-hant.mp4',
+    poster: '/images/column-videos/detached-tire-impact-v3-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...detachedTireImpactCaptions['zh-hant'],
+  },
   ...Object.fromEntries(Object.entries(stopDialogueCaptions).map(([locale, caption]) => {
     const id = `stop-dialogue-v1-${locale}`;
     return [
@@ -694,47 +795,39 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     loop: true,
   },
   'column/ko/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {
-    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-ko',
-    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-ko.mp4',
-    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-ko.jpg',
+    id: 'road-rage-driver-stopped-route-66s-fast-lane-v4-ko',
+    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v4-ko.mp4',
+    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v4-ko.jpg',
     width: 1280,
     height: 720,
-    title: '앞 SUV의 브레이크등이 밝아지고 간격이 좁아지는 장면',
-    description: '밤의 다차로 도로에서 앞서가는 짙은 회색 SUV와의 간격이 잠시 벌어졌다가, SUV의 브레이크등이 밝아지면서 다시 좁아집니다. 이후 브레이크등이 어두워지며 SUV는 계속 달리고, 흰색과 검은색 차량들이 옆을 지나갑니다. 소리가 없는 약 15초 길이의 영상이며, 재생 버튼을 누르면 반복 재생됩니다.',
-    disclosure: 'AI로 만든 가상 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실을 재현한 영상이 아닙니다. 깜빡이는 REC와 경과 시간 표시는 덧붙인 화면 효과입니다. 영상 속 거리와 속도, 동작이 일어나는 시점은 설명을 위한 설정이며, 실제 사건의 과실을 판단하는 근거로 쓸 수 없습니다.',
+    ...fastLaneStopCaptions['ko'],
     loop: true,
   },
   'column/ja/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {
-    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-ja',
-    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-ja.mp4',
-    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-ja.jpg',
+    id: 'road-rage-driver-stopped-route-66s-fast-lane-v4-ja',
+    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v4-ja.mp4',
+    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v4-ja.jpg',
     width: 1280,
     height: 720,
-    title: 'ブレーキランプが光るSUVとの車間が詰まる場面',
-    description: '夜の道路で、前を走る濃いグレーのSUVとの車間がいったん広がったあと、ブレーキランプが明るくなり、車間が再び詰まります。やがてランプの光が弱まり、SUVが走り続ける横を白や黒の車が通り過ぎます。音声のない約15秒の映像で、再生ボタンを押すと繰り返し再生されます。',
-    disclosure: 'AIで生成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。点滅するRECマークと経過時間の表示は、あとから加えた画面上の演出です。映像内の距離・速度・動作のタイミングは説明用の設定であり、実際の事件で過失を判断する根拠にはなりません。',
+    ...fastLaneStopCaptions['ja'],
     loop: true,
   },
   'column/en/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {
-    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-en',
-    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-en.mp4',
-    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-en.jpg',
+    id: 'road-rage-driver-stopped-route-66s-fast-lane-v4-en',
+    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v4-en.mp4',
+    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v4-en.jpg',
     width: 1280,
     height: 720,
-    title: 'An SUV\'s brake lights brighten as the gap closes',
-    description: 'On a multi-lane road at night, a dark gray SUV ahead first moves farther away, then its brake lights brighten and the gap closes. Its brake lights then dim as it continues along the road, with white and black vehicles passing alongside. This silent clip is about 15 seconds long and loops once you press play.',
-    disclosure: 'This is a fictional AI-generated scene, not dashcam footage or a reconstruction of the facts in the judgment. The blinking REC marker and elapsed-time counter are added visual effects. Distances, speeds and timing are illustrative only and cannot be used to judge fault in any real case.',
+    ...fastLaneStopCaptions['en'],
     loop: true,
   },
   'column/zh-hant/taiwan-road-rage-driver-stopped-route-66s-fast-lane': {
-    id: 'road-rage-driver-stopped-route-66s-fast-lane-v3-zh-hant',
-    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v3-zh-hant.mp4',
-    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v3-zh-hant.jpg',
+    id: 'road-rage-driver-stopped-route-66s-fast-lane-v4-zh-hant',
+    src: '/videos/columns/road-rage-driver-stopped-route-66s-fast-lane-v4-zh-hant.mp4',
+    poster: '/images/column-videos/road-rage-driver-stopped-route-66s-fast-lane-v4-zh-hant.jpg',
     width: 1280,
     height: 720,
-    title: '前方休旅車煞車燈亮起，車距縮短',
-    description: '夜間的多車道道路上，與前方深灰色休旅車的距離先拉開，接著它的煞車燈變亮，車距逐漸縮短。煞車燈隨後變暗，休旅車繼續前進，白色與黑色車輛從旁駛過。本片無聲，長約15秒，按下播放後會循環播放。',
-    disclosure: '這是AI生成的虛構場景，不是行車紀錄器實錄，也不是判決認定事實的重現。閃爍的REC標示與經過時間計數器，都是後製加上的畫面效果。片中的距離、速度與動作發生的時間點僅供示意，不能用來判斷任何實際案件的過失責任。',
+    ...fastLaneStopCaptions['zh-hant'],
     loop: true,
   },
   'column/ko/taiwan-road-rage-freeway-chase-own-dashcam-too': {
@@ -782,47 +875,39 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
     loop: true,
   },
   'column/ko/taiwan-road-rage-52-seconds-subtracted-case': {
-    id: 'road-rage-52-seconds-subtracted-case-v3-ko',
-    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v3-ko.mp4',
-    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v3-ko.jpg',
+    id: 'road-rage-52-seconds-subtracted-case-v4-ko',
+    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v4-ko.mp4',
+    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v4-ko.jpg',
     width: 1280,
     height: 720,
-    title: '스쿠터 앞에서 은색 승용차가 오른쪽으로 움직이는 장면',
-    description: '해 질 무렵 도심 도로에서 스쿠터 앞에 비스듬히 서 있던 은색 승용차가 오른쪽 앞으로 움직입니다. 시점도 오른쪽으로 이동하는 동안 승용차는 계속 앞에 보이고, 다른 차량들이 주변 차로를 지나갑니다. 소리 없는 약 15초 길이의 영상으로, 반복 재생됩니다.',
-    disclosure: 'AI로 만든 가상 장면이며, 실제 블랙박스 영상이나 판결이 인정한 사실을 재현한 영상이 아닙니다. 왼쪽 위에서 깜빡이는 REC 표시는 연출이며, 오른쪽 위의 숫자는 날짜나 속도가 아니라 영상의 경과 시간입니다. 화면 속 거리와 속도, 시간은 설명을 위한 설정이므로 실제 사건의 과실이나 책임을 판단하는 근거로 쓸 수 없습니다.',
+    ...scooterLaneBlockCaptions['ko'],
     loop: true,
   },
   'column/ja/taiwan-road-rage-52-seconds-subtracted-case': {
-    id: 'road-rage-52-seconds-subtracted-case-v3-ja',
-    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v3-ja.mp4',
-    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v3-ja.jpg',
+    id: 'road-rage-52-seconds-subtracted-case-v4-ja',
+    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v4-ja.mp4',
+    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v4-ja.jpg',
     width: 1280,
     height: 720,
-    title: 'スクーターの前で銀色のセダンが右へ動く場面',
-    description: '夕暮れの市街地の道路で、スクーターの前に斜めに止まっていた銀色のセダンが右前方へ動き出します。視点が右へ移ってもセダンは前方にあり、周囲の車線をほかの車が通り過ぎます。音声のない約15秒の映像で、繰り返し再生されます。',
-    disclosure: 'AIで作成した架空の場面で、実際のドライブレコーダー映像でも、判決が認定した事実の再現でもありません。左上で点滅するREC表示は演出で、右上の数字は日付や速度ではなく、映像の経過時間を示しています。距離や速度、動きのタイミングは説明用の設定であり、実際の事件で過失や責任を判断する根拠には使えません。',
+    ...scooterLaneBlockCaptions['ja'],
     loop: true,
   },
   'column/en/taiwan-road-rage-52-seconds-subtracted-case': {
-    id: 'road-rage-52-seconds-subtracted-case-v3-en',
-    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v3-en.mp4',
-    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v3-en.jpg',
+    id: 'road-rage-52-seconds-subtracted-case-v4-en',
+    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v4-en.mp4',
+    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v4-en.jpg',
     width: 1280,
     height: 720,
-    title: 'A silver sedan moves right in front of a scooter',
-    description: 'On a city street at dusk, a silver sedan angled ahead of a scooter starts moving forward and to the right. The viewpoint shifts right, with the sedan still ahead as other cars pass in nearby lanes. The clip is silent, about 15 seconds long, and plays on a loop.',
-    disclosure: 'This is a fictional AI-generated scene, not dashcam footage or a reconstruction of the facts in the judgment. The blinking REC marker at the top left is an added effect; the counter at the top right shows elapsed clip time, not a date or speed. Distances, speeds and timing are illustrative and cannot be used to judge fault in any real case.',
+    ...scooterLaneBlockCaptions['en'],
     loop: true,
   },
   'column/zh-hant/taiwan-road-rage-52-seconds-subtracted-case': {
-    id: 'road-rage-52-seconds-subtracted-case-v3-zh-hant',
-    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v3-zh-hant.mp4',
-    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v3-zh-hant.jpg',
+    id: 'road-rage-52-seconds-subtracted-case-v4-zh-hant',
+    src: '/videos/columns/road-rage-52-seconds-subtracted-case-v4-zh-hant.mp4',
+    poster: '/images/column-videos/road-rage-52-seconds-subtracted-case-v4-zh-hant.jpg',
     width: 1280,
     height: 720,
-    title: '銀色轎車在機車前方向右移動',
-    description: '黃昏的市區道路上，原本斜停在機車前方的銀色轎車開始往右前方移動。視角也往右移，銀色轎車仍在前方，其他車輛則從周圍車道經過。影片無聲，長約 15 秒，會循環播放。',
-    disclosure: '這是 AI 生成的虛構場景，不是行車紀錄器實拍影像，也不是判決所認定事實的重現。左上角閃爍的 REC 標記是後製效果，右上角的數字表示影片經過的時間，不是日期或車速。片中的距離、速度與時間安排僅供示意，不能用來判斷任何真實案件的過失或責任。',
+    ...scooterLaneBlockCaptions['zh-hant'],
     loop: true,
   },
   'column/ko/taiwan-road-rage-two-second-stop-taipei-not-enough': {
@@ -872,4 +957,18 @@ export function getColumnGeneratedVideo(
   return (trafficFilms as Readonly<Record<string, ColumnGeneratedVideoAsset>>)[key]
     ?? REVIEWED_COLUMN_VIDEOS[key]
     ?? null;
+}
+
+/** A combined traffic film is one player; other articles retain their reviewed scenes. */
+export function getColumnGeneratedVideos(
+  locale: string,
+  slug: string,
+  source: ColumnVideoSource = 'column',
+): ColumnGeneratedVideoAsset[] {
+  const key = `${source}/${locale}/${slug}`;
+  const film = (trafficFilms as Readonly<Record<string, ColumnGeneratedVideoAsset>>)[key];
+  if (film) return [film];
+  const primary = getColumnGeneratedVideo(locale, slug, source);
+  const additional = ADDITIONAL_COLUMN_VIDEOS[key];
+  return [primary, additional].filter((video): video is ColumnGeneratedVideoAsset => Boolean(video));
 }

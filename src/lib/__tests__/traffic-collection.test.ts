@@ -46,6 +46,8 @@ function post(overrides: Partial<ColumnPost> & { slug: string }): ColumnPost {
 
 const EXPECTED_ORDER: Record<SiteLocale, string[]> = {
   'zh-hant': [
+    'taiwan-freeway-warning-triangle-time-ability-evidence',
+    'taiwan-detached-tire-delayed-treatment-criminal-injury-causation',
     'taiwan-road-rage-two-second-stop-taipei-not-enough',
     'taiwan-road-rage-52-seconds-subtracted-case',
     'taiwan-road-rage-freeway-chase-own-dashcam-too',
@@ -186,7 +188,7 @@ describe('reviewed column videos in the traffic board', () => {
 });
 
 describe('loadTrafficCollection (published files)', () => {
-  it('lists 44 zh-hant / 12 ko / 12 en / 11 ja articles, newest first, without another language fallback', async () => {
+  it('lists 46 zh-hant / 12 ko / 12 en / 11 ja articles, newest first, without another language fallback', async () => {
     for (const locale of siteLocales) {
       const items = await loadTrafficCollection(locale, fileSources);
       expect(items.map((item) => item.slug), locale).toEqual(EXPECTED_ORDER[locale]);
@@ -221,6 +223,8 @@ describe('loadTrafficCollection (published files)', () => {
       const reviewedGeneratedScene = [
         'taiwan-repaired-car-diminished-value-appraisal-evidence',
         'taiwan-pursuit-fatal-self-crash-vacated-judgment',
+        'taiwan-detached-tire-delayed-treatment-criminal-injury-causation',
+        'taiwan-freeway-warning-triangle-time-ability-evidence',
         'taiwan-ambulance-red-light-emergency-priority-negligence',
         'taiwan-bus-stop-illegal-parking-no-contact-criminal-causation',
         'taiwan-accident-stop-dialogue-hit-and-run-evidence',

@@ -18,5 +18,55 @@
     "title": "並排核對兩張資料",
     "description": "右手食指從左側紙張的表格移到右側紙張的橫線上，短暫指示後，再將手放在右側紙張的下緣。",
     "disclosure": "本片為 AI 生成的假想場景，示意核對最低服務年限約定的相關資料。空白表格與橫線並非真實契約、培訓或付款紀錄，也不代表約定有效或已確定返還金額。"
+  },
+  "da": {
+    "title": "To dokumenter sammenlignes på et skrivebord",
+    "description": "En person flytter højre pegefinger fra gitteret på det venstre ark til en linje på det højre. Efter kort at have peget lægger personen hånden ved det højre arks nederste kant.",
+    "disclosure": "Fiktiv scene skabt med AI, som viser en sammenligning af dokumenter om en aftalt bindingsperiode. Det tomme gitter og linjerne er ikke ægte kontrakt-, uddannelses- eller betalingsbilag og fastslår hverken aftalens gyldighed eller et skyldigt beløb."
+  },
+  "de": {
+    "title": "Zwei Unterlagen auf einem Schreibtisch vergleichen",
+    "description": "Eine Person bewegt den rechten Zeigefinger vom Raster auf dem linken Blatt zu einer Linie auf dem rechten Blatt. Nach kurzem Zeigen legt sie die Hand am unteren Rand des rechten Blatts ab.",
+    "disclosure": "Fiktive, mit KI erzeugte Szene zum Vergleich von Unterlagen zu einer Mindestbeschäftigungsdauer. Das leere Raster und die Linien sind keine echten Vertrags-, Schulungs- oder Zahlungsunterlagen. Sie belegen weder die Wirksamkeit einer Klausel noch einen geschuldeten Betrag."
+  },
+  "es": {
+    "title": "Comparación de dos documentos sobre un escritorio",
+    "description": "Una persona desplaza el índice de la mano derecha desde la cuadrícula de la hoja izquierda hasta una línea de la hoja derecha. Tras señalarla brevemente, baja la mano hasta el borde inferior de esa hoja.",
+    "disclosure": "Escena ficticia generada con IA que ilustra la comparación de documentos relativos a un pacto de período mínimo de trabajo. La cuadrícula vacía y las líneas no son documentos auténticos de contratación, formación o pagos, ni acreditan la validez del pacto o una cantidad adeudada."
+  },
+  "fi": {
+    "title": "Kahden asiakirjan vertailu työpöydällä",
+    "description": "Henkilö siirtää oikean käden etusormen vasemman arkin ruudukosta oikean arkin viivalle. Osoitettuaan sitä hetken hän laskee kätensä oikean arkin alareunan kohdalle.",
+    "disclosure": "Tekoälyllä luotu kuvitteellinen kohtaus, jossa vertaillaan vähimmäispalvelusaikaa koskevan sopimuksen asiakirjoja. Tyhjä ruudukko ja viivat eivät ole aitoja sopimus-, koulutus- tai maksutietoja. Ne eivät osoita sopimusehdon pätevyyttä tai velan määrää."
+  },
+  "fr": {
+    "title": "Deux documents comparés sur un bureau",
+    "description": "Une personne déplace l’index de la main droite de la grille sur la feuille de gauche vers une ligne sur la feuille de droite. Après l’avoir brièvement pointée, elle abaisse la main jusqu’au bord inférieur de cette feuille.",
+    "disclosure": "Scène fictive générée par IA illustrant la comparaison de documents relatifs à une clause de durée minimale de service. La grille vide et les lignes ne sont pas de véritables documents contractuels, de formation ou de paiement. Elles n’établissent ni la validité d’une clause ni un montant dû."
+  },
+  "it": {
+    "title": "Confronto tra due documenti su una scrivania",
+    "description": "Una persona sposta l’indice della mano destra dalla griglia sul foglio di sinistra a una riga sul foglio di destra. Dopo averla indicata per un momento, abbassa la mano fino al bordo inferiore del foglio di destra.",
+    "disclosure": "Scena fittizia generata con IA che illustra il confronto tra documenti relativi a un patto di periodo minimo di lavoro. La griglia vuota e le righe non sono autentici documenti contrattuali, formativi o di pagamento e non dimostrano la validità del patto né un importo dovuto."
+  },
+  "nb": {
+    "title": "Sammenligning av to dokumenter på et skrivebord",
+    "description": "En person flytter høyre pekefinger fra rutenettet på det venstre arket til en linje på det høyre. Etter å ha pekt et øyeblikk senker personen hånden til den nederste kanten av det høyre arket.",
+    "disclosure": "Fiktiv scene laget med KI som viser sammenligning av dokumenter knyttet til en avtale om bindingstid. Det tomme rutenettet og linjene er ikke ekte kontrakts-, opplærings- eller betalingsdokumenter. De fastslår verken at avtalen er gyldig, eller at et bestemt beløp skyldes."
+  },
+  "nl": {
+    "title": "Twee documenten vergelijken op een bureau",
+    "description": "Een persoon verplaatst de rechterwijsvinger van het raster op het linkerblad naar een lijn op het rechterblad. Na er kort naar te wijzen, laat de persoon de hand zakken tot aan de onderrand van het rechterblad.",
+    "disclosure": "Fictieve, met AI gemaakte scène waarin documenten over een minimale arbeidsperiode worden vergeleken. Het lege raster en de lijnen zijn geen echte contract-, opleidings- of betalingsdocumenten. Ze tonen niet aan dat een beding geldig is of dat een bepaald bedrag verschuldigd is."
+  },
+  "pt": {
+    "title": "Comparação de dois documentos sobre uma secretária",
+    "description": "Uma pessoa move o indicador da mão direita da grelha da folha da esquerda para uma linha da folha da direita. Depois de a apontar por instantes, baixa a mão até à margem inferior da folha da direita.",
+    "disclosure": "Cena fictícia gerada com IA que ilustra a comparação de documentos relativos a um pacto de período mínimo de trabalho. A grelha vazia e as linhas não são documentos autênticos de contratação, formação ou pagamento e não comprovam a validade do pacto nem qualquer montante em dívida."
+  },
+  "sv": {
+    "title": "Två dokument jämförs på ett skrivbord",
+    "description": "En person flyttar höger pekfinger från rutnätet på det vänstra arket till en linje på det högra. Efter att ha pekat en kort stund sänker personen handen till det högra arkets nederkant.",
+    "disclosure": "Fiktiv scen skapad med AI som visar en jämförelse av dokument om minsta tjänstgöringstid. Det tomma rutnätet och linjerna är inte äkta avtals-, utbildnings- eller betalningsunderlag. De visar varken att ett avtalsvillkor är giltigt eller att ett visst belopp ska betalas."
   }
 }

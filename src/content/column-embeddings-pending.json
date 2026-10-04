@@ -905,6 +905,14 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-semiconductor-foreign-talent-recruitment-law"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-science-park-fab-supplier-permits-water-power"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-semiconductor-export-control-entity-list-2025"
     }
   ]
 }

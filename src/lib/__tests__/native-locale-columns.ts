@@ -306,6 +306,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
     '204-taiwan-road-rage-two-second-stop-taipei-not-enough.md', // road-rage series (all four locales)
     '207-taiwan-semiconductor-shift-work-labor-law-korean-subsidiary.md', // semiconductor lane b09
+    '211-taiwan-science-park-fab-supplier-permits-water-power.md', // semiconductor lane b10
   ],
   en: [
     '170-taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech.md',
@@ -331,6 +332,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '201-taiwan-road-rage-52-seconds-subtracted-case.md', // road-rage series (all four locales)
     '204-taiwan-road-rage-two-second-stop-taipei-not-enough.md', // road-rage series (all four locales)
     '208-taiwan-ip-commercial-court-semiconductor-patent-judgments.md', // semiconductor lane b09
+    '212-japan-taiwan-tax-agreement-semiconductor-expatriates.md', // semiconductor lane b10
   ],
   'zh-hant': [
     '171-taiwan-ic-design-cross-border-patent-licensing-disputes.md',
@@ -358,6 +360,7 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
     '205-taiwan-detached-tire-delayed-treatment-criminal-injury-causation.md',
     '206-taiwan-freeway-warning-triangle-time-ability-evidence.md',
     '210-taiwan-semiconductor-foreign-talent-recruitment-law.md', // semiconductor lane b09
+    '214-taiwan-semiconductor-export-control-entity-list-2025.md', // semiconductor lane b10
   ],
   vi: [
     '203-taiwan-change-employer-broker-jobbuying-fees.md', // reviewed daily Japan/Vietnam pair

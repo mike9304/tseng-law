@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ServicePracticeIcon from '@/components/ServicePracticeIcon';
+import ZhHantMonoIcon, { ZH_PRACTICE_ICON } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { siteContent } from '@/data/site-content';
 import { getServiceSlugs } from '@/data/service-details';
 import { ZH_HANT_SERVICE_SCENARIOS } from './zh-hant-service-scenarios';
@@ -42,7 +42,7 @@ export default function ZhHantServiceGroups({ showTitle }: { showTitle: boolean 
                   <li key={slug} className={styles.card}>
                     {(ALIASES[slug] ?? []).map((alias) => <span key={alias} id={alias} className="services-anchor-alias" aria-hidden />)}
                     <article {...(anchor ? { id: anchor } : {})}>
-                      <span className={styles.cardIcon} aria-hidden><ServicePracticeIcon index={index} /></span>
+                      <span className={styles.cardIcon} aria-hidden><ZhHantMonoIcon name={ZH_PRACTICE_ICON[index] ?? 'company'} size={48} /></span>
                       <h3 className={styles.cardTitle}>{item.title}</h3>
                       <p className={styles.cardText}>{item.description}</p>
                       <ul className={styles.cardTags} aria-label={`${item.title}：常見情境`}>

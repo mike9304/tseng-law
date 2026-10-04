@@ -101,8 +101,9 @@ const EXPECTED_SEQUENCE = [
 // en redesign (2026-10-01): the English home has its own arrangement for English-speaking
 // readers — "start here" situations right under the hero, then practice areas, attorney,
 // latest insights; the decorative heritage interlude is not part of it. Guidance homes keep
-// EXPECTED_SEQUENCE (asserted below).
-const ENGLISH_HOME_SEQUENCE = ['hero', 'practice', 'about', 'insights', 'results', 'stats', 'faq', 'offices', 'contact'];
+// EXPECTED_SEQUENCE (asserted below). Clear Night (CONCEPT-V2, 2026-10-02): the figures from the attorney
+// profile close the attorney chapter, so "stats" follows "about" and comes before the insights.
+const ENGLISH_HOME_SEQUENCE = ['hero', 'practice', 'about', 'stats', 'insights', 'results', 'faq', 'offices', 'contact'];
 
 function fixturePost(index: number): ColumnPost {
   return {
@@ -399,13 +400,14 @@ describe('the existing four languages keep their exact home markup', () => {
       // zh-hant (2026-10-01, Taiwanese readers first): services, then practical columns, then the
       // attorney and cases; trust facts (stats) follow the cases. The decorative heritage interlude
       // is not part of the zh-hant home.
-      // ja design (2026-10-01): needs block first, then practice areas and the pinned column
-      // archive; en design (2026-10-01): its own sequence. No heritage interlude on either.
+      // ja design (昊, 2026-10-03): hero, the 透かし stage and the needs grid (not landmarks here), the numbers on
+      // the sunlit wall, practice areas, the column gallery, attorney, case, fees and flow (not landmarks here), FAQ,
+      // offices, contact. en design (2026-10-01): its own sequence. No heritage interlude on either.
       expectLandmarksOnce(markup, locale, locale === 'zh-hant' || locale === 'ja' || locale === 'en' ? ['heritage'] : []);
       expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'zh-hant'
         ? ['hero', 'practice', 'insights', 'about', 'results', 'stats', 'faq', 'offices', 'contact']
         : locale === 'ja'
-          ? ['hero', 'practice', 'insights', 'about', 'stats', 'results', 'faq', 'offices', 'contact']
+          ? ['hero', 'stats', 'practice', 'insights', 'about', 'results', 'faq', 'offices', 'contact']
           : locale === 'en'
             ? ENGLISH_HOME_SEQUENCE
             : EXPECTED_SEQUENCE);

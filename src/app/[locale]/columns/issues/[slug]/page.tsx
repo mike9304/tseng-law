@@ -20,6 +20,10 @@ import type { SiteLocale } from '@/lib/locales';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from '../../[slug]/ColumnDetail.module.css';
 import zhStyles from '../../[slug]/ZhHantColumnDetail.module.css';
+import enStyles from '../../[slug]/EnColumnDetail.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
+import jaColumnStyles from '../../[slug]/JaColumnDetail.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
 import boardStyles from '@/components/IssueBoard.module.css';
 
 export const dynamic = 'force-dynamic';
@@ -250,8 +254,14 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
       ) : null}
     </>
   );
+  // ja 昊 V2 inner pages (2026-10-02): same article inside the ja wrapper, styled like the ja column detail.
+  if (locale === 'ja') return <JaPageShell page="column" className={jaColumnStyles.root}>{content}</JaPageShell>;
   // zh-hant second pass (son7-87 / Opus 5.5): same article inside the zh-hant column-detail wrapper (split hero, sidebar).
-  return locale === 'zh-hant'
-    ? <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="issue">{content}</div>
+  if (locale === 'zh-hant') {
+    return <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="issue">{content}</div>;
+  }
+  // en redesign (Opus 5.5 en lane): same article inside the en column-detail wrapper (night briefing hero, en sidebar).
+  return locale === 'en'
+    ? <EnPageShell page="issue"><div className={`${enStyles.detail} en-column`}>{content}</div></EnPageShell>
     : content;
 }

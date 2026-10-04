@@ -1,0 +1,132 @@
+/*
+ * en search results, Clear Night (en-pages lane 2026-10-03). The shared search page renders inside EnPageShell only
+ * on /en/search; other locales keep their markup and styles. Title card with a dark search field (component 11),
+ * then results on night: text tabs, rows of title and summary, suggestions as text links.
+ */
+
+/* Search field in the title card */
+.search.search :global(.page-header .search-bar) {
+  position: relative;
+  display: flex;
+  max-width: 760px;
+  margin: 8px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+.search.search :global(.page-header .search-input) {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 64px;
+  padding: 0 120px 0 28px;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 32px;
+  background: rgb(20 20 22 / 82%);
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: 19px;
+}
+.search.search :global(.page-header .search-input::placeholder) { color: var(--en-grey); }
+.search.search :global(.page-header .search-submit) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  flex: none;
+  width: auto;
+  min-width: 44px;
+  min-height: 44px;
+  height: 44px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 12%);
+  color: #fff;
+  font-family: var(--en-text);
+  font-size: 16px;
+  font-weight: 600;
+}
+.search.search :global(.page-header .search-submit:hover) { background: rgb(255 255 255 / 18%); }
+.search.search :global(.page-header .search-input:focus-visible),
+.search.search :global(.page-header .search-submit:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 2px; }
+
+/* Results on night */
+.search.search :global(section.search-results-section) { padding: 72px 0 160px; background: var(--en-night); border: 0; color: var(--en-white); }
+.search.search :global(.search-tabs) { display: flex; flex-wrap: wrap; gap: 0 28px; margin: 0 0 16px; padding: 0; border: 0; }
+.search.search :global(.search-tabs .tab-button) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--en-grey);
+  font-family: var(--en-text);
+  font-size: 19px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.search.search :global(.search-tabs .tab-button:hover),
+.search.search :global(.search-tabs .tab-button.active) { color: #fff; background: none; }
+.search.search :global(.search-tabs .tab-button.active)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 4px; height: 2px; background: #fff; }
+.search.search :global(.search-results-total) { margin: 0 0 40px; font-family: var(--en-text); font-size: 14px; font-weight: 500; color: var(--en-grey-2); }
+.search.search :global(.list-rows) { display: grid; gap: 40px; max-width: 900px; margin: 0; padding: 0; border: 0; }
+.search.search :global(.list-row) { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; margin: 0; padding: 0; border: 0; background: none; }
+.search.search :global(.list-meta) { font-family: var(--en-text); font-size: 14px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--en-grey-2); }
+.search.search :global(.list-row a.link-underline) {
+  display: inline-block;
+  margin: -8px 0;
+  padding: 8px 0;
+  color: var(--en-white);
+  font-family: var(--en-display);
+  font-size: 24px;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  text-decoration: none;
+}
+.search.search :global(.list-row a.link-underline:hover) { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.search.search :global(.search-results-desc) { margin: 6px 0 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: var(--en-grey); }
+.search.search :global(.search-empty) { margin: 0; padding: 0; border: 0; background: none; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-grey); }
+
+/* Suggestions: text links, not chips. */
+.search.search :global(.search-results-suggested) { margin: 120px 0 0; padding: 0; border: 0; }
+.search.search :global(.search-results-suggested .section-label) { display: block; margin: 0 0 12px; font-family: var(--en-text); font-size: 17px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--en-grey); }
+.search.search :global(.search-results-suggested .section-label)::before,
+.search.search :global(.search-results-suggested .section-label)::after { content: none; display: none; }
+.search.search :global(.search-results-suggested .chip-group) { display: flex; flex-wrap: wrap; gap: 0 32px; }
+.search.search :global(.search-results-suggested .chip) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: 19px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.search.search :global(.search-results-suggested .chip:hover) { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; background: none; }
+.search.search :global(a:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+
+@media (max-width: 767px) {
+  .search.search :global(.page-header .search-input) { min-height: 56px; padding: 0 104px 0 22px; border-radius: 28px; font-size: 17px; }
+  .search.search :global(.page-header .search-submit) { top: 6px; right: 6px; }
+  .search.search :global(section.search-results-section) { padding: 48px 0 96px; }
+  .search.search :global(.search-tabs .tab-button) { font-size: 17px; }
+  .search.search :global(.list-rows) { gap: 32px; }
+  .search.search :global(.list-row a.link-underline) { font-size: 21px; }
+  .search.search :global(.search-results-desc),
+  .search.search :global(.search-empty) { font-size: 17px; }
+  .search.search :global(.search-results-suggested) { margin-top: 72px; }
+  .search.search :global(.search-results-suggested .chip) { font-size: 17px; }
+}

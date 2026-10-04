@@ -1,60 +1,95 @@
 /*
- * ja lawyer profile (Opus 5.5 ja lane, 2026-10-01). Same profile data and links; square photo
- * with a green top rule, the four summary points as a numbered ruled grid, and the info
- * cards (基本情報・取扱業務・関連・外部・学歴・経歴) as 履歴書-style panels.
+ * ja lawyer profile, 昊 V2 (2026-10-02; CONCEPT-V2 §9). The night tile header is JaProfileHeader; here: the
+ * local index beside the body, the summary card without its photo (the portrait is in the header), the four
+ * proof points as type tiles, the info cards as tiles with plain 18 px lists, and the related and media links
+ * as link rows with a chevron. Same profile data and links.
  */
-.root:global(#ja-lawyer-profile) :global(.section.section--light) { background: #fff; padding: clamp(48px, 5vw, 80px) 0 clamp(64px, 6vw, 104px); }
+.root:global(#ja-lawyer-profile) :global(.section.section--light) { background: #fff; padding-block: clamp(56px, 6vw, 104px) var(--ja-sec); }
+.root:global(#ja-lawyer-profile) :global(.section.section--light > .container) { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: var(--ja-gap); }
+.rail { margin-bottom: 12px; }
+@media (min-width: 1200px) {
+  .root:global(#ja-lawyer-profile) :global(.section.section--light > .container) { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--ja-gap); }
+  .root:global(#ja-lawyer-profile) :global(.section.section--light > .container > *) { grid-column: 6 / -1; }
+  .root:global(#ja-lawyer-profile) :global(.section.section--light > .container) > .rail { grid-column: 1 / span 4; grid-row: 1 / span 8; margin: 0; }
+  .rail :global(li) { margin-block-end: 10px; }
+  .rail :global(a) { font-size: 24px; line-height: 44px; letter-spacing: 0.08em; }
+}
 
-/* Hero card */
+/* Summary card: name, role, email, three summary paragraphs, languages, the consultation pill */
 .root:global(#ja-lawyer-profile) :global(.profile-hero-card) {
-  grid-template-columns: minmax(0, min(21rem, 38%)) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px);
-  padding: 0 0 clamp(36px, 4vw, 56px); border-bottom: 1px solid var(--ja-line);
+  display: block; margin: 0; padding: 0 0 clamp(16px, 2vw, 32px); border: 0; background: transparent; box-shadow: none;
+  scroll-margin-top: calc(var(--hdr) + 72px);
 }
-.root:global(#ja-lawyer-profile) :global(.profile-hero-photo) { border-radius: 0; border-top: 3px solid var(--ja-green); }
-.root:global(#ja-lawyer-profile) :global(.profile-hero-photo img) { border-radius: 0; }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-photo) { display: none; }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-body) { padding: 0; }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-body .section-label) { margin-bottom: 12px; }
 .root:global(#ja-lawyer-profile) :global(.section-title.profile-hero-title) {
-  font-size: clamp(28px, 2.6vw, 36px); letter-spacing: 0.12em; padding-bottom: 16px;
+  margin: 0; padding: 0; font-size: clamp(30px, 3.9vw, 56px); letter-spacing: 0.02em;
 }
-.root:global(#ja-lawyer-profile) :global(.profile-hero-role) { font-size: 15px; font-weight: 700; letter-spacing: 0.14em; color: var(--ja-gold-text); }
-.root:global(#ja-lawyer-profile) :global(.profile-hero-body .split-text) { font-size: 16px; line-height: 2.05; color: var(--ja-text); max-width: 40em; }
+.root:global(#ja-lawyer-profile) :global(.section-title.profile-hero-title)::after { display: none; }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-role) { margin: 8px 0 0; font-size: 19px; font-weight: 600; letter-spacing: 0.02em; color: var(--ja-text); }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-body .attorney-card-email) {
+  display: inline-flex; align-items: center; min-height: 44px; font-size: 17px; color: var(--ja-ink);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px;
+}
+.root:global(#ja-lawyer-profile) :global(.profile-summary-list) { display: grid; gap: 16px; margin-top: 20px; }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-body .split-text) { margin: 0; max-width: 34em; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.95; color: var(--ja-text); }
+.root:global(#ja-lawyer-profile) :global(.profile-chip-group) { display: block; margin-top: 20px; font-size: 17px; font-weight: 600; color: var(--ja-ink); }
 .root:global(#ja-lawyer-profile) :global(.profile-chip) {
-  border-radius: 0; border: 1px solid var(--ja-line-strong); background: var(--ja-paper); color: var(--ja-ink);
-  font-size: 13.5px; letter-spacing: 0.1em; min-height: 36px;
+  display: inline; min-height: 0; padding: 0; border: 0; border-radius: 0; background: none; color: inherit; font: inherit; letter-spacing: 0.04em;
 }
-.root:global(#ja-lawyer-profile) :global(a.button.profile-hero-cta) { border-radius: 2px; min-height: 52px; padding-inline: 32px; letter-spacing: 0.12em; }
+.root:global(#ja-lawyer-profile) :global(.profile-chip + .profile-chip)::before { content: '・'; }
+.root:global(#ja-lawyer-profile) :global(a.button.profile-hero-cta) { margin-top: 28px; }
 
-/* Four summary points: numbered, ruled 2×2 */
+/* Proof points: four type tiles */
 .root:global(#ja-lawyer-profile) :global(.profile-proof-grid) {
-  counter-reset: ja-proof; gap: 0; margin-top: 0; border-bottom: 1px solid var(--ja-line);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ja-gap); margin: 0; border: 0;
 }
 .root:global(#ja-lawyer-profile) :global(.profile-proof-card) {
-  counter-increment: ja-proof; display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start;
-  padding: 24px 24px 24px 0; border: 0; border-top: 1px solid var(--ja-line); border-radius: 0; box-shadow: none; background: transparent;
+  display: block; margin: 0; padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); box-shadow: none; background: var(--ja-tile);
 }
-.root:global(#ja-lawyer-profile) :global(.profile-proof-card)::before {
-  content: counter(ja-proof, decimal-leading-zero); position: static; width: auto; height: auto; background: none; transform: none;
-  font-family: Georgia, 'Times New Roman', serif; font-size: 20px; line-height: 1.5; color: var(--ja-gold-text);
-}
-.root:global(#ja-lawyer-profile) :global(.profile-proof-text) { margin: 0; font-size: 15.5px; line-height: 1.95; color: var(--ja-text); }
+.root:global(#ja-lawyer-profile) :global(.profile-proof-card)::before { content: none; }
+.root:global(#ja-lawyer-profile) :global(.profile-proof-text) { margin: 0; font-size: clamp(17px, 1.4vw, 21px); font-weight: 500; line-height: 1.8; color: var(--ja-ink); }
 
-/* Info cards */
-.root:global(#ja-lawyer-profile) :global(.profile-card-grid) { gap: 24px; margin-top: 40px; }
+/* Info cards: tiles with plain lists */
+.root:global(#ja-lawyer-profile) :global(.profile-card-grid) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ja-gap); margin: 0; }
 .root:global(#ja-lawyer-profile) :global(.profile-info-card) {
-  padding: 0 0 8px; border: 0; border-top: 2px solid var(--ja-ink); border-radius: 0; box-shadow: none; background: transparent;
+  margin: 0; padding: var(--ja-pad); border: 0; border-radius: var(--ja-r); box-shadow: none; background: var(--ja-tile);
+  scroll-margin-top: calc(var(--hdr) + 72px);
 }
 .root:global(#ja-lawyer-profile) :global(.profile-card-title) {
-  margin: 0; padding: 14px 0 12px; border-bottom: 1px solid var(--ja-line); font-size: 17px; font-weight: 700; letter-spacing: 0.14em; color: var(--ja-ink);
+  margin: 0 0 16px; padding: 0; border: 0; font-size: clamp(20px, 1.8vw, 24px); font-weight: 700; letter-spacing: 0.02em; color: var(--ja-ink);
 }
-.root:global(#ja-lawyer-profile) :global(.profile-info-card .attorney-list li),
-.root:global(#ja-lawyer-profile) :global(.profile-link-list li) { padding-block: 10px; border-bottom: 1px dashed var(--ja-line); }
-.root:global(#ja-lawyer-profile) :global(.profile-link-list) { list-style: none; margin: 0; padding: 0; }
-.root:global(#ja-lawyer-profile) :global(.profile-link-list a),
-.root:global(#ja-lawyer-profile) :global(.profile-hero-body .attorney-card-email) { display: inline-flex; min-height: 44px; align-items: center; font-size: 15px; color: var(--ja-green); }
-.root:global(#ja-lawyer-profile) :global(.profile-info-card .profile-link-list li) { padding-block: 0; }
+.root:global(#ja-lawyer-profile) :global(.profile-info-card .attorney-list) { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.root:global(#ja-lawyer-profile) :global(.profile-info-card .attorney-list li) { margin: 0; padding: 0; border: 0; font-size: 18px; line-height: 1.75; color: var(--ja-text); }
+.root:global(#ja-lawyer-profile) :global(.profile-info-card .attorney-list li)::before { content: none; }
+.root:global(#ja-lawyer-profile) :global(.profile-link-list) { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.root:global(#ja-lawyer-profile) :global(.profile-link-list li) { margin: 0; padding: 0; border: 0; }
+.root:global(#ja-lawyer-profile) :global(.profile-link-list a) {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 52px; padding-block: 6px;
+  font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--ja-ink); text-decoration: none;
+}
+.root:global(#ja-lawyer-profile) :global(.profile-link-list a)::after {
+  content: ''; position: static; flex: none; width: 8px; height: 13px; transform: none; background: var(--ja-shu);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M2 2l6 6-6 6' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M2 2l6 6-6 6' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: translate 300ms var(--ja-ease);
+}
+@media (hover: hover) {
+  .root:global(#ja-lawyer-profile) :global(.profile-link-list a:hover) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  .root:global(#ja-lawyer-profile) :global(.profile-link-list a:hover)::after { translate: 4px 0; }
+}
 
 @media (max-width: 767px) {
-  .root:global(#ja-lawyer-profile) :global(.profile-hero-card) { grid-template-columns: minmax(0, 1fr); }
-  .root:global(#ja-lawyer-profile) :global(.profile-hero-photo) { max-width: 240px; }
-  .root:global(#ja-lawyer-profile) :global(.profile-proof-card) { padding-right: 0; grid-template-columns: 36px minmax(0, 1fr); }
+  .root:global(#ja-lawyer-profile) :global(.profile-proof-grid),
+  .root:global(#ja-lawyer-profile) :global(.profile-card-grid) { grid-template-columns: minmax(0, 1fr); }
   .root:global(#ja-lawyer-profile) :global(a.button.profile-hero-cta) { width: 100%; justify-content: center; }
 }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .root:global(#ja-lawyer-profile) :global(:is(.profile-proof-card, .profile-info-card):nth-child(odd)) { animation: profSlideL linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+    .root:global(#ja-lawyer-profile) :global(:is(.profile-proof-card, .profile-info-card):nth-child(even)) { animation: profSlideR linear none; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+  }
+}
+@keyframes profSlideL { from { translate: -40px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }
+@keyframes profSlideR { from { translate: 40px 0; opacity: 0.35; } to { translate: 0 0; opacity: 1; } }

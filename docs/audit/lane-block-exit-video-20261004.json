@@ -1,0 +1,379 @@
+{
+  "reviewedAt": "2026-10-03T23:08:44.260548+00:00",
+  "reviewer": "Codex",
+  "scope": "Four article-188 video replacements. Native 15.041667 seconds / 24 fps / loop true. Article bodies unchanged.",
+  "workflow": "Codex generated and directly inspected the first-frame image before Grok 4.7 reference_to_video.",
+  "generationToolCall": "call-0e089fbd-4776-4e17-a726-2e5b1411e7b2-2",
+  "rawSha256": "89e80bc6f5cea7d43b630d4f06316323ff45167dfe7fb88945a5ab36d714632d",
+  "retiming": false,
+  "all361RawFramesDirectlyInspected": true,
+  "nativeDetailFramesZeroBased": [
+    36,
+    72,
+    218,
+    227,
+    239,
+    334
+  ],
+  "referenceImageReview": {
+    "reviewedAt": "2026-10-03T22:57:42.999727+00:00",
+    "reviewer": "Codex direct image inspection",
+    "verdict": "approved-as-first-frame",
+    "path": "/Users/son7/tseng-law-column-videos/assets/lane-block-exit/first-frame-v1.png",
+    "sourcePath": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-e523a0e9-0956-4df1-a078-04c1a29da65f.png",
+    "sha256": "e68ba23538de22fc38f29a346dc047feba789aa716446577ea6b460a55657b93",
+    "generator": "Codex image_gen.imagegen",
+    "observations": [
+      "Daylight two-way street, gray sedan rear toward camera, mostly on the left of the double yellow centerline with its right-side wheels near the lines.",
+      "Right camera lane is open; car doors closed; no exposed person, legible plate, logo or visible injury.",
+      "Mild right steering angle and grounded wheels provide space for a rapid rightward lane entry. Modest dashboard strip and consistent street perspective."
+    ],
+    "limitations": [
+      "Car already partly straddles the centerline. Describe and animate the actual start position; do not assert exact car distance or speed.",
+      "Independent fictional street, not the location or complete sequence from the article."
+    ]
+  },
+  "observedAction": [
+    "During roughly 0–3 seconds, the gray sedan turns right across the yellow centerline into the camera lane and straightens. Its brake lamps illuminate, and the dashcam viewpoint closes the gap before settling without a collision.",
+    "The vehicles settle by about 5.5 seconds. The left front door opens around 7.3–8.2 seconds. One adult man emerges through the doorway around 8.5–9.5 seconds with a single wooden bat held down in his right hand.",
+    "He steps along the left side of the sedan toward its rear, pauses, closes the door around 13 seconds and takes further steps toward the filming car through the end. The bat remains lowered, with no swing or strike.",
+    "The sedan remains grounded and coherent; the visible doorway occludes the initial exit naturally. No duplicated person, gross anatomy defect, person passing through a car, or vehicle collision was observed in the full-frame review."
+  ],
+  "observedLimitations": [
+    "The output differs from the prompt: the initial steering angle is pronounced, braking settles later, the door opens later, and the man closes it and resumes walking near the end. Captions must describe this actual sequence; do not claim an open door throughout or exact two steps.",
+    "The scene shows one fictional block-and-exit, not the two separate incidents or the six-minute interval in article 188. No exact speed, distance, stop duration or real location is asserted.",
+    "The visible adult is generated, not based on an identified person. This is not case evidence, an exact reconstruction, a depiction of a proved strike, or a basis to decide legal responsibility.",
+    "The final frame differs from the first; the 15-second loop visibly restarts and is not claimed seamless."
+  ],
+  "captionReview": [
+    {
+      "locale": "ko",
+      "oldRegistry": "  'column/ko/taiwan-road-rage-started-did-not-matter-driver-blocked': {\n    id: 'road-rage-started-did-not-matter-driver-blocked-v3-ko',\n    src: '/videos/columns/road-rage-started-did-not-matter-driver-blocked-v3-ko.mp4',\n    poster: '/images/column-videos/road-rage-started-did-not-matter-driver-blocked-v3-ko.jpg',\n    width: 1280,\n    height: 720,\n    title: '막대를 든 사람이 차문 쪽으로 팔을 뻗는 장면',\n    description: '낮의 내리막길에서 긴 막대를 든 사람이 회색 세단의 열린 앞문 옆에 서 있다가, 차문 쪽으로 다른 팔을 뻗은 뒤 내립니다. 시점이 서서히 가까워지면서 차와 사람이 화면에서 점점 크게 보입니다. 소리 없는 약 15초 영상이 반복 재생됩니다.',\n    disclosure: 'AI로 만든 가상 장면으로, 실제 블랙박스 영상이나 판결에 나온 사실관계를 재현한 영상이 아닙니다. 거리와 속도, 시간 표현은 설명을 위한 것이며 실제 사건의 과실이나 책임을 판단하는 근거로 사용할 수 없습니다.',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "차로를 막고 멈춘 뒤 방망이를 들고 내리는 장면",
+        "description": "회색 승용차가 중앙선 쪽에서 오른쪽으로 방향을 틀어 촬영 차량 앞에 들어와 멈춥니다. 촬영 차량이 뒤에 정차하면 앞차의 왼쪽 앞문이 열리고, 남성이 방망이를 아래로 든 채 내립니다. 남성은 차 옆에 잠시 서 있다가 문을 닫고 촬영 차량 쪽으로 걸어옵니다.",
+        "disclosure": "AI로 만든 15초 무음 반복 영상입니다. 실제 블랙박스나 해당 사건의 재현이 아닙니다. 칼럼 속 두 차례의 진로 방해와 그 사이 6분을 재현하지 않았으며, 사람이나 차량을 때리는 장면은 없습니다. 이 영상으로 실제 속도·정차 시간·당사자의 행위나 법적 책임을 판단할 수 없습니다."
+      },
+      "problem": "Old C7 copy describes a stationary gray sedan, a man gesturing toward its door and a slowly approaching viewpoint. It does not describe the new cut-in, braking and exit.",
+      "reason": "Match the reviewed action: rightward lane entry and stop, left-front-door exit with a lowered bat, pause, door closing and approach. No strike or collision occurs.",
+      "meaningPreservation": "Only the fictional media description changes. Full article text, findings about two incidents six minutes apart, unidentified object at the first stop, wooden bat at the second, sentencing qualifications, numbers, quotations, links and author history are unchanged. AI/non-case/non-evidential limits remain explicit.",
+      "firstParagraphDeletionCheck": "The three description sentences each add a distinct visible stage: lane entry/stop, exit, then pause/door closing/approach. Removing the first sentence would remove the vehicle action that distinguishes this replacement.",
+      "secondParagraphDeletionCheck": "Disclosure gives medium/duration/silence/loop, distinguishes fiction from case footage, excludes the two-incident/six-minute reconstruction and strike, then limits evidential use. No generic introduction or promotional ending.",
+      "sameLanguageComparison": "Compared with the actual first two paragraphs, headings and ending of the three bound recent articles in this locale. Caption opens with observed action rather than copying their factual dates, legal-advice lead or conclusion structure. Title names the visible block-and-exit, without an admonition or decorative bold.",
+      "reviewLimit": "Codex language/content review; not native-speaker or legal-professional certification. No new legal research."
+    },
+    {
+      "locale": "en",
+      "oldRegistry": "  'column/en/taiwan-road-rage-started-did-not-matter-driver-blocked': {\n    id: 'road-rage-started-did-not-matter-driver-blocked-v3-en',\n    src: '/videos/columns/road-rage-started-did-not-matter-driver-blocked-v3-en.mp4',\n    poster: '/images/column-videos/road-rage-started-did-not-matter-driver-blocked-v3-en.jpg',\n    width: 1280,\n    height: 720,\n    title: 'Person holding a stick reaches toward an open car door',\n    description: 'In daylight on a downhill road, a person holding a long stick stands beside the open front door of a gray sedan, extends their free arm toward the door, then lowers it. The view slowly moves closer, making the car and person appear larger. This silent clip lasts about 15 seconds and plays on a loop.',\n    disclosure: 'This fictional scene was generated with AI; it is not dashcam footage or a reconstruction of the facts in the judgment. Distances, speeds and timing are illustrative and cannot be used to determine fault in any real case.',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "Blocking the lane, then stepping out with a bat",
+        "description": "A gray sedan turns right from near the centerline, moves in front of the camera car and brakes to a stop. Once the camera car has stopped behind it, a man opens the left front door and gets out holding a bat down by his side. He pauses beside the sedan, closes the door and walks toward the camera car.",
+        "disclosure": "AI-generated, silent 15-second loop. This fictional scene is not actual dashcam footage or a reconstruction of the case. It does not reproduce the two separate blocking incidents or the six-minute interval described in the article, and shows no strike on a person or vehicle. It cannot establish actual speed, stopping time, conduct or legal responsibility."
+      },
+      "problem": "Old C7 copy describes a stationary gray sedan, a man gesturing toward its door and a slowly approaching viewpoint. It does not describe the new cut-in, braking and exit.",
+      "reason": "Match the reviewed action: rightward lane entry and stop, left-front-door exit with a lowered bat, pause, door closing and approach. No strike or collision occurs.",
+      "meaningPreservation": "Only the fictional media description changes. Full article text, findings about two incidents six minutes apart, unidentified object at the first stop, wooden bat at the second, sentencing qualifications, numbers, quotations, links and author history are unchanged. AI/non-case/non-evidential limits remain explicit.",
+      "firstParagraphDeletionCheck": "The three description sentences each add a distinct visible stage: lane entry/stop, exit, then pause/door closing/approach. Removing the first sentence would remove the vehicle action that distinguishes this replacement.",
+      "secondParagraphDeletionCheck": "Disclosure gives medium/duration/silence/loop, distinguishes fiction from case footage, excludes the two-incident/six-minute reconstruction and strike, then limits evidential use. No generic introduction or promotional ending.",
+      "sameLanguageComparison": "Compared with the actual first two paragraphs, headings and ending of the three bound recent articles in this locale. Caption opens with observed action rather than copying their factual dates, legal-advice lead or conclusion structure. Title names the visible block-and-exit, without an admonition or decorative bold.",
+      "reviewLimit": "Codex language/content review; not native-speaker or legal-professional certification. No new legal research."
+    },
+    {
+      "locale": "ja",
+      "oldRegistry": "  'column/ja/taiwan-road-rage-started-did-not-matter-driver-blocked': {\n    id: 'road-rage-started-did-not-matter-driver-blocked-v3-ja',\n    src: '/videos/columns/road-rage-started-did-not-matter-driver-blocked-v3-ja.mp4',\n    poster: '/images/column-videos/road-rage-started-did-not-matter-driver-blocked-v3-ja.jpg',\n    width: 1280,\n    height: 720,\n    title: '棒を持つ人が開いた車のドアへ腕を伸ばす場面',\n    description: '昼間の下り坂で、長い棒を持った人が灰色のセダンの開いたドアの横に立ち、もう一方の腕をドアの方へ伸ばしてから下ろします。視点がゆっくりと近づき、車と人が画面の中で大きくなっていきます。約15秒の無音動画が繰り返し再生されます。',\n    disclosure: 'AIで生成した架空の場面であり、実際のドライブレコーダー映像や、判決に記された事実関係を再現した映像ではありません。距離・速度・時間は説明用のもので、実際の事件や事故の過失や責任を判断する根拠にはできません。',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "進路を塞いだ車から、バットを持って降りる場面",
+        "description": "灰色の乗用車が中央線付近から右へ向きを変え、撮影車両の前に入って停止します。撮影車両が後ろで止まると、前の車の左前ドアが開き、男性がバットを下に向けて降ります。男性は車の横でいったん立ち止まり、ドアを閉めて撮影車両へ歩いてきます。",
+        "disclosure": "AIで生成した、音声のない15秒の繰り返し動画です。実際のドライブレコーダー映像や本件の再現ではありません。記事にある2回の進路妨害と、その間の6分間は再現しておらず、人や車をたたく場面もありません。この映像から実際の速度・停止時間・当事者の行為や法的責任を判断することはできません。"
+      },
+      "problem": "Old C7 copy describes a stationary gray sedan, a man gesturing toward its door and a slowly approaching viewpoint. It does not describe the new cut-in, braking and exit.",
+      "reason": "Match the reviewed action: rightward lane entry and stop, left-front-door exit with a lowered bat, pause, door closing and approach. No strike or collision occurs.",
+      "meaningPreservation": "Only the fictional media description changes. Full article text, findings about two incidents six minutes apart, unidentified object at the first stop, wooden bat at the second, sentencing qualifications, numbers, quotations, links and author history are unchanged. AI/non-case/non-evidential limits remain explicit.",
+      "firstParagraphDeletionCheck": "The three description sentences each add a distinct visible stage: lane entry/stop, exit, then pause/door closing/approach. Removing the first sentence would remove the vehicle action that distinguishes this replacement.",
+      "secondParagraphDeletionCheck": "Disclosure gives medium/duration/silence/loop, distinguishes fiction from case footage, excludes the two-incident/six-minute reconstruction and strike, then limits evidential use. No generic introduction or promotional ending.",
+      "sameLanguageComparison": "Compared with the actual first two paragraphs, headings and ending of the three bound recent articles in this locale. Caption opens with observed action rather than copying their factual dates, legal-advice lead or conclusion structure. Title names the visible block-and-exit, without an admonition or decorative bold.",
+      "reviewLimit": "Codex language/content review; not native-speaker or legal-professional certification. No new legal research."
+    },
+    {
+      "locale": "zh-hant",
+      "oldRegistry": "  'column/zh-hant/taiwan-road-rage-started-did-not-matter-driver-blocked': {\n    id: 'road-rage-started-did-not-matter-driver-blocked-v3-zh-hant',\n    src: '/videos/columns/road-rage-started-did-not-matter-driver-blocked-v3-zh-hant.mp4',\n    poster: '/images/column-videos/road-rage-started-did-not-matter-driver-blocked-v3-zh-hant.jpg',\n    width: 1280,\n    height: 720,\n    title: '持棍者朝敞開的車門伸出手臂',\n    description: '白天的下坡路上，一個人拿著長棍站在灰色轎車敞開的車門旁，朝車門伸出另一隻手臂，隨後放下。視角緩緩靠近，人與車在畫面中逐漸變大。這段無聲影片長約15秒，會循環播放。',\n    disclosure: '這是 AI 生成的虛構場景，不是行車紀錄器實拍影像，也不是判決所載事實的重現。畫面中的距離、速度與時間安排僅供示意，不能用來判斷任何真實案件的過失或責任。',\n    loop: true,\n  },",
+      "replacement": {
+        "title": "擋住車道後，持球棒下車",
+        "description": "灰色轎車從中央線附近向右切入，擋在拍攝車輛前方並煞停。拍攝車輛停下後，男子打開前車左前門，手持球棒下車，棒頭朝下。他在車旁稍作停留，關門後朝拍攝車輛走來。",
+        "disclosure": "本片為 AI 生成的 15 秒無聲循環影片，並非真實行車紀錄器畫面或本案重現。影片未重現文中的兩次攔車及相隔的 6 分鐘，也沒有擊打人車的畫面；不能據此判定實際車速、停車時間、當事人行為或法律責任。"
+      },
+      "problem": "Old C7 copy describes a stationary gray sedan, a man gesturing toward its door and a slowly approaching viewpoint. It does not describe the new cut-in, braking and exit.",
+      "reason": "Match the reviewed action: rightward lane entry and stop, left-front-door exit with a lowered bat, pause, door closing and approach. No strike or collision occurs.",
+      "meaningPreservation": "Only the fictional media description changes. Full article text, findings about two incidents six minutes apart, unidentified object at the first stop, wooden bat at the second, sentencing qualifications, numbers, quotations, links and author history are unchanged. AI/non-case/non-evidential limits remain explicit.",
+      "firstParagraphDeletionCheck": "The three description sentences each add a distinct visible stage: lane entry/stop, exit, then pause/door closing/approach. Removing the first sentence would remove the vehicle action that distinguishes this replacement.",
+      "secondParagraphDeletionCheck": "Disclosure gives medium/duration/silence/loop, distinguishes fiction from case footage, excludes the two-incident/six-minute reconstruction and strike, then limits evidential use. No generic introduction or promotional ending.",
+      "sameLanguageComparison": "Compared with the actual first two paragraphs, headings and ending of the three bound recent articles in this locale. Caption opens with observed action rather than copying their factual dates, legal-advice lead or conclusion structure. Title names the visible block-and-exit, without an admonition or decorative bold.",
+      "reviewLimit": "Codex language/content review; not native-speaker or legal-professional certification. No new legal research."
+    }
+  ],
+  "references": [
+    {
+      "locale": "ko",
+      "file": "src/content/columns/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "d6e3af70fa8e44d42db7953c59a9f291b3ad149cb3a5f6b90de4cf6f4a37d0bd",
+      "firstTwoParagraphs": [
+        "2025년 11월 25일 오후 5시 13분, 타이베이시 원산구(文山區)의 한 다리 위였습니다. 오토바이 한 대가 일반 차로에서 오른쪽 機慢車道(오토바이와 저속 차량이 다니는 차로)로 넘어와 그 차로를 달리던 차량 바로 앞에 들어섰습니다. 살짝 제동했다가 다시 속도를 낸 오토바이는 곧 3초 만에 멈춰 섰고, 운전자는 뒤를 돌아봤습니다. 뒤차는 왼쪽으로 비켜 오토바이를 앞질렀고, 두 사람 사이에 욕설이 오갔습니다. ([臺北高等行政法院 地方行政訴訟庭 115年度交字第54號, 2026년 5월 26일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1))",
+        "다섯 달 앞선 6월 3일 오전 7시 14분, 타이베이시 완화구(萬華區)의 교차로에서는 영업용 승용차(營業小客車) 한 대가 왼쪽 방향지시등을 켜고 차로를 바꾸려던 참이었습니다. 왼쪽 차로의 검은색 SUV를 먼저 보낸 뒤 그 차로 뒤쪽에서 흰색 차량이 다가오자 약 2초 멈췄고, 흰색 차량이 지나가자 다시 출발했습니다. 바로 뒤에 붙어 오던 차량의 운전자가 블랙박스 영상을 내며 경찰에 신고했습니다. ([臺北高等行政法院 高等行政訴訟庭 115年度交上字第76號, 2026년 8월 24일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1))"
+      ],
+      "headings": [
+        "흰색 차량이 다가오던 2초",
+        "입법 기록 속 '상향등 한두 번'",
+        "다리 위 3초, 법정에서 재생된 영상",
+        "경적이 울린 시점과 접촉을 주장한 위치",
+        "두 판결이 엇갈리게 쓴 한 문장",
+        "신고 영상에 담긴 감속과 접촉 여부",
+        "출처"
+      ],
+      "ending": "대만에서 운전하거나 오토바이를 타다 경적이나 접촉 때문에 멈춰야겠다고 느낄 때, 오토바이 사건 판결이 제시한 방법은 서서히 감속하고 주변을 살핀 뒤 길가나 교통을 방해하지 않는 곳에 세우는 것이었습니다. 상대의 차로 이용이 잘못됐다는 주장도, 나중에 경찰을 부르자고 한 일도 다른 차 바로 앞에서 급히 멈춰야 했다는 근거로 받아들여지지 않았습니다. ([臺北高等行政法院 地方行政訴訟庭 115年度交字第54號, 2026년 5월 26일](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1))"
+    },
+    {
+      "locale": "ko",
+      "file": "src/content/columns/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "fdc5b485a3d035770140a30a938ca4acd138654ca9f6e51a78fe43b1b4dbb14b",
+      "firstTwoParagraphs": [
+        "2024년 7월 28일 저녁 6시 58분쯤, 신베이시 중허구(中和區)의 한 도로에서 승용차 한 대가 유턴을 하고 있었습니다. 맞은편에서 오던 오토바이는 승용차가 먼저 유턴하도록 양보하지 않고 경고하듯 경적을 울렸습니다. 승용차 운전자는 곧바로 속도를 높여 오토바이를 뒤쫓았고, 교차로 앞에서 따라잡자 차를 들이밀어 오토바이를 도로 한가운데에 멈춰 세웠습니다. 그리고 창문을 열고 「幹你娘老雞掰」라고 욕했습니다. 상대의 어머니를 끌어들인 상스러운 욕설로, 대만고등법원도 이 말을 \"粗鄙低俗(거칠고 저속하다)\"고 표현했습니다([臺灣高等法院 114年度上易字第2198號, 2026. 1. 27.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)).",
+        "신호가 초록불로 바뀐 뒤에도 승용차는 비켜 주지 않았습니다. 오토바이 운전자가 승용차 오른쪽으로 돌아 직진하려 하자 승용차가 오른쪽 앞으로 움직여 다시 막았고, 오토바이 운전자가 더는 다른 행동을 하지 않는 것을 보고서야 자리를 떴습니다. 여기까지는 운전자도 다투지 않았고, 1심과 2심이 그대로 사실로 인정했습니다([臺灣新北地方法院 114年度易字第637號, 2025. 7. 31., 고등법원 판결문 附件 수록](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1) · [臺灣高等法院 114年度上易字第2198號, 2026. 1. 27.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)). 그런데도 두 법원은 모두 무죄로 판단했습니다. 법원은 영상 속 시간을 초 단위로 셌습니다."
+      ],
+      "headings": [
+        "블랙박스와 교차로 CCTV에 남은 1분 54초",
+        "검사와 운전자가 다툰 지점",
+        "빨간불 52초를 뺀 이유",
+        "욕설은 왜 처벌되지 않았나",
+        "1심과 2심의 결과",
+        "형사 무죄와 교통 과태료는 별개",
+        "영상 속에서 법원이 센 것",
+        "판결과 법령 출처"
+      ],
+      "ending": "오토바이 운전자가 유턴해 떠난 사실은 이 판결에서 빠져나갈 공간이 있었다는 근거로 쓰였습니다([臺灣高等法院 114年度上易字第2198號, 2026. 1. 27.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1))."
+    },
+    {
+      "locale": "ko",
+      "file": "src/content/columns/197-taiwan-remaining-property-claim-asset-tracing.md",
+      "sha256": "dd1e9aa6a0c2d8883c7966f3f89e6544e06f3f9a39463fdd153e87484229c1af",
+      "firstTwoParagraphs": [
+        "대만법상 법정재산제가 적용되는 부부가 이혼할 때, 잔여재산분배청구(剩餘財產分配請求權)는 두 사람의 혼인 후 순재산 차액을 정산하는 청구입니다. 각자 남아 있는 혼인 후 재산에서 혼인 중 진 채무를 공제하므로 자신의 재산과 채무도 확인해야 합니다. 상속·증여 등 무상으로 받은 재산과 위자료는 제외하고, 원칙적으로 차액을 절반씩 나누되 불공평한 사정이 있으면 법원이 분배액을 조정하거나 면제할 수 있습니다. [대만 민법 제1030조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1030-1)",
+        "한국에 사는 부부에 대해서도 대만 법원은 부부재산의 준거법을 서면 합의, 공통 본국법·주소지법 등의 기준으로 정하므로, 대만인 배우자가 있다는 사실만으로 대만법 적용을 단정할 수 없습니다. 적용 법과 재산제도의 선택은 [기존 부부재산제 칼럼](/ko/columns/taiwan-marital-property-regime-international-couples)에 설명돼 있습니다. [섭외민사법률적용법 제48조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=48), [민법 제1005조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1005)"
+      ],
+      "headings": [
+        "어느 날짜의 잔액과 가치를 확인할 것인가",
+        "재산 목록에는 금액 옆에 날짜와 출처가 필요합니다",
+        "상대가 자료를 주지 않을 때의 법원 조사와 문서제출",
+        "이미 빠져나간 돈은 언제 다시 계산에 넣을 수 있나",
+        "가압류에는 재산 차액과 집행 위험을 각각 설명해야 합니다",
+        "자료가 모일 때까지 시효가 기다려 주지는 않습니다",
+        "참고한 공식 자료"
+      ],
+      "ending": "호정(昊鼎)국제법률사무소에 대만 재산분배 상담을 문의하려면, 혼인·이혼 관련 문서와 알고 있는 재산 목록, 이미 받은 법원 문서를 정리해 증준외(曾雋崴) 변호사의 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 연락할 수 있습니다. 사무소 주소는 103 臺北市大同區承德路一段35號7樓之2입니다."
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "f453c5793f3e263fda3c724ea209fe69d8f14ce959d1192aaeb22e568b0fd820",
+      "firstTwoParagraphs": [
+        "At about 7:14 a.m. on June 3, 2025, a car at a junction on a multilane road in Taipei's Wanhua District signalled left. It let a black SUV pass in the next lane. Then a white vehicle approached from behind in that lane, and the car stopped for about two seconds. The motorist following closely behind submitted a dashcam recording to report the stop. ([Taipei High Administrative Court, High Administrative Litigation Division, 115年度交上字第76號, August 24, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1))",
+        "That recording eventually helped undo the penalties. The first-instance court cancelled an NT$24,000 fine, a road-safety course requirement and a six-month suspension of the car's plates. The traffic authority appealed and lost. These were administrative traffic proceedings, not a criminal acquittal or a damages award. ([Taipei High Administrative Court, High Administrative Litigation Division, 115年度交上字第76號, August 24, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1))"
+      ],
+      "headings": [
+        "The speed display belonged to the vehicle behind",
+        "On a bridge, the rider could still accelerate",
+        "The courts described intent differently",
+        "Sources"
+      ],
+      "ending": "For a driver or rider shaken by a horn or suspected contact, the court in the motorcycle case gave a specific alternative where an immediate stop was unnecessary: slow progressively, stabilise the vehicle, watch the surrounding traffic, and pull over once safe or reach somewhere that does not obstruct traffic. Wanting to inspect damage or involve police did not excuse creating another danger while stopping. ([Taipei High Administrative Court, Local Administrative Litigation Division, 115年度交字第54號, May 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1))"
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "6771fe209dedeae03a73d1d1f28ff60cda625ad46febe468fa35b4e0b5a36754",
+      "firstTwoParagraphs": [
+        "A scooter rider sounded the horn as a car made a U-turn on a road with two lanes in each direction in Zhonghe, New Taipei, at about 6:58 pm on July 28, 2024. The oncoming rider had not waited for the car to turn first. The driver accelerated after the scooter, overtook it and blocked it near an intersection, forcing the rider to stop in the middle of the road. The driver then swore at the rider. [Taiwan High Court, 114年度上易字第2198號, January 27, 2026, including the attached first-instance judgment](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1).",
+        "When the light turned green, the rider tried to pass on the right. The car moved forward and right, blocking that route too. The driver did not dispute those movements or the swearing. [Taiwan High Court, 114年度上易字第2198號, January 27, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)."
+      ],
+      "headings": [
+        "Two cameras, two clocks",
+        "The argument over room to escape",
+        "The swearing had its own legal threshold",
+        "The rest of the recording still matters",
+        "Sources"
+      ],
+      "ending": "For someone driving or riding in Taiwan, the useful evidential lesson is to retain the full recording, including the signal changes and departure, and note any clock discrepancy when describing events. That is a practical inference from this case, not a new legal requirement. The footage of the car cutting across the scooter showed the confrontation; the seconds and space around it helped explain the acquittal. [New Taipei District Court, 114年度易字第637號, July 31, 2025, attached judgment](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)."
+    },
+    {
+      "locale": "en",
+      "file": "src/content/columns-en/200-taiwan-protection-order-foreign-resident.md",
+      "sha256": "cfe574b3f0efc0d55eb80bc485c893318179e3ae8e61769ad04e400b7991f3a3",
+      "firstTwoParagraphs": [
+        "You can seek a Taiwan protection order against an abusive spouse without first filing for divorce. The Domestic Violence Prevention Act gives victims access to protection orders without a nationality restriction, and expressly covers spouses and former spouses. A criminal conviction is not a prerequisite. ([Articles 3 and 10](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0050071))",
+        "If you are in immediate danger, contact local police and seek a safe place rather than wait for court paperwork. Taiwan's Ministry of Health and Welfare also operates a round-the-clock protection hotline with English interpretation; its [official service page](https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html) provides access details."
+      ],
+      "headings": [
+        "Protection reaches beyond physical injury",
+        "Which order can be requested, and by whom?",
+        "The order needs to address where contact happens",
+        "Filing without exposing a safe address",
+        "Children and breaches of the order",
+        "A protection order does not renew an ARC",
+        "Official sources"
+      ],
+      "ending": "For advice on coordinating a protection application with parenting or residence issues, contact Attorney Wei Tseng (曾雋崴) at Hovering International Law Firm: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taipei office: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan."
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "f6dc7f531b01426f5fb800e88cbe140c6a8aee6d570bc25d4166de7f1da905cd",
+      "firstTwoParagraphs": [
+        "2025年6月3日、午前7時14分ごろ。台北市万華区の交差点で、乗用車が左のウインカーを出し、隣の車線を走る黒いSUVを先に通しました。続いて左後方から白い車が近づくと、乗用車はブレーキをかけて停止。約2秒後、白い車が通過すると再び走り出しました。すぐ後ろを走っていた車の映像が、この停止をめぐる通報の証拠になりました。[臺北高等行政法院高等庭115年度交上字第76號判決（2026年8月24日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)",
+        "臺北市交通事件裁決所が科したのは、2万4,000台湾元の制裁金、道路交通安全講習、車のナンバープレートの6か月停止でした。運転者は取消しを求めて行政訴訟を起こし、一審で二つの処分がともに取り消されます。裁決所は上訴しましたが、二審も取消しを維持しました。[臺北高等行政法院高等庭115年度交上字第76號判決（2026年8月24日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)"
+      ],
+      "headings": [
+        "通報映像に残っていた、止まる前の速度",
+        "約2秒なら許される、という判決ではない",
+        "橋の上では、クラクションの後に止まった",
+        "「悪意」の説明は一致していない",
+        "相手の走り方と、自分が止まる場所",
+        "出典"
+      ],
+      "ending": "接触したか確認したい、警察を呼びたい。その必要を感じた場合について、この判決が示したのは、徐々に減速して車体を安定させ、前後左右を見て、安全を確認してから路肩や交通を妨げない場所へ止まるという対応でした。これは、直ちに停止しなければ危険な場合まで走り続けよという意味ではありません。映像上、まだ安定して走れていたこのバイクについて、裁判所は停止するまでの方法と場所を問いました。[臺北高等行政法院地方庭115年度交字第54號判決（2026年5月26日）、事実及び理由五（二）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+      "sha256": "57f9847db0e103e8c2045f5fed18489c106131be298ef8ff53d4d3ae2a5d7c3e",
+      "firstTwoParagraphs": [
+        "転職先が決まった後、今の会社から「退職後2年間は同業他社で働けない」と言われたら、まず署名済みの契約書と補償の条件を確認してください。署名していることだけで制限の有効性は決まりません。反対に、補償の支払いに疑問があるからといって、入社予定日までに争いが解決するとも限りません。",
+        "台湾法でいう「離職後競業禁止」は、退職後の一定期間、競合する仕事などを制限する合意です。日本語では退職後の競業避止義務と呼びます。台湾の労働基準法（勞動基準法）第9条の1は、その合意に4つの要件を求めています。[労働基準法第9条の1](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001)"
+      ],
+      "headings": [
+        "署名済みでも、4つの要件を満たす必要があります",
+        "「2年以内」でも、制限の範囲を確認します",
+        "補償は「基本給の半分」で決めるものではありません",
+        "入社予定日から逆算し、会社の主張を書面で確かめます",
+        "秘密保持義務や最低勤務期間とは分けて考えます",
+        "手元にそろえたい資料"
+      ],
+      "ending": [
+        "最初にそろえるべきなのは、署名済み条項、旧職と新職の内容、補償の計算根拠です。この3点を並べると、「会社が求める制限」「実際に予定する仕事」「その制限に対する補償」のどこに食い違いがあるかを具体的に確認できます。",
+        "本稿は一般的な制度の説明です。資料確認日：2026年10月4日（台湾時間）。"
+      ]
+    },
+    {
+      "locale": "ja",
+      "file": "src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "ce3246410a7f780b6da753b44e3e701f19bf38877bc62031057bf7fea3a3f663",
+      "firstTwoParagraphs": [
+        "2024年7月28日午後6時58分ごろ、新北市中和区の片側2車線の道路で、乗用車がUターンしようとしていました。対向してきたバイクはそのUターンを先に通さず、警告のクラクションを鳴らします。車は加速して追いかけ、交差点の手前でバイクの前に出ると、道路の中央で停車させました。運転者は窓を開け、相手に暴言を浴びせます。",
+        "青信号になっても車は前を塞いだままです。バイクが右側から回り込んで直進しようとすると、車も右前方へ動いて再び進路を塞ぎます。相手がそれ以上動かないのを見て、車はようやく立ち去りました。ここまでの行動は車の運転者も争っておらず、裁判所が認定しています（[臺灣高等法院114年度上易字第2198號、2026年1月27日、附件の一審判決を含む](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。"
+      ],
+      "headings": [
+        "二つの映像に映った、最後のUターン",
+        "進める隙間があれば、強制ではないのか",
+        "赤信号の間は、そもそも前へ進めなかった",
+        "暴言を認めても、侮辱罪には届かなかった",
+        "二つの無罪と、この判決が答えていないこと",
+        "出典"
+      ],
+      "ending": "この判決の証拠の扱いからすると、台湾で同じような妨害に遭ったときは、前後を含む映像が役立ちます。信号の変化や車線、立ち去るまでの動きが分かる元の映像を残しておけば、裁判所が今回検討した事情を確かめられます。表示時刻が合っていない映像どうしは、時刻をそのまま並べても正しい経過になるとは限りません。本件では一方の映像が52秒の赤信号を、もう一方が約1分54秒の経過とUターンを示しました。妨害の瞬間だけでは、こうした事情は捉えきれません（[臺灣新北地方法院114年度易字第637號、2025年7月31日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+      "firstTwoParagraphs": [
+        "2025年6月3日上午7時14分，台北市萬華區一處路口，小客車打著左方向燈，讓左側一輛黑色休旅車先過。左側後方又有白車靠近，小客車煞停約兩秒，等白車通過後重新起步。後車的行車紀錄器錄下這段過程，也成了駕駛被檢舉的證據。法院的疑問是：這兩秒的暫停，能排除是為了避免碰撞嗎？[臺北高等行政法院高等庭115年度交上字第76號判決，2026年8月24日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)",
+        "同年11月25日下午5時13分，文山區一座橋上，機車從一般車道向右切入機慢車道，來到拍攝車輛前方。略煞車、再加速之後，機車在三秒內煞至停止，騎士回頭看，後車向左繞過。這次法院認定，影像裡沒有必須立即停下的突發狀況。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+      ],
+      "headings": [
+        "同一款處罰，爭的是為什麼停",
+        "後車的速度顯示，留下另一種解釋",
+        "撤銷處分，不是准許兩秒鐘的煞停",
+        "橋上的喇叭，響在機車切入前後",
+        "兩份判決對「惡意」說得不一樣",
+        "想停下來處理，和非立刻停不可",
+        "資料來源"
+      ],
+      "ending": "機車案留下的具體做法是：在仍能穩定操控、沒有立即煞停必要的情況下，即使因喇叭或疑似擦撞受驚，想確認車損或報警，仍應漸進減速、穩定車身、留意前後左右車流，確認安全後靠邊，或駛至不妨礙交通的安全處所。需要處理一場爭執，並不等於需要在後車面前立刻停下。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "9d6c2d5012e0fef908882e57f8f1029d3bf8d26370a41e683b41ec31d0a55250",
+      "firstTwoParagraphs": [
+        "2024年（民國113年）7月28日傍晚6點58分左右，新北市中和區。一輛自用小客車在路上迴轉，對向剛好駛來一輛機車，騎士沒有讓汽車先轉，還按喇叭示警。汽車駕駛隨即加速追趕，在一處交岔路口前追上機車，以逼車方式迫使機車停在道路中央，接著開窗對騎士罵了「幹你娘老雞掰」等語。",
+        "號誌轉為綠燈後，汽車仍擋在前方。騎士繞到汽車右側想直行離開，汽車駕駛發現後就往右前方開，讓機車無法前進；看騎士沒有其他動作，汽車才開走。這段經過汽車駕駛並不爭執，一審與二審也都認定屬實（[臺灣新北地方法院114年度易字第637號，2025年7月31日，收錄於高院判決附件](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)；[臺灣高等法院114年度上易字第2198號，2026年1月27日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。"
+      ],
+      "headings": [
+        "兩支鏡頭，兩套時間",
+        "「兩側還是有空間」與「法益侵害難認輕微」",
+        "一審：路夠寬，紅燈的52秒不算",
+        "高院：「無禮且不當」，但不具刑罰的可非難性",
+        "那句髒話，和憲法法庭113年憲判字第3號",
+        "兩審結果與不得上訴",
+        "無罪的範圍，只到刑法為止",
+        "法院用上的，是畫面裡的號誌和那次迴轉",
+        "資料來源"
+      ],
+      "ending": "另一個細節是那次迴轉。騎士最後迴轉離開了現場；在刑事判斷上，兩審法院都把這次迴轉當成騎士當時還有路可走的根據。在這份判決裡，強制罪看的不只是被擋了多久，也看當下有沒有其他路可以走。"
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/199-child-surname-change-after-divorce.md",
+      "sha256": "beaade3b84aa628af5a53e4df2c6dbf98165d1b9d40a4fc2dd34be3398048fab",
+      "firstTwoParagraphs": [
+        "離婚後，即使孩子一直與母親同住，並由母親單獨行使親權，也不會因此自動改從母姓。依[民法第1059條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1059)，未成年子女出生登記後，父母可以書面約定改姓；無法取得另一方同意時，則可依離婚等法定事由向法院聲請，由法院審查改姓是否符合子女利益。",
+        "以下以已辦出生登記、適用台灣民法的未成年子女為主；從母姓改為父姓，也適用相同規則。若孩子有外國國籍、長住海外，或尚未在台設籍，須先釐清適用法律與登記途徑，不能只憑父母其中一人是台灣人，就直接套用所有程序。"
+      ],
+      "headings": [
+        "約定改姓須父母書面同意，單獨親權不能取代",
+        "離婚是聲請事由，改姓的利益仍須另外說明",
+        "彰化地院：母親取得單獨親權，改姓聲請仍被駁回",
+        "改姓對孩子的影響，以及孩子表達意見的機會",
+        "約定書與確定裁定，是不同的戶政登記依據",
+        "外籍父母與海外文件，還有準據法及驗證問題",
+        "滿18歲後，子女可以自行決定改從父姓或母姓",
+        "參考的官方資料"
+      ],
+      "ending": "如需就子女改姓或海外文件安排諮詢，可來信昊鼎國際法律事務所曾雋崴律師：[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，簡述孩子年齡、國籍、居住地、親權安排與對方是否同意。地址：103 臺北市大同區承德路一段35號7樓之2。"
+    }
+  ],
+  "articleBindings": [
+    {
+      "key": "ko/column/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "locale": "ko",
+      "slug": "taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "file": "src/content/columns/188-taiwan-road-rage-started-did-not-matter-driver-blocked.md",
+      "url": "https://tseng-law.com/ko/columns/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "sourceSha256": "aa28d54e91e6dc2fc60153b306c31ca59db3fd715fa3e1074a3e605b9a62fd3f"
+    },
+    {
+      "key": "en/column/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "locale": "en",
+      "slug": "taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "file": "src/content/columns-en/188-taiwan-road-rage-started-did-not-matter-driver-blocked.md",
+      "url": "https://tseng-law.com/en/columns/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "sourceSha256": "1023d3a23eedcb1f74384ff31ffa24799609cc35d703ab51823f0e20293701db"
+    },
+    {
+      "key": "ja/column/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "locale": "ja",
+      "slug": "taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "file": "src/content/columns-ja/188-taiwan-road-rage-started-did-not-matter-driver-blocked.md",
+      "url": "https://tseng-law.com/ja/columns/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "sourceSha256": "912e7e9b56d681b2dfc74591f2a45781903fc250801f395ff092d84b5c9b52f3"
+    },
+    {
+      "key": "zh-hant/column/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "locale": "zh-hant",
+      "slug": "taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "file": "src/content/columns-zh/188-taiwan-road-rage-started-did-not-matter-driver-blocked.md",
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-road-rage-started-did-not-matter-driver-blocked",
+      "sourceSha256": "e66d5aef0aed80ae3b4cc21c3f740bccb2fd73880b7890c65c25aeceee5080b1"
+    }
+  ],
+  "localBrowserAndPublicPlayback": "Pending at scene/copy approval. Release evidence will be under /Users/son7/tseng-law-column-videos/qa/production-lane-block-exit-release.json.",
+  "youtubeUploaded": false
+}

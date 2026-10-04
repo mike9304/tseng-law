@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { pageCopy } from '@/data/page-copy';
 import { firmIntroductionContent } from '@/data/firm-introduction';
 import { siteContent } from '@/data/site-content';
@@ -50,7 +51,7 @@ export default function ZhHantAboutBody() {
           >
             {contact.cta.label}
           </a>
-          <Link href="/zh-hant/contact" className={styles.headerSecondary}>聯絡方式 <span aria-hidden>›</span></Link>
+          <Link href="/zh-hant/contact" className={styles.headerSecondary}>聯絡方式<ZhHantMonoIcon name="chevron-right" size={14} strokePx={1.75} /></Link>
         </div>
         <nav className={styles.jumps} aria-label="本頁內容">
           {jumps.map((jump) => <a key={jump.href} href={jump.href}>{jump.label}</a>)}

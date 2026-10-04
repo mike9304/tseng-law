@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import type { SiteLocale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
@@ -49,6 +50,11 @@ const copyByLocale = {
   },
 } as const;
 
+/** The home attorney copy for a locale (label, title, summary, link label). The en home design renders the same copy in its own stage. */
+export function getHomeAttorneyCopy(locale: SiteLocale) {
+  return copyByLocale[locale];
+}
+
 function protectAboutHeadingUnit(title: string, unit: string) {
   const index = title.indexOf(unit);
   if (index < 0) return title;
@@ -81,11 +87,14 @@ export default function HomeAttorneySplit({
   presentation,
   omitLandmarkId = false,
   override,
+  beforeSummary,
 }: {
   locale: SiteLocale;
   presentation?: 'editorial';
   omitLandmarkId?: boolean;
   override?: HomeAttorneyOverride;
+  /** Optional slot rendered directly above the summary paragraph (ja design). Omitted: nothing is rendered. */
+  beforeSummary?: ReactNode;
 }) {
   const copy = copyByLocale[locale];
   const profilePath = override?.href ?? getAttorneyProfilePath(locale);
@@ -147,6 +156,7 @@ export default function HomeAttorneySplit({
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[3]}>
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[3]}>{intro[1]}</SurfaceText>
         </p>
+        {beforeSummary ?? null}
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[4]}>
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[4]}>{summary}</SurfaceText>
         </p>

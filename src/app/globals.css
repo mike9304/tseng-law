@@ -27333,3 +27333,791 @@ html[dir='rtl'] .guidance-answer {
   visibility: visible;
   transition-delay: 0s;
 }
+
+/* =====================================================================================================
+   zh-hant · monoline icons and a neutral palette (2026-10-02)
+   Operator: 「대만페이지는 전체 색감을 다시 정했으니까 초록색 아이콘들 이런거도 다 다시 디자인해야지 심플세련 느낌으로」.
+   Icons are ZhHantMonoIcon (src/components/zh-hant-icons): one line on a 24px grid, currentColor, no box.
+   What does not move is neutral: #1d1d1f text and icons, #6e6e73 secondary text, #e3e3e8 lines, #f5f5f7 fills,
+   black bands and #1d1d1f dark tiles. The ink #16382d stays only on what you press: primary pills, text links,
+   open or selected states, focus rings and the consent checkbox.
+   Scope: html[lang='zh-Hant'] (the token layer has to reach the language picker and the search overlay, which
+   are portaled to <body>), .site[data-locale='zh-hant'] and the zh page roots. ko / ja / en never match.
+   ===================================================================================================== */
+
+/* 1 · Tokens. The :root values stay for ko / ja / en. Aliases declared on :root with var() (--accent, --navy,
+   --primary, --text, --text-primary, --bg-white …) resolve against these, so they follow too. */
+html[lang='zh-Hant'],
+html[lang='zh-hant'] {
+  --purple-light: #0d231b;
+  --purple-bg: #f5f5f7;
+  --purple-border: #e3e3e8;
+  --wine: #86868b;
+  --wine-light: #aeaeb2;
+  --wine-dark: #6e6e73;
+  --wine-muted: #aeaeb2;
+  --warm-bg: #f5f5f7;
+  --warm-bg-alt: #f5f5f7;
+  --warm-border: #e3e3e8;
+  --warm-surface: #f5f5f7;
+  --warm-muted: #d2d2d7;
+  --warm-text: #6e6e73;
+  --warm-text-dark: #6e6e73;
+  --cream: #f5f5f7;
+  --off-white: #f5f5f7;
+  --gray-50: #f5f5f7;
+  --gray-100: #f5f5f7;
+  --gray-200: #e8e8ed;
+  --gray-300: #d2d2d7;
+  --gray-400: #aeaeb2;
+  --gray-500: #86868b;
+  --gray-600: #6e6e73;
+  --gray-700: #424245;
+  --gray-800: #1d1d1f;
+  --gray-900: #1d1d1f;
+  --text-heading: #1d1d1f;
+  --text-body: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-caption: #86868b;
+  --text-meta: #6e6e73;
+  --text-link: #16382d;
+  --text-link-hover: #0d231b;
+  --dark-bg: #1d1d1f;
+  --dark-bg-secondary: #000;
+  --dark-card: #2c2c2e;
+  --dark-text: #f5f5f7;
+  --dark-text-secondary: #a1a1a6;
+  --border-light: #e3e3e8;
+  --border-medium: #d2d2d7;
+  --border-dark: #424245;
+  --divider: #e3e3e8;
+  --editorial-rule: rgb(0 0 0 / 10%);
+  --editorial-rule-strong: #d2d2d7;
+  --ink-deep: #1d1d1f;
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 5%), 0 1px 2px rgb(0 0 0 / 2.5%);
+  --shadow-md: 0 6px 14px rgb(0 0 0 / 6%), 0 2px 4px rgb(0 0 0 / 2.5%);
+  --shadow-lg: 0 14px 32px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 4%);
+  --shadow-xl: 0 24px 48px rgb(0 0 0 / 10%), 0 10px 20px rgb(0 0 0 / 5%);
+  --shadow-card-hover: 0 16px 34px rgb(0 0 0 / 10%), 0 6px 14px rgb(0 0 0 / 5%);
+}
+
+html[lang='zh-Hant'] ::selection {
+  background: rgb(0 0 0 / 14%);
+  color: inherit;
+}
+
+/* Focus: the global 2px #234d3c ring becomes 3px ink; :where() keeps the weight low, so component rings
+   (ink, or white on dark surfaces) still win. */
+html[lang='zh-Hant'] :where(:focus-visible) {
+  outline: 3px solid #16382d;
+  outline-offset: 3px;
+}
+
+/* The body's moss radial wash goes; the page is plain white. */
+html[lang='zh-Hant'] body {
+  background: #fff;
+}
+
+/* zh pages set --text-secondary on [data-zh-hant-design] (was #4f5b55, a green grey). */
+.site [data-zh-hant-design] {
+  --text-secondary: #6e6e73;
+}
+
+/* 2 · The icon component */
+.zh-mono {
+  display: inline-block;
+  flex: none;
+  vertical-align: -0.125em;
+  overflow: visible;
+}
+
+/* 3 · Chrome drawn by global classes. The search overlay is portaled to <body>, so it is scoped by html[lang]. */
+html[lang='zh-Hant'] .search-overlay {
+  background: rgb(0 0 0 / 40%);
+}
+html[lang='zh-Hant'] .search-panel {
+  border: 1px solid #e3e3e8;
+  border-radius: 18px;
+  box-shadow: 0 24px 64px rgb(0 0 0 / 18%);
+}
+html[lang='zh-Hant'] .search-bar {
+  border-color: #86868b;
+  box-shadow: none;
+}
+html[lang='zh-Hant'] .search-bar:focus-within {
+  border-color: #16382d;
+  box-shadow: 0 0 0 3px rgb(22 56 45 / 14%);
+}
+html[lang='zh-Hant'] .search-input {
+  caret-color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-tabs button,
+html[lang='zh-Hant'] .search-tabs a {
+  border-color: #e3e3e8;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-tabs .active {
+  border-color: #1d1d1f;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-tabs button:hover,
+html[lang='zh-Hant'] .search-tabs button:focus-visible,
+html[lang='zh-Hant'] .search-tabs a:hover,
+html[lang='zh-Hant'] .search-tabs a:focus-visible {
+  border-color: #1d1d1f;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .chip {
+  border-color: #e3e3e8;
+  border-radius: 999px;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .chip:hover,
+html[lang='zh-Hant'] .chip:focus-visible {
+  border-color: #d2d2d7;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-panel .section-label::before {
+  content: none;
+}
+html[lang='zh-Hant'] .search-panel .section-label {
+  color: #6e6e73;
+}
+
+/* Native clear button of every search field: an iOS-style filled disc with a cut-out x, 24px target,
+   #6e6e73 (5.07:1 on white); white 72% on the dark hero. A mask, so forced colours repaint it below. */
+html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 6px;
+  cursor: pointer;
+  background-color: #6e6e73;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cmask id='m'%3E%3Crect width='24' height='24' fill='white'/%3E%3Cpath d='M8.75 8.75l6.5 6.5M15.25 8.75l-6.5 6.5' stroke='black' stroke-width='1.9' stroke-linecap='round'/%3E%3C/mask%3E%3Ccircle cx='12' cy='12' r='10.5' fill='black' mask='url(%23m)'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cmask id='m'%3E%3Crect width='24' height='24' fill='white'/%3E%3Cpath d='M8.75 8.75l6.5 6.5M15.25 8.75l-6.5 6.5' stroke='black' stroke-width='1.9' stroke-linecap='round'/%3E%3C/mask%3E%3Ccircle cx='12' cy='12' r='10.5' fill='black' mask='url(%23m)'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+}
+html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button:hover {
+  background-color: #1d1d1f;
+}
+html[lang='zh-Hant'] .hero input[type='search']::-webkit-search-cancel-button {
+  background-color: rgb(255 255 255 / 72%);
+}
+html[lang='zh-Hant'] .hero input[type='search']::-webkit-search-cancel-button:hover {
+  background-color: #fff;
+}
+@media (forced-colors: active) {
+  html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button {
+    forced-color-adjust: none;
+    background-color: currentColor;
+  }
+}
+
+/* Mega panels: white with a hairline, links #1d1d1f, chevrons #86868b (decorative; the link text names it). */
+.site[data-locale='zh-hant'] .mega-panel {
+  background: #fff;
+  border-bottom-color: #e3e3e8;
+}
+.site[data-locale='zh-hant'] .mega-title {
+  color: #1d1d1f;
+}
+.site[data-locale='zh-hant'] .mega-links li {
+  border-color: #e3e3e8;
+}
+.site[data-locale='zh-hant'] .mega-links a {
+  color: #1d1d1f;
+}
+.site[data-locale='zh-hant'] .mega-chevron {
+  display: inline-flex;
+  color: #86868b;
+}
+.site[data-locale='zh-hant'] .mega-links a:hover .mega-chevron,
+.site[data-locale='zh-hant'] .mega-links a:focus-visible .mega-chevron {
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-panel header .icon-button {
+  min-height: 44px;
+  padding-inline: 1rem;
+  border-color: #e3e3e8;
+  border-radius: 999px;
+  color: #1d1d1f;
+}
+html[lang='zh-Hant'] .search-panel header .icon-button:hover,
+html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
+  border-color: #d2d2d7;
+  background: #f5f5f7;
+}
+
+/* 4 · Shared page parts (zh scope). */
+/* Inline links that sit in text (office phone, review link) keep a quiet underline at rest: ink on #1d1d1f text
+   is 1.3:1, so colour alone would not mark them (WCAG 1.4.1). The hover bar under them goes. */
+.site[data-locale='zh-hant'] #offices .phone-number,
+.site[data-locale='zh-hant'] #offices .office-rating-link {
+  color: #16382d;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgb(22 56 45 / 40%);
+  text-underline-offset: 4px;
+}
+.site[data-locale='zh-hant'] #offices .phone-number:hover,
+.site[data-locale='zh-hant'] #offices .office-rating-link:hover {
+  text-decoration-color: currentColor;
+}
+.site[data-locale='zh-hant'] #offices .phone-number::after {
+  content: none;
+}
+.site[data-locale='zh-hant'] #offices .card-copy {
+  color: #6e6e73;
+}
+
+/* Back to top: a white disc with a hairline and a soft shadow; the arrow is the monoline glyph in #1d1d1f. */
+.site[data-locale='zh-hant'] .scroll-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e3e3e8;
+  border-radius: 999px;
+  background: #fff;
+  color: #1d1d1f;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
+}
+.site[data-locale='zh-hant'] .scroll-top:hover,
+.site[data-locale='zh-hant'] .scroll-top:focus-visible {
+  border-color: #d2d2d7;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+
+/* The map placeholder (shows only if the Google map cannot load): neutral grid and roads, a map pin on a white
+   disc, ink only on the link. */
+.site[data-locale='zh-hant'] .office-map-fallback {
+  background-color: #f5f5f7;
+  background-image:
+    linear-gradient(22deg, transparent 0 43%, rgb(0 0 0 / 7%) 44% 46%, transparent 47% 100%),
+    linear-gradient(132deg, transparent 0 52%, rgb(0 0 0 / 5%) 53% 55%, transparent 56% 100%),
+    repeating-linear-gradient(0deg, rgb(0 0 0 / 4%) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 3%) 0 1px, transparent 1px 52px);
+}
+.site[data-locale='zh-hant'] .office-map-fallback::after {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 12%);
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d1d1f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21.25s-6.75-5.85-6.75-11.25a6.75 6.75 0 0 1 13.5 0c0 5.4-6.75 11.25-6.75 11.25Z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+}
+.site[data-locale='zh-hant'] .office-map-fallback-panel {
+  border-color: #e3e3e8;
+}
+.site[data-locale='zh-hant'] .office-map-fallback-kicker {
+  color: #6e6e73;
+}
+.site[data-locale='zh-hant'] .office-map-fallback-link {
+  color: #16382d;
+  text-decoration-color: rgb(22 56 45 / 40%);
+}
+
+/* Decorative video controls: the glyph is white (was gold), hover stays white, focus is a black ring with a
+   white halo on light footage. */
+.site[data-locale='zh-hant'] .decorative-autoplay-video__control-icon {
+  display: inline-flex;
+  color: #fff;
+}
+.site[data-locale='zh-hant'] .decorative-autoplay-video__control:hover {
+  color: #fff;
+  border-color: rgb(255 255 255 / 90%);
+}
+.site [data-zh-hant-design] .decorative-autoplay-video__control:focus-visible {
+  outline-color: #000;
+}
+
+/* =====================================================================================================
+   en "Clear Night" chrome (en lane, 2026-10-02; CONCEPT-V2 sections 8-10). The en wrapper cannot reach the
+   shared header, footer and portaled overlays, so they are re-skinned here for English only: black bars,
+   one blue action colour (#0066d6) on every email button, blue focus rings (#4ea1ff), Inter Tight display,
+   Inter text, EN Glyphs for typed arrows. Colours, type and sizes only; the shared markup is untouched.
+   ===================================================================================================== */
+@font-face { font-family: 'EN Inter Tight'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-tight-latin-var.woff2') format('woff2'); }
+@font-face { font-family: 'EN Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-latin-wght.woff2') format('woff2'); }
+/* Typed arrows (U+2190, U+2192, U+2197) render as the en chevron drawn from the EnChevron paths (0.4 KB). */
+@font-face { font-family: 'EN Glyphs'; font-display: block; unicode-range: U+2190, U+2192, U+2197; src: url('/fonts/en/en-glyphs.woff2') format('woff2'); }
+/* Metric-matched fallbacks (fontTools, from the files above) so a late swap does not move line breaks. */
+@font-face { font-family: 'EN Inter Tight Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'); font-weight: 100 900; size-adjust: 95.09%; ascent-override: 101.88%; descent-override: 25.37%; line-gap-override: 0%; }
+@font-face { font-family: 'EN Inter Fallback'; src: local('Arial'), local('ArialMT'); font-weight: 100 549; size-adjust: 106.04%; ascent-override: 91.36%; descent-override: 22.75%; line-gap-override: 0%; }
+@font-face { font-family: 'EN Inter Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'); font-weight: 550 900; size-adjust: 101.25%; ascent-override: 95.68%; descent-override: 23.82%; line-gap-override: 0%; }
+
+/* en type: Inter replaces the Latin of Noto Sans KR as the body face (the Korean stack stays behind it for
+   inline CJK terms); no serif anywhere. Pages outside the en wrapper keep their layout and take these faces. */
+.site[data-locale='en'] {
+  --font-body: 'EN Glyphs', 'EN Inter', 'EN Inter Fallback', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading-en: 'EN Glyphs', 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif;
+  --font-display-en: var(--font-heading-en);
+  --en-chrome-action: #0066d6;
+  --en-chrome-action-hover: #0a6ee6;
+  --en-chrome-action-pressed: #005bbf;
+  --en-chrome-focus: #4ea1ff;
+}
+
+/* ---------- Header: black bar, one hairline, blue email pill ---------- */
+.site[data-locale='en'] header.header[data-public-site-header],
+.site[data-locale='en'] header.header[data-public-site-header].scrolled { background: #000; border-bottom-color: rgb(255 255 255 / 10%); color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-utility { background: #000; border-bottom: 1px solid rgb(255 255 255 / 8%); }
+.site[data-locale='en'] header.header[data-public-site-header] .header-main { background: #000; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-accent-line { display: none; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav { min-height: 0; padding-block: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > a,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button { min-height: 36px; color: #a1a1a6; background: transparent; border-color: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > a:focus-visible,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .utility-nav > * > button:focus-visible { color: #f5f5f7; background: rgb(255 255 255 / 8%); }
+.site[data-locale='en'] header.header[data-public-site-header] .utility-lang { border-color: transparent; background: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .logo-kr,
+.site[data-locale='en'] header.header[data-public-site-header] [data-header-content-fit-probe] > span:first-child > span:last-child { color: #f5f5f7; font-family: var(--font-heading-en); font-size: 1.0625rem; font-weight: 700; letter-spacing: -0.012em; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-logo { min-height: 44px; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link { position: relative; color: #d2d2d7; font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; letter-spacing: 0; padding-inline: 0.55rem; border-radius: 999px; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-list,
+.site[data-locale='en'] header.header[data-public-site-header] [data-header-content-fit-probe] > span:nth-child(2) { gap: 0.1rem; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link:focus-visible,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-item.active .nav-link { color: #fff; background: rgb(255 255 255 / 8%); }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page'],
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']:focus-visible { box-shadow: none; color: #fff; }
+/* current page: a 2px white underline (never a second accent colour) */
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']::after { content: ''; position: absolute; left: 0.55rem; right: 0.55rem; bottom: 7px; height: 2px; border-radius: 2px; background: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-indicator { background: rgb(255 255 255 / 60%); }
+.site[data-locale='en'] header.header[data-public-site-header] .header-search-btn,
+.site[data-locale='en'] header.header[data-public-site-header] .icon-button { border-color: transparent; background: transparent; color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .header-search-btn:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .icon-button:hover { background: rgb(255 255 255 / 12%); }
+.site[data-locale='en'] .header .nav-cta.button {
+  border-radius: 999px;
+  padding-inline: 1.2rem;
+  min-height: 44px;
+  background: var(--en-chrome-action);
+  border-color: var(--en-chrome-action);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  box-shadow: none;
+  transition: background-color 100ms cubic-bezier(0, 0, 0.5, 1), border-color 100ms cubic-bezier(0, 0, 0.5, 1);
+}
+.site[data-locale='en'] .header .nav-cta.button:hover { background: var(--en-chrome-action-hover); border-color: var(--en-chrome-action-hover); color: #fff; }
+.site[data-locale='en'] .header .nav-cta.button:active { background: var(--en-chrome-action-pressed); border-color: var(--en-chrome-action-pressed); }
+.site[data-locale='en'] .header .nav-cta.button:focus-visible { background: var(--en-chrome-action); border-color: var(--en-chrome-action); color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] :focus-visible { outline: 3px solid var(--en-chrome-focus); outline-offset: 3px; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-menu { background: transparent; border-bottom: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-panel { background: #08090b; border-bottom: 1px solid rgb(255 255 255 / 10%); color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-title { font-family: var(--font-heading-en); font-weight: 700; letter-spacing: -0.026em; color: #f5f5f7; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-description { color: #a1a1a6; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links li { border-color: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a { color: #d2d2d7; font-family: var(--font-body); font-weight: 500; letter-spacing: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:focus-visible { color: #fff; background: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-chevron { color: #86868b; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover .mega-chevron,
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:focus-visible .mega-chevron { color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-view-all { color: #fff; font-weight: 600; }
+
+/* Narrowest phones (320 px): the seal, the two-line name and both icon buttons share one 64 px row instead of
+   wrapping the buttons onto a second row (the header measured 113 px at 320 px). The shared module wraps them
+   with a seven-class selector, so these en-only rules repeat classes to outrank it without !important. */
+@media (max-width: 359px) {
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main > .header-main-inner.header-main-inner { flex-wrap: nowrap; align-items: center; column-gap: 8px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-logo.header-logo { flex: 1 1 auto; width: auto; min-width: 0; gap: 8px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-actions.header-actions { flex: none; width: auto; gap: 0; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-mark.logo-mark { width: 36px; height: 36px; flex: none; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-mark.logo-mark img { width: 36px; height: 36px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .logo-kr.logo-kr { font-size: 13.5px; }
+  .site[data-locale='en'] header.header.header[data-public-site-header] > .header-main.header-main .header-actions.header-actions > button { width: 44px; min-width: 44px; height: 44px; min-height: 44px; }
+}
+
+/* ---------- Footer: black, grey links that turn white, sentence-case titles, 44 px targets ---------- */
+.site[data-locale='en'] .footer-skyline { display: none; }
+.site[data-locale='en'] footer.site-footer { background: #000; color: #f5f5f7; border-top: 1px solid rgb(255 255 255 / 10%); }
+.site[data-locale='en'] footer.site-footer .footer-offices,
+.site[data-locale='en'] footer.site-footer .footer-main,
+.site[data-locale='en'] footer.site-footer .footer-copyright-row,
+.site[data-locale='en'] footer.site-footer .footer-bottom-bar { border-color: rgb(255 255 255 / 10%); background: transparent; }
+.site[data-locale='en'] footer.site-footer .footer-link-title { text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-size: 14px; font-weight: 600; color: #86868b; }
+.site[data-locale='en'] footer.site-footer .footer-link-list a,
+.site[data-locale='en'] footer.site-footer .footer-legal-links a,
+.site[data-locale='en'] footer.site-footer .office-link { display: inline-flex; align-items: center; min-height: 44px; color: #a1a1a6; font-size: 17px; text-decoration: none; }
+.site[data-locale='en'] footer.site-footer .office-link { display: grid; font-size: 14px; }
+.site[data-locale='en'] footer.site-footer .footer-legal-links a { font-size: 14px; }
+.site[data-locale='en'] footer.site-footer .office-link-name { color: #d2d2d7; font-size: 17px; font-weight: 600; }
+.site[data-locale='en'] footer.site-footer .office-link-address { color: #86868b; font-size: 14px; }
+.site[data-locale='en'] footer.site-footer .office-label { color: #86868b; font-size: 14px; font-weight: 600; }
+.site[data-locale='en'] footer.site-footer .office-link + .office-link::before { background: rgb(255 255 255 / 12%); }
+.site[data-locale='en'] footer.site-footer .footer-link-list a:hover,
+.site[data-locale='en'] footer.site-footer .footer-link-list a:focus-visible,
+.site[data-locale='en'] footer.site-footer .footer-legal-links a:hover,
+.site[data-locale='en'] footer.site-footer .footer-legal-links a:focus-visible { color: #fff; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.site[data-locale='en'] footer.site-footer .office-link:hover .office-link-name,
+.site[data-locale='en'] footer.site-footer .office-link:focus-visible .office-link-name { color: #fff; }
+.site[data-locale='en'] footer.site-footer .footer-main-brand { font-family: var(--font-heading-en); font-weight: 700; letter-spacing: -0.022em; color: #f5f5f7; }
+.site[data-locale='en'] footer.site-footer .footer-main-intro,
+.site[data-locale='en'] footer.site-footer .footer-main-note,
+.site[data-locale='en'] footer.site-footer .footer-copyright-row { color: #86868b; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-label { color: #86868b; font-size: 14px; letter-spacing: 0; text-transform: none; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-link { color: #f5f5f7; font-size: 19px; font-weight: 600; text-decoration: none; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-link:hover,
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-link:focus-visible { color: #fff; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-copy { min-height: 44px; padding-inline: 18px; border: 0; border-radius: 999px; background: rgb(255 255 255 / 12%); color: #fff; font-size: 16px; font-weight: 600; }
+.site[data-locale='en'] footer.site-footer .footer-consultation-email-copy:hover { background: rgb(255 255 255 / 18%); }
+.site[data-locale='en'] footer.site-footer .social-icon { width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgb(255 255 255 / 12%); color: #fff; }
+.site[data-locale='en'] footer.site-footer .social-icon:hover,
+.site[data-locale='en'] footer.site-footer .social-icon:focus-visible { background: rgb(255 255 255 / 20%); color: #fff; }
+.site[data-locale='en'] footer.site-footer .social-label { color: #86868b; }
+.site[data-locale='en'] footer.site-footer :focus-visible { outline: 3px solid var(--en-chrome-focus); outline-offset: 3px; }
+/* Back to top: a 44 px white-on-black circle in the right gutter, clear of the 1200 px content column. */
+.site[data-locale='en'] .scroll-top {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 50%;
+  background: rgb(0 0 0 / 78%);
+  color: #f5f5f7;
+  font-family: var(--font-body);
+  font-size: 17px;
+  box-shadow: none;
+}
+.site[data-locale='en'] .scroll-top:hover,
+.site[data-locale='en'] .scroll-top:focus-visible { background: #1c1d21; border-color: rgb(255 255 255 / 40%); color: #fff; box-shadow: none; }
+.site[data-locale='en'] .scroll-top:focus-visible { outline: 3px solid var(--en-chrome-focus); outline-offset: 3px; }
+@media (min-width: 1360px) {
+  .site[data-locale='en'] .scroll-top { right: max(16px, calc((100vw - 1200px) / 2 - 76px)); }
+}
+
+/* =====================================================================================================
+   en overlays: the mobile sheet, the search modal and the language picker are portaled to <body> (outside
+   .site), so they are scoped by html[lang='en']. Night panel, Inter faces, blue primary actions and focus.
+   ===================================================================================================== */
+html[lang='en'] :is(#public-mobile-nav-drawer, .search-panel, [class*='GlobalLanguagePicker_panel']) {
+  font-family: 'EN Glyphs', 'EN Inter', 'EN Inter Fallback', var(--font-body);
+}
+/* mobile sheet */
+html[lang='en'] #public-mobile-nav-drawer { background: rgb(0 0 0 / 62%); }
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-panel.drawer-panel { background: #000; color: #f5f5f7; border-left: 1px solid rgb(255 255 255 / 10%); }
+html[lang='en'] #public-mobile-nav-drawer .drawer-header,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link { border-color: rgb(255 255 255 / 10%); }
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-brand .logo-kr.logo-kr,
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-brand .logo-kr.logo-kr span { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.012em; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.022em; font-size: clamp(1.45rem, 6.4vw, 1.85rem); }
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link:focus-visible { color: #fff; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+html[lang='en'] #public-mobile-nav-drawer .icon-button,
+html[lang='en'] #public-mobile-nav-drawer .chip,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav a,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav button { background: rgb(255 255 255 / 12%); border-color: transparent; color: #f5f5f7; border-radius: 999px; }
+html[lang='en'] #public-mobile-nav-drawer .icon-button:hover,
+html[lang='en'] #public-mobile-nav-drawer .chip:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav a:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav button:hover { background: rgb(255 255 255 / 20%); color: #fff; border-color: transparent; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button { background: #0066d6; border-color: #0066d6; color: #fff; font-weight: 600; border-radius: 999px; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button:hover { background: #0a6ee6; border-color: #0a6ee6; color: #fff; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button:active { background: #005bbf; border-color: #005bbf; }
+html[lang='en'] #public-mobile-nav-drawer :focus-visible { outline: 3px solid #4ea1ff; outline-offset: 3px; }
+
+/* search modal */
+html[lang='en'] .search-overlay { background: rgb(0 0 0 / 66%); }
+html[lang='en'] .search-panel { background: #08090b; color: #f5f5f7; border: 1px solid rgb(255 255 255 / 10%); border-radius: 28px; box-shadow: 0 30px 80px rgb(0 0 0 / 55%); }
+html[lang='en'] .search-panel header strong { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.02em; font-size: 1.3rem; }
+html[lang='en'] .search-panel .icon-button { background: rgb(255 255 255 / 12%); border: 0; border-radius: 999px; color: #f5f5f7; }
+html[lang='en'] .search-panel .icon-button:hover { background: rgb(255 255 255 / 20%); }
+html[lang='en'] .search-panel .search-bar { grid-template-columns: minmax(0, 1fr) auto; background: rgb(20 20 22 / 82%); border: 1px solid rgb(255 255 255 / 24%); border-radius: 32px; box-shadow: none; }
+html[lang='en'] .search-panel .search-bar:focus-within { border-color: #4ea1ff; box-shadow: 0 0 0 3px rgb(78 161 255 / 28%); }
+html[lang='en'] .search-panel .search-input { width: 100%; min-width: 0; color: #f5f5f7; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+/* the pill around the field shows focus (blue border and ring), so the field itself draws no second ring */
+html[lang='en'] .search-panel .search-bar:focus-within .search-input:focus-visible { outline: none; box-shadow: none; }
+html[lang='en'] .search-panel .search-input::placeholder { color: #a1a1a6; }
+html[lang='en'] .search-panel .search-submit { min-height: 44px; background: #0066d6; color: #fff; border-radius: 999px; font-weight: 600; padding-inline: 1.25rem; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
+html[lang='en'] .search-panel .search-submit:hover { background: #0a6ee6; color: #fff; }
+html[lang='en'] .search-panel .search-tabs button,
+html[lang='en'] .search-panel .search-tabs a { background: transparent; border-color: transparent; color: #a1a1a6; }
+html[lang='en'] .search-panel .search-tabs .active { background: transparent; border-color: transparent; color: #fff; font-weight: 600; box-shadow: inset 0 -2px 0 #f5f5f7; border-radius: 0; }
+html[lang='en'] .search-panel .search-tabs button:hover,
+html[lang='en'] .search-panel .search-tabs button:focus-visible { color: #fff; }
+html[lang='en'] .search-panel .chip { background: rgb(255 255 255 / 12%); border-color: transparent; color: #f5f5f7; border-radius: 999px; }
+html[lang='en'] .search-panel .chip:hover,
+html[lang='en'] .search-panel .chip:focus-visible { background: rgb(255 255 255 / 20%); border-color: transparent; color: #fff; }
+html[lang='en'] .search-panel .section-label { color: #86868b; letter-spacing: 0; text-transform: none; }
+html[lang='en'] .search-panel .section-label::before { display: none; }
+html[lang='en'] .search-panel .search-result { color: #f5f5f7; border-color: rgb(255 255 255 / 10%); }
+html[lang='en'] .search-panel .search-result-meta,
+html[lang='en'] .search-panel .search-empty { color: #a1a1a6; }
+html[lang='en'] .search-panel :focus-visible { outline: 3px solid #4ea1ff; outline-offset: 3px; }
+
+/* language picker (CSS module classes, matched by their stable file-name prefix) */
+html[lang='en'] [class*='GlobalLanguagePicker_overlay'] { background: rgb(0 0 0 / 70%); }
+html[lang='en'] [class*='GlobalLanguagePicker_panel'] { background: #08090b; color: #f5f5f7; border: 1px solid rgb(255 255 255 / 10%); border-radius: 28px; box-shadow: 0 30px 80px rgb(0 0 0 / 55%); }
+html[lang='en'] [class*='GlobalLanguagePicker_title'] { color: #f5f5f7; font-family: 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.026em; }
+html[lang='en'] [class*='GlobalLanguagePicker_close'] { color: #f5f5f7; border: 0; background: rgb(255 255 255 / 12%); border-radius: 999px; }
+html[lang='en'] [class*='GlobalLanguagePicker_close']:hover,
+html[lang='en'] [class*='GlobalLanguagePicker_close']:focus-visible { background: rgb(255 255 255 / 20%); }
+html[lang='en'] [class*='GlobalLanguagePicker_regionTitle'] { color: #86868b; font-family: 'EN Inter', 'EN Inter Fallback', var(--font-body), system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+html[lang='en'] [class*='GlobalLanguagePicker_item']:hover,
+html[lang='en'] [class*='GlobalLanguagePicker_item']:focus-visible { background: rgb(255 255 255 / 8%); }
+html[lang='en'] [class*='GlobalLanguagePicker_item'][aria-current='page'] { background: rgb(255 255 255 / 12%); box-shadow: none; }
+/* RTL languages (Urdu, Arabic, Persian, Hebrew) sit at the start of their cell like every other language; the label text itself keeps rtl. */
+html[lang='en'] [class*='GlobalLanguagePicker_item'][dir='rtl'] { direction: ltr; text-align: left; }
+html[lang='en'] [class*='GlobalLanguagePicker_item'][dir='rtl'] [class*='GlobalLanguagePicker_autonym'] { direction: rtl; unicode-bidi: isolate; justify-self: start; }
+html[lang='en'] [class*='GlobalLanguagePicker_autonym'] { color: #f5f5f7; flex-wrap: wrap; }
+html[lang='en'] [class*='GlobalLanguagePicker_englishName'] { color: #a1a1a6; }
+html[lang='en'] [class*='GlobalLanguagePicker_notice'] { color: #a1a1a6; }
+html[lang='en'] [class*='GlobalLanguagePicker_badge'] { background: rgb(255 255 255 / 14%); color: #f5f5f7; margin-inline-start: 0; }
+html[lang='en'] [class*='GlobalLanguagePicker_panel'] :focus-visible { outline: 3px solid #4ea1ff; outline-offset: 3px; }
+html[lang='en'] .search-panel .icon-button,
+html[lang='en'] .search-panel .search-tabs button,
+html[lang='en'] .search-panel .search-tabs a,
+html[lang='en'] .search-panel .chip { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+/* ja shell (Opus 5.5 ja lane, 2026-10-01; round 2 re-keyed to the locale): every ja page, wrapped or not, carries the
+   間 palette — sumi ink and one vermilion — into the shared header action and footer. Other locales never match. */
+.site[data-locale='ja'] .header .nav-cta,
+html[lang='ja'] body .drawer .drawer-footer .button:not(.secondary):not(.ghost) {
+  border-radius: 999px;
+  background: #c8102e;
+  border-color: #c8102e;
+  color: #fff;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.site[data-locale='ja'] .header .nav-cta:hover,
+.site[data-locale='ja'] .header .nav-cta:focus-visible,
+html[lang='ja'] body .drawer .drawer-footer .button:not(.secondary):not(.ghost):hover {
+  background: #a50d26;
+  border-color: #a50d26;
+}
+.site[data-locale='ja'] .site-footer { background: #141210; }
+
+/* ja shell tokens (Opus 5.5 ja lane; 昊 V2 values 2026-10-03, CONCEPT-V2 §3.2): the header, its overlays (mega panel, language picker, mobile menu, search page) and the
+   footer sit outside the ja wrapper, so the 間 palette is remapped on <body> for every ja page (html[lang='ja']).
+   Other locales never match. Keep in step with the token block in JaDesign.module.css. */
+html[lang='ja'] body {
+  --purple: #141210;
+  --purple-light: #3b352d;
+  --purple-dark: #0e0c09;
+  --purple-bg: #f1ede4;
+  --purple-border: #dcd5c6;
+  --primary: #141210;
+  --gold: #c8102e;
+  --gold-light: #e0384f;
+  --gold-dim: #a50d26;
+  --warm-bg: #f4f2ee;
+  --warm-bg-alt: #ebe6da;
+  --warm-border: #d8d0c0;
+  --warm-surface: #e8e2d6;
+  --warm-muted: #ddd6c7;
+  --warm-text: #66615a;
+  --warm-text-dark: #2b2824;
+  --off-white: #ffffff;
+  --cream: #fbfaf7;
+  --gray-50: #f7f4ee;
+  --gray-100: #ede9df;
+  --gray-200: #e2ddd0;
+  --gray-300: #cdc6b6;
+  --gray-400: #a39b8b;
+  --gray-500: #7a7266;
+  --gray-600: #5d564c;
+  --gray-700: #433e36;
+  --gray-800: #2d2a24;
+  --gray-900: #141210;
+  --text-heading: #141210;
+  --text-body: #2b2824;
+  --text-secondary: #66615a;
+  --text-caption: #8a8274;
+  --text-meta: #66615a;
+  --text-link: #141210;
+  --text-link-hover: #a50d26;
+  --dark-bg: #141210;
+  --dark-bg-secondary: #100d0a;
+  --dark-card: #221e18;
+  --dark-text: #f5f1e8;
+  --dark-text-secondary: #cfc8ba;
+  --border-light: #e4e0d8;
+  --border-medium: #d6d1c7;
+  --border-dark: #2e2922;
+  --divider: #ece7dc;
+  /* aliases resolved at :root in globals.css do not follow the remap above; rebind the ones the shared blocks use */
+  --accent: #141210;
+  --accent-strong: #0e0c09;
+  --accent-purple: #141210;
+  --accent-purple-light: #3b352d;
+  --accent-purple-dark: #0e0c09;
+  --accent-purple-bg: #f1ede4;
+  --accent-purple-border: #dcd5c6;
+  --accent-gold: #c8102e;
+  --accent-gold-light: #e0384f;
+  --accent-gold-dim: #a50d26;
+  --highlight: #c8102e;
+  --border-purple: #dcd5c6;
+  --line: #e4e0d8;
+  --line-strong: #d6d1c7;
+  --ink-strong: #141210;
+  --ink: #141210;
+  --ink-muted: #2b2824;
+  --ink-subtle: #66615a;
+  --text: #2b2824;
+  --text-strong: #141210;
+  --text-muted: #66615a;
+  --text-primary: #141210;
+  --surface-tint: #ffffff;
+  --surface-elevated: #f7f4ee;
+  --surface-hero: #ffffff;
+  --bg-off-white: #ffffff;
+  --bg-cream: #fbfaf7;
+  --bg-light-purple: #f7f4ee;
+  --shadow-sm: 0 1px 3px rgba(27, 24, 20, 0.05);
+  --shadow-md: 0 6px 14px rgba(27, 24, 20, 0.06);
+  --shadow-lg: 0 14px 32px rgba(27, 24, 20, 0.08);
+  --shadow-card-hover: 0 16px 34px rgba(27, 24, 20, 0.1);
+  --wine: #c8102e;
+  --wine-light: #e0384f;
+  --wine-dark: #a50d26;
+  --wine-muted: #a39b8b;
+}
+
+/* ja shell chrome (Opus 5.5 ja lane): PublicChrome.module.css hard-codes the green ink, so the header, mega panel,
+   mobile drawer, language picker overlay and footer text are re-pointed to sumi and one vermilion here. ja design pages only. */
+html[lang='ja'] body .header { border-bottom-color: #e6e0d4; color: #1b1814; }
+html[lang='ja'] body .header .header-utility,
+html[lang='ja'] body .header .utility-lang,
+html[lang='ja'] body .header .header-search-btn,
+html[lang='ja'] body .header .mobile-toggle { border-color: #e6e0d4; }
+html[lang='ja'] body .header .header-accent-line { background: #e6e0d4; }
+html[lang='ja'] body .header .logo-kr,
+html[lang='ja'] body .header .nav-link,
+html[lang='ja'] body .header .header-search-btn,
+html[lang='ja'] body .header .mobile-toggle,
+html[lang='ja'] body .header .mega-links a,
+html[lang='ja'] body .drawer .drawer-nav-link,
+html[lang='ja'] body .drawer .logo-kr { color: #1b1814; }
+html[lang='ja'] body .header .utility-nav > a,
+html[lang='ja'] body .header .utility-nav > * > a,
+html[lang='ja'] body .header .utility-nav > * > button,
+html[lang='ja'] body .header .utility-lang > a,
+html[lang='ja'] body .header .utility-lang .locale-flag-switcher-link { color: #38332c; }
+html[lang='ja'] body .header .nav-link:hover,
+html[lang='ja'] body .header .nav-link:focus-visible,
+html[lang='ja'] body .header .nav-item.active .nav-link,
+html[lang='ja'] body .header .nav-link[aria-current='page'],
+html[lang='ja'] body .header .nav-link[aria-current='page']:hover,
+html[lang='ja'] body .header .utility-nav > a:hover,
+html[lang='ja'] body .header .utility-nav > * > a:hover,
+html[lang='ja'] body .header .utility-nav > * > button:hover,
+html[lang='ja'] body .header .utility-lang .locale-flag-switcher-link:hover,
+html[lang='ja'] body .header .header-search-btn:focus-visible,
+html[lang='ja'] body .header .mega-title,
+html[lang='ja'] body .header .mega-view-all,
+html[lang='ja'] body .header .mega-links a:hover,
+html[lang='ja'] body .header .mega-links a:focus-visible { color: #1b1814; }
+html[lang='ja'] body .header .nav-link:hover,
+html[lang='ja'] body .header .nav-item.active .nav-link { background: rgba(27, 24, 20, 0.05); }
+html[lang='ja'] body .header .nav-link[aria-current='page'],
+html[lang='ja'] body .header .nav-link[aria-current='page']:hover,
+html[lang='ja'] body .header .nav-link[aria-current='page']:focus-visible { box-shadow: inset 0 -2px 0 #c8102e; background: transparent; }
+html[lang='ja'] body .header .nav-indicator { background: #c8102e; }
+html[lang='ja'] body .header .nav-link:focus-visible,
+html[lang='ja'] body .header .header-search-btn:focus-visible { outline-color: #c8102e; border-color: #1b1814; }
+html[lang='ja'] body .header .mega-description { color: #5a544a; }
+html[lang='ja'] body .header .mega-panel { background: #fff; border-bottom-color: #e4e0d8; }
+html[lang='ja'] body .header .mega-links li { border-color: #d8d0c0; }
+html[lang='ja'] body .drawer#public-mobile-nav-drawer { background: rgba(27, 24, 20, 0.5); }
+html[lang='ja'] body [class*='GlobalLanguagePicker_overlay'] { background: rgba(27, 24, 20, 0.5); }
+html[lang='ja'] body .footer .office-link,
+html[lang='ja'] body .site-footer .office-link,
+html[lang='ja'] body .site-footer .office-link-address,
+html[lang='ja'] body .site-footer .footer-main-note,
+html[lang='ja'] body .site-footer .footer-link-list a,
+html[lang='ja'] body .site-footer .footer-legal-links a,
+html[lang='ja'] body .site-footer .social-label,
+html[lang='ja'] body .site-footer .footer-copyright-row { color: #d9d3c6; }
+html[lang='ja'] body .site-footer .footer-locale-switch .locale-flag-switcher-link { color: #ece7dc; }
+html[lang='ja'] body .footer-skyline { background: linear-gradient(180deg, #faf8f4 0%, #f2eee5 100%); }
+html[lang='ja'] body .footer-skyline .skyline-image img { filter: grayscale(100%) sepia(0.12) contrast(1.02) brightness(0.99); }
+html[lang='ja'] body { background: #fff; }
+
+/* ja round 2 (Opus 5.5 ja lane, 2026-10-01). Everything below is gated on the ja design wrapper. */
+
+/* Japanese line breaking: break between phrases, never inside one (word-break: auto-phrase where supported; elsewhere the
+   normal strict CJK breaking stays). The :not(#_) hook lifts specificity above the older per-element resets. */
+html[lang='ja'] body :is([data-ja-design], .site-footer, .header .mega-panel, .drawer):not(#_) :not(#_):not(input):not(textarea):not(a[href^='mailto:']) {
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+html[lang='ja'] body :is([data-ja-design], .site-footer) :is(p, li, dd, .faq-answer, .section-lede):not(#_) { text-wrap: pretty; }
+
+/* The old pencil skyline of Taiwanese landmarks contradicts the 間 pages; the sumi footer starts straight under the content. */
+html[lang='ja'] body .footer-skyline { display: none; }
+
+/* Breadcrumb hit area on phones: 44px tall without changing the visual rhythm. */
+@media (max-width: 767px) {
+  html[lang='ja'] body [data-ja-design] a.breadcrumb-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 4px; margin-inline: -4px; }
+}
+
+/* Mobile drawer: logo and wordmark in one row, nav in the desktop order. */
+html[lang='ja'] body .drawer .drawer-header .drawer-brand { display: inline-flex; align-items: center; gap: 12px; flex-direction: row; }
+html[lang='ja'] body .drawer .drawer-nav { display: flex; flex-direction: column; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/services'] { order: 1; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/lawyers'] { order: 2; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/pricing'] { order: 3; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/columns'] { order: 4; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/traffic-accidents'] { order: 5; }
+html[lang='ja'] body .drawer .drawer-nav-link[href$='/videos'] { order: 6; }
+html[lang='ja'] body .drawer .drawer-nav-link[href*='/contact'] { order: 7; }
+
+/* Language picker: the current tile keeps 日本語 on one line, right-to-left entries sit on the left of their cell. */
+html[lang='ja'] body [class*='GlobalLanguagePicker_autonym'] { flex-wrap: wrap; }
+html[lang='ja'] body [class*='GlobalLanguagePicker_item'][dir='rtl'] { direction: ltr; justify-items: start; text-align: left; }
+
+/* Mega panel: a short lead plus the email action fills the empty left half. */
+html[lang='ja'] body .header .mega-panel .mega-intro::after {
+  content: ''; display: block; width: min(100%, 360px); height: 120px; margin-top: 28px; border-radius: 20px;
+  background: url('/images/editorial/ja-kou-wall-morning-960.webp') 40% 40% / cover no-repeat;
+}
+/* Shared editorial rules force word-break: normal on the practice summaries; phrase breaks win on ja pages. */
+html[lang='ja'] html[lang='ja'] body [data-ja-design] :is(.services-detail-desc, .services-card-summary):not(#_) { word-break: auto-phrase; line-break: strict; }
+html[lang='ja'] body [class*='GlobalLanguagePicker_badge'] { margin-inline-start: 0; }
+
+/* ja 昊 chrome (Opus 5.5 home lane, 2026-10-03; CONCEPT-V2 §5 footer, §7.1, §7.9). ja pages only. */
+/* Footer: the sumi night; no fine print under 15 px except the legal line. */
+html[lang='ja'] body .site-footer :is(a, p, li, span, address, button):not(.footer-copyright-row, .footer-copyright-row *) { font-size: max(15px, 1em); }
+html[lang='ja'] body .site-footer .footer-copyright-row { font-size: 14px; }
+/* Back to top: a 48 px white circle with a sumi arrow; never focusable while hidden; hidden while the ja hero is in view. */
+html[lang='ja'] body .scroll-top {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  color: #141210;
+  font-size: 20px;
+  box-shadow: 0 6px 20px rgb(20 18 16 / 0.14), 0 0 0 1px rgb(20 18 16 / 0.08);
+}
+html[lang='ja'] body .scroll-top:hover,
+html[lang='ja'] body .scroll-top:focus-visible { background: #fff; color: #141210; box-shadow: 0 8px 24px rgb(20 18 16 / 0.18), 0 0 0 1px rgb(20 18 16 / 0.12); }
+html[lang='ja'] body .scroll-top:focus-visible { outline: 3px solid #141210; outline-offset: 3px; }
+html[lang='ja'] body .scroll-top:not([data-visible='true']) { visibility: hidden; }
+html[lang='ja'] body:has(#ja-home[data-hero-in-view='true']) .scroll-top { opacity: 0; visibility: hidden; pointer-events: none; }
+/* Phone capsule (JaCapsule): focused elements never end up under it. */
+@media (max-width: 899px) {
+  html[lang='ja']:has(#ja-home) { scroll-padding-bottom: 84px; }
+  html[lang='ja'] body:has(#ja-home) .scroll-top { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}
+/* Search overlay and language picker: white panels, sumi text, one vermilion. */
+html[lang='ja'] body .search-overlay { background: rgb(20 18 16 / 0.5); }
+html[lang='ja'] body .search-overlay .search-panel { background: #fff; border-radius: 28px; color: #2b2824; }
+html[lang='ja'] body .search-overlay .search-submit { background: #141210; color: #fff; border-color: #141210; }
+html[lang='ja'] body .search-overlay .search-tabs .active { color: #141210; box-shadow: inset 0 -2px 0 #c8102e; }
+html[lang='ja'] body .search-overlay .chip { min-height: 44px; border-radius: 999px; background: #f4f2ee; border-color: transparent; color: #141210; }
+/* Header: white, one hairline; the drawer reads like the footer's day counterpart. */
+html[lang='ja'] body .header { background: #fff; border-bottom-color: #e4e0d8; }
+html[lang='ja'] body .drawer .drawer-nav-link { font-size: 19px; min-height: 52px; }
+

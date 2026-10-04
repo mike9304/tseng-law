@@ -7,6 +7,7 @@ import {
   getCopyEmailLabel,
   getEmailCopiedMessage,
 } from '@/lib/consultation/public-contact';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 
 function copyEmailAddress(email: string): boolean | Promise<void> {
   if (navigator.clipboard?.writeText) {
@@ -65,18 +66,22 @@ export default function FooterEmailCopyButton({
         }}
         aria-label={copyLabel}
       >
-        <svg
-          viewBox="0 0 20 20"
-          width="15"
-          height="15"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          aria-hidden="true"
-        >
-          <rect x="7" y="6" width="9" height="10" rx="1.5" />
-          <path d="M13 6V4.5A1.5 1.5 0 0 0 11.5 3h-7A1.5 1.5 0 0 0 3 4.5v8A1.5 1.5 0 0 0 4.5 14H7" />
-        </svg>
+        {locale === 'zh-hant' ? (
+          <ZhHantMonoIcon name="copy" size={16} />
+        ) : (
+          <svg
+            viewBox="0 0 20 20"
+            width="15"
+            height="15"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            aria-hidden="true"
+          >
+            <rect x="7" y="6" width="9" height="10" rx="1.5" />
+            <path d="M13 6V4.5A1.5 1.5 0 0 0 11.5 3h-7A1.5 1.5 0 0 0 3 4.5v8A1.5 1.5 0 0 0 4.5 14H7" />
+          </svg>
+        )}
         <span>{copyLabel}</span>
       </button>
       <span

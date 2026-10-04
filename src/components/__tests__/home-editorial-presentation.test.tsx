@@ -16,9 +16,20 @@ import HomeContactCta from '@/components/HomeContactCta';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import Reveal from '@/components/Reveal';
 import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
-import JaPersonalPaths from '@/components/ja-design/JaPersonalPaths';
-import { JA_PINNED_COLUMN_SLUGS, JA_SERVICE_ORDER } from '@/components/ja-design/ja-arrangement';
 import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
+import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
+import JaHero from '@/components/ja-design/kou/JaHero';
+import JaSukashi from '@/components/ja-design/kou/JaSukashi';
+import JaLightField from '@/components/ja-design/kou/JaLightField';
+import JaPracticeIndex from '@/components/ja-design/kou/JaPracticeIndex';
+import JaRead from '@/components/ja-design/kou/JaRead';
+import JaAttorney from '@/components/ja-design/kou/JaAttorney';
+import JaCase from '@/components/ja-design/kou/JaCase';
+import JaFees from '@/components/ja-design/kou/JaFees';
+import JaFlow from '@/components/ja-design/kou/JaFlow';
+import JaFaqRows from '@/components/ja-design/kou/JaFaqRows';
+import JaOffices from '@/components/ja-design/kou/JaOffices';
+import JaClosing from '@/components/ja-design/kou/JaClosing';
 import {
   homeAttorneyTextSurfaceIds,
   homeHeroButtonSurfaceIds,
@@ -383,39 +394,22 @@ describe('legacy home editorial composition', () => {
       },
     ];
     const faqItems = [{ question: 'Q', answer: 'A' } as FAQItem];
-    const body = LegacyHomePageBody({ locale: 'ja', posts, faqItems });
-    expect(body.props).toMatchObject({ page: 'home' });
-    const children = Children.toArray(body.props.children);
-
-    expect(children).toHaveLength(11);
-    // 0: hero inside a display-only surface provider (kicker shows the firm name).
-    const hero = revealChild(children[0]) as ReactElement<{ locale: SiteLocale; presentation?: string }>;
-    expect(elementType(children[0])).toBe(BuilderSurfaceProvider);
-    expect(elementType(hero)).toBe(HeroSearch);
-    expect(hero.props).toMatchObject({ locale: 'ja', presentation: 'editorial' });
-    // 1–2: needs — the 日系企業 entry block, then the individual-matters row.
-    expect(elementType(revealChild(children[1]))).toBe(EnAcquisitionGuideLinks);
-    expect((revealChild(children[1]) as ReactElement).props).toMatchObject({ locale: 'ja', variant: 'full' });
-    expect(elementType(children[2])).toBe(JaPersonalPaths);
-    // 3: practice areas in Japanese demand order.
-    expect(elementType(revealChild(children[3]))).toBe(ServicesBento);
-    expect((revealChild(children[3]) as ReactElement).props).toMatchObject({
-      locale: 'ja', id: 'practice', variant: 'default', presentation: 'editorial', order: JA_SERVICE_ORDER,
-    });
-    // 4: column archive with the cornerstone picks pinned (same posts passed through).
-    expect(elementType(children[4])).toBe(InsightsArchiveSection);
-    expect((children[4] as ReactElement<{ posts: unknown; pinnedSlugs?: unknown }>).props.posts).toBe(posts);
-    expect((children[4] as ReactElement<{ pinnedSlugs?: unknown }>).props.pinnedSlugs).toBe(JA_PINNED_COLUMN_SLUGS);
-    // 5–10: attorney, facts, case, FAQ, offices, contact. No decorative heritage band on ja.
-    expect(children.map((child) => elementType(child)).includes(TaiwanHeritageInterlude)).toBe(false);
-    expect(elementType(revealChild(children[5]))).toBe(HomeAttorneySplit);
-    expect(elementType(revealChild(children[6]))).toBe(HomeStatsSection);
-    expect(elementType(revealChild(children[7]))).toBe(HomeCaseResultsSplit);
-    expect(elementType(revealChild(children[8]))).toBe(FAQAccordion);
-    expect((revealChild(children[8]) as ReactElement).props).toMatchObject({ items: faqItems, id: 'faq', sectionClassName: 'section section--gray' });
-    expect(elementType(revealChild(children[9]))).toBe(OfficeMapTabs);
-    expect((revealChild(children[9]) as ReactElement).props).toMatchObject({ id: 'offices', sectionClassName: 'section section--light', presentation: 'editorial' });
-    expect(elementType(revealChild(children[10]))).toBe(HomeContactCta);
+    // ja design (昊, 2026-10-03): the ja home is JaHomeBody, with the same posts and FAQ items passed through.
+    const body = LegacyHomePageBody({ locale: 'ja', posts, faqItems }) as ReactElement<{ posts: unknown; faqItems: unknown }>;
+    expect(body.type).toBe(JaHomeBody);
+    expect(body.props.posts).toBe(posts);
+    expect(body.props.faqItems).toBe(faqItems);
+    const home = JaHomeBody(body.props as Parameters<typeof JaHomeBody>[0]) as ReactElement<{ page: string; children: ReactElement[] }>;
+    expect(home.props).toMatchObject({ page: 'home' });
+    const types = Children.toArray(home.props.children).filter(isValidElement).map((child) => elementType(child));
+    // hero, 透かし, light field (needs + numbers), practice, read, attorney, case, fees, flow, FAQ, offices, closing.
+    const order = [JaHero, JaSukashi, JaLightField, JaPracticeIndex, JaRead, JaAttorney, JaCase, JaFees, JaFlow, JaFaqRows, JaOffices, JaClosing];
+    expect(types.filter((type) => order.includes(type as (typeof order)[number]))).toEqual(order);
+    // No decorative heritage band on ja.
+    expect(types.includes(TaiwanHeritageInterlude)).toBe(false);
+    // The shared components keep their locale and props; only ja restyles and optional props are added.
+    expect(renderToStaticMarkup(createElement(JaOffices))).toContain('事務所所在地');
+    expect(renderToStaticMarkup(createElement(JaFaqRows, { items: faqItems }))).toContain('id="faq"');
   });
 });
 

@@ -1,36 +1,122 @@
-/* en services list (Opus 5.5 en lane, 2026-10-01). Tokens come from EnPage.module.css (.root). */
-.index { border-top: 6px solid var(--en-signal); background: var(--en-mist); padding: 18px 24px 12px; }
-.indexTitle { margin: 0 0 6px; font-size: 12.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--en-muted); }
-.indexList { margin: 0; padding: 0; list-style: none; }
-.indexList li + li { border-top: 1px solid var(--en-line); }
-.indexList a {
+/* en services list, Clear Night (CONCEPT-V2 12.3; en-pages lane 2026-10-03). Tokens from EnPage.module.css (.root). */
+
+.practice { padding: 120px 0 160px; background: #000; color: var(--en-white); }
+.listTitle { margin: 0 0 64px; font-family: var(--en-display) !important; font-size: var(--en-t-m2); font-weight: 700; line-height: 1.06; letter-spacing: -0.022em; color: var(--en-white); }
+.practice .rows { display: grid; grid-template-columns: minmax(0, 1fr); gap: 120px; margin: 0; padding: 0; list-style: none; }
+.rowItem { min-width: 0; margin: 0; padding: 0; }
+.alias { display: block; height: 0; overflow: hidden; }
+.row {
   display: grid;
-  grid-template-columns: 2.4em minmax(0, 1fr) auto;
-  gap: 12px;
-  align-items: baseline;
-  min-height: 48px;
-  padding: 12px 0;
-  color: var(--en-ink);
-  font-size: 17px;
-  font-weight: 800;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.rowTitle {
+  grid-column: 1 / span 5;
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-m2);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  color: var(--en-white);
+  text-wrap: balance;
+}
+.rowBody { grid-column: 7 / span 6; display: grid; gap: 24px; min-width: 0; }
+.rowDesc { margin: 0; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-grey); text-wrap: pretty; }
+.rowDetails {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rowDetails li { margin: 0; padding: 0; font-family: var(--en-text); font-size: 19px; font-weight: 400; line-height: 1.45; color: var(--en-grey); }
+.rowDetails li::before,
+.rowDetails li::marker { content: none; }
+.rowMore {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  min-height: 44px;
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: var(--en-t-link);
+  font-weight: 600;
   text-decoration: none;
 }
-.indexList a:hover span:nth-child(2) { text-decoration: underline; text-underline-offset: 4px; }
-.indexList a:focus-visible { outline: 3px solid var(--en-ink); outline-offset: 2px; }
-.indexNo { font-size: 14px; color: var(--en-signal-text); font-variant-numeric: tabular-nums; }
-.indexArrow { color: var(--en-ink); }
+.rowMore:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.rowMore:focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+.rowMore :global([data-en-chevron]) { transition: translate 150ms var(--en-ease); }
+@media (hover: hover) { .rowMore:hover :global([data-en-chevron]) { translate: 3px 0; } }
 
-.cards :global(.services-bento) { padding-block: 64px 72px; background: var(--en-mist); }
-.cards :global(.services-bento .services-card-grid) { margin-top: 0; }
+.after { display: grid; gap: 16px; margin-top: 120px; max-width: 900px; }
+.assist { margin: 0; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-grey); }
+.assist a { color: var(--en-white); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.assist a:focus-visible,
+.advisory a:focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+/* Corporate advisory link: one line, label white 600, " — ", summary grey; no box. */
+.advisory p { margin: 0; padding: 0; border: 0; background: none; font-family: var(--en-text); font-size: 19px; line-height: 1.5; color: var(--en-grey); }
+.advisory a { display: inline; color: var(--en-white); font-weight: 600; text-decoration: none; }
+.advisory a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
 
-/* Overseas-company links (compact EnAcquisitionGuideLinks, markup unchanged) */
-.cards ~ :global([data-overseas-entry='compact']) { padding-block: 40px; background: #fff; border-top: 1px solid var(--en-line); }
-.cards ~ :global([data-overseas-entry='compact'] h2) { font-family: var(--en-sans) !important; font-size: 22px; font-weight: 800; color: var(--en-ink); }
-.cards ~ :global([data-overseas-entry='compact'] ul a) { min-height: 44px; border: 2px solid var(--en-ink); border-radius: 4px; color: var(--en-ink); font-weight: 700; }
-.cards ~ :global([data-overseas-entry='compact'] ul a:focus-visible) { outline: 3px solid var(--en-ink); outline-offset: 2px; }
+/* Overseas links (shared compact block): heading on black, the five links as white text links with chevrons. */
+.overseas :global(section[aria-labelledby]) { margin: 0; padding: 160px 0; border: 0; background: #000; color: var(--en-white); }
+.overseas :global(section[aria-labelledby] > .container) { padding: 0; }
+.overseas :global(section[aria-labelledby] h2) {
+  max-width: 14em;
+  margin: 0 0 40px;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-m2);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  color: var(--en-white);
+  text-wrap: balance;
+}
+.overseas :global(section[aria-labelledby] ul) { display: flex; flex-wrap: wrap; gap: 4px 40px; margin: 0; padding: 0; list-style: none; }
+.overseas :global(section[aria-labelledby] li) { margin: 0; padding: 0; }
+.overseas :global(section[aria-labelledby] ul a) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: 21px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.overseas :global(section[aria-labelledby] ul a [aria-hidden]) { margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
+.overseas :global(section[aria-labelledby] ul a:hover) { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; background: none; color: #fff; }
+.overseas :global(section[aria-labelledby] ul a:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 3px; }
 
+@media (max-width: 1023px) {
+  .row { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .rowTitle,
+  .rowBody { grid-column: 1 / -1; }
+}
 @media (max-width: 767px) {
-  .index { padding: 14px 18px 8px; }
-  .indexList a { font-size: 16px; }
-  .cards :global(.services-bento) { padding-block: 40px 48px; }
+  .practice { padding: 72px 0 96px; }
+  .practice .rows { gap: 80px; }
+  .rowDesc { font-size: 17px; }
+  .rowDetails { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .rowDetails li { font-size: 17px; }
+  .after { margin-top: 80px; }
+  .assist { font-size: 17px; }
+  .advisory p { font-size: 17px; }
+  .overseas :global(section[aria-labelledby]) { padding: 96px 0; }
+  .overseas :global(section[aria-labelledby] ul) { flex-direction: column; gap: 8px; }
+  .overseas :global(section[aria-labelledby] ul a) { font-size: 19px; }
 }

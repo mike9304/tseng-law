@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import {
   DECORATIVE_VIDEO_CONTROL_LABELS,
   type DecorativeVideoControlLabels,
@@ -53,6 +53,25 @@ export type DecorativeAutoplayVideoProps = {
   rootMargin?: string;
   loop?: boolean;
   controlLabels: DecorativeVideoControlLabels;
+  /**
+   * Optional: hold playback as if the video were out of view (e.g. while a
+   * scroll stage covers it with the poster). Omitted: unchanged behaviour.
+   */
+  paused?: boolean;
+  /**
+   * Optional: serve the pre-encoded poster file as is instead of through the
+   * image optimizer (avoids a cold re-encode of an above-the-fold poster).
+   * Omitted: next/image optimisation as before.
+   */
+  posterUnoptimized?: boolean;
+  /** Optional glyphs for the control (zh-hant: the monoline set). Without them the control shows Ⅱ ▶ ↻ as before. */
+  controlIcons?: DecorativeVideoControlIcons;
+};
+
+export type DecorativeVideoControlIcons = {
+  pause: ReactNode;
+  play: ReactNode;
+  replay: ReactNode;
 };
 
 export type DecorativeVideoPlaybackState = {
@@ -256,6 +275,9 @@ export function DecorativeAutoplayVideo({
   rootMargin = '320px 0px',
   loop = true,
   controlLabels = DECORATIVE_VIDEO_CONTROL_LABELS.ko,
+  controlIcons,
+  paused = false,
+  posterUnoptimized = false,
 }: DecorativeAutoplayVideoProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLImageElement>(null);
@@ -457,11 +479,11 @@ export function DecorativeAutoplayVideo({
     if (!shouldMountVideo || !video) return;
 
     syncDecorativeVideoPlayback(video, {
-      inViewport,
+      inViewport: inViewport && !paused,
       ...playbackState,
     });
     // useMobileSources keys the <video>: re-apply the state to the replacement element.
-  }, [inViewport, playbackState, shouldMountVideo, useMobileSources]);
+  }, [inViewport, paused, playbackState, shouldMountVideo, useMobileSources]);
 
   const imageSizing =
     typeof width === 'number' && typeof height === 'number'
@@ -483,7 +505,7 @@ export function DecorativeAutoplayVideo({
     if (!video) return;
 
     setPlaybackState(
-      runDecorativeVideoControlActivation(video, playbackState, inViewport),
+      runDecorativeVideoControlActivation(video, playbackState, inViewport && !paused),
     );
   };
 
@@ -514,6 +536,7 @@ export function DecorativeAutoplayVideo({
           // poster eager/high-priority without emitting that unconditional
           // preload.
           priority={false}
+          {...(posterUnoptimized ? { unoptimized: true } : {})}
           fetchPriority={priority ? 'high' : undefined}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
@@ -549,7 +572,7 @@ export function DecorativeAutoplayVideo({
             setReadyMountId(mount.id);
             setControlRevealed(true);
             handleDecorativeVideoCanPlay(videoRef.current, {
-              inViewport,
+              inViewport: inViewport && !paused,
               ...playbackState,
             });
           }}
@@ -588,7 +611,9 @@ export function DecorativeAutoplayVideo({
           onClick={handleControlClick}
         >
           <span aria-hidden="true" className="decorative-autoplay-video__control-icon">
-            {playbackState.ended ? '↻' : playbackState.userPaused ? '▶' : 'Ⅱ'}
+            {controlIcons
+              ? (playbackState.ended ? controlIcons.replay : playbackState.userPaused ? controlIcons.play : controlIcons.pause)
+              : (playbackState.ended ? '↻' : playbackState.userPaused ? '▶' : 'Ⅱ')}
           </span>
           <span>{controlLabel}</span>
         </button>

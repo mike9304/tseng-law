@@ -184,7 +184,7 @@
   --ap-text: #1d1d1f;
   --ap-muted: #6e6e73;
   --ap-line: #e3e3e8;
-  --ap-accent: #0a7a55;
+  --ap-accent: #16382d; /* 2026-10-02: links and text actions take the action ink */
   --ap-ink: #16382d;
   --ap-ink-deep: #0d231b;
   --ap-radius: 28px;
@@ -552,4 +552,16 @@
   }
   .groupGrid:has(> :only-child) { margin-inline: 0; padding-inline: 0; }
   .contact { padding-inline: var(--svc-gutter); }
+}
+
+/* ===== Monoline icons and neutral accents (2026-10-02): the practice glyph is a 48px ZhHantMonoIcon in #1d1d1f
+   with no box (48 + 2px keeps the title where the 44px box + 6px put it). ===== */
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 2px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--ap-text);
 }

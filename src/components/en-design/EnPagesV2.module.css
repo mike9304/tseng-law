@@ -1,0 +1,492 @@
+/*
+ * en inner pages, "Clear Night" (CONCEPT-V2 section 12; en-pages lane, 2026-10-03).
+ * Shared pieces for every English inner page: paper tone, the inner band (component 8g), the local nav
+ * (12.2, Option B), the closing card, pills, text links and type-led cards, plus the gentle scroll motion.
+ * The colour and type tokens are the ones EnPage.module.css sets on the wrapper (section 9 and 8.4).
+ * Selectors start with `.v2.v2[data-en-design][id]` where they must beat the older wrapper rules
+ * (0,3,0) by specificity rather than by stylesheet order, which changes between CSS chunks.
+ */
+
+.v2 {
+  background: #000;
+}
+
+/* ---------- Paper (reading pages): ink on white; shared tokens point back at light values ---------- */
+.paper {
+  --purple: #1d1d1f;
+  --purple-light: #515154;
+  --purple-dark: #1d1d1f;
+  --purple-bg: #f2f2f4;
+  --purple-border: #d2d2d7;
+  --gold: #1d1d1f;
+  --gold-light: #1d1d1f;
+  --gold-dim: #515154;
+  --wine: #515154;
+  --wine-light: #6e6e73;
+  --wine-dark: #1d1d1f;
+  --wine-muted: #6e6e73;
+  --warm-bg: #fff;
+  --warm-bg-alt: #f2f2f4;
+  --warm-border: #d2d2d7;
+  --warm-surface: #f2f2f4;
+  --warm-muted: #d2d2d7;
+  --warm-text: #515154;
+  --warm-text-dark: #1d1d1f;
+  --off-white: #f2f2f4;
+  --cream: #f2f2f4;
+  --white: #fff;
+  --gray-50: #f2f2f4;
+  --gray-100: #ebebed;
+  --gray-200: #d2d2d7;
+  --gray-300: #c7c7cc;
+  --gray-400: #86868b;
+  --gray-500: #6e6e73;
+  --gray-600: #515154;
+  --gray-700: #3a3a3c;
+  --gray-800: #2c2c2e;
+  --gray-900: #1d1d1f;
+  --text-heading: #1d1d1f;
+  --text-body: #1d1d1f;
+  --text-secondary: #515154;
+  --text-caption: #6e6e73;
+  --text-meta: #6e6e73;
+  --text-link: #0058c4;
+  --text-link-hover: #004aa8;
+  --border-light: #d2d2d7;
+  --border-medium: #c7c7cc;
+  --border-dark: #86868b;
+  --divider: #e5e5ea;
+  --surface-paper: #fff;
+  --surface-tint: #f2f2f4;
+  --surface-elevated: #f2f2f4;
+  --bg-white: #fff;
+  --bg-off-white: #f2f2f4;
+  --bg-cream: #f2f2f4;
+  --bg-light-purple: #f2f2f4;
+  --bg-card: #f2f2f4;
+  --bg-card-hover: #ebebed;
+  --line: var(--border-light);
+  --line-strong: var(--border-medium);
+  --ink-strong: #1d1d1f;
+  --ink-muted: #1d1d1f;
+  --ink-subtle: #515154;
+  --accent: #1d1d1f;
+  --primary: #1d1d1f;
+  --navy: #1d1d1f;
+  --text: #1d1d1f;
+  --text-primary: #1d1d1f;
+  --en-tile: #f2f2f4;
+  --en-tile-hi: #ebebed;
+  color: #1d1d1f;
+  background: #fff;
+}
+.paper :focus-visible { outline-color: var(--en-focus-paper) !important; }
+
+/* ---------- Title card additions (12.1) ---------- */
+.v2.v2[data-en-design][id] :global(.page-header .page-header-title) { max-width: 13em; }
+.v2.v2[data-en-design][id] :global(.page-header .section-lede) { margin-top: 28px; }
+.v2.v2[data-en-design][id] :global(.page-header [data-page-header-slot='children']) { margin-top: 8px; }
+.titleActions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 36px; margin-top: 40px; }
+
+/* ---------- Inner band (component 8g): full bleed, top gradient from black, hard bottom edge ---------- */
+.band {
+  position: relative;
+  height: clamp(200px, 28vw, 440px);
+  overflow: clip;
+  background: #000;
+}
+.bandPicture { display: block; width: 100%; height: 100%; }
+.bandImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.band::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 30%;
+  background: linear-gradient(#000, rgb(0 0 0 / 0));
+  pointer-events: none;
+}
+
+/* ---------- Local nav (12.2, Option B): sticky under the site header, anchors only ---------- */
+.localNav {
+  position: sticky;
+  top: var(--en-hdr);
+  z-index: 20;
+  height: 52px;
+  background: #000;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+.localNavInner { display: flex; align-items: center; justify-content: space-between; gap: 32px; height: 100%; }
+.localNavTitle {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--en-text);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--en-white);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.localNavList {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 0 24px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+.localNavList::-webkit-scrollbar { display: none; }
+.localNavList[data-overflow='true'] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); padding-right: 40px; }
+/* The wrapper's `p { text-wrap: pretty }` would reset the wrap mode, so the title states nowrap again. */
+.v2.v2[data-en-design][id] .localNavTitle { flex: none; text-wrap: nowrap; white-space: nowrap; }
+.localNavList li { flex: none; scroll-snap-align: start; }
+.localNavLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 2px;
+  color: var(--en-grey);
+  font-family: var(--en-text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 150ms var(--en-ease);
+}
+.localNavLink:hover,
+.localNavLink[aria-current='true'] { color: #fff; }
+.localNavLink[aria-current='true']::after { content: ''; position: absolute; left: 0; right: 0; bottom: 3px; height: 2px; background: #fff; }
+.localNavLink:focus-visible { outline: 3px solid var(--en-focus); outline-offset: -3px; }
+@media (max-width: 1023px) {
+  .localNavTitle { display: none; }
+  .localNavInner { justify-content: flex-start; }
+  .localNavList { gap: 0 20px; }
+}
+@media (max-width: 767px) { .localNav { height: 48px; } }
+@media (max-height: 499px) { .localNav { display: none; } }
+/* html already reserves --header-offset-desktop (scroll-padding-top): subtract it so the header is not counted twice. */
+.v2.v2[data-en-design][id] :is(section[id], [id]:is(h2, h3), article[id]) { scroll-margin-top: calc(var(--en-hdr) + 52px + 16px - var(--header-offset-desktop, 96px)); }
+
+/* ---------- Pills (component 1, 3) and text link (component 2) ---------- */
+.pill,
+.pill2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 999px;
+  font-family: var(--en-text);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 100ms var(--en-ease);
+}
+.pill { background: var(--en-action); color: #fff; }
+.pill:hover { background: var(--en-action-hover); color: #fff; }
+.pill:active { background: var(--en-action-pressed); scale: 0.98; }
+.pill2 { min-height: 44px; padding: 0 22px; font-size: 16px; background: rgb(255 255 255 / 12%); color: #fff; }
+.pill2:hover { background: rgb(255 255 255 / 18%); color: #fff; }
+.paper .pill2 { background: #e8e8ed; color: #1d1d1f; }
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: var(--en-t-link);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.paper .textLink { color: var(--en-focus-paper); }
+.textLink:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.pill :global([data-en-chevron]),
+.textLink :global([data-en-chevron]) { transition: translate 150ms var(--en-ease); }
+@media (hover: hover) {
+  .pill:hover :global([data-en-chevron='right']),
+  .textLink:hover :global([data-en-chevron='right']) { translate: 3px 0; }
+}
+.pill:focus-visible,
+.pill2:focus-visible,
+.textLink:focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+.paper .pill:focus-visible,
+.paper .pill2:focus-visible,
+.paper .textLink:focus-visible { outline-color: var(--en-focus-paper); }
+
+/* ---------- Closing card (12.1): night, no image ---------- */
+.closing { padding: 160px 0; background: var(--en-night); color: var(--en-white); }
+.closingInner > * { max-width: 980px; }
+.closingTitle {
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-l2);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.024em;
+  color: var(--en-white);
+  text-wrap: balance;
+}
+.closingText { max-width: 760px; margin: 28px 0 0; font-family: var(--en-text); font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-grey); text-wrap: pretty; }
+.closingEmail { margin: 32px 0 0; font-family: var(--en-display); font-size: 28px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; overflow-wrap: anywhere; }
+.closingEmail a { display: inline-flex; align-items: center; min-height: 44px; color: var(--en-white); text-decoration: none; }
+.closingEmail a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.closingEmail a:focus-visible { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+.closingActions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 36px; margin-top: 40px; }
+
+/* ---------- Type-led card (component 4) ---------- */
+.card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--en-tile);
+  clip-path: inset(0 round 28px);
+  transition: background-color 300ms var(--en-ease);
+}
+@media (hover: hover) { .card:hover { background: var(--en-tile-hi); } }
+.paper .card { border-radius: 18px; clip-path: inset(0 round 18px); }
+
+/* ---------- FAQAccordion on paper (profile, service detail, landing pages): S9 rows in ink ---------- */
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout]) { background: #fff; color: #1d1d1f; border: 0; }
+/* The "FAQ" eyebrow repeats its H2 (CONCEPT-V2 21), so it is not shown. */
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .section-label) { display: none; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .section-title) { font-size: var(--en-t-l2); line-height: 1.04; letter-spacing: -0.024em; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-list) { display: grid; gap: 12px; border: 0; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-item) { padding: 0 24px; border: 0; border-radius: 18px; background: transparent; box-shadow: none; transition: background-color 300ms var(--en-ease); }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-item:has(.is-open)) { background: #f2f2f4; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-question button) {
+  min-height: 64px;
+  padding: 18px 0;
+  font-family: var(--en-text);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  color: #1d1d1f;
+}
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-arrow) {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 5%);
+  color: #1d1d1f;
+  font-family: var(--en-text);
+  font-size: 22px;
+  font-weight: 400;
+}
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-answer) { font-family: var(--en-text); font-size: 19px; line-height: 1.6; color: #3a3a3c; }
+.v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-question button:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 2px; }
+@media (max-width: 767px) {
+  .v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-item) { padding: 0 16px; }
+  .v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-question button) { font-size: 19px; }
+  .v2.v2[data-en-design][id] .paper :global(section[data-faq-layout] .faq-answer) { font-size: 17px; }
+}
+
+/* ---------- Attorney authority card on paper (column rail, landing pages): a compact mini card, no chips ---------- */
+.v2.v2[data-en-design][id] .paper :global(.authority-card) { display: grid; gap: 16px; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-eyebrow) { margin: 0; font-family: var(--en-text); font-size: 14px; font-weight: 500; letter-spacing: 0; text-transform: none; color: #6e6e73; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-heading) { margin: -8px 0 0; font-family: var(--en-display); font-size: 21px; font-weight: 700; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-top) { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; align-items: start; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-photo) { position: relative; width: 72px; height: 72px; border-radius: 18px; overflow: hidden; background: #15130a; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-photo img) { object-fit: cover; object-position: 50% 15%; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-name) { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--en-display); font-size: 19px; font-weight: 700; color: #1d1d1f; text-decoration: none; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-role) { margin: 0; font-family: var(--en-text); font-size: 14px; color: #6e6e73; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-summary) { grid-column: 1 / -1; margin: 4px 0 0; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: #515154; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-label) { margin: 0 0 6px; font-family: var(--en-text); font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; color: #6e6e73; }
+.v2.v2[data-en-design][id] .paper :global(.authority-chip-list) { display: block; font-family: var(--en-text); font-size: 17px; line-height: 1.5; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-chip) { display: inline; padding: 0; border: 0; border-radius: 0; background: none; font-size: 17px; color: #1d1d1f; }
+.v2.v2[data-en-design][id] .paper :global(.authority-chip + .authority-chip)::before { content: ' · '; color: #86868b; }
+.v2.v2[data-en-design][id] .paper :global(.authority-link-list) { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.v2.v2[data-en-design][id] .paper :global(.authority-link-list a) { display: inline-flex; align-items: center; min-height: 44px; color: #0058c4; font-family: var(--en-text); font-size: 17px; font-weight: 600; text-decoration: none; }
+.v2.v2[data-en-design][id] .paper :global(.authority-link-list a[target='_blank'])::after { content: '\2197'; margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions) { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions a.button) { min-height: 44px; padding: 0 22px; border: 0; border-radius: 999px; font-family: var(--en-text); font-size: 16px; font-weight: 600; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions a.button.button--outline),
+.v2.v2[data-en-design][id] .paper :global(.blog-sidebar .authority-card-actions a.button) { padding: 0; background: none; color: #0058c4; }
+.v2.v2[data-en-design][id] .paper :global(.authority-card-actions a.button.button--outline)::after,
+.v2.v2[data-en-design][id] .paper :global(.blog-sidebar .authority-card-actions a.button)::after { content: '\2192'; margin-left: 0.3em; font-family: var(--en-display); font-weight: 400; }
+
+/* ---------- Pause control on inner-page loops (component 9): a 44 px circle, label kept for screen readers ---------- */
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control) {
+  position: absolute;
+  inset: auto 16px 16px auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 50%);
+  box-shadow: none;
+  color: #fff;
+}
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control > span:not(.decorative-autoplay-video__control-icon)) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control-icon) { margin: 0; color: #fff; font-size: 14px; line-height: 1; }
+.v2.v2[data-en-design][id] :global(.decorative-autoplay-video__control:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 3px; }
+
+/* ---------- Member sign-in (/en/login): title card on black, the form on a paper card ---------- */
+.v2.v2:global(#en-login) :global(section[class*='authPage']) { min-height: 0; padding: 72px 0 160px; background: #000; color: var(--en-white); }
+.v2.v2:global(#en-login) :global(section[class*='authPanel']) {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 48px;
+  align-items: start;
+  width: min(1200px, calc(100% - 40px));
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.v2.v2:global(#en-login) :global(div[class*='authIntro']) { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: var(--en-white); }
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > p:first-child) { margin: 0 0 16px; font-family: var(--en-text); font-size: var(--en-t-label); font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--en-grey); }
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > p:first-child)::before,
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > p:first-child)::after { content: none; display: none; }
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] h1) {
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-xl);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.028em;
+  color: var(--en-white);
+  text-wrap: balance;
+}
+.v2.v2:global(#en-login) :global(div[class*='authIntro'] > span) { display: block; max-width: 640px; margin: 28px 0 0; font-family: var(--en-text); font-size: var(--en-t-lead); font-weight: 500; line-height: 1.36; color: var(--en-grey); }
+.v2.v2:global(#en-login) :global(form[class*='authForm']) {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 40px;
+  border: 0;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: none;
+  color: #1d1d1f;
+}
+.v2.v2:global(#en-login) :global(form[class*='authForm'] label) { display: grid; gap: 8px; font-family: var(--en-text); font-size: 17px; font-weight: 600; color: #1d1d1f; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] input) { min-height: 56px; padding: 0 16px; border: 1px solid #86868b; border-radius: 14px; background: #fff; color: #1d1d1f; font-family: var(--en-text); font-size: 17px; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] input:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 2px; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] button) { min-height: 56px; margin-top: 8px; border: 0; border-radius: 999px; background: var(--en-action); color: #fff; font-family: var(--en-text); font-size: 18px; font-weight: 600; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] button:hover) { background: var(--en-action-hover); }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] button:focus-visible) { outline: 3px solid var(--en-focus-paper); outline-offset: 3px; }
+.v2.v2:global(#en-login) :global(form[class*='authForm'] p) { margin: 0; font-family: var(--en-text); font-size: 17px; color: #515154; }
+@media (max-width: 899px) {
+  .v2.v2:global(#en-login) :global(section[class*='authPanel']) { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+}
+@media (max-width: 767px) {
+  .v2.v2:global(#en-login) :global(section[class*='authPage']) { padding: 40px 0 96px; }
+  .v2.v2:global(#en-login) :global(form[class*='authForm']) { padding: 24px; border-radius: 18px; }
+}
+
+/* ---------- Section frame ---------- */
+.section { padding: 160px 0; }
+.sectionNight { background: var(--en-night); }
+.sectionBlack { background: #000; }
+.sectionTitle {
+  margin: 0;
+  font-family: var(--en-display) !important;
+  font-size: var(--en-t-m2);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  color: var(--text-heading, var(--en-white));
+  text-wrap: balance;
+}
+.sectionLede { max-width: 760px; margin: 20px 0 0; font-size: 21px; font-weight: 500; line-height: 1.45; color: var(--en-grey); text-wrap: pretty; }
+.paper .sectionLede { color: #515154; }
+
+@media (max-width: 1023px) {
+  .section { padding: 120px 0; }
+  .closing { padding: 120px 0; }
+}
+@media (max-width: 767px) {
+  .section { padding: 96px 0; }
+  .closing { padding: 96px 0; }
+  .closingText { font-size: 17px; }
+  .closingEmail { font-size: 22px; }
+  .pill { display: block; padding: 15px 24px; font-size: 17px; line-height: 1.5; text-align: center; }
+  .closingActions > .pill,
+  .titleActions > .pill,
+  .v2.v2[data-en-design][id] :global(.page-header) .pill { width: 100%; }
+  .card { padding: 24px; border-radius: 18px; clip-path: inset(0 round 18px); }
+}
+
+/* ---------- Gentle scroll motion (transform and opacity only; static under reduced motion) ---------- */
+@keyframes enBandDrift {
+  from { transform: scale(1.12) translateY(-3%); }
+  to { transform: scale(1.02) translateY(2%); }
+}
+@keyframes enRise {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes enDraw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .bandImg {
+      animation: enBandDrift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    .v2.v2[data-en-design][id] [data-en-rise] {
+      animation: enRise linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 90%;
+    }
+    .v2.v2[data-en-design][id] [data-en-draw] {
+      transform-origin: left center;
+      animation: enDraw linear none;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+    .v2.v2[data-en-design][id] [data-en-rise]:focus-within { animation: none; }
+  }
+}
+
+@media print {
+  .localNav { position: static; }
+  .band { display: none; }
+}

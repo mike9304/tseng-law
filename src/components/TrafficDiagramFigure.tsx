@@ -1,5 +1,6 @@
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import TrafficManualVideo from '@/components/TrafficManualVideo';
+import { ZH_VIDEO_CONTROL_ICONS } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import Image from 'next/image';
 import type { CSSProperties } from 'react';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
@@ -73,6 +74,7 @@ export default function TrafficDiagramFigure({
           controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
           playbackTools={diagram.playbackTools}
           describedBy={captionId}
+          controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
         />}
       </div>
       <figcaption id={captionId} className={styles.caption}>

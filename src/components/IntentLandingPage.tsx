@@ -15,6 +15,10 @@ import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import styles from './IntentLandingPage.module.css';
+import EnPageShell from '@/components/en-design/EnPageShell';
+import enStyles from '@/components/en-design/EnLanding.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLandingStyles from '@/components/ja-design/JaLanding.module.css';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 import {
   getConsultationCtaLabel,
@@ -25,6 +29,8 @@ import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 import { LITIGATION_SITUATION_NAV } from '@/data/multilingual-international-v2';
 import ForeignMatterRouter from '@/components/ForeignMatterRouter';
 import { getForeignMatterRouter } from '@/data/foreign-matter-router';
+import ZhHantIntentHeaderActions from '@/components/zh-hant-intent/ZhHantIntentHeaderActions';
+import zhStyles from '@/components/zh-hant-intent/ZhHantIntent.module.css';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -537,7 +543,7 @@ export default function IntentLandingPage({
     })),
   };
 
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -575,6 +581,7 @@ export default function IntentLandingPage({
       <JsonLd data={faqSchema} />
 
       <PageHeader locale={locale} label={page.label} title={page.title} description={page.description}>
+        {locale === 'zh-hant' ? <ZhHantIntentHeaderActions contactLabel={l.contact} pricingLabel={l.pricing} /> : null}
         {isSiteLocale(locale) && slug === 'taiwan-litigation-lawyer' ? (
           <nav
             className="intent-situation-nav"
@@ -872,4 +879,19 @@ export default function IntentLandingPage({
       </section>
     </>
   );
+
+  // zh-hant: one wrapper scopes the Apple-language styles (zh-hant-intent/ZhHantIntent.module.css).
+  if (locale === 'zh-hant') {
+    return (
+      <div id="zh-hant-intent" className={zhStyles.root} data-zh-hant-design="intent">
+        {body}
+      </div>
+    );
+  }
+  // ja 昊 V2 inner pages (2026-10-02): same blocks inside the ja wrapper, restyled by JaLanding.module.css.
+  if (locale === 'ja') return <JaPageShell page="landing" className={jaLandingStyles.root}>{body}</JaPageShell>;
+  // en (Clear Night inner pages): the same landing body inside the en wrapper; other locales render it as before.
+  return locale === 'en'
+    ? <EnPageShell page="landing"><div className={enStyles.landing}>{body}</div></EnPageShell>
+    : body;
 }

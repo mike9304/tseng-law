@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import MemberAuthClient from '@/components/members/MemberAuthClient';
+import EnPageShell from '@/components/en-design/EnPageShell';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import { resolveSafeNextPath } from '@/lib/safe-next';
 import { buildSeoMetadata } from '@/lib/seo';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
 import zhLoginStyles from '@/components/zh-hant-pages/ZhHantLogin.module.css';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
 
 const LOGIN_DESCRIPTIONS: Record<SiteLocale, string> = {
   ko: '회원 계정에 로그인합니다.',
@@ -48,13 +51,17 @@ export default async function MemberLoginPage(
   const member = await getCurrentSiteMember();
   if (member) redirect(nextPath);
 
+  const body = <MemberAuthClient locale={locale} nextPath={nextPath} />;
   // zh-hant Apple pass (2026-10-01): typography only, inside a scoped wrapper; other locales render unchanged.
   if (locale === 'zh-hant') {
     return (
       <div className={`${zhPageShellStyles.shell} ${zhLoginStyles.root}`} id="zh-hant-login" data-zh-hant-design="login">
-        <MemberAuthClient locale={locale} nextPath={nextPath} />
+        {body}
       </div>
     );
   }
-  return <MemberAuthClient locale={locale} nextPath={nextPath} />;
+  // ja 昊 V2 inner pages (2026-10-02): the same sign-in block inside the ja wrapper (JaLegal.module.css).
+  if (locale === 'ja') return <JaPageShell page="login" className={jaLegalStyles.root}>{body}</JaPageShell>;
+  // en redesign (Opus 5.5 en lane): the same sign-in form in the en wrapper (en type and ink palette).
+  return locale === 'en' ? <EnPageShell page="login">{body}</EnPageShell> : body;
 }

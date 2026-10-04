@@ -9,7 +9,7 @@ import { teamContent } from '@/data/team-members';
 import SectionLabel from '@/components/SectionLabel';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
 import { homeHeroTextSurfaceIds } from '@/lib/builder/registry';
-import { SurfaceText } from '@/lib/builder/surface-context';
+import { SurfaceText, useBuilderSurfaceContext } from '@/lib/builder/surface-context';
 import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
@@ -113,6 +113,23 @@ const jaHeroTitlePhrases: Record<string, readonly string[]> = {
   '台湾の会社設立・労務・紛争を、日本語で。': ['台湾の会社設立・', '労務・', '紛争を、', '日本語で。'],
 };
 
+// ja only: keep the audience noun phrase 在台日本人の方 on one line (text unchanged, only wrapped in a no-break span).
+function JaNoBreakPhrases({ locale, text }: { locale: SiteLocale; text: string }) {
+  const phrase = '在台日本人の方';
+  if (locale !== 'ja' || !text.includes(phrase)) return <>{text}</>;
+  const parts = text.split(phrase);
+  return (
+    <>
+      {parts.map((part, index) => (
+        <span key={index} style={{ display: 'contents' }}>
+          {index > 0 ? <span style={{ whiteSpace: 'nowrap' }}>{phrase}</span> : null}
+          {part}
+        </span>
+      ))}
+    </>
+  );
+}
+
 function HeroTitleBody({ locale, title }: { locale: SiteLocale; title: string }) {
   const phrases = locale === 'ja' ? jaHeroTitlePhrases[title] : undefined;
   if (!phrases) return <>{title}</>;
@@ -138,6 +155,8 @@ export default function HeroSearch({
   trustContent,
   persistentQuickMenus = false,
   media,
+  showHomePaths = true,
+  subtitleKeyPhrase,
 }: {
   locale: SiteLocale;
   scrollHref?: string;
@@ -149,6 +168,16 @@ export default function HeroSearch({
   persistentQuickMenus?: boolean;
   /** Editorial only: replaces the hero photo in the media frame (en home design). Omitted elsewhere. */
   media?: ReactNode;
+  /**
+   * Renders the company-setup / dispute path links under the CTA (default). The zh-hant home passes false:
+   * its domestic hero never shows them, and hiding them with CSS left unreachable links in the markup.
+   */
+  showHomePaths?: boolean;
+  /**
+   * Editorial only (en home design): when the rendered subtitle starts with this phrase, the phrase is
+   * wrapped in `<span data-hero-key>` so it can be set apart by colour. Omitted elsewhere (plain text).
+   */
+  subtitleKeyPhrase?: string;
 }) {
   const hero = siteContent[locale].hero;
   const HeroHeading = headingLevel === 2 ? 'h2' : 'h1';
@@ -160,6 +189,19 @@ export default function HeroSearch({
   const lead = teamContent[locale].members[0];
   const profilePath = getAttorneyProfilePath(locale);
   const searchInputId = `hero-search-${locale}`;
+  const { overrides: surfaceOverrides } = useBuilderSurfaceContext();
+  const renderedSubtitle = surfaceOverrides[homeHeroTextSurfaceIds[2]] ?? hero.subtitle;
+  const keyedSubtitle = editorial
+    && subtitleKeyPhrase
+    && typeof renderedSubtitle === 'string'
+    && renderedSubtitle.startsWith(subtitleKeyPhrase)
+    ? (
+      <>
+        <span data-hero-key="">{subtitleKeyPhrase}</span>
+        {renderedSubtitle.slice(subtitleKeyPhrase.length)}
+      </>
+    )
+    : null;
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -233,7 +275,7 @@ export default function HeroSearch({
           {emailConsultationCtaLabels[locale]}
         </a>
       </div>
-      <LocaleHomePathNav locale={locale} tone={tone} />
+      {showHomePaths ? <LocaleHomePathNav locale={locale} tone={tone} /> : null}
     </div>
   );
 
@@ -273,7 +315,7 @@ export default function HeroSearch({
             </SectionLabel>
             {titleSurface}
             <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
-              <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
+              {keyedSubtitle ?? <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}><JaNoBreakPhrases locale={locale} text={hero.subtitle} /></SurfaceText>}
             </p>
             {lead ? (
               <Link href={profilePath} className={styles.byline} data-hero-slot="byline">
@@ -315,7 +357,7 @@ export default function HeroSearch({
           </SectionLabel>
           {titleSurface}
           <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
-            <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
+            <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}><JaNoBreakPhrases locale={locale} text={hero.subtitle} /></SurfaceText>
           </p>
           {ctaGroup('dark')}
           <HeroTrustStrip locale={locale} tone="dark" />

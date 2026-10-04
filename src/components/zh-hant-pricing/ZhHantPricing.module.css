@@ -116,7 +116,7 @@
   --ap-text: #1d1d1f;
   --ap-muted: #6e6e73;
   --ap-line: #e3e3e8;
-  --ap-accent: #0a7a55;
+  --ap-accent: #16382d; /* 2026-10-02: links and text actions take the action ink */
   --ap-ink: #16382d;
   --ap-ink-deep: #0d231b;
   --ap-radius: 28px;
@@ -236,7 +236,7 @@
   line-height: 1.08;
   letter-spacing: -0.01em;
   color: var(--ap-ink);
-  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -255,7 +255,7 @@
   font-weight: 800;
   line-height: 1;
   color: var(--ap-ink);
-  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -445,3 +445,7 @@
   .closing .ctaEmail a { width: 100%; padding: 0 16px; font-size: 16px; letter-spacing: 0; }
   .root:global(#zh-hant-pricing) .closing .cta :global(a.button) { width: 100%; }
 }
+
+/* ===== Monoline icons and neutral accents (2026-10-02): 48px ZhHantMonoIcon fee glyphs in #1d1d1f with no box
+   (48 + 18px = the old 44 + 22px). ===== */
+.rowIcon { width: 48px; height: 48px; margin: 0 0 18px; color: var(--ap-text); }

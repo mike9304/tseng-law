@@ -57,8 +57,8 @@ export default async function RootLayout({
 }) {
   const pathname = await getRequestPathname();
   const language = resolveDocumentLanguage(pathname);
-  // Homes that play the full-screen opening (zh-hant opens on its own hero instead).
-  const isLocaleHome = /^\/(?:ko|en|ja)\/?$/i.test(pathname ?? '');
+  // Homes that play the full-screen opening (zh-hant, ja and en open on their own heroes instead).
+  const isLocaleHome = /^\/(?:ko)\/?$/i.test(pathname ?? '');
   // next/font variables must live on <html> so :root semantic tokens resolve.
   const fontClassName = getLocaleFontClassName(language);
   // Arabic is the first right-to-left public language. `dir` must sit on <html>

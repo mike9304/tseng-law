@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import type { DecorativeVideoControlLabels } from './decorative-video-controls';
+import type { DecorativeVideoControlIcons } from './DecorativeAutoplayVideo';
 
 type Props = {
   mp4Src: string; webmSrc: string; mobileMp4Src: string; mobileWebmSrc: string;
@@ -11,6 +12,8 @@ type Props = {
   controlLabels: DecorativeVideoControlLabels;
   playbackTools?: boolean;
   describedBy?: string;
+  /** Optional glyphs for the control (zh-hant: the monoline set). Without them the control shows Ⅱ ▶ as before. */
+  controlIcons?: DecorativeVideoControlIcons;
 };
 
 /** User-initiated diagrams: no media source or request before explicit play. */
@@ -107,7 +110,7 @@ export default function TrafficManualVideo(props: Props) {
       </video> : null}
       <div className={props.playbackTools ? 'traffic-manual-tools' : undefined}>
       <button type="button" className="decorative-autoplay-video__control" aria-label={label} onClick={toggle}>
-        <span aria-hidden="true" className="decorative-autoplay-video__control-icon">{playing ? 'Ⅱ' : '▶'}</span>
+        <span aria-hidden="true" className="decorative-autoplay-video__control-icon">{props.controlIcons ? (playing ? props.controlIcons.pause : props.controlIcons.play) : (playing ? 'Ⅱ' : '▶')}</span>
         <span>{label}</span>
       </button>
       {props.playbackTools ? <>

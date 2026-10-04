@@ -409,7 +409,7 @@
   --ap-text: #1d1d1f;
   --ap-muted: #6e6e73;
   --ap-line: #e3e3e8;
-  --ap-accent: #0a7a55;
+  --ap-accent: #16382d; /* 2026-10-02: links and text actions take the action ink */
   --ap-ink: #16382d;
   --ap-ink-deep: #0d231b;
   --ap-radius: 28px;
@@ -836,7 +836,7 @@
   justify-content: flex-start;
   border-radius: 0;
   margin-bottom: 8px;
-  background: linear-gradient(135deg, #0f9b6e 0%, #16382d 85%);
+  background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: var(--ap-ink);
@@ -1087,4 +1087,68 @@
 @media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
   .mobileCta { transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s linear 0s; }
   .mobileCta[data-hero-visible='true'] { transition: opacity 0.25s ease, transform 0.3s ease, visibility 0s linear 0.3s; }
+}
+
+/* =====================================================================================================
+   Monoline icons and neutral accents (2026-10-02). Operator: 「대만페이지는 전체 색감을 다시 정했으니까 초록색
+   아이콘들 이런거도 다 다시 디자인해야지 심플세련 느낌으로」. Icons are ZhHantMonoIcon in #1d1d1f with no box;
+   the ink #16382d stays on what you press. Layout, hero, copy and the ink pills are unchanged. Later rules win.
+   ===================================================================================================== */
+/* Practice tiles: a 48px monoline glyph (2px line), no box; 48 + 18px keeps the title where the 44px box + 22px
+   put it. The shared card hover no longer turns the icon gold. */
+.home:global(#zh-hant-home) :global(.service-icon) {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 0 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: var(--ap-text);
+}
+.home:global(#zh-hant-home) :global(.services-detail-card:hover .service-icon),
+.home:global(#zh-hant-home) :global(.services-detail-card:focus-within .service-icon) { border-color: transparent; background: none; color: var(--ap-text); }
+/* Glyphs that follow link text (chevrons, arrows): a small gap; the links are inline-flex, so they centre. */
+.trail { margin-left: 3px; }
+.trailArrow { margin-left: 0; }
+
+/* First screen: the search magnifier joins the 1.5px family at its old 22px size; the video control glyphs
+   (pause, play solid; replay outline) are white instead of gold. */
+.home:global(#zh-hant-home) :global(.hero .hero-search-btn svg) { stroke-width: 1.65; }
+.home:global(#zh-hant-home) :global(.hero .decorative-autoplay-video__control-icon) { display: inline-flex; color: #fff; }
+
+/* Bento doors: the dark tile is neutral under its photograph. */
+.doorDark { background: #1d1d1f; }
+.doorDark::after { background: linear-gradient(180deg, rgb(0 0 0 / 6%) 0%, rgb(0 0 0 / 30%) 34%, rgb(0 0 0 / 70%) 58%, rgb(0 0 0 / 88%) 100%); }
+
+/* Columns: the thumbnail placeholder behind each list image is neutral. */
+.home:global(#zh-hant-home) :global(.insights-list-thumb) { background: linear-gradient(140deg, #f5f5f7, #e8e8ed); }
+
+/* How to retain: solid numerals in #1d1d1f (Apple's own big numbers), no green gradient. */
+.engagementNo {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--ap-text);
+  -webkit-text-fill-color: currentColor;
+}
+
+/* The dark chapter: labels #a1a1a6, the case link white, the figures white to silver. */
+.home:global(#zh-hant-home) :global(#results .section-label) { color: #a1a1a6 !important; }
+.home:global(#zh-hant-home) :global(#results .link-underline) { color: #fff; }
+.home:global(#zh-hant-home) :global(#results .link-underline)::after { background: currentColor; }
+.home:global(#zh-hant-home) :global(#results .home-results-media),
+.home:global(#zh-hant-home) :global(#results .home-results-media-fallback) { background: #1d1d1f; }
+.home:global(#zh-hant-home) :global(.stat-number) { background: linear-gradient(180deg, #ffffff 10%, #a1a1a6 100%); -webkit-background-clip: text; background-clip: text; }
+
+/* Offices: no ink bar on the card; secondary text #6e6e73; the phone and review links are ink with a quiet
+   underline at rest (they sit inside text, so colour alone would not mark them). */
+.home:global(#zh-hant-home) :global(#offices .office-card)::before { content: none; }
+.home:global(#zh-hant-home) :global(#offices .office-map-fallback-kicker) { color: var(--ap-muted); }
+
+/* Last call: one flat black, like the dark chapter above it. */
+.home:global(#zh-hant-home) :global(#contact) { background: #000 !important; border-color: transparent; }
+
+/* Phones: the sticky consultation bar's hairlines are neutral. */
+@media (max-width: 767px) {
+  .mobileCta { border-top-color: #e3e3e8; box-shadow: 0 -6px 18px rgb(0 0 0 / 8%); }
+  .mobileCtaSecondary { border-color: #e3e3e8; color: var(--ap-ink); }
 }

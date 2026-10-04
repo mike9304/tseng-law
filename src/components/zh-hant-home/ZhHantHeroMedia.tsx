@@ -1,5 +1,6 @@
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
+import { ZH_VIDEO_CONTROL_ICONS } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from '../ZhHantDesign.module.css';
 
 /**
@@ -39,6 +40,7 @@ export default function ZhHantHeroMedia() {
         deferVideoUntilPosterPaintOnAllViewports
         rootMargin="0px"
         controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS['zh-hant']}
+        controlIcons={ZH_VIDEO_CONTROL_ICONS}
       />
     </div>
   );

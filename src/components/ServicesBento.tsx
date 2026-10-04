@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { EN_HOME_SERVICES_ASSISTANCE } from '@/data/en-service-scope';
@@ -44,6 +45,8 @@ export default function ServicesBento({
   presentation,
   scenarioTags,
   order,
+  renderIcon,
+  layout = 'grid',
 }: {
   locale: SiteLocale;
   id?: string;
@@ -55,6 +58,14 @@ export default function ServicesBento({
   scenarioTags?: Readonly<Record<string, readonly string[]>>;
   /** Optional display order by service slug (zh-hant home, ja and en designs). Icons and anchors keep each service's own index. Omitted elsewhere. */
   order?: readonly string[];
+  /** Optional icon per service index (zh-hant home: the monoline set). Omitted elsewhere, so ServicePracticeIcon renders as before. */
+  renderIcon?: (index: number) => ReactNode;
+  /**
+   * `run` (en home design only): the practice titles as one ordered list of links with their descriptions,
+   * plus six scroll markers, instead of the card grid. The server HTML is a plain list; en CSS and a small
+   * client hook turn it into the lit run. Default `grid` keeps every other locale's markup unchanged.
+   */
+  layout?: 'grid' | 'run';
 }) {
   const { services } = siteContent[locale];
   const editorial = presentation === 'editorial';
@@ -75,29 +86,71 @@ export default function ServicesBento({
     if (anchor === 'ip') aliasAnchors.set(index, ['finance']);
   });
 
+  const header = (
+    <>
+      <SectionLabel data-builder-surface-key={homeServicesTextSurfaceIds[0]}>
+        <SurfaceText surfaceKey={homeServicesTextSurfaceIds[0]}>{services.label}</SurfaceText>
+      </SectionLabel>
+      <h2 className="section-title" data-builder-surface-key={homeServicesTextSurfaceIds[1]}>
+        <SurfaceText surfaceKey={homeServicesTextSurfaceIds[1]}>{services.title}</SurfaceText>
+      </h2>
+      <p className="section-lede" data-builder-surface-key={homeServicesTextSurfaceIds[2]}>
+        <SurfaceText surfaceKey={homeServicesTextSurfaceIds[2]}>{services.description}</SurfaceText>
+      </p>
+      <OrnamentDivider />
+    </>
+  );
+
   return (
     <section
       className={`${sectionClass} services-bento${editorial ? ` ${styles.servicesEditorial}` : ''}`}
       id={id}
       data-tone={tone}
       data-presentation={editorial ? 'editorial' : undefined}
+      data-en-run={layout === 'run' ? 'off' : undefined}
       aria-label={showHeader ? undefined : services.title}
     >
       <div className="container">
-        {showHeader ? (
-          <>
-            <SectionLabel data-builder-surface-key={homeServicesTextSurfaceIds[0]}>
-              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[0]}>{services.label}</SurfaceText>
-            </SectionLabel>
-            <h2 className="section-title" data-builder-surface-key={homeServicesTextSurfaceIds[1]}>
-              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[1]}>{services.title}</SurfaceText>
-            </h2>
-            <p className="section-lede" data-builder-surface-key={homeServicesTextSurfaceIds[2]}>
-              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[2]}>{services.description}</SurfaceText>
-            </p>
-            <OrnamentDivider />
-          </>
-        ) : null}
+        {showHeader && layout !== 'run' ? header : null}
+        {layout === 'run' ? (
+          <div className="services-run-wrap">
+            <div className="services-run-stage">
+              {showHeader ? header : null}
+              <ol className="services-run">
+                {orderServiceEntries(services.items, serviceSlugs, order).map(({ item, index }, position) => {
+                  const anchor = item.href.split('#')[1];
+                  const aliases = aliasAnchors.get(index) ?? [];
+                  const slug = serviceSlugs[index];
+                  const descId = `run-desc-${slug ?? anchor ?? index}`;
+                  return (
+                    <li key={item.title} className="services-run-item" data-run-index={position} {...(anchor ? { id: anchor } : {})}>
+                      {aliases.map((alias) => (
+                        <span key={alias} id={alias} className="services-anchor-alias" aria-hidden />
+                      ))}
+                      <HeadingTag className="services-run-title">
+                        {slug ? (
+                          <Link href={`/${locale}/services/${slug}`} aria-describedby={descId}>{item.title}</Link>
+                        ) : item.title}
+                      </HeadingTag>
+                      <div className="services-run-panel">
+                        <p id={descId} className="services-run-desc">{item.description}</p>
+                        {slug ? (
+                          <Link href={`/${locale}/services/${slug}`} className="services-run-more" aria-hidden="true" tabIndex={-1}>
+                            {detailLabel}
+                          </Link>
+                        ) : null}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+              <div className="services-run-progress" aria-hidden="true" />
+            </div>
+            {services.items.map((item, position) => (
+              <span key={`marker-${item.title}`} className="services-run-marker" data-stage-marker={position} aria-hidden="true" />
+            ))}
+          </div>
+        ) : (
         <div className="services-detail-list services-card-grid">
           {orderServiceEntries(services.items, serviceSlugs, order).map(({ item, index }) => {
             const anchor = item.href.split('#')[1];
@@ -113,7 +166,7 @@ export default function ServicesBento({
                 >
                   <div className="services-detail-header services-card-header">
                     <span className="service-icon" aria-hidden>
-                      <ServicePracticeIcon index={index} />
+                      {renderIcon ? renderIcon(index) : <ServicePracticeIcon index={index} />}
                     </span>
                     <HeadingTag className="services-detail-title">{item.title}</HeadingTag>
                   </div>
@@ -141,6 +194,7 @@ export default function ServicesBento({
             );
           })}
         </div>
+        )}
         {locale === 'en' ? (
           <p className="services-assistance-note">
             {EN_HOME_SERVICES_ASSISTANCE.beforeContact}

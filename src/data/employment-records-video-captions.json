@@ -68,5 +68,55 @@
     "title": "Tabeliga leht pannakse avatud kausta",
     "description": "Inimene asetab ühe tabeliga lehe avatud kaustas olevate paberite peale. Vasak käsi liigub tagasi lauale ja parem jääb lehe serva juurde.",
     "disclosure": "Umbes neljasekundiline väljamõeldud stseen, mis on loodud tehisintellektiga. Paberid ei ole tegelikud kohaloleku- ega palgaandmed ning need ei tõenda maksmata töötasu, põhjendatud nõuet ega lahkumishüvitise maksmist."
+  },
+  "fa": {
+    "title": "گذاشتن برگ جدول‌دار روی پوشه باز",
+    "description": "فرد یک برگ جدول‌دار را روی کاغذهای داخل پوشه باز می‌گذارد. دست چپش به میز برمی‌گردد و دست راستش کنار لبه کاغذ می‌ماند.",
+    "disclosure": "صحنه‌ای خیالی به طول حدود چهار ثانیه که با هوش مصنوعی ساخته شده است. این کاغذها سوابق واقعی حضور یا حقوق نیستند و حقوق پرداخت‌نشده، موجه بودن ادعا یا پرداخت غرامت اخراج را اثبات نمی‌کنند."
+  },
+  "fi": {
+    "title": "Taulukkopaperi lasketaan avoimeen kansioon",
+    "description": "Henkilö laskee taulukkopaperin avoimessa kansiossa olevien papereiden päälle. Vasen käsi palaa pöydälle ja oikea jää paperin reunalle.",
+    "disclosure": "Noin neljän sekunnin mittainen, tekoälyllä luotu kuvitteellinen kohtaus. Paperit eivät ole aitoja työaika- tai palkkatietoja eivätkä osoita maksamattomia palkkoja, vaatimuksen aiheellisuutta tai erorahan maksamista."
+  },
+  "fil": {
+    "title": "Pagpatong ng papel na may talahanayan sa bukas na folder",
+    "description": "Ipinapatong ng isang tao ang papel na may talahanayan sa mga papel sa bukas na folder. Bumabalik sa mesa ang kaliwang kamay at nananatili sa gilid ng papel ang kanang kamay.",
+    "disclosure": "Kathang-isip na eksenang humigit-kumulang apat na segundo, na ginawa gamit ang AI. Hindi tunay na talaan ng pagpasok o pasahod ang mga papel at hindi patunay ng hindi nabayarang sahod, wastong paghahabol o pagbabayad ng separation pay."
+  },
+  "fr": {
+    "title": "Une feuille avec un tableau posée dans un dossier ouvert",
+    "description": "Une personne pose une feuille avec un tableau sur les papiers d’un dossier ouvert. Sa main gauche revient sur le bureau et sa main droite reste au bord de la feuille.",
+    "disclosure": "Scène fictive d’environ quatre secondes générée par IA. Les papiers ne sont pas des relevés réels de présence ou de paie et ne prouvent ni salaires impayés, ni bien-fondé d’une demande, ni versement d’une indemnité de licenciement."
+  },
+  "he": {
+    "title": "הנחת דף עם טבלה על תיקייה פתוחה",
+    "description": "אדם מניח דף עם טבלה על הניירות שבתיקייה פתוחה. ידו השמאלית חוזרת אל השולחן וידו הימנית נשארת בשולי הדף.",
+    "disclosure": "סצנה בדיונית באורך של כארבע שניות שנוצרה בבינה מלאכותית. הניירות אינם רישומי נוכחות או שכר אמיתיים ואינם מוכיחים שכר שלא שולם, תביעה מוצדקת או תשלום דמי פיטורים."
+  },
+  "hi": {
+    "title": "खुले फ़ोल्डर में तालिका वाला कागज़ रखना",
+    "description": "एक व्यक्ति तालिका वाला कागज़ खुले फ़ोल्डर में रखे कागज़ों के ऊपर रखता है। बायाँ हाथ मेज़ पर लौट आता है और दायाँ हाथ कागज़ के किनारे रहता है।",
+    "disclosure": "AI से बनाया गया लगभग चार सेकंड का काल्पनिक दृश्य। ये कागज़ वास्तविक उपस्थिति या वेतन अभिलेख नहीं हैं और बकाया वेतन, किसी दावे की वैधता या विच्छेद वेतन के भुगतान का प्रमाण नहीं हैं।"
+  },
+  "hr": {
+    "title": "Stavljanje lista s tablicom u otvorenu mapu",
+    "description": "Osoba polaže list s tablicom na papire u otvorenoj mapi. Lijeva se ruka vraća na stol, a desna ostaje uz rub lista.",
+    "disclosure": "Izmišljena scena od približno četiri sekunde, stvorena umjetnom inteligencijom. Papiri nisu stvarne evidencije dolazaka ili plaća i ne dokazuju neisplaćenu plaću, osnovanost zahtjeva ni isplatu zakonske otpremnine."
+  },
+  "hu": {
+    "title": "Táblázatos lap elhelyezése egy nyitott mappában",
+    "description": "Egy személy táblázatos lapot tesz a nyitott mappában lévő papírokra. A bal keze visszatér az asztalra, a jobb a lap szélénél marad.",
+    "disclosure": "Mesterséges intelligenciával készült, körülbelül négy másodperces kitalált jelenet. A papírok nem valódi jelenléti vagy bérnyilvántartások, és nem igazolnak elmaradt bért, megalapozott követelést vagy végkielégítés kifizetését."
+  },
+  "id": {
+    "title": "Kertas bertabel diletakkan di dalam map terbuka",
+    "description": "Seseorang meletakkan selembar kertas bertabel di atas kertas-kertas dalam map terbuka. Tangan kirinya kembali ke meja, sedangkan tangan kanannya tetap di tepi kertas.",
+    "disclosure": "Adegan fiktif berdurasi sekitar empat detik yang dibuat dengan AI. Kertas-kertas itu bukan catatan kehadiran atau penggajian asli dan tidak membuktikan upah yang belum dibayar, keabsahan tuntutan, atau pembayaran pesangon."
+  },
+  "is": {
+    "title": "Blað með töflu lagt í opna möppu",
+    "description": "Manneskja leggur blað með töflu ofan á pappírana í opinni möppu. Vinstri höndin fer aftur á borðið en sú hægri helst við blaðbrúnina.",
+    "disclosure": "Um fjögurra sekúndna skálduð sena, búin til með gervigreind. Blöðin eru ekki raunverulegar mætingar- eða launaskrár og sanna hvorki vangoldin laun, réttmæti kröfu né greiðslu starfslokabóta."
   }
 }

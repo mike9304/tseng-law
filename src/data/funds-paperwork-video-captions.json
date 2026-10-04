@@ -98,5 +98,55 @@
     "title": "धनराशि से जुड़ा कागज़ मेज़ पर रखना",
     "description": "मिलने आया व्यक्ति एक कागज़ मेज़ पर दो फ़ोल्डरों के बीच रखता है। सामने बैठा व्यक्ति कागज़ के किनारे पर हाथ रखता है।",
     "disclosure": "यह AI से बनाया गया लगभग चार सेकंड का काल्पनिक दृश्य है। इसमें वास्तविक ग्राहक या बैंक के असली दस्तावेज़, पूरा हुआ धन हस्तांतरण, खाता खुलना या बैंक की मंज़ूरी नहीं दिखाई गई है।"
+  },
+  "hr": {
+    "title": "Dokument o sredstvima stavlja se na stol",
+    "description": "Posjetitelj položi jedan list papira na stol između dviju mapa. Osoba nasuprot njemu stavi ruku na rub papira.",
+    "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom traje približno četiri sekunde. Ne prikazuje stvarne klijente ni autentične bankovne dokumente, dovršen prijenos novca, otvoren račun ili odobrenje banke."
+  },
+  "hu": {
+    "title": "A pénzeszközökről szóló irat az asztalra kerül",
+    "description": "A látogató egy lapot tesz az asztalra, két mappa közé. A vele szemben ülő személy a papír szélére helyezi a kezét.",
+    "disclosure": "Mesterséges intelligenciával létrehozott, körülbelül négy másodperces kitalált jelenet. Nem mutat valódi ügyfeleket vagy valódi banki iratokat, teljesített átutalást, megnyitott számlát vagy banki jóváhagyást."
+  },
+  "id": {
+    "title": "Meletakkan dokumen tentang dana di atas meja",
+    "description": "Seorang pengunjung meletakkan selembar kertas di atas meja, di antara dua map. Orang di seberangnya menaruh tangan di tepi kertas.",
+    "disclosure": "Adegan fiktif yang dibuat dengan AI, berdurasi sekitar empat detik. Adegan ini tidak menggambarkan klien nyata atau dokumen bank asli, transfer yang telah selesai, pembukaan rekening, maupun persetujuan bank."
+  },
+  "is": {
+    "title": "Skjal um fjármuni lagt á borðið",
+    "description": "Gestur leggur eitt blað á borðið á milli tveggja mappa. Sá sem situr á móti leggur hönd við brún blaðsins.",
+    "disclosure": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né ósvikin bankaskjöl, framkvæmda millifærslu, opnaðan reikning eða samþykki banka."
+  },
+  "it": {
+    "title": "Un documento sui fondi viene posato tra due cartelle",
+    "description": "Una persona posa un foglio sul tavolo, tra due cartelle. Chi siede di fronte appoggia una mano sul bordo della carta.",
+    "disclosure": "Scena di fantasia di circa quattro secondi, generata con IA. Non rappresenta clienti reali o documenti bancari autentici, né mostra un bonifico completato, l’apertura di un conto o un’approvazione bancaria."
+  },
+  "km": {
+    "title": "ការដាក់ឯកសារអំពីទុនលើតុ",
+    "description": "អ្នកមកជួបដាក់ក្រដាសមួយសន្លឹកលើតុ នៅចន្លោះថតឯកសារពីរ។ អ្នកអង្គុយទល់មុខដាក់ដៃលើគែមក្រដាស។",
+    "disclosure": "ឈុតស្រមៃនេះបង្កើតដោយបញ្ញាសិប្បនិម្មិត (AI) និងមានរយៈពេលប្រហែលបួនវិនាទី។ វាមិនបង្ហាញអតិថិជនពិត ឬឯកសារធនាគារពិត ការផ្ទេរប្រាក់ដែលបានបញ្ចប់ ការបើកគណនី ឬការអនុម័តរបស់ធនាគារឡើយ។"
+  },
+  "lt": {
+    "title": "Dokumentas apie lėšas padedamas ant stalo",
+    "description": "Lankytojas padeda vieną popieriaus lapą ant stalo tarp dviejų aplankų. Priešais sėdintis žmogus uždeda ranką ant lapo krašto.",
+    "disclosure": "Dirbtiniu intelektu sukurta išgalvota scena trunka apie keturias sekundes. Joje nerodomi tikri klientai ar autentiški banko dokumentai, atliktas pinigų pervedimas, atidaryta sąskaita ar banko patvirtinimas."
+  },
+  "lv": {
+    "title": "Dokumentu par līdzekļiem noliek uz galda",
+    "description": "Apmeklētājs noliek vienu papīra lapu uz galda starp divām mapēm. Pretī sēdošais cilvēks uzliek roku uz papīra malas.",
+    "disclosure": "Ar mākslīgo intelektu veidota izdomāta aina, kas ilgst aptuveni četras sekundes. Tā nerāda īstus klientus vai autentiskus bankas dokumentus, pabeigtu naudas pārskaitījumu, atvērtu kontu vai bankas apstiprinājumu."
+  },
+  "mn": {
+    "title": "Хөрөнгөтэй холбоотой баримтыг ширээн дээр тавих",
+    "description": "Ирсэн хүн нэг хуудас цаасыг ширээн дээрх хоёр хавтасны хооронд тавина. Эсрэг талд сууж буй хүн цаасны захад гараа тавина.",
+    "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундын зохиомол дүрслэл. Бодит үйлчлүүлэгч, жинхэнэ банкны баримт бичиг, дууссан мөнгөн шилжүүлэг, данс нээх үйл явц эсвэл банкны зөвшөөрлийг харуулаагүй."
+  },
+  "ms": {
+    "title": "Dokumen tentang dana diletakkan di atas meja",
+    "description": "Seorang pelawat meletakkan sekeping kertas di atas meja, di antara dua fail. Orang di hadapannya meletakkan tangan pada tepi kertas.",
+    "disclosure": "Adegan rekaan yang dihasilkan dengan AI, sepanjang kira-kira empat saat. Adegan ini tidak memaparkan klien sebenar atau dokumen bank tulen, pindahan wang yang telah selesai, pembukaan akaun atau kelulusan bank."
   }
 }

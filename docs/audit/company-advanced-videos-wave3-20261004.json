@@ -1,0 +1,864 @@
+{
+  "reviewedAt": "2026-10-04T05:41:56.475826+00:00",
+  "reviewer": "Codex",
+  "scope": "Two previously published company scenes extended to 20 reviewed article-language pages; no new media, article body, registry or player changes. Another 38 company-advanced pages remain pending.",
+  "previousRelease": "/Users/son7/tseng-law-column-videos/qa/production-company-advanced-wave2-release.json",
+  "previousPublicationCommit": "1478a942e8ee91cb8b41620c671d735d5be98d98",
+  "mediaReview": "Reuse prior direct all-97-frame visual review and native timing verification, bound to unchanged English-labeled asset SHA. No claim of fresh generation or re-review of every native frame.",
+  "mediaSha256": {
+    "premises-lease-v1-en": "c8b86214a0eb7a66cd6b7d84ebd64eda64b41c95df82c5b773ea9e8de05d9622",
+    "funds-paperwork-v1-en": "4a34fcee1b697b32b657419f28c93a96c7500e0d2dee0308cf59ccd521185ea3"
+  },
+  "retiming": false,
+  "youtubeUploaded": false,
+  "nativeOrLegalProfessionalReview": false,
+  "labelPolicy": "All ten added locales use the unchanged English-labeled video with complete localized on-page title, action description and AI-fiction disclosure.",
+  "editorialRules": {
+    "file": "docs/columns/EDITORIAL-VOICE.md",
+    "sha256": "f4736c269436ceaf94c4d726cf9a1687d6b8b1df4823cd14f84afd7a17ed3e2c",
+    "fullTextRead": true
+  },
+  "captionReviews": [
+    {
+      "articleKey": "hr/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-hr/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "75b388113059fc7b738b2242af2dbee00e8575ccd680c10164c56b10067482f7",
+      "captionLanguage": "hr",
+      "caption": {
+        "title": "Tlocrt klizi preko stola",
+        "description": "Posjetitelj gurne tlocrt preko stola prema osobi nasuprot sebi. Ona položi ruku na rub papira.",
+        "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom traje približno četiri sekunde. Ne prikazuje stvarne klijente ni određenu nekretninu, sklapanje ugovora o najmu, odobrenje banke ili dozvolu za obavljanje djelatnosti."
+      },
+      "captionSha256": "99865403e8fbc2b8be47ee92df55d4cf38aa07329dffcc1f0482e48002124abd",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Tlocrt klizi preko stola",
+        "description": "Posjetitelj gurne tlocrt preko stola prema osobi nasuprot sebi. Ona položi ruku na rub papira.",
+        "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom traje približno četiri sekunde. Ne prikazuje stvarne klijente ni određenu nekretninu, sklapanje ugovora o najmu, odobrenje banke ili dozvolu za obavljanje djelatnosti."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-hr/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "c3d595fb90c86b366647b514c1e44d601258f6e557e71e766cbc5773c33597e2",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hr/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "79e83b2cd2352d6e07f8444477dd06bc42caacb3da3e176c35f473a7e2bbaf6c",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hr/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "c14f4854771ecfc50ec9185628544a3a9ce957a12ed21175363dd5fae00385e8",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Croatian articles read while wave2 browser QA runs. Advanced1 premises/lease-use sections match the plan handoff. Advanced2 limits remittance and source-document examples to Korea and preserves bank variation and foreign-manager eligibility. Use document placement without any new numerical/procedural or approval claims. Croatian awaits a later caption/integration wave; source unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "hu/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-hu/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "711c6cda462b14ff18b53167b55a65bdd9ced4eec920a7db8cb7011193d610f0",
+      "captionLanguage": "hu",
+      "caption": {
+        "title": "Alaprajz átcsúsztatása az asztalon",
+        "description": "A látogató átcsúsztat egy alaprajzot az asztalon. A vele szemben ülő személy a lap szélére teszi a kezét.",
+        "disclosure": "Mesterséges intelligenciával létrehozott, körülbelül négy másodperces kitalált jelenet. Nem mutat valódi ügyfeleket vagy konkrét ingatlant, bérleti szerződés megkötését, banki jóváhagyást vagy működési engedélyt."
+      },
+      "captionSha256": "b2359b5e574fbdfd687273b775ed752677c8840045e25f37574f853cff8d31b6",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Alaprajz átcsúsztatása az asztalon",
+        "description": "A látogató átcsúsztat egy alaprajzot az asztalon. A vele szemben ülő személy a lap szélére teszi a kezét.",
+        "disclosure": "Mesterséges intelligenciával létrehozott, körülbelül négy másodperces kitalált jelenet. Nem mutat valódi ügyfeleket vagy konkrét ingatlant, bérleti szerződés megkötését, banki jóváhagyást vagy működési engedélyt."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-hu/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "629197a956c967db97529d30de9fc6f62ceb13e3f80bc00d3f297e9db3f22a9c",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hu/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "0a3f7ef482fa8eea1f37689c67dee3818c199f5b8fbee86bac03ab9945e826b8",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hu/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "c7a79eace1c989e8423e9d3a8bd4fa468a1467c1159ad89d5290c5d2aec27f9e",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Hungarian articles read. Advanced1 premises and lease-use sections match the plan handoff. Advanced2 Q1 is Korea-specific, while Q2 broadly exempts foreign (for example Korean) bank accounts from source documents; do not repeat or generalize that legal claim in a caption. Generic records placement matches only the fund-document topic. Preserve bank variation, foreign-manager conditions and non-Hungarian service scope; source body unchanged. Hungarian awaits later caption/integration.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "id/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-id/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "3641c6961e2ebebab99f1b9d9156694f556146985af9a6b2b02c9328827be2b4",
+      "captionLanguage": "id",
+      "caption": {
+        "title": "Menggeser denah ke seberang meja",
+        "description": "Seorang pengunjung menggeser denah di atas meja ke arah orang di seberangnya. Orang tersebut meletakkan tangan di tepi kertas.",
+        "disclosure": "Adegan fiktif yang dibuat dengan AI, berdurasi sekitar empat detik. Adegan ini tidak menggambarkan klien nyata atau properti tertentu, penandatanganan sewa, persetujuan bank, maupun izin usaha."
+      },
+      "captionSha256": "e158736777276689031b5713ed4a748ea103fa135d87ed7485912203bcceda36",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Menggeser denah ke seberang meja",
+        "description": "Seorang pengunjung menggeser denah di atas meja ke arah orang di seberangnya. Orang tersebut meletakkan tangan di tepi kertas.",
+        "disclosure": "Adegan fiktif yang dibuat dengan AI, berdurasi sekitar empat detik. Adegan ini tidak menggambarkan klien nyata atau properti tertentu, penandatanganan sewa, persetujuan bank, maupun izin usaha."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-id/023-baby-taiwan-nationality-birth-registration.md",
+          "sourceSha256": "56f62d149ec598a229570b82100c2139ebf51a4579f9b1aebf57bef01f00ca43",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-id/022-marrying-taiwanese-national-registration-checklist.md",
+          "sourceSha256": "cf808ea4e53ef908b7ec3cd6e9d6528edd3a2af21689567017ee81220567254a",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-id/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+          "sourceSha256": "e7759fd6600d75a7ed4e079c923cc5c113798d66cece4a4ba1dea43862a0b3eb",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Indonesian articles read during wave2 deployment. Advanced1 premises/lease-use sections fit the plan handoff. Advanced2 explicitly limits both remittance and source-document exceptions to Korea and requires separate checks for other origin countries; it preserves bank variation and foreign-manager eligibility. Paper placement adds no legal, numerical or approval result. Source unchanged; Indonesian caption/integration remains pending.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "is/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-is/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "fab4551c75b03d482db408424d308cdbfba8d2625df0c966a503ad86557a3e0a",
+      "captionLanguage": "is",
+      "caption": {
+        "title": "Grunnmynd færð yfir borðið",
+        "description": "Gestur rennir grunnmynd yfir borðið. Sá sem situr á móti leggur hönd á brún blaðsins.",
+        "disclosure": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né tiltekna fasteign, undirritun leigusamnings, samþykki banka eða rekstrarleyfi."
+      },
+      "captionSha256": "755bfeb48c0d64878d86c8992e5e75efd7d7e61713e7c2705bfa16038b6138d4",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Grunnmynd færð yfir borðið",
+        "description": "Gestur rennir grunnmynd yfir borðið. Sá sem situr á móti leggur hönd á brún blaðsins.",
+        "disclosure": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né tiltekna fasteign, undirritun leigusamnings, samþykki banka eða rekstrarleyfi."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-is/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "5d82980c92e558c61fda579d632447466a93797fa933461085d479a47e462128",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-is/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "b897d6be6952ffe1444544c4c533f1ad2204e153e976218009a566af5a44dfad",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-is/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "0c0cdd25e87f6da4d877dc2b29b139f1f1e3a819abbf0fc9de036f038f11ea98",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Icelandic articles read during wave2 public QA. Advanced1 premises/lease-use topics fit the plan handoff. Advanced2 Q1 is explicitly a Korean example; Q2 broadly states a foreign-bank source-document exception. Do not reproduce or generalize this legal statement in captions. Generic records placement matches the document subtopic only. Preserve variable bank and foreign-manager conditions; source unchanged. Icelandic awaits later caption/integration.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "it/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-it/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "67aafdc954e4a5c899eb4bed1cb118560d042770b57d4de2049bc4a0cc9ac112",
+      "captionLanguage": "it",
+      "caption": {
+        "title": "Una planimetria scorre sul tavolo",
+        "description": "Una persona fa scorrere una planimetria sul tavolo verso chi le siede di fronte, che appoggia una mano sul bordo del foglio.",
+        "disclosure": "Scena di fantasia di circa quattro secondi, generata con IA. Non rappresenta clienti reali o un immobile specifico, né mostra la firma di un contratto di locazione, un’approvazione bancaria o un’autorizzazione all’attività."
+      },
+      "captionSha256": "1bb98745a96e7df419781503ca6e7a38e275ec6335c9c2e861db6babd3fe8cec",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Una planimetria scorre sul tavolo",
+        "description": "Una persona fa scorrere una planimetria sul tavolo verso chi le siede di fronte, che appoggia una mano sul bordo del foglio.",
+        "disclosure": "Scena di fantasia di circa quattro secondi, generata con IA. Non rappresenta clienti reali o un immobile specifico, né mostra la firma di un contratto di locazione, un’approvazione bancaria o un’autorizzazione all’attività."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-it/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "566e0d9917912c06fa979733cdf3a8bd7c9036541e5c58c8ef3199cc46d94638",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-it/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "d6f27f1cc46ce85600f815bab10b7358669f481c9bc292e9973688b1d55969f8",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-it/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "fd0a8885ee0c7e40198610dc431b768845d6acd13c4819a916fbb41fca8f4015",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Italian/Malay articles read. Advanced1 premises, lease and permissible-use topics fit the plan handoff. Advanced2 explicitly scopes the remittance example and source-document exception to Korea, retaining bank variation and conditioned foreign-manager/employee eligibility. Generic paper placement fits source-document review; captions do not repeat legal/numeric requirements, show approval or imply language services or real clients. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "km/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-km/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "b51fbe31689d8cfcf828ac7a0f8ced6f64ef9f46892cc1addb9b09b88fb1b487",
+      "captionLanguage": "km",
+      "caption": {
+        "title": "ការរុញប្លង់ទីតាំងតាមផ្ទៃតុ",
+        "description": "អ្នកមកជួបរុញប្លង់ទីតាំងលើតុទៅរកអ្នកអង្គុយទល់មុខ។ អ្នកទល់មុខដាក់ដៃលើគែមក្រដាស។",
+        "disclosure": "ឈុតស្រមៃនេះបង្កើតដោយបញ្ញាសិប្បនិម្មិត (AI) និងមានរយៈពេលប្រហែលបួនវិនាទី។ វាមិនបង្ហាញអតិថិជនពិត ឬអចលនទ្រព្យជាក់លាក់ ការចុះហត្ថលេខាលើកិច្ចសន្យាជួល ការអនុម័តរបស់ធនាគារ ឬលិខិតអនុញ្ញាតធ្វើអាជីវកម្មឡើយ។"
+      },
+      "captionSha256": "487da8d4d32a8adb328035779b6ae105dff004261c329d757b069380ca6eee95",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "ការរុញប្លង់ទីតាំងតាមផ្ទៃតុ",
+        "description": "អ្នកមកជួបរុញប្លង់ទីតាំងលើតុទៅរកអ្នកអង្គុយទល់មុខ។ អ្នកទល់មុខដាក់ដៃលើគែមក្រដាស។",
+        "disclosure": "ឈុតស្រមៃនេះបង្កើតដោយបញ្ញាសិប្បនិម្មិត (AI) និងមានរយៈពេលប្រហែលបួនវិនាទី។ វាមិនបង្ហាញអតិថិជនពិត ឬអចលនទ្រព្យជាក់លាក់ ការចុះហត្ថលេខាលើកិច្ចសន្យាជួល ការអនុម័តរបស់ធនាគារ ឬលិខិតអនុញ្ញាតធ្វើអាជីវកម្មឡើយ។"
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-km/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "4db7644c25e6add7daaa1fca73dedc0b21288b476465f854ee181ccfbfbe82b2",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-km/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "f7c3c04d31966c4a07d4a5a8ae8761b2dc09a6364eb4190794469822923caea3",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-km/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "8baf70ad1df18aaab3e8eae210970995e4ecb4f44880ea02f79dfc98d233a604",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Khmer articles read. Advanced1 explicitly separates work/residence procedures from company formation and covers lease/premises suitability. Advanced2 Q1 is a Korea-only example; Q2 broadly describes a usual foreign-bank source-document exception with a country-bank check qualifier. Do not repeat that legal claim in captions. Approved floor-plan and paper placement fit only the premises and records topics. Khmer shaping/line wrapping must be visually inspected. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "lt/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-lt/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "09f639c61f677de8a2ddd5fab0305d6ad7420a8c52b3f3ef05596686e65a1c27",
+      "captionLanguage": "lt",
+      "caption": {
+        "title": "Patalpų planas pastumiamas per stalą",
+        "description": "Lankytojas pastumia patalpų planą per stalą. Priešais sėdintis žmogus padeda ranką ant lapo krašto.",
+        "disclosure": "Dirbtiniu intelektu sukurta išgalvota scena trunka apie keturias sekundes. Joje nerodomi tikri klientai ar konkretus nekilnojamasis turtas, nuomos sutarties pasirašymas, banko patvirtinimas ar leidimas vykdyti veiklą."
+      },
+      "captionSha256": "54dfe08c754f2b2c6b3746a4636c7b33b5470a7f5cbe28e38888ee6e4b8702c7",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Patalpų planas pastumiamas per stalą",
+        "description": "Lankytojas pastumia patalpų planą per stalą. Priešais sėdintis žmogus padeda ranką ant lapo krašto.",
+        "disclosure": "Dirbtiniu intelektu sukurta išgalvota scena trunka apie keturias sekundes. Joje nerodomi tikri klientai ar konkretus nekilnojamasis turtas, nuomos sutarties pasirašymas, banko patvirtinimas ar leidimas vykdyti veiklą."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-lt/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "d5aa0403aca7cfab21c336d071ab044639facd7381874658cb2b80f2ee2b23cf",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lt/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "2981735077ad21e9d553ac535fce645f6fd4a867efdb19985dfe9a7666d56779",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lt/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "d5693b8028d207f732d6b0dc8fce6ad8619a10b17261d6b0fd0ae0cadcd627b4",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Lithuanian/Latvian articles read. Advanced1 premises and permissible-use sections fit the floor-plan handoff. Advanced2 expressly labels Korea as a remittance example, discusses source-of-funds documents, bank variation and conditional foreign-manager eligibility. Paper placement matches only the document topic, without a real-client/lawyer identity, approval or procedural/numeric claim. Bodies, conditions and links remain unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "lv/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-lv/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "eb2a0c78bad43cecf35658da4c0f15335fff5f5082ae76a704469e21790e01f9",
+      "captionLanguage": "lv",
+      "caption": {
+        "title": "Telpas plānu pabīda pāri galdam",
+        "description": "Apmeklētājs pabīda telpas plānu pāri galdam. Pretī sēdošais cilvēks uzliek roku uz lapas malas.",
+        "disclosure": "Ar mākslīgo intelektu veidota izdomāta aina, kas ilgst aptuveni četras sekundes. Tā nerāda īstus klientus vai konkrētu īpašumu, nomas līguma parakstīšanu, bankas apstiprinājumu vai darbības atļauju."
+      },
+      "captionSha256": "29e0be888f8517d88e43e75a07ab53299681d981476ebce13e5a7f168f22f14c",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Telpas plānu pabīda pāri galdam",
+        "description": "Apmeklētājs pabīda telpas plānu pāri galdam. Pretī sēdošais cilvēks uzliek roku uz lapas malas.",
+        "disclosure": "Ar mākslīgo intelektu veidota izdomāta aina, kas ilgst aptuveni četras sekundes. Tā nerāda īstus klientus vai konkrētu īpašumu, nomas līguma parakstīšanu, bankas apstiprinājumu vai darbības atļauju."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-lv/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "22a6c5eb20905053caf9df5933700593c46285d9e9a46ac94d2834e0d14aef5d",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lv/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "a5e6f8e22748c5a107b3f6f45829b5cb177c34e2a29371b672882c0d5229c33b",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lv/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "f0c38a7637e84bbe336b6849fa3f2b8f608ca517a994c072f169261c35fd34cf",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Lithuanian/Latvian articles read. Advanced1 premises and permissible-use sections fit the floor-plan handoff. Advanced2 expressly labels Korea as a remittance example, discusses source-of-funds documents, bank variation and conditional foreign-manager eligibility. Paper placement matches only the document topic, without a real-client/lawyer identity, approval or procedural/numeric claim. Bodies, conditions and links remain unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "mn/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-mn/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "72b0fcd4ea64d25aa05fb142b390051376b4b8e62560398eed808e1d40672e57",
+      "captionLanguage": "mn",
+      "caption": {
+        "title": "Өрөөний план зургийг ширээн дээгүүр дамжуулах",
+        "description": "Ирсэн хүн өрөөний план зургийг ширээн дээгүүр гулсуулна. Эсрэг талд сууж буй хүн цаасны захад гараа тавина.",
+        "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундын зохиомол дүрслэл. Бодит үйлчлүүлэгч, тодорхой үл хөдлөх хөрөнгө, түрээсийн гэрээнд гарын үсэг зурах үйл явц, банкны зөвшөөрөл эсвэл үйл ажиллагааны зөвшөөрлийг харуулаагүй."
+      },
+      "captionSha256": "09ff09d37b33f149e6b87f876a80f14fff06d608a5079f994ad9b72e8ed5f45d",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Өрөөний план зургийг ширээн дээгүүр дамжуулах",
+        "description": "Ирсэн хүн өрөөний план зургийг ширээн дээгүүр гулсуулна. Эсрэг талд сууж буй хүн цаасны захад гараа тавина.",
+        "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундын зохиомол дүрслэл. Бодит үйлчлүүлэгч, тодорхой үл хөдлөх хөрөнгө, түрээсийн гэрээнд гарын үсэг зурах үйл явц, банкны зөвшөөрөл эсвэл үйл ажиллагааны зөвшөөрлийг харуулаагүй."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-mn/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "9cf74f5bc85010d4b67554443f4cfa80e2ba352c30ffc8effa1a7330fc9b4031",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-mn/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "4be39a195ca72d155e6616a193312863254bc2942f699fdb0f7a2baba66bec27",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-mn/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "f0696a3234c42ca8ca55915e968f551f01efc2d222799d2eb93f522fb81b899c",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Mongolian articles read. Advanced1 premises/lease and business-use sections fit the plan handoff. Advanced2 repeatedly limits remittance and source-document examples to Korea and requires separate checks for other countries; bank variation and manager/employee eligibility remain conditioned. Paper placement matches the record topic without approval, transaction, procedural or numerical claims. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ms/column/taiwan-company-establishment-advanced-1",
+      "sourceFile": "src/content/columns-ms/013-taiwan-company-establishment-advanced-1.md",
+      "sourceSha256": "3dcb9f9080b7194644942f04c3b9bff872835a37975d73402b520f2e545e636b",
+      "captionLanguage": "ms",
+      "caption": {
+        "title": "Pelan ruang disorong ke seberang meja",
+        "description": "Seorang pelawat menyorong pelan ruang di atas meja ke arah orang di hadapannya. Orang itu meletakkan tangan pada tepi kertas.",
+        "disclosure": "Adegan rekaan yang dihasilkan dengan AI, sepanjang kira-kira empat saat. Adegan ini tidak memaparkan klien sebenar atau hartanah tertentu, penandatanganan perjanjian sewa, kelulusan bank atau permit untuk menjalankan perniagaan."
+      },
+      "captionSha256": "e08f90ff1e08e0c7f7a850aff7d0b743754033f33c2ef10b155a25ef28cee210",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Pelan ruang disorong ke seberang meja",
+        "description": "Seorang pelawat menyorong pelan ruang di atas meja ke arah orang di hadapannya. Orang itu meletakkan tangan pada tepi kertas.",
+        "disclosure": "Adegan rekaan yang dihasilkan dengan AI, sepanjang kira-kira empat saat. Adegan ini tidak memaparkan klien sebenar atau hartanah tertentu, penandatanganan perjanjian sewa, kelulusan bank atau permit untuk menjalankan perniagaan."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-ms/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "53aa2527c34b406c9bca264e852a3282e3fb487171173d311c415cd4a37fd70d",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-ms/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "410743f328faf2780cdd61e126ecbe45f122fc2d14d0c34c6f979e37bd731332",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-ms/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "5bb4d6f0c603f01f7bbbe1b91119200f6d73e808efde68b86ddd04d334cb7eff",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Italian/Malay articles read. Advanced1 premises, lease and permissible-use topics fit the plan handoff. Advanced2 explicitly scopes the remittance example and source-document exception to Korea, retaining bank variation and conditioned foreign-manager/employee eligibility. Generic paper placement fits source-document review; captions do not repeat legal/numeric requirements, show approval or imply language services or real clients. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "hr/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-hr/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "64a6daec39d48bf866ec97a6d9ada13306e1720a953719adb76bc1dfc97fb28a",
+      "captionLanguage": "hr",
+      "caption": {
+        "title": "Dokument o sredstvima stavlja se na stol",
+        "description": "Posjetitelj položi jedan list papira na stol između dviju mapa. Osoba nasuprot njemu stavi ruku na rub papira.",
+        "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom traje približno četiri sekunde. Ne prikazuje stvarne klijente ni autentične bankovne dokumente, dovršen prijenos novca, otvoren račun ili odobrenje banke."
+      },
+      "captionSha256": "2872c998586fe0f81c4fa6ec87af23faebe8b92653acddf4cdacc91ec2f6a23e",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Dokument o sredstvima stavlja se na stol",
+        "description": "Posjetitelj položi jedan list papira na stol između dviju mapa. Osoba nasuprot njemu stavi ruku na rub papira.",
+        "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom traje približno četiri sekunde. Ne prikazuje stvarne klijente ni autentične bankovne dokumente, dovršen prijenos novca, otvoren račun ili odobrenje banke."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-hr/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "c3d595fb90c86b366647b514c1e44d601258f6e557e71e766cbc5773c33597e2",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hr/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "79e83b2cd2352d6e07f8444477dd06bc42caacb3da3e176c35f473a7e2bbaf6c",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hr/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "c14f4854771ecfc50ec9185628544a3a9ce957a12ed21175363dd5fae00385e8",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Croatian articles read while wave2 browser QA runs. Advanced1 premises/lease-use sections match the plan handoff. Advanced2 limits remittance and source-document examples to Korea and preserves bank variation and foreign-manager eligibility. Use document placement without any new numerical/procedural or approval claims. Croatian awaits a later caption/integration wave; source unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "hu/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-hu/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "b9044fc7a39577604494c6f932c49a8de4579620b4dfb850f3bd6fcff03732e0",
+      "captionLanguage": "hu",
+      "caption": {
+        "title": "A pénzeszközökről szóló irat az asztalra kerül",
+        "description": "A látogató egy lapot tesz az asztalra, két mappa közé. A vele szemben ülő személy a papír szélére helyezi a kezét.",
+        "disclosure": "Mesterséges intelligenciával létrehozott, körülbelül négy másodperces kitalált jelenet. Nem mutat valódi ügyfeleket vagy valódi banki iratokat, teljesített átutalást, megnyitott számlát vagy banki jóváhagyást."
+      },
+      "captionSha256": "a554a401e5d4994053bdf69b23e80d437a160aa3010c6b2f0417e7e1c23cf04e",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "A pénzeszközökről szóló irat az asztalra kerül",
+        "description": "A látogató egy lapot tesz az asztalra, két mappa közé. A vele szemben ülő személy a papír szélére helyezi a kezét.",
+        "disclosure": "Mesterséges intelligenciával létrehozott, körülbelül négy másodperces kitalált jelenet. Nem mutat valódi ügyfeleket vagy valódi banki iratokat, teljesített átutalást, megnyitott számlát vagy banki jóváhagyást."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-hu/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "629197a956c967db97529d30de9fc6f62ceb13e3f80bc00d3f297e9db3f22a9c",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hu/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "0a3f7ef482fa8eea1f37689c67dee3818c199f5b8fbee86bac03ab9945e826b8",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-hu/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "c7a79eace1c989e8423e9d3a8bd4fa468a1467c1159ad89d5290c5d2aec27f9e",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Hungarian articles read. Advanced1 premises and lease-use sections match the plan handoff. Advanced2 Q1 is Korea-specific, while Q2 broadly exempts foreign (for example Korean) bank accounts from source documents; do not repeat or generalize that legal claim in a caption. Generic records placement matches only the fund-document topic. Preserve bank variation, foreign-manager conditions and non-Hungarian service scope; source body unchanged. Hungarian awaits later caption/integration.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "id/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-id/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "3064a2ca56812d947e8ba47518eb6b2923ecfbe200edadde2fc4cbc301d5c2b0",
+      "captionLanguage": "id",
+      "caption": {
+        "title": "Meletakkan dokumen tentang dana di atas meja",
+        "description": "Seorang pengunjung meletakkan selembar kertas di atas meja, di antara dua map. Orang di seberangnya menaruh tangan di tepi kertas.",
+        "disclosure": "Adegan fiktif yang dibuat dengan AI, berdurasi sekitar empat detik. Adegan ini tidak menggambarkan klien nyata atau dokumen bank asli, transfer yang telah selesai, pembukaan rekening, maupun persetujuan bank."
+      },
+      "captionSha256": "f84d64558b71b4e2e3512ebb01fd03fc59dabeba895f3352a361d2a7b2169b4e",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Meletakkan dokumen tentang dana di atas meja",
+        "description": "Seorang pengunjung meletakkan selembar kertas di atas meja, di antara dua map. Orang di seberangnya menaruh tangan di tepi kertas.",
+        "disclosure": "Adegan fiktif yang dibuat dengan AI, berdurasi sekitar empat detik. Adegan ini tidak menggambarkan klien nyata atau dokumen bank asli, transfer yang telah selesai, pembukaan rekening, maupun persetujuan bank."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-id/023-baby-taiwan-nationality-birth-registration.md",
+          "sourceSha256": "56f62d149ec598a229570b82100c2139ebf51a4579f9b1aebf57bef01f00ca43",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-id/022-marrying-taiwanese-national-registration-checklist.md",
+          "sourceSha256": "cf808ea4e53ef908b7ec3cd6e9d6528edd3a2af21689567017ee81220567254a",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-id/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+          "sourceSha256": "e7759fd6600d75a7ed4e079c923cc5c113798d66cece4a4ba1dea43862a0b3eb",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Indonesian articles read during wave2 deployment. Advanced1 premises/lease-use sections fit the plan handoff. Advanced2 explicitly limits both remittance and source-document exceptions to Korea and requires separate checks for other origin countries; it preserves bank variation and foreign-manager eligibility. Paper placement adds no legal, numerical or approval result. Source unchanged; Indonesian caption/integration remains pending.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "is/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-is/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "d8474935e057b4479550a488ef119baac8304727d1e7fd2db41c17f256fcd785",
+      "captionLanguage": "is",
+      "caption": {
+        "title": "Skjal um fjármuni lagt á borðið",
+        "description": "Gestur leggur eitt blað á borðið á milli tveggja mappa. Sá sem situr á móti leggur hönd við brún blaðsins.",
+        "disclosure": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né ósvikin bankaskjöl, framkvæmda millifærslu, opnaðan reikning eða samþykki banka."
+      },
+      "captionSha256": "48005cc8d231c9648659ae1e49c79493389fb7cc0de60052e9d69e3726b4a197",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Skjal um fjármuni lagt á borðið",
+        "description": "Gestur leggur eitt blað á borðið á milli tveggja mappa. Sá sem situr á móti leggur hönd við brún blaðsins.",
+        "disclosure": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né ósvikin bankaskjöl, framkvæmda millifærslu, opnaðan reikning eða samþykki banka."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-is/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "5d82980c92e558c61fda579d632447466a93797fa933461085d479a47e462128",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-is/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "b897d6be6952ffe1444544c4c533f1ad2204e153e976218009a566af5a44dfad",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-is/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "0c0cdd25e87f6da4d877dc2b29b139f1f1e3a819abbf0fc9de036f038f11ea98",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Icelandic articles read during wave2 public QA. Advanced1 premises/lease-use topics fit the plan handoff. Advanced2 Q1 is explicitly a Korean example; Q2 broadly states a foreign-bank source-document exception. Do not reproduce or generalize this legal statement in captions. Generic records placement matches the document subtopic only. Preserve variable bank and foreign-manager conditions; source unchanged. Icelandic awaits later caption/integration.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "it/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-it/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "eed9f9fb0aa8af668998c6b1e132edc26137a5ac4010aefd3c1e8d5a96e45c60",
+      "captionLanguage": "it",
+      "caption": {
+        "title": "Un documento sui fondi viene posato tra due cartelle",
+        "description": "Una persona posa un foglio sul tavolo, tra due cartelle. Chi siede di fronte appoggia una mano sul bordo della carta.",
+        "disclosure": "Scena di fantasia di circa quattro secondi, generata con IA. Non rappresenta clienti reali o documenti bancari autentici, né mostra un bonifico completato, l’apertura di un conto o un’approvazione bancaria."
+      },
+      "captionSha256": "6cc7316b7c0617bb7bd13dfa5830a67b71d1c88d9d4e93e32f3adbb32bcc4fa2",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Un documento sui fondi viene posato tra due cartelle",
+        "description": "Una persona posa un foglio sul tavolo, tra due cartelle. Chi siede di fronte appoggia una mano sul bordo della carta.",
+        "disclosure": "Scena di fantasia di circa quattro secondi, generata con IA. Non rappresenta clienti reali o documenti bancari autentici, né mostra un bonifico completato, l’apertura di un conto o un’approvazione bancaria."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-it/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "566e0d9917912c06fa979733cdf3a8bd7c9036541e5c58c8ef3199cc46d94638",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-it/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "d6f27f1cc46ce85600f815bab10b7358669f481c9bc292e9973688b1d55969f8",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-it/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "fd0a8885ee0c7e40198610dc431b768845d6acd13c4819a916fbb41fca8f4015",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Italian/Malay articles read. Advanced1 premises, lease and permissible-use topics fit the plan handoff. Advanced2 explicitly scopes the remittance example and source-document exception to Korea, retaining bank variation and conditioned foreign-manager/employee eligibility. Generic paper placement fits source-document review; captions do not repeat legal/numeric requirements, show approval or imply language services or real clients. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "km/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-km/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "c196eac941f9a32de9a1d9a53085d7dd715522190a7f50cd27291e846bb0a962",
+      "captionLanguage": "km",
+      "caption": {
+        "title": "ការដាក់ឯកសារអំពីទុនលើតុ",
+        "description": "អ្នកមកជួបដាក់ក្រដាសមួយសន្លឹកលើតុ នៅចន្លោះថតឯកសារពីរ។ អ្នកអង្គុយទល់មុខដាក់ដៃលើគែមក្រដាស។",
+        "disclosure": "ឈុតស្រមៃនេះបង្កើតដោយបញ្ញាសិប្បនិម្មិត (AI) និងមានរយៈពេលប្រហែលបួនវិនាទី។ វាមិនបង្ហាញអតិថិជនពិត ឬឯកសារធនាគារពិត ការផ្ទេរប្រាក់ដែលបានបញ្ចប់ ការបើកគណនី ឬការអនុម័តរបស់ធនាគារឡើយ។"
+      },
+      "captionSha256": "4091d4cb0c5ad9b4c3169498e4e43f7f4ece5b4214ca2a453becd3720d821eb8",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "ការដាក់ឯកសារអំពីទុនលើតុ",
+        "description": "អ្នកមកជួបដាក់ក្រដាសមួយសន្លឹកលើតុ នៅចន្លោះថតឯកសារពីរ។ អ្នកអង្គុយទល់មុខដាក់ដៃលើគែមក្រដាស។",
+        "disclosure": "ឈុតស្រមៃនេះបង្កើតដោយបញ្ញាសិប្បនិម្មិត (AI) និងមានរយៈពេលប្រហែលបួនវិនាទី។ វាមិនបង្ហាញអតិថិជនពិត ឬឯកសារធនាគារពិត ការផ្ទេរប្រាក់ដែលបានបញ្ចប់ ការបើកគណនី ឬការអនុម័តរបស់ធនាគារឡើយ។"
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-km/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "4db7644c25e6add7daaa1fca73dedc0b21288b476465f854ee181ccfbfbe82b2",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-km/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "f7c3c04d31966c4a07d4a5a8ae8761b2dc09a6364eb4190794469822923caea3",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-km/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "8baf70ad1df18aaab3e8eae210970995e4ecb4f44880ea02f79dfc98d233a604",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Khmer articles read. Advanced1 explicitly separates work/residence procedures from company formation and covers lease/premises suitability. Advanced2 Q1 is a Korea-only example; Q2 broadly describes a usual foreign-bank source-document exception with a country-bank check qualifier. Do not repeat that legal claim in captions. Approved floor-plan and paper placement fit only the premises and records topics. Khmer shaping/line wrapping must be visually inspected. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "lt/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-lt/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "4ddc0d180b2fdf23d641895d1036ebbcac2277af6d7afc86fc4fc2a753dd99c2",
+      "captionLanguage": "lt",
+      "caption": {
+        "title": "Dokumentas apie lėšas padedamas ant stalo",
+        "description": "Lankytojas padeda vieną popieriaus lapą ant stalo tarp dviejų aplankų. Priešais sėdintis žmogus uždeda ranką ant lapo krašto.",
+        "disclosure": "Dirbtiniu intelektu sukurta išgalvota scena trunka apie keturias sekundes. Joje nerodomi tikri klientai ar autentiški banko dokumentai, atliktas pinigų pervedimas, atidaryta sąskaita ar banko patvirtinimas."
+      },
+      "captionSha256": "5835e0adf5bba0ec45d92662fd81353c968e017ff8dc70d3f186616a9819f3ad",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Dokumentas apie lėšas padedamas ant stalo",
+        "description": "Lankytojas padeda vieną popieriaus lapą ant stalo tarp dviejų aplankų. Priešais sėdintis žmogus uždeda ranką ant lapo krašto.",
+        "disclosure": "Dirbtiniu intelektu sukurta išgalvota scena trunka apie keturias sekundes. Joje nerodomi tikri klientai ar autentiški banko dokumentai, atliktas pinigų pervedimas, atidaryta sąskaita ar banko patvirtinimas."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-lt/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "d5aa0403aca7cfab21c336d071ab044639facd7381874658cb2b80f2ee2b23cf",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lt/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "2981735077ad21e9d553ac535fce645f6fd4a867efdb19985dfe9a7666d56779",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lt/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "d5693b8028d207f732d6b0dc8fce6ad8619a10b17261d6b0fd0ae0cadcd627b4",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Lithuanian/Latvian articles read. Advanced1 premises and permissible-use sections fit the floor-plan handoff. Advanced2 expressly labels Korea as a remittance example, discusses source-of-funds documents, bank variation and conditional foreign-manager eligibility. Paper placement matches only the document topic, without a real-client/lawyer identity, approval or procedural/numeric claim. Bodies, conditions and links remain unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "lv/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-lv/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "5de2e881753766e8ae574bdbae44e01ca2702ad963ba2e5a3667bc0b32f416e1",
+      "captionLanguage": "lv",
+      "caption": {
+        "title": "Dokumentu par līdzekļiem noliek uz galda",
+        "description": "Apmeklētājs noliek vienu papīra lapu uz galda starp divām mapēm. Pretī sēdošais cilvēks uzliek roku uz papīra malas.",
+        "disclosure": "Ar mākslīgo intelektu veidota izdomāta aina, kas ilgst aptuveni četras sekundes. Tā nerāda īstus klientus vai autentiskus bankas dokumentus, pabeigtu naudas pārskaitījumu, atvērtu kontu vai bankas apstiprinājumu."
+      },
+      "captionSha256": "685020d4a9d41d74bec7ca90e71cea7983de7f8b5c402a796f627f2a2e9f944e",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Dokumentu par līdzekļiem noliek uz galda",
+        "description": "Apmeklētājs noliek vienu papīra lapu uz galda starp divām mapēm. Pretī sēdošais cilvēks uzliek roku uz papīra malas.",
+        "disclosure": "Ar mākslīgo intelektu veidota izdomāta aina, kas ilgst aptuveni četras sekundes. Tā nerāda īstus klientus vai autentiskus bankas dokumentus, pabeigtu naudas pārskaitījumu, atvērtu kontu vai bankas apstiprinājumu."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-lv/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "22a6c5eb20905053caf9df5933700593c46285d9e9a46ac94d2834e0d14aef5d",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lv/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "a5e6f8e22748c5a107b3f6f45829b5cb177c34e2a29371b672882c0d5229c33b",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-lv/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "f0c38a7637e84bbe336b6849fa3f2b8f608ca517a994c072f169261c35fd34cf",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Lithuanian/Latvian articles read. Advanced1 premises and permissible-use sections fit the floor-plan handoff. Advanced2 expressly labels Korea as a remittance example, discusses source-of-funds documents, bank variation and conditional foreign-manager eligibility. Paper placement matches only the document topic, without a real-client/lawyer identity, approval or procedural/numeric claim. Bodies, conditions and links remain unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "mn/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-mn/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "83cbd5127afaa2741914667be924650e9f7794610d886c389e5e34ddfd1f80ac",
+      "captionLanguage": "mn",
+      "caption": {
+        "title": "Хөрөнгөтэй холбоотой баримтыг ширээн дээр тавих",
+        "description": "Ирсэн хүн нэг хуудас цаасыг ширээн дээрх хоёр хавтасны хооронд тавина. Эсрэг талд сууж буй хүн цаасны захад гараа тавина.",
+        "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундын зохиомол дүрслэл. Бодит үйлчлүүлэгч, жинхэнэ банкны баримт бичиг, дууссан мөнгөн шилжүүлэг, данс нээх үйл явц эсвэл банкны зөвшөөрлийг харуулаагүй."
+      },
+      "captionSha256": "3115354b429b5b7636dac29f6503db6503f5c35787e04970077e2cf31291d103",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Хөрөнгөтэй холбоотой баримтыг ширээн дээр тавих",
+        "description": "Ирсэн хүн нэг хуудас цаасыг ширээн дээрх хоёр хавтасны хооронд тавина. Эсрэг талд сууж буй хүн цаасны захад гараа тавина.",
+        "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундын зохиомол дүрслэл. Бодит үйлчлүүлэгч, жинхэнэ банкны баримт бичиг, дууссан мөнгөн шилжүүлэг, данс нээх үйл явц эсвэл банкны зөвшөөрлийг харуулаагүй."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-mn/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "9cf74f5bc85010d4b67554443f4cfa80e2ba352c30ffc8effa1a7330fc9b4031",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-mn/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "4be39a195ca72d155e6616a193312863254bc2942f699fdb0f7a2baba66bec27",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-mn/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "f0696a3234c42ca8ca55915e968f551f01efc2d222799d2eb93f522fb81b899c",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Mongolian articles read. Advanced1 premises/lease and business-use sections fit the plan handoff. Advanced2 repeatedly limits remittance and source-document examples to Korea and requires separate checks for other countries; bank variation and manager/employee eligibility remain conditioned. Paper placement matches the record topic without approval, transaction, procedural or numerical claims. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    },
+    {
+      "articleKey": "ms/column/taiwan-company-establishment-advanced-2",
+      "sourceFile": "src/content/columns-ms/005-taiwan-company-establishment-advanced-2.md",
+      "sourceSha256": "3e5cdf44ee9cfcc6141f03871aa5d7a91415e2837a9f202a5e8707e8c1ea688b",
+      "captionLanguage": "ms",
+      "caption": {
+        "title": "Dokumen tentang dana diletakkan di atas meja",
+        "description": "Seorang pelawat meletakkan sekeping kertas di atas meja, di antara dua fail. Orang di hadapannya meletakkan tangan pada tepi kertas.",
+        "disclosure": "Adegan rekaan yang dihasilkan dengan AI, sepanjang kira-kira empat saat. Adegan ini tidak memaparkan klien sebenar atau dokumen bank tulen, pindahan wang yang telah selesai, pembukaan akaun atau kelulusan bank."
+      },
+      "captionSha256": "ffe177436d1174f8ccc5f27f343182ebb888eea1fa811827c46c72f62ff638f3",
+      "original": "No generated-video caption existed on this article-language page.",
+      "problemAndReason": "An added scene needs a concrete action description and AI-fiction disclosure; a procedure or approval claim would exceed the visible action.",
+      "replacement": {
+        "title": "Dokumen tentang dana diletakkan di atas meja",
+        "description": "Seorang pelawat meletakkan sekeping kertas di atas meja, di antara dua fail. Orang di hadapannya meletakkan tangan pada tepi kertas.",
+        "disclosure": "Adegan rekaan yang dihasilkan dengan AI, sepanjang kira-kira empat saat. Adegan ini tidak memaparkan klien sebenar atau dokumen bank tulen, pindahan wang yang telah selesai, pembukaan akaun atau kelulusan bank."
+      },
+      "meaningPreservation": "Caption preserves the inspected plan handoff or single-sheet placement, approximately four-second timing, AI fiction and absence of real clients, actual property/bank documents or approval/completed-transaction results. All existing legal body text, numbers, conditions, author metadata, quotations and links are unchanged.",
+      "deletionCheck": "Deleting the first action loses what the visitor does; deleting the recipient clause loses the second visible action. Deleting either disclosure sentence loses AI status/duration or the representation limits. No generic introduction or promotional ending added.",
+      "styleComparison": "Concrete participant/action caption, without recent articles’ generic legal-question introductions, directive headings or consultation endings. Three previously read same-language opening/headings/ending excerpts reused with current SHA verified.",
+      "sameLanguageReferences": [
+        {
+          "file": "src/content/columns-ms/018-taiwan-semiconductor-market-entry.md",
+          "sourceSha256": "53aa2527c34b406c9bca264e852a3282e3fb487171173d311c415cd4a37fd70d",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-ms/017-taiwan-logistics-business-setup.md",
+          "sourceSha256": "410743f328faf2780cdd61e126ecbe45f122fc2d14d0c34c6f979e37bd731332",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        },
+        {
+          "file": "src/content/columns-ms/016-taiwan-inheritance-custody-analysis.md",
+          "sourceSha256": "5bb4d6f0c603f01f7bbbe1b91119200f6d73e808efde68b86ddd04d334cb7eff",
+          "readEvidence": "adjacent-formation-reading-bindings.json: reuse unchanged, previously directly read excerpt"
+        }
+      ],
+      "sourceReview": "Full Italian/Malay articles read. Advanced1 premises, lease and permissible-use topics fit the plan handoff. Advanced2 explicitly scopes the remittance example and source-document exception to Korea, retaining bank variation and conditioned foreign-manager/employee eligibility. Generic paper placement fits source-document review; captions do not repeat legal/numeric requirements, show approval or imply language services or real clients. Source bodies unchanged.",
+      "verdict": "approved-for-integration"
+    }
+  ],
+  "localAndPublicVerification": "Pending at integration; see external company-advanced-wave3 release evidence.",
+  "draftRevisions": [
+    {
+      "scene": "premises-lease",
+      "locale": "is",
+      "original": "Uppspuni búinn til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né tiltekna fasteign, undirritun leigusamnings, samþykki banka eða rekstrarleyfi.",
+      "problemAndReason": "Use the concrete term for a fictional scene instead of a standalone word for fabrication; describe the absent completed transfer and opened account directly.",
+      "replacement": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né tiltekna fasteign, undirritun leigusamnings, samþykki banka eða rekstrarleyfi.",
+      "meaningPreserved": "AI generation, approximately four-second duration and all real-client/property/document/transaction/approval limits retained. No legal claim added.",
+      "nativeSpeakerReview": false
+    },
+    {
+      "scene": "funds-paperwork",
+      "locale": "is",
+      "original": "Uppspuni búinn til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né ósvikin bankaskjöl, lokið millifærsluferli, opnun reiknings eða samþykki banka.",
+      "problemAndReason": "Use the concrete term for a fictional scene instead of a standalone word for fabrication; describe the absent completed transfer and opened account directly.",
+      "replacement": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né ósvikin bankaskjöl, framkvæmda millifærslu, opnaðan reikning eða samþykki banka.",
+      "meaningPreserved": "AI generation, approximately four-second duration and all real-client/property/document/transaction/approval limits retained. No legal claim added.",
+      "nativeSpeakerReview": false
+    }
+  ]
+}

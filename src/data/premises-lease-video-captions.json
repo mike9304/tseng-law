@@ -98,5 +98,55 @@
     "title": "मेज़ के पार परिसर का नक्शा देना",
     "description": "मिलने आया व्यक्ति मेज़ पर रखा नक्शा सामने बैठे व्यक्ति की ओर सरकाता है। सामने वाला व्यक्ति कागज़ के किनारे पर हाथ रखता है।",
     "disclosure": "यह AI से बनाया गया लगभग चार सेकंड का काल्पनिक दृश्य है। इसमें वास्तविक ग्राहक या कोई खास संपत्ति, किरायानामे पर हस्ताक्षर, बैंक की मंज़ूरी या कारोबार चलाने की अनुमति नहीं दिखाई गई है।"
+  },
+  "hr": {
+    "title": "Tlocrt klizi preko stola",
+    "description": "Posjetitelj gurne tlocrt preko stola prema osobi nasuprot sebi. Ona položi ruku na rub papira.",
+    "disclosure": "Izmišljena scena izrađena umjetnom inteligencijom traje približno četiri sekunde. Ne prikazuje stvarne klijente ni određenu nekretninu, sklapanje ugovora o najmu, odobrenje banke ili dozvolu za obavljanje djelatnosti."
+  },
+  "hu": {
+    "title": "Alaprajz átcsúsztatása az asztalon",
+    "description": "A látogató átcsúsztat egy alaprajzot az asztalon. A vele szemben ülő személy a lap szélére teszi a kezét.",
+    "disclosure": "Mesterséges intelligenciával létrehozott, körülbelül négy másodperces kitalált jelenet. Nem mutat valódi ügyfeleket vagy konkrét ingatlant, bérleti szerződés megkötését, banki jóváhagyást vagy működési engedélyt."
+  },
+  "id": {
+    "title": "Menggeser denah ke seberang meja",
+    "description": "Seorang pengunjung menggeser denah di atas meja ke arah orang di seberangnya. Orang tersebut meletakkan tangan di tepi kertas.",
+    "disclosure": "Adegan fiktif yang dibuat dengan AI, berdurasi sekitar empat detik. Adegan ini tidak menggambarkan klien nyata atau properti tertentu, penandatanganan sewa, persetujuan bank, maupun izin usaha."
+  },
+  "is": {
+    "title": "Grunnmynd færð yfir borðið",
+    "description": "Gestur rennir grunnmynd yfir borðið. Sá sem situr á móti leggur hönd á brún blaðsins.",
+    "disclosure": "Skáldað atriði búið til með gervigreind, um fjórar sekúndur að lengd. Atriðið sýnir hvorki raunverulega viðskiptavini né tiltekna fasteign, undirritun leigusamnings, samþykki banka eða rekstrarleyfi."
+  },
+  "it": {
+    "title": "Una planimetria scorre sul tavolo",
+    "description": "Una persona fa scorrere una planimetria sul tavolo verso chi le siede di fronte, che appoggia una mano sul bordo del foglio.",
+    "disclosure": "Scena di fantasia di circa quattro secondi, generata con IA. Non rappresenta clienti reali o un immobile specifico, né mostra la firma di un contratto di locazione, un’approvazione bancaria o un’autorizzazione all’attività."
+  },
+  "km": {
+    "title": "ការរុញប្លង់ទីតាំងតាមផ្ទៃតុ",
+    "description": "អ្នកមកជួបរុញប្លង់ទីតាំងលើតុទៅរកអ្នកអង្គុយទល់មុខ។ អ្នកទល់មុខដាក់ដៃលើគែមក្រដាស។",
+    "disclosure": "ឈុតស្រមៃនេះបង្កើតដោយបញ្ញាសិប្បនិម្មិត (AI) និងមានរយៈពេលប្រហែលបួនវិនាទី។ វាមិនបង្ហាញអតិថិជនពិត ឬអចលនទ្រព្យជាក់លាក់ ការចុះហត្ថលេខាលើកិច្ចសន្យាជួល ការអនុម័តរបស់ធនាគារ ឬលិខិតអនុញ្ញាតធ្វើអាជីវកម្មឡើយ។"
+  },
+  "lt": {
+    "title": "Patalpų planas pastumiamas per stalą",
+    "description": "Lankytojas pastumia patalpų planą per stalą. Priešais sėdintis žmogus padeda ranką ant lapo krašto.",
+    "disclosure": "Dirbtiniu intelektu sukurta išgalvota scena trunka apie keturias sekundes. Joje nerodomi tikri klientai ar konkretus nekilnojamasis turtas, nuomos sutarties pasirašymas, banko patvirtinimas ar leidimas vykdyti veiklą."
+  },
+  "lv": {
+    "title": "Telpas plānu pabīda pāri galdam",
+    "description": "Apmeklētājs pabīda telpas plānu pāri galdam. Pretī sēdošais cilvēks uzliek roku uz lapas malas.",
+    "disclosure": "Ar mākslīgo intelektu veidota izdomāta aina, kas ilgst aptuveni četras sekundes. Tā nerāda īstus klientus vai konkrētu īpašumu, nomas līguma parakstīšanu, bankas apstiprinājumu vai darbības atļauju."
+  },
+  "mn": {
+    "title": "Өрөөний план зургийг ширээн дээгүүр дамжуулах",
+    "description": "Ирсэн хүн өрөөний план зургийг ширээн дээгүүр гулсуулна. Эсрэг талд сууж буй хүн цаасны захад гараа тавина.",
+    "disclosure": "Хиймэл оюунаар бүтээсэн, ойролцоогоор дөрвөн секундын зохиомол дүрслэл. Бодит үйлчлүүлэгч, тодорхой үл хөдлөх хөрөнгө, түрээсийн гэрээнд гарын үсэг зурах үйл явц, банкны зөвшөөрөл эсвэл үйл ажиллагааны зөвшөөрлийг харуулаагүй."
+  },
+  "ms": {
+    "title": "Pelan ruang disorong ke seberang meja",
+    "description": "Seorang pelawat menyorong pelan ruang di atas meja ke arah orang di hadapannya. Orang itu meletakkan tangan pada tepi kertas.",
+    "disclosure": "Adegan rekaan yang dihasilkan dengan AI, sepanjang kira-kira empat saat. Adegan ini tidak memaparkan klien sebenar atau hartanah tertentu, penandatanganan perjanjian sewa, kelulusan bank atau permit untuk menjalankan perniagaan."
   }
 }

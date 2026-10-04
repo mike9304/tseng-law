@@ -31,7 +31,9 @@ const fastLaneStopCaptions = JSON.parse(await fs.readFile(new URL('../src/data/f
 const detachedTireImpactCaptions = JSON.parse(await fs.readFile(new URL('../src/data/detached-tire-impact-video-captions.json', import.meta.url), 'utf8'));
 const warningTriangleRearEndCaptions = JSON.parse(await fs.readFile(new URL('../src/data/warning-triangle-rear-end-video-captions.json', import.meta.url), 'utf8'));
 const ownDashcamCutInCaptions = JSON.parse(await fs.readFile(new URL('../src/data/own-dashcam-cut-in-video-captions.json', import.meta.url), 'utf8'));
+const pursuitSelfSkidCaptions = JSON.parse(await fs.readFile(new URL('../src/data/pursuit-self-skid-video-captions.json', import.meta.url), 'utf8'));
 const allCases = [
+  { locale: 'zh-hant', slug: 'taiwan-pursuit-fatal-self-crash-vacated-judgment', id: 'pursuit-self-skid-v1-zh-hant', duration: 4.041667, contactTime: 1, expectedDiagrams: 0, disclosure: pursuitSelfSkidCaptions['zh-hant'].disclosure },
   // Preserve the original native looping clips beside the additional collision.
   {"locale": "ko", "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too", "id": "road-rage-freeway-chase-own-dashcam-too-v3-ko", "duration": 15.041667, "contactTime": 7, "expectedDiagrams": 0, "loop": true, "disclosure": "AI"},
   {"locale": "en", "slug": "taiwan-road-rage-freeway-chase-own-dashcam-too", "id": "road-rage-freeway-chase-own-dashcam-too-v3-en", "duration": 15.041667, "contactTime": 7, "expectedDiagrams": 0, "loop": true, "disclosure": "AI"},

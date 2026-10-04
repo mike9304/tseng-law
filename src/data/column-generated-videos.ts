@@ -1,3 +1,4 @@
+import pursuitSelfSkidCaptions from './pursuit-self-skid-video-captions.json';
 import ownDashcamCutInCaptions from './own-dashcam-cut-in-video-captions.json';
 import warningTriangleRearEndCaptions from './warning-triangle-rear-end-video-captions.json';
 import detachedTireImpactCaptions from './detached-tire-impact-video-captions.json';
@@ -84,6 +85,14 @@ const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsse
 };
 
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  'column/zh-hant/taiwan-pursuit-fatal-self-crash-vacated-judgment': {
+    id: 'pursuit-self-skid-v1-zh-hant',
+    src: '/videos/columns/pursuit-self-skid-v1-zh-hant.mp4',
+    poster: '/images/column-videos/pursuit-self-skid-v1-zh-hant.jpg',
+    width: 1280,
+    height: 720,
+    ...pursuitSelfSkidCaptions['zh-hant'],
+  },
   'column/zh-hant/taiwan-freeway-warning-triangle-time-ability-evidence': {
     id: 'warning-triangle-rear-end-v2-zh-hant',
     src: '/videos/columns/warning-triangle-rear-end-v2-zh-hant.mp4',

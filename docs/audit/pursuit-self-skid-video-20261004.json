@@ -1,0 +1,216 @@
+{
+  "reviewedAt": "2026-10-04T04:05:51.535628+00:00",
+  "reviewer": "Codex",
+  "scope": "New video on article190 zh-hant only; legal article body unchanged.",
+  "workflow": "Codex first/fall/end images, then one Grok4.7 reference_to_video call. First end reference rejected for direction mismatch; replacement end derived from fall reference before animation.",
+  "generationToolCall": "call-428336a9-bd8e-4a13-871d-44c07f011fe7-0",
+  "rawSha256": "8bd8764e40410f54aad73d52c2aaaaccf8f46ffb27ed55a9add8f23e7182a755",
+  "retiming": false,
+  "allRawFramesDirectlyInspected": true,
+  "decodedFrames": 97,
+  "rawVisualReview": {
+    "reviewedAt": "2026-10-04T04:05:00.498086+00:00",
+    "reviewer": "Codex direct visual inspection",
+    "verdict": "approved-for-packaging",
+    "rawSha256": "8bd8764e40410f54aad73d52c2aaaaccf8f46ffb27ed55a9add8f23e7182a755",
+    "decodedFrames": 97,
+    "allFramesViewed": true,
+    "nativeDetailFramesZeroBased": [
+      6,
+      8,
+      16,
+      24,
+      40,
+      96
+    ],
+    "durationSeconds": 4.041667,
+    "frameRate": "24/1",
+    "retiming": false,
+    "evidenceSha256": {
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/all-frames-01.jpg": "ea89bb47dc4c44da67dabf8eb3e79b8707c9a4f26b3a0a8f562768e84d2972d0",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/all-frames-02.jpg": "5614e8abb100e53ebe2693a7d5b1aa1d016f9d11ac77d193b387ce68a0de19f7",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/all-frames-03.jpg": "862e6ad62e7599006b5b0c34ed59b7b479ff661268c95b1846e1f2b1940e3064",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/all-frames-04.jpg": "b61431a3aa32d2ea092494f9d9ea3a1194d21a6f7da9de27f66d63d98a1a449a",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/all-frames-05.jpg": "3d75b3f27e1952c6b51808b7aca4f401e4e137c569d4d5f049e45a455857947b",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/all-frames-06.jpg": "169bf7a8c2432b5e08fd0b621ff84d4536481ffd44371d90a2d609af7a4eaac0",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/all-frames-07.jpg": "d08dfb5355a3c85fabd71ff3dcfdc5f6eff6158e53a91313427540a873c75a4f",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/frames/007.jpg": "d4097fff0e7367cb7ea641f86b146391fccc9786f06cd246569fd9683a1ffdc8",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/frames/009.jpg": "f021a0ceecfa6d97b8d807437acf66d6ae555541a2d90a12c993ef604315f3de",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/frames/017.jpg": "a2a77355ece79dd26750b455e2a0b0450d4dcf740243b5a2a58ea1907f8eab07",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/frames/025.jpg": "ad51fca7eb53aba5d78d2ad6a151e3b9ce674e6d1d5795def101af3c8afa6b3e",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/frames/041.jpg": "e921a5a7fc91397e961336aec81b177d48c9d3a265cd12398caa95f35699a381",
+      "/Users/son7/tseng-law-column-videos/qa/pursuit-self-skid-v1/frames/097.jpg": "4cec394bedc59eca573477d78408c98a8f68e8a7b73e41b87363dd218356f5e9"
+    },
+    "observations": [
+      "All97frames inspected across7contact sheets, with6native-resolution details.",
+      "Scooter moves forward-right, leans sharply by0.25s and reaches the gravel on its side around0.33s. Rider separates and slides ahead-left; dust disperses and both settle by about1.3s.",
+      "One coherent solid scooter and one helmeted adult throughout; no transparent double, dissolve, cut, repeated fall or material teleport observed.",
+      "Open asphalt gap to camera car persists in every frame; no car contact, tree strike, blood or depicted injury outcome.",
+      "Rider remains on shoulder. Normal small body/fabric/wheel-detail interpolation acknowledged; not a measured physics or accident reconstruction."
+    ],
+    "captionLimits": [
+      "Only brief fictional noncontact traction loss. Earlier collision, whole pursuit, actual speed/gap, tree impact, injuries and legal conclusions are unshown."
+    ],
+    "pending": [
+      "AI label/native timing packaging check",
+      "Source/caption integration",
+      "Local/public playback and screenshots"
+    ],
+    "published": false
+  },
+  "referenceReviews": [
+    {
+      "reviewedAt": "2026-10-04T03:54:30.033109+00:00",
+      "reviewer": "Codex direct generated-image inspection",
+      "file": "/Users/son7/tseng-law-column-videos/assets/pursuit-self-skid/first-frame-v1.png",
+      "original": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-2a823f92-1634-496c-a7f1-34f8029843e0.png",
+      "sha256": "571572f8d0740c8364341b48cfaef392b6d0490fb049e0c13413ff4736889357",
+      "verdict": "approved-as-first-frame",
+      "observations": [
+        "One upright blue scooter and one helmeted adult ahead-right; rider/vehicle scale and limbs coherent.",
+        "Gravel shoulder gives clear slide direction; camera car separated by visible asphalt.",
+        "Generic rural road, not claimed to be the actual Taiwanese accident location.",
+        "No visible wound, identity, number or readable license plate."
+      ],
+      "remaining": [
+        "Impact and end references",
+        "Grok animation",
+        "Native-frame review and publication checks"
+      ]
+    },
+    {
+      "reviewedAt": "2026-10-04T03:58:07.446332+00:00",
+      "reviewer": "Codex direct generated-image inspection",
+      "file": "/Users/son7/tseng-law-column-videos/assets/pursuit-self-skid/impact-frame-v1.png",
+      "original": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-c7cab4ad-4887-4751-8778-106fdf4c65c8.png",
+      "sha256": "c7d70c8834ab0b74ec15f08a2a40785ead961f9cb5012f30877577e14b9758a9",
+      "verdict": "approved-for-motion-keyframe",
+      "observations": [
+        "Scooter tips on right gravel shoulder with visible dust; one helmeted adult braces during a fall; broad car-scooter separation.",
+        "Single coherent scooter and adult; no visible injury or text."
+      ]
+    },
+    {
+      "reviewedAt": "2026-10-04T04:00:48.501418+00:00",
+      "reviewer": "Codex direct generated-image inspection",
+      "file": "/Users/son7/tseng-law-column-videos/assets/pursuit-self-skid/end-frame-v2.png",
+      "original": "/Users/son7/.codex/generated_images/01a0fe8c-fe62-7d53-9937-a7a516c53832/exec-7819be2c-3340-49a0-9bfc-364f80296b65.png",
+      "sha256": "9ae7498d5b443db23a00dd00565f4b456e0bf9163d4f1b31bbbf520c4dba3a3d",
+      "verdict": "approved-as-end-frame",
+      "observations": [
+        "Scooter location/orientation continues approved impact reference.",
+        "Adult helmeted rider separated ahead-left on shoulder, coherent limbs; no visible injury.",
+        "Camera hood and asphalt gap preserved; no car contact or tree strike."
+      ],
+      "previousReferenceRejected": "Endv1 changed scooter direction/location across reference pair."
+    }
+  ],
+  "captionReview": {
+    "reviewedAt": "2026-10-04T04:05:00.498086+00:00",
+    "reviewer": "Codex",
+    "verdict": "approved-for-integration",
+    "locale": "zh-hant",
+    "replacement": {
+      "title": "機車滑向路肩的瞬間",
+      "description": "機車在道路邊緣迅速側倒，騎士與車身滑向碎石路肩，揚起少量塵土後停下。拍攝車輛始終留在後方，未與騎士或機車接觸。",
+      "disclosure": "本片為 AI 生成的4秒無聲假想影片，並非真實行車紀錄器畫面或本案重現。只呈現一次未與後車接觸的滑倒，未呈現先前碰撞、追逐全程、身體撞樹或傷亡結果。道路、速度、車距與動作時間均為虛構，不能用來判斷本案的因果關係、駕駛意圖或刑事責任。"
+    },
+    "sourceScope": "Exact zh-hant article190 read in full including all source descriptions, source hash bound. Generic short noncontact loss of traction only. Earlier contact, full pursuit, body-tree contact and death unshown; no car/scooter numerical speed, gap, intent, causal allocation or case judgment conclusion asserted. Article body unchanged.",
+    "changes": [
+      {
+        "original": "機車在道路邊緣迅速側倒，騎士與車身滑向碎石路肩，揚起少量塵土後停下。後方拍攝車輛與機車保持分離。",
+        "problem": "保持分離 is an abstract phrase; name the camera car and visible absence of contact.",
+        "revision": "機車在道路邊緣迅速側倒，騎士與車身滑向碎石路肩，揚起少量塵土後停下。拍攝車輛始終留在後方，未與騎士或機車接觸。",
+        "meaningPreserved": true
+      },
+      {
+        "original": "機車滑向路肩的瞬間",
+        "problem": "No defect after actual-frame review; title states the action without asserting the real event or a legal conclusion.",
+        "revision": "retained",
+        "meaningPreserved": true
+      }
+    ],
+    "firstParagraphDeletionCheck": "First sentence identifies tipping/sliding/dust/stopping; second distinguishes following-car noncontact. Removing either loses visible action or scope. No generic introduction.",
+    "secondParagraphDeletionCheck": "Disclosure identifies AI fiction and unshown earlier impacts/whole chase/tree strike/injury; dropping it would falsely broaden the depicted scope.",
+    "sameLanguageReferences": "pursuit-self-skid-editorial-reference.json",
+    "style": "Compared actual first two paragraphs, headings and endings in3unchanged zh-hant reference articles. Concrete action, no generic intro, repetitive headings, promotional ending or decorative bold.",
+    "remainingMaterialFindings": []
+  },
+  "references": [
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+      "sha256": "35b3853d675e28bb2bfaaeb742dfd7823210d2473bf63ff7c1a9d29d8deb237b",
+      "firstTwoParagraphs": [
+        "2025年6月3日上午7時14分，台北市萬華區一處路口，小客車打著左方向燈，讓左側一輛黑色休旅車先過。左側後方又有白車靠近，小客車煞停約兩秒，等白車通過後重新起步。後車的行車紀錄器錄下這段過程，也成了駕駛被檢舉的證據。法院的疑問是：這兩秒的暫停，能排除是為了避免碰撞嗎？[臺北高等行政法院高等庭115年度交上字第76號判決，2026年8月24日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)",
+        "同年11月25日下午5時13分，文山區一座橋上，機車從一般車道向右切入機慢車道，來到拍攝車輛前方。略煞車、再加速之後，機車在三秒內煞至停止，騎士回頭看，後車向左繞過。這次法院認定，影像裡沒有必須立即停下的突發狀況。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)"
+      ],
+      "headings": [
+        "同一款處罰，爭的是為什麼停",
+        "後車的速度顯示，留下另一種解釋",
+        "撤銷處分，不是准許兩秒鐘的煞停",
+        "橋上的喇叭，響在機車切入前後",
+        "兩份判決對「惡意」說得不一樣",
+        "想停下來處理，和非立刻停不可",
+        "資料來源"
+      ],
+      "ending": "機車案留下的具體做法是：在仍能穩定操控、沒有立即煞停必要的情況下，即使因喇叭或疑似擦撞受驚，想確認車損或報警，仍應漸進減速、穩定車身、留意前後左右車流，確認安全後靠邊，或駛至不妨礙交通的安全處所。需要處理一場爭執，並不等於需要在後車面前立刻停下。[臺北高等行政法院地方庭115年度交字第54號判決，2026年5月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)",
+      "extractionNote": "Substantive opening and ending prose; byline/source definitions/disclosure remain preserved in the article."
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+      "sha256": "9d6c2d5012e0fef908882e57f8f1029d3bf8d26370a41e683b41ec31d0a55250",
+      "firstTwoParagraphs": [
+        "2024年（民國113年）7月28日傍晚6點58分左右，新北市中和區。一輛自用小客車在路上迴轉，對向剛好駛來一輛機車，騎士沒有讓汽車先轉，還按喇叭示警。汽車駕駛隨即加速追趕，在一處交岔路口前追上機車，以逼車方式迫使機車停在道路中央，接著開窗對騎士罵了「幹你娘老雞掰」等語。",
+        "號誌轉為綠燈後，汽車仍擋在前方。騎士繞到汽車右側想直行離開，汽車駕駛發現後就往右前方開，讓機車無法前進；看騎士沒有其他動作，汽車才開走。這段經過汽車駕駛並不爭執，一審與二審也都認定屬實（[臺灣新北地方法院114年度易字第637號，2025年7月31日，收錄於高院判決附件](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)；[臺灣高等法院114年度上易字第2198號，2026年1月27日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。"
+      ],
+      "headings": [
+        "兩支鏡頭，兩套時間",
+        "「兩側還是有空間」與「法益侵害難認輕微」",
+        "一審：路夠寬，紅燈的52秒不算",
+        "高院：「無禮且不當」，但不具刑罰的可非難性",
+        "那句髒話，和憲法法庭113年憲判字第3號",
+        "兩審結果與不得上訴",
+        "無罪的範圍，只到刑法為止",
+        "法院用上的，是畫面裡的號誌和那次迴轉",
+        "資料來源"
+      ],
+      "ending": "另一個細節是那次迴轉。騎士最後迴轉離開了現場；在刑事判斷上，兩審法院都把這次迴轉當成騎士當時還有路可走的根據。在這份判決裡，強制罪看的不只是被擋了多久，也看當下有沒有其他路可以走。",
+      "extractionNote": "Substantive opening and ending prose; byline/source definitions/disclosure remain preserved in the article."
+    },
+    {
+      "locale": "zh-hant",
+      "file": "src/content/columns-zh/199-child-surname-change-after-divorce.md",
+      "sha256": "beaade3b84aa628af5a53e4df2c6dbf98165d1b9d40a4fc2dd34be3398048fab",
+      "firstTwoParagraphs": [
+        "離婚後，即使孩子一直與母親同住，並由母親單獨行使親權，也不會因此自動改從母姓。依[民法第1059條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1059)，未成年子女出生登記後，父母可以書面約定改姓；無法取得另一方同意時，則可依離婚等法定事由向法院聲請，由法院審查改姓是否符合子女利益。",
+        "以下以已辦出生登記、適用台灣民法的未成年子女為主；從母姓改為父姓，也適用相同規則。若孩子有外國國籍、長住海外，或尚未在台設籍，須先釐清適用法律與登記途徑，不能只憑父母其中一人是台灣人，就直接套用所有程序。"
+      ],
+      "headings": [
+        "約定改姓須父母書面同意，單獨親權不能取代",
+        "離婚是聲請事由，改姓的利益仍須另外說明",
+        "彰化地院：母親取得單獨親權，改姓聲請仍被駁回",
+        "改姓對孩子的影響，以及孩子表達意見的機會",
+        "約定書與確定裁定，是不同的戶政登記依據",
+        "外籍父母與海外文件，還有準據法及驗證問題",
+        "滿18歲後，子女可以自行決定改從父姓或母姓",
+        "參考的官方資料"
+      ],
+      "ending": "如需就子女改姓或海外文件安排諮詢，可來信昊鼎國際法律事務所曾雋崴律師：[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，簡述孩子年齡、國籍、居住地、親權安排與對方是否同意。地址：103 臺北市大同區承德路一段35號7樓之2。",
+      "extractionNote": "Substantive opening and ending prose; byline/source definitions/disclosure remain preserved in the article."
+    }
+  ],
+  "articleBindings": [
+    {
+      "key": "zh-hant/column/taiwan-pursuit-fatal-self-crash-vacated-judgment",
+      "file": "src/content/columns-zh/190-taiwan-pursuit-fatal-self-crash-vacated-judgment.md",
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-pursuit-fatal-self-crash-vacated-judgment",
+      "sourceSha256": "cd8be82612d5950bdc3d3d0fc6e8fe1f15960bc98d85ef5113dbea6c99b3098d",
+      "locale": "zh-hant",
+      "slug": "taiwan-pursuit-fatal-self-crash-vacated-judgment"
+    }
+  ],
+  "localBrowserAndPublicPlayback": "Pending at integration. Release evidence: /Users/son7/tseng-law-column-videos/qa/production-pursuit-self-skid-release.json.",
+  "youtubeUploaded": false
+}

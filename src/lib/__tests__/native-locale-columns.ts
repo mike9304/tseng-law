@@ -378,10 +378,13 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '216-spouse-affair-evidence-damages-taiwan.md', // family lane b27
     '217-landlord-listing-stolen-fake-rental-deposit-taiwan.md', // fraud lane b05
     '222-taiwan-semiconductor-environmental-compliance-wastewater-judgments.md', // semiconductor lane b15
+    '223-account-lending-prosecutor-summons-money-laundering-taiwan.md', // fraud lane b53
+    '224-romance-scam-loan-or-fraud-evidence-taiwan.md', // fraud lane b53
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
     '220-taiwan-semiconductor-chemicals-environment-permits-japanese.md', // semiconductor lane b15
+    '225-japanese-victim-fraud-complaint-taiwan-account.md', // fraud lane b53
   ],
   ko: [
     '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import type { SiteLocale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
+import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent } from '@/data/team-members';
 import {
@@ -170,7 +171,10 @@ export default function HomeAttorneySplit({
           href={profilePath}
           data-builder-surface-key={homeAttorneyButtonSurfaceIds[0]}
         >
-          <SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{cta} →</SurfaceText>
+          {/* zh-hant: the monoline arrow sits outside the editable text; other locales keep the typed arrow. */}
+          {locale === 'zh-hant'
+            ? <><SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{cta}</SurfaceText><ZhHantTrail /></>
+            : <SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{cta} →</SurfaceText>}
         </SmartLink>
       </div>
     </section>

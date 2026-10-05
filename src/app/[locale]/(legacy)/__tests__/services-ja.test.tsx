@@ -190,7 +190,8 @@ describe('Japanese services-list integration', () => {
 
   it.each([
     ['ko', '자세히 보기 →', '/ko/services/investment'],
-    ['zh-hant', '查看詳情 →', '/zh-hant/services/investment'],
+    // zh-hant (2026-10-05): the label keeps its words and carries the monoline arrow instead of the typed one.
+    ['zh-hant', '查看詳情<svg', '/zh-hant/services/investment'],
     ['en', 'View details →', '/en/services/investment'],
   ] as const)(
     'preserves %s service-detail labels and links',

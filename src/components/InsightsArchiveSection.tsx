@@ -6,6 +6,7 @@ import type { SiteLocale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';
+import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import {
   homeInsightsButtonSurfaceIds,
   homeInsightsImageSurfaceIds,
@@ -180,6 +181,8 @@ export default function InsightsArchiveSection({
   pinnedSlugs?: readonly string[];
 }) {
   const copy = copyByLocale[locale];
+  // zh-hant only: the monoline set replaces the typed → ‹ › of this section; other locales render the glyphs as before.
+  const zhIcons = locale === 'zh-hant';
   const authorLabel =
     locale === 'ko'
       ? '증준외 변호사 검토'
@@ -299,7 +302,7 @@ export default function InsightsArchiveSection({
               </h3>
               <p className="insights-featured-summary">{featured.summary}</p>
               <span className="link-underline insights-card-cta" aria-hidden="true">
-                {copy.readMore} →
+                {zhIcons ? <>{copy.readMore}<ZhHantTrail /></> : <>{copy.readMore} →</>}
               </span>
             </div>
           </article>
@@ -313,7 +316,7 @@ export default function InsightsArchiveSection({
                   aria-controls={listId}
                   onClick={() => setPage((current) => (current - 1 + pageCount) % pageCount)}
                 >
-                  ‹ {copy.prevLabel}
+                  {zhIcons ? <><ZhHantTrail name="chevron-left" lead />{copy.prevLabel}</> : <>‹ {copy.prevLabel}</>}
                 </button>
                 <span className="insights-page-indicator" aria-live="polite" aria-atomic="true">
                   {page + 1} / {pageCount}
@@ -325,7 +328,7 @@ export default function InsightsArchiveSection({
                   aria-controls={listId}
                   onClick={() => setPage((current) => (current + 1) % pageCount)}
                 >
-                  {copy.nextLabel} ›
+                  {zhIcons ? <>{copy.nextLabel}<ZhHantTrail name="chevron-right" /></> : <>{copy.nextLabel} ›</>}
                 </button>
               </div>
             ) : null}
@@ -388,7 +391,7 @@ export default function InsightsArchiveSection({
             href={`/${locale}/columns`}
             data-builder-surface-key={homeInsightsButtonSurfaceIds[0]}
           >
-            {copy.viewAll} →
+            {zhIcons ? <>{copy.viewAll}<ZhHantTrail /></> : <>{copy.viewAll} →</>}
           </SmartLink>
         </div>
       </div>

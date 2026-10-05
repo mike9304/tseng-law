@@ -12,6 +12,7 @@ import {
   filterFaqItems,
 } from './FaqPublicExplorer.logic';
 import styles from './FaqPublicExplorer.module.css';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 
 interface FaqPublicExplorerProps {
   locale: SiteLocale;
@@ -227,7 +228,8 @@ export default function FaqPublicExplorer({
                       <small>{categoryLabel(categories, item.categoryId, locale)}</small>
                       {item.question}
                     </span>
-                    <span aria-hidden className={styles.arrow}>{isOpen ? '-' : '+'}</span>
+                    {/* zh-hant: the monoline plus / minus, as on FAQAccordion; other locales keep the typed sign. */}
+                    <span aria-hidden className={styles.arrow}>{locale === 'zh-hant' ? <ZhHantMonoIcon name={isOpen ? 'minus' : 'plus'} size={18} /> : isOpen ? '-' : '+'}</span>
                   </button>
                 </h3>
                 <div

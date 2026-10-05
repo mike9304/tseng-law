@@ -30,6 +30,7 @@ import { LITIGATION_SITUATION_NAV } from '@/data/multilingual-international-v2';
 import ForeignMatterRouter from '@/components/ForeignMatterRouter';
 import { getForeignMatterRouter } from '@/data/foreign-matter-router';
 import ZhHantIntentHeaderActions from '@/components/zh-hant-intent/ZhHantIntentHeaderActions';
+import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import zhStyles from '@/components/zh-hant-intent/ZhHantIntent.module.css';
 
 function summarize(text: string, maxLength = 180) {
@@ -793,7 +794,7 @@ export default function IntentLandingPage({
                     <time>{column.dateDisplay || column.date}</time>
                     {column.readTime ? <span>{column.readTime}</span> : null}
                   </span>
-                  <span className="svc-col-card-link">{l.readMore}</span>
+                  <span className="svc-col-card-link">{locale === 'zh-hant' ? <>{l.readMore.replace(/\s*→$/, '')}<ZhHantTrail /></> : l.readMore}</span>
                 </Link>
               ))}
             </div>

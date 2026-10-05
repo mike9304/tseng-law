@@ -155,7 +155,7 @@
 }
 .team:global(#team) :global(.attorney-card .attorney-card-cta:hover) { background: var(--ap-ink-deep); color: #fff; transform: translateY(-1px); }
 .team:global(#team) :global(.attorney-card .attorney-card-cta:not([href^='mailto:'])) { min-height: 44px; padding: 0; border-radius: 4px !important; background: transparent; color: var(--ap-accent); font-size: 16px; font-weight: 600; }
-.team:global(#team) :global(.attorney-card .attorney-card-cta:not([href^='mailto:']))::after { content: '›' / ''; margin-left: 6px; font-size: 1.15em; line-height: 1; }
+.team:global(#team) :global(.attorney-card .attorney-card-cta:not([href^='mailto:']))::after { content: ''; display: inline-block; flex: none; width: 0.82em; height: 0.82em; margin-left: -2px; background: currentColor; -webkit-mask: var(--zh-glyph-chevron-right) center / contain no-repeat; mask: var(--zh-glyph-chevron-right) center / contain no-repeat; }
 .team:global(#team) :global(.attorney-card .attorney-card-cta:not([href^='mailto:']):hover) { background: transparent; color: var(--ap-accent); text-decoration: underline; text-underline-offset: 6px; transform: none; }
 .team:global(#team) :global(.attorney-card .attorney-card-cta:not([href^='mailto:'])) { order: 2; }
 .team:global(#team) :global(.attorney-card-cta:focus-visible),

@@ -260,7 +260,7 @@ a.switchCard:hover, .switchCard:not(.switchActive):hover { border-color: transpa
 .switchLatest li { padding-left: 0; font-size: 14px; }
 .switchLatest li::before { content: none; }
 .switchLatest a { display: block; padding: 11px 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; color: var(--ap-accent); font-weight: 600; text-decoration: none; }
-.switchLatest a::after { content: ' ›'; content: ' ›' / ''; }
+.switchLatest a::after { content: ''; display: inline-block; width: 0.82em; height: 0.82em; margin-left: 3px; background: currentColor; -webkit-mask: var(--zh-glyph-chevron-right) center / contain no-repeat; mask: var(--zh-glyph-chevron-right) center / contain no-repeat; vertical-align: -0.08em; }
 .switchLatest a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .switchActive .switchLatest a { color: #fff; }
 .switch a:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 22px; }

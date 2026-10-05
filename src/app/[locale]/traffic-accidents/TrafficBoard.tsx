@@ -13,6 +13,7 @@ import {
   type TrafficBoardQuery,
 } from '@/lib/traffic-collection';
 import boardStyles from './TrafficBoard.module.css';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import JaWrap from '@/components/ja-design/JaWrap';
 import jaV2 from '@/components/ja-design/JaPagesV2.module.css';
 
@@ -46,6 +47,8 @@ export default function TrafficBoard({ locale, items, query, classes, thumbSizes
   const clearHref = buildTrafficBoardHref(locale, {});
   // ja only (昊 V2 tiles): titles break between phrases (<wbr> + keep-all); other locales render as before.
   const ja = locale === 'ja';
+  // zh-hant only: the monoline check and play glyphs instead of the typed ✓ and ▶. A label only; playback is not touched.
+  const zhIcons = locale === 'zh-hant';
 
   return (
     <div className={styles.board} data-traffic-board>
@@ -86,7 +89,7 @@ export default function TrafficBoard({ locale, items, query, classes, thumbSizes
         </ul>
         {showVideoFilter ? (
           <a className={`${styles.chip} ${styles.toggle}`} href={buildTrafficBoardHref(locale, { ...query, video: !query.video })} aria-current={query.video ? 'true' : undefined}>
-            <span className={styles.check} aria-hidden="true">{query.video ? '✓' : ''}</span>{copy.videoOnly}
+            <span className={styles.check} aria-hidden="true">{query.video ? (zhIcons ? <ZhHantMonoIcon name="check" size={12} strokePx={1.75} /> : '✓') : ''}</span>{copy.videoOnly}
           </a>
         ) : null}
       </nav>
@@ -113,7 +116,7 @@ export default function TrafficBoard({ locale, items, query, classes, thumbSizes
                   <span className={styles.subject}>{subjectLabels[item.subject]}</span>
                   {item.publicationDate ? <time dateTime={item.publicationDate}>{item.dateDisplay || item.publicationDate}</time> : null}
                   {item.readTime ? <span>{item.readTime}</span> : null}
-                  {item.hasVideo ? <span className={styles.video} data-traffic-board-video><span aria-hidden="true">▶</span> {copy.video}</span> : null}
+                  {item.hasVideo ? <span className={styles.video} data-traffic-board-video><span aria-hidden="true">{zhIcons ? <ZhHantMonoIcon name="play" size={12} /> : '▶'}</span> {copy.video}</span> : null}
                 </p>
               </div>
             </li>

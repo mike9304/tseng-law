@@ -263,10 +263,11 @@ describe('ColumnsGrid guidance filter and card CTA labels', () => {
     expect(html).not.toContain('Đọc tiếp');
   });
 
-  it('uses reviewed topic chips and unchanged CTA bytes on ko/zh-hant/ja', () => {
+  // zh-hant (2026-10-05): the card CTA keeps its words and carries the monoline arrow instead of the typed one.
+  it('uses reviewed topic chips and unchanged CTA bytes on ko/ja, and the monoline arrow on zh-hant', () => {
     for (const [locale, all, cta] of [
       ['ko', '전체', '칼럼 보기 →'],
-      ['zh-hant', '全部', '查看專欄 →'],
+      ['zh-hant', '全部', '查看專欄<svg'],
       ['ja', 'すべて', 'コラムを読む →'],
     ] as const) {
       const html = renderGrid(locale);
@@ -278,5 +279,9 @@ describe('ColumnsGrid guidance filter and card CTA labels', () => {
       ]);
       expect(html).toContain(cta);
     }
+    const zh = renderGrid('zh-hant');
+    expect(zh).toContain('data-zh-icon="arrow-right"');
+    expect(zh).not.toContain('查看專欄 →');
+    for (const locale of ['ko', 'ja'] as const) expect(renderGrid(locale)).not.toContain('data-zh-icon');
   });
 });

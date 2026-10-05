@@ -27430,6 +27430,34 @@ html[lang='zh-Hant'] body {
   vertical-align: -0.125em;
   overflow: visible;
 }
+/* A glyph next to a label (ZhHantTrail): 查看詳情, 閱讀全文, 下一頁 … */
+.zh-mono.zh-trail { margin-left: 0.3em; align-self: center; }
+.zh-mono.zh-lead { margin-right: 0.3em; align-self: center; }
+/* Where the link is a flex row with its own gap (.link-underline, .button), the gap already separates the glyph. */
+a.link-underline > .zh-mono.zh-trail,
+button.link-underline > .zh-mono.zh-trail,
+.button > .zh-mono.zh-trail { margin-left: 0; }
+
+/* The same glyphs where the shared markup draws its arrow in CSS (::after). A mask leaves that markup untouched
+   and takes the link colour; the paths are the ones in ZhHantMonoIcon (chevron-right, arrow-up-right). */
+html[lang='zh-Hant'] {
+  --zh-glyph-chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9.5 5.5 6.5 6.5-6.5 6.5'/%3E%3C/svg%3E");
+  --zh-glyph-arrow-up-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6.5 17.5 17.25 6.75M8.5 6.75h8.75v8.75'/%3E%3C/svg%3E");
+}
+html[lang='zh-Hant'] .profile-link-list a[target='_blank'][href^='http']:not(.button)::after,
+html[lang='zh-Hant'] .media-hub-card a[target='_blank'][href^='http']:not(.button)::after {
+  content: '';
+  display: inline-block;
+  flex: none;
+  width: 0.82em;
+  height: 0.82em;
+  margin-left: 0.3em;
+  background: currentColor;
+  -webkit-mask: var(--zh-glyph-arrow-up-right) center / contain no-repeat; mask: var(--zh-glyph-arrow-up-right) center / contain no-repeat;
+  font-size: 1em;
+  opacity: 1;
+  vertical-align: -0.06em;
+}
 
 /* 3 · Chrome drawn by global classes. The search overlay is portaled to <body>, so it is scoped by html[lang]. */
 html[lang='zh-Hant'] .search-overlay {

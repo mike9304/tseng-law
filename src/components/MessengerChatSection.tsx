@@ -1,6 +1,7 @@
 'use client';
 
 import type { SiteLocale } from '@/lib/locales';
+import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import {
   CONSULTATION_EMAIL,
   getConsultationCtaLabel,
@@ -105,7 +106,8 @@ export default function MessengerChatSection({ locale }: { locale: SiteLocale })
               <h3 className="messenger-card-platform">{config.primaryLabel}</h3>
               <p className="messenger-card-desc">{config.primaryDescription}</p>
             </div>
-            <span className="messenger-card-arrow">→</span>
+            {/* zh-hant: monoline glyphs (arrow, check) instead of the typed ones; other locales unchanged. */}
+            <span className="messenger-card-arrow">{locale === 'zh-hant' ? <ZhHantMonoIcon name="arrow-right" size={20} /> : '→'}</span>
           </a>
 
           <div className="messenger-features">
@@ -113,7 +115,7 @@ export default function MessengerChatSection({ locale }: { locale: SiteLocale })
             <ul className="messenger-features-list">
               {config.features.map((feature) => (
                 <li key={feature}>
-                  <span className="messenger-check">✓</span>
+                  <span className="messenger-check">{locale === 'zh-hant' ? <ZhHantMonoIcon name="check" size={14} strokePx={1.75} /> : '✓'}</span>
                   {feature}
                 </li>
               ))}

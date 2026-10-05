@@ -241,7 +241,7 @@
 
 /* ---------- Contact: the dark closing chapter (same gradient as the home's last call) ----------
    Secondary text #bdbdc2 (not the home's #a1a1a6): the gradient's bright top measured 4.2:1 behind the offices label. */
-.contact { padding: clamp(96px, 12vw, 168px) 0; background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%); color: #fff; }
+.contact { padding: clamp(96px, 12vw, 168px) 0; background: #000; color: #fff; } /* one flat black, like the home's last call */
 .contactGrid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 48px clamp(40px, 6vw, 96px); align-items: center; }
 .contactTitle { margin: 0 0 18px; font-family: var(--font-sans) !important; font-size: clamp(36px, 4.4vw, 64px); font-weight: 700; line-height: 1.14; color: #fff; }
 .contactLede { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.7; color: #bdbdc2; }

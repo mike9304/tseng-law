@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
-import { ZH_VIDEO_CONTROL_ICONS } from '@/components/zh-hant-icons/ZhHantMonoIcon';
+import { ZH_VIDEO_CONTROL_ICONS, ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import {
   DECORATIVE_VIDEO_CONTROL_LABELS,
   type DecorativeVideoControlLabels,
@@ -207,7 +207,10 @@ export default function HomeCaseResultsSplit({
           href={href}
           data-builder-surface-key={homeResultsButtonSurfaceIds[0]}
         >
-          <SurfaceText surfaceKey={homeResultsButtonSurfaceIds[0]}>{copy.cta} →</SurfaceText>
+          {/* zh-hant: the monoline arrow sits outside the editable text; other locales keep the typed arrow. */}
+          {locale === 'zh-hant'
+            ? <><SurfaceText surfaceKey={homeResultsButtonSurfaceIds[0]}>{copy.cta}</SurfaceText><ZhHantTrail /></>
+            : <SurfaceText surfaceKey={homeResultsButtonSurfaceIds[0]}>{copy.cta} →</SurfaceText>}
         </SmartLink>
       </div>
     </section>

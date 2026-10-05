@@ -21,6 +21,7 @@ import {
 import { RECOMMENDED_SECTION_TITLE, splitRecommendedColumns } from '@/lib/en-recommended-columns';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import styles from './ColumnsGrid.module.css';
+import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { typesetTitle } from '@/lib/ko-middot';
 
 const searchCopy = {
@@ -708,7 +709,8 @@ export default function ColumnsGrid({
         <h3 className="columns-card-title">{typesetTitle(locale, post.title)}</h3>
         <p className="columns-card-summary">{post.summary}</p>
         <span className="columns-card-linkhint">
-          {columnCardCtaLabel(locale)}
+          {/* zh-hant: the monoline arrow instead of the typed one; other locales keep their label as is. */}
+          {locale === 'zh-hant' ? <>{columnCardCtaLabel(locale).replace(/\s*→$/, '')}<ZhHantTrail /></> : columnCardCtaLabel(locale)}
         </span>
       </div>
     </Link>
@@ -863,7 +865,7 @@ export default function ColumnsGrid({
                     >
                       {topicCopy.viewAll(groupLabel(group.key), group.posts.length)}
                       {/* ja 昊 V2: the chevron is drawn in CSS instead of the arrow glyph */}
-                      {locale === 'ja' ? null : ' →'}
+                      {locale === 'ja' ? null : locale === 'zh-hant' ? <ZhHantTrail /> : ' →'}
                     </button>
                   ) : null}
                 </section>

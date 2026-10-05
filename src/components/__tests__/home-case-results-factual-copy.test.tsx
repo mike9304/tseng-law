@@ -133,7 +133,14 @@ describe('homepage gym case factual copy', () => {
     }
     expect(html).toContain(expected.description);
     expect(html).toContain(expected.summary);
-    expect(html).toContain(`${expected.cta} →`);
+    // zh-hant (2026-10-05): the monoline arrow follows the label; every other locale keeps the typed arrow.
+    if (locale === 'zh-hant') {
+      expect(html).toContain(`${expected.cta}<svg`);
+      expect(html).toContain('data-zh-icon="arrow-right"');
+    } else {
+      expect(html).toContain(`${expected.cta} →`);
+      expect(html).not.toContain('data-zh-icon');
+    }
     // WO-X1 (EN-16): EN/JA open the write-up of this case; ko/zh-hant the archive.
     expect(html).toContain(
       locale === 'en' || locale === 'ja'

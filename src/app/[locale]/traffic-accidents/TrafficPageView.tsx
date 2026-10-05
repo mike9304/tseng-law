@@ -18,6 +18,7 @@ import JaWrap from '@/components/ja-design/JaWrap';
 import jaV2 from '@/components/ja-design/JaPagesV2.module.css';
 import jaStyles from '@/components/ja-design/JaTraffic.module.css';
 import TrafficBoard from './TrafficBoard';
+import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './traffic.module.css';
 import zhStyles from './ZhHantTraffic.module.css';
 
@@ -56,7 +57,10 @@ export default function TrafficPageView({ locale, items, query, copy, collection
   // ja only (昊 V2 inner pages, 2026-10-04): the ja classes (JaTraffic.module.css) replace the hub's; arrow glyphs
   // become CSS chevrons, the header gains the patterned-glass band and the consult block becomes the dusk closing tile.
   const cx = (base: string, jaClass: string) => (ja ? jaClass : base);
-  const arrow = (glyph: string) => (ja ? null : glyph);
+  // zh-hant: the same links carry the monoline glyph instead of the typed arrow.
+  const zh = locale === 'zh-hant';
+  const ZH_GLYPH = { ' ↓': 'arrow-down', ' →': 'arrow-right', ' ↗': 'arrow-up-right' } as const;
+  const arrow = (glyph: keyof typeof ZH_GLYPH) => (ja ? null : zh ? <ZhHantTrail name={ZH_GLYPH[glyph]} /> : glyph);
   // ja headings break only between phrases (<wbr> + keep-all), so WebKit never splits a word such as 責任.
   const phrases = (text: string) => (ja ? <JaWrap text={text} /> : text);
   const phraseClass = ja ? jaV2.ph : undefined;
@@ -64,7 +68,7 @@ export default function TrafficPageView({ locale, items, query, copy, collection
   const contact = (
     <section className={s.contact} aria-labelledby="contact-title">
       <div><h2 id="contact-title">{copy.contactTitle}</h2><p>{copy.contactText}</p></div>
-      <Link className={s.primary} href={`/${locale}/contact`}>{copy.contact} →</Link>
+      <Link className={s.primary} href={`/${locale}/contact`}>{zh ? <>{copy.contact}<ZhHantTrail /></> : <>{copy.contact} →</>}</Link>
     </section>
   );
   const view = (
@@ -101,7 +105,7 @@ export default function TrafficPageView({ locale, items, query, copy, collection
             <article key={country.id} className={en ? `${enV2.card} ${enStyles.country}` : country.id === 'tw' ? cx(styles.taiwan, jaStyles.taiwan) : undefined}>
               <h3>{country.name}</h3><p>{country.text}</p>
               {country.href.startsWith('/') ? <Link className={ja ? jaV2.chev : en ? enV2.textLink : undefined} href={`/${locale}${country.href}`}>{country.linkLabel}{arrow(' →')}</Link>
-                : <a className={en ? enV2.textLink : undefined} href={country.href} target="_blank" rel="noopener noreferrer">{country.linkLabel} ↗</a>}
+                : <a className={en ? enV2.textLink : undefined} href={country.href} target="_blank" rel="noopener noreferrer">{zh ? <>{country.linkLabel}<ZhHantTrail name="arrow-up-right" /></> : <>{country.linkLabel} ↗</>}</a>}
             </article>
           ))}</div>
         </section>

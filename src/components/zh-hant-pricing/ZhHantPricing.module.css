@@ -286,7 +286,7 @@
   margin-top: clamp(56px, 7vw, 96px);
   padding: clamp(56px, 7vw, 104px) clamp(24px, 5vw, 64px);
   border-radius: var(--ap-radius);
-  background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%);
+  background: #1d1d1f;
   color: #fff;
   text-align: center;
 }
@@ -386,7 +386,7 @@
 /* Closing band: the home's #contact (full-bleed ink gradient, centered two-line statement, pills) */
 .closing {
   padding-block: clamp(96px, 12vw, 168px);
-  background: radial-gradient(120% 140% at 50% 0%, #1f4a3b 0%, #0d231b 45%, #000 100%);
+  background: #000; /* one flat black, like the home's last call */
   color: #fff;
   text-align: center;
 }

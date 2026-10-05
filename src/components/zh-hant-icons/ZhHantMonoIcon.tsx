@@ -101,6 +101,15 @@ export default function ZhHantMonoIcon({ name, size = 24, strokePx, className }:
   );
 }
 
+/**
+ * The glyph that trails a text link or button label (查看詳情, 閱讀全文, 下一頁 …). On zh-hant it replaces the
+ * typed → ↗ ↓ › of the shared markup, so one page never mixes typed arrows with the monoline set. The gap comes
+ * from `.zh-trail` / `.zh-lead` in globals.css.
+ */
+export function ZhHantTrail({ name = 'arrow-right', size = 14, lead = false }: { name?: ZhHantMonoIconName; size?: number; lead?: boolean }) {
+  return <ZhHantMonoIcon name={name} size={size} strokePx={1.6} className={lead ? 'zh-lead' : 'zh-trail'} />;
+}
+
 /** ServicesBento / ServicePracticeIcon index → practice glyph (0 company setup, 1 civil, 2 family, 3 labour, 4 criminal, 5 IP and finance). */
 export const ZH_PRACTICE_ICON: Readonly<Record<number, ZhHantMonoIconName>> = {
   0: 'company',

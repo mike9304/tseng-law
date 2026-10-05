@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ZhHantMonoIcon, { ZH_PRACTICE_ICON } from '@/components/zh-hant-icons/ZhHantMonoIcon';
+import ZhHantMonoIcon, { ZH_PRACTICE_ICON, ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { siteContent } from '@/data/site-content';
 import { getServiceSlugs } from '@/data/service-details';
 import { ZH_HANT_SERVICE_SCENARIOS } from './zh-hant-service-scenarios';
@@ -49,7 +49,7 @@ export default function ZhHantServiceGroups({ showTitle }: { showTitle: boolean 
                         {(ZH_HANT_SERVICE_SCENARIOS[slug] ?? []).map((tag) => <li key={tag}>{tag}</li>)}
                       </ul>
                       <Link href={`/zh-hant/services/${slug}`} className={styles.cardLink} aria-label={`${item.title}：查看詳情`}>
-                        查看詳情 →
+                        查看詳情<ZhHantTrail />
                       </Link>
                     </article>
                   </li>

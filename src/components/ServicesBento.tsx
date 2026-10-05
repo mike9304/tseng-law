@@ -8,6 +8,7 @@ import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import ServicePracticeIcon from '@/components/ServicePracticeIcon';
+import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { homeServicesTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import styles from './HomeEditorial.module.css';
@@ -185,7 +186,8 @@ export default function ServicesBento({
                         className="services-detail-more services-card-link"
                         aria-label={`${item.title}: ${detailLabel.replace(/\s*→$/, '')}`}
                       >
-                        {detailLabel}
+                        {/* zh-hant: the monoline arrow instead of the typed one; other locales keep their label as is. */}
+                        {locale === 'zh-hant' ? <>{detailLabel.replace(/\s*→$/, '')}<ZhHantTrail /></> : detailLabel}
                       </Link>
                     )}
                   </div>

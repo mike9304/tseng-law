@@ -49,7 +49,7 @@ import { EN_SERVICE_EXTRA_COLUMNS } from '@/components/en-design/en-design-data'
 import { getPricingContent } from '@/components/PricingCards';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
 import { typesetTitle } from '@/lib/ko-middot';
-import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
+import ZhHantMonoIcon, { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 
 export const dynamic = 'force-dynamic';
 
@@ -502,7 +502,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                           <time>{col.dateDisplay || col.date}</time>
                           {col.readTime && <span>{col.readTime}</span>}
                         </span>
-                        <span className="svc-col-card-link">{t.readMore}</span>
+                        <span className="svc-col-card-link">{zhHant ? <>{t.readMore.replace(/\s*→$/, '')}<ZhHantTrail /></> : t.readMore}</span>
                       </Link>
                     ))}
                   </div>

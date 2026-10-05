@@ -997,6 +997,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-intestate-succession-order-shares-representation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-parent-debt-renunciation-heir-in-japan"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-parent-debt-renunciation-heir-in-japan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-parent-debt-renunciation-heir-in-japan"
     }
   ]
 }

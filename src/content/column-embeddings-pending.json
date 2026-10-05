@@ -1009,6 +1009,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-parent-debt-renunciation-heir-in-japan"
+    },
+    {
+      "locale": "ko",
+      "slug": "us-living-trust-will-taiwan-property"
+    },
+    {
+      "locale": "en",
+      "slug": "us-living-trust-will-taiwan-property"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "us-living-trust-will-taiwan-property"
     }
   ]
 }

@@ -377,6 +377,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
+    '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
   ],
   'zh-hant': [
     '215-remaining-property-distribution-overseas-assets.md', // family lane b27
@@ -390,6 +391,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
+    '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
@@ -400,6 +402,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
+    '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
   ],
   ko: [
     '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15
@@ -408,6 +411,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
+    '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
   ],
 } as const;
 

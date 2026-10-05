@@ -961,6 +961,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-employee-stock-award-tax-deferral-industrial-innovation-act-19-1"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-inheritance-registration-deadline-unregistered-land"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-inheritance-registration-deadline-unregistered-land"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-inheritance-registration-deadline-unregistered-land"
     }
   ]
 }

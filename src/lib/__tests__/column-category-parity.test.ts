@@ -28,11 +28,11 @@ describe('column category parity with English', () => {
   );
 
   it('has the English baseline this test compares against', () => {
-    // Prior 40 + seven 2026-10-02 (063–069) + traffic 051 + road-rage 099, 109, 122, 188, 191, 194, 201, 204.
-    expect(english.size).toBe(55);
+    // Prior 40 + seven 2026-10-02 (063–069) + traffic 051 + road-rage 099, 109, 122, 188, 191, 194, 201, 204 + inheritance 230.
+    expect(english.size).toBe(56);
     const counts = { formation: 0, legal: 0, case: 0 };
     for (const category of english.values()) counts[category] += 1;
-    expect(counts).toEqual({ formation: 9, legal: 45, case: 1 });
+    expect(counts).toEqual({ formation: 9, legal: 46, case: 1 });
   });
 
   it.each(Object.keys(NATIVE_LOCALE_COLUMN_FILES) as (keyof typeof NATIVE_LOCALE_COLUMN_FILES)[])(

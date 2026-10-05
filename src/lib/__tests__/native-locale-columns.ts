@@ -375,6 +375,10 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
   'zh-hant': [
     '215-remaining-property-distribution-overseas-assets.md', // family lane b27
     '216-spouse-affair-evidence-damages-taiwan.md', // family lane b27
+    '217-landlord-listing-stolen-fake-rental-deposit-taiwan.md', // fraud lane b05
+  ],
+  ja: [
+    '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
   ],
 } as const;
 

@@ -371,14 +371,20 @@ export const COUNTRY_COLUMN_FILES_20261004 = {
 export const COUNTRY_COLUMN_FILES_20261005 = {
   en: [
     '213-taiwan-marital-property-division-us-assets.md', // family lane b27
+    '221-us-equipment-vendor-field-engineers-taiwan-labor-law.md', // semiconductor lane b15
   ],
   'zh-hant': [
     '215-remaining-property-distribution-overseas-assets.md', // family lane b27
     '216-spouse-affair-evidence-damages-taiwan.md', // family lane b27
     '217-landlord-listing-stolen-fake-rental-deposit-taiwan.md', // fraud lane b05
+    '222-taiwan-semiconductor-environmental-compliance-wastewater-judgments.md', // semiconductor lane b15
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
+    '220-taiwan-semiconductor-chemicals-environment-permits-japanese.md', // semiconductor lane b15
+  ],
+  ko: [
+    '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15
   ],
 } as const;
 

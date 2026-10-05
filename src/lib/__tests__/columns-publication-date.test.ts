@@ -236,6 +236,11 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   // fraud lane b05
   '217': '2026-10-05',
   '218': '2026-10-05',
+  // semiconductor lane b15
+  '219': '2026-10-05',
+  '220': '2026-10-05',
+  '221': '2026-10-05',
+  '222': '2026-10-05',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

@@ -949,6 +949,18 @@
     {
       "locale": "zh-hant",
       "slug": "romance-scam-loan-or-fraud-evidence-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "tsmc-former-executive-intel-noncompete-injunction-korean-employers"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-zero-recruitment-fee-forced-labor-rules-us-chip-supply-chain"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-employee-stock-award-tax-deferral-industrial-innovation-act-19-1"
     }
   ]
 }

@@ -985,6 +985,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-estate-tax-2026-amendment-gifts-before-death"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-intestate-succession-order-shares-representation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-intestate-succession-order-shares-representation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-intestate-succession-order-shares-representation"
     }
   ]
 }

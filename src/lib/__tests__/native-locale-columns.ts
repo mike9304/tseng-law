@@ -375,6 +375,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '228-taiwan-zero-recruitment-fee-forced-labor-rules-us-chip-supply-chain.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
+    '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
   ],
   'zh-hant': [
     '215-remaining-property-distribution-overseas-assets.md', // family lane b27
@@ -386,6 +387,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '229-taiwan-employee-stock-award-tax-deferral-industrial-innovation-act-19-1.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
+    '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
@@ -394,12 +396,14 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '227-taiwan-origin-declaration-us-bound-exports-japanese-trading-companies.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
+    '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
   ],
   ko: [
     '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15
     '226-tsmc-former-executive-intel-noncompete-injunction-korean-employers.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
     '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
+    '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
   ],
 } as const;
 

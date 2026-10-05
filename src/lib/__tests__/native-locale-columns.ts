@@ -378,6 +378,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
     '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
+    '237-us-victim-scam-funds-taiwan-bank-complaint.md', // fraud lane b57
   ],
   'zh-hant': [
     '215-remaining-property-distribution-overseas-assets.md', // family lane b27
@@ -392,6 +393,8 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
     '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
+    '235-fraud-crime-prevention-act-2024-victims-taiwan.md', // fraud lane b57
+    '236-fraud-complaint-filing-police-prosecutor-taiwan.md', // fraud lane b57
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05

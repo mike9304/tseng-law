@@ -17,7 +17,8 @@ import { getOrganizationName, getLocalizedPath } from '@/lib/seo';
 
 // 16 KiB since 2026-09-22: the root catalog lists 45 guidance languages (was 8 KiB for 27).
 export const ROOT_LLMS_TXT_MAX_BYTES = 16 * 1024;
-export const LOCALE_LLMS_TXT_MAX_BYTES = 64 * 1024;
+// 128 KiB since 2026-10-05: the zh-hant catalog lists 141 columns (64 KiB held 139).
+export const LOCALE_LLMS_TXT_MAX_BYTES = 128 * 1024;
 export const LLMS_TXT_CACHE_CONTROL =
   'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800';
 

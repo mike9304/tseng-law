@@ -1065,6 +1065,18 @@
     {
       "locale": "zh-hant",
       "slug": "fraud-victim-provisional-attachment-security-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "korean-national-dies-in-taiwan-inheritance-estate-tax"
+    },
+    {
+      "locale": "en",
+      "slug": "korean-national-dies-in-taiwan-inheritance-estate-tax"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "korean-national-dies-in-taiwan-inheritance-estate-tax"
     }
   ]
 }

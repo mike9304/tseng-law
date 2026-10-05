@@ -379,6 +379,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
     '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
     '237-us-victim-scam-funds-taiwan-bank-complaint.md', // fraud lane b57
+    '249-korean-national-dies-in-taiwan-inheritance-estate-tax.md', // inherit-20261005-I4
   ],
   'zh-hant': [
     '215-remaining-property-distribution-overseas-assets.md', // family lane b27
@@ -401,6 +402,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '244-family-act-procedure-litigation-vs-non-contentious.md', // family lane b80
     '246-criminal-confiscation-return-to-fraud-victims-taiwan.md', // fraud lane b59
     '247-fraud-victim-provisional-attachment-security-taiwan.md', // fraud lane b59
+    '249-korean-national-dies-in-taiwan-inheritance-estate-tax.md', // inherit-20261005-I4
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
@@ -415,6 +417,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '239-taiwan-renewable-obligation-new-plants-energy-act-bill-japanese-makers.md', // semiconductor lane b19
     '242-child-abduction-taiwan-non-hague-japan.md', // family lane b79
     '248-japanese-subsidiary-taiwan-invoice-fraud-recovery.md', // fraud lane b59
+    '249-korean-national-dies-in-taiwan-inheritance-estate-tax.md', // inherit-20261005-I4
   ],
   ko: [
     '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15
@@ -426,6 +429,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
     '238-korea-taiwan-tax-agreement-dispatched-engineers-permanent-establishment.md', // semiconductor lane b19
     '245-child-taken-to-taiwan-non-hague-korean-parent.md', // family lane b80
+    '249-korean-national-dies-in-taiwan-inheritance-estate-tax.md', // inherit-20261005-I4
   ],
 } as const;
 

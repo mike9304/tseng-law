@@ -374,6 +374,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '221-us-equipment-vendor-field-engineers-taiwan-labor-law.md', // semiconductor lane b15
     '228-taiwan-zero-recruitment-fee-forced-labor-rules-us-chip-supply-chain.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
+    '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
   ],
   'zh-hant': [
     '215-remaining-property-distribution-overseas-assets.md', // family lane b27
@@ -384,6 +385,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '224-romance-scam-loan-or-fraud-evidence-taiwan.md', // fraud lane b53
     '229-taiwan-employee-stock-award-tax-deferral-industrial-innovation-act-19-1.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
+    '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
@@ -391,11 +393,13 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '225-japanese-victim-fraud-complaint-taiwan-account.md', // fraud lane b53
     '227-taiwan-origin-declaration-us-bound-exports-japanese-trading-companies.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
+    '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
   ],
   ko: [
     '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15
     '226-tsmc-former-executive-intel-noncompete-injunction-korean-employers.md', // semiconductor lane b17
     '230-taiwan-inheritance-registration-deadline-unregistered-land.md', // inherit-20261005-I1
+    '231-taiwan-estate-tax-2026-amendment-gifts-before-death.md', // inherit-20261005-I2
   ],
 } as const;
 

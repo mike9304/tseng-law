@@ -973,6 +973,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-inheritance-registration-deadline-unregistered-land"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-estate-tax-2026-amendment-gifts-before-death"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-estate-tax-2026-amendment-gifts-before-death"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-estate-tax-2026-amendment-gifts-before-death"
     }
   ]
 }

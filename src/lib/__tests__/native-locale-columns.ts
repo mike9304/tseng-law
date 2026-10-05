@@ -399,6 +399,8 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '241-child-taken-abroad-taiwan-parent-remedies.md', // family lane b79
     '243-provisional-order-during-divorce-custody-support.md', // family lane b80
     '244-family-act-procedure-litigation-vs-non-contentious.md', // family lane b80
+    '246-criminal-confiscation-return-to-fraud-victims-taiwan.md', // fraud lane b59
+    '247-fraud-victim-provisional-attachment-security-taiwan.md', // fraud lane b59
   ],
   ja: [
     '218-japanese-resident-taiwan-account-lending-crime.md', // fraud lane b05
@@ -412,6 +414,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
     '239-taiwan-renewable-obligation-new-plants-energy-act-bill-japanese-makers.md', // semiconductor lane b19
     '242-child-abduction-taiwan-non-hague-japan.md', // family lane b79
+    '248-japanese-subsidiary-taiwan-invoice-fraud-recovery.md', // fraud lane b59
   ],
   ko: [
     '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15

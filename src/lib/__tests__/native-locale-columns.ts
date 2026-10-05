@@ -406,6 +406,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
     '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
+    '239-taiwan-renewable-obligation-new-plants-energy-act-bill-japanese-makers.md', // semiconductor lane b19
   ],
   ko: [
     '219-taiwan-semiconductor-patent-litigation-korean-companies.md', // semiconductor lane b15
@@ -415,6 +416,7 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
     '232-taiwan-intestate-succession-order-shares-representation.md', // inherit-20261005-I3
     '233-taiwan-parent-debt-renunciation-heir-in-japan.md', // inherit-20261005-I5
     '234-us-living-trust-will-taiwan-property.md', // inherit-20261005-I6
+    '238-korea-taiwan-tax-agreement-dispatched-engineers-permanent-establishment.md', // semiconductor lane b19
   ],
 } as const;
 

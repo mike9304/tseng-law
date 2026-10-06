@@ -1401,6 +1401,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-stamp-tax-contracts-receipts-foreign-companies"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief"
     }
   ]
 }

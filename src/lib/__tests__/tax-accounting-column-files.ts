@@ -19,6 +19,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
+    '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
   ] as string[],
   ja: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -35,6 +36,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
+    '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
   ] as string[],
   en: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -52,6 +54,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
+    '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
   ] as string[],
   'zh-hant': [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -69,6 +72,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
+    '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
   ] as string[],
 } as const;
 

@@ -137,10 +137,6 @@ function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
 }
 
-function firstParagraphAfter(content: string, heading: string) {
-  return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
-}
-
 function sectionBody(content: string, heading: string) {
   const sectionStart = content.indexOf(`## ${heading}`);
   const nextSection = content.indexOf('\n## ', sectionStart + 1);

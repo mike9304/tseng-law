@@ -160,13 +160,12 @@ const expectedFamilyIntros = {
   en: 'Cross-border marriages bring divorce, custody, and inheritance questions that involve more than one country\'s law. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.',
 } as const;
 
+// ko lists four questions: the house-title and claim-distinction questions moved to column 274.
 const expectedFaqQuestions = {
   ko: [
     '대만에서 협의이혼은 합의서에 서명하면 바로 효력이 생기나요?',
     '대만 법원의 이혼 조정에는 부부가 반드시 함께 출석해야 하나요?',
     '혼인파탄에 책임이 있는 배우자도 대만에서 재판상 이혼을 청구할 수 있나요?',
-    '혼전 자금으로 집값을 냈거나 한쪽 명의로 등기하면 소유권과 재산분할이 결정되나요?',
-    '잔여재산 분배, 이혼 손해배상, 배우자 부양과 양육비는 같은 청구인가요?',
     '대만 법원은 미성년 자녀에 관한 사항을 어떤 기준으로 판단하나요?',
   ],
   'zh-hant': [
@@ -194,6 +193,19 @@ const expectedFaqQuestions = {
     '台湾の裁判所は、未成年の子に関する事項をどのように判断しますか？',
   ],
 } as const;
+
+const expectedFaqCounts = {
+  ko: 4,
+  'zh-hant': 6,
+  en: 6,
+  ja: 6,
+} as const;
+
+const propertyColumnSlug = 'taiwan-divorce-property-damages-support';
+const expectedPropertyColumnFaqQuestions = [
+  '혼전 자금으로 집값을 냈거나 한쪽 명의로 등기하면 소유권과 재산분할이 결정되나요?',
+  '잔여재산 분배, 이혼 손해배상, 배우자 부양과 양육비는 같은 청구인가요?',
+] as const;
 
 const expectedInLanguage = {
   ko: 'ko',
@@ -444,11 +456,11 @@ describe('column 007 public reference synchronization', () => {
     }
   });
 
-  it('builds article and FAQ JSON-LD from the four posts with exact headline, page, language, and six FAQ entities', () => {
+  it('builds article and FAQ JSON-LD from the four posts with exact headline, page, language, and per-locale FAQ entities (ko four, others six)', () => {
     for (const locale of siteLocales) {
       const post = getColumnPost(slug, locale);
       expect(post, locale).toBeDefined();
-      expect(post?.faq, locale).toHaveLength(6);
+      expect(post?.faq, locale).toHaveLength(expectedFaqCounts[locale]);
 
       const article = buildArticleJsonLd({
         locale,
@@ -470,12 +482,27 @@ describe('column 007 public reference synchronization', () => {
       expect(faq?.inLanguage, locale).toBe(expectedInLanguage[locale]);
 
       const entities = faq?.mainEntity as Array<{ name: string }> | undefined;
-      expect(entities, locale).toHaveLength(6);
+      expect(entities, locale).toHaveLength(expectedFaqCounts[locale]);
       expect(
         entities?.map((entity) => entity.name),
         locale,
       ).toEqual([...expectedFaqQuestions[locale]]);
     }
+  });
+
+  it('serves the two FAQ entities that left the ko 007 column from the ko property column', () => {
+    const propertyPost = getColumnPost(propertyColumnSlug, 'ko');
+    expect(propertyPost).toBeDefined();
+    expect(propertyPost?.faq).toHaveLength(2);
+
+    const faq = buildFaqJsonLd(propertyPost!.faq ?? [], 'ko');
+    expect(faq?.['@type']).toBe('FAQPage');
+    expect(faq?.inLanguage).toBe(expectedInLanguage.ko);
+
+    const entities = faq?.mainEntity as Array<{ name: string }> | undefined;
+    expect(entities?.map((entity) => entity.name)).toEqual([
+      ...expectedPropertyColumnFaqQuestions,
+    ]);
   });
 
   it('removes stale public titles, old archive copy, and unsafe family claims from synchronized runtime data', () => {

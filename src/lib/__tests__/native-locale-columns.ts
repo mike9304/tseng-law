@@ -447,6 +447,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
     '259-taken-taiwan-police-station-first-24-hours-not-release.md', // gap1006-G2
     '260-foreigners-buying-property-in-taiwan.md', // gap1006-G3
+    '275-taiwan-divorce-property-damages-support.md', // audit-split-1006
   ],
   en: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1

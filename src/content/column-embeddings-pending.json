@@ -1365,6 +1365,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-tax-audit-reexamination-appeal-deadlines"
+    },
+    {
+      "locale": "ko",
+      "slug": "closing-taiwan-subsidiary-branch-liquidation-tax-filings"
+    },
+    {
+      "locale": "en",
+      "slug": "closing-taiwan-subsidiary-branch-liquidation-tax-filings"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "closing-taiwan-subsidiary-branch-liquidation-tax-filings"
     }
   ]
 }

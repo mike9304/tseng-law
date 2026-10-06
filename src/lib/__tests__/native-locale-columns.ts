@@ -489,7 +489,26 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
   ],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-06, in filename order. */
+/** Native audience columns published 2026-10-07. */
+export const COUNTRY_COLUMN_FILES_20261007 = {
+  ja: [
+    '261-japanese-arrested-questioned-in-taiwan-interpreter-lawyer-detention.md', // ja-plan-20261006
+    '262-taiwan-drunk-driving-thresholds-criminal-code-185-3-license-return-home.md', // ja-plan-20261006
+    '263-japanese-will-effect-on-taiwan-real-estate-and-deposits.md', // ja-plan-20261006
+    '264-taiwan-certified-letter-cunzheng-xinhan-vs-japanese-naiyo-shomei.md', // ja-plan-20261006
+    '265-taiwan-distributor-registered-japanese-brand-trademark.md', // ja-plan-20261006
+    '266-taiwan-rental-deposit-refund-two-months.md', // ja-plan-20261006
+    '267-japan-taiwan-couple-marital-property-governing-law.md', // ja-plan-20261006
+    '268-taiwan-labor-dispute-mediation-bureau-vs-court.md', // ja-plan-20261006
+    '269-taiwan-medical-dispute-records-mediation-damages.md', // ja-plan-20261006
+    '270-taiwan-company-setup-costs-japanese.md', // ja-plan-20261006
+    '271-taiwan-traffic-accident-compensation-items-japanese.md', // ja-plan-20261006
+    '272-taiwan-warning-account-frozen-japanese.md', // ja-plan-20261006
+    '273-taiwan-national-security-act-core-technology-japanese-employers.md', // ja-plan-20261006
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-07, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -504,6 +523,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261004 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -519,11 +539,13 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-06, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-07, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261007: readonly string[] =
+    (COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261006: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261005: readonly string[] =
@@ -544,18 +566,21 @@ export function archiveLeadSlugsFor(locale: string): string[] {
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   // Same calendar day → source (filename) order, matching sortColumnPostsNewestFirst.
+  const day20261007Slugs = [...day20261007].sort().map(slugOf);
   const day20261006Slugs = [...day20261006].sort().map(slugOf);
   const day20261005Slugs = [...day20261005].sort().map(slugOf);
   const currentSlugs = [...current].sort().map(slugOf);
   const latestSlugs = [...latest].sort().map(slugOf);
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  const head = [...day20261006Slugs, ...day20261005Slugs, ...currentSlugs, ...latestSlugs, ...newestSlugs, ...newerSlugs];
+  const head = [...day20261007Slugs, ...day20261006Slugs, ...day20261005Slugs, ...currentSlugs, ...latestSlugs, ...newestSlugs, ...newerSlugs];
   return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-06). */
+/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-07). */
 export function archiveLeadPublicationDate(slug: string): string {
+  const day20261007 = Object.values(COUNTRY_COLUMN_FILES_20261007).flat().map(slugOf);
+  if (day20261007.includes(slug)) return '2026-10-07';
   const day20261006 = Object.values(COUNTRY_COLUMN_FILES_20261006).flat().map(slugOf);
   if (day20261006.includes(slug)) return '2026-10-06';
   const day20261005 = Object.values(COUNTRY_COLUMN_FILES_20261005).flat().map(slugOf);
@@ -609,6 +634,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261004),
     ...Object.values(COUNTRY_COLUMN_FILES_20261005),
     ...Object.values(COUNTRY_COLUMN_FILES_20261006),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261007),
   ].flat().map(slugOf),
 );
 

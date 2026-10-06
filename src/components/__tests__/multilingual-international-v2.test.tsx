@@ -130,7 +130,8 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
     );
     expect(intro).not.toMatch(/韓国企業や個人事業者の台湾市場への進出/);
     expect(intro).toMatch(/日本企業や個人事業者/);
-    expect(source).toContain('台湾・韓国所得税協定');
+    // 2026-10-06 Japanese-reader rewrite: the Korea–Taiwan treaty paragraph was removed from the ja column.
+    expect(source).not.toContain('台湾・韓国所得税協定');
     expect(source).not.toContain('台湾・日本所得税協定');
   });
 

@@ -80,9 +80,8 @@ describe('company-setup Korea–Taiwan tax agreement dates', () => {
     expect(treatyCostRow('zh-hant')).not.toBeNull();
   });
 
-  it('keeps the ja and zh establishment columns on 2023年12月27日', () => {
+  it('keeps the zh establishment column on 2023年12月27日 (the ja column no longer discusses the Korea–Taiwan treaty since the 2026-10-06 rewrite)', () => {
     for (const file of [
-      'src/content/columns-ja/001-taiwan-company-establishment-basics.md',
       'src/content/columns-zh/001-taiwan-company-establishment-basics.md',
     ]) {
       const source = readFileSync(path.join(process.cwd(), file), 'utf8');

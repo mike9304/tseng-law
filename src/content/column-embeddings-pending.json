@@ -1257,6 +1257,18 @@
     {
       "locale": "zh-hant",
       "slug": "vietnamese-companies-taiwan-vietnam-tax-agreement"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-subsidiary-corporate-income-tax-calendar"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-subsidiary-corporate-income-tax-calendar"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-subsidiary-corporate-income-tax-calendar"
     }
   ]
 }

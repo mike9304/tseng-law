@@ -5,22 +5,26 @@
  */
 export const TAX_ACCOUNTING_COLUMN_FILES = {
   ko: [
+    '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
   ] as string[],
   ja: [
+    '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
   ] as string[],
   en: [
+    '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
   ] as string[],
   'zh-hant': [
+    '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',

@@ -77,6 +77,12 @@ describe('ko home first screen and situations', () => {
         expect(services).toContain(term);
       }
     });
+    // Pinned verbatim: a word added to a situation must come through review here, next to its source terms above.
+    expect(KO_SITUATIONS.map((situation) => situation.text)).toEqual([
+      '법인 형태 선택부터 투자심의위원회 승인, 업종별 인허가, 상표 선등록 확인까지.',
+      '계약 분쟁과 손해배상, 소비자 피해, 형사 절차의 수사 대응.',
+      '이혼과 재산분할, 친권, 상속.',
+    ]);
   });
 });
 

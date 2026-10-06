@@ -27698,6 +27698,12 @@ html[lang='ko'] :is(body:has(> .site), .site) {
 html[lang='ko'] :where(:is(body:has(> .site), .site) :focus-visible) { outline-color: #233f7a; }
 /* The light trust strip's 「Google 리뷰 보기」 ring reads --primary (the zh-hant green). */
 html[lang='ko'] .site .hero-trust-strip--light .hero-trust-rating:focus-visible { outline-color: #233f7a; }
+/* The search bar shows focus on the bar itself (shared zh-hant/ko rule: #16382d border and glow): indigo on ko, in the
+   page and in the header overlay that portals into body. */
+html[lang='ko'] :is(body:has(> .site), .site) .search-bar:focus-within {
+  border-color: #233f7a;
+  box-shadow: 0 0 0 3px rgb(35 63 122 / 16%);
+}
 /* The shared zh-hant/ko page modules read --ap-*: on ko roots they take the Korean palette — 쪽빛 indigo actions and
    links, an indigo mist instead of Apple grey, 12px tiles. The ids outweigh each module's own root rule. */
 html[lang='ko'] .site :is(#ko-about, #ko-services, #ko-pricing, #ko-contact, #ko-faq, #ko-columns, #ko-lawyers, #ko-videos, #ko-column, #ko-lawyer-profile, #ko-traffic, #ko-search, #ko-login, #ko-legal, #ko-intent),

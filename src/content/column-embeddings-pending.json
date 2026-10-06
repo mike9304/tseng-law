@@ -1341,6 +1341,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-industrial-innovation-act-rd-investment-tax-credits"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-payroll-foreign-employees-withholding-social-insurance"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-payroll-foreign-employees-withholding-social-insurance"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-payroll-foreign-employees-withholding-social-insurance"
     }
   ]
 }

@@ -31,7 +31,7 @@ author: "legal-ai-assistant"
 
 では何が証明できるのか。「この内容の文書を、この日に、この宛先へ書留で差し出した」という事実です。相手がいつ受け取ったかは、書留に回執を付けておくと、受取人が署名して返送する回執で確かめられます（[郵件處理規則第28条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0050021&flno=28)）。3年を過ぎると郵便局の副本はなくなるので、長い争いが予想される場合は自分の控えと配達記録を別に保管しておきます。
 
-書き方は中華郵政の様式に従います。文面は中国語で作るのが通常です。日本語の文面をそのまま入れることは実務上勧めません。相手が読めない文面は、到達したとしても内容が伝わったかを争われる余地を残すからです。
+書き方は中華郵政の様式に従います。本文は中国語で書きます。[中華郵政の規定](https://subservices.post.gov.tw/post/internet/Customer_service/index.jsp?ID=1610075122269&defaultAllOpen=1&sn=02168337-09CC-4AE0-AC56-608C84F49CB4)は存證信函に「本國文字」を使うよう求めていて、外国語を使えるのは人名や事物の名称など原文の引用が必要な部分に限られます。日本語の文面はこの規定に合わないうえ、相手が読めなければ内容が伝わったかを争われる余地も残します。
 
 ## 効力は「到達」と「催告」から生じる
 
@@ -75,6 +75,7 @@ author: "legal-ai-assistant"
 
 - [郵便法（日本）](https://laws.e-gov.go.jp/law/322AC0000000165) 第48条、[民法（日本）](https://laws.e-gov.go.jp/law/129AC0000000089) 第97条（e-Gov法令検索）
 - [郵件處理規則](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0050021) 第3条、第28条、第34条（2022年5月27日改正）
+- [中華郵政 存證信函 常見問答](https://subservices.post.gov.tw/post/internet/Customer_service/index.jsp?ID=1610075122269&defaultAllOpen=1&sn=02168337-09CC-4AE0-AC56-608C84F49CB4)「二、使用本國文字」（2026年10月7日確認）
 - [涉外民事法律適用法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007) 第20条
 - [民事訴訟法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001) 第508条、第512条、第516条、第519条、第521条（2023年11月29日改正）
 - [民法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001) 第95条、第125条、第127条、第128条、第129条、第130条、第203条、第229条、第233条（2026年8月17日改正）

@@ -3,7 +3,7 @@ title: "대만 병원·의원에서 다친 외국인 환자, 진료기록과 배
 seoTitle: "대만 의료분쟁, 외국인 환자의 진료기록과 조정·소송"
 summary: "대만 병원이나 의원에서 진료를 받은 외국인 환자는 의료법 제71조에 따라 진료기록 부본을 요구할 수 있고, 의료분쟁이 되면 의료사고예방및분쟁처리법 제10조의 7영업일 기한이 적용됩니다. 민사소송 전에는 조정을 신청합니다. 형사고소가 배상금을 정해주지는 않습니다."
 published: "2026-10-01"
-lastmod: "2026-10-01"
+lastmod: "2026-10-06"
 date_display: "2026년 10월 1일"
 read_time: "8분 분량"
 categories:
@@ -25,15 +25,15 @@ author: "legal-ai-assistant"
 
 대만에서 진료를 받은 외국인 환자는 진료한 의료기관에 기록 부본을 요구할 수 있습니다. 손해배상은 별도의 청구이며, 진료 결과가 나빴다는 사실만으로 의료과실이 인정되지는 않습니다.
 
-의료사고예방및분쟁처리법은 2022년 6월 22일 제정·공포되었습니다. 시행일은 제45조에 따라 행정원이 정합니다. 2023년 12월 12일 행정원 원대의자 제1121043912호 명령으로 2024년 1월 1일부터 시행되었습니다. [공보](https://gazette.nat.gov.tw/egFront/detail.do?metaid=145697&log=detailLog), [제45조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=45). 시행 전에 이미 수사나 재판이 시작된 의료분쟁 사건에는 이 법을 적용하지 않습니다. [제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=43). 병원 진료가 아니라 체육관에서 다친 사건은 경로가 다릅니다. [대만 체육관 부상 소송](/ko/columns/taiwan-gym-injury-lawsuit).
+의료사고예방및분쟁처리법은 2022년 6월 22일 제정·공포되었습니다. 시행일은 제45조에 따라 행정원이 정합니다. 2023년 12월 12일 행정원 院臺衛字 제1121043912호 명령으로 2024년 1월 1일부터 시행되었습니다. [공보](https://gazette.nat.gov.tw/egFront/detail.do?metaid=145697&log=detailLog), [제45조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=45). 시행 전에 이미 수사나 재판이 시작된 의료분쟁 사건에는 이 법을 적용하지 않습니다. [제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=43). 병원 진료가 아니라 체육관에서 다친 사건은 경로가 다릅니다. [대만 체육관 부상 소송](/ko/columns/taiwan-gym-injury-lawsuit).
 
 ## 진료기록 부본은 두 조항으로 청구합니다
 
 진료를 한 의료기관은 환자의 요구에 따라 진료기록 부본을 제공하고, 필요하면 중문 요약을 제공합니다. 정당한 이유 없이 미루거나 거절하지 못합니다. 비용은 환자가 부담합니다. [의료법 제71조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=71). 진료기록은 적어도 7년 보관합니다. 미성년자의 진료기록은 성년이 된 뒤 적어도 7년까지 보관합니다. 인체시험 진료기록은 영구 보관합니다. [제70조](https://law.moj.gov.tw/LawClass/LawParaDeatil.aspx?pcode=L0020021&bp=7).
 
-의료분쟁이 발생하면, 의료기관은 환자나 그 대리인, 법정대리인, 상속인이 진료기록 부본을 신청한 다음 날부터 7영업일 안에 진료기록 및 함께 보관된 동의서의 부본을 제공합니다. 비용은 신청인이 냅니다. [의료사고예방및분쟁처리법 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=10).
+의료분쟁이 발생하면, 의료기관(醫事機構, 병원·의원 외 약국 등 의료인이 개설한 기관 포함)은 환자나 그 대리인, 법정대리인, 상속인이 진료기록 부본을 신청한 다음 날부터 7영업일 안에 진료기록 및 함께 보관된 동의서의 부본을 제공합니다. 비용은 신청인이 냅니다. [의료사고예방및분쟁처리법 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=10).
 
-제3조는 용어를 나눕니다. 의료사고는 환자가 의료기관의 의료 서비스를 받다가 중상이나 사망에 이른 결과이고, 질병 자체나 의료 처치로 피할 수 없는 결과는 빠집니다. 의료분쟁은 환자 측이 나쁜 임상 결과를 의료인이나 의료기관의 책임이라고 보아 생긴 다툼입니다. 당사자에는 의료인, 의료기관, 환자, 그 밖에 법에 따라 소를 제기할 수 있는 사람이 들어갑니다. [제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=3). 7영업일 규정은 의료분쟁에 연결됩니다. 제71조의 부본 청구는 그 정의에만 묶이지 않습니다.
+제3조는 용어를 나눕니다. 의료사고는 환자가 의료기관의 의료 서비스를 받다가 중대한 상해(시행세칙 제2조: 형법상 중상, 중등도 이상의 장애, 중앙주관기관이 인정한 난치·불치 상해)나 사망에 이른 결과이고, 질병 자체나 의료 처치로 피할 수 없는 결과는 빠집니다. 의료분쟁은 환자 측이 나쁜 임상 결과를 의료인이나 의료기관의 책임이라고 보아 생긴 다툼입니다. 당사자에는 의료인, 의료기관, 환자, 그 밖에 법에 따라 소를 제기할 수 있는 사람이 들어갑니다. [제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=3), [시행세칙 제2조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020229&flno=2). 7영업일 규정은 의료분쟁에 연결됩니다. 제71조의 부본 청구는 그 정의에만 묶이지 않습니다.
 
 ## 민사소송 전에는 조정을 신청합니다
 
@@ -71,6 +71,7 @@ author: "legal-ai-assistant"
 
 - [의료사고예방및분쟁처리법 제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=3), [제4조가 있는 전문](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227), [제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=6), [제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=7), [제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=10), [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=12), [제13조가 있는 조정 장](https://law.moj.gov.tw/LawClass/LawParaDeatil.aspx?pcode=L0020227&bp=3), [제14조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=14), [제15조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=15), [제29조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=29), [제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=43), [제45조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=45).
 - [2023년 12월 12일 행정원 명령(2024년 1월 1일 시행)](https://gazette.nat.gov.tw/egFront/detail.do?metaid=145697&log=detailLog). 위생복리부도 113년 1월 1일 시행이라고 적고 있습니다. [위생복리부 안내](https://www.mohw.gov.tw/cp-2704-78488-1.html).
+- [의료사고예방및분쟁처리법 시행세칙 제2조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020229&flno=2).
 - [의료분쟁조정위원회 조직 및 운영방법 제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020232&flno=7).
 - [의료법 제70조](https://law.moj.gov.tw/LawClass/LawParaDeatil.aspx?pcode=L0020021&bp=7), [제71조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=71), [제82조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=82), [제83조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=83).
 - [형법 제276조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=276), [제284조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=284), [제287조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=287).

@@ -2,7 +2,7 @@
 title: "Left-turning cars and oncoming scooters: how Taiwan courts split fault"
 seoTitle: "Left turns and scooter fault in Taiwan"
 summary: "In Taiwan, a left-turning driver must yield to an oncoming scooter. Courts in three civil cases assigned 70%, 60% and 50% fault after examining the evidence."
-lastmod: "2026-10-01"
+lastmod: "2026-10-06"
 date_display: "October 1, 2026"
 read_time: "7 min read"
 categories: ["Legal information"]
@@ -76,7 +76,7 @@ A party disputing the appraisal may give reasons and seek one review within 30 d
 
 ## Police records become available in stages
 
-After a crash causing injury or death, the driver must provide immediate aid, take the required measures, notify the police and refrain from arbitrarily moving the vehicles or scene evidence. Breaching those duties carries a fine of NT$3,000–9,000. In an injury case, if all parties agree, they must mark the vehicle positions and move the vehicles somewhere that does not obstruct traffic. [Road Traffic Management and Penalty Act, Article 62(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
+After a crash causing injury or death, the driver must provide immediate aid, take the required measures, notify the police and refrain from arbitrarily moving the vehicles or scene evidence. Breaching those duties carries a fine of NT$3,000–9,000. If someone is injured and the driver flees the scene, the driver's license is revoked (paragraph 4 of the same article; if the injury is serious or fatal, the driver cannot take the license test again), and the driver also faces separate criminal punishment under [Article 185-4 of the Criminal Code](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4). In an injury case, if all parties agree, they must mark the vehicle positions and move the vehicles somewhere that does not obstruct traffic. [Road Traffic Management and Penalty Act, Article 62(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
 
 The National Police Agency (內政部警政署) says parties can request the accident party registration sheet (道路交通事故當事人登記聯單) at the scene. The scene diagram and photographs can be requested after seven days; the preliminary analysis sheet can be requested after thirty days. These are application times, not promised delivery dates. [NPA FAQ](https://www.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129) The [guide to police records after a crash](/en/columns/taiwan-accident-police-records) explains the request routes and their conditions.
 
@@ -96,6 +96,7 @@ This article presents general information from Taiwan statutes and published jud
 - [Road Traffic Safety Regulations, Article 94](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94)
 - [Road Traffic Management and Penalty Act (道路交通管理處罰條例), Article 48](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=48)
 - [Road Traffic Management and Penalty Act, Article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
+- [Criminal Code (刑法), Article 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4)
 - [Civil Code (民法), Article 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217)
 - [Insurance Act (保險法), Article 53](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390002&flno=53)
 - [Regulations on Vehicle Accident Appraisal and Review (車輛行車事故鑑定及覆議作業辦法), Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040045&flno=3)

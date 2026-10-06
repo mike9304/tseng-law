@@ -3,7 +3,7 @@ title: "Getting a Taiwan residential deposit back as a foreign tenant"
 seoTitle: "Taiwan Rental Deposit Cap and Return"
 summary: "Taiwan caps most residential deposits at two months' rent, refundable less lease debts at move-out. When landlords may reclaim housing and how mediation works."
 published: "2026-10-02"
-lastmod: "2026-10-02"
+lastmod: "2026-10-06"
 date_display: "October 2, 2026"
 read_time: "5 min read"
 categories:
@@ -35,11 +35,11 @@ The answer depends on whether the lease has a fixed term.
 
 If it does not, [Land Act Article 100](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=100) bars the landlord from reclaiming the dwelling unless one of six grounds exists: the landlord needs it for self-use or rebuilding; the tenant sublet in breach of Civil Code Article 443(1); rent arrears reach two months or more after the deposit is applied; the tenant uses the dwelling illegally; the tenant breaches the lease; or the tenant damages the dwelling or its fixtures and does not pay reasonable compensation.
 
-Arrears alone do not let the landlord end the lease on the spot. Under [Civil Code Article 440](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=440), the landlord must demand payment within a reasonable period and may terminate only if the tenant still does not pay; for housing, the arrears must also reach two months' rent. Court precedent applies this demand requirement when a landlord relies on the arrears ground in Land Act Article 100 ([precedents on Land Act Art. 100](https://law.moj.gov.tw/LawClass/LawSingleRela.aspx?FLNO=100&PCODE=D0060001&ty=J)).
+Arrears alone do not let the landlord end the lease on the spot. Under [Civil Code Article 440](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=440), the landlord must demand payment within a reasonable period and may terminate only if the tenant still does not pay; for housing, the arrears must also reach two months' rent, and if the rent was agreed to be paid at the start of each period, the landlord may terminate only after payment is more than two months late. Court precedent applies this demand requirement when a landlord relies on the arrears ground in Land Act Article 100 ([precedents on Land Act Art. 100](https://law.moj.gov.tw/LawClass/LawSingleRela.aspx?FLNO=100&PCODE=D0060001&ty=J)).
 
 Supreme Court Precedent 37-Shang-7729 (1948), listed on the same precedents page, and Judicial Yuan Interpretation Yuan-Jie No. 3489, as cited in other precedents on that page, read Article 100 as governing leases without a fixed term. A fixed-term lease ends when the term expires ([Civil Code Article 450](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=450)). If the tenant keeps living there after expiry and the landlord does not promptly object, [Civil Code Article 451](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=451) treats the lease as continuing for an indefinite term, and Article 100 then applies.
 
-During a fixed term, an early-termination clause may be limited if it departs from the mandatory and prohibited terms for standard residential leases published by the government ([Executive Yuan page](https://www.ey.gov.tw/Page/DFB720D019CCCB0A/478917df-7599-418f-8715-fd2716b623b4)).
+During a fixed term, an early-termination clause may be limited if it departs from the mandatory and prohibited terms for standard residential leases published by the government ([Executive Yuan page](https://www.ey.gov.tw/Page/DFB720D019CCCB0A/478917df-7599-418f-8715-fd2716b623b4)). [Article 10 of the Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=10) sets out the cases in which a landlord may terminate early during the lease term: the tenant damages the dwelling or its equipment and neither repairs it nor pays reasonable compensation; the tenant is in arrears of two months' rent or more on rent or charges and still does not pay after a demand within a reasonable period; the tenant sublets without the landlord's written consent; the landlord must take the dwelling back in order to rebuild; or another statute allows early termination. The landlord must give written notice with supporting evidence 30 days before termination, or three months before termination for rebuilding.
 
 ## Disputing deductions
 
@@ -53,7 +53,7 @@ Instructing a Taiwan lawyer to send a demand letter or handle mediation from ove
 
 ## Official sources
 
-- [Rental Housing Market Development and Regulation Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125): [Art. 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=4), [Art. 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=7), [Art. 12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=12), [Art. 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=16).
+- [Rental Housing Market Development and Regulation Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125): [Art. 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=4), [Art. 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=7), [Art. 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=10), [Art. 12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=12), [Art. 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=16).
 - [Land Act Art. 99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=99), [Art. 100](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=100).
 - [Interpretations and precedents on Land Act Art. 100 (Yuan-Jie No. 3489; Supreme Court 37-Shang-7729)](https://law.moj.gov.tw/LawClass/LawSingleRela.aspx?FLNO=100&PCODE=D0060001&ty=J).
 - [Civil Code Art. 440](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=440), [Art. 450](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=450), [Art. 451](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=451).

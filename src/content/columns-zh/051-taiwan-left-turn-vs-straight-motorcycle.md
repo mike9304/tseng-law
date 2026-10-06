@@ -1,7 +1,7 @@
 ---
 title: "左轉汽車與直行機車事故：70%、60%與50%的過失認定"
 summary: "左轉車應讓直行車先行，但三件民事案件中，法院分別認定左轉汽車負70%、60%、50%的過失。機車是否超速、是否注意車前狀況，以及影像和現場資料能證明什麼，都影響了判斷。"
-lastmod: "2026-10-01"
+lastmod: "2026-10-06"
 date_display: "2026年10月1日"
 read_time: "約6分鐘閱讀"
 categories: ["法律資訊"]
@@ -61,7 +61,7 @@ diagram_after: "左轉車要讓直行車先行"
 
 ## 事故後的救護與資料申請
 
-事故造成傷亡時，駕駛人應立即採取救護措施、依規定處置並通知警方，不得任意移動事故車輛或現場痕跡證據；違反者可處新臺幣3,000元以上、9,000元以下罰鍰。若是受傷事故且當事人均同意，應先標繪車輛位置，再移至不妨礙交通之處（[道路交通管理處罰條例第62條第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)）。
+事故造成傷亡時，駕駛人應立即採取救護措施、依規定處置並通知警方，不得任意移動事故車輛或現場痕跡證據；違反者可處新臺幣3,000元以上、9,000元以下罰鍰。肇事致人受傷而逃逸者，依同條第4項吊銷駕駛執照，致人重傷或死亡而逃逸者並不得再考領；另依[刑法第185條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4)負刑事責任。若是受傷事故且當事人均同意，應先標繪車輛位置，再移至不妨礙交通之處（[道路交通管理處罰條例第62條第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)）。
 
 依[警政署事故資料問答](https://www.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)，當事人或利害關係人在事故現場可申請「道路交通事故當事人登記聯單」；事故7日後可申請閱覽或提供現場圖、現場照片；事故30日後可申請初步分析研判表。這些是可申請的時間，不等於當天必然拿到文件。新北案用初步分析研判表判斷超速，臺北行政案則用現場圖確認碰撞位置。[警方資料的申請方式與線上申請條件](/zh-hant/columns/taiwan-accident-police-records)另有說明。
 
@@ -79,6 +79,7 @@ diagram_after: "左轉車要讓直行車先行"
 - [道路交通安全規則第94條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94)
 - [道路交通管理處罰條例第48條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=48)
 - [道路交通管理處罰條例第62條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
+- [刑法第185條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4)
 - [民法第217條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217)
 - [保險法第53條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390002&flno=53)
 - [車輛行車事故鑑定及覆議作業辦法第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040045&flno=3)

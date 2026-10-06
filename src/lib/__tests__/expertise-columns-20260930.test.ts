@@ -64,13 +64,16 @@ describe('expertise columns 2026-09-30', () => {
     expect([...localesBySlug.keys()].sort()).toEqual(Object.keys(EXPECTED_TOPIC).sort());
   });
 
+  // Verified fact fixes (audit-split lane 2026-10-06, FINDINGS F-035 046 / F-038 043) moved lastmod.
+  const FACT_FIX_LASTMOD: Record<string, string> = { 'ko/043': '2026-10-06', 'ko/046': '2026-10-06', 'zh-hant/046': '2026-10-06' };
+
   it.each(cases)('$locale/$file has the house frontmatter and a hero image on disk', ({ locale, file, num, slug }) => {
     const filePath = path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale], file);
     expect(fs.existsSync(filePath), filePath).toBe(true);
     const { data } = matter(fs.readFileSync(filePath, 'utf8'));
 
     expect(data.published).toBe('2026-09-30');
-    expect(data.lastmod).toBe('2026-09-30');
+    expect(data.lastmod).toBe(FACT_FIX_LASTMOD[`${locale}/${num}`] ?? '2026-09-30');
     expect(data.date_display).toBe(DATE_DISPLAY[locale]);
     expect(data.categories).toEqual([CATEGORY_PHRASE[locale]]);
     expect(data.topic).toBe(EXPECTED_TOPIC[slug]);

@@ -3,7 +3,7 @@ title: "外國病人的台灣醫療爭議：病歷請求與求償程序"
 seoTitle: "外國病人的台灣醫療爭議：病歷、調解與民刑事"
 summary: "在台灣醫院或診所接受醫事服務的外國病人，可以依醫療法第71條要求病歷複製本；發生醫療爭議時，另有醫療事故預防及爭議處理法第10條的七個工作日。民事起訴前應先申請調解。刑事告訴本身不核定賠償金額。"
 published: "2026-10-01"
-lastmod: "2026-10-01"
+lastmod: "2026-10-06"
 date_display: "2026年10月1日"
 read_time: "約8分鐘閱讀"
 categories:
@@ -33,7 +33,7 @@ author: "legal-ai-assistant"
 
 醫療爭議發生時，醫事機構應於病人或其代理人、法定代理人、繼承人申請病歷複製本的翌日起七個工作日內，提供病歷及併同保存的同意書複製本。費用由申請人負擔。[醫療事故預防及爭議處理法第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=10)。
 
-第3條把用語分開。醫療事故，指病人接受醫事機構的醫事服務，發生重大傷害或死亡的結果，不包括疾病本身或醫療處置不能避免的結果。醫療爭議，指病人方的當事人認為醫療不良結果應由醫事人員、醫事機構負責所生的爭議。當事人包括與爭議有關的醫事人員、醫事機構、病人，以及其他依法得提起訴訟的人。[第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=3)。七個工作日繫於醫療爭議。第71條的複製本請求，不以該定義為限。
+第3條把用語分開。醫療事故，指病人接受醫事機構的醫事服務，發生重大傷害（施行細則第2條：刑法第10條第4項的重傷、中度以上身心障礙，或經中央主管機關認定有重大不治或難治的傷害）或死亡的結果，不包括疾病本身或醫療處置不能避免的結果。醫療爭議，指病人方的當事人認為醫療不良結果應由醫事人員、醫事機構負責所生的爭議。當事人包括與爭議有關的醫事人員、醫事機構、病人，以及其他依法得提起訴訟的人。[第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=3)、[施行細則第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020229&flno=2)。七個工作日繫於醫療爭議。第71條的複製本請求，不以該定義為限。
 
 ## 民事案件先進入調解
 
@@ -71,6 +71,7 @@ author: "legal-ai-assistant"
 
 - [醫療事故預防及爭議處理法第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=3)、[含第4條的全文](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227)、[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=6)、[第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=7)、[第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=10)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=12)、[含第13條的調解章](https://law.moj.gov.tw/LawClass/LawParaDeatil.aspx?pcode=L0020227&bp=3)、[第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=14)、[第15條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=15)、[第29條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=29)、[第43條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=43)、[第45條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=45)。
 - [行政院112年12月12日令，指定113年1月1日施行](https://gazette.nat.gov.tw/egFront/detail.do?metaid=145697&log=detailLog)。衛生福利部亦說明該法自113年1月1日實施。[衛福部頁面](https://www.mohw.gov.tw/cp-2704-78488-1.html)。
+- [醫療事故預防及爭議處理法施行細則第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020229&flno=2)。
 - [醫療爭議調解會組織及運作辦法第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020232&flno=7)。
 - [醫療法第70條](https://law.moj.gov.tw/LawClass/LawParaDeatil.aspx?pcode=L0020021&bp=7)、[第71條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=71)、[第82條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=82)、[第83條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=83)。
 - [刑法第276條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=276)、[第284條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=284)、[第287條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=287)。

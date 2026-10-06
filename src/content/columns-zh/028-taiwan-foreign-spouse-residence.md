@@ -2,7 +2,7 @@
 title: "與台灣人結婚的外籍配偶居留：居留證怎麼辦，離婚、喪偶後還能留嗎"
 seoTitle: "與台灣人結婚的外籍配偶居留證（ARC）：申請、延期、離婚與喪偶後"
 summary: "依入出國及移民法條文與移民署說明，整理與台灣國民結婚的外籍配偶如何取得居留簽證與外僑居留證（ARC）、如何延期，以及配偶死亡或離婚後是否還能繼續在台居留。"
-lastmod: "2026-09-29"
+lastmod: "2026-10-06"
 date_display: "2026年9月29日"
 read_time: "約6分鐘閱讀"
 categories:
@@ -66,9 +66,9 @@ author: "legal-ai-assistant"
 
 離婚程序與子女問題，可參考[與台灣配偶協議離婚](/zh-hant/columns/taiwanese-spouse-divorce-agreement-registration)、[人在國外時的離婚](/zh-hant/columns/taiwanese-spouse-divorce-from-abroad)與[離婚後帶孩子跨國生活的安排](/zh-hant/columns/taiwanese-spouse-divorce-cross-border-parenting)。
 
-## 大陸地區配偶也適用同一套規定嗎？
+## 大陸戶籍配偶也適用同一套規定嗎？
 
-不適用。大陸地區配偶依[臺灣地區與大陸地區人民關係條例第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=Q0010001&flno=17)辦理，不適用入出國及移民法。申請階段與期間都不同，不能直接套用本文，須另行查閱該條例與移民署的說明。
+不適用。在大陸地區設有戶籍的配偶（大陸地區人民）依[臺灣地區與大陸地區人民關係條例第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=Q0010001&flno=17)辦理，不適用入出國及移民法。申請階段與期間都不同，不能直接套用本文，須另行查閱該條例與移民署的說明。出生在大陸、但在大陸地區未設有戶籍而持外國國籍者，依本文的程序辦理，但[移民署說明](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)另要求檢附在大陸地區未設有戶籍、未領用大陸地區護照的證明文件。
 
 ## 什麼時候可以考慮永久居留？
 

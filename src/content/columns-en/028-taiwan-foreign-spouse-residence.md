@@ -2,7 +2,7 @@
 title: "Residence in Taiwan as the Foreign Spouse of a Taiwanese National: From ARC to Divorce or Bereavement"
 seoTitle: "Taiwan Spouse ARC: Get, Extend, Keep It"
 summary: "A foreign spouse of a household-registered Taiwanese can get a resident visa and ARC, extend it, and may stay after the spouse dies or after a divorce."
-lastmod: "2026-09-29"
+lastmod: "2026-10-06"
 date_display: "September 29, 2026"
 read_time: "6 min read"
 categories:
@@ -66,9 +66,9 @@ The article says the agency "may" allow continued residence, so it is not automa
 
 For the divorce itself and arrangements for children, see [divorcing a Taiwanese spouse by agreement](/en/columns/taiwanese-spouse-divorce-agreement-registration), [divorcing while you live abroad](/en/columns/taiwanese-spouse-divorce-from-abroad) and [planning your child's life across two countries](/en/columns/taiwanese-spouse-divorce-cross-border-parenting).
 
-## Do the same rules apply to spouses from mainland China?
+## Do the same rules apply to spouses with mainland China household registration?
 
-No. Spouses from mainland China fall under [Article 17 of the Act Governing Relations between the People of the Taiwan Area and the Mainland Area](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=Q0010001&flno=17), not the Immigration Act. The stages and time periods differ, so check that statute and the agency's guidance for mainland spouses rather than applying this column.
+No. Spouses who hold household registration in mainland China (people of the Mainland Area) fall under [Article 17 of the Act Governing Relations between the People of the Taiwan Area and the Mainland Area](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=Q0010001&flno=17), not the Immigration Act. The stages and time periods differ, so check that statute and the agency's guidance for mainland spouses rather than applying this column. A person who was born in mainland China but has no mainland household registration and holds a foreign nationality follows the procedure in this column, though the [National Immigration Agency's guidance](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/) additionally asks for proof that the person has no mainland household registration and holds no mainland passport.
 
 ## When can I think about permanent residence?
 

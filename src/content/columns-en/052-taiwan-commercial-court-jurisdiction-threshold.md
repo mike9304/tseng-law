@@ -3,7 +3,7 @@ title: "Taiwan's Commercial Court now reaches more private-company disputes"
 seoTitle: "Taiwan Commercial Court thresholds 2026"
 summary: "From 1 Oct 2026 Taiwan's Commercial Court uses lower NT$ thresholds for some private-company shareholder disputes; the claim type still decides the forum."
 published: "2026-10-01"
-lastmod: "2026-10-01"
+lastmod: "2026-10-06"
 date_display: "October 1, 2026"
 read_time: "5 min read"
 categories:
@@ -33,7 +33,7 @@ For a foreign parent or minority shareholder, the practical starting point is to
 
 ## Procedure and the records to assemble
 
-The [Judicial Yuan's commercial-case guidance](https://www.judicial.gov.tw/tw/cp-1686-80069-2d753-1.html) explains that the court uses mandatory lawyer representation and electronic submission of pleadings under the Act. It also describes commercial mediation before litigation. A party should plan for a Taiwan lawyer to assess the category, procedural stage and any exception before filing, rather than treating the amount alone as an instruction to use the electronic portal.
+The [Judicial Yuan's commercial-case guidance](https://www.judicial.gov.tw/tw/cp-1686-80069-2d753-1.html) explains that the court uses mandatory lawyer representation and electronic submission of pleadings under the Act. Under Article 20 of the Commercial Case Adjudication Act, a commercial litigation case must go through mediation at the commercial court before suit is filed, and a suit filed directly is treated as an application for mediation. A party who fails to appear at a mediation session without justifiable cause may be fined up to NT$300,000 (Article 27). A party should plan for a Taiwan lawyer to assess the category, procedural stage and any exception before filing, rather than treating the amount alone as an instruction to use the electronic portal.
 
 Bring the company registration record, articles, shareholder register and capital records; notices, agendas, minutes and voting records for the challenged meeting; shareholding and control documents; the relevant contracts and correspondence; and a calculation of the claimed amount with supporting accounts. If proceedings have begun, include the filing date, court papers and service records. These documents let counsel test the court's jurisdiction and the requested remedy without guessing from the company's foreign ownership.
 

@@ -67,6 +67,12 @@ describe('native divorce columns September 2026', () => {
     }
   });
 
+  const FACT_FIXED_20261006 = new Set([
+    'ko/taiwanese-spouse-divorce-agreement-registration',
+    'ko/taiwanese-spouse-divorce-from-abroad',
+    'ja/taiwanese-spouse-divorce-from-abroad',
+  ]);
+
   it('includes exactly the nine authored locales in sitemap alternates for each new article', () => {
     const records = collectColumnSitemapRecords({
       postsForLocale: locale => getAllColumnPosts(locale).filter(post => slugs.includes(post.slug)),
@@ -77,7 +83,9 @@ describe('native divorce columns September 2026', () => {
       // Columns revised after the 2026-09-28 Fable review carry the revision date;
       // the review's unchanged PASS files keep the original date.
       const slug = record.path.replace('/columns/', '');
-      expect(record.lastModified).toBe(UNCHANGED_PASS.has(`${record.locale}/${slug}`) ? '2026-09-27' : '2026-09-28');
+      // Verified fact fixes (audit-split lane 2026-10-06, FINDINGS F-040 019 / F-041 020) moved lastmod.
+      const key = `${record.locale}/${slug}`;
+      expect(record.lastModified).toBe(FACT_FIXED_20261006.has(key) ? '2026-10-06' : UNCHANGED_PASS.has(key) ? '2026-09-27' : '2026-09-28');
     }
   });
 });

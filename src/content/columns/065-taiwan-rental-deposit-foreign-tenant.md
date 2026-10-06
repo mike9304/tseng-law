@@ -3,7 +3,7 @@ title: "대만 주택 보증금, 외국인 임차인이 돌려받을 때"
 seoTitle: "대만 주택 임대 보증금·회수 제한"
 summary: "임대주택시장발전및관리조례는 주택 임대에서 보증금을 두 달 치 월세를 넘기지 못하도록 하고, 계약이 끝나고 주택을 반환하며 채무를 변제하면 보증금을 돌려주거나 채무에 충당한 나머지를 돌려주도록 합니다. 기간을 정하지 않은 주택 임대에서 임대인이 집을 되찾으려면 토지법 제100조가 정한 사유가 있어야 합니다. 보증금 분쟁은 지방정부의 무료 조정(調處)을 신청할 수 있고, 입주·퇴거 사진과 인도 확인(點交) 기록이 입증 자료가 됩니다."
 published: "2026-10-02"
-lastmod: "2026-10-02"
+lastmod: "2026-10-06"
 date_display: "2026년 10월 2일"
 read_time: "5분 분량"
 categories:
@@ -33,11 +33,11 @@ author: "legal-ai-assistant"
 
 기간을 정하지 않은 주택 임대에서 [토지법 제100조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=100)는 임대인이 다음 사유 중 하나가 없으면 주택을 회수하지 못한다고 합니다. 자가 거주 또는 재건축, 민법 제443조 제1항을 어긴 전대, 담보금으로 충당해도 두 달 이상 연체, 법령 위반 사용, 계약 위반, 주택·부착물을 손괴하고 상당한 배상을 하지 않은 경우입니다.
 
-연체를 이유로 계약을 끝내려면 임대인은 [민법 제440조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=440)에 따라 상당한 기간을 정해 지급을 최고해야 하고, 그 기간 안에 지급하지 않아야 해지할 수 있습니다. 주택 임대는 연체액이 두 달 치에 이르러야 합니다. 토지법 제100조 제3호의 연체 사유로 회수할 때도 이 최고가 필요하다는 판례가 있습니다([토지법 제100조 관련 판례](https://law.moj.gov.tw/LawClass/LawSingleRela.aspx?FLNO=100&PCODE=D0060001&ty=J)).
+연체를 이유로 계약을 끝내려면 임대인은 [민법 제440조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=440)에 따라 상당한 기간을 정해 지급을 최고해야 하고, 그 기간 안에 지급하지 않아야 해지할 수 있습니다. 주택 임대는 연체액이 두 달 치에 이르러야 하고, 월세를 매 기간 초에 내기로 약정했다면 지급이 두 달을 넘겨 늦어진 뒤에야 해지할 수 있습니다. 토지법 제100조 제3호의 연체 사유로 회수할 때도 이 최고가 필요하다는 판례가 있습니다([토지법 제100조 관련 판례](https://law.moj.gov.tw/LawClass/LawSingleRela.aspx?FLNO=100&PCODE=D0060001&ty=J)).
 
 기간을 정한 임대에는 토지법 제100조의 제한이 그대로 적용되지 않습니다. 최고법원 37년 上字 제7729호 판례와, 같은 페이지의 여러 판례가 인용하는 사법원 해석(院解字第3489號)은 이 조문을 기간을 정하지 않은 임대에 관한 규정으로 봅니다(위 판례 링크). 기간을 정한 임대는 [민법 제450조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=450)에 따라 기간이 끝나면 소멸합니다. 다만 기간이 끝난 뒤에도 임차인이 계속 살고 임대인이 곧바로 반대 의사를 밝히지 않으면 [민법 제451조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=451)에 따라 기간을 정하지 않은 계약으로 계속되는 것으로 보고, 그때부터 토지법 제100조가 문제됩니다.
 
-기간 중 조기 해지 조항이 있어도 그 조항이 법령이나 정형화계약 필수·금지 기재 사항을 벗어나면 효력이 제한될 수 있습니다. 내정부가 공고한 [주택 임대 정형화계약 필수·금지 기재 사항](https://www.ey.gov.tw/Page/DFB720D019CCCB0A/478917df-7599-418f-8715-fd2716b623b4)은 계약서 검토 기간(審閱期), 임대 목적물, 차임·보증금, 수선, 해지, 퇴거 시 인도 확인(點交) 등을 계약에 담도록 합니다.
+기간 중 조기 해지 조항이 있어도 그 조항이 법령이나 정형화계약 필수·금지 기재 사항을 벗어나면 효력이 제한될 수 있습니다. [조례 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=10)는 임대 기간 중 임대인이 계약을 조기에 해지할 수 있는 경우를 주택·설비를 훼손하고 수선이나 상당한 배상을 하지 않은 때, 임대료나 비용이 두 달 치에 이르도록 연체하고 상당한 기간을 정한 최고에도 내지 않은 때, 서면 동의 없이 전대한 때, 재건축으로 반드시 회수해야 할 때, 그 밖에 법률이 허용한 때로 정하고, 임대인은 증빙을 붙여 해지 30일 전(재건축은 3개월 전)까지 서면으로 통지해야 합니다. 내정부가 공고한 [주택 임대 정형화계약 필수·금지 기재 사항](https://www.ey.gov.tw/Page/DFB720D019CCCB0A/478917df-7599-418f-8715-fd2716b623b4)은 계약서 검토 기간(審閱期), 임대 목적물, 차임·보증금, 수선, 해지, 퇴거 시 인도 확인(點交) 등을 계약에 담도록 합니다.
 
 ## 보증금을 두고 다툴 때
 
@@ -51,7 +51,7 @@ author: "legal-ai-assistant"
 
 ## 참고한 공식 자료
 
-- [임대주택시장발전및관리조례](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125): [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=4), [제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=7), [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=12), [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=16).
+- [임대주택시장발전및관리조례](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125): [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=4), [제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=7), [제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=10), [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=12), [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=16).
 - [토지법 제99조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=99), [제100조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=100).
 - [토지법 제100조 관련 해석·판례(院解字第3489號, 最高法院37年上字第7729號 등)](https://law.moj.gov.tw/LawClass/LawSingleRela.aspx?FLNO=100&PCODE=D0060001&ty=J).
 - [민법 제440조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=440), [제450조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=450), [제451조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=451).

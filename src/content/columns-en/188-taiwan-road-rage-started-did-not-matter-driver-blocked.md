@@ -42,9 +42,7 @@ The defendant accepted that there had been a traffic dispute (行車糾紛) with
 
 In English: the place in this case is a public place; the complainant crowded my car first; I did overtake against the flow of traffic, but I was stopping the complainant's car, not crowding it; in the Nangang Tunnel the complainant rolled the window down and muttered at me; I did not threaten the complainant or interfere with the complainant's freedom. 逼車, translated here as crowding, is the everyday word for pressing in on another vehicle. The defendant's argument was that 攔, stopping or intercepting a car, is a different thing.
 
-The prosecutor, who had brought the case as an offence against personal liberty (妨害自由), asked for a heavier sentence. The complainant asked the court to sentence according to law ([Shilin District Court 115年度易字第383號, June 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLDM%2C115%2C%E6%98%93%2C383%2C20260626%2C1)).
-
-Suppose the complainant really had crowded the defendant's car first. Would that change how you judge the second stop?
+The prosecutor, who had brought the case as an offence against personal liberty (妨害自由), asked for a heavier sentence. The complainant asked the court to sentence according to law ([Shilin District Court 115年度易字第383號, June 26, 2026](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLDM%2C115%2C%E6%98%93%2C383%2C20260626%2C1)). Suppose the complainant really had crowded the defendant's car first.
 
 ## The question the court left unanswered
 

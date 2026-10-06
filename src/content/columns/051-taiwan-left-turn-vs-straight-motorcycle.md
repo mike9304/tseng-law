@@ -1,7 +1,7 @@
 ---
 title: "좌회전 차가 비켜야 하지만, 대만 법원은 직진 오토바이의 과실도 따졌다"
 summary: "대만 교차로에서는 좌회전 차가 직진 오토바이에 길을 내줘야 합니다. 민사 사건 세 건에서 법원은 과실을 70 대 30, 60 대 40, 50 대 50으로 나눴습니다. 민사 판결문 네 건과 형사·행정 판결문 각 한 건, 행차사고감정 절차와 경찰 자료 신청 시점을 함께 짚었습니다."
-lastmod: "2026-10-01"
+lastmod: "2026-10-06"
 date_display: "2026년 10월 1일"
 read_time: "6분 분량"
 categories: ["대만 법률정보"]
@@ -86,7 +86,7 @@ diagram_after: "길을 내줘야 하는 쪽은 회전하는 차"
 
 ## 사고 직후의 의무와 경찰 자료
 
-사람이 다치거나 숨진 사고를 냈다면 곧바로 구호 조치를 하고 경찰에 알려야 합니다. 구호와 신고를 하지 않거나 사고 차량과 현장 흔적을 함부로 옮기면 3,000~9,000대만달러의 과태료가 붙습니다. 부상 사고에서 당사자가 모두 동의한 경우에는 반대로, 차량 위치를 표시한 뒤 교통에 방해되지 않는 곳으로 옮겨야 합니다([도로교통관리처벌조례 제62조 제3항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)).
+사람이 다치거나 숨진 사고를 냈다면 곧바로 구호 조치를 하고 경찰에 알려야 합니다. 구호와 신고를 하지 않거나 사고 차량과 현장 흔적을 함부로 옮기면 3,000~9,000대만달러의 과태료가 붙습니다. 부상 사고에서 당사자가 모두 동의한 경우에는 반대로, 차량 위치를 표시한 뒤 교통에 방해되지 않는 곳으로 옮겨야 합니다([도로교통관리처벌조례 제62조 제3항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)). 다친 사람이 있는데 현장을 떠나 달아나면 운전면허가 취소되고(같은 조 제4항, 중상·사망이면 다시 딸 수도 없습니다) [형법 제185조의4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4)의 형사처벌도 따로 받습니다.
 
 경찰 자료는 사고 뒤 지난 시간에 따라 신청할 수 있는 것이 다릅니다. 현장에서는 도로교통사고 당사자 등록연락서(道路交通事故當事人登記聯單)를 신청할 수 있습니다. 7일이 지나면 현장도와 현장사진을 보거나 받아 볼 수 있고, 초보분석판정표는 30일이 지나야 신청이 됩니다([대만 경찰청(內政部警政署) FAQ](https://www.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)).
 
@@ -113,6 +113,7 @@ diagram_after: "길을 내줘야 하는 쪽은 회전하는 차"
 - [道路交通安全規則 第94條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94)
 - [道路交通管理處罰條例 第48條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=48)
 - [道路交通管理處罰條例 第62條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
+- [刑法 第185條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4)
 - [民法 第217條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217)
 - [保險法 第53條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390002&flno=53)
 - [車輛行車事故鑑定及覆議作業辦法 第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040045&flno=3)

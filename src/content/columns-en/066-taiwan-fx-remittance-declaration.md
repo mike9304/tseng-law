@@ -3,7 +3,7 @@ title: "Declaring Taiwan FX conversions and remittances from NT$500,000 up"
 seoTitle: "Taiwan FX Declarations and Conversion Limits"
 summary: "Taiwan FX conversions of NT$500,000 or more are declared through a bank. When the form suffices, when papers are checked, when Central Bank approval applies."
 published: "2026-10-02"
-lastmod: "2026-10-02"
+lastmod: "2026-10-06"
 date_display: "October 2, 2026"
 read_time: "5 min read"
 categories:
@@ -16,7 +16,7 @@ faq:
   - q: "What if an individual exceeds the annual cumulative limit?"
     a: "Under Article 4, groups and individuals may convert on the form alone while their annual cumulative purchases or sales stay within USD 10 million equivalent; for companies and firms the figure is USD 100 million. A single conversion of USD 500,000 or more (USD 1 million for companies and firms) still needs the bank to check supporting documents under Article 5. A necessary remittance beyond that limit needs prior Central Bank approval under Article 6, applied for through a bank. These annual figures have applied since 1 November 2024 under the adjustment order the Central Bank issued on 31 October 2024 under Article 7 of the regulations."
   - q: "Can someone else file for me, or can I file for another person in my own name?"
-    a: "Under Article 9(2), you may authorize another individual to file for you. That person must give the bank a letter of authorization and identity documents for both of you, and must file in your name. You remain responsible for what is declared. A company or individual who takes on someone else's conversion and files in its own name is deemed a declarant under Article 2(2) and must follow the bank guidance rules and Central Bank rules, as Article 9(1) requires. Wilful non-declaration or a false declaration is punishable under Article 20(1) of the Foreign Exchange Control Act, through Article 16 of the regulations."
+    a: "Under Article 9(2), you may authorize another individual to file for you. That person must give the bank a letter of authorization and identity documents for both of you, and must file in your name. You remain responsible for what is declared. The separate rule in Article 10 for non-residents applies first. A company or individual who takes on someone else's conversion and files in its own name is deemed a declarant under Article 2(2) and must follow the bank guidance rules and Central Bank rules, as Article 9(1) requires. Wilful non-declaration or a false declaration is punishable under Article 20(1) of the Foreign Exchange Control Act, through Article 16 of the regulations."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
@@ -39,7 +39,7 @@ Under [Article 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&
 
 ## Filing through someone else, and false filings
 
-You may authorize another individual to file a conversion for you. That person gives the bank a letter of authorization and identity documents for both of you, and files in your name; responsibility for the content stays with you ([Article 9(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=9)). A company or individual who is entrusted with someone else's conversion and files in its own name is deemed a declarant (Article 2(2)(ii)) and must follow the bank guidance rules and Central Bank rules (Article 9(1)).
+You may authorize another individual to file a conversion for you. That person gives the bank a letter of authorization and identity documents for both of you, and files in your name; responsibility for the content stays with you ([Article 9(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=9)). A company or individual who is entrusted with someone else's conversion and files in its own name is deemed a declarant (Article 2(2)(ii)) and must follow the bank guidance rules and Central Bank rules (Article 9(1)). However, when a non-resident individual declares a conversion under Article 4(1)(v) or Article 5(iii), (v) or (vii), the individual must file in person with a passport or other identity document, unless the Central Bank provides otherwise ([Article 10(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=10)).
 
 A declarant who wilfully fails to declare, declares falsely, or fails to explain or explains falsely when queried is punished under [Article 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=16), which applies [Article 20(1) of the Foreign Exchange Control Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380026&flno=20): an administrative fine of NT$30,000 to NT$600,000.
 
@@ -58,6 +58,7 @@ To discuss a remittance structure, send the purpose of the transfer, the contrac
 - [Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=6): prior Central Bank approval.
 - [Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=7): adjustment of limits.
 - [Article 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=9): entrusted conversions and filing by an agent.
+- [Article 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=10): non-resident individuals filing in person.
 - [Article 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0450009&flno=16): penalties.
 - [Foreign Exchange Control Act, Article 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380026&flno=20): fine range.
 - [CBC press release: annual cumulative FX settlement limits](https://www.cbc.gov.tw/tw/cp-302-178539-47467-1.html) (effective 1 November 2024: USD 10 million for groups and individuals; USD 100 million for companies and firms).

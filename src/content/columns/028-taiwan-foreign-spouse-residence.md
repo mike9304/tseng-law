@@ -2,7 +2,7 @@
 title: "대만인과 결혼한 외국인 배우자의 거류: 거류증 발급부터 이혼·사별 뒤까지"
 seoTitle: "대만인 배우자 거류증(ARC): 발급·연장·이혼·사별 뒤"
 summary: "대만 국민과 결혼한 외국인 배우자가 거류비자와 거류증을 받고, 기간을 연장하고, 배우자가 사망하거나 이혼한 뒤에도 대만에 머물 수 있는지를 입출국및이민법 조문과 이민서 안내로 정리했습니다."
-lastmod: "2026-09-29"
+lastmod: "2026-10-06"
 date_display: "2026년 9월 29일"
 read_time: "6분 분량"
 categories:
@@ -66,9 +66,9 @@ author: "legal-ai-assistant"
 
 이혼 절차와 자녀 문제는 [대만인 배우자와 협의이혼](/ko/columns/taiwanese-spouse-divorce-agreement-registration), [한국에 있고 배우자는 대만에 있다면](/ko/columns/taiwanese-spouse-divorce-from-abroad), [이혼 후 아이와 한국에 돌아가려면](/ko/columns/taiwanese-spouse-divorce-cross-border-parenting)에서 다뤘습니다.
 
-## 대륙 출신 배우자도 같은 규정을 따르나요?
+## 대륙 호적 배우자도 같은 규정을 따르나요?
 
-아닙니다. 중국 대륙 출신 배우자는 입출국및이민법이 아니라 [대만지역과 대륙지역 인민관계조례 제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=Q0010001&flno=17)(臺灣地區與大陸地區人民關係條例)를 따릅니다. 단계와 기간이 다르므로 이 글의 내용을 그대로 적용하지 말고 해당 조례와 이민서 안내를 따로 확인하세요.
+아닙니다. 중국 대륙에 호적이 있는 배우자(대륙지역 인민)는 입출국및이민법이 아니라 [대만지역과 대륙지역 인민관계조례 제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=Q0010001&flno=17)(臺灣地區與大陸地區人民關係條例)를 따릅니다. 단계와 기간이 다르므로 이 글의 내용을 그대로 적용하지 말고 해당 조례와 이민서 안내를 따로 확인하세요. 대륙에서 태어났더라도 대륙 호적이 없고 외국 국적을 가진 사람은 이 글의 절차를 따르되, [이민서 안내](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)에 따라 대륙 호적·여권이 없다는 증빙을 추가로 요구받습니다.
 
 ## 영주권은 언제부터 생각할 수 있나요?
 

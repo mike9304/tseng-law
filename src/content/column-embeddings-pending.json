@@ -1137,6 +1137,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-apartment-management-committee-fees-rules"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-copyright-employee-freelancer-work-ownership"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-copyright-employee-freelancer-work-ownership"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-copyright-employee-freelancer-work-ownership"
     }
   ]
 }

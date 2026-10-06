@@ -441,6 +441,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
+    '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
   ],
   en: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -448,6 +449,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
+    '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
   ],
   ja: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -455,6 +457,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
+    '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
   ],
   'zh-hant': [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -462,6 +465,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
+    '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
   ],
 } as const;
 

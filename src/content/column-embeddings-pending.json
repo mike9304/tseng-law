@@ -1149,6 +1149,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-copyright-employee-freelancer-work-ownership"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-vat-foreign-digital-services-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-vat-foreign-digital-services-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-vat-foreign-digital-services-registration"
     }
   ]
 }

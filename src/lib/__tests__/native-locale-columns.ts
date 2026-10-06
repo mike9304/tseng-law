@@ -442,6 +442,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
+    '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
   ],
   en: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -450,6 +451,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
+    '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
   ],
   ja: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -458,6 +460,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
+    '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
   ],
   'zh-hant': [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -466,6 +469,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
     '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
+    '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
   ],
 } as const;
 

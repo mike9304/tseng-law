@@ -42,6 +42,7 @@ import {
 import CinematicOpening from '../CinematicOpening';
 import CinematicRouteShell, {
   CINEMATIC_CHROME_ATTRIBUTE,
+  CINEMATIC_OPENING_ENABLED,
   isCinematicHomepagePath,
   visibleCinematicPathname,
 } from '../CinematicRouteShell';
@@ -206,11 +207,14 @@ describe('cinematic opening client-route gate', () => {
     expect(html).toContain('PAGE_CONTENT');
   });
 
-  it.each(['/vi', '/vi/'] as const)('plays the opening on the guidance homepage pathname %s', (pathname) => {
+  // Since 2026-10-06 no home plays the gate (CINEMATIC_OPENING_ENABLED), the guidance languages included.
+  it.each(['/vi', '/vi/'] as const)('opens the guidance homepage %s on its own hero', (pathname) => {
+    expect(CINEMATIC_OPENING_ENABLED).toBe(false);
     expect(isCinematicHomepagePath(pathname, 'vi')).toBe(true);
     const html = renderRouteShell(pathname, 'vi');
-    expect(html).toContain('data-cinematic-home="true"');
-    expect(html).toContain('class="cinematic-opening"');
+    expect(html).not.toContain('data-cinematic-home="true"');
+    expect(html).not.toContain('class="cinematic-opening"');
+    expect(html).toContain('PAGE_CONTENT');
   });
 
   it.each([
@@ -230,7 +234,7 @@ describe('cinematic opening client-route gate', () => {
     expect(html).not.toContain('class="cinematic-opening"');
   });
 
-  it('shows the opening for a guidance rewrite and for the public homepage path', () => {
+  it('maps a guidance rewrite to the public homepage path and renders it like the browser path, without the gate', () => {
     for (const locale of ['vi', 'de', 'ar'] as const) {
       expect(visibleCinematicPathname(`/${locale}/__public-guidance`)).toBe(`/${locale}`);
       expect(visibleCinematicPathname(`/${locale}`)).toBe(`/${locale}`);
@@ -249,8 +253,8 @@ describe('cinematic opening client-route gate', () => {
           <div>PAGE_CONTENT</div>
         </CinematicRouteShell>,
       );
-      expect(rewritten, `${locale} rewrite`).toContain('data-cinematic-home="true"');
-      expect(rewritten, `${locale} rewrite opening`).toContain('class="cinematic-opening"');
+      expect(rewritten, `${locale} rewrite`).not.toContain('data-cinematic-home="true"');
+      expect(rewritten, `${locale} rewrite opening`).not.toContain('class="cinematic-opening"');
 
       navigationState.pathname = `/${locale}`;
       const browser = renderToStaticMarkup(
@@ -263,7 +267,7 @@ describe('cinematic opening client-route gate', () => {
           <div>PAGE_CONTENT</div>
         </CinematicRouteShell>,
       );
-      expect(browser, `${locale} browser`).toContain('class="cinematic-opening"');
+      expect(browser, `${locale} browser`).not.toContain('class="cinematic-opening"');
       expect(rewritten, `${locale} server rewrite matches the browser homepage`).toBe(browser);
 
       navigationState.pathname = `/${locale}/__public-guidance/services`;
@@ -281,14 +285,13 @@ describe('cinematic opening client-route gate', () => {
     }
   });
 
-  it('opens the ko, zh-hant, ja and en homes on their own heroes (no gate); the guidance languages keep the opening', () => {
-    for (const locale of ['ko', 'zh-hant', 'ja', 'en'] as const) {
+  it('opens every home on its own hero (no gate), the guidance languages included', () => {
+    for (const locale of ['ko', 'zh-hant', 'ja', 'en', 'vi'] as const) {
       const html = renderRouteShell(`/${locale}`, locale);
       expect(html, locale).not.toContain('data-cinematic-home="true"');
       expect(html, locale).not.toContain('class="cinematic-opening"');
       expect(html, locale).toContain('PAGE_CONTENT');
     }
-    expect(renderRouteShell('/vi', 'vi')).toContain('class="cinematic-opening"');
   });
 
   it('re-evaluates home → subpage → home instead of caching the first layout path', () => {
@@ -296,15 +299,15 @@ describe('cinematic opening client-route gate', () => {
     const subpage = renderRouteShell('/vi/services');
     const homeAfter = renderRouteShell('/vi');
 
-    expect(homeBefore).toContain('class="cinematic-opening"');
-    expect(subpage).not.toContain('class="cinematic-opening"');
-    expect(homeAfter).toContain('class="cinematic-opening"');
+    // The gate is off for every locale; the pathname is still read per render (home and subpage alike).
+    for (const html of [homeBefore, subpage, homeAfter]) expect(html).not.toContain('class="cinematic-opening"');
+    expect(homeBefore).toBe(homeAfter);
   });
 
-  it('defers the event popup during the opening and mounts it normally off-home', () => {
-    expect(renderRouteShell('/vi')).not.toContain('EVENT_POPUP');
+  it('mounts the event popup on every route now that no home plays the opening', () => {
+    // No home plays the opening any more, so the popup mounts straight away everywhere.
+    expect(renderRouteShell('/vi')).toContain('EVENT_POPUP');
     expect(renderRouteShell('/vi/services')).toContain('EVENT_POPUP');
-    // Homes without the opening mount the popup straight away.
     expect(renderRouteShell('/ko', 'ko')).toContain('EVENT_POPUP');
   });
 });
@@ -1107,6 +1110,8 @@ describe('WI-11 cinematic opening skip control and accessibility tree', () => {
 
   it('never removes the header, skip-link host or main from the accessibility tree', () => {
     const html = renderRouteShell('/vi');
+    // No route plays the opening since 2026-10-06; its own markup is checked standalone so a return stays accessible.
+    const opening = renderToStaticMarkup(<CinematicOpening locale="vi" />);
     const openingSource = readFileSync(
       path.join(process.cwd(), 'src/components/CinematicOpening.tsx'),
       'utf8',
@@ -1117,8 +1122,7 @@ describe('WI-11 cinematic opening skip control and accessibility tree', () => {
     );
     const headerHost = html.match(/<div[^>]*data-cinematic-chrome="header"[^>]*>/)?.[0];
     const main = html.match(/<main[^>]*>/)?.[0];
-    const section = html.match(/<section[^>]*>/)?.[0];
-    const sentinel = html.match(/<div[^>]*id="cinematic-home-content"[^>]*>/)?.[0];
+    const section = opening.match(/<section[^>]*>/)?.[0];
 
     expect(headerHost).toBeDefined();
     expect(headerHost).not.toContain('aria-hidden');
@@ -1127,8 +1131,8 @@ describe('WI-11 cinematic opening skip control and accessibility tree', () => {
     expect(section).not.toContain('aria-hidden');
     expect(section).not.toMatch(/\binert\b/);
     expect(section).toContain('aria-label=');
-    expect(sentinel).toContain('tabindex="-1"');
-    expect(sentinel).not.toContain('aria-hidden');
+    expect(html).not.toContain('id="cinematic-home-content"');
+    expect(shellSource).toMatch(/id="cinematic-home-content"[\s\S]{0,120}tabIndex=\{-1\}/);
     expect(openingSource).not.toMatch(/\binert\b/);
     expect(openingSource).not.toContain("setAttribute('aria-hidden'");
     expect(openingSource).not.toMatch(/\.ariaHidden\s*=/);

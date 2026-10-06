@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import {
   PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT,
   PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT,
+  isGuidanceLocale4,
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import CinematicOpening from '@/components/CinematicOpening';
@@ -17,9 +18,14 @@ export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
  * carries the moving dawn cloud sea, the headline, the email action and search, so a separate gate
  * in front of it only delays the content. ja and en follow the same direction (their homes carry
  * their own first-screen designs), and ko since 2026-10-06 (KoHomeBody shares the zh-hant first screen).
- * The guidance languages (vi/id/th/fil) keep the opening.
+ * The guidance languages follow on the same day (operator: 「SEO에 오프닝 동영상이 안좋게 영향 끼친다던대 …
+ * 대만어 페이지처럼」): their hero — with its own Taiwan footage — is the first screen, so no locale plays the gate.
+ * The component stays for a deliberate return.
  */
 export const CINEMATIC_OPENING_SKIPPED_LOCALES: readonly PublicLocale8[] = ['zh-hant', 'ja', 'en', 'ko'];
+
+/** No public home plays the full-screen opening since 2026-10-06 (guidance languages included). */
+export const CINEMATIC_OPENING_ENABLED = false;
 
 export function isCinematicHomepagePath(
   pathname: string | null,
@@ -63,16 +69,18 @@ export default function CinematicRouteShell({
   children: ReactNode;
 }) {
   const pathname = visibleCinematicPathname(usePathname());
-  // WO-O22 B: CINEMATIC_OPENING_COPY now covers all eight public languages, so
-  // vi/id/th/fil play the same opening as ko/zh-hant/en/ja instead of dropping
-  // straight onto the hero.
-  const showCinematicOpening = isCinematicHomepagePath(pathname, locale)
+  // WO-O22 B gave every public language opening copy; since 2026-10-06 no home plays the gate
+  // (CINEMATIC_OPENING_ENABLED), so every locale lands on its own hero.
+  const showCinematicOpening = CINEMATIC_OPENING_ENABLED
+    && isCinematicHomepagePath(pathname, locale)
     && !CINEMATIC_OPENING_SKIPPED_LOCALES.includes(locale);
 
   return (
     <div
       className="site"
       data-locale={locale}
+      // The 45 guidance languages: their pages share one sans display layer in globals.css (2026-10-06).
+      data-guidance-locale={isGuidanceLocale4(locale) ? '' : undefined}
       data-theme="parity"
       data-cinematic-home={showCinematicOpening ? 'true' : undefined}
       data-cinematic-intro-visible={showCinematicOpening ? 'true' : undefined}

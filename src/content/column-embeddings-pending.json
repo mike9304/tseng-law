@@ -1077,6 +1077,18 @@
     {
       "locale": "zh-hant",
       "slug": "korean-national-dies-in-taiwan-inheritance-estate-tax"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-stalking-harassment-act-written-warning-protection-order"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-stalking-harassment-act-written-warning-protection-order"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-stalking-harassment-act-written-warning-protection-order"
     }
   ]
 }

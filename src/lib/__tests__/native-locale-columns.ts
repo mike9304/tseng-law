@@ -433,7 +433,23 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
   ],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-05, in filename order. */
+/** Native audience columns published 2026-10-06. */
+export const COUNTRY_COLUMN_FILES_20261006 = {
+  ko: [
+    '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+  ],
+  en: [
+    '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+  ],
+  ja: [
+    '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+  ],
+  'zh-hant': [
+    '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-06, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -447,6 +463,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((ROAD_RAGE_COLUMN_FILES_20261003 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261004 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -462,11 +479,13 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-05, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-06, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261006: readonly string[] =
+    (COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261005: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const current: readonly string[] =
@@ -485,17 +504,20 @@ export function archiveLeadSlugsFor(locale: string): string[] {
     ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   // Same calendar day → source (filename) order, matching sortColumnPostsNewestFirst.
+  const day20261006Slugs = [...day20261006].sort().map(slugOf);
   const day20261005Slugs = [...day20261005].sort().map(slugOf);
   const currentSlugs = [...current].sort().map(slugOf);
   const latestSlugs = [...latest].sort().map(slugOf);
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  const head = [...day20261005Slugs, ...currentSlugs, ...latestSlugs, ...newestSlugs, ...newerSlugs];
+  const head = [...day20261006Slugs, ...day20261005Slugs, ...currentSlugs, ...latestSlugs, ...newestSlugs, ...newerSlugs];
   return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-05). */
+/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-06). */
 export function archiveLeadPublicationDate(slug: string): string {
+  const day20261006 = Object.values(COUNTRY_COLUMN_FILES_20261006).flat().map(slugOf);
+  if (day20261006.includes(slug)) return '2026-10-06';
   const day20261005 = Object.values(COUNTRY_COLUMN_FILES_20261005).flat().map(slugOf);
   if (day20261005.includes(slug)) return '2026-10-05';
   const current = Object.values(COUNTRY_COLUMN_FILES_20261004).flat().map(slugOf);
@@ -546,6 +568,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(ROAD_RAGE_COLUMN_FILES_20261003),
     ...Object.values(COUNTRY_COLUMN_FILES_20261004),
     ...Object.values(COUNTRY_COLUMN_FILES_20261005),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261006),
   ].flat().map(slugOf),
 );
 

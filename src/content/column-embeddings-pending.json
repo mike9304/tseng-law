@@ -1185,6 +1185,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-dui-reach-beyond-drivers-seat"
+    },
+    {
+      "locale": "ko",
+      "slug": "taken-taiwan-police-station-first-24-hours-not-release"
+    },
+    {
+      "locale": "en",
+      "slug": "taken-taiwan-police-station-first-24-hours-not-release"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taken-taiwan-police-station-first-24-hours-not-release"
     }
   ]
 }

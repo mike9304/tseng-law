@@ -27688,6 +27688,68 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
 }
 
 /* =====================================================================================================
+   /tax-accounting board on the Apple-system locales (zh-hant, ko; 2026-10-06). The board opened today with the
+   shared practice-page hero (a dark green gradient band, serif title, a ruled section label); on the zh-hant and ko
+   sites every other page now has the light Apple header. CSS only, scoped to the board's own data attribute, so the
+   board's markup and the en/ja boards are untouched.
+   ===================================================================================================== */
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-hero {
+  background: #fff !important;
+  color: #1d1d1f !important;
+  padding: clamp(56px, 7vw, 104px) 0 clamp(36px, 4.5vw, 64px) !important;
+  border-bottom: 1px solid #e3e3e8;
+}
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-hero-inner {
+  /* the board's content container width, so the title starts on the same edge as the column list */
+  max-width: 1200px !important;
+}
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-back-link {
+  color: #6e6e73 !important;
+  opacity: 1 !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-hero-title {
+  max-width: 16em;
+  margin-top: 14px;
+  color: #1d1d1f !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  font-size: clamp(36px, 5vw, 72px) !important;
+  line-height: 1.16 !important;
+  text-wrap: balance;
+}
+.site[data-locale='ko'] [data-tax-accounting-board] .svc-hero-title { letter-spacing: -0.035em; }
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-hero-subtitle {
+  max-width: 40em;
+  margin-top: 20px;
+  color: #6e6e73 !important;
+  font-size: clamp(17px, 1.5vw, 21px) !important;
+  line-height: 1.7;
+}
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-keypoints-title {
+  padding-left: 0 !important;
+  border-left: none !important;
+  font-size: clamp(26px, 2.6vw, 36px) !important;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+.site[data-locale='ko'] [data-tax-accounting-board] .svc-keypoints-title { letter-spacing: -0.03em; }
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-col-card {
+  border-color: #e3e3e8;
+  border-radius: 22px;
+  overflow: hidden;
+}
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] :is(.button, .svc-sidebar-card a[class*='button']) {
+  border-radius: 999px !important;
+}
+.site:is([data-locale='zh-hant'], [data-locale='ko']) [data-tax-accounting-board] .svc-sidebar-card {
+  border-color: #e3e3e8;
+  border-radius: 22px;
+  background: #f5f5f7;
+}
+
+/* =====================================================================================================
    Guidance languages · Apple-lite home first screen (2026-10-06)
    The 45 guidance languages (vi, id, th, fil, ar, de, …) lose the full-screen opening like ko/zh-hant/en/ja, so
    their own hero becomes the first screen. It takes the language of the ko/zh-hant first screen without their

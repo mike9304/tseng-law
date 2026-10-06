@@ -64,7 +64,9 @@ export default function TaxAccountingBoard({
   const mailto = getConsultationPublicMailto(locale);
 
   return (
-    <main className="tax-accounting-board" data-tax-accounting-board={locale}>
+    // A div, not a second <main>: the locale layout already provides <main id="main">, and a nested main doubled
+    // the header offset (an empty 135px band above the hero) and the main landmark (2026-10-06).
+    <div className="tax-accounting-board" data-tax-accounting-board={locale}>
       <section className="svc-hero" data-tone="dark">
         <div className="container svc-hero-inner">
           <p className="svc-back-link" style={{ opacity: 0.8 }}>
@@ -117,6 +119,6 @@ export default function TaxAccountingBoard({
           </aside>
         </div>
       </article>
-    </main>
+    </div>
   );
 }

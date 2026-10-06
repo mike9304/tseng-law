@@ -1317,6 +1317,30 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-representative-office-tax-what-it-may-do"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-branch-tax-head-office-expense-allocation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-branch-tax-head-office-expense-allocation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-branch-tax-head-office-expense-allocation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-industrial-innovation-act-rd-investment-tax-credits"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-industrial-innovation-act-rd-investment-tax-credits"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-industrial-innovation-act-rd-investment-tax-credits"
     }
   ]
 }

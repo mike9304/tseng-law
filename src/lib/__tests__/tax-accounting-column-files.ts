@@ -11,6 +11,8 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '323-taiwan-branch-tax-head-office-expense-allocation.md',
+    '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
   ja: [
@@ -20,6 +22,8 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '323-taiwan-branch-tax-head-office-expense-allocation.md',
+    '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
   en: [
@@ -30,6 +34,8 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '323-taiwan-branch-tax-head-office-expense-allocation.md',
+    '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
   'zh-hant': [
@@ -40,6 +46,8 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '323-taiwan-branch-tax-head-office-expense-allocation.md',
+    '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
 } as const;

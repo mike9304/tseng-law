@@ -2,7 +2,7 @@
 title: "Honked at from behind, a driver reversed into the other car three times and called it self-defence"
 seoTitle: "Reversed Into a Honking Car: No Self-Defence"
 summary: "Honked at on a New Taipei expressway, a driver reversed into the car behind three times. Courts rejected self-defence: five months for endangering road traffic."
-lastmod: "2026-10-03"
+lastmod: "2026-10-06"
 published: "2026-10-03"
 date_display: "October 3, 2026"
 read_time: "7 min read"
@@ -52,9 +52,7 @@ That is the defendant's version, not a finding. Neither judgment makes any findi
 
 Car B's driver gave police and prosecutors a different account. Car A had changed lanes and nearly caused a collision, so car B's driver flashed the high beams. Car A then got in front, repeatedly stopped suddenly, crowded car B and reversed into it, and blocked car B on a ramp with only one lane, damaging the bumper and the bonnet. Car B's driver also said they had called the police straight away when the crowding began ([New Taipei District Court, 113年度訴字第513號, 25 March 2025](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCDM%2C113%2C%E8%A8%B4%2C513%2C20250325%2C1)).
 
-Car A's driver had filed a criminal complaint of their own, accusing car B's driver of obstructing traffic safety, coercion and making threats. New Taipei prosecutors decided not to prosecute, finding the evidence insufficient ([New Taipei District Court, 113年度訴字第513號, 25 March 2025](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCDM%2C113%2C%E8%A8%B4%2C513%2C20250325%2C1)).
-
-So the car behind honked and flashed, and the driver in front says they felt chased. If you were deciding the case, would that make stopping in the lane and backing into the car behind self-defence?
+Car A's driver had filed a criminal complaint of their own, accusing car B's driver of obstructing traffic safety, coercion and making threats. New Taipei prosecutors decided not to prosecute, finding the evidence insufficient ([New Taipei District Court, 113年度訴字第513號, 25 March 2025](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=PCDM%2C113%2C%E8%A8%B4%2C513%2C20250325%2C1)). So the car behind honked and flashed, and the driver in front says they felt chased.
 
 ## A warning, not an attack
 
@@ -99,7 +97,7 @@ The defendant appealed, asking to be acquitted. The Taiwan High Court adopted th
 
 The courts found no evidence of a present unlawful infringement on this record. Car A was in front, and what the footage shows car B doing is a horn of about two seconds, then a flash of the high beams of about two seconds and one more honk. Neither court held that honking or flashing is always lawful, or that the driver in front can never rely on self-defence. A case with different footage would be judged on that footage.
 
-These are criminal judgments. They award no damages for car B, and the amount on the repair estimate is not stated. Administrative penalties run on a separate track. As background only, Article 43(1)(iv) of the [Road Traffic Management and Penalty Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43) covers sudden slowing, braking or stopping in the lane without an emergency, with a fine of NT$6,000 to NT$36,000 and an on-the-spot driving ban, and paragraph 4 adds a six-month plate suspension. Neither judgment mentions it, and the texts do not say whether any such penalty was imposed.
+These are criminal judgments. They award no damages for car B, and the amount on the repair estimate is not stated. Administrative penalties run on a separate track. As background only, Article 43(1)(iv) of the [Road Traffic Management and Penalty Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43) covers sudden slowing, braking or stopping in the lane without an emergency, with a current fine (in force since 30 June 2023) of NT$6,000 to NT$36,000 and an on-the-spot driving ban, and paragraph 4 adds a six-month plate suspension. Neither judgment mentions it, and the texts do not say whether any such penalty was imposed. At the time of this incident in January 2023, the [maximum was NT$24,000](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=K0040012&lnndate=20210120&lser=001).
 
 The High Court judgment ends with a notice that an appeal may be filed within 20 days of service. The texts do not show whether anyone appealed or whether the judgment is final.
 
@@ -126,5 +124,6 @@ Statutes
 - [中華民國刑法 第57條 (Criminal Code, Article 57)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=57)
 - [道路交通安全規則 第94條 (Road Traffic Safety Rules, Article 94)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94)
 - [道路交通管理處罰條例 第43條 (Road Traffic Management and Penalty Act, Article 43)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43) (background only; not applied in either judgment)
+- [道路交通管理處罰條例 第43條 (Article 43, text promulgated 20 January 2021 and in force from 1 June 2021, the version in force at the time of the incident)](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=K0040012&lnndate=20210120&lser=001)
 
 This column was written from public court judgments and statutes. Sources checked on 3 October 2026.

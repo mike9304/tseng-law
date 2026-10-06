@@ -3,7 +3,7 @@ title: "When a Korean National Dies in Taiwan: Korean Law Picks the Heirs, Taiwa
 seoTitle: "Korean Dies in Taiwan: Heirs and Estate Tax"
 summary: "When a Korean national living in Taiwan dies there, Korean law generally decides the heirs, while Taiwan taxes only Taiwan assets and limits the deductions."
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-06"
 date_display: "October 5, 2026"
 read_time: "7 min read"
 categories:
@@ -61,7 +61,7 @@ The exemption comes from paragraph 2 of [Article 18](https://law.moj.gov.tw/LawC
 
 ## Six months, and the return goes to Taipei
 
-The heirs and legatees are the taxpayers ([Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)). Under the current [Article 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23), as amended on September 11, 2026, they must file within six months counted from the day after the death. For good reason they may apply in writing before the deadline for an extension, generally limited to three months ([Article 26](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)). Missing the deadline brings a fine of up to twice the tax assessed ([Article 44](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)).
+The heirs and legatees are the taxpayers ([Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)), except that the tax attributable to a gift added back under Article 15 is owed by the donee under Article 6(3). Under the current [Article 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23), as amended on September 11, 2026, they must file within six months counted from the day after the death. For good reason they may apply in writing before the deadline for an extension, generally limited to three months ([Article 26](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)). Missing the deadline brings a fine of up to twice the tax assessed ([Article 44](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)).
 
 Where he lived in Taiwan does not decide where to file. Paragraph 2 of Article 23 sends the return for a non-ROC decedent to the tax authority at the seat of the central government. The Ministry of Finance tax portal [names that office](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3) as the National Taxation Bureau of Taipei, at its head office or one of its branches or offices. The portal's [document list](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB) includes proof of death, an identity document for each heir (an ID card, a household register, or a copy of a passport or Taiwan resident certificate), a chart of heirs (繼承系統表), deposit balance certificates as of the date of death and balance statements for listed shares. Certificates issued abroad must be authenticated by the Taiwan mission there and come with a Chinese translation.
 

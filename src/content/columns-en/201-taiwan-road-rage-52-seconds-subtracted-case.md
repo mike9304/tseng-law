@@ -2,7 +2,7 @@
 title: "The 52 seconds a Taiwan court subtracted from a road-rage case"
 seoTitle: "Zhonghe road rage: court upholds acquittal"
 summary: "A driver chased a scooter, blocked it twice and swore at its rider in Zhonghe. The High Court upheld the acquittal on coercion and public insult charges."
-lastmod: "2026-10-04"
+lastmod: "2026-10-06"
 published: "2026-10-04"
 date_display: "October 4, 2026"
 read_time: "7 min read"
@@ -31,8 +31,6 @@ The first court inspected intersection CCTV and the scooter's dashcam footage. T
 The dashcam supplied the signal timing. Its display showed green at 18:24:54–18:25:24, with continued honking as the car overtook and stopped ahead. At 18:25:25–18:25:39, the signal was red and the driver opened the door, swore and closed it. At 18:26:17, the light turned green; the car remained ahead and to the right. The judgment's general account says the driver opened a window; its footage inspection says a door. It does not resolve that difference. [New Taipei District Court, 114年度易字第637號, July 31, 2025, attached judgment](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1).
 
 Measured on the CCTV, the obstruction lasted about 1 minute 54 seconds, from roughly 18:58:47 to 19:00:41. The red light lasted 52 seconds on the dashcam. [New Taipei District Court, 114年度易字第637號, July 31, 2025, attached judgment](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1).
-
-If a driver blocks your route twice but you can turn back, has that driver criminally interfered with your freedom to leave?
 
 ## The argument over room to escape
 

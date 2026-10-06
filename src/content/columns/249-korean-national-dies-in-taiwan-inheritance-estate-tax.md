@@ -3,7 +3,7 @@ title: "대만에서 살다 세상을 떠난 한국인의 상속: 상속인은 �
 seoTitle: "대만 거주 한국인 사망 시 상속 준거법과 대만 유산세"
 summary: "대만에 살던 한국 국적자가 대만에서 사망하면 상속인과 상속분은 원칙적으로 한국법이 정하고, 대만 유산세는 대만에 있는 재산에만 붙습니다. 대만 국적의 배우자나 자녀가 있으면 제58조 단서 때문에 대만 민법으로도 몫을 계산해 두어야 하고, 유산세에서는 제17조 제2항에 따라 배우자·자녀 공제를 받지 못합니다. 신고는 타이베이 국세국에 하며, 한국에서 발급한 서류는 대만 재외공관의 인증을 받아야 합니다."
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-06"
 date_display: "2026년 10월 5일"
 read_time: "7분 분량"
 categories:
@@ -55,7 +55,7 @@ author: "legal-ai-assistant"
 
 ## 6개월 안에 타이베이 국세국에 신고합니다
 
-납세의무자는 상속인과 수유자입니다([제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)). 현행 [제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)(2026년 9월 11일 개정 공포)에 따라 사망한 다음 날부터 6개월 안에 신고해야 합니다. 정당한 사유로 기한을 맞출 수 없으면 기한이 끝나기 전에 서면으로 연장을 신청하고, 연장은 원칙적으로 3개월까지입니다([제26조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)). 기한 안에 신고하지 않으면 결정된 납부세액의 2배 이하 과태료(罰鍰)가 붙습니다([제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)).
+납세의무자는 상속인과 수유자입니다([제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)). 다만 제15조에 따라 유산에 합산되는 사망 전 2년 내 증여재산에 대응하는 세액은 제6조 제3항에 따라 수증자가 냅니다. 현행 [제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)(2026년 9월 11일 개정 공포)에 따라 사망한 다음 날부터 6개월 안에 신고해야 합니다. 정당한 사유로 기한을 맞출 수 없으면 기한이 끝나기 전에 서면으로 연장을 신청하고, 연장은 원칙적으로 3개월까지입니다([제26조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)). 기한 안에 신고하지 않으면 결정된 납부세액의 2배 이하 과태료(罰鍰)가 붙습니다([제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)).
 
 신고처는 고인이 대만 어느 도시에 살았는지와 관계없습니다. 제23조 제2항은 중화민국 국민이 아닌 사람의 유산세를 중앙정부 소재지의 관할 세무기관에 신고하게 하고, 재정부 세무포털(稅務入口網)의 [신고 장소 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)는 이를 타이베이 국세국(臺北國稅局) 총국이나 소속 분국·세무서(稽徵所)로 적고 있습니다. 같은 사이트의 [첨부서류 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB)에는 사망을 증명하는 자료, 상속인 각자의 신분 자료(신분증, 호구명부, 여권 또는 대만 거류증 사본 가운데 하나), 상속계통표(繼承系統表), 사망일 기준 예금 잔액증명서, 상장주식 잔고증명이 나옵니다. 외국에서 발급한 증명서류는 현지 대만 재외공관의 인증을 받고 중국어 번역본을 붙여야 한다는 항목도 있습니다.
 

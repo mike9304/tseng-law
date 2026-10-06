@@ -3,7 +3,7 @@ title: "韓國籍家人在台灣過世：繼承看韓國法，遺產稅只課台
 seoTitle: "韓國人在台過世的繼承準據法與遺產稅"
 summary: "長年住在台灣的韓國籍家人在台過世，誰是繼承人、應繼分多少，原則上依韓國法；台灣遺產稅只就境內財產課徵，卻不能適用配偶、子女等扣除額（遺產及贈與稅法第17條第2項）。家裡有台灣籍的配偶或子女時，在台灣的遺產還要依涉外民事法律適用法第58條但書，另依台灣民法算一次。遺產稅應於死亡之次日起6個月內向臺北國稅局申報，韓國出具的文件須經駐外館處驗證。"
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-06"
 date_display: "2026年10月5日"
 read_time: "約7分鐘閱讀"
 categories:
@@ -61,7 +61,7 @@ author: "legal-ai-assistant"
 
 ## 住在高雄，也要向臺北國稅局申報
 
-納稅義務人是繼承人及受遺贈人（[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）。依115年9月11日修正公布的現行[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)，應於被繼承人死亡之次日起算6個月內申報。同條第2項規定，非中華民國國民的遺產稅應向中央政府所在地的主管稽徵機關申報，財政部稅務入口網的[申報地點說明](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)指的是臺北國稅局總局或所屬分局、稽徵所。有正當理由不能如期申報，應在期限屆滿前以書面申請延長，原則上以3個月為限（[第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)）；逾期未申報，按核定應納稅額加處2倍以下罰鍰（[第44條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)）。
+納稅義務人是繼承人及受遺贈人（[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）；但依第15條併入遺產的死亡前二年內贈與財產，其對應稅額依第6條第3項由受贈人負擔。依115年9月11日修正公布的現行[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)，應於被繼承人死亡之次日起算6個月內申報。同條第2項規定，非中華民國國民的遺產稅應向中央政府所在地的主管稽徵機關申報，財政部稅務入口網的[申報地點說明](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)指的是臺北國稅局總局或所屬分局、稽徵所。有正當理由不能如期申報，應在期限屆滿前以書面申請延長，原則上以3個月為限（[第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)）；逾期未申報，按核定應納稅額加處2倍以下罰鍰（[第44條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)）。
 
 稅務入口網列出的[應檢附文件](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB)，包括被繼承人的死亡資料、每位繼承人的身分資料（身分證、戶口名簿、護照或在臺居留證影本擇一）、繼承系統表、死亡日的存款餘額證明、上市櫃股票的持股餘額證明；經國外出具的證明文件，應經我國當地駐外機構簽證並檢附中文翻譯。
 

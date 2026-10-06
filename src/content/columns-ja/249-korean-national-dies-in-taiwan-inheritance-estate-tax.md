@@ -3,7 +3,7 @@ title: "韓国籍の人が台湾で亡くなったときの相続：準拠法は
 seoTitle: "台湾在住の韓国籍者の相続：準拠法と台湾の遺産税"
 summary: "台湾で暮らしていた韓国籍の人が台湾で亡くなると、相続人と相続分は原則として韓国法で決まり、台湾の遺産税は台湾にある財産だけにかかります。台湾籍の配偶者や子がいれば、第58条ただし書があるため台湾民法でも相続分を計算しておく必要があります。遺産税では第17条第2項により配偶者や子の控除が使えず、申告先は台北国税局です。韓国で発行された書類には、台湾の在外機関の認証が要ります。"
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-06"
 date_display: "2026年10月5日"
 read_time: "約8分"
 categories:
@@ -63,7 +63,7 @@ author: "legal-ai-assistant"
 
 ## 台中に住んでいても申告先は台北国税局
 
-納税義務者は相続人と受遺者です（[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）。現行の[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)（2026年9月11日改正公布）により、死亡の翌日から6か月以内に申告しなければなりません。同条第2項は、中華民国国民でない人の遺産税を中央政府所在地の税務機関に申告すると定めており、財政部の税務ポータルの[申告先の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)は、これを台北国税局（臺北國稅局）の総局または所属の分局・稽徴所としています。
+納税義務者は相続人と受遺者です（[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）。ただし、第15条により遺産に加算される死亡前2年以内の贈与財産に対応する税額は、第6条第3項により受贈者が納めます。現行の[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)（2026年9月11日改正公布）により、死亡の翌日から6か月以内に申告しなければなりません。同条第2項は、中華民国国民でない人の遺産税を中央政府所在地の税務機関に申告すると定めており、財政部の税務ポータルの[申告先の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)は、これを台北国税局（臺北國稅局）の総局または所属の分局・稽徴所としています。
 
 正当な理由で期限に間に合わないときは、期限が切れる前に書面で延長を申請します。延長は原則3か月までです（[第26条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)）。期限内に申告しなかった場合は、決定された納付税額の2倍以下の過料（罰鍰）が科されます（[第44条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)）。
 

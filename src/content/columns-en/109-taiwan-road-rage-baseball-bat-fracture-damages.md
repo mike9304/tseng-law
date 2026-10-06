@@ -2,7 +2,7 @@
 title: "How a traffic quarrel in Keelung became a bat attack and an NT$2.08 million award"
 seoTitle: "Keelung Bat Attack: 7 Months, NT$2.08M"
 summary: "A Keelung traffic quarrel ended in a baseball-bat assault. Courts imposed seven months for injury and awarded the victim NT$2.08 million in civil damages."
-lastmod: "2026-10-03"
+lastmod: "2026-10-06"
 published: "2026-10-03"
 date_display: "October 3, 2026"
 read_time: "7 min read"
@@ -48,7 +48,7 @@ The criminal judgment gave the victim no money. For that, the victim filed an at
 
 The victim said the kneecap fracture required a brace, so walking normally was impossible and a month of care was needed; recovery required three months off work, then three months of rehabilitation working four days a week, a loss of about 20%; and the knee might be permanently damaged, recovering "至多僅得恢復至80%" (at most to 80%). The claim came to NT$4,824,227.
 
-Nobody argued against a single figure. If you were the judge, would you have awarded all of it?
+Nobody argued against a single figure.
 
 | Item (NT$) | Claimed | Awarded |
 |---|---:|---:|

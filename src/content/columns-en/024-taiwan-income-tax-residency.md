@@ -2,7 +2,7 @@
 title: "Taiwan Income Tax Residence When You Arrive or Leave Midyear"
 seoTitle: "Taiwan Tax Residence: Arrival and Departure"
 summary: "A move in or out of Taiwan can change what income you report. Check domicile, the tax-year day count, where you worked, who paid you, and departure date."
-lastmod: "2026-09-29"
+lastmod: "2026-10-06"
 date_display: "September 29, 2026"
 read_time: "6 min read"
 categories:
@@ -46,7 +46,7 @@ Both conditions matter. A Taiwan payer does not become an offshore employer beca
 
 ## How does a resident file, and what if I depart?
 
-For the ordinary annual route, [Article 71](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71) calls for a return for the preceding year during May 1–31. It also allows a resident below the applicable exemption and standard-deduction total to skip a return, with exceptions including a claim for a withholding refund. Check the official current-year figures rather than carrying an old amount forward. The fact that an employer withheld tax does not, by itself, settle whether you need a resident return.
+For the ordinary annual route, [Article 71](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71) calls for a return for the preceding year during May 1–31. It also allows a resident whose total annual consolidated income does not exceed that year’s exemption and standard-deduction total to skip a return, with exceptions including a claim for a withholding refund. Check the official current-year figures rather than carrying an old amount forward. The fact that an employer withheld tax does not, by itself, settle whether you need a resident return.
 
 Departure has a separate rule. Under [Article 71-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71-1), a resident who ends a Taiwan domicile or residence and leaves during the year files for that year's income before leaving, subject to the article's resident-spouse exception. The [Taipei bureau's filing FAQ](https://www.ntbt.gov.tw/singlehtml/0868f69a0e16490f90558979b32c8e83?cntId=16423f6ed5794e7984a79f89d4babbf0) likewise directs a foreign resident departing midyear to deal with that year's return before departure. A short trip abroad is not automatically the same as ending a Taiwan domicile or residence; give the tax office your actual plans.
 

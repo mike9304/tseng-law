@@ -287,6 +287,8 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '251': '2026-10-06',
   // cols-20261006-C3
   '252': '2026-10-06',
+  // cols-20261006-C4
+  '253': '2026-10-06',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

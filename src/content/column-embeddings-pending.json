@@ -1113,6 +1113,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-workplace-sexual-harassment-employer-obligations"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-maternity-paternity-parental-leave-2026"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-maternity-paternity-parental-leave-2026"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-maternity-paternity-parental-leave-2026"
     }
   ]
 }

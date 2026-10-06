@@ -54,7 +54,7 @@ const headings = [
   "6. 未成年後見人の指定と裁判所の関与",
   "7. 未成年者の相続財産の保護",
   "8. 渉外家族の準拠法と手続",
-  "9. 実務準備チェックリスト",
+  "9. 資料収集と手続の順序",
   "10. 公式資料",
   "11. 関連サービス",
 ];
@@ -75,27 +75,27 @@ const internalLinks = [
 ];
 const checklistStarts = [
   "1. 死亡診断書と死亡届に関する資料、家族関係と台湾の戸籍資料、婚姻・離婚・養子縁組の記録、既存の裁判所の判断を確認します。",
-  "2. 不動産、預金、投資資産、事業持分と動産、債権を調査し、融資、保証、税金および契約上の債務も併せて整理します。",
-  "3. 遺言の原本と作成方式、遺言能力、証人または公証の要件、遺言執行者および遺贈の内容を確認します。",
+  "2. 不動産、預金、投資資産、事業持分、動産、債権を調査し、融資、保証、税金、契約上の債務も併せて整理します。",
+  "3. 遺言の原本と作成方式、遺言能力、証人または公証の要件、遺言執行者、遺贈の内容を確認します。",
   "4. 法定相続分と夫婦残余財産差額分配請求権を分けて計算します。",
-  "5. 未成年者に帰属する財産を特定し、法定代理権、父母または後見人による管理の範囲、利益相反および特別代理人の必要性を確認します。",
-  "6. 裁判所における相続放棄・財産目録・後見・特別代理人の手続、税務機関への相続税申告、戸籍上の届出および財産登記の手続を機関ごとに分けます。",
+  "5. 未成年者に帰属する財産を特定し、法定代理権、父母または後見人による管理の範囲、利益相反、特別代理人の必要性を確認します。",
+  "6. 裁判所における相続放棄・財産目録・後見・特別代理人の手続、税務機関への相続税申告、戸籍上の届出、財産登記の手続を機関ごとに分けます。",
 ];
 const exactDeadlineStatement =
-  "台湾財政部税務ポータルの相続案件の申請手続に関する案内は、2026年6月25日に更新されており、財産目録の提出および相続放棄に関する裁判所手続の一般的な3か月の期間と、相続税申告の一般的な6か月の期間を案内しています。ただし、起算点、延長、例外および管轄は事案ごとに確認する必要があり、これを個別の期限計算に用いてはなりません。";
+  "台湾財政部税務ポータルの相続案件の申請手続に関する案内は、2026年6月25日に更新されています。この案内は、財産目録の提出と相続放棄に関する裁判所手続について3か月、相続税申告について6か月という期間を示しています。どちらも一般的な期間です。起算点、延長、例外、管轄は事案ごとに確認が必要で、この案内を個別の期限計算に用いてはなりません。";
 const exactOfficialNote =
-  "公式法令ページでは、条文の改正日と施行日を確認し、英語版は日本語の説明と原文の条文を照合するための補助資料として利用する必要があります。司法院の書式と税務ポータルの案内は、一般的な準備の方向性を示すものですが、個別案件の管轄と提出要件については、受付機関の最新の案内を別途確認しなければなりません。";
+  "公式法令ページでは、条文の改正日と施行日を確認します。英語版は補助資料です。日本語の説明と原文の条文を照合するために使います。司法院の書式と税務ポータルの案内が示すのは一般的な準備の方向性で、個別案件の管轄と提出要件は、受付機関の最新の案内で別途確認しなければなりません。";
 const exactEnding = `---
 
-本稿は、台湾の相続、夫婦財産制、親権および未成年後見制度について一般的に説明するための教育目的の資料であり、個別の相続事件または家事事件に関する法的助言ではありません。相続人の範囲、遺言、財産と債務、夫婦財産制、既存の裁判所の判断および渉外要素により、適用法、手続および結果が異なる場合があります。相続放棄や税務申告などの期限を計算し、または財産を処分する前に、最新の公式資料と個別事情を確認してください。
+本稿は、台湾の相続、夫婦財産制、親権、未成年後見を一般的に説明する教育目的の資料で、個別の相続事件や家事事件に関する法的助言ではありません。相続人の範囲、遺言、財産と債務、夫婦財産制、既存の裁判所の判断、渉外要素によって適用法も手続も結果も異なる場合があるため、相続放棄の3か月や相続税申告の一般的な6か月といった期限を計算する前に、また財産を処分する前に、最新の公式資料と個別事情を確認してください。
 
 曾雋崴弁護士（Wei Tseng）`;
 const expectedFrontmatter = `---
 title: "台湾の相続と親権：遺された家族のための法律ガイド"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
-lastmod: "2026-07-25"
+lastmod: "2026-10-06"
 date_display: "2025年9月13日"
-read_time: "約16分"
+read_time: "約15分"
 categories:
   - "台湾法律情報"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
@@ -111,8 +111,8 @@ faq:
 ---
 `;
 
-function firstParagraphAfter(content: string, heading: string) {
-  return content.split(`${heading}\n\n`)[1]?.split("\n\n")[0];
+function sectionAfter(content: string, heading: string) {
+  return content.split(`${heading}\n\n`)[1]?.split("\n\n## ")[0] ?? "";
 }
 
 function extractPublicText(content: string) {
@@ -144,9 +144,9 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: "2026-07-25",
+      lastmod: "2026-10-06",
       date_display: "2025年9月13日",
-      read_time: "約16分",
+      read_time: "約15分",
       categories: ["台湾法律情報"],
       featured_image: featuredImage,
       faq,
@@ -157,9 +157,9 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     expect(post).toMatchObject({
       slug: "taiwan-inheritance-custody-analysis",
       title,
-      date: "2026-07-25",
+      date: "2026-10-06",
       dateDisplay: "2025年9月13日",
-      readTime: "約16分",
+      readTime: "約15分",
       category: "legal",
       categoryLabel: "台湾法律情報",
       featuredImage:
@@ -190,18 +190,62 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     }
   });
 
-  it("repeats each FAQ answer twice and as its assigned H2 first paragraph", () => {
-    const headingAnswers = [
-      ["## 1. 法定相続人と法定相続分", faq1Answer],
-      ["## 3. 生存配偶者の夫婦残余財産差額分配請求権", faq2Answer],
-      ["## 5. 生存する父又は母の親権上の権利義務", faq3Answer],
-      ["## 7. 未成年者の相続財産の保護", faq4Answer],
+  it("keeps each FAQ answer in the front matter and its legal facts in the assigned H2 section", () => {
+    const headingFacts: [string, string, string[]][] = [
+      [
+        "## 1. 法定相続人と法定相続分",
+        faq1Answer,
+        [
+          "台湾民法第1138条が定めています。",
+          "第1順位は直系卑属です。",
+          "第1144条により、その案件で実際に適用される順位の相続人と共同で相続し",
+          "有効な遺言がなく、関係する相続人は生存配偶者と子2人だけで、相続放棄、相続欠格、代襲相続その他結論を左右する事情もない場合を考えます。3人は通常、3分の1ずつ相続します。",
+          "これは説明のための仮定にすぎません。特定の相続事件について結論を示す趣旨ではありません。",
+        ],
+      ],
+      [
+        "## 3. 生存配偶者の夫婦残余財産差額分配請求権",
+        faq2Answer,
+        [
+          "同じ権利なのでしょうか。同じではありません。",
+          "台湾民法第1030条の1に基づくこの請求権は、法定要件を満たす場合に生存配偶者が別個に主張できる権利で、法定相続分とは区別して計算しなければなりません。",
+          "婚姻中に取得した財産がすべて当然に計算対象になるとは限らず、生存配偶者が相続財産の半分を必ず取得するとも限りません。",
+          "夫婦財産制と、民法が定める算入・除外の範囲を確認します。",
+          "婚姻中に生じた債務も考慮します。",
+          "いずれも資料に基づき、個別に判断します。",
+        ],
+      ],
+      [
+        "## 5. 生存する父又は母の親権上の権利義務",
+        faq3Answer,
+        [
+          "父母の一方が未成年の子に対する権利を行使し義務を負担できないときは、他方がこれを行うのが原則です（台湾民法第1089条）。",
+          "生存する父又は母が親権を保持し、これに反する裁判所の判断がなければ、通常はその人が引き続き親権上の権利を行使し、義務を負担します。",
+          "既存の裁判、親権の制限・停止事由、渉外要素、子の最善の利益などの具体的事情によっては、裁判所の関与が必要になる場合があります。",
+        ],
+      ],
+      [
+        "## 7. 未成年者の相続財産の保護",
+        faq4Answer,
+        [
+          "生存する父又は母は、未成年の子が相続した財産を自由に使えるのでしょうか。使えません。",
+          "台湾民法第1087条と第1088条によれば、未成年者が相続によって取得した財産は子の特有財産で、父母や後見人がその財産の実質的な所有者になるわけではありません。",
+          "管理、使用、収益、法定代理、処分は、いずれも子の利益のために行わなければなりません。",
+          "利益相反や重要な処分については、特別代理人の選任や裁判所の関与が問題になる場合があります。",
+        ],
+      ],
     ];
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? "", heading)).toBe(answer);
-      expect(raw.split(answer)).toHaveLength(3);
+    for (const [heading, answer, facts] of headingFacts) {
+      expect(raw.split(answer)).toHaveLength(2);
+      for (const content of [parsed.content, post?.content ?? ""]) {
+        const section = sectionAfter(content, heading);
+
+        expect(section).not.toBe("");
+        for (const fact of facts) {
+          expect(section).toContain(fact);
+        }
+      }
     }
     expect(raw.match(/3分の1/g)).toHaveLength(2);
   });
@@ -214,14 +258,14 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
 
   it("locks the introduction, intestate order, concurrent spouse, and share limits", () => {
     const requiredPhrases = [
-      "誰が相続人となるのか、どの財産と債務が相続の対象となるのか",
+      "相続人は誰か、どの財産と債務が相続の対象か",
       "法定相続分と夫婦残余財産差額分配請求権、親権と未成年後見、法定代理権と財産の所有権",
-      "直系卑属、父母、兄弟姉妹、祖父母の順",
-      "実際に適用される順位の相続人と共同相続します。",
+      "第1順位は直系卑属です。父母、兄弟姉妹、祖父母がこの順に続きます。",
+      "実際に適用される順位の相続人と共同で相続し",
       "死亡時期、親子関係、養子縁組関係、代襲相続の有無",
       "相続欠格事由があるか、適法な相続放棄があったか",
       "遺産分割協議または裁判手続",
-      "抽象的な法定相続分と特定の財産の最終的な帰属",
+      "抽象的な法定相続分と、特定の財産の最終的な帰属",
     ];
 
     for (const phrase of requiredPhrases) {
@@ -232,12 +276,12 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
 
   it("locks wills, reserved portions, estate identification, and governing law", () => {
     const requiredPhrases = [
-      "有効な遺言は、法定相続とは異なる分配方法を定めることができます。",
-      "遺言の方式、遺言能力、解釈および執行可能性",
+      "有効な遺言は、法定相続と違う分配方法を定められます。",
+      "遺言の方式、遺言能力、解釈、執行可能性",
       "遺留分をはじめとする強行規定による制限",
-      "一部の財産しか記載されていない場合",
-      "被相続人の債務、保証責任、未納税金および葬儀関連費用",
-      "実質的な所有関係、共有名義の持分、第三者の権利および担保設定",
+      "一部の財産しか記載されていない遺言では",
+      "被相続人の債務、保証責任、未納税金、葬儀関連費用",
+      "実質的な所有関係、共有名義の持分、第三者の権利、担保設定",
       "保険金や退職給付",
       "信託契約の構造と受益権",
       "生前贈与や財産移転",
@@ -254,12 +298,12 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     const requiredPhrases = [
       "法定夫婦財産制が終了したとき",
       "夫婦それぞれの婚姻後の財産増加",
-      "発生根拠、相手方および計算対象が異なります。",
+      "発生根拠、相手方、計算対象が異なります。",
       "被相続人に残る財産を相続財産として確定する",
       "相続や贈与によって取得した財産、慰撫金",
       "夫婦が別の財産制を合意していたか",
-      "均等分配の結果が著しく不公平となる場合",
-      "婚姻期間、家事労働と子の養育、経済的貢献、職業上の事情、財産の取得および管理状況",
+      "均等分配の結果が著しく不公平となるときです（第1030条の1）",
+      "婚姻期間、家事労働と子の養育、経済的貢献、職業上の事情、財産の取得と管理の状況",
     ];
 
     for (const phrase of requiredPhrases) {
@@ -270,14 +314,14 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
 
   it("locks inherited-debt limits, misconduct, waiver formalities, and deadlines", () => {
     const requiredPhrases = [
-      "一身専属的な権利義務は除かれます。",
-      "原則として相続によって取得した財産の価額を限度とします。",
-      "相続権を知った時から3か月以内に",
-      "親族の間で受け取らないと述べたり、財産を使用しなかったりするだけ",
-      "積極財産と消極財産を併せて調査",
-      "財産を隠匿し、または財産目録から漏らす行為",
+      "一身専属的な権利義務は除かれます（台湾民法第1148条）。",
+      "原則として、相続によって取得した財産の価額までです。",
+      "台湾民法第1174条により、相続放棄を希望する相続人は、相続権を知った時から3か月以内に",
+      "親族の間で受け取らないと述べただけ、あるいは財産を使用しなかっただけで",
+      "積極財産と消極財産の両方",
+      "財産を隠匿する行為や財産目録から漏らす行為",
       exactDeadlineStatement,
-      "裁判所に提出する相続放棄の書類と税務機関への相続税申告",
+      "相続放棄の書類は裁判所に提出し、相続税は税務機関に申告します。",
     ];
 
     for (const phrase of requiredPhrases) {
@@ -290,12 +334,12 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
   it("locks parental rights, guardianship, appointment, and best-interests rules", () => {
     const requiredPhrases = [
       "未成年の子の保護・教養、居所に関する決定、法定代理、財産管理",
-      "父母個人の利益のためではなく",
+      "父母個人の利益のためには使えません。",
       "親権と相続は、法的に別個の問題です。",
-      "台湾民法第1091条に基づく未成年後見",
-      "父母の一方が死亡したという事実だけで、直ちに未成年後見が開始",
-      "台湾民法第1093条によれば、最後に親権上の権利を行使し義務を負担する父または母",
-      "台湾民法第1094条の法定順位と第1094条の1",
+      "父母双方が親権上の権利を行使し義務を負担できない場合です（台湾民法第1091条）",
+      "父母の一方が死亡したというだけで、直ちに未成年後見が開始するとは断定できません",
+      "第1093条は、最後に親権上の権利を行使し義務を負担する父または母が、遺言で未成年後見人を指定できると定めています。",
+      "第1094条の法定順位と、第1094条の1の裁判所による選任",
       "候補者との関係と養育能力、財産管理の適切性、生活の安定性",
       "身上保護と財産管理の役割",
     ];
@@ -308,13 +352,13 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
 
   it("locks minor ownership, joint management, conflicts, records, and supervision", () => {
     const requiredPhrases = [
-      "特有財産とは、未成年者本人に帰属する財産",
-      "自らの生活費や債務の弁済に使用してはなりません。",
+      "特有財産は未成年者本人の財産です。",
+      "自分の生活費や債務の弁済に使用してはなりません。",
       "処分代金の保管方法と使用計画",
       "台湾民法第1086条の特別代理人制度",
       "誰が子を代理して遺産分割協議や訴訟行為",
       "経済的利益が実際に対立するか",
-      "財産目録の作成、証拠書類の保管、収入と支出の分離、裁判所への報告および監督",
+      "財産目録の作成、証拠書類の保管、収入と支出の分離、裁判所への報告と監督",
     ];
 
     for (const phrase of requiredPhrases) {
@@ -330,7 +374,7 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
       "国際裁判管轄",
       "外国裁判の承認と執行",
       "アポスティーユまたは領事確認と翻訳文",
-      "子が他国に常居所を有する場合",
+      "子が他国に常居所を有するなら",
       "国外金融口座の届出、不動産移転税",
     ];
 
@@ -343,7 +387,7 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
   it("uses exactly six source-aligned checklist items with all safeguards", () => {
     const checklistSection =
       parsed.content
-        .split("## 9. 実務準備チェックリスト\n\n")[1]
+        .split("## 9. 資料収集と手続の順序\n\n")[1]
         ?.split("\n\n## 10. 公式資料")[0] ?? "";
     const items = checklistSection.match(/^\d+\. .+$/gm) ?? [];
 
@@ -356,11 +400,11 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     for (const phrase of [
       "死亡診断書と死亡届",
       "婚姻・離婚・養子縁組",
-      "認証、翻訳および氏名表記",
+      "認証、翻訳、氏名表記の一致",
       "名義と実質的な所有関係",
-      "遺言執行者および遺贈",
-      "評価基準日および証拠書類",
-      "補正の可否および延長",
+      "遺言執行者、遺贈の内容",
+      "評価基準日、証拠書類",
+      "補正の可否、延長の有無",
       "受領証と写し",
       "原本の保管場所と発行日・基準日",
       "アクセス権限を管理",
@@ -420,14 +464,14 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
       0;
     const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
 
-    expect(visibleJapaneseCount).toBe(7867);
+    expect(visibleJapaneseCount).toBe(7353);
     expect(visibleJapaneseCount).toBeGreaterThanOrEqual(4500);
-    expect(visibleKanaCount).toBe(3532);
+    expect(visibleKanaCount).toBe(3213);
     expect(visibleKanaCount).toBeGreaterThanOrEqual(1500);
     expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
     expect(post?.readTime).toBe(`約${calculatedMinutes}分`);
     expect(crypto.createHash("sha256").update(raw).digest("hex")).toBe(
-      "710280c695f0a5c4c925f5f8ccbfa54a65fd136a4ef391a759cecb0dd6a448b4",
+      "638c64743c0e80aaa25ee0ddff7a7c4a3add6473519d80508d19454817c7e247",
     );
   });
 

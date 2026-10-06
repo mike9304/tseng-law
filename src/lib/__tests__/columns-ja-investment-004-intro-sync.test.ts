@@ -11,7 +11,7 @@ const sourceBytes = fs.readFileSync(columnPath);
 
 const immutablePrefixLength = 2_356;
 const immutablePrefixSha256 =
-  'e94afe87b304061816a7484506c1815b4e8233eda8b1054329c19a7a2a9c4e6f';
+  'a071b9d8188f4ce8166cd35855b620d4c6a61c5283c68cfbdaa83d75b281e5fd';
 const section1Marker = Buffer.from('## 1. 法人格と出資構造', 'utf8');
 const imageLine =
   '![](../images/004-taiwan-company-subsidiary-vs-branch/img-01.jpg)';
@@ -72,27 +72,29 @@ describe('Japanese investment column 004 — synchronized introduction', () => {
     expect(first).toMatch(
       /台湾[^。]*(?:継続的|継続して|継続する|恒常的)[^。]*(?:事業|営業)[^。]*(?:外国企業|外国会社)/u,
     );
-    expect(first).toMatch(/台湾子会社[^。]*(?:外国会社の)?台湾支店[^。]*(?:比較|検討)/u);
-    expect(first).toMatch(/(?:いずれも|両者)[^。]*台湾[^。]*事業拠点/u);
+    expect(first).toMatch(/台湾支店の債務は、外国会社の債務になります/u);
+    expect(first).toMatch(/子会社が結んだ契約であれば、債務は原則として子会社に帰属します/u);
+    expect(first).toMatch(/この二つの形態を(?:比較|比べ)[^。]*検討/u);
+    expect(first).toMatch(/(?:いずれも|両者|どちらも)[^。]*台湾[^。]*拠点/u);
 
     for (const difference of [
       /(?:契約(?:の)?当事者|契約主体)/u,
       /(?:債務|責任)[^、。]*(?:負担|負う|帰属|主体)/u,
       /第三者[^、。]*(?:出資|投資)[^、。]*(?:受け|受入|受け入れ|可能)/u,
-      /利益[^、。]*(?:国外|海外|本国|親会社|本店)[^、。]*(?:送金|移転)[^、。]*(?:手続|方法)/u,
+      /利益[^、。]*(?:国外|海外|本国|親会社|本店)[^、。]*(?:送金|移転|移す)[^、。]*(?:手続|方法)/u,
     ]) {
       expect(first).toMatch(difference);
     }
 
     expect(first).toMatch(
-      /設立[^。]*(?:便宜|利便|容易|簡便)[^。]*(?:だけ|のみ)[^。]*(?:比較|判断|選択)/u,
+      /設立[^。]*(?:便宜|利便|容易|簡便|手軽さ)[^。]*(?:だけ|のみ)[^。]*(?:比較|比べ|判断|選択)/u,
     );
     expect(first).toMatch(
       /運営|事業運営|事業開始後/u,
     );
     expect(first).toMatch(/(?:予想外|想定外)[^。]*(?:責任|債務)[^。]*(?:税務|税金|課税)/u);
     expect(first).toMatch(
-      /(?:事業の)?(?:全ライフサイクル|ライフサイクル全体|全期間|開始から終了まで)[^。]*(?:検討|比較|考慮)/u,
+      /(?:事業の)?(?:全ライフサイクル|ライフサイクル全体|全期間|開始から終了まで)[^。]*(?:検討|比較|考慮|判断)/u,
     );
   });
 
@@ -100,7 +102,7 @@ describe('Japanese investment column 004 — synchronized introduction', () => {
     const second = paragraphs[1] ?? '';
 
     expect(second).toMatch(
-      /台湾子会社[^。]*台湾法[^。]*(?:設立|成立)[^。]*(?:独立した法人|独立法人|独立した法的主体)/u,
+      /子会社は[^。]*台湾法[^。]*(?:設立|成立)[^。]*(?:独立した法人|独立の法人|独立法人|独立した法的主体)/u,
     );
     expect(second).toMatch(/外国[^。]*(?:親会社|本社)[^。]*(?:株主|出資者)/u);
     expect(second).toMatch(/親会社[^。]*区別される権利・義務の主体/u);
@@ -108,15 +110,15 @@ describe('Japanese investment column 004 — synchronized introduction', () => {
       /(?:外国会社の)?台湾支店[^。]*(?:外国本店|外国会社|本社)[^。]*(?:一部|構成部分)/u,
     );
     expect(second).toMatch(
-      /台湾支店[^。]*(?:独立した法人格を持たない|別個の法人格を有しない|独立した法的主体ではない)[^。]*(?:事業拠点|営業拠点)/u,
+      /台湾支店[^。]*(?:事業拠点|営業拠点)です。(?:独立した法人格は持ちません|独立した法人格を持たない|別個の法人格を有しない|独立した法的主体ではない)/u,
     );
-    expect(second).toMatch(/支社[^。]*(?:日常|一般|通称|俗称)[^。]*(?:呼|表現|用語)/u);
+    expect(second).toMatch(/(?:日常|一般|通称|俗称)[^。]*支社[^。]*(?:呼|表現|用語)/u);
     expect(second).toMatch(
-      /(?:本記事|この記事)[^。]*(?:法的関係|法律関係)[^。]*(?:明確|明らか)[^。]*支店/u,
+      /(?:本記事|この記事)[^。]*(?:法的関係|法的な関係|法律関係)[^。]*(?:明確|明らか)[^。]*支店/u,
     );
   });
 
-  it('individualizes the selection and gives the complete cross-border roadmap', () => {
+  it('individualizes the selection and flags the cross-border and treaty caveats', () => {
     const third = paragraphs[2] ?? '';
 
     for (const selectionFactor of [
@@ -134,18 +136,15 @@ describe('Japanese investment column 004 — synchronized introduction', () => {
       expect(third).toMatch(selectionFactor);
     }
 
-    expect(third).toMatch(/台湾国外の親会社が台湾に進出/u);
-    expect(third).toMatch(/韓国親会社の例/u);
+    expect(third).toMatch(/親会社が台湾国外にある場合は/u);
+    expect(third).toMatch(/韓国の親会社を例にしたもの/u);
     expect(third).toMatch(
-      /台湾法[^。]*(?:会計|税務)[^。]*(?:海外投資|国外投資)[^。]*(?:手続|手続き)[^。]*(?:併せて|ともに|一緒に)[^。]*(?:検討|確認)/u,
+      /(?:会計|税務)[^。]*(?:海外投資|国外投資)[^。]*(?:手続|手続き)[^。]*(?:併せて|ともに|一緒に)[^。]*(?:検討|確認)[^。]*。台湾法だけでは足りません/u,
     );
 
     for (const roadmapConcept of [
-      /法人格/u,
       /税(?:務|制|金)/u,
-      /責任/u,
       /資金調達/u,
-      /投資税額控除/u,
       /所得税協定/u,
       /(?:退出|撤退|事業終了|廃業)/u,
     ]) {

@@ -10,6 +10,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
+    '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
   ] as string[],
   ja: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -17,6 +18,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
+    '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
   ] as string[],
   en: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -25,6 +27,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
+    '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
   ] as string[],
   'zh-hant': [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -33,6 +36,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
+    '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
   ] as string[],
 } as const;
 

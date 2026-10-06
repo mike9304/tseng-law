@@ -1293,6 +1293,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-semiconductor-core-key-technology-list-trade-secrets"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-business-tax-vat-e-invoice-foreign-subsidiary"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-business-tax-vat-e-invoice-foreign-subsidiary"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-business-tax-vat-e-invoice-foreign-subsidiary"
     }
   ]
 }

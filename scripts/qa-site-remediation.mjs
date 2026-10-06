@@ -44,8 +44,7 @@ async function hydrateLazyImages(page) {
   await page.waitForLoadState('networkidle');
 }
 
-// zh-hant, ja and en open straight on their own heroes (CINEMATIC_OPENING_SKIPPED_LOCALES); ko keeps
-// the full-screen opening gate.
+// Every locale opens straight on its own hero since 2026-10-06 (CINEMATIC_OPENING_ENABLED = false).
 async function assertImmediateHomepageHero(page, locale) {
   assert.equal(await page.locator('.cinematic-opening').count(), 0, `${locale} should not render the cinematic opening`);
   const visibleHero = page.locator('#hero:visible').first();

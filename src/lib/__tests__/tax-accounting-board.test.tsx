@@ -86,6 +86,9 @@ describe.each([...siteLocales])('%s tax & accounting board on the real corpus', 
     const html = renderToStaticMarkup(<TaxAccountingBoard locale={locale} lists={lists} />);
     const copy = taxAccountingBoardCopy[locale];
     expect(html).toContain(`<h1 class="svc-hero-title">${copy.title}</h1>`);
+    // The locale layout owns <main id="main">; a second main doubled the header offset and the landmark (2026-10-06).
+    expect(html).not.toMatch(/<main\b/);
+    expect(html).toContain(`data-tax-accounting-board="${locale}"`);
     for (const column of [...lists.board, ...lists.related]) {
       expect(html).toContain(`href="/${locale}/columns/${column.slug}"`);
     }

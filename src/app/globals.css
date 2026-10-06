@@ -27762,7 +27762,9 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
   isolation: isolate;
   display: flex;
   align-items: center;
-  min-height: max(600px, calc(100svh - var(--header-offset-desktop, 137px)));
+  /* .hero already slides under the header (negative top margin + matching padding), so a full viewport fills to the
+     fold. */
+  min-height: max(600px, 100svh);
 }
 .site [data-guidance-page='home'] .hero .hero-media::after {
   content: '';
@@ -27781,6 +27783,7 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
 }
 .site [data-guidance-page='home'] .hero .hero-copy {
   max-width: 820px;
+  text-align: start;
   background: none !important;
   box-shadow: none !important;
 }
@@ -27811,6 +27814,7 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
 .site [data-guidance-page='home'] .hero .en-home-paths {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 10px;
   margin-top: 26px;
 }
@@ -27818,9 +27822,13 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding: 0 18px !important;
+  height: auto;
+  /* Long labels (de, ru, my, …) wrap to two lines on phones: keep vertical room and a radius that stays a pill on
+     one line without cutting into a second. */
+  padding: 10px 18px !important;
+  line-height: 1.35;
   border: 1px solid rgb(255 255 255 / 32%) !important;
-  border-radius: 999px !important;
+  border-radius: 22px !important;
   background: rgb(255 255 255 / 10%) !important;
   color: #fff !important;
   font-size: 15px;
@@ -27869,7 +27877,7 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
 }
 .site[data-guidance-locale] main .button { border-radius: 999px !important; }
 @media (max-width: 767px) {
-  .site [data-guidance-page='home'] .hero { min-height: max(560px, calc(100svh - 64px)); }
+  .site [data-guidance-page='home'] .hero { min-height: max(560px, 100svh); }
   .site [data-guidance-page='home'] .hero .container.hero-inner { padding-inline: 20px; }
   .site [data-guidance-page='home'] .hero .hero-title { font-size: clamp(34px, 9vw, 44px) !important; }
   .site [data-guidance-page='home'] .hero .hero-cta-actions > * { flex: 1 1 100%; justify-content: center; }

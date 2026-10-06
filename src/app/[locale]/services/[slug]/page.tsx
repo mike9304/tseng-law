@@ -360,7 +360,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                   {attorney ? <Link href={`/${locale}/lawyers/${attorney.slug}`} className={zhStyles.byline}>{attorney.name} · {attorney.role}</Link> : null}
                   <nav className={zhStyles.contents} aria-label={t.breadcrumbServices}>
                     {showBody && points.length > 0 ? <a href="#service-keypoints">{t.keyPointsLabel}<ZhHantMonoIcon name="arrow-down" size={16} strokePx={1.5} /></a> : null}
-                    {showBody && columns.length > 0 ? <a href="#service-columns">{t.columnsLabel}<ZhHantMonoIcon name="arrow-down" size={16} strokePx={1.5} /></a> : null}
+                    {showBody && columns.length > 0 ? <a href="#service-columns">{t.columnsLabel.split(' —')[0]}<ZhHantMonoIcon name="arrow-down" size={16} strokePx={1.5} /></a> : null}
                   </nav>
                 </div>
                 <div className={zhStyles.heroImage}>
@@ -427,7 +427,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
       ) : null}
 
       {showBody ? (
-        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}${ja ? ` ${jaStyles.article}` : ''}${en ? ` ${enStyles.article}` : ''}`} data-ja-area={ja ? area.slug : undefined}>
+        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}${ja ? ` ${jaStyles.article}` : ''}${en ? ` ${enStyles.article}` : ''}`} data-ja-area={ja ? area.slug : undefined} data-ko-design-scope={locale === 'ko' ? 'service-detail' : undefined}>
           <div className={`container svc-container ${styles.layout}`}>
             {zhHant ? contactCard : null}
             {ja && ((points.length > 0) || columns.length > 0) ? (

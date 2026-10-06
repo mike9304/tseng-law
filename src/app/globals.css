@@ -27677,13 +27677,13 @@ html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-v
 html[lang='ko'] {
   --font-reading-zh: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article) *:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
+html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) *:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.005em !important;
 }
-html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) :is(h1, h2, .page-header-title, .section-title, .split-title):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
+html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) :is(h1, h2, .page-header-title, .section-title, .split-title):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.03em !important;
 }
-html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) h3:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
+html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) h3:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.02em !important;
 }
 

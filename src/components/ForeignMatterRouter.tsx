@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { getForeignMatterRouter } from '@/data/foreign-matter-router';
 import ZhHantMonoIcon, { type ZhHantMonoIconName } from '@/components/zh-hant-icons/ZhHantMonoIcon';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 import type { SiteLocale } from '@/lib/locales';
 import styles from './ForeignMatterRouter.module.css';
 
@@ -27,10 +28,10 @@ export default function ForeignMatterRouter({ locale }: { locale: SiteLocale }) 
         <div className={styles.grid}>
           {copy.matters.map((matter) => (
             <Link key={matter.href} href={`/${locale}/${matter.href}`} className={styles.card}>
-              {locale === 'zh-hant' && ZH_MATTER_ICON[matter.href] ? <ZhHantMonoIcon name={ZH_MATTER_ICON[matter.href]} size={44} /> : null}
+              {isAppleDesignLocale(locale) && ZH_MATTER_ICON[matter.href] ? <ZhHantMonoIcon name={ZH_MATTER_ICON[matter.href]} size={44} /> : null}
               <h3>{matter.title}</h3>
               <p>{matter.description}</p>
-              <span aria-hidden="true">{locale === 'zh-hant' ? <ZhHantMonoIcon name="arrow-right" size={20} /> : '↗'}</span>
+              <span aria-hidden="true">{isAppleDesignLocale(locale) ? <ZhHantMonoIcon name="arrow-right" size={20} /> : '↗'}</span>
             </Link>
           ))}
         </div>

@@ -1353,6 +1353,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-payroll-foreign-employees-withholding-social-insurance"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-tax-audit-reexamination-appeal-deadlines"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-tax-audit-reexamination-appeal-deadlines"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-tax-audit-reexamination-appeal-deadlines"
     }
   ]
 }

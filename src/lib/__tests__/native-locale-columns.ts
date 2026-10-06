@@ -1,4 +1,4 @@
-import { TAX_ACCOUNTING_COLUMN_FILES } from './tax-accounting-column-files';
+import { TAX_ACCOUNTING_COLUMN_FILES, taxAccountingFilesPublishedOn } from './tax-accounting-column-files';
 
 /**
  * Columns written natively for one audience (2026-09-29): English-, Japanese-
@@ -554,11 +554,13 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const day20261007: readonly string[] =
-    (COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261007: readonly string[] = [
+    ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...(taxAccountingFilesPublishedOn('2026-10-07')[locale] ?? []),
+  ];
   const day20261006: readonly string[] = [
     ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
-    ...((TAX_ACCOUNTING_COLUMN_FILES as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...(taxAccountingFilesPublishedOn('2026-10-06')[locale] ?? []),
   ];
   const day20261005: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
@@ -591,9 +593,9 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-07). */
 export function archiveLeadPublicationDate(slug: string): string {
-  const day20261007 = Object.values(COUNTRY_COLUMN_FILES_20261007).flat().map(slugOf);
+  const day20261007 = [...Object.values(COUNTRY_COLUMN_FILES_20261007), ...Object.values(taxAccountingFilesPublishedOn('2026-10-07'))].flat().map(slugOf);
   if (day20261007.includes(slug)) return '2026-10-07';
-  const day20261006 = [...Object.values(COUNTRY_COLUMN_FILES_20261006), ...Object.values(TAX_ACCOUNTING_COLUMN_FILES)].flat().map(slugOf);
+  const day20261006 = [...Object.values(COUNTRY_COLUMN_FILES_20261006), ...Object.values(taxAccountingFilesPublishedOn('2026-10-06'))].flat().map(slugOf);
   if (day20261006.includes(slug)) return '2026-10-06';
   const day20261005 = Object.values(COUNTRY_COLUMN_FILES_20261005).flat().map(slugOf);
   if (day20261005.includes(slug)) return '2026-10-05';

@@ -64,8 +64,26 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
   ] as string[],
 } as const;
 
-/** Publication date of a tax-board column by its file number (all 2026-10-06 so far). */
+/** Board columns published after 2026-10-06, by file-number prefix; every other board file is 2026-10-06. */
+const LATER_PUBLICATION_DATES: Readonly<Record<string, string>> = {
+  '342': '2026-10-07',
+  '344': '2026-10-07',
+  '345': '2026-10-07',
+};
+
+/** Publication date of a tax-board column by its file number. */
 export function taxAccountingPublicationDate(prefix: string): string | undefined {
   const files = Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat();
-  return files.some((file) => file.startsWith(`${prefix}-`)) ? '2026-10-06' : undefined;
+  if (!files.some((file) => file.startsWith(`${prefix}-`))) return undefined;
+  return LATER_PUBLICATION_DATES[prefix] ?? '2026-10-06';
+}
+
+/** The board files of each locale that were published on `date`. */
+export function taxAccountingFilesPublishedOn(date: string): Partial<Record<string, readonly string[]>> {
+  return Object.fromEntries(
+    Object.entries(TAX_ACCOUNTING_COLUMN_FILES).map(([locale, files]) => [
+      locale,
+      files.filter((file) => taxAccountingPublicationDate(file.slice(0, 3)) === date),
+    ]),
+  );
 }

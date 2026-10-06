@@ -1,3 +1,5 @@
+import { TAX_ACCOUNTING_COLUMN_FILES } from './tax-accounting-column-files';
+
 /**
  * Columns written natively for one audience (2026-09-29): English-, Japanese-
  * and Vietnamese-only articles that have no Korean source and no translations.
@@ -525,6 +527,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((TAX_ACCOUNTING_COLUMN_FILES as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -547,8 +550,10 @@ export function expertiseSlugsFor(locale: string): string[] {
 export function archiveLeadSlugsFor(locale: string): string[] {
   const day20261007: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
-  const day20261006: readonly string[] =
-    (COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261006: readonly string[] = [
+    ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((TAX_ACCOUNTING_COLUMN_FILES as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const day20261005: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const current: readonly string[] =
@@ -582,7 +587,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 export function archiveLeadPublicationDate(slug: string): string {
   const day20261007 = Object.values(COUNTRY_COLUMN_FILES_20261007).flat().map(slugOf);
   if (day20261007.includes(slug)) return '2026-10-07';
-  const day20261006 = Object.values(COUNTRY_COLUMN_FILES_20261006).flat().map(slugOf);
+  const day20261006 = [...Object.values(COUNTRY_COLUMN_FILES_20261006), ...Object.values(TAX_ACCOUNTING_COLUMN_FILES)].flat().map(slugOf);
   if (day20261006.includes(slug)) return '2026-10-06';
   const day20261005 = Object.values(COUNTRY_COLUMN_FILES_20261005).flat().map(slugOf);
   if (day20261005.includes(slug)) return '2026-10-05';
@@ -636,6 +641,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261005),
     ...Object.values(COUNTRY_COLUMN_FILES_20261006),
     ...Object.values(COUNTRY_COLUMN_FILES_20261007),
+    ...Object.values(TAX_ACCOUNTING_COLUMN_FILES),
   ].flat().map(slugOf),
 );
 

@@ -69,7 +69,7 @@ export default function TaxAccountingBoard({
         <div className="container svc-container">
           <div className="svc-body">
             {lists.board.length > 0 ? (
-              <section className="svc-columns-section" aria-labelledby="tax-accounting-board-heading">
+              <section aria-labelledby="tax-accounting-board-heading">
                 <h2 id="tax-accounting-board-heading" className="svc-keypoints-title">
                   {copy.boardHeading}
                 </h2>
@@ -78,9 +78,8 @@ export default function TaxAccountingBoard({
             ) : null}
             {lists.related.length > 0 ? (
               <section
-                className="svc-columns-section"
+                className={lists.board.length > 0 ? 'svc-columns-section' : undefined}
                 aria-labelledby="tax-accounting-related-heading"
-                style={{ marginTop: '2.5rem' }}
               >
                 <h2 id="tax-accounting-related-heading" className="svc-keypoints-title">
                   {copy.relatedHeading}

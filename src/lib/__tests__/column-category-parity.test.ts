@@ -5,6 +5,7 @@ import { getAllColumnPosts } from '@/lib/columns';
 import { COLUMN_CONTENT_DIR_BY_LOCALE } from '@/lib/column-locales';
 import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
 import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug, isNativeOrExpertiseNativeSlug } from './native-locale-columns';
+import { isTaxAccountingBoardColumn } from '@/lib/tax-accounting-board';
 
 /**
  * Every translated column carries the same category as its English source —
@@ -20,10 +21,11 @@ import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug, isNativeOrExperti
  */
 describe('column category parity with English', () => {
   // English-only native columns have no counterpart elsewhere; the baseline is
-  // the translated corpus every other locale mirrors.
+  // the translated corpus every other locale mirrors. Tax-board columns are
+  // pinned by tax-accounting-board.test.tsx instead.
   const english = new Map(
     getAllColumnPosts('en')
-      .filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))
+      .filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug) && !isTaxAccountingBoardColumn(post))
       .map((post) => [post.slug, post.category]),
   );
 

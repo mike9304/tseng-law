@@ -1213,6 +1213,42 @@
     {
       "locale": "ko",
       "slug": "taiwan-divorce-property-damages-support"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-withholding-tax-payments-to-foreign-companies"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-withholding-tax-payments-to-foreign-companies"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-withholding-tax-payments-to-foreign-companies"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-dividend-withholding-foreign-parent-tax-agreement-rates"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-dividend-withholding-foreign-parent-tax-agreement-rates"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-dividend-withholding-foreign-parent-tax-agreement-rates"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-transfer-pricing-documentation-thresholds"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-transfer-pricing-documentation-thresholds"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-transfer-pricing-documentation-thresholds"
     }
   ]
 }

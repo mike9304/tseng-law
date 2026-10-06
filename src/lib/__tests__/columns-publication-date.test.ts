@@ -10,6 +10,7 @@ import {
   expertiseSlugsFor,
   isNativeLocaleColumnSlug,
 } from './native-locale-columns';
+import { taxAccountingPublicationDate } from './tax-accounting-column-files';
 
 const COSMETICS_SLUG = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
 
@@ -332,7 +333,9 @@ const REDATED_20260928: Record<string, readonly string[]> = {
 };
 
 function verifiedPublicationDate(locale: string, prefix: string): string {
-  return REDATED_20260928[locale]?.includes(prefix) ? '2026-09-28' : VERIFIED_PUBLICATION_DATES[prefix];
+  return REDATED_20260928[locale]?.includes(prefix)
+    ? '2026-09-28'
+    : VERIFIED_PUBLICATION_DATES[prefix] ?? taxAccountingPublicationDate(prefix)!;
 }
 
 const CONTENT_DIR_BY_LOCALE = {

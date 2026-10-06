@@ -106,7 +106,7 @@ author: "legal-ai-assistant"
 
 ## 参考資料
 
-資料確認日：2026年10月4日（韓国標準時）。法令は法務部・全國法規資料庫の現行条文と沿革、申請実務は各管理局の公開資料を参照しました。
+資料確認日：2026年10月4日（台湾時間）。法令は法務部・全國法規資料庫の現行条文と沿革、申請実務は各管理局の公開資料を参照しました。
 
 - 法務部・[科學園區設置管理條例・全文](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160004)（最終改正2018年6月6日）、[沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=H0160004)（2022年7月27日の管轄変更を含む）。本文で参照した条文：[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=4)、[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=5)、[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=6)、[第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=9)、[第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=11)、[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=13)、[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=18)、[第19条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=19)、[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=23)、[第26条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160004&flno=26)。
 - 法務部・園區事業投資計畫管理辦法（最終改正2018年12月6日）：[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160045&flno=2)、[第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160045&flno=3)、[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160045&flno=4)、[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0160045&flno=5)。保証金・登記、完成評価・完成期限、計画変更。
@@ -116,4 +116,4 @@ author: "legal-ai-assistant"
 - 中部科學園區管理局・[投資申請與審核](https://www.ctsp.gov.tw/chinese/04-Manufacturer/03-08-audit_view.aspx?fr=1045&no=1058&sn=251&v=1)（2020年1月31日掲載、2026年7月7日更新）。申請資料、土地・工場、水・電力、環境手続、外国人投資。
 - 南部科學園區管理局・[投資申請](https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=584)（2026年7月8日更新）。事業区分別の申請書、候補地別の汚染防止計画、費用項目。
 
-*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月4日（韓国標準時）。*
+*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月4日（台湾時間）。*

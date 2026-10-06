@@ -59,12 +59,10 @@ social_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-
 
 この事件で危険を具体的に示したのは、当事者同士の説明に加え、右側を通った車の減速とハザードランプでした。この証拠評価からは、台湾で同じようなトラブルの録画を残す際、相手が止まった瞬間だけでなく、周囲の車が通過する間も含めて保存する意味が読み取れます。[臺灣桃園地方法院115年度訴字第868號・2026年6月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1)
 
-執筆：法律AIアシスタント
-
 ## 出典
 
 - [臺灣桃園地方法院115年度訴字第868號刑事判決・2026年6月26日（添付起訴状を含む）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TYDM%2C115%2C%E8%A8%B4%2C868%2C20260626%2C1)
 - [中華民國刑法185条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185)
 - [中華民國刑法41条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=41)
 
-この記事は法律AIアシスタントが公開判決文と法令をもとに作成しました。資料確認日：2026年10月3日。
+この記事は公開判決文と法令をもとに作成しました。資料確認日：2026年10月3日。

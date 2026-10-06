@@ -70,8 +70,6 @@ social_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-her
 
 この判決の証拠の扱いからすると、台湾で同じような妨害に遭ったときは、前後を含む映像が役立ちます。信号の変化や車線、立ち去るまでの動きが分かる元の映像を残しておけば、裁判所が今回検討した事情を確かめられます。表示時刻が合っていない映像どうしは、時刻をそのまま並べても正しい経過になるとは限りません。本件では一方の映像が52秒の赤信号を、もう一方が約1分54秒の経過とUターンを示しました。妨害の瞬間だけでは、こうした事情は捉えきれません（[臺灣新北地方法院114年度易字第637號、2025年7月31日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)）。
 
-執筆：法律AIアシスタント
-
 ## 出典
 
 - [臺灣高等法院114年度上易字第2198號刑事判決、2026年1月27日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHM%2C114%2C%E4%B8%8A%E6%98%93%2C2198%2C20260127%2C1)
@@ -80,4 +78,4 @@ social_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-her
 - [中華民國刑法309条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=309)
 - [道路交通管理處罰條例43条（背景法令。本件では適用なし）](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43)
 
-この記事は法律AIアシスタントが公開判決文と法令をもとに作成しました。資料確認日：2026年10月3日。
+この記事は公開判決文と法令をもとに作成しました。資料確認日：2026年10月3日。

@@ -82,7 +82,7 @@ author: "legal-ai-assistant"
 
 ## 参考資料
 
-以下の資料は2026年10月4日（韓国標準時）に最終確認しました。
+以下の資料は2026年10月4日（台湾時間）に最終確認しました。
 
 - [東京応化工業「海外拠点」](https://www.tok.co.jp/company/overseas)：台湾東應化股份有限公司の事業と銅鑼工場。掲載日の表示なし。
 - [工會法第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020001&flno=6)、[第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020001&flno=11)、[第35条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020001&flno=35)：法務部・全國法規資料庫。最終改正日2022年11月30日。
@@ -92,4 +92,4 @@ author: "legal-ai-assistant"
 - [労働部「勞動部發布『團體協約之協商會議注意事項』」](https://www.mol.gov.tw/1607/1632/1640/55775/post)：2022年11月18日。交渉会議の運営に関する案内。
 - [最高行政法院110年度上字第195号判決](https://data.judicial.gov.tw/opendl/JDocFile/TPAA/110%2C%E4%B8%8A%2C195%2C20230131%2C1.pdf)：2023年1月31日。106年勞裁字第55号への言及、解雇に関する別の裁決の経過、勞資爭議處理法第8条違反を理由とする過料処分の取消し。
 
-*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月4日（韓国標準時）。*
+*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月4日（台湾時間）。*

@@ -118,7 +118,7 @@ author: "legal-ai-assistant"
 
 ## 参考資料
 
-資料確認日：2026年10月4日（韓国標準時）。法令は同日参照した条文に基づき、年度ごとに変わる控除額・所得区分の金額は掲載していません。
+資料確認日：2026年10月4日（台湾時間）。法令は同日参照した条文に基づき、年度ごとに変わる控除額・所得区分の金額は掲載していません。
 
 - 公益財団法人日本台湾交流協会掲載、日台民間租税取決め（2015年11月26日署名）：[和文仮訳](https://www.koryu.or.jp/Portals/0/images/news/20160615/sozei-J.pdf)、[英文本文](https://www.koryu.or.jp/Portals/0/images/news/20160615/sozei-E.pdf)。第4・5・7・12・14～16・22・24条を中心に参照。
 - 日本財務省、[平成28年度改正関係参考資料（国際課税関係）](https://www.mof.go.jp/tax_policy/summary/international/28kaiseikokusai.pdf)（2016年度）。日台民間租税取決めを実施する国内法の整備。
@@ -129,4 +129,4 @@ author: "legal-ai-assistant"
 - 法務部・全國法規資料庫、適用所得稅協定查核準則：[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340125&flno=23)、[第25条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340125&flno=25)、[第26条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340125&flno=26)、[第34条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340125&flno=34)。免税・上限税率の適用手続、2025年4月8日改正の還付申請期間と経過措置。
 - 日本国税庁、[相互協議手続に関するガイダンスQ＆A「5．日台民間租税取決め関係」](https://www.nta.go.jp/taxes/shiraberu/kokusai/map/guidance/qa5.htm)。日本側手続の一般的な位置付け。
 
-*本稿は一般的な情報であり、個別案件への法律・税務上の助言ではありません。資料最終確認日：2026年10月4日（韓国標準時）。*
+*本稿は一般的な情報であり、個別案件への法律・税務上の助言ではありません。資料最終確認日：2026年10月4日（台湾時間）。*

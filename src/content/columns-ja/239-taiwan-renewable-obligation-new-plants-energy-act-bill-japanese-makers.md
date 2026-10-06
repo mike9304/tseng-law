@@ -52,7 +52,7 @@ author: "legal-ai-assistant"
 
 ## 参考資料
 
-資料確認日：2026年10月5日（韓国標準時）。能源管理法第10条第5項の下位法令（規定容量、期限、装置容量、設備の種類・方式）は未制定のため、公布後に内容の確認が必要です。
+資料確認日：2026年10月5日（台湾時間）。能源管理法第10条第5項の下位法令（規定容量、期限、装置容量、設備の種類・方式）は未制定のため、公布後に内容の確認が必要です。
 
 - 法務部・全國法規資料庫、再生能源發展條例（最終改正2025年6月11日。第12条は2023年6月21日改正）：[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0130032&flno=12)、[沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0130032)。
 - 法務部・全國法規資料庫、[一定契約容量以上之電力用戶應設置再生能源發電設備管理辦法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0130095)（最終改正2023年10月17日）：[第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0130095&flno=3)、[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0130095&flno=4)、[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0130095&flno=5)、[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0130095&flno=6)、[第7条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0130095&flno=7)。
@@ -66,4 +66,4 @@ author: "legal-ai-assistant"
 - 聯合新聞網、[「能源管理法修法三讀 新用電大戶未設發電或儲能最高罰75萬元」](https://udn.com/news/story/6656/9706117)（2026年8月21日）。
 - 中央社、[「能管法修法三讀通過 經部：助強化需求管理提升電網韌性」](https://cna.com.tw/news/afe/202608240113.aspx)（2026年8月24日）。
 
-*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月5日（韓国標準時）。*
+*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月5日（台湾時間）。*

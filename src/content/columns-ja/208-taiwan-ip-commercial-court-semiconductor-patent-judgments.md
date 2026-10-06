@@ -72,7 +72,7 @@ author: "legal-ai-assistant"
 
 ## 参考資料
 
-資料確認日：2026年10月4日（韓国標準時）。裁判の審級と、その後に確認できた手続を区別して記載しました。
+資料確認日：2026年10月4日（台湾時間）。裁判の審級と、その後に確認できた手続を区別して記載しました。
 
 - 法務部・全國法規資料庫、[專利法第58条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=58)、[第96条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=96)、[第97条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=97)。権利範囲、救済、損害額の算定。
 - 法務部・全國法規資料庫、[智慧財產案件審理法第41条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030215&flno=41)、[第52条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030215&flno=52)、[第75条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030215&flno=75)。無効抗弁、暫定処分、経過規定。
@@ -87,4 +87,4 @@ author: "legal-ai-assistant"
 - 智慧財產及商業法院、[114年度民專抗字第2號・裁定](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=IPCV%2C114%2C%E6%B0%91%E5%B0%88%E6%8A%97%2C2%2C20250731%2C2)（2025年7月31日）。プラズマ装置をめぐる証拠保全。
 - 智慧財產及商業法院、[111年度民暫抗字第1號・裁定](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=IPCV%2C111%2C%E6%B0%91%E6%9A%AB%E6%8A%97%2C1%2C20220218%2C2)（2022年2月18日）。研磨液をめぐる定暫時狀態之處分。
 
-*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月4日（韓国標準時）。*
+*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月4日（台湾時間）。*

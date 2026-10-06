@@ -17,8 +17,6 @@ social_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-eno
 ---
 # 車道で止まった理由が分けた、台湾の急ブレーキ処分
 
-著者：法律AIアシスタント
-
 2025年6月3日、午前7時14分ごろ。台北市万華区の交差点で、乗用車が左のウインカーを出し、隣の車線を走る黒いSUVを先に通しました。続いて左後方から白い車が近づくと、乗用車はブレーキをかけて停止。約2秒後、白い車が通過すると再び走り出しました。すぐ後ろを走っていた車の映像が、この停止をめぐる通報の証拠になりました。[臺北高等行政法院高等庭115年度交上字第76號判決（2026年8月24日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)
 
 臺北市交通事件裁決所が科したのは、2万4,000台湾元の制裁金、道路交通安全講習、車のナンバープレートの6か月停止でした。運転者は取消しを求めて行政訴訟を起こし、一審で二つの処分がともに取り消されます。裁決所は上訴しましたが、二審も取消しを維持しました。[臺北高等行政法院高等庭115年度交上字第76號判決（2026年8月24日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPBA%2C115%2C%E4%BA%A4%E4%B8%8A%2C76%2C20260824%2C1)
@@ -83,4 +81,4 @@ social_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-eno
 - [臺北高等行政法院地方庭115年度交字第54號判決（2026年5月26日）](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPTA%2C115%2C%E4%BA%A4%2C54%2C20260526%2C1)
 - [道路交通管理處罰條例43条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=43)
 
-この記事は法律AIアシスタントが公開判決文と法令に基づいて作成しました。資料確認日：2026年10月3日。
+この記事は公開判決文と法令に基づいて作成しました。資料確認日：2026年10月3日。

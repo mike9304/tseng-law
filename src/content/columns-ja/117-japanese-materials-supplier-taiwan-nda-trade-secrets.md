@@ -107,7 +107,7 @@ NDAで対象にする「秘密情報」と、この法定の営業秘密は分�
 
 ## 参考資料
 
-確認日：すべて2026年10月3日（韓国時間）。法令の改正日は、同日に確認した法務部全國法規資料庫の最終改正表示です。
+確認日：すべて2026年10月3日（台湾時間）。法令の改正日は、同日に確認した法務部全國法規資料庫の最終改正表示です。
 
 - [JSR、台湾に電子材料事業の平坦化プロセス研究拠点を開設](https://www.jsr.co.jp/news/2026/20260415.html)。JSR株式会社、2026年4月15日。現地研究拠点の公表内容。
 - [營業秘密法・全条文](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028)、[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2)、[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=4)、[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=5)、[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=6)、[第7条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=7)。法務部全國法規資料庫、最終改正2020年1月15日。営業秘密の要件、委託・共同開発、共有と使用許諾。
@@ -116,4 +116,4 @@ NDAで対象にする「秘密情報」と、この法定の営業秘密は分�
 - [涉外民事法律適用法第20条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20)。法務部全國法規資料庫。法律行為に基づく債権債務関係の準拠法。
 - [仲裁法・全条文（第49条・第50条を含む）](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020001)、[第1条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=1)、[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=23)、[第39条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=39)、[第47条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=47)。法務部全國法規資料庫、最終改正2015年12月2日。仲裁合意、非公開手続、保全、外国仲裁判断の承認。
 
-*一般的な情報であり、個別案件への法律助言ではありません。資料は2026年10月3日（韓国時間）に確認しました。*
+*一般的な情報であり、個別案件への法律助言ではありません。資料は2026年10月3日（台湾時間）に確認しました。*

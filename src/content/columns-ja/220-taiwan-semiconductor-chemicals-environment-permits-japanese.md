@@ -64,7 +64,7 @@ author: "legal-ai-assistant"
 
 ## 参考資料
 
-資料確認日：2026年10月5日（韓国標準時）。指定物質の一覧と数量・濃度の基準は公告で変わるため、個別の物質は申請時点の公表で確認が必要です。
+資料確認日：2026年10月5日（台湾時間）。指定物質の一覧と数量・濃度の基準は公告で変わるため、個別の物質は申請時点の公表で確認が必要です。
 
 - 法務部・全國法規資料庫、毒性及關注化學物質管理法（最終改正2019年1月16日）：[全文](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0060012)、[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=O0060012&flno=13)、[第25条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=O0060012&flno=25)、[第30条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=O0060012&flno=30)。
 - 環境部・主管法規查詢系統、[新化學物質及既有化學物質資料登錄辦法](https://oaout.moenv.gov.tw/Law/LawContent.aspx?id=GL005417)（最終改正2021年11月23日）第2～5条、第15条、[附表一](https://oaout.moenv.gov.tw/Law/Download.ashx?FileID=112512&id=GL005417&type=LAW)。
@@ -75,4 +75,4 @@ author: "legal-ai-assistant"
 - 法務部・全國法規資料庫、環境影響評估法（最終改正2025年11月28日）：[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=O0090001&flno=5)、[第14条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=O0090001&flno=14)。
 - 環境部・主管法規查詢系統、[開發行為應實施環境影響評估細目及範圍認定標準](https://oaout.moenv.gov.tw/law/LawContent.aspx?id=FL016247)（最終改正2026年2月5日）第3条、[附表二](https://oaout.moenv.gov.tw/law/Download.ashx?FileID=135165&id=FL016247&type=LAW)。
 
-*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月5日（韓国標準時）。*
+*本稿は一般的な情報であり、個別案件への法律意見ではありません。資料最終確認日：2026年10月5日（台湾時間）。*

@@ -1089,6 +1089,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-stalking-harassment-act-written-warning-protection-order"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-small-claims-simplified-civil-procedure"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-small-claims-simplified-civil-procedure"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-small-claims-simplified-civil-procedure"
     }
   ]
 }

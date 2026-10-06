@@ -437,15 +437,19 @@ export const COUNTRY_COLUMN_FILES_20261005 = {
 export const COUNTRY_COLUMN_FILES_20261006 = {
   ko: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+    '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
   ],
   en: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+    '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
   ],
   ja: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+    '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
   ],
   'zh-hant': [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
+    '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
   ],
 } as const;
 

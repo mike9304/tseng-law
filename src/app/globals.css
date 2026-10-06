@@ -27670,18 +27670,20 @@ html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-v
    ideographs with positive tracking. On ko pages that variable is the ko body pair instead (Noto Sans KR first,
    the Apple/Windows Korean faces behind it), so every shared module sets Hangul without a per-module override.
    Hangul reads best untracked: body text near zero, display sizes slightly negative. The ko home tunes its own
-   type in ZhHantDesign.module.css, so it is left out of the tracking rules.
+   type in ZhHantDesign.module.css, so it is left out of the tracking rules. Nodes an editor places in a builder
+   page (any .builder-pub-node other than the page root and its code composite) keep their own letter-spacing: on
+   /ko/columns the ko shell wraps the whole published page, and an inline editor value must not lose to !important.
    ===================================================================================================== */
 html[lang='ko'] {
   --font-reading-zh: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article) * {
+html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article) *:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.005em !important;
 }
-html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) :is(h1, h2, .page-header-title, .section-title, .split-title) {
+html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) :is(h1, h2, .page-header-title, .section-title, .split-title):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.03em !important;
 }
-html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) h3 {
+html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) h3:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.02em !important;
 }
 

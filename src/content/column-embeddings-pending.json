@@ -1377,6 +1377,30 @@
     {
       "locale": "zh-hant",
       "slug": "closing-taiwan-subsidiary-branch-liquidation-tax-filings"
+    },
+    {
+      "locale": "ko",
+      "slug": "selling-shares-taiwan-company-securities-transaction-tax-agreements"
+    },
+    {
+      "locale": "en",
+      "slug": "selling-shares-taiwan-company-securities-transaction-tax-agreements"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "selling-shares-taiwan-company-securities-transaction-tax-agreements"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-stamp-tax-contracts-receipts-foreign-companies"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-stamp-tax-contracts-receipts-foreign-companies"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-stamp-tax-contracts-receipts-foreign-companies"
     }
   ]
 }

@@ -16,7 +16,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
     '341-taiwan-tax-audit-reexamination-appeal-deadlines.md',
+    '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
+    '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
   ] as string[],
   ja: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -30,7 +32,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
     '341-taiwan-tax-audit-reexamination-appeal-deadlines.md',
+    '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
+    '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
   ] as string[],
   en: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -45,7 +49,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
     '341-taiwan-tax-audit-reexamination-appeal-deadlines.md',
+    '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
+    '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
   ] as string[],
   'zh-hant': [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -60,7 +66,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md',
     '325-taiwan-representative-office-tax-what-it-may-do.md',
     '341-taiwan-tax-audit-reexamination-appeal-deadlines.md',
+    '342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md',
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
+    '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
   ] as string[],
 } as const;
 

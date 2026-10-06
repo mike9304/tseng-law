@@ -21,7 +21,22 @@ import {
 } from '@/lib/ai-authored-columns';
 import { buildArticleJsonLd } from '@/lib/seo';
 import AiAuthorBox from '@/components/AiAuthorBox';
-import { expertiseSlugsFor } from './native-locale-columns';
+import { archiveLeadPublicationDate, expertiseSlugsFor } from './native-locale-columns';
+
+/**
+ * Newest registered audience column of a locale: latest publication day, then the
+ * higher column number (expertiseSlugsFor is in filename order). File numbers are
+ * not dates — the tax board's 30x files were published before the 2026-10-07 batch.
+ */
+function newestLeadSlug(locale: string): string | undefined {
+  const slugs = expertiseSlugsFor(locale);
+  let best: { slug: string; date: string; index: number } | undefined;
+  slugs.forEach((slug, index) => {
+    const date = archiveLeadPublicationDate(slug);
+    if (!best || date > best.date || (date === best.date && index > best.index)) best = { slug, date, index };
+  });
+  return best?.slug;
+}
 
 vi.mock('next/image', () => ({
   // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
@@ -48,9 +63,9 @@ describe('audience frontmatter recommendations', () => {
       prioritizeRecommendedColumns(locale, getAllColumnPosts(locale))[0]?.slug;
     // 2026-10-03: registered audience batches lead; same-day ties go to the
     // higher column number, so the last file of the batch comes first.
-    expect(first('en')).toBe(expertiseSlugsFor('en').at(-1));
-    expect(first('ja')).toBe(expertiseSlugsFor('ja').at(-1));
-    expect(first('ko')).toBe(expertiseSlugsFor('ko').at(-1));
+    expect(first('en')).toBe(newestLeadSlug('en'));
+    expect(first('ja')).toBe(newestLeadSlug('ja'));
+    expect(first('ko')).toBe(newestLeadSlug('ko'));
     expect(first('th')).toBe('baby-taiwan-nationality-birth-registration');
     for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'zh-hans', 'id', 'th', 'fil'] as const) {
       const posts = getAllColumnPosts(locale);
@@ -67,7 +82,7 @@ describe('audience frontmatter recommendations', () => {
 
   it('breaks same-day ties by column number regardless of input order', () => {
     const ko = getAllColumnPosts('ko');
-    expect(prioritizeRecommendedColumns('ko', [...ko].reverse())[0]?.slug).toBe(expertiseSlugsFor('ko').at(-1));
+    expect(prioritizeRecommendedColumns('ko', [...ko].reverse())[0]?.slug).toBe(newestLeadSlug('ko'));
     expect(prioritizeRecommendedColumns('zh-hant', [...getAllColumnPosts('zh-hant')].reverse())[0]?.slug)
       .toBe(expertiseSlugsFor('zh-hant').at(-1));
   });

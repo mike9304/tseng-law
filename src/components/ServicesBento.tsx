@@ -12,6 +12,7 @@ import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { homeServicesTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import styles from './HomeEditorial.module.css';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 function compactServiceSummary(description: string, maxLength = 120): string {
   const text = description.replace(/\s+/g, ' ').trim();
@@ -186,8 +187,8 @@ export default function ServicesBento({
                         className="services-detail-more services-card-link"
                         aria-label={`${item.title}: ${detailLabel.replace(/\s*→$/, '')}`}
                       >
-                        {/* zh-hant: the monoline arrow instead of the typed one; other locales keep their label as is. */}
-                        {locale === 'zh-hant' ? <>{detailLabel.replace(/\s*→$/, '')}<ZhHantTrail /></> : detailLabel}
+                        {/* zh-hant, ko: the monoline arrow instead of the typed one; other locales keep their label as is. */}
+                        {isAppleDesignLocale(locale) ? <>{detailLabel.replace(/\s*→$/, '')}<ZhHantTrail /></> : detailLabel}
                       </Link>
                     )}
                   </div>

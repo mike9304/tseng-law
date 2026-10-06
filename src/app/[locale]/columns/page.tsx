@@ -5,6 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
 import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
+import KoPageShell from '@/components/ko-design/KoPageShell';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { getAllIssuePosts } from '@/lib/columns';
 import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
@@ -356,5 +357,7 @@ export default async function ColumnsPage(
     </>
   );
   if (locale === 'zh-hant') return <ZhHantColumnsShell>{body}</ZhHantColumnsShell>;
+  // ko: the published path already gets KoPageShell from ColumnsLegacyPageBody inside the builder page.
+  if (locale === 'ko') return <KoPageShell page="columns">{body}</KoPageShell>;
   return locale === 'en' ? <EnColumnsShell>{body}</EnColumnsShell> : body;
 }

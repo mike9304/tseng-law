@@ -27,6 +27,7 @@ import {
 } from '@/components/builder/published/overlayFocus';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 type MegaLink = {
   label: string;
@@ -462,8 +463,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
 export default function Header({ locale }: { locale: PublicLocale8 }) {
   const content = publicSiteContent(locale);
   const isGuidance = isGuidanceLocale4(locale);
-  // zh-hant draws its header glyphs from the monoline set; other locales keep the markup below.
-  const zhIcons = locale === 'zh-hant';
+  // The Apple-system locales (zh-hant, ko) draw header glyphs from the monoline set; other locales keep the markup below.
+  const zhIcons = isAppleDesignLocale(locale);
   const chromeLocale = chromeSiteLocale(locale);
   const guidanceSearch = guidanceSearchLink(locale);
   const brandText =

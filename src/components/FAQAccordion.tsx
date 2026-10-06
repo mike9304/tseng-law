@@ -10,6 +10,7 @@ import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import styles from './FAQAccordion.module.css';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 const parentheticalParticlePattern = /\)([은는이가을를과와])/g;
 
@@ -83,7 +84,7 @@ export default function FAQAccordion({
                   >
                     <span>{formatFaqQuestion(item.question)}</span>
                     <span className={`faq-arrow ${styles.indicator}`} aria-hidden>
-                      {locale === 'zh-hant' ? <ZhHantMonoIcon name={isOpen ? 'minus' : 'plus'} size={20} /> : isOpen ? '-' : '+'}
+                      {isAppleDesignLocale(locale) ? <ZhHantMonoIcon name={isOpen ? 'minus' : 'plus'} size={20} /> : isOpen ? '-' : '+'}
                     </span>
                   </button>
                 </h3>

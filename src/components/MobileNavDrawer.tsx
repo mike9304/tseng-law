@@ -11,6 +11,7 @@ import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
 import { isSiteLocale } from '@/lib/locales';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 const trafficLabel = { ko: '교통사고', 'zh-hant': '交通事故', en: 'Traffic accidents', ja: '交通事故' };
 
@@ -191,7 +192,7 @@ export default function MobileNavDrawer({
             )}
           </Link>
           <button className={`icon-button ${styles.drawerClose}`} type="button" onClick={onClose} aria-label={closeLabel} ref={closeButtonRef}>
-            {locale === 'zh-hant' ? <ZhHantMonoIcon name="close" size={20} /> : '×'}
+            {isAppleDesignLocale(locale) ? <ZhHantMonoIcon name="close" size={20} /> : '×'}
           </button>
         </div>
         <div className="drawer-utilities">

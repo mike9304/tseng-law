@@ -5,6 +5,7 @@ import JsonLd from '@/components/JsonLd';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
 import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import KoPageShell from '@/components/ko-design/KoPageShell';
 import jaFaqStyles from '@/components/ja-design/JaFaq.module.css';
 import EnFaqShell, { EnFaqGlance } from '@/components/en-design/EnFaqShell';
 import { orderEnFaq } from '@/components/en-design/en-design-data';
@@ -170,5 +171,6 @@ export default async function FaqPage(
     </>
   );
   if (locale === 'zh-hant') return <ZhHantFaqShell>{body}</ZhHantFaqShell>;
+  if (locale === 'ko') return <KoPageShell page="faq">{body}</KoPageShell>;
   return locale === 'en' ? <EnFaqShell>{body}</EnFaqShell> : body;
 }

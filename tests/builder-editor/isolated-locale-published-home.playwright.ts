@@ -68,7 +68,8 @@ test.describe('isolated published canvases per public locale', () => {
 
       expect(desktop.h1Count, `${locale} desktop h1`).toBe(1);
       expect(desktop.h1s[0]?.text).toContain(EXPECTED_H1[locale]);
-      expect(desktop.cinematic, `${locale} cinematic`).toBe(true);
+      // ko, zh-hant, ja and en all open on their own heroes (CINEMATIC_OPENING_SKIPPED_LOCALES).
+      expect(desktop.cinematic, `${locale} cinematic`).toBe(false);
       expect(desktop.overflowPx, `${locale} desktop overflow`).toBeLessThanOrEqual(1);
 
       if (locale === 'zh-hant') {
@@ -79,10 +80,9 @@ test.describe('isolated published canvases per public locale', () => {
         expect(desktop.insightsMinHeightPx).toBe(820);
       }
       if (locale === 'ko') {
-        expect(desktop.pubNodes).toBeGreaterThan(20);
-        expect(desktop.mainMinHeightPx).toBeGreaterThan(7000);
-        expect(desktop.mainMinHeightPx).toBeLessThanOrEqual(7124);
-        expect(desktop.insightsMinHeightPx).toBe(820);
+        // KoHomeBody (2026-10-06) replaces the stock canvas: no saved composite wrappers, no pinned main height.
+        expect(desktop.pubNodes).toBe(0);
+        expect(desktop.mainMinHeightPx).toBeLessThanOrEqual(0);
       }
       if (locale === 'en') {
         expect(desktop.pubNodes).toBeGreaterThan(20);

@@ -240,17 +240,17 @@
 }
 
 /* zh-hant (2026-10-02): neutral text and hairlines; the +/− is the monoline glyph (ZhHantMonoIcon) in #1d1d1f. */
-:global(.site[data-locale='zh-hant']) .root { color: #1d1d1f; }
-:global(.site[data-locale='zh-hant']) .root :global(.section-label) { color: #6e6e73; }
-:global(.site[data-locale='zh-hant']) .root :global(.section-title),
-:global(.site[data-locale='zh-hant']) .root :global(.faq-question) :global(button) { color: #1d1d1f; }
-:global(.site[data-locale='zh-hant']) .root :global(.faq-list) { border-top-color: #e3e3e8; }
-:global(.site[data-locale='zh-hant']) .root :global(.faq-item),
-:global(.site[data-locale='zh-hant']) .root :global(.faq-item.is-open),
-:global(.site[data-locale='zh-hant']) .root :global(.faq-item):hover { border-bottom-color: #e3e3e8; }
-:global(.site[data-locale='zh-hant']) .indicator,
-:global(.site[data-locale='zh-hant']) .root :global(.faq-arrow) { color: #1d1d1f; }
-:global(.site[data-locale='zh-hant']) .root :global(.faq-answer) { color: #6e6e73; }
-:global(.site[data-locale='zh-hant']) .root :global(.faq-question) :global(button):focus-visible { outline: 3px solid #16382d; outline-offset: 2px; }
-:global(.site[data-locale='zh-hant']) .root[data-tone='dark'] .indicator,
-:global(.site[data-locale='zh-hant']) .root[data-tone='dark'] :global(.faq-arrow) { color: #fff; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.section-label) { color: #6e6e73; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.section-title),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-question) :global(button) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-list) { border-top-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-item),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-item.is-open),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-item):hover { border-bottom-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .indicator,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-arrow) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-answer) { color: #6e6e73; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-question) :global(button):focus-visible { outline: 3px solid #16382d; outline-offset: 2px; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root[data-tone='dark'] .indicator,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root[data-tone='dark'] :global(.faq-arrow) { color: #fff; }

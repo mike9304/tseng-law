@@ -23,6 +23,7 @@ import {
   resolveInsightsImageSrc,
 } from '@/components/insights-image';
 import { typesetTitle } from '@/lib/ko-middot';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 interface ArchivePost {
   slug: string;
@@ -181,8 +182,8 @@ export default function InsightsArchiveSection({
   pinnedSlugs?: readonly string[];
 }) {
   const copy = copyByLocale[locale];
-  // zh-hant only: the monoline set replaces the typed → ‹ › of this section; other locales render the glyphs as before.
-  const zhIcons = locale === 'zh-hant';
+  // zh-hant and ko: the monoline set replaces the typed → ‹ › of this section; other locales render the glyphs as before.
+  const zhIcons = isAppleDesignLocale(locale);
   const authorLabel =
     locale === 'ko'
       ? '증준외 변호사 검토'

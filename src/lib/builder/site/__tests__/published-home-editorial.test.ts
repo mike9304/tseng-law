@@ -20,6 +20,7 @@ import {
   deriveJulyHeroEditorialPresentation,
   isSafeNormalizedDocumentEnvelope,
   matchCurrent9PublishedHomeEditorial,
+  matchStockKoCompositeHome,
   publishedHomeEditorialCompositeProps,
   reorderCurrent9PublishedHomeNodes,
   shouldSkipJulyPublishedGeometry,
@@ -388,5 +389,83 @@ describe('july published home editorial derivation', () => {
     expect(interactions).not.toMatch(/function shouldSkipJulyPublishedGeometry/);
     expect(interactions).toContain('applyExpandedSiblingStack');
     expect(interactions).toContain('setExpandedSectionHeight');
+  });
+});
+
+describe('stock ko composite home admission (KoHomeBody, 2026-10-06)', () => {
+  function stockKo() {
+    return structuredClone(normalizedFactory('ko'));
+  }
+
+  it('admits the stock ko home whatever its saved geometry (production is the 8504px seed)', () => {
+    const doc = stockKo();
+    expect(matchStockKoCompositeHome({ document: doc, locale: 'ko', slugPath: '' })).toBe(true);
+    const tall = stockKo();
+    (tall as { stageHeight: number }).stageHeight = 8504;
+    tall.nodes.forEach((node, index) => {
+      node.rect = { ...node.rect, y: index * 900, height: 900 };
+    });
+    expect(matchCurrent9PublishedHomeEditorial({ document: tall, locale: 'ko', slugPath: '' })).toBeNull();
+    expect(matchStockKoCompositeHome({ document: tall, locale: 'ko', slugPath: '' })).toBe(true);
+  });
+
+  it('never admits another locale, a subpage or a non-document', () => {
+    expect(matchStockKoCompositeHome({ document: normalizedFactory('zh-hant'), locale: 'zh-hant', slugPath: '' })).toBe(false);
+    expect(matchStockKoCompositeHome({ document: normalizedFactory('en'), locale: 'en', slugPath: '' })).toBe(false);
+    expect(matchStockKoCompositeHome({ document: stockKo(), locale: 'ko', slugPath: 'about' })).toBe(false);
+    expect(matchStockKoCompositeHome({ document: null, locale: 'ko', slugPath: '' })).toBe(false);
+    expect(matchStockKoCompositeHome({ document: [], locale: 'ko', slugPath: '' })).toBe(false);
+  });
+
+  it('keeps any authored ko home on the saved canvas', () => {
+    const hidden = stockKo();
+    hidden.nodes[3]!.visible = false;
+    expect(matchStockKoCompositeHome({ document: hidden, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const extra = stockKo();
+    extra.nodes.push({ ...structuredClone(extra.nodes[0]!), id: 'authored-banner' });
+    expect(matchStockKoCompositeHome({ document: extra, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const removed = stockKo();
+    removed.nodes.pop();
+    expect(matchStockKoCompositeHome({ document: removed, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const overridden = stockKo();
+    const hero = overridden.nodes.find((node) => node.id === 'home-hero')!;
+    if (hero.kind !== 'composite') throw new Error('stock hero is a composite');
+    hero.content = { ...hero.content, config: { locale: 'ko', overrides: { headline: '작성자 제목' } } };
+    expect(matchStockKoCompositeHome({ document: overridden, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const swapped = stockKo();
+    const services = swapped.nodes.find((node) => node.id === 'home-services')!;
+    if (services.kind !== 'composite') throw new Error('stock services is a composite');
+    services.content = { ...services.content, componentKey: 'home-stats' };
+    expect(matchStockKoCompositeHome({ document: swapped, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const phoneHidden = stockKo();
+    (phoneHidden.nodes[5] as unknown as Record<string, unknown>).responsive = { mobile: { hidden: true } };
+    expect(matchStockKoCompositeHome({ document: phoneHidden, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const animated = stockKo();
+    (animated.nodes[1] as unknown as Record<string, unknown>).animation = { entrance: 'fade-in' };
+    expect(matchStockKoCompositeHome({ document: animated, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const restyled = stockKo();
+    restyled.nodes[2]!.style = { ...restyled.nodes[2]!.style, backgroundColor: '#ff0000' };
+    expect(matchStockKoCompositeHome({ document: restyled, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const rotated = stockKo();
+    rotated.nodes[0]!.rotation = 3;
+    expect(matchStockKoCompositeHome({ document: rotated, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const extraDocKey = stockKo() as unknown as Record<string, unknown>;
+    extraDocKey.authoredTheme = { accent: '#000' };
+    expect(matchStockKoCompositeHome({ document: extraDocKey, locale: 'ko', slugPath: '' })).toBe(false);
+
+    const wrongLocale = stockKo();
+    const faq = wrongLocale.nodes.find((node) => node.id === 'home-faq')!;
+    if (faq.kind !== 'composite') throw new Error('stock faq is a composite');
+    faq.content = { ...faq.content, config: { locale: 'en' } };
+    expect(matchStockKoCompositeHome({ document: wrongLocale, locale: 'ko', slugPath: '' })).toBe(false);
   });
 });

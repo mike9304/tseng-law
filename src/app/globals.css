@@ -25918,9 +25918,9 @@ html[lang='zh-hant'],
   font-weight: 700;
   white-space: nowrap;
 }
-/* zh-hant home on phones: sit above the sticky consultation bar once it is showing. */
+/* zh-hant / ko home on phones: sit above the sticky consultation bar once it is showing. */
 @media (max-width: 767px) {
-  body:has(#zh-hant-home nav[data-hero-visible='false']) .locale-suggestion {
+  body:has(:is(#zh-hant-home, #ko-home) nav[data-hero-visible='false']) .locale-suggestion {
     bottom: calc(68px + 0.75rem + env(safe-area-inset-bottom));
   }
 }
@@ -27214,18 +27214,18 @@ html[dir='rtl'] .guidance-answer {
  * margins) is left alone. Browsers without :has() keep today's behaviour as a whole.
  */
 @supports selector(:has(*)) {
-  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) {
     min-height: 0 !important;
     height: auto !important;
   }
-  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) {
     position: relative !important;
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
   }
-  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > .builder-layout-absolute,
-  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > div:not(.builder-pub-node) {
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) > .builder-layout-absolute,
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) > div:not(.builder-pub-node) {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
@@ -27235,25 +27235,25 @@ html[dir='rtl'] .guidance-answer {
      pins its node to 100% width, so on phones and tablets the main's 16px gutter boxed their full-width
      bands; let them reach the screen edges like the footer. */
   @media (max-width: 1279px) {
-    .site .builder-pub-main:has(> #zh-hant-home[data-zh-hant-design='home']),
-    .site .builder-pub-main:has(#zh-hant-services[data-zh-hant-design='services']) {
+    .site .builder-pub-main:has(> :is(#zh-hant-home[data-zh-hant-design='home'], #ko-home[data-ko-design='home'])),
+    .site .builder-pub-main:has(:is(#zh-hant-services[data-zh-hant-design='services'], #ko-services[data-ko-design='services'])) {
       padding-inline: 0 !important;
     }
-    .site .builder-pub-main:has(#zh-hant-services[data-zh-hant-design='services']) .builder-pub-node:has(#zh-hant-services) {
+    .site .builder-pub-main:has(:is(#zh-hant-services[data-zh-hant-design='services'], #ko-services[data-ko-design='services'])) .builder-pub-node:has(:is(#zh-hant-services, #ko-services)) {
       margin-inline: 0 !important;
     }
     /* Post-deploy check 2026-10-01: published redesigned pages (zh-hant pricing/about/lawyers/contact/faq…)
        kept their composite node at the builder's 375px phone width, leaving a white strip on 390–430px
        phones; let the composite follow its breakout root instead. zh-hant only: ja/en bring their own
        evidence when their redesign lands (Astra 2026-10-01). */
-    .site .builder-pub-main:has([data-zh-hant-design]) .builder-pub-node[data-node-id$='-page-root-composite']:has([data-zh-hant-design]) {
+    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ko-design])) .builder-pub-node[data-node-id$='-page-root-composite']:has(:is([data-zh-hant-design], [data-ko-design])) {
       width: 100% !important;
       max-width: 100% !important;
       left: auto !important;
     }
     /* The zh home is published straight into the main, which the builder zooms to 0.80–0.95 at 1024–1279px
        (iPad landscape, small laptops) with a 1280px width; the redesigned home is responsive on its own. */
-    .site .builder-pub-main:has(> #zh-hant-home[data-zh-hant-design='home']) {
+    .site .builder-pub-main:has(> :is(#zh-hant-home[data-zh-hant-design='home'], #ko-home[data-ko-design='home'])) {
       zoom: 1 !important;
       width: auto !important;
       max-width: none !important;
@@ -27262,19 +27262,19 @@ html[dir='rtl'] .guidance-answer {
   }
 
   @media (min-width: 1280px) {
-    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) {
       max-width: none !important;
     }
-    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design])) {
       width: 100% !important;
       max-width: 100% !important;
       left: auto !important;
     }
     /* Columns: the locale wrapper sits outside the published page, around it. */
-    .site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main {
+    .site :is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design]) .builder-pub-main {
       max-width: none !important;
     }
-    .site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main .builder-pub-node:has(.page-header) {
+    .site :is([data-zh-hant-design], [data-ko-design], [data-ja-design], [data-en-design]) .builder-pub-main .builder-pub-node:has(.page-header) {
       width: 100% !important;
       max-width: 100% !important;
       left: auto !important;
@@ -27284,52 +27284,52 @@ html[dir='rtl'] .guidance-answer {
 
 /* zh-hant home, phones: keep the shared back-to-top button clear of the sticky consultation bar. */
 @media (max-width: 767px) {
-  .site:has(#zh-hant-home) .scroll-top {
+  .site:has(:is(#zh-hant-home, #ko-home)) .scroll-top {
     bottom: calc(84px + env(safe-area-inset-bottom));
   }
 }
 
 /* zh-hant pages: the decorative video pause control sits on bright footage (courtroom) where the cream
    ring measured ~1.2:1 — a dark ring with a white halo stays visible on light and dark frames. */
-.site [data-zh-hant-design] .decorative-autoplay-video__control:focus-visible {
+.site :is([data-zh-hant-design], [data-ko-design]) .decorative-autoplay-video__control:focus-visible {
   outline: 3px solid #0b1712;
   outline-offset: 2px;
   box-shadow: 0 0 0 5px #fff;
 }
 
 /* zh-hant pages incl. home: secondary text on the stone/paper bands needs ≥4.5:1 (#5f7869 gave 4.33). */
-.site [data-zh-hant-design] {
+.site :is([data-zh-hant-design], [data-ko-design]) {
   --text-secondary: #4f5b55;
 }
 
 /* zh-hant pages (pro pass, son7-87 / Opus 5.5, 2026-10-01): a Chinese page carries no English eyebrows
    (SERVICES, OUR TEAM, GUIDE, EMAIL, OFFICES, FAQ…), and every action has the same 2px corner. The home
    has its own rules in ZhHantDesign.module.css. */
-.site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns) .page-header .section-label,
-.site #zh-hant-about .attorney-team-section > .container > .section-label,
-.site #zh-hant-lawyer-profile .section[class*='FAQAccordion'] > .container > .section-label,
-.site #zh-hant-contact :is(.consultation-guide-section, #offices) > .container > .section-label,
-.site #zh-hant-contact .messenger-header .section-label-text,
-.site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-lawyer-profile, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns, #zh-hant-column, [data-zh-hant-design='service-detail']) :is(.ornament-divider, .split-divider) {
+.site :is(#zh-hant-services, #ko-services, #zh-hant-pricing, #ko-pricing, #zh-hant-about, #ko-about, #zh-hant-lawyers, #ko-lawyers, #zh-hant-contact, #ko-contact, #zh-hant-faq, #ko-faq, #zh-hant-columns, #ko-columns) .page-header .section-label,
+.site :is(#zh-hant-about, #ko-about) .attorney-team-section > .container > .section-label,
+.site :is(#zh-hant-lawyer-profile, #ko-lawyer-profile) .section[class*='FAQAccordion'] > .container > .section-label,
+.site :is(#zh-hant-contact, #ko-contact) :is(.consultation-guide-section, #offices) > .container > .section-label,
+.site :is(#zh-hant-contact, #ko-contact) .messenger-header .section-label-text,
+.site :is(#zh-hant-services, #ko-services, #zh-hant-pricing, #ko-pricing, #zh-hant-about, #ko-about, #zh-hant-lawyers, #ko-lawyers, #zh-hant-lawyer-profile, #ko-lawyer-profile, #zh-hant-contact, #ko-contact, #zh-hant-faq, #ko-faq, #zh-hant-columns, #ko-columns, #zh-hant-column, #ko-column, [data-zh-hant-design='service-detail'], [data-ko-design='service-detail']) :is(.ornament-divider, .split-divider) {
   display: none !important;
 }
-.site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-lawyer-profile, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns, #zh-hant-column, [data-zh-hant-design='service-detail']) .button {
+.site :is(#zh-hant-services, #ko-services, #zh-hant-pricing, #ko-pricing, #zh-hant-about, #ko-about, #zh-hant-lawyers, #ko-lawyers, #zh-hant-lawyer-profile, #ko-lawyer-profile, #zh-hant-contact, #ko-contact, #zh-hant-faq, #ko-faq, #zh-hant-columns, #ko-columns, #zh-hant-column, #ko-column, [data-zh-hant-design='service-detail'], [data-ko-design='service-detail']) .button {
   /* Apple pass (2026-10-01): pills everywhere, like the home. */
   border-radius: 999px !important;
 }
 
 /* zh-hant pages: header logo tap height ≥44px (measured 224.6x40 at 390; header height unchanged), and the
    back-to-top button leaves the tab order while it is invisible (it was focusable at opacity 0). */
-.site[data-locale='zh-hant'] .header-logo {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .header-logo {
   min-height: 44px;
 }
-.site[data-locale='zh-hant'] .scroll-top:not([data-visible='true']) {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .scroll-top:not([data-visible='true']) {
   visibility: hidden;
 }
-.site[data-locale='zh-hant'] .scroll-top {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .scroll-top {
   transition: opacity 200ms ease, transform 200ms ease, visibility 0s linear 200ms, background 180ms ease, box-shadow 180ms ease;
 }
-.site[data-locale='zh-hant'] .scroll-top[data-visible='true'] {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .scroll-top[data-visible='true'] {
   visibility: visible;
   transition-delay: 0s;
 }
@@ -27342,12 +27342,15 @@ html[dir='rtl'] .guidance-answer {
    black bands and #1d1d1f dark tiles. The ink #16382d stays only on what you press: primary pills, text links,
    open or selected states, focus rings and the consent checkbox.
    Scope: html[lang='zh-Hant'] (the token layer has to reach the language picker and the search overlay, which
-   are portaled to <body>), .site[data-locale='zh-hant'] and the zh page roots. ko / ja / en never match.
+   are portaled to <body>), .site[data-locale='zh-hant'] and the zh page roots. ja / en never match.
+   ko shares the whole layer since 2026-10-06 (operator: 「전체적 디자인 아직 밤티 나는데」 → ko adopts this system):
+   every selector reads :is(zh-hant, ko) — html[lang], .site[data-locale], #zh-hant-<page> / #ko-<page> roots and
+   [data-zh-hant-design] / [data-ko-design]. Korean type and copy differences live in the ko sections of each module.
    ===================================================================================================== */
 
-/* 1 · Tokens. The :root values stay for ko / ja / en. Aliases declared on :root with var() (--accent, --navy,
+/* 1 · Tokens. The :root values stay for ja / en. Aliases declared on :root with var() (--accent, --navy,
    --primary, --text, --text-primary, --bg-white …) resolve against these, so they follow too. */
-html[lang='zh-Hant'],
+html:is([lang='zh-Hant'], [lang='ko']),
 html[lang='zh-hant'] {
   --purple-light: #0d231b;
   --purple-bg: #f5f5f7;
@@ -27401,25 +27404,25 @@ html[lang='zh-hant'] {
   --shadow-card-hover: 0 16px 34px rgb(0 0 0 / 10%), 0 6px 14px rgb(0 0 0 / 5%);
 }
 
-html[lang='zh-Hant'] ::selection {
+html:is([lang='zh-Hant'], [lang='ko']) ::selection {
   background: rgb(0 0 0 / 14%);
   color: inherit;
 }
 
 /* Focus: the global 2px #234d3c ring becomes 3px ink; :where() keeps the weight low, so component rings
    (ink, or white on dark surfaces) still win. */
-html[lang='zh-Hant'] :where(:focus-visible) {
+html:is([lang='zh-Hant'], [lang='ko']) :where(:focus-visible) {
   outline: 3px solid #16382d;
   outline-offset: 3px;
 }
 
 /* The body's moss radial wash goes; the page is plain white. */
-html[lang='zh-Hant'] body {
+html:is([lang='zh-Hant'], [lang='ko']) body {
   background: #fff;
 }
 
 /* zh pages set --text-secondary on [data-zh-hant-design] (was #4f5b55, a green grey). */
-.site [data-zh-hant-design] {
+.site :is([data-zh-hant-design], [data-ko-design]) {
   --text-secondary: #6e6e73;
 }
 
@@ -27440,12 +27443,12 @@ button.link-underline > .zh-mono.zh-trail,
 
 /* The same glyphs where the shared markup draws its arrow in CSS (::after). A mask leaves that markup untouched
    and takes the link colour; the paths are the ones in ZhHantMonoIcon (chevron-right, arrow-up-right). */
-html[lang='zh-Hant'] {
+html:is([lang='zh-Hant'], [lang='ko']) {
   --zh-glyph-chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9.5 5.5 6.5 6.5-6.5 6.5'/%3E%3C/svg%3E");
   --zh-glyph-arrow-up-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6.5 17.5 17.25 6.75M8.5 6.75h8.75v8.75'/%3E%3C/svg%3E");
 }
-html[lang='zh-Hant'] .profile-link-list a[target='_blank'][href^='http']:not(.button)::after,
-html[lang='zh-Hant'] .media-hub-card a[target='_blank'][href^='http']:not(.button)::after {
+html:is([lang='zh-Hant'], [lang='ko']) .profile-link-list a[target='_blank'][href^='http']:not(.button)::after,
+html:is([lang='zh-Hant'], [lang='ko']) .media-hub-card a[target='_blank'][href^='http']:not(.button)::after {
   content: '';
   display: inline-block;
   flex: none;
@@ -27460,63 +27463,63 @@ html[lang='zh-Hant'] .media-hub-card a[target='_blank'][href^='http']:not(.butto
 }
 
 /* 3 · Chrome drawn by global classes. The search overlay is portaled to <body>, so it is scoped by html[lang]. */
-html[lang='zh-Hant'] .search-overlay {
+html:is([lang='zh-Hant'], [lang='ko']) .search-overlay {
   background: rgb(0 0 0 / 40%);
 }
-html[lang='zh-Hant'] .search-panel {
+html:is([lang='zh-Hant'], [lang='ko']) .search-panel {
   border: 1px solid #e3e3e8;
   border-radius: 18px;
   box-shadow: 0 24px 64px rgb(0 0 0 / 18%);
 }
-html[lang='zh-Hant'] .search-bar {
+html:is([lang='zh-Hant'], [lang='ko']) .search-bar {
   border-color: #86868b;
   box-shadow: none;
 }
-html[lang='zh-Hant'] .search-bar:focus-within {
+html:is([lang='zh-Hant'], [lang='ko']) .search-bar:focus-within {
   border-color: #16382d;
   box-shadow: 0 0 0 3px rgb(22 56 45 / 14%);
 }
-html[lang='zh-Hant'] .search-input {
+html:is([lang='zh-Hant'], [lang='ko']) .search-input {
   caret-color: #1d1d1f;
 }
-html[lang='zh-Hant'] .search-tabs button,
-html[lang='zh-Hant'] .search-tabs a {
+html:is([lang='zh-Hant'], [lang='ko']) .search-tabs button,
+html:is([lang='zh-Hant'], [lang='ko']) .search-tabs a {
   border-color: #e3e3e8;
   color: #1d1d1f;
 }
-html[lang='zh-Hant'] .search-tabs .active {
+html:is([lang='zh-Hant'], [lang='ko']) .search-tabs .active {
   border-color: #1d1d1f;
   background: #f5f5f7;
   color: #1d1d1f;
 }
-html[lang='zh-Hant'] .search-tabs button:hover,
-html[lang='zh-Hant'] .search-tabs button:focus-visible,
-html[lang='zh-Hant'] .search-tabs a:hover,
-html[lang='zh-Hant'] .search-tabs a:focus-visible {
+html:is([lang='zh-Hant'], [lang='ko']) .search-tabs button:hover,
+html:is([lang='zh-Hant'], [lang='ko']) .search-tabs button:focus-visible,
+html:is([lang='zh-Hant'], [lang='ko']) .search-tabs a:hover,
+html:is([lang='zh-Hant'], [lang='ko']) .search-tabs a:focus-visible {
   border-color: #1d1d1f;
   color: #1d1d1f;
 }
-html[lang='zh-Hant'] .chip {
+html:is([lang='zh-Hant'], [lang='ko']) .chip {
   border-color: #e3e3e8;
   border-radius: 999px;
   color: #1d1d1f;
 }
-html[lang='zh-Hant'] .chip:hover,
-html[lang='zh-Hant'] .chip:focus-visible {
+html:is([lang='zh-Hant'], [lang='ko']) .chip:hover,
+html:is([lang='zh-Hant'], [lang='ko']) .chip:focus-visible {
   border-color: #d2d2d7;
   background: #f5f5f7;
   color: #1d1d1f;
 }
-html[lang='zh-Hant'] .search-panel .section-label::before {
+html:is([lang='zh-Hant'], [lang='ko']) .search-panel .section-label::before {
   content: none;
 }
-html[lang='zh-Hant'] .search-panel .section-label {
+html:is([lang='zh-Hant'], [lang='ko']) .search-panel .section-label {
   color: #6e6e73;
 }
 
 /* Native clear button of every search field: an iOS-style filled disc with a cut-out x, 24px target,
    #6e6e73 (5.07:1 on white); white 72% on the dark hero. A mask, so forced colours repaint it below. */
-html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button {
+html:is([lang='zh-Hant'], [lang='ko']) input[type='search']::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
   width: 24px;
@@ -27527,53 +27530,53 @@ html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button {
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cmask id='m'%3E%3Crect width='24' height='24' fill='white'/%3E%3Cpath d='M8.75 8.75l6.5 6.5M15.25 8.75l-6.5 6.5' stroke='black' stroke-width='1.9' stroke-linecap='round'/%3E%3C/mask%3E%3Ccircle cx='12' cy='12' r='10.5' fill='black' mask='url(%23m)'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cmask id='m'%3E%3Crect width='24' height='24' fill='white'/%3E%3Cpath d='M8.75 8.75l6.5 6.5M15.25 8.75l-6.5 6.5' stroke='black' stroke-width='1.9' stroke-linecap='round'/%3E%3C/mask%3E%3Ccircle cx='12' cy='12' r='10.5' fill='black' mask='url(%23m)'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
 }
-html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button:hover {
+html:is([lang='zh-Hant'], [lang='ko']) input[type='search']::-webkit-search-cancel-button:hover {
   background-color: #1d1d1f;
 }
-html[lang='zh-Hant'] .hero input[type='search']::-webkit-search-cancel-button {
+html:is([lang='zh-Hant'], [lang='ko']) .hero input[type='search']::-webkit-search-cancel-button {
   background-color: rgb(255 255 255 / 72%);
 }
-html[lang='zh-Hant'] .hero input[type='search']::-webkit-search-cancel-button:hover {
+html:is([lang='zh-Hant'], [lang='ko']) .hero input[type='search']::-webkit-search-cancel-button:hover {
   background-color: #fff;
 }
 @media (forced-colors: active) {
-  html[lang='zh-Hant'] input[type='search']::-webkit-search-cancel-button {
+  html:is([lang='zh-Hant'], [lang='ko']) input[type='search']::-webkit-search-cancel-button {
     forced-color-adjust: none;
     background-color: currentColor;
   }
 }
 
 /* Mega panels: white with a hairline, links #1d1d1f, chevrons #86868b (decorative; the link text names it). */
-.site[data-locale='zh-hant'] .mega-panel {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .mega-panel {
   background: #fff;
   border-bottom-color: #e3e3e8;
 }
-.site[data-locale='zh-hant'] .mega-title {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .mega-title {
   color: #1d1d1f;
 }
-.site[data-locale='zh-hant'] .mega-links li {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .mega-links li {
   border-color: #e3e3e8;
 }
-.site[data-locale='zh-hant'] .mega-links a {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .mega-links a {
   color: #1d1d1f;
 }
-.site[data-locale='zh-hant'] .mega-chevron {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .mega-chevron {
   display: inline-flex;
   color: #86868b;
 }
-.site[data-locale='zh-hant'] .mega-links a:hover .mega-chevron,
-.site[data-locale='zh-hant'] .mega-links a:focus-visible .mega-chevron {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .mega-links a:hover .mega-chevron,
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .mega-links a:focus-visible .mega-chevron {
   color: #1d1d1f;
 }
-html[lang='zh-Hant'] .search-panel header .icon-button {
+html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button {
   min-height: 44px;
   padding-inline: 1rem;
   border-color: #e3e3e8;
   border-radius: 999px;
   color: #1d1d1f;
 }
-html[lang='zh-Hant'] .search-panel header .icon-button:hover,
-html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
+html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:hover,
+html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-visible {
   border-color: #d2d2d7;
   background: #f5f5f7;
 }
@@ -27581,27 +27584,27 @@ html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
 /* 4 · Shared page parts (zh scope). */
 /* Inline links that sit in text (office phone, review link) keep a quiet underline at rest: ink on #1d1d1f text
    is 1.3:1, so colour alone would not mark them (WCAG 1.4.1). The hover bar under them goes. */
-.site[data-locale='zh-hant'] #offices .phone-number,
-.site[data-locale='zh-hant'] #offices .office-rating-link {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) #offices .phone-number,
+.site:is([data-locale='zh-hant'], [data-locale='ko']) #offices .office-rating-link {
   color: #16382d;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-color: rgb(22 56 45 / 40%);
   text-underline-offset: 4px;
 }
-.site[data-locale='zh-hant'] #offices .phone-number:hover,
-.site[data-locale='zh-hant'] #offices .office-rating-link:hover {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) #offices .phone-number:hover,
+.site:is([data-locale='zh-hant'], [data-locale='ko']) #offices .office-rating-link:hover {
   text-decoration-color: currentColor;
 }
-.site[data-locale='zh-hant'] #offices .phone-number::after {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) #offices .phone-number::after {
   content: none;
 }
-.site[data-locale='zh-hant'] #offices .card-copy {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) #offices .card-copy {
   color: #6e6e73;
 }
 
 /* Back to top: a white disc with a hairline and a soft shadow; the arrow is the monoline glyph in #1d1d1f. */
-.site[data-locale='zh-hant'] .scroll-top {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .scroll-top {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -27611,8 +27614,8 @@ html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
   color: #1d1d1f;
   box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
 }
-.site[data-locale='zh-hant'] .scroll-top:hover,
-.site[data-locale='zh-hant'] .scroll-top:focus-visible {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .scroll-top:hover,
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .scroll-top:focus-visible {
   border-color: #d2d2d7;
   background: #f5f5f7;
   color: #1d1d1f;
@@ -27620,7 +27623,7 @@ html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
 
 /* The map placeholder (shows only if the Google map cannot load): neutral grid and roads, a map pin on a white
    disc, ink only on the link. */
-.site[data-locale='zh-hant'] .office-map-fallback {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .office-map-fallback {
   background-color: #f5f5f7;
   background-image:
     linear-gradient(22deg, transparent 0 43%, rgb(0 0 0 / 7%) 44% 46%, transparent 47% 100%),
@@ -27628,7 +27631,7 @@ html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
     repeating-linear-gradient(0deg, rgb(0 0 0 / 4%) 0 1px, transparent 1px 44px),
     repeating-linear-gradient(90deg, rgb(0 0 0 / 3%) 0 1px, transparent 1px 52px);
 }
-.site[data-locale='zh-hant'] .office-map-fallback::after {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .office-map-fallback::after {
   width: 44px;
   height: 44px;
   border: 0;
@@ -27636,28 +27639,28 @@ html[lang='zh-Hant'] .search-panel header .icon-button:focus-visible {
   box-shadow: 0 10px 30px rgb(0 0 0 / 12%);
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d1d1f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21.25s-6.75-5.85-6.75-11.25a6.75 6.75 0 0 1 13.5 0c0 5.4-6.75 11.25-6.75 11.25Z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
 }
-.site[data-locale='zh-hant'] .office-map-fallback-panel {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .office-map-fallback-panel {
   border-color: #e3e3e8;
 }
-.site[data-locale='zh-hant'] .office-map-fallback-kicker {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .office-map-fallback-kicker {
   color: #6e6e73;
 }
-.site[data-locale='zh-hant'] .office-map-fallback-link {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .office-map-fallback-link {
   color: #16382d;
   text-decoration-color: rgb(22 56 45 / 40%);
 }
 
 /* Decorative video controls: the glyph is white (was gold), hover stays white, focus is a black ring with a
    white halo on light footage. */
-.site[data-locale='zh-hant'] .decorative-autoplay-video__control-icon {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .decorative-autoplay-video__control-icon {
   display: inline-flex;
   color: #fff;
 }
-.site[data-locale='zh-hant'] .decorative-autoplay-video__control:hover {
+.site:is([data-locale='zh-hant'], [data-locale='ko']) .decorative-autoplay-video__control:hover {
   color: #fff;
   border-color: rgb(255 255 255 / 90%);
 }
-.site [data-zh-hant-design] .decorative-autoplay-video__control:focus-visible {
+.site :is([data-zh-hant-design], [data-ko-design]) .decorative-autoplay-video__control:focus-visible {
   outline-color: #000;
 }
 

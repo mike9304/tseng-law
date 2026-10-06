@@ -12,11 +12,18 @@ import styles from '../ZhHantDesign.module.css';
  * away. An IntersectionObserver drives it, so it works with reduced motion and in browsers without
  * scroll-driven animations (post-deploy check 2026-10-01: the bar covered the chips there).
  */
-export default function ZhHantMobileCta() {
+const MOBILE_CTA_COPY = {
+  'zh-hant': { root: 'zh-hant-home', label: '快速聯絡', primary: '申請電子郵件諮詢', secondary: '服務領域' },
+  // ko home (2026-10-06): the hero CTA label and the header's 업무분야.
+  ko: { root: 'ko-home', label: '빠른 연락', primary: '이메일 상담 신청', secondary: '업무분야' },
+} as const;
+
+export default function ZhHantMobileCta({ locale = 'zh-hant' }: { locale?: 'zh-hant' | 'ko' } = {}) {
+  const copy = MOBILE_CTA_COPY[locale];
   const [heroVisible, setHeroVisible] = useState(true);
 
   useEffect(() => {
-    const hero = document.querySelector('#zh-hant-home #hero');
+    const hero = document.querySelector(`#${copy.root} #hero`);
     if (!hero || typeof IntersectionObserver === 'undefined') {
       setHeroVisible(false);
       return;
@@ -27,17 +34,17 @@ export default function ZhHantMobileCta() {
     );
     observer.observe(hero);
     return () => observer.disconnect();
-  }, []);
+  }, [copy.root]);
 
   return (
     <nav
       className={styles.mobileCta}
-      aria-label="快速聯絡"
+      aria-label={copy.label}
       data-hero-visible={heroVisible ? 'true' : 'false'}
       inert={heroVisible ? true : undefined}
     >
-      <a className={styles.mobileCtaPrimary} href={getConsultationPublicMailto('zh-hant')}>申請電子郵件諮詢</a>
-      <a className={styles.mobileCtaSecondary} href="#practice">服務領域</a>
+      <a className={styles.mobileCtaPrimary} href={getConsultationPublicMailto(locale)}>{copy.primary}</a>
+      <a className={styles.mobileCtaSecondary} href="#practice">{copy.secondary}</a>
     </nav>
   );
 }

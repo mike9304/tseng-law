@@ -8,6 +8,7 @@ import {
   getEmailCopiedMessage,
 } from '@/lib/consultation/public-contact';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 function copyEmailAddress(email: string): boolean | Promise<void> {
   if (navigator.clipboard?.writeText) {
@@ -66,7 +67,7 @@ export default function FooterEmailCopyButton({
         }}
         aria-label={copyLabel}
       >
-        {locale === 'zh-hant' ? (
+        {isAppleDesignLocale(locale) ? (
           <ZhHantMonoIcon name="copy" size={16} />
         ) : (
           <svg

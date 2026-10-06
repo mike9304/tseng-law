@@ -12,6 +12,7 @@ import {
   homeResultsTextSurfaceIds,
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 /** Calm Taiwan civil courtroom editorial plate — used only by home `#results`. */
 export const HOME_RESULTS_EDITORIAL_IMAGE_SRC =
@@ -172,7 +173,7 @@ export default function HomeCaseResultsSplit({
           sizes="(max-width: 900px) 100vw, 52vw"
           loop={false}
           controlLabels={controlLabels}
-          controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
+          controlIcons={isAppleDesignLocale(locale) ? ZH_VIDEO_CONTROL_ICONS : undefined}
         />
       </div>
       )}
@@ -207,8 +208,8 @@ export default function HomeCaseResultsSplit({
           href={href}
           data-builder-surface-key={homeResultsButtonSurfaceIds[0]}
         >
-          {/* zh-hant: the monoline arrow sits outside the editable text; other locales keep the typed arrow. */}
-          {locale === 'zh-hant'
+          {/* zh-hant, ko: the monoline arrow sits outside the editable text; other locales keep the typed arrow. */}
+          {isAppleDesignLocale(locale)
             ? <><SurfaceText surfaceKey={homeResultsButtonSurfaceIds[0]}>{copy.cta}</SurfaceText><ZhHantTrail /></>
             : <SurfaceText surfaceKey={homeResultsButtonSurfaceIds[0]}>{copy.cta} →</SurfaceText>}
         </SmartLink>

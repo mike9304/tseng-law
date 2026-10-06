@@ -969,6 +969,60 @@ export function matchCurrent9PublishedHomeEditorial(input: {
   return { locale };
 }
 
+/**
+ * The ko home joins the zh-hant Apple system (2026-10-06) and renders KoHomeBody in place of the saved
+ * canvas — but only while that canvas is still the stock home: the nine home composites, each visible, unrotated,
+ * in the default composite style, carrying nothing but `{ componentKey, config: { locale: 'ko' } }` and no other
+ * authoring keys (responsive overrides, animation, anchor, hover…). Only geometry (rect, zIndex, stageHeight) is
+ * free: production's ko home is the 8504px seed that the exact current9 fingerprint rejects (its nodes differ from
+ * the factory in rect alone), and the code body owns the layout either way. Any authored change — another node, a
+ * hidden, restyled or re-configured section, a phone-only override, a different component — keeps the saved canvas
+ * on screen. Read-only.
+ */
+export function matchStockKoCompositeHome(input: {
+  document: unknown;
+  locale: string;
+  slugPath: string;
+}): boolean {
+  const { document, locale, slugPath } = input;
+  if (locale !== 'ko' || slugPath !== '') return false;
+  if (!isSafeNormalizedDocumentEnvelope(document)) return false;
+  if (document === null || typeof document !== 'object' || Array.isArray(document)) return false;
+  const documentLocale = ownValue(document, 'locale');
+  if (documentLocale !== undefined && documentLocale !== 'ko') return false;
+  for (const key of Reflect.ownKeys(document)) {
+    if (typeof key !== 'string' || !EXPECTED_DOCUMENT_KEYS.has(key)) return false;
+  }
+  const nodes = ownValue(document, 'nodes');
+  if (!Array.isArray(nodes) || nodes.length !== HOME_COMPOSITE_SECTION_IDS.length) return false;
+  const seen = new Set<string>();
+  for (const node of nodes) {
+    if (!node || typeof node !== 'object' || Array.isArray(node)) return false;
+    const id = ownValue(node, 'id');
+    if (typeof id !== 'string' || seen.has(id)) return false;
+    if (!(HOME_COMPOSITE_SECTION_IDS as readonly string[]).includes(id)) return false;
+    seen.add(id);
+    for (const key of Reflect.ownKeys(node)) {
+      if (typeof key !== 'string' || (!EXPECTED_NODE_KEYS.has(key) && key !== 'parentId')) return false;
+    }
+    if (ownValue(node, 'kind') !== 'composite') return false;
+    if (ownValue(node, 'visible') !== true) return false;
+    if (ownValue(node, 'rotation') !== 0) return false;
+    if (!sameJson(ownValue(node, 'style'), expectedStyle())) return false;
+    const parentId = ownValue(node, 'parentId');
+    if (parentId !== undefined && parentId !== null) return false;
+    const content = ownValue(node, 'content');
+    if (!content || typeof content !== 'object' || Array.isArray(content)) return false;
+    if (Reflect.ownKeys(content).some((key) => key !== 'componentKey' && key !== 'config')) return false;
+    if (ownValue(content, 'componentKey') !== CURRENT9_COMPONENT_KEYS[id as HomeCompositeSectionId]) return false;
+    const config = ownValue(content, 'config');
+    if (!config || typeof config !== 'object' || Array.isArray(config)) return false;
+    const configKeys = Reflect.ownKeys(config);
+    if (configKeys.length !== 1 || configKeys[0] !== 'locale' || ownValue(config, 'locale') !== 'ko') return false;
+  }
+  return seen.size === HOME_COMPOSITE_SECTION_IDS.length;
+}
+
 export function reorderCurrent9PublishedHomeNodes<T extends { id: string }>(nodes: readonly T[]): T[] {
   const byId = new Map(nodes.map((node) => [node.id, node]));
   const ordered: T[] = [];

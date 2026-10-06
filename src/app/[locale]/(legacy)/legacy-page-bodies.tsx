@@ -23,6 +23,7 @@ import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 import JaPricingBody from '@/components/ja-design/JaPricingBody';
 import JaPageShell from '@/components/ja-design/JaPageShell';
+import KoPageShell from '@/components/ko-design/KoPageShell';
 import jaAboutStyles from '@/components/ja-design/JaAbout.module.css';
 import JaAboutFirm from '@/components/ja-design/JaAboutFirm';
 import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
@@ -93,12 +94,12 @@ export function AboutLegacyPageBody({ locale }: { locale: SiteLocale }) {
     );
   }
   return (
-    <>
+    <KoPageShell page="about">
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <FirmIntroductionSection locale={locale} />
       <AttorneyProfileSection locale={locale} />
       <ContactBlocks locale={locale} />
-    </>
+    </KoPageShell>
   );
 }
 
@@ -118,7 +119,7 @@ export function ServicesLegacyPageBody({
   if (locale === 'ja') return <JaServicesBody showHero={showHero} showRepeater={showRepeater} />;
   if (locale === 'en') return <EnServicesBody showHero={showHero} showRepeater={showRepeater} />;
   return (
-    <>
+    <KoPageShell page="services">
       {showHero ? (
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
@@ -126,7 +127,7 @@ export function ServicesLegacyPageBody({
         <ServicesBento locale={locale} showHeader={!showHero} presentation="editorial" />
       ) : null}
       <EnAcquisitionGuideLinks locale={locale} variant="compact" />
-    </>
+    </KoPageShell>
   );
 }
 
@@ -153,7 +154,7 @@ export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   // ja design (Opus 5.5 ja lane): same six blocks in the same order, scoped by the ja contact module.
   return locale === 'ja'
     ? <JaPageShell page="contact" className={jaContactStyles.root}>{blocks.props.children}</JaPageShell>
-    : blocks;
+    : <KoPageShell page="contact">{blocks.props.children}</KoPageShell>;
 }
 
 const attorneyFactLabels = {
@@ -331,7 +332,8 @@ export function LawyersLegacyPageBody({
     return <div className={zhLawyersStyles.root} id="zh-hant-lawyers" data-zh-hant-design="lawyers">{body}</div>;
   }
   // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper.
-  return locale === 'en' ? <EnLawyersShell>{body}</EnLawyersShell> : body;
+  // ko (2026-10-06): the Apple-system shell; it also lets the saved canvas height follow the grown team.
+  return locale === 'en' ? <EnLawyersShell>{body}</EnLawyersShell> : <KoPageShell page="lawyers">{body}</KoPageShell>;
 }
 
 export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
@@ -350,13 +352,14 @@ export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
     })),
   };
 
-  return (
+  const body = (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <FAQAccordion locale={locale} items={items} />
       <JsonLd data={faqSchema} />
     </>
   );
+  return locale === 'ko' ? <KoPageShell page="faq">{body}</KoPageShell> : body;
 }
 
 export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
@@ -365,10 +368,10 @@ export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
   if (locale === 'en') return <EnPricingBody />;
   const copy = pageCopy[locale].pricing;
   return (
-    <>
+    <KoPageShell page="pricing">
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <PricingCards locale={locale} />
-    </>
+    </KoPageShell>
   );
 }
 
@@ -403,7 +406,7 @@ export function ColumnsLegacyPageBody({
   const showHero = isTemplateBlockVisible(visibleBlockIds, 'columns.list.hero');
   const showRepeater = isTemplateBlockVisible(visibleBlockIds, 'columns.list.repeater');
 
-  return (
+  const body = (
     <>
       {showHero ? (
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description}>
@@ -423,6 +426,7 @@ export function ColumnsLegacyPageBody({
       ) : null}
     </>
   );
+  return locale === 'ko' ? <KoPageShell page="columns">{body}</KoPageShell> : body;
 }
 
 export function VideosLegacyPageBody({
@@ -449,6 +453,7 @@ export function VideosLegacyPageBody({
     );
   }
   // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper, closed by the en contact band.
+  if (locale === 'ko') return <KoPageShell page="videos">{body}</KoPageShell>;
   return locale === 'en' ? <EnVideosShell>{body}</EnVideosShell> : body;
 }
 
@@ -475,6 +480,7 @@ export function PrivacyLegacyPageBody({ locale }: { locale: SiteLocale }) {
     </>
   );
   // ja 昊 V2 inner pages (2026-10-02): the same blocks inside the ja wrapper (JaLegal.module.css).
+  if (locale === 'ko') return <KoPageShell page="privacy">{body}</KoPageShell>;
   return locale === 'ja' ? <JaPageShell page="privacy" className={jaLegalStyles.root}>{body}</JaPageShell> : body;
 }
 
@@ -501,6 +507,7 @@ export function DisclaimerLegacyPageBody({ locale }: { locale: SiteLocale }) {
     </>
   );
   // ja 昊 V2 inner pages (2026-10-02): the same blocks inside the ja wrapper (JaLegal.module.css).
+  if (locale === 'ko') return <KoPageShell page="disclaimer">{body}</KoPageShell>;
   return locale === 'ja' ? <JaPageShell page="disclaimer" className={jaLegalStyles.root}>{body}</JaPageShell> : body;
 }
 

@@ -57,8 +57,8 @@ export default async function RootLayout({
 }) {
   const pathname = await getRequestPathname();
   const language = resolveDocumentLanguage(pathname);
-  // Homes that play the full-screen opening (zh-hant, ja and en open on their own heroes instead).
-  const isLocaleHome = /^\/(?:ko)\/?$/i.test(pathname ?? '');
+  // No public home preloads the opening seal any more: zh-hant, ja, en and (since 2026-10-06) ko open on
+  // their own heroes; the guidance languages never preloaded it.
   // next/font variables must live on <html> so :root semantic tokens resolve.
   const fontClassName = getLocaleFontClassName(language);
   // Arabic is the first right-to-left public language. `dir` must sit on <html>
@@ -70,14 +70,6 @@ export default async function RootLayout({
       <head>
         {getLocaleFontStylesheets(language).map(href => <link key={`preload:${href}`} rel="preload" as="style" href={href} />)}
         {getLocaleFontStylesheets(language).map(href => <link key={href} rel="stylesheet" href={href} />)}
-        {isLocaleHome ? (
-          <link
-            rel="preload"
-            as="image"
-            href="/images/brand/hovering-seal-official-opening.webp"
-            fetchPriority="high"
-          />
-        ) : null}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<style>.reveal,.reveal-stagger > *{opacity:1;transform:none;pointer-events:auto;transition:none}</style>`,

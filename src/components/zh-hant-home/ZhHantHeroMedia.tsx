@@ -19,7 +19,8 @@ export const ZH_HANT_HERO_MEDIA = {
   mobileMediaQuery: '(max-width: 767px)',
 };
 
-export default function ZhHantHeroMedia() {
+/** The ko home (2026-10-06) shares this first screen; `locale` only picks the pause/play labels. */
+export default function ZhHantHeroMedia({ locale = 'zh-hant' }: { locale?: 'zh-hant' | 'ko' } = {}) {
   return (
     <div className={styles.heroBackdrop}>
       <DecorativeAutoplayVideo
@@ -39,7 +40,7 @@ export default function ZhHantHeroMedia() {
         deferVideoUntilPosterPaint
         deferVideoUntilPosterPaintOnAllViewports
         rootMargin="0px"
-        controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS['zh-hant']}
+        controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
         controlIcons={ZH_VIDEO_CONTROL_ICONS}
       />
     </div>

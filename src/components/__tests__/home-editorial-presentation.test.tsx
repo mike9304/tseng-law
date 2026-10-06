@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { Children, createElement, isValidElement, type ReactElement } from 'react';
+import { Children, createElement, isValidElement, type ReactElement, type ReactNode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
@@ -15,8 +15,12 @@ import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import Reveal from '@/components/Reveal';
-import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
+import KoHomeBody from '@/components/KoHomeBody';
+import KoAudienceDoors from '@/components/ko-home/KoAudienceDoors';
+import KoEngagement from '@/components/ko-home/KoEngagement';
+import ZhHantMobileCta from '@/components/zh-hant-home/ZhHantMobileCta';
+import ZhHantPracticeFocus from '@/components/zh-hant-home/ZhHantPracticeFocus';
 import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
 import JaHero from '@/components/ja-design/kou/JaHero';
 import JaSukashi from '@/components/ja-design/kou/JaSukashi';
@@ -115,11 +119,6 @@ function serviceSummaryParagraphs(html: string): string[] {
   return [...html.matchAll(/<p class="[^"]*services-card-summary[^"]*">([\s\S]*?)<\/p>/g)].map(
     (match) => decodeEntities(match[1].replace(/<[^>]+>/g, '')),
   );
-}
-
-function revealChild(node: unknown) {
-  if (!isValidElement<{ children?: unknown }>(node)) return null;
-  return node.props.children ?? null;
 }
 
 function elementType(node: unknown) {
@@ -308,7 +307,7 @@ describe('ServicesBento editorial full descriptions', () => {
 describe('legacy home editorial composition', () => {
   // ja design (Opus 5.5 ja lane, 2026-10-01): the shared order below stays pinned on the shared
   // legacy body (en); ja now has its own Japanese-reader order, pinned in the next test.
-  it('wraps retained sections in editorial order with Insights right after the hero', () => {
+  it('renders the ko home as KoHomeBody: the zh-hant Apple journey with the ko posts and FAQ passed through', () => {
     const posts = [
       {
         slug: 'sample',
@@ -322,62 +321,45 @@ describe('legacy home editorial composition', () => {
       },
     ];
     const faqItems = [{ question: 'Q', answer: 'A' } as FAQItem];
-    // zh-hant, ja and en each render their own home body (2026-10-01 lanes), so the shared body is
-    // pinned on ko, the one locale that still renders it. WO-G6's EN overseas entry block now lives in
-    // EnHomeBody / the ja home and is no longer part of the shared body.
-    const body = LegacyHomePageBody({ locale: 'ko', posts, faqItems });
-    const allChildren = Children.toArray(body.props.children);
+    // ko joined the zh-hant Apple system on 2026-10-06, so every main locale now renders its own home body.
+    const body = LegacyHomePageBody({ locale: 'ko', posts, faqItems }) as ReactElement<{ posts: unknown; faqItems: unknown }>;
+    expect(body.type).toBe(KoHomeBody);
+    expect(body.props.posts).toBe(posts);
+    expect(body.props.faqItems).toBe(faqItems);
 
-    // The column archive sits directly under the hero (no scroll reveal), as on the Korean home.
-    expect(allChildren).toHaveLength(10);
-    expect(elementType(allChildren[0])).toBe(HeroSearch);
-    expect((allChildren[0] as ReactElement<{ presentation?: string; locale: SiteLocale }>).props.presentation).toBe(
-      'editorial',
-    );
-    expect((allChildren[0] as ReactElement<{ locale: SiteLocale }>).props.locale).toBe('ko');
-    expect(elementType(allChildren[1])).toBe(InsightsArchiveSection);
-    expect((allChildren[1] as ReactElement<{ posts: unknown }>).props.posts).toBe(posts);
-    expect((allChildren[1] as ReactElement<{ presentation?: string }>).props.presentation).toBe('editorial');
-    expect(Children.toArray(body.props.children).some((child) => elementType(revealChild(child)) === EnAcquisitionGuideLinks)).toBe(false);
-    const children = allChildren.slice(2);
-
-    expect(elementType(children[0])).toBe(Reveal);
-    expect(elementType(revealChild(children[0]))).toBe(ServicesBento);
-    expect(
-      (revealChild(children[0]) as ReactElement<{ presentation?: string; id?: string; variant?: string }>).props,
-    ).toMatchObject({
-      presentation: 'editorial',
-      id: 'practice',
-      variant: 'default',
-    });
-
-    expect(elementType(children[1])).toBe(TaiwanHeritageInterlude);
-    expect(elementType(revealChild(children[2]))).toBe(HomeAttorneySplit);
-    expect(
-      (revealChild(children[2]) as ReactElement<{ presentation?: string }>).props.presentation,
-    ).toBe('editorial');
-    expect(elementType(revealChild(children[3]))).toBe(HomeCaseResultsSplit);
-    expect(
-      (revealChild(children[3]) as ReactElement<{ presentation?: string }>).props.presentation,
-    ).toBe('editorial');
-    expect(elementType(revealChild(children[4]))).toBe(HomeStatsSection);
-    expect(elementType(revealChild(children[5]))).toBe(FAQAccordion);
-    expect(
-      (revealChild(children[5]) as ReactElement<{ items: FAQItem[]; id?: string; sectionClassName?: string }>).props,
-    ).toMatchObject({
-      items: faqItems,
-      id: 'faq',
-      sectionClassName: 'section section--gray',
-    });
-    expect(elementType(revealChild(children[6]))).toBe(OfficeMapTabs);
-    expect(
-      (revealChild(children[6]) as ReactElement<{ id?: string; sectionClassName?: string }>).props,
-    ).toMatchObject({
-      id: 'offices',
-      sectionClassName: 'section section--light',
-      presentation: 'editorial',
-    });
-    expect(elementType(revealChild(children[7]))).toBe(HomeContactCta);
+    const home = KoHomeBody({ posts, faqItems }) as ReactElement<{ id: string; children: ReactNode }>;
+    expect(home.props.id).toBe('ko-home');
+    expect((home.props as Record<string, unknown>)['data-ko-design']).toBe('home');
+    const children = Children.toArray(home.props.children) as ReactElement[];
+    const hero = Children.only((children[0] as ReactElement<{ children: ReactElement }>).props.children) as ReactElement<{
+      locale: SiteLocale;
+      presentation?: string;
+      showHomePaths?: boolean;
+      scrollHref?: string;
+    }>;
+    expect(elementType(hero)).toBe(HeroSearch);
+    expect(hero.props).toMatchObject({ locale: 'ko', presentation: 'editorial', showHomePaths: false, scrollHref: '#practice' });
+    expect(children.map((child) => elementType(child))).toEqual([
+      BuilderSurfaceProvider,
+      KoAudienceDoors,
+      ServicesBento,
+      ZhHantPracticeFocus,
+      InsightsArchiveSection,
+      KoEngagement,
+      HomeAttorneySplit,
+      HomeCaseResultsSplit,
+      HomeStatsSection,
+      FAQAccordion,
+      OfficeMapTabs,
+      HomeContactCta,
+      ZhHantMobileCta,
+    ]);
+    expect((children[2] as ReactElement<{ id?: string; presentation?: string }>).props).toMatchObject({ id: 'practice', presentation: 'editorial' });
+    expect((children[4] as ReactElement<{ posts: unknown; presentation?: string }>).props).toMatchObject({ posts, presentation: 'editorial' });
+    expect((children[9] as ReactElement<{ items: FAQItem[]; id?: string }>).props).toMatchObject({ items: faqItems, id: 'faq' });
+    expect((children[10] as ReactElement<{ id?: string; presentation?: string }>).props).toMatchObject({ id: 'offices', presentation: 'editorial' });
+    // The heritage interlude and the reveal wrappers belonged to the retired green home.
+    expect(children.some((child) => elementType(child) === TaiwanHeritageInterlude || elementType(child) === Reveal)).toBe(false);
   });
 
   it('orders the ja home for Japanese readers: needs first, then practice areas, pinned columns, trust, FAQ, offices, contact', () => {

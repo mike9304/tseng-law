@@ -36,6 +36,7 @@ import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-han
 import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead, omitOverlayOwnedDesktopLandmarkIds } from '@/lib/builder/canvas/home-zh-hant-parity';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import ZhHantHomeBody from '@/components/ZhHantHomeBody';
+import KoHomeBody from '@/components/KoHomeBody';
 import { ZH_HANT_HERO_MEDIA } from '@/components/zh-hant-home/ZhHantHeroMedia';
 import { getImageProps } from 'next/image';
 import { faqContent } from '@/data/faq-content';
@@ -46,6 +47,7 @@ import {
   deriveJulyHeroEditorialPresentation,
   isSafeNormalizedDocumentEnvelope,
   matchCurrent9PublishedHomeEditorial,
+  matchStockKoCompositeHome,
   publishedHomeEditorialCompositeProps,
   reorderCurrent9PublishedHomeNodes,
 } from '@/lib/builder/site/published-home-editorial';
@@ -888,6 +890,10 @@ export async function PublishedSitePageView({
   // read-only presentation; storage, source nodes and other locales are retained.
   const redesignedZhHome = locale === 'zh-hant' && slugPath === ''
     && Boolean(current9PublishedHomeEditorial || (legacyZhTabletParity && julyPublishedHomeEditorial));
+  // ko joins the zh-hant Apple system (2026-10-06): while the saved ko home is still the stock nine
+  // composites, KoHomeBody replaces it (read-only presentation; storage is untouched).
+  const redesignedKoHome = matchStockKoCompositeHome({ document: canvas, locale, slugPath });
+  const redesignedAppleHome = redesignedZhHome || redesignedKoHome;
   const stockZhCopy = redesignedZhHome && legacyZhTabletParity
     ? readZhHantStockHomeCopy(normalizedHomeCanvas)
     : null;
@@ -1524,7 +1530,7 @@ export async function PublishedSitePageView({
         // The redesigned zh-hant home paints its own dawn poster (DecorativeAutoplayVideo: next/image fill,
         // sizes 100vw on wide screens; the raw portrait file on phones), so preload exactly those and not the
         // stock canvas hero, which that home never shows (post-deploy check 2026-10-01: ~285 KB wasted).
-        if (redesignedZhHome) {
+        if (redesignedAppleHome) {
           const { props: desktopPoster } = getImageProps({ src: ZH_HANT_HERO_MEDIA.poster, alt: '', fill: true, sizes: '100vw' });
           return (
             <>
@@ -2510,7 +2516,7 @@ export async function PublishedSitePageView({
         <style data-builder-legacy-editorial-composite="true" dangerouslySetInnerHTML={{ __html: LEGACY_EDITORIAL_COMPOSITE_LAYOUT_CSS }} />
       ) : null}
       <div
-        className={['builder-pub-main', current9PublishedHomeEditorial && !redesignedZhHome ? homeEditorialStyles.root : undefined].filter(Boolean).join(' ')}
+        className={['builder-pub-main', current9PublishedHomeEditorial && !redesignedAppleHome ? homeEditorialStyles.root : undefined].filter(Boolean).join(' ')}
         data-builder-zh-tablet-parity={legacyZhTabletParity ? 'true' : undefined}
         data-builder-legacy-columns-flow={hasLegacyColumnsScaffold(canvas, locale, slugPath) ? 'true' : undefined}
         data-builder-legacy-editorial-composite={legacyEditorialCompositeLayout ? 'true' : undefined}
@@ -2524,7 +2530,7 @@ export async function PublishedSitePageView({
           maxWidth: hasTopLevelComposite ? undefined : 1280,
           margin: '0 auto',
           position: 'relative',
-          minHeight: redesignedZhHome || current9PublishedHomeEditorial || legacyEditorialCompositeLayout || selfSizingFlowOnlyPage
+          minHeight: redesignedAppleHome || current9PublishedHomeEditorial || legacyEditorialCompositeLayout || selfSizingFlowOnlyPage
             ? undefined
             : Math.max(publishedContentHeight, 720),
           // Light mode: inherit color/background/font from body so the
@@ -2547,6 +2553,11 @@ export async function PublishedSitePageView({
             heroOverrides={julyPublishedHomeEditorial?.overrides}
             quickMenus={julyPublishedHomeEditorial?.quickMenus}
             attorneyIntro={stockZhCopy?.attorneyIntro}
+          />
+        ) : redesignedKoHome ? (
+          <KoHomeBody
+            posts={mapColumnPostsToHomeInsights(resolved.columnPosts)}
+            faqItems={resolved.faqItems.length > 0 ? resolved.faqItems : faqContent.ko}
           />
         ) : renderedTopLevelNodes.flatMap((node) => {
           const renderedNode = renderPublishedNode(node, true);

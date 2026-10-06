@@ -183,8 +183,40 @@ describe('published current9 editorial render', () => {
     }
   });
 
-  it('keeps all nine wrappers, editorial order, wired hero/services presentation, heritage once, destinations and full service copy', async () => {
+  it('redesigns the stock ko home as KoHomeBody (Apple system, 2026-10-06) without mutating the canvas', async () => {
     const resolved = publishedHomeResolved('ko');
+    const before = JSON.stringify(resolved.canvas);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved }));
+    const text = visibleText(html);
+    expect(JSON.stringify(resolved.canvas)).toBe(before);
+    expect(html).toContain('id="ko-home"');
+    expect(html).toContain('data-ko-design="home"');
+    expect(html).not.toContain('data-zh-hant-design');
+    // No saved composite wrapper is rendered (the current9 stylesheet may still name the ids).
+    expect(html).not.toMatch(/<div[^>]*class="builder-pub-node"[^>]*data-node-id="home-/);
+    expect(publishedHomeSequence(html).filter((id) => id === 'heritage')).toHaveLength(0);
+    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    expect(html).toContain('action="/ko/search"');
+    expect(html).toContain('href="/ko/columns"');
+    expect(html).toContain('href="/ko/columns/one"');
+    for (const item of siteContent.ko.services.items) {
+      expect(text).toContain(item.description);
+    }
+
+    // Any authored change keeps the saved canvas on screen.
+    const custom = publishedHomeResolved('ko');
+    const hero = custom.canvas.nodes.find((node) => node.id === 'home-hero');
+    if (hero?.kind === 'composite') {
+      hero.content = { ...hero.content, config: { locale: 'ko', overrides: { headline: '작성자가 저장한 제목' } } };
+    }
+    const customHtml = renderToStaticMarkup(await PublishedSitePageView({ resolved: custom }));
+    expect(customHtml).not.toContain('id="ko-home"');
+    expect(visibleText(customHtml)).toContain('작성자가 저장한 제목');
+  });
+
+  it('keeps all nine wrappers, editorial order, wired hero/services presentation, heritage once, destinations and full service copy', async () => {
+    // ko renders KoHomeBody since 2026-10-06; the current9 canvas path is pinned on en, the other locale it serves.
+    const resolved = publishedHomeResolved('en');
     const hero = resolved.canvas.nodes.find((node) => node.id === 'home-hero')!;
     const services = resolved.canvas.nodes.find((node) => node.id === 'home-services')!;
     expect(publishedHomeEditorialCompositeProps(hero, { current9: true, july: null })).toEqual({
@@ -227,15 +259,15 @@ describe('published current9 editorial render', () => {
       'home-offices',
       'home-contact',
     ]);
-    expect(html).toContain('action="/ko/search"');
+    expect(html).toContain('action="/en/search"');
     expect(html).toMatch(/name="q"/);
     // WO-X3b: the hero's services/columns CTAs were removed (header nav keeps them).
-    expect(html).not.toContain('href="/ko/services"');
+    expect(html).not.toContain('href="/en/services"');
     expect(html).not.toContain('hero-cta-secondary');
-    expect(html).toContain('href="/ko/columns"');
-    expect(html).toContain('href="/ko/columns/one"');
+    expect(html).toContain('href="/en/columns"');
+    expect(html).toContain('href="/en/columns/one"');
     expect(html).toContain('1 / 2');
-    for (const item of siteContent.ko.services.items) {
+    for (const item of siteContent.en.services.items) {
       expect(text).toContain(item.description);
     }
     expect(html).not.toContain('office-map-wrap--naver');

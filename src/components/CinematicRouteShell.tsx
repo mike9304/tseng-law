@@ -16,9 +16,10 @@ export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
  * opening gate. zh-hant (2026-10-01, operator direction for Taiwanese readers): the home hero itself
  * carries the moving dawn cloud sea, the headline, the email action and search, so a separate gate
  * in front of it only delays the content. ja and en follow the same direction (their homes carry
- * their own first-screen designs); ko keeps the opening.
+ * their own first-screen designs), and ko since 2026-10-06 (KoHomeBody shares the zh-hant first screen).
+ * The guidance languages (vi/id/th/fil) keep the opening.
  */
-export const CINEMATIC_OPENING_SKIPPED_LOCALES: readonly PublicLocale8[] = ['zh-hant', 'ja', 'en'];
+export const CINEMATIC_OPENING_SKIPPED_LOCALES: readonly PublicLocale8[] = ['zh-hant', 'ja', 'en', 'ko'];
 
 export function isCinematicHomepagePath(
   pathname: string | null,

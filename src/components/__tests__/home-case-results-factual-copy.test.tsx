@@ -133,8 +133,9 @@ describe('homepage gym case factual copy', () => {
     }
     expect(html).toContain(expected.description);
     expect(html).toContain(expected.summary);
-    // zh-hant (2026-10-05): the monoline arrow follows the label; every other locale keeps the typed arrow.
-    if (locale === 'zh-hant') {
+    // zh-hant (2026-10-05) and ko (2026-10-06, Apple system): the monoline arrow follows the label; en and ja
+    // keep the typed arrow.
+    if (locale === 'zh-hant' || locale === 'ko') {
       expect(html).toContain(`${expected.cta}<svg`);
       expect(html).toContain('data-zh-icon="arrow-right"');
     } else {

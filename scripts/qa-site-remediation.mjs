@@ -55,7 +55,8 @@ async function assertImmediateHomepageHero(page, locale) {
 }
 
 async function revealHomepageAfterCinematicOpening(page, locale) {
-  if (/^(zh-hant|ja|en)\b/.test(locale)) {
+  // ko joined the own-hero homes on 2026-10-06; only the guidance languages still play the opening.
+  if (/^(zh-hant|ja|en|ko)\b/.test(locale)) {
     await assertImmediateHomepageHero(page, locale);
     return;
   }

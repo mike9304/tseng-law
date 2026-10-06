@@ -17,6 +17,7 @@ import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 import {
   CONSULTATION_EMAIL,
   getConsultationCtaLabel,
@@ -160,8 +161,8 @@ export default function Footer({
           // WO-X1 (EN-17): member login moved out of the public EN header.
           { label: 'Client log in', href: '/en/login' }
         ];
-  // zh-hant draws the social glyphs from the monoline set; other locales keep the SVGs below.
-  const zhIcons = locale === 'zh-hant';
+  // The Apple-system locales (zh-hant, ko) draw the social glyphs from the monoline set; other locales keep the SVGs below.
+  const zhIcons = isAppleDesignLocale(locale);
   const socialLabels =
     locale === 'ko'
       ? { blog: '블로그', youtube: '유튜브', website: '공식 사이트' }
@@ -177,10 +178,13 @@ export default function Footer({
             }
         : { blog: 'Blog', youtube: 'YouTube', website: 'Website' };
 
-  // Korean and Taiwanese readers keep the Seoul–Taipei skyline (the firm's
-  // Korea–Taiwan bridge). Every other locale is someone coming to Taiwan, so it
-  // shows Taiwan landmarks only (Presidential Office, 85 Sky Tower, CKS
-  // Memorial Hall, Taipei 101) in the same pen-and-ink style.
+  // Taiwanese readers keep the Seoul–Taipei skyline (the firm's Korea–Taiwan
+  // bridge). Every other locale is someone coming to Taiwan, so it shows Taiwan
+  // landmarks only (Presidential Office, 85 Sky Tower, CKS Memorial Hall,
+  // Taipei 101) in the same pen-and-ink style. The en and ja designs hide the
+  // band in CSS; the ko Apple-system redesign (2026-10-06) drops it outright,
+  // so the 2600px drawing is not even requested there.
+  const showSkyline = locale !== 'ko';
   const skyline =
     locale === 'ko' || locale === 'zh-hant'
       ? { src: '/images/footer-ground-skyline-v2.webp', width: 2600, height: 778 }
@@ -188,19 +192,21 @@ export default function Footer({
 
   return (
     <>
-      <section className={`footer-skyline ${styles.skyline}`} aria-hidden>
-        <div className="skyline-image">
-          <Image
-            src={skyline.src}
-            alt=""
-            width={skyline.width}
-            height={skyline.height}
-            loading="eager"
-            fetchPriority="low"
-            sizes="100vw"
-          />
-        </div>
-      </section>
+      {showSkyline ? (
+        <section className={`footer-skyline ${styles.skyline}`} aria-hidden>
+          <div className="skyline-image">
+            <Image
+              src={skyline.src}
+              alt=""
+              width={skyline.width}
+              height={skyline.height}
+              loading="eager"
+              fetchPriority="low"
+              sizes="100vw"
+            />
+          </div>
+        </section>
+      ) : null}
       {/* Footer links do not prefetch: entering the footer used to prefetch every sitemap route (about 7.8 MB
           across locales). Navigation still works; the target loads on click. */}
       <footer className={`site-footer ${styles.footer}`}>

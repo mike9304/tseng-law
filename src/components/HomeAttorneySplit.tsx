@@ -11,6 +11,7 @@ import {
   homeAttorneyTextSurfaceIds,
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 const copyByLocale = {
   ko: {
@@ -171,8 +172,8 @@ export default function HomeAttorneySplit({
           href={profilePath}
           data-builder-surface-key={homeAttorneyButtonSurfaceIds[0]}
         >
-          {/* zh-hant: the monoline arrow sits outside the editable text; other locales keep the typed arrow. */}
-          {locale === 'zh-hant'
+          {/* zh-hant, ko: the monoline arrow sits outside the editable text; other locales keep the typed arrow. */}
+          {isAppleDesignLocale(locale)
             ? <><SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{cta}</SurfaceText><ZhHantTrail /></>
             : <SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{cta} →</SurfaceText>}
         </SmartLink>

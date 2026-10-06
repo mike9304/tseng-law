@@ -90,7 +90,12 @@ function htmlEncodedText(value: string): string {
   return value.replace(/&/g, '&amp;');
 }
 
-function renderRouteShell(pathname: string | null, locale: (typeof locales)[number] = 'ko') {
+// The opening now plays only for the guidance languages (ko joined the own-hero homes on 2026-10-06), so the
+// default route-shell locale is vi; the four main locales are passed explicitly.
+function renderRouteShell(
+  pathname: string | null,
+  locale: (typeof locales)[number] | 'vi' = 'vi',
+) {
   navigationState.pathname = pathname;
   return renderToStaticMarkup(
     <CinematicRouteShell
@@ -195,11 +200,15 @@ describe('cinematic opening client-route gate', () => {
   ] as const)('includes the exact homepage pathname %s', (pathname, locale) => {
     expect(isCinematicHomepagePath(pathname, locale)).toBe(true);
     const html = renderRouteShell(pathname, locale);
-    // zh-hant, ja and en open on their own heroes instead of the gate (CINEMATIC_OPENING_SKIPPED_LOCALES).
-    if (locale === 'zh-hant' || locale === 'ja' || locale === 'en') {
-      expect(html).not.toContain('class="cinematic-opening"');
-      return;
-    }
+    // ko, zh-hant, ja and en open on their own heroes instead of the gate (CINEMATIC_OPENING_SKIPPED_LOCALES).
+    expect(html).not.toContain('data-cinematic-home="true"');
+    expect(html).not.toContain('class="cinematic-opening"');
+    expect(html).toContain('PAGE_CONTENT');
+  });
+
+  it.each(['/vi', '/vi/'] as const)('plays the opening on the guidance homepage pathname %s', (pathname) => {
+    expect(isCinematicHomepagePath(pathname, 'vi')).toBe(true);
+    const html = renderRouteShell(pathname, 'vi');
     expect(html).toContain('data-cinematic-home="true"');
     expect(html).toContain('class="cinematic-opening"');
   });
@@ -272,20 +281,20 @@ describe('cinematic opening client-route gate', () => {
     }
   });
 
-  it('opens the zh-hant, ja and en homes on their own heroes (no gate) while ko keeps the opening', () => {
-    for (const locale of ['zh-hant', 'ja', 'en'] as const) {
+  it('opens the ko, zh-hant, ja and en homes on their own heroes (no gate); the guidance languages keep the opening', () => {
+    for (const locale of ['ko', 'zh-hant', 'ja', 'en'] as const) {
       const html = renderRouteShell(`/${locale}`, locale);
       expect(html, locale).not.toContain('data-cinematic-home="true"');
       expect(html, locale).not.toContain('class="cinematic-opening"');
       expect(html, locale).toContain('PAGE_CONTENT');
     }
-    expect(renderRouteShell('/ko', 'ko')).toContain('class="cinematic-opening"');
+    expect(renderRouteShell('/vi', 'vi')).toContain('class="cinematic-opening"');
   });
 
   it('re-evaluates home → subpage → home instead of caching the first layout path', () => {
-    const homeBefore = renderRouteShell('/ko');
-    const subpage = renderRouteShell('/ko/about');
-    const homeAfter = renderRouteShell('/ko');
+    const homeBefore = renderRouteShell('/vi');
+    const subpage = renderRouteShell('/vi/services');
+    const homeAfter = renderRouteShell('/vi');
 
     expect(homeBefore).toContain('class="cinematic-opening"');
     expect(subpage).not.toContain('class="cinematic-opening"');
@@ -293,8 +302,10 @@ describe('cinematic opening client-route gate', () => {
   });
 
   it('defers the event popup during the opening and mounts it normally off-home', () => {
-    expect(renderRouteShell('/ko')).not.toContain('EVENT_POPUP');
-    expect(renderRouteShell('/ko/about')).toContain('EVENT_POPUP');
+    expect(renderRouteShell('/vi')).not.toContain('EVENT_POPUP');
+    expect(renderRouteShell('/vi/services')).toContain('EVENT_POPUP');
+    // Homes without the opening mount the popup straight away.
+    expect(renderRouteShell('/ko', 'ko')).toContain('EVENT_POPUP');
   });
 });
 
@@ -473,7 +484,7 @@ describe('cinematic opening content and semantics', () => {
     expect(source).toContain('priority');
   });
 
-  it('preloads the opening seal on locale home routes without prioritizing the hidden header seal', () => {
+  it('no longer preloads the opening seal (no main-locale home plays the opening) and never prioritizes the hidden header seal', () => {
     const layoutSource = readFileSync(
       path.join(process.cwd(), 'src/app/layout.tsx'),
       'utf8',
@@ -483,13 +494,8 @@ describe('cinematic opening content and semantics', () => {
       'utf8',
     );
 
-    expect(layoutSource).toContain(
-      "const isLocaleHome = /^\\/(?:ko)\\/?$/i.test(pathname ?? '');",
-    );
-    expect(layoutSource).toContain(
-      'href="/images/brand/hovering-seal-official-opening.webp"',
-    );
-    expect(layoutSource).toContain('fetchPriority="high"');
+    expect(layoutSource).not.toContain('isLocaleHome');
+    expect(layoutSource).not.toContain('href="/images/brand/hovering-seal-official-opening.webp"');
     expect(headerSource).toContain(
       '<Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} />',
     );
@@ -1100,7 +1106,7 @@ describe('WI-11 cinematic opening skip control and accessibility tree', () => {
   });
 
   it('never removes the header, skip-link host or main from the accessibility tree', () => {
-    const html = renderRouteShell('/ko');
+    const html = renderRouteShell('/vi');
     const openingSource = readFileSync(
       path.join(process.cwd(), 'src/components/CinematicOpening.tsx'),
       'utf8',

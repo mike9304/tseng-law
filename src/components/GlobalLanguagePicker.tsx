@@ -26,6 +26,7 @@ import {
 } from '@/components/builder/published/overlayFocus';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './GlobalLanguagePicker.module.css';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 export type GlobalLanguagePickerProps = {
   locale: PublicLocale8;
@@ -58,7 +59,7 @@ function resolvePickerInertRoot(): HTMLElement | null {
   return siteRoot instanceof HTMLElement ? siteRoot : null;
 }
 
-/** zh-hant draws the globe, check and close from the monoline set; other locales keep the glyphs below. */
+/** zh-hant and ko draw the globe, check and close from the monoline set; other locales keep the glyphs below. */
 function GlobeIcon({ zh }: { zh: boolean }) {
   if (zh) return <ZhHantMonoIcon name="globe" size={20} />;
   return (
@@ -98,7 +99,7 @@ export function GlobalLanguagePickerView({
   onClose: () => void;
 }) {
   const copy = LANGUAGE_PICKER_COPY[locale];
-  const zhIcons = locale === 'zh-hant';
+  const zhIcons = isAppleDesignLocale(locale);
   const titleId = useId();
   const currentAutonym =
     PUBLIC_LANGUAGE_REGISTRY.find((entry) => entry.locale === locale)?.autonym ?? locale;

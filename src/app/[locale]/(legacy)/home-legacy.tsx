@@ -13,6 +13,7 @@ import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import Reveal from '@/components/Reveal';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import ZhHantHomeBody from '@/components/ZhHantHomeBody';
+import KoHomeBody from '@/components/KoHomeBody';
 import EnHomeBody from '@/components/en-design/EnHomeBody';
 import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
 import type { FAQItem } from '@/data/faq-content';
@@ -75,6 +76,7 @@ export function LegacyHomePageBody({
   faqItems: FAQItem[];
 }) {
   if (locale === 'zh-hant') return <ZhHantHomeBody posts={posts} faqItems={faqItems} />;
+  if (locale === 'ko') return <KoHomeBody posts={posts} faqItems={faqItems} />;
   if (locale === 'ja') return <JaHomeBody posts={posts} faqItems={faqItems} />;
   if (locale === 'en') return <EnHomeBody posts={posts} faqItems={faqItems} />;
   return (

@@ -440,24 +440,28 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
+    '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
   ],
   en: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
     '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
+    '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
   ],
   ja: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
     '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
+    '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
   ],
   'zh-hant': [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
     '251-taiwan-small-claims-simplified-civil-procedure.md', // cols-20261006-C2
     '252-taiwan-workplace-sexual-harassment-employer-obligations.md', // cols-20261006-C3
     '253-taiwan-maternity-paternity-parental-leave-2026.md', // cols-20261006-C4
+    '254-taiwan-apartment-management-committee-fees-rules.md', // cols-20261006-C5
   ],
 } as const;
 

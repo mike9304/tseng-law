@@ -1125,6 +1125,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-maternity-paternity-parental-leave-2026"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-apartment-management-committee-fees-rules"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-apartment-management-committee-fees-rules"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-apartment-management-committee-fees-rules"
     }
   ]
 }

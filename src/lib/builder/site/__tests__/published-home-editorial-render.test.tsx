@@ -183,7 +183,7 @@ describe('published current9 editorial render', () => {
     }
   });
 
-  it('redesigns the stock ko home as KoHomeBody (Apple system, 2026-10-06) without mutating the canvas', async () => {
+  it('redesigns the stock ko home as KoHomeBody (Korean identity, 2026-10-06) without mutating the canvas', async () => {
     const resolved = publishedHomeResolved('ko');
     const before = JSON.stringify(resolved.canvas);
     const html = renderToStaticMarkup(await PublishedSitePageView({ resolved }));
@@ -196,6 +196,8 @@ describe('published current9 editorial render', () => {
     expect(html).not.toMatch(/<div[^>]*class="builder-pub-node"[^>]*data-node-id="home-/);
     expect(publishedHomeSequence(html).filter((id) => id === 'heritage')).toHaveLength(0);
     expect(html.match(/<h1\b/g)).toHaveLength(1);
+    // It opens on type, not footage: no hero image preload (neither the zh-hant poster nor the stock canvas hero).
+    expect(html).not.toMatch(/<link[^>]*rel="preload"[^>]*as="image"/);
     expect(html).toContain('action="/ko/search"');
     expect(html).toContain('href="/ko/columns"');
     expect(html).toContain('href="/ko/columns/one"');

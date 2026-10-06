@@ -1,0 +1,90 @@
+import { createHash } from 'node:crypto';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import path from 'node:path';
+import { describe, expect, test } from 'vitest';
+import { KO_PRETENDARD_STYLESHEET } from '@/app/fonts';
+import { KO_LEDGER, KO_PROCESS } from '@/components/ko-home/ko-home-content';
+
+// ko home, Korean identity (2026-10-06). The site is advertising-sensitive: every visible line on the new ko home
+// restates existing ko copy. These pins catch drift (review of 1ce4a31d: 「…로 진행합니다」 widened 「…로 상담/소통」).
+
+function read(relative: string): string {
+  return readFileSync(path.join(process.cwd(), relative), 'utf8');
+}
+
+describe('ko home copy provenance', () => {
+  const koColumns = readdirSync(path.join(process.cwd(), 'src/content/columns'))
+    .filter((name) => name.endsWith('.md'))
+    .map((name) => read(`src/content/columns/${name}`))
+    .join('\n');
+
+  test.each(KO_LEDGER.map((row) => [row.ko, row.han]))('glossary pair %s(%s) is printed by a ko column', (ko, han) => {
+    expect(koColumns).toContain(`${ko}(${han})`);
+  });
+
+  test('the consultation steps restate the contact, pricing, legal and hero copy', () => {
+    // The copy keeps 「NT$ 3,000」 together with a no-break space; compare as plain spaces.
+    const [inquiry, review, quote, retainer] = KO_PROCESS.map((step) => step.text.replace(/\u00a0/g, ' '));
+    const contact = read('src/lib/consultation/public-contact.ts');
+    const pricing = read('src/components/PricingCards.tsx');
+    const legal = read('src/data/legal-pages.ts');
+    const site = read('src/data/site-content.ts');
+
+    expect(contact).toContain('사건 또는 업무의 개요와 연락처');
+    expect(inquiry).toContain('사건 또는 업무의 개요와 연락처');
+    expect(contact).toContain('담당 변호사의 별도 안내 후');
+    expect(inquiry).toContain('담당 변호사의 별도 안내 후');
+
+    for (const fragment of ['사건 내용을 확인한 후 견적을 안내드립니다', '사건의 특성·복합성·긴급도에 따라 변동될 수 있습니다']) {
+      expect(pricing).toContain(fragment);
+      expect(review).toContain(fragment);
+    }
+    expect(pricing).toMatch(/price: 'NT\$ 3,000',\s*unit: '\/ 1시간'/);
+    expect(review).toContain('NT$ 3,000 / 1시간');
+
+    expect(pricing).toContain('정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다');
+    expect(quote).toBe('정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다.');
+
+    expect(legal).toContain('정식 자문 또는 수임은 별도의 검토와 동의 절차가 완료된 경우에만 성립합니다.');
+    expect(retainer).toContain('정식 자문 또는 수임은 별도의 검토와 동의 절차가 완료된 경우에만 성립합니다.');
+    // Languages are for consultation and communication (hero subtitle), never a promise about how a matter is run.
+    expect(site).toContain('한국어·중국어·일본어·영어로 소통하며');
+    expect(retainer).toContain('한국어·중국어·일본어·영어로 소통합니다');
+    expect(retainer).not.toMatch(/로 진행합니다/);
+  });
+});
+
+describe('ko identity stays out of zh-hant', () => {
+  test('the zh-hant home module no longer styles the ko home', () => {
+    expect(read('src/components/ZhHantDesign.module.css')).not.toContain('ko-home');
+  });
+});
+
+describe('ko Pretendard sheet', () => {
+  const file = path.join(process.cwd(), 'public', KO_PRETENDARD_STYLESHEET);
+  const css = readFileSync(file, 'utf8');
+
+  test('is content-hashed (/fonts is served immutable)', () => {
+    const hash = /pretendard-([0-9a-f]{12})\.css$/.exec(KO_PRETENDARD_STYLESHEET)?.[1];
+    expect(hash).toBe(createHash('sha256').update(css).digest('hex').slice(0, 12));
+  });
+
+  test('references only woff2 slices that ship in the same versioned folder', () => {
+    const urls = [...css.matchAll(/url\(([^)]+)\)/g)].map((match) => match[1]);
+    expect(urls.length).toBeGreaterThan(0);
+    for (const url of urls) {
+      expect(url.startsWith('/fonts/pretendard-1.3.9/')).toBe(true);
+      expect(existsSync(path.join(process.cwd(), 'public', url))).toBe(true);
+    }
+  });
+
+  test('declares no CJK ideograph ranges, so a 漢字 word is never split across two faces', () => {
+    const ideographs = [[0x2e80, 0x2fdf], [0x3400, 0x4dbf], [0x4e00, 0x9fff], [0xf900, 0xfaff], [0x20000, 0x3ffff]];
+    for (const match of css.matchAll(/unicode-range:\s*([^;]+);/g)) {
+      for (const part of match[1].split(',')) {
+        const [lo, hi = lo] = part.trim().slice(2).split('-').map((hex) => parseInt(hex, 16));
+        for (const [a, b] of ideographs) expect(hi < a || lo > b).toBe(true);
+      }
+    }
+  });
+});

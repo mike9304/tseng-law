@@ -86,7 +86,8 @@
 
 /* ---------- ko (2026-10-06): Korean type on the shared shell ---------- */
 .shell[data-ko-design] {
-  --font-sans: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* The ko site face (globals.css html[lang='ko'] .site) — Pretendard, then the device Korean faces. */
+  --font-sans: var(--font-ko-pretendard, var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo')), 'Apple SD Gothic Neo', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: var(--font-sans);
   word-break: keep-all;
   overflow-wrap: break-word;

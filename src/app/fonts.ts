@@ -194,10 +194,11 @@ export function getManagedLocaleFontClassNames(): string[] {
 }
 
 /**
- * ko identity type (2026-10-06): Pretendard Variable 1.3.9 in unicode-range slices (SIL OFL 1.1), self-hosted under a
- * versioned folder with a content-hashed sheet — /fonts is served immutable, so a changed sheet needs a new name.
+ * ko identity type (2026-10-06): Pretendard Variable 1.3.9 in unicode-range slices (SIL OFL 1.1, 漢字 ranges removed),
+ * self-hosted under a versioned folder with a content-hashed sheet — /fonts is served immutable, so a changed sheet
+ * needs a new name.
  */
-export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-775e6d82aebe.css';
+export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-ff7df79e29f2.css';
 
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {

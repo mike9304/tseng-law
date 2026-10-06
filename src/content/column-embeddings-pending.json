@@ -1161,6 +1161,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-vat-foreign-digital-services-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-naturalization-keep-original-nationality"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-naturalization-keep-original-nationality"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-naturalization-keep-original-nationality"
     }
   ]
 }

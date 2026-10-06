@@ -3,7 +3,7 @@ title: "Buying a Home in Taiwan: Reciprocity, Presale Contracts and Resale Tax"
 seoTitle: "Buying Property in Taiwan as a Foreigner"
 summary: "Taiwan lists Korea and Japan as fully reciprocal and U.S. buyers by state. Presale contracts cannot be freely assigned; nonresidents pay 45% or 35% on gains."
 published: "2026-10-06"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "October 6, 2026"
 read_time: "4 min read"
 categories:
@@ -41,7 +41,7 @@ The article has two exceptions. One is a transfer between spouses, lineal blood 
 
 Under [Article 17 of the Statute for Investment by Foreign Nationals](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0040002&flno=17), an enterprise that a foreign investor has invested in under that statute has the same legal rights and obligations as one run by Taiwan nationals, unless another law provides otherwise. An office bought in the Taiwan company's own name starts from that rule.
 
-Could the same company buy an apartment? [Article 79-1 of the Equalization of Land Rights Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060009&flno=79-1) requires a private juridical person buying a house for residential use to submit a use plan and obtain a permit from the central authority, unless an announced exemption applies. The permit is valid for one year. For five years after registration the company cannot transfer the property, except through compulsory execution, expropriation, a court judgment or another statute. Whether a building is residential turns on the use recorded in the registry transcript, occupancy permit or building permit: 住 or 住宅 ([permit regulations, art. 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060140&flno=2)). Moving a desk in does not change that entry.
+Could the same company buy an apartment? [Article 79-1 of the Equalization of Land Rights Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060009&flno=79-1) requires a private juridical person buying a house for residential use to submit a use plan and obtain a permit from the central authority, unless an announced exemption applies. The permit is valid for one year. For five years after registration the company cannot transfer the property, except through compulsory execution, expropriation, a court judgment or another statute. Whether a building is residential turns on the use recorded in the registry transcript, occupancy permit or building permit: 住 or 住宅 ([permit regulations, art. 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060140&flno=2)). Moving a desk in does not change that entry. Paragraph 3 of the same article makes exceptions, though: the regulations do not apply to a registered building (成屋) whose recorded use is residential-commercial (住商用), residential-industrial (住工用) or mixed residential use, or is blank, or where the company supplies proof of non-residential use: for a building that predates building-control rules, a document showing that its house tax for the year is classed as non-residential, and for a later building, proof that it is not used as a residence.
 
 ## Registration, deed tax and resale tax
 

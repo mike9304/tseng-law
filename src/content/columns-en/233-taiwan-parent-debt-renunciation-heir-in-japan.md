@@ -3,7 +3,7 @@ title: "Renouncing a Taiwanese Parent's Debts From Japan: The Three-Month Deadli
 seoTitle: "Renouncing a Taiwan Inheritance From Japan"
 summary: "A child in Japan can renounce a Taiwanese parent's debts only in a Taiwan court, within three months. Document authentication in Japan does not stop that clock."
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "October 5, 2026"
 read_time: "7 min read"
 categories:
@@ -37,7 +37,7 @@ That affects where you file. Under [Japan's Civil Code](https://laws.e-gov.go.jp
 
 Under [Article 1148](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148), paragraph 2, an heir is liable for the deceased's debts only up to the estate the heir receives. Gifts the heir received from the deceased in the two years before death are treated as part of that estate ([Article 1148-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148-1)).
 
-Staying an heir still comes with rules. [Article 1156](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1156) has an heir file an inventory of the estate (遺產清冊) with the court within three months of learning of the inheritance, and the court may extend that period on the heir's application if it finds an extension necessary. An heir who files no inventory must still pay all creditors out of the estate in proportion to their claims ([Article 1162-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-1)). An heir who breaks that rule becomes liable beyond the estate for whatever a creditor should have received but did not. The only exception is for heirs who lack full legal capacity ([Article 1162-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-2)).
+Staying an heir still comes with rules. [Article 1156](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1156) has an heir file an inventory of the estate (遺產清冊) with the court within three months of learning of the inheritance, and the court may extend that period on the heir's application if it finds an extension necessary. An heir who files no inventory must still pay all creditors out of the estate in proportion to their claims, without prejudice to creditors who have priority ([Article 1162-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-1)). An heir who breaks that rule becomes liable beyond the estate for whatever a creditor should have received but did not. The only exception is for heirs who lack full legal capacity ([Article 1162-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-2)).
 
 If there is nothing worth inheriting, and you would rather not trace Taiwan creditors and make proportional payments from Japan, renunciation is the cleaner route. It takes effect retroactively from the opening of the succession ([Article 1175](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1175)).
 

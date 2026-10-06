@@ -3,7 +3,7 @@ title: "대만 부모가 남긴 빚, 일본에 사는 자녀의 상속포기: 3�
 seoTitle: "대만 상속포기 3개월 기한, 일본 거주 상속인의 절차"
 summary: "대만에 살던 대만 국적 부모가 빚을 남기고 사망하면 부모의 본국법인 대만 민법이 적용되고, 일본에 사는 자녀도 상속포기는 서면으로 대만 법원에 해야 합니다. 기간은 상속인이 될 수 있음을 안 때부터 3개월이며, 대표처 인증을 거쳐도 늘지 않는다고 본 지방법원 결정이 있습니다. 자녀가 모두 포기하면 손자녀가, 앞 순위가 모두 포기하면 다음 순위 친족이 상속인이 됩니다."
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "2026년 10월 5일"
 read_time: "7분 분량"
 categories:
@@ -37,7 +37,7 @@ author: "legal-ai-assistant"
 
 [민법 제1148조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148) 제2항에 따라 상속인은 상속으로 얻은 유산의 한도에서만 피상속인의 채무를 갚을 책임을 집니다. 사망 전 2년 안에 부모에게서 증여받은 재산도 이 유산에 넣어 계산합니다([제1148조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148-1)).
 
-상속인으로 남으면 따라야 할 절차가 있습니다. [제1156조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1156)는 상속인이 될 수 있음을 안 때부터 3개월 안에 유산 목록(遺產清冊)을 작성해 법원에 내도록 하고, 법원은 상속인의 신청을 받아 필요하다고 보면 이 기간을 늘릴 수 있습니다. 목록을 내지 않은 상속인도 채권자 전원에게 채권액 비율대로 유산에서 갚아야 합니다([제1162조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-1)). 이를 어기면 채권자가 받았어야 할 몫 가운데 받지 못한 부분은 유산 한도를 넘어 책임지며, 행위능력이 없거나 제한된 상속인만 예외입니다([제1162조의2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-2)).
+상속인으로 남으면 따라야 할 절차가 있습니다. [제1156조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1156)는 상속인이 될 수 있음을 안 때부터 3개월 안에 유산 목록(遺產清冊)을 작성해 법원에 내도록 하고, 법원은 상속인의 신청을 받아 필요하다고 보면 이 기간을 늘릴 수 있습니다. 목록을 내지 않은 상속인도 채권자 전원에게 채권액 비율대로 유산에서 갚아야 합니다. 다만 우선권이 있는 채권자의 이익을 해칠 수는 없습니다([제1162조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-1)). 이를 어기면 채권자가 받았어야 할 몫 가운데 받지 못한 부분은 유산 한도를 넘어 책임지며, 행위능력이 없거나 제한된 상속인만 예외입니다([제1162조의2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-2)).
 
 일본에서 대만의 채권자를 파악해 비율대로 갚는 일을 맡기 어렵고 받을 재산도 없다면, 상속포기가 더 단순합니다. 포기는 상속이 시작된 때로 거슬러 올라가 효력이 생깁니다([제1175조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1175)).
 

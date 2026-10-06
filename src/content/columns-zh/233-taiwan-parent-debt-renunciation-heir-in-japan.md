@@ -3,7 +3,7 @@ title: "父母留下債務，人在日本的子女如何拋棄繼承：三個月
 seoTitle: "旅日繼承人拋棄繼承：三個月期限與駐外館處驗證"
 summary: "父母在台灣過世留下債務，住在日本的子女要拋棄繼承，仍須在知悉得繼承時起三個月內，以書面向台灣的法院聲明。準據法看的是過世父母的國籍，不看子女的國籍或住所。聲明書可以先送駐日代表處驗證，再寄給台灣的代理人向法院陳報，但地方法院的裁定認為，期間不因驗證費時而延長。"
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "2026年10月5日"
 read_time: "約7分鐘閱讀"
 categories:
@@ -35,7 +35,7 @@ author: "legal-ai-assistant"
 
 ## 不拋棄也只以遺產為限，但仍然是繼承人
 
-依[民法第1148條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148)第2項，繼承人對被繼承人的債務，以因繼承所得遺產為限負清償責任。不過沒有拋棄就還是繼承人：[第1156條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1156)規定，繼承人在知悉其得繼承之時起三個月內開具遺產清冊陳報法院，法院認為必要時得依聲請延展；沒有陳報的，仍應按債權數額比例，以遺產分別償還（[第1162條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-1)）。違反這項規定，就債權人應受償而未受償的部分，責任不以所得遺產為限，只有無行為能力人或限制行為能力人例外（[第1162條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-2)）。兩條路怎麼選，可以參考[家人過世留下債務：拋棄繼承和限定責任怎麼選](/zh-hant/columns/taiwan-inheritance-renunciation-debt)。
+依[民法第1148條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148)第2項，繼承人對被繼承人的債務，以因繼承所得遺產為限負清償責任。不過沒有拋棄就還是繼承人：[第1156條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1156)規定，繼承人在知悉其得繼承之時起三個月內開具遺產清冊陳報法院，法院認為必要時得依聲請延展；沒有陳報的，仍應按債權數額比例，以遺產分別償還，但不得害及有優先權人的利益（[第1162條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-1)）。違反這項規定，就債權人應受償而未受償的部分，責任不以所得遺產為限，只有無行為能力人或限制行為能力人例外（[第1162條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1162-2)）。兩條路怎麼選，可以參考[家人過世留下債務：拋棄繼承和限定責任怎麼選](/zh-hant/columns/taiwan-inheritance-renunciation-debt)。
 
 人在日本，要清查台灣的債權人、再按比例清償並不容易。確定沒有遺產可拿時，拋棄繼承比較單純，效力溯及繼承開始時（[第1175條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1175)）。
 

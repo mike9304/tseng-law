@@ -11,6 +11,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
   ja: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -19,6 +20,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
   en: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -28,6 +30,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
   'zh-hant': [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -37,6 +40,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '305-taiwan-cpa-audit-tax-certification-bookkeeping.md',
     '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
     '321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md',
+    '325-taiwan-representative-office-tax-what-it-may-do.md',
   ] as string[],
 } as const;
 

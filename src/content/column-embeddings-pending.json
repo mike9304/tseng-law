@@ -1305,6 +1305,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-business-tax-vat-e-invoice-foreign-subsidiary"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-representative-office-tax-what-it-may-do"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-representative-office-tax-what-it-may-do"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-representative-office-tax-what-it-may-do"
     }
   ]
 }

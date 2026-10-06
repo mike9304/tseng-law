@@ -82,23 +82,42 @@ describe('traffic hub publication contracts', () => {
 
   it('replaces sentencing guesses with sourced, conditional rules in the existing Q&A', () => {
     const staleSentencing = /약 3개월|보통 4개월|보통 6개월|通常.{0,8}[346三四六].{0,3}個月|usually.{0,30}(?:three|four|six|3|4|6) months|通常.{0,8}[346３４６].{0,3}か月/i;
+    // The former Q16-Q20 stubs were folded into Q1, Q4 and Q5; safeguards are anchored to Q4-Q5 (sentencing, withdrawal).
     const safeguards = {
-      ko: ['요건과 예외', '제1심 변론 종결 전', '다시 고소할 수 없습니다', '자동 종료되지 않습니다'],
-      en: ['eligibility requirements and exceptions', 'before first-instance argument closes', 'cannot complain again', 'does not automatically end prosecution'],
-      ja: ['要件と例外', '第一審の弁論終結前', '再び告訴できません', '自動的に終了しません'],
-      'zh-hant': ['適用要件與例外', '第一審辯論終結前', '不得再行告訴', '不因私下和解即自動終結'],
+      ko: ['요건과 예외', '제1심 변론 종결 전', '다시 고소할 수 없습니다', '자동으로 공소가 종료되지 않으며'],
+      en: ['eligibility requirements and exceptions', 'before the close of first-instance oral argument', 'cannot file a complaint again', 'does not automatically terminate prosecution'],
+      ja: ['要件と例外', '第一審の弁論終結前', '再び告訴できません', '公訴が自動的に終了しない'],
+      'zh-hant': ['適用要件與例外', '第一審言詞辯論終結前', '不得再行告訴', '不會自動終結追訴'],
     };
     for (const locale of siteLocales) {
       const post = getColumnPost('taiwan-traffic-accident-procedure', locale)!;
-      const tail = post.content.slice(post.content.indexOf('## Q16.'));
-      expect(tail).not.toMatch(staleSentencing);
+      const content = post.content;
+      const q1 = content.indexOf('## Q1.');
+      const q4 = content.indexOf('## Q4.');
+      const q6 = content.indexOf('## Q6.');
+      const q7 = content.indexOf('## Q7.');
+      expect(q1, locale).toBeGreaterThan(-1);
+      expect(q1, locale).toBeLessThan(q4);
+      expect(q4, locale).toBeLessThan(q6);
+      expect(q6, locale).toBeLessThan(q7);
+      // Q6 legitimately states the ordinary appraisal-application deadline (ja 「通常、事故発生日から6か月以内」), so it is excluded.
+      expect(content.slice(0, q6) + content.slice(q7), locale).not.toMatch(staleSentencing);
+      const answers = content.slice(q4, q6);
       for (const safeguard of safeguards[locale]) {
-        expect(tail, `${locale}: ${safeguard}`).toContain(safeguard);
+        expect(answers, `${locale}: ${safeguard}`).toContain(safeguard);
+      }
+      const scene = content.slice(q1, content.indexOf('## Q2.'));
+      const sentencing = content.slice(q4, content.indexOf('## Q5.'));
+      const pre = content.slice(q1, q6);
+      expect(scene, `${locale}: Q1 links the Article 62 handling duty`).toMatch(/flno=62(?:\)|&)/);
+      for (const article of ['276', '41']) {
+        expect(sentencing, `${locale}: Q4 links Article ${article}`).toMatch(new RegExp(`flno=${article}(?:\\)|&)`));
       }
       for (const article of ['284', '276', '41', '238', '287', '185-4', '62']) {
-        expect(tail).toMatch(new RegExp(`flno=${article}(?:\\)|&)`));
+        expect(pre, `${locale}: flno=${article}`).toMatch(new RegExp(`flno=${article}(?:\\)|&)`));
       }
-      expect(tail.match(/^## Q\d+\./gm)).toHaveLength(5);
+      expect(Array.from(content.matchAll(/^## Q(\d+)\./gm), (match) => Number(match[1])), locale)
+        .toEqual(Array.from({ length: 15 }, (_, index) => index + 1));
     }
   });
 

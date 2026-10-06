@@ -2,9 +2,9 @@
 title: "Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation"
 seoTitle: "Taiwan Traffic Accident Fault & Compensation"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-30"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
-read_time: "8 min read"
+read_time: "11 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
@@ -19,7 +19,7 @@ diagram_after: "Q7. What losses can I claim after an accident?"
 
 ![Recording vehicle positions and road evidence at the accident scene](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-After a traffic accident in Taiwan, first secure safety, make the appropriate report or notification, and preserve evidence. Then examine claim deadlines, fault, and the scope of settlement. This guide sets out a general sequence based on Taiwan law and official guidance; responsibility and procedure depend on the facts of each accident.
+After a traffic accident in Taiwan, first secure safety, make the appropriate report or notification, and preserve evidence. This guide sets out a general sequence based on Taiwan law and official guidance; responsibility and procedure depend on the facts of each accident. No particular outcome or compensation amount can be guaranteed in advance.
 
 ## Q1. Can I leave the scene after an accident?
 
@@ -27,7 +27,7 @@ In an accident involving injury or death, the driver must immediately provide ai
 
 In an injury accident, if all parties agree, record the vehicle positions and scene marks; the vehicles must then be moved to avoid obstruction of traffic. The duty to provide aid and the reporting requirement still apply.
 
-Where there is property damage only and the vehicles can be moved, record their positions and the scene marks with photographs or video, then move them promptly to a safe place. Leaving without taking the required measures can result in administrative sanctions.
+Where there is property damage only and the vehicles can be moved, record their positions and the scene marks with photographs or video, then move them promptly to a safe place. Leaving without taking the required measures can result in administrative sanctions under the Road Traffic Management and Penalty Act, [Article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62).
 
 Criminal Code Article 185-4 addresses a driver's departure after a traffic accident that caused injury or death. Whether it applies depends on the facts of the accident and the measures taken.
 
@@ -37,21 +37,21 @@ Personal safety and warning measures come first. For injury or rescue in Taiwan,
 
 Once safety is secured, take wide and close-up photographs of the vehicle positions and damage, road markings, signals, and weather conditions. Preserve witness contact details, request preservation of CCTV and dashcam footage, and collect the parties’ identifying details, vehicle and insurance information, and medical records. Personal recordings are useful, but they do not replace the police handling required in accidents involving injury or death.
 
-The police may provide a traffic-accident party registration and contact form at the scene. The scene diagram and scene photographs may be requested after seven days from the accident; the preliminary analysis form may be requested after thirty days. Confirm availability and application requirements with the competent police agency.
+At the scene, the police may provide a traffic-accident party registration and contact form. The scene diagram and scene photographs may be requested after seven days from the accident; the preliminary analysis form may be requested after thirty days. Confirm availability and application requirements with the competent police agency.
 
 ## Q3. If I was injured, what claims and deadlines should I check?
 
 Criminal Code Article 284 defines negligent injury and negligent serious injury, and Article 287 makes those offenses complaint-based. Under Criminal Procedure Code Article 237, the ordinary complaint period is six months from the day the complainant learns the offender's identity.
 
-Under Civil Code Article 197, a civil damages claim is generally subject to a period of two years from knowledge of the damage and the person liable, and ten years from the tort. Whether particular facts interrupt or otherwise affect a limitation period must be assessed separately.
+A civil damages claim is generally subject, under Civil Code Article 197, to a period of two years from knowledge of the damage and the person liable, and ten years from the tort. Whether particular facts interrupt or otherwise affect a limitation period must be assessed separately.
 
 Under Criminal Procedure Code Articles 487 and 488, a crime victim may file an attached civil action after criminal prosecution has begun, no later than the close of second-instance oral argument, except that it may not be filed after the close of first-instance oral argument and before an appeal is lodged. This route usually provides a filing-fee advantage, but it does not guarantee a cost-free result. Under Article 503, if the criminal judgment is an acquittal, a judgment barring prosecution, or a judgment declining to entertain the prosecution, and the attached civil action is transferred to the civil division at the plaintiff's request, court fees are payable. Article 504 also governs aspects of transfer and procedure.
 
-The appropriate route depends on interruption of the limitation period, the defendants, evidence, insurance, and venue. There is no universally best route for every case.
+The appropriate route depends on interruption of the limitation period, the defendants, evidence, insurance, and venue.
 
 ## Q4. If both sides were at fault, how are criminal and civil liability assessed?
 
-Criminal liability requires proof of each person's breach of a duty of care and a causal link between that breach and the other person's injury. Fault on both sides does not automatically establish negligent injury.
+Criminal liability requires proof of each person's breach of a duty of care and a causal link between that breach and the other person's injury. Fault on both sides does not automatically establish negligent injury. Negligent homicide is addressed by Criminal Code [Article 276](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=276). Actual sentencing depends on the circumstances, not a fixed number of months. Conversion to a fine under Criminal Code [Article 41](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=41) is subject to eligibility requirements and exceptions.
 
 In a civil case, Civil Code Article 217 permits the court to reduce the amount of damages or relieve the liable party of liability when the injured person’s fault contributed to causing or increasing the damage. For example, if recognized damages are TWD 1,000,000 (one million New Taiwan dollars) and a 50% share of injured-party fault is assessed, the amount may be reduced to TWD 500,000 before other adjustments.
 
@@ -61,9 +61,9 @@ An appraisal or preliminary-analysis document may be important evidence, but it 
 
 A settlement agreement should identify the accident date and place and the parties; state the payment amount and timing; address insurance; and specify the included claims and any reserved claims. It should also address future treatment, later-discovered injury, document delivery, and the relationship between payment and complaint withdrawal.
 
-Under Civil Code Articles 736 and 737, settlement involves mutual concession, and the extinguishment of rights is limited to the rights waived by the wording of the agreement. The agreement does not necessarily make every future claim disappear.
+Under Civil Code Articles 736 and 737, settlement involves mutual concession, and the extinguishment of rights is limited to the rights waived by the wording of the agreement.
 
-For a complaint-based offense, Criminal Procedure Code Article 238 permits withdrawal before the close of first-instance oral argument. The person who withdraws cannot file a complaint again. Private settlement does not automatically terminate prosecution for a non-complaint offense, and settlement does not invariably require complaint withdrawal.
+For a complaint-based offense, Criminal Procedure Code Article 238 permits withdrawal before the close of first-instance oral argument. The person who withdraws cannot file a complaint again. Private settlement does not automatically terminate prosecution for a non-complaint offense, such as negligent homicide, and settlement does not invariably require complaint withdrawal.
 
 ### Q1–Q5 Official Sources
 
@@ -87,11 +87,11 @@ For a complaint-based offense, Criminal Procedure Code Article 238 permits withd
 
 ## Q6. How is responsibility for the accident determined?
 
-The Road Traffic Accident Preliminary Analysis Determination Form is a preliminary police analysis based on evidence gathered at the scene. It is not a court judgment: it neither binds the court nor fixes a fault percentage. Because the evidence needed and the scope of the dispute vary from one accident to another, the preliminary analysis, statutory appraisal, and review do not form an automatic or mandatory sequence.
+The Road Traffic Accident Preliminary Analysis Determination Form is a preliminary police analysis based on evidence gathered at the scene. It is not a court judgment: it neither binds the court nor fixes a fault percentage. The preliminary analysis, statutory appraisal, and review do not form an automatic or mandatory sequence.
 
 Under the applicable rules, an eligible party may apply for a vehicle-accident appraisal, a handling authority may refer the matter, or a judicial authority may commission an appraisal. A direct party application is ordinarily made within six months after the accident. If an investigation or trial is already pending, check the judicial-referral procedure. [Appraisal and review rules, Article 3](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)
 
-During a criminal trial, Article 208 of the Code of Criminal Procedure also allows a party to commission a qualified institution to conduct an appraisal or review another appraisal at that party's expense. This route should be distinguished from an application to the accident appraisal committee; the appropriate procedure depends on the stage and institution. [Code of Criminal Procedure, Article 208](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=208)
+During a criminal trial, Article 208 of the Code of Criminal Procedure also allows a party to commission a qualified institution to conduct an appraisal or review another appraisal at that party's expense. This route should be distinguished from an application to the accident appraisal committee. [Code of Criminal Procedure, Article 208](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=208)
 
 For an ordinary direct application for committee review, give reasons and apply within 30 days starting the day after receipt of the appraisal opinion. Only one review is available. Cases already in judicial proceedings require checking the judicial-referral route and applicable deadline. Appraisal and review opinions serve as evidence or reference material. The court independently evaluates statements, video, scene records, and the record as a whole. [Appraisal and review rules, Articles 10 and 11](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)
 
@@ -101,7 +101,7 @@ A claim under Civil Code Article 184 requires an unlawful infringement of a righ
 
 - Injury: Under Civil Code Article 193, recoverable loss may include necessary medical expenses; expenses for care, travel for treatment, assistive devices, and other increased living needs; proven temporary income loss; and loss of earning capacity. Civil Code Article 195 also permits a claim for non-pecuniary damage.
 - Death: Under Civil Code Article 192, recoverable loss may include applicable pre-death medical and increased-need expenses, funeral expenses, and loss of support for a person legally entitled to support. Civil Code Article 194 also permits non-pecuniary damage for qualifying relatives.
-- Property: Under Civil Code Article 196, a claimant may seek proven actual property damage, including supported repair expenses or diminution in value.
+- Property: Under Civil Code Article 196, the owner may claim the reduction in the vehicle's value caused by the damage; repair costs serve as the measure only to the extent necessary, and depreciation may be deducted where new parts replace old ones.
 
 ## Q8. How should I submit medical-expense records while treatment continues?
 
@@ -109,7 +109,7 @@ Preserve receipts, diagnosis certificates, and medical records, and organize evi
 
 Supplementing medical evidence must be distinguished from changing or increasing the amount or scope of the claim. Adding medical receipts after filing an attached civil action in a criminal case does not by itself automatically create a court fee.
 
-Under Code of Criminal Procedure Article 504, however, after the matter is transferred to the civil division, a change, addition, or expansion beyond the pre-transfer claim can create a court-fee issue for the excess. Confirm the transfer stage, filing time, and claim scope case by case.
+Under Code of Criminal Procedure Article 504, however, after the matter is transferred to the civil division, a change, addition, or expansion beyond the pre-transfer claim can create a court-fee issue for the excess.
 
 ## Q9. How can I prove professional-care and family-care expenses?
 
@@ -160,7 +160,7 @@ If damages are calculated as a lump sum, an intermediate-interest discount may b
 
 ## Q13. How are non-pecuniary damages assessed?
 
-Under Civil Code Article 195, an appropriate amount may be awarded for a qualifying unlawful infringement of body or health.
+An appropriate amount may be awarded, under Civil Code Article 195, for a qualifying unlawful infringement of body or health.
 
 The assessment is individualized. Relevant factors include the injury and treatment, lasting effects, pain and impact on life, age and status, the parties' social and economic circumstances, and the parties' evidence. No fixed range determines the result.
 
@@ -168,21 +168,21 @@ The assessment is individualized. Relevant factors include the injury and treatm
 
 Civil Code Article 188 addresses an employee who unlawfully injures another while performing duties. The fact that an accident occurred during work hours, by itself, does not automatically establish the required connection to duties; the relationship between the actual work and the accident must be examined.
 
-The employer may defend the claim by showing that it exercised due care in selecting and supervising the employee, or that the damage could not have been avoided even with such care. A joint claim for damages against the employer and employee may be considered. The employer may seek recourse from the employee after payment.
+By showing that it exercised due care in selecting and supervising the employee, or that the damage could not have been avoided even with such care, the employer may defend the claim. A joint claim for damages against the employer and employee may be considered. The employer may seek recourse from the employee after payment.
 
-If the employer proves the preceding defense and the victim cannot recover damages under paragraph 1, Civil Code Article 188, paragraph 2 permits the court to consider the employer's and victim's economic circumstances and order full or partial compensation.
+If the employer proves the preceding defense and the victim cannot recover damages under paragraph 1, Civil Code Article 188, paragraph 2 provides that, if the victim applies, the court may, considering the economic circumstances of the employer and the victim, order the employer to pay all or part of the damages.
 
 The choice of civil defendants is distinct from criminal liability. Under Criminal Code Article 284, liability turns on each natural person's own breach of duty and causation.
 
 ## Q15. What motor-insurance benefits and coverage should I check?
 
-Under Compulsory Automobile Liability Insurance Act Article 6, the duty to insure ordinarily belongs to the owner of a covered vehicle and, in specified cases, its user or manager. The Act provides basic no-fault statutory benefits when a person is injured or killed in a motor-vehicle accident, subject to its definitions of passengers and third parties outside the vehicle.
+Under Compulsory Automobile Liability Insurance Act Article 6, the duty to insure ordinarily belongs to the owner of a covered vehicle and, in specified cases, its user or manager. The Act provides basic no-fault statutory benefits when a person is injured or killed in a motor-vehicle accident, subject to its definitions of passengers and third parties outside the vehicle. The insurer does not pay benefits where the injured person or another claimant caused the accident intentionally or while committing a crime (Article 28).
 
 In a single-vehicle accident, the driver is generally outside that vehicle's compulsory cover. In a multi-vehicle accident, a driver may claim benefits from another involved vehicle's compulsory insurer.
 
 The benefit standard amended on 2026-05-29 applies to accidents occurring on or after 2026-07-01. The limit for necessary and reasonable medical expenses for injury is TWD 200,000; disability benefits are TWD 80,000–3,000,000 across 15 statutory grades; the death benefit is TWD 3,000,000; and the combined maximum for death, disability, and medical expenses is TWD 3,200,000 per victim per accident. The earlier standard may apply to accidents that occurred before that date.
 
-Third-party liability, driver injury, and own-damage insurance are optional insurance products. Actual coverage depends on the insured person, coverage limits, deductibles, exclusions, fault, and other terms and conditions, so each insurance policy and its terms must be reviewed separately.
+Third-party liability, driver injury, and own-damage insurance are optional insurance products. Actual coverage depends on the insured person, coverage limits, deductibles, exclusions, fault, and other terms and conditions, so each insurance policy and its terms must be reviewed separately. Confirm what the insurer will handle, which documents it needs and the notice deadlines.
 
 ### Q11–Q15 Official Sources
 
@@ -199,26 +199,6 @@ Third-party liability, driver injury, and own-damage insurance are optional insu
 - [Compulsory Automobile Liability Insurance Act](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Compulsory Automobile Liability Insurance benefit standards](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Financial Supervisory Commission standard personal automobile insurance contract](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
-
-## Q16. After an accident, can you leave everything to the insurance company?
-
-Confirm what the insurer will handle, which documents it needs and the notice deadlines. Before signing a settlement, check how it treats payments already received, further treatment costs and any release of claims.
-
-## Q17. What criminal liability does an at-fault party face for negligent injury in a traffic accident?
-
-Negligent injury and serious injury are addressed by Criminal Code Article 284; negligent homicide by Article 276. Actual sentencing depends on the circumstances, not a fixed number of months. Conversion to a fine under Article 41 is subject to eligibility requirements and exceptions. [284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=284) · [276](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=276) · [41](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=41)
-
-## Q18. If you settle with the other party, can you withdraw the criminal complaint?
-
-A complaint-dependent complaint may be withdrawn before first-instance argument closes; the withdrawing person cannot complain again. Check payment and withdrawal arrangements separately. Private settlement does not automatically end prosecution for negligent homicide or other offenses that do not require a complaint. [238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=238) · [287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=287)
-
-## Q19. If you leave the scene after an accident, does criminal hit-and-run always apply?
-
-Criminal Code Article 185-4 addresses fleeing an injury or death accident. Property-only accidents still require separate consideration of handling duties and administrative consequences under the Road Traffic Management and Penalty Act, Article 62. [185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4) · [62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
-
-## Q20. How do you find a traffic accident attorney?
-
-Ask how the lawyer will assess evidence and damages, which deadlines remain, what the fee covers and how you will communicate. No particular outcome or compensation amount can be guaranteed in advance.
 
 ---
 

@@ -48,8 +48,8 @@ const q11ToQ15Headings = [
   'Q15. 應確認哪些汽車保險給付與保障？',
 ] as const;
 const q11ToQ15SourceHeading = 'Q11–Q15 官方依據';
-const q16Marker =
-  'Q16. 事故發生後，可以把所有事情都交給保險公司處理嗎？';
+// Q16–Q20 no longer exist; Q11–Q15 now end at the horizontal rule that precedes the related-reading footer.
+const bodyEndMarker = '\n---\n';
 const approvedQ2PrivatePhotoSentence =
   '自行拍照雖然有用，但不能取代死傷事故依法所需的警察處理。';
 const staleQ2PrivatePhotoSentence =
@@ -66,8 +66,6 @@ const approvedQ7WorkInabilityClause =
   '以及經證明因實際無法工作所生的收入損失與勞動能力減損；';
 const staleQ7TemporaryWorkInabilityClause =
   '以及經證明因暫時不能工作所生的收入損失與勞動能力減損；';
-const approvedQ11ContinuedWorkBasisParagraph =
-  '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題，亦非單獨判斷勞動能力減損的依據；勞動能力減損應另行判斷，詳見 Q12。';
 const staleQ11ContinuedWorkBasisParagraph =
   '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題；勞動能力減損應於 Q12 另行判斷。';
 const approvedQ14JointClaimParagraph =
@@ -219,6 +217,18 @@ type ConceptRule = {
   pattern: RegExp;
 };
 
+const workLossColumnSlug = 'taiwan-car-accident-work-loss-rest-note';
+const familyCareColumnSlug = 'taiwan-accident-family-care-necessity-period';
+
+function readLinkedZhColumn(slug: string) {
+  const dir = path.join(process.cwd(), 'src/content/columns-zh');
+  const file = fs
+    .readdirSync(dir)
+    .find((name) => name.endsWith(`-${slug}.md`));
+  expect(file, `linked zh-hant column ${slug} exists`).toBeDefined();
+  return fs.readFileSync(path.join(dir, file as string), 'utf8');
+}
+
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
 }
@@ -282,7 +292,10 @@ const q11CharacterIndex =
   q11HeadingCharacterIndex === -1
     ? legacyQ11CharacterIndex
     : q11HeadingCharacterIndex;
-const q16CharacterIndex = parsed.content.indexOf(q16Marker);
+const bodyEndCharacterIndex =
+  q11CharacterIndex === -1
+    ? -1
+    : parsed.content.indexOf(bodyEndMarker, q11CharacterIndex);
 const localizedPrefix =
   q6CharacterIndex === -1
     ? parsed.content
@@ -310,9 +323,9 @@ const q11ToQ15Start =
     ? legacyQ11CharacterIndex
     : q11HeadingCharacterIndex;
 const q11ToQ15Section =
-  q11ToQ15Start === -1 || q16CharacterIndex === -1
+  q11ToQ15Start === -1 || bodyEndCharacterIndex === -1
     ? ''
-    : parsed.content.slice(q11ToQ15Start, q16CharacterIndex);
+    : parsed.content.slice(q11ToQ15Start, bodyEndCharacterIndex);
 const q11ToQ15SourceBlockStart = q11ToQ15Section.indexOf(
   `### ${q11ToQ15SourceHeading}`,
 );
@@ -348,9 +361,9 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       diagram_after: 'Q7. 事故後可以向對方請求哪些損害？',
       title,
       url: sourceUrl,
-      lastmod: '2026-09-30',
+      lastmod: '2026-10-06',
       date_display: '2025年9月13日',
-      read_time: '13分鐘閱讀',
+      read_time: '10分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
     });
@@ -401,6 +414,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
     }
     expect(positions).toEqual([...positions].sort((a, b) => a - b));
     expect(introduction).toMatch(/(?:結果|判斷|責任).{0,24}(?:事實|情形).{0,12}(?:而異|不同)/s);
+    expect(introduction).toContain('個案結果或特定賠償金額不能預先保證。');
   });
 
   it('locks Q1 injury-or-death duties, vehicle movement rules, and Article 185-4 limits', () => {
@@ -422,6 +436,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'administrative consequences', pattern: /行政.{0,8}(?:處罰|裁罰|處分|責任|制裁)/s },
       { label: 'Criminal Code Article 185-4', pattern: /刑法第\s*185\s*條之\s*4/ },
       { label: 'Article 185-4 fact-specific analysis', pattern: /第\s*185\s*條之\s*4.{0,100}(?:個案|具體事實|實際情形).{0,20}(?:判斷|分析)/s },
+      { label: 'Road Traffic Management and Penalty Act Article 62 handling duty and administrative liability', pattern: /應另行檢視\[道路交通管理處罰條例第62條\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=K0040012&flno=62\)的處置義務及行政責任/ },
     ]);
   });
 
@@ -509,6 +524,9 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'video footage', pattern: /影像/ },
       { label: 'vehicle condition', pattern: /車輛狀態/ },
       { label: 'whole body of evidence', pattern: /整體證據/ },
+      { label: 'negligent homicide Criminal Code Article 276', pattern: /過失致死則應檢視\[刑法第276條\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=C0000001&flno=276\)/ },
+      { label: 'sentence is not predictable by a fixed number of months', pattern: /實際刑度依過失、損害及個案情節決定，不能以固定月數預測/ },
+      { label: 'Criminal Code Article 41 fine conversion has requirements and exceptions', pattern: /\[刑法第41條\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=C0000001&flno=41\)的易科罰金有適用要件與例外，並非一律准許/ },
     ]);
     expect(section).toContain('新臺幣 1,000,000 元');
     expect(section).toContain('新臺幣 500,000 元');
@@ -532,6 +550,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'withdrawal before first-instance oral argument ends', pattern: /第一審.{0,18}言詞辯論.{0,8}終結.{0,18}(?:前|以前).{0,18}(?:撤回告訴|撤回)/s },
       { label: 'no refiling after withdrawal', pattern: /撤回.{0,30}(?:不得|不能).{0,12}(?:再行告訴|再次提出告訴|再提出告訴|重新告訴)/s },
       { label: 'private settlement does not end non-complaint prosecution', pattern: /非告訴乃論.{0,40}(?:私人|私下)?和解.{0,40}(?:不當然|不會自動|並不會自動).{0,18}(?:公訴|追訴|刑事程序)/s },
+      { label: 'negligent homicide is a non-complaint offense', pattern: /過失致死等非告訴乃論之罪/ },
       { label: 'settlement does not always compel withdrawal', pattern: /和解.{0,30}(?:不代表|並非|不當然).{0,18}(?:必須|一定要).{0,8}撤回告訴/s },
     ]);
   });
@@ -586,7 +605,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
 });
 
 describe('Traditional Chinese traffic column 003 — Q6–Q10 localization boundary', () => {
-  it('starts the new Q6 H2 at byte 7265 and isolates exactly Q6–Q10 before the immutable Q11 marker', () => {
+  it('starts the new Q6 H2 and isolates exactly Q6–Q10 before the Q11 heading', () => {
     expect(q6HeadingByteIndex).toBeGreaterThan(0);
     expect(q6ByteIndex).toBe(q6HeadingByteIndex + 3);
     expect(q11CharacterIndex).toBeGreaterThan(q6HeadingCharacterIndex);
@@ -722,17 +741,16 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
       },
       { label: 'Civil Code Article 196', pattern: /民法第\s*196\s*條/ },
       {
-        label: 'proven property damage',
-        pattern:
-          /(?:財物|財產).{0,12}(?:實際|具體).{0,8}損害.{0,20}(?:證明|舉證)|(?:證明|舉證).{0,20}(?:財物|財產).{0,12}(?:實際|具體).{0,8}損害/s,
+        label: 'reduction in the value of the damaged object, to be proven',
+        pattern: /物因毀損所減少的價額.{0,12}(?:證明|舉證)/s,
       },
       {
-        label: 'repair or diminution in value',
-        pattern: /修理費|修復費|維修費/,
+        label: 'repair costs are a measure only to the extent necessary',
+        pattern: /(?:修理費|修復費|維修費).{0,8}以必要者為限/s,
       },
       {
-        label: 'diminution in value',
-        pattern: /價值減損|交易價值.{0,8}(?:減少|貶損)/,
+        label: 'depreciation where new parts replace old ones',
+        pattern: /以新品換舊品者應予折舊/,
       },
     ]);
     expect(countOccurrences(section, approvedQ7WorkInabilityClause)).toBe(1);
@@ -797,11 +815,6 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
         pattern:
           /(?:超過|超出|超額).{0,8}部分.{0,24}(?:裁判費|法院費用).{0,12}(?:問題|負擔|繳納)/s,
       },
-      {
-        label: 'case-specific stage, timing, and scope',
-        pattern:
-          /移送.{0,8}階段.{0,16}(?:提出|聲明|申請).{0,8}(?:時間|時點).{0,16}(?:請求|聲明).{0,8}範圍.{0,24}(?:個案|具體).{0,8}(?:確認|判斷)/s,
-      },
     ]);
   });
 
@@ -827,19 +840,25 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
         pattern: /(?:合理|相當).{0,8}(?:金額|費用|數額)/,
       },
       {
-        label: 'unpaid relative care may be valued',
-        pattern:
-          /親屬.{0,20}(?:無償|未實際支付|沒有金錢支出).{0,30}(?:得|可以|可能).{0,12}(?:評價|認列|計算).{0,12}(?:損害|費用)/s,
+        label: 'unpaid relative care cost and period are delegated to the linked family-care column',
+        pattern: new RegExp(
+          `親屬無償照顧的看護費與照護期間，另見\\[[^\\]]+\\]\\(/zh-hant/columns/${familyCareColumnSlug}\\)`,
+        ),
+      },
+    ]);
+    // The unpaid-relative-care rules trimmed from Q9 now live in the linked column.
+    expectConcepts(readLinkedZhColumn(familyCareColumnSlug), [
+      {
+        label: 'unpaid relative care may still be a care-cost loss',
+        pattern: /親屬無償提供照顧，仍可能使傷者受有相當於看護費的損害/,
       },
       {
-        label: 'relative care is not automatic',
-        pattern:
-          /親屬.{0,16}(?:看護|照護).{0,30}(?:不當然|不會自動|並非自動).{0,16}(?:認定|准許|賠償)/s,
+        label: 'relative presence does not make all accompanying time claimable',
+        pattern: /家人陪在身邊，也不表示所有陪伴時間都能計入看護費/,
       },
       {
-        label: 'nature, duration, and customary cost',
-        pattern:
-          /(?:看護|照護).{0,8}性質.{0,16}(?:期間|時間).{0,16}(?:通常|一般|市場|慣常).{0,8}(?:費用|價格|成本)/s,
+        label: 'family care is valued at the general market rate',
+        pattern: /一般市場行情/,
       },
     ]);
   });
@@ -928,9 +947,9 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
 });
 
 describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boundary', () => {
-  it('starts the new Q11 H2 at byte 12428 and isolates exactly Q11–Q15 before the immutable Q16 marker', () => {
+  it('starts the new Q11 H2, isolates exactly Q11–Q15 before the closing footer, and leaves no Q16–Q20', () => {
     expect(q11HeadingByteIndex).toBeGreaterThan(q6HeadingByteIndex);
-    expect(q16CharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
+    expect(bodyEndCharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
     expect(
       Array.from(
         q11ToQ15Section.matchAll(/^## (Q\d+\..+)$/gm),
@@ -941,13 +960,16 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
     expect(q11ToQ15SourceBlockStart).toBeGreaterThan(
       q11ToQ15Section.indexOf(`## ${q11ToQ15Headings[4]}`),
     );
-    expect(q11ToQ15Section).not.toContain(`## ${q16Marker}`);
+    expect(
+      Array.from(parsed.content.matchAll(/^## Q(\d+)\./gm), (match) =>
+        Number(match[1]),
+      ),
+    ).toEqual(Array.from({ length: 15 }, (_, index) => index + 1));
   });
 
   it('locks Q11 temporary income loss, proof categories, and the separate Q12 issue', () => {
     const section = q11ToQ15SectionForQuestion(11);
 
-    expect(countOccurrences(section, approvedQ11ContinuedWorkBasisParagraph)).toBe(1);
     expect(section).not.toContain(staleQ11ContinuedWorkBasisParagraph);
 
     expectConcepts(section, [
@@ -993,37 +1015,26 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
         pattern: /雇主.{0,8}(?:證明|確認|說明)/,
       },
       {
-        label: 'self-employed business records',
-        pattern:
-          /(?:自營業者|自營工作者|自行執業者).{0,24}(?:帳冊|帳簿|發票|營業紀錄|業務紀錄|營業資料|業務資料|營業憑證)/s,
+        label: 'duty, period, and amount proof is delegated to the linked work-loss column',
+        pattern: new RegExp(
+          `職務、期間與金額的證明方式，另見\\[[^\\]]+\\]\\(/zh-hant/columns/${workLossColumnSlug}\\)`,
+        ),
+      },
+    ]);
+    // The self-employed and unchanged-pay rules trimmed from Q11 now live in the linked column;
+    // the separate lasting earning-capacity issue stays locked in the Q12 test.
+    expectConcepts(readLinkedZhColumn(workLossColumnSlug), [
+      {
+        label: 'self-employed claimants prove income with records suited to the business',
+        pattern: /自營者要做的是用適合其營業型態的紀錄說明收入/,
       },
       {
-        label: 'continued work or unchanged pay is relevant',
-        pattern:
-          /(?:(?:繼續|持續).{0,8}工作|(?:薪資|收入|所得).{0,8}(?:未變|沒有變|未減少|相同)).{0,24}(?:相關|考量|判斷)/s,
+        label: 'continued pay does not exclude every loss',
+        pattern: /不能只因仍有領薪，就把所有損害一概排除/,
       },
       {
-        label: 'temporary loss does not itself decide lasting capacity',
-        pattern:
-          /(?:繼續|持續).{0,8}工作|(?:薪資|收入|所得).{0,8}(?:未變|沒有變|未減少|相同)/,
-      },
-      {
-        label: 'separate lasting earning-capacity issue',
-        pattern:
-          /(?:不當然|不會自動|不能單憑|不足以).{0,24}(?:決定|排除|否定).{0,24}(?:勞動能力|工作能力).{0,8}(?:減損|喪失)|(?:勞動能力|工作能力).{0,8}(?:減損|喪失).{0,24}(?:另行|分別|不同).{0,8}(?:判斷|認定|問題)/s,
-      },
-      {
-        label: 'continued work or unchanged pay does not automatically decide capacity loss',
-        pattern:
-          /(?:繼續工作|薪資未減少).{0,80}不當然決定勞動能力減損問題/s,
-      },
-      {
-        label: 'continued work or unchanged pay is not a stand-alone capacity-loss basis',
-        pattern: /亦非單獨判斷勞動能力減損的依據/,
-      },
-      {
-        label: 'Q12 separately determines capacity loss',
-        pattern: /勞動能力減損應另行判斷，詳見\s*Q12/,
+        label: 'recovery-period loss is separate from lasting earning-capacity loss',
+        pattern: /休養期間不能工作的損失，與長期勞動能力減損的請求期間、證據及計算方式不同/,
       },
     ]);
   });
@@ -1190,6 +1201,10 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
           /第\s*188\s*條第\s*2\s*項.{0,30}(?:未獲|不能獲得|無法獲得).{0,8}(?:賠償|補償).{0,24}(?:法院|損害).{0,18}(?:斟酌|命|適當)/s,
       },
       {
+        label: 'paragraph 2 relief is available on the victim application',
+        pattern: /法院得依被害人聲請，斟酌僱用人與被害人的經濟狀況，命為全部或一部賠償/,
+      },
+      {
         label: 'employer recourse after payment',
         pattern:
           /(?:雇主|僱用人).{0,18}(?:賠償|給付|支付).{0,18}(?:後|之後).{0,18}(?:向受僱人|對受僱人).{0,12}(?:求償|追償)/s,
@@ -1276,6 +1291,10 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
         label: 'policy-specific conditions',
         pattern:
           /被保險人.{0,12}(?:保額|限額).{0,12}自負額.{0,12}除外.{0,12}過失.{0,16}(?:條款|條件)/s,
+      },
+      {
+        label: 'insurer handling scope, documents, and notice deadlines',
+        pattern: /確認保險公司的處理範圍、所需文件與通知期限/,
       },
     ]);
 

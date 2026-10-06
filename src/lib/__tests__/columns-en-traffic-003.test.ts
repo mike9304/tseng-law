@@ -25,8 +25,8 @@ const incidentImage =
 const immutablePrefixBytes = rawBytes.indexOf(Buffer.from('## Q1. ', 'utf8'));
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
-const q16Marker =
-  'Q16. After an accident, can you leave everything to the insurance company?';
+// Q16–Q20 no longer exist; Q11–Q15 now end at the horizontal rule that precedes the related-links footer.
+const bodyEndMarker = '\n---\n';
 
 const q1Heading = '## Q1. Can I leave the scene after an accident?';
 const q2Heading = '## Q2. What evidence should I preserve first?';
@@ -79,7 +79,7 @@ const q13Heading = '## Q13. How are non-pecuniary damages assessed?';
 const q14Heading =
   '## Q14. Can an employer also face civil liability for an accident during work?';
 const approvedQ14JointClaimParagraph =
-  'The employer may defend the claim by showing that it exercised due care in selecting and supervising the employee, or that the damage could not have been avoided even with such care. A joint claim for damages against the employer and employee may be considered. The employer may seek recourse from the employee after payment.';
+  'By showing that it exercised due care in selecting and supervising the employee, or that the damage could not have been avoided even with such care, the employer may defend the claim. A joint claim for damages against the employer and employee may be considered. The employer may seek recourse from the employee after payment.';
 const staleQ14JointClaimParagraph =
   'Possible joint civil liability is subject to statutory defenses. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.';
 const q15Heading =
@@ -303,11 +303,14 @@ const q6ToQ10Sources =
   q6ToQ10.indexOf(q6ToQ10SourceHeading) === -1
     ? ''
     : q6ToQ10.slice(q6ToQ10.indexOf(q6ToQ10SourceHeading));
-const q16ByteIndex = rawBytes.indexOf(Buffer.from(q16Marker, 'utf8'));
+const bodyEndByteIndex = rawBytes.indexOf(
+  Buffer.from(bodyEndMarker, 'utf8'),
+  q11ByteIndex,
+);
 const q11ToQ15 =
-  q16ByteIndex <= q11ByteIndex
+  bodyEndByteIndex <= q11ByteIndex
     ? ''
-    : rawBytes.subarray(q11ByteIndex, q16ByteIndex).toString('utf8');
+    : rawBytes.subarray(q11ByteIndex, bodyEndByteIndex).toString('utf8');
 const q11 = q11ToQ15SectionBetween(q11Heading, q12Heading);
 const q12 = q11ToQ15SectionBetween(q12Heading, q13Heading);
 const q13 = q11ToQ15SectionBetween(q13Heading, q14Heading);
@@ -359,9 +362,9 @@ describe('English traffic column 003 — metadata and introduction localization 
       title,
       seoTitle: 'Taiwan Traffic Accident Fault & Compensation',
       url: sourceUrl,
-      lastmod: '2026-09-30',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
-      read_time: '8 min read',
+      read_time: '11 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       summary:
@@ -399,22 +402,14 @@ describe('English traffic column 003 — metadata and introduction localization 
       /(?:report|notification|notify).{0,80}(?:preserve|document|record).{0,25}evidence/is,
     );
 
-    const sequence = [
-      /(?:claim|filing).{0,20}(?:deadline|time limit|limitation)/i,
-      /fault/i,
-      /(?:scope|terms|extent).{0,20}(?:settlement|settling)|settlement.{0,20}(?:scope|terms|extent)/i,
-    ];
-    const positions = sequence.map((pattern) => introduction.search(pattern));
-    for (const position of positions) {
-      expect(position).toBeGreaterThanOrEqual(0);
-    }
-    expect(positions).toEqual([...positions].sort((a, b) => a - b));
-
     expect(introduction).toMatch(
       /(?:general|overall).{0,30}(?:sequence|order|steps|process).{0,50}Taiwan(?:ese)?.{0,10}law.{0,50}(?:official|government|public).{0,20}(?:guidance|information)/is,
     );
     expect(introduction).toMatch(
       /(?:responsibility|liability).{0,30}(?:procedure|process).{0,60}(?:depend|vary).{0,30}(?:facts|circumstances)/is,
+    );
+    expect(introduction).toMatch(
+      /No particular outcome or compensation amount can be guaranteed in advance\./,
     );
   });
 
@@ -470,6 +465,9 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
     expect(q1).toMatch(
       /Article 185-4.{0,120}(?:injury|death).{0,120}(?:depend|fact).{0,60}(?:measures|steps|actions) taken/is,
     );
+    expect(q1).toMatch(
+      /administrative sanctions? under the Road Traffic Management and Penalty Act, \[Article 62\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=K0040012&flno=62\)/is,
+    );
   });
 
   it('puts safety first and preserves the complete evidence and police-document sequence in Q2', () => {
@@ -499,7 +497,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
       /personal recordings?.{0,60}useful.{0,80}(?:does not|do not|cannot).{0,30}(?:replace|substitute).{0,40}police.{0,50}(?:injury|death)/is,
     );
     expect(q2).toMatch(
-      /(?:registration|contact) form.{0,40}(?:at the scene|on-site).{0,80}(?:scene diagram|diagram).{0,30}(?:photos?|photographs?).{0,40}(?:day 7|seven days).{0,80}preliminary analysis.{0,40}(?:day 30|thirty days)/is,
+      /(?:at the scene|on-site).{0,80}(?:registration|contact) form.{0,40}(?:scene diagram|diagram).{0,30}(?:photos?|photographs?).{0,40}(?:day 7|seven days).{0,80}preliminary analysis.{0,40}(?:day 30|thirty days)/is,
     );
     expect(q2).toMatch(
       /(?:confirm|check).{0,40}(?:availability|available).{0,30}(?:requirements?|conditions?).{0,50}(?:competent|responsible|relevant).{0,20}police/is,
@@ -529,9 +527,6 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
     expect(q3).toMatch(
       /(?:interruption|interrupt).{0,30}(?:limitation|period).{0,80}defendants?.{0,50}evidence.{0,50}insurance.{0,50}venue/is,
     );
-    expect(q3).toMatch(
-      /(?:no|not).{0,30}(?:universally|always).{0,30}best (?:route|procedure|option)/is,
-    );
   });
 
   it('keeps criminal negligence individual and the civil comparative-fault example conditional in Q4', () => {
@@ -557,6 +552,12 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
     expect(q4).toMatch(
       /(?:appraisal|preliminary analysis).{0,100}(?:important|relevant).{0,100}(?:does not|cannot).{0,40}(?:mechanically|automatically).{0,30}bind.{0,30}court.{0,80}full body of evidence.{0,80}statements?.{0,80}video.{0,80}vehicle condition/is,
     );
+    expect(q4).toMatch(
+      /Negligent homicide.{0,60}Criminal Code \[Article 276\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=C0000001&flno=276\).{0,40}Actual sentencing depends on the circumstances, not a fixed number of months\./is,
+    );
+    expect(q4).toMatch(
+      /Conversion to a fine under Criminal Code \[Article 41\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=C0000001&flno=41\) is subject to eligibility requirements and exceptions/is,
+    );
   });
 
   it('preserves the settlement scope, limited waiver, and complaint-withdrawal distinctions in Q5', () => {
@@ -573,13 +574,10 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
       /Articles? 736.{0,20}(?:and|,).{0,20}737.{0,100}mutual concession.{0,100}(?:extinguish|waiv).{0,80}(?:limited|only).{0,50}(?:wording|terms)/is,
     );
     expect(q5).toMatch(
-      /(?:does not|not).{0,50}(?:every|all).{0,30}future claims?.{0,30}(?:disappear|extinguish|waive)/is,
-    );
-    expect(q5).toMatch(
       /Article 238.{0,100}(?:withdraw|withdrawal).{0,80}(?:before|by).{0,40}(?:close|conclusion).{0,30}first-instance oral argument.{0,40}person who withdraws.{0,20}cannot file a complaint again/is,
     );
     expect(q5).toMatch(
-      /private settlement.{0,100}(?:does not|cannot).{0,40}automatically.{0,40}(?:terminate|end).{0,30}prosecution.{0,60}non-complaint offense/is,
+      /private settlement.{0,100}(?:does not|cannot).{0,40}automatically.{0,40}(?:terminate|end).{0,30}prosecution.{0,60}non-complaint offense.{0,40}negligent homicide/is,
     );
     expect(q5).toMatch(
       /settlement.{0,80}(?:does not|need not|not invariably).{0,50}(?:require|mean).{0,30}(?:complaint )?withdrawal/is,
@@ -626,7 +624,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
 });
 
 describe('English traffic column 003 — Q6–Q10 translation contract', () => {
-  it('starts the exact five H2s at byte 8755 and places the source H3 after Q10 before Q11', () => {
+  it('starts the exact five H2s at Q6 and places the source H3 after Q10 before Q11', () => {
     expect(rawBytes.subarray(q6ByteIndex).toString('utf8')).toMatch(
       /^## Q6\. How is responsibility for the accident determined\?\n/,
     );
@@ -696,7 +694,7 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
       /Article 194.{0,100}non-pecuniary damage.{0,100}(?:qualifying|eligible|specified).{0,30}relatives/is,
     );
     expect(q7).toMatch(
-      /(?:property|property damage).{0,100}Article 196.{0,100}(?:proven|proof of).{0,40}actual property damage.{0,120}repair.{0,100}diminution in value/is,
+      /(?:property|property damage).{0,100}Article 196.{0,100}reduction in the vehicle['’]s value.{0,120}repair costs.{0,100}only to the extent necessary.{0,100}depreciation.{0,60}new parts/is,
     );
   });
 
@@ -726,9 +724,6 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
     );
     expect(q8).toMatch(
       /Article 504.{0,140}transfer.{0,100}(?:change|addition|increase|expansion).{0,100}(?:beyond|exceed).{0,80}pre-transfer claim.{0,120}(?:court-fee|court fee|filing-fee|filing fee).{0,80}excess/is,
-    );
-    expect(q8).toMatch(
-      /(?:confirm|check|consider).{0,80}transfer stage.{0,80}filing time.{0,80}claim scope.{0,80}(?:case by case|individual case)/is,
     );
   });
 
@@ -806,7 +801,7 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
 });
 
 describe('English traffic column 003 — Q11–Q15 translation contract', () => {
-  it('starts the exact five H2s at byte 14906 and places the source H3 after Q15 before Q16', () => {
+  it('starts the exact five H2s at Q11, places the source H3 after Q15, and leaves no Q16–Q20', () => {
     expect(rawBytes.subarray(q11ByteIndex).toString('utf8')).toMatch(
       /^## Q11\. How should I prove temporary lost income during treatment and recovery\?\n/,
     );
@@ -820,7 +815,9 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
       q11ToQ15.indexOf(q15Heading),
     );
     expect(countOccurrences(q11ToQ15, q11ToQ15SourceHeading)).toBe(1);
-    expect(q11ToQ15).not.toContain(q16Marker);
+    expect(
+      Array.from(raw.matchAll(/^## Q(\d+)\./gm), (match) => Number(match[1])),
+    ).toEqual(Array.from({ length: 15 }, (_, index) => index + 1));
   });
 
   it('requires accident-caused inability and actual income reduction while preserving Q12 as a separate issue', () => {
@@ -885,7 +882,7 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
 
   it('bases Q13 non-pecuniary damages on Article 195 and individualized evidence', () => {
     expect(q13).toMatch(
-      /Article 195.{0,120}(?:appropriate|reasonable) amount.{0,120}(?:unlawful infringement|unlawfully infringed).{0,80}(?:body|bodily integrity).{0,20}(?:or|and).{0,20}health/is,
+      /(?:appropriate|reasonable) amount.{0,120}Article 195.{0,120}(?:unlawful infringement|unlawfully infringed).{0,80}(?:body|bodily integrity).{0,20}(?:or|and).{0,20}health/is,
     );
     expect(q13).toMatch(
       /injury.{0,40}treatment.{0,80}lasting effects.{0,80}pain.{0,80}(?:impact|effect).{0,40}(?:daily )?life/is,
@@ -908,10 +905,10 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
       /joint claim for damages.{0,80}employer.{0,40}(?:and|&)\s+employee.{0,80}may be considered/is,
     );
     expect(q14).toMatch(
-      /employer may defend.{0,100}due care.{0,60}selecting.{0,30}(?:and|\/).{0,30}supervising.{0,140}(?:damage|loss).{0,60}could not have been avoided/is,
+      /due care.{0,60}selecting.{0,30}(?:and|\/).{0,30}supervising.{0,140}(?:damage|loss).{0,60}could not have been avoided.{0,100}employer may defend/is,
     );
     expect(q14).toMatch(
-      /victim.{0,60}cannot recover damages.{0,50}paragraph 1.{0,100}paragraph 2.{0,140}economic circumstances.{0,100}(?:full|partial) compensation/is,
+      /victim.{0,60}cannot recover damages.{0,50}paragraph 1.{0,100}paragraph 2.{0,60}if the victim applies.{0,100}court may.{0,60}economic circumstances.{0,100}order the employer to pay all or part of the damages/is,
     );
     expect(q14).toMatch(
       /(?:employer|principal).{0,80}(?:recourse|reimbursement).{0,80}(?:employee|worker).{0,80}(?:after|once).{0,30}payment/is,
@@ -958,6 +955,9 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
     );
     expect(q15).toMatch(
       /each insurance policy.{0,50}its terms.{0,50}reviewed separately/is,
+    );
+    expect(q15).toContain(
+      'Confirm what the insurer will handle, which documents it needs and the notice deadlines.',
     );
   });
 

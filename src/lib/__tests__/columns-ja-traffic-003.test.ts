@@ -16,8 +16,8 @@ const immutablePrefixBytes = rawBytes.indexOf(Buffer.from('## Q1. ', 'utf8'));
 // Q16-Q20 amounts); the introduction prefix hash is unchanged.
 const q6ByteIndex = rawBytes.indexOf(Buffer.from('## Q6. ', 'utf8'));
 const q11ByteIndex = rawBytes.indexOf(Buffer.from('## Q11. ', 'utf8'));
-const q16Marker =
-  'Q16. 事故発生後、保険会社にすべてを任せられますか？';
+// Q16–Q20 no longer exist; Q11–Q15 now end at the horizontal rule that precedes the related-links footer.
+const bodyEndMarker = '\n---\n';
 const expectedFooterLocaleTargets = [
   '/ja/taiwan-litigation-lawyer',
   '/ja/korean-lawyer-in-taiwan',
@@ -326,13 +326,18 @@ const q6ToQ10SourceBlock =
   q6ToQ10SourceBlockStart === -1
     ? ''
     : q6ToQ10.slice(q6ToQ10SourceBlockStart);
-const q16ByteIndex = rawBytes.indexOf(Buffer.from(q16Marker, 'utf8'));
-const q16ToEnd =
-  q16ByteIndex === -1 ? '' : rawBytes.subarray(q16ByteIndex).toString('utf8');
-const q11ToQ15 =
-  q16ByteIndex <= q11ByteIndex
+const bodyEndByteIndex = rawBytes.indexOf(
+  Buffer.from(bodyEndMarker, 'utf8'),
+  q11ByteIndex,
+);
+const closingToEnd =
+  bodyEndByteIndex === -1
     ? ''
-    : rawBytes.subarray(q11ByteIndex, q16ByteIndex).toString('utf8');
+    : rawBytes.subarray(bodyEndByteIndex).toString('utf8');
+const q11ToQ15 =
+  bodyEndByteIndex <= q11ByteIndex
+    ? ''
+    : rawBytes.subarray(q11ByteIndex, bodyEndByteIndex).toString('utf8');
 const q11 = q11ToQ15SectionBetween(q11Heading, q12Heading);
 const q12 = q11ToQ15SectionBetween(q12Heading, q13Heading);
 const q13 = q11ToQ15SectionBetween(q13Heading, q14Heading);
@@ -364,9 +369,9 @@ describe('Japanese traffic column 003 — metadata and introduction localization
       diagram_after: 'Q7. 事故後、どのような損害を請求できますか？',
       title: expectedTitle,
       url: sourceUrl,
-      lastmod: '2026-09-30',
+      lastmod: '2026-10-06',
       date_display: '2025年9月13日',
-      read_time: '約8分',
+      read_time: '約11分',
       categories: ['台湾法律情報'],
       featured_image: featuredImage,
     });
@@ -415,6 +420,9 @@ describe('Japanese traffic column 003 — metadata and introduction localization
     expect(introduction).toMatch(
       /(?:具体的な)?(?:責任|責任関係).{0,30}(?:手続|対応).{0,50}(?:事故|事案).{0,20}(?:事実関係|事情|状況).{0,30}(?:異な|変わ)/su,
     );
+    expect(introduction).toContain(
+      '特定の結果や賠償額を事前に保証することはできません。',
+    );
   });
 
   it('removes stale personal copy, first-person prose, Hangul, and spacer-only lines', () => {
@@ -428,7 +436,7 @@ describe('Japanese traffic column 003 — metadata and introduction localization
 });
 
 describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
-  it('starts the exact five-H2 segment at byte 1170 and places the source H3 after Q5', () => {
+  it('starts the exact five-H2 segment at Q1 and places the source H3 after Q5', () => {
     expect(rawBytes.subarray(immutablePrefixBytes).toString('utf8')).toMatch(
       /^## Q1\. 事故後に現場を離れてもよいですか？/u,
     );
@@ -452,7 +460,10 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
       /(?:車両|自動車).{0,25}(?:現場|事故現場).{0,35}(?:証拠|痕跡).{0,20}(?:保全|保存)/su,
     );
     expect(q1).toMatch(
-      /(?:(?:口頭|非公式).{0,20}(?:同意|承諾)|(?:録音|録画|記録)).{0,45}(?:必要な措置|法定の措置|義務).{0,20}(?:代わり|代替).{0,8}(?:にはなら|できな)/su,
+      /(?:(?:口頭|非公式).{0,20}(?:同意|承諾)|(?:録音|録画|記録)).{0,45}必要な措置.{0,12}終えずに.{0,20}現場を離れてよい.{0,12}ことにはなりません/su,
+    );
+    expect(q1).toMatch(
+      /これは(?:救護や通報など、)?必要な措置に代わるものではありません/u,
     );
     expect(q1).toMatch(
       /当事者全員.{0,20}(?:同意|合意).{0,45}(?:位置|痕跡).{0,20}(?:表示|標示|記録).{0,50}(?:交通|通行).{0,20}(?:妨げ|支障|阻害).{0,35}(?:移動|動か)/su,
@@ -463,6 +474,9 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
     expect(q1).toMatch(/行政.{0,12}(?:処分|責任|罰|上の不利益)/u);
     expect(q1).toMatch(
       /刑法.{0,8}185条の4.{0,80}(?:負傷|傷害|死亡|死傷).{0,70}(?:個別|具体的).{0,20}(?:判断|検討|分析)/su,
+    );
+    expect(q1).toContain(
+      '（[道路交通管理処罰条例第62条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)）',
     );
   });
 
@@ -511,7 +525,7 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
 
   it('states the complaint, limitation, and criminal-attached civil-action rules in Q3', () => {
     expect(q3).toMatch(
-      /刑法.{0,8}284条.{0,25}(?:過失傷害|過失致傷).{0,20}(?:重傷|重傷害)/su,
+      /刑法.{0,8}284条(?:\]\([^)]*\))?.{0,25}(?:過失傷害|過失致傷).{0,20}(?:重傷|重傷害)/su,
     );
     expect(q3).toMatch(
       /刑法.{0,8}287条.{0,30}(?:親告罪|告訴を要する|告訴が必要)/su,
@@ -537,9 +551,6 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
     expect(q3).toMatch(
       /(?:時効|期間).{0,15}(?:中断|更新|完成猶予).{0,35}(?:被告|相手方).{0,25}証拠.{0,25}保険.{0,25}(?:管轄|裁判管轄)/su,
     );
-    expect(q3).toMatch(
-      /すべての事案.{0,20}一律に.{0,20}最善の手続.{0,20}あるわけではありません/u,
-    );
   });
 
   it('separates criminal causation from civil comparative fault and preserves the Q4 example', () => {
@@ -558,6 +569,12 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
     );
     expect(q4).toMatch(
       /(?:(?:鑑定|事故鑑定).{0,25}(?:初期分析|初歩分析|初判表)|(?:初期分析|初歩分析|初判表).{0,25}(?:鑑定|事故鑑定)).{0,35}(?:重要|有力).{0,15}(?:資料|証拠).{0,45}(?:裁判所|裁判官).{0,30}(?:拘束しない|機械的に従わない|独自に判断)/su,
+    );
+    expect(q4).toMatch(
+      /過失致死については\[刑法第276条\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=C0000001&flno=276\)を確認します。実際の刑は個別事情により異なり、一定の月数では予測できません。/u,
+    );
+    expect(q4).toMatch(
+      /\[刑法第41条\]\(https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=C0000001&flno=41\)による罰金への換算にも要件と例外があります/u,
     );
   });
 
@@ -584,7 +601,7 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
       /刑事訴訟法.{0,10}238条.{0,40}(?:第一審|第1審).{0,20}(?:口頭弁論|弁論).{0,25}(?:終結|終了).{0,35}(?:取り下げ|取消し|撤回).{0,35}(?:再度|再び).{0,12}(?:告訴できない|告訴できません|告訴することができない)/su,
     );
     expect(q5).toMatch(
-      /(?:非親告罪|告訴を要しない犯罪).{0,45}(?:私的|当事者間).{0,15}示談.{0,35}(?:公訴|訴追|刑事手続).{0,20}(?:当然|自動的).{0,12}(?:終了しない|終わらない)/su,
+      /過失致死など(?:非親告罪|告訴を要しない犯罪).{0,45}(?:私的|当事者間).{0,15}示談.{0,35}(?:公訴|訴追|刑事手続).{0,20}(?:当然|自動的).{0,12}(?:終了しない|終わらない)/su,
     );
     expect(q5).toMatch(
       /(?:示談.{0,35}(?:すべて|あらゆる|常に|必ず|一律に).{0,20}(?:告訴|告訴の取下げ|告訴取消).{0,20}(?:義務|強制).{0,15}(?:ではない|しない|されない)|示談したからといって[^。\n]{0,20}必ず[^。\n]{0,20}告訴[^。\n]{0,20}(?:取り下げ|取消し|撤回)[^。\n]{0,25}(?:なければならないわけでは|必要はない))/u,
@@ -628,7 +645,7 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
 });
 
 describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => {
-  it('starts the exact five H2s at byte 9395 and places the source H3 after Q10 before Q11', () => {
+  it('starts the exact five H2s at Q6 and places the source H3 after Q10 before Q11', () => {
     expect(rawBytes.subarray(q6ByteIndex).toString('utf8')).toMatch(
       /^## Q6\. 事故責任はどのように認定されますか？\n/u,
     );
@@ -698,7 +715,7 @@ describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => 
       /(?:第)?194条.{0,50}(?:一定|所定|特定).{0,20}(?:親族|家族).{0,50}非財産的損害/su,
     );
     expect(q7).toMatch(
-      /(?:財産|物的損害).{0,60}(?:第)?196条.{0,50}(?:(?:立証|証明).{0,30}(?:実損害|実際の損害).{0,70}修理費.{0,60}(?:価値減少|価値の減少|価値の下落)|修理費.{0,60}(?:価値減少|価値の減少|価値の下落).{0,60}(?:立証|証明).{0,30}(?:実際の財産損害|財産の実損害))/su,
+      /(?:財産|物的損害).{0,60}(?:第)?196条.{0,50}(?:毀損|損傷).{0,20}(?:減少した価額|価値の減少|価値減少).{0,40}(?:賠償|請求).{0,60}修理費.{0,60}必要な範囲.{0,40}基準.{0,60}新品部品.{0,40}減価償却/su,
     );
   });
 
@@ -723,9 +740,6 @@ describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => 
     );
     expect(q8).toMatch(
       /刑事訴訟法.{0,10}(?:第)?504条.{0,80}民事部.{0,30}移送.{0,100}移送前.{0,30}(?:範囲|請求).{0,50}(?:変更|追加|拡張|増額).{0,60}超過部分.{0,40}(?:裁判費用|訴訟費用)/su,
-    );
-    expect(q8).toMatch(
-      /(?:移送段階|移送の段階).{0,40}(?:提出時期|提出の時期).{0,40}(?:請求範囲|請求の範囲).{0,50}(?:個別|事案ごと|事件ごと).{0,20}(?:確認|検討)/su,
     );
   });
 
@@ -802,7 +816,7 @@ describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => 
 });
 
 describe('Japanese traffic column 003 — Q11–Q15 translation contract', () => {
-  it('starts the exact five H2s at byte 15831 and places the source H3 after Q15 before Q16', () => {
+  it('starts the exact five H2s at Q11, places the source H3 after Q15, and leaves no Q16–Q20', () => {
     expect(rawBytes.subarray(q11ByteIndex).toString('utf8')).toMatch(
       /^## Q11\. 治療・回復期間中の逸失収入は、どのように立証しますか？\n/u,
     );
@@ -816,7 +830,9 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
       q11ToQ15.indexOf(q15Heading),
     );
     expect(countOccurrences(q11ToQ15, q11ToQ15SourceHeading)).toBe(1);
-    expect(q11ToQ15).not.toContain(q16Marker);
+    expect(
+      Array.from(raw.matchAll(/^## Q(\d+)\./gm), (match) => Number(match[1])),
+    ).toEqual(Array.from({ length: 15 }, (_, index) => index + 1));
   });
 
   it('requires accident-caused inability and actual income reduction while preserving Q12 as a separate issue', () => {
@@ -912,6 +928,9 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
       /使用者.{0,30}免責要件.{0,30}立証.{0,50}被害者.{0,30}第1項.{0,30}(?:損害賠償|賠償).{0,30}(?:受けられない|得られない).{0,50}第2項.{0,30}(?:救済|補償)/su,
     );
     expect(q14).toMatch(
+      /第2項による救済が問題となります。この場合、被害者の申立てがあれば、裁判所は使用者と被害者の経済状況を考慮し、使用者に全部または一部の賠償を命じることができます/u,
+    );
+    expect(q14).toMatch(
       /使用者.{0,60}(?:支払|賠償).{0,50}(?:被用者|従業員).{0,40}(?:求償|償還)/su,
     );
     expect(q14).toMatch(
@@ -951,6 +970,9 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
     );
     expect(q15).toMatch(
       /(?:実際の)?(?:補償|給付).{0,70}被保険者.{0,40}(?:限度額|保険金額).{0,40}免責金額.{0,40}免責事由.{0,40}過失.{0,50}(?:約款|契約条件)/su,
+    );
+    expect(q15).toContain(
+      '保険会社が担当する範囲、必要書類、通知期限を確認しましょう。',
     );
   });
 
@@ -1003,11 +1025,11 @@ describe('Japanese traffic column 003 — Q20 lawyer-warning translation repair'
 
 });
 
-describe('Japanese traffic column 003 — Q16-to-end closing narrative repair', () => {
+describe('Japanese traffic column 003 — closing related-links footer', () => {
 
 
   it('uses only the three Japanese-locale targets in the related-links footer', () => {
-    const footer = q16ToEnd.slice(q16ToEnd.lastIndexOf('> 関連リンク:'));
+    const footer = closingToEnd.slice(closingToEnd.lastIndexOf('> 関連リンク:'));
     const footerLocaleTargets = Array.from(
       footer.matchAll(/\]\((\/(?:ja|ko)\/[^)]+)\)/g),
       (match) => match[1],

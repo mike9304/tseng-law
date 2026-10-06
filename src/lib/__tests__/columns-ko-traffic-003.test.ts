@@ -26,7 +26,8 @@ const incidentAlt =
 
 const q6Marker = 'Q6. 사고 책임은 어떻게 인정되나요?';
 const q11Marker = 'Q11. 치료·회복 기간의 일실수입은 어떻게 입증하나요?';
-const q16Marker = 'Q16. 사고 발생 후 보험사에게 모든 것을 맡길 수 있나요?';
+// Q16–Q20 no longer exist; Q11–Q15 now end at the horizontal rule that precedes the related-links footer.
+const bodyEndMarker = '\n---\n';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -150,7 +151,10 @@ const q6CharacterIndex = parsed.content.indexOf(q6Marker);
 const q6HeadingCharacterIndex = parsed.content.indexOf(`## ${q6Marker}`);
 const q11CharacterIndex = parsed.content.indexOf(q11Marker);
 const q11HeadingCharacterIndex = parsed.content.indexOf(`## ${q11Marker}`);
-const q16CharacterIndex = parsed.content.indexOf(q16Marker);
+const bodyEndCharacterIndex = parsed.content.indexOf(
+  bodyEndMarker,
+  q11HeadingCharacterIndex,
+);
 const microSection = parsed.content.slice(0, q6CharacterIndex);
 const q6ToQ10Section = parsed.content.slice(q6CharacterIndex, q11CharacterIndex);
 const q6ToQ10WithHeadings = parsed.content.slice(
@@ -159,7 +163,7 @@ const q6ToQ10WithHeadings = parsed.content.slice(
 );
 const q11ToQ15Section = parsed.content.slice(
   q11HeadingCharacterIndex,
-  q16CharacterIndex,
+  bodyEndCharacterIndex,
 );
 
 function questionSection(questionNumber: number) {
@@ -195,9 +199,9 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       diagram_after: 'Q7. 사고 발생 뒤 어떤 손해를 청구할 수 있나요?',
       title,
       url: sourceUrl,
-      lastmod: '2026-09-30',
+      lastmod: '2026-10-06',
       date_display: '2025년 9월 13일',
-      read_time: '8분 분량',
+      read_time: '11분 분량',
       categories: ['대만 법률정보'],
       featured_image: featuredImage,
     });
@@ -227,6 +231,9 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
     expect(microSection).toContain('기한');
     expect(microSection).toContain('과실');
     expect(microSection).toContain('합의');
+    expect(microSection.slice(0, microSection.indexOf('## Q1.'))).toContain(
+      '사건 결과나 특정 배상액을 미리 보장할 수는 없습니다',
+    );
 
     expect(
       Array.from(microSection.matchAll(/^## (Q\d+)\./gm), (match) => match[1]),
@@ -258,6 +265,9 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       '행정상 제재',
       '형법 제185조의4',
       '부상이나 사망을 초래한 교통사고',
+      '물적 피해만 있는 경우',
+      '도로교통관리처벌조례 제62조',
+      '사고 처리 의무와 행정상 책임',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -319,7 +329,6 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       '피고',
       '보험',
       '관할',
-      '일률적으로 가장 좋은 절차',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -339,6 +348,11 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       'TWD 500,000',
       '감정 또는 초보분석판정표',
       '법원을 기계적으로 구속하지',
+      '형법 제276조',
+      '일률적인 개월 수로 예측할 수 없습니다',
+      '형법 제41조',
+      '벌금 대체 집행',
+      '적용 요건과 예외',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -367,6 +381,7 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       '제1심 변론 종결 전',
       '다시 고소할 수 없',
       '비친고죄',
+      '과실치사 등 비친고죄',
       '자동으로 공소가 종료',
       '무조건 고소를 취하해야 하는 것은 아닙니다',
     ];
@@ -473,6 +488,8 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       '장례비',
       '부양',
       '수리비',
+      '줄어든 가액',
+      '감가가 공제',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -498,7 +515,6 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       '이송 전 청구 범위',
       '초과 부분',
       '재판 비용',
-      '사건별',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -584,7 +600,7 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
 describe('Korean traffic column 003 — Q11–Q15 rewrite boundary', () => {
   it('isolates exactly one H2 for Q11–Q15 and places their source block after Q15', () => {
     expect(q11HeadingCharacterIndex).toBeGreaterThan(0);
-    expect(q16CharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
+    expect(bodyEndCharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
     expect(
       Array.from(
         q11ToQ15Section.matchAll(/^## (Q\d+)\./gm),
@@ -592,6 +608,11 @@ describe('Korean traffic column 003 — Q11–Q15 rewrite boundary', () => {
       ),
     ).toEqual(['Q11', 'Q12', 'Q13', 'Q14', 'Q15']);
     expect(q11ToQ15Section).not.toMatch(/^## Q16\./m);
+    expect(
+      Array.from(parsed.content.matchAll(/^## Q(\d+)\./gm), (match) =>
+        Number(match[1]),
+      ),
+    ).toEqual(Array.from({ length: 15 }, (_, index) => index + 1));
     expect(q11ToQ15Section).toContain('### Q11–Q15 공식 근거');
     expect(q11ToQ15Section.indexOf('### Q11–Q15 공식 근거')).toBeGreaterThan(
       q11ToQ15Section.indexOf('## Q15.'),
@@ -608,7 +629,6 @@ describe('Korean traffic column 003 — Q11–Q15 rewrite boundary', () => {
       '회복 기간',
       '진단서',
       '휴식 권고',
-      '단독으로',
       '진료기록',
       '출근 또는 휴가 기록',
       '급여 및 세금 자료',
@@ -691,6 +711,7 @@ describe('Korean traffic column 003 — Q11–Q15 rewrite boundary', () => {
       '피해자',
       '제1항에 따른 손해배상을 받지 못하는 경우',
       '제2항',
+      '피해자가 신청하면',
       '구상',
       '형사책임',
       '형법 제284조',
@@ -736,6 +757,7 @@ describe('Korean traffic column 003 — Q11–Q15 rewrite boundary', () => {
       '자기부담금',
       '면책',
       '과실',
+      '보험사의 처리 범위와 필요한 서류, 통지 기한',
     ];
 
     for (const phrase of requiredPhrases) {

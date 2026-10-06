@@ -1,7 +1,7 @@
 ---
 title: "직원이 자발적으로 퇴사해도 퇴직금을 받을 수 있는 예외"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2026-09-10"
+lastmod: "2026-10-06"
 date_display: "2025년 9월 13일"
 read_time: "2분 분량"
 categories:
@@ -45,6 +45,8 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 6. 고용주가 근로계약이나 노동법을 위반하여 근로자의 권익이 침해될 우려가 있는 경우
 
+다만 제2호·제4호의 경우 고용주가 그 대리인과의 계약을 이미 종료했거나 법정 전염병 환자가 위생 법규에 따라 치료를 받고 있으면 근로자는 계약을 종료할 수 없습니다(제14조 제3항).
+
 ​
 
 가장 흔한 예로는 고용주가
@@ -55,7 +57,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 노동보험이나 건강보험에 가입시키지 않은 경우입니다.
 
-이런 경우 근로자가 노동계약을 일반적으로 종료하더라도 고용주는 근로자에게 퇴직금을 지급해야 합니다.
+이런 경우 근로자가 이 사유를 들어 계약을 종료하면 고용주는 근로자에게 퇴직금을 지급해야 합니다.
 
 ​
 

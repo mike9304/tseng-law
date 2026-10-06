@@ -2,9 +2,9 @@
 title: "Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring"
 seoTitle: "Taiwan Company Setup: Remittance and Banking"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
-lastmod: "2026-09-10"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
-read_time: "3 min read"
+read_time: "4 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
@@ -27,7 +27,7 @@ Korean banks generally require the investor personally to visit a bank in Korea 
 
 Remitting the funds through online banking or through a relative or acquaintance in Korea on the investor's behalf is not permitted.
 
-In addition, under Korea's foreign exchange laws, a Korean national who establishes or acquires an equity interest in a foreign company must file an "overseas direct investment report." The report must be filed when the capital is remitted to the Taiwan company, and failure to file may result in sanctions for violating foreign exchange laws.
+In addition, under Korea's Foreign Exchange Transactions Act, a Korean resident (an individual with a domicile or residence in Korea) who establishes or acquires an equity interest in a foreign company must file an "overseas direct investment report." The report must be filed with a foreign exchange bank, and accepted, before the capital is remitted to the Taiwan company, and failure to file may result in sanctions for violating the Foreign Exchange Transactions Act.
 
 Before remitting the capital, please consult the Korean bank with which you normally do business.
 

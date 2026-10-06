@@ -1,7 +1,7 @@
 ---
 title: "Taiwan Massage: History and Legal Information"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
 read_time: "4 min read"
 categories:
@@ -52,9 +52,9 @@ only people with visual impairments were in fact allowed to work in the massage 
 
 It was illegal for people without visual impairments to work in this occupation.
 
-This law remained in force until 2003, when police found that Mr. Lin, who ran a barbershop, had hired two employees without visual impairments to provide shampooing and massage services.
+This restriction remained in force until October 31, 2011; in 2003, within that period, police found that Mr. Lin, who ran a barbershop, had hired two employees without visual impairments to provide shampooing and massage services.
 
-Under the law at the time, Mr. Lin was fined NT$40,000, while the two employees were fined NT$10,000 and NT$20,000, respectively.
+Under the law at the time, the Taipei City Social Affairs Bureau imposed administrative fines of NT$40,000 on Mr. Lin and NT$10,000 and NT$20,000 on the two employees, respectively.
 
 Mr. Lin considered this punishment highly unfair and petitioned for constitutional interpretation.
 
@@ -74,7 +74,7 @@ For example, some felt that a provision expressly allowing only people with visu
 
 and questions were raised as to whether the provision truly helped protect the jobs and livelihoods of people with visual impairments.
 
-In the end, the Grand Justices declared the statutory provision allowing only people with visual impairments to engage in the massage business unconstitutional.
+In the end, in Judicial Yuan Interpretation No. 649 of October 31, 2008, the Grand Justices declared the statutory provision allowing only people with visual impairments to engage in the massage business unconstitutional, and the provision ceased to have effect on October 31, 2011, at the end of the three-year grace period the interpretation allowed.
 
 
 

@@ -34,7 +34,7 @@ const answerParagraphs = [
   [
     "Korean banks generally require the investor personally to visit a bank in Korea and remit the funds from the investor's own account.",
     "Remitting the funds through online banking or through a relative or acquaintance in Korea on the investor's behalf is not permitted.",
-    'In addition, under Korea\'s foreign exchange laws, a Korean national who establishes or acquires an equity interest in a foreign company must file an "overseas direct investment report." The report must be filed when the capital is remitted to the Taiwan company, and failure to file may result in sanctions for violating foreign exchange laws.',
+    'In addition, under Korea\'s Foreign Exchange Transactions Act, a Korean resident (an individual with a domicile or residence in Korea) who establishes or acquires an equity interest in a foreign company must file an "overseas direct investment report." The report must be filed with a foreign exchange bank, and accepted, before the capital is remitted to the Taiwan company, and failure to file may result in sanctions for violating the Foreign Exchange Transactions Act.',
     'Before remitting the capital, please consult the Korean bank with which you normally do business.',
   ],
   [
@@ -113,9 +113,9 @@ describe('English investment column 005 — faithful Korean-source translation',
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2',
-      lastmod: '2026-09-10',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
-      read_time: '3 min read',
+      read_time: '4 min read',
       categories: ['Taiwan Company Formation'],
       featured_image:
         '../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg',
@@ -124,9 +124,9 @@ describe('English investment column 005 — faithful Korean-source translation',
     expect(post).toMatchObject({
       slug: 'taiwan-company-establishment-advanced-2',
       title,
-      date: '2026-09-10',
+      date: '2026-10-06',
       dateDisplay: 'September 13, 2025',
-      readTime: '3 min read',
+      readTime: '4 min read',
       categoryLabel: 'Company Setup',
     });
   });
@@ -171,13 +171,25 @@ describe('English investment column 005 — faithful Korean-source translation',
       'require the investor personally to visit a bank in Korea',
       "through a relative or acquaintance in Korea on the investor's behalf is not permitted",
       'must file an "overseas direct investment report."',
-      'The report must be filed when the capital is remitted to the Taiwan company',
-      'failure to file may result in sanctions for violating foreign exchange laws',
+      "under Korea's Foreign Exchange Transactions Act, a Korean resident (an individual with a domicile or residence in Korea)",
+      'The report must be filed with a foreign exchange bank, and accepted, before the capital is remitted to the Taiwan company',
+      'failure to file may result in sanctions for violating the Foreign Exchange Transactions Act',
       'consult the Korean bank with which you normally do business',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
+    }
+
+    const staleWording = [
+      "under Korea's foreign exchange laws",
+      'a Korean national who establishes',
+      'The report must be filed when the capital is remitted to the Taiwan company',
+      'sanctions for violating foreign exchange laws',
+    ];
+    for (const phrase of staleWording) {
+      expect(raw).not.toContain(phrase);
+      expect(post?.content).not.toContain(phrase);
     }
   });
 
@@ -260,8 +272,8 @@ describe('English investment column 005 — faithful Korean-source translation',
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(586);
-    expect(calculatedMinutes).toBe(3);
+    expect(visibleWordCount).toBe(605);
+    expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(getColumnPost('company-advanced-2', 'en')?.slug).toBe(

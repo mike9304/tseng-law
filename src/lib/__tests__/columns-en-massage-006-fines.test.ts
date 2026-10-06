@@ -112,18 +112,21 @@ describe('English massage column 006 — fine amounts', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      'This law remained in force until 2003, when police found that Mr. Lin, who ran a barbershop, had hired two employees without visual impairments to provide shampooing and massage services.',
+      'This restriction remained in force until October 31, 2011; in 2003, within that period, police found that Mr. Lin, who ran a barbershop, had hired two employees without visual impairments to provide shampooing and massage services.',
     );
     expect(raw).not.toContain('was found by the police after hiring');
+    expect(raw).not.toContain('This law remained in force until 2003');
   });
 
   it('maps each fine to Mr. Lin and the two employees unambiguously', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      'Under the law at the time, Mr. Lin was fined NT$40,000, while the two employees were fined NT$10,000 and NT$20,000, respectively.',
+      'Under the law at the time, the Taipei City Social Affairs Bureau imposed administrative fines of NT$40,000 on Mr. Lin and NT$10,000 and NT$20,000 on the two employees, respectively.',
     );
     expect(raw).not.toContain('were each fined NT$40,000');
+    expect(raw).not.toContain('Mr. Lin was fined NT$40,000');
+    expect(raw).not.toContain('the two employees were fined');
   });
 
   it('describes barriers and occupational limits in natural English', () => {
@@ -191,7 +194,10 @@ describe('English massage column 006 — fine amounts', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      'In the end, the Grand Justices declared the statutory provision allowing only people with visual impairments to engage in the massage business unconstitutional.',
+      'In the end, in Judicial Yuan Interpretation No. 649 of October 31, 2008, the Grand Justices declared the statutory provision allowing only people with visual impairments to engage in the massage business unconstitutional, and the provision ceased to have effect on October 31, 2011, at the end of the three-year grace period the interpretation allowed.',
+    );
+    expect(raw).not.toContain(
+      'In the end, the Grand Justices declared the statutory provision',
     );
     expect(raw).not.toContain(
       'allowing only the visually impaired to engage in the massage business unconstitutional',

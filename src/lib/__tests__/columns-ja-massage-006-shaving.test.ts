@@ -95,9 +95,22 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      '当時の法律に基づき、林氏には4万新台湾ドル（NT$）、2名の従業員にはそれぞれNT$1万とNT$2万の罰金が科されました。',
+      '当時の法律に基づき、台北市社会局から、林氏には4万新台湾ドル（NT$）、2名の従業員にはそれぞれNT$1万とNT$2万の過料（罰鍰、行政上の制裁金）が科されました。',
     );
+    expect(raw).not.toContain('NT$2万の罰金が科されました');
     expect(raw).not.toContain('万元');
+  });
+
+  it('states the corrected restriction period and the Interpretation No. 649 ruling', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'この制限は2011年10月31日まで続きましたが、その間の2003年に、理髪店を経営していた林氏が、',
+    );
+    expect(raw).toContain(
+      '2008年10月31日の司法院解釈第649号で、視覚障害者のみがマッサージ業に従事できるという法条項を違憲と宣言し、この条項は解釈が定めた3年の猶予期間が終わる2011年10月31日に効力を失いました。',
+    );
+    expect(raw).not.toContain('この法は2003年まで続きました');
   });
 
   it('describes barriers faced by visually impaired people naturally', () => {

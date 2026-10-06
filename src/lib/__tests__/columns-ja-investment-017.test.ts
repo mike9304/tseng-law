@@ -12,14 +12,12 @@ const raw = fs.readFileSync(columnPath, 'utf8');
 const parsed = matter(raw);
 const post = getColumnPost('taiwan-logistics-business-setup', 'ja');
 
-function extractBodySections(content: string) {
-  return Array.from(
-    content.matchAll(/^## \d+\. (.+)\n\n([^\n]+)$/gm),
-    (match) => ({
-      heading: match[1],
-      a: match[2],
-    }),
-  );
+function extractBodyHeadings(content: string) {
+  return Array.from(content.matchAll(/^## \d+\. (.+)$/gm), (match) => match[1]);
+}
+
+function countOccurrences(value: string, needle: string) {
+  return value.split(needle).length - 1;
 }
 
 const faq = [
@@ -41,23 +39,11 @@ const faq = [
   },
 ];
 
-const bodySections = [
-  {
-    heading: '物流事業と「汽車貨運業」の範囲',
-    a: faq[0].a,
-  },
-  {
-    heading: '汽車貨運業を新設する場合',
-    a: faq[1].a,
-  },
-  {
-    heading: '既存事業者を買収する場合',
-    a: faq[2].a,
-  },
-  {
-    heading: '輸配送を委託する場合と外国人の就労',
-    a: faq[3].a,
-  },
+const bodyHeadings = [
+  '物流事業と「汽車貨運業」の範囲',
+  '汽車貨運業を新設する場合',
+  '既存事業者を買収する場合',
+  '輸配送を委託する場合と外国人の就労',
 ];
 
 describe('Japanese investment column 017 — logistics and motor freight', () => {
@@ -68,9 +54,9 @@ describe('Japanese investment column 017 — logistics and motor freight', () =>
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-24');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('2025年9月13日');
-    expect(parsed.data.read_time).toBe('約8分');
+    expect(parsed.data.read_time).toBe('約7分');
     expect(parsed.data.categories).toEqual(['台湾会社設立']);
     expect(parsed.data.featured_image).toBe(
       '../images/017-taiwan-logistics-business-setup/featured-01.jpg',
@@ -80,16 +66,24 @@ describe('Japanese investment column 017 — logistics and motor freight', () =>
 
     expect(post?.slug).toBe('taiwan-logistics-business-setup');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-24');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('2025年9月13日');
-    expect(post?.readTime).toBe('約8分');
+    expect(post?.readTime).toBe('約7分');
     expect(post?.categoryLabel).toBe('台湾会社設立');
     expect(post?.faq).toEqual(faq);
   });
 
-  it('keeps the four ordered body questions and immediate answers aligned with the FAQs', () => {
-    expect(extractBodySections(raw)).toEqual(bodySections);
-    expect(extractBodySections(post?.content ?? '')).toEqual(bodySections);
+  it('keeps the four ordered body headings without repeating the FAQ answers in the body', () => {
+    expect(extractBodyHeadings(raw)).toEqual(bodyHeadings);
+    expect(extractBodyHeadings(post?.content ?? '')).toEqual(bodyHeadings);
+
+    // The page renders the frontmatter FAQ as its own visible section, so each
+    // FAQ answer must exist exactly once in the file (frontmatter only).
+    for (const { a } of faq) {
+      expect(countOccurrences(raw, a)).toBe(1);
+      expect(parsed.content).not.toContain(a);
+      expect(post?.content).not.toContain(a);
+    }
   });
 
   it('distinguishes broad logistics services from regulated carriage', () => {
@@ -215,7 +209,7 @@ describe('Japanese investment column 017 — logistics and motor freight', () =>
       '契約終了時におけるデータ・貨物・顧客対応の引継手続',
       '投資家になっても、その事実だけで台湾で働く権利または在留資格を得るわけではありません。',
       '業務を開始する前に、実際の職務に応じた就業許可が必要かどうか',
-      '行政上の罰鍰および出国措置が適用される可能性',
+      '無許可で就労した外国人には、行政上の罰鍰が科され、直ちに出国を命じられ、再び台湾で就労することはできません（「就業服務法」第68条）。',
       '一般に3年の入国禁止期間',
       '同じ指針に定める免除または期間短縮の要件',
       '単に第三者から通報があったという事実だけで結果が機械的に決まるものではなく',
@@ -225,6 +219,8 @@ describe('Japanese investment column 017 — logistics and motor freight', () =>
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+    expect(raw).not.toContain('出国措置が適用される可能性');
+    expect(post?.content).not.toContain('出国措置が適用される可能性');
   });
 
   it('uses every official source and only the three safe Japanese internal links', () => {
@@ -243,6 +239,7 @@ describe('Japanese investment column 017 — logistics and motor freight', () =>
       'https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49',
       'https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128',
       'https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128',
+      'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68',
       'https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp',
     ];
     for (const source of officialSources) {

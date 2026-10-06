@@ -2,9 +2,9 @@
 title: "Taiwan Logistics Businesses and Motor Freight Carrier Licensing: Formation, Acquisition, and Outsourcing"
 seoTitle: "Taiwan Motor Freight Carrier Licensing"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
-read_time: "12 min read"
+read_time: "10 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
@@ -32,8 +32,6 @@ This guide distinguishes forming a new motor freight carrier, acquiring shares i
 
 ## 1. When a Logistics Business Is a Regulated Motor Freight Carrier
 
-Not necessarily. “Logistics” is a broad business term, so a company’s name or registered business activities do not by themselves determine whether a license is required. A company may fall within Taiwan’s regulated motor freight carrier category if it transports other parties’ goods by motor vehicle for compensation. Warehousing, packing, systems operations, shipping one’s own goods, and freight forwarding or other transportation-intermediary services require a fact-specific analysis of the contracts, transportation responsibility, compensation structure, and actual vehicle operations.
-
 Taiwan’s Highway Act (公路法) regulates a motor transportation enterprise that transports passengers or cargo by motor vehicle for compensation. Providing services commonly described as “logistics” therefore does not, standing alone, make a company a motor freight carrier. Conversely, calling an arrangement freight forwarding or platform operations will not avoid regulation if the company actually contracts as the carrier, receives the freight charge, dispatches the vehicles, and assumes responsibility for vehicle operations and cargo incidents.
 
 At a minimum, the proposed operating model should identify:
@@ -47,8 +45,6 @@ At a minimum, the proposed operating model should identify:
 Under Article 3 of the Highway Act, the central highway authority is the Ministry of Transportation and Communications (MOTC). The Directorate General of Highways and its subordinate offices handle applications and provide administrative guidance, so their current instructions should be confirmed. If it is unclear whether a proposed model constitutes a motor freight carrier business, the company should present its intended contracts and actual operating arrangements to the competent authority before selecting its registered business activities.
 
 ## 2. Forming a New Motor Freight Carrier Business
-
-As a general rule, a new motor freight carrier business must have at least NT$25 million in capital and at least 20 new freight trucks. A business limited to household-goods moving is subject to the separate thresholds of NT$10 million and at least eight new freight trucks. A carrier operating in Kinmen or Lienchiang (Matsu) is subject to the separate thresholds of NT$10 million and at least five new freight trucks, together with geographic operating restrictions. A narrowly defined individual small-truck carrier route has separate requirements, including one personally owned small truck no more than two years old, the appropriate occupational driver’s license, and household registration within the competent authority’s jurisdiction. Foreign-investment review, Ministry of Transportation and Communications approval, establishment-preparation approval (籌設許可), company or business registration, vehicle and facility preparation, the operating license, and trade-association membership must be analyzed as distinct requirements.
 
 ### General Capital and Vehicle Requirements and Limited Alternatives
 
@@ -82,8 +78,6 @@ After establishment-preparation approval is granted, the preparation generally m
 
 ## 3. Acquiring an Existing Carrier
 
-No. In a share acquisition, the buyer does not acquire or receive a transfer of the license; the target company remains the same legal entity and continues to hold its license. In a business or asset acquisition, the target’s license does not automatically pass to the buyer. Verify the operating license’s validity and authorized scope, vehicles and commercial license plates, parking facilities, trade-association membership, violations and arrears, insurance, security interests, and change-of-control clauses; obtain the required foreign-investment approval; and complete any necessary approval or change procedures before the competent highway authority.
-
 ### Share Acquisitions Compared with Business or Asset Acquisitions
 
 In a share acquisition, the buyer becomes a shareholder while the licensed target continues as the same legal entity. The funds remitted for the shares are the purchase price, not paid-in capital. Depending on the transaction, the parties should treat MOEA preapproval, Highway Act Article 35 sector approval, post-remittance verification of the investment amount (投資額審定), changes to shareholders, directors, or the responsible person, and highway-authority applications as distinct steps.
@@ -108,8 +102,6 @@ The acquisition agreement should address representations and warranties, conditi
 
 ## 4. Outsourcing Transportation and Foreign-National Work Authorization
 
-There is no categorical answer. The analysis depends on whether the outsourcing company is acting as the shipper or a transportation intermediary, or instead contracts as the carrier and receives the freight charge directly. Verify the contractor’s operating license and commercial vehicles, and align the contract with actual operations so the arrangement does not become license lending or unlicensed carriage. Shareholder or investor status also does not by itself authorize work in Taiwan. A foreign national who will work or manage operations in Taiwan should determine the applicable work-permit requirements and immigration status before beginning those activities.
-
 ### Engaging a Licensed Carrier
 
 A shipper or logistics-service provider may arrange for a licensed Taiwanese motor freight carrier to perform the physical transportation. Whether the principal is merely the shipper or a transportation intermediary, or instead contracts as the carrier and receives the freight charge, affects both the licensing analysis and the allocation of liability. The contractual roles, customer invoicing, dispatch instructions, control of drivers and vehicles, and handling of cargo incidents should match the actual operations.
@@ -120,7 +112,7 @@ The principal should verify the contractor’s operating license and authorized 
 
 Becoming a shareholder or investor in a Taiwan company does not itself confer authorization to work or immigration status. A foreign national who will perform management, sales, dispatch, customer service, or other operational work in Taiwan should determine whether the actual role requires a work permit before beginning that work and should handle the corresponding immigration process separately.
 
-Unauthorized work may lead to administrative fines and an order to leave Taiwan. Current directions issued by the National Immigration Agency generally prescribe a three-year bar on entry in unauthorized-work cases, but also identify circumstances in which the bar may be waived or shortened. A third party’s report does not mechanically determine the result; the relevant authorities assess the facts, applicable law, and individual circumstances.
+A foreign national who works without authorization is subject to an administrative fine and must be ordered to leave Taiwan immediately, and may not work in Taiwan again (Article 68 of the Employment Service Act). Current directions issued by the National Immigration Agency generally prescribe a three-year bar on entry in unauthorized-work cases, but also identify circumstances in which the bar may be waived or shortened. A third party’s report does not mechanically determine the result; the relevant authorities assess the facts, applicable law, and individual circumstances.
 
 ## Official Resources
 
@@ -138,6 +130,7 @@ Unauthorized work may lead to administrative fines and an order to leave Taiwan.
 - [Ministry of Economic Affairs: foreign-investment application guidance](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Employment Service Act, Article 43](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Employment Service Act, Article 68](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Employment Service Act, Article 68 (Laws & Regulations Database)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [National Immigration Agency directions on periods of entry prohibition](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Related Guidance

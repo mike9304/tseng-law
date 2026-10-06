@@ -1,7 +1,7 @@
 ---
 title: "Semiconductor Component Companies Entering Taiwan: How to Assess a Subsidiary, Branch, or Agent"
 seoTitle: "Taiwan Semiconductor Entry: Entity Options"
-lastmod: "2026-09-17"
+lastmod: "2026-10-06"
 date_display: "September 17, 2026"
 read_time: "10 min read"
 categories:
@@ -67,11 +67,11 @@ A limited company may be formed by one or more natural persons, or by Taiwan or 
 
 ### Company limited by shares: suited to bringing in other investors or a possible listing
 
-The capital of a company limited by shares is divided into shares. In principle two or more shareholders are required, but the government or a juristic person may form one alone, and a foreign juristic person may hold 100% of the shares. Shares are in principle freely transferable, subject to statutory exceptions, and special shares and employee stock options may be designed under law. The form therefore suits companies that expect investors, share transactions, employee equity incentives, or a future merger, acquisition, or listing or emerging-market registration; it is not limited to large companies. As to governance, a non-public company may, by its articles, not have a board and may have only one or two directors. A company with a single government or corporate shareholder may also, by its articles, not have a supervisor. Not every company limited by shares must obtain an annual financial-statement audit. For an ordinary company the main audit thresholds are paid-in capital of NT$30 million, or, below that capital, operating revenue of NT$100 million or 100 employees enrolled in labor insurance. Public companies follow the securities laws.
+The capital of a company limited by shares is divided into shares. In principle two or more promoters are required, but the government or a juristic person may form one alone, and a foreign juristic person may hold 100% of the shares. Shares are in principle freely transferable, subject to statutory exceptions, and special shares and employee stock options may be designed under law. The form therefore suits companies that expect investors, share transactions, employee equity incentives, or a future merger, acquisition, or listing or emerging-market registration; it is not limited to large companies. As to governance, a non-public company may, by its articles, not have a board and may have only one or two directors. A company with a single government or corporate shareholder may also, by its articles, not have a supervisor. Not every company limited by shares must obtain an annual financial-statement audit. For an ordinary company the main audit thresholds are paid-in capital of NT$30 million, or, below that capital, operating revenue of NT$100 million or 100 employees enrolled in labor insurance. Public companies follow the securities laws.
 
 ## 4. Branch and subsidiary procedures differ; only a subsidiary requires Investment Commission review
 
-When a foreign company forms a Taiwan subsidiary, it generally pre-clears the company name and then applies to the Investment Commission of the Ministry of Economic Affairs for investment approval. After approval it remits funds, completes determination of the investment amount and CPA capital verification, and then completes company formation and tax registration.
+When a foreign company forms a Taiwan subsidiary, it generally pre-clears the company name and then applies to the Investment Commission of the Ministry of Economic Affairs for investment approval. After approval it remits funds, completes determination of the investment amount and CPA capital verification, and then completes company formation and tax registration. After applying for formation registration, the company must take part in labor-rights courses run by government agencies at any level or by non-profit organizations they designate (Article 387-1 of the Company Act, effective June 2026).
 
 By contrast, when an ordinary foreign company establishes a Taiwan branch, investment approval from the Investment Commission is generally not required. The Department of Commerce of the Ministry of Economic Affairs handles branch registration and related capital determination. Name pre-check, remittance of working capital, capital verification, and tax registration are still required, and the formation timetable is usually shorter.
 
@@ -79,11 +79,11 @@ The foregoing is contract-design advice. Merely having a particular form does no
 
 ## 5. Company registration and an engineer’s lawful work are not the same thing
 
-Completing company registration in Taiwan does not mean that employees of the overseas head office may automatically work in Taiwan. A foreign national working in Taiwan must have a lawful work permit and, for a longer stay, a residence permit. In principle the employer applies for the foreign employee’s work permit and the corresponding residence permit.
+Completing company registration in Taiwan does not mean that employees of the overseas head office may automatically work in Taiwan. A foreign national working in Taiwan must have a lawful work permit and, for a longer stay, a residence permit. In principle the employer applies for the foreign employee’s work permit, and the foreign national applies to the National Immigration Agency for the corresponding residence permit.
 
-It is relatively easier for a manager of a foreign company’s Taiwan subsidiary or branch to obtain a work permit. To apply for a work permit for a second or further foreign national, however, the Ministry of Labor requires, depending on the industry, that the company meet capital, revenue, or similar thresholds. If you plan to have foreign staff work in Taiwan, confirm before forming the Taiwan company whether the planned capital meets the applicable threshold.
+It is relatively easier for a manager of a foreign company’s Taiwan subsidiary (a company approved for investment in which foreign nationals hold more than one-third of the shares) or branch to obtain a work permit. Even when hiring the first foreign national, however, the employer must meet one of the criteria in Article 39 of the Qualifications and Review Standards for foreign nationals’ work. For a company less than one year old, the criteria include paid-in capital (for a branch, operating funds in Taiwan) of at least NT$500,000 or revenue of at least NT$3 million; for a company one year old or more, they include average revenue over the most recent one year or three years of at least NT$3 million. If the employer hires two or more foreign nationals of the same type, those foreign nationals and the employer must meet the general standards of Chapter 2 (Article 38, paragraph 2). If you plan to have foreign staff work in Taiwan, confirm before forming the Taiwan company whether the planned capital meets the applicable threshold.
 
-## 7. Structures that may fit different stages of business development
+## 6. Structures that may fit different stages of business development
 
 The following are hypothetical review scenarios to aid thinking. They do not guarantee that a particular approach is lawful or preferable.
 
@@ -93,25 +93,11 @@ Companies expanding Taiwan sales and technical support. If you plan to hire in T
 
 Companies still in a market-research stage. If, before forming a sales organization, you only want information-gathering and liaison functions, a representative office may be considered. If the actual plan includes selling inventory or on-site work, separately confirm whether those activities are permitted.
 
-## 8. For a first consultation, prepare an operating overview; you need not hand over all confidential materials first
+## 7. For a first consultation, prepare an operating overview; you need not hand over all confidential materials first
 
 For a first consultation, you can assemble basic information on the head office and investors, a general description of the product or service, the intended transaction flow, Taiwan staffing and facilities plans, and the contract and support terms customers are requesting. Items not yet decided may be marked “to be determined.”
 
 You need not attach all customer-confidential materials or detailed process data in the first contact. After providing information needed for a conflict check, such as the counterparty’s company name, decide the necessary materials and the method of transmission according to the responsible attorney’s instructions.
-
-## Frequently asked questions
-
-### If we have Taiwan customers, must we form a company in Taiwan?
-
-Not automatically. The need depends on the customer’s requirements and on the actual business, facilities, staffing, and transaction structure in Taiwan. Choose the entity that fits those facts.
-
-### Does forming a Taiwan company eliminate the parent company’s liability?
-
-If you form a subsidiary rather than a branch, the parent generally does not assume contractual duties signed in the subsidiary’s name. You should still check exceptions for abuse of separate legal personality and whether the parent has given a guarantee or taken on contractual duties of its own.
-
-### Can we start through a distributor and later switch to a Taiwan company?
-
-A staged transition can be planned, but you should also review termination or amendment of existing contracts, customer contracts, inventory, warranty handling, and staffing.
 
 ## Consultation on a Taiwan market-entry structure
 

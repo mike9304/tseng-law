@@ -2,7 +2,7 @@
 title: "Taiwan Company Formation — Advanced Guide 3: Finding a Business Location"
 seoTitle: "Taiwan Company Setup: Choosing a Location"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
-lastmod: "2026-09-10"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
 read_time: "3 min read"
 categories:
@@ -61,7 +61,7 @@ since January 1, 2023 an application to register the establishment, relocation, 
 
 The list of "business items subject to proactive inquiry" (主動查詢之營業項目) below covers the items the Department of Commerce queries on its own initiative during registration review (隨案主動查詢) when the application names such an item but the attached inquiry result omits it; an item absent from this list is not exempt from the inquiry.
 
-If a restaurant opens at a location where restaurant operations are not permitted, the competent authority may later impose a fine.
+If a restaurant opens at a location where restaurant operations are not permitted, the competent authority may later impose an administrative fine and order the use to stop.
 
 !["Business items subject to proactive inquiry" (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 

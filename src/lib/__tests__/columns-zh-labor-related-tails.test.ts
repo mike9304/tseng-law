@@ -16,7 +16,7 @@ const targets = [
     slug: 'taiwan-labor-severance-law',
     filename: '008-taiwan-labor-severance-law.md',
     finalBodyParagraph: '符合資遣費請求要件時，\n\n雇主應依法給付。',
-    visibleHanCount: 1_759,
+    visibleHanCount: 1_915,
     readTime: '5分鐘閱讀',
   },
   {
@@ -24,7 +24,7 @@ const targets = [
     filename: '009-taiwan-voluntary-resignation-severance.md',
     finalBodyParagraph:
       '勞資雙方的30日期限，都從知悉相關情形之日起算；勞工依第14條第1項第6款終止時，也可以從知悉損害結果之日起算。',
-    visibleHanCount: 743,
+    visibleHanCount: 744,
     readTime: '2分鐘閱讀',
   },
 ];
@@ -68,13 +68,13 @@ describe('Traditional Chinese labor columns 008 and 009 — related tails', () =
         parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
       const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-      expect(parsed.data.lastmod).toBe('2026-09-10');
+      expect(parsed.data.lastmod).toBe('2026-10-06');
       expect(visibleHanCount).toBe(target.visibleHanCount);
       expect(parsed.data.read_time).toBe(target.readTime);
       expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
       expect(post).toMatchObject({
         slug: target.slug,
-        date: '2026-09-10',
+        date: '2026-10-06',
         readTime: target.readTime,
       });
     });

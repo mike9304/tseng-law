@@ -25,8 +25,8 @@ const EXPECTED_EN_TITLE =
 const EXPECTED_KO_TITLE =
   '직원이 자발적으로 퇴사해도 퇴직금을 받을 수 있는 예외';
 const EXPECTED_EN_BODY_SHA256 =
-  '5633c423410a894e1d9c30f0fffbdedca38562f617461179378c374e300d0b88';
-const EXPECTED_VISIBLE_WORD_COUNT = 486;
+  '9e1da57f10360ba6bcad8cb1fcff87b7ed047f1d2991bcf39fb3654cea2d870c';
+const EXPECTED_VISIBLE_WORD_COUNT = 540;
 
 function extractDestinations(content: string, pattern: RegExp): string[] {
   return Array.from(content.matchAll(pattern), (match) => match[1]);
@@ -70,7 +70,7 @@ describe('English labor column 009 mirror', () => {
       title: EXPECTED_EN_TITLE,
       seoTitle: 'Taiwan Severance After Voluntary Resignation',
       url: 'https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외',
-      lastmod: '2026-09-10',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
       read_time: '3 min read',
       categories: ['Taiwan Legal Information'],
@@ -124,6 +124,38 @@ describe('English labor column 009 mirror', () => {
       'within 30 days after becoming aware of the resulting harm',
     );
     expect(enParsed.content.match(/30 days/g)).toHaveLength(2);
+  });
+
+  it('limits the severance consequence to termination on the stated ground and adds the Article 14(3) bar', () => {
+    expect(enParsed.content).toContain(
+      'In such cases, when the employee terminates the labor contract on that ground, the employer must pay severance.',
+    );
+    expect(enParsed.content).toContain(
+      'However, in the case of grounds 2 and 4, the employee may not terminate the contract if the employer has already terminated its contract with that agent, or if the person with the notifiable communicable disease is already receiving treatment under health regulations (paragraph 3 of Article 14 of the Labor Standards Act).',
+    );
+    expect(enParsed.content).not.toContain(
+      'even when the employee terminates the labor contract',
+    );
+    expect(enParsed.content).not.toContain(
+      'the employer must still pay severance',
+    );
+
+    expect(koParsed.content).toContain(
+      '이런 경우 근로자가 이 사유를 들어 계약을 종료하면 고용주는 근로자에게 퇴직금을 지급해야 합니다.',
+    );
+    expect(koParsed.content).not.toContain('일반적으로 종료하더라도');
+
+    const zhRaw = fs.readFileSync(
+      path.join(
+        root,
+        'src/content/columns-zh/009-taiwan-voluntary-resignation-severance.md',
+      ),
+      'utf8',
+    );
+    expect(zhRaw).toContain(
+      '勞工以該事由終止勞動契約時，雇主仍須支付資遣費。',
+    );
+    expect(zhRaw).not.toContain('即使勞工主動終止勞動契約');
   });
 
   it('freezes corrected body integrity, word count, read time, and name safety', () => {

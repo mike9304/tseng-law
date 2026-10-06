@@ -12,14 +12,12 @@ const raw = fs.readFileSync(columnPath, 'utf8');
 const parsed = matter(raw);
 const post = getColumnPost('taiwan-logistics-business-setup', 'ko');
 
-function extractBodySections(content: string) {
-  return Array.from(
-    content.matchAll(/^## \d+\. (.+)\n\n([^\n]+)$/gm),
-    (match) => ({
-      heading: match[1],
-      a: match[2],
-    }),
-  );
+function extractBodyHeadings(content: string) {
+  return Array.from(content.matchAll(/^## \d+\. (.+)$/gm), (match) => match[1]);
+}
+
+function countOccurrences(value: string, needle: string) {
+  return value.split(needle).length - 1;
 }
 
 function extractPublicText(content: string) {
@@ -54,23 +52,11 @@ const faq = [
   },
 ];
 
-const bodySections = [
-  {
-    heading: '물류사업과 자동차 화물운송업(汽車貨運業)의 범위',
-    a: faq[0].a,
-  },
-  {
-    heading: '자동차 화물운송업을 신설하는 경우',
-    a: faq[1].a,
-  },
-  {
-    heading: '기존 사업자를 인수하는 경우',
-    a: faq[2].a,
-  },
-  {
-    heading: '운송·배송을 위탁하는 경우와 외국인의 취업',
-    a: faq[3].a,
-  },
+const bodyHeadings = [
+  '물류사업과 자동차 화물운송업(汽車貨運業)의 범위',
+  '자동차 화물운송업을 신설하는 경우',
+  '기존 사업자를 인수하는 경우',
+  '운송·배송을 위탁하는 경우와 외국인의 취업',
 ];
 
 describe('Korean investment column 017 — logistics and motor freight', () => {
@@ -81,9 +67,9 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('2025년 9월 13일');
-    expect(parsed.data.read_time).toBe('9분 분량');
+    expect(parsed.data.read_time).toBe('7분 분량');
     expect(parsed.data.categories).toEqual(['대만 법인설립']);
     expect(parsed.data.featured_image).toBe(
       '../images/017-taiwan-logistics-business-setup/featured-01.jpg',
@@ -96,17 +82,25 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
 
     expect(post?.slug).toBe('taiwan-logistics-business-setup');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('2025년 9월 13일');
-    expect(post?.readTime).toBe('9분 분량');
+    expect(post?.readTime).toBe('7분 분량');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('법인설립');
     expect(post?.faq).toEqual(faq);
   });
 
-  it('keeps the four ordered body headings and immediate answers aligned with the FAQs', () => {
-    expect(extractBodySections(raw)).toEqual(bodySections);
-    expect(extractBodySections(post?.content ?? '')).toEqual(bodySections);
+  it('keeps the four ordered body headings without repeating the FAQ answers in the body', () => {
+    expect(extractBodyHeadings(raw)).toEqual(bodyHeadings);
+    expect(extractBodyHeadings(post?.content ?? '')).toEqual(bodyHeadings);
+
+    // The page renders the frontmatter FAQ as its own visible section, so each
+    // FAQ answer must exist exactly once in the file (frontmatter only).
+    for (const { a } of faq) {
+      expect(countOccurrences(raw, a)).toBe(1);
+      expect(parsed.content).not.toContain(a);
+      expect(post?.content).not.toContain(a);
+    }
   });
 
   it('distinguishes broad logistics services from regulated carriage', () => {
@@ -226,7 +220,7 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
       '계약 종료 시 데이터·화물·고객 대응의 인계 절차와 관련 위험',
       '주주나 투자자가 되더라도 그 사실만으로 대만에서 취업할 권리나 체류자격을 얻지는 않습니다.',
       '업무를 시작하기 전에 실제 직무에 맞는 취업허가가 필요한지',
-      '행정상 과태료와 출국조치가 적용될 수 있습니다.',
+      '무허가로 일한 외국인에게는 행정상 과태료가 부과되고 즉시 출국하도록 명령이 내려지며, 다시 대만에서 일할 수 없습니다(「취업서비스법」 제68조).',
       '일반적으로 3년의 입국금지 기간',
       '면제 또는 기간 단축 요건',
       '단순히 제3자의 신고가 있었다는 사실만으로 결과가 기계적으로 결정되는 것은 아니며',
@@ -236,6 +230,8 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+    expect(raw).not.toContain('출국조치가 적용될 수 있습니다');
+    expect(post?.content).not.toContain('출국조치가 적용될 수 있습니다');
   });
 
   it('uses every official source and only the three contracted Korean internal links', () => {
@@ -254,6 +250,7 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
       'https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49',
       'https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128',
       'https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128',
+      'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68',
       'https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp',
     ];
     for (const source of officialSources) {
@@ -301,8 +298,8 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
       eojeolCount / koreanLegalEojeolPerMinute,
     );
 
-    expect(eojeolCount).toBe(1_454);
-    expect(calculatedMinutes).toBe(9);
+    expect(eojeolCount).toBe(1_224);
+    expect(calculatedMinutes).toBe(7);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

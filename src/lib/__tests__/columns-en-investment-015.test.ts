@@ -57,7 +57,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
       title,
       seoTitle: 'Taiwan Company Setup: Choosing a Location',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location',
-      lastmod: '2026-09-10',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
       read_time: '3 min read',
       categories: ['Taiwan Company Formation'],
@@ -70,7 +70,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     expect(post).toMatchObject({
       slug: 'taiwan-company-setup-pitch-location',
       title,
-      date: '2026-09-10',
+      date: '2026-10-06',
       dateDisplay: 'September 13, 2025',
       readTime: '3 min read',
       categoryLabel: 'Company Setup',
@@ -164,7 +164,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
 
   it('retains the fine warning, closing advice, and required byline', () => {
     const required = [
-      'the competent authority may later impose a fine',
+      'the competent authority may later impose an administrative fine and order the use to stop',
       'please feel free to contact a Taiwan attorney',
       'Administrative agency rules may change frequently',
       'confirm the latest regulations before registering a company',
@@ -174,6 +174,10 @@ describe('English investment column 015 — Taipei business-location inquiry', (
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+    expect(raw).not.toContain('the competent authority may later impose a fine');
+    expect(post?.content).not.toContain(
+      'the competent authority may later impose a fine',
+    );
   });
 
   it('uses exactly the source images and localized source links', () => {
@@ -237,7 +241,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(490);
+    expect(visibleWordCount).toBe(497);
     expect(calculatedMinutes).toBe(3);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

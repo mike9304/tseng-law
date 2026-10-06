@@ -122,7 +122,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-06',
       date_display: '2025年9月13日',
       read_time: '8分鐘閱讀',
       categories: ['訴訟案例分析'],
@@ -145,7 +145,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
       visibleText.match(/[\u3400-\u4DBF\u4E00-\u9FFF]/g)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(2_973);
+    expect(visibleHanCount).toBe(3_045);
     expect(calculatedMinutes).toBe(8);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
@@ -155,7 +155,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
     const approvedReplacements = [
       '以下依序整理相關新聞、討論與法律評論。各標題僅用來標示所連結的報導或貼文內容，不代表本文另行認定其中每一項敘述均屬事實。',
       '本案的實務意義，在於說明健身房受傷案件中的責任與損害均須逐項證明，不能僅憑事故發生即認定健身房應負責或逕定賠償範圍。服務提供者負有何種安全義務、具體指導是否違反注意義務、行為與傷害之間有無因果關係，以及損害範圍如何計算，均應依個案事實及證據判斷。刑事告訴與民事請求的成立要件及期間也不相同，事故發生後應分別確認。',
-      `依[《消費者保護法》第7條](${lawUrls[0]})，提供服務的企業經營者於提供服務時，應確保服務符合當時科技或專業水準可合理期待的安全性。`,
+      `依[《消費者保護法》第7條](${lawUrls[0]})，提供服務的企業經營者於提供服務時，應確保服務符合當時科技或專業水準可合理期待的安全性。同條第3項規定，企業經營者違反上述規定，致生損害於消費者或第三人時，應負連帶賠償責任；即使企業經營者證明其無過失，法院也僅得減輕其賠償責任。`,
       '這項規定不表示只要有人在健身房受傷，企業經營者或教練就當然負責。個案仍須判斷注意義務的具體內容、是否違反該義務、違反義務與傷害間的因果關係、實際損害、可能的抗辯，以及雙方提出的證據。',
       '個案中可能涉及的損害項目包括：',
       '4. 勞動能力減損：如有持續性障礙，法院可能綜合醫療或鑑定資料、勞動能力減損程度、職業、收入及可工作期間，判斷賠償範圍。單一鑑定所認定的減損比例不會自動決定賠償金額，也不能當然以退休年齡作為損失計算終點。',
@@ -177,6 +177,10 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
     expect(raw).toContain(`[${officialAmount}](${judgmentUrl})`);
     expect(raw).toContain('臺灣臺中地方法院於2022年1月24日');
     expect(raw).toContain('109年度消字第7號一審判決');
+    expect(raw).toContain(
+      `命被告中的健身房經營公司給付原告[${officialAmount}](${judgmentUrl})`,
+    );
+    expect(raw).not.toContain('命被告給付原告');
     expect(raw).toContain('媒體報導稱雙方在上訴審達成和解');
     expect(raw).toContain('並非官方一審判決所認定的結果');
     expect(raw).toContain('該判決也沒有記載和解金額');
@@ -343,7 +347,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-10-06',
       dateDisplay: '2025年9月13日',
       readTime: '8分鐘閱讀',
       category: 'case',

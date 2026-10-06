@@ -67,9 +67,9 @@ describe('English litigation column 010 — gym injury damages', () => {
       title,
       seoTitle: 'Taiwan Gym Injury Claims: Case and Damages',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit',
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
-      read_time: '10 min read',
+      read_time: '11 min read',
       categories: ['Case Study Analysis'],
       featured_image:
         '../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
@@ -83,7 +83,7 @@ describe('English litigation column 010 — gym injury damages', () => {
       Array.from(parsed.content.matchAll(/^## (.+)$/gm), (match) => match[1]),
     ).toEqual(sectionHeadings);
     expect(post?.title).toBe(title);
-    expect(post?.readTime).toBe('10 min read');
+    expect(post?.readTime).toBe('11 min read');
   });
 
   it('preserves all source images and link destinations in source order', () => {
@@ -143,7 +143,9 @@ describe('English litigation column 010 — gym injury damages', () => {
       'January 24, 2022',
       '109 Consumer No. 7',
       'TWD 1,579,589',
+      'ordered the company that operates the gym, one of the defendants, to pay',
       'together with the interest stated in the judgment',
+      'Paragraph 3 of the same article provides that a business operator that violates these requirements and causes damage to a consumer or a third party is jointly and severally liable for compensation, and that even if the operator proves that it was not at fault, the court may do no more than reduce its liability.',
       'does not disclose the outcome of the appeal or any settlement amount',
       'this article does not independently establish the facts they describe',
       'does not automatically draw an adverse inference',
@@ -155,6 +157,9 @@ describe('English litigation column 010 — gym injury damages', () => {
       expect(parsed.content).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+
+    expect(parsed.content).not.toContain('Court ordered the defendant to pay');
+    expect(post?.content).not.toContain('Court ordered the defendant to pay');
   });
 
   it('removes stale framing, Korean copy, and invisible spacer characters', () => {
@@ -177,8 +182,8 @@ describe('English litigation column 010 — gym injury damages', () => {
     const visibleWords = countVisibleEnglishWords(post?.content ?? '');
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
-    expect(visibleWords).toBe(1_963);
-    expect(calculatedMinutes).toBe(10);
+    expect(visibleWords).toBe(2_026);
+    expect(calculatedMinutes).toBe(11);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(getColumnPost('gym-injury-lawsuit', 'en')?.slug).toBe(
       'taiwan-gym-injury-lawsuit',

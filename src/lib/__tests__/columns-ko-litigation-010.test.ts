@@ -132,7 +132,7 @@ describe('Korean litigation column 010 — gym injury damages', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-06',
       date_display: '2025년 9월 13일',
       read_time: '7분 분량',
       categories: ['소송사례 분석'],
@@ -154,7 +154,7 @@ describe('Korean litigation column 010 — gym injury damages', () => {
     const visibleEojeolCount = visibleText.split(/\s+/).filter(Boolean).length;
     const calculatedMinutes = Math.ceil(visibleEojeolCount / 180);
 
-    expect(visibleEojeolCount).toBe(1_227);
+    expect(visibleEojeolCount).toBe(1_255);
     expect(calculatedMinutes).toBe(7);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
@@ -167,8 +167,9 @@ describe('Korean litigation column 010 — gym injury damages', () => {
     expect(raw).toContain(`[${officialAmount}](${judgmentUrl})`);
     expect(raw).toContain('이용자의 운동 경험과 건강 상태');
     expect(raw).toContain(
-      `타이중 지방법원은 2022년 1월 24일 109년도 소비자 사건 제7호에 관한 1심 판결에서 피고가 [${officialAmount}](${judgmentUrl})와 판결에 기재된 이자를 지급하도록 명했습니다.`,
+      `타이중 지방법원은 2022년 1월 24일 109년도 소비자 사건 제7호에 관한 1심 판결에서 피고 가운데 헬스장 운영회사가 [${officialAmount}](${judgmentUrl})와 판결에 기재된 이자를 지급하도록 명했습니다.`,
     );
+    expect(raw).not.toContain('1심 판결에서 피고가 [');
     expect(raw).toContain(
       '그 뒤 항소심에서 당사자들이 합의했다는 내용은 언론 보도로 알려졌습니다.',
     );
@@ -188,6 +189,7 @@ describe('Korean litigation column 010 — gym injury damages', () => {
 
     const requiredRules = [
       '서비스가 제공 당시의 전문적 또는 기술적 기준에 비추어 합리적으로 기대되는 안전성을 갖추도록 해야 한다고 정합니다.',
+      '같은 조 제3항은 사업자가 이를 위반해 소비자나 제3자에게 손해가 생기면 연대하여 배상책임을 지고, 사업자가 과실 없음을 증명하더라도 법원은 그 책임을 줄일 수 있을 뿐이라고 정합니다.',
       '헬스장에서 부상이 발생할 때마다 사업자나 트레이너의 책임이 인정되는 것은 아닙니다.',
       '구체적으로 어떠한 주의의무가 있었는지, 그 의무를 위반했는지, 위반과 부상 사이에 인과관계가 있는지, 실제 손해가 발생했는지, 상대방에게 어떤 항변이 있는지, 각 주장과 항변을 뒷받침할 증거가 있는지를 사건별로 판단해야 합니다.',
       '과실상해죄의 법정 요건이 충족된다면 형사 고소를 검토할 수 있습니다.',
@@ -346,7 +348,7 @@ describe('Korean litigation column 010 — gym injury damages', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-10-06',
       dateDisplay: '2025년 9월 13일',
       readTime: '7분 분량',
       category: 'case',

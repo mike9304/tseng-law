@@ -2,7 +2,7 @@
 title: "Exceptions Where Employees Can Still Receive Severance After Voluntary Resignation"
 seoTitle: "Taiwan Severance After Voluntary Resignation"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2026-09-10"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
 read_time: "3 min read"
 categories:
@@ -47,6 +47,8 @@ In the following exceptional circumstances, an employer must pay severance even 
 
 6. Where the employer breaches the labor contract or violates labor law, creating a risk that the employee’s rights and interests will be harmed
 
+However, in the case of grounds 2 and 4, the employee may not terminate the contract if the employer has already terminated its contract with that agent, or if the person with the notifiable communicable disease is already receiving treatment under health regulations (paragraph 3 of Article 14 of the Labor Standards Act).
+
 ​
 
 The most common examples are employers who
@@ -57,7 +59,7 @@ fail to pay overtime,
 
 or fail to enroll employees in labor insurance or national health insurance.
 
-In such cases, even when the employee terminates the labor contract, the employer must still pay severance.
+In such cases, when the employee terminates the labor contract on that ground, the employer must pay severance.
 
 ​
 

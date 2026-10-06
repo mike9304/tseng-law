@@ -2,9 +2,9 @@
 title: "Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages"
 seoTitle: "Taiwan Gym Injury Claims: Case and Damages"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
-read_time: "10 min read"
+read_time: "11 min read"
 categories:
   - "Case Study Analysis"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
@@ -21,7 +21,7 @@ Drawing on a case in which a Korean university student was injured at a gym in T
 
 The accident occurred during a deadlift session led by a trainer at a gym in Taichung. After such an injury, it is not enough to look only at the fact that the accident happened inside a gym. One must also consider the user's exercise experience and health condition, the type of exercise and the weight involved, the explanations and instruction given by the trainer, the movements and responses at the time, the causal relationship between the exercise and the injury, and the materials supporting the claimed losses.
 
-I served as litigation counsel for the plaintiff, the Korean student, in this case. In its first-instance judgment of January 24, 2022, in case 109 Consumer No. 7, the Taichung District Court ordered the defendant to pay [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) together with the interest stated in the judgment.
+I served as litigation counsel for the plaintiff, the Korean student, in this case. In its first-instance judgment of January 24, 2022, in case 109 Consumer No. 7, the Taichung District Court ordered the company that operates the gym, one of the defendants, to pay [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) together with the interest stated in the judgment.
 
 Media reports later stated that the parties reached a settlement on appeal. The official first-instance judgment alone does not disclose the outcome of the appeal or any settlement amount, so the reported settlement should not be treated as the confirmed final disposition of the first-instance judgment.
 
@@ -69,7 +69,7 @@ The following is general information about gym-injury disputes in Taiwan, not le
 
 ## 1. What legal procedures may be considered after a gym injury in Taiwan?
 
-Under [Article 7 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), when a business operator provides services, it must ensure that the services have the level of safety reasonably expected under the professional or technical standards current at the time they are provided.
+Under [Article 7 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), when a business operator provides services, it must ensure that the services have the level of safety reasonably expected under the professional or technical standards current at the time they are provided. Paragraph 3 of the same article provides that a business operator that violates these requirements and causes damage to a consumer or a third party is jointly and severally liable for compensation, and that even if the operator proves that it was not at fault, the court may do no more than reduce its liability.
 
 This does not mean that the business operator or trainer will be held liable whenever an injury occurs at a gym. In each case, one must assess what specific duty of care existed, whether that duty was breached, whether there is a causal relationship between the breach and the injury, whether actual loss occurred, what defenses the opposing party may raise, and what evidence supports each claim and defense.
 

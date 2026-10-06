@@ -17,14 +17,8 @@ function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
 }
 
-function extractBodySections(content: string) {
-  return Array.from(
-    content.matchAll(/^## \d+\. (.+)\n\n([^\n]+)$/gm),
-    (match) => ({
-      heading: match[1],
-      a: match[2],
-    }),
-  );
+function extractBodyHeadings(content: string) {
+  return Array.from(content.matchAll(/^## \d+\. (.+)$/gm), (match) => match[1]);
 }
 
 function countVisibleEnglishWords(content: string) {
@@ -61,23 +55,11 @@ const faq = [
   },
 ];
 
-const bodySections = [
-  {
-    heading: 'When a Logistics Business Is a Regulated Motor Freight Carrier',
-    a: faq[0].a,
-  },
-  {
-    heading: 'Forming a New Motor Freight Carrier Business',
-    a: faq[1].a,
-  },
-  {
-    heading: 'Acquiring an Existing Carrier',
-    a: faq[2].a,
-  },
-  {
-    heading: 'Outsourcing Transportation and Foreign-National Work Authorization',
-    a: faq[3].a,
-  },
+const bodyHeadings = [
+  'When a Logistics Business Is a Regulated Motor Freight Carrier',
+  'Forming a New Motor Freight Carrier Business',
+  'Acquiring an Existing Carrier',
+  'Outsourcing Transportation and Foreign-National Work Authorization',
 ];
 
 describe('English investment column 017 — logistics and motor freight', () => {
@@ -89,9 +71,9 @@ describe('English investment column 017 — logistics and motor freight', () => 
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('September 13, 2025');
-    expect(parsed.data.read_time).toBe('12 min read');
+    expect(parsed.data.read_time).toBe('10 min read');
     expect(parsed.data.categories).toEqual(['Taiwan Company Formation']);
     expect(parsed.data.featured_image).toBe(
       '../images/017-taiwan-logistics-business-setup/featured-01.jpg',
@@ -102,17 +84,25 @@ describe('English investment column 017 — logistics and motor freight', () => 
     expect(post).toBeTruthy();
     expect(post?.slug).toBe('taiwan-logistics-business-setup');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('September 13, 2025');
-    expect(post?.readTime).toBe('12 min read');
+    expect(post?.readTime).toBe('10 min read');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('Company Setup');
     expect(post?.faq).toEqual(faq);
   });
 
-  it('aligns each ordered numbered heading with its exact FAQ answer', () => {
-    expect(extractBodySections(parsed.content)).toEqual(bodySections);
-    expect(extractBodySections(post?.content ?? '')).toEqual(bodySections);
+  it('keeps the four ordered numbered headings without repeating the FAQ answers in the body', () => {
+    expect(extractBodyHeadings(parsed.content)).toEqual(bodyHeadings);
+    expect(extractBodyHeadings(post?.content ?? '')).toEqual(bodyHeadings);
+
+    // The page renders the frontmatter FAQ as its own visible section, so each
+    // FAQ answer must exist exactly once in the file (frontmatter only).
+    for (const { a } of faq) {
+      expect(countOccurrences(raw, a)).toBe(1);
+      expect(parsed.content).not.toContain(a);
+      expect(post?.content).not.toContain(a);
+    }
   });
 
   it('uses a substance-over-form licensing analysis and identifies the authorities', () => {
@@ -242,7 +232,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
       'the orderly transition of data, cargo, and customer-service responsibilities when the relationship ends',
       'does not itself confer authorization to work or immigration status',
       'determine whether the actual role requires a work permit before beginning that work',
-      'administrative fines and an order to leave Taiwan',
+      'A foreign national who works without authorization is subject to an administrative fine and must be ordered to leave Taiwan immediately, and may not work in Taiwan again (Article 68 of the Employment Service Act).',
       'generally prescribe a three-year bar on entry in unauthorized-work cases',
       'circumstances in which the bar may be waived or shortened',
       'A third party’s report does not mechanically determine the result',
@@ -252,6 +242,11 @@ describe('English investment column 017 — logistics and motor freight', () => 
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+    expect(raw).not.toContain('Unauthorized work may lead to');
+    expect(raw).not.toContain('administrative fines and an order to leave Taiwan');
+    expect(post?.content).not.toContain(
+      'administrative fines and an order to leave Taiwan',
+    );
   });
 
   it('uses all official sources, both images, and exactly the three safe English links', () => {
@@ -270,6 +265,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
       'https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49',
       'https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128',
       'https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128',
+      'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68',
       'https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp',
     ];
     const images = [
@@ -323,9 +319,9 @@ describe('English investment column 017 — logistics and motor freight', () => 
     const visibleWords = countVisibleEnglishWords(parsed.content);
     const minutes = Math.ceil(visibleWords / 200);
 
-    expect(visibleWords).toBe(2349);
-    expect(visibleWords).toBeGreaterThan(2000);
-    expect(minutes).toBe(12);
+    expect(visibleWords).toBe(1969);
+    expect(visibleWords).toBeGreaterThan(1900);
+    expect(minutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${minutes} min read`);
     expect(post?.readTime).toBe(`${minutes} min read`);
   });

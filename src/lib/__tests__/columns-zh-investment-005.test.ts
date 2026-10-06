@@ -29,6 +29,8 @@ const headings = [
 const officialUrls = [
   'https://www.bok.or.kr/eng/main/contents.do?menuNo=400191',
   'https://www.bok.or.kr/eng/main/contents.do?menuNo=400189',
+  'https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EB%B2%95/%EC%A0%9C3%EC%A1%B0',
+  'https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EB%B2%95/%EC%A0%9C18%EC%A1%B0',
   'https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01',
   'https://investtaiwan.nat.gov.tw/faqQContent?lang=eng&search=94',
   'https://investtaiwan.nat.gov.tw/eBook/BravoTaiwan/2024ebook_en/files/basic-html/page55.html',
@@ -61,7 +63,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2',
-      lastmod: '2026-09-10',
+      lastmod: '2026-10-06',
       date_display: '2025年9月13日',
       read_time: '10分鐘閱讀',
       categories: ['台灣公司設立'],
@@ -72,7 +74,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     expect(post).toMatchObject({
       slug: 'taiwan-company-establishment-advanced-2',
       title,
-      date: '2026-09-10',
+      date: '2026-10-06',
       dateDisplay: '2025年9月13日',
       readTime: '10分鐘閱讀',
       categoryLabel: '公司設立',
@@ -121,19 +123,32 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       '韓國銀行要求投資人本人親自前往銀行，並從本人帳戶匯款',
       '網路銀行或由韓國親友代為匯款均不可行',
       '必須辦理「海外直接投資申報」',
-      '申報必須於匯出台灣法人出資款時獲受理',
-      '未申報可能因違反外匯管理法規而受制裁',
+      '韓國居住者（在韓國有住所或居所的個人）設立外國法人或取得股份時',
+      '申報必須於向台灣法人匯出出資款之前，向外匯銀行辦理並獲受理',
+      '未申報可能因違反韓國《外匯交易法》而受制裁',
       '匯出出資款前，請向往來銀行確認申報受理機關、指定外匯銀行、申報時點、匯款名義、應備文件及匯款方式',
       '海外直接投資交易須透過指定外匯銀行辦理',
-      '海外直接投資申報為必須，並須在匯出台灣法人出資款時獲受理',
+      '海外直接投資申報為必須，並須在匯出台灣法人出資款之前獲受理',
       '韓國銀行一般要求投資人本人親自到行，以本人帳戶辦理匯款',
-      '海外直接投資申報必須在匯出出資款時獲受理',
+      '海外直接投資申報必須在匯出出資款之前獲受理',
       '由於可能須先經文件審查、補正或指定銀行確認，應事先確認申報與匯款的順序，並與台灣方面的投資核准及繳款期限調整時程',
       '具體處置不宜一概而論，而應在匯款前確認最新制度與個別交易內容',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
+    }
+
+    const staleWording = [
+      '持有韓國國籍者',
+      '外匯管理法規',
+      '申報必須於匯出台灣法人出資款時獲受理',
+      '須在匯出台灣法人出資款時獲受理',
+      '申報必須在匯出出資款時獲受理',
+    ];
+    for (const phrase of staleWording) {
+      expect(raw).not.toContain(phrase);
+      expect(post?.content).not.toContain(phrase);
     }
   });
 
@@ -279,7 +294,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_829);
+    expect(visibleHanCount).toBe(3_887);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

@@ -74,6 +74,23 @@ describe('Japanese full column corpus + site locale', () => {
     expect(post?.content ?? '').not.toMatch(/Harlem\s*Yu/i);
   });
 
+  it('states the corrected Labor Pension Act coverage in the ja 270 setup-cost column', () => {
+    const raw = fs.readFileSync(
+      path.join(jaDir, '270-taiwan-company-setup-costs-japanese.md'),
+      'utf8',
+    );
+
+    expect(raw).toContain(
+      '2026年1月1日からは、就業許可を受けて専門的な仕事に従事する外国人も含まれます（[外國專業人才延攬及僱用法第24条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)）。',
+    );
+    expect(raw).toContain(
+      '日本人社員も、経理人やエンジニアとして就業許可を受けていれば対象です。',
+    );
+    expect(raw).not.toContain(
+      '永久居留の許可や台湾人の配偶者としての居留がない日本人社員は含まれません。',
+    );
+  });
+
   it('uses the official attorney name throughout the Japanese column corpus', () => {
     const jaFiles = fs.readdirSync(jaDir).filter((name) => name.endsWith('.md'));
     const corpus = jaFiles.map((name) => fs.readFileSync(path.join(jaDir, name), 'utf8')).join('\n');

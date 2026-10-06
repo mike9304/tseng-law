@@ -12,14 +12,12 @@ const raw = fs.readFileSync(columnPath, 'utf8');
 const parsed = matter(raw);
 const post = getColumnPost('taiwan-logistics-business-setup', 'zh-hant');
 
-function extractBodySections(content: string) {
-  return Array.from(
-    content.matchAll(/^## \d+\. (.+)\n\n([^\n]+)$/gm),
-    (match) => ({
-      heading: match[1],
-      a: match[2],
-    }),
-  );
+function extractBodyHeadings(content: string) {
+  return Array.from(content.matchAll(/^## \d+\. (.+)$/gm), (match) => match[1]);
+}
+
+function countOccurrences(value: string, needle: string) {
+  return value.split(needle).length - 1;
 }
 
 function extractPublicText(content: string) {
@@ -54,23 +52,11 @@ const faq = [
   },
 ];
 
-const bodySections = [
-  {
-    heading: '物流業務與「汽車貨運業」的範圍',
-    a: faq[0].a,
-  },
-  {
-    heading: '新設汽車貨運業',
-    a: faq[1].a,
-  },
-  {
-    heading: '收購既有業者',
-    a: faq[2].a,
-  },
-  {
-    heading: '委外運輸與外國人工作許可',
-    a: faq[3].a,
-  },
+const bodyHeadings = [
+  '物流業務與「汽車貨運業」的範圍',
+  '新設汽車貨運業',
+  '收購既有業者',
+  '委外運輸與外國人工作許可',
 ];
 
 describe('Traditional Chinese investment column 017 — logistics and motor freight', () => {
@@ -81,9 +67,9 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('2025年9月13日');
-    expect(parsed.data.read_time).toBe('10分鐘閱讀');
+    expect(parsed.data.read_time).toBe('8分鐘閱讀');
     expect(parsed.data.categories).toEqual(['台灣公司設立']);
     expect(parsed.data.featured_image).toBe(
       '../images/017-taiwan-logistics-business-setup/featured-01.jpg',
@@ -96,17 +82,25 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
 
     expect(post?.slug).toBe('taiwan-logistics-business-setup');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('2025年9月13日');
-    expect(post?.readTime).toBe('10分鐘閱讀');
+    expect(post?.readTime).toBe('8分鐘閱讀');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('公司設立');
     expect(post?.faq).toEqual(faq);
   });
 
-  it('keeps the four ordered body headings and immediate answers aligned with the FAQs', () => {
-    expect(extractBodySections(raw)).toEqual(bodySections);
-    expect(extractBodySections(post?.content ?? '')).toEqual(bodySections);
+  it('keeps the four ordered body headings without repeating the FAQ answers in the body', () => {
+    expect(extractBodyHeadings(raw)).toEqual(bodyHeadings);
+    expect(extractBodyHeadings(post?.content ?? '')).toEqual(bodyHeadings);
+
+    // The page renders the frontmatter FAQ as its own visible section, so each
+    // FAQ answer must exist exactly once in the file (frontmatter only).
+    for (const { a } of faq) {
+      expect(countOccurrences(raw, a)).toBe(1);
+      expect(parsed.content).not.toContain(a);
+      expect(post?.content).not.toContain(a);
+    }
   });
 
   it('distinguishes broad logistics services from regulated carriage', () => {
@@ -227,7 +221,7 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
       '契約終止後的資料、貨物及客戶服務移交預作安排',
       '股東或投資人，不表示同時取得在台工作或居留資格',
       '在開始工作前，依實際職務確認是否須取得工作許可',
-      '可能遭處罰鍰並被限令出國',
+      '未經許可工作的外國人，會被處以罰鍰，並應即令其出國，不得再於台灣工作（《就業服務法》第68條）。',
       '原則上可能適用3年的禁止入國期間',
       '免予禁止入國或縮短期間的情形',
       '不能將第三人的檢舉與特定處分結果直接畫上等號',
@@ -237,6 +231,8 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+    expect(raw).not.toContain('可能遭處罰鍰並被限令出國');
+    expect(post?.content).not.toContain('可能遭處罰鍰並被限令出國');
   });
 
   it('uses every official source and only the three contracted Chinese internal links', () => {
@@ -255,6 +251,7 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
       'https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49',
       'https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128',
       'https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128',
+      'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68',
       'https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp',
     ];
     const officialLinks = Array.from(
@@ -291,9 +288,9 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
     );
 
     const han = /\p{Script=Han}/gu;
-    expect(raw.match(han)?.length ?? 0).toBeGreaterThan(4_000);
+    expect(raw.match(han)?.length ?? 0).toBeGreaterThan(3_500);
     expect(raw.length).toBeGreaterThan(6_000);
-    expect(post?.content.length).toBeGreaterThan(5_000);
+    expect(post?.content.length).toBeGreaterThan(4_500);
     expect(getColumnPost('logistics-business', 'zh-hant')?.slug).toBe(
       'taiwan-logistics-business-setup',
     );
@@ -309,8 +306,8 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
         traditionalChineseCharactersPerMinute,
     );
 
-    expect(traditionalChineseCharacterCount).toBe(3_666);
-    expect(calculatedMinutes).toBe(10);
+    expect(traditionalChineseCharacterCount).toBe(3_089);
+    expect(calculatedMinutes).toBe(8);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
   });

@@ -121,7 +121,7 @@ describe('builder column storage backend', () => {
       expect(posts[0]?.slug).toBe(archiveLeadSlugsFor('ko')[0]);
       expect(post?.dateDisplay).toBe('2025년 9월 13일');
       expect(post?.publicationDate).toBe('2025-09-13');
-      expect(post?.readTime).toBe('9분 분량');
+      expect(post?.readTime).toBe('7분 분량');
     } finally {
       await rm(root, { recursive: true, force: true });
     }

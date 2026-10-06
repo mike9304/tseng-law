@@ -212,11 +212,11 @@ describe('English full column corpus', () => {
     expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
     expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
     expect(post!.title).toBe(exactTitle);
-    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-07-25');
+    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-10-06');
     expect(raw.match(/^date_display:\s*"([^"]+)"$/m)?.[1]).toBe(
       'September 13, 2025',
     );
-    expect(post!.date).toBe('2026-07-25');
+    expect(post!.date).toBe('2026-10-06');
     expect(post!.dateDisplay).toBe('September 13, 2025');
 
     const loadedPublicContent = `${post!.title}\n${post!.content}`;
@@ -224,10 +224,10 @@ describe('English full column corpus', () => {
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
 
     const renderedWordCount = countRenderedEnglishWords(post!.content);
-    expect(renderedWordCount).toBe(1963);
-    expect(Math.ceil(renderedWordCount / 200)).toBe(10);
-    expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('10 min read');
-    expect(post!.readTime).toBe('10 min read');
+    expect(renderedWordCount).toBe(2026);
+    expect(Math.ceil(renderedWordCount / 200)).toBe(11);
+    expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('11 min read');
+    expect(post!.readTime).toBe('11 min read');
 
     const mediaRecords = [
       {
@@ -343,8 +343,9 @@ describe('English full column corpus', () => {
       `[TWD 1,579,589](${judgmentUrl}) together with the interest stated in the judgment`,
     );
     expect(raw).toContain(
-      'In its first-instance judgment of January 24, 2022, in case 109 Consumer No. 7, the Taichung District Court ordered the defendant to pay',
+      'In its first-instance judgment of January 24, 2022, in case 109 Consumer No. 7, the Taichung District Court ordered the company that operates the gym, one of the defendants, to pay',
     );
+    expect(raw).not.toContain('the Taichung District Court ordered the defendant to pay');
     expect(raw).toContain(
       'Media reports later stated that the parties reached a settlement on appeal.',
     );

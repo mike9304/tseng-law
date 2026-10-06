@@ -93,7 +93,7 @@ author: "legal-ai-assistant"
 
 健康保険。民間企業の被用者は本人30%、事業主60%、政府10%です（[全民健康保険法第27条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=27)）。
 
-退職金。台湾籍の従業員など労工退休金条例の対象者については、事業主が月給の6%以上を退職金として拠出します（[第14条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=14)）。毎月外部に払う固定費です。対象は[第7条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=7)が定めていて、永久居留の許可や台湾人の配偶者としての居留がない日本人社員は含まれません。
+退職金。台湾籍の従業員など労工退休金条例の対象者については、事業主が月給の6%以上を退職金として拠出します（[第14条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=14)）。毎月外部に払う固定費です。対象は[第7条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=7)が定める台湾籍の労働者や永住許可を受けた外国人などのほか、2026年1月1日からは、就業許可を受けて専門的な仕事に従事する外国人も含まれます（[外國專業人才延攬及僱用法第24条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)）。日本人社員も、経理人やエンジニアとして就業許可を受けていれば対象です。
 
 このほか、会計士への記帳・申告の報酬、営業場所の賃料、業種別の許認可の更新費がありますが、金額は法律で決まっていないので、ここでは数えていません。
 

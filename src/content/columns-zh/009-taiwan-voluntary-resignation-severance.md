@@ -1,7 +1,7 @@
 ---
 title: "員工自願離職也能領資遣費的例外情形"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2026-09-10"
+lastmod: "2026-10-06"
 date_display: "2025年9月13日"
 read_time: "2分鐘閱讀"
 categories:
@@ -41,7 +41,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 最常見的例子是雇主未按時發放工資、未支付加班費，或未替員工投保勞保或健保。
 
-這種情況下，即使勞工主動終止勞動契約，雇主仍須支付資遣費。
+這種情況下，勞工以該事由終止勞動契約時，雇主仍須支付資遣費。
 
 ​
 

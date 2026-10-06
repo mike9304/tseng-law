@@ -160,7 +160,9 @@ const expectedFamilyIntros = {
   en: 'Cross-border marriages bring divorce, custody, and inheritance questions that involve more than one country\'s law. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.',
 } as const;
 
-// ko lists four questions: the house-title and claim-distinction questions moved to column 274.
+// ko and en list four questions and zh-hant and ja three: the house-title and claim-distinction
+// questions (and, for ja, the child-standard question) moved to the part columns 275 and 307, and
+// the zh-hant hub dropped FAQ 4 to 6 together with their sections.
 const expectedFaqQuestions = {
   ko: [
     '대만에서 협의이혼은 합의서에 서명하면 바로 효력이 생기나요?',
@@ -172,39 +174,62 @@ const expectedFaqQuestions = {
     '台灣兩願離婚只要簽署協議書就立刻生效嗎？',
     '台灣法院的離婚調解，夫妻是否必須一起出庭？',
     '對婚姻破綻應負責任的配偶，能否在台灣請求裁判離婚？',
-    '以婚前資金支付房價，或以一方名義登記，是否就決定所有權與財產分配？',
-    '剩餘財產分配、離婚損害賠償、離婚後贍養費與子女扶養費是同一請求嗎？',
-    '台灣法院以何種標準判斷未成年子女相關事項？',
   ],
   en: [
     'Does signing a divorce agreement make a mutual-consent divorce in Taiwan immediately effective?',
     'Must both spouses always appear together in court mediation?',
     'Can the spouse responsible for marital breakdown petition for judicial divorce?',
-    'Does paying for a house or holding title decide ownership and residual-property distribution?',
-    'Are residual-property distribution, divorce damages, and post-divorce support the same claim or subject to one five-year period?',
     'How does a Taiwan court decide issues concerning a minor child?',
   ],
   ja: [
     '台湾の協議離婚は、合意書に署名すれば直ちに効力が生じますか？',
     '裁判所の調停では、必ず双方が同じ場に出頭しなければなりませんか？',
     '婚姻破綻について有責な配偶者は、裁判離婚を請求できますか？',
-    '住宅の購入資金を負担したことや登記名義だけで、所有権や夫婦残余財産差額分配は決まりますか？',
-    '夫婦残余財産差額分配、離婚に伴う損害賠償、配偶者扶養および養育費は同じ請求ですか？',
-    '台湾の裁判所は、未成年の子に関する事項をどのように判断しますか？',
   ],
 } as const;
 
 const expectedFaqCounts = {
   ko: 4,
-  'zh-hant': 6,
-  en: 6,
-  ja: 6,
+  'zh-hant': 3,
+  en: 4,
+  ja: 3,
 } as const;
 
 const propertyColumnSlug = 'taiwan-divorce-property-damages-support';
-const expectedPropertyColumnFaqQuestions = [
-  '혼전 자금으로 집값을 냈거나 한쪽 명의로 등기하면 소유권과 재산분할이 결정되나요?',
-  '잔여재산 분배, 이혼 손해배상, 배우자 부양과 양육비는 같은 청구인가요?',
+const childrenColumnSlug = 'taiwan-divorce-children-custody-support-visitation';
+// FAQ entities that left the 007 hubs and are now served by the part columns (275 for ko/en/ja, 307 for ja).
+const expectedPartColumnFaqs = [
+  {
+    locale: 'ko',
+    slug: propertyColumnSlug,
+    questions: [
+      '혼전 자금으로 집값을 냈거나 한쪽 명의로 등기하면 소유권과 재산분할이 결정되나요?',
+      '잔여재산 분배, 이혼 손해배상, 배우자 부양과 양육비는 같은 청구인가요?',
+    ],
+  },
+  {
+    locale: 'en',
+    slug: propertyColumnSlug,
+    questions: [
+      'Does paying for a house or holding title decide ownership and residual-property distribution?',
+      'Are residual-property distribution, divorce damages, and post-divorce support the same claim or subject to one five-year period?',
+    ],
+  },
+  {
+    locale: 'ja',
+    slug: propertyColumnSlug,
+    questions: [
+      '住宅の購入資金を負担したことや登記名義だけで、所有権や夫婦残余財産差額分配は決まりますか？',
+      '夫婦残余財産差額分配、離婚に伴う損害賠償、配偶者扶養および養育費は同じ請求ですか？',
+    ],
+  },
+  {
+    locale: 'ja',
+    slug: childrenColumnSlug,
+    questions: [
+      '台湾の裁判所は、未成年の子に関する事項をどのように判断しますか？',
+    ],
+  },
 ] as const;
 
 const expectedInLanguage = {
@@ -456,7 +481,7 @@ describe('column 007 public reference synchronization', () => {
     }
   });
 
-  it('builds article and FAQ JSON-LD from the four posts with exact headline, page, language, and per-locale FAQ entities (ko four, others six)', () => {
+  it('builds article and FAQ JSON-LD from the four posts with exact headline, page, language, and per-locale FAQ entities (ko and en four, zh-hant and ja three)', () => {
     for (const locale of siteLocales) {
       const post = getColumnPost(slug, locale);
       expect(post, locale).toBeDefined();
@@ -490,19 +515,22 @@ describe('column 007 public reference synchronization', () => {
     }
   });
 
-  it('serves the two FAQ entities that left the ko 007 column from the ko property column', () => {
-    const propertyPost = getColumnPost(propertyColumnSlug, 'ko');
-    expect(propertyPost).toBeDefined();
-    expect(propertyPost?.faq).toHaveLength(2);
+  it('serves the FAQ entities that left the ko, en and ja 007 hubs from the property and children part columns', () => {
+    for (const { locale, slug: partSlug, questions } of expectedPartColumnFaqs) {
+      const partPost = getColumnPost(partSlug, locale);
+      expect(partPost, `${locale}/${partSlug}`).toBeDefined();
+      expect(partPost?.faq, `${locale}/${partSlug}`).toHaveLength(questions.length);
 
-    const faq = buildFaqJsonLd(propertyPost!.faq ?? [], 'ko');
-    expect(faq?.['@type']).toBe('FAQPage');
-    expect(faq?.inLanguage).toBe(expectedInLanguage.ko);
+      const faq = buildFaqJsonLd(partPost!.faq ?? [], locale);
+      expect(faq?.['@type'], `${locale}/${partSlug}`).toBe('FAQPage');
+      expect(faq?.inLanguage, `${locale}/${partSlug}`).toBe(expectedInLanguage[locale]);
 
-    const entities = faq?.mainEntity as Array<{ name: string }> | undefined;
-    expect(entities?.map((entity) => entity.name)).toEqual([
-      ...expectedPropertyColumnFaqQuestions,
-    ]);
+      const entities = faq?.mainEntity as Array<{ name: string }> | undefined;
+      expect(
+        entities?.map((entity) => entity.name),
+        `${locale}/${partSlug}`,
+      ).toEqual([...questions]);
+    }
   });
 
   it('removes stale public titles, old archive copy, and unsafe family claims from synchronized runtime data', () => {

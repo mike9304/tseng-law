@@ -26,18 +26,13 @@ const faq1Answer =
 const faq2Answer =
   '並非必然如此。法院處理家事事件時，得命當事人或法定代理人本人到場，或依事件之性質以適當方法命其陳述或訊問；無正當理由而不從到場命令者，依家事事件法第13條準用民事訴訟法第303條，初次得處新臺幣三萬元以下罰鍰，但不得拘提。惟是否必須於同一空間共同調解，以及分離、安全、代理或其他程序上措施是否可行，仍應依法院及個案情形確認。';
 const nonKoreanFaq3Addition = '該但書限制原則上合憲；但';
-const faq3ConstitutionalHolding =
-  '惟憲法法庭112年憲判字第4號認為，未考量該重大事由是否已發生或持續相當期間，即完全剝奪唯一有責配偶之離婚機會，致個案顯然過苛者，於此範圍內違憲。';
+// The holding as it reads in the section 4 body; FAQ 3 repeats it after the connective 惟.
+const constitutionalHoldingSentence =
+  '憲法法庭112年憲判字第4號認為，未考量該重大事由是否已發生或持續相當期間，即完全剝奪唯一有責配偶之離婚機會，致個案顯然過苛者，於此範圍內違憲。';
 const faq3Answer =
-  `現行民法第1052條第2項規定，有前項以外之重大事由，難以維持婚姻者，夫妻之一方得請求離婚；其但書規定，該事由應由夫妻之一方負責者，僅他方得請求離婚。${faq3ConstitutionalHolding}條文本身仍在，故不得一概謂有責配偶絕對可以或絕對不可以請求，而應視法院如何適用該判決意旨及具體事實。`;
-const faq4Answer =
-  '並非如此。房屋登記名義與購屋資金來源雖屬重要證據，但所有權、贈與、借名登記、借貸、不當得利等個別請求，與民法第1030條之1之剩餘財產差額分配，係不同問題。應分別檢視實際合意、取得原因與時點、資金流向、債務、是否無償取得及相關證據；僅以婚前資金支付部分價款，或以一方名義登記，尚不能決定全部結論。';
-const faq5Answer =
-  '並非同一權利。民法第1030條之1之剩餘財產差額分配請求權、第1056條裁判離婚之損害賠償、第1057條對無過失配偶之贍養費，以及未成年子女之扶養費，其發生要件、計算與期間均不相同。剩餘財產差額分配請求權雖有自知有差額時起二年、法定財產制消滅時起五年之期間，但不得逕將該期間套用於其他請求。';
-const faq6Answer =
-  '依民法第1055條及第1055條之1，法院應以未成年子女之最佳利益為準，就未成年子女權利義務之行使或負擔、會面交往等子女相關事項為判斷。應綜合子女之年齡、健康、意願與發展需要、父母之生活與照護能力及態度、親子情感關係、是否妨礙他方與子女之關係等法定因素及具體資料，不得僅以父母所得或婚姻破綻責任單一決定結論。';
-const section8AgreementParagraph =
-  '依民法第1055條，父母得協議離婚後由何方行使或負擔前述權利義務；未為協議或協議不成時，法院得予酌定。協議不利於子女時，法院得予改定，或為必要之決定。既有決定作成後，如衡酌其後情事及子女利益而有變更之必要，仍可能需要法院審查。已簽署之離婚協議書並不排除其後以子女最佳利益為準之審查；協議之變更亦不能僅視為提出戶籍書表的問題。';
+  `現行民法第1052條第2項規定，有前項以外之重大事由，難以維持婚姻者，夫妻之一方得請求離婚；其但書規定，該事由應由夫妻之一方負責者，僅他方得請求離婚。惟${constitutionalHoldingSentence}條文本身仍在，故不得一概謂有責配偶絕對可以或絕對不可以請求，而應視法院如何適用該判決意旨及具體事實。`;
+const paragraph2Sentence =
+  '現行民法第1052條第2項規定，有前項以外之重大事由，難以維持婚姻者，夫妻之一方得請求離婚；其但書規定，該事由應由夫妻之一方負責者，僅他方得請求離婚。';
 const faq = [
   {
     q: '台灣兩願離婚只要簽署協議書就立刻生效嗎？',
@@ -51,18 +46,13 @@ const faq = [
     q: '對婚姻破綻應負責任的配偶，能否在台灣請求裁判離婚？',
     a: faq3Answer,
   },
-  {
-    q: '以婚前資金支付房價，或以一方名義登記，是否就決定所有權與財產分配？',
-    a: faq4Answer,
-  },
-  {
-    q: '剩餘財產分配、離婚損害賠償、離婚後贍養費與子女扶養費是同一請求嗎？',
-    a: faq5Answer,
-  },
-  {
-    q: '台灣法院以何種標準判斷未成年子女相關事項？',
-    a: faq6Answer,
-  },
+];
+// FAQ 4 to 6 of the former six were dropped from the hub on 2026-10-06 together with their sections;
+// the linked zh columns carry those topics.
+const droppedFaqQuestions = [
+  '以婚前資金支付房價，或以一方名義登記，是否就決定所有權與財產分配？',
+  '剩餘財產分配、離婚損害賠償、離婚後贍養費與子女扶養費是同一請求嗎？',
+  '台灣法院以何種標準判斷未成年子女相關事項？',
 ];
 const headings = [
   '1. 台灣離婚的三條路徑與涉外事件的首要確認事項',
@@ -99,8 +89,68 @@ const internalLinks = [
   '[台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)',
   '[聯絡諮詢](/zh-hant/contact)',
 ];
+// The hub now sends the dropped detail to these existing zh-hant columns, one lead paragraph per section.
+const hubColumnLinks = [
+  {
+    heading: headings[1],
+    link: '[簽離婚協議書前：證人、財產拋棄與未登記的效力](/zh-hant/columns/divorce-agreement-terms-before-signing)',
+  },
+  {
+    heading: headings[3],
+    link: '[分居多年仍離不了婚？民法第1052條與有責配偶的離婚請求](/zh-hant/columns/judicial-divorce-grounds-civil-code-1052)',
+  },
+  {
+    heading: headings[5],
+    link: '[離婚時剩餘財產分配怎麼算？婚前存款、房貸與轉出款項的差別](/zh-hant/columns/remaining-property-distribution-calculation)',
+  },
+  {
+    heading: headings[5],
+    link: '[配偶的錢在海外，離婚時如何請求剩餘財產分配？](/zh-hant/columns/remaining-property-distribution-overseas-assets)',
+  },
+  {
+    heading: headings[5],
+    link: '[跨國夫妻的財產，適用哪一國法律？](/zh-hant/columns/taiwan-marital-property-regime-international-couples)',
+  },
+  {
+    heading: headings[6],
+    link: '[離婚後的贍養費與損害賠償：第1057條和第1056條的不同門檻](/zh-hant/columns/alimony-after-divorce-civil-code-1057)',
+  },
+  {
+    heading: headings[6],
+    link: '[配偶外遇求償：法院怎麼看證據、慰撫金與蒐證界線](/zh-hant/columns/spouse-affair-evidence-damages-taiwan)',
+  },
+  {
+    heading: headings[7],
+    link: '[離婚爭監護權，法院靠什麼認定子女最佳利益：社工訪視、家事調查官與孩子的聲音](/zh-hant/columns/child-custody-best-interests-social-worker-report)',
+  },
+  {
+    heading: headings[8],
+    link: '[離婚後子女扶養費怎麼算：生活支出、父母分擔與逾期給付](/zh-hant/columns/child-support-calculation-taiwan-court)',
+  },
+  {
+    heading: headings[8],
+    link: '[對方不讓看小孩，法院能做什麼：履行勸告、怠金與改定監護權的門檻](/zh-hant/columns/change-custody-visitation-refusal)',
+  },
+  {
+    heading: headings[8],
+    link: '[離婚還沒判，孩子九月要開學：家事暫時處分能先定什麼](/zh-hant/columns/provisional-order-during-divorce-custody-support)',
+  },
+  {
+    heading: headings[8],
+    link: '[子女扶養費的跨國執行：對方在國外，或手上是外國裁判](/zh-hant/columns/taiwan-child-support-enforcement-cross-border)',
+  },
+  {
+    heading: headings[9],
+    link: '[與台灣配偶離婚後想帶孩子住海外：親職計畫要能實行](/zh-hant/columns/taiwanese-spouse-divorce-cross-border-parenting)',
+  },
+  {
+    heading: headings[9],
+    link: '[怕孩子被帶出國不回來：海牙公約用不上，禁止出境的裁定一准一駁](/zh-hant/columns/child-taken-abroad-taiwan-parent-remedies)',
+  },
+];
+const inlineColumnLinks = hubColumnLinks.map(({ link }) => link);
 const disclaimer =
-  '本文係供教育用途，旨在一般性說明台灣的離婚、涉外家事、夫妻財產及未成年子女制度，並非針對個別案件的法律意見。管轄、準據法、外國裁判之承認、婚姻與戶籍狀態、財產制、關於子女之既有協議或裁判、事實關係與證據，以及最新官方規定，均可能使程序與結果有所不同。登記、救濟、請求及執行期限，均應於採取行動前，以各項權利與程序的確切起算事由為準，逐一確認。';
+  '本文係供教育用途，旨在一般性說明台灣的離婚、涉外家事、夫妻財產及未成年子女制度，並非針對個別案件的法律意見。';
 const staleDisclaimer =
   '本文僅供一般法律資訊參考，不構成個案法律意見。管轄、準據法、外國裁判或身分行為之承認、具體事實、證據、既有協議或裁判及最新官方規定，均可能影響結論；採取行動前，應依正確起算事由個別計算申請、救濟、時效與執行期間。';
 const author = '曾雋崴律師（Wei Tseng）';
@@ -111,29 +161,32 @@ const exactEnding = `- ${internalLinks[2]}
 ${disclaimer}
 
 ${author}`;
-const frozenVisibleHanCount = 7_649;
+const evidenceItems = [
+  '1. 婚姻證明與台灣戶籍資料，以及各當事人國籍、住所、經常居所與現在住址。',
+  '2. 書面離婚協議與證人確認離婚真意之經過、法院文件、送達紀錄、調解筆錄、和解筆錄、判決及確定證明等，依程序分別彙整。',
+  '3. 外國婚姻或離婚紀錄、外國裁判或證明書、台灣駐外館處或其他有權機關之認證、中文譯本及其認證或公證情形，以及在台灣之承認、效力與登記狀態。',
+  '4. 以中立年表整理所主張離婚事由之事件與時間，並將合法取得之通訊、醫療或警察資料及其他證據以原本狀態保存。',
+  '5. 各子女之年齡、健康、教育、居住、過去與現在之照護經過、與其發展程度相稱之意願、與各父母之關係，以及安全與穩定相關資料，均自子女最佳利益觀點準備。',
+  '6. 現行子女相關協議或裁判、扶養費給付與實際費用、會面交往經過、旅行文件、移動行程，以及具體跨境遷居計畫。',
+  '7. 將申請、登記、上訴、抗告、請求權行使與執行之全部日期，各自連結至正確起算事由。判決之宣示、送達與確定，調解或和解之成立，知悉權利之日與法定財產制消滅日，不得混用。',
+  '8. 配偶與子女之身分識別資料、地址、醫療、教育與金融資料，僅於必要範圍提供必要之人或機關，並就檔案存取權限、傳輸方式與複本銷毀建立隱私保護安排。',
+];
+const evidenceProhibitionSentence =
+  '不得以違法監視、侵入帳號或裝置、追蹤、違反法律之錄音，或公開子女隱私，作為蒐證方法。';
+// Re-frozen after the 2026-10-06 hub trim (sections 6 to 10 reduced to lead sentences plus links).
+const frozenVisibleHanCount = 4_829;
 const frozenSourceSha256 =
-  'ebdbe4615984f52c9fce023322476df09964b79e9157b943943d76ec7ec518d8';
+  '6bd706204b872e3dadd6b08ba0adddf654bafd1bf9dc9a5ef361e1c64c55719a';
 const frozenSection4TailSha256 =
-  'a507e018ed271a5caf2483f5c8880d836f485789c693a0fbdc9c35418f2f645d';
+  '50ca1218b8183e84f8f4bdda1761ec0d7a58e50da5d28d331c8fa328c903d628';
 const frozenSection5OnwardSha256 =
-  'd118d5448bf7b19159c9582dd6d3383860814ab7c71826e8b5948a5deaa20926';
-const frozenSection8AgreementPrefixLength = 16_860;
-const frozenSection8AgreementPrefixSha256 =
-  'e6f13969b4ab04d31100ccad5d51ae5fbe6a8d7aaf306dbe9c973dc3101ef7f9';
-const frozenSection8AgreementTailLength = 1_043;
-const frozenSection8AgreementTailSha256 =
-  'eac23054c07aed295e4d21a8a81852629a16d2100a24a0200ad4af9446e42668';
-const frozenSection9OnwardLength = 8_156;
+  '60c1e51538278aa15c90395c8ab570577f4a6f3956fbdabbdfb1652abcdeed6f';
+const frozenSection9OnwardLength = 6_112;
 const frozenSection9OnwardSha256 =
-  '068c106efae4a616fa55be484b957e040b3f7c4b93b1ab5414deaa6a7e5a491f';
+  '52972da0d2f7e58e18051b0ca70e1cd628653624f7e64bfc79a268308c97be3c';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
-}
-
-function firstParagraphAfter(content: string, heading: string) {
-  return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
 }
 
 function sectionBody(content: string, heading: string) {
@@ -164,20 +217,20 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-10-06',
       date_display: '2025年9月13日',
-      read_time: '20分鐘閱讀',
+      read_time: '10分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
       faq,
     });
-    expect(parsed.data.faq).toHaveLength(6);
+    expect(parsed.data.faq).toHaveLength(3);
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-09-10',
+      date: '2026-10-06',
       dateDisplay: '2025年9月13日',
-      readTime: '20分鐘閱讀',
+      readTime: '10分鐘閱讀',
       category: 'legal',
       categoryLabel: '法律資訊',
       featuredImage:
@@ -218,24 +271,23 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     ).toEqual(headings);
   });
 
-  it('repeats each exact FAQ answer twice and starts its assigned section with it', () => {
-    const assignments = [
-      [`## ${headings[1]}`, faq1Answer],
-      [`## ${headings[2]}`, faq2Answer],
-      [`## ${headings[3]}`, faq3Answer],
-      [`## ${headings[5]}`, faq4Answer],
-      [`## ${headings[6]}`, faq5Answer],
-      [`## ${headings[7]}`, faq6Answer],
-    ];
+  it('keeps each exact FAQ answer once in the frontmatter and the loader and not in the body, and drops FAQ 4 to 6', () => {
+    for (const { q, a } of faq) {
+      expect(countOccurrences(raw, a), q).toBe(1);
+      expect(post?.faq?.map((item) => item.a), q).toContain(a);
+      expect(post?.content, q).not.toContain(a);
+    }
+    expect(post?.faq).toHaveLength(3);
 
-    for (const [heading, answer] of assignments) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
-      expect(countOccurrences(raw, answer)).toBe(2);
+    for (const question of droppedFaqQuestions) {
+      expect(raw, question).not.toContain(question);
+      expect(post?.faq?.map((item) => item.q), question).not.toContain(
+        question,
+      );
     }
   });
 
-  it('keeps only the Korean-source constitutional holding in both FAQ3 copies and freezes everything after the section 4 lead', () => {
+  it('keeps only the source constitutional holding in both the FAQ 3 and section 4 copies and freezes everything after the section 4 lead', () => {
     const section4 = sectionBody(parsed.content, headings[3]);
     const section4Blocks = section4.split('\n\n');
     const section4Tail = section4Blocks.slice(2).join('\n\n');
@@ -243,8 +295,11 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     const section5Onward = parsed.content.slice(section5Start);
 
     expect(countOccurrences(raw, nonKoreanFaq3Addition)).toBe(0);
-    expect(countOccurrences(raw, faq3ConstitutionalHolding)).toBe(2);
-    expect(section4Blocks[1]).toBe(faq3Answer);
+    expect(countOccurrences(raw, constitutionalHoldingSentence)).toBe(2);
+    expect(countOccurrences(section4, constitutionalHoldingSentence)).toBe(1);
+    expect(section4Blocks[1]).toBe(
+      '民法第1052條第1項列舉十款裁判離婚事由，夫妻之一方有下列情形之一者，他方得向法院請求離婚：',
+    );
     expect(
       crypto.createHash('sha256').update(section4Tail).digest('hex'),
     ).toBe(frozenSection4TailSha256);
@@ -253,7 +308,11 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     ).toBe(frozenSection5OnwardSha256);
   });
 
-  it('locks one exact substantive proposition in its assigned section for all twenty-five legacy topics', () => {
+  it('locks one exact substantive proposition in its assigned section for the eighteen surviving legacy topics', () => {
+    // Legacy topics 5, 6, 10, 14, 16, 20 and 25 were dropped from the hub on 2026-10-06 (hub trim);
+    // the linked zh columns carry them. Topics 2, 4, 7, 12, 17 and 21 are re-anchored to the sentence
+    // that now carries the same proposition.
+    const removedLegacyTopics = [5, 6, 10, 14, 16, 20, 25];
     const legacyCoverage = [
       {
         number: 1,
@@ -265,7 +324,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
         number: 2,
         heading: headings[4],
         phrase:
-          '僅以「依外國當地法離婚已成立」或單一外國離婚證明，並不能逕使全部台灣程序完結。',
+          '若身分行為或裁判已於外國成立，應先確認其在台灣之效力與承認可能性；若程序尚未開始，則應比較管轄、準據法，以及可預期之登記與執行效果。',
       },
       {
         number: 3,
@@ -273,23 +332,21 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
         phrase:
           '以婚前儲蓄支付頭期款或貸款分期，並不當然使登記名義移轉；以一方名義登記，亦不當然終結全部契約、受益、償還或夫妻財產爭議。',
       },
-      { number: 4, heading: headings[2], phrase: faq2Answer },
       {
-        number: 5,
+        number: 4,
+        heading: headings[2],
+        phrase:
+          '分離場所、視訊方式、僅代理人到場或安全措施是否於特定事件中獲准，亦不能預先承諾，而應將情形陳明法院並確認程序指示。',
+      },
+      {
+        number: 7,
         heading: headings[6],
         phrase:
-          '不得以政府統計上之平均消費支出，或以他方有責一事，作為具拘束力之固定算式。',
+          '民法第1030條之1之剩餘財產差額分配請求權、第1056條裁判離婚之損害賠償、第1057條對無過失配偶之贍養費，以及未成年子女之扶養費，其發生要件、計算與期間均不相同。',
       },
-      {
-        number: 6,
-        heading: headings[5],
-        phrase:
-          '應將匯款紀錄、買賣契約、貸款與清償資料、收據、當事人間訊息、稅務與登記資料，連同取得原因與時點一併對照，始能呈現真實法律關係。',
-      },
-      { number: 7, heading: headings[6], phrase: faq5Answer },
       {
         number: 8,
-        heading: headings[7],
+        heading: headings[2],
         phrase:
           '惟不得將「先離婚、子女事項日後再處理」視為一切事件皆可採用之普遍捷徑。',
       },
@@ -300,29 +357,17 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
           '申請人、得否代理、身分證明與戶籍資料、離婚書面等實際準備文件，應以申請當時內政部戶政司離婚登記說明及管轄戶政事務所之確認為準。',
       },
       {
-        number: 10,
-        heading: headings[2],
-        phrase:
-          '事件所需時間因送達、調解次數、爭執事實與證據、鑑定或調查、子女爭點、涉外送達及審級而異，無法提出固定完成時點。',
-      },
-      {
         number: 11,
         heading: headings[3],
         phrase:
           '民法第1052條第1項列舉十款裁判離婚事由，夫妻之一方有下列情形之一者，他方得向法院請求離婚：',
       },
-      { number: 12, heading: headings[3], phrase: faq3Answer },
+      { number: 12, heading: headings[3], phrase: paragraph2Sentence },
       {
         number: 13,
         heading: headings[2],
         phrase:
           '家事事件法所定之家事事件，原則上於裁判前應經法院調解。',
-      },
-      {
-        number: 14,
-        heading: headings[6],
-        phrase:
-          '應先確認是否屬裁判離婚、請求人有無過失，以及是否因離婚而實際陷於困難，再依需要與資力等具體資料判斷範圍。',
       },
       {
         number: 15,
@@ -331,16 +376,10 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
           '未結婚而同居之當事人，不因共同生活之事實，即取得離婚或配偶贍養等婚姻上權利。',
       },
       {
-        number: 16,
-        heading: headings[7],
-        phrase:
-          '既有決定作成後，如衡酌其後情事及子女利益而有變更之必要，仍可能需要法院審查。',
-      },
-      {
         number: 17,
         heading: headings[8],
         phrase:
-          '不得將「當事人於訂約時無法預見之事件」定為一切變更之唯一門檻；亦不得僅憑物價變動或一方主張，即逕定變更額。',
+          '子女扶養費之確定裁判或成立之和解，如其內容尚未實現，因情事變更，依原裁判或和解內容顯失公平者，法院得依聲請人或相對人聲請變更（家事事件法第102條第1項、第107條第2項）。',
       },
       {
         number: 18,
@@ -355,16 +394,10 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
           '屬判決之上訴、裁定之抗告，或另就調解、和解之成立或效力爭執，路徑與期間均不相同。',
       },
       {
-        number: 20,
-        heading: headings[5],
-        phrase:
-          '與配偶以外之人合意性交，或婚姻破綻責任本身，並不當然排除或減縮剩餘財產差額分配請求權。',
-      },
-      {
         number: 21,
         heading: headings[3],
         phrase:
-          '條文本身仍在，故不得一概謂有責配偶絕對可以或絕對不可以請求，而應視法院如何適用該判決意旨及具體事實。',
+          '但書文義本身並未自現行條文刪除；法院仍應於個案適用該判決之意旨。',
       },
       {
         number: 22,
@@ -384,16 +417,12 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
         phrase:
           '僅離家數月一事，本身亦不當然構成任一離婚事由；尚應檢視離家原因、有無正當分居事由、聯繫與扶養、狀態是否繼續等具體事實。',
       },
-      {
-        number: 25,
-        heading: headings[9],
-        phrase:
-          '僅因雙方同意子女將於某一外國生活，例如同意於韓國生活，並不能使該地生活費水準逕成為扶養費之獨立算式。',
-      },
     ];
 
     expect(legacyCoverage.map(({ number }) => number)).toEqual(
-      Array.from({ length: 25 }, (_, index) => index + 1),
+      Array.from({ length: 25 }, (_, index) => index + 1).filter(
+        (number) => !removedLegacyTopics.includes(number),
+      ),
     );
     for (const { heading, phrase } of legacyCoverage) {
       expect(sectionBody(parsed.content, heading)).toContain(phrase);
@@ -407,7 +436,6 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '第二，於法院成立調解或和解，依調解筆錄或和解筆錄使婚姻關係消滅的法院調解或和解離婚。',
       '第三，主張並證明法定離婚事由，由法院以判決准許的裁判離婚。',
       '台灣法院或行政機關是否具有管轄或處理權限；離婚、夫妻財產與子女問題應適用何地法律為準據法；外國離婚或裁判在台灣是否獲承認或具何種效力；台灣戶籍登記需要何種程序與經認證之文書；其他相關國家或地區是否另須申報、承認或執行。',
-      '當事人國籍、是否為外國人，或婚姻締結地之一端，並不能單獨決定上述五個問題。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -427,15 +455,16 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '判決書或筆錄之送達、收受日，並非全部事件共通之起算點。',
       '逾期申請，戶政事務所仍應受理；書面催告後仍無人申請者，符合要件時，戶政事務所應依第48條之2逕為登記。',
       '申請期間經過之事實，並不使已生效之離婚失其效力。',
-      '線上申辦僅限於法定申請期間內利用，不得將該三十日解讀為僅適用於線上申辦之期間規則。',
+      '線上申辦僅限於法定申請期間內利用。',
     ];
 
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+    expect(section).not.toContain('30日只是線上申辦期間');
   });
 
-  it('locks Family Act Article 13 and the type-specific effects and review routes', () => {
+  it('locks Family Act Article 13, the type-specific effects and review routes, and the open-issues check', () => {
     const section = sectionBody(parsed.content, headings[2]);
     const requiredPhrases = [
       '家事事件法第13條之制裁，僅於法院命當事人或法定代理人本人到場時始有適用。',
@@ -445,6 +474,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '調解或和解成立時，婚姻關係依法律所定方式消滅，並發生與確定裁判相同之效力。',
       '以判決准許之離婚，以判決確定為關鍵。',
       '應確認送達日、是否確定及程序上地位後，依該類型計算期間',
+      '應一併檢視：未決財產如何保全與結算；子女居所、照護、醫療與教育需要何種協議或法院決定；扶養費與會面交往如何安排；以及爭執期間是否需要暫時處分以維護安全與生活連續性。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -452,7 +482,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     }
   });
 
-  it('locks Article 1052 paragraph 1 grounds, paragraph 2, and the constitutional qualification', () => {
+  it('locks Article 1052 paragraph 1 grounds, paragraph 2, the constitutional qualification, and the link to the dedicated grounds column', () => {
     const section = sectionBody(parsed.content, headings[3]);
     const grounds = [
       '1. 重婚。',
@@ -467,12 +497,12 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '10. 因故意犯罪，經判處有期徒刑逾六個月確定。',
     ];
     const requiredPhrases = [
-      '第2項另以第1項以外之重大事由、致難以維持婚姻者，作為獨立之一般事由。',
-      '截至2026年7月25日，但書文義本身並未自現行條文刪除；法院仍應於個案適用該判決之意旨。',
+      paragraph2Sentence,
+      constitutionalHoldingSentence,
+      '截至2026年10月6日，但書文義本身並未自現行條文刪除；法院仍應於個案適用該判決之意旨。',
       '生死不明已逾三年之第1項事由、惡意遺棄在繼續狀態中之第1項事由，以及其他重大事由致難以維持婚姻之第2項事由，彼此不同。',
       '亦無「必須先請求履行同居義務，始得主張惡意遺棄或其他重大事由」之普遍要件。',
-      '即便該事實存在，亦不能一併決定裁判離婚、第1056條損害賠償、剩餘財產差額分配、第1057條離婚後贍養費，或未成年子女權利義務之行使負擔與扶養費之結論。',
-      faq3ConstitutionalHolding,
+      hubColumnLinks[1].link,
     ];
 
     let previousIndex = -1;
@@ -486,15 +516,13 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     }
   });
 
-  it('locks foreign-record connecting factors, authentication, translation, and regional verification', () => {
+  it('locks foreign-record connecting factors and regional verification', () => {
     const section = sectionBody(parsed.content, headings[4]);
     const requiredPhrases = [
       '不能僅以「先在台灣補登婚姻」或「在台灣提起離婚訴訟」二途概括。',
       '宜分別確認當事人各國籍、住所與經常居所、婚姻或離婚作成之地點與方式、現行台灣戶籍與外國家庭關係紀錄，以及既有外國判決、調解筆錄或離婚證明之有無。',
       '他方是否曾受合法送達並有防禦機會等程序公正事項',
       '應具體特定在台灣所欲達成者究為婚姻關係消滅、戶籍變更、財產判斷或執行中之何種效果。',
-      '亦非所有外國離婚均須同一承認訴訟或同一套文件。',
-      '外國文書可能須經台灣駐外館處或其他有權機關認證；依文書別之官方說明，並可能須附經認證或公證之中文譯本。',
       '在中國大陸作成之文書，與在香港、澳門作成之文書，各有別於一般外國文書之驗證規則',
     ];
 
@@ -503,118 +531,77 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     }
   });
 
-  it('locks Article 1017 and Article 1030-1 classification, exclusions, adjustment, and claim-specific periods', () => {
-    const section = sectionBody(parsed.content, headings[5]);
-    const requiredPhrases = [
+  it('keeps the house-title three layers and the claim separations in the hub and sends the detail to the linked columns', () => {
+    const section6 = sectionBody(parsed.content, headings[5]);
+    const section7 = sectionBody(parsed.content, headings[6]);
+    const section6Phrases = [
+      '房屋登記名義與購屋資金來源雖屬重要證據，但所有權、贈與、借名登記、借貸、不當得利等個別請求，與民法第1030條之1之剩餘財產差額分配，係不同問題。',
       '房屋爭議宜分三層處理。',
       '第一，依登記與取得原因，確認特定財產之所有權歸屬。',
       '第二，依實際合意與資金提供性質，判斷贈與、借名登記、借貸、信託、不當得利、費用償還或其他契約上請求是否成立。',
       '第三，另行判斷該財產或其價值與相關債務，是否進入法定財產制消滅時之剩餘財產差額分配計算。',
-      '民法第1017條區分婚前財產與婚後財產，並就難以證明取得時點之財產推定為婚後財產。',
-      '民法第1030條之1係於法定財產制消滅時，計算各配偶符合要件之婚後淨剩餘財產，並就差額原則上平均分配。',
-      '繼承或其他無償取得之財產，以及慰撫金，依法應自該計算排除',
-      '若平均分配差額之結果，依法定情事顯失公平，法院得調整或免除其分配額。',
-      '此請求權自知有剩餘財產差額時起二年內，且自法定財產制消滅時起五年內不行使而消滅。',
-      '上述二年與五年期間僅得連結於第1030條之1之請求，不得逕套用於所有權、借貸、損害賠償、離婚後贍養費或子女扶養費。',
     ];
-
-    for (const phrase of requiredPhrases) {
-      expect(section).toContain(phrase);
-    }
-  });
-
-  it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {
-    const section = sectionBody(parsed.content, headings[6]);
-    const requiredPhrases = [
-      '民法第1056條之損害賠償，係於裁判離婚時，就有責他方所生財產上損害，以及符合法定要件（同條第2項但書：以受害人無過失者為限）之非財產上損害，分別審酌之請求。',
-      '民法第1057條之離婚後贍養費，以因裁判離婚致無過失配偶陷於生活困難為前提。',
-      '未成年子女之扶養，係父母與子女間之權利義務，與第1057條前配偶間之贍養不同。',
-      '第1030條之1剩餘財產差額分配則屬夫妻財產制之結算，不能代替損害賠償或贍養。',
-      '若另有對配偶以外第三人之侵權行為請求、特定財產返還、借貸或契約上請求，應分別特定其法律依據、當事人、損害與期間。',
-      '不得對全部權利一律套用自離婚日起算之單一五年期間；各請求之發生、知悉、事實、程序狀態與時效規則，均應分開確認。',
+    const section7Phrases = [
+      '未結婚而同居之當事人，不因共同生活之事實，即取得離婚或配偶贍養等婚姻上權利。',
       '惟若有實際共有財產、借貸、契約、借名登記、信託、不當得利或侵權行為，仍得作為與婚姻有無無關之財產或債權關係分析。',
-      '對第三人之請求，須另具侵權行為或財產法上之法律依據，並就違法行為、故意或過失、損害與因果關係等要件及證據分別檢視。',
+      '姻親或其他第三人，並非第1057條所定離婚後贍養費之義務人。僅主張第三人曾嚴重干涉或侮辱，亦不當然成立損害賠償。',
     ];
 
-    for (const phrase of requiredPhrases) {
-      expect(section).toContain(phrase);
+    for (const phrase of section6Phrases) {
+      expect(section6).toContain(phrase);
     }
+    for (const phrase of section7Phrases) {
+      expect(section7).toContain(phrase);
+    }
+    // Article 1017/1030-1 detail now lives only in the linked columns; the hub states no adjustment test.
+    expect(parsed.content).not.toContain('民法第1017條');
+    expect(raw).not.toMatch(/1030條之1[^。\n]*顯失公平/);
   });
 
-  it('locks Articles 1055 and 1055-1, the full Taiwan concept, review, and unresolved issues', () => {
+  it('keeps the full Taiwan parental-rights concept and the best-interests pointer in section 8', () => {
     const section = sectionBody(parsed.content, headings[7]);
     const requiredPhrases = [
       '台灣法上之完整概念為「未成年子女權利義務之行使或負擔」',
       '為敘述方便，或可簡稱「監護權」或「親權」，但不得將該簡稱誤認為已完整涵蓋台灣法上全部權利與義務。',
-      section8AgreementParagraph,
-      '依民法第1055條之1，法院應綜合子女之年齡、性別、人數與健康，子女之意願與人格發展需要',
-      '法院得依法聽取子女意見，並得參考主管機關或兒童福利專業人員之調查與意見。',
-      '應一併檢視：未決財產如何保全與結算；子女居所、照護、醫療與教育需要何種協議或法院決定；扶養費與會面交往如何安排；以及爭執期間是否需要暫時處分以維護安全與生活連續性。',
+      '較高所得或婚姻破綻責任，至多僅為諸多事實之一，不能單獨作為決定標準或獎懲手段。',
+      '法院依民法第1055條、第1055條之1酌定時的判斷因素',
     ];
 
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+    expect(section).not.toContain('情事變更並非唯一法定門檻');
+    expect(section).not.toContain('未盡保護教養義務');
+    expect(section).not.toContain('對未成年子女有不利情事');
   });
 
-  it('uses only the Korean-faithful Section 8 agreement paragraph and freezes its surrounding content', () => {
+  it('freezes section 9 onward as the section 8 to section 9 boundary and keeps the Family Act modification limited to judgments and court settlements', () => {
     const section8Start = parsed.content.indexOf(`## ${headings[7]}`);
     const section9Start = parsed.content.indexOf(`## ${headings[8]}`);
-    const paragraphStart = parsed.content.indexOf(
-      '依民法第1055條，父母得協議離婚後由何方行使或負擔前述權利義務',
-      section8Start,
-    );
-    const paragraphEnd = parsed.content.indexOf('\n\n', paragraphStart);
-    const actualParagraph = parsed.content.slice(paragraphStart, paragraphEnd);
-    const immutablePrefix = parsed.content.slice(0, paragraphStart);
-    const immutableSection8Tail = parsed.content.slice(
-      paragraphEnd,
-      section9Start,
-    );
     const immutableSection9Onward = parsed.content.slice(section9Start);
 
     expect(section8Start).toBeGreaterThanOrEqual(0);
     expect(section9Start).toBeGreaterThan(section8Start);
-    expect(paragraphStart).toBeGreaterThan(section8Start);
-    expect(paragraphEnd).toBeGreaterThan(paragraphStart);
-    expect(actualParagraph).toBe(section8AgreementParagraph);
-    expect(countOccurrences(parsed.content, section8AgreementParagraph)).toBe(
-      1,
-    );
-    expect(actualParagraph).not.toContain('情事變更並非唯一法定門檻');
-    expect(actualParagraph).not.toContain('未盡保護教養義務');
-    expect(actualParagraph).not.toContain('對未成年子女有不利情事');
-
-    expect(Buffer.byteLength(immutablePrefix, 'utf8')).toBe(
-      frozenSection8AgreementPrefixLength,
-    );
-    expect(
-      crypto.createHash('sha256').update(immutablePrefix).digest('hex'),
-    ).toBe(frozenSection8AgreementPrefixSha256);
-    expect(Buffer.byteLength(immutableSection8Tail, 'utf8')).toBe(
-      frozenSection8AgreementTailLength,
-    );
-    expect(
-      crypto.createHash('sha256').update(immutableSection8Tail).digest('hex'),
-    ).toBe(frozenSection8AgreementTailSha256);
     expect(Buffer.byteLength(immutableSection9Onward, 'utf8')).toBe(
       frozenSection9OnwardLength,
     );
     expect(
       crypto.createHash('sha256').update(immutableSection9Onward).digest('hex'),
     ).toBe(frozenSection9OnwardSha256);
+    expect(sectionBody(parsed.content, headings[8])).toContain(
+      '子女扶養費之確定裁判或成立之和解，如其內容尚未實現，因情事變更，依原裁判或和解內容顯失公平者，法院得依聲請人或相對人聲請變更（家事事件法第102條第1項、第107條第2項）。',
+    );
   });
 
   it('locks Article 1116-2 support and Family Act Article 194 contact and enforcement qualifications', () => {
     const section = sectionBody(parsed.content, headings[8]);
     const requiredPhrases = [
       '依民法第1116條之2，父母對未成年子女之扶養義務，於離婚後仍繼續存在。',
-      '此與民法第1057條前配偶間之離婚後贍養費，屬不同權利。',
-      '應一併審查子女之現在需要、雙方父母之現在資力與生活情況、既有文書之內容與形式、給付經過，以及子女之最佳利益。',
+      '會面交往受阻時，應依既有協議或裁判之內容與執行可能性、受阻經過、子女之意願、安全與生活作息，檢討得否向法院聲請酌定、改定、執行或適當之暫時處分。',
       '依家事事件法第194條執行時，方法仍應依子女最佳利益選擇，個案上可能涉及直接強制或間接強制。',
       '會面交往受阻一事，並不保證立即交付子女、使用強制力、改定權利義務之行使負擔，或處罰他方。',
-      '宜整理現行協議或裁判、聯繫紀錄、實際嘗試會面之時間與地點、就學與醫療行程，以及影響安全與穩定之事實。',
       '既有執行名義之文義、給付期日、未給付金額與給付明細',
+      '扶養費給付與會面交往履行，不得互為報復式交換條件，而應各自依義務與程序處理，以維護子女生活。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -622,18 +609,13 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     }
   });
 
-  it('locks the seven relocation questions, non-treaty shortcut, and no unauthorized removal', () => {
+  it('locks the relocation authority check, non-treaty shortcut, and no unauthorized removal', () => {
     const section = sectionBody(parsed.content, headings[9]);
     const requiredPhrases = [
-      '仍應一併審查實際居住、教育、醫療與移動支出、子女需要、雙方父母之所得、財產與照護負擔，以及既有協議或裁判。',
       '何人有權決定子女之居所與旅行；他方是否同意，或是否已有可適用之法院命令。',
-      '檢視遷居是否符合子女最佳利益，對教育、醫療與生活連續性，以及與未同行父母持續會面交往之影響。',
-      '護照之核發與使用，以及台灣與目的地之入出境、停留、移民與身分登記要件，與親權或權利義務行使之民事決定應予分開。',
-      '既有子女相關裁判或協議，於台灣與目的地是否各自可被承認與執行，亦應確認。',
-      '若具體存在出走、拒絕送回或安全風險，則應就出境前或緊急情況，依相關管轄分別檢討得否聲請保全或暫時處分。',
       '不得預設1980年海牙兒童擄拐公約當然適用於台灣。',
-      '跨境移動、留置或返還，應依子女之經常居所與目前所在地、相關當事人與裁判狀態',
       '亦不宜在違反既有協議或命令之情形下帶走或不送回子女',
+      '移動前應確認合法同意、裁判及緊急保護途徑。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -641,35 +623,20 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     }
   });
 
-  it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {
+  it('uses the exact ordered eight-category evidence checklist and privacy prohibition', () => {
     const section = sectionBody(parsed.content, headings[10]);
-    const checklistStarts = [
-      '1. 婚姻證明與台灣戶籍資料，以及各當事人國籍、住所、經常居所與現在住址。',
-      '2. 書面離婚協議與證人確認離婚真意之經過、法院文件、送達紀錄、調解筆錄、和解筆錄、判決及確定證明等',
-      '3. 外國婚姻或離婚紀錄、外國裁判或證明書、台灣駐外館處或其他有權機關之認證、中文譯本及其認證或公證情形，以及在台灣之承認、效力與登記狀態。',
-      '4. 適用之夫妻財產契約與財產制，以及資產、債務、登記名義、取得原因與時點、資金移轉、處分、貸款、清償、稅務與評價資料',
-      '5. 以中立年表整理所主張離婚事由之事件與時間，並將合法取得之通訊、醫療或警察資料及其他證據以原本狀態保存。',
-      '6. 各子女之年齡、健康、教育、居住、過去與現在之照護經過、與其發展程度相稱之意願、與各父母之關係，以及安全與穩定相關資料',
-      '7. 現行子女相關協議或裁判、扶養費給付與實際費用、會面交往經過、旅行文件、移動行程，以及具體跨境遷居計畫。',
-      '8. 將申請、登記、上訴、抗告、請求權行使與執行之全部日期，各自連結至正確起算事由。',
-      '9. 配偶與子女之身分識別資料、地址、醫療、教育與金融資料，僅於必要範圍提供必要之人或機關',
-    ];
 
-    let previousIndex = -1;
-    for (const item of checklistStarts) {
-      const index = section.indexOf(item);
-      expect(index).toBeGreaterThan(previousIndex);
-      previousIndex = index;
+    expect(
+      section.split('\n').filter((line) => /^\d+\. /.test(line)),
+    ).toEqual(evidenceItems);
+    for (const item of evidenceItems) {
+      expect(countOccurrences(section, item), item).toBe(1);
     }
-    expect(section).toContain(
-      '不得以違法監視、侵入帳號或裝置、追蹤、違反法律之錄音，或公開子女隱私，作為蒐證方法。',
-    );
-    expect(section).toContain(
-      '對他方之報復、隱匿財產或虛偽移轉，以及違反協議或裁判帶走子女，均可能對事件與子女造成額外風險。',
-    );
+    expect(section.trim().endsWith(evidenceProhibitionSentence)).toBe(true);
+    expect(countOccurrences(section, evidenceProhibitionSentence)).toBe(1);
   });
 
-  it('uses exactly the ten official and three ZH-Hant internal body links once and in order', () => {
+  it('uses exactly the fourteen inline zh-hant column links, ten official links and three ZH-Hant internal links once and in order', () => {
     const markdownLinks = Array.from(
       parsed.content.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g),
       (match) => match[0],
@@ -679,21 +646,56 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       (match) => match[1],
     );
 
-    expect(markdownLinks).toEqual([...officialLinks, ...internalLinks]);
+    expect(markdownLinks).toEqual([
+      ...inlineColumnLinks,
+      ...officialLinks,
+      ...internalLinks,
+    ]);
     expect(externalTargets).toEqual(officialUrls);
     for (const url of officialUrls) {
       expect(countOccurrences(parsed.content, url)).toBe(1);
     }
-    for (const link of [...officialLinks, ...internalLinks]) {
+    for (const link of [
+      ...inlineColumnLinks,
+      ...officialLinks,
+      ...internalLinks,
+    ]) {
       expect(countOccurrences(raw, link)).toBe(1);
     }
     expect(parsed.content).not.toMatch(/\]\(\/(?:ko|en|ja)(?:\/|\))/);
   });
 
+  it('places each dedicated-column link in its assigned section and every link resolves to a published zh-hant column', () => {
+    for (const { heading, link } of hubColumnLinks) {
+      expect(sectionBody(parsed.content, heading), link).toContain(link);
+      const linkedSlug =
+        link.match(/\(\/zh-hant\/columns\/([^)]+)\)$/)?.[1] ?? '';
+      expect(getColumnPost(linkedSlug, 'zh-hant'), link).toBeDefined();
+    }
+    expect(
+      hubColumnLinks.map(({ link }) => link.match(/\(\/zh-hant\/columns\/([^)]+)\)$/)?.[1]),
+    ).toEqual([
+      'divorce-agreement-terms-before-signing',
+      'judicial-divorce-grounds-civil-code-1052',
+      'remaining-property-distribution-calculation',
+      'remaining-property-distribution-overseas-assets',
+      'taiwan-marital-property-regime-international-couples',
+      'alimony-after-divorce-civil-code-1057',
+      'spouse-affair-evidence-damages-taiwan',
+      'child-custody-best-interests-social-worker-report',
+      'child-support-calculation-taiwan-court',
+      'change-custody-visitation-refusal',
+      'provisional-order-during-divorce-custody-support',
+      'taiwan-child-support-enforcement-cross-border',
+      'taiwanese-spouse-divorce-cross-border-parenting',
+      'child-taken-abroad-taiwan-parent-remedies',
+    ]);
+  });
+
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /逐一確認。\n\n曾雋崴律師（Wei Tseng）$/,
+      /並非針對個別案件的法律意見。\n\n曾雋崴律師（Wei Tseng）$/,
     );
     expect(countOccurrences(raw, disclaimer)).toBe(1);
     expect(countOccurrences(raw, staleDisclaimer)).toBe(0);
@@ -704,14 +706,15 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     const publicText = extractPublicText(parsed.content);
     const visibleHanCount =
       publicText.match(/\p{Script=Han}/gu)?.length ?? 0;
-    const calculatedMinutes = Math.ceil(visibleHanCount / 400);
+    // Lane policy 2026-10-06: zh read_time is recalculated at about 500 characters per minute.
+    const calculatedMinutes = Math.round(visibleHanCount / 500);
     const sourceSha256 = crypto
       .createHash('sha256')
       .update(raw)
       .digest('hex');
 
     expect(visibleHanCount).toBe(frozenVisibleHanCount);
-    expect(calculatedMinutes).toBe(20);
+    expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(frozenSourceSha256);
@@ -780,7 +783,6 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     expect(raw).not.toContain('婚前資金當然決定所有權');
     expect(raw).not.toContain('登記名義當然決定所有權');
     expect(raw).not.toContain('收到判決書或調解筆錄之日起30日');
-    expect(raw).not.toContain('收到判決書或調解筆錄之日起30日');
     expect(raw).not.toContain('30日只是線上申辦期間');
     expect(raw).not.toContain('逾期使離婚失效');
     expect(raw).not.toContain('逾期使已生效的離婚失效');
@@ -822,12 +824,12 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
   });
 
   it('contains no invisible characters, cross-locale routes, or visible script leakage', () => {
-    expect(raw).not.toContain('\uFEFF');
-    expect(raw).not.toContain('\u00A0');
-    expect(raw).not.toContain('\u200B');
+    expect(raw).not.toContain('﻿');
+    expect(raw).not.toContain(' ');
+    expect(raw).not.toContain('​');
     expect(raw).not.toMatch(/\]\(\/(?:ko|en|ja)(?:\/|\))/);
-    expect(parsed.content).not.toMatch(/[\u3040-\u30ff]/);
-    expect(parsed.content).not.toMatch(/[\uac00-\ud7af]/);
+    expect(parsed.content).not.toMatch(/[぀-ヿ]/);
+    expect(parsed.content).not.toMatch(/[가-힯]/);
     expect(parsed.content).not.toMatch(
       /(?:reply promptly|お気軽にコメント|Taiwan Divorce Q&A|대만 이혼)/,
     );

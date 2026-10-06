@@ -463,6 +463,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
     '259-taken-taiwan-police-station-first-24-hours-not-release.md', // gap1006-G2
     '260-foreigners-buying-property-in-taiwan.md', // gap1006-G3
+    '275-taiwan-divorce-property-damages-support.md', // audit-split-1006
   ],
   ja: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -476,6 +477,9 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
     '259-taken-taiwan-police-station-first-24-hours-not-release.md', // gap1006-G2
     '260-foreigners-buying-property-in-taiwan.md', // gap1006-G3
+    '307-taiwan-divorce-children-custody-support-visitation.md', // audit-split-1006
+    '275-taiwan-divorce-property-damages-support.md', // audit-split-1006
+    '310-japanese-engineer-hired-by-taiwan-subsidiary-work-permit.md', // audit-split-1006
   ],
   'zh-hant': [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -489,6 +493,8 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
     '259-taken-taiwan-police-station-first-24-hours-not-release.md', // gap1006-G2
     '260-foreigners-buying-property-in-taiwan.md', // gap1006-G3
+    '308-taiwan-engineer-leaving-job-trade-secret-risk.md', // audit-split-1006
+    '309-taiwan-semiconductor-core-key-technology-list-trade-secrets.md', // audit-split-1006
   ],
 } as const;
 

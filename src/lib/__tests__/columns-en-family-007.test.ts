@@ -18,6 +18,18 @@ const canonicalSlug = 'taiwan-divorce-lawsuit-qna';
 const post = getColumnPost(canonicalSlug, 'en');
 const aliasPost = getColumnPost('divorce-qna', 'en');
 
+// Column 275 now carries the property, damages and support sections that 007 used to hold.
+const propertySlug = 'taiwan-divorce-property-damages-support';
+const propertyColumnPath = path.join(
+  process.cwd(),
+  'src/content/columns-en/275-taiwan-divorce-property-damages-support.md',
+);
+const propertyRaw = fs.readFileSync(propertyColumnPath, 'utf8');
+const propertyParsed = matter(propertyRaw);
+const propertyPost = getColumnPost(propertySlug, 'en');
+const hubHref = `/en/columns/${canonicalSlug}`;
+const propertyHref = `/en/columns/${propertySlug}`;
+
 const title = 'Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children';
 const sourceUrl =
   'https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna';
@@ -41,12 +53,7 @@ const responsibleSpouseJudgmentSentence =
   'The Court held the proviso unconstitutional to the extent that it completely deprives the solely responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case.';
 const faq3Answer = responsibleSpouseParagraph;
 const faq4Answer =
-  'No. Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. The parties must separately examine their actual agreement, the cause and timing of acquisition, fund flows, debts, whether property was acquired gratuitously, and the supporting evidence. Neither paying part of the cost with premarital funds nor registering the house in one party’s name determines every issue.';
-const faq5Answer =
-  'No. A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits. The Article 1030-1 claim is subject to a two-year period from knowledge of the residual-property difference and a five-year period from termination of the statutory matrimonial-property regime, but those periods must not be carried over to the other claims.';
-const faq6Answer =
   'Under Civil Code Articles 1055 and 1055-1, a Taiwan court decides the exercise and assumption of rights and duties regarding a minor child, contact or visitation, and other child-related matters according to the child’s best interests. The court considers the statutory factors and the specific evidence, including the child’s age, health, views, and developmental needs; each parent’s living circumstances, caregiving capacity, and attitude; the child’s emotional relationship with each parent; and whether either parent has interfered with the child’s relationship with the other. Neither a parent’s income nor responsibility for the breakdown of the marriage determines the outcome by itself.';
-
 const faq = [
   {
     q: 'Does signing a divorce agreement make a mutual-consent divorce in Taiwan immediately effective?',
@@ -61,16 +68,23 @@ const faq = [
     a: faq3Answer,
   },
   {
-    q: 'Does paying for a house or holding title decide ownership and residual-property distribution?',
+    q: 'How does a Taiwan court decide issues concerning a minor child?',
     a: faq4Answer,
+  },
+];
+// FAQ 4 and 5 of the former six moved to column 275 together with their sections.
+const propertyFaqHouseAnswer =
+  'No. Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. The parties must separately examine their actual agreement, the cause and timing of acquisition, fund flows, debts, whether property was acquired gratuitously, and the supporting evidence. Neither paying part of the cost with premarital funds nor registering the house in one party’s name determines every issue.';
+const propertyFaqClaimsAnswer =
+  'No. A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits. The Article 1030-1 claim is subject to a two-year period from knowledge of the residual-property difference and a five-year period from termination of the statutory matrimonial-property regime, but those periods must not be carried over to the other claims.';
+const propertyFaq = [
+  {
+    q: 'Does paying for a house or holding title decide ownership and residual-property distribution?',
+    a: propertyFaqHouseAnswer,
   },
   {
     q: 'Are residual-property distribution, divorce damages, and post-divorce support the same claim or subject to one five-year period?',
-    a: faq5Answer,
-  },
-  {
-    q: 'How does a Taiwan court decide issues concerning a minor child?',
-    a: faq6Answer,
+    a: propertyFaqClaimsAnswer,
   },
 ];
 
@@ -80,14 +94,19 @@ const headings = [
   '3. Court Mediation, Litigation, Appearance, and Review',
   '4. Judicial-Divorce Grounds and the Responsible-Spouse Proviso',
   '5. Foreign Marriage, Foreign Divorce, and Taiwan Records',
-  '6. House Title, Premarital Funds, and Residual-Property Distribution',
-  '7. Damages, Post-Divorce Support, Unmarried Partners, and Third Parties',
-  '8. Minor Children, Parental Rights, and the Best-Interests Standard',
-  '9. Child Support, Contact, Enforcement, and Interim Protection',
-  '10. Cross-Border Relocation with a Child',
-  '11. Evidence and Practical Preparation',
-  '12. Official Sources',
-  '13. Related Guidance',
+  '6. House Title, Residual-Property Distribution, Damages, and Post-Divorce Support',
+  '7. Minor Children, Parental Rights, and the Best-Interests Standard',
+  '8. Child Support, Contact, Enforcement, and Interim Protection',
+  '9. Cross-Border Relocation with a Child',
+  '10. Evidence and Practical Preparation',
+  '11. Official Sources',
+  '12. Related Guidance',
+];
+const propertyHeadings = [
+  '1. House Title, Premarital Funds, and Residual-Property Distribution',
+  '2. Damages, Post-Divorce Support, Unmarried Partners, and Third Parties',
+  '3. Official Sources',
+  '4. Related Guidance',
 ];
 
 const officialLinks = [
@@ -110,9 +129,24 @@ const internalLinks = [
   '[Taiwan Litigation Lawyer Guide](/en/taiwan-litigation-lawyer)',
   '[Contact Us](/en/contact)',
 ];
+// Inline column links in the hub, in order of appearance; the custody link is reused three times.
+const inlineColumnLinks = [
+  '[divorcing a Taiwanese spouse by agreement](/en/columns/taiwanese-spouse-divorce-agreement-registration)',
+  '[getting a US divorce decree onto Taiwan’s household register](/en/columns/us-divorce-decree-recognition-taiwan)',
+  '[preparing for a divorce consultation while living outside Taiwan](/en/columns/taiwanese-spouse-divorce-from-abroad)',
+  '[house title, residual-property distribution, damages, and post-divorce support in a Taiwan divorce](/en/columns/taiwan-divorce-property-damages-support)',
+  '[when the other parent keeps your child in Taiwan](/en/columns/us-parent-child-taken-to-taiwan-custody)',
+  '[child support across borders](/en/columns/taiwan-child-support-enforcement-cross-border)',
+  '[when the other parent keeps your child in Taiwan](/en/columns/us-parent-child-taken-to-taiwan-custody)',
+  '[planning your child’s life across two countries](/en/columns/taiwanese-spouse-divorce-cross-border-parenting)',
+  '[what a Taiwan family court can do](/en/columns/us-parent-child-taken-to-taiwan-custody)',
+];
+const propertyHubLink = inlineColumnLinks[3];
 
 const disclaimer =
-  'This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and minor children; it is not legal advice for any specific matter. Procedures and outcomes may vary depending on jurisdiction, applicable law, recognition of foreign judgments, marital and household-registration status, the matrimonial-property regime, any existing agreement or court decision concerning minor children, the facts and evidence, and the latest official rules. Before taking action, separately confirm every deadline for registration, challenge or appeal, filing a claim, or enforcement by reference to the precise triggering event for the particular right or procedure.';
+  'This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and minor children; it is not legal advice for any specific matter.';
+const propertyDisclaimer =
+  'This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and financial claims on divorce; it is not legal advice for any specific matter.';
 const staleDisclaimer =
   'This article is general legal information only and is not legal advice. Jurisdiction, applicable law, recognition of foreign divorces or judgments, the specific facts and evidence, existing agreements or court orders, and current official rules may all change the analysis and result. Before taking action, calculate any application, review, limitation, or enforcement period from the correct triggering event for the specific right or procedure involved.';
 const author = 'Wei Tseng (曾雋崴), Taiwan Attorney';
@@ -122,54 +156,42 @@ ${disclaimer}
 
 ${author}`;
 
-const article1052Paragraph1Heading =
-  '### Article 1052 paragraph 1: ten grounds';
 const staleArticle1052TranslationInstruction =
   'Civil Code Article 1052 paragraph 1 lists ten specific grounds for judicial divorce. Translate them accurately; do not expand or shrink a statutory term into a broader colloquial ground.';
 const article1052Paragraph1ReaderSentence =
   'Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce when any of the following applies to the other spouse:';
+const sexualIntercourseConsequencesParagraph =
+  'Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support.';
+const missingSpouseSubsectionHeading =
+  '### Missing or absent spouses: no universal shortcut';
 const missingSpouseTailParagraph =
   'A police missing-person report may be evidence of the spouse’s whereabouts and the passage of time, but it is not a mandatory prerequisite for every divorce claim. Nor is there a universal requirement to bring an action demanding cohabitation before alleging malicious desertion or another serious cause. Several months away from home, without more, does not establish any particular ground. The court must examine the reason for the departure, whether there was a justified reason to live separately, contact and support between the spouses, continuity, and the other specific facts.';
-const sexualIntercourseConsequencesParagraph =
-  'Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support. Each issue is determined under its own requirements and applicable standards, including the child’s best interests where relevant.';
-const foreignEffectSubsectionHeading =
-  '### Recognition, effect, and registration';
-const foreignRecognitionParagraph =
-  'A statement that a divorce was completed under foreign law—or a foreign divorce certificate alone—does not complete every required Taiwan procedure. Conversely, not every foreign divorce requires the same recognition proceeding or the same documents. Taiwan’s required recognition or legal-effect determination and household registration may vary with whether the instrument is a court judgment or administrative certificate, its country of issue and form, and the parties’ current household-registration status.';
-const article1017SubsectionHeading =
-  '### Article 1017 classifications and presumptions';
-const article10301SubsectionHeading =
-  '### Article 1030-1 residual-property distribution';
-const article1017Paragraph =
-  'Civil Code Article 1017 distinguishes premarital property from property acquired during marriage and provides that property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage. This is a starting point for classification and proof in calculating the matrimonial property regime; it is not a shortcut for determining ownership irrespective of registration or defeating the other spouse’s separate claims. Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.';
-const article10301ExclusionsParagraph =
-  'Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded from the statutory calculation. Relevant debts and the statutory rules governing dispositions made before termination of the matrimonial property regime must also be considered. Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage, and it is not the same concept as common property under a different marital regime.';
-const article10301AdjustmentParagraph =
-  'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution after considering the statutory circumstances. Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference. However, specific facts falling within the statutory adjustment factors—such as the concealment or disposition of property, contributions through household labor and childcare, and the overall circumstances of the spouses’ shared life and acquisition of property—may be separately pleaded and proved. Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.\n\nThe claim is extinguished if it is not exercised within two years from the date on which the claimant learned that there was a residual-property difference and, in any event, within five years from termination of the statutory matrimonial-property regime. These two periods apply only to the Article 1030-1 claim; they must not be used as the periods for ownership, loan, damages, post-divorce spousal support, or child-support claims. The actual triggering date and the date on which the statutory regime terminated must be determined from the evidence in each case.';
-const article1056SubsectionHeading =
-  '### Article 1056, Article 1057, and child support';
-const article1056Paragraph =
-  'Article 1056 provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
-const completeParentalRightsSubsectionHeading =
-  '### Complete parental rights and duties, not “custody” as an umbrella';
+const foreignOverviewParagraph =
+  'A foreign marriage or foreign divorce does not collapse into one universal Taiwan route. Identify, as separate questions, whether the marriage or divorce was completed abroad, whether Taiwan recognition or legal effect is sought, what Taiwan household registration is required, and what additional procedure remains necessary in another jurisdiction. Taiwan’s required recognition or legal-effect determination and household registration may vary with whether the instrument is a court judgment or administrative certificate, its country of issue and form, and the parties’ current household-registration status.';
+const hubPropertySummaryParagraph =
+  'Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits.';
+
 const childScopeParagraph =
   'Under Taiwan law, the precise concept is the exercise and assumption of rights and duties regarding a minor child. It may include the child’s residence, day-to-day care, educational and medical decisions, management of the child’s property, and legal representation. Terms such as “parental rights” or “custody” may be used as shorthand for convenience, but no single term fully translates the entire set of rights and duties under Taiwan law.';
 const bestInterestsSubsectionHeading =
   '### Best interests and statutory factors';
+const bestInterestsFactorsParagraph =
+  'Under Civil Code Article 1055-1, the court considers all circumstances in light of the child’s best interests, with particular attention to the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child, or between the child and others who live with the child; any circumstances in which one parent has interfered with the relationship between the other parent and the child; and the traditional customs, culture, and values of each ethnic group. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent. A custody case over a child kept in Taiwan, including how the court weighs these factors, is covered in [when the other parent keeps your child in Taiwan](/en/columns/us-parent-child-taken-to-taiwan-custody).';
 const unresolvedIssuesSubsectionHeading =
   '### Divorce while other issues remain open';
 const unresolvedIssuesParagraph =
   'If the requirements of the chosen route to divorce are satisfied, the marriage itself may be dissolved first even though some property or child-related issues remain unresolved. This should not, however, be treated as a shortcut that can be recommended in every case. The preservation and settlement of unresolved property; the child’s residence, care, medical treatment, and education; the agreements or court orders needed for child support and contact; and whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending must all be considered together.';
-const childSupportFactorsParagraph =
-  'Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce. Child support is a parent–child obligation. It is distinct from Article 1057 post-divorce support for a qualifying former spouse. Do not treat the two claims as interchangeable, and do not use the Article 1030-1 residual-property limitation period as a universal deadline for child support. The specific allocation of support should be determined from evidence of the child’s living expenses, education costs, medical expenses, and any special needs, together with each parent’s income, assets, ability to provide support, and actual share of caregiving.';
-const childSupportEnforcementParagraph =
-  'For child-support enforcement, the wording of the existing enforceable instrument, the payment due dates, the unpaid amount, and the payment history are important. For contact or visitation enforcement, it is important whether the method and conditions of contact are sufficiently specific. Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation. To protect the child’s day-to-day welfare, each obligation and procedure should be handled independently.';
-const contactEnforcementFactorsParagraph =
-  'There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked. The sequence and method of enforcement should be determined in light of the child’s age and views, current care and protection arrangements, the emotional impact of enforcement, and the child’s safety. Interim protection may be necessary where flight risk, retention, or safety is genuinely in issue, but the form of that protection is a court decision based on the instrument and the evidence.';
-const bestInterestsFactorsParagraph =
-  'Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.';
+const childSupportParagraph =
+  'Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce. Child support is a parent–child obligation. It is distinct from Article 1057 post-divorce support for a qualifying former spouse. The specific allocation of support should be determined from evidence of the child’s living expenses, education costs, medical expenses, and any special needs, together with each parent’s income, assets, ability to provide support, and actual share of caregiving. The part of a final child support ruling, or of a settlement reached in court, that has not yet been carried out may be changed on application to the court if, because circumstances have changed, leaving the original ruling or settlement as it stands has become clearly unfair (Family Act Article 102, paragraph 1, and Article 107, paragraph 2). Enforcing child support, including against a parent abroad, is covered in [child support across borders](/en/columns/taiwan-child-support-enforcement-cross-border).';
+const familyActModificationSentence =
+  'The part of a final child support ruling, or of a settlement reached in court, that has not yet been carried out may be changed on application to the court if, because circumstances have changed, leaving the original ruling or settlement as it stands has become clearly unfair (Family Act Article 102, paragraph 1, and Article 107, paragraph 2).';
+const contactObstructedParagraph =
+  'If contact or visitation is obstructed, the available response depends on the existing agreement or court order and on the facts. A party may seek a court determination of contact, a change of the arrangement, enforcement of an existing instrument, or an appropriate interim measure. Family Act Article 194 requires enforcement methods to be selected under the child’s best interests. Those methods may involve direct or indirect compulsion as the law and the facts allow.';
+const contactEnforcementParagraph =
+  'There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked. Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation. To protect the child’s day-to-day welfare, each obligation and procedure should be handled independently. Provisional orders in a custody case, including a ban on taking the child out of Taiwan, are covered in [when the other parent keeps your child in Taiwan](/en/columns/us-parent-child-taken-to-taiwan-custody).';
+
 const filingDocumentsParagraph =
-  'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
+  'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. Release clauses and filing through a representative are covered in [divorcing a Taiwanese spouse by agreement](/en/columns/taiwanese-spouse-divorce-agreement-registration).';
 const filingDocumentsPrefixMarker =
   '3. Household registration. Registration with the household-registration authority is constitutive for this path. Without registration, the private writing does not complete a Taiwan mutual-consent divorce.';
 const courtResultsSubsectionHeading =
@@ -177,35 +199,70 @@ const courtResultsSubsectionHeading =
 const courtResultsFirstParagraph =
   'When a Taiwan divorce judgment becomes final or court mediation or settlement ends the marriage, either party may, in principle, apply for divorce registration with the household-registration authority. Registration of the court result is governed by the Household Registration Act rather than Article 1050’s constitutive sequence for mutual-consent divorce.';
 const courtResultsOnlineParagraph =
-  'Online filing is available only within the statutory application period. The thirty-day period is the general deadline for registering the court result, not a deadline exclusive to online filing.';
-const mediationSubsectionHeading =
-  '### Mediation and litigation as related but distinct stages';
+  'Online filing is available only within the statutory application period.';
 const mediationIntroParagraph =
   'Family matters governed by the Family Act ordinarily proceed through court mediation before adjudication. Even a matter filed directly for adjudication may be deemed an application for mediation under the Act. Because there are exceptions involving the method of service or the nature of the matter, as well as rules governing transitions between procedures, however, not every case can be described as following a single immutable sequence. Mediation may address not only the parties’ intention to divorce but also related issues involving property, children, and the manner of payment, but the court may not confirm, without modification, an agreement that is detrimental to a minor child.';
-const courtMediationOutcomeParagraphMarker =
-  'Court mediation or settlement,';
 const courtMediationOutcomeParagraph =
   'Court mediation or settlement, once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. Litigation may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.';
-const expectedDurationParagraph =
-  'The time required to resolve a case varies depending on service of process, the number of mediation sessions, the facts and evidence in dispute, any appraisals or investigations, child-related issues, international service, and how many levels of court proceedings are involved, so no fixed completion date can be given.';
+const personalAppearanceParagraphs = [
+  'Family Act Article 13 applies when the court orders a party or legal representative to appear in person. Unjustified nonappearance then triggers Civil Procedure Code Article 303 mutatis mutandis: a first fine of up to NTD 30,000, possible repeated sanctions after further lawful notice, and no arrest for compulsory appearance under this rule.',
+  'The order to appear personally is not the same as a universal rule that both spouses must always mediate face-to-face. Remote, separate, representative, or safety arrangements are available only if the court so decides under law and the circumstances.',
+];
+
+const evidenceItems = [
+  '1. Identity, status, and addresses. Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address.',
+  '2. Divorce instruments and court papers. Collect and organize by procedure any written mutual-consent divorce agreement; documentation of how the witnesses confirmed the spouses’ genuine intent to divorce; court papers; records of service; mediation and settlement records; judgments; and documents proving finality.',
+  '3. Foreign marriage or divorce records. For foreign marriage and divorce records and foreign judgments or certificates, check authentication by a Taiwan overseas mission or other competent authority; the Chinese translation and whether it has been certified or notarized; and their recognition, legal effect, and registration status in Taiwan.',
+  '4. Alleged divorce-ground chronology. Create a neutral timeline of the events and their timing underlying the alleged grounds for divorce. Preserve lawfully obtained communications, medical and police records, and other evidence in their original state.',
+  '5. Each child’s situation. Compile information on each child’s age, health, education, residence, caregiving history and current care arrangements, views appropriate to the child’s stage of development, relationship with each parent, and safety and stability, all from the perspective of the child’s best interests.',
+  '6. Support, contact, and relocation plans. Compile together any current child-related agreements and court proceedings, child-support payment records and actual expenses, the history of contact or visitation, travel documents and itineraries, and any specific plan for international relocation.',
+  '7. Deadlines calculated from correct triggering events. Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event. The dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates are different dates.',
+  '8. Privacy plan and limited disclosure. Share identification numbers, addresses, and medical, educational, or financial information concerning a spouse or child only with people and institutions that need the information and only to the extent necessary. Establish a privacy plan covering file-access permissions, methods of transmission, and disposal of copies.',
+];
 const evidenceProhibitionsParagraph =
-  'Do not use unlawful surveillance, unauthorized access to accounts, intrusion into a mobile phone or computer, location tracking, recordings made in violation of law, or disclosure of a child’s private information as methods of gathering evidence. Retaliation against the other party, concealment or sham transfer of assets, and moving a child contrary to an agreement or court order may also create additional risks for the case and the child. If it is unclear whether material may lawfully be obtained or how it should be preserved, check the applicable law and court procedures before collecting it.';
+  'Do not use unlawful surveillance, unauthorized access to accounts, intrusion into a mobile phone or computer, location tracking, recordings made in violation of law, or disclosure of a child’s private information as methods of gathering evidence.';
+// Wording rejected in earlier rounds that must not return to the evidence section.
+const staleEvidenceWording = [
+  'Prepare a non-adversarial file early. The goal is accuracy, preservation of originals, and privacy-safe handling—not advantage-seeking through unlawful methods. Organize materials in at least the following nine groups.',
+  'and current addresses for each spouse and child',
+  'These materials frame jurisdiction, service, and registration questions.',
+  'Keep originals or certified copies and note how and when each instrument was served or became final.',
+  'Documents from mainland China, Hong Kong, and Macao follow distinct verification tracks',
+  'materials showing gifts, nominee arrangements, reimbursements, or other theories',
+  'Distinguish ownership claims from residual-property calculation inputs.',
+  'preservation of original media and metadata',
+  'Do not create evidence by unlawful means.',
+  'views where appropriate',
+  'Handle identifiers and school or medical details with privacy in mind.',
+  'expense records',
+  'any proposed relocation plan with supporting logistics',
+  'travel or movement schedules',
+  'knowledge of a residual-property difference',
+  'not from a convenient or informal date.',
+  'mediation or settlement is concluded',
+  'the relevant person learns of the right',
+  'preserve fragile evidence promptly',
+  'notarial or other formal preservation',
+  'Do not engage in unlawful surveillance',
+  'Those acts may create separate liability and undermine legitimate claims.',
+];
+
+// Re-frozen after the 2026-10-06 hub trim (sections 6 and 8 to 10 reduced, property part moved to column 275).
 const frozenBeforeFilingDocumentsSha256 =
-  '173982a33a41ebfdb737df2a1e2d79fa2a321e433e31a8bd3670702f2597df5c';
+  '170a56aefc755bbacb5e306408c09c6b9f388542656128361d88a31e366e5f68';
 const frozenCourtResultsSubsectionSha256 =
-  'cd3cc2f913e658d8c559d191c46d687736f93b8cd551ea86e77dce05f549cb92';
+  '8d510f3ab4c2b908ae222a5af79038fb82dcce258d9af9438a1147dc69318a97';
 const frozenSection3OnwardSha256 =
-  'e218c0617ef812936c55a9be294145f79614dd37439796b1c7c7f80ca26b08ed';
+  'aa0a3e827386fcf35ae41d4051ec3e1c673252547f41cd5f092ebe604234bf81';
 const frozenSection4OutsideArticle1052IntroSha256 =
-  '64f5911cf568e7d80b0a57f39defe4533e7d03e3bd08f3a56eda80907a0ad9cd';
+  '639f4d5147e1fd6e61075d7678a9043f3337d5dbbb14df859eb9226c1322ebd0';
 const frozenSection5OnwardSha256 =
-  '637cc171093641ac501bdca922932e06b49d143f58a3d432876896fa6899c117';
+  '0212aa987a46d2b81f19649ddd92dfa354d5ddc9d310d16c815778b7aa8f4bad';
 const frozenSection1OnwardSha256 =
-  '9bd992465119f6d686e189c07aef64fa5eedc0819abb855f32431da62dba85ec';
-const frozenVisibleWordCount = 5_827;
-// WO-X2 (EN-20): re-frozen after adding the short frontmatter seoTitle.
+  '27cfb4e516fd60cfcd59de469e7fb85868b69433ab189cb879d253af4f220062';
+const frozenVisibleWordCount = 3_323;
 const frozenSourceSha256 =
-  'd86bba225f8067c73c0dc3cc9c87558fde2fc435bb717bcbc0af16261ef3288d';
+  'a860b12a22142998c8a341874e6956f962aa67e652f9f39d8e546db0f144e0a5';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -217,6 +274,10 @@ function sha256(value: string) {
 
 function firstParagraphAfter(content: string, heading: string) {
   return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
+}
+
+function paragraphsAfter(content: string, heading: string) {
+  return content.split(`${heading}\n\n`)[1]?.split('\n\n') ?? [];
 }
 
 function sectionBody(content: string, heading: string) {
@@ -252,22 +313,22 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       title,
       seoTitle: 'Taiwan Divorce Q&A: Property and Children',
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
-      read_time: '30 min read',
+      read_time: '14 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       summary:
         'A Taiwan divorce may use mutual consent, mediation, or litigation. Household registration, property division, and parental rights remain separate issues.',
       faq,
     });
-    expect(parsed.data.faq).toHaveLength(6);
+    expect(parsed.data.faq).toHaveLength(4);
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-09-10',
+      date: '2026-10-06',
       dateDisplay: 'September 13, 2025',
-      readTime: '30 min read',
+      readTime: '14 min read',
       category: 'legal',
       categoryLabel: 'Legal Information',
       featuredImage:
@@ -325,31 +386,40 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(sha256(section1Onward)).toBe(frozenSection1OnwardSha256);
   });
 
-  it('uses exactly the thirteen contracted H2 sections in order', () => {
+  it('uses exactly the twelve contracted H2 sections in order', () => {
     expect(
       Array.from(parsed.content.matchAll(/^## (.+)$/gm), (match) => match[1]),
     ).toEqual(headings);
   });
 
-  it('repeats each exact FAQ answer twice and starts its assigned section with it', () => {
-    const assignments = [
-      [`## ${headings[1]}`, faq1Answer],
-      [`## ${headings[2]}`, faq2Answer],
-      [`## ${headings[3]}`, faq3Answer],
-      [`## ${headings[5]}`, faq4Answer],
-      [`## ${headings[6]}`, faq5Answer],
-      [`## ${headings[7]}`, faq6Answer],
-    ];
+  it('keeps each exact FAQ answer once in the frontmatter and the loader, and moves FAQ 4 and 5 to column 275', () => {
+    for (const { q, a } of faq) {
+      expect(countOccurrences(raw, a), q).toBe(1);
+      expect(post?.faq?.map((item) => item.a), q).toContain(a);
+      expect(post?.content, q).not.toContain(a);
+    }
+    expect(post?.faq).toHaveLength(4);
 
-    for (const [heading, answer] of assignments) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
-      expect(countOccurrences(raw, answer)).toBe(2);
+    for (const { q, a } of propertyFaq) {
+      expect(raw, q).not.toContain(q);
+      expect(raw, q).not.toContain(a);
+      expect(countOccurrences(propertyRaw, a), q).toBe(1);
+      expect(propertyPost?.faq?.map((item) => item.a), q).toContain(a);
     }
   });
 
-  it('locks one exact substantive proposition in its assigned section for all twenty-five legacy topics', () => {
-    const legacyCoverage = [
+  it('locks one exact substantive proposition in its assigned section for the twenty-four surviving legacy topics', () => {
+    // Legacy topic 10 (case-duration factors) was dropped from the hub on 2026-10-06 (hub trim)
+    // and has no counterpart in column 007 or 275; topics marked `column: 'property'` now live
+    // in column 275. Topics 2, 4, 7, 12, 17, 19, 21 and 25 are re-anchored to the sentence that
+    // now carries the same proposition.
+    const removedLegacyTopics = [10];
+    const legacyCoverage: Array<{
+      number: number;
+      heading: string;
+      phrase: string;
+      column?: 'property';
+    }> = [
       {
         number: 1,
         heading: headings[0],
@@ -360,30 +430,43 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 2,
         heading: headings[4],
         phrase:
-          'Completing a divorce under foreign local law does not, by itself, complete Taiwan household registration or prove Taiwan recognition.',
+          'Identify, as separate questions, whether the marriage or divorce was completed abroad, whether Taiwan recognition or legal effect is sought, what Taiwan household registration is required, and what additional procedure remains necessary in another jurisdiction.',
       },
       {
         number: 3,
-        heading: headings[5],
+        heading: propertyHeadings[0],
+        column: 'property',
         phrase:
           'A down payment or loan installment paid from premarital savings is relevant source-of-funds evidence. It does not by itself transfer registered title or dictate every later claim.',
       },
-      { number: 4, heading: headings[2], phrase: faq2Answer },
+      {
+        number: 4,
+        heading: headings[2],
+        phrase: personalAppearanceParagraphs[1],
+      },
       {
         number: 5,
-        heading: headings[6],
+        heading: propertyHeadings[1],
+        column: 'property',
         phrase:
           'Government average consumption statistics are not a binding formula that automatically sets Article 1057 support.',
       },
       {
         number: 6,
-        heading: headings[5],
-        phrase: article1017Paragraph,
+        heading: propertyHeadings[0],
+        column: 'property',
+        phrase:
+          'Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.',
       },
-      { number: 7, heading: headings[6], phrase: faq5Answer },
+      {
+        number: 7,
+        heading: headings[5],
+        phrase:
+          'A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits.',
+      },
       {
         number: 8,
-        heading: headings[7],
+        heading: headings[6],
         phrase: unresolvedIssuesParagraph,
       },
       {
@@ -392,16 +475,16 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         phrase: filingDocumentsParagraph,
       },
       {
-        number: 10,
-        heading: headings[2],
-        phrase: expectedDurationParagraph,
-      },
-      {
         number: 11,
         heading: headings[3],
         phrase: article1052Paragraph1ReaderSentence,
       },
-      { number: 12, heading: headings[3], phrase: faq3Answer },
+      {
+        number: 12,
+        heading: headings[3],
+        phrase:
+          'Its proviso provides that if that cause is attributable to one spouse, only the other spouse may petition.',
+      },
       {
         number: 13,
         heading: headings[2],
@@ -409,31 +492,32 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       },
       {
         number: 14,
-        heading: headings[6],
+        heading: propertyHeadings[1],
+        column: 'property',
         phrase:
           'Article 1057 concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
       },
       {
         number: 15,
-        heading: headings[6],
+        heading: propertyHeadings[1],
+        column: 'property',
         phrase:
           'An unmarried couple does not obtain divorce rights, Article 1056 divorce damages, or Article 1057 post-divorce support merely because they lived together.',
       },
       {
         number: 16,
-        heading: headings[7],
+        heading: headings[6],
         phrase:
           'A signed divorce agreement does not bar later review under the best-interests standard',
       },
       {
         number: 17,
-        heading: headings[8],
-        phrase:
-          'unforeseeability is not the sole legal threshold.',
+        heading: headings[7],
+        phrase: familyActModificationSentence,
       },
       {
         number: 18,
-        heading: headings[8],
+        heading: headings[7],
         phrase:
           'There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked.',
       },
@@ -441,22 +525,25 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 19,
         heading: headings[2],
         phrase:
-          'There is no single universal appeal deadline that covers every family decision. Calculate the correct route and period from the instrument actually issued before acting.',
+          'There is no single universal appeal deadline that covers every family decision.',
       },
       {
         number: 20,
-        heading: headings[5],
-        phrase: article10301AdjustmentParagraph,
+        heading: propertyHeadings[0],
+        column: 'property',
+        phrase:
+          'Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference.',
       },
       {
         number: 21,
         heading: headings[3],
         phrase:
-          'Do not state that an at-fault spouse can never petition, can always petition, or that adultery alone automatically grants or bars divorce.',
+          'The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support.',
       },
       {
         number: 22,
-        heading: headings[6],
+        heading: propertyHeadings[1],
+        column: 'property',
         phrase:
           'Serious interference or insults by a third party do not automatically give rise to damages.',
       },
@@ -474,18 +561,24 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       },
       {
         number: 25,
-        heading: headings[9],
+        heading: headings[8],
         phrase:
-          'Agreement that a child will live in Korea does not by itself fix support at Korean cost-of-living levels.',
+          'Cross-border relocation with a minor child is not decided by Korean living costs, a single nationality, or a treaty label alone.',
       },
     ];
 
     expect(legacyCoverage.map(({ number }) => number)).toEqual(
-      Array.from({ length: 25 }, (_, index) => index + 1),
+      Array.from({ length: 25 }, (_, index) => index + 1).filter(
+        (number) => !removedLegacyTopics.includes(number),
+      ),
     );
-    for (const { heading, phrase } of legacyCoverage) {
-      expect(sectionBody(parsed.content, heading)).toContain(phrase);
-      expect(post?.content).toContain(phrase);
+    for (const { heading, phrase, column } of legacyCoverage) {
+      const owner =
+        column === 'property'
+          ? { content: propertyParsed.content, loaded: propertyPost?.content }
+          : { content: parsed.content, loaded: post?.content };
+      expect(sectionBody(owner.content, heading)).toContain(phrase);
+      expect(owner.loaded).toContain(phrase);
     }
   });
 
@@ -500,7 +593,6 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'whether a foreign divorce, judgment, or status act is recognized or effective in Taiwan;',
       'what Taiwan household-registration step and authenticated documents are required; and',
       'what additional registration, recognition, or enforcement step is required in another relevant jurisdiction.',
-      'No single factor—such as a party’s nationality, foreign status, or place of marriage—answers all five questions.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -511,7 +603,6 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('locks Article 1050 elements and the qualified court-result registration rule', () => {
     const section = sectionBody(parsed.content, headings[1]);
     const requiredPhrases = [
-      faq1Answer,
       'Article 1050 separates three requirements:',
       'Writing. The mutual-consent divorce must be in writing.',
       'A witness does not satisfy the requirement by merely adding a name to a document without confirming that intent.',
@@ -570,7 +661,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     ).toBe(courtResultsFirstParagraph);
   });
 
-  it('preserves the statutory online window without turning thirty days into an online-only deadline', () => {
+  it('preserves the statutory online window as the last paragraph of the court-results subsection', () => {
     const courtResultsStart = parsed.content.indexOf(
       courtResultsSubsectionHeading,
     );
@@ -584,91 +675,52 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
 
     expect(courtResultsStart).toBeGreaterThan(-1);
     expect(section3Start).toBeGreaterThan(courtResultsStart);
-    expect(
-      firstParagraphAfter(parsed.content, courtResultsSubsectionHeading),
-    ).toBe(courtResultsFirstParagraph);
-    expect(sha256(courtResultsSubsection)).toBe(
-      frozenCourtResultsSubsectionSha256,
-    );
     expect(onlineParagraph).toBe(courtResultsOnlineParagraph);
+    expect(courtResultsSubsection).toContain(
+      'the general application period for registration is thirty days',
+    );
+    expect(raw).not.toContain('thirty days is only an online-filing period');
   });
 
-  it('restores the complete mediation-stage introduction before the court-outcome paragraph', () => {
-    const section3IntroStart = parsed.content.indexOf(faq2Answer);
-    const mediationHeadingStart = parsed.content.indexOf(
-      mediationSubsectionHeading,
-      section3IntroStart + faq2Answer.length,
-    );
-    const paragraphStart =
-      mediationHeadingStart + mediationSubsectionHeading.length + 2;
-    const courtOutcomeStart = parsed.content.indexOf(
-      `\n\n${courtMediationOutcomeParagraphMarker}`,
-      paragraphStart,
-    );
-    const paragraph = parsed.content.slice(paragraphStart, courtOutcomeStart);
-
-    expect(section3IntroStart).toBeGreaterThan(-1);
-    expect(mediationHeadingStart).toBe(
-      section3IntroStart + faq2Answer.length + 2,
-    );
-    expect(courtOutcomeStart).toBeGreaterThan(paragraphStart);
-    expect(paragraph).toBe(mediationIntroParagraph);
-  });
-
-  it('restores the three legal effects of established mediation or settlement before the duration guidance', () => {
-    const courtOutcomeStart = parsed.content.indexOf(
-      courtMediationOutcomeParagraphMarker,
-    );
-    const durationStart = parsed.content.indexOf(
-      `\n\n${expectedDurationParagraph}`,
-      courtOutcomeStart,
-    );
-    const paragraph = parsed.content.slice(courtOutcomeStart, durationStart);
-
-    expect(courtOutcomeStart).toBeGreaterThan(-1);
-    expect(durationStart).toBeGreaterThan(courtOutcomeStart);
-    expect(paragraph).toBe(courtMediationOutcomeParagraph);
-  });
-
-  it('restores every case-duration factor before the personal-appearance guidance', () => {
-    const mediationEffectStart = parsed.content.indexOf(
+  it('opens section 3 with the complete mediation introduction and the court-outcome paragraph', () => {
+    expect(
+      paragraphsAfter(parsed.content, `## ${headings[2]}`).slice(0, 3),
+    ).toEqual([
+      mediationIntroParagraph,
       courtMediationOutcomeParagraph,
-    );
-    const durationStart =
-      mediationEffectStart + courtMediationOutcomeParagraph.length + 2;
-    const personalAppearanceStart = parsed.content.indexOf(
-      '\n\n### Personal appearance',
-      durationStart,
-    );
-    const paragraph = parsed.content.slice(
-      durationStart,
-      personalAppearanceStart,
-    );
-
-    expect(mediationEffectStart).toBeGreaterThan(-1);
-    expect(personalAppearanceStart).toBeGreaterThan(durationStart);
-    expect(paragraph).toBe(expectedDurationParagraph);
+      '### Personal appearance',
+    ]);
+    expect(countOccurrences(parsed.content, mediationIntroParagraph)).toBe(1);
+    expect(
+      countOccurrences(parsed.content, courtMediationOutcomeParagraph),
+    ).toBe(1);
   });
 
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {
     const section = sectionBody(parsed.content, headings[2]);
+    const reviewParagraph =
+      'Review or appeal depends on the type of decision, how and when it was served, whether it is final, and the case’s procedural posture. A mediation or settlement record, a ruling, and a judgment are not interchangeable for that purpose. There is no single universal appeal deadline that covers every family decision.';
     const requiredPhrases = [
-      faq2Answer,
       mediationIntroParagraph,
-      'Family Act Article 13 applies when the court orders a party or legal representative to appear in person.',
+      courtMediationOutcomeParagraph,
+      ...personalAppearanceParagraphs,
+      reviewParagraph,
       'a first fine of up to NTD 30,000',
       'no arrest for compulsory appearance under this rule',
-      'Remote, separate, representative, or safety arrangements are available only if the court so decides under law and the circumstances.',
-      'A mediation or settlement record, a ruling, and a judgment are not interchangeable for that purpose.',
-      'There is no single universal appeal deadline that covers every family decision.',
     ];
 
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+    expect(
+      paragraphsAfter(parsed.content, '### Personal appearance').slice(0, 2),
+    ).toEqual(personalAppearanceParagraphs);
+    expect(
+      firstParagraphAfter(parsed.content, '### Review and appeal'),
+    ).toBe(reviewParagraph);
   });
 
-  it('locks Article 1052 paragraph 1 grounds, paragraph 2, and the constitutional qualification', () => {
+  it('locks Article 1052 paragraph 1 grounds, including the 惡疾 wording, paragraph 2, and the constitutional qualification', () => {
     const section = sectionBody(parsed.content, headings[3]);
     const grounds = [
       '1. Bigamy.',
@@ -677,24 +729,20 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       '4. Abuse by one spouse against the other spouse’s lineal relative, or by one spouse’s lineal relative against the other spouse, making common life unbearable.',
       '5. Malicious desertion of the other spouse in a continuing state.',
       '6. An attempt by one spouse to kill the other.',
-      '7. An incurable serious disease.',
+      '7. An incurable loathsome disease (不治之惡疾).',
       '8. A serious incurable mental illness.',
       '9. Life or death unknown for more than three years.',
       '10. A final sentence of imprisonment for more than six months for an intentional offense.',
     ];
     const requiredPhrases = [
-      faq3Answer,
       'Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce',
       'Paragraph 2 is separate from the ten grounds.',
-      'the wording of the proviso itself remained in the statute as of 2026-07-25.',
+      'the wording of the proviso itself remained in the statute as of 2026-10-06.',
       'Although the legislative period specified by Constitutional Court Judgment 112-Hsien-Pan-4 has elapsed',
+      responsibleSpouseJudgmentSentence,
       'Courts must apply the judgment’s constitutional reasoning to the facts of each case.',
-      'Do not state that an at-fault spouse can never petition, can always petition',
-      'A police missing-person report may be evidence of the spouse’s whereabouts and the passage of time, but it is not a mandatory prerequisite for every divorce claim.',
-      'Nor is there a universal requirement to bring an action demanding cohabitation before alleging malicious desertion or another serious cause.',
-      'Several months away from home, without more, does not establish any particular ground.',
-      'either a spouse abuses the other spouse’s lineal relative, or a lineal relative of one spouse abuses the other spouse',
-      'The court must examine the reason for the departure, whether there was a justified reason to live separately, contact and support between the spouses',
+      sexualIntercourseConsequencesParagraph,
+      missingSpouseTailParagraph,
     ];
 
     let previousIndex = -1;
@@ -706,36 +754,16 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+    expect(section).not.toContain('An incurable serious disease');
+    expect(raw).not.toContain('An incurable serious disease');
   });
 
-  it('publishes the exact constitutional qualification as the first Section 4 paragraph', () => {
-    const section = sectionBody(parsed.content, headings[3]);
-    const paragraphEnd = section.indexOf(
-      `\n\n${article1052Paragraph1Heading}`,
-    );
-    const paragraph = section.slice(
-      `## ${headings[3]}\n\n`.length,
-      paragraphEnd,
-    );
-
-    expect(paragraphEnd).toBeGreaterThan(-1);
-    expect(paragraph).toBe(responsibleSpouseParagraph);
+  it('keeps the responsible-spouse qualification exactly once in the FAQ and not as a body paragraph', () => {
     expect(parsed.data.faq[2]?.a).toBe(responsibleSpouseParagraph);
     expect(post?.faq?.[2]?.a).toBe(responsibleSpouseParagraph);
-    expect(countOccurrences(parsed.content, responsibleSpouseParagraph)).toBe(
-      1,
-    );
-    expect(countOccurrences(raw, responsibleSpouseParagraph)).toBe(2);
-    expect(
-      countOccurrences(post?.content ?? '', responsibleSpouseParagraph),
-    ).toBe(1);
-    expect(
-      countOccurrences(
-        JSON.stringify({ faq: post?.faq, content: post?.content }),
-        responsibleSpouseParagraph,
-      ),
-    ).toBe(2);
-    expect(paragraph).not.toContain('generally constitutional');
+    expect(countOccurrences(raw, responsibleSpouseParagraph)).toBe(1);
+    expect(post?.content).not.toContain(responsibleSpouseParagraph);
+    expect(raw).not.toContain('generally constitutional');
   });
 
   it('uses the exact constitutional holding in the Paragraph 2 subsection', () => {
@@ -744,7 +772,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       '### Paragraph 2 and the responsible-spouse proviso',
     );
     const subsectionEnd = section.indexOf(
-      '\n\n### Missing or absent spouses: no universal shortcut',
+      `\n\n${missingSpouseSubsectionHeading}`,
       subsectionStart,
     );
     const subsection = section.slice(subsectionStart, subsectionEnd);
@@ -757,18 +785,21 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(raw).not.toContain('generally constitutional');
   });
 
-  it('restores the sexual-intercourse consequences paragraph at the exact Section 4 tail boundary', () => {
-    const exactBoundary = `${missingSpouseTailParagraph}\n\n${sexualIntercourseConsequencesParagraph}\n\n## ${headings[4]}`;
+  it('places the sexual-intercourse paragraph in the Paragraph 2 subsection and the missing-spouse paragraph at the Section 4 tail boundary', () => {
+    const exactBoundary = `${sexualIntercourseConsequencesParagraph}\n\n${missingSpouseSubsectionHeading}\n\n${missingSpouseTailParagraph}\n\n## ${headings[4]}`;
 
     expect(parsed.content).toContain(exactBoundary);
     expect(
       countOccurrences(parsed.content, sexualIntercourseConsequencesParagraph),
     ).toBe(1);
+    expect(countOccurrences(parsed.content, missingSpouseTailParagraph)).toBe(
+      1,
+    );
   });
 
   it('presents the Article 1052 paragraph 1 rule to readers without exposing a translation instruction or changing later text', () => {
     const section = sectionBody(parsed.content, headings[3]);
-    const introMarker = `${article1052Paragraph1Heading}\n\n`;
+    const introMarker = `## ${headings[3]}\n\n`;
     const introStart = section.indexOf(introMarker) + introMarker.length;
     const listStart = section.indexOf('\n\n1. Bigamy.', introStart);
     const section5Start = parsed.content.indexOf(`## ${headings[4]}`);
@@ -779,14 +810,14 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
 
     expect(introStart).toBeGreaterThan(introMarker.length - 1);
     expect(listStart).toBeGreaterThan(introStart);
-    expect(firstParagraphAfter(parsed.content, article1052Paragraph1Heading)).toBe(
+    expect(firstParagraphAfter(parsed.content, `## ${headings[3]}`)).toBe(
       article1052Paragraph1ReaderSentence,
     );
-    expect(
-      firstParagraphAfter(post?.content ?? '', article1052Paragraph1Heading),
-    ).toBe(article1052Paragraph1ReaderSentence);
+    expect(firstParagraphAfter(post?.content ?? '', `## ${headings[3]}`)).toBe(
+      article1052Paragraph1ReaderSentence,
+    );
     expect(section).toContain(
-      `${article1052Paragraph1Heading}\n\n${article1052Paragraph1ReaderSentence}\n\n1. Bigamy.`,
+      `## ${headings[3]}\n\n${article1052Paragraph1ReaderSentence}\n\n1. Bigamy.`,
     );
     expect(countOccurrences(raw, article1052Paragraph1ReaderSentence)).toBe(1);
     expect(raw).not.toContain(staleArticle1052TranslationInstruction);
@@ -799,685 +830,175 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
   });
 
-  it('locks foreign-record connecting factors, authentication, translation, and regional verification', () => {
+  it('locks the foreign-record separation of questions, the recognition paragraph, and regional verification', () => {
     const section = sectionBody(parsed.content, headings[4]);
     const requiredPhrases = [
       'A foreign marriage or foreign divorce does not collapse into one universal Taiwan route.',
-      'There is no fixed rule that parties must first re-register a foreign marriage in Taiwan or must always sue only in Taiwan.',
-      'Completing a divorce under foreign local law does not, by itself, complete Taiwan household registration or prove Taiwan recognition.',
-      'a foreign marriage or divorce record may require authentication by a Taiwan overseas mission or another competent authority.',
+      foreignOverviewParagraph,
       'Documents from mainland China, Hong Kong, and Macao follow verification regimes that differ from ordinary foreign authentication.',
-      foreignRecognitionParagraph,
     ];
 
+    expect(firstParagraphAfter(parsed.content, `## ${headings[4]}`)).toBe(
+      foreignOverviewParagraph,
+    );
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
-  });
-
-  it('publishes the exact foreign-divorce effect paragraph at the Section 5 tail without adding public policy', () => {
-    const subsectionMarker = `${foreignEffectSubsectionHeading}\n\n`;
-    const subsectionStart = parsed.content.indexOf(subsectionMarker);
-    const paragraphStart = subsectionStart + subsectionMarker.length;
-    const section6Start = parsed.content.indexOf(
-      `\n\n## ${headings[5]}`,
-      paragraphStart,
-    );
-    const section = sectionBody(parsed.content, headings[4]);
-
-    expect(subsectionStart).toBeGreaterThan(-1);
-    expect(section6Start).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, section6Start)).toBe(
-      foreignRecognitionParagraph,
-    );
     expect(section).not.toContain('public policy');
+    // Authentication and translation of foreign documents stays locked in sections 2 and 10.
+    expect(sectionBody(parsed.content, headings[1])).toContain(
+      'a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority',
+    );
+    expect(sectionBody(parsed.content, headings[9])).toContain(
+      'check authentication by a Taiwan overseas mission or other competent authority; the Chinese translation and whether it has been certified or notarized',
+    );
   });
 
-  it('locks Article 1017 and Article 1030-1 classification, exclusions, adjustment, and claim-specific periods', () => {
+  it('keeps only the property, damages and support summary in the hub and links to column 275', () => {
     const section = sectionBody(parsed.content, headings[5]);
-    const requiredPhrases = [
-      faq4Answer,
-      'Separate at least three inquiries for a house or other asset:',
-      article1017Paragraph,
-      'net residual property composed of qualifying property acquired during marriage, after the statutory exclusions and relevant debts',
-      'The difference is generally divided equally.',
-      article10301ExclusionsParagraph,
-      'Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage',
-      'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution',
-      article10301AdjustmentParagraph,
-      'Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.',
-    ];
 
-    for (const phrase of requiredPhrases) {
-      expect(section).toContain(phrase);
-    }
-  });
-
-  it('publishes the exact Article 1017 classification-and-presumption paragraph', () => {
-    const subsectionMarker = `${article1017SubsectionHeading}\n\n`;
-    const subsectionStart = parsed.content.indexOf(subsectionMarker);
-    const paragraphStart = subsectionStart + subsectionMarker.length;
-    const nextSubsectionStart = parsed.content.indexOf(
-      `\n\n${article10301SubsectionHeading}`,
-      paragraphStart,
+    expect(firstParagraphAfter(parsed.content, `## ${headings[5]}`)).toBe(
+      `${hubPropertySummaryParagraph} Property, damages, and support claims are covered in ${propertyHubLink}.`,
     );
-
-    expect(subsectionStart).toBeGreaterThan(-1);
-    expect(nextSubsectionStart).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, nextSubsectionStart)).toBe(
-      article1017Paragraph,
-    );
-    expect(article1017Paragraph).toContain(
-      'property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage',
-    );
-  });
-
-  it('publishes the exact Article 1030-1 exclusions-and-pre-termination-dispositions paragraph', () => {
-    const calculationParagraphMarker =
-      `${article10301SubsectionHeading}\n\nUnder Article 1030-1,`;
-    const calculationParagraphStart = parsed.content.indexOf(
-      calculationParagraphMarker,
-    );
-    const targetParagraphStart =
-      parsed.content.indexOf(
-        '\n\n',
-        calculationParagraphStart + calculationParagraphMarker.length,
-      ) + 2;
-    const adjustmentParagraphStart = parsed.content.indexOf(
-      '\n\nWhere equal division',
-      targetParagraphStart,
-    );
-
-    expect(calculationParagraphStart).toBeGreaterThan(-1);
-    expect(targetParagraphStart).toBeGreaterThan(
-      calculationParagraphStart + calculationParagraphMarker.length,
-    );
-    expect(adjustmentParagraphStart).toBeGreaterThan(targetParagraphStart);
-    expect(
-      parsed.content.slice(targetParagraphStart, adjustmentParagraphStart),
-    ).toBe(article10301ExclusionsParagraph);
-  });
-
-  it('publishes the exact Article 1030-1 adjustment-factors paragraph', () => {
-    const subsectionStart = parsed.content.indexOf(
-      article10301SubsectionHeading,
-    );
-    const paragraphStart =
-      parsed.content.indexOf(
-        '\n\nWhere equal division',
-        subsectionStart + article10301SubsectionHeading.length,
-      ) + 2;
-    const section7Start = parsed.content.indexOf(
-      `\n\n## ${headings[6]}`,
-      paragraphStart,
-    );
-
-    expect(subsectionStart).toBeGreaterThan(-1);
-    expect(paragraphStart).toBeGreaterThan(
-      subsectionStart + article10301SubsectionHeading.length,
-    );
-    expect(section7Start).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, section7Start)).toBe(
-      article10301AdjustmentParagraph,
-    );
-  });
-
-  it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {
-    const section = sectionBody(parsed.content, headings[6]);
-    const requiredPhrases = [
-      faq5Answer,
-      article1056Paragraph,
-      'Article 1057 concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
-      'Article 1116-2 continues parents’ duty to support a minor child after divorce.',
-      'Child support is distinct from Article 1057 spousal support.',
-      'Government average consumption statistics are not a binding formula that automatically sets Article 1057 support.',
-      'An unmarried couple does not obtain divorce rights, Article 1056 divorce damages, or Article 1057 post-divorce support merely because they lived together.',
-      'An in-law or another relative of a spouse is not an obligor for post-divorce spousal support under Article 1057.',
-      'those periods must not be carried over to the other claims.',
-      'a two-year period from knowledge of the residual-property difference',
-      'a five-year period from termination of the statutory matrimonial-property regime',
-    ];
-
-    for (const phrase of requiredPhrases) {
-      expect(section).toContain(phrase);
-    }
-  });
-
-  it('publishes the exact Article 1056 pecuniary-and-non-pecuniary damages paragraph', () => {
-    const subsectionMarker = `${article1056SubsectionHeading}\n\n`;
-    const subsectionStart = parsed.content.indexOf(subsectionMarker);
-    const paragraphStart = subsectionStart + subsectionMarker.length;
-    const article1057Start = parsed.content.indexOf(
-      '\n\nArticle 1057',
-      paragraphStart,
-    );
-
-    expect(subsectionStart).toBeGreaterThan(-1);
-    expect(article1057Start).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, article1057Start)).toBe(
-      article1056Paragraph,
-    );
-  });
-
-  it('publishes the exact complete parental-rights-and-duties scope paragraph', () => {
-    const subsectionMarker = `${completeParentalRightsSubsectionHeading}\n\n`;
-    const subsectionStart = parsed.content.indexOf(subsectionMarker);
-    const paragraphStart = subsectionStart + subsectionMarker.length;
-    const agreementStart = parsed.content.indexOf(
-      '\n\nUnder Civil Code Article 1055, parents may agree',
-      paragraphStart,
-    );
-
-    expect(subsectionStart).toBeGreaterThan(-1);
-    expect(agreementStart).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, agreementStart)).toBe(
-      childScopeParagraph,
-    );
-  });
-
-  it('publishes the exact best-interests-and-statutory-factors paragraph', () => {
-    const subsectionMarker = `${bestInterestsSubsectionHeading}\n\n`;
-    const subsectionStart = parsed.content.indexOf(subsectionMarker);
-    const paragraphStart = subsectionStart + subsectionMarker.length;
-    const nextSubsectionStart = parsed.content.indexOf(
-      `\n\n${unresolvedIssuesSubsectionHeading}`,
-      paragraphStart,
-    );
-
-    expect(subsectionStart).toBeGreaterThan(-1);
-    expect(nextSubsectionStart).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, nextSubsectionStart)).toBe(
-      bestInterestsFactorsParagraph,
-    );
-  });
-
-  it('publishes the exact unresolved-property-and-child-issues paragraph', () => {
-    const subsectionMarker = `${unresolvedIssuesSubsectionHeading}\n\n`;
-    const subsectionStart = parsed.content.indexOf(subsectionMarker);
-    const paragraphStart = subsectionStart + subsectionMarker.length;
-    const section9Start = parsed.content.indexOf(
-      `\n\n## ${headings[8]}`,
-      paragraphStart,
-    );
-
-    expect(subsectionStart).toBeGreaterThan(-1);
-    expect(section9Start).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, section9Start)).toBe(
-      unresolvedIssuesParagraph,
-    );
+    expect(section).toContain(hubPropertySummaryParagraph);
+    expect(propertyHubLink).toContain(`](${propertyHref})`);
+    expect(countOccurrences(raw, `](${propertyHref})`)).toBe(1);
+    expect(propertyPost?.slug).toBe(propertySlug);
+    // Detailed Article 1017/1030-1/1056/1057 text now lives only in column 275.
+    expect(parsed.content).not.toContain('Article 1017');
+    expect(parsed.content).not.toContain('solatium');
+    expect(parsed.content).not.toContain('manifestly unfair');
   });
 
   it('locks Articles 1055 and 1055-1, the full Taiwan concept, review, and unresolved issues', () => {
-    const section = sectionBody(parsed.content, headings[7]);
+    const section = sectionBody(parsed.content, headings[6]);
     const requiredPhrases = [
-      faq6Answer,
       childScopeParagraph,
       'management of the child’s property, and legal representation',
+      'Under Civil Code Article 1055, parents may agree on who will exercise and assume these rights and duties after divorce.',
+      'if an agreement is adverse to the child, the court may modify it or make any necessary decision',
       'A signed divorce agreement does not bar later review under the best-interests standard',
       bestInterestsFactorsParagraph,
+      'the court considers all circumstances in light of the child’s best interests',
       'the child’s age, sex, and health; the number of children; the child’s views and needs for personality development',
       'each parent’s age, occupation, conduct, health, financial means, and living circumstances',
       'each parent’s willingness and attitude toward the child’s protection and upbringing',
+      'the emotional relationship between each parent and the child, or between the child and others who live with the child',
       'any circumstances in which one parent has interfered with the relationship between the other parent and the child',
+      'the traditional customs, culture, and values of each ethnic group',
       'The court may hear the child’s views in the manner prescribed by law',
       'investigations and opinions from competent authorities or child-welfare professionals',
       'A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many',
+      unresolvedIssuesParagraph,
       'whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending',
     ];
 
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+    expect(section).not.toContain('Do not state');
   });
 
-  it('publishes the exact child-support allocation factors before modification guidance', () => {
-    const sectionMarker = `## ${headings[8]}\n\n`;
-    const sectionStart = parsed.content.indexOf(sectionMarker);
-    const paragraphStart = sectionStart + sectionMarker.length;
-    const modificationStart = parsed.content.indexOf(
-      '\n\n### Modification of child support',
-      paragraphStart,
+  it('publishes the exact scope, best-interests-factors and unresolved-issues paragraphs at their section positions', () => {
+    const section7Paragraphs = paragraphsAfter(
+      parsed.content,
+      `## ${headings[6]}`,
     );
 
-    expect(sectionStart).toBeGreaterThan(-1);
-    expect(modificationStart).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, modificationStart)).toBe(
-      childSupportFactorsParagraph,
+    expect(section7Paragraphs[0]).toBe(childScopeParagraph);
+    expect(section7Paragraphs[1]).toMatch(
+      /^Under Civil Code Article 1055, parents may agree/,
     );
     expect(
-      countOccurrences(parsed.content, childSupportFactorsParagraph),
-    ).toBe(1);
-  });
-
-  it('publishes the exact child-focused contact-enforcement factors between the adjacent enforcement paragraphs', () => {
-    const precedingParagraph =
-      'If contact or visitation is obstructed, the available response depends on the existing agreement or court order and on the facts. A party may seek a court determination of contact, a change of the arrangement, enforcement of an existing instrument, or an appropriate interim measure. Family Act Article 194 requires enforcement methods to be selected under the child’s best interests. Those methods may involve direct or indirect compulsion as the law and the facts allow.';
-    const precedingMarker = `${precedingParagraph}\n\n`;
-    const followingMarker = `\n\n${childSupportEnforcementParagraph}`;
-    const precedingStart = parsed.content.indexOf(precedingMarker);
-    const paragraphStart = precedingStart + precedingMarker.length;
-    const followingStart = parsed.content.indexOf(
-      followingMarker,
-      paragraphStart,
-    );
-
-    expect(precedingStart).toBeGreaterThan(-1);
-    expect(followingStart).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, followingStart)).toBe(
-      contactEnforcementFactorsParagraph,
-    );
+      firstParagraphAfter(parsed.content, bestInterestsSubsectionHeading),
+    ).toBe(bestInterestsFactorsParagraph);
     expect(
-      countOccurrences(parsed.content, contactEnforcementFactorsParagraph),
-    ).toBe(1);
-    expect(
-      parsed.content.slice(precedingStart, precedingStart + precedingParagraph.length),
-    ).toBe(precedingParagraph);
-    expect(
-      parsed.content.slice(
-        followingStart + 2,
-        followingStart + 2 + childSupportEnforcementParagraph.length,
+      parsed.content.indexOf(
+        `${unresolvedIssuesSubsectionHeading}\n\n${unresolvedIssuesParagraph}\n\n## ${headings[7]}`,
       ),
-    ).toBe(childSupportEnforcementParagraph);
+    ).toBeGreaterThan(-1);
+    expect(countOccurrences(parsed.content, childScopeParagraph)).toBe(1);
+    expect(countOccurrences(parsed.content, bestInterestsFactorsParagraph)).toBe(
+      1,
+    );
+    expect(countOccurrences(parsed.content, unresolvedIssuesParagraph)).toBe(1);
   });
 
-  it('publishes the exact independent child-support and contact enforcement paragraph', () => {
-    const precedingMarker =
-      'Interim protection may be necessary where flight risk, retention, or safety is genuinely in issue, but the form of that protection is a court decision based on the instrument and the evidence.\n\n';
-    const followingMarker = '\n\n### Evidence for support and contact disputes';
-    const precedingStart = parsed.content.indexOf(precedingMarker);
-    const paragraphStart = precedingStart + precedingMarker.length;
-    const followingStart = parsed.content.indexOf(
-      followingMarker,
-      paragraphStart,
-    );
-
-    expect(precedingStart).toBeGreaterThan(-1);
-    expect(followingStart).toBeGreaterThan(paragraphStart);
-    expect(parsed.content.slice(paragraphStart, followingStart)).toBe(
-      childSupportEnforcementParagraph,
-    );
-    expect(
-      countOccurrences(parsed.content, childSupportEnforcementParagraph),
-    ).toBe(1);
-  });
-
-  it('locks Article 1116-2 support and Family Act Article 194 contact and enforcement qualifications', () => {
-    const section = sectionBody(parsed.content, headings[8]);
+  it('locks Article 1116-2 support, Family Act Articles 102 and 107 modification, and Article 194 enforcement qualifications', () => {
+    const section = sectionBody(parsed.content, headings[7]);
     const requiredPhrases = [
       'Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce.',
       'It is distinct from Article 1057 post-divorce support for a qualifying former spouse.',
-      'unforeseeability is not the sole legal threshold.',
-      'the child’s current needs, both parents’ resources and circumstances, the existing agreement or order, and the child’s best interests',
+      familyActModificationSentence,
       'Family Act Article 194 requires enforcement methods to be selected under the child’s best interests.',
       'Those methods may involve direct or indirect compulsion as the law and the facts allow.',
       'There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked.',
-      'Preserve the current agreement or court decision, records of communications and attempted contact, the dates and places of attempted meetings, school and medical schedules',
+      'Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation.',
     ];
 
+    expect(firstParagraphAfter(parsed.content, `## ${headings[7]}`)).toBe(
+      childSupportParagraph,
+    );
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+    expect(
+      paragraphsAfter(parsed.content, '### Contact, visitation, and enforcement').slice(
+        0,
+        2,
+      ),
+    ).toEqual([contactObstructedParagraph, contactEnforcementParagraph]);
+    // The modification rule is limited to final rulings and court settlements and is not a foreseeability test.
+    expect(parsed.content).not.toMatch(/unforeseeab|foreseeable/i);
+    expect(raw).not.toContain(
+      'child-support modification requires an unforeseeable event',
+    );
   });
 
-  it('locks the seven relocation questions, non-treaty shortcut, and no unauthorized removal', () => {
-    const section = sectionBody(parsed.content, headings[9]);
+  it('locks the three relocation questions, non-treaty shortcut, and no unauthorized removal', () => {
+    const section = sectionBody(parsed.content, headings[8]);
+    const relocationQuestions = [
+      '1. Authority over residence and travel. Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?',
+      '2. Consent or court order. Does the other parent consent, or is a court determination required before relocation or retention abroad?',
+      '3. Passports, entry, exit, immigration, and registration. What requirements govern passport issuance and use, entry and exit, residence or immigration status, and family-status registration in Taiwan and the destination?',
+    ];
     const requiredPhrases = [
       'Cross-border relocation with a minor child is not decided by Korean living costs, a single nationality, or a treaty label alone.',
-      'Authority over residence and travel.',
-      'Consent or court order.',
-      'Best interests and continuing contact.',
-      'Passports, entry, exit, immigration, and registration.',
-      'Recognition and enforcement.',
-      'Actual expenses and both parents’ resources.',
-      'Urgent protection.',
-      'Agreement that a child will live in Korea does not by itself fix support at Korean cost-of-living levels.',
-      'Do not state or imply that the 1980 Hague Child Abduction Convention automatically governs Taiwan.',
-      'Cross-border removal, retention, and return questions require advice and analysis in every relevant jurisdiction',
+      'The 1980 Hague Child Abduction Convention does not automatically govern Taiwan.',
+      'Taking a child away or refusing to return the child contrary to an existing agreement or order should not be recommended',
+      'identify any available urgent protective measures',
     ];
 
+    expect(
+      section.split('\n').filter((line) => /^\d+\. /.test(line)),
+    ).toEqual(relocationQuestions);
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
-  });
-
-  it('publishes the exact authority-over-residence relocation item without habitual-residence wording', () => {
-    const section = sectionBody(parsed.content, headings[9]);
-    const expectedItem =
-      '1. Authority over residence and travel. Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?';
-    const itemStart = section.indexOf('1. Authority over residence and travel.');
-    const nextItemStart = section.indexOf(
-      '\n2. Consent or court order.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
     expect(section).not.toContain('habitual residence');
+    expect(section).not.toContain('Do not state or imply');
   });
 
-  it('publishes the exact best-interests and continuing-contact relocation item', () => {
+  it('uses the exact ordered eight-category evidence checklist and privacy prohibitions', () => {
     const section = sectionBody(parsed.content, headings[9]);
-    const expectedItem =
-      '3. Best interests and continuing contact. How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent? A workable plan should address the frequency of contact, stays during school holidays, travel costs, and handover locations.';
-    const itemStart = section.indexOf(
-      '3. Best interests and continuing contact.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n4. Passports, entry, exit, immigration, and registration.',
-      itemStart,
-    );
 
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-  });
-
-  it('publishes the exact non-adversarial evidence-organization introduction', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedIntro =
-      'Organize the materials not as a collection intended to pressure the other party, but as records that accurately explain jurisdiction, procedure, the facts, and the child’s needs. Preparing the following nine categories so that both the chronology of the case and the source of each original document are clear can reduce the risk of confusing different claims and deadlines.';
-    const introStart = `## ${headings[10]}\n\n`.length;
-    const firstItemStart = section.indexOf(
-      '\n\n1. Identity, status, and addresses.',
-    );
-
-    expect(firstItemStart).toBeGreaterThan(-1);
-    expect(section.slice(introStart, firstItemStart)).toBe(expectedIntro);
-    expect(countOccurrences(section, expectedIntro)).toBe(1);
-    expect(section).not.toContain(
-      'Prepare a non-adversarial file early. The goal is accuracy, preservation of originals, and privacy-safe handling—not advantage-seeking through unlawful methods. Organize materials in at least the following nine groups.',
-    );
-  });
-
-  it('publishes the exact identity, status, and address evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '1. Identity, status, and addresses. Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address. Note any discrepancy between the information shown in the documents and where each party actually lives now or the address at which each party can be served.';
-    const itemStart = section.indexOf(
-      '1. Identity, status, and addresses.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n2. Divorce instruments and court papers.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(section).not.toContain(
-      'and current addresses for each spouse and child',
-    );
-    expect(section).not.toContain(
-      'These materials frame jurisdiction, service, and registration questions.',
-    );
-  });
-
-  it('publishes the exact divorce instruments and court papers evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '2. Divorce instruments and court papers. Collect and organize by procedure any written mutual-consent divorce agreement; documentation of how the witnesses confirmed the spouses’ genuine intent to divorce; court papers; records of service; mediation and settlement records; judgments; and documents proving finality.';
-    const itemStart = section.indexOf(
-      '2. Divorce instruments and court papers.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n3. Foreign marriage or divorce records.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(section).not.toContain(
-      'Keep originals or certified copies and note how and when each instrument was served or became final.',
-    );
-  });
-
-  it('publishes the exact foreign marriage or divorce records evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '3. Foreign marriage or divorce records. For foreign marriage and divorce records and foreign judgments or certificates, check authentication by a Taiwan overseas mission or other competent authority; the Chinese translation and whether it has been certified or notarized; and their recognition, legal effect, and registration status in Taiwan.';
-    const itemStart = section.indexOf(
-      '3. Foreign marriage or divorce records.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n4. Matrimonial property and debts.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(section).not.toContain(
-      'Documents from mainland China, Hong Kong, and Macao follow distinct verification tracks',
-    );
-  });
-
-  it('publishes the exact matrimonial property and debts evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '4. Matrimonial property and debts. Identify the applicable matrimonial-property agreement and property regime. Link every asset and debt—and, where applicable, its registered titleholder and the source and timing of acquisition—to a complete inventory together with records of fund transfers, dispositions, loans, repayments, taxes, and valuations.';
-    const itemStart = section.indexOf(
-      '4. Matrimonial property and debts.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n5. Alleged divorce-ground chronology.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(section).not.toContain(
-      'materials showing gifts, nominee arrangements, reimbursements, or other theories',
-    );
-    expect(section).not.toContain(
-      'Distinguish ownership claims from residual-property calculation inputs.',
-    );
-  });
-
-  it('publishes the exact alleged divorce-ground chronology evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '5. Alleged divorce-ground chronology. Create a neutral timeline of the events and their timing underlying the alleged grounds for divorce. Preserve lawfully obtained communications, medical and police records, and other evidence in their original state. Distinguish speculation from directly verified facts.';
-    const itemStart = section.indexOf(
-      '5. Alleged divorce-ground chronology.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n6. Each child’s situation.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    const item = section.slice(itemStart, nextItemStart);
-    expect(item).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(item).not.toContain('preservation of original media and metadata');
-    expect(item).not.toContain('Do not create evidence by unlawful means.');
-  });
-
-  it('publishes the exact each child’s situation evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '6. Each child’s situation. Compile information on each child’s age, health, education, residence, caregiving history and current care arrangements, views appropriate to the child’s stage of development, relationship with each parent, and safety and stability, all from the perspective of the child’s best interests.';
-    const itemStart = section.indexOf('6. Each child’s situation.');
-    const nextItemStart = section.indexOf(
-      '\n7. Support, contact, and relocation plans.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    const item = section.slice(itemStart, nextItemStart);
-    expect(item).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(item).not.toContain('views where appropriate');
-    expect(item).not.toContain(
-      'Handle identifiers and school or medical details with privacy in mind.',
-    );
-  });
-
-  it('publishes the exact support, contact, and relocation plans evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '7. Support, contact, and relocation plans. Compile together any current child-related agreements and court proceedings, child-support payment records and actual expenses, the history of contact or visitation, travel documents and itineraries, and any specific plan for international relocation.';
-    const itemStart = section.indexOf(
-      '7. Support, contact, and relocation plans.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n8. Deadlines calculated from correct triggering events.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    const item = section.slice(itemStart, nextItemStart);
-    expect(item).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(item).not.toContain('expense records');
-    expect(item).not.toContain(
-      'any proposed relocation plan with supporting logistics',
-    );
-    expect(item).not.toContain('travel or movement schedules');
-  });
-
-  it('publishes the exact triggering-event deadlines evidence item', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '8. Deadlines calculated from correct triggering events. Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event. Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.';
-    const itemStart = section.indexOf(
-      '8. Deadlines calculated from correct triggering events.',
-    );
-    const nextItemStart = section.indexOf(
-      '\n9. Privacy plan and limited disclosure.',
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(nextItemStart).toBeGreaterThan(itemStart);
-    const item = section.slice(itemStart, nextItemStart);
-    expect(item).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(item).not.toContain('knowledge of a residual-property difference');
-    expect(item).not.toContain('not from a convenient or informal date.');
-    expect(item).not.toContain('mediation or settlement is concluded');
-    expect(item).not.toContain('the relevant person learns of the right');
-  });
-
-  it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const expectedItem =
-      '9. Privacy plan and limited disclosure. Share identification numbers, addresses, and medical, educational, or financial information concerning a spouse or child only with people and institutions that need the information and only to the extent necessary. Establish a privacy plan covering file-access permissions, methods of transmission, and disposal of copies.';
-    const itemStart = section.indexOf(
-      '9. Privacy plan and limited disclosure.',
-    );
-    const prohibitionsStart = section.indexOf(
-      `\n\n${evidenceProhibitionsParagraph}`,
-      itemStart,
-    );
-
-    expect(itemStart).toBeGreaterThan(-1);
-    expect(prohibitionsStart).toBeGreaterThan(itemStart);
-    expect(section.slice(itemStart, prohibitionsStart)).toBe(expectedItem);
-    expect(countOccurrences(section, expectedItem)).toBe(1);
-    expect(section).not.toContain('preserve fragile evidence promptly');
-    expect(section).not.toContain('notarial or other formal preservation');
-  });
-
-  it('publishes the exact evidence-gathering prohibitions paragraph', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const paragraphStart = section.indexOf(evidenceProhibitionsParagraph);
-
-    expect(paragraphStart).toBeGreaterThan(-1);
-    expect(section.slice(paragraphStart).trim()).toBe(
-      evidenceProhibitionsParagraph,
-    );
-    expect(countOccurrences(section, evidenceProhibitionsParagraph)).toBe(1);
-    expect(section).not.toContain('Do not engage in unlawful surveillance');
-    expect(section).not.toContain(
-      'Those acts may create separate liability and undermine legitimate claims.',
-    );
-  });
-
-  it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {
-    const section = sectionBody(parsed.content, headings[10]);
-    const checklistStarts = [
-      '1. Identity, status, and addresses.',
-      '2. Divorce instruments and court papers.',
-      '3. Foreign marriage or divorce records.',
-      '4. Matrimonial property and debts.',
-      '5. Alleged divorce-ground chronology.',
-      '6. Each child’s situation.',
-      '7. Support, contact, and relocation plans.',
-      '8. Deadlines calculated from correct triggering events.',
-      '9. Privacy plan and limited disclosure.',
-    ];
-
-    let previousIndex = -1;
-    for (const item of checklistStarts) {
-      const index = section.indexOf(item);
-      expect(index).toBeGreaterThan(previousIndex);
-      previousIndex = index;
+    expect(
+      section.split('\n').filter((line) => /^\d+\. /.test(line)),
+    ).toEqual(evidenceItems);
+    for (const item of evidenceItems) {
+      expect(countOccurrences(section, item), item).toBe(1);
     }
-    expect(section).toContain(
-      'documentation of how the witnesses confirmed the spouses’ genuine intent to divorce',
+    expect(section.trim().endsWith(evidenceProhibitionsParagraph)).toBe(true);
+    expect(countOccurrences(section, evidenceProhibitionsParagraph)).toBe(1);
+    expect(firstParagraphAfter(parsed.content, `## ${headings[9]}`)).toBe(
+      evidenceItems.join('\n'),
     );
-    expect(section).toContain(
-      'Collect and organize by procedure',
-    );
-    expect(section).toContain(
-      'Taiwan overseas mission or other competent authority',
-    );
-    expect(section).toContain(
-      'certified or notarized',
-    );
-    expect(section).toContain(
-      'recognition, legal effect, and registration status in Taiwan',
-    );
-    expect(section).toContain('source and timing of acquisition');
-    expect(section).toContain('complete inventory');
-    expect(section).toContain('dispositions');
-    expect(section).toContain('repayments');
-    expect(section).toContain(
-      'Create a neutral timeline of the events and their timing underlying the alleged grounds for divorce.',
-    );
-    expect(section).toContain(
-      'Preserve lawfully obtained communications, medical and police records, and other evidence in their original state.',
-    );
-    expect(section).toContain(
-      'Distinguish speculation from directly verified facts.',
-    );
-    expect(section).toContain(
-      'caregiving history and current care arrangements',
-    );
-    expect(section).toContain(
-      'all from the perspective of the child’s best interests.',
-    );
-    expect(section).toContain(
-      'child-support payment records and actual expenses',
-    );
-    expect(section).toContain(
-      'travel documents and itineraries, and any specific plan for international relocation.',
-    );
-    expect(section).toContain(
-      'only with people and institutions that need the information and only to the extent necessary',
-    );
-    expect(section).toContain(
-      'Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event.',
-    );
-    expect(section).toContain(
-      'Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.',
-    );
-    expect(section).toContain(evidenceProhibitionsParagraph);
+    for (const stale of staleEvidenceWording) {
+      expect(section, stale).not.toContain(stale);
+    }
   });
 
-  it('uses exactly the ten official and three English internal body links once and in order', () => {
+  it('uses exactly the nine inline English column links, ten official links and three English internal links once and in order', () => {
     const markdownLinks = Array.from(
       parsed.content.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g),
       (match) => match[0],
@@ -1487,7 +1008,11 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       (match) => match[1],
     );
 
-    expect(markdownLinks).toEqual([...officialLinks, ...internalLinks]);
+    expect(markdownLinks).toEqual([
+      ...inlineColumnLinks,
+      ...officialLinks,
+      ...internalLinks,
+    ]);
     expect(externalTargets).toEqual(officialUrls);
     for (const url of officialUrls) {
       expect(countOccurrences(parsed.content, url)).toBe(1);
@@ -1495,7 +1020,22 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const link of [...officialLinks, ...internalLinks]) {
       expect(countOccurrences(raw, link)).toBe(1);
     }
+    for (const link of new Set(inlineColumnLinks)) {
+      expect(countOccurrences(raw, link), link).toBe(
+        inlineColumnLinks.filter((candidate) => candidate === link).length,
+      );
+    }
     expect(parsed.content).not.toMatch(/\]\(\/(?:ko|zh-hant|ja)(?:\/|\))/);
+  });
+
+  it('links the hub to column 275 and every inline English column link resolves to a published English column', () => {
+    expect(raw).toContain(`](${propertyHref})`);
+    expect(propertyRaw).toContain(`](${hubHref})`);
+
+    for (const link of inlineColumnLinks) {
+      const linkedSlug = link.match(/\(\/en\/columns\/([^)]+)\)$/)?.[1] ?? '';
+      expect(getColumnPost(linkedSlug, 'en'), link).toBeDefined();
+    }
   });
 
   it('ends with the exact disclaimer and author and nothing else', () => {
@@ -1510,14 +1050,15 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
 
   it('freezes the exact visible English word count, calculated read time, and source digest', () => {
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
-    const calculatedMinutes = Math.ceil(visibleWordCount / 200);
+    // Lane policy 2026-10-06: en read_time is recalculated at about 230 words per minute.
+    const calculatedMinutes = Math.round(visibleWordCount / 230);
     const sourceSha256 = crypto
       .createHash('sha256')
       .update(raw)
       .digest('hex');
 
     expect(visibleWordCount).toBe(frozenVisibleWordCount);
-    expect(calculatedMinutes).toBe(30);
+    expect(calculatedMinutes).toBe(14);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(frozenSourceSha256);
@@ -1531,7 +1072,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(aliasPost?.content).toBe(post?.content);
     expect(aliasPost?.faq).toEqual(faq);
     expect(post?.content).toContain(`## ${headings[0]}`);
-    expect(post?.content).toContain(`## ${headings[12]}`);
+    expect(post?.content).toContain(`## ${headings[11]}`);
     expect(post?.content).toContain(disclaimer);
     expect(post?.content).toContain(author);
     expect(post?.content).not.toContain(`# ${title}`);
@@ -1544,14 +1085,20 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(aliasPost?.featuredImage).toBe(post?.featuredImage);
   });
 
-  it('rejects exact legacy wording, semantic overclaims, promotional copy, and wrong identity', () => {
+  it('rejects exact legacy wording, semantic overclaims, promotional copy, leaked instructions, and wrong identity in the hub and column 275', () => {
     const serialized = JSON.stringify({
       raw,
       parsedContent: parsed.content,
       postTitle: post?.title,
       postContent: post?.content,
       postFaq: post?.faq,
+      propertyRaw,
+      propertyParsedContent: propertyParsed.content,
+      propertyPostTitle: propertyPost?.title,
+      propertyPostContent: propertyPost?.content,
+      propertyPostFaq: propertyPost?.faq,
     });
+    const hubAndPropertyRaw = `${raw}\n${propertyRaw}`;
     const forbiddenLiterals = [
       'within 30 days from the date of receiving the judgment or mediation record',
       'from the date of receiving the judgment or mediation record',
@@ -1571,6 +1118,9 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'you may first petition the court to enforce the cohabitation duty and then file a divorce lawsuit',
       'child support may be claimed in line with Korea’s cost-of-living level',
       'the Hague Convention automatically applies to Taiwan',
+      'Do not state',
+      'Do not treat',
+      'Do not promise',
       'reply promptly',
       'leave a comment',
       'DM',
@@ -1584,63 +1134,87 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const forbidden of forbiddenLiterals) {
       expect(serialized).not.toContain(forbidden);
     }
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'receipt of a judgment or mediation record starts every thirty-day period',
     );
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'thirty days is only an online-filing period',
     );
-    expect(raw).not.toContain('lateness invalidates divorce');
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain('lateness invalidates divorce');
+    expect(hubAndPropertyRaw).not.toContain(
       'foreign marriage or divorce is governed only by foreign local law',
     );
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'registering the marriage in Taiwan or suing in Taiwan are the only choices',
     );
-    expect(raw).not.toContain('every marital asset is divided equally');
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
+      'every marital asset is divided equally',
+    );
+    expect(hubAndPropertyRaw).not.toContain(
       'average monthly consumption determines post-divorce support',
     );
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'responsible or adulterous spouse absolutely can or cannot petition',
     );
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'the constitutional judgment repealed the Article 1052 paragraph 2 proviso',
     );
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'a missing-person report or prior cohabitation action is always required',
     );
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'several months away from home is itself a divorce ground',
     );
-    expect(raw).not.toContain(
-      'child-support modification requires an unforeseeable event',
-    );
-    expect(raw).not.toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'Korean living costs alone determine child support',
     );
-    expect(raw).toContain(
+    expect(hubAndPropertyRaw).not.toContain(
       'Do not state or imply that the 1980 Hague Child Abduction Convention automatically governs Taiwan.',
+    );
+    expect(raw).toContain(
+      'The 1980 Hague Child Abduction Convention does not automatically govern Taiwan.',
     );
     expect(raw).toContain(
       'There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked.',
     );
   });
 
-  it('contains no invisible characters, cross-locale routes, or visible script leakage', () => {
-    expect(raw).not.toContain('\uFEFF');
-    expect(raw).not.toContain('\u00A0');
-    expect(raw).not.toContain('\u200B');
-    expect(raw).not.toMatch(/\]\(\/(?:ko|zh-hant|ja)(?:\/|\))/);
-    expect(parsed.content).not.toMatch(/[\u3040-\u30ff]/);
-    expect(parsed.content).not.toMatch(/[\uac00-\ud7af]/);
-    // Visible CJK except the exact contracted attorney characters in the author line.
-    const contentWithoutAuthor = parsed.content.replace(author, '');
-    expect(contentWithoutAuthor).not.toMatch(/[\u4e00-\u9fff]/);
+  it('uses the current Article 1030-1 fairness standard and never the manifestly-unfair wording outside the constitutional holding', () => {
+    expect(propertyRaw).not.toMatch(/manifestly/i);
+    expect(propertyPost?.content).not.toMatch(/manifestly/i);
+    expect(raw).not.toContain('manifestly unfair');
+    // The only "manifestly" in the hub is the Constitutional Court holding on the Article 1052 proviso.
+    for (const occurrence of raw.matchAll(/manifestly[^.;]*/g)) {
+      expect(occurrence[0]).toContain('manifestly harsh result');
+    }
+    expect(raw).not.toMatch(/Article 1030-1[^.]*manifestly/);
+  });
+
+  it('contains no invisible characters, cross-locale routes, or visible script leakage in the hub and column 275', () => {
+    for (const [name, text, content] of [
+      ['007', raw, parsed.content],
+      ['275', propertyRaw, propertyParsed.content],
+    ] as const) {
+      expect(text, name).not.toContain('﻿');
+      expect(text, name).not.toContain(' ');
+      expect(text, name).not.toContain('​');
+      expect(text, name).not.toMatch(/\]\(\/(?:ko|zh-hant|ja)(?:\/|\))/);
+      expect(content, name).not.toMatch(/[぀-ヿ]/);
+      expect(content, name).not.toMatch(/[가-힯]/);
+      expect(content, name).not.toMatch(
+        /(?:reply promptly|お気軽にコメント|대만 이혼|台灣離婚程序)/,
+      );
+    }
+    // Visible CJK is limited to the contracted author characters and the statutory term 不治之惡疾.
+    const hubCjk = parsed.content
+      .replace(author, '')
+      .replace('(不治之惡疾)', '');
+    expect(hubCjk).not.toMatch(/[一-鿿]/);
     expect(parsed.content).toContain('曾雋崴');
-    expect(parsed.content).not.toMatch(
-      /(?:reply promptly|お気軽にコメント|대만 이혼|台灣離婚程序)/,
-    );
+    expect(parsed.content).toContain('不治之惡疾');
+    const propertyCjk = propertyParsed.content.replace(author, '');
+    expect(propertyCjk).not.toMatch(/[一-鿿]/);
+    expect(propertyParsed.content).toContain('曾雋崴');
   });
 
   it('retains title, FAQ, source URL, and complete body through loader and parse', () => {
@@ -1648,15 +1222,18 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post?.faq).toEqual(faq);
     expect(raw).toContain(sourceUrl);
     expect(post?.content).toContain(`## ${headings[0]}`);
-    expect(post?.content).toContain(`## ${headings[12]}`);
-    expect(post?.content).toContain(faq1Answer);
-    expect(post?.content).toContain(faq6Answer);
+    expect(post?.content).toContain(`## ${headings[11]}`);
+    expect(post?.faq?.map((item) => item.a)).toContain(faq1Answer);
+    expect(post?.faq?.map((item) => item.a)).toContain(faq4Answer);
     expect(post?.content).toContain(disclaimer);
     expect(post?.content).toContain(author);
     for (const link of officialLinks) {
       expect(post?.content).toContain(link);
     }
     for (const link of internalLinks) {
+      expect(post?.content).toContain(link);
+    }
+    for (const link of inlineColumnLinks) {
       expect(post?.content).toContain(link);
     }
   });
@@ -1670,13 +1247,243 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const civilCodeUrlEscaped = civilCodeUrl.replace(/&/g, '&amp;');
 
     expect(html).toContain(headings[0]);
-    expect(html).toContain(headings[12]);
-    expect(html).toContain(faq1Answer);
+    expect(html).toContain(headings[11]);
+    expect(html).toContain('Article 1050 separates three requirements:');
     expect(html).toContain('Taiwan Civil Code');
     expect(
       html.includes(civilCodeUrl) || html.includes(civilCodeUrlEscaped),
     ).toBe(true);
+    expect(html).toContain(propertyHref);
     expect(html).toContain('/en/contact');
     expect(html).toContain('Contact Us');
+  });
+});
+
+describe('English family column 275 — property, damages and support moved out of column 007', () => {
+  const propertyTitle =
+    'House Title, Residual-Property Distribution, Damages, and Post-Divorce Support in a Taiwan Divorce';
+  const propertyImage =
+    '../images/275-taiwan-divorce-property-damages-support/featured-01.webp';
+  const propertyImageAlt =
+    'A single house key on a ring beside two separate stacks of blank papers on a wooden table.';
+  const propertyBodyImage = `![${propertyImageAlt}](${propertyImage})`;
+  const propertyInlineLinks = [
+    '[Taiwan marital property division with an American spouse](/en/columns/taiwan-marital-property-division-us-assets)',
+    `[${title}](${hubHref})`,
+  ];
+  const article1017SubsectionHeading =
+    '### Article 1017 classifications and presumptions';
+  const article10301SubsectionHeading =
+    '### Article 1030-1 residual-property distribution';
+  const unmarriedSubsectionHeading = '### Unmarried cohabitation and third parties';
+  const article1017Paragraph =
+    'Civil Code Article 1017 distinguishes premarital property from property acquired during marriage and provides that property that cannot be proved to be premarital or acquired during marriage is presumed to have been acquired during marriage, and that property that cannot be proved to belong to the husband or the wife is presumed to be jointly owned by the spouses. This is a starting point for classification and proof in calculating the matrimonial property regime; it is not a shortcut for determining ownership irrespective of registration or defeating the other spouse’s separate claims. Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.';
+  const article10301CalculationParagraph =
+    'Under Article 1030-1, when the statutory matrimonial-property regime ends, the statutory calculation generally looks to each spouse’s net residual property composed of qualifying property acquired during marriage, after the statutory exclusions and relevant debts, then distributes the difference between those net residual amounts. The difference is generally divided equally. Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded from the statutory calculation. Relevant debts and the statutory rules governing dispositions made before termination of the matrimonial property regime must also be considered. Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage, and it is not the same concept as common property under a different marital regime.';
+  const article10301AdjustmentParagraph =
+    'Where one spouse made no contribution or cooperation toward the marital life, or there are other circumstances, and as a result equal division would be unfair, the court may adjust or waive the amount distributed. In making that decision the court must consider, among other factors, the spouses’ household labor, care and upbringing of the children, overall contribution and cooperation toward the family, the length of their shared life and of any separation, when property was acquired after marriage, and each spouse’s economic capacity.';
+  const article10301FaultParagraph =
+    'Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference. Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities. Which country’s law governs the property, and how US accounts and a 401(k) fit in, are covered in [Taiwan marital property division with an American spouse](/en/columns/taiwan-marital-property-division-us-assets).';
+  const article10301PeriodParagraph =
+    'The claim is extinguished if it is not exercised within two years from the date on which the claimant learned that there was a residual-property difference and, in any event, within five years from termination of the statutory matrimonial-property regime. These two periods apply only to the Article 1030-1 claim; they must not be used as the periods for ownership, loan, damages, post-divorce spousal support, or child-support claims. The actual triggering date and the date on which the statutory regime terminated must be determined from the evidence in each case.';
+  const article1056Paragraph =
+    'Article 1056 provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
+  const article1057Paragraph =
+    'Article 1057 concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce. The analysis must first confirm that the divorce was judicial rather than by mutual consent, that the claimant was without fault, and that the divorce actually caused the financial hardship. The scope of support must then be assessed from concrete evidence, including the claimant’s needs and financial resources. It is not residual-property distribution, child support, or a fixed penalty attached to every finding of fault. Article 1116-2 continues parents’ duty to support a minor child after divorce. Child support is distinct from Article 1057 spousal support. The amount of any support or damages award depends on the specific statutory right and the evidence. Government average consumption statistics are not a binding formula that automatically sets Article 1057 support.';
+
+  it('publishes the exact complete frontmatter, the moved FAQ pair and the loaded identity', () => {
+    expect(propertyParsed.data).toEqual({
+      title: propertyTitle,
+      seoTitle: 'Taiwan Divorce: Property, Damages, Support',
+      summary:
+        'House title, residual-property distribution, damages, and post-divorce support are separate claims with different elements, calculations, and time limits.',
+      published: '2026-10-06',
+      lastmod: '2026-10-06',
+      date_display: 'October 6, 2026',
+      read_time: '5 min read',
+      categories: ['Taiwan Legal Information'],
+      topic: 'family',
+      featured_image: propertyImage,
+      featured_image_alt: propertyImageAlt,
+      featured_image_caption:
+        'AI-generated fictional scene; it does not depict a real company, facility or person.',
+      faq: propertyFaq,
+      audience: ['en'],
+    });
+    expect(propertyPost).toMatchObject({
+      slug: propertySlug,
+      title: propertyTitle,
+      readTime: '5 min read',
+      category: 'legal',
+      faq: propertyFaq,
+      featuredImage:
+        '/images/blog/275-taiwan-divorce-property-damages-support/featured-01.webp',
+    });
+    expect(
+      fs.existsSync(
+        path.join(
+          process.cwd(),
+          'public/images/blog/275-taiwan-divorce-property-damages-support/featured-01.webp',
+        ),
+      ),
+    ).toBe(true);
+  });
+
+  it('keeps the read time within one minute of the visible word count at about 230 words per minute', () => {
+    const visibleWordCount = countVisibleEnglishWords(propertyParsed.content);
+    const minutes = Number(
+      String(propertyParsed.data.read_time).match(/^(\d+) min read$/)?.[1],
+    );
+
+    expect(visibleWordCount).toBeGreaterThanOrEqual(1_000);
+    expect(Math.abs(minutes - visibleWordCount / 230)).toBeLessThanOrEqual(1);
+    expect(propertyPost?.readTime).toBe(propertyParsed.data.read_time);
+  });
+
+  it('uses the sole exact H1 followed immediately by the sole contracted image and the four contracted H2 sections', () => {
+    expect(
+      Array.from(
+        propertyParsed.content.matchAll(/^# (.+)$/gm),
+        (match) => match[1],
+      ),
+    ).toEqual([propertyTitle]);
+    expect(propertyParsed.content).toMatch(
+      new RegExp(
+        `^\\n# ${propertyTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n${propertyBodyImage.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n`,
+      ),
+    );
+    expect(
+      Array.from(
+        propertyParsed.content.matchAll(/!\[[^\]]*\]\([^)]+\)/g),
+        (match) => match[0],
+      ),
+    ).toEqual([propertyBodyImage]);
+    expect(propertyPost?.content).not.toMatch(/!\[[^\]]*\]\([^)]+\)/);
+    expect(
+      Array.from(
+        propertyParsed.content.matchAll(/^## (.+)$/gm),
+        (match) => match[1],
+      ),
+    ).toEqual(propertyHeadings);
+  });
+
+  it('separates the three house inquiries and keeps premarital funds and registration as evidence only', () => {
+    const section = sectionBody(propertyParsed.content, propertyHeadings[0]);
+    const requiredPhrases = [
+      'Separate at least three inquiries for a house or other asset:',
+      '1. Who owns the specific asset as a matter of title, beneficial ownership, or another ownership theory;',
+      '2. Whether a gift, nominee-registration, loan, trust, unjust-enrichment, reimbursement, or related claim can be established from the parties’ real agreement and evidence; and',
+      '3. Whether the asset or its value enters residual matrimonial-property calculation under Article 1030-1 when the statutory regime ends.',
+      'A down payment or loan installment paid from premarital savings is relevant source-of-funds evidence. It does not by itself transfer registered title or dictate every later claim. Registration in one spouse’s name is important evidence of formal title, but it does not by itself resolve every contractual, beneficial, reimbursement, or matrimonial-property issue.',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+      expect(propertyPost?.content).toContain(phrase);
+    }
+  });
+
+  it('publishes the exact Article 1017 classification paragraph with both statutory presumptions', () => {
+    expect(
+      firstParagraphAfter(propertyParsed.content, article1017SubsectionHeading),
+    ).toBe(article1017Paragraph);
+    expect(countOccurrences(propertyParsed.content, article1017Paragraph)).toBe(
+      1,
+    );
+    expect(article1017Paragraph).toContain(
+      'property that cannot be proved to be premarital or acquired during marriage is presumed to have been acquired during marriage',
+    );
+    expect(article1017Paragraph).toContain(
+      'property that cannot be proved to belong to the husband or the wife is presumed to be jointly owned by the spouses',
+    );
+    expect(propertyRaw).not.toContain(
+      'property whose time of acquisition is difficult to prove',
+    );
+  });
+
+  it('publishes the exact Article 1030-1 calculation, adjustment, fault, and claim-period paragraphs with the current fairness test', () => {
+    expect(
+      paragraphsAfter(propertyParsed.content, article10301SubsectionHeading).slice(
+        0,
+        4,
+      ),
+    ).toEqual([
+      article10301CalculationParagraph,
+      article10301AdjustmentParagraph,
+      article10301FaultParagraph,
+      article10301PeriodParagraph,
+    ]);
+    expect(article10301AdjustmentParagraph).toContain(
+      'and as a result equal division would be unfair, the court may adjust or waive the amount distributed',
+    );
+    expect(article10301AdjustmentParagraph).toContain(
+      'the spouses’ household labor, care and upbringing of the children, overall contribution and cooperation toward the family, the length of their shared life and of any separation, when property was acquired after marriage, and each spouse’s economic capacity',
+    );
+    expect(propertyRaw).not.toContain('manifestly unfair');
+    expect(propertyRaw).not.toContain('Where equal division of the residual difference');
+    expect(propertyRaw).not.toContain('concealment or disposition of property');
+    expect(propertyPost?.content).toContain(article10301PeriodParagraph);
+    expect(propertyRaw).toContain(
+      'a two-year period from knowledge of the residual-property difference and a five-year period from termination of the statutory matrimonial-property regime',
+    );
+  });
+
+  it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {
+    const section = sectionBody(propertyParsed.content, propertyHeadings[1]);
+    const paragraphs = paragraphsAfter(
+      propertyParsed.content,
+      `## ${propertyHeadings[1]}`,
+    );
+    const requiredPhrases = [
+      article1056Paragraph,
+      article1057Paragraph,
+      'Article 1116-2 continues parents’ duty to support a minor child after divorce.',
+      'Child support is distinct from Article 1057 spousal support.',
+      'An unmarried couple does not obtain divorce rights, Article 1056 divorce damages, or Article 1057 post-divorce support merely because they lived together. Actual co-ownership, loans, contracts, nominee registration, trusts, unjust enrichment, or torts may still raise separate claims on their own legal bases.',
+      'An in-law or another relative of a spouse is not an obligor for post-divorce spousal support under Article 1057.',
+      'Serious interference or insults by a third party do not automatically give rise to damages.',
+      'A claim against a third party requires a separate legal basis in tort or property law and evidence of the applicable elements, such as an unlawful act, intent or negligence, damage, and causation.',
+    ];
+
+    expect(paragraphs.slice(0, 3)).toEqual([
+      article1056Paragraph,
+      article1057Paragraph,
+      unmarriedSubsectionHeading,
+    ]);
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+      expect(propertyPost?.content).toContain(phrase);
+    }
+    expect(propertyRaw).not.toContain('Do not treat');
+    expect(propertyRaw).not.toContain('Do not promise');
+  });
+
+  it('links back to the hub, links to its inline sources, keeps its two official links, and ends with the exact disclaimer and author', () => {
+    const markdownLinks = Array.from(
+      propertyParsed.content.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g),
+      (match) => match[0],
+    );
+
+    expect(markdownLinks).toEqual([
+      ...propertyInlineLinks,
+      officialLinks[0],
+      officialLinks[1],
+      internalLinks[0],
+      internalLinks[2],
+    ]);
+    expect(propertyInlineLinks[1]).toContain(`](${hubHref})`);
+    expect(countOccurrences(propertyRaw, `](${hubHref})`)).toBe(1);
+    expect(getColumnPost(canonicalSlug, 'en')).toBeDefined();
+    for (const link of propertyInlineLinks) {
+      const linkedSlug = link.match(/\(\/en\/columns\/([^)]+)\)$/)?.[1] ?? '';
+      expect(getColumnPost(linkedSlug, 'en'), link).toBeDefined();
+    }
+    expect(propertyRaw.trimEnd().endsWith(`- ${internalLinks[2]}
+
+${propertyDisclaimer}
+
+${author}`)).toBe(true);
+    expect(countOccurrences(propertyRaw, propertyDisclaimer)).toBe(1);
+    expect(countOccurrences(propertyRaw, author)).toBe(1);
   });
 });

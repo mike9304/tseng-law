@@ -2,9 +2,9 @@
 title: "Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children"
 seoTitle: "Taiwan Divorce Q&A: Property and Children"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
-lastmod: "2026-09-10"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
-read_time: "30 min read"
+read_time: "14 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
@@ -16,10 +16,6 @@ faq:
     a: "No. Depending on the nature of the family matter, a Taiwan court may order a party or legal representative to appear in person. A failure to comply without just cause may result in an initial fine of up to NTD 30,000 under Family Act Article 13 and Civil Procedure Code Article 303, which applies mutatis mutandis. Whether the spouses must mediate together in the same room, or whether separate sessions, safety measures, representation, or other procedural arrangements are available, depends on the court and the circumstances of the case."
   - q: "Can the spouse responsible for marital breakdown petition for judicial divorce?"
     a: "The proviso to current Civil Code Article 1052, paragraph 2 provides that, where a serious cause for the breakdown of the marriage is attributable solely to one spouse, only the other spouse may, in principle, petition for divorce. However, Taiwan Constitutional Court Judgment 112-Hsien-Pan-4 held the proviso unconstitutional to the extent that it completely deprives the responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case. Because the proviso remains in the statutory text, a petition by the responsible spouse should not be treated as automatically available or automatically barred; the outcome depends on how the court applies the judgment’s reasoning to the specific facts."
-  - q: "Does paying for a house or holding title decide ownership and residual-property distribution?"
-    a: "No. Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. The parties must separately examine their actual agreement, the cause and timing of acquisition, fund flows, debts, whether property was acquired gratuitously, and the supporting evidence. Neither paying part of the cost with premarital funds nor registering the house in one party’s name determines every issue."
-  - q: "Are residual-property distribution, divorce damages, and post-divorce support the same claim or subject to one five-year period?"
-    a: "No. A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits. The Article 1030-1 claim is subject to a two-year period from knowledge of the residual-property difference and a five-year period from termination of the statutory matrimonial-property regime, but those periods must not be carried over to the other claims."
   - q: "How does a Taiwan court decide issues concerning a minor child?"
     a: "Under Civil Code Articles 1055 and 1055-1, a Taiwan court decides the exercise and assumption of rights and duties regarding a minor child, contact or visitation, and other child-related matters according to the child’s best interests. The court considers the statutory factors and the specific evidence, including the child’s age, health, views, and developmental needs; each parent’s living circumstances, caregiving capacity, and attitude; the child’s emotional relationship with each parent; and whether either parent has interfered with the child’s relationship with the other. Neither a parent’s income nor responsibility for the breakdown of the marriage determines the outcome by itself."
 ---
@@ -42,8 +38,6 @@ Divorce established through court mediation or settlement ends the marriage when
 
 Judicial divorce is granted by court judgment on a statutory ground under Civil Code Article 1052. The divorce status depends on finality of the judgment under the applicable procedure, not on informal agreement alone.
 
-These paths must not be blended. Documents, proof, registration steps, and review routes differ for each path.
-
 ### First checks in a cross-border family
 
 Where a foreign nationality, foreign marriage or divorce, overseas residence, or another foreign element is present, separate at least five questions:
@@ -54,13 +48,7 @@ Where a foreign nationality, foreign marriage or divorce, overseas residence, or
 4. what Taiwan household-registration step and authenticated documents are required; and
 5. what additional registration, recognition, or enforcement step is required in another relevant jurisdiction.
 
-No single factor—such as a party’s nationality, foreign status, or place of marriage—answers all five questions. For example, whether a proceeding may be brought in Taiwan is different from whether a foreign judgment has effect in Taiwan, and updating Taiwan household-registration records does not automatically update family-status records in another country. The parties should therefore identify their current marital and household-registration status and the precise legal effects they seek before choosing a divorce path.
-
 ## 2. Mutual-Consent Divorce and Household Registration
-
-Under Civil Code Article 1050, the parties must agree to divorce in writing, at least two witnesses must sign after confirming both parties’ genuine intent to divorce, and the divorce must be registered with the household-registration authority. A signed agreement alone does not complete the divorce. Where foreign elements are involved, the parties must separately check the applicable law, document authentication and translation requirements, and any registration required in another country or region.
-
-### Article 1050 elements
 
 Article 1050 separates three requirements:
 
@@ -68,7 +56,7 @@ Article 1050 separates three requirements:
 2. Witnesses. At least two witnesses must sign after becoming aware of and confirming both spouses’ genuine intent to divorce. A witness does not satisfy the requirement by merely adding a name to a document without confirming that intent.
 3. Household registration. Registration with the household-registration authority is constitutive for this path. Without registration, the private writing does not complete a Taiwan mutual-consent divorce.
 
-Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.
+Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. Release clauses and filing through a representative are covered in [divorcing a Taiwanese spouse by agreement](/en/columns/taiwanese-spouse-divorce-agreement-registration).
 
 ### Court results and Household Registration Act Articles 48 and 48-2
 
@@ -78,45 +66,35 @@ Under Household Registration Act Article 48, the general application period for 
 
 A late application must still be accepted. Lateness does not undo an already effective court divorce. If no party applies after written demand, and the statutory conditions are met, the household-registration office registers the result directly under Article 48-2.
 
-Online filing is available only within the statutory application period. The thirty-day period is the general deadline for registering the court result, not a deadline exclusive to online filing.
+Online filing is available only within the statutory application period.
 
 ## 3. Court Mediation, Litigation, Appearance, and Review
-
-No. Depending on the nature of the family matter, a Taiwan court may order a party or legal representative to appear in person. A failure to comply without just cause may result in an initial fine of up to NTD 30,000 under Family Act Article 13 and Civil Procedure Code Article 303, which applies mutatis mutandis. Whether the spouses must mediate together in the same room, or whether separate sessions, safety measures, representation, or other procedural arrangements are available, depends on the court and the circumstances of the case.
-
-### Mediation and litigation as related but distinct stages
 
 Family matters governed by the Family Act ordinarily proceed through court mediation before adjudication. Even a matter filed directly for adjudication may be deemed an application for mediation under the Act. Because there are exceptions involving the method of service or the nature of the matter, as well as rules governing transitions between procedures, however, not every case can be described as following a single immutable sequence. Mediation may address not only the parties’ intention to divorce but also related issues involving property, children, and the manner of payment, but the court may not confirm, without modification, an agreement that is detrimental to a minor child.
 
 Court mediation or settlement, once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. Litigation may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.
 
-The time required to resolve a case varies depending on service of process, the number of mediation sessions, the facts and evidence in dispute, any appraisals or investigations, child-related issues, international service, and how many levels of court proceedings are involved, so no fixed completion date can be given.
-
 ### Personal appearance
 
-Family Act Article 13 applies when the court orders a party or legal representative to appear in person. Unjustified nonappearance then triggers Civil Procedure Code Article 303 mutatis mutandis, with the qualifications stated above: a first fine of up to NTD 30,000, possible repeated sanctions after further lawful notice, and no arrest for compulsory appearance under this rule.
+Family Act Article 13 applies when the court orders a party or legal representative to appear in person. Unjustified nonappearance then triggers Civil Procedure Code Article 303 mutatis mutandis: a first fine of up to NTD 30,000, possible repeated sanctions after further lawful notice, and no arrest for compulsory appearance under this rule.
 
-The order to appear personally is not the same as a universal rule that both spouses must always mediate face-to-face. Remote, separate, representative, or safety arrangements are available only if the court so decides under law and the circumstances. They are neither automatic rights nor automatic prohibitions.
+The order to appear personally is not the same as a universal rule that both spouses must always mediate face-to-face. Remote, separate, representative, or safety arrangements are available only if the court so decides under law and the circumstances.
 
 ### Review and appeal
 
-Review or appeal depends on the type of decision, how and when it was served, whether it is final, and the case’s procedural posture. A mediation or settlement record, a ruling, and a judgment are not interchangeable for that purpose. There is no single universal appeal deadline that covers every family decision. Calculate the correct route and period from the instrument actually issued before acting.
+Review or appeal depends on the type of decision, how and when it was served, whether it is final, and the case’s procedural posture. A mediation or settlement record, a ruling, and a judgment are not interchangeable for that purpose. There is no single universal appeal deadline that covers every family decision.
 
 ## 4. Judicial-Divorce Grounds and the Responsible-Spouse Proviso
-
-The proviso to current Civil Code Article 1052, paragraph 2 provides that, where a serious cause for the breakdown of the marriage is attributable solely to one spouse, only the other spouse may, in principle, petition for divorce. However, Taiwan Constitutional Court Judgment 112-Hsien-Pan-4 held the proviso unconstitutional to the extent that it completely deprives the responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case. Because the proviso remains in the statutory text, a petition by the responsible spouse should not be treated as automatically available or automatically barred; the outcome depends on how the court applies the judgment’s reasoning to the specific facts.
-
-### Article 1052 paragraph 1: ten grounds
 
 Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce when any of the following applies to the other spouse:
 
 1. Bigamy.
 2. Consensual sexual intercourse with a person other than the spouse.
 3. Unbearable abuse by one spouse against the other.
-4. Abuse by one spouse against the other spouse’s lineal relative, or by one spouse’s lineal relative against the other spouse, making common life unbearable. The actor and the victim must be identified with care: either a spouse abuses the other spouse’s lineal relative, or a lineal relative of one spouse abuses the other spouse, in either case so that common life becomes unbearable.
+4. Abuse by one spouse against the other spouse’s lineal relative, or by one spouse’s lineal relative against the other spouse, making common life unbearable.
 5. Malicious desertion of the other spouse in a continuing state.
 6. An attempt by one spouse to kill the other.
-7. An incurable serious disease.
+7. An incurable loathsome disease (不治之惡疾).
 8. A serious incurable mental illness.
 9. Life or death unknown for more than three years.
 10. A final sentence of imprisonment for more than six months for an intentional offense.
@@ -125,95 +103,27 @@ Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may p
 
 Paragraph 2 is separate from the ten grounds. It allows a petition where another serious cause makes continuation of the marriage difficult. Its proviso provides that if that cause is attributable to one spouse, only the other spouse may petition.
 
-Although the legislative period specified by Constitutional Court Judgment 112-Hsien-Pan-4 has elapsed, the wording of the proviso itself remained in the statute as of 2026-07-25. The Court held the proviso unconstitutional to the extent that it completely deprives the solely responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case. Courts must apply the judgment’s constitutional reasoning to the facts of each case.
+Although the legislative period specified by Constitutional Court Judgment 112-Hsien-Pan-4 has elapsed, the wording of the proviso itself remained in the statute as of 2026-10-06. The Court held the proviso unconstitutional to the extent that it completely deprives the solely responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case. Courts must apply the judgment’s constitutional reasoning to the facts of each case.
 
-Do not state that an at-fault spouse can never petition, can always petition, or that adultery alone automatically grants or bars divorce. Do not treat marital fault as a mechanical rule that decides damages, residual-property distribution, parental responsibility, or child support.
+Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support.
 
 ### Missing or absent spouses: no universal shortcut
 
-For a missing or absent spouse, distinguish three analyses:
-
-- life or death unknown for more than three years under Article 1052 paragraph 1;
-- malicious desertion continuing under Article 1052 paragraph 1; and
-- another serious cause under Article 1052 paragraph 2, subject to the proviso and Judgment 112-Hsien-Pan-4 where responsibility is in issue.
-
 A police missing-person report may be evidence of the spouse’s whereabouts and the passage of time, but it is not a mandatory prerequisite for every divorce claim. Nor is there a universal requirement to bring an action demanding cohabitation before alleging malicious desertion or another serious cause. Several months away from home, without more, does not establish any particular ground. The court must examine the reason for the departure, whether there was a justified reason to live separately, contact and support between the spouses, continuity, and the other specific facts.
-
-Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support. Each issue is determined under its own requirements and applicable standards, including the child’s best interests where relevant.
 
 ## 5. Foreign Marriage, Foreign Divorce, and Taiwan Records
 
-A foreign marriage or foreign divorce does not collapse into one universal Taiwan route. Identify, as separate questions, whether the marriage or divorce was completed abroad, whether Taiwan recognition or legal effect is sought, what Taiwan household registration is required, and what additional procedure remains necessary in another jurisdiction.
+A foreign marriage or foreign divorce does not collapse into one universal Taiwan route. Identify, as separate questions, whether the marriage or divorce was completed abroad, whether Taiwan recognition or legal effect is sought, what Taiwan household registration is required, and what additional procedure remains necessary in another jurisdiction. Taiwan’s required recognition or legal-effect determination and household registration may vary with whether the instrument is a court judgment or administrative certificate, its country of issue and form, and the parties’ current household-registration status.
 
-### Taiwan procedure and foreign procedure are not substitutes
+Documents from mainland China, Hong Kong, and Macao follow verification regimes that differ from ordinary foreign authentication.
 
-Taiwan court jurisdiction or administrative authority, the law applicable to the status or property issue, recognition of a foreign act or judgment in Taiwan, Taiwan household registration, and foreign registration or recognition are distinct steps. Completing a divorce under foreign local law does not, by itself, complete Taiwan household registration or prove Taiwan recognition. Conversely, filing only in Taiwan does not automatically resolve registration or recognition abroad.
+Registering a US divorce decree in Taiwan is covered in [getting a US divorce decree onto Taiwan’s household register](/en/columns/us-divorce-decree-recognition-taiwan). Preparing for a divorce while living abroad is covered in [preparing for a divorce consultation while living outside Taiwan](/en/columns/taiwanese-spouse-divorce-from-abroad).
 
-There is no fixed rule that parties must first re-register a foreign marriage in Taiwan or must always sue only in Taiwan. The correct sequence depends on nationality, domicile or habitual residence, place of marriage or divorce, current household records, any existing foreign judgment or certificate, service and procedural fairness, and the Taiwan legal effect requested.
+## 6. House Title, Residual-Property Distribution, Damages, and Post-Divorce Support
 
-### Documents, authentication, and Chinese translation
+Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits. Property, damages, and support claims are covered in [house title, residual-property distribution, damages, and post-divorce support in a Taiwan divorce](/en/columns/taiwan-divorce-property-damages-support).
 
-Depending on the type of document and where it was prepared, a foreign marriage or divorce record may require authentication by a Taiwan overseas mission or another competent authority. An authenticated or notarized Chinese translation may also be required when the applicable official guidance calls for one. Check the current Ministry of the Interior guide and the competent office or court for the document set actually in force; no single fixed checklist applies unchanged to every foreign divorce.
-
-Documents from mainland China, Hong Kong, and Macao follow verification regimes that differ from ordinary foreign authentication. Treat those regimes as separate administrative and statutory tracks rather than as interchangeable “foreign document” formalities.
-
-### Recognition, effect, and registration
-
-A statement that a divorce was completed under foreign law—or a foreign divorce certificate alone—does not complete every required Taiwan procedure. Conversely, not every foreign divorce requires the same recognition proceeding or the same documents. Taiwan’s required recognition or legal-effect determination and household registration may vary with whether the instrument is a court judgment or administrative certificate, its country of issue and form, and the parties’ current household-registration status.
-
-## 6. House Title, Premarital Funds, and Residual-Property Distribution
-
-No. Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. The parties must separately examine their actual agreement, the cause and timing of acquisition, fund flows, debts, whether property was acquired gratuitously, and the supporting evidence. Neither paying part of the cost with premarital funds nor registering the house in one party’s name determines every issue.
-
-### Specific-asset ownership versus residual-property distribution
-
-Separate at least three inquiries for a house or other asset:
-
-1. Who owns the specific asset as a matter of title, beneficial ownership, or another ownership theory;
-2. Whether a gift, nominee-registration, loan, trust, unjust-enrichment, reimbursement, or related claim can be established from the parties’ real agreement and evidence; and
-3. Whether the asset or its value enters residual matrimonial-property calculation under Article 1030-1 when the statutory regime ends.
-
-A down payment or loan installment paid from premarital savings is relevant source-of-funds evidence. It does not by itself transfer registered title or dictate every later claim. Registration in one spouse’s name is important evidence of formal title, but it does not by itself resolve every contractual, beneficial, reimbursement, or matrimonial-property issue.
-
-### Article 1017 classifications and presumptions
-
-Civil Code Article 1017 distinguishes premarital property from property acquired during marriage and provides that property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage. This is a starting point for classification and proof in calculating the matrimonial property regime; it is not a shortcut for determining ownership irrespective of registration or defeating the other spouse’s separate claims. Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.
-
-### Article 1030-1 residual-property distribution
-
-Under Article 1030-1, when the statutory matrimonial-property regime ends, the statutory calculation generally looks to each spouse’s net residual property composed of qualifying property acquired during marriage, after the statutory exclusions and relevant debts, then distributes the difference between those net residual amounts. The difference is generally divided equally.
-
-Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded from the statutory calculation. Relevant debts and the statutory rules governing dispositions made before termination of the matrimonial property regime must also be considered. Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage, and it is not the same concept as common property under a different marital regime.
-
-Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution after considering the statutory circumstances. Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference. However, specific facts falling within the statutory adjustment factors—such as the concealment or disposition of property, contributions through household labor and childcare, and the overall circumstances of the spouses’ shared life and acquisition of property—may be separately pleaded and proved. Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.
-
-The claim is extinguished if it is not exercised within two years from the date on which the claimant learned that there was a residual-property difference and, in any event, within five years from termination of the statutory matrimonial-property regime. These two periods apply only to the Article 1030-1 claim; they must not be used as the periods for ownership, loan, damages, post-divorce spousal support, or child-support claims. The actual triggering date and the date on which the statutory regime terminated must be determined from the evidence in each case.
-
-## 7. Damages, Post-Divorce Support, Unmarried Partners, and Third Parties
-
-No. A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits. The Article 1030-1 claim is subject to a two-year period from knowledge of the residual-property difference and a five-year period from termination of the statutory matrimonial-property regime, but those periods must not be carried over to the other claims.
-
-### Article 1056, Article 1057, and child support
-
-Article 1056 provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.
-
-Article 1057 concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce. The analysis must first confirm that the divorce was judicial rather than by mutual consent, that the claimant was without fault, and that the divorce actually caused the financial hardship. The scope of support must then be assessed from concrete evidence, including the claimant’s needs and financial resources. It is not residual-property distribution, child support, or a fixed penalty attached to every finding of fault.
-
-Article 1116-2 continues parents’ duty to support a minor child after divorce. Child support is distinct from Article 1057 spousal support.
-
-The amount of any support or damages award depends on the specific statutory right and the evidence. Government average consumption statistics are not a binding formula that automatically sets Article 1057 support.
-
-### Unmarried cohabitation and third parties
-
-An unmarried couple does not obtain divorce rights, Article 1056 divorce damages, or Article 1057 post-divorce support merely because they lived together. Actual co-ownership, loans, contracts, nominee registration, trusts, unjust enrichment, or torts may still raise separate claims on their own legal bases. Do not treat every cohabiting couple as married, and do not promise recovery in the abstract.
-
-An in-law or another relative of a spouse is not an obligor for post-divorce spousal support under Article 1057. Serious interference or insults by a third party do not automatically give rise to damages. A claim against a third party requires a separate legal basis in tort or property law and evidence of the applicable elements, such as an unlawful act, intent or negligence, damage, and causation.
-
-## 8. Minor Children, Parental Rights, and the Best-Interests Standard
-
-Under Civil Code Articles 1055 and 1055-1, a Taiwan court decides the exercise and assumption of rights and duties regarding a minor child, contact or visitation, and other child-related matters according to the child’s best interests. The court considers the statutory factors and the specific evidence, including the child’s age, health, views, and developmental needs; each parent’s living circumstances, caregiving capacity, and attitude; the child’s emotional relationship with each parent; and whether either parent has interfered with the child’s relationship with the other. Neither a parent’s income nor responsibility for the breakdown of the marriage determines the outcome by itself.
-
-### Complete parental rights and duties, not “custody” as an umbrella
+## 7. Minor Children, Parental Rights, and the Best-Interests Standard
 
 Under Taiwan law, the precise concept is the exercise and assumption of rights and duties regarding a minor child. It may include the child’s residence, day-to-day care, educational and medical decisions, management of the child’s property, and legal representation. Terms such as “parental rights” or “custody” may be used as shorthand for convenience, but no single term fully translates the entire set of rights and duties under Taiwan law.
 
@@ -221,63 +131,48 @@ Under Civil Code Article 1055, parents may agree on who will exercise and assume
 
 ### Best interests and statutory factors
 
-Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.
+Under Civil Code Article 1055-1, the court considers all circumstances in light of the child’s best interests, with particular attention to the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child, or between the child and others who live with the child; any circumstances in which one parent has interfered with the relationship between the other parent and the child; and the traditional customs, culture, and values of each ethnic group. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent. A custody case over a child kept in Taiwan, including how the court weighs these factors, is covered in [when the other parent keeps your child in Taiwan](/en/columns/us-parent-child-taken-to-taiwan-custody).
 
 ### Divorce while other issues remain open
 
 If the requirements of the chosen route to divorce are satisfied, the marriage itself may be dissolved first even though some property or child-related issues remain unresolved. This should not, however, be treated as a shortcut that can be recommended in every case. The preservation and settlement of unresolved property; the child’s residence, care, medical treatment, and education; the agreements or court orders needed for child support and contact; and whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending must all be considered together.
 
-## 9. Child Support, Contact, Enforcement, and Interim Protection
+## 8. Child Support, Contact, Enforcement, and Interim Protection
 
-Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce. Child support is a parent–child obligation. It is distinct from Article 1057 post-divorce support for a qualifying former spouse. Do not treat the two claims as interchangeable, and do not use the Article 1030-1 residual-property limitation period as a universal deadline for child support. The specific allocation of support should be determined from evidence of the child’s living expenses, education costs, medical expenses, and any special needs, together with each parent’s income, assets, ability to provide support, and actual share of caregiving.
-
-### Modification of child support
-
-A request to increase, decrease, or otherwise change child support is not limited to events the parties could not foresee when they first agreed or when the court first ordered payment. The reviewing court examines the child’s current needs, both parents’ resources and circumstances, the existing agreement or order, and the child’s best interests. Price changes, health needs, schooling, and other material shifts may be relevant evidence, but unforeseeability is not the sole legal threshold. Preserve expense records, payment history, income materials, and communications about support so the current picture can be shown accurately.
+Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce. Child support is a parent–child obligation. It is distinct from Article 1057 post-divorce support for a qualifying former spouse. The specific allocation of support should be determined from evidence of the child’s living expenses, education costs, medical expenses, and any special needs, together with each parent’s income, assets, ability to provide support, and actual share of caregiving. The part of a final child support ruling, or of a settlement reached in court, that has not yet been carried out may be changed on application to the court if, because circumstances have changed, leaving the original ruling or settlement as it stands has become clearly unfair (Family Act Article 102, paragraph 1, and Article 107, paragraph 2). Enforcing child support, including against a parent abroad, is covered in [child support across borders](/en/columns/taiwan-child-support-enforcement-cross-border).
 
 ### Contact, visitation, and enforcement
 
 If contact or visitation is obstructed, the available response depends on the existing agreement or court order and on the facts. A party may seek a court determination of contact, a change of the arrangement, enforcement of an existing instrument, or an appropriate interim measure. Family Act Article 194 requires enforcement methods to be selected under the child’s best interests. Those methods may involve direct or indirect compulsion as the law and the facts allow.
 
-There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked. The sequence and method of enforcement should be determined in light of the child’s age and views, current care and protection arrangements, the emotional impact of enforcement, and the child’s safety. Interim protection may be necessary where flight risk, retention, or safety is genuinely in issue, but the form of that protection is a court decision based on the instrument and the evidence.
+There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked. Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation. To protect the child’s day-to-day welfare, each obligation and procedure should be handled independently. Provisional orders in a custody case, including a ban on taking the child out of Taiwan, are covered in [when the other parent keeps your child in Taiwan](/en/columns/us-parent-child-taken-to-taiwan-custody).
 
-For child-support enforcement, the wording of the existing enforceable instrument, the payment due dates, the unpaid amount, and the payment history are important. For contact or visitation enforcement, it is important whether the method and conditions of contact are sufficiently specific. Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation. To protect the child’s day-to-day welfare, each obligation and procedure should be handled independently.
-
-### Evidence for support and contact disputes
-
-Preserve the current agreement or court decision, records of communications and attempted contact, the dates and places of attempted meetings, school and medical schedules, and facts affecting the child’s safety and stability.
-
-## 10. Cross-Border Relocation with a Child
+## 9. Cross-Border Relocation with a Child
 
 Cross-border relocation with a minor child is not decided by Korean living costs, a single nationality, or a treaty label alone. Separate the following questions and answer each on the facts and the law of every relevant jurisdiction.
 
 1. Authority over residence and travel. Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?
 2. Consent or court order. Does the other parent consent, or is a court determination required before relocation or retention abroad?
-3. Best interests and continuing contact. How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent? A workable plan should address the frequency of contact, stays during school holidays, travel costs, and handover locations.
-4. Passports, entry, exit, immigration, and registration. What requirements govern passport issuance and use, entry and exit, residence or immigration status, and family-status registration in Taiwan and the destination?
-5. Recognition and enforcement. Is an existing Taiwan or foreign order recognized and enforceable in each relevant jurisdiction, and what procedure is required to seek recognition or enforcement there?
-6. Actual expenses and both parents’ resources. Child support, if adjusted or newly determined after relocation, turns on the child’s actual needs and both parents’ resources and circumstances. Agreement that a child will live in Korea does not by itself fix support at Korean cost-of-living levels.
-7. Urgent protection. Where unlawful removal, retention, or a genuine safety risk is in issue, consider urgent protective or interim measures available under the law of each place where action may be needed.
+3. Passports, entry, exit, immigration, and registration. What requirements govern passport issuance and use, entry and exit, residence or immigration status, and family-status registration in Taiwan and the destination?
 
-Do not state or imply that the 1980 Hague Child Abduction Convention automatically governs Taiwan. Cross-border removal, retention, and return questions require advice and analysis in every relevant jurisdiction and cannot be reduced to a treaty label or to one country’s local cost tables. Taking a child away or refusing to return the child contrary to an existing agreement or order should not be recommended; before relocation, confirm that the necessary lawful consent or court decision is in place and identify any available urgent protective measures.
+The 1980 Hague Child Abduction Convention does not automatically govern Taiwan. Taking a child away or refusing to return the child contrary to an existing agreement or order should not be recommended; before relocation, confirm that the necessary lawful consent or court decision is in place and identify any available urgent protective measures.
 
-## 11. Evidence and Practical Preparation
+Planning a child’s life across two countries after the divorce is covered in [planning your child’s life across two countries](/en/columns/taiwanese-spouse-divorce-cross-border-parenting). A child kept in Taiwan by the other parent is covered in [what a Taiwan family court can do](/en/columns/us-parent-child-taken-to-taiwan-custody).
 
-Organize the materials not as a collection intended to pressure the other party, but as records that accurately explain jurisdiction, procedure, the facts, and the child’s needs. Preparing the following nine categories so that both the chronology of the case and the source of each original document are clear can reduce the risk of confusing different claims and deadlines.
+## 10. Evidence and Practical Preparation
 
-1. Identity, status, and addresses. Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address. Note any discrepancy between the information shown in the documents and where each party actually lives now or the address at which each party can be served.
+1. Identity, status, and addresses. Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address.
 2. Divorce instruments and court papers. Collect and organize by procedure any written mutual-consent divorce agreement; documentation of how the witnesses confirmed the spouses’ genuine intent to divorce; court papers; records of service; mediation and settlement records; judgments; and documents proving finality.
 3. Foreign marriage or divorce records. For foreign marriage and divorce records and foreign judgments or certificates, check authentication by a Taiwan overseas mission or other competent authority; the Chinese translation and whether it has been certified or notarized; and their recognition, legal effect, and registration status in Taiwan.
-4. Matrimonial property and debts. Identify the applicable matrimonial-property agreement and property regime. Link every asset and debt—and, where applicable, its registered titleholder and the source and timing of acquisition—to a complete inventory together with records of fund transfers, dispositions, loans, repayments, taxes, and valuations.
-5. Alleged divorce-ground chronology. Create a neutral timeline of the events and their timing underlying the alleged grounds for divorce. Preserve lawfully obtained communications, medical and police records, and other evidence in their original state. Distinguish speculation from directly verified facts.
-6. Each child’s situation. Compile information on each child’s age, health, education, residence, caregiving history and current care arrangements, views appropriate to the child’s stage of development, relationship with each parent, and safety and stability, all from the perspective of the child’s best interests.
-7. Support, contact, and relocation plans. Compile together any current child-related agreements and court proceedings, child-support payment records and actual expenses, the history of contact or visitation, travel documents and itineraries, and any specific plan for international relocation.
-8. Deadlines calculated from correct triggering events. Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event. Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.
-9. Privacy plan and limited disclosure. Share identification numbers, addresses, and medical, educational, or financial information concerning a spouse or child only with people and institutions that need the information and only to the extent necessary. Establish a privacy plan covering file-access permissions, methods of transmission, and disposal of copies.
+4. Alleged divorce-ground chronology. Create a neutral timeline of the events and their timing underlying the alleged grounds for divorce. Preserve lawfully obtained communications, medical and police records, and other evidence in their original state.
+5. Each child’s situation. Compile information on each child’s age, health, education, residence, caregiving history and current care arrangements, views appropriate to the child’s stage of development, relationship with each parent, and safety and stability, all from the perspective of the child’s best interests.
+6. Support, contact, and relocation plans. Compile together any current child-related agreements and court proceedings, child-support payment records and actual expenses, the history of contact or visitation, travel documents and itineraries, and any specific plan for international relocation.
+7. Deadlines calculated from correct triggering events. Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event. The dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates are different dates.
+8. Privacy plan and limited disclosure. Share identification numbers, addresses, and medical, educational, or financial information concerning a spouse or child only with people and institutions that need the information and only to the extent necessary. Establish a privacy plan covering file-access permissions, methods of transmission, and disposal of copies.
 
-Do not use unlawful surveillance, unauthorized access to accounts, intrusion into a mobile phone or computer, location tracking, recordings made in violation of law, or disclosure of a child’s private information as methods of gathering evidence. Retaliation against the other party, concealment or sham transfer of assets, and moving a child contrary to an agreement or court order may also create additional risks for the case and the child. If it is unclear whether material may lawfully be obtained or how it should be preserved, check the applicable law and court procedures before collecting it.
+Do not use unlawful surveillance, unauthorized access to accounts, intrusion into a mobile phone or computer, location tracking, recordings made in violation of law, or disclosure of a child’s private information as methods of gathering evidence.
 
-## 12. Official Sources
+## 11. Official Sources
 
 The following official primary sources were checked on 2026-07-25. Later amendment, judgment, or administrative change may affect an individual matter. Reconfirm the current text and administrative practice before relying on any provision.
 
@@ -292,12 +187,12 @@ The following official primary sources were checked on 2026-07-25. Later amendme
 9. [Constitutional Court Judgment 112-Hsien-Pan-4](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
 10. [Official English Text of Constitutional Court Judgment 112-Hsien-Pan-4](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
 
-## 13. Related Guidance
+## 12. Related Guidance
 
 - [Taiwan Family Law Services](/en/services/family)
 - [Taiwan Litigation Lawyer Guide](/en/taiwan-litigation-lawyer)
 - [Contact Us](/en/contact)
 
-This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and minor children; it is not legal advice for any specific matter. Procedures and outcomes may vary depending on jurisdiction, applicable law, recognition of foreign judgments, marital and household-registration status, the matrimonial-property regime, any existing agreement or court decision concerning minor children, the facts and evidence, and the latest official rules. Before taking action, separately confirm every deadline for registration, challenge or appeal, filing a claim, or enforcement by reference to the precise triggering event for the particular right or procedure.
+This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and minor children; it is not legal advice for any specific matter.
 
 Wei Tseng (曾雋崴), Taiwan Attorney

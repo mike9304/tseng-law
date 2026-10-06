@@ -1,36 +1,36 @@
 /* zh-hant lawyers list, second pass (son7-87 / Opus 5.5, 2026-10-01): green header, team (ZhHantTeam), fact band. */
 .root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
 
-.root:global(#zh-hant-lawyers) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 64px; border-bottom: none; }
-.root:global(#zh-hant-lawyers) :global(.page-header-title),
-.root:global(#zh-hant-lawyers) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
-.root:global(#zh-hant-lawyers) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
-.root:global(#zh-hant-lawyers) :global(.page-header .section-label) { color: var(--zh-gold); }
-.root:global(#zh-hant-lawyers) :global(.page-header .section-label::before) { background: var(--zh-gold); }
-.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb),
-.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
-.root:global(#zh-hant-lawyers) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 64px; border-bottom: none; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title),
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .section-label) { color: var(--zh-gold); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .section-label::before) { background: var(--zh-gold); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .breadcrumb),
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
 
 /* Basic facts about the lead attorney: three columns on a green band */
-.root:global(#zh-hant-lawyers) :global(#attorney-facts) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .container) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 48px; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title) { grid-column: 1 / -1; margin: 0 0 8px; font-family: var(--font-serif-tc); font-size: clamp(28px, 2.8vw, 36px); color: var(--zh-cream); }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-section) { border-top: 1px solid rgb(244 239 226 / 30%); padding-top: 18px; margin: 0; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-label) { font-size: 13px; letter-spacing: 0.14em; color: var(--zh-gold); font-weight: 700; margin-bottom: 10px; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts p) { margin: 0; font-size: 16.5px; line-height: 1.85; color: var(--zh-cream); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .container) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 48px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .section-title) { grid-column: 1 / -1; margin: 0 0 8px; font-family: var(--font-serif-tc); font-size: clamp(28px, 2.8vw, 36px); color: var(--zh-cream); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .attorney-card-section) { border-top: 1px solid rgb(244 239 226 / 30%); padding-top: 18px; margin: 0; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .attorney-card-label) { font-size: 13px; letter-spacing: 0.14em; color: var(--zh-gold); font-weight: 700; margin-bottom: 10px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts p) { margin: 0; font-size: 16.5px; line-height: 1.85; color: var(--zh-cream); }
 
 @media (max-width: 1000px) {
-  .root:global(#zh-hant-lawyers) :global(#attorney-facts .container) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .container) { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-lawyers) :global(.page-header) { padding: 40px 0 44px; }
-  .root:global(#zh-hant-lawyers) :global(#attorney-facts) { padding: 52px 0; }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header) { padding: 40px 0 44px; }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts) { padding: 52px 0; }
 }
 
 /* ===== Apple pass (2026-10-01) =====
    Light header with a big sans H1 (as on the zh-hant home and about), the team on a gray band with white tiles,
    and the attorney's basic facts as the home's dark chapter (black band, #1d1d1f tiles). */
-.root:global(#zh-hant-lawyers) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) {
   --ap-gray: #f5f5f7;
   --ap-text: #1d1d1f;
   --ap-muted: #6e6e73;
@@ -43,24 +43,24 @@
   background: #fff;
   color: var(--ap-text);
 }
-.root:global(#zh-hant-lawyers) :global(.container) { max-width: 1240px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.container) { max-width: 1240px; }
 
-.root:global(#zh-hant-lawyers) :global(.page-header) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header) {
   background: #fff;
   color: var(--ap-text);
   padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
   border-bottom: none;
 }
-.root:global(#zh-hant-lawyers) :global(.page-header)::after { display: none; }
-.root:global(#zh-hant-lawyers) :global(.page-header [data-page-header-slot='copy']) { max-width: none; }
-.root:global(#zh-hant-lawyers) :global(.page-header .section-label) { display: none; }
-.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb),
-.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
-.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb a:hover) { color: var(--ap-text); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header)::after { display: none; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header [data-page-header-slot='copy']) { max-width: none; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .section-label) { display: none; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .breadcrumb),
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .breadcrumb a:hover) { color: var(--ap-text); }
 /* 44px tap target for the breadcrumb link without moving the trail (padding offset by negative margin). */
-.root:global(#zh-hant-lawyers) :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 9px; margin: -10px -9px; }
-.root:global(#zh-hant-lawyers) :global(.page-header-title),
-.root:global(#zh-hant-lawyers) :global(.page-header-title *) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 9px; margin: -10px -9px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title),
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title *) {
   color: var(--ap-text) !important;
   font-family: var(--font-sans) !important;
   font-weight: 700;
@@ -68,8 +68,8 @@
   line-height: 1.08;
   letter-spacing: 0.01em;
 }
-.root:global(#zh-hant-lawyers) :global(.page-header-title) { max-width: 14em; margin: 20px 0 0; text-wrap: balance; }
-.root:global(#zh-hant-lawyers) :global(.page-header .section-lede) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title) { max-width: 14em; margin: 20px 0 0; text-wrap: balance; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header .section-lede) {
   max-width: 34em;
   margin: 22px 0 0;
   color: var(--ap-muted);
@@ -77,15 +77,15 @@
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.6;
 }
-.root:global(#zh-hant-lawyers) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
 
 /* Team on a gray band, white tiles */
-.root:global(#zh-hant-lawyers) :global(#team) { --team-band: var(--ap-gray); --team-tile: #fff; --team-line: var(--ap-line); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#team) { --team-band: var(--ap-gray); --team-tile: #fff; --team-line: var(--ap-line); }
 
 /* Basic facts: the dark chapter */
-.root:global(#zh-hant-lawyers) :global(#attorney-facts) { padding: clamp(84px, 10vw, 148px) 0; background: #000; color: #f5f5f7; border: none; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .container) { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts) { padding: clamp(84px, 10vw, 148px) 0; background: #000; color: #f5f5f7; border: none; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .container) { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .section-title) {
   grid-column: 1 / -1;
   max-width: 16em;
   margin: 0 auto clamp(24px, 3vw, 44px);
@@ -97,37 +97,37 @@
   color: #f5f5f7 !important;
   text-wrap: balance;
 }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title)::before,
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title)::after { display: none !important; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-section) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .section-title)::before,
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .section-title)::after { display: none !important; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .attorney-card-section) {
   margin: 0;
   padding: clamp(28px, 3vw, 40px);
   border: none;
   border-radius: var(--ap-radius);
   background: #1d1d1f;
 }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-label) { margin-bottom: 14px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; color: #8fd3b6; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts p) { font-size: clamp(17px, 1.5vw, 20px); font-weight: 600; line-height: 1.7; color: #f5f5f7; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .attorney-card-label) { margin-bottom: 14px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; color: #8fd3b6; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts p) { font-size: clamp(17px, 1.5vw, 20px); font-weight: 600; line-height: 1.7; color: #f5f5f7; }
 
 @media (max-width: 1000px) {
-  .root:global(#zh-hant-lawyers) :global(#attorney-facts .container) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .container) { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-lawyers) { --ap-radius: 22px; }
-  .root:global(#zh-hant-lawyers) :global(.page-header) { padding: 64px 0 40px; }
-  .root:global(#zh-hant-lawyers) :global(.page-header-title),
-  .root:global(#zh-hant-lawyers) :global(.page-header-title *) { letter-spacing: 0; }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) { --ap-radius: 22px; }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header) { padding: 64px 0 40px; }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title),
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title *) { letter-spacing: 0; }
   /* Eight characters at 44px are 2px wider than a 390px column; a touch smaller keeps the title on one line
      instead of breaking 曾雋崴律 / 師與團隊. */
-  .root:global(#zh-hant-lawyers) :global(.page-header-title),
-  .root:global(#zh-hant-lawyers) :global(.page-header-title *) { font-size: min(44px, 10.6vw); }
-  .root:global(#zh-hant-lawyers) :global(#attorney-facts) { padding: 80px 0; }
-  .root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-section) { padding: 24px; }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title),
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header-title *) { font-size: min(44px, 10.6vw); }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts) { padding: 80px 0; }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .attorney-card-section) { padding: 24px; }
 }
 
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-section) {
+    .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .attorney-card-section) {
       animation: zhRiseIn linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 70%;
@@ -136,30 +136,30 @@
 }
 @keyframes zhRiseIn { from { opacity: 0; transform: translateY(48px) scale(0.98); } to { opacity: 1; transform: none; } }
 /* The team band follows the header directly on this page: a shorter top gap brings the lead tile into the first screen. */
-.root:global(#zh-hant-lawyers) :global(#team .attorney-team-section) { padding-top: clamp(48px, 5vw, 72px); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#team .attorney-team-section) { padding-top: clamp(48px, 5vw, 72px); }
 
 /* ===== Apple pass, critique fixes (2026-10-01) =====
    The home's font stack; a shorter header bottom and team top so the lead portrait enters the first screen;
    基本資料 on the home's last-call gradient (no pure black, no #1d1d1f tiles). */
-.root:global(#zh-hant-lawyers) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) {
   --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }
-.root:global(#zh-hant-lawyers) :global(.page-header) { padding-bottom: clamp(28px, 3vw, 40px); }
-.root:global(#zh-hant-lawyers) :global(#team .attorney-team-section) { padding-top: clamp(32px, 3.4vw, 48px); }
-.root:global(#zh-hant-lawyers) :global(#team .attorney-lead-wrap .attorney-group-title) { margin-bottom: 16px; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(.page-header) { padding-bottom: clamp(28px, 3vw, 40px); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#team .attorney-team-section) { padding-top: clamp(32px, 3.4vw, 48px); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#team .attorney-lead-wrap .attorney-group-title) { margin-bottom: 16px; }
 
-.root:global(#zh-hant-lawyers) :global(#attorney-facts) {
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts) {
   padding: clamp(96px, 12vw, 168px) 0;
   background: #000; /* one flat black, like the home's last call */
   color: #fff;
 }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title) { max-width: 14em; font-size: clamp(40px, 5.4vw, 80px); color: #fff !important; }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .attorney-card-section) { background: rgb(255 255 255 / 7%); }
-.root:global(#zh-hant-lawyers) :global(#attorney-facts p) { color: #fff; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .section-title) { max-width: 14em; font-size: clamp(40px, 5.4vw, 80px); color: #fff !important; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .attorney-card-section) { background: rgb(255 255 255 / 7%); }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts p) { color: #fff; }
 /* Break 曾雋崴律師 / 基本資料 at the space, never inside the name. */
-.root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title) { word-break: keep-all; }
+.root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .section-title) { word-break: keep-all; }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-lawyers) :global(#attorney-facts .section-title) { font-size: clamp(32px, 9vw, 40px); }
+  .root:global(:is(#zh-hant-lawyers, #ko-lawyers)) :global(#attorney-facts .section-title) { font-size: clamp(32px, 9vw, 40px); }
 }

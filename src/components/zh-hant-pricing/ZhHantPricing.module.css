@@ -2,18 +2,18 @@
 .root, .schedule { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
 
 /* Header */
-.root:global(#zh-hant-pricing) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 80px; border-bottom: none; }
-.root:global(#zh-hant-pricing) :global(.page-header > .container) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr); gap: 28px 72px; align-items: start; }
-.root:global(#zh-hant-pricing) :global(.page-header [data-page-header-slot='copy']) { grid-column: 1; grid-row: 1; text-align: left; align-items: flex-start; }
-.root:global(#zh-hant-pricing) :global(.page-header [data-page-header-slot='children']) { display: contents; }
-.root:global(#zh-hant-pricing) :global(.page-header-title),
-.root:global(#zh-hant-pricing) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
-.root:global(#zh-hant-pricing) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
-.root:global(#zh-hant-pricing) :global(.page-header .section-label) { color: var(--zh-gold); }
-.root:global(#zh-hant-pricing) :global(.page-header .section-label::before) { background: var(--zh-gold); }
-.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb),
-.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
-.root:global(#zh-hant-pricing) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 80px; border-bottom: none; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header > .container) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr); gap: 28px 72px; align-items: start; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header [data-page-header-slot='copy']) { grid-column: 1; grid-row: 1; text-align: left; align-items: flex-start; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header [data-page-header-slot='children']) { display: contents; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header-title),
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .section-label) { color: var(--zh-gold); }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .section-label::before) { background: var(--zh-gold); }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .breadcrumb),
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
 
 .headerActions { grid-column: 1; grid-row: 2; }
 .headerActions :global(.button) { background: var(--zh-gold); border-color: var(--zh-gold); color: var(--zh-ink); font-weight: 700; font-size: 16.5px; min-height: 56px; padding: 14px 28px; gap: 12px; }
@@ -25,7 +25,7 @@
 .boardList li + li { border-top: 1px solid #ddd3bb; }
 .boardLink { display: flex; align-items: baseline; gap: 12px; min-height: 64px; padding: 16px 0; color: var(--zh-ink); text-decoration: none; }
 .boardLink:hover .boardTitle { text-decoration: underline; text-underline-offset: 5px; }
-.root:global(#zh-hant-pricing) .boardLink:focus-visible { outline: 3px solid var(--zh-ink); outline-offset: 2px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .boardLink:focus-visible { outline: 3px solid var(--zh-ink); outline-offset: 2px; }
 .boardTitle { font-size: 17px; font-weight: 700; white-space: nowrap; }
 .boardLeader { flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted #b9ab86; transform: translateY(-5px); }
 .boardPrice { font-family: var(--font-serif-tc); font-size: 24px; font-weight: 700; white-space: nowrap; }
@@ -65,12 +65,12 @@
 .cta a:focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
 
 @media (max-width: 1000px) {
-  .root:global(#zh-hant-pricing) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
   .board { grid-column: 1; grid-row: 3; align-self: stretch; }
   .row { grid-template-columns: minmax(0, 1fr); gap: 20px; }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-pricing) :global(.page-header) { padding: 40px 0 48px; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header) { padding: 40px 0 48px; }
   .headerActions :global(.button) { width: 100%; justify-content: center; }
   .board { padding: 20px 20px 12px; box-shadow: 8px 8px 0 rgb(212 185 122 / 35%); margin-right: 8px; }
   .boardLink { flex-wrap: wrap; gap: 2px 10px; min-height: 0; padding: 14px 0; }
@@ -111,7 +111,7 @@
    The pricing page in the language of the zh-hant home: a light header with a big sans H1 and the fee board as a
    gray rounded tile, then the four fees as a bento of white tiles on #f5f5f7 (large gradient amounts), a footnote,
    and one dark closing tile like the home's last call. Later rules override the green/serif passes above. */
-.root:global(#zh-hant-pricing) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) {
   --ap-gray: #f5f5f7;
   --ap-text: #1d1d1f;
   --ap-muted: #6e6e73;
@@ -125,30 +125,30 @@
   background: #fff;
   color: var(--ap-text);
 }
-.root:global(#zh-hant-pricing) :global(.container) { max-width: 1240px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.container) { max-width: 1240px; }
 
 /* Header: light, big type, the board as a tile */
-.root:global(#zh-hant-pricing) :global(.page-header) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header) {
   padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
   background: #fff;
   color: var(--ap-text);
   border-bottom: none;
 }
-.root:global(#zh-hant-pricing) :global(.page-header)::after,
-.root:global(#zh-hant-pricing) :global(.page-header)::before { display: none !important; }
-.root:global(#zh-hant-pricing) :global(.page-header > .container) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header)::after,
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header)::before { display: none !important; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header > .container) {
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
   gap: 32px clamp(48px, 6vw, 96px);
   align-items: center;
 }
-.root:global(#zh-hant-pricing) :global(.page-header [data-page-header-slot='copy']) { align-self: end; max-width: none; }
-.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb),
-.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
-.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb a:hover) { color: var(--ap-accent); }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header [data-page-header-slot='copy']) { align-self: end; max-width: none; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .breadcrumb),
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .breadcrumb a:hover) { color: var(--ap-accent); }
 /* 首頁 measured 26x23: give the crumb link a full tap target without moving the line. */
-.root:global(#zh-hant-pricing) :global(.page-header .breadcrumb-link) { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin: -10px -9px; padding: 0 9px; }
-.root:global(#zh-hant-pricing) :global(.page-header-title),
-.root:global(#zh-hant-pricing) :global(.page-header-title *) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .breadcrumb-link) { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin: -10px -9px; padding: 0 9px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header-title),
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header-title *) {
   color: var(--ap-text) !important;
   font-family: var(--font-sans) !important;
   font-weight: 700;
@@ -156,8 +156,8 @@
   line-height: 1.08;
   letter-spacing: 0.01em;
 }
-.root:global(#zh-hant-pricing) :global(.page-header-title) { margin: 18px 0 20px; }
-.root:global(#zh-hant-pricing) :global(.page-header .section-lede) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header-title) { margin: 18px 0 20px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header .section-lede) {
   max-width: 34em;
   margin: 0;
   color: var(--ap-muted);
@@ -165,10 +165,10 @@
   line-height: 1.7;
   text-wrap: pretty;
 }
-.root:global(#zh-hant-pricing) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
 
 .headerActions { align-self: start; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
-.root:global(#zh-hant-pricing) .headerActions :global(a.button) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .headerActions :global(a.button) {
   min-height: 52px;
   padding: 0 30px;
   gap: 10px;
@@ -181,7 +181,7 @@
   letter-spacing: 0.02em;
   transition: background 0.3s ease, transform 0.3s var(--ap-ease);
 }
-.root:global(#zh-hant-pricing) .headerActions :global(a.button:hover) { background: var(--ap-ink-deep); border-color: var(--ap-ink-deep); color: #fff; transform: translateY(-1px); }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .headerActions :global(a.button:hover) { background: var(--ap-ink-deep); border-color: var(--ap-ink-deep); color: #fff; transform: translateY(-1px); }
 
 .board {
   grid-row: 1 / span 2;
@@ -200,7 +200,7 @@
 .boardLink:hover .boardTitle { color: var(--ap-accent); text-decoration: none; }
 .boardPrice { font-family: var(--font-sans); font-size: clamp(22px, 2vw, 28px); font-weight: 800; letter-spacing: 0; color: var(--ap-text); }
 .boardPrice small { margin-left: 6px; font-size: 14px; font-weight: 500; color: var(--ap-muted); }
-.root:global(#zh-hant-pricing) .boardLink:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 8px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .boardLink:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 8px; }
 
 /* Fee tiles on the gray band */
 .schedule { padding: clamp(72px, 9vw, 128px) 0; background: var(--ap-gray); }
@@ -264,7 +264,7 @@
 .details + .note, .steps + .note { margin-top: 24px; }
 .advisory { margin-top: auto; padding-top: 24px; }
 .advisory p { margin: 0; font-size: 15.5px; line-height: 1.8; color: var(--ap-muted); }
-.root:global(#zh-hant-pricing) .advisory :global(.link-underline) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .advisory :global(.link-underline) {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -273,8 +273,8 @@
   text-decoration: none;
   background-image: none;
 }
-.root:global(#zh-hant-pricing) .advisory :global(.link-underline)::after { content: none; }
-.root:global(#zh-hant-pricing) .advisory :global(.link-underline:hover) { text-decoration: underline; text-underline-offset: 5px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .advisory :global(.link-underline)::after { content: none; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .advisory :global(.link-underline:hover) { text-decoration: underline; text-underline-offset: 5px; }
 .row :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 4px; }
 .disclaimer { max-width: 52em; margin: 28px 0 0; padding: 0; border: none; font-size: 14px; line-height: 1.85; color: var(--ap-muted); }
 
@@ -294,7 +294,7 @@
 .ctaEmail { margin: 12px 0 0; font-family: var(--font-sans); font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.15; letter-spacing: 0; }
 .ctaEmail a { color: #fff; text-decoration: none; }
 .ctaEmail a:hover { text-decoration: underline; text-decoration-color: rgb(255 255 255 / 50%); text-decoration-thickness: 2px; text-underline-offset: 8px; }
-.root:global(#zh-hant-pricing) .cta :global(a.button) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .cta :global(a.button) {
   min-height: 54px;
   padding: 0 32px;
   border-radius: 999px !important;
@@ -306,7 +306,7 @@
   letter-spacing: 0.02em;
   transition: transform 0.3s var(--ap-ease);
 }
-.root:global(#zh-hant-pricing) .cta :global(a.button:hover) { background: #fff; border-color: #fff; color: var(--ap-ink); transform: translateY(-2px) scale(1.02); }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .cta :global(a.button:hover) { background: #fff; border-color: #fff; color: var(--ap-ink); transform: translateY(-2px) scale(1.02); }
 .cta a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
 
 /* Motion: tiles rise in as they enter, like the home. */
@@ -323,15 +323,15 @@
 }
 
 @media (max-width: 1000px) {
-  .root:global(#zh-hant-pricing) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
   .board { grid-column: 1; grid-row: 3; margin-top: 16px; }
   .row[data-fee] { grid-column: 1 / -1; }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-pricing) { --ap-radius: 22px; }
-  .root:global(#zh-hant-pricing) :global(.container) { padding-inline: 20px; }
-  .root:global(#zh-hant-pricing) :global(.page-header) { padding: 64px 0 40px; }
-  .root:global(#zh-hant-pricing) .headerActions :global(a.button) { width: 100%; justify-content: center; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) { --ap-radius: 22px; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.container) { padding-inline: 20px; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.page-header) { padding: 64px 0 40px; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) .headerActions :global(a.button) { width: 100%; justify-content: center; }
   .board { padding: 24px 24px 12px; }
   .boardLink { flex-wrap: nowrap; min-height: 64px; padding: 12px 0; }
   .boardTitle { font-size: 16px; white-space: nowrap; }
@@ -348,14 +348,14 @@
   .stepNo { font-size: 28px; min-width: 22px; }
   .cta { gap: 24px; padding: 48px 20px; }
   .ctaEmail { font-size: clamp(19px, 5.2vw, 30px); overflow-wrap: anywhere; }
-  .root:global(#zh-hant-pricing) .cta :global(a.button) { width: 100%; justify-content: center; padding: 0 16px; font-size: 16px; letter-spacing: 0; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) .cta :global(a.button) { width: 100%; justify-content: center; padding: 0 16px; font-size: 16px; letter-spacing: 0; }
 }
 
 /* ===== Fix round (2026-10-01, critic pass) =====
    One font stack with the home, the home's full-bleed last call (statement + white pill + outlined email pill),
    a 聯絡方式 › secondary link, bottom-anchored tile bodies (no dead area under short lists), quieter header board
    and amounts, and phone edges on the logo line. Later rules win over the Apple pass above. */
-.root:global(#zh-hant-pricing) {
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) {
   --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
@@ -432,18 +432,18 @@
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 .closing .ctaEmail a:hover { border-color: #fff; background: rgb(255 255 255 / 8%); text-decoration: none; }
-.root:global(#zh-hant-pricing) .closing .cta :global(a.button) { min-height: 54px; padding: 0 28px; }
+.root:global(:is(#zh-hant-pricing, #ko-pricing)) .closing .cta :global(a.button) { min-height: 54px; padding: 0 28px; }
 
 @media (max-width: 767px) {
   /* The global .container already keeps the gutter; extra padding put the H1 at x=38 against the logo at 18. */
-  .root:global(#zh-hant-pricing) :global(.container) { padding-inline: 0; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) :global(.container) { padding-inline: 0; }
   .closing { padding-block: 96px; }
   .closing .cta { padding: 0; }
   /* 9 characters must fit the 340px line at 390 so the break stays after 電子郵件 */
   .closing .ctaNote { font-size: min(40px, 9.2vw); }
   .ctaActions { flex-direction: column; align-items: stretch; width: 100%; margin-top: 32px; }
   .closing .ctaEmail a { width: 100%; padding: 0 16px; font-size: 16px; letter-spacing: 0; }
-  .root:global(#zh-hant-pricing) .closing .cta :global(a.button) { width: 100%; }
+  .root:global(:is(#zh-hant-pricing, #ko-pricing)) .closing .cta :global(a.button) { width: 100%; }
 }
 
 /* ===== Monoline icons and neutral accents (2026-10-02): 48px ZhHantMonoIcon fee glyphs in #1d1d1f with no box

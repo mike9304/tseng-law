@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import { firmIntroductionContent } from '@/data/firm-introduction';
+import type { AppleDesignLocale } from '@/lib/apple-design-locales';
 import styles from './ZhHantAbout.module.css';
 
 /**
  * zh-hant about: the firm introduction as a short history. Same text, logo, source link and
  * builder surface keys as FirmIntroductionSection; the year beside a paragraph is read from
- * that paragraph's own text (e.g. 「於2017年」), never added.
+ * that paragraph's own text (e.g. 「於2017年」 / ko 「2017년에는」), never added. ko shares it since 2026-10-06.
  */
-export default function ZhHantFirmIntro() {
-  const content = firmIntroductionContent['zh-hant'];
+export default function ZhHantFirmIntro({ locale = 'zh-hant' }: { locale?: AppleDesignLocale } = {}) {
+  const content = firmIntroductionContent[locale];
   return (
     <section id="firm" className={`section firm-intro-section ${styles.firm}`} data-tone="light">
       <div className={`container ${styles.firmGrid}`}>
@@ -26,7 +27,7 @@ export default function ZhHantFirmIntro() {
         </div>
         <ol className={styles.timeline}>
           {content.paragraphs.map((paragraph, index) => {
-            const year = paragraph.match(/(\d{4})年/)?.[1];
+            const year = paragraph.match(locale === 'ko' ? /(\d{4})년/ : /(\d{4})年/)?.[1];
             return (
               <li key={paragraph} className={`${styles.entry} ${index === 0 ? styles.entryLead : ''}`}>
                 <span className={styles.entryYear} aria-hidden={year ? undefined : true}>{year ?? ''}</span>

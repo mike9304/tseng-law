@@ -4,6 +4,7 @@ import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import PricingCards, { getPricingContent } from '@/components/PricingCards';
 import { pageCopy } from '@/data/page-copy';
 import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { appleDesignRootProps, type AppleDesignLocale } from '@/lib/apple-design-locales';
 import styles from './ZhHantPricing.module.css';
 
 /**
@@ -11,15 +12,23 @@ import styles from './ZhHantPricing.module.css';
  * and the consultation CTA, then the fee schedule. Apple pass (2026-10-01): light header,
  * the board as a gray rounded tile — styles only, see the module's last block. Copy and amounts come from page-copy
  * and the shared pricing data. Fix round (2026-10-01): no ↗ on the primary CTA, plus a 聯絡方式 › secondary link.
+ * ko shares it since 2026-10-06 (`locale="ko"`): ko page copy and pricing data; the board label and the 연락처 link
+ * (the header utility label) are the only ko strings here.
  */
-export default function ZhHantPricingBody() {
-  const copy = pageCopy['zh-hant'].pricing;
-  const data = getPricingContent('zh-hant');
-  const mailto = getConsultationPublicMailto('zh-hant');
+const PRICING_LABELS: Record<AppleDesignLocale, { board: string; contact: string }> = {
+  'zh-hant': { board: '收費一覽', contact: '聯絡方式' },
+  ko: { board: '비용 한눈에 보기', contact: '연락처' },
+};
+
+export default function ZhHantPricingBody({ locale = 'zh-hant' }: { locale?: AppleDesignLocale } = {}) {
+  const copy = pageCopy[locale].pricing;
+  const data = getPricingContent(locale);
+  const mailto = getConsultationPublicMailto(locale);
+  const labels = PRICING_LABELS[locale];
   return (
-    <div className={styles.root} id="zh-hant-pricing" data-zh-hant-design="pricing">
-      <PageHeader locale="zh-hant" label={copy.label} title={copy.title} description={copy.description}>
-        <nav className={styles.board} aria-label="收費一覽">
+    <div className={styles.root} {...appleDesignRootProps(locale, 'pricing')}>
+      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
+        <nav className={styles.board} aria-label={labels.board}>
           <p className={styles.boardCurrency}>{data.currency}</p>
           <ul className={styles.boardList}>
             {data.items.map((item) => (
@@ -37,14 +46,14 @@ export default function ZhHantPricingBody() {
           </ul>
         </nav>
         <div className={styles.headerActions}>
-          <a href={mailto} className="button" aria-label={`${data.ctaLabel} — ${getConsultationCtaLabel('zh-hant')}`}>
+          <a href={mailto} className="button" aria-label={`${data.ctaLabel} — ${getConsultationCtaLabel(locale)}`}>
             {data.ctaLabel}
           </a>
           {/* Secondary header link (spec: existing links only) — the header nav's own 聯絡方式 entry. */}
-          <Link href="/zh-hant/contact" className={styles.headerLink}>聯絡方式<ZhHantMonoIcon name="chevron-right" size={14} strokePx={1.75} className={styles.trail} /></Link>
+          <Link href={`/${locale}/contact`} className={styles.headerLink}>{labels.contact}<ZhHantMonoIcon name="chevron-right" size={14} strokePx={1.75} className={styles.trail} /></Link>
         </div>
       </PageHeader>
-      <PricingCards locale="zh-hant" />
+      <PricingCards locale={locale} />
     </div>
   );
 }

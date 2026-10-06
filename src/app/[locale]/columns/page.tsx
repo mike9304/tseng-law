@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
 import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
-import KoPageShell from '@/components/ko-design/KoPageShell';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { getAllIssuePosts } from '@/lib/columns';
 import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
@@ -257,13 +257,13 @@ export default async function ColumnsPage(
 
     const publishedBody = (
       <>
-        {/* zh-hant: the board switch renders inside the published columns body, right under its header. */}
-        {locale === 'zh-hant' ? null : <IssueBoardTabs locale={locale} active="expert" />}
+        {/* zh-hant and ko: the board switch renders inside the published columns body, right under its header. */}
+        {isAppleDesignLocale(locale) ? null : <IssueBoardTabs locale={locale} active="expert" />}
         <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />
         <EnAcquisitionGuideLinks locale={locale} />
       </>
     );
-    if (locale === 'zh-hant') return <ZhHantColumnsShell>{publishedBody}</ZhHantColumnsShell>;
+    if (isAppleDesignLocale(locale)) return <ZhHantColumnsShell locale={locale}>{publishedBody}</ZhHantColumnsShell>;
     return locale === 'en' ? <EnColumnsShell>{publishedBody}</EnColumnsShell> : publishedBody;
   }
 
@@ -333,13 +333,14 @@ export default async function ColumnsPage(
           {locale === 'en' ? <EnColumnsStartHere posts={posts} /> : null}
         </PageHeader>
       ) : null}
-      {locale === 'zh-hant'
+      {isAppleDesignLocale(locale)
         ? (
           <ZhHantBoardSwitch
             active="expert"
             expertCount={posts.length}
-            issueCount={getAllIssuePosts('zh-hant').length}
-            latestIssues={getAllIssuePosts('zh-hant').slice(0, 3).map(({ slug, title }) => ({ slug, title }))}
+            issueCount={getAllIssuePosts(locale).length}
+            latestIssues={getAllIssuePosts(locale).slice(0, 3).map(({ slug, title }) => ({ slug, title }))}
+            locale={locale}
           />
         )
         : <IssueBoardTabs locale={locale} active="expert" />}
@@ -356,8 +357,6 @@ export default async function ColumnsPage(
       <EnAcquisitionGuideLinks locale={locale} />
     </>
   );
-  if (locale === 'zh-hant') return <ZhHantColumnsShell>{body}</ZhHantColumnsShell>;
-  // ko: the published path already gets KoPageShell from ColumnsLegacyPageBody inside the builder page.
-  if (locale === 'ko') return <KoPageShell page="columns">{body}</KoPageShell>;
+  if (isAppleDesignLocale(locale)) return <ZhHantColumnsShell locale={locale}>{body}</ZhHantColumnsShell>;
   return locale === 'en' ? <EnColumnsShell>{body}</EnColumnsShell> : body;
 }

@@ -2,18 +2,18 @@
 .root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --zh-paper: #f7f5ef; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
 
 /* Header: green, facts panel, in-page jumps */
-.root:global(#zh-hant-about) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 64px; border-bottom: none; }
-.root:global(#zh-hant-about) :global(.page-header > .container) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr); gap: 32px 72px; align-items: center; }
-.root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='copy']) { grid-column: 1; grid-row: 1; text-align: left; align-items: flex-start; }
-.root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='children']) { display: contents; }
-.root:global(#zh-hant-about) :global(.page-header-title),
-.root:global(#zh-hant-about) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
-.root:global(#zh-hant-about) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
-.root:global(#zh-hant-about) :global(.page-header .section-label) { color: var(--zh-gold); }
-.root:global(#zh-hant-about) :global(.page-header .section-label::before) { background: var(--zh-gold); }
-.root:global(#zh-hant-about) :global(.page-header .breadcrumb),
-.root:global(#zh-hant-about) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
-.root:global(#zh-hant-about) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 64px; border-bottom: none; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header > .container) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr); gap: 32px 72px; align-items: center; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header [data-page-header-slot='copy']) { grid-column: 1; grid-row: 1; text-align: left; align-items: flex-start; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header [data-page-header-slot='children']) { display: contents; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header-title),
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .section-label) { color: var(--zh-gold); }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .section-label::before) { background: var(--zh-gold); }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .breadcrumb),
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
 
 .facts { grid-column: 2; grid-row: 1 / span 2; margin: 0; display: grid; gap: 0; border-top: 1px solid rgb(244 239 226 / 30%); }
 .fact { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); align-items: baseline; gap: 16px; padding: 22px 0; border-bottom: 1px solid rgb(244 239 226 / 30%); }
@@ -66,14 +66,14 @@
 .officeAddress { color: var(--zh-muted-on-dark); line-height: 1.7; }
 
 @media (max-width: 1000px) {
-  .root:global(#zh-hant-about) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
   .facts { grid-column: 1; grid-row: 3; }
   .firmGrid { grid-template-columns: minmax(0, 1fr); }
   .firmAside { position: static; }
   .contactGrid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-about) :global(.page-header) { padding: 40px 0 44px; }
+  .root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header) { padding: 40px 0 44px; }
   .fact { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 14px 0; }
   .fact dd { font-size: 22px; }
   .jumps { gap: 8px; }
@@ -104,7 +104,7 @@
    Same design language as the zh-hant home (ZhHantDesign.module.css "Apple pass"): light header with a big
    sans H1, rounded tiles on white / #f5f5f7 bands, pill actions, gradient numerals, one dark closing chapter.
    Later rules override the earlier passes. */
-.root:global(#zh-hant-about) {
+.root:global(:is(#zh-hant-about, #ko-about)) {
   --ap-gray: #f5f5f7;
   --ap-text: #1d1d1f;
   --ap-muted: #6e6e73;
@@ -118,26 +118,26 @@
   background: #fff;
   color: var(--ap-text);
 }
-.root:global(#zh-hant-about) :global(.container) { max-width: 1240px; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.container) { max-width: 1240px; }
 
 /* ---------- Header: light, big type, facts as a rounded tile ---------- */
-.root:global(#zh-hant-about) :global(.page-header) {
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header) {
   background: #fff;
   color: var(--ap-text);
   padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 5vw, 72px);
   border-bottom: none;
 }
-.root:global(#zh-hant-about) :global(.page-header)::after { display: none; }
-.root:global(#zh-hant-about) :global(.page-header > .container) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 36px clamp(40px, 6vw, 96px); align-items: center; }
-.root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='copy']) { max-width: none; align-self: end; }
-.root:global(#zh-hant-about) :global(.page-header .section-label) { display: none; }
-.root:global(#zh-hant-about) :global(.page-header .breadcrumb),
-.root:global(#zh-hant-about) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
-.root:global(#zh-hant-about) :global(.page-header .breadcrumb a:hover) { color: var(--ap-text); }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header)::after { display: none; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header > .container) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 36px clamp(40px, 6vw, 96px); align-items: center; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header [data-page-header-slot='copy']) { max-width: none; align-self: end; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .section-label) { display: none; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .breadcrumb),
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .breadcrumb *) { color: var(--ap-muted); font-size: 13px; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .breadcrumb a:hover) { color: var(--ap-text); }
 /* 44px tap target for the breadcrumb link without moving the trail (padding offset by negative margin). */
-.root:global(#zh-hant-about) :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 9px; margin: -10px -9px; }
-.root:global(#zh-hant-about) :global(.page-header-title),
-.root:global(#zh-hant-about) :global(.page-header-title *) {
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .breadcrumb a) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 9px; margin: -10px -9px; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header-title),
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header-title *) {
   color: var(--ap-text) !important;
   font-family: var(--font-sans) !important;
   font-weight: 700;
@@ -145,8 +145,8 @@
   line-height: 1.08;
   letter-spacing: 0.01em;
 }
-.root:global(#zh-hant-about) :global(.page-header-title) { margin: 20px 0 0; }
-.root:global(#zh-hant-about) :global(.page-header .section-lede) {
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header-title) { margin: 20px 0 0; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header .section-lede) {
   max-width: 34em;
   margin: 22px 0 0;
   color: var(--ap-muted);
@@ -154,7 +154,7 @@
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.6;
 }
-.root:global(#zh-hant-about) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
 
 .facts {
   align-self: stretch;
@@ -249,7 +249,7 @@
 .contactEmail a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; text-decoration: none; }
 .contactEmail a:hover { text-decoration: underline; text-decoration-color: #8fd3b6; text-underline-offset: 8px; }
 .contactActions { margin-top: 28px; gap: 12px 28px; }
-.root:global(#zh-hant-about) .contactActions :global(.button) {
+.root:global(:is(#zh-hant-about, #ko-about)) .contactActions :global(.button) {
   min-height: 54px;
   padding: 14px 32px;
   border: none;
@@ -271,23 +271,23 @@
 .officeAddress { color: #bdbdc2; }
 
 @media (max-width: 1000px) {
-  .root:global(#zh-hant-about) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
   .facts { grid-column: 1; grid-row: 3; }
   .contactGrid { grid-template-columns: minmax(0, 1fr); }
   .firmGrid { grid-template-columns: minmax(0, 1fr); }
   .firmAside { position: static; }
 }
 @media (max-width: 767px) {
-  .root:global(#zh-hant-about) { --ap-radius: 22px; }
+  .root:global(:is(#zh-hant-about, #ko-about)) { --ap-radius: 22px; }
   .factYear dd { font-size: 52px; }
   .firmLogo { max-width: 300px; }
   .firmTitle { margin-top: 28px; }
-  .root:global(#zh-hant-about) :global(.page-header) { padding: 64px 0 40px; }
+  .root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header) { padding: 64px 0 40px; }
   .facts { padding: 24px; }
   .fact { padding: 16px 0; }
   .fact:not(.factYear) dd { font-size: 22px; }
-  .root:global(#zh-hant-about) :global(.page-header-title),
-  .root:global(#zh-hant-about) :global(.page-header-title *) { letter-spacing: 0; }
+  .root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header-title),
+  .root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header-title *) { letter-spacing: 0; }
   .jumps { width: auto; }
   .jumps a { flex: 1 1 auto; justify-content: center; padding: 0 14px; font-size: 14px; }
   .firm { padding: 72px 0; }
@@ -315,14 +315,14 @@
    1. Same font stack as the home (PingFang TC first).  2. Header actions: ink pill + accent text link with ›.
    3. Bands alternate header white → firm white (gray tiles) → team gray (white tiles, same as /lawyers) → dark close.
    4. The closing band is the home's last call: centered title, white pill + outlined email pill, offices below. */
-.root:global(#zh-hant-about) {
+.root:global(:is(#zh-hant-about, #ko-about)) {
   --font-sans: var(--font-reading-zh);
   --font-body: var(--font-sans);
   font-family: var(--font-sans);
 }
 
 /* Header: copy / actions / jumps on the left, facts tile on the right */
-.root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='copy']) { grid-row: 1; }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header [data-page-header-slot='copy']) { grid-row: 1; }
 .facts { grid-row: 1 / span 3; }
 .headerActions { grid-column: 1; grid-row: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
 .headerPrimary {
@@ -354,7 +354,7 @@
 .firmAside { align-self: start; }
 
 /* Team: one tile rule on both pages (gray band, white tiles) */
-.root:global(#zh-hant-about) :global(#team) { --team-band: var(--ap-gray); --team-tile: #fff; --team-line: var(--ap-line); }
+.root:global(:is(#zh-hant-about, #ko-about)) :global(#team) { --team-band: var(--ap-gray); --team-tile: #fff; --team-line: var(--ap-line); }
 
 /* Closing chapter: the home's last call */
 .contactGrid { grid-template-columns: minmax(0, 1fr); gap: clamp(48px, 6vw, 80px); justify-items: center; }
@@ -362,7 +362,7 @@
 .contactTitle { max-width: 14em; margin: 0; font-size: clamp(40px, 5.4vw, 80px); line-height: 1.14; }
 .contactLede { max-width: 36em; margin: 20px auto 0; color: #bdbdc2; }
 .contactActions { justify-content: center; gap: 12px; margin-top: 40px; }
-.root:global(#zh-hant-about) .contactActions :global(.button) { min-height: 54px; padding: 14px 28px; }
+.root:global(:is(#zh-hant-about, #ko-about)) .contactActions :global(.button) { min-height: 54px; padding: 14px 28px; }
 .contactEmail {
   display: inline-flex;
   align-items: center;
@@ -391,7 +391,7 @@
 .officeList li:last-child { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 16px 0 0; border-bottom: none; }
 .officeAddress { line-height: 1.6; }
 @media (max-width: 1000px) {
-  .root:global(#zh-hant-about) :global(.page-header [data-page-header-slot='copy']) { grid-row: 1; }
+  .root:global(:is(#zh-hant-about, #ko-about)) :global(.page-header [data-page-header-slot='copy']) { grid-row: 1; }
   .headerActions { grid-row: 2; }
   .jumps { grid-row: 3; }
   .facts { grid-column: 1; grid-row: 4; }
@@ -401,7 +401,7 @@
   .headerActions { gap: 4px 24px; }
   .headerPrimary { flex: 1 1 100%; }
   .contactActions { width: 100%; }
-  .root:global(#zh-hant-about) .contactActions :global(.button),
+  .root:global(:is(#zh-hant-about, #ko-about)) .contactActions :global(.button),
   .contactEmail { width: 100%; }
   .officeList { grid-template-columns: minmax(0, 1fr); }
   .officeList li { padding-top: 14px; }

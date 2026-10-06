@@ -7,7 +7,6 @@ import AttorneyProfileSection from '@/components/AttorneyProfileSection';
 import FirmIntroductionSection from '@/components/FirmIntroductionSection';
 import ConsultationGuideSection from '@/components/ConsultationGuideSection';
 import MessengerChatSection from '@/components/MessengerChatSection';
-import PricingCards from '@/components/PricingCards';
 import ReviewBoard from '@/components/ReviewBoard';
 import ColumnsGrid, { type ColumnsGridFilters } from '@/components/ColumnsGrid';
 import { toColumnListItems } from '@/lib/column-list-items';
@@ -24,6 +23,8 @@ import { ZH_HANT_COLUMN_TOPIC_ORDER, ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/dat
 import JaPricingBody from '@/components/ja-design/JaPricingBody';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import KoPageShell from '@/components/ko-design/KoPageShell';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
+import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
 import jaAboutStyles from '@/components/ja-design/JaAbout.module.css';
 import JaAboutFirm from '@/components/ja-design/JaAboutFirm';
 import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
@@ -78,7 +79,8 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams): ColumnsGridFil
 }
 
 export function AboutLegacyPageBody({ locale }: { locale: SiteLocale }) {
-  if (locale === 'zh-hant') return <ZhHantAboutBody />;
+  // zh-hant and (since 2026-10-06) ko: the Apple about page.
+  if (isAppleDesignLocale(locale)) return <ZhHantAboutBody locale={locale} />;
   if (locale === 'en') return <EnAboutBody />;
   const copy = pageCopy[locale].about;
   if (locale === 'ja') {
@@ -94,12 +96,12 @@ export function AboutLegacyPageBody({ locale }: { locale: SiteLocale }) {
     );
   }
   return (
-    <KoPageShell page="about">
+    <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <FirmIntroductionSection locale={locale} />
       <AttorneyProfileSection locale={locale} />
       <ContactBlocks locale={locale} />
-    </KoPageShell>
+    </>
   );
 }
 
@@ -115,11 +117,11 @@ export function ServicesLegacyPageBody({
     || isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.hero');
   const showRepeater = locale === 'ja'
     || isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.repeater');
-  if (locale === 'zh-hant') return <ZhHantServicesBody showHero={showHero} showRepeater={showRepeater} />;
+  if (isAppleDesignLocale(locale)) return <ZhHantServicesBody showHero={showHero} showRepeater={showRepeater} locale={locale} />;
   if (locale === 'ja') return <JaServicesBody showHero={showHero} showRepeater={showRepeater} />;
   if (locale === 'en') return <EnServicesBody showHero={showHero} showRepeater={showRepeater} />;
   return (
-    <KoPageShell page="services">
+    <>
       {showHero ? (
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
@@ -127,12 +129,12 @@ export function ServicesLegacyPageBody({
         <ServicesBento locale={locale} showHeader={!showHero} presentation="editorial" />
       ) : null}
       <EnAcquisitionGuideLinks locale={locale} variant="compact" />
-    </KoPageShell>
+    </>
   );
 }
 
 export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
-  if (locale === 'zh-hant') return <ZhHantContactBody />;
+  if (isAppleDesignLocale(locale)) return <ZhHantContactBody locale={locale} />;
   if (locale === 'en') return <EnContactBody />;
   const copy = pageCopy[locale].contact;
   const blocks = (
@@ -154,7 +156,7 @@ export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   // ja design (Opus 5.5 ja lane): same six blocks in the same order, scoped by the ja contact module.
   return locale === 'ja'
     ? <JaPageShell page="contact" className={jaContactStyles.root}>{blocks.props.children}</JaPageShell>
-    : <KoPageShell page="contact">{blocks.props.children}</KoPageShell>;
+    : blocks;
 }
 
 const attorneyFactLabels = {
@@ -318,7 +320,7 @@ export function LawyersLegacyPageBody({
         </PageHeader>
       ) : null}
       {showRepeater ? (
-        locale === 'zh-hant' ? <ZhHantTeam showIntro={false} /> : <AttorneyProfileSection locale={locale} showIntro={false} />
+        isAppleDesignLocale(locale) ? <ZhHantTeam showIntro={false} locale={locale} /> : <AttorneyProfileSection locale={locale} showIntro={false} />
       ) : null}
       {showRepeater ? <AttorneyFactSummary locale={locale} /> : null}
     </>
@@ -328,12 +330,11 @@ export function LawyersLegacyPageBody({
     // ja design (Opus 5.5 ja lane): same blocks, 履歴書-style team rows from the shared ja team module.
     return <JaPageShell page="lawyers" className={jaTeamStyles.team}>{body}</JaPageShell>;
   }
-  if (locale === 'zh-hant') {
-    return <div className={zhLawyersStyles.root} id="zh-hant-lawyers" data-zh-hant-design="lawyers">{body}</div>;
+  if (isAppleDesignLocale(locale)) {
+    return <div className={zhLawyersStyles.root} {...appleDesignRootProps(locale, 'lawyers')}>{body}</div>;
   }
   // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper.
-  // ko (2026-10-06): the Apple-system shell; it also lets the saved canvas height follow the grown team.
-  return locale === 'en' ? <EnLawyersShell>{body}</EnLawyersShell> : <KoPageShell page="lawyers">{body}</KoPageShell>;
+  return locale === 'en' ? <EnLawyersShell>{body}</EnLawyersShell> : body;
 }
 
 export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
@@ -359,20 +360,14 @@ export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
       <JsonLd data={faqSchema} />
     </>
   );
-  return locale === 'ko' ? <KoPageShell page="faq">{body}</KoPageShell> : body;
+  return locale === 'ko' ? <ZhHantFaqShell locale="ko">{body}</ZhHantFaqShell> : body;
 }
 
 export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
-  if (locale === 'zh-hant') return <ZhHantPricingBody />;
   if (locale === 'ja') return <JaPricingBody />;
   if (locale === 'en') return <EnPricingBody />;
-  const copy = pageCopy[locale].pricing;
-  return (
-    <KoPageShell page="pricing">
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
-      <PricingCards locale={locale} />
-    </KoPageShell>
-  );
+  // zh-hant and (since 2026-10-06) ko: the Apple pricing page.
+  return <ZhHantPricingBody locale={locale} />;
 }
 
 export function ReviewsLegacyPageBody({ locale }: { locale: SiteLocale }) {
@@ -413,7 +408,7 @@ export function ColumnsLegacyPageBody({
           {locale === 'en' ? <EnColumnsStartHere posts={posts} /> : null}
         </PageHeader>
       ) : null}
-      {locale === 'zh-hant' ? <ZhHantBoardSwitch active="expert" expertCount={posts.length} /> : null}
+      {isAppleDesignLocale(locale) ? <ZhHantBoardSwitch active="expert" expertCount={posts.length} locale={locale} /> : null}
       {showRepeater ? (
         <ColumnsGrid
           locale={locale}
@@ -426,7 +421,8 @@ export function ColumnsLegacyPageBody({
       ) : null}
     </>
   );
-  return locale === 'ko' ? <KoPageShell page="columns">{body}</KoPageShell> : body;
+  // ko: the columns route wraps this body (published or not) in ZhHantColumnsShell, like zh-hant.
+  return body;
 }
 
 export function VideosLegacyPageBody({
@@ -445,15 +441,14 @@ export function VideosLegacyPageBody({
     </>
   );
   // zh-hant Apple pass (2026-10-01): the same blocks inside a scoped wrapper; other locales render unchanged.
-  if (locale === 'zh-hant') {
+  if (isAppleDesignLocale(locale)) {
     return (
-      <div className={`${zhPageShellStyles.shell} ${zhVideosStyles.root}`} id="zh-hant-videos" data-zh-hant-design="videos">
+      <div className={`${zhPageShellStyles.shell} ${zhVideosStyles.root}`} {...appleDesignRootProps(locale, 'videos')}>
         {body}
       </div>
     );
   }
   // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper, closed by the en contact band.
-  if (locale === 'ko') return <KoPageShell page="videos">{body}</KoPageShell>;
   return locale === 'en' ? <EnVideosShell>{body}</EnVideosShell> : body;
 }
 

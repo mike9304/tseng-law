@@ -6,6 +6,7 @@ import {
   getConsultationPublicEmail,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import type { AppleDesignLocale } from '@/lib/apple-design-locales';
 import styles from './ZhHantPricing.module.css';
 
 /**
@@ -16,11 +17,18 @@ import styles from './ZhHantPricing.module.css';
  * Fix round: the closing call leaves the gray section and becomes the home's full-bleed band (`.closing`).
  */
 
-/** Litigation quote flow: restates the card note (確認案件內容後提供報價，請先預約諮詢) and the disclaimer's 書面報價. */
-const QUOTE_STEPS = ['預約諮詢', '確認案件內容', '書面報價'] as const;
+/**
+ * Litigation quote flow: restates the card note (確認案件內容後提供報價，請先預約諮詢 / ko 「사건 내용을 확인한 후 견적을
+ * 안내드립니다. 먼저 상담을 예약해 주세요.」) and the disclaimer's 書面報價 / 「서면 견적」.
+ */
+const QUOTE_STEPS: Record<AppleDesignLocale, { label: string; steps: readonly string[] }> = {
+  'zh-hant': { label: '報價流程', steps: ['預約諮詢', '確認案件內容', '書面報價'] },
+  ko: { label: '견적 절차', steps: ['상담 예약', '사건 내용 확인', '서면 견적'] },
+};
 
-export default function ZhHantPricingSchedule({ data }: { data: PricingContent }) {
-  const mailto = getConsultationPublicMailto('zh-hant');
+export default function ZhHantPricingSchedule({ data, locale = 'zh-hant' }: { data: PricingContent; locale?: AppleDesignLocale }) {
+  const mailto = getConsultationPublicMailto(locale);
+  const quote = QUOTE_STEPS[locale];
   return (
     <>
       <section className={styles.schedule}>
@@ -42,14 +50,14 @@ export default function ZhHantPricingSchedule({ data }: { data: PricingContent }
                     {item.details.map((detail) => <li key={detail}>{detail}</li>)}
                   </ul>
                   {item.icon === 'litigation' ? (
-                    <ol className={styles.steps} aria-label="報價流程">
-                      {QUOTE_STEPS.map((step, index) => (
+                    <ol className={styles.steps} aria-label={quote.label}>
+                      {quote.steps.map((step, index) => (
                         <li key={step}><span className={styles.stepNo} aria-hidden>{index + 1}</span>{step}</li>
                       ))}
                     </ol>
                   ) : null}
                   {item.note ? <p className={styles.note}>{item.note}</p> : null}
-                  {item.icon === 'retainer' ? <div className={styles.advisory}><CorporateAdvisoryLink locale="zh-hant" /></div> : null}
+                  {item.icon === 'retainer' ? <div className={styles.advisory}><CorporateAdvisoryLink locale={locale} /></div> : null}
                 </div>
               </article>
             ))}
@@ -64,7 +72,7 @@ export default function ZhHantPricingSchedule({ data }: { data: PricingContent }
             <p className={styles.ctaNote}>{data.ctaNote}</p>
           </div>
           <div className={styles.ctaActions}>
-            <a href={mailto} className="button" aria-label={`${data.ctaLabel} — ${getConsultationCtaLabel('zh-hant')}`}>
+            <a href={mailto} className="button" aria-label={`${data.ctaLabel} — ${getConsultationCtaLabel(locale)}`}>
               {data.ctaLabel}
             </a>
             <p className={styles.ctaEmail}><a href={mailto}>{getConsultationPublicEmail()}</a></p>

@@ -105,7 +105,12 @@ describe('zh-hant columns curation (domestic readers first)', () => {
     expect(html).toContain('data-issue-board-tab="expert"');
     expect(html).toContain('data-issue-board-tab="issues"');
     expect(html.indexOf('page-header')).toBeLessThan(html.indexOf('data-issue-board-tabs'));
+    // ko shares the two-board cards since 2026-10-06 (Apple system), with its own boards; en keeps the plain body.
     const ko = renderToStaticMarkup(<ColumnsLegacyPageBody locale="ko" posts={[]} />);
-    expect(ko).not.toContain('data-issue-board-tab="expert"');
+    expect(ko).toContain('data-issue-board-tab="expert"');
+    expect(ko).toContain('href="/ko/columns/issues"');
+    expect(ko).not.toContain('/zh-hant/');
+    const en = renderToStaticMarkup(<ColumnsLegacyPageBody locale="en" posts={[]} />);
+    expect(en).not.toContain('data-issue-board-tab="expert"');
   });
 });

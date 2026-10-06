@@ -285,7 +285,8 @@ export function getPricingContent(locale: SiteLocale): PricingContent {
 
 export default function PricingCards({ locale }: { locale: SiteLocale }) {
   const data = pricingData[locale];
-  if (locale === 'zh-hant') return <ZhHantPricingSchedule data={data} />;
+  // zh-hant and (since 2026-10-06) ko: the Apple fee schedule; other locales keep the cards below.
+  if (locale === 'zh-hant' || locale === 'ko') return <ZhHantPricingSchedule data={data} locale={locale} />;
   if (locale === 'ja') return <JaPricingTable data={data} />;
   if (locale === 'en') return <EnPricingTiers data={data} />;
 

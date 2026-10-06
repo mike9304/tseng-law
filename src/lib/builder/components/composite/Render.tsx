@@ -14,7 +14,6 @@ import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
 import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
-import KoPageShell from '@/components/ko-design/KoPageShell';
 import EnFaqShell, { EnFaqGlance } from '@/components/en-design/EnFaqShell';
 import { orderEnFaq } from '@/components/en-design/en-design-data';
 import {
@@ -341,8 +340,8 @@ export default function CompositeRender({
             />
           </>
         );
-        if (locale === 'zh-hant') return <ZhHantFaqShell>{faqBody}</ZhHantFaqShell>;
-        if (locale === 'ko') return <KoPageShell page="faq">{faqBody}</KoPageShell>;
+        // zh-hant and (since 2026-10-06) ko: the Apple FAQ shell.
+        if (locale === 'zh-hant' || locale === 'ko') return <ZhHantFaqShell locale={locale}>{faqBody}</ZhHantFaqShell>;
         return locale === 'en' ? <EnFaqShell>{faqBody}</EnFaqShell> : faqBody;
       }
       case 'legacy-page-pricing':

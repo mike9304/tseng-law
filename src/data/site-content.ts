@@ -991,6 +991,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             { label: '대만 회사설립', href: '/ko/taiwan-company-setup-lawyer' },
             { label: '대만 반도체 소재·장비 공급사 법무', href: '/ko/taiwan-semiconductor-supplier-legal' },
             { label: '반도체 기업 실무가이드', href: '/ko/semiconductor' },
+            { label: '대만 세무·회계 칼럼', href: '/ko/tax-accounting' },
             { label: '대만 소송', href: '/ko/taiwan-litigation-lawyer' },
             { label: '대만 회사설립 종합 가이드', href: '/ko/guides/taiwan-company-setup' },
             { label: '한국어 가능한 대만 변호사', href: '/ko/korean-lawyer-in-taiwan' }
@@ -1761,6 +1762,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             { label: '台灣公司設立', href: '/zh-hant/taiwan-company-setup-lawyer' },
             { label: '海外半導體材料與設備供應商在台法務', href: '/zh-hant/taiwan-semiconductor-supplier-legal' },
             { label: '半導體企業實務指南', href: '/zh-hant/semiconductor' },
+            { label: '外商稅務會計專欄', href: '/zh-hant/tax-accounting' },
             { label: '台灣訴訟', href: '/zh-hant/taiwan-litigation-lawyer' },
             { label: '台灣公司設立完整指南', href: '/zh-hant/guides/taiwan-company-setup' },
             { label: '會說韓文的台灣律師', href: '/zh-hant/korean-lawyer-in-taiwan' }
@@ -2536,6 +2538,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             { label: 'Taiwan Company Setup', href: '/en/taiwan-company-setup-lawyer' },
             { label: 'Taiwan Semiconductor Supplier Legal', href: '/en/taiwan-semiconductor-supplier-legal' },
             { label: 'Semiconductor Practice Guide', href: '/en/semiconductor' },
+            { label: 'Taiwan Tax & Accounting', href: '/en/tax-accounting' },
             { label: 'Attorney Wei Tseng Profile', href: '/en/lawyers/wei-tseng' },
             { label: 'Taiwan Litigation', href: '/en/taiwan-litigation-lawyer' },
             { label: 'Taiwan Company Setup Guide', href: '/en/guides/taiwan-company-setup' },
@@ -3319,6 +3322,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
             { label: '台湾会社設立の弁護士', href: '/ja/taiwan-company-setup-lawyer' },
             { label: '台湾の半導体材料・装置サプライヤー法務', href: '/ja/taiwan-semiconductor-supplier-legal' },
             { label: '半導体企業実務ガイド', href: '/ja/semiconductor' },
+            { label: '台湾 税務・会計コラム', href: '/ja/tax-accounting' },
             { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
             { label: '台湾訴訟の弁護士', href: '/ja/taiwan-litigation-lawyer' },
             { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' }

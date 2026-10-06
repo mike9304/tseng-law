@@ -141,6 +141,7 @@ export const PUBLIC_FILE_ROUTES = [
   "/taiwan-lawyer",
   "/taiwan-litigation-lawyer",
   "/taiwan-semiconductor-supplier-legal",
+  "/tax-accounting",
   "/traffic-accidents",
   "/videos",
 ] as const;

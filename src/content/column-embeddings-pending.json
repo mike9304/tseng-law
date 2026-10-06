@@ -1197,6 +1197,18 @@
     {
       "locale": "zh-hant",
       "slug": "taken-taiwan-police-station-first-24-hours-not-release"
+    },
+    {
+      "locale": "ko",
+      "slug": "foreigners-buying-property-in-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "foreigners-buying-property-in-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "foreigners-buying-property-in-taiwan"
     }
   ]
 }

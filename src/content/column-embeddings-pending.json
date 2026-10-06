@@ -1249,6 +1249,14 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-transfer-pricing-documentation-thresholds"
+    },
+    {
+      "locale": "en",
+      "slug": "vietnamese-companies-taiwan-vietnam-tax-agreement"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "vietnamese-companies-taiwan-vietnam-tax-agreement"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import TaxAccountingBoard from '@/components/tax-accounting/TaxAccountingBoard';
 import type { ColumnPost } from '@/lib/column-post';
@@ -11,6 +11,11 @@ import {
   taxAccountingBoardCopy,
 } from '@/lib/tax-accounting-board';
 import { TAX_ACCOUNTING_COLUMN_FILES } from './tax-accounting-column-files';
+
+vi.mock('next/image', () => ({
+  // eslint-disable-next-line @next/next/no-img-element
+  default: ({ src, alt }: { src: string; alt: string }) => <img src={src} alt={alt} />,
+}));
 
 function post(slug: string, extra: Partial<ColumnPost> = {}): ColumnPost {
   return {
@@ -90,5 +95,7 @@ describe.each([...siteLocales])('%s tax & accounting board on the real corpus', 
       expect(html).not.toContain(`href="/${other}/columns/`);
     }
     expect(html).not.toMatch(/<strong|<b>/);
+    // Badges sit on the card image (svc-col-badge is absolutely positioned).
+    expect(html.match(/class="svc-col-badge"/g) ?? []).toHaveLength(html.match(/class="svc-col-card-media"/g)?.length ?? 0);
   });
 });

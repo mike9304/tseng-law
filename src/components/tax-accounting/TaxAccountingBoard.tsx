@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { ColumnPost } from '@/lib/column-post';
 import {
@@ -32,10 +33,19 @@ function ColumnCards({
           data-tax-accounting-column={post.slug}
           data-tax-accounting-kind={kind}
         >
-          <span className="svc-col-badge">{taxAccountingColumnBadge(post, locale)}</span>
+          {post.featuredImage ? (
+            <div className="svc-col-card-media">
+              <Image src={post.featuredImage} alt="" width={640} height={360} />
+              <div className="svc-col-card-overlay" />
+              <span className="svc-col-badge">{taxAccountingColumnBadge(post, locale)}</span>
+            </div>
+          ) : null}
           <h3 className="svc-col-card-title">{post.title}</h3>
           <p className="svc-col-card-summary">{post.summary}</p>
-          {post.dateDisplay ? <span className="svc-col-card-meta">{post.dateDisplay}</span> : null}
+          <span className="svc-col-card-meta">
+            <time>{post.dateDisplay || post.date}</time>
+            {post.readTime ? <span>{post.readTime}</span> : null}
+          </span>
           <span className="svc-col-card-link">{readMore}</span>
         </Link>
       ))}

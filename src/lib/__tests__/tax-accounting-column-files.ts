@@ -18,11 +18,13 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
+    '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
   ] as string[],
   'zh-hant': [
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
     '304-taiwan-transfer-pricing-documentation-thresholds.md',
+    '306-vietnamese-companies-taiwan-vietnam-tax-agreement.md',
   ] as string[],
 } as const;
 

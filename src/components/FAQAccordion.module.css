@@ -252,5 +252,7 @@
 :global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-arrow) { color: #1d1d1f; }
 :global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-answer) { color: #6e6e73; }
 :global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-question) :global(button):focus-visible { outline: 3px solid #16382d; outline-offset: 2px; }
+/* ko identity (2026-10-06): the same ring in 쪽빛 indigo on the light FAQ. */
+:global(.site[data-locale='ko']) .root:not([data-tone='dark']) :global(.faq-question) :global(button):focus-visible { outline-color: #233f7a; }
 :global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root[data-tone='dark'] .indicator,
 :global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root[data-tone='dark'] :global(.faq-arrow) { color: #fff; }

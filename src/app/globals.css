@@ -27677,12 +27677,14 @@ html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-v
 html[lang='ko'] {
   --font-reading-zh: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-/* Korean identity (2026-10-06) on the public ko pages only: .site is the public shell (CinematicRouteShell); the
-   builder and account routes that also resolve to lang="ko" (/ko/admin-builder …) keep the stack above, so the
-   editor stage does not change face. Pretendard (self-hosted, /fonts/pretendard-1.3.9, its 漢字 ranges removed) leads;
+/* Korean identity (2026-10-06) on the public ko pages only: .site is the public shell (CinematicRouteShell), and the
+   body that holds it also carries the tokens for what public pages portal into document.body (header search overlay,
+   language picker); :is() drops body:has() where :has is unsupported and keeps .site. The builder and account routes
+   that also resolve to lang="ko" (/ko/admin-builder …) have no .site and keep the stack above, so the editor stage
+   does not change face. Pretendard (self-hosted, /fonts/pretendard-1.3.9, its 漢字 ranges removed) leads;
    漢字 glosses and addresses fall to the device Korean/CJK faces in one piece — naming the Noto Sans KR web font here
    pulled ~0.9 MB of its slices onto /ko. */
-html[lang='ko'] .site {
+html[lang='ko'] :is(body:has(> .site), .site) {
   --font-ko-pretendard: 'Pretendard Variable', Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-reading-zh: var(--font-ko-pretendard);
   --font-body: var(--font-ko-pretendard);
@@ -27693,7 +27695,9 @@ html[lang='ko'] .site {
 }
 /* Same weight as the shared html:is([lang='zh-Hant'], [lang='ko']) :where(:focus-visible) ring (#16382d) and later, so ko
    rings are indigo; anything with a class of its own (the indigo chapter's white ring, the footer) still wins. */
-html[lang='ko'] :where(.site :focus-visible) { outline-color: #233f7a; }
+html[lang='ko'] :where(:is(body:has(> .site), .site) :focus-visible) { outline-color: #233f7a; }
+/* The light trust strip's 「Google 리뷰 보기」 ring reads --primary (the zh-hant green). */
+html[lang='ko'] .site .hero-trust-strip--light .hero-trust-rating:focus-visible { outline-color: #233f7a; }
 /* The shared zh-hant/ko page modules read --ap-*: on ko roots they take the Korean palette — 쪽빛 indigo actions and
    links, an indigo mist instead of Apple grey, 12px tiles. The ids outweigh each module's own root rule. */
 html[lang='ko'] .site :is(#ko-about, #ko-services, #ko-pricing, #ko-contact, #ko-faq, #ko-columns, #ko-lawyers, #ko-videos, #ko-column, #ko-lawyer-profile, #ko-traffic, #ko-search, #ko-login, #ko-legal, #ko-intent),

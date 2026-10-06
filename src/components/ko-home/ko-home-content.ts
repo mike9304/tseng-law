@@ -6,7 +6,7 @@
 /**
  * The first-screen glossary: Taiwan legal terms as the firm's ko columns print them, 「한국어(漢字)」 — 대표사무소(辦事處),
  * 퇴직금(資遣費), 조정(調解), 유산세(遺產稅), 이민서(移民署), 경시계좌(警示帳戶) (src/content/columns/*.md, checked
- * 2026-10-06; ko-home-content.test.ts pins each pair to a ko column). The area is the ko service or column topic the term belongs to. Each row runs the site search for
+ * 2026-10-06; ko-home-identity.test.ts pins each pair to a ko column). The area is the ko service or column topic the term belongs to. Each row runs the site search for
  * the Korean term, which lists the columns, FAQ and pages about it.
  */
 export const KO_LEDGER = [

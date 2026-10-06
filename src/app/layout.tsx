@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import type { ReactNode } from 'react';
 import { getSearchEngineVerification, getSiteUrl } from '@/lib/seo';
-import { getLocaleFontClassName, getLocaleFontStylesheets, KO_PRETENDARD_STYLESHEET, type DocumentLanguage } from './fonts';
+import { getLocaleFontClassName, getLocaleFontStylesheets, type DocumentLanguage } from './fonts';
 import { isRtlDocumentLanguage, resolvePublicDocumentLanguage } from '@/lib/public-guidance';
 
 const searchEngineVerification = getSearchEngineVerification();
@@ -61,8 +61,6 @@ export default async function RootLayout({
   // their own heroes; the guidance languages never preloaded it.
   // next/font variables must live on <html> so :root semantic tokens resolve.
   const fontClassName = getLocaleFontClassName(language);
-  // The ko pages lead with Pretendard (Korean identity, 2026-10-06); the Noto pair stays as the fallback.
-  const fontStylesheets = [...getLocaleFontStylesheets(language), ...(language === 'ko' ? [KO_PRETENDARD_STYLESHEET] : [])];
   // Arabic is the first right-to-left public language. `dir` must sit on <html>
   // so every block, flex row and text run in the document inherits it.
   const direction = isRtlDocumentLanguage(language) ? 'rtl' : 'ltr';
@@ -70,8 +68,8 @@ export default async function RootLayout({
   return (
     <html lang={language} dir={direction} className={fontClassName} suppressHydrationWarning>
       <head>
-        {fontStylesheets.map(href => <link key={`preload:${href}`} rel="preload" as="style" href={href} />)}
-        {fontStylesheets.map(href => <link key={href} rel="stylesheet" href={href} />)}
+        {getLocaleFontStylesheets(language).map(href => <link key={`preload:${href}`} rel="preload" as="style" href={href} />)}
+        {getLocaleFontStylesheets(language).map(href => <link key={href} rel="stylesheet" href={href} />)}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<style>.reveal,.reveal-stagger > *{opacity:1;transform:none;pointer-events:auto;transition:none}</style>`,

@@ -2,8 +2,11 @@ import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, test } from 'vitest';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { KO_PRETENDARD_STYLESHEET } from '@/app/fonts';
-import { KO_LEDGER, KO_PROCESS } from '@/components/ko-home/ko-home-content';
+import KoHero from '@/components/ko-home/KoHero';
+import { KO_LEDGER, KO_PROCESS, KO_SITUATIONS } from '@/components/ko-home/ko-home-content';
+import { siteContent } from '@/data/site-content';
 
 // ko home, Korean identity (2026-10-06). The site is advertising-sensitive: every visible line on the new ko home
 // restates existing ko copy. These pins catch drift (review of 1ce4a31d: 「…로 진행합니다」 widened 「…로 상담/소통」).
@@ -51,6 +54,29 @@ describe('ko home copy provenance', () => {
     expect(site).toContain('한국어·중국어·일본어·영어로 소통하며');
     expect(retainer).toContain('한국어·중국어·일본어·영어로 소통합니다');
     expect(retainer).not.toMatch(/로 진행합니다/);
+  });
+});
+
+describe('ko home first screen and situations', () => {
+  test('the h1 is the ko hero title (only the line break is the design)', () => {
+    const markup = renderToStaticMarkup(KoHero());
+    const h1 = /<h1\b[^>]*>([\s\S]*?)<\/h1>/.exec(markup)?.[1] ?? '';
+    expect(h1.replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()).toBe(siteContent.ko.hero.title);
+  });
+
+  test('each situation names only matters the ko service descriptions name', () => {
+    const services = siteContent.ko.services.items.map((item) => item.description).join('\n');
+    const terms = [
+      ['법인 형태 선택', '투자심의위원회 승인', '업종별 인허가', '상표 선등록 확인'],
+      ['계약 분쟁', '손해배상', '소비자 피해', '수사 대응'],
+      ['이혼', '재산분할', '친권', '상속'],
+    ];
+    KO_SITUATIONS.forEach((situation, index) => {
+      for (const term of terms[index]) {
+        expect(situation.text).toContain(term);
+        expect(services).toContain(term);
+      }
+    });
   });
 });
 

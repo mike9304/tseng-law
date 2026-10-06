@@ -202,5 +202,7 @@ export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-ff7d
 
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
-  return getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
+  const sheets = getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
+  // ko leads with Pretendard; the list also feeds DocumentLocaleSync, so a client-side switch into /ko attaches it too.
+  return language === 'ko' ? [...sheets, KO_PRETENDARD_STYLESHEET] : sheets;
 }

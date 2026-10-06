@@ -44,6 +44,20 @@ const faq = [
   },
 ];
 
+// The FAQ answers are no longer copied into the body; the body states the same rules in its own sentences.
+const suspensionRuleSentence =
+  'A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins (unless the suspension has already been reported to and recorded by the tax authority under the Business Tax Act — proviso to Article 3, paragraph 1 of the Regulations Governing Company Registration), and each suspension period may not exceed one year.';
+const suspensionTaxSentence =
+  'The company must file an annual income tax return for the year in which it suspends business, and other filing or payment obligations may remain based on transactions before and after suspension, the holding or disposal of assets, withholding, employees, and the industry involved.';
+const permanentClosureSentence =
+  'If permanent closure is chosen, dissolution registration and liquidation should be connected so that the company’s contracts, claims, debts, taxes, and residual assets can be settled.';
+const liquidationPeriodSentence =
+  'How long liquidation takes depends on these facts, but the liquidator must complete it within six months (Company Act Article 87(3), applied to companies limited by shares by Article 334 and to limited companies by Article 113(2)); if that is not possible, the liquidator may state the reasons and apply to the court for an extension.';
+const article87Link =
+  '[Taiwan Company Act, Article 87](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87)';
+const dissolutionColumnLink =
+  '[Closing a Taiwan subsidiary or branch: when can the remaining cash leave?](/en/columns/taiwan-company-dissolution-liquidation)';
+
 const article9Paragraph =
   'Article 9 of Taiwan’s Company Act provides that when share capital payable to a company was not actually paid but was represented as fully paid, or when share capital was returned to shareholders or shareholders were permitted to recover it after registration, the violation is punishable by imprisonment for up to five years, detention, or a fine of between NT$500,000 and NT$2.5 million. This provision does not generally punish ordinary, lawful uses of company funds.';
 const article90Paragraph =
@@ -63,6 +77,7 @@ const h2s = [
 
 const officialLinks = [
   '[Taiwan Company Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
+  article87Link,
   '[Taiwan Ministry of Economic Affairs Company Registration Regulations](https://law.moea.gov.tw/LawContent.aspx?id=FL011312)',
   '[Taiwan Ministry of Finance Guidance on Final Returns, Liquidation Returns, and Business Suspension](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/x6mOPan)',
   '[Taiwan Ministry of Economic Affairs Guidance on the Business-Suspension Filing Deadline](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
@@ -80,9 +95,6 @@ function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
 }
 
-function firstParagraphAfter(content: string, heading: string) {
-  return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
-}
 
 function countVisibleEnglishWords(content: string) {
   const visibleText = content
@@ -104,7 +116,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
   it('publishes the exact metadata, H1, images, and three contracted FAQs', () => {
     expect(parsed.data.title).toBe(title);
     expect(parsed.data.url).toBe(sourceUrl);
-    expect(parsed.data.lastmod).toBe('2026-09-10');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('September 13, 2025');
     expect(parsed.data.categories).toEqual(['Taiwan Company Formation']);
     expect(parsed.data.featured_image).toBe(featuredImage);
@@ -117,7 +129,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     expect(post).toBeTruthy();
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-09-10');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('September 13, 2025');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('Company Setup');
@@ -142,16 +154,21 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     expect(countOccurrences(raw, inlineImage)).toBe(1);
   });
 
-  it('repeats each FAQ answer verbatim as the first paragraph after its H2', () => {
-    const headingAnswers = [
-      [`## ${h2s[0]}`, exitFaqAnswer],
-      [`## ${h2s[1]}`, resolutionFaqAnswer],
-      [`## ${h2s[4]}`, suspensionFaqAnswer],
-    ];
+  it('keeps each FAQ answer in the front matter only, with its rules stated in the body', () => {
+    for (const answer of [exitFaqAnswer, resolutionFaqAnswer, suspensionFaqAnswer]) {
+      expect(parsed.content).not.toContain(answer);
+      expect(post?.content ?? '').not.toContain(answer);
+    }
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
+    for (const content of [parsed.content, post?.content ?? '']) {
+      expect(content).toContain(permanentClosureSentence);
+      expect(
+        content
+          .split(`## ${h2s[4]}\n\n`)[1]
+          ?.split('\n\n')
+          .some((paragraph) => paragraph.startsWith(suspensionRuleSentence)),
+      ).toBe(true);
+      expect(content).toContain(suspensionTaxSentence);
     }
   });
 
@@ -169,14 +186,12 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       'The applicable requirements differ depending on whether the transaction is a payment for goods or services incurred by the company, a dividend that has already been lawfully declared, repayment of money lent to the company by a shareholder, a capital reduction, or a distribution of residual assets after liquidation.',
       article9Paragraph,
       article90Paragraph,
-      'The provision should not be extended to every payment from a company account.',
       'payments of rent, wages, amounts owed to suppliers, or taxes for actual business operations must be distinguished from falsely representing unpaid share capital as paid or returning share capital after registration',
       'separate issues may arise under company law, tax law, and accounting standards if its actual use, counterparty, consideration, or decision-making authority is unclear',
       'In liquidation, creditors and taxes take priority over a shareholder’s recovery of an investment.',
       'Even when a shareholder asserts a loan claim against the company, the actual loan agreement, flow of funds, interest terms, accounting treatment, and order of repayment must be checked.',
       'Other civil, criminal, and tax liabilities depend on the specific facts, including the purpose and authority for the transfer, the supporting evidence, its accounting treatment, and the relationship between the parties.',
-      'The existence of a particular transaction does not necessarily establish breach of trust or another offense, while internal approval alone does not necessarily exclude all liability.',
-      'Combining personal expenses paid with a company card, company expenses advanced by a responsible person, amounts borrowed by the company from a shareholder, and amounts withdrawn from the company by a shareholder into one netted account can obscure the basis for each transaction.',
+      'In practice, it is useful first to separate the list of assets held in the company’s name from assets held personally by shareholders, and to prepare a separate schedule of claims and debts between the company and its shareholders.',
     ]) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
@@ -204,7 +219,9 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       'File the liquidation-income return within 30 days after the liquidation ends',
       'make the required liquidation-completion report to the court',
       'Dissolution resulting from a merger, split-up, or bankruptcy may be exempt from ordinary liquidation procedures.',
-      'The time needed for liquidation varies with these facts, so decisions should not be based on an assumed fixed period.',
+      liquidationPeriodSentence,
+      'the liquidator must complete it within six months',
+      'the liquidator may state the reasons and apply to the court for an extension',
       'a transfer of assets to a related party or a waiver of claims requires a separate review of its effect on the company and its creditors',
     ]) {
       expect(raw).toContain(phrase);
@@ -218,15 +235,13 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     expect(countOccurrences(parsed.content, article89Paragraph)).toBe(1);
 
     for (const phrase of [
-      'The books, claims and debts, security, and unpaid taxes must be checked before considering shareholder distributions.',
+      'If the company’s financial condition is unclear, the amount that shareholders may receive should not be calculated first.',
       'debts incurred after the financial-statement date, guarantee obligations, litigation claims, employee-related amounts, the possibility of a tax audit, and the actual disposal value of assets',
       'Excess liabilities generally concern the company’s financial position as determined by comparing assets with liabilities, while inability to pay concerns whether debts can be paid when they become due.',
       'Even if the books show substantial assets, the company’s ability to pay may be assessed differently if those assets cannot be converted immediately into cash or are subject to security.',
       'a temporary cash shortage alone does not necessarily mean that the same procedure applies in every case',
       'paying only a particular creditor or shareholder first may prejudice other creditors’ interests and procedural fairness',
-      'security interests, tax claims, and wages',
-      'Whether a bankruptcy application is required should not be decided using only a simplistic formula or multiple conditions found in outdated guidance.',
-      'The collectability of the company’s claims and the costs of selling its assets should also be assessed at realistic values rather than nominal amounts.',
+      'The central questions are whether company property is insufficient to pay the debts, what the payment dates and cash flow are, what security and priority claims exist, and when the liquidator learned of these circumstances, all as shown by the actual records.',
       'A new loan, capital increase, debt waiver, and agreement with creditors can each produce different accounting and tax consequences.',
     ]) {
       expect(raw).toContain(phrase);
@@ -254,19 +269,16 @@ describe('English investment column 002 — closing a Taiwan company', () => {
   });
 
   it('qualifies business suspension timing, tax filings, and continuing duties', () => {
-    expect(firstParagraphAfter(parsed.content, `## ${h2s[4]}`)).toBe(
-      suspensionFaqAnswer,
-    );
     for (const phrase of [
+      suspensionRuleSentence,
+      suspensionTaxSentence,
       'Business suspension allows a company to stop operating for a period while retaining its legal personality.',
       'it does not extinguish the company or settle all existing rights and obligations',
       'changes to registered matters such as the business address, responsible person, articles of incorporation, or capital require the necessary change registration',
       'The company should maintain an address and a responsible person who can receive mail and agency notices',
       'separate expenses such as local taxes, management fees, and insurance premiums may continue',
-      'If a shareholder personally uses or stores an asset, the respective rights of the company and the individual and responsibility for the expenses should be documented separately.',
-      'Continuing obligations relating to contracts, employees, permits and licenses, bank accounts, and record retention should also be checked.',
+      'Before suspension, the company should decide whether to terminate or maintain its commercial contracts, lawfully handle employment relationships, and review the conditions and renewal deadlines for industry-specific permits and licenses.',
       'establish a system to retain accounting books and supporting evidence for the statutory period',
-      'Business-suspension registration alone should not be understood as eliminating all tax filings.',
       'The fact that the company has no actual sales is not the same as a conclusion that it has no filing obligation for a particular tax',
       'decide whether to resume business, consider whether it qualifies for a further suspension, or move to permanent closure',
       'business suspension is not a substitute for dissolution and liquidation',
@@ -276,7 +288,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     }
   });
 
-  it('uses exactly the four official links and three English links once and in order', () => {
+  it('uses the inline column link, exactly the five official links and three English links once and in order', () => {
     const officialSection =
       parsed.content
         .split('## Official Sources\n\n')[1]
@@ -301,8 +313,12 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       parsed.content.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g),
       (match) => match[0],
     );
-    expect(markdownLinks).toEqual([...officialLinks, ...internalLinks]);
-    for (const link of [...officialLinks, ...internalLinks]) {
+    expect(markdownLinks).toEqual([
+      dissolutionColumnLink,
+      ...officialLinks,
+      ...internalLinks,
+    ]);
+    for (const link of [dissolutionColumnLink, ...officialLinks, ...internalLinks]) {
       expect(countOccurrences(raw, link)).toBe(1);
     }
   });
@@ -320,14 +336,19 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     );
   });
 
-  it('locks the exact visible-word count and 200-wpm read-time formula', () => {
+  it('locks the exact visible-word count and the lane-set read_time', () => {
     const visibleWords = countVisibleEnglishWords(parsed.content);
-    const calculatedMinutes = Math.ceil(visibleWords / 200);
+    // read_time follows audit-split POLICY v1 (2026-10-06: about 230 words/min over the prose before
+    // "Official Sources"), not the former ceil(all visible words / 200); re-set it together with the counts below.
+    const proseWords = countVisibleEnglishWords(
+      parsed.content.split('## Official Sources')[0],
+    );
 
-    expect(visibleWords).toBe(4_321);
+    expect(visibleWords).toBe(3_288);
+    expect(proseWords).toBe(3_155);
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
-    expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
-    expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
+    expect(parsed.data.read_time).toBe('14 min read');
+    expect(post?.readTime).toBe('14 min read');
   });
 
   it('resolves the withdraw-capital alias to the complete canonical post', () => {
@@ -352,6 +373,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       'response within',
       'guaranteed approval',
       'guaranteed remittance',
+      'outdated guidance',
       '曾俊瑋',
       '/ko/',
       '/ja/',

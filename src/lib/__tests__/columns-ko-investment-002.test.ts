@@ -21,11 +21,24 @@ const resolutionFaqAnswer =
 const suspensionFaqAnswer =
   '1개월 이상 휴업하는 회사는 휴업 전 또는 휴업 시작일부터 15일 이내에 휴업등기를 신청해야 하며(이미 영업세법에 따라 세무기관에 휴업을 신고·核備한 경우에는 이 등기가 필요하지 않습니다 — 회사등기방법(公司登記辦法) 제3조 제1항 단서), 1회 휴업 기간은 1년을 넘을 수 없습니다. 다만 휴업한 연도에도 연간 소득세 결산신고 의무가 있으므로 세무신고가 일률적으로 면제되는 것은 아닙니다. 세목, 보유 자산, 근로자와 그 밖의 사정에 따른 의무를 개별적으로 확인해야 합니다.';
 const article9Paragraph =
-  '대만 「회사법」 제9조는 회사가 납입받아야 할 주금에 관하여 실제로 납입되지 않았는데도 전액 납입된 것으로 표시한 경우, 또는 등기 후 주금을 주주에게 반환하거나 주주가 회수하도록 허용한 경우에 5년 이하의 유기징역·구류 또는 50만 대만달러 이상 250만 대만달러 이하의 벌금을 규정합니다. 통상적인 적법한 회사 자금 사용 일반을 처벌하는 조항은 아닙니다.';
+  '대만 「회사법」 제9조는 회사가 납입받아야 할 주금에 관하여 실제로 납입되지 않았는데도 전액 납입된 것으로 표시한 경우, 또는 등기 후 주금을 주주에게 반환하거나 주주가 회수하도록 허용한 경우에 5년 이하의 유기징역·구류 또는 50만 대만달러 이상 250만 대만달러 이하의 벌금을 규정합니다.';
+const article9ScopeSentence =
+  '이 조항을 회사 계좌에서 이루어지는 모든 지급에 확대해서는 안 됩니다.';
 const article90Paragraph =
   '청산인이 회사 채무를 변제하기 전에 회사 재산을 주주에게 분배한 경우에는 「회사법」 제90조에 따라 1년 이하의 유기징역·구류 또는 6만 대만달러 이하의 벌금에 처해질 수 있습니다.';
 const insolvencyParagraph =
-  '해산 후의 청산은 회사 자산이 부채보다 많은 경우에만 가능한 절차가 아닙니다. 「회사법」 제89조에 따르면 회사 재산으로 채무를 변제하기에 부족한 경우 청산인은 즉시 파산선고를 신청해야 합니다. 채무초과, 지급불능, 담보, 조세채무 및 채권자 수를 확인하여 통상 청산을 계속할 수 있는지 개별적으로 판단해야 합니다.';
+  '해산 후의 청산은 회사 자산이 부채보다 많은 경우에만 가능한 절차가 아닙니다. 「회사법」 제89조에 따르면 회사 재산으로 채무를 변제하기에 부족한 경우 청산인은 즉시 파산선고를 신청해야 합니다. 핵심은 회사 재산이 채무 변제에 부족한지, 지급기일과 현금 흐름이 어떠한지, 담보와 우선채권이 무엇인지, 청산인이 언제 그 사정을 알았는지를 실제 자료로 판단하는 것입니다. 회사가 보유한 채권의 회수 가능성과 자산 매각비용도 명목 금액이 아니라 현실적인 가치로 검토해야 합니다.';
+// FAQ answers now live in the front matter only; the body states the same rules in its own sentences.
+const suspensionRuleSentence =
+  '1개월 이상 휴업하는 회사는 휴업 전 또는 휴업 시작일부터 15일 이내에 휴업등기를 신청해야 하며(이미 영업세법에 따라 세무기관에 휴업을 신고·核備한 경우에는 이 등기가 필요하지 않습니다 — 회사등기방법(公司登記辦法) 제3조 제1항 단서), 1회 휴업 기간은 1년을 넘을 수 없습니다.';
+const suspensionTaxSentence =
+  '휴업한 연도에도 연간 소득세 결산신고 의무가 있고, 휴업 전후 거래, 자산 보유·처분, 원천징수, 근로자와 업종에 따라 다른 신고나 납부가 남을 수 있습니다.';
+const resolutionStep =
+  '2. 회사 형태에 맞는 해산 결의를 합니다. 유한회사는 「회사법」 제113조에 따라 주주 의결권 3분의 2 이상의 동의가 필요합니다. 주식회사는 「회사법」 제316조에 따라 원칙적으로 발행주식 총수 3분의 2 이상을 대표하는 주주가 출석하고, 출석 주주 의결권 과반수로 결의합니다. 공개발행회사가 그 출석 요건에 미달한 때에는 발행주식 총수 과반수를 대표하는 주주가 출석하고 출석 주주 의결권 3분의 2 이상으로 결의할 수 있습니다. 정관이 출석 주식 수나 의결권 수에 관하여 더 높은 요건을 두면 그 정관도 따라야 합니다.';
+const registrationStep =
+  '3. 기한 안에 해산 변경등기를 신청합니다. 「회사등기방법」(公司登記辦法) 제4조에 따라 회사 등기사항이 변경되면 변경 후 15일 이내에 변경등기를 신청하는 것이 원칙입니다. 따라서 해산 후 15일 이내에 회사 형태와 해산 원인에 맞는 해산 변경등기를 준비합니다. 해산등기와 세적 정리, 영업세 관련 절차, 인허가의 폐지나 반납은 담당 기관과 법적 효과가 서로 다를 수 있으므로 하나의 신고로 모두 끝났다고 보아서는 안 됩니다.';
+const liquidationPeriodSentence =
+  '청산 소요기간은 이런 사실에 따라 달라지지만, 청산인은 6개월 안에 청산을 끝내야 하고(회사법 제87조 제3항, 주식회사는 제334조, 유한회사는 제113조 제2항에 따라 준용), 그 안에 끝내지 못하면 사유를 밝혀 법원에 연장을 신청할 수 있습니다.';
 const disclaimer =
   '이 글은 대만 회사의 종료와 회사 재산 처리에 관한 일반적인 법률정보 및 교육 자료이며, 특정 사안에 대한 법률의견이 아닙니다. 적절한 해산·청산·감자·휴업 절차와 세무신고는 회사 형태, 정관, 재무상태, 채권자, 외국인투자 및 개별 거래에 따라 달라질 수 있으므로 실제 결의나 자금 이동 전에 해당 사안을 별도로 확인해야 합니다.';
 const author = '증준외 변호사(Wei Tseng)';
@@ -69,7 +82,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-09-10');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('2025년 9월 13일');
     expect(parsed.data.categories).toEqual(['대만 법인설립']);
     expect(parsed.data.featured_image).toBe(
@@ -81,7 +94,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-09-10');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('2025년 9월 13일');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('법인설립');
@@ -91,16 +104,20 @@ describe('Korean investment column 002 — company exit and capital return', () 
     expect(post?.faq).toEqual(faq);
   });
 
-  it('keeps every FAQ answer identical to the first paragraph after its H2', () => {
-    const headingAnswers = [
-      ['## 1. 회사 재산과 주주 출자금은 구분해야 합니다', exitFaqAnswer],
-      ['## 2. 회사를 영구적으로 종료하는 절차', resolutionFaqAnswer],
-      ['## 5. 당장 종료하지 않는 경우의 휴업', suspensionFaqAnswer],
-    ];
+  it('keeps each FAQ answer in the front matter only, with its rules stated in the body', () => {
+    for (const answer of [exitFaqAnswer, resolutionFaqAnswer, suspensionFaqAnswer]) {
+      expect(parsed.content).not.toContain(answer);
+      expect(post?.content ?? '').not.toContain(answer);
+    }
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
+    const suspensionSection = '## 5. 당장 종료하지 않는 경우의 휴업';
+    for (const content of [parsed.content, post?.content ?? '']) {
+      expect(firstParagraphAfter(content, suspensionSection)).toContain(
+        suspensionRuleSentence,
+      );
+      expect(content.split('\n\n')).toContain(resolutionStep);
+      expect(content.split('\n\n')).toContain(registrationStep);
+      expect(content).toContain(suspensionTaxSentence);
     }
   });
 
@@ -142,6 +159,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
       '회사 재산은 회사에 귀속되고 주주의 개인 재산이 아닙니다.',
       '출자했다는 이유만으로 회사 예금이나 자산을 자유롭게 인출할 수 없습니다.',
       article9Paragraph,
+      article9ScopeSentence,
       article90Paragraph,
       '민사·형사·세무상 책임은 자금 이동의 목적, 권한, 증빙, 회계 처리 및 당사자 관계 등 구체적 사실에 따라 달라집니다.',
     ];
@@ -159,7 +177,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
       '「회사등기방법」(公司登記辦法) 제4조',
       '해산 후 15일 이내',
       '주무기관의 해산 승인일부터 45일 이내에 당기 결산신고',
-      '승인일의 의미와 기산 방법은 개별 승인 문서와 적용 규정을 확인',
+      '실제 기준일을 다시 확인해야 합니다.',
       '청산인을 선임하거나 법정 청산인을 확인',
       '필요한 사항을 법원에 신고',
       '재산목록과 대차대조표',
@@ -171,6 +189,9 @@ describe('Korean investment column 002 — company exit and capital return', () 
       '청산 종료일부터 30일 이내에 청산소득을 신고',
       '법원에 필요한 청산종결 보고',
       '합병·분할·파산에 따른 해산은 통상 청산 절차가 면제될 수 있습니다.',
+      liquidationPeriodSentence,
+      '청산인은 6개월 안에 청산을 끝내야 하고',
+      '그 안에 끝내지 못하면 사유를 밝혀 법원에 연장을 신청할 수 있습니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -182,17 +203,18 @@ describe('Korean investment column 002 — company exit and capital return', () 
   it('covers insolvency, capital reduction, and suspension with proper qualifications', () => {
     const requiredPhrases = [
       insolvencyParagraph,
-      '주주 분배보다 장부, 채권·채무, 담보와 미납세액의 확인이 우선',
+      '재무상태가 불분명하다면 주주에게 돌아갈 금액을 먼저 계산해서는 안 됩니다.',
       '회사를 존속시키면서 출자의 일부를 반환하는 적법한 방법으로 감자를 검토',
       '비공식 인출 수단이 아니며 항상 가능한 것도 아닙니다.',
       '회사 형태에 맞는 결의, 채권자 보호, 자본 검증·회계 처리, 외국인투자, 세무, 송금 및 변경등기',
-      '계약·결의·증빙·원천징수',
-      suspensionFaqAnswer,
+      '서로 다른 법률·세무 범주입니다.',
+      suspensionRuleSentence,
       '소재지, 책임자, 정관, 자본액',
       '필요한 변경등기',
       '차량이나 건물 등 보유 자산',
       '계약, 근로자, 인허가, 은행계좌와 장부 보존',
-      '휴업은 해산·청산의 대체 수단이 아닙니다.',
+      '휴업은 회사의 존재를 끝내는 절차가 아닙니다.',
+      '회사가 소멸하거나 기존 권리·의무가 일괄 정리되는 효과는 없습니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -206,15 +228,12 @@ describe('Korean investment column 002 — company exit and capital return', () 
       '예를 들어 실제 영업을 위한 임차료, 급여, 공급대금이나 세금의 지급은 주금을 실제로 납입하지 않은 가장납입이나 등기 후 주금 반환과 구별해야 합니다.',
       '세액 계산·신고 자료',
       '세무·회계 장부',
-      '은행계좌와 세무 전산자료를 관리할 담당자를 정하고',
       '해산은 회사의 통상적인 영업을 끝내고 청산 단계로 전환하는 법률상 절차이며, 청산은 그 뒤 회사에 남은 사무와 재산관계를 정리하는 절차입니다.',
       '공식 세무 안내에 따르면 기간은 주무기관의 승인 공문 발송일(발문일) 다음 날부터 계산합니다. 다만 회사가 받은 문서의 종류와 해산 원인에 따라 실제 기준일을 다시 확인해야 합니다.',
       '정관이나 주주 결의에 따라 청산인을 선임하거나 법정 청산인을 확인한 뒤, 필요한 사항을 법원에 신고합니다.',
       '임금·퇴직금 등 근로관계 채무',
-      '다만 모든 회사에 같은 서류와 순서가 적용되는 것은 아닙니다.',
-      '거래대금 수령부터 장부 반영과 세무신고까지 일관되게 관리하는 것이 중요합니다.',
+      '다음 순서는 일반적인 점검 틀입니다.',
       '회사 계좌에 현금이 있다는 사실만으로 배당 가능한 이익이 있는 것은 아니므로 결손금, 법정적립금과 미처분이익잉여금을 확인해야 합니다.',
-      '휴업 상태가 길어질수록 담당자 교체, 자료 분실, 주소 변경 미신고나 그 밖의 의무 불이행으로 나중의 종료 절차가 더 복잡해질 수 있습니다.',
     ];
 
     for (const phrase of correctedPhrases) {
@@ -223,12 +242,16 @@ describe('Korean investment column 002 — company exit and capital return', () 
     }
   });
 
-  it('uses each official source and contracted internal link exactly once in order', () => {
+  it('uses each inline column link, official source and contracted internal link exactly once in order', () => {
     const officialLinks = [
       '[대만 회사법](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
       '[대만 경제부 회사등기방법](https://law.moea.gov.tw/LawContent.aspx?id=FL011312)',
       '[대만 재정부 결산·청산·휴업 세무 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/x6mOPan)',
       '[대만 경제부 휴업 신청 기한 안내](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
+      '[대만 회사법 제87조(청산 기간)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87)',
+    ];
+    const inlineColumnLinks = [
+      '[대만 자회사 해산등기 뒤에도 청산은 남습니다](/ko/columns/taiwan-company-dissolution-liquidation)',
     ];
     const internalLinks = [
       '[대만 투자·회사설립 서비스](/ko/services/investment)',
@@ -240,8 +263,12 @@ describe('Korean investment column 002 — company exit and capital return', () 
       (match) => match[0],
     );
 
-    expect(markdownLinks).toEqual([...officialLinks, ...internalLinks]);
-    for (const link of [...officialLinks, ...internalLinks]) {
+    expect(markdownLinks).toEqual([
+      ...inlineColumnLinks,
+      ...officialLinks,
+      ...internalLinks,
+    ]);
+    for (const link of [...inlineColumnLinks, ...officialLinks, ...internalLinks]) {
       expect(raw.split(link)).toHaveLength(2);
     }
   });
@@ -262,7 +289,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
     expect(eojeolCount).toBeGreaterThanOrEqual(1_000);
-    expect(eojeolCount).toBe(2_476);
+    expect(eojeolCount).toBe(1_803);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

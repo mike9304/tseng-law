@@ -22,7 +22,19 @@ const entityFaqAnswer =
 const residenceFaqAnswer =
   '僅完成公司設立，並不當然取得工作許可或居留資格。外國人如要在台灣管理或經營公司，仍須就其職務、出資關係及雇主營運實績等，符合工作許可的相關要件；取得工作許可後，還須依居留目的另行申請外僑居留證。';
 const capitalFaqAnswer =
-  '公司設立本身並無一體適用的法定最低資本額；但特定行業的最低資本額、事業計畫的合理性、銀行審查，以及工作許可所要求的雇主資格，仍須分別確認。僑外投資事業主管工作許可的適用對象，包括華僑或外國人持有該事業股份或出資額合計超過股份總數或資本總額三分之一之公司的經理人、外國分公司經理人，以及代表人辦事處代表人等。其中，公司或分公司設立未滿一年者，雇主原則上須符合下列條件之一：實收資本額或在台營運資金達新臺幣50萬元以上、營業額達新臺幣300萬元以上、進出口實績總額達美金50萬元以上，或代理佣金達美金20萬元以上。設立一年以上者，則原則上須符合最近一年或前三年在台平均營業額達新臺幣300萬元以上、平均進出口實績總額達美金50萬元以上，或平均代理佣金達美金20萬元以上其中之一。代表人辦事處設立滿一年者，須具備在台工作實績；設立未滿一年者免除此項要求。對國內經濟發展有實質貢獻，或情況特殊者，仍可能由主管機關個案認定。';
+  '公司設立本身並無一體適用的法定最低資本額；但特定行業的最低資本額、事業計畫的合理性、銀行審查，以及工作許可所要求的雇主資格，仍須分別確認。僑外投資事業主管工作許可對設立未滿一年的公司或分公司，原則上要求雇主在實收資本額或在台營運資金（新臺幣50萬元以上）、營業額、進出口實績、代理佣金四項中，至少一項達到門檻，各項數額見本文第4節。';
+
+// The FAQ answers are no longer copied into the body; the body states the same rules in its own paragraphs.
+const residenceBodyParagraph =
+  '僅完成公司設立，並不當然取得工作許可或居留資格。學生可以申請投資及公司設立，但投資人或股東身分，不表示其現有居留身分允許在台灣工作或經營公司。若實際負責簽訂契約、指揮員工或處理日常經營業務，應在開始工作前確認工作許可的適用對象與要件。';
+const capitalIntroParagraph =
+  '公司設立本身並無一體適用的法定最低資本額；但特定行業的最低資本額、事業計畫的合理性、銀行審查，以及工作許可所要求的雇主資格，仍須分別確認。';
+const employerThresholdParagraph =
+  '僑外投資事業主管工作許可的適用對象，包括華僑或外國人持有該事業股份或出資額合計超過股份總數或資本總額三分之一之公司的經理人、外國分公司經理人，以及代表人辦事處代表人等。其中，公司或分公司設立未滿一年者，雇主原則上須符合下列條件之一：實收資本額或在台營運資金達新臺幣50萬元以上、營業額達新臺幣300萬元以上、進出口實績總額達美金50萬元以上，或代理佣金達美金20萬元以上。設立一年以上者，則原則上須符合最近一年或前三年在台平均營業額達新臺幣300萬元以上、平均進出口實績總額達美金50萬元以上，或平均代理佣金達美金20萬元以上其中之一。';
+const representativeOfficeAndArticle38Paragraph =
+  '代表人辦事處設立滿一年者，須具備在台工作實績；設立未滿一年者免除此項要求。對國內經濟發展有實質貢獻，或情況特殊者，仍可能由主管機關個案認定。雇主依此途徑聘僱人數超過一人者，外國人與雇主資格應改依審查標準第二章之一般規定審查（外國人從事就業服務法第四十六條第一項第一款至第六款工作資格及審查標準第38條第2項）。';
+const employerRequirementLimitsParagraph =
+  '行業法規可能另定資本額或保證金要求，銀行亦可能就事業計畫與交易風險獨立審查。此外，即使符合上述數額，也不代表工作許可必然核發，申請人的實際職務、經歷與提出文件等其他要件仍會一併審查。';
 
 const faq = [
   {
@@ -53,6 +65,17 @@ const officialSources = [
   'https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice',
 ];
 
+const inlineColumnLinks = [
+  '[比較組織形式](/zh-hant/columns/taiwan-company-subsidiary-vs-branch)',
+  '[營業場所預先查詢](/zh-hant/columns/taiwan-company-setup-pitch-location)',
+  '[永久居留](/zh-hant/columns/taiwan-permanent-residence-aprc)',
+];
+const contractedServiceLinks = [
+  '[台灣投資及公司設立服務](/zh-hant/services/investment)',
+  '[曾雋崴律師簡介](/zh-hant/lawyers/wei-tseng)',
+  '[聯絡我們](/zh-hant/contact)',
+];
+
 const imagePaths = [
   '../images/001-taiwan-company-establishment-basics/featured-01.jpg',
   '../images/001-taiwan-company-establishment-basics/img-01.jpg',
@@ -64,7 +87,7 @@ const imagePaths = [
 const disclaimer =
   '本文僅供一般法律資訊與教育參考，不構成就任何個案提供的法律或稅務意見。所需程序及結果可能因投資架構、行業、申請人的國籍與居留身分，以及主管機關最新實務而異；進行投資、簽約或聘僱前，仍應依最新官方資料及個案情形另行確認。';
 const taxParagraph =
-  '台灣營業稅的一般稅率為5%，通常每兩個月申報一次。營利事業所得稅的一般稅率為20%，但實際課稅仍取決於課稅所得及適用規定。依台灣國內法，向非居住者支付股利的扣繳率為21%；符合台韓所得稅協定適用要件及程序的股利，來源地課稅上限為10%。辦理申報與扣繳時，仍須確認納稅義務人的協定居住者身分、受益所有人、所得性質及協定適用文件。';
+  '台灣營業稅的一般稅率為5%，通常每兩個月申報一次。營利事業所得稅的一般稅率為20%，但實際課稅仍取決於課稅所得及適用規定。依台灣國內法，向非居住者支付股利的扣繳率為21%；符合台韓所得稅協定適用要件及程序的股利，來源地課稅上限為10%。';
 
 function firstParagraphAfter(content: string, heading: string) {
   return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
@@ -90,7 +113,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('2025年9月13日');
     expect(parsed.data.categories).toEqual(['台灣公司設立']);
     expect(parsed.data.featured_image).toBe(imagePaths[0]);
@@ -102,7 +125,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
 
     expect(post?.slug).toBe('taiwan-company-establishment-basics');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('2025年9月13日');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('公司設立');
@@ -112,22 +135,23 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     expect(post?.faq).toEqual(faq);
   });
 
-  it('keeps each FAQ answer identical to its contracted first body paragraph', () => {
-    const headingAnswers = [
-      [
-        '## 1. 進入台灣市場的組織形式：子公司、分公司與代表人辦事處',
-        entityFaqAnswer,
-      ],
-      ['### 公司設立與工作許可、居留資格', residenceFaqAnswer],
-      [
-        '### 公司資本額與僑外投資事業主管工作許可',
-        capitalFaqAnswer,
-      ],
-    ];
+  it('keeps each FAQ answer in the front matter only, with its rules stated in the body', () => {
+    for (const answer of [entityFaqAnswer, residenceFaqAnswer, capitalFaqAnswer]) {
+      expect(parsed.content).not.toContain(answer);
+      expect(post?.content ?? '').not.toContain(answer);
+    }
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
+    for (const content of [parsed.content, post?.content ?? '']) {
+      expect(firstParagraphAfter(content, '### 公司設立與工作許可、居留資格')).toBe(
+        residenceBodyParagraph,
+      );
+      expect(firstParagraphAfter(content, '### 公司資本額與僑外投資事業主管工作許可')).toBe(
+        capitalIntroParagraph,
+      );
+      const paragraphs = content.split('\n\n');
+      expect(paragraphs).toContain(employerThresholdParagraph);
+      expect(paragraphs).toContain(representativeOfficeAndArticle38Paragraph);
+      expect(paragraphs).toContain(employerRequirementLimitsParagraph);
     }
   });
 
@@ -205,7 +229,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
       '不得在台灣從事銷售、提供服務等一般營利活動',
       '不得僅憑組織名稱判斷',
       '台韓所得稅協定於2023年12月27日生效，自2024年1月1日起適用',
-      '股利、利息及權利金的來源地課稅上限稅率均為10%',
+      '符合要件的利息及權利金，來源地上限稅率亦為10%',
       '管理處所、分公司、辦事處等固定場所',
       '超過六個月的工程',
       '任一十二個月期間合計超過183日的服務',
@@ -214,28 +238,37 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
       '外國人可以投資許多行業',
       '不表示公司可以立即開始營業',
       '土地使用分區、建築管理、租賃條件及稅籍登記',
-      '臺北市設有適用於公司或商業登記案件的「營業場所預先查詢」機制',
+      '臺北市設有適用於公司或商業登記案件的「[營業場所預先查詢](/zh-hant/columns/taiwan-company-setup-pitch-location)」機制',
       '學生可以申請投資及公司設立',
       '不表示其現有居留身分允許在台灣工作或經營公司',
-      '是工作許可所要求的雇主資格，不是公司設立的一般最低資本額',
       '符合上述數額，也不代表工作許可必然核發',
+      '雇主依此途徑聘僱人數超過一人者，外國人與雇主資格應改依審查標準第二章之一般規定審查',
+      '審查標準第38條第2項）',
       '配偶及未成年子女仍須符合條件，另行申請依親居留',
       '家屬也不會因主申請人取得居留證，就當然取得居留資格',
       '連續合法居留五年，且每年居住183日以上',
       '外國專業人才可能適用不同的居留期間計算方式',
       '品行、財產或技能等其他法定要件',
-      '持有工作許可或居留證滿五年，不等於自動取得永久居留',
       '台灣營業稅的一般稅率為5%，通常每兩個月申報一次。',
       '營利事業所得稅的一般稅率為20%',
       '向非居住者支付股利的扣繳率為21%',
       '符合台韓所得稅協定適用要件及程序的股利，來源地課稅上限為10%',
-      '協定居住者身分、受益所有人、所得性質及協定適用文件',
+      '應確認納稅義務人是否為協定上的居住者、是否為受益所有人、所得的法律性質，以及應提出的居住者證明與申請文件',
     ];
 
     for (const phrase of requiredPhrases) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+
+    // The treaty facts are stated once, in section 5.
+    expect(parsed.content.match(/2023年12月27日/g)).toHaveLength(1);
+    expect(parsed.content.match(/常設機構（PE）/g)).toHaveLength(1);
+    expect(
+      parsed.content
+        .split('## 5. 稅務與台韓所得稅協定')[1]
+        ?.split('## 官方資料')[0],
+    ).toContain('台韓所得稅協定於2023年12月27日生效，自2024年1月1日起適用');
   });
 
   it('keeps the approved native-Taiwanese legal phrasing from final review', () => {
@@ -244,13 +277,13 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
       '開立公司籌備處帳戶及匯入投資款時，銀行可能會依認識客戶、實質受益人辨識及資金來源審查等程序，要求提供相關資料。若匯款人、匯款目的、投資核准內容與入帳帳戶彼此不符，可能需要補充說明或補件。投資款匯入後，尚須辦理投資額審定，再完成公司設立登記與稅籍登記，最後依銀行要求將籌備處帳戶轉為正式帳戶。',
       '醫療器材、酒類、旅行業、營建或專業服務等可能涉及主管機關許可、登記或資格的領域，應以實際提供的商品與服務及交易結構為基準，評估適用規定。',
       '簽訂租約前，應依預定地址及實際營業內容，確認土地使用分區、建築管理、租賃條件及稅籍登記等事項是否符合需求與相關規定。若建物用途或管理規約不符合實際業務，或未能取得必要的出租人同意，登記後仍可能須變更場所或補辦其他程序。',
-      '臺北市設有適用於公司或商業登記案件的「營業場所預先查詢」機制，申請人可在提出登記前，就預定場所與營業項目辦理查詢。但查詢結果並不表示其他許可或專門法規上的要件已一併符合。在其他地區設址時，應確認當地地方政府與管轄機關的程序，並在簽訂長期租約或投資設備前，先以書面確認場所是否符合相關規定。',
+      '臺北市設有適用於公司或商業登記案件的「[營業場所預先查詢](/zh-hant/columns/taiwan-company-setup-pitch-location)」機制。但查詢結果並不表示其他許可或專門法規上的要件已一併符合。在其他地區設址時，應確認當地地方政府與管轄機關的程序，並在簽訂長期租約或投資設備前，先以書面確認場所是否符合相關規定。',
       '公司設立的申請人、公司股東、實際在台灣執行業務的人與居留申請人，可能是同一人，但法律上應分別以觀。投資核准審查資本的投入，工作許可審查外國人的業務執行，居留證則審查居留目的與期間，三者的審查目的各自不同。',
-      '上述數額是工作許可所要求的雇主資格，不是公司設立的一般最低資本額。行業法規可能另定資本額或保證金要求，銀行亦可能就事業計畫與交易風險獨立審查。此外，即使符合上述數額，也不代表工作許可必然核發，申請人的實際職務、經歷與提出文件等其他要件仍會一併審查。',
+      employerRequirementLimitsParagraph,
       '外國專業人才可能適用不同的居留期間計算方式，部分居留期間也可能不計入申請永久居留所需的年限。',
       '營業稅與營利事業所得稅的課稅對象與申報方式不同，應區分對銷售額課徵的稅與對課稅所得課徵的稅。向境外股東或關係企業支付股利、利息、權利金或服務費時，應事先評估給付的性質、收款人的身分、國內法上的扣繳規定，以及所得稅協定適用的可能性。',
       '協定上的限制稅率，不會僅因協定存在即自動適用。應確認納稅義務人是否為協定上的居住者、是否為受益所有人、所得的法律性質，以及應提出的居住者證明與申請文件。',
-      '評估營業利潤的課稅權時，應檢視前述四種常設機構類型，分析是否構成常設機構及相關營業利潤的歸屬。除服務日數外，亦應一併確認固定場所、工程期間、代理人締結契約權限及實際活動。',
+      '台韓所得稅協定於2023年12月27日生效，自2024年1月1日起適用；符合要件的利息及權利金，來源地上限稅率亦為10%。',
     ];
 
     for (const phrase of approvedPhrases) {
@@ -259,7 +292,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     }
   });
 
-  it('uses all eleven official sources and exactly the three contracted internal links', () => {
+  it('uses all eleven official sources and exactly the six contracted internal links', () => {
     for (const source of officialSources) {
       expect(raw).toContain(source);
     }
@@ -275,11 +308,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
         raw.matchAll(/\[[^\]]+\]\((\/[^)]+)\)/g),
         (match) => match[0],
       ),
-    ).toEqual([
-      '[台灣投資及公司設立服務](/zh-hant/services/investment)',
-      '[曾雋崴律師簡介](/zh-hant/lawyers/wei-tseng)',
-      '[聯絡我們](/zh-hant/contact)',
-    ]);
+    ).toEqual([...inlineColumnLinks, ...contractedServiceLinks]);
   });
 
   it('preserves exactly five images in their contracted positions', () => {
@@ -290,10 +319,10 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     expect(markdownImages).toEqual(imagePaths);
     expect(
       parsed.content.indexOf(imagePaths[0]),
-    ).toBeLessThan(parsed.content.indexOf('台灣市場'));
+    ).toBeLessThan(parsed.content.indexOf('完成公司登記，不代表投資金審查'));
     expect(
       parsed.content.indexOf(imagePaths[1]),
-    ).toBeLessThan(parsed.content.indexOf('台灣市場'));
+    ).toBeLessThan(parsed.content.indexOf('完成公司登記，不代表投資金審查'));
     expect(parsed.content.indexOf(imagePaths[2])).toBeGreaterThan(
       parsed.content.indexOf(
         '## 1. 進入台灣市場的組織形式：子公司、分公司與代表人辦事處',
@@ -339,14 +368,15 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     ]);
   });
 
-  it('derives read_time from the exact visible Han-character count at 400 per minute', () => {
+  it('locks the exact visible Han-character count and the lane-set read_time', () => {
     const publicText = extractPublicVisibleText(parsed.content);
     const visibleHanCount = publicText.match(/\p{Script=Han}/gu)?.length ?? 0;
-    const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(4_260);
-    expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
-    expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
+    // read_time follows audit-split POLICY v1 (2026-10-06: about 500 characters/min over the prose, sources
+    // excluded), not the former ceil(visible Han characters / 400); re-set it together with the count below.
+    expect(visibleHanCount).toBe(3_690);
+    expect(parsed.data.read_time).toBe('8分鐘閱讀');
+    expect(post?.readTime).toBe('8分鐘閱讀');
   });
 
   it('resolves the canonical and alias slugs in Traditional Chinese', () => {

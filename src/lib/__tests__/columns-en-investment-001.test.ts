@@ -20,7 +20,26 @@ const entityFaqAnswer =
 const residenceFaqAnswer =
   'Forming a company does not by itself confer work authorization or residence status. A foreign national who will manage or operate a business in Taiwan must meet the applicable work-permit requirements concerning the proposed role, the investment relationship, and the employer’s business performance, and must separately apply for an Alien Resident Certificate (ARC) appropriate to the purpose of residence after obtaining the work permit.';
 const capitalFaqAnswer =
-  'Taiwan does not impose a generally applicable statutory minimum capital requirement for company formation. Industry-specific capital requirements, the reasonableness of the business plan, bank review, and employer-qualification rules for work permits must be assessed separately. The foreign-manager work-permit category for a foreign-invested business covers, among others, the manager (經理人) of a company in which overseas Chinese or foreign investors collectively hold more than one-third of the issued shares or total capital, the manager of a Taiwan branch of a foreign company, and the representative of a representative office. For a company or branch established for less than one year, the employer generally must satisfy at least one of the following: paid-in capital or Taiwan working capital of at least NT$500,000; revenue of at least NT$3 million; import-export performance of at least US$500,000; or agency commissions of at least US$200,000. For a company or branch established for at least one year, the employer generally must satisfy at least one of the following, measured by the most recent year in Taiwan or the average of the preceding three years: revenue of at least NT$3 million; import-export performance of at least US$500,000; or agency commissions of at least US$200,000. A representative office established for at least one year must have a record of activities in Taiwan; this requirement is waived if it has been established for less than one year. Special approval may be available where the business makes a substantial contribution to Taiwan’s economic development or special circumstances exist.';
+  'Taiwan does not impose a generally applicable statutory minimum capital requirement for company formation. Industry-specific laws may require separate capital or security deposits, and a bank may independently review the business plan and transaction risks. For a foreign manager’s work permit, a company or branch established for less than one year generally must meet at least one of four employer thresholds (paid-in capital or Taiwan working capital of at least NT$500,000, or specified revenue, import-export, or agency-commission levels), unless the same employer hires more than one person through this route, in which case the general standards apply instead.';
+
+// The FAQ answers are no longer copied into the body; the body states the same rules in its own paragraphs.
+const residenceBodyParagraph =
+  'Forming a company does not by itself confer work authorization or residence status. Work-permit review may consider the applicant’s duties and qualifications, role in the company, investment relationship, the employer’s business performance, and the submitted materials as a whole. Even after a work permit is granted, an ARC must be applied for separately in accordance with the purpose of residence, and the validity period and renewal requirements of each authorization must be confirmed from the relevant disposition and the law in effect at the time.';
+const capitalIntroParagraph =
+  'Taiwan does not impose a generally applicable statutory minimum capital requirement for company formation. Industry-specific laws may require separate capital or security deposits, and a bank may independently review the business plan and transaction risks. The foreign-manager work-permit category for a foreign-invested business covers, among others, the manager (經理人) of a company in which overseas Chinese or foreign investors collectively hold more than one-third of the issued shares or total capital, the manager of a Taiwan branch of a foreign company, and the representative of a representative office. A representative office established for at least one year must have a record of activities in Taiwan. This requirement is waived if it has been established for less than one year.';
+const newEmployerThresholds = `For a company or branch established for less than one year, the employer generally must satisfy at least one of the following:
+
+- Paid-in capital or Taiwan working capital of at least NT$500,000
+- Revenue of at least NT$3 million
+- Import-export performance of at least US$500,000
+- Agency commissions of at least US$200,000`;
+const establishedEmployerThresholds = `For a company or branch established for at least one year, the employer generally must satisfy at least one of the following, measured by the most recent year in Taiwan or the average of the preceding three years:
+
+- Revenue of at least NT$3 million
+- Import-export performance of at least US$500,000
+- Agency commissions of at least US$200,000`;
+const article38Paragraph =
+  'Special approval may be available where the business makes a substantial contribution to Taiwan’s economic development or special circumstances exist. The figures above are employer-qualification requirements for a foreign manager’s work permit, not a universally applicable minimum capital requirement for company formation. Satisfying the thresholds above also does not result in the automatic issuance of a work permit. If the same employer hires more than one person through this route, the foreign national’s, the employer’s, and other qualifications must meet the general requirements in Chapter 2 instead (Qualifications and Criteria Standards for Foreigners Undertaking Jobs under Article 46, Paragraph 1, Subparagraphs 1 to 6 of the Employment Service Act, Article 38(2)).';
 
 const faq = [
   {
@@ -43,6 +62,7 @@ const officialSources = [
   'https://gcis.nat.gov.tw/mainNew/English/index.jsp',
   'https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D',
   'https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340080&flno=10',
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3',
   'https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM',
   'https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR',
@@ -57,12 +77,13 @@ const officialSourceLinks = [
   `[Taiwan MOEA Administration of Commerce — Company and Business Registration](${officialSources[2]})`,
   `[Taiwan Workforce Development Agency — Work Permit Manual for Managers of Foreign-Invested Businesses](${officialSources[3]})`,
   `[Taiwan Ministry of Finance — Taiwan–Korea Income Tax Agreement](${officialSources[4]})`,
-  `[Taiwan Laws & Regulations Database — General Business Tax Rate](${officialSources[5]})`,
-  `[Taiwan Tax Portal — Business Tax Filing Cycle](${officialSources[6]})`,
-  `[Taiwan Tax Portal — Profit-Seeking Enterprise Income Tax Rate](${officialSources[7]})`,
-  `[Taiwan Tax Portal — Taxation of Dividends Paid to Foreign Nationals](${officialSources[8]})`,
-  `[Taiwan National Immigration Agency — Permanent Residence Guidance](${officialSources[9]})`,
-  `[Taipei City — Advance Inquiry for Business Premises](${officialSources[10]})`,
+  `[Value-added and Non-value-added Business Tax Act, Article 10 (statutory range 5%-10%; the applied rate is set by the Executive Yuan)](${officialSources[5]})`,
+  `[Standards of Withholding Rates for Various Incomes, Article 3 (withholding on dividends)](${officialSources[6]})`,
+  `[Taiwan Tax Portal — Business Tax Filing Cycle](${officialSources[7]})`,
+  `[Taiwan Tax Portal — Profit-Seeking Enterprise Income Tax Rate](${officialSources[8]})`,
+  `[Taiwan Tax Portal — Taxation of Dividends Paid to Foreign Nationals](${officialSources[9]})`,
+  `[Taiwan National Immigration Agency — Permanent Residence Guidance](${officialSources[10]})`,
+  `[Taipei City — Advance Inquiry for Business Premises](${officialSources[11]})`,
 ];
 
 const imagePaths = [
@@ -73,6 +94,11 @@ const imagePaths = [
   '../images/001-taiwan-company-establishment-basics/img-04.jpg',
 ];
 
+const inlineColumnLinks = [
+  '[When comparing organizational forms](/en/columns/taiwan-company-subsidiary-vs-branch)',
+  '[advance inquiry for business premises](/en/columns/taiwan-company-setup-pitch-location)',
+  '[permanent residence](/en/columns/taiwan-permanent-residence-aprc)',
+];
 const internalLinks = [
   '[Taiwan Investment and Company Formation Services](/en/services/investment)',
   '[Wei Tseng’s Profile](/en/lawyers/wei-tseng)',
@@ -82,7 +108,9 @@ const relatedServicesParagraph =
   '[Taiwan Investment and Company Formation Services](/en/services/investment) describes the scope of our related services, and [Wei Tseng’s Profile](/en/lawyers/wei-tseng) provides information about the responsible attorney’s experience and languages. For advice on a specific matter, please use [Contact Our Office](/en/contact).';
 
 const taxParagraph =
-  'Taiwan’s general business tax rate is 5%, and returns are generally filed every two months. The general profit-seeking enterprise income tax rate is 20%, although actual liability depends on taxable income and the applicable rules. Under Taiwan domestic law, dividends paid to a nonresident are generally subject to withholding at 21%. Dividends that qualify for the Taiwan–Korea Income Tax Agreement are subject to a maximum source-country rate of 10%. The applicable filing and withholding treatment depends on the taxpayer’s residence status, beneficial ownership, the character of the income, and the documents required to claim treaty benefits.';
+  'Taiwan’s general business tax rate is 5%, and returns are generally filed every two months. The general profit-seeking enterprise income tax rate is 20%, although actual liability depends on taxable income and the applicable rules. Under Taiwan domestic law, dividends paid to a nonresident are generally subject to withholding at 21%.';
+const treatyParagraph =
+  'The Taiwan–Korea Income Tax Agreement entered into force on December 27, 2023, and applies from January 1, 2024. When the requirements for applying the agreement are met, the maximum source-country rate for dividends, interest, and royalties is 10% in each case. This treaty discussion applies to a Korean-related fact pattern that meets the agreement’s conditions. It is not a worldwide investor rule. The treaty’s reduced rates do not apply automatically merely because the treaty exists. The taxpayer must confirm whether it is a resident under the treaty, whether it is the beneficial owner, the legal character of the income, and the certificate of residence and application documents that must be submitted. The transaction structure, contracts, invoices, actual work, and payment flows should be kept consistent, and filing deadlines and the retention of supporting records should be reviewed separately.';
 const disclaimer =
   'This article is an educational resource providing a general overview of Taiwan company formation and related rules, and it is not legal or tax advice for any specific matter. Because the required procedures and outcomes may vary with the investment structure, industry, the applicant’s nationality and immigration status, and current agency practice, confirm the latest official sources and the circumstances of the individual matter before investing, entering into a contract, or employing personnel.';
 
@@ -116,7 +144,7 @@ describe('English investment column 001 — company-formation basics', () => {
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('September 13, 2025');
     expect(parsed.data.categories).toEqual(['Taiwan Company Formation']);
     expect(parsed.data.featured_image).toBe(imagePaths[0]);
@@ -129,7 +157,7 @@ describe('English investment column 001 — company-formation basics', () => {
     expect(post).toBeTruthy();
     expect(post?.slug).toBe('taiwan-company-establishment-basics');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('September 13, 2025');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('Company Setup');
@@ -139,25 +167,28 @@ describe('English investment column 001 — company-formation basics', () => {
     expect(post?.faq).toEqual(faq);
   });
 
-  it('repeats each FAQ answer verbatim as the first paragraph after its heading', () => {
-    const headingAnswers = [
-      [
-        '## 1. Choosing a Taiwan Presence: Subsidiary, Branch, or Representative Office',
-        entityFaqAnswer,
-      ],
-      [
-        '### Company Formation, Work Authorization, and Residence',
-        residenceFaqAnswer,
-      ],
-      [
-        '### Company Capital and Work Permits for Foreign Managers',
-        capitalFaqAnswer,
-      ],
-    ];
+  it('keeps each FAQ answer in the front matter only, with its rules stated in the body', () => {
+    for (const answer of [entityFaqAnswer, residenceFaqAnswer, capitalFaqAnswer]) {
+      expect(parsed.content).not.toContain(answer);
+      expect(post?.content ?? '').not.toContain(answer);
+    }
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
+    for (const content of [parsed.content, post?.content ?? '']) {
+      expect(
+        firstParagraphAfter(
+          content,
+          '### Company Formation, Work Authorization, and Residence',
+        ),
+      ).toBe(residenceBodyParagraph);
+      expect(
+        firstParagraphAfter(
+          content,
+          '### Company Capital and Work Permits for Foreign Managers',
+        ),
+      ).toBe(capitalIntroParagraph);
+      expect(content).toContain(newEmployerThresholds);
+      expect(content).toContain(establishedEmployerThresholds);
+      expect(content.split('\n\n')).toContain(article38Paragraph);
     }
   });
 
@@ -237,7 +268,7 @@ describe('English investment column 001 — company-formation basics', () => {
       ],
     ]);
     expect(processSection).toContain(
-      'does not represent a fixed sequence or timeline that applies in every case',
+      'The order, necessity, and duration of the procedures vary with the organizational form, investment amount, industry, substance of the review, progress of the bank’s procedures, and any requested corrections.',
     );
     for (const qualification of [
       'organizational form',
@@ -265,11 +296,11 @@ describe('English investment column 001 — company-formation basics', () => {
       'more than 183 aggregate days in any 12-month period',
       'repeatedly exercises authority to conclude contracts',
       'should not be determined from the 183-day figure alone',
-      'The fact that a business activity can be listed in the company registration does not mean that the company may begin that business immediately.',
+      'Passing that review does not mean that a separate license required for the business has already been obtained or that operations may begin immediately at the proposed premises.',
       'prohibited or restricted industries',
       'professional qualifications',
       'land-use classification, building regulations, lease terms, and suitability for tax registration',
-      'advance inquiry for business premises (營業場所預先查詢)',
+      '[advance inquiry for business premises](/en/columns/taiwan-company-setup-pitch-location) (營業場所預先查詢)',
       'For premises in another locality, the company should confirm the procedures of the relevant local government and competent authority',
       'Students may also apply to invest and form a company.',
       'current immigration status permits employment or company management in Taiwan',
@@ -280,7 +311,8 @@ describe('English investment column 001 — company-formation basics', () => {
       'lawfully resided in Taiwan for five consecutive years and for at least 183 days in each year',
       'conduct, assets or skills',
       'Different calculation rules may apply to foreign professionals and others',
-      'merely holding a work permit or ARC for five years does not automatically confer permanent residence',
+      'If the same employer hires more than one person through this route, the foreign national’s, the employer’s, and other qualifications must meet the general requirements in Chapter 2 instead',
+      'Article 38(2)',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -290,15 +322,20 @@ describe('English investment column 001 — company-formation basics', () => {
   });
 
   it('locks every foreign-manager threshold and the complete tax qualification', () => {
-    expect(raw).toContain(taxParagraph);
-    expect(post?.content).toContain(taxParagraph);
+    for (const paragraph of [taxParagraph, treatyParagraph]) {
+      expect(parsed.content.split('\n\n')).toContain(paragraph);
+      expect(post?.content.split('\n\n')).toContain(paragraph);
+    }
+    // The treaty facts are stated once.
+    expect(countOccurrences(parsed.content, 'December 27, 2023')).toBe(1);
+    expect(countOccurrences(parsed.content, 'permanent establishment (PE)')).toBe(1);
 
     for (const phrase of [
       'more than one-third of the issued shares or total capital',
-      'paid-in capital or Taiwan working capital of at least NT$500,000',
-      'revenue of at least NT$3 million',
-      'import-export performance of at least US$500,000',
-      'agency commissions of at least US$200,000',
+      'Paid-in capital or Taiwan working capital of at least NT$500,000',
+      'Revenue of at least NT$3 million',
+      'Import-export performance of at least US$500,000',
+      'Agency commissions of at least US$200,000',
       'the most recent year in Taiwan or the average of the preceding three years',
       'A representative office established for at least one year must have a record of activities in Taiwan',
       'waived if it has been established for less than one year',
@@ -308,8 +345,8 @@ describe('English investment column 001 — company-formation basics', () => {
       'filed every two months',
       'profit-seeking enterprise income tax rate is 20%',
       'dividends paid to a nonresident are generally subject to withholding at 21%',
-      'maximum source-country rate of 10%',
-      'taxpayer’s residence status, beneficial ownership, the character of the income',
+      'maximum source-country rate for dividends, interest, and royalties is 10% in each case',
+      'whether it is the beneficial owner, the legal character of the income',
       'certificate of residence and application documents that must be submitted',
     ]) {
       expect(raw).toContain(phrase);
@@ -317,7 +354,7 @@ describe('English investment column 001 — company-formation basics', () => {
     }
   });
 
-  it('uses all eleven official links once and exactly the three English internal links', () => {
+  it('uses all twelve official links once and exactly the six English internal links', () => {
     expect(
       parsed.content
         .split('## Official Sources\n\n')[1]
@@ -333,8 +370,8 @@ describe('English investment column 001 — company-formation basics', () => {
       parsed.content.matchAll(/\[[^\]]+\]\((\/[^)]+)\)/g),
       (match) => match[0],
     );
-    expect(bodyInternalLinks).toEqual(internalLinks);
-    for (const link of internalLinks) {
+    expect(bodyInternalLinks).toEqual([...inlineColumnLinks, ...internalLinks]);
+    for (const link of [...inlineColumnLinks, ...internalLinks]) {
       expect(post?.content).toContain(link);
     }
   });
@@ -348,12 +385,12 @@ describe('English investment column 001 — company-formation basics', () => {
     ).toEqual(imagePaths);
     expect(parsed.content.indexOf(imagePaths[0])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
+        'Completing company registration does not mean that investment-fund verification',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[1])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
+        'Completing company registration does not mean that investment-fund verification',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[2])).toBeGreaterThan(
@@ -394,16 +431,19 @@ describe('English investment column 001 — company-formation basics', () => {
     );
   });
 
-  it('locks the exact visible-word count and 200-wpm read-time formula', () => {
+  it('locks the exact visible-word count and the lane-set read_time', () => {
     const visibleWords = countVisibleEnglishWords(parsed.content);
-    const calculatedMinutes = Math.ceil(visibleWords / 200);
+    // read_time follows audit-split POLICY v1 (2026-10-06: about 230 words/min over the prose before
+    // "Official Sources"), not the former ceil(all visible words / 200); re-set it together with the counts below.
+    const proseWords = countVisibleEnglishWords(
+      parsed.content.split('## Official Sources')[0],
+    );
 
-    // 2_931 after the merge dropped the reader-facing editorial aside
-    // ("Korean companies remain part of that overseas audience …", 17 words).
-    expect(visibleWords).toBe(2_931);
+    expect(visibleWords).toBe(2_365);
+    expect(proseWords).toBe(2_138);
     expect(visibleWords).toBeGreaterThan(2_000);
-    expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
-    expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
+    expect(parsed.data.read_time).toBe('9 min read');
+    expect(post?.readTime).toBe('9 min read');
   });
 
   it('resolves the canonical and alias slugs to the same complete English post', () => {
@@ -448,6 +488,7 @@ describe('English investment column 001 — company-formation basics', () => {
       'residence qualification',
       'legal acts and contact work',
       'foreign nationality responsible person',
+      'Laws & Regulations Database — General Business Tax Rate',
       '\uFEFF',
       '\u00A0',
     ];

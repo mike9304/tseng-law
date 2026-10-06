@@ -23,7 +23,23 @@ const resolutionFaqAnswer =
 const suspensionFaqAnswer =
   '公司停業一個月以上者，應於停業前或停業日起十五日內申請停業登記（但已依加值型及非加值型營業稅法規定申報核備者，不在此限——公司登記辦法第3條第1項但書），每次停業期間最長不得超過一年。但停業年度仍須辦理年度所得稅結算申報，並非所有稅務申報一律免除。仍應依稅目、持有資產、員工及其他具體情形，分別確認相關義務。';
 const article9Paragraph =
-  '台灣《公司法》第9條規定，公司應收之股款，若股東未實際繳納而以申請文件表明收足，或股東雖已繳納但在登記後將股款發還股東或任由股東收回，公司負責人可能面臨五年以下有期徒刑、拘役，或科或併科新臺幣50萬元以上250萬元以下罰金。這項規定並非處罰所有正常、合法的公司資金運用。';
+  '台灣《公司法》第9條規定，公司應收之股款，若股東未實際繳納而以申請文件表明收足，或股東雖已繳納但在登記後將股款發還股東或任由股東收回，公司負責人可能面臨五年以下有期徒刑、拘役，或科或併科新臺幣50萬元以上250萬元以下罰金。';
+const article9ScopeSentence = '本條規定不應擴大適用於公司帳戶的一切付款。';
+// The FAQ answers are no longer copied into the body; the body states the same rules in its own sentences.
+const suspensionRuleSentence =
+  '公司停業一個月以上者，應於停業前或停業日起十五日內申請停業登記（但已依加值型及非加值型營業稅法規定申報核備者，不在此限——公司登記辦法第3條第1項但書），每次停業期間最長不得超過一年。';
+const suspensionTaxSentence =
+  '停業年度仍有年度所得稅結算申報義務，且依停業前後交易、資產持有或處分、扣繳、員工及業別，可能仍有其他申報或繳納。';
+const resolutionStep =
+  '2. 依公司種類作成解散決議。有限公司依《公司法》第113條，須經股東表決權三分之二以上同意。股份有限公司依《公司法》第316條，原則上須有代表已發行股份總數三分之二以上之股東出席，並經出席股東表決權過半數同意。公開發行公司未達該出席門檻時，得由代表已發行股份總數過半數之股東出席，並經出席股東表決權三分之二以上同意作成決議。章程就出席股份數或表決權數訂有更高門檻者，亦應遵守該章程。';
+const registrationStep =
+  '3. 於期限內申請解散變更登記。依《公司登記辦法》第4條，公司登記事項有變更者，原則上應於變更後十五日內申請變更登記。因此，應於解散後十五日內，依公司種類及解散原因準備相應的解散變更登記。解散登記與稅籍整理、營業稅相關程序、許可的廢止或繳回，主管機關與法律效果可能各不相同，不得認為單一申報即全部完成。';
+const liquidationPeriodSentence =
+  '清算期間依上述情形而異，但清算人應於六個月內完結清算（公司法第87條第3項；股份有限公司依第334條、有限公司依第113條第2項準用），不能於六個月內完結時，得申敘理由向法院聲請展期。';
+const article87Link =
+  '[公司法第87條（清算期限與展期）](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87)';
+const dissolutionColumnLink =
+  '[〈公司解散登記後，清算人還要處理哪些事〉](/zh-hant/columns/taiwan-company-dissolution-liquidation)';
 const article90Paragraph =
   '清算人在公司債務尚未清償前分派公司財產於股東者，依《公司法》第90條，可能面臨一年以下有期徒刑、拘役，或科或併科新臺幣6萬元以下罰金。';
 const insolvencyParagraph =
@@ -71,9 +87,9 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-09-10');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('2025年9月13日');
-    expect(parsed.data.read_time).toBe('15分鐘閱讀');
+    expect(parsed.data.read_time).toBe('10分鐘閱讀');
     expect(parsed.data.categories).toEqual(['台灣公司設立']);
     expect(parsed.data.featured_image).toBe(
       '../images/002-withdraw-capital-taiwan-company/featured-01.png',
@@ -84,9 +100,9 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-09-10');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('2025年9月13日');
-    expect(post?.readTime).toBe('15分鐘閱讀');
+    expect(post?.readTime).toBe('10分鐘閱讀');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('公司設立');
     expect(post?.featuredImage).toBe(
@@ -95,16 +111,20 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     expect(post?.faq).toEqual(faq);
   });
 
-  it('keeps every FAQ answer identical to the first paragraph after its H2', () => {
-    const headingAnswers = [
-      ['## 1. 公司財產與股東出資必須分開處理', exitFaqAnswer],
-      ['## 2. 永久結束公司的程序', resolutionFaqAnswer],
-      ['## 5. 不立即結束公司時的停業', suspensionFaqAnswer],
-    ];
+  it('keeps each FAQ answer in the front matter only, with its rules stated in the body', () => {
+    for (const answer of [exitFaqAnswer, resolutionFaqAnswer, suspensionFaqAnswer]) {
+      expect(parsed.content).not.toContain(answer);
+      expect(post?.content ?? '').not.toContain(answer);
+    }
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
+    for (const content of [parsed.content, post?.content ?? '']) {
+      expect(
+        firstParagraphAfter(content, '## 5. 不立即結束公司時的停業'),
+      ).toContain(suspensionRuleSentence);
+      expect(content).toContain(suspensionTaxSentence);
+      const paragraphs = content.split('\n\n');
+      expect(paragraphs).toContain(resolutionStep);
+      expect(paragraphs).toContain(registrationStep);
     }
   });
 
@@ -150,8 +170,9 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '使公司永久消滅的解散及清算、公司存續中減少資本的減資、正常營業費用的支付、以盈餘為前提的股利分配，以及公司實際負擔借款的清償，屬於不同的法律及稅務範疇。',
       '僅停止公司營運，法人格及申報義務亦不會因此消滅。',
       article9Paragraph,
+      article9ScopeSentence,
       article90Paragraph,
-      '不能僅因存在特定交易，即斷定背信等犯罪當然成立',
+      '其他民事、刑事及稅務責任，依資金移轉的目的、權限、憑證、會計處理及當事人關係等具體事實而定。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -164,7 +185,6 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
   it('covers the dissolution, registration, liquidation, and tax sequence', () => {
     const requiredPhrases = [
-      '公司章程、股東名簿、最新登記事項、會計帳簿、財務報表及稅務申報資料',
       '將持續中的契約、員工、租賃、許可、資產、債務',
       '外國投資',
       '《公司法》第113條',
@@ -172,7 +192,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '《公司登記辦法》第4條',
       '應於解散後十五日內，依公司種類及解散原因準備相應的解散變更登記',
       '主管機關核准解散之日起四十五日內辦理當期決算申報',
-      '核准日的意義及起算方法',
+      '再次確認實際基準日',
       '選任清算人，或確認法定清算人',
       '向法院陳報必要事項',
       '財產目錄及資產負債表',
@@ -184,6 +204,9 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '自清算完結之日起三十日內申報清算所得',
       '向法院辦理必要的清算完結陳報',
       '因合併、分割或破產而解散者，通常清算程序可能免除',
+      liquidationPeriodSentence,
+      '清算人應於六個月內完結清算',
+      '不能於六個月內完結時，得申敘理由向法院聲請展期',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -218,15 +241,13 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
   it('preserves every native-review Taiwanese legal phrasing correction', () => {
     const correctedPhrases = [
-      '若選擇永久結束，應辦理解散登記與清算，整理公司的契約、債權、債務、稅捐及剩餘財產。',
-      '本文分別說明結束台灣公司時經常混淆的公司財產、已繳股款、減資、解散、清算、破產聲請、剩餘財產分配及停業。',
-      '1. 結束前的現況調查。取得公司章程、股東名簿、最新登記事項、會計帳簿、財務報表及稅務申報資料。',
-      '並非所有公司均適用相同的文件與順序',
+      '若目前仍欲保留事業重啟的可能性，可以評估停業，但停業並非終結公司存續的程序。',
+      '下列順序是一般性的檢核架構。',
       '應避免事後將出資改記為借款的做法',
       '清算人應編造財產目錄及資產負債表、了結公司現存事務，收取尚未受償的債權，並決定資產的保全及變現方式。',
       '銀行帳戶的結清、印鑑與文件的保管、稅務及會計帳簿的法定保存、許可及契約的最終狀態，亦應一併檢核。',
       '即使帳面資產眾多，若無法立即變現或已設定擔保，清償能力的評價可能不同。反之，亦不能僅因一時現金不足，即斷定所有情形均適用相同程序。',
-      '應一併判斷該等措施是否解決已發生的無力清償問題、是否侵害其他債權人的權利，以及之後能否繼續通常清算。',
+      '新借款、增資、債務免除或與債權人的協議，可能產生不同的會計及稅務結果。',
       '可能需要準備銀行要求的登記資料、投資相關文件、稅務資料及資金性質說明。',
       '若以公司繼續存續為前提，重要的是在董事會或股東決策資料中，留下付款後是否仍能正常營運及清償債務的評估。',
       '應維持可收受郵件及機關通知的地址與負責人',
@@ -264,9 +285,8 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '實際處分價值',
       '若無法立即變現或已設定擔保，清償能力的評價可能不同',
       '資不抵債一般是比較資產與負債的財務狀態問題；無力清償則涉及到期債務能否支付的問題。',
-      '擔保權、租稅債權、工資等債權種類及優先關係，應依各該適用法律確認',
+      '應以實際資料判斷：公司財產是否不足以清償債務、付款到期日與現金流量如何、擔保及優先債權為何，以及清算人何時知悉該情形。',
       '若僅優先支付特定債權人或股東，可能損害其他債權人的利益及程序公平。',
-      '不應僅依舊版說明中的簡化公式或多項要件，決定是否聲請宣告破產。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -283,11 +303,11 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '債權人保護、資本查核及會計處理、外國投資、稅務、匯款及變更登記',
       '有外國股東的公司',
       '投資相關文件、稅務資料及資金性質說明',
-      '股利分配亦應與減資或清算後分配相區別。',
+      '股利分配以有可分配盈餘、財務資料及依公司種類所為決議為前提',
       '公司帳戶有現金，並不代表有可分配盈餘',
       '累積虧損、法定盈餘公積及未分配盈餘',
       '公司實際負擔借款的清償',
-      '各自需要契約、決議、憑證、扣繳等依據',
+      '亦應按各筆交易的法律性質及稅務處理分別記載',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -298,7 +318,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
   it('keeps suspension temporary and preserves every continuing obligation', () => {
     const requiredPhrases = [
-      suspensionFaqAnswer,
+      suspensionRuleSentence,
       '停業是公司在一定期間停止營業、但仍維持法人格的選項。',
       '不具使公司消滅或將既有權利義務一概整理的效果',
       '所在地、負責人、章程、資本額等登記事項',
@@ -320,9 +340,10 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     }
   });
 
-  it('uses every official source and contracted internal link exactly once in order', () => {
+  it('uses the inline column link, every official source and contracted internal link exactly once in order', () => {
     const officialLinks = [
       '[台灣公司法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
+      article87Link,
       '[經濟部公司登記辦法](https://law.moea.gov.tw/LawContent.aspx?id=FL011312)',
       '[財政部決算、清算及停業稅務說明](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/x6mOPan)',
       '[經濟部停業申請期限說明](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
@@ -337,8 +358,12 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       (match) => match[0],
     );
 
-    expect(markdownLinks).toEqual([...officialLinks, ...internalLinks]);
-    for (const link of [...officialLinks, ...internalLinks]) {
+    expect(markdownLinks).toEqual([
+      dissolutionColumnLink,
+      ...officialLinks,
+      ...internalLinks,
+    ]);
+    for (const link of [dissolutionColumnLink, ...officialLinks, ...internalLinks]) {
       expect(raw.split(link)).toHaveLength(2);
     }
   });
@@ -354,16 +379,16 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     expect(raw).not.toContain('**');
   });
 
-  it('freezes the exact visible Han count and derives read_time at 400 Han per minute', () => {
+  it('freezes the exact visible Han count and the lane-set read_time', () => {
     const publicText = extractPublicText(parsed.content);
     const hanCount = publicText.match(/\p{Script=Han}/gu)?.length ?? 0;
-    const calculatedMinutes = Math.ceil(hanCount / 400);
 
+    // read_time follows audit-split POLICY v1 (2026-10-06: about 500 characters/min over the prose, sources
+    // excluded), not the former ceil(visible Han characters / 400); re-set it together with the count below.
     expect(hanCount).toBeGreaterThanOrEqual(4_000);
-    expect(hanCount).toBe(5_968);
-    expect(calculatedMinutes).toBe(15);
-    expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
-    expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
+    expect(hanCount).toBe(4_490);
+    expect(parsed.data.read_time).toBe('10分鐘閱讀');
+    expect(post?.readTime).toBe('10分鐘閱讀');
   });
 
   it('resolves the canonical and alias slugs in Traditional Chinese', () => {

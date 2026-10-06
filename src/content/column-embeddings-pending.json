@@ -1269,6 +1269,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-subsidiary-corporate-income-tax-calendar"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-cpa-audit-tax-certification-bookkeeping"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-cpa-audit-tax-certification-bookkeeping"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-cpa-audit-tax-certification-bookkeeping"
     }
   ]
 }

@@ -2,11 +2,11 @@
    zh-hant search results in the language of the zh-hant home: the header from ZhHantPageShell.module.css with
    the query as a large pill field (the home's search bar, on white), then the results on a #f5f5f7 band —
    pill tabs, each hit as a white tile, the suggestions as white pills. Markup, labels and links are unchanged. */
-.root:global(#zh-hant-search) { font-size: 17px; line-height: 1.8; }
+.root:global(:is(#zh-hant-search, #ko-search)) { font-size: 17px; line-height: 1.8; }
 
 /* ---------- Query field in the header ---------- */
-.root:global(#zh-hant-search) :global(.page-header [data-page-header-slot='children']) { max-width: 760px; margin-top: clamp(32px, 4vw, 48px); }
-.root:global(#zh-hant-search) :global(.page-header .search-bar) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header [data-page-header-slot='children']) { max-width: 760px; margin-top: clamp(32px, 4vw, 48px); }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar) {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 8px;
   padding: 6px 6px 6px 26px;
@@ -17,8 +17,8 @@
   transition: background-color 0.3s var(--ap-ease), box-shadow 0.3s var(--ap-ease);
 }
 /* Focus ring on the whole pill while the field is focused (the field's own inner outline is replaced by it). */
-.root:global(#zh-hant-search) :global(.page-header .search-bar:has(.search-input:focus-visible)) { background: #fff; box-shadow: 0 0 0 3px var(--ap-ink); }
-.root:global(#zh-hant-search) :global(.page-header .search-bar .search-input) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar:has(.search-input:focus-visible)) { background: #fff; box-shadow: 0 0 0 3px var(--ap-ink); }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-input) {
   min-height: 52px;
   padding: 0;
   border: 0;
@@ -27,10 +27,10 @@
   font-family: var(--font-sans);
   font-size: 18px;
 }
-.root:global(#zh-hant-search) :global(.page-header .search-bar .search-input::placeholder) { color: var(--ap-muted); opacity: 1; }
-.root:global(#zh-hant-search) :global(.page-header .search-bar .search-input:focus),
-.root:global(#zh-hant-search) :global(.page-header .search-bar .search-input:focus-visible) { outline: none; }
-.root:global(#zh-hant-search) :global(.page-header .search-bar .search-submit) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-input::placeholder) { color: var(--ap-muted); opacity: 1; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-input:focus),
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-input:focus-visible) { outline: none; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-submit) {
   width: auto;
   min-height: 52px;
   padding: 0 30px;
@@ -42,18 +42,18 @@
   font-weight: 600;
   transition: background-color 0.3s var(--ap-ease);
 }
-.root:global(#zh-hant-search) :global(.page-header .search-bar .search-submit:hover) { background: var(--ap-ink-deep); }
-.root:global(#zh-hant-search) :global(.page-header .search-bar .search-submit:focus-visible) { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-submit:hover) { background: var(--ap-ink-deep); }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-submit:focus-visible) { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
 
 /* ---------- Results band (gray) ---------- */
-.root:global(#zh-hant-search) :global(.search-results-section) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section) {
   padding: clamp(48px, 6vw, 80px) 0 clamp(72px, 9vw, 128px);
   background: var(--ap-gray);
   color: var(--ap-text);
 }
-.root:global(#zh-hant-search) :global(.search-results-section .search-tabs) { gap: 8px; margin: 0 0 28px; }
-.root:global(#zh-hant-search) :global(.search-results-section .tab-button),
-.root:global(#zh-hant-search) :global(.search-results-section .chip) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .search-tabs) { gap: 8px; margin: 0 0 28px; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .tab-button),
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .chip) {
   min-height: 44px;
   padding: 0 20px;
   border: none;
@@ -65,21 +65,21 @@
   text-decoration: none;
   transition: background-color 0.3s var(--ap-ease), color 0.3s var(--ap-ease);
 }
-.root:global(#zh-hant-search) :global(.search-results-section .tab-button:hover),
-.root:global(#zh-hant-search) :global(.search-results-section .chip:hover),
-.root:global(#zh-hant-search) :global(.search-results-section .tab-button.active),
-.root:global(#zh-hant-search) :global(.search-results-section .tab-button.active:hover) { border: none; background: var(--ap-ink); color: #fff; }
-.root:global(#zh-hant-search) :global(.search-results-section .tab-button)::after { display: none; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .tab-button:hover),
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .chip:hover),
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .tab-button.active),
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .tab-button.active:hover) { border: none; background: var(--ap-ink); color: #fff; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .tab-button)::after { display: none; }
 /* Result titles: strict kinsoku everywhere; phrases kept whole (申/請 never split) only where keep-all breaks at CJK
    punctuation (Blink, detected through word-break: auto-phrase). WebKit's keep-all keeps the whole title together and
    overflow-wrap: anywhere then breaks it anywhere, even before 「？」, so WebKit gets normal CJK breaking. */
-.root:global(#zh-hant-search) :global(.search-results-section .list-row .link-underline) { word-break: normal; line-break: strict; overflow-wrap: anywhere; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row .link-underline) { word-break: normal; line-break: strict; overflow-wrap: anywhere; }
 @supports (word-break: auto-phrase) {
-  .root:global(#zh-hant-search) :global(.search-results-section .list-row .link-underline) { word-break: keep-all; }
+  .root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row .link-underline) { word-break: keep-all; }
 }
-.root:global(#zh-hant-search) :global(.search-results-section .search-results-total) { margin: 0 0 16px; color: var(--ap-muted); font-size: 15px; line-height: 1.6; }
-.root:global(#zh-hant-search) :global(.search-results-section .list-rows) { gap: 12px; }
-.root:global(#zh-hant-search) :global(.search-results-section .list-row) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .search-results-total) { margin: 0 0 16px; color: var(--ap-muted); font-size: 15px; line-height: 1.6; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-rows) { gap: 12px; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row) {
   grid-template-columns: 5.5em minmax(0, 1fr);
   gap: 24px;
   padding: clamp(24px, 2.6vw, 32px) clamp(24px, 3vw, 40px);
@@ -87,7 +87,7 @@
   border-radius: 22px;
   background: #fff;
 }
-.root:global(#zh-hant-search) :global(.search-results-section .list-meta) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-meta) {
   padding-top: 5px;
   color: var(--ap-accent);
   font-size: 13px;
@@ -95,46 +95,46 @@
   line-height: 1.6;
   letter-spacing: 0.06em;
 }
-.root:global(#zh-hant-search) :global(.search-results-section .list-row .link-underline) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row .link-underline) {
   color: var(--ap-text);
   font-size: clamp(19px, 1.6vw, 22px);
   font-weight: 700;
   line-height: 1.5;
   text-decoration: none;
 }
-.root:global(#zh-hant-search) :global(.search-results-section .list-row .link-underline)::after { display: none; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row .link-underline)::after { display: none; }
 /* 44px tap target for one-line titles (26px tall) and short ones such as 首頁, without moving the layout: an
    inline-block (so min-width applies) whose padding is offset by an equal negative margin keeps its line height. */
-.root:global(#zh-hant-search) :global(.search-results-section .list-row .link-underline) { display: inline-block; min-width: 44px; padding-block: 9px; margin-block: -9px; }
-.root:global(#zh-hant-search) :global(.search-results-section .list-row .link-underline:hover) { color: var(--ap-accent); text-decoration: underline; text-underline-offset: 5px; }
-.root:global(#zh-hant-search) :global(.search-results-section .search-results-desc) { margin: 8px 0 0; color: var(--ap-muted); font-size: 16px; line-height: 1.8; }
-.root:global(#zh-hant-search) :global(.search-results-section .search-empty) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row .link-underline) { display: inline-block; min-width: 44px; padding-block: 9px; margin-block: -9px; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row .link-underline:hover) { color: var(--ap-accent); text-decoration: underline; text-underline-offset: 5px; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .search-results-desc) { margin: 8px 0 0; color: var(--ap-muted); font-size: 16px; line-height: 1.8; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .search-empty) {
   padding: clamp(28px, 3vw, 40px);
   border-radius: 22px;
   background: #fff;
   color: var(--ap-muted);
   font-size: 17px;
 }
-.root:global(#zh-hant-search) :global(.search-results-section .search-results-suggested) { margin-top: clamp(40px, 5vw, 64px); }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .search-results-suggested) { margin-top: clamp(40px, 5vw, 64px); }
 /* 建議: the Chinese label stays, as a quiet caption without the old rule. */
-.root:global(#zh-hant-search) :global(.search-results-section .search-results-suggested .section-label) {
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .search-results-suggested .section-label) {
   margin: 0 0 14px;
   color: var(--ap-muted);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.12em;
 }
-.root:global(#zh-hant-search) :global(.search-results-section .search-results-suggested .section-label)::before { display: none; }
-.root:global(#zh-hant-search) :global(.search-results-section .chip-group) { gap: 8px; }
-.root:global(#zh-hant-search) :global(.search-results-section) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .search-results-suggested .section-label)::before { display: none; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .chip-group) { gap: 8px; }
+.root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
 
 @media (max-width: 640px) {
-  .root:global(#zh-hant-search) :global(.page-header .search-bar) { padding-left: 20px; }
-  .root:global(#zh-hant-search) :global(.page-header .search-bar .search-submit) { padding: 0 22px; }
-  .root:global(#zh-hant-search) :global(.search-results-section .list-row) { grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 22px 22px 24px; }
+  .root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar) { padding-left: 20px; }
+  .root:global(:is(#zh-hant-search, #ko-search)) :global(.page-header .search-bar .search-submit) { padding: 0 22px; }
+  .root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row) { grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 22px 22px 24px; }
   /* Result titles keep a phrase and its closing mark together (keep-all in Blink), so 在台灣發生交通事故該如何處理？ (15 glyphs)
      cannot break; the row is a size container and the title steps down just enough for 15 glyphs to share a line,
      so 「？」 never wraps alone on narrow phones. */
-  .root:global(#zh-hant-search) :global(.search-results-section .list-row) { container-type: inline-size; }
-  .root:global(#zh-hant-search) :global(.search-results-section .list-row .link-underline) { font-size: max(16px, min(19px, 100cqi / 15.3)); }
+  .root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row) { container-type: inline-size; }
+  .root:global(:is(#zh-hant-search, #ko-search)) :global(.search-results-section .list-row .link-underline) { font-size: max(16px, min(19px, 100cqi / 15.3)); }
 }

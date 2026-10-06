@@ -32,6 +32,7 @@ import { getForeignMatterRouter } from '@/data/foreign-matter-router';
 import ZhHantIntentHeaderActions from '@/components/zh-hant-intent/ZhHantIntentHeaderActions';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import zhStyles from '@/components/zh-hant-intent/ZhHantIntent.module.css';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -582,7 +583,7 @@ export default function IntentLandingPage({
       <JsonLd data={faqSchema} />
 
       <PageHeader locale={locale} label={page.label} title={page.title} description={page.description}>
-        {locale === 'zh-hant' ? <ZhHantIntentHeaderActions contactLabel={l.contact} pricingLabel={l.pricing} /> : null}
+        {isAppleDesignLocale(locale) ? <ZhHantIntentHeaderActions contactLabel={l.contact} pricingLabel={l.pricing} locale={locale} /> : null}
         {isSiteLocale(locale) && slug === 'taiwan-litigation-lawyer' ? (
           <nav
             className="intent-situation-nav"
@@ -794,7 +795,7 @@ export default function IntentLandingPage({
                     <time>{column.dateDisplay || column.date}</time>
                     {column.readTime ? <span>{column.readTime}</span> : null}
                   </span>
-                  <span className="svc-col-card-link">{locale === 'zh-hant' ? <>{l.readMore.replace(/\s*→$/, '')}<ZhHantTrail /></> : l.readMore}</span>
+                  <span className="svc-col-card-link">{isAppleDesignLocale(locale) ? <>{l.readMore.replace(/\s*→$/, '')}<ZhHantTrail /></> : l.readMore}</span>
                 </Link>
               ))}
             </div>
@@ -881,10 +882,10 @@ export default function IntentLandingPage({
     </>
   );
 
-  // zh-hant: one wrapper scopes the Apple-language styles (zh-hant-intent/ZhHantIntent.module.css).
-  if (locale === 'zh-hant') {
+  // zh-hant and (since 2026-10-06) ko: one wrapper scopes the Apple-language styles (zh-hant-intent/ZhHantIntent.module.css).
+  if (isAppleDesignLocale(locale)) {
     return (
-      <div id="zh-hant-intent" className={zhStyles.root} data-zh-hant-design="intent">
+      <div className={zhStyles.root} {...appleDesignRootProps(locale, 'intent')}>
         {body}
       </div>
     );

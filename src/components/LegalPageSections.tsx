@@ -5,6 +5,7 @@ import Reveal from '@/components/Reveal';
 import EnPageShell from '@/components/en-design/EnPageShell';
 import styles from './LegalPageSections.module.css';
 import zhPageShellStyles from './zh-hant-pages/ZhHantPageShell.module.css';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
 import zhLegalStyles from './zh-hant-pages/ZhHantLegal.module.css';
 import enStyles from './en-design/EnLegal.module.css';
 
@@ -53,10 +54,10 @@ export default function LegalPageSections({
       </Reveal>
     </>
   );
-  // zh-hant Apple pass (2026-10-01): typography only, inside a scoped wrapper; other locales render unchanged.
-  if (locale === 'zh-hant') {
+  // zh-hant Apple pass (2026-10-01; ko since 2026-10-06): typography only, inside a scoped wrapper.
+  if (isAppleDesignLocale(locale)) {
     return (
-      <div className={`${zhPageShellStyles.shell} ${zhLegalStyles.root}`} id="zh-hant-legal" data-zh-hant-design="legal">
+      <div className={`${zhPageShellStyles.shell} ${zhLegalStyles.root}`} {...appleDesignRootProps(locale, 'legal')}>
         {body}
       </div>
     );

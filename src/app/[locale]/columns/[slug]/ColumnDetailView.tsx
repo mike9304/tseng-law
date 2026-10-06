@@ -20,6 +20,7 @@ import type { ResolvedColumnTypography } from '@/lib/builder/columns/typography'
 import { typesetTitle } from '@/lib/ko-middot';
 import styles from './ColumnDetail.module.css';
 import zhStyles from './ZhHantColumnDetail.module.css';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
 import jaStyles from './JaColumnDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import enStyles from './EnColumnDetail.module.css';
@@ -259,8 +260,9 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
   // ja design (Opus 5.5 ja lane): same article inside the ja wrapper (paper header, framed photo plate).
   if (locale === 'ja') return <JaPageShell page="column" className={jaStyles.root}>{content}</JaPageShell>;
   // zh-hant second pass (son7-87 / Opus 5.5): same article inside a scoped wrapper for the split hero and sidebar styling.
-  if (locale === 'zh-hant') {
-    return <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="column">{content}</div>;
+  // zh-hant and (since 2026-10-06) ko: the Apple column page.
+  if (isAppleDesignLocale(locale)) {
+    return <div className={zhStyles.root} {...appleDesignRootProps(locale, 'column')}>{content}</div>;
   }
   // en redesign (Opus 5.5 en lane): same article inside the scoped en wrapper (only the /en/ route, not guidance locales).
   return urlLocale === 'en'

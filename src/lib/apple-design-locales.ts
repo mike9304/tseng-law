@@ -19,8 +19,10 @@ export function isAppleDesignLocale(locale: string | null | undefined): locale i
 export function appleDesignRootProps(
   locale: AppleDesignLocale,
   page: string,
+  /** The data attribute value when it differs from the id suffix (e.g. issue articles share #…-column). */
+  design: string = page,
 ): { id: string; 'data-zh-hant-design'?: string; 'data-ko-design'?: string } {
   return locale === 'ko'
-    ? { id: `ko-${page}`, 'data-ko-design': page }
-    : { id: `zh-hant-${page}`, 'data-zh-hant-design': page };
+    ? { id: `ko-${page}`, 'data-ko-design': design }
+    : { id: `zh-hant-${page}`, 'data-zh-hant-design': design };
 }

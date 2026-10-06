@@ -19,6 +19,7 @@ import jaV2 from '@/components/ja-design/JaPagesV2.module.css';
 import jaStyles from '@/components/ja-design/JaTraffic.module.css';
 import TrafficBoard from './TrafficBoard';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
 import styles from './traffic.module.css';
 import zhStyles from './ZhHantTraffic.module.css';
 
@@ -51,14 +52,16 @@ export default function TrafficPageView({ locale, items, query, copy, collection
 }) {
   const en = locale === 'en';
   const s = en ? EN_CLASSES : styles;
-  // zh-hant only: the Apple-pass wrapper (id + data-zh-hant-design) that ZhHantTraffic.module.css is scoped to.
-  const zhWrapper = locale === 'zh-hant' ? { id: 'zh-hant-traffic', 'data-zh-hant-design': 'traffic' } : {};
+  // zh-hant and (since 2026-10-06) ko: the Apple-pass wrapper (id + data attribute) that ZhHantTraffic.module.css is
+  // scoped to.
+  const apple = isAppleDesignLocale(locale);
+  const zhWrapper = apple ? appleDesignRootProps(locale, 'traffic') : {};
   const ja = locale === 'ja';
   // ja only (昊 V2 inner pages, 2026-10-04): the ja classes (JaTraffic.module.css) replace the hub's; arrow glyphs
   // become CSS chevrons, the header gains the patterned-glass band and the consult block becomes the dusk closing tile.
   const cx = (base: string, jaClass: string) => (ja ? jaClass : base);
-  // zh-hant: the same links carry the monoline glyph instead of the typed arrow.
-  const zh = locale === 'zh-hant';
+  // zh-hant and ko: the same links carry the monoline glyph instead of the typed arrow.
+  const zh = apple;
   const ZH_GLYPH = { ' ↓': 'arrow-down', ' →': 'arrow-right', ' ↗': 'arrow-up-right' } as const;
   const arrow = (glyph: keyof typeof ZH_GLYPH) => (ja ? null : zh ? <ZhHantTrail name={ZH_GLYPH[glyph]} /> : glyph);
   // ja headings break only between phrases (<wbr> + keep-all), so WebKit never splits a word such as 責任.
@@ -72,7 +75,7 @@ export default function TrafficPageView({ locale, items, query, copy, collection
     </section>
   );
   const view = (
-    <div className={locale === 'zh-hant' ? `${styles.page} ${zhStyles.zh}` : cx(s.page, jaStyles.page)} {...zhWrapper}>
+    <div className={apple ? `${styles.page} ${zhStyles.zh}` : cx(s.page, jaStyles.page)} {...zhWrapper}>
       <JsonLd data={collectionJsonLd} />
       <section className={cx(s.hero, jaStyles.hero)}>
         <div className={cx(s.container, jaStyles.inner)}>

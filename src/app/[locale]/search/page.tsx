@@ -9,6 +9,7 @@ import SearchPageView, { type SearchPageViewProps } from './SearchPageView';
 import JaSearchView from './JaSearchView';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
 import zhSearchStyles from './ZhHantSearch.module.css';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
 import EnPageShell from '@/components/en-design/EnPageShell';
 import enStyles from '@/components/en-design/EnSearch.module.css';
 
@@ -141,10 +142,10 @@ export default async function SearchPage(
     suggestedLabel,
   };
   const body = locale === 'ja' ? <JaSearchView {...viewProps} /> : <SearchPageView {...viewProps} />;
-  // zh-hant Apple pass (2026-10-01): the same page inside a scoped wrapper; other locales render unchanged.
-  if (locale === 'zh-hant') {
+  // zh-hant Apple pass (2026-10-01; ko since 2026-10-06): the same page inside a scoped wrapper.
+  if (isAppleDesignLocale(locale)) {
     return (
-      <div className={`${zhPageShellStyles.shell} ${zhSearchStyles.root}`} id="zh-hant-search" data-zh-hant-design="search">
+      <div className={`${zhPageShellStyles.shell} ${zhSearchStyles.root}`} {...appleDesignRootProps(locale, 'search')}>
         {body}
       </div>
     );

@@ -91,17 +91,22 @@ describe('intent landing EN/JA contact paths', () => {
     },
   );
 
-  it.each(['ko'] as const)(
-    'keeps the %s page header as keyword chips without the EN/JA header contact actions',
-    (locale) => {
-      const html = renderLanding(locale, 'taiwan-lawyer');
+  // ko joined the Apple system on 2026-10-06: its header carries the same email pill and pricing link as zh-hant,
+  // with the ko landing labels (상담 문의 / 비용안내 보기); the EN/JA header block stays out.
+  it.each(generalIntentPageSlugs)(
+    'gives the ko %s header the ko email action and keyword chips, not the EN/JA header block',
+    (slug) => {
+      const html = renderLanding('ko', slug);
       const header = pageHeaderHtml(html);
 
+      expect(html).toContain('id="ko-intent"');
       expect(header).toContain('intent-chip');
-      expect(header).not.toContain(htmlHref(getConsultationPublicMailto(locale)));
+      expect(header).toContain(`href="${htmlHref(getConsultationPublicMailto('ko'))}"`);
+      expect(header).toContain('>상담 문의</a>');
+      expect(header).toContain('href="/ko/pricing"');
+      expect(header).not.toContain('class="contact-email-actions"');
       expect(header).not.toContain('Email about your Taiwan matter');
       expect(header).not.toContain('台湾の法律問題をメールで相談');
-      expect(header).not.toContain(`href="/${locale}/pricing"`);
     },
   );
 

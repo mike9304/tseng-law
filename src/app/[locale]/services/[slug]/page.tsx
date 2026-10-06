@@ -37,6 +37,7 @@ import CivilCommercialBlock from '@/components/CivilCommercialBlock';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './ServiceDetail.module.css';
 import zhStyles from './ZhHantServiceDetail.module.css';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 import ZhHantSnapRowFocus from '@/components/zh-hant-home/ZhHantSnapRowFocus';
 import jaStyles from './JaServiceDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
@@ -281,7 +282,8 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
   const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.hero');
   const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.body');
   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.seo');
-  const zhHant = locale === 'zh-hant';
+  // zh-hant and (since 2026-10-06) ko share the Apple service page; `zhHant` names that presentation.
+  const zhHant = isAppleDesignLocale(locale);
   // ja design (Opus 5.5 ja lane, 2026-10-01): paper hero with an in-page index, numbered key points.
   const ja = locale === 'ja';
   const jaIndexLabel = 'このページの内容';
@@ -348,7 +350,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
         </>
       ) : null}
       {showHero ? (
-        <section className={`svc-hero ${styles.hero}${zhHant ? ` ${zhStyles.hero}` : ''}${ja ? ` ${jaStyles.hero}` : ''}${en ? ` ${enStyles.hero}` : ''}`} data-tone="dark" data-zh-hant-design={zhHant ? 'service-detail' : undefined}>
+        <section className={`svc-hero ${styles.hero}${zhHant ? ` ${zhStyles.hero}` : ''}${ja ? ` ${jaStyles.hero}` : ''}${en ? ` ${enStyles.hero}` : ''}`} data-tone="dark" data-zh-hant-design={locale === 'zh-hant' ? 'service-detail' : undefined} data-ko-design={locale === 'ko' ? 'service-detail' : undefined}>
           <div className={`container svc-hero-inner ${styles.heroInner}${ja ? ` ${jaStyles.heroInner}` : ''}`}>
             {zhHant ? (
               <>

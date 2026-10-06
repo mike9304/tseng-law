@@ -7,6 +7,7 @@ import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import { resolveSafeNextPath } from '@/lib/safe-next';
 import { buildSeoMetadata } from '@/lib/seo';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
 import zhLoginStyles from '@/components/zh-hant-pages/ZhHantLogin.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import jaLegalStyles from '@/components/ja-design/JaLegal.module.css';
@@ -52,10 +53,10 @@ export default async function MemberLoginPage(
   if (member) redirect(nextPath);
 
   const body = <MemberAuthClient locale={locale} nextPath={nextPath} />;
-  // zh-hant Apple pass (2026-10-01): typography only, inside a scoped wrapper; other locales render unchanged.
-  if (locale === 'zh-hant') {
+  // zh-hant Apple pass (2026-10-01; ko since 2026-10-06): typography only, inside a scoped wrapper.
+  if (isAppleDesignLocale(locale)) {
     return (
-      <div className={`${zhPageShellStyles.shell} ${zhLoginStyles.root}`} id="zh-hant-login" data-zh-hant-design="login">
+      <div className={`${zhPageShellStyles.shell} ${zhLoginStyles.root}`} {...appleDesignRootProps(locale, 'login')}>
         {body}
       </div>
     );

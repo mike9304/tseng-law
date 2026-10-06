@@ -37,6 +37,7 @@ import {
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './LawyerProfile.module.css';
 import zhStyles from './ZhHantLawyerProfile.module.css';
+import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
 import jaStyles from './JaLawyerProfile.module.css';
 import jaTeamStyles from '@/components/ja-design/JaTeam.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
@@ -444,9 +445,10 @@ export default async function LawyerProfilePage(
     // ja design (Opus 5.5 ja lane): same blocks; 履歴書-style rows from the ja profile/team modules.
     return <JaPageShell page="lawyer-profile" className={`${jaStyles.root} ${jaTeamStyles.team}`}>{content}</JaPageShell>;
   }
-  // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside a scoped wrapper for the zh-hant profile styling.
-  if (locale === 'zh-hant') {
-    return <div className={zhStyles.root} id="zh-hant-lawyer-profile" data-zh-hant-design="lawyer-profile">{content}</div>;
+  // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside a scoped wrapper for the zh-hant profile styling;
+  // ko shares it since 2026-10-06.
+  if (isAppleDesignLocale(locale)) {
+    return <div className={zhStyles.root} {...appleDesignRootProps(locale, 'lawyer-profile')}>{content}</div>;
   }
   // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper.
   return locale === 'en'

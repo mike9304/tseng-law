@@ -27675,7 +27675,7 @@ html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-v
 html[lang='ko'] {
   --font-reading-zh: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) * {
+html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article) * {
   letter-spacing: -0.005em !important;
 }
 html[lang='ko'] .site [data-ko-design]:not([data-ko-design='home']) :is(h1, h2, .page-header-title, .section-title, .split-title) {

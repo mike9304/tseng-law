@@ -1,9 +1,9 @@
 /* ===== Apple pass (2026-10-01, zh pages lane / Opus 5.5) =====
    會員登入: typography only — the zh font stack, a sans H1 in the ink colour, no English eyebrow (Members), the pill
    submit button of the other zh pages. Layout and form behaviour are unchanged (MemberAuthClient). */
-.root:global(#zh-hant-login) section[data-member-login-page] { color: var(--ap-text); font-family: var(--font-sans); }
-.root:global(#zh-hant-login) section[data-member-login-page] > section > div:first-child > p { display: none; }
-.root:global(#zh-hant-login) section[data-member-login-page] h1 {
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] { color: var(--ap-text); font-family: var(--font-sans); }
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] > section > div:first-child > p { display: none; }
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] h1 {
   color: var(--ap-text);
   font-family: var(--font-sans) !important;
   font-size: clamp(32px, 3.4vw, 44px);
@@ -11,9 +11,9 @@
   line-height: 1.2;
   letter-spacing: 0.01em;
 }
-.root:global(#zh-hant-login) section[data-member-login-page] h1 + span { color: var(--ap-muted); font-size: 17px; line-height: 1.8; }
-.root:global(#zh-hant-login) section[data-member-login-page] form label { color: var(--ap-text); font-size: 15px; font-weight: 600; }
-.root:global(#zh-hant-login) section[data-member-login-page] form button[type='submit'] {
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] h1 + span { color: var(--ap-muted); font-size: 17px; line-height: 1.8; }
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] form label { color: var(--ap-text); font-size: 15px; font-weight: 600; }
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] form button[type='submit'] {
   min-height: 52px;
   border-radius: 999px;
   background: var(--ap-ink);
@@ -21,5 +21,5 @@
   font-size: 16px;
   font-weight: 600;
 }
-.root:global(#zh-hant-login) section[data-member-login-page] form button[type='submit']:hover:not(:disabled) { background: var(--ap-ink-deep); }
-.root:global(#zh-hant-login) section[data-member-login-page] :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] form button[type='submit']:hover:not(:disabled) { background: var(--ap-ink-deep); }
+.root:global(:is(#zh-hant-login, #ko-login)) section[data-member-login-page] :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }

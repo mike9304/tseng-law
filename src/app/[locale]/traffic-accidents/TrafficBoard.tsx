@@ -13,6 +13,7 @@ import {
   type TrafficBoardQuery,
 } from '@/lib/traffic-collection';
 import boardStyles from './TrafficBoard.module.css';
+import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import JaWrap from '@/components/ja-design/JaWrap';
 import jaV2 from '@/components/ja-design/JaPagesV2.module.css';
@@ -48,7 +49,7 @@ export default function TrafficBoard({ locale, items, query, classes, thumbSizes
   // ja only (昊 V2 tiles): titles break between phrases (<wbr> + keep-all); other locales render as before.
   const ja = locale === 'ja';
   // zh-hant only: the monoline check and play glyphs instead of the typed ✓ and ▶. A label only; playback is not touched.
-  const zhIcons = locale === 'zh-hant';
+  const zhIcons = isAppleDesignLocale(locale);
 
   return (
     <div className={styles.board} data-traffic-board>

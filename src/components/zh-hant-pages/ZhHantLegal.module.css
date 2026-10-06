@@ -1,14 +1,14 @@
 /* ===== Apple pass (2026-10-01, zh pages lane / Opus 5.5) =====
    隱私權政策 / 免責聲明 / 無障礙聲明: typography only (the header from ZhHantPageShell.module.css, the same font stack,
    ink and muted colours and type scale as the other zh subpages). Layout, cards and legal wording are unchanged. */
-.root:global(#zh-hant-legal) :global(.page-header .legal-effective-date) {
+.root:global(:is(#zh-hant-legal, #ko-legal)) :global(.page-header .legal-effective-date) {
   margin: 20px 0 0;
   color: var(--ap-muted);
   font-family: var(--font-sans);
   font-size: 14px;
   line-height: 1.6;
 }
-.root:global(#zh-hant-legal) :global(.legal-page-section .card-title) {
+.root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .card-title) {
   color: var(--ap-text);
   font-family: var(--font-sans) !important;
   font-size: 22px;
@@ -23,12 +23,12 @@
   overflow-wrap: anywhere;
 }
 @supports (word-break: auto-phrase) {
-  .root:global(#zh-hant-legal) :global(.legal-page-section .card-title) { word-break: keep-all; }
+  .root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .card-title) { word-break: keep-all; }
 }
-.root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-copy),
-.root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-copy p),
-.root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-list),
-.root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-list li) {
+.root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-copy),
+.root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-copy p),
+.root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-list),
+.root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-list li) {
   color: var(--ap-text);
   font-family: var(--font-sans);
   font-size: 17px;
@@ -36,12 +36,12 @@
   line-height: 1.8;
   letter-spacing: 0;
 }
-.root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-list li::marker) { color: #a1a1a6; }
+.root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-list li::marker) { color: #a1a1a6; }
 
 @media (max-width: 639px) {
-  .root:global(#zh-hant-legal) :global(.legal-page-section .card-title) { font-size: 20px; }
-  .root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-copy),
-  .root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-copy p),
-  .root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-list),
-  .root:global(#zh-hant-legal) :global(.legal-page-section .legal-card-list li) { font-size: 16px; }
+  .root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .card-title) { font-size: 20px; }
+  .root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-copy),
+  .root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-copy p),
+  .root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-list),
+  .root:global(:is(#zh-hant-legal, #ko-legal)) :global(.legal-page-section .legal-card-list li) { font-size: 16px; }
 }

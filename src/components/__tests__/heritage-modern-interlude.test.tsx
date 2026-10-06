@@ -4,13 +4,13 @@ import path from 'node:path';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import HomeAttorneySplit from '@/components/HomeAttorneySplit';
-import ServicesBento from '@/components/ServicesBento';
 import TaiwanHeritageInterlude, {
   TAIWAN_HERITAGE_INTERLUDE_MEDIA,
   resolveHeritageInterludeInsertionNodeId,
 } from '@/components/TaiwanHeritageInterlude';
 import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
 import KoHomeBody from '@/components/KoHomeBody';
+import { KoPractice } from '@/components/ko-home/KoSections';
 import type { SiteLocale } from '@/lib/locales';
 
 const localizedMediaAlt = {
@@ -126,7 +126,7 @@ describe('TaiwanHeritageInterlude', () => {
     expect(source).toContain('alt={mediaAlt ?? copy.mediaAlt}');
   });
 
-  it('is not part of the ko home since it joined the Apple system (KoHomeBody, 2026-10-06)', () => {
+  it('is not part of the ko home (KoHomeBody, Korean identity since 2026-10-06)', () => {
     const body = LegacyHomePageBody({
       locale: 'ko',
       posts: [],
@@ -136,8 +136,8 @@ describe('TaiwanHeritageInterlude', () => {
     const home = KoHomeBody({ posts: [], faqItems: [] }) as ReactElement<{ children: ReactNode }>;
     const children = Children.toArray(home.props.children);
     expect(children.some((child) => isValidElement(child) && child.type === TaiwanHeritageInterlude)).toBe(false);
-    // The practice tiles still lead straight into the columns, then the process and the attorney.
-    expect(children.some((child) => isValidElement(child) && child.type === ServicesBento)).toBe(true);
+    // The Korean-identity home (2026-10-06): the practice register, then the columns, the process and the attorney.
+    expect(children.some((child) => isValidElement(child) && child.type === KoPractice)).toBe(true);
     expect(children.some((child) => isValidElement(child) && child.type === HomeAttorneySplit)).toBe(true);
   });
 });

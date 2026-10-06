@@ -8,9 +8,9 @@ import { revealSnapRowItem } from '@/components/zh-hant-home/ZhHantSnapRowFocus'
  * enters a tile that sits off to the side, bring that tile into view (post-deploy a11y check
  * 2026-10-01: tiles 2/4/6 kept focus while 78% off screen). Renders nothing.
  */
-export default function ZhHantPracticeFocus({ rootId = 'zh-hant-home' }: { rootId?: 'zh-hant-home' | 'ko-home' } = {}) {
+export default function ZhHantPracticeFocus() {
   useEffect(() => {
-    const grid = document.querySelector<HTMLElement>(`#${rootId} #practice .services-card-grid`);
+    const grid = document.querySelector<HTMLElement>('#zh-hant-home #practice .services-card-grid');
     if (!grid) return;
     const onFocusIn = (event: FocusEvent) => {
       if (grid.scrollWidth <= grid.clientWidth + 1) return;
@@ -20,6 +20,6 @@ export default function ZhHantPracticeFocus({ rootId = 'zh-hant-home' }: { rootI
     };
     grid.addEventListener('focusin', onFocusIn);
     return () => grid.removeEventListener('focusin', onFocusIn);
-  }, [rootId]);
+  }, []);
   return null;
 }

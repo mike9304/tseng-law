@@ -1530,7 +1530,9 @@ export async function PublishedSitePageView({
         // The redesigned zh-hant home paints its own dawn poster (DecorativeAutoplayVideo: next/image fill,
         // sizes 100vw on wide screens; the raw portrait file on phones), so preload exactly those and not the
         // stock canvas hero, which that home never shows (post-deploy check 2026-10-01: ~285 KB wasted).
-        if (redesignedAppleHome) {
+        // The ko home (KoHomeBody) opens on type, not footage: nothing to preload.
+        if (redesignedKoHome) return null;
+        if (redesignedZhHome) {
           const { props: desktopPoster } = getImageProps({ src: ZH_HANT_HERO_MEDIA.poster, alt: '', fill: true, sizes: '100vw' });
           return (
             <>

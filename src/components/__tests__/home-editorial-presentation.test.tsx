@@ -17,10 +17,9 @@ import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import Reveal from '@/components/Reveal';
 import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
 import KoHomeBody from '@/components/KoHomeBody';
-import KoAudienceDoors from '@/components/ko-home/KoAudienceDoors';
-import KoEngagement from '@/components/ko-home/KoEngagement';
-import ZhHantMobileCta from '@/components/zh-hant-home/ZhHantMobileCta';
-import ZhHantPracticeFocus from '@/components/zh-hant-home/ZhHantPracticeFocus';
+import KoHero from '@/components/ko-home/KoHero';
+import KoMobileCta from '@/components/ko-home/KoMobileCta';
+import { KoPractice, KoProcess, KoSituations } from '@/components/ko-home/KoSections';
 import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
 import JaHero from '@/components/ja-design/kou/JaHero';
 import JaSukashi from '@/components/ja-design/kou/JaSukashi';
@@ -307,7 +306,7 @@ describe('ServicesBento editorial full descriptions', () => {
 describe('legacy home editorial composition', () => {
   // ja design (Opus 5.5 ja lane, 2026-10-01): the shared order below stays pinned on the shared
   // legacy body (en); ja now has its own Japanese-reader order, pinned in the next test.
-  it('renders the ko home as KoHomeBody: the zh-hant Apple journey with the ko posts and FAQ passed through', () => {
+  it('renders the ko home as KoHomeBody: its own Korean journey with the ko posts and FAQ passed through', () => {
     const posts = [
       {
         slug: 'sample',
@@ -321,7 +320,7 @@ describe('legacy home editorial composition', () => {
       },
     ];
     const faqItems = [{ question: 'Q', answer: 'A' } as FAQItem];
-    // ko joined the zh-hant Apple system on 2026-10-06, so every main locale now renders its own home body.
+    // ko has its own identity since 2026-10-06 (no longer the zh-hant system): every main locale renders its own body.
     const body = LegacyHomePageBody({ locale: 'ko', posts, faqItems }) as ReactElement<{ posts: unknown; faqItems: unknown }>;
     expect(body.type).toBe(KoHomeBody);
     expect(body.props.posts).toBe(posts);
@@ -331,35 +330,33 @@ describe('legacy home editorial composition', () => {
     expect(home.props.id).toBe('ko-home');
     expect((home.props as Record<string, unknown>)['data-ko-design']).toBe('home');
     const children = Children.toArray(home.props.children) as ReactElement[];
-    const hero = Children.only((children[0] as ReactElement<{ children: ReactElement }>).props.children) as ReactElement<{
-      locale: SiteLocale;
-      presentation?: string;
-      showHomePaths?: boolean;
-      scrollHref?: string;
-    }>;
-    expect(elementType(hero)).toBe(HeroSearch);
-    expect(hero.props).toMatchObject({ locale: 'ko', presentation: 'editorial', showHomePaths: false, scrollHref: '#practice' });
     expect(children.map((child) => elementType(child))).toEqual([
-      BuilderSurfaceProvider,
-      KoAudienceDoors,
-      ServicesBento,
-      ZhHantPracticeFocus,
+      KoHero,
+      KoSituations,
+      KoPractice,
       InsightsArchiveSection,
-      KoEngagement,
+      KoProcess,
       HomeAttorneySplit,
-      HomeCaseResultsSplit,
-      HomeStatsSection,
+      'div',
       FAQAccordion,
       OfficeMapTabs,
       HomeContactCta,
-      ZhHantMobileCta,
+      KoMobileCta,
     ]);
-    expect((children[2] as ReactElement<{ id?: string; presentation?: string }>).props).toMatchObject({ id: 'practice', presentation: 'editorial' });
-    expect((children[4] as ReactElement<{ posts: unknown; presentation?: string }>).props).toMatchObject({ posts, presentation: 'editorial' });
-    expect((children[9] as ReactElement<{ items: FAQItem[]; id?: string }>).props).toMatchObject({ items: faqItems, id: 'faq' });
-    expect((children[10] as ReactElement<{ id?: string; presentation?: string }>).props).toMatchObject({ id: 'offices', presentation: 'editorial' });
-    // The heritage interlude and the reveal wrappers belonged to the retired green home.
-    expect(children.some((child) => elementType(child) === TaiwanHeritageInterlude || elementType(child) === Reveal)).toBe(false);
+    const chapter = Children.toArray((children[6] as ReactElement<{ children: ReactNode }>).props.children) as ReactElement[];
+    expect(chapter.map((child) => elementType(child))).toEqual([HomeCaseResultsSplit, HomeStatsSection]);
+    expect((children[3] as ReactElement<{ posts: unknown; presentation?: string }>).props).toMatchObject({ posts, presentation: 'editorial' });
+    expect((children[7] as ReactElement<{ items: FAQItem[]; id?: string }>).props).toMatchObject({ items: faqItems, id: 'faq' });
+    expect((children[8] as ReactElement<{ id?: string; presentation?: string }>).props).toMatchObject({ id: 'offices', presentation: 'editorial' });
+    // Neither the zh-hant hero (HeroSearch) nor the heritage interlude or reveal wrappers are part of it.
+    expect(children.some((child) => [HeroSearch, TaiwanHeritageInterlude, Reveal, ServicesBento].includes(elementType(child) as never))).toBe(false);
+
+    const markup = renderToStaticMarkup(home);
+    expect(markup.match(/<h1\b/g)).toHaveLength(1);
+    expect(markup).toContain('action="/ko/search"');
+    expect(markup).toContain('lang="zh-Hant">資遣費</span>');
+    expect(markup).toContain('>퇴직금</span>');
+    expect(markup).not.toContain('/zh-hant/');
   });
 
   it('orders the ja home for Japanese readers: needs first, then practice areas, pinned columns, trust, FAQ, offices, contact', () => {

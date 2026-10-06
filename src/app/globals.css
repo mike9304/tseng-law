@@ -27675,8 +27675,39 @@ html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-v
    /ko/columns the ko shell wraps the whole published page, and an inline editor value must not lose to !important.
    ===================================================================================================== */
 html[lang='ko'] {
-  --font-reading-zh: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Korean identity (2026-10-06): Pretendard (self-hosted, /fonts/pretendard-1.3.9) leads every ko text stack. It has
+     no 漢字, so the stack goes straight to the device Korean faces: naming the Noto Sans KR web font here pulled ~0.9 MB
+     of its slices onto /ko for the 漢字 in 「퇴직금(資遣費)」-style glosses and the office addresses. */
+  --font-ko-pretendard: 'Pretendard Variable', Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-reading-zh: var(--font-ko-pretendard);
+  --font-body: var(--font-ko-pretendard);
+  --font-sans: var(--font-ko-pretendard);
+  --text-link: #233f7a;
+  --text-link-hover: #172d5a;
 }
+html[lang='ko'] :where(:focus-visible) { outline-color: #233f7a; }
+/* The shared zh-hant/ko page modules read --ap-*: on ko roots they take the Korean palette — 쪽빛 indigo actions and
+   links, an indigo mist instead of Apple grey, 12px tiles. The ids outweigh each module's own root rule. */
+html[lang='ko'] .site :is(#ko-about, #ko-services, #ko-pricing, #ko-contact, #ko-faq, #ko-columns, #ko-lawyers, #ko-videos, #ko-column, #ko-lawyer-profile, #ko-traffic, #ko-search, #ko-login, #ko-legal, #ko-intent),
+html[lang='ko'] .site :is([data-ko-design='service-detail'], article.svc-article[data-ko-design-scope]) {
+  --ap-gray: #eef2f9;
+  --ap-line: #d8dee8;
+  --ap-text: #1f2329;
+  --ap-muted: #5e6470;
+  --ap-ink: #233f7a;
+  --ap-ink-deep: #172d5a;
+  --ap-accent: #233f7a;
+  --ap-radius: 12px;
+  --zh-paper: #eef2f9;
+}
+/* No pills on the Korean site: every action, chip, tab, field and tab rail takes 10px corners (radius only shows where
+   there is a fill or a border, so plain text links are unaffected); round icon controls keep their shape. */
+html[lang='ko'] .site :is(#ko-about, #ko-services, #ko-pricing, #ko-contact, #ko-faq, #ko-columns, #ko-lawyers, #ko-videos, #ko-column, #ko-lawyer-profile, #ko-traffic, #ko-search, #ko-login, #ko-legal, #ko-intent) :is(a, button, input[type='search'], select, nav):not([class*='icon'], [class*='Icon'], [class*='scroll-top'], [class*='nav-btn'], [class*='control']),
+html[lang='ko'] .site :is([data-ko-design='service-detail'], article.svc-article[data-ko-design-scope]) :is(a, button):not([class*='icon'], [class*='Icon'], [class*='control']) {
+  border-radius: 10px !important;
+}
+/* The practice hero raises its pill with an id in :is() (ZhHantServiceDetail .heroCta); match that weight. */
+html[lang='ko'] .site [data-ko-design='service-detail'] :is(.button, #ko-svc-boost) { border-radius: 10px !important; }
 html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) *:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.005em !important;
 }

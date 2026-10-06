@@ -444,6 +444,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
     '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
     '257-taiwan-naturalization-keep-original-nationality.md', // cols-20261006-C8
+    '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
   ],
   en: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -454,6 +455,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
     '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
     '257-taiwan-naturalization-keep-original-nationality.md', // cols-20261006-C8
+    '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
   ],
   ja: [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -464,6 +466,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
     '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
     '257-taiwan-naturalization-keep-original-nationality.md', // cols-20261006-C8
+    '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
   ],
   'zh-hant': [
     '250-taiwan-stalking-harassment-act-written-warning-protection-order.md', // cols-20261006-C1
@@ -474,6 +477,7 @@ export const COUNTRY_COLUMN_FILES_20261006 = {
     '255-taiwan-copyright-employee-freelancer-work-ownership.md', // cols-20261006-C6
     '256-taiwan-vat-foreign-digital-services-registration.md', // cols-20261006-C7
     '257-taiwan-naturalization-keep-original-nationality.md', // cols-20261006-C8
+    '258-taiwan-dui-reach-beyond-drivers-seat.md', // gap1006-G1
   ],
 } as const;
 

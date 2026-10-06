@@ -1173,6 +1173,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-naturalization-keep-original-nationality"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-dui-reach-beyond-drivers-seat"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-dui-reach-beyond-drivers-seat"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-dui-reach-beyond-drivers-seat"
     }
   ]
 }

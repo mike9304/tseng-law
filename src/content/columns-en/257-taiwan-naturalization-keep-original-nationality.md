@@ -3,7 +3,7 @@ title: "Naturalizing in Taiwan: The One-Year Renunciation Deadline and the High-
 seoTitle: "Taiwan Naturalization: Certificate of Loss"
 summary: "Taiwan gives most naturalized foreigners one year to prove loss of their original nationality. High-level professionals are exempt from that requirement."
 published: "2026-10-06"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "October 6, 2026"
 read_time: "7 min read"
 categories:
@@ -41,9 +41,9 @@ Residence periods differ by route. The table follows the provisions in force on 
 | Spouse of a Taiwan national and others ([Article 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=4), paragraph 1) | 183 days or more a year, 3 or more consecutive years | 60 | Due within 1 year of approval |
 | High-level professional ([Article 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=5), paragraph 1, item 3) | 183 days or more a year for 2 or more consecutive years, or 5 or more continuous years of legal residence in the past | 60 | Not required |
 
-Spouses of Taiwan nationals do not have to meet the property-or-skills requirement (Article 4, paragraph 1, item 1). Years are counted backward from the application and must be unbroken ([Enforcement Rules, Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)). [Article 5 of the Enforcement Rules](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5) leaves residence granted for study in Taiwan, among other categories, out of the count.
+Spouses of Taiwan nationals do not have to meet the property-or-skills requirement (Article 4, paragraph 1, item 1). Years are counted backward from the application and must be unbroken ([Enforcement Rules, Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)). If an overstay of less than 30 days interrupts the period of residence, the period is treated as unbroken, but the overstay does not count toward the 183 days of lawful residence (Article 6, paragraphs 1 and 2). [Article 5 of the Enforcement Rules](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5) leaves residence granted for study in Taiwan, among other categories, out of the count.
 
-On the general route, applicants can meet the property-or-skills requirement in several ways. Two are average monthly income in Taiwan over the past year above twice the basic wage announced by the Ministry of Labor, and property in Taiwan valued at more than NT$5 million (Enforcement Rules as amended November 19, 2024, [Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)). An APRC holder may omit this proof ([Enforcement Rules, Article 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9), paragraph 3). The APRC requirements are in [When Can You Apply for Permanent Residence (APRC) in Taiwan?](/en/columns/taiwan-permanent-residence-aprc).
+On the general route, applicants can meet the property-or-skills requirement in several ways. Two are average monthly income in Taiwan over the past year above twice the basic wage announced by the Ministry of Labor, and property in Taiwan valued at more than NT$5 million ([Enforcement Rules, Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)). An APRC holder may omit this proof ([Enforcement Rules, Article 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9), paragraph 3). The APRC requirements are in [When Can You Apply for Permanent Residence (APRC) in Taiwan?](/en/columns/taiwan-permanent-residence-aprc).
 
 ## Language and civics: a test, classes, or a year of school
 

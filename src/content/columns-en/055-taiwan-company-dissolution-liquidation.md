@@ -3,7 +3,7 @@ title: "Closing a Taiwan subsidiary or branch: when can the remaining cash leave
 seoTitle: "Taiwan company dissolution liquidation"
 summary: "Dissolution registration starts Taiwan liquidation; it does not clear tax, labor, or creditor claims. Foreign parents need a checklist before remitting capital."
 published: "2026-10-01"
-lastmod: "2026-10-01"
+lastmod: "2026-10-07"
 date_display: "October 1, 2026"
 read_time: "5 min read"
 categories:
@@ -31,7 +31,7 @@ An overseas company closing a Taiwan branch follows a different path. Under [Art
 
 ## Creditors, court reports and the distribution
 
-The default liquidators differ. Articles 113 and 79 generally point to shareholders for a limited company, while Article 322 points to directors for a company limited by shares, subject to the Act, the articles or a valid selection. For the limited company, Article 83, applied through Article 113, requires the liquidator to report taking office to the court within 15 days; Article 88 requires public notice to creditors and separate notice to known creditors. Article 93 requires a court report after completion and shareholder approval. For the share company, Article 327 requires at least three public notices calling for claims within three months, plus separate notice to known creditors; Article 331 sets the final accounts and court-report step. These notice rules should not be collapsed into one generic deadline. [The Company Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001) also bars distribution of assets to shareholders before company debts are paid.
+The default liquidators differ. Articles 113 and 79 generally point to shareholders for a limited company, while Article 322 points to directors for a company limited by shares, subject to the Act, the articles or a valid selection. For the limited company, Article 83, applied through Article 113, requires the liquidator to report taking office to the court within 15 days; Article 88 requires public notice to creditors and separate notice to known creditors. Article 93 requires a court report after completion and shareholder approval. For the share company, Article 327 requires at least three public notices calling for claims within three months, plus separate notice to known creditors; Article 331 sets the final accounts and court-report step. The notice rules differ between the two company types. For either type, the liquidator must complete the liquidation within six months and, if that is not possible, may state the reasons and apply to the court for an extension ([Company Act Article 87(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87), applied through Article 113(2) for a limited company and Article 334 for a company limited by shares). [The Company Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001) also bars distribution of assets to shareholders before company debts are paid.
 
 ## Tax and money leaving Taiwan
 

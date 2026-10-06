@@ -3,7 +3,7 @@ title: "대만에 귀화하면 한국 국적은 어떻게 되나: 상실증명 1
 seoTitle: "대만 귀화 요건과 원래 국적 상실증명, 고급전문인재 면제"
 summary: "대만 국적법은 귀화 허가일부터 1년 안에 원래 국적의 상실증명을 내도록 하고, 고급전문인재 등 세 경우에만 이를 면제합니다. 한국 국적이 유지되는지는 한국 국적법이 따로 정합니다."
 published: "2026-10-06"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "2026년 10월 6일"
 read_time: "6분 분량"
 categories:
@@ -39,9 +39,9 @@ author: "legal-ai-assistant"
 | 대만 국민의 배우자 등([제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=4) 제1항) | 매년 183일 이상, 3년 이상 계속 | 60점 | 허가일부터 1년 안에 제출 |
 | 고급전문인재([제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=5) 제1항 제3호) | 매년 183일 이상 2년 이상 계속, 또는 과거에 5년 이상 계속 거류 | 60점 | 면제 |
 
-재산·기술 요건은 대만 국민의 배우자에게 묻지 않습니다(제4조 제1항 제1호). 기간은 신청 시점부터 거꾸로 세고 중간에 끊기지 않아야 합니다([시행세칙 제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)). [시행세칙 제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5)는 유학을 사유로 거류한 기간 등을 이 계산에서 뺍니다.
+재산·기술 요건은 대만 국민의 배우자에게 묻지 않습니다(제4조 제1항 제1호). 기간은 신청 시점부터 거꾸로 세고 중간에 끊기지 않아야 합니다([시행세칙 제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)). 다만 거류 기간을 넘겨 머물러 거류가 중단되었더라도 그 초과 체류 기간이 30일 미만이면 연속이 끊기지 않은 것으로 보지만, 그 기간은 합법 거류 183일 계산에 넣지 않습니다(같은 조 제1항 단서, 제2항). [시행세칙 제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5)는 유학을 사유로 거류한 기간 등을 이 계산에서 뺍니다.
 
-배우자가 아닌 일반 신청자는 몇 가지 방법 가운데 하나로 재산·기술 요건을 채웁니다. 최근 1년간 대만 내 월평균 소득이 노동부 공고 기본임금의 2배를 넘거나, 대만 내 동산과 부동산의 평가액이 500만 대만달러를 넘는 것이 그 예입니다(2024년 11월 19일 개정 [시행세칙 제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)). 영주거류증이 있으면 이 증명 서류를 내지 않아도 됩니다([시행세칙 제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9) 제3항). 영주권 요건은 [대만 영주권(APRC) 신청 경로](/ko/columns/taiwan-permanent-residence-aprc)에서 설명했습니다.
+배우자가 아닌 일반 신청자는 몇 가지 방법 가운데 하나로 재산·기술 요건을 채웁니다. 최근 1년간 대만 내 월평균 소득이 노동부 공고 기본임금의 2배를 넘거나, 대만 내 동산과 부동산의 평가액이 500만 대만달러를 넘는 것이 그 예입니다([시행세칙 제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)). 영주거류증이 있으면 이 증명 서류를 내지 않아도 됩니다([시행세칙 제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9) 제3항). 영주권 요건은 [대만 영주권(APRC) 신청 경로](/ko/columns/taiwan-permanent-residence-aprc)에서 설명했습니다.
 
 언어능력과 기본 상식은 세 가지 서류 가운데 하나로 인정받습니다. 대만 학교에 1년 이상 다닌 증명, 정부기관이 연 과정을 정해진 시간 이상 수강한 증명, 귀화시험 합격증입니다([언어능력·기본상식 인정표준 제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030028&flno=3)). [같은 표준 제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030028&flno=6)에 따르면 귀화시험은 20문항이고, 구술시험은 화어(표준 중국어)·민남어·객가어·원주민어 가운데 하나를 골라 봅니다. 만점은 100점입니다. 65세 이상은 50점이면 합격합니다([같은 표준 제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030028&flno=7)).
 

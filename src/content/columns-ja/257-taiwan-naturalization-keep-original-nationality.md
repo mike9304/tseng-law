@@ -3,7 +3,7 @@ title: "台湾に帰化すると日本国籍はどうなるか：原国籍の喪
 seoTitle: "台湾の帰化要件と原国籍の喪失証明：高級専門人材は提出不要"
 summary: "台湾の国籍法は、帰化の許可から1年以内に元の国籍を失ったことの証明を出すよう求め、高級専門人材など三つの場合に限って提出を免除しています。日本国籍が残るかどうかは、日本の国籍法が別に定めています。"
 published: "2026-10-06"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "2026年10月6日"
 read_time: "約7分"
 categories:
@@ -45,9 +45,9 @@ author: "legal-ai-assistant"
 
 3年の区分には、配偶者のほか、台湾国民の養子、台湾で生まれた人、父または母が現在または過去に台湾国民である人なども入ります。このうち台湾国民の配偶者は、財産・技能の要件を満たす必要がありません（第4条第1項第1号）。
 
-期間は、申請の時点からさかのぼって数えます。途中で途切れてはいけません（[施行細則第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)）。[施行細則第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5)により、台湾での就学を理由とする居留の期間などは、この計算に入りません。
+期間は、申請の時点からさかのぼって数えます。途中で途切れてはいけません（[施行細則第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)）。ただし、在留期間を過ぎて滞在したために在留が中断しても、その超過滞在が30日未満であれば連続は途切れなかったものとみなされますが、その期間は合法的な在留183日の計算には入りません（同条第1項ただし書・第2項）。[施行細則第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5)により、台湾での就学を理由とする居留の期間などは、この計算に入りません。
 
-配偶者以外の一般の申請者は、いくつかある方法のいずれかで財産・技能の要件を満たします。直近1年の台湾での平均月収が労働部公告の基本工資の2倍を超えること、台湾にある動産と不動産の評価額が500万台湾元を超えること、などです（2024年11月19日改正の[施行細則第7条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)）。APRCを持っている人は、この証明書類の添付を省けます（[施行細則第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9)第3項）。APRCの要件は[台湾の永住許可（APRC）はいつ申請できるか](/ja/columns/taiwan-permanent-residence-aprc)で説明しています。
+配偶者以外の一般の申請者は、いくつかある方法のいずれかで財産・技能の要件を満たします。直近1年の台湾での平均月収が労働部公告の基本工資の2倍を超えること、台湾にある動産と不動産の評価額が500万台湾元を超えること、などです（[施行細則第7条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)）。APRCを持っている人は、この証明書類の添付を省けます（[施行細則第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9)第3項）。APRCの要件は[台湾の永住許可（APRC）はいつ申請できるか](/ja/columns/taiwan-permanent-residence-aprc)で説明しています。
 
 ## 言語能力と基本常識は、テスト以外でも証明できます
 

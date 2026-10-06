@@ -3,7 +3,7 @@ title: "外國人歸化我國國籍，一定要放棄原國籍嗎？一年期限
 seoTitle: "歸化國籍要件與喪失原有國籍證明：高級專業人才免提出"
 summary: "外國人經許可歸化後，原則上應在一年內提出喪失原有國籍證明，否則撤銷歸化許可；高級專業人才、殊勳及不可歸責於當事人等三種情形免提出。"
 published: "2026-10-06"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "2026年10月6日"
 read_time: "約6分鐘閱讀"
 categories:
@@ -37,9 +37,9 @@ author: "legal-ai-assistant"
 | 國民之配偶等（[第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=4)第1項） | 每年183日以上，繼續三年以上 | 60分 | 許可之日起一年內提出 |
 | 高級專業人才（[第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=5)第1項第3款） | 每年183日以上繼續二年以上，或曾合法居留繼續五年以上 | 60分 | 免提出 |
 
-國民的配偶不須符合財產或專業技能的要件（第4條第1項第1款）。年限從申請歸化時往前推算，必須連續不中斷（[施行細則第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)）。依[施行細則第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5)，以在臺就學等事由居留的期間不列入計算。
+國民的配偶不須符合財產或專業技能的要件（第4條第1項第1款）。年限從申請歸化時往前推算，必須連續不中斷（[施行細則第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=6)）。因逾期居留致居留期間中斷，其逾期居留期間未達30日者，視為居留期間連續不中斷，但該逾期居留期間不列入合法居留183日的計算（同條第1項但書、第2項）。依[施行細則第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=5)，以在臺就學等事由居留的期間不列入計算。
 
-配偶以外的一般申請人，可以用最近一年在國內平均每月收入逾勞動部公告基本工資二倍，或國內動產及不動產估價總值逾新臺幣五百萬元等方式，證明財產或專業技能（2024年11月19日修正的[施行細則第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)）。已取得外僑永久居留證的人，得免附這項證明（[施行細則第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9)第3項）。永久居留的要件，見[外國人何時可申請台灣永久居留（APRC）？](/zh-hant/columns/taiwan-permanent-residence-aprc)。
+配偶以外的一般申請人，可以用最近一年在國內平均每月收入逾勞動部公告基本工資二倍，或國內動產及不動產估價總值逾新臺幣五百萬元等方式，證明財產或專業技能（[施行細則第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=7)）。已取得外僑永久居留證的人，得免附這項證明（[施行細則第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=9)第3項）。永久居留的要件，見[外國人何時可申請台灣永久居留（APRC）？](/zh-hant/columns/taiwan-permanent-residence-aprc)。
 
 語言能力與基本常識，可以用曾就讀國內學校一年以上的證明、參加政府機關所開課程達一定時數的證明，或歸化測試合格的證明來認定（[語言能力及基本常識認定標準第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030028&flno=3)）。歸化測試共20題，口試可以就華語、閩南語、客語或原住民語擇一應試（[同標準第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030028&flno=6)）。總分100分。年滿65歲的人，合格分數是50分（[同標準第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030028&flno=7)）。歸化由本人向住所地的戶政事務所申請（[施行細則第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030022&flno=2)）。
 

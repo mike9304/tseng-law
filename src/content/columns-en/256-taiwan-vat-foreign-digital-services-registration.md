@@ -3,7 +3,7 @@ title: "Selling Apps, Games or SaaS to Taiwan Without an Office: When VAT Regist
 seoTitle: "Taiwan VAT for Foreign Digital Sellers"
 summary: "A foreign company with no Taiwan office must register for business tax once e-service sales to individuals in Taiwan pass NT$600,000 a year, up from NT$480,000."
 published: "2026-10-06"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "October 6, 2026"
 read_time: "7 min read"
 categories:
@@ -16,7 +16,7 @@ faq:
   - q: "We sell SaaS only to Taiwanese companies. Do we have to register?"
     a: "The registration duty in Article 28-1 of the Business Tax Act covers foreign sellers of electronic services to individuals in Taiwan. Where the buyer is a Taiwanese business, Article 36, paragraph 1 makes the buyer calculate and pay the tax within 15 days after the start of the period following payment."
   - q: "Who reports the tax when we sell through an app store?"
-    a: "The Ministry of Finance's rules turn on who collects the price from the buyer. If a foreign platform collects it, the platform reports and pays on the full amount collected, and what the seller receives from the platform is outside Taiwan business tax. If the seller collects the price itself, the seller is the one that registers and files."
+    a: "The Ministry of Finance's rules turn on who collects the price from the buyer. If a foreign platform collects it, the platform reports and pays on the full amount collected, and what the seller receives from the platform is outside Taiwan business tax. If the seller collects the price itself, the seller is the one that registers and files, provided its annual sales of electronic services to individuals in Taiwan exceed NT$600,000."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
@@ -64,7 +64,7 @@ Where the buyer is a Taiwanese business, the buyer is the taxpayer ([Article 2](
 
 ## Selling through an app store or another platform
 
-Point 4 of the MOF directions turns on who collects the price from the buyer when a service with no physical place of use, such as a game or an app, is sold on a platform run by another foreign company. If the seller collects the price itself, the seller is the one that registers and files, and the commission the platform charges the seller is outside Taiwan business tax. If the platform collects the price, the platform reports and pays on the full amount it collects from the buyer, and what the seller then receives from the platform is outside Taiwan business tax.
+Point 4 of the MOF directions turns on who collects the price from the buyer when a service with no physical place of use, such as a game or an app, is sold on a platform run by another foreign company. If the seller collects the price itself, the seller is the one that registers and files once its annual sales of electronic services to individuals in Taiwan exceed NT$600,000, and the commission the platform charges the seller is outside Taiwan business tax. If the platform collects the price, the platform reports and pays on the full amount it collects from the buyer, and what the seller then receives from the platform is outside Taiwan business tax.
 
 ## If the seller does not register or file
 

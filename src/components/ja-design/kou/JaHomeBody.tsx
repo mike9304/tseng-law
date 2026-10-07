@@ -49,7 +49,6 @@ export default function JaHomeBody({ posts, faqItems }: { posts: readonly JaHome
   const capsuleLabel = siteContent.ja.contact.cta.label;
   return (
     <JaPageShell page="home" className={k.root}>
-      <link rel="preload" href="/fonts/ja-kou-display.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <JaHero />
       <JaSukashi />
       <JaLightField>

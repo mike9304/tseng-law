@@ -4,7 +4,8 @@
  * (#ja-home, data-ja-design="home"); nothing here can match another locale (the class only exists in ja markup).
  */
 
-/* Display face: Noto Serif JP 600 (OFL 1.1), subset to the home's display glyphs (ja-kou-display.glyphs.txt). */
+/* Former display face: Noto Serif JP 600 subset (ja-kou-display.glyphs.txt). Since 2026-10-07 the titles set in Zen Old
+   Mincho (--ja-display) and nothing names this family, so it is never fetched; kept for the subset test's glyph list. */
 @font-face {
   font-family: 'JaKouDisplay';
   src: url('/fonts/ja-kou-display.woff2') format('woff2');

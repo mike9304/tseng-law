@@ -188,14 +188,14 @@
   --font-display-en: var(--font-heading-en);
 }
 
-/* The lead attorney's name 曾雋崴 in one face (2026-10-07): Zen has no 崴, so the three characters come from the Noto JP
-   slices the ja pages already link, sans for text and serif for titles; everything else falls through to Zen. */
-@font-face { font-family: 'JA Name Sans'; font-weight: 100 900; font-display: swap; unicode-range: U+66FE; src: url(/fonts/00d49745793628af-s.woff2) format('woff2'); }
-@font-face { font-family: 'JA Name Sans'; font-weight: 100 900; font-display: swap; unicode-range: U+96CB; src: url(/fonts/073c56d5826c0954-s.woff2) format('woff2'); }
-@font-face { font-family: 'JA Name Sans'; font-weight: 100 900; font-display: swap; unicode-range: U+5D34; src: url(/fonts/8dae1ea3903b1d2c-s.woff2) format('woff2'); }
-@font-face { font-family: 'JA Name Serif'; font-weight: 200 900; font-display: swap; unicode-range: U+66FE; src: url(/fonts/c5d2990dd7e95e50-s.woff2) format('woff2'); }
-@font-face { font-family: 'JA Name Serif'; font-weight: 200 900; font-display: swap; unicode-range: U+96CB; src: url(/fonts/7979d326a9a21f7a-s.woff2) format('woff2'); }
-@font-face { font-family: 'JA Name Serif'; font-weight: 200 900; font-display: swap; unicode-range: U+5D34; src: url(/fonts/0210a8e3222d8405-s.woff2) format('woff2'); }
+/* The lead attorney's name 曾雋崴 in one face (2026-10-07): Zen has no 崴, so the three characters come from Noto Sans /
+   Serif JP (SIL OFL 1.1, /fonts/ja-name/OFL-noto-cjk.txt), cut to just these glyphs (about 1.5 KB a file) and set at
+   weights that sit with Zen — text at 340 (Noto's 400 reads darker than Zen Kaku 400) and 620, titles at 500 and 700.
+   Everything else falls through to Zen. */
+@font-face { font-family: 'JA Name Sans'; font-weight: 100 549; font-display: swap; unicode-range: U+5D34, U+66FE, U+96CB; src: url(/fonts/ja-name/ja-name-sans-regular.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Sans'; font-weight: 550 900; font-display: swap; unicode-range: U+5D34, U+66FE, U+96CB; src: url(/fonts/ja-name/ja-name-sans-bold.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Serif'; font-weight: 100 599; font-display: swap; unicode-range: U+5D34, U+66FE, U+96CB; src: url(/fonts/ja-name/ja-name-serif-medium.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Serif'; font-weight: 600 900; font-display: swap; unicode-range: U+5D34, U+66FE, U+96CB; src: url(/fonts/ja-name/ja-name-serif-bold.woff2) format('woff2'); }
 /* ja page titles at the specimen's Zen Old Mincho 500 (the face ships 500 and 700); builder-placed nodes keep their own. */
 html[lang='ja'] .site #main h1:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 500 !important; }
 

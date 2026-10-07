@@ -26,6 +26,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
     '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
     '382-taiwan-customs-valuation-related-party-imports-transfer-pricing.md',
+    '383-taiwan-free-trade-zone-bonded-factory-science-park-tax.md',
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   ja: [
@@ -50,6 +51,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
     '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
     '382-taiwan-customs-valuation-related-party-imports-transfer-pricing.md',
+    '383-taiwan-free-trade-zone-bonded-factory-science-park-tax.md',
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   en: [
@@ -75,6 +77,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
     '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
     '382-taiwan-customs-valuation-related-party-imports-transfer-pricing.md',
+    '383-taiwan-free-trade-zone-bonded-factory-science-park-tax.md',
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   'zh-hant': [
@@ -100,6 +103,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
     '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
     '382-taiwan-customs-valuation-related-party-imports-transfer-pricing.md',
+    '383-taiwan-free-trade-zone-bonded-factory-science-park-tax.md',
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
 } as const;

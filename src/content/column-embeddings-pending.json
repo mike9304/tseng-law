@@ -1545,6 +1545,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-cross-border-e-services-income-tax-foreign-platforms"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-free-trade-zone-bonded-factory-science-park-tax"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-free-trade-zone-bonded-factory-science-park-tax"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-free-trade-zone-bonded-factory-science-park-tax"
     }
   ]
 }

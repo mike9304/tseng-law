@@ -1437,6 +1437,42 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-related-party-loan-interest-thin-capitalization"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-stock-options-rsu-foreign-parent-employee-tax"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-stock-options-rsu-foreign-parent-employee-tax"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-stock-options-rsu-foreign-parent-employee-tax"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-unpaid-tax-exit-ban-responsible-person-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-unpaid-tax-exit-ban-responsible-person-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-unpaid-tax-exit-ban-responsible-person-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "global-minimum-tax-pillar-two-taiwan-subsidiary"
+    },
+    {
+      "locale": "en",
+      "slug": "global-minimum-tax-pillar-two-taiwan-subsidiary"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "global-minimum-tax-pillar-two-taiwan-subsidiary"
     }
   ]
 }

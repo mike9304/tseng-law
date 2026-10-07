@@ -22,6 +22,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
     '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
     '372-taiwan-related-party-loan-interest-thin-capitalization.md',
+    '373-taiwan-stock-options-rsu-foreign-parent-employee-tax.md',
+    '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
+    '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
   ] as string[],
   ja: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -41,6 +44,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
     '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
     '372-taiwan-related-party-loan-interest-thin-capitalization.md',
+    '373-taiwan-stock-options-rsu-foreign-parent-employee-tax.md',
+    '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
+    '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
   ] as string[],
   en: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -61,6 +67,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
     '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
     '372-taiwan-related-party-loan-interest-thin-capitalization.md',
+    '373-taiwan-stock-options-rsu-foreign-parent-employee-tax.md',
+    '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
+    '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
   ] as string[],
   'zh-hant': [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -81,6 +90,9 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
     '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
     '372-taiwan-related-party-loan-interest-thin-capitalization.md',
+    '373-taiwan-stock-options-rsu-foreign-parent-employee-tax.md',
+    '374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md',
+    '375-global-minimum-tax-pillar-two-taiwan-subsidiary.md',
   ] as string[],
 } as const;
 

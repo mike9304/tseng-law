@@ -217,10 +217,7 @@ html[lang='ja'] {
 /* ZH pages load only TC next/font variables — rebind body/display to TC stacks. */
 html[lang='zh-Hant'],
 html[lang='zh-hant'] {
-  /* zh-hant type (2026-10-07, operator choice Z1 — 「윈도우에서도 같은 모양」): text in Noto Sans TC (思源黑體), titles in
-     Noto Serif TC (思源宋體), both self-hosted slices already linked on zh-hant; the device faces stay as fallback.
-     (Earlier the text used the device face only, to avoid web-font slices; the operator chose one face everywhere.) */
-  --font-reading-zh: var(--font-noto-sans-tc-loaded, 'PingFang TC'), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans CJK TC', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  /* zh-hant text sets in the device's own face (see --font-reading-zh): no webfont slices while scrolling. */
   --font-body-zh: var(--font-reading-zh);
   --font-body: var(--font-body-zh);
   --font-heading: var(--font-heading-zh);
@@ -228,8 +225,6 @@ html[lang='zh-hant'] {
   --font-display: var(--font-heading-zh);
   --font-display-en: var(--font-heading-zh);
 }
-/* zh-hant titles in Noto Serif TC (思源宋體, Z1): page and section titles 500; builder-placed nodes keep their own. */
-.site[data-locale='zh-hant'] #main :is(h1, h2):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-family: var(--font-heading-zh) !important; font-weight: 500 !important; }
 
 /* Guidance locales load only the latin/Vietnamese Noto Sans (plus Noto Sans
    Thai for th). Without these bindings --font-body resolves through the

@@ -1413,6 +1413,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-equipment-installation-project-tax-permanent-establishment"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-equipment-installation-project-tax-permanent-establishment"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-equipment-installation-project-tax-permanent-establishment"
     }
   ]
 }

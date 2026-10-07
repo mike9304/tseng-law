@@ -20,6 +20,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
+    '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
   ] as string[],
   ja: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -37,6 +38,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
+    '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
   ] as string[],
   en: [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -55,6 +57,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
+    '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
   ] as string[],
   'zh-hant': [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -73,6 +76,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md',
     '344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md',
     '345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md',
+    '371-taiwan-equipment-installation-project-tax-permanent-establishment.md',
   ] as string[],
 } as const;
 
@@ -81,6 +85,16 @@ const LATER_PUBLICATION_DATES: Readonly<Record<string, string>> = {
   '342': '2026-10-07',
   '344': '2026-10-07',
   '345': '2026-10-07',
+  '371': '2026-10-07',
+  '372': '2026-10-07',
+  '373': '2026-10-07',
+  '374': '2026-10-07',
+  '375': '2026-10-07',
+  '381': '2026-10-07',
+  '382': '2026-10-07',
+  '383': '2026-10-07',
+  '384': '2026-10-07',
+  '385': '2026-10-07',
 };
 
 /** Publication date of a tax-board column by its file number. */

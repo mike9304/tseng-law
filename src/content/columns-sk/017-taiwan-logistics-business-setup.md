@@ -1,7 +1,7 @@
 ---
 title: "Logistická činnosť na Taiwane a povolenie nákladnej automobilovej dopravy (汽車貨運業): nové založenie, nadobudnutie a zverenie"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "12 min čítania"
 categories:
@@ -118,7 +118,7 @@ Treba overiť platnosť prevádzkovej licencie podnikateľa, ktorému je práca 
 
 Aj keď sa cudzinec stane akcionárom alebo investorom cieľovej spoločnosti, táto skutočnosť mu sama osebe neudeluje právo pracovať ani pobytový status na Taiwane. Ak na Taiwane vykonáva každodennú prácu, ako riadenie spoločnosti, predaj, prideľovanie vozidiel a starostlivosť o zákazníka, musí pred začatím práce overiť, či potrebuje pracovné povolenie zodpovedajúce skutočnej funkcii, a zvlášť vykonať neskorší pobytový postup.
 
-Na prácu bez povolenia sa môžu uplatniť správna pokuta a príkaz opustiť Taiwan (限令出國). Platné správne pokyny Imigračnej správy Ministerstva vnútra (內政部移民署) k zákazu vstupu (禁止入國) stanovujú všeobecne pri nedovolenej práci dobu zákazu vstupu 3 roky, avšak môžu sa uplatniť požiadavky na oslobodenie alebo skrátenie doby, ktoré tie isté pokyny stanovujú. Výsledok sa neurčuje mechanicky len preto, že existuje oznámenie tretej osoby, a príslušný orgán posudzuje skutkové okolnosti, uplatniteľné normy a okolnosti každej veci.
+Cudzinec, ktorý pracuje bez povolenia, podlieha správnej pokute, musí mu byť bezodkladne nariadené opustiť Taiwan (限令出國) a nesmie už na Taiwane pracovať (článok 68 zákona o službách zamestnanosti, 就業服務法). Platné správne pokyny Imigračnej správy Ministerstva vnútra (內政部移民署) k zákazu vstupu (禁止入國) stanovujú všeobecne pri nedovolenej práci dobu zákazu vstupu 3 roky, avšak môžu sa uplatniť požiadavky na oslobodenie alebo skrátenie doby, ktoré tie isté pokyny stanovujú. Výsledok sa neurčuje mechanicky len preto, že existuje oznámenie tretej osoby, a príslušný orgán posudzuje skutkové okolnosti, uplatniteľné normy a okolnosti každej veci.
 
 ## Oficiálne podklady
 
@@ -136,6 +136,7 @@ Na prácu bez povolenia sa môžu uplatniť správna pokuta a príkaz opustiť T
 - [Ministerstvo hospodárstva: pokyny k žiadosti o zahraničnú investíciu](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Čl. 43 zákona o službách zamestnanosti (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Čl. 68 zákona o službách zamestnanosti](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Čl. 68 zákona o službách zamestnanosti (databáza zákonov a predpisov)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Imigračná správa Ministerstva vnútra: správne pokyny k dobe zákazu vstupu](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Súvisiace odkazy

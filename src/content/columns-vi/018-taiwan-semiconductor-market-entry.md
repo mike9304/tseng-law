@@ -1,6 +1,6 @@
 ---
 title: "Doanh nghiệp sản xuất linh kiện bán dẫn gia nhập thị trường Đài Loan: đánh giá công ty con, chi nhánh hay đại lý"
-lastmod: "2026-09-17"
+lastmod: "2026-10-07"
 date_display: "Ngày 17 tháng 9 năm 2026"
 read_time: "8 phút đọc"
 categories:
@@ -65,11 +65,11 @@ Công ty hữu hạn có thể do 1 cá nhân trở lên, hoặc người góp v
 
 ### Công ty cổ phần: phù hợp khi muốn đưa nhà đầu tư khác vào hoặc có thể niêm yết
 
-Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 cổ đông trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy hình thức này phù hợp với doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, đãi ngộ bằng cổ phần cho nhân viên, mua bán và sáp nhập (M&A), niêm yết hoặc đăng ký giao dịch trên sàn cổ phiếu mới nổi (興櫃) sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp 30 triệu Đài tệ mới (新臺幣, TWD), hoặc chưa đạt mức đó nhưng doanh thu 100 triệu Đài tệ mới (TWD) hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
+Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 người sáng lập (發起人) trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy hình thức này phù hợp với doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, đãi ngộ bằng cổ phần cho nhân viên, mua bán và sáp nhập (M&A), niêm yết hoặc đăng ký giao dịch trên sàn cổ phiếu mới nổi (興櫃) sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp 30 triệu Đài tệ mới (新臺幣, TWD), hoặc chưa đạt mức đó nhưng doanh thu 100 triệu Đài tệ mới (TWD) hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
 
 ## 4. Thủ tục lập chi nhánh và công ty con khác nhau; chỉ lập công ty con mới phải qua thẩm định của Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)
 
-Khi công ty nước ngoài lập công ty con tại Đài Loan, về nguyên tắc phải tra cứu trước tên công ty, rồi xin phép đầu tư tại Vụ Thẩm định Đầu tư, Bộ Kinh tế. Sau khi được duyệt, chuyển vốn, hoàn tất thẩm định số vốn đầu tư và kiểm tra vốn do kế toán sư (會計師, CPA) thực hiện, rồi hoàn tất thành lập công ty và đăng ký thuế.
+Khi công ty nước ngoài lập công ty con tại Đài Loan, về nguyên tắc phải tra cứu trước tên công ty, rồi xin phép đầu tư tại Vụ Thẩm định Đầu tư, Bộ Kinh tế. Sau khi được duyệt, chuyển vốn, hoàn tất thẩm định số vốn đầu tư và kiểm tra vốn do kế toán sư (會計師, CPA) thực hiện, rồi hoàn tất thành lập công ty và đăng ký thuế. Sau khi nộp đơn đăng ký thành lập, công ty phải tham gia các khóa tập huấn về quyền lợi lao động (勞動權益講習) do cơ quan chính phủ các cấp hoặc tổ chức phi lợi nhuận do các cơ quan đó chỉ định tổ chức (Điều 387-1 Luật Công ty, 公司法, có hiệu lực từ tháng 6 năm 2026).
 
 Ngược lại, khi công ty nước ngoài thông thường lập chi nhánh Đài Loan, về nguyên tắc không cần phép đầu tư của Vụ Thẩm định Đầu tư, mà Cục Phát triển Thương mại, Bộ Kinh tế (商業發展署) xử lý đăng ký chi nhánh và thẩm định vốn liên quan. Vẫn phải hoàn tất tra cứu tên, chuyển vốn lưu động, kiểm tra vốn và đăng ký thuế; thời gian thành lập thường nhanh hơn.
 
@@ -77,9 +77,9 @@ Trên đây là so sánh chung về các hình thức công ty, không phải t�
 
 ## 5. Đăng ký công ty và việc kỹ sư làm việc hợp pháp là hai việc khác nhau
 
-Hoàn tất đăng ký công ty tại Đài Loan không có nghĩa là nhân viên tổng công ty nước ngoài đương nhiên được làm việc tại Đài Loan. Người nước ngoài làm việc tại Đài Loan phải có giấy phép làm việc hợp pháp (工作許可); nếu lưu trú dài hơn thì cũng cần xin thẻ cư trú (居留證). Về nguyên tắc, người sử dụng lao động xin giấy phép làm việc và thẻ cư trú tương ứng cho nhân viên nước ngoài.
+Hoàn tất đăng ký công ty tại Đài Loan không có nghĩa là nhân viên tổng công ty nước ngoài đương nhiên được làm việc tại Đài Loan. Người nước ngoài làm việc tại Đài Loan phải có giấy phép làm việc hợp pháp (工作許可); nếu lưu trú dài hơn thì cũng cần xin thẻ cư trú (居留證). Về nguyên tắc, người sử dụng lao động xin giấy phép làm việc cho nhân viên nước ngoài, còn người nước ngoài tự xin thẻ cư trú tương ứng tại Sở Di dân, Bộ Nội chính (內政部移民署).
 
-Người quản lý của công ty con và chi nhánh Đài Loan của công ty nước ngoài xin giấy phép làm việc dễ hơn. Nhưng để xin giấy phép cho người nước ngoài thứ hai trở đi, tùy ngành, Bộ Lao động yêu cầu công ty đạt ngưỡng về vốn, doanh thu hoặc tiêu chí tương đương. Nếu dự định cho nhân viên nước ngoài làm việc tại Đài Loan, trước khi lập công ty Đài Loan phải xác nhận mức vốn có đạt ngưỡng hay không.
+Người quản lý của công ty con (công ty được phê duyệt đầu tư, trong đó người nước ngoài nắm hơn một phần ba cổ phần) và chi nhánh Đài Loan của công ty nước ngoài xin giấy phép làm việc dễ hơn. Tuy nhiên, ngay cả khi thuê người nước ngoài đầu tiên, người sử dụng lao động cũng phải đáp ứng một trong các tiêu chí tại Điều 39 Tiêu chuẩn Điều kiện và Thẩm định đối với công việc của người nước ngoài. Đối với công ty thành lập chưa đầy một năm, các tiêu chí bao gồm vốn góp đã nộp (đối với chi nhánh là vốn hoạt động tại Đài Loan) từ 500.000 Đài tệ mới trở lên hoặc doanh thu từ 3 triệu Đài tệ mới trở lên; đối với công ty đã thành lập từ một năm trở lên, các tiêu chí bao gồm doanh thu bình quân trong một năm hoặc ba năm gần nhất từ 3 triệu Đài tệ mới trở lên. Nếu người sử dụng lao động thuê từ hai người nước ngoài cùng loại trở lên, những người nước ngoài đó và người sử dụng lao động phải đáp ứng tiêu chuẩn chung của Chương 2 (Điều 38 khoản 2). Nếu dự định cho nhân viên nước ngoài làm việc tại Đài Loan, trước khi lập công ty Đài Loan phải xác nhận mức vốn có đạt ngưỡng hay không.
 
 ## 7. Cấu trúc phù hợp hơn theo giai đoạn phát triển kinh doanh
 

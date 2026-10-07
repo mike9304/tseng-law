@@ -1,7 +1,7 @@
 ---
 title: "Domande e risposte sul trattamento degli incidenti stradali a Taiwan: misure sul posto, colpa, transazione e risarcimento"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 settembre 2025"
 read_time: "12 min di lettura"
 categories:
@@ -95,7 +95,7 @@ La pretesa fondata sull’articolo 184 del Codice civile presuppone un’offesa 
 
 - Ferite: Secondo l’articolo 193 del Codice civile possono essere esaminate le spese mediche (醫療費用) necessarie, le spese supplementari della vita quotidiana quali le spese di assistenza (看護費用), di trasporto per cura (就醫交通費) e di ausili tecnici, nonché la perdita di redditi (收入損失) per incapacità di lavoro reale e la diminuzione della capacità di lavoro (勞動能力減損). Secondo l’articolo 195 del Codice civile il danno morale può anche essere esaminato.
 - Morte: Secondo l’articolo 192 del Codice civile, ove ne ricorrono i presupposti, possono essere esaminate le spese mediche anteriori alla morte e le spese di necessità vitali accresciute, le spese funebri (殯葬費) e la perdita di alimenti (扶養利益損失) della persona che aveva un diritto legale agli alimenti. Secondo l’articolo 194 del Codice civile il danno morale di certi parenti può anche essere esaminato.
-- Patrimonio: Secondo l’articolo 196 del Codice civile si può pretendere il danno patrimoniale effettivo giustificato, comprese le spese di riparazione del veicolo o la perdita di valore.
+- Patrimonio: Secondo l’articolo 196 del Codice civile il proprietario può chiedere la diminuzione di valore del veicolo causata dal danno; le spese di riparazione fungono da parametro solo nei limiti del necessario, e il deprezzamento può essere detratto quando pezzi nuovi sostituiscono pezzi vecchi.
 
 ## Q8. Se il trattamento prosegue, come presentare i documenti delle spese mediche?
 
@@ -165,13 +165,13 @@ L’articolo 188 del Codice civile disciplina il caso nel quale il dipendente ca
 
 Il datore di lavoro può allegare di aver osservato la diligenza dovuta nella selezione e nella vigilanza del dipendente, o che il danno non avrebbe potuto essere evitato anche osservando tale diligenza. Si può valutare di chiedere il risarcimento in modo congiunto contro il datore di lavoro e il dipendente. Dopo aver risarcito, il datore di lavoro può esercitare un regresso contro il dipendente.
 
-Se il datore di lavoro prova queste condizioni di esenzione e la persona lesa non ottiene il risarcimento del comma 1, il tribunale, secondo l’articolo 188, comma 2, del Codice civile, può ordinare un risarcimento totale o parziale tenendo conto della situazione economica del datore di lavoro e della persona lesa.
+Se il datore di lavoro prova queste condizioni di esenzione e la persona lesa non ottiene il risarcimento del comma 1, l’articolo 188, comma 2, del Codice civile prevede che, se la persona lesa ne fa richiesta, il tribunale possa, tenendo conto della situazione economica del datore di lavoro e della persona lesa, ordinare al datore di lavoro di pagare il risarcimento in tutto o in parte.
 
 Contro chi si dirige la domanda civile di risarcimento deve distinguersi dalla responsabilità penale. La responsabilità penale dell’articolo 284 del Codice penale si valuta secondo l’inadempimento del dovere di prudenza di ciascuna persona fisica e il nesso di causalità di tale inadempimento.
 
 ## Q15. Quali prestazioni e quali coperture dell’assicurazione automobilistica devono verificarsi?
 
-L’obbligo di sottoscrivere secondo l’articolo 6 della legge sull’assicurazione obbligatoria di responsabilità civile automobilistica (強制汽車責任保險法) ricade, di regola, sul proprietario del veicolo e, nei casi previsti, anche sull’utilizzatore o l’amministratore di quel veicolo. Questo regime stabilisce una struttura di copertura senza colpa (無過失給付制度) per la persona ferita o deceduta in virtù di un incidente di automobile, ma si deve verificare l’estensione dei passeggeri o di un terzo (第三人) estraneo al veicolo che la legge fissa.
+L’obbligo di sottoscrivere secondo l’articolo 6 della legge sull’assicurazione obbligatoria di responsabilità civile automobilistica (強制汽車責任保險法) ricade, di regola, sul proprietario del veicolo e, nei casi previsti, anche sull’utilizzatore o l’amministratore di quel veicolo. Questo regime stabilisce una struttura di copertura senza colpa (無過失給付制度) per la persona ferita o deceduta in virtù di un incidente di automobile, ma si deve verificare l’estensione dei passeggeri o di un terzo (第三人) estraneo al veicolo che la legge fissa. L’assicuratore non paga le prestazioni quando la persona ferita o un altro avente diritto ha causato l’incidente intenzionalmente o commettendo un reato (articolo 28).
 
 In un incidente di un solo veicolo, il conducente di quel veicolo non è, in generale, destinatario delle prestazioni dell’assicurazione obbligatoria di quel veicolo. Tuttavia, in un incidente in cui intervengono più veicoli, esistono casi nei quali il conducente può chiedere le prestazioni all’assicuratore obbligatorio di un altro veicolo implicato.
 

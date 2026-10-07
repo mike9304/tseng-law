@@ -1,7 +1,7 @@
 ---
 title: "Spurningar og svör um meðferð umferðarslysa á Taívan: ráðstafanir á vettvangi, gáleysi, sátt og skaðabætur"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "12 mín. lestur"
 categories:
@@ -95,7 +95,7 @@ Kröfur samkvæmt 184. gr. almennra borgaralaga (民法) gera ráð fyrir ólög
 
 - Meiðsli: Samkvæmt 193. gr. almennra borgaralaga má kanna nauðsynlegan meðferðarkostnað (醫療費用), aukinn lífsnauðsynjakostnað eins og hjúkrun (看護費用), ferðakostnað vegna læknismeðferðar (就醫交通費) og hjálpartæki ásamt tekjutapi (收入損失) við raunverulega vinnuóhæfni og skerðingu vinnugetu (勞動能力減損). Samkvæmt 195. gr. almennra borgaralaga má einnig kanna ófjárhagslegt tjón.
 - Dauðsfall: Samkvæmt 192. gr. almennra borgaralaga má, að svo miklu leyti sem við á, kanna meðferðarkostnað og aukinn lífsnauðsynjakostnað fyrir dauðsfall, útfararkostnað (殯葬費) og tap meðlags (扶養利益損失) fyrir þann sem lagalega átti rétt á framfærslu. Samkvæmt 194. gr. almennra borgaralaga má einnig kanna ófjárhagslegt tjón tiltekinna ættingja.
-- Eignir: Samkvæmt 196. gr. almennra borgaralaga má krefjast sannaðs raunverulegs eignatjóns, þar á meðal viðgerðar ökutækis eða virðisrýrnunar.
+- Eignir: Samkvæmt 196. gr. almennra borgaralaga getur eigandi krafist bóta fyrir þá virðisrýrnun ökutækisins sem tjónið olli; viðgerðarkostnaður er aðeins viðmið að því marki sem nauðsynlegt er, og þegar nýir hlutar koma í stað gamalla má draga frá rýrnun vegna slits.
 
 ## Q8. Hvernig skal skila gögnum um meðferðarkostnað þegar meðferð heldur áfram?
 
@@ -165,13 +165,13 @@ Dómstóllinn skoðar meiðsli og meðferð, viðvarandi afleiðingu, þjáningu
 
 Vinnuveitandi getur borið fyrir sig að hann hafi gætt nauðsynlegrar aðgæslu við val og eftirlit með starfsmanni, eða að tjónið hefði ekki heldur við slíka aðgæslu mátt forðast. Kanna má að gera vinnuveitanda og starfsmann sameiginlega skaðabótaskylda. Að skaðabótum inntum getur vinnuveitandi leitað endurkröfu á starfsmanninn.
 
-Sanni vinnuveitandi ofangreind undanþáguskilyrði, þannig að tjónþoli fái ekki skaðabætur samkvæmt 1. mgr., getur dómstóllinn samkvæmt 188. gr. 2. mgr. almennra borgaralaga (民法), með tilliti til efnahagslegrar stöðu vinnuveitanda og tjónþola, dæmt fullar skaðabætur eða hluta þeirra.
+Sanni vinnuveitandi ofangreind undanþáguskilyrði, þannig að tjónþoli fái ekki skaðabætur samkvæmt 1. mgr., getur dómstóllinn samkvæmt 188. gr. 2. mgr. almennra borgaralaga (民法), ef tjónþoli óskar þess og með tilliti til efnahagslegrar stöðu vinnuveitanda og tjónþola, gert vinnuveitanda að greiða skaðabæturnar að fullu eða að hluta.
 
 Val stefndu í einkamálinu skal greina frá refsiábyrgð. Refsiábyrgð samkvæmt 284. gr. hegningarlaga (刑法) er metin eftir broti hvers einstaklings á aðgæsluskyldu og orsakasambandi þessa brots.
 
 ## Q15. Hvaða greiðslur og vernd í tryggingu vélknúinna ökutækja skal kanna?
 
-Tryggingarskylda samkvæmt 6. gr. laga um skyldubundna ábyrgðartryggingu vélknúinna ökutækja (強制汽車責任保險法) nær að jafnaði til eiganda ökutækis og í tilteknum tilvikum einnig til notanda eða umsjónarmanns ökutækisins. Þetta kerfi skipuleggur greiðsluskipulag óháð gáleysi (無過失給付制度) fyrir þá sem hafa orðið fyrir meiðslum eða látist í slysum vélknúinna ökutækja; skilgreiningar laganna á farþegum og á þriðja aðila (第三人) utan ökutækisins skal kanna.
+Tryggingarskylda samkvæmt 6. gr. laga um skyldubundna ábyrgðartryggingu vélknúinna ökutækja (強制汽車責任保險法) nær að jafnaði til eiganda ökutækis og í tilteknum tilvikum einnig til notanda eða umsjónarmanns ökutækisins. Þetta kerfi skipuleggur greiðsluskipulag óháð gáleysi (無過失給付制度) fyrir þá sem hafa orðið fyrir meiðslum eða látist í slysum vélknúinna ökutækja; skilgreiningar laganna á farþegum og á þriðja aðila (第三人) utan ökutækisins skal kanna. Vátryggjandi greiðir ekki bætur ef tjónþoli eða annar kröfuhafi olli slysinu af ásetningi eða við framningu afbrots (28. gr.).
 
 Við einslys með einu ökutæki er ökumaður þess að jafnaði ekki greiðsluþegi skyldutryggingar þess ökutækis. Við slys með fleiri ökutækjum getur ökumaður þó krafist greiðslna hjá skyldutryggjanda annars aðkomins ökutækis.
 

@@ -1,7 +1,7 @@
 ---
 title: "Klausimai ir atsakymai dėl eigos po eismo įvykio Taivane: veiksmai vietoje, kaltė, taikos susitarimas ir žalos atlyginimas"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "2025 m. rugsėjo 13 d."
 read_time: "8 min. skaitymo"
 categories:
@@ -95,7 +95,7 @@ Reikalavimas pagal Civilinio kodekso 184 straipsnį numato neteisėtą teisės p
 
 - Sužeidimas: Pagal Civilinio kodekso 193 straipsnį galima vertinti būtinas gydymo išlaidas (醫療費用), papildomas kasdienio gyvenimo išlaidas, tokias kaip slaugos išlaidos (看護費用), kelionės išlaidos gydymui (就醫交通費) ir pagalbos priemonės, taip pat pajamų praradimą (收入損失) dėl tikro negalėjimo dirbti ir darbingumo sumažėjimą (勞動能力減損). Pagal Civilinio kodekso 195 straipsnį galima vertinti ir neturtinę žalą.
 - Mirtis: Pagal Civilinio kodekso 192 straipsnį, jei pagrindas atsiranda, galima vertinti gydymo išlaidas prieš mirtį ir padidėjusių gyvenimo poreikių išlaidas, laidotuvių išlaidas (殯葬費) ir išlaikymo praradimą (扶養利益損失) asmens, kuris turėjo įstatyminę teisę į išlaikymą. Pagal Civilinio kodekso 194 straipsnį galima vertinti ir tam tikrų giminaičių neturtinę žalą.
-- Turtas: Pagal Civilinio kodekso 196 straipsnį galima reikalauti pagrįstos tikrosios turtinės žalos, įskaitant transporto priemonės remonto išlaidas arba vertės sumažėjimą.
+- Turtas: Pagal Civilinio kodekso 196 straipsnį savininkas gali reikalauti atlyginti dėl žalos atsiradusį transporto priemonės vertės sumažėjimą; remonto išlaidos yra matas tik tiek, kiek būtina, o senas dalis keičiant naujomis, galima išskaičiuoti nusidėvėjimą.
 
 ## Q8. Jei gydymas tęsiasi, kaip teikti gydymo išlaidų dokumentus?
 
@@ -165,13 +165,13 @@ Civilinio kodekso 188 straipsnis reguliuoja atvejį, kai darbuotojas, vykdydamas
 
 Darbdavys gali gintis, kad parinkdamas ir prižiūrėdamas darbuotoją laikėsi deramo rūpestingumo arba kad žalos nebūtų buvę galima išvengti net laikantis šio rūpestingumo. Galima svarstyti žalos atlyginimo reikalavimą kartu prieš darbdavį ir darbuotoją. Atlyginęs darbdavys gali reikalauti regresu iš darbuotojo.
 
-Jei darbdavys įrodo šias atleidimo sąlygas ir nukentėjusysis negauna atlyginimo pagal 1 dalį, teismas pagal Civilinio kodekso 188 straipsnio 2 dalį gali įsakyti visą arba dalinį atlyginimą, atsižvelgdamas į darbdavio ir nukentėjusiojo ekonominę padėtį.
+Jei darbdavys įrodo šias atleidimo sąlygas ir nukentėjusysis negauna atlyginimo pagal 1 dalį, teismas pagal Civilinio kodekso 188 straipsnio 2 dalį nukentėjusiojo prašymu, atsižvelgdamas į darbdavio ir nukentėjusiojo ekonominę padėtį, gali įpareigoti darbdavį atlyginti žalą visą arba iš dalies.
 
 Klausimą, prieš ką nukreiptas civilinis reikalavimas, reikia skirti nuo baudžiamosios atsakomybės. Baudžiamojo kodekso 284 straipsnio baudžiamoji atsakomybė vertinama pagal kiekvieno fizinio asmens atsargumo pareigos pažeidimą ir to pažeidimo priežastinį ryšį.
 
 ## Q15. Kokias privalomojo transporto priemonių draudimo išmokas ir apsaugą reikia patikrinti?
 
-Privalomojo transporto priemonių civilinės atsakomybės draudimo įstatymo (強制汽車責任保險法) 6 straipsnio sudarymo pareiga iš esmės tenka transporto priemonės savininkui, o numatytais atvejais — ir tos priemonės naudotojui arba valdytojui. Ši sistema nustato apsaugos be kaltės struktūrą (無過失給付制度) asmeniui, sužeistam arba mirusiam dėl automobilio įvykio, tačiau reikia patikrinti keleivių arba trečiųjų šalių (第三人) už priemonės ribų apimtį, kurią nustato įstatymas.
+Privalomojo transporto priemonių civilinės atsakomybės draudimo įstatymo (強制汽車責任保險法) 6 straipsnio sudarymo pareiga iš esmės tenka transporto priemonės savininkui, o numatytais atvejais — ir tos priemonės naudotojui arba valdytojui. Ši sistema nustato apsaugos be kaltės struktūrą (無過失給付制度) asmeniui, sužeistam arba mirusiam dėl automobilio įvykio, tačiau reikia patikrinti keleivių arba trečiųjų šalių (第三人) už priemonės ribų apimtį, kurią nustato įstatymas. Draudikas neišmoka išmokų, jei nukentėjusysis arba kitas reikalavimo teisę turintis asmuo įvykį sukėlė tyčia arba darydamas nusikaltimą (28 straipsnis).
 
 Vienos transporto priemonės įvykyje tos priemonės vairuotojas iš esmės nėra tos priemonės privalomojo draudimo išmokos adresatas. Tačiau įvykyje, kuriame dalyvauja kelios transporto priemonės, yra atvejų, kai vairuotojas gali reikalauti išmokos iš kitos dalyvaujančios priemonės privalomojo draudiko.
 

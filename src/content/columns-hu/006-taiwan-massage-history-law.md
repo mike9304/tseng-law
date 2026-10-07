@@ -1,7 +1,7 @@
 ---
 title: "A tajvani masszázs története és jogi rendje"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "2025. szeptember 13."
 read_time: "3 perc olvasás"
 categories:
@@ -51,11 +51,11 @@ ténylegesen csak látássérült személyek (視障者) végezhették a massző
 
 Ép látású személy (非視障者) nem gyakorolhatta jogszerűen ezt a foglalkozást.
 
-Ez a törvény 2003-ig maradt fenn; akkor Lin úr, aki fodrászszalont üzemeltetett,
+Ez a korlátozás 2011. október 31-ig maradt hatályban; ezen időszakon belül, 2003-ban Lin úr, aki fodrászszalont üzemeltetett,
 
 két ép látású munkavállalót foglalkoztatott hajmosási és masszázsszolgáltatásra, és a rendőrség ezt megállapította.
 
-Az akkori jog szerint Lin úrnak és ezeknek a munkavállalóknak közigazgatási bírságot (罰鍰) szabtak ki, rendre 40.000, 10.000 és 20.000 TWD (新臺幣) összegben.
+Az akkori jog szerint Tajpej város Szociális Ügyek Hivatala (臺北市社會局) 40.000 TWD (新臺幣) közigazgatási bírságot (罰鍰) szabott ki Lin úrra, a két munkavállalóra pedig rendre 10.000 és 20.000 TWD összegű közigazgatási bírságot.
 
 Lin úr e szankciót nagyon igazságtalannak tartotta, és alkotmányértelmezést kért.
 
@@ -81,7 +81,7 @@ Például azt kérdezték, hogy az írott szabály, amely kizárólag látássé
 
 és kétségbe vonták, hogy e szabály ténylegesen hozzájárult-e a látássérült személyek foglalkoztatásának és létfenntartásának védelméhez.
 
-Végül az alkotmánybírák (大法官) alkotmányellenesnek (違憲) nyilvánították azt a rendelkezést, amely kizárólag látássérült személyeknek engedte a masszőri foglalkozás gyakorlását.
+Végül 2008. október 31-én, a Bírósági Yuan (司法院) 649. sz. értelmezésében (釋字第649號) az alkotmánybírák (大法官) alkotmányellenesnek (違憲) nyilvánították azt a rendelkezést, amely kizárólag látássérült személyeknek engedte a masszőri foglalkozás gyakorlását, és a rendelkezés 2011. október 31-én, az értelmezés által engedett 3 éves türelmi idő végén hatályát vesztette.
 
 ​
 

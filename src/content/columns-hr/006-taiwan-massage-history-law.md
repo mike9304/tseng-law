@@ -1,7 +1,7 @@
 ---
 title: "Povijest i pravni režim masaže na Tajvanu"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. rujna 2025."
 read_time: "3 min čitanja"
 categories:
@@ -51,11 +51,11 @@ doista su samo osobe s oštećenjem vida (視障者) mogle obavljati zanimanje m
 
 Bilo je nezakonito da to zanimanje obavlja osoba bez oštećenja vida (非視障者).
 
-Taj je zakon vrijedio do 2003.; tada je g. Lin, koji je vodio frizerski salon,
+Ovo je ograničenje vrijedilo do 31. listopada 2011.; 2003. godine, dakle u tom razdoblju, g. Lin, koji je vodio frizerski salon,
 
 zaposlio radnike bez oštećenja vida za usluge pranja kose i masaže, a policija je to utvrdila.
 
-Prema tadašnjem pravu g. Linu izrečena je upravna novčana kazna (罰鍰) od 40.000 TWD, a dvojici radnika od 10.000 odnosno 20.000 TWD (新臺幣).
+Prema tadašnjem pravu Ured za socijalne poslove grada Taipeia (臺北市社會局) izrekao je g. Linu upravnu novčanu kaznu (罰鍰) od 40.000 TWD, a dvojici radnika od 10.000 odnosno 20.000 TWD (新臺幣).
 
 G. Lin smatrao je tu sankciju veoma nepravednom i zatražio je ustavno tumačenje.
 
@@ -81,7 +81,7 @@ Pitalo se, na primjer, ne predstavlja li pisana odredba koja je dopuštala isklj
 
 i dovodilo se u pitanje je li ta odredba doista pridonijela zaštiti zaposlenja i opstanka osoba s oštećenjem vida.
 
-Naposljetku su suci Sudbenog yuana (大法官) proglasili protivustavnom (違憲) odredbu koja je dopuštala isključivo osobama s oštećenjem vida obavljanje zanimanja masera.
+Naposljetku su suci Sudbenog yuana (大法官) tumačenjem br. 649 od 31. listopada 2008. (司法院釋字第649號) proglasili protivustavnom (違憲) odredbu koja je dopuštala isključivo osobama s oštećenjem vida obavljanje zanimanja masera, a odredba je prestala važiti 31. listopada 2011., istekom prijelaznog razdoblja od 3 godine koje je tumačenje dopustilo.
 
 ​
 

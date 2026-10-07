@@ -1,7 +1,7 @@
 ---
 title: "Ganti rugi bagi kecederaan di pusat kecergasan di Taiwan: kes mahkamah peringkat pertama (一審), tempoh, bukti dan jenis pampasan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "10 minit bacaan"
 categories:
@@ -19,7 +19,7 @@ Bermula daripada kes pelajar universiti Korea yang cedera semasa menerima arahan
 
 Kemalangan berlaku di pusat kecergasan di Taichung (臺中), semasa latihan angkat mati (硬舉) yang diketuai jurulatih. Selepas kecederaan, tidak memadai hanya melihat hakikat bahawa kemalangan berlaku di dalam pusat kecergasan; perlu diteliti bersama pengalaman sukan dan keadaan kesihatan pengguna, jenis senaman dan beban, penjelasan dan arahan jurulatih, pergerakan dan reaksi pada saat itu, kaitan sebab (因果關係) antara kecederaan dan senaman, serta dokumen yang menyokong kerugian.
 
-Saya ialah peguam (訴訟代理人) bagi plaintif dalam kes ini, iaitu pelajar Korea. Mahkamah daerah Taichung, pada 24 Januari 2022, dalam penghakiman peringkat pertama (一審) kes pengguna nombor 7 tahun 109 (2020 Masihi; 109年度消字第7號), memerintahkan defendan membayar [1,579,589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) serta faedah yang disebut dalam penghakiman.
+Saya ialah peguam (訴訟代理人) bagi plaintif dalam kes ini, iaitu pelajar Korea. Mahkamah daerah Taichung, pada 24 Januari 2022, dalam penghakiman peringkat pertama (一審) kes pengguna nombor 7 tahun 109 (2020 Masihi; 109年度消字第7號), memerintahkan syarikat yang mengendalikan pusat kecergasan itu, iaitu salah seorang defendan, membayar [1,579,589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) serta faedah yang disebut dalam penghakiman.
 
 Kemudian, akhbar menyatakan bahawa pihak telah berdamai (和解) pada peringkat kedua. Penghakiman rasmi peringkat pertama semata-mata tidak mendedahkan hasil rayuan mahupun jumlah perdamaian; maka perdamaian yang dilaporkan tidak boleh dianggap sebagai pelupusan muktamad penghakiman peringkat pertama.
 
@@ -67,7 +67,7 @@ Berikut ialah maklumat umum untuk menjelaskan pertikaian kecederaan di pusat kec
 
 ## 1. Selepas kecederaan di pusat kecergasan di Taiwan, prosedur undang-undang apa yang boleh diteliti?
 
-[Perkara 7 undang-undang perlindungan pengguna Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) memperuntukkan bahawa, apabila menyediakan perkhidmatan, syarikat mesti memastikan bahawa perkhidmatan itu mempunyai keselamatan yang boleh dijangkakan secara munasabah menurut kriteria profesional atau teknikal yang terpakai pada masa perkhidmatan itu disediakan.
+[Perkara 7 undang-undang perlindungan pengguna Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) memperuntukkan bahawa, apabila menyediakan perkhidmatan, syarikat mesti memastikan bahawa perkhidmatan itu mempunyai keselamatan yang boleh dijangkakan secara munasabah menurut kriteria profesional atau teknikal yang terpakai pada masa perkhidmatan itu disediakan. Perenggan 3 perkara yang sama memperuntukkan bahawa syarikat yang melanggar keperluan ini dan menyebabkan kerugian kepada pengguna atau pihak ketiga bertanggungan secara bersama dan berasingan untuk membayar pampasan, dan walaupun syarikat itu membuktikan bahawa ia tidak bersalah, mahkamah hanya boleh mengurangkan tanggungannya.
 
 Ini tidak bermakna bahawa tanggungjawab syarikat atau jurulatih diakui setiap kali kecederaan berlaku di pusat kecergasan. Perlu dinilai, kes demi kes, kewajipan kewaspadaan apa yang wujud secara konkret, sama ada ia dilanggar, sama ada terdapat kaitan sebab antara pelanggaran dan kecederaan, sama ada kerugian sebenar berlaku, pembelaan apa yang ada pada pihak lawan, dan sama ada wujud bukti yang menyokong setiap dakwaan dan setiap pembelaan.
 

@@ -1,6 +1,6 @@
 ---
 title: "Pusvadītāju sastāvdaļu uzņēmumi, kas ienāk Taivānā: kā vērtēt meitas sabiedrību, filiāli vai pārstāvi"
-lastmod: "2026-09-17"
+lastmod: "2026-10-07"
 date_display: "17. septembrī 2026. gadā"
 read_time: "8 min"
 categories:
@@ -65,11 +65,11 @@ To var veidot ar 1 vai vairākām fiziskām personām vai ar Taivānas vai ārva
 
 ### Akciju sabiedrība: piemērota, ja jāpiesaista citi ieguldītāji vai apsver kotēšanu
 
-Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk akcionāri, taču valsts vai juridiskā persona to var dibināt pati, un ārvalstu juridiskā persona var turēt 100 %. Akcijas principā ir brīvi pārņemamas, ar likumā noteiktiem izņēmumiem; saskaņā ar noteikumiem var izstrādāt īpašās akcijas, darbinieku opcijas un tamlīdzīgi. Tāpēc tā der uzņēmumiem, kas gaida ieguldītājus, daļu darījumus, darbinieku akciju atlīdzības vai turpmāku apvienošanos, iegādi vai kotēšanu; tā neaprobežojas tikai ar lieliem uzņēmumiem. Pārvaldībā nekotēta sabiedrība statūtos var neizveidot direktoru padomi un turēt tikai 1 vai 2 direktorus. Sabiedrība ar vienīgo valsts vai juridisko akcionāru statūtos var neizveidot uzraugu. Tāpat ne katrai akciju sabiedrībai gada finanšu pārskats jārevidē. Parastas sabiedrības galvenie revīzijas sliekšņi ir iemaksātais kapitāls TWD 30.000.000 vai, arī zem šīs robežas, darbības ieņēmumi TWD 100.000.000 vai 100 darbinieki darba apdrošināšanā; sabiedrības, kas publiski laidušas apgrozībā akcijas, vadās pēc vērtspapīru noteikumiem.
+Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk dibinātāji (發起人), taču valsts vai juridiskā persona to var dibināt pati, un ārvalstu juridiskā persona var turēt 100 %. Akcijas principā ir brīvi pārņemamas, ar likumā noteiktiem izņēmumiem; saskaņā ar noteikumiem var izstrādāt īpašās akcijas, darbinieku opcijas un tamlīdzīgi. Tāpēc tā der uzņēmumiem, kas gaida ieguldītājus, daļu darījumus, darbinieku akciju atlīdzības vai turpmāku apvienošanos, iegādi vai kotēšanu; tā neaprobežojas tikai ar lieliem uzņēmumiem. Pārvaldībā nekotēta sabiedrība statūtos var neizveidot direktoru padomi un turēt tikai 1 vai 2 direktorus. Sabiedrība ar vienīgo valsts vai juridisko akcionāru statūtos var neizveidot uzraugu. Tāpat ne katrai akciju sabiedrībai gada finanšu pārskats jārevidē. Parastas sabiedrības galvenie revīzijas sliekšņi ir iemaksātais kapitāls TWD 30.000.000 vai, arī zem šīs robežas, darbības ieņēmumi TWD 100.000.000 vai 100 darbinieki darba apdrošināšanā; sabiedrības, kas publiski laidušas apgrozībā akcijas, vadās pēc vērtspapīru noteikumiem.
 
 ## 4. Filiāles un meitas sabiedrības kārtība atšķiras; tikai meitas sabiedrības dibināšanu izskata Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments
 
-Kad ārvalstu sabiedrība dibina Taivānas meitas sabiedrību, nosaukumu principā iepriekš pārbauda un piesakās ieguldījuma atļaujai pie Ekonomikas ministrijas Ieguldījumu izskatīšanas departamenta (經濟部投資審議司). Pēc apstiprinājuma pārskaita līdzekļus, nosaka ieguldījuma apjomu un zvērināts revidents (會計師) pārbauda kapitālu, pēc tam pabeidz dibināšanu un nodokļu reģistrāciju.
+Kad ārvalstu sabiedrība dibina Taivānas meitas sabiedrību, nosaukumu principā iepriekš pārbauda un piesakās ieguldījuma atļaujai pie Ekonomikas ministrijas Ieguldījumu izskatīšanas departamenta (經濟部投資審議司). Pēc apstiprinājuma pārskaita līdzekļus, nosaka ieguldījuma apjomu un zvērināts revidents (會計師) pārbauda kapitālu, pēc tam pabeidz dibināšanu un nodokļu reģistrāciju. Pēc pieteikuma dibināšanas reģistrācijai sabiedrībai jāpiedalās jebkura līmeņa valsts iestāžu vai to noteiktu bezpeļņas organizāciju rīkotajos darba tiesību kursos (勞動權益講習) (Sabiedrību likuma 387-1. pants, spēkā no 2026. gada jūnija).
 
 Turpretī, dibinot parastas ārvalstu sabiedrības Taivānas filiāli, principā nav vajadzīga Ieguldījumu izskatīšanas departamenta ieguldījuma atļauja; Ekonomikas ministrijas Komercdarbības attīstības pārvalde (經濟部商業發展署) veic filiāles reģistrāciju un saistīto kapitāla noteikšanu. Joprojām vajadzīga nosaukuma iepriekšēja pārbaude, apgrozāmā kapitāla pārskaitījums, kapitāla pārbaude un nodokļu reģistrācija; reģistrācijas grafiks parasti ir īsāks.
 
@@ -77,9 +77,9 @@ Iepriekš minētais salīdzina tikai filiāles un meitas sabiedrības reģistrā
 
 ## 5. Sabiedrības reģistrācija un inženiera likumīgais darbs nav tas pats
 
-Reģistrācijas pabeigšana Taivānā nenozīmē, ka ārvalstu galvenā biroja darbinieki Taivānā var automātiski strādāt. Ārzemniekam, kurš strādā Taivānā, vajadzīga likumīga darba atļauja (工作許可), un ilgākai uzturēšanai vajadzīga arī ārvalstnieka uzturēšanās apliecība (外僑居留證). Principā darba devējs piesakās darba atļaujai un atbilstošajai uzturēšanās apliecībai.
+Reģistrācijas pabeigšana Taivānā nenozīmē, ka ārvalstu galvenā biroja darbinieki Taivānā var automātiski strādāt. Ārzemniekam, kurš strādā Taivānā, vajadzīga likumīga darba atļauja (工作許可), un ilgākai uzturēšanai vajadzīga arī ārvalstnieka uzturēšanās apliecība (外僑居留證). Principā darba devējs piesakās ārzemnieka darba atļaujai, bet ārzemnieks pats piesakās atbilstošajai uzturēšanās apliecībai Imigrācijas pārvaldē (移民署).
 
-Taivānas meitas sabiedrības un ārvalstu sabiedrības filiāles vadītājam darba atļaujas pieteikums ir relatīvi vieglāks. Ja tomēr jāpiesakās darba atļaujai otrajam un nākamajiem ārzemniekiem, Darba ministrija pēc nozares prasa kapitāla, apgrozījuma un tamlīdzīgus sliekšņus. Ja plānojat, ka ārvalstu darbinieki strādās Taivānā, pirms Taivānas sabiedrības dibināšanas iepriekš jāpārbauda, vai paredzētais kapitāls atbilst attiecīgajam slieksnim.
+Taivānas meitas sabiedrības (ieguldījuma atļauju saņēmusi sabiedrība, kurā ārzemniekiem pieder vairāk nekā 1/3 akciju) un ārvalstu sabiedrības filiāles vadītājam darba atļaujas pieteikums ir relatīvi vieglāks. Tomēr jau pirmā ārzemnieka nodarbināšanai darba devējam jāatbilst vienam no Ārzemnieku darba kvalifikācijas un izvērtēšanas standartu 39. panta kritērijiem. Sabiedrībai, kas ir jaunāka par 1 gadu, kritēriji cita starpā ietver iemaksāto kapitālu (filiālei — darbības līdzekļus Taivānā) vismaz TWD 500.000 vai apgrozījumu vismaz TWD 3.000.000; sabiedrībai, kas ir 1 gadu veca vai vecāka, tie cita starpā ietver vidējo apgrozījumu pēdējā 1 gada vai 3 gadu laikā vismaz TWD 3.000.000. Ja darba devējs nodarbina 2 vai vairāk viena veida ārzemniekus, šiem ārzemniekiem un darba devējam jāatbilst 2. nodaļas vispārīgajiem standartiem (38. panta 2. daļa). Ja plānojat, ka ārvalstu darbinieki strādās Taivānā, pirms Taivānas sabiedrības dibināšanas iepriekš jāpārbauda, vai paredzētais kapitāls atbilst attiecīgajam slieksnim.
 
 ## 7. Struktūras, ko var salīdzināt pēc uzņēmuma attīstības pakāpes
 

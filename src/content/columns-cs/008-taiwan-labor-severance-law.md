@@ -1,7 +1,7 @@
 ---
 title: "Pracovní právo na Tchaj-wanu: je odstupné na Tchaj-wanu opravdu obtížné získat?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. září 2025"
 read_time: "6 min čtení"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Na Tchaj-wanu dostane zaměstnanec odstupné, pokud sám odejde?"
-    a: "Ne. Na rozdíl od některých jurisdikcí (například Koreje) vzniká na Tchaj-wanu povinnost vyplatit odstupné (資遣費) teprve tehdy, když společnost zaměstnance propustí; pokud zaměstnanec sám odejde, společnost odstupné vyplácet nemusí."
+    a: "Ne. Na rozdíl od některých jurisdikcí (například Koreje) vzniká na Tchaj-wanu povinnost vyplatit odstupné (資遣費) teprve tehdy, když společnost zaměstnance propustí; pokud zaměstnanec sám odejde, společnost odstupné vyplácet nemusí. Pokud však existuje důvod podle článku 14 zákona o pracovních normách, například společnost nevyplácí mzdu nebo porušuje pracovněprávní předpisy, a zaměstnanec z tohoto důvodu smlouvu ukončí, musí společnost odstupné vyplatit."
   - q: "Musí společnost vyplatit odstupné i při kárném propuštění?"
-    a: "Ne. Dopustí-li se zaměstnanec protiprávního činu, poruší vnitřní řád, nebo se bez oprávněného důvodu nedostaví 3 dny po sobě (článek 12 zákona o pracovních normách, 勞動基準法第12條), může společnost propustit bez výpovědi a odstupné vyplácet nemusí. Naproti tomu hospodářské propuštění (článek 11) vyžaduje předchozí výpověď a výplatu odstupného."
+    a: "Ne. Dopustí-li se zaměstnanec protiprávního činu, závažně poruší pracovní smlouvu nebo vnitřní řád, nebo se bez oprávněného důvodu nedostaví 3 dny po sobě nebo 6 dnů v jednom měsíci (článek 12 zákona o pracovních normách, 勞動基準法第12條), může společnost propustit bez výpovědi a odstupné vyplácet nemusí. Naproti tomu hospodářské propuštění (článek 11) vyžaduje předchozí výpověď a výplatu odstupného."
   - q: "Jak se na Tchaj-wanu odstupné počítá?"
-    a: "Za každý dokončený 1 rok praxe musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy jako odstupné, nejvýše 6 měsíců mzdy. Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu."
+    a: "Za každý dokončený 1 rok praxe musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy jako odstupné, nejvýše 6 měsíců mzdy. Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu. Zákon o důchodu pracovníků se vztahuje na tchajwanské občany, cizince, kteří jsou v manželství s tchajwanským občanem a byl jim udělen pobyt, cizince, kterým bylo uděleno trvalé povolení k pobytu, a obdobné pracovníky (článek 7 odstavec 1) a od roku 2026 také na zahraniční odborníky vykonávající odbornou práci (článek 24 zákona o získávání a zaměstnávání zahraničních odborníků, 外國專業人才延攬及僱用法); odstupné ostatních pracovníků a za dobu praxe před použitím tohoto zákona se počítá podle článku 17 zákona o pracovních normách."
 ---
 
 # Pracovní právo na Tchaj-wanu: je odstupné na Tchaj-wanu opravdu obtížné získat?
@@ -36,15 +36,19 @@ Povinnost vyplatit odstupné vzniká teprve tehdy, když společnost zaměstnanc
 
 Pokud zaměstnanec sám odejde, společnost odstupné vyplácet nemusí.
 
+Pokud však existuje důvod podle [článku 14 zákona o pracovních normách](/cs/columns/taiwan-voluntary-resignation-severance), například společnost nevyplácí mzdu nebo porušuje pracovněprávní předpisy, a zaměstnanec z tohoto důvodu smlouvu ukončí, musí společnost odstupné vyplatit.
+
 ​
 
 Dopustí-li se však zaměstnanec protiprávního činu,
 
-poruší vnitřní řád (工作規則),
+závažně poruší pracovní smlouvu nebo vnitřní řád (工作規則),
 
-nebo se bez důvodu nedostaví 3 dny po sobě (曠工),
+nebo se bez důvodu nedostaví 3 dny po sobě nebo 6 dnů v jednom měsíci (曠工),
 
 může společnost propustit bez výplaty odstupného.
+
+U každého důvodu s výjimkou bodu 3 (pravomocný trest odnětí svobody) však musí společnost zaměstnance propustit do 30 dnů od okamžiku, kdy se o okolnostech dozvěděla (článek 12 odstavec 2 zákona o pracovních normách).
 
 ​
 
@@ -53,16 +57,16 @@ Následující tabulka to shrnuje.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Druh | Hospodářské propuštění (資遣員工, 經濟解僱) | Kárné propuštění (解僱員工, 懲戒解僱) | Vlastní odchod zaměstnance  員工自請離職 |
-| Význam | Existuje-li u zaměstnavatele potřeba úpravy personálu kvůli situaci podniku, leží důvod v hospodářské oblasti zaměstnavatele, nikoli v odpovědnosti zaměstnance. Proto musí zaměstnavatel dodržet výpovědní dobu (預告期間) a vyplatit odstupné, aby vyvážil nevýhody zaměstnance. | Dopustí-li se zaměstnanec protiprávního nebo nevhodného činu, může zaměstnavatel okamžitě ukončit pracovní smlouvu (勞動契約) bez předchozí výpovědi a odstupné vyplácet nemusí. Jde o jednu z kárných pravomocí zaměstnavatele. | Zaměstnanec může kdykoli ukončit smlouvu, avšak musí podle doby zaměstnání dodržet výpovědní dobu, aby zaměstnavatel mohl provést předání a hledání náhrady. |
+| Význam | Existuje-li u zaměstnavatele potřeba úpravy personálu kvůli situaci podniku, leží důvod v hospodářské oblasti zaměstnavatele, nikoli v odpovědnosti zaměstnance. Proto musí zaměstnavatel dodržet výpovědní dobu (預告期間) a vyplatit odstupné, aby vyvážil nevýhody zaměstnance. | Dopustí-li se zaměstnanec protiprávního nebo nevhodného činu, může zaměstnavatel okamžitě ukončit pracovní smlouvu (勞動契約) bez předchozí výpovědi a odstupné vyplácet nemusí. Jde o jednu z kárných pravomocí zaměstnavatele. | U smlouvy na dobu neurčitou může zaměstnanec kdykoli ukončit smlouvu, avšak musí podle doby zaměstnání dodržet výpovědní dobu, aby zaměstnavatel mohl provést předání a hledání náhrady. |
 | Podmínky | Ano (článek 11 tchajwanského zákona o pracovních normách) | Ano (článek 12 tchajwanského zákona o pracovních normách) | Nejsou |
 | Předchozí výpověď | Nutná | Není nutná | Nutná |
 | Obtížnost pro zaměstnavatele | Nižší | Vyšší | Netýká se |
-| Zda společnost musí vyplatit odstupné (資遣費) | Nutné | Není nutné | Není nutné |
-|  | Tchajwanský zákon o pracovních normách, článek 11 (勞動基準法第11條): Pokud nenastane jeden z následujících případů, zaměstnavatel nemůže ukončit pracovní smlouvu, ani po předchozím oznámení zaměstnanci.  1. Zastavení činnosti (歇業) nebo převod podniku (轉讓)  2. Ztráty (虧損) nebo omezení činnosti (業務緊縮)  3. Vyšší moc vyžaduje přerušení činnosti na 1 měsíc nebo déle  4. Povaha činnosti vyžaduje snížení personálu a propuštěného nelze převést na jiné vhodné místo  5. Určený zaměstnanec nemůže uspokojivě vykonat práci požadovanou místem | Tchajwanský zákon o pracovních normách, článek 12 (勞動基準法第12條): Zaměstnavatel může propustit bez předchozího oznámení, pokud zaměstnanec spadá do jednoho z následujících případů.  1. Kdo při uzavření pracovní smlouvy podá nepravdivé údaje, uvede zaměstnavatele v omyl a vystaví podnik riziku škody  2. Kdo užije násilí nebo těžce urazí zaměstnavatele, jeho rodinu, jeho zástupce (代理人) nebo jiné spolupracovníky  3. Koho pravomocně odsoudili k trestu odnětí svobody na dobu určitou (有期徒刑) nebo k trestu přísnějšímu, bez podmíněného odkladu výkonu trestu (緩刑) a bez povolení přeměny na peněžitý trest (易科罰金)  4. Závažné porušení pracovní smlouvy nebo pracovního řádu  5. Kdo úmyslně spotřebuje stroje, nástroje, suroviny, výrobky nebo jiný majetek zaměstnavatele, nebo úmyslně vyzradí technická a obchodní tajemství zaměstnavatele a způsobí zaměstnavateli škodu  6. Neomluvená absence (曠工) bez oprávněného důvodu 3 dny po sobě, nebo 6 dní nebo více v měsíci |  |
+| Zda společnost musí vyplatit odstupné (資遣費) | Nutné | Není nutné | Není nutné (kromě případu, kdy zaměstnanec ukončí smlouvu z důvodu podle článku 14) |
+|  | Tchajwanský zákon o pracovních normách, článek 11 (勞動基準法第11條): Pokud nenastane jeden z následujících případů, zaměstnavatel nemůže ukončit pracovní smlouvu, ani po předchozím oznámení zaměstnanci.  1. Zastavení činnosti (歇業) nebo převod podniku (轉讓)  2. Ztráty (虧損) nebo omezení činnosti (業務緊縮)  3. Vyšší moc vyžaduje přerušení činnosti na 1 měsíc nebo déle  4. Povaha činnosti se změnila, snížení počtu zaměstnanců je nutné a není vhodné místo, na které by bylo možné zaměstnance převést  5. Zaměstnanec zjevně není schopen vykonávat přidělenou práci | Tchajwanský zákon o pracovních normách, článek 12 (勞動基準法第12條): Zaměstnavatel může propustit bez předchozího oznámení, pokud zaměstnanec spadá do jednoho z následujících případů.  1. Kdo při uzavření pracovní smlouvy podá nepravdivé údaje, uvede zaměstnavatele v omyl a vystaví podnik riziku škody  2. Kdo užije násilí nebo těžce urazí zaměstnavatele, jeho rodinu, jeho zástupce (代理人) nebo jiné spolupracovníky  3. Koho pravomocně odsoudili k trestu odnětí svobody na dobu určitou (有期徒刑) nebo k trestu přísnějšímu, bez podmíněného odkladu výkonu trestu (緩刑) a bez povolení přeměny na peněžitý trest (易科罰金)  4. Závažné porušení pracovní smlouvy nebo pracovního řádu  5. Kdo úmyslně spotřebuje stroje, nástroje, suroviny, výrobky nebo jiný majetek zaměstnavatele, nebo úmyslně vyzradí technická a obchodní tajemství zaměstnavatele a způsobí zaměstnavateli škodu  6. Neomluvená absence (曠工) bez oprávněného důvodu 3 dny po sobě, nebo 6 dní nebo více v měsíci |  |
 
 > Na Tchaj-wanu, za každý dokončený 1 rok praxe (年資),
 > musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy (平均工資) jako odstupné, nejvýše za 6 měsíců mzdy.
-> Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu.
+> Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu. Zákon o důchodu pracovníků se vztahuje na tchajwanské občany, cizince, kteří jsou v manželství s tchajwanským občanem a byl jim udělen pobyt, cizince, kterým bylo uděleno trvalé povolení k pobytu, a obdobné pracovníky (článek 7 odstavec 1) a od roku 2026 také na zahraniční odborníky vykonávající odbornou práci ([článek 24 zákona o získávání a zaměstnávání zahraničních odborníků (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); odstupné ostatních pracovníků a za dobu praxe před použitím tohoto zákona se počítá podle článku 17 zákona o pracovních normách. Praxe kratší než 1 rok se počítá poměrně a společnost musí odstupné vyplatit do 30 dnů po skončení smlouvy.
 
 ​
 

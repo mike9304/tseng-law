@@ -1,7 +1,7 @@
 ---
 title: "História e regime jurídico da massagem em Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 de setembro de 2025"
 read_time: "3 min de leitura"
 categories:
@@ -51,11 +51,11 @@ Só as pessoas em situação de deficiência visual (視障者) podiam na realid
 
 Que um indivíduo sem deficiência visual (非視障者) exercesse este ofício era ilegal.
 
-Esta lei manteve-se até 2003. Na época, o Sr. Lin geria um salão de cabeleireiro.
+Esta restrição manteve-se em vigor até 31 de outubro de 2011; em 2003, dentro desse período, o Sr. Lin geria um salão de cabeleireiro.
 
 O Sr. Lin empregou trabalhadores sem deficiência visual para serviços de lavagem de cabelo e de massagem, e a polícia constatou-o.
 
-Segundo o direito de então, foi aplicada ao Sr. Lin uma coima administrativa (罰鍰) de TWD 40.000 e, aos dois trabalhadores, coimas de TWD 10.000 e de TWD 20.000, em novos dólares de Taiwan (新臺幣).
+Segundo o direito de então, o Gabinete de Assuntos Sociais da cidade de Taipé (臺北市政府社會局) aplicou ao Sr. Lin uma coima administrativa (罰鍰) de TWD 40.000 e, aos dois trabalhadores, coimas de TWD 10.000 e de TWD 20.000, respetivamente, em novos dólares de Taiwan (新臺幣).
 
 O Sr. Lin considerou esta sanção muito injusta e pediu uma interpretação constitucional.
 
@@ -81,7 +81,7 @@ Perguntou-se por exemplo se a regra escrita que só autorizava as pessoas em sit
 
 Pôs-se em dúvida que esta regra tivesse realmente contribuído para proteger o emprego e a subsistência das pessoas em situação de deficiência visual.
 
-Finalmente, os juízes constitucionais (大法官) declararam inconstitucional (違憲) a disposição que só autorizava as pessoas em situação de deficiência visual a exercer o ofício de massagem.
+Finalmente, na Interpretação n.º 649 (釋字第649號) do Yuan Judicial (司法院), de 31 de outubro de 2008, os juízes constitucionais (大法官) declararam inconstitucional (違憲) a disposição que só autorizava as pessoas em situação de deficiência visual a exercer o ofício de massagem, e a disposição deixou de produzir efeitos em 31 de outubro de 2011, no termo do prazo de graça de 3 anos que a interpretação concedeu.
 
 ​
 

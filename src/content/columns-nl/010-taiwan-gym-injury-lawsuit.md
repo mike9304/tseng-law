@@ -1,7 +1,7 @@
 ---
 title: "Schadevergoeding bij een blessure in een fitnesscentrum in Taiwan: vonnis in eerste aanleg, termijnen, bewijs en schadeposten"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "10 minuten leestijd"
 categories:
@@ -19,7 +19,7 @@ Aan de hand van een zaak waarin een Koreaanse student in een fitnesscentrum (健
 
 Het ongeval vond plaats in een fitnesscentrum in Taichung (臺中), tijdens een deadlift-training (硬舉) onder leiding van de trainer. Na de blessure volstaat het niet alleen te kijken naar het feit dat het ongeval in het fitnesscentrum plaatsvond; samen moeten de trainingservaring en de gezondheidstoestand van de gebruiker, het soort oefening en het gewicht, de uitleg en de leiding van de trainer, de beweging en de reactie op dat ogenblik, het causaal verband (因果關係) tussen blessure en oefening, en de stukken die de schade staven, worden onderzocht.
 
-Ik was in deze zaak procesgemachtigde (訴訟代理人) van de eiser, de Koreaanse student. De rechtbank van Taichung (臺灣臺中地方法院) veroordeelde op 24 januari 2022, in het vonnis in eerste aanleg van de consumentenzaak nummer 7 van het jaar 109 (109年度消字第7號), de verweerder tot betaling van [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) en de in het vonnis vermelde rente.
+Ik was in deze zaak procesgemachtigde (訴訟代理人) van de eiser, de Koreaanse student. De rechtbank van Taichung (臺灣臺中地方法院) veroordeelde op 24 januari 2022, in het vonnis in eerste aanleg van de consumentenzaak nummer 7 van het jaar 109 (109年度消字第7號), de vennootschap die het fitnesscentrum exploiteert, een van de verweerders, tot betaling van [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) en de in het vonnis vermelde rente.
 
 Daarna meldde de pers dat de partijen in hoger beroep een schikking (和解) hadden getroffen. Het officiële vonnis in eerste aanleg op zich laat niet toe het resultaat van het hoger beroep noch het schikkingsbedrag te bevestigen; de persmelding van de schikking (和解) mag niet worden gelezen als de bevestigde eindafdoening van het vonnis in eerste aanleg.
 
@@ -67,7 +67,7 @@ Hetgeen volgt is algemene informatie tot toelichting van geschillen over blessur
 
 ## 1. Welke juridische procedures kunnen na een blessure in een fitnesscentrum in Taiwan worden onderzocht?
 
-Het [artikel 7 van de Taiwanese wet op de consumentenbescherming (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bepaalt dat de onderneming, wanneer zij een dienst verleent, ervoor moet zorgen dat die dienst de veiligheid biedt die naar de professionele of technische maatstaf van het ogenblik van de verlening redelijkerwijs mag worden verwacht.
+Het [artikel 7 van de Taiwanese wet op de consumentenbescherming (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bepaalt dat de onderneming, wanneer zij een dienst verleent, ervoor moet zorgen dat die dienst de veiligheid biedt die naar de professionele of technische maatstaf van het ogenblik van de verlening redelijkerwijs mag worden verwacht. Lid 3 van hetzelfde artikel bepaalt dat een onderneming die deze eisen schendt en daardoor schade toebrengt aan een consument of een derde, hoofdelijk aansprakelijk is voor schadevergoeding, en dat de rechter, ook wanneer de onderneming bewijst dat zij geen schuld treft, de aansprakelijkheid hoogstens kan verminderen.
 
 Dat betekent niet dat de aansprakelijkheid van de onderneming of van de trainer wordt erkend telkens wanneer een blessure in een fitnesscentrum ontstaat. Er moet per zaak worden beoordeeld welke zorgplicht concreet gold, of zij is geschonden, of er een causaal verband (因果關係) tussen schending en blessure bestaat, of werkelijke schade is ontstaan, welke verweren de wederpartij heeft, en of er bewijs is dat elke stelling en elk verweer schraagt.
 

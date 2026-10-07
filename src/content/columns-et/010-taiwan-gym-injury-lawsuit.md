@@ -1,7 +1,7 @@
 ---
 title: "Kahjuhüvitis jõusaalivigastuse eest Taiwanis: esimese astme juhtum, tähtajad, tõendid ja kahjuliigid"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "7 min lugemist"
 categories:
@@ -19,7 +19,7 @@ Juhtumi põhjal, kus Korea üliõpilane sai Taiwanis jõusaalis (健身房) tree
 
 Õnnetus juhtus Taichungis (臺中) asuvas jõusaalis treeneri juhendatud jõutõmbe (硬舉) treeningul. Vigastuse järel ei tohi vaadata üksnes asjaolu, et õnnetus toimus jõusaalis; tuleb arvestada ka kasutaja treeningukogemust ja terviseseisundit, harjutuse liiki ja raskust, treeneri selgitust ja juhendamist, toonaseid liigutusi ja reageeringut, vigastuse ja harjutuse vahelist põhjuslikku seost (因果關係) ning kahju toetavaid materjale.
 
-Esindasin selles asjas hagejat, Korea üliõpilast, kohtuesindajana (訴訟代理人). Taichungi esimese astme kohus (臺灣臺中地方法院) kohustas 24. jaanuar 2022. aasta esimese astme otsusega tarbijavaidluse asjas nr 7 Hiina Vabariigi kalendriaastal 109 (109年度消字第7號) kostjat maksma [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) koos otsuses märgitud intressiga.
+Esindasin selles asjas hagejat, Korea üliõpilast, kohtuesindajana (訴訟代理人). Taichungi esimese astme kohus (臺灣臺中地方法院) kohustas 24. jaanuar 2022. aasta esimese astme otsusega tarbijavaidluse asjas nr 7 Hiina Vabariigi kalendriaastal 109 (109年度消字第7號) jõusaali käitavat äriühingut, kes oli üks kostjatest, maksma [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) koos otsuses märgitud intressiga.
 
 Seejärel teatasid meediakanalid, et pooled jõudsid apellatsiooniastmes kokkuleppele (和解). Ainuüksi ametliku esimese astme otsuse põhjal ei saa kinnitada apellatsiooniastme tulemust ega kokkuleppe summat; meedias teatatud kokkulepet ei tohi lugeda esimese astme otsuse kinnitatud lõpptulemuseks.
 
@@ -67,7 +67,7 @@ Järgnev on üldine teave Taiwani jõusaalivigastuste vaidluste selgitamiseks; s
 
 ## 1. Milliseid õigusmenetlusi võib Taiwani jõusaalivigastuse järel kaaluda?
 
-[Taiwani tarbijakaitseseaduse artikkel 7 (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) sätestab, et ettevõtja peab teenust osutades tagama, et teenus oleks nii ohutu, kui teenuse osutamise hetke kutse- või tehnilise standardi järgi saab mõistlikult oodata.
+[Taiwani tarbijakaitseseaduse artikkel 7 (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) sätestab, et ettevõtja peab teenust osutades tagama, et teenus oleks nii ohutu, kui teenuse osutamise hetke kutse- või tehnilise standardi järgi saab mõistlikult oodata. Sama artikli lõige 3 sätestab, et ettevõtja, kes neid nõudeid rikub ja põhjustab tarbijale või kolmandale isikule kahju, vastutab hüvitamise eest solidaarselt ning isegi kui ettevõtja tõendab, et ta ei ole süüdi, võib kohus tema vastutust üksnes vähendada.
 
 See ei tähenda, et ettevõtja või treeneri vastutus loetaks tuvastatuks iga kord, kui vigastus tekib jõusaalis. Asja kaupa tuleb hinnata, milline hoolsuskohustus konkreetselt oli, kas seda rikuti, kas rikkumise ja vigastuse vahel on põhjuslik seos (因果關係), kas tekkis tegelik kahju, milliseid vastuväiteid vastaspoolel on ning kas on tõendeid, mis toetavad iga väidet ja iga vastuväidet.
 

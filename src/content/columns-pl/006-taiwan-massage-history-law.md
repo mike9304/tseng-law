@@ -1,7 +1,7 @@
 ---
 title: "Historia i reżim prawny masażu na Tajwanie"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 września 2025"
 read_time: "3 min czytania"
 categories:
@@ -51,11 +51,11 @@ faktycznie tylko osoby z niepełnosprawnością wzroku (視障者) mogły wykony
 
 Wykonywanie tego zawodu przez osobę bez niepełnosprawności wzroku (非視障者) było nielegalne.
 
-Ustawa ta obowiązywała do 2003 r.; wówczas pan Lin, który prowadził salon fryzjerski,
+Ograniczenie to obowiązywało do 31 października 2011 r.; w 2003 r., a więc w tym okresie, pan Lin, który prowadził salon fryzjerski,
 
 zatrudnił dwóch pracowników bez niepełnosprawności wzroku do usług mycia włosów i masażu, i policja to stwierdziła.
 
-Według ówczesnego prawa panu Linowi i tym pracownikom wymierzono odpowiednio administracyjną karę pieniężną (罰鍰) w wysokości 40.000 TWD, 10.000 TWD i 20.000 TWD w nowym dolarze tajwańskim (新臺幣).
+Według ówczesnego prawa Biuro Spraw Społecznych miasta Tajpej (臺北市社會局) wymierzyło panu Linowi administracyjną karę pieniężną (罰鍰) w wysokości 40.000 TWD, a dwóm pracownikom odpowiednio 10.000 TWD i 20.000 TWD w nowym dolarze tajwańskim (新臺幣).
 
 Pan Lin uznał tę sankcję za bardzo niesprawiedliwą i wystąpił o wykładnię konstytucyjną.
 
@@ -81,7 +81,7 @@ Pytano na przykład, czy przepis pisany, który zezwalał wyłącznie osobom z n
 
 i podważano, czy przepis ten rzeczywiście przyczynił się do ochrony zatrudnienia i egzystencji osób z niepełnosprawnością wzroku.
 
-Ostatecznie sędziowie konstytucyjni (大法官) uznali za niekonstytucyjny (違憲) przepis, który zezwalał wyłącznie osobom z niepełnosprawnością wzroku na wykonywanie zawodu masażysty.
+Ostatecznie sędziowie konstytucyjni (大法官) w wykładni nr 649 Yuanu Sądowego (司法院釋字第649號) z 31 października 2008 r. uznali za niekonstytucyjny (違憲) przepis, który zezwalał wyłącznie osobom z niepełnosprawnością wzroku na wykonywanie zawodu masażysty, a przepis ten utracił moc 31 października 2011 r., z upływem okresu przejściowego 3 lat, na który zezwoliła ta wykładnia.
 
 ​
 

@@ -1,7 +1,7 @@
 ---
 title: "Sejarah dan Informasi Hukum Pijat di Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "3 menit baca"
 categories:
@@ -51,11 +51,11 @@ Pada waktu itu, sesungguhnya hanya penyandang disabilitas netra (視障者) yang
 
 Bagi orang yang bukan penyandang disabilitas netra (非視障者), bekerja di bidang usaha ini merupakan perbuatan yang melanggar hukum.
 
-Ketentuan ini terus berlaku sampai tahun 2003. Ketika itu, Tuan Lin mengelola sebuah salon pangkas rambut.
+Ketentuan ini terus berlaku sampai 31 Oktober 2011; pada tahun 2003, dalam kurun tersebut, Tuan Lin mengelola sebuah salon pangkas rambut.
 
 Ia mempekerjakan dua karyawan yang bukan penyandang disabilitas netra untuk memberikan jasa cuci rambut dan pijat, lalu ketahuan oleh polisi.
 
-Menurut hukum yang berlaku pada waktu itu, Tuan Lin dan kedua karyawannya masing-masing dikenai denda administratif (罰鍰) sebesar 40.000, 10.000, dan 20.000 dolar baru Taiwan (新臺幣, TWD).
+Menurut hukum yang berlaku pada waktu itu, Biro Urusan Sosial Kota Taipei (臺北市社會局) mengenakan denda administratif (罰鍰) sebesar 40.000 dolar baru Taiwan (新臺幣, TWD) kepada Tuan Lin, dan masing-masing 10.000 serta 20.000 dolar baru Taiwan kepada kedua karyawannya.
 
 Tuan Lin menilai sanksi tersebut sangat tidak wajar, sehingga ia mengajukan permohonan penafsiran konstitusi.
 
@@ -81,7 +81,7 @@ Sebagai contoh, timbul pemikiran apakah ketentuan tertulis yang hanya memperbole
 
 Dipertanyakan pula apakah ketentuan tersebut benar-benar berkontribusi pada perlindungan pekerjaan dan penghidupan penyandang disabilitas netra.
 
-Pada akhirnya para hakim konstitusi (大法官) menyatakan bahwa pasal undang-undang yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bertentangan dengan konstitusi (違憲).
+Pada akhirnya, dalam Penafsiran Yudisial Nomor 649 (釋字第649號) tanggal 31 Oktober 2008, para hakim konstitusi (大法官) menyatakan bahwa pasal undang-undang yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bertentangan dengan konstitusi (違憲), dan pasal tersebut kehilangan daya berlaku pada 31 Oktober 2011, yaitu pada akhir masa tenggang tiga tahun yang diberikan oleh penafsiran itu.
 
 ​
 

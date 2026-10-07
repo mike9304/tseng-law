@@ -1,7 +1,7 @@
 ---
 title: "Zgodovina in pravni režim masaže na Tajvanu"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "3 min branja"
 categories:
@@ -51,11 +51,11 @@ so v resnici le osebe z okvaro vida (視障者) smele opravljati poklic maserja 
 
 Osebam brez okvare vida (非視障者) opravljanje tega poklica ni bilo dovoljeno.
 
-Ta zakon je veljal do leta 2003; tedaj je gospod Lin, ki je vodil brivnico,
+Ta omejitev je veljala do 31. oktobra 2011; leta 2003, torej v tem obdobju, je gospod Lin, ki je vodil brivnico,
 
 zaposlil delavce brez okvare vida za storitve umivanja las in masaže, policija pa je zadevo odkrila.
 
-Po tedanjem pravu je bila gospodu Linu izrečena upravna denarna kazen (罰鍰) 40.000 TWD, delavcema pa 10.000 TWD in 20.000 TWD v novem tajvanskem dolarju (新臺幣).
+Po tedanjem pravu je Urad za socialne zadeve mesta Tajpej (臺北市社會局) gospodu Linu izrekel upravno denarno kazen (罰鍰) 40.000 TWD, delavcema pa 10.000 TWD in 20.000 TWD v novem tajvanskem dolarju (新臺幣).
 
 Gospod Lin je to sankcijo štel za zelo nepravično in zaprosil za ustavno razlago.
 
@@ -81,7 +81,7 @@ Spraševalo se je denimo, ali pisana določba, ki je izključno osebam z okvaro 
 
 in se je dvomilo, ali je ta določba resnično prispevala k varovanju zaposlitve in obstoja oseb z okvaro vida.
 
-Nazadnje so ustavni sodniki (大法官) določbo, ki je izključno osebam z okvaro vida dovoljevala opravljanje poklica maserja, razglasili za protiustavno (違憲).
+Nazadnje so ustavni sodniki (大法官) z razlago Sodnega juana št. 649 (司法院釋字第649號) z dne 31. oktobra 2008 določbo, ki je izključno osebam z okvaro vida dovoljevala opravljanje poklica maserja, razglasili za protiustavno (違憲), določba pa je prenehala veljati 31. oktobra 2011 s potekom prehodnega obdobja 3 let, ki ga je razlaga dovolila.
 
 ​
 

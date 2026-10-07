@@ -1,7 +1,7 @@
 ---
 title: "Tanya Jawab Kecelakaan Lalu Lintas di Taiwan: Tindakan di Lokasi, Kelalaian, Perdamaian, dan Ganti Rugi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "8 menit baca"
 categories:
@@ -95,7 +95,7 @@ Tuntutan berdasarkan Pasal 184 Kitab Undang-Undang Hukum Perdata mensyaratkan ad
 
 - Luka: Menurut Pasal 193 Kitab Undang-Undang Hukum Perdata dapat dikaji biaya pengobatan (醫療費用) yang diperlukan, biaya tambahan yang timbul dalam kehidupan seperti biaya perawatan (看護費用), biaya transportasi berobat (就醫交通費), dan alat bantu, serta kehilangan penghasilan (收入損失) akibat ketidakmampuan bekerja secara nyata dan penurunan kemampuan bekerja (勞動能力減損). Menurut Pasal 195 Kitab Undang-Undang Hukum Perdata, kerugian immateriil juga dapat dikaji.
 - Kematian: Menurut Pasal 192 Kitab Undang-Undang Hukum Perdata, apabila memenuhi syarat dapat dikaji biaya pengobatan sebelum meninggal dan biaya kebutuhan hidup yang bertambah, biaya pemakaman (殯葬費), serta kehilangan nafkah (扶養利益損失) bagi orang yang secara hukum berhak menerima nafkah. Menurut Pasal 194 Kitab Undang-Undang Hukum Perdata, kerugian immateriil bagi kerabat tertentu juga dapat dikaji.
-- Harta benda: Menurut Pasal 196 Kitab Undang-Undang Hukum Perdata dapat dituntut kerugian harta benda nyata yang terbukti, termasuk biaya perbaikan kendaraan atau penurunan nilainya.
+- Harta benda: Menurut Pasal 196 Kitab Undang-Undang Hukum Perdata, pemilik dapat menuntut penurunan nilai kendaraan yang disebabkan oleh kerusakan; biaya perbaikan hanya menjadi tolok ukur sebatas yang diperlukan, dan penyusutan dapat dikurangkan apabila suku cadang baru menggantikan suku cadang lama.
 
 ## Q8. Bagaimana cara mengajukan data biaya pengobatan apabila perawatan masih berlanjut?
 
@@ -165,13 +165,13 @@ Pasal 188 Kitab Undang-Undang Hukum Perdata mengatur keadaan ketika seorang peke
 
 Pemberi kerja dapat mengajukan pembelaan bahwa ia telah menjalankan kehati-hatian yang patut dalam memilih dan mengawasi pekerjanya, atau bahwa kerugian itu tidak dapat dihindarkan sekalipun kehati-hatian tersebut telah dijalankan. Cara menuntut ganti rugi secara bersama-sama terhadap pemberi kerja dan pekerja dapat dipertimbangkan. Setelah membayar ganti rugi, pemberi kerja dapat menuntut kembali kepada pekerjanya.
 
-Apabila pemberi kerja membuktikan syarat pembebasan tersebut sehingga pihak yang dirugikan tidak memperoleh ganti rugi menurut ayat (1), maka menurut Pasal 188 ayat (2) Kitab Undang-Undang Hukum Perdata pengadilan dapat memerintahkan ganti rugi seluruhnya atau sebagian dengan mempertimbangkan keadaan ekonomi pemberi kerja dan pihak yang dirugikan.
+Apabila pemberi kerja membuktikan syarat pembebasan tersebut sehingga pihak yang dirugikan tidak memperoleh ganti rugi menurut ayat (1), maka menurut Pasal 188 ayat (2) Kitab Undang-Undang Hukum Perdata, apabila pihak yang dirugikan mengajukan permohonan, pengadilan dapat, dengan mempertimbangkan keadaan ekonomi pemberi kerja dan pihak yang dirugikan, memerintahkan pemberi kerja membayar ganti rugi seluruhnya atau sebagian.
 
 Persoalan menentukan pihak yang dituntut secara perdata harus dibedakan dari tanggung jawab pidana. Tanggung jawab pidana menurut Pasal 284 Kitab Undang-Undang Hukum Pidana dinilai berdasarkan pelanggaran kewajiban berhati-hati oleh masing-masing orang perseorangan dan hubungan sebab akibat dari pelanggaran itu.
 
 ## Q15. Manfaat dan perlindungan asuransi kendaraan apa yang harus diperiksa?
 
-Kewajiban mengikuti asuransi menurut Pasal 6 Undang-Undang Asuransi Tanggung Jawab Kendaraan Bermotor Wajib (強制汽車責任保險法) pada asasnya berada pada pemilik kendaraan, dan dalam hal-hal yang ditentukan juga pada pengguna atau pengelola kendaraan tersebut. Sistem ini menyediakan struktur perlindungan tanpa kesalahan (無過失給付制度) bagi orang yang luka atau meninggal karena kecelakaan kendaraan bermotor, tetapi lingkup penumpang atau pihak ketiga di luar kendaraan yang ditentukan undang-undang harus diperiksa.
+Kewajiban mengikuti asuransi menurut Pasal 6 Undang-Undang Asuransi Tanggung Jawab Kendaraan Bermotor Wajib (強制汽車責任保險法) pada asasnya berada pada pemilik kendaraan, dan dalam hal-hal yang ditentukan juga pada pengguna atau pengelola kendaraan tersebut. Sistem ini menyediakan struktur perlindungan tanpa kesalahan (無過失給付制度) bagi orang yang luka atau meninggal karena kecelakaan kendaraan bermotor, tetapi lingkup penumpang atau pihak ketiga di luar kendaraan yang ditentukan undang-undang harus diperiksa. Penanggung tidak membayar manfaat apabila orang yang luka atau pihak lain yang berhak menuntut menyebabkan kecelakaan itu dengan sengaja atau pada saat melakukan tindak pidana (Pasal 28).
 
 Dalam kecelakaan yang melibatkan satu kendaraan, pengemudi kendaraan itu pada umumnya bukan penerima manfaat asuransi wajib kendaraan tersebut. Namun, dalam kecelakaan yang melibatkan beberapa kendaraan, terdapat keadaan ketika pengemudi dapat menuntut manfaat kepada penanggung asuransi wajib dari kendaraan lain yang terlibat.
 

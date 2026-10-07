@@ -1,7 +1,7 @@
 ---
 title: "El negoci logístic a Taiwan i l’autorització de transport de mercaderies per automòbil (汽車貨運業): constitució nova, adquisició i encomana"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 de setembre de 2025"
 read_time: "9 min de lectura"
 categories:
@@ -118,7 +118,7 @@ S’ha de confirmar la vigència de la llicència d’explotació de l’empresa
 
 Encara que l’estranger es converteixi en accionista o inversor de la societat objecte, aquest fet per si sol no li atorga el dret a treballar ni una situació de residència a Taiwan. Si exerceix a Taiwan el treball quotidià, com la gestió de la societat, les vendes, l’assignació de vehicles i l’atenció al client, ha de confirmar, abans d’iniciar el treball, si necessita el permís de treball d’acord amb el càrrec real, i tramitar per separat el procediment de residència posterior.
 
-El treball sense permís pot comportar una multa administrativa i l’ordre de sortida de Taiwan (限令出國). Les directrius vigents de l’Administració d’Immigració del Ministeri de l’Interior (內政部移民署) sobre la prohibició d’entrada (禁止入國) solen fixar, per al treball il·lícit, un període de prohibició d’entrada de 3 anys, però es poden aplicar els requisits d’exempció o d’escurçament del període que fixen aquestes mateixes directrius. El resultat no es determina mecànicament només perquè existeixi una denúncia d’un tercer, i l’autoritat competent examina els fets, les normes aplicables i les circumstàncies de cada assumpte.
+L’estranger que treballa sense autorització està subjecte a una multa administrativa, ha de ser objecte d’una ordre de sortida immediata de Taiwan (限令出國) i no pot tornar a treballar a Taiwan (article 68 de la Llei de serveis d’ocupació, 就業服務法). Les directrius vigents de l’Administració d’Immigració del Ministeri de l’Interior (內政部移民署) sobre la prohibició d’entrada (禁止入國) solen fixar, per al treball il·lícit, un període de prohibició d’entrada de 3 anys, però es poden aplicar els requisits d’exempció o d’escurçament del període que fixen aquestes mateixes directrius. El resultat no es determina mecànicament només perquè existeixi una denúncia d’un tercer, i l’autoritat competent examina els fets, les normes aplicables i les circumstàncies de cada assumpte.
 
 ## Fonts oficials
 
@@ -136,6 +136,7 @@ El treball sense permís pot comportar una multa administrativa i l’ordre de s
 - [Ministeri d’Economia: guia de sol·licitud d’inversió estrangera](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Article 43 de la Llei de serveis d’ocupació (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Article 68 de la Llei de serveis d’ocupació](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Article 68 de la Llei de serveis d’ocupació (Base de dades de lleis i reglaments)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Administració d’Immigració del Ministeri de l’Interior: guia administrativa sobre el període de prohibició d’entrada](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Guies relacionades

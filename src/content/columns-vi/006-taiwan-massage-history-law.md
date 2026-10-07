@@ -1,7 +1,7 @@
 ---
 title: "Lịch sử ngành massage tại Đài Loan và thông tin pháp luật"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "4 phút đọc"
 categories:
@@ -51,11 +51,11 @@ trên thực tế chỉ người khiếm thị mới được hành nghề massa
 
 Người không khiếm thị làm nghề này là hành vi vi phạm pháp luật.
 
-Quy định này kéo dài đến tận năm 2003, khi ông Lâm (林) đang kinh doanh một tiệm cắt tóc
+Quy định này có hiệu lực cho đến ngày 31 tháng 10 năm 2011; trong khoảng thời gian đó, vào năm 2003, ông Lâm (林) đang kinh doanh một tiệm cắt tóc
 
 đã thuê hai nhân viên không khiếm thị để cung cấp dịch vụ gội đầu và massage, rồi bị cảnh sát phát hiện.
 
-Theo pháp luật khi đó, ông Lâm và hai nhân viên lần lượt bị áp dụng tiền phạt hành chính (罰鍰) là 40.000 Đài tệ mới (新臺幣4萬元, TWD), 10.000 Đài tệ (1萬元) và 20.000 Đài tệ (2萬元).
+Theo pháp luật khi đó, Cục Xã hội Thành phố Đài Bắc (臺北市社會局) đã áp dụng tiền phạt hành chính (罰鍰) là 40.000 Đài tệ mới (新臺幣4萬元, TWD) đối với ông Lâm, và lần lượt là 10.000 Đài tệ (1萬元) và 20.000 Đài tệ (2萬元) đối với hai nhân viên.
 
 Ông Lâm cho rằng mức xử phạt này hết sức bất hợp lý nên đã nộp đơn đề nghị các thẩm phán hiến pháp (大法官) giải thích Hiến pháp.
 
@@ -81,7 +81,7 @@ Ví dụ, có ý kiến băn khoăn rằng quy định thành văn chỉ cho ph�
 
 và cũng có ý kiến đặt câu hỏi liệu quy định này có thực sự góp phần bảo vệ việc làm và cuộc sống của người khiếm thị hay không.
 
-Cuối cùng, các thẩm phán hiến pháp đã tuyên bố điều luật chỉ cho phép người khiếm thị hành nghề massage là vi hiến (違憲).
+Cuối cùng, trong Giải thích số 649 (釋字第649號) của Viện Tư pháp ngày 31 tháng 10 năm 2008, các thẩm phán hiến pháp đã tuyên bố điều luật chỉ cho phép người khiếm thị hành nghề massage là vi hiến (違憲), và điều luật này mất hiệu lực vào ngày 31 tháng 10 năm 2011, khi kết thúc thời hạn chuyển tiếp ba năm mà bản giải thích cho phép.
 
 ​
 

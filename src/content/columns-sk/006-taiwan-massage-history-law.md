@@ -1,7 +1,7 @@
 ---
 title: "História a právny režim masáže na Taiwane"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "3 min čítania"
 categories:
@@ -51,11 +51,11 @@ skutočne len osoby so zrakovým postihnutím (視障者) mohli vykonávať povo
 
 Výkon tohto povolania osobou bez zrakového postihnutia (非視障者) bol nezákonný.
 
-Tento zákon platil do roku 2003; vtedy pán Lin, ktorý viedol kaderníctvo,
+Toto obmedzenie platilo do 31. októbra 2011; v roku 2003, teda v tomto období, pán Lin, ktorý viedol kaderníctvo,
 
 zamestnal dvoch pracovníkov bez zrakového postihnutia na služby umývania vlasov a masáže, a polícia to zistila.
 
-Podľa vtedajšieho práva bola pánovi Linovi uložená správna pokuta (罰鍰) 40.000 TWD a dvom pracovníkom 10.000 TWD a 20.000 TWD v novom taiwanskom dolári (新臺幣).
+Podľa vtedajšieho práva uložil Odbor sociálnych vecí mesta Taipej (臺北市社會局) pánovi Linovi správnu pokutu (罰鍰) 40.000 TWD a dvom pracovníkom 10.000 TWD a 20.000 TWD v novom taiwanskom dolári (新臺幣).
 
 Pán Lin považoval túto sankciu za veľmi nespravodlivú a požiadal o ústavný výklad.
 
@@ -81,7 +81,7 @@ Nastolila sa napríklad otázka, či písané ustanovenie, ktoré dovolovalo vý
 
 a spochybňovalo sa, či toto ustanovenie skutočne prispelo k ochrane zamestnania a existencie osôb so zrakovým postihnutím.
 
-Nakoniec sudcovia Súdneho jüanu (大法官) vyhlásili za protiústavné (違憲) ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať povolanie maséra.
+Nakoniec sudcovia Súdneho jüanu (大法官) vo výklade č. 649 (司法院釋字第649號) z 31. októbra 2008 vyhlásili za protiústavné (違憲) ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať povolanie maséra, a ustanovenie stratilo účinnosť 31. októbra 2011 uplynutím prechodnej lehoty 3 rokov, ktorú výklad poskytol.
 
 ​
 

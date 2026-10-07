@@ -1,7 +1,7 @@
 ---
 title: "Kysymyksiä ja vastauksia liikenneonnettomuuksien käsittelystä Taiwanissa: toimet paikan päällä, tuottamus, sovinto ja vahingonkorvaus"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. syyskuuta 2025"
 read_time: "12 min lukuaika"
 categories:
@@ -95,7 +95,7 @@ Vaatimus siviililain (民法) 184 artiklan mukaan edellyttää oikeudenvastaista
 
 - Vammautuminen: Siviililain 193 artiklan mukaan voidaan tutkia tarvittavat hoitokulut (醫療費用), hoito (看護費用), matkat hoitoon (就醫交通費), apuvälineet ja muut lisääntyneet elinkustannukset sekä ansiomenetys (收入損失) tosiasiallisesta työkyvyttömyydestä ja työkyvyn alentumisesta (勞動能力減損). Siviililain 195 artiklan mukaan voidaan tutkia myös aineeton vahinko.
 - Kuolema: Siviililain 192 artiklan mukaan voidaan, siltä osin kuin se soveltuu, tutkia hoitokulut ja lisääntyneet elinkustannukset ennen kuolemaa, hautauskulut (殯葬費) ja elatuksen menetys (扶養利益損失) sille, jolla oli oikeudellinen elatusvaatimus. Siviililain 194 artiklan mukaan voidaan tutkia myös tiettyjen sukulaisten aineeton vahinko.
-- Varallisuus: Siviililain 196 artiklan mukaan voidaan vaatia näytettyjä tosiasiallisia varallisuusvahinkoja, mukaan lukien ajoneuvon korjaus tai arvon alentuminen.
+- Varallisuus: Siviililain 196 artiklan mukaan omistaja voi vaatia vahingon aiheuttamaa ajoneuvon arvon alentumista; korjauskustannukset toimivat mittapuuna vain siltä osin kuin se on tarpeen, ja kun vanhojen osien tilalle vaihdetaan uusia, voidaan vähentää kulumisesta johtuva arvonalennus.
 
 ## Q8. Miten hoitokuluasiakirjat on jätettävä, kun hoito jatkuu?
 
@@ -165,13 +165,13 @@ Siviililain (民法) 188 artikla käsittelee tapausta, jossa työntekijä tehtä
 
 Työnantaja voi väittää, että hän on noudattanut tarvittavaa huolellisuutta työntekijän valinnassa ja valvonnassa, tai että vahinkoa ei sellaisellakaan huolellisuudella olisi voitu välttää. Työnantaja ja työntekijä voidaan tietyin edellytyksin saattaa yhdessä korvausvastuuseen. Korvauksen suorittamisen jälkeen työnantaja voi hakea regressiä työntekijältä.
 
-Jos työnantaja näyttää mainitut vapautumisehdot siten, että vahingonkärsijä ei saa korvausta 1 momentin mukaan, tuomioistuin voi siviililain (民法) 188 artiklan 2 momentin mukaan työnantajan ja vahingonkärsijän taloudellisen aseman huomioon ottaen määrätä täyden tai osittaisen korvauksen.
+Jos työnantaja näyttää mainitut vapautumisehdot siten, että vahingonkärsijä ei saa korvausta 1 momentin mukaan, siviililain (民法) 188 artiklan 2 momentin mukaan tuomioistuin voi vahingonkärsijän hakemuksesta työnantajan ja vahingonkärsijän taloudellisen aseman huomioon ottaen velvoittaa työnantajan maksamaan vahingonkorvauksen kokonaan tai osittain.
 
 Siviilioikeudellisten vaatimusvastapuolten vahvistaminen ja rikosoikeudellinen vastuu on erotettava. Rikosoikeudellinen vastuu rikoslain (刑法) 284 artiklan mukaan arvioidaan kunkin luonnollisen henkilön huolellisuusvelvollisuuden laiminlyönnin ja tämän laiminlyönnin syy-yhteyden mukaan.
 
 ## Q15. Mitkä moottoriajoneuvovakuutuksen korvaukset ja turvat on selvitettävä?
 
-Vakuutusvelvollisuus moottoriajoneuvojen pakollisen vastuuvakuutuslain (強制汽車責任保險法) 6 artiklan mukaan osuu periaatteessa ajoneuvon omistajaan ja tietyissä tapauksissa myös ajoneuvon käyttäjään tai haltijaan. Tämä järjestelmä luo tuottamuksesta riippumattoman korvausjärjestelmän (無過失給付制度) henkilöille, jotka ovat vammautuneet tai kuolleet moottoriajoneuvo-onnettomuuksissa; lakisääteinen piiri matkustajista tai ajoneuvon ulkopuolella olevista kolmansista henkilöistä (第三人) on selvitettävä.
+Vakuutusvelvollisuus moottoriajoneuvojen pakollisen vastuuvakuutuslain (強制汽車責任保險法) 6 artiklan mukaan osuu periaatteessa ajoneuvon omistajaan ja tietyissä tapauksissa myös ajoneuvon käyttäjään tai haltijaan. Tämä järjestelmä luo tuottamuksesta riippumattoman korvausjärjestelmän (無過失給付制度) henkilöille, jotka ovat vammautuneet tai kuolleet moottoriajoneuvo-onnettomuuksissa; lakisääteinen piiri matkustajista tai ajoneuvon ulkopuolella olevista kolmansista henkilöistä (第三人) on selvitettävä. Vakuutuksenantaja ei maksa korvausta, jos vahingonkärsinyt tai muu korvauksen vaatija on aiheuttanut onnettomuuden tahallaan tai rikosta tehdessään (28 artikla).
 
 Yhden ajoneuvon yksittäisonnettomuuksissa sen kuljettaja ei yleensä ole kyseisen ajoneuvon pakollisen vakuutuksen korvauksensaaja. Onnettomuuksissa, joissa on useita ajoneuvoja, kuljettaja voi kuitenkin vaatia korvausta toisen osallisen ajoneuvon pakolliselta vakuuttajalta.
 

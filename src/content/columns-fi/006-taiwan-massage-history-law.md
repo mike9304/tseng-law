@@ -1,7 +1,7 @@
 ---
 title: "Hieronnan historia ja oikeudellinen asema Taiwanissa"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. syyskuuta 2025"
 read_time: "3 min lukuaika"
 categories:
@@ -51,11 +51,11 @@ hieronta-alaa (按摩業) saivat tosiasiassa harjoittaa vain näkövammaiset (�
 
 Se, että joku ilman näkövammaa (非視障者) harjoitti tätä alaa, oli laitonta.
 
-Tämä laki kesti vuoteen 2003; tuolloin herra Lin, joka piti parturiliikettä,
+Tämä rajoitus oli voimassa 31. lokakuuta 2011 asti; tuona aikana, vuonna 2003, herra Lin, joka piti parturiliikettä,
 
 palkkasi työntekijöitä ilman näkövammaa hiuspesu- ja hierontapalveluihin, ja poliisi totesi sen.
 
-Silloisen oikeuden mukaan herra Linille määrättiin hallinnollinen sakko (罰鍰) TWD 40.000 (新臺幣) ja kahdelle työntekijälle TWD 10.000 ja TWD 20.000.
+Silloisen oikeuden mukaan Taipein kaupungin sosiaaliasiainvirasto (臺北市社會局) määräsi herra Linille hallinnollisen sakon (罰鍰) TWD 40.000 (新臺幣) ja kahdelle työntekijälle hallinnolliset sakot TWD 10.000 ja TWD 20.000 vastaavasti.
 
 Herra Lin piti tätä seuraamusta hyvin epäoikeudenmukaisena ja pyysi perustuslain tulkintaa.
 
@@ -81,7 +81,7 @@ Kysyttiin esimerkiksi, eikö kirjallinen sääntö, joka salli hieronnan vain n�
 
 ja epäiltiin, oliko tämä sääntö todella edistänyt näkövammaisten työn ja toimeentulon suojaa.
 
-Lopulta perustuslakituomarit (大法官) julistivat säännöksen, joka salli vain näkövammaisten harjoittaa hieronta-alaa, perustuslainvastaiseksi (違憲).
+Lopulta perustuslakituomarit (大法官) julistivat 31. lokakuuta 2008 antamassaan Oikeusyuanin (司法院) tulkinnassa nro 649 (釋字第649號) säännöksen, joka salli vain näkövammaisten harjoittaa hieronta-alaa, perustuslainvastaiseksi (違憲), ja säännös lakkasi olemasta voimassa 31. lokakuuta 2011 tulkinnan salliman 3 vuoden siirtymäajan päätyttyä.
 
 ​
 

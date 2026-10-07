@@ -1,7 +1,7 @@
 ---
 title: "Logistička delatnost na Tajvanu i dozvola za automobilski teretni prevoz (汽車貨運業): novo osnivanje, sticanje i poveravanje"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025."
 read_time: "9 min čitanja"
 categories:
@@ -118,7 +118,7 @@ Treba potvrditi važenje poslovne dozvole za prevoz preduzetnika kome je posao p
 
 Čak i kada stranac postane akcionar ili investitor ciljnog društva, ta činjenica mu sama po sebi ne daje pravo na rad niti boravišni status na Tajvanu. Ako na Tajvanu obavlja svakodnevni posao, kao što su upravljanje društvom, prodaja, raspodela vozila i briga o kupcu, mora pre početka rada da potvrdi da li mu je potrebna radna dozvola koja odgovara stvarnoj funkciji, i posebno da sprovede kasniji boravišni postupak.
 
-Na rad bez dozvole mogu se primeniti upravna novčana kazna i nalog za napuštanje Tajvana (限令出國). Važeće upravne smernice o zabrani ulaska (禁止入國) Imigracione uprave Ministarstva unutrašnjih poslova (內政部移民署) načelno utvrđuju period zabrane ulaska od 3 godine u slučaju nedozvoljenog rada, ali se mogu primeniti zahtevi za oslobođenje ili skraćenje tog perioda koje iste smernice utvrđuju. Ishod se ne određuje mehanički samo zato što postoji prijava trećeg lica, i nadležni organ ocenjuje činjenične okolnosti, merodavna pravila i okolnosti svake stvari.
+Stranac koji radi bez dozvole podleži upravnoj novčanoj kazni, mora mu se odmah naložiti napuštanje Tajvana (限令出國) i ne sme ponovo da radi na Tajvanu (član 68 Zakona o uslugama zapošljavanja, 就業服務法). Važeće upravne smernice o zabrani ulaska (禁止入國) Imigracione uprave Ministarstva unutrašnjih poslova (內政部移民署) načelno utvrđuju period zabrane ulaska od 3 godine u slučaju nedozvoljenog rada, ali se mogu primeniti zahtevi za oslobođenje ili skraćenje tog perioda koje iste smernice utvrđuju. Ishod se ne određuje mehanički samo zato što postoji prijava trećeg lica, i nadležni organ ocenjuje činjenične okolnosti, merodavna pravila i okolnosti svake stvari.
 
 ## Zvanični izvori
 
@@ -136,6 +136,7 @@ Na rad bez dozvole mogu se primeniti upravna novčana kazna i nalog za napuštan
 - [Ministarstvo ekonomije: smernice za zahtev za stranu investiciju](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Član 43 Zakona o uslugama zapošljavanja (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Član 68 Zakona o uslugama zapošljavanja](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Član 68 Zakona o uslugama zapošljavanja (Baza zakona i propisa)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Imigraciona uprava Ministarstva unutrašnjih poslova: upravne smernice o periodu zabrane ulaska](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Povezana uputstva

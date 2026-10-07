@@ -1,7 +1,7 @@
 ---
 title: "Odškodnina za poškodbo v fitnesu na Tajvanu: zadeva prve stopnje, roki, dokazi in postavke odškodnine"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "10 min branja"
 categories:
@@ -19,7 +19,7 @@ Na podlagi zadeve, v kateri se je korejski študent poškodoval, ko je v fitnesu
 
 Nesreča se je zgodila v fitnesu v Taichungu (臺中) med vadbo mrtvega dviga (硬舉), ki jo je vodil trener. Po poškodbi ne zadošča ostati le pri dejstvu, da se je nesreča zgodila znotraj fitnesa; treba je skupaj presoditi vadbene izkušnje in zdravstveno stanje uporabnika, vrsto vadbe in obremenitev, pojasnila in navodila trenerja, gibanje in odziv v tistem trenutku, vzročno zvezo (因果關係) med poškodbo in vadbo ter listine, ki utemeljujejo zatrjevano škodo.
 
-Odvetnica Wei Tseng je tožnika, korejskega študenta, zastopala kot procesna zastopnica (訴訟代理人). Okrožno sodišče v Taichungu je 24. 1. 2022 v sodbi prve stopnje v potrošniški zadevi št. 7 leta 109 po koledarju Republike Kitajske (民國109年度消字第7號) naložilo toženi stranki plačilo [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) in obresti, navedene v sodbi.
+Odvetnica Wei Tseng je tožnika, korejskega študenta, zastopala kot procesna zastopnica (訴訟代理人). Okrožno sodišče v Taichungu je 24. 1. 2022 v sodbi prve stopnje v potrošniški zadevi št. 7 leta 109 po koledarju Republike Kitajske (民國109年度消字第7號) naložilo družbi, ki upravlja fitnes in je ena od tožencev, plačilo [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) in obresti, navedene v sodbi.
 
 Nato je tisk poročal, da sta stranki na drugi stopnji sklenili poravnavo (和解). Samo uradna sodba prve stopnje ne omogoča potrditve izida druge stopnje niti zneska poravnave; o poravnavi, o kateri poroča tisk, zato ni mogoče sklepati, da je s tem potrjen končni izid sodbe prve stopnje.
 
@@ -67,7 +67,7 @@ V nadaljevanju so splošne informacije o sporih zaradi poškodbe v fitnesu na Ta
 
 ## 1. Kateri pravni postopki lahko pridejo v poštev po poškodbi v fitnesu na Tajvanu?
 
-[7. člen tajvanskega zakona o varstvu potrošnikov (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) določa, da mora podjetje, ko nudi storitev, zagotoviti, da ta storitev dosega raven varnosti, ki jo je mogoče razumno pričakovati po strokovnem ali tehničnem merilu v trenutku nudenja.
+[7. člen tajvanskega zakona o varstvu potrošnikov (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) določa, da mora podjetje, ko nudi storitev, zagotoviti, da ta storitev dosega raven varnosti, ki jo je mogoče razumno pričakovati po strokovnem ali tehničnem merilu v trenutku nudenja. 3. odstavek istega člena določa, da podjetje, ki te zahteve krši in potrošniku ali tretji osebi povzroči škodo, odgovarja za odškodnino solidarno, sodišče pa lahko tudi v primeru, ko podjetje dokaže, da ni bilo krivo, njegovo odgovornost le zmanjša.
 
 To ne pomeni, da je odgovornost podjetja ali trenerja priznana vsakič, ko se poškodba zgodi v fitnesu. Presojati je treba od primera do primera, katera konkretna dolžnost skrbnosti je obstajala, ali je bila kršena, ali je vzročna zveza med kršitvijo in poškodbo, ali je nastala dejanska škoda, kakšne ugovore ima nasprotna stranka in ali obstaja dokaz, ki podpira vsako trditev ter vsak ugovor.
 

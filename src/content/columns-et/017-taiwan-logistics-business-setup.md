@@ -1,7 +1,7 @@
 ---
 title: "Logistika Taiwanis ja mootorveokite kaubaveo tegevusala (汽車貨運業) luba: uus asutamine, omandamine ja usaldamine"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "9 min lugemist"
 categories:
@@ -118,7 +118,7 @@ Tuleb kontrollida usaldatud ettevõtja tegevusloa kehtivust ja loa ulatust, tege
 
 Isegi kui välismaalane saab sihtäriühingu osanikuks või investoriks, ei anna see asjaolu iseenesest õigust töötada Taiwanis ega elamisõigust. Kui äriühingu juhtimist, müüki, jaotamist, klienditeenindust või muud tegelikku tööd teostatakse Taiwanis, tuleb enne töö algust kindlaks teha, kas tegelik amet eeldab tööluba, ning seejärel viia elamisloa menetlus eraldi.
 
-Loata töötamisega võivad kaasneda haldustrahv (罰鍰) ja riigist lahkumise korraldus. Siseministeeriumi immigratsiooniameti kehtiv sissesõidukeelu töökorraldus näeb loata töötamise korral üldiselt ette 3-aastase sissesõidukeelu, kuid sama juhise vabastuse või tähtaja lühendamise eeldused võivad kohalduda. Pelk asjaolu, et kolmas isik on teate teinud, ei otsusta tulemust mehaaniliselt; pädev asutus hindab asjaolusid, kohalduvat õigust ja individuaalseid olusid.
+Tööhõiveteenuste seaduse (就業服務法) artikli 68 järgi määratakse loata töötavale välismaalasele haldustrahv (罰鍰), ta tuleb viivitamata kohustada Taiwanist lahkuma ning ta ei tohi Taiwanis enam töötada. Siseministeeriumi immigratsiooniameti kehtiv sissesõidukeelu töökorraldus näeb loata töötamise korral üldiselt ette 3-aastase sissesõidukeelu, kuid sama juhise vabastuse või tähtaja lühendamise eeldused võivad kohalduda. Pelk asjaolu, et kolmas isik on teate teinud, ei otsusta tulemust mehaaniliselt; pädev asutus hindab asjaolusid, kohalduvat õigust ja individuaalseid olusid.
 
 ## Ametlikud allikad
 
@@ -136,6 +136,7 @@ Loata töötamisega võivad kaasneda haldustrahv (罰鍰) ja riigist lahkumise k
 - [Majandusministeerium: juhis välisinvesteeringu taotlusest](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Tööhõiveteenuste seaduse artikkel 43 (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Tööhõiveteenuste seaduse artikkel 68](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Tööhõiveteenuste seaduse artikkel 68 (õigus- ja määrusandmebaas)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Siseministeeriumi immigratsiooniamet: haldusjuhis sissesõidukeelu kestusest](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Seotud juhised

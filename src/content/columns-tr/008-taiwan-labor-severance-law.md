@@ -1,7 +1,7 @@
 ---
 title: "Tayvan iş hukuku: Tayvan’da kıdem tazminatı (資遣費) almak gerçekten zor mu?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 Eylül 2025"
 read_time: "6 dk okuma"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tayvan’da çalışan kendi isteğiyle ayrılırsa kıdem tazminatı (資遣費) alır mı?"
-    a: "Hayır. Bazı hukuk düzenlerinden — örneğin Kore’den — farklı olarak Tayvan’da kıdem tazminatı (資遣費) ödeme yükümlülüğü ancak şirket çalışanı işten çıkardığında doğar; çalışan kendi isteğiyle ayrılırsa şirket kıdem tazminatı ödemek zorunda değildir."
+    a: "Hayır. Bazı hukuk düzenlerinden — örneğin Kore’den — farklı olarak Tayvan’da kıdem tazminatı (資遣費) ödeme yükümlülüğü ancak şirket çalışanı işten çıkardığında doğar; çalışan kendi isteğiyle ayrılırsa şirket kıdem tazminatı ödemek zorunda değildir. Ancak İş Standartları Kanununun 14. maddesindeki bir neden varsa — örneğin şirketin ücreti ödememesi veya iş mevzuatını ihlal etmesi — ve çalışan bu nedenle sözleşmeyi feshederse şirket kıdem tazminatı ödemelidir."
   - q: "Disiplin nedeniyle işten çıkarmada da şirket kıdem tazminatı ödemeli midir?"
-    a: "Hayır. Çalışan hukuka aykırı bir fiil işlerse, şirket kurallarını ihlal ederse veya meşru neden olmadan 3 gün üst üste izinsiz devamsızlık yaparsa (İş Standartları Kanununun 12. maddesi, 勞動基準法第12條) şirket önceden bildirim olmadan işten çıkarabilir ve kıdem tazminatı ödemek zorunda değildir. Buna karşılık ekonomik işten çıkarma (11. madde) önceden bildirimi ve kıdem tazminatı ödemesini gerektirir."
+    a: "Hayır. Çalışan hukuka aykırı bir fiil işlerse, iş sözleşmesini veya şirket kurallarını ağır biçimde ihlal ederse veya meşru neden olmadan 3 gün üst üste ya da bir ayda 6 gün izinsiz devamsızlık yaparsa (İş Standartları Kanununun 12. maddesi, 勞動基準法第12條) şirket önceden bildirim olmadan işten çıkarabilir ve kıdem tazminatı ödemek zorunda değildir. Buna karşılık ekonomik işten çıkarma (11. madde) önceden bildirimi ve kıdem tazminatı ödemesini gerektirir."
   - q: "Tayvan’da kıdem tazminatı nasıl hesaplanır?"
-    a: "Tamamlanan her bir yıl kıdem için işveren, ortalama ücretin 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir; en çok 6 aylık ücret. Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir."
+    a: "Tamamlanan her bir yıl kıdem için işveren, ortalama ücretin 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir; en çok 6 aylık ücret. Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir. İşçi Emeklilik Kanunu, Tayvan vatandaşlarına, bir Tayvan vatandaşıyla evli olup oturma izni almış yabancılara, daimi oturma izni almış yabancılara ve benzeri çalışanlara (7. madde, 1. fıkra), 2026’dan itibaren ise profesyonel iş yapan yabancı uzmanlara (Yabancı Uzmanların Çağrılması ve İstihdamı Kanunu’nun (外國專業人才延攬及僱用法) 24. maddesi) uygulanır; diğer çalışanların ve Kanunun uygulanmasından önceki kıdemin tazminatı İş Standartları Kanununun 17. maddesine göre hesaplanır."
 ---
 
 # Tayvan iş hukuku: Tayvan’da kıdem tazminatı (資遣費) almak gerçekten zor mu?
@@ -36,15 +36,19 @@ Kıdem tazminatı ödeme yükümlülüğü ancak şirket çalışanı işten ç�
 
 Çalışan kendi isteğiyle ayrılırsa şirket kıdem tazminatı ödemek zorunda değildir.
 
+Ancak [İş Standartları Kanununun 14. maddesindeki](/tr/columns/taiwan-voluntary-resignation-severance) bir neden varsa — örneğin şirketin ücreti ödememesi veya iş mevzuatını ihlal etmesi — ve çalışan bu nedenle sözleşmeyi feshederse şirket kıdem tazminatı ödemelidir.
+
 ​
 
 Ancak çalışan hukuka aykırı bir fiil işlerse,
 
-şirket kurallarını (工作規則) ihlal ederse,
+iş sözleşmesini veya şirket kurallarını (工作規則) ağır biçimde ihlal ederse,
 
-veya neden olmadan 3 gün üst üste işe gelmezse (曠工),
+veya neden olmadan 3 gün üst üste ya da bir ayda 6 gün işe gelmezse (曠工),
 
 şirket kıdem tazminatı ödemeden işten çıkarabilir.
+
+Ancak 3. bent (kesinleşmiş hapis cezası) dışındaki her neden için şirket, durumu öğrendiği günden itibaren 30 gün içinde işten çıkarmalıdır (İş Standartları Kanununun 12. maddesinin 2. fıkrası).
 
 ​
 
@@ -53,16 +57,16 @@ Aşağıdaki tablo üç sona erme türünü karşılaştırır.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Tür | Ekonomik işten çıkarma (資遣員工(經濟解僱)) | Disiplin nedeniyle işten çıkarma (解僱員工(懲戒解僱)) | Çalışanın kendi isteğiyle istifası (員工自請離職) |
-| Anlam | İşverende işletme durumuna göre personel ayarlama ihtiyacı varsa, neden işverenin işletme alanında doğmuştur ve çalışanın sorumluluğunda değildir. Bu yüzden işveren bildirim süresine (預告期間) uymalı ve çalışanın sakıncalarını dengeli biçimde telafi etmek için kıdem tazminatı ödemelidir. | Çalışan hukuka aykırı veya uygunsuz bir fiil işlerse işveren, önceden bildirim olmadan iş sözleşmesini (勞動契約) derhal sona erdirebilir ve kıdem tazminatı ödemek zorunda değildir. Bu, işverenin disiplin yetkilerinden biridir. | Çalışan sözleşmeyi her an sona erdirmekte özgürdür; ancak istihdam süresine göre bildirim süresine uymalıdır ki işveren teslimi yapabilsin ve yerine birini arayabilsin. |
+| Anlam | İşverende işletme durumuna göre personel ayarlama ihtiyacı varsa, neden işverenin işletme alanında doğmuştur ve çalışanın sorumluluğunda değildir. Bu yüzden işveren bildirim süresine (預告期間) uymalı ve çalışanın sakıncalarını dengeli biçimde telafi etmek için kıdem tazminatı ödemelidir. | Çalışan hukuka aykırı veya uygunsuz bir fiil işlerse işveren, önceden bildirim olmadan iş sözleşmesini (勞動契約) derhal sona erdirebilir ve kıdem tazminatı ödemek zorunda değildir. Bu, işverenin disiplin yetkilerinden biridir. | Belirsiz süreli sözleşmede çalışan sözleşmeyi sona erdirmekte özgürdür; ancak istihdam süresine göre bildirim süresine uymalıdır ki işveren teslimi yapabilsin ve yerine birini arayabilsin. |
 | Şartlar | Var  (Tayvan İş Standartları Kanununun 11. maddesi) | Var  (Tayvan İş Standartları Kanununun 12. maddesi) | Yok |
 | Önceden bildirim | Gerekli | Gerekli değil | Gerekli |
 | Zorluk | Kolay | Zor | Kolay |
-| Şirketin kıdem tazminatı (資遣費) ödeyip ödemeyeceği | Gerekli | Gerekli değil | Gerekli değil |
-|  | Tayvan İş Standartları Kanununun 11. maddesi (勞動基準法第11條): Aşağıdaki durumlardan biri gerçekleşmedikçe işveren, çalışana önceden bildirimde bulunsa bile iş sözleşmesini sona erdiremez.  1. Faaliyetin durdurulması (歇業) veya işletmenin devri (轉讓)  2. Zarar (虧損) veya işin daraltılması (業務緊縮)  3. Mücbir sebep 1 ay veya daha uzun bir faaliyet kesintisini gerektirir  4. İşin niteliği personel azaltmayı gerektirir ve işten çıkarılan kişi başka uygun bir göreve nakledilemez  5. Belirli bir çalışan, görevin gerektirdiği işi tatmin edici biçimde yerine getiremez | Tayvan İş Standartları Kanununun 12. maddesi (勞動基準法第12條): İşveren, çalışan aşağıdaki hallerden birine girerse önceden bildirim olmadan işten çıkarabilir.  1. İş sözleşmesinin kurulmasında gerçeğe aykırı beyanda bulunup işvereni yanılgıya düşüren ve işletmeye zarar riski yaratan kişi  2. İşverene, ailesine, temsilcisine (代理人) veya diğer meslektaşlara şiddet uygulayan veya ağır hakaret eden kişi  3. Süreli hapis (有期徒刑) veya daha ağır bir cezaya kesin olarak mahkûm edilen, erteleme (緩刑) verilmeyen ve para cezasına çevirmeye (易科罰金) de izin verilmeyen kişi  4. İş sözleşmesinin veya iş kurallarının ağır ihlali  5. İşverenin makinelerini, aletlerini, hammaddelerini, ürünlerini veya diğer mallarını kasten tüketen veya işverenin teknik ve ticari sırlarını kasten açıklayıp işverene zarar veren kişi  6. Meşru neden olmadan 3 gün üst üste veya 1 ayda 6 gün veya daha fazla izinsiz devamsızlık (曠工) |  |
+| Şirketin kıdem tazminatı (資遣費) ödeyip ödemeyeceği | Gerekli | Gerekli değil | Gerekli değil (çalışanın 14. madde kapsamındaki bir neden yüzünden sözleşmeyi feshettiği haller hariç) |
+|  | Tayvan İş Standartları Kanununun 11. maddesi (勞動基準法第11條): Aşağıdaki durumlardan biri gerçekleşmedikçe işveren, çalışana önceden bildirimde bulunsa bile iş sözleşmesini sona erdiremez.  1. Faaliyetin durdurulması (歇業) veya işletmenin devri (轉讓)  2. Zarar (虧損) veya işin daraltılması (業務緊縮)  3. Mücbir sebep 1 ay veya daha uzun bir faaliyet kesintisini gerektirir  4. İşin niteliği değişmiştir, personel azaltmak gerekir ve çalışanı atayacak uygun bir görev yoktur  5. Çalışan, kendisine verilen işi açıkça yerine getiremez | Tayvan İş Standartları Kanununun 12. maddesi (勞動基準法第12條): İşveren, çalışan aşağıdaki hallerden birine girerse önceden bildirim olmadan işten çıkarabilir.  1. İş sözleşmesinin kurulmasında gerçeğe aykırı beyanda bulunup işvereni yanılgıya düşüren ve işletmeye zarar riski yaratan kişi  2. İşverene, ailesine, temsilcisine (代理人) veya diğer meslektaşlara şiddet uygulayan veya ağır hakaret eden kişi  3. Süreli hapis (有期徒刑) veya daha ağır bir cezaya kesin olarak mahkûm edilen, erteleme (緩刑) verilmeyen ve para cezasına çevirmeye (易科罰金) de izin verilmeyen kişi  4. İş sözleşmesinin veya iş kurallarının ağır ihlali  5. İşverenin makinelerini, aletlerini, hammaddelerini, ürünlerini veya diğer mallarını kasten tüketen veya işverenin teknik ve ticari sırlarını kasten açıklayıp işverene zarar veren kişi  6. Meşru neden olmadan 3 gün üst üste veya 1 ayda 6 gün veya daha fazla izinsiz devamsızlık (曠工) |  |
 
 > Tayvan’da tamamlanan her bir yıl kıdem (年資) için
 > işveren, ortalama ücretin (平均工資) 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir.
-> (en çok 6 aylık ücret) Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir.
+> (en çok 6 aylık ücret) Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir. İşçi Emeklilik Kanunu, Tayvan vatandaşlarına, bir Tayvan vatandaşıyla evli olup oturma izni almış yabancılara, daimi oturma izni almış yabancılara ve benzeri çalışanlara (7. madde, 1. fıkra), 2026’dan itibaren ise profesyonel iş yapan yabancı uzmanlara ([Yabancı Uzmanların Çağrılması ve İstihdamı Kanunu’nun (外國專業人才延攬及僱用法) 24. maddesi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)) uygulanır; diğer çalışanların ve Kanunun uygulanmasından önceki kıdemin tazminatı İş Standartları Kanununun 17. maddesine göre hesaplanır. 1 yıldan kısa süre orantılı hesaplanır ve şirket tazminatı sözleşmenin bitiminden itibaren 30 gün içinde ödemelidir.
 
 ​
 

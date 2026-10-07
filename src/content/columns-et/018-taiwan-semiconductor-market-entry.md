@@ -1,6 +1,6 @@
 ---
 title: "Pooljuhtkomponentide ettevõtted Taiwani turul: kuidas hinnata tütarettevõtet, filiaali või esindussuhet"
-lastmod: "2026-09-17"
+lastmod: "2026-10-07"
 date_display: "17. september 2026"
 read_time: "8 min lugemist"
 categories:
@@ -65,11 +65,11 @@ Selle saab moodustada 1 või enama füüsilise isikuga (有限公司) või Taiwa
 
 ### Aktsiaselts (股份有限公司): sobiv, kui soovitakse võtta teisi investoreid või noteerimine on kavas
 
-Kapital jagatakse aktsiateks. Põhimõtteliselt nõutakse vähemalt kaks aktsionäri (股份有限公司), kuid riik või juriidiline isik võib selle asutada üksi ning välismaine juriidiline isik võib hoida 100 %. Aktsiad on põhimõtteliselt vabalt üleantavad, seadusjärgsete eranditega; eri liiki aktsiaid ja optsioone töötajatele saab kujundada seaduse järgi. See sobib ettevõtetele, kes ootavad investoreid, aktsiakauplemist, kapitalistiimuleid töötajatele või hilisemat ühinemist, omandamist, noteerimist või registreerimist esibörsile (興櫃); see ei piirdu suurte ettevõtetega. Juhtimises võib äriühing, mis ei ole teinud avalikku aktsiapakkumist, põhikirjaga olla ilma juhatuseta ning tal võib olla ainult üks või kaks juhatajat. Äriühing, mille ainus aktsionär on riik või juriidiline isik, võib põhikirjaga olla ilma järelevalvajata (監察人). Mitte iga aktsiaselts (股份有限公司) ei pea laskma majandusaasta aruannet audiitoril kontrollida (會計師查核簽證). Tavalise äriühingu olulisimad audiitorkünnised on sissemakstud kapital TWD 30.000.000 (新臺幣) või, selle all, käive TWD 100.000.000 või 100 töötajat Taiwani töötajate kindlustuses (勞工保險); avaliku aktsiapakkumise teinud äriühingud järgivad väärtpaberireguleerimist.
+Kapital jagatakse aktsiateks. Põhimõtteliselt nõutakse vähemalt kaks asutajat (發起人), kuid riik või juriidiline isik võib selle asutada üksi ning välismaine juriidiline isik võib hoida 100 %. Aktsiad on põhimõtteliselt vabalt üleantavad, seadusjärgsete eranditega; eri liiki aktsiaid ja optsioone töötajatele saab kujundada seaduse järgi. See sobib ettevõtetele, kes ootavad investoreid, aktsiakauplemist, kapitalistiimuleid töötajatele või hilisemat ühinemist, omandamist, noteerimist või registreerimist esibörsile (興櫃); see ei piirdu suurte ettevõtetega. Juhtimises võib äriühing, mis ei ole teinud avalikku aktsiapakkumist, põhikirjaga olla ilma juhatuseta ning tal võib olla ainult üks või kaks juhatajat. Äriühing, mille ainus aktsionär on riik või juriidiline isik, võib põhikirjaga olla ilma järelevalvajata (監察人). Mitte iga aktsiaselts (股份有限公司) ei pea laskma majandusaasta aruannet audiitoril kontrollida (會計師查核簽證). Tavalise äriühingu olulisimad audiitorkünnised on sissemakstud kapital TWD 30.000.000 (新臺幣) või, selle all, käive TWD 100.000.000 või 100 töötajat Taiwani töötajate kindlustuses (勞工保險); avaliku aktsiapakkumise teinud äriühingud järgivad väärtpaberireguleerimist.
 
 ## 4. Filiaali ja tütarettevõtte menetlused erinevad; ainult tütarettevõte läbib investeeringute läbivaatamise osakonna kontrolli
 
-Kui välismaine äriühing asutab Taiwani tütarettevõtte, tehakse põhimõtteliselt nime eeluuring ning taotletakse investeerimisluba Majandusministeeriumi investeeringute läbivaatamise osakonnalt (經濟部投資審議司). Heakskiidu järel kantakse vahendid, kinnitatakse investeerimissumma ja audiitor (會計師) kontrollib kapitali, seejärel viiakse asutamine ja maksuregistreerimine lõpule.
+Kui välismaine äriühing asutab Taiwani tütarettevõtte, tehakse põhimõtteliselt nime eeluuring ning taotletakse investeerimisluba Majandusministeeriumi investeeringute läbivaatamise osakonnalt (經濟部投資審議司). Heakskiidu järel kantakse vahendid, kinnitatakse investeerimissumma ja audiitor (會計師) kontrollib kapitali, seejärel viiakse asutamine ja maksuregistreerimine lõpule. Pärast asutamisregistreerimise taotlemist peab äriühing osalema mis tahes tasandi valitsusasutuste või nende määratud mittetulundusorganisatsioonide korraldatud töötajate õiguste koolitusel (勞動權益講習) (äriühinguseaduse artikkel 387-1, kehtib alates 2026. aasta juunist).
 
 Seevastu tavalise välismaise äriühingu Taiwani filiaali asutamine ei eelda põhimõtteliselt investeeringute läbivaatamise osakonna investeerimisluba; Majandusministeeriumi kaubandusarengu amet (經濟部商業發展署) käsitleb filiaali registreerimist ja sellega seotud kapitali kinnitamist. Vajalikuks jäävad nime eeluuring, käibekapitali ülekanne, kapitali kontroll ja maksuregistreerimine; kava on tavaliselt lühem.
 
@@ -77,9 +77,9 @@ Eelnev on juhis lepingu sõnastamise kohta. Ühe konkreetse vormi omamine ei tee
 
 ## 5. Äriühingu registreerimine ja inseneri seadusjärgne töö ei ole sama asi
 
-Registreerimise lõpuleviimine Taiwanis ei tähenda, et välismaise peakontori personal võiks automaatselt Taiwanis töötada. Välismaalane, kes töötab Taiwanis, vajab seadusjärgset tööluba (工作許可) ja pikema elamise korral välismaalase elamiskaarti (外僑居留證). Põhimõtteliselt taotleb tööandja tööluba ja vastavat elamiskaarti.
+Registreerimise lõpuleviimine Taiwanis ei tähenda, et välismaise peakontori personal võiks automaatselt Taiwanis töötada. Välismaalane, kes töötab Taiwanis, vajab seadusjärgset tööluba (工作許可) ja pikema elamise korral välismaalase elamiskaarti (外僑居留證). Põhimõtteliselt taotleb tööandja välismaalase tööluba ning välismaalane ise taotleb vastava elamiskaardi immigratsiooniametilt (移民署).
 
-Tööloa saamine on suhteliselt lihtsam Taiwani tütarettevõtte või välismaise äriühingu filiaali juhile. Teisele ja igale järgmisele välismaalasele tööluba taotledes nõuab tööministeerium (勞動部) valdkonna järgi, et äriühing vastaks kapitali-, käibe- või muule võrreldavale künnisele. Kui on kavas, et Taiwanis töötab välismaine personal, tuleb enne äriühingu asutamist kindlaks teha, kas kavandatud kapital saavutab kehtiva künnise.
+Tööloa saamine on suhteliselt lihtsam Taiwani tütarettevõtte (investeerimisloaga äriühing, milles välismaalastele kuulub üle 1/3 aktsiatest) või välismaise äriühingu filiaali juhile. Ent juba esimese välismaalase töölevõtmisel peab tööandja vastama ühele välismaalaste töö kvalifikatsiooni- ja läbivaatamisstandardite artikli 39 kriteeriumile. Alla 1 aasta vanuse äriühingu puhul kuuluvad kriteeriumide hulka sissemakstud kapital (filiaali puhul Taiwani tegevusvahendid) vähemalt TWD 500.000 või käive vähemalt TWD 3.000.000; vähemalt 1 aasta vanuse äriühingu puhul kuuluvad nende hulka keskmine käive viimase 1 aasta või 3 aasta jooksul vähemalt TWD 3.000.000. Kui tööandja võtab tööle vähemalt 2 sama liiki välismaalast, peavad need välismaalased ja tööandja vastama 2. peatüki üldistele standarditele (artikli 38 lõige 2). Kui on kavas, et Taiwanis töötab välismaine personal, tuleb enne äriühingu asutamist kindlaks teha, kas kavandatud kapital saavutab kehtiva künnise.
 
 ## 7. Struktuurid, mis võivad tegevuse etapi järgi sobida
 

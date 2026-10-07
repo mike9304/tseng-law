@@ -1,7 +1,7 @@
 ---
 title: "Masažo istorija ir teisinė informacija Taivane"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "2025 m. rugsėjo 13 d."
 read_time: "2 min. skaitymo"
 categories:
@@ -51,11 +51,11 @@ iš tikrųjų tik asmenys su regos negalia (視障者) galėjo verstis masažuot
 
 Šios veiklos vykdymas asmens be regos negalios (非視障者) buvo neteisėtas.
 
-Šis įstatymas galiojo iki 2003 m.; tuomet ponas Lin, kuris turėjo kirpyklą,
+Šis apribojimas galiojo iki 2011 m. spalio 31 d.; per tą laikotarpį, 2003 m., ponas Lin, kuris turėjo kirpyklą,
 
 įdarbino du darbuotojus be regos negalios plaukų plovimo ir masažo paslaugoms, ir policija tai nustatė.
 
-Pagal tuometinę teisę ponui Lin ir šiems darbuotojams buvo skirta administracinė bauda (罰鍰) — 40.000, 10.000 ir 20.000 naujųjų Taivano dolerių (新臺幣, TWD) atitinkamai.
+Pagal tuometinę teisę Taipėjaus miesto Socialinių reikalų biuras (臺北市社會局) skyrė ponui Lin ir dviem darbuotojams administracines baudas (罰鍰) — 40.000, 10.000 ir 20.000 naujųjų Taivano dolerių (新臺幣, TWD) atitinkamai.
 
 Ponas Lin šią sankciją laikė labai neteisinga ir paprašė konstitucinio išaiškinimo.
 
@@ -81,7 +81,7 @@ Pavyzdžiui, klausta, ar rašytinė nuostata, kuri leido verstis masažu tik asm
 
 ir kvestionuota, ar ši nuostata iš tikrųjų padėjo apsaugoti asmenų su regos negalia darbą ir pragyvenimą.
 
-Galiausiai Konstitucinio Teismo teisėjai (大法官) pripažino prieštaraujančia Konstitucijai (違憲) nuostatą, kuri leido verstis masažuotojo veikla tik asmenims su regos negalia.
+Galiausiai Konstitucinio Teismo teisėjai (大法官) 2008 m. spalio 31 d. Teisminio juanio (司法院) išaiškinime Nr. 649 (釋字第649號) pripažino prieštaraujančia Konstitucijai (違憲) nuostatą, kuri leido verstis masažuotojo veikla tik asmenims su regos negalia, o ši nuostata neteko galios 2011 m. spalio 31 d., pasibaigus išaiškinime leistam 3 metų pereinamajam laikotarpiui.
 
 ​
 

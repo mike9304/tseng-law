@@ -1,7 +1,7 @@
 ---
 title: "Kérdések és válaszok a tajvani közúti baleseti eljárásról: helyszíni intézkedések, gondatlanság, egyezség és kártérítés"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "2025. szeptember 13."
 read_time: "12 perc olvasás"
 categories:
@@ -95,7 +95,7 @@ A polgári törvénykönyv 184. cikkén alapuló igény jogellenes jogsértést,
 
 - Sérülések: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a gyógyászati segédeszközök, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nem vagyoni kár is vizsgálható.
 - Halál: A polgári törvénykönyv 192. cikke szerint, ha van alap, vizsgálhatók a halál előtti orvosi költségek és a megnövekedett életviteli szükségletek költségei, a temetési költségek (殯葬費), valamint annak a személynek a tartási érdekkiesése (扶養利益損失), akinek törvényes tartási joga volt. A polgári törvénykönyv 194. cikke szerint egyes rokonok nem vagyoni kára is vizsgálható.
-- Vagyon: A polgári törvénykönyv 196. cikke szerint az indokolt tényleges vagyoni kár érvényesíthető, ideértve a jármű javítási költségeit vagy az értékvesztést.
+- Vagyon: A polgári törvénykönyv 196. cikke szerint a tulajdonos követelheti a jármű értékének a sérülés által okozott csökkenését; a javítási költség csak a szükséges mértékig szolgál mércéül, és ha új alkatrészek váltják fel a régieket, a kopásból eredő értékcsökkenés levonható.
 
 ## Q8. Ha a kezelés tart, hogyan kell bemutatni az orvosi költségiratokat?
 
@@ -165,13 +165,13 @@ A polgári törvénykönyv 188. cikke azt az esetet szabályozza, amikor a munka
 
 A munkáltató felhozhatja, hogy kellő gondosságot tanúsított a munkavállaló kiválasztásában és felügyeletében, vagy hogy a kár e gondosság mellett sem lett volna elkerülhető. Megfontolható a kártérítés együttes érvényesítése a munkáltatóval és a munkavállalóval szemben. A kártérítés után a munkáltató regresszt gyakorolhat a munkavállalóval szemben.
 
-Ha a munkáltató bizonyítja ezeket a mentesülési feltételeket, és a károsult az 1. bekezdés szerint nem kap kártérítést, a bíróság a polgári törvénykönyv 188. cikke 2. bekezdése szerint, a munkáltató és a károsult gazdasági helyzetét figyelembe véve, teljes vagy részleges kártérítésről rendelkezhet.
+Ha a munkáltató bizonyítja ezeket a mentesülési feltételeket, és a károsult az 1. bekezdés szerint nem kap kártérítést, a polgári törvénykönyv 188. cikke 2. bekezdése úgy rendelkezik, hogy ha a károsult kérelmezi, a bíróság a munkáltató és a károsult gazdasági helyzetét figyelembe véve kötelezheti a munkáltatót a kár egészének vagy egy részének megtérítésére.
 
 Azt, hogy kivel szemben irányul a polgári igény, el kell különíteni a büntetőjogi felelősségtől. A büntető törvénykönyv 284. cikke szerinti büntetőjogi felelősséget minden természetes személy gondossági kötelezettségének megsértése és e megsértés okozati összefüggése szerint értékelik.
 
 ## Q15. Milyen gépjármű-biztosítási szolgáltatásokat és fedezeteket kell ellenőrizni?
 
-A kötelező gépjármű-felelősségbiztosításról szóló törvény (強制汽車責任保險法) 6. cikke szerinti szerződéskötési kötelezettség elvben a jármű tulajdonosát terheli, a meghatározott esetekben pedig a jármű használóját vagy üzemeltetőjét is. Ez a rend a gépjármű-baleset miatt megsérült vagy meghalt személyre gondatlanságtól független kifizetési szerkezetet (無過失給付制度) állít fel, de ellenőrizni kell a törvény által megállapított utasok vagy a járművön kívüli harmadik személy (第三人) terjedelmét.
+A kötelező gépjármű-felelősségbiztosításról szóló törvény (強制汽車責任保險法) 6. cikke szerinti szerződéskötési kötelezettség elvben a jármű tulajdonosát terheli, a meghatározott esetekben pedig a jármű használóját vagy üzemeltetőjét is. Ez a rend a gépjármű-baleset miatt megsérült vagy meghalt személyre gondatlanságtól független kifizetési szerkezetet (無過失給付制度) állít fel, de ellenőrizni kell a törvény által megállapított utasok vagy a járművön kívüli harmadik személy (第三人) terjedelmét. A biztosító nem teljesít kifizetést, ha a sérült személy vagy más igényjogosult szándékosan, illetve bűncselekmény elkövetése közben idézte elő a balesetet (28. cikk).
 
 Egyjárműves balesetben e jármű vezetője elvben nem címzettje e jármű kötelező biztosításának. Több jármű részvételével járó balesetben azonban vannak esetek, amikor a vezető a másik érintett jármű kötelező biztosítója felé érvényesíthet szolgáltatásokat.
 

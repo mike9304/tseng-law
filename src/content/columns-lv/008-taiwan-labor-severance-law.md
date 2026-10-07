@@ -1,7 +1,7 @@
 ---
 title: "Darba tiesības Taivānā: vai likumā noteikto atlaišanas pabalstu Taivānā ir grūti saņemt?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. septembrī 2025. gadā"
 read_time: "6 min"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Vai Taivānā darbinieks, kurš aiziet pēc paša gribas, saņem atlaišanas pabalstu?"
-    a: "Nē. Atšķirībā no dažām valstīm (piemēram, Korejas) Taivānā pienākums izmaksāt likumā noteikto atlaišanas pabalstu (資遣費) rodas tikai tad, kad sabiedrība darbinieku atlaiž; ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav jāizmaksā."
+    a: "Nē. Atšķirībā no dažām valstīm (piemēram, Korejas) Taivānā pienākums izmaksāt likumā noteikto atlaišanas pabalstu (資遣費) rodas tikai tad, kad sabiedrība darbinieku atlaiž; ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav jāizmaksā. Ja tomēr pastāv Darba standartu likuma 14. pantā paredzēts pamats, piemēram, sabiedrība nemaksā algu vai pārkāpj darba tiesību aktus, un darbinieks uz šā pamata izbeidz līgumu, sabiedrībai atlaišanas pabalsts jāizmaksā."
   - q: "Vai sabiedrībai atlaišanas pabalsts jāizmaksā arī disciplinārās atlaišanas gadījumā?"
-    a: "Nē. Ja darbinieks izdara pretlikumīgu darbību, pārkāpj iekšējos darba noteikumus vai bez attaisnojoša iemesla 3 dienas pēc kārtas neierodas darbā (Darba standartu likuma 12. pants, 勞動基準法第12條), sabiedrība var atlaist bez iepriekšēja paziņojuma un atlaišanas pabalstu neizmaksāt. Turpretim ekonomiskā atlaišana (11. pants) prasa iepriekšēju paziņojumu un atlaišanas pabalsta izmaksu."
+    a: "Nē. Ja darbinieks izdara pretlikumīgu darbību, smagi pārkāpj darba līgumu vai iekšējos darba noteikumus vai bez attaisnojoša iemesla 3 dienas pēc kārtas vai 6 dienas mēneša laikā neierodas darbā (Darba standartu likuma 12. pants, 勞動基準法第12條), sabiedrība var atlaist bez iepriekšēja paziņojuma un atlaišanas pabalstu neizmaksāt. Turpretim ekonomiskā atlaišana (11. pants) prasa iepriekšēju paziņojumu un atlaišanas pabalsta izmaksu."
   - q: "Kā Taivānā aprēķina atlaišanas pabalstu?"
-    a: "Par katru noslēgtu 1 darba stāža gadu darba devējam jāizmaksā 0,5 mēneša vidējā alga kā atlaišanas pabalsts, ne vairāk kā 6 mēnešu alga. Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem."
+    a: "Par katru noslēgtu 1 darba stāža gadu darba devējam jāizmaksā 0,5 mēneša vidējā alga kā atlaišanas pabalsts, ne vairāk kā 6 mēnešu alga. Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem. Darbinieku pensiju likumu (勞工退休金條例) piemēro Taivānas pilsoņiem, ārzemniekiem, kuri ir precējušies ar Taivānas pilsoni un kuriem piešķirta uzturēšanās atļauja, ārzemniekiem, kuriem piešķirta pastāvīgā uzturēšanās atļauja, un līdzīgiem darbiniekiem (7. panta 1. daļa), kā arī no 2026. gada ārvalstu speciālistiem, kas veic profesionālu darbu (Ārvalstu speciālistu piesaistes un nodarbināšanas likuma (外國專業人才延攬及僱用法) 24. pants); citu darbinieku atlaišanas pabalsts un atlaišanas pabalsts par stāžu pirms likuma piemērošanas tiek aprēķināts pēc Darba standartu likuma 17. panta."
 ---
 
 # Darba tiesības Taivānā: vai likumā noteikto atlaišanas pabalstu Taivānā ir grūti saņemt?
@@ -36,15 +36,19 @@ Pienākums izmaksāt atlaišanas pabalstu rodas tikai tad, kad sabiedrība darbi
 
 Ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav jāizmaksā.
 
+Ja tomēr pastāv [Darba standartu likuma 14. pantā](/lv/columns/taiwan-voluntary-resignation-severance) paredzēts pamats, piemēram, sabiedrība nemaksā algu vai pārkāpj darba tiesību aktus, un darbinieks šā iemesla dēļ izbeidz līgumu, sabiedrībai atlaišanas pabalsts jāizmaksā.
+
 ​
 
 Ja tomēr darbinieks izdara pretlikumīgu darbību,
 
-pārkāpj iekšējos darba noteikumus (工作規則),
+smagi pārkāpj darba līgumu vai iekšējos darba noteikumus (工作規則),
 
-vai bez iemesla 3 dienas pēc kārtas neierodas darbā (曠工),
+vai bez iemesla 3 dienas pēc kārtas vai 6 dienas mēneša laikā neierodas darbā (曠工),
 
 sabiedrība var atlaist bez atlaišanas pabalsta izmaksas.
+
+Tomēr visos gadījumos, izņemot 3. punktu (spēkā stājies brīvības atņemšanas sods), sabiedrībai darbinieks jāatlaiž 30 dienu laikā pēc apstākļu uzzināšanas (Darba standartu likuma 12. panta 2. daļa).
 
 ​
 
@@ -53,16 +57,16 @@ Turpmākā tabula to apkopo.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Veids | Ekonomiskā atlaišana (資遣員工, 經濟解僱) | Disciplinārā atlaišana (解僱員工, 懲戒解僱) | Darbinieka brīvprātīga aiziešana (員工自請離職) |
-| Nozīme | Ja darba devējam uzņēmuma stāvokļa dēļ vajadzīga personāla korekcija, iemesls slēpjas darba devēja saimnieciskajā jomā, nevis darbinieka atbildībā. Tāpēc darba devējam jāievēro iepriekšējā paziņojuma termiņš (預告期間) un jāizmaksā atlaišanas pabalsts, lai līdzsvarotu darbinieka nelabvēlību. | Ja darbinieks izdara pretlikumīgu vai neatbilstošu darbību, darba devējs var nekavējoties izbeigt darba līgumu (勞動契約) bez iepriekšēja paziņojuma un atlaišanas pabalstu neizmaksāt. Tā ir viena no darba devēja disciplinārajām pilnvarām. | Darbinieks var jebkurā laikā izbeigt līgumu, tomēr atbilstoši nostrādātajam laikam jāievēro paziņojuma termiņš, lai darba devējs varētu veikt nodošanu un meklēt aizstājēju. |
+| Nozīme | Ja darba devējam uzņēmuma stāvokļa dēļ vajadzīga personāla korekcija, iemesls slēpjas darba devēja saimnieciskajā jomā, nevis darbinieka atbildībā. Tāpēc darba devējam jāievēro iepriekšējā paziņojuma termiņš (預告期間) un jāizmaksā atlaišanas pabalsts, lai līdzsvarotu darbinieka nelabvēlību. | Ja darbinieks izdara pretlikumīgu vai neatbilstošu darbību, darba devējs var nekavējoties izbeigt darba līgumu (勞動契約) bez iepriekšēja paziņojuma un atlaišanas pabalstu neizmaksāt. Tā ir viena no darba devēja disciplinārajām pilnvarām. | Ja darba līgums noslēgts uz nenoteiktu laiku, darbinieks var jebkurā laikā izbeigt līgumu, tomēr atbilstoši nostrādātajam laikam jāievēro paziņojuma termiņš, lai darba devējs varētu veikt nodošanu un meklēt aizstājēju. |
 | Nosacījumi | Ir  (Taivānas Darba standartu likuma 11. pants) | Ir  (Taivānas Darba standartu likuma 12. pants) | Nav |
 | Iepriekšējs paziņojums | Nepieciešams | Nav nepieciešams | Nepieciešams |
 | Grūtība darba devējam | Zemāka | Augstāka | Zemāka |
-| Vai sabiedrībai jāizmaksā atlaišanas pabalsts (資遣費) | Nepieciešams | Nav nepieciešams | Nav nepieciešams |
-|  | Taivānas Darba standartu likums, 11. pants (勞動基準法第11條): Ja neiestājas kāds no šādiem gadījumiem, darba devējs nevar izbeigt darba līgumu, pat pēc iepriekšēja paziņojuma darbiniekam.  1. Darbības apturēšana (歇業) vai uzņēmuma nodošana (轉讓)  2. Zaudējumi (虧損) vai darbības sašaurināšana (業務緊縮)  3. Nepārvarama vara prasa darbības pārtraukumu uz 1 mēnesi vai ilgāk  4. Darbības raksturs prasa personāla samazināšanu, un atlaisto nevar pārcelt citā piemērotā amatā  5. Noteikts darbinieks nevar apmierinoši veikt amatā prasīto darbu | Taivānas Darba standartu likums, 12. pants (勞動基準法第12條): Darba devējs var atlaist bez iepriekšēja paziņojuma, ja darbinieks ietilpst kādā no šādiem gadījumiem.  1. Kurš, slēdzot darba līgumu, sniedz nepatiesas ziņas, maldina darba devēju un pakļauj uzņēmumu zaudējumu riskam  2. Kurš lieto vardarbību vai smagi apvaino darba devēju, viņa ģimeni, viņa pārstāvi (代理人) vai citus līdzstrādniekus  3. Kuram ar spēkā stājušos spriedumu piespriesta brīvības atņemšana uz noteiktu laiku (有期徒刑) vai smagāks sods, bez nosacītas soda izpildes atlikšanas (緩刑) un bez atļaujas aizstāt sodu ar naudas sodu (易科罰金)  4. Smags darba līguma vai iekšējo darba noteikumu pārkāpums  5. Kurš tīši izlieto darba devēja mašīnas, rīkus, izejvielas, izstrādājumus vai citu mantu vai tīši izpauž darba devēja tehniskos un komerciālos noslēpumus un nodara darba devējam zaudējumus  6. Nepamatota neierašanās (曠工) bez attaisnojoša iemesla 3 dienas pēc kārtas vai 6 dienas vai vairāk mēnesī |  |
+| Vai sabiedrībai jāizmaksā atlaišanas pabalsts (資遣費) | Nepieciešams | Nav nepieciešams | Nav nepieciešams (izņemot gadījumu, kad darbinieks izbeidz līgumu uz 14. panta pamata) |
+|  | Taivānas Darba standartu likums, 11. pants (勞動基準法第11條): Ja neiestājas kāds no šādiem gadījumiem, darba devējs nevar izbeigt darba līgumu, pat pēc iepriekšēja paziņojuma darbiniekam.  1. Darbības apturēšana (歇業) vai uzņēmuma nodošana (轉讓)  2. Zaudējumi (虧損) vai darbības sašaurināšana (業務緊縮)  3. Nepārvarama vara prasa darbības pārtraukumu uz 1 mēnesi vai ilgāk  4. Darbības raksturs ir mainījies, personāla samazināšana ir nepieciešama, un nav piemērota amata, kurā darbinieku pārcelt  5. Darbinieks acīmredzami nespēj veikt uzticēto darbu | Taivānas Darba standartu likums, 12. pants (勞動基準法第12條): Darba devējs var atlaist bez iepriekšēja paziņojuma, ja darbinieks ietilpst kādā no šādiem gadījumiem.  1. Kurš, slēdzot darba līgumu, sniedz nepatiesas ziņas, maldina darba devēju un pakļauj uzņēmumu zaudējumu riskam  2. Kurš lieto vardarbību vai smagi apvaino darba devēju, viņa ģimeni, viņa pārstāvi (代理人) vai citus līdzstrādniekus  3. Kuram ar spēkā stājušos spriedumu piespriesta brīvības atņemšana uz noteiktu laiku (有期徒刑) vai smagāks sods, bez nosacītas soda izpildes atlikšanas (緩刑) un bez atļaujas aizstāt sodu ar naudas sodu (易科罰金)  4. Smags darba līguma vai iekšējo darba noteikumu pārkāpums  5. Kurš tīši izlieto darba devēja mašīnas, rīkus, izejvielas, izstrādājumus vai citu mantu vai tīši izpauž darba devēja tehniskos un komerciālos noslēpumus un nodara darba devējam zaudējumus  6. Nepamatota neierašanās (曠工) bez attaisnojoša iemesla 3 dienas pēc kārtas vai 6 dienas vai vairāk mēnesī |  |
 
 > Taivānā par katru noslēgtu 1 darba stāža gadu (年資)
 > darba devējam jāizmaksā 0,5 mēneša vidējā alga (平均工資) kā atlaišanas pabalsts, ne vairāk kā 6 mēnešu alga.
-> Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem.
+> Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem. Darbinieku pensiju likumu piemēro Taivānas pilsoņiem, ārzemniekiem, kuri ir precējušies ar Taivānas pilsoni un kuriem piešķirta uzturēšanās atļauja, ārzemniekiem, kuriem piešķirta pastāvīgā uzturēšanās atļauja, un līdzīgiem darbiniekiem (7. panta 1. daļa), kā arī no 2026. gada ārvalstu speciālistiem, kas veic profesionālu darbu ([Ārvalstu speciālistu piesaistes un nodarbināšanas likuma (外國專業人才延攬及僱用法) 24. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); citu darbinieku atlaišanas pabalsts un atlaišanas pabalsts par stāžu pirms likuma piemērošanas tiek aprēķināts pēc Darba standartu likuma 17. panta. Stāžs, kas ir mazāks par 1 gadu, tiek aprēķināts proporcionāli, un sabiedrībai atlaišanas pabalsts jāizmaksā 30 dienu laikā pēc līguma izbeigšanas.
 
 ​
 

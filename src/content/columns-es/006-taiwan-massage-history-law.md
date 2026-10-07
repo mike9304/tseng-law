@@ -1,7 +1,7 @@
 ---
 title: "Historia del masaje en Taiwán e información jurídica"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 de septiembre de 2025"
 read_time: "3 min de lectura"
 categories:
@@ -51,11 +51,11 @@ En realidad, solo las personas con discapacidad visual (視障者) podían dedic
 
 Que una persona sin discapacidad visual (非視障者) se dedicara a este oficio era ilegal.
 
-Esta ley se mantuvo hasta 2003. El señor Lin, que entonces gestionaba una barbería, fue el caso que la puso a prueba.
+Esta restricción se mantuvo en vigor hasta el 31 de octubre de 2011; en 2003, dentro de ese período, el señor Lin, que entonces gestionaba una barbería, fue el caso que la puso a prueba.
 
 Empleó a dos trabajadores sin discapacidad visual para prestar servicios de lavado de cabello y masaje, y la policía lo detectó.
 
-Según la ley de entonces, al señor Lin y a los dos trabajadores se les impuso una multa administrativa (罰鍰) de 40.000, 10.000 y 20.000 dólares de Taiwán (新臺幣, TWD), respectivamente.
+Según la ley de entonces, la Oficina de Asuntos Sociales de la ciudad de Taipéi (臺北市政府社會局) impuso una multa administrativa (罰鍰) de 40.000 dólares de Taiwán (新臺幣, TWD) al señor Lin y de 10.000 y 20.000 dólares de Taiwán a los dos trabajadores, respectivamente.
 
 El señor Lin consideró esa sanción muy injusta y solicitó una interpretación constitucional.
 
@@ -81,7 +81,7 @@ Por ejemplo, se pensó si la norma escrita que solo permitía a las personas con
 
 También se cuestionó si esa norma había contribuido realmente a proteger el empleo y la subsistencia de las personas con discapacidad visual.
 
-Al final, los Grandes Jueces (大法官) declararon inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje.
+Al final, en la Interpretación n.º 649 (釋字第649號) del Yuan Judicial (司法院), de 31 de octubre de 2008, los Grandes Jueces (大法官) declararon inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje, y el precepto dejó de tener efecto el 31 de octubre de 2011, al terminar el plazo de gracia de 3 años que la interpretación concedió.
 
 ​
 

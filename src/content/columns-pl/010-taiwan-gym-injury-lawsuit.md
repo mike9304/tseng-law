@@ -1,7 +1,7 @@
 ---
 title: "Odszkodowanie za uraz na siłowni na Tajwanie: sprawa pierwszej instancji, terminy, dowody i składniki odszkodowania"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 września 2025"
 read_time: "10 min czytania"
 categories:
@@ -19,7 +19,7 @@ Na podstawie sprawy, w której koreański student doznał urazu, gdy otrzymywał
 
 Wypadek nastąpił na siłowni w Taichung (臺中), podczas treningu martwego ciągu (硬舉) prowadzonego przez trenera. Po urazie nie wystarczy poprzestać na samym fakcie, że wypadek miał miejsce wewnątrz siłowni; należy razem zbadać doświadczenie sportowe i stan zdrowia użytkownika, rodzaj ćwiczenia i obciążenie, wyjaśnienia i wskazówki trenera, ruch i reakcję w tamtym momencie, związek przyczynowy (因果關係) między urazem a ćwiczeniem oraz dokumenty, które wykazują szkodę.
 
-Byłam pełnomocnikiem procesowym (訴訟代理人) powoda — koreańskiego studenta. Sąd okręgowy w Taichung 24 stycznia 2022 r., w wyroku pierwszej instancji w sprawie konsumenckiej nr 7 roku 109 kalendarza Republiki Chińskiej (109年度消字第7號), nakazał pozwanemu zapłacić [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) oraz odsetki wymienione w wyroku.
+Byłam pełnomocnikiem procesowym (訴訟代理人) powoda — koreańskiego studenta. Sąd okręgowy w Taichung 24 stycznia 2022 r., w wyroku pierwszej instancji w sprawie konsumenckiej nr 7 roku 109 kalendarza Republiki Chińskiej (109年度消字第7號), nakazał spółce prowadzącej siłownię, będącej jednym z pozwanych, zapłacić [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) oraz odsetki wymienione w wyroku.
 
 Następnie prasa podała, że strony zawarły ugodę (和解) w drugiej instancji. Sam oficjalny wyrok pierwszej instancji nie pozwala potwierdzić wyniku drugiej instancji ani kwoty ugody; ugody podanej w prasie nie należy traktować jako ustalonego zakończenia sprawy w pierwszej instancji.
 
@@ -67,7 +67,7 @@ Poniższy tekst jest ogólną informacją o sporach o uraz na siłowni na Tajwan
 
 ## 1. Po urazie na siłowni na Tajwanie, jakie procedury prawne można rozważyć?
 
-[Art. 7 tajwańskiej ustawy o ochronie konsumentów (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanowi, że gdy przedsiębiorstwo świadczy usługę, musi zapewnić poziom bezpieczeństwa, jakiego można rozsądnie oczekiwać według kryterium zawodowego lub technicznego z chwili świadczenia.
+[Art. 7 tajwańskiej ustawy o ochronie konsumentów (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanowi, że gdy przedsiębiorstwo świadczy usługę, musi zapewnić poziom bezpieczeństwa, jakiego można rozsądnie oczekiwać według kryterium zawodowego lub technicznego z chwili świadczenia. Ust. 3 tego samego artykułu stanowi, że przedsiębiorca, który narusza te wymogi i wyrządza szkodę konsumentowi lub osobie trzeciej, ponosi solidarną odpowiedzialność odszkodowawczą, a nawet jeśli udowodni, że nie ponosi winy, sąd może jedynie złagodzić jego odpowiedzialność.
 
 Nie oznacza to, że odpowiedzialność przedsiębiorstwa lub trenera jest uznawana za każdym razem, gdy uraz nastąpi na siłowni. Należy oceniać w każdej sprawie osobno, jaki obowiązek staranności konkretnie istniał, czy został naruszony, czy jest związek przyczynowy między naruszeniem a urazem, czy powstała rzeczywista szkoda, jakie zarzuty ma strona przeciwna i czy istnieje dowód na poparcie każdego twierdzenia i każdego zarzutu.
 

@@ -1,7 +1,7 @@
 ---
 title: "Frågor och svar om hantering av trafikolyckor i Taiwan: åtgärder på platsen, vårdslöshet, förlikning och skadestånd"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "12 minuters läsning"
 categories:
@@ -95,7 +95,7 @@ Kravet grundat på artikel 184 i civillagen förutsätter en olaglig kränkning 
 
 - Skador: Enligt artikel 193 i civillagen kan prövas de nödvändiga sjukvårdskostnaderna (醫療費用), de ökade levnadskostnaderna såsom vårdkostnader (看護費用), resekostnader för behandling (就醫交通費) och hjälpmedel, samt inkomstförlust (收入損失) genom faktisk arbetsoförmåga och nedsättning av arbetsförmågan (勞動能力減損). Enligt artikel 195 i civillagen kan även ideell skada prövas.
 - Dödsfall: Enligt artikel 192 i civillagen kan, när det är befogat, prövas sjukvårdskostnader före dödsfallet och ökade levnadskostnader, begravningskostnader (殯葬費) och förlust av underhåll (扶養利益損失) för den som hade laglig rätt till underhåll. Enligt artikel 194 i civillagen kan även ideell skada för vissa anhöriga prövas.
-- Förmögenhet: Enligt artikel 196 i civillagen kan den styrkta faktiska förmögenhetsskadan krävas, inbegripet kostnader för reparation av fordonet eller värdeförlust.
+- Förmögenhet: Enligt artikel 196 i civillagen kan ägaren kräva ersättning för den värdeminskning av fordonet som skadan har orsakat; reparationskostnaderna tjänar som mått endast i den mån de är nödvändiga, och när nya delar ersätter gamla kan avskrivning dras av (nytt för gammalt).
 
 ## Q8. Om behandlingen fortsätter, hur ska handlingar om sjukvårdskostnader ges in?
 
@@ -165,13 +165,13 @@ Artikel 188 i civillagen reglerar det fall där den anställda olagligen orsakar
 
 Arbetsgivaren kan invända att denne har iakttagit tillbörlig aktsamhet vid urval och tillsyn av den anställda, eller att skadan inte hade kunnat undvikas ens vid iakttagande av denna aktsamhet. Det kan komma i fråga att kräva skadestånd gemensamt mot arbetsgivaren och den anställda. Efter att ha ersatt kan arbetsgivaren utöva regress mot den anställda.
 
-Om arbetsgivaren styrker dessa befrielsevillkor och den skadade inte får ersättningen enligt 1:a stycket, kan domstolen, enligt artikel 188, 2:a stycket, i civillagen, förordna hel eller delvis ersättning med hänsyn till arbetsgivarens och den skadades ekonomiska läge.
+Om arbetsgivaren styrker dessa befrielsevillkor och den skadade inte får ersättningen enligt 1:a stycket, kan domstolen, enligt artikel 188, 2:a stycket, i civillagen, på den skadades ansökan och med hänsyn till arbetsgivarens och den skadades ekonomiska läge förordna att arbetsgivaren ska ersätta skadan helt eller delvis.
 
 Frågan om mot vem det civilrättsliga kravet riktas ska skiljas från det straffrättsliga ansvaret. Det straffrättsliga ansvaret enligt artikel 284 i strafflagen bedöms utifrån varje fysisk persons åsidosättande av aktsamhetsplikten och orsakssambandet för detta åsidosättande.
 
 ## Q15. Vilka ersättningar och täckningar i motorfordonsförsäkringen ska prövas?
 
-Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsansvarsförsäkring (強制汽車責任保險法) åvilar i princip fordonets ägare och, i de fall som föreskrivs, också fordonets brukare eller förvaltare. Denna ordning inrättar ett system för ersättning oberoende av vållande (無過失給付制度) för den som skadas eller avlider genom en motorfordonsolycka, men det omfång av passagerare eller tredje man (第三人) utanför fordonet som lagen fastställer måste prövas.
+Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsansvarsförsäkring (強制汽車責任保險法) åvilar i princip fordonets ägare och, i de fall som föreskrivs, också fordonets brukare eller förvaltare. Denna ordning inrättar ett system för ersättning oberoende av vållande (無過失給付制度) för den som skadas eller avlider genom en motorfordonsolycka, men det omfång av passagerare eller tredje man (第三人) utanför fordonet som lagen fastställer måste prövas. Försäkringsbolaget betalar ingen ersättning om den skadade eller någon annan ersättningsberättigad har orsakat olyckan uppsåtligen eller vid utförandet av ett brott (artikel 28).
 
 Vid en olycka med ett enda fordon är föraren av det fordonet i allmänhet inte berättigad till ersättning från det fordonets obligatoriska försäkring. Dock, vid en olycka där flera fordon deltar, finns fall där föraren kan kräva ersättning av den obligatoriska försäkringsgivaren för ett annat inblandat fordon.
 

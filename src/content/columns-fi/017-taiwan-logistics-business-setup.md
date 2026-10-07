@@ -1,7 +1,7 @@
 ---
 title: "Logistiikka Taiwanissa ja lupa moottoriajoneuvojen tavaraliikenteeseen (汽車貨運業): uusi perustaminen, yritysosto ja luovutus"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. syyskuuta 2025"
 read_time: "12 min lukuaika"
 categories:
@@ -118,7 +118,7 @@ On vahvistettava elinkeinoluvan pätevyys elinkeinonharjoittajalla, joka vastaan
 
 Vaikka ulkomaalaisesta tulee osakkeenomistaja tai sijoittaja kohdeyhtiössä, tämä seikka ei itsessään anna oikeutta työskennellä eikä oleskeluoikeutta Taiwanissa. Jos hän Taiwanissa harjoittaa päivittäistä työtä, kuten yhtiön johtamista, myyntiä, ajoneuvojen sijoittelua ja asiakaspalvelua, hänen on ennen työn alkamista vahvistettava, onko tosiasialliseen tehtävään sopiva työlupa tarpeen, ja käsiteltävä myöhempi oleskelumenettely erikseen.
 
-Työhön ilman lupaa voidaan soveltaa hallinnollista sakkoa ja määräystä lähteä Taiwanista (限令出國). Sisäministeriön maahanmuuttoviraston (內政部移民署) voimassa oleva hallinnollinen ohje maahantulokiellosta (禁止入國) säätää yleensä lainvastaisesta työstä 3 vuoden maahantulokiellon, mutta vapautuksen tai määräajan lyhentämisen vaatimuksia, jotka sama ohje säätää, voidaan soveltaa. Tulosta ei ratkaista mekaanisesti pelkästään siksi, että 3. osapuolen ilmoitus on olemassa, ja toimivaltainen viranomainen tutkii tosiseikat, sovellettavat normit ja olosuhteet kussakin asiassa.
+Työllisyyspalvelulain (就業服務法) 68 artiklan mukaan ulkomaalaiselle, joka työskentelee ilman lupaa, määrätään hallinnollinen sakko ja hänet on määrättävä viipymättä lähtemään Taiwanista (限令出國), eikä hän saa enää työskennellä Taiwanissa. Sisäministeriön maahanmuuttoviraston (內政部移民署) voimassa oleva hallinnollinen ohje maahantulokiellosta (禁止入國) säätää yleensä lainvastaisesta työstä 3 vuoden maahantulokiellon, mutta vapautuksen tai määräajan lyhentämisen vaatimuksia, jotka sama ohje säätää, voidaan soveltaa. Tulosta ei ratkaista mekaanisesti pelkästään siksi, että 3. osapuolen ilmoitus on olemassa, ja toimivaltainen viranomainen tutkii tosiseikat, sovellettavat normit ja olosuhteet kussakin asiassa.
 
 ## Viralliset lähteet
 
@@ -136,6 +136,7 @@ Työhön ilman lupaa voidaan soveltaa hallinnollista sakkoa ja määräystä lä
 - [Talousministeriö: ohje hakemuksesta ulkomaiseen sijoitukseen](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Työllisyyspalvelulain (就業服務法) 43 artikla](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Työllisyyspalvelulain 68 artikla](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Työllisyyspalvelulain 68 artikla (lakien ja asetusten tietokanta)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Sisäministeriön maahanmuuttovirasto: hallinnollinen ohje maahantulokiellon kestosta](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Liittyvät oppaat

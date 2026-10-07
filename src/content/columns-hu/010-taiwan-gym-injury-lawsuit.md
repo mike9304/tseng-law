@@ -1,7 +1,7 @@
 ---
 title: "Kártérítés edzőtermi sérülésért Tajvanon: elsőfokú ügy, határidők, bizonyítékok és kártérítési tételek"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "2025. szeptember 13."
 read_time: "10 perc olvasás"
 categories:
@@ -19,7 +19,7 @@ Abból az ügyből kiindulva, amelyben egy koreai egyetemi hallgató megsérült
 
 A baleset Tajcsung (臺中) egyik edzőtermében történt, az edző által vezetett felhúzás (硬舉) edzés közben. A sérülés után nem elég pusztán azt rögzíteni, hogy a baleset az edzőterem belsejében történt; együtt kell vizsgálni a vendég edzettségét, sporttapasztalatát és egészségi állapotát, a gyakorlat fajtáját és a terhelést, az edző ismertetéseit és útmutatásait, az akkori mozdulatot és reakciót, a sérülés és a gyakorlat közötti okozati összefüggést (因果關係), valamint a kárt alátámasztó iratokat.
 
-A felperes, a koreai hallgató ügyvédnőjeként (訴訟代理人) jártam el. A tajcsungi járásbíróság 2022. január 24-én, a Kínai Köztársaság (Tajvan) 109. évének (2020) fogyasztói 7. számú ügyében (民國109年消字第7號) hozott elsőfokú ítéletében elrendelte, hogy az alperes fizessen [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) összeget, valamint az ítéletben feltüntetett kamatot.
+A felperes, a koreai hallgató ügyvédnőjeként (訴訟代理人) jártam el. A tajcsungi járásbíróság 2022. január 24-én, a Kínai Köztársaság (Tajvan) 109. évének (2020) fogyasztói 7. számú ügyében (民國109年消字第7號) hozott elsőfokú ítéletében elrendelte, hogy az edzőtermet üzemeltető társaság, az alperesek egyike, fizessen [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) összeget, valamint az ítéletben feltüntetett kamatot.
 
 Ezt követően a sajtó arról számolt be, hogy a felek fellebbvitelen egyezséget (和解) kötöttek. Maga a hivatalos elsőfokú ítélet nem teszi lehetővé a fellebbvitel kimenetelének vagy az egyezségi összegnek az ellenőrzését; a sajtóban közölt egyezséget nem szabad az elsőfokú ítélet megerősített lezárásának tekinteni.
 
@@ -67,7 +67,7 @@ Az alábbiak általános információk a tajvani edzőtermi sérülési viták i
 
 ## 1. Edzőtermi sérülés után Tajvanon milyen jogi eljárások vizsgálhatók?
 
-A [tajvani fogyasztóvédelmi törvény (消費者保護法) 7. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) úgy rendelkezik, hogy amikor a vállalkozás szolgáltatást nyújt, a szolgáltatásnak a nyújtás idején érvényes szakmai vagy műszaki mérce szerint észszerűen elvárható biztonsággal kell rendelkeznie.
+A [tajvani fogyasztóvédelmi törvény (消費者保護法) 7. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) úgy rendelkezik, hogy amikor a vállalkozás szolgáltatást nyújt, a szolgáltatásnak a nyújtás idején érvényes szakmai vagy műszaki mérce szerint észszerűen elvárható biztonsággal kell rendelkeznie. Ugyanezen cikk 3. bekezdése szerint az a vállalkozás, amely e követelmények megsértésével kárt okoz a fogyasztónak vagy harmadik személynek, egyetemlegesen felel a kártérítésért, és még ha bizonyítja is, hogy nem terheli vétkesség, a bíróság legfeljebb csak mérsékelheti a felelősségét.
 
 Ez nem jelenti azt, hogy a vállalkozás vagy az edző felelőssége minden alkalommal fennáll, amikor sérülés történik az edzőteremben. Ügyenként kell értékelni, milyen gondossági kötelezettség állt fenn konkrétan, megsértették-e, van-e okozati összefüggés a megsértés és a sérülés között, keletkezett-e tényleges kár, milyen kifogásai vannak a másik félnek, és van-e bizonyíték, amely minden állítást és minden kifogást alátámaszt.
 

@@ -1,7 +1,7 @@
 ---
 title: "Küsimused ja vastused liiklusõnnetuste käsitlemise kohta Taiwanis: toimingud sündmuskohal, hooletus, kokkulepe ja kahjuhüvitis"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "12 min lugemist"
 categories:
@@ -95,7 +95,7 @@ Nõue tsiviilseadustiku (民法) artikli 184 järgi eeldab õigusvastast õiguse
 
 - Kehavigastus: Tsiviilseadustiku artikli 193 järgi saab uurida vajalikke ravikulusid (醫療費用), hooldust (看護費用), sõitu ravile (就醫交通費), abivahendeid ja muid suurenenud elamiskulusid ning palgakaotust (收入損失) tegelikust töövõimetusest ja töövõime alanemisest (勞動能力減損). Tsiviilseadustiku artikli 195 järgi saab uurida ka mittevaralist kahju.
 - Surm: Tsiviilseadustiku artikli 192 järgi saab, niivõrd kui see kohaldub, uurida ravikulusid ja suurenenud elamiskulusid enne surma, matusekulusid (殯葬費) ja ülalpidamise kaotust (扶養利益損失) sellele, kellel oli õiguslik ülalpidamisnõue. Tsiviilseadustiku artikli 194 järgi saab uurida ka teatud sugulaste mittevaralist kahju.
-- Vara: Tsiviilseadustiku artikli 196 järgi saab nõuda tõendatud tegelikke varalisi kahjusid, sealhulgas sõiduki parandust või väärtuse alanemist.
+- Vara: Tsiviilseadustiku artikli 196 järgi võib omanik nõuda kahjustuse tõttu tekkinud sõiduki väärtuse langust; parandamiskulud on mõõdupuuks ainult niivõrd, kuivõrd see on vajalik, ja kui vanad osad asendatakse uutega, võib maha arvata kulumise.
 
 ## Q8. Kuidas tuleb ravikulude dokumendid esitada, kui ravi jätkub?
 
@@ -165,13 +165,13 @@ Tsiviilseadustiku (民法) artikkel 188 käsitleb juhtu, milles töötaja ülesa
 
 Tööandja võib väita, et ta on järginud vajalikku hoolsust töötaja valimisel ja järelevalvel, või et kahju ei oleks sellise hoolsusega saanud vältida. Tööandja ja töötaja võib teatud eeldustel võtta koos hüvitamisvastutusele. Pärast hüvitise täitmist võib tööandja taotleda regressi töötajalt.
 
-Kui tööandja tõendab nimetatud vabastamise tingimused nii, et kannatanu ei saa hüvitist lõike 1 järgi, võib kohus tsiviilseadustiku (民法) artikli 188 lõike 2 järgi, arvestades tööandja ja kannatanu majanduslikku seisundit, määrata täieliku või osalise hüvitise.
+Kui tööandja tõendab nimetatud vabastamise tingimused nii, et kannatanu ei saa hüvitist lõike 1 järgi, võib kohus tsiviilseadustiku (民法) artikli 188 lõike 2 järgi kannatanu taotlusel, arvestades tööandja ja kannatanu majanduslikku seisundit, kohustada tööandjat kahju täielikult või osaliselt hüvitama.
 
 Tsiviilkostjate valik ja kriminaalvastutus tuleb eristada. Kriminaalvastutus kriminaalkoodeksi (刑法) artikli 284 järgi hinnatakse iga füüsilise isiku hoolsuskohustuse rikkumise ja selle rikkumise põhjusliku seose järgi.
 
 ## Q15. Millised mootorsõiduki kindlustuse hüvitised ja kaitse tuleb selgitada?
 
-Kindlustamiskohustus mootorsõidukite kohustusliku vastutuskindlustuse seaduse (強制汽車責任保險法) artikli 6 järgi langeb põhimõtteliselt sõiduki omanikule ja teatud juhtudel ka sõiduki kasutajale või valdajale. See süsteem loob hooletusest sõltumatu hüvitamissüsteemi (無過失給付制度) isikutele, kes on saanud kehavigastuse või surnud mootorsõidukiõnnetustes; seadusjärgne ring reisijatest või sõidukivälistest kolmandatest isikutest (第三人) tuleb selgitada.
+Kindlustamiskohustus mootorsõidukite kohustusliku vastutuskindlustuse seaduse (強制汽車責任保險法) artikli 6 järgi langeb põhimõtteliselt sõiduki omanikule ja teatud juhtudel ka sõiduki kasutajale või valdajale. See süsteem loob hooletusest sõltumatu hüvitamissüsteemi (無過失給付制度) isikutele, kes on saanud kehavigastuse või surnud mootorsõidukiõnnetustes; seadusjärgne ring reisijatest või sõidukivälistest kolmandatest isikutest (第三人) tuleb selgitada. Kindlustusandja ei maksa hüvitist, kui kannatanu või muu hüvitisenõude esitaja on õnnetuse põhjustanud tahtlikult või kuriteo toimepanemise käigus (artikkel 28).
 
 Ühe sõiduki üksikõnnetustes ei ole selle juht tavaliselt kõnealuse sõiduki kohustusliku kindlustuse hüvitise saaja. Õnnetustes, milles on mitu sõidukit, võib juht siiski nõuda hüvitist teise osalise sõiduki kohustuslikult kindlustajalt.
 

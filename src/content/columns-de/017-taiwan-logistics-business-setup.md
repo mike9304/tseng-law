@@ -1,7 +1,7 @@
 ---
 title: "Logistikgeschäft in Taiwan und Genehmigung des Kraftfahrzeug-Güterverkehrs (汽車貨運業): Neugründung, Übernahme und Beauftragung"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. September 2025"
 read_time: "12 Minuten Lesezeit"
 categories:
@@ -118,7 +118,7 @@ Wirksamkeit und Genehmigungsrahmen der Betriebszulassung des beauftragten Untern
 
 Auch wenn eine ausländische Person Gesellschafter oder Investor der Zielgesellschaft wird, erlangt sie allein dadurch weder das Recht, in Taiwan zu arbeiten, noch einen Aufenthaltsstatus. Werden Geschäftsleitung, Vertrieb, Disposition, Kundenbetreuung und ähnliche Arbeit in Taiwan ausgeübt, ist vor Beginn der Arbeit zu prüfen, ob eine zur tatsächlichen Funktion passende Arbeitserlaubnis erforderlich ist, und das nachfolgende Aufenthaltsverfahren gesondert durchzuführen.
 
-Ungenehmigte Arbeit kann Verwaltungsbuße und Ausreiseanordnung (限令出國) nach sich ziehen. Die geltende Arbeitshilfe der Einwanderungsbehörde des Innenministeriums (內政部移民署) zur Einreisesperre (禁止入國) sieht für ungesetzliche Arbeit in der Regel eine Einreisesperre von 3 Jahren vor; die in derselben Hilfe bestimmten Voraussetzungen der Befreiung oder Verkürzung können Anwendung finden. Allein die Tatsache einer Meldung Dritter bestimmt das Ergebnis nicht mechanisch; die zuständige Behörde prüft Sachverhalt, anwendbares Recht und die einzelnen Umstände.
+Eine ausländische Person, die ohne Genehmigung arbeitet, unterliegt einer Verwaltungsbuße und ist unverzüglich zur Ausreise aus Taiwan aufzufordern (限令出國); sie darf in Taiwan nicht wieder arbeiten (Artikel 68 des Beschäftigungsdienstgesetzes, 就業服務法). Die geltende Arbeitshilfe der Einwanderungsbehörde des Innenministeriums (內政部移民署) zur Einreisesperre (禁止入國) sieht für ungesetzliche Arbeit in der Regel eine Einreisesperre von 3 Jahren vor; die in derselben Hilfe bestimmten Voraussetzungen der Befreiung oder Verkürzung können Anwendung finden. Allein die Tatsache einer Meldung Dritter bestimmt das Ergebnis nicht mechanisch; die zuständige Behörde prüft Sachverhalt, anwendbares Recht und die einzelnen Umstände.
 
 ## Amtliche Quellen
 
@@ -136,6 +136,7 @@ Ungenehmigte Arbeit kann Verwaltungsbuße und Ausreiseanordnung (限令出國) n
 - [Wirtschaftsministerium: Hinweis zum Antrag auf ausländische Investition](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Artikel 43 des Beschäftigungsdienstgesetzes (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Artikel 68 des Beschäftigungsdienstgesetzes](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Artikel 68 des Beschäftigungsdienstgesetzes (Datenbank für Gesetze und Verordnungen)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Einwanderungsbehörde des Innenministeriums: Verwaltungsleitfaden zur Dauer der Einreisesperre](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Zugehörige Hinweise

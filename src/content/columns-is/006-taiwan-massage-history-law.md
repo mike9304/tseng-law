@@ -1,7 +1,7 @@
 ---
 title: "Saga og lagaleg staða nudds á Taívan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "3 mín. lestur"
 categories:
@@ -51,11 +51,11 @@ máttu í raun aðeins sjónskertir (視障者) stunda nuddstarf (按摩業).
 
 Að einhver án sjónskerðingar (非視障者) stundaði þetta starf var ólögmætt.
 
-Þessi lög héldust til 2003; þá réð hr. Lin, sem rak rakarastofu,
+Þessi takmörkun gilti til 31. október 2011; á því tímabili, árið 2003, réð hr. Lin, sem rak rakarastofu,
 
 starfsfólk án sjónskerðingar til hárþvottar- og nuddþjónustu, og lögreglan staðfesti það.
 
-Samkvæmt þá gildandi rétti fengu hr. Lin og starfsfólkið stjórnvaldssekt (罰鍰) að fjárhæð TWD 40.000, TWD 10.000 og TWD 20.000 í nýjum taívönskum dollurum (新臺幣).
+Samkvæmt þá gildandi rétti lagði félagsmálaskrifstofa Taípei-borgar (臺北市社會局) stjórnvaldssekt (罰鍰) að fjárhæð TWD 40.000 á hr. Lin og TWD 10.000 og TWD 20.000 á starfsmennina tvo, hvorn um sig, í nýjum taívönskum dollurum (新臺幣).
 
 Hr. Lin taldi þessa refsingu mjög ósanngjarna og bað um stjórnskipunarskýringu.
 
@@ -81,7 +81,7 @@ Til dæmis var spurt hvort skráða reglan, sem aðeins leyfði sjónskertum nud
 
 og dregið í efa hvort þessi regla hefði raunverulega stuðlað að vernd vinnu og tilveru sjónskertra.
 
-Að lokum lýstu stjórnlagadómarar (大法官) ákvæðið, sem aðeins leyfði sjónskertum að stunda nuddstarf, andstætt stjórnarskrá (違憲).
+Að lokum lýstu stjórnlagadómarar (大法官) í skýringu dómsvaldsráðsins (司法院) nr. 649 (釋字第649號) frá 31. október 2008 ákvæðið, sem aðeins leyfði sjónskertum að stunda nuddstarf, andstætt stjórnarskrá (違憲), og ákvæðið féll úr gildi 31. október 2011, við lok 3 ára aðlögunartímans sem skýringin heimilaði.
 
 ​
 

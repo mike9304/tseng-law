@@ -1,7 +1,7 @@
 ---
 title: "Spørsmål og svar om behandlingen av trafikkulykker i Taiwan: tiltak på stedet, uaktsomhet, forlik og erstatning"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "12 minutter lesetid"
 categories:
@@ -95,7 +95,7 @@ Krav ifølge artikkel 184 i sivilloven (民法) forutsetter rettsstridig krenkel
 
 - Tilskadekomst: Ifølge artikkel 193 i sivilloven kan nødvendige behandlingsutgifter (醫療費用), i livet forhøyede behovsutgifter som pleie (看護費用), transport til behandling (就醫交通費) og hjelpemidler samt inntektstap (收入損失) ved faktisk arbeidsudyktighet og nedsettelse av arbeidsevnen (勞動能力減損) undersøkes. Ifølge artikkel 195 i sivilloven kan også ikke-økonomisk skade undersøkes.
 - Dødsfall: Ifølge artikkel 192 i sivilloven kan, for så vidt det finner anvendelse, behandlingsutgifter og forhøyede livsbehovsutgifter før dødsfallet, begravelsesutgifter (殯葬費) og tap av forsørgelse (扶養利益損失) for den som rettslig hadde krav på forsørgelse, undersøkes. Ifølge artikkel 194 i sivilloven kan også ikke-økonomisk skade for visse slektninger undersøkes.
-- Formue: Ifølge artikkel 196 i sivilloven kan beviste faktiske formuesskader, herunder kjøretøyreparasjon eller verdiforringelse, kreves.
+- Formue: Ifølge artikkel 196 i sivilloven kan eieren kreve erstatning for verdiforringelsen av kjøretøyet som skaden har forårsaket; reparasjonskostnadene tjener bare som målestokk i den grad de er nødvendige, og der nye deler erstatter gamle, kan avskrivning trekkes fra.
 
 ## Q8. Hvordan skal dokumenter om behandlingsutgifter innleveres når behandlingen fortsetter?
 
@@ -165,13 +165,13 @@ Artikkel 188 i sivilloven (民法) behandler de tilfellene der en ansatt under u
 
 Arbeidsgiveren kan innvende at vedkommende har iakttatt den nødvendige aktpågivenhet ved utvelgelse og tilsyn med den ansatte, eller at skaden heller ikke ved slik aktpågivenhet ville kunne unngås. Det kan undersøkes å gjøre arbeidsgiver og ansatt i fellesskap erstatningsansvarlige. Etter erleggelse av erstatningen kan arbeidsgiveren søke regress hos den ansatte.
 
-Beviser arbeidsgiveren de nevnte fritaksvilkår, slik at den skadelidte ikke mottar erstatning ifølge ledd 1, kan retten ifølge artikkel 188 ledd 2 i sivilloven (民法) ut fra arbeidsgiverens og den skadelidtes økonomiske stilling pålegge full eller delvis erstatning.
+Beviser arbeidsgiveren de nevnte fritaksvilkår, slik at den skadelidte ikke mottar erstatning ifølge ledd 1, kan retten ifølge artikkel 188 ledd 2 i sivilloven (民法) etter begjæring fra den skadelidte, ut fra arbeidsgiverens og den skadelidtes økonomiske stilling, pålegge arbeidsgiveren å betale full eller delvis erstatning.
 
 Fastleggelsen av de sivilrettslige kravsmotparter og det strafferettslige ansvar skal skilles. Det strafferettslige ansvar ifølge artikkel 284 i straffeloven (刑法) bedømmes etter tilsidesettelse av hver fysisk persons aktpågivenhetsplikt og årsakssammenhengen av denne tilsidesettelsen.
 
 ## Q15. Hvilke ytelser og dekninger i motorkjøretøyforsikringen skal undersøkes?
 
-Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring for motorkjøretøyer (強制汽車責任保險法) rammer i prinsippet kjøretøyets eier og i bestemte tilfeller også bruker eller forvalter av kjøretøyet. Dette systemet innretter en uaktsomhetsuavhengig ytelsesstruktur (無過失給付制度) for personer som er kommet til skade eller er avgått ved døden ved motorkjøretøyulykker; den lovbestemte krets av passasjerer eller av tredjemann (第三人) utenfor kjøretøyet skal undersøkes.
+Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring for motorkjøretøyer (強制汽車責任保險法) rammer i prinsippet kjøretøyets eier og i bestemte tilfeller også bruker eller forvalter av kjøretøyet. Dette systemet innretter en uaktsomhetsuavhengig ytelsesstruktur (無過失給付制度) for personer som er kommet til skade eller er avgått ved døden ved motorkjøretøyulykker; den lovbestemte krets av passasjerer eller av tredjemann (第三人) utenfor kjøretøyet skal undersøkes. Forsikringsselskapet utbetaler ikke ytelser dersom den skadelidte eller en annen berettiget har forårsaket ulykken forsettlig eller under utførelsen av en straffbar handling (artikkel 28).
 
 Ved eneulykker med 1 kjøretøy er dets fører som regel ikke ytelsesmottaker av den obligatoriske forsikringen for det kjøretøyet. Ved ulykker med flere kjøretøyer kan føreren imidlertid kreve ytelser hos den obligatoriske forsikringsgiveren for et annet involvert kjøretøy.
 

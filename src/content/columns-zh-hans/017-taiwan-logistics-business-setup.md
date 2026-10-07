@@ -1,7 +1,7 @@
 ---
 title: "台湾物流事业与汽车货运业许可：新设、收购与委托"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "2025年9月13日"
 read_time: "12分钟阅读"
 categories:
@@ -118,7 +118,7 @@ faq:
 
 即使外国人成为目标公司股东或投资人，仅凭该事实也不会赋予其在台湾工作的权利或居留地位。若在台湾从事公司管理、销售、车辆调派及客户应对等日常工作，须在开始工作前确认是否需要符合实际职务的工作许可，并另行办理其后的居留程序。
 
-无许可工作可能适用行政罚锾及限令出国。内政部移民署现行关于禁止入境期间的指引，对不法工作一般订有3年禁止入境期间，但同指引所定免除或缩短期间的要件可能适用。不会仅因有第三人检举，结果就当然确定；主管机关仍审查各案事实、适用规范及具体情事。
+未经许可在台湾工作的外国人，应处行政罚锾，并应立即限令出国，且不得再在台湾工作（就业服务法第68条）。内政部移民署现行关于禁止入境期间的指引，对不法工作一般订有3年禁止入境期间，但同指引所定免除或缩短期间的要件可能适用。不会仅因有第三人检举，结果就当然确定；主管机关仍审查各案事实、适用规范及具体情事。
 
 ## 官方来源
 
@@ -136,6 +136,7 @@ faq:
 - [经济部：侨外投资申请指引](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [就业服务法第43条](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [就业服务法第68条](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [就业服务法第68条（全国法规数据库）](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [内政部移民署：禁止入境期间行政指引](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## 相关指引

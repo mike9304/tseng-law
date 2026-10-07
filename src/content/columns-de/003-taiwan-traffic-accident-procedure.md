@@ -1,7 +1,7 @@
 ---
 title: "Fragen und Antworten zur Behandlung von Verkehrsunfällen in Taiwan: Maßnahmen am Unfallort, Fahrlässigkeit, Vergleich und Schadensersatz"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. September 2025"
 read_time: "12 Minuten Lesezeit"
 categories:
@@ -95,7 +95,7 @@ Ansprüche nach Artikel 184 des Zivilgesetzbuchs (民法) setzen rechtswidrige R
 
 - Verletzung: Nach Artikel 193 des Zivilgesetzbuchs können erforderliche Heilbehandlungskosten (醫療費用), im Leben erhöhte Bedarfskosten wie Pflege (看護費用), Fahrtkosten zur Behandlung (就醫交通費) und Hilfsmittel sowie Verdienstausfall (收入損失) durch tatsächliche Arbeitsunfähigkeit und Minderung der Arbeitsfähigkeit (勞動能力減損) geprüft werden. Nach Artikel 195 des Zivilgesetzbuchs kann auch immaterieller Schaden geprüft werden.
 - Tod: Nach Artikel 192 des Zivilgesetzbuchs können, soweit einschlägig, Heilbehandlungskosten und erhöhte Lebensbedarfskosten vor dem Tod, Bestattungskosten (殯葬費) und Unterhaltsverlust (扶養利益損失) der gesetzlich Unterhaltsberechtigten geprüft werden. Nach Artikel 194 des Zivilgesetzbuchs kann auch immaterieller Schaden bestimmter Verwandter geprüft werden.
-- Vermögen: Nach Artikel 196 des Zivilgesetzbuchs können nachgewiesene tatsächliche Vermögensschäden einschließlich Fahrzeugreparatur oder Wertminderung verlangt werden.
+- Vermögen: Nach Artikel 196 des Zivilgesetzbuchs kann der Eigentümer die durch die Beschädigung eingetretene Wertminderung des Fahrzeugs verlangen; die Reparaturkosten dienen nur insoweit als Maßstab, als sie erforderlich sind, und bei Ersatz alter durch neue Teile kann ein Abzug neu für alt (Abschreibung) vorgenommen werden.
 
 ## Q8. Wie sind Heilbehandlungskostenunterlagen einzureichen, wenn die Behandlung andauert?
 
@@ -165,13 +165,13 @@ Artikel 188 des Zivilgesetzbuchs (民法) behandelt den Fall, dass eine beschäf
 
 Der Arbeitgeber kann einwenden, bei Auswahl und Aufsicht der beschäftigten Person die gebotene Sorgfalt angewendet zu haben oder dass der Schaden auch bei solcher Sorgfalt nicht vermeidbar gewesen wäre. Es kann geprüft werden, Arbeitgeber und beschäftigte Person gemeinsam auf Schadensersatz in Anspruch zu nehmen. Nach Leistung des Ersatzes kann der Arbeitgeber bei der beschäftigten Person Rückgriff nehmen.
 
-Beweist der Arbeitgeber die vorgenannten Befreiungsvoraussetzungen, sodass die verletzte Person keinen Schadensersatz nach Absatz 1 erhält, kann das Gericht nach Artikel 188 Absatz 2 des Zivilgesetzbuchs (民法) unter Berücksichtigung der wirtschaftlichen Lage von Arbeitgeber und verletzter Person vollen oder teilweisen Ersatz anordnen.
+Beweist der Arbeitgeber die vorgenannten Befreiungsvoraussetzungen, sodass die verletzte Person keinen Schadensersatz nach Absatz 1 erhält, kann das Gericht nach Artikel 188 Absatz 2 des Zivilgesetzbuchs (民法) auf Antrag der verletzten Person unter Berücksichtigung der wirtschaftlichen Lage von Arbeitgeber und verletzter Person den Arbeitgeber zum vollen oder teilweisen Ersatz verpflichten.
 
 Die Bestimmung der zivilrechtlichen Anspruchsgegner und die strafrechtliche Haftung sind zu unterscheiden. Die strafrechtliche Haftung nach Artikel 284 des Strafgesetzbuchs (刑法) beurteilt sich nach Verletzung der Sorgfaltspflicht jeder natürlichen Person und dem Kausalzusammenhang dieser Verletzung.
 
 ## Q15. Welche Leistungen und Deckungen der Kraftfahrtversicherung sind zu prüfen?
 
-Die Versicherungspflicht nach Artikel 6 des Gesetzes über die obligatorische Kraftfahrzeughaftpflichtversicherung (強制汽車責任保險法) trifft grundsätzlich den Fahrzeugeigentümer und in bestimmten Fällen auch Nutzer oder Verwalter des Fahrzeugs. Dieses System sieht eine verschuldensunabhängige Leistungsstruktur (無過失給付制度) für bei Kraftfahrzeugunfällen Verletzte oder Getötete vor; der gesetzlich bestimmte Kreis der Fahrgäste oder Dritter außerhalb des Fahrzeugs ist zu prüfen.
+Die Versicherungspflicht nach Artikel 6 des Gesetzes über die obligatorische Kraftfahrzeughaftpflichtversicherung (強制汽車責任保險法) trifft grundsätzlich den Fahrzeugeigentümer und in bestimmten Fällen auch Nutzer oder Verwalter des Fahrzeugs. Dieses System sieht eine verschuldensunabhängige Leistungsstruktur (無過失給付制度) für bei Kraftfahrzeugunfällen Verletzte oder Getötete vor; der gesetzlich bestimmte Kreis der Fahrgäste oder Dritter außerhalb des Fahrzeugs ist zu prüfen. Der Versicherer leistet nicht, wenn die verletzte Person oder ein anderer Anspruchsberechtigter den Unfall vorsätzlich oder bei der Begehung einer Straftat verursacht hat (Artikel 28).
 
 Bei Alleinunfällen eines Fahrzeugs ist dessen Fahrer in der Regel nicht Leistungsempfänger der obligatorischen Versicherung dieses Fahrzeugs. Bei Unfällen mit mehreren Fahrzeugen kann der Fahrer jedoch Leistungen beim obligatorischen Versicherer eines anderen beteiligten Fahrzeugs verlangen.
 

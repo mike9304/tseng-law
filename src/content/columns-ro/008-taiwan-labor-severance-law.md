@@ -1,7 +1,7 @@
 ---
 title: "Dreptul muncii din Taiwan: este chiar atât de greu de obținut indemnizația de concediere?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 septembrie 2025"
 read_time: "6 min de lectură"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "În Taiwan, salariații primesc o indemnizație de concediere dacă demisionează ei înșiși?"
-    a: "Nu. Spre deosebire de unele state — de exemplu Coreea —, în Taiwan obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu are obligația de a plăti indemnizație de concediere."
+    a: "Nu. Spre deosebire de unele state — de exemplu Coreea —, în Taiwan obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu are obligația de a plăti indemnizație de concediere. Totuși, dacă există un motiv prevăzut la art. 14 din legea standardelor muncii, de exemplu societatea nu plătește salariul sau încalcă legile și reglementările muncii, iar persoana angajată pune capăt contractului pe acest temei, societatea trebuie să plătească indemnizația de concediere."
   - q: "Societatea trebuie să plătească o indemnizație de concediere și în caz de concediere disciplinară?"
-    a: "Nu. Dacă persoana angajată săvârșește o faptă ilicită, încalcă regulamentul intern sau lipsește fără motiv legitim 3 zile la rând (art. 12 din legea standardelor muncii, 勞動基準法第12條), societatea poate concedia fără preaviz și nu are obligația de a plăti indemnizație de concediere. În schimb, o concediere economică (art. 11) cere un preaviz și plata indemnizației de concediere."
+    a: "Nu. Dacă persoana angajată săvârșește o faptă ilicită, încalcă grav contractul de muncă sau regulamentul intern ori lipsește fără motiv legitim 3 zile la rând sau 6 zile într-o lună (art. 12 din legea standardelor muncii, 勞動基準法第12條), societatea poate concedia fără preaviz și nu are obligația de a plăti indemnizație de concediere. În schimb, o concediere economică (art. 11) cere un preaviz și plata indemnizației de concediere."
   - q: "Cum se calculează indemnizația de concediere în Taiwan?"
-    a: "Pentru fiecare 1 an de vechime împlinit, angajatorul trebuie să plătească 0,5 luni de salariu mediu ca indemnizație de concediere, cel mult 6 luni de salariu. Această formulă se aplică vechimii căreia i se aplică art. 12 din Legea privind pensia lucrătorilor (勞工退休金條例); pentru vechimea căreia i se aplică art. 17 din legea standardelor muncii (勞動基準法), se plătește 1 lună de salariu mediu pe 1 an, fără plafon."
+    a: "Pentru fiecare 1 an de vechime împlinit, angajatorul trebuie să plătească 0,5 luni de salariu mediu ca indemnizație de concediere, cel mult 6 luni de salariu. Această formulă se aplică vechimii căreia i se aplică art. 12 din Legea privind pensia lucrătorilor (勞工退休金條例); pentru vechimea căreia i se aplică art. 17 din legea standardelor muncii (勞動基準法), se plătește 1 lună de salariu mediu pe 1 an, fără plafon. Legea privind pensia lucrătorilor se aplică cetățenilor taiwanezi, străinilor căsătoriți cu un cetățean taiwanez care au primit drept de ședere, străinilor care au primit drept de ședere permanentă și lucrătorilor similari (art. 7 alineatul 1) și, din 2026, profesioniștilor străini care desfășoară activitate profesională (art. 24 din legea privind recrutarea și angajarea profesioniștilor străini, 外國專業人才延攬及僱用法); indemnizația de concediere a celorlalți lucrători, precum și pentru vechimea anterioară aplicării legii, se calculează potrivit art. 17 din legea standardelor muncii."
 ---
 
 # Dreptul muncii din Taiwan: este chiar atât de greu de obținut indemnizația de concediere?
@@ -36,15 +36,19 @@ Obligația de a plăti indemnizația de concediere se naște numai când societa
 
 Dacă persoana angajată demisionează ea însăși, societatea nu are obligația de a plăti indemnizație de concediere.
 
+Totuși, dacă există un motiv prevăzut la [art. 14 din legea standardelor muncii](/ro/columns/taiwan-voluntary-resignation-severance), de exemplu societatea nu plătește salariul sau încalcă legile și reglementările muncii, iar persoana angajată pune capăt contractului din acest motiv, societatea trebuie să plătească indemnizația de concediere.
+
 ​
 
 Dacă persoana angajată săvârșește totuși o faptă ilicită,
 
-încalcă regulamentul intern (工作規則),
+încalcă grav contractul de muncă sau regulamentul intern (工作規則),
 
-sau lipsește de la muncă fără motiv legitim 3 zile la rând (曠工),
+sau lipsește de la muncă fără motiv legitim 3 zile la rând sau 6 zile într-o lună (曠工),
 
 societatea poate concedia fără a plăti indemnizație de concediere.
+
+Totuși, pentru orice motiv, cu excepția punctului 3 (o condamnare definitivă la pedeapsa cu închisoarea), societatea trebuie să concedieze persoana angajată în termen de 30 de zile de la data la care a aflat împrejurările (art. 12 alineatul 2 din legea standardelor muncii).
 
 ​
 
@@ -53,16 +57,16 @@ Vă rezum aceasta într-un tabel simplu.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Tip | Concediere economică (資遣員工, 經濟解僱) | Concediere disciplinară (解僱員工, 懲戒解僱) | Demisia proprie a persoanei angajate  員工自請離職 |
-| Semnificație | Dacă există, la angajator, o nevoie de ajustare a personalului din cauza situației întreprinderii, motivul se situează în domeniul antreprenorial al angajatorului, nu în răspunderea persoanei angajate. De aceea angajatorul trebuie să respecte termenul de preaviz (預告期間) și să plătească o indemnizație de concediere, pentru a compensa în mod echilibrat inconvenientele persoanei angajate. | Dacă persoana angajată săvârșește o faptă ilicită sau nepotrivită, angajatorul poate pune capăt de îndată contractului de muncă (勞動契約) fără preaviz și nu are obligația de a plăti indemnizație de concediere. Aceasta este una dintre prerogativele disciplinare ale angajatorului. | Persoana angajată este liberă să pună capăt contractului oricând, dar trebuie, după durata de angajare, să respecte termenul de preaviz, pentru ca angajatorul să poată proceda la predare și la căutarea unui înlocuitor. |
+| Semnificație | Dacă există, la angajator, o nevoie de ajustare a personalului din cauza situației întreprinderii, motivul se situează în domeniul antreprenorial al angajatorului, nu în răspunderea persoanei angajate. De aceea angajatorul trebuie să respecte termenul de preaviz (預告期間) și să plătească o indemnizație de concediere, pentru a compensa în mod echilibrat inconvenientele persoanei angajate. | Dacă persoana angajată săvârșește o faptă ilicită sau nepotrivită, angajatorul poate pune capăt de îndată contractului de muncă (勞動契約) fără preaviz și nu are obligația de a plăti indemnizație de concediere. Aceasta este una dintre prerogativele disciplinare ale angajatorului. | Într-un contract fără durată determinată, persoana angajată este liberă să pună capăt contractului oricând, dar trebuie, după durata de angajare, să respecte termenul de preaviz, pentru ca angajatorul să poată proceda la predare și la căutarea unui înlocuitor. |
 | Condiții | Prezente  (art. 11 din legea taiwaneză a standardelor muncii) | Prezente  (art. 12 din legea taiwaneză a standardelor muncii) | Niciuna |
 | Preaviz | Cerut | Nu este cerut | Cerut |
 | Dificultate pentru angajator | Redusă | Ridicată | Redusă |
-| Dacă societatea trebuie să plătească indemnizația de concediere (資遣費) | Se datorează | Nu se datorează | Nu se datorează |
-|  | Legea taiwaneză a standardelor muncii, art. 11 (勞動基準法第11條): În afară de cazul în care se produce unul dintre cazurile următoare, angajatorul nu poate pune capăt contractului de muncă, chiar după înștiințarea prealabilă a persoanei angajate.  1. Încetarea activității (歇業) sau cesiunea de întreprindere (轉讓)  2. Pierderi (虧損) sau contracția activității (業務緊縮)  3. Un caz de forță majoră cere o întrerupere a activității de 1 lună sau mai mult  4. Natura activității cere o reducere de personal, iar persoana concediată nu poate fi mutată la un alt post potrivit  5. O persoană angajată determinată nu poate îndeplini în mod satisfăcător munca cerută de post | Legea taiwaneză a standardelor muncii, art. 12 (勞動基準法第12條): Angajatorul poate concedia fără înștiințare prealabilă dacă persoana angajată cade în unul dintre cazurile următoare.  1. Face declarații inexacte la încheierea contractului de muncă, induce în eroare angajatorul și creează un risc de prejudiciu pentru întreprindere  2. Exercită violențe sau insultă grav angajatorul, familia sa, reprezentantul său (代理人) sau alți colegi  3. A fost condamnat definitiv la o pedeapsă cu închisoarea pe durată determinată (有期徒刑) sau la o pedeapsă mai grea, fără ca suspendarea executării pedepsei (緩刑) să fi fost dispusă și fără ca convertirea în amendă (易科罰金) să fi fost autorizată  4. Încălcare gravă a contractului de muncă sau a regulilor de muncă  5. Deteriorează sau consumă intenționat utilaje, unelte, materii prime, produse sau alte bunuri ale angajatorului, sau dezvăluie intenționat secrete tehnice și comerciale ale angajatorului, și cauzează un prejudiciu angajatorului  6. Absență nejustificată (曠工) fără motiv legitim timp de 3 zile consecutive, sau timp de 6 zile sau mai mult într-o lună |  |
+| Dacă societatea trebuie să plătească indemnizația de concediere (資遣費) | Se datorează | Nu se datorează | Nu se datorează (cu excepția cazului în care persoana angajată pune capăt contractului pentru un motiv prevăzut la art. 14) |
+|  | Legea taiwaneză a standardelor muncii, art. 11 (勞動基準法第11條): În afară de cazul în care se produce unul dintre cazurile următoare, angajatorul nu poate pune capăt contractului de muncă, chiar după înștiințarea prealabilă a persoanei angajate.  1. Încetarea activității (歇業) sau cesiunea de întreprindere (轉讓)  2. Pierderi (虧損) sau contracția activității (業務緊縮)  3. Un caz de forță majoră cere o întrerupere a activității de 1 lună sau mai mult  4. Natura activității s-a schimbat, reducerea de personal este necesară și nu există un post potrivit în care persoana angajată să poată fi mutată  5. Persoana angajată este în mod evident incapabilă să îndeplinească munca încredințată | Legea taiwaneză a standardelor muncii, art. 12 (勞動基準法第12條): Angajatorul poate concedia fără înștiințare prealabilă dacă persoana angajată cade în unul dintre cazurile următoare.  1. Face declarații inexacte la încheierea contractului de muncă, induce în eroare angajatorul și creează un risc de prejudiciu pentru întreprindere  2. Exercită violențe sau insultă grav angajatorul, familia sa, reprezentantul său (代理人) sau alți colegi  3. A fost condamnat definitiv la o pedeapsă cu închisoarea pe durată determinată (有期徒刑) sau la o pedeapsă mai grea, fără ca suspendarea executării pedepsei (緩刑) să fi fost dispusă și fără ca convertirea în amendă (易科罰金) să fi fost autorizată  4. Încălcare gravă a contractului de muncă sau a regulilor de muncă  5. Deteriorează sau consumă intenționat utilaje, unelte, materii prime, produse sau alte bunuri ale angajatorului, sau dezvăluie intenționat secrete tehnice și comerciale ale angajatorului, și cauzează un prejudiciu angajatorului  6. Absență nejustificată (曠工) fără motiv legitim timp de 3 zile consecutive, sau timp de 6 zile sau mai mult într-o lună |  |
 
 > În Taiwan, pentru fiecare 1 an de vechime (年資) împlinit,
 > angajatorul trebuie să plătească 0,5 luni de salariu mediu (平均工資) ca indemnizație de concediere.
-> (cel mult 6 luni de salariu) Această formulă se aplică vechimii căreia i se aplică art. 12 din Legea privind pensia lucrătorilor (勞工退休金條例); pentru vechimea căreia i se aplică art. 17 din legea standardelor muncii (勞動基準法), se plătește 1 lună de salariu mediu pe 1 an, fără plafon.
+> (cel mult 6 luni de salariu) Această formulă se aplică vechimii căreia i se aplică art. 12 din Legea privind pensia lucrătorilor (勞工退休金條例); pentru vechimea căreia i se aplică art. 17 din legea standardelor muncii (勞動基準法), se plătește 1 lună de salariu mediu pe 1 an, fără plafon. Legea privind pensia lucrătorilor se aplică cetățenilor taiwanezi, străinilor căsătoriți cu un cetățean taiwanez care au primit drept de ședere, străinilor care au primit drept de ședere permanentă și lucrătorilor similari (art. 7 alineatul 1) și, din 2026, profesioniștilor străini care desfășoară activitate profesională ([art. 24 din legea privind recrutarea și angajarea profesioniștilor străini (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); indemnizația de concediere a celorlalți lucrători, precum și pentru vechimea anterioară aplicării legii, se calculează potrivit art. 17 din legea standardelor muncii. Vechimea mai mică de 1 an se calculează proporțional, iar societatea trebuie să plătească indemnizația de concediere în termen de 30 de zile de la încetarea contractului.
 
 ​
 

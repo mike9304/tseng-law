@@ -1,7 +1,7 @@
 ---
 title: "Historie a právní režim masáže na Tchaj-wanu"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. září 2025"
 read_time: "3 min čtení"
 categories:
@@ -51,11 +51,11 @@ skutečně jen osoby se zrakovým postižením (視障者) mohly vykonávat povo
 
 Výkon tohoto povolání osobou bez zrakového postižení (非視障者) byl nezákonný.
 
-Tento zákon platil do roku 2003; tehdy pan Lin, který vedl kadeřnictví,
+Toto omezení platilo do 31. října 2011; v roce 2003, tedy v tomto období, pan Lin, který vedl kadeřnictví,
 
 zaměstnal dva pracovníky bez zrakového postižení ke službám mytí vlasů a masáže, a policie to zjistila.
 
-Podle tehdejšího práva byla panu Linovi uložena správní pokuta (罰鍰) 40.000 TWD a dvěma pracovníkům 10.000 TWD a 20.000 TWD v novém tchajwanském dolaru (新臺幣).
+Podle tehdejšího práva uložil Odbor sociálních věcí města Tchaj-pej (臺北市社會局) panu Linovi správní pokutu (罰鍰) 40.000 TWD a dvěma pracovníkům 10.000 TWD a 20.000 TWD v novém tchajwanském dolaru (新臺幣).
 
 Pan Lin považoval tuto sankci za velmi nespravedlivou a požádal o ústavní výklad.
 
@@ -81,7 +81,7 @@ Padla například otázka, zda psané ustanovení, které dovolovalo výhradně 
 
 a zpochybňovalo se, zda toto ustanovení skutečně přispělo k ochraně zaměstnání a existence osob se zrakovým postižením.
 
-Nakonec ústavní soudci (大法官) prohlásili za protiústavní (違憲) ustanovení, které dovolovalo výhradně osobám se zrakovým postižením vykonávat povolání maséra.
+Nakonec ústavní soudci (大法官) ve výkladu Soudního jüanu č. 649 (司法院釋字第649號) z 31. října 2008 prohlásili za protiústavní (違憲) ustanovení, které dovolovalo výhradně osobám se zrakovým postižením vykonávat povolání maséra, a ustanovení pozbylo účinnosti 31. října 2011 uplynutím přechodné lhůty 3 let, kterou výklad poskytl.
 
 ​
 

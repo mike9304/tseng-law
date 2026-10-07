@@ -1,7 +1,7 @@
 ---
 title: "Indemnización por lesión en un gimnasio de Taiwán: caso de primera instancia, plazos, pruebas y conceptos indemnizatorios"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 de septiembre de 2025"
 read_time: "10 min de lectura"
 categories:
@@ -19,7 +19,7 @@ Este artículo, a partir de un asunto en el que un estudiante universitario core
 
 El accidente ocurrió en un gimnasio de Taichung (臺中), durante un entrenamiento de peso muerto (硬舉) dirigido por el entrenador. Tras la lesión no basta con ver el mero hecho de que el accidente ocurrió dentro del gimnasio; deben examinarse en conjunto la experiencia deportiva y el estado de salud del usuario, el tipo de ejercicio y la carga, las explicaciones y la instrucción del entrenador, el movimiento y la reacción en ese momento, el nexo causal (因果關係) entre la lesión y el ejercicio, y los datos que respaldan el daño.
 
-En este asunto actué como representante procesal (訴訟代理人) del demandante, el estudiante coreano. El Tribunal de Distrito de Taichung, el 24 de enero de 2022, en la sentencia de primera instancia del asunto de consumo n.º 7 del año 109 de la República de China (2020) (109年度消字第7號), condenó al demandado a pagar [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) y los intereses consignados en la sentencia.
+En este asunto actué como representante procesal (訴訟代理人) del demandante, el estudiante coreano. El Tribunal de Distrito de Taichung, el 24 de enero de 2022, en la sentencia de primera instancia del asunto de consumo n.º 7 del año 109 de la República de China (2020) (109年度消字第7號), condenó a la empresa que gestiona el gimnasio, una de las partes demandadas, a pagar [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) y los intereses consignados en la sentencia.
 
 Después, la prensa informó de que las partes transigieron (和解) en la segunda instancia. Como la sentencia oficial de primera instancia, por sí sola, no permite confirmar el resultado de la segunda instancia ni el importe de la transacción, lo informado no debe tomarse por el desenlace firme de aquella sentencia.
 
@@ -67,7 +67,7 @@ Lo que sigue es información general para explicar las controversias por lesión
 
 ## 1. Tras una lesión en un gimnasio de Taiwán, ¿qué procedimientos jurídicos pueden examinarse?
 
-El [artículo 7 de la Ley de protección de los consumidores de Taiwán (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispone que, al prestar un servicio, el empresario debe hacer que ese servicio tenga la seguridad que razonablemente cabe esperar según el criterio profesional o técnico del momento de la prestación.
+El [artículo 7 de la Ley de protección de los consumidores de Taiwán (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispone que, al prestar un servicio, el empresario debe hacer que ese servicio tenga la seguridad que razonablemente cabe esperar según el criterio profesional o técnico del momento de la prestación. El apartado 3 del mismo artículo dispone que el empresario que infrinja estas exigencias y cause un daño al consumidor o a un tercero responde solidariamente de la indemnización, y que, aunque el empresario pruebe que no tuvo culpa, el tribunal solo puede reducir su responsabilidad.
 
 Ello no significa que se reconozca la responsabilidad del empresario o del entrenador cada vez que ocurre una lesión en un gimnasio. Debe valorarse en cada asunto qué deber de cuidado existía en concreto, si se infringió, si hay nexo causal entre la infracción y la lesión, si se produjo un daño real, qué defensas tiene la otra parte y si hay prueba que respalde cada alegación y cada defensa.
 

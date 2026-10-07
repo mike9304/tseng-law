@@ -1,7 +1,7 @@
 ---
 title: "Lögbundnar starfslokabætur á Taívan: hvenær þær eru greiddar og hvenær ekki"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "6 mín. lestur"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Fær starfsmaður á Taívan lögbundnar starfslokabætur ef hann segir sjálfur upp?"
-    a: "Nei. Ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — myndast skylda til greiðslu lögboðinna starfslokabóta samkvæmt rétti Taívan (資遣費) fyrst þegar félagið segir starfsmanninum upp; segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokabætur."
+    a: "Nei. Ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — myndast skylda til greiðslu lögboðinna starfslokabóta samkvæmt rétti Taívan (資遣費) fyrst þegar félagið segir starfsmanninum upp; segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokabætur. Sé hins vegar fyrir hendi ástæða samkvæmt 14. gr. laga um vinnustaðla, svo sem að félagið greiði ekki laun eða brjóti gegn vinnulöggjöf, og starfsmaðurinn slítur samningnum á þeim grundvelli, skal félagið greiða starfslokabætur."
   - q: "Á félagið einnig að greiða starfslokabætur við agalega uppsögn?"
-    a: "Nei. Fremji starfsmaðurinn ólögmæta háttsemi, brjóti hann vinnureglur eða sé fjarverandi án gildrar ástæðu 3 daga í röð (12. gr. laga um vinnustaðla, 勞動基準法第12條), má félagið segja upp án fyrirvara og þarf ekki að greiða starfslokabætur. Efnahagsleg uppsögn (11. gr.) krefst hins vegar fyrirvara og greiðslu starfslokabóta."
+    a: "Nei. Fremji starfsmaðurinn ólögmæta háttsemi, brjóti hann alvarlega gegn ráðningarsamningi eða vinnureglum eða sé fjarverandi án gildrar ástæðu 3 daga í röð eða 6 daga á einum mánuði (12. gr. laga um vinnustaðla, 勞動基準法第12條), má félagið segja upp án fyrirvara og þarf ekki að greiða starfslokabætur. Efnahagsleg uppsögn (11. gr.) krefst hins vegar fyrirvara og greiðslu starfslokabóta."
   - q: "Hvernig eru starfslokabætur á Taívan reiknaðar?"
-    a: "Fyrir hvert fullt ár í starfi skal vinnuveitandi greiða 0,5 mánaðar meðallaun sem starfslokabætur, þó að hámarki 6 mánaðarlaun. Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til eru greidd ein mánaðarmeðallaun á hvert ár, án hámarks."
+    a: "Fyrir hvert fullt ár í starfi skal vinnuveitandi greiða 0,5 mánaðar meðallaun sem starfslokabætur, þó að hámarki 6 mánaðarlaun. Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til eru greidd ein mánaðarmeðallaun á hvert ár, án hámarks. Lög um lífeyri launafólks (勞工退休金條例) gilda um taívanska ríkisborgara, útlendinga sem eru giftir taívönskum ríkisborgara og hafa fengið dvalarleyfi, útlendinga sem hafa fengið ótímabundið dvalarleyfi og sambærilegt launafólk (7. gr. 1. mgr.), og frá 2026 einnig um erlenda sérfræðinga sem sinna sérfræðistörfum (24. gr. laga um að laða að og ráða erlenda sérfræðinga (外國專業人才延攬及僱用法)); starfslokabætur annars launafólks, og vegna starfsaldurs áður en lögin tóku til þess, eru reiknaðar samkvæmt 17. gr. laga um vinnustaðla."
 ---
 
 
@@ -37,15 +37,19 @@ Skyldan til greiðslu starfslokabóta myndast fyrst þegar félagið segir starf
 
 Segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokabætur.
 
+Sé hins vegar fyrir hendi ástæða samkvæmt [14. gr. laga um vinnustaðla](/is/columns/taiwan-voluntary-resignation-severance), svo sem að félagið greiði ekki laun eða brjóti gegn vinnulöggjöf, og starfsmaðurinn slítur samningnum vegna þess, skal félagið greiða starfslokabætur.
+
 ​
 
 Fremji starfsmaðurinn hins vegar ólögmæta háttsemi gildir eftirfarandi.
 
-Brot á vinnureglum (工作規則) er eitt slíkt tilvik.
+Alvarlegt brot á ráðningarsamningi eða vinnureglum (工作規則) er eitt slíkt tilvik.
 
-Fjarvera án ástæðu 3 daga í röð (曠工) er annað.
+Fjarvera án ástæðu 3 daga í röð eða 6 daga á einum mánuði (曠工) er annað.
 
 Má félagið þá segja upp án þess að greiða starfslokabætur.
+
+Þó skal félagið, vegna allra ástæðna nema 3. liðar (endanlegs fangelsisdóms), segja starfsmanninum upp innan 30 daga frá því að það varð kunnugt um atvikin (12. gr. 2. mgr. laga um vinnustaðla).
 
 ​
 
@@ -54,16 +58,16 @@ Eftirfarandi tafla dregur þetta saman.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Tegund | Efnahagsleg uppsögn (資遣員工, 經濟解僱) | Agaleg uppsögn (解僱員工, 懲戒解僱) | Sjálfviljug uppsögn starfsmanns  員工自請離職 |
-| Merking | Ef vinnuveitandi þarf, vegna rekstrarástands, að aðlaga mannafla, liggur ástæðan á sviði rekstrar vinnuveitandans og er ekki á ábyrgð starfsmannsins. Því skal vinnuveitandi virða uppsagnarfrest (預告期間) og greiða starfslokabætur, svo óhagræði starfsmannsins sé jafnað. | Fremji starfsmaðurinn ólögmæta eða ótilhlýðilega háttsemi, má vinnuveitandi þegar í stað slíta ráðningarsamningi (勞動契約) án fyrirvara og þarf ekki að greiða starfslokabætur. Þetta er ein af agaheimildum vinnuveitanda. | Starfsmaðurinn er frjáls til að slíta samningnum hvenær sem er, en skal eftir starfstíma virða uppsagnarfrestinn, svo vinnuveitandi geti tryggt afhendingu starfa og leitað staðgengils. |
+| Merking | Ef vinnuveitandi þarf, vegna rekstrarástands, að aðlaga mannafla, liggur ástæðan á sviði rekstrar vinnuveitandans og er ekki á ábyrgð starfsmannsins. Því skal vinnuveitandi virða uppsagnarfrest (預告期間) og greiða starfslokabætur, svo óhagræði starfsmannsins sé jafnað. | Fremji starfsmaðurinn ólögmæta eða ótilhlýðilega háttsemi, má vinnuveitandi þegar í stað slíta ráðningarsamningi (勞動契約) án fyrirvara og þarf ekki að greiða starfslokabætur. Þetta er ein af agaheimildum vinnuveitanda. | Samkvæmt ótímabundnum samningi er starfsmaðurinn frjáls til að slíta samningnum hvenær sem er, en skal eftir starfstíma virða uppsagnarfrestinn, svo vinnuveitandi geti tryggt afhendingu starfa og leitað staðgengils. |
 | Skilyrði | Já (11. gr. laga um vinnustaðla á Taívan) | Já (12. gr. laga um vinnustaðla á Taívan) | Engin |
 | Fyrirvari | Krafist | Ekki krafist | Krafist |
 | Erfiðleiki | Auðvelt | Erfitt | Auðvelt |
-| Hvort félagið skuli greiða starfslokabætur (資遣費) | Krafist | Ekki krafist | Ekki krafist |
-|  | Lög um vinnustaðla á Taívan, 11. gr. (勞動基準法第11條): Nema eitt af eftirfarandi tilvikum komi upp, má vinnuveitandi ekki slíta ráðningarsamningi, ekki einu sinni að undangenginni tilkynningu til starfsmannsins.  1. Rekstrarstöðvun (歇業) eða framsal rekstrar (轉讓)  2. Tap (虧損) eða samdráttur í starfsemi (業務緊縮)  3. Óviðráðanleg atvik (不可抗力) krefjast stöðvunar rekstrar í einn mánuð eða lengur  4. Eðli rekstrarins krefst fækkunar starfsfólks, og ekki er unnt að færa hinn uppsagða í aðra hæfilega stöðu  5. Tiltekinn starfsmaður getur ekki sinnt því starfi sem staðan krefst með fullnægjandi hætti | Lög um vinnustaðla á Taívan, 12. gr. (勞動基準法第12條): Vinnuveitandi má segja upp án fyrirvara þegar starfsmaðurinn fellur undir eitt af eftirfarandi tilvikum.  1. Sá sem við gerð ráðningarsamnings veitir rangar upplýsingar, villir um fyrir vinnuveitanda, og hætta er á tjóni fyrir reksturinn  2. Sá sem beitir vinnuveitanda, fjölskyldu hans, umboðsmann hans (代理人) eða aðra samstarfsmenn ofbeldi eða móðgar þá alvarlega  3. Sá sem hefur verið dæmdur með endanlegum dómi til tímabundinnar fangelsisvistar (有期徒刑) eða þyngri refsingar, án þess að skilorðsdómur (緩刑) hafi verið kveðinn upp og án þess að umbreyting í sekt (易科罰金) hafi verið heimiluð  4. Alvarlegt brot á ráðningarsamningi eða vinnureglum  5. Sá sem af ásetningi eyðir vélum, verkfærum, hráefni, vörum eða öðrum eigum vinnuveitanda, eða af ásetningi opinberar tækni- og viðskiptaleyndarmál vinnuveitanda og veldur honum tjóni  6. Óheimil fjarvist (曠工) án gildrar ástæðu 3 daga í röð, eða 6 daga eða meira á einum mánuði |  |
+| Hvort félagið skuli greiða starfslokabætur (資遣費) | Krafist | Ekki krafist | Ekki krafist (nema starfsmaðurinn slíti samningnum á grundvelli 14. gr.) |
+|  | Lög um vinnustaðla á Taívan, 11. gr. (勞動基準法第11條): Nema eitt af eftirfarandi tilvikum komi upp, má vinnuveitandi ekki slíta ráðningarsamningi, ekki einu sinni að undangenginni tilkynningu til starfsmannsins.  1. Rekstrarstöðvun (歇業) eða framsal rekstrar (轉讓)  2. Tap (虧損) eða samdráttur í starfsemi (業務緊縮)  3. Óviðráðanleg atvik (不可抗力) krefjast stöðvunar rekstrar í einn mánuð eða lengur  4. Eðli rekstrarins hefur breyst, fækkun starfsfólks er nauðsynleg og engin hæfileg staða er til að færa starfsmanninn í  5. Starfsmaðurinn getur augljóslega ekki sinnt því starfi sem honum er falið | Lög um vinnustaðla á Taívan, 12. gr. (勞動基準法第12條): Vinnuveitandi má segja upp án fyrirvara þegar starfsmaðurinn fellur undir eitt af eftirfarandi tilvikum.  1. Sá sem við gerð ráðningarsamnings veitir rangar upplýsingar, villir um fyrir vinnuveitanda, og hætta er á tjóni fyrir reksturinn  2. Sá sem beitir vinnuveitanda, fjölskyldu hans, umboðsmann hans (代理人) eða aðra samstarfsmenn ofbeldi eða móðgar þá alvarlega  3. Sá sem hefur verið dæmdur með endanlegum dómi til tímabundinnar fangelsisvistar (有期徒刑) eða þyngri refsingar, án þess að skilorðsdómur (緩刑) hafi verið kveðinn upp og án þess að umbreyting í sekt (易科罰金) hafi verið heimiluð  4. Alvarlegt brot á ráðningarsamningi eða vinnureglum  5. Sá sem af ásetningi eyðir vélum, verkfærum, hráefni, vörum eða öðrum eigum vinnuveitanda, eða af ásetningi opinberar tækni- og viðskiptaleyndarmál vinnuveitanda og veldur honum tjóni  6. Óheimil fjarvist (曠工) án gildrar ástæðu 3 daga í röð, eða 6 daga eða meira á einum mánuði |  |
 
 > Á Taívan skal vinnuveitandi fyrir hvert fullt ár í starfi (年資)
 > greiða 0,5 mánaðar meðallaun (平均工資) sem starfslokabætur.
-> (að hámarki 6 mánaðarlaun) Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til eru greidd ein mánaðarmeðallaun á hvert ár, án hámarks.
+> (að hámarki 6 mánaðarlaun) Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til eru greidd ein mánaðarmeðallaun á hvert ár, án hámarks. Lög um lífeyri launafólks gilda um taívanska ríkisborgara, útlendinga sem eru giftir taívönskum ríkisborgara og hafa fengið dvalarleyfi, útlendinga sem hafa fengið ótímabundið dvalarleyfi og sambærilegt launafólk (7. gr. 1. mgr.), og frá 2026 einnig um erlenda sérfræðinga sem sinna sérfræðistörfum ([24. gr. laga um að laða að og ráða erlenda sérfræðinga (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); starfslokabætur annars launafólks, og vegna starfsaldurs áður en lögin tóku til þess, eru reiknaðar samkvæmt 17. gr. laga um vinnustaðla. Starfsaldur undir 1 ári er reiknaður hlutfallslega og félagið skal greiða starfslokabæturnar innan 30 daga frá því að samningi lýkur.
 
 ​
 

@@ -1,7 +1,7 @@
 ---
 title: "Risarcimento per una lesione in palestra a Taiwan: caso di primo grado, termini, prove e voci di risarcimento"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 settembre 2025"
 read_time: "10 min di lettura"
 categories:
@@ -19,7 +19,7 @@ A partire da un caso in cui uno studente universitario coreano ha riportato una 
 
 L’incidente è avvenuto in una palestra di Taichung (臺中), durante un allenamento di stacco da terra (硬舉) diretto dall’allenatore. Dopo la lesione, non basta ritenere il solo fatto che l’incidente abbia avuto luogo all’interno della palestra; si deve esaminare insieme l’esperienza sportiva e lo stato di salute dell’utente, il tipo di esercizio e il carico, le spiegazioni e le istruzioni dell’allenatore, il movimento e la reazione in quel momento, il nesso di causalità (因果關係) tra la lesione e l’esercizio, e i documenti che sostengono il pregiudizio.
 
-Sono stata l’avvocata che ha rappresentato in giudizio (訴訟代理人) l’attore, lo studente coreano. Il tribunale distrettuale di Taichung, il 24 gennaio 2022, nella sentenza di primo grado della causa in materia di consumo numero 7 dell’anno 109 (109年度消字第7號), ha ordinato al convenuto di pagare [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) nonché gli interessi menzionati nella sentenza.
+Sono stata l’avvocata che ha rappresentato in giudizio (訴訟代理人) l’attore, lo studente coreano. Il tribunale distrettuale di Taichung, il 24 gennaio 2022, nella sentenza di primo grado della causa in materia di consumo numero 7 dell’anno 109 (109年度消字第7號), ha ordinato alla società che gestisce la palestra, una delle parti convenute, di pagare [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) nonché gli interessi menzionati nella sentenza.
 
 In seguito, la stampa ha indicato che le parti avevano transatto (和解) in appello. La sola sentenza ufficiale di primo grado non permette di confermare il risultato dell’appello né l’importo della transazione; la transazione riferita dalla stampa non va trattata come l’esito definitivo accertato della sentenza di primo grado.
 
@@ -67,7 +67,7 @@ Ciò che segue è un’informazione generale per spiegare le liti di lesione in 
 
 ## 1. Dopo una lesione in palestra a Taiwan, quali procedure giuridiche si possono esaminare?
 
-L’[articolo 7 della legge taiwanese di protezione dei consumatori (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispone che, quando fornisce un servizio, l’impresa deve fare in modo che questo servizio presenti la sicurezza che si può ragionevolmente attendere secondo il criterio professionale o tecnico del momento della prestazione.
+L’[articolo 7 della legge taiwanese di protezione dei consumatori (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispone che, quando fornisce un servizio, l’impresa deve fare in modo che questo servizio presenti la sicurezza che si può ragionevolmente attendere secondo il criterio professionale o tecnico del momento della prestazione. Il comma 3 dello stesso articolo dispone che l’impresa che viola queste prescrizioni e cagiona un danno al consumatore o a un terzo risponde in solido del risarcimento, e che, anche se l’impresa prova di non aver avuto colpa, il tribunale può soltanto ridurre la sua responsabilità.
 
 Ciò non significa che la responsabilità dell’impresa o dell’allenatore sia riconosciuta ogni volta che una lesione avviene in palestra. Si deve valutare, caso per caso, quale dovere di diligenza esisteva concretamente, se è stato violato, se vi è un nesso di causalità tra la violazione e la lesione, se un pregiudizio reale si è prodotto, quali difese ha la parte avversa, e se esiste una prova che sostenga ciascuna allegazione e ciascuna difesa.
 

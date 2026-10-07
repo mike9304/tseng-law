@@ -1,7 +1,7 @@
 ---
 title: "Jautājumi un atbildes par rīcību pēc ceļu satiksmes negadījuma Taivānā: pasākumi notikuma vietā, vaina, izlīgums un zaudējumu atlīdzība"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. septembrī 2025. gadā"
 read_time: "12 min"
 categories:
@@ -95,7 +95,7 @@ Prasījums, kas balstīts uz Civillikuma 184. pantu, pieņem prettiesisku tiesī
 
 - Ievainojums: Saskaņā ar Civillikuma 193. pantu var izvērtēt nepieciešamos medicīniskos izdevumus (醫療費用), ikdienas dzīves palielinātās vajadzības, piemēram, kopšanas izmaksas (看護費用), ceļa izdevumus ārstēšanai (就醫交通費) un palīglīdzekļus, kā arī ienākumu zaudējumu (收入損失) faktiskas darbnespējas dēļ un darbspējas samazināšanos (勞動能力減損). Saskaņā ar Civillikuma 195. pantu var izvērtēt arī morālo kaitējumu.
 - Nāve: Saskaņā ar Civillikuma 192. pantu, ja ir pamats, var izvērtēt medicīniskos izdevumus pirms nāves un palielināto dzīves vajadzību izmaksas, apbedīšanas izdevumus (殯葬費) un uzturēšanas zaudējumu (扶養利益損失) personai, kurai bija likumīgas tiesības uz uzturēšanu. Saskaņā ar Civillikuma 194. pantu var izvērtēt arī noteiktu tuvinieku morālo kaitējumu.
-- Manta: Saskaņā ar Civillikuma 196. pantu var prasīt pamatotus faktiskos mantiskos zaudējumus, tostarp transportlīdzekļa remonta izmaksas vai vērtības zudumu.
+- Manta: Saskaņā ar Civillikuma 196. pantu īpašnieks var prasīt zaudējuma izraisīto transportlīdzekļa vērtības samazinājumu; remonta izmaksas kalpo kā mērauklā tikai tiktāl, cik tas ir nepieciešams, un, ja vecās daļas aizstāj ar jaunām, var atskaitīt nolietojumu.
 
 ## 8. Ja ārstēšana turpinās, kā iesniegt medicīnisko izdevumu dokumentus?
 
@@ -165,13 +165,13 @@ Civillikuma 188. pants regulē gadījumu, kurā darbinieks, pildot amata pienāk
 
 Darba devējs var iebilst, ka tas ievēroja pienācīgu rūpību darbinieka izvēlē un uzraudzībā vai ka zaudējumus nevarētu novērst pat ar šādas rūpības ievērošanu. Var apsvērt atlīdzības prasīšanu kopīgi pret darba devēju un darbinieku. Pēc atlīdzības darba devējs var vērst regresu pret darbinieku.
 
-Ja darba devējs pierāda šos atbrīvojuma priekšnoteikumus un cietušais nesaņem atlīdzību no 1. daļas, tiesa saskaņā ar Civillikuma 188. panta 2. daļu var uzlikt pilnu vai daļēju atlīdzību, ņemot vērā darba devēja un cietušā saimniecisko stāvokli.
+Ja darba devējs pierāda šos atbrīvojuma priekšnoteikumus un cietušais nesaņem atlīdzību no 1. daļas, tiesa saskaņā ar Civillikuma 188. panta 2. daļu pēc cietušā pieteikuma, ņemot vērā darba devēja un cietušā saimniecisko stāvokli, var uzlikt darba devējam pienākumu atlīdzināt zaudējumus pilnībā vai daļēji.
 
 Jautājums, pret ko vērst civiltiesisko prasījumu, jānošķir no kriminālatbildības. Kriminālatbildību saskaņā ar Krimināllikuma 284. pantu vērtē pēc katras fiziskās personas piesardzības pienākuma pārkāpuma un šā pārkāpuma cēloņsakarības.
 
 ## 15. Kādi pabalsti un kāds transportlīdzekļu obligātās apdrošināšanas segums jāpārbauda?
 
-Pienākums slēgt līgumu saskaņā ar Obligātās automašīnu civiltiesiskās atbildības apdrošināšanas likuma (強制汽車責任保險法) 6. pantu principā gulstas uz transportlīdzekļa īpašnieku un paredzētos gadījumos arī uz šā transportlīdzekļa lietotāju vai pārvaldītāju. Šis režīms izveido bezvainas pabalstu struktūru (無過失給付制度) personai, kas ievainota vai mirusi automašīnas negadījuma dēļ, taču jāpārbauda likumā noteiktais pasažieru vai trešo personu (第三人) apjoms ārpus transportlīdzekļa.
+Pienākums slēgt līgumu saskaņā ar Obligātās automašīnu civiltiesiskās atbildības apdrošināšanas likuma (強制汽車責任保險法) 6. pantu principā gulstas uz transportlīdzekļa īpašnieku un paredzētos gadījumos arī uz šā transportlīdzekļa lietotāju vai pārvaldītāju. Šis režīms izveido bezvainas pabalstu struktūru (無過失給付制度) personai, kas ievainota vai mirusi automašīnas negadījuma dēļ, taču jāpārbauda likumā noteiktais pasažieru vai trešo personu (第三人) apjoms ārpus transportlīdzekļa. Apdrošinātājs nemaksā pabalstus, ja cietušais vai cits atlīdzības pieprasītājs negadījumu ir izraisījis tīši vai noziedzīga nodarījuma izdarīšanas laikā (28. pants).
 
 Viena transportlīdzekļa negadījumā šā transportlīdzekļa vadītājs principā nav šā transportlīdzekļa obligātās apdrošināšanas pabalsta adresāts. Tomēr negadījumā, kurā piedalās vairāki transportlīdzekļi, ir gadījumi, kuros vadītājs var prasīt pabalstu pie cita iesaistītā transportlīdzekļa obligātā apdrošinātāja.
 

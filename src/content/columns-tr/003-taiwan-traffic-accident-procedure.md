@@ -1,7 +1,7 @@
 ---
 title: "Tayvan’da trafik kazasına ilişkin soru ve yanıtlar: yerindeki önlemler, kusur, uzlaşma ve tazminat"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 Eylül 2025"
 read_time: "12 dk okuma"
 categories:
@@ -95,7 +95,7 @@ Medeni Kanunun 184. maddesine dayanan talep, bir hakka hukuka aykırı saldırı
 
 - Yaralanma: Medeni Kanunun 193. maddesine göre gereken tıbbi giderler (醫療費用), bakım giderleri (看護費用), tedaviye gidiş giderleri (就醫交通費) ve yardımcı araçlar gibi günlük yaşama eklenen giderler ile gerçek iş göremezlikten doğan gelir kaybı (收入損失) ve çalışma gücünün azalması (勞動能力減損) incelenebilir. Medeni Kanunun 195. maddesine göre manevi zarar da incelenebilir.
 - Ölüm: Medeni Kanunun 192. maddesine göre yer varsa ölümden önceki tıbbi giderler ve artan yaşam ihtiyacı giderleri, cenaze giderleri (殯葬費) ve yasal nafaka hakkına sahip kişinin nafaka kaybı (扶養利益損失) incelenebilir. Medeni Kanunun 194. maddesine göre belirli yakınların manevi zararı da incelenebilir.
-- Malvarlığı: Medeni Kanunun 196. maddesine göre aracın onarım giderleri veya değer kaybı dâhil, belgelenmiş gerçek malvarlığı zararı talep edilebilir.
+- Malvarlığı: Medeni Kanunun 196. maddesine göre malik, zarar nedeniyle aracın değerinde oluşan azalmayı talep edebilir; onarım gideri yalnızca gerekli ölçüde ölçüt olur ve eski parçaların yerine yeni parça takılan hallerde yıpranma payı indirilebilir.
 
 ## Q8. Tedavi sürerse tıbbi gider belgelerini nasıl sunmalı?
 
@@ -165,13 +165,13 @@ Medeni Kanunun 188. maddesi, çalışanın görevini yerine getirirken başkası
 
 İşveren, çalışanın seçiminde ve gözetiminde gereken özeni gösterdiğini, veya bu özen gösterilse bile zararın kaçınılamayacağını ileri sürebilir. Tazminatın işveren ve çalışana karşı birlikte talep edilmesi tartılabilir. Tazmin ettikten sonra işveren çalışana rücu edebilir.
 
-İşveren bu bağışıklık koşullarını kanıtlar ve zarar gören 1. fıkradaki tazminatı alamazsa mahkeme, Medeni Kanunun 188. maddesinin 2. fıkrasına göre işveren ile zarar görenin ekonomik durumunu dikkate alarak tam veya kısmi tazminat emredebilir.
+İşveren bu bağışıklık koşullarını kanıtlar ve zarar gören 1. fıkradaki tazminatı alamazsa, Medeni Kanunun 188. maddesinin 2. fıkrası, zarar gören başvurursa mahkemenin, işveren ile zarar görenin ekonomik durumunu dikkate alarak işverenin zararın tamamını veya bir kısmını ödemesine hükmedebileceğini öngörür.
 
 Medeni talebin kime yöneltileceği sorusu, ceza sorumluluğundan ayırt edilmelidir. Ceza Kanununun 284. maddesindeki ceza sorumluluğu, her gerçek kişinin özen yükümlülüğünü ihlali ve bu ihlalin nedensellik bağına göre değerlendirilir.
 
 ## Q15. Hangi zorunlu otomobil sigortası ödemeleri ve teminatları doğrulanmalıdır?
 
-Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險法) 6. maddesine göre sigorta ettirme yükümlülüğü kural olarak araç sahibine ve öngörülen hallerde o aracın kullanıcısına veya yöneticisine düşer. Bu rejim, otomobil kazası nedeniyle yaralanan veya ölen kişi için kusursuz teminat yapısı (無過失給付制度) kurar, ancak kanunun saptadığı yolcuların veya araç dışındaki üçüncü kişinin (第三人) kapsamı doğrulanmalıdır.
+Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險法) 6. maddesine göre sigorta ettirme yükümlülüğü kural olarak araç sahibine ve öngörülen hallerde o aracın kullanıcısına veya yöneticisine düşer. Bu rejim, otomobil kazası nedeniyle yaralanan veya ölen kişi için kusursuz teminat yapısı (無過失給付制度) kurar, ancak kanunun saptadığı yolcuların veya araç dışındaki üçüncü kişinin (第三人) kapsamı doğrulanmalıdır. Yaralanan kişi veya başka bir hak talep eden kazaya kasten ya da suç işlerken neden olmuşsa sigortacı ödeme yapmaz (28. madde).
 
 Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu sigortasının ödemelerinin muhatabı değildir. Ancak birden çok aracın karıştığı bir kazada, sürücünün karışan başka bir aracın zorunlu sigortacısından ödeme talep edebildiği haller vardır.
 

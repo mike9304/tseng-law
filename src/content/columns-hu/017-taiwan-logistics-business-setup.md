@@ -1,7 +1,7 @@
 ---
 title: "Logisztikai tevékenység és a gépjárműves árufuvarozás (汽車貨運業) engedélye Tajvanon: új alapítás, felvásárlás és megbízás"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "2025. szeptember 13."
 read_time: "12 perc olvasás"
 categories:
@@ -118,7 +118,7 @@ Ellenőrizni kell a megbízott vállalkozó működési engedélyének érvénye
 
 Még ha a külföldi a céltársaság részvényesévé vagy befektetőjévé válik is, e tény önmagában nem ad tajvani munkavégzési jogot vagy tartózkodási jogállást. Ha a társaság ügyvezetését, az értékesítést, a járművek indítását, az ügyfélkezelést Tajvanon végzi, a munka megkezdése előtt ellenőrizni kell, a tényleges munkakörhöz illő munkavállalási engedély kell-e, és a későbbi tartózkodási eljárást külön kell folytatni.
 
-Az engedély nélküli munkára közigazgatási bírság és Tajvan elhagyására kötelezés (限令出國) alkalmazható. A Belügyminisztérium Bevándorlási Hivatalának (內政部移民署) a belépési tilalomra (禁止入國) vonatkozó hatályos szolgálati utasítása a jogellenes munkára általában 3 éves belépési tilalmat rögzít, de ugyanazon utasítás mentességi vagy időrövidítési feltételei alkalmazhatók. Az eredmény nem dől el automatikusan pusztán attól, hogy harmadik fél bejelentése volt, és az illetékes szerv a tényeket, az alkalmazandó szabályokat és az egyedi körülményeket vizsgálja.
+Az a külföldi, aki engedély nélkül dolgozik, közigazgatási bírsággal sújtandó, azonnali hatállyal Tajvan elhagyására kell kötelezni (限令出國), és Tajvanon többé nem dolgozhat (a foglalkoztatási szolgáltatási törvény 68. cikke). A Belügyminisztérium Bevándorlási Hivatalának (內政部移民署) a belépési tilalomra (禁止入國) vonatkozó hatályos szolgálati utasítása a jogellenes munkára általában 3 éves belépési tilalmat rögzít, de ugyanazon utasítás mentességi vagy időrövidítési feltételei alkalmazhatók. Az eredmény nem dől el automatikusan pusztán attól, hogy harmadik fél bejelentése volt, és az illetékes szerv a tényeket, az alkalmazandó szabályokat és az egyedi körülményeket vizsgálja.
 
 ## Hivatalos források
 
@@ -136,6 +136,7 @@ Az engedély nélküli munkára közigazgatási bírság és Tajvan elhagyásár
 - [Gazdasági Minisztérium: külföldi beruházási kérelem útmutatója](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [A foglalkoztatási szolgáltatási törvény 43. cikke](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [A foglalkoztatási szolgáltatási törvény 68. cikke](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [A foglalkoztatási szolgáltatási törvény 68. cikke (Törvények és Rendeletek Adatbázisa)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Belügyminisztérium Bevándorlási Hivatala: a belépési tilalom idejére vonatkozó közigazgatási útmutató](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Kapcsolódó útmutatók

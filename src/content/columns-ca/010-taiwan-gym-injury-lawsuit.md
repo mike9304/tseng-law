@@ -1,7 +1,7 @@
 ---
 title: "Indemnització per lesió en un gimnàs de Taiwan: cas de primera instància, terminis, proves i conceptes indemnitzatoris"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 de setembre de 2025"
 read_time: "7 min de lectura"
 categories:
@@ -19,7 +19,7 @@ Aquest article, a partir d’un assumpte en què un estudiant universitari core�
 
 L’accident va ocórrer en un gimnàs de Taichung (臺中), durant un entrenament de pes mort (硬舉) dirigit per l’entrenador. Després de la lesió no n’hi ha prou amb constatar el mer fet que l’accident va ocórrer dins del gimnàs; cal valorar conjuntament l’experiència esportiva i l’estat de salut de l’usuari, el tipus d’exercici i la càrrega, les explicacions i la instrucció de l’entrenador, el moviment i la reacció d’aquell moment, el nexe causal (因果關係) entre la lesió i l’exercici, i les dades que acrediten el dany reclamat.
 
-En aquest assumpte vaig actuar com a representant processal (訴訟代理人) del demandant, l’estudiant coreà. El Tribunal de Districte de Taichung, el 24 de gener de 2022, en la sentència de primera instància de l’assumpte de consum núm. 7 de l’any 109 de la República de la Xina (2020) (109年度消字第7號), va condemnar el demandat a pagar [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i els interessos que fixa la sentència.
+En aquest assumpte vaig actuar com a representant processal (訴訟代理人) del demandant, l’estudiant coreà. El Tribunal de Districte de Taichung, el 24 de gener de 2022, en la sentència de primera instància de l’assumpte de consum núm. 7 de l’any 109 de la República de la Xina (2020) (109年度消字第7號), va condemnar l’empresa que explota el gimnàs, una de les parts demandades, a pagar [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i els interessos que fixa la sentència.
 
 Després, la premsa va informar que les parts van transigir (和解) en la segona instància. Com que amb la sola sentència oficial de primera instància no es pot confirmar el resultat de la segona instància ni l’import de la transacció, la transacció de què informa la premsa no s’ha de prendre com el desenllaç confirmat de la sentència de primera instància.
 
@@ -67,7 +67,7 @@ El que segueix és informació general per explicar les controvèrsies per lesi�
 
 ## 1. Després d’una lesió en un gimnàs de Taiwan, quins procediments jurídics es poden examinar?
 
-L’[article 7 de la Llei de protecció dels consumidors de Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) disposa que, en prestar un servei, l’empresari ha de fer que aquest servei tingui la seguretat que raonablement es pot esperar segons el criteri professional o tècnic del moment de la prestació.
+L’[article 7 de la Llei de protecció dels consumidors de Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) disposa que, en prestar un servei, l’empresari ha de fer que aquest servei tingui la seguretat que raonablement es pot esperar segons el criteri professional o tècnic del moment de la prestació. L’apartat 3 del mateix article disposa que l’empresari que infringeixi aquests requisits i causi un dany al consumidor o a un tercer respon solidàriament de la indemnització, i que, encara que l’empresari provi que no hi va tenir culpa, el tribunal només en pot reduir la responsabilitat.
 
 Això no significa que es reconegui la responsabilitat de l’empresari o de l’entrenador cada vegada que ocorre una lesió en un gimnàs. Cal valorar en cada assumpte quin deure de diligència hi havia en concret, si es va infringir, si hi ha nexe causal entre la infracció i la lesió, si es va produir un dany real, quines defenses té l’altra part i si hi ha prova que avala cada al·legació i cada defensa.
 

@@ -1,7 +1,7 @@
 ---
 title: "O comércio logístico em Taiwan e a autorização de transporte de mercadorias por automóvel (汽車貨運業): constituição nova, aquisição e mandato"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 de setembro de 2025"
 read_time: "12 min de leitura"
 categories:
@@ -118,7 +118,7 @@ Deve confirmar-se a validade da licença de exploração do empresário destinat
 
 Mesmo se o estrangeiro se tornar acionista ou investidor da sociedade-alvo, este facto por si só não lhe confere nem o direito de trabalhar nem um estatuto de estadia em Taiwan. Se exercer em Taiwan o trabalho quotidiano, como a gestão da sociedade, as vendas, a afetação dos veículos e o atendimento ao cliente, deve confirmar, antes de começar o trabalho, se precisa da autorização de trabalho conforme à função real, e tratar em separado o procedimento de estadia posterior.
 
-Ao trabalho sem autorização podem aplicar-se uma coima administrativa e uma ordem de deixar Taiwan (限令出國). A orientação de trabalho sobre a interdição de entrada (禁止入國) em vigor na Administração da imigração do Ministério do Interior (內政部移民署) fixa em geral, para o trabalho ilícito, um período de interdição de entrada de 3 anos, mas as exigências de isenção ou de encurtamento do período que esta mesma orientação fixa podem aplicar-se. O resultado não se determina de forma mecânica só porque existe uma denúncia de um terceiro, e a autoridade competente examina os factos, as normas aplicáveis e as circunstâncias de cada assunto.
+O estrangeiro que trabalha sem autorização fica sujeito a uma coima administrativa, deve ser objeto de uma ordem de saída imediata de Taiwan (限令出國) e não pode voltar a trabalhar em Taiwan (artigo 68 da lei sobre os serviços de emprego, 就業服務法). A orientação de trabalho sobre a interdição de entrada (禁止入國) em vigor na Administração da imigração do Ministério do Interior (內政部移民署) fixa em geral, para o trabalho ilícito, um período de interdição de entrada de 3 anos, mas as exigências de isenção ou de encurtamento do período que esta mesma orientação fixa podem aplicar-se. O resultado não se determina de forma mecânica só porque existe uma denúncia de um terceiro, e a autoridade competente examina os factos, as normas aplicáveis e as circunstâncias de cada assunto.
 
 ## Fontes oficiais
 
@@ -136,6 +136,7 @@ Ao trabalho sem autorização podem aplicar-se uma coima administrativa e uma or
 - [Ministério da Economia: orientação de pedido de investimento estrangeiro](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49).
 - [Artigo 43 da lei sobre os serviços de emprego (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128).
 - [Artigo 68 da lei sobre os serviços de emprego](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128).
+- [Artigo 68 da lei sobre os serviços de emprego (Base de Dados de Leis e Regulamentos)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68).
 - [Administração da imigração do Ministério do Interior: orientação administrativa sobre o período de interdição de entrada](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp).
 
 ## Orientações ligadas

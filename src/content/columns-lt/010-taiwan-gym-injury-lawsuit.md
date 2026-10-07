@@ -1,7 +1,7 @@
 ---
 title: "Žalos atlyginimas dėl sužalojimo sporto salėje Taivane: 1-osios instancijos byla, terminai, įrodymai ir žalos rūšys"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "2025 m. rugsėjo 13 d."
 read_time: "7 min. skaitymo"
 categories:
@@ -19,7 +19,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 Įvykis įvyko Taidžungo (臺中) sporto salėje, trenerio vedamų mirties traukos (硬舉) pratimų metu. Po sužalojimo nepakanka žiūrėti tik į tai, kad įvykis nutiko sporto salės viduje; kartu reikia įvertinti sportuojančiojo patirtį ir sveikatos būklę, pratimo rūšį ir svorį, trenerio paaiškinimus ir instrukcijas, tuometinį judesį ir reakciją, priežastinį ryšį (因果關係) tarp sužalojimo ir pratimo bei dokumentus, pagrindžiančius žalą.
 
-Šioje byloje ieškovui, korėjiečių studentui, atstovavau kaip proceso atstovė (訴訟代理人). Taidžungo apygardos teismas 2022 m. sausio 24 d. Kinijos Respublikos kalendoriaus 109 metų vartotojų bylos Nr. 7 (民國109年度消字第7號) 1-osios instancijos sprendime nurodė atsakovui sumokėti [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ir sprendime nurodytas palūkanas.
+Šioje byloje ieškovui, korėjiečių studentui, atstovavau kaip proceso atstovė (訴訟代理人). Taidžungo apygardos teismas 2022 m. sausio 24 d. Kinijos Respublikos kalendoriaus 109 metų vartotojų bylos Nr. 7 (民國109年度消字第7號) 1-osios instancijos sprendime nurodė sporto salę valdančiai bendrovei, kuri buvo vienas iš atsakovų, sumokėti [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ir sprendime nurodytas palūkanas.
 
 Vėliau žiniasklaida pranešė, kad apeliacinėje instancijoje šalys sudarė taikos susitarimą (和解). Vien oficialus 1-osios instancijos sprendimas neleidžia patvirtinti apeliacinės instancijos baigties ar taikos sumos, todėl pranešimo apie taiką negalima laikyti patvirtinta galutine bylos baigtimi.
 
@@ -67,7 +67,7 @@ Toliau pateikta bendra informacija, skirta sužalojimų sporto salėje ginčams 
 
 ## 1. Po sužalojimo sporto salėje Taivane kokias teisines procedūras galima įvertinti?
 
-[Taivano Vartotojų apsaugos įstatymo (消費者保護法) 7 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nustato, kad verslininkas, teikdamas paslaugą, privalo užtikrinti tokį paslaugos saugumo lygį, kokio pagrįstai galima tikėtis pagal paslaugos teikimo metu galiojantį profesinį ar techninį standartą.
+[Taivano Vartotojų apsaugos įstatymo (消費者保護法) 7 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nustato, kad verslininkas, teikdamas paslaugą, privalo užtikrinti tokį paslaugos saugumo lygį, kokio pagrįstai galima tikėtis pagal paslaugos teikimo metu galiojantį profesinį ar techninį standartą. Tojo paties straipsnio 3 dalyje nustatyta, kad verslininkas, pažeidęs šiuos reikalavimus ir padaręs žalos vartotojui ar trečiajam asmeniui, solidariai atsako už žalos atlyginimą, o net jei verslininkas įrodo, kad nėra kaltas, teismas gali tik sumažinti jo atsakomybę.
 
 Tai nereiškia, kad verslininko ar trenerio atsakomybė pripažįstama kaskart, kai sužalojimas įvyksta sporto salėje. Kiekvienoje byloje reikia vertinti, kokia konkreti rūpestingumo pareiga egzistavo, ar ji buvo pažeista, ar yra priežastinis ryšys tarp pažeidimo ir sužalojimo, ar atsirado faktinė žala, kokias prieštaras turi kita šalis ir ar yra įrodymų, pagrindžiančių kiekvieną teiginį ir kiekvieną prieštarą.
 

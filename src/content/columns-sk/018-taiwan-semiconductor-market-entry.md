@@ -1,6 +1,6 @@
 ---
 title: "Zahraničné podniky v odbore polovodičových súčiastok, ktoré vstupujú na Taiwan: ako posúdiť dcérsku spoločnosť, pobočku alebo zástupcu"
-lastmod: "2026-09-17"
+lastmod: "2026-10-07"
 date_display: "17. septembra 2026"
 read_time: "8 min čítania"
 categories:
@@ -65,11 +65,11 @@ Možno ju vytvoriť s 1 alebo viacerými fyzickými osobami, alebo s taiwanským
 
 ### Akciová spoločnosť: vhodná, ak sa majú pribrať iní investori alebo sa zvažuje kótovanie
 
-Kapitál sa delí na akcie. Spravidla sú potrební 2 alebo viacerí akcionári (股東), avšak štát alebo právnická osoba ju môže založiť aj samostatne a zahraničná právnická osoba môže držať 100 %. Akcie sú v zásade voľne prevoditeľné, so zákonnými výnimkami; podľa predpisov možno navrhnúť druhové akcie, opcie zamestnancov a podobne. Preto sa hodí podnikom, ktoré očakávajú investorov, obchody s podielmi, akciové odmeny zamestnancov alebo budúcu fúziu, akvizíciu, kótovanie alebo zápis do režimu vznikajúcich akcií (興櫃); neobmedzuje sa len na veľké podniky. V správe môže nekótovaná spoločnosť stanovami nezriaďovať predstavenstvo a mať len 1 alebo 2 členov predstavenstva (董事). Spoločnosť s jediným štátnym alebo právnickým akcionárom môže stanovami nezriaďovať dozorný orgán (監察人). Takisto nemusí každá akciová spoločnosť nechať overiť ročnú účtovnú závierku. Povinnosť auditu vzniká bežnej spoločnosti pri splatenom kapitáli 30.000.000 TWD a aj pod touto hranicou pri prevádzkovom príjme 100.000.000 TWD alebo pri 100 zamestnancoch prihlásených v poistení pracovníkov (勞工保險); spoločnosti, ktoré uskutočnili verejnú emisiu akcií (公開發行公司), sa riadia predpismi o cenných papieroch.
+Kapitál sa delí na akcie. Spravidla sú potrební 2 alebo viacerí zakladatelia (發起人), avšak štát alebo právnická osoba ju môže založiť aj samostatne a zahraničná právnická osoba môže držať 100 %. Akcie sú v zásade voľne prevoditeľné, so zákonnými výnimkami; podľa predpisov možno navrhnúť druhové akcie, opcie zamestnancov a podobne. Preto sa hodí podnikom, ktoré očakávajú investorov, obchody s podielmi, akciové odmeny zamestnancov alebo budúcu fúziu, akvizíciu, kótovanie alebo zápis do režimu vznikajúcich akcií (興櫃); neobmedzuje sa len na veľké podniky. V správe môže nekótovaná spoločnosť stanovami nezriaďovať predstavenstvo a mať len 1 alebo 2 členov predstavenstva (董事). Spoločnosť s jediným štátnym alebo právnickým akcionárom môže stanovami nezriaďovať dozorný orgán (監察人). Takisto nemusí každá akciová spoločnosť nechať overiť ročnú účtovnú závierku. Povinnosť auditu vzniká bežnej spoločnosti pri splatenom kapitáli 30.000.000 TWD a aj pod touto hranicou pri prevádzkovom príjme 100.000.000 TWD alebo pri 100 zamestnancoch prihlásených v poistení pracovníkov (勞工保險); spoločnosti, ktoré uskutočnili verejnú emisiu akcií (公開發行公司), sa riadia predpismi o cenných papieroch.
 
 ## 4. Postupy pobočky a dcérskej spoločnosti sa líšia; iba dcérska spoločnosť prechádza preskúmaním investičného odboru Ministerstva hospodárstva
 
-Keď zahraničná spoločnosť zakladá taiwanskú dcérsku spoločnosť, názov sa spravidla vopred overí a žiada sa o investičné povolenie na Odbore preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司). Po schválení sa prevedú prostriedky, určí sa výška investície a audítor (會計師) overí kapitál, potom sa dokončí založenie a daňový zápis.
+Keď zahraničná spoločnosť zakladá taiwanskú dcérsku spoločnosť, názov sa spravidla vopred overí a žiada sa o investičné povolenie na Odbore preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司). Po schválení sa prevedú prostriedky, určí sa výška investície a audítor (會計師) overí kapitál, potom sa dokončí založenie a daňový zápis. Po podaní žiadosti o zápis založenia sa spoločnosť musí zúčastniť kurzov o pracovných právach (勞動權益講習), ktoré organizujú orgány verejnej správy na akejkoľvek úrovni alebo nimi určené neziskové organizácie (článok 387-1 zákona o spoločnostiach, účinný od júna 2026).
 
 Naproti tomu pri zakladaní taiwanskej pobočky bežnej zahraničnej spoločnosti investičné povolenie Odboru preskúmania investícií spravidla netreba; Úrad obchodného rozvoja Ministerstva hospodárstva (經濟部商業發展署) vykonáva zápis pobočky a súvisiace určenie kapitálu. Naďalej sú nutné predbežné overenie názvu, prevod prevádzkového kapitálu, overenie kapitálu a daňový zápis; harmonogram je zvyčajne kratší.
 
@@ -77,9 +77,9 @@ Vyššie uvedené porovnáva len postup zápisu pobočky a dcérskej spoločnost
 
 ## 5. Zápis spoločnosti a zákonná práca inžiniera nie sú totéž
 
-Dokončenie zápisu na Taiwane neznamená, že zamestnanci zahraničného ústredia môžu na Taiwane automaticky pracovať. Cudzinec, ktorý na Taiwane pracuje, potrebuje zákonné pracovné povolenie (工作許可) a na dlhší pobyt i preukaz na pobyt cudzinca (外僑居留證). Spravidla zamestnávateľ žiada o pracovné povolenie a zodpovedajúci preukaz na pobyt.
+Dokončenie zápisu na Taiwane neznamená, že zamestnanci zahraničného ústredia môžu na Taiwane automaticky pracovať. Cudzinec, ktorý na Taiwane pracuje, potrebuje zákonné pracovné povolenie (工作許可) a na dlhší pobyt i preukaz na pobyt cudzinca (外僑居留證). Spravidla zamestnávateľ žiada o pracovné povolenie pre zahraničného zamestnanca a cudzinec sám žiada na Imigračnej správe (移民署) o zodpovedajúci preukaz na pobyt.
 
-Pre vedúceho taiwanskej dcérskej spoločnosti a pobočky zahraničnej spoločnosti je žiadosť o pracovné povolenie relatívne ľahšia. Ak sa má však žiadať o pracovné povolenie pre ďalšieho cudzinca, Ministerstvo práce podľa odvetvia požaduje prahy kapitálu, obratu a podobne. Ak plánujete, že zahraniční zamestnanci budú pracovať na Taiwane, treba pred založením taiwanskej spoločnosti vopred overiť, či nastavenie kapitálu spĺňa príslušný prah.
+Pre vedúceho taiwanskej dcérskej spoločnosti (spoločnosti so schválenou investíciou, v ktorej cudzinci držia viac ako 1/3 podielov) a pobočky zahraničnej spoločnosti je žiadosť o pracovné povolenie relatívne ľahšia. Aj pri zamestnaní prvého cudzinca však zamestnávateľ musí splniť jedno z kritérií článku 39 Štandardov kvalifikácie a preskúmania práce cudzincov (工作資格及審查標準). Pri spoločnosti, ktorá existuje menej ako 1 rok, kritériá zahŕňajú splatený kapitál (pri pobočke prevádzkové prostriedky na Taiwane) najmenej 500.000 TWD alebo obrat najmenej 3.000.000 TWD; pri spoločnosti, ktorá existuje 1 rok alebo dlhšie, zahŕňajú priemerný obrat za posledný 1 rok alebo 3 roky najmenej 3.000.000 TWD. Ak zamestnávateľ zamestnáva 2 alebo viacerých cudzincov rovnakého typu, títo cudzinci a zamestnávateľ musia splniť všeobecné štandardy kapitoly 2 (článok 38 odsek 2). Ak plánujete, že zahraniční zamestnanci budú pracovať na Taiwane, treba pred založením taiwanskej spoločnosti vopred overiť, či nastavenie kapitálu spĺňa príslušný prah.
 
 ## 7. Štruktúry, ktoré možno porovnať podľa stupňa rozvoja podniku
 

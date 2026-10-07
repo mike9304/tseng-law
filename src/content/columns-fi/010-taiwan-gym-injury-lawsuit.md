@@ -1,7 +1,7 @@
 ---
 title: "Korvaus kuntosalivammasta Taiwanissa: ensimmäisen oikeusasteen asia, määräajat, todisteet ja korvauserät"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. syyskuuta 2025"
 read_time: "10 min lukuaika"
 categories:
@@ -19,7 +19,7 @@ Tämä artikkeli perustuu asiaan, jossa korealainen opiskelija vammautui Taiwani
 
 Onnettomuus tapahtui kuntosalilla Taichungissa (臺中) maastavedon (硬舉) harjoituksessa valmentajan johdolla. Vamman jälkeen ei tule katsoa pelkästään sitä, että onnettomuus tapahtui kuntosalilla; on tutkittava myös käyttäjän harjoituskokemus ja terveydentila, liikkeen luonne ja paino, valmentajan selitys ja ohjaus, liike ja reaktio tuolloin, vamman ja liikkeen välinen syy-yhteys (因果關係) sekä asiakirjat, jotka tukevat vahinkoa.
 
-Olin tässä asiassa kantajan, korealaisen opiskelijan, oikeudenkäyntiasiamies (訴訟代理人). Taichungin käräjäoikeus (臺灣臺中地方法院) velvoitti 24. tammikuuta 2022 antamassaan ensimmäisen oikeusasteen tuomiossa kuluttaja-asiassa numero 7 Kiinan tasavallan kalenterivuonna 109 (109年度消字第7號) vastaajan maksamaan [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) sekä tuomiossa mainitun koron.
+Olin tässä asiassa kantajan, korealaisen opiskelijan, oikeudenkäyntiasiamies (訴訟代理人). Taichungin käräjäoikeus (臺灣臺中地方法院) velvoitti 24. tammikuuta 2022 antamassaan ensimmäisen oikeusasteen tuomiossa kuluttaja-asiassa numero 7 Kiinan tasavallan kalenterivuonna 109 (109年度消字第7號) kuntosalia pyörittävän yhtiön, joka oli yksi vastaajista, maksamaan [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) sekä tuomiossa mainitun koron.
 
 Sen jälkeen lehdistö ilmoitti, että asianosaiset olivat muutoksenhakuasteessa tehneet sovinnon (和解). Pelkästä virallisesta ensimmäisen oikeusasteen tuomiosta ei käy ilmi muutoksenhakuasteen tulos eikä sovintosumma; lehdistön ilmoittamaa sovintoa ei saa lukea ensimmäisen oikeusasteen vahvistetuksi lopputulokseksi.
 
@@ -67,7 +67,7 @@ Seuraava on yleistä tietoa Taiwanin kuntosalivammoja koskevien riitojen selosta
 
 ## 1. Mitä oikeudellisia menettelyjä Taiwanin kuntosalivamman jälkeen voidaan tutkia?
 
-[Taiwanin kuluttajansuojalain 7 artikla (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) määrää, että yrityksen on palvelua antaessaan huolehdittava, että palvelu on niin turvallinen kuin ammattimaisen tai teknisen mittapuun mukaan voidaan palvelun antamisen ajankohtana kohtuudella odottaa.
+[Taiwanin kuluttajansuojalain 7 artikla (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) määrää, että yrityksen on palvelua antaessaan huolehdittava, että palvelu on niin turvallinen kuin ammattimaisen tai teknisen mittapuun mukaan voidaan palvelun antamisen ajankohtana kohtuudella odottaa. Saman artiklan 3 momentin mukaan yritys, joka rikkoo näitä vaatimuksia ja aiheuttaa kuluttajalle tai kolmannelle vahinkoa, vastaa korvauksesta yhteisvastuullisesti, ja vaikka yritys näyttäisi, ettei sillä ole ollut tuottamusta, tuomioistuin voi ainoastaan lieventää sen vastuuta.
 
 Tämä ei merkitse, että yrityksen tai valmentajan vastuun katsottaisiin aina syntyneen, kun vamma syntyy kuntosalilla. On asia asialta arvioitava, mikä huolellisuusvelvollisuus konkreettisesti oli, onko se laiminlyöty, onko laiminlyönnin ja vamman välillä syy-yhteys (因果關係), onko syntynyt todellinen vahinko, mitä väitteitä vastapuolella on, ja onko näyttöä, joka tukee kutakin väitettä ja kutakin vastaväitettä.
 

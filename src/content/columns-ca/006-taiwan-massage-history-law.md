@@ -1,7 +1,7 @@
 ---
 title: "Història del massatge a Taiwan i informació jurídica"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 de setembre de 2025"
 read_time: "3 min de lectura"
 categories:
@@ -51,11 +51,11 @@ De fet, només les persones amb discapacitat visual (視障者) podien dedicar-s
 
 Que una persona sense discapacitat visual (非視障者) es dediqués a aquest ofici era il·legal.
 
-Aquesta llei es va mantenir fins al 2003. El senyor Lin aleshores gestionava una barberia.
+Aquesta restricció es va mantenir en vigor fins al 31 d’octubre de 2011. El 2003, dins d’aquest període, el senyor Lin gestionava una barberia.
 
 Va ocupar dos treballadors sense discapacitat visual per prestar serveis de rentat de cabells i massatge, i la policia ho va detectar.
 
-Segons la llei d’aleshores, al senyor Lin i als dos treballadors se’ls va imposar una multa administrativa (罰鍰) de 40.000, 10.000 i 20.000 nous dòlars taiwanesos (新臺幣), respectivament.
+Segons la llei d’aleshores, l’Oficina d’Afers Socials de la ciutat de Taipei (臺北市政府社會局) va imposar una multa administrativa (罰鍰) de 40.000 nous dòlars taiwanesos (新臺幣) al senyor Lin i de 10.000 i 20.000 nous dòlars taiwanesos als dos treballadors, respectivament.
 
 El senyor Lin va considerar aquesta sanció molt injusta i va sol·licitar una interpretació constitucional.
 
@@ -81,7 +81,7 @@ Per exemple, es va pensar si la norma escrita que només permetia a les persones
 
 També es va qüestionar si aquella norma havia contribuït realment a protegir l’ocupació i la subsistència de les persones amb discapacitat visual.
 
-Al final, els Grans Magistrats (大法官) van declarar inconstitucional (違憲) el precepte que només permetia a les persones amb discapacitat visual dedicar-se a l’ofici de massatge.
+Al final, en la Interpretació núm. 649 (釋字第649號) del Yuan Judicial (司法院), de 31 d’octubre de 2008, els Grans Magistrats (大法官) van declarar inconstitucional (違憲) el precepte que només permetia a les persones amb discapacitat visual dedicar-se a l’ofici de massatge, i el precepte va deixar de tenir efecte el 31 d’octubre de 2011, en acabar el termini de gràcia de 3 anys que la interpretació va concedir.
 
 ​
 

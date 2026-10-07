@@ -1,7 +1,7 @@
 ---
 title: "Sejarah dan rejim undang-undang urutan di Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "3 minit bacaan"
 categories:
@@ -51,11 +51,11 @@ hanya orang kurang upaya penglihatan (視障者) yang benar-benar boleh menjalan
 
 Individu tanpa kurang upaya penglihatan (非視障者) yang menjalankan pekerjaan ini adalah dilarang.
 
-Undang-undang ini kekal hingga 2003; pada masa itu, Encik Lin, yang mengurus salun gunting rambut,
+Sekatan ini kekal berkuat kuasa hingga 31 Oktober 2011; pada tahun 2003, dalam tempoh itu, Encik Lin, yang mengurus salun gunting rambut,
 
 menggaji dua pekerja tanpa kurang upaya penglihatan untuk perkhidmatan cucian rambut dan urutan, dan polis mengetahuinya.
 
-Menurut undang-undang masa itu, Encik Lin dikenakan denda pentadbiran (罰鍰) sebanyak 40,000 dolar baharu Taiwan (新臺幣), manakala dua pekerja itu masing-masing 10,000 dan 20,000 dolar baharu Taiwan.
+Menurut undang-undang masa itu, Biro Hal Ehwal Sosial Bandar Taipei (臺北市社會局) mengenakan denda pentadbiran (罰鍰) sebanyak 40,000 dolar baharu Taiwan (新臺幣) ke atas Encik Lin, manakala dua pekerja itu masing-masing 10,000 dan 20,000 dolar baharu Taiwan.
 
 Encik Lin menganggap sanksi ini sangat tidak adil dan memohon tafsiran perlembagaan.
 
@@ -81,7 +81,7 @@ Ditanyakan contohnya sama ada peraturan bertulis yang hanya membenarkan orang ku
 
 dan diragui sama ada peraturan ini benar-benar menyumbang untuk melindungi pekerjaan dan sara hidup orang kurang upaya penglihatan.
 
-Akhirnya, hakim perlembagaan (大法官) mengisytiharkan tidak berperlembagaan (違憲) peruntukan yang hanya membenarkan orang kurang upaya penglihatan menjalankan pekerjaan urutan.
+Akhirnya, dalam Tafsiran Yuan Kehakiman No. 649 (釋字第649號) bertarikh 31 Oktober 2008, hakim perlembagaan (大法官) mengisytiharkan tidak berperlembagaan (違憲) peruntukan yang hanya membenarkan orang kurang upaya penglihatan menjalankan pekerjaan urutan, dan peruntukan itu tidak lagi berkuat kuasa pada 31 Oktober 2011, iaitu pada akhir tempoh tangguh tiga tahun yang dibenarkan oleh tafsiran itu.
 
 ​
 

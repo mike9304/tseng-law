@@ -1,7 +1,7 @@
 ---
 title: "Logistická činnost na Tchaj-wanu a povolení automobilové nákladní dopravy (汽車貨運業): nové založení, nabytí a pověření"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. září 2025"
 read_time: "12 min čtení"
 categories:
@@ -118,7 +118,7 @@ Je třeba ověřit platnost provozní licence podnikatele, jemuž je práce svě
 
 I když se cizinec stane akcionářem nebo investorem cílové společnosti, tato skutečnost mu sama o sobě neuděluje právo pracovat ani pobytový status na Tchaj-wanu. Pokud na Tchaj-wanu vykonává každodenní práci, jako řízení společnosti, prodej, přidělování vozidel a péči o zákazníka, musí před zahájením práce ověřit, zda potřebuje pracovní povolení odpovídající skutečné funkci, a zvlášť provést pozdější pobytový postup.
 
-Za práci bez povolení hrozí správní pokuta a příkaz opustit Tchaj-wan (限令出國). Platné správní pokyny Imigrační správy k zákazu vstupu (禁止入國) Ministerstva vnitra (內政部移民署) stanoví obecně u nedovolené práce dobu zákazu vstupu 3 roky, avšak mohou se uplatnit požadavky na osvobození nebo zkrácení doby, které tytéž pokyny stanoví. Výsledek se neurčuje mechanicky jen proto, že existuje oznámení třetí osoby, a příslušný orgán posuzuje skutkové okolnosti, použitelné normy a okolnosti každé věci.
+Cizinec, který pracuje bez povolení, podléhá správní pokutě, musí mu být neprodleně nařízeno opustit Tchaj-wan (限令出國) a nesmí již na Tchaj-wanu pracovat (článek 68 zákona o službách zaměstnanosti, 就業服務法). Platné správní pokyny Imigrační správy k zákazu vstupu (禁止入國) Ministerstva vnitra (內政部移民署) stanoví obecně u nedovolené práce dobu zákazu vstupu 3 roky, avšak mohou se uplatnit požadavky na osvobození nebo zkrácení doby, které tytéž pokyny stanoví. Výsledek se neurčuje mechanicky jen proto, že existuje oznámení třetí osoby, a příslušný orgán posuzuje skutkové okolnosti, použitelné normy a okolnosti každé věci.
 
 ## Oficiální podklady
 
@@ -136,6 +136,7 @@ Za práci bez povolení hrozí správní pokuta a příkaz opustit Tchaj-wan (�
 - [Ministerstvo hospodářství: pokyny k žádosti o zahraniční investici](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Čl. 43 zákona o službách zaměstnanosti (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Čl. 68 zákona o službách zaměstnanosti](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Čl. 68 zákona o službách zaměstnanosti (databáze zákonů a předpisů)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Imigrační správa Ministerstva vnitra: správní pokyny k době zákazu vstupu](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Související odkazy

@@ -1,7 +1,7 @@
 ---
 title: "Histoire et régime juridique du massage à Taïwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 septembre 2025"
 read_time: "3 min de lecture"
 categories:
@@ -51,11 +51,11 @@ seules les personnes en situation de handicap visuel (視障者) pouvaient en r�
 
 Qu’un individu sans handicap visuel (非視障者) exerce ce métier était illégal.
 
-Cette loi s’est maintenue jusqu’en 2003 ; à l’époque, M. Lin, qui gérait un salon de coiffure,
+Cette restriction s’est maintenue en vigueur jusqu’au 31 octobre 2011 ; en 2003, pendant cette période, M. Lin, qui gérait un salon de coiffure,
 
 employa des salariés sans handicap visuel pour des services de lavage de cheveux et de massage, et la police le constata.
 
-Selon le droit d’alors, M. Lin et ces salariés se virent infliger respectivement une amende administrative (罰鍰) de TWD 40.000, TWD 10.000 et TWD 20.000 en nouveaux dollars de Taïwan (新臺幣).
+Selon le droit d’alors, le Bureau des affaires sociales de la ville de Taipei (臺北市政府社會局) infligea à M. Lin une amende administrative (罰鍰) de TWD 40.000 et aux deux salariés des amendes de TWD 10.000 et de TWD 20.000 respectivement, en nouveaux dollars de Taïwan (新臺幣).
 
 M. Lin estima cette sanction très injuste et demanda une interprétation constitutionnelle.
 
@@ -81,7 +81,7 @@ On se demanda par exemple si la règle écrite qui n’autorisait que les person
 
 et l’on mit en doute que cette règle eût réellement contribué à protéger l’emploi et la subsistance des personnes en situation de handicap visuel.
 
-Finalement, les juges constitutionnels (大法官) ont déclaré inconstitutionnelle (違憲) la disposition qui n’autorisait que les personnes en situation de handicap visuel à exercer le métier de massage.
+Finalement, dans l’interprétation n° 649 (釋字第649號) du Yuan judiciaire (司法院) du 31 octobre 2008, les juges constitutionnels (大法官) ont déclaré inconstitutionnelle (違憲) la disposition qui n’autorisait que les personnes en situation de handicap visuel à exercer le métier de massage, et la disposition a cessé de produire effet le 31 octobre 2011, au terme du délai de grâce de 3 ans que l’interprétation avait accordé.
 
 ​
 

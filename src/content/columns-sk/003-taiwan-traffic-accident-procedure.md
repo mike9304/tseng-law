@@ -1,7 +1,7 @@
 ---
 title: "Otázky a odpovede k postupu po dopravných nehodách na Taiwane: úkony na mieste, zavinenie, zmier a náhrada škody"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "12 min čítania"
 categories:
@@ -95,7 +95,7 @@ Nárok založený na článku 184 občianskeho zákonníka predpokladá protipr�
 
 - Poranenie: Podľa článku 193 občianskeho zákonníka možno posúdiť potrebné lekárske náklady (醫療費用), dodatočné náklady každodenného života, ako sú náklady na opatrovanie (看護費用), cestovné na liečbu (就醫交通費) a náklady na technické pomôcky, a tiež stratu príjmu (收入損失) preukázanú neschopnosťou pracovať, ako aj zníženie pracovnej schopnosti (勞動能力減損). Podľa článku 195 občianskeho zákonníka možno tiež posúdiť nemajetkovú ujmu.
 - Smrť: Podľa článku 192 občianskeho zákonníka, ak na to vznikne právny základ, možno posúdiť lekárske náklady pred smrťou a náklady zvýšených životných potrieb, náklady pohrebu (殯葬費) a stratu výživného (扶養利益損失) osoby, ktorá mala zákonné právo na výživné. Podľa článku 194 občianskeho zákonníka možno tiež posúdiť nemajetkovú ujmu niektorých príbuzných.
-- Majetok: Podľa článku 196 občianskeho zákonníka možno uplatniť odôvodnenú skutočnú majetkovú škodu vrátane nákladov na opravu vozidla alebo straty hodnoty.
+- Majetok: Podľa článku 196 občianskeho zákonníka môže vlastník požadovať náhradu zníženia hodnoty vozidla spôsobeného poškodením; náklady na opravu slúžia ako miera len v nevyhnutnom rozsahu a pri nahradení starých dielov novými možno vykonať odpočet za opotrebenie.
 
 ## Q8. Ak liečba trvá, ako predkladať listiny o lekárskych nákladoch?
 
@@ -165,13 +165,13 @@ Súd posudzuje okolnosti každej veci a spoločne hodnotí obsah poranenia a lie
 
 Zamestnávateľ môže namietať, že zachoval náležitú starostlivosť pri výbere zamestnanca a pri dohľade nad ním, alebo že škode by nebolo možné predísť ani pri zachovaní tejto starostlivosti. Možno zvážiť uplatnenie náhrady spoločne proti zamestnávateľovi a zamestnancovi. Po náhrade môže zamestnávateľ vykonať regres voči zamestnancovi.
 
-Ak zamestnávateľ preukáže tieto predpoklady zbavenia sa zodpovednosti a poškodený nezíska náhradu z odseku 1, môže súd podľa článku 188 odseku 2 občianskeho zákonníka uložiť náhradu úplnú alebo čiastočnú s prihliadnutím na hospodársku situáciu zamestnávateľa a poškodeného.
+Ak zamestnávateľ preukáže tieto predpoklady zbavenia sa zodpovednosti a poškodený nezíska náhradu z odseku 1, môže súd podľa článku 188 odseku 2 občianskeho zákonníka na návrh poškodeného s prihliadnutím na hospodársku situáciu zamestnávateľa a poškodeného uložiť zamestnávateľovi, aby škodu nahradil celkom alebo sčasti.
 
 Otázku, proti komu sa občianskoprávny nárok smeruje, treba odlíšiť od trestnej zodpovednosti. Trestná zodpovednosť podľa článku 284 trestného zákona sa hodnotí podľa porušenia povinnosti opatrnosti každej fyzickej osoby a príčinnej súvislosti tohto porušenia.
 
 ## Q15. Aké plnenia a aké krytie povinného poistenia vozidiel treba overiť?
 
-Povinnosť uzavrieť poistenie podľa článku 6 zákona o povinnom poistení zodpovednosti vozidiel (強制汽車責任保險法) spočíva v zásade na vlastníkovi vozidla a v predvídaných prípadoch tiež na užívateľovi alebo správcovi tohto vozidla. Tento režim vytvára štruktúru krytia bez ohľadu na nedbanlivosť (無過失給付制度) pre osobu zranenú alebo usmrtenú v dôsledku nehody motorového vozidla, avšak treba overiť rozsah cestujúcich alebo tretích osôb (第三人) mimo vozidla, ktorý stanovuje zákon.
+Povinnosť uzavrieť poistenie podľa článku 6 zákona o povinnom poistení zodpovednosti vozidiel (強制汽車責任保險法) spočíva v zásade na vlastníkovi vozidla a v predvídaných prípadoch tiež na užívateľovi alebo správcovi tohto vozidla. Tento režim vytvára štruktúru krytia bez ohľadu na nedbanlivosť (無過失給付制度) pre osobu zranenú alebo usmrtenú v dôsledku nehody motorového vozidla, avšak treba overiť rozsah cestujúcich alebo tretích osôb (第三人) mimo vozidla, ktorý stanovuje zákon. Poisťovateľ neposkytuje plnenie, ak nehodu úmyselne alebo pri páchaní trestného činu spôsobila zranená osoba alebo iná osoba uplatňujúca nárok (článok 28).
 
 Pri nehode jedného vozidla nie je vodič tohto vozidla spravidla adresátom plnenia z povinného poistenia tohto vozidla. Pri nehode, ktorej sa zúčastňuje niekoľko vozidiel, však existujú prípady, v ktorých vodič môže uplatniť plnenie voči poisťovateľovi povinného poistenia iného zúčastneného vozidla.
 

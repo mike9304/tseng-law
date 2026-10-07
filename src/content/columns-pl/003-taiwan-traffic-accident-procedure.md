@@ -1,7 +1,7 @@
 ---
 title: "Pytania i odpowiedzi o postępowaniu po wypadku drogowym na Tajwanie: czynności na miejscu, wina, ugoda i odszkodowanie"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 września 2025"
 read_time: "12 min czytania"
 categories:
@@ -95,7 +95,7 @@ Roszczenie oparte na art. 184 Kodeksu cywilnego zakłada bezprawne naruszenie pr
 
 - Obrażenia: Według art. 193 Kodeksu cywilnego szkoda podlegająca naprawieniu może obejmować potrzebne koszty medyczne (醫療費用), dodatkowe koszty życia codziennego, takie jak koszty opieki (看護費用), transportu na leczenie (就醫交通費) i pomocy technicznej, a także utratę dochodów (收入損失) przez rzeczywistą niezdolność do pracy oraz zmniejszenie zdolności do pracy (勞動能力減損). Według art. 195 Kodeksu cywilnego można też dochodzić szkody niemajątkowej.
 - Śmierć: Według art. 192 Kodeksu cywilnego, gdy zachodzi podstawa, naprawienie szkody może obejmować koszty medyczne przed śmiercią i koszty zwiększonych potrzeb życiowych, koszty pogrzebu (殯葬費) oraz utratę alimentów (扶養利益損失) osoby, która miała ustawowe prawo do alimentów. Według art. 194 Kodeksu cywilnego szkody niemajątkowej mogą też dochodzić niektórzy krewni.
-- Majątek: Według art. 196 Kodeksu cywilnego można dochodzić uzasadnionej rzeczywistej szkody majątkowej, w tym kosztów naprawy pojazdu albo utraty wartości.
+- Majątek: Według art. 196 Kodeksu cywilnego właściciel może żądać odszkodowania za obniżenie wartości pojazdu spowodowane uszkodzeniem; koszty naprawy stanowią miarę tylko w niezbędnym zakresie, a przy wymianie starych części na nowe można odliczyć amortyzację.
 
 ## Q8. Jeżeli leczenie trwa, jak przedstawiać dokumenty kosztów medycznych?
 
@@ -165,13 +165,13 @@ Art. 188 Kodeksu cywilnego reguluje przypadek, w którym pracownik powoduje bezp
 
 Pracodawca może podnieść, że zachował należytą staranność przy wyborze i nadzorze pracownika, albo że szkody nie dałoby się uniknąć nawet przy zachowaniu tej staranności. Można rozważyć dochodzenie odszkodowania łącznie przeciwko pracodawcy i pracownikowi. Po odszkodowaniu pracodawca może wykonać regres wobec pracownika.
 
-Jeżeli pracodawca udowodni te przesłanki zwolnienia i osoba poszkodowana nie uzyska odszkodowania z ust. 1, sąd, według art. 188 ust. 2 Kodeksu cywilnego, może orzec odszkodowanie całkowite albo częściowe, uwzględniając sytuację gospodarczą pracodawcy i osoby poszkodowanej.
+Jeżeli pracodawca udowodni te przesłanki zwolnienia i osoba poszkodowana nie uzyska odszkodowania z ust. 1, sąd, według art. 188 ust. 2 Kodeksu cywilnego, na wniosek osoby poszkodowanej może, uwzględniając sytuację gospodarczą pracodawcy i osoby poszkodowanej, nakazać pracodawcy zapłatę odszkodowania w całości albo w części.
 
 Kwestię, przeciwko komu kieruje się roszczenie cywilne, należy odróżnić od odpowiedzialności karnej. Odpowiedzialność karną z art. 284 Kodeksu karnego ocenia się według naruszenia obowiązku ostrożności każdej osoby fizycznej i związku przyczynowego tego naruszenia.
 
 ## Q15. Jakie świadczenia i jakie pokrycia ubezpieczenia komunikacyjnego należy sprawdzić?
 
-Obowiązek zawarcia według art. 6 ustawy o obowiązkowym ubezpieczeniu odpowiedzialności cywilnej pojazdów (強制汽車責任保險法) spoczywa co do zasady na właścicielu pojazdu, a w przewidzianych przypadkach także na użytkowniku albo administratorze tego pojazdu. Ten reżim ustanawia strukturę pokrycia bez winy (無過失給付制度) dla osoby rannej albo zmarłej wskutek wypadku samochodowego, lecz należy sprawdzić zakres pasażerów albo osoby trzeciej (第三人) poza pojazdem, który ustala ustawa.
+Obowiązek zawarcia według art. 6 ustawy o obowiązkowym ubezpieczeniu odpowiedzialności cywilnej pojazdów (強制汽車責任保險法) spoczywa co do zasady na właścicielu pojazdu, a w przewidzianych przypadkach także na użytkowniku albo administratorze tego pojazdu. Ten reżim ustanawia strukturę pokrycia bez winy (無過失給付制度) dla osoby rannej albo zmarłej wskutek wypadku samochodowego, lecz należy sprawdzić zakres pasażerów albo osoby trzeciej (第三人) poza pojazdem, który ustala ustawa. Ubezpieczyciel nie wypłaca świadczeń, jeżeli wypadek został spowodowany umyślnie albo podczas popełniania przestępstwa przez osobę poszkodowaną albo inną osobę uprawnioną do dochodzenia świadczeń (art. 28).
 
 W wypadku jednego pojazdu kierowca tego pojazdu nie jest co do zasady adresatem świadczeń obowiązkowego ubezpieczenia tego pojazdu. Jednak w wypadku, w którym uczestniczy kilka pojazdów, istnieją przypadki, w których kierowca może dochodzić świadczeń od ubezpieczyciela obowiązkowego innego pojazdu zaangażowanego.
 

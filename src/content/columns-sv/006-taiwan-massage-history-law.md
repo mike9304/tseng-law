@@ -1,7 +1,7 @@
 ---
 title: "Massage i Taiwan: historia och rättsläge"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "3 minuters läsning"
 categories:
@@ -51,11 +51,11 @@ kunde i praktiken endast personer med synnedsättning (視障者) utöva massage
 
 Att en individ utan synnedsättning (非視障者) utövade yrket var olagligt.
 
-Den lagen gällde fram till 2003; då anställde herr Lin, som drev en frisersalong,
+Denna begränsning gällde till och med den 31 oktober 2011; år 2003, alltså inom denna period, anställde herr Lin, som drev en frisersalong,
 
 anställda utan synnedsättning för hårtvätt och massage, och polisen upptäckte det.
 
-Enligt den dåvarande rätten ålades herr Lin en sanktionsavgift (罰鍰) på TWD 40.000 och de två anställda TWD 10.000 respektive TWD 20.000 i ny taiwanesisk dollar (新臺幣).
+Enligt den dåvarande rätten påförde Taipei stads socialförvaltning (臺北市社會局) herr Lin en administrativ sanktionsavgift (罰鍰) på TWD 40.000 och de två anställda administrativa sanktionsavgifter på TWD 10.000 respektive TWD 20.000 i ny taiwanesisk dollar (新臺幣).
 
 Herr Lin ansåg sanktionen orimlig och begärde en konstitutionell tolkning.
 
@@ -81,7 +81,7 @@ Man frågade sig till exempel om den skrivna regeln som endast tillät personer 
 
 och man tvivlade på att denna regel verkligen hade bidragit till att skydda anställning och existens för personer med synnedsättning.
 
-Slutligen förklarade justitieråden vid Justitieyuanen (大法官) den bestämmelse som endast tillät personer med synnedsättning att utöva massageyrket som grundlagsstridig (違憲).
+Slutligen förklarade justitieråden vid Justitieyuanen (大法官) i tolkning nr 649 (司法院釋字第649號) av den 31 oktober 2008 den bestämmelse som endast tillät personer med synnedsättning att utöva massageyrket som grundlagsstridig (違憲), och bestämmelsen upphörde att gälla den 31 oktober 2011, när den övergångstid på 3 år som tolkningen medgav löpte ut.
 
 ​
 

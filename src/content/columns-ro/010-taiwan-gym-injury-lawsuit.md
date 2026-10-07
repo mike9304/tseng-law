@@ -1,7 +1,7 @@
 ---
 title: "Despăgubiri pentru o vătămare la sală în Taiwan: caz în primă instanță, termene, probe și capete de despăgubire"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 septembrie 2025"
 read_time: "10 min de lectură"
 categories:
@@ -19,7 +19,7 @@ Pornind de la o cauză în care un student universitar coreean s-a vătămat în
 
 Accidentul s-a produs într-o sală din Taichung (臺中), în timpul unui antrenament de deadlift (硬舉) condus de antrenor. După vătămare nu este suficient să rețineți doar faptul că accidentul a avut loc în interiorul sălii; trebuie examinate împreună experiența sportivă și starea de sănătate a utilizatorului, tipul de exercițiu și greutatea, explicațiile și îndrumările antrenorului, mișcarea și reacția din acel moment, legătura de cauzalitate (因果關係) dintre vătămare și exercițiu, precum și documentele care susțin prejudiciul.
 
-Am fost avocata (訴訟代理人) reclamantului, un student coreean. Tribunalul districtual din Taichung, la 24 ianuarie 2022, în hotărârea de primă instanță a cauzei de consum nr. 7 a anului 109 (109年度消字第7號), a dispus pârâtului să plătească [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) precum și dobânzile menționate în hotărâre.
+Am fost avocata (訴訟代理人) reclamantului, un student coreean. Tribunalul districtual din Taichung, la 24 ianuarie 2022, în hotărârea de primă instanță a cauzei de consum nr. 7 a anului 109 (109年度消字第7號), a dispus societății care exploatează sala de sport, una dintre pârâte, să plătească [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) precum și dobânzile menționate în hotărâre.
 
 Apoi presa a relatat că părțile au încheiat o tranzacție (和解) în apel. Hotărârea oficială de primă instanță nu permite, prin ea însăși, confirmarea nici a rezultatului din apel, nici a sumei tranzacției; tranzacția relatată de presă nu trebuie tratată ca soluția confirmată a hotărârii de primă instanță.
 
@@ -67,7 +67,7 @@ Cele ce urmează sunt informații generale pentru a explica litigiile de vătăm
 
 ## 1. După o vătămare la sală în Taiwan, ce proceduri juridice se pot examina?
 
-[Art. 7 din legea taiwaneză de protecție a consumatorilor (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispune că, atunci când întreprinderea prestează un serviciu, trebuie să facă astfel încât acest serviciu să prezinte siguranța la care se poate aștepta în mod rezonabil după criteriul profesional sau tehnic din momentul prestării.
+[Art. 7 din legea taiwaneză de protecție a consumatorilor (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispune că, atunci când întreprinderea prestează un serviciu, trebuie să facă astfel încât acest serviciu să prezinte siguranța la care se poate aștepta în mod rezonabil după criteriul profesional sau tehnic din momentul prestării. Alineatul 3 al aceluiași articol prevede că întreprinderea care încalcă aceste cerințe și cauzează un prejudiciu unui consumator sau unui terț răspunde solidar pentru despăgubire și că, chiar dacă dovedește că nu a avut culpă, tribunalul poate doar să îi reducă răspunderea.
 
 Aceasta nu înseamnă că răspunderea întreprinderii sau a antrenorului este recunoscută de fiecare dată când o vătămare survine la sală. Trebuie apreciat, de la caz la caz, ce obligație de diligență exista concret, dacă a fost încălcată, dacă există o legătură de cauzalitate între încălcare și vătămare, dacă s-a produs un prejudiciu real, ce apărări are partea adversă și dacă există o probă care susține fiecare afirmație și fiecare apărare.
 

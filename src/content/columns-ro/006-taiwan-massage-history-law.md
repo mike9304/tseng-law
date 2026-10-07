@@ -1,7 +1,7 @@
 ---
 title: "Istoria și regimul juridic al masajului în Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 septembrie 2025"
 read_time: "3 min de lectură"
 categories:
@@ -51,11 +51,11 @@ doar persoanele cu dizabilități vizuale (視障者) puteau, de fapt, să exerc
 
 Ca o persoană fără dizabilități vizuale (非視障者) să exercite această meserie era ilegal.
 
-Această lege s-a menținut până în 2003; atunci, dl Lin, care conducea un salon de coafură,
+Această restricție a rămas în vigoare până la 31 octombrie 2011; în cursul acestei perioade, în 2003, dl Lin, care conducea un salon de coafură,
 
 a angajat salariați fără dizabilități vizuale pentru servicii de spălare a părului și de masaj, iar poliția a constatat acest lucru.
 
-Potrivit dreptului de atunci, dl Lin și acești salariați au primit, respectiv, o amendă administrativă (罰鍰) de 40.000 TWD, 10.000 TWD și 20.000 TWD în noul dolar taiwanez (新臺幣).
+Potrivit dreptului de atunci, Biroul pentru Afaceri Sociale al orașului Taipei (臺北市社會局) i-a aplicat dlui Lin o amendă administrativă (罰鍰) de 40.000 TWD, iar celor doi salariați amenzi administrative de 10.000 TWD și, respectiv, 20.000 TWD, în noul dolar taiwanez (新臺幣).
 
 Dl Lin a considerat această sancțiune foarte nedreaptă și a cerut o interpretare constituțională.
 
@@ -81,7 +81,7 @@ S-a pus, de exemplu, întrebarea dacă regula scrisă care permitea numai persoa
 
 și s-a pus la îndoială dacă această regulă contribuise cu adevărat la protejarea ocupării și a subzistenței persoanelor cu dizabilități vizuale.
 
-În cele din urmă, judecătorii constituționali (大法官) au declarat neconstituțională (違憲) dispoziția care permitea numai persoanelor cu dizabilități vizuale să exercite meseria de masaj.
+În cele din urmă, la 31 octombrie 2008, prin Interpretarea nr. 649 (釋字第649號) a Yuanului Judiciar (司法院), judecătorii constituționali (大法官) au declarat neconstituțională (違憲) dispoziția care permitea numai persoanelor cu dizabilități vizuale să exercite meseria de masaj, iar dispoziția a încetat să producă efecte la 31 octombrie 2011, la sfârșitul perioadei de grație de 3 ani permise de interpretare.
 
 ​
 

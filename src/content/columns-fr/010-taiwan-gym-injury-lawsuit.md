@@ -1,7 +1,7 @@
 ---
 title: "Dommages-intérêts pour une blessure en salle de sport à Taïwan : affaire de première instance, délais, preuves et postes d’indemnisation"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 septembre 2025"
 read_time: "10 min de lecture"
 categories:
@@ -19,7 +19,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 L’accident s’est produit dans une salle de sport de Taichung (臺中), pendant un entraînement de soulevé de terre (硬舉) dirigé par l’entraîneur. Après la blessure, il ne suffit pas de retenir le seul fait que l’accident a eu lieu à l’intérieur de la salle de sport ; il faut examiner ensemble l’expérience sportive et l’état de santé de l’usager, le type d’exercice et la charge, les explications et les consignes de l’entraîneur, le mouvement et la réaction à ce moment, le lien de causalité (因果關係) entre la blessure et l’exercice, et les documents qui étayent le préjudice.
 
-J’étais l’avocate du demandeur, l’étudiant coréen, en qualité de représentante en justice (訴訟代理人). Le tribunal de district de Taichung, le 24 janvier 2022, dans le jugement de première instance de l’affaire de protection des consommateurs n° 7 de l’année 109 de l’ère de la République (2020) (109年度消字第7號), a ordonné au défendeur de payer [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ainsi que les intérêts mentionnés dans le jugement.
+J’étais l’avocate du demandeur, l’étudiant coréen, en qualité de représentante en justice (訴訟代理人). Le tribunal de district de Taichung, le 24 janvier 2022, dans le jugement de première instance de l’affaire de protection des consommateurs n° 7 de l’année 109 de l’ère de la République (2020) (109年度消字第7號), a ordonné à la société qui exploite la salle de sport, l’une des parties défenderesses, de payer [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ainsi que les intérêts mentionnés dans le jugement.
 
 Ensuite, la presse a indiqué que les parties avaient transigé (和解) en deuxième instance. Le seul jugement officiel de première instance ne permet pas de confirmer le résultat de la deuxième instance ni le montant de la transaction ; le règlement rapporté par la presse ne doit pas être lu comme le dénouement confirmé du jugement de première instance.
 
@@ -67,7 +67,7 @@ Ce qui suit est une information générale pour expliquer les litiges de blessur
 
 ## 1. Après une blessure en salle de sport à Taïwan, quelles procédures juridiques peut-on examiner ?
 
-L’[article 7 de la loi taïwanaise de protection des consommateurs (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispose que, lorsqu’elle fournit un service, l’entreprise doit faire en sorte que ce service présente la sécurité que l’on peut raisonnablement attendre selon le critère professionnel ou technique du moment de la prestation.
+L’[article 7 de la loi taïwanaise de protection des consommateurs (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispose que, lorsqu’elle fournit un service, l’entreprise doit faire en sorte que ce service présente la sécurité que l’on peut raisonnablement attendre selon le critère professionnel ou technique du moment de la prestation. L’alinéa 3 du même article prévoit que l’entreprise qui enfreint ces exigences et cause un dommage au consommateur ou à un tiers est tenue solidairement à réparation, et que, même si l’entreprise prouve qu’elle n’a commis aucune faute, le tribunal peut seulement réduire sa responsabilité.
 
 Cela ne signifie pas que la responsabilité de l’entreprise ou de l’entraîneur est reconnue chaque fois qu’une blessure survient en salle de sport. Il faut apprécier, affaire par affaire, quel devoir de diligence existait concrètement, s’il a été violé, s’il y a un lien de causalité entre la violation et la blessure, si un préjudice réel s’est produit, quelles défenses a la partie adverse, et s’il existe une preuve qui étaye chaque allégation et chaque défense.
 

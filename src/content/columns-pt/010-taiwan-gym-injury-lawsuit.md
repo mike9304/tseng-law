@@ -1,7 +1,7 @@
 ---
 title: "Indemnização por um ferimento em ginásio em Taiwan: estudo de caso, prazos, provas e rubricas de indemnização"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 de setembro de 2025"
 read_time: "10 min de leitura"
 categories:
@@ -19,7 +19,7 @@ A partir de um caso no qual um estudante universitário coreano se feriu enquant
 
 O acidente ocorreu num ginásio de Taichung (臺中), durante um treino de levantamento terra (硬舉) dirigido pelo treinador. Depois do ferimento, não basta atender só ao facto de o acidente ter tido lugar no interior do ginásio; deve examinar-se em conjunto a experiência desportiva e o estado de saúde do utente, o tipo de exercício e a carga, as explicações e as instruções do treinador, o movimento e a reação nesse momento, o nexo de causalidade (因果關係) entre o ferimento e o exercício, e os documentos que sustentam o prejuízo.
 
-Fui advogada (訴訟代理人) do autor, o estudante coreano. O tribunal de comarca de Taichung, a 24 de janeiro de 2022, na sentença de primeira instância do processo de consumo número 7 do ano 109 do calendário da República (民國109年度消字第7號), ordenou ao réu que pagasse [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) bem como os juros mencionados na sentença.
+Fui advogada (訴訟代理人) do autor, o estudante coreano. O tribunal de comarca de Taichung, a 24 de janeiro de 2022, na sentença de primeira instância do processo de consumo número 7 do ano 109 do calendário da República (民國109年度消字第7號), ordenou à sociedade que explora o ginásio, uma das partes demandadas, que pagasse [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) bem como os juros mencionados na sentença.
 
 Em seguida, a imprensa indicou que as partes tinham transigido (和解) em segunda instância. A simples sentença oficial de primeira instância não permite confirmar o resultado da segunda instância nem o montante da transação; o que a imprensa noticiou sobre a transação não deve ser lido como o desfecho definitivo daquela sentença.
 
@@ -67,7 +67,7 @@ O que se segue é uma informação geral para explicar os litígios de ferimento
 
 ## 1. Depois de um ferimento em ginásio em Taiwan, que procedimentos jurídicos se podem examinar?
 
-O [artigo 7 da lei taiwanesa de proteção dos consumidores (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispõe que, quando fornece um serviço, a empresa deve fazer com que esse serviço apresente a segurança que se pode razoavelmente esperar segundo o critério profissional ou técnico do momento da prestação.
+O [artigo 7 da lei taiwanesa de proteção dos consumidores (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) dispõe que, quando fornece um serviço, a empresa deve fazer com que esse serviço apresente a segurança que se pode razoavelmente esperar segundo o critério profissional ou técnico do momento da prestação. A alínea 3 do mesmo artigo dispõe que a empresa que viole estas exigências e cause um dano ao consumidor ou a um terceiro responde solidariamente pela indemnização, e que, ainda que a empresa prove que não teve culpa, o tribunal apenas pode reduzir a sua responsabilidade.
 
 Isso não significa que a responsabilidade da empresa ou do treinador seja reconhecida cada vez que um ferimento ocorre em ginásio. Deve apreciar-se, assunto a assunto, que dever de diligência existia concretamente, se foi violado, se há um nexo de causalidade entre a violação e o ferimento, se um prejuízo real se produziu, que defesas tem a parte adversa, e se existe uma prova que sustente cada alegação e cada defesa.
 

@@ -1,7 +1,7 @@
 ---
 title: "Masāžas vēsture un tiesiskais režīms Taivānā"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. septembrī 2025. gadā"
 read_time: "3 min"
 categories:
@@ -51,11 +51,11 @@ patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masi
 
 Šīs profesijas veikšana personai bez redzes traucējumiem (非視障者) bija pretlikumīga.
 
-Šis likums bija spēkā līdz 2003. gadam; toreiz Lin kungs, kurš vadīja frizētavu,
+Šis ierobežojums bija spēkā, līdz tas 2011. gada 31. oktobrī zaudēja spēku; šajā laikposmā, 2003. gadā, Lin kungs, kurš vadīja frizētavu,
 
 nodarbināja divus darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas pakalpojumiem, un policija to konstatēja.
 
-Saskaņā ar tolaik spēkā esošajām tiesībām Lin kungam un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 (新臺幣).
+Saskaņā ar tolaik spēkā esošajām tiesībām Taipejas pilsētas Sociālo lietu birojs (臺北市社會局) uzlika Lin kungam administratīvo naudas sodu (罰鍰) TWD 40.000 (新臺幣), bet diviem darbiniekiem attiecīgi TWD 10.000 un TWD 20.000.
 
 Lin kungs uzskatīja šo sankciju par ļoti netaisnīgu un pieprasīja konstitucionālo iztulkošanu.
 
@@ -81,7 +81,7 @@ Piemēram, tika jautāts, vai rakstītā norma, kas ļāva tikai personām ar re
 
 un tika apšaubīts, vai šī norma patiešām sekmēja personu ar redzes traucējumiem nodarbinātības un pastāvēšanas aizsardzību.
 
-Visbeidzot konstitucionālie tiesneši (大法官) par pretkonstitucionālu (違憲) atzina normu, kas ļāva tikai personām ar redzes traucējumiem veikt masiera profesiju.
+Visbeidzot konstitucionālie tiesneši (大法官) 2008. gada 31. oktobra Tieslietu juaņa (司法院) iztulkojumā Nr. 649 (釋字第649號) par pretkonstitucionālu (違憲) atzina normu, kas ļāva tikai personām ar redzes traucējumiem veikt masiera profesiju, un šī norma zaudēja spēku 2011. gada 31. oktobrī, kad beidzās iztulkojuma noteiktais 3 gadu pārejas periods.
 
 ​
 

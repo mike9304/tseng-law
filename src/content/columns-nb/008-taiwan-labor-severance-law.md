@@ -1,7 +1,7 @@
 ---
 title: "Sluttvederlag i Taiwan: når det utbetales, og når det ikke gjør det"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "6 minutter lesetid"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Mottar arbeidstakere i Taiwan sluttvederlag når de selv sier opp?"
-    a: "Nei. I motsetning til det som gjelder i noen andre land — Korea er ett eksempel — oppstår plikten til å betale sluttvederlag (資遣費) i Taiwan først når arbeidsgiveren sier opp arbeidstakeren; sier arbeidstakeren selv opp, trenger selskapet ikke å utbetale sluttvederlag."
+    a: "Nei. I motsetning til det som gjelder i noen andre land — Korea er ett eksempel — oppstår plikten til å betale sluttvederlag (資遣費) i Taiwan først når arbeidsgiveren sier opp arbeidstakeren; sier arbeidstakeren selv opp, trenger selskapet ikke å utbetale sluttvederlag. Foreligger det derimot en grunn etter artikkel 14 i loven om arbeidsnormer (勞動基準法第14條), for eksempel at selskapet ikke betaler lønn eller bryter arbeidsrettslige regler, og arbeidstakeren av den grunn sier opp avtalen, skal selskapet utbetale sluttvederlag."
   - q: "Skal selskapet også ved en disiplinær avskjed utbetale sluttvederlag?"
-    a: "Nei. Begår arbeidstakeren et delikt (侵權行為), krenker interne regler eller uteblir uten gyldig grunn 3 dager på rad (artikkel 12 i loven om arbeidsnormer, 勞動基準法第12條), kan selskapet avskjedige uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Derimot krever en økonomisk oppsigelse (artikkel 11) forutgående varsel og utbetaling av sluttvederlag."
+    a: "Nei. Begår arbeidstakeren et delikt (侵權行為), grovt krenker arbeidsavtalen eller interne regler eller uteblir uten gyldig grunn 3 dager på rad eller 6 dager i løpet av 1 måned (artikkel 12 i loven om arbeidsnormer, 勞動基準法第12條), kan selskapet avskjedige uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Derimot krever en økonomisk oppsigelse (artikkel 11) forutgående varsel og utbetaling av sluttvederlag."
   - q: "Hvordan beregnes sluttvederlaget i Taiwan?"
-    a: "For hvert fullførte 1 års ansiennitet skal arbeidsgiveren utbetale 0,5 måneds gjennomsnittslønn som sluttvederlag, høyst 6 månedslønninger. Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales det per år 1 måneds gjennomsnittslønn uten maksimum."
+    a: "For hvert fullførte 1 års ansiennitet skal arbeidsgiveren utbetale 0,5 måneds gjennomsnittslønn som sluttvederlag, høyst 6 månedslønninger. Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales det per år 1 måneds gjennomsnittslønn uten maksimum. Loven om arbeidstakeres pensjon gjelder for taiwanske statsborgere, utenlandske statsborgere som er gift med en taiwansk statsborger og har fått oppholdstillatelse, utenlandske statsborgere med permanent oppholdstillatelse og lignende arbeidstakere (artikkel 7 ledd 1) samt fra 2026 for utenlandske fagfolk som utfører faglig arbeid (artikkel 24 i loven om rekruttering og ansettelse av utenlandske fagfolk, 外國專業人才延攬及僱用法); sluttvederlaget for andre arbeidstakere og for ansiennitet før loven fikk anvendelse beregnes etter artikkel 17 i loven om arbeidsnormer."
 ---
 
 # Sluttvederlag (資遣費) i Taiwan: når det utbetales, og når det ikke gjør det
@@ -36,15 +36,19 @@ Plikten til å betale sluttvederlag oppstår først når arbeidsgiveren sier opp
 
 Sier arbeidstakeren selv opp, trenger selskapet ikke å utbetale sluttvederlag.
 
+Foreligger det derimot en grunn etter [artikkel 14 i loven om arbeidsnormer](/nb/columns/taiwan-voluntary-resignation-severance), for eksempel at selskapet ikke betaler lønn eller bryter arbeidsrettslige regler, og arbeidstakeren av den grunn sier opp avtalen, skal selskapet utbetale sluttvederlag.
+
 ​
 
 Begår arbeidstakeren imidlertid et delikt (侵權行為),
 
-krenker vedkommende interne regler (工作規則),
+krenker vedkommende arbeidsavtalen eller interne regler (工作規則) grovt,
 
-eller uteblir uten grunn 3 dager på rad fra arbeidet (曠工),
+eller uteblir uten grunn 3 dager på rad eller 6 dager i løpet av 1 måned fra arbeidet (曠工),
 
 kan selskapet avskjedige uten å utbetale sluttvederlag.
+
+For alle grunner unntatt nr. 3 (en endelig fengselsstraff) må selskapet imidlertid avskjedige arbeidstakeren innen 30 dager fra det tidspunktet det fikk kjennskap til forholdene (artikkel 12 ledd 2 i loven om arbeidsnormer).
 
 ​
 
@@ -53,16 +57,16 @@ Oversikten står i en enkel tabell.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Art | Økonomisk oppsigelse (資遣員工, 經濟解僱) | Disiplinær avskjed (解僱員工, 懲戒解僱) | Arbeidstakerens egen oppsigelse (員工自請離職) |
-| Betydning | Består det hos arbeidsgiveren på grunn av forretningssituasjonen behov for personaltilpasning, ligger grunnen i arbeidsgiverens virksomhetsområde og ikke i arbeidstakerens ansvar. Derfor skal arbeidsgiveren overholde varselfristen (預告期間) og utbetale sluttvederlag, så arbeidstakerens ulemper utlignes balansert. | Begår arbeidstakeren en rettsstridig eller upassende handling, kan arbeidsgiveren straks bringe arbeidsavtalen (勞動契約) til opphør uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Dette er 1 av arbeidsgiverens disiplinærbeføyelser. | Arbeidstakeren er fri til når som helst å bringe avtalen til opphør, men skal etter ansettelsens varighet overholde varselfristen, slik at arbeidsgiveren får tid til overlevering og til å finne en erstatter. |
+| Betydning | Består det hos arbeidsgiveren på grunn av forretningssituasjonen behov for personaltilpasning, ligger grunnen i arbeidsgiverens virksomhetsområde og ikke i arbeidstakerens ansvar. Derfor skal arbeidsgiveren overholde varselfristen (預告期間) og utbetale sluttvederlag, så arbeidstakerens ulemper utlignes balansert. | Begår arbeidstakeren en rettsstridig eller upassende handling, kan arbeidsgiveren straks bringe arbeidsavtalen (勞動契約) til opphør uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Dette er 1 av arbeidsgiverens disiplinærbeføyelser. | Ved en tidsubestemt arbeidsavtale er arbeidstakeren fri til når som helst å bringe avtalen til opphør, men skal etter ansettelsens varighet overholde varselfristen, slik at arbeidsgiveren får tid til overlevering og til å finne en erstatter. |
 | Vilkår | Ja  (artikkel 11 i den taiwanske loven om arbeidsnormer) | Ja  (artikkel 12 i den taiwanske loven om arbeidsnormer) | Ingen |
 | Forutgående varsel | Påkrevd | Ikke påkrevd | Påkrevd |
 | Vanskelighet | Enkel | Vanskelig | Enkel |
-| Om selskapet skal utbetale sluttvederlag (資遣費) | Påkrevd | Ikke påkrevd | Ikke påkrevd |
-|  | Taiwansk lov om arbeidsnormer artikkel 11 (勞動基準法第11條): Med mindre 1 av følgende tilfeller inntreffer, må arbeidsgiveren ikke bringe arbeidsavtalen til opphør, heller ikke etter forutgående varsel til arbeidstakeren.  1. Stillstand av virksomheten (歇業) eller overdragelse av virksomheten (轉讓)  2. Tap (虧損) eller innskrenkning av virksomheten (業務緊縮)  3. En ekstraordinær hendelse (不可抗力) krever en avbrytelse av virksomheten på 1 måned eller lenger  4. Virksomhetens art krever personalnedsettelse, og den avskjedigede kan ikke omplasseres til en annen passende stilling  5. En bestemt arbeidstaker kan ikke tilfredsstillende utføre det arbeidet stillingen krever | Taiwansk lov om arbeidsnormer artikkel 12 (勞動基準法第12條): Arbeidsgiveren kan avskjedige uten forutgående varsel når arbeidstakeren hører under 1 av følgende tilfeller.  1. Den som ved inngåelsen av arbeidsavtalen avgir uriktige opplysninger, villeder arbeidsgiveren, og det består fare for skade på virksomheten  2. Den som overfor arbeidsgiveren, dennes familie, dennes representant (代理人) eller andre kolleger anvender vold eller grovt fornærmer dem  3. Den som er endelig idømt tidsbegrenset fengsel (有期徒刑) eller en strengere straff, uten at betinget dom (緩刑) er uttalt, og uten at ombytting til bot (易科罰金) er tillatt  4. Alvorlig krenkelse av arbeidsavtalen eller av arbeidsreglene  5. Den som forsettlig skader maskiner, redskaper, råvarer, produkter eller andre eiendeler som tilhører arbeidsgiveren, eller forsettlig røper arbeidsgiverens tekniske eller forretningshemmeligheter og tilføyer arbeidsgiveren skade  6. Ulovlig fravær (曠工) uten gyldig grunn i 3 på hverandre følgende dager, eller i 6 dager eller mer i 1 måned |  |
+| Om selskapet skal utbetale sluttvederlag (資遣費) | Påkrevd | Ikke påkrevd | Ikke påkrevd (unntatt når arbeidstakeren bringer avtalen til opphør av en grunn etter artikkel 14) |
+|  | Taiwansk lov om arbeidsnormer artikkel 11 (勞動基準法第11條): Med mindre 1 av følgende tilfeller inntreffer, må arbeidsgiveren ikke bringe arbeidsavtalen til opphør, heller ikke etter forutgående varsel til arbeidstakeren.  1. Stillstand av virksomheten (歇業) eller overdragelse av virksomheten (轉讓)  2. Tap (虧損) eller innskrenkning av virksomheten (業務緊縮)  3. En ekstraordinær hendelse (不可抗力) krever en avbrytelse av virksomheten på 1 måned eller lenger  4. Virksomhetens art er endret, personalnedsettelse er nødvendig, og det finnes ingen passende stilling som arbeidstakeren kan omplasseres til  5. Arbeidstakeren kan åpenbart ikke utføre det tildelte arbeidet | Taiwansk lov om arbeidsnormer artikkel 12 (勞動基準法第12條): Arbeidsgiveren kan avskjedige uten forutgående varsel når arbeidstakeren hører under 1 av følgende tilfeller.  1. Den som ved inngåelsen av arbeidsavtalen avgir uriktige opplysninger, villeder arbeidsgiveren, og det består fare for skade på virksomheten  2. Den som overfor arbeidsgiveren, dennes familie, dennes representant (代理人) eller andre kolleger anvender vold eller grovt fornærmer dem  3. Den som er endelig idømt tidsbegrenset fengsel (有期徒刑) eller en strengere straff, uten at betinget dom (緩刑) er uttalt, og uten at ombytting til bot (易科罰金) er tillatt  4. Alvorlig krenkelse av arbeidsavtalen eller av arbeidsreglene  5. Den som forsettlig skader maskiner, redskaper, råvarer, produkter eller andre eiendeler som tilhører arbeidsgiveren, eller forsettlig røper arbeidsgiverens tekniske eller forretningshemmeligheter og tilføyer arbeidsgiveren skade  6. Ulovlig fravær (曠工) uten gyldig grunn i 3 på hverandre følgende dager, eller i 6 dager eller mer i 1 måned |  |
 
 > I Taiwan skal arbeidsgiveren for hvert fullførte 1 års ansiennitet (年資)
 > utbetale 0,5 måneds gjennomsnittslønn (平均工資) som sluttvederlag.
-> (høyst 6 månedslønninger) Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales det per år 1 måneds gjennomsnittslønn uten maksimum.
+> (høyst 6 månedslønninger) Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales det per år 1 måneds gjennomsnittslønn uten maksimum. Loven om arbeidstakeres pensjon gjelder for taiwanske statsborgere, utenlandske statsborgere som er gift med en taiwansk statsborger og har fått oppholdstillatelse, utenlandske statsborgere med permanent oppholdstillatelse og lignende arbeidstakere (artikkel 7 ledd 1) samt fra 2026 for utenlandske fagfolk som utfører faglig arbeid ([artikkel 24 i loven om rekruttering og ansettelse av utenlandske fagfolk (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); sluttvederlaget for andre arbeidstakere og for ansiennitet før loven fikk anvendelse beregnes etter artikkel 17 i loven om arbeidsnormer. Ansiennitet på under 1 år beregnes forholdsmessig, og selskapet skal utbetale sluttvederlaget innen 30 dager etter at avtalen er opphørt.
 
 ​
 

@@ -1,7 +1,7 @@
 ---
 title: "Schadensersatz bei Fitnessstudio-Verletzungen in Taiwan: Fall der ersten Instanz, Klagefristen, Beweise und Schadenspositionen"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. September 2025"
 read_time: "10 Minuten Lesezeit"
 categories:
@@ -19,7 +19,7 @@ Dieser Beitrag erläutert anhand eines Falls, in dem ein koreanischer Student in
 
 Der Unfall ereignete sich in einem Fitnessstudio in Taichung (臺中) während eines Deadlift-Trainings (硬舉) unter Anleitung des Trainers. Nach der Verletzung ist nicht nur zu betrachten, dass der Unfall im Fitnessstudio geschah. Zu prüfen sind gemeinsam die Trainingserfahrung und der Gesundheitszustand der nutzenden Person, Art und Gewicht der Übung, Erklärungen und Anleitung des Trainers, Bewegung und Reaktion zum Unfallzeitpunkt, der Kausalzusammenhang (因果關係) zwischen Verletzung und Übung sowie Unterlagen, die den Schaden belegen.
 
-Ich war in diesem Fall Prozessbevollmächtigte (訴訟代理人) des Klägers, des koreanischen Studenten. Das Bezirksgericht Taichung (臺灣臺中地方法院) verurteilte in der Entscheidung der ersten Instanz vom 24. Januar 2022 in der Verbrauchersache Nr. 7 des Jahres 109 (2020) (109年度消字第7號) die Beklagtenseite zur Zahlung von [1.579.589 TWD (neue Taiwan-Dollar, 新臺幣)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) zuzüglich der im Urteil genannten Zinsen.
+Ich war in diesem Fall Prozessbevollmächtigte (訴訟代理人) des Klägers, des koreanischen Studenten. Das Bezirksgericht Taichung (臺灣臺中地方法院) verurteilte in der Entscheidung der ersten Instanz vom 24. Januar 2022 in der Verbrauchersache Nr. 7 des Jahres 109 (2020) (109年度消字第7號) die Gesellschaft, die das Fitnessstudio betreibt und eine der Beklagten ist, zur Zahlung von [1.579.589 TWD (neue Taiwan-Dollar, 新臺幣)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) zuzüglich der im Urteil genannten Zinsen.
 
 Später wurde in Medienberichten mitgeteilt, dass die Parteien in der zweiten Instanz einen Vergleich (和解) geschlossen haben. Allein aus dem amtlichen Urteil der ersten Instanz lassen sich Ausgang und Vergleichsbetrag der zweiten Instanz nicht feststellen; der in den Medien genannte Vergleich darf nicht als feststehender Abschluss des erstinstanzlichen Verfahrens verstanden werden.
 
@@ -67,7 +67,7 @@ Die folgende Darstellung ist allgemeine Information zu Streitigkeiten über Fitn
 
 ## 1. Welche rechtlichen Verfahren können bei einer Fitnessstudio-Verletzung in Taiwan geprüft werden?
 
-[Artikel 7 des taiwanesischen Verbraucherschutzgesetzes (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bestimmt, dass Unternehmen (企業經營者) bei der Erbringung von Dienstleistungen sicherzustellen haben, dass die Dienstleistung die nach den fachlichen oder technischen Maßstäben zum Zeitpunkt der Erbringung vernünftigerweise zu erwartende Sicherheit aufweist.
+[Artikel 7 des taiwanesischen Verbraucherschutzgesetzes (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bestimmt, dass Unternehmen (企業經營者) bei der Erbringung von Dienstleistungen sicherzustellen haben, dass die Dienstleistung die nach den fachlichen oder technischen Maßstäben zum Zeitpunkt der Erbringung vernünftigerweise zu erwartende Sicherheit aufweist. Absatz 3 desselben Artikels bestimmt, dass ein Unternehmen, das gegen diese Anforderungen verstößt und dadurch einem Verbraucher oder einem Dritten einen Schaden zufügt, gesamtschuldnerisch zum Schadensersatz haftet, und dass das Gericht die Haftung auch dann, wenn das Unternehmen nachweist, dass es kein Verschulden trifft, höchstens herabsetzen kann.
 
 Das bedeutet nicht, dass bei jeder Verletzung im Fitnessstudio die Haftung des Unternehmens oder des Trainers anerkannt wird. Konkret ist fallweise zu beurteilen, welche Sorgfaltspflicht bestand, ob sie verletzt wurde, ob zwischen Verletzung und Pflichtverletzung ein Kausalzusammenhang besteht, ob ein tatsächlicher Schaden entstanden ist, welche Einwendungen die Gegenseite hat und ob Beweise die jeweiligen Behauptungen und Einwendungen stützen.
 

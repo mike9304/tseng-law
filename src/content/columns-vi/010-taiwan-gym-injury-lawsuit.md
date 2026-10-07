@@ -1,7 +1,7 @@
 ---
 title: "Bồi thường thiệt hại do chấn thương tại phòng tập thể hình ở Đài Loan: vụ việc sơ thẩm, thời hạn yêu cầu, chứng cứ và các khoản bồi thường"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "9 phút đọc"
 categories:
@@ -19,7 +19,7 @@ Bài viết này dựa trên vụ việc một sinh viên đại học người 
 
 Vụ tai nạn xảy ra trong buổi tập động tác nâng tạ deadlift (硬舉) do huấn luyện viên hướng dẫn tại một phòng tập ở Đài Trung (臺中). Sau khi bị chấn thương, quý vị không nên chỉ nhìn vào việc tai nạn đã xảy ra bên trong phòng tập, mà cần xem xét đồng thời kinh nghiệm tập luyện và tình trạng sức khỏe của người tập, loại bài tập và mức tạ, phần giải thích cùng hướng dẫn của huấn luyện viên, động tác và cách xử lý tại thời điểm đó, quan hệ nhân quả (因果關係) giữa việc tập luyện và chấn thương, cùng các tài liệu chứng minh cho thiệt hại.
 
-Trong vụ án này, tôi là luật sư đại diện cho nguyên đơn, một sinh viên người Hàn Quốc. Tại bản án sơ thẩm ngày 24 tháng 1 năm 2022 về vụ án tiêu dùng số 7 năm 109 (2020) (109年度消字第7號), Tòa án Địa phương Đài Trung (臺灣臺中地方法院) đã tuyên buộc bị đơn phải trả [1.579.589 Đài tệ mới (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) cùng khoản tiền lãi được ghi trong bản án.
+Trong vụ án này, tôi là luật sư đại diện cho nguyên đơn, một sinh viên người Hàn Quốc. Tại bản án sơ thẩm ngày 24 tháng 1 năm 2022 về vụ án tiêu dùng số 7 năm 109 (2020) (109年度消字第7號), Tòa án Địa phương Đài Trung (臺灣臺中地方法院) đã tuyên buộc công ty vận hành phòng tập thể hình, một trong các bị đơn, phải trả [1.579.589 Đài tệ mới (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) cùng khoản tiền lãi được ghi trong bản án.
 
 Sau đó, báo chí đưa tin rằng các bên đã đạt được thỏa thuận (和解) ở giai đoạn phúc thẩm. Chỉ dựa vào bản án sơ thẩm chính thức thì không thể xác nhận kết quả xử lý của cấp phúc thẩm hay số tiền thỏa thuận, nên không được coi thông tin về thỏa thuận mà báo chí đưa tin là kết quả xử lý cuối cùng đã được xác nhận của bản án sơ thẩm.
 
@@ -67,7 +67,7 @@ Nội dung dưới đây là thông tin nhằm giải thích một cách khái q
 
 ## 1. Khi bị chấn thương tại phòng tập thể hình ở Đài Loan, quý vị có thể xem xét những thủ tục pháp lý nào?
 
-[Điều 7 Luật Bảo vệ Người tiêu dùng Đài Loan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) quy định rằng khi chủ thể kinh doanh (企業經營者) cung cấp dịch vụ thì phải bảo đảm dịch vụ đó đạt mức độ an toàn có thể kỳ vọng một cách hợp lý theo tiêu chuẩn chuyên môn hoặc kỹ thuật tại thời điểm cung cấp.
+[Điều 7 Luật Bảo vệ Người tiêu dùng Đài Loan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) quy định rằng khi chủ thể kinh doanh (企業經營者) cung cấp dịch vụ thì phải bảo đảm dịch vụ đó đạt mức độ an toàn có thể kỳ vọng một cách hợp lý theo tiêu chuẩn chuyên môn hoặc kỹ thuật tại thời điểm cung cấp. Khoản 3 cùng điều quy định rằng chủ thể kinh doanh vi phạm các yêu cầu này và gây thiệt hại cho người tiêu dùng hoặc bên thứ ba thì phải chịu trách nhiệm bồi thường liên đới, và ngay cả khi chủ thể kinh doanh chứng minh mình không có lỗi, tòa án cũng chỉ có thể giảm mức trách nhiệm của họ.
 
 Điều đó không có nghĩa là cứ mỗi lần có người bị chấn thương ở phòng tập thì chủ thể kinh doanh hoặc huấn luyện viên đương nhiên phải chịu trách nhiệm. Từng vụ việc vẫn phải đánh giá nghĩa vụ cẩn trọng cụ thể là gì, nghĩa vụ đó có bị vi phạm hay không, giữa việc vi phạm và chấn thương có quan hệ nhân quả hay không, thiệt hại thực tế có phát sinh hay không, phía đối phương có những lập luận phản bác (抗辯) nào, và có chứng cứ nào chứng minh cho từng yêu cầu cũng như từng lập luận phản bác đó.
 

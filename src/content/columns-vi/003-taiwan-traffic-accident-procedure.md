@@ -1,7 +1,7 @@
 ---
 title: "Hỏi đáp về tai nạn giao thông tại Đài Loan: xử trí hiện trường, lỗi, thỏa thuận và bồi thường thiệt hại"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "13 phút đọc"
 categories:
@@ -95,7 +95,7 @@ Yêu cầu theo Điều 184 Bộ luật Dân sự đòi hỏi tiền đề là c
 
 - Thương tích: theo Điều 193 Bộ luật Dân sự, có thể xem xét chi phí y tế cần thiết, các chi phí sinh hoạt tăng thêm như chi phí người chăm sóc (看護費用), chi phí đi lại khám chữa bệnh (就醫交通費) và dụng cụ hỗ trợ, cùng thiệt hại về thu nhập phát sinh do thực tế không thể làm việc và phần suy giảm khả năng lao động. Theo Điều 195 Bộ luật Dân sự, tổn thất tinh thần cũng có thể được xem xét.
 - Tử vong: theo Điều 192 Bộ luật Dân sự, trong trường hợp có áp dụng, có thể xem xét chi phí y tế và chi phí sinh hoạt tăng thêm trước khi tử vong, chi phí mai táng (殯葬費), cùng khoản mất cấp dưỡng của người lẽ ra được cấp dưỡng theo pháp luật (扶養利益損失). Theo Điều 194 Bộ luật Dân sự, tổn thất tinh thần của một số thân nhân nhất định cũng có thể được xem xét.
-- Tài sản: theo Điều 196 Bộ luật Dân sự, quý vị có thể yêu cầu bồi thường phần thiệt hại tài sản thực tế đã được chứng minh, bao gồm chi phí sửa chữa xe hoặc mức giảm giá trị của xe.
+- Tài sản: theo Điều 196 Bộ luật Dân sự, chủ sở hữu có thể yêu cầu bồi thường phần giá trị xe bị giảm do hư hỏng; chi phí sửa chữa chỉ là thước đo trong chừng mực cần thiết, và có thể khấu trừ khấu hao khi phụ tùng mới thay cho phụ tùng cũ.
 
 ## Q8. Nếu việc điều trị vẫn tiếp tục thì tài liệu chi phí y tế được nộp thế nào?
 
@@ -165,13 +165,13 @@ Tòa án xem xét tình tiết của từng vụ việc bằng cách tổng hợ
 
 Người sử dụng lao động (僱用人) có thể phản bác rằng mình đã dành sự chú ý thỏa đáng khi tuyển chọn và giám sát người được thuê, hoặc rằng dù đã dành sự chú ý như vậy thì thiệt hại vẫn không thể tránh khỏi. Quý vị có thể cân nhắc phương thức đồng thời yêu cầu bồi thường thiệt hại đối với cả người sử dụng lao động lẫn người được thuê. Sau khi đã bồi thường, người sử dụng lao động có thể yêu cầu người được thuê hoàn trả.
 
-Trường hợp người sử dụng lao động chứng minh được các điều kiện miễn trách nêu trên khiến người bị thiệt hại không nhận được khoản bồi thường theo khoản 1, thì theo Điều 188 khoản 2 Bộ luật Dân sự, tòa án có thể cân nhắc tình hình kinh tế của người sử dụng lao động và của người bị thiệt hại để ra lệnh bồi thường toàn bộ hoặc một phần.
+Trường hợp người sử dụng lao động chứng minh được các điều kiện miễn trách nêu trên khiến người bị thiệt hại không nhận được khoản bồi thường theo khoản 1, thì theo Điều 188 khoản 2 Bộ luật Dân sự, nếu người bị thiệt hại có yêu cầu, tòa án có thể cân nhắc tình hình kinh tế của người sử dụng lao động và của người bị thiệt hại để buộc người sử dụng lao động bồi thường toàn bộ hoặc một phần thiệt hại.
 
 Phải phân biệt vấn đề xác định bên bị yêu cầu bồi thường dân sự với trách nhiệm hình sự. Trách nhiệm hình sự theo Điều 284 Bộ luật Hình sự được phán định trên cơ sở việc vi phạm nghĩa vụ chú ý của từng cá nhân và quan hệ nhân quả của vi phạm đó.
 
 ## Q15. Tôi cần xác nhận những khoản chi trả và phạm vi bảo đảm nào của bảo hiểm xe cơ giới?
 
-Nghĩa vụ tham gia bảo hiểm theo Điều 6 Luật Bảo hiểm Trách nhiệm Dân sự Bắt buộc của Chủ xe Cơ giới (強制汽車責任保險法) về nguyên tắc thuộc về chủ sở hữu xe, và trong trường hợp luật định thì cũng thuộc về người sử dụng xe (使用人) hoặc người quản lý xe đó. Chế độ này đặt ra cơ cấu bảo đảm không xét lỗi (無過失給付制度) dành cho người bị thương hoặc tử vong do tai nạn xe cơ giới, nhưng quý vị phải xác nhận phạm vi hành khách hoặc người thứ ba ngoài xe theo quy định của luật.
+Nghĩa vụ tham gia bảo hiểm theo Điều 6 Luật Bảo hiểm Trách nhiệm Dân sự Bắt buộc của Chủ xe Cơ giới (強制汽車責任保險法) về nguyên tắc thuộc về chủ sở hữu xe, và trong trường hợp luật định thì cũng thuộc về người sử dụng xe (使用人) hoặc người quản lý xe đó. Chế độ này đặt ra cơ cấu bảo đảm không xét lỗi (無過失給付制度) dành cho người bị thương hoặc tử vong do tai nạn xe cơ giới, nhưng quý vị phải xác nhận phạm vi hành khách hoặc người thứ ba ngoài xe theo quy định của luật. Doanh nghiệp bảo hiểm không chi trả khi người bị thương hoặc người có quyền yêu cầu khác đã cố ý gây ra tai nạn hoặc gây ra tai nạn trong khi thực hiện hành vi phạm tội (Điều 28).
 
 Trong vụ tai nạn chỉ liên quan tới một xe, người lái chiếc xe đó thông thường không thuộc đối tượng được chi trả theo bảo hiểm bắt buộc của chính chiếc xe ấy. Tuy nhiên, trong vụ tai nạn có nhiều xe liên quan, có trường hợp người lái xe có thể yêu cầu doanh nghiệp bảo hiểm bắt buộc của xe liên quan khác chi trả.
 

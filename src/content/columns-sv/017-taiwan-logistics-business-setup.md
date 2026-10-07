@@ -1,7 +1,7 @@
 ---
 title: "Logistikverksamhet i Taiwan och tillstånd för motorfordonstransport av gods (汽車貨運業): nybildning, förvärv och uppdrag"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "12 minuters läsning"
 categories:
@@ -118,7 +118,7 @@ Bekräfta giltigheten av uppdragstagarens driftlicens och tillståndsomfång, de
 
 Även om utlänningen blir delägare eller investerare i målbolaget ger det faktumet ensamt varken rätt att arbeta eller vistelsestatus i Taiwan. Om den dagliga driften, såsom företagsledning, försäljning, fordonsdisposition och kundhantering, utförs i Taiwan ska det, innan arbetet inleds, bekräftas om arbetstillstånd som stämmer med den faktiska funktionen behövs, och det efterföljande vistelseförfarandet ska drivas separat.
 
-Vid arbete utan tillstånd kan sanktionsavgift och utreseorder (限令出國) tillämpas. Den gällande administrativa vägledningen om inreseförbud (禁止入國) vid inrikesministeriets immigrationsmyndighet (內政部移民署) anger i allmänhet, för olagligt arbete, en inreseförbudsperiod om 3 år, men de krav på befrielse eller förkortning av perioden som samma vägledning anger kan tillämpas. Resultatet avgörs inte mekaniskt bara för att en anmälan från tredje man finns, och den behöriga myndigheten prövar fakta, tillämpliga regler och omständigheterna i varje ärende.
+En utländsk medborgare som arbetar utan tillstånd påförs en sanktionsavgift och ska omedelbart föreläggas att lämna Taiwan (限令出國), och får inte arbeta i Taiwan på nytt (artikel 68 i lagen om anställningstjänster, 就業服務法). Den gällande administrativa vägledningen om inreseförbud (禁止入國) vid inrikesministeriets immigrationsmyndighet (內政部移民署) anger i allmänhet, för olagligt arbete, en inreseförbudsperiod om 3 år, men de krav på befrielse eller förkortning av perioden som samma vägledning anger kan tillämpas. Resultatet avgörs inte mekaniskt bara för att en anmälan från tredje man finns, och den behöriga myndigheten prövar fakta, tillämpliga regler och omständigheterna i varje ärende.
 
 ## Officiella källor
 
@@ -136,6 +136,7 @@ Vid arbete utan tillstånd kan sanktionsavgift och utreseorder (限令出國) ti
 - [Ekonomiministeriet: vägledning för ansökan om utländsk investering](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Artikel 43 i lagen om anställningstjänster (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Artikel 68 i lagen om anställningstjänster](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Artikel 68 i lagen om anställningstjänster (Databasen för lagar och föreskrifter)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Inrikesministeriets immigrationsmyndighet: administrativ vägledning om inreseförbudsperiod](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Relaterad vägledning

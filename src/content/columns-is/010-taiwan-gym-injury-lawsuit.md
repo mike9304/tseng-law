@@ -1,7 +1,7 @@
 ---
 title: "Skaðabætur vegna meiðsla á líkamsræktarstöð á Taívan: mál á fyrsta dómsstigi, kröfufrestir, sönnunargögn og bótaliðir"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "7 mín. lestur"
 categories:
@@ -19,7 +19,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 Slysið varð á líkamsræktarstöð í Taichung (臺中) í réttstöðulyftuæfingu (硬舉) undir leiðsögn þjálfara. Eftir meiðslin má ekki aðeins horfa á það að slysið hafi orðið innandyra á stöðinni; saman skal skoða æfingareynslu og heilsufar notandans, tegund æfingar og þyngd, skýringar og leiðsögn þjálfarans, hreyfinguna og viðbrögðin á þeim tíma, orsakasambandið (因果關係) milli meiðslanna og æfingarinnar og gögnin sem styðja tjónið.
 
-Ég fór með þetta mál sem málflutningsmaður (訴訟代理人) stefnanda, hins kóreska námsmanns. Héraðsdómstóllinn í Taichung (臺灣臺中地方法院) lagði 24. janúar 2022, í dómi á fyrsta dómsstigi í neytendamáli nr. 7 á lýðveldisári 109 (2020) (109年度消字第7號), fyrir stefnda að greiða [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ásamt vöxtum sem greindir eru í dómnum.
+Ég fór með þetta mál sem málflutningsmaður (訴訟代理人) stefnanda, hins kóreska námsmanns. Héraðsdómstóllinn í Taichung (臺灣臺中地方法院) lagði 24. janúar 2022, í dómi á fyrsta dómsstigi í neytendamáli nr. 7 á lýðveldisári 109 (2020) (109年度消字第7號), fyrir félagið sem rekur líkamsræktarstöðina, einn stefndu, að greiða [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ásamt vöxtum sem greindir eru í dómnum.
 
 Síðar greindu fjölmiðlar frá því að aðilar hefðu náð sátt (和解) á áfrýjunarstigi. Opinberi dómurinn á fyrsta dómsstigi einn segir ekkert um niðurstöðu áfrýjunarinnar eða sáttarfjárhæðina, svo frásögn af sáttinni má ekki lesa sem staðfestar lyktir þess dóms.
 
@@ -67,7 +67,7 @@ Eftirfarandi er almenn fræðsla um deilur vegna meiðsla á líkamsræktarstö�
 
 ## 1. Hvaða lagalegum málsmeðferðum má kanna eftir meiðsli á líkamsræktarstöð á Taívan?
 
-[7. gr. laga um neytendavernd á Taívan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) kveður á um að atvinnurekandi, þegar hann veitir þjónustu, skuli sjá til þess að þjónustan hafi það öryggi sem, miðað við faglegan eða tæknilegan mælikvarða þegar þjónustan er veitt, má með sanngirni gera ráð fyrir.
+[7. gr. laga um neytendavernd á Taívan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) kveður á um að atvinnurekandi, þegar hann veitir þjónustu, skuli sjá til þess að þjónustan hafi það öryggi sem, miðað við faglegan eða tæknilegan mælikvarða þegar þjónustan er veitt, má með sanngirni gera ráð fyrir. Í 3. mgr. sömu greinar er kveðið á um að atvinnurekandi sem brýtur gegn þessum kröfum og veldur neytanda eða þriðja aðila tjóni beri óskipta ábyrgð á bótum, og að jafnvel þótt atvinnurekandi sanni að hann sé án sakar geti dómstóllinn ekki gert meira en að lækka ábyrgð hans.
 
 Það þýðir ekki að ábyrgð atvinnurekanda eða þjálfara sé viðurkennd í hvert sinn sem meiðsli verða á líkamsræktarstöð. Meta skal í hverju máli hvaða aðgæsluskylda var til staðar, hvort hún var brotin, hvort orsakasamband (因果關係) sé milli brotsins og meiðslanna, hvort raunverulegt tjón hafi orðið, hvaða varnir gagnaðili hafi og hvort sönnunargögn styðji hverja kröfu og hverja vörn.
 

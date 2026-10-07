@@ -1,7 +1,7 @@
 ---
 title: "Działalność logistyczna na Tajwanie i zezwolenie na samochodowy przewóz towarów (汽車貨運業): nowe założenie, nabycie i zlecenie"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 września 2025"
 read_time: "12 min czytania"
 categories:
@@ -118,7 +118,7 @@ Trzeba potwierdzić ważność licencji działalności przedsiębiorcy będąceg
 
 Nawet jeśli cudzoziemiec staje się akcjonariuszem lub inwestorem spółki docelowej, sam ten fakt nie przyznaje mu prawa do pracy ani statusu pobytu na Tajwanie. Jeśli na Tajwanie wykonuje codzienną pracę, taką jak zarządzanie spółką, sprzedaż, przydział pojazdów i obsługa klienta, musi przed rozpoczęciem pracy potwierdzić, czy potrzebuje zezwolenia na pracę zgodnego z rzeczywistą funkcją, i osobno przeprowadzić późniejszą procedurę pobytu.
 
-Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz opuszczenia Tajwanu (限令出國). Obowiązujące wytyczne Administracji Imigracyjnej Ministerstwa Spraw Wewnętrznych (內政部移民署) w sprawie zakazu wjazdu (禁止入國) ustalają na ogół, dla pracy bezprawnej, 3-letni okres zakazu wjazdu, lecz mogą mieć zastosowanie wymogi zwolnienia lub skrócenia okresu, które te same wytyczne ustalają. Wyniku nie ustala się mechanicznie tylko dlatego, że istnieje doniesienie osoby trzeciej, a właściwy organ bada fakty, normy stosowane i okoliczności każdej sprawy.
+Cudzoziemiec, który pracuje bez zezwolenia, podlega administracyjnej karze pieniężnej, musi zostać niezwłocznie zobowiązany do opuszczenia Tajwanu (限令出國) i nie może ponownie pracować na Tajwanie (art. 68 ustawy o usługach zatrudnienia, 就業服務法). Obowiązujące wytyczne Administracji Imigracyjnej Ministerstwa Spraw Wewnętrznych (內政部移民署) w sprawie zakazu wjazdu (禁止入國) ustalają na ogół, dla pracy bezprawnej, 3-letni okres zakazu wjazdu, lecz mogą mieć zastosowanie wymogi zwolnienia lub skrócenia okresu, które te same wytyczne ustalają. Wyniku nie ustala się mechanicznie tylko dlatego, że istnieje doniesienie osoby trzeciej, a właściwy organ bada fakty, normy stosowane i okoliczności każdej sprawy.
 
 ## Źródła oficjalne
 
@@ -136,6 +136,7 @@ Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz op
 - [Ministerstwo Gospodarki: wskazówki wniosku o inwestycję zagraniczną](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Art. 43 ustawy o usługach zatrudnienia (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Art. 68 ustawy o usługach zatrudnienia](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Art. 68 ustawy o usługach zatrudnienia (baza przepisów i regulacji)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Administracja Imigracyjna Ministerstwa Spraw Wewnętrznych: wytyczne w sprawie okresu zakazu wjazdu](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Wskazówki związane

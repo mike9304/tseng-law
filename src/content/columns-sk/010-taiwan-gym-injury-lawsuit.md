@@ -1,7 +1,7 @@
 ---
 title: "Náhrada škody za úraz v posilňovni na Taiwane: vec 1. inštancie, lehoty, dôkazy a položky náhrady"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "10 min čítania"
 categories:
@@ -19,7 +19,7 @@ Na základe veci, v ktorej sa kórejský vysokoškolský študent zranil, keď v
 
 Nehoda nastala v posilňovni v Taichungu (臺中) pri tréningu mŕtveho ťahu (硬舉) vedenom trénerom. Po úraze nestačí ostať len pri skutočnosti, že k nehode došlo vo vnútri posilňovne; treba spoločne posúdiť športové skúsenosti a zdravotný stav používateľa, druh cvičenia a záťaž, vysvetlenie a pokyny trénera, pohyb a reakciu v onom okamihu, príčinnú súvislosť (因果關係) medzi úrazom a cvičením a podklady, ktoré dokladajú uplatňovanú škodu.
 
-Zastupovala som žalobcu, kórejského študenta, ako procesná zástupkyňa (訴訟代理人). Okresný súd v Taichungu 24. 1. 2022 v rozsudku 1. stupňa v spotrebiteľskej veci č. 7 roku 109 kalendára Čínskej republiky (109年度消字第7號) nariadil žalovanému zaplatiť [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
+Zastupovala som žalobcu, kórejského študenta, ako procesná zástupkyňa (訴訟代理人). Okresný súd v Taichungu 24. 1. 2022 v rozsudku 1. stupňa v spotrebiteľskej veci č. 7 roku 109 kalendára Čínskej republiky (109年度消字第7號) nariadil spoločnosti prevádzkujúcej posilňovňu, ktorá je jednou zo žalovaných, zaplatiť [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
 
 Potom tlač uviedla, že strany uzavreli zmier (和解) v 2. inštancii. Samotný oficiálny rozsudok 1. inštancie neumožňuje potvrdiť výsledok 2. inštancie ani výšku zmieru; uvedený zmier v tlači nemožno brať ako potvrdené konečné vybavenie veci v 1. inštancii.
 
@@ -67,7 +67,7 @@ Nasledujúci text je všeobecnou informáciou, ktorá vysvetľuje spory o úraz 
 
 ## 1. Po úraze v posilňovni na Taiwane, aké právne postupy možno posúdiť?
 
-[Článok 7 taiwanského zákona o ochrane spotrebiteľa (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že keď podnik poskytuje službu, musí zabezpečiť, aby táto služba spĺňala úroveň bezpečnosti, ktorú možno rozumne očakávať podľa odborných alebo technických noriem platných v čase poskytnutia.
+[Článok 7 taiwanského zákona o ochrane spotrebiteľa (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že keď podnik poskytuje službu, musí zabezpečiť, aby táto služba spĺňala úroveň bezpečnosti, ktorú možno rozumne očakávať podľa odborných alebo technických noriem platných v čase poskytnutia. Odsek 3 toho istého článku stanoví, že podnikateľ, ktorý tieto požiadavky poruší a spôsobí spotrebiteľovi alebo tretej osobe škodu, zodpovedá za náhradu spoločne a nerozdielne, a aj keď preukáže, že nezavinil, môže súd jeho zodpovednosť iba znížiť.
 
 To neznamená, že zodpovednosť podniku alebo trénera je uznaná zakaždým, keď k úrazu dôjde v posilňovni. V každej veci treba posúdiť, aká konkrétna povinnosť starostlivosti existovala, či bola porušená, či je príčinná súvislosť medzi porušením a úrazom, či vznikla skutočná škoda, aké námietky má protistrana a či existuje dôkaz, ktorý dokladá každé tvrdenie a každú námietku.
 

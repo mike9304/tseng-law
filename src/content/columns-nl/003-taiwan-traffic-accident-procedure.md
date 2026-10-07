@@ -1,7 +1,7 @@
 ---
 title: "Vragen en antwoorden over de behandeling van verkeersongevallen in Taiwan: maatregelen ter plaatse, schuld, schikking en schadevergoeding"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "12 minuten leestijd"
 categories:
@@ -95,7 +95,7 @@ Vorderingen volgens artikel 184 van het Burgerlijk Wetboek (民法) veronderstel
 
 - Letsel: Volgens artikel 193 van het Burgerlijk Wetboek kunnen nodige behandelingskosten (醫療費用), extra kosten van levensonderhoud, zoals verzorgingskosten (看護費用), vervoerskosten naar behandeling (就醫交通費) en hulpmiddelen en inkomstenderving (收入損失) door werkelijke arbeidsongeschiktheid en vermindering van de arbeidsgeschiktheid (勞動能力減損) worden onderzocht. Volgens artikel 195 van het Burgerlijk Wetboek kan ook immateriële schade worden onderzocht.
 - Overlijden: Volgens artikel 192 van het Burgerlijk Wetboek kunnen, voor zover van toepassing, behandelingskosten en extra kosten van levensonderhoud vóór het overlijden, begrafeniskosten (殯葬費) en onderhoudsverlies (扶養利益損失) van de wettelijk tot onderhoud gerechtigden worden onderzocht. Volgens artikel 194 van het Burgerlijk Wetboek kan ook immateriële schade van bepaalde verwanten worden onderzocht.
-- Vermogen: Volgens artikel 196 van het Burgerlijk Wetboek kunnen bewezen werkelijke vermogensschade met inbegrip van voertuigreparatie of waardevermindering worden gevorderd.
+- Vermogen: Volgens artikel 196 van het Burgerlijk Wetboek kan de eigenaar de door de beschadiging veroorzaakte waardevermindering van het voertuig vorderen; de reparatiekosten dienen slechts als maatstaf voor zover zij noodzakelijk zijn, en bij vervanging van oude door nieuwe onderdelen kan een afschrijving in mindering worden gebracht.
 
 ## Q8. Hoe moeten stukken van behandelingskosten worden ingediend wanneer de behandeling voortduurt?
 
@@ -165,13 +165,13 @@ Artikel 188 van het Burgerlijk Wetboek (民法) behandelt het geval dat een tewe
 
 De werkgever kan inbrengen bij selectie en toezicht van de tewerkgestelde persoon de geboden zorg te hebben betracht, of dat de schade ook bij zulke zorg niet vermijdbaar zou zijn geweest. Onderzocht kan worden of werkgever en werknemer gezamenlijk tot schadevergoeding kunnen worden aangesproken. Na prestatie van de vergoeding kan de werkgever bij de tewerkgestelde persoon verhaal nemen.
 
-Bewijst de werkgever de voornoemde vrijstellingsvoorwaarden, zodat de benadeelde persoon geen schadevergoeding volgens lid 1 ontvangt, dan kan de rechter volgens artikel 188 lid 2 van het Burgerlijk Wetboek (民法) met inachtneming van de economische toestand van werkgever en benadeelde persoon volle of gedeeltelijke vergoeding bevelen.
+Bewijst de werkgever de voornoemde vrijstellingsvoorwaarden, zodat de benadeelde persoon geen schadevergoeding volgens lid 1 ontvangt, dan kan de rechter volgens artikel 188 lid 2 van het Burgerlijk Wetboek (民法) op verzoek van de benadeelde persoon, met inachtneming van de economische toestand van werkgever en benadeelde persoon, de werkgever bevelen de schade geheel of gedeeltelijk te vergoeden.
 
 De bepaling van de civielrechtelijke vorderingstegenpartijen en de strafrechtelijke aansprakelijkheid moeten worden onderscheiden. De strafrechtelijke aansprakelijkheid volgens artikel 284 van het Wetboek van Strafrecht (刑法) wordt beoordeeld aan de hand van de schending van de zorgplicht van elke natuurlijke persoon en het causaal verband van die schending.
 
 ## Q15. Welke prestaties en dekkingen van de autoverzekering moeten worden onderzocht?
 
-De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzekering van civiele aansprakelijkheid (強制汽車責任保險法) treft in beginsel de voertuigeigenaar en in bepaalde gevallen ook gebruiker of beheerder van het voertuig. Dit stelsel voorziet een schuldonafhankelijke prestatiestructuur (無過失給付制度) voor bij motorvoertuigongevallen gewonden of overledenen; de wettelijk bepaalde kring van passagiers of van een derde (第三人) buiten het voertuig moet worden onderzocht.
+De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzekering van civiele aansprakelijkheid (強制汽車責任保險法) treft in beginsel de voertuigeigenaar en in bepaalde gevallen ook gebruiker of beheerder van het voertuig. Dit stelsel voorziet een schuldonafhankelijke prestatiestructuur (無過失給付制度) voor bij motorvoertuigongevallen gewonden of overledenen; de wettelijk bepaalde kring van passagiers of van een derde (第三人) buiten het voertuig moet worden onderzocht. De verzekeraar keert geen uitkering uit wanneer de gewonde persoon of een andere rechthebbende het ongeval opzettelijk of tijdens het plegen van een misdrijf heeft veroorzaakt (artikel 28).
 
 Bij een ongeval met 1 voertuig is de bestuurder van dat voertuig in de regel geen prestatieontvanger van de verplichte verzekering van dat voertuig. Bij ongevallen met verscheidene voertuigen kan de bestuurder echter prestaties bij de verplichte verzekeraar van een ander betrokken voertuig vorderen.
 

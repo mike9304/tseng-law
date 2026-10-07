@@ -1,7 +1,7 @@
 ---
 title: "Naknada štete zbog ozljede u teretani na Tajvanu: predmet 1. stupnja, rokovi, dokazi i stavke naknade"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. rujna 2025."
 read_time: "7 min čitanja"
 categories:
@@ -19,7 +19,7 @@ Na temelju predmeta u kojemu se korejski sveučilišni student ozlijedio dok je 
 
 Nesreća se dogodila u teretani u Taichungu (臺中) tijekom vježbe mrtvog dizanja (硬舉) koju je vodio trener. Nakon ozljede nije dovoljno ostati samo pri činjenici da se nesreća zbila unutar teretane; treba zajedno ocijeniti sportsko iskustvo i zdravstveno stanje korisnika, vrstu vježbe i opterećenje, objašnjenja i upute trenera, pokret i reakciju u tom trenutku, uzročnu vezu (因果關係) između ozljede i vježbe te isprave koje potkrepljuju potraživanu štetu.
 
-U ovom sam predmetu sudjelovala kao parnična zastupnica (訴訟代理人) tužitelja, korejskog studenta. Okružni sud u Taichungu 24. siječnja 2022. u prvostupanjskoj presudi u potrošačkoj stvari br. 7 iz 109. godine Republike Kine (109年度消字第7號) naredio je tuženiku da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamate navedene u presudi.
+U ovom sam predmetu sudjelovala kao parnična zastupnica (訴訟代理人) tužitelja, korejskog studenta. Okružni sud u Taichungu 24. siječnja 2022. u prvostupanjskoj presudi u potrošačkoj stvari br. 7 iz 109. godine Republike Kine (109年度消字第7號) naredio je društvu koje upravlja teretanom, jednom od tuženika, da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamate navedene u presudi.
 
 Potom je tisak izvijestio da su stranke sklopile nagodbu (和解) u 2. stupnju. Sama službena prvostupanjska presuda ne omogućuje potvrditi ishod 2. stupnja ni iznos nagodbe; prijavljenu nagodbu ne treba uzimati kao potvrđen završetak prvostupanjskog predmeta.
 
@@ -67,7 +67,7 @@ Niže navedeno opća je informacija za objašnjenje sporova o ozljedi u teretani
 
 ## 1. Nakon ozljede u teretani na Tajvanu, koje pravne postupke valja ocijeniti?
 
-[Članak 7. tajvanskog Zakona o zaštiti potrošača (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) određuje da, kada poduzetnik pruža uslugu, mora osigurati da ta usluga ima razinu sigurnosti koja se razumno može očekivati prema stručnom ili tehničkom mjerilu u trenutku pružanja.
+[Članak 7. tajvanskog Zakona o zaštiti potrošača (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) određuje da, kada poduzetnik pruža uslugu, mora osigurati da ta usluga ima razinu sigurnosti koja se razumno može očekivati prema stručnom ili tehničkom mjerilu u trenutku pružanja. Stavak 3. istog članka određuje da poduzetnik koji prekrši te zahtjeve i time prouzroči štetu potrošaču ili trećoj osobi solidarno odgovara za naknadu, a čak i ako dokaže da nije kriv, sud mu može samo smanjiti odgovornost.
 
 To ne znači da se odgovornost poduzetnika ili trenera priznaje svaki put kad do ozljede dođe u teretani. Treba za svaki predmet posebno ocjenjivati koja je konkretna dužnost pažnje postojala, je li povrijeđena, postoji li uzročna veza između povrede i ozljede, je li nastala stvarna šteta, koje prigovore ima protivna strana i postoji li dokaz koji potkrepljuje svaku tvrdnju i svaki prigovor.
 

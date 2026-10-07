@@ -1,7 +1,7 @@
 ---
 title: "Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "5 phút đọc"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tại Đài Loan, người lao động tự xin nghỉ việc có được nhận trợ cấp thôi việc (資遣費) không?"
-    a: "Không. Khác với một số nước — ví dụ Hàn Quốc — tại Đài Loan nghĩa vụ chi trả trợ cấp thôi việc (資遣費) chỉ phát sinh khi người sử dụng lao động chủ động cho người lao động thôi việc; nếu người lao động tự xin nghỉ việc thì công ty không phải chi trả khoản này."
+    a: "Không. Khác với một số nước — ví dụ Hàn Quốc — tại Đài Loan nghĩa vụ chi trả trợ cấp thôi việc (資遣費) chỉ phát sinh khi người sử dụng lao động chủ động cho người lao động thôi việc; nếu người lao động tự xin nghỉ việc thì công ty không phải chi trả khoản này. Tuy nhiên, nếu tồn tại một căn cứ theo Điều 14 Luật Tiêu chuẩn Lao động (勞動基準法), chẳng hạn công ty không trả lương hoặc vi phạm các quy định pháp luật về lao động, và người lao động chấm dứt hợp đồng dựa trên căn cứ đó, thì công ty phải chi trả trợ cấp thôi việc."
   - q: "Trong trường hợp sa thải kỷ luật, công ty có phải chi trả trợ cấp thôi việc không?"
-    a: "Không. Khi người lao động có hành vi vi phạm pháp luật, vi phạm nội quy lao động (工作規則), hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày (Điều 12 Luật Tiêu chuẩn Lao động (勞動基準法)), công ty được chấm dứt hợp đồng mà không cần báo trước và không phải chi trả trợ cấp thôi việc. Ngược lại, trường hợp cho thôi việc vì lý do kinh tế (Điều 11) thì phải báo trước và phải chi trả trợ cấp thôi việc."
+    a: "Không. Khi người lao động có hành vi vi phạm pháp luật, vi phạm nghiêm trọng hợp đồng lao động hoặc nội quy lao động (工作規則), hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày hoặc 6 ngày trong một tháng (Điều 12 Luật Tiêu chuẩn Lao động (勞動基準法)), công ty được chấm dứt hợp đồng mà không cần báo trước và không phải chi trả trợ cấp thôi việc. Ngược lại, trường hợp cho thôi việc vì lý do kinh tế (Điều 11) thì phải báo trước và phải chi trả trợ cấp thôi việc."
   - q: "Trợ cấp thôi việc tại Đài Loan được tính như thế nào?"
-    a: "Cứ mỗi một năm thâm niên công tác đầy đủ của người lao động, người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc, tối đa không quá 6 tháng tiền lương. Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Luật Hưu trí Người lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần."
+    a: "Cứ mỗi một năm thâm niên công tác đầy đủ của người lao động, người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc, tối đa không quá 6 tháng tiền lương. Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Luật Hưu trí Người lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần. Luật Hưu trí Người lao động áp dụng đối với công dân Đài Loan, người nước ngoài đã kết hôn với công dân Đài Loan và được cấp phép cư trú, người nước ngoài đã được cấp thường trú cùng những người lao động tương tự (Điều 7 khoản 1), và từ năm 2026 áp dụng cả đối với chuyên gia nước ngoài làm công việc chuyên môn (Điều 24 Luật Tuyển dụng và Thuê mướn Chuyên gia Nước ngoài, 外國專業人才延攬及僱用法); trợ cấp thôi việc của những người lao động khác, và đối với thời gian làm việc trước khi luật này được áp dụng, được tính theo Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法)."
 ---
 
 # Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao?
@@ -36,15 +36,19 @@ chỉ khi phía công ty cho người lao động thôi việc thì mới phát 
 
 Trong trường hợp người lao động tự xin nghỉ việc (自請離職), công ty không phải chi trả trợ cấp thôi việc.
 
+Tuy nhiên, nếu tồn tại một căn cứ theo [Điều 14 Luật Tiêu chuẩn Lao động (勞動基準法)](/vi/columns/taiwan-voluntary-resignation-severance), chẳng hạn công ty không trả lương hoặc vi phạm các quy định pháp luật về lao động, và người lao động chấm dứt hợp đồng vì căn cứ đó, thì công ty phải chi trả trợ cấp thôi việc.
+
 ​
 
 Tuy nhiên, nếu người lao động có hành vi vi phạm pháp luật,
 
-vi phạm nội quy lao động,
+vi phạm nghiêm trọng hợp đồng lao động hoặc nội quy lao động,
 
-hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày,
+hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày hoặc 6 ngày trong một tháng,
 
 công ty có thể sa thải người lao động mà không phải chi trả trợ cấp thôi việc.
+
+Tuy nhiên, đối với mọi căn cứ trừ mục 3 (bản án tù đã có hiệu lực), công ty phải sa thải người lao động trong vòng 30 ngày kể từ khi biết sự việc (Điều 12 khoản 2 Luật Tiêu chuẩn Lao động).
 
 ​
 
@@ -53,16 +57,16 @@ Bảng dưới đây tóm tắt các hình thức chấm dứt hợp đồng.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Loại | Cho thôi việc vì lý do kinh tế  資遣員工(經濟解僱) | Sa thải kỷ luật  解僱員工(懲戒解僱) | Người lao động tự xin nghỉ việc  員工自請離職 |
-| Ý nghĩa | Khi người sử dụng lao động cần điều chỉnh nhân sự do tình hình kinh doanh, nguyên nhân đó phát sinh từ phạm vi kinh doanh của người sử dụng lao động chứ không thuộc trách nhiệm của người lao động. Vì vậy, người sử dụng lao động phải tuân thủ thời hạn báo trước (預告期間) và có nghĩa vụ chi trả trợ cấp thôi việc, qua đó bù đắp một cách cân bằng những bất lợi mà người lao động phải gánh chịu. | Khi người lao động có hành vi vi phạm pháp luật hoặc hành vi không đúng đắn, người sử dụng lao động được chấm dứt hợp đồng lao động (勞動契約) ngay lập tức mà không cần báo trước, và không phải chi trả trợ cấp thôi việc. Đây là một biểu hiện của quyền kỷ luật của người sử dụng lao động. | Người lao động có quyền tự do chấm dứt hợp đồng vào bất cứ lúc nào, nhưng phải tuân thủ thời hạn báo trước tương ứng với thâm niên công tác (年資) của mình, để người sử dụng lao động có thể sắp xếp bàn giao công việc và tìm người thay thế. |
+| Ý nghĩa | Khi người sử dụng lao động cần điều chỉnh nhân sự do tình hình kinh doanh, nguyên nhân đó phát sinh từ phạm vi kinh doanh của người sử dụng lao động chứ không thuộc trách nhiệm của người lao động. Vì vậy, người sử dụng lao động phải tuân thủ thời hạn báo trước (預告期間) và có nghĩa vụ chi trả trợ cấp thôi việc, qua đó bù đắp một cách cân bằng những bất lợi mà người lao động phải gánh chịu. | Khi người lao động có hành vi vi phạm pháp luật hoặc hành vi không đúng đắn, người sử dụng lao động được chấm dứt hợp đồng lao động (勞動契約) ngay lập tức mà không cần báo trước, và không phải chi trả trợ cấp thôi việc. Đây là một biểu hiện của quyền kỷ luật của người sử dụng lao động. | Đối với hợp đồng không xác định thời hạn, người lao động có quyền tự do chấm dứt hợp đồng vào bất cứ lúc nào, nhưng phải tuân thủ thời hạn báo trước tương ứng với thâm niên công tác (年資) của mình, để người sử dụng lao động có thể sắp xếp bàn giao công việc và tìm người thay thế. |
 | Điều kiện | Có  (Điều 11 Luật Tiêu chuẩn Lao động Đài Loan) | Có  (Điều 12 Luật Tiêu chuẩn Lao động Đài Loan) | Không |
 | Báo trước | Cần báo trước | Không cần báo trước | Cần báo trước |
 | Mức độ phức tạp khi áp dụng | Đơn giản | Phức tạp | Đơn giản |
-| Công ty có phải chi trả trợ cấp thôi việc (資遣費) hay không | Phải chi trả | Không phải chi trả | Không phải chi trả |
+| Công ty có phải chi trả trợ cấp thôi việc (資遣費) hay không | Phải chi trả | Không phải chi trả | Không phải chi trả (trừ trường hợp người lao động chấm dứt hợp đồng vì một căn cứ theo Điều 14) |
 |  | Điều 11 Luật Tiêu chuẩn Lao động Đài Loan (勞動基準法第11條): Nếu không thuộc một trong các trường hợp sau đây, người sử dụng lao động không được chấm dứt hợp đồng lao động với người lao động, kể cả khi đã báo trước.  1. Khi người sử dụng lao động đóng cửa, ngừng kinh doanh (歇業) hoặc chuyển nhượng doanh nghiệp  2. Khi doanh nghiệp của người sử dụng lao động bị thua lỗ hoặc phải thu hẹp hoạt động kinh doanh (業務緊縮)  3. Khi vì lý do bất khả kháng mà doanh nghiệp phải tạm ngừng hoạt động (暫停工作) từ 1 tháng trở lên  4. Khi tính chất hoạt động kinh doanh (業務性質) thay đổi, có nhu cầu giảm số lượng người lao động, và không có công việc phù hợp khác để bố trí cho người lao động bị cho thôi việc  5. Khi một người lao động cụ thể thực sự không thể đảm đương công việc được giao | Điều 12 Luật Tiêu chuẩn Lao động Đài Loan (勞動基準法第12條): Người sử dụng lao động được sa thải người lao động mà không cần báo trước nếu người lao động thuộc một trong các trường hợp sau đây.  1. Khi giao kết hợp đồng lao động đã đưa ra thông tin không đúng sự thật, khiến người sử dụng lao động hiểu sai và có nguy cơ gây thiệt hại cho hoạt động kinh doanh  2. Có hành vi bạo lực hoặc lăng mạ nghiêm trọng đối với người sử dụng lao động, người thân của người sử dụng lao động, người đại diện của người sử dụng lao động hoặc những người lao động khác cùng làm việc  3. Bị tuyên án tù có thời hạn trở lên và bản án đã có hiệu lực, mà không được hưởng án treo và cũng không được nộp tiền thay thế hình phạt tù (易科罰金)  4. Vi phạm hợp đồng lao động hoặc nội quy lao động (工作規則) với tình tiết nghiêm trọng  5. Cố ý làm hư hỏng, tiêu hao máy móc, công cụ, nguyên vật liệu, sản phẩm hoặc các tài sản khác thuộc sở hữu của người sử dụng lao động, hoặc cố ý tiết lộ bí mật kỹ thuật, bí mật kinh doanh của người sử dụng lao động, gây thiệt hại cho người sử dụng lao động  6. Vắng mặt không có lý do chính đáng liên tục 3 ngày, hoặc vắng mặt không có lý do chính đáng từ 6 ngày trở lên trong 1 tháng |  |
 
 > Tại Đài Loan, cứ mỗi một năm thâm niên công tác đầy đủ của người lao động,
 > người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc.
-> (Tối đa không quá 6 tháng tiền lương) Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Luật Hưu trí Người lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần.
+> (Tối đa không quá 6 tháng tiền lương) Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Luật Hưu trí Người lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần. Luật Hưu trí Người lao động áp dụng đối với công dân Đài Loan, người nước ngoài đã kết hôn với công dân Đài Loan và được cấp phép cư trú, người nước ngoài đã được cấp thường trú cùng những người lao động tương tự (Điều 7 khoản 1), và từ năm 2026 áp dụng cả đối với chuyên gia nước ngoài làm công việc chuyên môn ([Điều 24 Luật Tuyển dụng và Thuê mướn Chuyên gia Nước ngoài (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); trợ cấp thôi việc của những người lao động khác, và đối với thời gian làm việc trước khi luật này được áp dụng, được tính theo Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法). Thời gian làm việc chưa đủ một năm được tính theo tỷ lệ, và công ty phải chi trả trợ cấp thôi việc trong vòng 30 ngày sau khi hợp đồng chấm dứt.
 
 ​
 

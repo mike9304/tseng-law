@@ -1,7 +1,7 @@
 ---
 title: "Flutningastarfsemi á Taívan og leyfi til vöruflutninga með vélknúnum ökutækjum (汽車貨運業): ný stofnun, yfirtaka og það að fela flutninginn leyfishafa"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "12 mín. lestur"
 categories:
@@ -118,7 +118,7 @@ Staðfesta skal gildi rekstrarleyfis rekstraraðilans sem tekur við verkefninu 
 
 Þótt útlendingur verði hluthafi eða fjárfestir í markfélaginu veitir þessi staðreynd ein og sér hvorki rétt til að vinna né dvalarstöðu á Taívan. Stundi hann á Taívan daglega vinnu, svo sem félagsstjórnun, sölu, úthlutun ökutækja og viðskiptaþjónustu, skal hann, áður en störf hefjast, staðfesta hvort atvinnuleyfi sem hæfir raunverulegu starfi sé nauðsynlegt, og meðhöndla síðari dvalarmeðferð sérstaklega.
 
-Við vinnu án leyfis getur stjórnvaldssekt og fyrirmæli um brottför af Taívan (限令出國) gilt. Leiðbeining um innkomubann (禁止入國), sem gildir hjá innflytjendastofnun innanríkisráðuneytisins (內政部移民署), kveður almennt, vegna ólögmætrar vinnu, á um innkomubann í 3 ár, en skilyrði um undanþágu eða styttingu frestsins, sem sama leiðbeining ákveður, geta gilt. Niðurstaðan ræðst ekki vélrænt einungis af því að tilkynning frá þriðja aðila sé fyrir hendi, og lögbært yfirvald kannar atvik, gildandi reglur og aðstæður hvers máls.
+Samkvæmt 68. gr. laga um vinnumiðlun (就業服務法) skal útlendingur sem vinnur án leyfis sæta stjórnvaldssekt og honum skal þegar í stað gert að yfirgefa Taívan (限令出國), og hann má ekki vinna á Taívan á ný. Leiðbeining um innkomubann (禁止入國), sem gildir hjá innflytjendastofnun innanríkisráðuneytisins (內政部移民署), kveður almennt, vegna ólögmætrar vinnu, á um innkomubann í 3 ár, en skilyrði um undanþágu eða styttingu frestsins, sem sama leiðbeining ákveður, geta gilt. Niðurstaðan ræðst ekki vélrænt einungis af því að tilkynning frá þriðja aðila sé fyrir hendi, og lögbært yfirvald kannar atvik, gildandi reglur og aðstæður hvers máls.
 
 ## Opinberar heimildir
 
@@ -136,6 +136,7 @@ Við vinnu án leyfis getur stjórnvaldssekt og fyrirmæli um brottför af Taív
 - [Efnahagsráðuneytið: leiðbeining um umsókn um erlenda fjárfestingu](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Ákvæði 43. gr. laga um vinnumiðlun (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Ákvæði 68. gr. laga um vinnumiðlun](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Ákvæði 68. gr. laga um vinnumiðlun (gagnagrunnur laga og reglugerða)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Innflytjendastofnun innanríkisráðuneytisins: stjórnsýsluleiðbeining um tímalengd innkomubanns](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Tengdar leiðbeiningar

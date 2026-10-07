@@ -1,7 +1,7 @@
 ---
 title: "Logistikk i Taiwan og tillatelsen til godstransport med motorkjøretøy (汽車貨運業): ny stiftelse, oppkjøp og bortsetting av transporten"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "12 minutter lesetid"
 categories:
@@ -118,7 +118,7 @@ Man skal bekrefte gyldigheten av næringslisensen hos den næringsdrivende som m
 
 Selv hvis utlendingen blir aksjonær eller investor i målselskapet, gir denne kjensgjerning i seg selv verken retten til å arbeide eller en oppholdsstatus i Taiwan. Hvis vedkommende i Taiwan utøver det daglige arbeid, slik som selskapsledelsen, salget, kjøretøyinnsettelsen og kundebehandlingen, skal vedkommende før arbeidets begynnelse bekrefte om den arbeidstillatelse som passer til den faktiske funksjon, er nødvendig, og behandle den senere oppholdsprosedyre særskilt.
 
-Ved arbeid uten tillatelse kan det ilegges en administrativ bot og et påbud om å forlate Taiwan (限令出國). Arbeidsveiledningen om innreiseforbud (禁止入國) som gjelder hos immigrasjonsmyndigheten under Taiwans innenriksdepartement (內政部移民署), fastsetter i alminnelighet, for urettmessig arbeid, et innreiseforbud på 3 år, men kravene om fritak eller avkortning av fristen som samme veiledning fastsetter, kan anvendes. Resultatet avgjøres ikke mekanisk alene fordi det finnes en anmeldelse fra en tredjemann, og den kompetente myndigheten etterprøver kjensgjerningene, de gjeldende normer og omstendighetene i hver sak.
+En utenlandsk statsborger som arbeider uten tillatelse, ilegges en administrativ bot og skal straks gis påbud om å forlate Taiwan (限令出國), og får ikke arbeide i Taiwan igjen (artikkel 68 i loven om arbeidsformidling, 就業服務法). Arbeidsveiledningen om innreiseforbud (禁止入國) som gjelder hos immigrasjonsmyndigheten under Taiwans innenriksdepartement (內政部移民署), fastsetter i alminnelighet, for urettmessig arbeid, et innreiseforbud på 3 år, men kravene om fritak eller avkortning av fristen som samme veiledning fastsetter, kan anvendes. Resultatet avgjøres ikke mekanisk alene fordi det finnes en anmeldelse fra en tredjemann, og den kompetente myndigheten etterprøver kjensgjerningene, de gjeldende normer og omstendighetene i hver sak.
 
 ## Offisielle kilder
 
@@ -136,6 +136,7 @@ Ved arbeid uten tillatelse kan det ilegges en administrativ bot og et påbud om 
 - [Taiwans økonomidepartement: veiledning om søknad om utenlandsk investering](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Artikkel 43 i loven om arbeidsformidling (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Artikkel 68 i loven om arbeidsformidling](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Artikkel 68 i loven om arbeidsformidling (Database for lover og forskrifter)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Immigrasjonsmyndigheten under Taiwans innenriksdepartement: administrativ veiledning om varigheten av innreiseforbudet](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Tilknyttede veiledninger

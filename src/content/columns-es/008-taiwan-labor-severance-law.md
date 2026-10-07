@@ -1,7 +1,7 @@
 ---
 title: "Derecho laboral de Taiwán: ¿es difícil cobrar la indemnización por despido en Taiwán?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 de septiembre de 2025"
 read_time: "6 min de lectura"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "En Taiwán, ¿percibe indemnización por despido el trabajador que dimite de forma voluntaria?"
-    a: "No. A diferencia de algunos ordenamientos (Corea, por ejemplo), en Taiwán la obligación de pagar la indemnización por despido (資遣費) solo nace cuando la empresa despide al trabajador; si el trabajador dimite de forma voluntaria, la empresa no tiene que pagarla."
+    a: "No. A diferencia de algunos ordenamientos (Corea, por ejemplo), en Taiwán la obligación de pagar la indemnización por despido (資遣費) solo nace cuando la empresa despide al trabajador; si el trabajador dimite de forma voluntaria, la empresa no tiene que pagarla. Sin embargo, si existe un motivo del artículo 14 de la Ley de Normas Laborales (勞動基準法第14條), por ejemplo que la empresa no pague el salario o infrinja las leyes y reglamentos laborales, y el trabajador resuelve el contrato por ese motivo, la empresa debe pagar la indemnización por despido."
   - q: "En caso de despido disciplinario, ¿debe la empresa pagar igualmente la indemnización por despido?"
-    a: "No. Si el trabajador comete un acto ilícito, infringe las normas de la empresa o falta al trabajo sin causa justificada durante 3 días consecutivos (artículo 12 de la Ley de Normas Laborales, 勞動基準法第12條), la empresa puede despedir sin preaviso y no está obligada a pagar la indemnización por despido. En cambio, el despido económico (artículo 11) exige preaviso y el pago de la indemnización por despido."
+    a: "No. Si el trabajador comete un acto ilícito, infringe gravemente el contrato de trabajo o las normas de la empresa, o falta al trabajo sin causa justificada durante 3 días consecutivos o 6 días en un mes (artículo 12 de la Ley de Normas Laborales, 勞動基準法第12條), la empresa puede despedir sin preaviso y no está obligada a pagar la indemnización por despido. En cambio, el despido económico (artículo 11) exige preaviso y el pago de la indemnización por despido."
   - q: "¿Cómo se calcula la indemnización por despido en Taiwán?"
-    a: "Cada vez que el trabajador complete un año de antigüedad (年資), el empleador debe pagar como indemnización por despido 0,5 meses del salario medio (平均工資), con un máximo de 6 meses de salario. Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada año completo, sin tope."
+    a: "Cada vez que el trabajador complete un año de antigüedad (年資), el empleador debe pagar como indemnización por despido 0,5 meses del salario medio (平均工資), con un máximo de 6 meses de salario. Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada año completo, sin tope. La Ley de la pensión laboral se aplica a los nacionales de Taiwán, a los extranjeros casados con un nacional de Taiwán a quienes se ha concedido la residencia, a los extranjeros a quienes se ha concedido la residencia permanente y a trabajadores similares (artículo 7, apartado 1), y, desde 2026, a los profesionales extranjeros que realizan trabajo profesional (artículo 24 de la Ley para la Captación y el Empleo de Profesionales Extranjeros, 外國專業人才延攬及僱用法); la indemnización de los demás trabajadores, y la de los períodos de antigüedad anteriores a la aplicación de la Ley, se calcula conforme al artículo 17 de la Ley de Normas Laborales."
 ---
 
 # Derecho laboral de Taiwán: ¿es difícil cobrar la indemnización por despido en Taiwán?
@@ -36,15 +36,19 @@ La obligación de pagar la indemnización por despido solo nace cuando la empres
 
 Si el trabajador dimite de forma voluntaria, la empresa no tiene que pagar la indemnización por despido.
 
+Sin embargo, si existe un motivo del [artículo 14 de la Ley de Normas Laborales](/es/columns/taiwan-voluntary-resignation-severance), por ejemplo que la empresa no pague el salario o infrinja las leyes y reglamentos laborales, y el trabajador resuelve el contrato por ese motivo, la empresa debe pagar la indemnización por despido.
+
 ​
 
 Sin embargo, cabe el despido sin indemnización si el trabajador comete un acto ilícito.
 
-También cabe si infringe las normas de la empresa (工作規則).
+También cabe si infringe gravemente el contrato de trabajo o las normas de la empresa (工作規則).
 
-También cabe si falta al trabajo sin motivo durante 3 días consecutivos.
+También cabe si falta al trabajo sin motivo durante 3 días consecutivos o 6 días en un mes.
 
 En esos casos, la empresa puede despedir al trabajador sin pagarle la indemnización por despido.
+
+Sin embargo, salvo en el supuesto 3 (condena firme a pena de prisión), la empresa debe despedir al trabajador dentro de los 30 días siguientes a aquel en que tenga conocimiento de los hechos (artículo 12, apartado 2, de la Ley de Normas Laborales).
 
 ​
 
@@ -53,16 +57,16 @@ La comparación queda en la tabla siguiente.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Tipo | Despido económico (資遣員工, 經濟解僱) | Despido disciplinario (解僱員工, 懲戒解僱) | Dimisión voluntaria del trabajador (員工自請離職) |
-| Significado | Cuando el empleador, según la situación de gestión, necesita un ajuste de personal, la causa surge en el ámbito de gestión del empleador y no es responsabilidad del trabajador. Por ello el empleador debe respetar el período de preaviso (預告期間) y asumir obligaciones como el pago de la indemnización por despido, a fin de equilibrar el perjuicio del trabajador. | Si el trabajador comete un acto ilícito o impropio, el empleador puede resolver de inmediato el contrato de trabajo (勞動契約) sin preaviso y no tiene que pagar la indemnización por despido. Ello es una de las facultades disciplinarias del empleador. | El trabajador tiene libertad para poner fin al contrato en cualquier momento, pero debe respetar el período de preaviso según su antigüedad, a fin de que el empleador pueda organizar la entrega del puesto y buscar a otra persona. |
+| Significado | Cuando el empleador, según la situación de gestión, necesita un ajuste de personal, la causa surge en el ámbito de gestión del empleador y no es responsabilidad del trabajador. Por ello el empleador debe respetar el período de preaviso (預告期間) y asumir obligaciones como el pago de la indemnización por despido, a fin de equilibrar el perjuicio del trabajador. | Si el trabajador comete un acto ilícito o impropio, el empleador puede resolver de inmediato el contrato de trabajo (勞動契約) sin preaviso y no tiene que pagar la indemnización por despido. Ello es una de las facultades disciplinarias del empleador. | En un contrato de duración indefinida, el trabajador tiene libertad para poner fin al contrato en cualquier momento, pero debe respetar el período de preaviso según su antigüedad, a fin de que el empleador pueda organizar la entrega del puesto y buscar a otra persona. |
 | Requisitos | Sí  (artículo 11 de la Ley de Normas Laborales de Taiwán) | Sí  (artículo 12 de la Ley de Normas Laborales de Taiwán) | No |
 | Preaviso | Necesario | No necesario | Necesario |
 | Dificultad del trámite | Menor | Mayor | Menor |
-| Si la empresa debe pagar la indemnización por despido (資遣費) | Necesario | No necesario | No necesario |
-|  | Artículo 11 de la Ley de Normas Laborales de Taiwán (勞動基準法第11條): Salvo que se produzca una de las situaciones siguientes, el empleador no puede resolver el contrato de trabajo aunque notifique previamente al trabajador.  1. Cese de actividad (歇業) o transmisión de la empresa (轉讓)  2. Pérdidas (虧損) o contracción de la actividad (業務緊縮)  3. Fuerza mayor que exige suspender la actividad durante 1 mes o más  4. La naturaleza del negocio exige reducir personal y el trabajador despedido no puede reubicarse en otro puesto adecuado  5. Un trabajador determinado no puede desempeñar de forma satisfactoria el trabajo que exige el puesto | Artículo 12 de la Ley de Normas Laborales de Taiwán (勞動基準法第12條): El empleador puede despedir sin preaviso si el trabajador se halla en uno de los casos siguientes.  1. Quien, al celebrar el contrato de trabajo, facilita información falsa y induce a error al empleador, con riesgo de dañar el negocio  2. Quien ejerce violencia contra el empleador, un familiar del empleador, el representante del empleador u otros compañeros, o les dirige un insulto grave  3. Quien tiene una condena firme a pena de prisión (有期徒刑) o superior, sin suspensión de la pena (緩刑) y sin que se haya autorizado la conversión de la pena en multa (易科罰金)  4. Infracción grave del contrato de trabajo o del reglamento de trabajo  5. Quien, de forma intencionada, consume o destruye máquinas, herramientas, materias primas, productos u otros bienes del empleador, o revela de forma intencionada secretos técnicos o comerciales del empleador, causando daño al empleador  6. Falta injustificada al trabajo durante 3 días consecutivos, o 6 días o más en un mes |  |
+| Si la empresa debe pagar la indemnización por despido (資遣費) | Necesario | No necesario | No necesario (salvo cuando el trabajador resuelve el contrato por una causa del artículo 14) |
+|  | Artículo 11 de la Ley de Normas Laborales de Taiwán (勞動基準法第11條): Salvo que se produzca una de las situaciones siguientes, el empleador no puede resolver el contrato de trabajo aunque notifique previamente al trabajador.  1. Cese de actividad (歇業) o transmisión de la empresa (轉讓)  2. Pérdidas (虧損) o contracción de la actividad (業務緊縮)  3. Fuerza mayor que exige suspender la actividad durante 1 mes o más  4. Ha cambiado la naturaleza del negocio, es necesaria una reducción de personal y no hay un puesto adecuado al que reasignar al trabajador  5. El trabajador es claramente incapaz de desempeñar el trabajo asignado | Artículo 12 de la Ley de Normas Laborales de Taiwán (勞動基準法第12條): El empleador puede despedir sin preaviso si el trabajador se halla en uno de los casos siguientes.  1. Quien, al celebrar el contrato de trabajo, facilita información falsa y induce a error al empleador, con riesgo de dañar el negocio  2. Quien ejerce violencia contra el empleador, un familiar del empleador, el representante del empleador u otros compañeros, o les dirige un insulto grave  3. Quien tiene una condena firme a pena de prisión (有期徒刑) o superior, sin suspensión de la pena (緩刑) y sin que se haya autorizado la conversión de la pena en multa (易科罰金)  4. Infracción grave del contrato de trabajo o del reglamento de trabajo  5. Quien, de forma intencionada, consume o destruye máquinas, herramientas, materias primas, productos u otros bienes del empleador, o revela de forma intencionada secretos técnicos o comerciales del empleador, causando daño al empleador  6. Falta injustificada al trabajo durante 3 días consecutivos, o 6 días o más en un mes |  |
 
 > En Taiwán, cada vez que el trabajador complete un año de antigüedad (年資),
 > el empleador debe pagar como indemnización por despido 0,5 meses del salario medio (平均工資).
-> (hasta un máximo de 6 meses de salario) Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada año completo, sin tope.
+> (hasta un máximo de 6 meses de salario) Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada año completo, sin tope. La Ley de la pensión laboral se aplica a los nacionales de Taiwán, a los extranjeros casados con un nacional de Taiwán a quienes se ha concedido la residencia, a los extranjeros a quienes se ha concedido la residencia permanente y a trabajadores similares (artículo 7, apartado 1), y, desde 2026, a los profesionales extranjeros que realizan trabajo profesional ([artículo 24 de la Ley para la Captación y el Empleo de Profesionales Extranjeros (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); la indemnización de los demás trabajadores, y la de los períodos de antigüedad anteriores a la aplicación de la Ley, se calcula conforme al artículo 17 de la Ley de Normas Laborales. El período de servicio inferior a 1 año se calcula de forma proporcional, y la empresa debe pagar la indemnización dentro de los 30 días siguientes a la terminación del contrato.
 
 ​
 

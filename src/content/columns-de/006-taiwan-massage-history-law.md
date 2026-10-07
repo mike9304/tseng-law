@@ -1,7 +1,7 @@
 ---
 title: "Geschichte und Rechtslage der Massage in Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. September 2025"
 read_time: "3 Minuten Lesezeit"
 categories:
@@ -51,11 +51,11 @@ durften tatsächlich nur sehbehinderte Personen (視障者) im Massagegewerbe (�
 
 Für nicht sehbehinderte Personen (非視障者) war die Ausübung dieses Gewerbes rechtswidrig.
 
-Diese Regelung galt bis 2003 fort. Damals betrieb Herr Lin einen Friseursalon.
+Diese Beschränkung galt bis zum 31. Oktober 2011 fort; im Jahr 2003, also innerhalb dieses Zeitraums, betrieb Herr Lin einen Friseursalon.
 
 Die Polizei stellte fest, dass er zwei nicht sehbehinderte Beschäftigte für Haarwäsche und Massage beschäftigte.
 
-Nach dem damaligen Recht wurde Herr Lin mit einer Geldbuße (罰鍰) von TWD 40.000 (新臺幣) belegt, die beiden Beschäftigten mit TWD 10.000 und TWD 20.000.
+Nach dem damaligen Recht verhängte das Sozialamt der Stadt Taipeh (臺北市社會局) gegen Herrn Lin eine Verwaltungsgeldbuße (罰鍰) von TWD 40.000 (新臺幣) und gegen die beiden Beschäftigten Verwaltungsgeldbußen von TWD 10.000 bzw. TWD 20.000.
 
 Herr Lin hielt diese Sanktion für sehr ungerecht und beantragte eine Verfassungsauslegung.
 
@@ -81,7 +81,7 @@ So entstand etwa der Gedanke, ob die ausdrückliche Regelung, dass nur sehbehind
 
 und es wurde bezweifelt, ob diese Regelung wirklich zum Schutz von Arbeitsplätzen und Existenz sehbehinderter Personen beitrug.
 
-Schließlich erklärten die Großen Richter (大法官) die Gesetzesvorschrift, nach der nur sehbehinderte Personen im Massagegewerbe tätig sein durften, für verfassungswidrig (違憲).
+Schließlich erklärten die Großen Richter (大法官) in der Auslegung Nr. 649 (司法院釋字第649號) vom 31. Oktober 2008 die Gesetzesvorschrift, nach der nur sehbehinderte Personen im Massagegewerbe tätig sein durften, für verfassungswidrig (違憲); die Vorschrift trat am 31. Oktober 2011 mit Ablauf der in der Auslegung eingeräumten Übergangsfrist von 3 Jahren außer Kraft.
 
 ​
 

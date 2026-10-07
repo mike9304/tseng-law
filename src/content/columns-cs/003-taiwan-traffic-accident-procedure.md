@@ -1,7 +1,7 @@
 ---
 title: "Otázky a odpovědi k postupu po dopravních nehodách na Tchaj-wanu: úkony na místě, zavinění, smír a náhrada škody"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. září 2025"
 read_time: "12 min čtení"
 categories:
@@ -95,7 +95,7 @@ Nárok založený na článku 184 občanského zákoníku předpokládá protipr
 
 - Poranění: Podle článku 193 občanského zákoníku lze posoudit potřebné lékařské náklady (醫療費用), dodatečné náklady každodenního života, jako náklady péče (看護費用), dopravy na léčení (就醫交通費) a technické pomoci, a také ztrátu příjmů (收入損失) skutečnou neschopností práce a snížení pracovní schopnosti (勞動能力減損). Podle článku 195 občanského zákoníku lze také posoudit nemajetkovou újmu.
 - Smrt: Podle článku 192 občanského zákoníku, nastane-li základ, lze posoudit lékařské náklady před smrtí a náklady zvýšených životních potřeb, náklady pohřbu (殯葬費) a ztrátu výživného (扶養利益損失) osoby, která měla zákonné právo na výživné. Podle článku 194 občanského zákoníku lze také posoudit nemajetkovou újmu některých příbuzných.
-- Majetek: Podle článku 196 občanského zákoníku lze uplatnit odůvodněnou skutečnou majetkovou škodu, včetně nákladů opravy vozidla nebo ztráty hodnoty.
+- Majetek: Podle článku 196 občanského zákoníku může vlastník požadovat náhradu snížení hodnoty vozidla způsobeného poškozením; náklady opravy slouží jako měřítko jen v nezbytném rozsahu a při nahrazení starých dílů novými lze provést odpočet za opotřebení.
 
 ## Q8. Trvá-li léčení, jak předkládat listiny lékařských nákladů?
 
@@ -165,13 +165,13 @@ Soud posuzuje okolnosti každé věci, hodnotí společně obsah poranění a l�
 
 Zaměstnavatel může namítnout, že zachoval náležitou péči při výběru a dohledu nad zaměstnancem, nebo že škodě by nebylo možné předejít ani při zachování této péče. Lze zvážit uplatnění náhrady společně proti zaměstnavateli a zaměstnanci. Po náhradě může zaměstnavatel vykonat regres vůči zaměstnanci.
 
-Prokáže-li zaměstnavatel tyto předpoklady zproštění a poškozený nezíská náhradu z odstavce 1, může soud podle článku 188 odstavce 2 občanského zákoníku uložit náhradu úplnou nebo částečnou s přihlédnutím k hospodářské situaci zaměstnavatele a poškozeného.
+Prokáže-li zaměstnavatel tyto předpoklady zproštění a poškozený nezíská náhradu z odstavce 1, může soud podle článku 188 odstavce 2 občanského zákoníku na návrh poškozeného s přihlédnutím k hospodářské situaci zaměstnavatele a poškozeného uložit zaměstnavateli, aby škodu nahradil zcela nebo zčásti.
 
 Otázku, proti komu se občanskoprávní nárok směřuje, je třeba odlišit od trestní odpovědnosti. Trestní odpovědnost z článku 284 trestního zákona se hodnotí podle porušení povinnosti opatrnosti každé fyzické osoby a příčinné souvislosti tohoto porušení.
 
 ## Q15. Jaká plnění a jaká krytí povinného pojištění vozidel je třeba ověřit?
 
-Povinnost uzavření podle článku 6 zákona o povinném pojištění odpovědnosti vozidel (強制汽車責任保險法) spočívá zásadně na vlastníkovi vozidla a v předvídaných případech také na uživateli nebo správci tohoto vozidla. Tento režim zřizuje strukturu krytí bez zavinění (無過失給付制度) pro osobu zraněnou nebo zemřelou v důsledku automobilové nehody, avšak je třeba ověřit rozsah cestujících nebo třetích osob (第三人) mimo vozidlo, který stanoví zákon.
+Povinnost uzavření podle článku 6 zákona o povinném pojištění odpovědnosti vozidel (強制汽車責任保險法) spočívá zásadně na vlastníkovi vozidla a v předvídaných případech také na uživateli nebo správci tohoto vozidla. Tento režim zřizuje strukturu krytí bez zavinění (無過失給付制度) pro osobu zraněnou nebo zemřelou v důsledku automobilové nehody, avšak je třeba ověřit rozsah cestujících nebo třetích osob (第三人) mimo vozidlo, který stanoví zákon. Pojistitel neposkytuje plnění, jestliže nehodu úmyslně nebo při páchání trestného činu způsobila zraněná osoba či jiná osoba uplatňující nárok (článek 28).
 
 U nehody jednoho vozidla není řidič tohoto vozidla zásadně adresátem plnění povinného pojištění tohoto vozidla. Avšak u nehody, v níž se účastní několik vozidel, existují případy, v nichž řidič může uplatnit plnění u pojistitele povinného pojištění jiného zúčastněného vozidla.
 

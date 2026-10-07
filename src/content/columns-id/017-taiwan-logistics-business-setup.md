@@ -1,7 +1,7 @@
 ---
 title: "Usaha logistik di Taiwan dan izin usaha angkutan barang bermotor (汽車貨運業): pendirian baru, akuisisi, dan pengalihdayaan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "9 menit baca"
 categories:
@@ -118,7 +118,7 @@ Anda harus memastikan keabsahan izin operasional usaha pelaku usaha penerima pen
 
 Meskipun orang asing menjadi pemegang saham atau investor pada perusahaan sasaran, hal itu saja tidak memberinya hak untuk bekerja maupun status izin tinggal di Taiwan. Apabila ia menjalankan pekerjaan sehari-hari di Taiwan, seperti pengelolaan usaha perusahaan, penjualan, penugasan kendaraan, dan penanganan pelanggan, ia harus memastikan perlu tidaknya izin kerja yang sesuai dengan jabatan yang sesungguhnya sebelum mulai bekerja, dan menempuh prosedur izin tinggal berikutnya secara tersendiri.
 
-Bekerja tanpa izin dapat dikenai denda administratif dan perintah meninggalkan Taiwan (限令出國). Panduan kerja mengenai larangan masuk (禁止入國) yang berlaku pada Badan Imigrasi Kementerian Dalam Negeri (內政部移民署) pada umumnya menetapkan jangka waktu larangan masuk selama 3 tahun bagi pekerjaan yang tidak sah, tetapi persyaratan pembebasan atau pemendekan jangka waktu yang ditetapkan panduan yang sama dapat diterapkan. Hasilnya tidak ditentukan secara mekanis hanya karena adanya laporan dari pihak ketiga, dan instansi yang berwenang memeriksa fakta, ketentuan yang berlaku, serta keadaan masing-masing.
+Warga negara asing yang bekerja tanpa izin dikenai denda administratif dan harus segera diperintahkan meninggalkan Taiwan (限令出國), serta tidak boleh bekerja lagi di Taiwan (Pasal 68 Undang-Undang Layanan Ketenagakerjaan, 就業服務法). Panduan kerja mengenai larangan masuk (禁止入國) yang berlaku pada Badan Imigrasi Kementerian Dalam Negeri (內政部移民署) pada umumnya menetapkan jangka waktu larangan masuk selama 3 tahun bagi pekerjaan yang tidak sah, tetapi persyaratan pembebasan atau pemendekan jangka waktu yang ditetapkan panduan yang sama dapat diterapkan. Hasilnya tidak ditentukan secara mekanis hanya karena adanya laporan dari pihak ketiga, dan instansi yang berwenang memeriksa fakta, ketentuan yang berlaku, serta keadaan masing-masing.
 
 ## Sumber resmi
 
@@ -136,6 +136,7 @@ Bekerja tanpa izin dapat dikenai denda administratif dan perintah meninggalkan T
 - [Kementerian Urusan Ekonomi: panduan permohonan investasi asing](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Pasal 43 Undang-Undang Layanan Ketenagakerjaan (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Pasal 68 Undang-Undang Layanan Ketenagakerjaan](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Pasal 68 Undang-Undang Layanan Ketenagakerjaan (Basis Data Hukum dan Peraturan)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Badan Imigrasi Kementerian Dalam Negeri: panduan administratif mengenai jangka waktu larangan masuk](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Panduan terkait

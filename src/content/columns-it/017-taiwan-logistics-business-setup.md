@@ -1,7 +1,7 @@
 ---
 title: "L’attività logistica a Taiwan e l’autorizzazione di trasporto di merci per autoveicolo (汽車貨運業): costituzione nuova, acquisizione e mandato"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 settembre 2025"
 read_time: "12 min di lettura"
 categories:
@@ -118,7 +118,7 @@ Deve confermarsi la validità della licenza di esercizio dell’imprenditore des
 
 Anche se lo straniero diventa azionista o investitore della società-obiettivo, questo fatto da solo non gli conferisce né il diritto di lavorare né un titolo di soggiorno a Taiwan. Se esercita a Taiwan il lavoro quotidiano, come la gestione della società, le vendite, l’assegnazione dei veicoli e l’assistenza al cliente, deve confermare, prima di cominciare il lavoro, se ha bisogno dell’autorizzazione di lavoro conforme alla funzione reale, e trattare separatamente la procedura di soggiorno posteriore.
 
-Al lavoro senza autorizzazione possono applicarsi una sanzione amministrativa e un ordine di lasciare Taiwan (限令出國). L’orientamento di lavoro sull’interdizione di ingresso (禁止入國) in vigore nell’Amministrazione dell’immigrazione del Ministero dell’Interno (內政部移民署) fissa in generale, per il lavoro illecito, un periodo di interdizione di ingresso di 3 anni, ma le esigenze di esenzione o di accorciamento del periodo che questo stesso orientamento fissa possono applicarsi. Il risultato non si determina in modo meccanico solo perché esiste una denuncia di un terzo, e l’autorità competente esamina i fatti, le norme applicabili e le circostanze di ciascun caso.
+Lo straniero che lavora senza autorizzazione è soggetto a una sanzione amministrativa, deve essere destinatario di un ordine di lasciare immediatamente Taiwan (限令出國) e non può più lavorare a Taiwan (articolo 68 della legge sui servizi di impiego, 就業服務法). L’orientamento di lavoro sull’interdizione di ingresso (禁止入國) in vigore nell’Amministrazione dell’immigrazione del Ministero dell’Interno (內政部移民署) fissa in generale, per il lavoro illecito, un periodo di interdizione di ingresso di 3 anni, ma le esigenze di esenzione o di accorciamento del periodo che questo stesso orientamento fissa possono applicarsi. Il risultato non si determina in modo meccanico solo perché esiste una denuncia di un terzo, e l’autorità competente esamina i fatti, le norme applicabili e le circostanze di ciascun caso.
 
 ## Fonti ufficiali
 
@@ -136,6 +136,7 @@ Al lavoro senza autorizzazione possono applicarsi una sanzione amministrativa e 
 - [Ministero dell’Economia: orientamento di domanda di investimento straniero](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49).
 - [Articolo 43 della legge sui servizi di impiego (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128).
 - [Articolo 68 della legge sui servizi di impiego](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128).
+- [Articolo 68 della legge sui servizi di impiego (Banca dati delle leggi e dei regolamenti)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68).
 - [Amministrazione dell’immigrazione del Ministero dell’Interno: orientamento amministrativo sul periodo di interdizione di ingresso](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp).
 
 ## Orientamenti legati

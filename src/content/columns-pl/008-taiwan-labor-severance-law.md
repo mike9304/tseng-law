@@ -1,7 +1,7 @@
 ---
 title: "Prawo pracy na Tajwanie: kiedy przysługuje odprawa (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 września 2025"
 read_time: "6 min czytania"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Na Tajwanie, czy pracownicy otrzymują odprawę, jeśli sami rezygnują z pracy?"
-    a: "Nie. W odróżnieniu od niektórych porządków prawnych — na przykład koreańskiego — na Tajwanie obowiązek wypłaty odprawy (資遣費) powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę; jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy."
+    a: "Nie. W odróżnieniu od niektórych porządków prawnych — na przykład koreańskiego — na Tajwanie obowiązek wypłaty odprawy (資遣費) powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę; jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy. Jeżeli jednak istnieje przyczyna z art. 14 ustawy o normach pracy, na przykład spółka nie wypłaca wynagrodzenia albo narusza przepisy prawa pracy, a zatrudniona osoba rozwiązuje umowę z tego powodu, spółka musi wypłacić odprawę."
   - q: "Czy spółka musi też wypłacić odprawę przy zwolnieniu dyscyplinarnym?"
-    a: "Nie. Jeśli zatrudniona osoba popełnia czyn bezprawny, narusza regulamin pracy albo opuszcza pracę bez uzasadnionej przyczyny przez 3 dni z rzędu (art. 12 ustawy o normach pracy, 勞動基準法第12條), spółka może zwolnić bez wypowiedzenia i nie musi wypłacać odprawy. Natomiast zwolnienie ekonomiczne (art. 11) wymaga wcześniejszego wypowiedzenia i wypłaty odprawy."
+    a: "Nie. Jeśli zatrudniona osoba popełnia czyn bezprawny, poważnie narusza umowę o pracę lub regulamin pracy albo opuszcza pracę bez uzasadnionej przyczyny przez 3 dni z rzędu lub 6 dni w jednym miesiącu (art. 12 ustawy o normach pracy, 勞動基準法第12條), spółka może zwolnić bez wypowiedzenia i nie musi wypłacać odprawy. Natomiast zwolnienie ekonomiczne (art. 11) wymaga wcześniejszego wypowiedzenia i wypłaty odprawy."
   - q: "Jak oblicza się odprawę na Tajwanie?"
-    a: "Za każdy ukończony jeden rok stażu pracodawca musi wypłacić 0,5 miesiąca przeciętnego wynagrodzenia jako odprawę, najwyżej 6 miesięcy wynagrodzenia. Ten wzór dotyczy stażu, do którego stosuje się art. 12 ustawy o emeryturach pracowniczych (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za jeden rok wypłaca się jeden miesiąc przeciętnego wynagrodzenia, bez limitu."
+    a: "Za każdy ukończony jeden rok stażu pracodawca musi wypłacić 0,5 miesiąca przeciętnego wynagrodzenia jako odprawę, najwyżej 6 miesięcy wynagrodzenia. Ten wzór dotyczy stażu, do którego stosuje się art. 12 ustawy o emeryturach pracowniczych (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za jeden rok wypłaca się jeden miesiąc przeciętnego wynagrodzenia, bez limitu. Ustawa o emeryturach pracowniczych ma zastosowanie do obywateli Tajwanu, cudzoziemców pozostających w związku małżeńskim z obywatelem Tajwanu, którzy uzyskali zezwolenie na pobyt, cudzoziemców, którzy uzyskali pobyt stały, i podobnych pracowników (art. 7 ust. 1), a od 2026 r. także do zagranicznych specjalistów wykonujących pracę zawodową (art. 24 ustawy o pozyskiwaniu i zatrudnianiu zagranicznych specjalistów, 外國專業人才延攬及僱用法); odprawa dla pozostałych pracowników oraz za okresy zatrudnienia sprzed stosowania tej ustawy jest obliczana według art. 17 ustawy o normach pracy."
 ---
 
 # Prawo pracy na Tajwanie: kiedy przysługuje odprawa (資遣費)
@@ -36,15 +36,19 @@ Obowiązek wypłaty odprawy powstaje dopiero wtedy, gdy spółka zwalnia zatrudn
 
 Jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy.
 
+Jeżeli jednak istnieje przyczyna z [art. 14 ustawy o normach pracy](/pl/columns/taiwan-voluntary-resignation-severance), na przykład spółka nie wypłaca wynagrodzenia albo narusza przepisy prawa pracy, a zatrudniona osoba rozwiązuje umowę z tego powodu, spółka musi wypłacić odprawę.
+
 ​
 
 Jeśli zatrudniona osoba popełnia jednak czyn bezprawny,
 
-narusza regulamin pracy (工作規則),
+poważnie narusza umowę o pracę lub regulamin pracy (工作規則),
 
-albo opuszcza pracę bez powodu przez 3 dni z rzędu (曠工),
+albo opuszcza pracę bez powodu przez 3 dni z rzędu lub przez 6 dni w jednym miesiącu (曠工),
 
 spółka może zwolnić bez wypłaty odprawy.
+
+Jednak w przypadku każdej przyczyny z wyjątkiem pkt 3 (prawomocny wyrok kary pozbawienia wolności) spółka musi zwolnić zatrudnioną osobę w ciągu 30 dni od dowiedzenia się o okolicznościach (art. 12 ust. 2 ustawy o normach pracy).
 
 ​
 
@@ -53,16 +57,16 @@ Podsumowuję to w prostej tabeli.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Rodzaj | Zwolnienie ekonomiczne (資遣員工, 經濟解僱) | Zwolnienie dyscyplinarne (解僱員工, 懲戒解僱) | Własna rezygnacja zatrudnionej osoby (員工自請離職) |
-| Znaczenie | Jeśli u pracodawcy istnieje potrzeba korekty personelu z powodu sytuacji przedsiębiorstwa, przyczyna leży w sferze gospodarczej pracodawcy, a nie w odpowiedzialności zatrudnionej osoby. Dlatego pracodawca musi przestrzegać terminu wypowiedzenia (預告期間) i wypłacić odprawę, aby zrównoważyć niekorzyści zatrudnionej osoby. | Jeśli zatrudniona osoba popełnia czyn bezprawny lub niewłaściwy, pracodawca może natychmiast zakończyć umowę o pracę (勞動契約) bez wcześniejszego wypowiedzenia i nie musi wypłacać odprawy. Jest to jedna z prerogatyw dyscyplinarnych pracodawcy. | Zatrudniona osoba może w każdej chwili zakończyć umowę, lecz musi, według czasu zatrudnienia, przestrzegać terminu wypowiedzenia, aby pracodawca mógł przeprowadzić przekazanie i poszukiwanie zastępstwa. |
+| Znaczenie | Jeśli u pracodawcy istnieje potrzeba korekty personelu z powodu sytuacji przedsiębiorstwa, przyczyna leży w sferze gospodarczej pracodawcy, a nie w odpowiedzialności zatrudnionej osoby. Dlatego pracodawca musi przestrzegać terminu wypowiedzenia (預告期間) i wypłacić odprawę, aby zrównoważyć niekorzyści zatrudnionej osoby. | Jeśli zatrudniona osoba popełnia czyn bezprawny lub niewłaściwy, pracodawca może natychmiast zakończyć umowę o pracę (勞動契約) bez wcześniejszego wypowiedzenia i nie musi wypłacać odprawy. Jest to jedna z prerogatyw dyscyplinarnych pracodawcy. | Przy umowie na czas nieokreślony zatrudniona osoba może w każdej chwili zakończyć umowę, lecz musi, według czasu zatrudnienia, przestrzegać terminu wypowiedzenia, aby pracodawca mógł przeprowadzić przekazanie i poszukiwanie zastępstwa. |
 | Warunki | Tak (art. 11 tajwańskiej ustawy o normach pracy) | Tak (art. 12 tajwańskiej ustawy o normach pracy) | Brak |
 | Wcześniejsze wypowiedzenie | Wymagane | Niewymagane | Wymagane |
 | Trudność (bez obietnicy wyniku) | Niska | Wysoka | Niska |
-| Czy spółka musi wypłacić odprawę (資遣費) | Wymagane | Niewymagane | Niewymagane |
-|  | Tajwańska ustawa o normach pracy, art. 11 (勞動基準法第11條): O ile nie wystąpi jeden z następujących przypadków, pracodawca nie może zakończyć umowy o pracę, nawet po wcześniejszym zawiadomieniu zatrudnionej osoby.  1. Zaprzestanie działalności (歇業) lub zbycie przedsiębiorstwa (轉讓)  2. Straty (虧損) lub ograniczenie działalności (業務緊縮)  3. Siła wyższa wymaga przerwy w działalności na jeden miesiąc lub dłużej  4. Charakter działalności wymaga redukcji personelu, a zwolnionej osoby nie można przenieść na inne odpowiednie stanowisko  5. Określona zatrudniona osoba nie może w sposób zadowalający wykonać pracy wymaganej przez stanowisko | Tajwańska ustawa o normach pracy, art. 12 (勞動基準法第12條): Pracodawca może zwolnić bez wcześniejszego zawiadomienia, jeśli zachodzi jedna z następujących okoliczności.  1. Kto przy zawarciu umowy o pracę składa nieprawdziwe oświadczenia, wprowadza pracodawcę w błąd i naraża przedsiębiorstwo na ryzyko szkody  2. Kto stosuje przemoc lub poważnie znieważa pracodawcę, jego rodzinę, jego przedstawiciela (代理人) lub innych współpracowników  3. Kogo prawomocnie skazano na karę pozbawienia wolności na czas oznaczony (有期徒刑) lub karę cięższą, bez orzeczenia warunkowego zawieszenia (緩刑) i bez zezwolenia na zamianę na grzywnę (易科罰金)  4. Poważne naruszenie umowy o pracę lub regulaminu pracy  5. Kto umyślnie zużywa maszyny, narzędzia, surowce, produkty lub inne mienie pracodawcy albo umyślnie ujawnia tajemnice techniczne i handlowe pracodawcy i wyrządza pracodawcy szkodę  6. Nieusprawiedliwiona nieobecność (曠工) bez uzasadnionej przyczyny przez 3 dni z rzędu albo przez 6 dni lub więcej w miesiącu |  |
+| Czy spółka musi wypłacić odprawę (資遣費) | Wymagane | Niewymagane | Niewymagane (z wyjątkiem przypadku, gdy zatrudniona osoba rozwiązuje umowę z przyczyny z art. 14) |
+|  | Tajwańska ustawa o normach pracy, art. 11 (勞動基準法第11條): O ile nie wystąpi jeden z następujących przypadków, pracodawca nie może zakończyć umowy o pracę, nawet po wcześniejszym zawiadomieniu zatrudnionej osoby.  1. Zaprzestanie działalności (歇業) lub zbycie przedsiębiorstwa (轉讓)  2. Straty (虧損) lub ograniczenie działalności (業務緊縮)  3. Siła wyższa wymaga przerwy w działalności na jeden miesiąc lub dłużej  4. Charakter działalności uległ zmianie, konieczna jest redukcja personelu i nie ma odpowiedniego stanowiska, na które można by przenieść zatrudnioną osobę  5. Zatrudniona osoba wyraźnie nie jest w stanie wykonywać powierzonej pracy | Tajwańska ustawa o normach pracy, art. 12 (勞動基準法第12條): Pracodawca może zwolnić bez wcześniejszego zawiadomienia, jeśli zachodzi jedna z następujących okoliczności.  1. Kto przy zawarciu umowy o pracę składa nieprawdziwe oświadczenia, wprowadza pracodawcę w błąd i naraża przedsiębiorstwo na ryzyko szkody  2. Kto stosuje przemoc lub poważnie znieważa pracodawcę, jego rodzinę, jego przedstawiciela (代理人) lub innych współpracowników  3. Kogo prawomocnie skazano na karę pozbawienia wolności na czas oznaczony (有期徒刑) lub karę cięższą, bez orzeczenia warunkowego zawieszenia (緩刑) i bez zezwolenia na zamianę na grzywnę (易科罰金)  4. Poważne naruszenie umowy o pracę lub regulaminu pracy  5. Kto umyślnie zużywa maszyny, narzędzia, surowce, produkty lub inne mienie pracodawcy albo umyślnie ujawnia tajemnice techniczne i handlowe pracodawcy i wyrządza pracodawcy szkodę  6. Nieusprawiedliwiona nieobecność (曠工) bez uzasadnionej przyczyny przez 3 dni z rzędu albo przez 6 dni lub więcej w miesiącu |  |
 
 > Na Tajwanie, za każdy ukończony jeden rok stażu (年資),
 > pracodawca musi wypłacić 0,5 miesiąca przeciętnego wynagrodzenia (平均工資) jako odprawę.
-> Pułap wynosi najwyżej 6 miesięcy wynagrodzenia. Ten wzór dotyczy stażu, do którego stosuje się art. 12 ustawy o emeryturach pracowniczych (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za jeden rok wypłaca się jeden miesiąc przeciętnego wynagrodzenia, bez limitu.
+> Pułap wynosi najwyżej 6 miesięcy wynagrodzenia. Ten wzór dotyczy stażu, do którego stosuje się art. 12 ustawy o emeryturach pracowniczych (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za jeden rok wypłaca się jeden miesiąc przeciętnego wynagrodzenia, bez limitu. Ustawa o emeryturach pracowniczych ma zastosowanie do obywateli Tajwanu, cudzoziemców pozostających w związku małżeńskim z obywatelem Tajwanu, którzy uzyskali zezwolenie na pobyt, cudzoziemców, którzy uzyskali pobyt stały, i podobnych pracowników (art. 7 ust. 1), a od 2026 r. także do zagranicznych specjalistów wykonujących pracę zawodową ([art. 24 ustawy o pozyskiwaniu i zatrudnianiu zagranicznych specjalistów (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); odprawa dla pozostałych pracowników oraz za okresy zatrudnienia sprzed stosowania tej ustawy jest obliczana według art. 17 ustawy o normach pracy. Okres zatrudnienia krótszy niż 1 rok oblicza się proporcjonalnie, a spółka musi wypłacić odprawę w ciągu 30 dni po zakończeniu umowy.
 
 ​
 

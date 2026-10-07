@@ -1,7 +1,7 @@
 ---
 title: "Massaaži ajalugu ja õigusteave Taiwanis"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "4 min lugemist"
 categories:
@@ -51,11 +51,11 @@ võisid massaažialal (按摩業) tegelikult tegutseda ainult nägemispuudega is
 
 See, et keegi ilma nägemispuudeta (非視障者) seda ala harrastas, oli ebaseaduslik.
 
-See seadus kestis 2003. aastani; toona härra Lin, kes pidas juuksurisalongi,
+See piirang kehtis kuni kuupäevani 31. oktoober 2011; sel ajavahemikul, 2003. aastal, härra Lin, kes pidas juuksurisalongi,
 
 palkas töötajaid ilma nägemispuudeta juuksepesu- ja massaažiteenusteks ning politsei selle tuvastas.
 
-Tollase õiguse järgi said härra Lin ja töötajad haldustrahve (罰鍰) TWD 40.000, TWD 10.000 ja TWD 20.000 (新臺幣).
+Tollase õiguse järgi määras Taipei linna sotsiaalamet (臺北市社會局) härra Linile haldustrahvi (罰鍰) TWD 40.000 (新臺幣) ning kahele töötajale vastavalt TWD 10.000 ja TWD 20.000.
 
 Härra Lin pidas seda karistust väga ebaõiglaseks ja taotles põhiseaduse tõlgendamist.
 
@@ -81,7 +81,7 @@ Küsiti näiteks, kas kirjalik reegel, mis lubas massaaži ainult nägemispuudeg
 
 ja kaheldi, kas see reegel oli tegelikult edendanud nägemispuudega isikute töö ja toimetuleku kaitset.
 
-Lõpuks kuulutasid põhiseaduskohtu kohtunikud (大法官) sätte, mis lubas ainult nägemispuudega isikutel massaažialal tegutseda, põhiseadusvastaseks (違憲).
+Lõpuks kuulutasid põhiseaduskohtu kohtunikud (大法官) 31. oktoober 2008. aasta Justiitsjuuani (司法院) tõlgenduses nr 649 (釋字第649號) sätte, mis lubas ainult nägemispuudega isikutel massaažialal tegutseda, põhiseadusvastaseks (違憲) ning säte kaotas kehtivuse kuupäeval 31. oktoober 2011, tõlgenduse lubatud 3-aastase üleminekuaja lõpus.
 
 ​
 

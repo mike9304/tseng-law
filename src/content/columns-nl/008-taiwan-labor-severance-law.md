@@ -1,7 +1,7 @@
 ---
 title: "Arbeidsrecht in Taiwan: is de ontslagvergoeding in Taiwan werkelijk moeilijk te verkrijgen?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "6 minuten leestijd"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Ontvangen werknemers in Taiwan een ontslagvergoeding wanneer zij zelf ontslag nemen?"
-    a: "Nee. Anders dan in sommige andere landen — Korea is daarvan een voorbeeld — ontstaat in Taiwan de plicht tot betaling van de ontslagvergoeding (資遣費) pas wanneer de werkgever de werknemer ontslaat; neemt de werknemer zelf ontslag, dan hoeft de vennootschap geen ontslagvergoeding te betalen."
+    a: "Nee. Anders dan in sommige andere landen — Korea is daarvan een voorbeeld — ontstaat in Taiwan de plicht tot betaling van de ontslagvergoeding (資遣費) pas wanneer de werkgever de werknemer ontslaat; neemt de werknemer zelf ontslag, dan hoeft de vennootschap geen ontslagvergoeding te betalen. Bestaat er echter een grond als bedoeld in artikel 14 van de wet op de arbeidsnormen (勞動基準法第14條), zoals dat de vennootschap het loon niet betaalt of de arbeidswetten en -voorschriften schendt, en beëindigt de werknemer de overeenkomst daarom, dan moet de vennootschap wel een ontslagvergoeding betalen."
   - q: "Moet de vennootschap ook bij een tuchtontslag een ontslagvergoeding betalen?"
-    a: "Nee. Pleegt de werknemer een onrechtmatige handeling, schendt hij interne regels of blijft hij zonder geldige reden 3 dagen achtereen ongewettigd afwezig (artikel 12 van de wet op de arbeidsnormen, 勞動基準法第12條), dan kan de vennootschap zonder voorafgaande opzegging ontslaan en hoeft zij geen ontslagvergoeding te betalen. Daarentegen vereist een economisch ontslag (artikel 11) voorafgaande opzegging en betaling van de ontslagvergoeding."
+    a: "Nee. Pleegt de werknemer een onrechtmatige handeling, schendt hij de arbeidsovereenkomst of interne regels ernstig of blijft hij zonder geldige reden 3 dagen achtereen of 6 dagen in 1 maand ongewettigd afwezig (artikel 12 van de wet op de arbeidsnormen, 勞動基準法第12條), dan kan de vennootschap zonder voorafgaande opzegging ontslaan en hoeft zij geen ontslagvergoeding te betalen. Daarentegen vereist een economisch ontslag (artikel 11) voorafgaande opzegging en betaling van de ontslagvergoeding."
   - q: "Hoe wordt de ontslagvergoeding in Taiwan berekend?"
-    a: "Voor elke anciënniteit van een jaar moet de werkgever 0,5 maand gemiddeld loon als ontslagvergoeding betalen, ten hoogste 6 maandlonen. Deze formule geldt voor anciënniteit waarop artikel 12 van de wet over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt voor een jaar 1 maand gemiddeld loon zonder maximum betaald."
+    a: "Voor elke anciënniteit van een jaar moet de werkgever 0,5 maand gemiddeld loon als ontslagvergoeding betalen, ten hoogste 6 maandlonen. Deze formule geldt voor anciënniteit waarop artikel 12 van de wet over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt voor een jaar 1 maand gemiddeld loon zonder maximum betaald. De wet over het pensioen van werknemers is van toepassing op Taiwanese onderdanen, buitenlandse onderdanen die gehuwd zijn met een Taiwanese onderdaan en een verblijfsvergunning hebben gekregen, buitenlandse onderdanen die een permanente verblijfsvergunning hebben gekregen en soortgelijke werknemers (artikel 7 lid 1), en vanaf 2026 ook op buitenlandse professionals die vakkundig werk verrichten (artikel 24 van de wet inzake de werving en tewerkstelling van buitenlandse professionals, 外國專業人才延攬及僱用法); de ontslagvergoeding voor andere werknemers en voor anciënniteit vóór de toepasselijkheid van de wet wordt berekend volgens artikel 17 van de wet op de arbeidsnormen."
 ---
 
 # Arbeidsrecht in Taiwan: is de ontslagvergoeding (資遣費) in Taiwan werkelijk moeilijk te verkrijgen?
@@ -36,15 +36,19 @@ De plicht tot betaling van de ontslagvergoeding ontstaat pas wanneer de vennoots
 
 Neemt de werknemer zelf ontslag, dan hoeft de vennootschap geen ontslagvergoeding te betalen.
 
+Bestaat er echter een grond als bedoeld in [artikel 14 van de wet op de arbeidsnormen](/nl/columns/taiwan-voluntary-resignation-severance), zoals dat de vennootschap het loon niet betaalt of de arbeidswetten en -voorschriften schendt, en beëindigt de werknemer de overeenkomst daarom, dan moet de vennootschap wel een ontslagvergoeding betalen.
+
 ​
 
 Pleegt de werknemer echter een onrechtmatige handeling,
 
-schendt hij interne regels (工作規則),
+schendt hij de arbeidsovereenkomst of interne regels (工作規則) ernstig,
 
-of blijft hij zonder reden 3 dagen achtereen van het werk weg (曠工),
+of blijft hij zonder reden 3 dagen achtereen of 6 dagen in 1 maand van het werk weg (曠工),
 
 dan kan de vennootschap ontslaan zonder ontslagvergoeding te betalen.
+
+Voor alle gronden, behalve punt 3 (een onherroepelijke gevangenisstraf), moet de vennootschap de werknemer echter ontslaan binnen 30 dagen nadat zij van de omstandigheden kennis heeft gekregen (artikel 12 lid 2 van de wet op de arbeidsnormen).
 
 ​
 
@@ -53,16 +57,16 @@ De onderstaande tabel vat dit samen.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Soort | Economisch ontslag (資遣員工, 經濟解僱) | Tuchtontslag (解僱員工, 懲戒解僱) | Eigen ontslag van de werknemer (員工自請離職) |
-| Betekenis | Bestaat bij de werkgever wegens de bedrijfssituatie behoefte aan personeelsaanpassing, dan ligt de grond in het ondernemingsdomein van de werkgever en niet in de verantwoordelijkheid van de werknemer. Daarom moet de werkgever de opzeggingstermijn (預告期間) naleven en ontslagvergoeding betalen, om nadelen van de werknemer evenwichtig te vereffenen. | Pleegt de werknemer een onrechtmatige of ongepaste handeling, dan kan de werkgever de arbeidsovereenkomst (勞動契約) zonder voorafgaande opzegging dadelijk beëindigen en hoeft hij geen ontslagvergoeding te betalen. Dit is 1 van de tuchtbevoegdheden van de werkgever. | De werknemer is vrij de overeenkomst te allen tijde te beëindigen, maar moet overeenkomstig de duur van de tewerkstelling de opzeggingstermijn naleven, zodat de werkgever overdracht en vervanging kan zoeken. |
+| Betekenis | Bestaat bij de werkgever wegens de bedrijfssituatie behoefte aan personeelsaanpassing, dan ligt de grond in het ondernemingsdomein van de werkgever en niet in de verantwoordelijkheid van de werknemer. Daarom moet de werkgever de opzeggingstermijn (預告期間) naleven en ontslagvergoeding betalen, om nadelen van de werknemer evenwichtig te vereffenen. | Pleegt de werknemer een onrechtmatige of ongepaste handeling, dan kan de werkgever de arbeidsovereenkomst (勞動契約) zonder voorafgaande opzegging dadelijk beëindigen en hoeft hij geen ontslagvergoeding te betalen. Dit is 1 van de tuchtbevoegdheden van de werkgever. | Bij een arbeidsovereenkomst voor onbepaalde tijd is de werknemer vrij de overeenkomst te allen tijde te beëindigen, maar moet overeenkomstig de duur van de tewerkstelling de opzeggingstermijn naleven, zodat de werkgever overdracht en vervanging kan zoeken. |
 | Voorwaarden | Ja (artikel 11 van de Taiwanese wet op de arbeidsnormen) | Ja (artikel 12 van de Taiwanese wet op de arbeidsnormen) | Geen |
 | Voorafgaande opzegging | Vereist | Niet vereist | Vereist |
 | Moeilijkheid | Eenvoudig | Moeilijk | Eenvoudig |
-| Of de vennootschap ontslagvergoeding (資遣費) moet betalen | Vereist | Niet vereist | Niet vereist |
-|  | Taiwanese wet op de arbeidsnormen artikel 11 (勞動基準法第11條): Tenzij 1 van de volgende gevallen zich voordoet, mag de werkgever de arbeidsovereenkomst ook na voorafgaande kennisgeving aan de werknemer niet beëindigen.  1. Stillegging van de activiteit (歇業) of overdracht van de onderneming (轉讓)  2. Verliezen (虧損) of inkrimping van de activiteit (業務緊縮)  3. Overmacht vereist een onderbreking van de activiteit van 1 maand of langer  4. De aard van de activiteit vereist personeelsvermindering, en de ontslagen persoon kan niet naar een andere passende functie worden overgeplaatst  5. Een bepaalde werknemer kan het voor de functie vereiste werk niet bevredigend vervullen | Taiwanese wet op de arbeidsnormen artikel 12 (勞動基準法第12條): De werkgever kan zonder voorafgaande kennisgeving ontslaan wanneer de werknemer onder 1 van de volgende gevallen valt.  1. Wie bij het sluiten van de arbeidsovereenkomst onjuiste opgaven doet, de werkgever misleidt en het gevaar van schade voor de onderneming bestaat  2. Wie tegenover de werkgever, diens familie, diens vertegenwoordiger (代理人) of andere collega's geweld gebruikt of hen zwaar beledigt  3. Wie onherroepelijk tot een gevangenisstraf van bepaalde duur (有期徒刑) of een zwaardere straf is veroordeeld, zonder dat een voorwaardelijke straf (緩刑) is uitgesproken of omzetting in geldboete (易科罰金) is toegestaan  4. Ernstige schending van de arbeidsovereenkomst of van de arbeidsregels  5. Wie machines, gereedschap, grondstoffen, producten of andere goederen van de werkgever opzettelijk verbruikt of technische en handelsgeheimen van de werkgever opzettelijk openbaart en de werkgever schade berokkent  6. Ongewettigde afwezigheid (曠工) zonder geldige reden gedurende 3 opeenvolgende dagen, of gedurende 6 dagen of meer in 1 maand |  |
+| Of de vennootschap ontslagvergoeding (資遣費) moet betalen | Vereist | Niet vereist | Niet vereist (behalve wanneer de werknemer de overeenkomst beëindigt om een reden als bedoeld in artikel 14) |
+|  | Taiwanese wet op de arbeidsnormen artikel 11 (勞動基準法第11條): Tenzij 1 van de volgende gevallen zich voordoet, mag de werkgever de arbeidsovereenkomst ook na voorafgaande kennisgeving aan de werknemer niet beëindigen.  1. Stillegging van de activiteit (歇業) of overdracht van de onderneming (轉讓)  2. Verliezen (虧損) of inkrimping van de activiteit (業務緊縮)  3. Overmacht vereist een onderbreking van de activiteit van 1 maand of langer  4. De aard van de activiteit is gewijzigd, personeelsvermindering blijkt noodzakelijk, en er bestaat geen passende functie waarnaar de werknemer kan worden overgeplaatst  5. De werknemer kan het opgedragen werk kennelijk niet verrichten | Taiwanese wet op de arbeidsnormen artikel 12 (勞動基準法第12條): De werkgever kan zonder voorafgaande kennisgeving ontslaan wanneer de werknemer onder 1 van de volgende gevallen valt.  1. Wie bij het sluiten van de arbeidsovereenkomst onjuiste opgaven doet, de werkgever misleidt en het gevaar van schade voor de onderneming bestaat  2. Wie tegenover de werkgever, diens familie, diens vertegenwoordiger (代理人) of andere collega's geweld gebruikt of hen zwaar beledigt  3. Wie onherroepelijk tot een gevangenisstraf van bepaalde duur (有期徒刑) of een zwaardere straf is veroordeeld, zonder dat een voorwaardelijke straf (緩刑) is uitgesproken of omzetting in geldboete (易科罰金) is toegestaan  4. Ernstige schending van de arbeidsovereenkomst of van de arbeidsregels  5. Wie machines, gereedschap, grondstoffen, producten of andere goederen van de werkgever opzettelijk verbruikt of technische en handelsgeheimen van de werkgever opzettelijk openbaart en de werkgever schade berokkent  6. Ongewettigde afwezigheid (曠工) zonder geldige reden gedurende 3 opeenvolgende dagen, of gedurende 6 dagen of meer in 1 maand |  |
 
 > In Taiwan moet de werkgever voor elke anciënniteit van een jaar (年資)
 > 0,5 maand gemiddeld loon (平均工資) als ontslagvergoeding betalen.
-> (ten hoogste 6 maandlonen) Deze formule geldt voor anciënniteit waarop artikel 12 van de wet over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt voor een jaar 1 maand gemiddeld loon zonder maximum betaald.
+> (ten hoogste 6 maandlonen) Deze formule geldt voor anciënniteit waarop artikel 12 van de wet over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt voor een jaar 1 maand gemiddeld loon zonder maximum betaald. De wet over het pensioen van werknemers is van toepassing op Taiwanese onderdanen, buitenlandse onderdanen die gehuwd zijn met een Taiwanese onderdaan en een verblijfsvergunning hebben gekregen, buitenlandse onderdanen die een permanente verblijfsvergunning hebben gekregen en soortgelijke werknemers (artikel 7 lid 1), en vanaf 2026 ook op buitenlandse professionals die vakkundig werk verrichten ([artikel 24 van de wet inzake de werving en tewerkstelling van buitenlandse professionals (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); de ontslagvergoeding voor andere werknemers en voor anciënniteit vóór de toepasselijkheid van de wet wordt berekend volgens artikel 17 van de wet op de arbeidsnormen. Anciënniteit van minder dan een jaar wordt naar evenredigheid berekend, en de vennootschap moet de ontslagvergoeding binnen 30 dagen na het einde van de overeenkomst betalen.
 
 ​
 

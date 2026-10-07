@@ -1,7 +1,7 @@
 ---
 title: "Întrebări și răspunsuri despre tratarea accidentelor de circulație în Taiwan: măsuri la fața locului, vină, tranzacție și despăgubiri"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 septembrie 2025"
 read_time: "12 min de lectură"
 categories:
@@ -95,7 +95,7 @@ Pretenția întemeiată pe art. 184 din Codul civil presupune o atingere ilicit�
 
 - Răni: Potrivit art. 193 din Codul civil pot fi examinate cheltuielile medicale (醫療費用) necesare, cheltuielile suplimentare ale vieții zilnice precum cheltuielile de îngrijire (看護費用), de transport pentru tratament (就醫交通費) și de ajutoare tehnice, precum și pierderea de venituri (收入損失) prin incapacitatea de muncă reală și diminuarea capacității de muncă (勞動能力減損). Potrivit art. 195 din Codul civil prejudiciul moral poate de asemenea fi examinat.
 - Deces: Potrivit art. 192 din Codul civil, când este cazul, pot fi examinate cheltuielile medicale anterioare decesului și cheltuielile de nevoi vitale sporite, cheltuielile funerare (殯葬費) și pierderea întreținerii (扶養利益損失) a persoanei care avea un drept legal la întreținere. Potrivit art. 194 din Codul civil poate fi examinat și prejudiciul moral al rudelor îndreptățite (soțul, părinții, copiii).
-- Patrimoniu: Potrivit art. 196 din Codul civil poate fi cerută dauna patrimonială efectivă, dacă este dovedită, inclusiv cheltuielile de reparare a vehiculului sau pierderea de valoare.
+- Patrimoniu: Potrivit art. 196 din Codul civil, proprietarul poate cere reducerea valorii vehiculului cauzată de deteriorare; cheltuielile de reparare servesc drept măsură numai în măsura în care sunt necesare, iar uzura poate fi dedusă atunci când piese noi înlocuiesc piese vechi.
 
 ## Q8. Dacă tratamentul continuă, cum se prezintă documentele de cheltuieli medicale?
 
@@ -165,13 +165,13 @@ Art. 188 din Codul civil reglementează cazul în care angajatul cauzează o dau
 
 Angajatorul poate alega că a observat diligența cuvenită în selecția și supravegherea angajatului, sau că dauna n-ar fi putut fi evitată chiar observând această diligență. Se poate avea în vedere să se pretindă despăgubirea în mod solidar împotriva angajatorului și a angajatului. După ce a despăgubit, angajatorul poate exercita o acțiune în regres împotriva angajatului.
 
-Dacă angajatorul dovedește aceste condiții de exonerare și persoana vătămată nu obține despăgubirea alineatului 1, tribunalul, potrivit art. 188 alineatul 2 din Codul civil, poate ordona o despăgubire totală sau parțială ținând seama de situația economică a angajatorului și a persoanei vătămate.
+Dacă angajatorul dovedește aceste condiții de exonerare și persoana vătămată nu obține despăgubirea alineatului 1, art. 188 alineatul 2 din Codul civil prevede că, dacă persoana vătămată formulează o cerere, tribunalul poate, ținând seama de situația economică a angajatorului și a persoanei vătămate, să oblige angajatorul la plata totală sau parțială a despăgubirii.
 
 Chestiunea împotriva cui se orientează pretenția civilă trebuie distinsă de răspunderea penală. Răspunderea penală din art. 284 al Codului penal se apreciază după încălcarea datoriei de prudență a fiecărei persoane fizice și legătura de cauzalitate a acestei încălcări.
 
 ## Q15. Ce prestații și ce acoperiri ale asigurării auto trebuie verificate?
 
-Obligația de a subscrie potrivit art. 6 din legea asigurării obligatorii de răspundere civilă auto (強制汽車責任保險法) apasă, în principiu, asupra proprietarului vehiculului și, în cazurile prevăzute, și asupra utilizatorului sau administratorului acestui vehicul. Acest regim stabilește o structură de acoperire fără vină (無過失給付制度) pentru persoana rănită sau decedată din cauza unui accident de automobil, dar trebuie verificată întinderea pasagerilor sau a unui terț (第三人) exterior vehiculului pe care o fixează legea.
+Obligația de a subscrie potrivit art. 6 din legea asigurării obligatorii de răspundere civilă auto (強制汽車責任保險法) apasă, în principiu, asupra proprietarului vehiculului și, în cazurile prevăzute, și asupra utilizatorului sau administratorului acestui vehicul. Acest regim stabilește o structură de acoperire fără vină (無過失給付制度) pentru persoana rănită sau decedată din cauza unui accident de automobil, dar trebuie verificată întinderea pasagerilor sau a unui terț (第三人) exterior vehiculului pe care o fixează legea. Asigurătorul nu plătește prestații atunci când persoana vătămată sau un alt titular al creanței a provocat accidentul cu intenție sau în timpul săvârșirii unei infracțiuni (art. 28).
 
 Într-un accident al unui singur vehicul, conducătorul acestui vehicul nu este, în general, destinatar al prestațiilor asigurării obligatorii a acestui vehicul. Totuși, într-un accident în care intervin mai multe vehicule, există cazuri în care conducătorul poate pretinde prestații de la asigurătorul obligatoriu al unui alt vehicul implicat.
 

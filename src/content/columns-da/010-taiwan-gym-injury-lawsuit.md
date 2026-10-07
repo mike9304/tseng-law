@@ -1,7 +1,7 @@
 ---
 title: "Erstatning ved skade i et fitnesscenter i Taiwan: sag i 1. instans, frister, beviser og erstatningsposter"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "10 minutters læsetid"
 categories:
@@ -19,7 +19,7 @@ På grundlag af en sag, hvor en koreansk studerende i et fitnesscenter (健身�
 
 Ulykken fandt sted i et fitnesscenter i Taichung (臺中) under en deadlift-træning (硬舉) under trænerens ledelse. Efter skaden er det ikke nok at se på, at ulykken fandt sted i fitnesscentret. Man skal også se på brugerens træningserfaring og helbredstilstand, øvelsens art og vægt, trænerens forklaring og ledelse, bevægelsen og reaktionen på det tidspunkt, årsagsforbindelsen (因果關係) mellem skade og øvelse og de dokumenter, der underbygger tabet.
 
-Jeg førte denne sag som procesfuldmægtig (訴訟代理人) for sagsøgeren, den koreanske studerende. Byretten i Taichung (臺灣臺中地方法院) pålagde den 24. januar 2022 i dommen i 1. instans i forbrugersagen nr. 7 i året 109 (2020) (109年度消字第7號) sagsøgte at betale [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den i dommen anførte rente.
+Jeg førte denne sag som procesfuldmægtig (訴訟代理人) for sagsøgeren, den koreanske studerende. Byretten i Taichung (臺灣臺中地方法院) pålagde den 24. januar 2022 i dommen i 1. instans i forbrugersagen nr. 7 i året 109 (2020) (109年度消字第7號) det selskab, der driver fitnesscentret og er en af de sagsøgte, at betale [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den i dommen anførte rente.
 
 Derefter meddelte pressen, at parterne i ankeinstansen havde indgået et forlig (和解). Den officielle dom i 1. instans oplyser i sig selv hverken udfaldet af anken eller et forligsbeløb; det forlig, pressen har omtalt, må ikke læses som en bekræftet afslutning af sagen i 1. instans.
 
@@ -67,7 +67,7 @@ Det følgende er almindelig information til belysning af tvister om skader i et 
 
 ## 1. Hvilke juridiske procedurer kan efter en skade i et fitnesscenter i Taiwan undersøges?
 
-[Artikel 7 i den taiwanske lov om forbrugerbeskyttelse (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bestemmer, at virksomheden, når den yder en tjeneste, skal sørge for, at tjenesten har den sikkerhed, der efter den faglige eller tekniske målestok på ydelsestidspunktet med rimelighed kan forventes.
+[Artikel 7 i den taiwanske lov om forbrugerbeskyttelse (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bestemmer, at virksomheden, når den yder en tjeneste, skal sørge for, at tjenesten har den sikkerhed, der efter den faglige eller tekniske målestok på ydelsestidspunktet med rimelighed kan forventes. Stk. 3 i samme artikel bestemmer, at en virksomhed, der overtræder disse krav og derved forvolder en forbruger eller en tredjemand skade, hæfter solidarisk for erstatning. Selv om virksomheden beviser, at den ikke har skyld, kan retten efter samme bestemmelse kun nedsætte ansvaret.
 
 Det betyder ikke, at virksomhedens eller trænerens ansvar anerkendes, hver gang en skade opstår i et fitnesscenter. Der skal sag for sag vurderes, hvilken omhyggelighedspligt der konkret bestod, om den er tilsidesat, om der er en årsagsforbindelse (因果關係) mellem tilsidesættelse og skade, om der er opstået et virkeligt tab, hvilke indsigelser modparten har, og om der er bevis, der underbygger hver påstand og hver indsigelse.
 

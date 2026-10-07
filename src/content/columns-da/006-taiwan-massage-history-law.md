@@ -1,7 +1,7 @@
 ---
 title: "Historie og retsstilling for massage i Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "3 minutters læsetid"
 categories:
@@ -51,11 +51,11 @@ måtte i virkeligheden kun personer med synshandicap (視障者) udøve massagee
 
 At nogen uden synshandicap (非視障者) udøvede dette erhverv, var ulovligt.
 
-Denne lov holdt stand indtil 2003; dengang ansatte hr. Lin, der drev en frisørforretning,
+Denne begrænsning var i kraft indtil den 31. oktober 2011; i 2003, inden for denne periode, ansatte hr. Lin, der drev en frisørforretning,
 
 medarbejdere uden synshandicap til hårvask- og massageydelser, og politiet konstaterede det.
 
-Ifølge den daværende ret fik hr. Lin og de medarbejdere henholdsvis en administrativ bøde (罰鍰) på 40.000 TWD, 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
+Ifølge den daværende ret pålagde Taipei Bys socialforvaltning (臺北市社會局) hr. Lin en administrativ bøde (罰鍰) på 40.000 TWD og de to medarbejdere administrative bøder på henholdsvis 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
 
 Hr. Lin fandt denne sanktion meget uretfærdig og anmodede om en forfatningsfortolkning.
 
@@ -81,7 +81,7 @@ Der blev eksempelvis spurgt, om den skrevne regel, der kun tillod personer med s
 
 og der blev tvivlet på, om denne regel virkelig havde bidraget til beskyttelsen af arbejdet og eksistensen for personer med synshandicap.
 
-Til sidst erklærede forfatningsdomstolens dommere (大法官) bestemmelsen, der kun tillod personer med synshandicap at udøve massageerhvervet, for grundlovsstridig (違憲).
+Til sidst erklærede forfatningsdomstolens dommere (大法官) i fortolkning nr. 649 (司法院釋字第649號) af den 31. oktober 2008 bestemmelsen, der kun tillod personer med synshandicap at udøve massageerhvervet, for grundlovsstridig (違憲), og bestemmelsen ophørte med at have virkning den 31. oktober 2011, da den overgangsperiode på 3 år, som fortolkningen gav, udløb.
 
 ​
 

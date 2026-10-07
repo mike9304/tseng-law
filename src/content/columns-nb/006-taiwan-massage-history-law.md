@@ -1,7 +1,7 @@
 ---
 title: "Historie og rettsstilling for massasje i Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "3 minutter lesetid"
 categories:
@@ -51,11 +51,11 @@ var det i praksis bare personer med synshemming (視障者) som fikk utøve mass
 
 At noen uten synshemming (非視障者) utøvde dette yrket, var ulovlig.
 
-Denne loven sto ved lag til 2003; den gangen ansatte herr Lin, som drev en frisørsalong,
+Denne begrensningen sto ved lag til 31. oktober 2011; i 2003, innenfor denne perioden, ansatte herr Lin, som drev en frisørsalong,
 
 medarbeidere uten synshemming til hårvask og massasje, og politiet slo ned på det.
 
-Etter datidens regler fikk herr Lin en administrativ bot (罰鍰) på 40.000 TWD, og de to medarbeiderne fikk 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
+Etter datidens regler ilagde Taipei bys sosialavdeling (臺北市社會局) herr Lin en administrativ bot (罰鍰) på 40.000 TWD, og de to medarbeiderne administrative bøter på henholdsvis 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
 
 Herr Lin mente sanksjonen var svært urettferdig og ba om en grunnlovstolkning.
 
@@ -81,7 +81,7 @@ Det ble for eksempel spurt om regelen, som bare tillot personer med synshemming 
 
 og det ble stilt spørsmål ved om regelen virkelig hadde bidratt til å verne arbeidet og livsgrunnlaget for personer med synshemming.
 
-Til slutt erklærte forfatningsdomstolens dommere (大法官) bestemmelsen som bare tillot personer med synshemming å utøve massasjeyrket, grunnlovsstridig (違憲).
+Til slutt erklærte forfatningsdomstolens dommere (大法官) i tolkning nr. 649 (司法院釋字第649號) av 31. oktober 2008 bestemmelsen som bare tillot personer med synshemming å utøve massasjeyrket, grunnlovsstridig (違憲), og bestemmelsen opphørte å ha virkning 31. oktober 2011, da den overgangsperioden på 3 år som tolkningen ga, utløp.
 
 ​
 

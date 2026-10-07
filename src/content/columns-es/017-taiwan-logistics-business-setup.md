@@ -1,7 +1,7 @@
 ---
 title: "El negocio logístico en Taiwán y la autorización de transporte de mercancías por automóvil (汽車貨運業): constitución nueva, adquisición y encomienda"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 de septiembre de 2025"
 read_time: "9 min de lectura"
 categories:
@@ -118,7 +118,7 @@ Debe confirmar la vigencia de la licencia de explotación del empresario destina
 
 Aunque el extranjero se convierta en accionista o inversor de la sociedad objeto, ese hecho por sí solo no le otorga el derecho a trabajar ni un estatuto de residencia en Taiwán. Si desempeña en Taiwán el trabajo cotidiano, como la gestión de la sociedad, las ventas, la asignación de vehículos y la atención al cliente, debe confirmar, antes de iniciar el trabajo, si necesita el permiso de trabajo acorde con el cargo real, y tramitar por separado el procedimiento de residencia posterior.
 
-Al trabajo sin permiso pueden imponerse una multa administrativa y la orden de salida de Taiwán (限令出國). La guía de trabajo sobre prohibición de entrada (禁止入國) vigente en la Administración de Inmigración del Ministerio del Interior (內政部移民署) suele fijar, para el trabajo ilícito, un período de prohibición de entrada de 3 años, pero pueden aplicarse los requisitos de exención o de acortamiento del período que fija esa misma guía. El resultado no se determina de forma mecánica solo porque exista una denuncia de un tercero, y la autoridad competente examina los hechos, las normas aplicables y las circunstancias de cada asunto.
+El extranjero que trabaja sin autorización está sujeto a una multa administrativa, debe ser objeto de una orden de salida inmediata de Taiwán (限令出國) y no puede volver a trabajar en Taiwán (artículo 68 de la Ley de Servicios de Empleo, 就業服務法). La guía de trabajo sobre prohibición de entrada (禁止入國) vigente en la Administración de Inmigración del Ministerio del Interior (內政部移民署) suele fijar, para el trabajo ilícito, un período de prohibición de entrada de 3 años, pero pueden aplicarse los requisitos de exención o de acortamiento del período que fija esa misma guía. El resultado no se determina de forma mecánica solo porque exista una denuncia de un tercero, y la autoridad competente examina los hechos, las normas aplicables y las circunstancias de cada asunto.
 
 ## Fuentes oficiales
 
@@ -136,6 +136,7 @@ Al trabajo sin permiso pueden imponerse una multa administrativa y la orden de s
 - [Ministerio de Economía: guía de solicitud de inversión extranjera](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Artículo 43 de la Ley de Servicios de Empleo (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Artículo 68 de la Ley de Servicios de Empleo](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Artículo 68 de la Ley de Servicios de Empleo (Base de Datos de Leyes y Reglamentos)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Administración de Inmigración del Ministerio del Interior: guía administrativa sobre el período de prohibición de entrada](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Guías relacionadas

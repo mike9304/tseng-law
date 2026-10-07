@@ -1,7 +1,7 @@
 ---
 title: "Logistikos veikla Taivane ir automobilių krovinių vežimo veiklos (汽車貨運業) leidimas: naujas steigimas, įsigijimas ir pavedimas"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "2025 m. rugsėjo 13 d."
 read_time: "9 min. skaitymo"
 categories:
@@ -118,7 +118,7 @@ Reikia patikrinti pavedimo gavėjo verslo registracijos pažymėjimo galiojimą 
 
 Net jei užsienietis tampa tikslinės bendrovės akcininku ar investuotoju, vien ši aplinkybė nesuteikia teisės dirbti Taivane ar leidimo gyventi statuso. Jei Taivane atliekamas įmonės valdymas, pardavimas, reisų skyrimas, klientų aptarnavimas ar kitas operacinis darbas, prieš pradedant darbą reikia patikrinti, ar faktinėms pareigoms reikalingas leidimas dirbti, ir atskirai tvarkyti vėlesnę leidimo gyventi eigą.
 
-Darbui be leidimo gali būti taikoma administracinė bauda ir nurodymas išvykti iš Taivano (限令出國). Vidaus reikalų ministerijos Imigracijos tarnybos (內政部移民署) galiojančios administracinės gairės dėl draudimo atvykti (禁止入國) neteisėto darbo atvejais paprastai nustato 3 metų draudimą atvykti, tačiau gali būti taikomos tų pačių gairių nustatytos atleidimo ar termino sutrumpinimo sąlygos. Rezultatas neatsiranda mechaniškai vien todėl, kad trečioji šalis pateikė pranešimą; kompetentinga institucija vertina faktines aplinkybes, taikytinas normas ir kiekvienos bylos sąlygas.
+Pagal Užimtumo paslaugų įstatymo (就業服務法) 68 straipsnį užsieniečiui, kuris dirba be leidimo, skiriama administracinė bauda, jis nedelsiant įpareigojamas išvykti iš Taivano (限令出國) ir daugiau nebegali dirbti Taivane. Vidaus reikalų ministerijos Imigracijos tarnybos (內政部移民署) galiojančios administracinės gairės dėl draudimo atvykti (禁止入國) neteisėto darbo atvejais paprastai nustato 3 metų draudimą atvykti, tačiau gali būti taikomos tų pačių gairių nustatytos atleidimo ar termino sutrumpinimo sąlygos. Rezultatas neatsiranda mechaniškai vien todėl, kad trečioji šalis pateikė pranešimą; kompetentinga institucija vertina faktines aplinkybes, taikytinas normas ir kiekvienos bylos sąlygas.
 
 ## Oficialūs šaltiniai
 
@@ -136,6 +136,7 @@ Darbui be leidimo gali būti taikoma administracinė bauda ir nurodymas išvykti
 - [Ekonomikos ministerija: užsienio investicijos prašymo gairės](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Užimtumo paslaugų įstatymo (就業服務法) 43 straipsnis](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Užimtumo paslaugų įstatymo 68 straipsnis](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Užimtumo paslaugų įstatymo 68 straipsnis (Įstatymų ir teisės aktų duomenų bazė)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Vidaus reikalų ministerijos Imigracijos tarnyba: administracinės gairės dėl draudimo atvykti trukmės](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Susijusios nuorodos

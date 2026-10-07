@@ -1,7 +1,7 @@
 ---
 title: "Vprašanja in odgovori k postopku po prometnih nesrečah na Tajvanu: ukrepi na kraju, krivda, poravnava in odškodnina"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "12 min branja"
 categories:
@@ -95,7 +95,7 @@ Zahtevek, utemeljen na 184. členu civilnega zakonika, predpostavlja protipravno
 
 - Poškodba: Po 193. členu civilnega zakonika je mogoče presoditi potrebne zdravstvene stroške (醫療費用), dodatne stroške vsakdanjega življenja, kot so stroški nege (看護費用), potni stroški za zdravljenje (就醫交通費) in tehnične pomoči, pa tudi izgubo dohodka (收入損失) zaradi dejanske nezmožnosti dela in zmanjšanje delovne zmožnosti (勞動能力減損). Po 195. členu civilnega zakonika je mogoče presoditi tudi nepremoženjsko škodo.
 - Smrt: Po 192. členu civilnega zakonika, če podlaga nastopi, je mogoče presoditi zdravstvene stroške pred smrtjo in stroške povečanih življenjskih potreb, pogrebne stroške (殯葬費) in izgubo preživnine (扶養利益損失) osebe, ki je imela zakonsko pravico do preživnine. Po 194. členu civilnega zakonika je mogoče presoditi tudi nepremoženjsko škodo določenih sorodnikov.
-- Premoženje: Po 196. členu civilnega zakonika je mogoče uveljavljati utemeljeno dejansko premoženjsko škodo, vključno s stroški popravila vozila ali izgubo vrednosti.
+- Premoženje: Po 196. členu civilnega zakonika lahko lastnik zahteva povrnitev zmanjšanja vrednosti vozila, ki ga je povzročila poškodba; stroški popravila so merilo le v potrebnem obsegu, pri zamenjavi starih delov z novimi pa se lahko odšteje amortizacija.
 
 ## Q8. Če zdravljenje traja, kako predložiti listine zdravstvenih stroškov?
 
@@ -165,13 +165,13 @@ Določba 188. člena civilnega zakonika ureja primer, v katerem zaposleni povzro
 
 Delodajalec lahko ugovarja, da je ohranil ustrezno skrbnost pri izbiri in nadzoru zaposlenega, ali da škodi ne bi bilo mogoče preprečiti niti ob ohranitvi te skrbnosti. Mogoče je pretehtati uveljavljanje odškodnine skupaj zoper delodajalca in zaposlenega. Po plačilu odškodnine lahko delodajalec uveljavlja regres zoper zaposlenega.
 
-Če delodajalec dokaže te predpostavke oprostitve in oškodovanec ne pridobi odškodnine iz 1. odstavka, lahko sodišče po 2. odstavku 188. člena civilnega zakonika naloži popolno ali delno odškodnino z upoštevanjem gospodarskega položaja delodajalca in oškodovanca.
+Če delodajalec dokaže te predpostavke oprostitve in oškodovanec ne pridobi odškodnine iz 1. odstavka, lahko sodišče po 2. odstavku 188. člena civilnega zakonika na predlog oškodovanca ob upoštevanju gospodarskega položaja delodajalca in oškodovanca delodajalcu naloži plačilo odškodnine v celoti ali delno.
 
 Vprašanje, zoper koga se civilni zahtevek usmerja, je treba ločiti od kazenske odgovornosti. Kazenska odgovornost iz 284. člena kazenskega zakonika se presoja po kršitvi dolžnosti skrbnosti vsake fizične osebe in vzročni zvezi te kršitve.
 
 ## Q15. Katere dajatve in katera kritja obveznega zavarovanja vozil je treba preveriti?
 
-Obveznost sklenitve po 6. členu zakona o obveznem zavarovanju avtomobilske odgovornosti (強制汽車責任保險法) leži načeloma na lastniku vozila in v predvidenih primerih tudi na uporabniku ali upravitelju tega vozila. Ta ureditev vzpostavlja strukturo kritja brez ugotavljanja krivde (無過失給付制度) za osebo, poškodovano ali umrlo zaradi avtomobilske nesreče, vendar je treba preveriti obseg potnikov ali tretjih oseb (第三人) zunaj vozila, ki ga določa zakon.
+Obveznost sklenitve po 6. členu zakona o obveznem zavarovanju avtomobilske odgovornosti (強制汽車責任保險法) leži načeloma na lastniku vozila in v predvidenih primerih tudi na uporabniku ali upravitelju tega vozila. Ta ureditev vzpostavlja strukturo kritja brez ugotavljanja krivde (無過失給付制度) za osebo, poškodovano ali umrlo zaradi avtomobilske nesreče, vendar je treba preveriti obseg potnikov ali tretjih oseb (第三人) zunaj vozila, ki ga določa zakon. Zavarovatelj dajatve ne izplača, če je nesrečo namerno ali ob storitvi kaznivega dejanja povzročila poškodovana oseba ali druga oseba, ki uveljavlja zahtevek (28. člen).
 
 Pri nesreči enega vozila voznik tega vozila načeloma ni naslovnik dajatve obveznega zavarovanja tega vozila. Pri nesreči, v kateri sodeluje več vozil, pa obstajajo primeri, v katerih lahko voznik uveljavlja dajatev pri zavarovatelju obveznega zavarovanja drugega udeleženega vozila.
 

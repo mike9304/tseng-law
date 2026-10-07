@@ -1,7 +1,7 @@
 ---
 title: "Massage sa Taiwan: Kasaysayan at Impormasyong Legal"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 Setyembre 2025"
 read_time: "2 minutong pagbabasa"
 categories:
@@ -51,11 +51,11 @@ ang totoo ay ang mga taong may kapansanan sa paningin (視障者) lamang ang maa
 
 Labag sa batas na pumasok sa hanapbuhay na ito ang mga taong walang kapansanan sa paningin (非視障者).
 
-Nanatiling may bisa ang batas na ito hanggang 2003, nang si Ginoong Lin (林先生) na nagpapatakbo ng barberya
+Nanatiling may bisa ang paghihigpit na ito hanggang 31 Oktubre 2011; noong 2003, sa loob ng panahong iyon, si Ginoong Lin (林先生) na nagpapatakbo ng barberya
 
 ay natuklasan ng pulisya dahil kumuha siya ng dalawang empleyadong walang kapansanan sa paningin upang maghugas ng buhok, magbigay rin ng serbisyong massage.
 
-Sa ilalim ng batas noong panahong iyon, pinatawan sina Ginoong Lin at ang dalawang empleyado ng multa administratibo (罰鍰) na TWD 40,000, TWD 10,000, at TWD 20,000 (新臺幣), ayon sa pagkakasunod.
+Sa ilalim ng batas noong panahong iyon, ang Kawanihan ng Ugnayang Panlipunan ng Lungsod ng Taipei (臺北市社會局) ay nagpataw ng multa administratibo (罰鍰) na TWD 40,000 (新臺幣) kay Ginoong Lin at TWD 10,000 at TWD 20,000 sa dalawang empleyado, ayon sa pagkakasunod.
 
 Naisip ni Ginoong Lin na labis na hindi makatarungan ang parusang ito, kaya naghain siya ng petisyon para sa constitutional interpretation.
 
@@ -81,7 +81,7 @@ Halimbawa, umusbong ang tanong kung ang tahasang probisyong nagpapahintulot lama
 
 at itinaas din ang duda kung tunay bang nakatulong ang probisyong ito sa pangangalaga sa trabaho, at sa kabuhayan ng mga may kapansanan sa paningin.
 
-Sa huli, idineklara ng Grand Justices (大法官) na labag sa konstitusyon (違憲) ang probisyong nagsasaad na ang mga may kapansanan sa paningin lamang ang maaaring magtrabaho sa industriya ng massage.
+Sa huli, sa Judicial Yuan Interpretation Blg. 649 (釋字第649號) noong 31 Oktubre 2008, idineklara ng Grand Justices (大法官) na labag sa konstitusyon (違憲) ang probisyong nagsasaad na ang mga may kapansanan sa paningin lamang ang maaaring magtrabaho sa industriya ng massage, at nawalan ng bisa ang probisyon noong 31 Oktubre 2011, sa pagtatapos ng tatlong-taong palugit na pinahintulutan ng interpretasyon.
 
 ​
 

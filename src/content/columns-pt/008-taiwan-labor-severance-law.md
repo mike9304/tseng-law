@@ -1,7 +1,7 @@
 ---
 title: "Direito do trabalho em Taiwan: a indemnização por despedimento é realmente difícil de obter em Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 de setembro de 2025"
 read_time: "6 min de leitura"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Em Taiwan, os trabalhadores percebem uma indemnização por despedimento se se demitirem por si próprios?"
-    a: "Não. Ao contrário de alguns ordenamentos (por exemplo a Coreia), em Taiwan a obrigação de pagar a indemnização por despedimento (資遣費) só nasce quando a sociedade despede a pessoa empregada; se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar indemnização por despedimento."
+    a: "Não. Ao contrário de alguns ordenamentos (por exemplo a Coreia), em Taiwan a obrigação de pagar a indemnização por despedimento (資遣費) só nasce quando a sociedade despede a pessoa empregada; se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar indemnização por despedimento. Contudo, se existir um fundamento previsto no artigo 14 da lei sobre as normas do trabalho (勞動基準法第14條), por exemplo, se a sociedade não pagar o salário ou violar as leis e regulamentos do trabalho, e a pessoa empregada rescindir o contrato com esse fundamento, a sociedade deve pagar a indemnização por despedimento."
   - q: "A sociedade deve também pagar uma indemnização por despedimento em caso de despedimento disciplinar?"
-    a: "Não. Se a pessoa empregada cometer um ato ilícito, violar o regulamento interno ou faltar sem motivo legítimo 3 dias seguidos (artigo 12 da lei sobre as normas do trabalho, 勞動基準法第12條), a sociedade pode despedir sem pré-aviso e não tem de pagar indemnização por despedimento. Em contrapartida, um despedimento económico (artigo 11) exige um pré-aviso e o pagamento da indemnização por despedimento."
+    a: "Não. Se a pessoa empregada cometer um ato ilícito, violar gravemente o contrato de trabalho ou o regulamento interno, ou faltar sem motivo legítimo 3 dias seguidos ou 6 dias num mês (artigo 12 da lei sobre as normas do trabalho, 勞動基準法第12條), a sociedade pode despedir sem pré-aviso e não tem de pagar indemnização por despedimento. Em contrapartida, um despedimento económico (artigo 11) exige um pré-aviso e o pagamento da indemnização por despedimento."
   - q: "Como se calcula a indemnização por despedimento em Taiwan?"
-    a: "Por cada 1 ano de antiguidade cumprido, o empregador deve pagar 0,5 mês de salário médio a título de indemnização por despedimento, no máximo 6 meses de salário. Esta fórmula aplica-se à antiguidade à qual o artigo 12 da lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por cada 1 ano, sem teto."
+    a: "Por cada 1 ano de antiguidade cumprido, o empregador deve pagar 0,5 mês de salário médio a título de indemnização por despedimento, no máximo 6 meses de salário. Esta fórmula aplica-se à antiguidade à qual o artigo 12 da lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por cada 1 ano, sem teto. A lei da pensão de reforma dos trabalhadores aplica-se aos nacionais de Taiwan, aos estrangeiros casados com um nacional de Taiwan a quem tenha sido concedida residência, aos estrangeiros a quem tenha sido concedida residência permanente e a trabalhadores semelhantes (artigo 7, alínea 1), e, a partir de 2026, aos profissionais estrangeiros que exercem trabalho profissional (artigo 24 da lei para o recrutamento e o emprego de profissionais estrangeiros, 外國專業人才延攬及僱用法); a indemnização dos demais trabalhadores, e a dos períodos de antiguidade anteriores à aplicação da lei, calcula-se nos termos do artigo 17 da lei sobre as normas do trabalho."
 ---
 
 # Direito do trabalho em Taiwan: a indemnização por despedimento é realmente difícil de obter em Taiwan?
@@ -36,15 +36,19 @@ A obrigação de pagar a indemnização por despedimento só nasce quando a soci
 
 Se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar indemnização por despedimento.
 
+Contudo, se existir um fundamento previsto no [artigo 14 da lei sobre as normas do trabalho](/pt/columns/taiwan-voluntary-resignation-severance), por exemplo, se a sociedade não pagar o salário ou violar as leis e regulamentos do trabalho, e a pessoa empregada rescindir o contrato com esse fundamento, a sociedade deve pagar a indemnização por despedimento.
+
 ​
 
 Se a pessoa empregada cometer, contudo, um ato ilícito, o despedimento sem indemnização pode caber.
 
-Violar o regulamento interno (工作規則) tem o mesmo efeito.
+Violar gravemente o contrato de trabalho ou o regulamento interno (工作規則) tem o mesmo efeito.
 
-Faltar ao trabalho sem motivo 3 dias seguidos (曠工) tem o mesmo efeito.
+Faltar ao trabalho sem motivo 3 dias seguidos ou 6 dias num mês (曠工) tem o mesmo efeito.
 
 A sociedade pode despedir sem pagar indemnização por despedimento.
+
+Contudo, quanto a todos os fundamentos, exceto o n.º 3 (condenação definitiva em pena de prisão), a sociedade deve despedir a pessoa empregada no prazo de 30 dias a contar do momento em que tenha conhecimento das circunstâncias (artigo 12, alínea 2, da lei sobre as normas do trabalho).
 
 ​
 
@@ -53,16 +57,16 @@ Resumo-lhe isso num quadro simples.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Tipo | Despedimento económico  資遣 員工(經濟解僱) | Despedimento disciplinar  解僱 員工(懲戒解僱) | Demissão própria da pessoa empregada  員工自請離職 |
-| Significado | Se existir, no empregador, uma necessidade de ajustamento do pessoal em razão da situação da empresa, o motivo situa-se no domínio empresarial do empregador e não na responsabilidade da pessoa empregada. É por isso que o empregador deve respeitar o prazo de pré-aviso (預告期間) e pagar uma indemnização por despedimento, a fim de compensar de forma equilibrada os inconvenientes da pessoa empregada. | Se a pessoa empregada cometer um ato ilícito ou inapropriado, o empregador pode pôr termo de imediato ao contrato de trabalho (勞動契約) sem pré-aviso e não tem de pagar indemnização por despedimento. É uma das prerrogativas disciplinares do empregador. | A pessoa empregada é livre de pôr termo ao contrato a qualquer momento, mas deve, segundo a duração de emprego, respeitar o prazo de pré-aviso, a fim de que o empregador possa proceder à passagem e à procura de um substituto. |
+| Significado | Se existir, no empregador, uma necessidade de ajustamento do pessoal em razão da situação da empresa, o motivo situa-se no domínio empresarial do empregador e não na responsabilidade da pessoa empregada. É por isso que o empregador deve respeitar o prazo de pré-aviso (預告期間) e pagar uma indemnização por despedimento, a fim de compensar de forma equilibrada os inconvenientes da pessoa empregada. | Se a pessoa empregada cometer um ato ilícito ou inapropriado, o empregador pode pôr termo de imediato ao contrato de trabalho (勞動契約) sem pré-aviso e não tem de pagar indemnização por despedimento. É uma das prerrogativas disciplinares do empregador. | Num contrato de duração indeterminada, a pessoa empregada é livre de pôr termo ao contrato a qualquer momento, mas deve, segundo a duração de emprego, respeitar o prazo de pré-aviso, a fim de que o empregador possa proceder à passagem e à procura de um substituto. |
 | Condições | Sim (artigo 11 da lei taiwanesa sobre as normas do trabalho) | Sim (artigo 12 da lei taiwanesa sobre as normas do trabalho) | Nenhuma |
 | Pré-aviso prévio | Exigido | Não exigido | Exigido |
 | Dificuldade | Simples | Difícil | Simples |
-| Se a sociedade deve pagar a indemnização por despedimento (資遣費) | Exigido | Não exigido | Não exigido |
-|  | Lei taiwanesa sobre as normas do trabalho, artigo 11 (勞動基準法第11條): Salvo se um dos casos seguintes se produzir, o empregador não pode pôr termo ao contrato de trabalho, mesmo depois de notificação prévia à pessoa empregada.  1. Cessação de atividade (歇業) ou cessão de empresa (轉讓)  2. Perdas (虧損) ou contração da atividade (業務緊縮)  3. Um caso de força maior exige uma interrupção de atividade de 1 mês ou mais  4. A natureza da atividade exige uma redução de pessoal, e a pessoa despedida não pode ser transferida para outro posto adequado  5. Uma pessoa empregada determinada não pode cumprir de forma satisfatória o trabalho exigido pelo posto | Lei taiwanesa sobre as normas do trabalho, artigo 12 (勞動基準法第12條): O empregador pode despedir sem notificação prévia se a pessoa empregada cair num dos casos seguintes.  1. Quem, na celebração do contrato de trabalho, faz declarações inexatas, induz o empregador em erro e faz correr um risco de prejuízo à empresa  2. Quem exerce violências ou insulta gravemente o empregador, a sua família, o seu representante (代理人) ou outros colegas  3. Quem foi definitivamente condenado a uma pena de prisão por tempo determinado (有期徒刑) ou a uma pena mais pesada, sem que a suspensão da pena (緩刑) tenha sido pronunciada nem que a conversão em multa (易科罰金) tenha sido autorizada  4. Violação grave do contrato de trabalho ou das regras de trabalho  5. Quem danifica ou consome intencionalmente máquinas, ferramentas, matérias-primas, produtos ou outros bens do empregador, ou revela intencionalmente segredos técnicos e comerciais do empregador, e causa um prejuízo ao empregador  6. Falta injustificada (曠工) sem motivo legítimo durante 3 dias consecutivos, ou durante 6 dias ou mais num mês |  |
+| Se a sociedade deve pagar a indemnização por despedimento (資遣費) | Exigido | Não exigido | Não exigido (exceto quando a pessoa empregada rescinde o contrato por um fundamento do artigo 14) |
+|  | Lei taiwanesa sobre as normas do trabalho, artigo 11 (勞動基準法第11條): Salvo se um dos casos seguintes se produzir, o empregador não pode pôr termo ao contrato de trabalho, mesmo depois de notificação prévia à pessoa empregada.  1. Cessação de atividade (歇業) ou cessão de empresa (轉讓)  2. Perdas (虧損) ou contração da atividade (業務緊縮)  3. Um caso de força maior exige uma interrupção de atividade de 1 mês ou mais  4. A natureza da atividade mudou, é necessária uma redução de pessoal e não existe um posto adequado para onde reafetar a pessoa empregada  5. A pessoa empregada é claramente incapaz de cumprir o trabalho que lhe foi atribuído | Lei taiwanesa sobre as normas do trabalho, artigo 12 (勞動基準法第12條): O empregador pode despedir sem notificação prévia se a pessoa empregada cair num dos casos seguintes.  1. Quem, na celebração do contrato de trabalho, faz declarações inexatas, induz o empregador em erro e faz correr um risco de prejuízo à empresa  2. Quem exerce violências ou insulta gravemente o empregador, a sua família, o seu representante (代理人) ou outros colegas  3. Quem foi definitivamente condenado a uma pena de prisão por tempo determinado (有期徒刑) ou a uma pena mais pesada, sem que a suspensão da pena (緩刑) tenha sido pronunciada nem que a conversão em multa (易科罰金) tenha sido autorizada  4. Violação grave do contrato de trabalho ou das regras de trabalho  5. Quem danifica ou consome intencionalmente máquinas, ferramentas, matérias-primas, produtos ou outros bens do empregador, ou revela intencionalmente segredos técnicos e comerciais do empregador, e causa um prejuízo ao empregador  6. Falta injustificada (曠工) sem motivo legítimo durante 3 dias consecutivos, ou durante 6 dias ou mais num mês |  |
 
 > Em Taiwan, por cada 1 ano de antiguidade (年資) cumprido,
 > o empregador deve pagar 0,5 mês de salário médio (平均工資) a título de indemnização por despedimento.
-> (no máximo 6 meses de salário) Esta fórmula aplica-se à antiguidade à qual o artigo 12 da lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por cada 1 ano, sem teto.
+> (no máximo 6 meses de salário) Esta fórmula aplica-se à antiguidade à qual o artigo 12 da lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por cada 1 ano, sem teto. A lei da pensão de reforma dos trabalhadores aplica-se aos nacionais de Taiwan, aos estrangeiros casados com um nacional de Taiwan a quem tenha sido concedida residência, aos estrangeiros a quem tenha sido concedida residência permanente e a trabalhadores semelhantes (artigo 7, alínea 1), e, a partir de 2026, aos profissionais estrangeiros que exercem trabalho profissional ([artigo 24 da lei para o recrutamento e o emprego de profissionais estrangeiros (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); a indemnização dos demais trabalhadores, e a dos períodos de antiguidade anteriores à aplicação da lei, calcula-se nos termos do artigo 17 da lei sobre as normas do trabalho. O período de serviço inferior a 1 ano é calculado proporcionalmente, e a sociedade deve pagar a indemnização no prazo de 30 dias após o termo do contrato.
 
 ​
 

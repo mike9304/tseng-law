@@ -1,7 +1,7 @@
 ---
 title: "Pitanja i odgovori o postupku nakon saobraćajnih nezgoda na Tajvanu: mere na mestu, nehat, poravnanje i naknada štete"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025."
 read_time: "12 min čitanja"
 categories:
@@ -95,7 +95,7 @@ Potraživanje zasnovano na članu 184 Građanskog zakonika pretpostavlja protivp
 
 - Povreda: Prema članu 193 Građanskog zakonika mogu se oceniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života, kao što su troškovi nege (看護費用), prevoza na lečenje (就醫交通費) i tehničke pomoći, a takođe gubitak prihoda (收入損失) stvarnom nesposobnošću za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članu 195 Građanskog zakonika može se oceniti i nematerijalna šteta.
 - Smrt: Prema članu 192 Građanskog zakonika, ako nastupi osnov, mogu se oceniti medicinski troškovi pre smrti i troškovi povećanih životnih potreba, troškovi sahrane (殯葬費) i gubitak izdržavanja (扶養利益損失) lica koje je imalo zakonsko pravo na izdržavanje. Prema članu 194 Građanskog zakonika može se oceniti i nematerijalna šteta izvesnih srodnika.
-- Imovina: Prema članu 196 Građanskog zakonika može se istaći obrazložena stvarna imovinska šteta, uključujući troškove popravke vozila ili gubitak vrednosti.
+- Imovina: Prema članu 196 Građanskog zakonika vlasnik može tražiti naknadu umanjenja vrednosti vozila prouzrokovanog oštećenjem; troškovi popravke služe kao mera samo u nužnom obimu, a kada se stari delovi zamenjuju novima, može se odbiti amortizacija.
 
 ## Q8. Ako lečenje traje, kako podnositi isprave medicinskih troškova?
 
@@ -165,13 +165,13 @@ Sud ocenjuje okolnosti svake stvari, vrednujući u celini sadržaj povrede i le�
 
 Poslodavac može prigovoriti da je sačuvao dužnu pažnju pri izboru i nadzoru zaposlenog, ili da se šteti ne bi moglo preduprediti ni pri sačuvanju te pažnje. Može se razmotriti isticanje naknade zajedno protiv poslodavca i zaposlenog. Nakon naknade poslodavac može ostvariti regres prema zaposlenom.
 
-Ako poslodavac dokaže te pretpostavke oslobođenja i oštećeni ne dobije naknadu iz stava 1, sud može prema članu 188 stavu 2 Građanskog zakonika naložiti naknadu potpunu ili delimičnu uz uvažavanje privrednog stanja poslodavca i oštećenog.
+Ako poslodavac dokaže te pretpostavke oslobođenja i oštećeni ne dobije naknadu iz stava 1, sud prema članu 188 stavu 2 Građanskog zakonika, ako oštećeni to zatraži, može uz uvažavanje privrednog stanja poslodavca i oštećenog naložiti poslodavcu da naknadi štetu u celini ili delimično.
 
 Pitanje protiv koga se građansko potraživanje usmerava treba razlikovati od krivične odgovornosti. Krivična odgovornost iz člana 284 Krivičnog zakonika ocenjuje se prema povredi dužnosti pažnje svakog fizičkog lica i uzročnoj vezi te povrede.
 
 ## Q15. Koja davanja i koja pokrića obaveznog osiguranja vozila treba proveriti?
 
-Obaveza zaključenja prema članu 6 Zakona o obaveznom osiguranju od autoodgovornosti (強制汽車責任保險法) leži načelno na vlasniku vozila, a u predviđenim slučajevima i na korisniku ili upravljaču tog vozila. Ovaj režim uspostavlja strukturu pokrića bez krivice (無過失給付制度) za lice povređeno ili umrlo usled automobilske nezgode, ali treba proveriti obim putnika ili trećih lica (第三人) van vozila, koji utvrđuje zakon.
+Obaveza zaključenja prema članu 6 Zakona o obaveznom osiguranju od autoodgovornosti (強制汽車責任保險法) leži načelno na vlasniku vozila, a u predviđenim slučajevima i na korisniku ili upravljaču tog vozila. Ovaj režim uspostavlja strukturu pokrića bez krivice (無過失給付制度) za lice povređeno ili umrlo usled automobilske nezgode, ali treba proveriti obim putnika ili trećih lica (第三人) van vozila, koji utvrđuje zakon. Osiguravač ne isplaćuje naknadu ako je povređeno lice ili drugo lice s pravom na zahtev nezgodu izazvalo namerno ili prilikom izvršenja krivičnog dela (član 28).
 
 Kod nezgode jednog vozila vozač tog vozila načelno nije adresat davanja obaveznog osiguranja tog vozila. Međutim, kod nezgode u kojoj učestvuje više vozila postoje slučajevi u kojima vozač može istaći davanje kod osiguravača obaveznog osiguranja drugog učestvujućeg vozila.
 

@@ -1,6 +1,6 @@
 ---
 title: "Zahraniční podniky v oboru polovodičových součástek, které vstupují na Tchaj-wan: jak posoudit dceřinou společnost, pobočku nebo zástupce"
-lastmod: "2026-09-17"
+lastmod: "2026-10-07"
 date_display: "17. září 2026"
 read_time: "8 min čtení"
 categories:
@@ -65,11 +65,11 @@ Lze ji vytvořit s 1 nebo více fyzickými osobami, nebo s tchajwanskými či za
 
 ### Akciová společnost: vhodná, mají-li se přibrat jiní investoři nebo se zvažuje kotování
 
-Kapitál se dělí na akcie. Zásadně jsou potřeba 2 nebo více akcionářů, avšak stát nebo právnická osoba ji může založit i samostatně a zahraniční právnická osoba může držet 100 %. Akcie jsou zásadně volně převoditelné, se zákonnými výjimkami; podle předpisů lze navrhnout druhové akcie, opce zaměstnanců a podobně. Proto se hodí podnikům, které očekávají investory, obchody s podíly, akciové odměny zaměstnanců nebo budoucí fúzi, akvizici, kotování nebo zápis do režimu vznikajících akcií (興櫃); neomezuje se jen na velké podniky. Ve správě může nekotovaná společnost ve stanovách určit, že představenstvo nezřizuje a že bude mít jen 1 nebo 2 jednatele. Společnost s jediným státním nebo právnickým akcionářem může ve stanovách určit, že dozorčího (監察人) nezřizuje. Rovněž nemusí každá akciová společnost nechat ověřit roční účetní závěrku. Hlavní prahy auditu běžné společnosti jsou splacený kapitál 30.000.000 TWD, nebo i pod touto hranicí provozní příjem 100.000.000 TWD nebo 100 zaměstnanců přihlášených k pracovnímu pojištění; veřejně emitované společnosti se řídí předpisy o cenných papírech.
+Kapitál se dělí na akcie. Zásadně jsou potřeba 2 nebo více zakladatelů (發起人), avšak stát nebo právnická osoba ji může založit i samostatně a zahraniční právnická osoba může držet 100 %. Akcie jsou zásadně volně převoditelné, se zákonnými výjimkami; podle předpisů lze navrhnout druhové akcie, opce zaměstnanců a podobně. Proto se hodí podnikům, které očekávají investory, obchody s podíly, akciové odměny zaměstnanců nebo budoucí fúzi, akvizici, kotování nebo zápis do režimu vznikajících akcií (興櫃); neomezuje se jen na velké podniky. Ve správě může nekotovaná společnost ve stanovách určit, že představenstvo nezřizuje a že bude mít jen 1 nebo 2 jednatele. Společnost s jediným státním nebo právnickým akcionářem může ve stanovách určit, že dozorčího (監察人) nezřizuje. Rovněž nemusí každá akciová společnost nechat ověřit roční účetní závěrku. Hlavní prahy auditu běžné společnosti jsou splacený kapitál 30.000.000 TWD, nebo i pod touto hranicí provozní příjem 100.000.000 TWD nebo 100 zaměstnanců přihlášených k pracovnímu pojištění; veřejně emitované společnosti se řídí předpisy o cenných papírech.
 
 ## 4. Postupy pobočky a dceřiné společnosti se liší; pouze dceřiná společnost prochází přezkumem investičního odboru Ministerstva hospodářství
 
-Když zahraniční společnost zakládá tchajwanskou dceřinou společnost, název se zásadně předem ověří a žádá se o investiční povolení u Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司). Po schválení se převedou prostředky, určí se výše investice a kapitál ověří auditor (會計師), poté se dokončí založení a daňový zápis.
+Když zahraniční společnost zakládá tchajwanskou dceřinou společnost, název se zásadně předem ověří a žádá se o investiční povolení u Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司). Po schválení se převedou prostředky, určí se výše investice a kapitál ověří auditor (會計師), poté se dokončí založení a daňový zápis. Po podání žádosti o zápis založení se společnost musí zúčastnit kurzů o pracovních právech (勞動權益講習), které pořádají orgány veřejné správy na kterékoli úrovni nebo jimi určené neziskové organizace (článek 387-1 zákona o společnostech, účinný od června 2026).
 
 Naproti tomu při zakládání tchajwanské pobočky běžné zahraniční společnosti zásadně není třeba investičního povolení Odboru přezkumu investic; Odbor obchodního rozvoje Ministerstva hospodářství (經濟部商業發展署) provádí zápis pobočky a související určení kapitálu. Nadále jsou nutné předběžné ověření názvu, převod provozního kapitálu, ověření kapitálu a daňový zápis; časový plán je obvykle kratší.
 
@@ -77,9 +77,9 @@ Výše uvedené porovnává jen postup zápisu pobočky a dceřiné společnosti
 
 ## 5. Zápis společnosti a zákonná práce inženýra nejsou totéž
 
-Dokončení zápisu na Tchaj-wanu neznamená, že zaměstnanci zahraničního ústředí mohou na Tchaj-wanu automaticky pracovat. Cizinec, který na Tchaj-wanu pracuje, potřebuje zákonné pracovní povolení (工作許可) a pro delší pobyt i průkaz k pobytu (外僑居留證). Zásadně zaměstnavatel žádá o pracovní povolení a odpovídající průkaz k pobytu.
+Dokončení zápisu na Tchaj-wanu neznamená, že zaměstnanci zahraničního ústředí mohou na Tchaj-wanu automaticky pracovat. Cizinec, který na Tchaj-wanu pracuje, potřebuje zákonné pracovní povolení (工作許可) a pro delší pobyt i průkaz k pobytu (外僑居留證). Zásadně zaměstnavatel žádá o pracovní povolení pro zahraničního zaměstnance a cizinec sám žádá u Imigrační správy (移民署) o odpovídající průkaz k pobytu.
 
-Pro vedoucího tchajwanské dceřiné společnosti a pobočky zahraniční společnosti je žádost o pracovní povolení relativně snazší. Má-li se však žádat o pracovní povolení pro dalšího cizince, Ministerstvo práce podle odvětví požaduje prahy kapitálu, obratu a podobně. Pokud plánujete, že zahraniční zaměstnanci budou pracovat na Tchaj-wanu, je třeba před založením tchajwanské společnosti předem ověřit, zda nastavení kapitálu splňuje příslušný práh.
+Pro vedoucího tchajwanské dceřiné společnosti (společnosti se schválenou investicí, v níž cizinci drží více než 1/3 podílů) a pobočky zahraniční společnosti je žádost o pracovní povolení relativně snazší. Avšak i při zaměstnání prvního cizince musí zaměstnavatel splnit jedno z kritérií článku 39 Standardů kvalifikace a přezkumu práce cizinců (工作資格及審查標準). U společnosti, která existuje méně než 1 rok, kritéria zahrnují splacený kapitál (u pobočky provozní prostředky na Tchaj-wanu) nejméně 500.000 TWD nebo obrat nejméně 3.000.000 TWD; u společnosti, která existuje 1 rok nebo déle, zahrnují průměrný obrat za poslední 1 rok nebo 3 roky nejméně 3.000.000 TWD. Zaměstnává-li zaměstnavatel 2 nebo více cizinců stejného typu, musí tito cizinci a zaměstnavatel splnit obecné standardy kapitoly 2 (článek 38 odstavec 2). Pokud plánujete, že zahraniční zaměstnanci budou pracovat na Tchaj-wanu, je třeba před založením tchajwanské společnosti předem ověřit, zda nastavení kapitálu splňuje příslušný práh.
 
 ## 7. Struktury, které lze porovnat podle stupně rozvoje podniku
 

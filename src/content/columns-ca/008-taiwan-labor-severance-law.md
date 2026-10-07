@@ -1,7 +1,7 @@
 ---
 title: "Dret laboral de Taiwan: és difícil cobrar la indemnització per acomiadament a Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 de setembre de 2025"
 read_time: "6 min de lectura"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "A Taiwan, percep indemnització per acomiadament el treballador que dimiteix voluntàriament?"
-    a: "No. A diferència d’alguns ordenaments (Corea, per exemple), a Taiwan l’obligació de pagar la indemnització per acomiadament (資遣費) només neix quan l’empresa acomiada el treballador; si el treballador dimiteix voluntàriament, l’empresa no l’ha de pagar."
+    a: "No. A diferència d’alguns ordenaments (Corea, per exemple), a Taiwan l’obligació de pagar la indemnització per acomiadament (資遣費) només neix quan l’empresa acomiada el treballador; si el treballador dimiteix voluntàriament, l’empresa no l’ha de pagar. Tanmateix, si hi ha una causa de l’article 14 de la Llei de normes laborals (勞動基準法第14條), per exemple que l’empresa no pagui el salari o infringeixi les lleis i reglaments laborals, i el treballador resol el contracte per aquest motiu, l’empresa ha de pagar la indemnització per acomiadament."
   - q: "En cas d’acomiadament disciplinari, l’empresa ha de pagar igualment la indemnització per acomiadament?"
-    a: "No. Si el treballador comet un acte il·lícit, infringeix les normes de l’empresa o falta a la feina sense causa justificada durant 3 dies consecutius (article 12 de la Llei de normes laborals, 勞動基準法第12條), l’empresa pot acomiadar sense preavís i no està obligada a pagar la indemnització per acomiadament. En canvi, l’acomiadament econòmic (article 11) exigeix preavís i el pagament de la indemnització per acomiadament."
+    a: "No. Si el treballador comet un acte il·lícit, infringeix greument el contracte de treball o les normes de l’empresa, o falta a la feina sense causa justificada durant 3 dies consecutius o 6 dies en un mes (article 12 de la Llei de normes laborals, 勞動基準法第12條), l’empresa pot acomiadar sense preavís i no està obligada a pagar la indemnització per acomiadament. En canvi, l’acomiadament econòmic (article 11) exigeix preavís i el pagament de la indemnització per acomiadament."
   - q: "Com es calcula la indemnització per acomiadament a Taiwan?"
-    a: "Cada vegada que el treballador completi 1 any d’antiguitat (年資), l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資), amb un màxim de 6 mesos de salari. Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall."
+    a: "Cada vegada que el treballador completi 1 any d’antiguitat (年資), l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資), amb un màxim de 6 mesos de salari. Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall. La Llei de la pensió laboral s’aplica als nacionals de Taiwan, als estrangers casats amb un nacional de Taiwan als quals s’ha concedit la residència, als estrangers als quals s’ha concedit la residència permanent i a treballadors similars (article 7, apartat 1), i, des del 2026, als professionals estrangers que fan treball professional (article 24 de la Llei per a la captació i l’ocupació de professionals estrangers, 外國專業人才延攬及僱用法); la indemnització dels altres treballadors, i la dels períodes d’antiguitat anteriors a l’aplicació de la Llei, es calcula d’acord amb l’article 17 de la Llei de normes laborals."
 ---
 
 # Dret laboral de Taiwan: és difícil cobrar la indemnització per acomiadament a Taiwan?
@@ -36,15 +36,19 @@ Només genera l’obligació de pagar la indemnització per acomiadament quan l�
 
 Si el treballador dimiteix de manera voluntària, l’empresa no ha de pagar la indemnització per acomiadament.
 
+Tanmateix, si hi ha una causa de l’[article 14 de la Llei de normes laborals](/ca/columns/taiwan-voluntary-resignation-severance), per exemple que l’empresa no pagui el salari o infringeixi les lleis i reglaments laborals, i el treballador resol el contracte per aquest motiu, l’empresa ha de pagar la indemnització per acomiadament.
+
 ​
 
 Tanmateix, hi ha supòsits en què el treballador comet un acte il·lícit.
 
-Infringeix les normes de l’empresa (工作規則).
+Infringeix greument el contracte de treball o les normes de l’empresa (工作規則).
 
-O falta a la feina sense motiu durant 3 dies consecutius.
+O falta a la feina sense motiu durant 3 dies consecutius o 6 dies en un mes.
 
 En aquests casos, l’empresa pot acomiadar el treballador sense pagar-li la indemnització per acomiadament.
+
+Tanmateix, per a tots els motius llevat del núm. 3 (condemna ferma a pena de presó), l’empresa ha d’acomiadar el treballador dins dels 30 dies següents a aquell en què en tingui coneixement (article 12, apartat 2, de la Llei de normes laborals).
 
 ​
 
@@ -53,16 +57,16 @@ Li ho resumeixo en una taula senzilla.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Tipus | Acomiadament econòmic (資遣員工, 經濟解僱) | Acomiadament disciplinari (解僱員工, 懲戒解僱) | Dimissió voluntària del treballador (員工自請離職) |
-| Significat | Quan l’ocupador, segons la situació de gestió, necessita un ajust de personal, la causa sorgeix en l’àmbit de gestió de l’ocupador i no és responsabilitat del treballador. Per això l’ocupador ha de respectar el període de preavís (預告期間) i assumir obligacions com el pagament de la indemnització per acomiadament, a fi d’equilibrar el perjudici del treballador. | Si el treballador comet un acte il·lícit o impropi, l’ocupador pot posar fi de seguida al contracte de treball (勞動契約) sense preavís i no ha de pagar la indemnització per acomiadament. Això és una de les facultats disciplinàries de l’ocupador. | El treballador té llibertat per posar fi al contracte en qualsevol moment, però ha de respectar el període de preavís segons la seva antiguitat, a fi que l’ocupador pugui organitzar el traspàs del lloc i buscar una altra persona. |
+| Significat | Quan l’ocupador, segons la situació de gestió, necessita un ajust de personal, la causa sorgeix en l’àmbit de gestió de l’ocupador i no és responsabilitat del treballador. Per això l’ocupador ha de respectar el període de preavís (預告期間) i assumir obligacions com el pagament de la indemnització per acomiadament, a fi d’equilibrar el perjudici del treballador. | Si el treballador comet un acte il·lícit o impropi, l’ocupador pot posar fi de seguida al contracte de treball (勞動契約) sense preavís i no ha de pagar la indemnització per acomiadament. Això és una de les facultats disciplinàries de l’ocupador. | En un contracte de durada indefinida, el treballador té llibertat per posar fi al contracte en qualsevol moment, però ha de respectar el període de preavís segons la seva antiguitat, a fi que l’ocupador pugui organitzar el traspàs del lloc i buscar una altra persona. |
 | Requisits | Sí  (article 11 de la Llei de normes laborals de Taiwan) | Sí  (article 12 de la Llei de normes laborals de Taiwan) | No |
 | Preavís | Necessari | No necessari | Necessari |
 | Càrrega de justificació de l’empresa | Alta | Molt alta | No escau |
-| Si l’empresa ha de pagar la indemnització per acomiadament (資遣費) | Necessari | No necessari | No necessari |
-|  | Article 11 de la Llei de normes laborals de Taiwan (勞動基準法第11條): Llevat que es produeixi una de les situacions següents, l’ocupador no pot posar fi al contracte de treball encara que notifiqui prèviament el treballador.  1. Cessament d’activitat (歇業) o transmissió de l’empresa (轉讓)  2. Pèrdues (虧損) o contracció de l’activitat (業務緊縮)  3. Força major que exigeix suspendre l’activitat durant 1 mes o més  4. La naturalesa del negoci exigeix reduir personal i el treballador acomiadat no es pot reubicar en un altre lloc adequat  5. Un treballador determinat no pot exercir satisfactòriament la feina que exigeix el lloc | Article 12 de la Llei de normes laborals de Taiwan (勞動基準法第12條): L’ocupador pot acomiadar sense preavís si el treballador es troba en un dels casos següents.  1. Qui, en celebrar el contracte de treball, facilita informació falsa i indueix a error l’ocupador, amb risc de danyar el negoci  2. Qui exerceix violència o dirigeix un insult greu a l’ocupador, a un familiar de l’ocupador, al representant de l’ocupador o a altres companys  3. Qui té una condemna ferma a pena de presó (有期徒刑) o superior, sense suspensió de la pena (緩刑) i sense que s’hagi autoritzat la conversió en multa (易科罰金)  4. Infracció greu del contracte de treball o del reglament intern  5. Qui, intencionadament, consumeix o destrueix màquines, eines, matèries primeres, productes o altres béns de l’ocupador, o revela intencionadament secrets tècnics o comercials de l’ocupador, causant dany a l’ocupador  6. Falta injustificada a la feina durant 3 dies consecutius, o 6 dies o més en un mes |  |
+| Si l’empresa ha de pagar la indemnització per acomiadament (資遣費) | Necessari | No necessari | No necessari (tret que el treballador resolgui el contracte per una causa de l’article 14) |
+|  | Article 11 de la Llei de normes laborals de Taiwan (勞動基準法第11條): Llevat que es produeixi una de les situacions següents, l’ocupador no pot posar fi al contracte de treball encara que notifiqui prèviament el treballador.  1. Cessament d’activitat (歇業) o transmissió de l’empresa (轉讓)  2. Pèrdues (虧損) o contracció de l’activitat (業務緊縮)  3. Força major que exigeix suspendre l’activitat durant 1 mes o més  4. La naturalesa del negoci ha canviat, cal reduir personal i no hi ha un lloc adequat on reassignar el treballador  5. El treballador és clarament incapaç de fer la feina assignada | Article 12 de la Llei de normes laborals de Taiwan (勞動基準法第12條): L’ocupador pot acomiadar sense preavís si el treballador es troba en un dels casos següents.  1. Qui, en celebrar el contracte de treball, facilita informació falsa i indueix a error l’ocupador, amb risc de danyar el negoci  2. Qui exerceix violència o dirigeix un insult greu a l’ocupador, a un familiar de l’ocupador, al representant de l’ocupador o a altres companys  3. Qui té una condemna ferma a pena de presó (有期徒刑) o superior, sense suspensió de la pena (緩刑) i sense que s’hagi autoritzat la conversió en multa (易科罰金)  4. Infracció greu del contracte de treball o del reglament intern  5. Qui, intencionadament, consumeix o destrueix màquines, eines, matèries primeres, productes o altres béns de l’ocupador, o revela intencionadament secrets tècnics o comercials de l’ocupador, causant dany a l’ocupador  6. Falta injustificada a la feina durant 3 dies consecutius, o 6 dies o més en un mes |  |
 
 > A Taiwan, cada vegada que el treballador completi 1 any d’antiguitat (年資),
 > l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資).
-> (fins a un màxim de 6 mesos de salari). Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall.
+> (fins a un màxim de 6 mesos de salari). Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall. La Llei de la pensió laboral s’aplica als nacionals de Taiwan, als estrangers casats amb un nacional de Taiwan als quals s’ha concedit la residència, als estrangers als quals s’ha concedit la residència permanent i a treballadors similars (article 7, apartat 1), i, des del 2026, als professionals estrangers que fan treball professional ([article 24 de la Llei per a la captació i l’ocupació de professionals estrangers (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); la indemnització dels altres treballadors, i la dels períodes d’antiguitat anteriors a l’aplicació de la Llei, es calcula d’acord amb l’article 17 de la Llei de normes laborals. El període de servei inferior a 1 any es calcula proporcionalment, i l’empresa ha de pagar la indemnització dins dels 30 dies següents a l’acabament del contracte.
 
 ​
 

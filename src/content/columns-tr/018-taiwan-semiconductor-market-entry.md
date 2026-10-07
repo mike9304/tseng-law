@@ -1,6 +1,6 @@
 ---
 title: "Yarı iletken parça şirketleri Tayvan pazarına girerken: yerel bağlı şirket, şube ve acente hangisi incelenmeli?"
-lastmod: "2026-09-17"
+lastmod: "2026-10-07"
 date_display: "17 Eylül 2026"
 read_time: "8 dk okuma"
 categories:
@@ -65,11 +65,11 @@ Limited şirket 1 veya daha fazla gerçek kişi, ya da Tayvan veya yabancı tüz
 
 ### Anonim şirket (股份有限公司): başka yatırımcı alınması veya borsaya kote olma düşünülen işletmelere uygundur
 
-Anonim şirketin özelliği sermayenin paylara bölünmesidir. İlke olarak 2 veya daha fazla ortak gerekir; ancak devlet veya tüzel kişi tek başına kurabilir ve yabancı tüzel kişinin %100 pay tutması da mümkündür. Paylar ilke olarak serbestçe devredilebilir ancak yasal istisnalar vardır; mevzuata göre özel paylar, çalışanlara pay opsiyonu tasarlanabilir. Bu nedenle yatırımcı çekme, pay işlemi, çalışan pay ödülü, ileride birleşme ve devralma veya kote olma veya gelişen şirketler piyasasına kayıt düşünülen işletmelere uygundur; yalnızca büyük şirketlere özgü değildir. Yönetişim açısından halka arz etmeyen şirket esas sözleşme ile yönetim kurulu koymayıp yalnızca 1 veya 2 direktör (董事) bulundurabilir. Devlet veya tüzel kişi tek ortaklı şirket esas sözleşme ile denetçi koymayabilir. Ayrıca bütün anonim şirketlerin yıllık mali tabloları için denetim ve tasdik gerekmez. Olağan şirketin başlıca denetim eşiği ödenmiş sermaye 30.000.000 TWD (新臺幣), veya bu tutara ulaşmasa bile faaliyet geliri 100.000.000 TWD ya da işçi sigortasına kayıtlı 100 çalışandır; halka arz şirketleri menkul kıymet mevzuatını izler.
+Anonim şirketin özelliği sermayenin paylara bölünmesidir. İlke olarak 2 veya daha fazla kurucu (發起人) gerekir; ancak devlet veya tüzel kişi tek başına kurabilir ve yabancı tüzel kişinin %100 pay tutması da mümkündür. Paylar ilke olarak serbestçe devredilebilir ancak yasal istisnalar vardır; mevzuata göre özel paylar, çalışanlara pay opsiyonu tasarlanabilir. Bu nedenle yatırımcı çekme, pay işlemi, çalışan pay ödülü, ileride birleşme ve devralma veya kote olma veya gelişen şirketler piyasasına kayıt düşünülen işletmelere uygundur; yalnızca büyük şirketlere özgü değildir. Yönetişim açısından halka arz etmeyen şirket esas sözleşme ile yönetim kurulu koymayıp yalnızca 1 veya 2 direktör (董事) bulundurabilir. Devlet veya tüzel kişi tek ortaklı şirket esas sözleşme ile denetçi koymayabilir. Ayrıca bütün anonim şirketlerin yıllık mali tabloları için denetim ve tasdik gerekmez. Olağan şirketin başlıca denetim eşiği ödenmiş sermaye 30.000.000 TWD (新臺幣), veya bu tutara ulaşmasa bile faaliyet geliri 100.000.000 TWD ya da işçi sigortasına kayıtlı 100 çalışandır; halka arz şirketleri menkul kıymet mevzuatını izler.
 
 ## 4. Şube ve bağlı şirket kuruluş usulü farklıdır; yalnızca bağlı şirket kuruluşu Ekonomi Bakanlığı yatırım incelemesinden geçer
 
-Yabancı şirket Tayvan’da bağlı şirket kurarken ilke olarak unvan ön sorgusundan sonra Ekonomi Bakanlığı Yatırım İnceleme Dairesine (經濟部投資審議司) yatırım iznine başvurur. Onaydan sonra fon gönderilir, yatırım tutarı tespiti ve mali müşavir (會計師) sermaye incelemesi tamamlanır, ardından şirket kuruluşu ve vergi tescili bitirilir.
+Yabancı şirket Tayvan’da bağlı şirket kurarken ilke olarak unvan ön sorgusundan sonra Ekonomi Bakanlığı Yatırım İnceleme Dairesine (經濟部投資審議司) yatırım iznine başvurur. Onaydan sonra fon gönderilir, yatırım tutarı tespiti ve mali müşavir (會計師) sermaye incelemesi tamamlanır, ardından şirket kuruluşu ve vergi tescili bitirilir. Kuruluş tescili başvurusundan sonra şirket, her düzeydeki kamu kurumlarının veya bunların belirlediği kâr amacı gütmeyen kuruluşların yürüttüğü iş hakları eğitimlerine (勞動權益講習) katılmalıdır (şirket kanununun (公司法) 387-1. maddesi, Haziran 2026'dan itibaren yürürlükte).
 
 Buna karşılık olağan yabancı şirket Tayvan şubesi kurarken ilke olarak Ekonomi Bakanlığı Yatırım İnceleme Dairesi yatırım izni gerekmez; Ekonomi Bakanlığı Ticaret Dairesi (經濟部商業發展署) şube tescili ve ilgili fon tespitini yapar. Ancak unvan ön sorgusu, işletme sermayesi gönderimi, inceleme ve vergi tescili yine gerekir; kuruluş takvimi daha kısa olma eğilimindedir.
 
@@ -77,9 +77,9 @@ Yukarıdakiler sözleşme tasarımı önerisidir. Belirli bir şirket biçiminin
 
 ## 5. Şirket tescili ile mühendisin yasal çalışması ayrıdır
 
-Tayvan’da şirket tescili tamamlandı diye yurt dışı merkez çalışanı kendiliğinden Tayvan’da çalışamaz. Yabancı Tayvan’da çalışmak için yasal çalışma iznine (工作許可) ihtiyaç duyar; uzun süre kalmak için oturma belgesi (外僑居留證) için de başvurmalıdır. İlke olarak işveren, yabancı çalışan için çalışma iznine ve buna karşılık gelen oturma belgesine başvurur.
+Tayvan’da şirket tescili tamamlandı diye yurt dışı merkez çalışanı kendiliğinden Tayvan’da çalışamaz. Yabancı Tayvan’da çalışmak için yasal çalışma iznine (工作許可) ihtiyaç duyar; uzun süre kalmak için oturma belgesi (外僑居留證) için de başvurmalıdır. İlke olarak işveren yabancı çalışan için çalışma iznine başvurur; buna karşılık gelen oturma belgesine ise yabancının kendisi İçişleri Bakanlığı Göç İdaresine (內政部移民署) başvurur.
 
-Yabancı şirketin Tayvan bağlı şirketi ve şube yöneticisi için çalışma izni başvurusu görece kolaydır. Ancak ikinci yabancıdan itibaren çalışma iznine başvururken sektörüne göre Çalışma Bakanlığı sermaye, ciro gibi eşikler ister. Bu yüzden yabancı çalışanı Tayvan’da çalıştırmak planlanıyorsa, Tayvan şirketi kurulmadan önce sermaye ayarının o eşiği karşılayıp karşılamadığı doğrulanmalıdır.
+Yabancı şirketin Tayvan bağlı şirketi (yatırım izni almış ve yabancıların payların üçte birinden (1/3) fazlasına sahip olduğu şirket) ve şube yöneticisi için çalışma izni başvurusu görece kolaydır. Ancak ilk yabancıyı istihdam ederken bile işveren, yabancıların çalışmasına ilişkin Nitelik ve İnceleme Standartlarının 39. maddesindeki ölçütlerden birini karşılamalıdır. Kuruluşundan 1 yıldan az geçmiş şirket için ölçütler arasında ödenmiş sermaye (şubede Tayvan’daki işletme fonu) en az 500.000 TWD veya ciro en az 3.000.000 TWD yer alır; kuruluşundan 1 yıl veya daha fazla geçmiş şirket için ölçütler arasında son 1 yıl veya 3 yıllık ortalama ciro en az 3.000.000 TWD yer alır. İşveren aynı türden 2 veya daha fazla yabancı istihdam ederse bu yabancılar ve işveren 2. bölümdeki genel standartları karşılamalıdır (38. madde, 2. fıkra). Bu yüzden yabancı çalışanı Tayvan’da çalıştırmak planlanıyorsa, Tayvan şirketi kurulmadan önce sermaye ayarının o eşiği karşılayıp karşılamadığı doğrulanmalıdır.
 
 ## 7. İş gelişme aşamasına göre karşılaştırılabilecek yapılar
 

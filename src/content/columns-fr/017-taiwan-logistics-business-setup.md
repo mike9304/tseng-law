@@ -1,7 +1,7 @@
 ---
 title: "Le commerce logistique à Taïwan et l’autorisation de transport routier de marchandises (汽車貨運業) : constitution nouvelle, acquisition et mandat"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 septembre 2025"
 read_time: "12 min de lecture"
 categories:
@@ -118,7 +118,7 @@ Vous devez confirmer la validité de la licence d’exploitation de l’entrepre
 
 Même si l’étranger devient actionnaire ou investisseur de la société cible, ce fait à lui seul ne lui confère ni le droit de travailler ni un statut de séjour à Taïwan. S’il exerce à Taïwan le travail quotidien, comme la gestion de la société, les ventes, l’affectation des véhicules et le service client, il doit confirmer, avant de commencer le travail, s’il a besoin du permis de travail conforme à la fonction réelle, et traiter à part la procédure de séjour postérieure.
 
-Au travail sans permis peuvent s’appliquer une amende administrative et un ordre de quitter Taïwan (限令出國). La note administrative sur la période d’interdiction d’entrée (禁止入國) en vigueur à l’Administration de l’immigration du ministère de l’Intérieur (內政部移民署) fixe en général, pour le travail illicite, une période d’interdiction d’entrée de 3 ans, mais les exigences d’exemption ou de raccourcissement de la période que fixe cette même note peuvent s’appliquer. Le résultat ne se détermine pas mécaniquement seulement parce qu’il existe une dénonciation d’un tiers, et l’autorité compétente examine les faits, les normes applicables et les circonstances de chaque affaire.
+L’étranger qui travaille sans autorisation encourt une amende administrative, doit faire l’objet d’un ordre de quitter immédiatement Taïwan (限令出國) et ne peut plus travailler à Taïwan (article 68 de la loi sur les services de l’emploi, 就業服務法). La note administrative sur la période d’interdiction d’entrée (禁止入國) en vigueur à l’Administration de l’immigration du ministère de l’Intérieur (內政部移民署) fixe en général, pour le travail illicite, une période d’interdiction d’entrée de 3 ans, mais les exigences d’exemption ou de raccourcissement de la période que fixe cette même note peuvent s’appliquer. Le résultat ne se détermine pas mécaniquement seulement parce qu’il existe une dénonciation d’un tiers, et l’autorité compétente examine les faits, les normes applicables et les circonstances de chaque affaire.
 
 ## Sources officielles
 
@@ -136,6 +136,7 @@ Au travail sans permis peuvent s’appliquer une amende administrative et un ord
 - [Ministère de l’Économie : note de demande d’investissement étranger](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Article 43 de la loi sur les services de l’emploi (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Article 68 de la loi sur les services de l’emploi](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Article 68 de la loi sur les services de l’emploi (Base de données des lois et règlements)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Administration de l’immigration du ministère de l’Intérieur : note administrative sur la période d’interdiction d’entrée](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Orientations liées

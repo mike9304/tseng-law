@@ -1,7 +1,7 @@
 ---
 title: "Activitatea de logistică în Taiwan și autorizația de transport de mărfuri cu autovehicule (汽車貨運業): constituire nouă, achiziție și mandat"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 septembrie 2025"
 read_time: "12 min de lectură"
 categories:
@@ -118,7 +118,7 @@ Trebuie să confirmați valabilitatea licenței de exploatare a antreprenorului 
 
 Chiar dacă străinul devine acționar sau investitor al societății țintă, acest fapt singur nu îi conferă nici dreptul de a lucra, nici un statut de ședere în Taiwan. Dacă exercită în Taiwan lucrul cotidian, precum gestiunea societății, vânzările, repartizarea vehiculelor și relația cu clientul, trebuie să confirme, înainte de a începe lucrul, dacă are nevoie de permisul de muncă conform funcției reale, și să trateze aparte procedura de ședere posterioară.
 
-Munca fără permis poate atrage o amendă administrativă și un ordin de a părăsi Taiwanul (限令出國). Orientarea de lucru asupra interdicției de intrare (禁止入國) în vigoare la Administrația imigrației a Ministerului de Interne (內政部移民署) fixează în general, pentru lucrul ilicit, o perioadă de interdicție de intrare de 3 ani, dar cerințele de scutire sau de scurtare a perioadei pe care le fixează aceeași orientare se pot aplica. Rezultatul nu se determină în mod mecanic numai pentru că există o denunțare din partea unui terț, iar autoritatea competentă examinează faptele, normele aplicabile și împrejurările fiecărei cauze.
+Un străin care lucrează fără autorizație este supus unei amenzi administrative și trebuie să fie obligat să părăsească imediat Taiwanul (限令出國), și nu mai poate lucra în Taiwan (art. 68 din legea serviciilor de ocupare). Orientarea de lucru asupra interdicției de intrare (禁止入國) în vigoare la Administrația imigrației a Ministerului de Interne (內政部移民署) fixează în general, pentru lucrul ilicit, o perioadă de interdicție de intrare de 3 ani, dar cerințele de scutire sau de scurtare a perioadei pe care le fixează aceeași orientare se pot aplica. Rezultatul nu se determină în mod mecanic numai pentru că există o denunțare din partea unui terț, iar autoritatea competentă examinează faptele, normele aplicabile și împrejurările fiecărei cauze.
 
 ## Surse oficiale
 
@@ -136,6 +136,7 @@ Munca fără permis poate atrage o amendă administrativă și un ordin de a pă
 - [Ministerul Economiei: orientare de cerere de investiție străină](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Art. 43 din legea serviciilor de ocupare (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Art. 68 din legea serviciilor de ocupare](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Art. 68 din legea serviciilor de ocupare (Baza de date a legilor și reglementărilor)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Administrația imigrației a Ministerului de Interne: orientare administrativă asupra perioadei de interdicție de intrare](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Orientări legate

@@ -1,7 +1,7 @@
 ---
 title: "Pracovné právo na Taiwane: je odstupné na Taiwane naozaj ťažké získať?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "6 min čítania"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Dostane na Taiwane zamestnanec odstupné, ak odíde sám?"
-    a: "Nie. Na rozdiel od niektorých právnych poriadkov (napríklad Kórey) vzniká na Taiwane povinnosť vyplatiť odstupné (資遣費) až vtedy, keď spoločnosť zamestnanca prepustí; ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí."
+    a: "Nie. Na rozdiel od niektorých právnych poriadkov (napríklad Kórey) vzniká na Taiwane povinnosť vyplatiť odstupné (資遣費) až vtedy, keď spoločnosť zamestnanca prepustí; ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí. Ak však existuje dôvod podľa článku 14 zákona o pracovných normách, napríklad spoločnosť nevypláca mzdu alebo porušuje pracovnoprávne predpisy, a zamestnanec z tohto dôvodu zmluvu ukončí, spoločnosť musí odstupné vyplatiť."
   - q: "Musí spoločnosť vyplatiť odstupné aj pri kárnom prepustení?"
-    a: "Nie. Ak sa zamestnanec dopustí protiprávneho činu, poruší pracovný poriadok (工作規則), alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (článok 12 zákona o pracovných normách, 勞動基準法第12條), môže ho spoločnosť prepustiť bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Naproti tomu hospodárske prepustenie (článok 11) vyžaduje predchádzajúcu výpoveď a výplatu odstupného."
+    a: "Nie. Ak sa zamestnanec dopustí protiprávneho činu, závažne poruší pracovnú zmluvu alebo pracovný poriadok (工作規則), alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe alebo 6 dní v jednom mesiaci (článok 12 zákona o pracovných normách, 勞動基準法第12條), môže ho spoločnosť prepustiť bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Naproti tomu hospodárske prepustenie (článok 11) vyžaduje predchádzajúcu výpoveď a výplatu odstupného."
   - q: "Ako sa na Taiwane odstupné počíta?"
-    a: "Za každý dokončený jeden rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemernej mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); pri praxi, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu."
+    a: "Za každý dokončený jeden rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemernej mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); pri praxi, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu. Zákon o dôchodku pracovníkov sa vzťahuje na taiwanských štátnych príslušníkov, cudzincov, ktorí sú v manželstve s taiwanským štátnym príslušníkom a bol im udelený pobyt, cudzincov, ktorým bol udelený trvalý pobyt, a podobných pracovníkov (článok 7 odsek 1) a od roku 2026 aj na zahraničných odborníkov vykonávajúcich odbornú prácu (článok 24 zákona o získavaní a zamestnávaní zahraničných odborníkov, 外國專業人才延攬及僱用法); odstupné ostatných pracovníkov a za dobu praxe pred uplatnením tohto zákona sa počíta podľa článku 17 zákona o pracovných normách."
 ---
 
 # Pracovné právo na Taiwane: je odstupné na Taiwane naozaj ťažké získať?
@@ -36,15 +36,19 @@ Povinnosť vyplatiť odstupné vzniká až vtedy, keď spoločnosť zamestnanca 
 
 Ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí.
 
+Ak však existuje dôvod podľa [článku 14 zákona o pracovných normách](/sk/columns/taiwan-voluntary-resignation-severance), napríklad spoločnosť nevypláca mzdu alebo porušuje pracovnoprávne predpisy, a zamestnanec z tohto dôvodu zmluvu ukončí, spoločnosť musí odstupné vyplatiť.
+
 ​
 
 Ak sa však zamestnanec dopustí protiprávneho činu,
 
-poruší pracovný poriadok (工作規則),
+závažne poruší pracovnú zmluvu alebo pracovný poriadok (工作規則),
 
-alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (曠工),
+alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe alebo 6 dní v jednom mesiaci (曠工),
 
 môže ho spoločnosť prepustiť bez výplaty odstupného.
+
+Pri každom dôvode okrem bodu 3 (právoplatný trest odňatia slobody) však musí spoločnosť zamestnanca prepustiť do 30 dní od chvíle, keď sa o okolnostiach dozvedela (článok 12 odsek 2 zákona o pracovných normách).
 
 ​
 
@@ -53,16 +57,16 @@ Nasledujúca tabuľka to zhŕňa.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Druh | Hospodárske prepustenie (資遣員工, 經濟解僱) | Kárne prepustenie (解僱員工, 懲戒解僱) | Vlastný odchod zamestnanca (員工自請離職) |
-| Význam | Ak zamestnávateľ potrebuje upraviť počet zamestnancov kvôli situácii podniku, dôvod je v hospodárskej oblasti zamestnávateľa, nie v zodpovednosti zamestnanca. Zamestnávateľ preto musí dodržať výpovednú dobu (預告期間) a vyplatiť odstupné, aby vyvážil nevýhodu zamestnanca. | Ak sa zamestnanec dopustí protiprávneho alebo nevhodného konania, môže zamestnávateľ okamžite ukončiť pracovnú zmluvu (勞動契約) bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Ide o výkon kárnej právomoci zamestnávateľa. | Zamestnanec môže zmluvu ukončiť, musí však podľa dĺžky zamestnania dodržať výpovednú dobu, aby zamestnávateľ stihol odovzdanie agendy a hľadanie náhrady. |
+| Význam | Ak zamestnávateľ potrebuje upraviť počet zamestnancov kvôli situácii podniku, dôvod je v hospodárskej oblasti zamestnávateľa, nie v zodpovednosti zamestnanca. Zamestnávateľ preto musí dodržať výpovednú dobu (預告期間) a vyplatiť odstupné, aby vyvážil nevýhodu zamestnanca. | Ak sa zamestnanec dopustí protiprávneho alebo nevhodného konania, môže zamestnávateľ okamžite ukončiť pracovnú zmluvu (勞動契約) bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Ide o výkon kárnej právomoci zamestnávateľa. | Pri zmluve na dobu neurčitú môže zamestnanec zmluvu ukončiť, musí však podľa dĺžky zamestnania dodržať výpovednú dobu, aby zamestnávateľ stihol odovzdanie agendy a hľadanie náhrady. |
 | Podmienky | Áno  (článok 11 taiwanského zákona o pracovných normách) | Áno  (článok 12 taiwanského zákona o pracovných normách) | Žiadne |
 | Predchádzajúca výpoveď | Vyžaduje sa | Nevyžaduje sa | Vyžaduje sa |
 | Náročnosť | Ľahká | Ťažká | Ľahká |
-| Či spoločnosť musí vyplatiť odstupné (資遣費) | Vyžaduje sa | Nevyžaduje sa | Nevyžaduje sa |
-|  | Taiwanský zákon o pracovných normách, článok 11 (勞動基準法第11條): Ak nenastane jeden z nasledujúcich prípadov, zamestnávateľ nemôže ukončiť pracovnú zmluvu ani po predchádzajúcom oznámení zamestnancovi.  1. Zastavenie činnosti (歇業) alebo prevod podniku (轉讓)  2. Straty (虧損) alebo obmedzenie činnosti (業務緊縮)  3. Vyššia moc vyžaduje prerušenie činnosti na jeden mesiac alebo dlhšie  4. Povaha činnosti vyžaduje zníženie personálu a prepusteného nemožno preradiť na iné vhodné miesto  5. Určený zamestnanec nemôže uspokojivo vykonávať prácu, ktorú miesto vyžaduje | Taiwanský zákon o pracovných normách, článok 12 (勞動基準法第12條): Zamestnávateľ môže prepustiť bez predchádzajúceho oznámenia, ak zamestnanec spadá do jedného z nasledujúcich prípadov.  1. Kto pri uzatváraní pracovnej zmluvy uvedie nepravdivé údaje, uvedie zamestnávateľa do omylu a vystaví podnik riziku škody  2. Kto použije násilie alebo ťažko urazí zamestnávateľa, jeho rodinu, jeho zástupcu (代理人) alebo iných spolupracovníkov  3. Koho právoplatne odsúdili na trest odňatia slobody na dobu určitú (有期徒刑) alebo na prísnejší trest, bez podmienečného odkladu výkonu trestu (緩刑) a bez povolenia premeny na peňažný trest (易科罰金)  4. Závažné porušenie pracovnej zmluvy alebo pracovného poriadku  5. Kto úmyselne spotrebuje stroje, nástroje, suroviny, výrobky alebo iný majetok zamestnávateľa, alebo úmyselne vyzradí technické a obchodné tajomstvo zamestnávateľa a spôsobí zamestnávateľovi škodu  6. Neospravedlnená absencia (曠工) bez oprávneného dôvodu 3 dni po sebe, alebo 6 dní alebo viac v mesiaci |  |
+| Či spoločnosť musí vyplatiť odstupné (資遣費) | Vyžaduje sa | Nevyžaduje sa | Nevyžaduje sa (okrem prípadu, keď zamestnanec ukončí zmluvu z dôvodu podľa článku 14) |
+|  | Taiwanský zákon o pracovných normách, článok 11 (勞動基準法第11條): Ak nenastane jeden z nasledujúcich prípadov, zamestnávateľ nemôže ukončiť pracovnú zmluvu ani po predchádzajúcom oznámení zamestnancovi.  1. Zastavenie činnosti (歇業) alebo prevod podniku (轉讓)  2. Straty (虧損) alebo obmedzenie činnosti (業務緊縮)  3. Vyššia moc vyžaduje prerušenie činnosti na jeden mesiac alebo dlhšie  4. Povaha činnosti sa zmenila, zníženie počtu zamestnancov je potrebné a nie je vhodné miesto, na ktoré by sa zamestnanec dal preradiť  5. Zamestnanec zjavne nie je schopný vykonávať pridelenú prácu | Taiwanský zákon o pracovných normách, článok 12 (勞動基準法第12條): Zamestnávateľ môže prepustiť bez predchádzajúceho oznámenia, ak zamestnanec spadá do jedného z nasledujúcich prípadov.  1. Kto pri uzatváraní pracovnej zmluvy uvedie nepravdivé údaje, uvedie zamestnávateľa do omylu a vystaví podnik riziku škody  2. Kto použije násilie alebo ťažko urazí zamestnávateľa, jeho rodinu, jeho zástupcu (代理人) alebo iných spolupracovníkov  3. Koho právoplatne odsúdili na trest odňatia slobody na dobu určitú (有期徒刑) alebo na prísnejší trest, bez podmienečného odkladu výkonu trestu (緩刑) a bez povolenia premeny na peňažný trest (易科罰金)  4. Závažné porušenie pracovnej zmluvy alebo pracovného poriadku  5. Kto úmyselne spotrebuje stroje, nástroje, suroviny, výrobky alebo iný majetok zamestnávateľa, alebo úmyselne vyzradí technické a obchodné tajomstvo zamestnávateľa a spôsobí zamestnávateľovi škodu  6. Neospravedlnená absencia (曠工) bez oprávneného dôvodu 3 dni po sebe, alebo 6 dní alebo viac v mesiaci |  |
 
 > Na Taiwane musí zamestnávateľ za každý dokončený jeden rok praxe (年資)
 > vyplatiť 0,5 mesiaca priemernej mzdy (平均工資) ako odstupné, najviac však za 6 mesiacov mzdy.
-> Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); pri praxi, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
+> Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); pri praxi, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu. Zákon o dôchodku pracovníkov sa vzťahuje na taiwanských štátnych príslušníkov, cudzincov, ktorí sú v manželstve s taiwanským štátnym príslušníkom a bol im udelený pobyt, cudzincov, ktorým bol udelený trvalý pobyt, a podobných pracovníkov (článok 7 odsek 1) a od roku 2026 aj na zahraničných odborníkov vykonávajúcich odbornú prácu ([článok 24 zákona o získavaní a zamestnávaní zahraničných odborníkov (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); odstupné ostatných pracovníkov a za dobu praxe pred uplatnením tohto zákona sa počíta podľa článku 17 zákona o pracovných normách. Prax kratšia ako 1 rok sa počíta pomerne a spoločnosť musí odstupné vyplatiť do 30 dní po skončení zmluvy.
 
 ​
 

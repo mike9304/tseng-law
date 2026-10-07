@@ -1,7 +1,7 @@
 ---
 title: "Logistiek in Taiwan en de vergunning voor goederenvervoer per motorvoertuig (汽車貨運業): nieuwe oprichting, overname en opdracht"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "12 minuten leestijd"
 categories:
@@ -60,7 +60,7 @@ Deze beperking betreft de schrapping van de handelskentekenplaat door teruggave 
 
 ### Buitenlandse investering en goedkeuring van de sector
 
-Volgens artikel 35 van de wegenwet (公路法) moet de buitenlander of de buitenlandse rechtspersoon die in Taiwan in het goederenvervoer per motorvoertuig wil investeren en het exploiteren, eerst de goedkeuring van het ministerie van Verkeer verkrijgen, centrale bevoegde autoriteit volgens dezezelfde wet. Men mag niet bij de toetsing van de algemene goedkeuring van buitenlandse investering blijven, maar moet afzonderlijk in het ondernemingsplan de goedkeuring van het ministerie van Verkeer betreffende de sector van het goederenvervoer per motorvoertuig opnemen.
+Volgens artikel 35 van de wegenwet (公路法) moet de buitenlander of de buitenlandse rechtspersoon die in Taiwan in het goederenvervoer per motorvoertuig wil investeren en het exploiteren, eerst de goedkeuring van het ministerie van Verkeer verkrijgen, centrale bevoegde autoriteit volgens dezelfde wet. Men mag niet bij de toetsing van de algemene goedkeuring van buitenlandse investering blijven, maar moet afzonderlijk in het ondernemingsplan de goedkeuring van het ministerie van Verkeer betreffende de sector van het goederenvervoer per motorvoertuig opnemen.
 
 De thans bevoegde autoriteit voor de algemene buitenlandse investering is de Dienst Investeringstoetsing van het ministerie van Economische Zaken (經濟部投資審議司). Toch volgt niet elke buitenlandse investering hetzelfde loket en dezelfde procedure. De investering in genoteerde of buiten de beurs verhandelde effecten, het bijkantoor (分公司) van een buitenlandse vennootschap, de zaken die de autoriteiten van wetenschapsparken en industrieterreinen behandelen, en de investering afkomstig van het Chinese vasteland kunnen onder verschillende loketten of een eigen stelsel vallen. Bij investering in het goederenvervoer per motorvoertuig moet, naast de bevestiging van de toepasselijke investeringsweg, de sectorgoedkeuring volgens artikel 35 van de wegenwet worden voltooid.
 
@@ -118,7 +118,7 @@ Men moet de geldigheid van de exploitatievergunning van de ondernemer die de opd
 
 Zelfs indien de buitenlander aandeelhouder of investeerder van de doelvennootschap wordt, verleent dit feit op zich hem noch het recht om te werken noch een verblijfsstatuut in Taiwan. Indien hij in Taiwan het dagelijkse werk uitoefent, zoals het vennootschapsbeheer, de verkoop, de inzet van voertuigen en de klantenservice, moet hij vóór het begin van het werk nagaan of hij de werkvergunning passend bij de werkelijke functie nodig heeft, en de latere verblijfsprocedure afzonderlijk behandelen.
 
-Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan te verlaten (限令出國) worden toegepast. De bestuurlijke aanwijzingen over het inreisverbod (禁止入國) van de Immigratieadministratie van het ministerie van Binnenlandse Zaken (內政部移民署) stellen in het algemeen, bij onrechtmatig werk, een inreisverbod van 3 jaar vast, maar de eisen van vrijstelling of inkorting van de termijn die dezezelfde aanwijzingen vaststellen, kunnen worden toegepast. Het resultaat wordt niet mechanisch bepaald alleen omdat er een aangifte van een derde bestaat, en de bevoegde autoriteit toetst de feiten, de toepasselijke normen en de omstandigheden van elk dossier.
+Een buitenlandse onderdaan die zonder vergunning werkt, krijgt een bestuurlijke boete opgelegd en moet onmiddellijk worden bevolen Taiwan te verlaten (限令出國), en mag niet opnieuw in Taiwan werken (artikel 68 van de Wet op de werkgelegenheidsdiensten, 就業服務法). De bestuurlijke aanwijzingen over het inreisverbod (禁止入國) van de Immigratieadministratie van het ministerie van Binnenlandse Zaken (內政部移民署) stellen in het algemeen, bij onrechtmatig werk, een inreisverbod van 3 jaar vast, maar de eisen van vrijstelling of inkorting van de termijn die dezelfde aanwijzingen vaststellen, kunnen worden toegepast. Het resultaat wordt niet mechanisch bepaald alleen omdat er een aangifte van een derde bestaat, en de bevoegde autoriteit toetst de feiten, de toepasselijke normen en de omstandigheden van elk dossier.
 
 ## Officiële bronnen
 
@@ -136,6 +136,7 @@ Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan t
 - [Ministerie van Economische Zaken: toelichting van de aanvraag van buitenlandse investering](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Artikel 43 van de Wet op de werkgelegenheidsdiensten (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Artikel 68 van de Wet op de werkgelegenheidsdiensten](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Artikel 68 van de Wet op de werkgelegenheidsdiensten (Databank wet- en regelgeving)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Immigratieadministratie van het ministerie van Binnenlandse Zaken: bestuurlijke toelichting over de duur van het inreisverbod](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Verbonden toelichtingen

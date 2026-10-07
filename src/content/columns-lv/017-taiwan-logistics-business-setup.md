@@ -1,7 +1,7 @@
 ---
 title: "Loģistikas darbība Taivānā un automobiļu kravas pārvadājumu (汽車貨運業) atļauja: jaundibināšana, iegāde un uzticēšana"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. septembrī 2025. gadā"
 read_time: "9 min"
 categories:
@@ -118,7 +118,7 @@ Jāpārbauda uzņēmēja, kuram darbs uzticēts, darbības licences spēkā esam
 
 Pat ja ārzemnieks kļūst par mērķa sabiedrības akcionāru vai ieguldītāju, šis apstāklis pats par sevi nedod ne tiesības strādāt, ne uzturēšanās statusu Taivānā. Ja Taivānā veic ikdienas darbu, piemēram, sabiedrības vadību, pārdošanu, transportlīdzekļu piešķiršanu un klientu aprūpi, pirms darba sākšanas jāpārbauda, vai vajadzīga darba atļauja, kas atbilst faktiskajam amatam, un atsevišķi jāveic turpmākā uzturēšanās gaita.
 
-Darbam bez atļaujas var piemērot administratīvo naudas sodu un rīkojumu atstāt Taivānu (限令出國). Iekšlietu ministrijas Imigrācijas pārvaldes (內政部移民署) spēkā esošie norādījumi par ieceļošanas aizliegumu (禁止入國) vispārēji nelikumīgam darbam nosaka 3 gadu ieceļošanas aizlieguma termiņu, taču var piemērot atbrīvojuma vai termiņa saīsināšanas prasības, ko nosaka tie paši norādījumi. Iznākums netiek noteikts mehāniski tikai tāpēc, ka pastāv trešās personas paziņojums, un kompetentā iestāde vērtē faktus, piemērojamās normas un katras lietas apstākļus.
+Saskaņā ar Nodarbinātības pakalpojumu likuma (就業服務法) 68. pantu ārzemniekam, kurš strādā bez atļaujas, tiek uzlikts administratīvais naudas sods un viņam nekavējoties jāliek atstāt Taivānu (限令出國), un viņš vairs nedrīkst strādāt Taivānā. Iekšlietu ministrijas Imigrācijas pārvaldes (內政部移民署) spēkā esošie norādījumi par ieceļošanas aizliegumu (禁止入國) vispārēji nelikumīgam darbam nosaka 3 gadu ieceļošanas aizlieguma termiņu, taču var piemērot atbrīvojuma vai termiņa saīsināšanas prasības, ko nosaka tie paši norādījumi. Iznākums netiek noteikts mehāniski tikai tāpēc, ka pastāv trešās personas paziņojums, un kompetentā iestāde vērtē faktus, piemērojamās normas un katras lietas apstākļus.
 
 ## Oficiālie materiāli
 
@@ -136,6 +136,7 @@ Darbam bez atļaujas var piemērot administratīvo naudas sodu un rīkojumu atst
 - [Ekonomikas ministrija: norādījumi ārvalstu ieguldījuma pieteikumam](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Nodarbinātības pakalpojumu likuma (就業服務法) 43. pants](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Nodarbinātības pakalpojumu likuma 68. pants](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Nodarbinātības pakalpojumu likuma 68. pants (Likumu un noteikumu datubāze)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Iekšlietu ministrijas Imigrācijas pārvalde: administratīvie norādījumi par ieceļošanas aizlieguma termiņu](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Attiecīgās saites

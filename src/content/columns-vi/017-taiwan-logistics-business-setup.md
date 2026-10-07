@@ -1,7 +1,7 @@
 ---
 title: "Kinh doanh hậu cần tại Đài Loan và giấy phép ngành vận tải hàng hóa bằng ô tô (汽車貨運業): thành lập mới, mua lại và giao thầu"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "11 phút đọc"
 categories:
@@ -118,7 +118,7 @@ Quý vị phải kiểm tra hiệu lực và phạm vi được chấp thuận c
 
 Ngay cả khi người nước ngoài trở thành cổ đông hoặc nhà đầu tư của công ty mục tiêu, chỉ riêng sự kiện đó không mang lại quyền làm việc hay tư cách cư trú tại Đài Loan. Nếu quý vị thực hiện tại Đài Loan các công việc như quản lý điều hành công ty, kinh doanh, điều xe hay chăm sóc khách hàng, thì trước khi bắt đầu công việc phải xác nhận xem có cần giấy phép làm việc phù hợp với chức vụ thực tế hay không, và sau đó phải tiến hành riêng các thủ tục cư trú tiếp theo.
 
-Việc làm không có giấy phép có thể bị áp dụng tiền phạt hành chính và biện pháp buộc xuất cảnh. Quy định nghiệp vụ hiện hành về cấm nhập cảnh (禁止入國) do Sở Di dân, Bộ Nội chính (內政部移民署) ban hành nói chung đặt ra thời hạn cấm nhập cảnh 3 năm đối với việc làm bất hợp pháp, nhưng cũng có thể áp dụng các điều kiện miễn trừ hoặc rút ngắn thời hạn do chính quy định đó đặt ra. Kết quả không được quyết định một cách máy móc chỉ vì có người thứ ba tố cáo; cơ quan có thẩm quyền vẫn thẩm định các tình tiết thực tế, quy định pháp luật được áp dụng và hoàn cảnh riêng của từng vụ việc.
+Người nước ngoài làm việc không có giấy phép sẽ bị áp dụng tiền phạt hành chính, phải bị buộc xuất cảnh ngay lập tức và không được làm việc tại Đài Loan nữa (Điều 68 Luật Dịch vụ Việc làm, 就業服務法). Quy định nghiệp vụ hiện hành về cấm nhập cảnh (禁止入國) do Sở Di dân, Bộ Nội chính (內政部移民署) ban hành nói chung đặt ra thời hạn cấm nhập cảnh 3 năm đối với việc làm bất hợp pháp, nhưng cũng có thể áp dụng các điều kiện miễn trừ hoặc rút ngắn thời hạn do chính quy định đó đặt ra. Kết quả không được quyết định một cách máy móc chỉ vì có người thứ ba tố cáo; cơ quan có thẩm quyền vẫn thẩm định các tình tiết thực tế, quy định pháp luật được áp dụng và hoàn cảnh riêng của từng vụ việc.
 
 ## Tài liệu chính thức
 
@@ -136,6 +136,7 @@ Việc làm không có giấy phép có thể bị áp dụng tiền phạt hàn
 - [Bộ Kinh tế: hướng dẫn nộp đơn đầu tư nước ngoài](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Điều 43 Luật Dịch vụ Việc làm (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Điều 68 Luật Dịch vụ Việc làm](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Điều 68 Luật Dịch vụ Việc làm (Cơ sở dữ liệu Luật và Quy định)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Sở Di dân, Bộ Nội chính: quy định hành chính về thời hạn cấm nhập cảnh](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Hướng dẫn liên quan

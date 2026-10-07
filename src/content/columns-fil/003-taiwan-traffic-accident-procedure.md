@@ -1,7 +1,7 @@
 ---
 title: "Mga Tanong at Sagot sa Aksidente sa Trapiko sa Taiwan: Kaligtasan sa Pinangyarihan, Kapabayaan, Kasunduang Pag-aayos, Danyos"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 Setyembre 2025"
 read_time: "8 minutong pagbabasa"
 categories:
@@ -95,7 +95,7 @@ Ang paghahabla ayon sa Artikulo 184 ng Kodigo Sibil ay nangangailangan ng labag 
 
 - Pinsala sa katawan: Ayon sa Artikulo 193 ng Kodigo Sibil, maaaring suriin ang kinakailangang gastos sa medikal (medical expenses, 醫療費用), ang dagdag na gastusing pangangailangan sa pamumuhay gaya ng pag-aalaga, pagbiyahe para sa paggamot at kagamitang pantulong, ang pagkawala ng kita (income loss, 收入損失) dahil sa aktuwal na hindi pagkakaya sa trabaho, at ang pagkabawas ng kakayahang kumita (loss of earning capacity, 勞動能力減損). Ayon sa Artikulo 195 ng Kodigo Sibil ay maaari ding suriin ang moral damages (慰撫金).
 - Kamatayan: Ayon sa Artikulo 192 ng Kodigo Sibil, kung naaangkop ay maaaring suriin ang gastos sa medikal bago ang kamatayan, ang dagdag na gastusing pangangailangan sa pamumuhay, ang gastos sa libing (殯葬費), at ang pagkawala ng suporta ng taong may karapatang tumanggap ng sustento ayon sa batas. Ayon sa Artikulo 194 ng Kodigo Sibil ay maaari ding suriin ang moral damages ng ilang kamag-anak.
-- Ari-arian: Ayon sa Artikulo 196 ng Kodigo Sibil, maaaring habulin ang napatunayang aktuwal na pinsala sa ari-arian kasama ang gastos sa pagkukumpuni ng sasakyan o ang pagbaba ng halaga nito.
+- Ari-arian: Ayon sa Artikulo 196 ng Kodigo Sibil, maaaring hingin ng may-ari ang pagbaba ng halaga ng sasakyan na dulot ng pinsala; ang gastos sa pagkukumpuni ay sukatan lamang hanggang sa kinakailangan, at maaaring ibawas ang pamumura (depreciation) kapag pinalitan ng bagong piyesa ang luma.
 
 ## Q8. Kung nagpapatuloy ang paggamot, paano isinusumite ang datos ng gastos sa medikal?
 
@@ -165,13 +165,13 @@ Tinatalakay ng Artikulo 188 ng Kodigo Sibil ang kalagayang ang empleyado ay laba
 
 Maaaring iharap ng amo ang depensa na ginawa niya ang nararapat na pag-iingat sa pagpili at sa pagsubaybay sa empleyado, o na hindi maiiwasan ang pinsala kahit ginawa ang gayong pag-iingat. Mapag-iisipan ang paraang paghahabol ng danyos laban sa amo at sa empleyado nang magkasama. Matapos magbayad ang amo ay maaari niyang singilin ang empleyado.
 
-Kapag napatunayan ng amo ang nabanggit na dahilan ng pagkaligtas sa pananagutan kaya hindi natanggap ng biktima ang danyos ayon sa unang talata, maaaring iutos ng hukuman ang buo o bahagyang pagbabayad ayon sa ikalawang talata ng Artikulo 188 ng Kodigo Sibil, sa pagsasaalang-alang sa kalagayang pang-ekonomiya ng amo at ng biktima.
+Kapag napatunayan ng amo ang nabanggit na dahilan ng pagkaligtas sa pananagutan kaya hindi natanggap ng biktima ang danyos ayon sa unang talata, itinatakda ng ikalawang talata ng Artikulo 188 ng Kodigo Sibil na, kung mag-aplay ang biktima, maaaring iutos ng hukuman, sa pagsasaalang-alang sa kalagayang pang-ekonomiya ng amo at ng biktima, na bayaran ng amo ang buo o bahagi ng danyos.
 
 Kailangang ibukod ang usapin ng pagpili kung sino ang hahablahin sa sibil sa usapin ng pananagutang kriminal. Ang pananagutang kriminal sa Artikulo 284 ng Kodigo Penal ay hinuhusgahan batay sa paglabag ng bawat natural na tao sa tungkuling mag-ingat, gayundin sa ugnayang sanhi ng paglabag na iyon.
 
 ## Q15. Anong mga benepisyo at saklaw ng seguro sa sasakyan ang dapat tingnan?
 
-Ang obligasyong magseguro ayon sa Artikulo 6 ng Batas sa Sapilitang Seguro sa Pananagutan ng Sasakyan (強制汽車責任保險法) ay nasa may-ari ng sasakyan bilang panuntunan, at sa mga tinukoy na kalagayan ay saklaw din nito ang gumagamit o ang tagapamahala ng sasakyang iyon. Ang sistemang ito ay may istrukturang hindi-batay-sa-kapabayaan (no-fault, 無過失給付制度) na pagbabayad para sa taong nasugatan o namatay sa aksidente ng sasakyan, ngunit kailangang tingnan ang saklaw ng mga pasaherong itinatakda ng batas o ng ikatlong panig na nasa labas ng sasakyan.
+Ang obligasyong magseguro ayon sa Artikulo 6 ng Batas sa Sapilitang Seguro sa Pananagutan ng Sasakyan (強制汽車責任保險法) ay nasa may-ari ng sasakyan bilang panuntunan, at sa mga tinukoy na kalagayan ay saklaw din nito ang gumagamit o ang tagapamahala ng sasakyang iyon. Ang sistemang ito ay may istrukturang hindi-batay-sa-kapabayaan (no-fault, 無過失給付制度) na pagbabayad para sa taong nasugatan o namatay sa aksidente ng sasakyan, ngunit kailangang tingnan ang saklaw ng mga pasaherong itinatakda ng batas o ng ikatlong panig na nasa labas ng sasakyan. Hindi nagbabayad ng benepisyo ang kompanya ng seguro kapag ang nasugatan o ang iba pang may karapatang maghabol ang sadyang nagdulot ng aksidente o nagdulot nito habang gumagawa ng krimen (Artikulo 28).
 
 Sa aksidenteng iisang sasakyan lamang ang sangkot, karaniwang hindi saklaw ng Sapilitang Seguro sa Pananagutan ng Sasakyan ng sasakyang iyon ang nagmamaneho nito. Ngunit sa aksidenteng maraming sasakyan ang sangkot, may pagkakataong makapaghabol ang nagmamaneho ng bayad mula sa kompanya ng Sapilitang Seguro sa Pananagutan ng Sasakyan ng ibang sasakyang kaugnay ng aksidente.
 

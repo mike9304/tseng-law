@@ -1,7 +1,7 @@
 ---
 title: "Storia e regime giuridico del massaggio a Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 settembre 2025"
 read_time: "3 min di lettura"
 categories:
@@ -51,11 +51,11 @@ solo le persone con disabilità visiva (視障者) potevano in realtà esercitar
 
 Che un individuo senza disabilità visiva (非視障者) esercitasse questo mestiere era illegale.
 
-Questa legge si è mantenuta fino al 2003; all’epoca, il Sig. Lin, che gestiva un salone di barbiere,
+Questa restrizione si è mantenuta in vigore fino al 31 ottobre 2011; nel 2003, all’interno di quel periodo, il Sig. Lin, che gestiva un salone di barbiere,
 
 ha impiegato lavoratori senza disabilità visiva per servizi di lavaggio dei capelli e di massaggio, e la polizia lo ha constatato.
 
-Secondo il diritto di allora, il Sig. Lin ha ricevuto una sanzione amministrativa pecuniaria (罰鍰) di 40.000 nuovi dollari taiwanesi (TWD) e i lavoratori, rispettivamente, di 10.000 e di 20.000 TWD (新臺幣).
+Secondo il diritto di allora, l’Ufficio degli affari sociali della città di Taipei (臺北市政府社會局) ha inflitto al Sig. Lin una sanzione amministrativa pecuniaria (罰鍰) di 40.000 nuovi dollari taiwanesi (TWD) e ai due lavoratori, rispettivamente, di 10.000 e di 20.000 TWD (新臺幣).
 
 Il Sig. Lin ha stimato questa sanzione molto ingiusta e ha chiesto un’interpretazione costituzionale.
 
@@ -81,7 +81,7 @@ Ci si è chiesti per esempio se la regola scritta che solo autorizzava le person
 
 e si è posto in dubbio che questa regola avesse realmente contribuito a proteggere l’impiego e la sussistenza delle persone con disabilità visiva.
 
-Infine, i giudici costituzionali (大法官) hanno dichiarato incostituzionale (違憲) la disposizione che solo autorizzava le persone con disabilità visiva a esercitare il mestiere di massaggio.
+Infine, nell’interpretazione n. 649 (釋字第649號) dello Yuan giudiziario (司法院) del 31 ottobre 2008, i giudici costituzionali (大法官) hanno dichiarato incostituzionale (違憲) la disposizione che solo autorizzava le persone con disabilità visiva a esercitare il mestiere di massaggio, e la disposizione ha cessato di avere effetto il 31 ottobre 2011, al termine del periodo di grazia di 3 anni concesso dall’interpretazione.
 
 ​
 

@@ -1,7 +1,7 @@
 ---
 title: "Perdagangan logistik di Taiwan dan kebenaran pengangkutan barang dengan kenderaan bermotor (汽車貨運業): penubuhan baharu, pemerolehan dan mandat"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "12 minit bacaan"
 categories:
@@ -118,7 +118,7 @@ Anda mesti mengesahkan kesahan lesen operasi usahawan penerima mandat dan skop k
 
 Walaupun orang asing menjadi pemegang saham atau pelabur syarikat sasaran, hakikat ini semata-mata tidak memberikannya hak bekerja mahupun status kediaman di Taiwan. Jika ia menjalankan di Taiwan kerja harian, seperti pengurusan syarikat, jualan, penempatan kenderaan dan perkhidmatan pelanggan, ia mesti mengesahkan, sebelum memulakan kerja, sama ada ia memerlukan permit kerja yang sepadan dengan fungsi sebenar, dan merawat secara berasingan prosedur kediaman kemudian.
 
-Kepada kerja tanpa lesen boleh terpakai denda pentadbiran dan perintah meninggalkan Taiwan (限令出國). Panduan kerja mengenai larangan masuk (禁止入國) yang berkuat kuasa di Pentadbiran Imigresen Kementerian Dalam Negeri (內政部移民署) menetapkan pada umumnya, bagi kerja haram, tempoh larangan masuk 3 tahun, tetapi keperluan pengecualian atau pemendekan tempoh yang ditetapkan panduan yang sama boleh terpakai. Hasil tidak ditentukan secara mekanikal hanya kerana wujud aduan pihak ketiga, dan pihak berkuasa kompeten meneliti fakta, norma yang terpakai dan keadaan setiap kes.
+Warga asing yang bekerja tanpa lesen dikenakan denda pentadbiran dan mesti segera diperintahkan meninggalkan Taiwan (限令出國), serta tidak boleh bekerja lagi di Taiwan (perkara 68 undang-undang perkhidmatan pekerjaan, 就業服務法). Panduan kerja mengenai larangan masuk (禁止入國) yang berkuat kuasa di Pentadbiran Imigresen Kementerian Dalam Negeri (內政部移民署) menetapkan pada umumnya, bagi kerja haram, tempoh larangan masuk 3 tahun, tetapi keperluan pengecualian atau pemendekan tempoh yang ditetapkan panduan yang sama boleh terpakai. Hasil tidak ditentukan secara mekanikal hanya kerana wujud aduan pihak ketiga, dan pihak berkuasa kompeten meneliti fakta, norma yang terpakai dan keadaan setiap kes.
 
 ## Sumber rasmi
 
@@ -136,6 +136,7 @@ Kepada kerja tanpa lesen boleh terpakai denda pentadbiran dan perintah meninggal
 - [Kementerian Hal Ehwal Ekonomi: panduan permohonan pelaburan asing](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Perkara 43 undang-undang perkhidmatan pekerjaan (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Perkara 68 undang-undang perkhidmatan pekerjaan](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Perkara 68 undang-undang perkhidmatan pekerjaan (Pangkalan Data Undang-undang dan Peraturan)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Pentadbiran Imigresen Kementerian Dalam Negeri: panduan pentadbiran mengenai tempoh larangan masuk](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Panduan berkaitan

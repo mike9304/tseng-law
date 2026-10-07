@@ -1,7 +1,7 @@
 ---
 title: "Tayvan’da spor salonu yaralanmasında tazminat: ilk derece mahkemesi örneği, talep süreleri, delil ve tazminat kalemleri"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 Eylül 2025"
 read_time: "10 dk okuma"
 categories:
@@ -19,7 +19,7 @@ Tayvan’da bir spor salonunda (健身房) antrenörün (教練) rehberliği alt
 
 Kaza, Taichung’daki (臺中) bir spor salonunda, antrenörün yönettiği deadlift (硬舉) çalışması sırasında meydana geldi. Yaralanmadan sonra kazanın spor salonu içinde olduğu olgusu tek başına yetmez; kullanıcının spor deneyimi ve sağlık durumu, egzersizin türü ve ağırlığı, antrenörün açıklama ve rehberliği, o andaki hareket ve tepki, yaralanma ile egzersiz arasındaki illiyet bağı (因果關係) ve zararı destekleyen belgeler birlikte incelenmelidir.
 
-Bu işte davacı Koreli öğrencinin dava vekili (訴訟代理人) oldum. Taichung bölge mahkemesi, 24 Ocak 2022 tarihinde 2020 (民國 109) yılı tüketici işi 7 sayılı (109年度消字第7號) ilk derece hükmünde davalının [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ile hükümde yazılı faizi ödemesini emretti.
+Bu işte davacı Koreli öğrencinin dava vekili (訴訟代理人) oldum. Taichung bölge mahkemesi, 24 Ocak 2022 tarihinde 2020 (民國 109) yılı tüketici işi 7 sayılı (109年度消字第7號) ilk derece hükmünde davalılardan biri olan, spor salonunu işleten şirketin [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ile hükümde yazılı faizi ödemesini emretti.
 
 Ardından basında tarafların istinafta sulh (和解) ettiği bildirildi. Yalnız resmi ilk derece hükmü, istinafın sonucunu veya sulh tutarını doğrulamaya yetmez; basında bildirilen sulh, ilk derece hükmünün kesinleşmiş sonucu olarak okunmamalıdır.
 
@@ -67,7 +67,7 @@ Aşağıdakiler Tayvan’daki spor salonu yaralanması uyuşmazlıklarını gene
 
 ## 1. Tayvan’da spor salonu yaralanmasından sonra hangi hukuki usuller incelenebilir?
 
-[Tayvan Tüketiciyi Koruma Kanunu’nun (消費者保護法) 7. maddesi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), işletmenin hizmet sunarken o hizmetin, sunum anındaki mesleki veya teknik ölçüte göre makul olarak beklenebilecek güvenliği taşımasını öngörür.
+[Tayvan Tüketiciyi Koruma Kanunu’nun (消費者保護法) 7. maddesi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), işletmenin hizmet sunarken o hizmetin, sunum anındaki mesleki veya teknik ölçüte göre makul olarak beklenebilecek güvenliği taşımasını öngörür. Aynı maddenin 3. fıkrası, bu gereklere aykırı davranıp tüketiciye veya üçüncü kişiye zarar veren işletmenin müteselsilen tazminattan sorumlu olduğunu ve işletme kusursuz olduğunu kanıtlasa bile mahkemenin sorumluluğunu ancak azaltabileceğini öngörür.
 
 Bu, spor salonunda her yaralanmada işletmenin veya antrenörün sorumluluğunun tanındığı anlamına gelmez. Somut olarak hangi özen yükümlülüğünün bulunduğu, ihlal edilip edilmediği, ihlal ile yaralanma arasında illiyet bağı olup olmadığı, gerçek bir zarar doğup doğmadığı, karşı tarafın hangi savunmaları olduğu ve her iddia ile savunmayı destekleyen delil bulunup bulunmadığı her somut olayda ayrı ayrı değerlendirilmelidir.
 

@@ -1,7 +1,7 @@
 ---
 title: "Tayvan’da masajın tarihi ve hukuki rejimi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 Eylül 2025"
 read_time: "3 dk okuma"
 categories:
@@ -51,11 +51,11 @@ gerçekte yalnızca görme engelli kişiler (視障者) masaj mesleğini (按摩
 
 Görme engelli olmayan bir kişinin (非視障者) bu mesleği icra etmesi hukuka aykırıydı.
 
-Bu kanun 2003’e kadar sürdü; o dönemde berber salonu işleten Bay Lin,
+Bu kısıtlama 31 Ekim 2011’e kadar yürürlükte kaldı; 2003’te, bu süre içinde, berber salonu işleten Bay Lin,
 
 görme engelli olmayan çalışanları saç yıkama ve masaj hizmetleri için istihdam etti ve polis bunu saptadı.
 
-O zamanki hukuka göre Bay Lin’e Tayvan yeni doları (新臺幣) cinsinden TWD 40.000, iki çalışana ise TWD 10.000 ve TWD 20.000 idari para cezası (罰鍰) verildi.
+O zamanki hukuka göre Taipei Şehri Sosyal İşler Bürosu (臺北市社會局), Bay Lin’e Tayvan yeni doları (新臺幣) cinsinden TWD 40.000, iki çalışana ise sırasıyla TWD 10.000 ve TWD 20.000 idari para cezası (罰鍰) verdi.
 
 Bay Lin bu yaptırımı çok haksız buldu ve anayasa yorumu istedi.
 
@@ -81,7 +81,7 @@ Görme engelli olan ve olmayan kişilerin meslek hakları tartışmasında çok 
 
 ve bu kuralın gerçekten görme engelli kişilerin istihdamını ve geçimini korumaya katkıda bulunup bulunmadığı kuşkuya düşürüldü.
 
-Sonunda büyük yargıçlar (大法官), yalnızca görme engelli kişilerin masaj mesleğini icra edebileceğini söyleyen hükmü anayasaya aykırı (違憲) ilan etti.
+Sonunda büyük yargıçlar (大法官), 31 Ekim 2008 tarihli 649 sayılı yorum kararında (釋字第649號), yalnızca görme engelli kişilerin masaj mesleğini icra edebileceğini söyleyen hükmü anayasaya aykırı (違憲) ilan etti; hüküm, kararın tanıdığı 3 yıllık geçiş süresinin sonunda, 31 Ekim 2011’de etkisini yitirdi.
 
 ​
 

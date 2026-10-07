@@ -1,7 +1,7 @@
 ---
 title: "Pitanja i odgovori o postupanju nakon prometne nesreće na Tajvanu: mjere na mjestu, krivnja, nagodba i naknada štete"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. rujna 2025."
 read_time: "12 min čitanja"
 categories:
@@ -95,7 +95,7 @@ Zahtjev utemeljen na članku 184. Građanskog zakonika pretpostavlja protupravnu
 
 - Ozljeda: Prema članku 193. Građanskog zakonika mogu se ocijeniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života kao što su troškovi njege (看護費用), putni troškovi za liječenje (就醫交通費) i tehnička pomagala, te gubitak prihoda (收入損失) zbog stvarne nesposobnosti za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članku 195. Građanskog zakonika može se ocijeniti i neimovinska šteta.
 - Smrt: Prema članku 192. Građanskog zakonika, ako postoji osnova, mogu se ocijeniti medicinski troškovi prije smrti i troškovi povećanih životnih potreba, troškovi pogreba (殯葬費) i gubitak uzdržavanja (扶養利益損失) osobe koja je imala zakonsko pravo na uzdržavanje. Prema članku 194. Građanskog zakonika može se ocijeniti i neimovinska šteta određenih srodnika.
-- Imovina: Prema članku 196. Građanskog zakonika može se zahtijevati dokazana stvarna imovinska šteta, uključujući troškove popravka vozila ili pad vrijednosti.
+- Imovina: Prema članku 196. Građanskog zakonika vlasnik može zahtijevati naknadu smanjenja vrijednosti vozila uzrokovanog oštećenjem; troškovi popravka služe kao mjerilo samo u potrebnom opsegu, a pri zamjeni starih dijelova novima može se odbiti amortizacija.
 
 ## Q8. Ako liječenje traje, kako predlagati isprave medicinskih troškova?
 
@@ -165,13 +165,13 @@ Sud ocjenjuje okolnosti svakog predmeta, zajedno procjenjujući sadržaj ozljede
 
 Poslodavac može prigovoriti da je sačuvao dužnu pažnju pri izboru i nadzoru zaposlenika, ili da se šteta ne bi mogla spriječiti ni uz tu pažnju. Može se razmotriti zahtijevanje naknade zajedno protiv poslodavca i zaposlenika. Nakon naknade poslodavac može ostvariti regres prema zaposleniku.
 
-Ako poslodavac dokaže te pretpostavke oslobođenja i oštećenik ne dobije naknadu iz stavka 1., sud može prema članku 188. stavku 2. Građanskog zakonika naložiti naknadu potpunu ili djelomičnu s obzirom na gospodarsko stanje poslodavca i oštećenika.
+Ako poslodavac dokaže te pretpostavke oslobođenja i oštećenik ne dobije naknadu iz stavka 1., sud može prema članku 188. stavku 2. Građanskog zakonika na zahtjev oštećenika, s obzirom na gospodarsko stanje poslodavca i oštećenika, naložiti poslodavcu naknadu štete u cijelosti ili djelomično.
 
 Pitanje protiv koga se građanskopravni zahtjev usmjerava treba razlikovati od kaznene odgovornosti. Kaznena odgovornost iz članka 284. Kaznenog zakona ocjenjuje se prema povredi dužnosti pažnje svake fizičke osobe i uzročnoj vezi te povrede.
 
 ## Q15. Koja davanja i koja pokrića obveznog osiguranja vozila treba provjeriti?
 
-Obveza sklapanja prema članku 6. Zakona o obveznom osiguranju odgovornosti za vozila (強制汽車責任保險法) načelno leži na vlasniku vozila, a u predviđenim slučajevima i na korisniku ili upravitelju toga vozila. Taj režim uspostavlja strukturu pokrića bez obzira na krivnju (無過失給付制度) za osobu ozlijeđenu ili umrlu uslijed automobilske nesreće, ali treba provjeriti opseg putnika ili trećih osoba (第三人) izvan vozila koji utvrđuje zakon.
+Obveza sklapanja prema članku 6. Zakona o obveznom osiguranju odgovornosti za vozila (強制汽車責任保險法) načelno leži na vlasniku vozila, a u predviđenim slučajevima i na korisniku ili upravitelju toga vozila. Taj režim uspostavlja strukturu pokrića bez obzira na krivnju (無過失給付制度) za osobu ozlijeđenu ili umrlu uslijed automobilske nesreće, ali treba provjeriti opseg putnika ili trećih osoba (第三人) izvan vozila koji utvrđuje zakon. Osiguravatelj ne isplaćuje davanja ako je nesreću namjerno ili pri počinjenju kaznenog djela uzrokovala ozlijeđena osoba ili druga osoba koja podnosi zahtjev (članak 28.).
 
 Kod nesreće jednog vozila vozač toga vozila načelno nije korisnik davanja obveznog osiguranja toga vozila. Međutim, kod nesreće u kojoj sudjeluje više vozila postoje slučajevi u kojima vozač može zahtijevati davanje kod osiguravatelja obveznog osiguranja drugog sudjelujućeg vozila.
 

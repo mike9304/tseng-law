@@ -1,7 +1,7 @@
 ---
 title: "Avgångsvederlag i Taiwan: när det utgår och när det inte gör det"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "6 minuters läsning"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Får anställda i Taiwan avgångsvederlag om de säger upp sig själva?"
-    a: "Nej. Till skillnad från vad som gäller i en del andra länder, till exempel Korea, uppstår i Taiwan skyldigheten att betala avgångsvederlag (資遣費) först när företaget säger upp den anställda; om den anställda själv säger upp sig behöver företaget inte betala avgångsvederlag."
+    a: "Nej. Till skillnad från vad som gäller i en del andra länder, till exempel Korea, uppstår i Taiwan skyldigheten att betala avgångsvederlag (資遣費) först när företaget säger upp den anställda; om den anställda själv säger upp sig behöver företaget inte betala avgångsvederlag. Om det däremot finns en grund enligt artikel 14 i lagen om arbetsnormer (勞動基準法第14條), till exempel att företaget inte betalar lön eller bryter mot arbetsrättsliga bestämmelser, och den anställda av det skälet avslutar avtalet, måste företaget betala avgångsvederlag."
   - q: "Måste företaget betala avgångsvederlag även vid disciplinär uppsägning?"
-    a: "Nej. Om den anställda handlar olagligt, allvarligt bryter mot arbetsreglerna eller är frånvarande utan giltigt skäl 3 dagar i följd (artikel 12 i lagen om arbetsnormer, 勞動基準法第12條), kan företaget säga upp utan varsel och behöver inte betala avgångsvederlag. Däremot kräver ekonomisk uppsägning (artikel 11) förhandsvarsel och utbetalning av avgångsvederlag."
+    a: "Nej. Om den anställda handlar olagligt, allvarligt bryter mot arbetsavtalet eller arbetsreglerna eller är frånvarande utan giltigt skäl 3 dagar i följd eller 6 dagar under 1 månad (artikel 12 i lagen om arbetsnormer, 勞動基準法第12條), kan företaget säga upp utan varsel och behöver inte betala avgångsvederlag. Däremot kräver ekonomisk uppsägning (artikel 11) förhandsvarsel och utbetalning av avgångsvederlag."
   - q: "Hur beräknas avgångsvederlaget i Taiwan?"
-    a: "För varje fullgjort tjänsteår (1 år) som fyllts måste arbetsgivaren betala 0,5 månaders genomsnittslön som avgångsvederlag, högst 6 månaders lön. Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per ett år, utan tak."
+    a: "För varje fullgjort tjänsteår (1 år) som fyllts måste arbetsgivaren betala 0,5 månaders genomsnittslön som avgångsvederlag, högst 6 månaders lön. Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per ett år, utan tak. Lagen om arbetstagares pension tillämpas på taiwanesiska medborgare, utländska medborgare som är gifta med en taiwanesisk medborgare och har beviljats uppehållsrätt, utländska medborgare som har beviljats permanent uppehållstillstånd och liknande arbetstagare (artikel 7, 1:a stycket) samt, från och med 2026, på utländska experter som utför professionellt arbete (artikel 24 i lagen om rekrytering och anställning av utländska experter, 外國專業人才延攬及僱用法); avgångsvederlag för andra arbetstagare och för tjänstgöringstid före lagens tillämpning beräknas enligt artikel 17 i lagen om arbetsnormer."
 ---
 
 # Avgångsvederlag i Taiwan: när det utgår och när det inte gör det
@@ -36,15 +36,19 @@ Skyldigheten att betala avgångsvederlag uppstår först när företaget säger 
 
 Om den anställda själv säger upp sig behöver företaget inte betala avgångsvederlag.
 
+Om det däremot finns en grund enligt [artikel 14 i lagen om arbetsnormer](/sv/columns/taiwan-voluntary-resignation-severance), till exempel att företaget inte betalar lön eller bryter mot arbetsrättsliga bestämmelser, och den anställda av det skälet avslutar avtalet, måste företaget betala avgångsvederlag.
+
 ​
 
 Om den anställda däremot handlar olagligt,
 
-allvarligt bryter mot arbetsreglerna (工作規則),
+allvarligt bryter mot arbetsavtalet eller arbetsreglerna (工作規則),
 
-eller är frånvarande från arbetet utan skäl 3 dagar i följd (曠工),
+eller är frånvarande från arbetet utan skäl 3 dagar i följd eller 6 dagar under 1 månad (曠工),
 
 kan företaget säga upp utan att betala avgångsvederlag.
+
+För alla grunder utom punkt 3 (ett lagakraftvunnet fängelsestraff) måste företaget dock säga upp den anställda inom 30 dagar från det att det fick kännedom om omständigheterna (artikel 12, 2:a stycket, i lagen om arbetsnormer).
 
 ​
 
@@ -53,16 +57,16 @@ Detta sammanfattas i en enkel tabell.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Typ | Ekonomisk uppsägning (資遣員工, 經濟解僱) | Disciplinär uppsägning (解僱員工, 懲戒解僱) | Den anställdas egen uppsägning (員工自請離職) |
-| Betydelse | Om det hos arbetsgivaren finns behov av personaljustering på grund av företagets situation, ligger skälet på arbetsgivarens sida och inte i den anställdas ansvar. Därför måste arbetsgivaren iaktta varseltiden (預告期間) och betala avgångsvederlag, för att på ett balanserat sätt kompensera den anställdas nackdel. | Om den anställda begår en olaglig eller olämplig handling kan arbetsgivaren omedelbart avsluta arbetsavtalet (勞動契約) utan förhandsvarsel och behöver inte betala avgångsvederlag. Detta är en av arbetsgivarens disciplinära befogenheter. | Den anställda är fri att avsluta avtalet när som helst, men måste, beroende på anställningstid, iaktta varseltiden, så att arbetsgivaren kan genomföra överlämning och söka ersättare. |
+| Betydelse | Om det hos arbetsgivaren finns behov av personaljustering på grund av företagets situation, ligger skälet på arbetsgivarens sida och inte i den anställdas ansvar. Därför måste arbetsgivaren iaktta varseltiden (預告期間) och betala avgångsvederlag, för att på ett balanserat sätt kompensera den anställdas nackdel. | Om den anställda begår en olaglig eller olämplig handling kan arbetsgivaren omedelbart avsluta arbetsavtalet (勞動契約) utan förhandsvarsel och behöver inte betala avgångsvederlag. Detta är en av arbetsgivarens disciplinära befogenheter. | Vid ett arbetsavtal utan bestämd tid är den anställda fri att avsluta avtalet när som helst, men måste, beroende på anställningstid, iaktta varseltiden, så att arbetsgivaren kan genomföra överlämning och söka ersättare. |
 | Villkor | Ja (artikel 11 i Taiwans lag om arbetsnormer) | Ja (artikel 12 i Taiwans lag om arbetsnormer) | Inga |
 | Förhandsvarsel | Krävs | Krävs inte | Krävs |
 | Hur högt ställda villkoren är (inget utfall utlovas) | lägre | högre | lägre |
-| Om företaget måste betala avgångsvederlag (資遣費) | Krävs | Krävs inte | Krävs inte |
-|  | Taiwans lag om arbetsnormer, artikel 11 (勞動基準法第11條): Om inte något av följande fall inträffar får arbetsgivaren inte avsluta arbetsavtalet, även efter förhandsvarsel till den anställda.  1. Verksamheten upphör (歇業) eller företaget överlåts (轉讓)  2. Förlust (虧損) eller krympning av verksamheten (業務緊縮)  3. En extraordinär händelse (不可抗力) kräver avbrott i verksamheten i 1 månad eller mer  4. Verksamhetens art kräver personalminskning, och den uppsagda personen kan inte omplaceras till en annan lämplig befattning  5. Att den anställda inte kan utföra det arbete som befattningen kräver på ett tillfredsställande sätt | Taiwans lag om arbetsnormer, artikel 12 (勞動基準法第12條): Arbetsgivaren kan säga upp utan förhandsvarsel om den anställda faller in under något av följande.  1. Den som vid ingåendet av arbetsavtalet lämnar oriktiga uppgifter, vilseleder arbetsgivaren och medför risk för skada för verksamheten  2. Den som utövar våld eller grovt förolämpar arbetsgivaren, dennes familj, ombud (代理人) eller andra kollegor  3. Den som har fått lagakraftvunnen dom till tidsbegränsat fängelse (有期徒刑) eller strängare straff, utan att villkorlig dom (緩刑) har meddelats och utan att omvandling till böter (易科罰金) har tillåtits  4. Allvarlig överträdelse av arbetsavtalet eller arbetsreglerna  5. Den som avsiktligt förbrukar maskiner, verktyg, råvaror, produkter eller annan egendom som tillhör arbetsgivaren, eller avsiktligt röjer arbetsgivarens tekniska och affärsmässiga hemligheter, och vållar arbetsgivaren skada  6. Obehörig frånvaro (曠工) utan giltigt skäl i 3 dagar i följd, eller i 6 dagar eller mer under 1 månad |  |
+| Om företaget måste betala avgångsvederlag (資遣費) | Krävs | Krävs inte | Krävs inte (utom när den anställda avslutar avtalet av ett skäl enligt artikel 14) |
+|  | Taiwans lag om arbetsnormer, artikel 11 (勞動基準法第11條): Om inte något av följande fall inträffar får arbetsgivaren inte avsluta arbetsavtalet, även efter förhandsvarsel till den anställda.  1. Verksamheten upphör (歇業) eller företaget överlåts (轉讓)  2. Förlust (虧損) eller krympning av verksamheten (業務緊縮)  3. En extraordinär händelse (不可抗力) kräver avbrott i verksamheten i 1 månad eller mer  4. Verksamhetens art har ändrats, personalminskning är nödvändig, och det finns ingen lämplig befattning dit den anställda kan omplaceras  5. Att den anställda uppenbart inte kan utföra det tilldelade arbetet | Taiwans lag om arbetsnormer, artikel 12 (勞動基準法第12條): Arbetsgivaren kan säga upp utan förhandsvarsel om den anställda faller in under något av följande.  1. Den som vid ingåendet av arbetsavtalet lämnar oriktiga uppgifter, vilseleder arbetsgivaren och medför risk för skada för verksamheten  2. Den som utövar våld eller grovt förolämpar arbetsgivaren, dennes familj, ombud (代理人) eller andra kollegor  3. Den som har fått lagakraftvunnen dom till tidsbegränsat fängelse (有期徒刑) eller strängare straff, utan att villkorlig dom (緩刑) har meddelats och utan att omvandling till böter (易科罰金) har tillåtits  4. Allvarlig överträdelse av arbetsavtalet eller arbetsreglerna  5. Den som avsiktligt förbrukar maskiner, verktyg, råvaror, produkter eller annan egendom som tillhör arbetsgivaren, eller avsiktligt röjer arbetsgivarens tekniska och affärsmässiga hemligheter, och vållar arbetsgivaren skada  6. Obehörig frånvaro (曠工) utan giltigt skäl i 3 dagar i följd, eller i 6 dagar eller mer under 1 månad |  |
 
 > I Taiwan, för varje fullgjort år av tjänstgöringstid (年資, 1 år) som fyllts,
 > måste arbetsgivaren betala 0,5 månaders genomsnittslön (平均工資) som avgångsvederlag.
-> (högst 6 månaders lön) Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per ett år, utan tak.
+> (högst 6 månaders lön) Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per ett år, utan tak. Lagen om arbetstagares pension tillämpas på taiwanesiska medborgare, utländska medborgare som är gifta med en taiwanesisk medborgare och har beviljats uppehållsrätt, utländska medborgare som har beviljats permanent uppehållstillstånd och liknande arbetstagare (artikel 7, 1:a stycket) samt, från och med 2026, på utländska experter som utför professionellt arbete ([artikel 24 i lagen om rekrytering och anställning av utländska experter (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); avgångsvederlag för andra arbetstagare och för tjänstgöringstid före lagens tillämpning beräknas enligt artikel 17 i lagen om arbetsnormer. Tjänstgöringstid på mindre än ett år beräknas proportionellt, och företaget måste betala avgångsvederlaget inom 30 dagar efter det att avtalet har upphört.
 
 ​
 

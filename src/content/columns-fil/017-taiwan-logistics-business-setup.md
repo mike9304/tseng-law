@@ -1,7 +1,7 @@
 ---
 title: "Negosyong Logistics sa Taiwan at ang Lisensiya sa Negosyo ng Paghahatid ng Kargamento sa Sasakyan (汽車貨運業): Pagtatatag, Pagbili at Pagpapakontrata"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "Setyembre 13, 2025"
 read_time: "12 minutong pagbabasa"
 categories:
@@ -118,7 +118,7 @@ Kailangang tiyakin ang bisa ng lisensiya sa pagpapatakbo ng kontratista at ang s
 
 Kahit maging shareholder o mamumuhunan ang isang dayuhan sa target na kompanya, hindi niya nakukuha dahil lamang doon ang karapatang magtrabaho sa Taiwan o ang katayuan sa paninirahan (居留資格). Kung isasagawa niya sa Taiwan ang praktikal na gawain gaya ng pamamahala ng kompanya, ng benta, ng pagtatalaga ng sasakyan o ng pag-aasikaso sa kliyente, kailangang tiyakin bago simulan ang gawain kung kailangan ang permiso sa trabaho na akma sa aktuwal na tungkulin, at kailangang hiwalay na isagawa ang mga sumusunod na hakbang sa paninirahan.
 
-Sa pagtatrabaho nang walang pahintulot ay maaaring ipataw ang multa administratibo at ang utos na umalis sa Taiwan (限令出國). Ang umiiral na panuntunan sa gawain hinggil sa pagbabawal ng pagpasok na itinakda ng Pambansang Ahensiya sa Imigrasyon (NIA, 內政部移民署) ay karaniwang naglalagay ng 3 taong panahon ng pagbabawal sa pagpasok para sa ilegal na pagtatrabaho, ngunit maaaring mailapat ang mga kondisyon ng pagbubukod (免予禁止入國) o ng pagpapaikli ng panahon na itinatakda rin ng panuntunang iyon. Hindi mekanikal na napagpapasyahan ang resulta dahil lamang may isinumbong ang ikatlong panig; sinusuri ng ahensiyang may hurisdiksiyon ang mga katotohanan, ang batas na inilalapat at ang indibidwal na kalagayan.
+Ang dayuhang nagtatrabaho nang walang pahintulot ay pinapatawan ng multa administratibo at kailangang agad utusang umalis sa Taiwan (限令出國), at hindi na maaaring magtrabaho muli sa Taiwan (Artikulo 68 ng Batas sa Serbisyo sa Pagtatrabaho, 就業服務法). Ang umiiral na panuntunan sa gawain hinggil sa pagbabawal ng pagpasok na itinakda ng Pambansang Ahensiya sa Imigrasyon (NIA, 內政部移民署) ay karaniwang naglalagay ng 3 taong panahon ng pagbabawal sa pagpasok para sa ilegal na pagtatrabaho, ngunit maaaring mailapat ang mga kondisyon ng pagbubukod (免予禁止入國) o ng pagpapaikli ng panahon na itinatakda rin ng panuntunang iyon. Hindi mekanikal na napagpapasyahan ang resulta dahil lamang may isinumbong ang ikatlong panig; sinusuri ng ahensiyang may hurisdiksiyon ang mga katotohanan, ang batas na inilalapat at ang indibidwal na kalagayan.
 
 ## Mga Opisyal na Sanggunian
 
@@ -136,6 +136,7 @@ Sa pagtatrabaho nang walang pahintulot ay maaaring ipataw ang multa administrati
 - [Ministri ng Ekonomiya: gabay sa aplikasyon ng dayuhang pamumuhunan](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Batas sa Serbisyo sa Pagtatrabaho (就業服務法) Artikulo 43](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Batas sa Serbisyo sa Pagtatrabaho (就業服務法) Artikulo 68](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Batas sa Serbisyo sa Pagtatrabaho (就業服務法) Artikulo 68 (Database ng mga Batas at Regulasyon)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Pambansang Ahensiya sa Imigrasyon (NIA): panuntunang administratibo hinggil sa panahon ng pagbabawal ng pagpasok](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Kaugnay na Gabay

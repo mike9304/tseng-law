@@ -1,7 +1,7 @@
 ---
 title: "Godtgørelse ved afskedigelse i Taiwan: hvornår den udbetales, og hvornår den ikke gør"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "6 minutters læsetid"
 categories:
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Modtager arbejdstagere i Taiwan godtgørelse ved afskedigelse, når de selv siger op?"
-    a: "Nej. I modsætning til visse andre lande — Korea er ét eksempel — opstår pligten til at udbetale godtgørelse ved afskedigelse (資遣費) i Taiwan først, når selskabet afskediger arbejdstageren; siger arbejdstageren selv op, behøver selskabet ikke at udbetale godtgørelse ved afskedigelse."
+    a: "Nej. I modsætning til visse andre lande — Korea er ét eksempel — opstår pligten til at udbetale godtgørelse ved afskedigelse (資遣費) i Taiwan først, når selskabet afskediger arbejdstageren; siger arbejdstageren selv op, behøver selskabet ikke at udbetale godtgørelse ved afskedigelse. Foreligger der derimod en grund efter artikel 14 i loven om arbejdsnormer (勞動基準法第14條), for eksempel at selskabet ikke udbetaler løn eller overtræder arbejdsretlige regler, og bringer arbejdstageren aftalen til ophør af den grund, skal selskabet udbetale godtgørelse ved afskedigelse."
   - q: "Skal selskabet også ved en disciplinær afskedigelse udbetale godtgørelse ved afskedigelse?"
-    a: "Nej. Begår arbejdstageren et retsbrud, krænker interne regler eller udebliver uden gyldig grund 3 dage i træk (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af godtgørelse ved afskedigelse."
+    a: "Nej. Begår arbejdstageren et retsbrud, groft krænker arbejdsaftalen eller interne regler eller udebliver uden gyldig grund 3 dage i træk eller 6 dage i løbet af 1 måned (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af godtgørelse ved afskedigelse."
   - q: "Hvordan beregnes godtgørelsen ved afskedigelse i Taiwan?"
-    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hver fuldført periode på 1 år, uden loft."
+    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hver fuldført periode på 1 år, uden loft. Loven om arbejdstageres pension finder anvendelse på taiwanske statsborgere, udenlandske statsborgere, der er gift med en taiwansk statsborger og har fået tildelt opholdstilladelse, udenlandske statsborgere med tildelt permanent opholdstilladelse og lignende arbejdstagere (artikel 7 stk. 1) samt fra 2026 på udenlandske fagfolk, der udfører fagligt arbejde (artikel 24 i loven om rekruttering og ansættelse af udenlandske fagfolk, 外國專業人才延攬及僱用法); godtgørelsen ved afskedigelse for andre arbejdstagere og for anciennitet før lovens anvendelse beregnes efter artikel 17 i loven om arbejdsnormer."
 ---
 
 # Godtgørelse ved afskedigelse (資遣費) i Taiwan: hvornår den udbetales, og hvornår den ikke gør
@@ -36,15 +36,19 @@ Pligten til udbetaling af godtgørelse ved afskedigelse opstår først, når sel
 
 Siger arbejdstageren selv op, behøver selskabet ikke at udbetale godtgørelse ved afskedigelse.
 
+Foreligger der derimod en grund efter [artikel 14 i loven om arbejdsnormer](/da/columns/taiwan-voluntary-resignation-severance), for eksempel at selskabet ikke udbetaler løn eller overtræder arbejdsretlige regler, og bringer arbejdstageren aftalen til ophør af den grund, skal selskabet udbetale godtgørelse ved afskedigelse.
+
 ​
 
 Begår arbejdstageren et retsbrud, kan selskabet afskedige uden godtgørelse ved afskedigelse.
 
-Krænker vedkommende interne regler (工作規則), gælder det samme.
+Krænker vedkommende arbejdsaftalen eller interne regler (工作規則) groft, gælder det samme.
 
-Udebliver vedkommende uden grund 3 dage i træk fra arbejdet (曠工), gælder det samme.
+Udebliver vedkommende uden grund 3 dage i træk eller 6 dage i løbet af 1 måned fra arbejdet (曠工), gælder det samme.
 
 Selskabet kan da afskedige uden at udbetale godtgørelse ved afskedigelse.
+
+For alle grunde undtagen nr. 3 (en endelig fængselsstraf) skal selskabet dog afskedige arbejdstageren inden for 30 dage fra det tidspunkt, hvor det fik kendskab til omstændighederne (artikel 12 stk. 2 i loven om arbejdsnormer).
 
 ​
 
@@ -53,16 +57,16 @@ Det sammenfattes i tabellen nedenfor.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | Art | Økonomisk afskedigelse (資遣員工, 經濟解僱) | Disciplinær afskedigelse (解僱員工, 懲戒解僱) | Arbejdstagerens egen opsigelse (員工自請離職) |
-| Betydning | Består der hos arbejdsgiveren på grund af forretningssituationen behov for personaletilpasning, ligger grunden i arbejdsgiverens virksomhedsområde og ikke i arbejdstagerens ansvar. Derfor skal arbejdsgiveren overholde varselsfristen (預告期間) og udbetale godtgørelse ved afskedigelse, så arbejdstagerens ulemper udlignes afbalanceret. | Begår arbejdstageren en retsstridig eller upassende handling, kan arbejdsgiveren straks bringe arbejdsaftalen (勞動契約) til ophør uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Dette er 1 af arbejdsgiverens disciplinærbeføjelser. | Arbejdstageren er fri til når som helst at bringe aftalen til ophør, men skal efter ansættelsens varighed overholde varselsfristen, så arbejdsgiveren kan søge overdragelse og erstatning. |
+| Betydning | Består der hos arbejdsgiveren på grund af forretningssituationen behov for personaletilpasning, ligger grunden i arbejdsgiverens virksomhedsområde og ikke i arbejdstagerens ansvar. Derfor skal arbejdsgiveren overholde varselsfristen (預告期間) og udbetale godtgørelse ved afskedigelse, så arbejdstagerens ulemper udlignes afbalanceret. | Begår arbejdstageren en retsstridig eller upassende handling, kan arbejdsgiveren straks bringe arbejdsaftalen (勞動契約) til ophør uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Dette er 1 af arbejdsgiverens disciplinærbeføjelser. | Ved en tidsubegrænset arbejdsaftale er arbejdstageren fri til når som helst at bringe aftalen til ophør, men skal efter ansættelsens varighed overholde varselsfristen, så arbejdsgiveren kan søge overdragelse og erstatning. |
 | Vilkår | Ja  (artikel 11 i den taiwanske lov om arbejdsnormer) | Ja  (artikel 12 i den taiwanske lov om arbejdsnormer) | Ingen |
 | Forudgående varsel | Påkrævet | Ikke påkrævet | Påkrævet |
 | Vanskelighed ved fremgangsmåden | Enkel | Vanskelig | Enkel |
-| Om selskabet skal udbetale godtgørelse ved afskedigelse (資遣費) | Påkrævet | Ikke påkrævet | Ikke påkrævet |
-|  | Taiwansk lov om arbejdsnormer artikel 11 (勞動基準法第11條): Medmindre ét af følgende tilfælde indtræder, må arbejdsgiveren ikke bringe arbejdsaftalen til ophør, heller ikke efter forudgående underretning af arbejdstageren.  1. Stilstand af virksomheden (歇業) eller overdragelse af virksomheden (轉讓)  2. Tab (虧損) eller indskrænkning af virksomheden (業務緊縮)  3. En ekstraordinær hændelse (不可抗力) kræver afbrydelse af virksomheden i 1 måned eller længere  4. Virksomhedens art kræver personalenedsættelse, og den afskedigede kan ikke omplaceres til en anden passende stilling  5. En bestemt arbejdstager kan ikke tilfredsstillende udføre det arbejde, stillingen kræver | Taiwansk lov om arbejdsnormer artikel 12 (勞動基準法第12條): Arbejdsgiveren kan afskedige uden forudgående underretning, når arbejdstageren hører under ét af følgende tilfælde.  1. Den, der ved indgåelsen af arbejdsaftalen afgiver urigtige oplysninger, vildleder arbejdsgiveren, og der består fare for skade på virksomheden  2. Den, der over for arbejdsgiveren, dennes familie, dennes repræsentant (代理人) eller andre kolleger anvender vold eller groft fornærmer dem  3. Den, der er endeligt idømt tidsbegrænset fængsel (有期徒刑) eller en strengere straf, uden at en betinget dom (緩刑) er udtalt, og uden at ombytning til bøde (易科罰金) er tilladt  4. Alvorlig krænkelse af arbejdsaftalen eller af arbejdsreglerne  5. Den, der forsætligt beskadiger eller bortødsler maskiner, redskaber, råvarer, produkter eller andre goder tilhørende arbejdsgiveren, eller forsætligt åbenbarer arbejdsgiverens tekniske og forretningshemmeligheder og tilføjer arbejdsgiveren skade  6. Ulovligt fravær (曠工) uden gyldig grund i 3 på hinanden følgende dage, eller i 6 dage eller mere i 1 måned |  |
+| Om selskabet skal udbetale godtgørelse ved afskedigelse (資遣費) | Påkrævet | Ikke påkrævet | Ikke påkrævet (undtagen når arbejdstageren bringer aftalen til ophør af en grund efter artikel 14) |
+|  | Taiwansk lov om arbejdsnormer artikel 11 (勞動基準法第11條): Medmindre ét af følgende tilfælde indtræder, må arbejdsgiveren ikke bringe arbejdsaftalen til ophør, heller ikke efter forudgående underretning af arbejdstageren.  1. Stilstand af virksomheden (歇業) eller overdragelse af virksomheden (轉讓)  2. Tab (虧損) eller indskrænkning af virksomheden (業務緊縮)  3. En ekstraordinær hændelse (不可抗力) kræver afbrydelse af virksomheden i 1 måned eller længere  4. Virksomhedens art er ændret, personalenedsættelse er nødvendig, og der findes ingen passende stilling, som arbejdstageren kan omplaceres til  5. Arbejdstageren kan åbenbart ikke udføre det tildelte arbejde | Taiwansk lov om arbejdsnormer artikel 12 (勞動基準法第12條): Arbejdsgiveren kan afskedige uden forudgående underretning, når arbejdstageren hører under ét af følgende tilfælde.  1. Den, der ved indgåelsen af arbejdsaftalen afgiver urigtige oplysninger, vildleder arbejdsgiveren, og der består fare for skade på virksomheden  2. Den, der over for arbejdsgiveren, dennes familie, dennes repræsentant (代理人) eller andre kolleger anvender vold eller groft fornærmer dem  3. Den, der er endeligt idømt tidsbegrænset fængsel (有期徒刑) eller en strengere straf, uden at en betinget dom (緩刑) er udtalt, og uden at ombytning til bøde (易科罰金) er tilladt  4. Alvorlig krænkelse af arbejdsaftalen eller af arbejdsreglerne  5. Den, der forsætligt beskadiger eller bortødsler maskiner, redskaber, råvarer, produkter eller andre goder tilhørende arbejdsgiveren, eller forsætligt åbenbarer arbejdsgiverens tekniske og forretningshemmeligheder og tilføjer arbejdsgiveren skade  6. Ulovligt fravær (曠工) uden gyldig grund i 3 på hinanden følgende dage, eller i 6 dage eller mere i 1 måned |  |
 
 > I Taiwan skal arbejdsgiveren for hvert fuldført års anciennitet (年資)
 > udbetale 0,5 måneds gennemsnitsløn (平均工資) som godtgørelse ved afskedigelse.
-> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hver fuldført periode på 1 år, uden loft.
+> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hver fuldført periode på 1 år, uden loft. Loven om arbejdstageres pension finder anvendelse på taiwanske statsborgere, udenlandske statsborgere, der er gift med en taiwansk statsborger og har fået tildelt opholdstilladelse, udenlandske statsborgere med tildelt permanent opholdstilladelse og lignende arbejdstagere (artikel 7 stk. 1) samt fra 2026 på udenlandske fagfolk, der udfører fagligt arbejde ([artikel 24 i loven om rekruttering og ansættelse af udenlandske fagfolk (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); godtgørelsen ved afskedigelse for andre arbejdstagere og for anciennitet før lovens anvendelse beregnes efter artikel 17 i loven om arbejdsnormer. Anciennitet på under 1 år beregnes forholdsmæssigt, og selskabet skal udbetale godtgørelsen ved afskedigelse inden for 30 dage efter aftalens ophør.
 
 ​
 

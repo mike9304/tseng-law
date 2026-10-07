@@ -1,7 +1,7 @@
 ---
 title: "Questions-réponses sur le traitement des accidents de la circulation à Taïwan : mesures sur les lieux, faute, transaction et dommages-intérêts"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 septembre 2025"
 read_time: "12 min de lecture"
 categories:
@@ -95,7 +95,7 @@ La réclamation fondée sur l’article 184 du Code civil présuppose une attein
 
 - Blessures : Selon l’article 193 du Code civil peuvent être examinés les frais médicaux (醫療費用) nécessaires, les frais supplémentaires de la vie quotidienne tels que les frais de soins (看護費用), de transport pour traitement (就醫交通費) et d’aides techniques, ainsi que la perte de revenus (收入損失) par incapacité de travail réelle et la diminution de la capacité de travail (勞動能力減損). Selon l’article 195 du Code civil le préjudice moral peut aussi être examiné.
 - Décès : Selon l’article 192 du Code civil, lorsqu’il y a lieu, peuvent être examinés les frais médicaux antérieurs au décès et les frais de besoins vitaux accrus, les frais funéraires (殯葬費) et la perte d’aliments (扶養利益損失) de la personne qui avait un droit légal aux aliments. Selon l’article 194 du Code civil le préjudice moral de certains parents peut aussi être examiné.
-- Patrimoine : Selon l’article 196 du Code civil peut être réclamé le dommage patrimonial effectif justifié, y compris les frais de réparation du véhicule ou la perte de valeur.
+- Patrimoine : Selon l’article 196 du Code civil, le propriétaire peut réclamer la diminution de valeur du véhicule causée par le dommage ; les frais de réparation ne servent de référence que dans la mesure nécessaire, et la dépréciation peut être déduite lorsque des pièces neuves remplacent des pièces anciennes.
 
 ## Q8. Si le traitement se poursuit, comment présenter les pièces de frais médicaux ?
 
@@ -165,13 +165,13 @@ L’article 188 du Code civil régit le cas dans lequel l’employé cause un do
 
 L’employeur peut alléguer qu’il a observé la diligence due dans la sélection et la surveillance de l’employé, ou que le dommage n’aurait pas pu être évité même en observant cette diligence. On peut envisager de réclamer l’indemnisation conjointement contre l’employeur et l’employé. Après avoir indemnisé, l’employeur peut exercer un recours contre l’employé.
 
-Si l’employeur prouve ces conditions d’exonération et que la personne lésée n’obtient pas l’indemnisation de l’alinéa 1, le tribunal, selon l’article 188, alinéa 2, du Code civil, peut ordonner une indemnisation totale ou partielle en tenant compte de la situation économique de l’employeur et de la personne lésée.
+Si l’employeur prouve ces conditions d’exonération et que la personne lésée n’obtient pas l’indemnisation de l’alinéa 1, l’article 188, alinéa 2, du Code civil prévoit que, si la personne lésée en fait la demande, le tribunal peut, en tenant compte de la situation économique de l’employeur et de la personne lésée, ordonner à l’employeur de verser tout ou partie de l’indemnisation.
 
 La question de savoir contre qui s’oriente la réclamation civile doit être distinguée de la responsabilité pénale. La responsabilité pénale de l’article 284 du Code pénal s’apprécie selon le manquement au devoir de prudence de chaque personne physique et le lien de causalité de ce manquement.
 
 ## Q15. Quelles prestations et quelles couvertures de l’assurance automobile faut-il vérifier ?
 
-L’obligation de souscrire selon l’article 6 de la loi sur l’assurance obligatoire de responsabilité civile automobile (強制汽車責任保險法) pèse, en principe, sur le propriétaire du véhicule et, dans les cas prévus, aussi sur l’utilisateur ou l’administrateur de ce véhicule. Ce régime établit une structure de couverture sans faute (無過失給付制度) pour la personne blessée ou décédée du fait d’un accident d’automobile, mais il faut vérifier l’étendue des passagers ou d’un tiers (第三人) extérieur au véhicule que fixe la loi.
+L’obligation de souscrire selon l’article 6 de la loi sur l’assurance obligatoire de responsabilité civile automobile (強制汽車責任保險法) pèse, en principe, sur le propriétaire du véhicule et, dans les cas prévus, aussi sur l’utilisateur ou l’administrateur de ce véhicule. Ce régime établit une structure de couverture sans faute (無過失給付制度) pour la personne blessée ou décédée du fait d’un accident d’automobile, mais il faut vérifier l’étendue des passagers ou d’un tiers (第三人) extérieur au véhicule que fixe la loi. L’assureur ne verse pas les prestations lorsque la personne blessée ou un autre ayant droit a causé l’accident intentionnellement ou en commettant une infraction (article 28).
 
 Dans un accident d’un seul véhicule, le conducteur de ce véhicule n’est, en général, pas destinataire des prestations de l’assurance obligatoire de ce véhicule. Toutefois, dans un accident où interviennent plusieurs véhicules, il existe des cas dans lesquels le conducteur peut réclamer des prestations à l’assureur obligatoire d’un autre véhicule impliqué.
 

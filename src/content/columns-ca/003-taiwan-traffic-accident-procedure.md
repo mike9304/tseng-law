@@ -1,7 +1,7 @@
 ---
 title: "Preguntes i respostes sobre accidents de trànsit a Taiwan: mesures al lloc, culpa, transacció i indemnització"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 de setembre de 2025"
 read_time: "8 min de lectura"
 categories:
@@ -95,7 +95,7 @@ La reclamació basada en l’article 184 del Codi civil pressuposa una lesió il
 
 - Lesions: Segons l’article 193 del Codi civil es poden examinar les despeses mèdiques (醫療費用) necessàries, les despeses addicionals de la vida diària com les de cura (看護費用), de transport per a tractament (就醫交通費) i d’ajudes tècniques, així com la pèrdua d’ingressos (收入損失) per incapacitat laboral real i la disminució de la capacitat laboral (勞動能力減損). Segons l’article 195 del Codi civil també es pot examinar el dany moral.
 - Mort: Segons l’article 192 del Codi civil, quan escaigui, es poden examinar les despeses mèdiques anteriors a la mort i les despeses de necessitats vitals incrementades, les despeses funeràries (殯葬費) i la pèrdua d’aliments (扶養利益損失) de qui tenia dret legal a aliments. Segons l’article 194 del Codi civil també es pot examinar el dany moral de determinats parents.
-- Patrimoni: Segons l’article 196 del Codi civil es pot reclamar el dany patrimonial efectiu acreditat, incloses les despeses de reparació del vehicle o la pèrdua de valor.
+- Patrimoni: Segons l’article 196 del Codi civil, el propietari pot reclamar la disminució del valor del vehicle causada pel dany; les despeses de reparació serveixen de referència només en la mesura necessària, i es pot descomptar la depreciació quan peces velles se substitueixen per peces noves.
 
 ## 8. Si el tractament continua, com es presenten les dades de despeses mèdiques?
 
@@ -165,13 +165,13 @@ L’article 188 del Codi civil regula el cas en què l’empleat causa un dany i
 
 L’ocupador pot al·legar que va observar la diligència deguda en la selecció i supervisió de l’empleat, o que el dany no s’hauria pogut evitar ni observant aquesta diligència. Es pot considerar reclamar la indemnització conjuntament contra l’ocupador i l’empleat. Després d’indemnitzar, l’ocupador pot repetir contra l’empleat.
 
-Si l’ocupador prova aquests requisits d’exempció i el perjudicat no obté la indemnització de l’apartat 1, el tribunal, segons l’article 188, apartat 2, del Codi civil, pot ordenar una indemnització total o parcial tenint en compte la situació econòmica de l’ocupador i del perjudicat.
+Si l’ocupador prova aquests requisits d’exempció i el perjudicat no obté la indemnització de l’apartat 1, l’article 188, apartat 2, del Codi civil preveu que, si el perjudicat ho sol·licita, el tribunal pot, tenint en compte la situació econòmica de l’ocupador i del perjudicat, ordenar a l’ocupador que pagui la indemnització totalment o parcialment.
 
 La qüestió de contra qui s’adreça la reclamació civil s’ha de distingir de la responsabilitat penal. La responsabilitat penal de l’article 284 del Codi penal es valora segons la infracció del deure de cura de cada persona física i el nexe causal d’aquesta infracció.
 
 ## 15. Quines prestacions i cobertures de l’assegurança d’automòbils s’han de comprovar?
 
-L’obligació de contractar segons l’article 6 de la Llei de l’assegurança obligatòria de responsabilitat civil d’automòbils (強制汽車責任保險法) recau, en principi, sobre el propietari del vehicle i, en els casos previstos, també sobre l’usuari o l’administrador d’aquest vehicle. Aquest règim estableix una estructura de cobertura sense culpa (無過失給付制度) per a qui resulta lesionat o mor per un accident d’automòbil, però s’ha de comprovar l’abast dels passatgers o d’un tercer (第三人) aliè al vehicle que fixa la llei.
+L’obligació de contractar segons l’article 6 de la Llei de l’assegurança obligatòria de responsabilitat civil d’automòbils (強制汽車責任保險法) recau, en principi, sobre el propietari del vehicle i, en els casos previstos, també sobre l’usuari o l’administrador d’aquest vehicle. Aquest règim estableix una estructura de cobertura sense culpa (無過失給付制度) per a qui resulta lesionat o mor per un accident d’automòbil, però s’ha de comprovar l’abast dels passatgers o d’un tercer (第三人) aliè al vehicle que fixa la llei. L’asseguradora no paga les prestacions quan la persona lesionada o un altre reclamant va causar l’accident intencionadament o mentre cometia un delicte (article 28).
 
 En un accident d’un sol vehicle, el conductor d’aquest vehicle no és, en general, destinatari de les prestacions de l’assegurança obligatòria d’aquest vehicle. Tanmateix, en un accident en què intervenen diversos vehicles, hi ha casos en què el conductor pot reclamar prestacions a l’assegurador obligatori d’un altre vehicle implicat.
 

@@ -1,7 +1,7 @@
 ---
 title: "Logistik i Taiwan og tilladelsen til godstransport med motorkøretøj (汽車貨運業): ny stiftelse, overtagelse og overdragelse"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "12 minutters læsetid"
 categories:
@@ -118,7 +118,7 @@ Man skal kontrollere gyldigheden af erhvervslicensen hos den erhvervsdrivende, d
 
 Selv hvis udlændingen bliver aktionær eller investor i målselskabet, giver denne kendsgerning i sig selv hverken retten til at arbejde eller en opholdsstatus i Taiwan. Hvis vedkommende i Taiwan udøver det daglige arbejde, såsom selskabsledelsen, salget, køretøjsindsættelsen og kundeservicen, skal vedkommende før arbejdets begyndelse afklare, om den arbejdstilladelse, der passer til den faktiske funktion, er nødvendig, og behandle den senere opholdsprocedure særskilt.
 
-På arbejde uden tilladelse kan en administrativ bøde og et påbud om at forlade Taiwan (限令出國) anvendes. Den administrative vejledning om indrejseforbud (禁止入國) fra immigrationsstyrelsen under Ministeriet for Indenrigsanliggender (內政部移民署) fastsætter i almindelighed, for uretmæssigt arbejde, et indrejseforbud på 3 år, men kravene om fritagelse eller afkortning af fristen, som samme vejledning fastsætter, kan anvendes. Resultatet afgøres ikke mekanisk alene fordi der findes en anmeldelse fra en tredjemand, og den kompetente myndighed efterprøver kendsgerningerne, de gældende normer og omstændighederne i hver sag.
+En udenlandsk statsborger, der arbejder uden tilladelse, pålægges en administrativ bøde og skal straks gives påbud om at forlade Taiwan (限令出國), og må ikke arbejde i Taiwan igen (artikel 68 i loven om arbejdsformidling, 就業服務法). Den administrative vejledning om indrejseforbud (禁止入國) fra immigrationsstyrelsen under Ministeriet for Indenrigsanliggender (內政部移民署) fastsætter i almindelighed, for uretmæssigt arbejde, et indrejseforbud på 3 år, men kravene om fritagelse eller afkortning af fristen, som samme vejledning fastsætter, kan anvendes. Resultatet afgøres ikke mekanisk alene fordi der findes en anmeldelse fra en tredjemand, og den kompetente myndighed efterprøver kendsgerningerne, de gældende normer og omstændighederne i hver sag.
 
 ## Officielle kilder
 
@@ -136,6 +136,7 @@ På arbejde uden tilladelse kan en administrativ bøde og et påbud om at forlad
 - [Ministeriet for Økonomiske Anliggender: vejledning om ansøgning om udenlandsk investering](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Artikel 43 i loven om arbejdsformidling (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Artikel 68 i loven om arbejdsformidling](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Artikel 68 i loven om arbejdsformidling (Database for love og bekendtgørelser)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Immigrationsstyrelsen under Ministeriet for Indenrigsanliggender: administrativ vejledning om varigheden af indrejseforbuddet](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Tilknyttede vejledninger

@@ -1,7 +1,7 @@
 ---
 title: "Spørgsmål og svar om behandlingen af trafikulykker i Taiwan: foranstaltninger på stedet, uagtsomhed, forlig og erstatning"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13. september 2025"
 read_time: "12 minutters læsetid"
 categories:
@@ -95,7 +95,7 @@ Krav ifølge artikel 184 i civilloven (民法) forudsætter retsstridig krænkel
 
 - Tilskadekomst: Ifølge artikel 193 i civilloven kan nødvendige behandlingsudgifter (醫療費用), forøgede udgifter til livsophold såsom pleje (看護費用), transport til behandling (就醫交通費) og hjælpemidler samt indtægtstab (收入損失) ved faktisk arbejdsudygtighed og nedsættelse af arbejdsevnen (勞動能力減損) undersøges. Ifølge artikel 195 i civilloven kan også ikke-økonomisk skade undersøges.
 - Dødsfald: Ifølge artikel 192 i civilloven kan, for så vidt det finder anvendelse, behandlingsudgifter og forhøjede livsbehovsudgifter før dødsfaldet, begravelsesudgifter (殯葬費) og tab af forsørgelse (扶養利益損失) for den, der retligt havde krav på forsørgelse, undersøges. Ifølge artikel 194 i civilloven kan også ikke-økonomisk skade for visse slægtninge undersøges.
-- Formue: Ifølge artikel 196 i civilloven kan beviste faktiske formueskader, herunder køretøjsreparation eller værdiforringelse, kræves.
+- Formue: Ifølge artikel 196 i civilloven kan ejeren kræve erstatning for den værdiforringelse af køretøjet, som beskadigelsen har forårsaget; reparationsudgifterne tjener kun som målestok, i det omfang de er nødvendige, og hvor nye dele erstatter gamle, kan afskrivning fradrages.
 
 ## Q8. Hvordan skal dokumenter om behandlingsudgifter indgives, når behandlingen fortsætter?
 
@@ -165,13 +165,13 @@ Artikel 188 i civilloven (民法) behandler det tilfælde, at en ansat under udf
 
 Arbejdsgiveren kan indvende, at vedkommende har iagttaget den fornødne agtpågivenhed ved udvælgelse og tilsyn med den ansatte, eller at skaden heller ikke ved sådan agtpågivenhed ville kunne undgås. Det kan undersøges at gøre arbejdsgiver og ansat i fællesskab erstatningsansvarlige. Efter erlæggelse af erstatningen kan arbejdsgiveren søge regres hos den ansatte.
 
-Beviser arbejdsgiveren de nævnte fritagelsesbetingelser, således at den skadelidte ikke modtager erstatning ifølge stk. 1, kan retten ifølge artikel 188 stk. 2 i civilloven (民法) under hensyntagen til arbejdsgiverens og den skadelidtes økonomiske stilling pålægge fuld eller delvis erstatning.
+Beviser arbejdsgiveren de nævnte fritagelsesbetingelser, således at den skadelidte ikke modtager erstatning ifølge stk. 1, kan retten ifølge artikel 188 stk. 2 i civilloven (民法) på den skadelidtes begæring under hensyntagen til arbejdsgiverens og den skadelidtes økonomiske stilling pålægge arbejdsgiveren at betale fuld eller delvis erstatning.
 
 Fastlæggelsen af de civilretlige kravsmodparter og det strafferetlige ansvar skal skelnes. Det strafferetlige ansvar ifølge artikel 284 i straffeloven (刑法) bedømmes efter tilsidesættelse af hver fysisk persons agtpågivenhedspligt og årsagssammenhængen af denne tilsidesættelse.
 
 ## Q15. Hvilke ydelser og dækninger i motorkøretøjsforsikringen skal undersøges?
 
-Forsikringspligten ifølge artikel 6 i loven om obligatorisk ansvarsforsikring for motorkøretøjer (強制汽車責任保險法) rammer i princippet køretøjets ejer og i bestemte tilfælde også bruger eller forvalter af køretøjet. Dette system indretter en uagtsomhedsuafhængig ydelsesstruktur (無過失給付制度) for personer, der er kommet til skade eller er afgået ved døden ved motorkøretøjsulykker; den lovbestemte kreds af passagerer eller af en tredjemand (第三人) uden for køretøjet skal undersøges.
+Forsikringspligten ifølge artikel 6 i loven om obligatorisk ansvarsforsikring for motorkøretøjer (強制汽車責任保險法) rammer i princippet køretøjets ejer og i bestemte tilfælde også bruger eller forvalter af køretøjet. Dette system indretter en uagtsomhedsuafhængig ydelsesstruktur (無過失給付制度) for personer, der er kommet til skade eller er afgået ved døden ved motorkøretøjsulykker; den lovbestemte kreds af passagerer eller af en tredjemand (第三人) uden for køretøjet skal undersøges. Forsikringsselskabet udbetaler ikke ydelser, hvis den tilskadekomne eller en anden berettiget har forårsaget ulykken forsætligt eller under begåelse af en forbrydelse (artikel 28).
 
 Ved eneulykker med 1 køretøj er dets fører som regel ikke ydelsesmodtager af den obligatoriske forsikring for det køretøj. Ved ulykker med flere køretøjer kan føreren dog kræve ydelser hos det obligatoriske forsikringsselskab for et andet involveret køretøj.
 

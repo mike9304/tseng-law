@@ -1,7 +1,7 @@
 ---
 title: "Paghahabol ng Danyos dahil sa Pinsala sa Gym sa Taiwan: Kaso sa Unang Antas (第一審), Takdang Panahon, Ebidensya, Mga Uri ng Danyos"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "Setyembre 13, 2025"
 read_time: "7 minutong pagbabasa"
 categories:
@@ -19,7 +19,7 @@ Batay sa isang kaso kung saan nasugatan ang isang Koreanong estudyante sa uniber
 
 Naganap ang aksidente sa isang gym sa Taichung (臺中), sa gitna ng pagsasanay sa deadlift (硬舉) na pinamumunuan ng trainer. Matapos ang ganitong pinsala, hindi sapat na tingnan lamang ang katotohanang naganap ang aksidente sa loob ng gym. Kailangan ding sabay na suriin ang karanasan sa ehersisyo at ang kalagayan ng kalusugan ng gumagamit, ang uri ng ehersisyo at ang bigat na ginamit, ang paliwanag at ang pagtuturong ibinigay ng trainer, ang aktuwal na kilos at ang pagtugon noong mga sandaling iyon, ang ugnayang sanhi sa pagitan ng ehersisyo at ng pinsala, gayundin ang mga materyal na sumusuporta sa inihahablang pinsala.
 
-Sa kasong ito ay nagsilbi ako bilang kinatawan sa paglilitis (訴訟代理人) ng naghahabla, ang Koreanong estudyante. Sa hatol nito sa unang antas (第一審) noong Enero 24, 2022 hinggil sa kasong pangkonsumo noong taong 109 (2020), Blg. 7 (109年度消字第7號), inutusan ng Hukuman ng Distrito ng Taichung (臺灣臺中地方法院) ang inihahabla na magbayad ng [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) (新臺幣), kasama ang interes na nakasaad sa hatol.
+Sa kasong ito ay nagsilbi ako bilang kinatawan sa paglilitis (訴訟代理人) ng naghahabla, ang Koreanong estudyante. Sa hatol nito sa unang antas (第一審) noong Enero 24, 2022 hinggil sa kasong pangkonsumo noong taong 109 (2020), Blg. 7 (109年度消字第7號), inutusan ng Hukuman ng Distrito ng Taichung (臺灣臺中地方法院) ang kompanyang nagpapatakbo ng gym, isa sa mga inihahabla, na magbayad ng [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) (新臺幣), kasama ang interes na nakasaad sa hatol.
 
 Pagkatapos nito ay iniulat ng midya na nagkaroon ng kasunduang pag-aayos (和解) ang mga panig sa apela. Hindi matutukoy sa opisyal na hatol sa unang antas lamang ang naging kalalabasan ng apela o ang halaga ng kasunduan, kaya hindi dapat ituring na kumpirmadong kalalabasan ang kasunduang iniulat ng midya.
 
@@ -67,7 +67,7 @@ Ang sumusunod ay pangkalahatang impormasyon tungkol sa mga alitan hinggil sa pin
 
 ## 1. Anong mga pamamaraang legal ang maaaring suriin kapag nasugatan sa gym sa Taiwan?
 
-Ayon sa [Artikulo 7 ng Batas sa Proteksiyon ng Mamimili ng Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), kapag nagbibigay ng serbisyo ang isang operator ng negosyo (business operator, 企業經營者), kailangan niyang tiyakin na taglay ng serbisyo ang kaligtasang makatuwirang inaasahan batay sa pamantayang teknikal o propesyonal na umiiral sa panahon ng pagbibigay nito.
+Ayon sa [Artikulo 7 ng Batas sa Proteksiyon ng Mamimili ng Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), kapag nagbibigay ng serbisyo ang isang operator ng negosyo (business operator, 企業經營者), kailangan niyang tiyakin na taglay ng serbisyo ang kaligtasang makatuwirang inaasahan batay sa pamantayang teknikal o propesyonal na umiiral sa panahon ng pagbibigay nito. Itinatakda ng talata 3 ng parehong artikulo na ang operator ng negosyong lumabag sa mga kinakailangang ito at nagdulot ng pinsala sa mamimili o sa ikatlong panig ay solidaryong mananagot sa pagbabayad ng danyos, at kahit mapatunayan ng operator na wala siyang kasalanan, maaari lamang bawasan ng hukuman ang kanyang pananagutan.
 
 Hindi ibig sabihin nito na sa tuwing may nasusugatan sa gym ay mananagot na ang operator ng negosyo o ang trainer. Sa bawat kaso ay kailangang husgahan kung anong tiyak na tungkuling mag-ingat ang umiiral, kung nilabag ba ang tungkuling iyon, kung may ugnayang sanhi sa pagitan ng paglabag at ng pinsala, kung may aktuwal na pinsalang naganap, kung anong depensa ang maaaring ilahad ng kabilang panig, saka kung may ebidensyang sumusuporta sa bawat paghahabla at depensa.
 

@@ -1,7 +1,7 @@
 ---
 title: "Soalan lazim mengenai rawatan kemalangan jalan raya di Taiwan: langkah di tempat kejadian, kecuaian, perdamaian dan ganti rugi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "12 minit bacaan"
 categories:
@@ -95,7 +95,7 @@ Tuntutan berdasarkan perkara 184 Kanun Sivil mengandaikan pelanggaran haram terh
 
 - Kecederaan: Menurut perkara 193 Kanun Sivil boleh diteliti kos perubatan (醫療費用) yang diperlukan, kos tambahan kehidupan harian seperti kos jagaan (看護費用), kos perjalanan untuk rawatan (就醫交通費) dan alat bantu, serta kehilangan pendapatan (收入損失) kerana ketidakupayaan kerja sebenar dan pengurangan keupayaan kerja (勞動能力減損). Menurut perkara 195 Kanun Sivil pampasan penderitaan juga boleh diteliti.
 - Kematian: Menurut perkara 192 Kanun Sivil, apabila berkenaan, boleh diteliti kos perubatan sebelum kematian dan kos keperluan hidup yang meningkat, kos pengebumian (殯葬費) dan kehilangan nafkah (扶養利益損失) orang yang mempunyai hak berkanun kepada nafkah. Menurut perkara 194 Kanun Sivil pampasan penderitaan saudara tertentu juga boleh diteliti.
-- Harta: Menurut perkara 196 Kanun Sivil boleh dituntut kerosakan harta sebenar yang dibuktikan, termasuk kos pembaikan kenderaan atau kehilangan nilai.
+- Harta: Menurut perkara 196 Kanun Sivil, pemilik boleh menuntut pengurangan nilai kenderaan yang disebabkan oleh kerosakan itu; kos pembaikan hanya menjadi ukuran setakat yang perlu, dan susut nilai boleh ditolak apabila bahagian baharu menggantikan bahagian lama.
 
 ## Q8. Jika rawatan berterusan, bagaimana mengemukakan dokumen kos perubatan?
 
@@ -165,13 +165,13 @@ Perkara 188 Kanun Sivil mengatur kes apabila pekerja menyebabkan kerosakan haram
 
 Majikan boleh mendakwa bahawa ia mematuhi ketelitian yang wajar dalam pemilihan dan pengawasan pekerja, atau bahawa kerosakan tidak dapat dielakkan walaupun mematuhi ketelitian itu. Boleh dipertimbangkan untuk menuntut pampasan secara bersama terhadap majikan dan pekerja. Selepas membayar pampasan, majikan boleh menjalankan tuntutan balik terhadap pekerja.
 
-Jika majikan membuktikan syarat pengecualian ini dan orang yang cedera tidak memperoleh pampasan perenggan 1, mahkamah, menurut perkara 188, perenggan 2, Kanun Sivil, boleh memerintahkan pampasan keseluruhan atau sebahagian dengan mengambil kira keadaan ekonomi majikan dan orang yang cedera.
+Jika majikan membuktikan syarat pengecualian ini dan orang yang cedera tidak memperoleh pampasan perenggan 1, mahkamah, menurut perkara 188, perenggan 2, Kanun Sivil, jika orang yang cedera memohon, boleh memerintahkan majikan membayar pampasan keseluruhan atau sebahagian dengan mengambil kira keadaan ekonomi majikan dan orang yang cedera.
 
 Soalan terhadap siapa tuntutan sivil diarahkan mesti dibezakan daripada tanggungjawab jenayah. Tanggungjawab jenayah perkara 284 Kanun Jenayah dinilai menurut kegagalan kewajipan berjaga-jaga setiap individu dan kaitan sebab kegagalan itu.
 
 ## Q15. Faedah dan perlindungan insurans kenderaan apa yang perlu disemak?
 
-Kewajipan untuk menyertai menurut perkara 6 undang-undang insurans liabiliti sivil kenderaan wajib (強制汽車責任保險法) terletak, pada prinsipnya, ke atas pemilik kenderaan dan, dalam kes yang diperuntukkan, juga ke atas pengguna atau pentadbir kenderaan itu. Rejim ini menubuhkan struktur perlindungan tanpa kecuaian (無過失給付制度) bagi orang yang cedera atau meninggal kerana kemalangan kenderaan, tetapi perlu disemak skop penumpang atau pihak ketiga (第三人) di luar kenderaan yang ditetapkan undang-undang.
+Kewajipan untuk menyertai menurut perkara 6 undang-undang insurans liabiliti sivil kenderaan wajib (強制汽車責任保險法) terletak, pada prinsipnya, ke atas pemilik kenderaan dan, dalam kes yang diperuntukkan, juga ke atas pengguna atau pentadbir kenderaan itu. Rejim ini menubuhkan struktur perlindungan tanpa kecuaian (無過失給付制度) bagi orang yang cedera atau meninggal kerana kemalangan kenderaan, tetapi perlu disemak skop penumpang atau pihak ketiga (第三人) di luar kenderaan yang ditetapkan undang-undang. Penanggung insurans tidak membayar faedah apabila orang yang cedera atau orang lain yang berhak menuntut menyebabkan kemalangan itu dengan sengaja atau semasa melakukan jenayah (perkara 28).
 
 Dalam kemalangan satu kenderaan, pemandu kenderaan itu pada umumnya bukan penerima faedah insurans wajib kenderaan itu. Namun, dalam kemalangan yang melibatkan beberapa kenderaan, terdapat kes apabila pemandu boleh menuntut faedah daripada penanggung insurans wajib kenderaan lain yang terlibat.
 

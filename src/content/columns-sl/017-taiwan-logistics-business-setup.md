@@ -1,7 +1,7 @@
 ---
 title: "Logistična dejavnost na Tajvanu in dovoljenje za avtomobilski tovorni prevoz (汽車貨運業): nova ustanovitev, pridobitev in poveritev"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. septembra 2025"
 read_time: "12 min branja"
 categories:
@@ -118,7 +118,7 @@ Preveriti je treba veljavnost potrdila o vpisu dejavnosti prevoznika, ki mu je d
 
 Tudi če tujec postane delničar ali vlagatelj ciljne družbe, mu ta okoliščina sama po sebi ne podeli pravice do dela niti statusa prebivanja na Tajvanu. Če na Tajvanu izvršuje vsakodnevno delo, kot so vodenje družbe, prodaja, dodeljevanje vozil in skrb za stranko, mora pred začetkom dela preveriti, ali potrebuje delovno dovoljenje, ki ustreza dejanski funkciji, in posebej opraviti poznejši postopek prebivanja.
 
-Za delo brez dovoljenja se lahko uporabita upravna globa in nalog za zapustitev Tajvana (限令出國). Veljavni upravni napotki o prepovedi vstopa (禁止入國) Imigracijske uprave Ministrstva za notranje zadeve (內政部移民署) pri nedovoljenem delu splošno določajo dobo prepovedi vstopa 3 leta, vendar se lahko uporabijo zahteve za oprostitev ali skrajšanje dobe, ki jih določajo isti napotki. Izid se ne določa mehansko le zato, ker obstaja prijava tretje osebe, pristojni organ pa presoja dejanske okoliščine, pravila, ki se uporabljajo, in okoliščine vsake zadeve.
+Tujec, ki dela brez dovoljenja, je podvržen upravni globi, nemudoma mu je treba odrediti odhod s Tajvana (限令出國) in ne sme več delati na Tajvanu (68. člen zakona o storitvah zaposlovanja, 就業服務法). Veljavni upravni napotki o prepovedi vstopa (禁止入國) Imigracijske uprave Ministrstva za notranje zadeve (內政部移民署) pri nedovoljenem delu splošno določajo dobo prepovedi vstopa 3 leta, vendar se lahko uporabijo zahteve za oprostitev ali skrajšanje dobe, ki jih določajo isti napotki. Izid se ne določa mehansko le zato, ker obstaja prijava tretje osebe, pristojni organ pa presoja dejanske okoliščine, pravila, ki se uporabljajo, in okoliščine vsake zadeve.
 
 ## Uradni viri
 
@@ -136,6 +136,7 @@ Za delo brez dovoljenja se lahko uporabita upravna globa in nalog za zapustitev 
 - [Ministrstvo za gospodarstvo: napotki o vlogi za tujo naložbo](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [43. člen zakona o storitvah zaposlovanja (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [68. člen zakona o storitvah zaposlovanja](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [68. člen zakona o storitvah zaposlovanja (zbirka zakonov in predpisov)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)
 - [Imigracijska uprava Ministrstva za notranje zadeve: upravni napotki o dobi prepovedi vstopa](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Povezana navodila

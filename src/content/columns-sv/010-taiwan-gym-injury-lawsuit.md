@@ -1,7 +1,7 @@
 ---
 title: "Skadestånd vid gymskada i Taiwan: fall i första instans, frister, bevis och ersättningsposter"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "10 minuters läsning"
 categories:
@@ -19,7 +19,7 @@ Utifrån ett ärende där en koreansk universitetsstudent skadades medan denne f
 
 Olyckan inträffade på ett gym i Taichung (臺中), under ett marklyftpass (硬舉) som leddes av tränaren. Efter skadan räcker det inte att bara utgå från att olyckan skedde inne på gymmet. Man måste också granska användarens träningserfarenhet och hälsotillstånd, övningstyp och vikt, tränarens förklaringar och anvisningar, rörelsen och reaktionen just då, orsakssambandet (因果關係) mellan skadan och övningen, och de handlingar som stöder skadan.
 
-Jag var ombud (訴訟代理人) för käranden, den koreanska studenten. Distriktsdomstolen i Taichung förpliktade den 24 januari 2022, i domen i första instans i konsumentmål nr 7 för år 109 (2020) (109年度消字第7號), svaranden att betala [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den ränta som anges i domen.
+Jag var ombud (訴訟代理人) för käranden, den koreanska studenten. Distriktsdomstolen i Taichung förpliktade den 24 januari 2022, i domen i första instans i konsumentmål nr 7 för år 109 (2020) (109年度消字第7號), företaget som driver gymmet, en av svarandena, att betala [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den ränta som anges i domen.
 
 Därefter har pressen uppgett att parterna förliktes (和解) i andra instans. Enbart den officiella domen i första instans gör det inte möjligt att bekräfta utfallet i andra instans eller förlikningsbeloppet; den förlikning som pressen uppgett får inte läsas som ett bekräftat avslut av målet i första instans.
 
@@ -67,7 +67,7 @@ Det som följer är allmän information för att förklara tvister om gymskador 
 
 ## 1. Efter en gymskada i Taiwan, vilka rättsliga förfaranden kan prövas?
 
-[Artikel 7 i Taiwans lag om konsumentskydd (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) föreskriver att företaget, när det tillhandahåller en tjänst, ska se till att tjänsten har den säkerhet som skäligen kan förväntas enligt den yrkesmässiga eller tekniska standarden vid tillhandahållandet.
+[Artikel 7 i Taiwans lag om konsumentskydd (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) föreskriver att företaget, när det tillhandahåller en tjänst, ska se till att tjänsten har den säkerhet som skäligen kan förväntas enligt den yrkesmässiga eller tekniska standarden vid tillhandahållandet. I 3:e stycket i samma artikel föreskrivs att ett företag som bryter mot dessa krav och därigenom vållar en konsument eller en tredje man skada ansvarar solidariskt för skadeståndet, och att domstolen, även om företaget styrker att det saknar skuld, endast kan jämka ansvaret.
 
 Det betyder inte att företaget eller tränaren har ansvar varje gång en skada uppstår på gymmet. Det måste bedömas, ärende för ärende, vilken aktsamhetsplikt som konkret fanns, om den överträddes, om det finns orsakssamband mellan överträdelsen och skadan, om en verklig skada uppstod, vilka invändningar motparten har, och om det finns bevis som stöder varje påstående och varje invändning.
 

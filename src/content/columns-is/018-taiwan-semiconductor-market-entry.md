@@ -1,6 +1,6 @@
 ---
 title: "Hálfleiðarahlutaframleiðendur sem koma inn á markað Taívan: hvernig dótturfélag, útibú eða umboðssala er metin"
-lastmod: "2026-09-17"
+lastmod: "2026-10-07"
 date_display: "17. september 2026"
 read_time: "8 mín. lestur"
 categories:
@@ -65,11 +65,11 @@ Hafi verið ákveðið að stofna sjálfstæðan lögaðila á Taívan, skal ein
 
 ### Hlutafélag (股份有限公司): hæfir ef aðrir fjárfestar eiga að koma inn, eða skráning í kauphöll kemur til greina
 
-Hlutafé er skipt í hluti. Að jafnaði er krafist tveggja hluthafa hið minnsta, en ríki eða lögaðili getur stofnað eitt og sér, og erlendur lögaðili getur átt 100 %. Hlutir eru að jafnaði frjálst framseljanlegir, með lögbundnum undantekningum; sérstaka hluti og kauprétt starfsmanna má móta samkvæmt lögum. Það hæfir fyrirtækjum sem búast við fjárfestum, hlutaviðskiptum, hlutahvata til starfsmanna eða síðari samruna, yfirtöku, skráningu í kauphöll eða skráningu á verðbréfamarkaði fyrir skráningu (興櫃); það takmarkast ekki við stórfyrirtæki. Í stjórnskipulagi getur félag án opinbers útboðs samkvæmt samþykktum verið án stjórnar og aðeins haft 1 eða 2 stjórnarmenn. Félag með eitt ríki eða lögaðila sem einn hluthafa getur samkvæmt samþykktum verið án eftirlitsmanns félags (監察人). Ekki þarf hvert hlutafélag (股份有限公司) að láta ársreikning vottast. Helstu endurskoðunarviðmið almenns félags eru innborgað hlutafé að fjárhæð 30.000.000 TWD (新臺幣), eða, þar undir, rekstrartekjur 100.000.000 TWD eða 100 starfsmenn skráðir í launþegatryggingu (勞工保險); félög með opinbert útboð fylgja verðbréfareglum.
+Hlutafé er skipt í hluti. Að jafnaði er krafist tveggja stofnenda (發起人) hið minnsta, en ríki eða lögaðili getur stofnað eitt og sér, og erlendur lögaðili getur átt 100 %. Hlutir eru að jafnaði frjálst framseljanlegir, með lögbundnum undantekningum; sérstaka hluti og kauprétt starfsmanna má móta samkvæmt lögum. Það hæfir fyrirtækjum sem búast við fjárfestum, hlutaviðskiptum, hlutahvata til starfsmanna eða síðari samruna, yfirtöku, skráningu í kauphöll eða skráningu á verðbréfamarkaði fyrir skráningu (興櫃); það takmarkast ekki við stórfyrirtæki. Í stjórnskipulagi getur félag án opinbers útboðs samkvæmt samþykktum verið án stjórnar og aðeins haft 1 eða 2 stjórnarmenn. Félag með eitt ríki eða lögaðila sem einn hluthafa getur samkvæmt samþykktum verið án eftirlitsmanns félags (監察人). Ekki þarf hvert hlutafélag (股份有限公司) að láta ársreikning vottast. Helstu endurskoðunarviðmið almenns félags eru innborgað hlutafé að fjárhæð 30.000.000 TWD (新臺幣), eða, þar undir, rekstrartekjur 100.000.000 TWD eða 100 starfsmenn skráðir í launþegatryggingu (勞工保險); félög með opinbert útboð fylgja verðbréfareglum.
 
 ## 4. Málsmeðferðir útibús og dótturfélags greinast; aðeins dótturfélagið fer í gegnum skoðun fjárfestingarathugunardeildarinnar
 
-Þegar erlent félag stofnar dótturfélag á Taívan er heitið að jafnaði forathugað, og sótt um fjárfestingarheimild til fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司). Að samþykki fengnu er fé sent, fjárfestingarfjárhæð ákveðin, og endurskoðandi (會計師) kannar hlutafé, og síðan er stofnun og skattaskráningu lokið.
+Þegar erlent félag stofnar dótturfélag á Taívan er heitið að jafnaði forathugað, og sótt um fjárfestingarheimild til fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司). Að samþykki fengnu er fé sent, fjárfestingarfjárhæð ákveðin, og endurskoðandi (會計師) kannar hlutafé, og síðan er stofnun og skattaskráningu lokið. Eftir að sótt hefur verið um stofnskráningu skal félagið taka þátt í námskeiðum um vinnuréttindi (勞動權益講習) sem stjórnvöld á hvaða stigi sem er eða sjálfseignarstofnanir sem þau tilnefna standa fyrir (387-1. gr. félagalaga, í gildi frá og með júní árið 2026).
 
 Hins vegar krefst stofnun útibús almenns erlends félags á Taívan að jafnaði ekki fjárfestingarheimildar fjárfestingarathugunardeildarinnar; verslunarþróunarstofa efnahagsráðuneytisins (經濟部商業發展署) meðhöndlar skráningu útibúsins og tengda ákvörðun fjárhæðar. Áfram nauðsynleg eru forathugun heitis, sending rekstrarfjár, könnun hlutafjár og skattaskráning; tímaáætlunin er að jafnaði styttri.
 
@@ -77,9 +77,9 @@ Ofangreint ber saman skráningarferli útibús og dótturfélags og er ekki rá�
 
 ## 5. Félagaskráning og lögmæt vinna verkfræðings eru ekki það sama
 
-Að ljúka skráningu á Taívan merkir ekki að starfsfólk erlendra höfuðstöðva megi sjálfkrafa vinna á Taívan. Útlendingur sem vinnur á Taívan þarf lögmætt atvinnuleyfi og, við lengri dvöl, dvalarleyfi. Að jafnaði sækir vinnuveitandi um atvinnuleyfið og samsvarandi dvalarleyfi.
+Að ljúka skráningu á Taívan merkir ekki að starfsfólk erlendra höfuðstöðva megi sjálfkrafa vinna á Taívan. Útlendingur sem vinnur á Taívan þarf lögmætt atvinnuleyfi og, við lengri dvöl, dvalarleyfi. Að jafnaði sækir vinnuveitandi um atvinnuleyfi útlendingsins, og útlendingurinn sjálfur sækir um samsvarandi dvalarleyfi hjá innflytjendastofnun (移民署).
 
-Það er tiltölulega einfaldara að öðlast atvinnuleyfi fyrir stjórnanda dótturfélags á Taívan eða útibús erlends félags. Til að sækja um það fyrir annan útlending eða þá sem á eftir koma krefst vinnumálaráðuneytið, eftir atvinnugrein, viðmiða um hlutafé, veltu eða annað. Sé gert ráð fyrir að erlent starfsfólk vinni á Taívan, skal áður en félagið er stofnað staðfesta hvort fyrirhugað hlutafé nái viðeigandi viðmiði.
+Það er tiltölulega einfaldara að öðlast atvinnuleyfi fyrir stjórnanda dótturfélags á Taívan (félags sem hefur hlotið fjárfestingarheimild og þar sem útlendingar eiga meira en 1/3 hluta) eða útibús erlends félags. Jafnvel þegar fyrsti útlendingurinn er ráðinn skal vinnuveitandi þó uppfylla eitt af viðmiðunum í 39. gr. staðla um hæfi og athugun vegna starfa útlendinga. Fyrir félag sem er yngra en 1 árs eru viðmiðin meðal annars innborgað hlutafé (fyrir útibú rekstrarfé á Taívan) að lágmarki 500.000 TWD eða velta að lágmarki 3.000.000 TWD; fyrir félag sem er 1 árs eða eldra eru þau meðal annars meðalvelta síðasta 1 ár eða 3 ár að lágmarki 3.000.000 TWD. Ráði vinnuveitandi 2 eða fleiri útlendinga af sömu gerð skulu þeir útlendingar og vinnuveitandinn uppfylla almennu viðmiðin í 2. kafla (38. gr. 2. mgr.). Sé gert ráð fyrir að erlent starfsfólk vinni á Taívan, skal áður en félagið er stofnað staðfesta hvort fyrirhugað hlutafé nái viðeigandi viðmiði.
 
 ## 7. Skipulag sem eftir þróunarstigi starfseminnar má bera saman
 

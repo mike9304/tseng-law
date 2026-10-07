@@ -1,7 +1,7 @@
 ---
 title: "Náhrada škody za úraz v posilovně na Tchaj-wanu: věc 1. instance, lhůty, důkazy a položky náhrady"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. září 2025"
 read_time: "10 min čtení"
 categories:
@@ -19,7 +19,7 @@ Na základě věci, v níž se korejský vysokoškolský student zranil, když v
 
 Nehoda nastala v posilovně v Tchaj-čungu (臺中) při tréninku mrtvého tahu (硬舉) vedeném trenérem. Po úrazu nestačí setrvat jen u faktu, že k nehodě došlo uvnitř posilovny; je třeba společně posoudit sportovní zkušenost a zdravotní stav uživatele, druh cvičení a zátěž, vysvětlení a pokyny trenéra, pohyb a reakci v onom okamžiku, příčinnou souvislost (因果關係) mezi úrazem a cvičením a podklady, které uplatněnou škodu dokládají.
 
-Advokátka Wei Tseng zastupovala žalobce, korejského studenta, jako procesní zástupkyně (訴訟代理人). Okresní soud v Tchaj-čungu 24. 1. 2022 v rozsudku 1. instance ve spotřebitelské věci č. 7 roku 109 kalendáře Čínské republiky (民國109年度消字第7號) nařídil žalovanému zaplatit [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
+Advokátka Wei Tseng zastupovala žalobce, korejského studenta, jako procesní zástupkyně (訴訟代理人). Okresní soud v Tchaj-čungu 24. 1. 2022 v rozsudku 1. instance ve spotřebitelské věci č. 7 roku 109 kalendáře Čínské republiky (民國109年度消字第7號) nařídil společnosti provozující posilovnu, která je jedním ze žalovaných, zaplatit [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
 
 Poté tisk uvedl, že strany uzavřely smír (和解) ve 2. instanci. Samotný oficiální rozsudek 1. instance neumožňuje potvrdit výsledek 2. instance ani výši smíru; uvedený smír v tisku nelze brát jako potvrzené konečné vyřízení věci v 1. instanci.
 
@@ -67,7 +67,7 @@ Níže uvedené je obecná informace k vysvětlení sporů o úraz v posilovně 
 
 ## 1. Po úrazu v posilovně na Tchaj-wanu, jaké právní postupy lze posoudit?
 
-[Čl. 7 tchajwanského zákona o ochraně spotřebitele (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že když podnik poskytuje službu, musí zajistit, aby tato služba dosahovala bezpečnosti, kterou lze rozumně očekávat podle odborné nebo technické úrovně v okamžiku poskytnutí.
+[Čl. 7 tchajwanského zákona o ochraně spotřebitele (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že když podnik poskytuje službu, musí zajistit, aby tato služba dosahovala bezpečnosti, kterou lze rozumně očekávat podle odborné nebo technické úrovně v okamžiku poskytnutí. Odstavec 3 téhož článku stanoví, že podnikatel, který tyto požadavky poruší a způsobí spotřebiteli nebo třetí osobě škodu, odpovídá za náhradu společně a nerozdílně, a i když prokáže, že nezavinil, může soud jeho odpovědnost pouze snížit.
 
 To neznamená, že odpovědnost podniku nebo trenéra je uznána pokaždé, když k úrazu dojde v posilovně. Je třeba posuzovat věc po věci, jaká konkrétní povinnost péče existovala, zda byla porušena, zda je příčinná souvislost mezi porušením a úrazem, zda vznikla skutečná škoda, jaké námitky má protistrana a zda existuje důkaz dokládající každé tvrzení a každou námitku.
 

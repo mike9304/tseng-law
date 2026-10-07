@@ -1,7 +1,7 @@
 ---
 title: "Geschiedenis en rechtsregime van de massage in Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
-lastmod: "2025-09-13"
+lastmod: "2026-10-07"
 date_display: "13 september 2025"
 read_time: "3 minuten leestijd"
 categories:
@@ -51,11 +51,11 @@ mochten in werkelijkheid alleen personen met een visuele beperking (視障者) h
 
 Dat een persoon zonder visuele beperking (非視障者) dit beroep uitoefende, was onwettig.
 
-Deze wet hield stand tot 2003; destijds nam de heer Lin, die een kapperszaak dreef,
+Deze beperking bleef van kracht tot 31 oktober 2011; in 2003, binnen die periode, nam de heer Lin, die een kapperszaak dreef,
 
 werknemers zonder visuele beperking in dienst voor haarwas- en massagediensten, en de politie stelde dat vast.
 
-De heer Lin kreeg een bestuurlijke geldboete (罰鍰) van TWD 40.000, de twee werknemers TWD 10.000 en TWD 20.000 in nieuwe Taiwanese dollar (新臺幣).
+Volgens het toenmalige recht legde de Dienst Sociale Zaken van de stad Taipei (臺北市社會局) de heer Lin een bestuurlijke geldboete (罰鍰) van TWD 40.000 op en de twee werknemers bestuurlijke geldboeten van TWD 10.000 respectievelijk TWD 20.000 in nieuwe Taiwanese dollar (新臺幣).
 
 De heer Lin achtte deze sanctie zeer onrechtvaardig en vroeg een grondwetsuitlegging.
 
@@ -81,7 +81,7 @@ Zo werd bijvoorbeeld gevraagd of de geschreven regel die alleen personen met een
 
 en werd betwijfeld of deze regel werkelijk had bijgedragen tot de bescherming van de arbeid en het bestaan van personen met een visuele beperking.
 
-Ten slotte verklaarden de rechters van het Grondwettelijk Hof (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
+Ten slotte verklaarden de rechters van het Grondwettelijk Hof (大法官) in uitlegging nr. 649 (司法院釋字第649號) van 31 oktober 2008 de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲); de bepaling verloor haar werking op 31 oktober 2011, aan het einde van de in de uitlegging toegestane overgangstermijn van 3 jaar.
 
 ​
 

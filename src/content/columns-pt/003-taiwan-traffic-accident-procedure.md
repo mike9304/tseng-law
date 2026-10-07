@@ -1,7 +1,7 @@
 ---
 title: "Perguntas e respostas sobre o tratamento dos acidentes de viação em Taiwan: medidas no local, culpa, transação e indemnização"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-10-07"
 date_display: "13 de setembro de 2025"
 read_time: "12 min de leitura"
 categories:
@@ -95,7 +95,7 @@ A reclamação fundada no artigo 184 do Código Civil pressupõe uma ofensa ilí
 
 - Ferimentos: Segundo o artigo 193 do Código Civil podem ser examinados os encargos médicos (醫療費用) necessários, os encargos suplementares da vida quotidiana tais como os encargos de cuidados (看護費用), de transporte para tratamento (就醫交通費) e de ajudas técnicas, bem como a perda de rendimentos (收入損失) por incapacidade de trabalho real e a diminuição da capacidade de trabalho (勞動能力減損). Segundo o artigo 195 do Código Civil o dano moral pode também ser examinado.
 - Morte: Segundo o artigo 192 do Código Civil, quando houver lugar, podem ser examinados os encargos médicos anteriores à morte e os encargos de necessidades vitais acrescidos, os encargos fúnebres (殯葬費) e a perda de alimentos (扶養利益損失) da pessoa que tinha um direito legal aos alimentos. Segundo o artigo 194 do Código Civil o dano moral de certos parentes pode também ser examinado.
-- Património: Segundo o artigo 196 do Código Civil pode ser reclamado o dano patrimonial efetivo justificado, incluindo os encargos de reparação do veículo ou a perda de valor.
+- Património: Segundo o artigo 196 do Código Civil, o proprietário pode reclamar a diminuição do valor do veículo causada pelo dano; os encargos de reparação servem de referência apenas na medida necessária, e a depreciação pode ser deduzida quando peças novas substituem peças usadas.
 
 ## Q8. Se o tratamento prosseguir, como apresentar as peças de encargos médicos?
 
@@ -165,13 +165,13 @@ O artigo 188 do Código Civil rege o caso no qual o empregado causa um dano ilí
 
 O empregador pode alegar que observou a diligência devida na seleção e na vigilância do empregado, ou que o dano não teria podido ser evitado mesmo observando essa diligência. Pode ponderar-se reclamar a indemnização de forma conjunta contra o empregador e o empregado. Depois de ter indemnizado, o empregador pode exercer um recurso contra o empregado.
 
-Se o empregador provar estas condições de isenção e a pessoa lesada não obtiver a indemnização da alínea 1, o tribunal, segundo o artigo 188, alínea 2, do Código Civil, pode ordenar uma indemnização total ou parcial tendo em conta a situação económica do empregador e da pessoa lesada.
+Se o empregador provar estas condições de isenção e a pessoa lesada não obtiver a indemnização da alínea 1, o artigo 188, alínea 2, do Código Civil prevê que, se a pessoa lesada o requerer, o tribunal pode, tendo em conta a situação económica do empregador e da pessoa lesada, ordenar ao empregador que pague a indemnização total ou parcialmente.
 
 A questão de saber contra quem se orienta a reclamação civil deve ser distinguida da responsabilidade penal. A responsabilidade penal do artigo 284 do Código Penal aprecia-se segundo o incumprimento do dever de prudência de cada pessoa singular e o nexo de causalidade desse incumprimento.
 
 ## Q15. Que prestações e que coberturas do seguro automóvel devem verificar-se?
 
-A obrigação de subscrever segundo o artigo 6 da lei sobre o seguro obrigatório de responsabilidade civil automóvel (強制汽車責任保險法) recai, em princípio, sobre o proprietário do veículo e, nos casos previstos, também sobre o utilizador ou o administrador desse veículo. Este regime estabelece uma estrutura de cobertura sem culpa (無過失給付制度) para a pessoa ferida ou falecida em virtude de um acidente de automóvel, mas deve verificar-se a extensão dos passageiros ou de um terceiro (第三人) exterior ao veículo que a lei fixa.
+A obrigação de subscrever segundo o artigo 6 da lei sobre o seguro obrigatório de responsabilidade civil automóvel (強制汽車責任保險法) recai, em princípio, sobre o proprietário do veículo e, nos casos previstos, também sobre o utilizador ou o administrador desse veículo. Este regime estabelece uma estrutura de cobertura sem culpa (無過失給付制度) para a pessoa ferida ou falecida em virtude de um acidente de automóvel, mas deve verificar-se a extensão dos passageiros ou de um terceiro (第三人) exterior ao veículo que a lei fixa. A seguradora não paga as prestações quando a pessoa lesada ou outro reclamante causou o acidente intencionalmente ou durante a prática de um crime (artigo 28).
 
 Num acidente de um só veículo, o condutor desse veículo não é, em geral, destinatário das prestações do seguro obrigatório desse veículo. Contudo, num acidente em que intervêm vários veículos, existem casos nos quais o condutor pode reclamar prestações ao segurador obrigatório de outro veículo implicado.
 

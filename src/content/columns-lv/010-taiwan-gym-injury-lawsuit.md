@@ -1,7 +1,7 @@
 ---
 title: "Zaudējumu atlīdzība par traumu sporta zālē Taivānā: 1. instances lieta, termiņi, pierādījumi un atlīdzības posteņi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13. septembrī 2025. gadā"
 read_time: "7 min"
 categories:
@@ -19,7 +19,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 Negadījums notika sporta zālē Taidžunā (臺中) trenera vadītā stieņa pacelšanā no zemes (硬舉). Pēc traumas nepietiek palikt tikai pie fakta, ka negadījums notika sporta zāles iekšienē; kopīgi jāizvērtē lietotāja treniņa pieredze un veselības stāvoklis, vingrojuma veids un svars, trenera skaidrojums un norādījumi, kustība un reakcija tolaik, cēloņsakarība (因果關係) starp traumu un vingrojumu, kā arī dokumenti, kas pamato zaudējumus.
 
-Šajā lietā es kā procesuālā pārstāve (訴訟代理人) pārstāvēju prasītāju, korejiešu studentu. Taidžunas rajona tiesa 2022. gada 24. janvārī 1. instances spriedumā par Ķīnas Republikas 109. gada patērētāju lietu Nr. 7 (109年度消字第7號) uzdeva atbildētājam samaksāt [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) un spriedumā norādītos procentus.
+Šajā lietā es kā procesuālā pārstāve (訴訟代理人) pārstāvēju prasītāju, korejiešu studentu. Taidžunas rajona tiesa 2022. gada 24. janvārī 1. instances spriedumā par Ķīnas Republikas 109. gada patērētāju lietu Nr. 7 (109年度消字第7號) uzdeva sporta zāli pārvaldošajai sabiedrībai, kas bija viena no atbildētājām, samaksāt [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) un spriedumā norādītos procentus.
 
 Pēc tam presē tika ziņots, ka puses 2. instancē noslēgušas izlīgumu (和解). Oficiālais 1. instances spriedums pats par sevi neatklāj 2. instances iznākumu vai izlīguma summu; presē minēto izlīgumu nedrīkst uzskatīt par apstiprinātu 1. instances lietas galīgo iznākumu.
 
@@ -67,7 +67,7 @@ Turpmākais ir vispārīga informācija, lai skaidrotu strīdus par traumām spo
 
 ## 1. Kādu tiesisko kārtību pēc traumas sporta zālē Taivānā var izvērtēt?
 
-[Taivānas Patērētāju aizsardzības likuma (消費者保護法) 7. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nosaka, ka tad, kad uzņēmums sniedz pakalpojumu, tam jānodrošina tāds drošības līmenis, kādu saprātīgi var sagaidīt atbilstoši profesionālajiem vai tehniskajiem standartiem, kuri ir spēkā pakalpojuma sniegšanas brīdī.
+[Taivānas Patērētāju aizsardzības likuma (消費者保護法) 7. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nosaka, ka tad, kad uzņēmums sniedz pakalpojumu, tam jānodrošina tāds drošības līmenis, kādu saprātīgi var sagaidīt atbilstoši profesionālajiem vai tehniskajiem standartiem, kuri ir spēkā pakalpojuma sniegšanas brīdī. Tā paša panta 3. daļa nosaka, ka uzņēmums, kas pārkāpj šīs prasības un nodara kaitējumu patērētājam vai trešajai personai, ir solidāri atbildīgs par atlīdzināšanu, un pat ja uzņēmums pierāda, ka nav vainojams, tiesa var tikai samazināt tā atbildību.
 
 Tas nenozīmē, ka uzņēmuma vai trenera atbildība tiek atzīta ikreiz, kad trauma notiek sporta zālē. Katrā lietā atsevišķi jāvērtē, kāds konkrēts rūpības pienākums pastāvēja, vai tas tika pārkāpts, vai ir cēloņsakarība starp pārkāpumu un traumu, vai radušies faktiski zaudējumi, kādi iebildumi ir pretējai pusei un vai pastāv pierādījums, kas pamato katru apgalvojumu un katru iebildumu.
 

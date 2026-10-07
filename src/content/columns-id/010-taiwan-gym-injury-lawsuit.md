@@ -1,7 +1,7 @@
 ---
 title: "Ganti Rugi Cedera di Pusat Kebugaran Taiwan: Kasus Tingkat Pertama, Batas Waktu, Bukti, dan Pos Ganti Rugi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2026-07-25"
+lastmod: "2026-10-07"
 date_display: "13 September 2025"
 read_time: "10 menit baca"
 categories:
@@ -19,7 +19,7 @@ Artikel ini berangkat dari perkara seorang mahasiswa asal Korea yang mengalami c
 
 Kecelakaan itu terjadi di sebuah pusat kebugaran di Taichung (臺中), saat mahasiswa tersebut menjalani latihan deadlift (硬舉) di bawah bimbingan pelatih. Setelah cedera terjadi, yang perlu diperhatikan bukan sekadar kenyataan bahwa peristiwa itu berlangsung di dalam pusat kebugaran. Harus ditelaah pula pengalaman berolahraga dan kondisi kesehatan pengguna, jenis latihan serta beban yang digunakan, penjelasan dan bimbingan yang diberikan pelatih, gerakan dan penanganan pada saat kejadian, hubungan kausal (因果關係) antara latihan dan cedera, serta data yang mendukung kerugian yang didalilkan.
 
-Saya bertindak sebagai kuasa hukum (訴訟代理人) penggugat, yaitu mahasiswa asal Korea tersebut, dalam perkara ini. Pengadilan Distrik Taichung, Taiwan (臺灣臺中地方法院) pada 24 Januari 2022 menjatuhkan putusan tingkat pertama dalam perkara konsumen tahun 109 (2020) Nomor 7 (109年度消字第7號), yang memerintahkan tergugat membayar [1.579.589 dolar baru Taiwan (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) beserta bunga sebagaimana tercantum dalam putusan tersebut.
+Saya bertindak sebagai kuasa hukum (訴訟代理人) penggugat, yaitu mahasiswa asal Korea tersebut, dalam perkara ini. Pengadilan Distrik Taichung, Taiwan (臺灣臺中地方法院) pada 24 Januari 2022 menjatuhkan putusan tingkat pertama dalam perkara konsumen tahun 109 (2020) Nomor 7 (109年度消字第7號), yang memerintahkan perusahaan pengelola pusat kebugaran, salah satu tergugat, membayar [1.579.589 dolar baru Taiwan (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) beserta bunga sebagaimana tercantum dalam putusan tersebut.
 
 Setelah itu, pemberitaan media menyebutkan bahwa para pihak mencapai perdamaian (和解) pada tingkat banding. Pemberitaan itu tidak boleh dianggap sebagai hasil akhir yang sudah pasti atas putusan tingkat pertama, karena putusan resmi tingkat pertama saja tidak mengungkapkan hasil pemeriksaan tingkat banding maupun jumlah uang perdamaian.
 
@@ -67,7 +67,7 @@ Uraian di bawah ini merupakan informasi umum mengenai sengketa cedera di pusat k
 
 ## 1. Prosedur hukum apa saja yang dapat dipertimbangkan atas cedera di pusat kebugaran di Taiwan?
 
-[Pasal 7 Undang-Undang Perlindungan Konsumen Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) menentukan bahwa pelaku usaha (企業經營者), ketika menyediakan jasa, wajib memastikan jasa tersebut memenuhi tingkat keamanan yang secara wajar dapat diharapkan menurut standar profesional atau teknis yang berlaku pada saat jasa itu diberikan.
+[Pasal 7 Undang-Undang Perlindungan Konsumen Taiwan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) menentukan bahwa pelaku usaha (企業經營者), ketika menyediakan jasa, wajib memastikan jasa tersebut memenuhi tingkat keamanan yang secara wajar dapat diharapkan menurut standar profesional atau teknis yang berlaku pada saat jasa itu diberikan. Ayat (3) pasal yang sama menentukan bahwa pelaku usaha yang melanggar ketentuan tersebut dan menimbulkan kerugian bagi konsumen atau pihak ketiga bertanggung jawab secara tanggung renteng untuk membayar ganti rugi, dan bahwa sekalipun pelaku usaha membuktikan bahwa ia tidak bersalah, pengadilan hanya dapat mengurangi tanggung jawabnya.
 
 Meski demikian, hal itu tidak berarti tanggung jawab pelaku usaha atau pelatih diakui setiap kali terjadi cedera di pusat kebugaran. Harus dinilai perkara demi perkara: kewajiban kehati-hatian apa yang secara konkret ada, apakah kewajiban itu dilanggar, apakah terdapat hubungan kausal antara pelanggaran dan cedera, apakah kerugian benar-benar timbul, pembelaan apa yang dimiliki pihak lawan, serta apakah tersedia bukti yang mendukung setiap dalil dan pembelaan tersebut.
 

@@ -6,7 +6,7 @@
    Cream  #F7F3EA  news and glossary tiles             Greige    #E9E5DF  quiet bands
    Ink    #2C231E  text (warm near-black)              Stone     #6B5F57  secondary text   Rule #DDD6CC  hairlines
    인주   #C42B2B  the firm's seal only
-   Silk   /images/ko/plum-silk.webp — deep plum shot silk (Grok-generated texture, 2026-10-07; operator: 「고급진 자두색,
+   Silk   ./plum-silk.webp (bundled: hashed, immutable) — deep plum shot silk (Grok-generated texture, 2026-10-07; operator: 「고급진 자두색,
           한국 판사 법복의 띠처럼 빛에 따라 다른 색이 나는 느낌」): the search band, the case/figures chapter and the
           plum news tiles are cut from it, and its sheen travels as the page scrolls, like light moving over cloth.
    Type: Pretendard (self-hosted on ko pages) — light for display, bold for register heads; the device Ming/Song face
@@ -23,7 +23,6 @@
   --ko-rule: #ddd6cc;
   --ko-seal: #c42b2b;
   --ko-search-h: 76px;
-  --ko-silk: url('/images/ko/plum-silk.webp');
   /* The shot-silk glint: wine on one side, violet on the other, like the two threads of the weave catching the light. */
   --ko-glint: linear-gradient(105deg, transparent 0%, transparent 34%, rgb(214 92 140 / 50%) 45%, rgb(150 110 230 / 44%) 53%, transparent 65%, transparent 100%);
   /* Inline padding that puts a full-bleed section's content on the shared edge (.container + the 20–40px inset);
@@ -52,7 +51,8 @@
 }
 .home :focus-visible { outline: 3px solid var(--ko-plum); outline-offset: 3px; }
 
-/* The silk's sheen position: a registered property so the scroll-linked animation can travel it. */
+/* The silk's sheen position: a registered property so the scroll-linked animation can travel it. Every use carries a
+   28% fallback — without @property support an undefined variable would void the whole background. */
 @property --ko-sheen {
   syntax: '<percentage>';
   inherits: false;
@@ -188,9 +188,9 @@
   height: var(--ko-search-h);
   /* The robe's sash laid across the photograph: plum shot silk under a plum wash that keeps white text above 4.5:1. */
   background:
-    var(--ko-glint) var(--ko-sheen) 0 / 260% 100% no-repeat,
+    var(--ko-glint) var(--ko-sheen, 28%) 0 / 260% 100% no-repeat,
     linear-gradient(90deg, rgb(92 38 70 / 62%) 0%, rgb(104 44 80 / 46%) 55%, rgb(110 46 84 / 24%) 100%),
-    var(--ko-silk) 40% 70% / 160% auto no-repeat,
+    url('./plum-silk.webp') 40% 70% / 160% auto no-repeat,
     #6e2e54;
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 16%);
 }
@@ -264,9 +264,9 @@
 .columnCardAccent { background: var(--ko-cream); color: var(--ko-ink); }
 .columnCardAccent {
   background:
-    var(--ko-glint) var(--ko-sheen) 0 / 300% 100% no-repeat,
+    var(--ko-glint) var(--ko-sheen, 28%) 0 / 300% 100% no-repeat,
     linear-gradient(rgb(104 44 80 / 74%), rgb(104 44 80 / 74%)),
-    var(--ko-silk) 60% 60% / 260% auto no-repeat,
+    url('./plum-silk.webp') 60% 60% / 260% auto no-repeat,
     var(--ko-plum);
   color: #fff;
 }
@@ -284,7 +284,7 @@
   overflow: hidden;
 }
 .columnDate { margin-top: auto; padding-top: 22px; color: var(--ko-stone); font-size: 13px; font-variant-numeric: tabular-nums; }
-.columnCardAccent .columnDate { color: rgb(255 255 255 / 80%); }
+.columnCardAccent .columnDate { color: #fff; }
 .columnLink:hover .columnTitle { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .columnCardAccent :focus-visible { outline-color: var(--ko-ink); }
 
@@ -388,9 +388,9 @@
 /* One deep-plum chapter: the case, then the figures */
 .chapter {
   background:
-    var(--ko-glint) var(--ko-sheen) 0 / 320% 100% no-repeat,
+    var(--ko-glint) var(--ko-sheen, 28%) 0 / 320% 100% no-repeat,
     linear-gradient(180deg, rgb(58 34 50 / 86%) 0%, rgb(74 42 62 / 78%) 100%),
-    var(--ko-silk) 50% 50% / cover no-repeat,
+    url('./plum-silk.webp') 50% 50% / cover no-repeat,
     var(--ko-plum-deep);
   color: #fff;
 }

@@ -1425,6 +1425,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-equipment-installation-project-tax-permanent-establishment"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-related-party-loan-interest-thin-capitalization"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-related-party-loan-interest-thin-capitalization"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-related-party-loan-interest-thin-capitalization"
     }
   ]
 }

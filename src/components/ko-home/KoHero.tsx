@@ -5,8 +5,27 @@ import { siteContent } from '@/data/site-content';
 import { teamContent } from '@/data/team-members';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
-import { KO_HERO_IMAGE, KO_SEARCH_CHIPS } from './ko-home-content';
+import { KO_SEARCH_CHIPS } from './ko-home-content';
+import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
+import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import styles from './KoHome.module.css';
+
+/**
+ * The first screen's moving still (2026-10-07; operator chose the stone colonnade over Taipei 101 — 「촌스러워」 — and
+ * asked for the light coming in to move): a colonnade in plum dusk light generated with Grok, then a Grok image-to-video
+ * take where only the light drifts across the columns and floor, cut into a seamless 8 s loop (no people, text or
+ * landmarks; decorative — the h1 over it carries the meaning). The first frame is the poster, which stays for reduced
+ * motion and save-data visitors; phones get a portrait crop of the same loop. Same component as the zh-hant hero.
+ */
+export const KO_HERO_MEDIA = {
+  poster: '/images/ko/hero-colonnade.webp',
+  mobilePoster: '/images/ko/hero-colonnade-portrait.webp',
+  mp4: '/videos/ko-hero-colonnade-light.mp4',
+  webm: '/videos/ko-hero-colonnade-light.webm',
+  mobileMp4: '/videos/ko-hero-colonnade-light-portrait.mp4',
+  mobileWebm: '/videos/ko-hero-colonnade-light-portrait.webm',
+  mobileMediaQuery: '(max-width: 767px)',
+};
 
 const searchHref = (q: string) => `/ko/search?q=${encodeURIComponent(q)}`;
 
@@ -33,14 +52,27 @@ export default function KoHero() {
   return (
     <section className={styles.hero} id="hero" aria-labelledby="ko-hero-title">
       <div className={styles.heroStage}>
-        <Image
-          className={styles.heroImage}
-          src={KO_HERO_IMAGE.src}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-        />
+        <div className={styles.heroMedia}>
+          <DecorativeAutoplayVideo
+            className={styles.heroMediaPlayer}
+            imageClassName={styles.heroMediaImage}
+            videoClassName={styles.heroMediaImage}
+            poster={KO_HERO_MEDIA.poster}
+            mobilePoster={KO_HERO_MEDIA.mobilePoster}
+            mp4Src={KO_HERO_MEDIA.mp4}
+            webmSrc={KO_HERO_MEDIA.webm}
+            mobileMp4Src={KO_HERO_MEDIA.mobileMp4}
+            mobileWebmSrc={KO_HERO_MEDIA.mobileWebm}
+            mobileMediaQuery={KO_HERO_MEDIA.mobileMediaQuery}
+            alt=""
+            sizes="100vw"
+            priority
+            deferVideoUntilPosterPaint
+            deferVideoUntilPosterPaintOnAllViewports
+            rootMargin="0px"
+            controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS.ko}
+          />
+        </div>
         <div className={`${styles.wrap} ${styles.heroInner}`}>
           <p className={styles.firm}>
             <Image src="/images/brand/hovering-seal-official.png" alt="" width={28} height={28} />

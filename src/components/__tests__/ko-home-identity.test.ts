@@ -128,9 +128,9 @@ describe('ko home columns grid and hero photo', () => {
     expect(KoColumns({ posts: [] })).toBeNull();
   });
 
-  test('the hero photograph is loaded first (next/image priority), not lazily', () => {
+  test('the hero poster (first frame of the moving still) is loaded first (priority), not lazily', () => {
     const markup = renderToStaticMarkup(KoHero());
-    const img = /<img[^>]*hero-taipei-101-blue-hour[^>]*>/.exec(markup)?.[0] ?? '';
+    const img = /<img[^>]*hero-colonnade[^>]*>/.exec(markup)?.[0] ?? '';
     expect(img).not.toBe('');
     // Without `priority` next/image renders loading="lazy" (and no preload); the test renderer (React 18) prints no
     // fetchpriority, so the lazy flag is the guard.

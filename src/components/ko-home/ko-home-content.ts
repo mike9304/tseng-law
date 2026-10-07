@@ -5,9 +5,6 @@
  * per block.
  */
 
-/** The first-screen photograph: the site's own Taipei 101 blue-hour picture (an earlier home hero poster). Decorative —
- *  the h1 over it carries the meaning. The tower stands at ~80% of the width, so phones crop towards it. */
-export const KO_HERO_IMAGE = { src: '/images/hero-taipei-101-blue-hour.webp', width: 1600, height: 900 } as const;
 
 /**
  * The first-screen glossary: Taiwan legal terms as the firm's ko columns print them, 「한국어(漢字)」 — 대표사무소(辦事處),

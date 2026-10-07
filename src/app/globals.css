@@ -27728,6 +27728,7 @@ html[lang='ko'] :is(body:has(> .site), .site) {
   /* Darker than the ink: --navy is also text on the gold landing/guide keys (#241c18 on #9f8752 = 4.83:1). */
   --navy: #241c18;
   font-family: var(--font-ko-pretendard);
+  font-weight: 350;
 }
 /* Same weight as the shared html:is([lang='zh-Hant'], [lang='ko']) :where(:focus-visible) ring (#16382d) and later, so ko
    rings are plum; anything with a class of its own (the deep-plum chapter's white ring, the footer) still wins. */
@@ -27779,6 +27780,11 @@ html[lang='ko'] .site #ko-columns [class*='switchActive'] [class*='switchCount']
    rounds them with !important; the sidebar's consultation key outranks the square rule too. */
 html[lang='ko'] .site #ko-column .column-post-nav > a { border-radius: 0 !important; }
 html[lang='ko'] .site #ko-column .blog-sidebar > .blog-sidebar-card:first-child .button { border-radius: 0 !important; }
+/* Type weights on every ko page (2026-10-07, operator: 「글씨체 디자인도 세종처럼」; measured on the reference: body 350,
+   headings and labels 500, display thin): page titles 200 (the home sets its own 100), section and card headings 500.
+   Nodes an editor placed in a builder page keep their own weight. */
+html[lang='ko'] .site #main h1:not(#ko-home h1, .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 200 !important; }
+html[lang='ko'] .site #main :is(h2, h3):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 500 !important; }
 /* ZhHantContact raises the map keys to pills with two ids and !important; match that weight. */
 html[lang='ko'] .site #ko-contact #offices .office-map-link { border-radius: 0 !important; }
 html[lang='ko'] .site .scroll-top { border-color: transparent; border-radius: 0; background: #57524e; color: #fff; box-shadow: none; }

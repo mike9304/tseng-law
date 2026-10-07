@@ -27677,11 +27677,11 @@ html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-v
 html[lang='ko'] {
   --font-reading-zh: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-/* Korean identity (2026-10-06) on the public ko pages only: .site is the public shell (CinematicRouteShell), and the
-   body that holds it also carries the tokens for what public pages portal into document.body (header search overlay,
-   language picker); :is() drops body:has() where :has is unsupported and keeps .site. The builder and account routes
-   that also resolve to lang="ko" (/ko/admin-builder …) have no .site and keep the stack above, so the editor stage
-   does not change face. Pretendard (self-hosted, /fonts/pretendard-1.3.9, its 漢字 ranges removed) leads;
+/* Korean identity (2026-10-06) on the ko pages inside the public shell: .site is CinematicRouteShell (every [locale]
+   route, the member/account pages included), and the body that holds it also carries the tokens for what those pages
+   portal into document.body (header search overlay, language picker); :is() drops body:has() where :has is unsupported
+   and keeps .site. The builder routes that also resolve to lang="ko" (/ko/admin-builder, the (builder) layout) have no
+   .site and keep the stack above, so the editor stage does not change face. Pretendard (self-hosted, /fonts/pretendard-1.3.9, its 漢字 ranges removed) leads;
    漢字 glosses and addresses fall to the device Korean/CJK faces in one piece — naming the Noto Sans KR web font here
    pulled ~0.9 MB of its slices onto /ko. */
 html[lang='ko'] :is(body:has(> .site), .site) {
@@ -27725,7 +27725,8 @@ html[lang='ko'] :is(body:has(> .site), .site) {
   --text-meta: #6b5f57;
   --dark-bg: #5f4656;
   --ink-deep: #2c231e;
-  --navy: #2c231e;
+  /* Darker than the ink: --navy is also text on the gold landing/guide keys (#241c18 on #9f8752 = 4.83:1). */
+  --navy: #241c18;
   font-family: var(--font-ko-pretendard);
 }
 /* Same weight as the shared html:is([lang='zh-Hant'], [lang='ko']) :where(:focus-visible) ring (#16382d) and later, so ko
@@ -27756,9 +27757,12 @@ html[lang='ko'] .site #main :is([class*='ZhHant'], [data-ko-design], article.svc
   --zh-paper: #f7f3ea;
 }
 /* Square corners on the Korean site (2026-10-07, Korean big-firm grammar): every box, card, photo, action, chip, tab and
-   field in the ko page body (#main). Left round: native check/radio marks, icon keys and controls, dots, toggles and spinners,
-   and anything an editor placed in a builder page (its inline radius must not lose to !important). */
-html[lang='ko'] .site #main *:not(input[type='checkbox'], input[type='radio'], [class*='icon'], [class*='Icon'], [class*='control'], [class*='scroll-top'], [class*='nav-btn'], [class*='dot'], [class*='Dot'], [class*='toggle'], [class*='Toggle'], [class*='spinner'], .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
+   field in the ko page body (#main — the public pages and the member/account pages that share the shell), the header
+   search overlay (portaled into body) and the phone menu. Left as they are: native check/radio marks, anything with an
+   inline radius (builder-placed nodes, billing panels), icon keys and controls, dots, toggles, spinners, round
+   profile photos, and anything an editor placed in a builder page. */
+html[lang='ko'] .site #main *:not(input[type='checkbox'], input[type='radio'], [style*='border-radius'], [class*='icon'], [class*='Icon'], [class*='control'], [class*='scroll-top'], [class*='nav-btn'], [class*='dot'], [class*='Dot'], [class*='toggle'], [class*='Toggle'], [class*='spinner'], [class*='avatar'], [class*='Avatar'], [class*='ProfilePhoto'], .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *),
+html[lang='ko'] :is(body:has(> .site), .site) :is(.search-overlay, #public-mobile-nav-drawer) *:not(input[type='checkbox'], input[type='radio'], [style*='border-radius'], [class*='icon'], [class*='Icon'], [class*='control'], [class*='scroll-top'], [class*='nav-btn'], [class*='dot'], [class*='Dot'], [class*='toggle'], [class*='Toggle'], [class*='spinner'], [class*='avatar'], [class*='Avatar'], [class*='ProfilePhoto'], .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   border-radius: 0 !important;
 }
 /* Literal zh colours the tokens above do not reach (2026-10-07): office links in plum; the service contact panel and the
@@ -27766,6 +27770,11 @@ html[lang='ko'] .site #main *:not(input[type='checkbox'], input[type='radio'], [
 html[lang='ko'] .site #offices :is(.phone-number, .office-rating-link, .office-map-fallback-link) { color: #8e4c6e; }
 html[lang='ko'] .site #main [class*='ZhHantServiceDetail_contactPanel'] { background: #5f4656; }
 html[lang='ko'] .site #ko-contact .messenger-card { background: #5f4656; }
+/* Pale-green text tuned for the zh #16382d panels sits on plum on ko: white instead (6.16:1). */
+html[lang='ko'] .site #ko-traffic section[aria-labelledby='countries-title'] article:has(> a[href*='/columns/']) p { color: #fff; }
+html[lang='ko'] .site #ko-traffic [data-traffic-board] [aria-current='true'] [class*='chipCount'] { color: #fff; }
+/* The active columns switch count: white on plum lightened by 16% white was 4.34:1; darken the chip instead (7.86:1). */
+html[lang='ko'] .site #ko-columns [class*='switchActive'] [class*='switchCount'] { background: rgb(0 0 0 / 16%); }
 /* ZhHantContact raises the map keys to pills with two ids and !important; match that weight. */
 html[lang='ko'] .site #ko-contact #offices .office-map-link { border-radius: 0 !important; }
 html[lang='ko'] .site .scroll-top { border-color: transparent; border-radius: 0; background: #57524e; color: #fff; box-shadow: none; }

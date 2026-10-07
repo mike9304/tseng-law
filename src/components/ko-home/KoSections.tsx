@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type InsightsArchiveSection from '@/components/InsightsArchiveSection';
 import { siteContent } from '@/data/site-content';
 import { getServiceSlugs } from '@/data/service-details';
+import { prioritizeRecommendedColumns } from '@/lib/column-audience';
+import { typesetTitle } from '@/lib/ko-middot';
 import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import { KO_SERVICE_SCENARIOS } from './ko-service-scenarios';
 import { KO_LEDGER, KO_PROCESS, KO_SITUATIONS } from './ko-home-content';
@@ -11,17 +13,27 @@ type ColumnPost = Parameters<typeof InsightsArchiveSection>[0]['posts'][number];
 
 const searchHref = (q: string) => `/ko/search?q=${encodeURIComponent(q)}`;
 
-/** A register's head: the title on the left, 「전체 보기」 (the header menu's own label) on the right after a short rule. */
+/**
+ * A register's head: the title on the left, 「전체 보기」 (the header menu's own label) on the right after a short rule.
+ * The link's accessible name carries the title too (「호정칼럼 전체 보기」), so a links list does not show two bare
+ * 「전체 보기」.
+ */
 function SectionHead({ id, title, more }: { id: string; title: string; more?: { href: string; label: string } }) {
   return (
     <div className={styles.sectionHead}>
       <h2 id={id} className={styles.sectionTitle}>{title}</h2>
       {more ? (
-        <Link href={more.href} className={styles.more}>{more.label}</Link>
+        <Link href={more.href} className={styles.more}>
+          <span className={styles.visuallyHidden}>{title} </span>
+          {more.label}
+        </Link>
       ) : null}
     </div>
   );
 }
+
+/** Publication date first (the frontmatter `published`); `date` is the last-modified date and only a fallback. */
+const publishedOn = (post: ColumnPost) => post.publicationDate || post.date || '';
 
 /**
  * The Taiwan legal terms the firm's ko columns print as 「한국어(漢字)」, as six tiles under the first screen; each runs
@@ -49,16 +61,17 @@ export function KoGlossary() {
 }
 
 /**
- * The newest six columns as a news grid: category, title and date on cream tiles, the third and fifth filled plum so
- * the grid reads as a pattern rather than a list. The columns page keeps the full archive and its filters.
+ * Six columns as a news grid: category, title and date on cream tiles, the third and fifth filled plum so the grid
+ * reads as a pattern rather than a list. The same order the home archive used: columns recommended to Korean readers
+ * first (column-audience), then newest by publication date. The columns page keeps the full archive and its filters.
  */
 export function KoColumns({ posts }: { posts: readonly ColumnPost[] }) {
   // ISO dates sort as strings; equal dates keep the order the archive gave them.
-  const latest = posts
+  const newest = posts
     .map((post, index) => ({ post, index }))
-    .sort((a, b) => (b.post.date ?? '').localeCompare(a.post.date ?? '') || a.index - b.index)
-    .slice(0, 6)
+    .sort((a, b) => publishedOn(b.post).localeCompare(publishedOn(a.post)) || a.index - b.index)
     .map(({ post }) => post);
+  const latest = prioritizeRecommendedColumns('ko', newest).slice(0, 6);
   if (latest.length === 0) return null;
   return (
     <section className={styles.columns} id="insights" aria-labelledby="ko-columns-title">
@@ -73,8 +86,8 @@ export function KoColumns({ posts }: { posts: readonly ColumnPost[] }) {
             <li key={post.slug} className={index === 2 || index === 4 ? styles.columnCardAccent : styles.columnCard}>
               <Link href={`/ko/columns/${post.slug}`} className={styles.columnLink}>
                 <span className={styles.columnCategory}>{post.categoryLabel}</span>
-                <span className={styles.columnTitle}>{post.title}</span>
-                <time className={styles.columnDate} dateTime={post.date}>{post.dateDisplay || post.date}</time>
+                <span className={styles.columnTitle}>{typesetTitle('ko', post.title)}</span>
+                <time className={styles.columnDate} dateTime={publishedOn(post) || undefined}>{post.dateDisplay || publishedOn(post)}</time>
               </Link>
             </li>
           ))}

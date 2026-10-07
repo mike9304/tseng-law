@@ -1557,6 +1557,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-free-trade-zone-bonded-factory-science-park-tax"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-import-duty-business-tax-commodity-tax-foreign-supplier"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-import-duty-business-tax-commodity-tax-foreign-supplier"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-import-duty-business-tax-commodity-tax-foreign-supplier"
     }
   ]
 }

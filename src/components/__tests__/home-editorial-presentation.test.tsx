@@ -19,7 +19,7 @@ import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
 import KoHomeBody from '@/components/KoHomeBody';
 import KoHero from '@/components/ko-home/KoHero';
 import KoMobileCta from '@/components/ko-home/KoMobileCta';
-import { KoPractice, KoProcess, KoSituations } from '@/components/ko-home/KoSections';
+import { KoColumns, KoGlossary, KoPractice, KoProcess, KoSituations } from '@/components/ko-home/KoSections';
 import JaHomeBody from '@/components/ja-design/kou/JaHomeBody';
 import JaHero from '@/components/ja-design/kou/JaHero';
 import JaSukashi from '@/components/ja-design/kou/JaSukashi';
@@ -332,28 +332,31 @@ describe('legacy home editorial composition', () => {
     const children = Children.toArray(home.props.children) as ReactElement[];
     expect(children.map((child) => elementType(child))).toEqual([
       KoHero,
-      KoSituations,
+      KoGlossary,
+      KoColumns,
       KoPractice,
-      InsightsArchiveSection,
-      KoProcess,
-      HomeAttorneySplit,
+      KoSituations,
       'div',
+      HomeAttorneySplit,
+      KoProcess,
       FAQAccordion,
       OfficeMapTabs,
       HomeContactCta,
       KoMobileCta,
     ]);
-    const chapter = Children.toArray((children[6] as ReactElement<{ children: ReactNode }>).props.children) as ReactElement[];
+    const chapter = Children.toArray((children[5] as ReactElement<{ children: ReactNode }>).props.children) as ReactElement[];
     expect(chapter.map((child) => elementType(child))).toEqual([HomeCaseResultsSplit, HomeStatsSection]);
-    expect((children[3] as ReactElement<{ posts: unknown; presentation?: string }>).props).toMatchObject({ posts, presentation: 'editorial' });
-    expect((children[7] as ReactElement<{ items: FAQItem[]; id?: string }>).props).toMatchObject({ items: faqItems, id: 'faq' });
-    expect((children[8] as ReactElement<{ id?: string; presentation?: string }>).props).toMatchObject({ id: 'offices', presentation: 'editorial' });
+    expect((children[2] as ReactElement<{ posts: unknown }>).props.posts).toBe(posts);
+    expect((children[8] as ReactElement<{ items: FAQItem[]; id?: string }>).props).toMatchObject({ items: faqItems, id: 'faq' });
+    expect((children[9] as ReactElement<{ id?: string; presentation?: string }>).props).toMatchObject({ id: 'offices', presentation: 'editorial' });
     // Neither the zh-hant hero (HeroSearch) nor the heritage interlude or reveal wrappers are part of it.
-    expect(children.some((child) => [HeroSearch, TaiwanHeritageInterlude, Reveal, ServicesBento].includes(elementType(child) as never))).toBe(false);
+    expect(children.some((child) => [HeroSearch, TaiwanHeritageInterlude, Reveal, ServicesBento, InsightsArchiveSection].includes(elementType(child) as never))).toBe(false);
 
     const markup = renderToStaticMarkup(home);
     expect(markup.match(/<h1\b/g)).toHaveLength(1);
     expect(markup).toContain('action="/ko/search"');
+    // The newest columns as a news grid, each linking to its column.
+    expect(markup).toContain('href="/ko/columns/sample"');
     expect(markup).toContain('lang="zh-Hant">資遣費</span>');
     expect(markup).toContain('>퇴직금</span>');
     expect(markup).not.toContain('/zh-hant/');

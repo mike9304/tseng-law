@@ -1306,37 +1306,122 @@
 :global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .skyline :global(.skyline-image) img { filter: grayscale(100%) contrast(1.02) brightness(0.96); }
 
 /* =====================================================================================================
-   ko · Korean identity chrome (2026-10-06, operator: 「한국도 한국 개성으로 디자인 해봐」). The ko site leaves the
-   zh-hant look on top of the shared neutral chrome: 쪽빛 indigo #233F7A for the consultation action, the current page
-   and focus; 10px corners instead of pills; a deep indigo-ink footer instead of graphite. Later in the file, same
-   specificity as the shared rules, so ko wins only where it differs.
+   ko chrome (2026-10-06 Korean identity; 2026-10-07 Korean big-firm grammar, operator: 「세종로펌 디자인으로 비슷하게,
+   색감도 비슷하게」). On top of the shared neutral chrome: plum #8E4C6E for the consultation action, the current page
+   and focus; square corners; a square warm-grey search key; a warm dark-grey footer under the Seoul–Taipei skyline
+   drawing on white. Later in the file, same specificity as the shared rules, so ko wins only where it differs.
    ===================================================================================================== */
 :global(.site[data-locale='ko']) .header :global(.nav-cta.button) {
-  border-radius: 10px !important;
-  background: #233f7a;
-  border-color: #233f7a;
+  border-radius: 0 !important;
+  background: #8e4c6e;
+  border-color: #8e4c6e;
   color: #fff;
   font-weight: 700;
 }
 :global(.site[data-locale='ko']) .header :global(.nav-cta.button):hover,
-:global(.site[data-locale='ko']) .header :global(.nav-cta.button):focus-visible { background: #172d5a; border-color: #172d5a; color: #fff; }
+:global(.site[data-locale='ko']) .header :global(.nav-cta.button):focus-visible { background: #5f4656; border-color: #5f4656; color: #fff; }
 :global(.site[data-locale='ko']) .header :global(.nav-link[aria-current='page']),
 :global(.site[data-locale='ko']) .header :global(.nav-link[aria-current='page']:hover),
 :global(.site[data-locale='ko']) .header :global(.nav-link[aria-current='page']:focus-visible) {
-  color: #1f2329;
-  box-shadow: inset 0 -3px 0 #233f7a;
+  color: #2c231e;
+  /* The silk sash on the header's edge marks the current page (Header keeps its indicator there); no second bar. */
+  box-shadow: none;
 }
-:global(.site[data-locale='ko']) .header :global(.nav-link):hover { color: #233f7a; }
-:global(.site[data-locale='ko']) .header :global(.nav-link):focus-visible { outline-color: #233f7a; }
+:global(.site[data-locale='ko']) .header :global(.nav-link):hover { color: #8e4c6e; }
+:global(.site[data-locale='ko']) .header :global(.nav-link):focus-visible { outline-color: #8e4c6e; }
 :global(.site[data-locale='ko']) .header :global(.mega-links) a:hover,
-:global(.site[data-locale='ko']) .header :global(.mega-links) a:focus-visible { color: #233f7a; }
-:global(.site[data-locale='ko']) .footer:global(.site-footer) { background: #151d31; }
+:global(.site[data-locale='ko']) .header :global(.mega-links) a:focus-visible { color: #8e4c6e; }
+/* Search: a square warm-grey key with a white glyph; the phone menu key square on cream. */
+:global(.site[data-locale='ko']) .header :global(.header-search-btn) { border-color: transparent; border-radius: 0; background: #57524e; color: #fff; }
+:global(.site[data-locale='ko']) .header :global(.header-search-btn):hover,
+:global(.site[data-locale='ko']) .header :global(.header-search-btn):focus-visible { border-color: transparent; background: #2c231e; color: #fff; }
+:global(.site[data-locale='ko']) .menuToggle:global(.mobile-toggle) { border-color: transparent; border-radius: 0; background: #f7f3ea; color: #2c231e; }
+:global(.site[data-locale='ko']) .menuToggle:global(.mobile-toggle):hover { background: #e9e5df; color: #2c231e; }
+:global(.site[data-locale='ko']) .skyline:global(.footer-skyline) { background: #fff; border-top-color: transparent; }
+:global(.site[data-locale='ko']) .footer:global(.site-footer) { background: #4b4541; }
 :global(.site[data-locale='ko']) .footer :global(.office-link),
 :global(.site[data-locale='ko']) .footer :global(.office-link-address),
 :global(.site[data-locale='ko']) .footer :global(.footer-main-note),
 :global(.site[data-locale='ko']) .footer :global(.footer-link-list) a,
 :global(.site[data-locale='ko']) .footer :global(.footer-legal-links) a,
 :global(.site[data-locale='ko']) .footer :global(.social-label),
-:global(.site[data-locale='ko']) .footer :global(.footer-copyright-row) { color: #aab4ca; }
+:global(.site[data-locale='ko']) .footer :global(.footer-copyright-row) { color: #d8d1ca; }
 :global(.site[data-locale='ko']) .footer :global(.footer-consultation-email-copy),
-:global(.site[data-locale='ko']) .footer :global(.social-icon) { border-radius: 10px; }
+:global(.site[data-locale='ko']) .footer :global(.social-icon) { border-radius: 0; }
+
+/* ---------- ko menu (2026-10-07, operator: 「메뉴쪽 위에 재밌는 효과, 밋밋하지 않게」) ----------
+   Type as on the reference site: menu 17px / 500. The robe's sash runs the menu: the hover marker (Header's sliding
+   indicator) becomes a plum shot-silk bar on the header's lower edge with a wine-to-violet glint running along it; the
+   header's lower edge carries a silk reading line that fills as the page scrolls; the menu panel opens like the
+   reference — a large thin plum title, a ruled list whose rows fill with plum from the left. */
+:global(.site[data-locale='ko']) .header :global(.nav-link) { font-size: 17px; font-weight: 500; letter-spacing: 0; }
+:global(.site[data-locale='ko']) .header :global(.nav-indicator) {
+  display: block;
+  bottom: -13px;
+  height: 3px;
+  border-radius: 0;
+  background: linear-gradient(105deg, #5f4656 0%, #8e4c6e 28%, #c45e8c 44%, #8c6bd0 54%, #8e4c6e 72%, #5f4656 100%);
+  background-size: 320% 100%;
+  background-position: 100% 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :global(.site[data-locale='ko']) .header :global(.main-nav:hover .nav-indicator),
+  :global(.site[data-locale='ko']) .header :global(.main-nav.menu-open .nav-indicator) { animation: koSashGlint 2.2s linear infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :global(.site[data-locale='ko']) .header :global(.nav-indicator) { transition: opacity 180ms ease; }
+}
+@keyframes koSashGlint {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+:global(.site[data-locale='ko']) .header:global(.mega-open) { border-bottom-color: #8e4c6e; }
+/* Reading line: fills left to right with the page's scroll (scroll-driven; absent where unsupported). */
+@supports (animation-timeline: scroll()) {
+  :global(.site[data-locale='ko']) .header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    pointer-events: none;
+    background: linear-gradient(90deg, #5f4656 0%, #8e4c6e 45%, #c45e8c 75%, #8c6bd0 100%);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    animation: koReadLine linear both;
+    animation-timeline: scroll(root);
+  }
+}
+@keyframes koReadLine {
+  to { transform: scaleX(1); }
+}
+:global(.site[data-locale='ko']) .header :global(.mega-panel) { background: #f4f0ea; border-bottom-color: #ddd6cc; }
+:global(.site[data-locale='ko']) .header :global(.mega-title) {
+  font-family: var(--font-ko-pretendard);
+  font-size: clamp(34px, 3vw, 44px);
+  font-weight: 200;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #8e4c6e;
+}
+:global(.site[data-locale='ko']) .header :global(.mega-description) { font-size: 16px; font-weight: 350; color: #6b5f57; }
+:global(.site[data-locale='ko']) .header :global(.mega-view-all) { color: #8e4c6e; font-weight: 500; }
+:global(.site[data-locale='ko']) .header :global(.mega-links) :global(li) { border-color: #d6cec3; }
+:global(.site[data-locale='ko']) .header :global(.mega-links) a {
+  padding-inline: 0 4px;
+  color: #2c231e;
+  font-size: 17px;
+  font-weight: 350;
+  background: linear-gradient(90deg, rgb(142 76 110 / 10%), rgb(142 76 110 / 0%)) no-repeat 0 0 / 0% 100%;
+  transition: background-size 380ms cubic-bezier(0.2, 0.7, 0.2, 1), padding-left 380ms cubic-bezier(0.2, 0.7, 0.2, 1), color 180ms ease;
+}
+:global(.site[data-locale='ko']) .header :global(.mega-links) a:hover,
+:global(.site[data-locale='ko']) .header :global(.mega-links) a:focus-visible { padding-left: 14px; background-size: 100% 100%; color: #8e4c6e; }
+:global(.site[data-locale='ko']) .header :global(.mega-links) a:hover :global(.mega-chevron),
+:global(.site[data-locale='ko']) .header :global(.mega-links) a:focus-visible :global(.mega-chevron) { color: #8e4c6e; transform: translateX(6px); }
+@media (prefers-reduced-motion: reduce) {
+  :global(.site[data-locale='ko']) .header :global(.mega-links) a { transition: none; }
+}
+:global(.site[data-locale='ko']) .header :global(.mega-overlay) { background: rgb(44 35 30 / 30%); }
+

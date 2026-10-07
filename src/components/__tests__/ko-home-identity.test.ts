@@ -5,6 +5,7 @@ import { describe, expect, test } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { KO_PRETENDARD_STYLESHEET } from '@/app/fonts';
 import KoHero from '@/components/ko-home/KoHero';
+import { KoColumns } from '@/components/ko-home/KoSections';
 import { KO_LEDGER, KO_PROCESS, KO_SITUATIONS } from '@/components/ko-home/ko-home-content';
 import { siteContent } from '@/data/site-content';
 
@@ -83,6 +84,57 @@ describe('ko home first screen and situations', () => {
       '계약 분쟁과 손해배상, 소비자 피해, 형사 절차의 수사 대응.',
       '이혼과 재산분할, 친권, 상속.',
     ]);
+  });
+});
+
+describe('ko home columns grid and hero photo', () => {
+  const post = (slug: string, publicationDate: string, lastmod: string, audience?: string[]) => ({
+    slug,
+    title: `제목 ${slug}·부제`,
+    date: lastmod,
+    publicationDate,
+    dateDisplay: `표시 ${publicationDate}`,
+    readTime: '3분',
+    categoryLabel: '법률정보',
+    featuredImage: '/images/example.webp',
+    summary: '요약',
+    ...(audience ? { audience } : {}),
+  });
+
+  test('six columns: recommended to Korean readers first, then newest by publication date (not lastmod)', () => {
+    const posts = [
+      post('old-but-touched', '2026-09-01', '2026-10-07'),
+      // Shown, with a later lastmod: the tile's machine date must still be the publication date.
+      post('n1', '2026-10-06', '2026-10-07'),
+      post('n2', '2026-10-05', '2026-10-05'),
+      post('n3', '2026-10-04', '2026-10-04'),
+      post('n4', '2026-10-03', '2026-10-03'),
+      post('n5', '2026-10-02', '2026-10-02'),
+      post('n6', '2026-10-01', '2026-10-01'),
+      post('ko-pick', '2026-08-01', '2026-08-01', ['ko']),
+    ];
+    const markup = renderToStaticMarkup(KoColumns({ posts }));
+    const slugs = [...markup.matchAll(/href="\/ko\/columns\/([^"]+)"/g)].map((match) => match[1]);
+    expect(slugs).toEqual(['ko-pick', 'n1', 'n2', 'n3', 'n4', 'n5']);
+    expect(markup).toContain('id="insights"');
+    // The machine date is the publication date the tile shows, not the last-modified date.
+    expect(markup).toContain('dateTime="2026-10-06">표시 2026-10-06</time>');
+    expect(markup).not.toContain('dateTime="2026-10-07"');
+    // Titles are typeset (the 「X·」 pair kept together), like the archive cards.
+    expect(markup).toMatch(/<span[^>]*white-space:\s*nowrap[^>]*>[^<]*·<\/span>/);
+  });
+
+  test('no columns, no section (and no #insights landmark)', () => {
+    expect(KoColumns({ posts: [] })).toBeNull();
+  });
+
+  test('the hero poster (first frame of the moving still) is loaded first (priority), not lazily', () => {
+    const markup = renderToStaticMarkup(KoHero());
+    const img = /<img[^>]*hero-colonnade[^>]*>/.exec(markup)?.[0] ?? '';
+    expect(img).not.toBe('');
+    // Without `priority` next/image renders loading="lazy" (and no preload); the test renderer (React 18) prints no
+    // fetchpriority, so the lazy flag is the guard.
+    expect(img).not.toContain('loading="lazy"');
   });
 });
 

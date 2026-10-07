@@ -1,7 +1,10 @@
 /**
- * Content for the ko home (Korean identity, 2026-10-06; operator: 「한국도 한국 개성으로 디자인 해봐」).
- * Every line restates existing ko site copy — no new claims. Sources are cited per block.
+ * Content for the ko home (Korean identity, 2026-10-06; operator: 「한국도 한국 개성으로 디자인 해봐」; 2026-10-07:
+ * 「한국 세종로펌 디자인으로 비슷하게 변형, 색감도 비슷하게」 — the layout grammar and palette of a Korean big-firm site,
+ * never its logo, photography or wording). Every line restates existing ko site copy — no new claims. Sources are cited
+ * per block.
  */
+
 
 /**
  * The first-screen glossary: Taiwan legal terms as the firm's ko columns print them, 「한국어(漢字)」 — 대표사무소(辦事處),

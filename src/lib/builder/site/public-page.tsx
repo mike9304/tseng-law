@@ -38,6 +38,7 @@ import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import ZhHantHomeBody from '@/components/ZhHantHomeBody';
 import KoHomeBody from '@/components/KoHomeBody';
 import { ZH_HANT_HERO_MEDIA } from '@/components/zh-hant-home/ZhHantHeroMedia';
+import { KO_HERO_MEDIA } from '@/components/ko-home/KoHero';
 import { getImageProps } from 'next/image';
 import { faqContent } from '@/data/faq-content';
 import { readZhHantStockHomeCopy } from '@/lib/builder/site/zh-hant-stock-home-copy';
@@ -1530,8 +1531,17 @@ export async function PublishedSitePageView({
         // The redesigned zh-hant home paints its own dawn poster (DecorativeAutoplayVideo: next/image fill,
         // sizes 100vw on wide screens; the raw portrait file on phones), so preload exactly those and not the
         // stock canvas hero, which that home never shows (post-deploy check 2026-10-01: ~285 KB wasted).
-        // The ko home (KoHomeBody) opens on type, not footage: nothing to preload.
-        if (redesignedKoHome) return null;
+        // The ko home (KoHomeBody) opens on its colonnade poster (the moving still's first frame, the LCP): the same
+        // media-scoped pair — next/image fill at 100vw on wide screens, the raw portrait file on phones.
+        if (redesignedKoHome) {
+          const { props: koPoster } = getImageProps({ src: KO_HERO_MEDIA.poster, alt: '', fill: true, sizes: '100vw' });
+          return (
+            <>
+              <link rel="preload" as="image" imageSrcSet={koPoster.srcSet} imageSizes="100vw" media="(min-width: 768px)" fetchPriority="high" />
+              <link rel="preload" as="image" href={KO_HERO_MEDIA.mobilePoster} media={KO_HERO_MEDIA.mobileMediaQuery} fetchPriority="high" />
+            </>
+          );
+        }
         if (redesignedZhHome) {
           const { props: desktopPoster } = getImageProps({ src: ZH_HANT_HERO_MEDIA.poster, alt: '', fill: true, sizes: '100vw' });
           return (

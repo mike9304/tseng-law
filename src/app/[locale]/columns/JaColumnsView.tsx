@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import CriminalBoardLink from '@/components/CriminalBoardLink';
 import ColumnsGrid, { type ColumnListItem, type ColumnsGridFilters } from '@/components/ColumnsGrid';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
@@ -41,7 +40,6 @@ export default function JaColumnsView({ title, description, label, showHero, sho
           </nav>
         </div>
       ) : null}
-      <CriminalBoardLink locale="ja" />
       {showRepeater ? (
         <ColumnsGrid
           locale="ja"

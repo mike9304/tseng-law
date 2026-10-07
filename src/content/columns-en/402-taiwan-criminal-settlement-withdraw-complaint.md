@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "October 7, 2026"
 read_time: "4 min read"
 categories: ["Taiwan Legal Information"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "Taiwan criminal settlement", "withdraw criminal complaint Taiwan", "Taiwan complaint deadline"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Two hands resting on a document envelope on a table"

@@ -165,6 +165,7 @@
 }
 .root:global(#ja-columns) :global(a.columns-card[data-column-topic='company'])::after { content: '社' / ''; }
 .root:global(#ja-columns) :global(a.columns-card[data-column-topic='labor'])::after { content: '労' / ''; }
+.root:global(#ja-columns) :global(a.columns-card[data-column-topic='criminal'])::after { content: '訴' / ''; }
 .root:global(#ja-columns) :global(a.columns-card[data-column-topic='litigation'])::after { content: '訴' / ''; }
 .root:global(#ja-columns) :global(a.columns-card[data-column-topic='family'])::after { content: '婚' / ''; }
 .root:global(#ja-columns) :global(a.columns-card[data-column-topic='inheritance'])::after { content: '続' / ''; }

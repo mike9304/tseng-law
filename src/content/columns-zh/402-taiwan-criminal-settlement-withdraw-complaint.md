@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026年10月7日"
 read_time: "約4分鐘閱讀"
 categories: ["台灣法律資訊"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "和解撤告", "和解金沒付", "告訴期間六個月"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "雙手放在木桌上的文件信封旁"

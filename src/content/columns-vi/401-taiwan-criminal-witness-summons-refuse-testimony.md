@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "7 tháng 10 năm 2026"
 read_time: "4 phút đọc"
 categories: ["Thông tin pháp luật Đài Loan"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "giấy triệu tập làm chứng Đài Loan", "quyền từ chối làm chứng", "phiên dịch tiếng Việt"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "Bàn trống và hai chiếc ghế đặt đối diện gần cửa sổ"

@@ -113,7 +113,7 @@ export const EN_SERVICE_EXTRA_COLUMNS: Readonly<Record<string, readonly string[]
 };
 
 /** Column topic order on the English columns index (topic ids from lib/column-topics.ts). */
-export const EN_COLUMN_TOPIC_ORDER = ['labor', 'family', 'litigation', 'visa', 'inheritance', 'company', 'tax', 'lawyer', 'other'] as const;
+export const EN_COLUMN_TOPIC_ORDER = ['labor', 'family', 'criminal', 'litigation', 'visa', 'inheritance', 'company', 'tax', 'lawyer', 'other'] as const;
 
 /** Home FAQ display order (question text, exact). Questions not listed keep their order after these. */
 export const EN_HOME_FAQ_ORDER: readonly string[] = [

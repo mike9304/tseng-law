@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026년 10월 7일"
 read_time: "4분 분량"
 categories: ["대만 법률정보"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "대만 불기소 재의", "대만 재의 10일", "准許提起自訴"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "탁자에 놓인 봉투와 서류를 짚은 손"

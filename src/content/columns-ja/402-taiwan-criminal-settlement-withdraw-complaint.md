@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026年10月7日"
 read_time: "約4分"
 categories: ["台湾法律情報"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "台湾 刑事 示談", "台湾 告訴 取消し", "告訴期間 6か月"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "机の上の書類封筒に添えられた両手"

@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026年10月7日"
 read_time: "約4分"
 categories: ["台湾法律情報"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "台湾 証人 召喚状", "台湾 証言拒絶", "台湾 刑事裁判"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "窓際の机と向かい合わせに置かれた椅子"

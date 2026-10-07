@@ -21,6 +21,7 @@ import {
 import { RECOMMENDED_SECTION_TITLE, splitRecommendedColumns } from '@/lib/en-recommended-columns';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import styles from './ColumnsGrid.module.css';
+import CriminalBoardLink from './CriminalBoardLink';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { typesetTitle } from '@/lib/ko-middot';
 
@@ -485,13 +486,16 @@ function normalizeFilterValue(value: string | string[] | null | undefined): stri
   return Array.isArray(value) ? value[0] ?? '' : value ?? '';
 }
 
-function postMatchesQuery(post: ColumnListItem, query: string): boolean {
+function postMatchesQuery(post: ColumnListItem, query: string, locale: PublicLocale8): boolean {
   if (!query) return true;
   const normalized = query.toLowerCase();
   return [
     post.title,
     post.summary,
     post.categoryLabel,
+    isExistingSiteLocale4(locale)
+      ? COLUMN_TOPIC_LABELS[locale][post.topic ?? resolveColumnTopic(post.slug, undefined, post.category)]
+      : undefined,
     post.blogCategory,
     post.authorName,
     ...(post.tags ?? []),
@@ -633,10 +637,10 @@ export default function ColumnsGrid({
           const month = post.date.slice(5, 7).replace(/^0/, '');
           if (month !== requestedMonth.replace(/^0/, '')) return false;
         }
-        return postMatchesQuery(post, appliedQuery);
+        return postMatchesQuery(post, appliedQuery, locale);
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps -- topicOf is derived from props only
-    [appliedQuery, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear, requestedTopic, topicMode],
+    [appliedQuery, locale, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear, requestedTopic, topicMode],
   );
 
   const cats: { id: ColumnCategory | 'all'; label: string }[] = [
@@ -719,6 +723,7 @@ export default function ColumnsGrid({
   return (
     <section className={`section section--light ${styles.root}`}>
       <div className="container">
+        {listHref === `/${locale}/columns` ? <CriminalBoardLink locale={locale} contained={false} /> : null}
         <form
           className="columns-search"
           role="search"

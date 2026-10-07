@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026年10月7日"
 read_time: "約4分"
 categories: ["台湾法律情報"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "窓際の誰もいない会議机と二脚の椅子"

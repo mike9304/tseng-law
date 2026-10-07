@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026年10月7日"
 read_time: "約4分鐘閱讀"
 categories: ["台灣法律資訊"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "窗邊空著的會議桌與兩張椅子"

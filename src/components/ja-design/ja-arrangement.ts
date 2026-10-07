@@ -20,6 +20,7 @@ export const JA_SERVICE_ORDER = ['investment', 'labor', 'civil', 'criminal', 'fa
 export const JA_COLUMN_TOPIC_ORDER: readonly ColumnTopic[] = [
   'company',
   'labor',
+  'criminal',
   'litigation',
   'family',
   'inheritance',

@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026年10月7日"
 read_time: "約4分"
 categories: ["台湾法律情報"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "台湾 不起訴 再議", "台湾 告訴人 10日", "准許提起自訴"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "机の上の封筒と書類に添えられた手"

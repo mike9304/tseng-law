@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026년 10월 7일"
 read_time: "4분 분량"
 categories: ["대만 법률정보"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "대만 증인 소환장", "증언거부권", "대만 형사재판"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "창가의 빈 탁자와 마주 놓인 의자"

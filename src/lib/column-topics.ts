@@ -9,6 +9,7 @@
  */
 
 export const COLUMN_TOPICS = [
+  'criminal',
   'company',
   'tax',
   'visa',
@@ -70,6 +71,7 @@ export type ColumnTopicUiLocale = 'ko' | 'zh-hant' | 'en' | 'ja';
 
 export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic, string>> = {
   ko: {
+    criminal: '형사소송',
     company: '법인설립·투자',
     tax: '세무',
     visa: '비자·체류',
@@ -81,6 +83,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     other: '기타 법률정보',
   },
   'zh-hant': {
+    criminal: '刑事訴訟',
     company: '公司設立與投資',
     tax: '稅務',
     visa: '簽證與居留',
@@ -92,6 +95,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     other: '其他法律資訊',
   },
   en: {
+    criminal: 'Criminal litigation',
     company: 'Company setup & investment',
     tax: 'Tax',
     visa: 'Visas & residence',
@@ -103,6 +107,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     other: 'Other legal topics',
   },
   ja: {
+    criminal: '刑事訴訟',
     company: '会社設立・投資',
     tax: '税務',
     visa: 'ビザ・在留',

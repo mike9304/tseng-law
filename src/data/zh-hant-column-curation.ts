@@ -5,6 +5,7 @@ import type { ColumnTopic } from '@/lib/column-topics';
  * first, company setup — mainly sought by foreign clients — last.
  */
 export const ZH_HANT_COLUMN_TOPIC_ORDER: readonly ColumnTopic[] = [
+  'criminal',
   'litigation',
   'family',
   'inheritance',

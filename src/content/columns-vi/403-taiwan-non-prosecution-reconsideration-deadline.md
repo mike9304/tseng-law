@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "7 tháng 10 năm 2026"
 read_time: "4 phút đọc"
 categories: ["Thông tin pháp luật Đài Loan"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "Đài Loan không truy tố", "yêu cầu xem xét lại 10 ngày", "准許提起自訴"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Bàn tay đặt trên giấy tờ và phong bì trên bàn"

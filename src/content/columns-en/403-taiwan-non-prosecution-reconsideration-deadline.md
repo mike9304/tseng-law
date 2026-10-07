@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "October 7, 2026"
 read_time: "4 min read"
 categories: ["Taiwan Legal Information"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "Taiwan non-prosecution reconsideration", "Taiwan criminal complaint appeal", "Taiwan ten-day deadline"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Hands holding a document envelope on a table"

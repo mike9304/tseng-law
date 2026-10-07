@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026년 10월 7일"
 read_time: "4분 분량"
 categories: ["대만 법률정보"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "창가의 빈 회의 탁자와 두 개의 의자"

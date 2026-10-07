@@ -6,7 +6,7 @@ lastmod: "2026-10-07"
 date_display: "October 7, 2026"
 read_time: "4 min read"
 categories: ["Taiwan Legal Information"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "Taiwan witness summons", "refuse testimony Taiwan", "American witness Taiwan"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "An empty table and two chairs beside a window"

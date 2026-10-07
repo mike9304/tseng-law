@@ -61,8 +61,8 @@ describe('column topic taxonomy (topic-grouped column index)', () => {
     const order = groups.map((group) => group.topic);
     expect(order).toEqual(COLUMN_TOPICS.filter((topic) => order.includes(topic)));
     expect(groups.reduce((n, group) => n + group.posts.length, 0)).toBe(getAllColumnPosts('ko').length);
-    // Family columns no longer own the top of the index: company comes first.
-    expect(order[0]).toBe('company');
+    // Keep the newly published criminal board visible at the start of the topic index.
+    expect(order[0]).toBe('criminal');
   });
 
   it('falls back from legacy category when a column has no topic', () => {

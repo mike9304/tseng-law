@@ -7,6 +7,7 @@ import r from './JaRead.module.css';
 
 /** One decorative kanji per topic (CONCEPT-V2 §5 C5), aria-hidden. */
 export const JA_GLYPH_BY_TOPIC: Record<ColumnTopic, string> = {
+  criminal: '訴',
   company: '社',
   labor: '労',
   litigation: '訴',

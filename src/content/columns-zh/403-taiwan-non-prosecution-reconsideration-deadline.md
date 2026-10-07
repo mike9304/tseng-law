@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "2026年10月7日"
 read_time: "約4分鐘閱讀"
 categories: ["台灣法律資訊"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "不起訴再議", "再議10日", "准許提起自訴"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "手扶著桌上的文件與信封"

@@ -7,7 +7,7 @@ lastmod: "2026-10-07"
 date_display: "7 tháng 10 năm 2026"
 read_time: "4 phút đọc"
 categories: ["Thông tin pháp luật Đài Loan"]
-topic: "litigation"
+topic: "criminal"
 tags: ["criminal-litigation", "bồi thường hình sự Đài Loan", "rút đơn Đài Loan", "hòa giải chưa trả tiền"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Hai bàn tay đặt cạnh phong bì hồ sơ trên bàn gỗ"

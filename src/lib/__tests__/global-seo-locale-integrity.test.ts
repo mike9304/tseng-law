@@ -100,11 +100,13 @@ describe.each(Object.entries(localeExpectations) as Array<
   it('localizes the WebSite publisher while sharing a neutral organization ID', () => {
     const payload = buildWebsiteJsonLd(locale);
     const localeRoot = `https://tseng-law.com/${locale}`;
+    // ko is the edition the bare domain serves crawlers: its WebSite node names the whole site at the domain root.
+    const siteRoot = locale === 'ko' ? 'https://tseng-law.com/' : localeRoot;
 
     expect(payload).toMatchObject({
-      '@id': `${localeRoot}#website`,
-      name: expected.organizationName,
-      url: localeRoot,
+      '@id': `${siteRoot}#website`,
+      name: locale === 'ko' ? '증준외 대만변호사' : expected.organizationName,
+      url: siteRoot,
       inLanguage: expected.language,
       publisher: {
         '@id': organizationId,

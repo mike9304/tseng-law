@@ -9,6 +9,7 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { isEnglishNoindexPath, isGloballyNoindexPath } from '@/lib/seo-visibility';
+import { ROOT_FALLBACK_LOCALE } from '@/lib/root-locale-negotiation';
 import { taiwanOfficeData, taiwanOfficeSeoRecords, type TaiwanOfficeId } from '@/data/office-locations';
 
 type ImageInput =
@@ -147,6 +148,16 @@ const pageTitleBrands = Array.from(
   new Set([...Object.values(organizationName), ...Object.values(pageTitleBrand)]),
 ).sort((a, b) => b.length - a.length);
 const pageTitleSeparatorPattern = /(?:\s*(?:\||｜|—|–|-)\s*)$/u;
+
+/**
+ * The site name Google prints above the URL. Google reads it only from the `WebSite` node of the domain-level
+ * home page (subdirectory homes such as `/ko` are not supported), and the bare domain sends Googlebot — which
+ * carries no Accept-Language — to the {@link ROOT_FALLBACK_LOCALE} edition. So that edition's `WebSite` node names
+ * the domain root as its `url` and carries this name; the other editions keep their localized firm name. The firm
+ * stays the publisher `Organization` (operator 2026-10-08: 「법무법인 호정 말고 … 증준외 대만변호사」 — the site is
+ * attorney Tseng's team site; "대만변호사" keeps the jurisdiction beside the name).
+ */
+export const ROOT_SITE_NAME = '증준외 대만변호사';
 
 const organizationAlternateNames = ['법무법인 호정', '昊鼎國際法律事務所', 'Hovering International Law Firm', 'Tseng Law', '昊鼎国際法律事務所'];
 
@@ -416,7 +427,7 @@ export function buildSeoMetadata({
       title,
       description,
       url: canonicalUrl,
-      siteName: organizationName[chromeLocale],
+      siteName: chromeLocale === ROOT_FALLBACK_LOCALE ? ROOT_SITE_NAME : organizationName[chromeLocale],
       locale: openGraphLocaleFor(locale),
       type,
       images: socialImages,
@@ -489,14 +500,17 @@ export function buildWebsiteJsonLd(
   const localizedAlternateNames = organizationAlternateNames.filter(
     (name) => name !== localizedOrganizationName && (locale !== 'ja' || name !== organizationName.en),
   );
+  // The edition the bare domain serves crawlers names the whole site (see ROOT_SITE_NAME).
+  const isRootEdition = locale === ROOT_FALLBACK_LOCALE;
+  const siteUrl = isRootEdition ? buildAbsoluteUrl('/') : websiteUrl;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${websiteUrl}#website`,
-    name: localizedOrganizationName,
-    alternateName: localizedAlternateNames,
-    url: websiteUrl,
+    '@id': `${siteUrl}#website`,
+    name: isRootEdition ? ROOT_SITE_NAME : localizedOrganizationName,
+    alternateName: isRootEdition ? [localizedOrganizationName, ...localizedAlternateNames] : localizedAlternateNames,
+    url: siteUrl,
     inLanguage: getLocaleLanguageTag(locale),
     publisher: {
       '@type': 'Organization',

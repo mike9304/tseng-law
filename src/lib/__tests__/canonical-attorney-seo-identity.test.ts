@@ -38,10 +38,14 @@ describe('canonical attorney SEO identity', () => {
   });
 
   it('preserves representative WebSite values for the existing locales', () => {
+    // The bare domain serves crawlers the ko edition, so its WebSite node names the domain root (Google site name).
     expect(buildWebsiteJsonLd('ko')).toMatchObject({
-      name: '법무법인 호정',
-      url: 'https://tseng-law.com/ko',
+      '@id': 'https://tseng-law.com/#website',
+      name: '증준외 대만변호사',
+      alternateName: expect.arrayContaining(['법무법인 호정']),
+      url: 'https://tseng-law.com/',
       inLanguage: 'ko',
+      publisher: { name: '법무법인 호정', url: 'https://tseng-law.com/ko' },
       potentialAction: {
         target: 'https://tseng-law.com/ko/search?q={search_term_string}',
       },

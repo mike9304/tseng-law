@@ -2,7 +2,7 @@
 title: "When Someone Who Lived Abroad Dies Holding Assets in Taiwan"
 seoTitle: "Taiwan Estate Tax After a Death Abroad"
 summary: "If a non-ROC national who lived abroad dies owning Taiwan property, estate tax reaches only property situated in Taiwan, with the return due within six months."
-lastmod: "2026-09-29"
+lastmod: "2026-10-07"
 date_display: "September 29, 2026"
 read_time: "6 min read"
 categories:
@@ -42,7 +42,7 @@ Ships, vehicles, aircraft, patents, trademarks and copyrights have their own lin
 
 ## Who files, by when, and at which office?
 
-[Article 6(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6) names the heirs and legatees as taxpayers. If there is no heir, the administrator is the taxpayer. The duty to pay is limited to the estate. Where property has already been transferred or lost, the duty follows its market value at death. An executor named in the will may file, pay, and apply for review on behalf of those taxpayers. That limit sits in the tax Act. The civil-law rules on liability and renunciation are in the inheritance note linked above. If someone has renounced, say so when you ask who should sign, and take the papers with you. For gifts added to the estate under [Article 15(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=15), Article 6(3) instead makes the recipient liable for the tax attributable to that gift, limited to the gifted property.
+[Article 6(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6) names the heirs and legatees as taxpayers. If there is no heir, the administrator is the taxpayer. The duty to pay is limited to the estate. Where property has already been transferred or lost, the duty follows its market value at death. An executor named in the will may file, pay, and apply for review on behalf of those taxpayers. That limit sits in the tax Act. The civil-law rules on liability and renunciation are in the inheritance note linked above. If someone has renounced, say so when you ask who should sign, and take the papers with you. For gifts added to the estate under [Article 15(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=15), Article 6(3) instead makes the recipient liable for the tax attributable to that gift, limited to the gifted property. This applies to deaths on or after September 13, 2026; for deaths from October 28, 2024 through September 12, 2026, it applies only where the deceased's spouse renounced the inheritance or lost the right to inherit (Article 6(5)).
 
 [Article 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23) gives six months, counted from the day after the death. Where the office has asked the court to appoint an administrator under Article 6, paragraph 2, the six months run from the day after that appointment. Property that a final judgment, or a document with the same effect, later confirms as the deceased's is reported in a supplemental return, within six months from the day after the judgment becomes final or the document is made.
 

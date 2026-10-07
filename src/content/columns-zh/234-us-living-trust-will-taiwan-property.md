@@ -3,7 +3,7 @@ title: "美國的遺囑與生前信託，管得到台北的房子和台灣的存
 seoTitle: "美國遺囑、生前信託與台灣遺產"
 summary: "在美國立了遺囑、設了可撤銷生前信託，台北的房子和台灣的存款不會因此直接移轉。只要登記簿上沒有移轉給受託人並辦理信託登記，房子在委託人過世時仍是他的財產。遺囑的成立及效力依立遺囑時的本國法，方式也可以依訂立地法等其他法律。適用台灣法時有特留分，辦繼承登記要附遺產稅繳清證明書或免稅證明書等文件。"
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "2026年10月5日"
 read_time: "約7分鐘閱讀"
 categories:
@@ -55,7 +55,7 @@ author: "legal-ai-assistant"
 
 經常居住境外的中華民國國民，與只有美國籍的人一樣，只就境內遺產課徵遺產稅（[遺產及贈與稅法第1條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=1)第2項）。死亡前二年內在境內有住所，或無住所而有居所且二年內居留合計逾365天，屬於經常居住境內（[第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=4)）。死亡前二年內自願喪失中華民國國籍的人，仍依中華民國國民的規定課稅（[第3條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=3-1)）。
 
-申報期限是死亡之次日起六個月內（[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）；經常居住境外的國民與外國人在境內的遺產，向臺北國稅局申報（[財政部稅務入口網](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)）。國外出具的證明文件，應經我國當地駐外機構簽證並檢附中文譯本（[申報應附文件](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB)）。免稅額對經常居住境外的國民與外國人也比照適用（[第18條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18)），2026年發生的繼承案件為1,333萬元（[財政部公告](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)）；配偶、子女、父母等第17條第1項第1款至第7款的扣除額則不適用（[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17)第2項）。依2026年9月11日修正公布的[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)，有遺囑執行人的案件，得由遺囑執行人代繼承人及受遺贈人申報、繳納遺產稅。美國聯邦與各州的法律和稅負，須另向美國當地的專業人士確認。
+申報期限是死亡之次日起六個月內（[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）；經常居住境外的國民與外國人在境內的遺產，向臺北國稅局申報（[財政部稅務入口網](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)）。死亡前二年內自願喪失中華民國國籍者，依同一說明，應向原戶籍所在地主管稽徵機關申報。國外出具的證明文件，應經我國當地駐外機構簽證並檢附中文譯本（[申報應附文件](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB)）。免稅額對經常居住境外的國民與外國人也比照適用（[第18條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18)），2026年發生的繼承案件為1,333萬元（[財政部公告](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)）；配偶、子女、父母等第17條第1項第1款至第7款的扣除額則不適用（[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17)第2項）。依2026年9月11日修正公布的[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)，有遺囑執行人的案件，得由遺囑執行人代繼承人及受遺贈人申報、繳納遺產稅。美國聯邦與各州的法律和稅負，須另向美國當地的專業人士確認。
 
 遺產稅未繳清前，不得分割遺產、交付遺贈或辦理移轉登記（[第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)）；沒有稅款繳清證明書或免稅證明書等文件，地政事務所不得逕為移轉登記（[第42條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)），繼承登記應附的文件見[土地登記規則第119條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=119)。遺囑把公寓遺贈給他人時，也要先辦畢繼承登記（指定有遺囑執行人的，連同遺囑執行人登記），再由繼承人或遺囑執行人會同受遺贈人申請（[第123條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=123)）。國外作成的遺囑須附何種驗證與譯本，宜先問不動產所在地的地政事務所。外國籍繼承人取得土地的限制與遺產稅的課徵範圍，另見[外國人繼承台灣不動產](/zh-hant/columns/foreign-heir-taiwan-succession-law-land)、[海外亡者的台灣遺產稅](/zh-hant/columns/taiwan-estate-tax-foreign-decedent)。
 

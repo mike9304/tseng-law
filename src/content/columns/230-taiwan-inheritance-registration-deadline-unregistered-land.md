@@ -3,7 +3,7 @@ title: "대만 부모님 명의로 남은 땅과 집, 상속등기를 미루면 
 seoTitle: "대만 상속등기 기한 6개월, 과태료와 미등기 부동산 공개 매각"
 summary: "대만에서 부모가 돌아가신 뒤 부동산 상속등기를 미루면 6개월 뒤 과태료, 1년 뒤 공고와 열책관리(列冊管理), 그로부터 15년 뒤 공개 매각으로 이어질 수 있습니다."
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "2026년 10월 5일"
 read_time: "7분 분량"
 categories:
@@ -62,7 +62,7 @@ author: "legal-ai-assistant"
 
 [토지등기규칙 제119조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=119)는 등기신청서와 기존 소유권장(所有權狀) 외에 내야 할 서류로 피상속인의 사망 사실이 적힌 호적등본, 상속인의 현재 호적등본, 상속계통표(繼承系統表), 유산세 납부(면제) 증명서를 듭니다([제34조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=34) 참조). 1985년 6월 5일 이후에 시작된 상속에서 상속을 포기한 사람이 있으면 법원이 그 포기를 받아 기록해 두었다는(准予備查) 증명 서류도 필요합니다. 상속계통표는 신청인이 민법에 따라 직접 작성하고, 누락이나 오류로 다른 사람이 손해를 입으면 법적 책임을 지겠다는 문구를 적어 서명합니다.
 
-상속인은 등기에 앞서 유산세(遺產稅)부터 정리해야 합니다. [유산및증여세법 제8조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)는 유산세를 완납하기 전에는 유산 분할, 유증 인도, 이전등기를 할 수 없다고 정하고, 면세 증명서나 이전 동의 증명서 같은 서류가 있는 경우만 예외로 둡니다. [제42조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)는 지정기관이 이런 증명서의 부본을 받지 못하면 이전등기를 할 수 없게 합니다. 납부할 세액이 없다고 결정된 경우에도 세무 당국이 면세 증명서를 발급하므로([제41조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=41)) 이 서류를 받아야 등기로 넘어갈 수 있습니다. 유산세 신고 기한은 사망일 다음 날부터 6개월이고([제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)), [제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)는 기한 안에 신고하지 않은 경우 결정된 납부세액의 2배 이하의 과태료를 정하고 있습니다.
+상속인은 등기에 앞서 유산세(遺產稅)부터 정리해야 합니다. [유산및증여세법 제8조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)는 유산세를 완납하기 전에는 유산 분할, 유증 인도, 이전등기를 할 수 없다고 정하고, 면세 증명서나 이전 동의 증명서 같은 서류가 있는 경우만 예외로 둡니다. [제42조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)는 지정기관이 이런 증명서의 부본을 받지 못하면 이전등기를 할 수 없게 합니다. 납부할 세액이 없다고 결정된 경우에도 세무 당국이 면세 증명서를 발급하므로([제41조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=41)) 이 서류를 받아야 등기로 넘어갈 수 있습니다. 유산세 신고 기한은 사망일 다음 날부터 6개월이고([제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)), [제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)는 기한 안에 신고하지 않은 경우 결정된 납부세액의 2배 이하의 과태료를 정하고 있습니다. 다만 기한 안에 신고하지 않은 유산세의 부과 기간(核課期間)은 신고 기한이 끝난 다음 날부터 7년이고, 이 기간 안에 발견되지 않으면 그 뒤에는 세금을 추징하거나 처벌할 수 없습니다([조세징수법(稅捐稽徵法) 제21조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=21), [제22조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=22)). 기한을 넘겼더라도 제보나 조사가 있기 전에 스스로 신고하고 세금을 내면 과태료는 면제되고 이자만 붙습니다([같은 법 제48조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=48-1)).
 
 ## 형제 한 명이 협조하지 않거나 해외에 있다면
 

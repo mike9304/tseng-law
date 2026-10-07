@@ -3,7 +3,7 @@ title: "米国の遺言とリビング・トラストは、台湾のマンショ
 seoTitle: "米国の遺言・リビングトラストと台湾財産の相続"
 summary: "米国で作った遺言と撤回可能なリビング・トラストだけでは、台北のマンションの名義も台湾の預金も動きません。台湾の登記簿に受託者への移転登記と信託登記がなければ、マンションは亡くなった方の財産のままです。遺言の成立と効力は作成時の本国法で判断され、方式は作成地法などによることもできます。台湾法が基準になれば特留分があり、相続登記には遺産税の完納証明書や免税証明書などが必要です。"
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "2026年10月5日"
 read_time: "約8分"
 categories:
@@ -59,7 +59,7 @@ author: "legal-ai-assistant"
 
 米国に住んでいた人が台湾の国籍も持っていた場合でも、台湾の外に常時居住（經常居住）していたのであれば、米国籍だけの人と同じく、台湾内にある遺産だけが遺産税の課税対象です（[遺産及び贈与税法第1条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=1)第2項）。死亡前2年以内に台湾に住所があった場合、または住所はなく居所があり、その2年間の台湾滞在が合計365日を超える場合は、台湾に常時居住していたものとされます（[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=4)）。死亡前2年以内に自ら台湾の国籍を離れた人にも、台湾国民に関する規定がそのまま適用されます（[第3条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=3-1)）。
 
-申告期限は死亡の翌日から6か月で（[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）、台湾の外に住んでいた国民と外国人の台湾内の遺産は、台北国税局に申告します（[財政部の税務ポータル（稅務入口網）の申告先の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)）。外国で発行された証明書類は、現地の台湾在外公館の認証を受け、中国語訳を添えます（[添付書類の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB)）。免税額は台湾の外に住んでいた国民と外国人にも同じ基準で適用され（[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18)）、2026年に亡くなった場合は1,333万台湾ドルです（[財政部の公告](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)）。一方、配偶者・子・父母の控除など、第17条第1項第1号から第7号までの控除は適用されません（[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17)第2項）。2026年9月11日に改正・公布された[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)により、遺言執行者がいる場合は、執行者が相続人と受遺者に代わって申告と納付を行うことができます。米国の連邦や州の税は別の問題ですので、米国の税務の専門家に確かめてください。
+申告期限は死亡の翌日から6か月で（[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）、台湾の外に住んでいた国民と外国人の台湾内の遺産は、台北国税局に申告します（[財政部の税務ポータル（稅務入口網）の申告先の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)）。ただし、死亡前2年以内に自ら台湾の国籍を放棄した人の遺産は、同じ案内により、放棄前の戸籍所在地を管轄する国税局に申告します。外国で発行された証明書類は、現地の台湾在外公館の認証を受け、中国語訳を添えます（[添付書類の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB)）。免税額は台湾の外に住んでいた国民と外国人にも同じ基準で適用され（[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18)）、2026年に亡くなった場合は1,333万台湾ドルです（[財政部の公告](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)）。一方、配偶者・子・父母の控除など、第17条第1項第1号から第7号までの控除は適用されません（[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17)第2項）。2026年9月11日に改正・公布された[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)により、遺言執行者がいる場合は、執行者が相続人と受遺者に代わって申告と納付を行うことができます。米国の連邦や州の税は別の問題ですので、米国の税務の専門家に確かめてください。
 
 遺産税を完納するまでは、遺産の分割、遺贈の引渡し、移転登記ができず（[第8条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)）、地政事務所（日本の法務局にあたる窓口）は、完納証明書や免税証明書などがなければ移転登記をしません（[第42条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)）。相続登記の書類は[土地登記規則第119条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=119)が定めています。遺言でマンションの遺贈を受けた人がいる場合も、まず相続人が相続登記を済ませ、そのうえで相続人と受遺者が共同で移転登記を申請します。遺言執行者が指定されているときは、執行者の登記と相続登記を終えた後、執行者が受遺者と共同で申請します（[第123条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=123)）。外国で作成された遺言を提出するときにどのような認証や訳文が必要かは、不動産所在地の地政事務所にあらかじめ確かめてください。
 

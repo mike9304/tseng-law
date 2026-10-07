@@ -3,7 +3,7 @@ title: "台湾の親名義のままの土地・家屋：相続登記を先延ば
 seoTitle: "台湾の相続登記は6か月以内：過料・列冊管理・公開入札"
 summary: "台湾で親が亡くなったあと、土地や建物の相続登記をしないままにすると、6か月後から過料、1年後に公告と列冊管理、さらに15年後には公開入札による売却へ進むことがあります。"
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "2026年10月5日"
 read_time: "約8分"
 categories:
@@ -64,7 +64,7 @@ author: "legal-ai-assistant"
 
 [土地登記規則第119条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=119)は、登記申請書と既存の所有権状（所有權狀）のほかに提出する書類として（[第34条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=34)）、被相続人の死亡の記載がある戸籍謄本、相続人の現在の戸籍謄本、相続系統表（繼承系統表）、遺産税の納付（免除）証明書を挙げています。戸籍謄本は、コンピュータ処理で照会できる場合には提出を省略できます。相続系統表は申請人が民法の規定に従って自分で作成し、漏れや誤りで他人に損害が生じたときは法的責任を負う旨を記して署名します。相続放棄をした人がいる場合は、相続開始が1985年6月5日以降であれば裁判所が放棄を備査（准予備查）したことの証明書類を、1985年6月4日以前であれば相続権の放棄に関する書類を添えます。
 
-登記の前に、台湾の遺産税（遺產稅）の手続きを済ませておく必要があります。[遺産及び贈与税法第8条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)は、遺産税を完納する前は遺産の分割、遺贈の交付、移転登記ができないと定め、免税証明書や移転同意証明書などがある場合だけを例外としています。[第42条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)は、これらの証明書の副本が提出されないときは、地政機関は移転登記をしてはならないとしています。納める税額がないと決定された場合にも免税証明書が発行されますから（[第41条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=41)）、この書類を受け取ってから登記に進むことになります。遺産税の申告期限は死亡日の翌日から6か月で（[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）、[第44条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)は、期限内に申告しなかった場合について、決定された納付税額の2倍以下の過料を定めています。
+登記の前に、台湾の遺産税（遺產稅）の手続きを済ませておく必要があります。[遺産及び贈与税法第8条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)は、遺産税を完納する前は遺産の分割、遺贈の交付、移転登記ができないと定め、免税証明書や移転同意証明書などがある場合だけを例外としています。[第42条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)は、これらの証明書の副本が提出されないときは、地政機関は移転登記をしてはならないとしています。納める税額がないと決定された場合にも免税証明書が発行されますから（[第41条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=41)）、この書類を受け取ってから登記に進むことになります。遺産税の申告期限は死亡日の翌日から6か月で（[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）、[第44条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)は、期限内に申告しなかった場合について、決定された納付税額の2倍以下の過料を定めています。ただし、期限内に申告しなかった遺産税の課税期間（核課期間）は申告期限の翌日から7年で、その間に発見されなければ、その後は追徴も処罰もできません（[稅捐稽徵法第21条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=21)、[第22条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=22)）。期限を過ぎても、通報や調査の前に自ら申告して納付すれば過料は免除され、利息だけが加算されます（[同法第48条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=48-1)）。
 
 ## 兄弟姉妹の一人が協力しない、または海外にいるとき
 

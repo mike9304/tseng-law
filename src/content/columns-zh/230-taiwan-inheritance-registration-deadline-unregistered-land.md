@@ -3,7 +3,7 @@ title: "長輩過世多年，土地房子還在他名下：繼承登記拖著不
 seoTitle: "繼承登記期限6個月：逾期罰鍰、列冊管理15年與公開標售"
 summary: "繼承登記的申請期間是繼承開始之日起6個月，逾期得處登記費最高20倍罰鍰；超過1年未辦，地政機關公告3個月後得列冊管理15年，期滿仍未辦就移請國有財產署公開標售。"
 published: "2026-10-05"
-lastmod: "2026-10-05"
+lastmod: "2026-10-07"
 date_display: "2026年10月5日"
 read_time: "約6分鐘閱讀"
 categories:
@@ -64,7 +64,7 @@ author: "legal-ai-assistant"
 
 依[土地登記規則第119條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=119)，申請繼承登記除登記申請書與所有權狀（[第34條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060003&flno=34)）外，還要提出載有被繼承人死亡記事的戶籍謄本、繼承人現在戶籍謄本、繼承系統表，以及遺產稅繳（免）納證明書或其他有關證明文件。繼承系統表由申請人依民法規定自行訂定，註明如有遺漏或錯誤致他人受損害，申請人願負法律責任，並簽名。有人拋棄繼承時，繼承開始在民國74年6月5日以後的，檢附法院准予備查的證明文件；在民國74年6月4日以前的，檢附拋棄繼承權的有關文件。
 
-遺產稅要先處理。[遺產及贈與稅法第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)規定，遺產稅未繳清前，不得分割遺產、交付遺贈或辦理移轉登記，但已取得免稅證明書、同意移轉證明書等文件的不在此限；[第42條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)也規定，不能檢附這些證明書副本的，地政機關不得逕為移轉登記。即使核定無應納稅款，稽徵機關也是發給核定免稅證明書（[第41條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=41)），要拿到這張證明才能向地政事務所送件。遺產稅應於被繼承人死亡之次日起6個月內，向戶籍所在地的國稅局（主管稽徵機關）申報（[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）；未依限申報的，[第44條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)定有按核定應納稅額加處2倍以下罰鍰的規定。
+遺產稅要先處理。[遺產及贈與稅法第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=8)規定，遺產稅未繳清前，不得分割遺產、交付遺贈或辦理移轉登記，但已取得免稅證明書、同意移轉證明書等文件的不在此限；[第42條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42)也規定，不能檢附這些證明書副本的，地政機關不得逕為移轉登記。即使核定無應納稅款，稽徵機關也是發給核定免稅證明書（[第41條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=41)），要拿到這張證明才能向地政事務所送件。遺產稅應於被繼承人死亡之次日起6個月內，向戶籍所在地的國稅局（主管稽徵機關）申報（[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）；未依限申報的，[第44條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)定有按核定應納稅額加處2倍以下罰鍰的規定。不過，未依限申報的遺產稅，核課期間自規定申報期間屆滿之翌日起算7年，在核課期間內未經發現者，以後不得再補稅處罰（[稅捐稽徵法第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=21)、[第22條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=22)）；逾期但在未經檢舉、未經調查前自動補報並補繳的，免予處罰，只加計利息（[同法第48條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=48-1)）。
 
 ## 有繼承人不配合，或人在國外
 

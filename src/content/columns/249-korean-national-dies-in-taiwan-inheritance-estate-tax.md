@@ -3,7 +3,7 @@ title: "대만에서 살다 세상을 떠난 한국인의 상속: 상속인은 �
 seoTitle: "대만 거주 한국인 사망 시 상속 준거법과 대만 유산세"
 summary: "대만에 살던 한국 국적자가 대만에서 사망하면 상속인과 상속분은 원칙적으로 한국법이 정하고, 대만 유산세는 대만에 있는 재산에만 붙습니다. 대만 국적의 배우자나 자녀가 있으면 제58조 단서 때문에 대만 민법으로도 몫을 계산해 두어야 하고, 유산세에서는 제17조 제2항에 따라 배우자·자녀 공제를 받지 못합니다. 신고는 타이베이 국세국에 하며, 한국에서 발급한 서류는 대만 재외공관의 인증을 받아야 합니다."
 published: "2026-10-05"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "2026년 10월 5일"
 read_time: "7분 분량"
 categories:
@@ -51,11 +51,11 @@ author: "legal-ai-assistant"
 | 배우자 553만, 직계비속 1인당 56만, 부모 1인당 138만 등 제1호~제7호 공제 | 적용 | 적용되지 않음 |
 | 사망 전 미납 세금·과태료·벌금, 증명되는 채무, 장례비 138만, 유언 집행·유산 관리 비용(제8호~제11호) | 적용 | 대만 안에서 발생한 것만 |
 
-면세액은 [제18조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18) 제2항이, 공제 제한은 [제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17) 제2항이 정합니다. 금액은 재정부가 [2026년에 발생한 상속에 적용한다고 공고한 금액](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)입니다. 대만 국적의 배우자와 미성년 자녀가 남았더라도 고인이 한국 국적이면 배우자 공제와 자녀 공제는 없습니다. 장례를 한국에서 치렀거나 채무가 한국에서 생겼다면 그 비용과 채무도 공제에서 빠집니다. 면세액과 공제를 뺀 과세유산 순액이 5,621만 대만달러 이하이면 세율은 10%이고, 그 위 구간은 15%, 20%입니다([제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=13), 2026년 금액).
+면세액은 [제18조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18) 제2항이, 공제 제한은 [제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17) 제2항이 정합니다. 금액은 재정부가 [2026년에 발생한 상속에 적용한다고 공고한 금액](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)입니다. 대만 국적의 배우자와 미성년 자녀가 남았더라도 고인이 한국 국적이면 배우자 공제와 자녀 공제는 없습니다. 다만 배우자의 잔여재산 차액분배청구권 공제([제17조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17-1))는 제17조 제2항의 제외 대상이 아니어서, 부부재산제에 대만 민법이 적용되는 경우([섭외민사법률적용법 제48조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=48))에는 이 공제를 신고할 수 있는지 검토할 필요가 있습니다. 장례를 한국에서 치렀거나 채무가 한국에서 생겼다면 그 비용과 채무도 공제에서 빠집니다. 면세액과 공제를 뺀 과세유산 순액이 5,621만 대만달러 이하이면 세율은 10%이고, 그 위 구간은 15%, 20%입니다([제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=13), 2026년 금액).
 
 ## 6개월 안에 타이베이 국세국에 신고합니다
 
-납세의무자는 상속인과 수유자입니다([제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)). 다만 제15조에 따라 유산에 합산되는 사망 전 2년 내 증여재산에 대응하는 세액은 제6조 제3항에 따라 수증자가 냅니다. 현행 [제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)(2026년 9월 11일 개정 공포)에 따라 사망한 다음 날부터 6개월 안에 신고해야 합니다. 정당한 사유로 기한을 맞출 수 없으면 기한이 끝나기 전에 서면으로 연장을 신청하고, 연장은 원칙적으로 3개월까지입니다([제26조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)). 기한 안에 신고하지 않으면 결정된 납부세액의 2배 이하 과태료(罰鍰)가 붙습니다([제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)).
+납세의무자는 상속인과 수유자입니다([제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)). 다만 2026년 9월 13일 이후 사망한 경우, 제15조에 따라 유산에 합산되는 사망 전 2년 내 증여재산에 대응하는 세액은 제6조 제3항에 따라 수증자가 냅니다. 2024년 10월 28일부터 그 전날까지 사망한 경우에는 피상속인의 배우자가 상속을 포기했거나 상속권을 잃었을 때만 이 항이 적용됩니다(같은 조 제5항). 현행 [제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)(2026년 9월 11일 개정 공포)에 따라 사망한 다음 날부터 6개월 안에 신고해야 합니다. 정당한 사유로 기한을 맞출 수 없으면 기한이 끝나기 전에 서면으로 연장을 신청하고, 연장은 원칙적으로 3개월까지입니다([제26조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)). 기한 안에 신고하지 않으면 결정된 납부세액의 2배 이하 과태료(罰鍰)가 붙습니다([제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)).
 
 신고처는 고인이 대만 어느 도시에 살았는지와 관계없습니다. 제23조 제2항은 중화민국 국민이 아닌 사람의 유산세를 중앙정부 소재지의 관할 세무기관에 신고하게 하고, 재정부 세무포털(稅務入口網)의 [신고 장소 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)는 이를 타이베이 국세국(臺北國稅局) 총국이나 소속 분국·세무서(稽徵所)로 적고 있습니다. 같은 사이트의 [첨부서류 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/7MrYaQB)에는 사망을 증명하는 자료, 상속인 각자의 신분 자료(신분증, 호구명부, 여권 또는 대만 거류증 사본 가운데 하나), 상속계통표(繼承系統表), 사망일 기준 예금 잔액증명서, 상장주식 잔고증명이 나옵니다. 외국에서 발급한 증명서류는 현지 대만 재외공관의 인증을 받고 중국어 번역본을 붙여야 한다는 항목도 있습니다.
 

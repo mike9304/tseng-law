@@ -3,7 +3,7 @@ title: "韓国籍の人が台湾で亡くなったときの相続：準拠法は
 seoTitle: "台湾在住の韓国籍者の相続：準拠法と台湾の遺産税"
 summary: "台湾で暮らしていた韓国籍の人が台湾で亡くなると、相続人と相続分は原則として韓国法で決まり、台湾の遺産税は台湾にある財産だけにかかります。台湾籍の配偶者や子がいれば、第58条ただし書があるため台湾民法でも相続分を計算しておく必要があります。遺産税では第17条第2項により配偶者や子の控除が使えず、申告先は台北国税局です。韓国で発行された書類には、台湾の在外機関の認証が要ります。"
 published: "2026-10-05"
-lastmod: "2026-10-06"
+lastmod: "2026-10-07"
 date_display: "2026年10月5日"
 read_time: "約8分"
 categories:
@@ -59,11 +59,11 @@ author: "legal-ai-assistant"
 | 配偶者553万、直系卑属1人56万、父母1人138万など第1号〜第7号の控除 | 適用 | 適用なし |
 | 死亡前に納めるべきだった税・過料・罰金、証明のある債務、葬儀費用138万、遺言執行・遺産管理の費用（第8号〜第11号） | 適用 | 台湾内で生じたものだけ |
 
-免税額は[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18)第2項、控除の制限は[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17)第2項によります。金額は、財政部が[2026年に発生した相続に適用すると公告した額](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)です。妻が台湾籍でも、亡くなった方が韓国籍であれば配偶者控除はありません。葬儀を韓国で行った場合の費用や、韓国で生じた債務も控除から外れます。免税額と控除を引いた課税遺産の純額が5,621万台湾元以下なら税率は10%で、それを超える部分は15%、20%と上がります（[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=13)、2026年の金額）。
+免税額は[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=18)第2項、控除の制限は[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17)第2項によります。金額は、財政部が[2026年に発生した相続に適用すると公告した額](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9ba544f1016c4b85b54960b4346b5b75)です。妻が台湾籍でも、亡くなった方が韓国籍であれば配偶者控除はありません。ただし、配偶者の剰余財産差額分配請求権の控除（[第17条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=17-1)）は第17条第2項の除外対象ではないため、夫婦の財産制に台湾民法が適用される場合（[渉外民事法律適用法第48条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=48)）は、この控除を申告できるか検討する余地があります。葬儀を韓国で行った場合の費用や、韓国で生じた債務も控除から外れます。免税額と控除を引いた課税遺産の純額が5,621万台湾元以下なら税率は10%で、それを超える部分は15%、20%と上がります（[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=13)、2026年の金額）。
 
 ## 台中に住んでいても申告先は台北国税局
 
-納税義務者は相続人と受遺者です（[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）。ただし、第15条により遺産に加算される死亡前2年以内の贈与財産に対応する税額は、第6条第3項により受贈者が納めます。現行の[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)（2026年9月11日改正公布）により、死亡の翌日から6か月以内に申告しなければなりません。同条第2項は、中華民国国民でない人の遺産税を中央政府所在地の税務機関に申告すると定めており、財政部の税務ポータルの[申告先の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)は、これを台北国税局（臺北國稅局）の総局または所属の分局・稽徴所としています。
+納税義務者は相続人と受遺者です（[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）。ただし、2026年9月13日以後に亡くなった場合、第15条により遺産に加算される死亡前2年以内の贈与財産に対応する税額は、第6条第3項により受贈者が納めます。2024年10月28日からその前日までに亡くなった場合は、被相続人の配偶者が相続を放棄したか相続権を失ったときに限って同項が適用されます（同条第5項）。現行の[第23条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)（2026年9月11日改正公布）により、死亡の翌日から6か月以内に申告しなければなりません。同条第2項は、中華民国国民でない人の遺産税を中央政府所在地の税務機関に申告すると定めており、財政部の税務ポータルの[申告先の案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/filing/rv3qBl3)は、これを台北国税局（臺北國稅局）の総局または所属の分局・稽徴所としています。
 
 正当な理由で期限に間に合わないときは、期限が切れる前に書面で延長を申請します。延長は原則3か月までです（[第26条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)）。期限内に申告しなかった場合は、決定された納付税額の2倍以下の過料（罰鍰）が科されます（[第44条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=44)）。
 

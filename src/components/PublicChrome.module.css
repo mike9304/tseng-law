@@ -1396,6 +1396,50 @@
 @keyframes koReadLine {
   to { transform: scaleX(1); }
 }
+/* ---------- ko logo light (2026-10-08, operator: 「위에 그냥 떠있기만 하면 밋밋하니까 빛이 가던 무슨 효과」) ----------
+   One pass of light crosses the lacquer-red seal and runs on through 「법무법인 호정」 — once as the page opens and
+   again whenever the logo is pointed at or focused. Not looped, so nothing keeps moving beside the content
+   (WCAG 2.2.2); reduced motion keeps the logo still. Both bands rest past the far edge (position 100%), so the
+   end of a pass and the snap back on leaving are invisible. */
+:global(.site[data-locale='ko']) .header .logoMark:global(.logo-mark) { position: relative; }
+:global(.site[data-locale='ko']) .header .logoMark:global(.logo-mark)::after {
+  content: '';
+  position: absolute;
+  inset: 1px 0;
+  border-radius: 30%;
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 0 41%, rgb(255 246 236 / 0%) 43%, rgb(255 246 236 / 62%) 50%, rgb(255 246 236 / 0%) 57%, transparent 59% 100%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+}
+:global(.site[data-locale='ko']) .header .brandText:global(.logo-kr) {
+  background: linear-gradient(105deg, currentColor 0 43%, #8e4c6e 46.5%, #c45e8c 50%, #8e4c6e 53.5%, currentColor 57% 100%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (forced-colors: active) {
+  :global(.site[data-locale='ko']) .header .brandText:global(.logo-kr) { background: none; -webkit-text-fill-color: currentColor; }
+  :global(.site[data-locale='ko']) .header .logoMark:global(.logo-mark)::after { content: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  :global(.site[data-locale='ko']) .header .logoMark:global(.logo-mark)::after { animation: koLogoLight 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.6s backwards; }
+  :global(.site[data-locale='ko']) .header .brandText:global(.logo-kr) { animation: koLogoLight 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.95s backwards; }
+  :global(.site[data-locale='ko']) .header .headerLogo:global(.header-logo):is(:hover, :focus-visible) .logoMark:global(.logo-mark)::after {
+    background-position: 0% 0;
+    transition: background-position 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  :global(.site[data-locale='ko']) .header .headerLogo:global(.header-logo):is(:hover, :focus-visible) .brandText:global(.logo-kr) {
+    background-position: 0% 0;
+    transition: background-position 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
+  }
+}
+@keyframes koLogoLight {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
 :global(.site[data-locale='ko']) .header :global(.mega-panel) { background: #f4f0ea; border-bottom-color: #ddd6cc; }
 :global(.site[data-locale='ko']) .header :global(.mega-title) {
   font-family: var(--font-ko-pretendard);

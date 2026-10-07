@@ -179,7 +179,7 @@ export default function MobileNavDrawer({
         <div className="drawer-header">
           <Link className="header-logo drawer-brand" href={`/${locale}`} onClick={onClose}>
             <span className="logo-mark" aria-hidden>
-              <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} />
+              <Image src="/images/brand/hovering-seal-complete.png" alt="" width={40} height={40} />
             </span>
             {locale === 'en' ? (
               <span className={`logo-kr ${styles.brandText} ${styles.brandTextEn}`}>

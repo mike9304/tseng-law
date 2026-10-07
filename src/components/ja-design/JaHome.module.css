@@ -546,7 +546,7 @@
   content: ''; position: absolute; z-index: 4; pointer-events: none;
   left: calc(62.28% - clamp(44px, 4vw, 64px)); top: 44%;
   width: clamp(88px, 8vw, 128px); aspect-ratio: 1; border-radius: 50%;
-  background: var(--ja-paper) url('/images/brand/hovering-seal-official.png') 50% 50% / 68% no-repeat;
+  background: var(--ja-paper) url('/images/brand/hovering-seal-complete.png') 50% 50% / 68% no-repeat;
   box-shadow: 0 0 0 6px var(--ja-paper), 0 18px 40px -16px rgb(27 24 20 / 45%);
 }
 @media (prefers-reduced-motion: no-preference) {

@@ -133,9 +133,10 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(consultation?.answer).not.toContain('Sending relevant documents in advance');
   });
 
-  it('1-4 hides Jungmin Son email in every locale while preserving the managing attorney email', () => {
-    for (const locale of ['ko', 'zh-hant', 'en'] as const) {
-      expect(teamContent[locale].members.find((member) => member.id === 'son-jungmin')?.email).toBe('');
+  // 1-4 hid the duplicated wei@ address until Jungmin Son's real address was confirmed; the address was supplied on 2026-10-08.
+  it('1-4 shows Jungmin Son\'s own address in every locale while preserving the managing attorney email', () => {
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      expect(teamContent[locale].members.find((member) => member.id === 'son-jungmin')?.email).toBe('son-7@tseng-law.com');
       expect(teamContent[locale].members.find((member) => member.id === 'tseng-junwei')?.email).toBe('wei@hoveringlaw.com.tw');
     }
     const renderer = readFileSync(path.join(root, 'src/components/AttorneyProfileSection.tsx'), 'utf8');
@@ -339,10 +340,14 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     }
   });
 
+  // 2026-10-08 (operator: 「로고 조금 짤려있는거 같은데, 너가 다시 생성」): the official seal's right and bottom sides ran
+  // flat into the image edge. hovering-seal-complete.png keeps every stroke of hovering-seal-official.png and closes the
+  // red field as one squircle with a margin; the source file stays in place unchanged.
   it('1b-6 uses the complete official seal in desktop and mobile headers', () => {
     for (const component of ['Header.tsx', 'MobileNavDrawer.tsx']) {
       const source = readFileSync(path.join(root, 'src/components', component), 'utf8');
-      expect(source).toContain('src="/images/brand/hovering-seal-official.png"');
+      expect(source).toContain('src="/images/brand/hovering-seal-complete.png"');
+      expect(source).not.toContain('src="/images/brand/hovering-seal-official.png"');
       expect(source).not.toContain('src="/images/brand/favicon-seal-red-512.png"');
       expect(source).not.toContain('src="/images/brand/hovering-seal-red-512.png"');
       expect(source).toContain('width={40} height={40}');
@@ -354,6 +359,10 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     expect(statSync(officialSealPath).size).toBe(230656);
     expect(createHash('sha256').update(officialSeal).digest('hex')).toBe(
       '73c20bf8407d52560fe63f20953fd98e10a34e42924d916edd56ca1dc0e5a8d8',
+    );
+    const completeSealPath = path.join(root, 'public/images/brand/hovering-seal-complete.png');
+    expect(createHash('sha256').update(readFileSync(completeSealPath)).digest('hex')).toBe(
+      '654c295fed1037a11ebbe82257ba4ccd7cf47fbc0ee97727a09b348b5e55aa9b',
     );
   });
 

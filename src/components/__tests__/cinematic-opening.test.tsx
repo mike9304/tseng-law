@@ -500,7 +500,7 @@ describe('cinematic opening content and semantics', () => {
     expect(layoutSource).not.toContain('isLocaleHome');
     expect(layoutSource).not.toContain('href="/images/brand/hovering-seal-official-opening.webp"');
     expect(headerSource).toContain(
-      '<Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} />',
+      '<Image src="/images/brand/hovering-seal-complete.png" alt="" width={40} height={40} />',
     );
   });
 

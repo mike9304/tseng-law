@@ -26,10 +26,11 @@ import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMeta
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
+import columnUiVi from '@/data/column-ui-vi.json';
 
 export const dynamic = 'force-dynamic';
 
-const copy: Record<SiteLocale, {
+const copy: Record<SiteLocale | 'vi', {
   backLabel: string;
   attorneyHeading: string;
   guideTitle: string;
@@ -39,6 +40,7 @@ const copy: Record<SiteLocale, {
   faqHeading: string;
   tocLabel: string;
 }> = {
+  vi: columnUiVi.article,
   ko: {
     backLabel: '← 칼럼 목록으로',
     attorneyHeading: '이 글 검토 변호사',
@@ -165,17 +167,10 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
   const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
-  /*
-   * Guidance locales render this shell with `locale` coerced to 'en' above, so
-   * every label came out English under a Vietnamese/Thai/Indonesian/Filipino
-   * article — "Back to Insights", "Contact Us", "Frequently Asked Questions".
-   * The content pack already publishes reviewed wording for three of the seven,
-   * so use those. The remaining four (attorneyHeading, guideTitle,
-   * consultationTitle, consultationText) have no equivalent in the pack and are
-   * left in English rather than invented here — they need the translation lane.
-   */
+  // Vietnamese has a complete native article shell. Other guidance locales
+  // continue to use their existing translated navigation with English fallbacks.
   const guidancePack = guidanceLocale ? guidanceContent[guidanceLocale] : null;
-  const t = guidancePack
+  const t = urlLocale === 'vi' ? copy.vi : guidancePack
     ? {
         ...copy.en,
         backLabel: `← ${guidancePack.nav.columns}`,
@@ -183,9 +178,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         consultationButton: guidancePack.contactCta,
       }
     : copy[locale];
-  // Guidance locales borrow the English shell labels, so they get no TOC label
-  // (and no TOC) until the translation lane supplies one.
-  const tocEntries = guidancePack ? [] : extractColumnToc(post.content);
+  const tocEntries = guidancePack && urlLocale !== 'vi' ? [] : extractColumnToc(post.content);
   const diagramVideo = post.diagramVideo && isTrafficDiagramId(post.diagramVideo.id) && isTrafficDiagramLocale(urlLocale)
     ? { id: post.diagramVideo.id, locale: urlLocale }
     : null;
@@ -202,7 +195,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           : 'Attorney Wei Tseng';
   // Retain provenance so AI-written columns never inherit an attorney byline.
   const aiAuthored = isAiAuthoredColumn(post);
-  const attorneyHeading = aiAuthored
+  const attorneyHeading = urlLocale === 'vi' ? t.attorneyHeading : aiAuthored
     ? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en
     : t.attorneyHeading;
   const authorProfilePath = getAttorneyProfilePath(locale);
@@ -264,8 +257,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       readTime: p.readTime,
     }));
 
-  const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
-  const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
+  const prevLabel = urlLocale === 'vi' ? columnUiVi.article.prevLabel : locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
+  const nextLabel = urlLocale === 'vi' ? columnUiVi.article.nextLabel : locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
 
   // FAQ (FAQPage schema + plain-text "자주 묻는 질문" section). Only the two
   // indexed, hand-authored locales (ko / zh-hant) carry an `faq` array; the
@@ -274,7 +267,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   const faqItems = post.faq ?? [];
   // File-backed EN columns now carry translated FAQ; render for all locales with FAQ data.
   const showFaq = faqItems.length > 0;
-  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;
+  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, urlLocale) : null;
 
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.item-template',
@@ -331,6 +324,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       readTime: post.readTime,
       content: showBody && !diagramSplit ? post.content : '',
       topic: post.topic,
+      tags: post.tags,
     },
     prevPost: showBody && prevPost ? { slug: prevPost.slug, title: prevPost.title } : null,
     nextPost: showBody && nextPost ? { slug: nextPost.slug, title: nextPost.title } : null,

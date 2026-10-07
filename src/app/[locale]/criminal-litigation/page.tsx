@@ -21,16 +21,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: CRIMINAL_BOARD_PATH, alternateLocales: CRIMINAL_BOARD_LOCALES });
 }
 
-export default async function CriminalLitigationPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CriminalLitigationPage({ params, searchParams }: {
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ q?: string | string[] }>;
+}) {
   const { locale } = await params;
   if (!isCriminalBoardLocale(locale)) notFound();
   const copy = criminalBoardCopy[locale];
   const posts = selectCriminalColumns(getAllColumnPosts(locale));
+  const search = await searchParams;
+  const query = ((Array.isArray(search?.q) ? search.q[0] : search?.q) ?? '').trim().slice(0, 200);
+  const needle = query.toLocaleLowerCase(locale);
+  const visiblePosts = query ? posts.filter((post) =>
+    [post.title, post.summary, ...(post.tags ?? [])].join(' ').toLocaleLowerCase(locale).includes(needle),
+  ) : posts;
   return (
     <div data-criminal-board={locale}>
       <JsonLd data={buildCollectionPageJsonLd({ locale, path: `/${locale}${CRIMINAL_BOARD_PATH}`,
         name: copy.title, description: copy.description,
-        items: posts.map((post) => ({ name: post.title, path: `/${locale}/columns/${post.slug}`, description: post.summary })),
+        items: visiblePosts.map((post) => ({ name: post.title, path: `/${locale}/columns/${post.slug}`, description: post.summary })),
       })} />
       <section className="svc-hero" data-tone="dark">
         <div className="container svc-hero-inner">
@@ -49,8 +58,24 @@ export default async function CriminalLitigationPage({ params }: { params: Promi
             </Link>
           ))}
         </nav>
+        <p data-criminal-count={posts.length} style={{ marginBottom: '1rem' }}>
+          {copy.count(posts.length)}
+        </p>
+        <form action={`/${locale}${CRIMINAL_BOARD_PATH}`} method="get" role="search" className="columns-search">
+          <label className="columns-search-label" htmlFor="criminal-search-input">{copy.search}</label>
+          <div className="columns-search-row">
+            <input id="criminal-search-input" type="search" name="q" defaultValue={query} maxLength={200}
+              placeholder={copy.placeholder} className="columns-search-input" />
+            <button type="submit" className="columns-search-submit">{copy.submit}</button>
+          </div>
+        </form>
+        {query ? <div className="columns-filter-summary">
+          <p role="status" data-criminal-search-results={visiblePosts.length}>{copy.results(visiblePosts.length)}</p>
+          <Link href={`/${locale}${CRIMINAL_BOARD_PATH}`} className="link-underline" data-criminal-search-reset>{copy.reset}</Link>
+        </div> : null}
+        {visiblePosts.length === 0 ? <p className="columns-empty">{copy.empty}</p> : null}
         <div className="svc-columns-grid">
-          {posts.map((post) => (
+          {visiblePosts.map((post) => (
             <Link key={post.slug} href={`/${locale}/columns/${post.slug}`}
               className="svc-col-card" data-criminal-column={post.slug}>
               {post.featuredImage ? <div className="svc-col-card-media">

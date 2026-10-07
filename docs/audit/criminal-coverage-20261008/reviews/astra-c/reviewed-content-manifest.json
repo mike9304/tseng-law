@@ -1,0 +1,412 @@
+{
+  "reviewer": "C",
+  "candidate": 2,
+  "captured_at": "2026-10-07T18:59:00.418535+00:00",
+  "repo_base": "b6b4452d6ecad7ff79e2a00a31f36dfacfb9501f",
+  "candidate_manifest_sha256": "f06aec60c2c1430ce73643ac45c41912fe4960b90df8d65246efc5f83b079d83",
+  "articles": [
+    {
+      "path": "src/content/columns-en/355-cannabis-thc-cbd-taiwan-penalties-us-visitors.md",
+      "sha256": "001ac9275512d3860126e615b2a4d11f8037cb2eb73eede1a7e081c3d06a95be",
+      "scope": "legacy_repair",
+      "lines": 120
+    },
+    {
+      "path": "src/content/columns-en/401-taiwan-criminal-witness-summons-refuse-testimony.md",
+      "sha256": "548579319834c4bb5f644b704f96d2221705bf085a757f43449e157a123b8d7a",
+      "scope": "legacy_original_board",
+      "lines": 60
+    },
+    {
+      "path": "src/content/columns-en/402-taiwan-criminal-settlement-withdraw-complaint.md",
+      "sha256": "ca0f7360a852ac7deaa08647e1e7a322199f98d7ba407e3ab1cfa2fa96df1374",
+      "scope": "legacy_original_board",
+      "lines": 58
+    },
+    {
+      "path": "src/content/columns-en/403-taiwan-non-prosecution-reconsideration-deadline.md",
+      "sha256": "a4e794175c52eccc1a4294b73e8e61a6d152fbd7599a987771b7ee8b96dacd23",
+      "scope": "legacy_original_board",
+      "lines": 62
+    },
+    {
+      "path": "src/content/columns-en/404-taiwan-seized-phone-property-return.md",
+      "sha256": "e7aca43e1afcec5fd24348d2b3618e7ef5966d488b0f295f17a4b918e32e5cb5",
+      "scope": "legacy_original_board",
+      "lines": 53
+    },
+    {
+      "path": "src/content/columns-en/405-taiwan-assault-injury-self-defense-compensation.md",
+      "sha256": "ba9102644bf93e009838911be2e91172bee04a06d628e1500b473f18d36e2b5b",
+      "scope": "new",
+      "lines": 64
+    },
+    {
+      "path": "src/content/columns-en/406-taiwan-criminal-judgment-summary-appeal-service.md",
+      "sha256": "d552aeb7e792092447fe7d90e5a2f961933b15b0bc48d6a3e60b4ba563947595",
+      "scope": "new",
+      "lines": 70
+    },
+    {
+      "path": "src/content/columns-en/407-taiwan-deferred-prosecution-conditions-revocation.md",
+      "sha256": "d700107a551b2e2232aeabda483dc6ca0e9308a5253b36263b0f050814c5b822",
+      "scope": "new",
+      "lines": 61
+    },
+    {
+      "path": "src/content/columns-en/408-taiwan-detention-center-family-visits-lawyer-contact.md",
+      "sha256": "e54aab41bf65724a4c6fe356b4b72afb7e194665434fcc741e4bbb1e1b21c777",
+      "scope": "new",
+      "lines": 64
+    },
+    {
+      "path": "src/content/columns-en/409-taiwan-police-criminal-record-certificate-omitted-conviction.md",
+      "sha256": "32d9f495f72626594128fcb67d0ef279f8749dc42ee904d6d6391abb6de7b2c5",
+      "scope": "new",
+      "lines": 68
+    },
+    {
+      "path": "src/content/columns-en/410-taiwan-sexual-assault-report-adult-foreign-victim.md",
+      "sha256": "5b16323e53e6e66c4440d2511ce82945294759e101d9cd6f744709daeb4a8e63",
+      "scope": "new",
+      "lines": 69
+    },
+    {
+      "path": "src/content/columns-en/411-taiwan-shoplifting-found-property-theft.md",
+      "sha256": "3664ea1531e4a27e2bbc7825a99a713bcb8bc88e13b10dfe183ae8a5adb91915",
+      "scope": "new",
+      "lines": 64
+    },
+    {
+      "path": "src/content/columns-en/412-taiwan-short-sentence-fine-community-service-suspension.md",
+      "sha256": "74f22c0858b8ad63ac614e658adec8df9d01b962e8d32324ae6e18629b6a68d5",
+      "scope": "new",
+      "lines": 67
+    },
+    {
+      "path": "src/content/columns-ja/401-taiwan-criminal-witness-summons-refuse-testimony.md",
+      "sha256": "d10f85b822615912652b8e424de51cdf3de099da38a74c700efd8d905ccddaf3",
+      "scope": "legacy_original_board",
+      "lines": 61
+    },
+    {
+      "path": "src/content/columns-ja/402-taiwan-criminal-settlement-withdraw-complaint.md",
+      "sha256": "852ed30c83e1d36da0cc4a9551ef0f0f51e26b65bfa306a787f92d56ed808ea8",
+      "scope": "legacy_original_board",
+      "lines": 58
+    },
+    {
+      "path": "src/content/columns-ja/403-taiwan-non-prosecution-reconsideration-deadline.md",
+      "sha256": "38cebaee3b4d2ff4d661591882458ff96ce4d1b53875bf9baba33aa9ea38a477",
+      "scope": "legacy_original_board",
+      "lines": 62
+    },
+    {
+      "path": "src/content/columns-ja/404-taiwan-seized-phone-property-return.md",
+      "sha256": "4e85aaa82a0e6a21dabd2f38e03bec252b1fffeb1a65bea90c619e2b722dd40d",
+      "scope": "legacy_original_board",
+      "lines": 53
+    },
+    {
+      "path": "src/content/columns-ja/429-taiwan-assault-damages-attached-civil-action-japanese.md",
+      "sha256": "660c795f075f57f1143975d09d218d5b6469c5e71b2c0e1c1c0b8c52052006eb",
+      "scope": "new",
+      "lines": 74
+    },
+    {
+      "path": "src/content/columns-ja/430-taiwan-assault-injury-threat-complaint-japanese.md",
+      "sha256": "01059e240f9b83143987658d98391379c5f68508c7794b42a5b0b92e77f92a4f",
+      "scope": "new",
+      "lines": 66
+    },
+    {
+      "path": "src/content/columns-ja/431-taiwan-criminal-judgment-appeal-japanese.md",
+      "sha256": "781ae2c22e86cd2181f7c3082cb04b3ca7ec7aa4f364615b2fb5f2ac0af8f933",
+      "scope": "new",
+      "lines": 73
+    },
+    {
+      "path": "src/content/columns-ja/432-taiwan-deferred-prosecution-suspended-sentence-fine-japanese.md",
+      "sha256": "dd4076ba69d448711801f8ef97017e7eede537c2795f453edcfc2f17b862b7fe",
+      "scope": "new",
+      "lines": 76
+    },
+    {
+      "path": "src/content/columns-ja/433-taiwan-detained-family-visits-lawyer-japanese.md",
+      "sha256": "9c2c13ec1c66b9847fa87946aac65ae923fbb3fa0abe62d8ea23b6d9150dc356",
+      "scope": "new",
+      "lines": 63
+    },
+    {
+      "path": "src/content/columns-ja/434-taiwan-search-warrant-consent-home-office-japanese.md",
+      "sha256": "5e20b564b88cd7ee10fe74ef9f9b658b2ff096b4d200e98efb941ef1e16153ab",
+      "scope": "new",
+      "lines": 67
+    },
+    {
+      "path": "src/content/columns-ja/435-taiwan-sexual-assault-medical-reporting-japanese.md",
+      "sha256": "35ced5e232ab5a83c1836545086344794612a6085c5573298f044c9339a7d7df",
+      "scope": "new",
+      "lines": 68
+    },
+    {
+      "path": "src/content/columns-ja/436-taiwan-shoplifting-found-property-japanese.md",
+      "sha256": "34100024eb1c74fe2f20aff4b3a8b1687e725034efd3c4bf1a942501cfc93d8c",
+      "scope": "new",
+      "lines": 62
+    },
+    {
+      "path": "src/content/columns-vi/401-taiwan-criminal-witness-summons-refuse-testimony.md",
+      "sha256": "4510e7fc7da019bbca00e90f2a8a6d4d2eabdf5564adb5ee18d4a460d5ce0494",
+      "scope": "legacy_original_board",
+      "lines": 61
+    },
+    {
+      "path": "src/content/columns-vi/402-taiwan-criminal-settlement-withdraw-complaint.md",
+      "sha256": "aca7b9cd766b67c79dcc7e5a6d73f248dc014b242d5c224f51a1a3aa165bea78",
+      "scope": "legacy_original_board",
+      "lines": 58
+    },
+    {
+      "path": "src/content/columns-vi/403-taiwan-non-prosecution-reconsideration-deadline.md",
+      "sha256": "dcc0cd7730349bfa436efbb01063e7a91fa7855c5ed4f0ae5687768ffceda5ae",
+      "scope": "legacy_original_board",
+      "lines": 62
+    },
+    {
+      "path": "src/content/columns-vi/404-taiwan-seized-phone-property-return.md",
+      "sha256": "c62d069488db8dbc94c8c62b21ba7855246011355f034ebd89ac3401d5121ec1",
+      "scope": "legacy_original_board",
+      "lines": 53
+    },
+    {
+      "path": "src/content/columns-vi/437-taiwan-arrest-detention-bail-vietnamese-families.md",
+      "sha256": "e9c56e5d5fcf53382327344e495fe15f903531e35556b46407943a63551da780",
+      "scope": "new",
+      "lines": 67
+    },
+    {
+      "path": "src/content/columns-vi/438-taiwan-assault-threats-evidence-complaint-deadline.md",
+      "sha256": "0256b302f8820ec741ef43c64feab47cd02d00081bf9ea24cf69c8c7d77442be",
+      "scope": "new",
+      "lines": 64
+    },
+    {
+      "path": "src/content/columns-vi/439-taiwan-criminal-judgment-appeal-vietnamese.md",
+      "sha256": "04b5c45c07740b102b4bd7c1926d939047b2228e62d2e387fe905693ae0fec71",
+      "scope": "new",
+      "lines": 65
+    },
+    {
+      "path": "src/content/columns-vi/440-taiwan-drug-parcel-courier-job-criminal-risk.md",
+      "sha256": "8b9c34f37205b76c1515cd9ee7f64a29608b0aea02f8801381b3663d2f09a3c4",
+      "scope": "new",
+      "lines": 74
+    },
+    {
+      "path": "src/content/columns-vi/441-taiwan-fraud-victim-report-civil-money-recovery.md",
+      "sha256": "a3cb154b8996a46d6d8abec84419486c6a7979b461f54131dd2827e919c091de",
+      "scope": "new",
+      "lines": 73
+    },
+    {
+      "path": "src/content/columns-vi/442-taiwan-police-interview-vietnamese-interpreter-lawyer.md",
+      "sha256": "4304eba2fcb82829b42381c7af569ca76520264746f2bd3b369e7754b3339c97",
+      "scope": "new",
+      "lines": 65
+    },
+    {
+      "path": "src/content/columns-vi/443-taiwan-sexual-assault-report-vietnamese-workers-residents.md",
+      "sha256": "c8ba2e87070b1ac07e3d770a547a4b21cea1d83ebec98a33ef1d6ff3528cabbf",
+      "scope": "new",
+      "lines": 70
+    },
+    {
+      "path": "src/content/columns-vi/444-taiwan-short-sentence-fine-suspension-residence.md",
+      "sha256": "e4eae4e9550ee6963a77699f81efe75009f1d6bb28164d94b21a135fb34a97ff",
+      "scope": "new",
+      "lines": 71
+    },
+    {
+      "path": "src/content/columns-zh/401-taiwan-criminal-witness-summons-refuse-testimony.md",
+      "sha256": "eda6cdf33912cf03b9f9026d3b365563ced65cdb497ec5a7ea7da604fd288940",
+      "scope": "legacy_original_board",
+      "lines": 61
+    },
+    {
+      "path": "src/content/columns-zh/402-taiwan-criminal-settlement-withdraw-complaint.md",
+      "sha256": "4e31de4daf930f5160d325b500b951f41dffc11db249e9c153fb044eccd5dbef",
+      "scope": "legacy_original_board",
+      "lines": 58
+    },
+    {
+      "path": "src/content/columns-zh/403-taiwan-non-prosecution-reconsideration-deadline.md",
+      "sha256": "e427df05a4af49a9f9dcdfff9cb78f56010c2db066f42146b848b7c47c6580e7",
+      "scope": "legacy_original_board",
+      "lines": 62
+    },
+    {
+      "path": "src/content/columns-zh/404-taiwan-seized-phone-property-return.md",
+      "sha256": "e41226aae4626037b12d53fb4e178cb1ad1970401e0652eb0e5dfe02d6fc7bda",
+      "scope": "legacy_original_board",
+      "lines": 53
+    },
+    {
+      "path": "src/content/columns-zh/413-taiwan-criminal-first-judgment-appeal-summary.md",
+      "sha256": "de29abc085cc89bf62ec0faf11c19e3c65c8baea1aa964373481c527ec86ef3d",
+      "scope": "new",
+      "lines": 65
+    },
+    {
+      "path": "src/content/columns-zh/414-taiwan-deferred-prosecution-duties-revocation.md",
+      "sha256": "7bc7696ccfa262a97e810f73aec1229c9586311d48dfadf5e1521a13a836cdf9",
+      "scope": "new",
+      "lines": 61
+    },
+    {
+      "path": "src/content/columns-zh/415-taiwan-fine-conversion-community-service-execution.md",
+      "sha256": "652d4a419ff14a94a5f44e8a52312aeaf5a9bf45c1c250cac6195d2ca92c8dc4",
+      "scope": "new",
+      "lines": 60
+    },
+    {
+      "path": "src/content/columns-zh/416-taiwan-injury-complaint-fight-self-defense.md",
+      "sha256": "4805dce3f939a6075ac424275e270822e20dd14e9c91faaaa7112bb527c158b8",
+      "scope": "new",
+      "lines": 64
+    },
+    {
+      "path": "src/content/columns-zh/417-taiwan-remand-family-visits-contact-challenge.md",
+      "sha256": "87e42c5031374b77dfb23a1402d4053317a57dcd88e5c1b0af79b03cb11695f2",
+      "scope": "new",
+      "lines": 64
+    },
+    {
+      "path": "src/content/columns-zh/418-taiwan-sexual-assault-report-evidence-victim-support.md",
+      "sha256": "aac73eed8974eeeff38e504ccb6768b0228e483f7a8f88ef6342dc50372bd4c9",
+      "scope": "new",
+      "lines": 71
+    },
+    {
+      "path": "src/content/columns-zh/419-taiwan-suspended-sentence-obligations-revocation.md",
+      "sha256": "aa926d3ae2316720ae87bfcafd5db944eab8f99aa525b0287b71055f5a5fcc6f",
+      "scope": "new",
+      "lines": 64
+    },
+    {
+      "path": "src/content/columns-zh/420-taiwan-threats-coercion-messages-evidence.md",
+      "sha256": "fd0cf16d13dde9e5efe57f49ccfc25b19a03450207f6898482cbb2f60d85b23d",
+      "scope": "new",
+      "lines": 60
+    },
+    {
+      "path": "src/content/columns/064-taiwan-warning-account-foreigners.md",
+      "sha256": "02f66cb91ce52362d50cbdbb8e8e34b48cf54ed9fe919570bfe83b8ea58044e2",
+      "scope": "legacy_repair",
+      "lines": 81
+    },
+    {
+      "path": "src/content/columns/401-taiwan-criminal-witness-summons-refuse-testimony.md",
+      "sha256": "3580120b7bf21981bf883c053ea1004f6abe6aded8fe1ec41613df73bea7e10f",
+      "scope": "legacy_original_board",
+      "lines": 59
+    },
+    {
+      "path": "src/content/columns/402-taiwan-criminal-settlement-withdraw-complaint.md",
+      "sha256": "2f324274549e9d5178947880af1a8886de922df1274084aefba44964816d3531",
+      "scope": "legacy_original_board",
+      "lines": 54
+    },
+    {
+      "path": "src/content/columns/403-taiwan-non-prosecution-reconsideration-deadline.md",
+      "sha256": "c4361c780ea0c51cb4003fc50b496245a394cf0d57f8a79bebae5e16c4a9f2d4",
+      "scope": "legacy_original_board",
+      "lines": 62
+    },
+    {
+      "path": "src/content/columns/404-taiwan-seized-phone-property-return.md",
+      "sha256": "b6cf1a0fc98b453a1272fdd58f06fd7dc67a5235dfa80a162179a082c89e81a1",
+      "scope": "legacy_original_board",
+      "lines": 53
+    },
+    {
+      "path": "src/content/columns/421-taiwan-assault-injury-medical-evidence-complaint.md",
+      "sha256": "56f4244a8d4c7ee34f2099c5d8b3c3acdf4ff925481ec5220ceec1595b89a510",
+      "scope": "new",
+      "lines": 59
+    },
+    {
+      "path": "src/content/columns/422-taiwan-cannabis-drugs-luggage-parcel-criminal-risk.md",
+      "sha256": "8c26f1e601c3a643bf952f6ae987c5b84fc41150eca59222831ea369050449fa",
+      "scope": "new",
+      "lines": 55
+    },
+    {
+      "path": "src/content/columns/423-taiwan-crime-report-complaint-korean-return.md",
+      "sha256": "46461337c88a6b41048f99ed0836fe75439c45b303698b7f4899770a746d0ad4",
+      "scope": "new",
+      "lines": 65
+    },
+    {
+      "path": "src/content/columns/424-taiwan-criminal-judgment-summary-appeal-twenty-days.md",
+      "sha256": "8d247c916df405dbf50d0cc2680a1809b529c1dc9f03e5faab2751fcaf1c548a",
+      "scope": "new",
+      "lines": 62
+    },
+    {
+      "path": "src/content/columns/425-taiwan-deferred-prosecution-suspended-sentence-fine-conversion.md",
+      "sha256": "d1b6375b8d41fd863f8e92983f60d512854ac325d0fb2e6c028bfe94b109fde1",
+      "scope": "new",
+      "lines": 69
+    },
+    {
+      "path": "src/content/columns/426-taiwan-online-review-defamation-public-insult.md",
+      "sha256": "e7315cf3e7dff42ecf8355a7a2adde6c54f847f89f3aa2cd3e30d05063a85099",
+      "scope": "new",
+      "lines": 63
+    },
+    {
+      "path": "src/content/columns/427-taiwan-sexual-assault-medical-report-support.md",
+      "sha256": "ed48da8d397f8d697210b9ff7c2eaab5ed58acb24663a6bd8b673703e1669d0c",
+      "scope": "new",
+      "lines": 61
+    },
+    {
+      "path": "src/content/columns/428-taiwan-stolen-phone-wallet-police-evidence.md",
+      "sha256": "5a2e4253962f947b32e0e6358de578835abf61a1ea8460069f6b8157215d5a29",
+      "scope": "new",
+      "lines": 61
+    }
+  ],
+  "coverage_inputs": [
+    {
+      "path": "/Users/son7/tseng-criminal-coverage-20261008/ko/coverage.json",
+      "sha256": "bc43450bf3c40df44699365de97d46d4701a380894351a94e26789d48c8004d6"
+    },
+    {
+      "path": "/Users/son7/tseng-criminal-coverage-20261008/zh-hant/coverage.json",
+      "sha256": "ee253dadc58273b554dda965be85d14a4bdee40ad8fc0d7286e081176f1884ac"
+    },
+    {
+      "path": "/Users/son7/tseng-criminal-coverage-20261008/ja/coverage.json",
+      "sha256": "b5003ca7ba97368bfba1ee0a0d40ae87826a27fcadebc3c3ae299eecfe808bfc"
+    },
+    {
+      "path": "/Users/son7/tseng-criminal-coverage-20261008/en/coverage.json",
+      "sha256": "3bc0d1f9720ace7b1b1876695272891b8b370faa9fec0fa41f7f6dbba4c05ddf"
+    },
+    {
+      "path": "/Users/son7/tseng-criminal-coverage-20261008/vi/coverage.json",
+      "sha256": "062cc1e0ef46717cc74ee2809487859d7b7f36aefe918ddea4829f6bec3816fb"
+    },
+    {
+      "path": "/Users/son7/tseng-criminal-coverage-20261008/COVERAGE-STANDARD.md",
+      "sha256": "95ea81273f39b5a9605329009afa667a1e3c73ccfc5c771a87f3bb4c5a90cb75"
+    },
+    {
+      "path": "/Users/son7/tseng-criminal-coverage-20261008/WRITER-BRIEF.md",
+      "sha256": "ddbab4f76032e1d771c0bb6d50dd8f099944fbc4f695a570d721ab7e454c5841"
+    }
+  ],
+  "scope_note": "62 article texts: original20 + new40 + KO064 + EN355. Board61 excludes KO064. Full original reads plus unchanged-hash continuity; final changed passages reread. Approval is scoped content review, not entire broad coverage or production verification."
+}

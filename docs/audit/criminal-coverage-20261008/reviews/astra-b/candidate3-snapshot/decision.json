@@ -1,0 +1,32 @@
+{
+  "reviewer": "Independent GPT-6 Astra B",
+  "decided_at": "2026-10-07T19:04:00.370018+00:00",
+  "decision": "APPROVE_SCOPED_CONTENT_SOURCE_EDITORIAL_DISCOVERY",
+  "candidate": 3,
+  "manifest_sha256": "0e09b8e27485175b24050193ba5f6d517258767d7686f53a97603327caffa467",
+  "files": 68,
+  "all_hashes_match": true,
+  "original_candidate2_files_unchanged": 67,
+  "new_full_texts_reviewed": 40,
+  "full_legacy_reviews": [
+    "en/355",
+    "ko/064"
+  ],
+  "legacy_source_list_only": [
+    "ko/403",
+    "zh-hant/403",
+    "en/403",
+    "ja/403",
+    "vi/403"
+  ],
+  "resolved_findings": [
+    "B24-UI-01",
+    "B16-L01",
+    "B40-UI-02"
+  ],
+  "open_blocking_findings_in_review_scope": [],
+  "vi_automation": "unsupported KeyError; manual section5 review performed",
+  "publication_status": "root owns final clean build/built-browser/deployment evidence",
+  "whole_goal_complete": false,
+  "report": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-b/first-batch-24-review.md"
+}

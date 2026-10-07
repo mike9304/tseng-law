@@ -1,6 +1,6 @@
 {
   "reason": "API embedding calls are not authorized. These published columns use the existing public text-search index; genuine vectors may be backfilled only with future authorization.",
-  "recordedAt": "2026-10-03",
+  "recordedAt": "2026-10-08",
   "columns": [
     {
       "locale": "zh-hant",
@@ -1597,6 +1597,102 @@
     {
       "locale": "en",
       "slug": "cannabis-thc-cbd-taiwan-penalties-us-visitors"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-assault-injury-self-defense-compensation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-criminal-judgment-summary-appeal-service"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-deferred-prosecution-conditions-revocation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-detention-center-family-visits-lawyer-contact"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-police-criminal-record-certificate-omitted-conviction"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-sexual-assault-report-adult-foreign-victim"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-shoplifting-found-property-theft"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-short-sentence-fine-community-service-suspension"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-criminal-first-judgment-appeal-summary"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-deferred-prosecution-duties-revocation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-fine-conversion-community-service-execution"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-injury-complaint-fight-self-defense"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-remand-family-visits-contact-challenge"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-sexual-assault-report-evidence-victim-support"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-suspended-sentence-obligations-revocation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-threats-coercion-messages-evidence"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-assault-injury-medical-evidence-complaint"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-cannabis-drugs-luggage-parcel-criminal-risk"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-crime-report-complaint-korean-return"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-criminal-judgment-summary-appeal-twenty-days"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-deferred-prosecution-suspended-sentence-fine-conversion"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-online-review-defamation-public-insult"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-sexual-assault-medical-report-support"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-stolen-phone-wallet-police-evidence"
     }
   ]
 }

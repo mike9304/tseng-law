@@ -412,7 +412,7 @@ function parseColumnPostsFromDir(
     const fixedContent = fixImagePaths(content);
     const cleanContent = stripInlineImages(stripLeadingDuplicates(fixedContent));
     const featuredRaw = (data.featured_image as string) || '';
-    const featuredImage = featuredRaw ? featuredRaw.replace(/^\.\.\/images\//, '/images/blog/') : '/images/blog/placeholder.jpg';
+    const featuredImage = featuredRaw ? featuredRaw.replace(/^\.\.\/images\//, '/images/blog/') : '/images/placeholder-article-hero.jpg';
     const featuredImageAlt = typeof data.featured_image_alt === 'string' ? data.featured_image_alt.trim() : '';
     const featuredImageCaption = typeof data.featured_image_caption === 'string' ? data.featured_image_caption.trim() : '';
     const socialImage = typeof data.social_image === 'string' ? data.social_image.trim().replace(/^\.\.\/images\//, '/images/blog/') : '';

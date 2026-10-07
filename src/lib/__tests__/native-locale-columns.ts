@@ -1,4 +1,5 @@
 import { TAX_ACCOUNTING_COLUMN_FILES, taxAccountingFilesPublishedOn } from './tax-accounting-column-files';
+import { CRIMINAL_COLUMN_FILES_20261008 } from './criminal-coverage-column-files';
 
 /**
  * Columns written natively for one audience (2026-09-29): English-, Japanese-
@@ -575,6 +576,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((CRIMINAL_COLUMN_FILES_20261008 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TAX_ACCOUNTING_COLUMN_FILES as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
@@ -596,6 +598,7 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261008 = (CRIMINAL_COLUMN_FILES_20261008 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261007: readonly string[] = [
     ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(taxAccountingFilesPublishedOn('2026-10-07')[locale] ?? []),
@@ -629,12 +632,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const latestSlugs = [...latest].sort().map(slugOf);
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  const head = [...day20261007Slugs, ...day20261006Slugs, ...day20261005Slugs, ...currentSlugs, ...latestSlugs, ...newestSlugs, ...newerSlugs];
+  const head = [...day20261008].sort().map(slugOf).concat(day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
   return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-07). */
 export function archiveLeadPublicationDate(slug: string): string {
+  if (Object.values(CRIMINAL_COLUMN_FILES_20261008).flat().map(slugOf).includes(slug)) return '2026-10-08';
   const day20261007 = [...Object.values(COUNTRY_COLUMN_FILES_20261007), ...Object.values(taxAccountingFilesPublishedOn('2026-10-07')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261007.includes(slug)) return '2026-10-07';
   const day20261006 = [...Object.values(COUNTRY_COLUMN_FILES_20261006), ...Object.values(taxAccountingFilesPublishedOn('2026-10-06')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
@@ -691,6 +695,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261005),
     ...Object.values(COUNTRY_COLUMN_FILES_20261006),
     ...Object.values(COUNTRY_COLUMN_FILES_20261007),
+    ...Object.values(CRIMINAL_COLUMN_FILES_20261008),
     ...Object.values(TAX_ACCOUNTING_COLUMN_FILES),
   ].flat().map(slugOf),
 );

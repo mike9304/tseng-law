@@ -1,0 +1,48 @@
+{
+  "search": {
+    "label": "Tìm bài viết",
+    "placeholder": "Tìm theo tiêu đề, tóm tắt hoặc thẻ",
+    "submit": "Tìm kiếm",
+    "clear": "Xóa từ khóa",
+    "resultCount": "{n} kết quả",
+    "reset": "Xóa bộ lọc · Xem tất cả bài viết",
+    "category": "Danh mục",
+    "author": "Tác giả",
+    "year": "Năm",
+    "month": "Tháng",
+    "query": "Từ khóa",
+    "noMatches": "Không có bài viết phù hợp. Xóa bộ lọc để xem tất cả bài viết.",
+    "noPosts": "Chưa có bài viết nào được đăng."
+  },
+  "topics": {
+    "criminal": "Pháp luật hình sự",
+    "company": "Thành lập công ty và đầu tư",
+    "tax": "Thuế",
+    "visa": "Thị thực và cư trú",
+    "family": "Hôn nhân và ly hôn có yếu tố nước ngoài",
+    "inheritance": "Thừa kế",
+    "litigation": "Tố tụng và tranh chấp",
+    "labor": "Lao động và việc làm",
+    "lawyer": "Thuê luật sư tại Đài Loan",
+    "other": "Thông tin pháp luật khác"
+  },
+  "topicUi": {
+    "nav": "Xem theo chủ đề",
+    "viewAll": "Xem tất cả {n} bài viết về {label}",
+    "count": "{n} bài viết",
+    "backToTopics": "Trở về danh sách chủ đề"
+  },
+  "article": {
+    "backLabel": "← Danh sách bài viết",
+    "attorneyHeading": "Luật sư",
+    "guideTitle": "Chủ đề liên quan",
+    "consultationTitle": "Đặt lịch tư vấn",
+    "consultationText": "Nếu bạn có câu hỏi về pháp luật Đài Loan, hãy liên hệ với chúng tôi.",
+    "consultationButton": "Liên hệ",
+    "faqHeading": "Câu hỏi thường gặp",
+    "tocLabel": "Mục lục bài viết",
+    "prevLabel": "← Bài trước",
+    "nextLabel": "Bài tiếp theo →",
+    "openColumn": "Đọc bài viết →"
+  }
+}

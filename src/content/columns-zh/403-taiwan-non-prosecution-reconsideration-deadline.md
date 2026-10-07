@@ -57,5 +57,6 @@ author: "legal-ai-assistant"
 - [民法第122條・末日休息日](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=122)
 - [民事訴訟法第137條・補充送達](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=137)
 - [民事訴訟法第138條・寄存送達](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=138)
+- [台北地檢署的說明](https://www.tpc.moj.gov.tw/292885/976681/661783/1088793/post)
 
 查核日期：2026年10月7日。

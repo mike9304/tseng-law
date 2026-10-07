@@ -69,10 +69,20 @@ describe('ColumnsGrid topic grouping', () => {
     expect(html).toContain('International marriage &amp; divorce');
   });
 
-  it('translated guidance locales group by their reviewed category labels', () => {
+  it('other guidance locales still group by their reviewed category labels', () => {
     nav.params = new URLSearchParams();
-    const html = renderToStaticMarkup(<ColumnsGrid locale="vi" posts={posts} />);
+    const html = renderToStaticMarkup(<ColumnsGrid locale="id" posts={posts} />);
     const sections = [...html.matchAll(/data-columns-topic-section="([a-z]+)"/g)].map((m) => m[1]);
     expect(sections).toEqual(['formation', 'legal', 'case']);
+  });
+
+  it('uses Vietnamese topic names for filtering and search controls', () => {
+    nav.params = new URLSearchParams('topic=family');
+    const html = renderToStaticMarkup(<ColumnsGrid locale="vi" posts={posts} />);
+    expect(html.match(/data-column-topic="family"/g)).toHaveLength(5);
+    expect(html).not.toContain('href="/vi/columns/c1"');
+    expect(html).toContain('Hôn nhân và ly hôn có yếu tố nước ngoài');
+    expect(html).toContain('Tìm bài viết');
+    expect(html).not.toContain('Search columns');
   });
 });

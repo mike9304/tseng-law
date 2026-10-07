@@ -57,5 +57,6 @@ Nếu văn bản được tống đạt trực tiếp cho chính bạn, không t
 - [Bộ luật Dân sự Đài Loan Điều 122: ngày nghỉ ở cuối hạn](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=122)
 - [Bộ luật Tố tụng dân sự Đài Loan Điều 137: tống đạt thay thế](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=137)
 - [Bộ luật Tố tụng dân sự Đài Loan Điều 138: lưu giữ văn bản để nhận](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=138)
+- [Hướng dẫn của Viện Kiểm sát địa phương Đài Bắc](https://www.tpc.moj.gov.tw/292885/976681/661783/1088793/post)
 
 Ngày kiểm tra: 7/10/2026.

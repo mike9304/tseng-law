@@ -57,5 +57,6 @@ author: "legal-ai-assistant"
 - [대만 민법 제122조·말일의 휴일](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=122)
 - [대만 민사소송법 제137조·대체 수령](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=137)
 - [대만 민사소송법 제138조·보관 송달](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=138)
+- [타이베이 지검 안내](https://www.tpc.moj.gov.tw/292885/976681/661783/1088793/post)
 
 확인일: 2026년 10월 7일.

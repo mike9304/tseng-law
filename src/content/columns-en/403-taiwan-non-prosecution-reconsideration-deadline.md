@@ -57,5 +57,6 @@ The [Taipei District Prosecutors Office explains](https://www.tpc.moj.gov.tw/292
 - [Taiwan Civil Code Article 122: last-day holidays](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=122)
 - [Taiwan Code of Civil Procedure Article 137: substituted service](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=137)
 - [Taiwan Code of Civil Procedure Article 138: deposit service](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=138)
+- [Taipei District Prosecutors Office explains](https://www.tpc.moj.gov.tw/292885/976681/661783/1088793/post)
 
 Checked: October 7, 2026.

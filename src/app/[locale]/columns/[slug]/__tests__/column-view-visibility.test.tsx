@@ -5,10 +5,10 @@ import ColumnDetailView from '../ColumnDetailView';
 import PublicColumnView from '../PublicColumnView';
 import type { ColumnDetailViewProps } from '../ColumnDetailView';
 
-const state = vi.hoisted(() => ({ body: false, seo: false, traffic: true, slug: 'visibility-fixture' }));
+const state = vi.hoisted(() => ({ body: false, seo: false, traffic: true, criminal: false, slug: 'visibility-fixture' }));
 vi.mock('@/lib/consultation/columns-blob-reader', () => ({
   getAllColumnPostsIncludingBlob: async () => [{
-    slug: state.slug, title: 'Published column title', tags: state.traffic ? ['traffic-accidents'] : [],
+    slug: state.slug, title: 'Published column title', tags: state.traffic ? ['traffic-accidents'] : state.criminal ? ['criminal-litigation'] : [],
     date: '2026-10-02', dateDisplay: '2026年10月2日', readTime: '', category: 'legal', categoryLabel: '',
     featuredImage: '', summary: 'Public summary', content: '## HIDDEN_HEADING\n\nHIDDEN_BODY',
     faq: [{ q: 'HIDDEN_FAQ_QUESTION', a: 'HIDDEN_FAQ_ANSWER' }],
@@ -21,8 +21,8 @@ vi.mock('@/lib/builder/dynamic-template-drafts', () => ({
     key.endsWith('.body') ? state.body : key.endsWith('.seo') ? state.seo : true,
 }));
 
-async function props(body: boolean, seo: boolean, slug = 'visibility-fixture', traffic = true) {
-  state.body = body; state.seo = seo; state.slug = slug; state.traffic = traffic;
+async function props(body: boolean, seo: boolean, slug = 'visibility-fixture', traffic = true, criminal = false) {
+  state.body = body; state.seo = seo; state.slug = slug; state.traffic = traffic; state.criminal = criminal;
   const { default: Page } = await import('../page');
   const element = await Page({ params: Promise.resolve({ locale: 'zh-hant', slug }) });
   expect((element as ReactElement).type).toBe(PublicColumnView);
@@ -30,6 +30,13 @@ async function props(body: boolean, seo: boolean, slug = 'visibility-fixture', t
 }
 
 describe('public column view publication visibility', () => {
+  it('lets readers return from a tagged article to its native criminal board', async () => {
+    const data = await props(true, true, 'visibility-fixture', false, true);
+    const html = renderToStaticMarkup(<ColumnDetailView {...data} />);
+    expect(html).toContain('href="/zh-hant/criminal-litigation"');
+    const ordinary = await props(true, true, 'visibility-fixture', false);
+    expect(renderToStaticMarkup(<ColumnDetailView {...ordinary} />)).not.toContain('href="/zh-hant/criminal-litigation"');
+  });
   it('omits AI bylines and schema authors while retaining article text and the disclaimer', async () => {
     const data = await props(true, true, 'taiwan-exit-ban-foreigners', false);
     const html = renderToStaticMarkup(<ColumnDetailView {...data} />);

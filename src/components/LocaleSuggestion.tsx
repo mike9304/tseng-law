@@ -19,7 +19,7 @@ import {
 /** Copy is shown in the suggested language, since that is what the visitor reads. */
 const COPY: Record<string, { text: string; link: string; close: string }> = {
   ko: { text: '한국어 칼럼도 있습니다.', link: '한국어로 보기', close: '닫기' },
-  en: { text: 'These columns are also available in English.', link: 'Read in English', close: 'Close' },
+  en: { text: 'Browse our English-language articles.', link: 'English articles', close: 'Close' },
   ja: { text: '日本語のコラムもあります。', link: '日本語で読む', close: '閉じる' },
   'zh-hant': { text: '本站也有繁體中文專欄。', link: '閱讀中文版', close: '關閉' },
   'zh-hans': { text: '本站也有简体中文专栏。', link: '阅读中文版', close: '关闭' },

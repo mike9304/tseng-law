@@ -25,11 +25,12 @@ import jaStyles from './JaColumnDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import enStyles from './EnColumnDetail.module.css';
 import EnPageShell from '@/components/en-design/EnPageShell';
+import { CRIMINAL_BOARD_TAG, criminalBoardCopy, isCriminalBoardLocale } from '@/lib/criminal-litigation-board';
 
 const MIN_TOC_SECTIONS = 3;
 export type ColumnDetailViewProps = {
   locale: SiteLocale; urlLocale: string;
-  post: Pick<ColumnPost, 'slug' | 'title' | 'categoryLabel' | 'featuredImage' | 'featuredImageAlt' | 'featuredImageCaption' | 'dateDisplay' | 'date' | 'readTime' | 'content' | 'topic'>;
+  post: Pick<ColumnPost, 'slug' | 'title' | 'categoryLabel' | 'featuredImage' | 'featuredImageAlt' | 'featuredImageCaption' | 'dateDisplay' | 'date' | 'readTime' | 'content' | 'topic' | 'tags'>;
   prevPost: Pick<ColumnPost, 'slug' | 'title'> | null;
   nextPost: Pick<ColumnPost, 'slug' | 'title'> | null;
   t: { backLabel: string; consultationTitle: string; consultationText: string; consultationButton: string; guideTitle: string; faqHeading: string; tocLabel: string };
@@ -83,6 +84,10 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
           </div>
           <div className="container blog-hero-inner">
             <Link href={`/${urlLocale}/columns`} className="blog-back-link">{t.backLabel}</Link>
+            {post.tags?.includes(CRIMINAL_BOARD_TAG) && isCriminalBoardLocale(urlLocale) ? (
+              <Link href={`/${urlLocale}/criminal-litigation`} className="blog-back-link" data-criminal-board-link
+                style={{ display: 'block', marginTop: '0.5rem' }}>{criminalBoardCopy[urlLocale].title}</Link>
+            ) : null}
             {urlLocale in trafficHubCopy && isTrafficColumn ? (
               <Link href={`/${urlLocale}/traffic-accidents#articles`} className="blog-back-link" style={{ marginInlineStart: '1.5rem' }}>
                 {trafficHubCopy[urlLocale as keyof typeof trafficHubCopy].nav} →

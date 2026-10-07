@@ -11,6 +11,7 @@ import {
   isNativeLocaleColumnSlug,
 } from './native-locale-columns';
 import { taxAccountingPublicationDate } from './tax-accounting-column-files';
+import { CRIMINAL_COLUMN_FILES_20261008 } from './criminal-coverage-column-files';
 
 const COSMETICS_SLUG = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
 
@@ -355,6 +356,9 @@ const REDATED_20260928: Record<string, readonly string[]> = {
 };
 
 function verifiedPublicationDate(locale: string, prefix: string): string {
+  if (Object.values(CRIMINAL_COLUMN_FILES_20261008).flat().some((file) => file.startsWith(`${prefix}-`))) {
+    return '2026-10-08';
+  }
   return REDATED_20260928[locale]?.includes(prefix)
     ? '2026-09-28'
     : VERIFIED_PUBLICATION_DATES[prefix] ?? taxAccountingPublicationDate(prefix)!;

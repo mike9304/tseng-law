@@ -4,7 +4,7 @@ import ColumnsGrid from '@/components/ColumnsGrid';
 import { getAllColumnPosts } from '@/lib/columns';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { CRIMINAL_BOARD_LOCALES } from '@/lib/criminal-litigation-board';
-import { CRIMINAL_SERVICE_COLUMN_SLUGS } from '@/data/criminal-service-copy';
+import { expectedCriminalBoardSlugs } from '@/lib/__tests__/criminal-coverage-column-files';
 
 const navigation = vi.hoisted(() => ({ params: new URLSearchParams() }));
 vi.mock('next/navigation', () => ({
@@ -17,27 +17,29 @@ vi.mock('next/image', () => ({ default: ({ alt }: { alt: string }) => <span data
 beforeEach(() => { navigation.params = new URLSearchParams(); });
 
 describe('criminal columns in the existing archive', () => {
-  it.each(['ko', 'zh-hant', 'en', 'ja'] as const)(
-    'shows all four %s articles together when the criminal topic is selected',
+  it.each(['ko', 'zh-hant', 'en', 'ja', 'vi'] as const)(
+    'shows the exact %s criminal inventory when the topic is selected',
     (locale) => {
       navigation.params = new URLSearchParams({ topic: 'criminal' });
       const html = renderToStaticMarkup(<ColumnsGrid locale={locale} posts={toColumnListItems(getAllColumnPosts(locale))} />);
-      expect(html).toContain('data-columns-visible-count="4"');
-      expect(html.match(/class="columns-card"/g)).toHaveLength(4);
+      const expected = expectedCriminalBoardSlugs(locale);
+      expect(html).toContain(`data-columns-visible-count="${expected.length}"`);
+      expect(html.match(/class="columns-card"/g)).toHaveLength(expected.length);
       expect(html).toContain('data-columns-topic-chip="criminal"');
-      for (const slug of CRIMINAL_SERVICE_COLUMN_SLUGS) expect(html).toContain(`href="/${locale}/columns/${slug}"`);
+      for (const slug of expected) expect(html).toContain(`href="/${locale}/columns/${slug}"`);
       expect(html).not.toContain('data-column-topic="litigation"');
     },
   );
 
   it.each([
-    ['ko', '형사소송'], ['zh-hant', '刑事訴訟'], ['en', 'Criminal litigation'], ['ja', '刑事訴訟'],
-  ] as const)('finds all four %s articles by the visible topic name, including with the topic filter', (locale, query) => {
+    ['ko', '형사소송'], ['zh-hant', '刑事訴訟'], ['en', 'Criminal litigation'], ['ja', '刑事訴訟'], ['vi', 'Pháp luật hình sự'],
+  ] as const)('finds the exact %s criminal inventory by its visible topic name', (locale, query) => {
     for (const topic of ['', 'criminal']) {
       navigation.params = new URLSearchParams({ q: query, ...(topic ? { topic } : {}) });
       const html = renderToStaticMarkup(<ColumnsGrid locale={locale} posts={toColumnListItems(getAllColumnPosts(locale))} />);
-      for (const slug of CRIMINAL_SERVICE_COLUMN_SLUGS) expect(html).toContain(`href="/${locale}/columns/${slug}"`);
-      if (topic) expect(html.match(/class="columns-card"/g)).toHaveLength(4);
+      const expected = expectedCriminalBoardSlugs(locale);
+      for (const slug of expected) expect(html).toContain(`href="/${locale}/columns/${slug}"`);
+      if (topic) expect(html.match(/class="columns-card"/g)).toHaveLength(expected.length);
     }
   });
 

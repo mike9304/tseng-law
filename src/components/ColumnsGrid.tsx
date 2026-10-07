@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import {
-  isExistingSiteLocale4,
   isGuidanceLocale4,
   type GuidanceLocale4,
   type PublicLocale8,
@@ -15,6 +14,7 @@ import {
   COLUMN_TOPIC_SECTION_PREVIEW,
   COLUMN_TOPIC_UI_COPY,
   isColumnTopic,
+  isColumnTopicUiLocale,
   resolveColumnTopic,
   type ColumnTopic,
 } from '@/lib/column-topics';
@@ -24,8 +24,13 @@ import styles from './ColumnsGrid.module.css';
 import CriminalBoardLink from './CriminalBoardLink';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { typesetTitle } from '@/lib/ko-middot';
+import columnUiVi from '@/data/column-ui-vi.json';
 
 const searchCopy = {
+  vi: {
+    ...columnUiVi.search,
+    resultCount: (n: number) => columnUiVi.search.resultCount.replace('{n}', String(n)),
+  },
   ko: {
     label: '칼럼 검색',
     placeholder: '제목, 요약, 태그로 검색',
@@ -493,7 +498,7 @@ function postMatchesQuery(post: ColumnListItem, query: string, locale: PublicLoc
     post.title,
     post.summary,
     post.categoryLabel,
-    isExistingSiteLocale4(locale)
+    isColumnTopicUiLocale(locale)
       ? COLUMN_TOPIC_LABELS[locale][post.topic ?? resolveColumnTopic(post.slug, undefined, post.category)]
       : undefined,
     post.blogCategory,
@@ -559,7 +564,7 @@ export default function ColumnsGrid({
     const fill = recommended.filter((post) => !picked.includes(post));
     return [...picked, ...fill].slice(0, COLUMN_TOPIC_SECTION_PREVIEW);
   }, [featuredSlugs, openingSlugs, posts, recommended]);
-  const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
+  const uiLocale = isColumnTopicUiLocale(locale) ? locale : 'en';
   const labels = categoryFilterLabels(locale);
   const byline =
     locale === 'ko'
@@ -584,9 +589,9 @@ export default function ColumnsGrid({
   const [searchInput, setSearchInput] = useState(requestedQuery);
   const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
   const searchLabels = searchCopy[uiLocale];
-  // Core site locales group the index by topic; translated guidance locales
-  // group by the reviewed category labels they already carry.
-  const topicMode = isExistingSiteLocale4(locale);
+  // Locales with native topic labels group by subject; other guidance locales
+  // keep the category labels they already carry.
+  const topicMode = isColumnTopicUiLocale(locale);
   const topicLabels = COLUMN_TOPIC_LABELS[uiLocale];
   const topicCopy = COLUMN_TOPIC_UI_COPY[uiLocale];
   const topicOf = (post: ColumnListItem): ColumnTopic => post.topic ?? resolveColumnTopic(post.slug, undefined, post.category);

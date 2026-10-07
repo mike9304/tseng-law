@@ -226,6 +226,16 @@ describe('ColumnsGrid guidance filter and card CTA labels', () => {
         ).not.toMatch(new RegExp(`class="columns-filter-btn[^"]*"[^>]*>${english}<`));
       }
 
+      if (locale === 'vi') {
+        expect(buttons).toEqual([
+          'Tất cả',
+          'Thành lập công ty và đầu tư',
+          'Tố tụng và tranh chấp',
+          'Thông tin pháp luật khác',
+        ]);
+        return;
+      }
+
       expect(buttons).toEqual([
         GUIDANCE_ALL_LABEL[locale],
         guidanceColumnCategoryLabel('formation', locale),

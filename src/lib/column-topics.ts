@@ -8,6 +8,8 @@
  * translated guidance locales alike.
  */
 
+import columnUiVi from '@/data/column-ui-vi.json';
+
 export const COLUMN_TOPICS = [
   'criminal',
   'company',
@@ -67,9 +69,14 @@ export function resolveColumnTopic(
   return 'other';
 }
 
-export type ColumnTopicUiLocale = 'ko' | 'zh-hant' | 'en' | 'ja';
+export type ColumnTopicUiLocale = 'ko' | 'zh-hant' | 'en' | 'ja' | 'vi';
+
+export function isColumnTopicUiLocale(locale: string): locale is ColumnTopicUiLocale {
+  return ['ko', 'zh-hant', 'en', 'ja', 'vi'].includes(locale);
+}
 
 export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic, string>> = {
+  vi: columnUiVi.topics,
   ko: {
     criminal: '형사소송',
     company: '법인설립·투자',
@@ -124,6 +131,12 @@ export const COLUMN_TOPIC_UI_COPY: Record<
   ColumnTopicUiLocale,
   { nav: string; viewAll: (label: string, n: number) => string; count: (n: number) => string; backToTopics: string }
 > = {
+  vi: {
+    nav: columnUiVi.topicUi.nav,
+    viewAll: (label, n) => columnUiVi.topicUi.viewAll.replace('{n}', String(n)).replace('{label}', label),
+    count: (n) => columnUiVi.topicUi.count.replace('{n}', String(n)),
+    backToTopics: columnUiVi.topicUi.backToTopics,
+  },
   ko: {
     nav: '주제별로 보기',
     viewAll: (label, n) => `${label} 칼럼 ${n}편 모두 보기`,

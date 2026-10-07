@@ -1,6 +1,7 @@
 import { isInternalColumnPost } from './builder/columns/public-post-filter';
 import { getColumnPublicationDate, type ColumnPost } from './column-post';
 import { normalizeColumnTags } from './column-tags';
+import columnUiVi from '@/data/column-ui-vi.json';
 
 export const CRIMINAL_BOARD_PATH = '/criminal-litigation';
 export const CRIMINAL_BOARD_TAG = 'criminal-litigation';
@@ -27,27 +28,47 @@ export function selectCriminalColumns(posts: readonly ColumnPost[]): ColumnPost[
 export const criminalBoardCopy = {
   ko: {
     title: '대만 형사소송 칼럼',
-    description: '증인 소환장, 형사합의와 고소취소, 불기소 재의, 압수물 반환을 대만 법령으로 설명합니다. 출석과 제출 기한, 신청할 기관, 필요한 문서를 각 글에서 확인할 수 있습니다.',
+    description: '대만에서 범죄 피해를 신고하거나 수사·재판을 받을 때 필요한 절차를 다룹니다. 사건별 증거와 고소, 체포와 구속, 판결에 대한 불복, 피해 회복과 형의 집행을 공식 자료와 함께 설명합니다.',
     columns: '전체 칼럼', service: '형사소송 업무 안내', read: '칼럼 읽기', language: '칼럼 언어',
+    count: (value: number) => `총 ${value}편`,
+    search: '형사소송 칼럼 검색', placeholder: '사건이나 절차로 검색', submit: '검색', reset: '전체 글 보기',
+    empty: '검색어에 맞는 글이 없습니다.', results: (n: number) => `검색 결과 ${n}편`,
   },
   'zh-hant': {
     title: '刑事訴訟專欄',
-    description: '從證人傳票、和解撤告、不起訴再議到扣押物發還，依台灣法規說明出庭與提出書狀的期限、受理機關，以及需保留的文件。各篇附官方資料與查核日期。',
+    description: '依台灣法規說明報案與蒐證、偵查與羈押、刑事審判與救濟，以及求償和刑罰執行。從各篇確認受理機關、期限、所需文件與例外，並可查閱引用的官方資料。',
     columns: '所有專欄', service: '刑事訴訟服務', read: '閱讀專欄', language: '專欄語言',
+    count: (value: number) => `共 ${value} 篇`,
+    search: '搜尋刑事訴訟專欄', placeholder: '輸入案件或程序', submit: '搜尋', reset: '查看全部文章',
+    empty: '沒有符合關鍵字的文章。', results: (n: number) => `找到 ${n} 篇文章`,
   },
   en: {
     title: 'Taiwan Criminal Litigation Columns',
-    description: 'Taiwan procedures for witness summonses, settlement and complaint withdrawal, reconsideration of non-prosecution, and return of seized property. Each column identifies the relevant authority, documents and deadlines, with official sources.',
+    description: 'Taiwan criminal cases from reporting and investigation through detention, trial, appeals and sentencing. Find the relevant authority, evidence, deadlines and routes to compensation, with links to official sources.',
     columns: 'All columns', service: 'Criminal litigation services', read: 'Read column', language: 'Column language',
+    count: (value: number) => `${value} ${value === 1 ? 'article' : 'articles'}`,
+    search: 'Search criminal law articles', placeholder: 'Search an offense or procedure', submit: 'Search', reset: 'View all articles',
+    empty: 'No articles match your search.', results: (n: number) => `${n} search ${n === 1 ? 'result' : 'results'}`,
   },
   ja: {
     title: '台湾の刑事訴訟コラム',
-    description: '証人の召喚状、示談と告訴取消し、不起訴処分への再議、押収物の還付を台湾の法令に基づいて説明します。出頭や書面提出の期限、提出先、保管する書類を各コラムで確認できます。',
+    description: '台湾での被害申告や証拠の保存から、取調べ、勾留、裁判、不服申立て、損害賠償と刑の執行までを扱います。提出先や期限、必要な書類と例外を、台湾の公的資料とともに説明します。',
     columns: 'すべてのコラム', service: '刑事訴訟の業務案内', read: 'コラムを読む', language: 'コラムの言語',
+    count: (value: number) => `全${value}件`,
+    search: '刑事訴訟コラムを検索', placeholder: '事件や手続で検索', submit: '検索', reset: 'すべての記事を表示',
+    empty: '検索語に一致する記事はありません。', results: (n: number) => `検索結果 ${n}件`,
   },
   vi: {
     title: 'Bài viết về tố tụng hình sự Đài Loan',
-    description: 'Giấy triệu tập làm chứng, thỏa thuận và rút yêu cầu xử lý, xem xét lại quyết định không truy tố, trả lại vật bị thu giữ: các bài giải thích cơ quan giải quyết, giấy tờ và thời hạn theo luật Đài Loan, kèm nguồn chính thức.',
+    description: 'Từ trình báo và lưu giữ chứng cứ đến điều tra, tạm giam, xét xử, kháng cáo và thi hành án tại Đài Loan. Các bài giải thích cơ quan tiếp nhận, thời hạn, giấy tờ và cách yêu cầu bồi thường, kèm nguồn chính thức.',
     columns: 'Tất cả bài viết', service: 'Thông tin dịch vụ pháp lý', read: 'Đọc bài', language: 'Ngôn ngữ bài viết',
+    count: (value: number) => `${value} bài viết`,
+    search: columnUiVi.search.label, placeholder: columnUiVi.search.placeholder, submit: columnUiVi.search.submit,
+    reset: columnUiVi.search.reset, empty: columnUiVi.search.noMatches,
+    results: (n: number) => columnUiVi.search.resultCount.replace('{n}', String(n)),
   },
-} satisfies Record<CriminalBoardLocale, { title: string; description: string; columns: string; service: string; read: string; language: string }>;
+} satisfies Record<CriminalBoardLocale, {
+  title: string; description: string; columns: string; service: string; read: string; language: string;
+  count: (value: number) => string; search: string; placeholder: string; submit: string; reset: string;
+  empty: string; results: (value: number) => string;
+}>;

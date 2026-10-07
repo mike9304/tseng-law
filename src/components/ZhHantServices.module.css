@@ -362,6 +362,11 @@
 .cardLink:hover { text-decoration: underline; text-underline-offset: 5px; }
 .cardLink :global(.zh-trail) { margin-left: 0; } /* the link's own 6px gap separates the glyph */
 .cardLink:focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 6px; }
+/* The whole tile opens the practice (2026-10-08, operator: 「주요 서비스에 글들 누르면 자세히 보기로 들어가야」): the card's
+   one link (「자세히 보기」) stretches over its article; the label stays the visible key and the link's name. */
+.card > article { position: relative; cursor: pointer; }
+.cardLink::after { content: ''; position: absolute; inset: 0; }
+.card > article:hover .cardLink { text-decoration: underline; text-underline-offset: 5px; }
 /* A group with a single practice: one wide tile, title on the left, the full description on the right. */
 .groupGrid:has(> :only-child) > .card > article {
   display: grid;

@@ -97,7 +97,10 @@ export function KoColumns({ posts }: { posts: readonly ColumnPost[] }) {
   );
 }
 
-/** The six practice areas as tiles on the greige band: name, what the area covers, and its scenarios. */
+/**
+ * The six practice areas as tiles on the greige band: name, what the area covers, and its scenarios. The whole tile
+ * opens the practice page (the title link stretches over it; 「자세히 보기」 is the visible key, as on /ko/services).
+ */
 export function KoPractice() {
   const { services } = siteContent.ko;
   const slugs = getServiceSlugs();
@@ -121,6 +124,7 @@ export function KoPractice() {
                 <ul className={styles.practiceTags} aria-label={`${item.title}: 주요 업무`}>
                   {(KO_SERVICE_SCENARIOS[slug] ?? []).map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
+                <span className={styles.practiceMore} aria-hidden>자세히 보기</span>
               </li>
             );
           })}

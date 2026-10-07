@@ -319,7 +319,24 @@
   background: var(--ko-paper);
   transition: border-color 0.2s ease;
 }
+.practiceTile { position: relative; cursor: pointer; }
 .practiceTile:hover { border-top-color: var(--ko-plum); }
+/* The title link covers the whole tile; focus shows on the tile. */
+.practiceName a::after { content: ''; position: absolute; inset: 0; }
+.practiceName a:focus-visible { outline: none; }
+.practiceTile:focus-within { outline: 3px solid var(--ko-plum); outline-offset: 3px; }
+.practiceTile:hover .practiceName a { color: var(--ko-plum); }
+.practiceMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  color: var(--ko-ink);
+  font-size: 15px;
+  font-weight: 500;
+}
+.practiceMore::before { content: ''; width: 24px; height: 2px; background: var(--ko-plum); }
+.practiceTile:hover .practiceMore { color: var(--ko-plum); }
 .practiceName { margin: 0; font-size: 21px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; }
 .practiceName a { color: var(--ko-ink); text-decoration: none; }
 .practiceName a:hover { color: var(--ko-plum); text-decoration: underline; text-underline-offset: 5px; }

@@ -45,7 +45,9 @@ const faq = [
 
 const officialLinks = [
   '[대만 법무부 법령정보 — 회사법](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
-  '[대만 법무부 법령정보 — 영업세법 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
+  '[대만 법무부 법령정보 — 영업세법 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340080&flno=10)',
+  '[대만 법무부 법령정보 — 각종 소득 원천징수율 표준(各類所得扣繳率標準) 제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
+  '[대만 법무부 법령정보 — 각종 소득 원천징수율 표준(各類所得扣繳率標準) 제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=4)',
   '[대만 법무부 법령정보 — 소득세법](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)',
   '[대만 재정부 — 국외 주주 배당 원천징수 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)',
   '[대만 재정부 — 외국회사 지점이익 관련 해석](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)',
@@ -179,7 +181,7 @@ describe('Korean investment column 004 — subsidiary versus branch', () => {
       '모회사 보증',
       '이사, 관리자, 대만 책임자의 의무',
       '회사법 제378조에 따라 지점등기 말소를 신청해야 합니다.',
-      '지점등기를 말소해도 채권자의 권리와 외국회사의 의무는 달라지지 않습니다. 회사법 제379조의 내용입니다.',
+      '주무기관이 회사법 제379조 제1항에 따라 지점등기를 말소하는 경우에도 채권자의 권리와 외국회사의 의무는 달라지지 않습니다. 같은 조 제2항의 내용입니다.',
       '회사법 제380조에 따라 외국회사는 대만 내 영업과 지점에서 생긴 권리·의무를 청산해야 합니다.',
       '청산 뒤에도 갚지 못한 채무는 외국회사가 계속 부담합니다.',
       '자회사는 독립 법인이어서 지점등기 말소가 아니라 회사법상 해산·청산 절차를 밟습니다.',
@@ -289,7 +291,7 @@ describe('Korean investment column 004 — subsidiary versus branch', () => {
     const calculatedMinutes = Math.ceil(visibleEojeolCount / 180);
 
     expect(visibleEojeolCount).toBeGreaterThanOrEqual(1_800);
-    expect(visibleEojeolCount).toBe(2_958);
+    expect(visibleEojeolCount).toBe(2_983);
     expect(calculatedMinutes).toBe(17);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);

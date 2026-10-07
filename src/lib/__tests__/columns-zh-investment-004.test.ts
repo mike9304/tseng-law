@@ -50,6 +50,7 @@ const faq = [
 const officialLinks = [
   '[全國法規資料庫—公司法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
   '[全國法規資料庫—各類所得扣繳率標準第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
+  '[全國法規資料庫—各類所得扣繳率標準第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=4)',
   '[全國法規資料庫—所得稅法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)',
   '[財政部稅務入口網—營利所得扣繳說明](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)',
   '[財政部主管法規查詢系統—外商在我國境內分公司之盈餘課稅釋疑](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)',
@@ -88,7 +89,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     expect(parsed.data).toEqual({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch',
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-06',
       date_display: '2025年9月13日',
       read_time: '20分鐘閱讀',
       categories: ['台灣公司設立'],
@@ -103,7 +104,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     expect(post).toMatchObject({
       slug: 'taiwan-company-subsidiary-vs-branch',
       title,
-      date: '2026-07-25',
+      date: '2026-10-06',
       dateDisplay: '2025年9月13日',
       readTime: '20分鐘閱讀',
       category: 'formation',
@@ -321,7 +322,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(5_000);
-    expect(visibleHanCount).toBe(7_935);
+    expect(visibleHanCount).toBe(7_953);
     expect(calculatedMinutes).toBe(20);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

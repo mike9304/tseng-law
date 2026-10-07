@@ -2,7 +2,7 @@
 title: "Entering the Taiwan Market: Key Differences Between a Subsidiary and a Branch"
 seoTitle: "Taiwan Subsidiary vs Branch: Key Differences"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
-lastmod: "2026-07-25"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
 read_time: "28 min read"
 categories:
@@ -163,7 +163,7 @@ The possibility of changing the structure during operations should also be consi
 
 Exit procedures also differ. If the branch of a foreign company ceases operations in Taiwan, it must apply to cancel its branch registration under Article 378 of the Company Act. Debts and tax, employment, contractual, and regulatory obligations arising before the application do not, however, disappear merely because an application is filed. Settlement with business counterparties, termination of employment, collection of receivables, disposal of assets, tax filings, and closure of bank accounts should be carried out in the proper sequence.
 
-Under Article 379 of the Company Act, cancellation of a branch registration does not affect creditors’ rights or the foreign company’s obligations. Creditors may continue to exercise rights arising from operations before cancellation, and the foreign company remains liable for those obligations. The disappearance of the branch from the register therefore does not, by itself, end past liability. Contracts and guarantees that may give rise to disputes, possible tax-audit periods, and record-retention obligations should also be reviewed.
+Where the competent authority cancels a branch registration under Article 379(1) of the Company Act, Article 379(2) provides that the cancellation does not affect creditors’ rights or the foreign company’s obligations. Creditors may continue to exercise rights arising from operations before cancellation, and the foreign company remains liable for those obligations. The disappearance of the branch from the register therefore does not, by itself, end past liability. Contracts and guarantees that may give rise to disputes, possible tax-audit periods, and record-retention obligations should also be reviewed.
 
 If all Taiwan branches of a foreign company are canceled, Article 380 of the Company Act requires liquidation of the rights and obligations arising from its Taiwan operations and branches. The foreign company remains liable for debts that cannot be paid after liquidation. The principle that the foreign head office and branch are the same legal person applies both on entry and on exit. The appointment of the person responsible for liquidation, creditor notices, filings, and treatment of remaining funds must also follow current procedures.
 
@@ -174,7 +174,9 @@ The safest approach is for professionals in Taiwan and the jurisdiction of the h
 ## Official Sources
 
 - [Laws & Regulations Database — Company Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Laws & Regulations Database — Article 10 of the Value-Added and Non-Value-Added Business Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Laws & Regulations Database — Article 10 of the Value-Added and Non-Value-Added Business Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340080&flno=10)
+- [Laws & Regulations Database — Article 3 of the Standards of Withholding Rates for Various Incomes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Laws & Regulations Database — Article 4 of the Standards of Withholding Rates for Various Incomes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=4)
 - [Laws & Regulations Database — Income Tax Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministry of Finance eTax Portal — Withholding on Profit Income](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministry of Finance Laws and Regulations Database — Taxation of Profits of a Taiwan Branch of a Foreign Company](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

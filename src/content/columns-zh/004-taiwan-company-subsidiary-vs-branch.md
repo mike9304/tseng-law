@@ -1,7 +1,7 @@
 ---
 title: "進入台灣市場：子公司與分公司的差異"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
-lastmod: "2026-07-25"
+lastmod: "2026-10-06"
 date_display: "2025年9月13日"
 read_time: "20分鐘閱讀"
 categories:
@@ -173,6 +173,7 @@ faq:
 
 - [全國法規資料庫—公司法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
 - [全國法規資料庫—各類所得扣繳率標準第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [全國法規資料庫—各類所得扣繳率標準第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=4)
 - [全國法規資料庫—所得稅法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [財政部稅務入口網—營利所得扣繳說明](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [財政部主管法規查詢系統—外商在我國境內分公司之盈餘課稅釋疑](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

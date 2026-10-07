@@ -46,7 +46,9 @@ const faq = [
 
 const officialLinks = [
   '[Laws & Regulations Database — Company Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
-  '[Laws & Regulations Database — Article 10 of the Value-Added and Non-Value-Added Business Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
+  '[Laws & Regulations Database — Article 10 of the Value-Added and Non-Value-Added Business Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340080&flno=10)',
+  '[Laws & Regulations Database — Article 3 of the Standards of Withholding Rates for Various Incomes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
+  '[Laws & Regulations Database — Article 4 of the Standards of Withholding Rates for Various Incomes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=4)',
   '[Laws & Regulations Database — Income Tax Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)',
   '[Ministry of Finance eTax Portal — Withholding on Profit Income](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)',
   '[Ministry of Finance Laws and Regulations Database — Taxation of Profits of a Taiwan Branch of a Foreign Company](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)',
@@ -115,7 +117,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
       title,
       seoTitle: 'Taiwan Subsidiary vs Branch: Key Differences',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch',
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
       read_time: '28 min read',
       categories: ['Taiwan Company Formation'],
@@ -130,7 +132,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
     expect(post).toMatchObject({
       slug: 'taiwan-company-subsidiary-vs-branch',
       title,
-      date: '2026-07-25',
+      date: '2026-10-06',
       dateDisplay: 'September 13, 2025',
       readTime: '28 min read',
       category: 'formation',
@@ -225,7 +227,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
       'Branch contracts and debts belong to the foreign company',
       'Part of the foreign head office, without separate legal personality',
       branchExitParagraph,
-      'Under Article 379 of the Company Act, cancellation of a branch registration does not affect creditors’ rights or the foreign company’s obligations.',
+      'Where the competent authority cancels a branch registration under Article 379(1) of the Company Act, Article 379(2) provides that the cancellation does not affect creditors’ rights or the foreign company’s obligations.',
       'Article 380 of the Company Act requires liquidation of the rights and obligations arising from its Taiwan operations and branches.',
       'Because a Taiwan subsidiary is an independent legal entity, it follows the dissolution and liquidation procedures under the Company Act rather than the cancellation procedure for the branch of a foreign company.',
       'The termination procedures and work required for the two structures should not be treated as the same.',
@@ -382,7 +384,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
-    expect(visibleWords).toBe(5_505);
+    expect(visibleWords).toBe(5_544);
     expect(calculatedMinutes).toBe(28);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

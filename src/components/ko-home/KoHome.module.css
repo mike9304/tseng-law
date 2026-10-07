@@ -490,6 +490,22 @@
 .home:global(#ko-home) .chapter :global(.stat-label) { margin-top: 12px; color: #ecdfe6 !important; font-size: 15px; letter-spacing: 0; }
 .home:global(#ko-home) .chapter :global(.stat-progress) { display: none; }
 .home:global(#ko-home) .chapter :global(.decorative-autoplay-video__control:focus-visible) { outline-color: #fff; }
+/* The case video's pause key: glyph only, as the hero's (operator 2026-10-08: 「영상 일시정지라는거 없애자」). */
+.home:global(#ko-home) .chapter :global(#results .decorative-autoplay-video__control) {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: rgb(24 16 14 / 55%);
+  color: #fff;
+  box-shadow: none;
+}
+.home:global(#ko-home) .chapter :global(#results .decorative-autoplay-video__control:hover) { background: rgb(24 16 14 / 80%); }
+.home:global(#ko-home) .chapter :global(#results .decorative-autoplay-video__control-icon) { display: inline-flex; color: inherit; }
+.home:global(#ko-home) .chapter :global(#results .decorative-autoplay-video__control) > span:not(:global(.decorative-autoplay-video__control-icon)) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
 /* Hangul labels read as words without the shared modules' positive label tracking. */
 .home:global(#ko-home) :global(#offices :is(.section-label, .office-map-fallback-kicker)) { letter-spacing: 0; }
 

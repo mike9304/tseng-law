@@ -505,6 +505,16 @@
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
 }
 .home:global(#zh-hant-home) :global(.hero .decorative-autoplay-video__control:focus-visible) { outline: 3px solid #fff; outline-offset: 3px; }
+/* The case video's control: the same glyph-only disc. */
+.home:global(#zh-hant-home) :global(#results .decorative-autoplay-video__control) {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+}
+.home:global(#zh-hant-home) :global(#results .decorative-autoplay-video__control) > span:not(:global(.decorative-autoplay-video__control-icon)) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
 /* The copy column spans the hero; let clicks through to the video control behind it. */
 .home:global(#zh-hant-home) :global(.hero .container.hero-inner) { pointer-events: none !important; }
 .home:global(#zh-hant-home) :global(.hero .hero-copy) { pointer-events: auto; }

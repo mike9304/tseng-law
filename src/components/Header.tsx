@@ -967,7 +967,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
                 <span className={styles.brandLine}>Law Firm</span>
               </span>
             ) : (
-              <span className={`logo-kr ${styles.brandText}`}>
+              <span className={`logo-kr ${styles.brandText}`} data-brand-text={brandText}>
                 {brandText}
                 {locale === 'ja' ? (
                   <span lang="en" style={JA_BRAND_SUBLABEL_STYLE} data-ja-brand-sublabel>

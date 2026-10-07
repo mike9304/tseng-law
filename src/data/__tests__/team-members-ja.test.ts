@@ -79,7 +79,7 @@ describe('Japanese team content', () => {
     }
   });
 
-  it('preserves the lead profile contract and the intentionally blank operations email', () => {
+  it('preserves the lead profile contract and the operations manager\'s own email', () => {
     const lead = teamContent.ja.members.find(({ id }) => id === 'tseng-junwei');
     const operations = teamContent.ja.members.find(({ id }) => id === 'son-jungmin');
 
@@ -88,7 +88,7 @@ describe('Japanese team content', () => {
       email: 'wei@hoveringlaw.com.tw',
       photo: '/images/team/wei-tseng-official.png',
     });
-    expect(operations?.email).toBe('');
+    expect(operations?.email).toBe('son-7@tseng-law.com');
   });
 
   it('preserves reviewer-approved credential-sensitive wording', () => {

@@ -486,15 +486,23 @@
 .heroBackdrop { position: absolute; inset: 0; overflow: hidden; }
 .heroBackdropPlayer { position: absolute; inset: 0; isolation: isolate; transform-origin: 50% 72%; }
 .heroBackdropImage { object-fit: cover; object-position: 50% 58%; }
-/* The video's pause control (WCAG 2.2.2): a small glass pill at the top right of the image. */
+/* The video's pause control (WCAG 2.2.2): a small glass disc at the top right of the image — the glyph only
+   (operator 2026-10-08, every locale: icon without words); the label stays the control's accessible name. */
 .home:global(#zh-hant-home) :global(.hero .decorative-autoplay-video__control) {
   top: 18px;
   right: 18px;
-  padding: 0.55rem 0.9rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border-color: rgb(255 255 255 / 30%);
-  background: rgb(6 14 20 / 55%);
+  border-radius: 50%;
+  background: rgb(6 14 20 / 45%);
   box-shadow: none;
   font-size: 12px;
+}
+.home:global(#zh-hant-home) :global(.hero .decorative-autoplay-video__control:hover) { background: rgb(6 14 20 / 75%); color: #fff; }
+.home:global(#zh-hant-home) :global(.hero .decorative-autoplay-video__control) > span:not(:global(.decorative-autoplay-video__control-icon)) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
 }
 .home:global(#zh-hant-home) :global(.hero .decorative-autoplay-video__control:focus-visible) { outline: 3px solid #fff; outline-offset: 3px; }
 /* The copy column spans the hero; let clicks through to the video control behind it. */

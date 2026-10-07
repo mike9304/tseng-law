@@ -138,19 +138,27 @@
     linear-gradient(90deg, rgb(24 16 14 / 74%) 0%, rgb(24 16 14 / 46%) 44%, rgb(24 16 14 / 0%) 74%),
     linear-gradient(0deg, rgb(24 16 14 / 50%) 0%, rgb(24 16 14 / 0%) 46%);
 }
-/* The pause key (WCAG 2.2.2): a small square of dark glass at the top right of the moving picture. */
+/* The pause key (WCAG 2.2.2): a quiet 44px square of dark glass at the top right of the moving picture — the
+   glyph only (operator 2026-10-08: 「영상 일시정지라는거 없애자」 → icon without words); the label stays the key's
+   accessible name. It firms up under the pointer and keyboard focus. */
 .heroMediaPlayer :global(.decorative-autoplay-video__control) {
   top: 18px;
   right: 18px;
   z-index: 3;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid rgb(255 255 255 / 30%);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
   border-radius: 0;
-  background: rgb(24 16 14 / 55%);
-  color: #fff;
+  background: rgb(24 16 14 / 42%);
+  color: rgb(255 255 255 / 88%);
   box-shadow: none;
 }
-.heroMediaPlayer :global(.decorative-autoplay-video__control):hover { background: rgb(24 16 14 / 75%); }
+.heroMediaPlayer :global(.decorative-autoplay-video__control):is(:hover, :focus-visible) { background: rgb(24 16 14 / 78%); color: #fff; }
+.heroMediaPlayer :global(.decorative-autoplay-video__control-icon) { display: inline-flex; color: inherit; }
+.heroMediaPlayer :global(.decorative-autoplay-video__control) > span:not(:global(.decorative-autoplay-video__control-icon)) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
 .heroInner { position: relative; padding-top: 120px; }
 .firm { display: flex; align-items: center; gap: 10px; margin: 0; color: rgb(255 255 255 / 88%); font-size: 15px; font-weight: 500; }
 .firm img { width: 28px; height: 28px; }

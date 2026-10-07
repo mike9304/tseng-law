@@ -8,6 +8,7 @@ import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/cons
 import { KO_SEARCH_CHIPS } from './ko-home-content';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
+import { ZH_VIDEO_CONTROL_ICONS } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './KoHome.module.css';
 
 /**
@@ -71,11 +72,12 @@ export default function KoHero() {
             deferVideoUntilPosterPaintOnAllViewports
             rootMargin="0px"
             controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS.ko}
+            controlIcons={ZH_VIDEO_CONTROL_ICONS}
           />
         </div>
         <div className={`${styles.wrap} ${styles.heroInner}`}>
           <p className={styles.firm}>
-            <Image src="/images/brand/hovering-seal-official.png" alt="" width={28} height={28} />
+            <Image src="/images/brand/hovering-seal-complete.png" alt="" width={28} height={28} />
             법무법인 호정
           </p>
           <h1 id="ko-hero-title" className={styles.heroTitle}>

@@ -27677,11 +27677,11 @@ html:is([lang='zh-Hant'], [lang='ko']) .search-panel header .icon-button:focus-v
 html[lang='ko'] {
   --font-reading-zh: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-/* Korean identity (2026-10-06) on the ko pages inside the public shell: .site is CinematicRouteShell (every [locale]
-   route, the member/account pages included), and the body that holds it also carries the tokens for what those pages
-   portal into document.body (header search overlay, language picker); :is() drops body:has() where :has is unsupported
-   and keeps .site. The builder routes that also resolve to lang="ko" (/ko/admin-builder, the (builder) layout) have no
-   .site and keep the stack above, so the editor stage does not change face. Pretendard (self-hosted, /fonts/pretendard-1.3.9, its 漢字 ranges removed) leads;
+/* Korean identity (2026-10-06) on the public ko pages only: .site is the public shell (CinematicRouteShell), and the
+   body that holds it also carries the tokens for what public pages portal into document.body (header search overlay,
+   language picker); :is() drops body:has() where :has is unsupported and keeps .site. The builder and account routes
+   that also resolve to lang="ko" (/ko/admin-builder …) have no .site and keep the stack above, so the editor stage
+   does not change face. Pretendard (self-hosted, /fonts/pretendard-1.3.9, its 漢字 ranges removed) leads;
    漢字 glosses and addresses fall to the device Korean/CJK faces in one piece — naming the Noto Sans KR web font here
    pulled ~0.9 MB of its slices onto /ko. */
 html[lang='ko'] :is(body:has(> .site), .site) {
@@ -27689,108 +27689,44 @@ html[lang='ko'] :is(body:has(> .site), .site) {
   --font-reading-zh: var(--font-ko-pretendard);
   --font-body: var(--font-ko-pretendard);
   --font-sans: var(--font-ko-pretendard);
-  --text-link: #8e4c6e;
-  --text-link-hover: #5f4656;
-  /* The site's brand and neutral tokens in the ko palette (2026-10-07, Korean big-firm grammar): the forest-green brand
-     (--purple, and every token :root computed from it: --primary, --accent*, --border-purple) becomes plum, the Apple greys become cream and
-     greige, text a warm ink, dark panels deep plum. */
-  --purple: #8e4c6e;
-  --purple-light: #5f4656;
-  --purple-dark: #5f4656;
-  --purple-bg: #f7f3ea;
-  --purple-border: #ddd6cc;
-  --primary: #8e4c6e;
-  --accent: #8e4c6e;
-  --accent-strong: #5f4656;
-  --accent-purple: #8e4c6e;
-  --accent-purple-light: #5f4656;
-  --accent-purple-dark: #5f4656;
-  --accent-purple-bg: #f7f3ea;
-  --accent-purple-border: #ddd6cc;
-  --border-purple: #ddd6cc;
-  --cream: #f7f3ea;
-  --off-white: #f7f3ea;
-  --warm-bg: #f7f3ea;
-  --warm-bg-alt: #e9e5df;
-  --warm-surface: #f7f3ea;
-  --warm-border: #ddd6cc;
-  --gray-50: #f7f3ea;
-  --gray-100: #f7f3ea;
-  --gray-200: #e9e5df;
-  --border-light: #ddd6cc;
-  --divider: #ddd6cc;
-  --text-heading: #2c231e;
-  --text-body: #2c231e;
-  --text-secondary: #6b5f57;
-  --text-meta: #6b5f57;
-  --dark-bg: #5f4656;
-  --ink-deep: #2c231e;
-  /* Darker than the ink: --navy is also text on the gold landing/guide keys (#241c18 on #9f8752 = 4.83:1). */
-  --navy: #241c18;
+  --text-link: #233f7a;
+  --text-link-hover: #172d5a;
   font-family: var(--font-ko-pretendard);
-  font-weight: 350;
 }
 /* Same weight as the shared html:is([lang='zh-Hant'], [lang='ko']) :where(:focus-visible) ring (#16382d) and later, so ko
-   rings are plum; anything with a class of its own (the deep-plum chapter's white ring, the footer) still wins. */
-html[lang='ko'] :where(:is(body:has(> .site), .site) :focus-visible) { outline-color: #8e4c6e; }
+   rings are indigo; anything with a class of its own (the indigo chapter's white ring, the footer) still wins. */
+html[lang='ko'] :where(:is(body:has(> .site), .site) :focus-visible) { outline-color: #233f7a; }
 /* The light trust strip's 「Google 리뷰 보기」 ring reads --primary (the zh-hant green). */
-html[lang='ko'] .site .hero-trust-strip--light .hero-trust-rating:focus-visible { outline-color: #8e4c6e; }
-/* The search bar shows focus on the bar itself (shared zh-hant/ko rule: #16382d border and glow): plum on ko, in the
+html[lang='ko'] .site .hero-trust-strip--light .hero-trust-rating:focus-visible { outline-color: #233f7a; }
+/* The search bar shows focus on the bar itself (shared zh-hant/ko rule: #16382d border and glow): indigo on ko, in the
    page and in the header overlay that portals into body. */
 html[lang='ko'] :is(body:has(> .site), .site) .search-bar:focus-within {
-  border-color: #8e4c6e;
-  box-shadow: 0 0 0 3px rgb(142 76 110 / 16%);
+  border-color: #233f7a;
+  box-shadow: 0 0 0 3px rgb(35 63 122 / 16%);
 }
-/* The shared zh-hant/ko page modules read --ap-*: on ko pages they take the ko palette (2026-10-07, Korean big-firm
-   grammar) — plum actions and links, cream instead of Apple grey, warm ink, square tiles. Every ZhHant* module
-   re-declares the zh values at its own root (all identical: #16382d ink, 28px radius …), so the ko values sit on those
-   roots too; #main outweighs each module's own root rule. */
-html[lang='ko'] .site #main,
-html[lang='ko'] .site #main :is([class*='ZhHant'], [data-ko-design], article.svc-article[data-ko-design-scope]) {
-  --ap-gray: #f7f3ea;
-  --ap-line: #ddd6cc;
-  --ap-text: #2c231e;
-  --ap-muted: #6b5f57;
-  --ap-ink: #8e4c6e;
-  --ap-ink-deep: #5f4656;
-  --ap-accent: #8e4c6e;
-  --ap-radius: 0;
-  --zh-paper: #f7f3ea;
+/* The shared zh-hant/ko page modules read --ap-*: on ko roots they take the Korean palette — 쪽빛 indigo actions and
+   links, an indigo mist instead of Apple grey, 12px tiles. The ids outweigh each module's own root rule. */
+html[lang='ko'] .site :is(#ko-about, #ko-services, #ko-pricing, #ko-contact, #ko-faq, #ko-columns, #ko-lawyers, #ko-videos, #ko-column, #ko-lawyer-profile, #ko-traffic, #ko-search, #ko-login, #ko-legal, #ko-intent),
+html[lang='ko'] .site :is([data-ko-design='service-detail'], article.svc-article[data-ko-design-scope]) {
+  --ap-gray: #eef2f9;
+  --ap-line: #d8dee8;
+  --ap-text: #1f2329;
+  --ap-muted: #5e6470;
+  --ap-ink: #233f7a;
+  --ap-ink-deep: #172d5a;
+  --ap-accent: #233f7a;
+  --ap-radius: 12px;
+  --zh-paper: #eef2f9;
 }
-/* Square corners on the Korean site (2026-10-07, Korean big-firm grammar): every box, card, photo, action, chip, tab and
-   field in the ko page body (#main — the public pages and the member/account pages that share the shell), the header
-   search overlay (portaled into body) and the phone menu. Left as they are: native check/radio marks, anything with an
-   inline radius (builder-placed nodes, billing panels), icon keys and controls, dots, toggles, spinners, round
-   profile photos, and anything an editor placed in a builder page. */
-html[lang='ko'] .site #main *:not(input[type='checkbox'], input[type='radio'], [style*='border-radius'], [class*='icon'], [class*='Icon'], [class*='control'], [class*='scroll-top'], [class*='nav-btn'], [class*='dot'], [class*='Dot'], [class*='toggle'], [class*='Toggle'], [class*='spinner'], [class*='avatar'], [class*='Avatar'], [class*='ProfilePhoto'], .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *),
-html[lang='ko'] :is(body:has(> .site), .site) :is(.search-overlay, #public-mobile-nav-drawer) *:not(input[type='checkbox'], input[type='radio'], [style*='border-radius'], [class*='icon'], [class*='Icon'], [class*='control'], [class*='scroll-top'], [class*='nav-btn'], [class*='dot'], [class*='Dot'], [class*='toggle'], [class*='Toggle'], [class*='spinner'], [class*='avatar'], [class*='Avatar'], [class*='ProfilePhoto'], .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
-  border-radius: 0 !important;
+/* No pills on the Korean site: every action, chip, tab, field, search bar and tab rail takes 10px corners (radius only
+   shows where there is a fill or a border, so plain text links are unaffected); round icon controls keep their shape,
+   and so does anything an editor placed in a builder page (its inline radius must not lose to !important). */
+html[lang='ko'] .site :is(#ko-about, #ko-services, #ko-pricing, #ko-contact, #ko-faq, #ko-columns, #ko-lawyers, #ko-videos, #ko-column, #ko-lawyer-profile, #ko-traffic, #ko-search, #ko-login, #ko-legal, #ko-intent) :is(a, button, input[type='search'], select, nav, form[role='search'], form.search-bar):not([class*='icon'], [class*='Icon'], [class*='scroll-top'], [class*='nav-btn'], [class*='control'], .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *),
+html[lang='ko'] .site :is([data-ko-design='service-detail'], article.svc-article[data-ko-design-scope]) :is(a, button):not([class*='icon'], [class*='Icon'], [class*='control'], .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
+  border-radius: 10px !important;
 }
-/* Literal zh colours the tokens above do not reach (2026-10-07): office links in plum; the service contact panel and the
-   messenger cards, #1d1d1f tiles on zh-hant, deep plum; the back-to-top key square warm grey. */
-html[lang='ko'] .site #offices :is(.phone-number, .office-rating-link, .office-map-fallback-link) { color: #8e4c6e; }
-html[lang='ko'] .site #main [class*='ZhHantServiceDetail_contactPanel'] { background: #5f4656; }
-html[lang='ko'] .site #ko-contact .messenger-card { background: #5f4656; }
-/* Pale-green text tuned for the zh #16382d panels sits on plum on ko: white instead (6.16:1). */
-html[lang='ko'] .site #ko-traffic section[aria-labelledby='countries-title'] article:has(> a[href*='/columns/']) p { color: #fff; }
-html[lang='ko'] .site #ko-traffic [data-traffic-board] [aria-current='true'] [class*='chipCount'] { color: #fff; }
-/* The active columns switch count: white on plum lightened by 16% white was 4.34:1; darken the chip instead (7.86:1). */
-html[lang='ko'] .site #ko-columns [class*='switchActive'] [class*='switchCount'] { background: rgb(0 0 0 / 16%); }
-/* Column pages: the previous/next tiles carry inline styles (so the square rule skips them) and ZhHantColumnDetail
-   rounds them with !important; the sidebar's consultation key outranks the square rule too. */
-html[lang='ko'] .site #ko-column .column-post-nav > a { border-radius: 0 !important; }
-html[lang='ko'] .site #ko-column .blog-sidebar > .blog-sidebar-card:first-child .button { border-radius: 0 !important; }
-/* Type weights on every ko page (2026-10-07, operator: 「글씨체 디자인도 세종처럼」; measured on the reference: body 350,
-   headings and labels 500, display thin): page titles 200 (the home sets its own 100), section and card headings 500.
-   Nodes an editor placed in a builder page keep their own weight. */
-html[lang='ko'] .site #main h1:not(#ko-home h1, .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 200 !important; }
-html[lang='ko'] .site #main :is(h2, h3):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 500 !important; }
-/* ZhHantContact raises the map keys to pills with two ids and !important; match that weight. */
-html[lang='ko'] .site #ko-contact #offices .office-map-link { border-radius: 0 !important; }
-html[lang='ko'] .site .scroll-top { border-color: transparent; border-radius: 0; background: #57524e; color: #fff; box-shadow: none; }
-html[lang='ko'] .site .scroll-top:is(:hover, :focus-visible) { border-color: transparent; background: #2c231e; color: #fff; }
 /* The practice hero raises its pill with an id in :is() (ZhHantServiceDetail .heroCta); match that weight. */
-html[lang='ko'] .site [data-ko-design='service-detail'] :is(.button, #ko-svc-boost) { border-radius: 0 !important; }
+html[lang='ko'] .site [data-ko-design='service-detail'] :is(.button, #ko-svc-boost) { border-radius: 10px !important; }
 html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) *:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.005em !important;
 }

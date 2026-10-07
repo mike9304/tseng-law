@@ -289,6 +289,3 @@ html[dir='rtl'] .currentLabel {
   background: #fff;
   color: #6e6e73;
 }
-
-/* ko (2026-10-07): square corners on the Korean site, the header key included. */
-:global(.site[data-locale='ko']) .trigger { border-radius: 0 !important; }

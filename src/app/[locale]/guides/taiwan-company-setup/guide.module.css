@@ -338,8 +338,3 @@
     text-wrap: balance;
   }
 }
-
-/* ko (2026-10-07, Korean big-firm palette): the gold accent takes the site's plum — the gold label read 3.1:1 on the
-   cream page — and the consultation key, plum now, carries white text (6.2:1). */
-:global(html[lang='ko']) .page { --gold: #8e4c6e; }
-:global(html[lang='ko']) .ctaButton { color: #fff; }

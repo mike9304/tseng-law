@@ -403,14 +403,11 @@ describe('the existing four languages keep their exact home markup', () => {
       // ja design (昊, 2026-10-03): hero, the 透かし stage and the needs grid (not landmarks here), the numbers on
       // the sunlit wall, practice areas, the column gallery, attorney, case, fees and flow (not landmarks here), FAQ,
       // offices, contact. en design (2026-10-01): its own sequence. No heritage interlude on either.
-      // ko (2026-10-07, Korean big-firm grammar): hero and its search, the columns as a news grid, practice, the case
-      // and figures, then the attorney (the glossary, situations and consultation steps are not landmarks here); no
-      // heritage interlude.
+      // ko (Korean identity, 2026-10-06): KoHomeBody has its own design, but its landmarks keep the zh-hant order
+      // (its situations and consultation-process blocks are not landmarks here); no heritage interlude.
       expectLandmarksOnce(markup, locale, ['heritage']);
-      expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'zh-hant'
+      expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'zh-hant' || locale === 'ko'
         ? ['hero', 'practice', 'insights', 'about', 'results', 'stats', 'faq', 'offices', 'contact']
-        : locale === 'ko'
-          ? ['hero', 'insights', 'practice', 'results', 'stats', 'about', 'faq', 'offices', 'contact']
         : locale === 'ja'
           ? ['hero', 'stats', 'practice', 'insights', 'about', 'results', 'faq', 'offices', 'contact']
           : locale === 'en'

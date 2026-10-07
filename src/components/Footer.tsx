@@ -178,14 +178,13 @@ export default function Footer({
             }
         : { blog: 'Blog', youtube: 'YouTube', website: 'Website' };
 
-  // Taiwanese and Korean readers get the Seoul–Taipei skyline (the firm's
-  // Korea–Taiwan bridge). Every other locale is someone coming to Taiwan, so it
-  // showed Taiwan landmarks only (Presidential Office, 85 Sky Tower, CKS Memorial
-  // Hall, Taipei 101) in the same pen-and-ink style. The en and ja designs hide the
-  // band in CSS and the guidance languages (2026-10-06) drop it outright; ko brought
-  // it back with its big-firm redesign (2026-10-07: line drawing on white above the
-  // warm-grey footer), so the drawing is requested on zh-hant and ko.
-  const showSkyline = locale === 'zh-hant' || locale === 'ko';
+  // Taiwanese readers keep the Seoul–Taipei skyline (the firm's Korea–Taiwan
+  // bridge). Every other locale is someone coming to Taiwan, so it showed Taiwan
+  // landmarks only (Presidential Office, 85 Sky Tower, CKS Memorial Hall,
+  // Taipei 101) in the same pen-and-ink style. The en and ja designs hide the
+  // band in CSS; the ko Apple-system redesign and the guidance languages
+  // (2026-10-06) drop it outright, so the drawing is only requested on zh-hant.
+  const showSkyline = locale === 'zh-hant';
   const skyline =
     locale === 'ko' || locale === 'zh-hant'
       ? { src: '/images/footer-ground-skyline-v2.webp', width: 2600, height: 778 }

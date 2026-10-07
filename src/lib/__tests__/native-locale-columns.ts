@@ -514,6 +514,11 @@ export const COUNTRY_COLUMN_FILES_20261007 = {
     '271-taiwan-traffic-accident-compensation-items-japanese.md', // ja-plan-20261006
     '272-taiwan-warning-account-frozen-japanese.md', // ja-plan-20261006
     '273-taiwan-national-security-act-core-technology-japanese-employers.md', // ja-plan-20261006
+    '346-taiwan-distributor-agreement-termination-japanese-brand.md', // enja-inbound-20261007
+    '347-taiwan-counterfeit-japanese-brand-customs-criminal-civil.md', // enja-inbound-20261007
+    '348-taiwan-cross-border-ecommerce-consumer-protection-japanese-sellers.md', // enja-inbound-20261007
+    '349-japanese-company-acquiring-taiwan-company-investment-review-merger-filing.md', // enja-inbound-20261007
+    '350-taiwan-cannabis-cbd-penalties-japanese-travellers.md', // enja-inbound-20261007
 
     '401-taiwan-criminal-witness-summons-refuse-testimony.md', // criminal-20261007
     '402-taiwan-criminal-settlement-withdraw-complaint.md', // criminal-20261007
@@ -531,6 +536,11 @@ export const COUNTRY_COLUMN_FILES_20261007 = {
     '402-taiwan-criminal-settlement-withdraw-complaint.md', // criminal-20261007
     '403-taiwan-non-prosecution-reconsideration-deadline.md', // criminal-20261007
     '404-taiwan-seized-phone-property-return.md', // criminal-20261007
+    '351-enforcing-us-arbitral-award-in-taiwan.md', // enja-inbound-20261007
+    '352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits.md', // enja-inbound-20261007
+    '353-terminating-taiwan-distributor-us-exporter.md', // enja-inbound-20261007
+    '354-unpaid-invoices-taiwan-buyer-payment-order-attachment.md', // enja-inbound-20261007
+    '355-cannabis-thc-cbd-taiwan-penalties-us-visitors.md', // enja-inbound-20261007
   ],
 
   'zh-hant': [

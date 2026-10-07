@@ -1533,6 +1533,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-customs-valuation-related-party-imports-transfer-pricing"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-cross-border-e-services-income-tax-foreign-platforms"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-cross-border-e-services-income-tax-foreign-platforms"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-cross-border-e-services-income-tax-foreign-platforms"
     }
   ]
 }

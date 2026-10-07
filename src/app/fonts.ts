@@ -198,8 +198,8 @@ export function getManagedLocaleFontClassNames(): string[] {
  * self-hosted under a versioned folder with a content-hashed sheet — /fonts is served immutable, so a changed sheet
  * needs a new name.
  */
-/** ja type (2026-10-07, J1): Zen Old Mincho + Zen Kaku Gothic New in unicode-range slices (SIL OFL 1.1), hashed sheet. */
-export const JA_ZEN_STYLESHEET = '/fonts/zen-ja-2026-10/zen-ja-d3629b42fbc1.css';
+/** ja type (2026-10-07, J1): Zen Old Mincho (500/700) + Zen Kaku Gothic New (400/700) in unicode-range slices (SIL OFL 1.1), hashed sheet. */
+export const JA_ZEN_STYLESHEET = '/fonts/zen-ja-2026-10/zen-ja-50b77accc577.css';
 
 export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-ff7df79e29f2.css';
 

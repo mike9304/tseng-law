@@ -37,8 +37,8 @@
   --en-field: #86868b;
 
   /* type (8) */
-  /* Display serif (2026-10-07, operator choice E1): Source Serif 4; text stays Inter. */
-  --en-display: 'EN Glyphs', 'EN Source Serif', Georgia, 'Times New Roman', var(--font-body), serif;
+  /* Display serif (2026-10-07, operator choice E1): Source Serif 4, renamed 'EN Display Serif' (globals); text stays Inter. */
+  --en-display: 'EN Glyphs', 'EN Display Serif', Georgia, 'Times New Roman', var(--font-body), serif;
   --en-text: 'EN Glyphs', 'EN Inter', 'EN Inter Fallback', var(--font-body), system-ui, sans-serif;
   --en-sans: var(--en-text);
   --en-t-xl: clamp(44px, 6.67vw, 104px);

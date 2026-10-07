@@ -188,13 +188,24 @@
   --font-display-en: var(--font-heading-en);
 }
 
+/* The lead attorney's name 曾雋崴 in one face (2026-10-07): Zen has no 崴, so the three characters come from the Noto JP
+   slices the ja pages already link, sans for text and serif for titles; everything else falls through to Zen. */
+@font-face { font-family: 'JA Name Sans'; font-weight: 100 900; font-display: swap; unicode-range: U+66FE; src: url(/fonts/00d49745793628af-s.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Sans'; font-weight: 100 900; font-display: swap; unicode-range: U+96CB; src: url(/fonts/073c56d5826c0954-s.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Sans'; font-weight: 100 900; font-display: swap; unicode-range: U+5D34; src: url(/fonts/8dae1ea3903b1d2c-s.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Serif'; font-weight: 200 900; font-display: swap; unicode-range: U+66FE; src: url(/fonts/c5d2990dd7e95e50-s.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Serif'; font-weight: 200 900; font-display: swap; unicode-range: U+96CB; src: url(/fonts/7979d326a9a21f7a-s.woff2) format('woff2'); }
+@font-face { font-family: 'JA Name Serif'; font-weight: 200 900; font-display: swap; unicode-range: U+5D34; src: url(/fonts/0210a8e3222d8405-s.woff2) format('woff2'); }
+/* ja page titles at the specimen's Zen Old Mincho 500 (the face ships 500 and 700); builder-placed nodes keep their own. */
+html[lang='ja'] .site #main h1:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 500 !important; }
+
 /* Japanese pages receive only the JP pair, including legacy display roles
    that still reference the Korean-named compatibility token. */
 html[lang='ja'] {
   /* ja type (2026-10-07, operator choice J1): Zen Kaku Gothic New for text, Zen Old Mincho for titles, self-hosted
      (/fonts/zen-ja-2026-10, SIL OFL 1.1); the Noto JP pair stays behind them for any character they lack. */
-  --font-body-ja: 'JA Zen Kaku Gothic New', var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
-  --font-heading-ja: 'JA Zen Old Mincho', var(--font-noto-serif-jp-loaded, 'Yu Mincho'), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  --font-body-ja: 'JA Name Sans', 'JA Zen Kaku Gothic New', var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  --font-heading-ja: 'JA Name Serif', 'JA Zen Old Mincho', var(--font-noto-serif-jp-loaded, 'Yu Mincho'), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
   --font-body: var(--font-body-ja);
   --font-sans: var(--font-body-ja);
   --font-heading: var(--font-heading-ja);
@@ -28014,9 +28025,10 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
    ===================================================================================================== */
 @font-face { font-family: 'EN Inter Tight'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-tight-latin-var.woff2') format('woff2'); }
 @font-face { font-family: 'EN Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-latin-wght.woff2') format('woff2'); }
-/* Display serif (2026-10-07, operator choice E1): Source Serif 4, variable weight and optical size, Latin (SIL OFL 1.1,
-   /fonts/en/OFL-source-serif-4.txt). */
-@font-face { font-family: 'EN Source Serif'; font-style: normal; font-weight: 200 900; font-display: swap; src: url('/fonts/en/source-serif-4-latin-var.woff2') format('woff2'); }
+/* Display serif (2026-10-07, operator choice E1): Adobe's Source Serif 4 variable (weight + optical size), subset to
+   Latin and renamed 'EN Display Serif' — the SIL OFL 1.1 reserves the name "Source" for the unmodified font
+   (/fonts/en/OFL-en-display-serif.txt). */
+@font-face { font-family: 'EN Display Serif'; font-style: normal; font-weight: 200 900; font-display: swap; src: url('/fonts/en/en-display-serif-latin-var.woff2') format('woff2'); }
 /* Typed arrows (U+2190, U+2192, U+2197) render as the en chevron drawn from the EnChevron paths (0.4 KB). */
 @font-face { font-family: 'EN Glyphs'; font-display: block; unicode-range: U+2190, U+2192, U+2197; src: url('/fonts/en/en-glyphs.woff2') format('woff2'); }
 /* Metric-matched fallbacks (fontTools, from the files above) so a late swap does not move line breaks. */
@@ -28028,7 +28040,7 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
    inline CJK terms); no serif anywhere. Pages outside the en wrapper keep their layout and take these faces. */
 .site[data-locale='en'] {
   --font-body: 'EN Glyphs', 'EN Inter', 'EN Inter Fallback', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading-en: 'EN Glyphs', 'EN Source Serif', Georgia, 'Times New Roman', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), serif;
+  --font-heading-en: 'EN Glyphs', 'EN Display Serif', Georgia, 'Times New Roman', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), serif;
   --font-display-en: var(--font-heading-en);
   --en-chrome-action: #0066d6;
   --en-chrome-action-hover: #0a6ee6;

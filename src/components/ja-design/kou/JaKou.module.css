@@ -43,9 +43,10 @@
   --ja-ease: cubic-bezier(0, 0, 0.5, 1);
   --ja-ease-reveal: cubic-bezier(0.2, 0, 0, 1);
 
-  /* Titles in Zen Old Mincho (2026-10-07, J1); the former display subset stays behind it. */
-  --ja-display: 'JA Zen Old Mincho', 'JaKouDisplay', var(--font-noto-serif-jp-loaded, 'Hiragino Mincho ProN'), 'Hiragino Mincho ProN', 'Yu Mincho', serif;
-  --ja-sans: var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans CJK JP', sans-serif;
+  /* Titles in Zen Old Mincho, text in Zen Kaku Gothic New (2026-10-07, J1); the attorney's name from Noto (see
+     globals 'JA Name …'); the Noto JP pair behind for anything Zen lacks. */
+  --ja-display: 'JA Name Serif', 'JA Zen Old Mincho', var(--font-noto-serif-jp-loaded, 'Hiragino Mincho ProN'), 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --ja-sans: 'JA Name Sans', 'JA Zen Kaku Gothic New', var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans CJK JP', sans-serif;
 
   --ja-fs-hero2: clamp(64px, min(10.8vw, 19svh), 208px);
   --ja-fs-hero1: clamp(20px, 2.5vw, 44px);

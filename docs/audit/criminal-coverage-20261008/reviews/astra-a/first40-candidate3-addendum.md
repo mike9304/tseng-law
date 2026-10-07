@@ -32,4 +32,3 @@ The [candidate 2 content/source/editorial review](first40-final-review.md) carri
 No new implementation or test was written. I inspected the existing language-link test source but did not rerun it or perform a browser/build run for this addendum. Root's reported QA/build/browser results remain root's evidence; this addendum does not independently certify them. The known broader-builder smoke failure is not called a pass here.
 
 I did not read other reviewers' opinions. Broad five-country coverage, deferred legacy reclassification, and publication/technical gates remain outside completion. No second-batch work was started.
-

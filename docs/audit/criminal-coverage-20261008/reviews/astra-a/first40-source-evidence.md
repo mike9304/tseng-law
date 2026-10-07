@@ -75,4 +75,3 @@ Checked 2026-10-08 for candidate 2. This supplements [first-batch-en-source-evid
 The database displayed consolidated law current to 2026-09-24 during this review. I compared the current displayed Chinese provisions, relevant official notices and constitutional holdings; I do not claim an exhaustive Gazette search for every possible later promulgation or a live browser test of every outbound link. Old FAQ dates are not treated as proof of current law when a current statute provides the rule.
 
 A repeated topic, official source URL, healthy HTTP response, author ledger or numeric style score never establishes a substantive answer by itself. Full article reading and the proposition-specific checks above support this limited decision. The eleven planning additions, linked legacy content, full workplace/child specialist procedures and the technical publication gates remain outside completion.
-

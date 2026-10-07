@@ -4,87 +4,108 @@
     {
       "retained": "reviews/astra-a/first40-final-review.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-a/first40-final-review.md",
-      "sha256": "c46fc81f488a6754e6e2bf06c3b527e0270e7088035d6bb2b5e5a8ff13ee20f4"
+      "source_sha256": "c46fc81f488a6754e6e2bf06c3b527e0270e7088035d6bb2b5e5a8ff13ee20f4",
+      "retained_sha256": "73ee7957df2c2a5885b93291967b5a3730f41121e5505b4df118310b6cbd10f5",
+      "formatting_note": "Only extra blank lines at end of Markdown removed; original report remains unmodified at source path."
     },
     {
       "retained": "reviews/astra-a/first40-candidate3-addendum.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-a/first40-candidate3-addendum.md",
-      "sha256": "dfd2d622f95ad89c01d97fec12bad2269b5682abc494801340a3c3882e2eeac5"
+      "source_sha256": "dfd2d622f95ad89c01d97fec12bad2269b5682abc494801340a3c3882e2eeac5",
+      "retained_sha256": "906c435b1a06c3d2710d21f482196c6185c89cf3936bf0f2a63bc522082b1c5b",
+      "formatting_note": "Only extra blank lines at end of Markdown removed; original report remains unmodified at source path."
     },
     {
       "retained": "reviews/astra-a/first40-candidate3-verification.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-a/first40-candidate3-verification.json",
-      "sha256": "dae29ac356f51880961b7d0d0507454a20a7b621c64a501a0e8088779c6b350c"
+      "source_sha256": "dae29ac356f51880961b7d0d0507454a20a7b621c64a501a0e8088779c6b350c",
+      "retained_sha256": "dae29ac356f51880961b7d0d0507454a20a7b621c64a501a0e8088779c6b350c"
     },
     {
       "retained": "reviews/astra-a/first40-source-evidence.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-a/first40-source-evidence.md",
-      "sha256": "3c0c88513c4c849565fa973f95615e062047b9e48b6c50660438d47339027673"
+      "source_sha256": "3c0c88513c4c849565fa973f95615e062047b9e48b6c50660438d47339027673",
+      "retained_sha256": "017430193845052c4d1296fac5cfcf4ce296b580d978b4d1e98a1e7a4bbafc84",
+      "formatting_note": "Only extra blank lines at end of Markdown removed; original report remains unmodified at source path."
     },
     {
       "retained": "reviews/astra-a/first-batch-en-review.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-a/first-batch-en-review.md",
-      "sha256": "b34627b40f981b966ed9558f68c9b2d9ac3c5060cf30de8a30161ad68693d5da"
+      "source_sha256": "b34627b40f981b966ed9558f68c9b2d9ac3c5060cf30de8a30161ad68693d5da",
+      "retained_sha256": "b34627b40f981b966ed9558f68c9b2d9ac3c5060cf30de8a30161ad68693d5da"
     },
     {
       "retained": "reviews/astra-a/first-batch-en-source-evidence.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-a/first-batch-en-source-evidence.md",
-      "sha256": "3ae77f28b0a9782f7a2ce1352cba3429fbb70f05b61043a52d9769ec823406e0"
+      "source_sha256": "3ae77f28b0a9782f7a2ce1352cba3429fbb70f05b61043a52d9769ec823406e0",
+      "retained_sha256": "3ae77f28b0a9782f7a2ce1352cba3429fbb70f05b61043a52d9769ec823406e0"
     },
     {
       "retained": "reviews/astra-b/first-batch-24-review.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-b/first-batch-24-review.md",
-      "sha256": "1c747f6363c438c4fb3e9b33f260ba519460d6f6128fe9b2b0916963990764b7"
+      "source_sha256": "1c747f6363c438c4fb3e9b33f260ba519460d6f6128fe9b2b0916963990764b7",
+      "retained_sha256": "1c747f6363c438c4fb3e9b33f260ba519460d6f6128fe9b2b0916963990764b7"
     },
     {
       "retained": "reviews/astra-b/candidate3-snapshot/decision.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-b/candidate3-snapshot/decision.json",
-      "sha256": "6cd1580d1c531569570a4948af05c24cb9ad9eb3dcb2b841601fda214fc47680"
+      "source_sha256": "6cd1580d1c531569570a4948af05c24cb9ad9eb3dcb2b841601fda214fc47680",
+      "retained_sha256": "6cd1580d1c531569570a4948af05c24cb9ad9eb3dcb2b841601fda214fc47680"
     },
     {
       "retained": "reviews/astra-b/candidate3-snapshot/independent-hash-check.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-b/candidate3-snapshot/independent-hash-check.json",
-      "sha256": "93eb6b8942371bf189be0ab61c79174786bd45d448fc232b17e6667d71c6cacb"
+      "source_sha256": "93eb6b8942371bf189be0ab61c79174786bd45d448fc232b17e6667d71c6cacb",
+      "retained_sha256": "93eb6b8942371bf189be0ab61c79174786bd45d448fc232b17e6667d71c6cacb"
     },
     {
       "retained": "reviews/astra-c/FINAL-REVIEW-CANDIDATE2.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-c/FINAL-REVIEW-CANDIDATE2.md",
-      "sha256": "cf1536e9e7b399a184742de47c554b6755519e2f9d91e7e17397d876280b0152"
+      "source_sha256": "cf1536e9e7b399a184742de47c554b6755519e2f9d91e7e17397d876280b0152",
+      "retained_sha256": "cf1536e9e7b399a184742de47c554b6755519e2f9d91e7e17397d876280b0152"
     },
     {
       "retained": "reviews/astra-c/CANDIDATE3-ADDENDUM.md",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-c/CANDIDATE3-ADDENDUM.md",
-      "sha256": "f9af8088ca83b2ea874d5a5fb568e035f445ae92e05c853c420fbd2b40e3ad08"
+      "source_sha256": "f9af8088ca83b2ea874d5a5fb568e035f445ae92e05c853c420fbd2b40e3ad08",
+      "retained_sha256": "fd10494214ba51465876de2e21e5ebd8c571ae9049d1ea1163f6f97f6015c504",
+      "formatting_note": "Only extra blank lines at end of Markdown removed; original report remains unmodified at source path."
     },
     {
       "retained": "reviews/astra-c/reviewed-content-manifest.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-c/reviewed-content-manifest.json",
-      "sha256": "a75692c7f75c8d9b44472e5474302cfc2f4d8772429f00fc16a13bacb2c87554"
+      "source_sha256": "a75692c7f75c8d9b44472e5474302cfc2f4d8772429f00fc16a13bacb2c87554",
+      "retained_sha256": "a75692c7f75c8d9b44472e5474302cfc2f4d8772429f00fc16a13bacb2c87554"
     },
     {
       "retained": "reviews/astra-c/candidate3-continuity.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/astra-c/candidate3-continuity.json",
-      "sha256": "1af407cc69680f537ff7c1784d548aa8848de862e386effa8e2f5637f4d42d91"
+      "source_sha256": "1af407cc69680f537ff7c1784d548aa8848de862e386effa8e2f5637f4d42d91",
+      "retained_sha256": "1af407cc69680f537ff7c1784d548aa8848de862e386effa8e2f5637f4d42d91"
     },
     {
       "retained": "first40-release-candidate-2.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/first40-release-candidate-2.json",
-      "sha256": "64f8014a6cb2333c61d7a5cabc61592914abe7d3b87ed118420556c9db4d9fde"
+      "source_sha256": "64f8014a6cb2333c61d7a5cabc61592914abe7d3b87ed118420556c9db4d9fde",
+      "retained_sha256": "64f8014a6cb2333c61d7a5cabc61592914abe7d3b87ed118420556c9db4d9fde"
     },
     {
       "retained": "first40-release-candidate-3.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/first40-release-candidate-3.json",
-      "sha256": "0e09b8e27485175b24050193ba5f6d517258767d7686f53a97603327caffa467"
+      "source_sha256": "0e09b8e27485175b24050193ba5f6d517258767d7686f53a97603327caffa467",
+      "retained_sha256": "0e09b8e27485175b24050193ba5f6d517258767d7686f53a97603327caffa467"
     },
     {
       "retained": "browser-dev-results.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/browser-dev/results.json",
-      "sha256": "51e9c8347f55315f0fc9f614fd3c9e342bf0ca6c4a0f5f85cf7221d417f4e99a"
+      "source_sha256": "51e9c8347f55315f0fc9f614fd3c9e342bf0ca6c4a0f5f85cf7221d417f4e99a",
+      "retained_sha256": "51e9c8347f55315f0fc9f614fd3c9e342bf0ca6c4a0f5f85cf7221d417f4e99a"
     },
     {
       "retained": "browser-built-results.json",
       "source": "/Users/son7/tseng-criminal-coverage-20261008/reviews/browser-built/results.json",
-      "sha256": "233086a6446f1a4ddf1d32ba8aeb397208029533a7eeadf24f6bc4475811aac0"
+      "source_sha256": "233086a6446f1a4ddf1d32ba8aeb397208029533a7eeadf24f6bc4475811aac0",
+      "retained_sha256": "233086a6446f1a4ddf1d32ba8aeb397208029533a7eeadf24f6bc4475811aac0"
     },
     {
       "retained": null,
@@ -107,5 +128,5 @@
       "sha256": "799931ede1aac501ca14b5149ede4da3a2385d264a5941af28dff04ab7152df9"
     }
   ],
-  "note": "Reviewer reports are verbatim. Their historical snapshot/source attachments remain in the original review directories; exact final reviewed product files are bound by candidate3 hashes. Large raw test logs remain local with SHA256 above."
+  "note": "Reviewer prose is unchanged; only redundant EOF blank lines were removed in four retained Markdown copies. Both original and retained SHA256 are recorded. Historical raw source snapshots/test logs remain at the original evidence directories."
 }

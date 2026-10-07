@@ -109,4 +109,3 @@ The July 2026 Criminal Code Article 80 caution remains for later child/sexual-of
 I have not independently reviewed the code changes, run the complete build/test suite, or inspected the actual desktop/mobile site. Root reported those checks in progress. This content PASS must not be reused as their PASS, nor as proof of publication. The remaining 15 original board articles outside the five 403 texts are not freshly recertified by this report.
 
 Reuse this decision only with the exact content hashes in the accompanying verification JSON. Any substantive body/FAQ/title/source change requires a focused rereview; changed rendering or routing requires technical verification. Candidate 2's 61-item board count is a release specification from root, not an independently observed live count here.
-

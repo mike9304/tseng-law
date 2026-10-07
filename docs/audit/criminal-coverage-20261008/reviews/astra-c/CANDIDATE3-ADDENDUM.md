@@ -18,4 +18,3 @@ No article text, sources, dates, AI attribution or board membership changed. Acc
 The primary agent reports that the second pristine production build and final built/public flow checks are underway. I did not execute those checks and do not mark them passed here. I read the prior release's docs/audit/criminal-20261007/preflight.md, which documents the retired homepage-marker assertion at tests/builder-editor/admin-builder.playwright.ts:440. The parent reports the same broad-builder smoke failure now; it remains a failed/unfinished broad smoke, not a passing gate or proof that later builder stages ran. I did not read the referenced other-reviewer report.
 
 This addendum approves only the unchanged content scope plus the inspected interface-copy delta. It does not declare broad criminal coverage complete or certify publication. The primary agent retains the final release decision and production verification.
-

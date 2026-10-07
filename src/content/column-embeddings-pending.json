@@ -1569,6 +1569,14 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-import-duty-business-tax-commodity-tax-foreign-supplier"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-cfc-rules-vietnamese-subsidiary-incentives"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-cfc-rules-vietnamese-subsidiary-incentives"
     }
   ]
 }

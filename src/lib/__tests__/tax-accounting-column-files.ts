@@ -82,6 +82,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '382-taiwan-customs-valuation-related-party-imports-transfer-pricing.md',
     '383-taiwan-free-trade-zone-bonded-factory-science-park-tax.md',
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
+    '385-taiwan-cfc-rules-vietnamese-subsidiary-incentives.md',
   ] as string[],
   'zh-hant': [
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -109,6 +110,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '382-taiwan-customs-valuation-related-party-imports-transfer-pricing.md',
     '383-taiwan-free-trade-zone-bonded-factory-science-park-tax.md',
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
+    '385-taiwan-cfc-rules-vietnamese-subsidiary-incentives.md',
   ] as string[],
 } as const;
 

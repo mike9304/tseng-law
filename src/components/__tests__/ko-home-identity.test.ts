@@ -104,7 +104,8 @@ describe('ko home columns grid and hero photo', () => {
   test('six columns: recommended to Korean readers first, then newest by publication date (not lastmod)', () => {
     const posts = [
       post('old-but-touched', '2026-09-01', '2026-10-07'),
-      post('n1', '2026-10-06', '2026-10-06'),
+      // Shown, with a later lastmod: the tile's machine date must still be the publication date.
+      post('n1', '2026-10-06', '2026-10-07'),
       post('n2', '2026-10-05', '2026-10-05'),
       post('n3', '2026-10-04', '2026-10-04'),
       post('n4', '2026-10-03', '2026-10-03'),

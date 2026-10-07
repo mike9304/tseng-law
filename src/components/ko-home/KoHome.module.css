@@ -6,6 +6,9 @@
    Cream  #F7F3EA  news and glossary tiles             Greige    #E9E5DF  quiet bands
    Ink    #2C231E  text (warm near-black)              Stone     #6B5F57  secondary text   Rule #DDD6CC  hairlines
    인주   #C42B2B  the firm's seal only
+   Silk   /images/ko/plum-silk.webp — deep plum shot silk (Grok-generated texture, 2026-10-07; operator: 「고급진 자두색,
+          한국 판사 법복의 띠처럼 빛에 따라 다른 색이 나는 느낌」): the search band, the case/figures chapter and the
+          plum news tiles are cut from it, and its sheen travels as the page scrolls, like light moving over cloth.
    Type: Pretendard (self-hosted on ko pages) — light for display, bold for register heads; the device Ming/Song face
    for the glossary's 漢字.
    ===================================================================================================== */
@@ -20,6 +23,9 @@
   --ko-rule: #ddd6cc;
   --ko-seal: #c42b2b;
   --ko-search-h: 76px;
+  --ko-silk: url('/images/ko/plum-silk.webp');
+  /* The shot-silk glint: wine on one side, violet on the other, like the two threads of the weave catching the light. */
+  --ko-glint: linear-gradient(105deg, transparent 0%, transparent 34%, rgb(214 92 140 / 50%) 45%, rgb(150 110 230 / 44%) 53%, transparent 65%, transparent 100%);
   /* Inline padding that puts a full-bleed section's content on the shared edge (.container + the 20–40px inset);
      the percentages resolve against the section's own width, so the scrollbar is not counted. */
   --ko-edge: calc((100% - min(var(--max-width, 1200px), 100% - var(--page-gutter, 20px) * 2)) / 2 + clamp(20px, 4vw, 40px));
@@ -45,6 +51,13 @@
   overflow-wrap: break-word;
 }
 .home :focus-visible { outline: 3px solid var(--ko-plum); outline-offset: 3px; }
+
+/* The silk's sheen position: a registered property so the scroll-linked animation can travel it. */
+@property --ko-sheen {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 28%;
+}
 .visuallyHidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* The shared .container plus the editorial sections' inner inset, so the ko-only sections and the shared ones
@@ -170,8 +183,18 @@
 
 .searchWrap { position: relative; z-index: 2; margin-top: calc(var(--ko-search-h) / -2); }
 .search { max-width: 800px; margin: 0; }
-.searchField { display: flex; height: var(--ko-search-h); background: var(--ko-plum); }
-.searchField:focus-within { box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--ko-ink); }
+.searchField {
+  display: flex;
+  height: var(--ko-search-h);
+  /* The robe's sash laid across the photograph: plum shot silk under a plum wash that keeps white text above 4.5:1. */
+  background:
+    var(--ko-glint) var(--ko-sheen) 0 / 260% 100% no-repeat,
+    linear-gradient(90deg, rgb(92 38 70 / 62%) 0%, rgb(104 44 80 / 46%) 55%, rgb(110 46 84 / 24%) 100%),
+    var(--ko-silk) 40% 70% / 160% auto no-repeat,
+    #6e2e54;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 16%);
+}
+.searchField:focus-within { box-shadow: inset 0 1px 0 rgb(255 255 255 / 16%), 0 0 0 3px #fff, 0 0 0 6px var(--ko-ink); }
 .searchField input {
   flex: 1;
   min-width: 0;
@@ -184,7 +207,7 @@
   font-weight: 400;
   outline: none;
 }
-.searchField input::placeholder { color: rgb(255 255 255 / 86%); opacity: 1; }
+.searchField input::placeholder { color: #fff; opacity: 1; }
 .searchField input:focus-visible { outline: none; }
 .searchField button {
   display: inline-flex;
@@ -196,7 +219,7 @@
   color: #fff;
   cursor: pointer;
 }
-.searchField button:hover { background: var(--ko-plum-deep); }
+.searchField button:hover { background: rgb(40 16 32 / 35%); }
 .searchField button:focus-visible { outline: 3px solid #fff; outline-offset: -8px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
 .chips a {
@@ -239,7 +262,14 @@
 .columnGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 22px 0 0; padding: 0; list-style: none; }
 .columnCard,
 .columnCardAccent { background: var(--ko-cream); color: var(--ko-ink); }
-.columnCardAccent { background: var(--ko-plum); color: #fff; }
+.columnCardAccent {
+  background:
+    var(--ko-glint) var(--ko-sheen) 0 / 300% 100% no-repeat,
+    linear-gradient(rgb(104 44 80 / 74%), rgb(104 44 80 / 74%)),
+    var(--ko-silk) 60% 60% / 260% auto no-repeat,
+    var(--ko-plum);
+  color: #fff;
+}
 .columnLink { display: flex; flex-direction: column; height: 100%; min-height: 210px; padding: 26px 26px 22px; color: inherit; text-decoration: none; }
 .columnCategory { font-size: 13px; font-weight: 700; }
 .columnTitle {
@@ -356,7 +386,14 @@
 }
 
 /* One deep-plum chapter: the case, then the figures */
-.chapter { background: var(--ko-plum-deep); color: #fff; }
+.chapter {
+  background:
+    var(--ko-glint) var(--ko-sheen) 0 / 320% 100% no-repeat,
+    linear-gradient(180deg, rgb(58 34 50 / 86%) 0%, rgb(74 42 62 / 78%) 100%),
+    var(--ko-silk) 50% 50% / cover no-repeat,
+    var(--ko-plum-deep);
+  color: #fff;
+}
 /* On the plum band a plum focus ring would vanish. */
 .chapter :focus-visible { outline-color: #fff; }
 .home:global(#ko-home) .chapter :global(#results) {
@@ -461,12 +498,26 @@
 /* ---------- Phones: consultation bar ---------- */
 .mobileCta { display: none; }
 
-/* ---------- Motion: one moment — the Korean terms arrive after the 漢字 ----------
+/* ---------- Motion: the Korean terms arrive after the 漢字; the silk follows the scroll ----------
    Nothing else on this page waits to be revealed: the shared .reveal-stagger grids (the figures) are shown as they
    are; the zh-hant home released them with scroll-driven animation, this home has no other motion. */
 .home:global(#ko-home) :global(.reveal-stagger > *) { opacity: 1 !important; transform: none !important; }
 @media (prefers-reduced-motion: no-preference) {
   .koTerm { animation: koTranslate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 90ms + 350ms); }
+}
+/* The silk catches the light as the page moves: the glint sweeps across each silk surface while that surface passes
+   through the window (no timer, nothing moves while the reader is still; only those surfaces restyle). Browsers
+   without scroll-driven animation, and reduced motion, keep the still cloth with the glint at the right. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .searchField,
+    .columnCardAccent,
+    .chapter { animation: koSheen linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  }
+}
+@keyframes koSheen {
+  from { --ko-sheen: 0%; }
+  to { --ko-sheen: 100%; }
 }
 @keyframes koTranslate {
   from { opacity: 0; transform: translateX(-10px); }

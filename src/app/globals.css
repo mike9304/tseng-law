@@ -27775,6 +27775,10 @@ html[lang='ko'] .site #ko-traffic section[aria-labelledby='countries-title'] art
 html[lang='ko'] .site #ko-traffic [data-traffic-board] [aria-current='true'] [class*='chipCount'] { color: #fff; }
 /* The active columns switch count: white on plum lightened by 16% white was 4.34:1; darken the chip instead (7.86:1). */
 html[lang='ko'] .site #ko-columns [class*='switchActive'] [class*='switchCount'] { background: rgb(0 0 0 / 16%); }
+/* Column pages: the previous/next tiles and the AI-author box carry inline styles (so the square rule skips them) and
+   ZhHantColumnDetail rounds them with !important; the sidebar's consultation key outranks the square rule too. */
+html[lang='ko'] .site #ko-column :is(.column-post-nav > a, .column-ai-author) { border-radius: 0 !important; }
+html[lang='ko'] .site #ko-column .blog-sidebar > .blog-sidebar-card:first-child .button { border-radius: 0 !important; }
 /* ZhHantContact raises the map keys to pills with two ids and !important; match that weight. */
 html[lang='ko'] .site #ko-contact #offices .office-map-link { border-radius: 0 !important; }
 html[lang='ko'] .site .scroll-top { border-color: transparent; border-radius: 0; background: #57524e; color: #fff; box-shadow: none; }

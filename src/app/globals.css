@@ -191,6 +191,10 @@
 /* Japanese pages receive only the JP pair, including legacy display roles
    that still reference the Korean-named compatibility token. */
 html[lang='ja'] {
+  /* ja type (2026-10-07, operator choice J1): Zen Kaku Gothic New for text, Zen Old Mincho for titles, self-hosted
+     (/fonts/zen-ja-2026-10, SIL OFL 1.1); the Noto JP pair stays behind them for any character they lack. */
+  --font-body-ja: 'JA Zen Kaku Gothic New', var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  --font-heading-ja: 'JA Zen Old Mincho', var(--font-noto-serif-jp-loaded, 'Yu Mincho'), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
   --font-body: var(--font-body-ja);
   --font-sans: var(--font-body-ja);
   --font-heading: var(--font-heading-ja);
@@ -202,7 +206,10 @@ html[lang='ja'] {
 /* ZH pages load only TC next/font variables — rebind body/display to TC stacks. */
 html[lang='zh-Hant'],
 html[lang='zh-hant'] {
-  /* zh-hant text sets in the device's own face (see --font-reading-zh): no webfont slices while scrolling. */
+  /* zh-hant type (2026-10-07, operator choice Z1 — 「윈도우에서도 같은 모양」): text in Noto Sans TC (思源黑體), titles in
+     Noto Serif TC (思源宋體), both self-hosted slices already linked on zh-hant; the device faces stay as fallback.
+     (Earlier the text used the device face only, to avoid web-font slices; the operator chose one face everywhere.) */
+  --font-reading-zh: var(--font-noto-sans-tc-loaded, 'PingFang TC'), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans CJK TC', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-body-zh: var(--font-reading-zh);
   --font-body: var(--font-body-zh);
   --font-heading: var(--font-heading-zh);
@@ -210,6 +217,8 @@ html[lang='zh-hant'] {
   --font-display: var(--font-heading-zh);
   --font-display-en: var(--font-heading-zh);
 }
+/* zh-hant titles in Noto Serif TC (思源宋體, Z1): page and section titles 500; builder-placed nodes keep their own. */
+.site[data-locale='zh-hant'] #main :is(h1, h2):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-family: var(--font-heading-zh) !important; font-weight: 500 !important; }
 
 /* Guidance locales load only the latin/Vietnamese Noto Sans (plus Noto Sans
    Thai for th). Without these bindings --font-body resolves through the
@@ -28005,6 +28014,9 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
    ===================================================================================================== */
 @font-face { font-family: 'EN Inter Tight'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-tight-latin-var.woff2') format('woff2'); }
 @font-face { font-family: 'EN Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/en/inter-latin-wght.woff2') format('woff2'); }
+/* Display serif (2026-10-07, operator choice E1): Source Serif 4, variable weight and optical size, Latin (SIL OFL 1.1,
+   /fonts/en/OFL-source-serif-4.txt). */
+@font-face { font-family: 'EN Source Serif'; font-style: normal; font-weight: 200 900; font-display: swap; src: url('/fonts/en/source-serif-4-latin-var.woff2') format('woff2'); }
 /* Typed arrows (U+2190, U+2192, U+2197) render as the en chevron drawn from the EnChevron paths (0.4 KB). */
 @font-face { font-family: 'EN Glyphs'; font-display: block; unicode-range: U+2190, U+2192, U+2197; src: url('/fonts/en/en-glyphs.woff2') format('woff2'); }
 /* Metric-matched fallbacks (fontTools, from the files above) so a late swap does not move line breaks. */
@@ -28016,13 +28028,18 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
    inline CJK terms); no serif anywhere. Pages outside the en wrapper keep their layout and take these faces. */
 .site[data-locale='en'] {
   --font-body: 'EN Glyphs', 'EN Inter', 'EN Inter Fallback', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading-en: 'EN Glyphs', 'EN Inter Tight', 'EN Inter Tight Fallback', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif;
+  --font-heading-en: 'EN Glyphs', 'EN Source Serif', Georgia, 'Times New Roman', var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), serif;
   --font-display-en: var(--font-heading-en);
   --en-chrome-action: #0066d6;
   --en-chrome-action-hover: #0a6ee6;
   --en-chrome-action-pressed: #005bbf;
   --en-chrome-focus: #4ea1ff;
 }
+
+/* Serif titles (2026-10-07, E1): page titles light, section titles regular, tracking for a serif; nodes an editor
+   placed in a builder page keep their own. Other display lines keep their weight in the serif. */
+.site[data-locale='en'] #main h1:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 300 !important; letter-spacing: -0.012em !important; }
+.site[data-locale='en'] #main h2:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 400 !important; letter-spacing: -0.01em !important; }
 
 /* ---------- Header: black bar, one hairline, blue email pill ---------- */
 .site[data-locale='en'] header.header[data-public-site-header],

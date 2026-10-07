@@ -198,11 +198,16 @@ export function getManagedLocaleFontClassNames(): string[] {
  * self-hosted under a versioned folder with a content-hashed sheet — /fonts is served immutable, so a changed sheet
  * needs a new name.
  */
+/** ja type (2026-10-07, J1): Zen Old Mincho + Zen Kaku Gothic New in unicode-range slices (SIL OFL 1.1), hashed sheet. */
+export const JA_ZEN_STYLESHEET = '/fonts/zen-ja-2026-10/zen-ja-d3629b42fbc1.css';
+
 export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-ff7df79e29f2.css';
 
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
   const sheets = getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
   // ko leads with Pretendard; the list also feeds DocumentLocaleSync, so a client-side switch into /ko attaches it too.
-  return language === 'ko' ? [...sheets, KO_PRETENDARD_STYLESHEET] : sheets;
+  if (language === 'ko') return [...sheets, KO_PRETENDARD_STYLESHEET];
+  if (language === 'ja') return [...sheets, JA_ZEN_STYLESHEET];
+  return sheets;
 }

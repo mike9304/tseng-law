@@ -1,7 +1,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { getLocaleFontClassName, getLocaleFontStylesheets, getManagedLocaleFontClassNames, KO_PRETENDARD_STYLESHEET } from '../fonts';
+import { getLocaleFontClassName, getLocaleFontStylesheets, getManagedLocaleFontClassNames, JA_ZEN_STYLESHEET, KO_PRETENDARD_STYLESHEET } from '../fonts';
 import sheets from '@/data/font-stylesheets.json';
 
 describe('locale font resources', () => {
@@ -19,7 +19,7 @@ describe('locale font resources', () => {
     }
   });
   it.each([
-    ['en', ['kr', 'kr']], ['ja', ['jp', 'jp']],
+    ['en', ['kr', 'kr']],
     ['zh-Hant', ['tc', 'tc']], ['zh-Hans', ['sc', 'sc']],
     ['ar', ['arabic', 'latin']], ['hi', ['devanagari', 'latin']],
     ['bn', ['bengali', 'latin']], ['ta', ['tamil', 'latin']],
@@ -39,5 +39,12 @@ describe('locale font resources', () => {
     ['kr', 'kr'].forEach((script, index) => expect(hrefs[index]).toContain(`-${script}-loaded-`));
     expect(hrefs[2]).toBe(KO_PRETENDARD_STYLESHEET);
     expect(getLocaleFontStylesheets('en')).not.toContain(KO_PRETENDARD_STYLESHEET);
+  });
+  it('loads the ja Noto pair plus the Zen faces (J1, 2026-10-07), also on a client-side switch into /ja', () => {
+    const hrefs = getLocaleFontStylesheets('ja');
+    expect(hrefs).toHaveLength(3);
+    ['jp', 'jp'].forEach((script, index) => expect(hrefs[index]).toContain(`-${script}-loaded-`));
+    expect(hrefs[2]).toBe(JA_ZEN_STYLESHEET);
+    expect(getLocaleFontStylesheets('zh-Hant')).not.toContain(JA_ZEN_STYLESHEET);
   });
 });

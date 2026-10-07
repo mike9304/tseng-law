@@ -1,13 +1,13 @@
 import HomeAttorneySplit from '@/components/HomeAttorneySplit';
 import HomeCaseResultsSplit from '@/components/HomeCaseResultsSplit';
 import HomeStatsSection from '@/components/HomeStatsSection';
-import InsightsArchiveSection from '@/components/InsightsArchiveSection';
+import type InsightsArchiveSection from '@/components/InsightsArchiveSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import KoHero from '@/components/ko-home/KoHero';
 import KoMobileCta from '@/components/ko-home/KoMobileCta';
-import { KoPractice, KoProcess, KoSituations } from '@/components/ko-home/KoSections';
+import { KoColumns, KoGlossary, KoPractice, KoProcess, KoSituations } from '@/components/ko-home/KoSections';
 import type { FAQItem } from '@/data/faq-content';
 import styles from '@/components/ko-home/KoHome.module.css';
 
@@ -17,26 +17,27 @@ type Props = {
 };
 
 /**
- * ko home, Korean identity (2026-10-06, operator: 「왜 대만 디자인이랑 똑같이 했어? … 한국도 한국 개성으로 디자인 해봐」).
- * Its own system (src/components/ko-home/KoHome.module.css), not the zh-hant one: white paper, 쪽빛 indigo for every
- * action, Pretendard for Hangul, the firm's red seal as the only red; the first screen is the Taiwan-law glossary
- * (漢字 → 한글) beside the headline. Below: situations, the practice register, columns, the consultation process,
- * the attorney, one indigo chapter for the case and the figures, FAQ, offices and the closing call.
- * Copy comes from existing ko data (cited in each component). Display-only: the saved builder document is unchanged.
+ * ko home (2026-10-06 Korean identity; 2026-10-07 operator: 「한국 세종로펌 디자인으로 비슷하게 변형, 색감도 비슷하게」).
+ * The grammar of a Korean big-firm site in this firm's own material: a full-bleed photograph with the search laid
+ * across its edge, then the Taiwan-law glossary, the newest columns as a cream/plum news grid, the practice tiles on a
+ * greige band, situations, one deep-plum chapter for the case and the figures, the attorney, the consultation steps,
+ * FAQ, offices and the closing call; square corners throughout (ko-home/KoHome.module.css). Copy comes from existing
+ * ko data (cited in each component). Display-only: the saved builder document is unchanged.
  */
 export default function KoHomeBody({ posts, faqItems }: Props) {
   return (
     <div className={styles.home} id="ko-home" data-ko-design="home">
       <KoHero />
-      <KoSituations />
+      <KoGlossary />
+      <KoColumns posts={posts} />
       <KoPractice />
-      <InsightsArchiveSection locale="ko" posts={posts} presentation="editorial" />
-      <KoProcess />
-      <HomeAttorneySplit locale="ko" presentation="editorial" />
+      <KoSituations />
       <div className={styles.chapter}>
         <HomeCaseResultsSplit locale="ko" presentation="editorial" />
         <HomeStatsSection locale="ko" plainLede />
       </div>
+      <HomeAttorneySplit locale="ko" presentation="editorial" />
+      <KoProcess />
       <FAQAccordion locale="ko" items={faqItems} id="faq" sectionClassName="section section--gray" layout="split" />
       <OfficeMapTabs locale="ko" id="offices" sectionClassName="section section--light" presentation="editorial" />
       <HomeContactCta locale="ko" />

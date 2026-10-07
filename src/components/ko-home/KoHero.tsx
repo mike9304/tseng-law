@@ -5,15 +5,24 @@ import { siteContent } from '@/data/site-content';
 import { teamContent } from '@/data/team-members';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
-import { KO_LEDGER, KO_SEARCH_CHIPS } from './ko-home-content';
+import { KO_HERO_IMAGE, KO_SEARCH_CHIPS } from './ko-home-content';
 import styles from './KoHome.module.css';
 
 const searchHref = (q: string) => `/ko/search?q=${encodeURIComponent(q)}`;
 
+function SearchIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden focusable="false">
+      <circle cx="10.5" cy="10.5" r="7" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M15.6 15.6 21 21" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square" />
+    </svg>
+  );
+}
+
 /**
- * ko home first screen (2026-10-06): no footage — the firm's work itself. The headline and the email action on the
- * left; on the right the glossary of Taiwan legal terms the firm writes about, each 漢字 term set beside the Korean
- * the ko columns use for it. That is what the Korean site is for: Taiwan law, read in Korean.
+ * ko home first screen (2026-10-07, Korean big-firm grammar): a full-bleed photograph with the headline set light in
+ * white at its lower left, and the site search as a plum bar laid across the photograph's lower edge — the question
+ * every visitor brings, asked first. Topic shortcuts sit under the bar.
  * Copy: site-content ko hero (title, subtitle, search prompt and button, 이메일 상담 신청, 호정칼럼 보기); the trust
  * facts are HeroTrustStrip ko; the attorney byline is team-members ko.
  */
@@ -23,10 +32,18 @@ export default function KoHero() {
   const mailto = getConsultationPublicMailto('ko');
   return (
     <section className={styles.hero} id="hero" aria-labelledby="ko-hero-title">
-      <div className={`${styles.wrap} ${styles.heroGrid}`}>
-        <div className={styles.heroCopy}>
+      <div className={styles.heroStage}>
+        <Image
+          className={styles.heroImage}
+          src={KO_HERO_IMAGE.src}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className={`${styles.wrap} ${styles.heroInner}`}>
           <p className={styles.firm}>
-            <Image src="/images/brand/hovering-seal-official.png" alt="" width={32} height={32} />
+            <Image src="/images/brand/hovering-seal-official.png" alt="" width={28} height={28} />
             법무법인 호정
           </p>
           <h1 id="ko-hero-title" className={styles.heroTitle}>
@@ -36,10 +53,10 @@ export default function KoHero() {
           </h1>
           <p className={styles.heroLede}>{hero.subtitle}</p>
           <div className={styles.heroActions}>
-            <a href={mailto} className={styles.primary} aria-label={`이메일 상담 신청 — ${getConsultationCtaLabel('ko')}`}>
+            <a href={mailto} className={styles.heroPrimary} aria-label={`이메일 상담 신청 — ${getConsultationCtaLabel('ko')}`}>
               이메일 상담 신청
             </a>
-            <Link href="/ko/columns" className={styles.textLink}>호정칼럼 보기</Link>
+            <Link href="/ko/columns" className={styles.heroLink}>호정칼럼 보기</Link>
           </div>
           {lead ? (
             <p className={styles.byline}>
@@ -50,37 +67,25 @@ export default function KoHero() {
             </p>
           ) : null}
           <div className={styles.trust}>
-            <HeroTrustStrip locale="ko" tone="light" />
+            <HeroTrustStrip locale="ko" tone="dark" />
           </div>
         </div>
-        <aside className={styles.ledger} aria-labelledby="ko-ledger-title">
-          <p id="ko-ledger-title" className={styles.ledgerTitle}>대만 법률 용어, 한국어로</p>
-          <ul className={styles.ledgerList}>
-            {KO_LEDGER.map((row, index) => (
-              <li key={row.han} style={{ ['--i' as string]: index }}>
-                <Link href={searchHref(row.ko)} className={styles.ledgerRow}>
-                  <span className={styles.han} lang="zh-Hant">{row.han}</span>
-                  <span className={styles.koTerm}>{row.ko}</span>
-                  <span className={styles.area}>{row.area}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
       </div>
-      <div className={styles.wrap}>
+      <div className={`${styles.wrap} ${styles.searchWrap}`}>
         <form className={styles.search} action="/ko/search" method="get" role="search">
-          <label htmlFor="ko-home-search" className={styles.searchLabel}>{hero.searchPlaceholder}</label>
+          <label htmlFor="ko-home-search" className={styles.visuallyHidden}>{hero.searchPlaceholder}</label>
           <div className={styles.searchField}>
-            <input id="ko-home-search" name="q" type="search" placeholder="예: 회사 설립" autoComplete="off" />
-            <button type="submit">{hero.searchButton}</button>
+            <input id="ko-home-search" name="q" type="search" placeholder={hero.searchPlaceholder} autoComplete="off" />
+            <button type="submit" aria-label={hero.searchButton}>
+              <SearchIcon />
+            </button>
           </div>
-          <ul className={styles.chips} aria-label="자주 찾는 주제">
-            {KO_SEARCH_CHIPS.map((q) => (
-              <li key={q}><Link href={searchHref(q)}>{q}</Link></li>
-            ))}
-          </ul>
         </form>
+        <ul className={styles.chips} aria-label="자주 찾는 주제">
+          {KO_SEARCH_CHIPS.map((q) => (
+            <li key={q}><Link href={searchHref(q)}>{q}</Link></li>
+          ))}
+        </ul>
       </div>
     </section>
   );

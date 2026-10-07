@@ -1306,37 +1306,44 @@
 :global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .skyline :global(.skyline-image) img { filter: grayscale(100%) contrast(1.02) brightness(0.96); }
 
 /* =====================================================================================================
-   ko · Korean identity chrome (2026-10-06, operator: 「한국도 한국 개성으로 디자인 해봐」). The ko site leaves the
-   zh-hant look on top of the shared neutral chrome: 쪽빛 indigo #233F7A for the consultation action, the current page
-   and focus; 10px corners instead of pills; a deep indigo-ink footer instead of graphite. Later in the file, same
-   specificity as the shared rules, so ko wins only where it differs.
+   ko chrome (2026-10-06 Korean identity; 2026-10-07 Korean big-firm grammar, operator: 「세종로펌 디자인으로 비슷하게,
+   색감도 비슷하게」). On top of the shared neutral chrome: plum #8E4C6E for the consultation action, the current page
+   and focus; square corners; a square warm-grey search key; a warm dark-grey footer under the Seoul–Taipei skyline
+   drawing on white. Later in the file, same specificity as the shared rules, so ko wins only where it differs.
    ===================================================================================================== */
 :global(.site[data-locale='ko']) .header :global(.nav-cta.button) {
-  border-radius: 10px !important;
-  background: #233f7a;
-  border-color: #233f7a;
+  border-radius: 0 !important;
+  background: #8e4c6e;
+  border-color: #8e4c6e;
   color: #fff;
   font-weight: 700;
 }
 :global(.site[data-locale='ko']) .header :global(.nav-cta.button):hover,
-:global(.site[data-locale='ko']) .header :global(.nav-cta.button):focus-visible { background: #172d5a; border-color: #172d5a; color: #fff; }
+:global(.site[data-locale='ko']) .header :global(.nav-cta.button):focus-visible { background: #5f4656; border-color: #5f4656; color: #fff; }
 :global(.site[data-locale='ko']) .header :global(.nav-link[aria-current='page']),
 :global(.site[data-locale='ko']) .header :global(.nav-link[aria-current='page']:hover),
 :global(.site[data-locale='ko']) .header :global(.nav-link[aria-current='page']:focus-visible) {
-  color: #1f2329;
-  box-shadow: inset 0 -3px 0 #233f7a;
+  color: #2c231e;
+  box-shadow: inset 0 -3px 0 #8e4c6e;
 }
-:global(.site[data-locale='ko']) .header :global(.nav-link):hover { color: #233f7a; }
-:global(.site[data-locale='ko']) .header :global(.nav-link):focus-visible { outline-color: #233f7a; }
+:global(.site[data-locale='ko']) .header :global(.nav-link):hover { color: #8e4c6e; }
+:global(.site[data-locale='ko']) .header :global(.nav-link):focus-visible { outline-color: #8e4c6e; }
 :global(.site[data-locale='ko']) .header :global(.mega-links) a:hover,
-:global(.site[data-locale='ko']) .header :global(.mega-links) a:focus-visible { color: #233f7a; }
-:global(.site[data-locale='ko']) .footer:global(.site-footer) { background: #151d31; }
+:global(.site[data-locale='ko']) .header :global(.mega-links) a:focus-visible { color: #8e4c6e; }
+/* Search: a square warm-grey key with a white glyph; the phone menu key square on cream. */
+:global(.site[data-locale='ko']) .header :global(.header-search-btn) { border-color: transparent; border-radius: 0; background: #57524e; color: #fff; }
+:global(.site[data-locale='ko']) .header :global(.header-search-btn):hover,
+:global(.site[data-locale='ko']) .header :global(.header-search-btn):focus-visible { border-color: transparent; background: #2c231e; color: #fff; }
+:global(.site[data-locale='ko']) .menuToggle:global(.mobile-toggle) { border-color: transparent; border-radius: 0; background: #f7f3ea; color: #2c231e; }
+:global(.site[data-locale='ko']) .menuToggle:global(.mobile-toggle):hover { background: #e9e5df; color: #2c231e; }
+:global(.site[data-locale='ko']) .skyline:global(.footer-skyline) { background: #fff; border-top-color: transparent; }
+:global(.site[data-locale='ko']) .footer:global(.site-footer) { background: #4b4541; }
 :global(.site[data-locale='ko']) .footer :global(.office-link),
 :global(.site[data-locale='ko']) .footer :global(.office-link-address),
 :global(.site[data-locale='ko']) .footer :global(.footer-main-note),
 :global(.site[data-locale='ko']) .footer :global(.footer-link-list) a,
 :global(.site[data-locale='ko']) .footer :global(.footer-legal-links) a,
 :global(.site[data-locale='ko']) .footer :global(.social-label),
-:global(.site[data-locale='ko']) .footer :global(.footer-copyright-row) { color: #aab4ca; }
+:global(.site[data-locale='ko']) .footer :global(.footer-copyright-row) { color: #d8d1ca; }
 :global(.site[data-locale='ko']) .footer :global(.footer-consultation-email-copy),
-:global(.site[data-locale='ko']) .footer :global(.social-icon) { border-radius: 10px; }
+:global(.site[data-locale='ko']) .footer :global(.social-icon) { border-radius: 0; }

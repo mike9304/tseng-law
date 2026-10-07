@@ -196,7 +196,8 @@ describe('published current9 editorial render', () => {
     expect(html).not.toMatch(/<div[^>]*class="builder-pub-node"[^>]*data-node-id="home-/);
     expect(publishedHomeSequence(html).filter((id) => id === 'heritage')).toHaveLength(0);
     expect(html.match(/<h1\b/g)).toHaveLength(1);
-    // It opens on type, not footage: no hero image preload (neither the zh-hant poster nor the stock canvas hero).
+    // The page view adds no hero preload of its own for the ko home (neither the zh-hant poster nor the stock canvas
+    // hero); the ko hero photograph is a next/image with priority, which preloads itself at render time.
     expect(html).not.toMatch(/<link[^>]*rel="preload"[^>]*as="image"/);
     expect(html).toContain('action="/ko/search"');
     expect(html).toContain('href="/ko/columns"');

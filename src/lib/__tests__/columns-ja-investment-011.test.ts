@@ -40,20 +40,43 @@ const faq = [
   },
 ];
 
+// The body answers are no longer verbatim copies of the FAQ answers. Each body
+// answer is pinned exactly, and `sharedWithFaq` keeps the facts that must agree
+// with the matching FAQ answer.
 const bodyContracts = [
   {
-    heading: '台湾への進出形態と輸入主体の選択',
-    answer: faq[0].a,
+    heading: '子会社・支店か、現地の輸入業者か',
+    answer:
+      '最初に決めるのは、事業モデルと、化粧品製造・輸入業者として責任を負う主体です。',
+    sharedWithFaq: ['事業モデルと、化粧品製造・輸入業者として責任を負う主体'],
   },
   {
-    heading: '製品登録とPIFは別個の制度',
-    answer: faq[1].a,
+    heading: '製品登録とPIFは別の制度',
+    answer:
+      'PIFは、製品登録と同じように、事前にTFDAへ提出するものでしょうか？いいえ。製品登録は、TFDAの化粧品製品登録プラットフォームで行う別の手続です。PIFは、品質、安全性、組成、標榜する機能、製造方法、試験結果、安全性評価などの資料をまとめたファイルで、化粧品製造・輸入業者が作成・更新・保存します。ファイル自体をTFDAへ事前に提出する制度ではありません。',
+    sharedWithFaq: [
+      'TFDAの化粧品製品登録プラットフォームで行う',
+      '品質、安全性、組成、標榜する機能、製造方法、試験結果、安全性評価',
+      '化粧品製造・輸入業者が作成・更新・保存',
+      'TFDAへ事前に提出する制度ではありません。',
+    ],
   },
   {
     heading: '表示・宣伝・広告規制',
-    answer: faq[2].a,
+    answer:
+      '虚偽・誇大な表現は禁止されています。医療的効能の標榜も禁止です。行政上の過料は、虚偽・誇大広告ならNT$4万～NT$20万、医療的効能を標榜した場合はNT$60万～NT$500万です。違反の類型で、過料の幅は違います。掲載前に、広告表現の全体と根拠資料を突き合わせなければなりません。',
+    sharedWithFaq: [
+      '虚偽・誇大',
+      '医療的効能',
+      'NT$4万～NT$20万',
+      'NT$60万～NT$500万',
+    ],
   },
 ];
+const expectedBodyContracts = bodyContracts.map(({ heading, answer }) => ({
+  heading,
+  answer,
+}));
 
 describe('Japanese investment column 011 — cosmetics registration, PIF, and advertising', () => {
   it('publishes the contracted frontmatter and exactly three exact FAQs', () => {
@@ -63,7 +86,7 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-24');
+    expect(parsed.data.lastmod).toBe('2026-10-06');
     expect(parsed.data.date_display).toBe('2026年2月4日');
     expect(parsed.data.read_time).toBe('約6分');
     expect(parsed.data.categories).toEqual(['台湾会社設立']);
@@ -77,7 +100,7 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
       'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
     );
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-24');
+    expect(post?.date).toBe('2026-10-06');
     expect(post?.dateDisplay).toBe('2026年2月4日');
     expect(post?.readTime).toBe('約6分');
     expect(post?.categoryLabel).toBe('台湾会社設立');
@@ -85,16 +108,25 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
   });
 
   it('keeps the three ordered body headings and immediate answers aligned with the FAQs', () => {
-    expect(extractBodyContracts(raw)).toEqual(bodyContracts);
-    expect(extractBodyContracts(post?.content ?? '')).toEqual(bodyContracts);
+    expect(extractBodyContracts(raw)).toEqual(expectedBodyContracts);
+    expect(extractBodyContracts(post?.content ?? '')).toEqual(
+      expectedBodyContracts,
+    );
+
+    bodyContracts.forEach(({ answer, sharedWithFaq }, index) => {
+      for (const phrase of sharedWithFaq) {
+        expect(answer).toContain(phrase);
+        expect(faq[index].a).toContain(phrase);
+      }
+    });
   });
 
   it('separates importer choice, subsidiary, branch, and the current investment agency', () => {
     const requiredPhrases = [
-      '台湾の輸入業者または販売代理店が輸入と販売を担当する場合、外国ブランドが自社の台湾子会社や支店を設けない形も可能です。',
-      '台湾子会社と外国会社の支店は、同一の組織ではありません。',
-      '経済部投資審議司',
-      '一定の固定期間を前提に',
+      '台湾の輸入業者または販売代理店が輸入と販売を担当するなら、外国ブランドは自社の台湾子会社や支店を置かなくても構いません。',
+      '子会社と支店は同じ組織ではありません。',
+      '現在の担当機関は、経済部投資審議司です。',
+      '決まった期間を前提に発売日を決めるのは適切ではありません。',
       '化粧品製造・輸入業者',
       '契約上の業務分担と法令上の責任主体',
     ];
@@ -107,12 +139,13 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
 
   it('keeps product registration distinct from PIF and states its timing and validity', () => {
     const requiredPhrases = [
-      '製品登録は、TFDAの化粧品製品登録プラットフォームで行う別個の手続です。',
-      '対象製品を供給・販売・贈与・公開陳列し、または消費者に試用として提供する前',
-      '製品登録の有効期間は3年です。',
-      '有効期間満了前3か月以内に延長を申請',
-      '登録が完了しても、PIFに必要な資料がすべて揃っていることが確認されたという意味ではなく、製品の表示や広告が適法であるとの判断でもありません。',
-      'PIF自体をTFDAへ事前に提出する制度ではありません。',
+      '製品登録は、TFDAの化粧品製品登録プラットフォームで行う別の手続です。',
+      '対象製品を供給・販売・贈与・公開陳列する前、または消費者に試用として提供する前',
+      '有効期間は3年です。',
+      '供給を続けるなら、その満了前3か月以内に延長を申請しなければなりません。',
+      '完了しても、PIFに必要な資料がすべてそろっていると確認されたことにはなりません。',
+      '表示や広告が適法だという判断でもありません。',
+      'ファイル自体をTFDAへ事前に提出する制度ではありません。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -125,11 +158,11 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
     const requiredPhrases = [
       '品質、安全性、組成、標榜する機能、製造方法、試験結果、安全性評価',
       '必要な資料を16の区分に分けている',
-      '2026年7月1日から、残る化粧品も対象に含まれ、原則としてすべての化粧品に適用',
-      '工場登記を免除される製造場所で製造された固形手作り石けん',
-      '手作りであることや、石けんという名称を使用していることだけで対象外となるわけではなく',
+      '2026年7月1日からは残る化粧品も対象に入り、原則としてすべての化粧品に適用されます。',
+      '例外は一つだけです。工場登記を免除される製造場所で製造された固形手作り石けんです。',
+      '手作りであることや、石けんという名称だけでは、対象外になりません。',
       '必要な資格と能力を備えた第三者の支援',
-      '第三者による作成支援や資料保存サービスを利用しても、化粧品製造・輸入業者の法的責任は維持されます。',
+      '作成を手伝ってもらっても、資料の保存サービスを使っても、化粧品製造・輸入業者の法的責任は残ります。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -140,11 +173,11 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
 
   it('locks the five-year retention start, address, and qualified retrieval methods', () => {
     const requiredPhrases = [
-      '市場に最後に供給した日の翌日から最低5年間',
-      '「化粧品製品情報ファイル管理弁法」第7条',
+      '市場に最後に供給した日の翌日で、期間は最低5年間です。',
+      '保存期間を定めるのは、「化粧品製品情報ファイル管理弁法」第7条です。',
       '化粧品製造・輸入業者の表示住所',
-      '元の製造業者が原本を保有している場合や、安全な電子保存またはクラウドストレージを利用する場合',
-      '主管機関から要求された際に資料を速やかに検索・提示できるよう',
+      '元の製造業者が原本を持っている場合や、安全な電子保存、クラウドストレージを使う場合',
+      '主管機関から求められたときにすぐ検索して示せるよう',
       'アクセス権限、バックアップ、版管理',
     ];
 
@@ -156,12 +189,13 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
 
   it('qualifies inspections and distinguishes false information, correction, and recall', () => {
     const requiredPhrases = [
-      '原則として検査日の7日前までに化粧品製造・輸入業者へ通知',
-      '法定の例外に該当する場合は、事前通知なしに検査',
+      '原則として検査日の7日前までに、化粧品製造・輸入業者へ通知します。',
+      '法定の例外に当たる場合は、事前の通知なしに検査できます。',
       '製品登録で虚偽の情報を申告した場合や、PIFに虚偽の情報を記載した場合',
       '1万～100万新台湾ドル（NT$）の行政上の過料',
-      '主管機関が期限を定めて是正を命じ、その期限内に是正しないときに過料',
-      '回収や廃棄は、すべてのPIF資料の不備に自動的に伴う措置ではありません。',
+      '通常、主管機関が期限を定めて是正を命じます。',
+      '過料が問題になるのは、その期限内に是正しなかったときです。',
+      '回収や廃棄も、どのPIF資料の不備にも自動的に伴うわけではありません。',
       '製品の安全性、違反の内容、是正の状況、各措置に適用される法定要件',
     ];
 
@@ -173,13 +207,12 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
 
   it('states the overall-advertising test, medical examples, exact fines, and influencer qualification', () => {
     const requiredPhrases = [
-      '商品名、文章、画像、記号、音声、前後の文脈、消費者が受ける全体的な印象',
-      'ニキビを治療する、抗炎症効果がある、または殺菌作用がある',
-      '虚偽・誇大広告に対する行政上の過料はNT$4万～NT$20万',
-      '医療的効能の標榜に対する行政上の過料はNT$60万～NT$500万',
+      '商品名、文章、画像、記号、音声に加え、前後の文脈と、消費者が受ける全体的な印象も考慮されます。',
+      'ニキビを治療する、抗炎症効果がある、殺菌作用がある。こうした表現は、医療的効能の標榜に当たることがあり',
+      '行政上の過料は、虚偽・誇大広告ならNT$4万～NT$20万、医療的効能を標榜した場合はNT$60万～NT$500万です。',
       '実質的に広告と判断されることがあります。',
-      'すべての個人投稿が自動的にブランドの広告となるわけではなく',
-      '投稿者とブランドとの関係、具体的な内容、ブランドの関与の程度',
+      '個人の投稿がすべて自動的にブランドの広告になるわけではありません。',
+      '投稿者とブランドの関係、具体的な内容、ブランドの関与の程度',
     ];
 
     for (const phrase of requiredPhrases) {

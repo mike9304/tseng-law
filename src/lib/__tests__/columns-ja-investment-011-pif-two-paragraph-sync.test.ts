@@ -11,16 +11,16 @@ const sourceBytes = fs.readFileSync(columnPath);
 
 // WO-X2 (JA-17): re-locked after the NT$ currency-notation pass (prefix FAQ
 // and tail fine amounts); the synchronized paragraphs are byte-identical.
-const immutablePrefixLength = 11_850;
+// 2026-10-06: re-locked after the natural-style rewrite of the column. The
+// prefix now ends after the "### PIFの更新と保存" heading and the tail starts at
+// "### 検査、是正、過料"; the three synchronized paragraphs sit between them.
+const immutablePrefixLength = 10_811;
 const immutablePrefixSha256 =
-  '681ed0d16988041e5d052ef73420c81b533a6d8e3525120bac632582a44e2ecf';
-const immutableTailMarker = Buffer.from(
-  '\n\n### 検査、是正、行政上の措置',
-  'utf8',
-);
-const immutableTailLength = 7_636;
+  '56efb897fd6a7f7ed26c6173c50536bc6cfcfeda54468d76e449ea244d8ad2c5';
+const immutableTailMarker = Buffer.from('\n\n### 検査、是正、過料', 'utf8');
+const immutableTailLength = 7_007;
 const immutableTailSha256 =
-  '0e614eaecc1900ed64eabb7d97a7ac6e6e9d91ac16e9f3daea227b793380396a';
+  '23d960cfcd1bbe7b4189e03630094d20f0c852734cf843ba1b8bb0784634393a';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const synchronizedBytes =
@@ -79,14 +79,14 @@ describe('Japanese investment column 011 — synchronized PIF update and retenti
     }
 
     expect(first).toMatch(
-      /変更[^。]*(?:影響を受ける|影響する)[^。]*PIF[^。]*資料[^。]*(?:見直|検討)[^。]*更新/u,
+      /(?:変更|変わ)[^。]*(?:影響を受ける|影響する)[^。]*PIF[^。]*資料[^。]*(?:見直|検討)[^。]*更新/u,
     );
     expect(first).toMatch(/消費者(?:から)?[^、。]*(?:苦情|クレーム)/u);
     expect(first).toMatch(/有害事象/u);
     expect(first).toMatch(/新たな試験結果/u);
     expect(first).toMatch(/既存(?:の)?評価[^。]*影響/u);
     expect(first).toMatch(
-      /(?:初回|最初)(?:の)?作成後[^。]*継続的な変更管理(?:手続|手順|プロセス)?[^。]*必要/u,
+      /(?:初回|最初)(?:の)?作成で終わりではありません。[^。]*変更を管理し続ける(?:手続|手順|プロセス)が(?:要|必要)/u,
     );
   });
 
@@ -106,7 +106,7 @@ describe('Japanese investment column 011 — synchronized PIF update and retenti
     );
     expect(second).toMatch(/化粧品製造・輸入業者[^。]*表示住所/u);
     expect(second).toMatch(
-      /(?:保存|保管)期間[^。]*第7条[^。]*。\s*[^。]*?(?:保存|保管)場所[^。]*第8条/u,
+      /(?:保存|保管)期間[^。]*第7条[^。]*。(?:[^。]*。)?\s*[^。]*?(?:保存|保管)場所[^。]*第8条/u,
     );
     expect(second).not.toMatch(/第7条に基づく[^。]*(?:表示)?住所/u);
   });
@@ -118,7 +118,7 @@ describe('Japanese investment column 011 — synchronized PIF update and retenti
     expect(third).toMatch(/安全[^。]*(?:電子[^。]*クラウド|クラウド[^。]*電子)/u);
     expect(third).toMatch(/完全な資料/u);
     expect(third).toMatch(
-      /主管機関[^。]*(?:要求|求め)[^。]*速やか[^。]*(?:検索|取り出し)[^。]*提示/u,
+      /主管機関[^。]*(?:要求|求め)[^。]*(?:速やか|すぐ)[^。]*(?:検索|取り出し)[^。]*(?:提示|示せ)/u,
     );
   });
 

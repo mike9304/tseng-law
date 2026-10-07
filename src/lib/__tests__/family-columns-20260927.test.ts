@@ -18,10 +18,15 @@ const FEATURED_NUMBER: Record<string, string> = {
 };
 
 const UNCHANGED_PASS = new Set([
-  'ja/marrying-taiwanese-national-registration-checklist',
   'ja/baby-taiwan-nationality-birth-registration',
   'fil/marrying-taiwanese-national-registration-checklist',
 ]);
+
+// Columns rewritten after the 2026-09-28 review carry their own later revision date.
+const REWRITTEN_LASTMOD: Record<string, string> = {
+  // ja 022 was rewritten for natural style on 2026-10-06.
+  'ja/marrying-taiwanese-national-registration-checklist': '2026-10-06',
+};
 
 // Revised columns in locales without a separate `published` field were re-dated to
 // 2026-09-28 (user decision 2026-09-28); locales with `published` keep 2026-09-27.
@@ -77,7 +82,9 @@ describe('native marriage and birth columns September 2026', () => {
       // Columns revised after the 2026-09-28 Fable review carry the revision date;
       // the review's unchanged PASS files keep the original date.
       const slug = record.path.replace('/columns/', '');
-      expect(record.lastModified).toBe(UNCHANGED_PASS.has(`${record.locale}/${slug}`) ? '2026-09-27' : '2026-09-28');
+      const key = `${record.locale}/${slug}`;
+      const expectedLastModified = REWRITTEN_LASTMOD[key] ?? (UNCHANGED_PASS.has(key) ? '2026-09-27' : '2026-09-28');
+      expect(record.lastModified).toBe(expectedLastModified);
     }
   });
 });

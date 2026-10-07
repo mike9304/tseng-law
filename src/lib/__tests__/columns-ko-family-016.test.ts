@@ -26,6 +26,14 @@ const faq3Answer =
   '대만 민법 제1089조에 따라 부모 한쪽이 미성년 자녀에 대한 권리와 의무를 행사할 수 없을 때에는 다른 한쪽이 이를 행사하는 것이 원칙입니다. 따라서 생존 부모가 친권을 유지하고 이에 반하는 법원 재판이 없다면, 그 부모가 통상 계속해서 친권상 권리와 의무를 행사합니다. 다만 기존 재판, 친권 제한·정지 사유, 국제적 요소와 자녀의 최선의 이익 등 구체적인 사정에 따라 법원의 관여가 필요할 수 있습니다.';
 const faq4Answer =
   '그렇지 않습니다. 대만 민법 제1087조와 제1088조에 따르면 미성년자가 상속으로 취득한 재산은 자녀의 특유재산이며, 부모나 후견인이 그 재산의 실질적 소유자가 되는 것은 아닙니다. 관리·사용·수익·법정대리·처분은 자녀의 이익을 위해 이루어져야 하고, 이해상충이나 중요한 처분에는 특별대리인 선임 또는 법원의 관여가 문제될 수 있습니다. 부모가 자녀의 상속재산을 제한 없이 일방적으로 사용할 수 있다고 보아서는 안 됩니다.';
+const h2Lead1 =
+  '대만 민법 제1138조와 제1144조에 따르면 법정상속의 제1순위는 직계비속이고, 배우자는 해당 순위의 상속인과 공동상속합니다. 유효한 유언이 없고, 관련 상속인은 배우자와 자녀 두 명뿐이며, 상속포기·상속결격·대습상속이나 그 밖에 결론을 바꿀 사정도 없다면 세 사람은 통상 각각 3분의 1씩 상속합니다. 설명을 위한 가정일 뿐입니다. 특정 상속사건의 결론은 아닙니다.';
+const h2Lead2 =
+  '배우자의 잔여재산 분배청구권은 상속분과 같은 권리일까요? 아닙니다. 대만 민법 제1030조의1에 따른 부부 잔여재산 분배청구권은 법정 요건이 충족될 때 배우자가 별도로 주장할 수 있는 권리이고, 상속분과 구별하여 계산합니다. 혼인 중 취득한 모든 재산이 당연히 계산 대상이 되지도 않고, 생존 배우자가 상속재산의 절반을 반드시 받는 것도 아닙니다.';
+const h2Lead3 =
+  '민법 제1089조는 부모 한쪽이 미성년 자녀에 대한 권리와 의무를 행사할 수 없을 때 다른 한쪽이 이를 행사하는 것을 원칙으로 합니다. 따라서 생존 부모가 친권을 유지하고 이에 반하는 법원 재판이 없다면, 그 부모가 통상 계속해서 친권상 권리와 의무를 행사합니다. 법원 관여가 필요할 때도 있습니다. 기존 재판, 친권 제한·정지 사유, 국제적 요소와 자녀의 최선의 이익 등 구체적인 사정에 달려 있습니다.';
+const h2Lead4 =
+  '미성년 자녀가 상속받은 재산을 생존 부모가 제한 없이, 일방적으로 써도 될까요? 그렇지 않습니다. 대만 민법 제1087조와 제1088조에 따르면 미성년자가 상속으로 취득한 재산은 자녀의 특유재산입니다. 미성년자 본인에게 귀속하는 재산이라는 뜻입니다. 부모나 후견인이 관리 업무를 맡더라도 그 재산의 실질적 소유자가 되는 것은 아닙니다.';
 const faq = [
   {
     q: '유언이 없고 배우자와 자녀 두 명만 상속인이라면 상속분은 어떻게 되나요?',
@@ -53,7 +61,7 @@ const headings = [
   '6. 후견인 지정과 법원의 관여',
   '7. 미성년자의 상속재산 보호',
   '8. 국제가족의 준거법과 절차',
-  '9. 실무 준비 체크리스트',
+  '9. 자료 수집 순서와 일정 관리',
   '10. 공식 자료',
   '11. 관련 안내',
 ];
@@ -73,7 +81,7 @@ const internalLinks = [
   '[상담 문의](/ko/contact)',
 ];
 const disclaimer =
-  '이 글은 대만의 상속, 부부재산제, 친권과 미성년후견 제도를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 상속·가사 사건에 대한 법률 자문이 아닙니다. 상속인의 범위, 유언, 재산과 채무, 혼인재산제, 기존 법원 재판 및 국제적 요소에 따라 적용 법률, 절차와 결과가 달라질 수 있습니다. 상속포기·세무신고 등 기한을 계산하거나 재산을 처분하기 전에 최신 공식 자료와 개별 사정을 확인하시기 바랍니다.';
+  '이 글은 대만 민법과 공식 절차 자료를 바탕으로 대만의 상속, 부부재산제, 친권과 미성년후견 제도를 일반적으로 설명한 교육 목적의 자료이며, 개별 상속·가사 사건에 대한 법률 자문이 아닙니다. 적용 법률과 절차, 결과는 상속인의 범위, 유언, 재산과 채무, 혼인재산제, 기존 법원 재판 및 국제적 요소에 따라 달라질 수 있습니다. 상속포기·세무신고 등 기한을 계산하거나 재산을 처분하기 전에 최신 공식 자료와 개별 사정을 확인하시기 바랍니다.';
 const author = '증준외 변호사(曾雋崴, Wei Tseng)';
 
 function firstParagraphAfter(content: string, heading: string) {
@@ -99,9 +107,9 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-06',
       date_display: '2025년 9월 13일',
-      read_time: '13분 분량',
+      read_time: '12분 분량',
       categories: ['대만 법률정보'],
       featured_image: featuredImage,
       faq,
@@ -113,9 +121,9 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
     expect(post).toMatchObject({
       slug: 'taiwan-inheritance-custody-analysis',
       title,
-      date: '2026-07-25',
+      date: '2026-10-06',
       dateDisplay: '2025년 9월 13일',
-      readTime: '13분 분량',
+      readTime: '12분 분량',
       category: 'legal',
       categoryLabel: '법률정보',
       featuredImage:
@@ -144,18 +152,19 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
     }
   });
 
-  it('repeats every FAQ answer exactly twice and as the assigned H2 first paragraph', () => {
+  it('keeps every FAQ answer once in the frontmatter and answers it in the assigned H2 first paragraph', () => {
     const headingAnswers = [
-      ['## 1. 법정상속인과 상속분', faq1Answer],
-      ['## 3. 배우자의 잔여재산 분배청구권', faq2Answer],
-      ['## 5. 생존 부모의 친권상 권리와 의무', faq3Answer],
-      ['## 7. 미성년자의 상속재산 보호', faq4Answer],
+      ['## 1. 법정상속인과 상속분', faq1Answer, h2Lead1],
+      ['## 3. 배우자의 잔여재산 분배청구권', faq2Answer, h2Lead2],
+      ['## 5. 생존 부모의 친권상 권리와 의무', faq3Answer, h2Lead3],
+      ['## 7. 미성년자의 상속재산 보호', faq4Answer, h2Lead4],
     ];
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
-      expect(raw.split(answer)).toHaveLength(3);
+    for (const [heading, answer, lead] of headingAnswers) {
+      expect(firstParagraphAfter(parsed.content, heading)).toBe(lead);
+      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(lead);
+      expect(raw.split(answer)).toHaveLength(2);
+      expect(raw.split(lead)).toHaveLength(2);
     }
     expect(raw.match(/3분의 1/g)).toHaveLength(2);
   });
@@ -168,16 +177,16 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
 
   it('locks the intestate, will, estate-identification, and spouse-claim rules', () => {
     const requiredPhrases = [
-      '민법 제1138조는 배우자 외 법정상속인의 순위를 직계비속, 부모, 형제자매, 조부모의 순서로 정합니다.',
-      '생존 배우자는 민법 제1138조가 정한 친족 상속순위에 속하는 후순위 상속인이 아니라, 민법 제1144조에 따라 실제로 적용되는 순위의 상속인과 공동상속합니다.',
-      '유효한 유언은 법정상속과 다른 분배 방법을 정할 수 있습니다.',
-      '유류분을 비롯한 강행규정의 제한도 함께 검토해야 합니다.',
-      '실질 소유관계, 공동명의의 지분, 제3자의 권리와 담보 설정도 조사해야 합니다.',
+      '배우자 외 법정상속인의 순위는 직계비속, 부모, 형제자매, 조부모 순입니다(민법 제1138조).',
+      '생존 배우자는 제1138조가 정한 친족 상속순위에 속하는 후순위 상속인이 아닙니다. 실제로 적용되는 순위의 상속인과 공동상속합니다. 제1144조가 근거입니다.',
+      '유효한 유언은 법정상속과 다른 분배 방법을 정할 수 있지만',
+      '유류분을 비롯한 강행규정의 제한도 함께 검토합니다.',
+      '실질 소유관계, 공동명의의 지분, 제3자의 권리와 담보 설정까지 조사합니다.',
       '보험금이나 퇴직급여처럼 수익자가 별도로 지정된 급부',
-      '신탁재산은 신탁계약의 구조와 수익권을 확인해야 하고, 생전 증여나 재산 이전',
+      '신탁재산이라면 신탁계약의 구조와 수익권을 봅니다. 생전 증여나 재산 이전',
       '이 청구권은 법정재산제가 종료될 때 부부 각자의 혼인 후 재산 증가를 법정 기준에 따라 비교하는 제도입니다.',
-      '상속이나 증여로 취득한 재산과 위자료 등 법정 제외항목이 있을 수 있고, 혼인 중 발생한 채무도 고려해야 합니다.',
-      '민법 제1030조의1은 균등 분배의 결과가 현저히 불공평한 경우 법원이 분배액을 조정할 수 있도록 정하고 있습니다.',
+      '상속이나 증여로 취득한 재산과 위자료 등 법정 제외항목이 있을 수 있기 때문입니다. 혼인 중 발생한 채무도 고려합니다.',
+      '균등 분배의 결과가 현저히 불공평하면 법원이 분배액을 조정할 수 있다는 내용도 제1030조의1에 있습니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -189,11 +198,11 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
   it('locks inherited-debt limits, waiver formalities, and qualified public deadlines', () => {
     const requiredPhrases = [
       '상속채무에 대한 책임은 원칙적으로 상속으로 취득한 재산의 가액을 한도로 합니다.',
-      '민법 제1174조에 따라 상속권을 안 날부터 3개월 안에 관할 법원에 서면으로 의사를 표시해야 합니다.',
+      '상속권을 안 날부터 3개월 안에 관할 법원에 서면으로 의사를 표시해야 합니다(민법 제1174조).',
       '재산목록 작성, 채권자에 대한 공고와 변제, 상속재산 보전',
-      '2026년 6월 25일 갱신되었으며, 재산목록 제출과 상속포기에 관한 법원 절차의 일반적인 3개월 기간 및 상속세 신고의 일반적인 6개월 기간',
-      '이를 개인별 마감일 계산으로 사용해서는 안 됩니다.',
-      '법원에 제출하는 상속포기 서류와 세무기관의 상속세 신고를 같은 절차로 생각해서는 안 됩니다.',
+      '2026년 6월 25일 갱신되었습니다. 이 안내에 따르면 재산목록 제출과 상속포기에 관한 법원 절차의 일반적인 기간은 3개월입니다. 상속세 신고는 일반적으로 6개월입니다.',
+      '이 기간을 그대로 개인별 마감일 계산에 써서는 안 됩니다.',
+      '상속포기 서류는 법원에 내고, 상속세 신고는 세무기관에 합니다. 같은 절차가 아닙니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -204,14 +213,14 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
 
   it('locks the surviving-parent, guardianship, and court-involvement rules', () => {
     const requiredPhrases = [
-      '친권상 권리와 의무에는 미성년 자녀의 보호·교양, 거소에 관한 결정, 법정대리와 재산관리 등 여러 내용이 포함될 수 있습니다.',
+      '친권상 권리와 의무에 포함될 수 있는 내용으로는 미성년 자녀의 보호·교양, 거소에 관한 결정, 법정대리와 재산관리 등이 있습니다.',
       '친권과 상속은 법적으로 별개의 문제입니다.',
-      '대만 민법 제1091조에 따른 미성년후견은 미성년자에게 부모가 없거나 부모 모두가 친권상 권리와 의무를 행사할 수 없는 때 문제됩니다.',
-      '민법 제1093조에 따르면 마지막으로 친권상 권리와 의무를 행사하는 부모는 유언으로 미성년후견인을 지정할 수 있습니다.',
+      '미성년후견은 미성년자에게 부모가 없거나 부모 모두가 친권상 권리와 의무를 행사할 수 없는 때 문제됩니다(대만 민법 제1091조).',
+      '민법 제1093조는 마지막으로 친권상 권리와 의무를 행사하는 부모가 유언으로 미성년후견인을 지정할 수 있다고 정합니다.',
       '민법 제1094조의 법정 순위와 제1094조의1의 법원 선임 규율',
-      '자녀의 최선의 이익을 심사합니다.',
-      '친족과 그 밖에 법률이 정한 신청권자는 법정 사유가 있으면 법원에 후견인의 선임·변경 또는 그 밖에 필요한 처분을 구할 수 있습니다.',
-      '후견인은 친권을 행사하는 부모와 같은 개념이 아니며',
+      '법원이 심사하는 것은 자녀의 최선의 이익입니다.',
+      '친족과 그 밖에 법률이 정한 신청권자는 법정 사유가 있으면 법원에 후견인의 선임·변경 또는 그 밖에 필요한 처분을 구할 수 있지만',
+      '후견인은 친권을 행사하는 부모와 같은 개념도 아닙니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -222,11 +231,11 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
 
   it('locks ownership, conflicts, special representation, and supervision of a minor’s property', () => {
     const requiredPhrases = [
-      '특유재산은 미성년자 본인에게 귀속하는 재산을 뜻합니다.',
-      '부모 또는 후견인이 관리 업무를 맡더라도 그 재산의 실질적 소유자가 되는 것은 아니며',
-      '민법 제1088조에 따른 관리·사용·수익과 처분 권한은 자녀의 이익을 위한 목적에 묶여 있습니다.',
-      '민법 제1086조의 특별대리인 제도를 검토하고',
-      '미성년후견인이 재산을 관리하는 경우에는 재산목록 작성, 증빙 보관, 수입과 지출의 분리, 법원에 대한 보고와 감독 규율이 적용될 수 있습니다.',
+      '자녀의 특유재산입니다. 미성년자 본인에게 귀속하는 재산이라는 뜻입니다.',
+      '부모나 후견인이 관리 업무를 맡더라도 그 재산의 실질적 소유자가 되는 것은 아닙니다.',
+      '관리·사용·수익·법정대리·처분은 자녀의 이익을 위해 이루어져야 하고, 제1088조에 따른 관리·사용·수익과 처분 권한도 그 목적에 묶여 있습니다.',
+      '이때 검토할 제도가 민법 제1086조의 특별대리인입니다.',
+      '미성년후견인이 재산을 관리하는 경우에는 재산목록 작성, 증빙 보관, 수입과 지출의 분리, 법원에 대한 보고와 감독 규율이 적용되기도 합니다.',
       '재산관리자의 편의를 자녀의 이익보다 앞세워서는 안 됩니다.',
     ];
 
@@ -239,7 +248,7 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
   it('locks cross-border connecting factors and the ordered practical checklist', () => {
     const requiredPhrases = [
       '당사자의 국적, 주소와 상거소, 사망 당시의 생활 근거지, 재산의 소재지, 외국에서 성립한 혼인이나 이혼, 기존 친권 재판',
-      '대만 「섭외민사법률적용법」은 외국 요소가 있는 민사관계의 준거법을 정하는 출발점입니다.',
+      '외국 요소가 있는 민사관계의 준거법을 정할 때 출발점은 대만 「섭외민사법률적용법」입니다.',
       '법원의 국제재판관할, 외국 재판의 승인과 집행, 조약이나 상대국 법률',
       '대만의 상속세 신고와 외국의 상속·증여세, 해외금융계좌 신고, 부동산 이전세',
     ];
@@ -247,7 +256,7 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
       '1. 사망진단서와 사망신고 자료, 가족관계와 대만 호적 자료',
       '2. 부동산, 예금, 투자자산, 사업 지분과 동산, 채권',
       '3. 유언 원본과 작성 방식, 유언능력',
-      '4. 법정상속분과 부부 잔여재산 분배청구권을 분리하여 계산합니다.',
+      '4. 법정상속분과 부부 잔여재산 분배청구권은 분리하여 계산합니다.',
       '5. 미성년자에게 귀속되는 재산을 식별하고 법정대리권',
       '6. 법원의 상속포기·재산목록·후견·특별대리인 절차',
     ];
@@ -299,8 +308,8 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
     const calculatedMinutes = Math.ceil(visibleEojeolCount / 180);
 
     expect(visibleEojeolCount).toBeGreaterThanOrEqual(1_200);
-    expect(visibleEojeolCount).toBe(2_227);
-    expect(calculatedMinutes).toBe(13);
+    expect(visibleEojeolCount).toBe(2_132);
+    expect(calculatedMinutes).toBe(12);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

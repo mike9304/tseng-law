@@ -11,7 +11,7 @@ const sourceBytes = fs.readFileSync(columnPath);
 
 const immutablePrefixLength = 2_666;
 const immutablePrefixSha256 =
-  'c20dbef568745d5a87573fb0ca5ab04825feb287196bde745b186b9db1b28a78';
+  '93378af0048a68b34d0b16367b5a003dc6a599024e431fab5f2a17cc98a02611';
 const immutableTailMarker = Buffer.from(
   '![](../images/002-withdraw-capital-taiwan-company/img-01.png)',
   'utf8',
@@ -25,6 +25,10 @@ const introBytes =
     : sourceBytes.subarray(immutablePrefixLength, tailOffset);
 const intro = introBytes.toString('utf8');
 const paragraphs = intro.endsWith('\n\n') ? intro.slice(0, -2).split('\n\n') : [];
+
+const sourceText = sourceBytes.toString('utf8');
+// The source-specific limitations now live in the closing note after the last horizontal rule.
+const closingNote = sourceText.slice(sourceText.lastIndexOf('\n---\n'));
 
 const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 
@@ -61,26 +65,32 @@ describe('Japanese investment column 002 — synchronized introduction', () => {
 
   it('explains why paid-in capital cannot simply be moved to the shareholder', () => {
     const first = paragraphs[0] ?? '';
+    const second = paragraphs[1] ?? '';
 
     expect(first).toMatch(
-      /台湾[^。]*(?:設立|登記)[^。]*(?:会社|法人)[^。]*(?:終了|終える|廃止|廃業)/u,
+      /(?:事業|営業)[^。]*(?:終了|終える|廃止|廃業)[^。]*台湾[^。]*(?:会社|法人)/u,
     );
+    expect(first).toMatch(/最初に(?:問題|論点)[^。]*資本金/u);
     expect(first).toMatch(
-      /(?:当初|最初|設立時)[^。]*(?:払い込んだ|払込)[^。]*(?:資本金|資本|出資金)[^。]*(?:直ちに|すぐに)[^。]*株主[^。]*口座[^。]*(?:移す|移せる|移転|送金|振り込)[^。]*(?:問題|確認|論点)/u,
+      /(?:当初|最初|設立時)[^。]*(?:払い込んだ|払込)[^。]*(?:金額|資本金|資本|出資金)[^。]*(?:直ちに|すぐに)[^。]*株主[^。]*口座[^。]*(?:移す|移せる|移転|送金|振り込)/u,
     );
-    expect(first).toMatch(
+    expect(second).toMatch(
       /(?:出資金|払込金|払い込まれた資金)[^。]*会社[^。]*口座[^。]*(?:会社財産|会社の財産|会社資産|会社の資産)/u,
     );
-    expect(first).toMatch(
-      /(?:会社財産|会社の財産|会社資産|会社の資産)[^。]*会社[^。]*帰属[^。]*株主[^。]*(?:個人財産|個人の財産)[^。]*(?:ではない|ではありません|でない)/u,
+    expect(second).toMatch(
+      /(?:会社財産|会社の財産|会社資産|会社の資産)[^。]*会社[^。]*帰属[^。]*。株主[^。]*(?:個人財産|個人の財産)[^。]*(?:ではない|ではありません|でない)/u,
     );
-    expect(first).toMatch(
-      /株主[^。]*(?:全て|すべて|全部|100％|100%)[^。]*(?:所有|保有)[^。]*(?:唯一|単独)[^。]*(?:取締役|董事)[^。]*(?:原則|考え方)[^。]*(?:変わらない|変わりません|異ならない)/u,
+    expect(second).toMatch(
+      /(?:全て|すべて|全部|100％|100%)[^。]*(?:所有|保有)[^。]*株主[^。]*(?:原則|考え方)[^。]*(?:変わらない|変わりません|異ならない)/u,
+    );
+    expect(second).toMatch(
+      /(?:唯一|単独)[^。]*(?:取締役|董事)[^。]*(?:同じ|変わらない|変わりません|異ならない)/u,
     );
   });
 
   it('covers company assets and the proof required for a genuine shareholder debt', () => {
     const second = paragraphs[1] ?? '';
+    const third = paragraphs[2] ?? '';
 
     expect(second).toMatch(
       /(?:過去|以前)[^。]*(?:出資|払込)[^。]*(?:だけ|のみ)[^。]*(?:預金|資産)[^。]*(?:自由に|任意に)[^。]*(?:引き出|払い戻|回収)[^。]*(?:できない|できません|認められない)/u,
@@ -95,12 +105,12 @@ describe('Japanese investment column 002 — synchronized introduction', () => {
       /保証金|敷金/u,
       /知的財産権/u,
     ]) {
-      expect(second).toMatch(asset);
+      expect(third).toMatch(asset);
     }
-    expect(second).toMatch(
+    expect(third).toMatch(
       /(?:会社の|会社における)[^。]*(?:権利義務|権利・義務)[^。]*(?:関係|枠組み)[^。]*(?:処理|整理)/u,
     );
-    expect(second).toMatch(
+    expect(third).toMatch(
       /会社[^。]*株主[^。]*(?:真正|実在|実際|正当)[^。]*(?:債務|負債)[^。]*(?:契約|送金記録|送金履歴|振込記録|振込履歴|会計帳簿|帳簿|決議)[^。]*(?:存在|返済根拠|返済の根拠)/u,
     );
     for (const evidence of [
@@ -109,27 +119,33 @@ describe('Japanese investment column 002 — synchronized introduction', () => {
       /会計帳簿|帳簿/u,
       /決議/u,
     ]) {
-      expect(second).toMatch(evidence);
+      expect(third).toMatch(evidence);
     }
   });
 
   it('separates the five kinds of company-fund outflow and their procedures', () => {
-    const third = paragraphs[2] ?? '';
+    const fourth = paragraphs[3] ?? '';
 
     for (const category of [
       /解散[^、。]*(?:清算|清算手続)/u,
-      /会社[^、。]*(?:存続|維持)[^、。]*減資/u,
+      /(?:存続|維持)させながら[^、。]*減資/u,
       /通常[^、。]*(?:事業|営業)[^、。]*(?:費用|経費)/u,
       /利益[^、。]*(?:前提|原資|基づ)[^、。]*配当/u,
       /会社[^、。]*(?:実際|真正|正当)[^、。]*(?:借入金|債務)[^、。]*返済/u,
     ]) {
-      expect(third).toMatch(category);
+      expect(fourth).toMatch(category);
     }
-    expect(third).toMatch(
-      /(?:(?:異なる|別々の|別の)[^。]*(?:法的|法律上)[^。]*(?:税務|税務上)[^。]*(?:区分|分類|カテゴリー)|(?:法的|法律上)[^。]*(?:税務|税務上)[^。]*それぞれ[^。]*(?:異なる|別々の|別の)[^。]*(?:取扱い|区分|分類|カテゴリー))/u,
+    expect(fourth).toMatch(
+      /(?:法的|法律上)[^。]*(?:税務|税務上)[^。]*取扱い[^。]*取引[^。]*(?:異なる|異なります|違)/u,
     );
-    expect(third).toMatch(
-      /会社[^。]*口座[^。]*(?:資金|金銭|金)[^。]*(?:出る|流出|支出)[^。]*(?:同じ|同様)[^。]*(?:決議|債権者保護|証憑|証拠書類|会計処理|源泉徴収|申告)[^。]*(?:同じではない|同じではありません|異なる)/u,
+    expect(fourth).toMatch(
+      /解散[^。]*減資[^。]*配当[^。]*返済[^。]*(?:別々の|別の|それぞれ別)[^。]*取引/u,
+    );
+    expect(fourth).toMatch(
+      /会社[^。]*口座[^。]*(?:資金|金銭|金)[^。]*(?:出る|流出|支出)[^。]*(?:同じ|同様)[^。]*(?:異なる|異なります)/u,
+    );
+    expect(fourth).toMatch(
+      /決議[^。]*債権者保護[^。]*(?:証憑|証拠書類)[^。]*会計処理[^。]*源泉徴収[^。]*申告[^。]*取引(?:ごと|ごとに)[^。]*(?:違います|異なる|異なります)/u,
     );
     for (const procedure of [
       /決議/u,
@@ -139,27 +155,27 @@ describe('Japanese investment column 002 — synchronized introduction', () => {
       /源泉徴収/u,
       /申告/u,
     ]) {
-      expect(third).toMatch(procedure);
+      expect(fourth).toMatch(procedure);
     }
   });
 
   it('distinguishes permanent dissolution from merely suspending operations', () => {
-    const fourth = paragraphs[3] ?? '';
+    const fifth = paragraphs[4] ?? '';
 
-    expect(fourth).toMatch(
-      /(?:営業|事業|業務)[^。]*(?:中止|停止|止め)[^。]*(?:だけ|のみ)[^。]*(?:法人格|会社の存在)[^。]*(?:申告義務|届出義務)[^。]*(?:消えない|なくならない|なくなりません|終了しない)/u,
+    expect(fifth).toMatch(
+      /(?:法人格|会社の存在)[^。]*(?:申告義務|届出義務)[^。]*(?:営業|事業|業務)[^。]*(?:中止|停止|止め)[^。]*(?:だけ|のみ)[^。]*(?:消えない|なくならない|なくなりません|終了しない)/u,
     );
-    expect(fourth).toMatch(
+    expect(fifth).toMatch(
       /(?:恒久的|永久に)[^。]*(?:終了|廃止)[^。]*解散登記[^。]*清算[^。]*(?:契約|債権|債務|税金|租税|残余財産)[^。]*(?:整理|処理)/u,
     );
     for (const item of [/契約/u, /債権/u, /債務/u, /税金|租税/u, /残余財産/u]) {
-      expect(fourth).toMatch(item);
+      expect(fifth).toMatch(item);
     }
-    expect(fourth).toMatch(
+    expect(fifth).toMatch(
       /(?:事業|営業)[^。]*(?:再開|再開する)[^。]*(?:可能性|余地)[^。]*(?:休業|営業停止)[^。]*(?:検討|選択)/u,
     );
-    expect(fourth).toMatch(
-      /(?:(?:休業|営業停止)[^。]*(?:会社|法人)[^。]*(?:存在|法人格)[^。]*(?:終わらせる|終了させる|消滅させる)[^。]*(?:手続|制度)[^。]*(?:ではない|ではありません|でない)|(?:休業|営業停止)[^。]*法人格[^。]*消滅させる[^。]*(?:手続|制度)[^。]*(?:ではない|ではありません|でない))/u,
+    expect(fifth).toMatch(
+      /(?:休業|営業停止)[^。]*(?:会社|法人格)[^。]*(?:消滅しません|消滅しない|消滅させる[^。]*(?:手続|制度)[^。]*(?:ではない|ではありません|でない))/u,
     );
   });
 
@@ -167,17 +183,20 @@ describe('Japanese investment column 002 — synchronized introduction', () => {
     const fifth = paragraphs[4] ?? '';
 
     for (const roadmapConcept of [
-      /会社財産|会社の財産/u,
       /払込(?:株金|金)|払込済み?資本|出資金/u,
       /減資/u,
       /解散/u,
       /清算/u,
-      /破産[^、。]*(?:申立|申請)/u,
       /残余財産[^、。]*分配/u,
       /休業|営業停止/u,
     ]) {
       expect(fifth).toMatch(roadmapConcept);
     }
+    // The rewrite introduces company property in the second paragraph, and the bankruptcy-petition
+    // step is carried by the insolvency section instead of the roadmap paragraph.
+    expect(intro).toMatch(/会社財産|会社の財産/u);
+    expect(sourceText).toMatch(/破産[^、。]*(?:申立|申請|申し立て)/u);
+    // The source-specific limitations are carried by the closing note.
     for (const factor of [
       /会社[^、。]*(?:形態|種類)/u,
       /定款/u,
@@ -188,12 +207,10 @@ describe('Japanese investment column 002 — synchronized introduction', () => {
       /外国(?:人)?投資/u,
       /送金[^、。]*(?:構造|仕組み)/u,
     ]) {
-      expect(fifth).toMatch(factor);
+      expect(closingNote).toMatch(factor);
     }
-    expect(fifth).toMatch(
-      /(?:実際|具体的)[^。]*(?:順序|手順)[^。]*(?:書類|文書)[^。]*(?:異なる|変わる)/u,
-    );
-    expect(fifth).toMatch(
+    expect(closingNote).toMatch(/(?:順序|手順)[^。]*(?:書類|文書)[^。]*(?:異なる|変わる)/u);
+    expect(closingNote).toMatch(
       /(?:各段階|それぞれの段階)[^。]*(?:現在|最新)[^。]*(?:資料|情報)[^。]*(?:判断|確認)/u,
     );
   });

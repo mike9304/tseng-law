@@ -9,16 +9,16 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 4_385;
+const immutablePrefixLength = 4_418;
 const immutablePrefixSha256 =
-  '4848e21b99d6d5399e451bc229580291d069d6525a7a0665121e3c6026d352c8';
+  '12e1f1774703817566a12c5ff4478e6e1068b93c197e68eef54f89ffb4fc9d08';
 const immutableTailMarker = Buffer.from(
-  '## 1. 最低勤務期間条項はいつ有効となるか',
+  '## 最低勤務期間条項が有効になる条件',
   'utf8',
 );
-const immutableTailLength = 25_915;
+const immutableTailLength = 24_094;
 const immutableTailSha256 =
-  'a2b8a76be010237440f8841ca2df823c36859eb7997ddbd50998c860c7878e80';
+  '4ac8ddebae2fa04584e4b367623e1d7b782e0592286463da865c709746d88f1b';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const closingBytes =
@@ -40,8 +40,8 @@ describe('Japanese labor column 014 — synchronized introduction closing', () =
 
     expect(prefix).toHaveLength(immutablePrefixLength);
     expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(prefix.toString('utf8')).toContain('read_time: "約17分"');
-    expect(prefix.toString('utf8')).not.toContain('read_time: "約18分"');
+    expect(prefix.toString('utf8')).toContain('read_time: "約16分"');
+    expect(prefix.toString('utf8')).not.toContain('read_time: "約17分"');
     expect(tail).toHaveLength(immutableTailLength);
     expect(sha256(tail)).toBe(immutableTailSha256);
   });
@@ -58,8 +58,9 @@ describe('Japanese labor column 014 — synchronized introduction closing', () =
 
   it('states that all four issues may appear in the same contract', () => {
     expect(paragraph).toMatch(
-      /(?:(?:同じ|同一の)契約(?:書)?[^。]*(?:四つ|4つ)[^。]*(?:問題|事項|論点)|(?:四つ|4つ)[^。]*(?:問題|事項|論点)[^。]*(?:同じ|同一の)契約(?:書)?)/u,
+      /(?:同じ|同一の)契約(?:書)?[^。]*(?:記載|定め|盛り込|含まれ|併記|並ん|書かれ)/u,
     );
+    expect(paragraph).toMatch(/この(?:四つ|4つ)/u);
     expect(paragraph).toMatch(
       /(?:記載|定め|盛り込|含まれ|併記|並ん|書かれ)/u,
     );
@@ -76,7 +77,7 @@ describe('Japanese labor column 014 — synchronized introduction closing', () =
 
   it('requires a separate assessment of clause validity', () => {
     expect(paragraph).toMatch(
-      /(?:それぞれ|各問題|各事項)[^。]*(?:分けて|個別に|別々に)[^。]*(?:検討|確認|判断|評価)/u,
+      /(?:一つずつ|それぞれ|各問題|各事項)[^。]*(?:切り分けて|分けて|個別に|別々に)[^。]*(?:検討|確認|判断|評価)/u,
     );
     expect(paragraph).toMatch(
       /(?:最低勤務期間)?(?:条項|約定)[^。]*(?:有効か|有効性)/u,

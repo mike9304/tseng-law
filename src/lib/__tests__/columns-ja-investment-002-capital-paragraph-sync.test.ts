@@ -10,8 +10,7 @@ const columnPath = path.join(
 const raw = fs.readFileSync(columnPath, 'utf8');
 const body = matter(raw).content;
 
-const sectionStartMarker =
-  '## 1. 会社財産と株主の出資金は区別しなければなりません';
+const sectionStartMarker = '## 1. 会社財産と株主の出資金の区別';
 const sectionEndMarker = '## 2. 会社を恒久的に終了する手続';
 
 const startIndex = body.indexOf(sectionStartMarker);
@@ -27,26 +26,35 @@ const paragraphs = section
   .split(/\r?\n\s*\r?\n/)
   .map((block) => block.trim())
   .filter((block) => block.length > 0);
+// Everything before section 1: the featured image, the five-paragraph introduction and its image.
+const preamble = startIndex === -1 ? '' : body.slice(0, startIndex);
 
 const capitalParagraph =
   paragraphs.find((block) => block.includes('純資産項目')) ?? '';
 
-const overviewParagraph =
-  '会社を恒久的に終了するには、原則として解散登記と清算を行い、債務と税務を処理した後に残った残余財産を株主に分配します。会社を存続させながら払込金を返還するには、会社形態に応じた減資などの適法な手続を検討しなければなりません。通常の事業費用、配当、会社が実際に負担している借入金の返済は、それぞれ別個の法的・税務上の根拠と手続を確認する必要があります。';
+// The overview used to be the first paragraph of section 1; the rewrite moved it into the introduction.
+const overviewSentences = [
+  '恒久的に終了させるための解散・清算、存続させながら資本を減らす減資、通常の事業費用の支払、利益を前提とする配当、会社が実際に負っている借入債務の返済は、別々の取引です。',
+  '事業費用、配当、借入金の返済にも、別個の法的・税務上の根拠と手続の確認が必要です。',
+  '恒久的に終了させるなら、原則として解散登記と清算を一連の手続として進め、契約、債権、債務、税金を整理し、債務と税務を処理した後に残った残余財産を株主に分配します。',
+  '会社を存続させながら払込金を返還するなら、会社形態に応じた減資などの適法な手続を検討します。',
+];
 const classificationParagraph =
-  '株主の払込金返還の可否を判断する際は、まず取引の法的性質を確定しなければなりません。会社が商品やサービスのために負担した費用であるか、すでに適法に確定した配当であるか、株主が会社に貸し付けた金額の返済であるか、資本を減少させる減資であるか、清算後の残余財産の分配であるかによって、適用される要件が異なります。取引の名称を変更したり、帳簿に任意の勘定科目を付けたりするだけで、その性質が変わるわけではありません。';
+  '払込金を株主へ返還できるかどうかを判断するには、まず取引の法的性質を確定しなければなりません。会社が商品やサービスのために負担した費用か、すでに適法に確定した配当か、株主が会社に貸し付けた金額の返済か、資本を減少させる減資か、清算後の残余財産の分配かによって、適用される要件が異なります。名称を変えても性質は同じです。帳簿に任意の勘定科目を付けても変わりません。';
 const article9Paragraph =
-  '会社法（公司法）第9条は、会社が受け取るべき払込金（股款）について、実際には払い込まれていないのに全額払込済みと表示した場合、または登記後に払込金を株主へ返還し、もしくは株主による回収を許した場合について、5年以下の有期刑、拘留または50万以上250万新台湾ドル（NT$）以下の罰金を定めています。通常の適法な会社資金の使用一般を処罰する規定ではありません。';
+  '罰則もあります。会社法（公司法）第9条は、会社が受け取るべき払込金（股款）について、実際には払い込まれていないのに全額払込済みと表示した場合と、登記後に払込金を株主へ返還し、または株主による回収を許した場合を処罰します。定められているのは、5年以下の有期刑、拘留または50万以上250万新台湾ドル（NT$）以下の罰金です。';
 const article9ScopeParagraph =
-  'この条項を、会社の口座から行われるすべての支払いに拡大してはなりません。たとえば、実際の営業のための賃借料、給与、仕入代金や税金の支払いは、払込金を実際には払い込まなかった仮装払込や登記後の払込金返還とは区別しなければなりません。ただし、事業費用という名目を付けた場合でも、実際の用途、契約の相手方、対価の存在および意思決定権限が不明確であれば、会社法、税法および会計基準に基づく別個の問題が生じるおそれがあります。';
+  '第9条は、通常の適法な会社資金の使用一般を処罰する規定ではありません。会社の口座から行われるすべての支払いに拡大してはいけません。たとえば、実際の営業のための賃借料、給与、仕入代金、税金の支払いは、払込金を実際には払い込まなかった仮装払込や、登記後の払込金返還と区別しなければなりません。';
+const article9CaveatParagraph =
+  'ただし、事業費用という名目を付けても、実際の用途、契約の相手方、対価の存在、意思決定権限が不明確であれば、会社法、税法、会計基準に基づく別個の問題が生じるおそれがあります。';
 const article90Paragraph =
-  '清算人が会社の債務を弁済する前に会社財産を株主へ分配した場合、会社法第90条により、1年以下の有期刑、拘留またはNT$6万以下の罰金が科され得ます。';
-const priorityParagraph =
-  '清算では、株主の投資回収よりも債権者と税金の処理が優先されます。株主が会社に対する貸付金債権を主張する場合にも、実際の貸付契約、資金の流れ、利息の約定、会計への反映および返済順位を確認しなければなりません。当事者間に特別な関係がある取引であれば、取引条件と証憑が、独立した第三者との取引と同様に説明可能かどうかも検討する必要があります。';
+  '清算人にも罰則があります。会社の債務を弁済する前に会社財産を株主へ分配した清算人には、1年以下の有期刑、拘留またはNT$6万以下の罰金が科され得ます（会社法第90条）。清算で優先されるのは、債権者と税金の処理です。株主の投資回収は後になります。';
+const shareholderLoanParagraph =
+  '会社に対する貸付金債権を株主が主張する場合も、実際の貸付契約、資金の流れ、利息の約定、会計への反映、返済順位の確認が欠かせません。当事者間に特別な関係がある取引なら、取引条件と証憑を、独立した第三者との取引と同じように説明できるかも検討します。';
 const factSpecificParagraph =
-  'そのほかの民事上・刑事上・税務上の責任は、資金移動の目的、権限、証憑、会計処理および当事者の関係などの具体的な事実によって異なります。特定の取引があったという理由だけで背任罪などが当然に成立すると断定することはできず、逆に内部承認があったという理由だけですべての責任が除外されると考えることもできません。決議書、契約書、税額の計算・申告資料、銀行取引明細および帳簿が互いに一致しているかを、取引ごとに確認しなければなりません。';
+  'そのほかの民事上・刑事上・税務上の責任は、資金移動の目的、権限、証憑、会計処理、当事者の関係などの具体的な事実によって異なります。特定の取引があったというだけで背任罪などが当然に成立するとは断定できず、逆に、内部承認があったというだけですべての責任が除外されるとも考えられません。決議書、契約書、税額の計算・申告資料、銀行取引明細、帳簿が互いに一致しているかを、取引ごとに確かめます。';
 const reconciliationParagraph =
-  '実務上は、会社名義の資産一覧と株主個人名義の資産をまず分離し、会社と株主との間の債権・債務を別表で整理することが有用です。会社カードで決済した個人費用、代表者が代わりに支払った会社費用、会社が株主から借り入れた金額と株主が会社から引き出した金額を1つの勘定で相殺すると、取引の根拠が曖昧になるおそれがあります。各金額の発生日、目的、承認者、証憑および税務処理を個別に結び付ける必要があります。';
+  '実務上は、まず会社名義の資産一覧と株主個人名義の資産を分け、会社と株主との間の債権・債務を別表で整理する方法が有用です。会社カードで決済した個人費用、代表者が代わりに支払った会社費用、会社が株主から借り入れた金額と株主が会社から引き出した金額を1つの勘定で相殺すると、取引の根拠が曖昧になるおそれがあります。金額ごとに、発生日、目的、承認者、証憑、税務処理を個別に結び付けることが必要です。';
 const staleCondensedFactParagraph =
   'このほかに民事上、刑事上または税務上の問題が生じるかどうかは、資金移動の目的、権限、証憑、会計処理、会社と株主との関係等の具体的な事実により異なります。';
 
@@ -77,16 +85,16 @@ describe('Japanese investment column 002 — capital return section completeness
 
   it('distinguishes capital from the current bank balance and all operating assets or liabilities', () => {
     expect(capitalParagraph).toMatch(
-      /(?:会社の)?(?:銀行)?口座[^。]*(?:現在|現時点)[^。]*(?:残高|預金残高)[^。]*(?:必ずしも|常に)[^。]*(?:一致しない|一致せず|一致するものではない|同一ではない|同じではない)/u,
+      /(?:会社の)?(?:銀行)?口座[^。]*(?:現在|現時点)[^。]*(?:残高|預金残高)[^。]*(?:必ずしも|常に)[^。]*(?:一致しない|一致しません|一致せず|一致するものではない|同一ではない|同じではない)/u,
     );
     expect(capitalParagraph).toMatch(
-      /(?:(?:事業|営業)[^。]*(?:取得した|取得する)[^。]*(?:資産|財産)[^。]*(?:負担した|負担する|生じた)[^。]*(?:負債|債務)[^。]*(?:すべて|全て|全部)[^。]*(?:資本金|一語)[^。]*(?:表すものではない|意味するものではない|含まれない|包含しない|説明できない)|事業活動中[^。]*取得した[^。]*すべての資産[^。]*負担した[^。]*すべての債務[^。]*含むものでも[^。]*それらを表すものでもありません|会社[^。]*事業活動を通じて[^。]*取得した資産[^。]*負担した債務[^。]*(?:すべて|全て|全部)[^。]*表すものでもありません)/u,
+      /(?:(?:事業|営業)[^。]*(?:取得した|取得する)[^。]*(?:資産|財産)[^。]*(?:負担した|負担する|生じた)[^。]*(?:負債|債務)[^。]*(?:すべて|全て|全部)[^。]*(?:資本金|一語)[^。]*(?:表すものではない|意味するものではない|含まれない|包含しない|説明できない)|事業活動中[^。]*取得した[^。]*すべての資産[^。]*負担した[^。]*すべての債務[^。]*含むものでも[^。]*それらを表すものでもありません|会社[^。]*事業活動を通じて[^。]*取得した資産[^。]*負担した債務[^。]*(?:すべて|全て|全部)[^。]*表す(?:もの|数字)でもありません)/u,
     );
   });
 
   it('requires every closure-check category and a combined assessment beyond book capital', () => {
     expect(capitalParagraph).toMatch(
-      /会社[^。]*(?:終了|閉鎖|廃止|清算)[^。]*(?:帳簿上|会計帳簿上)[^。]*資本金[^。]*(?:だけでなく|のみではなく|だけを見るのではなく|のみを見るのではなく)/u,
+      /(?:終了|閉鎖|廃止|清算)[^。]*(?:帳簿上|会計帳簿上)[^。]*資本金[^。]*(?:だけでなく|のみではなく|だけを見るのではなく|のみを見るのではなく|に加えて)/u,
     );
 
     for (const category of [
@@ -135,10 +143,14 @@ describe('Japanese investment column 002 — capital return section completeness
   });
 
   it('distinguishes liquidation, capital reduction, ordinary expenses, dividends, genuine loan repayment, and residual-property distribution', () => {
+    for (const sentence of overviewSentences) {
+      expect(preamble).toContain(sentence);
+    }
+
     for (const paragraph of [
-      overviewParagraph,
       classificationParagraph,
       article9ScopeParagraph,
+      article9CaveatParagraph,
     ]) {
       expect(paragraphs).toContain(paragraph);
     }
@@ -146,6 +158,10 @@ describe('Japanese investment column 002 — capital return section completeness
 
   it('keeps the Article 9 and Article 90 penalty ceilings with their narrow scope', () => {
     expect(paragraphs).toContain(article9Paragraph);
+    expect(paragraphs).toContain(article9ScopeParagraph);
+    expect(section).toContain(
+      '第9条は、通常の適法な会社資金の使用一般を処罰する規定ではありません。',
+    );
     expect(paragraphs).toContain(article90Paragraph);
     expect(section).toContain(
       '5年以下の有期刑、拘留または50万以上250万新台湾ドル（NT$）以下の罰金',
@@ -154,28 +170,28 @@ describe('Japanese investment column 002 — capital return section completeness
   });
 
   it('prioritizes creditors and tax over shareholder recovery and requires proof for shareholder loans', () => {
-    expect(paragraphs).toContain(priorityParagraph);
+    expect(paragraphs).toContain(shareholderLoanParagraph);
     expect(section).toContain(
-      '株主の投資回収よりも債権者と税金の処理が優先されます。',
+      '清算で優先されるのは、債権者と税金の処理です。株主の投資回収は後になります。',
     );
     expect(section).toContain(
-      '実際の貸付契約、資金の流れ、利息の約定、会計への反映および返済順位を確認しなければなりません。',
+      '実際の貸付契約、資金の流れ、利息の約定、会計への反映、返済順位の確認が欠かせません。',
     );
   });
 
   it('states fact-specific civil, criminal, and tax responsibility with document consistency', () => {
     expect(paragraphs).toContain(factSpecificParagraph);
     expect(section).toContain(
-      '資金移動の目的、権限、証憑、会計処理および当事者の関係などの具体的な事実によって異なります。',
+      '資金移動の目的、権限、証憑、会計処理、当事者の関係などの具体的な事実によって異なります。',
     );
     expect(section).toContain(
-      '決議書、契約書、税額の計算・申告資料、銀行取引明細および帳簿が互いに一致しているかを、取引ごとに確認しなければなりません。',
+      '決議書、契約書、税額の計算・申告資料、銀行取引明細、帳簿が互いに一致しているかを、取引ごとに確かめます。',
     );
   });
 
   it('keeps the practical company/shareholder asset and debt reconciliation guidance', () => {
     expect(paragraphs).toContain(reconciliationParagraph);
-    expect(section).toContain('会社名義の資産一覧と株主個人名義の資産をまず分離し');
+    expect(section).toContain('会社名義の資産一覧と株主個人名義の資産を分け');
     expect(section).toContain('会社と株主との間の債権・債務を別表で整理する');
   });
 

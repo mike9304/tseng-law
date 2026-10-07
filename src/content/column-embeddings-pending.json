@@ -1521,6 +1521,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-seized-phone-property-return"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-customs-valuation-related-party-imports-transfer-pricing"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-customs-valuation-related-party-imports-transfer-pricing"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-customs-valuation-related-party-imports-transfer-pricing"
     }
   ]
 }

@@ -201,6 +201,9 @@ export function getManagedLocaleFontClassNames(): string[] {
 /** ja type (2026-10-07, J1): Zen Old Mincho (500/700) + Zen Kaku Gothic New (400/700) in unicode-range slices (SIL OFL 1.1), hashed sheet. */
 export const JA_ZEN_STYLESHEET = '/fonts/zen-ja-2026-10/zen-ja-50b77accc577.css';
 
+/** zh-hant titles (2026-10-07): Noto Serif TC cut to a static 500 + the brand line's glyphs (SIL OFL 1.1), hashed sheet. */
+export const ZH_TITLE_SERIF_STYLESHEET = '/fonts/zh-title-serif-500/zh-title-serif-df46f034f157.css';
+
 export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-ff7df79e29f2.css';
 
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
@@ -209,5 +212,6 @@ export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
   // ko leads with Pretendard; the list also feeds DocumentLocaleSync, so a client-side switch into /ko attaches it too.
   if (language === 'ko') return [...sheets, KO_PRETENDARD_STYLESHEET];
   if (language === 'ja') return [...sheets, JA_ZEN_STYLESHEET];
+  if (language === 'zh-Hant') return [...sheets, ZH_TITLE_SERIF_STYLESHEET];
   return sheets;
 }

@@ -1425,3 +1425,9 @@
 }
 :global(.site[data-locale='ko']) .header :global(.mega-overlay) { background: rgb(44 35 30 / 30%); }
 
+/* zh-hant brand line 「昊鼎國際法律事務所」 (2026-10-07): from 'ZH Brand Serif', its nine glyphs at the brand's weights
+   (600/650, ~3 KB a file), so zh-hant pages no longer fetch whole variable Noto Serif TC slices for it. */
+:global(.site[data-locale='zh-hant']) .brandText:global(.logo-kr),
+:global(.site[data-locale='zh-hant']) .contentFitProbeBrand,
+:global(.site[data-locale='zh-hant']) .footer :global(.footer-main-brand) { font-family: 'ZH Brand Serif', var(--font-display); }
+

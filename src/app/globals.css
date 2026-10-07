@@ -225,6 +225,9 @@ html[lang='zh-hant'] {
   --font-display: var(--font-heading-zh);
   --font-display-en: var(--font-heading-zh);
 }
+/* zh-hant titles in Noto Serif TC (思源宋體, 2026-10-07; text stays in the device face): page and section titles at 500
+   from 'ZH Title Serif', a static cut about half the variable slices' weight; builder-placed nodes keep their own. */
+.site[data-locale='zh-hant'] #main :is(h1, h2):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-family: 'ZH Title Serif', var(--font-heading-zh) !important; font-weight: 500 !important; }
 
 /* Guidance locales load only the latin/Vietnamese Noto Sans (plus Noto Sans
    Thai for th). Without these bindings --font-body resolves through the

@@ -151,7 +151,6 @@
   box-shadow: none;
 }
 .heroMediaPlayer :global(.decorative-autoplay-video__control):hover { background: rgb(24 16 14 / 75%); }
-.heroMediaPlayer :global(.decorative-autoplay-video__control):focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .heroInner { position: relative; padding-top: 120px; }
 .firm { display: flex; align-items: center; gap: 10px; margin: 0; color: rgb(255 255 255 / 88%); font-size: 15px; font-weight: 500; }
 .firm img { width: 28px; height: 28px; }
@@ -565,10 +564,13 @@
   .home { font-size: 16px; --ko-search-h: 64px; }
   .heroStage { min-height: clamp(540px, 86svh, 700px); padding-bottom: calc(var(--ko-search-h) / 2 + 36px); }
   .heroMediaImage { object-position: 50% 50%; }
+  /* Phones: the type runs from the top of the frame, where the moving light brightens the columns mid-loop; the scrim
+     stays heavy all the way up (the firm line measured 3.3:1 at 4 s with an 18% top). */
   .heroMediaPlayer::after {
     background:
-      linear-gradient(0deg, rgb(24 16 14 / 82%) 0%, rgb(24 16 14 / 52%) 52%, rgb(24 16 14 / 18%) 100%);
+      linear-gradient(0deg, rgb(24 16 14 / 84%) 0%, rgb(24 16 14 / 62%) 50%, rgb(24 16 14 / 56%) 100%);
   }
+  .firm { color: #fff; }
   .heroInner { padding-top: 88px; }
   .heroTitle { font-size: clamp(36px, 10.5vw, 46px); font-weight: 200; }
   .heroActions { flex-direction: column; align-items: stretch; }

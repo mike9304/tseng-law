@@ -196,9 +196,13 @@ describe('published current9 editorial render', () => {
     expect(html).not.toMatch(/<div[^>]*class="builder-pub-node"[^>]*data-node-id="home-/);
     expect(publishedHomeSequence(html).filter((id) => id === 'heritage')).toHaveLength(0);
     expect(html.match(/<h1\b/g)).toHaveLength(1);
-    // The page view adds no hero preload of its own for the ko home (neither the zh-hant poster nor the stock canvas
-    // hero); the ko hero photograph is a next/image with priority, which preloads itself at render time.
-    expect(html).not.toMatch(/<link[^>]*rel="preload"[^>]*as="image"/);
+    // The ko home preloads its own poster (the colonnade loop's first frame, the LCP) for wide screens and phones —
+    // neither the zh-hant poster nor the stock canvas hero.
+    const imagePreloads = html.match(/<link[^>]*rel="preload"[^>]*as="image"[^>]*>/g) ?? [];
+    expect(imagePreloads).toHaveLength(2);
+    expect(imagePreloads.join(' ')).toContain('hero-colonnade');
+    expect(imagePreloads.join(' ')).toContain('/images/ko/hero-colonnade-portrait.webp');
+    expect(html).not.toContain('taiwan-dawn-cloud-sea-hero');
     expect(html).toContain('action="/ko/search"');
     expect(html).toContain('href="/ko/columns"');
     expect(html).toContain('href="/ko/columns/one"');

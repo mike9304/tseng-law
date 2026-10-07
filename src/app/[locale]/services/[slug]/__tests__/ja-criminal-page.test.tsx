@@ -102,7 +102,7 @@ describe('Japanese criminal service-detail route', () => {
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });
 
-  it('renders exact approved body, empty columns, links, and structured data', async () => {
+  it('renders the Japanese guidance, related columns and board without an unverified review claim', async () => {
     const approved = getJapaneseServiceDetail('criminal');
     const base = getServiceArea('criminal');
     const attorney = getAttorneyProfile('ja', primaryAttorneySlug);
@@ -110,7 +110,7 @@ describe('Japanese criminal service-detail route', () => {
     expect(base).toBeDefined();
     expect(attorney).toBeDefined();
     expect(approved!.keyPoints).toHaveLength(5);
-    expect(base!.columnSlugs).toEqual([]);
+    expect(base!.columnSlugs).toHaveLength(4);
 
     const page = await ServiceDetailPage({
       params: Promise.resolve({ locale: 'ja', slug: 'criminal' }),
@@ -134,9 +134,6 @@ describe('Japanese criminal service-detail route', () => {
       '法律相談',
       `${CONSULTATION_EMAIL} へ、ご相談内容の簡潔な概要をメールでお送りください。機微情報は弁護士の指示後にご提出ください。`,
       'お問い合わせ',
-      'このページは',
-      'が内容を確認し、関連コラムと相談窓口をご案内しています。',
-      'この分野の関連コラムを準備中です。',
       'ホーム',
       '取扱業務',
     ]) {
@@ -150,9 +147,11 @@ describe('Japanese criminal service-detail route', () => {
     expect(html).not.toContain('お問い合わせフォームからお申し込みください');
     expect(html).not.toContain('href="tel:');
     expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
-    expect(html).not.toContain('class="svc-col-card"');
-    expect(html).not.toContain('class="svc-related-link"');
-    expect(html).not.toContain('href="/ja/columns/');
+    expect(html).toContain('href="/ja/criminal-litigation"');
+    expect(html).not.toContain('が内容を確認し、関連コラムと相談窓口をご案内しています。');
+    expect(html).not.toContain('この分野の関連コラムを準備中です。');
+
+    for (const slug of base!.columnSlugs) expect(html).toContain(`href="/ja/columns/${slug}"`);
 
     expect(html).toContain('"@type":"BreadcrumbList"');
     expect(html).toContain('"@type":"LegalService"');

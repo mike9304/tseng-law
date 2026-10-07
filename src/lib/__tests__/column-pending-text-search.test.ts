@@ -24,5 +24,6 @@ describe('columns awaiting authorized embedding backfill', () => {
       const hits = runSearchQuery({ index, query: post.title, locale: locale as Locale, limit: 50, kinds: ['blog'] });
       expect(hits.some(hit => hit.doc.url === `/${locale}/columns/${slug}`), `${locale}:${slug}`).toBe(true);
     }
-  });
+  // This integration test builds the full multilingual index and searches every pending article.
+  }, 15000);
 });

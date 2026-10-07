@@ -1,3 +1,4 @@
+import CriminalBoardLink from '@/components/CriminalBoardLink';
 import Link from 'next/link';
 import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
@@ -261,6 +262,7 @@ export default function GuidancePageBody({
         </Reveal>
       ) : null}
 
+      {locale === 'vi' && pageKey === 'services' ? <CriminalBoardLink locale={locale} /> : null}
       <GuidanceContactBand locale={locale} isContact={isContact} />
     </div>
   );

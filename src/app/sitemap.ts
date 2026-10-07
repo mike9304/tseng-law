@@ -6,6 +6,7 @@ import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { ISSUE_BOARD_LOCALES, getAllColumnPosts, getAllIssuePosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
 import { collectColumnSitemapRecords } from '@/lib/column-locales';
 import { locales } from '@/lib/locales';
+import { CRIMINAL_BOARD_LOCALES, CRIMINAL_BOARD_PATH } from '@/lib/criminal-litigation-board';
 import {
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
@@ -319,6 +320,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         })
       );
     }
+  }
+
+  for (const locale of CRIMINAL_BOARD_LOCALES) {
+    pages.push(createEntry(locale, CRIMINAL_BOARD_PATH, {
+      priority: 0.8, lastModified: '2026-10-07', alternateLocales: CRIMINAL_BOARD_LOCALES,
+    }));
   }
 
   const columnRecords = collectColumnSitemapRecords({

@@ -326,6 +326,11 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '309': '2026-10-06',
   // audit-split-1006
   '310': '2026-10-06',
+  // criminal-20261007
+  '401': '2026-10-07',
+  '402': '2026-10-07',
+  '403': '2026-10-07',
+  '404': '2026-10-07',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

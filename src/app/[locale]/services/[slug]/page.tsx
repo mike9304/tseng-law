@@ -1,3 +1,4 @@
+import CriminalBoardLink from '@/components/CriminalBoardLink';
 import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
@@ -56,6 +57,7 @@ export const dynamic = 'force-dynamic';
 
 type ServiceDetailRecord = {
   slug: string;
+  sourceSlug?: string;
   title: string;
   subtitle: string;
   intro: string;
@@ -185,6 +187,7 @@ async function getServiceRecord(
 
   return projectInternationalPublicCopy(locale, {
     slug: area.slug,
+    sourceSlug: area.sourceSlug,
     title: area.title[locale],
     subtitle: area.subtitle[locale],
     intro: area.intro[locale],
@@ -460,7 +463,8 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                 </div>
               ) : null}
               {area.slug === 'civil' ? <CivilCommercialBlock locale={locale} /> : null}
-              {attorney ? (
+              {(area.sourceSlug ?? area.slug) === 'criminal' ? <CriminalBoardLink locale={locale} /> : null}
+              {attorney && (area.sourceSlug ?? area.slug) !== 'criminal' ? (
                 <p className="svc-review-note">
                   {t.reviewLead}
                   <Link href={`/${locale}/lawyers/${attorney.slug}`} className="link-underline">

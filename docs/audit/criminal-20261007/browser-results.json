@@ -1,0 +1,222 @@
+{
+  "base": "http://127.0.0.1:3107",
+  "results": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "대만 형사소송 칼럼"
+      ],
+      "links": [
+        "/ko/columns/taiwan-seized-phone-property-return",
+        "/ko/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/ko/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/ko/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/ko-1440.png"
+    },
+    {
+      "locale": "zh-hant",
+      "width": 1440,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "刑事訴訟專欄"
+      ],
+      "links": [
+        "/zh-hant/columns/taiwan-seized-phone-property-return",
+        "/zh-hant/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/zh-hant/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/zh-hant/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/zh-hant-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "Taiwan Criminal Litigation Columns"
+      ],
+      "links": [
+        "/en/columns/taiwan-seized-phone-property-return",
+        "/en/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/en/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/en/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/en-1440.png"
+    },
+    {
+      "locale": "ja",
+      "width": 1440,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "台湾の刑事訴訟コラム"
+      ],
+      "links": [
+        "/ja/columns/taiwan-seized-phone-property-return",
+        "/ja/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/ja/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/ja/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/ja-1440.png"
+    },
+    {
+      "locale": "vi",
+      "width": 1440,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "Bài viết về tố tụng hình sự Đài Loan"
+      ],
+      "links": [
+        "/vi/columns/taiwan-seized-phone-property-return",
+        "/vi/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/vi/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/vi/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/vi-1440.png"
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "대만 형사소송 칼럼"
+      ],
+      "links": [
+        "/ko/columns/taiwan-seized-phone-property-return",
+        "/ko/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/ko/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/ko/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/ko-390.png"
+    },
+    {
+      "locale": "zh-hant",
+      "width": 390,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "刑事訴訟專欄"
+      ],
+      "links": [
+        "/zh-hant/columns/taiwan-seized-phone-property-return",
+        "/zh-hant/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/zh-hant/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/zh-hant/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/zh-hant-390.png"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "Taiwan Criminal Litigation Columns"
+      ],
+      "links": [
+        "/en/columns/taiwan-seized-phone-property-return",
+        "/en/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/en/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/en/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/en-390.png"
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "台湾の刑事訴訟コラム"
+      ],
+      "links": [
+        "/ja/columns/taiwan-seized-phone-property-return",
+        "/ja/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/ja/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/ja/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/ja-390.png"
+    },
+    {
+      "locale": "vi",
+      "width": 390,
+      "status": 200,
+      "count": 4,
+      "title": [
+        "Bài viết về tố tụng hình sự Đài Loan"
+      ],
+      "links": [
+        "/vi/columns/taiwan-seized-phone-property-return",
+        "/vi/columns/taiwan-non-prosecution-reconsideration-deadline",
+        "/vi/columns/taiwan-criminal-settlement-withdraw-complaint",
+        "/vi/columns/taiwan-criminal-witness-summons-refuse-testimony"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-criminal-20261007/local-production/screenshots/vi-390.png"
+    },
+    {
+      "action": "Vietnamese article click",
+      "url": "http://127.0.0.1:3107/vi/columns/taiwan-seized-phone-property-return",
+      "title": [
+        "Điện thoại bị thu giữ tại Đài Loan: xin trả lại khi vụ án chưa kết thúc"
+      ]
+    }
+  ]
+}

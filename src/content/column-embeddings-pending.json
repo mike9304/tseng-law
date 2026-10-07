@@ -1473,6 +1473,54 @@
     {
       "locale": "zh-hant",
       "slug": "global-minimum-tax-pillar-two-taiwan-subsidiary"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-criminal-witness-summons-refuse-testimony"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-criminal-witness-summons-refuse-testimony"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-criminal-witness-summons-refuse-testimony"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-criminal-settlement-withdraw-complaint"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-criminal-settlement-withdraw-complaint"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-criminal-settlement-withdraw-complaint"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-non-prosecution-reconsideration-deadline"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-non-prosecution-reconsideration-deadline"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-non-prosecution-reconsideration-deadline"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-seized-phone-property-return"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-seized-phone-property-return"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-seized-phone-property-return"
     }
   ]
 }

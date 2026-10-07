@@ -1,0 +1,63 @@
+src/content/columns/401-taiwan-criminal-witness-summons-refuse-testimony.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns/401-taiwan-criminal-witness-summons-refuse-testimony.md [ko] sentences=28 mean=35.6 cv=0.472 short=0.25 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.7 contrast=0 caveat=0 q=2
+  WARN 89% of sentences end in '니다.' — vary endings within the register
+
+src/content/columns-en/401-taiwan-criminal-witness-summons-refuse-testimony.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-en/401-taiwan-criminal-witness-summons-refuse-testimony.md [en] sentences=39 mean=14.9 cv=0.526 short=0.256 run3=0.027 opener_rep=0.091 cite_end=0.0 cite_para=0.636 contrast=1 caveat=0 q=1
+  OK — no variety limit violated
+
+src/content/columns-ja/401-taiwan-criminal-witness-summons-refuse-testimony.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-ja/401-taiwan-criminal-witness-summons-refuse-testimony.md [ja] sentences=30 mean=37.7 cv=0.459 short=0.167 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.636 contrast=1 caveat=1 q=0
+  WARN 93% of sentences end in 'desu-masu' — vary endings within the register
+
+src/content/columns-zh/401-taiwan-criminal-witness-summons-refuse-testimony.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-zh/401-taiwan-criminal-witness-summons-refuse-testimony.md [zh-hant] sentences=31 mean=30.6 cv=0.519 short=0.194 run3=0.069 opener_rep=0.0 cite_end=0.0 cite_para=0.636 contrast=0 caveat=1 q=1
+  OK — no variety limit violated
+
+src/content/columns/402-taiwan-criminal-settlement-withdraw-complaint.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns/402-taiwan-criminal-settlement-withdraw-complaint.md [ko] sentences=23 mean=36.7 cv=0.523 short=0.174 run3=0.0 opener_rep=0.0 cite_end=0.043 cite_para=0.75 contrast=0 caveat=0 q=3
+  WARN 78% of sentences end in '니다.' — vary endings within the register
+
+src/content/columns-en/402-taiwan-criminal-settlement-withdraw-complaint.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-en/402-taiwan-criminal-settlement-withdraw-complaint.md [en] sentences=31 mean=15.3 cv=0.517 short=0.258 run3=0.0 opener_rep=0.1 cite_end=0.0 cite_para=0.6 contrast=0 caveat=0 q=3
+  OK — no variety limit violated
+
+src/content/columns-ja/402-taiwan-criminal-settlement-withdraw-complaint.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-ja/402-taiwan-criminal-settlement-withdraw-complaint.md [ja] sentences=26 mean=36.1 cv=0.453 short=0.192 run3=0.0 opener_rep=0.2 cite_end=0.0 cite_para=0.6 contrast=0 caveat=0 q=0
+  WARN 96% of sentences end in 'desu-masu' — vary endings within the register
+
+src/content/columns-zh/402-taiwan-criminal-settlement-withdraw-complaint.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-zh/402-taiwan-criminal-settlement-withdraw-complaint.md [zh-hant] sentences=25 mean=30.3 cv=0.472 short=0.12 run3=0.087 opener_rep=0.0 cite_end=0.0 cite_para=0.6 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+src/content/columns/403-taiwan-non-prosecution-reconsideration-deadline.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns/403-taiwan-non-prosecution-reconsideration-deadline.md [ko] sentences=30 mean=34.8 cv=0.462 short=0.133 run3=0.036 opener_rep=0.0 cite_end=0.0 cite_para=0.7 contrast=0 caveat=0 q=1
+  WARN 87% of sentences end in '니다.' — vary endings within the register
+
+src/content/columns-en/403-taiwan-non-prosecution-reconsideration-deadline.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-en/403-taiwan-non-prosecution-reconsideration-deadline.md [en] sentences=34 mean=15 cv=0.569 short=0.294 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.7 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+src/content/columns-ja/403-taiwan-non-prosecution-reconsideration-deadline.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-ja/403-taiwan-non-prosecution-reconsideration-deadline.md [ja] sentences=33 mean=33 cv=0.478 short=0.273 run3=0.065 opener_rep=0.0 cite_end=0.0 cite_para=0.7 contrast=0 caveat=1 q=0
+  WARN 97% of sentences end in 'desu-masu' — vary endings within the register
+
+src/content/columns-zh/403-taiwan-non-prosecution-reconsideration-deadline.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-zh/403-taiwan-non-prosecution-reconsideration-deadline.md [zh-hant] sentences=28 mean=27.7 cv=0.52 short=0.214 run3=0.038 opener_rep=0.0 cite_end=0.0 cite_para=0.7 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+src/content/columns/404-taiwan-seized-phone-property-return.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns/404-taiwan-seized-phone-property-return.md [ko] sentences=28 mean=34.0 cv=0.479 short=0.214 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2
+  WARN 82% of sentences end in '니다.' — vary endings within the register
+
+src/content/columns-en/404-taiwan-seized-phone-property-return.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-en/404-taiwan-seized-phone-property-return.md [en] sentences=28 mean=14.6 cv=0.516 short=0.25 run3=0.038 opener_rep=0.0 cite_end=0.0 cite_para=0.778 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+src/content/columns-ja/404-taiwan-seized-phone-property-return.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-ja/404-taiwan-seized-phone-property-return.md [ja] sentences=27 mean=35.9 cv=0.456 short=0.222 run3=0.08 opener_rep=0.222 cite_end=0.0 cite_para=0.667 contrast=1 caveat=1 q=0
+  WARN 93% of sentences end in 'desu-masu' — vary endings within the register
+
+src/content/columns-zh/404-taiwan-seized-phone-property-return.md
+/Users/son7/Projects/tseng-law-criminal-20261007/src/content/columns-zh/404-taiwan-seized-phone-property-return.md [zh-hant] sentences=26 mean=27.5 cv=0.508 short=0.192 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2
+  OK — no variety limit violated

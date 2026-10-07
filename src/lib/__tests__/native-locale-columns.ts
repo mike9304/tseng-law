@@ -514,7 +514,39 @@ export const COUNTRY_COLUMN_FILES_20261007 = {
     '271-taiwan-traffic-accident-compensation-items-japanese.md', // ja-plan-20261006
     '272-taiwan-warning-account-frozen-japanese.md', // ja-plan-20261006
     '273-taiwan-national-security-act-core-technology-japanese-employers.md', // ja-plan-20261006
+
+    '401-taiwan-criminal-witness-summons-refuse-testimony.md', // criminal-20261007
+    '402-taiwan-criminal-settlement-withdraw-complaint.md', // criminal-20261007
+    '403-taiwan-non-prosecution-reconsideration-deadline.md', // criminal-20261007
+    '404-taiwan-seized-phone-property-return.md', // criminal-20261007
   ],
+  ko: [
+    '401-taiwan-criminal-witness-summons-refuse-testimony.md', // criminal-20261007
+    '402-taiwan-criminal-settlement-withdraw-complaint.md', // criminal-20261007
+    '403-taiwan-non-prosecution-reconsideration-deadline.md', // criminal-20261007
+    '404-taiwan-seized-phone-property-return.md', // criminal-20261007
+  ],
+  en: [
+    '401-taiwan-criminal-witness-summons-refuse-testimony.md', // criminal-20261007
+    '402-taiwan-criminal-settlement-withdraw-complaint.md', // criminal-20261007
+    '403-taiwan-non-prosecution-reconsideration-deadline.md', // criminal-20261007
+    '404-taiwan-seized-phone-property-return.md', // criminal-20261007
+  ],
+
+  'zh-hant': [
+    '401-taiwan-criminal-witness-summons-refuse-testimony.md', // criminal-20261007
+    '402-taiwan-criminal-settlement-withdraw-complaint.md', // criminal-20261007
+    '403-taiwan-non-prosecution-reconsideration-deadline.md', // criminal-20261007
+    '404-taiwan-seized-phone-property-return.md', // criminal-20261007
+  ],
+
+  vi: [
+    '401-taiwan-criminal-witness-summons-refuse-testimony.md', // criminal-20261007
+    '402-taiwan-criminal-settlement-withdraw-complaint.md', // criminal-20261007
+    '403-taiwan-non-prosecution-reconsideration-deadline.md', // criminal-20261007
+    '404-taiwan-seized-phone-property-return.md', // criminal-20261007
+  ],
+
 } as const;
 
 /** Registered locale-specific batches through 2026-10-07, in filename order. */
@@ -593,9 +625,9 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-07). */
 export function archiveLeadPublicationDate(slug: string): string {
-  const day20261007 = [...Object.values(COUNTRY_COLUMN_FILES_20261007), ...Object.values(taxAccountingFilesPublishedOn('2026-10-07'))].flat().map(slugOf);
+  const day20261007 = [...Object.values(COUNTRY_COLUMN_FILES_20261007), ...Object.values(taxAccountingFilesPublishedOn('2026-10-07')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261007.includes(slug)) return '2026-10-07';
-  const day20261006 = [...Object.values(COUNTRY_COLUMN_FILES_20261006), ...Object.values(taxAccountingFilesPublishedOn('2026-10-06'))].flat().map(slugOf);
+  const day20261006 = [...Object.values(COUNTRY_COLUMN_FILES_20261006), ...Object.values(taxAccountingFilesPublishedOn('2026-10-06')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261006.includes(slug)) return '2026-10-06';
   const day20261005 = Object.values(COUNTRY_COLUMN_FILES_20261005).flat().map(slugOf);
   if (day20261005.includes(slug)) return '2026-10-05';

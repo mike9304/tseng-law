@@ -1,3 +1,4 @@
+import { CRIMINAL_SERVICE_POINTS, CRIMINAL_SERVICE_COLUMN_SLUGS } from './criminal-service-copy';
 import type { Locale } from '@/lib/locales';
 
 export interface ServiceArea {
@@ -211,33 +212,11 @@ export const serviceAreas: ServiceArea[] = [
     },
     intro: {
       ko: '법무법인 호정은 대만 형사 절차에서 한국인 의뢰인의 권리를 보호합니다. 수사 단계 변호인 접견, 피해자 대리, 규제 위반에 따른 형사 리스크 사전 점검 등을 수행합니다.',
-      'zh-hant': '昊鼎在台灣刑事程序中維護韓國當事人權益，提供偵查階段律師接見、被害人代理，以及違反法規的刑事風險評估。',
+      'zh-hant': '昊鼎在台灣刑事程序中協助本地與外國當事人，提供偵查階段律師接見、被害人代理，以及違反法規的刑事風險評估。',
       en: 'We protect client rights throughout Taiwan criminal procedure, including investigation response, attorney interviews, victim representation, and pre-risk checks for potential regulatory offenses.'
     },
-    keyPoints: {
-      ko: [
-        '수사 단계 변호인 접견 및 진술 자문, 피해자 대리(고소·고발 절차), 외국인 피의자 한국어 통역 소송 지원.',
-        '회사 자금 무단 인출: 회사법 제9조 — 최대 5년 징역 또는 50만~250만 TWD 벌금.',
-        '뺑소니(교통사고 후 도주): 형법 제185조의4 — 1년 이상 7년 이하 징역.',
-        '취업허가 없이 대만에서 근무하다 적발되면 3년간 입국 금지.',
-        '형사 고소 기한은 6개월이며, 이 기한을 놓치면 민사만 가능하므로 사고 직후 빠른 상담이 중요합니다.',
-      ],
-      'zh-hant': [
-        '偵查階段律師接見及陳述諮詢、被害人代理（告訴程序），以及外籍被告的韓文口譯與訴訟協助。',
-        '違法抽回資本（公司法第9條）：最重5年有期徒刑，或新台幣50萬元至250萬元罰金。',
-        '肇事逃逸（刑法第185條之4）：1年以上7年以下有期徒刑。',
-        '無工作許可在台工作被查獲者，3年內禁止入境。',
-        '刑事告訴期限為6個月，逾期僅能提起民事訴訟，因此事故發生後應儘速諮詢律師。',
-      ],
-      en: [
-        'Support includes investigation-stage attorney consultation, victim complaint procedure support, and multilingual communication assistance for foreign nationals.',
-        'Unlawful withdrawal of company capital can trigger severe penalties under Taiwan company law.',
-        'Hit-and-run and serious traffic offenses carry substantial criminal liability.',
-        'Working without proper work authorization may cause immigration and criminal exposure.',
-        'Criminal complaint deadlines are strict, so immediate legal review after an incident is essential.'
-      ]
-    },
-    columnSlugs: [],
+    keyPoints: { ko: CRIMINAL_SERVICE_POINTS.ko, 'zh-hant': CRIMINAL_SERVICE_POINTS['zh-hant'], en: CRIMINAL_SERVICE_POINTS.en },
+    columnSlugs: CRIMINAL_SERVICE_COLUMN_SLUGS,
   },
   {
     slug: 'ip',

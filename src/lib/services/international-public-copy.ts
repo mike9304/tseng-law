@@ -1,8 +1,10 @@
 import { getServiceArea } from '@/data/service-details';
+import { CRIMINAL_SERVICE_POINTS, CRIMINAL_SERVICE_COLUMN_SLUGS, PREVIOUS_CRIMINAL_SERVICE_POINTS } from '@/data/criminal-service-copy';
 import type { SiteLocale } from '@/lib/locales';
 
 export type LocalizedServiceCopy = {
   slug: string;
+  sourceSlug?: string;
   title: string;
   subtitle: string;
   intro: string;
@@ -61,6 +63,17 @@ export function projectInternationalPublicCopy(
   locale: SiteLocale,
   record: LocalizedServiceCopy,
 ): LocalizedServiceCopy {
+  if ((record.sourceSlug ?? record.slug) === 'criminal' && locale !== 'ja') {
+    const previous = PREVIOUS_CRIMINAL_SERVICE_POINTS[locale];
+    return {
+      ...record,
+      keyPoints: record.keyPoints.map((point) => {
+        const index = previous.indexOf(point);
+        return index < 0 ? point : CRIMINAL_SERVICE_POINTS[locale][index];
+      }),
+      columnSlugs: [...new Set([...record.columnSlugs, ...CRIMINAL_SERVICE_COLUMN_SLUGS])],
+    };
+  }
   if (locale !== 'en') {
     return record;
   }

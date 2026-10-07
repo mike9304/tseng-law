@@ -18,8 +18,7 @@ describe('reviewed diminished value and vacated pursuit judgment columns', () =>
     expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ subject: a.subject, q: matches[0].title })).map(p => p.slug)).toEqual([a.slug]);
     expect(filterTrafficBoardItems(items, parseTrafficBoardQuery({ video: '1' })).some(p => p.slug === a.slug)).toBe(Boolean(a.film));
     expect(pending.columns.filter(p => p.slug === a.slug)).toEqual([{ locale: 'zh-hant', slug: a.slug }]);
-    if (a.film) expect(getColumnGeneratedVideo('zh-hant', a.slug)?.id).toBe(a.film);
-    else expect(getColumnGeneratedVideo('zh-hant', a.slug)).toBeNull();
+    expect(getColumnGeneratedVideo('zh-hant', a.slug)?.id).toBe(a.film);
     for (const locale of ['ko', 'en', 'ja'] as const) expect(getAllColumnPosts(locale).some(p => p.slug === a.slug)).toBe(false);
   });
 

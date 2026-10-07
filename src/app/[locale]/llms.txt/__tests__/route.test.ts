@@ -12,7 +12,6 @@ import { GUIDANCE_LOCALES_4, PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
 import { getOrganizationName } from '@/lib/seo';
 import { GET, generateStaticParams } from '../route';
 import { UNROUTABLE_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
-import { allNativeFiles } from '@/lib/__tests__/native-locale-columns';
 
 const canonicalOrigin = 'https://tseng-law.com';
 const contentLanguage: Record<SiteLocale, string> = {
@@ -265,13 +264,13 @@ describe('guidance llms.txt lists the translated columns', () => {
    * listed only the ten guidance pages — sixty-eight real pages missing from
    * the surface AI clients read, while ko/zh-hant/en/ja listed all seventeen.
    */
-  it.each(['vi', 'id', 'th', 'fil'] as const)('%s carries all twenty-one column URLs', (locale) => {
+  it.each(['vi', 'id', 'th', 'fil'] as const)('%s carries every file-backed column URL', (locale) => {
     const body = buildGuidanceLlmsTxt(locale);
     const columnUrls = [...body.matchAll(/https:\/\/tseng-law\.com\/[a-z-]+\/columns\/[^)\s]+/g)].map(
       (m) => m[0],
     );
     // Guidance locales also include every independently authored native column.
-    const expected = 23 + allNativeFiles(locale).length;
+    const expected = getAllColumnPosts(locale).length;
     expect(columnUrls.length).toBe(expected);
     expect(new Set(columnUrls).size).toBe(expected);
     // Every column URL must stay inside its own locale, not fall back to /en or /ko.

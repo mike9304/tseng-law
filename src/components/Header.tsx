@@ -284,6 +284,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
       { key: 'insights', label: 'コラム', href: '/ja/columns' },
       { key: 'traffic', label: '交通事故', href: '/ja/traffic-accidents' },
       { key: 'tax', label: '税務・会計', href: '/ja/tax-accounting' },
+      { key: 'criminal', label: '刑事訴訟', href: '/ja/criminal-litigation' },
       { key: 'videos', label: 'メディア', href: '/ja/videos' },
       { key: 'directions', label: 'アクセス', href: '/ja/contact#offices' },
     ];
@@ -296,6 +297,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
       { key: 'insights', label: '호정칼럼', href: '/ko/columns' },
       { key: 'traffic', label: '교통사고', href: '/ko/traffic-accidents' },
       { key: 'tax', label: '세무·회계', href: '/ko/tax-accounting' },
+      { key: 'criminal', label: '형사소송', href: '/ko/criminal-litigation' },
       { key: 'videos', label: '미디어센터', href: '/ko/videos' },
       { key: 'directions', label: '오시는길', href: '/ko/contact#offices' }
     ];
@@ -309,6 +311,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
       { key: 'insights', label: '昊鼎專欄', href: '/zh-hant/columns' },
       { key: 'traffic', label: '交通事故', href: '/zh-hant/traffic-accidents' },
       { key: 'tax', label: '稅務會計', href: '/zh-hant/tax-accounting' },
+      { key: 'criminal', label: '刑事訴訟', href: '/zh-hant/criminal-litigation' },
       { key: 'videos', label: '影音', href: '/zh-hant/videos' },
       { key: 'directions', label: '交通位置', href: '/zh-hant/contact#offices' }
     ];
@@ -321,6 +324,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
     { key: 'insights', label: 'Insights', href: '/en/columns' },
       { key: 'traffic', label: 'Traffic accidents', href: '/en/traffic-accidents' },
     { key: 'tax', label: 'Tax & accounting', href: '/en/tax-accounting' },
+    { key: 'criminal', label: 'Criminal litigation', href: '/en/criminal-litigation' },
     { key: 'videos', label: 'Videos', href: '/en/videos' },
     { key: 'directions', label: 'Locations', href: '/en/contact#offices' }
   ];

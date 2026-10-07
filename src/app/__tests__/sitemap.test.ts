@@ -208,9 +208,10 @@ describe('sitemap column lastModified', () => {
       // 2026-10-01 zh-hant-only domestic columns 060-062 add 3 URLs (zh-hant 3).
       // 2026-10-02 expertise columns 063-069 add 23 URLs (ko 7, en 7, zh-hant 7, ja 2).
       // The 2026-10-02–07 audience/traffic batches add one URL per core-locale file; VI is counted above.
+      // Criminal board adds 5 language URLs.
       // Tax & accounting board (4 core-language URLs) + its column files, one URL per locale file.
       beforeFiltering:
-        524 + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        529 + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
@@ -229,7 +230,7 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        515 + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        520 + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length

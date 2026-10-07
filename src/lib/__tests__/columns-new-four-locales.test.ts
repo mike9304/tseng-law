@@ -168,11 +168,12 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
     // covers every Korean slug except those eight.
     const koPosts = getAllColumnPosts('ko');
     // The 2026-09-30 expertise columns are locale-specific and none of them was translated into vi.
+    const viSlugs = new Set(viPosts.map((post) => post.slug));
     const koOnlyGapSlugs = koPosts.filter(
-      (post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug) || isExpertiseColumnSlug20260930(post.slug),
+      (post) => !viSlugs.has(post.slug) && (GAP_COLUMN_SLUGS_20260929.includes(post.slug) || isExpertiseColumnSlug20260930(post.slug)),
     );
     expect(koOnlyGapSlugs).toHaveLength(
-      GAP_COLUMN_SLUGS_20260929.length + expertiseSlugsFor('ko').length,
+      GAP_COLUMN_SLUGS_20260929.length + expertiseSlugsFor('ko').filter((slug) => !viSlugs.has(slug)).length,
     );
     // Vietnamese-only native columns have no Korean counterpart by design.
     const translatedViPosts = viPosts.filter((post) => !isNativeOrExpertiseNativeSlug('vi', post.slug));

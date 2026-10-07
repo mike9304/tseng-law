@@ -525,7 +525,7 @@ export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMidd
   // File routes own `/columns` and `/columns/[slug]` so translations can
   // render (or 404) without the catch-all folding unknown locales into KO.
   const firstSegment = slugPath.split('/')[0] ?? '';
-  if (firstSegment === 'columns') {
+  if (firstSegment === 'columns' || (locale === 'vi' && slugPath === 'criminal-litigation')) {
     return null;
   }
 
@@ -682,6 +682,9 @@ export function resolvePublicLanguageSwitchTarget(
   }
 
   if (isGuidanceLocale4(targetLocale)) {
+    if (targetLocale === 'vi' && slugPath === 'criminal-litigation') {
+      return { status: 'available', href: '/vi/criminal-litigation', fallback: 'exact' };
+    }
     const pageKey = guidancePageKeyFromSlugPath(slugPath);
     if (pageKey) {
       return {

@@ -153,22 +153,23 @@ describe('generated column embeddings content synchronization', () => {
 
   it('covers every current column with a genuine embedding or an explicit pending entry', () => {
     const pendingKeys = pending.columns.map(({ locale, slug }) => `${locale}:${slug}`);
+    const postsByLocale = new Map(SUPPORTED_LOCALES.map(locale => [locale, getAllColumnPosts(locale)]));
     expect(new Set(pendingKeys).size).toBe(pendingKeys.length);
     expect(pending.reason).toContain('not authorized');
     for (const { locale, slug } of pending.columns) {
       expect(SUPPORTED_LOCALES).toContain(locale);
-      expect(getAllColumnPosts(locale as Locale).some(post => post.slug === slug)).toBe(true);
+      expect(postsByLocale.get(locale as Locale)?.some(post => post.slug === slug)).toBe(true);
       expect(embeddingsFile.embeddings.some(record => record.locale === locale && record.slug === slug)).toBe(false);
     }
     for (const locale of SUPPORTED_LOCALES) {
-      const expected = getAllColumnPosts(locale)
+      const expected = postsByLocale.get(locale)!
         .map(({ slug, title }) => [slug, title] as const)
         .sort(([left], [right]) => left.localeCompare(right));
       const actual = embeddingsFile.embeddings
         .filter((record) => record.locale === locale)
         .map(({ slug, title }) => [slug, title] as const)
         .sort(([left], [right]) => left.localeCompare(right));
-      const textOnly = getAllColumnPosts(locale)
+      const textOnly = postsByLocale.get(locale)!
         .filter(post => pendingKeys.includes(`${locale}:${post.slug}`))
         .map(({ slug, title }) => [slug, title] as const);
       expect([...actual, ...textOnly].sort(([left], [right]) => left.localeCompare(right))).toEqual(expected);

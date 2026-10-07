@@ -4,6 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
+import CriminalBoardLink from '@/components/CriminalBoardLink';
 import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
@@ -213,6 +214,7 @@ export default async function ColumnsPage(
           description={copy.description}
         />
         <IssueBoardTabs locale={locale} active="expert" />
+        <CriminalBoardLink locale={locale} />
         <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} />
         <div className="container">
           <OriginalLanguageColumnsSection locale={locale} remainingPosts={remainingPosts} />
@@ -260,6 +262,7 @@ export default async function ColumnsPage(
         {/* zh-hant and ko: the board switch renders inside the published columns body, right under its header. */}
         {isAppleDesignLocale(locale) ? null : <IssueBoardTabs locale={locale} active="expert" />}
         <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />
+        <CriminalBoardLink locale={locale} />
         <EnAcquisitionGuideLinks locale={locale} />
       </>
     );
@@ -344,6 +347,7 @@ export default async function ColumnsPage(
           />
         )
         : <IssueBoardTabs locale={locale} active="expert" />}
+      <CriminalBoardLink locale={locale} />
       {showRepeater ? (
         <ColumnsGrid
           locale={locale}

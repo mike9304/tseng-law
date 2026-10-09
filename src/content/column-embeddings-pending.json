@@ -1,6 +1,6 @@
 {
   "reason": "API embedding calls are not authorized. These published columns use the existing public text-search index; genuine vectors may be backfilled only with future authorization.",
-  "recordedAt": "2026-10-09",
+  "recordedAt": "2026-10-10",
   "columns": [
     {
       "locale": "zh-hant",
@@ -1745,6 +1745,18 @@
     {
       "locale": "ko",
       "slug": "taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean"
+    },
+    {
+      "locale": "en",
+      "slug": "singapore-arbitration-clause-taiwan-supply-contract"
+    },
+    {
+      "locale": "en",
+      "slug": "singapore-company-taiwan-subsidiary-capital-remittance"
+    },
+    {
+      "locale": "en",
+      "slug": "singapore-goods-taiwan-astep-origin"
     }
   ]
 }

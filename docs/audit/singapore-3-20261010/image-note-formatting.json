@@ -1,0 +1,38 @@
+{
+  "formattedAt": "2026-10-09T22:58:57.941Z",
+  "reason": "Precommit staged whitespace check found an additional blank line at EOF in three newly added image-provenance audit notes. Remove only trailing empty lines from repository copies. Original generated-image notes and all prompt content remain unchanged.",
+  "transform": "source.replace(/\\n+$/, \"\\n\"): retain exactly one terminal newline, remove only surplus terminal LF bytes.",
+  "historicalEvidence": "The sealed editorial and QA reports describe byte-exact copies before this formatting-only change and are preserved unchanged. They remain historical evidence. This record identifies the current normalized copies and proves the sole transformation.",
+  "entries": [
+    {
+      "source": "work/sg-release/images/arbitration/arbitration-image.md",
+      "target": "docs/audit/singapore-3-20261010/arbitration-image.md",
+      "originalSourceSha256": "d79a986e3633ce4eebaa77a014ffd08c85bf8b032f1649dad6bfd6ff13ebecd4",
+      "priorExactCopySha256": "d79a986e3633ce4eebaa77a014ffd08c85bf8b032f1649dad6bfd6ff13ebecd4",
+      "normalizedTargetSha256": "5df5fbcb13880c23af0c1a6aea71a15134253ca4ffbe8e4d86923be747ba05dc",
+      "removedTerminalLfBytes": 1,
+      "allNonterminalBytesUnchanged": true,
+      "originalSourcePreserved": true
+    },
+    {
+      "source": "outputs/singapore-publication-20261010/images/investment-image.md",
+      "target": "docs/audit/singapore-3-20261010/investment-image.md",
+      "originalSourceSha256": "8b865cde3de084045310584cc1f8789ef71b9d580bd7ba7700e5c5969263fccc",
+      "priorExactCopySha256": "8b865cde3de084045310584cc1f8789ef71b9d580bd7ba7700e5c5969263fccc",
+      "normalizedTargetSha256": "8e8c18d6bb424941a4e7c742d30eec15693dff6ad784dc543a716d72e26f37df",
+      "removedTerminalLfBytes": 1,
+      "allNonterminalBytesUnchanged": true,
+      "originalSourcePreserved": true
+    },
+    {
+      "source": "outputs/singapore-publication-20261010/images/astep-image.md",
+      "target": "docs/audit/singapore-3-20261010/astep-image.md",
+      "originalSourceSha256": "c01435313e8c0c427fdeb9ff94dad322e78e6a8fddfab244a24d00d89b346d31",
+      "priorExactCopySha256": "c01435313e8c0c427fdeb9ff94dad322e78e6a8fddfab244a24d00d89b346d31",
+      "normalizedTargetSha256": "2a5b698f285526fc3bec6d21e47c78688139e7f0b51e10000271ed8eb5178fb3",
+      "removedTerminalLfBytes": 1,
+      "allNonterminalBytesUnchanged": true,
+      "originalSourcePreserved": true
+    }
+  ]
+}

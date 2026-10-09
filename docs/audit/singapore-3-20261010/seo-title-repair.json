@@ -1,0 +1,37 @@
+{
+  "repairedAt": "2026-10-09T22:46:15.495Z",
+  "reason": "Full QA identified metadata titles exceeding the 60-character browser-title limit after adding the site brand. Only seoTitle is shortened; the display title and all body/image/source bytes stay unchanged.",
+  "priorReview": {
+    "path": "integrated-final-review.md",
+    "sha256": "e0e93d06ac70a7a4b0f15119aaf9aa832d1ff756f73c526c7251aca56e5bae5b",
+    "status": "Preserved historical seal; targeted review of new metadata is pending."
+  },
+  "entries": [
+    {
+      "number": 499,
+      "target": "src/content/columns-en/499-singapore-arbitration-clause-taiwan-supply-contract.md",
+      "beforeSha256": "5198e9d36a01deae3f93702ed12d8b532a680e88efb1c17e578c4b65816594fc",
+      "afterSha256": "7ba5cadc66c2cbab4a58741d9d9bf6ba25ebabdbdbd5388dff7ef708d4cd2f03",
+      "seoTitleBefore": "Singapore Arbitration Clauses for Taiwan Supply Contracts",
+      "seoTitleAfter": "Singapore Arbitration for Taiwan Contracts",
+      "lengthBefore": 57,
+      "lengthAfter": 42,
+      "brandedLengthAfter": 57,
+      "allOtherBytesUnchanged": true,
+      "bodySha256Unchanged": "8a675e79e25ff73c2d560f36e1e8536993a736ae5325fce5a39c67f865469453"
+    },
+    {
+      "number": 501,
+      "target": "src/content/columns-en/501-singapore-goods-taiwan-astep-origin.md",
+      "beforeSha256": "72122495bbb7cc26804b0d263c1b60fc38c24ecbf97f3edec83914295c4b7846",
+      "afterSha256": "c0b3019db90b003bf8f176a893998d9c34a730b651cf1e0e1537652c3ab0cff4",
+      "seoTitleBefore": "ASTEP Origin Rules for Singapore Goods Sold to Taiwan",
+      "seoTitleAfter": "ASTEP Origin: Singapore Goods Sold to Taiwan",
+      "lengthBefore": 53,
+      "lengthAfter": 44,
+      "brandedLengthAfter": 59,
+      "allOtherBytesUnchanged": true,
+      "bodySha256Unchanged": "1eaac57bff3b8c5000c6082832529debe044f7f1f7ebf9c4363489efff96b63c"
+    }
+  ]
+}

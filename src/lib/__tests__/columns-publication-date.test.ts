@@ -359,6 +359,10 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '496': '2026-10-09',
   '497': '2026-10-09',
   '498': '2026-10-09',
+  // Singapore-facing original columns
+  '499': '2026-10-10',
+  '500': '2026-10-10',
+  '501': '2026-10-10',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

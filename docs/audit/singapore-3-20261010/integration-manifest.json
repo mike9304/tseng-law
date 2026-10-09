@@ -1,0 +1,335 @@
+{
+  "preparedAt": "2026-10-09T22:29:59.564Z",
+  "base": "65a560ec9bcbcac792021b9a590c66d4b246bb71",
+  "runtime": "v24.19.0",
+  "dependencies": {
+    "package.json": {
+      "isolated": "fc4016059c154a76ff1d578008b209182c6a2a67705815556eb07fc10e08eb76",
+      "canonical": "fc4016059c154a76ff1d578008b209182c6a2a67705815556eb07fc10e08eb76"
+    },
+    "package-lock.json": {
+      "isolated": "c695c97423db150426faea4b4fac7e940a8ec35cc9ada52f79ff91d0c507efdf",
+      "canonical": "c695c97423db150426faea4b4fac7e940a8ec35cc9ada52f79ff91d0c507efdf"
+    }
+  },
+  "articles": [
+    {
+      "number": 499,
+      "source": "outputs/singapore-columns-20261009/01-singapore-dispute-clause-taiwan-assets.md",
+      "sourceSha256": "b84135c5fb131e7f4133df601a260d684acc539bdaab4a0623a19df8a6d8389f",
+      "target": "src/content/columns-en/499-singapore-arbitration-clause-taiwan-supply-contract.md",
+      "targetSha256": "7ba5cadc66c2cbab4a58741d9d9bf6ba25ebabdbdbd5388dff7ef708d4cd2f03",
+      "slug": "singapore-arbitration-clause-taiwan-supply-contract",
+      "url": "https://tseng-law.com/en/columns/singapore-arbitration-clause-taiwan-supply-contract",
+      "sourceBodySha256": "7ba547a1ddda67399f30c82d32a2c39170a0e3203eaceb36e8163d0e0ea56d6e",
+      "integratedBodySha256": "8a675e79e25ff73c2d560f36e1e8536993a736ae5325fce5a39c67f865469453",
+      "transform": "Remove single leading Markdown H1 and following blank line; preserve one leading newline and all remaining body bytes.",
+      "sourcePreserved": true,
+      "bodyVerifiedExactAfterTransform": true,
+      "sourceLinksPreserved": true,
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=47",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+        "https://siac.org.sg/siac-model-clause",
+        "https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL010105",
+        "https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards/status2",
+        "https://www.arbitration.org.tw/qa08.php",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=49",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010004&flno=4-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=402",
+        "https://tseng-law.com/en/columns/enforcing-us-arbitral-award-in-taiwan",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526",
+        "https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=FL010105",
+        "https://tseng-law.com/en/contact",
+        "https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=FL010105",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010004"
+      ],
+      "metadataBefore": {
+        "title": "A Singapore Arbitration Clause for a Taiwan Supply Contract",
+        "slug": "singapore-arbitration-clause-taiwan-supply-contract",
+        "locale": "en",
+        "targetMarket": "Singapore",
+        "author": "legal-ai-assistant",
+        "date": "2026-10-09",
+        "draft": true,
+        "summary": "For Singapore buyers of Taiwan goods: connect the arbitration clause to the contracting supplier, its assets and the Taiwan enforcement process before signing."
+      },
+      "metadataAfter": {
+        "title": "A Singapore Arbitration Clause for a Taiwan Supply Contract",
+        "seoTitle": "Singapore Arbitration for Taiwan Contracts",
+        "summary": "For Singapore buyers of Taiwan goods: connect the arbitration clause to the contracting supplier, its assets and the Taiwan enforcement process before signing.",
+        "published": "2026-10-10",
+        "lastmod": "2026-10-10",
+        "date_display": "October 10, 2026",
+        "read_time": "6 min read",
+        "categories": [
+          "Taiwan Legal Information"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "singapore",
+          "arbitration"
+        ],
+        "featured_image": "/images/blog/singapore-20261010/arbitration-1600x900.webp",
+        "featured_image_alt": "Contract folders, a pen and a packaged industrial component on a meeting table overlooking Singapore’s waterfront.",
+        "featured_image_caption": "AI-generated illustration of a fictional commercial meeting room in Singapore.",
+        "social_image": "/images/blog/singapore-20261010/arbitration-1600x900.webp",
+        "audience": [
+          "en"
+        ],
+        "targetMarket": "Singapore",
+        "author": "legal-ai-assistant"
+      },
+      "summaryLength": 159,
+      "wordCount": 1013,
+      "image": {
+        "original": "outputs/singapore-publication-20261010/images/arbitration-original.png",
+        "originalSha256": "4473389985e56385cc1225c2f38f6d391b4dbd2fa8a28edca42104b7d1a42a7d",
+        "originalWidth": 1672,
+        "originalHeight": 941,
+        "target": "public/images/blog/singapore-20261010/arbitration-1600x900.webp",
+        "targetSha256": "fb9b9900ed64bac8958cd395d44b1cf142ecdb73869e4dc0a6eaf7975f31f712",
+        "bytes": 125004,
+        "width": 1600,
+        "height": 900,
+        "sharp": "0.35.3",
+        "encoding": "rotate EXIF; resize1600x900 cover centre without enlargement; WebP quality84 effort6; metadata omitted"
+      }
+    },
+    {
+      "number": 500,
+      "source": "outputs/singapore-columns-20261009/02-singapore-holding-company-taiwan-investment.md",
+      "sourceSha256": "c2fece15d588141633e67fed0f0650106c02685657caea7580d216533dc74e96",
+      "target": "src/content/columns-en/500-singapore-company-taiwan-subsidiary-capital-remittance.md",
+      "targetSha256": "264409b0d0862ffdf478b060e6531b0e90f5b44841816b17a22e99063e1b3b64",
+      "slug": "singapore-company-taiwan-subsidiary-capital-remittance",
+      "url": "https://tseng-law.com/en/columns/singapore-company-taiwan-subsidiary-capital-remittance",
+      "sourceBodySha256": "571ee1128814d7e7e368af206664e3b5cb51bad88860b277ef04b0f057347bfc",
+      "integratedBodySha256": "15b203b1137878cf44baa3d65fe466af6aa704ec131c3d33307cb99af1c6edc3",
+      "transform": "Remove single leading Markdown H1 and following blank line; preserve one leading newline and all remaining body bytes.",
+      "sourcePreserved": true,
+      "bodyVerifiedExactAfterTransform": true,
+      "sourceLinksPreserved": true,
+      "sourceLinks": [
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42812",
+        "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/",
+        "https://law.moea.gov.tw/LawContent.aspx?id=FL011158",
+        "https://law.moea.gov.tw/LawContent.aspx?id=FL049681",
+        "https://law.moea.gov.tw/LawContent.aspx?id=GL001108",
+        "https://law.moea.gov.tw/LawContent.aspx?id=GL001107",
+        "https://law.moea.gov.tw/LawContent.aspx?id=FL011158",
+        "https://tseng-law.com/en/contact",
+        "https://law.moea.gov.tw/LawContent.aspx?id=FL011158",
+        "https://law.moea.gov.tw/LawContentSource.aspx?id=FL011158",
+        "https://law.moea.gov.tw/LawContent.aspx?id=FL049681",
+        "https://law.moea.gov.tw/LawContentSource.aspx?id=FL049681",
+        "https://law.moea.gov.tw/LawContent.aspx?id=GL001108",
+        "https://law.moea.gov.tw/LawContent.aspx?id=GL001107",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42812",
+        "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+      ],
+      "metadataBefore": {
+        "title": "Funding a New Taiwan Subsidiary: Singapore Company Records and Capital Remittance",
+        "slugProposal": "singapore-company-taiwan-subsidiary-capital-remittance",
+        "locale": "en",
+        "targetMarket": "Singapore",
+        "author": "legal-ai-assistant",
+        "date": "2026-10-09",
+        "draft": true,
+        "summary": "For Singapore holding companies establishing a Taiwan subsidiary: prepare the ownership evidence behind ACRA records and align capital remittance with the approved investment."
+      },
+      "metadataAfter": {
+        "title": "Funding a New Taiwan Subsidiary: Singapore Company Records and Capital Remittance",
+        "seoTitle": "Singapore Capital for a New Taiwan Subsidiary",
+        "summary": "For Singapore holding companies: prepare ownership records for a new Taiwan subsidiary and align capital remittance with the approved investment plan.",
+        "published": "2026-10-10",
+        "lastmod": "2026-10-10",
+        "date_display": "October 10, 2026",
+        "read_time": "6 min read",
+        "categories": [
+          "Taiwan Legal Information"
+        ],
+        "topic": "company",
+        "tags": [
+          "singapore",
+          "foreign-investment"
+        ],
+        "featured_image": "/images/blog/singapore-20261010/investment-1600x900.webp",
+        "featured_image_alt": "AI-generated illustration of document folders, a calculator and a pen on a desk overlooking Taipei, representing preparations to fund a Taiwan subsidiary.",
+        "featured_image_caption": "AI-generated illustrative scene of company records and funding preparations; no actual client, transaction or office is depicted.",
+        "social_image": "/images/blog/singapore-20261010/investment-1600x900.webp",
+        "audience": [
+          "en"
+        ],
+        "targetMarket": "Singapore",
+        "author": "legal-ai-assistant"
+      },
+      "summaryLength": 150,
+      "wordCount": 1073,
+      "image": {
+        "original": "outputs/singapore-publication-20261010/images/investment-original.png",
+        "originalSha256": "834f70db53abb16c1336f66a845da30ad4adde055aafab160cefa6f732d2080a",
+        "originalWidth": 1672,
+        "originalHeight": 941,
+        "target": "public/images/blog/singapore-20261010/investment-1600x900.webp",
+        "targetSha256": "6de65f0b068845440b280267600eefbb6451f8165c54bfa4a5dca8d409cc3249",
+        "bytes": 105978,
+        "width": 1600,
+        "height": 900,
+        "sharp": "0.35.3",
+        "encoding": "rotate EXIF; resize1600x900 cover centre without enlargement; WebP quality84 effort6; metadata omitted"
+      }
+    },
+    {
+      "number": 501,
+      "source": "outputs/singapore-columns-20261009/03-singapore-goods-taiwan-astep-origin.md",
+      "sourceSha256": "239fed3d697c926e84d4c88183e6befbea0b4b96885df535ac3034c591e3cfc3",
+      "target": "src/content/columns-en/501-singapore-goods-taiwan-astep-origin.md",
+      "targetSha256": "c0b3019db90b003bf8f176a893998d9c34a730b651cf1e0e1537652c3ab0cff4",
+      "slug": "singapore-goods-taiwan-astep-origin",
+      "url": "https://tseng-law.com/en/columns/singapore-goods-taiwan-astep-origin",
+      "sourceBodySha256": "76a7628d898dc3b14d47bfe904db96a4201c1023ab511b78d3310e22dd2707a8",
+      "integratedBodySha256": "1eaac57bff3b8c5000c6082832529debe044f7f1f7ebf9c4363489efff96b63c",
+      "transform": "Remove single leading Markdown H1 and following blank line; preserve one leading newline and all remaining body bytes.",
+      "sourcePreserved": true,
+      "bodyVerifiedExactAfterTransform": true,
+      "sourceLinksPreserved": true,
+      "sourceLinks": [
+        "https://www.customs.gov.sg/doing-business/rules-of-origin/origin-documentation/origin-documentation-overview/",
+        "https://www.enterprisesg.gov.sg/industries/wholesale-trade/astep",
+        "https://www.enterprisesg.gov.sg/-/media/esg/files/industries/wholesale-trade/ASTEP/astepchapter204rules20of20origin.pdf",
+        "https://www.customs.gov.sg/doing-business/rules-of-origin/origin-documentation/self-certification/",
+        "https://isomer-user-content.by.gov.sg/174/617bdb46-7560-482c-8c2e-46e07cb3f11e/2014-04-03-Circular062014.pdf",
+        "https://law-out.mof.gov.tw/LawContent.aspx?id=GL009764",
+        "https://www.customs.gov.sg/doing-business/rules-of-origin/origin-documentation/origin-documentation-overview/",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0350001",
+        "https://tseng-law.com/en/contact"
+      ],
+      "metadataBefore": {
+        "title": "Selling Singapore Goods to Taiwan: Before You Quote an ASTEP Price",
+        "slug": "singapore-goods-taiwan-astep-origin",
+        "locale": "en",
+        "targetMarket": "Singapore",
+        "author": "legal-ai-assistant",
+        "date": "2026-10-09",
+        "draft": true,
+        "summary": "Singapore exporters selling to Taiwan should verify ASTEP origin, arrange supporting records and agree who bears the cost if tariff preference is refused."
+      },
+      "metadataAfter": {
+        "title": "Selling Singapore Goods to Taiwan: Before You Quote an ASTEP Price",
+        "seoTitle": "ASTEP Origin: Singapore Goods Sold to Taiwan",
+        "summary": "Singapore exporters selling to Taiwan should verify ASTEP origin, arrange supporting records and agree who bears the cost if tariff preference is refused.",
+        "published": "2026-10-10",
+        "lastmod": "2026-10-10",
+        "date_display": "October 10, 2026",
+        "read_time": "5 min read",
+        "categories": [
+          "Taiwan Legal Information"
+        ],
+        "topic": "tax",
+        "tags": [
+          "singapore",
+          "astep"
+        ],
+        "featured_image": "/images/blog/singapore-20261010/astep-1600x900.webp",
+        "featured_image_alt": "Open carton of packed metal components beside a blank clipboard, with a container terminal in the background.",
+        "featured_image_caption": "AI-generated illustration of a fictional goods-inspection workspace; it does not depict an actual shipment or certify ASTEP origin.",
+        "social_image": "/images/blog/singapore-20261010/astep-1600x900.webp",
+        "audience": [
+          "en"
+        ],
+        "targetMarket": "Singapore",
+        "author": "legal-ai-assistant"
+      },
+      "summaryLength": 154,
+      "wordCount": 952,
+      "image": {
+        "original": "outputs/singapore-publication-20261010/images/astep-original.png",
+        "originalSha256": "bf6319a58db0df3ca34dfe681e51e05d0e6c251a56f8760997da15d19d4c8321",
+        "originalWidth": 1672,
+        "originalHeight": 941,
+        "target": "public/images/blog/singapore-20261010/astep-1600x900.webp",
+        "targetSha256": "a9ba840b9c846d8e219e9fd42ee840a6ecba8641f12495190ffec120a7999258",
+        "bytes": 127696,
+        "width": 1600,
+        "height": 900,
+        "sharp": "0.35.3",
+        "encoding": "rotate EXIF; resize1600x900 cover centre without enlargement; WebP quality84 effort6; metadata omitted"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "source": "outputs/singapore-columns-20261009/sources-and-reviews/english-review.md",
+      "target": "docs/audit/singapore-3-20261010/english-review.md",
+      "sha256": "76534e2f48b626e3bdd43d6359084945c05499108442b892156651ef054d8a17"
+    },
+    {
+      "source": "outputs/singapore-columns-20261009/sources-and-reviews/final-review.md",
+      "target": "docs/audit/singapore-3-20261010/final-review.md",
+      "sha256": "7799707fe09c0872b29280cc1877352b50fc2edb3d245414f6a29adc6e85f241"
+    },
+    {
+      "source": "outputs/singapore-columns-20261009/sources-and-reviews/research.md",
+      "target": "docs/audit/singapore-3-20261010/research.md",
+      "sha256": "673fe8d2d3631b17de81a1e7ee2da599e7679135f04fa04f4710f074062b46c0"
+    },
+    {
+      "source": "outputs/singapore-columns-20261009/sources-and-reviews/writer-disputes.md",
+      "target": "docs/audit/singapore-3-20261010/writer-disputes.md",
+      "sha256": "b5c7b83f1314b53e5c9860d85b170cd1283a03d3e7be71398a64464ad722fd5b"
+    },
+    {
+      "source": "outputs/singapore-columns-20261009/sources-and-reviews/writer-investment.md",
+      "target": "docs/audit/singapore-3-20261010/writer-investment.md",
+      "sha256": "d1b841dc46e7b6c55d39d1e74b4205b089ec80a470ff415de35065c556015b83"
+    },
+    {
+      "source": "outputs/singapore-columns-20261009/sources-and-reviews/writer-astep.md",
+      "target": "docs/audit/singapore-3-20261010/writer-astep.md",
+      "sha256": "82429cb48fe4cbeaed04f3247d7369ee355ea1c5ac8ce9d9d5e62604cdc002af"
+    },
+    {
+      "source": "outputs/singapore-columns-20261009/sources-and-reviews/repo-context.md",
+      "target": "docs/audit/singapore-3-20261010/repo-context.md",
+      "sha256": "60a545d3104a4de186c3d9185c075da5d74fe59408cd8cab96377b1e0d1db694"
+    },
+    {
+      "source": "work/sg-release/images/arbitration/arbitration-image.md",
+      "target": "docs/audit/singapore-3-20261010/arbitration-image.md",
+      "sha256": "d79a986e3633ce4eebaa77a014ffd08c85bf8b032f1649dad6bfd6ff13ebecd4",
+      "normalizedTargetSha256": "5df5fbcb13880c23af0c1a6aea71a15134253ca4ffbe8e4d86923be747ba05dc",
+      "copyTransform": "Trailing empty lines removed; one final newline retained. Original source and full prompt content unchanged."
+    },
+    {
+      "source": "outputs/singapore-publication-20261010/images/investment-image.md",
+      "target": "docs/audit/singapore-3-20261010/investment-image.md",
+      "sha256": "8b865cde3de084045310584cc1f8789ef71b9d580bd7ba7700e5c5969263fccc",
+      "normalizedTargetSha256": "8e8c18d6bb424941a4e7c742d30eec15693dff6ad784dc543a716d72e26f37df",
+      "copyTransform": "Trailing empty lines removed; one final newline retained. Original source and full prompt content unchanged."
+    },
+    {
+      "source": "outputs/singapore-publication-20261010/images/astep-image.md",
+      "target": "docs/audit/singapore-3-20261010/astep-image.md",
+      "sha256": "c01435313e8c0c427fdeb9ff94dad322e78e6a8fddfab244a24d00d89b346d31",
+      "normalizedTargetSha256": "2a5b698f285526fc3bec6d21e47c78688139e7f0b51e10000271ed8eb5178fb3",
+      "copyTransform": "Trailing empty lines removed; one final newline retained. Original source and full prompt content unchanged."
+    }
+  ],
+  "originalPreservation": true,
+  "coordination": "Current remote and22 inspected local worktrees highest498; no local499+ reservation found by release explorer. Studio SSH unavailable; unpublished remote reservations and legacy lock state unverified. No lock bypassed. Parent must recheck remote/local reservations before fast-forward-only push.",
+  "metadataRepair": {
+    "path": "docs/audit/singapore-3-20261010/seo-title-repair.json",
+    "sha256": "1d6b78d31023330f6f8f9563786f1818fafdf6d94324bfe44cc9dc8f91d22300",
+    "reason": "Full QA identified metadata titles exceeding the 60-character browser-title limit after adding the site brand. Only seoTitle is shortened; the display title and all body/image/source bytes stay unchanged."
+  },
+  "documentationFormatting": {
+    "path": "docs/audit/singapore-3-20261010/image-note-formatting.json",
+    "sha256": "fc5638be5e669d4ebe7eed56e97a4f3bfdda1c45fe31e6c0d810d28a28c48b3d",
+    "reason": "Precommit staged whitespace check found an additional blank line at EOF in three newly added image-provenance audit notes. Remove only trailing empty lines from repository copies. Original generated-image notes and all prompt content remain unchanged."
+  },
+  "evidenceCopyPolicy": "Seven editorial/research records remain byte-exact copies. Three image provenance notes preserve their exact original source hashes and full prompt content; repository copies remove only surplus terminal LF bytes, with normalized hashes and transform recorded per entry."
+}

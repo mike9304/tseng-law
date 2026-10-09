@@ -1,6 +1,6 @@
 {
   "reason": "API embedding calls are not authorized. These published columns use the existing public text-search index; genuine vectors may be backfilled only with future authorization.",
-  "recordedAt": "2026-10-08",
+  "recordedAt": "2026-10-09",
   "columns": [
     {
       "locale": "zh-hant",
@@ -1693,6 +1693,58 @@
     {
       "locale": "ko",
       "slug": "taiwan-stolen-phone-wallet-police-evidence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-basic-act-semiconductor-factory-governance"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-manufacturing-ai-data-trade-secrets"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-development-model-data-code-rights"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-server-gpu-export-order-contract-controls"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-factory-vision-ai-worker-personal-data"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-inspection-contract-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-model-inspection-equipment-investment-tax-credit"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-project-unpaid-balance-delivery-evidence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-semiconductor-ai-nstc-university-licensing"
+    },
+    {
+      "locale": "en",
+      "slug": "us-ai-chip-taiwan-packaging-capacity-prepayment-refund"
+    },
+    {
+      "locale": "en",
+      "slug": "us-buyer-taiwan-ai-chip-startup-investment-approval-closing"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-equipment-engineer-contract-work-permit-korean"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean"
     }
   ]
 }

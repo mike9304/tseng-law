@@ -1,0 +1,126 @@
+{
+  "reason": "Current timestamp2026-10-08T23:46:29Z is October9 in both KST andTaiwan; no backdating",
+  "bodyAndSourcesPreserved": true,
+  "changes": [
+    {
+      "number": 484,
+      "target": "src/content/columns-zh/484-taiwan-ai-basic-act-semiconductor-factory-governance.md",
+      "before": "f121a3e3d67f952b4846f6685ff07115392b19c3c939a9a973899ff2ef84e010",
+      "after": "7aa2bfed1cef35921500ebf031334f8708bf81a6d1364108d779c3b32b1ac435",
+      "bodyUnchanged": true,
+      "bodySha256": "acfb244196a61d093e3357bbaad2a73ab9cb57bcf02f69301b3ccf13f86d4af1"
+    },
+    {
+      "number": 485,
+      "target": "src/content/columns-zh/485-taiwan-manufacturing-ai-data-trade-secrets.md",
+      "before": "df6f8ab1174e1b09fa6bd5244a34f77e40b59abc8afcee1b6de6738bd79a61d9",
+      "after": "f0fb222731c7d6b8c8b2989a698a7a50e10966afba84be393ae3595b16ff469a",
+      "bodyUnchanged": true,
+      "bodySha256": "7597eb9990602899fd5ed94929b721d9ce9cc20220ff96cae3bbac7cdad7e08c"
+    },
+    {
+      "number": 486,
+      "target": "src/content/columns-zh/486-taiwan-ai-development-model-data-code-rights.md",
+      "before": "1f65b6d8af46440b70ef8c512f42fbdb777ef6e6ed22e799b4f025a947cb7038",
+      "after": "7cca19b41a3f81178fe56c5210db7dcb6615f447cb9b8a3f58b1e07889c66b84",
+      "bodyUnchanged": true,
+      "bodySha256": "3c1d7007b63f0437d7eb1528a36805cdcb0a36b4f70bfdea782edeef43578a93"
+    },
+    {
+      "number": 487,
+      "target": "src/content/columns-zh/487-taiwan-ai-server-gpu-export-order-contract-controls.md",
+      "before": "85cb3de28b8a43685426fc6f99238e38225f4bf6d21540eb6a76fc1e957de695",
+      "after": "7b82b414e9c6ed8e1c052513cfc9d0286f4bc482a056aa4603d2a4f385c1852a",
+      "bodyUnchanged": true,
+      "bodySha256": "78fec1639b0b64ae073d0b91eddcf51675f1e00b55a99ba1a27521c60dbc8fe1"
+    },
+    {
+      "number": 488,
+      "target": "src/content/columns-zh/488-taiwan-factory-vision-ai-worker-personal-data.md",
+      "before": "8bc36ab649ce34019604404d85e90a0d5c320e8f246bdd1d53d0c2aae2e8d9a9",
+      "after": "d19ed53401a13fcc5d9458612c95324c4fc6d46c29f875045fdca341a13451b7",
+      "bodyUnchanged": true,
+      "bodySha256": "a55bd04be3d139106624715108e422d242314074c720ea94bbaa7c1c30742a8e"
+    },
+    {
+      "number": 489,
+      "target": "src/content/columns-zh/489-taiwan-ai-inspection-contract-liability.md",
+      "before": "eb027d2ed595d2650e02e0c25bbb36ac95e2078954cba2b73cc3113d87bb3537",
+      "after": "d34bb7d1831eb30df222abfbc5a18f20d81c1c16821345587b3fc841b977ea38",
+      "bodyUnchanged": true,
+      "bodySha256": "bec7e097b9a8ca09be06c5574d04f1a752a6b5747a2623d127a6d03dce55cf2f"
+    },
+    {
+      "number": 490,
+      "target": "src/content/columns-zh/490-taiwan-ai-model-inspection-equipment-investment-tax-credit.md",
+      "before": "a73f4a23ebe74f2a9785ccdcc55138a6c0ac117294ffa59415054da304dffb6a",
+      "after": "51c4230a1393b72f74b5dd613a6544805b5d99b84de840f2a10295667c696ea5",
+      "bodyUnchanged": true,
+      "bodySha256": "aa8b6a416271cfcf87b10f418b974c10aeb2f642175d3402be3e0fb0510c5c9f"
+    },
+    {
+      "number": 491,
+      "target": "src/content/columns-zh/491-taiwan-ai-project-unpaid-balance-delivery-evidence.md",
+      "before": "d61bf79c47145f61a92fe751978e7d18c477ea588d825fa19f4bf13139d7e189",
+      "after": "2f59b05cc08af29e8e761b39ca620f4fb0146277ec39ecf3bb538abb0317fede",
+      "bodyUnchanged": true,
+      "bodySha256": "8f9bc3860fdb3ec3b62ecfbca15201885dd22f676ba0bdd95bb475939b00d816"
+    },
+    {
+      "number": 492,
+      "target": "src/content/columns-zh/492-taiwan-semiconductor-ai-nstc-university-licensing.md",
+      "before": "83b0311472ce679428bf28c5ee76cb7fe0d83dff8cb2309ac804282f5102903b",
+      "after": "0920f5d3bdd2829704437c7a7d5da5c4170730aa0c1fd14fedf4baabcce3bb46",
+      "bodyUnchanged": true,
+      "bodySha256": "a0d2737bdad18f2f912b80ce9ff2b9186fc637262a5c9bc8b28e9a7ced94e0cf"
+    },
+    {
+      "number": 493,
+      "target": "src/content/columns-en/493-us-ai-chip-taiwan-packaging-capacity-prepayment-refund.md",
+      "before": "4644098496f078a91a26d88844077b2d335e8dcaa3822a75bced92135fd97bcd",
+      "after": "0b0a1561777fd05303906766c39c75c7a77e2017a7244b6e1cf1e357de4eac95",
+      "bodyUnchanged": true,
+      "bodySha256": "76daf7473e26524b78a0953cd91eba65896c9fb841cf7ec4993f8a3bb836932f"
+    },
+    {
+      "number": 494,
+      "target": "src/content/columns-en/494-us-buyer-taiwan-ai-chip-startup-investment-approval-closing.md",
+      "before": "29059b12a2e1fc634c6a4a99d3e8aece042ac129056bfb9e93d6ca43a66a1a49",
+      "after": "c7a626ba1fe619605d769b7af442134d603f98fe05f3922046e4f2429911eab4",
+      "bodyUnchanged": true,
+      "bodySha256": "fed3eb18d93523d90a1b7f194d73dd29aa291e50ae9a6ba8406b736a1fdae6e1"
+    },
+    {
+      "number": 495,
+      "target": "src/content/columns-ja/495-taiwan-ai-poc-additional-testing-commercial-order-japanese.md",
+      "before": "870122bb0f627d113cc8808fb0765aeb4870c626460b4474120dacce3ba58568",
+      "after": "6b843176e3c4657a2d96ee1143f403b0b149003ba6a6d8f799b2f196f040b652",
+      "bodyUnchanged": true,
+      "bodySha256": "b24847330de20c4e86a5e24f50396dd9b7d2a5bc42b821020e175da39e378d01"
+    },
+    {
+      "number": 496,
+      "target": "src/content/columns-ja/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese.md",
+      "before": "e30bd94eee3263375242bb0562c9647f7479c4b3944df7b1f522521079519fe3",
+      "after": "27d9d76061fdf3ea38cee0a67b53c47ddbe3979d1eb7a5f275482c0d8c88878e",
+      "bodyUnchanged": true,
+      "bodySha256": "2fe5ff97cc2aec4d051395e78f62a9aeffa45b56f3fbeae5953c651345587ef7"
+    },
+    {
+      "number": 497,
+      "target": "src/content/columns/497-taiwan-equipment-engineer-contract-work-permit-korean.md",
+      "before": "16c7de92744e43e48ee083ee72f9cced7e76af81a6288d60460c44eae48e8c82",
+      "after": "44ac6a46d1c2a49c8da6d5be8c70b602a171c03fe8a16a53424831f882bc95d1",
+      "bodyUnchanged": true,
+      "bodySha256": "222d2ea2aab9c8f711c908a8c284e5b63d004808c5382834202e6437f68396df"
+    },
+    {
+      "number": 498,
+      "target": "src/content/columns/498-taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean.md",
+      "before": "b5d64d7c7c2af2bc33ec2bc516cf991a48b1f2605322f5b64cf535fbef74fdaa",
+      "after": "41111dcc531aa850d54714affb425c2a7df45c0bcf3e1bd8f05572885eab8273",
+      "bodyUnchanged": true,
+      "bodySha256": "3563cf50e8d78fdf665a05eb013f324c5325623935c66d5667fe0b5d11d8477c"
+    }
+  ]
+}

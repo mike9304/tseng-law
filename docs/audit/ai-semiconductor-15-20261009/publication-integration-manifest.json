@@ -1,0 +1,764 @@
+[
+  {
+    "number": 484,
+    "locale": "zh-hant",
+    "original": "outputs/taiwan-ai-semiconductor-series/01-ai-basic-act-factory-governance.zh-hant.md",
+    "slug": "taiwan-ai-basic-act-semiconductor-factory-governance",
+    "target": "src/content/columns-zh/484-taiwan-ai-basic-act-semiconductor-factory-governance.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/01-ai-basic-act-factory-governance.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-basic-act-semiconductor-factory-governance",
+    "authorOwner": "/root/ai_law_sources",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "05dd964cbd690ab15010d4472ffaa4e602fe703076b5512a6e1fdd29d5e4a475",
+    "targetSha256": "7aa2bfed1cef35921500ebf031334f8708bf81a6d1364108d779c3b32b1ac435",
+    "sourceBodySha256": "48c3421c67c427784ddcfe89ce5ac21e42cb337f7586d5d60ab993e5e4ca293a",
+    "targetBodySha256": "acfb244196a61d093e3357bbaad2a73ab9cb57bcf02f69301b3ccf13f86d4af1",
+    "removedH1": "晶圓廠導入 AI：基本法生效後，誰決定系統可以做到哪一步",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "晶圓廠導入 AI：基本法生效後，誰決定系統可以做到哪一步",
+      "summary": "從影像輔助判讀到自動停機，晶圓廠如何依台灣人工智慧基本法與風險分類框架，確認試驗、上線、模型更新及異常處置的責任與證據。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約5分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "other",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "f121a3e3d67f952b4846f6685ff07115392b19c3c939a9a973899ff2ef84e010",
+      "newFullSha256": "7aa2bfed1cef35921500ebf031334f8708bf81a6d1364108d779c3b32b1ac435",
+      "bodyUnchanged": true,
+      "bodySha256": "acfb244196a61d093e3357bbaad2a73ab9cb57bcf02f69301b3ccf13f86d4af1",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 485,
+    "locale": "zh-hant",
+    "original": "outputs/taiwan-ai-semiconductor-series/02-manufacturing-data-trade-secrets.zh-hant.md",
+    "slug": "taiwan-manufacturing-ai-data-trade-secrets",
+    "target": "src/content/columns-zh/485-taiwan-manufacturing-ai-data-trade-secrets.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/02-manufacturing-data-trade-secrets.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-manufacturing-ai-data-trade-secrets",
+    "authorOwner": "/root/chip_law_sources",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "c4b14cd2df234ca9e0da5f4f299d20e034c982bc6deca7b7b4d38443e2ba58e2",
+    "targetSha256": "f0fb222731c7d6b8c8b2989a698a7a50e10966afba84be393ae3595b16ff469a",
+    "sourceBodySha256": "0c7624191d856ba8770788bb8c3053835e0bb6be2df95fff4b60791d137a1dd0",
+    "targetBodySha256": "7597eb9990602899fd5ed94929b721d9ce9cc20220ff96cae3bbac7cdad7e08c",
+    "removedH1": "晶圓資料交給外部 AI：製程機密的存取、保存與再訓練界線",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "晶圓資料交給外部 AI：製程機密的存取、保存與再訓練界線",
+      "summary": "刪除客戶名稱，未必消除晶圓影像與製程紀錄的機密性。台灣製造業導入外部生成式 AI 或委託模型訓練時，如何辨識營業秘密、約定資料用途，並保留授權與刪除紀錄。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約6分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "df6f8ab1174e1b09fa6bd5244a34f77e40b59abc8afcee1b6de6738bd79a61d9",
+      "newFullSha256": "f0fb222731c7d6b8c8b2989a698a7a50e10966afba84be393ae3595b16ff469a",
+      "bodyUnchanged": true,
+      "bodySha256": "7597eb9990602899fd5ed94929b721d9ce9cc20220ff96cae3bbac7cdad7e08c",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 486,
+    "locale": "zh-hant",
+    "original": "outputs/taiwan-ai-semiconductor-series/03-ai-development-ip-ownership.zh-hant.md",
+    "slug": "taiwan-ai-development-model-data-code-rights",
+    "target": "src/content/columns-zh/486-taiwan-ai-development-model-data-code-rights.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/03-ai-development-ip-ownership.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-development-model-data-code-rights",
+    "authorOwner": "/root/ai_law_sources",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "47a6ebdebfc353990a9d835447a7af3c5091ed80cb55fbcd5ca0d98962c2385e",
+    "targetSha256": "7cca19b41a3f81178fe56c5210db7dcb6615f447cb9b8a3f58b1e07889c66b84",
+    "sourceBodySha256": "816bbd2235575d278b9167ce7bf0502446538cea8bc42d15b13c51ae53211478",
+    "targetBodySha256": "3c1d7007b63f0437d7eb1528a36805cdcb0a36b4f70bfdea782edeef43578a93",
+    "removedH1": "委託開發晶圓檢測 AI：成果歸公司，為何仍可能無法換廠使用",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "委託開發晶圓檢測 AI：成果歸公司，為何仍可能無法換廠使用",
+      "summary": "晶圓檢測 AI 的基礎模型、微調權重、訓練資料與程式碼各有權利來源。委託開發時，如何約定跨廠部署、再訓練、供應商接手及終止後的使用。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約5分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "1f65b6d8af46440b70ef8c512f42fbdb777ef6e6ed22e799b4f025a947cb7038",
+      "newFullSha256": "7cca19b41a3f81178fe56c5210db7dcb6615f447cb9b8a3f58b1e07889c66b84",
+      "bodyUnchanged": true,
+      "bodySha256": "3c1d7007b63f0437d7eb1528a36805cdcb0a36b4f70bfdea782edeef43578a93",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 487,
+    "locale": "zh-hant",
+    "original": "outputs/taiwan-ai-semiconductor-series/04-ai-chip-export-controls.zh-hant.md",
+    "slug": "taiwan-ai-server-gpu-export-order-contract-controls",
+    "target": "src/content/columns-zh/487-taiwan-ai-server-gpu-export-order-contract-controls.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/04-ai-chip-export-controls.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-server-gpu-export-order-contract-controls",
+    "authorOwner": "/root/chip_law_sources",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "991f502ad3ebadd15af4cd65fb6176ce854b4bb033d3d891371748c2923dfc77",
+    "targetSha256": "7b82b414e9c6ed8e1c052513cfc9d0286f4bc482a056aa4603d2a4f385c1852a",
+    "sourceBodySha256": "c6ddb8075c84b914c47778372bf950a765b9df7b60ffafc2aba77a3b11887587",
+    "targetBodySha256": "78fec1639b0b64ae073d0b91eddcf51675f1e00b55a99ba1a27521c60dbc8fe1",
+    "removedH1": "AI 伺服器接單後：把出口審查接進報價、交期與出貨條件",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "AI 伺服器接單後：把出口審查接進報價、交期與出貨條件",
+      "summary": "GPU 與 AI 伺服器交易如何從實際配置、最終使用人一路核對到許可內容，並在供貨契約處理資料不全、改址與許可延誤。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約5分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "85cb3de28b8a43685426fc6f99238e38225f4bf6d21540eb6a76fc1e957de695",
+      "newFullSha256": "7b82b414e9c6ed8e1c052513cfc9d0286f4bc482a056aa4603d2a4f385c1852a",
+      "bodyUnchanged": true,
+      "bodySha256": "78fec1639b0b64ae073d0b91eddcf51675f1e00b55a99ba1a27521c60dbc8fe1",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 488,
+    "locale": "zh-hant",
+    "original": "outputs/taiwan-ai-semiconductor-series/05-factory-vision-personal-data.zh-hant.md",
+    "slug": "taiwan-factory-vision-ai-worker-personal-data",
+    "target": "src/content/columns-zh/488-taiwan-factory-vision-ai-worker-personal-data.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/05-factory-vision-personal-data.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-factory-vision-ai-worker-personal-data",
+    "authorOwner": "/root/ai_law_sources",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "9a55b2434beaf1e6395e485e80cb47073ed5d7968aad65409dcc8eae1b31fe18",
+    "targetSha256": "d19ed53401a13fcc5d9458612c95324c4fc6d46c29f875045fdca341a13451b7",
+    "sourceBodySha256": "13d2b9d0f164957546d6d408ecabfd459457a18004cf0f6ff1d0b7bb77df9656",
+    "targetBodySha256": "a55bd04be3d139106624715108e422d242314074c720ea94bbaa7c1c30742a8e",
+    "removedH1": "工廠視覺 AI 拍到員工：從安全監測改作績效評分，個資如何處理",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "工廠視覺 AI 拍到員工：從安全監測改作績效評分，個資如何處理",
+      "summary": "工廠影像可連結員工身分時，安全監測、績效評分與模型再訓練須分別確認法律依據。說明目的變更、委外監督、資料更正與保存期限的實際處理。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約6分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "labor",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "8bc36ab649ce34019604404d85e90a0d5c320e8f246bdd1d53d0c2aae2e8d9a9",
+      "newFullSha256": "d19ed53401a13fcc5d9458612c95324c4fc6d46c29f875045fdca341a13451b7",
+      "bodyUnchanged": true,
+      "bodySha256": "a55bd04be3d139106624715108e422d242314074c720ea94bbaa7c1c30742a8e",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 489,
+    "locale": "zh-hant",
+    "original": "outputs/taiwan-ai-semiconductor-series/06-ai-inspection-contract-liability.zh-hant.md",
+    "slug": "taiwan-ai-inspection-contract-liability",
+    "target": "src/content/columns-zh/489-taiwan-ai-inspection-contract-liability.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/06-ai-inspection-contract-liability.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-inspection-contract-liability",
+    "authorOwner": "/root/contracts_article",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "3bc6251ffcc91944cc6a5c6ff666628ba8a9a5cf8b9c262ad9b94793d03eb859",
+    "targetSha256": "d34bb7d1831eb30df222abfbc5a18f20d81c1c16821345587b3fc841b977ea38",
+    "sourceBodySha256": "06f9244e43cd49375cfe27db6c3c82f2bb73879ee959e5d1b4197bd075f54664",
+    "targetBodySha256": "bec7e097b9a8ca09be06c5574d04f1a752a6b5747a2623d127a6d03dce55cf2f",
+    "removedH1": "AI 檢測設備未達標：驗收版本、重訓費用與停線責任",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "AI 檢測設備未達標：驗收版本、重訓費用與停線責任",
+      "summary": "半導體產線的 AI 檢測未達約定標準，應如何區分缺失修正與付費重訓？從驗收資料、模型版本及製程變更，整理台灣契約責任、停線損害與違約金的判斷。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約6分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "litigation",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "eb027d2ed595d2650e02e0c25bbb36ac95e2078954cba2b73cc3113d87bb3537",
+      "newFullSha256": "d34bb7d1831eb30df222abfbc5a18f20d81c1c16821345587b3fc841b977ea38",
+      "bodyUnchanged": true,
+      "bodySha256": "bec7e097b9a8ca09be06c5574d04f1a752a6b5747a2623d127a6d03dce55cf2f",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 490,
+    "locale": "zh-hant",
+    "original": "outputs/taiwan-ai-semiconductor-series/07-ai-semiconductor-tax-credits.zh-hant.md",
+    "slug": "taiwan-ai-model-inspection-equipment-investment-tax-credit",
+    "target": "src/content/columns-zh/490-taiwan-ai-model-inspection-equipment-investment-tax-credit.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/07-ai-semiconductor-tax-credits.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-model-inspection-equipment-investment-tax-credit",
+    "authorOwner": "/root/chip_law_sources",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "4518194c39e1bc873e44ca1a86621262a9e16d21472d612c46e66b6603bb8a9e",
+    "targetSha256": "51c4230a1393b72f74b5dd613a6544805b5d99b84de840f2a10295667c696ea5",
+    "sourceBodySha256": "0856340de40ad3b9d521c01bbd19f9ef3fe6bb2c7afdf0546ba826ce8e09eece",
+    "targetBodySha256": "aa8b6a416271cfcf87b10f418b974c10aeb2f642175d3402be3e0fb0510c5c9f",
+    "removedH1": "AI 模型、檢測軟體與機臺一起買：投資抵減先拆清楚支出",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "AI 模型、檢測軟體與機臺一起買：投資抵減先拆清楚支出",
+      "summary": "半導體業採購 AI 套裝方案，如何區分第10條之1的自用投資、軟體授權與技術服務，並避免誤套第10條之2的前瞻研發及先進製程優惠。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約7分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "tax",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "a73f4a23ebe74f2a9785ccdcc55138a6c0ac117294ffa59415054da304dffb6a",
+      "newFullSha256": "51c4230a1393b72f74b5dd613a6544805b5d99b84de840f2a10295667c696ea5",
+      "bodyUnchanged": true,
+      "bodySha256": "aa8b6a416271cfcf87b10f418b974c10aeb2f642175d3402be3e0fb0510c5c9f",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 491,
+    "locale": "zh-hant",
+    "original": "outputs/four-market-columns/tw/01-ai-poc-payment.zh-hant.md",
+    "slug": "taiwan-ai-project-unpaid-balance-delivery-evidence",
+    "target": "src/content/columns-zh/491-taiwan-ai-project-unpaid-balance-delivery-evidence.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/08-ai-poc-payment.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-project-unpaid-balance-delivery-evidence",
+    "authorOwner": "/root/market_tw",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "2be50123af88ea6a6427a5fcef27d2e7bbb74f44761fed4ff5b4c60cb53f376b",
+    "targetSha256": "2f59b05cc08af29e8e761b39ca620f4fb0146277ec39ecf3bb538abb0317fede",
+    "sourceBodySha256": "dd784feab59add178c41a477606231899413d2ba6733d42148488baaec281e60",
+    "targetBodySha256": "8f9bc3860fdb3ec3b62ecfbca15201885dd22f676ba0bdd95bb475939b00d816",
+    "removedH1": "AI 專案交付後尾款未付：供應商的完成證據、追加工作與催告",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "AI 專案交付後尾款未付：供應商的完成證據、追加工作與催告",
+      "summary": "AI 開發商交付模型、程式或測試報告後，客戶仍拒付尾款，須先區分完成、交付與約定付款條件，再整理追加需求、客戶協力及終止結算的證據。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約5分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "litigation",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "d61bf79c47145f61a92fe751978e7d18c477ea588d825fa19f4bf13139d7e189",
+      "newFullSha256": "2f59b05cc08af29e8e761b39ca620f4fb0146277ec39ecf3bb538abb0317fede",
+      "bodyUnchanged": true,
+      "bodySha256": "8f9bc3860fdb3ec3b62ecfbca15201885dd22f676ba0bdd95bb475939b00d816",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 492,
+    "locale": "zh-hant",
+    "original": "outputs/four-market-columns/tw/02-semiconductor-ai-university-collaboration.zh-hant.md",
+    "slug": "taiwan-semiconductor-ai-nstc-university-licensing",
+    "target": "src/content/columns-zh/492-taiwan-semiconductor-ai-nstc-university-licensing.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/zh-hant/09-semiconductor-ai-university-collaboration.md",
+    "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-semiconductor-ai-nstc-university-licensing",
+    "authorOwner": "/root/market_tw",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "611b641f77cb7ffc753a7dd74bc9f9d555fd2aac8382d1e94a50ab645760e579",
+    "targetSha256": "0920f5d3bdd2829704437c7a7d5da5c4170730aa0c1fd14fedf4baabcce3bb46",
+    "sourceBodySha256": "da7aa736c63681f18c42d2df68cd4fa0f91369565598e5eeaa85c50cbd358b8b",
+    "targetBodySha256": "a0d2737bdad18f2f912b80ce9ff2b9186fc637262a5c9bc8b28e9a7ced94e0cf",
+    "removedH1": "半導體 AI 產學合作簽約前：配合款、技轉授權與共有成果如何分開談",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "半導體 AI 產學合作簽約前：配合款、技轉授權與共有成果如何分開談",
+      "summary": "半導體與 AI 企業參與國科會產學合作計畫，出資不等於取得完整技術使用權。簽約前須區分配合款、先期技轉授權、成果共有及對客戶授權的權限。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約6分鐘閱讀",
+      "categories": [
+        "台灣法律資訊"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "zh-hant"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "83b0311472ce679428bf28c5ee76cb7fe0d83dff8cb2309ac804282f5102903b",
+      "newFullSha256": "0920f5d3bdd2829704437c7a7d5da5c4170730aa0c1fd14fedf4baabcce3bb46",
+      "bodyUnchanged": true,
+      "bodySha256": "a0d2737bdad18f2f912b80ce9ff2b9186fc637262a5c9bc8b28e9a7ced94e0cf",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 493,
+    "locale": "en",
+    "original": "outputs/four-market-columns/us/01-advanced-packaging-capacity-prepayment.en.md",
+    "slug": "us-ai-chip-taiwan-packaging-capacity-prepayment-refund",
+    "target": "src/content/columns-en/493-us-ai-chip-taiwan-packaging-capacity-prepayment-refund.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/en/01-advanced-packaging-capacity-prepayment.md",
+    "publicUrl": "https://tseng-law.com/en/columns/us-ai-chip-taiwan-packaging-capacity-prepayment-refund",
+    "authorOwner": "/root/market_us",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "1d9da050bfb28b54a080350ecb1b77598ec3617b05ac5884ee8bacf269eda0e0",
+    "targetSha256": "0b0a1561777fd05303906766c39c75c7a77e2017a7244b6e1cf1e357de4eac95",
+    "sourceBodySha256": "1e0051c814f80c761a6ec5e097f18228bc54e11b873e7b538e10d7838252c3cb",
+    "targetBodySha256": "76daf7473e26524b78a0953cd91eba65896c9fb841cf7ec4993f8a3bb836932f",
+    "removedH1": "Prepaying for Taiwan Advanced Packaging: Capacity, Delivery Dates and Refunds",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "Prepaying for Taiwan Advanced Packaging: Capacity, Delivery Dates and Refunds",
+      "seoTitle": "Taiwan Packaging Prepayments and Refunds",
+      "summary": "For US AI-chip buyers reserving Taiwan packaging capacity: define the production commitment, payment credits, delay remedies and refund terms before paying.",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "October 9, 2026",
+      "read_time": "6 min read",
+      "categories": [
+        "Taiwan Legal Information"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "en"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "4644098496f078a91a26d88844077b2d335e8dcaa3822a75bced92135fd97bcd",
+      "newFullSha256": "0b0a1561777fd05303906766c39c75c7a77e2017a7244b6e1cf1e357de4eac95",
+      "bodyUnchanged": true,
+      "bodySha256": "76daf7473e26524b78a0953cd91eba65896c9fb841cf7ec4993f8a3bb836932f",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 494,
+    "locale": "en",
+    "original": "outputs/four-market-columns/us/02-taiwan-ai-startup-acquisition.en.md",
+    "slug": "us-buyer-taiwan-ai-chip-startup-investment-approval-closing",
+    "target": "src/content/columns-en/494-us-buyer-taiwan-ai-chip-startup-investment-approval-closing.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/en/02-taiwan-ai-startup-acquisition.md",
+    "publicUrl": "https://tseng-law.com/en/columns/us-buyer-taiwan-ai-chip-startup-investment-approval-closing",
+    "authorOwner": "/root/market_us",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "c9e61669b32f04818a49dd3fc4323b6ceeaf51dad3e08bcf2d9391b7adfb1621",
+    "targetSha256": "e3e948c33c70fb2a0bc10581add775f95b641e4a787c02801b1c2fad6a133a17",
+    "sourceBodySha256": "c19a182133caf3359fa67016ff2593d58b8b1f63212488579c50e0deda459aea",
+    "targetBodySha256": "fed3eb18d93523d90a1b7f194d73dd29aa291e50ae9a6ba8406b736a1fdae6e1",
+    "removedH1": "Buying a Taiwan AI-Chip Startup: Investor Status and the Closing Date",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "Buying a Taiwan AI-Chip Startup: Investor Status and the Closing Date",
+      "seoTitle": "Buying a Taiwan AI-Chip Startup",
+      "summary": "US buyers of private Taiwan AI-chip companies should check investor ownership, control rights, investment approval and merger filing before committing to close.",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "October 9, 2026",
+      "read_time": "6 min read",
+      "categories": [
+        "Taiwan Legal Information"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "en"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "29059b12a2e1fc634c6a4a99d3e8aece042ac129056bfb9e93d6ca43a66a1a49",
+      "newFullSha256": "c7a626ba1fe619605d769b7af442134d603f98fe05f3922046e4f2429911eab4",
+      "bodyUnchanged": true,
+      "bodySha256": "fed3eb18d93523d90a1b7f194d73dd29aa291e50ae9a6ba8406b736a1fdae6e1",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    },
+    "summaryMetadataRepair": {
+      "reason": "EN corpus summary limit150–160characters",
+      "oldSummary": "US buyers of private Taiwan AI-chip companies need to examine investor ownership, control rights, investment approval and merger filing before committing to close.",
+      "newSummary": "US buyers of private Taiwan AI-chip companies should check investor ownership, control rights, investment approval and merger filing before committing to close.",
+      "oldSummaryLength": 163,
+      "newSummaryLength": 160,
+      "previousFullSha256": "c7a626ba1fe619605d769b7af442134d603f98fe05f3922046e4f2429911eab4",
+      "newFullSha256": "e3e948c33c70fb2a0bc10581add775f95b641e4a787c02801b1c2fad6a133a17",
+      "allOtherBytesUnchanged": true
+    }
+  },
+  {
+    "number": 495,
+    "locale": "ja",
+    "original": "outputs/four-market-columns/jp/01-ai-poc-to-mass-production.ja.md",
+    "slug": "taiwan-ai-poc-additional-testing-commercial-order-japanese",
+    "target": "src/content/columns-ja/495-taiwan-ai-poc-additional-testing-commercial-order-japanese.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/ja/01-ai-poc-to-mass-production.md",
+    "publicUrl": "https://tseng-law.com/ja/columns/taiwan-ai-poc-additional-testing-commercial-order-japanese",
+    "authorOwner": "/root/market_jp",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "ad62a4324bc39b17a73b490cf7f6bbfcb4decd17dcebb820a77f23650eddd256",
+    "targetSha256": "6b843176e3c4657a2d96ee1143f403b0b149003ba6a6d8f799b2f196f040b652",
+    "sourceBodySha256": "c80ba7dc7af4e9f6d30632c7d6a04ea930735d419f474af2ad3613f3786dc3fe",
+    "targetBodySha256": "b24847330de20c4e86a5e24f50396dd9b7d2a5bc42b821020e175da39e378d01",
+    "removedH1": "台湾顧客とのAI実証実験が終わらない――追加検証費用と量産採用を分ける契約",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "台湾顧客とのAI実証実験が終わらない――追加検証費用と量産採用を分ける契約",
+      "summary": "台湾工場でAIの追加試験を求められた日本企業向けに、PoCの作業範囲、追加費用、終了時の精算、量産導入への移行条件を台湾法から整理します。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約7分",
+      "categories": [
+        "台湾法律情報"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "ja"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "870122bb0f627d113cc8808fb0765aeb4870c626460b4474120dacce3ba58568",
+      "newFullSha256": "6b843176e3c4657a2d96ee1143f403b0b149003ba6a6d8f799b2f196f040b652",
+      "bodyUnchanged": true,
+      "bodySha256": "b24847330de20c4e86a5e24f50396dd9b7d2a5bc42b821020e175da39e378d01",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 496,
+    "locale": "ja",
+    "original": "outputs/four-market-columns/jp/02-semiconductor-equipment-cancellation.ja.md",
+    "slug": "taiwan-semiconductor-equipment-order-cancellation-costs-japanese",
+    "target": "src/content/columns-ja/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/ja/02-semiconductor-equipment-cancellation.md",
+    "publicUrl": "https://tseng-law.com/ja/columns/taiwan-semiconductor-equipment-order-cancellation-costs-japanese",
+    "authorOwner": "/root/market_jp",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "c46e62dfa787b8ac79c6868cd76e5434d8ec3d49fc376a535b625e81b1e28c68",
+    "targetSha256": "27d9d76061fdf3ea38cee0a67b53c47ddbe3979d1eb7a5f275482c0d8c88878e",
+    "sourceBodySha256": "f99605072fcb08a61793cbe7cb46670f8eea299533280b71c12c0205d14496fc",
+    "targetBodySha256": "2fe5ff97cc2aec4d051395e78f62a9aeffa45b56f3fbeae5953c651345587ef7",
+    "removedH1": "台湾向け半導体装置の発注が取り消されたら――専用部材・製作途中の費用をどう定めるか",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "台湾向け半導体装置の発注が取り消されたら――専用部材・製作途中の費用をどう定めるか",
+      "summary": "台湾顧客の注文で専用部材を調達した日本の装置メーカー向けに、売買と請負の違い、製作中止後の損害、取消費用の契約と証拠を整理します。",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026年10月9日",
+      "read_time": "約7分",
+      "categories": [
+        "台湾法律情報"
+      ],
+      "topic": "litigation",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "ja"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "e30bd94eee3263375242bb0562c9647f7479c4b3944df7b1f522521079519fe3",
+      "newFullSha256": "27d9d76061fdf3ea38cee0a67b53c47ddbe3979d1eb7a5f275482c0d8c88878e",
+      "bodyUnchanged": true,
+      "bodySha256": "2fe5ff97cc2aec4d051395e78f62a9aeffa45b56f3fbeae5953c651345587ef7",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 497,
+    "locale": "ko",
+    "original": "outputs/four-market-columns/kr/01-taiwan-equipment-engineer-work-permit.ko.md",
+    "slug": "taiwan-equipment-engineer-contract-work-permit-korean",
+    "target": "src/content/columns/497-taiwan-equipment-engineer-contract-work-permit-korean.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/ko/01-taiwan-equipment-engineer-work-permit.md",
+    "publicUrl": "https://tseng-law.com/ko/columns/taiwan-equipment-engineer-contract-work-permit-korean",
+    "authorOwner": "/root/market_kr",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "ee233cc8bf40618569e6487bc0b4d4eddc7bc3a78d2158989a2553c4592ac237",
+    "targetSha256": "44ac6a46d1c2a49c8da6d5be8c70b602a171c03fe8a16a53424831f882bc95d1",
+    "sourceBodySha256": "4e9447a697637f8442ac36b32df7d4654bb0d36b90ef0405f4a3f6f2880b8271",
+    "targetBodySha256": "222d2ea2aab9c8f711c908a8c284e5b63d004808c5382834202e6437f68396df",
+    "removedH1": "대만 반도체 장비 설치 출장, 취업허가는 누가 언제 신청하나",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "대만 반도체 장비 설치 출장, 취업허가는 누가 언제 신청하나",
+      "summary": "한국 장비·제조 AI 기업의 대만 현장 출장을 위해 실제 업무, 계약 당사자와 허가 신청자를 연결하고, 30일·90일 기준과 입국 절차를 구별해 설명합니다.",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026년 10월 9일",
+      "read_time": "7분",
+      "categories": [
+        "대만 법률정보"
+      ],
+      "topic": "visa",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "ko"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "16c7de92744e43e48ee083ee72f9cced7e76af81a6288d60460c44eae48e8c82",
+      "newFullSha256": "44ac6a46d1c2a49c8da6d5be8c70b602a171c03fe8a16a53424831f882bc95d1",
+      "bodyUnchanged": true,
+      "bodySha256": "222d2ea2aab9c8f711c908a8c284e5b63d004808c5382834202e6437f68396df",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  },
+  {
+    "number": 498,
+    "locale": "ko",
+    "original": "outputs/four-market-columns/kr/02-taiwan-ai-distributor-contract.ko.md",
+    "slug": "taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean",
+    "target": "src/content/columns/498-taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean.md",
+    "publicationSource": "/Users/son7/Documents/Codex/2026-10-08/new-chat/outputs/publication-20261008/articles/ko/02-taiwan-ai-distributor-contract.md",
+    "publicUrl": "https://tseng-law.com/ko/columns/taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean",
+    "authorOwner": "/root/market_kr",
+    "numberStatus": "root-approved allocation after Studio snapshot; recheck before ship",
+    "integrationStatus": "integrated for independent target review",
+    "sourceSha256": "69f6be978c425b8289d289ff8ceb2e0d277accd16cc5cddbfe2bde2b1cd0a3f9",
+    "targetSha256": "41111dcc531aa850d54714affb425c2a7df45c0bcf3e1bd8f05572885eab8273",
+    "sourceBodySha256": "057e9a0c392e929f242a218ca048393af73fef5864b97b228c8d4121460177bc",
+    "targetBodySha256": "3563cf50e8d78fdf665a05eb013f324c5325623935c66d5667fe0b5d11d8477c",
+    "removedH1": "대만 AI 소프트웨어 총판 계약에서 직판과 할인 권한을 정하는 법",
+    "bodyTransformation": "Removed exactly the single leading Markdown H1 line; all other body characters unchanged",
+    "metadata": {
+      "title": "대만 AI 소프트웨어 총판 계약에서 직판과 할인 권한을 정하는 법",
+      "summary": "한국 제조 AI 기업의 대만 총판 계약에서 기존 고객과 본사 직판을 남겨 두는 조건, 독점 대상, 재판매가격 제한, 계약 종료 후 고객 서비스와 자료 이관을 살펴봅니다.",
+      "published": "2026-10-09",
+      "lastmod": "2026-10-09",
+      "date_display": "2026년 10월 9일",
+      "read_time": "8분",
+      "categories": [
+        "대만 법률정보"
+      ],
+      "topic": "company",
+      "tags": [
+        "semiconductor",
+        "artificial-intelligence"
+      ],
+      "audience": [
+        "ko"
+      ],
+      "author": "legal-ai-assistant"
+    },
+    "publicationMetadataAdjustment": {
+      "reason": "Actual first publication occurs October9 in Korea and Taiwan; legal research date remains October8",
+      "previousFullSha256": "b5d64d7c7c2af2bc33ec2bc516cf991a48b1f2605322f5b64cf535fbef74fdaa",
+      "newFullSha256": "41111dcc531aa850d54714affb425c2a7df45c0bcf3e1bd8f05572885eab8273",
+      "bodyUnchanged": true,
+      "bodySha256": "3563cf50e8d78fdf665a05eb013f324c5325623935c66d5667fe0b5d11d8477c",
+      "fields": [
+        "published",
+        "lastmod",
+        "date_display"
+      ]
+    }
+  }
+]

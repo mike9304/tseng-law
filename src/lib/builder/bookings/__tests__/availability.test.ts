@@ -445,16 +445,22 @@ describe('booking availability slots', () => {
   });
 
   it('excludes automatic public holidays from recurring weekly slots', async () => {
-    fixtures.availability = {
-      ...fixtures.availability!,
-      holidayCalendar: 'kr',
-    };
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(new Date('2026-10-01T00:00:00.000Z'));
+    try {
+      fixtures.availability = {
+        ...fixtures.availability!,
+        holidayCalendar: 'kr',
+      };
 
-    const normalSlots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2026-10-08' });
-    const holidaySlots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2026-10-09' });
+      const normalSlots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2026-10-08' });
+      const holidaySlots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2026-10-09' });
 
-    expect(normalSlots.length).toBeGreaterThan(0);
-    expect(holidaySlots).toEqual([]);
+      expect(normalSlots.length).toBeGreaterThan(0);
+      expect(holidaySlots).toEqual([]);
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it('describes a holiday override as open and a blank override as closed', () => {

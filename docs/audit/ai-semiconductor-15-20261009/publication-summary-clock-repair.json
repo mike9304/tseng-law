@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "One ENsummary metadata repair andone existing test-clock repair",
+  "article494SourceSha256": "c9e61669b32f04818a49dd3fc4323b6ceeaf51dad3e08bcf2d9391b7adfb1621",
+  "article494TargetSha256": "e3e948c33c70fb2a0bc10581add775f95b641e4a787c02801b1c2fad6a133a17",
+  "article494BodySha256": "fed3eb18d93523d90a1b7f194d73dd29aa291e50ae9a6ba8406b736a1fdae6e1",
+  "article494OnlySummaryChanged": true,
+  "availabilityTestSha256": "23b1e0e170a6323a5d3fbc55373d583ec60ab1eddaceddcd2cc7dfe88bd32953",
+  "nodeVersion": "v24.19.0",
+  "checks": {
+    "availabilityTests": "19/19PASS",
+    "englishSummaryAndCorpus": "15/15PASS",
+    "allIntegrationInvariants": "PASS"
+  },
+  "releaseScopeFileCount": 23
+}

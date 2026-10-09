@@ -159,8 +159,15 @@ test('next config scopes hardened production and private-route headers', async (
     '/api/members/:path*',
     '/api/billing-documents/:path*',
   ];
-  const sensitiveRules = productionRules.filter(({ headers }) =>
-    headers.some(({ key }) => key === 'Cache-Control' || key === 'X-Robots-Tag'),
+  const publicFontRules = productionRules.filter(({ source }) => source === '/fonts/:path*');
+  assert.equal(publicFontRules.length, 1);
+  const publicFontHeaders = headerMap(publicFontRules[0]);
+  assert.equal(publicFontHeaders.get('Cache-Control'), 'public, max-age=31536000, immutable');
+  assert.equal(publicFontHeaders.has('X-Robots-Tag'), false);
+
+  const sensitiveRules = productionRules.filter(({ source, headers }) =>
+    source !== '/fonts/:path*'
+      && headers.some(({ key }) => key === 'Cache-Control' || key === 'X-Robots-Tag'),
   );
 
   assert.deepEqual(

@@ -1,3 +1,4 @@
+import { AI_SEMICONDUCTOR_COLUMN_FILES_20261009 } from '@/lib/__tests__/ai-semiconductor-column-files';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
@@ -212,7 +213,7 @@ describe('sitemap column lastModified', () => {
       // Criminal board adds 5 language URLs.
       // Tax & accounting board (4 core-language URLs) + its column files, one URL per locale file.
       beforeFiltering:
-        529 + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        529 + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
@@ -231,7 +232,7 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        520 + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        520 + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length

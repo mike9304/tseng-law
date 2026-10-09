@@ -10,6 +10,9 @@ topic: "company"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["ko"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/498-taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean/featured-01.webp"
+featured_image_alt: "공장 시연실에서 세 사람이 검사 장비를 살펴보고 있으며, 회의 탁자에는 노트북과 자료 폴더가 놓여 있습니다."
+featured_image_caption: "AI로 생성한 가상 장면으로, 검사 장비의 영업·지원 협의를 표현했습니다."
 ---
 
 한국 본사가 거래하던 고객이 대만 공장을 새로 열었다면, 추가 라이선스 주문도 현지 총판을 거쳐야 할까요? 기존 고객의 갱신 주문이나 온라인으로 들어온 주문, 해외 본사가 일괄 구매하는 대만 공장용 라이선스를 누가 맡는지까지 ‘대만 독점 총판’이라는 문구만으로 정하기는 어렵습니다.

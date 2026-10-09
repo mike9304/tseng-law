@@ -10,6 +10,9 @@ topic: "labor"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/488-taiwan-factory-vision-ai-worker-personal-data/featured-01.webp"
+featured_image_alt: "工廠走道上，兩名人員在設備旁交談，天花板裝有一部攝影機。"
+featured_image_caption: "AI生成的虛構場景，呈現工廠交接與影像拍攝的情境。"
 ---
 
 如果 AI 把交接時間算成離席，這筆紀錄又進了考核，員工面對的就不只是影像辨識錯誤。人資需要知道分數用了哪些紀錄，資訊人員要能找回原始事件；廠商即使承認模型有誤，公司仍得處理已經產生的資料與考核結果。

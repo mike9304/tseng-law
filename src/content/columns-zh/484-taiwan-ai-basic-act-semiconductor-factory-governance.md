@@ -10,6 +10,9 @@ topic: "other"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/484-taiwan-ai-basic-act-semiconductor-factory-governance/featured-01.webp"
+featured_image_alt: "穿著無塵衣的人員坐在檢測設備的操作台前，後方可見封閉的設備與晶圓載具。"
+featured_image_caption: "AI生成的虛構場景，呈現人員在檢測設備前覆核的情境。"
 ---
 
 工程師看過 AI 標出的瑕疵後再決定是否放行，與系統判定合格就讓產品進入下一站，是兩種不同的產線安排。後者少了一道人員確認，模型漏判、影像中斷或門檻設錯，都可能直接影響出貨；若系統還能下達停機指令，影響就延伸到設備與現場人員。

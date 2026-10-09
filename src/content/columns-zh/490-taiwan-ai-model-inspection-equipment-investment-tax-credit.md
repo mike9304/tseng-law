@@ -10,6 +10,9 @@ topic: "tax"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/490-taiwan-ai-model-inspection-equipment-investment-tax-credit/featured-01.webp"
+featured_image_alt: "桌面上分開放著數組文件、計算機與小型電腦設備，旁邊有一個資料夾。"
+featured_image_caption: "AI生成的虛構場景，呈現採購文件分項整理的情境。"
 ---
 
 模型授權、瑕疵辨識軟體和檢測機臺可以一起採購，申請投資抵減時，卻需要分別說明買到了什麼。機臺的配置與交貨資料、軟體的授權期間、整合服務完成的內容，各自用來認定不同的支出。一張只寫「AI 升級方案」的總價報價單，往往還缺少這些資料。

@@ -10,6 +10,9 @@ topic: "litigation"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/491-taiwan-ai-project-unpaid-balance-delivery-evidence/featured-01.webp"
+featured_image_alt: "辦公桌上放著筆電、外接儲存裝置、報告與攤開的資料夾，後方是一張空椅子。"
+featured_image_caption: "AI生成的虛構場景，呈現專案交付資料整理的情境。"
 ---
 
 供應商說「模型已經交了」，客戶回覆「現場還不能用」，兩邊可能對何謂完成有不同理解。契約若約定交付模型與測試報告，和約定讓特定產線達到某項部署效果，需要證明的事情就不同。

@@ -10,6 +10,9 @@ topic: "company"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/492-taiwan-semiconductor-ai-nstc-university-licensing/featured-01.webp"
+featured_image_alt: "實驗室內，兩名人員在工作台旁查看機器視覺測試設備。"
+featured_image_caption: "AI生成的虛構實驗室場景，呈現產學合作中的技術討論。"
 ---
 
 設備公司準備把產學合作開發的 AI 程式裝進產品時，客戶接下來怎麼使用，也會影響需要取得的權利。由公司自行操作技術、把程式部署到客戶工廠，或讓海外子公司自行實施，涉及的行為可能不同。「研發成果由雙方共享」這一句，還不足以回答其中哪些用途已獲准、哪些須另行同意。

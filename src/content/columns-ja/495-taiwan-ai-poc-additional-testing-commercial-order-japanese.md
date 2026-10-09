@@ -10,6 +10,9 @@ topic: "company"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["ja"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/495-taiwan-ai-poc-additional-testing-commercial-order-japanese/featured-01.webp"
+featured_image_alt: "下向きの検査カメラの下に金属試料が置かれ、作業者が別の試料を載せたトレーを隣に添えています。"
+featured_image_caption: "AIで生成した架空の場面で、異なる試料を用いた追加試験の準備を表しています。"
 ---
 
 台湾の工場でAI検査の試験を終えた後、「別の品種でも試してほしい」と頼まれたら、その試験まで当初の料金に含まれるのでしょうか。見積書では品種を限定していても、試験計画やメールで対象を広げていれば、見積書だけでは費用負担を判断できません。

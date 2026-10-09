@@ -10,6 +10,9 @@ topic: "litigation"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["ja"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese/featured-01.webp"
+featured_image_alt: "作業場の台車に、金属製の治具が保護材に収められています。"
+featured_image_caption: "特注部材の保管を描いた、AI生成による架空の場面です。"
 ---
 
 台湾の顧客からAI検査機や特注治具の製作を止めるよう言われても、日本のメーカーが既に発注した専用部材の代金まで消えるわけではありません。顧客との契約がどう終わるかと、仕入先への注文を取り消せるかは、それぞれの契約の問題です。

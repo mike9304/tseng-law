@@ -10,6 +10,9 @@ topic: "company"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/487-taiwan-ai-server-gpu-export-order-contract-controls/featured-01.webp"
+featured_image_alt: "物流區內，一座伺服器機櫃固定在運輸木箱中，旁邊的人員拿著資料夾。"
+featured_image_caption: "AI生成的虛構出貨準備場景。"
 ---
 
 AI 伺服器已經收了訂金，出口許可卻還在審查，買賣雙方接下來要談的，就是貨放在哪裡、交期延多久，以及訂單如果做不成，已投入的費用由誰負擔。契約裡只有一句「遵守出口管制」，無法替雙方決定這些事。

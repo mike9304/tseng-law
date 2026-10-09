@@ -11,6 +11,9 @@ topic: "company"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/493-us-ai-chip-taiwan-packaging-capacity-prepayment-refund/featured-01.webp"
+featured_image_alt: "A black ESD tray holds a few packaged chips beside empty pockets, with enclosed storage in the background."
+featured_image_caption: "AI-generated fictional scene of a semiconductor packaging area."
 ---
 
 A Taiwan supplier’s promise to reserve packaging capacity can leave the shipment date for tested chips unsettled. A US AI-chip developer may be paying for a place in the production schedule while still negotiating the commitments on which its launch depends.

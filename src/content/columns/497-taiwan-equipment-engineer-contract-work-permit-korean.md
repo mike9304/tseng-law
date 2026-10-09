@@ -10,6 +10,9 @@ topic: "visa"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["ko"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/497-taiwan-equipment-engineer-contract-work-permit-korean/featured-01.webp"
+featured_image_alt: "서류 폴더를 든 사람이 바퀴 달린 장비 가방 옆에서 공장 방문자 접수대 앞에 서 있습니다."
+featured_image_caption: "AI로 생성한 가상의 공장 방문 접수 장면입니다."
 ---
 
 한국에서 엔지니어를 보내 대만 반도체 공장의 장비를 설치할 때는 취업허가가 필요한지부터 살펴야 합니다. 회사가 단기 출장으로 처리하더라도, 대만에서는 실제로 어떤 일을 하는지가 기준이 됩니다. 대만 [고용서비스법 제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43)는 법에 다른 정함이 없는 한 허가 없이 일할 수 없도록 정합니다.

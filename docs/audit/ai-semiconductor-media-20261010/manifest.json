@@ -1,0 +1,912 @@
+{
+  "schema": 1,
+  "createdAt": "2026-10-09T23:02:19.574Z",
+  "base": {
+    "head": "c6e2436514fe4c48ae6d3e8126a220116c9098e7",
+    "originMain": "c6e2436514fe4c48ae6d3e8126a220116c9098e7",
+    "checkedAt": "2026-10-09T23:02:17.385Z"
+  },
+  "scope": "15 existing articles; three image frontmatter fields only",
+  "originalPngsPreserved": true,
+  "sourcePixelComposition": "Uncropped; proportional resize and WebP encoding only",
+  "productTestsRun": false,
+  "articles": [
+    {
+      "id": 484,
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-basic-act-semiconductor-factory-governance",
+      "target": "src/content/columns-zh/484-taiwan-ai-basic-act-semiconductor-factory-governance.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-basic-act-semiconductor-factory-governance",
+      "sourceSha256": "449edc906b3d483168bca4af987020c802be6cc1016d37b0a6d496a008f0336d",
+      "bodySha256": "6d04da92459a6a361ee32ea7cf6407dbb0c794090eb1ff2c2abd1a64e2fdfa76",
+      "frontmatterPrefixSha256": "b6443d5e1d9269e9acafe81dea97c137cd1aa392e63fa98d1088993891e30a32",
+      "suffixSha256": "1108caa5c8fd838876d382dc88566e5b0fabf56ac777a5600f91f5f390afcb97",
+      "original": {
+        "path": "outputs/column-media-20261010/images/484-taiwan-ai-basic-act-semiconductor-factory-governance.png",
+        "sha256": "8d3418f7935307aec060a200e650e87b48addee740b830c02d52aca7013c960e",
+        "bytes": 2017230,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph for a professional Taiwan law-firm column. Wide 16:9 horizontal composition; keep the essential action and objects inside the central 65% for mobile and card crops. Natural light, believable scale and materials, restrained neutral color, quiet observational style. A fictional staged scene, no recognizable real person or real facility. No lettering, numbers, logos, signatures, official stamps, flags, readable interfaces, legal symbols, gavels, justice scales, neon, holograms, robot brains, or decorative circuit patterns. Produce one finished image with no text overlay. An anonymous engineer in complete white cleanroom clothing, hood and mask sits side-on at an external inspection-tool console in a modern semiconductor cleanroom. A single monitor shows only a simple grayscale microscopy texture, no interface text or performance marks. The engineer pauses with a gloved hand near the controls. Behind glass, a closed wafer carrier is docked at an enclosed inspection machine; all wafers remain enclosed. Calm cool white and brushed steel, very subtle soft blue. The focal point is the human decision at the console; no emergency, open machinery or automatic approval symbolism.",
+        "createdAt": "2026-10-09T22:52:50.925797+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-7c70-7212-a82b-44a125272ac6/exec-6ce776c5-81e5-463e-947b-1d6aa470c2a3.png",
+        "receiptPath": "work/column-media-20261010/receipts/484.json",
+        "receiptSha256": "6232c1386d3869540f1b5af360c81bd392a3dcaf6f10b90dd00cbace45567471"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "8d3418f7935307aec060a200e650e87b48addee740b830c02d52aca7013c960e",
+          "alt": "穿著無塵衣的人員坐在檢測設備的操作台前，後方可見封閉的設備與晶圓載具。",
+          "caption": "AI生成的虛構場景，呈現人員在檢測設備前覆核的情境。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "8d3418f7935307aec060a200e650e87b48addee740b830c02d52aca7013c960e",
+          "alt": "穿著無塵衣的人員坐在檢測設備的操作台前，後方可見封閉的設備與晶圓載具。",
+          "caption": "AI生成的虛構場景，呈現人員在檢測設備前覆核的情境。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/484-taiwan-ai-basic-act-semiconductor-factory-governance/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/484-taiwan-ai-basic-act-semiconductor-factory-governance/featured-01.webp",
+        "alt": "穿著無塵衣的人員坐在檢測設備的操作台前，後方可見封閉的設備與晶圓載具。",
+        "caption": "AI生成的虛構場景，呈現人員在檢測設備前覆核的情境。",
+        "sha256": "bc930090ee724556f7541d31b3255ccd9490b8ebe903eeb60fb70f14dc72307a",
+        "bytes": 94266,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "872887fc269463fa203cf3b330bca6741ee3a5bb838a94c8a286e1289df57c75",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 485,
+      "locale": "zh-hant",
+      "slug": "taiwan-manufacturing-ai-data-trade-secrets",
+      "target": "src/content/columns-zh/485-taiwan-manufacturing-ai-data-trade-secrets.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-manufacturing-ai-data-trade-secrets",
+      "sourceSha256": "252ee47525f2be6f5a3a463a019b1e6864c5878fd68e49f6e6c9c5bbb14a0858",
+      "bodySha256": "7fd8eb8b606a5b118902b4c9caa427b34181e8754fb0c15e192ceb725e221944",
+      "frontmatterPrefixSha256": "e39252d79c6c0518eb493e646ff175c670184ac059d1d340376f81c7e1ce517b",
+      "suffixSha256": "2d21ef891220235658ab3adb03574230d63fe663fdc8a1450a0ea2ac371c8128",
+      "original": {
+        "path": "outputs/column-media-20261010/images/485-taiwan-manufacturing-ai-data-trade-secrets.png",
+        "sha256": "8457d22105b4851552405f14902d521b221ab76af2093a3926584e9865d9d0fb",
+        "bytes": 1937897,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit the most recent generated data-room image. Change only the content displayed on the workstation monitor: replace the entire visible active screen area edge to edge with the same grayscale magnified semiconductor surface photograph. Remove every application toolbar, menu, sidebar, taskbar, icon, window border, glyph, letter and number from the screen so it is a pure full-screen image. Preserve the monitor body, laptop, table, keyboard, chair, glass partition, server cabinets, reflections, lighting, perspective, composition and all other pixels as closely as possible. No text, logos or watermarks anywhere. This remains a photorealistic fictional editorial image.",
+        "createdAt": "2026-10-09T22:54:15.269Z",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-7c70-7212-a82b-44a125272ac6/exec-bd91b525-2bb3-4634-981e-94ef7643b049.png",
+        "receiptPath": "work/column-media-20261010/receipts/485.json",
+        "receiptSha256": "b42afe24bca5059311cf5a51b47231c9fa039dff0f6eac20643e191cc37d9f54"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "8457d22105b4851552405f14902d521b221ab76af2093a3926584e9865d9d0fb",
+          "alt": "玻璃隔間前的螢幕顯示灰階檢測影像，隔間後方可見伺服器機櫃。",
+          "caption": "AI生成的虛構資料室場景，用於說明檢測資料的處理情境。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "8457d22105b4851552405f14902d521b221ab76af2093a3926584e9865d9d0fb",
+          "alt": "玻璃隔間前的螢幕顯示灰階檢測影像，隔間後方可見伺服器機櫃。",
+          "caption": "AI生成的虛構資料室場景，用於說明檢測資料的處理情境。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/485-taiwan-manufacturing-ai-data-trade-secrets/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/485-taiwan-manufacturing-ai-data-trade-secrets/featured-01.webp",
+        "alt": "玻璃隔間前的螢幕顯示灰階檢測影像，隔間後方可見伺服器機櫃。",
+        "caption": "AI生成的虛構資料室場景，用於說明檢測資料的處理情境。",
+        "sha256": "c7fb92b6b882030cdffe63d141929284227128a602bb23404810382dd343d7fa",
+        "bytes": 84836,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "13fc0f5fcee7cae0c6e52c21486610127eb7708108ee92fbf1a13af934d4b5b9",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 486,
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-development-model-data-code-rights",
+      "target": "src/content/columns-zh/486-taiwan-ai-development-model-data-code-rights.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-development-model-data-code-rights",
+      "sourceSha256": "149ccc52156726991a2f125ccdf814da01caa7b661a525de8cbb433941190877",
+      "bodySha256": "748032ecbf52a07e2d5debb3f0e47657462b866bdbd66f8de18ece181306be69",
+      "frontmatterPrefixSha256": "04c02d2176001bd42f2be8a2e7231bd0605893522fe4368f3f5c16b71ecee572",
+      "suffixSha256": "7b8c43e66b6ce28ac4339b8835b6528779b9c0f851d5fddca5eb982c87418512",
+      "original": {
+        "path": "outputs/column-media-20261010/images/486-taiwan-ai-development-model-data-code-rights.png",
+        "sha256": "c819e23046bee1204e243e7780c181b2561db97fc590286c57f716fcf309e7f7",
+        "bytes": 1926286,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit the most recent generated electronics-integration-bench photograph. Make one targeted correction: remove all lettering, numbers, printed labels, decals and logos from every visible hardware surface, especially the front panels of both compact computers and the vertical panel beside the enclosed camera fixture. Leave the ports, screws, grooves, cable connections and blank metal surfaces physically realistic; do not erase or change those functional parts. Preserve the technician's body and hands, all equipment geometry, binder, workbench, lighting, perspective and composition as closely as possible. No text, logos or watermark anywhere. This remains a photorealistic fictional editorial image.",
+        "createdAt": "2026-10-09T22:55:35.821Z",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-7c70-7212-a82b-44a125272ac6/exec-32632bb0-e4cb-41d5-8d45-599d3dbab1d3.png",
+        "receiptPath": "work/column-media-20261010/receipts/486.json",
+        "receiptSha256": "01a5a1b2a84740304506e11afccf4c6a98618d1e17616767bd92de43e4a67d32"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "c819e23046bee1204e243e7780c181b2561db97fc590286c57f716fcf309e7f7",
+          "alt": "工作台上放著兩台小型電腦與封閉式測試設備，一名人員正在檢查連接。",
+          "caption": "AI生成的虛構場景，呈現檢測系統交接與部署的情境。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "c819e23046bee1204e243e7780c181b2561db97fc590286c57f716fcf309e7f7",
+          "alt": "工作台上放著兩台小型電腦與封閉式測試設備，一名人員正在檢查連接。",
+          "caption": "AI生成的虛構場景，呈現檢測系統交接與部署的情境。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/486-taiwan-ai-development-model-data-code-rights/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/486-taiwan-ai-development-model-data-code-rights/featured-01.webp",
+        "alt": "工作台上放著兩台小型電腦與封閉式測試設備，一名人員正在檢查連接。",
+        "caption": "AI生成的虛構場景，呈現檢測系統交接與部署的情境。",
+        "sha256": "ae0fef31a52576f601994578bcc3ac872481bc9ea56e1c8987159c1f5d5902c1",
+        "bytes": 90870,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "ebb0db430dee2432fd9ae965a895c97ddbbde6314190e57d057b32ea18961243",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 487,
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-server-gpu-export-order-contract-controls",
+      "target": "src/content/columns-zh/487-taiwan-ai-server-gpu-export-order-contract-controls.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-server-gpu-export-order-contract-controls",
+      "sourceSha256": "074934d2908e4c1122dcc532e62ead9113471ac5f045acf66d5c876066c00b69",
+      "bodySha256": "37421b82eefcf4fc1553ce79a8e4bb90e2ced24893e060c685e9875dda359a04",
+      "frontmatterPrefixSha256": "589b725da5dd2b4f7a72aca33dce62c1c01448bbbdfd5313722a51c317c48a23",
+      "suffixSha256": "69d60ef9218870e4c2cd97105391bf7f02fbd6222e4ebb08146f1437aacd8172",
+      "original": {
+        "path": "outputs/column-media-20261010/images/487-taiwan-ai-server-gpu-export-order-contract-controls.png",
+        "sha256": "5c544e86711f7660cb76a511555bff4c109edc31dc71e89039b3e7cb5c59b2d1",
+        "bytes": 1952235,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit the most recent generated server-shipping-bay photograph into a fully unbranded fictional scene. Remove all lettering, numbers, logos, printed labels and decals everywhere, specifically the small mark at the top of the central server rack, the employee's hat and uniform patches, and labels on background shipping crates and equipment. Restore blank plausible surfaces in their place while keeping screws, hardware, mesh and packaging details. Close the plain black folder in the employee's hands so its covers are together and no pages are exposed, preserving a natural two-handed hold and downward gaze. Keep the employee's appearance, server rack, protective crate and foam, closed loading door, lighting, framing and all other objects unchanged. No text, logos or watermark.",
+        "createdAt": "2026-10-09T22:57:00.821Z",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-7c70-7212-a82b-44a125272ac6/exec-03a06f33-5c79-443b-bb13-9ad0dcd4e5e0.png",
+        "receiptPath": "work/column-media-20261010/receipts/487.json",
+        "receiptSha256": "e12f648febcc9cfa00a30c2753c57c4df5d929313f5ce212f477db35e9fee278"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "5c544e86711f7660cb76a511555bff4c109edc31dc71e89039b3e7cb5c59b2d1",
+          "alt": "物流區內，一座伺服器機櫃固定在運輸木箱中，旁邊的人員拿著資料夾。",
+          "caption": "AI生成的虛構出貨準備場景。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "5c544e86711f7660cb76a511555bff4c109edc31dc71e89039b3e7cb5c59b2d1",
+          "alt": "物流區內，一座伺服器機櫃固定在運輸木箱中，旁邊的人員拿著資料夾。",
+          "caption": "AI生成的虛構出貨準備場景。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/487-taiwan-ai-server-gpu-export-order-contract-controls/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/487-taiwan-ai-server-gpu-export-order-contract-controls/featured-01.webp",
+        "alt": "物流區內，一座伺服器機櫃固定在運輸木箱中，旁邊的人員拿著資料夾。",
+        "caption": "AI生成的虛構出貨準備場景。",
+        "sha256": "0c0599ffcc8221439e66dab16317e0202fcd09582b0579beb32a1d86b1cb15c7",
+        "bytes": 99696,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "30d27192a48de37ce7c6a13918676ec14d8ffcafef07766322b5fdf29a3b7fc3",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 488,
+      "locale": "zh-hant",
+      "slug": "taiwan-factory-vision-ai-worker-personal-data",
+      "target": "src/content/columns-zh/488-taiwan-factory-vision-ai-worker-personal-data.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-factory-vision-ai-worker-personal-data",
+      "sourceSha256": "f8ad4cabecd8d4e547ad4c4d7af70cdb33d70a392116fa0f903ef84a5b81ba1f",
+      "bodySha256": "7bf27a1475e94a0e1529f6cd239ab7a8a8f9fa1e69391014f98f61de7aa527a3",
+      "frontmatterPrefixSha256": "823350746922a37441e9172b7b8d135cb5af4e3eead2179276349dd29b320016",
+      "suffixSha256": "f9fb05405544ec4be3f71810bdef6dbfb4fbe5e9db19a3f4188d3e5ae8e98920",
+      "original": {
+        "path": "outputs/column-media-20261010/images/488-taiwan-factory-vision-ai-worker-personal-data.png",
+        "sha256": "1d2eab8ec35dfd1195f8593ab29020abc6b4661b06642830a0931133ed06a679",
+        "bytes": 2086675,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit this existing fictional editorial factory photograph to correct its framing for responsive article heroes. Reframe the same quiet factory aisle slightly wider and with substantially more visible ceiling and overhead structure above the workers. Place exactly one small believable ceiling safety camera on a rigid short mount beneath a realistic horizontal industrial ceiling beam. The center of the camera must be around 50 percent of the full image width and 29 percent of the full image height, well clear of all edges. Show enough ceiling above its support so the camera is clearly ceiling-mounted, not floating or hanging in a worker's face. Remove the previous high camera. Keep the two anonymous blue-uniformed workers speaking beside the same closed equipment cabinet, with natural rear three-quarter poses, realistic bodies and work shoes; place them somewhat smaller and lower in the central area, their heads below the camera's image position, leaving the camera unobstructed. Preserve the ordinary factory setting, diffuse natural light, muted blue and neutral gray palette, restrained yellow floor boundary, quiet documentary tone, and wide 16:9 landscape image. Essential crop requirement: both the safety camera and both workers' conversational upper bodies must remain clearly visible in a CENTERED 21:9 desktop crop that removes approximately the top and bottom 13 percent of this image, and in a CENTERED 4:3 mobile crop that trims its left and right sides. Prioritize plausible ceiling/beam geometry and this safe central composition. No second camera, no text, readable forms, numbers, logos, watermark, surveillance overlays, detection boxes or scores. This is a fictional staged scene, with no identifiable real person or facility.",
+        "createdAt": "2026-10-09T23:21:08.944870+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-9f75-7f80-b51c-629ee899c844/exec-70087a5c-8a06-41e7-9a10-efd1f8d8bc93.png",
+        "receiptPath": "work/column-media-20261010/receipts/488.json",
+        "receiptSha256": "96807d30f57b4b664f15494bc8a98b036e2c5861e262d654b28aeb466e4f6769"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "1d2eab8ec35dfd1195f8593ab29020abc6b4661b06642830a0931133ed06a679",
+          "alt": "工廠走道上，兩名人員在設備旁交談，天花板裝有一部攝影機。",
+          "caption": "AI生成的虛構場景，呈現工廠交接與影像拍攝的情境。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final-488-v2.json",
+          "reportSha256": "c8c9b3eaa9d20816a6d3927962bdf28fea32655fa47166336823200c977d6302"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "1d2eab8ec35dfd1195f8593ab29020abc6b4661b06642830a0931133ed06a679",
+          "alt": "工廠走道上，兩名人員在設備旁交談，天花板裝有一部攝影機。",
+          "caption": "AI生成的虛構場景，呈現工廠交接與影像拍攝的情境。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant-488-v2.json",
+          "reportSha256": "e1fbda3123cd4cc85fc751874029c19c52787b6f8f76a9acb644138fc19d6804"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/488-taiwan-factory-vision-ai-worker-personal-data/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/488-taiwan-factory-vision-ai-worker-personal-data/featured-01.webp",
+        "alt": "工廠走道上，兩名人員在設備旁交談，天花板裝有一部攝影機。",
+        "caption": "AI生成的虛構場景，呈現工廠交接與影像拍攝的情境。",
+        "sha256": "481facda219e406101ebc8a7802bfbaa88f00736f355d622c4a8ac4f06d0b239",
+        "bytes": 130034,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "16ec8c2b5777d214e2232713ea50662608cf43a7e740822c131217906792c3b2",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 489,
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-inspection-contract-liability",
+      "target": "src/content/columns-zh/489-taiwan-ai-inspection-contract-liability.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-inspection-contract-liability",
+      "sourceSha256": "9a17f8fe4185d3fd26bbb8c92ab49963ea89f23142e75e7f31c92df975f6f946",
+      "bodySha256": "96bc38c365a99d33395224588f5fc57e4a72daa4657024c9671f892c798bb96f",
+      "frontmatterPrefixSha256": "04a90b5a6ffeff6ef965f0e227368589e17fe0bd204294ef696c93cda777ccab",
+      "suffixSha256": "3922e27040cb738446613e3c99462df7feaafdc3679c9bf21fc43bc8cb84fa9f",
+      "original": {
+        "path": "outputs/column-media-20261010/images/489-taiwan-ai-inspection-contract-liability.png",
+        "sha256": "99d8b7bfebd5ee8dccbdcd970644fa88f640db9e962810b7081ed482048c36fc",
+        "bytes": 1868970,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph for a professional Taiwan law-firm column. Wide 16:9 horizontal composition; keep the essential action and objects inside the central 65% for mobile and card crops. Natural light, believable scale and materials, restrained neutral color, quiet observational style. A fictional staged scene, no recognizable real person or real facility. No lettering, numbers, logos, signatures, official stamps, flags, readable interfaces, legal symbols, gavels, justice scales, neon, holograms, robot brains, or decorative circuit patterns. Produce one finished image with no text overlay. A close, tactile editorial view of a semiconductor packaging quality-control bench. A realistic binocular inspection microscope stands beside one shallow black ESD tray holding a few small sealed rectangular chip packages, with another empty tray set apart. An anonymous gloved hand adjusts only the microscope focus knob, never touches a bare die. A closed inspection machine sits softly out of focus behind. No huge chip, exposed production wafer, fake glowing circuitry or visible microscopic defect asserted as fact. Neutral silver, black and restrained warm gray, balanced clinical task lighting.",
+        "createdAt": "2026-10-09T22:54:17.198222+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-9f75-7f80-b51c-629ee899c844/exec-c7476c64-03b1-4b57-8297-ec4d39fcc7e2.png",
+        "receiptPath": "work/column-media-20261010/receipts/489.json",
+        "receiptSha256": "bc84d66829aaf7a4f95e65eaa74e249c464082c4fb9741a025fa1b1f33016be1"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "99d8b7bfebd5ee8dccbdcd970644fa88f640db9e962810b7081ed482048c36fc",
+          "alt": "品管工作台上放著顯微鏡與晶片樣品托盤，一隻戴手套的手正在轉動顯微鏡的調焦旋鈕。",
+          "caption": "AI生成的虛構品管場景，呈現樣品複檢的情境。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "99d8b7bfebd5ee8dccbdcd970644fa88f640db9e962810b7081ed482048c36fc",
+          "alt": "品管工作台上放著顯微鏡與晶片樣品托盤，一隻戴手套的手正在轉動顯微鏡的調焦旋鈕。",
+          "caption": "AI生成的虛構品管場景，呈現樣品複檢的情境。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/489-taiwan-ai-inspection-contract-liability/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/489-taiwan-ai-inspection-contract-liability/featured-01.webp",
+        "alt": "品管工作台上放著顯微鏡與晶片樣品托盤，一隻戴手套的手正在轉動顯微鏡的調焦旋鈕。",
+        "caption": "AI生成的虛構品管場景，呈現樣品複檢的情境。",
+        "sha256": "5fe889e4e82bd5f6cd1dd9aa9dd43524250343ae6991c49a034044e8e56053a9",
+        "bytes": 71316,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "fe8c0bec2bae642339189a9cf0d567d25b2f728be750352b9d43809f0d42577c",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 490,
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-model-inspection-equipment-investment-tax-credit",
+      "target": "src/content/columns-zh/490-taiwan-ai-model-inspection-equipment-investment-tax-credit.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-model-inspection-equipment-investment-tax-credit",
+      "sourceSha256": "5be92cb701609d02e9c8335f998e01e4a68f4beab3216596d30d2d8cfbcec5a9",
+      "bodySha256": "3d2e26b870cab918f6e6b6ca24937775e3e728a3836a519c22b8baaeb81e8e5c",
+      "frontmatterPrefixSha256": "881daa49a6b721dee6425b57e4bffc3658bbd4b2cd42186afae45ff9bdd3eaa8",
+      "suffixSha256": "f778518467b5b629ee06fe75143b9f8a66ccd18685a152be36074205b0b71798",
+      "original": {
+        "path": "outputs/column-media-20261010/images/490-taiwan-ai-model-inspection-equipment-investment-tax-credit.png",
+        "sha256": "1b9f6cf8f3a3a1f15816cc39d983f136fde0f67ec53a665810e3d0ce21300d55",
+        "bytes": 2069645,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit this existing fictional editorial procurement-desk photograph with one targeted correction: remove all lettering, digits, symbols, pseudo-writing and logos from the calculator keys, every sheet of paper and all other objects. Keep the calculator display dark and blank; its keys should be plain unmarked charcoal buttons. Papers may retain only empty ruled lines and empty rectangular form boxes, with no text-like header marks. Preserve the three distinct paper groups, plum folder, compact computer enclosure, original desk arrangement, window, materials, daylight and wide 16:9 composition. Change no other content.",
+        "createdAt": "2026-10-09T22:56:41.164548+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-9f75-7f80-b51c-629ee899c844/exec-794c429f-9b34-4d74-bf0d-11c2e168f06d.png",
+        "receiptPath": "work/column-media-20261010/receipts/490.json",
+        "receiptSha256": "14f81d011851beb507d773122972d790bad85186b4ab92daaeb04a67682a109e"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "1b9f6cf8f3a3a1f15816cc39d983f136fde0f67ec53a665810e3d0ce21300d55",
+          "alt": "桌面上分開放著數組文件、計算機與小型電腦設備，旁邊有一個資料夾。",
+          "caption": "AI生成的虛構場景，呈現採購文件分項整理的情境。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "1b9f6cf8f3a3a1f15816cc39d983f136fde0f67ec53a665810e3d0ce21300d55",
+          "alt": "桌面上分開放著數組文件、計算機與小型電腦設備，旁邊有一個資料夾。",
+          "caption": "AI生成的虛構場景，呈現採購文件分項整理的情境。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/490-taiwan-ai-model-inspection-equipment-investment-tax-credit/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/490-taiwan-ai-model-inspection-equipment-investment-tax-credit/featured-01.webp",
+        "alt": "桌面上分開放著數組文件、計算機與小型電腦設備，旁邊有一個資料夾。",
+        "caption": "AI生成的虛構場景，呈現採購文件分項整理的情境。",
+        "sha256": "60b463782239f4666b2b8eba55be7e4e4b2e1c3fecbe5c43d61c54392994c55c",
+        "bytes": 108326,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "291b92ff1b511d044907ad72954c8ec8beac0d1aceeeb366b3eec4dcca2d68a3",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 491,
+      "locale": "zh-hant",
+      "slug": "taiwan-ai-project-unpaid-balance-delivery-evidence",
+      "target": "src/content/columns-zh/491-taiwan-ai-project-unpaid-balance-delivery-evidence.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-ai-project-unpaid-balance-delivery-evidence",
+      "sourceSha256": "a17392428a7074664576d7618e90386ff48aa477295e20c953de2232bdf939d6",
+      "bodySha256": "cba7d39d00818bfb6d7a672da0c36471594fb95a3052090239382ad5560b4b80",
+      "frontmatterPrefixSha256": "446577e4bee705a5f95031327c920926159a815735660e9d3d5b331b5f4dfecf",
+      "suffixSha256": "43f72cb661beb7f33bcf537fbce1218db200512aafcb52107bbabd1a7ea2d713",
+      "original": {
+        "path": "outputs/column-media-20261010/images/491-taiwan-ai-project-unpaid-balance-delivery-evidence.png",
+        "sha256": "15d70551e41d5c07498fbd0fb0db19c264f5bc6660ac90b4e8a14218eb2792e4",
+        "bytes": 1801783,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit this existing fictional editorial developer-desk photograph with one targeted correction: remove all tiny logos, lettering, numbers and symbol markings from the external SSD, paper report, books and any other object. The SSD should be a completely plain charcoal enclosure; the clipped report should contain only empty horizontal rules and no text-like headings. Preserve the laptop, SSD cable, report, open folder, empty chair, desk arrangement, warm afternoon light, colors, realistic textures and wide 16:9 framing. Change no other content. No readable text, watermark or interface.",
+        "createdAt": "2026-10-09T22:56:41.168722+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-9f75-7f80-b51c-629ee899c844/exec-19077eff-b382-46d2-ab79-758140d5bfcf.png",
+        "receiptPath": "work/column-media-20261010/receipts/491.json",
+        "receiptSha256": "cfd04e8e4b35d7fc2ac29c37e377fa5a8bc5ead38d4971ddae2b144295e790d9"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "15d70551e41d5c07498fbd0fb0db19c264f5bc6660ac90b4e8a14218eb2792e4",
+          "alt": "辦公桌上放著筆電、外接儲存裝置、報告與攤開的資料夾，後方是一張空椅子。",
+          "caption": "AI生成的虛構場景，呈現專案交付資料整理的情境。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "15d70551e41d5c07498fbd0fb0db19c264f5bc6660ac90b4e8a14218eb2792e4",
+          "alt": "辦公桌上放著筆電、外接儲存裝置、報告與攤開的資料夾，後方是一張空椅子。",
+          "caption": "AI生成的虛構場景，呈現專案交付資料整理的情境。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/491-taiwan-ai-project-unpaid-balance-delivery-evidence/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/491-taiwan-ai-project-unpaid-balance-delivery-evidence/featured-01.webp",
+        "alt": "辦公桌上放著筆電、外接儲存裝置、報告與攤開的資料夾，後方是一張空椅子。",
+        "caption": "AI生成的虛構場景，呈現專案交付資料整理的情境。",
+        "sha256": "d4ac5d34340e055a88b7a502fa53ff903a702f8fa6c105f9d2510f5665ecc200",
+        "bytes": 79028,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "b1ddecf1c3701661ba57b2f21cd09c195424fac940bbd073a7da5b1d9dc0e694",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 492,
+      "locale": "zh-hant",
+      "slug": "taiwan-semiconductor-ai-nstc-university-licensing",
+      "target": "src/content/columns-zh/492-taiwan-semiconductor-ai-nstc-university-licensing.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-semiconductor-ai-nstc-university-licensing",
+      "sourceSha256": "1354a6ec6023349b917378795b6831a068a4ba9637c6744fc6b101eb29288d8e",
+      "bodySha256": "9ee0d65144a71578f0e16cb24d19d65c971c7005436c302b3ed7c47fd270b09e",
+      "frontmatterPrefixSha256": "e7241384cf18d36a5c415571cbd2f0ca0e324c8175f02ced60361caee4f31cd2",
+      "suffixSha256": "6190275ed2a60ec17903a59d44b111d0bcf7b82b8dea98e3c769d62a15678f7f",
+      "original": {
+        "path": "outputs/column-media-20261010/images/492-taiwan-semiconductor-ai-nstc-university-licensing.png",
+        "sha256": "9a2520a9b2af3bac70dc26fc5fd6cb7068e1d2f4110615dd6233e0ee3c88f066",
+        "bytes": 2048915,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph for a professional Taiwan law-firm column. Wide 16:9 horizontal composition; keep the essential action and objects inside the central 65% for mobile and card crops. Natural light, believable scale and materials, restrained neutral color, quiet observational style. A fictional staged scene, no recognizable real person or real facility. No lettering, numbers, logos, signatures, official stamps, flags, readable interfaces, legal symbols, gavels, justice scales, neon, holograms, robot brains, or decorative circuit patterns. Produce one finished image with no text overlay. A university-style applied optics laboratory, small and believable. At a neat bench, one anonymous research engineer adjusts a compact unpowered machine-vision camera mount over a neutral metal test target, while another adult in ordinary business-casual clothing studies the fixture from the opposite side. No handshake or signing. A plain closed equipment case and neutral folders sit away from the test surface. Daylight through high windows with soft campus greenery, restrained cream and muted olive tones, realistic mounts and cables, no open wafers, lasers, university crest or identifiable institution.",
+        "createdAt": "2026-10-09T22:52:59.520908+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-c644-77f0-bae4-def2a3415003/exec-a553d10f-cba9-44f9-b023-eca3772ef927.png",
+        "receiptPath": "work/column-media-20261010/receipts/492.json",
+        "receiptSha256": "6442dc8968737227d294c4da2f5d5abc2f8d638eed9848edcd5e7df573f87f6c"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "9a2520a9b2af3bac70dc26fc5fd6cb7068e1d2f4110615dd6233e0ee3c88f066",
+          "alt": "實驗室內，兩名人員在工作台旁查看機器視覺測試設備。",
+          "caption": "AI生成的虛構實驗室場景，呈現產學合作中的技術討論。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "9a2520a9b2af3bac70dc26fc5fd6cb7068e1d2f4110615dd6233e0ee3c88f066",
+          "alt": "實驗室內，兩名人員在工作台旁查看機器視覺測試設備。",
+          "caption": "AI生成的虛構實驗室場景，呈現產學合作中的技術討論。",
+          "reviewer": "Independent AI editorial role: tseng-editor-zh-hant (manual role loading; authored none)",
+          "reportPath": "work/column-media-20261010/review-zh-hant.json",
+          "reportSha256": "d0387ea1798d06ed11405302ac8adaec6da6de6b7c9d96dbbc2502d0189d1939"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/492-taiwan-semiconductor-ai-nstc-university-licensing/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/492-taiwan-semiconductor-ai-nstc-university-licensing/featured-01.webp",
+        "alt": "實驗室內，兩名人員在工作台旁查看機器視覺測試設備。",
+        "caption": "AI生成的虛構實驗室場景，呈現產學合作中的技術討論。",
+        "sha256": "607ac43a6db64c4421a0547eaa30f70b790b9341cb1c6661ccb6f01ca35161b0",
+        "bytes": 99750,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "1a1fee60c629769db2eda3a734e92e9466e52b8cdc171a561147cdd9ca8e92b8",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 493,
+      "locale": "en",
+      "slug": "us-ai-chip-taiwan-packaging-capacity-prepayment-refund",
+      "target": "src/content/columns-en/493-us-ai-chip-taiwan-packaging-capacity-prepayment-refund.md",
+      "publicUrl": "https://tseng-law.com/en/columns/us-ai-chip-taiwan-packaging-capacity-prepayment-refund",
+      "sourceSha256": "8388b33dc7bb92ac4f89b37af3f983503bae58f7b93da0e4dadb67fa84928bf7",
+      "bodySha256": "a08a7cae2919a10f298b3bce9b618983602a38b7ba276620db02debcd56ccbf4",
+      "frontmatterPrefixSha256": "9e975c3d0b5abd79a7633888a07741b56f704a19e6ed5042671395e0bba09861",
+      "suffixSha256": "717bf7a5110b002b6fa88bfb4d5ceebfbbed5be3ffa249b223cb684fa2613019",
+      "original": {
+        "path": "outputs/column-media-20261010/images/493-us-ai-chip-taiwan-packaging-capacity-prepayment-refund.png",
+        "sha256": "14729772ac1cbc9438f27002bf6f58be88f1205d87bf831a6319ed611da7c911",
+        "bytes": 2037113,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph for a professional Taiwan law-firm column. Wide 16:9 horizontal composition; keep the essential action and objects inside the central 65% for mobile and card crops. Natural light, believable scale and materials, restrained neutral color, quiet observational style. A fictional staged scene, no recognizable real person or real facility. No lettering, numbers, logos, signatures, official stamps, flags, readable interfaces, legal symbols, gavels, justice scales, neon, holograms, robot brains, or decorative circuit patterns. Produce one finished image with no text overlay. A close editorial photograph inside a clean semiconductor packaging staging area. In the foreground, a realistic black ESD tray has several empty pockets and a small number of ordinary sealed rectangular chip packages seated correctly, not bare dies or ornamented circuit wafers. Behind it are orderly shelves with closed antistatic containers and an enclosed packaging workstation in soft focus. No staff, documents, clocks, labels, logos or shipping arrows. Low raking neutral light, graphite and soft blue-gray, realistic modest component scale. Preserve the tray shape within the central crop.",
+        "createdAt": "2026-10-09T22:53:40.766422+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-c644-77f0-bae4-def2a3415003/exec-4b457a14-5b96-49c3-aa5a-bd4960635de4.png",
+        "receiptPath": "work/column-media-20261010/receipts/493.json",
+        "receiptSha256": "d6bf73f22b88a0ca2d6d8c640c8d26ec8be36f557f4470542cc249dcc619a522"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "14729772ac1cbc9438f27002bf6f58be88f1205d87bf831a6319ed611da7c911",
+          "alt": "A black ESD tray holds a few packaged chips beside empty pockets, with enclosed storage in the background.",
+          "caption": "AI-generated fictional scene of a semiconductor packaging area.",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "14729772ac1cbc9438f27002bf6f58be88f1205d87bf831a6319ed611da7c911",
+          "alt": "A black ESD tray holds a few packaged chips beside empty pockets, with enclosed storage in the background.",
+          "caption": "AI-generated fictional scene of a semiconductor packaging area.",
+          "reviewer": "Independent AI editorial specialist, tseng-editor-en-us (manual role loading)",
+          "reportPath": "work/column-media-20261010/review-en-us.json",
+          "reportSha256": "7efa1a5ef9838a0fc1cbf0cdc7a6f228918334ad44dc1e567e392284ff54b15d"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/493-us-ai-chip-taiwan-packaging-capacity-prepayment-refund/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/493-us-ai-chip-taiwan-packaging-capacity-prepayment-refund/featured-01.webp",
+        "alt": "A black ESD tray holds a few packaged chips beside empty pockets, with enclosed storage in the background.",
+        "caption": "AI-generated fictional scene of a semiconductor packaging area.",
+        "sha256": "dbb6f05ca27afaf1e3d43cf7ff9950ac6aa8a79fef1d5daa49acc1268ce025ec",
+        "bytes": 96622,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "6ac24304d8c4c54cfa2a41e675a6849b8f6b68b9c5e34963e63f7fe4e0610831",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 494,
+      "locale": "en",
+      "slug": "us-buyer-taiwan-ai-chip-startup-investment-approval-closing",
+      "target": "src/content/columns-en/494-us-buyer-taiwan-ai-chip-startup-investment-approval-closing.md",
+      "publicUrl": "https://tseng-law.com/en/columns/us-buyer-taiwan-ai-chip-startup-investment-approval-closing",
+      "sourceSha256": "0a0dc7574349d6ae543a3059628f9555e1779e50e073fb26ef7ec286fc60c6a0",
+      "bodySha256": "683e18ec50a60f91da0655998c4c7cb54c7c3e3629d58a2e4e6217943e871158",
+      "frontmatterPrefixSha256": "ec191ff1951999781c5f35ea010fa6a15fe3c377303d208dad2ff003c139fdf6",
+      "suffixSha256": "03cda8f26217807770712a3494fd9b5d3b254bf906ece9cfdfd39a5212674494",
+      "original": {
+        "path": "outputs/column-media-20261010/images/494-us-buyer-taiwan-ai-chip-startup-investment-approval-closing.png",
+        "sha256": "7fa733dbb60a080cca02221406b91f875d45e9bfeb52a13171c8d7ccfa6b20d8",
+        "bytes": 1906324,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph for a professional Taiwan law-firm column. Wide 16:9 horizontal composition; keep the essential action and objects inside the central 65% for mobile and card crops. Natural light, believable scale and materials, restrained neutral color, quiet observational style. A fictional staged scene, no recognizable real person or real facility. No lettering, numbers, logos, signatures, official stamps, flags, readable interfaces, legal symbols, gavels, justice scales, neon, holograms, robot brains, or decorative circuit patterns. Produce one finished image with no text overlay. A daylight scene in a modest technology startup meeting room. Seen from above and slightly behind, two anonymous adults review separate plain folders and a large sheet containing only empty boxes connected by thin lines, no writing or percentages. A compact closed computing prototype sits on a shelf in the softly blurred background. Their hands are calmly comparing records, no handshake, signature, celebratory pose or money. Warm oak, pale gray walls and one restrained deep-plum chair. Professional but small-scale setting, not a grand law office or a real startup.",
+        "createdAt": "2026-10-09T22:54:24.340066+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-c644-77f0-bae4-def2a3415003/exec-58d2e5b1-8df0-407a-a0c3-a77f62109b49.png",
+        "receiptPath": "work/column-media-20261010/receipts/494.json",
+        "receiptSha256": "c22c99a382d80376e3486a171d40d59f29017b715cbb99d189b63373adbfc884"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "7fa733dbb60a080cca02221406b91f875d45e9bfeb52a13171c8d7ccfa6b20d8",
+          "alt": "Two people review folders and a sheet of connected blank boxes in a meeting room.",
+          "caption": "AI-generated fictional scene of an investment document review.",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "7fa733dbb60a080cca02221406b91f875d45e9bfeb52a13171c8d7ccfa6b20d8",
+          "alt": "Two people review folders and a sheet of connected blank boxes in a meeting room.",
+          "caption": "AI-generated fictional scene of an investment document review.",
+          "reviewer": "Independent AI editorial specialist, tseng-editor-en-us (manual role loading)",
+          "reportPath": "work/column-media-20261010/review-en-us.json",
+          "reportSha256": "7efa1a5ef9838a0fc1cbf0cdc7a6f228918334ad44dc1e567e392284ff54b15d"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/494-us-buyer-taiwan-ai-chip-startup-investment-approval-closing/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/494-us-buyer-taiwan-ai-chip-startup-investment-approval-closing/featured-01.webp",
+        "alt": "Two people review folders and a sheet of connected blank boxes in a meeting room.",
+        "caption": "AI-generated fictional scene of an investment document review.",
+        "sha256": "46624a1bb7d5ab8d30a83563d501447c2184e430bea6534f2c8ad26b4a96fef4",
+        "bytes": 72114,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "c9959262dab269b83500775fd3f47cfeaabf71070af628b4b140e21fbe805f7f",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 495,
+      "locale": "ja",
+      "slug": "taiwan-ai-poc-additional-testing-commercial-order-japanese",
+      "target": "src/content/columns-ja/495-taiwan-ai-poc-additional-testing-commercial-order-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-ai-poc-additional-testing-commercial-order-japanese",
+      "sourceSha256": "0c87876d9782110fd38e5583864534fd21b1664884225afb236636fabe118ab6",
+      "bodySha256": "fe55238ff66d8a3010f6086fbbfb866bd404184c4e5359922cdfeb8c5d6ea28f",
+      "frontmatterPrefixSha256": "f57ae37c9cd9f06df5d53935c35194214193f9d6e09b7cbfae572d3feaaddbf6",
+      "suffixSha256": "c0d591c287cb44448e715ab7c8ebc447efcfe31b88edcb69015c103c09237181",
+      "original": {
+        "path": "outputs/column-media-20261010/images/495-taiwan-ai-poc-additional-testing-commercial-order-japanese.png",
+        "sha256": "c10977093a36892ba784d186ed816e329df44ec922a83f3e6227df17be4263ee",
+        "bytes": 1830809,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph for a professional Taiwan law-firm column about preparing additional machine-vision tests. A fictional staged engineering bench, no recognizable real person or real facility. Wide 16:9 horizontal composition. Keep the camera, sample, visible hand and both trays fully inside the central 65% for mobile and card crops. Side three-quarter view of ONE small industrial inspection camera held on a rigid vertical stand above an open bench. Its lens points straight DOWN toward the tabletop. Directly beneath the lens, on precisely the same vertical axis, is one simple machined metal sample on a plain neutral mat inside a shallow tray. Make the unobstructed vertical camera-to-sample alignment visually obvious, with the lens hanging above the sample and an open air gap between them. Adjacent to this first tray, a second shallow tray contains different simple unbranded metal test samples. One anonymous technician is visible only from torso down at the edge of the scene, with a single visible hand placing the second tray beside the first in preparation for additional testing. Believable hand anatomy, realistic modest equipment scale, coherent mounts and cables. Natural daylight, soft neutral metal and cream palette, restrained quiet observational photography. This is a concept photograph of additional testing, not technical certification. No closed boxes, no inspection windows, no sideways camera, no extra camera, no readable monitors or interfaces, no lettering, numbers, logos, signatures, official documents, stamps, flags, legal symbols, gavels, justice scales, neon, holograms or decorative circuit patterns. One finished image with no text overlay.",
+        "createdAt": "2026-10-09T22:57:51.104646+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122dd-c644-77f0-bae4-def2a3415003/exec-3bc796f8-55bb-44fb-987d-2b945ab59f9c.png",
+        "receiptPath": "work/column-media-20261010/receipts/495.json",
+        "receiptSha256": "de7b98ee344b37e86f46b8c40a3ac4176ad7662f10208f98eeeff9366f54a3ec"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "c10977093a36892ba784d186ed816e329df44ec922a83f3e6227df17be4263ee",
+          "alt": "下向きの検査カメラの下に金属試料が置かれ、作業者が別の試料を載せたトレーを隣に添えています。",
+          "caption": "AIで生成した架空の場面で、異なる試料を用いた追加試験の準備を表しています。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "c10977093a36892ba784d186ed816e329df44ec922a83f3e6227df17be4263ee",
+          "alt": "下向きの検査カメラの下に金属試料が置かれ、作業者が別の試料を載せたトレーを隣に添えています。",
+          "caption": "AIで生成した架空の場面で、異なる試料を用いた追加試験の準備を表しています。",
+          "reviewer": "tseng-editor-ja independent media reviewer /root/media_review_lead/review_ja",
+          "reportPath": "work/column-media-20261010/review-ja.json",
+          "reportSha256": "373e78f63face65fa0651a71a379d93045e2a75ad3678395b35cf9d03b1b046e"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/495-taiwan-ai-poc-additional-testing-commercial-order-japanese/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/495-taiwan-ai-poc-additional-testing-commercial-order-japanese/featured-01.webp",
+        "alt": "下向きの検査カメラの下に金属試料が置かれ、作業者が別の試料を載せたトレーを隣に添えています。",
+        "caption": "AIで生成した架空の場面で、異なる試料を用いた追加試験の準備を表しています。",
+        "sha256": "3c43027b9135eb734c42b82e07d32f1940956f6fbf3201678fb1317cb1c824c6",
+        "bytes": 68246,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "794f13a4404c37defce98a71b340c9699aa7bcab3cb8ad1577890714262940b5",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 496,
+      "locale": "ja",
+      "slug": "taiwan-semiconductor-equipment-order-cancellation-costs-japanese",
+      "target": "src/content/columns-ja/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-semiconductor-equipment-order-cancellation-costs-japanese",
+      "sourceSha256": "bca4c14cbe9911483793a9ba839ee78d3cbafdbc9a6c0e9a707a8c92ce7e45d4",
+      "bodySha256": "e275bfd3b815d3a9fee7cb27cfbf548a1c9d4439e858d660afcb36361da70d66",
+      "frontmatterPrefixSha256": "d2c7bb40a10cd62a72c2ecf596da9d03e148632f89e489aee6fdacc0b12ab623",
+      "suffixSha256": "2c7a89f09fa9f8272c3f706fef4492ff772c150e24e743efdd7e3420bc77f473",
+      "original": {
+        "path": "outputs/column-media-20261010/images/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese.png",
+        "sha256": "c3ce0b5f46a6d15a1ed245ff6f1a0d3d130d83a58663634a85c8d7ddbe812b77",
+        "bytes": 2363864,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph for a professional Taiwan law-firm column. Wide 16:9 horizontal composition; keep the essential action and objects inside the central 65% for mobile and card crops. Natural light, believable scale and materials, restrained neutral color, quiet observational style. A fictional staged scene, no recognizable real person or real facility. No lettering, numbers, logos, signatures, official stamps, flags, readable interfaces, legal symbols, gavels, justice scales, neon, holograms, robot brains, or decorative circuit patterns. Produce one finished image with no text overlay. A low-angle close photograph in a precision-equipment workshop. A bespoke machined aluminum fixture with a plausible set of mounting holes rests in a fitted dark foam cradle on a trolley; a few standard sealed parts packages sit separately behind it. A plain folded protective cover suggests paused assembly. No dangerous operation, sharp moving tools, paperwork, price tags or readable text. Show realistic brushed metal and machining marks, no silicon wafer or fake PCB patterns. Pale workshop daylight, silver, warm gray and restrained dark green, quiet tangible emphasis on made-to-order material.",
+        "createdAt": "2026-10-09T22:52:53.153158+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122de-00f4-7dc1-9432-d290431bf91c/exec-a8427008-82d9-4cb6-827b-10541d4ec781.png",
+        "receiptPath": "work/column-media-20261010/receipts/496.json",
+        "receiptSha256": "4d8c93b63d4a7321fef7873a66e78f5bb7a189a8d42c2a9567c72dc8eec951e0"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "c3ce0b5f46a6d15a1ed245ff6f1a0d3d130d83a58663634a85c8d7ddbe812b77",
+          "alt": "作業場の台車に、金属製の治具が保護材に収められています。",
+          "caption": "特注部材の保管を描いた、AI生成による架空の場面です。",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "c3ce0b5f46a6d15a1ed245ff6f1a0d3d130d83a58663634a85c8d7ddbe812b77",
+          "alt": "作業場の台車に、金属製の治具が保護材に収められています。",
+          "caption": "特注部材の保管を描いた、AI生成による架空の場面です。",
+          "reviewer": "tseng-editor-ja independent media reviewer /root/media_review_lead/review_ja",
+          "reportPath": "work/column-media-20261010/review-ja.json",
+          "reportSha256": "373e78f63face65fa0651a71a379d93045e2a75ad3678395b35cf9d03b1b046e"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese/featured-01.webp",
+        "alt": "作業場の台車に、金属製の治具が保護材に収められています。",
+        "caption": "特注部材の保管を描いた、AI生成による架空の場面です。",
+        "sha256": "54b89eac1a285c4d3f30dc376cce3232189a017ecac2ccabcc3c930e80892c9a",
+        "bytes": 130568,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "d5afad7c0ed5b5126355586d79d278983177529e733b38d56a593bbc774cd8cb",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 497,
+      "locale": "ko",
+      "slug": "taiwan-equipment-engineer-contract-work-permit-korean",
+      "target": "src/content/columns/497-taiwan-equipment-engineer-contract-work-permit-korean.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-equipment-engineer-contract-work-permit-korean",
+      "sourceSha256": "e08c1088189d8c7d5b0753dd9ed46823819a0758d07ae681370f034b84f3ae04",
+      "bodySha256": "d61a01a26033cb6aeecf8a7bbb0444e41504bae0c06867366b7342afbf28919c",
+      "frontmatterPrefixSha256": "84757a7eafac10eb515a431d2d460516d109bf19749ddab7236fea1ee7a4fa18",
+      "suffixSha256": "83beb9a12365b04398b27970687d376707587f2238e1103da29f455cffebda8c",
+      "original": {
+        "path": "outputs/column-media-20261010/images/497-taiwan-equipment-engineer-contract-work-permit-korean.png",
+        "sha256": "8a90ed1049473f7bc2935aa06c7fa9072674503af7d879c6a115b1ec092b8c35",
+        "bytes": 2015822,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Photorealistic editorial concept photograph, wide 16:9 horizontal composition, for a Korean-language Taiwan semiconductor equipment installation travel article. A fictional engineer seen from behind pauses at a modern factory visitor reception desk, plain closed document folder in hand, compact wheeled service case beside them; beyond glass is the entrance to a clean production building, not an exposed fabrication floor. Reception is quiet and professional, no official document or immigration checkpoint. Focus on the person's paused arrival and the folder; equipment case remains inside central 65% safe area, generous breathing room suitable for responsive article hero crops. Natural morning daylight, warm pale stone, graphite, subtle sage, realistic scale and materials, understated documentary editorial photography. No identifiable real person, logos, lettering, badges with data, flags, passports, stamps, screens with text, lawyer costume, gavel, scales, neon or holograms. Fictional staged scene, never actual client or plant photography. Produce one finished image without any text.",
+        "createdAt": "2026-10-09T22:47:54.782661+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a11862-86d4-7eb1-84a1-6aad7acd2a61/exec-7bb7e86a-1c8b-4bba-b346-e36b5103fc43.png",
+        "receiptPath": "work/column-media-20261010/receipts/497.json",
+        "receiptSha256": "3fe4d5c1cc125be398e2cd858e72960247bc39b475010f5ee058344c7de9e53f"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "8a90ed1049473f7bc2935aa06c7fa9072674503af7d879c6a115b1ec092b8c35",
+          "alt": "서류 폴더를 든 사람이 바퀴 달린 장비 가방 옆에서 공장 방문자 접수대 앞에 서 있습니다.",
+          "caption": "AI로 생성한 가상의 공장 방문 접수 장면입니다.",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "8a90ed1049473f7bc2935aa06c7fa9072674503af7d879c6a115b1ec092b8c35",
+          "alt": "서류 폴더를 든 사람이 바퀴 달린 장비 가방 옆에서 공장 방문자 접수대 앞에 서 있습니다.",
+          "caption": "AI로 생성한 가상의 공장 방문 접수 장면입니다.",
+          "reviewer": "Independent AI Korean editorial/media reviewer, manually loaded tseng-editor-ko role; /root/media_review_lead/review_ko",
+          "reportPath": "work/column-media-20261010/review-ko.json",
+          "reportSha256": "f2e407ab9bf5a18faacba87c42bb5ab3a99ccc2a7bcd9f86b8d3660ec3e76b63"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/497-taiwan-equipment-engineer-contract-work-permit-korean/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/497-taiwan-equipment-engineer-contract-work-permit-korean/featured-01.webp",
+        "alt": "서류 폴더를 든 사람이 바퀴 달린 장비 가방 옆에서 공장 방문자 접수대 앞에 서 있습니다.",
+        "caption": "AI로 생성한 가상의 공장 방문 접수 장면입니다.",
+        "sha256": "03e1fe4a19bde77696171d7569f2eeae5e9f1a9ae68847abe71768ae02297ed4",
+        "bytes": 97900,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "3dfe37f209f012fca7dff0a3f7783b2ab32b58bef1f8406c4d51f06b8280969b",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 498,
+      "locale": "ko",
+      "slug": "taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean",
+      "target": "src/content/columns/498-taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean",
+      "sourceSha256": "1bc95a7f450ef53fdfd59c58781c2c8f82151ab2919304fdc36f3a872452cc16",
+      "bodySha256": "b5c18a1c31a9f5e72eac6533afc31835e3cc36c9b73789b9d3dd880f97e92d81",
+      "frontmatterPrefixSha256": "4ca3c106e29293f86636fa3e22dccca58f425d7535b9d9e26af9a70f7fc2da58",
+      "suffixSha256": "d97fca17770b99564094158b44a6d192f1dbb86f7e181770bfc2253f112ce63b",
+      "original": {
+        "path": "outputs/column-media-20261010/images/498-taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean.png",
+        "sha256": "99fc7ed0a9810a37378f56a31009cacb9512c33b7cbfecccc88246fe27ff311f",
+        "bytes": 2024303,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit this supplied fictional industrial-software demonstration photograph with one targeted cleanup: remove every equipment brand mark, logo, letter, number and all interface/text details on the monitor and any visible equipment. The right monitor must become an evenly dark matte charcoal screen, with no graphics or text. Replace tiny equipment labels with plain uninterrupted material matching their surface. Preserve the three adults, their anatomy and pose, the enclosed demonstration unit, meeting table, two laptops and closed folders, architecture, color, lighting, camera perspective and wide horizontal composition exactly. Do not add anything. One finished photorealistic image with no text or branding anywhere.",
+        "createdAt": "2026-10-09T22:54:20.525788+00:00",
+        "sourcePath": "/Users/son7/.codex/generated_images/01a122de-00f4-7dc1-9432-d290431bf91c/exec-56626e7f-2e27-4a3d-8a66-3331d600c94e.png",
+        "receiptPath": "work/column-media-20261010/receipts/498.json",
+        "receiptSha256": "1a79b5252ee43d989ba3c3ddd997b93b03aa3bc1df741923298de9df455de9a5"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "99fc7ed0a9810a37378f56a31009cacb9512c33b7cbfecccc88246fe27ff311f",
+          "alt": "공장 시연실에서 세 사람이 검사 장비를 살펴보고 있으며, 회의 탁자에는 노트북과 자료 폴더가 놓여 있습니다.",
+          "caption": "AI로 생성한 가상 장면으로, 검사 장비의 영업·지원 협의를 표현했습니다.",
+          "reviewer": "Independent AI final reviewer: manually loaded tseng-editor-final; /root/media_review_lead",
+          "reportPath": "work/column-media-20261010/review-final.json",
+          "reportSha256": "a09067a8ce4a4b7befd319ff8487124b635655ab4673ae2990e9eda056fd9b00"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "99fc7ed0a9810a37378f56a31009cacb9512c33b7cbfecccc88246fe27ff311f",
+          "alt": "공장 시연실에서 세 사람이 검사 장비를 살펴보고 있으며, 회의 탁자에는 노트북과 자료 폴더가 놓여 있습니다.",
+          "caption": "AI로 생성한 가상 장면으로, 검사 장비의 영업·지원 협의를 표현했습니다.",
+          "reviewer": "Independent AI Korean editorial/media reviewer, manually loaded tseng-editor-ko role; /root/media_review_lead/review_ko",
+          "reportPath": "work/column-media-20261010/review-ko.json",
+          "reportSha256": "f2e407ab9bf5a18faacba87c42bb5ab3a99ccc2a7bcd9f86b8d3660ec3e76b63"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/ai-semiconductor-20261010/498-taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean/featured-01.webp",
+        "hero": "/images/blog/ai-semiconductor-20261010/498-taiwan-manufacturing-ai-distributor-direct-sales-pricing-korean/featured-01.webp",
+        "alt": "공장 시연실에서 세 사람이 검사 장비를 살펴보고 있으며, 회의 탁자에는 노트북과 자료 폴더가 놓여 있습니다.",
+        "caption": "AI로 생성한 가상 장면으로, 검사 장비의 영업·지원 협의를 표현했습니다.",
+        "sha256": "869641517af4088b6470eba2747050091b9357ea152b01b11d0d1cfb1e3ed462",
+        "bytes": 105786,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "4ce8aab97ab99bd4c6df727baa9654fce64a65e161c7497a7261ff716e446308",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    }
+  ],
+  "repairHistory": [
+    {
+      "id": 488,
+      "stagedAt": "2026-10-09T23:24:37.669Z",
+      "reason": "Keep the surveillance camera visible in the existing desktop 21:9 hero crop",
+      "previousOriginalSha256": "80cf25b709dab28352a9904c9c746faf54e82fec3d3fc44dd38748fefab606e6",
+      "previousWebpSha256": "22ba8c6a10d9340f51d0e8a60a3f27934ed936677c7b69fa8abdcd62b8fe1014",
+      "preservedEvidence": "work/column-media-20261010/integration-repair-488-baseline/snapshot.json",
+      "reviewManifestPath": "work/column-media-20261010/review-manifest-v2.json",
+      "reviewManifestSha256": "383c3b6fd1f5b19c47806ffcb77a00d7c64fe7f8270095608d705161e25b7c38"
+    }
+  ]
+}

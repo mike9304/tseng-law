@@ -10,6 +10,9 @@ topic: "company"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/485-taiwan-manufacturing-ai-data-trade-secrets/featured-01.webp"
+featured_image_alt: "玻璃隔間前的螢幕顯示灰階檢測影像，隔間後方可見伺服器機櫃。"
+featured_image_caption: "AI生成的虛構資料室場景，用於說明檢測資料的處理情境。"
 ---
 
 一張晶圓缺陷影像，可能同時帶著批次、機台與製程參數。接收者把這些資訊放在一起，就可能辨認出未公開的製造條件。刪去客戶名稱，只處理了資料的一部分，尚不足以判斷整份檔案能否交給外部 AI。

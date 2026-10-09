@@ -10,6 +10,9 @@ topic: "litigation"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/489-taiwan-ai-inspection-contract-liability/featured-01.webp"
+featured_image_alt: "品管工作台上放著顯微鏡與晶片樣品托盤，一隻戴手套的手正在轉動顯微鏡的調焦旋鈕。"
+featured_image_caption: "AI生成的虛構品管場景，呈現樣品複檢的情境。"
 ---
 
 假設供應商承諾 AI 檢測「辨識準確率達 99%」，晶圓廠驗收時，這個數字可能指全部樣本判斷正確的比例，也可能指特定缺陷被檢出的比例。兩種算法回答的問題不同，對瑕疵漏檢的容忍程度也可能不同。這裡的 99% 僅為說明用的假設；契約若沒寫測試樣本、缺陷種類及計算方式，雙方即使都在談同一個數字，也未必約定了同一種性能。

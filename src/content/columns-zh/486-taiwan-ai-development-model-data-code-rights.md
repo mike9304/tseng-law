@@ -10,6 +10,9 @@ topic: "company"
 tags: ["semiconductor","artificial-intelligence"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/ai-semiconductor-20261010/486-taiwan-ai-development-model-data-code-rights/featured-01.webp"
+featured_image_alt: "工作台上放著兩台小型電腦與封閉式測試設備，一名人員正在檢查連接。"
+featured_image_caption: "AI生成的虛構場景，呈現檢測系統交接與部署的情境。"
 ---
 
 檢測 AI 若要搬到第二座廠區，工廠需要的不只是原來那組模型檔案。另一廠區是否在授權範圍內，能否用新影像再訓練，以及接手廠商能不能修改程式，都會影響搬遷能否進行。這些用途，有的涉及開發商自己的成果，有的則要回頭看第三方的模型與軟體授權。

@@ -1,9 +1,9 @@
 ---
-title: "Prepaying for Taiwan Advanced Packaging: Capacity, Delivery Dates and Refunds"
+title: "Prepaying a Taiwan packaging supplier: what happens if the slot slips?"
 seoTitle: "Taiwan Packaging Prepayments and Refunds"
-summary: "For US AI-chip buyers reserving Taiwan packaging capacity: define the production commitment, payment credits, delay remedies and refund terms before paying."
+summary: "A Taiwan packaging prepayment may reserve a production slot without fixing a delivery date. The contract should explain what happens to the money if work slips."
 published: "2026-10-09"
-lastmod: "2026-10-09"
+lastmod: "2026-10-10"
 date_display: "October 9, 2026"
 read_time: "6 min read"
 categories: ["Taiwan Legal Information"]
@@ -13,56 +13,45 @@ audience: ["en"]
 author: "legal-ai-assistant"
 ---
 
+A Taiwan supplier’s promise to reserve packaging capacity can leave the shipment date for tested chips unsettled. A US AI-chip developer may be paying for a place in the production schedule while still negotiating the commitments on which its launch depends.
 
-A reservation for equipment time, a committed production start and a delivery date for tested chips describe different promises. Before a US AI-chip developer prepays a Taiwan packaging supplier, the agreement should identify which promise the payment secures. A launch schedule built around finished chips needs more detail than a monthly capacity allocation.
+If the supplier has promised only to make capacity available, a missed launch date may say little about whether it has broken that promise.
 
-The supplier’s Taiwan address does not by itself make Taiwan contract law applicable. [Article 20 of Taiwan’s Choice of Law Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=B0000007) starts with the parties’ choice of law and, without an effective choice, turns to the closest connection. The Civil Code rules below matter where Taiwan law governs the relevant obligation.
+## What the supplier is committing to
 
-## Define the capacity that can actually be used
+Package type, production site, process, quantity, allocation period and qualification requirements define the capacity the supplier is offering. Leaving those details to a later purchase order creates uncertainty if the supplier remains free to decline that order.
 
-The reservation schedule should connect the commercial allocation to the buyer’s product: package type, production site, relevant process, quantity, allocation period and qualification requirements. A capacity commitment is difficult to evaluate if the contract leaves those details to a later purchase order that the supplier can decline.
+There are further steps between access to equipment and delivery of finished chips. A production start depends on dies, substrates and approved technical files arriving when needed, so the agreement needs to identify who supplies them and what happens if they arrive late. Finished output requires agreed test criteria and an acceptance procedure. The parties can attach binding dates to those commitments, but a monthly allocation alone does not establish them. A changed process or replacement site raises a related question: whether the buyer must qualify it again and who bears that cost.
 
-Identify the entity accepting the prepayment and the entity promising performance. If packaging or testing will be subcontracted, the agreement should allocate responsibility for securing that work and dealing with a missed subcontractor slot. A group logo or a reference to an approved site does not explain who owes the buyer a refund.
+Responsibility can become harder to trace when more than one company performs the work. The entity collecting the prepayment may differ from the one promising packaging or testing. If work will be subcontracted, the buyer needs an agreement identifying who secures that capacity, deals with a missed subcontractor slot and owes any refund. A group logo on the quotation does not resolve those questions.
 
-Check how the agreement handles the inputs needed to use the slot. Who supplies the dies, substrates and approved technical files? What happens if one arrives late? If the supplier changes the process or moves the work to another site, does the buyer have to qualify it again, and who bears that cost?
+These are negotiated commitments. Their effect also depends on which document prevails: a reservation schedule can be undermined by conflicting quotation or purchase terms. The same applies to a forecast if the documents leave unclear when it becomes binding, who can revise it or how long the buyer has to respond.
 
-These are matters to negotiate. They should not be presented as rights Taiwan law automatically supplies. The schedule can distinguish milestones such as:
+## Where the money goes when work stops
 
-| Commitment | Detail to settle in writing |
-|---|---|
-| Reserved capacity | The period, quantity and conditions for access |
-| Production start | Required inputs and a binding start date, if agreed |
-| Finished output | Test criteria, acceptance procedure and delivery commitment |
+The word “deposit” can conceal several different arrangements. Money might pay for the reservation itself, reduce the price of future orders or serve another agreed purpose. A buyer expecting invoice credits needs to know when they are applied, whether unused credits expire and what happens to the balance if the supplier cannot provide the capacity.
 
-Check which document prevails when the reservation schedule, quotation and purchase terms disagree. Record whether a forecast becomes binding, who may revise it and when the buyer must respond.
+If work stops after some invoices have been issued, the parties can start with the amount prepaid and account for credits already used, any earned reservation fee and proposed cancellation charges. That calculation reveals both the remaining balance and any disputed deductions. There is still a practical difference between returning the balance in cash and offering credit against future orders. Credit has limited value to a buyer ending the relationship.
 
-## Follow the prepayment through the agreement
+Buyer cancellation, supplier delay, qualification failure and termination after a prolonged interruption need not produce the same result. A negotiated refund clause can give each event its own trigger, calculation and payment date. Those terms should be settled alongside the damages provisions, because the agreement may treat repayment of unused money and compensation for delay differently.
 
-The payment clause should show whether money purchases a reservation service, pays part of future orders, or serves another agreed purpose. Specify when a credit appears on an invoice, whether unused credits expire and what happens to the balance if the supplier cannot provide the reserved capacity.
+Taiwan contract law is relevant only if it governs the obligation. The supplier’s Taiwan address does not decide that issue. [Article 20 of Taiwan’s Choice of Law Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=B0000007) starts with the parties’ choice of law and, without an effective choice, turns to the closest connection.
 
-Ask for separate treatment of buyer cancellation, supplier delay, qualification failure and termination after a prolonged interruption. Those events need not have the same financial consequences. If a refund is negotiated, state its trigger, calculation and payment date; a credit usable only against future orders may be of little use after the relationship ends.
+Where Taiwan law applies, [Civil Code Article 250](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=250) generally treats an agreed payment for breach as the total damages for the relevant nonperformance unless the parties agree otherwise. [Article 252](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=252) permits a court to reduce an excessive contractual penalty. A delay payment therefore needs to be read together with the refund clause and damages cap. The parties can negotiate whether the cap covers repayment of unused prepayments and whether the delay payment is exclusive compensation for delay; neither exclusion arises automatically under these provisions.
 
-Before paying, ask the supplier to reconcile a hypothetical partial-performance scenario: the amount prepaid, credits already applied to invoices, any earned reservation fee, proposed cancellation charges and the remaining balance. Identify which deductions are agreed and which remain disputed. Then state whether that balance would be returned in cash or carried forward. This exposes gaps that the word “deposit” alone leaves unresolved.
+A “nonrefundable” label also has to be read in context. [Article 247-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=247-1) can invalidate specified preformulated terms intended for repeated use when they are manifestly unfair in the circumstances. It does not make every reservation fee or liability limit invalid.
 
-Taiwan law also distinguishes agreed remedies. Under [Civil Code Article 250](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=250), an agreed payment for breach is generally treated as the total damages for the relevant nonperformance unless the parties agree otherwise. [Article 252](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=252) permits a court to reduce an excessive contractual penalty. A buyer should therefore clarify how delay payments, refunds and a damages cap interact, rather than assume every amount is recoverable cumulatively. Negotiate expressly whether repayment of an unused prepayment falls within the damages cap and whether an agreed delay payment is the exclusive compensation for delay. Those are proposed contract terms, not automatic exclusions supplied by law.
+## A missed date and the decision to walk away
 
-Nor does the phrase “nonrefundable” end every inquiry. [Article 247-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=247-1) can invalidate specified preformulated terms intended for repeated use where they are manifestly unfair in the circumstances. That is a conditional rule, not a finding that every reservation fee or limitation of liability is invalid.
+A binding performance date makes it easier to establish when an obligation is late. [Civil Code Article 229](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229) distinguishes fixed deadlines from obligations for which a demand is needed. Even then, delay liability depends on responsibility: [Article 230](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230) excludes it where nonperformance results from a cause for which the debtor is not responsible. A supplier’s explanation, the agreed allocation of risk and any notice requirements all bear on a claim.
 
-## When the reserved slot slips
+Under [Article 254](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=254), the party facing delayed performance may give a reasonable period for performance and rescind if that period passes without performance. [Article 255](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=255) permits rescission without that demand where performance at the specified time is necessary to achieve the contract’s purpose, as established by the contract’s nature or the parties’ expressed intention. A launch date kept only in the buyer’s internal plan does not, by itself, establish that exception.
 
-A binding date helps identify when performance is late. [Civil Code Article 229](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229) distinguishes obligations with a fixed deadline from those for which a demand is needed. Responsibility still matters: [Article 230](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230) excludes delay liability where nonperformance is attributable to a cause for which the debtor is not responsible. Review the cause, contractual allocation of risk and any notice requirements before asserting breach.
+After valid rescission, [Article 259](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=259) provides for restoration of what the parties received, subject to a different statutory or contractual arrangement. A buyer seeking its money back thus needs an identified contractual or legal basis. A missed forecast alone does not establish a right to recover the whole prepayment.
 
-Ending the contract involves another step. Under [Article 254](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=254), a party facing delayed performance may set a reasonable period for performance and rescind if it is not met. [Article 255](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=255) allows rescission without that demand where timely performance is necessary to achieve the contract’s purpose, as established by its nature or the parties’ expressed intention. A launch date appearing only in the buyer’s internal plan does not, by itself, establish that exception.
+The records needed to assess that claim are also useful when deciding whether to accept another slot. Signed agreements, incorporated terms, accepted orders, payment entries and successive allocation schedules show what changed; the technical-readiness record helps distinguish unavailable supplier capacity from missing customer inputs. If the parties agree to move production, the new schedule should say whether it changes timing alone or also settles the earlier delay, the prepayment balance and any accrued claims.
 
-If the contract is validly rescinded, [Article 259](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=259) provides for restoration of what the parties received, subject to a different statutory or contractual arrangement. A refund request therefore needs an identified contractual or legal basis; a missed forecast is not automatically a right to recover the entire prepayment.
-
-## Preserve the allocation record before renegotiating
-
-Keep the signed agreement, incorporated terms, payment ledger, accepted orders and successive allocation schedules together. Preserve the technical-readiness record too. It can distinguish a supplier’s unavailable slot from a delay caused by missing customer inputs.
-
-When agreeing to a replacement slot, address the original prepayment and any accrued claims expressly. A revised delivery schedule should make clear whether it changes only the timing or also settles the financial consequences of the earlier delay.
-
-To discuss the Taiwan-law issues, [contact the firm](https://tseng-law.com/en/contact) with a nonconfidential description of the transaction, whether payment has been made and the next deadline. Keep chip designs, trade secrets, banking details and identity documents out of the initial inquiry; arrange document delivery after the attorney confirms how to proceed.
+For a [Taiwan-law consultation](https://tseng-law.com/en/contact), an initial inquiry can describe the transaction, whether payment has been made and the next deadline. Keep chip designs, trade secrets, banking details and identity documents out of that inquiry; arrange document delivery with the attorney.
 
 ## Sources and review date
 

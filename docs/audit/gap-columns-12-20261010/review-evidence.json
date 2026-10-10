@@ -1,0 +1,887 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-10T02:28:51.406Z",
+  "status": "PRE_INTEGRATION_REVIEWS_PASS_PRODUCT_COPY_RECORDED",
+  "scope": "12 distinct Taiwan-law articles for four markets and their 12 generated hero images.",
+  "baselineCommit": "0a63d2591b64c3ddba41af56b81b9a5d26e5968b",
+  "publicationDate": "2026-10-10",
+  "reviewIdentity": "AI language specialists, an independent AI legal chair and independent AI visual reviewers. These records do not claim human native-speaker or licensed-lawyer certification.",
+  "separation": "Article authors did not provide their own independent locale or final legal approval. The visual reviewer did not generate the images.",
+  "generation": {
+    "tool": "Built-in image generation",
+    "actualBackendModel": null,
+    "modelNote": "No backend model identifier was observable; none is inferred."
+  },
+  "transformation": {
+    "tool": "sharp",
+    "version": "0.33.5",
+    "fit": "cover",
+    "position": "centre",
+    "width": 1600,
+    "height": 900,
+    "quality": 82,
+    "effort": 6,
+    "originalPngsPreserved": true
+  },
+  "evidenceLimits": [
+    "This snapshot records prior source, locale, legal and image/crop reviews and byte-identical integration.",
+    "Actual product-page review, full tests, clean build, deployment and fresh public readback are separate required gates. This audit does not claim they have occurred."
+  ],
+  "normalizationMap": [
+    {
+      "privateField": "draft.path",
+      "publishedField": "entries[].sourcePath",
+      "rule": "Use the repository-relative integrated article path; exact source bytes and SHA-256 are unchanged."
+    },
+    {
+      "privateField": "originalPath and generated sourcePath",
+      "publishedField": "entries[].originalPngSha256 and originalPngBytes",
+      "rule": "Omit private filesystem and generation locations; retain original-byte identity."
+    },
+    {
+      "privateField": "review and source-ledger paths",
+      "publishedField": "evidenceRecords[].id",
+      "rule": "Assign a neutral evidence identifier and preserve exact original report SHA-256 and size."
+    },
+    {
+      "privateField": "temporary media URLs, generation run identifiers, network hosts and accounts",
+      "publishedField": null,
+      "rule": "Not copied. Original private work reports remain unmodified."
+    }
+  ],
+  "articles": [
+    {
+      "id": 502,
+      "locale": "zh-hant",
+      "slug": "limited-company-shareholder-exit-transfer-taiwan",
+      "title": "公司繼續營業，股東想退出：出資轉讓的價款、同意與交接",
+      "sourcePath": "src/content/columns-zh/502-limited-company-shareholder-exit-transfer-taiwan.md",
+      "sourceSha256": "f32be771cf8ad4dc8ae6996ca9319bc32ef1a46f2d03f25d26100db0fdd462e3",
+      "sourceBytes": 8460,
+      "draftByteIdentical": true,
+      "bodySha256": "1bbe969725d2d94e73d2cdeeb6016a4dce2e33ce7946f0f6f7c018f243418f53",
+      "imagePath": "/images/blog/gap-columns-20261010/502-limited-company-shareholder-exit-transfer-taiwan.webp",
+      "imageSha256": "ec9804f040f4aac06897ed7d6981f271cc85a008bdc36e12989da934327feff5",
+      "imageBytes": 111036,
+      "originalPngSha256": "29d96f709d98fb0b6cadacf4a25cd545bba260d0e7fbb1dcb0a29670efb7dcb9",
+      "originalPngBytes": 2187536,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "兩人在辦公室桌旁一起查看資料夾中的文件。",
+      "imageCaption": "AI 生成示意圖：股東討論出資轉讓安排，非實際個案。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-001"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-004"
+      ],
+      "imageReceiptEvidence": "evidence-005",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/limited-company-shareholder-exit-transfer-taiwan",
+      "searchQuery": "公司繼續營業，股東想退出：出資轉讓的價款、同意與交接"
+    },
+    {
+      "id": 503,
+      "locale": "zh-hant",
+      "slug": "parent-capacity-guardianship-assistance-authority-taiwan",
+      "title": "父母難以表達意思時，子女能代簽哪些文件？",
+      "sourcePath": "src/content/columns-zh/503-parent-capacity-guardianship-assistance-authority-taiwan.md",
+      "sourceSha256": "330091b2ba825856c5ac07c5005c037f980f838c4909f55b343d32d5d1692f33",
+      "sourceBytes": 9583,
+      "draftByteIdentical": true,
+      "bodySha256": "f7175d840181081e30cf5632b452f11774a090e4d655807dbfbbe2a2890b4234",
+      "imagePath": "/images/blog/gap-columns-20261010/503-parent-capacity-guardianship-assistance-authority-taiwan.webp",
+      "imageSha256": "12facc44bea5b2d950f5954d6df861daa0f2cfff525c2ef65499f159f048c518",
+      "imageBytes": 112168,
+      "originalPngSha256": "9bc7ad71eb1c05ad3b218c9f447dc158bd73bc197c9ae9a0c37bd05287f80349",
+      "originalPngBytes": 2157616,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "年長女性與成年女性在家中桌旁一起討論文件。",
+      "imageCaption": "AI 生成示意圖：家人共同討論事務安排，非實際個案，亦不表示已取得代理權或監護權。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-001"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-006",
+        "evidence-007"
+      ],
+      "imageReceiptEvidence": "evidence-008",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/parent-capacity-guardianship-assistance-authority-taiwan",
+      "searchQuery": "父母難以表達意思時，子女能代簽哪些文件？"
+    },
+    {
+      "id": 504,
+      "locale": "zh-hant",
+      "slug": "ai-product-open-source-license-delivery-taiwan",
+      "title": "AI 產品要交付了，開源套件的授權文件誰來準備？",
+      "sourcePath": "src/content/columns-zh/504-ai-product-open-source-license-delivery-taiwan.md",
+      "sourceSha256": "ff0bded5d5880004dc96e53431cf892a43dc2310de938d93e71a9674ce4c0190",
+      "sourceBytes": 8270,
+      "draftByteIdentical": true,
+      "bodySha256": "e69f75275c1fa5d70536cf1deccfc343441145b532e7ab8e784f8df4c6837400",
+      "imagePath": "/images/blog/gap-columns-20261010/504-ai-product-open-source-license-delivery-taiwan.webp",
+      "imageSha256": "37f3d3f3cb75ab26f9526cc879bf49004e2e5cc63c7a3877b4f9ec17f82a4280",
+      "imageBytes": 89068,
+      "originalPngSha256": "b7086b78adf4d98eaaaefdbebc7046bdc812a8f03fe23ee2f2c7fc1150570ed0",
+      "originalPngBytes": 1923676,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "工程人員在工作桌上整理小型運算裝置、筆電與文件。",
+      "imageCaption": "AI 生成示意圖：產品與相關文件一併交付的情境，非實際產品或授權證明。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-001"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-004"
+      ],
+      "imageReceiptEvidence": "evidence-009",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/ai-product-open-source-license-delivery-taiwan",
+      "searchQuery": "AI 產品要交付了，開源套件的授權文件誰來準備？"
+    },
+    {
+      "id": 505,
+      "locale": "en",
+      "slug": "taiwan-supplier-return-molds-test-fixtures",
+      "title": "Getting Molds and Test Fixtures Back From a Taiwan Supplier",
+      "sourcePath": "src/content/columns-en/505-taiwan-supplier-return-molds-test-fixtures.md",
+      "sourceSha256": "f04cfd1d5afb769a7249999b40731bda1263001130695b9f827c04f5a660a134",
+      "sourceBytes": 9668,
+      "draftByteIdentical": true,
+      "bodySha256": "a6406b6c4891b34c4832fcb27e7557a6406fb1d0f0321e497258b0bcadd7ab69",
+      "imagePath": "/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp",
+      "imageSha256": "eb85ddd893fea4e6208c6c53bb4c428e3e6b583a6706ec55671cd14e98bce446",
+      "imageBytes": 125644,
+      "originalPngSha256": "398581b826c78a66a4eaf30cd031dfe40dc91ac44ef42f61f7415e443e521523",
+      "originalPngBytes": 2290291,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "A steel production mold and a compact test fixture arranged for an inventory check at an industrial packing bench.",
+      "imageCaption": "AI-generated illustration of a fictional equipment inventory; it does not depict an actual supplier or dispute.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-010"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-011",
+        "evidence-012",
+        "evidence-013"
+      ],
+      "imageReceiptEvidence": "evidence-014",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-supplier-return-molds-test-fixtures",
+      "searchQuery": "Getting Molds and Test Fixtures Back From a Taiwan Supplier"
+    },
+    {
+      "id": 506,
+      "locale": "en",
+      "slug": "taiwan-defective-shipment-inspection-notice",
+      "title": "When a Taiwan Shipment Fails Inspection",
+      "sourcePath": "src/content/columns-en/506-taiwan-defective-shipment-inspection-notice.md",
+      "sourceSha256": "c8bf1bf38299ef05f0418f6422a487202d6b463d626e3c8923379a14cb5c17ee",
+      "sourceBytes": 9904,
+      "draftByteIdentical": true,
+      "bodySha256": "2b9e49d3bc25b13bb57ee48d30229f7472b515c638ea111d8be88b4712bb4fb1",
+      "imagePath": "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+      "imageSha256": "2e94445745c56720e779170cfcc3f6d6ecbdaa663a4bbbbc163fd98b5acbbe6c",
+      "imageBytes": 80048,
+      "originalPngSha256": "cc7807fbd075332f4452a796709bb03c768c9fc491dc962df239677beaf77302",
+      "originalPngBytes": 2295550,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "Metal component samples, a separate reference part, and a caliper arranged on an inspection table.",
+      "imageCaption": "AI-generated illustration of a fictional shipment inspection; no particular defect or inspection result is shown.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-041"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-042"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-015",
+        "evidence-016",
+        "evidence-017"
+      ],
+      "imageReceiptEvidence": "evidence-018",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-defective-shipment-inspection-notice",
+      "searchQuery": "When a Taiwan Shipment Fails Inspection"
+    },
+    {
+      "id": 507,
+      "locale": "en",
+      "slug": "taiwan-investor-company-records-access",
+      "title": "Your Taiwan Investment Closed. Now the Company Won't Share Its Records.",
+      "sourcePath": "src/content/columns-en/507-taiwan-investor-company-records-access.md",
+      "sourceSha256": "f4222a8f2b6dea4f0289a8cdc59ff843301ffc72aa9ae8493bc645e2985aa966",
+      "sourceBytes": 11087,
+      "draftByteIdentical": true,
+      "bodySha256": "3bafbda7953dad36cd49a5912aed82cee1b50f66bc03a8cf622867f97ec9473a",
+      "imagePath": "/images/blog/gap-columns-20261010/507-taiwan-investor-company-records-access.webp",
+      "imageSha256": "8f573753eb4b010285fcabb0aba8eadc62c26565f3fce5f0653b5ca52ae4c700",
+      "imageBytes": 68482,
+      "originalPngSha256": "c32eae9b44751f81481d2100fa5801e7da21fa9a2b962d5da0dfa0c46e8931ab",
+      "originalPngBytes": 1945785,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "Two people reviewing a small set of company folders across a meeting table, with an open laptop and closed records cabinet nearby.",
+      "imageCaption": "AI-generated illustration of a fictional records review; it does not depict an actual company or investor meeting.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-010"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-019",
+        "evidence-020"
+      ],
+      "imageReceiptEvidence": "evidence-021",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-investor-company-records-access",
+      "searchQuery": "Your Taiwan Investment Closed. Now the Company Won't Share Its Records."
+    },
+    {
+      "id": 508,
+      "locale": "ja",
+      "slug": "taiwan-equipment-acceptance-unpaid-balance-japanese",
+      "title": "台湾の工場で装置は動いているのに、検収が終わらない",
+      "sourcePath": "src/content/columns-ja/508-taiwan-equipment-acceptance-unpaid-balance-japanese.md",
+      "sourceSha256": "a2f7d2edefc5a40f2019c80da630a38f1e66f13d94bf39203a0aa3d7a722520e",
+      "sourceBytes": 11302,
+      "draftByteIdentical": true,
+      "bodySha256": "216d0f9956a33f219b7f5ee0236e8de66519191815095a4383771e1b5d86fe71",
+      "imagePath": "/images/blog/gap-columns-20261010/508-taiwan-equipment-acceptance-unpaid-balance-japanese.webp",
+      "imageSha256": "6c5275bca554bf065855b5ee8038cfa8457924aaac15ab323a1d8103e132c500",
+      "imageBytes": 82654,
+      "originalPngSha256": "59eccc914611c0810692059db9862807fc616da5db0bbee739a89c17d216fcec",
+      "originalPngBytes": 1961095,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "稼働中の設備の外側で、点検記録を確かめる作業者。",
+      "imageCaption": "設備の検収をイメージしたAI生成画像です。実際の工場や取引を写したものではありません。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-022"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-023"
+      ],
+      "imageReceiptEvidence": "evidence-024",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-equipment-acceptance-unpaid-balance-japanese",
+      "searchQuery": "台湾の工場で装置は動いているのに、検収が終わらない"
+    },
+    {
+      "id": 509,
+      "locale": "ja",
+      "slug": "taiwan-customer-data-japan-crm-transfer-japanese",
+      "title": "台湾の顧客情報を日本本社のCRMへ移す前に",
+      "sourcePath": "src/content/columns-ja/509-taiwan-customer-data-japan-crm-transfer-japanese.md",
+      "sourceSha256": "3577dda020a51e92db5f38ad1764348320cd0f370dc2b6a9982f1a149e8a7bda",
+      "sourceBytes": 12395,
+      "draftByteIdentical": true,
+      "bodySha256": "737f1d352382e87e44cc459523099aa36bdb169dcdf5868821808360a1c33a5d",
+      "imagePath": "/images/blog/gap-columns-20261010/509-taiwan-customer-data-japan-crm-transfer-japanese.webp",
+      "imageSha256": "56f1056b8f422b28aeb44821220c5cc580ad7ea3c831289965e21b86c1d1d78d",
+      "imageBytes": 88480,
+      "originalPngSha256": "45e6c77889e3c932b60f2c2035431157ef743c16697e33d8951050faa32dedce",
+      "originalPngBytes": 1913320,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "二つの画面に顧客情報の管理画面を模した図形が映る、静かなオフィスの机。",
+      "imageCaption": "顧客情報を社内システム間で扱う場面をイメージしたAI生成画像です。実在する顧客情報やシステムは使用していません。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-022"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-025",
+        "evidence-026"
+      ],
+      "imageReceiptEvidence": "evidence-027",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-customer-data-japan-crm-transfer-japanese",
+      "searchQuery": "台湾の顧客情報を日本本社のCRMへ移す前に"
+    },
+    {
+      "id": 510,
+      "locale": "ja",
+      "slug": "taiwan-product-accident-recall-costs-japanese",
+      "title": "台湾で売った電気ケトルに事故が起きたら――回収と費用の分担",
+      "sourcePath": "src/content/columns-ja/510-taiwan-product-accident-recall-costs-japanese.md",
+      "sourceSha256": "256e2a492b296a6a6535cf5170d1856e2ca8d1f68aa83ea4cb05e2734b32fe1f",
+      "sourceBytes": 13333,
+      "draftByteIdentical": true,
+      "bodySha256": "71dc6fabd80d2ead7e91cefd861e04b69bb6f7ee2c17d0f7da55c7e6616475f1",
+      "imagePath": "/images/blog/gap-columns-20261010/510-taiwan-product-accident-recall-costs-japanese.webp",
+      "imageSha256": "66855dc716374fb0f5296417f4b5274ae36dff26609eaa074f46c6c202789f2a",
+      "imageBytes": 69954,
+      "originalPngSha256": "1402f6950c982a29d2cddc3824f12ce0153ded51b95819a30b25084d75b6a750",
+      "originalPngBytes": 1882615,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "電源を抜いた電気ケトルと、同じ製品の箱を並べた確認用の作業台。",
+      "imageCaption": "製品の確認と回収準備をイメージしたAI生成画像です。実際の製品事故やリコールを示すものではありません。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-022"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-028",
+        "evidence-029"
+      ],
+      "imageReceiptEvidence": "evidence-030",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-product-accident-recall-costs-japanese",
+      "searchQuery": "台湾で売った電気ケトルに事故が起きたら――回収と費用の分担"
+    },
+    {
+      "id": 511,
+      "locale": "ko",
+      "slug": "taiwan-unpaid-invoice-provisional-attachment-korean",
+      "title": "대만 거래처가 재산을 옮긴다면, 미수금 소송 전에 준비할 자료",
+      "sourcePath": "src/content/columns/511-taiwan-unpaid-invoice-provisional-attachment-korean.md",
+      "sourceSha256": "d608a2c3a41d29bb722ef9c4a2499b2bb075b96c58aa8ba195a3dfcb1f44b913",
+      "sourceBytes": 9947,
+      "draftByteIdentical": true,
+      "bodySha256": "2bb820465a2c077bb5ce8dd93fc8b70a559186ef6465375e4cafcb5df73f69aa",
+      "imagePath": "/images/blog/gap-columns-20261010/511-taiwan-unpaid-invoice-provisional-attachment-korean.webp",
+      "imageSha256": "71a1541723c5926d46ea8023aba29d560d791f04139e337c4378ec02d1068273",
+      "imageBytes": 87868,
+      "originalPngSha256": "b662223433f89105f6c7139f18ab5af4b5f08ea046fe09193df700ee1a522b18",
+      "originalPngBytes": 2000348,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "창고가 보이는 사무실 창가에 놓인 서류철과 여러 장의 거래 서류",
+      "imageCaption": "미수금 청구를 앞두고 거래 자료를 정리하는 상황을 표현한 AI 생성 이미지입니다. 실제 사건이나 사업장 사진은 아닙니다.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-031"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-032",
+        "evidence-033"
+      ],
+      "imageReceiptEvidence": "evidence-034",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-unpaid-invoice-provisional-attachment-korean",
+      "searchQuery": "대만 거래처가 재산을 옮긴다면, 미수금 소송 전에 준비할 자료"
+    },
+    {
+      "id": 512,
+      "locale": "ko",
+      "slug": "taiwan-equipment-installation-suspension-costs-korean",
+      "title": "대만 공장의 설치 중단, 엔지니어 대기비와 납기는 어떻게 정할까",
+      "sourcePath": "src/content/columns/512-taiwan-equipment-installation-suspension-costs-korean.md",
+      "sourceSha256": "e489de14637bd1260d5e7736100c1b769601b83aa1d8da7a1e8e8190d0a072ad",
+      "sourceBytes": 10157,
+      "draftByteIdentical": true,
+      "bodySha256": "cf81cf617a20ee5f35c6153f0a6bdd5410276c8f314cccbd792e7efb3cbbbb31",
+      "imagePath": "/images/blog/gap-columns-20261010/512-taiwan-equipment-installation-suspension-costs-korean.webp",
+      "imageSha256": "9c011304d2cd2161e50690d944840df3bf480d0d160b1cd31365a2a09bd45550",
+      "imageBytes": 113912,
+      "originalPngSha256": "b3c24b52bb41330d9ffd64f6e8a56afab9002fb7f1b6b01fe42fe73ca574c64a",
+      "originalPngBytes": 2085241,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "포장이 일부 남은 장비 옆에서 서류를 확인하는 기술자",
+      "imageCaption": "장비 설치가 중단된 현장에서 준비 상태를 확인하는 상황을 표현한 AI 생성 이미지입니다. 실제 현장 사진은 아닙니다.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-031"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-035",
+        "evidence-036"
+      ],
+      "imageReceiptEvidence": "evidence-037",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-equipment-installation-suspension-costs-korean",
+      "searchQuery": "대만 공장의 설치 중단, 엔지니어 대기비와 납기는 어떻게 정할까"
+    },
+    {
+      "id": 513,
+      "locale": "ko",
+      "slug": "taiwan-industrial-ai-update-defect-dispute-korean",
+      "title": "AI 업데이트 뒤 대만 공장에서 불량이 늘었다면",
+      "sourcePath": "src/content/columns/513-taiwan-industrial-ai-update-defect-dispute-korean.md",
+      "sourceSha256": "b685a1bfb7348f84aae861430f886b9015f2a3726033d0e75f9b46f9478e5843",
+      "sourceBytes": 11046,
+      "draftByteIdentical": true,
+      "bodySha256": "4dbf04aed81f722155acb7e74175d4ce2e7378418078233cf0c8bd6001187b68",
+      "imagePath": "/images/blog/gap-columns-20261010/513-taiwan-industrial-ai-update-defect-dispute-korean.webp",
+      "imageSha256": "8bd1bf8e29403ed8efe8b646374828350cd6d7c2deba61edae9acdcf4bfdc0bf",
+      "imageBytes": 63290,
+      "originalPngSha256": "2f800e6b72d8108a11fa181068c7679e2d1acccc385c88a2f113e6b92c0eb059",
+      "originalPngBytes": 1816263,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "검사대의 금속 부품과 펼쳐 놓은 기록을 비교하는 담당자",
+      "imageCaption": "AI 업데이트 전후의 검사 기록과 기준 부품을 비교하는 상황을 표현한 AI 생성 이미지입니다. 불량의 원인을 단정하는 장면은 아닙니다.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-031"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-038"
+      ],
+      "imageReceiptEvidence": "evidence-039",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-industrial-ai-update-defect-dispute-korean",
+      "searchQuery": "AI 업데이트 뒤 대만 공장에서 불량이 늘었다면"
+    }
+  ],
+  "evidenceRecords": [
+    {
+      "id": "evidence-001",
+      "role": "zh-hant independent language review",
+      "sha256": "1d0a000d3c928231f23f2c680a6b030a0090a3f68092126e6da8c856c56e2c88",
+      "bytes": 24667,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-002",
+      "role": "Independent pre-integration legal chair review",
+      "sha256": "f07683923376ccdd52487e3b15dbf39975d20d0247fc916284ad2853556e77b2",
+      "bytes": 19316,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-003",
+      "role": "Independent original, WebP and CSS crop review",
+      "sha256": "348eb3a7eed291f4cd19035816a73e79403bc2918167be2773e83e2136c7b2ba",
+      "bytes": 42901,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-004",
+      "role": "Article 502 primary-source ledger",
+      "sha256": "b563ec1c699d1240dcecaffcc37c354ca6b9cba4177be4a5e42e33fc8d290966",
+      "bytes": 8047,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-005",
+      "role": "Article 502 original image provenance receipt",
+      "sha256": "884bbc3bc69c57c05029a183cd1a6244ed4dc0d3bed93e54660d20e0da7ac050",
+      "bytes": 4652,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-006",
+      "role": "Article 503 primary-source ledger",
+      "sha256": "7a65fbc2ecdfdc5a6fcb0177e47208df55e32a15a96d21f9ef81c24bb86307e9",
+      "bytes": 21489,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-007",
+      "role": "Article 503 primary-source ledger",
+      "sha256": "1f32eab5acfbd187a9d524d1a9699796de69536c04c56650f3c7b33aa0b8ae74",
+      "bytes": 2786,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-008",
+      "role": "Article 503 original image provenance receipt",
+      "sha256": "8dfc6096b8a27c0510b315e379570c241722610d1eb1572b5e379f1e5ed317ca",
+      "bytes": 4212,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-009",
+      "role": "Article 504 original image provenance receipt",
+      "sha256": "58cfae7d574c08b164f1ed7c50d7c6534a46f322587d027b6359728ba26fcdb1",
+      "bytes": 4455,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-010",
+      "role": "en independent language review",
+      "sha256": "52531d52fd888b371f1ea8361f1a715480c9809f87bbdcc2aaba62e639c88f99",
+      "bytes": 16788,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-011",
+      "role": "Article 505 primary-source ledger",
+      "sha256": "3999c1ef4adfee6af137c7d166eb53a23760357eeb052a53993c1abb1c4dc149",
+      "bytes": 6055,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-012",
+      "role": "Article 505 primary-source ledger",
+      "sha256": "6334d323f0059f7963b62da51eaccbe6fb4ced962f0939097f19afba61a0cb2d",
+      "bytes": 16785,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-013",
+      "role": "Article 505 primary-source ledger",
+      "sha256": "ffb4a0728c9f974793094b764e99fe18069f2453b8a136cc60421f15ce24ca4b",
+      "bytes": 4560,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-014",
+      "role": "Article 505 original image provenance receipt",
+      "sha256": "8fabc5b70e7a75061aef7a45997fad1e28736ffc589c8b7ef5c7759937079031",
+      "bytes": 5288,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-015",
+      "role": "Article 506 primary-source ledger",
+      "sha256": "f3ead56d97e7fb63d2964bdc9967e56356d5a69e94f4e1b3fa3851ce72e9bf2f",
+      "bytes": 6149,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-016",
+      "role": "Article 506 primary-source ledger",
+      "sha256": "b89e27566abaeff8afe51a5cc6bb2999bcd64b6b5574bd9ac9f4e71f1de40ffd",
+      "bytes": 17030,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-017",
+      "role": "Article 506 primary-source ledger",
+      "sha256": "0d90ce9a28b3788c895c5722e9d4c6bd8bd1f5ba148b223349276b1a674caa34",
+      "bytes": 7220,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-018",
+      "role": "Article 506 original image provenance receipt",
+      "sha256": "32ec7f8cc7f2d5aa40d8e047515b3c234b80ac225cacb3f0f46e4adf78e92815",
+      "bytes": 5309,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-019",
+      "role": "Article 507 primary-source ledger",
+      "sha256": "192d98ce9697f117196d2b44686bf5a4649776fe216502525e3f76d621d28748",
+      "bytes": 6322,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-020",
+      "role": "Article 507 primary-source ledger",
+      "sha256": "dbbadb792375adbdb92594be1ba8c9f353dfc09e968e54e3bd3400198eaab010",
+      "bytes": 10144,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-021",
+      "role": "Article 507 original image provenance receipt",
+      "sha256": "036091790697737c78d26cd217d240de5532bee7891b5678ee7c0dad5ad9a997",
+      "bytes": 5560,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-022",
+      "role": "ja independent language review",
+      "sha256": "7c167bda6be9ac9f27650ca74961a31e59b8348e046828a1bfa8966e3c4bb790",
+      "bytes": 15186,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-023",
+      "role": "Article 508 primary-source ledger",
+      "sha256": "5df52306f3edc9f786ab940f692814373b35ad5fdd716e043d9ff1a9db97300c",
+      "bytes": 6502,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-024",
+      "role": "Article 508 original image provenance receipt",
+      "sha256": "93140cd846af6e2072d7eca5e097f09cf6f6dc1b54de1a17bfe95b6847d47a66",
+      "bytes": 6742,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-025",
+      "role": "Article 509 primary-source ledger",
+      "sha256": "2d460e6bf2a26c7ed1e5d6b3835039a2491b9127e4924444ea7d04edfd715eee",
+      "bytes": 3338,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-026",
+      "role": "Article 509 primary-source ledger",
+      "sha256": "665cc984d296748dfb49266d7f751ef4144cf1db9a7e0f84bbc4cc3453b20e1d",
+      "bytes": 14862,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-027",
+      "role": "Article 509 original image provenance receipt",
+      "sha256": "ac5f4aabc1a37ac13d2181b3638c5d59b39ef4e9781b1b1979b1311203665dad",
+      "bytes": 6748,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-028",
+      "role": "Article 510 primary-source ledger",
+      "sha256": "c57862197369e16ece9d8fe1f8b36b1a5f59b543d95b73067149149847635170",
+      "bytes": 3623,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-029",
+      "role": "Article 510 primary-source ledger",
+      "sha256": "e7b701a83ed708ca20562252fe41e72502c0240e072e3678f4ffca33b320203e",
+      "bytes": 15418,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-030",
+      "role": "Article 510 original image provenance receipt",
+      "sha256": "6d97cb996d26fb5f4259978e4f1efac85080ff3cacc3d5039cde66a1d987f362",
+      "bytes": 9615,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-031",
+      "role": "ko independent language review",
+      "sha256": "dd7ebe135f127fd22918da7fa2481b4cc75f6e280f341291423bc8c0e1e1b446",
+      "bytes": 4096,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-032",
+      "role": "Article 511 primary-source ledger",
+      "sha256": "1bfd76def598bafa77298f76c3d93192e212353d6a9d8ce06101359585c676fd",
+      "bytes": 5616,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-033",
+      "role": "Article 511 primary-source ledger",
+      "sha256": "b53f474dbeeb935c6d1b059b6937094e61089e990b62bc789fa1fa78a3399e8e",
+      "bytes": 212,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-034",
+      "role": "Article 511 original image provenance receipt",
+      "sha256": "7ea1b1bd1a690ed6de168b3e72bd4e8ac1b5b1c0aff9d7cb24bae8040c5f8aad",
+      "bytes": 6405,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-035",
+      "role": "Article 512 primary-source ledger",
+      "sha256": "a958fb60dfc6b7036f70b7d0539da0a68bf4f194c63341679cff972171c166dd",
+      "bytes": 4689,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-036",
+      "role": "Article 512 primary-source ledger",
+      "sha256": "d6c0029b9d1df9002719133f2c685aa56b67b2c507763281dffa4381972db80f",
+      "bytes": 8192,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-037",
+      "role": "Article 512 original image provenance receipt",
+      "sha256": "fd3628515f07c806ab763e02d2259fbe858e20ce2ccd4501e629e31a6819395a",
+      "bytes": 6602,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-038",
+      "role": "Article 513 primary-source ledger",
+      "sha256": "c485216159149ebe01ff7abdb55cf6c89490ce1c7925f7e912af656527f2e169",
+      "bytes": 4769,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-039",
+      "role": "Article 513 original image provenance receipt",
+      "sha256": "b5e090a7f92b1315b3e18c7dc445ffabf8484c1a4598e71ac38b238b2140ffe2",
+      "bytes": 6935,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-040",
+      "role": "Frozen twelve-article editorial manifest",
+      "sha256": "a2dc97772562908739a0aa220e4a39c56e056649c118f770f55ed0d71017ed1c",
+      "bytes": 39269,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-041",
+      "role": "Independent English metadata-only rebind for article 506",
+      "sha256": "acaca5f14e8fd43520361c5d0a837a2a669391a3103acd7af54a4972bdd44cf6",
+      "bytes": 3083,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-042",
+      "role": "Independent legal chair metadata-only rebind for article 506",
+      "sha256": "2f8db56098d15d81f703cff239ece9a6f2c192c23220011cfaac2bfa643754a1",
+      "bytes": 1918,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-043",
+      "role": "Frozen twelve-article editorial manifest v2 after bounded SEO repair",
+      "sha256": "2d880cda851c4c9545d1a81c059365c6181ca6b62479a965e360688480d76b64",
+      "bytes": 41502,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    },
+    {
+      "id": "evidence-044",
+      "role": "Exact one-line removal and reverse-byte proof for article 506",
+      "sha256": "c77f809aca75bdd832ececa7f2ad82f23c6228fc3f4a36b2da4b2190beb437db",
+      "bytes": 1429,
+      "archivePolicy": "Exact original is retained privately; no filesystem or temporary-media location is published."
+    }
+  ],
+  "manuscriptFreezeEvidence": "evidence-043",
+  "existingArticleBodyEdits": 0,
+  "pendingEmbeddingPairsAdded": [
+    {
+      "locale": "zh-hant",
+      "slug": "limited-company-shareholder-exit-transfer-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "parent-capacity-guardianship-assistance-authority-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "ai-product-open-source-license-delivery-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-supplier-return-molds-test-fixtures"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-defective-shipment-inspection-notice"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-investor-company-records-access"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-unpaid-invoice-provisional-attachment-korean"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-equipment-installation-suspension-costs-korean"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-industrial-ai-update-defect-dispute-korean"
+    }
+  ],
+  "runtimeSchemaAuthDependencyChanges": false,
+  "priorManuscriptFreezeEvidence": "evidence-040",
+  "metadataRepair": {
+    "articleId": 506,
+    "reason": "The visible title plus the site brand suffix fits the repository title limit; the redundant SEO override is omitted.",
+    "priorManuscriptSha256": "a99d226aaa86a7df8686c8b76eb6411c32c0e7509130640af5f9e8aa62d8348e",
+    "currentManuscriptSha256": "c8bf1bf38299ef05f0418f6422a487202d6b463d626e3c8923379a14cb5c17ee",
+    "removedBytes": 55,
+    "bodySha256": "2b9e49d3bc25b13bb57ee48d30229f7472b515c638ea111d8be88b4712bb4fb1",
+    "bodyAndAllOtherMetadataUnchanged": true,
+    "imageBytesAltCaptionUnchanged": true,
+    "priorAuditSha256": "c50d470ca35624ef63ad92952fae9e7c858f0429ffeede7e69b24768c7e91d48",
+    "priorEvidencePreserved": true,
+    "sourceProofEvidence": "evidence-044",
+    "localeRebindEvidence": "evidence-041",
+    "legalRebindEvidence": "evidence-042"
+  }
+}

@@ -1,3 +1,4 @@
+import { GAP_COLUMN_FILES_20261010 } from './gap-column-files';
 import { SINGAPORE_COLUMN_FILES_20261010 } from './singapore-column-files';
 import { AI_SEMICONDUCTOR_COLUMN_FILES_20261009 } from './ai-semiconductor-column-files';
 import { TAX_ACCOUNTING_COLUMN_FILES, taxAccountingFilesPublishedOn } from './tax-accounting-column-files';
@@ -578,6 +579,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((SINGAPORE_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((AI_SEMICONDUCTOR_COLUMN_FILES_20261009 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((CRIMINAL_COLUMN_FILES_20261008 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -602,7 +604,10 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const day20261010 = (SINGAPORE_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261010: readonly string[] = [
+    ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((SINGAPORE_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const day20261009 = (AI_SEMICONDUCTOR_COLUMN_FILES_20261009 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261008 = (CRIMINAL_COLUMN_FILES_20261008 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261007: readonly string[] = [
@@ -644,6 +649,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-07). */
 export function archiveLeadPublicationDate(slug: string): string {
+  if (Object.values(GAP_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-10';
   if (Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-10';
   if (Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().map(slugOf).includes(slug)) return '2026-10-09';
   if (Object.values(CRIMINAL_COLUMN_FILES_20261008).flat().map(slugOf).includes(slug)) return '2026-10-08';
@@ -703,6 +709,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261005),
     ...Object.values(COUNTRY_COLUMN_FILES_20261006),
     ...Object.values(COUNTRY_COLUMN_FILES_20261007),
+    ...Object.values(GAP_COLUMN_FILES_20261010),
     ...Object.values(SINGAPORE_COLUMN_FILES_20261010),
     ...Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009),
     ...Object.values(CRIMINAL_COLUMN_FILES_20261008),

@@ -1757,6 +1757,42 @@
     {
       "locale": "en",
       "slug": "singapore-goods-taiwan-astep-origin"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "limited-company-shareholder-exit-transfer-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "parent-capacity-guardianship-assistance-authority-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "ai-product-open-source-license-delivery-taiwan"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-supplier-return-molds-test-fixtures"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-defective-shipment-inspection-notice"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-investor-company-records-access"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-unpaid-invoice-provisional-attachment-korean"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-equipment-installation-suspension-costs-korean"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-industrial-ai-update-defect-dispute-korean"
     }
   ]
 }

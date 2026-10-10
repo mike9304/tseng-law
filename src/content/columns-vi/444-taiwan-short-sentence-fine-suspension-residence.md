@@ -16,6 +16,9 @@ faq:
     a: "Không. Điều 41 còn xét mức hình phạt tối đa của tội và có ngoại lệ về hiệu quả cải tạo, trật tự pháp luật. Cần xem phần quyết định của bản án và việc cho phép tại giai đoạn thi hành, không tự tính tiền rồi cho rằng đã hoàn tất."
   - q: "Án treo có bảo đảm giữ được thẻ ARC không?"
     a: "Điểm 3 Điều 32 Luật Xuất nhập cảnh và Di dân loại trừ án treo khỏi căn cứ thu hồi đang xét về bản án tù từ một năm đã có hiệu lực. Đây chỉ là một căn cứ; các điều kiện cư trú khác và giấy phép làm việc vẫn phải được kiểm tra riêng."
+featured_image: "/images/blog/column-media-20261010/444-taiwan-short-sentence-fine-suspension-residence/featured-01.webp"
+featured_image_alt: "Túi đựng giấy tờ nhiều ngăn có bìa hồ sơ và bao đựng thẻ, bên cạnh túi đeo vai bằng vải đựng sổ tay; cả hai đặt trên kệ gỗ."
+featured_image_caption: "Hình minh họa do AI tạo về việc sắp xếp riêng giấy tờ thi hành án và giấy tờ cư trú. Đây là bối cảnh giả định, không tái hiện hồ sơ khách hàng thực tế."
 ---
 
 # Án tù ngắn và án treo ở Đài Loan: tiền phải nộp, nghĩa vụ và thẻ cư trú

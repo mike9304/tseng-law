@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "Will paying the shop end a shoplifting case in Taiwan?", "a": "Not automatically. Ordinary theft generally does not require the store’s complaint. Payment or return may be considered with other circumstances, but the prosecutor decides the criminal disposition. Article 324 contains separate family exceptions."}, {"q": "May I keep cash or a phone that I find?", "a": "The finder has notification and handover duties under Civil Code Article 803. Unlawfully appropriating lost property can be an offense under Criminal Code Article 337. Whether an object is legally lost or remains in someone’s possession affects classification."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/411-taiwan-shoplifting-found-property-theft/featured-01.webp"
+featured_image_alt: "A closed brown leather wallet rests in a gray felt-lined tray on a pale reception counter."
+featured_image_caption: "AI-generated illustrative scene featuring a fictional wallet and reception area, not an actual client’s property or event."
 ---
 # Shoplifting and keeping found property in Taiwan
 

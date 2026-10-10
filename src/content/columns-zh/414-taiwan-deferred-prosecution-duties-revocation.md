@@ -12,6 +12,9 @@ tags: ["criminal-litigation","緩起訴","義務勞務","撤銷緩起訴"]
 faq: [{"q":"緩起訴金繳清，就算緩起訴結束了嗎？","a":"不一定。繳款只是處分書可能指定的事項之一，還要看有無其他負擔及緩起訴期間。期間為一年以上三年以下，從處分確定日起算；提前繳清不會自行縮短。"},{"q":"沒收到提醒，漏繳緩起訴金，可以先等通知嗎？","a":"應直接核對處分書期限及向承辦單位說明情形，提供已繳紀錄或無法履行的資料。違反處分書指定事項可能成為撤銷原因，並沒有等再次提醒才開始負義務的通則；是否准予調整仍由承辦機關依法處理。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/414-taiwan-deferred-prosecution-duties-revocation/featured-01.webp"
+featured_image_alt: "苔綠色三格文件夾放著不同形狀的素面紙卡，前方橫放一支鉛筆。"
+featured_image_caption: "AI 生成的示意插畫，呈現分類保存紀錄的概念，並非真實案件文件或履行證明。"
 ---
 # 緩起訴處分確定後：繳款、義務勞務與撤銷再議
 

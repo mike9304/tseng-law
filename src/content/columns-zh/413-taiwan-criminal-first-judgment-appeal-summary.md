@@ -12,6 +12,9 @@ tags: ["criminal-litigation","刑事上訴","簡易判決","上訴期間"]
 faq: [{"q":"上訴狀是寄給高等法院嗎？","a":"上訴書狀應提出於原審法院。通常地方法院第一審案件的第二審由高等法院審理；簡易判決則由地方法院合議庭審理，仍先交原判決法院。"},{"q":"上訴理由還沒寫好，可以等二十日之後再上訴嗎？","a":"不可以把補理由期間當成延長上訴期間。通常第一審案件須先在上訴期間內提出上訴；未記載理由時，第361條規定於上訴期間屆滿後二十日內補提。簡易判決上訴排除第361條的準用，不能照搬這套補提規則。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/413-taiwan-criminal-first-judgment-appeal-summary/featured-01.webp"
+featured_image_alt: "一隻手將素面信封與紙束放在軟木托盤中，旁邊是灰藍色記事本。"
+featured_image_caption: "AI 生成的虛構示意場景，呈現信封與文件的整理方式，並非真實當事人或案件。"
 ---
 # 收到刑事判決後的20日：上訴狀交哪裡，簡易判決怎麼辦
 

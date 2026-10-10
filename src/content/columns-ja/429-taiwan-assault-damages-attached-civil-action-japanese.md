@@ -18,6 +18,9 @@ faq:
     a: "移送の根拠で異なります。第504条による複雑な事件の移送には裁判費の免除がありますが、無罪・免訴・不受理の場合に原告の申立てで移す第503条の手続では訴訟費用が必要です。翻訳や弁護士などの費用まで一律に無料になる制度でもありません。"
 audience: ["ja"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/429-taiwan-assault-damages-attached-civil-action-japanese/featured-01.webp"
+featured_image_alt: "木の机で、紙の明細を透明なファイルに収める手元。隣に小さな紙の束と青い書類入れがあります。"
+featured_image_caption: "AIで生成した架空の書類整理の場面です。実際の依頼者や事件を写したものではありません。"
 ---
 
 # 台湾でけがをさせられた後の治療費と休業損害――刑事附帯民事の使い方

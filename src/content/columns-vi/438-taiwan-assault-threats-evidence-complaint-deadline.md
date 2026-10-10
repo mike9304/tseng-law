@@ -16,6 +16,9 @@ faq:
     a: "Với tội gây thương tích thông thường thuộc Điều 277 khoản 1, thời hạn yêu cầu xử lý về nguyên tắc là sáu tháng từ lúc người có quyền biết người phạm tội. Điều trị hoặc thương lượng không tự làm thời hạn bắt đầu lại. Cần xác định tội danh và ngày biết người gây ra hành vi."
   - q: "Người kia đánh trước thì tôi đánh lại luôn được coi là tự vệ không?"
     a: "Không tự động. Điều 23 xét hành vi bảo vệ quyền của mình hoặc người khác trước sự xâm hại trái pháp luật đang diễn ra; vượt quá giới hạn phòng vệ có thể được giảm hoặc miễn hình phạt. Toàn bộ diễn biến, thời điểm nguy hiểm chấm dứt và cách phản ứng đều cần được xem xét."
+featured_image: "/images/blog/column-media-20261010/438-taiwan-assault-threats-evidence-complaint-deadline/featured-01.webp"
+featured_image_alt: "Tập giấy trong bìa đựng hồ sơ, điện thoại tắt màn hình và USB được đặt gọn trên nền vải xanh nhạt."
+featured_image_caption: "Hình minh họa do AI tạo về cách sắp xếp tài liệu trong một tình huống giả định, không phải hồ sơ khách hàng hay vụ việc có thật."
 ---
 
 # Bị đánh hoặc đe dọa ở Đài Loan: chứng cứ và thời hạn yêu cầu xử lý

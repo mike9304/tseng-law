@@ -18,6 +18,9 @@ faq:
     a: "台湾の緩刑には、賠償、支払い、労務、治療などの条件が付くことがあります。重大な違反など法定の要件を満たせば、猶予を取り消される可能性があります。"
 audience: ["ja"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/432-taiwan-deferred-prosecution-suspended-sentence-fine-japanese/featured-01.webp"
+featured_image_alt: "青い蛇腹式の書類入れに、無地の紙と色の異なる見出しを収めた、紙細工風のイラスト。"
+featured_image_caption: "AIで生成した、処分に関する書類を整理する架空のイラストです。実際の依頼者の資料や事件を示すものではありません。"
 ---
 
 # 緩起訴、緩刑、易科罰金――台湾の処分書にある条件と支払い

@@ -16,6 +16,9 @@ faq:
     a: "台湾刑法第23条は、現在の不法な侵害から権利を守る防衛行為を対象とします。攻撃が続いていたか、防衛の程度はどうだったかなどを判断します。先に殴られたことだけで、その後の行為がすべて正当防衛になるわけではありません。"
 audience: ["ja"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/430-taiwan-assault-injury-threat-complaint-japanese/featured-01.webp"
+featured_image_alt: "布の上に置いた画面の暗いスマートフォン、青いノート、銀色の保存媒体と短いケーブルを描いたイラスト。"
+featured_image_caption: "AIで生成した架空のイラストです。実際の依頼者の持ち物や事件の証拠を示すものではありません。"
 ---
 
 # 台湾で殴られた、殴ったと言われた――傷害の告訴と証拠

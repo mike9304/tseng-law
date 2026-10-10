@@ -16,6 +16,9 @@ faq:
     a: "Điều 99 yêu cầu phiên dịch khi không thông ngôn ngữ đang sử dụng. Hãy nói rõ phần nào bạn không hiểu và đề nghị phiên dịch tiếng Việt; việc biết giao tiếp ở nơi làm việc không tự chứng minh rằng bạn hiểu câu hỏi và biên bản pháp lý."
   - q: "Tôi đã ký biên bản nhưng phát hiện dịch sai thì còn làm gì được?"
     a: "Ghi lại ngay câu bị sai, ý thực sự đã trình bày và thời điểm buổi hỏi. Có thể gửi văn bản bổ sung và đề nghị kiểm tra bản ghi âm qua luật sư hoặc cơ quan thụ lý. Điều 100-1 có quy định về phần biên bản không khớp bản ghi; ký rồi không tự làm mọi sai sót trở thành đúng."
+featured_image: "/images/blog/column-media-20261010/442-taiwan-police-interview-vietnamese-interpreter-lawyer/featured-01.webp"
+featured_image_alt: "Hai bàn tay xem một xấp giấy; bên cạnh là một chiếc bút đã đậy nắp và một máy ghi âm nhỏ."
+featured_image_caption: "Tranh minh họa do AI tạo về việc đọc và đối chiếu biên bản. Đây là bối cảnh giả định, không tái hiện khách hàng hay một buổi lấy lời khai có thật."
 ---
 
 # Cảnh sát Đài Loan lấy lời khai: phiên dịch, luật sư và biên bản tiếng Hoa

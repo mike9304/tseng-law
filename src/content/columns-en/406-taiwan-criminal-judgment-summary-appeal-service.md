@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "Can I receive a Taiwan criminal conviction without an ordinary trial hearing?", "a": "Yes. Article 449 permits summary judgment in defined circumstances, with questioning before sentencing where necessary. The document remains a criminal judgment; check its appeal notice immediately."}, {"q": "Do I send a summary-judgment appeal to the High Court?", "a": "Submit the appeal to the original court. Under Article 455-1, a summary judgment is generally reviewed by a district-court collegiate panel acting as the second instance, subject to the statutory bar for certain Article 451-1 sentencing judgments."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/406-taiwan-criminal-judgment-summary-appeal-service/featured-01.webp"
+featured_image_alt: "Anonymous hands arrange a stack of cream papers beside an opened kraft envelope on a pale oak bench."
+featured_image_caption: "AI-generated illustration of a fictional document-preparation scene. It does not show an actual client, court document or event."
 ---
 # A Taiwan criminal judgment arrived: when the appeal period starts
 

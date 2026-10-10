@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "Does a blank Taiwan police certificate prove I was never convicted?", "a": "No. Article 6 requires specified records to be omitted. The certificate must be understood together with the judgment and the question asked by the receiving authority."}, {"q": "Is imprisonment converted to a fine omitted immediately?", "a": "It is different from a fine imposed as the original sentence. Article 6(7) requires completed conversion or qualifying Article 41(2) service and no further sentence of imprisonment or a more severe punishment within five years after completion. Verify the outcome and dates from official case documents."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/409-taiwan-police-criminal-record-certificate-omitted-conviction/featured-01.webp"
+featured_image_alt: "An open gray folio holds two separate translucent sleeves with ivory sheets and blue dividers."
+featured_image_caption: "AI-generated illustration of fictional document folders; it does not show an actual client’s records or case."
 ---
 # What a Taiwan police criminal-record certificate leaves out
 

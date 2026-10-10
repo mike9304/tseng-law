@@ -12,6 +12,9 @@ tags: ["criminal-litigation","易科罰金","易服社會勞動","執行傳票"]
 faq: [{"q":"判決寫可以易科罰金，收到執行傳票後還要聲請嗎？","a":"仍須依執行通知向承辦地檢署辦理，由檢察官依具體情形審酌。刑法第41條有難收矯正之效或難以維持法秩序的例外；判決寫明折算標準，不等於執行程序已辦妥。"},{"q":"不能易科罰金，就一定不能做社會勞動嗎？","a":"不一定。刑法第41條第3項容許受六個月以下有期徒刑或拘役宣告、但不符易科罰金規定的人，聲請易服社會勞動；仍須符合健康、矯正及法秩序等條件，由檢察官審酌。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/415-taiwan-fine-conversion-community-service-execution/featured-01.webp"
+featured_image_alt: "花園木凳上放著折好的藍色工作圍裙、棉質手套、手刷與素面紙袋。"
+featured_image_caption: "AI 生成的虛構示意場景，呈現服務用品的準備，並非真實當事人、案件或指定執行機構。"
 ---
 # 判六個月以下就能繳錢嗎？易科罰金與社會勞動的聲請
 

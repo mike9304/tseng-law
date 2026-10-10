@@ -1,0 +1,2335 @@
+{
+  "schema": 1,
+  "createdAt": "2026-10-10T00:28:28.179Z",
+  "base": {
+    "head": "8da023868a6c0db96a64caa761f6ef66fa9bb402",
+    "originMain": "8da023868a6c0db96a64caa761f6ef66fa9bb402",
+    "checkedAt": "2026-10-10T00:28:21.499Z"
+  },
+  "scope": "40 existing articles; three image frontmatter fields only",
+  "originalPngsPreserved": true,
+  "sourcePixelComposition": "Centered 16:9 web rendition, exactly 1600 by 900 pixels; original PNGs preserved separately",
+  "productTestsRun": false,
+  "articles": [
+    {
+      "id": 405,
+      "locale": "en",
+      "slug": "taiwan-assault-injury-self-defense-compensation",
+      "target": "src/content/columns-en/405-taiwan-assault-injury-self-defense-compensation.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-assault-injury-self-defense-compensation",
+      "inventorySourceSha256": "ba9102644bf93e009838911be2e91172bee04a06d628e1500b473f18d36e2b5b",
+      "inventoryBodySha256": "6b14aaa0f34ec11b3f77f63dca8ef2bda275954bc476c6bd37ecb7e498b039fb",
+      "sourceSha256": "ba9102644bf93e009838911be2e91172bee04a06d628e1500b473f18d36e2b5b",
+      "bodySha256": "6b14aaa0f34ec11b3f77f63dca8ef2bda275954bc476c6bd37ecb7e498b039fb",
+      "frontmatterPrefixSha256": "bd7bfbe1a1866ea8c56bdd76745506233cdf9bf6788d672832bcedf4452ee4a3",
+      "suffixSha256": "45f419c90344d8a8168abbf1b561e635ad62a78b878174a307c0b8b20c3c5245",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/405-taiwan-assault-injury-self-defense-compensation.png",
+        "sha256": "266ca8051bd17d7d4b1f8c7026a3c656ea719ecbc399f331d12fc29a0e852079",
+        "bytes": 2693480,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit this fictional editorial still life. Preserve the natural photograph, textured pale-gray surface, soft daylight, plain translucent document folder, screen-off unbranded phone and small unbranded gray drive. Change composition only: pull the camera back significantly and bring those three objects close together as a compact central grouping, entirely within the middle 50% of image width AND middle 50% of image height. Their total bounding box must be x27–73%, y27–73%; the folder on left, phone directly adjacent right, drive immediately beside phone. The cluster should be only about half the current apparent size. Let the tabletop extend broadly all around. Peripheral glasses, plant and cup may remain outside center but are nonessential. Landscape16:9. No added text, numbers, marks, brands, titles or symbols. Keep every essential object fully retained under both21:9center crop and4:3center crop.",
+        "createdAt": "2026-10-10T00:06:42.422774+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/405.json",
+        "receiptSha256": "7b48f6be029ac941c657033b5e4e5a1fbdeb29aaf81c734eff884bb340e3047c"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "266ca8051bd17d7d4b1f8c7026a3c656ea719ecbc399f331d12fc29a0e852079",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "266ca8051bd17d7d4b1f8c7026a3c656ea719ecbc399f331d12fc29a0e852079",
+          "alt": "A translucent folder of blank papers, a dark phone and a small portable drive grouped on a light stone table.",
+          "caption": "AI-generated illustrative scene of record preservation. The objects and setting are fictional and do not depict an actual client or event.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/405-review.json",
+          "reportSha256": "dedad443e48a65ee4d1b35b2cd9ccee725b71139441ef409e1759abef9e28da2"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/405-taiwan-assault-injury-self-defense-compensation/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/405-taiwan-assault-injury-self-defense-compensation/featured-01.webp",
+        "alt": "A translucent folder of blank papers, a dark phone and a small portable drive grouped on a light stone table.",
+        "caption": "AI-generated illustrative scene of record preservation. The objects and setting are fictional and do not depict an actual client or event.",
+        "sha256": "a2110ea27a3249574cb96fdeda571f46f6fa94dd4824e290ba2ba5dc83dccc3d",
+        "bytes": 176770,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "ebf943e860157f7d6769e05247de0993820c733726724658aae54d4524e9c013",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 406,
+      "locale": "en",
+      "slug": "taiwan-criminal-judgment-summary-appeal-service",
+      "target": "src/content/columns-en/406-taiwan-criminal-judgment-summary-appeal-service.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-criminal-judgment-summary-appeal-service",
+      "inventorySourceSha256": "d552aeb7e792092447fe7d90e5a2f961933b15b0bc48d6a3e60b4ba563947595",
+      "inventoryBodySha256": "760cb68eacaa39ee9a2459a2779849318c044ffaaaacc5566a1c71d64ea67f6a",
+      "sourceSha256": "d552aeb7e792092447fe7d90e5a2f961933b15b0bc48d6a3e60b4ba563947595",
+      "bodySha256": "760cb68eacaa39ee9a2459a2779849318c044ffaaaacc5566a1c71d64ea67f6a",
+      "frontmatterPrefixSha256": "af3498e28bba3c3a36c5e1dd5cff2e5f84de66df012230a7d0199bc277a59762",
+      "suffixSha256": "2f1533b59431cdd2892475fe724ba87cae9d0b7949424f236d6ad2934923417d",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/406-taiwan-criminal-judgment-summary-appeal-service.png",
+        "sha256": "17447dcb470798281c8084edd80a4f593ef1c529b2b1b98a99bfa763b8dc3f13",
+        "bytes": 2016584,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: editorial hero for an English-language article about receiving a Taiwan criminal judgment, preserving its envelope and service evidence, and promptly preparing an appeal.\nCreate a fictional quiet close-up of a seated adult's anonymous hands carefully placing an opened plain kraft envelope alongside the complete cream document packet it contained. No text is visible on envelope or sheets. The papers remain together. The scene is a warm residential entryway with a pale oak bench, a softly blurred wall and gentle side daylight, not an official court. Show only natural hands and a small portion of simple linen sleeves, no face or identifiable person. Neutral purposeful gesture, no alarm.\nStyle: premium editorial photograph with tactile fibers, soft natural shadows and restrained sandy beige with a muted navy folder below the paper packet. Landscape 16:9. Frame fairly wide, with hands, envelope and document packet all contained inside the central rectangle x25–75%, y25–75%; give surrounding bench and wall breathing room so both21:9desktop and4:3mobile center crops preserve the meaningful gesture. Anatomically correct hands. No readable or pseudo-readable text, numbers, postage stamps, court symbols, seals, badges, logos, screens, clock faces, calendars, legal icons, crime depiction, fearful faces, outcome guarantees, title overlays or watermarks.\nCrop-safe framing is essential: the envelope, entire paper packet and both hands form one small compact grouping spanning no more than45% of image width and40% of image height around dead center. Pull the camera back; broad empty bench surface surrounds this grouping. Do not create an extreme close-up that enlarges objects to frame edges.",
+        "createdAt": "2026-10-10T00:07:43.379576+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/406.json",
+        "receiptSha256": "c73eb65d695e3b7385408dd39ac70c8d3662b815428be014cd06460a8d168f56"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "17447dcb470798281c8084edd80a4f593ef1c529b2b1b98a99bfa763b8dc3f13",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "17447dcb470798281c8084edd80a4f593ef1c529b2b1b98a99bfa763b8dc3f13",
+          "alt": "Anonymous hands arrange a stack of cream papers beside an opened kraft envelope on a pale oak bench.",
+          "caption": "AI-generated illustration of a fictional document-preparation scene. It does not show an actual client, court document or event.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/406-review.json",
+          "reportSha256": "b9f93932a96c1a5153d8b7c0903764403ce0c0bde47d1206df234ceb8b841d58"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/406-taiwan-criminal-judgment-summary-appeal-service/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/406-taiwan-criminal-judgment-summary-appeal-service/featured-01.webp",
+        "alt": "Anonymous hands arrange a stack of cream papers beside an opened kraft envelope on a pale oak bench.",
+        "caption": "AI-generated illustration of a fictional document-preparation scene. It does not show an actual client, court document or event.",
+        "sha256": "4be220761e5a7b31596b506f46c360d8539f3827bee259658d92de613768e71c",
+        "bytes": 79004,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "9d4aded53c30bff113820ebb802d079aa604472c45d20c87c69b8a8eed54cca3",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 407,
+      "locale": "en",
+      "slug": "taiwan-deferred-prosecution-conditions-revocation",
+      "target": "src/content/columns-en/407-taiwan-deferred-prosecution-conditions-revocation.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-deferred-prosecution-conditions-revocation",
+      "inventorySourceSha256": "d700107a551b2e2232aeabda483dc6ca0e9308a5253b36263b0f050814c5b822",
+      "inventoryBodySha256": "b678bfce6463e3421259ad2a3c55a0f5fa2417d26364388c10dc260a3c3b8162",
+      "sourceSha256": "d700107a551b2e2232aeabda483dc6ca0e9308a5253b36263b0f050814c5b822",
+      "bodySha256": "b678bfce6463e3421259ad2a3c55a0f5fa2417d26364388c10dc260a3c3b8162",
+      "frontmatterPrefixSha256": "f5426a22096aa48b42efd0e0b9ee204c084d5e567702dddfe7febc7cd003047e",
+      "suffixSha256": "dba980a318d255af3d81266104b23490b8fadf0f965107ddc7ee458254c5aee6",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/407-taiwan-deferred-prosecution-conditions-revocation.png",
+        "sha256": "9800c2ac9c11bf3f666c1d513093825c7dd6a3c1e2ae3faa7759bd9dc881c45b",
+        "bytes": 2288203,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit only the organizer arrangement in this warm gouache editorial illustration. Preserve wall texture, natural leaf shadows, blank cards/envelopes, rust/moss/slate pocket colors and restrained mood. Arrange the three pockets SIDE BY SIDE in ONE horizontal row (not stacked), under one simple wooden rail. The overall organizer must be much wider than tall, compact and centered; complete bounding box x28–72%, y32–68% of the16:9image. Each of the three equal pockets holds one blank cream envelope and blank card. Keep them fully visible. Broad quiet wall all around, same peripheral decoration. No writing, numbers, logos, stamps, seals, calendar grids, symbols, checkmarks, people, title overlay or watermark. This is a fictional record-organization metaphor, no outcome claim.",
+        "createdAt": "2026-10-10T00:10:07.082119+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/407.json",
+        "receiptSha256": "48ac2a0fcf93cb3791393754a15ad50fd281a9a2af19898119a2b64ba39f7480"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "9800c2ac9c11bf3f666c1d513093825c7dd6a3c1e2ae3faa7759bd9dc881c45b",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "9800c2ac9c11bf3f666c1d513093825c7dd6a3c1e2ae3faa7759bd9dc881c45b",
+          "alt": "A wall organizer with rust, green and blue fabric pockets holding blank envelopes and cards.",
+          "caption": "AI-generated illustration of a fictional record organizer. It does not depict an actual client, official document or event.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/407-review.json",
+          "reportSha256": "0c866f065bf761d32a50a6ee7229b1c681910e1295fc8e23880dda394417187c"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/407-taiwan-deferred-prosecution-conditions-revocation/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/407-taiwan-deferred-prosecution-conditions-revocation/featured-01.webp",
+        "alt": "A wall organizer with rust, green and blue fabric pockets holding blank envelopes and cards.",
+        "caption": "AI-generated illustration of a fictional record organizer. It does not depict an actual client, official document or event.",
+        "sha256": "861d2b9d1f018f5a1d3896ffc42fc6fd623d6df40c3e6ce74d5a07104d6554c8",
+        "bytes": 90658,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "aa6799da2c3d04238c27ff21a718802821bc79887ee53f0dfc9a405c0806432c",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 408,
+      "locale": "en",
+      "slug": "taiwan-detention-center-family-visits-lawyer-contact",
+      "target": "src/content/columns-en/408-taiwan-detention-center-family-visits-lawyer-contact.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-detention-center-family-visits-lawyer-contact",
+      "inventorySourceSha256": "e54aab41bf65724a4c6fe356b4b72afb7e194665434fcc741e4bbb1e1b21c777",
+      "inventoryBodySha256": "ab3e0e45b069ff76bb1e92a16378677a94ddb1aecfaa8b06af59daaa7443db93",
+      "sourceSha256": "e54aab41bf65724a4c6fe356b4b72afb7e194665434fcc741e4bbb1e1b21c777",
+      "bodySha256": "ab3e0e45b069ff76bb1e92a16378677a94ddb1aecfaa8b06af59daaa7443db93",
+      "frontmatterPrefixSha256": "35bf55278fcac4027ec92192632b4abd70ec02217ce4993a11faf95ade64eb6e",
+      "suffixSha256": "92989d8a1eb1123c27fb9f31cb20a3ad8b3aa1e0c421760223798b822cf8c98e",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/408-taiwan-detention-center-family-visits-lawyer-contact.png",
+        "sha256": "32cd3bd0d2936e08543722a97dd616fc9163741ce6260d46d1be66f505109e16",
+        "bytes": 2260872,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Replace the entire navy document case on the LEFT wooden chair with a different simple soft light-gray felt document envelope. The replacement is a featureless folded envelope of gray wool felt, no zipper, no trim, no tag, no metallic plate, no writing or embossing, no symbol, no logo. It lies flat in the same place on the left chair seat and is visibly light gray instead of navy. Preserve the rest of the fictional domestic scene exactly: two warm wooden chairs, cream tote on right chair, plaster wall, wood furniture, houseplants, home door, gentle sunlight and landscape16:9 composition. The only change is replacement of that navy case with the plain light-gray felt envelope.",
+        "createdAt": "2026-10-10T00:13:54.781305+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/408.json",
+        "receiptSha256": "4af5af68ffb05acfeb26c711b8111d41544b0e876ae08c8180c2010f6838f94e"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "32cd3bd0d2936e08543722a97dd616fc9163741ce6260d46d1be66f505109e16",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "32cd3bd0d2936e08543722a97dd616fc9163741ce6260d46d1be66f505109e16",
+          "alt": "Two wooden chairs in a sunlit home entryway hold a plain gray document pouch and a cream canvas tote.",
+          "caption": "AI-generated illustration of family preparation in a fictional home. It does not depict an actual client, detention facility or visit, or indicate that a visit has been approved.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/408-review.json",
+          "reportSha256": "8c875b824af0c8eb6dd4cae63bf8f1494061d221df640b26e187db0b6a05d04e"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/408-taiwan-detention-center-family-visits-lawyer-contact/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/408-taiwan-detention-center-family-visits-lawyer-contact/featured-01.webp",
+        "alt": "Two wooden chairs in a sunlit home entryway hold a plain gray document pouch and a cream canvas tote.",
+        "caption": "AI-generated illustration of family preparation in a fictional home. It does not depict an actual client, detention facility or visit, or indicate that a visit has been approved.",
+        "sha256": "639e73c3effc998201fed3ec39b8d789170cad1c05cc0a1efcc41c8bd2edcd68",
+        "bytes": 136536,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "531deec79a4cf9fe64ab7906b8f59486c02f406032c3848a713f7bd63c64512d",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 409,
+      "locale": "en",
+      "slug": "taiwan-police-criminal-record-certificate-omitted-conviction",
+      "target": "src/content/columns-en/409-taiwan-police-criminal-record-certificate-omitted-conviction.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-police-criminal-record-certificate-omitted-conviction",
+      "inventorySourceSha256": "32d9f495f72626594128fcb67d0ef279f8749dc42ee904d6d6391abb6de7b2c5",
+      "inventoryBodySha256": "81901fbb74105eb6926f96bfbf5ef895eadde46cd5edf1c4618bf4bff9c5db16",
+      "sourceSha256": "32d9f495f72626594128fcb67d0ef279f8749dc42ee904d6d6391abb6de7b2c5",
+      "bodySha256": "81901fbb74105eb6926f96bfbf5ef895eadde46cd5edf1c4618bf4bff9c5db16",
+      "frontmatterPrefixSha256": "9e692be148eeaad1b64e9bc4b74477099d620a6a4e90aa3e2396834076757643",
+      "suffixSha256": "2768e8a11b065d8fc161ca6b2a3d14daefe7ecbf7baf38594f2b6b578a479aec",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/409-taiwan-police-criminal-record-certificate-omitted-conviction.png",
+        "sha256": "f2f276474bfcaa0a604ac8be1c69d906de37da46d8451a7efbbeffc729359dfa",
+        "bytes": 2585280,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: illustration-story. Asset type: 16:9 landscape editorial hero for an English Taiwan-law article about the limited contents of a police criminal-record certificate and why a person should preserve and compare the underlying judgment and execution records. Create a calm premium paper-cut and softly textured gouache illustration: an open plain charcoal-gray document folio holds two clearly separate translucent sleeves, one containing a single ivory sheet, the other a small layered stack of ivory sheets with muted blue separator edges. No writing on any paper. View from a gentle elevated angle, folio on a warm pale stone surface with soft side light and substantial quiet negative space. Show physical depth, handmade paper fibers and delicate restrained shadows. The essential paired sleeves and their paper contents must fit entirely within the middle 50 percent of frame horizontally and vertically (x25–75%, y25–75%), remaining comprehensible after 21:9 desktop or 4:3 mobile center cropping. Edges of the folio may extend beyond that safe area. The illustration represents comparing records, never a cleared record or guaranteed outcome. No checkmarks, erasers, stamps, seals, numbers, readable text, labels, passport markings, government insignia, gavels, scales, handcuffs, logos, people or watermark. Fictional illustrative objects, never an actual case record.",
+        "createdAt": "2026-10-10T00:06:01.669865+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/409.json",
+        "receiptSha256": "464870499c2fedb6a961250f1c92fc99acb4916711a7528206bf7eeb80b3c561"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "f2f276474bfcaa0a604ac8be1c69d906de37da46d8451a7efbbeffc729359dfa",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "f2f276474bfcaa0a604ac8be1c69d906de37da46d8451a7efbbeffc729359dfa",
+          "alt": "An open gray folio holds two separate translucent sleeves with ivory sheets and blue dividers.",
+          "caption": "AI-generated illustration of fictional document folders; it does not show an actual client’s records or case.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/409-review.json",
+          "reportSha256": "34bc8783c978b443b6e0813a3279d2606c8aaef0b7e090baa124991d5ae0ba21"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/409-taiwan-police-criminal-record-certificate-omitted-conviction/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/409-taiwan-police-criminal-record-certificate-omitted-conviction/featured-01.webp",
+        "alt": "An open gray folio holds two separate translucent sleeves with ivory sheets and blue dividers.",
+        "caption": "AI-generated illustration of fictional document folders; it does not show an actual client’s records or case.",
+        "sha256": "ecaa6b053d6a6161949ff6df4628d98c8e745e43ff158de2828b892b2534b49b",
+        "bytes": 128656,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "f06097beab5645812ad7b647ae1c8929567e25f37a1ba81436a1fcfcfdefa304",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 410,
+      "locale": "en",
+      "slug": "taiwan-sexual-assault-report-adult-foreign-victim",
+      "target": "src/content/columns-en/410-taiwan-sexual-assault-report-adult-foreign-victim.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-sexual-assault-report-adult-foreign-victim",
+      "inventorySourceSha256": "5b16323e53e6e66c4440d2511ce82945294759e101d9cd6f744709daeb4a8e63",
+      "inventoryBodySha256": "f36a1569a511f3ccc9b221bd52c7e9ad70b36b237736321c1deca92cdf0089f3",
+      "sourceSha256": "5b16323e53e6e66c4440d2511ce82945294759e101d9cd6f744709daeb4a8e63",
+      "bodySha256": "f36a1569a511f3ccc9b221bd52c7e9ad70b36b237736321c1deca92cdf0089f3",
+      "frontmatterPrefixSha256": "8dbf447d38d8ebe76a5c8ad69b2afcfb4a64e315618bf102e33b81743d6a6634",
+      "suffixSha256": "6552c6dcf35bd8ee86297ee403aa23a157a0ee02dedf315b97875c0300f08deb",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/410-taiwan-sexual-assault-report-adult-foreign-victim.png",
+        "sha256": "0dbe1f68d6707811f4758f95ba867cc98ef5bc5e47b986e41667611fc66d12d7",
+        "bytes": 2339295,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: 16:9 landscape editorial hero for an English Taiwan-law article on seeking medical care, privacy, support and interpretation after suspected sexual assault. Create a quiet fictional staged private care consultation room with no people: one comfortable pale muted sage upholstered armchair, a small round side table with one clear tumbler of water, and a closed soft linen privacy curtain behind it. No desk, no paperwork. A gentle window glow from outside the frame falls on linen fabric, rounded wood and natural upholstery, making the space calm and respectful, ordinary and credible rather than luxurious. A discreet houseplant may appear at an outer edge. Natural editorial interior photograph with realistic material texture, warm off-white and subtle sage palette, no dramatic shadows. The chair's back and seat, water glass and central curtain folds form a compact visual group fully within x25–75%, y25–75% of the complete image; allow empty walls and floor around them for real 21:9 desktop and 4:3 mobile center crops. Camera moderately wide, level, composition softly asymmetric while essential objects remain centered. No people, patient, distressed face, body, injury, examination bed, medical instrument, reenactment, police, uniforms, legal symbols, readable text, notices, signs, logos, watermark or outcome promises. This is an invented supportive setting, not a photograph of an actual client, care facility or event.",
+        "createdAt": "2026-10-10T00:06:57.896878+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/410.json",
+        "receiptSha256": "f2cb3b48855545b1d935538b0f1f8c2eb80ee7ca1bb040f950fa1902c1620215"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "0dbe1f68d6707811f4758f95ba867cc98ef5bc5e47b986e41667611fc66d12d7",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "0dbe1f68d6707811f4758f95ba867cc98ef5bc5e47b986e41667611fc66d12d7",
+          "alt": "A sage armchair and a small table with a glass of water stand in front of closed linen curtains.",
+          "caption": "AI-generated illustrative scene of a fictional private consultation space, not an actual client, care facility or event.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/410-review.json",
+          "reportSha256": "5b81f439191944954dec89ec787d2dad39e2f415fceea4c27e89d1436927693f"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/410-taiwan-sexual-assault-report-adult-foreign-victim/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/410-taiwan-sexual-assault-report-adult-foreign-victim/featured-01.webp",
+        "alt": "A sage armchair and a small table with a glass of water stand in front of closed linen curtains.",
+        "caption": "AI-generated illustrative scene of a fictional private consultation space, not an actual client, care facility or event.",
+        "sha256": "444efc22a1542b3551bdcee69daa4f9d316ba88a8944277b2d140cedaceb38ee",
+        "bytes": 114368,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "1bd0e848874dab7b37e52ca5a374eac4273da0dd1538bc29f72bf5e1e14ab6be",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 411,
+      "locale": "en",
+      "slug": "taiwan-shoplifting-found-property-theft",
+      "target": "src/content/columns-en/411-taiwan-shoplifting-found-property-theft.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-shoplifting-found-property-theft",
+      "inventorySourceSha256": "3664ea1531e4a27e2bbc7825a99a713bcb8bc88e13b10dfe183ae8a5adb91915",
+      "inventoryBodySha256": "bc16f6c6d1ad15875ed334780553f74f6591a0cae821efc5759d42cca72dfd70",
+      "sourceSha256": "3664ea1531e4a27e2bbc7825a99a713bcb8bc88e13b10dfe183ae8a5adb91915",
+      "bodySha256": "bc16f6c6d1ad15875ed334780553f74f6591a0cae821efc5759d42cca72dfd70",
+      "frontmatterPrefixSha256": "0a6ee60fcf4ea8339823f07b98f5a5c1a4a0cc58c06c7453435d3a8092baac07",
+      "suffixSha256": "24ba1878dcd42a65facadf50affe7950a2589a6d54b967d3046a31ee78765a7b",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/411-taiwan-shoplifting-found-property-theft.png",
+        "sha256": "fc9719ea86f33c476776ad9cf1fb3be04865e56096d688ec80b9cd50b24812e2",
+        "bytes": 2178820,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: 16:9 landscape English Taiwan-law article hero on shoplifting, found property and preserving a truthful account of how an item was handled. Make a quiet editorial closeup of a single closed plain brown leather wallet resting alone in a shallow soft-gray felt-lined property tray on an unbranded public reception counter. The wallet is the clear central subject, not being taken or handled. The tray has a simple rectangular shape with softly rounded corners, worn but well-kept material texture. Background is an airy softly out-of-focus everyday lobby with pale terrazzo and warm oak, no people, no guards, no surveillance screens, no signs. Natural daylight and gentle shadows, tactile leather grain and felt fibers, documentary restraint. Camera at a slightly elevated close angle. Make the whole wallet and the inner tray fit inside x30–70%, y30–70% of the image with generous quiet counter and blurred background around them; center crops to21:9 desktop and4:3 mobile must retain the entire wallet and recognizable tray. No other belongings, payment cards, cash, personal identification, hand, face, theft reenactment, police, handcuffs, gavels, scales, stamps, labels, text, numbers, logos or watermark. Fictional staged scene; do not imply an actual stolen item, a finding of guilt or a legal outcome.",
+        "createdAt": "2026-10-10T00:07:46.555942+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/411.json",
+        "receiptSha256": "e35da366f0aecb0a03eaa27e07c8198a751256f22cd1744196b9b28c03a61daf"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "fc9719ea86f33c476776ad9cf1fb3be04865e56096d688ec80b9cd50b24812e2",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "fc9719ea86f33c476776ad9cf1fb3be04865e56096d688ec80b9cd50b24812e2",
+          "alt": "A closed brown leather wallet rests in a gray felt-lined tray on a pale reception counter.",
+          "caption": "AI-generated illustrative scene featuring a fictional wallet and reception area, not an actual client’s property or event.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/411-review.json",
+          "reportSha256": "0a1695ead76c79176b5862a2fdfcaeeb1856ffb313dfcbd8f165ffc54856431c"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/411-taiwan-shoplifting-found-property-theft/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/411-taiwan-shoplifting-found-property-theft/featured-01.webp",
+        "alt": "A closed brown leather wallet rests in a gray felt-lined tray on a pale reception counter.",
+        "caption": "AI-generated illustrative scene featuring a fictional wallet and reception area, not an actual client’s property or event.",
+        "sha256": "355b27855027ab6640d0b5309b46dd2a11679f46744495e865273f442218b177",
+        "bytes": 103992,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "7744e4a1db65a8e9afef07ae407e529deba8140eda51f76466b8062c0a9b61e0",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 412,
+      "locale": "en",
+      "slug": "taiwan-short-sentence-fine-community-service-suspension",
+      "target": "src/content/columns-en/412-taiwan-short-sentence-fine-community-service-suspension.md",
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-short-sentence-fine-community-service-suspension",
+      "inventorySourceSha256": "74f22c0858b8ad63ac614e658adec8df9d01b962e8d32324ae6e18629b6a68d5",
+      "inventoryBodySha256": "a3061cf3467de88856416168790fbc1da53336c83a97fefd7be87231a60a402d",
+      "sourceSha256": "74f22c0858b8ad63ac614e658adec8df9d01b962e8d32324ae6e18629b6a68d5",
+      "bodySha256": "a3061cf3467de88856416168790fbc1da53336c83a97fefd7be87231a60a402d",
+      "frontmatterPrefixSha256": "960b9827ecc644ebc4c3ece1caee19dd79be89b0e7f61ffcd8b6c92e1cc11ab7",
+      "suffixSha256": "cd90af118f09f4ebe2e3496af230f3a75706432aa8002a2e5f115222290d6329",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/412-taiwan-short-sentence-fine-community-service-suspension.png",
+        "sha256": "eaca794449e84e28767052e395b1f9488b64c5c8fe495434588313e5478d0146",
+        "bytes": 2960832,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: illustration-story. Asset type: 16:9 landscape hero for an English Taiwan-law article explaining short-sentence execution, possible monetary conversion, assigned community service and suspended sentences. Create a premium restrained gouache editorial painting on lightly textured paper: a plain pair of soft canvas gardening gloves, a compact muted teal watering can, and a small terracotta seedling tray neatly arranged together on a weathered pale wooden garden workbench in a peaceful courtyard. The gloves are empty, loosely overlapping with credible five-finger shapes, no hands or people. The watering can is simple and physically coherent. Show only a few fresh seedlings; not a lush harvest or success metaphor. Soft green foliage and a pale wall in the background, dappled gentle morning light, muted sage, dusty teal, terracotta and warm ivory colors, visible painterly texture, quiet everyday dignity. Medium-wide view with the whole essential cluster including gloves, watering-can spout/handle and seedling tray contained within x25–75%, y25–75%; keep generous subdued garden space around them so21:9 desktop and4:3 mobile center crops preserve all three objects. This is only a fictional example of preparing for service activity, not a statement that gardening is approved, required, completed or available in a particular case. No prison, bars, uniform, defendant, officer, restraints, money, documents, clock, calendar, checkmarks, reward symbols, scale, gavel, text, numbers, labels, logos, signage or watermark.",
+        "createdAt": "2026-10-10T00:09:01.442094+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/412.json",
+        "receiptSha256": "ca88a19c0c537e7db2641649a345e892d2cd56cc346b18ab60d8e1448638dd45"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "eaca794449e84e28767052e395b1f9488b64c5c8fe495434588313e5478d0146",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "eaca794449e84e28767052e395b1f9488b64c5c8fe495434588313e5478d0146",
+          "alt": "Canvas garden gloves, a teal watering can and small seedling pots sit on a weathered workbench in a sunny courtyard.",
+          "caption": "AI-generated illustration of a fictional garden-work setting, not an actual client or event; the activity shown does not represent an approved service assignment.",
+          "reviewer": "/root/missing_media_review/review_en",
+          "reportPath": "work/missing-media-20261010/reviews/en/412-review.json",
+          "reportSha256": "8dc09252d4ddce177bc3f6896ade22707ad9c8642183d84ab8b097eaf0a998e5"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/412-taiwan-short-sentence-fine-community-service-suspension/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/412-taiwan-short-sentence-fine-community-service-suspension/featured-01.webp",
+        "alt": "Canvas garden gloves, a teal watering can and small seedling pots sit on a weathered workbench in a sunny courtyard.",
+        "caption": "AI-generated illustration of a fictional garden-work setting, not an actual client or event; the activity shown does not represent an approved service assignment.",
+        "sha256": "4fd1f2b9ad1f987a00dc76b06828bd86c38bff4a15779d206b53a3537db9a824",
+        "bytes": 235522,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "8f44c43f173336f29b5b291141430d65d8ba80425ab42bace9d51b0a8e7f40ab",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 413,
+      "locale": "zh-hant",
+      "slug": "taiwan-criminal-first-judgment-appeal-summary",
+      "target": "src/content/columns-zh/413-taiwan-criminal-first-judgment-appeal-summary.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-criminal-first-judgment-appeal-summary",
+      "inventorySourceSha256": "de29abc085cc89bf62ec0faf11c19e3c65c8baea1aa964373481c527ec86ef3d",
+      "inventoryBodySha256": "c27715e862bc46e8f117de5c601d43e06f7a7226d47141ab993ebc690f1f0970",
+      "sourceSha256": "de29abc085cc89bf62ec0faf11c19e3c65c8baea1aa964373481c527ec86ef3d",
+      "bodySha256": "c27715e862bc46e8f117de5c601d43e06f7a7226d47141ab993ebc690f1f0970",
+      "frontmatterPrefixSha256": "a6aa60705586b1c26ef9b92bd63a118138359edb64211062050f347883e37c05",
+      "suffixSha256": "0ce9fb5eca40387b3d867ad5e1e4844c9a9f72906182765ba76a85c9ecebc1b0",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/413-taiwan-criminal-first-judgment-appeal-summary.png",
+        "sha256": "7f9acca58ebe781990324996b8a370c3e38bdf164b6ea14d297a26bde71f2309",
+        "bytes": 2401442,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural.\nAsset type: one fictional editorial hero photograph for a Taiwanese Traditional Chinese legal-information article about receiving a first criminal judgment, retaining the delivery envelope, distinguishing judgment date from service date, and preparing an appeal to the original court.\nPrimary request: A quiet, premium close photograph of an opened unmarked cream delivery envelope and its neatly aligned ivory document bundle together in a shallow oval cork tray, beside a small closed slate-blue tabbed planner. One anonymous relaxed adult hand gently keeps the envelope and papers together, showing careful preservation of delivery materials rather than panic.\nScene/backdrop: softly lit home entry console beside a frosted window, subtle Taiwan urban-home textures without landmarks. Only tray, envelope, paper bundle and planner are the story objects. Warm wood grain and natural linen, soft daylight, restrained sand and slate palette.\nComposition/framing: landscape 16:9. Modest scale objects and ample peripheral breathing room. Keep the entire opened envelope, essential document bundle, planner and visible hand within the central x25–75% and y25–75% rectangle. The meaningful cluster must remain fully legible after both a very wide 21:9 center crop and a narrower 4:3 center crop. Camera at a gentle overhead diagonal, refined editorial detail.\nConstraints: fictional staged scene, no identifiable person, no actual court papers. All papers and envelope completely blank, no readable writing, digits, calendar numbers, postage stamps, seals, signatures, interface, titles or text overlays. No courthouse, gavel, scales, handcuffs, police, barred windows, money, check marks or guaranteed outcome symbolism. Anatomically natural hand, five fingers, relaxed; no distress. No watermark, logo or border.",
+        "createdAt": "2026-10-10T00:06:45.823682+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/413.json",
+        "receiptSha256": "c458cf157c5eaf61cd4ea9e1e73650d632070f0b9015166c465908e3ef812328"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "7f9acca58ebe781990324996b8a370c3e38bdf164b6ea14d297a26bde71f2309",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "7f9acca58ebe781990324996b8a370c3e38bdf164b6ea14d297a26bde71f2309",
+          "alt": "一隻手將素面信封與紙束放在軟木托盤中，旁邊是灰藍色記事本。",
+          "caption": "AI 生成的虛構示意場景，呈現信封與文件的整理方式，並非真實當事人或案件。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/413-review.json",
+          "reportSha256": "d8819b9f700aae26e2d8a2c9cd5ae3593e49bcc59039957a67e61b3b64c9637a"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/413-taiwan-criminal-first-judgment-appeal-summary/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/413-taiwan-criminal-first-judgment-appeal-summary/featured-01.webp",
+        "alt": "一隻手將素面信封與紙束放在軟木托盤中，旁邊是灰藍色記事本。",
+        "caption": "AI 生成的虛構示意場景，呈現信封與文件的整理方式，並非真實當事人或案件。",
+        "sha256": "5999a06c60c95865da2d132872f9f32173de586840842eee3b6221901825942e",
+        "bytes": 132268,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "37c2bb1c33cbd2fca51dc6194b4363b3804b67415ee90a3e662d15e11b00bdc0",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 414,
+      "locale": "zh-hant",
+      "slug": "taiwan-deferred-prosecution-duties-revocation",
+      "target": "src/content/columns-zh/414-taiwan-deferred-prosecution-duties-revocation.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-deferred-prosecution-duties-revocation",
+      "inventorySourceSha256": "7bc7696ccfa262a97e810f73aec1229c9586311d48dfadf5e1521a13a836cdf9",
+      "inventoryBodySha256": "4e318dee6b57240cb1bce10e795f3bccbaf7523eb12fe421b16d93720368631c",
+      "sourceSha256": "7bc7696ccfa262a97e810f73aec1229c9586311d48dfadf5e1521a13a836cdf9",
+      "bodySha256": "4e318dee6b57240cb1bce10e795f3bccbaf7523eb12fe421b16d93720368631c",
+      "frontmatterPrefixSha256": "903abff35324b75b4ef142c18f7b6e2226887f1e3320ac44abe4c7b72a7228e0",
+      "suffixSha256": "d981158ba1592c6d500f825d5e28ac956576f873c233cb438b7dc7266588e68a",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/414-taiwan-deferred-prosecution-duties-revocation.png",
+        "sha256": "be29da8e3d1afe6401224d650afd93dadf1e6f71ef60e5afad2b1d801adfff12",
+        "bytes": 2425496,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: illustration-story.\nAsset type: one premium fictional editorial hero illustration for a Taiwanese Traditional Chinese article about deferred prosecution: separately tracking payment receipts, community-service arrangements and ongoing duties, which do not simply finish when one payment is made.\nPrimary request: A refined handmade paper-cut and softly shaded gouache still life of a small open sage accordion document organizer containing three clearly separated pockets. Each pocket holds a different compact blank card type: a narrow receipt, a folded plain sheet, and a tabbed scheduling card. A small plain graphite pencil rests across the front. Cards have tactile paper grain and subtle geometric separators only, no writing. The visual story is keeping different records together while preserving their separate purpose.\nScene/backdrop: warm limestone-colored horizontal surface, abstract soft indoor shadow, spacious muted cream background. Rich restrained tactile materials, sage green, ivory, dusty terracotta accents. Elegant editorial art, not a generic infographic and not photorealistic.\nComposition/framing: landscape 16:9. Viewpoint slightly above and in front, with all essential cards, organizer and pencil compactly within central x28–72% and y28–72%; ample empty soft-textured margins on every side. Keep the complete critical object group visible in both21:9 desktop center crop and4:3 mobile center crop. No separate story objects outside this safe area.\nConstraints: fictional illustrative scene, no real case or client. No readable letters, numbers, legal forms, dates, seals, stamps, signatures, identity cards, logos, watermarks, titles or text overlays. No check marks, cash, courthouse, gavel, scales, handcuffs, prison, police or person. No visual guarantee of completion or success. Calm, orderly and useful.",
+        "createdAt": "2026-10-10T00:06:45.828305+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/414.json",
+        "receiptSha256": "df733a2cc3f48555d34bb1b3b20de0a7c4792e7cf7b376c68a3f59ce3916b899"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "be29da8e3d1afe6401224d650afd93dadf1e6f71ef60e5afad2b1d801adfff12",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "be29da8e3d1afe6401224d650afd93dadf1e6f71ef60e5afad2b1d801adfff12",
+          "alt": "苔綠色三格文件夾放著不同形狀的素面紙卡，前方橫放一支鉛筆。",
+          "caption": "AI 生成的示意插畫，呈現分類保存紀錄的概念，並非真實案件文件或履行證明。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/414-review.json",
+          "reportSha256": "dd29e094a5160f2e48e45b12133b028b79f74397ba58f2fd5b85b0ca297b43c8"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/414-taiwan-deferred-prosecution-duties-revocation/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/414-taiwan-deferred-prosecution-duties-revocation/featured-01.webp",
+        "alt": "苔綠色三格文件夾放著不同形狀的素面紙卡，前方橫放一支鉛筆。",
+        "caption": "AI 生成的示意插畫，呈現分類保存紀錄的概念，並非真實案件文件或履行證明。",
+        "sha256": "5bb8e695997d2cf9778d40b57bbfc93ba7e4b93192615878d0beb9d36240fcfc",
+        "bytes": 94626,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "1efe2043ef10d7f40ca26160981f5f96a8eed91d72d52ca51d6a7549f6bfcd7f",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 415,
+      "locale": "zh-hant",
+      "slug": "taiwan-fine-conversion-community-service-execution",
+      "target": "src/content/columns-zh/415-taiwan-fine-conversion-community-service-execution.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-fine-conversion-community-service-execution",
+      "inventorySourceSha256": "652d4a419ff14a94a5f44e8a52312aeaf5a9bf45c1c250cac6195d2ca92c8dc4",
+      "inventoryBodySha256": "a25a8710eb067773d953fd943e58d275a7c2913ddffe86833d352da9003468c4",
+      "sourceSha256": "652d4a419ff14a94a5f44e8a52312aeaf5a9bf45c1c250cac6195d2ca92c8dc4",
+      "bodySha256": "a25a8710eb067773d953fd943e58d275a7c2913ddffe86833d352da9003468c4",
+      "frontmatterPrefixSha256": "3bc19494289cfc80663800fd5e05ae92d4fb4579cf717a6eb1f4f77d22ca1f36",
+      "suffixSha256": "c4004ac7d168e4b14831395250fe2fab3eb7beb82c7029ba68e75a743b32911f",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/415-taiwan-fine-conversion-community-service-execution.png",
+        "sha256": "7e4f13f9f94c00045a3d227fe082e38b6508d0be990b095e6a16ea2fdc9479d2",
+        "bytes": 2479615,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural.\nAsset type: premium fictional editorial hero for a Taiwanese Traditional Chinese article explaining that conversion of a short prison sentence to a fine or community service requires an application, review and an approved work arrangement.\nPrimary request: Quiet preparation still life on the middle of a wooden bench at the edge of a well-kept neighborhood garden: a neatly folded plain muted-blue work apron, a pair of cream cotton work gloves laid naturally together on top, and a compact hand brush beside them. A modest closed unmarked document sleeve tucked partly under the apron hints at preparation before attending an arranged appointment. No person, no work activity, no official facility.\nScene/backdrop: softly blurred ordinary green planting and pale garden walkway in morning light. Real worn wood and woven cotton detail, gentle botanical shadows. This is an imaginary neutral preparation scene, not a depiction of any offender or institution.\nComposition/framing: landscape16:9, natural camera at bench height with medium distance. Keep the apron, both gloves, hand brush and small plain sleeve compact within x30–70%, y30–70%; most of the image is softly blurred garden and bench breathing room. Do not zoom close or fill the frame with the objects. Entire meaningful group remains visible under21:9 wide and4:3 mobile center crops.\nLighting/mood: warm natural morning daylight, understated, dignified and useful; muted blue, cream, brown and gentle greens.\nConstraints: no readable text, labels, numbers, official forms, logos, uniforms, reflective vest, check marks, cash, gavel, courthouse, scales, prison, police, handcuffs or people. No dramatic or coercive mood, no suggestion of automatic entitlement or successful completion, no title overlay, watermark or border.",
+        "createdAt": "2026-10-10T00:08:34.924467+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/415.json",
+        "receiptSha256": "a2de5f4ff0181ac54035818b383eafdbb27272ea3bcedb591636254228ac3b6f"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "7e4f13f9f94c00045a3d227fe082e38b6508d0be990b095e6a16ea2fdc9479d2",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "7e4f13f9f94c00045a3d227fe082e38b6508d0be990b095e6a16ea2fdc9479d2",
+          "alt": "花園木凳上放著折好的藍色工作圍裙、棉質手套、手刷與素面紙袋。",
+          "caption": "AI 生成的虛構示意場景，呈現服務用品的準備，並非真實當事人、案件或指定執行機構。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/415-review.json",
+          "reportSha256": "d574206e197ab2d4d20f227e45c5aa200382169c93015678e4c03b4b6f0e41ac"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/415-taiwan-fine-conversion-community-service-execution/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/415-taiwan-fine-conversion-community-service-execution/featured-01.webp",
+        "alt": "花園木凳上放著折好的藍色工作圍裙、棉質手套、手刷與素面紙袋。",
+        "caption": "AI 生成的虛構示意場景，呈現服務用品的準備，並非真實當事人、案件或指定執行機構。",
+        "sha256": "bcb49c8cc8925bdf6576383f0c3833dfd6d0007ca0da02db813b7964f9395e68",
+        "bytes": 168150,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "c92195080ceda650528ee864c20019762529beca5efd94e18c116a07a87a6f8c",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 416,
+      "locale": "zh-hant",
+      "slug": "taiwan-injury-complaint-fight-self-defense",
+      "target": "src/content/columns-zh/416-taiwan-injury-complaint-fight-self-defense.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-injury-complaint-fight-self-defense",
+      "inventorySourceSha256": "4805dce3f939a6075ac424275e270822e20dd14e9c91faaaa7112bb527c158b8",
+      "inventoryBodySha256": "1fece69a8b007caff03ae4e339d5c8dcccb058699750b5d8699703db59aafd8e",
+      "sourceSha256": "4805dce3f939a6075ac424275e270822e20dd14e9c91faaaa7112bb527c158b8",
+      "bodySha256": "1fece69a8b007caff03ae4e339d5c8dcccb058699750b5d8699703db59aafd8e",
+      "frontmatterPrefixSha256": "5231921e8311295dd4a4ec377dc974ca49e7e7169b306aae8e173f53d7bc9b70",
+      "suffixSha256": "3e9c2c43a023488cfdc7e84abb840f0b0955b856aaf0eb2d61a924d4907e2924",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/416-taiwan-injury-complaint-fight-self-defense.png",
+        "sha256": "47ed98696e9f2d09fc4eb7d5eab0a7b55fb2782c5adb9679979143a23c34abbf",
+        "bytes": 2594224,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: illustration-story.\nAsset type: one sophisticated fictional editorial hero illustration for a Taiwanese Traditional Chinese article on evidence after an injury incident: medical records document injury while complete original video and the sequence of actions answer different questions.\nPrimary request: A quiet hand-painted editorial still life of two separate but adjacent evidence-storage materials: on the left, a compact closed teal document folio with the edges of a long blank receipt and a plain ivory sheet peeking out; on the right, a dark generic memory card in a small transparent protective case beside three tiny unlabelled image cards aligned in a continuous sequence. The three tiny cards each depict the same EMPTY sunlit building entrance at slightly changing light, no person or incident. The important idea is preserving medical paperwork and original continuous footage separately, without showing violence or asserting any conclusion.\nStyle/medium: high-end ink, gouache and colored-pencil illustration on warm lightly textured paper, restrained editorial realism, tactile glass case and paper edges, muted teal, slate, ivory and a small rust accent. Distinct from a photo and distinct from flat corporate clip art.\nScene/backdrop: simple uninterrupted warm gray studio ground, faint soft cast shadow only, no desk clutter, no interior furniture.\nComposition/framing: landscape16:9, spacious horizontal composition. The entire modest-sized two-part still life must sit inside the middle40% width and middle40% height of the image, x30–70% and y30–70%, with very generous unobstructed background above below and both sides. Do not zoom in. Keep folio, blank receipts, memory case and all three cards within this central protected rectangle for both21:9 desktop and4:3 mobile center crops.\nConstraints: fictional illustration, not actual evidence or a real event. No readable writing, letters, digits, medical symbols, legal text, dates, logos, seals, signatures, people, wounds, violence, weapons, police, hospital patients, courthouse, gavel, scales, handcuffs, check marks or outcome guarantees. No titles, watermark or border. Cards show only an empty architecture scene and do not reenact a crime.",
+        "createdAt": "2026-10-10T00:08:34.928456+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/416.json",
+        "receiptSha256": "88f13f64760528df99d1f6d2cf2c9f32295290efb4a48ff92ec5f1b2291adb3a"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "47ed98696e9f2d09fc4eb7d5eab0a7b55fb2782c5adb9679979143a23c34abbf",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "47ed98696e9f2d09fc4eb7d5eab0a7b55fb2782c5adb9679979143a23c34abbf",
+          "alt": "青綠色資料夾旁擺著透明盒中的記憶卡，以及三張依序排列的建築入口空景圖卡。",
+          "caption": "AI 生成的虛構示意插畫，呈現文件與影像資料的保存概念，並非真實當事人、事件或證據。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/416-review-v2.json",
+          "reportSha256": "867f2f4a5b809cee2727ebc5ae35cf1babfc25214c5996618694e2a33e9985b7"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/416-taiwan-injury-complaint-fight-self-defense/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/416-taiwan-injury-complaint-fight-self-defense/featured-01.webp",
+        "alt": "青綠色資料夾旁擺著透明盒中的記憶卡，以及三張依序排列的建築入口空景圖卡。",
+        "caption": "AI 生成的虛構示意插畫，呈現文件與影像資料的保存概念，並非真實當事人、事件或證據。",
+        "sha256": "5bbec3ea7a969434be03b5ccce2da0da2020fb21ab148d1928d187f45d50b7fc",
+        "bytes": 93374,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "8295560ed861ed8f79a193ad3abac88938682a9abd98aaa2e9ca891126e43030",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 417,
+      "locale": "zh-hant",
+      "slug": "taiwan-remand-family-visits-contact-challenge",
+      "target": "src/content/columns-zh/417-taiwan-remand-family-visits-contact-challenge.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-remand-family-visits-contact-challenge",
+      "inventorySourceSha256": "87e42c5031374b77dfb23a1402d4053317a57dcd88e5c1b0af79b03cb11695f2",
+      "inventoryBodySha256": "b14b1363b53afc1d20ad240261cf6342eb4054490707d02f17c54550fc193bc8",
+      "sourceSha256": "87e42c5031374b77dfb23a1402d4053317a57dcd88e5c1b0af79b03cb11695f2",
+      "bodySha256": "b14b1363b53afc1d20ad240261cf6342eb4054490707d02f17c54550fc193bc8",
+      "frontmatterPrefixSha256": "e230edb12e8ccd01dee9c31022d87ef56a4616314de1488e85a02398f26fd60f",
+      "suffixSha256": "ce32dfe14e74d3ce87f32a470e576804f04cbc388e08208f1e45a62717c1ccf5",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/417-taiwan-remand-family-visits-contact-challenge.png",
+        "sha256": "88a43b82ac15c9c82c52f066b346313a1323cfdf549347c3e70072da1c5d0bd7",
+        "bytes": 2674903,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit this fictional editorial photograph only for safer website cropping. Preserve the same natural-canvas tote, slate document folder, blank transparent card sleeve, black-screen unbranded phone, warm bench, soft light and restrained realism. Pull the camera back substantially so the entire meaningful still-life group is about 65 percent of its current apparent size. Reposition that group to the exact image center. The highest folder edge must be below y28 percent and the lowest phone or sleeve edge above y72 percent. All four objects must fit within x28–72 percent too. Fill the newly revealed space with the existing quiet wall and broad wooden bench; reduce distracting side decor. Keep landscape16:9. No people, text, letters, numbers, logos, legal symbols or other new objects. No visual indication of legal outcome.",
+        "createdAt": "2026-10-10T00:10:17.111Z",
+        "receiptPath": "work/missing-media-20261010/receipts/417.json",
+        "receiptSha256": "e4ea29b751ffbd306185612eb274256edfd78358c92fc499ca9c0e25cfd90b4f"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "88a43b82ac15c9c82c52f066b346313a1323cfdf549347c3e70072da1c5d0bd7",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "88a43b82ac15c9c82c52f066b346313a1323cfdf549347c3e70072da1c5d0bd7",
+          "alt": "木凳上的帆布提袋內放著灰藍色文件夾，前方整齊擺放手機與透明卡套。",
+          "caption": "AI 生成的虛構示意畫面，呈現家屬整理資料的情境，並非真實當事人或案件現場。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/417-review.json",
+          "reportSha256": "dc8a4dfa8b25c068c6baf0036f3bbb4b63e843250edd0968ec6ee077767dd7d6"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/417-taiwan-remand-family-visits-contact-challenge/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/417-taiwan-remand-family-visits-contact-challenge/featured-01.webp",
+        "alt": "木凳上的帆布提袋內放著灰藍色文件夾，前方整齊擺放手機與透明卡套。",
+        "caption": "AI 生成的虛構示意畫面，呈現家屬整理資料的情境，並非真實當事人或案件現場。",
+        "sha256": "e4489177170985e4ee306f201cdd9890021219d90ffaafffbc3ab7211c96fcfb",
+        "bytes": 156840,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "323c1161a47c72c727a696034c214cf3dfa8378db586492c10276595891d1948",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 418,
+      "locale": "zh-hant",
+      "slug": "taiwan-sexual-assault-report-evidence-victim-support",
+      "target": "src/content/columns-zh/418-taiwan-sexual-assault-report-evidence-victim-support.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-sexual-assault-report-evidence-victim-support",
+      "inventorySourceSha256": "aac73eed8974eeeff38e504ccb6768b0228e483f7a8f88ef6342dc50372bd4c9",
+      "inventoryBodySha256": "c831aeb72e7acfbc764dbc90945f72b810fd517b2b7c2592b3f887ebaa3d4274",
+      "sourceSha256": "aac73eed8974eeeff38e504ccb6768b0228e483f7a8f88ef6342dc50372bd4c9",
+      "bodySha256": "c831aeb72e7acfbc764dbc90945f72b810fd517b2b7c2592b3f887ebaa3d4274",
+      "frontmatterPrefixSha256": "01652c7b4538d3a7b5133cf9776ef1eda8b7bcdbc7e7eeef45410c32c73d4e99",
+      "suffixSha256": "cf40c38532caafb50b8d8e1b2acf5c5f892f17ccdc987a97192a7254925fc8c6",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/418-taiwan-sexual-assault-report-evidence-victim-support.png",
+        "sha256": "0c6ecfd915889f5dd8df75ec7e34d68df9748887da289c015ff3596bf918684e",
+        "bytes": 2025711,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit only camera distance and framing of this fictional consultation-room photograph. Preserve both empty armchairs, their natural textile textures and muted blue/oatmeal colors, the centered round table, plain tissue box, two water glasses, and soft daylight. Pull the camera back much further so the COMPLETE chairs plus table form a SMALL central group, with the leftmost chair edge at x28 percent, rightmost chair edge at x72 percent, highest chair back below y33 percent, lowest furniture foot above y71 percent. Keep their conversational spacing proportional. Add quiet room space around them, rather than making the room ornate. The room should remain warmly supportive, neither luxurious nor clinical. Landscape16:9. No people, no readable writing, numbers, signs, brand logos, certificates or legal symbols.",
+        "createdAt": "2026-10-10T00:10:17.401Z",
+        "receiptPath": "work/missing-media-20261010/receipts/418.json",
+        "receiptSha256": "32ab6d0a4e79ed985656aa48b0fd63d3348841bfd3fdf4648f3d372e6c125570"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "0c6ecfd915889f5dd8df75ec7e34d68df9748887da289c015ff3596bf918684e",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "0c6ecfd915889f5dd8df75ec7e34d68df9748887da289c015ff3596bf918684e",
+          "alt": "柔和日光灑入安靜房間，兩張空扶手椅之間的小圓桌上放著紙巾盒與兩杯水。",
+          "caption": "AI 生成的虛構示意畫面，呈現安靜的支持空間，並非真實當事人、機構或事件現場。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/418-review.json",
+          "reportSha256": "916ad7419aca22ec981dbefe551e5817845c1e93d0a66d603be85c5c44537617"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/418-taiwan-sexual-assault-report-evidence-victim-support/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/418-taiwan-sexual-assault-report-evidence-victim-support/featured-01.webp",
+        "alt": "柔和日光灑入安靜房間，兩張空扶手椅之間的小圓桌上放著紙巾盒與兩杯水。",
+        "caption": "AI 生成的虛構示意畫面，呈現安靜的支持空間，並非真實當事人、機構或事件現場。",
+        "sha256": "009d252b497cd5d2f6c0735c9bf05b85003e9be079d2ce4e82e038c8f3f757a5",
+        "bytes": 97388,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "69223597d6b29fff0b8fb08170256277648dc8b1aa7840a2dfafc4e75494f0be",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 419,
+      "locale": "zh-hant",
+      "slug": "taiwan-suspended-sentence-obligations-revocation",
+      "target": "src/content/columns-zh/419-taiwan-suspended-sentence-obligations-revocation.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-suspended-sentence-obligations-revocation",
+      "inventorySourceSha256": "aa926d3ae2316720ae87bfcafd5db944eab8f99aa525b0287b71055f5a5fcc6f",
+      "inventoryBodySha256": "6b9a89097a37c30974b4fc9fc71b9940a2ad58c7037a148857c66dfca0d98b68",
+      "sourceSha256": "aa926d3ae2316720ae87bfcafd5db944eab8f99aa525b0287b71055f5a5fcc6f",
+      "bodySha256": "6b9a89097a37c30974b4fc9fc71b9940a2ad58c7037a148857c66dfca0d98b68",
+      "frontmatterPrefixSha256": "9f4a159ee0d3a4d4fc75776991cc62c69d8419c7d0372169af49292166998e90",
+      "suffixSha256": "c4f4d837da2f720d61772119bae43f5638c0bdc9381ff7adc9cff86cb39e8eda",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/419-taiwan-suspended-sentence-obligations-revocation.png",
+        "sha256": "dd3da8f6aea82d50bef34859cd3c98baabcd908694fe94e8e93325e9f13a2f36",
+        "bytes": 2255510,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural\nAsset type: restrained premium editorial hero for a Taiwan Traditional Chinese article about checking compensation receipts, reporting arrangements and obligations after a suspended sentence, horizontal16:9.\nPrimary request: fictional calm close study of personal preparation, only anonymous relaxed adult hands and a small closed notebook with plain paper slips on a lap. No person is identifiable.\nScene: quiet simple waiting nook with pale blue-gray upholstered seating. The camera observes diagonally downward toward the lap, no face, head, identifying body details or institution signage. Softly blurred empty seating in background.\nSubject: one adult in an ordinary oatmeal cotton sleeve and neutral charcoal trousers. Exactly two anatomically correct relaxed hands gently hold a small closed slate notebook on the lap; tucked across its cover are three modest blank off-white receipt-shaped slips and a small plain appointment card, secured together with a small silver paper clip. No writing at all, nothing that pretends to be an actual legal notice. Hands communicate calm attention, not distress or imprisonment.\nComposition: natural editorial photograph with subtle film grain and soft window daylight, realistic skin and fabric. The hands, notebook, slips and card form a SMALL compact group entirely inside x30–70% and y30–70%, leaving generous blurred surrounding seating and fabric. Keep sufficient distance; do not let hands or notebook dominate the frame. It must retain every critical object in centered21:9 and4:3 crops.\nColors: soft gray-blue, oatmeal, muted slate, warm paper. Quiet and humane rather than dramatic.\nConstraints: fictional staged scene, no real client. No suit or lawyer costume, no uniform, no cuffs, no prison, no bars, no gavels, scales, badges, logos, brands, seals, text, letters, numbers or checkmarks. No confident gesture of success, no prediction of release, no punitive imagery. Correct hand anatomy with natural finger joints; no extra fingers or merged skin.",
+        "createdAt": "2026-10-10T00:13:11.159Z",
+        "receiptPath": "work/missing-media-20261010/receipts/419.json",
+        "receiptSha256": "12c9da6d3be6eb1cb9c37c42fa50362ebbb0a455d56bbdc2094b3689c681c869"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "dd3da8f6aea82d50bef34859cd3c98baabcd908694fe94e8e93325e9f13a2f36",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "dd3da8f6aea82d50bef34859cd3c98baabcd908694fe94e8e93325e9f13a2f36",
+          "alt": "一雙手在膝上拿著深灰色記事本，封面夾著數張素色紙條與一張小卡片。",
+          "caption": "AI 生成的虛構示意畫面，呈現整理隨身紀錄的情境，並非真實當事人或案件紀錄。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/419-review-v2.json",
+          "reportSha256": "2651fbd6fc1818c2fa461da879ecd3710897a89260456e5014705924a6b4b596"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/419-taiwan-suspended-sentence-obligations-revocation/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/419-taiwan-suspended-sentence-obligations-revocation/featured-01.webp",
+        "alt": "一雙手在膝上拿著深灰色記事本，封面夾著數張素色紙條與一張小卡片。",
+        "caption": "AI 生成的虛構示意畫面，呈現整理隨身紀錄的情境，並非真實當事人或案件紀錄。",
+        "sha256": "765591795c91bf439e78f248bab0aba04975dcba36a82bafd158a5d223300399",
+        "bytes": 101774,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "635f5a758ff3c1c38048dd7f56c45fc4e3aca1e9e3c4891eaab06b35b063da9d",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 420,
+      "locale": "zh-hant",
+      "slug": "taiwan-threats-coercion-messages-evidence",
+      "target": "src/content/columns-zh/420-taiwan-threats-coercion-messages-evidence.md",
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-threats-coercion-messages-evidence",
+      "inventorySourceSha256": "fd0cf16d13dde9e5efe57f49ccfc25b19a03450207f6898482cbb2f60d85b23d",
+      "inventoryBodySha256": "d6d2c088e3fe7bcca04a18ea1e574ff307e3e5ac86972f2a3ebd5afbd7c3ea7b",
+      "sourceSha256": "fd0cf16d13dde9e5efe57f49ccfc25b19a03450207f6898482cbb2f60d85b23d",
+      "bodySha256": "d6d2c088e3fe7bcca04a18ea1e574ff307e3e5ac86972f2a3ebd5afbd7c3ea7b",
+      "frontmatterPrefixSha256": "7283dc14a04e5f5cb0b57593b431288ee829e6b3c54e9a666ab45b3155030704",
+      "suffixSha256": "68383a6c42c664f916468a2dfd2122a03b63242c243398243f9a3ee95cfe7207",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/420-taiwan-threats-coercion-messages-evidence.png",
+        "sha256": "bf1807ade83e5ed127aef314a0cd4ace91d3da0f6511a349f1d60fbee59c900c",
+        "bytes": 2597642,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: illustration-story\nAsset type: premium restrained editorial illustration for a Taiwan Traditional Chinese article about preserving complete threatening-message conversations and original records, horizontal16:9.\nPrimary request: a quiet fictional still life of an unbranded smartphone beside a small external digital archive drive, joined by one plausible short cable. The emphasis is preserving complete context, never depicting threats or confrontation.\nMedium: refined hand-painted egg-tempera and colored-pencil editorial illustration on subtly textured warm ivory art paper. Matte layered pigment, precise gentle pencil edges, delicate natural grain, soft simplified shadows. Clearly an illustration, not a photograph, not flat vector clip art or a glossy3D render.\nObjects: a modest dark-blue smartphone viewed at a gentle three-quarter angle, lying diagonally with its whole outline visible. Its pale screen contains only a calm sequence of several small alternating slate and muted sand rounded color shapes suggesting a full conversation. Absolutely no letters, numbers, icons, app logo or legible interface. A small plain gray-blue external storage device lies next to it, connected by a single gently curving charcoal cable. No file thumbnails, no actual messages, no alert badges.\nComposition: the entire phone, drive and cable form a compact centered group inside x30–70% and y28–72% of the full image. Leave large fields of quiet textured paper around it for cropping, no edge props. The phone must not dominate the entire frame. All three objects fully preserved in both centered21:9 desktop and4:3 mobile crops. No papers, folders or desktop furniture.\nMood and palette: calm careful preservation, muted indigo, slate blue, sand and warm ivory, subtle warm gray shadows, no red warning color, no black dramatic background.\nConstraints: fictional illustrative objects only. No people, victims, fear, violence, confrontation, obstructed exits, weapons, police, courthouse symbols, handcuffs, gavels, scales, seals or legal promises. No letters, numbers, readable text, logos, brand details, watermark, green checks or title overlay. Cable connection should be structurally plausible and uncluttered.",
+        "createdAt": "2026-10-10T00:15:59.654Z",
+        "receiptPath": "work/missing-media-20261010/receipts/420.json",
+        "receiptSha256": "2916da2619b418e44bfdd2c5190e43a77bf2b003de8d71123ff54508a51cdfb9"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "bf1807ade83e5ed127aef314a0cd4ace91d3da0f6511a349f1d60fbee59c900c",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "bf1807ade83e5ed127aef314a0cd4ace91d3da0f6511a349f1d60fbee59c900c",
+          "alt": "紙感插畫中的手機螢幕排列著無字對話色塊，旁邊以傳輸線連接一個灰藍色外接裝置。",
+          "caption": "AI 生成的虛構示意插畫，呈現保存數位紀錄的概念，並非真實對話、當事人或案件證據。",
+          "reviewer": "/root/missing_media_review/review_zh",
+          "reportPath": "work/missing-media-20261010/reviews/zh-hant/420-review-v2.json",
+          "reportSha256": "9b207c553d74709bb2fdc9b283d3c05334ad5cdb0db7da644deb76ef16787da2"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/420-taiwan-threats-coercion-messages-evidence/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/420-taiwan-threats-coercion-messages-evidence/featured-01.webp",
+        "alt": "紙感插畫中的手機螢幕排列著無字對話色塊，旁邊以傳輸線連接一個灰藍色外接裝置。",
+        "caption": "AI 生成的虛構示意插畫，呈現保存數位紀錄的概念，並非真實對話、當事人或案件證據。",
+        "sha256": "c5c8259a96860f8e735224a1e5994e814cb78bbbe07cad808fab5ec28e07f9aa",
+        "bytes": 110412,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "6a4e7f5537bc9a20e12a97b945e03131792815df7883ab219de68f569a2c10d7",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 421,
+      "locale": "ko",
+      "slug": "taiwan-assault-injury-medical-evidence-complaint",
+      "target": "src/content/columns/421-taiwan-assault-injury-medical-evidence-complaint.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-assault-injury-medical-evidence-complaint",
+      "inventorySourceSha256": "56f4244a8d4c7ee34f2099c5d8b3c3acdf4ff925481ec5220ceec1595b89a510",
+      "inventoryBodySha256": "bc652e6c16f6a79fc8402a35daaad583c3b45504bf0d439d219a028d01822d0f",
+      "sourceSha256": "56f4244a8d4c7ee34f2099c5d8b3c3acdf4ff925481ec5220ceec1595b89a510",
+      "bodySha256": "bc652e6c16f6a79fc8402a35daaad583c3b45504bf0d439d219a028d01822d0f",
+      "frontmatterPrefixSha256": "f4482c66ac1565221979cfd4377c8d1b61ab65a25af8251895f4333ceec4fbb1",
+      "suffixSha256": "9ed2d1579bb9107fec208b9bd50eeeb739ea2d2bc3e90733af7617721001d35a",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/421-taiwan-assault-injury-medical-evidence-complaint.png",
+        "sha256": "7029c464c5baf8bb57f7492a4c6e3c9feb9540a98cacb130a1282abf57ebeddf",
+        "bytes": 1856139,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural\nAsset type: Korean Taiwan-law editorial hero image, fictional illustrative staged scene.\nPrimary request: A quiet clinic waiting area focused on preserving medical records after an injury, with absolutely no depiction of the injury or incident.\nScene: A clean pale-oak visitor bench beneath a softly frosted window. At the center of the bench rests a compact translucent pale-blue document wallet, partly open, holding a modest stack of clean white medical-record sheets; a small plain cream receipt and a slim face-down smartphone lie beside it. Papers have only tiny indistinct soft-gray rules, no legible writing.\nStyle: Premium natural editorial photography, realistic paper and frosted plastic textures, peaceful daylight, muted sage, cream, pale blue and oak tones. The space is welcoming and practical, never ominous. No people.\nComposition: Landscape 16:9. Camera at bench height with enough airy clinic context to feel like a real place. Keep the entire document wallet, receipt and phone comfortably inside the central rectangle x30–70%, y32–68%; each is visibly distinct. Outer frame is soft window light and bench, so a centered 21:9 desktop crop or 4:3 mobile crop retains the complete record-preservation story.\nConstraints: No medical details, wounds, medicines, police, crime reenactment, distressed people, legal symbols, scales, gavel, handcuffs, readable text or numbers, logos, brands, official seals, watermark, title overlay, or promised outcome. Fictional staged location, no real client/event.",
+        "createdAt": "2026-10-10T00:06:02.620163+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/421.json",
+        "receiptSha256": "0777aa85ad3103130b3fda4f09dc91ba76004c655ad3d4938788c441e66708ee"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "7029c464c5baf8bb57f7492a4c6e3c9feb9540a98cacb130a1282abf57ebeddf",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "7029c464c5baf8bb57f7492a4c6e3c9feb9540a98cacb130a1282abf57ebeddf",
+          "alt": "밝은 대기실 나무 의자 위에 파란 서류철과 영수증, 휴대전화가 놓여 있습니다.",
+          "caption": "이해를 돕기 위해 AI로 제작한 가상 이미지입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/421-review-v2.json",
+          "reportSha256": "90da0f5592b5b75ac0f51847b3e10d0b03b05067da7183014acf772310cacf46"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/421-taiwan-assault-injury-medical-evidence-complaint/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/421-taiwan-assault-injury-medical-evidence-complaint/featured-01.webp",
+        "alt": "밝은 대기실 나무 의자 위에 파란 서류철과 영수증, 휴대전화가 놓여 있습니다.",
+        "caption": "이해를 돕기 위해 AI로 제작한 가상 이미지입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다.",
+        "sha256": "278a1170d7d2266fcc58b7492e28b519e28e80cbac87e744fd970e54780f8d51",
+        "bytes": 75352,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "7388510e8cfb5df74cc93dacb289da8d393a8766766d161fd1c44a9bde5b4365",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 422,
+      "locale": "ko",
+      "slug": "taiwan-cannabis-drugs-luggage-parcel-criminal-risk",
+      "target": "src/content/columns/422-taiwan-cannabis-drugs-luggage-parcel-criminal-risk.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-cannabis-drugs-luggage-parcel-criminal-risk",
+      "inventorySourceSha256": "8c26f1e601c3a643bf952f6ae987c5b84fc41150eca59222831ea369050449fa",
+      "inventoryBodySha256": "de99b0a06b94d7edb9da32fe331f9f5419eb7ce5534afbaef220ac6888938967",
+      "sourceSha256": "8c26f1e601c3a643bf952f6ae987c5b84fc41150eca59222831ea369050449fa",
+      "bodySha256": "de99b0a06b94d7edb9da32fe331f9f5419eb7ce5534afbaef220ac6888938967",
+      "frontmatterPrefixSha256": "3feb029e0eb6642c6b3eeab7ddf4a28c8bf6a95f189ff0e109cf573ff9dac3ab",
+      "suffixSha256": "544e859cea4f2c7a59feac6c91f19be11baf9d44457daf7ca4750092d78d8453",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/422-taiwan-cannabis-drugs-luggage-parcel-criminal-risk.png",
+        "sha256": "11bc7952a17ee6c4be8361b66740dbf4e70cfc11599c1011b6d328c4976c55d4",
+        "bytes": 2284311,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural\nAsset type: Korean Taiwan-law editorial hero, fictional staged illustrative photograph.\nPrimary request: Quiet pre-travel preparation showing a CLOSED small hard-shell suitcase and an unopened plain international-sized parcel, with a simple paper document sleeve for purchase and transport records.\nScene: A softly sunlit apartment entry alcove, subtle warm-gray plaster and pale stone. At the center, a compact muted sand-colored cabin suitcase stands upright with its telescopic handle fully retracted. A small fully closed unbranded kraft parcel sits immediately next to it on a low narrow bench, with a plain cream document sleeve leaning against the parcel. No contents of either luggage or parcel are visible.\nStyle: Premium natural still-life editorial photograph with tactile cardboard, fabric zipper and softly worn stone textures. Warm quiet daylight, restrained sand, warm gray and clay palette. No people.\nComposition: Landscape 16:9, wide eye-level view with gentle negative space around the grouping. Main grouping small enough that the complete suitcase, parcel and sleeve fit inside x29–71%, y28–73%; the suitcase top and wheels must stay within that safe central area. Outer edges show only the calm alcove. Preserve whole story in centered 21:9 desktop and4:3 mobile crops.\nConstraints: No drugs or drug products visible, no leaf icons, food, pills, vapes, bottles or packaging graphics, no customs inspection, search, weapons, crime reenactment, police, anxious people, legal symbols, gavel, scales, handcuffs, readable text or numbers, brands, logos, labels, official seals, green checks or any clearance/pass/compliance indicator. No title overlay or watermark. Fictional objects, no actual client/event, no implication that the contents are permitted.",
+        "createdAt": "2026-10-10T00:07:10.981965+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/422.json",
+        "receiptSha256": "8dfa6c6810c4ee7cca8e9ad8d30d6e3a41f3b476fe76e337758e976f25c8df9a"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "11bc7952a17ee6c4be8361b66740dbf4e70cfc11599c1011b6d328c4976c55d4",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "11bc7952a17ee6c4be8361b66740dbf4e70cfc11599c1011b6d328c4976c55d4",
+          "alt": "햇빛이 드는 현관에 닫힌 여행 가방이 서 있고, 옆 벤치에는 소포와 서류 봉투가 놓여 있습니다.",
+          "caption": "AI로 만든 가상의 여행 준비 장면입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/422-review-v1.json",
+          "reportSha256": "1f3283846af35e4d807c8ecc12e2b19937ebad621fef8a90f92a197bf9f707eb"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/422-taiwan-cannabis-drugs-luggage-parcel-criminal-risk/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/422-taiwan-cannabis-drugs-luggage-parcel-criminal-risk/featured-01.webp",
+        "alt": "햇빛이 드는 현관에 닫힌 여행 가방이 서 있고, 옆 벤치에는 소포와 서류 봉투가 놓여 있습니다.",
+        "caption": "AI로 만든 가상의 여행 준비 장면입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다.",
+        "sha256": "df20dc75e3c09752a90cb34af335a05e4498e27f29495bab4cd2553ae3eddc6b",
+        "bytes": 104056,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "fe0ef062a353827195d11c2bfedb718c4915f4572b3af30307435aa0a920c420",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 423,
+      "locale": "ko",
+      "slug": "taiwan-crime-report-complaint-korean-return",
+      "target": "src/content/columns/423-taiwan-crime-report-complaint-korean-return.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-crime-report-complaint-korean-return",
+      "inventorySourceSha256": "46461337c88a6b41048f99ed0836fe75439c45b303698b7f4899770a746d0ad4",
+      "inventoryBodySha256": "40418c5ba43d9472a23572209c9f480481f2572ef44cfc25cff9c10bc35f203b",
+      "sourceSha256": "46461337c88a6b41048f99ed0836fe75439c45b303698b7f4899770a746d0ad4",
+      "bodySha256": "40418c5ba43d9472a23572209c9f480481f2572ef44cfc25cff9c10bc35f203b",
+      "frontmatterPrefixSha256": "627cf677277a2a779189449382f1028e7fc4df7ec0d4c34e43590954c5983ea6",
+      "suffixSha256": "80e62c70ae87d6540c41e39828f404ca5a5bc926ed6f681d7a72078489092476",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/423-taiwan-crime-report-complaint-korean-return.png",
+        "sha256": "77579e9fd42a9788d20d004c5fc610f99dffb2ac3914d444a327c5d5a2f06457",
+        "bytes": 2446479,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit the provided fictional gouache travel-document illustration. Preserve the same navy canvas document wallet, cream paper packet, unmarked green booklet, burgundy strap, two natural anonymous adult hands and beige sleeves, colors, paper grain and calm gesture. Change only the framing: zoom out strongly so the COMPLETE wallet plus BOTH hands and the burgundy strap are now a compact centered group wholly within x27–73% and y27–73% of a landscape16:9 image. Add much more quiet ivory textured background surrounding the group on every side. Forearms may extend outward beyond that zone but every hand/fingertip, all pages and wallet edges stay inside the central safe rectangle. The intended scene is preserving a report receipt and contact papers before returning home; no readable text, letters, numbers, logos, passport emblems, official document design, seals or legal icons. Maintain two correctly formed adult hands with natural grip, no additional objects. Must retain whole story in centered21:9desktop and4:3mobile crops.",
+        "createdAt": "2026-10-10T00:09:38.320880+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/423.json",
+        "receiptSha256": "60fc0b1dd8bb7e65a4db46c81b364cee8d8c4baa5cb97cfa5523f88dcb79e66d"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "77579e9fd42a9788d20d004c5fc610f99dffb2ac3914d444a327c5d5a2f06457",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "77579e9fd42a9788d20d004c5fc610f99dffb2ac3914d444a327c5d5a2f06457",
+          "alt": "두 손이 남색 여행용 서류 지갑에 종이와 작은 수첩을 정리하고 있습니다.",
+          "caption": "AI로 제작한 가상의 서류 정리 장면입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/423-review-v1.json",
+          "reportSha256": "fcaa68f7395c7c78d33f7b8a80ce9b25e7e9cf6f39a87cfb4c73a8e897e9dc1b"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/423-taiwan-crime-report-complaint-korean-return/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/423-taiwan-crime-report-complaint-korean-return/featured-01.webp",
+        "alt": "두 손이 남색 여행용 서류 지갑에 종이와 작은 수첩을 정리하고 있습니다.",
+        "caption": "AI로 제작한 가상의 서류 정리 장면입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다.",
+        "sha256": "11acf3944edb2ac2b84b46d80cebc3b5ea8d21c7bd5224e203891658eb93cb5a",
+        "bytes": 96574,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "5da803929e195e5e7f2b83245a8646c16f9005631a8714ade0b75432e326098d",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 424,
+      "locale": "ko",
+      "slug": "taiwan-criminal-judgment-summary-appeal-twenty-days",
+      "target": "src/content/columns/424-taiwan-criminal-judgment-summary-appeal-twenty-days.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-criminal-judgment-summary-appeal-twenty-days",
+      "inventorySourceSha256": "8d247c916df405dbf50d0cc2680a1809b529c1dc9f03e5faab2751fcaf1c548a",
+      "inventoryBodySha256": "433d7dbcba946b393aebabd743704172b10add81fda62be14e14c98d5307b27a",
+      "sourceSha256": "8d247c916df405dbf50d0cc2680a1809b529c1dc9f03e5faab2751fcaf1c548a",
+      "bodySha256": "433d7dbcba946b393aebabd743704172b10add81fda62be14e14c98d5307b27a",
+      "frontmatterPrefixSha256": "db4d4b2e5ec06860afd5a91853448309ee24911e3fa2f7cb04c48c31de1f430f",
+      "suffixSha256": "50b49c15f970ce57b641300f6420c674eb5fb78ff93009f30fa729bbcbfb29f7",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/424-taiwan-criminal-judgment-summary-appeal-twenty-days.png",
+        "sha256": "245eadd135736d14b9f78992b8bffb157c9d8f198c4148924eb35ded79bb1571",
+        "bytes": 3065490,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit the provided fictional textured gouache/linocut mail-shelf illustration. Preserve exactly its opened warm manila envelope, complete cream document packet and small blank clipped slip, small plain navy clock with two hands and no numerals, wooden wall shelf, tactile painted texture and warm soft lighting. Change only framing: pull the viewpoint back enough that the ENTIRE envelope including its pointed flap, ALL paper edges, clipped slip and complete clock fit wholly within the central x28–72% and y28–72% of a landscape16:9 image. Add much more calm wall space above and on both sides; maintain balanced quiet negative space. Envelope top must be below 28% of frame height. Retain shelf beneath the group. The outer plant/artwork may be small peripheral context. No text or numbers, no dates or calendars, no20-day sign, no extra symbols, logo, official seals, stamps or watermark. The clock is only a neutral time cue, not a legal deadline start or expiry. No people or smartphone. The whole received-document preservation story must survive centered21:9desktop and4:3mobile crops.",
+        "createdAt": "2026-10-10T00:15:33.101191+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/424.json",
+        "receiptSha256": "8a93932a4bbdc8ab3231f4e16632761481e7e6b984601c140467d3080ab15b9e"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "245eadd135736d14b9f78992b8bffb157c9d8f198c4148924eb35ded79bb1571",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "245eadd135736d14b9f78992b8bffb157c9d8f198c4148924eb35ded79bb1571",
+          "alt": "나무 선반 위에 열린 봉투와 종이 묶음, 작은 기록지, 파란 탁상시계가 놓여 있습니다.",
+          "caption": "이해를 돕기 위해 AI로 제작한 가상 삽화입니다. 실제 판결문이나 의뢰인의 사건을 묘사하지 않습니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/424-review-v1.json",
+          "reportSha256": "393b8a21d166f0b4f6f8c583c8bd56931f9f8493fe8a312bd10a1f2e1b65f685"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/424-taiwan-criminal-judgment-summary-appeal-twenty-days/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/424-taiwan-criminal-judgment-summary-appeal-twenty-days/featured-01.webp",
+        "alt": "나무 선반 위에 열린 봉투와 종이 묶음, 작은 기록지, 파란 탁상시계가 놓여 있습니다.",
+        "caption": "이해를 돕기 위해 AI로 제작한 가상 삽화입니다. 실제 판결문이나 의뢰인의 사건을 묘사하지 않습니다.",
+        "sha256": "2c048ad302d5a07edc8be620fcebc26a9886c4c35a1c6d37a068570e35e73585",
+        "bytes": 211276,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "b260df84578a91eb3c4b222f284bdc6f1d390933039b04241ff921b54b196b21",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 425,
+      "locale": "ko",
+      "slug": "taiwan-deferred-prosecution-suspended-sentence-fine-conversion",
+      "target": "src/content/columns/425-taiwan-deferred-prosecution-suspended-sentence-fine-conversion.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-deferred-prosecution-suspended-sentence-fine-conversion",
+      "inventorySourceSha256": "d1b6375b8d41fd863f8e92983f60d512854ac325d0fb2e6c028bfe94b109fde1",
+      "inventoryBodySha256": "cccb748c1e9f0c8425f40674f741141f926536217ebe51162c2776bf7f661a24",
+      "sourceSha256": "d1b6375b8d41fd863f8e92983f60d512854ac325d0fb2e6c028bfe94b109fde1",
+      "bodySha256": "cccb748c1e9f0c8425f40674f741141f926536217ebe51162c2776bf7f661a24",
+      "frontmatterPrefixSha256": "9f16af659891b81d4898c383c7d35fd51a0713bfe361c1ddf920ef99d3424ca8",
+      "suffixSha256": "d1d8885f3ce3999e5a3cfa0d17d3d620b338fd2ce7a26416dc0960d382fa6c82",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/425-taiwan-deferred-prosecution-suspended-sentence-fine-conversion.png",
+        "sha256": "b0518aacd6e48cb278a4ff7ca9b8cec3477c038963f0ae1b66513a6dd8f5d019",
+        "bytes": 2116875,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit only the central framing of the provided editorial photograph. Preserve the exact warm natural photograph style, three indigo/grey/russet folders, blank tabs, paper details, divided wooden organizer, pale stone sideboard, soft window light and calm fictional interior. Zoom the camera out slightly so the ENTIRE organizer and all three folders including top tabs fit within the central rectangle x30–70% and y28–72% of the final 16:9 image. Keep the grouping centered and smaller, expanding the same background naturally. Do not change the story or add objects, writing, numbers, logos, people, legal symbols, money or outcome indicators. The selected output will be center-cropped to21:9 and4:3, so generous margins and all three complete folders inside the central safe rectangle are the only requested change.",
+        "createdAt": "2026-10-10T00:07:11.904570+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/425.json",
+        "receiptSha256": "94a6f1e3326fe3f8e389c5fec66bc24e33280571e0f861f54f729d37858e8545"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "b0518aacd6e48cb278a4ff7ca9b8cec3477c038963f0ae1b66513a6dd8f5d019",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "b0518aacd6e48cb278a4ff7ca9b8cec3477c038963f0ae1b66513a6dd8f5d019",
+          "alt": "서류가 꽂힌 남색·회색·적갈색 파일 세 개가 나무 정리함에 나란히 놓인 모습",
+          "caption": "문서의 종류를 구분해 보관하는 모습을 AI로 생성한 가상 장면입니다. 실제 의뢰인이나 사건을 촬영한 것이 아닙니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/425-review-v1.json",
+          "reportSha256": "36d7f2fc08a80db47b84f10feec9593853a360a9e7ee00c01b6564f21b9f887e"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/425-taiwan-deferred-prosecution-suspended-sentence-fine-conversion/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/425-taiwan-deferred-prosecution-suspended-sentence-fine-conversion/featured-01.webp",
+        "alt": "서류가 꽂힌 남색·회색·적갈색 파일 세 개가 나무 정리함에 나란히 놓인 모습",
+        "caption": "문서의 종류를 구분해 보관하는 모습을 AI로 생성한 가상 장면입니다. 실제 의뢰인이나 사건을 촬영한 것이 아닙니다.",
+        "sha256": "4783c233833790b8054be5309b67ffbadfad255fc1499df2d490f77c14be7bcc",
+        "bytes": 109080,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "f8507a36d6228df3024d02a41bfe1d2d140a8a0114e0d706bf1f13dac1fe67ae",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 426,
+      "locale": "ko",
+      "slug": "taiwan-online-review-defamation-public-insult",
+      "target": "src/content/columns/426-taiwan-online-review-defamation-public-insult.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-online-review-defamation-public-insult",
+      "inventorySourceSha256": "e7315cf3e7dff42ecf8355a7a2adde6c54f847f89f3aa2cd3e30d05063a85099",
+      "inventoryBodySha256": "f2b135b00097002001a3967d6f4cc8c075f54acd8c98d8c9485046c90db5db62",
+      "sourceSha256": "e7315cf3e7dff42ecf8355a7a2adde6c54f847f89f3aa2cd3e30d05063a85099",
+      "bodySha256": "f2b135b00097002001a3967d6f4cc8c075f54acd8c98d8c9485046c90db5db62",
+      "frontmatterPrefixSha256": "43a17a9b8a0f5dbad80eeb0a18dc3ce9c68d077c789769ac93f77e54d1a73bbc",
+      "suffixSha256": "c8d60df7b815d4ac7504d850d760e935efcb07d4b9848b78e89adf255359a8e0",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/426-taiwan-online-review-defamation-public-insult.png",
+        "sha256": "496ea656cfa056a6033e978cb48903319759b3ba1608910270f046ff9da4a286",
+        "bytes": 2531196,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Make one narrow edit to the provided textured gouache editorial illustration: pull back the viewpoint and center the ENTIRE group of smartphone, narrow receipt and clipped paper records so that its full outer boundary is within x28–72% and y28–72% of the 16:9 image. This means noticeably smaller objects with MORE blue-grey tabletop margin on all four sides; center at x50%,y50%. Preserve the illustrated paper grain, brushstroke texture, muted teal and cream palette, calm cafe table, object shapes, and abstract unreadable post/reply lines. No readable letters, numbers, logos, red marks, star ratings, approval symbols or new objects. Replace the small profile silhouette circles on the phone screen with plain featureless pale grey circles. The story remains preservation of online context and receipts, a fictional editorial scene with no real accusation. Critical group must stay complete in both centered21:9 and4:3 crops.",
+        "createdAt": "2026-10-10T00:07:40.944260+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/426.json",
+        "receiptSha256": "8da7893268f9933399658f350a96671c0c42f437ab46bd88219ca705a7c9799b"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "496ea656cfa056a6033e978cb48903319759b3ba1608910270f046ff9da4a286",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "496ea656cfa056a6033e978cb48903319759b3ba1608910270f046ff9da4a286",
+          "alt": "휴대전화의 추상적인 게시물 화면 옆에 영수증과 집게로 묶은 자료가 놓인 삽화",
+          "caption": "온라인 기록과 영수증을 함께 보관하는 상황을 AI로 표현한 가상 삽화입니다. 실제 게시물이나 의뢰인의 사건을 나타내지 않습니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/426-review-v1.json",
+          "reportSha256": "11c8df03cc84501a961385ffffea2709dada0fb85c51c3c1fa01f45be1680922"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/426-taiwan-online-review-defamation-public-insult/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/426-taiwan-online-review-defamation-public-insult/featured-01.webp",
+        "alt": "휴대전화의 추상적인 게시물 화면 옆에 영수증과 집게로 묶은 자료가 놓인 삽화",
+        "caption": "온라인 기록과 영수증을 함께 보관하는 상황을 AI로 표현한 가상 삽화입니다. 실제 게시물이나 의뢰인의 사건을 나타내지 않습니다.",
+        "sha256": "e095d6ad4d6ce6332ba67b2d5a724465df6b45c2f81d6b275a0980834fe1e5b7",
+        "bytes": 143558,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "5d0f8dbbae207de55ab9ca89fbbd39346149d0951847805d10b28bddde601a19",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 427,
+      "locale": "ko",
+      "slug": "taiwan-sexual-assault-medical-report-support",
+      "target": "src/content/columns/427-taiwan-sexual-assault-medical-report-support.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-sexual-assault-medical-report-support",
+      "inventorySourceSha256": "ed48da8d397f8d697210b9ff7c2eaab5ed58acb24663a6bd8b673703e1669d0c",
+      "inventoryBodySha256": "242ebdfaf143d0633a2a768ec7b1c7c92dee91eeda56c2f256b4f22bada789ac",
+      "sourceSha256": "ed48da8d397f8d697210b9ff7c2eaab5ed58acb24663a6bd8b673703e1669d0c",
+      "bodySha256": "242ebdfaf143d0633a2a768ec7b1c7c92dee91eeda56c2f256b4f22bada789ac",
+      "frontmatterPrefixSha256": "010e415cfcd81a825e87d242eb155cedd132933beb602176542ac869dca0bafb",
+      "suffixSha256": "eece611912dddbd9e83857d522993f113610cad98512a5bee1828985196ce5ca",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/427-taiwan-sexual-assault-medical-report-support.png",
+        "sha256": "0251939bed2052db0da9717ad914dc7916a4c18614f1f3d423b6656e4ea4b4b0",
+        "bytes": 1980570,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: precise-object-edit\nEdit this provided fictional interior photograph only to pull the camera farther back and re-center its central furniture group for responsive cropping. Preserve the same quiet refined natural-photography aesthetic, two comfortable oatmeal armchairs, small round wooden side table with two plain cups and tiny plant, and fabric privacy screen behind them. Preserve all object designs, natural textures, lighting and absence of people. Zoom out substantially: the complete central group, including both chairs down to the feet and the screen top, should now be smaller and fit wholly inside the rectangle from x28% to x72% and y25% to y75% of the final 16:9 frame. In particular move the chairs visually upward so their feet finish near y73%, not y85%. Extend the plausible quiet room architecture and floor around them as needed; broad breathing room, no border or inset effect. Remove visible book-spine print if any. Do not add subjects or props, people, faces, institution signs, readable text, logos, watermarks or dramatic crime symbols. This is an illustrative fictional support room, not an actual client or event.",
+        "createdAt": "2026-10-10T00:07:31.494286+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/427.json",
+        "receiptSha256": "08681348758a8085d4d689865d8e947fafb8ef517a1cf63090ffe4dea0c5052c"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "0251939bed2052db0da9717ad914dc7916a4c18614f1f3d423b6656e4ea4b4b0",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "0251939bed2052db0da9717ad914dc7916a4c18614f1f3d423b6656e4ea4b4b0",
+          "alt": "패브릭 가림막 앞에 편안한 의자 두 개와 작은 원형 탁자가 놓인 햇빛 드는 빈 방",
+          "caption": "AI로 만든 가상의 상담 공간 이미지입니다. 실제 의뢰인이나 사건, 의료기관을 촬영한 사진이 아닙니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/427-review-v1.json",
+          "reportSha256": "a6fad530f5738ba5b10229142b8ed31fb9e819bfaf50749e64313c90c58acd5f"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+        "alt": "패브릭 가림막 앞에 편안한 의자 두 개와 작은 원형 탁자가 놓인 햇빛 드는 빈 방",
+        "caption": "AI로 만든 가상의 상담 공간 이미지입니다. 실제 의뢰인이나 사건, 의료기관을 촬영한 사진이 아닙니다.",
+        "sha256": "4ae54482c1f9ac52f013497e7e75bdc7802e1665d5557612a201499e7f0f8585",
+        "bytes": 99894,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "66aa4dad638b7072ea2845ef0f3f406ab11168069f8cd864862b929f687a4796",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 428,
+      "locale": "ko",
+      "slug": "taiwan-stolen-phone-wallet-police-evidence",
+      "target": "src/content/columns/428-taiwan-stolen-phone-wallet-police-evidence.md",
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-stolen-phone-wallet-police-evidence",
+      "inventorySourceSha256": "5a2e4253962f947b32e0e6358de578835abf61a1ea8460069f6b8157215d5a29",
+      "inventoryBodySha256": "2b8631138a2f691e3c0f0253ba475c0f7d9427f6ae985eef84921f7ceb9eb48e",
+      "sourceSha256": "5a2e4253962f947b32e0e6358de578835abf61a1ea8460069f6b8157215d5a29",
+      "bodySha256": "2b8631138a2f691e3c0f0253ba475c0f7d9427f6ae985eef84921f7ceb9eb48e",
+      "frontmatterPrefixSha256": "a025f7a5a5445bb0ca164bff8b1836c860a37c4cb44c579fc10fa6292c5ab5c4",
+      "suffixSha256": "dc92e179dbea8f5cc5d375024f0e7baa742f7bbe7106f8263fb54e08ce068205",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/428-taiwan-stolen-phone-wallet-police-evidence.png",
+        "sha256": "acc19bf0a7f61d6015ea037c0475de2f6179c259249cb53117cf925d512ab493",
+        "bytes": 2339765,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: style-transfer\nEdit only the visual medium of the supplied illustration, preserving its exact compact object arrangement and central framing. Transform the gouache/pencil texture into an elegant sculptural cut-paper editorial illustration made from layered thick matte pastel papers, soft raised relief, carefully cut edges, shallow dimensional folds and delicate studio shadows. Warm pale stone background as continuous matte paper, ivory and cream carton and record slips, muted indigo-blue pouch. Sophisticated and restrained, not childish, no collage panels or border.\nPreserve exactly: an open EMPTY unbranded phone carton with a molded-looking EMPTY rounded-rectangle phone tray and separate lid; an open EMPTY indigo pouch rendered as softly folded cut paper; only two small purchase-record slips with a plain minimal paper clip. Keep the blank side label, make record marks abstract subtle short paper strips, no readable writing. Preserve the absence of any actual phone, screen, wallet, person, hands or recovered property. The object group must remain completely within x27–73% and y26–74% of the landscape 16:9 frame, with abundant negative space around it. Do not enlarge or reposition the cluster. Subject remains retained purchase and device-identification materials after an item disappears; no assertion of theft or recovery. No logos, numbers, readable text, barcodes, official symbols, police, tracking maps, green checks, dramatic lighting, text overlays or watermarks.",
+        "createdAt": "2026-10-10T00:11:21.614028+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/428.json",
+        "receiptSha256": "341c4b22006dcec82babce59490611c4605bfa290b779afa491b05c48c169673"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "acc19bf0a7f61d6015ea037c0475de2f6179c259249cb53117cf925d512ab493",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "acc19bf0a7f61d6015ea037c0475de2f6179c259249cb53117cf925d512ab493",
+          "alt": "빈 휴대전화 포장 상자와 클립으로 묶은 종이 두 장, 입구가 열린 남색 주머니를 표현한 입체 삽화",
+          "caption": "AI로 만든 가상의 삽화입니다. 실제 의뢰인이나 분실·도난 사건의 물품과 기록을 보여 주는 이미지가 아닙니다.",
+          "reviewer": "/root/missing_media_review/review_ko",
+          "reportPath": "work/missing-media-20261010/reviews/ko/428-review-v2.json",
+          "reportSha256": "0ff0375e3cc50419847200fe9459f08d361f35f48c5525811ae93b60a75009fd"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+        "alt": "빈 휴대전화 포장 상자와 클립으로 묶은 종이 두 장, 입구가 열린 남색 주머니를 표현한 입체 삽화",
+        "caption": "AI로 만든 가상의 삽화입니다. 실제 의뢰인이나 분실·도난 사건의 물품과 기록을 보여 주는 이미지가 아닙니다.",
+        "sha256": "74fbaa5e85a437aac9f1686b2118484df28cae69ff1875af211d8a0cf7d460b4",
+        "bytes": 66716,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "96fd636e1a75268aa61f4e2f7a015f5e55aa9c5e172da036d4c1b350b2096874",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 429,
+      "locale": "ja",
+      "slug": "taiwan-assault-damages-attached-civil-action-japanese",
+      "target": "src/content/columns-ja/429-taiwan-assault-damages-attached-civil-action-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-assault-damages-attached-civil-action-japanese",
+      "inventorySourceSha256": "660c795f075f57f1143975d09d218d5b6469c5e71b2c0e1c1c0b8c52052006eb",
+      "inventoryBodySha256": "077aaa01afaf5e46dff2f5322e29658200ba2cdb043505c00533b275bf4632e5",
+      "sourceSha256": "660c795f075f57f1143975d09d218d5b6469c5e71b2c0e1c1c0b8c52052006eb",
+      "bodySha256": "077aaa01afaf5e46dff2f5322e29658200ba2cdb043505c00533b275bf4632e5",
+      "frontmatterPrefixSha256": "ffc1d9459901e8fc4bce3debb6394e87b22d8afae9989894d46d8fee097adf6b",
+      "suffixSha256": "f8e02b4044999f1474ab2bc04f48025b0e7b295cbee711316f6202709b572790",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/429-taiwan-assault-damages-attached-civil-action-japanese.png",
+        "sha256": "f2e45375269aa0d901f584ba85caeedc2bd3ccbfcce01a389da0eb1a3a72fbf0",
+        "bytes": 1860489,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: Japanese-language Taiwan legal-information article hero, a fictional editorial illustration by photography, landscape 16:9. The article explains organizing medical expenses, time away from work, and original supporting records after an injury, separately from the criminal case. Show a calm tactile close-up of a single anonymous adult hand gently placing a narrow cream receipt slip into a transparent archival document sleeve resting on a pale oak surface; a small neat stack of differently sized plain cream slips and a closed muted blue employment-record folder sit beside it. All paper is blank or has only completely unreadable soft grey texture, with no legible letters, numbers, seals, stamps, signatures or logos. No medical instrument, medicine, bandages or visible injury. Show the hand from wrist down only, naturally relaxed and anatomically correct, no person or face. Morning window light, natural Japanese editorial magazine photography, realistic translucent sleeve edges, modest warm cream and blue tones, restrained and useful, quiet real textures, no drama. Composition: one focused cluster at image center; the hand's fingers, open sleeve and all important record slips must remain within x25–75% and y25–75% of the full image, with generous softly blurred oak and daylight margins on every side. Crop-safe for 21:9 desktop center crop and 4:3 mobile center crop. No text overlay, captions, law symbols, gavels, scales, handcuffs, money, green checkmarks, recognizable institution, actual client, outcome promise, collage, watermark.",
+        "createdAt": "2026-10-10T00:06:08.052Z",
+        "receiptPath": "work/missing-media-20261010/receipts/429.json",
+        "receiptSha256": "754c27d7defd73c645b9884d2465bd17abfba53e3d1a09e2da982398a30851dc"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "f2e45375269aa0d901f584ba85caeedc2bd3ccbfcce01a389da0eb1a3a72fbf0",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "f2e45375269aa0d901f584ba85caeedc2bd3ccbfcce01a389da0eb1a3a72fbf0",
+          "alt": "木の机で、紙の明細を透明なファイルに収める手元。隣に小さな紙の束と青い書類入れがあります。",
+          "caption": "AIで生成した架空の書類整理の場面です。実際の依頼者や事件を写したものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/429.json",
+          "reportSha256": "a7540836f03def31985e9188b868b6da0abeca8538718acebe74310ef1aac73a"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/429-taiwan-assault-damages-attached-civil-action-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/429-taiwan-assault-damages-attached-civil-action-japanese/featured-01.webp",
+        "alt": "木の机で、紙の明細を透明なファイルに収める手元。隣に小さな紙の束と青い書類入れがあります。",
+        "caption": "AIで生成した架空の書類整理の場面です。実際の依頼者や事件を写したものではありません。",
+        "sha256": "aebb9ccc24975f5ac567037cfd343aa0e767b950f09c3c314a4e8c76243c0732",
+        "bytes": 66428,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "30f9f1b6034af0e358d2a135f5cfb36bf0e3b242918b639e3e84ed1d472eefc0",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 430,
+      "locale": "ja",
+      "slug": "taiwan-assault-injury-threat-complaint-japanese",
+      "target": "src/content/columns-ja/430-taiwan-assault-injury-threat-complaint-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-assault-injury-threat-complaint-japanese",
+      "inventorySourceSha256": "01059e240f9b83143987658d98391379c5f68508c7794b42a5b0b92e77f92a4f",
+      "inventoryBodySha256": "99a56f8140eb1ca217e9087ae0dac02d2227c4893898b03fa7f44808fdd8838a",
+      "sourceSha256": "01059e240f9b83143987658d98391379c5f68508c7794b42a5b0b92e77f92a4f",
+      "bodySha256": "99a56f8140eb1ca217e9087ae0dac02d2227c4893898b03fa7f44808fdd8838a",
+      "frontmatterPrefixSha256": "63954087c352dfe55b260e3ba3b2bc3b34b2f669a9f82d548d8d48e433712fc5",
+      "suffixSha256": "9c4987756f25ed669f8b073fdfa1e4e1e3efa9420e21f8f5b1f56e5d89ed2e9b",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/430-taiwan-assault-injury-threat-complaint-japanese.png",
+        "sha256": "4b4fa88baea0304a8a803c3c2ef1a09decbe355b9dbb7e4e06cd044db266dadd",
+        "bytes": 2876549,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: illustration-story. Asset type: landscape 16:9 editorial website hero for a Japanese article about preserving original messages, photos and other evidence after an injury incident in Taiwan. Create an elegant restrained hand-painted gouache and colored-pencil still life, subtle paper grain, soft blue-grey and warm ivory palette, natural shadows, sophisticated editorial realism. Scene: on a plain light linen mat, a dark-screen unbranded smartphone lies face-up beside a small silver external backup drive and a short softly looped data cable, with one small closed plain notebook partially beneath the pair. There is no displayed interface or content, no pictured violence, no injuries, no person. The objects suggest keeping original digital records and writing down a factual chronology, without suggesting they prove who caused an injury. Composition: slight overhead oblique view, main phone, drive, connector and notebook compactly grouped fully inside x30–70% and y30–70% of the frame. Plenty of quiet textured linen and soft light around the centered cluster. All objects are physically coherent, realistic proportions; cable ends separate and plausible, no complex tangle. Critical subject must survive 21:9 desktop and 4:3 mobile center crops. No text, readable numbers, icons, timestamps, photographs on screen, courtroom symbols, gavels, scales, handcuffs, badges, seals, logos, watermarks, cash, medical equipment, crime reenactment, fear, result guarantees or green checkmarks. Fictional illustrative objects, not actual case evidence. One unified scene, no panels.",
+        "createdAt": "2026-10-10T00:07:10.384Z",
+        "receiptPath": "work/missing-media-20261010/receipts/430.json",
+        "receiptSha256": "ad872635ab2766e7ad9ccfd1dd3ca358fc9110a04814eba2a750d6eb245b7f42"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "4b4fa88baea0304a8a803c3c2ef1a09decbe355b9dbb7e4e06cd044db266dadd",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "4b4fa88baea0304a8a803c3c2ef1a09decbe355b9dbb7e4e06cd044db266dadd",
+          "alt": "布の上に置いた画面の暗いスマートフォン、青いノート、銀色の保存媒体と短いケーブルを描いたイラスト。",
+          "caption": "AIで生成した架空のイラストです。実際の依頼者の持ち物や事件の証拠を示すものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/430.json",
+          "reportSha256": "b03c86b32bb2944236ba235d619377fff3454bf3843e7f4afe4c8cc271000b7d"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/430-taiwan-assault-injury-threat-complaint-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/430-taiwan-assault-injury-threat-complaint-japanese/featured-01.webp",
+        "alt": "布の上に置いた画面の暗いスマートフォン、青いノート、銀色の保存媒体と短いケーブルを描いたイラスト。",
+        "caption": "AIで生成した架空のイラストです。実際の依頼者の持ち物や事件の証拠を示すものではありません。",
+        "sha256": "186bdcb98cef6ce5ea20b14a26793c55a0e61ccd215434109840307f33271aa4",
+        "bytes": 186352,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "9b3d6b1fbae7a55c41823a04b30c03c81e6e33c013fa15430ffb4ff9b9142d60",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 431,
+      "locale": "ja",
+      "slug": "taiwan-criminal-judgment-appeal-japanese",
+      "target": "src/content/columns-ja/431-taiwan-criminal-judgment-appeal-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-criminal-judgment-appeal-japanese",
+      "inventorySourceSha256": "781ae2c22e86cd2181f7c3082cb04b3ca7ec7aa4f364615b2fb5f2ac0af8f933",
+      "inventoryBodySha256": "00653cfe04029e636858375a1ae2a7eb3f92bcceaf9c8750a0fc8776246a16c6",
+      "sourceSha256": "781ae2c22e86cd2181f7c3082cb04b3ca7ec7aa4f364615b2fb5f2ac0af8f933",
+      "bodySha256": "00653cfe04029e636858375a1ae2a7eb3f92bcceaf9c8750a0fc8776246a16c6",
+      "frontmatterPrefixSha256": "d88b7f8c062516ed3f0bbfa5c0fb2be4f26f1ab39a118dab2ec879c3fabba7ad",
+      "suffixSha256": "8baf05fa5a2b23282aa9e22807be7fb3b0ab70bc06f2843094feaed5ba926474",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/431-taiwan-criminal-judgment-appeal-japanese.png",
+        "sha256": "5ba8316e7c662b3bad83719bf86fbb579ec33b93e7eeb55bb537c32d5d8c276d",
+        "bytes": 2087670,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: quiet premium Japanese editorial photograph, landscape 16:9 hero for an article about keeping every page and the envelope when a Taiwan criminal judgment arrives and promptly checking service date and appeal instructions. This is a fictional neutral domestic mail-sorting scene, no courtroom. Subject: a small dark walnut letter tray on a slim entryway console against soft warm plaster. In the central tray a large cream envelope is visibly opened, its flap folded back, with a complete modest stack of pale paper protruding slightly; one small folded plain desk planner with only a faint empty square grid and absolutely no letters or numbers stands immediately beside the envelope. Gentle daylight through a window out of frame, a hint of blurred apartment entry wall and coat hook at far margin. No people. Carefully observed paper fibers, folded envelope edges and warm wood, refined natural photography, calm modest household reality. All important envelope, protruding stack and blank planner fully inside x30–70% and y30–70% of the full frame; pull camera back for generous breathing room. Clearly distinguish this from a paper desk or legal office: a domestic entryway mail tray, side-on three-quarter view. Critical subjects must remain visible after centered 21:9 and4:3 crops. The paper and envelope are unmarked, with no fake legal language, dates, numbers, address, postage, barcodes, seals, official identity, signature, legible text, brand or logo. No clocks, hourglasses, numerals, gavels, scales, handcuffs, money, stamps, green checkmarks, dramatic light, crime imagery or outcome guarantees. No text overlay, watermark, panels or collage.",
+        "createdAt": "2026-10-10T00:08:12.341Z",
+        "receiptPath": "work/missing-media-20261010/receipts/431.json",
+        "receiptSha256": "f908aca93b31961bbb2b24087e6a7577abecf23f8c3fcf6cf01e47cb43387bbc"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "5ba8316e7c662b3bad83719bf86fbb579ec33b93e7eeb55bb537c32d5d8c276d",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "5ba8316e7c662b3bad83719bf86fbb579ec33b93e7eeb55bb537c32d5d8c276d",
+          "alt": "玄関脇の木製トレーに、開いた封筒と紙の束、薄い方眼のメモ帳が置かれています。",
+          "caption": "AIで生成した架空の郵便物整理の場面です。実際の依頼者に届いた判決書や事件を写したものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/431.json",
+          "reportSha256": "254a207f63ddedebc08cc3fde9996175a5671cf4bb57dd2d96b8755f19018e11"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/431-taiwan-criminal-judgment-appeal-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/431-taiwan-criminal-judgment-appeal-japanese/featured-01.webp",
+        "alt": "玄関脇の木製トレーに、開いた封筒と紙の束、薄い方眼のメモ帳が置かれています。",
+        "caption": "AIで生成した架空の郵便物整理の場面です。実際の依頼者に届いた判決書や事件を写したものではありません。",
+        "sha256": "4b1c8e7571657829badda49986d3a32ece7e0f73f3512c8ab9c73daf28c080b4",
+        "bytes": 83138,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "c859f07fe83845c266053c742b255d785e43a7b2ed04a85ce8ad95a4310d6f29",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 432,
+      "locale": "ja",
+      "slug": "taiwan-deferred-prosecution-suspended-sentence-fine-japanese",
+      "target": "src/content/columns-ja/432-taiwan-deferred-prosecution-suspended-sentence-fine-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-deferred-prosecution-suspended-sentence-fine-japanese",
+      "inventorySourceSha256": "dd4076ba69d448711801f8ef97017e7eede537c2795f453edcfc2f17b862b7fe",
+      "inventoryBodySha256": "2114881eb7c21b8fac7825901284342358a01cd9e77cb787a349c758e001a1d4",
+      "sourceSha256": "dd4076ba69d448711801f8ef97017e7eede537c2795f453edcfc2f17b862b7fe",
+      "bodySha256": "2114881eb7c21b8fac7825901284342358a01cd9e77cb787a349c758e001a1d4",
+      "frontmatterPrefixSha256": "8b60735f77ae84ef241a62f90785b0a76ef92a0f8c720a771403b2ea7022b5a4",
+      "suffixSha256": "7e421fe9238e4039a55b79fe6442e2105ed0c52d14e914741d5ee0f5c413fede",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/432-taiwan-deferred-prosecution-suspended-sentence-fine-japanese.png",
+        "sha256": "e1c85748c8e981b621253757d317515b04db3ba43246a6d99efdf18569095b1d",
+        "bytes": 2319595,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: stylized-concept. Asset type: landscape 16:9 Japanese legal-information website hero. Create a beautifully handcrafted editorial paper-sculpture illustration, visibly made from layered matte card with cut edges, folded planes and subtle paper fiber; intentionally NOT a photograph of a real desk. The article explains checking different Taiwan disposition and judgment documents, their conditions, official contacts and separate evidence of compliance. Depict ordinary careful record organization, NOT three legal options, choices or outcomes. One compact accordion document case made of muted slate-blue thick paper is open at the center, holding a modest uneven stack of cream sheets divided by three small plain index tabs in related neutral tones; two narrow unmarked receipt slips lie neatly within its front pocket. Everything forms ONE integrated object, no separate panels, lanes, arrows, icons, numbers or category labels. A small unmarked tan folder rests slightly tilted behind the accordion case as part of the same cluster. Scene is a spare sculptural set of pale warm-grey curved paper backdrop and low broad folded-paper plinth, generous negative space, soft raking studio daylight revealing material texture, quiet high-end editorial art direction, restrained blue, cream and clay palette. Camera at eye level slightly above object. Pull back: case, index tabs, sheets, slips and supporting folder all fit comfortably in x32–68% and y28–72% of full frame so both 21:9 desktop and4:3 mobile centered crops preserve the complete story. No real desk, computer, phone, person, money, calendar, clock, text, letters, numbers, printed markings, seals, logos, legal symbols, scales, gavel, handcuffs, court or government building, green checks, celebratory or ominous symbolism. No miniature diorama of a crime. Fictional illustrative record organizer only; no implication of choosing a legal disposition or guaranteeing completion. No watermark, collage, overlay or border.",
+        "createdAt": "2026-10-10T00:09:31.105Z",
+        "receiptPath": "work/missing-media-20261010/receipts/432.json",
+        "receiptSha256": "6970a46deb832f7531d164402c2174650f6ad847d90215baf5f71bdf0f370b33"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "e1c85748c8e981b621253757d317515b04db3ba43246a6d99efdf18569095b1d",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "e1c85748c8e981b621253757d317515b04db3ba43246a6d99efdf18569095b1d",
+          "alt": "青い蛇腹式の書類入れに、無地の紙と色の異なる見出しを収めた、紙細工風のイラスト。",
+          "caption": "AIで生成した、処分に関する書類を整理する架空のイラストです。実際の依頼者の資料や事件を示すものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/432.json",
+          "reportSha256": "98e9e6dd9f756dbdb7a312adf20d5e3c33289af3aecc38c62c2a935f02a1f041"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/432-taiwan-deferred-prosecution-suspended-sentence-fine-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/432-taiwan-deferred-prosecution-suspended-sentence-fine-japanese/featured-01.webp",
+        "alt": "青い蛇腹式の書類入れに、無地の紙と色の異なる見出しを収めた、紙細工風のイラスト。",
+        "caption": "AIで生成した、処分に関する書類を整理する架空のイラストです。実際の依頼者の資料や事件を示すものではありません。",
+        "sha256": "69fef9a0ff50bc2546b76d4e7a7e3612dea0ab68ecc8d28739cc5b727f8b924e",
+        "bytes": 95806,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "5dfa296834f68637d4d4f823ec6a0abdb6a80847046e3158c18be45d034e15ee",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 433,
+      "locale": "ja",
+      "slug": "taiwan-detained-family-visits-lawyer-japanese",
+      "target": "src/content/columns-ja/433-taiwan-detained-family-visits-lawyer-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-detained-family-visits-lawyer-japanese",
+      "inventorySourceSha256": "9c2c13ec1c66b9847fa87946aac65ae923fbb3fa0abe62d8ea23b6d9150dc356",
+      "inventoryBodySha256": "15a132caf7bd9a7ae3203d92083d661cc6bdbfaeb758faf1af72dc6c8ba3c4b4",
+      "sourceSha256": "9c2c13ec1c66b9847fa87946aac65ae923fbb3fa0abe62d8ea23b6d9150dc356",
+      "bodySha256": "15a132caf7bd9a7ae3203d92083d661cc6bdbfaeb758faf1af72dc6c8ba3c4b4",
+      "frontmatterPrefixSha256": "4950c625581101d11d520d123c149efbdd4119d1193b1f9e1582fb7ee77d1bfa",
+      "suffixSha256": "90da03eabe098adf82a9e4ea3cb994e2056513d69dc40632292237136a2afa78",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/433-taiwan-detained-family-visits-lawyer-japanese.png",
+        "sha256": "d1da5c1e2fc3301e8eb327c1dcdfabdacb78467c4a8441976c978284df36a3a1",
+        "bytes": 2270206,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural\nAsset type: Japanese Taiwan-law article hero, landscape 16:9.\nPrimary request: A calm, premium fictional still-life about preparing to contact a lawyer and a detained family member from home, without depicting detention or promising a visit.\nScene: A modest peaceful living-room corner. A small round matte oak side table stands beside the edge of an empty comfortable chair. On the center of the table are one sealed plain ivory envelope and one unbranded dark smartphone with its screen off, the two objects arranged naturally, not as icons. The envelope is visibly sealed and has no writing or stamp. Soft linen curtain and subtly blurred interior in the background.\nStyle: Natural editorial photography, realistic paper, wood and cloth textures, subdued warm ivory, olive gray and wood colors; gentle daylight; empathetic, quiet, professional.\nComposition: Wide landscape 16:9. Tabletop and both complete critical objects clustered entirely within central x30–70% and y30–70% of the full image. The chair is supporting context only and can extend toward the edges. Leave generous quiet background around the central tabletop so both a21:9 desktop center crop and a4:3 mobile center crop preserve envelope and phone.\nConstraints: Fictional staged scene. No people, no prison, bars, visit booths, handcuffs, police, courts, legal symbols, scales, gavels, maps or travel tickets. No readable text, letters, numbers, logos, brands, seals, watermarks, title overlay or green checks. Do not suggest successful contact or release.",
+        "createdAt": "2026-10-10T00:07:40.060869+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/433.json",
+        "receiptSha256": "d90178304013390c021b3cad511843a31895b1aa5a6c5f51a11dccf3019574b3"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "d1da5c1e2fc3301e8eb327c1dcdfabdacb78467c4a8441976c978284df36a3a1",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "d1da5c1e2fc3301e8eb327c1dcdfabdacb78467c4a8441976c978284df36a3a1",
+          "alt": "椅子の横の小さなテーブルに置かれた封筒とスマートフォン。",
+          "caption": "AIで生成したイメージ画像です。実際の相談者や面会の様子を写したものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/433.json",
+          "reportSha256": "938d46826b8483f4957ad06e4b2db67b96ac7ffb9b37eabf59f301aa7bc2e9d9"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/433-taiwan-detained-family-visits-lawyer-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/433-taiwan-detained-family-visits-lawyer-japanese/featured-01.webp",
+        "alt": "椅子の横の小さなテーブルに置かれた封筒とスマートフォン。",
+        "caption": "AIで生成したイメージ画像です。実際の相談者や面会の様子を写したものではありません。",
+        "sha256": "e80865ca9d81b13f667454aacdba3ed3c69e7fcc987916a3162dfc1fceb6c057",
+        "bytes": 127384,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "e7d3ea1b8b2a2a2b3f9512eb52348627e26c1cb2e11781214942154b81d90625",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 434,
+      "locale": "ja",
+      "slug": "taiwan-search-warrant-consent-home-office-japanese",
+      "target": "src/content/columns-ja/434-taiwan-search-warrant-consent-home-office-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-search-warrant-consent-home-office-japanese",
+      "inventorySourceSha256": "5e20b564b88cd7ee10fe74ef9f9b658b2ff096b4d200e98efb941ef1e16153ab",
+      "inventoryBodySha256": "6af96c7fc48452b2dc6663ed60ec8e6a72354e8ed0e66072f545ba7a5e69c771",
+      "sourceSha256": "5e20b564b88cd7ee10fe74ef9f9b658b2ff096b4d200e98efb941ef1e16153ab",
+      "bodySha256": "6af96c7fc48452b2dc6663ed60ec8e6a72354e8ed0e66072f545ba7a5e69c771",
+      "frontmatterPrefixSha256": "12dba6377fcc4f3caa6bcc9a35156cafc5a7d50f9246523e47a812ed8a41fbef",
+      "suffixSha256": "25d7df84db1bc5be2f444505a3c585a0bfc73faf5614f62e479f55b3d0e21781",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/434-taiwan-search-warrant-consent-home-office-japanese.png",
+        "sha256": "ab1478bb9b4196057f937509d3d189a671ecbfd61d9b6d379d240a0688ff522e",
+        "bytes": 2418500,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit only the composition of this supplied fictional gouache/colored-pencil home-office illustration. Preserve its existing warm quiet illustrated style, objects, colors, light, no-text/no-logo character and materials. Zoom the camera out about25 percent and recenter the closed laptop plus translucent paper sleeve plus their entire tray as one group. The COMPLETE closed laptop, COMPLETE document sleeve and COMPLETE tray must fit comfortably inside the central x27–73% and y32–68% of the 16:9 canvas. Extend the same neutral room/desk environment at the sides and bottom. Keep the laptop the largest focal object. This is a website hero for21:9 and4:3 centered crops. Do not add people, words, numbers, logos, seals, legal symbols, police, evidence bags, search action or extra meaningful objects. No text overlay. Only adjust the framing and the size/placement of the existing focal object group.",
+        "createdAt": "2026-10-10T00:07:40.063933+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/434.json",
+        "receiptSha256": "d04e51a7ed40633fd8c48623522cced59c8afd921a2191649e1500727a7865dc"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "ab1478bb9b4196057f937509d3d189a671ecbfd61d9b6d379d240a0688ff522e",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "ab1478bb9b4196057f937509d3d189a671ecbfd61d9b6d379d240a0688ff522e",
+          "alt": "閉じたノートパソコンと書類入れが置かれた仕事用デスク。",
+          "caption": "AIで生成した架空の場面です。実際の捜索や押収の様子を示すものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/434.json",
+          "reportSha256": "56038f2d5c71e154451055ccb57a83cc751e25415ae32db9cd4f39bfe509a0c8"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/434-taiwan-search-warrant-consent-home-office-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/434-taiwan-search-warrant-consent-home-office-japanese/featured-01.webp",
+        "alt": "閉じたノートパソコンと書類入れが置かれた仕事用デスク。",
+        "caption": "AIで生成した架空の場面です。実際の捜索や押収の様子を示すものではありません。",
+        "sha256": "48c89311f28c3d256deb6e817e367f757021cd981638af89184f2790c4981021",
+        "bytes": 126334,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "ef54268b5a612fbf95fa7082e5de8d97b8239fa7ee437ffc8703092197482f7b",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 435,
+      "locale": "ja",
+      "slug": "taiwan-sexual-assault-medical-reporting-japanese",
+      "target": "src/content/columns-ja/435-taiwan-sexual-assault-medical-reporting-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-sexual-assault-medical-reporting-japanese",
+      "inventorySourceSha256": "35ced5e232ab5a83c1836545086344794612a6085c5573298f044c9339a7d7df",
+      "inventoryBodySha256": "f147b2f91a9db357cb3f508f41b189066cba225710c05ec82272b632f0e9ad9a",
+      "sourceSha256": "35ced5e232ab5a83c1836545086344794612a6085c5573298f044c9339a7d7df",
+      "bodySha256": "f147b2f91a9db357cb3f508f41b189066cba225710c05ec82272b632f0e9ad9a",
+      "frontmatterPrefixSha256": "f214854685a8dd06e705525501859611306b066aef88a53339c5ef4e1d79231f",
+      "suffixSha256": "799ccedd5849e615cad08d371a4856b053fb92970f754b91924c1d3e94e790cf",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/435-taiwan-sexual-assault-medical-reporting-japanese.png",
+        "sha256": "c7006cefbf700004b6f07fa444abeb41869a9e36ab09ddc920c962f23ffbe866",
+        "bytes": 2235675,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Reframe this exact fictional empty consultation room photo by moving the camera much further back, as a wide room establishing photograph. Preserve the same two sage upholstered chairs, small table, tissue box, glass of water, palette and natural daylight. The ENTIRE two-chair-plus-table group must appear only about45% of the full image width, centered from x28% to x72%. Both chairs including their legs and the table must fit entirely between y32% and y72%. Enlarge the surrounding quiet wall, linen curtain and floor region so the furniture is considerably smaller in the overall16:9 frame. The chairs should be visibly close to each other with the table between, not spread toward frame edges. No additional chairs, no desk, no people, no medical equipment, no text, letters, numbers, logos or title overlays. This is a precise crop-safety framing repair: the complete supportive consultation arrangement must be fully inside the middle half of the canvas.",
+        "createdAt": "2026-10-10T00:11:38.509842+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/435.json",
+        "receiptSha256": "05a27875f1a5630f339638de17f8f1ba303111fa85be4098e32650bd709159ac"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "c7006cefbf700004b6f07fa444abeb41869a9e36ab09ddc920c962f23ffbe866",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "c7006cefbf700004b6f07fa444abeb41869a9e36ab09ddc920c962f23ffbe866",
+          "alt": "2脚の椅子と、水やティッシュが置かれたテーブルのある相談スペース。",
+          "caption": "AIで生成した架空の相談スペースです。実在の施設や相談者を写したものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/435.json",
+          "reportSha256": "648b7bab794aa4225e37ca615a518cb4c8d2b6c08730c5cf3ee5471c2704452c"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/435-taiwan-sexual-assault-medical-reporting-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/435-taiwan-sexual-assault-medical-reporting-japanese/featured-01.webp",
+        "alt": "2脚の椅子と、水やティッシュが置かれたテーブルのある相談スペース。",
+        "caption": "AIで生成した架空の相談スペースです。実在の施設や相談者を写したものではありません。",
+        "sha256": "1a910a45c2f69e0a15254b063b62934a9edad6a97d97d2792f996417a0eb9bf8",
+        "bytes": 118806,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "f8c1e9237163a3f74d47ff29c2c7165433bae59f2a042a520af57715219a5b18",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 436,
+      "locale": "ja",
+      "slug": "taiwan-shoplifting-found-property-japanese",
+      "target": "src/content/columns-ja/436-taiwan-shoplifting-found-property-japanese.md",
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-shoplifting-found-property-japanese",
+      "inventorySourceSha256": "34100024eb1c74fe2f20aff4b3a8b1687e725034efd3c4bf1a942501cfc93d8c",
+      "inventoryBodySha256": "e32280ed39208a2b315700ddcbadc7a83f0be4f3eef7f32d39a59039d1a59b1d",
+      "sourceSha256": "34100024eb1c74fe2f20aff4b3a8b1687e725034efd3c4bf1a942501cfc93d8c",
+      "bodySha256": "e32280ed39208a2b315700ddcbadc7a83f0be4f3eef7f32d39a59039d1a59b1d",
+      "frontmatterPrefixSha256": "14fd241c7dfd91db7a5363c80819926b7271950f6fdce990cc3acd15a1a272ea",
+      "suffixSha256": "8cd55350e792a2ecc9af4862659987f49a83a934744258456917c719883f692e",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/436-taiwan-shoplifting-found-property-japanese.png",
+        "sha256": "0886430521b8aa2893679f323680dfd89390dad8fce136ec6e30ee953959e83a",
+        "bytes": 2030578,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Apply two precise corrections to this fictional grocery checkout-counter photograph, preserving natural photographic style, citrus, wrapped package, counter and blurred shop background.\n1. Remove ALL pseudo-writing, characters, digits, numbers and marks from the curled receipt strip. Its printed face should be facing down: show only perfectly plain white reverse side of the curled thermal-paper strip. Absolutely no visible writing anywhere.\n2. Pull the camera back and move the object group slightly upward. Make the two mandarins, wrapped package and complete curled paper strip smaller, as one compact group entirely within x29–71% and y30–70% of the16:9 full frame. Show more empty checkout counter around them. The whole strip and both entire mandarins must sit above y70%, with nothing meaningful cut off in21:9 or4:3 center crops.\nKeep the environment recognizably a small grocery checkout, not a desk. Do not add people, hands, wallets, phones, office papers, legal symbols, price signs, brands, logos, text overlays or new objects. No depiction of wrongdoing.",
+        "createdAt": "2026-10-10T00:11:38.512763+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/436.json",
+        "receiptSha256": "54c2eb42ee5b809f07da43595b84bbb8c009f2345ede567e7e1a701154dbd52e"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "0886430521b8aa2893679f323680dfd89390dad8fce136ec6e30ee953959e83a",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "0886430521b8aa2893679f323680dfd89390dad8fce136ec6e30ee953959e83a",
+          "alt": "みかん、紙包み、裏返したレシートが置かれた店舗の会計カウンター。",
+          "caption": "AIで生成したイメージ画像です。実際の店舗や事件を示すものではありません。",
+          "reviewer": "/root/missing_media_review/review_ja",
+          "reportPath": "work/missing-media-20261010/reviews/ja/436.json",
+          "reportSha256": "3fa28af22a13c58817c3eb1dc4a0205e1e1a51034dd10785b1967050c3540d50"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/436-taiwan-shoplifting-found-property-japanese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/436-taiwan-shoplifting-found-property-japanese/featured-01.webp",
+        "alt": "みかん、紙包み、裏返したレシートが置かれた店舗の会計カウンター。",
+        "caption": "AIで生成したイメージ画像です。実際の店舗や事件を示すものではありません。",
+        "sha256": "ca40c630d13c04869b7f13064d9a591bef190b33f521f975ade8513296fe656d",
+        "bytes": 77934,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "673e94a504e8dad5f3f57949d5390feeed06ad84fc2e3b4959ac8102eb6fb097",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 437,
+      "locale": "vi",
+      "slug": "taiwan-arrest-detention-bail-vietnamese-families",
+      "target": "src/content/columns-vi/437-taiwan-arrest-detention-bail-vietnamese-families.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-arrest-detention-bail-vietnamese-families",
+      "inventorySourceSha256": "e9c56e5d5fcf53382327344e495fe15f903531e35556b46407943a63551da780",
+      "inventoryBodySha256": "62d85bf740e587a4ad429b817bc7c8713619528b6f16d328d2da2fb5851f9346",
+      "sourceSha256": "e9c56e5d5fcf53382327344e495fe15f903531e35556b46407943a63551da780",
+      "bodySha256": "62d85bf740e587a4ad429b817bc7c8713619528b6f16d328d2da2fb5851f9346",
+      "frontmatterPrefixSha256": "670a51effeed08986937e59860ef90e761f7f455aa16f5c3397389b301725c16",
+      "suffixSha256": "b09abf81ee863fc34b2e99cb3b31f8438411ad20aabd953de305b1eab01d0e1b",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/437-taiwan-arrest-detention-bail-vietnamese-families.png",
+        "sha256": "bd1d74ab6c80c20da941fe60496d6e6de5927b84a1a2e675dd774600495d4db7",
+        "bytes": 2426377,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: 16:9 landscape editorial hero for a Vietnamese-language practical article about a family arranging legal help after a relative is arrested in Taiwan. Primary request: a quiet fictional family-support consultation room, empty of people, photographed naturally with premium architectural editorial quality. Scene: two simple upholstered chairs turned gently toward a small round warm-oak table in a modest private consultation nook, softly diffused morning light and a linen curtain. Subject: on the table, a compact open unmarked document folder holding several complete blank cream pages, a dark smartphone lying face-up with a softly reflective inactive screen, and a plain navy travel-document sleeve with absolutely no writing, symbol or seal. The complete table and all three objects form a compact central story cluster. Style: natural photography, warm neutral timber and muted slate-blue upholstery, realistic tactile materials, calm helpful atmosphere without luxury excess. Composition: 16:9 wide landscape, eye-level three-quarter view, critical folder, phone and sleeve entirely inside x30-70 percent and y32-66 percent; central objects clearly visible at both21:9 desktop center crop and4:3 mobile center crop. Chairs and soft room architecture may extend beyond that zone. No people, no faces, no detention scene, no criminal reenactment, no police or jail, no gavels, scales, handcuffs or courthouse imagery, no money or implied bail guarantee, no flags, no readable text/numbers, logos, seals, government forms, UI brands, watermarks or title overlays. The scene is fictional and staged, not a real client or event. Opaque background.",
+        "createdAt": "2026-10-10T00:06:07.042476+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/437.json",
+        "receiptSha256": "80e62d850c9e70db3f77f54f85504f6d60fa79336ed2198ad31d173e337b2610"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "bd1d74ab6c80c20da941fe60496d6e6de5927b84a1a2e675dd774600495d4db7",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "bd1d74ab6c80c20da941fe60496d6e6de5927b84a1a2e675dd774600495d4db7",
+          "alt": "Hai ghế bọc vải đặt quanh bàn tròn, trên bàn có tập giấy mở, điện thoại và bao đựng giấy tờ màu xanh.",
+          "caption": "Hình minh họa do AI tạo về một góc chuẩn bị tư vấn giả định, không phải cơ sở giam giữ, khách hàng hay vụ việc có thật.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/437-review.json",
+          "reportSha256": "286b42627be55017b4d9fc820bc1afefabdf4875d5bdf1820bebf760f6bd73dc"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/437-taiwan-arrest-detention-bail-vietnamese-families/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/437-taiwan-arrest-detention-bail-vietnamese-families/featured-01.webp",
+        "alt": "Hai ghế bọc vải đặt quanh bàn tròn, trên bàn có tập giấy mở, điện thoại và bao đựng giấy tờ màu xanh.",
+        "caption": "Hình minh họa do AI tạo về một góc chuẩn bị tư vấn giả định, không phải cơ sở giam giữ, khách hàng hay vụ việc có thật.",
+        "sha256": "05e27f2458e6127e98c8e1007fe864ff27d90272b84eddbd1a57691959c9b4c4",
+        "bytes": 151442,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "e81422730dd333aa08a4e6e6641d6bd91c6d00bd606fb46d005828b914e44205",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 438,
+      "locale": "vi",
+      "slug": "taiwan-assault-threats-evidence-complaint-deadline",
+      "target": "src/content/columns-vi/438-taiwan-assault-threats-evidence-complaint-deadline.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-assault-threats-evidence-complaint-deadline",
+      "inventorySourceSha256": "0256b302f8820ec741ef43c64feab47cd02d00081bf9ea24cf69c8c7d77442be",
+      "inventoryBodySha256": "6c271fd4d8bc37bec944b900c932ed524c86f3efb4465de5a0d6a4d1c635a5ea",
+      "sourceSha256": "0256b302f8820ec741ef43c64feab47cd02d00081bf9ea24cf69c8c7d77442be",
+      "bodySha256": "6c271fd4d8bc37bec944b900c932ed524c86f3efb4465de5a0d6a4d1c635a5ea",
+      "frontmatterPrefixSha256": "076335e3b76b4a79429dbce7b9b37364c1e0e89a4f15146d5013081b00d2be53",
+      "suffixSha256": "dc0ef07cacddeb846102a615c9e57f8bc7c64bf56a872124f07d772e6427bcad",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/438-taiwan-assault-threats-evidence-complaint-deadline.png",
+        "sha256": "e1d2ffd9428c0a502468d0fdc73f368dabf27e865113ed4214abbbe0b38c08fb",
+        "bytes": 3369858,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Edit this provided illustration only to adjust composition for a website crop-safe hero. Keep exactly the same gouache-and-colored-pencil medium, sage fabric background, cream medical-record folder and translucent sleeve, dark-screen phone and small silver USB drive, colors and object details. Reduce the entire central object arrangement to 65 percent of its present size, leaving it centered. All folder/page edges, phone and USB must fall entirely within x30-70 percent and y25-75 percent of the full16:9 frame. Extend only the matching sage woven cloth texture to fill the newly exposed surrounding space. Keep the whole illustration wide16:9 landscape. Preserve the quiet fictional evidence-preservation concept. No added objects, no people, no injuries, no readable text or numbers, no logos, no title overlay, no symbols.",
+        "createdAt": "2026-10-10T00:07:41.221180+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/438.json",
+        "receiptSha256": "6d6880777389c2ceb35d7c512dd9356753fe90ade324911fe9c8ec4e9d03666d"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "e1d2ffd9428c0a502468d0fdc73f368dabf27e865113ed4214abbbe0b38c08fb",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "e1d2ffd9428c0a502468d0fdc73f368dabf27e865113ed4214abbbe0b38c08fb",
+          "alt": "Tập giấy trong bìa đựng hồ sơ, điện thoại tắt màn hình và USB được đặt gọn trên nền vải xanh nhạt.",
+          "caption": "Hình minh họa do AI tạo về cách sắp xếp tài liệu trong một tình huống giả định, không phải hồ sơ khách hàng hay vụ việc có thật.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/438-review.json",
+          "reportSha256": "2ae213f014c448b8874e5082c3d1af999539468f15792dd043ec49dc92e0acc0"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/438-taiwan-assault-threats-evidence-complaint-deadline/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/438-taiwan-assault-threats-evidence-complaint-deadline/featured-01.webp",
+        "alt": "Tập giấy trong bìa đựng hồ sơ, điện thoại tắt màn hình và USB được đặt gọn trên nền vải xanh nhạt.",
+        "caption": "Hình minh họa do AI tạo về cách sắp xếp tài liệu trong một tình huống giả định, không phải hồ sơ khách hàng hay vụ việc có thật.",
+        "sha256": "56149c722da2dae3fa9f41f8d8bf24ca8bd805946fd3361da5dcef069c5d788d",
+        "bytes": 274608,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "d2b7960c3ca62a264bdd392018392bec7d8a85040e8410d0fe8022cb168b256d",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 439,
+      "locale": "vi",
+      "slug": "taiwan-criminal-judgment-appeal-vietnamese",
+      "target": "src/content/columns-vi/439-taiwan-criminal-judgment-appeal-vietnamese.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-criminal-judgment-appeal-vietnamese",
+      "inventorySourceSha256": "04b5c45c07740b102b4bd7c1926d939047b2228e62d2e387fe905693ae0fec71",
+      "inventoryBodySha256": "5c0dc1afbf3460596b0d6aaed7fec09eb29ee4332dab9e2bd3dd522b03f4b97b",
+      "sourceSha256": "04b5c45c07740b102b4bd7c1926d939047b2228e62d2e387fe905693ae0fec71",
+      "bodySha256": "5c0dc1afbf3460596b0d6aaed7fec09eb29ee4332dab9e2bd3dd522b03f4b97b",
+      "frontmatterPrefixSha256": "5a04bcd477805cfcebf985df7987b09d76d615937c10e27bbea5ae6991bc8ac4",
+      "suffixSha256": "3c31bc76a4dc87ff19c71cef168bd5c9b7a1f527319f07e0a41f9fb56fe447de",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/439-taiwan-criminal-judgment-appeal-vietnamese.png",
+        "sha256": "08b65cc3897b086c789c897084fd4befc8bdea3ae035a192c6f2047d89173053",
+        "bytes": 2109212,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: stylized-concept. Asset type:16:9 landscape editorial hero for a Vietnamese article about receiving a Taiwan criminal judgment and retaining complete pages and the delivery envelope to check appeal timing. Primary request: a calm premium paper-sculpture still life, viewed slightly above a minimalist horizontal display plinth. Subject: one opened warm-ivory envelope with its triangular flap raised behind a neatly aligned full stack of blank ivory document sheets, with the top two sheets gently fanned just enough to show the full set; a single muted ochre paper corner tab, no writing. This is the moment of organizing received mail before obtaining a translation, not a court scene. Style/medium: refined handmade cut-paper sculpture with tactile cotton paper grain, softly modeled paper folds and very gentle sculptural shadows, contemporary editorial aesthetic, not a photograph of legal documents. Scene: muted dusty-blue matte background and plinth, soft ambient daylight from upper left. Composition: all envelope and document stack edges must be entirely within the middle38 percent of frame width and middle42 percent of frame height; x31-69%, y29-71%, viewed wide with ample quiet blue surroundings. Landscape16:9. Keep the envelope and paper stack clearly identifiable inside21:9 and4:3 center crops. No clock/calendar/numerals, no courthouse, gavels, scales, handcuffs, police or people, no visible guilty/innocent implication, no money, no passports, no readable text or numbers, no official seal, brand, watermark, title overlay, arrows or outcome guarantee. Entirely fictional illustrative composition, not an actual judgment or real event. Opaque background.",
+        "createdAt": "2026-10-10T00:08:56.143552+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/439.json",
+        "receiptSha256": "e34a312d66ccc0dafcdeb8952d71cf9aa619e8b60d3613328235e98cabedcdf9"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "08b65cc3897b086c789c897084fd4befc8bdea3ae035a192c6f2047d89173053",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "08b65cc3897b086c789c897084fd4befc8bdea3ae035a192c6f2047d89173053",
+          "alt": "Phong bì mở và một xấp giấy màu kem có thẻ đánh dấu nhỏ, được tạo hình bằng giấy trên nền xanh.",
+          "caption": "Hình minh họa do AI tạo theo phong cách tạo hình giấy. Đây là bố cục giả định, không phải bản án hay hồ sơ của khách hàng có thật.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/439-review.json",
+          "reportSha256": "33bc3b6df0a946fc6faf4bb5b9cb60be7eda7ffe0290642cee2417f294f28b21"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/439-taiwan-criminal-judgment-appeal-vietnamese/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/439-taiwan-criminal-judgment-appeal-vietnamese/featured-01.webp",
+        "alt": "Phong bì mở và một xấp giấy màu kem có thẻ đánh dấu nhỏ, được tạo hình bằng giấy trên nền xanh.",
+        "caption": "Hình minh họa do AI tạo theo phong cách tạo hình giấy. Đây là bố cục giả định, không phải bản án hay hồ sơ của khách hàng có thật.",
+        "sha256": "354273ce21e8519253ff5eee37235a62d6c17f2a1233fbfacaee9690f1a684db",
+        "bytes": 48666,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "ff842d466272f14d56c40a35a2e99f9ab60b7fb019f15c21bd08f9eddcec5a36",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 440,
+      "locale": "vi",
+      "slug": "taiwan-drug-parcel-courier-job-criminal-risk",
+      "target": "src/content/columns-vi/440-taiwan-drug-parcel-courier-job-criminal-risk.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-drug-parcel-courier-job-criminal-risk",
+      "inventorySourceSha256": "8b9c34f37205b76c1515cd9ee7f64a29608b0aea02f8801381b3663d2f09a3c4",
+      "inventoryBodySha256": "b8710c1a0971ac0ff687cd8a9b8ffa9fdf108dddf1b1fe7f8a82a43a8a6b69b8",
+      "sourceSha256": "8b9c34f37205b76c1515cd9ee7f64a29608b0aea02f8801381b3663d2f09a3c4",
+      "bodySha256": "b8710c1a0971ac0ff687cd8a9b8ffa9fdf108dddf1b1fe7f8a82a43a8a6b69b8",
+      "frontmatterPrefixSha256": "320c6b6a5ad5e693a9c124d90ecb2ebc9f6772b6ba520fa63eb3fa90a1a7bd84",
+      "suffixSha256": "253bad8a25445f1f6d8f64c23a5ee28fc6b3308dc0b642ab6ad3208870204f2e",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/440-taiwan-drug-parcel-courier-job-criminal-risk.png",
+        "sha256": "9f2a58f821c110ab2f379c2ff3a7fac1b95626465561b267eb05e2e03774fe6e",
+        "bytes": 2160800,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type:16:9 landscape editorial hero for a Vietnamese practical article about risks of receiving or carrying someone else's parcel in Taiwan and retaining the original delivery records. Primary request: a quiet fictional staged photograph of one ordinary unopened kraft cardboard parcel on a low entryway bench, with its accompanying delivery-paper sleeve preserved beside it. Scene: modest contemporary apartment entryway, warm off-white plaster wall, pale oak bench, softly blurred linen tote on a distant side hook, daylight from outside frame. Subject: the medium-small box is neatly closed with plain kraft tape; absolutely no contents visible, no damaged/open seam. A transparent document sleeve containing one plain unmarked shipping sheet rests flat right beside it; no phone, laptop or desk. Keep the parcel dominant, with the sleeve a secondary record-preservation cue. Style: natural editorial architectural still-life photograph with realistic cardboard fibers, subtle wear and calm neutral palette, ordinary helpful atmosphere rather than suspicious or sensational. Composition: landscape16:9, level three-quarter camera view, very compact central parcel+sleeve cluster; box centered slightly left at x40-56%, y39-64%; sleeve centered slightly right at x57-67%, y58-65%; ALL story objects fully inside x30-70%, y30-70%. Bench and quiet entryway extend around them. Story survives centered21:9 desktop and4:3 mobile crops. No people, hands, migrants, police, crime reenactment, contraband, pills, powders, drugs, contents, weapons, handcuffs, scales, gavels, travel/airport cues, flags, money, checks, safety or inspection stickers, government seals, text, numbers, readable barcode, logos, branding, watermark or title overlays. The sealed package has unknown contents; the picture must not imply any real package contains drugs or was inspected. Fictional illustrative staging, not a real delivery or client event. Opaque background.",
+        "createdAt": "2026-10-10T00:10:00.575392+00:00",
+        "receiptPath": "work/missing-media-20261010/receipts/440.json",
+        "receiptSha256": "8bce70507f726655c6d2e5f8d58bd10af140d0ec143f7389c0f285d507065995"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "9f2a58f821c110ab2f379c2ff3a7fac1b95626465561b267eb05e2e03774fe6e",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "9f2a58f821c110ab2f379c2ff3a7fac1b95626465561b267eb05e2e03774fe6e",
+          "alt": "Thùng giấy còn đóng kín và túi nhựa trong đựng giấy tờ đặt trên ghế dài bằng gỗ ở lối vào nhà.",
+          "caption": "Hình minh họa do AI tạo về một bưu kiện giả định, không phải khách hàng hay vụ việc có thật; hình ảnh không cho biết bên trong kiện hàng có gì.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/440-review.json",
+          "reportSha256": "bc4f8b991d5d437c3d8ab3134e578afee071830e3699e5fad21c40fd4bbd5612"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/440-taiwan-drug-parcel-courier-job-criminal-risk/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/440-taiwan-drug-parcel-courier-job-criminal-risk/featured-01.webp",
+        "alt": "Thùng giấy còn đóng kín và túi nhựa trong đựng giấy tờ đặt trên ghế dài bằng gỗ ở lối vào nhà.",
+        "caption": "Hình minh họa do AI tạo về một bưu kiện giả định, không phải khách hàng hay vụ việc có thật; hình ảnh không cho biết bên trong kiện hàng có gì.",
+        "sha256": "b628029a1abb094684dcf6fa220737570e810869c37ed4dd2fec01f0a22a6930",
+        "bytes": 87066,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "da2815241701cf3ee3ca87b9f9ed91dcf92dab79d58e0b8a8b0f0e0833e3e818",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 441,
+      "locale": "vi",
+      "slug": "taiwan-fraud-victim-report-civil-money-recovery",
+      "target": "src/content/columns-vi/441-taiwan-fraud-victim-report-civil-money-recovery.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-fraud-victim-report-civil-money-recovery",
+      "inventorySourceSha256": "a3cb154b8996a46d6d8abec84419486c6a7979b461f54131dd2827e919c091de",
+      "inventoryBodySha256": "521734f9855ed97c0ea5cdbb7d3fe95479daa4e7b9a44b6de5b0f2e48d8514a3",
+      "sourceSha256": "a3cb154b8996a46d6d8abec84419486c6a7979b461f54131dd2827e919c091de",
+      "bodySha256": "521734f9855ed97c0ea5cdbb7d3fe95479daa4e7b9a44b6de5b0f2e48d8514a3",
+      "frontmatterPrefixSha256": "716c408f52a6ecbe01946aac440b05ac03d892eea0fe0c2ada51b4ac05426a19",
+      "suffixSha256": "f666bb0aa8388b723457d4f757b3e9601f33f012e90a6269ee7baedb5fa73b59",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/441-taiwan-fraud-victim-report-civil-money-recovery.png",
+        "sha256": "8bef1c00ea0f7b5596ca3effd5afa94b7f562722afaa78e996d4d95699ec18e5",
+        "bytes": 2378394,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: landscape 16:9 website editorial hero for a Vietnamese-language article about reporting transfer fraud in Taiwan and organizing the original transfer evidence and outstanding losses.\nCreate one fictional staged editorial photograph, not an actual event. A close but generously framed overhead view of two calm, anonymous adult hands gently sorting several small unprinted transaction slips into the compartments of an open modest accordion receipt wallet. A plain unbranded smartphone with its screen completely dark rests beside the wallet. The hand action is about organizing and preserving records, not paying or recovering money. All papers are blank or show only subtle nonsemantic grey rules, no legible writing or numbers.\nThe whole open accordion wallet, a few loose slips, the hands' fingers, and the phone must form a compact visual cluster strictly within the middle 50 percent of the canvas, x25–75% and y25–75%, so both a 21:9 center crop and a 4:3 center crop preserve the entire meaningful subject. Wide quiet margins of a matte pale stone surface around the cluster; no object cut off. Natural late-morning side light, authentic tactile paper and leather texture, muted ochre and cool slate palette, premium restrained documentary aesthetic. Ordinary clean sleeves; no face or recognizable person. No logos, seals, readable text, numbers, currency, arrows, checkmarks, court symbols, police, crime reenactment, distress, injuries, handcuffs, or promise of recovered money. No text overlay or watermark. Anatomy must be natural with correct fingers.",
+        "createdAt": "2026-10-10T00:06:13.580Z",
+        "receiptPath": "work/missing-media-20261010/receipts/441.json",
+        "receiptSha256": "6b6383578428eb74257d6491919c86fae391fcd8c9d67b2355dfaa8a642dfb7b"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "8bef1c00ea0f7b5596ca3effd5afa94b7f562722afaa78e996d4d95699ec18e5",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "8bef1c00ea0f7b5596ca3effd5afa94b7f562722afaa78e996d4d95699ec18e5",
+          "alt": "Hai bàn tay sắp xếp các tờ giấy vào ví nhiều ngăn; bên cạnh là điện thoại có màn hình tối.",
+          "caption": "Hình minh họa do AI tạo về việc sắp xếp chứng từ chuyển tiền. Đây là bối cảnh giả định, không tái hiện khách hàng hay vụ việc có thật.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/441-review.json",
+          "reportSha256": "f73236cc2520785622bff72b22cd72a2f3c515ab94d48b556524bfdb72d2d60a"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/441-taiwan-fraud-victim-report-civil-money-recovery/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/441-taiwan-fraud-victim-report-civil-money-recovery/featured-01.webp",
+        "alt": "Hai bàn tay sắp xếp các tờ giấy vào ví nhiều ngăn; bên cạnh là điện thoại có màn hình tối.",
+        "caption": "Hình minh họa do AI tạo về việc sắp xếp chứng từ chuyển tiền. Đây là bối cảnh giả định, không tái hiện khách hàng hay vụ việc có thật.",
+        "sha256": "fdf8feef9c7e8ef1814f8b6de18cb6c416959baac1daad23db7b9481ee10672e",
+        "bytes": 117120,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "6c21eeb4aa587f07bb53164e10c7c3e85e57cc593fb2f0fc5165d221aec7ce97",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 442,
+      "locale": "vi",
+      "slug": "taiwan-police-interview-vietnamese-interpreter-lawyer",
+      "target": "src/content/columns-vi/442-taiwan-police-interview-vietnamese-interpreter-lawyer.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-police-interview-vietnamese-interpreter-lawyer",
+      "inventorySourceSha256": "4304eba2fcb82829b42381c7af569ca76520264746f2bd3b369e7754b3339c97",
+      "inventoryBodySha256": "e2d68d08ede75b80c9e9ebf7d814e08f7ff23772f170997b28fb58172b4402f7",
+      "sourceSha256": "4304eba2fcb82829b42381c7af569ca76520264746f2bd3b369e7754b3339c97",
+      "bodySha256": "e2d68d08ede75b80c9e9ebf7d814e08f7ff23772f170997b28fb58172b4402f7",
+      "frontmatterPrefixSha256": "55806377cf0785f1e1bf88f01dcf6a6a4348cf81eb824a55e4b00d0e85fcdd28",
+      "suffixSha256": "2161082d83b2a14aacd5d4c75e10cd2603c3f21cae08327e6bad8d5c62bc3659",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/442-taiwan-police-interview-vietnamese-interpreter-lawyer.png",
+        "sha256": "9bc6b6f0a9a2dbc87629d5cce856c847a3186e27e68d55c63b515e09a1d51ff9",
+        "bytes": 2572278,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: illustration-story. Asset type: landscape 16:9 website editorial hero for a Vietnamese-language article about interpretation, legal support, reading and correcting a police interview transcript before signing.\nCreate a quiet fictional gouache and fine-ink editorial illustration on textured warm paper. Seen from gently above, two anonymous relaxed adult hands review a small loose stack of off-white pages on a muted blue tabletop: one hand steadies the bottom edge while the other lightly indicates an unmarked line area. A capped fountain pen has been deliberately set aside, not being used to sign. A small plain charcoal audio recorder without brand, readable screen or symbols lies next to the pages. The scene evokes careful listening and checking a record, with no actual police interview depicted. Pages have faint abstract horizontal strokes only, no actual alphabet, numbers, forms, seals or signatures.\nKeep every meaningful item—the full paper stack, both hands and fingers, capped pen and recorder—grouped within x25–75% and y25–75% of the full frame. Surround with generous uninterrupted tabletop and softly painted negative space. Central composition must survive 21:9 desktop and 4:3 mobile center crops. Painterly mineral blue, ivory, terracotta skin tones, subtle paper grain, calm diffuse daylight, refined magazine illustration. No faces, uniforms, badges, courthouse, scales, gavel, handcuffs, aggressive gesture, fear, violence, recognizable client or real case. No text overlay, logos, outcome checkmarks or watermark. Both hands anatomically credible, no extra digits.",
+        "createdAt": "2026-10-10T00:06:58.976Z",
+        "receiptPath": "work/missing-media-20261010/receipts/442.json",
+        "receiptSha256": "f1ae3aee8261d6ae29e04c69462ce29144d5bf79dc41de6d0713ef427f903610"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "9bc6b6f0a9a2dbc87629d5cce856c847a3186e27e68d55c63b515e09a1d51ff9",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "9bc6b6f0a9a2dbc87629d5cce856c847a3186e27e68d55c63b515e09a1d51ff9",
+          "alt": "Hai bàn tay xem một xấp giấy; bên cạnh là một chiếc bút đã đậy nắp và một máy ghi âm nhỏ.",
+          "caption": "Tranh minh họa do AI tạo về việc đọc và đối chiếu biên bản. Đây là bối cảnh giả định, không tái hiện khách hàng hay một buổi lấy lời khai có thật.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/442-review.json",
+          "reportSha256": "456258b654d9e06f05940a62d4b77cf0fa355fddc31231bb4b3599cb21a5c0db"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/442-taiwan-police-interview-vietnamese-interpreter-lawyer/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/442-taiwan-police-interview-vietnamese-interpreter-lawyer/featured-01.webp",
+        "alt": "Hai bàn tay xem một xấp giấy; bên cạnh là một chiếc bút đã đậy nắp và một máy ghi âm nhỏ.",
+        "caption": "Tranh minh họa do AI tạo về việc đọc và đối chiếu biên bản. Đây là bối cảnh giả định, không tái hiện khách hàng hay một buổi lấy lời khai có thật.",
+        "sha256": "7ca1cde8bdb37fc4e795ac1b35296ecb94a69c70ca02bdab99832c704caab740",
+        "bytes": 125204,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "5c67714c7ef305553a5b95ae60ee949148900766a7b089e4e536cb06e8789179",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 443,
+      "locale": "vi",
+      "slug": "taiwan-sexual-assault-report-vietnamese-workers-residents",
+      "target": "src/content/columns-vi/443-taiwan-sexual-assault-report-vietnamese-workers-residents.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-sexual-assault-report-vietnamese-workers-residents",
+      "inventorySourceSha256": "c8ba2e87070b1ac07e3d770a547a4b21cea1d83ebec98a33ef1d6ff3528cabbf",
+      "inventoryBodySha256": "ca4e3955af355826cc9c02846ac234de8d6b579034ff3cf61c1f04f28c638220",
+      "sourceSha256": "c8ba2e87070b1ac07e3d770a547a4b21cea1d83ebec98a33ef1d6ff3528cabbf",
+      "bodySha256": "ca4e3955af355826cc9c02846ac234de8d6b579034ff3cf61c1f04f28c638220",
+      "frontmatterPrefixSha256": "04aa7283b6c070dfece08d29711fd809262853fcbef4c976b173fdbfe06db988",
+      "suffixSha256": "ce0fb1e93e5fd783fa2e5a70c22149f0e867b93706bdef2bc41e127cb9972ced",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/443-taiwan-sexual-assault-report-vietnamese-workers-residents.png",
+        "sha256": "4f5f155f920a94f6a40fd524fed71c4bbcd35b07317ff84f27f9359551f02fec",
+        "bytes": 1946336,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: photorealistic-natural. Asset type: landscape 16:9 website editorial hero for a Vietnamese-language article about medical support, privacy, interpretation and a trusted companion after sexual assault in Taiwan.\nCreate a single fictional staged interior photograph of a quiet unoccupied private medical exam alcove. The central scene contains the head half of a clean upholstered examination couch with a fresh ivory sheet, a simple companion chair next to it, and a softly curved privacy curtain partly enclosing the alcove. There are no people, and no medical procedure or assault is shown. The room feels dignified, practical and available for care, not luxurious or institutional punishment. A folded clean towel and a plain water glass can sit on a tiny shelf beside the chair. Soft daylight through frosted glass, warm ivory and muted sage, natural linen and matte wood textures, high-end editorial architectural photography.\nStage the couch head, companion chair and curved curtain opening as one compact cluster within the middle 50 percent of the image, x25–75% and y25–75%; keep the core relationship of couch beside chair fully legible under both a 21:9 center crop and a 4:3 center crop. Wide quiet wall and floor margins, level camera, medium-wide perspective, no dramatic low angle. No people, visible victims, injuries, violence, restraint, sexual content, gynecological equipment, needles, medicines, clinical specimens, police, government logos, legal symbols, signs, readable text or numbers. No promise of a result, no watermark. This is a fictional care setting, not a real clinic or client.",
+        "createdAt": "2026-10-10T00:08:14.313Z",
+        "receiptPath": "work/missing-media-20261010/receipts/443.json",
+        "receiptSha256": "b62969e0d7741565e8409609dcc741f7df5985cd3b6e350e9ad7746f24dbe80d"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "4f5f155f920a94f6a40fd524fed71c4bbcd35b07317ff84f27f9359551f02fec",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "4f5f155f920a94f6a40fd524fed71c4bbcd35b07317ff84f27f9359551f02fec",
+          "alt": "Góc phòng khám có giường khám, ghế đặt cạnh giường và rèm che, dưới ánh sáng dịu.",
+          "caption": "Hình minh họa do AI tạo về không gian hỗ trợ y tế và bảo vệ sự riêng tư. Đây là bối cảnh giả định, không tái hiện cơ sở y tế, khách hàng hay sự việc có thật.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/443-review.json",
+          "reportSha256": "a6786aff7d5821a09f353d98998142db6fb034721b73e7c1992cff8029b4c25d"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/443-taiwan-sexual-assault-report-vietnamese-workers-residents/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/443-taiwan-sexual-assault-report-vietnamese-workers-residents/featured-01.webp",
+        "alt": "Góc phòng khám có giường khám, ghế đặt cạnh giường và rèm che, dưới ánh sáng dịu.",
+        "caption": "Hình minh họa do AI tạo về không gian hỗ trợ y tế và bảo vệ sự riêng tư. Đây là bối cảnh giả định, không tái hiện cơ sở y tế, khách hàng hay sự việc có thật.",
+        "sha256": "4a772843c2578a8cc9460edd8d264643533c9ff156a592a9ed0c86b7244dbb88",
+        "bytes": 81416,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "fa640c1000951533c21b1f587b5e370804c09b055db040203f4a00f95b7842a9",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    },
+    {
+      "id": 444,
+      "locale": "vi",
+      "slug": "taiwan-short-sentence-fine-suspension-residence",
+      "target": "src/content/columns-vi/444-taiwan-short-sentence-fine-suspension-residence.md",
+      "publicUrl": "https://tseng-law.com/vi/columns/taiwan-short-sentence-fine-suspension-residence",
+      "inventorySourceSha256": "e4eae4e9550ee6963a77699f81efe75009f1d6bb28164d94b21a135fb34a97ff",
+      "inventoryBodySha256": "d05a590a2090a1bff0060605f45fa2d7b797d607b4534820671de23ece7991d0",
+      "sourceSha256": "e4eae4e9550ee6963a77699f81efe75009f1d6bb28164d94b21a135fb34a97ff",
+      "bodySha256": "d05a590a2090a1bff0060605f45fa2d7b797d607b4534820671de23ece7991d0",
+      "frontmatterPrefixSha256": "d720995294684e5f35efec8c02b3b257da2d3f52b75d36f124dd2192e2493680",
+      "suffixSha256": "5f2f9abca725c0d7e684a11a55d0a0d4e90da533fa4a15f7e75eab6db2f792eb",
+      "original": {
+        "path": "outputs/missing-column-media-20261010/images/444-taiwan-short-sentence-fine-suspension-residence.png",
+        "sha256": "54976ce08683cb19cc2ec507883e5765b047f92ae39814c5cdb20498557677b5",
+        "bytes": 2314581,
+        "width": 1672,
+        "height": 941
+      },
+      "generated": {
+        "tool": "built-in image_gen",
+        "prompt": "Use case: stylized-concept. Asset type: landscape 16:9 website editorial hero for a Vietnamese-language article about checking criminal-sentence execution obligations separately from residence and work documentation in Taiwan.\nCreate a quiet crafted editorial interior vignette, visibly sculpted in matte clay and woven fabric textures rather than a real photograph. A narrow floating wooden entryway shelf is the central subject, not a desk. On that shelf sits one compact open document organizer with three clearly separate compartments holding a few plain cream document sleeves; beside it is a modest small everyday canvas shoulder bag, open enough to reveal an unmarked planner. A simple card sleeve with a completely blank pale card is tucked into the front organizer pocket. One short unprinted receipt projects slightly from a separate inner pocket. Suggest careful organization for daily appointments, with different papers kept distinct. This is ordinary daily-life preparation; no travel or departure scene, no immigration checkpoint, no airport, no suitcase.\nKeep the entire organizer, bag, visible planner and card pocket together in a compact central cluster wholly within x25–75% and y25–75% of the full canvas. Wide quiet pale wall margins and subtle below-shelf shadow. All story objects and their relationship must survive 21:9 desktop and 4:3 mobile center crops. Soft three-quarter camera view at shelf height; tactile premium handcrafted miniature aesthetic, warm grey wall, muted terracotta organizer, oatmeal woven bag, restrained sage accents, gentle diffused daylight. No people. No phone, laptop, table, scattered paper stacks, money, banknotes, readable text, numbers, calendars with dates, ID portrait, fingerprints, official seals, government design, logos, stamps, checkmarks, approval symbols, passport branding, gavel, scales, handcuffs, bars or keys. No title, text overlay or watermark. All objects are fictional; nothing signifies completed payment, guaranteed residence, legal approval or a real client.",
+        "createdAt": "2026-10-10T00:09:14.907Z",
+        "receiptPath": "work/missing-media-20261010/receipts/444.json",
+        "receiptSha256": "a5ab2bb3cc0ed6ab3f6df53f343d032213ffa9b4f56a8192499c6a682f420c3b"
+      },
+      "reviews": {
+        "visualReview": {
+          "status": "PASS",
+          "assetSha256": "54976ce08683cb19cc2ec507883e5765b047f92ae39814c5cdb20498557677b5",
+          "reviewer": "/root/missing_media_review",
+          "reportPath": "work/missing-media-20261010/reviews/hero-visual-final.json",
+          "reportSha256": "c60c4b4181d4767783d385218526da4dcd1144182a5700b6c616337872315e8d"
+        },
+        "localeReview": {
+          "status": "PASS",
+          "assetSha256": "54976ce08683cb19cc2ec507883e5765b047f92ae39814c5cdb20498557677b5",
+          "alt": "Túi đựng giấy tờ nhiều ngăn có bìa hồ sơ và bao đựng thẻ, bên cạnh túi đeo vai bằng vải đựng sổ tay; cả hai đặt trên kệ gỗ.",
+          "caption": "Hình minh họa do AI tạo về việc sắp xếp riêng giấy tờ thi hành án và giấy tờ cư trú. Đây là bối cảnh giả định, không tái hiện hồ sơ khách hàng thực tế.",
+          "reviewer": "/root/missing_media_review/review_vi",
+          "reportPath": "work/missing-media-20261010/reviews/vi/444-review.json",
+          "reportSha256": "b4cf0f1880721f79d44b02e836dcb519ed599a28c86de2d7a59f4852d0d0b7e4"
+        }
+      },
+      "media": {
+        "asset": "public/images/blog/column-media-20261010/444-taiwan-short-sentence-fine-suspension-residence/featured-01.webp",
+        "hero": "/images/blog/column-media-20261010/444-taiwan-short-sentence-fine-suspension-residence/featured-01.webp",
+        "alt": "Túi đựng giấy tờ nhiều ngăn có bìa hồ sơ và bao đựng thẻ, bên cạnh túi đeo vai bằng vải đựng sổ tay; cả hai đặt trên kệ gỗ.",
+        "caption": "Hình minh họa do AI tạo về việc sắp xếp riêng giấy tờ thi hành án và giấy tờ cư trú. Đây là bối cảnh giả định, không tái hiện hồ sơ khách hàng thực tế.",
+        "sha256": "ae1f4f4983607cf681b735e07973d75a4ab2069030d2e5a166e73d4d92d31a38",
+        "bytes": 100188,
+        "width": 1600,
+        "height": 900
+      },
+      "resultSha256": "7a1e7875d6ca5df325f8d82c3c84bfd22ed94dd81195741aba606a8670db6030",
+      "bodyPreserved": true,
+      "existingMetadataPreserved": true
+    }
+  ]
+}

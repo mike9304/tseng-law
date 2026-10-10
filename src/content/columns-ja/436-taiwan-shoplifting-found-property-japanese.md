@@ -16,6 +16,9 @@ faq:
     a: "持ち主の占有を離れた落とし物を不法に自分のものにする行為は、刑法第337条が問題になります。ただし、置き忘れた場所や管理状況によっては窃盗との区別が必要です。拾得物は民法第803条に従い、持ち主や警察、施設の管理者などに速やかに届けます。"
 audience: ["ja"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/436-taiwan-shoplifting-found-property-japanese/featured-01.webp"
+featured_image_alt: "みかん、紙包み、裏返したレシートが置かれた店舗の会計カウンター。"
+featured_image_caption: "AIで生成したイメージ画像です。実際の店舗や事件を示すものではありません。"
 ---
 
 # 台湾で万引きを疑われたら――会計漏れと落とし物の持ち帰り

@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "Can I bring a trusted person when I report sexual assault in Taiwan?", "a": "Article 18 permits a consenting victim to be accompanied during investigation or trial by a listed person, including someone the victim trusts. Exceptions include a suspect or defendant and a presence that the investigating authority finds would obstruct investigation."}, {"q": "Must every sexual-assault complaint be filed within six months?", "a": "No. That complaint period concerns offenses requiring a complaint. Criminal Code Article 229-1 identifies specific sexual-offense exceptions, including certain offenses against a spouse. The offense, relationship, relevant ages and date of learning the offender’s identity need assessment."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/410-taiwan-sexual-assault-report-adult-foreign-victim/featured-01.webp"
+featured_image_alt: "A sage armchair and a small table with a glass of water stand in front of closed linen curtains."
+featured_image_caption: "AI-generated illustrative scene of a fictional private consultation space, not an actual client, care facility or event."
 ---
 # Reporting sexual assault in Taiwan as an English-speaking adult
 

@@ -12,6 +12,9 @@ tags: ["criminal-litigation","傷害罪","互毆","正當防衛"]
 faq: [{"q":"雙方都有受傷，就一定是互毆、都會有罪嗎？","a":"不能只看兩人都有傷。仍須分別判斷誰做了哪些動作、有無傷害故意，以及是否符合刑法第23條對現在不法侵害的防衛要件。完整影像與動作先後，比單張傷口照片更能說明這些問題。"},{"q":"正在談和解，可以等談完再提告嗎？","a":"普通傷害原則上是告訴乃論，應自有告訴權的人知悉犯人時起六個月內提出告訴。單純協商賠償，不會讓這個期間自動停止；公務員執行職務犯普通傷害，以及傷害致重傷、致死等情形，須另行區分。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/416-taiwan-injury-complaint-fight-self-defense/featured-01.webp"
+featured_image_alt: "青綠色資料夾旁擺著透明盒中的記憶卡，以及三張依序排列的建築入口空景圖卡。"
+featured_image_caption: "AI 生成的虛構示意插畫，呈現文件與影像資料的保存概念，並非真實當事人、事件或證據。"
 ---
 # 被打後驗傷、提告與互毆：傷害案要留下哪些證據
 

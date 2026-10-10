@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "How long do I have to complain about ordinary injury in Taiwan?", "a": "The ordinary injury offense in Criminal Code Article 277(1) generally requires a complaint. Article 237 of the Code of Criminal Procedure sets six months from when the person entitled to complain learns who the offender is. Article 287 contains an exception for an official acting in official duties."}, {"q": "Does being hit first automatically establish self-defense?", "a": "No. Article 23 concerns defense against a present unlawful attack. The sequence, continuation of the attack and force used must be assessed. Excessive defense has a separate rule allowing reduction or remission of punishment."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/405-taiwan-assault-injury-self-defense-compensation/featured-01.webp"
+featured_image_alt: "A translucent folder of blank papers, a dark phone and a small portable drive grouped on a light stone table."
+featured_image_caption: "AI-generated illustrative scene of record preservation. The objects and setting are fictional and do not depict an actual client or event."
 ---
 # An assault in Taiwan: injury evidence, self-defense and compensation
 

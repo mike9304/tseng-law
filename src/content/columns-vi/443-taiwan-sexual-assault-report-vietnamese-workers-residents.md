@@ -16,6 +16,9 @@ faq:
     a: "Có. Điều 229-1 quy định tội theo Điều 221 hoặc 224 đối với vợ/chồng thuộc nhóm phải có yêu cầu xử lý. Thời hạn yêu cầu theo Điều 237 là sáu tháng từ khi người có quyền biết người phạm tội; việc đã kết hôn không tạo quyền ép buộc quan hệ."
   - q: "Tôi muốn một người tin cậy đi cùng khi khai thì có được không?"
     a: "Điều 18 Luật Phòng chống tội phạm xâm hại tình dục cho phép người được liệt kê, gồm người bạn tin cậy, đi cùng và nêu ý kiến khi bạn đồng ý. Có ngoại lệ nếu người đi cùng là người bị tình nghi, bị cáo hoặc bị cơ quan có thẩm quyền đánh giá là cản trở điều tra."
+featured_image: "/images/blog/column-media-20261010/443-taiwan-sexual-assault-report-vietnamese-workers-residents/featured-01.webp"
+featured_image_alt: "Góc phòng khám có giường khám, ghế đặt cạnh giường và rèm che, dưới ánh sáng dịu."
+featured_image_caption: "Hình minh họa do AI tạo về không gian hỗ trợ y tế và bảo vệ sự riêng tư. Đây là bối cảnh giả định, không tái hiện cơ sở y tế, khách hàng hay sự việc có thật."
 ---
 
 # Bị xâm hại tình dục ở Đài Loan: khám, trình báo và người đi cùng

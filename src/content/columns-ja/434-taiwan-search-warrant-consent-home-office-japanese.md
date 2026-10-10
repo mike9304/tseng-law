@@ -16,6 +16,9 @@ faq:
     a: "刑事訴訟法第131条の1は、自発的な同意、執行者の身分証明書の提示、同意の意思の記録を定めています。対象となる場所や端末、説明の意味が分からない点を確認し、通訳や弁護士への相談を求めます。"
 audience: ["ja"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/434-taiwan-search-warrant-consent-home-office-japanese/featured-01.webp"
+featured_image_alt: "閉じたノートパソコンと書類入れが置かれた仕事用デスク。"
+featured_image_caption: "AIで生成した架空の場面です。実際の捜索や押収の様子を示すものではありません。"
 ---
 
 # 台湾の自宅や会社に捜索が入ったとき、捜索票と同意を確かめる

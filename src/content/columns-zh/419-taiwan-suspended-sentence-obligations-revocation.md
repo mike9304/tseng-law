@@ -12,6 +12,9 @@ tags: ["criminal-litigation","緩刑","保護管束","撤銷緩刑"]
 faq: [{"q":"被判六個月、緩刑二年，是要坐牢二年嗎？","a":"緩刑二年是暫不執行原宣告刑的觀察期間，從裁判確定日起算，不是另加二年的徒刑。仍須履行判決指定的負擔，並注意法定撤銷原因。"},{"q":"緩刑期間另被提告，就會自動撤銷嗎？","a":"不會只因被提告就當然撤銷。刑法第75條、第75條之1分別規定故意或過失、犯罪時間、宣告刑度及判決確定時間等條件；違反緩刑負擔還須檢查情節重大等要件。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/419-taiwan-suspended-sentence-obligations-revocation/featured-01.webp"
+featured_image_alt: "一雙手在膝上拿著深灰色記事本，封面夾著數張素色紙條與一張小卡片。"
+featured_image_caption: "AI 生成的虛構示意畫面，呈現整理隨身紀錄的情境，並非真實當事人或案件紀錄。"
 ---
 # 拿到緩刑判決後，賠償、報到與撤銷條件怎麼看
 

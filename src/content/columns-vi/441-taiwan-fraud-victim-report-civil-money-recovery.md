@@ -16,6 +16,9 @@ faq:
     a: "Không có bảo đảm đó. Tiền còn trong tài khoản bị dừng giao dịch có thể được hoàn theo điều kiện và thông báo của cảnh sát tư pháp. Khoản chưa thu hồi có thể cần yêu cầu bồi thường và thi hành án; kết quả còn phụ thuộc trách nhiệm của từng người và tài sản thực tế."
   - q: "Có thể nộp đơn dân sự kèm vụ hình sự ngay khi cảnh sát nhận báo án không?"
     a: "Chưa. Điều 488 cho nộp sau khi vụ hình sự được khởi tố ra tòa và trước khi kết thúc tranh luận phúc thẩm, nhưng không cho nộp trong khoảng từ khi kết thúc tranh luận sơ thẩm đến trước khi có kháng cáo. Khi vụ án vẫn đang điều tra, cần cân nhắc yêu cầu dân sự riêng và thời hiệu."
+featured_image: "/images/blog/column-media-20261010/441-taiwan-fraud-victim-report-civil-money-recovery/featured-01.webp"
+featured_image_alt: "Hai bàn tay sắp xếp các tờ giấy vào ví nhiều ngăn; bên cạnh là điện thoại có màn hình tối."
+featured_image_caption: "Hình minh họa do AI tạo về việc sắp xếp chứng từ chuyển tiền. Đây là bối cảnh giả định, không tái hiện khách hàng hay vụ việc có thật."
 ---
 
 # Bị lừa chuyển tiền ở Đài Loan: trình báo và yêu cầu hoàn lại tiền

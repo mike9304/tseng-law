@@ -12,6 +12,9 @@ tags: ["criminal-litigation","性侵害報案","驗傷採證","被害人保護"]
 faq: [{"q":"沒有立即報案，現在還能求助嗎？","a":"可以向警察、醫療院所或地方性侵害防治中心說明情形。是否仍有可採集的證據，由專業人員依時間與事實評估；刑事追訴或告訴是否逾期，也須按罪名、日期與當事人關係檢查，不能只因沒有當天報案就自行放棄。"},{"q":"作筆錄可以由信任的朋友陪同嗎？","a":"性侵害犯罪防治法第18條將被害人信賴的人列為可陪同者，須經被害人同意；陪同者是犯罪嫌疑人、被告，或有法定妨礙偵查情形時，則不適用。可在到場前向承辦單位提出需求。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/418-taiwan-sexual-assault-report-evidence-victim-support/featured-01.webp"
+featured_image_alt: "柔和日光灑入安靜房間，兩張空扶手椅之間的小圓桌上放著紙巾盒與兩杯水。"
+featured_image_caption: "AI 生成的虛構示意畫面，呈現安靜的支持空間，並非真實當事人、機構或事件現場。"
 ---
 # 遭遇性侵害後：驗傷採證、報案陪同與出庭保護
 

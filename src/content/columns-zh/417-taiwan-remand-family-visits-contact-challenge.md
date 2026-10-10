@@ -12,6 +12,9 @@ tags: ["criminal-litigation","羈押禁見","看守所接見","具保停止羈�
 faq: [{"q":"羈押禁見時，家屬還能幫忙委任律師嗎？","a":"可以。刑事訴訟法第27條容許法定代理人、配偶、直系或三親等內旁系血親、家長及家屬獨立選任辯護人。家屬接見禁令與辯護人接見的法律條件不同，應由律師核對相關限制。"},{"q":"偵查中羈押兩個月，期滿就一定釋放嗎？","a":"不能只看最初兩個月。刑事訴訟法第108條容許依法延長羈押，起訴後另進入審判中的期間計算；同條還有期滿後特定條件下繼續羈押的規定。須核對押票、延押裁定及案件目前階段。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/417-taiwan-remand-family-visits-contact-challenge/featured-01.webp"
+featured_image_alt: "木凳上的帆布提袋內放著灰藍色文件夾，前方整齊擺放手機與透明卡套。"
+featured_image_caption: "AI 生成的虛構示意畫面，呈現家屬整理資料的情境，並非真實當事人或案件現場。"
 ---
 # 家人被羈押後：接見、禁見與聲請停止羈押
 

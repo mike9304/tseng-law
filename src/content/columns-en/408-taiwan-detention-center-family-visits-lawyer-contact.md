@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "Can a relative in the United States hire a Taiwan defense lawyer before visiting?", "a": "Yes. Article 27 allows the defendant’s spouse, lineal relatives and other listed persons to retain defense counsel independently. Give the lawyer the available case papers and identifying details."}, {"q": "Are family visits confidential?", "a": "Ordinary detention-center visits are generally visually monitored and audiovisually recorded under Detention Act Article 62. Lawyer meetings have different safeguards under Article 65 and Code of Criminal Procedure Article 34."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/408-taiwan-detention-center-family-visits-lawyer-contact/featured-01.webp"
+featured_image_alt: "Two wooden chairs in a sunlit home entryway hold a plain gray document pouch and a cream canvas tote."
+featured_image_caption: "AI-generated illustration of family preparation in a fictional home. It does not depict an actual client, detention facility or visit, or indicate that a visit has been approved."
 ---
 # Visiting a family member held in a Taiwan detention center
 

@@ -16,6 +16,9 @@ faq:
     a: "Có thể. Điều 4 Điều lệ phòng chống tác hại ma túy quy định riêng hành vi vận chuyển, cùng với sản xuất và buôn bán. Việc có cấu thành tội và vai trò nào còn phụ thuộc chất bị phát hiện, hành vi thực tế, nhận thức và chứng cứ."
   - q: "Chỉ nói không biết bên trong là gì có đủ không?"
     a: "Cơ quan phải đánh giá chứng cứ về nhận thức. Điều 13 Bộ luật Hình sự tính cả trường hợp thấy trước khả năng sự việc xảy ra mà vẫn chấp nhận. Cần giữ nguyên tin tuyển việc, trao đổi về hàng hóa, tiền công và chỉ dẫn; không thể suy có tội chỉ từ tên trên kiện hàng, cũng không thể bảo đảm vô tội chỉ từ một lời phủ nhận."
+featured_image: "/images/blog/column-media-20261010/440-taiwan-drug-parcel-courier-job-criminal-risk/featured-01.webp"
+featured_image_alt: "Thùng giấy còn đóng kín và túi nhựa trong đựng giấy tờ đặt trên ghế dài bằng gỗ ở lối vào nhà."
+featured_image_caption: "Hình minh họa do AI tạo về một bưu kiện giả định, không phải khách hàng hay vụ việc có thật; hình ảnh không cho biết bên trong kiện hàng có gì."
 ---
 
 # Nhận hộ bưu kiện, mang hộ đồ sang Đài Loan khi bên trong có ma túy

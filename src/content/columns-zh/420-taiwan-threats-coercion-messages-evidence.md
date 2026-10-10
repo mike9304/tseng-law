@@ -12,6 +12,9 @@ tags: ["criminal-litigation","恐嚇罪","強制罪","LINE威脅"]
 faq: [{"q":"恐嚇一定要在公開場合，或真的動手，才成立嗎？","a":"刑法第305條沒有公然或已經動手的要件。仍須有以加害生命、身體、自由、名譽或財產之事恐嚇，致生危害於安全的情形；單句文字要連同前後對話、關係與現場行為判斷。"},{"q":"對方道歉、我說不告了，恐嚇案就會結束嗎？","a":"刑法第304條強制罪及第305條恐嚇危害安全罪，都不是告訴乃論之罪。檢警知有犯罪嫌疑仍可依法偵查；和解、道歉與是否起訴或如何量刑，需要分開判斷。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/420-taiwan-threats-coercion-messages-evidence/featured-01.webp"
+featured_image_alt: "紙感插畫中的手機螢幕排列著無字對話色塊，旁邊以傳輸線連接一個灰藍色外接裝置。"
+featured_image_caption: "AI 生成的虛構示意插畫，呈現保存數位紀錄的概念，並非真實對話、當事人或案件證據。"
 ---
 # 收到威脅訊息、被堵住去路：恐嚇與強制的報案資料
 

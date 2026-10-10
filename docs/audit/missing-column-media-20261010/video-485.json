@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "createdAt": "2026-10-10T00:37:13.917Z",
+  "base": {
+    "head": "8da023868a6c0db96a64caa761f6ef66fa9bb402",
+    "originMain": "8da023868a6c0db96a64caa761f6ef66fa9bb402",
+    "checkedAt": "2026-10-10T00:37:13.901Z"
+  },
+  "scope": "One reviewed ZH485 video; existing manual player after TOC; article bytes unchanged",
+  "articlePath": "src/content/columns-zh/485-taiwan-manufacturing-ai-data-trade-secrets.md",
+  "articleSha256": "13fc0f5fcee7cae0c6e52c21486610127eb7708108ee92fbf1a13af934d4b5b9",
+  "asset": {
+    "id": "manufacturing-ai-data-processing-v1-zh-hant",
+    "src": "/videos/columns/485-ai-data-processing.mp4",
+    "poster": "/images/column-videos/485-ai-data-processing-poster.jpg",
+    "width": 1920,
+    "height": 1080,
+    "title": "清除對話畫面後，還要確認什麼",
+    "description": "刪除對話後，其他資料如何處理，仍須逐項確認。下文說明本次分析、資料保存與模型調整的差別。 虛構晶圓影像出現在分析畫面，原始檔仍在。右側展開「查詢用資料」「輸出與備份」「是否調整模型」三個待確認項目。對話畫面清除後，三項仍待確認；圖示不表示資料確實保留或已用於訓練。實際處理依方案與設定確認。",
+    "disclosure": "AI生成的示意動畫，非特定服務的實際畫面。",
+    "durationSeconds": 15,
+    "sceneCount": 3
+  },
+  "fullStaticTranscript": "虛構晶圓影像出現在分析畫面，原始檔仍在。右側展開「查詢用資料」「輸出與備份」「是否調整模型」三個待確認項目。對話畫面清除後，三項仍待確認；圖示不表示資料確實保留或已用於訓練。實際處理依方案與設定確認。",
+  "approvedCaption": "刪除對話後，其他資料如何處理，仍須逐項確認。下文說明本次分析、資料保存與模型調整的差別。",
+  "original": {
+    "tool": "Grok Imagine consumer web UI",
+    "backendModelId": "not exposed or verified by the consumer UI",
+    "settings": {
+      "mode": "video",
+      "resolution_label": "1080p",
+      "duration_label": "15s",
+      "aspect_ratio": "16:9",
+      "video_audio": false
+    },
+    "prompt": "Create a 15-second, silent, 1920x1080, 16:9 editorial motion diagram for a legal information article about checking how an external AI service handles a file. This is an abstract explanatory illustration, not a real software interface and not a reconstruction of any provider's behavior.\n\nVisual style: locked camera, flat 2D vector-like shapes, warm off-white background, fine dark charcoal outlines, restrained slate blue and pale gray accents, generous empty space. No people, no factory footage, no realism, no camera zooms or pans. Keep all object positions stable between phases. Reserve the bottom 18 percent as a completely empty clean area for an editor to add readable captions later. Also leave generous blank label areas above or beside each shape. Do not generate any text, letters, numbers, glyphs, logos, watermarks, question marks, checks, warning badges, or UI buttons. The editor will add all exact labels and dotted connections afterwards.\n\nThe layout has three zones: left at approximately 18 percent of the frame width, center at 48 percent, right at 80 percent. The source is one rounded rectangular card on the left, containing a tiny abstract circular wafer pattern without symbols. The center is a large abstract rounded outline panel with room for one matching card and a reserved blank two-line caption area. The right will contain two small empty outline panels stacked above one simple inactive network-of-dots symbol. Keep a generous blank two-line label area for each right-side item, large enough for an editor to place approximately five Traditional Chinese characters per line in a 68 to 76 pixel font. These right-side shapes represent questions to investigate, not copies or confirmed storage locations; therefore they must stay empty and neutral, with no data entering them and no success or danger signals. Keep all three items and their label spaces clear of the empty bottom caption band.\n\n0 to 5 seconds: the left source card stays visible. A matching abstract card gently appears inside the center panel. The original left card never disappears. The right zone remains empty. This only illustrates that a file is visible in an analysis conversation.\n\n5 to 10 seconds: gradually reveal the three neutral right-side shapes, top, middle, then bottom. The top and middle are empty outline panels. The bottom is a simple inactive network of dots, visually different from a file container. Do not animate file copies, flowing particles, arrows, or data entering these shapes. The source and center card stay visible. These are unverified questions that an editor will label later.\n\n10 to 15 seconds: fade out only the matching card inside the center conversation panel. Keep the panel outline itself, the left source card, and all three empty right-side question shapes visible and unchanged. Do not erase the whole diagram. Do not mark any item complete. Hold this final composition completely still for the final two seconds. The visual must not suggest that all providers retain files or train models, or that clearing a conversation guarantees any backend deletion.\n\nNo audio or music. End without a logo, call to action, legal conclusion, deadline, calendar, or countdown.",
+    "promptSha256": "e5ffdaf2cb4b489bd43ac08accf1467eb82d92b4aa21ed54e027b162ad861f92",
+    "rawSha256": "6173eabc3bace899d115d682a6972ad357348519c74fe2472ef7f3351203b4d2"
+  },
+  "postproduction": {
+    "description": "Root-authorized deterministic postproduction: original 0–14 seconds retimed to 0–13 seconds; held final composition for 13–15 seconds. Original left card and center card motion preserved. Narrow padding (8px horizontal, 4px vertical) preserves the actual source pixels. Right question area replaced by intentionally spacious neutral vector panels and a static node for legible Traditional Chinese labels. Residual abstract response bars cleared only at 13 seconds, after the center card has completely disappeared. No supplier interface, file flow or legal outcome added. Original preserved untouched.",
+    "finalSha256": "3fc3854a3bc8e8a1796c885c492d309924608baea8dc5b83bdce0545278b3c77",
+    "finalBytes": 2115627,
+    "posterSha256": "bb6826e94c1253f1386bfbbc7e85d967e9e534af54644b0a9db4ef8e08969ce2",
+    "posterBytes": 195274,
+    "width": 1920,
+    "height": 1080,
+    "durationSeconds": 15,
+    "fps": 24,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "audio": false,
+    "faststart": true,
+    "overlayManifestSha256": "1a7a684bd5682ef32078642b74e66a94554116c6892e8888a283d72efb564023",
+    "postproductionScriptSha256": "f67761f68c53866db0a0ed85380e768a1403b4c254b79c9a38a950ee1d8cc314"
+  },
+  "evidenceHashes": {
+    "finalReview": "883b74e9482725c931629717e548fa94e3a1fbbde1321451d04a11ec18897649",
+    "handoff": "81b80dc6a9bea94453be32a4620f88912d0ff0290d0798365054474c284dee2e",
+    "provenance": "7d7f55248a74e8ae952306899d6d1785fc5403a470f3db1645ec3924d18104c7",
+    "generation": "bcd836afef5e9e329c01b8c72e6a45d94fffbf2da869e2dd1d78392fe945e91a",
+    "exactText": "f7e95e0ef37091c3a6785858994a1a34e3678b9c033e07ed8e1ed05fff4cc14d"
+  },
+  "privateMetadataExcluded": [
+    "conversation/post identifiers",
+    "account usage and subscription details",
+    "temporary media and private UI URLs"
+  ],
+  "productVerificationPending": true
+}

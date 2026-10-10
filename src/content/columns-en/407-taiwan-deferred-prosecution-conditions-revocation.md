@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "When does a Taiwan deferred-prosecution period begin?", "a": "Article 253-1 starts the one-to-three-year period when the disposition becomes final. It does not start merely because you paid the required amount or received a proposed disposition."}, {"q": "Can I challenge a revocation of deferred prosecution?", "a": "Article 256-1 permits the defendant to request reconsideration within ten days after receipt, giving written reasons through the original prosecutor to the directly superior prosecutorial authority. Preserve service evidence and the records of compliance."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/407-taiwan-deferred-prosecution-conditions-revocation/featured-01.webp"
+featured_image_alt: "A wall organizer with rust, green and blue fabric pockets holding blank envelopes and cards."
+featured_image_caption: "AI-generated illustration of a fictional record organizer. It does not depict an actual client, official document or event."
 ---
 # Deferred prosecution in Taiwan still carries deadlines
 

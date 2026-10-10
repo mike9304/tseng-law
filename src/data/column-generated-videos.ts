@@ -93,6 +93,18 @@ const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsse
 };
 
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  "column/zh-hant/taiwan-manufacturing-ai-data-trade-secrets": {
+    "id": "manufacturing-ai-data-processing-v1-zh-hant",
+    "src": "/videos/columns/485-ai-data-processing.mp4",
+    "poster": "/images/column-videos/485-ai-data-processing-poster.jpg",
+    "width": 1920,
+    "height": 1080,
+    "title": "清除對話畫面後，還要確認什麼",
+    "description": "刪除對話後，其他資料如何處理，仍須逐項確認。下文說明本次分析、資料保存與模型調整的差別。 虛構晶圓影像出現在分析畫面，原始檔仍在。右側展開「查詢用資料」「輸出與備份」「是否調整模型」三個待確認項目。對話畫面清除後，三項仍待確認；圖示不表示資料確實保留或已用於訓練。實際處理依方案與設定確認。",
+    "disclosure": "AI生成的示意動畫，非特定服務的實際畫面。",
+    "durationSeconds": 15,
+    "sceneCount": 3
+  },
   ...Object.fromEntries(Object.entries(massageShoulderReleaseCaptions).map(([locale, caption]) => {
     const assetLocale = ['ko', 'en', 'zh-hant', 'ja'].includes(locale) ? locale : 'en';
     const id = `massage-shoulder-release-v1-${assetLocale}`;

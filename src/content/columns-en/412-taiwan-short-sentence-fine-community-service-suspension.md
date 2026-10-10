@@ -12,6 +12,9 @@ tags: ["criminal-litigation"]
 faq: [{"q": "Does a judgment saying I may convert imprisonment to a fine mean I can simply pay?", "a": "No. The execution prosecutor reviews the application. Follow the execution summons, obtain the official payment instructions and keep confirmation of completion. The judgment’s conversion rate alone is not approval of every execution arrangement."}, {"q": "Can I object if the prosecutor refuses a lawful conversion request?", "a": "Article 484 permits the convicted person, their legal representative or spouse to object to an allegedly improper execution direction before the court that pronounced the judgment. The grounds and papers should address execution, not assume a new appeal against the conviction."}]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/blog/column-media-20261010/412-taiwan-short-sentence-fine-community-service-suspension/featured-01.webp"
+featured_image_alt: "Canvas garden gloves, a teal watering can and small seedling pots sit on a weathered workbench in a sunny courtyard."
+featured_image_caption: "AI-generated illustration of a fictional garden-work setting, not an actual client or event; the activity shown does not represent an approved service assignment."
 ---
 # A short Taiwan prison sentence: payment, service or suspension
 

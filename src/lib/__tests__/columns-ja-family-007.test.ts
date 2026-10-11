@@ -191,16 +191,16 @@ const evidenceCategoryStarts = [
 
 // Re-frozen after the 2026-10-12 style rewrite of the whole hub body (same legal content, new wording).
 const frozenH2BodySha256 =
-  '978beec9ce5555dd816d43ab29133e41e1f91982d26fe7716a202abf0079eed2';
+  'ff3706651cce6f12dc3a9e35cda4856eb05eb472816b3d384f634f4b26d30fac';
 const frozenNormalizedSection4Sha256 =
   '2ac287cc7e75df8aab30c6dc21655460e428d85e1c5e739e2ef388f21ddd66d0';
 const frozenSection5OnwardSha256 =
   'cd39dbed698b11eb2308689c64e427b3e731e77945d84a3295f6cb6a3c6ad5b4';
 const frozenResponsibleSpouseCount = 3;
-const frozenVisibleJapaneseCount = 4_921;
-const frozenVisibleKanaCount = 2_208;
+const frozenVisibleJapaneseCount = 4_901;
+const frozenVisibleKanaCount = 2_194;
 const frozenSourceSha256 =
-  '940dba373db72fe58afeca2a57ea8bead215cf90912b9b9534ea2432f2ef7da3';
+  '894cdb7e65890f9e18b61adf3fecbff1ca25fb29c23ab1ebc6cfc595a4bfdd1e';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -597,7 +597,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
       'これがなければ、私的な書面だけでは台湾の協議離婚は完成しません。',
       '外国で作成された文書は、種類と作成地によっては、台湾の在外機関などの権限ある機関による認証が必要になる場合があります。公式案内が求めるときは、認証または公証を受けた中国語訳も併せて提出しなければなりません。',
       '申請期間は、一般に30日です（戸籍法第48条）。数え始めるのは、台湾の離婚判決が確定した日、または調停・和解が成立した日です。',
-      '判決書や調停調書を受け取った日が、確定や成立より前だというだけなら、その日を一律に起算日にしてはいけません。',
+      '判決書や調停調書を受け取った日を、一律に起算日にしてはいけません。',
       '期限を過ぎた申請も受理されます。',
       '遅れたこと自体が、すでに効力を生じた裁判所の離婚を失効させることはありません。',
       '書面で催告しても誰も申請しなければ、戸政機関は戸籍法第48条の2に基づき、要件を満たす裁判所の結果を職権で登記します。',

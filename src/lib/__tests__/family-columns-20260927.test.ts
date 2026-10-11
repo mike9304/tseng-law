@@ -27,6 +27,8 @@ const REWRITTEN_LASTMOD: Record<string, string> = {
   'ja/marrying-taiwanese-national-registration-checklist': '2026-10-06',
   // ja 023 was rewritten for natural style on 2026-10-12 (no longer an unchanged PASS file).
   'ja/baby-taiwan-nationality-birth-registration': '2026-10-12',
+  // ko 022 was rewritten for natural style on 2026-10-12.
+  'ko/marrying-taiwanese-national-registration-checklist': '2026-10-12',
 };
 
 // Revised columns in locales without a separate `published` field were re-dated to

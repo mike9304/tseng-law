@@ -46,27 +46,27 @@ const faq = [
 
 // The FAQ answers are no longer copied into the body; the body states the same rules in its own sentences.
 const suspensionRuleSentence =
-  'A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins (unless the suspension has already been reported to and recorded by the tax authority under the Business Tax Act — proviso to Article 3, paragraph 1 of the Regulations Governing Company Registration), and each suspension period may not exceed one year.';
+  'A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins. The exception, found in the proviso to Article 3, paragraph 1 of the Regulations Governing Company Registration, is a suspension that has already been reported to and recorded by the tax authority under the Business Tax Act. Each suspension period may not exceed one year.';
 const suspensionTaxSentence =
-  'The company must file an annual income tax return for the year in which it suspends business, and other filing or payment obligations may remain based on transactions before and after suspension, the holding or disposal of assets, withholding, employees, and the industry involved.';
+  'The company must file an annual income tax return for the year in which it suspends business. Other filing or payment obligations may remain, based on transactions before and after suspension, the holding or disposal of assets, withholding, employees, and the industry involved.';
 const permanentClosureSentence =
-  'If permanent closure is chosen, dissolution registration and liquidation should be connected so that the company’s contracts, claims, debts, taxes, and residual assets can be settled.';
+  'For a permanent closure, dissolution registration and liquidation should be linked so that the company’s contracts, claims, debts, taxes, and residual assets can be settled.';
 const liquidationPeriodSentence =
-  'How long liquidation takes depends on these facts, but the liquidator must complete it within six months (Company Act Article 87(3), applied to companies limited by shares by Article 334 and to limited companies by Article 113(2)); if that is not possible, the liquidator may state the reasons and apply to the court for an extension.';
+  'How long liquidation takes depends on these facts. Article 87(3) of the Company Act nonetheless requires the liquidator to complete it within six months. Article 334 applies that rule to companies limited by shares, and Article 113(2) applies it to limited companies. If that is not possible, the liquidator may state the reasons and apply to the court for an extension.';
 const article87Link =
   '[Taiwan Company Act, Article 87](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87)';
 const dissolutionColumnLink =
   '[Closing a Taiwan subsidiary or branch: when can the remaining cash leave?](/en/columns/taiwan-company-dissolution-liquidation)';
 
 const article9Paragraph =
-  'Article 9 of Taiwan’s Company Act provides that when share capital payable to a company was not actually paid but was represented as fully paid, or when share capital was returned to shareholders or shareholders were permitted to recover it after registration, the violation is punishable by imprisonment for up to five years, detention, or a fine of between NT$500,000 and NT$2.5 million. This provision does not generally punish ordinary, lawful uses of company funds.';
+  'Article 9 of Taiwan’s Company Act carries a criminal penalty. It applies when share capital payable to a company was represented as fully paid although it had not actually been paid, or when, after registration, share capital was returned to shareholders or shareholders were permitted to recover it. The penalty is imprisonment for up to five years, detention, or a fine of between NT$500,000 and NT$2.5 million. The provision does not generally punish ordinary, lawful uses of company funds.';
 const article90Paragraph =
-  'If a liquidator distributes company property to shareholders before paying the company’s debts, Article 90 of the Company Act provides for imprisonment for up to one year, detention, or a fine of up to NT$60,000.';
+  'A liquidator who distributes company property to shareholders before paying the company’s debts faces imprisonment for up to one year, detention, or a fine of up to NT$60,000 (Company Act, Article 90).';
 const article89Paragraph =
-  'Liquidation after dissolution is not a procedure available only when a company’s assets exceed its liabilities. Under Article 89 of the Company Act, if the company’s property is insufficient to pay its debts, the liquidator must immediately apply for a declaration of bankruptcy. Whether ordinary liquidation can continue should be determined individually after reviewing excess liabilities, inability to pay, security, tax debts, and the number of creditors.';
+  'Liquidation after dissolution is not reserved for companies whose assets exceed their liabilities. Under Article 89 of the Company Act, if the company’s property is insufficient to pay its debts, the liquidator must immediately apply for a declaration of bankruptcy. Whether ordinary liquidation can continue should be determined individually, after reviewing excess liabilities, inability to pay, security, tax debts, and the number of creditors.';
 
 const h2s = [
-  '1. Company Assets and Shareholder Contributions Must Be Distinguished',
+  '1. Company Assets and Shareholder Contributions',
   '2. Procedure for Permanently Closing a Company',
   '3. When Liabilities Exceed Assets or the Company Cannot Pay Its Debts',
   '4. Capital Reduction While the Company Continues',
@@ -88,7 +88,7 @@ const internalLinks = [
   '[Contact Our Office](/en/contact)',
 ];
 const disclaimer =
-  'This article provides general legal information and educational material about closing a Taiwan company and handling company property; it is not legal advice for any specific matter. The appropriate dissolution, liquidation, capital-reduction, and business-suspension procedures and tax filings may vary with the company form, articles of incorporation, financial condition, creditors, foreign investment, and individual transactions, so the particular matter should be reviewed separately before any resolution is adopted or funds are transferred.';
+  'This article is general legal information and educational material about closing a Taiwan company and handling company property, not legal advice for any specific matter. The appropriate dissolution, liquidation, capital-reduction, and business-suspension procedures and tax filings may vary with the company form, articles of incorporation, financial condition, creditors, foreign investment, and individual transactions. Each matter should be reviewed separately before any resolution is adopted or funds are transferred.';
 const author = 'Wei Tseng (曾雋崴), Taiwan Attorney';
 
 function countOccurrences(value: string, needle: string) {
@@ -116,7 +116,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
   it('publishes the exact metadata, H1, images, and three contracted FAQs', () => {
     expect(parsed.data.title).toBe(title);
     expect(parsed.data.url).toBe(sourceUrl);
-    expect(parsed.data.lastmod).toBe('2026-10-06');
+    expect(parsed.data.lastmod).toBe('2026-10-12');
     expect(parsed.data.date_display).toBe('September 13, 2025');
     expect(parsed.data.categories).toEqual(['Taiwan Company Formation']);
     expect(parsed.data.featured_image).toBe(featuredImage);
@@ -129,7 +129,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     expect(post).toBeTruthy();
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-10-06');
+    expect(post?.date).toBe('2026-10-12');
     expect(post?.dateDisplay).toBe('September 13, 2025');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('Company Setup');
@@ -180,18 +180,18 @@ describe('English investment column 002 — closing a Taiwan company', () => {
 
   it('states the company-property distinctions and exact statutory safeguards', () => {
     for (const phrase of [
-      'Company property belongs to the company, not to the shareholders personally.',
-      'A shareholder therefore cannot freely withdraw company deposits or assets merely because that shareholder contributed capital in the past.',
-      'Capital is an equity item representing the amount paid by shareholders when a company is incorporated or increases its capital.',
-      'The applicable requirements differ depending on whether the transaction is a payment for goods or services incurred by the company, a dividend that has already been lawfully declared, repayment of money lent to the company by a shareholder, a capital reduction, or a distribution of residual assets after liquidation.',
+      'company property belongs to the company, not to the shareholders personally.',
+      'A shareholder therefore cannot freely withdraw company deposits or assets merely because that shareholder once contributed capital.',
+      'Capital is an equity item. It represents the amount shareholders paid when the company was incorporated or increased its capital.',
+      'A payment the company owes for goods or services, a dividend already lawfully declared, repayment of money a shareholder lent to the company, a capital reduction, and a distribution of residual assets after liquidation each have their own requirements.',
       article9Paragraph,
       article90Paragraph,
-      'payments of rent, wages, amounts owed to suppliers, or taxes for actual business operations must be distinguished from falsely representing unpaid share capital as paid or returning share capital after registration',
-      'separate issues may arise under company law, tax law, and accounting standards if its actual use, counterparty, consideration, or decision-making authority is unclear',
-      'In liquidation, creditors and taxes take priority over a shareholder’s recovery of an investment.',
+      'Payments of rent, wages, amounts owed to suppliers, or taxes for actual business operations must be distinguished from falsely representing unpaid share capital as paid or returning share capital after registration',
+      'may raise separate issues under company law, tax law, and accounting standards if its actual use, counterparty, consideration, or decision-making authority is unclear',
+      'Creditors and taxes come first in liquidation. A shareholder’s recovery of an investment ranks after them.',
       'Even when a shareholder asserts a loan claim against the company, the actual loan agreement, flow of funds, interest terms, accounting treatment, and order of repayment must be checked.',
-      'Other civil, criminal, and tax liabilities depend on the specific facts, including the purpose and authority for the transfer, the supporting evidence, its accounting treatment, and the relationship between the parties.',
-      'In practice, it is useful first to separate the list of assets held in the company’s name from assets held personally by shareholders, and to prepare a separate schedule of claims and debts between the company and its shareholders.',
+      'Other civil, criminal, and tax liabilities depend on the specific facts: the purpose of the transfer and the authority for it, the supporting evidence, its accounting treatment, and the relationship between the parties.',
+      'In practice, two lists are a useful start. One separates assets held in the company’s name from assets held personally by shareholders. The other is a separate schedule of claims and debts between the company and its shareholders.',
     ]) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
@@ -202,27 +202,27 @@ describe('English investment column 002 — closing a Taiwan company', () => {
 
   it('locks the company-form voting rules and qualified permanent-closing sequence', () => {
     for (const phrase of [
-      'Under Article 113 of the Company Act, a limited company requires the approval of shareholders holding at least two-thirds of the voting rights.',
-      'Under Article 316 of the Company Act, a company limited by shares, as a general rule, requires the attendance of shareholders representing at least two-thirds of all issued shares and a resolution approved by a majority of the voting rights represented by the attending shareholders.',
+      'A limited company requires the approval of shareholders holding at least two-thirds of the voting rights (Company Act, Article 113).',
+      'For a company limited by shares, Article 316 sets the general rule: shareholders representing at least two-thirds of all issued shares must attend, and the resolution must be approved by a majority of the voting rights represented by the attending shareholders.',
       'with shareholders representing a majority of all issued shares in attendance and at least two-thirds of the voting rights represented by the attending shareholders in favor',
-      'If the articles of incorporation impose higher requirements for the number of shares represented or voting rights, those requirements must also be followed.',
-      'List its ongoing contracts, employees, leases, permits and licenses, assets, debts, guarantees, taxes, litigation and enforcement proceedings, and bank accounts.',
-      'Under Article 4 of the Company Registration Regulations (公司登記辦法), as a general rule, a company must apply for change registration within 15 days after a registered matter changes.',
-      'dissolution change registration appropriate to the company form and cause of dissolution should be prepared within 15 days after dissolution',
-      'the current-period final return must be filed within 45 days after the competent authority approves the dissolution',
-      'the period begins on the day after the competent authority sends the approval document, that is, the day after its date of issuance',
+      'Higher requirements in the articles of incorporation, for the number of shares represented or for voting rights, must also be followed.',
+      'List the ongoing contracts, employees, leases, permits and licenses, assets, debts, guarantees, taxes, litigation and enforcement proceedings, and bank accounts.',
+      'As a general rule, Article 4 of the Company Registration Regulations (公司登記辦法) requires a company to apply for change registration within 15 days after a registered matter changes.',
+      'dissolution change registration appropriate to the company form and cause of dissolution should therefore be prepared within 15 days after dissolution',
+      'For profit-seeking enterprise income tax, this return must be filed within 45 days after the competent authority approves the dissolution',
+      'counts the period from the day after the competent authority sends the approval document, that is, the day after its date of issuance',
       'After appointing a liquidator under the articles of incorporation or a shareholder resolution, or confirming the statutory liquidator, report the required matters to the court.',
       'The liquidator prepares an inventory of property and a balance sheet, concludes the company’s existing affairs, collects outstanding claims, and determines how assets will be preserved and realized.',
       'notices, announcements, and creditor-protection procedures',
       'Only residual assets remaining after all debts and taxes have been settled may be distributed to shareholders',
-      'Residual assets are not the same concept as paid-in capital',
+      'Residual assets and paid-in capital are separate concepts',
       'File the liquidation-income return within 30 days after the liquidation ends',
       'make the required liquidation-completion report to the court',
       'Dissolution resulting from a merger, split-up, or bankruptcy may be exempt from ordinary liquidation procedures.',
       liquidationPeriodSentence,
-      'the liquidator must complete it within six months',
+      'requires the liquidator to complete it within six months',
       'the liquidator may state the reasons and apply to the court for an extension',
-      'a transfer of assets to a related party or a waiver of claims requires a separate review of its effect on the company and its creditors',
+      'A transfer of assets to a related party, or a waiver of claims, requires a separate review of its effect on the company and its creditors',
     ]) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
@@ -237,12 +237,12 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     for (const phrase of [
       'If the company’s financial condition is unclear, the amount that shareholders may receive should not be calculated first.',
       'debts incurred after the financial-statement date, guarantee obligations, litigation claims, employee-related amounts, the possibility of a tax audit, and the actual disposal value of assets',
-      'Excess liabilities generally concern the company’s financial position as determined by comparing assets with liabilities, while inability to pay concerns whether debts can be paid when they become due.',
+      'Excess liabilities generally concern the company’s financial position, determined by comparing assets with liabilities. Inability to pay concerns whether debts can be paid when they become due.',
       'Even if the books show substantial assets, the company’s ability to pay may be assessed differently if those assets cannot be converted immediately into cash or are subject to security.',
       'a temporary cash shortage alone does not necessarily mean that the same procedure applies in every case',
-      'paying only a particular creditor or shareholder first may prejudice other creditors’ interests and procedural fairness',
-      'The central questions are whether company property is insufficient to pay the debts, what the payment dates and cash flow are, what security and priority claims exist, and when the liquidator learned of these circumstances, all as shown by the actual records.',
-      'A new loan, capital increase, debt waiver, and agreement with creditors can each produce different accounting and tax consequences.',
+      'Paying only a particular creditor or shareholder first at this stage may prejudice other creditors’ interests and procedural fairness',
+      'The central questions are whether company property is insufficient to pay the debts, what the payment dates and cash flow are, what security and priority claims exist, and when the liquidator learned of these circumstances. The actual records have to answer them.',
+      'A new loan, a capital increase, a debt waiver, and an agreement with creditors can each produce different accounting and tax consequences.',
     ]) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
@@ -251,16 +251,16 @@ describe('English investment column 002 — closing a Taiwan company', () => {
 
   it('separates capital reduction, expenses, dividends, and genuine debt', () => {
     for (const phrase of [
-      'a capital reduction may be considered as a lawful way to return part of the shareholders’ contributions while continuing the company',
-      'A capital reduction, however, is not an informal means for shareholders to take company deposits whenever they wish, and it is not always available.',
+      'A capital reduction may then be considered as a lawful way to return part of the shareholders’ contributions while continuing the company',
+      'It is not always available. Nor is it an informal means for shareholders to take company deposits whenever they wish.',
       'The resolution appropriate to the company form, creditor protection, capital verification and accounting treatment, foreign-investment matters, taxes, remittance, and change registration must all be checked.',
-      'Even if the company has cash, it must be able to continue operating after paying wages, taxes, supplier invoices, loans, guarantees, and anticipated operating expenses.',
-      'the investment approval or reported information, shareholder register, change in capital, foreign-exchange records, and bank remittance documents should be consistent',
-      'The taxation of amounts received by shareholders in a capital reduction is not determined merely by labeling them a return of contributed principal.',
-      'If a shareholder or director is the supplier, the need for the transaction, its price, approval of the conflict of interest, and the requirements for recognizing the expense should be checked additionally.',
+      'Even a company with cash must be able to continue operating after paying wages, taxes, supplier invoices, loans, guarantees, and anticipated operating expenses.',
+      'should keep the investment approval or reported information, shareholder register, change in capital, foreign-exchange records, and bank remittance documents consistent',
+      'How shareholders are taxed on amounts received in a capital reduction is not determined merely by labeling them a return of contributed principal.',
+      'The supplier may be a shareholder or director. In that case the need for the transaction, its price, approval of the conflict of interest, and the requirements for recognizing the expense should be checked additionally.',
       'Cash in the company’s account does not by itself establish distributable profits',
-      'Repayment of a loan actually owed by the company is likewise a separate transaction.',
-      'retroactively relabeling a capital contribution as a loan should be avoided',
+      'Ordinary business expenses, dividends, and repayment of a loan the company actually owes are each a separate transaction from a capital reduction.',
+      'Retroactively relabeling a capital contribution as a loan should be avoided',
       'the legal character and tax treatment of each transaction should be recorded separately',
     ]) {
       expect(raw).toContain(phrase);
@@ -273,15 +273,15 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       suspensionRuleSentence,
       suspensionTaxSentence,
       'Business suspension allows a company to stop operating for a period while retaining its legal personality.',
-      'it does not extinguish the company or settle all existing rights and obligations',
-      'changes to registered matters such as the business address, responsible person, articles of incorporation, or capital require the necessary change registration',
+      'The company is not extinguished. Its existing rights and obligations are not all settled either.',
+      'changes to registered matters such as the business address, responsible person, articles of incorporation, or capital still require the necessary change registration',
       'The company should maintain an address and a responsible person who can receive mail and agency notices',
-      'separate expenses such as local taxes, management fees, and insurance premiums may continue',
-      'Before suspension, the company should decide whether to terminate or maintain its commercial contracts, lawfully handle employment relationships, and review the conditions and renewal deadlines for industry-specific permits and licenses.',
+      'may continue to generate separate expenses such as local taxes, management fees, and insurance premiums',
+      'Before suspension, the company should decide whether to terminate or maintain its commercial contracts, handle employment relationships lawfully, and review the conditions and renewal deadlines for industry-specific permits and licenses.',
       'establish a system to retain accounting books and supporting evidence for the statutory period',
-      'The fact that the company has no actual sales is not the same as a conclusion that it has no filing obligation for a particular tax',
+      'Having no actual sales does not establish that the company has no filing obligation for a particular tax',
       'decide whether to resume business, consider whether it qualifies for a further suspension, or move to permanent closure',
-      'business suspension is not a substitute for dissolution and liquidation',
+      'When the intent is to close the company permanently, suspension is no substitute for dissolution and liquidation.',
     ]) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
@@ -344,8 +344,8 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       parsed.content.split('## Official Sources')[0],
     );
 
-    expect(visibleWords).toBe(3_288);
-    expect(proseWords).toBe(3_155);
+    expect(visibleWords).toBe(3_234);
+    expect(proseWords).toBe(3_105);
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
     expect(parsed.data.read_time).toBe('14 min read');
     expect(post?.readTime).toBe('14 min read');

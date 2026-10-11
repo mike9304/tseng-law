@@ -64,8 +64,8 @@ describe('expertise columns 2026-09-30', () => {
     expect([...localesBySlug.keys()].sort()).toEqual(Object.keys(EXPECTED_TOPIC).sort());
   });
 
-  // Verified fact fixes (audit-split lane 2026-10-06, FINDINGS F-035 046 / F-038 043) moved lastmod.
-  const FACT_FIX_LASTMOD: Record<string, string> = { 'ko/043': '2026-10-06', 'ko/046': '2026-10-06', 'zh-hant/046': '2026-10-06' };
+  // Verified fact fixes (audit-split lane 2026-10-06, FINDINGS F-035 046 / F-038 043) and the 2026-10-12 sentence-variety rewrite of ko/048 moved lastmod.
+  const FACT_FIX_LASTMOD: Record<string, string> = { 'ko/043': '2026-10-06', 'ko/046': '2026-10-06', 'zh-hant/046': '2026-10-06', 'ko/048': '2026-10-12' };
 
   it.each(cases)('$locale/$file has the house frontmatter and a hero image on disk', ({ locale, file, num, slug }) => {
     const filePath = path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale], file);

@@ -29,7 +29,7 @@ const faq2Answer =
 const faq3Answer =
   '分公司不是獨立的發行公司，因此不能成為在台灣上市的主體。子公司若要上市，應符合公司法與證券交易所規定的要件。租稅優惠不會僅因組織形式而一律決定。《產業創新條例》第10條之1的投資抵減等，應個別確認適用對象投資、申請期限、抵減方式、重複適用與稅額上限。';
 const disclaimer =
-  '本文為說明台灣子公司與外國公司分公司一般差異的教育目的資料，並非就個別案件提供的法律、稅務諮詢。適用的法令與稅務處理，可能因投資人與本公司所在地、事業內容、交易與資金流向、協定適用要件及主管機關最新實務而不同；執行設立、投資、簽約、分配股利或匯款前，請確認最新官方資料與個別情形。';
+  '本文說明台灣子公司與外國公司分公司的一般差異，屬教育目的資料，不是針對個別案件的法律、稅務諮詢。適用的法令與稅務處理，可能隨投資人與本公司所在地、事業內容、交易與資金流向、協定適用要件和主管機關最新實務而不同；設立、投資、簽約、分配股利或匯款之前，請確認最新官方資料與個別情形。';
 const author = '曾雋崴律師（Wei Tseng）';
 
 const faq = [
@@ -70,6 +70,10 @@ function firstParagraphAfter(content: string, heading: string) {
   return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
 }
 
+function sectionAfter(content: string, heading: string) {
+  return content.split(`${heading}\n\n`)[1]?.split(/\n## /)[0] ?? '';
+}
+
 function extractPublicVisibleText(content: string) {
   return content
     .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
@@ -89,7 +93,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     expect(parsed.data).toEqual({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch',
-      lastmod: '2026-10-06',
+      lastmod: '2026-10-12',
       date_display: '2025年9月13日',
       read_time: '20分鐘閱讀',
       categories: ['台灣公司設立'],
@@ -104,7 +108,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     expect(post).toMatchObject({
       slug: 'taiwan-company-subsidiary-vs-branch',
       title,
-      date: '2026-10-06',
+      date: '2026-10-12',
       dateDisplay: '2025年9月13日',
       readTime: '20分鐘閱讀',
       category: 'formation',
@@ -134,7 +138,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       ),
     );
     expect(parsed.content.indexOf(inlineImage)).toBeGreaterThan(
-      parsed.content.indexOf('由誰成為契約當事人'),
+      parsed.content.indexOf('誰是契約當事人'),
     );
     expect(parsed.content.indexOf(inlineImage)).toBeLessThan(
       parsed.content.indexOf('## 1. 法人格與出資結構'),
@@ -143,21 +147,40 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     expect(raw.split(inlineImage)).toHaveLength(2);
   });
 
-  it('repeats each FAQ answer as the first paragraph after its assigned H2', () => {
-    const headingAnswers = [
-      ['## 1. 法人格與出資結構', faq1Answer],
-      ['## 2. 稅務與盈餘匯回', faq2Answer],
-      ['## 4. 資金籌措與在台灣上市', faq3Answer],
+  it('opens each FAQ-assigned H2 with the answer to its FAQ question', () => {
+    const headingOpenings = [
+      [
+        '## 1. 法人格與出資結構',
+        '能不能找台灣的自然人或法人來當分公司的股東？不能。分公司是外國公司的一部分，本身沒有股東。',
+      ],
+      [
+        '## 2. 稅務與盈餘匯回',
+        '營業稅5%、營利事業所得稅20%，子公司與分公司一般都適用。分歧在後面：盈餘怎麼離開台灣，以及盈餘留著不分配時怎麼課。',
+      ],
     ];
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
-      expect(raw.split(answer)).toHaveLength(3);
+    for (const [heading, opening] of headingOpenings) {
+      expect(firstParagraphAfter(parsed.content, heading)).toBe(opening);
+      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(opening);
+    }
+    for (const content of [parsed.content, post?.content ?? '']) {
+      const listingSection = sectionAfter(
+        content,
+        '## 4. 資金籌措與在台灣上市',
+      );
+      expect(listingSection).toContain(
+        '分公司不能在台灣上市。它不是獨立的發行公司，也沒有自己的股份，成不了台灣證券市場的上市主體',
+      );
+      expect(listingSection).toContain(
+        '計畫上市的話，須先具備可上市的發行公司形式，符合公司法的要件，以及臺灣證券交易所相應市場的標準。',
+      );
+      expect(firstParagraphAfter(content, '## 5. 投資抵減')).toMatch(
+        /^只看組織名稱是子公司還是分公司，沒辦法一律決定租稅優惠。/,
+      );
     }
   });
 
-  it('uses exactly the nine ordered H2 sections', () => {
+  it('uses exactly the ten ordered H2 sections', () => {
     expect(
       Array.from(parsed.content.matchAll(/^## (.+)$/gm), (match) => match[1]),
     ).toEqual([
@@ -167,7 +190,8 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       '4. 資金籌措與在台灣上市',
       '5. 投資抵減',
       '6. 台韓所得稅協定與常設機構（PE）',
-      '7. 應選擇何種形式',
+      '7. 退場：廢止登記與清算',
+      '8. 該選哪一種形式',
       '官方資料',
       '相關資訊',
     ]);
@@ -175,20 +199,20 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
 
   it('locks the Company Act identity, capital, and branch-exit rules', () => {
     const requiredPhrases = [
-      '台灣《公司法》第1條將依公司法組織、登記、設立，並以營利為目的的法人，規定為公司。',
-      '依此設立的台灣子公司，是與外國母公司區別的台灣法人。',
-      '有限公司股東依《公司法》第99條第1項，原則上以其出資額為限對公司負責。',
-      '但第99條第2項設有例外：股東濫用公司之法人地位，致公司負擔特定債務且清償顯有困難，其情節重大而有必要者，該股東應負清償之責。',
-      '依《公司法》第371條，外國公司未辦理分公司登記，不得以外國公司名義在台灣營業。',
+      '《公司法》第1條所稱的公司，是依該法組織、登記、設立，並以營利為目的的法人。',
+      '台灣子公司依此設立，是有別於外國母公司的台灣法人。',
+      '股東原則上以出資額為限對公司負責（《公司法》第99條第1項）。',
+      '第99條第2項另設例外：股東濫用公司之法人地位，致公司負擔特定債務且清償顯有困難，其情節重大而有必要者，該股東應負清償之責。',
+      '沒辦分公司登記，不得以外國公司名義在台灣營業（《公司法》第371條）。',
       '依第372條，外國公司應專撥其台灣分公司營業所用資金，並指定在台灣境內的負責人。',
-      '該資金是供台灣營業的本公司資金，而非分公司的股份或出資額。',
-      '台灣分公司的債務就是外國公司的債務',
+      '這筆資金是本公司供台灣營業使用的錢，不算分公司的股份或出資額。',
+      '分公司不是另一個法人。它的債務，就是外國公司的債務。',
       '《公司法》第378條申請廢止分公司登記',
-      '不會僅因申請而消失',
-      '主管機關依《公司法》第379條第1項廢止分公司登記時，依同條第2項，也不影響債權人之權利及外國公司之義務。',
-      '依《公司法》第380條，應清算在台灣營業與分公司所生的權利義務。',
+      '不會因為提出申請就消失',
+      '主管機關依《公司法》第379條第1項廢止分公司登記時，債權人之權利及外國公司之義務不受影響（同條第2項）。',
+      '《公司法》第380條規定，外國公司的台灣分公司全部廢止時，應清算在台灣營業與分公司所生的權利義務。',
       '清算後仍未清償的債務，由外國公司繼續負擔。',
-      '台灣子公司是獨立法人，因此不採外國公司分公司的廢止登記，而是依公司法上解散及清算程序。',
+      '換成子公司，因為是獨立法人，走的是公司法上的解散及清算程序，沒有外國公司分公司那種廢止登記。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -202,22 +226,22 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
 
   it('locks qualified tax rates, remittance, and undistributed-earnings rules', () => {
     const requiredPhrases = [
-      '營業稅是對在台灣銷售貨物或勞務的交易適用的間接稅。一般稅率為5%，通常以每二個月為一期申報。',
-      '但零稅率、免稅、特別稅率或進項稅額扣抵與否，可能因交易性質而不同。',
-      '課稅所得超過法定基準金額時，一般稅率為20%。',
-      '這不是對營業額直接乘以20%的稅',
-      '台灣國內法上的扣繳率為21%',
-      '協定上的上限稅率10%',
+      '營業稅是間接稅，對在台灣銷售貨物或勞務的交易課徵，一般稅率5%，通常每二個月申報一期。',
+      '零稅率、免稅、特別稅率，以及進項稅額能否扣抵，可能隨交易性質而不同。',
+      '課稅所得超過法定基準金額時，一般稅率是20%。',
+      '20%乘的不是營業額',
+      '依台灣國內法，支付給國外股東的股利，扣繳率是21%',
+      '可以評估協定的上限稅率10%',
       '居住者證明',
       '受益所有人',
-      '將稅後分公司盈餘匯回本公司的行為與股利有別',
-      '在分公司階段原則上無另行股利扣繳',
+      '把稅後盈餘匯回本公司有別於股利',
+      '分公司階段原則上沒有另行的股利扣繳',
       '利息、權利金、服務對價、資產價款或對第三人的支付',
-      '未分配盈餘加徵5%稅額',
-      '本公司在台灣境外的營利事業，不屬於該未分配盈餘申報對象',
+      '可能依《所得稅法》第66條之9被加徵5%的未分配盈餘稅額',
+      '本公司在台灣境外的營利事業，不屬於這項未分配盈餘的申報對象',
       '移轉訂價',
       '外國稅額扣抵',
-      '不能預先斷定選擇分公司即可減少韓國母公司的稅負',
+      '所以無法預先斷定選分公司就能減輕韓國母公司的稅負',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -230,21 +254,21 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
 
   it('qualifies liability, financing, listing, and investment-credit claims', () => {
     const requiredPhrases = [
-      '有限公司股東依《公司法》第99條的原則，在出資額限度內負責；股份有限公司股東，依所適用公司種類的規定，在所認購股份範圍內負責',
-      '責任的界線不僅受登記形式影響，也受實際決策與資金運用影響。',
-      '責任比較不能以「子公司安全、分公司危險」一句話作結',
-      '分公司沒有自己的股份或股權，因此不能發行給第三人',
-      '不應將不能發行股權的事實，擴大解釋為一切形式的資金籌措都不可能',
-      '也不是僅因存在台灣子公司，就自動取得上市資格。',
+      '有限公司的股東依《公司法》第99條的原則，在出資額限度內負責；股份有限公司的股東，依該種公司適用的規定，在所認購股份的範圍內負責',
+      '登記形式只是一部分。實際的決策與資金運用，同樣影響責任的界線。',
+      '「子公司安全、分公司危險」這樣一句話，概括不了責任的比較',
+      '股份或股權，分公司自己沒有，所以沒辦法發行給第三人',
+      '不能發行股權，不代表各種形式的資金籌措都行不通',
+      '有了台灣子公司，也不會自動取得上市資格。',
       '設立期間、資本、獲利能力、股權分散、公司治理、內部控制、會計查核與資訊揭露',
       '2025年1月1日至2029年12月31日',
-      '同一課稅年度投資新臺幣一百萬元以上二十億元以下的公司或有限合夥',
+      '同一課稅年度投資新臺幣一百萬元以上、二十億元以下的公司或有限合夥',
       '全新的智慧機械、5G系統、資通安全產品或服務、人工智慧產品或服務，以及節能減碳相關硬體、軟體、技術或技術服務',
-      '抵減方式須擇一適用，一經擇定不得變更：',
-      '於支出金額5%限度內，抵減當年度應納營利事業所得稅額',
-      '於支出金額3%限度內，自當年度起三年內抵減各年度應納營利事業所得稅額',
+      '抵減方式只能擇一。一經擇定，不得變更。',
+      '在支出金額5%限度內，抵減當年度應納營利事業所得稅額',
+      '在支出金額3%限度內，自當年度起三年內抵減各年度應納營利事業所得稅額',
       '以該年度營利事業所得稅額的30%為限',
-      '第10條的研究發展相關抵減與第10條之1',
+      '把第10條的研究發展相關抵減，和第10條之1的特定設備、技術投資抵減混淆',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -255,16 +279,16 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
 
   it('locks treaty dates, rates, and the distinct PE tests', () => {
     const requiredPhrases = [
-      '台韓所得稅協定於2021年11月17日簽署，2023年12月27日生效，自2024年1月1日起適用。',
-      '協定上股利、利息與權利金的上限稅率各為10%。',
-      '一方地區的企業未在他方地區設有協定上常設機構（PE）時，原則上在他方地區免稅。',
+      '台韓所得稅協定在2021年11月17日簽署，2023年12月27日生效，自2024年1月1日起適用。',
+      '股利、利息與權利金，協定上的上限稅率各為10%。',
+      '一方地區的企業在他方地區沒有協定上的常設機構（PE）時，原則上在他方地區免稅',
       '管理處所、分公司、辦事處等固定設施',
-      '超過六個月時，可能發生工程常設機構問題',
-      '在任何十二個月期間合計超過183日提供勞務時，可能成立勞務常設機構',
+      '超過六個月，可能發生工程常設機構問題',
+      '企業透過受僱人員或其他人員提供勞務，在任何十二個月期間合計超過183日，可能成立勞務常設機構',
       '反覆行使締結契約權限的代理人活動，也可能構成代理人常設機構',
-      '在台灣辦理正式分公司登記的外國公司營業據點，通常屬於台灣的固定設施常設機構',
-      '不能認為分公司的台灣營業利潤當然免稅',
-      '不會僅因是外國母公司的子公司，即直接成為母公司的台灣常設機構',
+      '外國公司在台灣正式辦了分公司登記的營業據點，通常屬於台灣的固定設施常設機構',
+      '分公司的台灣營業利潤，因此不能當成當然免稅',
+      '不會只因為是外國母公司的子公司，就直接成為母公司在台灣的常設機構',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -286,7 +310,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     ];
     const section =
       parsed.content
-        .split('## 7. 應選擇何種形式')[1]
+        .split('## 8. 該選哪一種形式')[1]
         ?.split('## 官方資料')[0] ?? '';
 
     expect(Array.from(section.matchAll(/^- /gm))).toHaveLength(8);
@@ -322,7 +346,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(5_000);
-    expect(visibleHanCount).toBe(7_953);
+    expect(visibleHanCount).toBe(7_610);
     expect(calculatedMinutes).toBe(20);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

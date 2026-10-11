@@ -107,7 +107,7 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-10-06',
+      lastmod: '2026-10-12',
       date_display: '2025년 9월 13일',
       read_time: '12분 분량',
       categories: ['대만 법률정보'],
@@ -121,7 +121,7 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
     expect(post).toMatchObject({
       slug: 'taiwan-inheritance-custody-analysis',
       title,
-      date: '2026-10-06',
+      date: '2026-10-12',
       dateDisplay: '2025년 9월 13일',
       readTime: '12분 분량',
       category: 'legal',
@@ -186,7 +186,8 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
       '신탁재산이라면 신탁계약의 구조와 수익권을 봅니다. 생전 증여나 재산 이전',
       '이 청구권은 법정재산제가 종료될 때 부부 각자의 혼인 후 재산 증가를 법정 기준에 따라 비교하는 제도입니다.',
       '상속이나 증여로 취득한 재산과 위자료 등 법정 제외항목이 있을 수 있기 때문입니다. 혼인 중 발생한 채무도 고려합니다.',
-      '균등 분배의 결과가 현저히 불공평하면 법원이 분배액을 조정할 수 있다는 내용도 제1030조의1에 있습니다.',
+      '균등 분배의 결과가 불공평하면 법원이 분배액을 조정하거나 면제할 수 있다는 내용도 제1030조의1에 있습니다.',
+      '혼인 기간 중의 가사노동, 자녀 돌봄과 양육, 가정에 대한 전반적인 기여·협력 상황, 공동생활 기간과 별거 기간의 길이, 혼인 후 재산을 취득한 시기, 쌍방의 경제적 능력 등 법이 요구하는 요소를 구체적으로 검토합니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -308,7 +309,7 @@ describe('Korean family column 016 — anonymized inheritance and parental-right
     const calculatedMinutes = Math.ceil(visibleEojeolCount / 180);
 
     expect(visibleEojeolCount).toBeGreaterThanOrEqual(1_200);
-    expect(visibleEojeolCount).toBe(2_132);
+    expect(visibleEojeolCount).toBe(2_144);
     expect(calculatedMinutes).toBe(12);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);

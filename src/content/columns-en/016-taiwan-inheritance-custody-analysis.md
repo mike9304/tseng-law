@@ -2,7 +2,7 @@
 title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
 seoTitle: "Taiwan Inheritance and Parental Rights Guide"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
-lastmod: "2026-10-06"
+lastmod: "2026-10-12"
 date_display: "September 13, 2025"
 read_time: "19 min read"
 categories:
@@ -56,7 +56,7 @@ When the statutory marital-property regime ends, the claim compares, under statu
 
 Not every asset acquired during marriage enters the calculation. Nor does the surviving spouse necessarily receive half of the estate. The calculation requires examining the Civil Code’s rules on what is included and excluded; whether property was acquired during marriage is not enough on its own. Statutory exclusions may include property acquired by inheritance or gift and solatium, and debts incurred during marriage must also be considered. All of this has to be examined on the facts. The evidence must establish the marital-property regime and whether the spouses agreed to a different one, when and why each asset was acquired, and the appropriate valuation date.
 
-Under Article 1030-1, a court may adjust the distribution amount if an equal distribution would be manifestly unfair. The factors required by law must be examined specifically, including the duration of the marriage, household work and childcare, economic contributions, occupational circumstances, and how property was acquired and managed. Comparing registered title or the length of the marriage therefore cannot predetermine the existence or amount of the claim.
+Under Article 1030-1, a court may adjust or waive the distribution amount if an equal distribution would be unfair. The factors required by law must be examined specifically, including household work during the marriage, the care and upbringing of children, the overall contribution and cooperation given to the family, how long the spouses lived together and apart, when property was acquired during the marriage, and each party’s economic capacity. Comparing registered title or the length of the marriage therefore cannot predetermine the existence or amount of the claim.
 
 ## 4. Inherited Debts and Waiver of Inheritance
 

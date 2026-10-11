@@ -100,7 +100,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-12',
       date_display: '2025年9月13日',
       read_time: '18分鐘閱讀',
       categories: ['台灣法律資訊'],
@@ -113,7 +113,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
     expect(post).toMatchObject({
       slug: 'taiwan-inheritance-custody-analysis',
       title,
-      date: '2026-07-25',
+      date: '2026-10-12',
       dateDisplay: '2025年9月13日',
       readTime: '18分鐘閱讀',
       category: 'legal',
@@ -178,7 +178,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       '信託財產則須釐清其權利歸屬、受益權內容及委託人死亡後的處理安排',
       '權利基礎及計算標的均不相同',
       '因繼承或其他無償取得的財產、慰撫金等法定不列入項目',
-      '平均分配顯失公平時，法院得依婚姻共同生活及協力情形等因素調整或免除分配額',
+      '平均分配有失公平時，法院得依婚姻共同生活及協力情形等因素調整或免除分配額',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -321,7 +321,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      '3e350231f8a5bb279f58a05bd1b9b159257e10f32c5dd09db5bf0d172634295b',
+      '9842d44c367f565f8a0b37b3cf1c80f02e62db54976bfa88f2059bab7ae08e0f',
     );
   });
 

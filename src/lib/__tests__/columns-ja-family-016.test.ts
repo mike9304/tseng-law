@@ -93,7 +93,7 @@ const exactEnding = `---
 const expectedFrontmatter = `---
 title: "台湾の相続と親権：遺された家族のための法律ガイド"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
-lastmod: "2026-10-06"
+lastmod: "2026-10-12"
 date_display: "2025年9月13日"
 read_time: "約15分"
 categories:
@@ -144,7 +144,7 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: "2026-10-06",
+      lastmod: "2026-10-12",
       date_display: "2025年9月13日",
       read_time: "約15分",
       categories: ["台湾法律情報"],
@@ -157,7 +157,7 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
     expect(post).toMatchObject({
       slug: "taiwan-inheritance-custody-analysis",
       title,
-      date: "2026-10-06",
+      date: "2026-10-12",
       dateDisplay: "2025年9月13日",
       readTime: "約15分",
       category: "legal",
@@ -302,8 +302,8 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
       "被相続人に残る財産を相続財産として確定する",
       "相続や贈与によって取得した財産、慰撫金",
       "夫婦が別の財産制を合意していたか",
-      "均等分配の結果が著しく不公平となるときです（第1030条の1）",
-      "婚姻期間、家事労働と子の養育、経済的貢献、職業上の事情、財産の取得と管理の状況",
+      "裁判所が分配額を調整または免除できる場合もあります。均等分配の結果が不公平となるときです（第1030条の1）",
+      "婚姻中の家事労働、子の世話と養育、家庭に対する全体的な貢献・協力の状況、共同生活と別居の期間の長短、婚姻後の財産の取得時期、双方の経済的能力",
     ];
 
     for (const phrase of requiredPhrases) {
@@ -464,14 +464,14 @@ describe("Japanese family column 016 — anonymized inheritance and parental-rig
       0;
     const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
 
-    expect(visibleJapaneseCount).toBe(7353);
+    expect(visibleJapaneseCount).toBe(7384);
     expect(visibleJapaneseCount).toBeGreaterThanOrEqual(4500);
-    expect(visibleKanaCount).toBe(3213);
+    expect(visibleKanaCount).toBe(3222);
     expect(visibleKanaCount).toBeGreaterThanOrEqual(1500);
     expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
     expect(post?.readTime).toBe(`約${calculatedMinutes}分`);
     expect(crypto.createHash("sha256").update(raw).digest("hex")).toBe(
-      "638c64743c0e80aaa25ee0ddff7a7c4a3add6473519d80508d19454817c7e247",
+      "9cfa275d6cd2a7250d8fae3d438d0a9e491bff4e04854a96ae719fb57d6c6f72",
     );
   });
 

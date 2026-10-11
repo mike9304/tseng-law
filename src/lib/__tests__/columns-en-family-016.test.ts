@@ -85,7 +85,7 @@ const expectedFrontmatter = `---
 title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
 seoTitle: "Taiwan Inheritance and Parental Rights Guide"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
-lastmod: "2026-10-06"
+lastmod: "2026-10-12"
 date_display: "September 13, 2025"
 read_time: "19 min read"
 categories:
@@ -139,7 +139,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       title,
       seoTitle: 'Taiwan Inheritance and Parental Rights Guide',
       url: sourceUrl,
-      lastmod: '2026-10-06',
+      lastmod: '2026-10-12',
       date_display: 'September 13, 2025',
       read_time: '19 min read',
       categories: ['Taiwan Legal Information'],
@@ -155,7 +155,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     expect(post).toMatchObject({
       slug: 'taiwan-inheritance-custody-analysis',
       title,
-      date: '2026-10-06',
+      date: '2026-10-12',
       dateDisplay: 'September 13, 2025',
       readTime: '19 min read',
       category: 'legal',
@@ -288,7 +288,8 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       'If the claim is established, its result may need to be reflected before the property remaining with the decedent is identified as the estate.',
       'Statutory exclusions may include property acquired by inheritance or gift and solatium, and debts incurred during marriage must also be considered.',
       'whether the spouses agreed to a different one, when and why each asset was acquired, and the appropriate valuation date',
-      'Under Article 1030-1, a court may adjust the distribution amount if an equal distribution would be manifestly unfair.',
+      'Under Article 1030-1, a court may adjust or waive the distribution amount if an equal distribution would be unfair.',
+      'including household work during the marriage, the care and upbringing of children, the overall contribution and cooperation given to the family, how long the spouses lived together and apart, when property was acquired during the marriage, and each party’s economic capacity.',
       'Comparing registered title or the length of the marriage therefore cannot predetermine the existence or amount of the claim.',
     ];
 
@@ -448,17 +449,17 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       .digest('hex');
 
     expect(visibleWordCount).toBeGreaterThanOrEqual(2_000);
-    expect(visibleWordCount).toBe(3_600);
+    expect(visibleWordCount).toBe(3_622);
     // The 2026-10-06 rewrite shortened the body to 3,600 words (18 minutes at
-    // 200 wpm) but kept the frontmatter read_time at "19 min read". Both values
-    // stay pinned; restore the read_time === calculated check once the
-    // frontmatter is corrected to "18 min read" (or the body is lengthened).
-    expect(calculatedMinutes).toBe(18);
-    expect(parsed.data.read_time).toBe('19 min read');
+    // 200 wpm) but kept the frontmatter read_time at "19 min read". The
+    // 2026-10-12 Article 1030-1 fact fix lengthened the body to 3,622 words,
+    // so the calculated 19 minutes now matches the frontmatter again.
+    expect(calculatedMinutes).toBe(19);
+    expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe('19 min read');
     expect(sourceSha256).toBe(
-      // Re-frozen after the 2026-10-06 Fable-reviewed rewrite.
-      '485e9bd45e41d48c9f175d337ed21323d4abf1849ac990bb9c223a07b9ade6ab',
+      // Re-frozen after the 2026-10-12 Article 1030-1 fact fix.
+      'e1010362dcb95f7ee1fbd1f3bd74d862f935e189f546884c5e0126dc49aa4893',
     );
   });
 

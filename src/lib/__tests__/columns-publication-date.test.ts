@@ -480,7 +480,7 @@ describe('Korean column publication dates', () => {
 
     expect(cosmetics).toMatchObject({
       publicationDate: '2026-02-04',
-      date: '2026-07-25',
+      date: '2026-10-12',
       dateDisplay: '2026년 2월 4일',
     });
     expect(updatedTrafficGuide).toMatchObject({

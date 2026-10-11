@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-10T12:59:52.187Z",
+  "status": "PRE_RELEASE_SOURCE_APPROVALS_AND_EXACT_INTEGRATION_RECORDED",
+  "scope": "Four distinct Taiwan-law follow-up articles and four generated hero images.",
+  "baselineCommit": "63efbfd9ab656837d50026633aa4ff89e8121a1c",
+  "publicationDate": "2026-10-11",
+  "reviewIdentity": "AI language specialists, an independent AI legal/editorial reviewer and independent AI visual reviewers. No human native-speaker or licensed-lawyer certification is claimed.",
+  "separation": "Article authors did not provide their own independent locale or final legal approval. Independent visual reviewers did not generate the images.",
+  "generation": {
+    "tool": "Built-in image generation",
+    "actualBackendModel": null,
+    "modelNote": "No backend model identifier was observable; none is inferred."
+  },
+  "integration": {
+    "copyMode": "Exact frozen manuscript and already-reviewed staged WebP bytes",
+    "imageReencodings": 0,
+    "originalPngsPreserved": true
+  },
+  "evidenceLimits": [
+    "Prior source, locale, legal and image/crop approvals are recorded here.",
+    "Integrated actual page review, full checks, clean build, deployment and fresh public readback are separate gates; this snapshot does not claim their completion."
+  ],
+  "normalizationMap": [
+    {
+      "privateField": "manuscript path",
+      "publishedField": "articles[].sourcePath",
+      "rule": "Repository-relative product path; exact manuscript bytes preserved."
+    },
+    {
+      "privateField": "source/review/receipt paths",
+      "publishedField": "evidenceRecords[].id",
+      "rule": "Neutral ID, original hash and size; original private evidence remains unchanged."
+    },
+    {
+      "privateField": "original image paths and temporary media references",
+      "publishedField": "articles[].originalPngSha256",
+      "rule": "Publish only original byte identity and size; omit locations, generation run identifiers, accounts and hosts."
+    }
+  ],
+  "articles": [
+    {
+      "id": 514,
+      "locale": "zh-hant",
+      "slug": "taiwan-customer-data-breach-vendor-notification",
+      "title": "會員資料外洩，廠商還沒認責，通知能等嗎？",
+      "sourcePath": "src/content/columns-zh/514-taiwan-customer-data-breach-vendor-notification.md",
+      "sourceSha256": "9ebca56c72ecd6106804730b52aa38ce800266b69ba1d23693f2392cd312003e",
+      "sourceBytes": 10848,
+      "draftByteIdentical": true,
+      "bodySha256": "8a39b10cea789d3f303b1e3eed0c4d5c866c35d53ba1284e4e79dbb941082e18",
+      "imagePath": "/images/blog/next-four-columns-20261010/514-taiwan-customer-data-breach-vendor-notification.webp",
+      "imageSha256": "2cd94e99f8bd738c9b3e39877041040dcc6f4b84a094c78a72c966d78b8044fe",
+      "imageBytes": 110452,
+      "originalPngSha256": "0e1c297a5fc363cc97036fa701bdef189309400ea25b7273486be7326050ce9d",
+      "originalPngBytes": 2064494,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "兩人在店內辦公桌旁查看紙本文件，桌上放著筆電，門外可見商品陳列架。",
+      "imageCaption": "AI 生成示意圖：店家同事在辦公室核對文件，並非實際個案。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-001"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-004"
+      ],
+      "imageReceiptEvidence": "evidence-005",
+      "recentComparatorIds": [
+        502,
+        503,
+        504
+      ],
+      "openingSentencesReviewed": 4,
+      "publicUrl": "https://tseng-law.com/zh-hant/columns/taiwan-customer-data-breach-vendor-notification",
+      "searchQuery": "會員資料外洩，廠商還沒認責，通知能等嗎？",
+      "priorSourceSha256": "6122c90efeb486b5eadb8a7a1df2684efc07b7e7c773432a5930551124069840"
+    },
+    {
+      "id": 515,
+      "locale": "en",
+      "slug": "taiwan-business-acquisition-engineer-employment",
+      "title": "Buying a Taiwan Business: Who Employs the Engineers After Closing?",
+      "sourcePath": "src/content/columns-en/515-taiwan-business-acquisition-engineer-employment.md",
+      "sourceSha256": "8992659922105268d502484efcc9ba6ceff98f1e9a2ee0a42f9c274dbb206a14",
+      "sourceBytes": 10947,
+      "draftByteIdentical": true,
+      "bodySha256": "71daaec7ecb5815081d6b2a2327d537017b8f3d6c0044e8533a6be69859a8248",
+      "imagePath": "/images/blog/next-four-columns-20261010/515-taiwan-business-acquisition-engineer-employment.webp",
+      "imageSha256": "247ea5a166256a8f1e4b43f05fce98658150d5642826653407b96ebbd00dcdb8",
+      "imageBytes": 108232,
+      "originalPngSha256": "498c8b062d7d5f35933da29be606b1ed86f35dc840d563272c59aa17c47ecc7a",
+      "originalPngBytes": 2132706,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "Three colleagues looking at an open folder at a table beside an engineering workbench.",
+      "imageCaption": "AI-generated illustration of a fictional workplace discussion.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-006"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-007"
+      ],
+      "imageReceiptEvidence": "evidence-008",
+      "recentComparatorIds": [
+        505,
+        506,
+        507
+      ],
+      "openingSentencesReviewed": 5,
+      "publicUrl": "https://tseng-law.com/en/columns/taiwan-business-acquisition-engineer-employment",
+      "searchQuery": "Buying a Taiwan Business: Who Employs the Engineers After Closing?",
+      "priorSourceSha256": "d2b5ac5971f03b8d049dc735b79c3ec32b8d8459e2e1df5ecce38dc74f439786"
+    },
+    {
+      "id": 516,
+      "locale": "ja",
+      "slug": "taiwan-order-invoice-different-company-payment-japanese",
+      "title": "台湾の取引先から「請求書は別会社へ」と言われたら",
+      "sourcePath": "src/content/columns-ja/516-taiwan-order-invoice-different-company-payment-japanese.md",
+      "sourceSha256": "fa93a6bec6e7307f6904396a3e0591b02f9113b5f0d702ee3c2825b3a444c7db",
+      "sourceBytes": 13473,
+      "draftByteIdentical": true,
+      "bodySha256": "3ec623920e5879ba91fe010eb1d019de08ec93a2b4d2dc1719200f6e09db8694",
+      "imagePath": "/images/blog/next-four-columns-20261010/516-taiwan-order-invoice-different-company-payment-japanese.webp",
+      "imageSha256": "d6e46605c44141b32c4f6c8aeb1cd8bde19f38a3a5b549ea4024680083ffa198",
+      "imageBytes": 84446,
+      "originalPngSha256": "c0a0b14315f98f46ea9243e366b76f1a73115d91717c6152b1b40dcddab97889",
+      "originalPngBytes": 2003213,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "青と薄茶色のフォルダーに載せた書類を、机の上で見比べている様子。",
+      "imageCaption": "二組の書類を机に並べて見比べる様子。AI生成イメージであり、実在の取引や書類を再現したものではありません。",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-009"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-010"
+      ],
+      "imageReceiptEvidence": "evidence-011",
+      "recentComparatorIds": [
+        508,
+        509,
+        510
+      ],
+      "openingSentencesReviewed": 4,
+      "publicUrl": "https://tseng-law.com/ja/columns/taiwan-order-invoice-different-company-payment-japanese",
+      "searchQuery": "台湾の取引先から「請求書は別会社へ」と言われたら",
+      "priorSourceSha256": "dbefc3d478c9b6fc61f548a8a0d3aba9c6e5885552d5c9fe21c702609d1602b2"
+    },
+    {
+      "id": 517,
+      "locale": "ko",
+      "slug": "taiwan-bankruptcy-creditor-claim-filing-korean",
+      "title": "대만 거래처에 파산선고가 내려졌다면, 미수금은 누구에게 신고할까",
+      "sourcePath": "src/content/columns/517-taiwan-bankruptcy-creditor-claim-filing-korean.md",
+      "sourceSha256": "3171a843fda0895df31ef20ade9bf0661f96c676e0383a7e0da4ae4ddd2167ab",
+      "sourceBytes": 12980,
+      "draftByteIdentical": true,
+      "bodySha256": "83286d9c9a51bed721d5d06342ddbc921ec55dbdd4fedc16958d8556c3540371",
+      "imagePath": "/images/blog/next-four-columns-20261010/517-taiwan-bankruptcy-creditor-claim-filing-korean.webp",
+      "imageSha256": "1f44fe0ae92482dd3aa603553c2d0b5a675e0508b3664dcd909c20f1283db014",
+      "imageBytes": 66280,
+      "originalPngSha256": "3fdb064954f59a6b5870486cb2a47fc49a6b46f3a5d909cf3b2d1a0d717d6ded",
+      "originalPngBytes": 1887164,
+      "imageWidth": 1600,
+      "imageHeight": 900,
+      "imageAlt": "서류철과 문서 묶음이 놓인 책상에서 스캐너에 서류를 올리는 모습",
+      "imageCaption": "거래자료를 정리하는 상황을 표현한 AI 생성 이미지입니다. 실제 사건이나 고객의 문서를 재현한 장면은 아닙니다.",
+      "localeReview": {
+        "decision": "PASS",
+        "evidence": "evidence-012"
+      },
+      "legalReview": {
+        "decision": "PASS",
+        "evidence": "evidence-002"
+      },
+      "visualReview": {
+        "decision": "PASS",
+        "evidence": "evidence-003"
+      },
+      "sourceLedgerEvidence": [
+        "evidence-013"
+      ],
+      "imageReceiptEvidence": "evidence-014",
+      "recentComparatorIds": [
+        511,
+        512,
+        513
+      ],
+      "openingSentencesReviewed": 6,
+      "publicUrl": "https://tseng-law.com/ko/columns/taiwan-bankruptcy-creditor-claim-filing-korean",
+      "searchQuery": "대만 거래처에 파산선고가 내려졌다면, 미수금은 누구에게 신고할까",
+      "priorSourceSha256": "3bbdde8beb2c2801cf6b7d20a0f485e1c8d50de3e1087d8378d03da915ae3ad0"
+    }
+  ],
+  "evidenceRecords": [
+    {
+      "id": "evidence-001",
+      "role": "zh-hant independent language review",
+      "sha256": "0ac025e2ba166591de04b96cf037e817f245318ad61e7e47ac12f1281962f799",
+      "bytes": 5403,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-002",
+      "role": "Independent source and manuscript legal/editorial review",
+      "sha256": "8a37b04c2a826614cf04b979f4296056a7d51b759cee513a97434ca892db4aba",
+      "bytes": 22660,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-003",
+      "role": "Independent original/WebP/CSS crop visual review",
+      "sha256": "ba867931c764a91d001c15e15c4575f3d954ecef2c7b6959d6cca8b3b332b6d5",
+      "bytes": 28808,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-004",
+      "role": "Article 514 primary-source ledger",
+      "sha256": "d293c69e00abc95efb98c8ce4345cb5e236b20281e541f90932a9661b7bcdcb4",
+      "bytes": 7998,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-005",
+      "role": "Article 514 original image generation receipt",
+      "sha256": "87d3ece960dbf849c2a626652f38394abbaac9072713f0cf4892eaecc90a1a4b",
+      "bytes": 4631,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-006",
+      "role": "en independent language review",
+      "sha256": "2b4d990ec25815969bd1f17e1bba686d59ecaba50e9525675e9d4a9c2bf530d5",
+      "bytes": 3577,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-007",
+      "role": "Article 515 primary-source ledger",
+      "sha256": "be246927b0ff5bdc3dfd6b23601cd90adf7fc8ff76f1865930f98bed49977086",
+      "bytes": 17578,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-008",
+      "role": "Article 515 original image generation receipt",
+      "sha256": "437637f56dffe76a2387ddf7b537d2a51e192c9308ae87789b5008b29a986bfe",
+      "bytes": 4406,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-009",
+      "role": "ja independent language review",
+      "sha256": "b3532e8ecc781eae2eec9b232612ef3791735164e5d46aa2ff74be4c9b2464e9",
+      "bytes": 1548,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-010",
+      "role": "Article 516 primary-source ledger",
+      "sha256": "68f79b4ec51ac8fa13e46b45946b37a2580096447a42a7eab1b5f62ff741a946",
+      "bytes": 8264,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-011",
+      "role": "Article 516 original image generation receipt",
+      "sha256": "8a94cb07b3a75c8767e226e8ec0a57e1e3952bef96c260a606b760b4c8996224",
+      "bytes": 4814,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-012",
+      "role": "ko independent language review",
+      "sha256": "ed6da3b6f17426b0880a0c0d461733df4f98cad5c84aad455b414b490653c31e",
+      "bytes": 2736,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-013",
+      "role": "Article 517 primary-source ledger",
+      "sha256": "16d083625cb7adb610a5815b60f6b530eddee0cd5a7c421f7ee40b621f24bc93",
+      "bytes": 10012,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-014",
+      "role": "Article 517 original image generation receipt",
+      "sha256": "960197276b8e2079ade98bab0e0d5d7b416c43874a836af36f2ff128f5bf4928",
+      "bytes": 5316,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-015",
+      "role": "Frozen four-article editorial manifest",
+      "sha256": "9c8a14e4ab83827f584349ae175efa10d1477c07bc8875b5d6843519e4ff7498",
+      "bytes": 12310,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    },
+    {
+      "id": "evidence-016",
+      "role": "Final media metadata and manuscript binding",
+      "sha256": "8c4bc7289db530c85240a4f9745d47e800a3cd9b79bc0d09f1103764a27f85cc",
+      "bytes": 19689,
+      "archivePolicy": "Exact original retained privately; filesystem paths and temporary media locations omitted."
+    }
+  ],
+  "manuscriptFreezeEvidence": "evidence-015",
+  "finalMediaBindingEvidence": "evidence-016",
+  "existingArticleBodyEdits": 0,
+  "pendingEmbeddingPairsAdded": [
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-customer-data-breach-vendor-notification"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-business-acquisition-engineer-employment"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-bankruptcy-creditor-claim-filing-korean"
+    }
+  ],
+  "runtimeSchemaAuthDependencyChanges": false,
+  "dateOnlyCorrection": {
+    "recordedAt": "2026-10-11T01:50:31.830Z",
+    "fields": [
+      "published",
+      "lastmod",
+      "date_display"
+    ],
+    "originalSourceReviewDate": "2026-10-10",
+    "bodiesAndMediaUnchanged": true,
+    "dateFreezeSha256": "d5bc3a463fcbbb4b8b901ca6763943e64e20291e3a39ff481cdaf242f3477f58",
+    "independentDateReviewSha256": "6c437bf271cb658e0021a2bb8d6b813183e1e2084c3b14fcd361206ca67237d3",
+    "priorFullReviewHashesRetained": true
+  }
+}

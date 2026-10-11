@@ -1793,6 +1793,18 @@
     {
       "locale": "ko",
       "slug": "taiwan-industrial-ai-update-defect-dispute-korean"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-customer-data-breach-vendor-notification"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-business-acquisition-engineer-employment"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-bankruptcy-creditor-claim-filing-korean"
     }
   ]
 }

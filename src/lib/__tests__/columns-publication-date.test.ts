@@ -376,6 +376,11 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '511': '2026-10-10',
   '512': '2026-10-10',
   '513': '2026-10-10',
+  // Four-market follow-up columns
+  '514': '2026-10-11',
+  '515': '2026-10-11',
+  '516': '2026-10-11',
+  '517': '2026-10-11',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

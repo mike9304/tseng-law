@@ -55,7 +55,7 @@ const headings = [
   '6. Guardian Designation and Court Involvement',
   '7. Protecting a Minor’s Inherited Property',
   '8. Cross-Border Family Issues',
-  '9. Practical Planning Checklist',
+  '9. Gathering Records and Sequencing the Procedures',
   '10. Official Sources',
   '11. Related Services',
 ];
@@ -75,17 +75,17 @@ const internalLinks = [
   '[Contact Us](/en/contact)',
 ];
 const exactDeadlineStatement =
-  'The Ministry of Finance’s Taiwan Tax Portal guidance on procedures for inheritance matters was updated on June 25, 2026. It describes the general three-month period for court procedures concerning submission of an estate inventory and waiver of inheritance, and the general six-month period for filing an estate tax return. The starting date, extensions, exceptions, and jurisdiction must be checked in each case, and this guidance must not be used to calculate an individual deadline.';
+  'The Ministry of Finance’s Taiwan Tax Portal guidance on procedures for inheritance matters was updated on June 25, 2026. It describes two general periods. One is three months, for the court procedures concerning submission of an estate inventory and waiver of inheritance; the other is six months, for filing an estate tax return. The starting date, extensions, exceptions, and jurisdiction must be checked in each case, and this guidance must not be used to calculate an individual deadline.';
 const exactEnding = `---
 
-This article provides general educational information about Taiwan’s law of succession, marital-property regimes, parental rights and duties, and guardianship of minors. It is not legal advice for any particular inheritance or family matter. The applicable law, procedures, and outcome may vary with the identity of the heirs, any will, the assets and debts, the marital-property regime, existing court orders, and cross-border factors. Before calculating a deadline for waiver of inheritance or tax filing, or disposing of property, confirm the current official materials and the facts of the matter.
+This article gives general educational information about Taiwan’s law of succession, marital-property regimes, parental rights and duties, and guardianship of minors, based on Taiwan’s Civil Code and official procedural materials. It is not legal advice for any particular inheritance or family matter. Who the heirs are, any will, the assets and debts, the marital-property regime, existing court orders, and cross-border factors may each change the applicable law, the procedures, and the outcome. Before calculating a deadline for waiver of inheritance or tax filing, or disposing of property, confirm the current official materials and the facts of the matter.
 
 Wei Tseng (曾雋崴), Taiwan Attorney`;
 const expectedFrontmatter = `---
 title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
 seoTitle: "Taiwan Inheritance and Parental Rights Guide"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
-lastmod: "2026-07-25"
+lastmod: "2026-10-06"
 date_display: "September 13, 2025"
 read_time: "19 min read"
 categories:
@@ -106,6 +106,10 @@ faq:
 
 function firstParagraphAfter(content: string, heading: string) {
   return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
+}
+
+function sectionAfter(content: string, heading: string) {
+  return content.split(`${heading}\n\n`)[1]?.split('\n## ')[0] ?? '';
 }
 
 function countVisibleEnglishWords(content: string) {
@@ -135,7 +139,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       title,
       seoTitle: 'Taiwan Inheritance and Parental Rights Guide',
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-06',
       date_display: 'September 13, 2025',
       read_time: '19 min read',
       categories: ['Taiwan Legal Information'],
@@ -151,7 +155,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     expect(post).toMatchObject({
       slug: 'taiwan-inheritance-custody-analysis',
       title,
-      date: '2026-07-25',
+      date: '2026-10-06',
       dateDisplay: 'September 13, 2025',
       readTime: '19 min read',
       category: 'legal',
@@ -183,18 +187,52 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     }
   });
 
-  it('repeats each exact FAQ answer twice and as its assigned H2 first paragraph', () => {
-    const headingAnswers = [
-      ['## 1. Statutory Heirs and Intestate Shares', faq1Answer],
-      ['## 3. The Surviving Spouse’s Residual-Property Claim', faq2Answer],
-      ['## 5. The Surviving Parent’s Rights and Duties', faq3Answer],
-      ['## 7. Protecting a Minor’s Inherited Property', faq4Answer],
+  it('keeps each exact FAQ answer in the frontmatter and anchors its legal facts in the assigned H2 section', () => {
+    // The body no longer repeats the FAQ answers verbatim; each assigned H2
+    // opens with its own paragraph that carries the same statutory citation.
+    const headingFirstParagraphs = [
+      [
+        '## 1. Statutory Heirs and Intestate Shares',
+        'Article 1138 of Taiwan’s Civil Code ranks the statutory heirs other than the spouse: descendants first, then parents, siblings, and grandparents. If an heir exists in a higher rank, an heir in a lower rank generally does not inherit ahead of that person. The surviving spouse stands outside that order. Under Article 1144, the spouse inherits concurrently with the heirs in the rank that actually applies. The precise share may vary with that rank.',
+      ],
+      [
+        '## 3. The Surviving Spouse’s Residual-Property Claim',
+        'Residual-property distribution is not the same as an inheritance share. It is a separate claim. A surviving spouse may assert it under Article 1030-1 of Taiwan’s Civil Code if the statutory requirements are met, and it must be analyzed separately from inheritance.',
+      ],
+      [
+        '## 5. The Surviving Parent’s Rights and Duties',
+        'Article 1089 of Taiwan’s Civil Code covers the case where one parent cannot exercise rights and assume duties concerning a minor child: the other parent ordinarily does so. A surviving parent who retains parental rights therefore ordinarily continues to exercise them and to assume parental duties, as long as no contrary court order exists. Courts may still become involved. Existing orders, statutory grounds for restriction or suspension, cross-border factors, the child’s best interests, and other specific circumstances may require it.',
+      ],
+      [
+        '## 7. Protecting a Minor’s Inherited Property',
+        'May a surviving parent freely use property that a minor child inherits? No. Under Articles 1087 and 1088 of Taiwan’s Civil Code, what a minor acquires through inheritance is the child’s separate property. Separate property means property that belongs to the minor. A parent or guardian who undertakes its management does not become the beneficial owner and must not use the property for personal living expenses or debt repayment.',
+      ],
+    ];
+    const sectionFacts = [
+      [
+        '## 1. Statutory Heirs and Intestate Shares',
+        'With a surviving spouse and two children as the only relevant heirs, each would ordinarily receive a one-third share. That assumes no valid will and no waiver, disqualification, succession by representation, or other material fact that changes the result. This is a hypothetical illustration. It is not a conclusion about any actual estate.',
+      ],
+      [
+        '## 3. The Surviving Spouse’s Residual-Property Claim',
+        'Not every asset acquired during marriage enters the calculation. Nor does the surviving spouse necessarily receive half of the estate.',
+      ],
+      [
+        '## 7. Protecting a Minor’s Inherited Property',
+        'A parent must not be understood to have unrestricted authority to use a child’s inherited property unilaterally.',
+      ],
     ];
 
-    for (const [heading, answer] of headingAnswers) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
-      expect(raw.split(answer)).toHaveLength(3);
+    for (const [heading, paragraph] of headingFirstParagraphs) {
+      expect(firstParagraphAfter(parsed.content, heading)).toBe(paragraph);
+      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(paragraph);
+    }
+    for (const [heading, fact] of sectionFacts) {
+      expect(sectionAfter(parsed.content, heading)).toContain(fact);
+      expect(sectionAfter(post?.content ?? '', heading)).toContain(fact);
+    }
+    for (const answer of [faq1Answer, faq2Answer, faq3Answer, faq4Answer]) {
+      expect(raw.split(answer)).toHaveLength(2);
     }
     expect(raw.match(/one-third/g)).toHaveLength(2);
   });
@@ -207,14 +245,13 @@ describe('English family column 016 — anonymized inheritance and parental-righ
 
   it('locks the introduction, intestate order, concurrent spouse, and share limits', () => {
     const requiredPhrases = [
-      'A death in the family does not set just one legal process in motion.',
-      'Separate consideration must be given to who the heirs are, which assets and debts form part of the estate, whether the surviving spouse has a separate marital-property claim, who will exercise parental rights and assume parental duties concerning any minor child, whether guardianship of a minor is necessary, and how property belonging to the child will be protected.',
-      'These issues may affect one another, but their legal bases and the order in which they should be analyzed are not the same.',
-      'Article 1138 places statutory heirs other than the spouse in the following order: descendants, parents, siblings, and grandparents.',
+      'After a death in the family, who inherits is only the first question.',
+      'Others follow: which assets and debts form part of the estate, whether the surviving spouse has a separate marital-property claim, who will exercise parental rights and assume parental duties for any minor child, whether the child needs a guardian, and how the child’s own property will be protected.',
+      'Each must be considered separately. They may affect one another. Their legal bases differ, though, and so does the order in which they should be analyzed.',
+      'Article 1138 of Taiwan’s Civil Code ranks the statutory heirs other than the spouse: descendants first, then parents, siblings, and grandparents.',
       'If an heir exists in a higher rank, an heir in a lower rank generally does not inherit ahead of that person.',
-      'Even within the same rank, the timing of deaths, legal parentage, adoption, and succession by representation must be checked',
-      'The surviving spouse is not a lower-ranking relative within the order set by Article 1138, but inherits concurrently with the heirs in the rank that actually applies under Article 1144.',
-      'The precise concurrent share may vary depending on the rank with which the spouse inherits.',
+      'Even within the same rank, the timing of deaths, legal parentage, adoption, and succession by representation all have to be checked',
+      'The surviving spouse stands outside that order. Under Article 1144, the spouse inherits concurrently with the heirs in the rank that actually applies. The precise share may vary with that rank.',
       'The opening of succession does not immediately make each heir the sole owner of a particular bank deposit or parcel of real property.',
     ];
 
@@ -226,16 +263,16 @@ describe('English family column 016 — anonymized inheritance and parental-righ
 
   it('locks wills, reserved portions, estate identification, and governing-law issues', () => {
     const requiredPhrases = [
-      'A valid will may provide for a distribution different from intestate succession.',
-      'Its form, the testator’s testamentary capacity, its interpretation and enforceability, and restrictions imposed by mandatory rules, including reserved portions, must all be examined.',
-      'if the will addresses only some assets, intestate-succession rules may apply to the remainder',
-      'Before calculating inheritance shares, the inventory and legal character of the estate must first be established.',
-      'The relevant materials should confirm not only real property, bank deposits, securities, business interests, receivables, and personal property, but also the decedent’s debts, guarantee obligations, unpaid taxes, and funeral-related expenses.',
-      'No conclusion should be based on registered or account title alone; beneficial ownership, shares in jointly titled property, third-party rights, and security interests should also be investigated.',
+      'A valid will may distribute the estate differently from intestate succession.',
+      'Its form, the testator’s testamentary capacity, its interpretation and enforceability, and the restrictions imposed by mandatory rules, including reserved portions, must all be examined.',
+      'If it addresses only some assets, intestate-succession rules may apply to the remainder.',
+      'Before inheritance shares are calculated, the inventory and legal character of the estate have to be established.',
+      'The records should confirm real property, bank deposits, securities, business interests, receivables, and personal property, and equally the decedent’s debts, guarantee obligations, unpaid taxes, and funeral-related expenses.',
+      'No conclusion should rest on registered or account title alone. Beneficial ownership, shares in jointly titled property, third-party rights, and security interests should also be investigated.',
       'Benefits with separately designated beneficiaries, such as insurance proceeds or retirement benefits, may be treated differently from estate property depending on the contract and applicable law.',
-      'Trust property requires review of the trust arrangement and beneficial interests, while lifetime gifts or transfers may raise issues of recovery, inclusion, or reserved portions.',
-      'If there are foreign accounts or real property, the law of the place where the property is located and Taiwan’s choice-of-law rules must also be considered.',
-      'An estate investigation is not limited to locating rights; it must also identify debts and procedural risks.',
+      'Trust property requires review of the trust arrangement and beneficial interests. Lifetime gifts or transfers may raise issues of recovery, inclusion, or reserved portions.',
+      'For foreign accounts or real property, the law of the place where the property is located and Taiwan’s choice-of-law rules must also be considered.',
+      'An estate investigation does more than locate rights. It must also identify debts and procedural risks.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -246,13 +283,13 @@ describe('English family column 016 — anonymized inheritance and parental-righ
 
   it('locks the separate Article 1030-1 claim, exclusions, debts, and adjustment', () => {
     const requiredPhrases = [
-      'This claim compares, under statutory criteria, the increase in each spouse’s property acquired during marriage when the statutory marital-property regime ends.',
-      'Its legal basis, the party against whom it is asserted, and the property included in the calculation differ from those of the inheritance share arising because the surviving spouse is an heir.',
+      'When the statutory marital-property regime ends, the claim compares, under statutory criteria, the increase in each spouse’s property acquired during marriage.',
+      'Its legal basis, the party against whom it is asserted, and the property included in the calculation all differ from those of the inheritance share the surviving spouse takes as an heir.',
       'If the claim is established, its result may need to be reflected before the property remaining with the decedent is identified as the estate.',
-      'Statutory exclusions may include property acquired by inheritance or gift and solatium, while debts incurred during marriage must also be considered.',
-      'whether the spouses agreed to a different marital-property regime, when and why each asset was acquired, and the appropriate valuation date',
-      'Article 1030-1 permits a court to adjust the distribution amount if an equal distribution would be manifestly unfair.',
-      'The existence and amount of the claim therefore cannot be predetermined merely by comparing registered title or the length of the marriage.',
+      'Statutory exclusions may include property acquired by inheritance or gift and solatium, and debts incurred during marriage must also be considered.',
+      'whether the spouses agreed to a different one, when and why each asset was acquired, and the appropriate valuation date',
+      'Under Article 1030-1, a court may adjust the distribution amount if an equal distribution would be manifestly unfair.',
+      'Comparing registered title or the length of the marriage therefore cannot predetermine the existence or amount of the claim.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -266,10 +303,10 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       'Liability for inherited debts is generally limited to the value of the property acquired through inheritance.',
       'Conduct that may affect the statutory limitation of liability, such as concealing property or omitting it from the inventory, should also be avoided.',
       'public notice and payment to creditors',
-      'Under Article 1174, an heir who wishes to waive an inheritance must make a written declaration to the court with jurisdiction within three months after learning of the right to inherit.',
-      'Merely telling family members that the heir will take nothing, or refraining from using estate property, must not be treated as completing a waiver in the legally prescribed form.',
+      'Under Article 1174, an heir who wishes to waive must make a written declaration to the court with jurisdiction within three months after learning of the right to inherit.',
+      'Merely telling family members that the heir will take nothing must not be treated as completing a waiver in that form. The same goes for refraining from using estate property.',
       exactDeadlineStatement,
-      'Court documents for waiver of inheritance must not be confused with an estate-tax return filed with the tax authority.',
+      'A waiver of inheritance is a court filing. An estate-tax return goes to the tax authority. The two must not be confused.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -282,15 +319,15 @@ describe('English family column 016 — anonymized inheritance and parental-righ
   it('locks parental rights, guardianship, appointment, and best-interests rules', () => {
     const requiredPhrases = [
       'Parental rights and duties may include the care and upbringing of a minor child, decisions about the child’s residence, legal representation, and management of the child’s property.',
-      'Each authority must be exercised to protect the child’s personal and property interests, not for the parent’s own benefit.',
+      'Each authority must be exercised to protect the child’s personal and property interests. None may be exercised for the parent’s own benefit.',
       'Parental rights and inheritance are legally separate issues.',
-      'Under Article 1091 of Taiwan’s Civil Code, guardianship of a minor becomes relevant when the minor has no parent or when neither parent can exercise rights and assume duties concerning the child.',
-      'The death of one parent alone must not be assumed to commence guardianship immediately.',
+      'Guardianship of a minor becomes relevant in two situations under Article 1091 of Taiwan’s Civil Code: when the minor has no parent, or when neither parent can exercise rights and assume duties concerning the child.',
+      'One parent’s death alone must not be assumed to commence guardianship immediately.',
       'Under Article 1093, the parent who is last to exercise rights and assume duties concerning a minor may appoint a guardian for the minor by will.',
       'the statutory order under Article 1094 and the court-appointment rules under Article 1094-1 may apply',
       'the child’s age and ability to express views, the candidate’s relationship with and ability to care for the child, the suitability of the proposed property management, and the stability of the child’s living arrangements',
-      'Relatives and other applicants authorized by law may, where statutory grounds exist, ask the court to appoint or replace a guardian or order another necessary measure.',
-      'A guardian is not the same as a parent exercising parental rights and may have separate duties concerning the scope of authority, preparation of an inventory, reporting, and court supervision.',
+      'Relatives and other applicants authorized by law may, where statutory grounds exist, ask the court to appoint or replace a guardian or to order another necessary measure.',
+      'Nor is a guardian in the same position as a parent exercising parental rights. A guardian may have separate duties concerning the scope of authority, preparation of an inventory, reporting, and court supervision.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -302,15 +339,16 @@ describe('English family column 016 — anonymized inheritance and parental-righ
   it('locks a minor’s ownership, joint management, conflicts, records, and supervision', () => {
     const requiredPhrases = [
       'Separate property means property that belongs to the minor.',
-      'Inherited bank deposits, real property, shares, and other rights should be clearly identified as the child’s property and managed separately in the child’s interests.',
+      'Inherited bank deposits, real property, shares, and other rights should be clearly identified as the child’s property and managed separately.',
+      'The powers of management, use, collection of income, and disposition under Article 1088 are tied to one purpose: serving the child’s interests.',
       'the type of property, the need for a disposition, the adequacy of the consideration, and the plan for holding and using the proceeds',
-      'For high-value or high-risk actions such as a sale of real property, creation of security, or business investment, it is also necessary to check whether permission under another law or a court procedure is required.',
-      'A conflict of interest may arise where a parent and child are co-heirs of the same estate or are counterparties to a contract with each other.',
+      'High-value or high-risk actions, such as a sale of real property, creation of security, or business investment, need one more check: whether permission under another law or a court procedure is required.',
+      'Conflicts of interest may arise where a parent and child are co-heirs of the same estate or are counterparties to a contract with each other.',
       'The special-representative system under Article 1086 should be considered',
       'whether the economic interests actually conflict',
       'rules on preparing an inventory, retaining supporting documents, separating income and expenditure, reporting to the court, and court supervision may apply',
-      'A trust or insurance arrangement cannot be assumed to be safe based on the contract alone.',
-      'the convenience of the property manager must not take priority over the child’s interests',
+      'A trust or insurance arrangement cannot be assumed to be safe on the contract alone.',
+      'A property manager’s convenience must not take priority over the child’s interests.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -321,10 +359,10 @@ describe('English family column 016 — anonymized inheritance and parental-righ
 
   it('locks cross-border factors, applicable regimes, and document requirements', () => {
     const requiredPhrases = [
-      'The parties’ nationality, domicile and habitual residence, their center of life at the time of death, the location of property, a foreign marriage or divorce, and existing parental-rights orders may affect the governing law and jurisdiction.',
+      'Nationality, domicile and habitual residence, the parties’ center of life at the time of death, the location of property, a foreign marriage or divorce, and existing parental-rights orders may all affect the governing law and jurisdiction.',
       'succession, the marital-property regime, parental rights, guardianship, and property registration may be subject to different connecting factors',
       'Taiwan’s Act Governing the Choice of Law in Civil Matters Involving Foreign Elements is the starting point for determining the governing law of a civil relationship with foreign elements.',
-      'the court’s international jurisdiction, recognition and enforcement of foreign judgments, treaties, and the law of the other country must also be examined',
+      'The court’s international jurisdiction, recognition and enforcement of foreign judgments, treaties, and the law of the other country must also be examined',
       'Foreign marriage and divorce certificates and parentage documents may require an apostille or consular legalization and a translation.',
       'whether the judgment is final, whether due process was observed, and whether it can be recognized in Taiwan',
       'Taiwan estate-tax filing overlaps with foreign inheritance or gift tax, foreign financial-account reporting, or real-property transfer taxes',
@@ -339,22 +377,22 @@ describe('English family column 016 — anonymized inheritance and parental-righ
   it('uses the exact six-item checklist starts and adds the required practical detail', () => {
     const checklistStarts = [
       '1. Verify death certificates and death-registration records, family relationships and Taiwan household-registration records, marriage, divorce, and adoption records, and existing court orders.',
-      '2. Investigate real property, bank deposits, investment assets, business interests, personal property, and receivables, while also organizing loans, guarantees, taxes, and contractual liabilities.',
-      '3. Review the original will and its method of execution, testamentary capacity, witness or notarization requirements, the executor, and any legacy.',
+      '2. Investigate real property, bank deposits, investment assets, business interests, personal property, and receivables, and organize loans, guarantees, taxes, and contractual liabilities alongside them.',
+      '3. Review the original will: its method of execution, testamentary capacity, witness or notarization requirements, the executor, and any legacy.',
       '4. Calculate statutory inheritance shares separately from the residual-property distribution claim.',
-      '5. Identify property belonging to a minor and determine the scope of legal representation and parental or guardian management, any conflict of interest, and whether a special representative is needed.',
-      '6. Separate by agency the court procedures for waiver of inheritance, an estate inventory, guardianship, and a special representative; the tax authority’s estate-tax filing; household-registration reporting; and property-registration procedures.',
+      '5. Identify property belonging to a minor, then determine the scope of legal representation and of parental or guardian management, any conflict of interest, and whether a special representative is needed.',
+      '6. Sort the procedures by agency: the court procedures for waiver of inheritance, an estate inventory, guardianship, and a special representative; the tax authority’s estate-tax filing; household-registration reporting; and property-registration procedures.',
     ];
     const requiredDetails = [
       'authentication, translation, and consistency in the spelling of names',
-      'registered and beneficial ownership, insurance beneficiaries, trusts, jointly owned property, and records of lifetime transfers',
+      'Registered and beneficial ownership, insurance beneficiaries, trusts, jointly owned property, and records of lifetime transfers',
       'how a valid will changes the distribution and the restrictions imposed by mandatory rules, including reserved portions',
-      'the calculation base, debts, exclusions, valuation date, and supporting evidence for each system',
+      'Each system has its own calculation base, debts, exclusions, valuation date, and supporting evidence',
       'keeping accounts, books, and disposition proceeds separate from an adult’s personal property',
-      'Check the jurisdiction, starting date, required documents, opportunity to supplement, and availability of an extension for each procedure',
+      'check the jurisdiction, starting date, required documents, opportunity to supplement, and availability of an extension',
       'record where each original is kept and its issue date or reference date',
       'Access to a minor’s personal and financial information should be limited to the people and institutions that need it.',
-      'urgency does not authorize a disposition by someone who lacks authority',
+      'Urgency does not authorize a disposition by someone who lacks authority',
     ];
 
     let previousIndex = -1;
@@ -389,7 +427,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       expect(raw.split(link)).toHaveLength(2);
     }
     const sourceUseCaution =
-      'On the official legislation pages, check the dates of amendment and entry into force, and use the English text only as an aid when comparing this English explanation with the original provisions. The Judicial Yuan form and the Taiwan Tax Portal guidance provide general preparation guidance, but the jurisdiction and filing requirements for an individual matter should be confirmed separately against the receiving agency’s latest instructions.';
+      'On the official legislation pages, check the dates of amendment and entry into force, and use the English text only as an aid when comparing this English explanation with the original provisions. The Judicial Yuan form and the Taiwan Tax Portal guidance are general aids to preparation. For an individual matter, the jurisdiction and filing requirements should be confirmed separately against the receiving agency’s latest instructions.';
     expect(raw).toContain(sourceUseCaution);
     expect(post?.content).toContain(sourceUseCaution);
   });
@@ -410,13 +448,17 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       .digest('hex');
 
     expect(visibleWordCount).toBeGreaterThanOrEqual(2_000);
-    expect(visibleWordCount).toBe(3_696);
-    expect(calculatedMinutes).toBe(19);
-    expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
-    expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
+    expect(visibleWordCount).toBe(3_600);
+    // The 2026-10-06 rewrite shortened the body to 3,600 words (18 minutes at
+    // 200 wpm) but kept the frontmatter read_time at "19 min read". Both values
+    // stay pinned; restore the read_time === calculated check once the
+    // frontmatter is corrected to "18 min read" (or the body is lengthened).
+    expect(calculatedMinutes).toBe(18);
+    expect(parsed.data.read_time).toBe('19 min read');
+    expect(post?.readTime).toBe('19 min read');
     expect(sourceSha256).toBe(
-      // WO-X2 (EN-20): re-frozen after adding the short frontmatter seoTitle.
-      '40185cb753161d30b74640eae5cd3d6e297590fe6ec2c4d5e8a58b019ba43918',
+      // Re-frozen after the 2026-10-06 Fable-reviewed rewrite.
+      '485e9bd45e41d48c9f175d337ed21323d4abf1849ac990bb9c223a07b9ade6ab',
     );
   });
 

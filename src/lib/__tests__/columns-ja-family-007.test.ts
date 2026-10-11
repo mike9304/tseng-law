@@ -51,8 +51,8 @@ const featuredImage =
   '../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg';
 const bodyImage = `![台湾の離婚手続と国際家事問題を説明する画像](${featuredImage})`;
 const introParagraphs = [
-  '台湾の離婚事件では、婚姻関係を終了させる方法だけでなく、戸籍の整理、外国における効力、夫婦財産、損害賠償、離婚後の配偶者扶養、未成年の子に関する判断および養育費を、それぞれ区別して検討する必要があります。同じ事実が複数の請求の資料となり得る場合でも、各権利の要件と効果、立証事項および期間は同じではありません。',
-  '特に、日本と台湾のように二つ以上の国または地域に関係する家族については、いずれか一方の国籍または婚姻届出地だけを見て手続を決めることは困難です。現在の生活の本拠地、既存の裁判手続および登録の状況、文書の作成地、子の居住地ならびに財産の所在地を先に確認することで、不必要な手続の重複や執行の空白を減らすことができます。',
+  '台湾の離婚では、婚姻を終わらせる手続のほかに、戸籍の整理、外国での効力、夫婦財産、損害賠償、離婚後の配偶者扶養、未成年の子に関する判断、養育費を、それぞれ分けて検討します。同じ事実が複数の請求の材料になることはあります。それでも、権利ごとに要件と効果、立証すべき事項、期間は違います。',
+  '日本と台湾のように二つ以上の国・地域にまたがる家族では、いずれか一方の国籍や婚姻届出地だけを見て手続を決めるのは困難です。先に確認したいのは、現在の生活の本拠地、すでに進んでいる裁判手続と登録の状況、文書を作成した場所、子の居住地、財産の所在地です。ここを押さえておくと、手続の重複や執行の空白を減らせます。',
 ];
 const legacyGenericIntro =
   '本稿は、台湾における離婚の経路、戸籍登記、裁判所手続、裁判離婚の事由について、中立的な法律情報として整理するものです。一般的な教育情報であり、個別事案への法的助言ではありません。裁判管轄、準拠法、外国の身分行為や裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により、結論は異なり得ます。';
@@ -104,16 +104,16 @@ const childrenFaq = [
 ];
 
 const headings = [
-  '1. 3つの離婚手続と、まず確認すべき渉外上の論点',
-  '2. 協議離婚と戸籍登記',
-  '3. 裁判所の調停・訴訟、出頭および不服申立て',
-  '4. 裁判離婚の事由と有責配偶者に関するただし書',
-  '5. 外国での婚姻・離婚と台湾における戸籍手続',
-  '6. 不動産の名義、夫婦残余財産差額分配、損害賠償および離婚後の扶養',
-  '7. 未成年の子の権利義務、養育費、面会交流および国境を越えた転居',
-  '8. 証拠と実務上の準備',
-  '9. 公式資料',
-  '10. 関連するご案内',
+  '離婚の3つの道筋',
+  '協議離婚と戸籍登記',
+  '調停から訴訟へ、出頭と不服申立て',
+  '裁判離婚の事由と、有責配偶者のただし書',
+  '外国での婚姻・離婚と台湾の戸籍手続',
+  '不動産の名義、残余財産差額分配、損害賠償、離婚後の扶養',
+  '未成年の子の権利義務・養育費・面会交流',
+  '証拠と資料の整理',
+  '公式資料',
+  '関連資料',
 ];
 const propertyHeadings = [
   '1. 不動産の名義、婚前資金および夫婦残余財産差額分配請求権',
@@ -166,7 +166,7 @@ const childrenTitle =
 const staleDisclaimer =
   '本稿は、台湾の離婚手続、夫婦財産制、離婚後の請求および未成年の子に関する家事法について、一般的な教育情報を提供するものです。個別の離婚事件または家事事件に関する法的助言ではありません。管轄、準拠法、外国裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により結果は異なり得ます。期限を計算し、又は手続を開始する前に、正しい起算事由に基づく期限と最新の公式資料を個別事情に即して確認してください。';
 const disclaimer =
-  '本稿は、台湾における離婚、国際家事、夫婦財産および未成年の子に関する制度を一般的に解説することを目的とした教育資料であり、個別の事案に対する法的助言ではありません。';
+  '本稿は、台湾における離婚、国際家事、夫婦財産および未成年の子に関する制度を一般的に解説する教育資料であり、個別の事案に対する法的助言ではありません。';
 const propertyDisclaimer =
   '本稿は、台湾における離婚、国際家事、夫婦財産および離婚に伴う財産・金銭の請求を一般的に解説することを目的とした教育資料であり、個別の事案に対する法的助言ではありません。';
 const childrenDisclaimer =
@@ -178,34 +178,36 @@ ${disclaimer}
 
 ${author}`;
 
-const evidenceChecklistStarts = [
-  '1. 婚姻・戸籍・身分資料。',
-  '2. 裁判・送達資料。',
-  '3. 外国文書の認証・翻訳。',
-  '4. 離婚事由の時系列。',
-  '5. 正しい起算事由に基づく各期限。',
-  '6. プライバシーに配慮した資料管理。',
+// The 2026-10-12 rewrite turned the numbered six-item evidence list into six prose paragraphs.
+// Each entry is the opening of one paragraph, in the order the categories appear.
+const evidenceCategoryStarts = [
+  'まず身分と戸籍の資料です。',
+  '裁判と送達の資料には、',
+  '外国の文書は、',
+  '離婚事由については、日付順の経緯をまとめます。',
+  '各期限は、権利や手続ごとに正しい起算事由から数えます。',
+  '配偶者と子の識別情報は安全に保管し、',
 ];
 
-// Re-frozen after the 2026-10-06 hub trim (sections 6 to 8 reduced, property and children parts split out).
+// Re-frozen after the 2026-10-12 style rewrite of the whole hub body (same legal content, new wording).
 const frozenH2BodySha256 =
-  '7a88558a8353de4549608f76d75e044c7afcfab23230cb16c005b2a1b977f87d';
+  '978beec9ce5555dd816d43ab29133e41e1f91982d26fe7716a202abf0079eed2';
 const frozenNormalizedSection4Sha256 =
-  '1685314f098cad856d1094691fe4ef750ef681a5e1a98fa7c2fd75f1bacbf557';
+  '2ac287cc7e75df8aab30c6dc21655460e428d85e1c5e739e2ef388f21ddd66d0';
 const frozenSection5OnwardSha256 =
-  '662c2bd5acb9a73573211e67ebfa687759fbf5d1528e8c4eee5b8c8ce879f03d';
+  'cd39dbed698b11eb2308689c64e427b3e731e77945d84a3295f6cb6a3c6ad5b4';
 const frozenResponsibleSpouseCount = 3;
-const frozenVisibleJapaneseCount = 5_108;
-const frozenVisibleKanaCount = 2_200;
+const frozenVisibleJapaneseCount = 4_921;
+const frozenVisibleKanaCount = 2_208;
 const frozenSourceSha256 =
-  'c3c892e6801507644cbf1fdcc19fc255f0a0f71dafdb6cbc3e13b0447c0f8bd7';
+  '940dba373db72fe58afeca2a57ea8bead215cf90912b9b9534ea2432f2ef7da3';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
 }
 
-function firstParagraphAfter(content: string, heading: string) {
-  return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
+function paragraphAfter(content: string, heading: string, index: number) {
+  return content.split(`${heading}\n\n`)[1]?.split('\n\n')[index];
 }
 
 function sectionBody(content: string, heading: string) {
@@ -254,7 +256,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-10-06',
+      lastmod: '2026-10-12',
       date_display: '2025年9月13日',
       read_time: '約8分',
       categories: ['台湾法律情報'],
@@ -265,7 +267,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-10-06',
+      date: '2026-10-12',
       dateDisplay: '2025年9月13日',
       readTime: '約8分',
       category: 'legal',
@@ -359,15 +361,12 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     const detailedParagraph =
       section4
         .split('\n\n')
-        .find((paragraph) =>
-          paragraph.startsWith(
-            'このただし書は、2026年10月6日時点の現行条文に残っています。',
-          ),
-        ) ?? '';
+        .find((paragraph) => paragraph.startsWith('同判決が違憲としたのは、')) ??
+      '';
 
     expect(parsed.data.faq[2]?.a).toBe(faq3Answer);
     expect(detailedParagraph).toContain(
-      '重大な事由が発生し、または継続した相当な期間を考慮しないまま、婚姻破綻について専ら責任を負う配偶者から離婚の機会を完全に奪い、個別事件で明らかに過酷となる範囲について違憲と判断しました。',
+      '同判決が違憲としたのは、重大な事由が発生し、または継続した相当な期間を考慮しないまま、婚姻破綻について専ら責任を負う配偶者から離婚の機会を完全に奪い、個別事件で明らかに過酷となる範囲です。',
     );
     expect(countOccurrences(raw, responsibleSpousePhrase)).toBe(
       frozenResponsibleSpouseCount,
@@ -385,7 +384,9 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     // Legacy topic 10 (case-duration guidance) was dropped from the hub on 2026-10-06 (hub trim)
     // and has no counterpart in columns 007, 275 or 307. Topics marked `column` now live in the
     // split-out part. Topics 2, 4, 7, 12, 17 and 21 are re-anchored to the sentence that now
-    // carries the same proposition.
+    // carries the same proposition. The 2026-10-12 rewrite renamed the hub headings and reworded
+    // every hub sentence, so the hub topics (1, 2, 4, 7, 8, 9, 11, 12, 13, 19, 21, 23, 24) are
+    // anchored to the rewritten sentences; topic 8 moved from the court section to the children section.
     const removedLegacyTopics = [10];
     const legacyCoverage: Array<{
       number: number;
@@ -397,13 +398,13 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 1,
         heading: headings[0],
         phrase:
-          '協議離婚は、民法第1050条の書面、証人および戸政機関への登記という要件をすべて満たして初めて効力を生じる身分行為です。私的な合意書に署名しただけでは完了しません。',
+          '協議離婚は、民法第1050条が定める書面、証人、戸政機関への登記の3つがそろって初めて効力を生じる身分行為です。合意書に署名しただけでは完了しません。',
       },
       {
         number: 2,
         heading: headings[4],
         phrase:
-          '外国の離婚または裁判が台湾で承認され、又は効力を有するかという問題と、台湾の戸政機関が特定の身分記録を登載できるかという問題は同一ではありません。',
+          '外国の離婚または裁判が台湾で承認され、または効力を持つかという問題と、台湾の戸政機関が特定の身分記録を登載できるかという問題は、同一ではありません。',
       },
       {
         number: 3,
@@ -416,7 +417,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 4,
         heading: headings[2],
         phrase:
-          '本人出頭命令は、双方が常に対面で同じ部屋にそろって調停しなければならないという普遍的なルールではありません。',
+          '本人出頭命令があっても、双方が常に対面で同じ部屋にそろって調停することになるわけではありません。',
       },
       {
         number: 5,
@@ -436,37 +437,37 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 7,
         heading: headings[5],
         phrase:
-          '民法第1030条の1の夫婦残余財産差額分配請求権、第1056条の裁判離婚に伴う損害賠償、第1057条の無過失配偶者に対する困窮扶養および未成年の子の養育費は、発生要件、算定方法および期間が異なります。',
+          '民法第1030条の1の夫婦残余財産差額分配請求権、第1056条の裁判離婚に伴う損害賠償、第1057条の無過失配偶者に対する困窮扶養、未成年の子の養育費は、発生要件も算定方法も期間も違います。',
       },
       {
         number: 8,
-        heading: headings[2],
+        heading: headings[6],
         phrase:
-          'もっとも、「まず離婚し、子の問題は後で処理すればよい」という普遍的な近道として勧めるものではありません。',
+          'だからといって、「先に離婚して、子の問題は後で片づければよい」という一律の近道として勧めるわけではありません。',
       },
       {
         number: 9,
         heading: headings[1],
         phrase:
-          '申請者、代理の可否、身分証明・戸籍資料、離婚書面などの実際の必要書類は、申請時における内政部戸政司の離婚登記案内と担当戸政事務所の確認に基づいて準備する必要があります。',
+          '申請者、代理の可否、身分証明・戸籍資料、離婚書面といった実際の必要書類は、申請時点の内政部戸政司の離婚登記案内と、担当の戸政事務所への確認に基づいて準備します。',
       },
       {
         number: 11,
         heading: headings[3],
         phrase:
-          '民法第1052条第1項は、裁判離婚の具体的事由として次の10を定めます。',
+          '民法第1052条第1項は、裁判離婚の具体的な事由を次の10個定めています。',
       },
       {
         number: 12,
         heading: headings[3],
         phrase:
-          'ただし書は、その事由が一方の配偶者に帰責し得るときは、他方の配偶者のみが請求できると規定します。',
+          '同項ただし書は、その事由が一方の配偶者に帰責し得るときは、他方の配偶者だけが請求できるとしています。',
       },
       {
         number: 13,
         heading: headings[2],
         phrase:
-          '家事事件法の対象となる事件では、原則として裁判所の調停が先行します。ただし、法令と個別の事件の性質・手続上の地位により例外や異なる進行があり得るため、すべての家事事件に変更不能な単一路線だけがあるとはいえません。',
+          '家事事件法の対象になる事件では、原則として、裁判所の調停が先に行われます。ただし、法令や事件の性質、手続上の地位によっては、例外や別の進み方があり得ます。すべての家事事件が動かせない一本の道を通る、とは言えません。',
       },
       {
         number: 14,
@@ -507,7 +508,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 19,
         heading: headings[2],
         phrase:
-          'あらゆる家事裁判に共通する単一の不服申立て期限があるわけではないため、実際に発せられた文書に基づき、正しい経路と期間を確認する必要があります。',
+          'すべての家事裁判に共通する単一の期限はありません。実際に出された文書に基づいて、正しい経路と期間を確かめます。',
       },
       {
         number: 20,
@@ -520,7 +521,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 21,
         heading: headings[3],
         phrase:
-          '有責配偶者に対して離婚を自動的に許可し、又は一律に禁止する結論を定めたわけでもありません。',
+          '有責配偶者の離婚を自動的に認める結論も、一律に禁じる結論も出していません。',
       },
       {
         number: 22,
@@ -533,13 +534,13 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 23,
         heading: headings[3],
         phrase:
-          '警察への行方不明届は重要な証拠となり得ますが、普遍的な法定前提ではありません。',
+          '警察への行方不明届は重要な証拠になり得ますが、普遍的な法定前提ではありません。',
       },
       {
         number: 24,
         heading: headings[3],
         phrase:
-          '数か月の別居それ自体は、当然の離婚事由にはなりません。',
+          '数か月の別居だけでは、当然の離婚事由になりません。',
       },
       {
         number: 25,
@@ -570,14 +571,14 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
   it('locks the three paths and five separate cross-border questions', () => {
     const section = sectionBody(parsed.content, headings[0]);
     const requiredPhrases = [
-      '協議離婚は、民法第1050条の書面、証人および戸政機関への登記という要件をすべて満たして初めて効力を生じる身分行為です。',
-      '裁判所の調停または和解による離婚は、調停または和解が成立した時点で婚姻関係が終了し',
-      '裁判離婚は、民法第1052条に定める事由に基づき、裁判所の判決により離婚を認める経路です。',
-      '台湾の裁判所または行政機関が、求められている手続について裁判管轄または行政権限を有するか。',
-      '離婚、夫婦財産および子に関する事項について、どの法域の準拠法が適用されるか。',
-      '外国の身分行為または裁判が、台湾において承認され、又は効力を有するか。',
-      '台湾の戸籍手続として、どのような登記と認証書類等が必要か。',
-      '他国・地域において、さらにどのような登記、承認または執行の手続が必要か。',
+      '協議離婚は、民法第1050条が定める書面、証人、戸政機関への登記の3つがそろって初めて効力を生じる身分行為です。',
+      '裁判所の調停や和解による離婚は、調停または和解が成立した時点で婚姻関係が終わります。',
+      '裁判離婚は、民法第1052条の定める事由があるときに、裁判所が判決で離婚を認める道です。',
+      '求められている手続について、台湾の裁判所または行政機関に管轄・権限があるか。',
+      '離婚、夫婦財産、子に関する事項に、どの法域の準拠法が適用されるか。',
+      '外国の身分行為や裁判が、台湾で承認され、または効力を持つか。',
+      '台湾の戸籍手続として、どのような登記と認証書類などが必要か。',
+      '他国・地域で、さらにどのような登記、承認、執行の手続が必要か。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -588,19 +589,19 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
   it('locks Article 1050 elements, foreign-document authentication and the qualified court-result registration rule', () => {
     const section = sectionBody(parsed.content, headings[1]);
     const requiredPhrases = [
-      '民法第1050条は、次の要件を別個に要求します。',
-      '書面。 協議離婚は書面により行わなければなりません。',
-      '双方に離婚の真意があることを直接見聞きして確認した2名以上の証人が署名する必要があります。',
-      '真意を確認していない者が後から形式的に署名するだけでは足りません。',
-      '戸政機関への登記は効力発生の要件です。',
-      '登記がなければ、私的な書面だけでは台湾の協議離婚は完成しません。',
-      '外国で作成された文書は、その種類と作成地に応じて台湾の在外機関その他の権限ある機関による認証が必要となる場合があり、公式案内が求めるときは、認証または公証された中国語訳も併せて提出しなければなりません。',
-      '台湾の離婚判決の確定日、または裁判所の調停・和解の成立日から30日',
-      '判決書や調停調書を受領した日が、確定または成立に先立つだけの場合には、その受領日を一律の起算日としてはなりません。',
-      '期限後の申請も受理されます。',
-      '申請が遅れたこと自体が、すでに効力を生じた裁判所の離婚を失効させるわけではありません。',
-      '書面による催告後も誰も申請しない場合、戸政機関は、戸籍法第48条の2に基づき、要件を満たす裁判所の結果を職権で登記します。',
-      'オンライン申請は法定の申請期間内に限り利用できます。',
+      '民法第1050条は、協議離婚の要件として書面、証人、登記の3つを別々に求めています。',
+      '協議離婚は書面で行わなければなりません。',
+      '署名する証人は2名以上で、双方に離婚の真意があることを直接見聞きして確認した人でなければなりません。',
+      '真意を確認していない人が後から形式的に署名するだけでは足りません。',
+      '登記は効力発生の要件です。',
+      'これがなければ、私的な書面だけでは台湾の協議離婚は完成しません。',
+      '外国で作成された文書は、種類と作成地によっては、台湾の在外機関などの権限ある機関による認証が必要になる場合があります。公式案内が求めるときは、認証または公証を受けた中国語訳も併せて提出しなければなりません。',
+      '申請期間は、一般に30日です（戸籍法第48条）。数え始めるのは、台湾の離婚判決が確定した日、または調停・和解が成立した日です。',
+      '判決書や調停調書を受け取った日が、確定や成立より前だというだけなら、その日を一律に起算日にしてはいけません。',
+      '期限を過ぎた申請も受理されます。',
+      '遅れたこと自体が、すでに効力を生じた裁判所の離婚を失効させることはありません。',
+      '書面で催告しても誰も申請しなければ、戸政機関は戸籍法第48条の2に基づき、要件を満たす裁判所の結果を職権で登記します。',
+      'オンライン申請が使えるのは、法定の申請期間内だけです。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -611,21 +612,25 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {
     const section = sectionBody(parsed.content, headings[2]);
     const requiredPhrases = [
-      '家事事件法の対象となる事件では、原則として裁判所の調停が先行します。',
-      'すべての家事事件に変更不能な単一路線だけがあるとはいえません。',
-      '家事事件法第13条は、裁判所が当事者または法定代理人に本人出頭を命じた場合に限り問題となります。',
-      '初回の過料は3万台湾元以下',
+      '家事事件法の対象になる事件では、原則として、裁判所の調停が先に行われます。',
+      'すべての家事事件が動かせない一本の道を通る、とは言えません。',
+      '家事事件法第13条が問題になるのは、裁判所が当事者または法定代理人に本人出頭を命じた場合に限られます。',
+      '初回の過料は3万台湾元以下です。',
       '拘引はできません',
-      '遠隔参加、分離手続、代理人、安全上の配慮などは、法令と個別事情に基づき裁判所が判断するものであり、自動的な権利でも自動的な禁止でもありません。',
-      '不服申立てまたは上訴の経路と期間は、文書の種類、送達の有無と時期、確定の有無、手続上の地位により異なります。',
-      'あらゆる家事裁判に共通する単一の不服申立て期限があるわけではないため、実際に発せられた文書に基づき、正しい経路と期間を確認する必要があります。',
+      '遠隔参加、手続の分離、代理人、安全上の配慮は、法令と個別事情に基づいて裁判所が判断します。当然に認められる権利でも、当然に禁じられる措置でもありません。',
+      '不服申立てや上訴の経路と期間は、文書の種類、送達の有無と時期、確定したかどうか、手続上の地位によって変わります。',
+      'すべての家事裁判に共通する単一の期限はありません。実際に出された文書に基づいて、正しい経路と期間を確かめます。',
     ];
 
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
-    expect(firstParagraphAfter(parsed.content, '### 本人出頭')).toContain(
-      '家事事件法第13条は、裁判所が当事者または法定代理人に本人出頭を命じた場合に限り問題となります。',
+    // The rewrite opens this subsection with a reader question; the Article 13 paragraph follows it.
+    expect(paragraphAfter(parsed.content, '### 本人出頭', 0)).toBe(
+      '調停では、必ず相手と同じ部屋に座らなければならないのでしょうか？',
+    );
+    expect(paragraphAfter(parsed.content, '### 本人出頭', 1)).toContain(
+      '家事事件法第13条が問題になるのは、裁判所が当事者または法定代理人に本人出頭を命じた場合に限られます。',
     );
   });
 
@@ -634,26 +639,26 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     const grounds = [
       '1. 重婚。',
       '2. 配偶者以外の者との合意による性交。',
-      '3. 配偶者の一方による他方への同居に耐え難い虐待。',
+      '3. 配偶者の一方による、他方への同居に耐え難い虐待。',
       '4. 配偶者の一方が他方の直系親族を虐待し、または配偶者一方の直系親族が他方を虐待して、共同生活に耐え難いこと。',
       '5. 配偶者の一方が悪意で他方を遺棄し、その状態が継続していること。',
       '6. 配偶者の一方が他方の殺害を企てたこと。',
       '7. 治癒不能の悪疾（法文は「有不治之惡疾」）。',
       '8. 重大で治癒不能の精神疾患。',
       '9. 生死不明が3年を超えること。',
-      '10. 故意の犯罪により6か月を超える有期懲役の確定判決を受けたこと。',
+      '10. 故意の犯罪により、6か月を超える有期懲役の確定判決を受けたこと。',
     ];
     const requiredPhrases = [
-      'これは法文の古い疾病表現であり、人格または道徳上の評価ではありません。',
-      '第2項は上記10事由とは別です。',
-      'このただし書は、2026年10月6日時点の現行条文に残っています。',
+      '法文の古い疾病表現であり、人格や道徳上の評価ではありません。',
+      '同条第2項は、この10事由とは別の規定です。',
+      'この点を定めるただし書は、現行条文に残っています（2026年10月6日時点）。',
       '憲法法廷112年憲判字第4号は、ただし書を全面削除したわけではなく',
-      '有責配偶者に対して離婚を自動的に許可し、又は一律に禁止する結論を定めたわけでもありません。',
-      '重大な事由が発生し、または継続した相当な期間を考慮しないまま、婚姻破綻について専ら責任を負う配偶者から離婚の機会を完全に奪い、個別事件で明らかに過酷となる範囲について違憲と判断しました。',
-      '第1項の各事由をすべて書き換えているわけではありません。',
-      '警察への行方不明届は重要な証拠となり得ますが、普遍的な法定前提ではありません。',
-      '先行する同居義務履行請求も、すべての事件に必須の法定前提ではありません。',
-      '数か月の別居それ自体は、当然の離婚事由にはなりません。',
+      '有責配偶者の離婚を自動的に認める結論も、一律に禁じる結論も出していません。',
+      '同判決が違憲としたのは、重大な事由が発生し、または継続した相当な期間を考慮しないまま、婚姻破綻について専ら責任を負う配偶者から離婚の機会を完全に奪い、個別事件で明らかに過酷となる範囲です。',
+      '第1項の各事由を書き換えたわけではありません。',
+      '警察への行方不明届は重要な証拠になり得ますが、普遍的な法定前提ではありません。',
+      '先に同居義務の履行を求める請求も、すべての事件に必須の法定前提とは限りません。',
+      '数か月の別居だけでは、当然の離婚事由になりません。',
     ];
 
     let previousIndex = -1;
@@ -672,10 +677,10 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
   it('locks foreign-record separation of questions, regional verification, and the recognition-versus-registration distinction', () => {
     const section = sectionBody(parsed.content, headings[4]);
     const requiredPhrases = [
-      '外国での婚姻または離婚は、台湾における単一の手続に要約できません。',
-      '外国で成立したか否か、台湾での承認または効力を求めるか否か、台湾の戸籍手続として何が必要か、他国・地域でさらにどのような手続が残るかを、別々の問題として整理する必要があります。',
-      '中国大陸、香港およびマカオの文書については、通常の外国文書の認証とは異なる確認制度が適用されます。',
-      '外国の離婚または裁判が台湾で承認され、又は効力を有するかという問題と、台湾の戸政機関が特定の身分記録を登載できるかという問題は同一ではありません。',
+      '外国での婚姻や離婚は、台湾の単一の手続にまとめられません。',
+      '成立地が外国かどうか、台湾での承認や効力を求めるかどうか、台湾の戸籍手続として何が必要か、他国・地域にさらにどんな手続が残るかの4点は、それぞれ独立した問題として整理します。',
+      '中国大陸、香港、マカオの文書には、通常の外国文書の認証とは別の確認制度が適用されます。',
+      '外国の離婚または裁判が台湾で承認され、または効力を持つかという問題と、台湾の戸政機関が特定の身分記録を登載できるかという問題は、同一ではありません。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -688,19 +693,19 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     const childrenSection = sectionBody(parsed.content, headings[6]);
 
     expect(propertySection).toContain(
-      '民法第1030条の1の夫婦残余財産差額分配請求権、第1056条の裁判離婚に伴う損害賠償、第1057条の無過失配偶者に対する困窮扶養および未成年の子の養育費は、発生要件、算定方法および期間が異なります。',
+      '民法第1030条の1の夫婦残余財産差額分配請求権、第1056条の裁判離婚に伴う損害賠償、第1057条の無過失配偶者に対する困窮扶養、未成年の子の養育費は、発生要件も算定方法も期間も違います。',
     );
     expect(propertySection).toContain(
-      `財産、損害賠償および扶養は${inlineColumnLinks[3]}で扱っています。`,
+      `財産、損害賠償、扶養は、${inlineColumnLinks[3]}で扱っています。`,
     );
     expect(childrenSection).toContain(
-      '台湾民法第1055条および第1055条の1によれば、裁判所は未成年の子の最善の利益を基準として、権利義務の行使・負担、面会交流その他の子に関する事項を判断します。',
+      '台湾民法第1055条と第1055条の1により、裁判所は未成年の子の最善の利益を基準として、権利義務の行使・負担、面会交流など子に関する事項を判断します。',
     );
     expect(childrenSection).toContain(
-      '民法第1116条の2によれば、父母の未成年の子に対する扶養義務は、離婚後も継続します。',
+      '民法第1116条の2によれば、父母が未成年の子を扶養する義務は、離婚後も続きます。',
     );
     expect(childrenSection).toContain(
-      `子どもの権利義務、養育費、面会交流および国境を越えた転居は${inlineColumnLinks[4]}で扱っています。`,
+      `子どもの権利義務、養育費、面会交流、国境を越えた転居は、${inlineColumnLinks[4]}で扱っています。`,
     );
     expect(inlineColumnLinks[3]).toContain(`](${propertyHref})`);
     expect(inlineColumnLinks[4]).toContain(`](${childrenHref})`);
@@ -715,30 +720,35 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(parsed.content).not.toContain('著しく不公平');
   });
 
-  it('uses the exact ordered six-category evidence checklist and privacy prohibitions', () => {
+  it('keeps the six evidence categories in order, now as prose paragraphs, and the privacy prohibitions', () => {
     const section = sectionBody(parsed.content, headings[7]);
 
     let previousIndex = -1;
-    for (const item of evidenceChecklistStarts) {
+    for (const item of evidenceCategoryStarts) {
       const index = section.indexOf(item);
       expect(index, item).toBeGreaterThan(previousIndex);
       previousIndex = index;
     }
-    expect(section.split('\n').filter((line) => /^\d+\. /.test(line))).toHaveLength(
-      evidenceChecklistStarts.length,
+    // Every category opens its own paragraph.
+    const paragraphs = section.split('\n\n');
+    for (const item of evidenceCategoryStarts) {
+      expect(
+        paragraphs.filter((paragraph) => paragraph.startsWith(item)),
+        item,
+      ).toHaveLength(1);
+    }
+    expect(section).toContain(
+      '証拠を整えるときに見るのは、真正性、完全性、取得の経緯、関連性です。',
     );
     expect(section).toContain(
-      '証拠は、真正性、完全性、取得経緯および関連性を重視して準備します。',
+      '何が必要かは、請求、抗弁、管轄、準拠法、承認、期限のどれが問題になるかで変わります。',
+    );
+    expect(section).toContain('違法に証拠を作り出してはいけません。');
+    expect(section).toContain(
+      '都合のよい非公式な日付を起算日にしてはいけません。',
     );
     expect(section).toContain(
-      '必要な証拠は、請求、抗弁、管轄、準拠法、承認、期限ごとに異なります。',
-    );
-    expect(section).toContain('違法な手段で証拠を作り出してはなりません。');
-    expect(section).toContain(
-      '都合のよい非公式な日付を起算日にしてはなりません。',
-    );
-    expect(section).toContain(
-      '違法な監視、アカウントや端末への侵入、追跡、違法録音、子の私生活の公開、報復、財産隠し、合意または裁判に反する子の連れ去りは勧められません。',
+      '違法な監視、アカウントや端末への侵入、追跡、違法な録音、子の私生活の公開、報復、財産隠し、合意や裁判に反する子の連れ去りは勧められません。',
     );
   });
 
@@ -947,7 +957,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(normalizedHtml).toContain(headings[0]);
     expect(normalizedHtml).toContain(headings[9]);
     expect(normalizedHtml).toContain(
-      '台湾の離婚判決の確定日、または裁判所の調停・和解の成立日から30日',
+      '申請期間は、一般に30日です（戸籍法第48条）。',
     );
     expect(normalizedHtml).toContain('曾雋崴');
 

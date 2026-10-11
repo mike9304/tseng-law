@@ -21,12 +21,20 @@ const residenceFaqAnswer =
 const capitalFaqAnswer =
   '회사 설립 자체에 일률적으로 적용되는 법정 최저자본금은 없습니다. 외국인투자사업의 외국 국적 책임자에 관한 취업허가에서는 회사 또는 지점 고용주가 설립 1년 미만이면 납입자본금 또는 대만 내 운영자금 50만 신타이완달러 이상 등 정해진 기준 중 하나가 원칙입니다. 다만 업종별 최저자본금, 사업계획의 합리성, 은행심사와 취업허가상 고용주 요건은 별도로 확인해야 합니다.';
 // The body states these facts in their own paragraphs; the FAQ answers are no longer copied verbatim into it.
+const capitalHeading = '### 최저자본금과 경영책임자 취업허가의 고용주 요건';
 const capitalNoStatutoryMinimumParagraph =
-  '회사 설립 자체에 일률적으로 적용되는 법정 최저자본금은 없습니다. 다만 업종별 최저자본금, 사업계획의 합리성, 은행심사와 취업허가상 고용주 요건은 별도로 확인해야 합니다.';
-const foreignManagerEmployerParagraph =
-  '외국인투자사업의 외국 국적 책임자에 관한 취업허가는 화교 또는 외국인이 보유한 해당 사업의 주식 또는 출자액 합계가 발행주식 총수 또는 자본총액의 3분의 1을 초과하는 회사의 경영책임자(經理人), 외국회사의 대만 지점 경영책임자, 대표사무소 대표자 등을 대상으로 합니다. 이 가운데 회사 또는 지점 고용주가 설립 1년 미만이면 납입자본금 또는 대만 내 운영자금 50만 신타이완달러 이상, 매출액 300만 신타이완달러 이상, 수출입 실적 50만 미국달러 이상, 대리수수료 20만 미국달러 이상 중 하나가 원칙입니다. 설립 1년 이상이면 대만 내 최근 1년 또는 최근 3년 평균에 관하여 매출액 300만 신타이완달러 이상, 수출입 실적 50만 미국달러 이상, 대리수수료 20만 미국달러 이상 중 하나가 원칙입니다.';
+  '최저자본금은 얼마일까요? 회사 설립 자체에 일률적으로 적용되는 법정 최저자본금은 없습니다. 다만 업종별 최저자본금, 사업계획의 합리성, 은행심사, 취업허가상 고용주 요건은 별도 확인이 필요합니다.';
+// The employer-requirement figures now sit in two intro paragraphs, each followed by a bullet list.
+const foreignManagerEmployerUnderOneYearParagraph =
+  '금액 기준은 외국인투자사업의 외국 국적 책임자에 대한 취업허가에서 나옵니다. 대상은 화교 또는 외국인이 보유한 해당 사업의 주식 또는 출자액 합계가 발행주식 총수 또는 자본총액의 3분의 1을 초과하는 회사의 경영책임자(經理人), 외국회사의 대만 지점 경영책임자, 대표사무소 대표자 등입니다. 이 가운데 고용주인 회사 또는 지점이 설립 1년 미만이면 다음 중 하나를 충족하는 것이 원칙입니다.';
+const foreignManagerEmployerUnderOneYearCriteria =
+  '- 납입자본금 또는 대만 내 운영자금 50만 신타이완달러 이상\n- 매출액 300만 신타이완달러 이상\n- 수출입 실적 50만 미국달러 이상\n- 대리수수료 20만 미국달러 이상';
+const foreignManagerEmployerOneYearOrMoreParagraph =
+  '설립 1년 이상이면 대만 내 최근 1년 또는 최근 3년 평균을 기준으로 다음 중 하나를 충족하는 것이 원칙입니다.';
+const foreignManagerEmployerOneYearOrMoreCriteria =
+  '- 매출액 300만 신타이완달러 이상\n- 수출입 실적 50만 미국달러 이상\n- 대리수수료 20만 미국달러 이상';
 const representativeOfficeAndArticle38Paragraph =
-  '대표사무소는 설립 1년 이상인 경우 대만 내 업무실적이 필요합니다(설립 1년 미만은 면제). 대만 경제 발전에 실질적으로 기여하거나 사정이 특별한 경우에는 특별 인정의 여지도 있습니다. 같은 고용주가 이 경로로 2명 이상을 채용하면 외국인과 고용주의 자격은 일반 기준(심사표준 제2장)에 따라 심사합니다([외국인 취업 자격·심사표준 제38조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090031&flno=38)).';
+  '대표사무소는 설립 1년 이상인 경우 대만 내 업무실적이 필요합니다. 설립 1년 미만은 면제됩니다. 대만 경제 발전에 실질적으로 기여하거나 사정이 특별한 경우에는 특별 인정의 여지도 있습니다. [외국인 취업 자격·심사표준 제38조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090031&flno=38)에 따르면, 같은 고용주가 이 경로로 2명 이상을 채용할 때 외국인과 고용주의 자격은 일반 기준(심사표준 제2장)에 따라 심사합니다.';
 
 const faq = [
   {
@@ -67,7 +75,7 @@ describe('Korean investment column 001 — company-establishment basics', () => 
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics',
     );
-    expect(parsed.data.lastmod).toBe('2026-10-06');
+    expect(parsed.data.lastmod).toBe('2026-10-12');
     expect(parsed.data.date_display).toBe('2025년 9월 13일');
     expect(parsed.data.categories).toEqual(['대만 법인설립']);
     expect(parsed.data.featured_image).toBe(
@@ -79,7 +87,7 @@ describe('Korean investment column 001 — company-establishment basics', () => 
 
     expect(post?.slug).toBe('taiwan-company-establishment-basics');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-10-06');
+    expect(post?.date).toBe('2026-10-12');
     expect(post?.dateDisplay).toBe('2025년 9월 13일');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('법인설립');
@@ -97,38 +105,39 @@ describe('Korean investment column 001 — company-establishment basics', () => 
 
     const bodyParagraphs = [
       capitalNoStatutoryMinimumParagraph,
-      foreignManagerEmployerParagraph,
+      foreignManagerEmployerUnderOneYearParagraph,
+      foreignManagerEmployerUnderOneYearCriteria,
+      foreignManagerEmployerOneYearOrMoreParagraph,
+      foreignManagerEmployerOneYearOrMoreCriteria,
       representativeOfficeAndArticle38Paragraph,
     ];
     for (const paragraph of bodyParagraphs) {
       expect(parsed.content.split('\n\n')).toContain(paragraph);
       expect((post?.content ?? '').split('\n\n')).toContain(paragraph);
     }
-    expect(firstParagraphAfter(parsed.content, '### 회사 자본금과 외국 국적 경영책임자 취업허가')).toBe(
+    expect(firstParagraphAfter(parsed.content, capitalHeading)).toBe(
       capitalNoStatutoryMinimumParagraph,
     );
-    expect(firstParagraphAfter(post?.content ?? '', '### 회사 자본금과 외국 국적 경영책임자 취업허가')).toBe(
+    expect(firstParagraphAfter(post?.content ?? '', capitalHeading)).toBe(
       capitalNoStatutoryMinimumParagraph,
     );
   });
 
-  it('uses five ordered sections and the ten-item qualified establishment overview', () => {
+  it('uses five ordered sections, the official-sources section, and the ten-item qualified establishment overview', () => {
     expect(
-      Array.from(
-        parsed.content.matchAll(/^## (\d+)\. (.+)$/gm),
-        (match) => [match[1], match[2]],
-      ),
+      Array.from(parsed.content.matchAll(/^## (.+)$/gm), (match) => match[1]),
     ).toEqual([
-      ['1', '대만 진출 형태: 자회사·지점·대표사무소'],
-      ['2', '대만 자회사 설립의 주요 절차'],
-      ['3', '업종과 영업장소 사전확인'],
-      ['4', '취업허가·거류자격·자본금'],
-      ['5', '세금과 대만–한국 소득세협정'],
+      '자회사, 지점, 대표사무소의 차이',
+      '자회사 설립 절차: 예비심사에서 세적등록까지',
+      '업종 인허가와 영업장소',
+      '취업허가, 거류증, 자본금',
+      '세금과 대만–한국 소득세협정',
+      '공식 자료',
     ]);
 
     const processSection = parsed.content
-      .split('## 2. 대만 자회사 설립의 주요 절차')[1]
-      ?.split('## 3. 업종과 영업장소 사전확인')[0] ?? '';
+      .split('## 자회사 설립 절차: 예비심사에서 세적등록까지')[1]
+      ?.split('## 업종 인허가와 영업장소')[0] ?? '';
     expect(
       Array.from(processSection.matchAll(/^(\d+)\. (.+)$/gm), (match) => [
         match[1],
@@ -156,7 +165,7 @@ describe('Korean investment column 001 — company-establishment basics', () => 
       ],
     ]);
     expect(processSection).toContain(
-      '절차의 순서·필요성·기간은 조직 형태, 투자액, 업종, 심사 내용, 은행 절차의 진행 상황과 보정 여부에 따라 달라집니다.',
+      '순서·필요성·기간은 조직 형태, 투자액, 업종, 심사 내용, 은행 절차의 진행 상황과 보정 여부에 따라 달라집니다.',
     );
     expect(processSection).toContain(
       '조직 형태, 투자액, 업종, 심사 내용, 은행 절차의 진행 상황과 보정',
@@ -169,37 +178,37 @@ describe('Korean investment column 001 — company-establishment basics', () => 
   it('states the entity, treaty, PE, work, residence, address, and tax qualifications', () => {
     const requiredPhrases = [
       '대만 자회사(有限公司·股份有限公司)는 본점과 구별되는 독립 법인',
-      '지점 자체에 주주를 두는 조직이 아니며',
-      '본점이 지점의 채무와 책임을 부담',
-      '판매나 용역 제공 등의 영업활동을 할 수 없습니다.',
-      '2023년 12월 27일 발효되었고 2024년 1월 1일부터 적용',
-      '배당·이자·사용료에 관한 원천지국 상한세율은 각각 10%',
+      '지점에는 주주를 두지 않습니다.',
+      '지점의 채무와 책임은 본점이 부담합니다.',
+      '판매나 용역 제공 같은 영업활동은 대만에서 할 수 없습니다.',
+      '2023년 12월 27일 발효되었습니다. 적용은 2024년 1월 1일부터입니다.',
+      '배당·이자·사용료에 대한 원천지국 상한세율은 각각 10%',
       '관리장소·지점·사무소 등 고정 시설',
       '6개월을 초과하는 공사',
       '어느 12개월 중 합산 183일을 초과하는 용역',
       '계약체결 권한을 반복적으로 행사하는 대리인',
-      '183일이라는 숫자 하나만으로 고정사업장의 성립이나 사업이익의 과세 여부를 판단해서는 안 됩니다.',
-      '많은 업종에서 외국투자가 가능하지만',
-      '예비심사를 통과했다는 사실은 그 업종에 필요한 별도 허가를 이미 받았거나 예정 장소에서 바로 영업할 수 있다는 뜻이 아닙니다.',
-      '회사명과 영업항목 예비심사, 회사설립등기, 세적등록, 업종별 인허가는 각각 목적이 다릅니다.',
-      '토지사용구분, 건축관리, 임대차 조건과 세적등록 적합성',
-      '타이베이시에서는 적용 대상인 회사·상업등기에 대하여 [영업장소 사전조회(營業場所預先查詢) 제도](/ko/columns/taiwan-company-setup-pitch-location)',
+      '183일이라는 숫자 하나만으로는 고정사업장이 성립하는지, 사업이익이 과세되는지를 판단해서는 안 됩니다.',
+      '외국투자가 가능한 업종은 많지만',
+      '그 업종에 필요한 별도 허가를 이미 받았다는 뜻도, 예정 장소에서 바로 영업할 수 있다는 뜻도 아닙니다.',
+      '회사명과 영업항목 예비심사, 회사설립등기, 세적등록, 업종별 인허가는 목적이 각각 다릅니다.',
+      '토지사용구분, 건축관리, 임대차 조건, 세적등록 적합성',
+      '타이베이시는 적용 대상인 회사·상업등기에 대해 [영업장소 사전조회(營業場所預先查詢) 제도](/ko/columns/taiwan-company-setup-pitch-location)',
       '학생도 투자와 회사설립을 신청할 수 있습니다.',
-      '현재 체류자격이 대만에서의 취업이나 회사 경영을 허용한다는 뜻은 아닙니다.',
+      '투자자나 주주가 되었다고 해서 현재의 체류자격으로 대만에서 일하거나 회사를 경영할 수 있는 것은 아닙니다.',
       '외국 국적 경영책임자 취업허가를 위한 고용주 요건',
-      '기준을 충족하더라도 취업허가가 자동으로 발급되는 것은 아닙니다.',
-      '배우자와 미성년 자녀는 요건을 갖추어 의친거류를 별도로 신청',
-      '가족의 거류자격이 자동으로 부여되는 것은 아닙니다.',
+      '이 기준을 채웠다고 취업허가가 자동으로 나오지는 않습니다.',
+      '배우자와 미성년 자녀는 요건을 갖추면 의친거류를 따로 신청할 수 있고',
+      '가족 거류자격은 자동이 아닙니다.',
       '5년 연속 합법적으로 거류하고 매년 183일 이상 체류',
       '외국전문인력 등에는 다른 산정기준',
       '품행, 자산·기능 등 다른 법정요건',
-      '대만 영업세는 일반세율이 5%이고 통상 2개월마다 신고합니다.',
-      '영리사업소득세 일반세율은 20%',
-      '비거주자에게 지급하는 배당의 대만 국내법상 원천징수율은 21%',
-      '협정의 적용 요건을 충족하면 배당·이자·사용료에 관한 원천지국 상한세율은 각각 10%입니다.',
-      '같은 고용주가 이 경로로 2명 이상을 채용하면 외국인과 고용주의 자격은 일반 기준(심사표준 제2장)에 따라 심사합니다',
+      '영업세의 일반세율은 5%입니다. 신고는 통상 2개월마다 합니다.',
+      '영리사업소득세의 일반세율은 20%',
+      '비거주자에게 지급하는 배당에 대한 대만 국내법상 원천징수율은 21%',
+      '협정의 적용 요건을 충족하면 배당·이자·사용료에 대한 원천지국 상한세율은 각각 10%입니다.',
+      '같은 고용주가 이 경로로 2명 이상을 채용할 때 외국인과 고용주의 자격은 일반 기준(심사표준 제2장)에 따라 심사합니다',
       '[외국인 취업 자격·심사표준 제38조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090031&flno=38)',
-      '대표사무소는 설립 1년 이상인 경우 대만 내 업무실적이 필요합니다(설립 1년 미만은 면제).',
+      '대표사무소는 설립 1년 이상인 경우 대만 내 업무실적이 필요합니다. 설립 1년 미만은 면제됩니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -212,9 +221,9 @@ describe('Korean investment column 001 — company-establishment basics', () => 
     expect(parsed.content.match(/고정사업장\(PE\)/g)).toHaveLength(1);
     expect(
       parsed.content
-        .split('## 5. 세금과 대만–한국 소득세협정')[1]
+        .split('## 세금과 대만–한국 소득세협정')[1]
         ?.split('## 공식 자료')[0],
-    ).toContain('2023년 12월 27일 발효되었고 2024년 1월 1일부터 적용됩니다.');
+    ).toContain('2023년 12월 27일 발효되었습니다. 적용은 2024년 1월 1일부터입니다.');
     expect(raw).toContain(
       '[비거주자 배당 원천징수율 관련 규정](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)',
     );
@@ -265,7 +274,7 @@ describe('Korean investment column 001 — company-establishment basics', () => 
     }
 
     expect(raw).toContain(
-      '이 글은 대만 회사 설립과 관련 제도를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 사안에 대한 법률·세무 자문이 아닙니다. 투자 구조, 업종, 신청인의 국적·체류자격과 주무기관의 최신 실무에 따라 필요한 절차와 결과가 달라질 수 있으므로, 투자·계약·고용을 실행하기 전에 최신 공식 자료와 개별 사정을 확인하시기 바랍니다.',
+      '이 글은 대만 회사 설립과 관련 제도를 일반적으로 설명하는 교육 목적의 자료이며, 개별 사안에 대한 법률·세무 자문이 아닙니다. 투자 구조, 업종, 신청인의 국적·체류자격, 주무기관의 최신 실무에 따라 필요한 절차와 결과가 달라질 수 있습니다. 투자·계약·고용을 실행하기 전에 최신 공식 자료와 개별 사정을 확인하시기 바랍니다.',
     );
     expect(raw.trimEnd()).toMatch(
       /확인하시기 바랍니다\.\n\n증준외 변호사\(曾雋崴, Wei Tseng\)$/,
@@ -280,7 +289,7 @@ describe('Korean investment column 001 — company-establishment basics', () => 
     const eojeolCount = publicText.split(/\s+/).filter(Boolean).length;
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
-    expect(eojeolCount).toBe(1_319);
+    expect(eojeolCount).toBe(1_296);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

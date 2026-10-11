@@ -2,7 +2,7 @@
 title: "Entering Taiwan’s Cosmetics Market: Importer Selection, Product Registration, PIF Preparation and Retention, and Advertising Rules"
 seoTitle: "Taiwan Cosmetics Entry: Registration and PIF"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
-lastmod: "2026-07-25"
+lastmod: "2026-10-12"
 date_display: "February 4, 2026"
 read_time: "13 min read"
 categories:
@@ -128,7 +128,7 @@ For the basic differences between a company and a branch, see [Taiwan Company Fo
 - [Criteria for Deceptive, Exaggerated, or Medical-Efficacy Claims in Cosmetic Labeling, Promotion, and Advertising](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Official Appendix to the Cosmetics Advertising Criteria](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministry of Health and Welfare Announcement on Cosmetics Advertising Regulation](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan Overview of Foreign Investment](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan Overview of Foreign Investment](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Department of Investment Review, MOEA](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 This article provides general educational information about the rules governing entry into Taiwan’s cosmetics market. It is not legal advice on any specific product or advertisement and does not guarantee any permit or registration, eligibility for sale, or processing time. The market-entry structure, product records, labeling and advertising content, and the competent authorities’ current practices should be confirmed for each particular matter.

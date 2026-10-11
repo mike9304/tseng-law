@@ -1,7 +1,7 @@
 ---
 title: "進入台灣化粧品市場：進口主體、產品登錄、PIF 的建立與保存及廣告規範"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
-lastmod: "2026-07-25"
+lastmod: "2026-10-12"
 date_display: "2026年2月4日"
 read_time: "10分鐘閱讀"
 categories:
@@ -126,7 +126,7 @@ PIF 制度已依產品類型分階段適用。自 2026 年 7 月 1 日起，其�
 - [化粧品標示宣傳廣告認定準則](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [化粧品廣告認定準則官方附表](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [衛生福利部化粧品廣告規範公告](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [投資台灣入口網外國人投資說明](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [投資台灣入口網外國人投資說明](https://investtaiwan.nat.gov.tw/showPage?lang=cht&search=InvestmentStatus01)
 - [經濟部投資審議司](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 本文僅供一般法律資訊與教育參考，不構成就任何個案提供的法律意見，亦不保證取得許可、完成登錄、得以銷售或在特定期間內完成程序。進入市場前，仍應依產品資料、進口架構、標示與廣告內容，以及主管機關最新法規與實務，就個案另行確認。

@@ -92,7 +92,7 @@ const officialLinks = [
   '[Criteria for Deceptive, Exaggerated, or Medical-Efficacy Claims in Cosmetic Labeling, Promotion, and Advertising](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)',
   '[Official Appendix to the Cosmetics Advertising Criteria](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)',
   '[Ministry of Health and Welfare Announcement on Cosmetics Advertising Regulation](https://www.mohw.gov.tw/cp-4256-48110-1.html)',
-  '[Invest Taiwan Overview of Foreign Investment](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)',
+  '[Invest Taiwan Overview of Foreign Investment](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)',
   '[Department of Investment Review, MOEA](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)',
 ];
 
@@ -107,7 +107,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-12',
       date_display: 'February 4, 2026',
       read_time: '13 min read',
       categories: ['Taiwan Company Formation'],
@@ -129,7 +129,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-10-12',
       dateDisplay: 'February 4, 2026',
       readTime: '13 min read',
       category: 'formation',

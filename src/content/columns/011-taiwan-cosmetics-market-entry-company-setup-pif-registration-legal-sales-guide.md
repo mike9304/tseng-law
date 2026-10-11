@@ -122,7 +122,7 @@ PIF 제도는 제품군별로 단계적으로 적용되어 왔습니다. 2026년
 - [화장품 표시·홍보·광고 인정기준](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [화장품 광고 인정기준 공식 부표](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [위생복리부 화장품 광고규제 공고](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan 외국인투자 개요](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan 외국인투자 개요](https://investtaiwan.nat.gov.tw/showPage?lang=cht&search=InvestmentStatus01)
 - [경제부 투자심의사 안내](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 이 글은 대만의 화장품 시장 진출 관련 제도를 일반적으로 설명하는 교육 목적의 자료로, 개별 제품이나 광고에 대한 법률 의견이 아니며 허가·등록, 판매 가능성, 처리기간을 보장하지 않습니다. 진출 형태, 제품 자료, 표시·광고 내용과 주무기관의 최신 실무는 사안별로 확인하시기 바랍니다.

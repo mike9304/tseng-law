@@ -84,7 +84,7 @@ const officialSources = [
   'https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099',
   'https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C',
   'https://www.mohw.gov.tw/cp-4256-48110-1.html',
-  'https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01',
+  'https://investtaiwan.nat.gov.tw/showPage?lang=cht&search=InvestmentStatus01',
   'https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879',
 ];
 
@@ -97,7 +97,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-10-12');
     expect(parsed.data.date_display).toBe('2026年2月4日');
     expect(parsed.data.read_time).toBe('10分鐘閱讀');
     expect(parsed.data.categories).toEqual(['台灣公司設立']);
@@ -114,7 +114,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
     );
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-10-12');
     expect(post?.dateDisplay).toBe('2026年2月4日');
     expect(post?.readTime).toBe('10分鐘閱讀');
     expect(post?.category).toBe('formation');

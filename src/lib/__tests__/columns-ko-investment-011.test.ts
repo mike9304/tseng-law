@@ -242,7 +242,7 @@ describe('Korean investment column 011 — cosmetics registration, PIF, and adve
       'https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099',
       'https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C',
       'https://www.mohw.gov.tw/cp-4256-48110-1.html',
-      'https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01',
+      'https://investtaiwan.nat.gov.tw/showPage?lang=cht&search=InvestmentStatus01',
       'https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879',
     ];
     for (const source of officialSources) {

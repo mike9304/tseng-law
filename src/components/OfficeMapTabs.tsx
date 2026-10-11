@@ -83,7 +83,9 @@ function taiwanOfficesFor(locale: PublicLocale8, guidance: GuidanceOfficeCopy | 
     }));
   }
   if (!guidance || isSiteLocale(locale)) return taiwanOfficeData[locale as SiteLocale];
-  return taiwanOfficeData.en.map((office) => ({
+  // Vietnamese readers can use the exact local address for travel and documents.
+  const canonicalOffices = taiwanOfficeData[locale === 'vi' ? 'zh-hant' : 'en'];
+  return canonicalOffices.map((office) => ({
     ...office,
     title: guidance.officeTitles[office.id as TaiwanOfficeId] ?? office.title,
   }));
@@ -227,7 +229,7 @@ export default function OfficeMapTabs({
     >
       <div className="container">
         <SectionLabel data-builder-surface-key={labelSurfaceId}>
-          <SurfaceText surfaceKey={labelSurfaceId}>{locale === 'ko' ? 'OFFICES' : 'OFFICES'}</SurfaceText>
+          <SurfaceText surfaceKey={labelSurfaceId}>{locale === 'vi' ? guidance?.label : 'OFFICES'}</SurfaceText>
         </SectionLabel>
         <h2 className="section-title" data-builder-surface-key={titleSurfaceId}>
           <SurfaceText surfaceKey={titleSurfaceId}>{title}</SurfaceText>

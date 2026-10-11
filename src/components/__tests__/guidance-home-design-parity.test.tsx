@@ -228,8 +228,11 @@ describe('guidance home matches the English home composition', () => {
     }
   });
 
-  it('keeps the guidance homes structurally identical to one another', () => {
-    const shapes = GUIDANCE_LOCALES_4.map((locale) =>
+  it('keeps the shared guidance homes structurally identical to one another', () => {
+    // VI now dispatches to ViHomeBody, asserted in vi-public-presentation.test.tsx.
+    // The remaining public guidance homes still share this exact template.
+    const sharedLocales = GUIDANCE_LOCALES_4.filter((locale) => locale !== 'vi');
+    const shapes = sharedLocales.map((locale) =>
       renderGuidanceHome(locale)
         // Text nodes and human-readable attributes (alt, aria-label and the
         // iframe accessible name) differ by language, as does the locale
@@ -241,7 +244,7 @@ describe('guidance home matches the English home composition', () => {
         .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-'),
     );
     shapes.forEach((shape, index) => {
-      expect(shape, `guidance home of ${GUIDANCE_LOCALES_4[index]} differs structurally from ${GUIDANCE_LOCALES_4[0]}`).toEqual(shapes[0]);
+      expect(shape, `guidance home of ${sharedLocales[index]} differs structurally from ${sharedLocales[0]}`).toEqual(shapes[0]);
     });
   });
 

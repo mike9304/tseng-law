@@ -240,19 +240,23 @@
 }
 
 /* zh-hant (2026-10-02): neutral text and hairlines; the +/− is the monoline glyph (ZhHantMonoIcon) in #1d1d1f. */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.section-label) { color: #6e6e73; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.section-title),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-question) :global(button) { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-list) { border-top-color: #e3e3e8; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-item),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-item.is-open),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-item):hover { border-bottom-color: #e3e3e8; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .indicator,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-arrow) { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-answer) { color: #6e6e73; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root :global(.faq-question) :global(button):focus-visible { outline: 3px solid #16382d; outline-offset: 2px; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.section-label) { color: #6e6e73; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.section-title),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-question) :global(button) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-list) { border-top-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-item),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-item.is-open),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-item):hover { border-bottom-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .indicator,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-arrow) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-answer) { color: #6e6e73; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root :global(.faq-question) :global(button):focus-visible { outline: 3px solid #16382d; outline-offset: 2px; }
 /* ko (2026-10-06, plum since 2026-10-07): the same ring in the ko action colour on the light FAQ. */
 :global(.site[data-locale='ko']) .root:not([data-tone='dark']) :global(.faq-question) :global(button):focus-visible { outline-color: #8e4c6e; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root[data-tone='dark'] .indicator,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .root[data-tone='dark'] :global(.faq-arrow) { color: #fff; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root[data-tone='dark'] .indicator,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .root[data-tone='dark'] :global(.faq-arrow) { color: #fff; }
+
+:global(.site[data-locale='vi']) .root :global(.faq-question) :global(button),
+:global(.site[data-locale='vi']) .root :global(.faq-answer) { word-break: normal; line-height: 1.75; }
+:global(.site[data-locale='vi']) .root :global(.faq-question) :global(button):focus-visible { outline-color: #235a46; }

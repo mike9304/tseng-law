@@ -131,31 +131,38 @@ export function replaceKoreanSpeakerLandingLinks(content: string, locale?: SiteL
   }).replace(/^\u0000DROP\u0000\n?/gm, '');
 }
 
-const FOOTNOTE_LABELS: Record<SiteLocale, string> = {
+type ColumnUiLocale = SiteLocale | 'vi';
+
+const FOOTNOTE_LABELS: Record<ColumnUiLocale, string> = {
   ko: '각주',
   'zh-hant': '註腳',
   en: 'Footnotes',
   ja: '脚注',
+  vi: 'Chú thích',
 };
 
-const COLUMN_TABLE_SCROLL_HINTS: Record<SiteLocale, string> = {
+const COLUMN_TABLE_SCROLL_HINTS: Record<ColumnUiLocale, string> = {
   ko: '표가 화면보다 넓으면 좌우로 스크롤해 보세요.',
   'zh-hant': '若表格超出畫面，請左右捲動檢視。',
   en: 'If the table extends beyond the screen, scroll horizontally to see the rest.',
   ja: '表が画面より広い場合は、左右にスクロールしてご覧ください。',
+  vi: 'Bảng có thể cuộn sang ngang để xem đầy đủ nội dung.',
 };
 
-function getColumnTableScrollHint(locale?: SiteLocale): string {
+function getColumnTableScrollHint(locale?: ColumnUiLocale): string {
   return COLUMN_TABLE_SCROLL_HINTS[locale ?? 'ko'];
 }
 
 export default function ColumnContent({
   content,
   locale,
+  uiLocale = locale,
   sectionIdOffset = 0,
 }: {
   content: string;
   locale?: SiteLocale;
+  /** UI labels may be localized independently of the legacy link-rewriting locale. */
+  uiLocale?: ColumnUiLocale;
   /** Number of section headings already rendered by an earlier part of the same body. */
   sectionIdOffset?: number;
 }) {
@@ -164,8 +171,11 @@ export default function ColumnContent({
       <ReactMarkdown
         remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkUnderline, [remarkColumnSectionIds, { offset: sectionIdOffset }]]}
         remarkRehypeOptions={
-          locale
-            ? { footnoteLabel: FOOTNOTE_LABELS[locale] }
+          uiLocale
+            ? {
+                footnoteLabel: FOOTNOTE_LABELS[uiLocale],
+                ...(uiLocale === 'vi' ? { footnoteBackLabel: 'Trở lại nội dung' } : {}),
+              }
             : undefined
         }
         components={{
@@ -191,7 +201,7 @@ export default function ColumnContent({
             return <p className="blog-paragraph">{children}</p>;
           },
           table: ({ children }) => {
-            const hint = getColumnTableScrollHint(locale);
+            const hint = getColumnTableScrollHint(uiLocale);
             return (
               <div
                 className="column-table-wrap"
@@ -208,9 +218,16 @@ export default function ColumnContent({
           },
           strong: ({ children }) => <strong style={{ fontWeight: 600 }}>{children}</strong>,
           u: ({ children }) => <u className="column-underline">{children}</u>,
-          a: ({ href, children }) => {
+          a: ({ href, children, id, title, 'aria-label': ariaLabel, 'aria-describedby': ariaDescribedBy }) => {
             const linkLabel = Children.toArray(children).map(getNodeText).join('');
             const resolvedHref = resolveColumnMarkdownLinkHref(href, linkLabel, locale);
+            if (uiLocale === 'vi' && resolvedHref.startsWith('#')) {
+              // Footnote references need their generated IDs and accessible
+              // return labels, and must stay in this article's document.
+              return (
+                <a href={resolvedHref} id={id} title={title} aria-label={ariaLabel} aria-describedby={ariaDescribedBy} className="link-underline">{children}</a>
+              );
+            }
             return (
               <a href={resolvedHref} target="_blank" rel="noopener noreferrer" className="link-underline">{children}</a>
             );

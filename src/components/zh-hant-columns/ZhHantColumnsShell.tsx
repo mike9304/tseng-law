@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import ZhHantSnapRowFocus from '@/components/zh-hant-home/ZhHantSnapRowFocus';
-import { appleDesignRootProps, type AppleDesignLocale } from '@/lib/apple-design-locales';
+import { applePresentationRootProps, type ApplePresentationLocale } from '@/lib/apple-design-locales';
 import styles from './ZhHantColumns.module.css';
 
 /**
@@ -9,8 +9,8 @@ import styles from './ZhHantColumns.module.css';
  * rail beside each category). Markup, filters, search and links are unchanged.
  * ko shares it since 2026-10-06 (`locale="ko"`: id ko-columns, data-ko-design).
  */
-export default function ZhHantColumnsShell({ children, locale = 'zh-hant' }: { children: ReactNode; locale?: AppleDesignLocale }) {
-  const root = appleDesignRootProps(locale, 'columns');
+export default function ZhHantColumnsShell({ children, locale = 'zh-hant' }: { children: ReactNode; locale?: ApplePresentationLocale }) {
+  const root = applePresentationRootProps(locale, 'columns');
   return (
     <div className={styles.root} {...root}>
       {children}

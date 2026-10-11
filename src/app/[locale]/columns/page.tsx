@@ -168,12 +168,16 @@ export default async function ColumnsPage(
     }
 
     const translatedSlugs = new Set(posts.map((post) => post.slug));
-    const remainingPosts = getAllColumnPosts('ko')
+    const remainingPosts = locale === 'vi' ? [] : getAllColumnPosts('ko')
       .filter((post) => !translatedSlugs.has(post.slug))
       .map((post) => ({ slug: post.slug, title: post.title }));
-    const byline = 'Attorney Wei Tseng';
+    const byline = locale === 'vi' ? 'Luật sư Wei Tseng' : 'Attorney Wei Tseng';
+    const issuePosts = locale === 'vi' ? getAllIssuePosts('vi') : [];
+    const listItems = toColumnListItems(posts).map((post) => (
+      locale === 'vi' && !post.authorName && !isAiAuthoredColumn(post) ? { ...post, authorName: byline } : post
+    ));
 
-    return (
+    const guidanceBody = (
       <>
         {/* WO-O28: this route renders its own body, so the guidance
             `LegalService` (and the `ContactPoint` / `PostalAddress` / provider
@@ -212,13 +216,22 @@ export default async function ColumnsPage(
           title={copy.title}
           description={copy.description}
         />
-        <IssueBoardTabs locale={locale} active="expert" />
-        <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} />
+        {locale === 'vi' ? (
+          <ZhHantBoardSwitch
+            active="expert"
+            locale="vi"
+            expertCount={posts.length}
+            issueCount={issuePosts.length}
+            latestIssues={issuePosts.slice(0, 3)}
+          />
+        ) : <IssueBoardTabs locale={locale} active="expert" />}
+        <ColumnsGrid locale={locale} posts={listItems} initialFilters={toColumnGridFilters(searchParams)} />
         <div className="container">
           <OriginalLanguageColumnsSection locale={locale} remainingPosts={remainingPosts} />
         </div>
       </>
     );
+    return locale === 'vi' ? <ZhHantColumnsShell locale="vi">{guidanceBody}</ZhHantColumnsShell> : guidanceBody;
   }
 
   const locale = normalizeSiteLocale(params.locale);

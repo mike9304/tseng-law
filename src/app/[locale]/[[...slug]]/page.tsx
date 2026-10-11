@@ -14,6 +14,8 @@ import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
 import GuidancePageBody from '@/components/GuidancePageBody';
+import ViHomeBody from '@/components/vi-design/ViHomeBody';
+import ViPageBody from '@/components/vi-design/ViPageBody';
 import GuidanceHomeBody, {
   resolveGuidanceHomeColumns,
 } from '@/components/GuidanceHomeBody';
@@ -150,6 +152,11 @@ export default async function MainSiteCatchAllPage(
     const classified = classifyGuidanceSlug(params.slug);
     if (classified.kind !== 'page') {
       notFound();
+    }
+    if (params.locale === 'vi') {
+      return classified.pageKey === 'home'
+        ? <ViHomeBody posts={getAllColumnPosts('vi')} />
+        : <ViPageBody pageKey={classified.pageKey} />;
     }
     if (classified.pageKey === 'home') {
       // Same section sequence as the English home. Columns come from the

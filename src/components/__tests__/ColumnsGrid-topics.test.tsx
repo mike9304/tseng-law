@@ -81,7 +81,7 @@ describe('ColumnsGrid topic grouping', () => {
     const html = renderToStaticMarkup(<ColumnsGrid locale="vi" posts={posts} />);
     expect(html.match(/data-column-topic="family"/g)).toHaveLength(5);
     expect(html).not.toContain('href="/vi/columns/c1"');
-    expect(html).toContain('Hôn nhân và ly hôn có yếu tố nước ngoài');
+    expect(html).toContain('Hôn nhân và gia đình');
     expect(html).toContain('Tìm bài viết');
     expect(html).not.toContain('Search columns');
   });

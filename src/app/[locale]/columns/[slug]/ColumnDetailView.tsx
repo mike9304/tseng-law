@@ -5,6 +5,8 @@ import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import RightTurnObservation from '@/components/RightTurnObservation';
 import { hasRightTurnObservation, RIGHT_TURN_OBSERVATION } from '@/data/right-turn-observation';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
+import ViArticleAuthority from '@/components/vi-design/ViArticleAuthority';
+import ViArticleShell from '@/components/vi-design/ViArticleShell';
 import AiAuthorBox from '@/components/AiAuthorBox';
 import RecommendedForYou from '@/components/RecommendedForYou';
 import ColumnContent from '@/components/ColumnContent';
@@ -133,11 +135,12 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
               <ColumnGeneratedVideo locale={urlLocale} slug={post.slug} autoPlay={isTrafficColumn} />
               {diagramVideo && diagramSplit ? (
                 <>
-                  <ColumnContent content={diagramSplit[0]} locale={locale} />
+                  <ColumnContent content={diagramSplit[0]} locale={locale} uiLocale={urlLocale === 'vi' ? 'vi' : locale} />
                   <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
                   <ColumnContent
                     content={diagramSplit[1]}
                     locale={locale}
+                    uiLocale={urlLocale === 'vi' ? 'vi' : locale}
                     sectionIdOffset={extractColumnToc(diagramSplit[0]).length}
                   />
                 </>
@@ -146,7 +149,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                   {diagramVideo ? (
                     <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
                   ) : null}
-                  <ColumnContent content={post.content} locale={locale} />
+                  <ColumnContent content={post.content} locale={locale} uiLocale={urlLocale === 'vi' ? 'vi' : locale} />
                 </>
               )}
               {showObservation ? <RightTurnObservation /> : null}
@@ -178,15 +181,15 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                 <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
                 <p className="blog-sidebar-text">{t.consultationText}</p>
                 <a
-                  href={getConsultationPublicMailto(locale)}
+                  href={urlLocale === 'vi' ? '/vi/contact' : getConsultationPublicMailto(locale)}
                   className="button blog-sidebar-btn"
-                  aria-label={`${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
+                  aria-label={urlLocale === 'vi' ? t.consultationButton : `${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
                 >
                   {t.consultationButton}
                 </a>
               </div>
               <div className="blog-sidebar-card blog-sidebar-card--attorney">
-                <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+                {urlLocale === 'vi' ? <ViArticleAuthority /> : <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />}
               </div>
               <div className="blog-sidebar-card">
                 <h3 className="blog-sidebar-title">{t.guideTitle}</h3>
@@ -262,6 +265,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
       )}
     </>
   );
+  if (urlLocale === 'vi') return <ViArticleShell>{content}</ViArticleShell>;
   // ja design (Opus 5.5 ja lane): same article inside the ja wrapper (paper header, framed photo plate).
   if (locale === 'ja') return <JaPageShell page="column" className={jaStyles.root}>{content}</JaPageShell>;
   // zh-hant second pass (son7-87 / Opus 5.5): same article inside a scoped wrapper for the split hero and sidebar styling.

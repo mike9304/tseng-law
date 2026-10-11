@@ -27,7 +27,7 @@ import {
 } from '@/components/builder/published/overlayFocus';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
-import { isAppleDesignLocale } from '@/lib/apple-design-locales';
+import { isApplePresentationLocale } from '@/lib/apple-design-locales';
 import { IS_STATIC_SITE } from '@/lib/static-site';
 
 type MegaLink = {
@@ -473,7 +473,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
   const content = publicSiteContent(locale);
   const isGuidance = isGuidanceLocale4(locale);
   // The Apple-system locales (zh-hant, ko) draw header glyphs from the monoline set; other locales keep the markup below.
-  const zhIcons = isAppleDesignLocale(locale);
+  const zhIcons = isApplePresentationLocale(locale);
   const chromeLocale = chromeSiteLocale(locale);
   const guidanceSearch = guidanceSearchLink(locale);
   const brandText =
@@ -529,18 +529,18 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
   const menuLabel = guidanceLabels
     ? guidanceLabels.menuLabel
     : locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : locale === 'ja' ? 'メニュー' : 'Menu';
-  const openMenuLabel = guidanceLabels
+  const openMenuLabel = locale === 'vi' ? 'Mở trình đơn' : guidanceLabels
     ? menuLabel
     : locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : locale === 'ja' ? 'メニューを開く' : 'Open menu';
-  const closeMenuLabel = guidanceLabels
+  const closeMenuLabel = locale === 'vi' ? 'Đóng trình đơn' : guidanceLabels
     ? menuLabel
     : locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : locale === 'ja' ? 'メニューを閉じる' : 'Close menu';
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : locale === 'ja' ? '検索を開く' : 'Open search';
   const skipLabel = guidanceLabels
     ? guidanceLabels.skipLink
     : locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
-  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
-  const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main menu';
+  const homeLabel = locale === 'vi' ? 'Trang chủ' : locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
+  const mainNavLabel = locale === 'vi' ? 'Điều hướng chính' : locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main menu';
   const memberLabels =
     locale === 'ko'
       ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
@@ -878,7 +878,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
           <nav
             className="utility-nav"
             aria-label={
-              locale === 'ko'
+              locale === 'vi' ? 'Liên kết nhanh' : locale === 'ko'
                 ? '보조 메뉴'
                 : locale === 'zh-hant'
                   ? '輔助選單'

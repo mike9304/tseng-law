@@ -43,17 +43,17 @@ export const guidanceAnswers: Record<
   vi: {
     services: {
       answer:
-        'Văn phòng nhận sáu lĩnh vực theo pháp luật Đài Loan: đầu tư và thành lập doanh nghiệp, tranh chấp dân sự và bồi thường, hôn nhân, gia đình và thừa kế, tranh chấp lao động, hình sự và sở hữu trí tuệ. Phạm vi từng vụ việc được xác nhận riêng sau khi luật sư xem xét nội dung quý vị gửi. Tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Văn phòng xử lý sáu nhóm việc theo pháp luật Đài Loan: đầu tư và thành lập doanh nghiệp, dân sự và bồi thường, hôn nhân, gia đình và thừa kế, lao động, hình sự và sở hữu trí tuệ. Phạm vi công việc được xác nhận riêng sau khi luật sư xem xét nội dung quý vị gửi. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/faq', '/vi/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm là văn phòng luật Đài Loan, thành lập năm 2016 bởi luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學), có văn phòng tại Đài Bắc, Cao Hùng, Đài Trung, Bình Đông. Từ 2020 có bộ phận kế toán; văn phòng Đài Trung phụ trách việc liên quan đến Hàn Quốc, Nhật Bản. Văn phòng không cam kết kết quả. Tư vấn chỉ bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Hovering International Law Firm được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學), với văn phòng tại Đài Bắc, Cao Hùng, Đài Trung và Bình Đông. Văn phòng không cam kết kết quả vụ việc. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/lawyers', '/vi/services'],
     },
     lawyers: {
       answer:
-        'Đội ngũ của luật sư Wei Tseng xử lý việc pháp lý Đài Loan và Hàn–Đài. Luật sư Wei Tseng (曾雋崴) có tư cách hành nghề tại Đài Loan và là luật sư thành viên của văn phòng, làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế. Việc tư vấn của văn phòng chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Luật sư Wei Tseng (曾雋崴) có tư cách hành nghề tại Đài Loan và là luật sư thành viên của văn phòng. Đội ngũ phụ trách pháp luật Đài Loan và các vụ việc giữa Hàn Quốc và Đài Loan, làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế. Luật sư tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/about', '/vi/contact'],
     },
     pricing: {
@@ -63,7 +63,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Hãy gửi tóm tắt qua biểu mẫu liên hệ: chuyện gì đã xảy ra, cần hỗ trợ gì, vụ việc liên quan đến Đài Loan ra sao và thời hạn nếu có. Bước đầu chưa cần gửi giấy tờ tùy thân hay toàn bộ chứng cứ. Văn phòng không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua đây. Việc tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Quý vị có thể gửi tóm tắt vụ việc, yêu cầu hỗ trợ và thời hạn qua biểu mẫu. Bước đầu chưa cần giấy tờ tùy thân hay toàn bộ chứng cứ. Văn phòng không cam kết thời gian phản hồi; lịch hẹn cần xác nhận riêng. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/faq', '/vi/pricing'],
     },
     faq: {

@@ -186,7 +186,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     ? splitColumnContentAfterHeading(post.content, post.diagramVideo.afterHeading)
     : null;
   const authorName =
-    locale === 'ko'
+    urlLocale === 'vi' ? 'Luật sư Wei Tseng' : locale === 'ko'
       ? '증준외 변호사'
       : locale === 'zh-hant'
         ? '曾雋崴律師'
@@ -285,9 +285,9 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         : undefined),
   );
 
-  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
-    { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
-    { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights', path: `/${urlLocale}/columns` },
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(urlLocale === 'vi' ? 'vi' : locale, [
+    { name: urlLocale === 'vi' ? guidanceContent.vi.nav.home : locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
+    { name: urlLocale === 'vi' ? guidanceContent.vi.nav.columns : locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights', path: `/${urlLocale}/columns` },
     { name: post.title, path: `/${urlLocale}/columns/${post.slug}` },
   ]);
   const articleJsonLd = buildArticleJsonLd({

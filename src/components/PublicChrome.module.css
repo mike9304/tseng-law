@@ -1142,81 +1142,81 @@
    Footer, FooterEmailCopyButton render them for the Apple-system locales); the ink #16382d stays on the primary pill.
    ko shares this chrome since 2026-10-06 (src/lib/apple-design-locales.ts): every selector reads :is(zh-hant, ko).
    ===================================================================================================== */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header {
   border-bottom-color: #e3e3e8;
   color: #1d1d1f;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header:global(.header.scrolled) { border-bottom-color: #e3e3e8; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .headerUtility:global(.header-utility) { border-bottom-color: #e3e3e8; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.header-accent-line) { background: #e3e3e8; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > a,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > * > a,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > * > button,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-lang) > a { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > a:hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > a:focus-visible,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > * > a:hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > * > a:focus-visible,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > * > button:hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-nav) > * > button:focus-visible {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header:global(.header.scrolled) { border-bottom-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .headerUtility:global(.header-utility) { border-bottom-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.header-accent-line) { background: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > a,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > * > a,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > * > button,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-lang) > a { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > a:hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > a:focus-visible,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > * > a:hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > * > a:focus-visible,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > * > button:hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-nav) > * > button:focus-visible {
   color: #1d1d1f;
   background: #f5f5f7;
 }
 /* Language trigger: no box, a quiet #f5f5f7 pill (#e8e8ed on hover and while the panel is open). */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-lang) {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-lang) {
   border: 0;
   border-radius: 999px;
   background: transparent;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-lang) button[aria-haspopup='dialog'] {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-lang) button[aria-haspopup='dialog'] {
   border-radius: 999px;
   background: #f5f5f7;
   color: #1d1d1f;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-lang) button[aria-haspopup='dialog']:hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.utility-lang) button[aria-haspopup='dialog'][aria-expanded='true'] { background: #e8e8ed; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-link) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-lang) button[aria-haspopup='dialog']:hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.utility-lang) button[aria-haspopup='dialog'][aria-expanded='true'] { background: #e8e8ed; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-link) { color: #1d1d1f; }
 /* Every nav item opens its mega panel on hover, so the item itself needs no tint. */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-link:hover),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-link:focus-visible),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-item.active) :global(.nav-link) {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-link:hover),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-link:focus-visible),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-item.active) :global(.nav-link) {
   color: #1d1d1f;
   background: transparent;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-link):focus-visible { outline: 3px solid #16382d; outline-offset: 2px; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-link[aria-current='page']),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-link[aria-current='page']:hover),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.nav-link[aria-current='page']:focus-visible) {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-link):focus-visible { outline: 3px solid #16382d; outline-offset: 2px; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-link[aria-current='page']),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-link[aria-current='page']:hover),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.nav-link[aria-current='page']:focus-visible) {
   color: #1d1d1f;
   box-shadow: inset 0 -2px 0 #1d1d1f;
 }
 /* Search and menu: a 44px #f5f5f7 circle (#e8e8ed on hover), icon in #1d1d1f. */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.header-search-btn),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .menuToggle:global(.mobile-toggle) {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.header-search-btn),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .menuToggle:global(.mobile-toggle) {
   border-color: transparent;
   border-radius: 999px;
   background: #f5f5f7;
   color: #1d1d1f;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.header-search-btn):hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.header-search-btn):focus-visible,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .menuToggle:global(.mobile-toggle):hover {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.header-search-btn):hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.header-search-btn):focus-visible,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .menuToggle:global(.mobile-toggle):hover {
   border-color: transparent;
   background: #e8e8ed;
   color: #1d1d1f;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.mega-title) { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.mega-description) { color: #6e6e73; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.mega-links) a { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.mega-links) a:hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .header :global(.mega-links) a:focus-visible { color: #16382d; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.mega-title) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.mega-description) { color: #6e6e73; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.mega-links) a { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.mega-links) a:hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .header :global(.mega-links) a:focus-visible { color: #16382d; }
 
 /* Drawer */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .drawer:global(#public-mobile-nav-drawer) { background: rgb(0 0 0 / 40%); }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .drawer:global(#public-mobile-nav-drawer) .drawerPanel:global(.drawer-panel),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .drawer:global(#public-mobile-nav-drawer) :global(.drawer-brand) .brandText:global(.logo-kr),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .drawer :global(.drawer-nav-link) { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .drawerClose {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .drawer:global(#public-mobile-nav-drawer) { background: rgb(0 0 0 / 40%); }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .drawer:global(#public-mobile-nav-drawer) .drawerPanel:global(.drawer-panel),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .drawer:global(#public-mobile-nav-drawer) :global(.drawer-brand) .brandText:global(.logo-kr),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .drawer :global(.drawer-nav-link) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .drawerClose {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1226,46 +1226,46 @@
   background: #f5f5f7;
   color: #1d1d1f;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .drawerClose:hover { background: #e8e8ed; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .drawerClose:hover { background: #e8e8ed; }
 
 /* Page header hairlines */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .pageHeader:global(.page-header) { border-bottom-color: #e3e3e8; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .pageHeader:global(.page-header)::after { background: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .pageHeader:global(.page-header) { border-bottom-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .pageHeader:global(.page-header)::after { background: #e3e3e8; }
 
 /* Footer: graphite #1d1d1f (operator decision; the light #f5f5f7 alternative is in the report). Text #f5f5f7 /
    #a1a1a6, hairlines white 12%, focus rings 3px white. Above it, the skyline band sits on #f5f5f7. */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .skyline:global(.footer-skyline) { background: #f5f5f7; border-top-color: #e3e3e8; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer:global(.site-footer) {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .skyline:global(.footer-skyline) { background: #f5f5f7; border-top-color: #e3e3e8; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer:global(.site-footer) {
   background: #1d1d1f;
   color: #f5f5f7;
   border-top-color: transparent;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-offices),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-main),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-copyright-row) { border-color: rgb(255 255 255 / 12%); }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.office-label),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.office-link-name),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-main-brand),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-label),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-link-title) { color: #f5f5f7; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.office-link),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.office-link-address),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-main-note),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-link-list) a,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-legal-links) a,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.social-label),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-copyright-row) { color: #a1a1a6; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.office-link):hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.office-link):focus-visible,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-link-list) a:hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-link-list) a:focus-visible,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-legal-links) a:hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-legal-links) a:focus-visible { color: #f5f5f7; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.office-link + .office-link)::before { background: rgb(255 255 255 / 20%); }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-link) { color: #f5f5f7; text-decoration-color: rgb(245 245 247 / 45%); }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-link):hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-link):focus-visible { color: #fff; text-decoration-color: currentColor; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-copy) {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-offices),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-main),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-copyright-row) { border-color: rgb(255 255 255 / 12%); }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.office-label),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.office-link-name),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-main-brand),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-label),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-link-title) { color: #f5f5f7; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.office-link),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.office-link-address),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-main-note),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-link-list) a,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-legal-links) a,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.social-label),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-copyright-row) { color: #a1a1a6; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.office-link):hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.office-link):focus-visible,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-link-list) a:hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-link-list) a:focus-visible,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-legal-links) a:hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-legal-links) a:focus-visible { color: #f5f5f7; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.office-link + .office-link)::before { background: rgb(255 255 255 / 20%); }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-link) { color: #f5f5f7; text-decoration-color: rgb(245 245 247 / 45%); }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-link):hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-link):focus-visible { color: #fff; text-decoration-color: currentColor; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-copy) {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1275,35 +1275,35 @@
   background: rgb(255 255 255 / 10%);
   color: #f5f5f7;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-copy):hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-copy):focus-visible {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-copy):hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-copy):focus-visible {
   border-color: transparent;
   background: rgb(255 255 255 / 18%);
   color: #fff;
 }
 /* The language menu opens as a white sheet: its options read #1d1d1f (they inherited the footer's light text). */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer .localeSwitcher :global(.locale-flag-switcher-link),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-locale-switch) :global(.locale-flag-switcher-link),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer .localeSwitcher :global(a[aria-current='page']),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-locale-switch) :global(a[aria-current='page']) { color: #1d1d1f; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.social-icon) {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer .localeSwitcher :global(.locale-flag-switcher-link),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-locale-switch) :global(.locale-flag-switcher-link),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer .localeSwitcher :global(a[aria-current='page']),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-locale-switch) :global(a[aria-current='page']) { color: #1d1d1f; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.social-icon) {
   border-color: transparent;
   background: rgb(255 255 255 / 10%);
   color: #f5f5f7;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.social-icon):hover,
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.social-icon):focus-visible {
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.social-icon):hover,
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.social-icon):focus-visible {
   border-color: transparent;
   background: rgb(255 255 255 / 18%);
   color: #fff;
 }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 /* Hover is a colour change only; the ivory hover outlines of the shared footer stay off in zh-hant. */
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-link-list) a:hover:not(:focus-visible),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-link):hover:not(:focus-visible),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.footer-consultation-email-copy):hover:not(:focus-visible),
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .footer :global(.social-icon):hover:not(:focus-visible) { outline: none; }
-:global(.site:is([data-locale='zh-hant'], [data-locale='ko'])) .skyline :global(.skyline-image) img { filter: grayscale(100%) contrast(1.02) brightness(0.96); }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-link-list) a:hover:not(:focus-visible),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-link):hover:not(:focus-visible),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.footer-consultation-email-copy):hover:not(:focus-visible),
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .footer :global(.social-icon):hover:not(:focus-visible) { outline: none; }
+:global(.site:is([data-locale='zh-hant'], [data-locale='ko'], [data-locale='vi'])) .skyline :global(.skyline-image) img { filter: grayscale(100%) contrast(1.02) brightness(0.96); }
 
 /* =====================================================================================================
    ko chrome (2026-10-06 Korean identity; 2026-10-07 Korean big-firm grammar, operator: 「세종로펌 디자인으로 비슷하게,
@@ -1484,3 +1484,15 @@
 :global(.site[data-locale='zh-hant']) .contentFitProbeBrand,
 :global(.site[data-locale='zh-hant']) .footer :global(.footer-main-brand) { font-family: 'ZH Brand Serif', var(--font-display); }
 
+/* Vietnamese shares the neutral chrome, with the same forest actions as its page bodies. */
+:global(.site[data-locale='vi']) .header,
+:global(.site[data-locale='vi']) .footer {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --font-body: var(--font-sans);
+  font-family: var(--font-sans);
+}
+:global(.site[data-locale='vi']) .header :global(.nav-link) { letter-spacing: 0; }
+:global(.site[data-locale='vi']) .header :global(.nav-cta.button) { background: #235a46; border-color: #235a46; border-radius: 999px; }
+:global(.site[data-locale='vi']) .header :global(.nav-cta.button):hover { background: #163e2e; border-color: #163e2e; }
+:global(.site[data-locale='vi']) .header :global(.nav-link[aria-current='page']) { color: #235a46; }
+:global(.site[data-locale='vi']) .footer :global(.footer-main-brand) { font-family: var(--font-sans); letter-spacing: -0.015em; }

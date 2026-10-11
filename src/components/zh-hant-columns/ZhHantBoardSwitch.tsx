@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { issueBoardCopy, issueBoardPath } from '@/data/issue-board';
 import { pageCopy } from '@/data/page-copy';
-import type { AppleDesignLocale } from '@/lib/apple-design-locales';
+import { guidanceContent } from '@/data/international-guidance-content';
+import type { ApplePresentationLocale } from '@/lib/apple-design-locales';
 import styles from './ZhHantColumns.module.css';
 
 /**
@@ -22,7 +23,7 @@ export default function ZhHantBoardSwitch({
   issueCount?: number;
   latestIssues?: readonly { slug: string; title: string }[];
   /** ko shares the two-board cards since 2026-10-06. */
-  locale?: AppleDesignLocale;
+  locale?: ApplePresentationLocale;
 }) {
   const copy = issueBoardCopy[locale];
   const boardHref = issueBoardPath(locale);
@@ -39,7 +40,7 @@ export default function ZhHantBoardSwitch({
           {copy.expertTab}
           {typeof expertCount === 'number' ? <span className={styles.switchCount}>{expertCount}</span> : null}
         </span>
-        <span className={styles.switchText}>{pageCopy[locale].insights.description}</span>
+        <span className={styles.switchText}>{locale === 'vi' ? guidanceContent.vi.pages.columns.description : pageCopy[locale].insights.description}</span>
       </Link>
       <div className={`${styles.switchCard} ${active === 'issues' ? styles.switchActive : ''}`}>
         <Link

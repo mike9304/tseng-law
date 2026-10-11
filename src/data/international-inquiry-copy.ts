@@ -307,44 +307,44 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   vi: {
     guidanceNotice:
-      'Trang này được viết bằng tiếng Việt để cung cấp thông tin hướng dẫn chung, không phải ý kiến pháp lý cho vụ việc cụ thể của quý vị.',
+      'Thông tin trên website mang tính tham khảo, không thay thế ý kiến pháp lý cho vụ việc cụ thể của quý vị.',
     consultationNotice:
-      'Việc tư vấn chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+      'Luật sư tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
     methodConfirmationNotice:
-      'Nếu quý vị không dùng được ngôn ngữ nào trong bốn ngôn ngữ đó, hãy chọn “Cần xác nhận cách liên hệ”. Văn phòng xác nhận phương thức trao đổi bằng thư trả lời khi có phương thức khả thi; không bảo đảm hỗ trợ bằng ngôn ngữ khác và không cam kết thời gian phản hồi.',
+      'Nếu quý vị không thể trao đổi bằng ngôn ngữ nào trong bốn ngôn ngữ trên, quý vị có thể chọn “Cần xác nhận cách liên hệ”. Văn phòng trao đổi qua email để xác nhận phương thức khả thi, nếu có; không bảo đảm hỗ trợ bằng ngôn ngữ khác hay thời gian phản hồi.',
     preparationNotice:
-      'Quý vị có thể viết tóm tắt vụ việc bằng ngôn ngữ của mình. Phần nội dung gốc quý vị viết được giữ nguyên và không được dịch tự động.',
+      'Quý vị có thể viết yêu cầu bằng tiếng Việt hoặc ngôn ngữ của mình. Nội dung được giữ nguyên, không dịch tự động.',
     heading: 'Gửi yêu cầu tư vấn',
     intro:
-      'Vui lòng mô tả ngắn gọn vụ việc của quý vị. Luật sư sẽ xem xét nội dung trước khi trao đổi về bước tiếp theo.',
+      'Một bản tóm tắt về vụ việc và điều quý vị cần hỗ trợ là cơ sở để luật sư xem xét yêu cầu.',
     submitLabel: 'Gửi yêu cầu',
     submittingLabel: 'Đang gửi…',
     successMessage:
-      'Chúng tôi đã nhận được yêu cầu của quý vị và đang chờ xem xét. Điều này không có nghĩa là buổi tư vấn đã diễn ra hay lịch hẹn đã được xác nhận.',
+      'Yêu cầu của quý vị đã được tiếp nhận và đang chờ xem xét. Buổi tư vấn và lịch hẹn chưa được xác nhận.',
     savedNotificationPendingMessage:
-      'Yêu cầu của quý vị đã được lưu, nhưng chưa xác nhận được thông báo gửi tới văn phòng. Nội dung quý vị viết không bị mất. Nếu chưa nhận được phản hồi, quý vị cũng có thể gửi thư tới địa chỉ thư điện tử trên trang liên hệ.',
+      'Yêu cầu đã được lưu, nhưng hệ thống chưa xác nhận được việc gửi thông báo đến văn phòng. Nội dung của quý vị vẫn được giữ lại. Quý vị có thể liên hệ qua email trên trang này và cung cấp mã tiếp nhận.',
     receiptIdLabel: 'Mã tiếp nhận',
     failureMessage:
-      'Không gửi được yêu cầu của quý vị. Vui lòng thử lại, hoặc gửi tới địa chỉ thư điện tử trên trang liên hệ.',
-    originalLanguageLabel: 'Ngôn ngữ quý vị dùng để viết',
+      'Chưa gửi được yêu cầu. Quý vị có thể thử lại hoặc liên hệ qua email trên trang này.',
+    originalLanguageLabel: 'Ngôn ngữ của nội dung yêu cầu',
     originalLanguagePlaceholder:
-      'Ví dụ: tiếng Việt, tiếng Indonesia, tiếng Thái, tiếng Filipino hoặc ngôn ngữ khác',
-    preferredConsultationLanguageLabel: 'Ngôn ngữ quý vị muốn dùng khi tư vấn',
-    originalTextLabel: 'Tóm tắt vụ việc (bằng ngôn ngữ của quý vị)',
+      'Ví dụ: tiếng Việt',
+    preferredConsultationLanguageLabel: 'Ngôn ngữ mong muốn khi tư vấn',
+    originalTextLabel: 'Tóm tắt vụ việc',
     originalTextPlaceholder:
-      'Hãy cho biết chuyện gì đã xảy ra, quý vị cần hỗ trợ điều gì và thời hạn nếu có. Xin đừng ghi số hộ chiếu, số giấy tờ tùy thân hoặc thông tin tài khoản ngân hàng.',
-    nameLabel: 'Tên',
-    emailLabel: 'Thư điện tử',
+      'Diễn biến chính, điều quý vị cần hỗ trợ, mối liên hệ với Đài Loan và thời hạn đã biết. Không ghi số hộ chiếu, số giấy tờ tùy thân hoặc thông tin tài khoản ngân hàng.',
+    nameLabel: 'Họ và tên',
+    emailLabel: 'Email',
     consentLabel:
-      'Tôi đã đọc chính sách quyền riêng tư và đồng ý gửi yêu cầu này.',
-    privacyLinkLabel: 'Chính sách quyền riêng tư',
-    requiredMessage: 'Mục này là bắt buộc.',
-    invalidEmailMessage: 'Vui lòng nhập địa chỉ thư điện tử hợp lệ.',
+      'Tôi đã đọc chính sách bảo mật và đồng ý gửi yêu cầu này.',
+    privacyLinkLabel: 'Chính sách bảo mật',
+    requiredMessage: 'Thông tin này là bắt buộc.',
+    invalidEmailMessage: 'Địa chỉ email chưa hợp lệ.',
     tooLongMessage: 'Nội dung quá dài. Vui lòng rút ngắn rồi gửi lại.',
     sourceLanguageNotice:
-      'Bài viết này chỉ có bằng {language}, và liên kết sẽ mở trang gốc đó.',
+      'Liên kết mở bài viết gốc bằng {language}.',
     unavailableTranslationNotice:
-      'Bài viết này chưa được dịch sang ngôn ngữ của trang này. Một liên kết có ghi rõ ngôn ngữ gốc sẽ mở bài viết gốc.',
+      'Bài viết chưa có bản tiếng Việt. Ngôn ngữ của bản gốc được ghi bên cạnh liên kết.',
     unavailableLanguageNotice: 'Trang này không được cung cấp bằng {language}.',
     languageOptions: {
       en: 'Tiếng Anh (English)',
@@ -352,7 +352,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Tiếng Nhật (日本語)',
       ko: 'Tiếng Hàn (한국어)',
       'needs-method-confirmation':
-        'Không dùng được bốn ngôn ngữ trên — cần xác nhận cách liên hệ',
+        'Cần xác nhận cách liên hệ',
     },
   },
   id: {

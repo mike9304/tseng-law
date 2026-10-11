@@ -28,7 +28,7 @@ const GUIDANCE_CENTRAL_EUROPE_SRC = path.join(process.cwd(), 'src/data/internati
 /**
  * Filter "All" word taken from reviewed `viewAllLabel` already in
  * `international-guidance-content.ts` (grep 2026-09-16). Not invented:
- *   vi  line 140  mega.services.viewAllLabel: 'Xem tất cả'     → 'Tất cả'
+ *   vi  home.columnsViewAllLabel: 'Xem tất cả bài viết'       → 'Tất cả'
  *   id  line 635  mega.services.viewAllLabel: 'Lihat semua'    → 'Semua'
  *   th  line 1130 mega.services.viewAllLabel: 'ดูทั้งหมด'       → 'ทั้งหมด'
  *   fil line 1625 mega.services.viewAllLabel: 'Tingnan ang lahat' → 'Lahat'
@@ -83,7 +83,7 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
 };
 
 const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
-  vi: "viewAllLabel: 'Xem tất cả'",
+  vi: "columnsViewAllLabel: 'Xem tất cả bài viết'",
   id: "viewAllLabel: 'Lihat semua'",
   th: "viewAllLabel: 'ดูทั้งหมด'",
   fil: "viewAllLabel: 'Tingnan ang lahat'",

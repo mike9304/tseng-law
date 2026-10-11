@@ -11,6 +11,23 @@ export function isAppleDesignLocale(locale: string | null | undefined): locale i
   return locale === 'zh-hant' || locale === 'ko';
 }
 
+/** Shared visual components may also serve vi, without widening the builder/copy locale contract. */
+export type ApplePresentationLocale = AppleDesignLocale | 'vi';
+
+export function isApplePresentationLocale(locale: string | null | undefined): locale is ApplePresentationLocale {
+  return isAppleDesignLocale(locale) || locale === 'vi';
+}
+
+export function applePresentationRootProps(
+  locale: ApplePresentationLocale,
+  page: string,
+  design: string = page,
+): { id: string; 'data-zh-hant-design'?: string; 'data-ko-design'?: string; 'data-vi-design'?: string } {
+  return locale === 'vi'
+    ? { id: `vi-${page}`, 'data-vi-design': design }
+    : appleDesignRootProps(locale, page, design);
+}
+
 /**
  * Root attributes for an Apple-system page body: `id="zh-hant-<page>" data-zh-hant-design` for zh-hant,
  * `id="ko-<page>" data-ko-design` for ko. The page modules are scoped to :is(#zh-hant-<page>, #ko-<page>), and

@@ -18,7 +18,7 @@ export default function ScrollTopButton({ locale }: { locale: PublicLocale8 }) {
   const [visible, setVisible] = useState(false);
   const [nearFooter, setNearFooter] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const label = scrollTopLabels[chromeSiteLocale(locale)];
+  const label = locale === 'vi' ? 'Về đầu trang' : scrollTopLabels[chromeSiteLocale(locale)];
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');

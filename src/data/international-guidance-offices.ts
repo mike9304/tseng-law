@@ -41,7 +41,7 @@ export interface GuidanceOfficeCopy {
 
 export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
   vi: {
-    label: 'VĂN PHÒNG',
+    label: 'Văn phòng',
     title: 'Văn phòng',
     description: 'Địa chỉ các văn phòng tại Đài Loan của Hovering International Law Firm.',
     officeLabel: 'Văn phòng',
@@ -1192,14 +1192,14 @@ export interface GuidanceFooterCopy {
 export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
   vi: {
     officeLabel: 'Văn phòng',
-    officeQuickLinksLabel: 'Liên kết nhanh đến các văn phòng',
+    officeQuickLinksLabel: 'Các văn phòng',
     followLabel: 'Theo dõi',
     blogLabel: 'Blog',
     websiteLabel: 'Trang web chính thức',
     sitemapLabel: 'Sơ đồ trang web',
-    copyEmailLabel: 'Sao chép địa chỉ thư điện tử',
-    emailCopiedMessage: 'Đã sao chép địa chỉ thư điện tử.',
-    officialConsultationEmailLabel: 'Thư điện tử tư vấn chính thức',
+    copyEmailLabel: 'Sao chép email',
+    emailCopiedMessage: 'Đã sao chép email.',
+    officialConsultationEmailLabel: 'Email liên hệ tư vấn',
   },
   id: {
     officeLabel: 'Kantor',

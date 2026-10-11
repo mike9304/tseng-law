@@ -125,9 +125,9 @@ export default function MobileNavDrawer({
   if (!open && !languagePickerOpen) return null;
 
   const closeLabel =
-    locale === 'ko' ? '닫기' : locale === 'zh-hant' ? '關閉' : locale === 'ja' ? '閉じる' : 'Close';
+    locale === 'vi' ? 'Đóng trình đơn' : locale === 'ko' ? '닫기' : locale === 'zh-hant' ? '關閉' : locale === 'ja' ? '閉じる' : 'Close';
   const drawerLabel =
-    locale === 'ko'
+    locale === 'vi' ? 'Trình đơn trên điện thoại' : locale === 'ko'
       ? '모바일 메뉴'
       : locale === 'zh-hant'
         ? '行動選單'
@@ -135,7 +135,7 @@ export default function MobileNavDrawer({
           ? 'モバイルメニュー'
           : 'Mobile menu';
   const navLabel =
-    locale === 'ko'
+    locale === 'vi' ? 'Điều hướng chính' : locale === 'ko'
       ? '모바일 주요 메뉴'
       : locale === 'zh-hant'
         ? '行動主要選單'

@@ -130,20 +130,20 @@ export interface GuidanceTeamCopy {
 
 export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
   vi: {
-    label: 'ĐỘI NGŨ CỦA CHÚNG TÔI',
+    label: 'Luật sư và đội ngũ',
     title: TEAM_NAME_BY_LOCALE['vi'],
     description: 'Đội ngũ do luật sư Wei Tseng phụ trách xử lý các vấn đề pháp luật Đài Loan và vụ việc giữa Hàn Quốc và Đài Loan.',
     representativeTitle: 'Luật sư thành viên',
     teamTitle: 'Luật sư và nhân viên',
-    partnerTitle: 'Kế toán sư hợp tác',
+    partnerTitle: 'Kế toán viên hợp tác',
     introLabel: 'Giới thiệu',
     educationLabel: 'Học vấn',
     experienceLabel: 'Kinh nghiệm',
     photoAltPrefix: 'Ảnh',
     workingLanguagesLabel: 'Ngôn ngữ làm việc',
     fullProfileLabel: 'Hồ sơ đầy đủ (tiếng Anh)',
-    keyFactsHeading: 'Luật sư Wei Tseng — Thông tin cơ bản',
-    qualificationLabel: 'Tư cách và nơi công tác',
+    keyFactsHeading: 'Luật sư Wei Tseng',
+    qualificationLabel: 'Tư cách hành nghề',
     qualificationSentence:
       '{name} là luật sư có tư cách hành nghề tại Đài Loan và là luật sư thành viên của {firm}.',
     practiceLabel: 'Lĩnh vực chính',
@@ -152,8 +152,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Luật sư thành viên tại Đài Loan',
       'chang-rongxuan': 'Luật sư tại Đài Loan',
       'chang-fangyu': 'Trợ lý pháp lý',
-      'son-jungmin': 'Quản lý nghiệp vụ Hàn Quốc',
-      'huang-shengping': 'Kế toán sư hợp tác (會計師, CPA)',
+      'son-jungmin': 'Quản lý hoạt động văn phòng Hàn Quốc',
+      'huang-shengping': 'Kế toán viên hợp tác (會計師, CPA)',
     },
   },
   id: {
@@ -1874,7 +1874,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'Trợ lý pháp lý cao cấp, nhiều năm hỗ trợ tố tụng, pháp chế doanh nghiệp và các vụ việc đầu tư nước ngoài tại nhiều văn phòng luật.',
-        'Hỗ trợ tố tụng, thành lập công ty, thủ tục chấp thuận đầu tư nước ngoài, xin giấy phép và việc trao đổi giữa Hàn Quốc và Đài Loan.',
+        'Hỗ trợ tố tụng, thành lập công ty, thủ tục chấp thuận đầu tư nước ngoài, xin giấy phép và trao đổi với khách hàng nước ngoài.',
       ],
       education: ['Cử nhân Luật (LL.B.), Tunghai University'],
       experience: [
@@ -1884,7 +1884,7 @@ export const guidanceTeamBios: Record<
     },
     'son-jungmin': {
       intro: [
-        'Điều phối lịch tư vấn và việc liên lạc cho khách hàng Hàn Quốc.',
+        'Điều phối lịch tư vấn và liên lạc qua văn phòng Hàn Quốc.',
         'Hỗ trợ trao đổi giữa các bộ phận bằng hệ thống tài liệu và quy trình công việc, với nền tảng khoa học máy tính.',
       ],
       education: ['Cử nhân (B.S.) Khoa học máy tính, National Cheng Kung University'],

@@ -2,25 +2,25 @@
   "vi": {
     "nav": {
       "home": "Trang chủ",
-      "services": "Lĩnh vực dịch vụ",
+      "services": "Dịch vụ pháp lý",
       "about": "Về văn phòng",
-      "lawyers": "Luật sư",
-      "pricing": "Phạm vi và chi phí",
+      "lawyers": "Luật sư và đội ngũ",
+      "pricing": "Chi phí dịch vụ",
       "contact": "Liên hệ",
       "faq": "Câu hỏi thường gặp",
-      "privacy": "Quyền riêng tư",
-      "disclaimer": "Tuyên bố miễn trừ trách nhiệm",
+      "privacy": "Chính sách bảo mật",
+      "disclaimer": "Thông tin pháp lý",
       "columns": "Bài viết"
     },
-    "languageLabel": "Ngôn ngữ của trang",
-    "skipLink": "Bỏ qua phần điều hướng, đến nội dung chính",
-    "menuLabel": "Trình đơn",
+    "languageLabel": "Ngôn ngữ",
+    "skipLink": "Đến nội dung chính",
+    "menuLabel": "Mở menu",
     "contactCta": "Gửi yêu cầu tư vấn",
-    "footerNotice": "Trang tiếng Việt này chỉ cung cấp thông tin hướng dẫn chung về công việc của văn phòng theo pháp luật Đài Loan. Đây không phải ý kiến pháp lý cho vụ việc cụ thể, và việc gửi thông tin qua trang này không tự nó tạo lập quan hệ giữa luật sư và khách hàng.",
+    "footerNotice": "Nội dung trên website là thông tin chung về pháp luật, không thay thế ý kiến pháp lý cho từng vụ việc. Phạm vi tư vấn của văn phòng là pháp luật Đài Loan. Việc gửi yêu cầu chưa làm phát sinh quan hệ luật sư – khách hàng.",
     "pages": {
       "home": {
-        "title": "Dịch vụ pháp lý tại Đài Loan — hướng dẫn bằng tiếng Việt",
-        "description": "Giới thiệu chung bằng tiếng Việt về phạm vi công việc của Hovering International Law Firm tại Đài Loan, ngôn ngữ tư vấn và cách bắt đầu liên hệ."
+        "title": "Dịch vụ pháp lý tại Đài Loan",
+        "description": "Hovering International Law Firm tại Đài Loan: tư vấn doanh nghiệp, tranh chấp, lao động, hôn nhân và gia đình. Thông tin dịch vụ và bài viết bằng tiếng Việt."
       }
     }
   },

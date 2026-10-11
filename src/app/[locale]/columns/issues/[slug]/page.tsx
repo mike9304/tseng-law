@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AiAuthorBox from '@/components/AiAuthorBox';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
+import ViArticleAuthority from '@/components/vi-design/ViArticleAuthority';
+import ViArticleShell from '@/components/vi-design/ViArticleShell';
 import ColumnContent from '@/components/ColumnContent';
 import ColumnGeneratedVideo from '@/components/ColumnGeneratedVideo';
 import { resolveTrafficSubject } from '@/lib/traffic-collection';
@@ -31,7 +33,7 @@ export const dynamic = 'force-dynamic';
 
 const MIN_TOC_SECTIONS = 3;
 
-/** Shell (labels, mailto template, attorney card) locale; vi borrows en like other guidance pages. */
+/** Legacy markdown/link locale. Vietnamese UI and authority copy use their own components. */
 function shellLocale(locale: IssueBoardLocale): SiteLocale {
   return locale === 'vi' ? 'en' : locale;
 }
@@ -100,7 +102,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
   const shell = shellLocale(locale);
   const boardPath = issueBoardPath(locale);
   const articlePath = `${boardPath}/${post.slug}`;
-  const tocEntries = locale === 'vi' ? [] : extractColumnToc(post.content);
+  const tocEntries = extractColumnToc(post.content);
   const faqItems = post.faq ?? [];
   const faqJsonLd = faqItems.length > 0 ? buildFaqJsonLd(faqItems, locale) : null;
   const guideLinks = guideLinksFor(locale, post);
@@ -165,7 +167,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={post.featuredImage} alt="" aria-hidden="true" className={styles.heroBackdrop} />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={post.featuredImage} alt={post.title} className="blog-hero-img" />
+          <img src={post.featuredImage} alt={locale === 'vi' ? post.featuredImageAlt || post.title : post.title} aria-describedby={locale === 'vi' && post.featuredImageCaption ? 'issue-image-caption' : undefined} className="blog-hero-img" />
           <div className="blog-hero-overlay" />
         </div>
         <div className="container blog-hero-inner">
@@ -178,13 +180,18 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           </div>
         </div>
       </section>
+      {locale === 'vi' && post.featuredImageCaption ? (
+        <div className="container">
+          <p id="issue-image-caption" className={styles.imageCaption} data-column-image-caption>{post.featuredImageCaption}</p>
+        </div>
+      ) : null}
       <article className={`blog-article ${styles.article}`}>
         <div className="container blog-container">
           <div className="blog-body">
             <p className={boardStyles.dateNote} data-issue-date-note>{t.dateNote}</p>
             {tocEntries.length >= MIN_TOC_SECTIONS ? <ColumnToc entries={tocEntries} label={t.tocLabel} /> : null}
             <ColumnGeneratedVideo locale={locale} slug={post.slug} source="issue" autoPlay={resolveTrafficSubject(post, 'issue') !== null} />
-            <ColumnContent content={post.content} locale={shell} />
+            <ColumnContent content={post.content} locale={shell} uiLocale={locale === 'vi' ? 'vi' : shell} />
             {faqItems.length > 0 ? (
               <section className="column-faq" aria-label={t.faqHeading}>
                 <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>
@@ -214,15 +221,15 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
               <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
               <p className="blog-sidebar-text">{t.consultationText}</p>
               <a
-                href={getConsultationPublicMailto(shell)}
+                href={locale === 'vi' ? '/vi/contact' : getConsultationPublicMailto(shell)}
                 className="button blog-sidebar-btn"
-                aria-label={`${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
+                aria-label={locale === 'vi' ? t.consultationButton : `${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
               >
                 {t.consultationButton}
               </a>
             </div>
             <div className="blog-sidebar-card blog-sidebar-card--attorney">
-              <AttorneyAuthorityCard locale={shell} heading={AI_COLUMN_ATTORNEY_HEADING[shell] ?? AI_COLUMN_ATTORNEY_HEADING.en} />
+              {locale === 'vi' ? <ViArticleAuthority /> : <AttorneyAuthorityCard locale={shell} heading={AI_COLUMN_ATTORNEY_HEADING[shell] ?? AI_COLUMN_ATTORNEY_HEADING.en} />}
             </div>
             <div className="blog-sidebar-card">
               <h3 className="blog-sidebar-title">{t.relatedTitle}</h3>
@@ -255,6 +262,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
       ) : null}
     </>
   );
+  if (locale === 'vi') return <ViArticleShell kind="issue">{content}</ViArticleShell>;
   // ja 昊 V2 inner pages (2026-10-02): same article inside the ja wrapper, styled like the ja column detail.
   if (locale === 'ja') return <JaPageShell page="column" className={jaColumnStyles.root}>{content}</JaPageShell>;
   // zh-hant second pass (son7-87 / Opus 5.5): same article inside the zh-hant column-detail wrapper (split hero, sidebar).

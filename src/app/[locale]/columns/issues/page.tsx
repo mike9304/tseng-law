@@ -8,10 +8,10 @@ import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell'
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import jaColumnsStyles from '@/components/ja-design/JaColumns.module.css';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
-import { isAppleDesignLocale } from '@/lib/apple-design-locales';
+import { isApplePresentationLocale } from '@/lib/apple-design-locales';
 import { EnIssuesShell } from '@/components/en-design/EnColumns';
 import { toColumnListItems } from '@/lib/column-list-items';
-import { ISSUE_BOARD_LOCALES, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
+import { ISSUE_BOARD_LOCALES, getAllColumnPosts, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
 import { issueBoardCopy, issueBoardPath } from '@/data/issue-board';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
@@ -71,7 +71,7 @@ export default async function IssueBoardPage(props: {
       />
       {/* en: the eyebrow names the parent section ("Insights"), as the board tabs below do. */}
       <PageHeader locale={locale} label={locale === 'en' ? copy.columns : copy.label} title={copy.title} description={copy.description} />
-      {isAppleDesignLocale(locale) ? <ZhHantBoardSwitch active="issues" issueCount={posts.length} locale={locale} /> : <IssueBoardTabs locale={locale} active="issues" />}
+      {isApplePresentationLocale(locale) ? <ZhHantBoardSwitch active="issues" expertCount={locale === 'vi' ? getAllColumnPosts('vi').length : undefined} issueCount={posts.length} locale={locale} /> : <IssueBoardTabs locale={locale} active="issues" />}
       <ColumnsGrid
         locale={locale}
         posts={toColumnListItems(posts)}
@@ -91,7 +91,7 @@ export default async function IssueBoardPage(props: {
   // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside the columns shell (header, tabs, grid styling).
   if (locale === 'ja') return <JaPageShell page="columns" className={jaColumnsStyles.root}>{body}</JaPageShell>;
   // zh-hant and (since 2026-10-06) ko: the Apple columns shell.
-  if (isAppleDesignLocale(locale)) return <ZhHantColumnsShell locale={locale}>{body}</ZhHantColumnsShell>;
+  if (isApplePresentationLocale(locale)) return <ZhHantColumnsShell locale={locale}>{body}</ZhHantColumnsShell>;
   // en redesign (Opus 5.5 en lane): same blocks inside the en wrapper with the en columns-index styling.
   return locale === 'en' ? <EnIssuesShell>{body}</EnIssuesShell> : body;
 }

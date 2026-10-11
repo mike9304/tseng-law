@@ -17,7 +17,8 @@ import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
-import { isAppleDesignLocale } from '@/lib/apple-design-locales';
+import { isApplePresentationLocale } from '@/lib/apple-design-locales';
+import { taiwanOfficeData } from '@/data/office-locations';
 import { IS_STATIC_SITE } from '@/lib/static-site';
 import {
   CONSULTATION_EMAIL,
@@ -126,11 +127,11 @@ export default function Footer({
       guidanceOffices && guidanceOfficeOrder[index]
         ? guidanceOffices.officeTitles[guidanceOfficeOrder[index]]
         : office.title,
-    address: office.details[0],
+    address: locale === 'vi' ? taiwanOfficeData['zh-hant'][index]?.address ?? office.details[0] : office.details[0],
     href: `/${locale}/contact#offices`,
   }));
-  const consultationMailto = getConsultationPublicMailto(chromeLocale);
-  const consultationCtaLabel = getConsultationCtaLabel(chromeLocale);
+  const consultationMailto = locale === 'vi' ? `mailto:${CONSULTATION_EMAIL}` : getConsultationPublicMailto(chromeLocale);
+  const consultationCtaLabel = locale === 'vi' ? content.nav.cta.label : getConsultationCtaLabel(chromeLocale);
   const legalLinks = isGuidanceLocale4(locale)
     ? guidanceLegalLinks(locale)
     : locale === 'ko'
@@ -164,7 +165,7 @@ export default function Footer({
           ...(IS_STATIC_SITE ? [] : [{ label: 'Client log in', href: '/en/login' }])
         ];
   // The Apple-system locales (zh-hant, ko) draw the social glyphs from the monoline set; other locales keep the SVGs below.
-  const zhIcons = isAppleDesignLocale(locale);
+  const zhIcons = isApplePresentationLocale(locale);
   const socialLabels =
     locale === 'ko'
       ? { blog: '블로그', youtube: '유튜브', website: '공식 사이트' }

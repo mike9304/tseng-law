@@ -21,11 +21,11 @@ const resolutionFaqAnswer =
 const suspensionFaqAnswer =
   '1개월 이상 휴업하는 회사는 휴업 전 또는 휴업 시작일부터 15일 이내에 휴업등기를 신청해야 하며(이미 영업세법에 따라 세무기관에 휴업을 신고·核備한 경우에는 이 등기가 필요하지 않습니다 — 회사등기방법(公司登記辦法) 제3조 제1항 단서), 1회 휴업 기간은 1년을 넘을 수 없습니다. 다만 휴업한 연도에도 연간 소득세 결산신고 의무가 있으므로 세무신고가 일률적으로 면제되는 것은 아닙니다. 세목, 보유 자산, 근로자와 그 밖의 사정에 따른 의무를 개별적으로 확인해야 합니다.';
 const article9Paragraph =
-  '대만 「회사법」 제9조는 회사가 납입받아야 할 주금에 관하여 실제로 납입되지 않았는데도 전액 납입된 것으로 표시한 경우, 또는 등기 후 주금을 주주에게 반환하거나 주주가 회수하도록 허용한 경우에 5년 이하의 유기징역·구류 또는 50만 대만달러 이상 250만 대만달러 이하의 벌금을 규정합니다.';
+  '대만 「회사법」 제9조는 회사가 납입받아야 할 주금에 관하여 실제로 납입되지 않았는데도 전액 납입된 것으로 표시한 경우, 또는 등기 후 주금을 주주에게 반환하거나 주주가 회수하도록 허용한 경우에 회사 책임자(公司負責人)에 대하여 5년 이하의 유기징역·구역(拘役) 또는 50만 대만달러 이상 250만 대만달러 이하의 벌금을 규정합니다. 벌금은 징역이나 구역과 함께 부과(併科)될 수도 있습니다.';
 const article9ScopeSentence =
   '이 조항을 회사 계좌에서 이루어지는 모든 지급에 확대해서는 안 됩니다.';
 const article90Paragraph =
-  '청산인이 회사 채무를 변제하기 전에 회사 재산을 주주에게 분배한 경우에는 「회사법」 제90조에 따라 1년 이하의 유기징역·구류 또는 6만 대만달러 이하의 벌금에 처해질 수 있습니다.';
+  '청산인이 회사 채무를 변제하기 전에 회사 재산을 주주에게 분배한 경우에는 「회사법」 제90조에 따라 1년 이하의 유기징역·구역(拘役) 또는 6만 대만달러 이하의 벌금에 처해질 수 있습니다. 이때에도 벌금은 징역이나 구역과 함께 부과될 수 있습니다.';
 const insolvencyParagraph =
   '해산 후의 청산은 회사 자산이 부채보다 많은 경우에만 가능한 절차가 아닙니다. 「회사법」 제89조에 따르면 회사 재산으로 채무를 변제하기에 부족한 경우 청산인은 즉시 파산선고를 신청해야 합니다. 핵심은 회사 재산이 채무 변제에 부족한지, 지급기일과 현금 흐름이 어떠한지, 담보와 우선채권이 무엇인지, 청산인이 언제 그 사정을 알았는지를 실제 자료로 판단하는 것입니다. 회사가 보유한 채권의 회수 가능성과 자산 매각비용도 명목 금액이 아니라 현실적인 가치로 검토해야 합니다.';
 // FAQ answers now live in the front matter only; the body states the same rules in its own sentences.
@@ -82,7 +82,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-10-06');
+    expect(parsed.data.lastmod).toBe('2026-10-12');
     expect(parsed.data.date_display).toBe('2025년 9월 13일');
     expect(parsed.data.categories).toEqual(['대만 법인설립']);
     expect(parsed.data.featured_image).toBe(
@@ -94,7 +94,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-10-06');
+    expect(post?.date).toBe('2026-10-12');
     expect(post?.dateDisplay).toBe('2025년 9월 13일');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('법인설립');
@@ -289,7 +289,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
     expect(eojeolCount).toBeGreaterThanOrEqual(1_000);
-    expect(eojeolCount).toBe(1_803);
+    expect(eojeolCount).toBe(1_821);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

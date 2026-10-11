@@ -59,9 +59,9 @@ const dissolutionColumnLink =
   '[Closing a Taiwan subsidiary or branch: when can the remaining cash leave?](/en/columns/taiwan-company-dissolution-liquidation)';
 
 const article9Paragraph =
-  'Article 9 of Taiwan’s Company Act carries a criminal penalty. It applies when share capital payable to a company was represented as fully paid although it had not actually been paid, or when, after registration, share capital was returned to shareholders or shareholders were permitted to recover it. The penalty is imprisonment for up to five years, detention, or a fine of between NT$500,000 and NT$2.5 million. The provision does not generally punish ordinary, lawful uses of company funds.';
+  'Article 9 of Taiwan’s Company Act carries a criminal penalty. It applies when share capital payable to a company was represented as fully paid although it had not actually been paid, or when, after registration, share capital was returned to shareholders or shareholders were permitted to recover it. The penalty falls on the company’s responsible persons (公司負責人): imprisonment for up to five years, detention, or a fine of between NT$500,000 and NT$2.5 million. That fine may also be imposed together with imprisonment or detention. The provision does not generally punish ordinary, lawful uses of company funds.';
 const article90Paragraph =
-  'A liquidator who distributes company property to shareholders before paying the company’s debts faces imprisonment for up to one year, detention, or a fine of up to NT$60,000 (Company Act, Article 90).';
+  'A liquidator who distributes company property to shareholders before paying the company’s debts faces imprisonment for up to one year, detention, or a fine of up to NT$60,000, which may likewise be imposed together with imprisonment or detention (Company Act, Article 90).';
 const article89Paragraph =
   'Liquidation after dissolution is not reserved for companies whose assets exceed their liabilities. Under Article 89 of the Company Act, if the company’s property is insufficient to pay its debts, the liquidator must immediately apply for a declaration of bankruptcy. Whether ordinary liquidation can continue should be determined individually, after reviewing excess liabilities, inability to pay, security, tax debts, and the number of creditors.';
 
@@ -344,8 +344,8 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       parsed.content.split('## Official Sources')[0],
     );
 
-    expect(visibleWords).toBe(3_234);
-    expect(proseWords).toBe(3_105);
+    expect(visibleWords).toBe(3_260);
+    expect(proseWords).toBe(3_131);
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
     expect(parsed.data.read_time).toBe('14 min read');
     expect(post?.readTime).toBe('14 min read');

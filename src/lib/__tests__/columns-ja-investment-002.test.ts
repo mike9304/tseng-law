@@ -19,11 +19,11 @@ const resolutionFaqAnswer =
 const suspensionFaqAnswer =
   '1か月以上休業する会社は、休業前または休業開始後15日以内に休業登記を申請し（ただし、すでに営業税法に基づき税務機関に休業を申告・核備している場合は、この登記は不要です――会社登記弁法第3条第1項但書）、1回の休業期間は最長1年です。ただし、休業した年度も年度の所得税申告が必要であり、税務申告が一律に不要になるわけではありません。税目、保有資産、従業員その他の事情に応じた義務を個別に確認してください。';
 const article9Paragraph =
-  '会社法（公司法）第9条は、会社が受け取るべき払込金（股款）について、実際には払い込まれていないのに全額払込済みと表示した場合と、登記後に払込金を株主へ返還し、または株主による回収を許した場合を処罰します。定められているのは、5年以下の有期刑、拘留または50万以上250万新台湾ドル（NT$）以下の罰金です。';
+  '会社法（公司法）第9条は、会社が受け取るべき払込金（股款）について、実際には払い込まれていないのに全額払込済みと表示した場合と、登記後に払込金を株主へ返還し、または株主による回収を許した場合に、会社の責任者（公司負責人）を処罰します。定められているのは、5年以下の有期刑、拘役または50万以上250万新台湾ドル（NT$）以下の罰金です。罰金は、有期刑や拘役に併科されることもあります。';
 const article9ScopeSentence =
   '第9条は、通常の適法な会社資金の使用一般を処罰する規定ではありません。';
 const article90Paragraph =
-  '会社の債務を弁済する前に会社財産を株主へ分配した清算人には、1年以下の有期刑、拘留またはNT$6万以下の罰金が科され得ます（会社法第90条）。';
+  '会社の債務を弁済する前に会社財産を株主へ分配した清算人には、1年以下の有期刑、拘役またはNT$6万以下の罰金が科され得ます（会社法第90条）。ここでも、罰金は有期刑や拘役に併科され得ます。';
 const insolvencyParagraph =
   '解散後の清算は、資産が負債を上回る場合だけに限られません。清算人は、会社財産が債務を弁済するのに不足するとき、直ちに破産宣告を申し立てなければなりません。会社法第89条の定めです。債務超過、支払不能、担保、租税債務、債権者数を確認し、通常清算を続けられるかを個別に判断します。';
 const factSpecificParagraph =
@@ -39,7 +39,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-10-06');
+    expect(parsed.data.lastmod).toBe('2026-10-12');
     expect(parsed.data.date_display).toBe('2025年9月13日');
     expect(parsed.data.read_time).toBe('約13分');
     expect(parsed.data.faq).toEqual([
@@ -59,7 +59,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-10-06');
+    expect(post?.date).toBe('2026-10-12');
     expect(post?.dateDisplay).toBe('2025年9月13日');
     expect(post?.readTime).toBe('約13分');
     expect(post?.faq).toEqual(parsed.data.faq);

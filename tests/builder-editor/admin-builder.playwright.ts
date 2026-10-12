@@ -436,12 +436,21 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     }
     const publicHomeResponse = await page.request.get('/ko');
     expect(publicHomeResponse.status()).toBe(200);
-    const publicHomeHtml = await publicHomeResponse.text();
-    expect(publicHomeHtml).toContain('hero-search-bar overlap');
-    // section-snapshot-v1: once the editor shell seeds the site, the public home
-    // is served from the builder snapshot backend (lifecycle.publishBackend =
-    // 'builder-snapshot'), so builder-pub-node markers are expected here.
-    expect(publicHomeHtml).toContain('builder-pub-node');
+    // The stock Korean home renders KoHomeBody rather than saved canvas wrappers.
+    await page.goto('/ko', { waitUntil: 'domcontentloaded' });
+    const publicHome = page.locator('#ko-home[data-ko-design="home"]');
+    await expect(publicHome).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
+    const homeSearch = publicHome.locator('form[role="search"]');
+    await expect(homeSearch).toBeVisible();
+    await expect(homeSearch).toHaveAttribute('action', '/ko/search');
+    await expect(homeSearch).toHaveAttribute('method', 'get');
+    const homeSearchInput = homeSearch.locator('input#ko-home-search');
+    await expect(homeSearchInput).toBeVisible();
+    await expect(homeSearchInput).toHaveAttribute('name', 'q');
+    await expect(homeSearchInput).toHaveAttribute('type', 'search');
+    await expect(homeSearch.locator('button[type="submit"]')).toBeVisible();
+    await expect(page.locator('.builder-pub-node[data-node-id^="home-"]')).toHaveCount(0);
     const columnsResponse = await page.request.get('/api/builder/columns?locale=ko');
     expect(columnsResponse.status()).toBe(200);
     const columnsPayload = (await columnsResponse.json()) as {
@@ -1286,20 +1295,43 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(
       columnsComposite.locator('[data-builder-surface-key="headline"]').first(),
     ).toContainText(/칼럼|Columns/);
-    // The composite renders the live ColumnsGrid archive — assert against
-    // current API titles instead of hardcoded post names.
-    const columnsListPayload = (await (await page.request.get('/api/builder/columns?locale=ko')).json()) as {
-      columns?: Array<{ title?: string }>;
+    // The archive groups cards by topic, independently of the API's sort order.
+    // Match every rendered ordinary-column card to its full published API record.
+    const columnsListResponse = await page.request.get('/api/builder/columns?locale=ko');
+    expect(columnsListResponse.status()).toBe(200);
+    const columnsListPayload = (await columnsListResponse.json()) as {
+      ok: boolean;
+      locale: string;
+      columns: Array<{ slug: string; title: string; locale: string; hasPublished: boolean }>;
     };
-    const columnTitleSamples = (columnsListPayload.columns ?? [])
-      .slice(0, 8)
-      .map((column) => (column.title ?? '').slice(0, 10))
-      .filter((title) => title.length > 1);
-    expect(columnTitleSamples.length).toBeGreaterThan(0);
-    await expect.poll(async () => {
-      const compositeText = await columnsComposite.innerText();
-      return columnTitleSamples.some((title) => compositeText.includes(title));
-    }, { timeout: 10_000 }).toBe(true);
+    expect(columnsListPayload.ok).toBe(true);
+    expect(columnsListPayload.locale).toBe('ko');
+    expect(Array.isArray(columnsListPayload.columns)).toBe(true);
+    expect(columnsListPayload.columns.length).toBeGreaterThan(0);
+    const renderedColumnCards = columnsComposite.locator(
+      'a.columns-card:not([href^="/ko/columns/issues/"])',
+    );
+    await expect(renderedColumnCards.first()).toBeVisible({ timeout: 10_000 });
+    const columnCards = await renderedColumnCards.all();
+    expect(columnCards.length).toBeGreaterThan(0);
+    for (const card of columnCards) {
+      await expect(card).toBeVisible();
+      const href = await card.getAttribute('href');
+      expect(href).toMatch(/^\/ko\/columns\/[^/?#]+$/);
+      const matchingColumns = columnsListPayload.columns.filter(
+        (column) => href === `/ko/columns/${column.slug}`,
+      );
+      expect(matchingColumns).toHaveLength(1);
+      const matchingColumn = matchingColumns[0];
+      expect(matchingColumn.locale).toBe('ko');
+      expect(matchingColumn.hasPublished).toBe(true);
+      expect(matchingColumn.title).toMatch(/\S/);
+      const cardTitle = card.locator('h3.columns-card-title');
+      await expect(cardTitle).toHaveCount(1);
+      expect((await cardTitle.innerText()).replace(/\s+/g, ' ').trim()).toBe(
+        matchingColumn.title.replace(/\s+/g, ' ').trim(),
+      );
+    }
     // Select the composite through an ordinary (non-forced) click on the
     // page-header band — a non-interactive text region. The composite's
     // transparent edit overlay (pointerEvents: auto while unselected) captures

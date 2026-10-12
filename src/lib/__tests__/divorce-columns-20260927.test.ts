@@ -69,13 +69,13 @@ describe('native divorce columns September 2026', () => {
   const FACT_FIXED_20261006 = new Set([
     'ko/taiwanese-spouse-divorce-agreement-registration',
     'ko/taiwanese-spouse-divorce-from-abroad',
-    'ja/taiwanese-spouse-divorce-from-abroad',
   ]);
 
-  // Sentence-variety rewrite lane 2026-10-12 moved lastmod; date_display stays 2026年9月28日
-  // (019) / 2026年9月27日 (021).
+  // Sentence-variety rewrite lane 2026-10-12 moved lastmod (this supersedes the 2026-10-06 fact-fix
+  // lastmod of ja/020); date_display stays 2026年9月28日 (019, 020) / 2026年9月27日 (021).
   const REWRITTEN_20261012 = new Set([
     'ja/taiwanese-spouse-divorce-agreement-registration',
+    'ja/taiwanese-spouse-divorce-from-abroad',
     'ja/taiwanese-spouse-divorce-cross-border-parenting',
   ]);
 

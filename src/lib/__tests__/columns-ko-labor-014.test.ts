@@ -46,18 +46,26 @@ const faq = [
     a: faq4Answer,
   },
 ];
+const faq1Lead =
+  '자동으로 무효는 아닙니다. 대만 근로기준법 제15조의1 제1항이 정한 법정 요건은 둘 중 하나입니다. 사용자가 전문기술 훈련을 실시하고 비용을 부담했거나, 근로자가 최소 근무기간을 지키도록 합리적 보상을 제공했다면 요건을 충족할 수 있습니다. 둘 다 갖출 필요는 없습니다. 그렇다고 한쪽만 형식적으로 적어 두면 약정이 자동으로 유효해지는 것도 아닙니다. 계약서에 어떤 이름을 붙였는지보다 실제로 어느 근거가 있는지가 기준입니다.';
+const faq2Lead =
+  '대만 노동부의 2026년 6월 5일 지침에 따르면 정례 교육, 일반적인 직무교육, 신입사원의 업무 적응 교육, 법률상 실시해야 하는 의무교육에 든 비용은 최소 근무기간 약정이나 위약금·비용 반환 청구의 근거로 삼을 수 없습니다. 교육의 명칭만 보지 않습니다. 구체적인 과정, 전문·기술적 내용, 기간, 사용자가 실제로 부담한 비용과 증빙을 확인합니다.';
+const faq3Lead =
+  '받은 돈을 항상 전부 돌려줘야 하는 것은 아닙니다. 계약금·근속보너스나 다른 선급성 급부가 최소 근무기간 약정의 합리적 보상으로 지급되었다면 그 목적이 근로자에게 명확히 고지되어야 합니다. 2026년 6월 5일 노동부 지침은 기간이 끝나기 전에 퇴사하면 반환액을 아직 이행하지 않은 기간에 비례해 계산해야 하고 전액 반환을 요구해서는 안 된다고 설명합니다. 실제 결론은 지급 목적, 약정 내용, 이미 근무한 기간과 종료 사유를 함께 검토해야 나옵니다.';
+const faq4Lead =
+  '계약이 일찍 끝나도 교육비를 돌려줘야 할까요? 근로자에게 책임을 돌릴 수 없는 사유로 최소 근무기간이 끝나기 전에 근로계약이 종료되었다면, 제15조의1 제4항에 따라 근로자는 최소 근무기간 약정 위반 책임이나 훈련비 반환 책임을 지지 않습니다. 다만 종료 사유와 책임 귀속은 해고 통지, 사직 의사표시, 근로조건 위반 자료 같은 구체적인 증거로 판단합니다.';
 const headings = [
-  '1. 최소 근무기간 약정은 언제 효력이 있나',
-  '2. 첫 번째 법정 요건: 전문기술 훈련과 비용 부담',
-  '3. 두 번째 법정 요건: 합리적 보상',
-  '4. 합리적 범위와 네 가지 심사요소',
-  '5. 약정의 근거가 될 수 없는 교육',
-  '6. 보너스 반환과 조기 퇴사',
-  '7. 근로자에게 책임을 돌릴 수 없는 사유로 계약이 종료된 경우',
-  '8. 퇴사 예고는 별개의 문제',
-  '9. 사용자·근로자 점검표',
-  '10. 공식 자료',
-  '11. 관련 안내',
+  '최소 근무기간 약정은 언제 효력이 있나',
+  '전문기술 훈련과 비용 부담',
+  '계약금과 근속보너스는 합리적 보상이 되는가',
+  '약정기간이 합리적인지 보는 네 가지 요소',
+  '신입 적응교육과 법정 의무교육은 근거가 되지 못합니다',
+  '조기 퇴사와 계약금·근속보너스 반환',
+  '근로자 책임이 아닌 사유로 계약이 끝난 경우',
+  '퇴사 예고기간은 약정과 따로 봅니다',
+  '교육·지급·근무·종료 자료는 시간순으로 정리합니다',
+  '관련 안내',
+  '공식 자료',
 ];
 const officialLinks = [
   '[대만 전국법규자료고: 근로기준법 제15조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)',
@@ -81,7 +89,7 @@ const internalTargets = [
 const disclaimer =
   '이 글은 대만의 최소 근무기간 약정, 훈련비와 선급성 급부의 반환 및 퇴사 예고를 일반적으로 설명하기 위한 교육 목적의 자료이며, 개별 노동사건에 대한 법률 자문이 아닙니다. 계약 유형과 문구, 실제 교육과 비용, 보상의 목적과 고지, 근무기간, 종료 원인과 증거에 따라 약정의 효력과 책임 범위가 달라질 수 있습니다. 퇴사 의사표시, 급여 공제, 반환 합의 또는 분쟁 대응 전에 최신 공식 자료와 개별 사정을 확인하시기 바랍니다.';
 const author = '증준외 변호사(曾雋崴, Wei Tseng)';
-const exactEnding = `- ${internalLinks[2]}
+const exactEnding = `- ${officialLinks[3]}
 
 ---
 
@@ -121,9 +129,9 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-12',
       date_display: '2025년 9월 13일',
-      read_time: '14분 분량',
+      read_time: '12분 분량',
       categories: ['대만 법률정보'],
       featured_image: featuredImage,
       faq,
@@ -158,24 +166,21 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     ).toEqual(headings);
     expect(
       Array.from(parsed.content.matchAll(/^### (.+)$/gm), (match) => match[1]),
-    ).toEqual(['사용자가 확인할 사항', '근로자가 확인할 사항']);
+    ).toEqual(['사용자 쪽 자료', '근로자 쪽 자료']);
   });
 
-  it('repeats every FAQ answer exactly twice and as its assigned H2 first paragraph', () => {
+  it('keeps every FAQ answer once in the frontmatter and carries it in its assigned H2 first paragraph', () => {
     const assignments = [
-      ['## 1. 최소 근무기간 약정은 언제 효력이 있나', faq1Answer],
-      ['## 5. 약정의 근거가 될 수 없는 교육', faq2Answer],
-      ['## 6. 보너스 반환과 조기 퇴사', faq3Answer],
-      [
-        '## 7. 근로자에게 책임을 돌릴 수 없는 사유로 계약이 종료된 경우',
-        faq4Answer,
-      ],
+      [`## ${headings[0]}`, faq1Answer, faq1Lead],
+      [`## ${headings[4]}`, faq2Answer, faq2Lead],
+      [`## ${headings[5]}`, faq3Answer, faq3Lead],
+      [`## ${headings[6]}`, faq4Answer, faq4Lead],
     ];
 
-    for (const [heading, answer] of assignments) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
-      expect(raw.split(answer)).toHaveLength(3);
+    for (const [heading, answer, lead] of assignments) {
+      expect(firstParagraphAfter(parsed.content, heading)).toBe(lead);
+      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(lead);
+      expect(raw.split(answer)).toHaveLength(2);
     }
   });
 
@@ -185,14 +190,14 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
       parsed.content.indexOf(`## ${headings[0]}`),
     );
     const orderedQuestions = [
-      '1. 약정 자체가 제15조의1의 법정 요건을 충족하는가',
-      '2. 약정기간과 근로자 부담이 합리적인 범위인가',
-      '3. 근로계약 종료 사유가 누구에게 귀속되는가',
-      '4. 퇴사 예고와 반환 범위는 어떻게 판단하는가',
+      '약정이 제15조의1의 법정 요건을 충족하는지',
+      '약정기간과 근로자의 부담이 합리적인 범위인지',
+      '계약이 끝난 사유가 누구에게 귀속되는지',
+      '퇴사 예고와 반환 범위를 어떻게 판단하는지',
     ];
 
     expect(introduction).toContain(
-      '조기 퇴사 시 훈련비·계약금·근속보너스를 반환할 의무가 있는지와 별도의 위약금 청구가 가능한지를 정하는 형태로 사용됩니다.',
+      '조기 퇴사 때 훈련비·계약금·근속보너스를 반환할 의무와 별도의 위약금 청구 가능 여부까지 함께 정해 둡니다.',
     );
     expect(introduction).not.toContain('위약금의 반환');
     let previousIndex = -1;
@@ -206,11 +211,12 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
   it('separates the two alternative threshold bases, reasonableness, and invalidity', () => {
     const section = sectionBody(parsed.content, headings[0]);
     const requiredPhrases = [
-      '제15조의1 제1항은 두 가지 법정 요건을 선택적으로 규정합니다.',
-      '첫째는 사용자가 근로자에게 전문기술 훈련을 제공하고 그 비용을 부담한 경우이고, 둘째는 최소 근무기간 준수의 대가로 합리적 보상을 제공한 경우입니다.',
-      '제15조의1은 두 법정 요건 중 하나와 별도의 합리성 심사를 요구합니다. 전문기술 훈련과 합리적 보상을 언제나 동시에 제공해야 한다는 뜻도 아니고, 둘 중 하나만 형식적으로 적어 두면 약정 전체가 자동으로 유효해진다는 뜻도 아닙니다.',
-      '제1항의 법정 요건 또는 제2항의 합리성 기준을 위반한 약정은 제3항에 따라 무효입니다.',
-      '근로자가 계약서에 서명했다는 사정은 합의의 존재를 확인하는 자료가 될 수 있지만 법정 요건을 대신하지 못합니다.',
+      '대만 근로기준법 제15조의1 제1항이 정한 법정 요건은 둘 중 하나입니다.',
+      '사용자가 전문기술 훈련을 실시하고 비용을 부담했거나, 근로자가 최소 근무기간을 지키도록 합리적 보상을 제공했다면 요건을 충족할 수 있습니다.',
+      '둘 다 갖출 필요는 없습니다. 그렇다고 한쪽만 형식적으로 적어 두면 약정이 자동으로 유효해지는 것도 아닙니다.',
+      '심사는 거기서 끝나지 않습니다. 제2항은 약정기간과 책임 범위가 합리적인지를 따로 심사하도록 정합니다.',
+      '제1항의 법정 요건이나 제2항의 합리성 기준을 어긴 약정은 제3항에 따라 무효입니다.',
+      '서명은 합의가 있었다는 자료가 될 수 있습니다. 법정 요건을 대신하지는 못합니다.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -223,19 +229,19 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     const trainingSection = sectionBody(parsed.content, headings[1]);
     const compensationSection = sectionBody(parsed.content, headings[2]);
     const trainingPhrases = [
-      '사용자가 해당 근로자에게 전문기술 훈련을 실제로 제공하고 그 비용을 부담해야 합니다.',
-      '교육의 주제, 직무에 필요한 전문성·기술성, 구체적인 기간, 이수 여부와 실제 비용 지출',
+      '사용자가 그 근로자에게 전문기술 훈련을 실제로 제공하고 비용을 부담해야 합니다.',
+      '교육의 주제, 직무에 필요한 전문성·기술성, 구체적인 기간, 이수 여부, 실제 비용 지출',
       '외부 강사비, 교육기관 수강료, 교재·장비 사용료',
-      '통상적인 감독이나 업무 인수인계와 어떻게 다른지',
-      '과정표, 교육 일정, 출석부, 평가 결과, 수료증, 청구서와 영수증',
-      '모든 내부교육을 일률적으로 배제하거나, 고액·장기 과정이라는 이유만으로 법정 요건을 충족한다고 인정해서는 안 됩니다.',
+      '통상적인 감독이나 업무 인수인계와 무엇이 다른지',
+      '과정표, 교육 일정, 출석부, 평가 결과, 수료증, 청구서, 영수증',
+      '내부교육이라고 일률적으로 배제해서는 안 되고, 고액·장기 과정이라는 이유만으로 법정 요건 충족을 인정해서도 안 됩니다.',
     ];
     const compensationPhrases = [
-      '통상임금이나 이미 제공해야 할 근로의 대가와 구별되는 목적과 구조',
-      '지급명세에 계약금, 근속보너스 또는 선급성 급부라고 표시했다는 이유만으로 법적 성격이 결정되지는 않습니다.',
+      '통상임금이나 이미 지급해야 할 근로의 대가와는 목적·구조가 구별되어야 합니다.',
+      '지급명세에 계약금, 근속보너스, 선급성 급부라고 적혀 있다는 이유만으로 법적 성격이 정해지지는 않습니다.',
       '지급일, 금액, 귀속 시점, 근속기간과의 연결, 반환 사유와 산식',
       '그 역할을 명확히 고지해야 한다고 설명합니다.',
-      '보상이 존재하더라도 어떠한 길이의 근속기간이나 어떠한 액수의 반환책임도 제한 없이 허용되는 것은 아닙니다.',
+      '보상이 있다고 해서 어떤 길이의 근속기간이든, 어떤 액수의 반환책임이든 제한 없이 허용되지는 않습니다.',
     ];
 
     for (const phrase of trainingPhrases) expect(trainingSection).toContain(phrase);
@@ -247,10 +253,10 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
   it('locks all four statutory scope factors and the required proportionality review', () => {
     const section = sectionBody(parsed.content, headings[3]);
     const orderedFactors = [
-      '1. 전문기술 훈련의 기간과 비용',
-      '2. 동일·유사 직무 근로자의 대체 가능성',
-      '3. 보상의 금액과 범위',
-      '4. 그 밖에 합리성에 영향을 미치는 사정',
+      '전문기술 훈련의 기간과 비용',
+      '동일·유사 직무 근로자의 대체 가능성',
+      '보상의 금액과 범위',
+      '그 밖에 합리성에 영향을 미치는 사정',
     ];
     let previousIndex = -1;
     for (const factor of orderedFactors) {
@@ -259,13 +265,13 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
       previousIndex = index;
     }
     for (const phrase of [
-      '항목별 증빙과 근로자별 귀속액',
+      '항목별 증빙, 근로자별 귀속액',
       '동일하거나 유사한 직무의 인력을 구할 수 있는지',
-      '중도 종료 시 이미 이행한 기간이 반영되는지',
-      '넷째 요소에는 약정 체결 경위, 업무의 성격, 당사자에게 설명된 내용, 실제 근무기간, 종료 사유 등 합리성에 영향을 미치는 여러 사정이 포함될 수 있습니다. 각 요소의 중요도는 사안에 따라 달라질 수 있으며, 고려할 사정도 위 예시에 한정되지 않습니다. 따라서 기록에 나타난 관련 사실을 빠뜨리지 않고 검토해야 합니다.',
-      '고려할 사정도 위 예시에 한정되지 않습니다.',
-      '약정기간, 사용자의 실제 투자, 대체 난이도, 근로자가 받은 보상과 반환 부담 사이에는 납득할 수 있는 비례관계가 필요합니다.',
-      '특정 직종이라는 이유만으로 효력을 미리 정하거나 다른 사건의 결론을 그대로 적용해서는 안 됩니다.',
+      '중도에 끝났을 때 이미 이행한 기간이 반영되는지',
+      '그 밖의 사정에는 약정을 맺은 경위, 업무의 성격, 당사자에게 설명된 내용, 실제 근무기간, 종료 사유 등이 들어가기도 합니다. 요소마다 중요도는 사안에 따라 달라지고, 고려할 사정이 이 예시에 한정되지도 않습니다. 기록에 나타난 관련 사실은 빠뜨리지 않고 검토합니다.',
+      '고려할 사정이 이 예시에 한정되지도 않습니다.',
+      '결국 필요한 것은 비례관계입니다. 약정기간, 사용자가 실제로 들인 투자, 대체 난이도, 근로자가 받은 보상, 반환 부담이 서로 납득할 만한 비율을 이루어야 합니다.',
+      '직종만으로 효력을 미리 정할 수는 없습니다. 다른 사건의 결론을 그대로 가져와서도 안 됩니다.',
     ]) {
       expect(section).toContain(phrase);
     }
@@ -276,10 +282,10 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     const requiredPhrases = [
       '勞動關2字第1150141814號 지침',
       '정기적으로 실시하는 교육, 통상적인 직무상 훈련, 신입사원이 업무환경과 절차에 익숙해지도록 하는 교육, 법률에 따라 사용자가 실시해야 하는 교육',
-      '사업 운영이나 법정 의무 이행에 수반되는 것',
-      '일반적인 채용·관리 비용이나 인수인계 비용을 별도의 투자라고 이름 붙여 반환 대상으로 정할 수 있는 것은 아닙니다.',
-      '교육이 사내에서 이루어졌다는 이유만으로 항상 배제되는 것도 아닙니다.',
-      '과정별 주제, 시간, 비용과 법정 의무 여부를 나누어 확인해야 합니다.',
+      '사업 운영이나 법정 의무 이행에 따르는 일입니다.',
+      '사용자가 원래 부담할 일반적인 채용·관리 비용이나 인수인계 비용에 별도의 투자라는 이름을 붙여 반환 대상으로 정할 수는 없습니다.',
+      '그렇다고 사내 교육이 언제나 빠지는 것은 아닙니다.',
+      '과정별 주제, 시간, 비용, 법정 의무 여부를 나누어 살펴야 합니다.',
     ];
     for (const phrase of requiredPhrases) expect(section).toContain(phrase);
   });
@@ -287,12 +293,12 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
   it('locks clear disclosure, unserved-period proportionality, and separate repayment questions', () => {
     const section = sectionBody(parsed.content, headings[5]);
     const requiredPhrases = [
-      '계약 체결과 지급 시점에 알 수 있어야 합니다.',
+      '근로자가 계약을 맺고 돈을 받는 시점에 알 수 있어야 합니다.',
       '약정의 시작일과 종료일, 실제 근무일, 반환 산정의 기준액',
       '이미 이행한 기간을 전혀 반영하지 않는 고정액',
-      '반환 문제는 약정의 효력, 지급된 금원의 법적 성격, 이미 근무한 기간, 종료 사유와 반환 산식을 차례로 확인해야 하며, 계약서에 ‘위약금’이라는 표현이 있다는 이유만으로 청구액이 확정되는 것은 아닙니다.',
+      '확인하는 순서는 약정의 효력, 지급된 돈의 법적 성격, 이미 근무한 기간, 종료 사유, 반환 산식입니다. 계약서에 ‘위약금’이라는 표현이 있어도 청구액은 확정되지 않습니다.',
       '전액 반환 문구, 실제 손실과 무관한 고정 위약금, 급여에서 일방적으로 공제하는 방식',
-      '훈련비 반환과 선급성 급부 반환도 구별해야 합니다.',
+      '훈련비 반환과 선급성 급부 반환도 나누어 봅니다.',
       '비용이 중복 계산되지 않았는지',
     ];
     for (const phrase of requiredPhrases) expect(section).toContain(phrase);
@@ -301,12 +307,12 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
   it('locks protection for non-attributable termination and evidence-based attribution', () => {
     const section = sectionBody(parsed.content, headings[6]);
     const requiredPhrases = [
-      '누가 어떤 의사표시를 했는지, 계약이 종료된 법적 근거는 무엇인지',
+      '누가 어떤 의사표시를 했는지, 계약이 끝난 법적 근거가 무엇인지',
       '해고 통지서, 사직서, 합의 종료 문서, 전자우편과 메신저 기록, 근로조건 변경 자료, 출근·업무 기록',
-      '건강이나 업무 사정이 언급된 경우에도 그 표현만으로 결과를 단정하지 않고',
-      '해고, 합의 종료, 근로조건 위반 주장 등은 검토할 사정의 예일 뿐, 근로자에게 책임을 돌릴 수 없는 사유를 한정적으로 열거한 것은 아닙니다.',
-      '산식 계산 전에 귀속 문제를 먼저 확인해야 합니다.',
-      '선급성 급부와 그 밖의 별도 청구가 함께 있다면 각 청구의 법적 성격과 근거를 구분',
+      '건강이나 업무 사정이 언급되어 있어도 그 표현만으로 결과를 단정하지 않습니다.',
+      '해고, 합의 종료, 근로조건 위반 주장은 검토할 사정의 예일 뿐입니다. 근로자에게 책임을 돌릴 수 없는 사유를 한정해 열거한 것이 아닙니다.',
+      '귀속 문제가 먼저입니다. 산식은 그다음입니다.',
+      '선급성 급부나 그 밖의 별도 청구가 함께 있다면 각 청구의 법적 성격과 근거를 구분',
     ];
     for (const phrase of requiredPhrases) expect(section).toContain(phrase);
   });
@@ -314,12 +320,12 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
   it('distinguishes resignation from liability and locks Articles 15 and 16 notice rules', () => {
     const section = sectionBody(parsed.content, headings[7]);
     const orderedRules = [
-      '기간의 정함이 없는 근로계약을 근로자가 종료할 때에는 대만 근로기준법 제15조에 따라 제16조 제1항의 예고기간이 준용됩니다.',
-      '1. 3개월 이상 1년 미만이면 10일',
-      '2. 1년 이상 3년 미만이면 20일',
-      '3. 3년 이상이면 30일',
-      '특정 업무를 위한 기간제 근로계약의 계약기간이 3년을 초과하는 경우에는 제15조의 별도 규정이 적용됩니다.',
-      '근로자는 3년간 근무한 뒤 30일 전에 사용자에게 예고하고 계약을 종료할 수 있습니다.',
+      '기간의 정함이 없는 근로계약을 근로자가 끝낼 때는 대만 근로기준법 제15조에 따라 제16조 제1항의 예고기간이 준용됩니다.',
+      '3개월 이상 1년 미만은 10일입니다.',
+      '1년 이상 3년 미만은 20일입니다.',
+      '3년 이상은 30일입니다.',
+      '특정 업무를 위한 기간제 근로계약의 계약기간이 3년을 초과하면 제15조에 정한 별도 규정이 적용됩니다.',
+      '근로자는 3년간 근무한 뒤 30일 전에 사용자에게 예고하고 계약을 끝낼 수 있습니다.',
     ];
     let previousIndex = -1;
     for (const rule of orderedRules) {
@@ -328,10 +334,10 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
       previousIndex = index;
     }
     for (const phrase of [
-      '최소 근무기간 약정은 근로자의 퇴사를 물리적 또는 법적으로 막는 장치가 아닙니다.',
-      '제16조는 사용자의 계약 종료에 관한 조항이고, 근로자의 사직에는 제15조를 통하여 그 예고기간이 적용됩니다.',
+      '최소 근무기간 약정은 퇴사를 물리적으로든 법적으로든 막지 못합니다.',
+      '제16조는 사용자가 계약을 끝내는 경우에 관한 조항이고, 근로자의 사직에는 제15조를 거쳐 같은 예고기간이 적용됩니다.',
       '3개월 미만의 계속근로, 다른 유형의 정기계약, 법률상 즉시종료 사유',
-      '퇴사가 유효하게 이루어지는 시점, 최소 근무기간 약정의 유효성, 훈련비나 선급성 급부의 반환, 별도로 주장되는 손해',
+      '약정의 유효성, 퇴사가 효력을 내는 시점, 훈련비나 선급성 급부의 반환, 별도로 주장되는 손해',
     ]) {
       expect(section).toContain(phrase);
     }
@@ -340,24 +346,23 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
   it('locks the employer and worker evidence checklists and their required separation', () => {
     const section = sectionBody(parsed.content, headings[8]);
     const employerItems = [
-      '1. 전문기술 훈련을 제공하고 비용을 부담했는지, 또는 근속 약속에 대한 합리적 보상을 제공했는지 법정 요건을 먼저 특정합니다.',
-      '2. 일반교육·정례교육·법정 의무교육과 전문기술 훈련을 과정의 실제 내용, 기간과 목적에 따라 구분합니다.',
-      '3. 교육 과정표, 일정, 이수기록, 청구서, 영수증과 비용 부담자 자료를 보존',
-      '4. 보상 목적, 지급일, 금액, 귀속 조건, 근로자에게 한 고지와 미이행 기간 반환 산식',
-      '5. 약정기간 산정 근거, 동일·유사 직무의 대체인력 가능성',
-      '6. 약정기간과 반환액이 훈련비 또는 보상의 범위에 비례하는지',
-      '7. 종료 원인과 책임 귀속을 개별적으로 확인한 뒤 실제 종료일, 이행 기간과 미이행 기간을 계산합니다.',
-      '8. 급여에서 공제하거나 반환을 요구하기 전에 계약, 지급자료, 급여명세, 당사자 통신, 요구서와 공제 기록',
+      '사용자는 어느 법정 요건에 기대는지부터 특정합니다.',
+      '과정표, 일정, 이수기록, 청구서, 영수증, 비용 부담자 자료를 보존하고 외부비용과 내부비용의 근거를 나누어 적습니다.',
+      '일반교육·정례교육·법정 의무교육은 실제 내용, 기간, 목적에 따라 전문기술 훈련과 구분합니다.',
+      '목적, 지급일, 금액, 귀속 조건, 근로자에게 한 고지, 미이행 기간 반환 산식',
+      '약정기간을 정한 근거, 동일·유사 직무의 대체인력 가능성',
+      '약정기간과 반환액이 훈련비나 보상의 범위에 비례하는지',
+      '종료 원인과 책임 귀속부터 가립니다. 그 뒤에 실제 종료일과 이행·미이행 기간을 계산합니다.',
+      '급여에서 공제하거나 반환을 요구하기 전에는 계약, 지급자료, 급여명세, 당사자 통신, 요구서, 공제 기록',
     ];
     const workerItems = [
-      '1. 서명한 근로계약서와 변경합의 원본, 채용 당시 설명자료, 교육자료·과정표·일정·이수기록',
-      '2. 교육의 전문·기술적 내용, 일반 적응교육인지 법정 의무교육인지, 청구서·영수증상 금액과 실제 비용 부담자',
-      '3. 계약금·근속보너스 등 선급성 급부의 지급자료, 보상 목적에 관한 고지, 지급일, 귀속 조건과 반환 산식',
-      '4. 약정기간의 산정 근거, 이미 근무한 기간, 남은 기간과 사용자가 주장하는 대체인력 가능성',
-      '5. 퇴사 통지, 해고 통지 또는 합의 종료 문서와 전자우편·메신저 등 송달 증거',
-      '6. 실제 종료 원인과 경위를 시간순으로 정리하고, 사용자의 반환 요구서, 급여명세, 당사자 통신과 공제 기록',
-      '7. 최소 근무기간 약정의 효력, 퇴사 의사표시와 예고, 훈련비·선급성 급부 반환, 별도로 주장되는 손해',
-      '8. 서명했다거나 사용자가 일정 금액을 요구했다는 사실만으로 책임을 인정하지 말고',
+      '서명한 근로계약서와 변경합의 원본부터 모읍니다. 채용 때 받은 설명자료, 교육자료·과정표·일정·이수기록도 같이 둡니다.',
+      '교육이 전문·기술적 내용인지 일반 적응교육이나 법정 의무교육인지, 청구서·영수증의 금액과 실제 비용 부담자가 누구인지도 확인합니다.',
+      '계약금·근속보너스 같은 선급성 급부는 지급자료, 보상 목적에 관한 고지, 지급일, 귀속 조건, 반환 산식을 확보합니다.',
+      '약정기간의 산정 근거, 이미 근무한 기간, 남은 기간, 사용자가 주장하는 대체인력 가능성은 구분해 기록합니다.',
+      '퇴사 통지, 해고 통지, 합의 종료 문서와 전자우편·메신저 같은 송달 증거도 보존합니다.',
+      '실제 종료 원인과 경위는 시간순으로 정리하고, 사용자의 반환 요구서, 급여명세, 당사자 통신, 공제 기록을 함께 살핍니다.',
+      '서명했다는 사실이나 사용자가 일정 금액을 요구했다는 사실만으로 책임을 인정해서는 안 됩니다.',
     ];
     let previousIndex = -1;
     for (const item of [...employerItems, ...workerItems]) {
@@ -385,7 +390,7 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     const allLocalePaths =
       parsed.content.match(/\/(?:ko|zh-hant|en|ja)(?:\/[^\s)]*)?/g) ?? [];
 
-    expect(markdownLinks).toEqual([...officialLinks, ...internalLinks]);
+    expect(markdownLinks).toEqual([...internalLinks, ...officialLinks]);
     expect(externalTargets).toEqual(officialUrls);
     expect(markdownInternalTargets).toEqual(internalTargets);
     expect(allExternalUrls).toEqual(officialUrls);
@@ -396,8 +401,8 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     }
   });
 
-  it('locks the last internal link through the exact disclaimer and author at EOF', () => {
-    expect(raw.trimEnd().slice(raw.lastIndexOf(`- ${internalLinks[2]}`))).toBe(
+  it('locks the last official link through the exact disclaimer and author at EOF', () => {
+    expect(raw.trimEnd().slice(raw.lastIndexOf(`- ${officialLinks[3]}`))).toBe(
       exactEnding,
     );
     expect(parsed.content.trimEnd().endsWith(exactEnding)).toBe(true);
@@ -420,8 +425,8 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     const calculatedMinutes = Math.ceil(visibleEojeolCount / 180);
 
     expect(visibleEojeolCount).toBeGreaterThanOrEqual(1_200);
-    expect(visibleEojeolCount).toBe(2_343);
-    expect(calculatedMinutes).toBe(14);
+    expect(visibleEojeolCount).toBe(2_132);
+    expect(calculatedMinutes).toBe(12);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });
@@ -430,9 +435,9 @@ describe('Korean labor column 014 — minimum-service-period clauses', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-10-12',
       dateDisplay: '2025년 9월 13일',
-      readTime: '14분 분량',
+      readTime: '12분 분량',
       category: 'legal',
       categoryLabel: '법률정보',
       featuredImage:

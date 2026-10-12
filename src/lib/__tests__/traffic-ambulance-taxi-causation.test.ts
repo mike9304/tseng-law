@@ -24,7 +24,7 @@ const articles = [
     "number": 121,
     "slug": "taiwan-bus-stop-illegal-parking-no-contact-criminal-causation",
     "file": "src/content/columns-zh/121-taiwan-bus-stop-illegal-parking-no-contact-criminal-causation.md",
-    "sourceManuscriptSha256": "56019b0d19dfdbebaff778f573e5bb172c7af42de111ca63e48bd7d04223e826",
+    "sourceManuscriptSha256": "13b7663ebca72a728e376b4fac340f67613c492402408707a59a07c51026b28b",
     "changes": [
       {
         "old": "作者：法律AI助理（本文由AI依官方裁判及法條撰寫，提供一般法律資訊）",

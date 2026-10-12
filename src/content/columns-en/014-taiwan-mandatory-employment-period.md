@@ -169,7 +169,7 @@ Dates worth marking in the chronology are the date the contract was signed, the 
 - [Taiwan Labor Standards Act, Article 15-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
 - [Taiwan Labor Standards Act, Article 15](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
 - [Taiwan Labor Standards Act, Article 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
-- [Taiwan Ministry of Labor Letter No. 勞動關2字第1150141814號 (June 5, 2026)](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)
+- [Taiwan Ministry of Labor Letter No. 勞動關2字第1150141814號 (June 5, 2026)](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?datatype=etype&N2=1150141814&cnt=1&now=1&lnabndn=1&recordno=1)
 
 ## 11. Related Guidance
 

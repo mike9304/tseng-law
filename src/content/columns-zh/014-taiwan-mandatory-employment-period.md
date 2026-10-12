@@ -1,7 +1,7 @@
 ---
 title: "台灣最低服務年限約定：效力、培訓費用與違約金判斷"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
-lastmod: "2026-07-25"
+lastmod: "2026-10-12"
 date_display: "2025年9月13日"
 read_time: "16分鐘閱讀"
 categories:
@@ -187,7 +187,7 @@ faq:
 - [全國法規資料庫：《勞動基準法》第15條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
 - [全國法規資料庫：《勞動基準法》第15條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
 - [全國法規資料庫：《勞動基準法》第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
-- [勞動部：勞動關2字第1150141814號函（2026年6月5日）](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)
+- [勞動部：勞動關2字第1150141814號函（2026年6月5日）](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?datatype=etype&N2=1150141814&cnt=1&now=1&lnabndn=1&recordno=1)
 
 ## 11. 相關資訊
 

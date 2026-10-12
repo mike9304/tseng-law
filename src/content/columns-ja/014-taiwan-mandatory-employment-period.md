@@ -1,7 +1,7 @@
 ---
 title: "台湾の最低勤務期間条項：効力・研修費・違約金の判断基準"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
-lastmod: "2026-10-06"
+lastmod: "2026-10-12"
 date_display: "2025年9月13日"
 read_time: "約16分"
 categories:
@@ -175,7 +175,7 @@ faq:
 - [台湾全国法規資料庫：労働基準法第15条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
 - [台湾全国法規資料庫：労働基準法第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
 - [台湾全国法規資料庫：労働基準法第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
-- [台湾労働部：2026年6月5日付最低勤務期間・違約金返還指針](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)
+- [台湾労働部：2026年6月5日付最低勤務期間・違約金返還指針](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?datatype=etype&N2=1150141814&cnt=1&now=1&lnabndn=1&recordno=1)
 
 ---
 

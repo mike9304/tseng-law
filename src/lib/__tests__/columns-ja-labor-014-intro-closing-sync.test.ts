@@ -11,14 +11,14 @@ const sourceBytes = fs.readFileSync(columnPath);
 
 const immutablePrefixLength = 4_418;
 const immutablePrefixSha256 =
-  '12e1f1774703817566a12c5ff4478e6e1068b93c197e68eef54f89ffb4fc9d08';
+  'e83db8e043350aa58d73a73993d2d69618663f69a280576ee0e42ec6a66475db';
 const immutableTailMarker = Buffer.from(
   '## 最低勤務期間条項が有効になる条件',
   'utf8',
 );
-const immutableTailLength = 24_094;
+const immutableTailLength = 24_075;
 const immutableTailSha256 =
-  '4ac8ddebae2fa04584e4b367623e1d7b782e0592286463da865c709746d88f1b';
+  'c39b97ce1721ae3290efb2fffb421ab5b46447ae7417048200df3390932de3a3';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const closingBytes =

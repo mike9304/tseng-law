@@ -153,7 +153,7 @@ faq:
 - [대만 전국법규자료고: 근로기준법 제15조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
 - [대만 전국법규자료고: 근로기준법 제15조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
 - [대만 전국법규자료고: 근로기준법 제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
-- [대만 노동부: 2026년 6월 5일 최소 근무기간·위약금 반환 지침](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)
+- [대만 노동부: 2026년 6월 5일 최소 근무기간·위약금 반환 지침](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?datatype=etype&N2=1150141814&cnt=1&now=1&lnabndn=1&recordno=1)
 
 ---
 

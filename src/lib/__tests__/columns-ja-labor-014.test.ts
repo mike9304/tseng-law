@@ -65,7 +65,7 @@ const officialLinks = [
   '[台湾全国法規資料庫：労働基準法第15条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)',
   '[台湾全国法規資料庫：労働基準法第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)',
   '[台湾全国法規資料庫：労働基準法第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)',
-  '[台湾労働部：2026年6月5日付最低勤務期間・違約金返還指針](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)',
+  '[台湾労働部：2026年6月5日付最低勤務期間・違約金返還指針](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?datatype=etype&N2=1150141814&cnt=1&now=1&lnabndn=1&recordno=1)',
 ];
 const officialUrls = officialLinks.map(
   (link) => link.match(/\((https?:\/\/[^)]+)\)$/)?.[1] ?? '',
@@ -93,7 +93,7 @@ ${author}`;
 const expectedFrontmatter = `---
 title: "${title}"
 url: "${sourceUrl}"
-lastmod: "2026-10-06"
+lastmod: "2026-10-12"
 date_display: "2025年9月13日"
 read_time: "約16分"
 categories:
@@ -151,7 +151,7 @@ describe('Japanese labor column 014 — minimum-service-period clauses', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-10-06',
+      lastmod: '2026-10-12',
       date_display: '2025年9月13日',
       read_time: '約16分',
       categories: ['台湾法律情報'],
@@ -667,7 +667,7 @@ describe('Japanese labor column 014 — minimum-service-period clauses', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-10-06',
+      date: '2026-10-12',
       dateDisplay: '2025年9月13日',
       readTime: '約16分',
       category: 'legal',

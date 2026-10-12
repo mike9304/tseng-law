@@ -64,7 +64,7 @@ const officialLinks = [
   '[全國法規資料庫：《勞動基準法》第15條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)',
   '[全國法規資料庫：《勞動基準法》第15條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)',
   '[全國法規資料庫：《勞動基準法》第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)',
-  '[勞動部：勞動關2字第1150141814號函（2026年6月5日）](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)',
+  '[勞動部：勞動關2字第1150141814號函（2026年6月5日）](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?datatype=etype&N2=1150141814&cnt=1&now=1&lnabndn=1&recordno=1)',
 ];
 const officialUrls = officialLinks.map(
   (link) => link.match(/\((https?:\/\/[^)]+)\)$/)?.[1] ?? '',
@@ -122,7 +122,7 @@ describe('Traditional Chinese labor column 014 — minimum-service-period clause
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-10-12',
       date_display: '2025年9月13日',
       read_time: '16分鐘閱讀',
       categories: ['台灣法律資訊'],
@@ -446,7 +446,7 @@ describe('Traditional Chinese labor column 014 — minimum-service-period clause
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      '32000684d23eebdc9792071805ab62fa47ae47f6b034b1bd2fd0d148a61fa3fb',
+      '268d6553ae3d178954b0ea98472107fb0a62c9aa344331860658bbea1cd114f9',
     );
   });
 
@@ -454,7 +454,7 @@ describe('Traditional Chinese labor column 014 — minimum-service-period clause
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-10-12',
       dateDisplay: '2025年9月13日',
       readTime: '16分鐘閱讀',
       category: 'legal',

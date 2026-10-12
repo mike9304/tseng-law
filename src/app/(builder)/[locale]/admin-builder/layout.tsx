@@ -31,9 +31,9 @@ export default async function AdminBuilderLayout({ children }: { children: React
   return (
     <>
       <BuilderAdminBackBar />
-      {/* AdminShell/AdminNavRail call useSearchParams(); wrap in Suspense so the page
-          content stays visible while the admin chrome hydrates and avoids a static CSR bailout. */}
-      <Suspense fallback={<>{children}</>}>
+      {/* AdminShell/AdminNavRail use useSearchParams(). Keep the fallback empty:
+          rendering children here would mount a second editor and overwrite its shared canvas store. */}
+      <Suspense fallback={null}>
         <AdminShell navTree={navTree}>{children}</AdminShell>
       </Suspense>
     </>

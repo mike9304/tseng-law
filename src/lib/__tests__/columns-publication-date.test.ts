@@ -485,7 +485,7 @@ describe('Korean column publication dates', () => {
     });
     expect(updatedTrafficGuide).toMatchObject({
       publicationDate: '2025-09-13',
-      date: '2026-10-06',
+      date: '2026-10-12',
       dateDisplay: '2025년 9월 13일',
     });
   });

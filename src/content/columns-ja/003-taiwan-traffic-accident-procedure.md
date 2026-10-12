@@ -87,11 +87,11 @@ diagram_after: "Q7. 事故後、どのような損害を請求できますか？
 
 警察の道路交通事故初期分析判断表は、現場資料に基づいて作成される予備的な分析です。これは裁判所の判決ではありません。裁判所を拘束せず、過失割合も確定しません。必要な資料と争いの範囲は事故ごとに異なるため、この表・鑑定・覆議は、自動的な手続でも必須の段階でもありません。
 
-車両事故鑑定は、関連規定（[車両事故鑑定・覆議の手続規定第3条](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)）に従い、適格な当事者が申請できます。処理機関による移送や司法機関による嘱託もあり得ます。当事者による直接の申請は、通常、事故発生日から6か月以内に行います。すでに捜査または裁判が進行中の事件では、司法機関の嘱託手続を確認します。
+車両事故鑑定は、関連規定（[車輛行車事故鑑定及覆議作業辦法第3条](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)）に従い、適格な当事者が申請できます。処理機関による移送や司法機関による嘱託もあり得ます。当事者による直接の申請は、通常、事故発生日から6か月以内に行います。すでに捜査または裁判が進行中の事件では、司法機関の嘱託手続を確認します。
 
 刑事裁判中は、[刑事訴訟法第208条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=208)に基づき、当事者が適格な機関へ鑑定や既存の鑑定の審査を直接委任し、その費用を負担する方法もあります。鑑定委員会への申請とは別の方法です。事件の段階と依頼先に応じた手続を選びます。
 
-鑑定意見に異議があり、通常の直接申請で覆議を求める場合は、鑑定意見書を受け取った翌日から30日以内に、理由を示して申請します。覆議は1回に限られます（[手続規定第10条・第11条](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)）。すでに司法手続に入った事件では、担当司法機関を通じた移送手続と適用される期限を確認してください。
+鑑定意見に異議があり、通常の直接申請で覆議を求める場合は、鑑定意見書を受け取った翌日から30日以内に、理由を示して申請します。覆議は1回に限られます（[作業辦法第10条・第11条](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)）。すでに司法手続に入った事件では、担当司法機関を通じた移送手続と適用される期限を確認してください。
 
 鑑定と覆議の意見は、証拠または参考資料です。裁判所は、陳述、映像、現場記録を含む記録全体を独立して評価します。
 
@@ -123,8 +123,8 @@ diagram_after: "Q7. 事故後、どのような損害を請求できますか？
 
 ### Q6–Q10 公式資料
 
-- [車両事故鑑定・覆議規則第3条](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
-- [車両事故鑑定・覆議規則第10条から第15条](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print)
+- [車輛行車事故鑑定及覆議作業辦法第3条](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
+- [車輛行車事故鑑定及覆議作業辦法第10条から第15条](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print)
 - [台湾交通部公路局の車両事故鑑定・覆議申請書](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
 - [民法第184条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
 - [民法第192条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)
@@ -195,8 +195,8 @@ diagram_after: "Q7. 事故後、どのような損害を請求できますか？
 - [桃園地方法院112年度壢簡字第236号判決](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [民法第188条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [中華民国刑法第284条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [強制自動車責任保険法](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
-- [強制自動車責任保険給付基準](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
+- [強制汽車責任保險法](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
+- [強制汽車責任保險給付標準](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [金融監督管理委員会の標準個人用自動車保険契約](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "대만 교통사고 대응 Q&A: 현장조치·과실·합의·손해배상"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-10-06"
+lastmod: "2026-10-12"
 date_display: "2025년 9월 13일"
 read_time: "11분 분량"
 categories:
@@ -123,8 +123,8 @@ diagram_after: "Q7. 사고 발생 뒤 어떤 손해를 청구할 수 있나요?"
 
 ### Q6–Q10 공식 근거
 
-- [차량사고 감정·재심의 규칙 제3조](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
-- [차량사고 감정·재심의 규칙 제10조부터 제15조](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print)
+- [차량사고 감정·재심의 절차 규정 제3조](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
+- [차량사고 감정·재심의 절차 규정 제10조부터 제15조](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print)
 - [대만 교통부 도로국 차량사고 감정 재심의 신청서](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
 - [민법 제184조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
 - [민법 제192조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)

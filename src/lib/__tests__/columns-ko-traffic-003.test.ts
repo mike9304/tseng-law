@@ -199,7 +199,7 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       diagram_after: 'Q7. 사고 발생 뒤 어떤 손해를 청구할 수 있나요?',
       title,
       url: sourceUrl,
-      lastmod: '2026-10-06',
+      lastmod: '2026-10-12',
       date_display: '2025년 9월 13일',
       read_time: '11분 분량',
       categories: ['대만 법률정보'],

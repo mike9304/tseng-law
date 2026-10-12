@@ -67,16 +67,19 @@ const faq = [
 
 const bodyContracts = [
   {
-    heading: '## 1. Choosing a Taiwan Market-Entry Structure and Importer',
-    answer: faq[0].a,
+    heading: '## 1. Going Through an Importer or Setting Up in Taiwan',
+    answer:
+      'Foreign brands do not have to form a Taiwan subsidiary or branch to sell here. A Taiwan importer or distributor can handle importation and sales. A brand that operates directly has a second choice to make, between a subsidiary and a branch of a foreign company. Either way, it should first settle its business model and identify the entity that will assume the legal responsibilities of the cosmetics manufacturer or importer.',
   },
   {
-    heading: '## 2. Product Registration and the PIF Are Separate Requirements',
-    answer: faq[1].a,
+    heading: '## 2. Product Registration and the PIF: Two Different Duties',
+    answer:
+      'Product registration runs through TFDA’s cosmetics product registration platform. The PIF is a different obligation: a file of product records that the cosmetics manufacturer or importer must prepare, update and retain. TFDA does not receive the PIF in advance.',
   },
   {
     heading: '## 3. Labeling, Promotion, and Advertising Rules',
-    answer: faq[2].a,
+    answer:
+      'An advertisement is assessed on its overall presentation, including names, text, images, symbols and sound, not on its wording alone. False or exaggerated claims and claims of medical efficacy are prohibited. The administrative fine is NT$40,000–NT$200,000 for false or exaggerated advertising and NT$600,000–NT$5,000,000 for claims of medical efficacy.',
   },
 ];
 
@@ -109,7 +112,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
       lastmod: '2026-10-12',
       date_display: 'February 4, 2026',
-      read_time: '13 min read',
+      read_time: '12 min read',
       categories: ['Taiwan Company Formation'],
       featured_image:
         '../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
@@ -131,7 +134,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
       title,
       date: '2026-10-12',
       dateDisplay: 'February 4, 2026',
-      readTime: '13 min read',
+      readTime: '12 min read',
       category: 'formation',
       categoryLabel: 'Company Setup',
       featuredImage:
@@ -140,7 +143,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
     });
   });
 
-  it('keeps the exact numbered H2s, immediate FAQ answers, and ordered H3s', () => {
+  it('keeps the exact numbered H2s, immediate opening answers, and ordered H3s', () => {
     expect(extractBodyContracts(parsed.content)).toEqual(bodyContracts);
     expect(extractBodyContracts(post?.content ?? '')).toEqual(bodyContracts);
     expect(
@@ -149,42 +152,42 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
         (match) => match[1],
       ),
     ).toEqual([
-      'Using a Taiwan Importer',
-      'Operating Directly in Taiwan',
-      'When Product Registration Is Required and How Long It Remains Valid',
-      'What the PIF Contains and When the Rules Apply',
-      'Updating and Retaining the PIF',
-      'Inspections, Corrective Orders, and Administrative Penalties',
-      'Evaluate the Advertisement as a Whole',
-      'Influencers, Reviewers, and Sales Partners',
-      'A Pre-Market Compliance Sequence',
+      'Selling Through a Taiwan Importer',
+      'Setting Up a Subsidiary or Branch',
+      'Registration: When It Is Due and How Long It Lasts',
+      'What Goes Into a PIF and Which Products Are Covered',
+      'Updating the PIF and Keeping It on File',
+      'Inspections, Correction Orders and Fines',
+      'Looking at the Whole Advertisement',
+      'Posts by Influencers, Reviewers and Sales Partners',
+      'The Order of Work Before Sale',
       'Official Sources',
     ]);
   });
 
   it('distinguishes the importer, direct-operation entities, institution, and statutory actor', () => {
     const required = [
-      'If a Taiwan importer or distributor handles importation and sales',
-      'The distributor may also serve as the importer, or a separate importer may participate.',
-      'Contractual labels such as agent, master distributor, or distributor do not by themselves determine where legal responsibility lies.',
-      'who will import the products and complete product registration',
-      'who will prepare, update, and retain the PIF',
-      'review labeling, maintain distribution records, receive consumer complaints and safety information',
-      'respond to inspections and requests for information from the competent authorities',
-      'The statutory obligations imposed on the cosmetics manufacturer or importer',
+      'A Taiwan importer or distributor can handle importation and sales.',
+      'Either the distributor also serves as the importer, or a separate importer takes part.',
+      'Contract labels such as agent, master distributor or distributor do not by themselves decide where legal responsibility lies.',
+      'Who imports the products and completes product registration',
+      'who prepares, updates and retains the PIF',
+      'who reviews labeling, maintains distribution records, receives consumer complaints and safety information',
+      'responds to inspections and information requests from the competent authorities',
+      'The statutory duties of the cosmetics manufacturer or importer',
       'the permitted use of intellectual property such as trademarks and images',
-      'the manufacturer’s records needed for product registration and the PIF',
-      'management of updated records and their handover when the agreement ends',
-      'authority to review and revise advertising in advance',
-      'the scope and deadline for returning them or providing copies',
-      'A subsidiary is a separate legal entity incorporated under Taiwan law',
-      'a branch is registered as part of the foreign company’s head office',
-      'legal personality, the head office’s liability, accounting and tax treatment, profit remittance, representative authority, and internal controls',
+      'the manufacturer’s records for product registration and the PIF',
+      'how updated records are managed and handed over when the agreement ends',
+      'who may review and revise advertising in advance',
+      'The scope and deadline for returning them or providing copies',
+      'The subsidiary is a separate legal entity incorporated under Taiwan law',
+      'The branch is registered as part of the foreign company’s head office',
+      'legal personality, the head office’s liability, accounting and tax treatment, profit remittance, representative authority and internal controls',
       'Department of Investment Review, Ministry of Economic Affairs (MOEA)',
-      'obtain investment approval, remit funds, register a company or branch, open a bank account, complete tax registration, and obtain importer status',
-      'the central responsible entity under cosmetics regulation is the cosmetics manufacturer or importer',
-      'outsourcing alone does not transfer the cosmetics manufacturer’s or importer’s legal responsibility',
-      'Distinguishing contractual task allocation from the responsible entity under the law',
+      'obtaining investment approval, remitting funds, registering a company or branch, opening a bank account, completing tax registration and obtaining importer status',
+      'cosmetics regulation puts the central responsibility on the cosmetics manufacturer or importer',
+      'An outside expert may take over the product documentation or the safety assessment. Outsourcing alone does not shift that responsibility.',
+      'who does the work under the contract, and who is responsible under the law',
     ];
 
     for (const phrase of required) {
@@ -195,19 +198,19 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
 
   it('separates notification from the PIF and locks timing, validity, changes, and limitations', () => {
     const required = [
-      'Product registration is a separate procedure',
+      'Product registration runs through TFDA’s cosmetics product registration platform. The PIF is a different obligation',
       'TFDA’s cosmetics product registration platform',
-      'before supplying, selling, giving away, or publicly displaying the product, or providing it to consumers for trial use',
-      'the registration timeline must also account for promotional giveaways and consumer trials',
-      'Product registration is valid for three years.',
+      'before supplying, selling, giving away or publicly displaying a product, or providing it to consumers for trial use',
+      'The registration timeline must also account for promotional giveaways and consumer trials',
+      'Registration is valid for three years.',
       'an extension must be applied for within the three months before the registration expires',
-      'the product name, purpose, dosage form, ingredients, or manufacturing site changes',
-      'what procedure is required for the particular change',
+      'the product name, purpose, dosage form, ingredients or manufacturing site changes',
+      'what procedure that particular change requires',
       'a procedure for reporting the prescribed registration information through the platform',
-      'does not mean that all records required for the PIF are in place',
-      'nor does it establish that the product’s labeling or advertising is lawful',
-      'Product registration, PIF management, and labeling and advertising review should be operated as separate compliance workstreams.',
-      'The PIF itself is not submitted to TFDA in advance',
+      'does not mean that all the records the PIF requires are in place',
+      'Nor does it establish that the labeling or advertising is lawful',
+      'registration, PIF management, and labeling and advertising review should run as separate compliance workstreams.',
+      'TFDA does not receive the PIF in advance',
     ];
 
     for (const phrase of required) {
@@ -217,20 +220,20 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
     expect(
       countOccurrences(
         parsed.content,
-        'Product registration is a separate procedure conducted through TFDA’s cosmetics product registration platform.',
+        'Product registration runs through TFDA’s cosmetics product registration platform.',
       ),
     ).toBe(1);
   });
 
   it('locks the PIF records, 16-category rule, phase-in, narrow exception, and retained responsibility', () => {
     const pifSection = parsed.content.slice(
-      parsed.content.indexOf('### What the PIF Contains and When the Rules Apply'),
-      parsed.content.indexOf('### Updating and Retaining the PIF'),
+      parsed.content.indexOf('### What Goes Into a PIF and Which Products Are Covered'),
+      parsed.content.indexOf('### Updating the PIF and Keeping It on File'),
     );
     const expectedParagraphs = [
-      'A PIF is a collection of records designed to provide an ongoing account of a product’s quality and safety. In addition to quality, safety, composition, claimed functions, manufacturing methods, test results, and the safety assessment, supporting records such as basic information about the product and manufacturer and the label must be organized for each product. The Regulations for Cosmetic Product Information File Management organize the required records into 16 categories, so the records and signature and qualification requirements for each category must be checked according to the product type.',
-      'The PIF requirements have been implemented in phases by product category. From July 1, 2026, the remaining cosmetics are also covered, so the requirements apply in principle to all cosmetics. The exception is limited to solid handmade soap manufactured at a site exempt from factory registration. A product is not exempt merely because it is handmade or called soap; both its solid form and the manufacturing site’s exemption from factory registration must be confirmed.',
-      'A third party with the necessary qualifications and capabilities may assist with PIF work, including the safety assessment. Even when a third party helps prepare or retain the records, however, the cosmetics manufacturer’s or importer’s legal responsibility remains in place. The original manufacturer, testing laboratory, safety assessor, and Taiwan business should establish a system for sharing changed information and current signed records.',
+      'A PIF is a set of records meant to give an ongoing account of a product’s quality and safety. It compiles information on the product’s quality, safety, composition, claimed functions, manufacturing methods, test results and safety assessment. Supporting records such as basic information about the product and the manufacturer, and the label, must also be organized for each product. The Regulations for Cosmetic Product Information File Management sort the required records into 16 categories. The records, signature requirements and qualification requirements for each category must be checked according to the product type.',
+      'PIF requirements have been implemented in phases by product category. From July 1, 2026, the remaining cosmetics are covered as well, so the requirements apply in principle to all cosmetics. The exception is narrow. It covers only solid handmade soap manufactured at a site exempt from factory registration. A product is not exempt merely because it is handmade or called soap. Both its solid form and the site’s exemption from factory registration must be confirmed.',
+      'Outside parties with the necessary qualifications and capabilities may assist with PIF work, including the safety assessment. Even then, the legal responsibility of the cosmetics manufacturer or importer remains in place, whoever helps prepare or retain the records. The original manufacturer, the testing laboratory, the safety assessor and the Taiwan business should set up a system for sharing changed information and current signed records.',
     ];
     const paragraphs = pifSection
       .split(/\n\n+/)
@@ -244,7 +247,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
       'solid handmade soap manufactured at a site exempt from factory registration',
     );
     expect(pifSection).toContain(
-      'the cosmetics manufacturer’s or importer’s legal responsibility remains in place',
+      'the legal responsibility of the cosmetics manufacturer or importer remains in place',
     );
     for (const paragraph of expectedParagraphs) {
       expect(post?.content).toContain(paragraph);
@@ -253,18 +256,18 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
 
   it('locks PIF updating, Article 7 duration, Article 8 address, and retrieval controls', () => {
     const required = [
-      'an ingredient or formula, a manufacturing method or site, labeling including the label, a claimed function, or safety information changes',
-      'consumer complaints, adverse events, and new test results may also affect the existing assessment',
-      'Under Article 7 of the Regulations for Cosmetic Product Information File Management',
-      'at least five years beginning on the day after the product was last supplied to the market',
-      'Under Article 8 of the same Regulations',
+      'an ingredient or formula, a manufacturing method or site, the labeling including the label, a claimed function or safety information changes',
+      'Consumer complaints, adverse events and new test results may also affect the existing assessment',
+      'Article 7 of the Regulations for Cosmetic Product Information File Management sets the retention period',
+      'at least five years, starting the day after the product was last supplied to the market',
+      'Article 8 of the same Regulations sets the place',
       'the address of the cosmetics manufacturer or importer specified in Article 7(1)(7) of the Cosmetic Hygiene and Safety Act',
-      'The provision governing the retention period and the provision governing the retention location should be distinguished in practice.',
-      'the original manufacturer holds the originals or a secure electronic or cloud repository is used',
+      'One rule answers how long, the other where, and practice should keep them apart.',
+      'the original manufacturer holds the originals, or a secure electronic or cloud repository is used',
       'must be able to access the complete records',
-      'Access rights, backups, version control, file formats, and responsible personnel',
-      'promptly retrieved and produced at the competent authority’s request',
-      'which records will be handed over, how the handover will occur, and whether access rights will survive',
+      'access rights, backups, version control, file formats and responsible personnel',
+      'retrieved and produced promptly at the competent authority’s request',
+      'which records are handed over, how the handover works, and whether access rights survive',
       'remain available for the statutory retention period',
     ];
 
@@ -276,17 +279,17 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
 
   it('qualifies inspections and separates false information, correction, fines, and further measures', () => {
     const required = [
-      'notify the cosmetics manufacturer or importer at least seven days before the inspection',
-      'conducted without advance notice if a statutory exception under the applicable regulations applies',
-      'Complete and current records should always be maintained',
-      'Reporting false information in a product registration or recording false information in a PIF',
+      'notify the cosmetics manufacturer or importer at least seven days beforehand',
+      'go ahead without advance notice if a statutory exception under the applicable regulations applies',
+      'complete and current records should be kept ready to retrieve and produce',
+      'Reporting false information in a product registration, or recording false information in a PIF',
       'NT$10,000–NT$1,000,000',
-      'if PIF records are incomplete, the competent authority ordinarily orders correction within a specified period',
-      'an administrative fine may be imposed if the deficiency is not corrected within that period',
-      'False information and a remediable documentation deficiency should not be treated as producing the same consequence.',
+      'Incomplete PIF records are treated differently. The competent authority ordinarily orders correction within a specified period',
+      'may impose an administrative fine if the deficiency is not corrected within that period',
+      'A false entry and a documentation gap that can still be fixed should not be treated alike.',
       'Recall or destruction does not automatically follow every deficiency in PIF documentation.',
-      'The product’s safety, the nature of the violation, the status of corrective action, and the statutory requirements applicable to each measure',
-      'Measures taken when a safety issue is identified should be distinguished from a request to supplement documentation',
+      'The product’s safety, the nature of the violation, the status of corrective action and the statutory requirements for each measure',
+      'A measure taken because a safety issue has been identified differs from a request to supplement documentation',
       'the competent authority’s notice and the applicable legal provisions',
     ];
 
@@ -298,23 +301,23 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
 
   it('locks the overall-advertisement analysis, fine ranges, and commercial-partner factors', () => {
     const required = [
-      'The product name, sentences, images, symbols, sound, surrounding context, and the overall impression conveyed to consumers',
-      'a dominant advertising message is not necessarily cured by a disclaimer in small print',
-      'both individual claims and the final advertisement as produced should be reviewed',
-      'treats acne, has an anti-inflammatory effect, or sterilizes',
+      'the product name, sentences, images, symbols, sound, surrounding context and the overall impression on consumers',
+      'A disclaimer in small print does not necessarily cure a dominant advertising message',
+      'both the individual claims and the final advertisement as produced should be reviewed',
+      'treats acne, has an anti-inflammatory effect or sterilizes',
       'claims that associate the product with a disease',
       'before-and-after images',
-      'contexts that connect an ingredient description to a therapeutic effect of the product',
+      'Contexts that connect an ingredient description to a therapeutic effect of the product',
       'NT$40,000–NT$200,000',
       'NT$600,000–NT$5,000,000',
-      'the ranges differ by violation type',
-      'Payment, free products, sales links, the brand’s posting instructions, and repeated collaborations',
+      'The two fine ranges differ by type of violation',
+      'Payment, free products, sales links, the brand’s posting instructions and repeated collaborations',
       'Not every personal post automatically becomes brand advertising',
-      'the relationship between the poster and the brand, the specific content, and the degree of the brand’s involvement',
+      'the poster’s relationship with the brand, the specific content and the degree of the brand’s involvement',
       'the permitted claims and supporting records, pre-publication review, and procedures for correcting or deleting noncompliant claims',
-      'Claims added in comments, oral explanations in livestreams or short videos',
+      'claims added in comments and oral explanations in livestreams or short videos',
       'inconsistencies among sales pages and labels',
-      'Reviewed drafts, approval history, correction requests, and final published materials',
+      'reviewed drafts, approval history, correction requests and the final published materials',
     ];
 
     for (const phrase of required) {
@@ -325,7 +328,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
 
   it('keeps the exact six-step pre-market sequence', () => {
     const sequenceSection = parsed.content.slice(
-      parsed.content.indexOf('### A Pre-Market Compliance Sequence'),
+      parsed.content.indexOf('### The Order of Work Before Sale'),
       parsed.content.indexOf('### Official Sources'),
     );
     expect(
@@ -335,11 +338,11 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
       ),
     ).toEqual([
       'Decide whether to establish a Taiwan subsidiary or branch or entrust importation and sales to a local importer.',
-      'Identify the entity bearing the legal responsibilities of the cosmetics manufacturer or importer and the persons responsible for the contractually allocated tasks.',
-      'Complete product registration before supplying, selling, giving away, or publicly displaying the product, or providing it to consumers for trial use.',
+      'Identify who bears the legal responsibilities of the cosmetics manufacturer or importer, and who is responsible for each contractually allocated task.',
+      'Complete product registration before supplying, selling, giving away or publicly displaying the product, or providing it to consumers for trial use.',
       'Prepare a PIF for each product, update it for changes, and retain it for the statutory period at the required location.',
-      'Review labels, sales pages, advertising, and collaboration posts based on their overall presentation.',
-      'Maintain procedures for responding to inspections and corrective requests, complaints and safety information, and any necessary follow-up measures.',
+      'Review labels, sales pages, advertising and collaboration posts on their overall presentation.',
+      'Keep procedures ready for inspections and corrective requests, complaints and safety information, and any necessary follow-up measures.',
     ]);
   });
 
@@ -358,7 +361,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
   });
 
   it('ends with the exact disclaimer and canonical author, with nothing after the author', () => {
-    const exactEnding = `This article provides general educational information about the rules governing entry into Taiwan’s cosmetics market. It is not legal advice on any specific product or advertisement and does not guarantee any permit or registration, eligibility for sale, or processing time. The market-entry structure, product records, labeling and advertising content, and the competent authorities’ current practices should be confirmed for each particular matter.
+    const exactEnding = `This article gives general educational information about the rules for entering Taiwan’s cosmetics market. It is not legal advice on any specific product or advertisement, and it does not guarantee any permit or registration, eligibility for sale, or processing time. The market-entry structure, product records, labeling and advertising content, and the competent authorities’ current practices should be confirmed for each particular matter.
 
 Wei Tseng (曾雋崴), Taiwan Attorney`;
 
@@ -370,9 +373,9 @@ Wei Tseng (曾雋崴), Taiwan Attorney`;
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const minutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(2_481);
+    expect(visibleWordCount).toBe(2_296);
     expect(visibleWordCount).toBeGreaterThanOrEqual(1_800);
-    expect(minutes).toBe(13);
+    expect(minutes).toBe(12);
     expect(parsed.data.read_time).toBe(`${minutes} min read`);
     expect(post?.readTime).toBe(`${minutes} min read`);
   });

@@ -2,7 +2,7 @@
 title: "Setting Up a Company in Taiwan: Subsidiaries, Branches, Representative Offices, Procedures, and Work Permits"
 seoTitle: "Taiwan Company Setup: Entities & Permits"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
-lastmod: "2026-10-06"
+lastmod: "2026-10-12"
 date_display: "September 13, 2025"
 read_time: "9 min read"
 categories:
@@ -24,102 +24,99 @@ faq:
 
 ![](../images/001-taiwan-company-establishment-basics/img-01.jpg)
 
-Completing company registration does not mean that investment-fund verification or every industry-specific license has been completed, nor does it allow a shareholder or manager to begin working in Taiwan immediately.
+Registration is not the finish line. Completing it does not mean that investment-fund verification or every industry-specific license has been completed. Nor does it let a shareholder or manager begin working in Taiwan immediately.
 
-## 1. Choosing a Taiwan Presence: Subsidiary, Branch, or Representative Office
+## Subsidiary, Branch, or Representative Office
 
-A Taiwan subsidiary (有限公司 or 股份有限公司) is a legal entity separate from its head office and enters into contracts and holds rights and obligations in its own name. The choice between a limited company and a company limited by shares should take account of the equity or share structure, corporate organs, decision-making arrangements, and financing plans. Separate legal personality does not mean that every liability is invariably confined to the subsidiary, so individual arrangements such as guarantees, security, contracts with the parent company, and directors’ liability must also be examined. A Taiwan branch of a foreign company is the organization through which the foreign head office conducts business in Taiwan. A branch has no shareholders of its own, and because it is part of the head office rather than a separate legal entity, the head office bears the branch’s debts and liabilities. Fund transfers and remittances of profits between the head office and the Taiwan branch, as well as their accounting and tax treatment, should not be assumed to follow the dividend structure of a subsidiary.
+A Taiwan subsidiary is a legal entity separate from its head office. It takes the form of a limited company (有限公司) or a company limited by shares (股份有限公司), and it enters into contracts and holds rights and obligations in its own name. The choice between the two forms should take account of the equity or share structure, the corporate organs, the decision-making arrangements, and the financing plans.
 
-A representative office is a base for activities within the permitted scope, such as market research, liaison work, negotiation support, and legal acts on behalf of the foreign company. It may not engage in business activities such as selling goods or providing services in Taiwan. If its actual work expands to taking orders, receiving payments, or repeatedly providing services, the business should look beyond the representative-office label and reconsider whether a subsidiary or branch is required.
+Separate legal personality does not always confine every liability to the subsidiary. Individual arrangements such as guarantees, security, contracts with the parent company, and directors’ liability must be examined as well.
 
-[When comparing organizational forms](/en/columns/taiwan-company-subsidiary-vs-branch), the business must therefore consider not only the scope of liability but also the capital structure, profit distributions and remittances, taxation, industry-specific licensing, employment relationships, and requirements for participation in government procurement. If a particular tender or license requires a Taiwan legal entity, specified capital, a performance record, or registration, eligibility should be determined from the applicable law and notice rather than from the organizational label alone.
+Branches work differently. A Taiwan branch of a foreign company is the organization through which the foreign head office conducts business in Taiwan. It has no shareholders of its own. Because it is part of the head office and not a separate legal entity, the head office bears the branch’s debts and liabilities. Fund transfers and profit remittances between the head office and the branch, with their accounting and tax treatment, should not be assumed to follow the dividend structure of a subsidiary.
+
+Then there is the representative office, a base for activities within a permitted scope: market research, liaison work, negotiation support, and legal acts on behalf of the foreign company. It may not engage in business activities such as selling goods or providing services in Taiwan. If its actual work grows to taking orders, receiving payments, or repeatedly providing services, the label no longer fits. The business should then reconsider whether a subsidiary or branch is required.
+
+Liability is only one question when [comparing organizational forms](/en/columns/taiwan-company-subsidiary-vs-branch). Capital structure, profit distributions and remittances, taxation, industry-specific licensing, employment relationships, and the requirements for taking part in government procurement all have to be weighed too. Some tenders and licenses call for a Taiwan legal entity, specified capital, a performance record, or a registration. For those, eligibility comes from the applicable law and notice. The organizational label alone settles nothing.
 
 ![](../images/001-taiwan-company-establishment-basics/img-02.jpg)
 
-## 2. Key Steps in Forming a Taiwan Subsidiary
+## Forming a Subsidiary, from Name Review to Regular Account
 
 1. Preliminary review and reservation of the company’s Chinese name and registered business activities
-
 2. Notarization or authentication of foreign documents, including powers of attorney, and Taiwan overseas-office authentication where required
-
 3. Foreign-investment application to the Department of Investment Review, Ministry of Economic Affairs (MOEA), where applicable
-
 4. Opening a preparatory bank account
-
 5. Remittance of foreign investment funds
-
 6. Investment amount verification (投資額審定)
-
 7. Company registration
-
 8. Tax registration
-
 9. Conversion of the preparatory account into a regular company account
-
 10. Additional import-export, industry-license, work-permit, or residence procedures, where applicable
 
-Preliminary review of the company’s Chinese name and registered business activities is the stage at which the proposed name and business are checked before registration. Passing that review does not mean that a separate license required for the business has already been obtained or that operations may begin immediately at the proposed premises. When a foreign-investment application is required, the investor, investment amount, investee, and business plan should be consistent with the review materials.
+Preliminary review checks the proposed name and business before registration. Passing it does not mean that a separate license required for the business has been obtained, or that operations may begin immediately at the proposed premises. Where a foreign-investment application is required, the investor, investment amount, investee, and business plan should match the review materials.
 
-Documents executed abroad, such as powers of attorney, certificates of corporate existence, and documents confirming representative authority, may require notarization or authentication, or authentication by a Taiwan overseas office, depending on the place of issuance and the nature of the document. The translation, the identity of the authorized signatory, and the corporate name should also be checked for consistency with the application. Because the required documents may vary with the investor’s nationality and whether the investor is an individual or a legal entity, it is efficient to identify the validity periods and authentication route before obtaining the documents.
+Documents executed abroad, such as powers of attorney, certificates of corporate existence, and documents confirming representative authority, may require notarization or authentication, or authentication by a Taiwan overseas office. Which applies depends on the place of issuance and the nature of the document. The translation, the authorized signatory, and the corporate name should be checked against the application. Required documents also vary with the investor’s nationality and with whether the investor is an individual or a legal entity, so it saves time to learn the validity periods and the authentication route before obtaining the documents.
 
-A bank may verify the beneficial owner and source of funds as part of its customer due diligence when the preparatory account is opened and the investment funds are remitted. If the remitter, purpose of remittance, approved investment, and receiving account do not correspond, further explanation or correction may be required. After remittance, the actual investment amount is verified, company registration and tax registration are completed, and the preparatory account is converted into a regular account in accordance with the bank’s procedures. The order, necessity, and duration of the procedures vary with the organizational form, investment amount, industry, substance of the review, progress of the bank’s procedures, and any requested corrections.
+Banks come in at the preparatory account. When it is opened and the investment funds are remitted, the bank may verify the beneficial owner and the source of funds as part of its customer due diligence. If the remitter, the purpose of the remittance, the approved investment, and the receiving account do not correspond, further explanation or correction may be required. After remittance, the actual investment amount is verified, company registration and tax registration are completed, and the preparatory account is converted into a regular account under the bank’s procedures. The order, necessity, and duration of these procedures vary with the organizational form, investment amount, industry, substance of the review, progress of the bank’s procedures, and any requested corrections.
 
-Some procedures take place after company formation, including import-export registration, permits concerning factories, products, or professional industries, and applications for foreign-national work permits and residence. When setting a contract date or business commencement date, the company should consider not only company registration but also the time required to complete these follow-up procedures.
+Several procedures come after formation: import-export registration, permits concerning factories, products, or professional industries, and applications for foreign-national work permits and residence. A contract date or business commencement date should allow for the time these take, not just for company registration.
 
 ![](../images/001-taiwan-company-establishment-basics/img-03.jpg)
 
-## 3. Checking Business Activities and Premises Before Formation
+## Licenses and Premises Before Registration
 
-Many industries are open to foreign investment, but prohibited or restricted industries, professional qualifications, restrictions on business premises, and industry-specific licenses must be checked separately. In fields such as medical devices, alcohol, travel, construction, and professional services, where approval or registration by a regulatory authority or a professional qualification may be required, the applicable rules must be assessed by reference to the products and services actually offered and the transaction structure. The required registrations and liabilities may differ depending on the operating model, such as online sales versus a physical store, importing versus domestic distribution, or direct services versus intermediary services.
+Many industries are open to foreign investment. Prohibited or restricted industries, professional qualifications, restrictions on business premises, and industry-specific licenses must still be checked separately. In medical devices, alcohol, travel, construction, and professional services, approval or registration by a regulatory authority, or a professional qualification, may be required. The rules that apply depend on the products and services actually offered and on the transaction structure. The operating model matters as well. Online sales versus a physical store, importing versus domestic distribution, and direct services versus intermediary services can each call for different registrations and carry different liabilities.
 
-Before entering into a lease, the company should check the land-use classification, building regulations, lease terms, and suitability for tax registration in relation to the proposed address and business activities. If the building’s permitted use or management rules are incompatible with the actual business, or if the necessary landlord consent cannot be obtained, the company may have to relocate or complete additional procedures even after registration.
+Before signing a lease, the company should check the land-use classification, building regulations, lease terms, and suitability for tax registration against the proposed address and business activities. If the building’s permitted use or management rules do not fit the actual business, or the necessary landlord consent cannot be obtained, the company may have to relocate or complete additional procedures even after registration.
 
-Taipei City operates an [advance inquiry for business premises](/en/columns/taiwan-company-setup-pitch-location) (營業場所預先查詢) for company and business registrations within its scope. The result of that inquiry alone, however, does not establish compliance with other licensing requirements or the requirements of laws governing professional activities. For premises in another locality, the company should confirm the procedures of the relevant local government and competent authority and should obtain written confirmation of the premises’ suitability before entering into a long-term lease or investing in facilities.
+Taipei City operates an [advance inquiry for business premises](/en/columns/taiwan-company-setup-pitch-location) (營業場所預先查詢) for company and business registrations within its scope. Its result does not establish compliance with other licensing requirements or with the laws governing professional activities. For premises in another locality, the company should confirm the procedures of the relevant local government and competent authority. It should also obtain written confirmation that the premises are suitable before entering into a long-term lease or investing in facilities.
 
-## 4. Work Permits, Residence, and Capital
+## Work Permits, Residence, and Capital
 
-The applicant for company formation, a company shareholder, the person who actually works in Taiwan, and the residence applicant may be the same person, but they must be treated as legally distinct roles. This is because investment approval reviews the inflow of capital, a work permit reviews a foreign national’s performance of work, and an ARC reviews the purpose and duration of residence.
+One person may be the applicant for company formation, a shareholder, the person who actually works in Taiwan, and the residence applicant. Even so, these must be treated as legally distinct roles, because each approval reviews something different. Investment approval reviews the inflow of capital. A work permit reviews a foreign national’s performance of work. An ARC reviews the purpose and duration of residence.
 
-### Company Formation, Work Authorization, and Residence
+### Work Authorization and Residence
 
-Forming a company does not by itself confer work authorization or residence status. Work-permit review may consider the applicant’s duties and qualifications, role in the company, investment relationship, the employer’s business performance, and the submitted materials as a whole. Even after a work permit is granted, an ARC must be applied for separately in accordance with the purpose of residence, and the validity period and renewal requirements of each authorization must be confirmed from the relevant disposition and the law in effect at the time.
+Does forming a company let a foreign national work in Taiwan? Not by itself. Formation confers neither work authorization nor residence status. Work-permit review may consider the applicant’s duties and qualifications, role in the company, investment relationship, the employer’s business performance, and the submitted materials as a whole. Even after a work permit is granted, an ARC must be applied for separately, according to the purpose of residence. The validity period and renewal requirements of each authorization must be confirmed from the relevant disposition and the law in effect at the time.
 
-Students may also apply to invest and form a company. Becoming an investor or shareholder, however, does not mean that the person’s current immigration status permits employment or company management in Taiwan. A person who will actually enter into contracts, direct employees, or handle day-to-day management should determine the applicable work-permit category and requirements before beginning work.
+Students may also apply to invest and form a company. Becoming an investor or shareholder does not mean that the person’s current immigration status permits employment or company management in Taiwan. Anyone who will actually enter into contracts, direct employees, or handle day-to-day management should determine the applicable work-permit category and its requirements before beginning work.
 
-The spouse and minor children of a foreign national who has obtained an ARC based on a work permit or similar authorization may separately apply for dependent residence if they meet the applicable requirements. Documents proving the marital or parent-child relationship, support, and purpose of residence may be required, and family members do not receive residence status automatically.
+Spouses and minor children of a foreign national who has obtained an ARC based on a work permit or similar authorization may separately apply for dependent residence if they meet the applicable requirements. Proof of the marital or parent-child relationship, of support, and of the purpose of residence may be required. Family members do not receive residence status automatically.
 
-As a general rule, an ordinary foreign national applying for [permanent residence](/en/columns/taiwan-permanent-residence-aprc) must have lawfully resided in Taiwan for five consecutive years and for at least 183 days in each year, among other requirements. Different calculation rules may apply to foreign professionals and others, and additional statutory requirements concerning conduct, assets or skills are also reviewed.
+An ordinary foreign national applying for [permanent residence](/en/columns/taiwan-permanent-residence-aprc) must, as a general rule, have lawfully resided in Taiwan for five consecutive years and for at least 183 days in each year, among other requirements. Different calculation rules may apply to foreign professionals and others. Additional statutory requirements concerning conduct, assets, or skills are also reviewed.
 
-### Company Capital and Work Permits for Foreign Managers
+### Capital and the Foreign-Manager Work Permit
 
-Taiwan does not impose a generally applicable statutory minimum capital requirement for company formation. Industry-specific laws may require separate capital or security deposits, and a bank may independently review the business plan and transaction risks. The foreign-manager work-permit category for a foreign-invested business covers, among others, the manager (經理人) of a company in which overseas Chinese or foreign investors collectively hold more than one-third of the issued shares or total capital, the manager of a Taiwan branch of a foreign company, and the representative of a representative office. A representative office established for at least one year must have a record of activities in Taiwan. This requirement is waived if it has been established for less than one year.
+There is no generally applicable statutory minimum capital requirement for company formation in Taiwan. Industry-specific laws may require separate capital or security deposits, and a bank may independently review the business plan and transaction risks.
 
-For a company or branch established for less than one year, the employer generally must satisfy at least one of the following:
+Foreign-manager work permits for a foreign-invested business cover, among others, the manager (經理人) of a company in which overseas Chinese or foreign investors collectively hold more than one-third of the issued shares or total capital, the manager of a Taiwan branch of a foreign company, and the representative of a representative office. A representative office established for at least one year must have a record of activities in Taiwan. That requirement is waived for one established less than a year.
+
+Where the company or branch has been established for less than one year, the employer generally must satisfy at least one of the following:
 
 - Paid-in capital or Taiwan working capital of at least NT$500,000
 - Revenue of at least NT$3 million
 - Import-export performance of at least US$500,000
 - Agency commissions of at least US$200,000
 
-For a company or branch established for at least one year, the employer generally must satisfy at least one of the following, measured by the most recent year in Taiwan or the average of the preceding three years:
+Once the company or branch has been established for at least one year, the employer generally must satisfy at least one of the following, measured by the most recent year in Taiwan or the average of the preceding three years:
 
 - Revenue of at least NT$3 million
 - Import-export performance of at least US$500,000
 - Agency commissions of at least US$200,000
 
-Special approval may be available where the business makes a substantial contribution to Taiwan’s economic development or special circumstances exist. The figures above are employer-qualification requirements for a foreign manager’s work permit, not a universally applicable minimum capital requirement for company formation. Satisfying the thresholds above also does not result in the automatic issuance of a work permit. If the same employer hires more than one person through this route, the foreign national’s, the employer’s, and other qualifications must meet the general requirements in Chapter 2 instead (Qualifications and Criteria Standards for Foreigners Undertaking Jobs under Article 46, Paragraph 1, Subparagraphs 1 to 6 of the Employment Service Act, Article 38(2)).
+Special approval may be available where the business makes a substantial contribution to Taiwan’s economic development or special circumstances exist. The figures above are employer-qualification requirements for a foreign manager’s work permit. They are not a universally applicable minimum capital requirement for company formation, and meeting them does not result in automatic issuance of a work permit. If the same employer hires more than one person through this route, the foreign national’s, the employer’s, and other qualifications must meet the general requirements in Chapter 2 instead (Article 38(2) of the Qualifications and Criteria Standards for Foreigners Undertaking Jobs under Article 46, Paragraph 1, Subparagraphs 1 to 6 of the Employment Service Act.)
 
 ![](../images/001-taiwan-company-establishment-basics/img-04.jpg)
 
-## 5. Taxes and the Taiwan–Korea Income Tax Agreement
+## Taxes and the Taiwan–Korea Income Tax Agreement
 
-Taiwan’s general business tax rate is 5%, and returns are generally filed every two months. The general profit-seeking enterprise income tax rate is 20%, although actual liability depends on taxable income and the applicable rules. Under Taiwan domestic law, dividends paid to a nonresident are generally subject to withholding at 21%.
+Taiwan’s general business tax rate is 5%, and returns are generally filed every two months. The general profit-seeking enterprise income tax rate is 20%. Actual liability depends on taxable income and the applicable rules. Under Taiwan domestic law, dividends paid to a nonresident are generally subject to withholding at 21%.
 
-Business tax and profit-seeking enterprise income tax have different tax bases and filing methods, so the tax on revenue must be distinguished from the tax on taxable income. When paying dividends, interest, royalties, or service fees to an overseas shareholder or related company, the payer should review in advance the character of the payment, the recipient’s status, domestic withholding rules, and the potential application of the income tax agreement.
+Business tax and profit-seeking enterprise income tax have different tax bases and filing methods. The tax on revenue has to be kept apart from the tax on taxable income. Before paying dividends, interest, royalties, or service fees to an overseas shareholder or related company, the payer should review the character of the payment, the recipient’s status, the domestic withholding rules, and the potential application of the income tax agreement.
 
-The Taiwan–Korea Income Tax Agreement entered into force on December 27, 2023, and applies from January 1, 2024. When the requirements for applying the agreement are met, the maximum source-country rate for dividends, interest, and royalties is 10% in each case. This treaty discussion applies to a Korean-related fact pattern that meets the agreement’s conditions. It is not a worldwide investor rule. The treaty’s reduced rates do not apply automatically merely because the treaty exists. The taxpayer must confirm whether it is a resident under the treaty, whether it is the beneficial owner, the legal character of the income, and the certificate of residence and application documents that must be submitted. The transaction structure, contracts, invoices, actual work, and payment flows should be kept consistent, and filing deadlines and the retention of supporting records should be reviewed separately.
+The Taiwan–Korea Income Tax Agreement entered into force on December 27, 2023, and applies from January 1, 2024. When the requirements for applying the agreement are met, the maximum source-country rate for dividends, interest, and royalties is 10% in each case. This discussion applies to a Korean-related fact pattern that meets the agreement’s conditions. It is not a worldwide investor rule. Reduced rates are not automatic. The taxpayer must confirm whether it is a resident under the treaty, whether it is the beneficial owner, the legal character of the income, and the certificate of residence and application documents that must be submitted. The transaction structure, contracts, invoices, actual work, and payment flows should be kept consistent. Filing deadlines and the retention of supporting records need a separate review.
 
-Business profits are generally taxable only in the residence jurisdiction unless, among other circumstances, the enterprise has a permanent establishment (PE) in the other jurisdiction under the agreement, but the manner in which the business is actually conducted must be examined first. A PE may include fixed facilities such as a place of management, branch, or office; a construction project lasting more than six months; services performed for more than 183 aggregate days in any 12-month period; or an agent who repeatedly exercises authority to conclude contracts. These four categories have different conditions, and the existence of a fixed place or an agent’s activities must be assessed independently of the number of service days. The existence of a PE and the taxation of business profits therefore should not be determined from the 183-day figure alone.
+Under the agreement, business profits are generally taxable only in the residence jurisdiction unless, among other circumstances, the enterprise has a permanent establishment (PE) in the other jurisdiction. How the business is actually conducted has to be examined first. A PE may include fixed facilities such as a place of management, branch, or office; a construction project lasting more than six months; services performed for more than 183 aggregate days in any 12-month period; or an agent who repeatedly exercises authority to conclude contracts. The four categories have different conditions. A fixed place or an agent’s activities must be assessed independently of the number of service days. So the 183-day figure alone should not decide whether a PE exists or how business profits are taxed.
 
 ## Official Sources
 
@@ -136,8 +133,8 @@ Business profits are generally taxable only in the residence jurisdiction unless
 - [Taiwan National Immigration Agency — Permanent Residence Guidance](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Taipei City — Advance Inquiry for Business Premises](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-[Taiwan Investment and Company Formation Services](/en/services/investment) describes the scope of our related services, and [Wei Tseng’s Profile](/en/lawyers/wei-tseng) provides information about the responsible attorney’s experience and languages. For advice on a specific matter, please use [Contact Our Office](/en/contact).
+Our related services are described under [Taiwan Investment and Company Formation Services](/en/services/investment), and [Wei Tseng’s Profile](/en/lawyers/wei-tseng) covers the responsible attorney’s experience and languages. For a specific matter, use [Contact Our Office](/en/contact).
 
-This article is an educational resource providing a general overview of Taiwan company formation and related rules, and it is not legal or tax advice for any specific matter. Because the required procedures and outcomes may vary with the investment structure, industry, the applicant’s nationality and immigration status, and current agency practice, confirm the latest official sources and the circumstances of the individual matter before investing, entering into a contract, or employing personnel.
+This article gives a general overview of Taiwan company formation and related rules. It is not legal or tax advice for any specific matter. Procedures and outcomes vary with the investment structure, industry, the applicant’s nationality and immigration status, and current agency practice, so check the latest official sources and the facts of the individual matter before investing, entering into a contract, or employing personnel.
 
 Wei Tseng (曾雋崴), Taiwan Attorney

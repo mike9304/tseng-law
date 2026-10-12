@@ -48,7 +48,7 @@ const faq = [
   },
 ];
 const headings = [
-  "1. Short Answer: When Can a Minimum-Service-Period Clause Be Enforceable?",
+  "1. When a Minimum-Service-Period Clause Can Be Enforceable",
   "2. First Statutory Basis: Employer-Funded Professional Skills Training",
   "3. Second Statutory Basis: Reasonable Compensation",
   "4. Reasonable Scope and the Four Statutory Factors",
@@ -56,7 +56,7 @@ const headings = [
   "6. Bonuses, Repayment, and Early Departure",
   "7. When Employment Ends for a Reason Not Attributable to the Worker",
   "8. Resignation Notice Is a Separate Question",
-  "9. Employer and Worker Review Checklists",
+  "9. Records Each Side Needs Beyond the Contract",
   "10. Official Sources",
   "11. Related Guidance",
 ];
@@ -80,7 +80,7 @@ const internalTargets = [
   "/en/contact",
 ];
 const disclaimer =
-  "This article is provided for educational purposes as a general explanation of minimum-service-period clauses in Taiwan, the repayment of training costs and prepaid benefits, and resignation notice. It is not legal advice on any individual employment matter. The enforceability of a clause and the scope of liability may vary depending on the contract type and wording, the training actually provided and its cost, the purpose and disclosure of compensation, the period served, the reason employment ended, and the available evidence. Before giving notice of resignation, making a wage deduction, entering into a repayment agreement, or responding to a dispute, consult the latest official sources and consider the specific circumstances.";
+  "This article is educational material that explains, in general terms, minimum-service-period clauses in Taiwan, the repayment of training costs and prepaid benefits, and resignation notice. It is not legal advice on any individual employment matter. The enforceability of a clause and the scope of liability may vary depending on the contract type and wording, the training actually provided and its cost, the purpose and disclosure of compensation, the period served, the reason employment ended, and the available evidence. Before giving notice of resignation, making a wage deduction, entering into a repayment agreement, or responding to a dispute, consult the latest official sources and consider the specific circumstances.";
 const author = "Wei Tseng (曾雋崴), Taiwan Attorney";
 const exactEnding = `- ${internalLinks[2]}
 
@@ -123,7 +123,7 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
       title,
       seoTitle: "Taiwan Minimum Service Period Clauses",
       url: sourceUrl,
-      lastmod: "2026-07-25",
+      lastmod: "2026-10-12",
       date_display: "September 13, 2025",
       read_time: "19 min read",
       categories: ["Taiwan Legal Information"],
@@ -169,22 +169,63 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
     ).toEqual(headings);
     expect(
       Array.from(parsed.content.matchAll(/^### (.+)$/gm), (match) => match[1]),
-    ).toEqual(["Employer Checklist", "Worker Checklist"]);
+    ).toEqual(["The Employer's File", "The Worker's File"]);
   });
 
-  it("repeats each FAQ answer twice and as its assigned H2 first paragraph", () => {
-    const assignments = [
-      [`## ${headings[0]}`, faq1Answer],
-      [`## ${headings[4]}`, faq2Answer],
-      [`## ${headings[5]}`, faq3Answer],
-      [`## ${headings[6]}`, faq4Answer],
+  it("carries each FAQ answer's legal facts in its assigned H2 first paragraph", () => {
+    const assignments: [string, string, string[]][] = [
+      [
+        `## ${headings[0]}`,
+        faq1Answer,
+        [
+          "Is a minimum-service-period clause automatically void? No.",
+          "Article 15-1 of Taiwan's Labor Standards Act sets the test, and its paragraph 1 provides two alternative statutory grounds.",
+          "The first is that the employer provides the worker with professional skills training and bears the cost.",
+          "The second is that the employer provides reasonable compensation in return for the worker's commitment to the minimum service period.",
+          "With either one, a clause may satisfy the statutory requirements. Both need not be met.",
+        ],
+      ],
+      [
+        `## ${headings[4]}`,
+        faq2Answer,
+        [
+          "Under the Ministry of Labor's guidance dated June 5, 2026, some training costs cannot serve as the basis for a minimum-service-period clause or a claim for a penalty or reimbursement.",
+          "routine education conducted regularly, ordinary on-the-job training, training that helps new hires adapt to their work and familiarizes them with the work environment and procedures, and training that employers are required by law to provide",
+        ],
+      ],
+      [
+        `## ${headings[5]}`,
+        faq3Answer,
+        [
+          "Not necessarily.",
+          "If a signing bonus, retention bonus, or other prepaid benefit was provided as reasonable compensation for a minimum-service-period clause, that purpose must have been clearly disclosed to the worker.",
+          "the Ministry of Labor's June 5, 2026 guidance explains that repayment must be calculated in proportion to the unserved period. The employer must not demand full repayment.",
+          "The actual outcome requires a review of the payment's purpose, the terms of the agreement, the period already served, and the reason employment ended.",
+        ],
+      ],
+      [
+        `## ${headings[6]}`,
+        faq4Answer,
+        [
+          "Article 15-1, paragraph 4 of Taiwan's Labor Standards Act covers an employment contract that ends before the minimum service period for a reason not attributable to the worker.",
+          "The worker is then not liable for breaching the minimum-service-period agreement or for reimbursing training costs.",
+          "The reason employment ended and the attribution of responsibility must be determined from specific evidence, including dismissal notices, resignation communications, and records of alleged violations of working conditions.",
+        ],
+      ],
     ];
 
-    for (const [heading, answer] of assignments) {
-      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
-      expect(firstParagraphAfter(post?.content ?? "", heading)).toBe(answer);
-      expect(raw.split(answer)).toHaveLength(3);
+    for (const [heading, answer, phrases] of assignments) {
+      const sourceFirst = firstParagraphAfter(parsed.content, heading);
+      const renderedFirst = firstParagraphAfter(post?.content ?? "", heading);
+
+      expect(sourceFirst).toBeDefined();
+      expect(renderedFirst).toBe(sourceFirst);
+      for (const phrase of phrases) expect(sourceFirst).toContain(phrase);
+      expect(raw).toContain(answer);
     }
+    expect(sectionBody(parsed.content, headings[4])).toContain(
+      "What the training is called is not decisive. Its specific curriculum, professional or technical content, duration, the costs actually borne by the employer, and supporting evidence must be examined.",
+    );
   });
 
   it("locks the introduction and its four review questions in order", () => {
@@ -201,7 +242,7 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
     let previousIndex = -1;
 
     expect(introduction).toContain(
-      "A minimum-service-period clause in a Taiwan employment contract is used to set out a worker's commitment to remain employed for a specified period, whether the worker must repay training costs, a signing bonus, or a retention bonus after leaving early, and whether the employer may seek a separate contractual penalty. The existence of a signed clause alone, however, does not establish either its enforceability or the amount repayable. The statutory requirements and the actual circumstances of the payment, training, and termination must be examined step by step, regardless of how the contract labels the arrangement.",
+      "A signed minimum-service-period clause does not, by its existence alone, establish that it is enforceable. Nor does it establish the amount repayable. In a Taiwan employment contract, the clause sets out a worker's commitment to remain employed for a specified period. It also sets out whether the worker must repay training costs, a signing bonus, or a retention bonus after leaving early, and whether the employer may seek a separate contractual penalty. Whatever label the contract uses, the statutory requirements and the actual circumstances of the payment, training, and termination must be examined step by step.",
     );
     for (const question of orderedQuestions) {
       const index = introduction.indexOf(question);
@@ -209,23 +250,23 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
       previousIndex = index;
     }
     expect(introduction).toContain(
-      "Even if the same contract addresses all four questions, different statutory provisions and evidence apply to each. The enforceability of the clause, when the notice of resignation takes effect, whether the worker must repay a prepaid benefit or training costs, and whether any separate loss actually occurred should therefore be examined independently.",
+      "One contract may address all four, yet different statutory provisions and evidence apply to each. Each point should therefore be examined independently: the enforceability of the clause, when the notice of resignation takes effect, whether the worker must repay a prepaid benefit or training costs, and whether any separate loss actually occurred.",
     );
   });
 
   it("separates the alternative threshold bases, scope review, and voidness rule", () => {
     const section = sectionBody(parsed.content, headings[0]);
     const requiredPhrases = [
-      "Article 15-1, paragraph 1 provides two alternative statutory grounds.",
+      "its paragraph 1 provides two alternative statutory grounds.",
       "The first is that the employer provides the worker with professional skills training and bears the cost",
-      "the second is that the employer provides reasonable compensation in return for the worker's commitment to the minimum service period",
+      "The second is that the employer provides reasonable compensation in return for the worker's commitment to the minimum service period",
       "The question is which ground actually exists, not what name the contract gives it.",
-      "Article 15-1 requires one of these two statutory grounds and a separate reasonableness review.",
-      "merely writing one of them into the contract automatically makes the entire clause enforceable",
-      "the reasonableness of the agreed period and scope of liability must be reviewed separately under paragraph 2",
-      "A clause that violates the statutory requirements in paragraph 1 or the reasonableness standard in paragraph 2 is void under paragraph 3.",
-      "A worker's signature may help establish that an agreement exists, but it cannot replace the statutory requirements.",
-      "the investment or compensation actually provided and the reason for selecting that period must also be examined",
+      "With either one, a clause may satisfy the statutory requirements. Both need not be met.",
+      "Merely writing a ground into the contract does not automatically make the entire clause enforceable.",
+      "paragraph 2 requires a separate review of whether the agreed period and the scope of liability are reasonable",
+      "Paragraph 3 states the consequence. A clause that violates the statutory requirements in paragraph 1 or the reasonableness standard in paragraph 2 is void.",
+      "A worker's signature may help establish that an agreement exists. It cannot replace the statutory requirements.",
+      "The investment or compensation actually provided, and the reason for selecting that period, must also be examined",
     ];
 
     for (const phrase of requiredPhrases) {
@@ -246,10 +287,10 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
       "Course outlines, training schedules, attendance records, assessment results, completion certificates, invoices, and receipts",
       "The agreement between the employer and the training provider, payment vouchers, and refund terms",
       "If the worker paid part of the cost directly or a third party provided support, determine who ultimately bore each cost.",
-      "The line between ordinary workplace familiarization and professional skills training does not depend solely on where the training occurred or who delivered it.",
-      "internal training should not be excluded across the board",
-      "The relationship between the service period and the investment in training must also be explained.",
-      "Whether the worker actually performed the relevant work after training and how long the worker had already served",
+      "Where the training occurred and who delivered it do not, by themselves, draw the line between ordinary workplace familiarization and professional skills training.",
+      "Internal training should therefore not be excluded across the board",
+      "How the service period relates to the investment in training must also be explained.",
+      "Whether the worker actually performed the relevant work after training, and how long the worker had already served",
     ];
 
     for (const phrase of requiredPhrases) expect(section).toContain(phrase);
@@ -258,15 +299,15 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
   it("locks reasonable-compensation purpose, disclosure, timing, vesting, and formula", () => {
     const section = sectionBody(parsed.content, headings[2]);
     const requiredPhrases = [
-      "reasonable compensation in return for the worker's commitment to the minimum service period",
-      "That compensation must have a purpose and structure distinct from ordinary wages or other compensation already due for work performed.",
+      "Reasonable compensation for the service commitment is the second ground.",
+      "It must have a purpose and structure distinct from ordinary wages or other compensation already due for work performed.",
       "Describing a payment on a pay statement as a signing bonus, retention bonus, or prepaid benefit does not by itself determine its legal character.",
-      "The payment's purpose should be examined first.",
+      "Start with the payment's purpose.",
       "part of the ordinary wage terms offered for recruitment, consideration for a commitment to remain for a particular period, or compensation for achieving performance targets",
       "payment date, amount, vesting date, connection to the service period, grounds for repayment, and repayment formula",
       "The Ministry of Labor's June 5, 2026 guidance",
       "that role must be clearly disclosed",
-      "An employer's later reinterpretation of the payment's purpose or reclassification of part of the worker's wages as compensation cannot readily substitute for the disclosure made when the contract was signed.",
+      "An employer's later reinterpretation of the payment's purpose, or reclassification of part of the worker's wages as compensation, cannot readily substitute for the disclosure made when the contract was signed.",
       "Reasonableness is not determined by the amount alone.",
       "The existence of compensation does not permit a service period of any length or repayment liability in any amount without limitation.",
       "how much the worker actually received after tax and deductions",
@@ -292,14 +333,14 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
     }
     for (const phrase of [
       "itemized evidence, the amount attributable to the individual worker, the skills the training provided, and the portion of the investment already recovered",
-      "The second factor, replaceability, is not determined solely by the employer's assertion that hiring is difficult.",
+      "Replaceability, the second factor, is not determined solely by the employer's assertion that hiring is difficult.",
       "whether workers are available for the same or a similar role, what qualifications and level of proficiency are required, the usual time needed to fill the position",
-      "The third factor concerns not only the amount of the compensation but also its scope.",
+      "Compensation, the third factor, is a matter of scope as well as amount.",
       "whether service already completed is reflected if the employment ends early",
-      "The fourth factor may include the circumstances in which the agreement was made, the nature of the work, what was explained to the parties, the actual period served, the reason employment ended",
-      "the relevant circumstances are not limited to these examples",
+      "Other circumstances make up the fourth factor. They may include the circumstances in which the agreement was made, the nature of the work, what was explained to the parties, the actual period served, and the reason employment ended",
+      "the relevant circumstances are not limited to them",
       "there must be a reasonable relationship of proportionality among the agreed period, the employer's actual investment, the difficulty of replacement, the compensation received by the worker, and the repayment burden",
-      "the outcome of another case should not simply be applied",
+      "The outcome of another case should not simply be applied",
     ]) {
       expect(section).toContain(phrase);
     }
@@ -308,13 +349,14 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
   it("locks all four excluded training categories and mixed-program separation", () => {
     const section = sectionBody(parsed.content, headings[4]);
     const requiredPhrases = [
-      "Ministry of Labor Letter No. 勞動關2字第1150141814號 separately addresses regularly conducted education, ordinary on-the-job training, training that familiarizes new hires with the work environment and procedures, and training that employers are required by law to provide.",
-      "its costs cannot be converted into the basis for a service obligation or a sanction for early termination",
+      "Four kinds of training are covered: routine education conducted regularly, ordinary on-the-job training, training that helps new hires adapt to their work and familiarizes them with the work environment and procedures, and training that employers are required by law to provide.",
+      "The guidance, Ministry of Labor Letter No. 勞動關2字第1150141814號, addresses each kind separately.",
+      "Its costs therefore cannot be converted into the basis for a service obligation or a sanction for early termination",
       "explanations of work rules, introductions to the organization and its systems, ordinary handovers, and basic safety procedures",
       "Ordinary recruitment, management, or handover costs that the employer would normally bear cannot be relabeled as a separate investment subject to reimbursement.",
       "Training is not always excluded merely because it was conducted in-house.",
-      "each component's subject, duration, cost, and status as legally required training should be examined separately",
-      "review the detailed table of contents and actual operating records rather than only the cover of the training materials",
+      "Each component's subject, duration, cost, and status as legally required training should then be examined separately",
+      "review the training materials' detailed table of contents and the actual operating records. The cover alone is not enough.",
       "supported by evidence matching the amount claimed as training costs",
     ];
 
@@ -327,10 +369,10 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
       "Disclosure should not be made for the first time after a dispute arises following payment.",
       "which payment compensates for the minimum service commitment, the full length of the agreed period, when the payment vests, and the formula used to settle repayment if employment ends early",
       "the agreed start and end dates, the actual dates worked, and the base amount used to calculate repayment",
-      "a fixed amount that takes no account of the period already served",
+      "A fixed amount that takes no account of the period already served",
       "If payment was made in installments or vests in stages, calculate separately the period to which each installment corresponds.",
-      "The repayment analysis should proceed in order through the enforceability of the clause, the legal character of the payment, the period already served, the reason employment ended, and the repayment formula.",
-      "A full-repayment provision, a fixed contractual penalty unrelated to actual loss, and a unilateral deduction from wages should not be treated as a single issue.",
+      "Any repayment analysis should proceed in order through the enforceability of the clause, the legal character of the payment, the period already served, the reason employment ended, and the repayment formula.",
+      "Full-repayment provisions, fixed contractual penalties unrelated to actual loss, and unilateral deductions from wages are three issues. They should not be treated as one.",
       "Neither the amount stated in the employer's demand nor the worker's payment of part of that amount resolves the remaining legal issues.",
       "Reimbursement of training costs must also be distinguished from repayment of a prepaid benefit.",
       "check whether any cost has been counted twice",
@@ -342,13 +384,14 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
   it("locks paragraph 4 protection and evidence-based attribution without a closed list", () => {
     const section = sectionBody(parsed.content, headings[6]);
     const requiredPhrases = [
-      faq4Answer,
-      "The mere fact that the employment relationship ended before the agreed period does not establish a breach by the worker.",
+      "Article 15-1, paragraph 4 of Taiwan's Labor Standards Act covers an employment contract that ends before the minimum service period for a reason not attributable to the worker. The worker is then not liable for breaching the minimum-service-period agreement or for reimbursing training costs.",
+      "The reason employment ended and the attribution of responsibility must be determined from specific evidence, including dismissal notices, resignation communications, and records of alleged violations of working conditions.",
+      "Early termination alone does not establish a breach by the worker.",
       "Determine who made which statement, the legal ground on which the contract ended, and to which party the circumstances that actually brought about the termination are attributable.",
       "a dismissal notice, resignation letter, mutual termination agreement, email and messenger records, materials concerning changes to working conditions, and attendance and work records",
-      "the actual course of events, the legal ground for termination, and the related evidence must be considered together",
+      "The actual course of events, the legal ground for termination, and the related evidence must be considered together",
       "Dismissal, mutual termination, and alleged violations of working conditions are examples of circumstances to review, not an exhaustive list",
-      "the label in a document may not match the actual facts",
+      "The label in a document may not match the actual facts.",
       "attribution must be addressed before calculating any amount",
       "the legal character and basis of each claim should be reviewed separately",
     ];
@@ -359,15 +402,15 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
   it("separates resignation from liability and locks Articles 15 and 16 notice rules", () => {
     const section = sectionBody(parsed.content, headings[7]);
     const orderedRules = [
-      "A minimum-service-period clause is not a device that physically or legally prevents a worker from resigning.",
+      "Minimum-service-period clauses do not physically or legally prevent a worker from resigning.",
       "A notice of resignation and the notice period concern when the employment relationship ends",
-      "the enforceability of the minimum-service-period clause and liability for repayment concern whether termination gives rise to financial liability",
+      "the enforceability of the clause and liability for repayment concern whether termination gives rise to financial liability",
       "When a worker terminates an indefinite-term employment contract, Article 15 of Taiwan's Labor Standards Act applies the notice periods in Article 16, paragraph 1.",
-      "Article 16 governs termination by an employer, and its notice periods apply to a worker's resignation through Article 15.",
+      "Article 16 itself governs termination by an employer. Its notice periods apply to a worker's resignation through Article 15.",
       "1. 10 days for at least three months but less than one year of continuous service",
       "2. 20 days for at least one year but less than three years of continuous service",
       "3. 30 days for at least three years of continuous service",
-      "If a fixed-term employment contract for a specific task exceeds three years, a separate rule under Article 15 applies.",
+      "Fixed-term employment contracts for a specific task follow a separate rule under Article 15 if they exceed three years.",
       "After completing three years of service, the worker may terminate the contract by giving the employer 30 days' notice.",
       "This rule must be distinguished from the notice periods based on continuous service that apply to indefinite-term employment contracts.",
     ];
@@ -385,31 +428,31 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
       "The legal conclusion cannot be predetermined merely because the contract states a longer notice period or the employer demands an immediate handover.",
     );
     expect(section).toContain(
-      "Separating when the resignation takes effect, whether the minimum-service-period clause is enforceable, whether training costs or prepaid benefits must be repaid, and whether any separate loss is claimed",
+      "Keep four matters apart: when the resignation takes effect, whether the minimum-service-period clause is enforceable, whether training costs or prepaid benefits must be repaid, and whether any separate loss is claimed",
     );
   });
 
   it("locks both evidence checklists and every contracted issue separation", () => {
     const section = sectionBody(parsed.content, headings[8]);
     const employerItems = [
-      "1. First identify the statutory ground: whether the employer provided professional skills training and bore its cost, or provided reasonable compensation for the service commitment.",
-      "2. Distinguish general education, routine education, legally required training, and professional skills training based on each course's actual content, duration, and purpose.",
-      "3. Preserve course outlines, schedules, completion records, invoices, receipts, and records showing who bore the cost, and record the grounds for external and internal costs separately.",
-      "4. Clearly link in writing the purpose of the compensation, payment date, amount, vesting conditions, disclosures made to the worker, and the formula for repayment based on the unserved period.",
-      "5. Document the basis for setting the service period, the possibility of replacing the worker with someone in the same or a similar role, and the relationship between the employer's operational needs and its actual investment.",
-      "6. Review whether the agreed period and repayment amount are proportionate to the scope of the training costs or compensation, and account for the period already served.",
-      "7. Determine the cause of termination and attribution of responsibility individually before calculating the actual termination date and the served and unserved periods.",
-      "8. Before making a wage deduction or demanding repayment, compare the contract, payment records, pay statements, the parties' communications, demand letters, and deduction records to review the legal basis and procedure.",
+      "Start by identifying the statutory ground: professional skills training provided at the employer's cost, or reasonable compensation for the service commitment.",
+      "Next, distinguish general education, routine education, legally required training, and professional skills training based on each course's actual content, duration, and purpose.",
+      "Preserve course outlines, schedules, completion records, invoices, receipts, and records showing who bore the cost. Record the grounds for external and internal costs separately.",
+      "On the compensation side, clearly link in writing the purpose of the compensation, the payment date, amount, vesting conditions, disclosures made to the worker, and the formula for repayment based on the unserved period.",
+      "Document the basis for setting the service period, the possibility of replacing the worker with someone in the same or a similar role, and the relationship between the employer's operational needs and its actual investment.",
+      "Review whether the agreed period and repayment amount are proportionate to the scope of the training costs or compensation, and account for the period already served.",
+      "Determine the cause of termination and the attribution of responsibility individually. Only then calculate the actual termination date and the served and unserved periods.",
+      "Before making a wage deduction or demanding repayment, compare the contract, payment records, pay statements, the parties' communications, demand letters, and deduction records to review the legal basis and procedure.",
     ];
     const workerItems = [
-      "1. Gather the original signed employment contract and amendments, recruitment materials, training materials, course outlines, schedules, and completion records.",
-      "2. Determine the training's professional or technical content, whether it was general familiarization or legally required training, the amounts shown on invoices and receipts, and who actually bore each cost.",
-      "3. Obtain payment records for prepaid benefits such as signing and retention bonuses, disclosures about their purpose as compensation, payment dates, vesting conditions, and repayment formulas.",
-      "4. Record separately the basis for the service period, the period already served, the remaining period, and the employer's claimed ability to replace the worker.",
-      "5. Preserve resignation notices, dismissal notices, or mutual termination agreements, as well as proof of delivery such as email and messenger records.",
-      "6. Arrange the actual reason and circumstances of termination chronologically, and review them together with the employer's repayment demand, pay statements, the parties' communications, and deduction records.",
-      "7. Review separately the enforceability of the minimum-service-period clause, the notice and timing of resignation, repayment of training costs and prepaid benefits, and any separately alleged loss.",
-      "8. Do not admit liability solely because the contract was signed or the employer demanded a particular amount; examine the evidence corresponding to Article 15-1's statutory requirements, reasonableness, attribution of termination, and proportional repayment formula.",
+      "Gather the original signed employment contract and amendments, recruitment materials, training materials, course outlines, schedules, and completion records.",
+      "Determine the training's professional or technical content, whether it was general familiarization or legally required training, the amounts shown on invoices and receipts, and who actually bore each cost.",
+      "For prepaid benefits such as signing and retention bonuses, obtain payment records, disclosures about their purpose as compensation, payment dates, vesting conditions, and repayment formulas.",
+      "Record separately the basis for the service period, the period already served, the remaining period, and the employer's claimed ability to replace the worker.",
+      "Preserve resignation notices, dismissal notices, or mutual termination agreements, as well as proof of delivery such as email and messenger records.",
+      "Arrange the actual reason and circumstances of termination chronologically. Then review them together with the employer's repayment demand, pay statements, the parties' communications, and deduction records.",
+      "Review separately the clause's enforceability, the notice and timing of resignation, repayment of training costs and prepaid benefits, and any separately alleged loss.",
+      "Do not admit liability solely because the contract was signed or the employer demanded a particular amount. Examine the evidence corresponding to Article 15-1's statutory requirements, reasonableness, attribution of termination, and proportional repayment formula.",
     ];
     let previousIndex = -1;
 
@@ -419,12 +462,12 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
       previousIndex = index;
     }
     for (const phrase of [
-      "review not only the contract but also the chronological records of training, payments, service, and termination",
-      "a table showing how much of the agreed period was served and remains unserved",
-      "Even when using a standard-form contract, do not mechanically apply the same period and amount to every role and worker.",
-      "Design the clause to reflect the actual investment in training, compensation, and replaceability, and clearly explain the payment's purpose and the proportional repayment formula before the contract is signed.",
-      "mark the date the contract was signed, the start and end dates of training, each payment date, the first and last days of work, and the date each notice was delivered",
-      "seek additional materials through the appropriate procedures as needed",
+      "review the contract together with the chronological records of training, payments, service, and termination",
+      "A table can help keep the issues separate. It would show how much of the agreed period was served and remains unserved",
+      "Even with a standard-form contract, do not mechanically apply the same period and amount to every role and worker.",
+      "Design the clause to reflect the actual investment in training, the compensation, and replaceability, and clearly explain the payment's purpose and the proportional repayment formula before the contract is signed.",
+      "Dates worth marking in the chronology are the date the contract was signed, the start and end dates of training, each payment date, the first and last days of work, and the date each notice was delivered",
+      "Then seek additional materials through the appropriate procedures as needed",
     ]) {
       expect(section).toContain(phrase);
     }
@@ -560,7 +603,7 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
     expect(visibleWordCount).toBeGreaterThanOrEqual(1_800);
-    expect(visibleWordCount).toBe(3_794);
+    expect(visibleWordCount).toBe(3_691);
     expect(calculatedMinutes).toBe(19);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
@@ -571,7 +614,7 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: "2026-07-25",
+      date: "2026-10-12",
       dateDisplay: "September 13, 2025",
       readTime: "19 min read",
       category: "legal",

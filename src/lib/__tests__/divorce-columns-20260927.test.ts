@@ -19,7 +19,6 @@ const FEATURED_NUMBER: Record<string, string> = {
 };
 
 const UNCHANGED_PASS = new Set([
-  'ja/taiwanese-spouse-divorce-cross-border-parenting',
   'th/taiwanese-spouse-divorce-cross-border-parenting',
   'fil/taiwanese-spouse-divorce-from-abroad',
 ]);
@@ -73,9 +72,11 @@ describe('native divorce columns September 2026', () => {
     'ja/taiwanese-spouse-divorce-from-abroad',
   ]);
 
-  // Sentence-variety rewrite lane 2026-10-12 moved lastmod; date_display stays 2026年9月28日.
+  // Sentence-variety rewrite lane 2026-10-12 moved lastmod; date_display stays 2026年9月28日
+  // (019) / 2026年9月27日 (021).
   const REWRITTEN_20261012 = new Set([
     'ja/taiwanese-spouse-divorce-agreement-registration',
+    'ja/taiwanese-spouse-divorce-cross-border-parenting',
   ]);
 
   it('includes exactly the nine authored locales in sitemap alternates for each new article', () => {

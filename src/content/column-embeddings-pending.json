@@ -1829,6 +1829,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-non-prosecution-reconsideration-private-prosecution"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-deferred-prosecution-conditions-complainant"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-deferred-prosecution-conditions-complainant"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-deferred-prosecution-conditions-complainant"
     }
   ]
 }

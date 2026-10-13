@@ -3,7 +3,7 @@
 // without a server: requests to /api, same-origin responses >= 400, console errors, page errors.
 //
 //   node scripts/static-site/browser-check.mjs [--out=out] [--sample=<n>] [--concurrency=6]
-//                                              [--report=static-site-browser.json]
+//                                              [--report=static-site-browser.json] [--base=https://…]
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
@@ -11,10 +11,11 @@ import { startStaticServer } from './serve-out.mjs';
 import { REPO_ROOT, walkFiles } from './shared.mjs';
 
 function parseArgs(argv) {
-  const args = { out: 'out', sample: Infinity, concurrency: 6, report: 'static-site-browser.json', port: 4620 };
+  const args = { out: 'out', sample: Infinity, concurrency: 6, report: 'static-site-browser.json', port: 4620, base: null };
   for (const arg of argv) {
     const [key, value] = arg.replace(/^--/, '').split('=');
     if (key === 'sample' || key === 'concurrency' || key === 'port') args[key] = Number(value);
+    else if (key === 'base') args.base = new URL(value).origin;
     else if (key in args) args[key] = value;
     else throw new Error(`Unknown argument: ${arg}`);
   }
@@ -35,8 +36,9 @@ function pagePaths(outDir) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const outDir = path.resolve(REPO_ROOT, args.out);
-  const server = await startStaticServer({ root: outDir, port: args.port });
-  const base = `http://127.0.0.1:${args.port}`;
+  // --base checks a deployed copy; otherwise out/ is served locally the way the host serves it.
+  const server = args.base ? null : await startStaticServer({ root: outDir, port: args.port });
+  const base = args.base ?? `http://127.0.0.1:${args.port}`;
   const mediaFile = path.join(REPO_ROOT, 'static-site-media.json');
   const mediaOrigin = fs.existsSync(mediaFile) ? JSON.parse(fs.readFileSync(mediaFile, 'utf8')).mediaOrigin : null;
   let paths = pagePaths(outDir);
@@ -92,7 +94,7 @@ async function main() {
   };
   await Promise.all(Array.from({ length: args.concurrency }, worker));
   await browser.close();
-  server.close();
+  server?.close();
   const counts = Object.fromEntries(Object.entries(issues).map(([k, v]) => [k, Object.keys(v).length]));
   fs.writeFileSync(path.join(REPO_ROOT, args.report), `${JSON.stringify({ generatedAt: new Date().toISOString(), pages: paths.length, counts, issues }, null, 2)}\n`);
   console.log(`[browser-check] ${paths.length} pages`, counts);

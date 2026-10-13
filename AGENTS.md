@@ -15,10 +15,10 @@
 
 ## 배포 (2026-10-13~): 정적 사이트 + MacBook Air 자동 배포
 
-- 공개 사이트는 ChatGPT Sites의 **정적 사이트**로 옮긴다(사용자 결정 2026-10-13: Vercel 비용, 폼·AI채팅·회원·빌더 미사용, 사건은 이메일로만). 도메인 전환 전까지는 Vercel도 계속 자동 배포되지만, 전환 후에는 쓰지 않는다.
-- **배포 방법 = main에 push.** MacBook Air(Codex ChatGPT 로그인)의 자동 배포기(`scripts/static-site/air-deployer.sh`, launchd 10분 주기)가 main을 빌드하고, 미디어를 R2에 올리고, Sites에 게시한다. 보통 push 후 20~40분. Air가 잠들어 있으면 깨어난 뒤 배포된다.
+- 공개 사이트는 **Cloudflare(Workers 정적 자산, Worker `tseng-law`)의 정적 사이트**로 옮긴다(사용자 결정 2026-10-13: Vercel 비용, 폼·AI채팅·회원·빌더 미사용, 사건은 이메일로만. ChatGPT Sites는 256MB 한도로 불가). 도메인 전환 전까지는 Vercel도 계속 자동 배포되지만, 전환 후에는 쓰지 않는다.
+- **배포 방법 = main에 push.** MacBook Air의 자동 배포기(`scripts/static-site/air-deployer.sh`, launchd 10분 주기)가 main을 빌드하고, 미디어를 R2에 올리고, Air의 Cloudflare 로그인(wrangler)으로 게시한다. 보통 push 후 20~40분. Air가 잠들어 있으면 깨어난 뒤 배포된다.
 - **확인:** `curl -s https://tseng-law.com/build-info.json`의 `commit`이 내 커밋(또는 그 이후)인지 본다.
-- **금지:** Studio 등 다른 머신에서 Sites 도구로 직접 배포, 새 Sites 사이트 생성, 사이트 공개 범위·도메인 변경, Vercel 설정 변경.
+- **금지:** 다른 머신에서 `wrangler deploy` 등으로 직접 배포, Cloudflare Worker·R2·DNS 설정 변경, Vercel 설정 변경. 배포는 Air 자동 배포기만 한다.
 - **정적 빌드 제약** (`NEXT_PUBLIC_STATIC_SITE=1`, `src/lib/static-site.ts`): 서버가 없다. 공개 화면에서 `/api` 호출 금지, 쿼리스트링으로 바뀌는 화면은 hydration 뒤 브라우저에서 읽기(검색·FAQ·칼럼·교통·형사 게시판 참고). `public/images`·`public/videos`는 `media.tseng-law.com`(R2)에서 서빙되고(`images/brand/` 제외) 새 파일은 자동 업로드된다.
 - ko·zh-hant 빌더 페이지와 머리글·바닥글 데이터는 Air의 `~/tseng-static-deploy/data/prod-mirror`에 고정돼 있다(편집기 없음). 수정은 Air에서 그 JSON을 고친다.
 - 절차·검증 도구: `docs/static-site/README.md`.

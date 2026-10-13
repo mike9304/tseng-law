@@ -161,7 +161,11 @@ export async function assembleSite({ crawlDir, outDir, crawl, mediaOrigin = null
     addRule(r.from, to, r.status);
   }
   for (const r of crawl.redirects) addRule(r.from, r.to, r.status);
-  fs.writeFileSync(path.join(outDir, '_redirects'), `${lines.join('\n')}\n`);
+  // Cloudflare counts every rule after the first splat/placeholder rule as dynamic (limit 100), so
+  // exact rules go first; a specific rule then also wins over a broader pattern, as in next.config.
+  const isDynamic = (line) => /[*:]/.test(line.split(/\s+/)[0]);
+  const ordered = [...lines.filter((line) => !isDynamic(line)), ...lines.filter(isDynamic)];
+  fs.writeFileSync(path.join(outDir, '_redirects'), `${ordered.join('\n')}\n`);
 
   // Fallback for hosts that ignore _redirects: a noindex page that forwards (exact paths only).
   let stubCount = 0;
@@ -190,6 +194,10 @@ export async function assembleSite({ crawlDir, outDir, crawl, mediaOrigin = null
     })].join('\n'));
   }
   blocks.push('/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable');
+  // Cloudflare Pages also serves every deploy on *.pages.dev; only the real domain may be indexed.
+  blocks.push('https://:project.pages.dev/*\n  X-Robots-Tag: noindex');
+  blocks.push('https://:version.:project.pages.dev/*\n  X-Robots-Tag: noindex');
+  blocks.push('https://:worker.:account.workers.dev/*\n  X-Robots-Tag: noindex');
   for (const f of crawl.files) {
     if (!/\.[a-z0-9]+$/i.test(f.path) && f.contentType) blocks.push(`${f.path}\n  Content-Type: ${f.contentType}`);
   }

@@ -1,13 +1,13 @@
 #!/bin/bash
 # Installs the MacBook Air auto-deployer (air-deployer.sh) as a launchd agent that runs every
-# 10 minutes. Re-run after changing air-deployer.sh. Only on the Mac whose Codex is logged into the
-# ChatGPT account that owns the Sites project.
+# 10 minutes. Re-run after changing air-deployer.sh. Needs this Mac's wrangler login
+# (`npx wrangler@4.149.0 login`) to the Cloudflare account that owns tseng-law.com.
 #
-#   bash scripts/static-site/install-air-deployer.sh <frozen data dir> [private|public]
+#   bash scripts/static-site/install-air-deployer.sh <frozen data dir> [site url to verify]
 set -euo pipefail
 
-DATA_SOURCE="${1:?usage: install-air-deployer.sh <frozen data dir (prod-mirror)> [private|public]}"
-ACCESS="${2:-private}"
+DATA_SOURCE="${1:?usage: install-air-deployer.sh <frozen data dir (prod-mirror)> [site url]}"
+SITE_URL="${2:-https://tseng-law.sejong-law.workers.dev}"
 BASE="$HOME/tseng-static-deploy"
 LABEL="com.son7.tseng-static-deploy"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
@@ -16,7 +16,7 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 mkdir -p "$BASE/bin" "$BASE/data" "$BASE/state" "$BASE/logs"
 install -m 755 "$HERE/air-deployer.sh" "$BASE/bin/air-deployer.sh"
 rsync -a --delete "${DATA_SOURCE%/}/" "$BASE/data/prod-mirror/"
-echo "$ACCESS" > "$BASE/access"
+echo "$SITE_URL" > "$BASE/site-url"
 
 cat > "$PLIST" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -36,4 +36,4 @@ PLIST
 
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST"
-echo "installed $LABEL (access: $ACCESS); status: cat $BASE/state/status.json"
+echo "installed $LABEL (verifies $SITE_URL); status: cat $BASE/state/status.json"

@@ -78,9 +78,6 @@ static-site-compare.json
 static-data/
 
 static-site-browser.json
-out-v2/
 static-site-*.json
-out-site/
-out-final/
-out-final2/
-out-deploy/
+# static-site build outputs (scripts/static-site/build.mjs --out=out-*)
+out-*/

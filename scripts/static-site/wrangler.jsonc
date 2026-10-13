@@ -1,0 +1,18 @@
+// Cloudflare Workers static assets for the static tseng-law.com (docs/static-site/README.md).
+// Deploy: npx wrangler@4.149.0 deploy --config scripts/static-site/wrangler.jsonc --assets <out dir>
+{
+  "name": "tseng-law",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    // `/ko/about` serves ko/about.html; `/ko/about.html` redirects to the clean URL.
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths get the nearest 404.html (ko/404.html, en/404.html, …) with status 404.
+    "not_found_handling": "404-page"
+  },
+  // The apex is a Workers custom domain (DNS record + certificate managed by Cloudflare).
+  // www.tseng-law.com → apex is a zone redirect rule, not part of this Worker.
+  "routes": [{ "pattern": "tseng-law.com", "custom_domain": true }],
+  // Preview URL (noindex via _headers) for checks; it serves the same files as the domain.
+  "workers_dev": true,
+  "preview_urls": false
+}

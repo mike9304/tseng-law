@@ -1,8 +1,10 @@
-# Static site on ChatGPT Sites (2026-10-13)
+# Static site on Cloudflare (2026-10-13)
 
-The public site is served as static files from ChatGPT Sites instead of Vercel (user decision
-2026-10-13: Vercel cost; AI chat, inquiry form, member login and the builder editor are unused —
-cases arrive by email only). Plan and decision log: `~/tseng-sites-migration-20261013/PLAN.md`.
+The public site is served as static files from Cloudflare Workers static assets (Worker
+`tseng-law`, `scripts/static-site/wrangler.jsonc`) instead of Vercel (user decision 2026-10-13: Vercel
+cost; AI chat, inquiry form, member login and the builder editor are unused — cases arrive by email
+only). ChatGPT Sites was tried first and rejected the site: its deploy archive may not exceed 256 MiB
+expanded, and the HTML alone is ~290 MB. Plan and decision log: `~/tseng-sites-migration-20261013/PLAN.md`.
 
 ## What changes in the static build only (`NEXT_PUBLIC_STATIC_SITE=1`, `src/lib/static-site.ts`)
 
@@ -42,16 +44,16 @@ directory is the only copy — keep a backup, and edit its published JSON to cha
 
 ## Publishing
 
-Push to `main`. The MacBook Air (its Codex is logged into the ChatGPT account that owns the Sites
-project) runs `scripts/static-site/air-deployer.sh` every 10 minutes via launchd
+Push to `main`. The MacBook Air runs `scripts/static-site/air-deployer.sh` every 10 minutes via launchd
 (`com.son7.tseng-static-deploy`, installed by `install-air-deployer.sh`): main in the worktree
 `~/Projects/tseng-law-deploy` → `build.mjs --data=~/tseng-static-deploy/data/prod-mirror
---media-origin=https://media.tseng-law.com` → `upload-media.mjs --bucket=tseng-law-media` → Codex
-with `codex-deploy-wo.md`. State: `~/tseng-static-deploy/state/status.json`; logs next to it. The
-live commit is in `https://tseng-law.com/build-info.json`. `air-deployer.sh --force` redeploys main.
+--media-origin=https://media.tseng-law.com` → `upload-media.mjs --bucket=tseng-law-media` →
+`wrangler deploy --config scripts/static-site/wrangler.jsonc --assets out-deploy` (the Air's wrangler
+login) → waits until `/build-info.json` reports the commit. State: `~/tseng-static-deploy/state/status.json`,
+logs next to it. `air-deployer.sh --force` redeploys main.
 
-Host limits measured 2026-10-13: a git push of 3.1 GB → HTTP 413 (617 MB accepted); the deploy
-archive may not exceed 256 MiB (the upload tool alone allows 512 MiB). That is why images and videos
-(2.6 GB) are served from Cloudflare R2 (`media.tseng-law.com`, bucket `tseng-law-media`, free tier) and
-only `images/brand/` stays on the site. `www.tseng-law.com` → apex is a domain setting (the next.config
-host rule cannot be expressed in `_redirects`).
+Limits: Workers static assets (free) allow 20,000 files per version and 25 MiB per file; `_redirects`
+allows 2,000 exact + 100 pattern rules and Cloudflare counts every rule after the first pattern as a
+pattern, so `assemble.mjs` writes exact rules first. Images and videos (2.6 GB) are served from
+Cloudflare R2 (`media.tseng-law.com`, bucket `tseng-law-media`, free tier); only `images/brand/` stays
+with the pages. `www.tseng-law.com` → apex is a domain setting.

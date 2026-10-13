@@ -572,6 +572,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
+    '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
   ],
   en: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
@@ -579,6 +580,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
+    '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
   ],
   ja: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
@@ -586,6 +588,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
+    '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
   ],
   'zh-hant': [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
@@ -593,6 +596,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
+    '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
   ],
 } as const;
 

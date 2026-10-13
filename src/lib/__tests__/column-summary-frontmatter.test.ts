@@ -138,7 +138,8 @@ describe('English column corpus summaries', () => {
       const post = getColumnPost(slug, 'en');
       expect(post?.summary, file).toBe(summary);
     }
-  });
+  // Reads and parses every EN column (150 files); ~3.4s alone, so the 5s default times out under parallel load.
+  }, 30000);
 
   it('reuses those summaries in EN meta description, Article JSON-LD, and llms.txt annotations', () => {
     const posts = getAllColumnPosts('en');

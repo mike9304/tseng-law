@@ -57,10 +57,10 @@ const EXPECTED_VISIBLE_JAPANESE = 1_641;
 const EXPECTED_VISIBLE_KANA = 851;
 const EXPECTED_READ_MINUTES = 4;
 const EXPECTED_SOURCE_SHA256 =
-  'c37198269c130ab4f0c63e5b15f51ac689a4a17d0a1addff2569017670ba2e86';
+  '8f027ed010b1c9f23dea377cfba707f33c46bb19c111e7702255ad740012fad7';
 
 const article101Groups = [
-  '曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',
+  '曲線・急勾配・狭橋・トンネル・交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',
   '学校や病院の標識がある場所、その他の追い越し禁止の標識や標線がある場所、対向車が接近しているとき、前方に二台以上の車両が連続して走行しているときにも、追い越しはできません。',
   '同一車道の前車を追い越そうとする後続車は、まず警音器を短く二回鳴らすか、前照灯を一回点滅させなければなりません。',
   '前車に進路を譲るよう強いるために、警音器や前照灯を繰り返し用いることは許されません。',
@@ -127,7 +127,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-09-30',
+      lastmod: '2026-10-13',
       date_display: '2025年9月13日',
       read_time: `約${EXPECTED_READ_MINUTES}分`,
       categories: ['台湾法律情報'],
@@ -257,7 +257,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-09-30',
+      date: '2026-10-13',
       dateDisplay: '2025年9月13日',
       readTime: `約${EXPECTED_READ_MINUTES}分`,
       category: 'legal',

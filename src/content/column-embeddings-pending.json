@@ -1853,6 +1853,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-summons-defendant-witness-warrant-wanted-notice"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-complaint-only-offense-settlement-withdrawal-deadline"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-complaint-only-offense-settlement-withdrawal-deadline"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-complaint-only-offense-settlement-withdrawal-deadline"
     }
   ]
 }

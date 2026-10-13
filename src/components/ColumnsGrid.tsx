@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import {
   isGuidanceLocale4,
   type GuidanceLocale4,
@@ -576,7 +577,14 @@ export default function ColumnsGrid({
           : 'Reviewed by Wei Tseng';
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const liveSearchParams = useSearchParams();
+  // Static site: the snapshot HTML was rendered without query filters, so hydrate with the same
+  // (initial) filters and apply the URL's filters right after mount.
+  const [urlFiltersReady, setUrlFiltersReady] = useState(!IS_STATIC_SITE);
+  useEffect(() => {
+    if (IS_STATIC_SITE) setUrlFiltersReady(true);
+  }, []);
+  const searchParams = urlFiltersReady ? liveSearchParams : null;
   const requestedCategory = normalizeFilterValue(searchParams ? searchParams.get('category') : initialFilters.category);
   const requestedTopic = normalizeFilterValue(searchParams ? searchParams.get('topic') : initialFilters.topic);
   const requestedAuthor = normalizeFilterValue(searchParams ? searchParams.get('author') : initialFilters.author);
@@ -613,7 +621,8 @@ export default function ColumnsGrid({
     if (typeof window !== 'undefined') {
       window.history[navigation === 'push' ? 'pushState' : 'replaceState'](null, '', target || '?');
     }
-    router.replace(target || '?', { scroll: false });
+    // The static site cannot answer router requests; history alone updates useSearchParams there.
+    if (!IS_STATIC_SITE) router.replace(target || '?', { scroll: false });
   };
 
   const updateSearchParam = (nextQuery: string) => {

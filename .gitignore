@@ -67,3 +67,18 @@ node_modules
 
 # Private drafting and individual Astra review evidence for this content batch.
 /work/divorce-columns-20260927/
+
+# static-site snapshot (scripts/static-site/build.mjs)
+.static-site-crawl/
+.static-site-server.log
+static-site-report.json
+
+static-site-compare.json
+# Frozen production builder content (scripts/static-site/pull-data.sh); contains drafts — commit only a reviewed published subset.
+static-data/
+
+static-site-browser.json
+out-v2/
+static-site-*.json
+out-site/
+out-final/

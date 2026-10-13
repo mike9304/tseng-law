@@ -406,3 +406,8 @@ html[dir='rtl'] .statusFailure {
   border-left: none;
   border-right: 4px solid #8b1e1e;
 }
+
+/* Static site: the submit button becomes a mailto link (InternationalInquiryEmailCta). */
+.mailtoSubmit {
+  text-decoration: none;
+}

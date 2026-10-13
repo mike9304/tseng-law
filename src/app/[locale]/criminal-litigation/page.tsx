@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import CriminalBoardList from './CriminalBoardList';
 import { getAllColumnPosts } from '@/lib/columns';
 import { buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
 import { PUBLIC_LANGUAGE_AUTONYMS } from '@/lib/public-guidance';
@@ -61,33 +61,21 @@ export default async function CriminalLitigationPage({ params, searchParams }: {
         <p data-criminal-count={posts.length} style={{ marginBottom: '1rem' }}>
           {copy.count(posts.length)}
         </p>
-        <form action={`/${locale}${CRIMINAL_BOARD_PATH}`} method="get" role="search" className="columns-search">
-          <label className="columns-search-label" htmlFor="criminal-search-input">{copy.search}</label>
-          <div className="columns-search-row">
-            <input id="criminal-search-input" type="search" name="q" defaultValue={query} maxLength={200}
-              placeholder={copy.placeholder} className="columns-search-input" />
-            <button type="submit" className="columns-search-submit">{copy.submit}</button>
-          </div>
-        </form>
-        {query ? <div className="columns-filter-summary">
-          <p role="status" data-criminal-search-results={visiblePosts.length}>{copy.results(visiblePosts.length)}</p>
-          <Link href={`/${locale}${CRIMINAL_BOARD_PATH}`} className="link-underline" data-criminal-search-reset>{copy.reset}</Link>
-        </div> : null}
-        {visiblePosts.length === 0 ? <p className="columns-empty">{copy.empty}</p> : null}
-        <div className="svc-columns-grid">
-          {visiblePosts.map((post) => (
-            <Link key={post.slug} href={`/${locale}/columns/${post.slug}`}
-              className="svc-col-card" data-criminal-column={post.slug}>
-              {post.featuredImage ? <div className="svc-col-card-media">
-                <Image src={post.featuredImage} alt="" width={640} height={360} />
-              </div> : null}
-              <h2 className="svc-col-card-title">{post.title}</h2>
-              <p className="svc-col-card-summary">{post.summary}</p>
-              <span className="svc-col-card-meta"><time>{post.dateDisplay || post.date}</time></span>
-              <span className="svc-col-card-link">{copy.read} →</span>
-            </Link>
-          ))}
-        </div>
+        <CriminalBoardList
+          locale={locale}
+          boardPath={CRIMINAL_BOARD_PATH}
+          posts={posts.map((post) => ({
+            slug: post.slug,
+            title: post.title,
+            summary: post.summary,
+            tags: post.tags ?? [],
+            featuredImage: post.featuredImage || undefined,
+            date: post.dateDisplay || post.date,
+          }))}
+          initialQuery={query}
+          labels={{ search: copy.search, placeholder: copy.placeholder, submit: copy.submit, reset: copy.reset, empty: copy.empty, read: copy.read }}
+          resultsLabels={Array.from({ length: posts.length + 1 }, (_, count) => copy.results(count))}
+        />
         <p style={{ marginTop: '2rem' }}>
           <Link className="link-underline" href={`/${locale}/services${locale === 'vi' ? '' : '/criminal'}`}>
             {copy.service}

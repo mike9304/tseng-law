@@ -4,7 +4,9 @@ import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import type { trafficHubCopy } from '@/data/traffic-hub';
 import { TRAFFIC_DIAGRAM_ID } from '@/data/traffic-hub';
-import type { TrafficBoardItem, TrafficBoardQuery } from '@/lib/traffic-collection';
+import { useEffect, useState } from 'react';
+import { parseTrafficBoardQuery, type TrafficBoardItem, type TrafficBoardQuery } from '@/lib/traffic-collection';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import JsonLd from '@/components/JsonLd';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import EnPageShell, { EnBand } from '@/components/en-design/EnPageShell';
@@ -43,13 +45,21 @@ function jaTitle(title: string) {
 
 // Preserve SSR while constructing the view synchronously from complete plain-data
 // props, instead of hydrating partially streamed RSC element children.
-export default function TrafficPageView({ locale, items, query, copy, collectionJsonLd }: {
+export default function TrafficPageView({ locale, items, query: serverQuery, copy, collectionJsonLd }: {
   locale: SiteLocale;
   items: readonly TrafficBoardItem[];
   query: TrafficBoardQuery;
   copy: (typeof trafficHubCopy)[SiteLocale];
   collectionJsonLd: Record<string, unknown>;
 }) {
+  // Static site (src/lib/static-site.ts): one snapshot serves every ?q=&subject=&video= URL,
+  // so the board's filters are read from the URL after hydration.
+  const [query, setQuery] = useState(serverQuery);
+  useEffect(() => {
+    if (IS_STATIC_SITE) setQuery(parseTrafficBoardQuery(Object.fromEntries(new URLSearchParams(window.location.search))));
+  }, []);
+  // Remount on a new query so the uncontrolled search input shows it.
+  const boardKey = `${query.q}|${query.subject ?? ''}|${query.video ? 1 : 0}`;
   const en = locale === 'en';
   const s = en ? EN_CLASSES : styles;
   // zh-hant and (since 2026-10-06) ko: the Apple-pass wrapper (id + data attribute) that ZhHantTraffic.module.css is
@@ -95,8 +105,8 @@ export default function TrafficPageView({ locale, items, query, copy, collection
         <section className={cx(s.section, jaStyles.board)} id="articles" aria-labelledby="articles-title">
           <div className={cx(s.heading, jaStyles.heading)}><h2 id="articles-title" className={phraseClass}>{phrases(copy.columns)}</h2><Link className={ja ? jaV2.chev : en ? enV2.textLink : undefined} href={`/${locale}/columns`}>{copy.allColumns}{arrow(' →')}</Link></div>
           {en
-            ? <TrafficBoard locale={locale} items={items} query={query} classes={enBoardStyles} thumbSizes={EN_THUMB_SIZES} />
-            : <TrafficBoard locale={locale} items={items} query={query} />}
+            ? <TrafficBoard key={boardKey} locale={locale} items={items} query={query} classes={enBoardStyles} thumbSizes={EN_THUMB_SIZES} />
+            : <TrafficBoard key={boardKey} locale={locale} items={items} query={query} />}
         </section>
         <section className={cx(s.visual, jaStyles.visual)} aria-labelledby="visual-title">
           <div className={cx(s.visualIntro, jaStyles.visualIntro)}><h2 id="visual-title" className={phraseClass}>{phrases(copy.visualTitle)}</h2><p>{copy.visualText}</p></div>

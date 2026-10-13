@@ -7,6 +7,7 @@ import { DEFAULT_FAQ_CATEGORIES } from '@/lib/builder/faq/faq-shared';
 import type { Locale } from '@/lib/locales';
 import { getFaqListCopy } from './faq-list-copy';
 import styles from './FaqList.module.css';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 export interface FaqItem {
   faqId?: string;
@@ -134,7 +135,8 @@ export default function FaqListPublished({
     if (typeof window !== 'undefined') {
       window.history.replaceState(null, '', href);
     }
-    router.replace(href, { scroll: false });
+    // The static site cannot answer router requests (src/lib/static-site.ts).
+    if (!IS_STATIC_SITE) router.replace(href, { scroll: false });
   }
 
   function handleQueryChange(nextQuery: string) {

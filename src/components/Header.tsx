@@ -28,6 +28,7 @@ import {
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 type MegaLink = {
   label: string;
@@ -798,7 +799,8 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
   }, [closeMegaMenuNow, drawerOpen, searchOpen]);
 
   useEffect(() => {
-    if (locale === 'ja' || isGuidanceLocale4(locale)) {
+    // The static site has no member API (src/lib/static-site.ts).
+    if (IS_STATIC_SITE || locale === 'ja' || isGuidanceLocale4(locale)) {
       setMemberNav({ status: 'signed-out' });
       return;
     }
@@ -893,7 +895,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
             {/* WO-X1 (EN-17): the public EN header no longer shows "Log in" to
                 signed-out visitors; the login link lives in the EN footer.
                 Signed-in members still get account/logout here. */}
-            {locale !== 'ja' && !isGuidance && (locale !== 'en' || memberNav.status === 'signed-in') ? (
+            {!IS_STATIC_SITE && locale !== 'ja' && !isGuidance && (locale !== 'en' || memberNav.status === 'signed-in') ? (
               <div className="utility-member-nav" data-member-nav-state={memberNav.status}>
                 {memberNav.status === 'signed-in' ? (
                   <>

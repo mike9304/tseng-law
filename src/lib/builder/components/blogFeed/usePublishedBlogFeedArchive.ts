@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 type NavigateMode = 'push' | 'replace';
 
@@ -82,7 +83,8 @@ export function usePublishedBlogFeedArchive({
       if (typeof window !== 'undefined') {
         window.history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', target);
       }
-      router.replace(target, { scroll: false });
+      // The static site cannot answer router requests (src/lib/static-site.ts).
+      if (!IS_STATIC_SITE) router.replace(target, { scroll: false });
     },
     [enabled, pathname, router, searchParams],
   );

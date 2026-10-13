@@ -1,12 +1,23 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { buildSeoMetadata } from '@/lib/seo';
-import { searchCurrentPublication } from '@/lib/builder/search/current-search';
+import { listCurrentSearchDocs, searchCurrentPublication } from '@/lib/builder/search/current-search';
 import type { SearchDocKind } from '@/lib/builder/search/types';
 import SearchPageView, { type SearchPageViewProps } from './SearchPageView';
 import JaSearchView from './JaSearchView';
+import StaticSearchPage from './StaticSearchPage';
+import {
+  formatSearchTotal,
+  MAX_SEARCH_QUERY_LENGTH,
+  normalizeSearchQuery,
+  resultKindLabel,
+  SEARCH_TAB_KIND,
+  searchKindLabel,
+} from './search-labels';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
 import zhSearchStyles from './ZhHantSearch.module.css';
 import { appleDesignRootProps, isAppleDesignLocale } from '@/lib/apple-design-locales';
@@ -26,47 +37,6 @@ export async function generateMetadata(props: { params: Promise<{ locale: SiteLo
     noindex: true,
     alternateLocales: siteLocales,
   });
-}
-
-const SEARCH_TAB_KIND: Record<string, SearchDocKind | 'all'> = {
-  all: 'all',
-  page: 'page',
-  pages: 'page',
-  // Historic overlay categories do not describe the page-kind collection.
-  services: 'all',
-  videos: 'all',
-  blog: 'blog',
-  columns: 'blog',
-  insights: 'blog',
-  faq: 'faq',
-  portfolio: 'portfolio',
-};
-
-const MAX_SEARCH_QUERY_LENGTH = 200;
-
-function normalizeSearchQuery(value: string): string {
-  let query = '';
-  let length = 0;
-
-  for (const character of value.trim()) {
-    if (length >= MAX_SEARCH_QUERY_LENGTH) break;
-    query += character;
-    length += 1;
-  }
-
-  return query;
-}
-
-function searchKindLabel(kind: SearchDocKind | 'all', locale: SiteLocale): string {
-  if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : locale === 'ja' ? 'すべて' : 'All';
-  if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : locale === 'ja' ? 'ページ' : 'Pages';
-  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights';
-  if (kind === 'faq') return locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : locale === 'ja' ? 'よくある質問' : 'FAQ';
-  return locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : locale === 'ja' ? 'ポートフォリオ' : 'Portfolio';
-}
-
-function resultKindLabel(kind: SearchDocKind, locale: SiteLocale): string {
-  return searchKindLabel(kind, locale);
 }
 
 export default async function SearchPage(
@@ -97,6 +67,30 @@ export default async function SearchPage(
       : locale === 'ja'
         ? 'キーワードを入力するか、下のおすすめのテーマを選んでください。'
         : 'Enter a keyword or choose a suggested topic below.';
+  if (IS_STATIC_SITE) {
+    // No server behind the static site: the query is read and matched in the browser
+    // against this locale's docs, embedded at snapshot time (titles and summaries only).
+    const docs = (await listCurrentSearchDocs(locale)).map((doc) => ({
+      id: doc.id,
+      kind: doc.kind,
+      url: doc.url,
+      title: doc.title,
+      summary: doc.summary,
+      tags: doc.tags,
+    }));
+    return wrapSearchBody(locale, (
+      <StaticSearchPage
+        docs={docs}
+        locale={locale}
+        copy={{ label: copy.label, title: copy.title, description: copy.description }}
+        search={{ title: content.search.title, placeholder: content.search.placeholder, suggestions: content.search.suggestions }}
+        maxQueryLength={MAX_SEARCH_QUERY_LENGTH}
+        emptyLabel={emptyLabel}
+        initialLabel={initialLabel}
+        suggestedLabel={suggestedLabel}
+      />
+    ));
+  }
   const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
   const { hits, availableKinds } = await searchCurrentPublication({
     query,
@@ -107,13 +101,7 @@ export default async function SearchPage(
   const visibleKindIds: Array<SearchDocKind | 'all'> = ['all', ...availableKinds];
 
   const results = hits;
-  const totalLabel = locale === 'ko'
-    ? `${hits.length === 50 ? '상위' : '총'} ${hits.length}건`
-    : locale === 'zh-hant'
-      ? `${hits.length === 50 ? '前' : '共'} ${hits.length} 筆`
-      : locale === 'ja'
-        ? `${hits.length === 50 ? '上位' : '全'} ${hits.length} 件`
-        : `${hits.length === 50 ? 'Top' : 'Total'} ${hits.length}`;
+  const totalLabel = formatSearchTotal(locale, hits.length);
   const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = visibleKindIds.map((id) => ({
     id,
     label: searchKindLabel(id, locale),
@@ -141,7 +129,10 @@ export default async function SearchPage(
     initialLabel,
     suggestedLabel,
   };
-  const body = locale === 'ja' ? <JaSearchView {...viewProps} /> : <SearchPageView {...viewProps} />;
+  return wrapSearchBody(locale, locale === 'ja' ? <JaSearchView {...viewProps} /> : <SearchPageView {...viewProps} />);
+}
+
+function wrapSearchBody(locale: SiteLocale, body: ReactNode) {
   // zh-hant Apple pass (2026-10-01; ko since 2026-10-06): the same page inside a scoped wrapper.
   if (isAppleDesignLocale(locale)) {
     return (

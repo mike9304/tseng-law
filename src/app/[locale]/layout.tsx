@@ -11,6 +11,7 @@ import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import CinematicRouteShell from '@/components/CinematicRouteShell';
 import VisitTracker from '@/components/metrics/VisitTracker';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import { PublicColumnLanguageLinksProvider } from '@/components/PublicColumnLanguageLinksContext';
 import LocaleSuggestion from '@/components/LocaleSuggestion';
 import { publicColumnSwitcherData } from '@/lib/column-language-links';
@@ -179,7 +180,8 @@ export default async function LocaleLayout(
       >
         {children}
       </CinematicRouteShell>
-      <VisitTracker locale={locale} />
+      {/* The static site has no metrics API (src/lib/static-site.ts). */}
+      {IS_STATIC_SITE ? null : <VisitTracker locale={locale} />}
       <LocaleSuggestion locale={locale} />
     </PublicColumnLanguageLinksProvider>
   );

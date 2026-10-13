@@ -13,6 +13,7 @@ import {
 } from './FaqPublicExplorer.logic';
 import styles from './FaqPublicExplorer.module.css';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 interface FaqPublicExplorerProps {
   locale: SiteLocale;
@@ -39,6 +40,20 @@ export default function FaqPublicExplorer({
   const text = faqPublicExplorerCopy[locale];
   const categoryRailLabel =
     locale === 'ko' ? 'FAQ 분류' : locale === 'zh-hant' ? 'FAQ 分類' : locale === 'ja' ? 'FAQ 分類' : 'FAQ categories';
+
+  useEffect(() => {
+    // Static site: every ?category=&q= URL is the same snapshot file, so apply the URL filters here.
+    if (!IS_STATIC_SITE) return;
+    const params = new URLSearchParams(window.location.search);
+    const urlCategory = params.get('category') || 'all';
+    const urlQuery = params.get('q') || '';
+    if (urlCategory === 'all' && !urlQuery) return;
+    setSelectedCategory(urlCategory);
+    setQuery(urlQuery);
+    setOpenId(filterFaqItems(items, categories, locale, urlCategory, urlQuery)[0]?.faqId ?? null);
+    // Mount-only: later changes come from the visitor's own clicks and typing.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -79,7 +94,8 @@ export default function FaqPublicExplorer({
     if (typeof window !== 'undefined') {
       window.history.replaceState(null, '', href);
     }
-    router.replace(href, { scroll: false });
+    // The static site cannot answer router requests; a replace there reloads the page and loses the input.
+    if (!IS_STATIC_SITE) router.replace(href, { scroll: false });
   }
 
   function setVisitorQuery(nextCategory: string, nextQuery: string, nextHash: string | null = currentHash) {

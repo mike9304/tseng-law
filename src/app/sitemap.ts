@@ -27,6 +27,7 @@ import {
   inferSitemapLastmod,
   type SitemapLastmodResolver,
 } from './sitemap-lastmod';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 export const dynamic = 'force-dynamic';
 
@@ -575,6 +576,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const ts = (v: string | Date | undefined): number =>
     v == null ? 0 : (v instanceof Date ? v.getTime() : new Date(v).getTime());
   for (const entry of pages) {
+    // The static site has no AI intake API (src/lib/static-site.ts), so its guide page is not published there.
+    if (IS_STATIC_SITE && new URL(entry.url).pathname.endsWith('/ai-intake')) continue;
     const existing = byUrl.get(entry.url);
     if (!existing) {
       byUrl.set(entry.url, entry);

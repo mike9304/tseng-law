@@ -18,6 +18,7 @@ import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import {
   CONSULTATION_EMAIL,
   getConsultationCtaLabel,
@@ -159,7 +160,8 @@ export default function Footer({
           { label: 'Accessibility', href: '/en/accessibility' },
           { label: 'Sitemap', href: '/sitemap.xml' },
           // WO-X1 (EN-17): member login moved out of the public EN header.
-          { label: 'Client log in', href: '/en/login' }
+          // The static site has no member login (src/lib/static-site.ts).
+          ...(IS_STATIC_SITE ? [] : [{ label: 'Client log in', href: '/en/login' }])
         ];
   // The Apple-system locales (zh-hant, ko) draw the social glyphs from the monoline set; other locales keep the SVGs below.
   const zhIcons = isAppleDesignLocale(locale);

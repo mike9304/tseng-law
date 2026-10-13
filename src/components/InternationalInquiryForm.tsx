@@ -17,6 +17,12 @@ import {
   CONSULTATION_LANGUAGES,
   inquiryLanguageSchema,
 } from '@/lib/consultation/intake-language-contract';
+import { isSiteLocale } from '@/lib/locales';
+import {
+  getConsultationPublicEmail,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import styles from './InternationalInquiryForm.module.css';
 
 const PREFERRED_CONSULTATION_VALUES = [
@@ -259,7 +265,34 @@ export function InternationalInquiryNotice({
   );
 }
 
-export default function InternationalInquiryForm({
+/**
+ * The static site has no inquiry API (src/lib/static-site.ts); visitors write to the
+ * consultation mailbox instead, under the same heading and intro.
+ */
+function InternationalInquiryEmailCta({ locale }: { locale: InquiryCopyLocale }) {
+  const copy = internationalInquiryCopy[locale];
+  const mailto = isSiteLocale(locale)
+    ? getConsultationPublicMailto(locale)
+    : `mailto:${getConsultationPublicEmail()}`;
+
+  return (
+    <section className={styles.form} lang={locale} data-inquiry-mode="email">
+      <h2 className={styles.heading}>{copy.heading}</h2>
+      <p className={styles.intro}>{copy.intro}</p>
+      <a className={`${styles.submit} ${styles.mailtoSubmit}`} href={mailto}>
+        {copy.submitLabel}
+      </a>
+      <p className={styles.intro}>{getConsultationPublicEmail()}</p>
+    </section>
+  );
+}
+
+export default function InternationalInquiryForm({ locale }: { locale: InquiryCopyLocale }) {
+  if (IS_STATIC_SITE) return <InternationalInquiryEmailCta locale={locale} />;
+  return <InternationalInquiryFormFields locale={locale} />;
+}
+
+function InternationalInquiryFormFields({
   locale,
 }: {
   locale: InquiryCopyLocale;

@@ -5,9 +5,11 @@ import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
 import { siteContent, type SiteContent } from '@/data/site-content';
 import FloatingAiChat from '@/components/FloatingAiChat';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 const STORAGE_KEY = 'hojeong-ai-chat-collapsed';
-const AI_CHAT_ENABLED = process.env.NEXT_PUBLIC_ENABLE_AI_CHAT === 'true';
+// The static site has no chat API (src/lib/static-site.ts).
+const AI_CHAT_ENABLED = process.env.NEXT_PUBLIC_ENABLE_AI_CHAT === 'true' && !IS_STATIC_SITE;
 
 export default function QuickContactWidget({
   locale,

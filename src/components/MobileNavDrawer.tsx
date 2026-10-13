@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
 import { publicSiteContent } from '@/lib/public-site-chrome';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
@@ -240,7 +241,7 @@ export default function MobileNavDrawer({
           ) : null}
         </nav>
         <div className="drawer-footer">
-          {isGuidance ? null : (
+          {isGuidance || IS_STATIC_SITE ? null : (
           <div className="utility-member-nav drawer-member-nav" data-member-nav-state={memberState.status}>
             {memberState.status === 'signed-in' ? (
               <>

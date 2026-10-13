@@ -105,3 +105,9 @@ export async function searchCurrentPublication(input: {query: string; locale: Si
   const availableKinds = SEARCH_DOC_KINDS.filter(kind => queryIndex.byLocale[input.locale]?.some(doc => doc.kind === kind));
   return {hits: await currentSearchHits(queryIndex, query, input.locale, limit, input.kinds, staticDocs), indexMissing: !storedIndex, availableKinds};
 }
+
+/** Static-site snapshot (src/lib/static-site.ts): one locale's current docs, matched in the browser. */
+export async function listCurrentSearchDocs(locale: SiteLocale): Promise<SearchDoc[]> {
+  const index = augmentStaticDocs(buildSearchIndex(await collectAllSearchDocs('default')), locale, getPublicIntentSearchDocs(locale));
+  return index.byLocale[locale] ?? [];
+}

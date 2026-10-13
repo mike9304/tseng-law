@@ -1,6 +1,11 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { withSentryConfig } from '@sentry/nextjs';
 
 const locales = ['ko', 'zh-hant', 'en', 'ja'];
+// Snapshot build for the static host (scripts/static-site/build.mjs). See src/lib/static-site.ts.
+const isStaticSite = process.env.NEXT_PUBLIC_STATIC_SITE === '1';
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 const distDir =
   process.env.NEXT_DIST_DIR ??
   (process.env.VERCEL ? '.next' : process.env.NEXT_DEV ? '.next-dev' : '.next-build');
@@ -60,6 +65,13 @@ const nextConfig = {
     '/**': ['./src/content/columns*/**/*', './src/content/issues/**/*'],
   },
   webpack(config, { dev }) {
+    if (isStaticSite) {
+      // No RSC server behind the static host: links become plain anchors (StaticLink.tsx).
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'next/link$': path.join(projectRoot, 'src/components/static-site/StaticLink.tsx'),
+      };
+    }
     if (dev) {
       config.watchOptions = {
         ...(config.watchOptions ?? {}),
@@ -74,7 +86,9 @@ const nextConfig = {
     return config;
   },
   images: {
-    formats: ['image/avif', 'image/webp']
+    formats: ['image/avif', 'image/webp'],
+    // The static host has no /_next/image optimizer; serve the original files.
+    unoptimized: isStaticSite,
   },
   async headers() {
     return [

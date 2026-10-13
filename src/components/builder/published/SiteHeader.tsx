@@ -17,6 +17,7 @@ import {
 } from '@/components/builder/published/overlayFocus';
 import { getPublishedSiteHeaderCopy } from '@/components/builder/published/published-site-header-copy';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 type HeaderNavSpec = {
   key: string;
@@ -442,7 +443,8 @@ export default function SiteHeader({
   }, [builderEditable, memberNavPreview]);
 
   useEffect(() => {
-    if (builderEditable) return undefined;
+    // The static site has no member API (src/lib/static-site.ts).
+    if (builderEditable || IS_STATIC_SITE) return undefined;
     let cancelled = false;
     fetch(`/api/members/me?locale=${locale}`, { credentials: 'same-origin' })
       .then((response) => response.ok ? response.json() : null)
@@ -758,6 +760,7 @@ export default function SiteHeader({
                   {item.label}
                 </a>
               ))}
+              {IS_STATIC_SITE ? null : (
               <span className="utility-member-nav" data-member-nav-state={memberNav.authenticated ? 'signed-in' : 'signed-out'}>
                 {memberNav.authenticated ? (
                   <>
@@ -777,6 +780,7 @@ export default function SiteHeader({
                   </a>
                 )}
               </span>
+              )}
               <div className="utility-lang">
                 <Link
                   href={localeSwitchPath('ko', currentSlug)}
@@ -1208,7 +1212,7 @@ export default function SiteHeader({
                   {item.label}
                 </a>
               ))}
-              {memberNav.authenticated ? (
+              {IS_STATIC_SITE ? null : memberNav.authenticated ? (
                 <>
                   <a href={`/${locale}/account`} data-member-role-link="account-mobile" onClick={(event) => {
                     setMobileMenuOpen(false);

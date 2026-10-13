@@ -14,6 +14,7 @@ import {
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
 import { getOrganizationName, getLocalizedPath } from '@/lib/seo';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 // 16 KiB since 2026-09-22: the root catalog lists 45 guidance languages (was 8 KiB for 27).
 export const ROOT_LLMS_TXT_MAX_BYTES = 16 * 1024;
@@ -419,7 +420,8 @@ export function buildRootLlmsTxt(): string {
       heading: 'Locale catalogs',
       entries: [...localeEntries, ...guidanceEntries],
     },
-    {
+    // The static site serves no API (src/lib/static-site.ts); it does not advertise the AI interfaces.
+    ...(IS_STATIC_SITE ? [] : [{
       heading: 'Public AI consultation interfaces',
       entries: [
         {
@@ -433,7 +435,7 @@ export function buildRootLlmsTxt(): string {
           annotation: 'Public Streamable HTTP endpoint; deployment, provider configuration, and provider registration may still be required.',
         },
       ],
-    },
+    }]),
   ];
 
   return finalizeLlmsTxt([

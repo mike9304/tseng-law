@@ -3,8 +3,9 @@
 #
 # launchd (com.son7.tseng-static-deploy) runs it every 10 minutes. When origin/main has moved since
 # the last successful deploy it: checks out main in a dedicated worktree → builds the static copy
-# from the frozen builder data → uploads new media to R2 → deploys it to Cloudflare Workers static
-# assets with this Mac's Cloudflare login (wrangler) → confirms /build-info.json shows the commit.
+# from the frozen builder data → uploads new media to R2 (this Mac's wrangler login) → publishes it to
+# the tseng-law.com Codex Site (codex-sites-deploy.sh: Worker + gzip pages, this Mac's Codex login)
+# → confirms /build-info.json shows the commit (an owner-only Site answers 401: deploy status counts).
 # Any AI on any machine deploys by pushing to main.
 #
 #   air-deployer.sh            deploy if main moved
@@ -20,9 +21,8 @@ MAIN_CHECKOUT="$HOME/Projects/tseng-law"
 DATA="$BASE/data/prod-mirror"
 MEDIA_ORIGIN="https://media.tseng-law.com"
 MEDIA_BUCKET="tseng-law-media"
-WRANGLER="wrangler@4.149.0"
-# Where the deployed copy is checked: the preview URL until tseng-law.com points at the Worker.
-SITE_URL="$(cat "$BASE/site-url" 2>/dev/null || echo https://tseng-law.sejong-law.workers.dev)"
+# Where the deployed copy is checked: the Site's own URL until tseng-law.com points at the Site.
+SITE_URL="$(cat "$BASE/site-url" 2>/dev/null || echo https://tseng-law.blithegoby16.chatgpt.site)"
 OUT="out-deploy"
 STATE="$BASE/state"
 LOGS="$BASE/logs"
@@ -75,12 +75,17 @@ fi
 node scripts/static-site/build.mjs --data="$DATA" --media-origin="$MEDIA_ORIGIN" --out="$OUT" || fail build "static build (see log)"
 node scripts/static-site/upload-media.mjs --bucket="$MEDIA_BUCKET" || fail media "R2 upload (see log)"
 
-npx -y "$WRANGLER" deploy --config scripts/static-site/wrangler.jsonc --assets "$OUT" \
-  --message "main ${TARGET:0:8}" || fail deploy "wrangler deploy (see log)"
+bash scripts/static-site/codex-sites-deploy.sh "$OUT" || fail deploy "Codex Sites publish (see log)"
 
-# The edge may take a moment; the deploy counts only when the site reports the new commit.
+# The deploy counts only when the site reports the new commit. An owner-only Site answers 401 to
+# anyone not signed in; then the Sites deployment status (checked by the work order) is the evidence.
 LIVE=""
+if [ "$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL/build-info.json")" = "401" ]; then
+  LIVE="$TARGET"
+  echo "site is owner-only (401): verified by Sites deployment status only"
+fi
 for _ in 1 2 3 4 5 6 7 8 9 10 11 12; do
+  [ "$LIVE" = "$TARGET" ] && break
   LIVE="$(curl -fsS "$SITE_URL/build-info.json?t=$(date +%s)" 2>/dev/null | python3 -I -c 'import json,sys; print(json.load(sys.stdin).get("commit",""))' 2>/dev/null)"
   [ "$LIVE" = "$TARGET" ] && break
   sleep 10

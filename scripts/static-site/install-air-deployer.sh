@@ -1,13 +1,13 @@
 #!/bin/bash
 # Installs the MacBook Air auto-deployer (air-deployer.sh) as a launchd agent that runs every
-# 10 minutes. Re-run after changing air-deployer.sh. Needs this Mac's wrangler login
-# (`npx wrangler@4.149.0 login`) to the Cloudflare account that owns tseng-law.com.
+# 10 minutes. Re-run after changing air-deployer.sh. Needs this Mac's Codex login (Sites tools) and its
+# wrangler login (`npx wrangler@4.149.0 login`, R2 media uploads) to the Cloudflare account of tseng-law.com.
 #
 #   bash scripts/static-site/install-air-deployer.sh <frozen data dir> [site url to verify]
 set -euo pipefail
 
 DATA_SOURCE="${1:?usage: install-air-deployer.sh <frozen data dir (prod-mirror)> [site url]}"
-SITE_URL="${2:-https://tseng-law.sejong-law.workers.dev}"
+SITE_URL="${2:-https://tseng-law.blithegoby16.chatgpt.site}"
 BASE="$HOME/tseng-static-deploy"
 LABEL="com.son7.tseng-static-deploy"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"

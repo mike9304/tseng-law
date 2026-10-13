@@ -27,7 +27,7 @@ const faq2Answer =
 const faq3Answer =
   'Under Article 1089 of Taiwan’s Civil Code, when one parent cannot exercise rights and assume duties concerning a minor child, the other parent ordinarily does so. Accordingly, if the surviving parent retains parental rights and no contrary court order exists, that parent ordinarily continues to exercise parental rights and assume parental duties. Existing orders, statutory grounds for restriction or suspension, cross-border factors, the child’s best interests, and other specific circumstances may still require judicial involvement.';
 const faq4Answer =
-  'No. Under Articles 1087 and 1088 of Taiwan’s Civil Code, property acquired by a minor through inheritance is the child’s separate property; the parent or guardian does not become its beneficial owner. Management, use, collection of income, legal representation, and disposition must be handled in the child’s interests. A conflict of interest or a significant disposition may require a special representative or court involvement. A parent must not be understood to have unrestricted authority to use a child’s inherited property unilaterally.';
+  'No. Under Articles 1087 and 1088 of Taiwan’s Civil Code, property acquired by a minor through inheritance is the child’s separate property; the parent or guardian does not become its beneficial owner. Article 1088 provides for joint parental management and gives parents the right to use the property and receive its income, but permits disposition only for the child’s benefit. A conflict of interest or a significant disposition may require a special representative or court involvement. A parent must not be understood to have unrestricted authority to use a child’s inherited property unilaterally.';
 const faq = [
   {
     q: 'If there is no will and the only heirs are a surviving spouse and two children, how are the intestate shares calculated?',
@@ -85,7 +85,7 @@ const expectedFrontmatter = `---
 title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
 seoTitle: "Taiwan Inheritance and Parental Rights Guide"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
-lastmod: "2026-10-12"
+lastmod: "2026-10-13"
 date_display: "September 13, 2025"
 read_time: "19 min read"
 categories:
@@ -100,7 +100,7 @@ faq:
   - q: "What happens to parental rights and duties when one parent dies?"
     a: "Under Article 1089 of Taiwan’s Civil Code, when one parent cannot exercise rights and assume duties concerning a minor child, the other parent ordinarily does so. Accordingly, if the surviving parent retains parental rights and no contrary court order exists, that parent ordinarily continues to exercise parental rights and assume parental duties. Existing orders, statutory grounds for restriction or suspension, cross-border factors, the child’s best interests, and other specific circumstances may still require judicial involvement."
   - q: "May a surviving parent freely use property that a minor child inherits?"
-    a: "No. Under Articles 1087 and 1088 of Taiwan’s Civil Code, property acquired by a minor through inheritance is the child’s separate property; the parent or guardian does not become its beneficial owner. Management, use, collection of income, legal representation, and disposition must be handled in the child’s interests. A conflict of interest or a significant disposition may require a special representative or court involvement. A parent must not be understood to have unrestricted authority to use a child’s inherited property unilaterally."
+    a: "No. Under Articles 1087 and 1088 of Taiwan’s Civil Code, property acquired by a minor through inheritance is the child’s separate property; the parent or guardian does not become its beneficial owner. Article 1088 provides for joint parental management and gives parents the right to use the property and receive its income, but permits disposition only for the child’s benefit. A conflict of interest or a significant disposition may require a special representative or court involvement. A parent must not be understood to have unrestricted authority to use a child’s inherited property unilaterally."
 ---
 `;
 
@@ -139,7 +139,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       title,
       seoTitle: 'Taiwan Inheritance and Parental Rights Guide',
       url: sourceUrl,
-      lastmod: '2026-10-12',
+      lastmod: '2026-10-13',
       date_display: 'September 13, 2025',
       read_time: '19 min read',
       categories: ['Taiwan Legal Information'],
@@ -155,7 +155,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     expect(post).toMatchObject({
       slug: 'taiwan-inheritance-custody-analysis',
       title,
-      date: '2026-10-12',
+      date: '2026-10-13',
       dateDisplay: 'September 13, 2025',
       readTime: '19 min read',
       category: 'legal',
@@ -205,7 +205,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       ],
       [
         '## 7. Protecting a Minor’s Inherited Property',
-        'May a surviving parent freely use property that a minor child inherits? No. Under Articles 1087 and 1088 of Taiwan’s Civil Code, what a minor acquires through inheritance is the child’s separate property. Separate property means property that belongs to the minor. A parent or guardian who undertakes its management does not become the beneficial owner and must not use the property for personal living expenses or debt repayment.',
+        'May a surviving parent freely use property that a minor child inherits? No. Under Articles 1087 and 1088 of Taiwan’s Civil Code, what a minor acquires through inheritance is the child’s separate property. Separate property means property that belongs to the minor. A parent or guardian who undertakes its management does not become the beneficial owner.',
       ],
     ];
     const sectionFacts = [
@@ -283,10 +283,10 @@ describe('English family column 016 — anonymized inheritance and parental-righ
 
   it('locks the separate Article 1030-1 claim, exclusions, debts, and adjustment', () => {
     const requiredPhrases = [
-      'When the statutory marital-property regime ends, the claim compares, under statutory criteria, the increase in each spouse’s property acquired during marriage.',
-      'Its legal basis, the party against whom it is asserted, and the property included in the calculation all differ from those of the inheritance share the surviving spouse takes as an heir.',
+      'When the statutory marital-property regime ends, each spouse’s existing property acquired after marriage is reduced by debts incurred during marriage. If property remains, the difference between the spouses’ remaining amounts is, in principle, divided equally.',
+      'The claim’s legal basis, the party against whom it is asserted, and the property included in the calculation all differ from those of the inheritance share the surviving spouse takes as an heir.',
       'If the claim is established, its result may need to be reflected before the property remaining with the decedent is identified as the estate.',
-      'Statutory exclusions may include property acquired by inheritance or gift and solatium, and debts incurred during marriage must also be considered.',
+      'Property acquired by inheritance or other gratuitous acquisition and solatium are excluded from the calculation.',
       'whether the spouses agreed to a different one, when and why each asset was acquired, and the appropriate valuation date',
       'Under Article 1030-1, a court may adjust or waive the distribution amount if an equal distribution would be unfair.',
       'including household work during the marriage, the care and upbringing of children, the overall contribution and cooperation given to the family, how long the spouses lived together and apart, when property was acquired during the marriage, and each party’s economic capacity.',
@@ -320,12 +320,15 @@ describe('English family column 016 — anonymized inheritance and parental-righ
   it('locks parental rights, guardianship, appointment, and best-interests rules', () => {
     const requiredPhrases = [
       'Parental rights and duties may include the care and upbringing of a minor child, decisions about the child’s residence, legal representation, and management of the child’s property.',
-      'Each authority must be exercised to protect the child’s personal and property interests. None may be exercised for the parent’s own benefit.',
+      'Each authority must be exercised to protect the child’s personal and property interests.',
       'Parental rights and inheritance are legally separate issues.',
       'Guardianship of a minor becomes relevant in two situations under Article 1091 of Taiwan’s Civil Code: when the minor has no parent, or when neither parent can exercise rights and assume duties concerning the child.',
       'One parent’s death alone must not be assumed to commence guardianship immediately.',
       'Under Article 1093, the parent who is last to exercise rights and assume duties concerning a minor may appoint a guardian for the minor by will.',
-      'the statutory order under Article 1094 and the court-appointment rules under Article 1094-1 may apply',
+      'Where guardianship is required, Article 1094(1) sets an order if there is no valid testamentary designation or the designated guardian declines to serve: grandparents living with the minor, older siblings living with the minor, then grandparents not living with the minor.',
+      'If no guardian can be determined in that order, the court may appoint one under Article 1094(3) on an application by a person or body authorized by law.',
+      'Under Article 1094-1, the court must consider all the circumstances in the child’s best interests when selecting or replacing a guardian.',
+      'Relevant circumstances may include, for example, the child’s age and ability to express views',
       'the child’s age and ability to express views, the candidate’s relationship with and ability to care for the child, the suitability of the proposed property management, and the stability of the child’s living arrangements',
       'Relatives and other applicants authorized by law may, where statutory grounds exist, ask the court to appoint or replace a guardian or to order another necessary measure.',
       'Nor is a guardian in the same position as a parent exercising parental rights. A guardian may have separate duties concerning the scope of authority, preparation of an inventory, reporting, and court supervision.',
@@ -341,11 +344,12 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     const requiredPhrases = [
       'Separate property means property that belongs to the minor.',
       'Inherited bank deposits, real property, shares, and other rights should be clearly identified as the child’s property and managed separately.',
-      'The powers of management, use, collection of income, and disposition under Article 1088 are tied to one purpose: serving the child’s interests.',
+      'Under Article 1088, parents jointly manage a minor’s separate property and have the right to use it and receive its income. They may dispose of it only for the child’s benefit.',
       'the type of property, the need for a disposition, the adequacy of the consideration, and the plan for holding and using the proceeds',
       'High-value or high-risk actions, such as a sale of real property, creation of security, or business investment, need one more check: whether permission under another law or a court procedure is required.',
       'Conflicts of interest may arise where a parent and child are co-heirs of the same estate or are counterparties to a contract with each other.',
-      'The special-representative system under Article 1086 should be considered',
+      'The special-representative system under Article 1086(2) should be considered',
+      'Where a parent’s conduct conflicts with the child’s interests and the parent is legally barred from representing the child, the court may appoint a special representative on an application by a person or body authorized by law or on its own initiative.',
       'whether the economic interests actually conflict',
       'rules on preparing an inventory, retaining supporting documents, separating income and expenditure, reporting to the court, and court supervision may apply',
       'A trust or insurance arrangement cannot be assumed to be safe on the contract alone.',
@@ -449,17 +453,16 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       .digest('hex');
 
     expect(visibleWordCount).toBeGreaterThanOrEqual(2_000);
-    expect(visibleWordCount).toBe(3_622);
-    // The 2026-10-06 rewrite shortened the body to 3,600 words (18 minutes at
-    // 200 wpm) but kept the frontmatter read_time at "19 min read". The
-    // 2026-10-12 Article 1030-1 fact fix lengthened the body to 3,622 words,
-    // so the calculated 19 minutes now matches the frontmatter again.
+    expect(visibleWordCount).toBe(3_723);
+    // The 2026-10-13 Article 1030-1 formula and exclusion clarification preserves
+    // the current English rewrite. Its 3,723 visible words still round to 19 minutes
+    // at 200 wpm, matching the unchanged frontmatter read_time.
     expect(calculatedMinutes).toBe(19);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe('19 min read');
     expect(sourceSha256).toBe(
-      // Re-frozen after the 2026-10-12 Article 1030-1 fact fix.
-      'e1010362dcb95f7ee1fbd1f3bd74d862f935e189f546884c5e0126dc49aa4893',
+      // Re-frozen after the 2026-10-13 statutory correction on the current main rewrite.
+      'e3ff89ed08500bbb4d7088964616d8ee0834188fcc915c13aa288f9be4461733',
     );
   });
 
@@ -522,6 +525,10 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       'monopolizing the estate',
     ];
 
+    expect(raw).not.toMatch(/\bchecklist\b/i);
+    expect(raw).not.toContain('court-appointment rules under Article 1094-1');
+    expect(raw).not.toContain('None may be exercised for the parent’s own benefit.');
+    expect(raw).not.toContain('must not use the property for personal living expenses or debt repayment');
     for (const forbidden of forbiddenLiterals) {
       expect(serialized).not.toContain(forbidden);
     }

@@ -26,7 +26,7 @@ const faq2Answer =
 const faq3Answer =
   '依《民法》第1089條，父母一方不能行使對未成年子女的權利時，原則上由他方行使；父母不能共同負擔義務時，則由有能力的一方負擔。因此，若生存父母仍保有親權，且沒有內容相反的法院裁判，通常由該生存父母繼續行使、負擔對未成年子女的權利義務。惟既有裁判、親權受限制或停止的事由、涉外因素及未成年子女最佳利益等具體情形，仍可能需要法院介入。';
 const faq4Answer =
-  '不可以。依《民法》第1087條及第1088條，未成年子女因繼承取得的財產屬於子女的特有財產，父母或監護人不會因此成為該財產的所有權人。管理、使用、收益、法定代理及處分都必須以子女利益為依歸；如有利益衝突或重大處分，可能須選任特別代理人或由法院介入。不得將父母的管理權理解為可以不受限制地單方使用子女的繼承財產。';
+  '不可以。依《民法》第1087條及第1088條，未成年子女因繼承取得的財產屬於子女的特有財產，父母或監護人不會因此成為該財產的所有權人。父母共同管理子女的特有財產，並有使用、收益之權，但非為子女利益，不得處分。監護人則適用另外的使用、處分限制及法院監督規定。如有利益衝突或重大處分，可能須選任特別代理人或由法院介入。不得將父母的管理權理解為可以不受限制地單方使用子女的繼承財產。';
 const faq = [
   {
     q: '如果沒有遺囑，繼承人只有配偶及二名子女，應如何計算應繼分？',
@@ -100,7 +100,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-10-12',
+      lastmod: '2026-10-13',
       date_display: '2025年9月13日',
       read_time: '18分鐘閱讀',
       categories: ['台灣法律資訊'],
@@ -113,7 +113,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
     expect(post).toMatchObject({
       slug: 'taiwan-inheritance-custody-analysis',
       title,
-      date: '2026-10-12',
+      date: '2026-10-13',
       dateDisplay: '2025年9月13日',
       readTime: '18分鐘閱讀',
       category: 'legal',
@@ -215,6 +215,8 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       '父母一方死亡而另一方仍可依法行使親權，通常不是直接啟動監護的充分理由',
       '得以遺囑指定監護人',
       '第1094條第一項的法定順序確定監護人',
+      '依序為與未成年人同居的祖父母、與未成年人同居的兄姊、不與未成年人同居的祖父母',
+      '無法依該順序確定時，法院得依同條第三項，依未成年子女、四親等內的親屬、檢察官、主管機關或其他利害關係人的聲請選定監護人',
       '第1094條之1',
       '法院選定或改定監護人時，則應依第1094條之1，以受監護人的最佳利益為準',
       '法律規定的聲請權人',
@@ -232,7 +234,10 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       '特有財產，重點在於財產歸未成年子女本人所有',
       '避免與父母、監護人或其他家屬的財產混同',
       '依第1088條，未成年子女的特有財產由父母共同管理，父母並有使用、收益之權；但非為子女利益，不得處分',
-      '依第1086條評估向法院聲請選任特別代理人',
+      '父母的行為與未成年子女利益相反，且依法不得代理時',
+      '依第1086條第二項，法院得依父母、未成年子女、主管機關、社會福利機構或其他利害關係人的聲請，或依職權為子女選任特別代理人',
+      '不得為支應自己的生活費或清償自己的債務而處分子女財產',
+      '財產保護並不等於所有資產均不得運用，而是要求每個決定有權限、程序完備並可被查核；處分子女財產則須為子女利益。',
       '財產清冊開具、報告義務、處分限制及法院監督的規定',
       '不能取代對管轄、期限、法定代理或緊急保全的個案判斷',
     ];
@@ -316,12 +321,12 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       .digest('hex');
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(4_500);
-    expect(visibleHanCount).toBe(6_944);
+    expect(visibleHanCount).toBe(7_086);
     expect(calculatedMinutes).toBe(18);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      '9842d44c367f565f8a0b37b3cf1c80f02e62db54976bfa88f2059bab7ae08e0f',
+      'b16878f2e93bb5a670a80907a1a83e69c3c8797ac5ce309426e1327610d20190',
     );
   });
 

@@ -1805,6 +1805,18 @@
     {
       "locale": "ko",
       "slug": "taiwan-bankruptcy-creditor-claim-filing-korean"
+    },
+    {
+      "locale": "ko",
+      "slug": "recovering-unpaid-invoices-from-taiwan-customers"
+    },
+    {
+      "locale": "en",
+      "slug": "recovering-unpaid-invoices-from-taiwan-customers"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "recovering-unpaid-invoices-from-taiwan-customers"
     }
   ]
 }

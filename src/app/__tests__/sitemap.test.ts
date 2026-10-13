@@ -27,6 +27,7 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   COUNTRY_COLUMN_FILES_20261005,
   COUNTRY_COLUMN_FILES_20261006,
   COUNTRY_COLUMN_FILES_20261007,
+  COUNTRY_COLUMN_FILES_20261013,
   ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 import { TAX_ACCOUNTING_COLUMN_FILES } from '@/lib/__tests__/tax-accounting-column-files';
 import { CRIMINAL_COLUMN_FILES_20261008 } from '@/lib/__tests__/criminal-coverage-column-files';
@@ -212,7 +213,7 @@ describe('sitemap column lastModified', () => {
       // 2026-10-01 expertise columns 052-059 add 24 URLs (ko 6, en 8, ja 3, zh-hant 7).
       // 2026-10-01 zh-hant-only domestic columns 060-062 add 3 URLs (zh-hant 3).
       // 2026-10-02 expertise columns 063-069 add 23 URLs (ko 7, en 7, zh-hant 7, ja 2).
-      // The 2026-10-02–07 audience/traffic batches add one URL per core-locale file; VI is counted above.
+      // The 2026-10-02–13 audience/traffic batches add one URL per core-locale file; VI is counted above.
       // Criminal board adds 5 language URLs.
       // Tax & accounting board (4 core-language URLs) + its column files, one URL per locale file.
       beforeFiltering:
@@ -233,6 +234,9 @@ describe('sitemap column lastModified', () => {
           + Object.entries(COUNTRY_COLUMN_FILES_20261007)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
+          + Object.entries(COUNTRY_COLUMN_FILES_20261013)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
         520 + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
@@ -250,6 +254,9 @@ describe('sitemap column lastModified', () => {
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
           + Object.entries(COUNTRY_COLUMN_FILES_20261007)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
+          + Object.entries(COUNTRY_COLUMN_FILES_20261013)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,

@@ -564,7 +564,23 @@ export const COUNTRY_COLUMN_FILES_20261007 = {
 
 } as const;
 
-/** Registered locale-specific batches through 2026-10-07, in filename order. */
+/** Native audience columns published 2026-10-13. */
+export const COUNTRY_COLUMN_FILES_20261013 = {
+  ko: [
+    '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+  ],
+  en: [
+    '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+  ],
+  ja: [
+    '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+  ],
+  'zh-hant': [
+    '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-13, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -580,6 +596,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261005 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261006 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261013 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((SINGAPORE_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -601,11 +618,13 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-07, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-13, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261013: readonly string[] =
+    (COUNTRY_COLUMN_FILES_20261013 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261011 = (NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261010: readonly string[] = [
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -646,12 +665,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const latestSlugs = [...latest].sort().map(slugOf);
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  const head = [...day20261011].sort().map(slugOf).concat([...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
+  const head = [...day20261013].sort().map(slugOf).concat([...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
   return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-07). */
+/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-13). */
 export function archiveLeadPublicationDate(slug: string): string {
+  if (Object.values(COUNTRY_COLUMN_FILES_20261013).flat().map(slugOf).includes(slug)) return '2026-10-13';
   if (Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-11';
   if (Object.values(GAP_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-10';
   if (Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-10';
@@ -713,6 +733,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261005),
     ...Object.values(COUNTRY_COLUMN_FILES_20261006),
     ...Object.values(COUNTRY_COLUMN_FILES_20261007),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261013),
     ...Object.values(NEXT_TOPIC_COLUMN_FILES_20261010),
     ...Object.values(GAP_COLUMN_FILES_20261010),
     ...Object.values(SINGAPORE_COLUMN_FILES_20261010),

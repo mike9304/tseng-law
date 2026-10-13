@@ -568,15 +568,19 @@ export const COUNTRY_COLUMN_FILES_20261007 = {
 export const COUNTRY_COLUMN_FILES_20261013 = {
   ko: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+    '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
   ],
   en: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+    '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
   ],
   ja: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+    '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
   ],
   'zh-hant': [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
+    '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
   ],
 } as const;
 

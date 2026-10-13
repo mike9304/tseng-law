@@ -137,7 +137,7 @@ describe('English column corpus seoTitle', () => {
         expect(post?.seoTitle, file).toBe(title);
       }
     }
-  });
+  }, 30_000); // whole EN corpus scan: ~3.5s alone, exceeded the 5s default under full-suite parallel load
 });
 
 describe('seoTitle accessor wiring', () => {

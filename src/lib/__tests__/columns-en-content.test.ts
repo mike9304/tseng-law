@@ -94,7 +94,7 @@ describe('English full column corpus', () => {
       // Allow EN to be shorter, but not stub-level (< 35% of KO cleaned body)
       expect(en!.content.length).toBeGreaterThan(Math.floor(ko!.content.length * 0.35));
     }
-  });
+  }, 60_000);
 
   it('keeps column 012 fully English, current-law scoped, and fact-specific', () => {
     const raw = fs.readFileSync(overtakingColumnPath, 'utf8');

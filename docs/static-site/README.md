@@ -42,7 +42,16 @@ directory is the only copy — keep a backup, and edit its published JSON to cha
 
 ## Publishing
 
-A git push no longer reaches production by itself. Rebuild `out/`, then publish it to the Sites
-project with Codex (`sites` tools). The Sites git server rejects very large pushes (HTTP 413 at
-3.1 GB; ~600 MB accepted), so push in batches. `www.tseng-law.com` → apex is a domain setting
-(the next.config host rule cannot be expressed in `_redirects`).
+Push to `main`. The MacBook Air (its Codex is logged into the ChatGPT account that owns the Sites
+project) runs `scripts/static-site/air-deployer.sh` every 10 minutes via launchd
+(`com.son7.tseng-static-deploy`, installed by `install-air-deployer.sh`): main in the worktree
+`~/Projects/tseng-law-deploy` → `build.mjs --data=~/tseng-static-deploy/data/prod-mirror
+--media-origin=https://media.tseng-law.com` → `upload-media.mjs --bucket=tseng-law-media` → Codex
+with `codex-deploy-wo.md`. State: `~/tseng-static-deploy/state/status.json`; logs next to it. The
+live commit is in `https://tseng-law.com/build-info.json`. `air-deployer.sh --force` redeploys main.
+
+Host limits measured 2026-10-13: a git push of 3.1 GB → HTTP 413 (617 MB accepted); the deploy
+archive may not exceed 256 MiB (the upload tool alone allows 512 MiB). That is why images and videos
+(2.6 GB) are served from Cloudflare R2 (`media.tseng-law.com`, bucket `tseng-law-media`, free tier) and
+only `images/brand/` stays on the site. `www.tseng-law.com` → apex is a domain setting (the next.config
+host rule cannot be expressed in `_redirects`).

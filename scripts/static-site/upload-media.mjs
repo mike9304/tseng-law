@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Uploads the videos listed in static-site-media.json (written by build.mjs --media-origin) to the
+// Uploads the media (videos, images) listed in static-site-media.json (written by build.mjs --media-origin) to the
 // Cloudflare R2 bucket behind the media origin. Needs `npx wrangler@4.149.0 login` first.
 //
 //   node scripts/static-site/upload-media.mjs --bucket=tseng-law-media [--concurrency=4] [--dry-run]
@@ -15,6 +15,7 @@ const WRANGLER = ['-y', 'wrangler@4.149.0'];
 const TYPES = {
   '.mp4': 'video/mp4', '.webm': 'video/webm', '.mov': 'video/quicktime', '.m4v': 'video/mp4', '.vtt': 'text/vtt',
   '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.avif': 'image/avif',
+  '.svg': 'image/svg+xml', '.gif': 'image/gif', '.ico': 'image/x-icon', '.pdf': 'application/pdf', '.json': 'application/json',
 };
 
 function parseArgs(argv) {

@@ -47,4 +47,17 @@ describe('static-site media origin rewrite', () => {
         + ` url(${origin}/videos/c.webm) "${origin}/videos/d.mp4" "/ko/videos/"`,
     );
   });
+
+  it('moves images too but keeps brand assets on the site', async () => {
+    // @ts-expect-error -- plain ESM build scripts without type declarations
+    const { rewriteMediaRefs } = await import('../../../scripts/static-site/assemble.mjs');
+    const origin = 'https://media.tseng-law.com';
+    expect(rewriteMediaRefs('<img src="/images/team/a.webp"><link href="/images/brand/favicon.png">'
+      + '<meta content="https://tseng-law.com/images/og.png"><a href="/ko/images-guide">x</a>', origin)).toBe(
+      `<img src="${origin}/images/team/a.webp"><link href="/images/brand/favicon.png">`
+        + `<meta content="${origin}/images/og.png"><a href="/ko/images-guide">x</a>`,
+    );
+    expect(rewriteMediaRefs('srcSet="/images/a-960.webp 960w, /images/a.webp 1920w"', origin))
+      .toBe(`srcSet="${origin}/images/a-960.webp 960w, ${origin}/images/a.webp 1920w"`);
+  });
 });

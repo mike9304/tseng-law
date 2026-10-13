@@ -29,40 +29,57 @@ const OUT_MARKER = '.static-site-out';
 const TEXT_EXTENSIONS = new Set(['.html', '.js', '.css', '.json', '.xml', '.txt', '.webmanifest']);
 
 /**
- * Videos (2.4 GB) exceed the host's 512 MiB deploy limit, so they live on a separate media origin.
- * Rewrites quoted/`url(` `/videos/…` paths and absolute site video URLs; page routes such as
- * `/ko/videos` are untouched because they are not preceded by a quote or bracket.
+ * Videos (2.4 GB) and images (0.2 GB) exceed the host's 256 MiB deploy archive, so they live on a
+ * separate media origin (Cloudflare R2). Brand assets (favicons, logos) stay on the site.
+ * Rewrites quoted/`url(` `/videos/…` and `/images/…` paths and absolute site URLs to them; page
+ * routes such as `/ko/videos` are untouched because they are not preceded by a quote or bracket.
  */
+export const MEDIA_DIRS = ['videos', 'images'];
+const KEEP_LOCAL = 'images/brand/';
+
 export function rewriteMediaRefs(text, mediaOrigin) {
   return text
-    .replace(/(["'`(])\/videos\//g, `$1${mediaOrigin}/videos/`)
-    .replaceAll(`${SITE_ORIGIN}/videos/`, `${mediaOrigin}/videos/`);
+    // srcset lists put later URLs after ", " instead of a quote.
+    .replace(/(["'`(]|,\s*)\/(videos|images)\/(?!brand\/)/g, `$1${mediaOrigin}/$2/`)
+    .replace(new RegExp(`${SITE_ORIGIN.replace(/[.]/g, '\\.')}/(videos|images)/(?!brand/)`, 'g'), `${mediaOrigin}/$1/`);
 }
 
-function moveVideosToMediaOrigin(outDir, mediaOrigin) {
-  // Some video URLs are assembled in client code ("/videos/columns/".concat(id, ".mp4")), so the
-  // media origin receives every file under public/videos, not only the literal references.
+function moveMediaToOrigin(outDir, mediaOrigin) {
+  // Some media URLs are assembled in client code ("/videos/columns/".concat(id, ".mp4")), so the
+  // media origin receives every file under public/videos and public/images, not only literal references.
   const referenced = new Set();
-  const pattern = new RegExp(`${mediaOrigin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/(videos/[^"'\`)\\\\\\s?#]+\\.[a-z0-9]{2,5})`, 'gi');
+  const pattern = new RegExp(`${mediaOrigin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/((?:videos|images)/[^"'\`)\\\\\\s?#]+\\.[a-z0-9]{2,5})`, 'gi');
+  const inMediaDir = (file) => MEDIA_DIRS.some((dir) => file.startsWith(path.join(outDir, dir) + path.sep));
   for (const file of walkFiles(outDir)) {
-    if (!TEXT_EXTENSIONS.has(path.extname(file)) || file.startsWith(path.join(outDir, 'videos'))) continue;
+    if (!TEXT_EXTENSIONS.has(path.extname(file)) || inMediaDir(file)) continue;
     const text = fs.readFileSync(file, 'utf8');
-    if (!text.includes('/videos/')) continue;
+    if (!text.includes('/videos/') && !text.includes('/images/')) continue;
     const rewritten = rewriteMediaRefs(text, mediaOrigin);
     if (rewritten !== text) fs.writeFileSync(file, rewritten);
     for (const m of rewritten.matchAll(pattern)) referenced.add(decodeURIComponent(m[1]));
   }
-  const videosRoot = path.join(REPO_ROOT, 'public', 'videos');
-  const files = walkFiles(videosRoot).sort().map((source) => ({
-    key: `videos/${path.relative(videosRoot, source).split(path.sep).join('/')}`,
-    source,
-    bytes: fs.statSync(source).size,
-  }));
+  const files = [];
+  for (const dir of MEDIA_DIRS) {
+    const root = path.join(REPO_ROOT, 'public', dir);
+    if (!fs.existsSync(root)) continue;
+    for (const source of walkFiles(root).sort()) {
+      const key = `${dir}/${path.relative(root, source).split(path.sep).join('/')}`;
+      if (key.startsWith(KEEP_LOCAL) || path.basename(key).startsWith('.')) continue;
+      files.push({ key, source, bytes: fs.statSync(source).size });
+      fs.rmSync(path.join(outDir, key), { force: true });
+    }
+  }
   const available = new Set(files.map((f) => f.key));
   // References to files that do not exist (the live site 404s on them as well) are reported, not uploaded.
   const missing = [...referenced].filter((key) => !available.has(key)).sort();
-  fs.rmSync(path.join(outDir, 'videos'), { recursive: true, force: true });
+  for (const dir of MEDIA_DIRS) removeEmptyDirs(path.join(outDir, dir));
   return { files, referenced: referenced.size, missing };
+}
+
+function removeEmptyDirs(dir) {
+  if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) return;
+  for (const entry of fs.readdirSync(dir)) removeEmptyDirs(path.join(dir, entry));
+  if (fs.readdirSync(dir).length === 0) fs.rmdirSync(dir);
 }
 
 /** The output directory is wiped on every run, so it must be a dedicated subdirectory of the repo. */
@@ -183,7 +200,7 @@ export async function assembleSite({ crawlDir, outDir, crawl, mediaOrigin = null
     .filter((segment) => /^[a-z]{2,3}(?:-[a-z]{2,4})?$/.test(segment) && fs.existsSync(path.join(outDir, `${segment}.html`)));
   fs.writeFileSync(path.join(outDir, 'index.html'), rootChooser(locales.sort()));
 
-  const media = mediaOrigin ? moveVideosToMediaOrigin(outDir, mediaOrigin) : { files: [], referenced: 0, missing: [] };
+  const media = mediaOrigin ? moveMediaToOrigin(outDir, mediaOrigin) : { files: [], referenced: 0, missing: [] };
   if (media.files.length) {
     fs.writeFileSync(path.join(REPO_ROOT, 'static-site-media.json'), `${JSON.stringify({ mediaOrigin, files: media.files, missingReferences: media.missing }, null, 2)}\n`);
   }

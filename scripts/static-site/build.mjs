@@ -8,7 +8,7 @@
 // 1. `next build` with NEXT_PUBLIC_STATIC_SITE=1 into .next-static (src/lib/static-site.ts)
 // 2. `next start` on 127.0.0.1, reading builder content from files (--data), never from Blob
 // 3. crawl every public page → assemble out/ → verify → static-site-report.json
-import { spawn } from 'node:child_process';
+import { execFileSync, spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { assembleSite } from './assemble.mjs';
@@ -148,6 +148,9 @@ async function main() {
 
     const outDir = path.resolve(REPO_ROOT, args.out);
     const assembled = await assembleSite({ crawlDir, outDir, crawl, mediaOrigin: args.mediaOrigin });
+    // Lets anyone check which commit is live: curl https://tseng-law.com/build-info.json
+    const commit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
+    fs.writeFileSync(path.join(outDir, 'build-info.json'), `${JSON.stringify({ commit, builtAt: new Date().toISOString() }, null, 2)}\n`);
     const verification = verifySite({ outDir });
     const report = {
       generatedAt: new Date().toISOString(),
@@ -168,7 +171,7 @@ async function main() {
       + `${verification.htmlPages} html; sitemap ${verification.sitemapUrls - verification.sitemapMissing.length}/${verification.sitemapUrls}; `
       + `broken refs ${Object.keys(verification.brokenRefs).length}; oversize ${verification.oversize.length}; crawl missing ${crawl.missing.length}`);
     if (assembled.media.origin) {
-      console.log(`[static-site] media: ${assembled.media.files} videos (${(assembled.media.bytes / 1024 / 1024).toFixed(1)} MB) → ${assembled.media.origin}; `
+      console.log(`[static-site] media: ${assembled.media.files} files (${(assembled.media.bytes / 1024 / 1024).toFixed(1)} MB) → ${assembled.media.origin}; `
         + `${assembled.media.referenced} referenced, missing locally: ${assembled.media.missingReferences.join(', ') || 'none'}`);
     }
     if (verification.sitemapMissing.length || verification.oversize.length) process.exitCode = 1;

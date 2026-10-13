@@ -82,3 +82,5 @@ out-v2/
 static-site-*.json
 out-site/
 out-final/
+out-final2/
+out-deploy/

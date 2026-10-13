@@ -206,6 +206,9 @@ export const ZH_TITLE_SERIF_STYLESHEET = '/fonts/zh-title-serif-500/zh-title-ser
 
 export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-ff7df79e29f2.css';
 
+/** vi type (2026-10-13, Indochine design): Be Vietnam Pro 400/500/600 + 'VI Display Serif' (cut from Lora), Latin + Vietnamese (SIL OFL 1.1), hashed sheet. */
+export const VI_TYPE_STYLESHEET = '/fonts/vi-2026-10/vi-type-523b201f8301.css';
+
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
   const sheets = getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
@@ -213,5 +216,6 @@ export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
   if (language === 'ko') return [...sheets, KO_PRETENDARD_STYLESHEET];
   if (language === 'ja') return [...sheets, JA_ZEN_STYLESHEET];
   if (language === 'zh-Hant') return [...sheets, ZH_TITLE_SERIF_STYLESHEET];
+  if (language === 'vi') return [...sheets, VI_TYPE_STYLESHEET];
   return sheets;
 }

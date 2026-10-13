@@ -570,21 +570,25 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
     '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
+    '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
   ],
   en: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
     '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
+    '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
   ],
   ja: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
     '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
+    '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
   ],
   'zh-hant': [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
     '519-taiwan-non-prosecution-reconsideration-private-prosecution.md', // gap1006-G5
     '520-taiwan-deferred-prosecution-conditions-complainant.md', // gap1006-G6
+    '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
   ],
 } as const;
 

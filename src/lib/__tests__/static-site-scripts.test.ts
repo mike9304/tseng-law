@@ -61,3 +61,23 @@ describe('static-site media origin rewrite', () => {
       .toBe(`srcSet="${origin}/images/a-960.webp 960w, ${origin}/images/a.webp 1920w"`);
   });
 });
+
+describe('static-site RSC payload rewrite', () => {
+  it('recomputes text-row byte lengths after rewriting inside them', async () => {
+    // @ts-expect-error -- plain ESM build scripts without type declarations
+    const { findFlightLengthErrors, rewriteHtmlDocument } = await import('../../../scripts/static-site/shared.mjs');
+    const text = '<p>화면 <img src="/images/a.webp"></p>';
+    const stream = `0:["$","div",null,{}]\n5:T${Buffer.byteLength(text, 'utf8').toString(16)},${text}6:["$","p",null,{}]\n`;
+    const half = Math.floor(stream.length / 2);
+    const html = `<html><body><img src="/images/a.webp"><script>self.__next_f.push([1,${JSON.stringify(stream.slice(0, half))}])</script>`
+      + `<script>self.__next_f.push([1,${JSON.stringify(stream.slice(half))}])</script></body></html>`;
+    expect(findFlightLengthErrors(html)).toEqual([]);
+    const rewrite = (part: string) => part.replace(/(["'`(])\/images\//g, '$1https://media.tseng-law.com/images/');
+    const naive = rewrite(html);
+    expect(findFlightLengthErrors(naive).length).toBe(1);
+    const fixed = rewriteHtmlDocument(html, rewrite);
+    expect(findFlightLengthErrors(fixed)).toEqual([]);
+    expect(fixed).toContain('<img src="https://media.tseng-law.com/images/a.webp">');
+    expect(fixed.match(/self\.__next_f\.push/g)?.length).toBe(1);
+  });
+});

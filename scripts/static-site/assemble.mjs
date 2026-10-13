@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { pageFileFor, REPO_ROOT, SITE_ORIGIN, STATIC_DIST_DIR, walkFiles } from './shared.mjs';
+import { pageFileFor, REPO_ROOT, rewriteHtmlDocument, SITE_ORIGIN, STATIC_DIST_DIR, walkFiles } from './shared.mjs';
 
 /** Next redirect pattern → Cloudflare-style _redirects pattern (`:path*` → `*`/`:splat`). */
 export function toHostPattern(pattern) {
@@ -54,7 +54,9 @@ function moveMediaToOrigin(outDir, mediaOrigin) {
     if (!TEXT_EXTENSIONS.has(path.extname(file)) || inMediaDir(file)) continue;
     const text = fs.readFileSync(file, 'utf8');
     if (!text.includes('/videos/') && !text.includes('/images/')) continue;
-    const rewritten = rewriteMediaRefs(text, mediaOrigin);
+    const rewritten = path.extname(file) === '.html'
+      ? rewriteHtmlDocument(text, (part) => rewriteMediaRefs(part, mediaOrigin))
+      : rewriteMediaRefs(text, mediaOrigin);
     if (rewritten !== text) fs.writeFileSync(file, rewritten);
     for (const m of rewritten.matchAll(pattern)) referenced.add(decodeURIComponent(m[1]));
   }

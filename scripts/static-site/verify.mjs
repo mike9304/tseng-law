@@ -1,7 +1,7 @@
 // Checks the assembled static directory: sitemap coverage, broken local refs, server calls, sizes.
 import fs from 'node:fs';
 import path from 'node:path';
-import { extractLocalRefs, isServerOnlyPath, pageFileFor, walkFiles } from './shared.mjs';
+import { extractLocalRefs, findFlightLengthErrors, isServerOnlyPath, pageFileFor, walkFiles } from './shared.mjs';
 
 const MAX_FILE_BYTES = 25 * 1024 * 1024; // Cloudflare static asset limit per file
 
@@ -40,6 +40,7 @@ export function verifySite({ outDir }) {
     brokenRefs: {},
     serverOnlyRefs: {},
     apiStrings: {},
+    flightErrors: {},
   };
 
   for (const file of files) {
@@ -63,6 +64,9 @@ export function verifySite({ outDir }) {
     report.htmlPages += 1;
     const rel = `/${path.relative(outDir, file).replace(/\.html$/, '')}`;
     const html = fs.readFileSync(file, 'utf8');
+    // A broken RSC text-row length makes the page fall over during hydration.
+    const flightErrors = findFlightLengthErrors(html);
+    if (flightErrors.length) report.flightErrors[rel] = flightErrors.slice(0, 3);
     for (const ref of extractLocalRefs(html, `https://tseng-law.com${rel}`, 'https://tseng-law.com')) {
       if (isServerOnlyPath(ref)) {
         (report.serverOnlyRefs[ref] ??= []).push(rel);

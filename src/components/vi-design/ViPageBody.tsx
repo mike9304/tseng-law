@@ -30,7 +30,7 @@ function ServicesBody() {
           if (!section) return null;
           return (
             <section className={styles.serviceDetail} id={service.id} key={service.id}>
-              <div className={styles.serviceDetailHeading}><ZhHantMonoIcon name={service.icon} size={36} /><h2>{section.heading}</h2></div>
+              <div className={styles.serviceDetailHeading}><h2>{section.heading}</h2></div>
               <div className={styles.prose}>
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 {section.items?.length ? <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul> : null}

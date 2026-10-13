@@ -22,9 +22,9 @@ function ColumnDate({ post }: { post: ColumnPost }) {
 function LatestColumns({ posts }: { posts: ColumnPost[] }) {
   const [featured, ...rest] = sortColumnPostsNewestFirst(posts).slice(0, 4);
   return (
-    <section className={`${styles.section} ${styles.fogSection}`} id="insights" data-vi-column-source="vi">
+    <section className={styles.section} id="insights" data-vi-column-source="vi">
       <ViContainer>
-        <ViSectionHeading title={viSiteCopy.columns.title} description={viSiteCopy.columns.description} href="/vi/columns" linkLabel={viSiteCopy.columns.allAction} />
+        <ViSectionHeading label={guidanceContent.vi.nav.columns} title={viSiteCopy.columns.title} description={viSiteCopy.columns.description} href="/vi/columns" linkLabel={viSiteCopy.columns.allAction} />
         {featured ? (
           <div className={styles.columnsGrid}>
             <article className={styles.featuredColumn}>
@@ -78,17 +78,21 @@ export default function ViHomeBody({ posts }: { posts: ColumnPost[] }) {
       {person ? <JsonLd data={person} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <section className={styles.hero} id="hero" aria-labelledby="vi-home-title">
-        <Image src="/images/hero-taiwan-modern-city-opening.webp" alt="" fill priority sizes="100vw" className={styles.heroImage} />
-        <div className={styles.heroShade} />
-        <ViContainer className={styles.heroContent}>
-          <p className={styles.firmName}>{getOrganizationName('vi')}</p>
-          <h1 id="vi-home-title">{viSiteCopy.home.title}</h1>
-          <p className={styles.heroDescription}>{viSiteCopy.home.description}</p>
-          <div className={styles.actions}>
-            <Link href="/vi/contact#international-inquiry" className={styles.heroPrimary}>{pack.contactCta}</Link>
-            <Link href="/vi/services" className={styles.heroSecondary}>{viSiteCopy.home.servicesAction}</Link>
+        <ViContainer className={styles.heroInner}>
+          <div className={styles.heroCopy}>
+            <p className={styles.firmName}>{getOrganizationName('vi')}</p>
+            <h1 id="vi-home-title">{viSiteCopy.home.title}</h1>
+            <p className={styles.heroDescription}>{viSiteCopy.home.description}</p>
+            <div className={styles.actions}>
+              <Link href="/vi/contact#international-inquiry" className={styles.heroPrimary}>{pack.contactCta}</Link>
+              <Link href="/vi/services" className={styles.heroSecondary}>{viSiteCopy.home.servicesAction}</Link>
+            </div>
+            <p className={styles.heroAudience}>{viSiteCopy.home.audience}</p>
           </div>
-          <p className={styles.heroAudience}>{viSiteCopy.home.audience}</p>
+          {/* The city through a window with its shutter half open: decorative, so it stays out of the reading order. */}
+          <div className={styles.heroFrame} aria-hidden="true">
+            <Image src="/images/hero-taiwan-modern-city-opening.webp" alt="" fill priority sizes="(max-width: 760px) 100vw, 44vw" className={styles.heroImage} />
+          </div>
         </ViContainer>
         <div className={styles.heroExplore}>
           <ViContainer>
@@ -98,16 +102,16 @@ export default function ViHomeBody({ posts }: { posts: ColumnPost[] }) {
           </ViContainer>
         </div>
       </section>
-      <section className={styles.section} id="practice">
+      <section className={`${styles.section} ${styles.paperSection}`} id="practice">
         <ViContainer>
-          <ViSectionHeading title={viSiteCopy.services.title} description={viSiteCopy.services.description} href="/vi/services" linkLabel={viSiteCopy.services.allAction} />
+          <ViSectionHeading label={pack.nav.services} title={viSiteCopy.services.title} description={viSiteCopy.services.description} href="/vi/services" linkLabel={viSiteCopy.services.allAction} />
           <ViServiceGrid />
         </ViContainer>
       </section>
       <LatestColumns posts={posts} />
       <ViTeamPreview />
       <div className={styles.faqRegion}>
-        <FAQAccordion locale="vi" items={faqs} id="faq" sectionClassName={styles.faqSection} headingLabel="" headingTitle={viSiteCopy.faq.title} layout="split" />
+        <FAQAccordion locale="vi" items={faqs} id="faq" sectionClassName={styles.faqSection} headingLabel={pack.nav.faq} headingTitle={viSiteCopy.faq.title} layout="split" />
         <ViContainer><Link className={styles.textLink} href="/vi/faq">{viSiteCopy.faq.allAction}<ZhHantMonoIcon name="chevron-right" size={16} /></Link></ViContainer>
       </div>
       <ViOfficePreview />

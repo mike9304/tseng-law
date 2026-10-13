@@ -18,12 +18,18 @@ export function ViContainer({ children, className = '' }: { children: ReactNode;
   return <div className={`${styles.container} ${className}`.trim()}>{children}</div>;
 }
 
+/** The site menu's name for a section, set small above its title (a wayfinding label, not new copy). */
+export function ViEyebrow({ children }: { children: ReactNode }) {
+  return <p className={styles.eyebrow}>{children}</p>;
+}
+
 export function ViSectionHeading({
-  title, description, href, linkLabel,
-}: { title: string; description?: string; href?: string; linkLabel?: string }) {
+  label, title, description, href, linkLabel,
+}: { label?: string; title: string; description?: string; href?: string; linkLabel?: string }) {
   return (
     <div className={styles.sectionHeading}>
       <div>
+        {label ? <ViEyebrow>{label}</ViEyebrow> : null}
         <h2>{title}</h2>
         {description ? <p>{description}</p> : null}
       </div>
@@ -60,7 +66,6 @@ export function ViServiceGrid() {
     <div className={styles.serviceGrid}>
       {viServicePresentation.map((service) => (
         <Link key={service.id} href={`/vi/services#${service.id}`} className={styles.serviceCard}>
-          <ZhHantMonoIcon name={service.icon} size={32} />
           <h3>{service.title}</h3>
           <p>{service.summary}</p>
           <span className={styles.serviceCardAction}>{viSiteCopy.services.detailAction}<ZhHantMonoIcon name="chevron-right" size={16} /></span>
@@ -75,17 +80,18 @@ export function ViTeamPreview() {
   const facts = buildGuidanceAttorneyFacts('vi');
   if (!member) return null;
   return (
-    <section className={styles.section} id="about" aria-labelledby="vi-team-heading">
+    <section className={`${styles.section} ${styles.paperSection}`} id="about" aria-labelledby="vi-team-heading">
       <ViContainer>
         <div className={styles.teamPreview}>
           <div className={styles.teamPortrait}>
-            <Image src={member.photo} alt={member.name} fill sizes="(max-width: 680px) 100vw, 42vw" />
+            <Image src={member.photo} alt={member.name} fill sizes="(max-width: 760px) 100vw, 42vw" />
             <div className={styles.portraitCaption}>
               <span>{member.name}</span>
               <p>{guidanceTeamCopy.vi.roles['tseng-junwei']}</p>
             </div>
           </div>
           <div className={styles.teamPreviewCopy}>
+            <ViEyebrow>{guidanceContent.vi.nav.lawyers}</ViEyebrow>
             <h2 id="vi-team-heading">{viSiteCopy.team.title}</h2>
             {facts ? <p>{facts.qualification}</p> : null}
             <p>{viSiteCopy.team.description}</p>
@@ -106,7 +112,7 @@ export function ViOfficePreview() {
   return (
     <section className={styles.officePreview} id="offices">
       <ViContainer>
-        <ViSectionHeading title={viSiteCopy.offices.title} description={viSiteCopy.offices.description} href="/vi/contact#offices" linkLabel={viSiteCopy.offices.action} />
+        <ViSectionHeading label={copy.label} title={viSiteCopy.offices.title} description={viSiteCopy.offices.description} href="/vi/contact#offices" linkLabel={viSiteCopy.offices.action} />
         <div className={styles.officeGrid}>
           {taiwanOfficeData['zh-hant'].map((office) => (
             <div key={office.id}>
@@ -126,6 +132,7 @@ export function ViContactBand() {
       <ViContainer>
         <div className={styles.contactBandMain}>
           <div>
+            <ViEyebrow>{guidanceContent.vi.nav.contact}</ViEyebrow>
             <h2 id="vi-contact-heading">{viSiteCopy.contact.title}</h2>
             <p>{viSiteCopy.contact.description}</p>
           </div>

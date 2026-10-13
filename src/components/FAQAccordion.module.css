@@ -259,4 +259,15 @@
 
 :global(.site[data-locale='vi']) .root :global(.faq-question) :global(button),
 :global(.site[data-locale='vi']) .root :global(.faq-answer) { word-break: normal; line-height: 1.75; }
-:global(.site[data-locale='vi']) .root :global(.faq-question) :global(button):focus-visible { outline-color: #235a46; }
+/* vi Indochine (2026-10-13): ink on paper, a gold rule over warm hairlines, bronze label and +/−, shutter-green ring. */
+:global(.site[data-locale='vi']) .root :global(.section-label) { color: #7d5a1e; }
+:global(.site[data-locale='vi']) .root :global(.section-title),
+:global(.site[data-locale='vi']) .root :global(.faq-question) :global(button) { color: #1c1a17; }
+:global(.site[data-locale='vi']) .root :global(.faq-list) { border-top: 1px solid #b8893b; }
+:global(.site[data-locale='vi']) .root :global(.faq-item),
+:global(.site[data-locale='vi']) .root :global(.faq-item.is-open),
+:global(.site[data-locale='vi']) .root :global(.faq-item):hover { border-bottom-color: #e3d8c4; }
+:global(.site[data-locale='vi']) .indicator,
+:global(.site[data-locale='vi']) .root :global(.faq-arrow) { color: #7d5a1e; }
+:global(.site[data-locale='vi']) .root :global(.faq-answer) { color: #6b6259; }
+:global(.site[data-locale='vi']) .root :global(.faq-question) :global(button):focus-visible { outline-color: #2f5b4e; }

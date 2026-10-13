@@ -1484,15 +1484,140 @@
 :global(.site[data-locale='zh-hant']) .contentFitProbeBrand,
 :global(.site[data-locale='zh-hant']) .footer :global(.footer-main-brand) { font-family: 'ZH Brand Serif', var(--font-display); }
 
-/* Vietnamese shares the neutral chrome, with the same forest actions as its page bodies. */
+/* =====================================================================================================
+   vi chrome «Indochine» (2026-10-13). On top of the shared neutral chrome: the header is a lacquer band
+   (#1e1612) with cream type, a deeper utility strip, gold hairlines and an ochre underline for the current
+   page; square actions — the consultation key in shutter green edged in
+   gold. The phone drawer is cream paper; the footer is deep lacquer. Text in Be Vietnam Pro, the wordmark and
+   panel titles in 'VI Display Serif' (both linked on vi pages only). Same specificity as the shared rules and
+   later in the file, so vi wins only where it differs.
+   ===================================================================================================== */
 :global(.site[data-locale='vi']) .header,
+:global(.site[data-locale='vi']) .drawer,
 :global(.site[data-locale='vi']) .footer {
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  --font-body: var(--font-sans);
-  font-family: var(--font-sans);
+  --vi-chrome-sans: 'Be Vietnam Pro', 'Be Vietnam Pro Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --vi-chrome-serif: 'VI Display Serif', 'VI Display Serif Fallback', Georgia, 'Times New Roman', serif;
+  --font-sans: var(--vi-chrome-sans);
+  --font-body: var(--vi-chrome-sans);
+  font-family: var(--vi-chrome-sans);
 }
-:global(.site[data-locale='vi']) .header :global(.nav-link) { letter-spacing: 0; }
-:global(.site[data-locale='vi']) .header :global(.nav-cta.button) { background: #235a46; border-color: #235a46; border-radius: 999px; }
-:global(.site[data-locale='vi']) .header :global(.nav-cta.button):hover { background: #163e2e; border-color: #163e2e; }
-:global(.site[data-locale='vi']) .header :global(.nav-link[aria-current='page']) { color: #235a46; }
-:global(.site[data-locale='vi']) .footer :global(.footer-main-brand) { font-family: var(--font-sans); letter-spacing: -0.015em; }
+/* Header.tsx rounds the measured header height up (Math.ceil) so content never slides under it; under a dark band
+   that sub-pixel gap showed the light page as a hairline, so the band's gold edge is carried 1px down over it. */
+:global(.site[data-locale='vi']) .header {
+  background: #1e1612;
+  border-bottom-color: rgb(184 137 59 / 45%);
+  box-shadow: 0 1px 0 #634a24;
+  color: #f5efe3;
+}
+:global(.site[data-locale='vi']) .header:global(.header.scrolled) { background: #1e1612; border-bottom-color: rgb(184 137 59 / 45%); box-shadow: 0 1px 0 #634a24; }
+:global(.site[data-locale='vi']) .headerUtility:global(.header-utility) { background: #150f0c; border-bottom-color: rgb(184 137 59 / 22%); }
+:global(.site[data-locale='vi']) .headerMain:global(.header-main) { background: #1e1612; }
+:global(.site[data-locale='vi']) .header :global(.header-accent-line) { background: rgb(184 137 59 / 45%); }
+
+/* Wordmark in the display serif, cream on lacquer; the width probe that sizes the header uses the same face. */
+:global(.site[data-locale='vi']) .header .brandText:global(.logo-kr) { color: #f5efe3; }
+:global(.site[data-locale='vi']) .brandText:global(.logo-kr),
+:global(.site[data-locale='vi']) .contentFitProbeBrand { font-family: var(--vi-chrome-serif); font-weight: 600; }
+
+/* Utility strip: muted cream links, the language key a square gold-edged box. */
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > a,
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > * > a,
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > * > button,
+:global(.site[data-locale='vi']) .header :global(.utility-lang) > a { color: #cbbba3; }
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > a:hover,
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > a:focus-visible,
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > * > a:hover,
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > * > a:focus-visible,
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > * > button:hover,
+:global(.site[data-locale='vi']) .header :global(.utility-nav) > * > button:focus-visible {
+  color: #fbf6ec;
+  background: rgb(245 239 227 / 8%);
+}
+:global(.site[data-locale='vi']) .header :global(.utility-lang) { border-radius: 0; }
+:global(.site[data-locale='vi']) .header :global(.utility-lang) button[aria-haspopup='dialog'] {
+  border: 1px solid rgb(184 137 59 / 50%);
+  border-radius: 0;
+  background: transparent;
+  color: #f5efe3;
+}
+:global(.site[data-locale='vi']) .header :global(.utility-lang) button[aria-haspopup='dialog']:hover,
+:global(.site[data-locale='vi']) .header :global(.utility-lang) button[aria-haspopup='dialog'][aria-expanded='true'] { background: rgb(245 239 227 / 8%); border-color: #d9a441; }
+
+/* Menu: cream type; the current page and the hover marker in ochre. */
+:global(.site[data-locale='vi']) .header :global(.nav-link) { color: #f5efe3; letter-spacing: 0; }
+:global(.site[data-locale='vi']) .header :global(.nav-link:hover),
+:global(.site[data-locale='vi']) .header :global(.nav-link:focus-visible),
+:global(.site[data-locale='vi']) .header :global(.nav-item.active) :global(.nav-link) { color: #fbf6ec; background: transparent; }
+:global(.site[data-locale='vi']) .header :global(.nav-link[aria-current='page']),
+:global(.site[data-locale='vi']) .header :global(.nav-link[aria-current='page']:hover),
+:global(.site[data-locale='vi']) .header :global(.nav-link[aria-current='page']:focus-visible) {
+  color: #d9a441;
+  background: transparent;
+  box-shadow: inset 0 -2px 0 #d9a441;
+}
+:global(.site[data-locale='vi']) .header :focus-visible,
+:global(.site[data-locale='vi']) .header :global(.nav-link):focus-visible { outline: 3px solid #d9a441; outline-offset: 2px; }
+
+/* Actions: square. Consultation in shutter green edged in gold; search and the phone menu key as gold-edged squares. */
+:global(.site[data-locale='vi']) .header :global(.nav-cta.button) {
+  border: 1px solid #b8893b;
+  border-radius: 2px;
+  background: #2f5b4e;
+  color: #f5efe3;
+  font-weight: 600;
+}
+:global(.site[data-locale='vi']) .header :global(.nav-cta.button):hover,
+:global(.site[data-locale='vi']) .header :global(.nav-cta.button):focus-visible { background: #22463b; border-color: #d9a441; color: #fff; }
+:global(.site[data-locale='vi']) .header :global(.header-search-btn),
+:global(.site[data-locale='vi']) .menuToggle:global(.mobile-toggle) {
+  border: 1px solid rgb(184 137 59 / 50%);
+  border-radius: 0;
+  background: transparent;
+  color: #f5efe3;
+}
+:global(.site[data-locale='vi']) .header :global(.header-search-btn):hover,
+:global(.site[data-locale='vi']) .header :global(.header-search-btn):focus-visible,
+:global(.site[data-locale='vi']) .menuToggle:global(.mobile-toggle):hover {
+  border-color: #d9a441;
+  background: rgb(245 239 227 / 8%);
+  color: #fbf6ec;
+}
+
+/* Phone drawer: cream paper, gold hairlines, square close key. */
+:global(.site[data-locale='vi']) .drawer:global(#public-mobile-nav-drawer) { --divider: #e3d8c4; background: rgb(30 22 18 / 50%); }
+:global(.site[data-locale='vi']) .drawer:global(#public-mobile-nav-drawer) .drawerPanel:global(.drawer-panel) { background: #fbf8f1; color: #1c1a17; border-left: 3px solid #b8893b; }
+:global(.site[data-locale='vi']) .drawer:global(#public-mobile-nav-drawer) :global(.drawer-brand) .brandText:global(.logo-kr),
+:global(.site[data-locale='vi']) .drawer :global(.drawer-nav-link) { color: #1c1a17; }
+:global(.site[data-locale='vi']) .drawer :global(.drawer-nav-link) { font-family: var(--vi-chrome-serif); font-weight: 500; }
+:global(.site[data-locale='vi']) .drawer :global(.drawer-nav-link):hover { color: #2f5b4e; }
+:global(.site[data-locale='vi']) .drawerClose { border: 1px solid #e3d8c4; border-radius: 0; background: #f5efe3; color: #1c1a17; }
+:global(.site[data-locale='vi']) .drawerClose:hover { border-color: #b8893b; background: #f5efe3; }
+:global(.site[data-locale='vi']) .drawer :global(.drawer-footer) :global(.button) { border: 1px solid #b8893b; border-radius: 2px; background: #2f5b4e; color: #f5efe3; }
+:global(.site[data-locale='vi']) .drawer :global(.drawer-footer) :global(.button):hover { border-color: #d9a441; background: #22463b; color: #fff; }
+:global(.site[data-locale='vi']) .drawer :focus-visible { outline: 3px solid #2f5b4e; outline-offset: 2px; }
+
+/* Footer: deep lacquer, gold hairlines, cream and parchment type, square keys. */
+:global(.site[data-locale='vi']) .skyline:global(.footer-skyline) { background: #f5efe3; border-top-color: #e3d8c4; }
+:global(.site[data-locale='vi']) .footer:global(.site-footer) { background: #150f0c; color: #f5efe3; border-top: 1px solid #b8893b; }
+:global(.site[data-locale='vi']) .footer :global(.footer-offices),
+:global(.site[data-locale='vi']) .footer :global(.footer-main),
+:global(.site[data-locale='vi']) .footer :global(.footer-copyright-row) { border-color: rgb(184 137 59 / 28%); }
+:global(.site[data-locale='vi']) .footer :global(.office-link),
+:global(.site[data-locale='vi']) .footer :global(.office-link-address),
+:global(.site[data-locale='vi']) .footer :global(.footer-main-note),
+:global(.site[data-locale='vi']) .footer :global(.footer-link-list) a,
+:global(.site[data-locale='vi']) .footer :global(.footer-legal-links) a,
+:global(.site[data-locale='vi']) .footer :global(.social-label),
+:global(.site[data-locale='vi']) .footer :global(.footer-copyright-row) { color: #cbbba3; }
+:global(.site[data-locale='vi']) .footer :global(.office-label),
+:global(.site[data-locale='vi']) .footer :global(.footer-link-title) { color: #d9a441; }
+:global(.site[data-locale='vi']) .footer :global(.office-link + .office-link)::before { background: rgb(184 137 59 / 35%); }
+:global(.site[data-locale='vi']) .footer :global(.footer-main-brand) { font-family: var(--vi-chrome-serif); font-weight: 600; letter-spacing: 0; }
+:global(.site[data-locale='vi']) .footer :global(.footer-consultation-email-link) { text-decoration-color: rgb(217 164 65 / 60%); }
+:global(.site[data-locale='vi']) .footer :global(.footer-consultation-email-copy),
+:global(.site[data-locale='vi']) .footer :global(.social-icon) { border: 1px solid rgb(184 137 59 / 45%); border-radius: 0; background: transparent; }
+:global(.site[data-locale='vi']) .footer :global(.footer-consultation-email-copy):hover,
+:global(.site[data-locale='vi']) .footer :global(.footer-consultation-email-copy):focus-visible,
+:global(.site[data-locale='vi']) .footer :global(.social-icon):hover,
+:global(.site[data-locale='vi']) .footer :global(.social-icon):focus-visible { border-color: #d9a441; background: rgb(245 239 227 / 8%); }
+:global(.site[data-locale='vi']) .footer :focus-visible { outline-color: #d9a441; }

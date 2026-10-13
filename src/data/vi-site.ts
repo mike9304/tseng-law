@@ -1,5 +1,3 @@
-import type { ZhHantMonoIconName } from '@/components/zh-hant-icons/ZhHantMonoIcon';
-
 /** Presentation copy only. People, offices, service detail and disclosures stay in their canonical packs. */
 export const viSiteCopy = {
   home: {
@@ -69,7 +67,6 @@ export interface ViServicePresentation {
   sectionIndex: number;
   title: string;
   summary: string;
-  icon: ZhHantMonoIconName;
 }
 
 /** Order prioritizes common personal matters without expanding the published six service areas. */
@@ -79,41 +76,35 @@ export const viServicePresentation: readonly ViServicePresentation[] = [
     sectionIndex: 3,
     title: 'Lao động và việc làm',
     summary: 'Tiền lương, chấm dứt hợp đồng và tranh chấp giữa người lao động với người sử dụng lao động.',
-    icon: 'labor',
   },
   {
     id: 'family',
     sectionIndex: 2,
     title: 'Hôn nhân và gia đình',
     summary: 'Ly hôn, tài sản, việc chăm sóc và thăm nom con, thừa kế và vụ việc có yếu tố nước ngoài.',
-    icon: 'family',
   },
   {
     id: 'civil',
     sectionIndex: 1,
     title: 'Dân sự và bồi thường',
     summary: 'Tranh chấp hợp đồng, thiệt hại ngoài hợp đồng và các vấn đề bảo vệ quyền lợi người tiêu dùng.',
-    icon: 'civil',
   },
   {
     id: 'criminal',
     sectionIndex: 4,
     title: 'Vụ việc hình sự',
     summary: 'Hỗ trợ người bị tình nghi, bị cáo và người bị hại trong quá trình điều tra, xét xử.',
-    icon: 'criminal',
   },
   {
     id: 'business',
     sectionIndex: 0,
     title: 'Đầu tư và doanh nghiệp',
     summary: 'Thành lập công ty, đầu tư, hợp đồng và các vấn đề pháp lý khi kinh doanh tại Đài Loan.',
-    icon: 'company',
   },
   {
     id: 'intellectual-property',
     sectionIndex: 5,
     title: 'Sở hữu trí tuệ',
     summary: 'Đăng ký và bảo vệ nhãn hiệu, sáng chế, quyền tác giả; giải quyết tranh chấp liên quan.',
-    icon: 'ip',
   },
 ];

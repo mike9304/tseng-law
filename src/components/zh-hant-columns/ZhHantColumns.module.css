@@ -546,26 +546,116 @@ a.switchActive:focus-visible { outline-color: var(--ap-ink); }
 /* Card titles break at punctuation instead of mid-word (台/灣); very long runs may still wrap anywhere. */
 .root:global(:is(#zh-hant-columns, #ko-columns, #vi-columns)) :global(.columns-card-title) { word-break: keep-all; line-break: strict; overflow-wrap: anywhere; }
 
-/* Vietnamese uses the same tiles and controls with a Latin reading rhythm. */
+
+/* ===== vi «Indochine» (2026-10-13) ===== */
+/* The Vietnamese columns list and issue board in the vi site's own dress (tokens as ViSite.module.css): a cream paper
+   header closed by a louvre band, square tiles edged in gold leaf, serif titles, shutter-green actions, a lacquer tile
+   for the current board. Same markup, filters, search and links; later rules and #vi-columns win over the passes above. */
 .root:global(#vi-columns) {
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  --font-display: var(--font-sans);
+  --vi-lacquer: #1e1612;
+  --vi-gold: #b8893b;
+  --vi-ochre: #d9a441;
+  --vi-bronze: #7d5a1e;
+  --vi-paper: #f5efe3;
+  --vi-paper-soft: #fbf8f1;
+  --vi-card: #fffdf8;
+  --vi-serif: 'VI Display Serif', 'VI Display Serif Fallback', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Be Vietnam Pro', 'Be Vietnam Pro Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --font-display: var(--vi-serif);
   --font-body: var(--font-sans);
-  --ap-ink: #235a46;
-  --ap-ink-deep: #163e2e;
-  --ap-accent: #235a46;
+  --ap-gray: var(--vi-paper);
+  --ap-text: #1c1a17;
+  --ap-muted: #6b6259;
+  --ap-line: #e3d8c4;
+  --ap-ink: #2f5b4e;
+  --ap-ink-deep: #22463b;
+  --ap-accent: #2f5b4e;
+  --ap-radius: 0;
+  background: var(--vi-paper-soft);
   font-family: var(--font-sans);
+  font-synthesis-weight: none;
+}
+.root:global(#vi-columns) :global(.page-header) { position: relative; background: var(--vi-paper); }
+.root:global(#vi-columns) > :global(.page-header)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 13px;
+  border-top: 1px solid var(--vi-gold);
+  background: repeating-linear-gradient(180deg, rgb(184 137 59 / 30%) 0 1px, transparent 1px 4px);
 }
 .root:global(#vi-columns) :global(.page-header-title),
-.root:global(#vi-columns) :global(.page-header-title *) { font-size: clamp(38px, 5vw, 68px) !important; line-height: 1.14; letter-spacing: -0.025em; text-wrap: pretty; }
+.root:global(#vi-columns) :global(.page-header-title *) {
+  font-family: var(--vi-serif) !important;
+  font-weight: 500;
+  font-size: clamp(38px, 4.6vw, 64px) !important;
+  line-height: 1.13;
+  letter-spacing: -0.008em;
+  text-wrap: pretty;
+}
+.root:global(#vi-columns) :global(.page-header .section-label) { color: var(--vi-bronze); }
+.root:global(#vi-columns) :global(.page-header .breadcrumb a:hover) { color: var(--ap-accent); text-decoration-color: var(--vi-gold); }
+.root:global(#vi-columns) :global(.page-header) :focus-visible { border-radius: 0; }
+
+/* Board switch: square paper tiles; the current board is the lacquer one, capped in gold. */
+.root:global(#vi-columns) .switchCard { background: var(--vi-card); border: 1px solid var(--ap-line); border-radius: 0; transition: border-color 160ms ease; }
+.root:global(#vi-columns) a.switchCard:hover,
+.root:global(#vi-columns) .switchCard:not(.switchActive):hover { transform: none; box-shadow: none; border-color: var(--vi-gold); }
+.root:global(#vi-columns) .switchActive { background: var(--vi-lacquer); border: 1px solid var(--vi-lacquer); border-top: 3px solid var(--vi-gold); color: #f5efe3; }
+.root:global(#vi-columns) .switchTitle { font-family: var(--vi-serif); font-weight: 500; font-size: 23px; }
+.root:global(#vi-columns) .switchCount { border-radius: 0; background: var(--vi-paper); color: var(--vi-bronze); border: 1px solid var(--ap-line); font-family: var(--font-sans); }
+.root:global(#vi-columns) .switchActive .switchCount { background: transparent; border-color: rgb(217 164 65 / 60%); color: var(--vi-ochre); }
+.root:global(#vi-columns) .switchActive .switchText { color: #cbbba3; }
+.root:global(#vi-columns) .switchActive .switchLatest { border-top-color: rgb(184 137 59 / 40%); }
+.root:global(#vi-columns) .switchActive .switchLatest a { color: #f5efe3; }
+/* The chevron after each latest link is a mask from --zh-glyph-chevron-right, defined for zh-hant/ko only; without it
+   the mask drops and a solid square shows (2026-10-11 vi). The links read as links without it. */
+.root:global(#vi-columns) .switchLatest a::after { content: none; }
+.root:global(#vi-columns) .switch a:focus-visible { border-radius: 0; }
+.root:global(#vi-columns) .switchActive a:focus-visible { outline-color: var(--vi-ochre); }
+
+/* Search and topics: square fields and tabs. */
+.root:global(#vi-columns) :global(section.section[class*='ColumnsGrid']) { background: var(--vi-paper-soft); }
+.root:global(#vi-columns) :global(.columns-search-input) { border: 1px solid #8c7b62; border-radius: 2px; background: var(--vi-card); }
+.root:global(#vi-columns) :global(.columns-search-input:focus) { background: #fff; border-color: var(--ap-ink); box-shadow: 0 0 0 2px var(--ap-ink); }
+.root:global(#vi-columns) :global(.columns-search-submit) { border: 1px solid var(--vi-gold); border-radius: 2px; background: var(--ap-ink); color: var(--vi-paper); font-weight: 600; }
+.root:global(#vi-columns) :global(.columns-search-submit:hover) { background: var(--ap-ink-deep); border-color: var(--vi-ochre); }
+.root:global(#vi-columns) :global(.columns-filters .columns-filter-btn) { border: 1px solid var(--ap-line); border-radius: 2px; background: var(--vi-card); font-weight: 500; }
+.root:global(#vi-columns) :global(.columns-filters .columns-filter-btn:hover) { background: var(--vi-card); border-color: var(--vi-gold); }
+.root:global(#vi-columns) :global(.columns-filters .columns-filter-btn .columns-filter-count) { color: var(--vi-bronze); }
+.root:global(#vi-columns) :global(.columns-filters .columns-filter-btn.active) { background: var(--ap-ink); border-color: var(--vi-gold); color: var(--vi-paper); }
+.root:global(#vi-columns) :global(.columns-filters .columns-filter-btn.active .columns-filter-count) { color: #e6dccb; }
+
+/* Section heads: gold rule above a serif title, bronze count. */
+.root:global(#vi-columns) :global(.columns-topic-title) { font-family: var(--vi-serif) !important; font-weight: 500; letter-spacing: -0.008em; }
 .root:global(#vi-columns) :global(.columns-topic-section .columns-topic-title),
-.root:global(#vi-columns) :global(.columns-topic-section:not(:first-child) .columns-topic-title) { font-size: clamp(28px, 3vw, 40px); line-height: 1.25; letter-spacing: -0.02em; }
-.root:global(#vi-columns) :global(.columns-card-title) { word-break: normal; line-break: auto; line-height: 1.45; }
-.root:global(#vi-columns) :global([data-columns-original-language]) { margin: 0 0 64px; padding-top: 40px; border-top: 1px solid var(--ap-line); }
-.root:global(#vi-columns) :global([data-columns-original-language] h2) { font-family: var(--font-sans); font-size: 20px; font-weight: 600; }
+.root:global(#vi-columns) :global(.columns-topic-section:not(:first-child) .columns-topic-title) { font-size: clamp(28px, 3vw, 42px); line-height: 1.22; }
+.root:global(#vi-columns) :global(.columns-topic-count) { color: var(--vi-bronze) !important; }
+.root:global(#vi-columns) :global(.columns-topic-section:first-child > .columns-topic-header) { padding-top: 22px; border-top: 1px solid var(--vi-gold); }
+
+/* Cards: square paper leaves with a hairline, the photograph inset with a fillet; no lift, the edge turns gold. */
+.root:global(#vi-columns) :global(.columns-card) { background: var(--vi-card); border: 1px solid var(--ap-line); border-radius: 0; transition: border-color 160ms ease; }
+.root:global(#vi-columns) :global(.columns-topic-section:not(:first-child) .columns-card) { background: var(--vi-card); }
+.root:global(#vi-columns) :global(.columns-card:hover) { transform: none; box-shadow: none; border-color: var(--vi-gold); }
+.root:global(#vi-columns) :global(.columns-card .columns-card-img) { position: relative; background: #e9dfcc; }
+.root:global(#vi-columns) :global(.columns-card .columns-card-img)::after { content: ''; position: absolute; inset: 10px; border: 1px solid rgb(251 246 236 / 62%); pointer-events: none; }
+.root:global(#vi-columns) :global(.columns-card:hover .columns-card-img img) { transform: none; }
+.root:global(#vi-columns) :global(.columns-card-image-overlay) { background: linear-gradient(180deg, rgb(30 22 18 / 0%) 55%, rgb(30 22 18 / 30%) 100%); }
+.root:global(#vi-columns) :global(.columns-category-badge--image),
+.root:global(#vi-columns) :global(.columns-card-datechip) { border-radius: 0; background: rgb(251 248 241 / 94%); -webkit-backdrop-filter: none; backdrop-filter: none; color: #1c1a17; letter-spacing: 0.01em; }
+.root:global(#vi-columns) :global(.columns-card-title) { font-family: var(--vi-serif) !important; font-weight: 600; word-break: normal; line-break: auto; line-height: 1.38; }
+.root:global(#vi-columns) :global(.columns-card:hover .columns-card-title) { color: var(--ap-ink); }
+.root:global(#vi-columns) :global(.columns-card-linkhint) { color: var(--ap-ink); }
+.root:global(#vi-columns) :global(.columns-topic-section:not(:first-child) > .columns-topic-more:hover) { text-decoration-color: var(--vi-gold); }
+.root:global(#vi-columns) :global([data-columns-original-language]) { margin: 0 0 64px; padding-top: 40px; border-top: 1px solid var(--vi-gold); }
+.root:global(#vi-columns) :global([data-columns-original-language] h2) { font-family: var(--vi-serif) !important; font-size: 22px; font-weight: 500; }
 
 @media (max-width: 767px) {
-  .root:global(#vi-columns) .switchCard { min-width: 0; }
-  .root:global(#vi-columns) .switchTitle { min-width: 0; max-width: 100%; flex-wrap: wrap; white-space: normal; }
+  .root:global(#vi-columns) .switchCard { min-width: 0; border-radius: 0; }
+  .root:global(#vi-columns) .switchTitle { min-width: 0; max-width: 100%; flex-wrap: wrap; white-space: normal; font-size: 17px; }
   .root:global(#vi-columns) .switchCount { flex: 0 0 auto; }
+  .root:global(#vi-columns) :global(.columns-card .columns-card-img)::after { inset: 8px; }
 }

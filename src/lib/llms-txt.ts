@@ -549,7 +549,7 @@ type GuidanceLlmsNotices = {
 export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices> = {
   vi: {
     consultationNotice:
-      'Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+      'Hiện luật sư tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn, chưa có dịch vụ tư vấn bằng tiếng Việt.',
     discoveryNotice:
       'Tệp llms.txt này chỉ là mục lục để tìm các trang công khai; nó không hứa hẹn thứ hạng trên công cụ tìm kiếm, không phải lời giới thiệu hay khuyến nghị của trí tuệ nhân tạo, và cũng không bảo đảm mức độ hiển thị.',
     confidentialNotice:

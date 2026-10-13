@@ -35,7 +35,13 @@ describe('residual public consultation CTAs', () => {
 
     expect(source).toContain('CONSULTATION_EMAIL');
     expect(source).toContain('getConsultationPublicMailto');
-    expect(source).toContain('href={getConsultationPublicMailto(locale)}');
+    // vi has no SiteLocale mail template (the English one would open), so vi articles send readers to the Vietnamese
+    // contact page, which states the consultation languages and, in the static build, opens a plain mailto.
+    // Every other locale and page keeps the localized mailto.
+    const ctaHref = pagePath.endsWith('ColumnDetailView.tsx')
+      ? "href={urlLocale === 'vi' ? '/vi/contact' : getConsultationPublicMailto(locale)}"
+      : 'href={getConsultationPublicMailto(locale)}';
+    expect(source).toContain(ctaHref);
     expect(source).toContain('aria-label=');
     expect(source).not.toContain('tel:');
     expect(source).not.toMatch(/kakaotalk|kakao|line\.me/i);

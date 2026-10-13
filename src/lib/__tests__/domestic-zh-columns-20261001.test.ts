@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { collectColumnSitemapRecords } from '@/lib/column-locales';
-import { PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
+import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { DOMESTIC_ZH_COLUMN_FILES_20261001 } from './native-locale-columns';
 
@@ -29,6 +29,14 @@ const PHONE_PATTERNS = [/\b0\d{1,2}-\d{3,4}-\d{3,4}\b/, /\(0\d{1,2}\)\s*\d{3,4}/
 const STATUTE_LINK = /https:\/\/law\.moj\.gov\.tw\/LawClass\/LawSingle\.aspx\?pcode=[A-Z]\d{7}&flno=[\d-]+/g;
 
 describe('domestic zh-hant columns 2026-10-01', () => {
+  const postsByLocale = new Map<PublicLocale8, ReturnType<typeof getAllColumnPosts>>();
+
+  for (const locale of PUBLIC_LOCALES_8) {
+    beforeAll(() => {
+      postsByLocale.set(locale, getAllColumnPosts(locale));
+    });
+  }
+
   it('covers three zh-hant-only columns', () => {
     expect(cases).toHaveLength(3);
     expect(cases.map(({ slug }) => slug).sort()).toEqual(Object.keys(EXPECTED_TOPIC).sort());
@@ -73,11 +81,11 @@ describe('domestic zh-hant columns 2026-10-01', () => {
 
   it.each(cases)('$slug exists only in zh-hant and its sitemap alternates stay zh-hant', ({ slug }) => {
     for (const other of PUBLIC_LOCALES_8) {
-      const present = getAllColumnPosts(other).some((post) => post.slug === slug);
+      const present = postsByLocale.get(other)!.some((post) => post.slug === slug);
       expect(present, `${other}/${slug}`).toBe(other === 'zh-hant');
     }
     const records = collectColumnSitemapRecords({
-      postsForLocale: (locale) => getAllColumnPosts(locale).filter((post) => post.slug === slug),
+      postsForLocale: (locale) => postsByLocale.get(locale)!.filter((post) => post.slug === slug),
     });
     expect(records.map((record) => record.locale)).toEqual(['zh-hant']);
     for (const record of records) expect(record.alternateLocales).toEqual(['zh-hant']);

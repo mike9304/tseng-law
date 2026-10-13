@@ -1,3 +1,4 @@
+import { AIR_COLUMN_FILES_20261011, AIR_COLUMN_PUBLICATION_DATE } from './air-column-files';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -381,6 +382,9 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '515': '2026-10-11',
   '516': '2026-10-11',
   '517': '2026-10-11',
+  ...Object.fromEntries(
+    Object.values(AIR_COLUMN_FILES_20261011).flat().map((file) => [file.slice(0, 3), AIR_COLUMN_PUBLICATION_DATE]),
+  ),
   // gap1006-G4
   '518': '2026-10-13',
   // gap1006-G5

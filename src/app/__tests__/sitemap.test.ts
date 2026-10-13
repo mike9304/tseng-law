@@ -1,8 +1,9 @@
+import { AIR_COLUMN_FILES_20261011 } from '@/lib/__tests__/air-column-files';
 import { NEXT_TOPIC_COLUMN_FILES_20261010 } from '@/lib/__tests__/next-topic-column-files';
 import { GAP_COLUMN_FILES_20261010 } from '@/lib/__tests__/gap-column-files';
 import { SINGAPORE_COLUMN_FILES_20261010 } from '@/lib/__tests__/singapore-column-files';
 import { AI_SEMICONDUCTOR_COLUMN_FILES_20261009 } from '@/lib/__tests__/ai-semiconductor-column-files';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { ISSUE_BOARD_LOCALES, getAllColumnPosts, getAllIssuePosts } from '@/lib/columns';
@@ -19,10 +20,7 @@ import {
   hreflangTagForPublicLocale,
   isPublicLocale8,
 } from '@/lib/public-guidance';
-import {
-  absentOptionalColumnLocales,
-  presentOptionalColumnLocales,
-} from '@/data/__tests__/column-alternate-expectations';
+import { COLUMN_CONTENT_DIR_BY_LOCALE } from '@/lib/column-locales';
 import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_COLUMN_FILES_20261004,
   COUNTRY_COLUMN_FILES_20261005,
   COUNTRY_COLUMN_FILES_20261006,
@@ -31,6 +29,59 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 import { TAX_ACCOUNTING_COLUMN_FILES } from '@/lib/__tests__/tax-accounting-column-files';
 import { CRIMINAL_COLUMN_FILES_20261008 } from '@/lib/__tests__/criminal-coverage-column-files';
+import {
+  ATTORNEY_SITEMAP_SOURCE,
+  SERVICE_SITEMAP_SOURCE,
+  STATIC_PATH_SOURCE_FILES,
+  readGitCommitIso,
+} from '../sitemap-lastmod';
+
+const fileCorpus = vi.hoisted(() => new Map<string, import('@/lib/columns').ColumnPost[]>());
+
+vi.mock('node:child_process', async (importOriginal) => {
+  const childProcess = await importOriginal<typeof import('node:child_process')>();
+  const gitCommitOutputs = new Map<string, ReturnType<typeof childProcess.execFileSync>>();
+  return {
+    ...childProcess,
+    execFileSync: (...args: Parameters<typeof childProcess.execFileSync>) => {
+      const [command, commandArgs, options] = args;
+      // HEAD and source files never change here. Reuse only the lastmod reader's exact git call.
+      const isSourceCommitRead = command === 'git' && Array.isArray(commandArgs)
+        && commandArgs.length === 5 && commandArgs[0] === 'log' && commandArgs[1] === '-1'
+        && commandArgs[2] === '--format=%cI' && commandArgs[3] === '--'
+        && commandArgs[4].startsWith('src/')
+        && options?.cwd === process.cwd() && options.encoding === 'utf8' && options.timeout === 8000
+        && JSON.stringify(options.stdio) === JSON.stringify(['ignore', 'pipe', 'ignore'])
+        && Object.keys(options).every((key) => ['cwd', 'encoding', 'timeout', 'stdio'].includes(key));
+      if (!isSourceCommitRead) return childProcess.execFileSync(...args);
+
+      const key = JSON.stringify(args);
+      const cached = gitCommitOutputs.get(key);
+      if (cached !== undefined) return cached;
+      const output = childProcess.execFileSync(...args);
+      gitCommitOutputs.set(key, output);
+      return output;
+    },
+  };
+});
+
+vi.mock('@/lib/columns', async (importOriginal) => {
+  const columns = await importOriginal<typeof import('@/lib/columns')>();
+  return {
+    ...columns,
+    getAllColumnPosts: (...args: Parameters<typeof columns.getAllColumnPosts>) => {
+      // This suite never changes the markdown corpus, cwd, or its environment.
+      if (args.length > 1) return columns.getAllColumnPosts(...args);
+      const locale = args[0] ?? 'ko';
+      let posts = fileCorpus.get(locale);
+      if (!posts) {
+        posts = columns.getAllColumnPosts(locale);
+        fileCorpus.set(locale, posts);
+      }
+      return posts.slice();
+    },
+  };
+});
 
 const sourceMocks = vi.hoisted(() => ({
   readAttorneyProfileSourceRecords: vi.fn<
@@ -62,6 +113,20 @@ const guidanceTranslatedColumnCount = [...GUIDANCE_LOCALES_4].reduce((total, loc
   return total + readdirSync(dir).filter((name) => name.endsWith('.md')).length;
 }, 0);
 
+const optionalColumnSlugs = new Map(GUIDANCE_LOCALES_4.map((locale) => {
+  const dir = path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale]);
+  const files = existsSync(dir) ? readdirSync(dir).filter((file) => file.endsWith('.md')) : [];
+  return [locale, new Set(files.map((file) => file.replace(/\.md$/, '').replace(/^\d{3}-/, '')))];
+}));
+
+function presentOptionalColumnLocales(slug: string) {
+  return GUIDANCE_LOCALES_4.filter((locale) => optionalColumnSlugs.get(locale)!.has(slug));
+}
+
+function absentOptionalColumnLocales(slug: string) {
+  return GUIDANCE_LOCALES_4.filter((locale) => !optionalColumnSlugs.get(locale)!.has(slug));
+}
+
 // Issue board (/[locale]/columns/issues): one list URL per board locale that
 // has issues, plus one URL per issue article (counted from disk).
 const issueBoardUrlCount = ISSUE_BOARD_LOCALES.reduce((total, locale) => {
@@ -70,6 +135,27 @@ const issueBoardUrlCount = ISSUE_BOARD_LOCALES.reduce((total, locale) => {
 }, 0);
 
 describe('sitemap column lastModified', () => {
+  for (const locale of PUBLIC_LOCALES_8) {
+    beforeAll(() => {
+      getAllColumnPosts(locale);
+    });
+  }
+
+  const sourceFiles = new Set([
+    ...Object.values(STATIC_PATH_SOURCE_FILES),
+    ATTORNEY_SITEMAP_SOURCE,
+    SERVICE_SITEMAP_SOURCE,
+  ]);
+  for (const file of sourceFiles) {
+    beforeAll(() => {
+      readGitCommitIso(file);
+    });
+  }
+
+  beforeAll(async () => {
+    await import('../sitemap');
+  });
+
   beforeEach(() => {
     sourceMocks.readAttorneyProfileSourceRecords.mockClear();
     sourceMocks.readServiceAreaSourceRecords.mockClear();
@@ -217,7 +303,7 @@ describe('sitemap column lastModified', () => {
       // Criminal board adds 5 language URLs.
       // Tax & accounting board (4 core-language URLs) + its column files, one URL per locale file.
       beforeFiltering:
-        529 + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        529 + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
@@ -239,7 +325,7 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        520 + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        520 + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length

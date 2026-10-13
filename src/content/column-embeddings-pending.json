@@ -1,6 +1,6 @@
 {
   "reason": "API embedding calls are not authorized. These published columns use the existing public text-search index; genuine vectors may be backfilled only with future authorization.",
-  "recordedAt": "2026-10-10",
+  "recordedAt": "2026-10-11",
   "columns": [
     {
       "locale": "zh-hant",
@@ -1805,6 +1805,58 @@
     {
       "locale": "ko",
       "slug": "taiwan-bankruptcy-creditor-claim-filing-korean"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "inventory-loss-wage-prededuction-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "adult-child-parent-maintenance-reduction-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "coowned-house-court-partition-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "custom-goods-online-seven-day-cancellation-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-business-contract-electronic-signature-korean"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "fraud-induced-contract-rescission-one-year-taiwan"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "rented-home-sale-lease-continuation-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-supply-payment-affiliate-setoff-korean"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-semiconductor-outsourced-testing-supplier-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-cross-border-separation-presumed-paternity"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-stepchild-adoption-parent-consent"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-account-admonition-online-seller-payment-limits"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-bank-account-restriction-complaint-korean"
     },
     {
       "locale": "ko",

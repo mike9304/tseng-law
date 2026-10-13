@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { describe, expect, it } from 'vitest';
-import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
+import { beforeAll, describe, expect, it } from 'vitest';
+import { getAllColumnPosts, getColumnPost, type ColumnPost } from '@/lib/columns';
 import { allNativeFiles, isNativeOrExpertiseNativeSlug, koFilesAbsentFromLocale } from './native-locale-columns';
 
 const HANGUL = /[\uac00-\ud7af]/;
@@ -36,6 +36,17 @@ const koFiles = fs
 const koFilesInEn = koFiles.filter((name) => !koFilesAbsentFromLocale('en').includes(name));
 
 describe('English full column corpus', () => {
+  let enPosts: ColumnPost[];
+  let koPostsBySlug: Map<string, ColumnPost>;
+  let enPostsBySlug: Map<string, ColumnPost>;
+
+  beforeAll(() => {
+    // The corpus is unchanged by this suite; parse each locale once for its comparisons.
+    enPosts = getAllColumnPosts('en');
+    enPostsBySlug = new Map(enPosts.map((post) => [post.slug, post]));
+    koPostsBySlug = new Map(getAllColumnPosts('ko').map((post) => [post.slug, post]));
+  });
+
   it('has one EN file per KO file with identical filenames (except the Korean-only 2026-09-30 columns), plus the English-only native columns', () => {
     expect(fs.existsSync(enDir)).toBe(true);
     const enFiles = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
@@ -45,7 +56,7 @@ describe('English full column corpus', () => {
   });
 
   it('loads translated KO twins plus native English posts with full bodies (not Overview stubs only)', () => {
-    const posts = getAllColumnPosts('en');
+    const posts = enPosts;
     const twinCount = koFilesInEn.length;
     const nativeCount = allNativeFiles('en').length;
     expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))).toHaveLength(twinCount);
@@ -77,8 +88,8 @@ describe('English full column corpus', () => {
       'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
     ];
     for (const slug of faqSlugs) {
-      const ko = getColumnPost(slug, 'ko');
-      const en = getColumnPost(slug, 'en');
+      const ko = koPostsBySlug.get(slug);
+      const en = enPostsBySlug.get(slug);
       expect(en?.faq?.length ?? 0).toBe(ko?.faq?.length ?? 0);
       expect((en?.faq?.length ?? 0) > 0).toBe(true);
     }
@@ -87,8 +98,8 @@ describe('English full column corpus', () => {
   it('EN body is not dramatically shorter than KO for each slug', () => {
     for (const file of koFilesInEn) {
       const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
-      const ko = getColumnPost(slug, 'ko');
-      const en = getColumnPost(slug, 'en');
+      const ko = koPostsBySlug.get(slug);
+      const en = enPostsBySlug.get(slug);
       expect(ko).toBeTruthy();
       expect(en).toBeTruthy();
       // Allow EN to be shorter, but not stub-level (< 35% of KO cleaned body)

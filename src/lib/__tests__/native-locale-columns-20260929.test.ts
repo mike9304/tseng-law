@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { COLUMN_CONTENT_DIR_BY_LOCALE, collectColumnSitemapRecords } from '@/lib/column-locales';
 import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
@@ -46,6 +46,14 @@ const cases = (Object.keys(NATIVE_LOCALE_COLUMN_FILES) as NativeColumnLocale[]).
 );
 
 describe('native single-locale columns 2026-09-29', () => {
+  const postsByLocale = new Map<PublicLocale8, ReturnType<typeof getAllColumnPosts>>();
+
+  for (const locale of PUBLIC_LOCALES_8) {
+    beforeAll(() => {
+      postsByLocale.set(locale, getAllColumnPosts(locale));
+    });
+  }
+
   it('covers nine columns, three per audience', () => {
     expect(cases).toHaveLength(9);
     expect(Object.keys(EXPECTED_TOPIC).sort()).toEqual(cases.map((c) => c.slug).sort());
@@ -98,10 +106,10 @@ describe('native single-locale columns 2026-09-29', () => {
   it.each(cases)('$locale/$slug exists only in its own locale', ({ locale, slug }) => {
     for (const other of PUBLIC_LOCALES_8) {
       if (other === locale) continue;
-      expect(getAllColumnPosts(other).some((post) => post.slug === slug), `${other}/${slug}`).toBe(false);
+      expect(postsByLocale.get(other)!.some((post) => post.slug === slug), `${other}/${slug}`).toBe(false);
     }
     const records = collectColumnSitemapRecords({
-      postsForLocale: (l) => getAllColumnPosts(l).filter((post) => post.slug === slug),
+      postsForLocale: (l) => postsByLocale.get(l)!.filter((post) => post.slug === slug),
     });
     expect(records).toHaveLength(1);
     expect(records[0]?.alternateLocales).toEqual([locale]);

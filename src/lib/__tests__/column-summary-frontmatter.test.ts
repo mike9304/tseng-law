@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { afterEach, describe, expect, it } from 'vitest';
-import { getAllColumnPosts, getColumnPost, resolveColumnSummary } from '@/lib/columns';
+import { afterEach, beforeAll, describe, expect, it } from 'vitest';
+import { getAllColumnPosts, getColumnPost, resolveColumnSummary, type ColumnPost } from '@/lib/columns';
 import { buildLocaleLlmsTxt } from '@/lib/llms-txt';
 import { buildArticleJsonLd, buildSeoMetadata } from '@/lib/seo';
 import { isExpertiseColumnFile20260930, isNativeLocaleColumnFile } from './native-locale-columns';
@@ -116,11 +116,18 @@ describe('column loader summary frontmatter', () => {
 describe('English column corpus summaries', () => {
   const enDir = path.join(process.cwd(), 'src/content/columns-en');
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
+  let posts: ColumnPost[];
+  let postsBySlug: Map<string, ColumnPost>;
+
+  beforeAll(() => {
+    posts = getAllColumnPosts('en');
+    postsBySlug = new Map(posts.map((post) => [post.slug, post]));
+  });
 
   it('gives every EN column a 150–160 character authored summary without Korean-company framing or an ellipsis', () => {
     // 32 translated EN columns plus the English-only native columns (same rules apply).
     expect(files.length).toBeGreaterThan(0);
-    expect(files).toHaveLength(getAllColumnPosts('en').length);
+    expect(files).toHaveLength(posts.length);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
@@ -135,14 +142,12 @@ describe('English column corpus summaries', () => {
       expect(summary, file).not.toContain('…');
 
       const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
-      const post = getColumnPost(slug, 'en');
+      const post = postsBySlug.get(slug);
       expect(post?.summary, file).toBe(summary);
     }
-  // Reads and parses every EN column (150 files); ~3.4s alone, so the 5s default times out under parallel load.
-  }, 30000);
+  });
 
   it('reuses those summaries in EN meta description, Article JSON-LD, and llms.txt annotations', () => {
-    const posts = getAllColumnPosts('en');
     expect(posts).toHaveLength(files.length);
     const llms = buildLocaleLlmsTxt('en');
 

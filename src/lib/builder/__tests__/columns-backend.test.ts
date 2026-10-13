@@ -1,7 +1,7 @@
 import { mkdir, mkdtemp, rm, writeFile } from 'fs/promises';
 import { tmpdir } from 'os';
 import path from 'path';
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { estimateColumnReadTimeLabel, getColumnsStorageBackend } from '@/lib/builder/columns/storage';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import {
@@ -11,7 +11,31 @@ import {
   isNativeLocaleColumnSlug,
 } from '@/lib/__tests__/native-locale-columns';
 
+const fileCorpus = vi.hoisted(() => new Map<string, import('@/lib/columns').ColumnPost[]>());
+
+vi.mock('@/lib/columns', async (importOriginal) => {
+  const columns = await importOriginal<typeof import('@/lib/columns')>();
+  return {
+    ...columns,
+    getAllColumnPosts: (...args: Parameters<typeof columns.getAllColumnPosts>) => {
+      // Only snapshot the unchanged markdown corpus; runtime storage and custom directories stay live.
+      if (args.length > 1) return columns.getAllColumnPosts(...args);
+      const locale = args[0] ?? 'ko';
+      let posts = fileCorpus.get(locale);
+      if (!posts) {
+        posts = columns.getAllColumnPosts(locale);
+        fileCorpus.set(locale, posts);
+      }
+      return posts.slice();
+    },
+  };
+});
+
 describe('builder column storage backend', () => {
+  beforeEach(() => {
+    fileCorpus.clear();
+  });
+
   afterEach(() => {
     vi.unstubAllEnvs();
   });

@@ -1,3 +1,4 @@
+import { AIR_COLUMN_FILES_20261011, AIR_COLUMN_PUBLICATION_DATE } from './air-column-files';
 import { NEXT_TOPIC_COLUMN_FILES_20261010 } from './next-topic-column-files';
 import { GAP_COLUMN_FILES_20261010 } from './gap-column-files';
 import { SINGAPORE_COLUMN_FILES_20261010 } from './singapore-column-files';
@@ -622,6 +623,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261013 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((AIR_COLUMN_FILES_20261011 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((SINGAPORE_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((AI_SEMICONDUCTOR_COLUMN_FILES_20261009 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -649,7 +651,10 @@ export function expertiseSlugsFor(locale: string): string[] {
 export function archiveLeadSlugsFor(locale: string): string[] {
   const day20261013: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261013 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
-  const day20261011 = (NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261011: readonly string[] = [
+    ...((NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((AIR_COLUMN_FILES_20261011 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const day20261010: readonly string[] = [
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((SINGAPORE_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -696,6 +701,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-13). */
 export function archiveLeadPublicationDate(slug: string): string {
   if (Object.values(COUNTRY_COLUMN_FILES_20261013).flat().map(slugOf).includes(slug)) return '2026-10-13';
+  if (Object.values(AIR_COLUMN_FILES_20261011).flat().map(slugOf).includes(slug)) return AIR_COLUMN_PUBLICATION_DATE;
   if (Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-11';
   if (Object.values(GAP_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-10';
   if (Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().map(slugOf).includes(slug)) return '2026-10-10';
@@ -759,6 +765,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261007),
     ...Object.values(COUNTRY_COLUMN_FILES_20261013),
     ...Object.values(NEXT_TOPIC_COLUMN_FILES_20261010),
+    ...Object.values(AIR_COLUMN_FILES_20261011),
     ...Object.values(GAP_COLUMN_FILES_20261010),
     ...Object.values(SINGAPORE_COLUMN_FILES_20261010),
     ...Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009),

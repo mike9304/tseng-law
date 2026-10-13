@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { COLUMN_CONTENT_DIR_BY_LOCALE, collectColumnSitemapRecords } from '@/lib/column-locales';
-import { PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
+import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import {
   EXPERTISE_COLUMN_FILES_20260930,
@@ -58,6 +58,14 @@ for (const { locale, slug } of cases) {
 }
 
 describe('expertise columns 2026-09-30', () => {
+  const postsByLocale = new Map<PublicLocale8, ReturnType<typeof getAllColumnPosts>>();
+
+  for (const locale of PUBLIC_LOCALES_8) {
+    beforeAll(() => {
+      postsByLocale.set(locale, getAllColumnPosts(locale));
+    });
+  }
+
   it('covers eight columns across fourteen locale files', () => {
     expect(localesBySlug.size).toBe(8);
     expect(cases).toHaveLength(14);
@@ -99,11 +107,11 @@ describe('expertise columns 2026-09-30', () => {
 
   it.each([...localesBySlug.entries()])('%s exists only in its own locales and alternates match', (slug, own) => {
     for (const other of PUBLIC_LOCALES_8) {
-      const present = getAllColumnPosts(other).some((post) => post.slug === slug);
+      const present = postsByLocale.get(other)!.some((post) => post.slug === slug);
       expect(present, `${other}/${slug}`).toBe(own.includes(other as ExpertiseColumnLocale));
     }
     const records = collectColumnSitemapRecords({
-      postsForLocale: (l) => getAllColumnPosts(l).filter((post) => post.slug === slug),
+      postsForLocale: (l) => postsByLocale.get(l)!.filter((post) => post.slug === slug),
     });
     expect(records.map((record) => record.locale).sort()).toEqual([...own].sort());
     for (const record of records) {

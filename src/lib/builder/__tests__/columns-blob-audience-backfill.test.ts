@@ -1,13 +1,37 @@
 import { mkdir, mkdtemp, rm, writeFile } from 'fs/promises';
 import { tmpdir } from 'os';
 import path from 'path';
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
-import { expertiseSlugsFor } from '@/lib/__tests__/native-locale-columns';
+import { archiveLeadPublicationDate, archiveLeadSlugsFor, expertiseSlugsFor } from '@/lib/__tests__/native-locale-columns';
 import { getColumnPost } from '@/lib/columns';
 
+const fileCorpus = vi.hoisted(() => new Map<string, import('@/lib/columns').ColumnPost[]>());
+
+vi.mock('@/lib/columns', async (importOriginal) => {
+  const columns = await importOriginal<typeof import('@/lib/columns')>();
+  return {
+    ...columns,
+    getAllColumnPosts: (...args: Parameters<typeof columns.getAllColumnPosts>) => {
+      // Only snapshot the unchanged markdown corpus; runtime storage and custom directories stay live.
+      if (args.length > 1) return columns.getAllColumnPosts(...args);
+      const locale = args[0] ?? 'ko';
+      let posts = fileCorpus.get(locale);
+      if (!posts) {
+        posts = columns.getAllColumnPosts(locale);
+        fileCorpus.set(locale, posts);
+      }
+      return posts.slice();
+    },
+  };
+});
+
 describe('published column copies keep file-only recommendation metadata', () => {
+  beforeEach(() => {
+    fileCorpus.clear();
+  });
+
   afterEach(() => {
     vi.unstubAllEnvs();
   });
@@ -102,8 +126,12 @@ describe('published column copies keep file-only recommendation metadata', () =>
       expect(shadowed?.title).toBe('대만 세법상 거주자 판단');
       expect(shadowed?.content).toBe('본문 [출처](https://example.com)');
       expect(shadowed).toMatchObject({ audience: ['ko'], aiAuthored: true, columnNumber: 24 });
-      // Same-day ties go to the higher column number: the last 2026-09-30 ko column (048) leads.
-      expect(prioritizeRecommendedColumns('ko', posts)[0]?.slug).toBe(expertiseSlugsFor('ko').at(-1));
+      // Newest publication date leads (archive lead order); same-day ties go to the higher column number.
+      const lead = archiveLeadSlugsFor('ko');
+      const newestDay = archiveLeadPublicationDate(lead[0]!);
+      expect(prioritizeRecommendedColumns('ko', posts)[0]?.slug).toBe(
+        lead.filter((slug) => archiveLeadPublicationDate(slug) === newestDay).at(-1),
+      );
     } finally {
       await rm(root, { recursive: true, force: true });
     }

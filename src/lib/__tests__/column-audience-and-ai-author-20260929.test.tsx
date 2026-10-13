@@ -84,7 +84,7 @@ describe('audience frontmatter recommendations', () => {
     const ko = getAllColumnPosts('ko');
     expect(prioritizeRecommendedColumns('ko', [...ko].reverse())[0]?.slug).toBe(newestLeadSlug('ko'));
     expect(prioritizeRecommendedColumns('zh-hant', [...getAllColumnPosts('zh-hant')].reverse())[0]?.slug)
-      .toBe(expertiseSlugsFor('zh-hant').at(-1));
+      .toBe(newestLeadSlug('zh-hant'));
   });
 
   it('puts own-audience columns before shared ones, each newest first', () => {

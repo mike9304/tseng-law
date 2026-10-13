@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { afterEach, describe, expect, it } from 'vitest';
-import { getAllColumnPosts, getColumnPost, resolveColumnSeoTitle } from '@/lib/columns';
+import { afterEach, beforeAll, describe, expect, it } from 'vitest';
+import { getAllColumnPosts, getColumnPost, resolveColumnSeoTitle, type ColumnPost } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
 
 const FALLBACK_TITLE = 'Fixture Company Setup Column With An Intentionally Long Display Title';
@@ -106,6 +106,13 @@ describe('column loader seoTitle frontmatter', () => {
 describe('English column corpus seoTitle', () => {
   const enDir = path.join(process.cwd(), 'src/content/columns-en');
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
+  let posts: ColumnPost[];
+  let postsBySlug: Map<string, ColumnPost>;
+
+  beforeAll(() => {
+    posts = getAllColumnPosts('en');
+    postsBySlug = new Map(posts.map((post) => [post.slug, post]));
+  });
 
   // WO-X2 (EN-20): the rendered <title> is `${seoTitle} | Hovering Law` and must
   // stay within 60 characters; seoTitle exists only when the H1 would overflow.
@@ -114,14 +121,14 @@ describe('English column corpus seoTitle', () => {
   it('adds a seoTitle only when the display title would push <title> past 60 characters', () => {
     // 32 translated EN columns plus the English-only native columns (same rules apply).
     expect(files.length).toBeGreaterThan(0);
-    expect(files).toHaveLength(getAllColumnPosts('en').length);
+    expect(files).toHaveLength(posts.length);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
       const parsed = matter(raw);
       const title = String(parsed.data.title ?? '').trim();
       const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
-      const post = getColumnPost(slug, 'en');
+      const post = postsBySlug.get(slug);
 
       expect(post?.title, file).toBe(title);
 

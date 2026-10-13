@@ -393,6 +393,8 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '522': '2026-10-13',
   // gap1006-G9
   '523': '2026-10-13',
+  // gap1006-G10
+  '524': '2026-10-13',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user

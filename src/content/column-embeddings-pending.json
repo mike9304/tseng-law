@@ -1877,6 +1877,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-criminal-appeal-twenty-days-third-instance-barred"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-sentence-fine-conversion-probation-deportation-foreigner"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-sentence-fine-conversion-probation-deportation-foreigner"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-sentence-fine-conversion-probation-deportation-foreigner"
     }
   ]
 }

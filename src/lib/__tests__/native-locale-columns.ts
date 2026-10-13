@@ -573,6 +573,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
     '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
+    '524-taiwan-sentence-fine-conversion-probation-deportation-foreigner.md', // gap1006-G10
   ],
   en: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
@@ -581,6 +582,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
     '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
+    '524-taiwan-sentence-fine-conversion-probation-deportation-foreigner.md', // gap1006-G10
   ],
   ja: [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
@@ -589,6 +591,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
     '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
+    '524-taiwan-sentence-fine-conversion-probation-deportation-foreigner.md', // gap1006-G10
   ],
   'zh-hant': [
     '518-recovering-unpaid-invoices-from-taiwan-customers.md', // gap1006-G4
@@ -597,6 +600,7 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
     '521-taiwan-summons-defendant-witness-warrant-wanted-notice.md', // gap1006-G7
     '522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md', // gap1006-G8
     '523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md', // gap1006-G9
+    '524-taiwan-sentence-fine-conversion-probation-deportation-foreigner.md', // gap1006-G10
   ],
 } as const;
 

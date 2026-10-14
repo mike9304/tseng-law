@@ -581,7 +581,7 @@
     box-shadow: none !important;
   }
 
-  .folio :global(.header) :global(.header-main-inner) {
+  .folio :global(.header):not([data-header-content-fit='compact']) :global(.header-main-inner) {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-rows: 64px 5px 44px;
@@ -593,7 +593,7 @@
     height: auto;
   }
 
-  .folio :global(.header) :global(.header-main-inner)::after {
+  .folio :global(.header):not([data-header-content-fit='compact']) :global(.header-main-inner)::after {
     content: '';
     grid-area: rule;
     align-self: stretch;
@@ -710,23 +710,24 @@
   }
 
   /* Collapsing masthead: the header wrapper is sticky at -101px (32 + 64 + 5), so after scrolling only the 44px menu
-     row stays; while focus is inside, the whole masthead is shown so a focused control is never hidden above. */
-  .folio > [data-cinematic-chrome='header'] {
+     row stays; while focus is inside, the whole masthead is shown so a focused control is never hidden above. If the
+     width probe ever falls back to the compact bar (large text zoom), the shared fixed header comes back unchanged. */
+  .folio > [data-cinematic-chrome='header']:has(> :global(.header):not([data-header-content-fit='compact'])) {
     position: sticky;
     top: -101px;
     z-index: 80;
   }
 
-  .folio > [data-cinematic-chrome='header']:focus-within {
+  .folio > [data-cinematic-chrome='header']:has(> :global(.header):not([data-header-content-fit='compact'])):focus-within {
     top: 0;
   }
 
-  .folio > [data-cinematic-chrome='header'] > :global(.header)[data-public-site-header] {
+  .folio > [data-cinematic-chrome='header'] > :global(.header)[data-public-site-header]:not([data-header-content-fit='compact']) {
     position: relative !important;
     top: auto !important;
   }
 
-  .folio.folio[data-guidance-locale] > :global(main) {
+  .folio.folio[data-guidance-locale]:has(> [data-cinematic-chrome='header'] > :global(.header):not([data-header-content-fit='compact'])) > :global(main) {
     padding-top: 0 !important;
   }
 
@@ -4002,6 +4003,7 @@
 /* ---------- 15. Phone safety nets ---------------------------------------------------------------------------------- */
 @media (max-width: 47.99rem) {
   .folio[data-guidance-locale] :global(main) :is(p, li, dd) {
+    overflow-wrap: break-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     hyphenate-limit-chars: 10 4 4;
@@ -4023,8 +4025,13 @@
 }
 
 /* ---------- 16. Localised 404 body --------------------------------------------------------------------------------- */
+/* The page head already closes with the double rule; the band under it needs no second one. */
+.folio[data-guidance-locale] [data-guidance-page='not-found'] :global(.home-contact-cta) > :global(.container) {
+  padding-top: 56px;
+}
+
 .folio[data-guidance-locale] [data-guidance-page='not-found'] :global(.home-contact-cta) > :global(.container)::before {
-  margin-bottom: 32px;
+  content: none;
 }
 
 /* ---------- 17. Scroll-to-top key ---------------------------------------------------------------------------------- */

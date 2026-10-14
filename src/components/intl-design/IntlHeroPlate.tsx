@@ -18,7 +18,7 @@ export default function IntlHeroPlate({ locale }: { locale: IntlDesignLocale }) 
           className={styles.plateImage}
           src={INTL_HERO_MEDIA.still1280}
           srcSet={`${INTL_HERO_MEDIA.still640} 640w, ${INTL_HERO_MEDIA.still1280} 1280w`}
-          sizes="(min-width: 75rem) 690px, (min-width: 48rem) calc(100vw - 80px), calc(100vw - 32px)"
+          sizes="(min-width: 75rem) 690px, 100vw"
           width={INTL_HERO_MEDIA.width}
           height={INTL_HERO_MEDIA.height}
           alt=""

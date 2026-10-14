@@ -132,6 +132,37 @@ describe('Folio root class', () => {
   });
 });
 
+describe('colour tokens', () => {
+  const token = (name: string) => {
+    const hex = new RegExp(`--f-${name}:\\s*(#[0-9a-fA-F]{6})`).exec(css)?.[1];
+    expect(hex, name).toBeTruthy();
+    return hex as string;
+  };
+  const luminance = (hex: string) => {
+    const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
+      .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const contrast = (a: string, b: string) => {
+    const [hi, lo] = [luminance(token(a)), luminance(token(b))].sort((x, y) => y - x);
+    return (hi + 0.05) / (lo + 0.05);
+  };
+
+  it('meets WCAG AA for every text pair and 3:1 for field edges (DIRECTION §2)', () => {
+    for (const [text, surface] of [
+      ['ink', 'paper'], ['ink-2', 'paper'], ['sign', 'paper'], ['alert', 'paper'],
+      ['ink', 'sign-tint'], ['ink-2', 'sign-tint'], ['sign', 'sign-tint'],
+      ['paper', 'ink'], ['paper', 'ink-hover'],
+      ['night-text', 'night'], ['night-muted', 'night'], ['night-sign', 'night'],
+    ] as const) {
+      expect(contrast(text, surface), `${text} on ${surface}`).toBeGreaterThanOrEqual(4.5);
+    }
+    expect(contrast('field', 'paper')).toBeGreaterThanOrEqual(3);
+    expect(contrast('field', 'night')).toBeGreaterThanOrEqual(3);
+    expect(contrast('ink', 'paper')).toBeCloseTo(17.38, 1);
+  });
+});
+
 describe('notice box positions (pinned by data position in the CSS)', () => {
   it('has the same section counts in all 29 languages', () => {
     for (const locale of INTL_DESIGN_LOCALES) {

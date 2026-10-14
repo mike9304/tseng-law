@@ -1,8 +1,28 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 // @ts-expect-error -- plain ESM build scripts without type declarations
 import { toHostDestination, toHostPattern } from '../../../scripts/static-site/assemble.mjs';
 // @ts-expect-error -- plain ESM build scripts without type declarations
 import { extractLocalRefs, isServerOnlyPath, pageFileFor } from '../../../scripts/static-site/shared.mjs';
+// @ts-expect-error -- plain ESM build scripts without type declarations
+import { parseRedirects } from '../../../scripts/static-site/sites-pack.mjs';
+// @ts-expect-error -- plain ESM build scripts without type declarations
+import { matchRedirect } from '../../../scripts/static-site/sites-worker.js';
+
+type RedirectRule = { source: string; destination: string; permanent?: boolean; has?: unknown; missing?: unknown };
+
+async function nextConfigRedirects(staticSite: boolean): Promise<RedirectRule[]> {
+  vi.stubEnv('NEXT_PUBLIC_STATIC_SITE', staticSite ? '1' : '');
+  vi.resetModules();
+  try {
+    const configUrl = new URL('../../../next.config.mjs', import.meta.url).href;
+    const { default: config } = (await import(configUrl)) as {
+      default: { redirects(): Promise<RedirectRule[]> };
+    };
+    return await config.redirects();
+  } finally {
+    vi.unstubAllEnvs();
+  }
+}
 
 describe('static-site build scripts', () => {
   it('maps page paths to extension files served at the clean URL', () => {
@@ -32,6 +52,24 @@ describe('static-site build scripts', () => {
     expect(toHostPattern('/zh/:path*')).toBe('/zh/*');
     expect(toHostDestination('/zh-hant/:path*')).toBe('/zh-hant/:splat');
     expect(toHostPattern('/ko/insights/:slug')).toBe('/ko/insights/:slug');
+  });
+
+  it('sends the static site AI intake URLs to contact, and leaves the server build alone', async () => {
+    const rules = await nextConfigRedirects(true);
+    // Same steps as assemble.mjs → _redirects → sites-pack.mjs → the Worker.
+    const redirectsFile = rules
+      .filter((rule) => !rule.has && !rule.missing)
+      .map((rule) => `${toHostPattern(rule.source)} ${toHostDestination(rule.destination)} ${rule.permanent ? 308 : 307}`)
+      .join('\n');
+    const redirects = parseRedirects(redirectsFile);
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi']) {
+      expect(matchRedirect(`/${locale}/ai-intake`, redirects)).toEqual({ to: `/${locale}/contact`, status: 308 });
+    }
+    expect(matchRedirect('/ko/ai-intake/x', redirects)).toBeNull();
+    expect(matchRedirect('/ko/contact', redirects)).toBeNull();
+
+    const serverRules = await nextConfigRedirects(false);
+    expect(serverRules.some((rule) => rule.source.endsWith('/ai-intake'))).toBe(false);
   });
 });
 

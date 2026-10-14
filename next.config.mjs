@@ -210,6 +210,11 @@ const nextConfig = {
       },
     ]);
 
+    // The static snapshot has no AI intake (cases come in by email), so its old URLs go to contact.
+    const staticSiteRedirects = isStaticSite
+      ? [{ source: '/:lang/ai-intake', destination: '/:lang/contact', permanent: true }]
+      : [];
+
     return [
       ...semiconductorBoardRedirects,
       // `/` is negotiated per visitor in middleware (Accept-Language → locale, fallback /ko).
@@ -256,6 +261,7 @@ const nextConfig = {
       },
       ...legacyColumnRedirects,
       ...legacyInsightsRedirects,
+      ...staticSiteRedirects,
     ];
   }
 };

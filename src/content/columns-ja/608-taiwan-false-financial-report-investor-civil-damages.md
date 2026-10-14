@@ -33,13 +33,11 @@ author: "legal-ai-assistant"
 
 発行人以外の第1項の人には、[第20条の1第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)による免責の余地があります。相当の注意を尽くしたことに加え、内容に虚偽や隠匿がないと合理的に信じられる正当な理由があったことを証明すれば、責任を免れます。両方の証明が必要です。発行人は免責の対象外です。
 
-## 公告の翌日に買い、その後も持っていた株
+## 買付日と株式の保有記録
 
-東京に住む人が、台湾のある発行会社の株を証券会社を通じて買いました。架空の例です。買付日は、その会社の年度財務報告が公告された翌日でした。後日、会社がその報告の売上数値は虚偽だったと公告した時点でも、投資家は株を持っていました。
+買付日は、いつ取引があったかを示す記録です。その日付だけで善意が認められるわけではありません。[第20条の1第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)に基づく請求には、主要内容の虚偽または隠匿と、それによって生じた損害も必要です。
 
-公告の翌日に買えば、善意と認められるのでしょうか？その日付だけでは足りません。[第20条の1第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)は、善意であること、主要内容に虚偽や隠匿があること、そのために損害が生じたことを要求しています。例にある二つの日付は、問題となる財務報告と株式の保有期間を結び付けるものです。日付を並べただけで、これらの要件や賠償額まで明らかになるわけではありません。
-
-対象となるのは、発行人がこの法律に従って届け出、または公告した財務報告と財務業務書類、そして第36条第1項に従って公告・申告した財務報告です（[第20条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)、[第20条の1第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)）。この例で問題になる年度財務報告は、[第36条第1項第1号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)の書類に当たります。報告の種類や対象年度を特定すれば、どの売上数値をめぐる請求なのかも整理しやすくなります。
+対象となるのは、発行人がこの法律に従って届け出、または公告した財務報告と財務業務書類、そして第36条第1項に従って公告・申告した財務報告です（[第20条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)、[第20条の1第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)）。年度財務報告は、[第36条第1項第1号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)の書類に当たります。報告の種類や対象年度を特定すれば、どの売上数値をめぐる請求なのかも整理しやすくなります。
 
 売却後はどうでしょうか？[第20条の1第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)には売主も含まれます。自分の名義で買った人は取得者、持ち続けている人は保有者として検討します。いずれも善意や損害などの要件を満たす必要があり、売買や保有の事実だけで賠償が決まるわけではありません。
 
@@ -49,11 +47,13 @@ author: "legal-ai-assistant"
 
 有価証券の募集、発行、私募、売買における虚偽、詐欺、その他他人を誤信させるに足りる行為は禁じられています。違反した人は、その有価証券の善意の取得者または売主がこれにより受けた損害を賠償します（[第20条第1項・第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)）。第3項は保有者を挙げていません。
 
-一方、発行人がこの法律に基づいて届け出、または公告する財務報告と財務業務書類については、内容に虚偽や隠匿があることを[第20条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)が禁じています。その報告に関する損害賠償の対象者や責任者を定めるのが、[第20条の1第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)です。株を売らずに持っている例の投資家も、この規定の保有者に含まれます。
+一方、発行人がこの法律に基づいて届け出、または公告する財務報告と財務業務書類については、内容に虚偽や隠匿があることを[第20条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)が禁じています。その報告に関する損害賠償の対象者や責任者を定めるのが、[第20条の1第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)です。株を売らずに持っている人も、他の要件を満たせば、この規定の保有者として請求できます。
 
 ## 年度財務報告の監査と、四半期のレビュー
 
 公告と申告の義務は、[第36条第1項第1号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)に基づきます。この法律により有価証券を発行した会社は、年度財務報告を公告し、主管機関に申告しなければなりません。期限は原則3か月です。毎会計年度の終了後から数えます。事情が特殊で主管機関が別に定めた場合は、例外です。董事長、経理人、会計主管が署名または押印し、会計士の監査・証明（查核簽證）、董事会の承認、監察人の承認を経ることも求められます。監査委員会を設置した会社には、このうち監察人の承認を求める規定が適用されません（[第14条の5第4項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5)）。
+
+この法律に基づいて株式を発行し、監査委員会を設けた会社では、年度財務報告についても、原則として委員全体の2分の1以上の同意を得て、董事会の決議に付します。会計士の監査・証明を要する第2四半期報告も同じ対象です（[第14条の5第1項第10号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5)）。これらの報告には、第2項の董事会だけで承認する扱いは使えません。正当な理由で監査委員会を開けない場合は、第3項により董事全体の3分の2以上の同意に加え、独立董事である委員の同意意見が必要です。人数は第5項に従い、実際に在任している人で数えます。
 
 第1・第2・第3四半期の財務報告は、各四半期の終了後45日以内に公告・申告するのが原則です。ここにも、特殊な事情について主管機関が別に定めた場合の例外があります。同じ三つの役職の人が署名または押印し、会計士の核閱（レビュー）を受けて董事会に報告します（[第36条第1項第2号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)）。レビューと、年度財務報告の監査・証明は異なる手続です。
 
@@ -71,11 +71,13 @@ author: "legal-ai-assistant"
 
 資料についての相談は、昊鼎国際法律事務所の wei@hoveringlaw.com.tw で受け付けています。
 
-例の資料を整理するなら、年度財務報告、虚偽を知らせた後日の公告、買付けと保有の記録を並べると経緯を追いやすくなります。報告書では問題の売上項目と署名・押印の箇所を示し、取引記録では日付と数量を確認します。この例の投資家は、年度財務報告の公告翌日に買い付け、虚偽が公表された時点でも株を保有していました。
+請求には時効もあります。[証券取引法第21条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=21)は、この法律に基づく損害賠償請求権について、賠償を受けられる原因を請求権者が知った時から2年間行使しなければ消滅すると定めています。募集、発行または売買の日から5年を超えた場合も同じです。二つの期間は起算点が異なり、後日の訂正公告の日が当然に両方の起算日になるわけではありません。
+
+年度財務報告、後日の訂正公告があればその公告、買付けと保有の記録を並べると、問題の売上項目、署名・押印、取引の日付を照合できます。請求では、報告内容の問題と損害とのつながりも確かめることになります。
 
 ## 参考にした公的資料
 
-- 台湾証券取引法 [第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=3)、[第14条の5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5)、[第20条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)、[第20条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)、[第36条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)
+- 台湾証券取引法 [第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=3)、[第14条の5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5)、[第20条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)、[第20条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)、[第21条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=21)、[第36条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)
 - 台湾証券取引法 [全文](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400001)（直近の改正 2024年8月7日）
 
 確認日: 2026年10月14日

@@ -25,13 +25,11 @@ author: "legal-ai-assistant"
 
 공시된 재무보고에 허위가 있었다면, 주식을 팔지 않고 보유한 사람도 손해배상을 청구할 수 있습니다. [증권거래법 제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)은 그 발행인의 유가증권에 관한 선의의 취득자·매도인·보유자를 청구권자로 정합니다. 다만 주요 내용에 허위나 은닉이 있고, 그 때문에 손해를 입어야 합니다. 주가 하락만으로 모든 청구 요건이나 배상액이 증명되지는 않습니다.
 
-## 공고 다음 날 산 주식을 계속 갖고 있었다면
+## 매수일과 보유 기록
 
-한국에 사는 사람이 대만의 어떤 발행회사 주식을 증권 중개인을 거쳐 샀습니다. 가상의 사례입니다. 매수일은 그 회사의 연차 재무보고가 공고된 다음 날이었습니다. 나중에 발행회사가 그 보고의 매출 수치가 허위였다고 공고할 때까지, 투자자는 주식을 팔지 않았습니다.
+매수일은 거래가 언제 있었는지 보여 주는 기록입니다. 그 날짜만으로 선의가 인정되지는 않습니다. [제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)에 따른 청구에는 주요 내용의 허위·은닉과 그로 인한 손해도 필요합니다.
 
-공고 다음 날 샀다는 사실만으로 선의가 인정될까요? 날짜만으로는 부족합니다. [제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)은 선의와 주요 내용의 허위·은닉, 그로 인한 손해를 요구합니다. 이 사례의 매수일과 뒤이은 공고일은 투자자가 어느 보고서의 공시 후 주식을 취득했고 언제까지 보유했는지 보여 줍니다. 날짜를 정리한 뒤에도 허위가 있는 항목과 손해의 관계를 살펴야 하는 이유입니다.
-
-청구 대상 서류에는 발행인이 이 법에 따라 신고하거나 공고한 재무보고와 재무업무 서류, 그리고 제36조 제1항에 따라 공고·신고한 재무보고가 포함됩니다([제20조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20), [제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)). 사례에서 문제 된 문서는 [제36조 제1항 제1호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)의 연차 재무보고입니다. 어떤 보고서의 어느 내용이 문제인지 특정해야 주요 내용의 허위·은닉을 논할 수 있습니다.
+청구 대상 서류에는 발행인이 이 법에 따라 신고하거나 공고한 재무보고와 재무업무 서류, 그리고 제36조 제1항에 따라 공고·신고한 재무보고가 포함됩니다([제20조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20), [제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)). 연차 재무보고는 [제36조 제1항 제1호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)가 정한 서류입니다. 어떤 보고서의 어느 내용이 문제인지 특정해야 주요 내용의 허위·은닉을 논할 수 있습니다.
 
 이미 팔았다면 어떨까요? [제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)은 매도인도 청구권자에 포함합니다. 자기 명의로 산 사람은 취득자, 계속 가진 사람은 보유자로서 청구를 검토하며, 어느 경우든 같은 항의 선의와 손해 등 요건이 남습니다. 매수·매도·보유 사실만으로 배상받는 것은 아닙니다.
 
@@ -53,11 +51,13 @@ author: "legal-ai-assistant"
 
 유가증권의 모집·발행·사모·매매에서 허위, 사기, 그 밖에 타인을 오인하게 할 만한 행위는 금지됩니다. 이를 어긴 사람은 그 유가증권의 선의의 취득자 또는 매도인이 그로 인해 입은 손해를 배상합니다([제20조 제1항·제3항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)). 제3항에는 보유자가 없습니다.
 
-발행인이 이 법에 따라 신고하거나 공고한 재무보고와 재무업무 서류에 허위나 은닉을 담는 것은 [제20조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)이 금지합니다. 이 금지 규정에 이어, [제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)이 보유자를 포함한 청구권자와 배상 책임자를 정합니다. 주식을 계속 갖고 있는 사례의 투자자에게 두 조문의 구별이 필요한 이유입니다.
+발행인이 이 법에 따라 신고하거나 공고한 재무보고와 재무업무 서류에 허위나 은닉을 담는 것은 [제20조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20)이 금지합니다. 이 금지 규정에 이어, [제20조의1 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1)이 보유자를 포함한 청구권자와 배상 책임자를 정합니다. 주식을 보유한 사람의 청구에서는 두 조문의 적용 범위가 이렇게 구별됩니다.
 
 ## 연차 보고의 감사·증명과 분기 보고의 검토
 
 연차 재무보고의 공고·신고 기한은 원칙적으로 3개월입니다. 매 회계연도 종료 후부터 셉니다. [제36조 제1항 제1호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)는 이 법에 따라 유가증권을 발행한 회사에 이 의무를 부과하되, 사정이 특수하여 주관기관이 달리 정한 경우를 제외합니다. 이사장·경리인(經理人)·회계주관(會計主管)이 서명하거나 날인하고, 회계사의 감사·증명(查核簽證), 이사회 승인, 감사(監察人)의 인정을 거쳐 공고하고 주관기관에 신고해야 합니다. 감사위원회를 설치한 회사에는 이 중 감사의 인정 규정이 적용되지 않습니다([제14조의5 제4항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5)).
+
+이 법에 따라 주식을 발행하고 감사위원회를 둔 회사의 연차 재무보고는 원칙적으로 감사위원회 전체 위원의 2분의 1 이상 동의를 거쳐 이사회 의결에 부쳐야 합니다. 회계사의 감사·증명이 필요한 제2분기 재무보고에도 같은 절차가 적용됩니다([제14조의5 제1항 제10호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5)). 이 두 종류의 보고에는 제2항의 이사회 단독 승인 절차를 쓸 수 없습니다. 정당한 이유로 감사위원회를 열 수 없는 경우에는 제3항에 따라 전체 이사의 3분의 2 이상 동의와 독립이사인 위원들의 동의 의견이 필요합니다. 인원은 제5항에 따라 실제 재임자를 기준으로 셉니다.
 
 제1·2·3분기 보고의 원칙적인 기한은 각 분기 종료 후 45일입니다. 특수한 사정에 따른 주관기관의 별도 규정이 있으면 예외가 적용됩니다. 같은 세 직책의 사람이 서명하거나 날인하며, 회계사의 검토(核閱)를 거쳐 이사회에 보고하고 공고·신고합니다([제36조 제1항 제2호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)). 연차 보고의 감사·증명과 분기 보고의 검토는 구별됩니다.
 
@@ -67,11 +67,13 @@ author: "legal-ai-assistant"
 
 자료에 관해 상의할 일이 있다면 호정(昊鼎)국제법률사무소의 wei@hoveringlaw.com.tw로 문의할 수 있습니다.
 
-사례의 자료를 정리한다면 연차 재무보고, 허위를 알린 후속 공고, 매수·보유 기록을 나란히 놓는 방식이 유용합니다. 보고서에는 문제 된 매출 항목과 서명·날인 부분을 표시하고, 거래 기록에는 매수일과 수량을 적습니다. 이 사례에서 투자자는 공고 다음 날 주식을 사서 허위 사실이 공고될 때까지 보유했습니다.
+청구에는 소멸시효도 있습니다. [증권거래법 제21조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=21)는 이 법에 따른 손해배상청구권을, 청구권자가 배상받을 수 있는 원인을 안 때부터 2년간 행사하지 않으면 소멸한다고 정합니다. 모집·발행 또는 매매일부터 5년을 넘긴 경우도 같습니다. 두 기간의 출발점은 다르므로, 후속 정정 공고일이 당연히 두 기간 모두의 기산점이 되는 것은 아닙니다.
+
+연차 재무보고, 후속 정정 공고, 매수·보유 기록을 함께 놓으면 문제 된 매출 항목과 서명·날인, 거래 날짜를 대조할 수 있습니다. 청구에서는 보고서의 허위·은닉과 손해 사이의 관계도 밝혀야 합니다.
 
 ## 참고한 공식 자료
 
-- 대만 증권거래법 [제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=3), [제14조의5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5), [제20조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20), [제20조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1), [제36조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)
+- 대만 증권거래법 [제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=3), [제14조의5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=14-5), [제20조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20), [제20조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=20-1), [제21조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=21), [제36조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=36)
 - 대만 증권거래법 [전문](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400001) (최근 개정 2024년 8월 7일)
 
 확인일: 2026년 10월 14일

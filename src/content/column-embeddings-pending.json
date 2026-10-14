@@ -1941,6 +1941,14 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-sentence-fine-conversion-probation-deportation-foreigner"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-company-preincorporation-contracts-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-company-preincorporation-contracts-liability"
     }
   ]
 }

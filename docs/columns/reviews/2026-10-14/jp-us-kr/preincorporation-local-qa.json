@@ -1,0 +1,310 @@
+{
+  "base": "http://127.0.0.1:4547",
+  "checkedAt": "2026-10-14T03:23:02.822Z",
+  "results": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "설립 전 대만 회사 이름으로 맺은 계약, 누가 책임지나"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 7,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-company-preincorporation-contracts-liability",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fcolumns%2Fair-20261011%2F530-taiwan-supply-payment-affiliate-setoff-korean.webp&w=96&q=75",
+          "width": 96,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fcolumns%2Fair-20261011%2F526-taiwan-business-contract-electronic-signature-korean.webp&w=96&q=75",
+          "width": 96,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fblog%2Fgap-columns-20261010%2F512-taiwan-equipment-installation-suspension-costs-korean.webp&w=96&q=75",
+          "width": 96,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official.png&w=256&q=75",
+          "width": 192,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/local/ko-1440.png"
+    },
+    {
+      "locale": "ja",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "台湾法人の設立前に結ぶ契約、名義と責任はどうなるか"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 6,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-company-preincorporation-contracts-liability",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official.png&w=256&q=75",
+          "width": 192,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/local/ja-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "Signing for a Taiwan Company Before It Exists"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 7,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-company-preincorporation-contracts-liability",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official.png&w=256&q=75",
+          "width": 192,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/local/en-1440.png"
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "설립 전 대만 회사 이름으로 맺은 계약, 누가 책임지나"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 7,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-company-preincorporation-contracts-liability",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fcolumns%2Fair-20261011%2F530-taiwan-supply-payment-affiliate-setoff-korean.webp&w=96&q=75",
+          "width": 96,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fcolumns%2Fair-20261011%2F526-taiwan-business-contract-electronic-signature-korean.webp&w=96&q=75",
+          "width": 96,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fblog%2Fgap-columns-20261010%2F512-taiwan-equipment-installation-suspension-costs-korean.webp&w=96&q=75",
+          "width": 96,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official.png&w=256&q=75",
+          "width": 192,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/local/ko-390.png"
+    },
+    {
+      "locale": "ko",
+      "action": "related-link-real-click",
+      "url": "http://127.0.0.1:4547/ko/columns/taiwan-company-establishment-basics",
+      "target": "_blank",
+      "headings": [
+        "대만 회사 설립 기초: 자회사·지점·대표사무소, 절차와 취업허가"
+      ]
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "台湾法人の設立前に結ぶ契約、名義と責任はどうなるか"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 6,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-company-preincorporation-contracts-liability",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official.png&w=256&q=75",
+          "width": 192,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/local/ja-390.png"
+    },
+    {
+      "locale": "ja",
+      "action": "related-link-real-click",
+      "url": "http://127.0.0.1:4547/ja/columns/taiwan-company-establishment-basics",
+      "target": "_blank",
+      "headings": [
+        "台湾での会社設立の基礎：子会社・支店・代表者事務所、手続と就業許可"
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "Signing for a Taiwan Company Before It Exists"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 7,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-company-preincorporation-contracts-liability",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4547/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:4547/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official.png&w=256&q=75",
+          "width": 192,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/local/en-390.png"
+    },
+    {
+      "locale": "en",
+      "action": "related-link-real-click",
+      "url": "http://127.0.0.1:4547/en/columns/taiwan-company-establishment-basics",
+      "target": "_blank",
+      "headings": [
+        "Setting Up a Company in Taiwan: Subsidiaries, Branches, Representative Offices, Procedures, and Work Permits"
+      ]
+    },
+    {
+      "locale": "ko",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ko",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "설립 전 대만"
+    },
+    {
+      "locale": "ja",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ja",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "台湾法人の設立前"
+    },
+    {
+      "locale": "en",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "en",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "Signing for a Taiwan Company"
+    },
+    {
+      "action": "sitemap",
+      "status": 200,
+      "includes": [
+        {
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "locale": "en",
+          "present": true
+        }
+      ]
+    }
+  ]
+}

@@ -18,11 +18,11 @@ import { isColumnTopic } from '@/lib/column-topics';
 
 // Scope the inventory to this batch so future issues do not change its count.
 const EXPECTED: Record<IssueBoardLocale, number[]> = {
-  ko: [1, 2],
-  ja: [3, 4],
-  'zh-hant': [],
-  en: [5, 6],
-  vi: [7, 8],
+  ko: [1, 2, 9],
+  ja: [3, 4, 10, 11],
+  'zh-hant': [13],
+  en: [5, 6, 14],
+  vi: [7, 8, 12],
 };
 
 function issueFiles(locale: IssueBoardLocale): string[] {
@@ -42,13 +42,13 @@ function readIssue(locale: IssueBoardLocale, file: string) {
 }
 
 describe('issue board 2026-10-14', () => {
-  it('contains exactly eight issue IDs in their assigned markets', () => {
+  it('contains exactly fourteen issue IDs in their assigned markets', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-20261014-(\d{2})-/)?.[1]));
       expect(numbers, locale).toEqual(EXPECTED[locale]);
     }
-    expect(cases).toHaveLength(8);
-    expect(new Set(cases.map(({ file }) => issueIdFromFilename(file))).size).toBe(8);
+    expect(cases).toHaveLength(14);
+    expect(new Set(cases.map(({ file }) => issueIdFromFilename(file))).size).toBe(14);
   });
 
   it.each(cases)('$locale/$file preserves publication metadata, provenance and three FAQs', ({ locale, file, slug }) => {

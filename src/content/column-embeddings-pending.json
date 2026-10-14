@@ -2057,6 +2057,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-private-loan-interest-cap-iou-repayment"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-unpaid-wages-insolvent-employer-payment-fund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-unpaid-wages-insolvent-employer-payment-fund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-unpaid-wages-insolvent-employer-payment-fund"
     }
   ]
 }

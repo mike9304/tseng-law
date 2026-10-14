@@ -69,9 +69,18 @@ const ORIGINAL_CRIMINAL_SLUGS = [
   "taiwan-seized-phone-property-return"
 ] as const;
 
+const CRIMINAL_COLUMN_SLUGS_20261014 = {
+  ko: ['taiwan-employee-criminal-questioning-company-paid-counsel'],
+  en: ['taiwan-employee-criminal-questioning-company-paid-counsel'],
+  ja: ['taiwan-employee-criminal-questioning-company-paid-counsel'],
+  'zh-hant': [],
+  vi: [],
+} as const;
+
 export function expectedCriminalBoardSlugs(locale: keyof typeof CRIMINAL_COLUMN_FILES_20261008): string[] {
   return [
     ...ORIGINAL_CRIMINAL_SLUGS,
+    ...CRIMINAL_COLUMN_SLUGS_20261014[locale],
     ...CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3}-/, '').replace(/\.md$/, '')),
     ...RECLASSIFIED_CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3}-/, '').replace(/\.md$/, '')),
   ].sort();

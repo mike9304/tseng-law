@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/content/columns/542-taiwan-civil-evidence-preservation-before-lawsuit.md",
+    "sha256": "588d0d1800bd842b72b7bd62b17fb0bd2bd660e368f2c3a0935ab247b0ae6e42",
+    "variety": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/542-taiwan-civil-evidence-preservation-before-lawsuit.md [ko] sentences=38 mean=32.9 cv=0.465 short=0.184 run3=0.056 opener_rep=0.0 cite_end=0.079 cite_para=0.636 contrast=0 caveat=0 q=2\n  WARN 87% of sentences end in '니다.' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns/543-taiwan-employee-criminal-questioning-company-paid-counsel.md",
+    "sha256": "e9dc348810e9644f71f388ccfa280a7de00e240e16076a710357a835b6bc4202",
+    "variety": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/543-taiwan-employee-criminal-questioning-company-paid-counsel.md [ko] sentences=35 mean=38.9 cv=0.541 short=0.086 run3=0.03 opener_rep=0.0 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=2\n  WARN 94% of sentences end in '니다.' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-ja/542-taiwan-civil-evidence-preservation-before-lawsuit.md",
+    "sha256": "81895c458316760a8ae0dc2cc88c27f4dade69fb92cbcdf5792ec83343a2a146",
+    "variety": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/542-taiwan-civil-evidence-preservation-before-lawsuit.md [ja] sentences=34 mean=37.1 cv=0.458 short=0.176 run3=0.062 opener_rep=0.091 cite_end=0.0 cite_para=0.545 contrast=0 caveat=0 q=0\n  WARN 88% of sentences end in 'desu-masu' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-ja/543-taiwan-employee-criminal-questioning-company-paid-counsel.md",
+    "sha256": "ec019ca7e6786304ace74eb60a8b48bfce42f3853a67ea3a6787c199e72712d5",
+    "variety": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/543-taiwan-employee-criminal-questioning-company-paid-counsel.md [ja] sentences=36 mean=40.2 cv=0.555 short=0.167 run3=0.029 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=1 q=0\n  WARN 94% of sentences end in 'desu-masu' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-en/542-taiwan-civil-evidence-preservation-before-lawsuit.md",
+    "sha256": "232d9f632289d8f6a20b5680a6e1f7e400645fd56cfe05ef81c88f413f31c041",
+    "variety": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/542-taiwan-civil-evidence-preservation-before-lawsuit.md [en] sentences=39 mean=14.3 cv=0.476 short=0.231 run3=0.0 opener_rep=0.091 cite_end=0.051 cite_para=0.636 contrast=0 caveat=0 q=2\n  OK — no variety limit violated"
+  },
+  {
+    "file": "src/content/columns-en/543-taiwan-employee-criminal-questioning-company-paid-counsel.md",
+    "sha256": "2c8b0819cd3211ce17aeaa96d5349aee64efb5f8e7f2299bfe96711fe74d0403",
+    "variety": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/543-taiwan-employee-criminal-questioning-company-paid-counsel.md [en] sentences=37 mean=14.5 cv=0.596 short=0.27 run3=0.0 opener_rep=0.083 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=2\n  OK — no variety limit violated"
+  }
+]

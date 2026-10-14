@@ -609,12 +609,18 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
 export const COUNTRY_COLUMN_FILES_20261014 = {
   ko: [
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
+    '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
+    '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
   ],
   en: [
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
+    '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
+    '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
   ],
   ja: [
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
+    '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
+    '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
   ],
 } as const;
 

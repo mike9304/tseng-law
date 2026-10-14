@@ -16,7 +16,7 @@ faq:
   - q: "2026年以後，請病假可以被不利處分嗎？"
     a: "[2026年1月1日起](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=12)，一年內普通傷病假未超過十日者，除本規則或其他法律另有規定而從其規定外，[雇主不得因請假為不利處分](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)。超過十日的考核，仍應綜合工作能力、工作態度與實際績效，不得只以請假日數作為考量。[第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)第1項第2款是妊娠未滿三個月流產、未請產假而請的普通傷病假。這一款以外的普通傷病假若扣全勤獎金，按日數比例，優於法令的約定從其約定。"
   - q: "病假天數用完，雇主可以終止契約嗎？"
-    a: "[勞工請假規則第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)規定，普通傷病假超過法定期限，經以事假或特別休假抵充後仍未痊癒者，得予留職停薪，以一年為限。期限屆滿後的處理，這條沒有規定。[勞動基準法第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)禁止終止契約的期間，是第50條停止工作期間及第59條醫療期間；雇主因天災、事變或其他不可抗力致事業不能繼續，經報主管機關核定者，才是例外。這條沒有將普通傷病假列入保護期間。"
+    a: "[勞工請假規則第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)規定，普通傷病假超過法定期限，經以事假或特別休假抵充後仍未痊癒者，得予留職停薪，以一年為限。期限屆滿後的處理，這條沒有規定。[勞動基準法第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)禁止終止契約的期間，是第50條停止工作期間及第59條醫療期間；雇主因天災、事變或其他不可抗力致事業不能繼續，經報主管機關核定者，才是例外。這條沒有將普通傷病假列入保護期間。普通傷病假或獲准留職停薪的期限用完，本身並不構成解僱事由。雇主若依[勞動基準法第11條第5款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)主張勞工確不能勝任工作，須合理證明，[不能只以病假日數過多為理由](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt)。依這一款終止契約，還須遵守[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)的預告或預告期間工資規定，並按適用的退休金制度與年資，依[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)或[勞工退休金條例第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)給付資遣費。"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 ---
@@ -43,9 +43,7 @@ author: "legal-ai-assistant"
 
 只有門診、沒有住院，不符合[勞工保險條例第33條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33)的給付要件。一年三十日以內的門診半薪，雇主仍依[勞工請假規則第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4)第3項發給。薪資上的勞保與扣繳，見[外籍員工薪資與勞保](/zh-hant/columns/taiwan-payroll-foreign-employees-withholding-social-insurance)。
 
-## 高雄那五天
-
-高雄加工區的品管，班表是週一到週五。週一發燒，這五個工作日都沒進廠，下週一才回產線（虛構情境）。沒有掛急診，也沒有住院。人資要證明文件。課長問整月全勤獎金能不能取消。
+## 請假手續與證明文件
 
 [第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=10)要勞工事前親自以口頭或書面說明理由及日數。急病或緊急事故，可以委託他人代辦。辦理時雇主可以要求有關證明文件。條文沒有點名哪一種。
 
@@ -74,6 +72,10 @@ author: "legal-ai-assistant"
 超過第4條第1項的期限，經以事假或特別休假抵充後仍未痊癒者，得予留職停薪。[第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)。期間以一年為限。特別休假是[勞動基準法第38條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38)按繼續工作的年資所給的假。第5條未規定期滿後的處理。
 
 契約不得終止的期間，是第50條停止工作期間和第59條醫療期間。[勞動基準法第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)。天災、事變或其他不可抗力致事業不能繼續，經報主管機關核定者，才是例外。條文點名的期間裡，沒有普通傷病假。
+
+普通傷病假或獲准留職停薪的期限用完，本身並不構成解僱事由。雇主若依[勞動基準法第11條第5款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)主張勞工確不能勝任工作，須合理證明，[不能只以病假日數過多為理由](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt)。
+
+依這一款終止契約，還須遵守[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)的預告或預告期間工資規定，並按適用的退休金制度與年資，依[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)或[勞工退休金條例第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)給付資遣費。
 
 職業災害造成失能、傷害或疾病時，治療、休養期間給予公傷病假。[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=6)。
 
@@ -106,13 +108,15 @@ author: "legal-ai-assistant"
 
 出勤日數和薪資單對不上時，可以寫給昊鼎國際法律事務所，信箱是 wei@hoveringlaw.com.tw。
 
-虛構的五個工作日是門診，沒有住院。一年三十日以內，工資依[第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4)第3項折半，這幾天沒有[第33條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33)的普通傷病給付。全勤獎金若扣，依[第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)第2項按這五日的比例。這一年的普通傷病假尚未超過十日，2026年1月1日施行的[第9條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)，除本規則或其他法律另有規定而從其規定者外，禁止因請假為不利處分。
+[第9條第1項第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)保護的流產病假以外，普通傷病假如扣發全勤獎金，須依第2項按請假日數比例計算。勞雇另有優於法令的約定，從其約定。
 
 ## 參考的官方資料
 
 2026年10月13日查核。
 
 - 勞工請假規則（法規頁面修正日期民國115年9月30日）[第1條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=1)、[第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=2)、[第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=3)、[第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4)、[第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)、[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=6)、[第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=7)、[第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=8)、[第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)、[第9條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)、[第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=10)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=12)。[沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006)（民國114年12月9日修正第7、9、12條並增訂第9條之1，民國115年1月1日施行；民國115年9月30日修正第2、12條，民國115年10月1日施行）。
-- 勞動基準法（法規頁面修正日期民國113年7月31日）[第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)、[第38條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38)、[第43條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=43)、[第74條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74)、[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)。
+- 勞動基準法（法規頁面修正日期民國113年7月31日）[第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)、[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)、[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)、[第38條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38)、[第43條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=43)、[第74條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74)、[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)。
 - 勞工保險條例（法規頁面修正日期民國115年1月21日）[第33條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33)、[第35條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=35)。
 - 性別平等工作法（民國112年8月16日修正）[第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=14)、[第20條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=20)、[第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=21)、[第38條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=38)。
+- 勞工退休金條例：[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)。
+- [勞動部：雇主可以因勞工長期生病請假要求勞工離職嗎？](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt)。

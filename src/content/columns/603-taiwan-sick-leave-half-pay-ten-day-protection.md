@@ -16,7 +16,7 @@ faq:
   - q: "2026년부터 병가를 이유로 불이익 처분을 할 수 없나요?"
     a: "[2026년 1월 1일부터](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=12), 한 해 보통상병가가 10일을 넘지 않으면 노동자청가규칙이나 다른 법률에 따로 정한 경우를 빼고 그 휴가를 이유로 [불이익 처분을 하지 못합니다](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1). 10일을 넘어도 인사고과는 근무 능력, 근무 태도, 실제 성과를 함께 보고 병가 일수만으로 매기지 못합니다. 임신 3개월 미만 유산으로 출산휴가 없이 낸 보통상병가를 뺀 그 밖의 보통상병가에서 [개근수당을 빼면 일수에 비례하고](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9), 근로자에게 더 유리한 약정이 있으면 그 약정을 따릅니다. 혼가·상가·공상병가·공가, 그 유산의 보통상병가, 가족 돌봄 사휴는 결근으로 보아 개근수당을 깎지 못합니다."
   - q: "병가 상한을 넘기면 회사가 바로 계약을 끝낼 수 있나요?"
-    a: "[노동자청가규칙 제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)는 보통상병가 상한을 넘겨 사휴나 특별휴가로 메운 뒤에도 낫지 않으면 무급휴직을 줄 수 있고, 그 기간은 1년이 한도라고 정합니다. 1년 뒤의 처리는 이 조항에 없습니다. [노동기준법 제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)가 계약 해지를 금지하는 기간은 제50조의 업무 정지 기간과 제59조의 의료 기간입니다. 천재·사변·그 밖의 불가항력으로 사업을 계속할 수 없어 주관기관에 보고하고 인정을 받은 경우는 예외입니다. 이 조문은 보통상병가를 보호 기간으로 정하지 않습니다."
+    a: "[노동자청가규칙 제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)는 보통상병가 상한을 넘겨 사휴나 특별휴가로 메운 뒤에도 낫지 않으면 무급휴직을 줄 수 있고, 그 기간은 1년이 한도라고 정합니다. 1년 뒤의 처리는 이 조항에 없습니다. [노동기준법 제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)가 계약 해지를 금지하는 기간은 제50조의 업무 정지 기간과 제59조의 의료 기간입니다. 천재·사변·그 밖의 불가항력으로 사업을 계속할 수 없어 주관기관에 보고하고 인정을 받은 경우는 예외입니다. 이 조문은 보통상병가를 보호 기간으로 정하지 않습니다. 보통상병가나 허용된 무급휴직 기간을 다 썼다는 사실만으로 해고가 허용되지는 않습니다. 고용주가 업무 수행 불능을 이유로 해고하려면 [노동기준법 제11조 제5호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)의 요건을 입증해야 하며, [병가 일수가 많다는 사정만으로는 부족합니다](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt). 이 사유로 해고할 때에도 [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)의 예고 또는 예고기간 임금 지급 규정을 따르고, 적용되는 퇴직금 제도와 근속기간에 따라 [제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17) 또는 [노공퇴직금조례(勞工退休金條例) 제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)의 해고보상금(資遣費) 규정도 지켜야 합니다."
 audience: ["ko"]
 author: "legal-ai-assistant"
 ---
@@ -41,9 +41,7 @@ author: "legal-ai-assistant"
 
 통원만 한 날에는 [제33조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33)의 입원 진료가 없습니다. 암의 통원 치료와 안태를 [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4)가 입원 일수에 넣더라도, 그 합산만으로 제33조의 입원 진료가 되지는 않습니다. 한 해 30일 안에 있는 통원일 임금의 절반은 고용주가 [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4) 제3항으로 지급합니다. 급여에서 빠지는 사회보험과 원천징수는 [외국인 직원 급여와 사회보험](/ko/columns/taiwan-payroll-foreign-employees-withholding-social-insurance)에 있습니다.
 
-## 나흘 쉰 품질팀 직원의 개근수당
-
-신주 과학단지의 한국 법인에서 출하 검사를 맡는 한국인 직원이 월요일 새벽에 열이 나 목요일까지 쉬고 금요일에 출근했습니다(가상의 사례입니다). 응급실 기록은 없습니다. 입원도 없습니다. 인사 담당자는 관련 증명 서류를 물었습니다. 팀장은 그달 개근수당을 전부 없앨 수 있는지 물었습니다.
+## 병가 신청과 증명 서류
 
 [제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=10)에 따라 휴가 전에 본인이 구두나 서면으로 사유와 일수를 말합니다. 급한 병이나 긴급한 사고이면 다른 사람이 절차를 대신할 수 있습니다. 절차를 밟을 때 고용주는 관련 증명 서류를 요구할 수 있습니다. 어느 서류가 충분한지는 이 조항에 없습니다.
 
@@ -53,7 +51,7 @@ author: "legal-ai-assistant"
 
 [제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9) 제1항은 개근수당을 결근으로 깎지 못하는 휴가를 둡니다. 혼가, 상가, 공상병가, 공가입니다. 임신 3개월 미만의 유산으로 출산휴가를 쓰지 않고 보통상병가를 낸 경우도 들어 있습니다. 가족을 직접 돌보려고 제7조의 사휴를 낸 경우도 같습니다. 다른 법률에 정한 바가 있으면 그 법률을 따릅니다. 출산휴가 자체의 임금은 [대만 출산휴가와 육아휴직](/ko/columns/taiwan-maternity-paternity-parental-leave-2026)에 있습니다.
 
-앞의 유산이 아닌 보통상병가에서 개근수당을 빼는 계산은 [제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9) 제2항입니다. 금액은 보통상병가 일수에 비례하고, 법령보다 근로자에게 유리한 약정이 있으면 약정을 따릅니다. 나흘 때문에 그달 개근수당 전부를 빼지는 않습니다.
+앞의 유산이 아닌 보통상병가에서 개근수당을 빼는 계산은 [제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9) 제2항입니다. 금액은 보통상병가 일수에 비례하고, 법령보다 근로자에게 유리한 약정이 있으면 약정을 따릅니다.
 
 한 해 보통상병가가 10일을 넘지 않으면, 이 규칙이나 다른 법률에 따로 정하여 그 규정을 따르는 경우를 빼고 고용주는 그 휴가를 이유로 불이익 처분을 하지 못합니다. 근거는 [제9조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1) 제1항입니다. 개근수당을 빼는 비례 계산은 [제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9) 제2항에 남아 있습니다.
 
@@ -72,6 +70,10 @@ author: "legal-ai-assistant"
 제4조 제1항의 기간을 넘기고 사휴나 [노동기준법 제38조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38)의 특별휴가로 메운 뒤에도 낫지 않으면, [제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)에 따라 무급휴직(留職停薪)을 줄 수 있습니다. 한도는 1년입니다. 그 뒤의 처리는 이 조문에 없습니다.
 
 [노동기준법 제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)가 계약 해지를 막는 기간은 제50조의 업무 정지 기간과 제59조의 의료 기간입니다. 천재, 사변, 그 밖의 불가항력으로 사업을 계속할 수 없어 주관기관에 보고하고 인정을 받은 경우만 예외입니다. 조문이 이름을 적은 기간 안에 보통상병가는 없습니다.
+
+보통상병가나 허용된 무급휴직 기간을 다 썼다는 사실만으로 해고가 허용되지는 않습니다. 고용주가 업무 수행 불능을 이유로 해고하려면 [노동기준법 제11조 제5호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)의 요건을 입증해야 하며, [병가 일수가 많다는 사정만으로는 부족합니다](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt).
+
+이 사유로 해고할 때에도 [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)의 예고 또는 예고기간 임금 지급 규정을 따르고, 적용되는 퇴직금 제도와 근속기간에 따라 [제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17) 또는 [노공퇴직금조례(勞工退休金條例) 제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)의 해고보상금(資遣費) 규정도 지켜야 합니다.
 
 직업재해로 장해, 부상 또는 질병이 생긴 치료·요양 기간에는 [제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=6)의 공상병가가 주어집니다.
 
@@ -104,13 +106,15 @@ author: "legal-ai-assistant"
 
 휴가 일수와 급여 명세가 회사 설명과 다르면 호정(昊鼎)국제법률사무소 이메일 wei@hoveringlaw.com.tw 로 보내 주셔도 됩니다.
 
-앞의 나흘 동안 입원은 하지 않았습니다. 한 해 30일 안에 있으면 [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4) 제3항에 따라 임금은 절반입니다. [제33조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33)의 입원 진료가 없는 이 나흘에는 노공보험 보통상병급부가 나오지 않습니다. 개근수당을 깎으면 [제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9) 제2항대로 그 나흘에 비례합니다. 같은 해 보통상병가가 열흘을 넘지 않는 동안, 2026년 1월 1일부터 시행된 [제9조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)은 이 규칙이나 다른 법률에 따로 정한 경우를 빼면 그 휴가를 이유로 한 불이익 처분을 금지합니다.
+[제9조 제1항 제2호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)가 보호하는 유산 관련 병가를 제외한 보통상병가에서 개근수당을 공제한다면, 제2항에 따라 병가 일수에 비례해야 합니다. 근로자에게 더 유리한 약정이 있으면 그 약정을 따릅니다.
 
 ## 참고한 공식 자료
 
 2026년 10월 13일에 확인했습니다.
 
 - 대만 노동자청가규칙(勞工請假規則, 법령 페이지 수정일 2026년 9월 30일) [제1조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=1), [제2조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=2), [제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=3), [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4), [제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5), [제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=6), [제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=7), [제8조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=8), [제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9), [제9조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1), [제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=10), [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=12). [연혁](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006)(2025년 12월 9일 제7·9·12조 개정 및 제9조의1 신설, 2026년 1월 1일 시행. 2026년 9월 30일 제2·12조 개정, 2026년 10월 1일 시행).
-- 대만 노동기준법(勞動基準法, 법령 페이지 수정일 2024년 7월 31일) [제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13), [제38조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38), [제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=43), [제74조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74), [제79조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79).
+- 대만 노동기준법(勞動基準法, 법령 페이지 수정일 2024년 7월 31일) [제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11), [제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13), [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16), [제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17), [제38조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38), [제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=43), [제74조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74), [제79조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79).
 - 대만 노공보험조례(勞工保險條例, 법령 페이지 수정일 2026년 1월 21일) [제33조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33), [제35조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=35).
 - 대만 성별평등공작법(性別平等工作法, 2023년 8월 16일 개정) [제14조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=14), [제20조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=20), [제21조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=21), [제38조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=38).
+- 대만 노공퇴직금조례(勞工退休金條例): [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12).
+- [대만 노동부: 장기 병가를 이유로 한 해고에 관한 FAQ](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt).

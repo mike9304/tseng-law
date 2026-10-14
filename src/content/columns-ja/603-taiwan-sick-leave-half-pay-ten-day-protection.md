@@ -16,7 +16,7 @@ faq:
   - q: "2026年から、病欠を理由に不利益な処分はできなくなりましたか。"
     a: "[2026年1月1日から](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=12)、一年の普通傷病假が10日を超えないときは、労工請假規則か他の法律に別段の定めがあってその定めによる場合を除き、その休暇を理由とする[不利益処分はできません](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)。10日を超えても人事考課は勤務能力、勤務態度、実際の業績を合わせて見て、休暇の日数だけを考慮の要因にはできません。妊娠三か月未満の流産で産假を取らずに取った普通傷病假を除き、その他の普通傷病假で[皆勤手当を控除するときは日数に比例し](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)、労働者に有利な約定があればその約定によります。婚假、喪假、公傷病假、公假、その流産の普通傷病假、家族を世話する私用休暇は、欠勤として皆勤手当を削りません。"
   - q: "上限を超えたら、会社はすぐ契約を終えられますか。"
-    a: "[労工請假規則第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)は、普通傷病假の上限を超え、私用休暇か特別休假で充てたあとも治らなければ、留職停薪（無給の休職）を与えることができ、その期間は一年が限度だと定めています。その後の扱いは規定していません。[労働基準法第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)が契約終了を禁じるのは、第50条の業務停止期間と第59条の医療期間です。天災、事変、その他の不可抗力で事業を続けられず、主管機関に報告して認定を受けた場合は例外です。この条は普通傷病假を保護期間として挙げていません。"
+    a: "[労工請假規則第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)は、普通傷病假の上限を超え、私用休暇か特別休假で充てたあとも治らなければ、留職停薪（無給の休職）を与えることができ、その期間は一年が限度だと定めています。その後の扱いは規定していません。[労働基準法第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)が契約終了を禁じるのは、第50条の業務停止期間と第59条の医療期間です。天災、事変、その他の不可抗力で事業を続けられず、主管機関に報告して認定を受けた場合は例外です。この条は普通傷病假を保護期間として挙げていません。普通傷病假や認められた無給休職の期間を使い切っただけで、解雇が認められるわけではありません。仕事を遂行できないことを理由に解雇する場合、雇用主は[労働基準法第11条第5号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)の要件を満たすことを示す必要があり、[病欠日数の多さだけでは足りません](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt)。この理由で解雇するときは、[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)による予告または予告期間の賃金支払いに加え、適用される退職金制度と勤務期間に応じて、[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)または[勞工退休金條例第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)の資遣費（解雇補償金）の規定にも従います。"
 audience: ["ja"]
 author: "legal-ai-assistant"
 ---
@@ -49,10 +49,6 @@ author: "legal-ai-assistant"
 
 上の流産以外の普通傷病假で皆勤手当を控除するときは、[第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)第2項によります。引く額は普通傷病假の日数に比例して計算します。法令より労働者に有利な約定があれば、その約定によります。
 
-台南の日系子会社で設備を見る日本人の技術者が、水曜の朝に熱を出して金曜まで休みました（架空の例です）。この三日、技術者は入院していません。人事は関連する証明書類を求め、部長はその月の皆勤手当を全額止められるかと聞きました。
-
-三日を理由に、その月の皆勤手当を全部引く扱いにはなりません。[第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)第2項の控除は、日数に比例します。
-
 一年の普通傷病假が10日を超えないとき、この規則か他の法律に別に定めてその定めによる場合を除き、雇用主はその休暇を理由に不利益な処分ができません。条文は[第9条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)第1項です。皆勤手当を比例で控除する計算は、[第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)第2項に残っています。
 
 立証の範囲は、年間10日以内かどうかに関わりません。普通傷病假によって不利益処分を受けたとき、その処分が休暇と関係ない事実は[第9条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)第2項により雇用主が立証します。10日を超えた人事考課も、第3項のとおり勤務能力、勤務態度、実際の業績を合わせて見ます。日数だけでは見ません。
@@ -74,6 +70,10 @@ author: "legal-ai-assistant"
 [第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4)第1項の期間を超え、私用休暇か[労働基準法第38条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38)の特別休假（特休。同じ雇主か事業単位での継続勤務に応じて付く休暇）で充てたあとも治らなければ、[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)により留職停薪（賃金を払わない休職）を与えられます。限度は一年です。そのあと雇用主が何をできるかは、この条にありません。
 
 [労働基準法第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)が契約の終了を止める期間は、第50条の業務停止期間と第59条の医療期間です。天災、事変、その他の不可抗力で事業を続けられず、主管機関に報告して認定を受けた場合だけが例外です。条文が名を挙げる期間に、普通傷病假はありません。
+
+普通傷病假や認められた無給休職の期間を使い切っただけで、解雇が認められるわけではありません。仕事を遂行できないことを理由に解雇する場合、雇用主は[労働基準法第11条第5号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)の要件を満たすことを示す必要があり、[病欠日数の多さだけでは足りません](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt)。
+
+この理由で解雇するときは、[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)による予告または予告期間の賃金支払いに加え、適用される退職金制度と勤務期間に応じて、[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)または[勞工退休金條例第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)の資遣費（解雇補償金）の規定にも従います。
 
 業務上の災害で障害、負傷または疾病が生じた治療と療養の期間には、[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=6)の公傷病假が与えられます。
 
@@ -106,13 +106,15 @@ author: "legal-ai-assistant"
 
 休暇の日数や給与明細が会社の説明と食い違う場合は、昊鼎国際法律事務所の wei@hoveringlaw.com.tw へメールでお知らせください。
 
-この架空の例では、三日のあいだ入院していません。一年で30日以内なら、賃金は[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4)第3項の半額です。労工保険の普通傷病給付は、[第33条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33)の入院がないこの三日には出ません。皆勤手当を減額する場合、削る幅は[第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)第2項のとおりその三日に比例します。この年の普通傷病假が10日を超えないあいだは、2026年1月1日施行の[第9条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)が、この規則か他の法律に別段の定めがある場合を除き、その休暇を理由とする不利益処分を禁じます。
+[第9条第1項第2号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)が保護する流産に伴う休暇以外の普通傷病假で皆勤手当を控除する場合、第2項に従って休暇日数に比例させます。労働者に有利な約定があれば、その約定によります。
 
 ## 参考にした公的資料
 
 2026年10月13日に確認しました。
 
 - 台湾 労工請假規則（法令ページの修正日は2026年9月30日）[第1条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=1)、[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=2)、[第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=3)、[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4)、[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5)、[第6条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=6)、[第7条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=7)、[第8条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=8)、[第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9)、[第9条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1)、[第10条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=10)、[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=12)。[沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006)（2025年12月9日に第7・9・12条を改正し第9条の1を新設、2026年1月1日施行。2026年9月30日に第2・12条を改正、2026年10月1日施行）。
-- 台湾 労働基準法（法令ページの修正日は2024年7月31日）[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)、[第38条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38)、[第43条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=43)、[第74条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74)、[第79条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)。
+- 台湾 労働基準法（法令ページの修正日は2024年7月31日）[第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)、[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)、[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)、[第38条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=38)、[第43条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=43)、[第74条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74)、[第79条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)。
 - 台湾 労工保険条例（法令ページの修正日は2026年1月21日）[第33条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33)、[第35条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=35)。
 - 台湾 性別平等工作法（2023年8月16日改正）[第14条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=14)、[第20条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=20)、[第21条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=21)、[第38条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=38)。
+- 台湾 勞工退休金條例：[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)。
+- [台湾 労働部：長期の病気休暇を理由とする解雇について](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82232/?cprint=pt)。

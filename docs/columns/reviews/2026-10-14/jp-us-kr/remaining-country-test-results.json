@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-14",
+  "fullRun": {
+    "command": "npm run test:unit",
+    "log": "/tmp/tseng-jp-us-kr-final-country-tests.log",
+    "filesTotal": 1424,
+    "filesPassed": 1422,
+    "filesFailed": 2,
+    "testsPassed": 14649,
+    "testsFailed": 12,
+    "skipped": 14,
+    "todo": 1,
+    "durationSeconds": 209.4
+  },
+  "cause": "Three new criminal columns omitted from the explicit test inventory; product selection was correct.",
+  "fix": "Registered 550 ko, 551 ja and 552 en in CRIMINAL_COLUMN_SLUGS_20261014.",
+  "targetedRerun": {
+    "files": [
+      "src/lib/__tests__/criminal-litigation-board.test.tsx",
+      "src/components/__tests__/criminal-column-discovery.test.tsx"
+    ],
+    "testsPassed": 32,
+    "testsFailed": 0,
+    "durationMs": 816,
+    "log": "/tmp/tseng-jp-us-kr-final-country-board-tests.log"
+  },
+  "impactCheck": "rg found the changed expectedCriminalBoardSlugs helper used only by these two test files.",
+  "lint": "All four modified TypeScript fixture/test files passed eslint --max-warnings=0."
+}

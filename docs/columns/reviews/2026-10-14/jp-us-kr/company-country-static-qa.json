@@ -1,0 +1,289 @@
+{
+  "base": "http://127.0.0.1:4631",
+  "checkedAt": "2026-10-14T04:49:29.621Z",
+  "results": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "한국 회사의 대만 자회사 출자, 두 나라 신고와 송금 순서"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 8,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-subsidiary-korean-outward-investment-remittance",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/530-taiwan-supply-payment-affiliate-setoff-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/526-taiwan-business-contract-electronic-signature-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/company-countries-static/ko-1440.png"
+    },
+    {
+      "locale": "ja",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "日本法人の台湾投資、登記証明書と委任状の認証"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 8,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-investment-japanese-company-documents-authentication",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/company-countries-static/ja-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "A Delaware LLC Investing in Taiwan: Identity, Ownership and Signing Authority"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 8,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-investment-delaware-llc-identity-authority",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/company-countries-static/en-1440.png"
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "한국 회사의 대만 자회사 출자, 두 나라 신고와 송금 순서"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 8,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-subsidiary-korean-outward-investment-remittance",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/530-taiwan-supply-payment-affiliate-setoff-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/526-taiwan-business-contract-electronic-signature-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/company-countries-static/ko-390.png"
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "日本法人の台湾投資、登記証明書と委任状の認証"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 8,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-investment-japanese-company-documents-authentication",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/company-countries-static/ja-390.png"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "A Delaware LLC Investing in Taiwan: Identity, Ownership and Signing Authority"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 8,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-investment-delaware-llc-identity-authority",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/company-countries-static/en-390.png"
+    },
+    {
+      "locale": "ko",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ko",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "대만 자회사 출자"
+    },
+    {
+      "locale": "ja",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ja",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "登記証明書"
+    },
+    {
+      "locale": "en",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "en",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "Delaware LLC"
+    },
+    {
+      "action": "sitemap",
+      "status": 200,
+      "includes": [
+        {
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "locale": "en",
+          "present": true
+        }
+      ]
+    }
+  ]
+}

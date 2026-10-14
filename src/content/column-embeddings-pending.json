@@ -1981,6 +1981,30 @@
     {
       "locale": "en",
       "slug": "taiwan-investment-delaware-llc-identity-authority"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-civil-korean-documents-chinese-translations"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-civil-us-company-opponent-document-production"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-investigation-korean-citizen-exit-restriction"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-us-citizen-arrest-ait-local-defense"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-korean-parent-service-fees-evidence"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-company-records-us-form-5471"
     }
   ]
 }

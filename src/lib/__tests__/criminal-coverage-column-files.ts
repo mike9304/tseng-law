@@ -70,9 +70,18 @@ const ORIGINAL_CRIMINAL_SLUGS = [
 ] as const;
 
 const CRIMINAL_COLUMN_SLUGS_20261014 = {
-  ko: ['taiwan-employee-criminal-questioning-company-paid-counsel'],
-  en: ['taiwan-employee-criminal-questioning-company-paid-counsel'],
-  ja: ['taiwan-employee-criminal-questioning-company-paid-counsel'],
+  ko: [
+    'taiwan-employee-criminal-questioning-company-paid-counsel',
+    'taiwan-investigation-korean-citizen-exit-restriction',
+  ],
+  en: [
+    'taiwan-employee-criminal-questioning-company-paid-counsel',
+    'taiwan-us-citizen-arrest-ait-local-defense',
+  ],
+  ja: [
+    'taiwan-employee-criminal-questioning-company-paid-counsel',
+    'taiwan-police-japanese-interpretation-record-corrections',
+  ],
   'zh-hant': [],
   vi: [],
 } as const;

@@ -1,0 +1,137 @@
+[
+  {
+    "file": "src/content/columns/547-taiwan-civil-korean-documents-chinese-translations.md",
+    "locale": "ko",
+    "sha256": "02d20d01e2cc59f0988d0bcc21ff538521b7875e5ee643d77eb884c63925458a",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/547-taiwan-civil-korean-documents-chinese-translations.md",
+      "--lang",
+      "ko"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/547-taiwan-civil-korean-documents-chinese-translations.md [ko] sentences=35 mean=29.7 cv=0.474 short=0.2 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=2\n  WARN 94% of sentences end in '니다.' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-ja/548-taiwan-civil-japanese-company-litigation-authority.md",
+    "locale": "ja",
+    "sha256": "3d95f70b61d481ef1f029db42ad133f22dfa4d6f582e4137d490386924926071",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/548-taiwan-civil-japanese-company-litigation-authority.md",
+      "--lang",
+      "ja"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/548-taiwan-civil-japanese-company-litigation-authority.md [ja] sentences=32 mean=34.2 cv=0.492 short=0.219 run3=0.033 opener_rep=0.0 cite_end=0.0 cite_para=0.273 contrast=0 caveat=0 q=0\n  WARN 94% of sentences end in 'desu-masu' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-en/549-taiwan-civil-us-company-opponent-document-production.md",
+    "locale": "en",
+    "sha256": "f6b25be7260eef4cd275d56bc4d97eeec831ad5b10cea75025b796019aa9c7a5",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/549-taiwan-civil-us-company-opponent-document-production.md",
+      "--lang",
+      "en"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/549-taiwan-civil-us-company-opponent-document-production.md [en] sentences=38 mean=15.2 cv=0.599 short=0.237 run3=0.028 opener_rep=0.182 cite_end=0.0 cite_para=0.545 contrast=1 caveat=0 q=2\n  OK — no variety limit violated"
+  },
+  {
+    "file": "src/content/columns/550-taiwan-investigation-korean-citizen-exit-restriction.md",
+    "locale": "ko",
+    "sha256": "a77dfd8ea6b6ec48bbc80e3a7792702c6d0fb71c3412d4fae3874dfc11b4347c",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/550-taiwan-investigation-korean-citizen-exit-restriction.md",
+      "--lang",
+      "ko"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/550-taiwan-investigation-korean-citizen-exit-restriction.md [ko] sentences=39 mean=33.1 cv=0.466 short=0.128 run3=0.027 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  WARN 95% of sentences end in '니다.' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-ja/551-taiwan-police-japanese-interpretation-record-corrections.md",
+    "locale": "ja",
+    "sha256": "1dc0f46d483dd22b606a92e0384e9003ecf09e02bdecfa3f74584c4733859722",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/551-taiwan-police-japanese-interpretation-record-corrections.md",
+      "--lang",
+      "ja"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/551-taiwan-police-japanese-interpretation-record-corrections.md [ja] sentences=36 mean=34.4 cv=0.464 short=0.194 run3=0.029 opener_rep=0.091 cite_end=0.0 cite_para=0.364 contrast=0 caveat=0 q=0\n  WARN 94% of sentences end in 'desu-masu' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-en/552-taiwan-us-citizen-arrest-ait-local-defense.md",
+    "locale": "en",
+    "sha256": "389599b8f832bd25ccfa4a947d82f4a5c524144970c16d8e245ad1f23cc4b9bb",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/552-taiwan-us-citizen-arrest-ait-local-defense.md",
+      "--lang",
+      "en"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/552-taiwan-us-citizen-arrest-ait-local-defense.md [en] sentences=39 mean=14.8 cv=0.559 short=0.333 run3=0.0 opener_rep=0.091 cite_end=0.0 cite_para=0.273 contrast=0 caveat=0 q=3\n  OK — no variety limit violated"
+  },
+  {
+    "file": "src/content/columns/553-taiwan-korean-parent-service-fees-evidence.md",
+    "locale": "ko",
+    "sha256": "e2671c13b14c0d6ede96a3f1955f6dd03dd680abddb187a084e287ffdbc739a0",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/553-taiwan-korean-parent-service-fees-evidence.md",
+      "--lang",
+      "ko"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns/553-taiwan-korean-parent-service-fees-evidence.md [ko] sentences=36 mean=37.5 cv=0.484 short=0.194 run3=0.029 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=2\n  WARN 94% of sentences end in '니다.' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-ja/554-taiwan-dividend-japanese-parent-tax-records.md",
+    "locale": "ja",
+    "sha256": "b0c2913d80b3a00c2fb2003a1434ef52f51cc05f0638e9e9865408ea05171daa",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/554-taiwan-dividend-japanese-parent-tax-records.md",
+      "--lang",
+      "ja"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-ja/554-taiwan-dividend-japanese-parent-tax-records.md [ja] sentences=38 mean=35.5 cv=0.49 short=0.184 run3=0.056 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=0\n  WARN 95% of sentences end in 'desu-masu' — vary endings within the register"
+  },
+  {
+    "file": "src/content/columns-en/555-taiwan-company-records-us-form-5471.md",
+    "locale": "en",
+    "sha256": "903a8570b09002cbd53bff41544c3d0dabf62b707077829281102600b52b7bda",
+    "varietyCommand": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/555-taiwan-company-records-us-form-5471.md",
+      "--lang",
+      "en"
+    ],
+    "varietyExit": 0,
+    "varietyOutput": "/Users/son7/Projects/tseng-law-jp-us-kr-20261014/src/content/columns-en/555-taiwan-company-records-us-form-5471.md [en] sentences=43 mean=15.2 cv=0.494 short=0.209 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=2\n  OK — no variety limit violated"
+  }
+]

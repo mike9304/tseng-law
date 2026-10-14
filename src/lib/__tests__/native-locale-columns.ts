@@ -608,18 +608,24 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
 /** Native audience columns published 2026-10-14. */
 export const COUNTRY_COLUMN_FILES_20261014 = {
   ko: [
+    '547-taiwan-civil-korean-documents-chinese-translations.md',
+    '550-taiwan-investigation-korean-citizen-exit-restriction.md',
     '544-taiwan-subsidiary-korean-outward-investment-remittance.md',
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
   ],
   en: [
+    '549-taiwan-civil-us-company-opponent-document-production.md',
+    '552-taiwan-us-citizen-arrest-ait-local-defense.md',
     '546-taiwan-investment-delaware-llc-identity-authority.md',
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
   ],
   ja: [
+    '548-taiwan-civil-japanese-company-litigation-authority.md',
+    '551-taiwan-police-japanese-interpretation-record-corrections.md',
     '545-taiwan-investment-japanese-company-documents-authentication.md',
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',

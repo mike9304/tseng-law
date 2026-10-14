@@ -9,6 +9,8 @@ categories: ["대만 법률정보"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/602-taiwan-rain-rear-end-braking-dashcam/featured-01.webp"
+featured_image_alt: "비가 내리는 도로에서 흰색 차량 후면에 접근한 운전자 시점의 AI 가상 장면"
+featured_image_caption: "AI로 만든 빗길 추돌 가상 장면입니다. 실제 사고나 제동거리 실험 사진이 아닙니다."
 audience: ["ko"]
 author: "legal-ai-assistant"
 faq:

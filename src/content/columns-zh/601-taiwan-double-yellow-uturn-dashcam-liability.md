@@ -9,6 +9,8 @@ categories: ["台灣法律資訊"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/601-taiwan-double-yellow-uturn-dashcam-liability/featured-01.webp"
+featured_image_alt: "駕駛視角中的藍色車左側與銀色車車頭相接的虛構情境"
+featured_image_caption: "AI生成的迴轉事故虛構情境，並非真實事故照片。"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 faq:

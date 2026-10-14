@@ -9,6 +9,8 @@ categories: ["台灣法律資訊"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/602-taiwan-rain-rear-end-braking-dashcam/featured-01.webp"
+featured_image_alt: "雨中駕駛視角接近白色車輛後方的虛構情境"
+featured_image_caption: "AI生成的雨天追撞虛構情境，非真實事故照片或煞車距離實驗。"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 faq:

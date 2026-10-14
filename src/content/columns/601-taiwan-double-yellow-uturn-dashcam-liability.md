@@ -9,6 +9,8 @@ categories: ["대만 법률정보"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/601-taiwan-double-yellow-uturn-dashcam-liability/featured-01.webp"
+featured_image_alt: "파란 차량 왼쪽 옆면과 은색 차량의 후드가 가까이 맞닿은 AI 가상 장면"
+featured_image_caption: "AI로 만든 유턴 사고 가상 장면입니다. 실제 사고 사진이 아닙니다."
 audience: ["ko"]
 author: "legal-ai-assistant"
 faq:

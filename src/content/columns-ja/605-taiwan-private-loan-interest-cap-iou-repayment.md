@@ -16,7 +16,7 @@ faq:
   - q: "約定金利が年16%を超えると、貸金全体が無効になりますか。"
     a: "[民法第205条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205)が無効とするのは、年16%を超える部分の約定です。この条を理由に元本や上限内の利息の約定まで無効になるわけではありません。[2021年1月20日に公布された改正](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)は、[民法債権編施行法第36条第5項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=36)により公布の6か月後に施行されました。施行前の約定でも、施行後に発生する利息債務には[同法第10条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=10-1)により改正後の条文が適用されます。"
   - q: "返済期限を合意していなければ、いつ返還を求められますか。"
-    a: "借主はいつでも返還でき、貸主は1か月以上の相当の期間を定めて返還を催告できます（[民法第478条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)）。催告で期間を定めた場合、遅延の責任はその期間が満了したときからです（[第229条第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)）。"
+    a: "借主はいつでも返還でき、貸主は1か月以上の相当の期間を定めて返還を催告できます（[民法第478条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)）。催告で期間を定めた場合、原則としてその期間が満了した時から遅延の責任を負います（[第229条第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)）。ただし、債務者の責めに帰すことのできない事由による不履行には、[第230条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)の例外があります。"
 audience: ["ja"]
 author: "legal-ai-assistant"
 ---
@@ -59,7 +59,7 @@ author: "legal-ai-assistant"
 
 借主は[民法第478条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)により、約定期限の内に、借りたものと種類、品質、数量が同じものを返します。返済期限を合意していなければ、借主はいつでも返還でき、貸主も1か月以上の相当の期間を定めて返還を催告できます。
 
-確定期限があれば、[民法第229条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第1項により、その期限が満了したときから遅延の責任を負います。確定期限がない場合は、同条第2項によります。債権者が給付を請求できるときに催告し、それでも履行がなければ、催告を受けたときから遅延の責任を負います。催告で期間を定めた場合は、第3項により、その期間が満了したときからです。
+確定期限があれば、[民法第229条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第1項により、その期限が満了したときから遅延の責任を負います。確定期限がない場合は、同条第2項によります。債権者が給付を請求できるときに催告し、それでも履行がなければ、催告を受けたときから遅延の責任を負います。催告で期間を定めた場合は、第3項により、その期間が満了したときからです。これらの起算点には[民法第230条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)の例外があり、債務者の責めに帰すことのできない事由で履行しなかった場合は、遅延の責任を負いません。
 
 訴状の送達と、督促手続での支払命令の送達は、[民法第229条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第2項後段により催告と同じ効力を持ちます。返済期限を合意していなければ、貸主の催告に[民法第478条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)の1か月以上の期間が必要です。借用書の返済日欄が空でも、メッセージなど他のやり取りに期限の合意がないかを先に見ます。そのときの遅延責任の始期は、[民法第229条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第3項の期間満了です。
 
@@ -77,9 +77,11 @@ author: "legal-ai-assistant"
 
 契約に別段の定めがなければ、[民法第480条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)が金銭貸借の返還通貨を定めます。通用貨幣で借り、返還のときにその貨幣が通用効力を失っていれば返還時に通用する貨幣で返し、通用貨幣に換算すると約定していれば受領した貨幣の価格の増減にかかわらず返還時の通用貨幣で返し、特定の貨幣で計算すると約定していればその貨幣で返すか、返還時と返還地の時価による通用貨幣で返します。
 
-元本の請求権は15年間、利息のように1年または1年より短い定期で給付する各回の請求権は5年間、行使しなければ消滅します（[民法第125条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)）。
+通常の貸金元本の請求権の消滅時効は原則15年で、法律がより短い期間を定める場合はその期間に従います。利息など、1年またはそれより短い間隔で支払う定期給付の各回の請求権は5年です（[民法第125条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)）。
 
-一定数量の金銭、他の代替物または有価証券の給付を求める債権者は、[民事訴訟法第508条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)第1項により、督促手続で支払命令を申し立てることができます。[売掛金の支払命令](/ja/columns/taiwan-unpaid-invoice-debt-collection)にその手続があり、少額手続の費用と審理は[少額手続](/ja/columns/taiwan-small-claims-simplified-civil-procedure)にあります。保証人を立てた約定や、手形を切った金銭は、ここでは扱いません。
+起算点は、[第128条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128)により請求権を行使できる時です。[第129条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129)、[第130条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130)、[第137条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=137)による時効の中断と再進行も確認します。特に、請求による中断は、その後6か月以内に訴えを提起しなければ、中断しなかったものと扱われます。時効が完成すると、債務者は[第144条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144)による時効の抗弁で支払いを拒めます。
+
+一定数量の金銭、他の代替物または有価証券の給付を求める債権者は、[民事訴訟法第508条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)第1項により、督促手続で支払命令を申し立てることができます。申立人が負う反対給付をまだ履行していない場合や、支払命令を外国で送達する必要がある場合、公示送達による必要がある場合は、[第509条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)によりこの手続を利用できません。債権者には、[第511条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)による請求の疎明も必要です。[売掛金の支払命令](/ja/columns/taiwan-unpaid-invoice-debt-collection)にその手続があり、少額手続の費用と審理は[少額手続](/ja/columns/taiwan-small-claims-simplified-civil-procedure)にあります。保証人を立てた約定や、手形を切った金銭は、ここでは扱いません。
 
 借用書の日付や返還の約束についてのご相談は、昊鼎国際法律事務所（[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)）で受け付けています。
 
@@ -87,10 +89,10 @@ author: "legal-ai-assistant"
 
 ## 参考にした公的資料
 
-- 台湾民法[第125条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)、[第203条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=203)、[第204条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=204)、[第205条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205)、[第206条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=206)、[第207条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=207)、[第229条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)、[第233条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=233)、[第474条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=474)、[第477条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=477)、[第478条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)、[第480条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)
+- 台湾民法[第125条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)、[第128条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128)、[第129条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129)、[第130条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130)、[第137条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=137)、[第144条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144)、[第203条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=203)、[第204条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=204)、[第205条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205)、[第206条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=206)、[第207条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=207)、[第229条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)、[第230条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)、[第233条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=233)、[第474条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=474)、[第477条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=477)、[第478条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)、[第480条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)
 - 台湾[民法の沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)（2021年1月20日の総統令で第205条を改正公布、公布後6か月で施行）
 - 台湾民法債権編施行法[第10条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=10-1)、[第36条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=36)
-- 台湾民事訴訟法[第222条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=222)、[第277条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=277)、[第508条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)
+- 台湾民事訴訟法[第222条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=222)、[第277条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=277)、[第508条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)、[第509条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)、[第511条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)
 
 確認日: 2026年10月13日
 再確認日: 2026年10月14日

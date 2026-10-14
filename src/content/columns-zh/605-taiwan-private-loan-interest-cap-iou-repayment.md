@@ -16,7 +16,7 @@ faq:
   - q: "約定超過年息16%，整筆借款都無效嗎？"
     a: "[民法第205條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205)只讓超過年息16%的部分約定無效，本金及上限內的利息約定不因此無效。[2021年1月20日公布的修正](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)，依[民法債編施行法第36條第5項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=36)在公布後六個月施行。施行前訂的約定，只要利息債務在施行後發生，也依[同法第10條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=10-1)適用修正後的條文。"
   - q: "雙方沒有約定返還期限時，什麼時候可以要回來？"
-    a: "借用人可以隨時返還，貸與人可以定一個月以上的相當期限催告返還（[民法第478條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)）。催告定有期限的，遲延責任從該期限屆滿時開始（[第229條第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)）。"
+    a: "借用人可以隨時返還，貸與人可以定一個月以上的相當期限催告返還（[民法第478條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)）。催告定有期限的，原則上從該期限屆滿時負遲延責任（[第229條第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)）；因不可歸責於債務人的事由而未給付時，則適用[第230條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)的例外。"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 ---
@@ -67,7 +67,7 @@ LINE那一句就夠了嗎？
 
 借用人要在約定期限內，依[民法第478條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)返還與借用物種類、品質、數量相同之物。雙方未約定返還期限時，借用人可以隨時返還，貸與人也可以定一個月以上的相當期限，催告返還。
 
-給付有確定期限的，依[民法第229條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第1項，遲延責任從期限屆滿時開始。沒有確定期限的，債權人可以請求給付時經催告仍未給付，依同條第2項從受催告時起負遲延責任。催告定有期限的，第3項以該期限屆滿時為起點。
+給付有確定期限的，依[民法第229條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第1項，遲延責任從期限屆滿時開始。沒有確定期限的，債權人可以請求給付時經催告仍未給付，依同條第2項從受催告時起負遲延責任。催告定有期限的，第3項以該期限屆滿時為起點。這些起算規則仍受[民法第230條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)限制：因不可歸責於債務人的事由而未給付時，債務人不負遲延責任。
 
 訴狀的送達，和督促程序裡支付命令的送達，依[民法第229條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第2項後段，與催告有同一效力。雙方未約定返還期限時，貸與人的催告要帶上[民法第478條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)所要求的一個月以上期間。借據日期欄空白的，先看訊息和其他往來有沒有另外約定返還期限。那時遲延責任的起點，是[民法第229條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)第3項的期限屆滿。
 
@@ -75,9 +75,11 @@ LINE那一句就夠了嗎？
 
 契約若另有訂定，先照契約。沒有另定時，[民法第480條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)決定返還貨幣：通用貨幣在返還時已失通用效力的，用當時仍有通用效力的貨幣償還；約定折合通用貨幣計算的，不論借用人所受領貨幣的價格如何增減，都用返還時有通用效力的貨幣償還；約定以特種貨幣計算的，用該特種貨幣償還，或按返還時、返還地的市價以通用貨幣償還。
 
-原本的請求權十五年不行使就消滅，利息這種一年或不及一年的定期給付，各期給付請求權五年不行使就消滅（[民法第125條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)）。
+一般借款本金請求權的消滅時效原則上是十五年，法律另定較短期間的，從其規定。利息等一年或不及一年的定期給付，各期請求權的時效是五年（[民法第125條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)）。
 
-請求給付一定數量的金錢、其他代替物或有價證券，債權人可以依[民事訴訟法第508條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)第1項，聲請法院依督促程序發支付命令。[支付命令和假扣押](/zh-hant/columns/taiwan-payment-order-provisional-attachment)寫了那套程序，小額程序的費用和審理在[小額程序](/zh-hant/columns/taiwan-small-claims-simplified-civil-procedure)。替人的借款簽連帶保證，見[連帶保證人會不會先被找](/zh-hant/columns/private-loan-joint-guarantor-first-demand-taiwan)。開了本票的錢，不在這篇裡。
+依[第128條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128)，時效從請求權可行使時起算；還要依[第129條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129)、[第130條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130)、[第137條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=137)判斷有無中斷及重行起算。尤其因請求而中斷的時效，若請求後六個月內不起訴，視為不中斷。時效完成後，債務人可以依[第144條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144)提出時效抗辯，拒絕給付。
+
+請求給付一定數量的金錢、其他代替物或有價證券，債權人可以依[民事訴訟法第508條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)第1項，聲請法院依督促程序發支付命令。聲請人應為的對待給付尚未履行，或支付命令須在外國送達、須以公示送達處理時，[第509條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)禁止使用督促程序。債權人也須依[第511條第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)釋明請求。[支付命令和假扣押](/zh-hant/columns/taiwan-payment-order-provisional-attachment)寫了那套程序，小額程序的費用和審理在[小額程序](/zh-hant/columns/taiwan-small-claims-simplified-civil-procedure)。替人的借款簽連帶保證，見[連帶保證人會不會先被找](/zh-hant/columns/private-loan-joint-guarantor-first-demand-taiwan)。開了本票的錢，不在這篇裡。
 
 要把轉帳時間和LINE的句子對在一起，可以寫信到昊鼎國際法律事務所（[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)），附上想問的那兩項。
 
@@ -85,10 +87,10 @@ LINE訊息若寫著「下個月」，就要看雙方是否因此約定了清償�
 
 ## 參考的官方資料
 
-- 台灣民法[第125條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)、[第203條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=203)、[第204條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=204)、[第205條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205)、[第206條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=206)、[第207條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=207)、[第229條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)、[第233條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=233)、[第474條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=474)、[第477條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=477)、[第478條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)、[第480條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)
+- 台灣民法[第125條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125)、[第126條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)、[第128條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128)、[第129條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129)、[第130條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130)、[第137條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=137)、[第144條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144)、[第203條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=203)、[第204條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=204)、[第205條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205)、[第206條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=206)、[第207條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=207)、[第229條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)、[第230條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)、[第233條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=233)、[第474條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=474)、[第477條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=477)、[第478條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)、[第480條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)
 - 台灣[民法沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)（2021年1月20日總統令修正公布第205條，公布後六個月施行）
 - 台灣民法債編施行法[第10條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=10-1)、[第36條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=36)
-- 台灣民事訴訟法[第222條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=222)、[第277條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=277)、[第508條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)
+- 台灣民事訴訟法[第222條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=222)、[第277條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=277)、[第508條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)、[第509條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)、[第511條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)
 
 確認日：2026年10月13日
 再次確認：2026年10月14日

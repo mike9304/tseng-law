@@ -16,7 +16,7 @@ faq:
   - q: "약정 이자가 연 16%를 넘으면 대여 전체가 무효인가요?"
     a: "[민법 제205조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205)가 무효로 하는 것은 연 16%를 넘는 부분의 약정입니다. 이 조를 이유로 원금이나 상한 이내의 이자 약정까지 무효가 되지는 않습니다. [2021년 1월 20일 공포된 개정](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)은 [민법 채편 시행법 제36조 제5항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=36)에 따라 공포 후 6개월이 지나 시행됐습니다. 시행 전 약정이라도 시행 뒤 발생하는 이자 채무에는 [같은 법 제10조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=10-1)에 따라 개정 조문이 적용됩니다."
   - q: "반환기한을 정하지 않았다면 언제 반환을 요구하나요?"
-    a: "차용인은 언제든 반환할 수 있고, 대여자는 한 달 이상의 상당한 기간을 정해 반환을 최고할 수 있습니다([민법 제478조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)). 최고에 기간을 정하면 지연 책임은 그 기간이 끝난 때부터입니다([제229조 제3항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229))."
+    a: "차용인은 언제든 반환할 수 있고, 대여자는 한 달 이상의 상당한 기간을 정해 반환을 최고할 수 있습니다([민법 제478조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)). 최고에 기간을 정하면 원칙적으로 그 기간이 끝난 때부터 지연 책임을 집니다([제229조 제3항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229)). 채무자에게 책임을 돌릴 수 없는 사유로 이행하지 못한 경우에는 [제230조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)의 예외가 적용됩니다."
 audience: ["ko"]
 author: "legal-ai-assistant"
 ---
@@ -59,7 +59,7 @@ author: "legal-ai-assistant"
 
 차용인은 [민법 제478조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)에 따라 약정한 기한 안에, 빌린 것과 종류, 품질, 수량이 같은 것을 돌려줍니다. 반환기한을 정하지 않았다면 차용인은 언제든 반환할 수 있고, 대여자는 한 달 이상의 상당한 기간을 정해 반환을 최고할 수 있습니다.
 
-확정된 기한이 있으면 [민법 제229조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229) 제1항에 따라 그 기한이 끝날 때 지연 책임이 시작됩니다. 확정 기한이 없다면 같은 조 제2항이 적용됩니다. 채권자가 이행을 청구할 수 있는 때에 최고했는데도 이행하지 않으면 최고를 받은 때부터 책임을 집니다. 최고에서 기간을 정했다면 제3항에 따라 그 기간이 끝날 때부터입니다.
+확정된 기한이 있으면 [민법 제229조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229) 제1항에 따라 그 기한이 끝날 때 지연 책임이 시작됩니다. 확정 기한이 없다면 같은 조 제2항이 적용됩니다. 채권자가 이행을 청구할 수 있는 때에 최고했는데도 이행하지 않으면 최고를 받은 때부터 책임을 집니다. 최고에서 기간을 정했다면 제3항에 따라 그 기간이 끝날 때부터입니다. 다만 [민법 제230조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)에 따라, 채무자에게 책임을 돌릴 수 없는 사유로 이행하지 못했다면 지연 책임을 지지 않습니다.
 
 소장 송달과 독촉절차의 지급명령 송달은, [민법 제229조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229) 제2항 후단에 따라 최고와 같은 효력을 가집니다. 반환기한을 정하지 않은 소비대차에서 대여자의 최고는 [민법 제478조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478)가 요구하는 한 달 이상의 기간을 포함합니다. 차용증의 날짜란이 비어 있어도, 메시지와 그 밖의 연락에 기한 합의가 있는지는 먼저 봅니다. 합의된 반환기한이 없을 때 지연 책임은 그 최고 기간이 끝날 때 시작되고, 기산점은 [민법 제229조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229) 제3항입니다.
 
@@ -77,9 +77,11 @@ author: "legal-ai-assistant"
 
 계약이 달리 정하지 않으면 [민법 제480조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)가 금전 대차의 반환 통화를 정합니다. 통용 화폐로 빌렸는데 반환 때 그 화폐가 통용 효력을 잃으면 반환 시에 통용되는 화폐로 갚고, 통용 화폐로 환산하기로 했으면 받은 화폐 가격이 올랐거나 내렸거나 반환 시 통용 화폐로 갚으며, 특정 화폐로 계산하기로 했으면 그 화폐로 갚거나 반환 시와 반환지의 시가로 통용 화폐로 갚습니다.
 
-원금 청구권은 15년간, 이자처럼 1년 또는 1년보다 짧은 정기로 지급하는 각 회차의 청구권은 5년간 행사하지 않으면 소멸합니다([민법 제125조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125), [제126조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)).
+일반적인 대여금 원금 청구권의 소멸시효는 원칙적으로 15년이며, 법률이 더 짧은 기간을 정하면 그 기간을 따릅니다. 이자 등 1년 또는 그보다 짧은 간격으로 지급하는 정기급부의 각 회차 청구권은 5년입니다([민법 제125조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125), [제126조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)).
 
-일정 수량의 금전, 다른 대체물 또는 유가증권을 구하는 채권자는 [민사소송법 제508조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508) 제1항에 따라 독촉절차로 지급명령을 신청할 수 있습니다. [거래처 미수금의 지급명령](/ko/columns/recovering-unpaid-invoices-from-taiwan-customers)에 그 절차가 있고, 소액절차의 비용과 심리는 [소액절차](/ko/columns/taiwan-small-claims-simplified-civil-procedure)에 있습니다. 보증인을 세운 약정이나 어음을 쓴 돈은 여기서 다루지 않습니다.
+시효는 [제128조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128)에 따라 청구권을 행사할 수 있는 때부터 계산합니다. [제129조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129)·[제130조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130)·[제137조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=137)에 따른 시효 중단과 재기산도 함께 판단합니다. 특히 청구로 중단된 시효는 청구 후 6개월 안에 소를 제기하지 않으면 중단되지 않은 것으로 봅니다. 시효가 완성되면 채무자는 [제144조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144)에 따른 시효 항변으로 지급을 거절할 수 있습니다.
+
+일정 수량의 금전, 다른 대체물 또는 유가증권을 구하는 채권자는 [민사소송법 제508조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508) 제1항에 따라 독촉절차로 지급명령을 신청할 수 있습니다. 신청인이 해야 할 반대급부를 아직 이행하지 않았거나, 지급명령을 외국에서 송달해야 하거나 공시송달로 처리해야 한다면 [제509조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)에 따라 이 절차를 이용할 수 없습니다. 채권자는 [제511조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)에 따라 청구를 소명해야 합니다. [거래처 미수금의 지급명령](/ko/columns/recovering-unpaid-invoices-from-taiwan-customers)에 그 절차가 있고, 소액절차의 비용과 심리는 [소액절차](/ko/columns/taiwan-small-claims-simplified-civil-procedure)에 있습니다. 보증인을 세운 약정이나 어음을 쓴 돈은 여기서 다루지 않습니다.
 
 날짜가 보이는 송금 기록과 메신저 문장을 맞춰 보려면, 호정(昊鼎)국제법률사무소 이메일([wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw))로 그 자료를 보내 문의할 수 있습니다.
 
@@ -87,10 +89,10 @@ author: "legal-ai-assistant"
 
 ## 참고한 공식 자료
 
-- 대만 민법 [제125조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125), [제126조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126), [제203조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=203), [제204조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=204), [제205조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205), [제206조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=206), [제207조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=207), [제229조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229), [제233조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=233), [제474조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=474), [제477조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=477), [제478조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478), [제480조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)
+- 대만 민법 [제125조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=125), [제126조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126), [제128조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128), [제129조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129), [제130조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130), [제137조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=137), [제144조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144), [제203조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=203), [제204조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=204), [제205조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=205), [제206조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=206), [제207조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=207), [제229조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=229), [제230조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230), [제233조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=233), [제474조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=474), [제477조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=477), [제478조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=478), [제480조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=480)
 - 대만 [민법 연혁](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)(2021년 1월 20일 대통령령으로 제205조 개정 공포, 공포 후 6개월 시행)
 - 대만 민법 채편 시행법 [제10조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=10-1), [제36조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000003&flno=36)
-- 대만 민사소송법 [제222조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=222), [제277조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=277), [제508조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)
+- 대만 민사소송법 [제222조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=222), [제277조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=277), [제508조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508), [제509조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509), [제511조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)
 
 확인일: 2026년 10월 13일
 재확인: 2026년 10월 14일

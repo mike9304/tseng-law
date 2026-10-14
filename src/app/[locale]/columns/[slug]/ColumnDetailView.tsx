@@ -7,6 +7,8 @@ import { hasRightTurnObservation, RIGHT_TURN_OBSERVATION } from '@/data/right-tu
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import ViArticleAuthority from '@/components/vi-design/ViArticleAuthority';
 import ViArticleShell from '@/components/vi-design/ViArticleShell';
+import IntlArticleAuthority from '@/components/intl-design/IntlArticleAuthority';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 import AiAuthorBox from '@/components/AiAuthorBox';
 import RecommendedForYou from '@/components/RecommendedForYou';
 import ColumnContent from '@/components/ColumnContent';
@@ -52,10 +54,12 @@ export type ColumnDetailViewProps = {
   articleJsonLd: Record<string, unknown>;
   showHero: boolean; showBody: boolean; showSeo: boolean;
   typography: ResolvedColumnTypography;
+  /** Folio locales: localized hint above wide tables (the body otherwise falls back to the English one). */
+  tableScrollHint?: string;
 };
 
 /** Shared SSR view. Data loading and publication decisions stay in the server route. */
-export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography }: ColumnDetailViewProps) {
+export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography, tableScrollHint }: ColumnDetailViewProps) {
   const showObservation = showBody && hasRightTurnObservation(urlLocale, post.slug);
   const visibleToc = showObservation
     ? [...tocEntries, { id: RIGHT_TURN_OBSERVATION.id, text: RIGHT_TURN_OBSERVATION.title }]
@@ -149,7 +153,12 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                   {diagramVideo ? (
                     <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
                   ) : null}
-                  <ColumnContent content={post.content} locale={locale} uiLocale={urlLocale === 'vi' ? 'vi' : locale} />
+                  <ColumnContent
+                    content={post.content}
+                    locale={locale}
+                    uiLocale={urlLocale === 'vi' ? 'vi' : locale}
+                    tableScrollHint={tableScrollHint}
+                  />
                 </>
               )}
               {showObservation ? <RightTurnObservation /> : null}
@@ -189,7 +198,11 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                 </a>
               </div>
               <div className="blog-sidebar-card blog-sidebar-card--attorney">
-                {urlLocale === 'vi' ? <ViArticleAuthority /> : <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />}
+                {urlLocale === 'vi'
+                  ? <ViArticleAuthority />
+                  : isIntlDesignLocale(urlLocale)
+                    ? <IntlArticleAuthority locale={urlLocale} heading={attorneyHeading} />
+                    : <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />}
               </div>
               <div className="blog-sidebar-card">
                 <h3 className="blog-sidebar-title">{t.guideTitle}</h3>

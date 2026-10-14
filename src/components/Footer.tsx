@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 import {
   guidanceFooterCopy,
   guidanceOfficeCopy,
@@ -131,7 +132,8 @@ export default function Footer({
     href: `/${locale}/contact#offices`,
   }));
   const consultationMailto = locale === 'vi' ? `mailto:${CONSULTATION_EMAIL}` : getConsultationPublicMailto(chromeLocale);
-  const consultationCtaLabel = locale === 'vi' ? content.nav.cta.label : getConsultationCtaLabel(chromeLocale);
+  // vi and the Folio locales name the email link with their own contact CTA instead of the English label.
+  const consultationCtaLabel = locale === 'vi' || isIntlDesignLocale(locale) ? content.nav.cta.label : getConsultationCtaLabel(chromeLocale);
   const legalLinks = isGuidanceLocale4(locale)
     ? guidanceLegalLinks(locale)
     : locale === 'ko'

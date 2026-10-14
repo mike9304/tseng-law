@@ -27,6 +27,9 @@ import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
 import columnUiVi from '@/data/column-ui-vi.json';
+import { folioArticleCopy, folioLabelValue } from '@/data/intl-design-ui';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
+import { buildGuidanceAttorneyFacts, GUIDANCE_FACT_SEPARATOR } from '@/lib/guidance-attorney-facts';
 
 export const dynamic = 'force-dynamic';
 
@@ -170,12 +173,28 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // Vietnamese has a complete native article shell. Other guidance locales
   // continue to use their existing translated navigation with English fallbacks.
   const guidancePack = guidanceLocale ? guidanceContent[guidanceLocale] : null;
+  // Folio locales (id, th, European): no English fallback left in the shell. The consultation card names the
+  // consultation languages from the team record, the attorney heading keeps the pack's review label.
+  const folioLocale = guidancePack && isIntlDesignLocale(urlLocale) ? urlLocale : null;
+  const folioArticle = folioLocale ? folioArticleCopy[folioLocale] : null;
+  const folioFacts = folioLocale ? buildGuidanceAttorneyFacts(folioLocale) : null;
   const t = urlLocale === 'vi' ? copy.vi : guidancePack
     ? {
         ...copy.en,
         backLabel: `← ${guidancePack.nav.columns}`,
         faqHeading: guidancePack.nav.faq,
         consultationButton: guidancePack.contactCta,
+        ...(folioLocale && folioArticle
+          ? {
+              attorneyHeading: guidancePack.home.columnsReviewLabel,
+              guideTitle: folioArticle.relatedTopics,
+              consultationTitle: guidancePack.nav.contact,
+              consultationText: folioFacts
+                ? folioLabelValue(folioLocale, folioFacts.languagesLabel, folioFacts.languages.join(GUIDANCE_FACT_SEPARATOR))
+                : guidancePack.pages.contact.description,
+              tocLabel: folioArticle.contents,
+            }
+          : {}),
       }
     : copy[locale];
   const tocEntries = guidancePack && urlLocale !== 'vi' ? [] : extractColumnToc(post.content);
@@ -186,7 +205,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     ? splitColumnContentAfterHeading(post.content, post.diagramVideo.afterHeading)
     : null;
   const authorName =
-    urlLocale === 'vi' ? 'Luật sư Wei Tseng' : locale === 'ko'
+    folioArticle ? folioArticle.byline : urlLocale === 'vi' ? 'Luật sư Wei Tseng' : locale === 'ko'
       ? '증준외 변호사'
       : locale === 'zh-hant'
         ? '曾雋崴律師'
@@ -196,7 +215,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // Retain provenance so AI-written columns never inherit an attorney byline.
   const aiAuthored = isAiAuthoredColumn(post);
   const attorneyHeading = urlLocale === 'vi' ? t.attorneyHeading : aiAuthored
-    ? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en
+    ? folioArticle?.consultingAttorney ?? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en
     : t.attorneyHeading;
   const authorProfilePath = getAttorneyProfilePath(locale);
   const authorHref = guidanceLocale
@@ -257,8 +276,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       readTime: p.readTime,
     }));
 
-  const prevLabel = urlLocale === 'vi' ? columnUiVi.article.prevLabel : locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
-  const nextLabel = urlLocale === 'vi' ? columnUiVi.article.nextLabel : locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
+  const prevLabel = folioArticle ? folioArticle.previous : urlLocale === 'vi' ? columnUiVi.article.prevLabel : locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
+  const nextLabel = folioArticle ? folioArticle.next : urlLocale === 'vi' ? columnUiVi.article.nextLabel : locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
 
   // FAQ (FAQPage schema + plain-text "자주 묻는 질문" section). Only the two
   // indexed, hand-authored locales (ko / zh-hant) carry an `faq` array; the
@@ -286,8 +305,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   );
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(urlLocale === 'vi' ? 'vi' : locale, [
-    { name: urlLocale === 'vi' ? guidanceContent.vi.nav.home : locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
-    { name: urlLocale === 'vi' ? guidanceContent.vi.nav.columns : locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights', path: `/${urlLocale}/columns` },
+    { name: folioLocale && guidancePack ? guidancePack.nav.home : urlLocale === 'vi' ? guidanceContent.vi.nav.home : locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
+    { name: folioLocale && guidancePack ? guidancePack.nav.columns : urlLocale === 'vi' ? guidanceContent.vi.nav.columns : locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights', path: `/${urlLocale}/columns` },
     { name: post.title, path: `/${urlLocale}/columns/${post.slug}` },
   ]);
   const articleJsonLd = buildArticleJsonLd({
@@ -352,6 +371,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     showBody,
     showSeo,
     typography,
+    // Only Folio pages carry the key, so other locales' serialized props stay byte-identical.
+    ...(folioArticle ? { tableScrollHint: folioArticle.tableScrollHint } : {}),
   };
   // Every column hydrates the same synchronous view from complete public data.
   // SSR and the server's publication/visibility decisions remain intact.

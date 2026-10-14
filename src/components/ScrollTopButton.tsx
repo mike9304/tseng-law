@@ -6,6 +6,7 @@ import { chromeSiteLocale } from '@/lib/public-site-chrome';
 import type { PublicLocale8 } from '@/lib/public-guidance';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
+import { folioChrome } from '@/data/intl-design-ui';
 
 const scrollTopLabels: Record<SiteLocale, string> = {
   ko: '상단으로 이동',
@@ -18,7 +19,7 @@ export default function ScrollTopButton({ locale }: { locale: PublicLocale8 }) {
   const [visible, setVisible] = useState(false);
   const [nearFooter, setNearFooter] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const label = locale === 'vi' ? 'Về đầu trang' : scrollTopLabels[chromeSiteLocale(locale)];
+  const label = locale === 'vi' ? 'Về đầu trang' : folioChrome(locale)?.backToTop ?? scrollTopLabels[chromeSiteLocale(locale)];
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');

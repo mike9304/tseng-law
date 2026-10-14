@@ -19,6 +19,7 @@ import {
 } from '@/data/international-guidance-content';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
+import { folioChrome } from '@/data/intl-design-ui';
 import {
   EXISTING_SITE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
@@ -117,7 +118,7 @@ export default function GuidancePageBody({
           <Reveal>
             <section
               className="section section--light"
-              aria-label="summary"
+              aria-label={folioChrome(locale)?.summary ?? 'summary'}
               data-page-block="answer-summary"
             >
               <div className="container">

@@ -26,6 +26,8 @@ import CriminalBoardLink from './CriminalBoardLink';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { typesetTitle } from '@/lib/ko-middot';
 import columnUiVi from '@/data/column-ui-vi.json';
+import { folioColumnsCopy } from '@/data/intl-design-columns-ui';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 const searchCopy = {
   vi: {
@@ -574,7 +576,9 @@ export default function ColumnsGrid({
         ? '曾雋崴律師審閱'
         : locale === 'ja'
           ? '曾雋崴弁護士監修'
-          : 'Reviewed by Wei Tseng';
+          : isIntlDesignLocale(locale)
+            ? folioColumnsCopy[locale].reviewedBy
+            : 'Reviewed by Wei Tseng';
   const router = useRouter();
   const pathname = usePathname();
   const liveSearchParams = useSearchParams();
@@ -596,7 +600,11 @@ export default function ColumnsGrid({
     : requestedCategory ? null : 'all';
   const [searchInput, setSearchInput] = useState(requestedQuery);
   const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
-  const searchLabels = searchCopy[uiLocale];
+  // Folio locales (id, th, European) have their own search labels; the rest keep the topic-UI locale's.
+  const folioSearch = isIntlDesignLocale(locale) ? folioColumnsCopy[locale] : null;
+  const searchLabels = folioSearch
+    ? { ...folioSearch, resultCount: (n: number) => folioSearch.resultCount.replace('{n}', String(n)) }
+    : searchCopy[uiLocale];
   // Locales with native topic labels group by subject; other guidance locales
   // keep the category labels they already carry.
   const topicMode = isColumnTopicUiLocale(locale);

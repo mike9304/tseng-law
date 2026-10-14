@@ -18,6 +18,7 @@ import { heroTrustCopy } from '@/components/HeroTrustStrip';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { guidanceOfficeCopy, type GuidanceOfficeCopy } from '@/data/international-guidance-offices';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 /**
  * WO-O29 A. The four guidance locales (vi/id/th/fil) used to render a separate
@@ -229,7 +230,7 @@ export default function OfficeMapTabs({
     >
       <div className="container">
         <SectionLabel data-builder-surface-key={labelSurfaceId}>
-          <SurfaceText surfaceKey={labelSurfaceId}>{locale === 'vi' ? guidance?.label : 'OFFICES'}</SurfaceText>
+          <SurfaceText surfaceKey={labelSurfaceId}>{locale === 'vi' || isIntlDesignLocale(locale) ? guidance?.label : 'OFFICES'}</SurfaceText>
         </SectionLabel>
         <h2 className="section-title" data-builder-surface-key={titleSurfaceId}>
           <SurfaceText surfaceKey={titleSurfaceId}>{title}</SurfaceText>

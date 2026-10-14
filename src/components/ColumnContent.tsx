@@ -158,6 +158,7 @@ export default function ColumnContent({
   locale,
   uiLocale = locale,
   sectionIdOffset = 0,
+  tableScrollHint,
 }: {
   content: string;
   locale?: SiteLocale;
@@ -165,6 +166,8 @@ export default function ColumnContent({
   uiLocale?: ColumnUiLocale;
   /** Number of section headings already rendered by an earlier part of the same body. */
   sectionIdOffset?: number;
+  /** Wide-table hint for a page language outside `ColumnUiLocale` (the Folio locales). */
+  tableScrollHint?: string;
 }) {
   return (
     <div className="column-markdown" data-column-content="markdown">
@@ -201,7 +204,7 @@ export default function ColumnContent({
             return <p className="blog-paragraph">{children}</p>;
           },
           table: ({ children }) => {
-            const hint = getColumnTableScrollHint(uiLocale);
+            const hint = tableScrollHint ?? getColumnTableScrollHint(uiLocale);
             return (
               <div
                 className="column-table-wrap"

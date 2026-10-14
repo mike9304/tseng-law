@@ -8,6 +8,8 @@ import { HOME_RESULTS_SHARED_IMAGE_ALT } from '@/components/HomeCaseResultsSplit
 import { buildGuidanceAttorneyFacts } from '@/lib/guidance-attorney-facts';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { GUIDANCE_CONSULTATION_LANGUAGES } from '@/lib/seo';
+import { folioResultsImageAlt } from '@/data/intl-design-ui';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 /**
  * Copy for the guidance-home bands the English home already shows
@@ -59,7 +61,7 @@ export function guidanceHomeResults(locale: GuidanceLocale) {
     summary: home.intro,
     cta: pack.nav.lawyers,
     href: guidancePublicPath(locale, 'lawyers'),
-    imageAlt: HOME_RESULTS_SHARED_IMAGE_ALT,
+    imageAlt: isIntlDesignLocale(locale) ? folioResultsImageAlt[locale] : HOME_RESULTS_SHARED_IMAGE_ALT,
     controlLabels: controls,
   };
 }

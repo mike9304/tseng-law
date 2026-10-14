@@ -29,6 +29,7 @@ import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import { isApplePresentationLocale } from '@/lib/apple-design-locales';
 import { IS_STATIC_SITE } from '@/lib/static-site';
+import { folioChrome } from '@/data/intl-design-ui';
 
 type MegaLink = {
   label: string;
@@ -539,8 +540,10 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
   const skipLabel = guidanceLabels
     ? guidanceLabels.skipLink
     : locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
-  const homeLabel = locale === 'vi' ? 'Trang chủ' : locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
-  const mainNavLabel = locale === 'vi' ? 'Điều hướng chính' : locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main menu';
+  // Folio locales (id, th, European) carry their own chrome labels; every other locale keeps the ladder below.
+  const folioLabels = folioChrome(locale);
+  const homeLabel = folioLabels?.home ?? (locale === 'vi' ? 'Trang chủ' : locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home');
+  const mainNavLabel = folioLabels?.mainMenu ?? (locale === 'vi' ? 'Điều hướng chính' : locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main menu');
   const memberLabels =
     locale === 'ko'
       ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
@@ -878,7 +881,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
           <nav
             className="utility-nav"
             aria-label={
-              locale === 'vi' ? 'Liên kết nhanh' : locale === 'ko'
+              folioLabels ? folioLabels.utilityMenu : locale === 'vi' ? 'Liên kết nhanh' : locale === 'ko'
                 ? '보조 메뉴'
                 : locale === 'zh-hant'
                   ? '輔助選單'

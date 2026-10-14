@@ -1,3 +1,4 @@
+import trafficReenactments20261014 from './traffic-reenactments-20261014.json';
 import massageShoulderReleaseCaptions from './massage-shoulder-release-video-captions.json';
 import inheritanceRecordEnvelopeCaptions from './inheritance-record-envelope-video-captions.json';
 import familyDocumentSortingCaptions from './family-document-sorting-video-captions.json';
@@ -92,6 +93,7 @@ const ADDITIONAL_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsse
 };
 
 const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>> = {
+  ...trafficReenactments20261014,
   "column/zh-hant/taiwan-manufacturing-ai-data-trade-secrets": {
     "id": "manufacturing-ai-data-processing-v1-zh-hant",
     "src": "/videos/columns/485-ai-data-processing.mp4",

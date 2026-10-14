@@ -1,0 +1,11 @@
+/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/601-taiwan-double-yellow-uturn-dashcam-liability.md [ko] sentences=26 mean=32.4 cv=0.503 short=0.192 run3=0.167 opener_rep=0.0 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=1
+  WARN 92% of sentences end in '니다.' — vary endings within the register
+
+/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/602-taiwan-rain-rear-end-braking-dashcam.md [ko] sentences=32 mean=33.7 cv=0.458 short=0.125 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.273 contrast=0 caveat=0 q=1
+  WARN 94% of sentences end in '니다.' — vary endings within the register
+
+/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/601-taiwan-double-yellow-uturn-dashcam-liability.md [zh-hant] sentences=28 mean=28.5 cv=0.488 short=0.25 run3=0.038 opener_rep=0.0 cite_end=0.0 cite_para=0.364 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/602-taiwan-rain-rear-end-braking-dashcam.md [zh-hant] sentences=33 mean=28.0 cv=0.468 short=0.182 run3=0.065 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=1
+  OK — no variety limit violated

@@ -1,0 +1,262 @@
+{
+  "pipeline": "Codex imagegen reference images -> Grok CLI --model grok-4.7 reference_to_video -> reviewed shots -> localized ffmpeg assembly",
+  "videoModelNote": "grok-4.7 is the directing assistant; the video tool uses the provider video-generation backend, not a separately verified video model named Grok 4.7.",
+  "media": [
+    {
+      "id": "uturn-dashcam-reenactment-20261014-v1-ko",
+      "locale": "ko",
+      "path": "/videos/columns/uturn-dashcam-reenactment-20261014-v1-ko.mp4",
+      "duration": 60,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 11764295,
+      "sha256": "94236e614f1c04aa2ee92175370dc9f6345f045a32d22891445213e84d2445fd",
+      "segments": [
+        {
+          "stem": "uturn-01-approach-v2",
+          "duration": 10,
+          "sourceSha256": "3b3aee4e0bb7a1d36be0df195402cfa65400dfd180f8ddda4a535ed35e583c01"
+        },
+        {
+          "stem": "uturn-02-cross",
+          "duration": 10,
+          "sourceSha256": "a7aeec406110dcc43b383f2605e6a43868675d3a57101cc05d97891712fd596d"
+        },
+        {
+          "stem": "uturn-03-contact",
+          "duration": 10,
+          "sourceSha256": "5bd2895eca63627d27871825b51da8a68e515f1d5c7007ac0b6f3c3bc3855e8e"
+        },
+        {
+          "stem": "uturn-04-side-contact-v3",
+          "duration": 15,
+          "sourceSha256": "a5303382a9b14c33a1a3f58768a1cd476e78d10632cc791e7a7483a75f10a887"
+        },
+        {
+          "stem": "uturn-05-aftermath",
+          "duration": 15,
+          "sourceSha256": "f766c9bb4a55a6b6826eab59f1bc1ebf0a4566747837a2aabff006f9c607daff"
+        }
+      ]
+    },
+    {
+      "id": "uturn-dashcam-reenactment-20261014-v1-zh-hant",
+      "locale": "zh-hant",
+      "path": "/videos/columns/uturn-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+      "duration": 60,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 11767751,
+      "sha256": "e604753ab12a2402e5cb24d4ba15966f2e52bf4cef5849c1dbd1146bdd731fb6",
+      "segments": [
+        {
+          "stem": "uturn-01-approach-v2",
+          "duration": 10,
+          "sourceSha256": "3b3aee4e0bb7a1d36be0df195402cfa65400dfd180f8ddda4a535ed35e583c01"
+        },
+        {
+          "stem": "uturn-02-cross",
+          "duration": 10,
+          "sourceSha256": "a7aeec406110dcc43b383f2605e6a43868675d3a57101cc05d97891712fd596d"
+        },
+        {
+          "stem": "uturn-03-contact",
+          "duration": 10,
+          "sourceSha256": "5bd2895eca63627d27871825b51da8a68e515f1d5c7007ac0b6f3c3bc3855e8e"
+        },
+        {
+          "stem": "uturn-04-side-contact-v3",
+          "duration": 15,
+          "sourceSha256": "a5303382a9b14c33a1a3f58768a1cd476e78d10632cc791e7a7483a75f10a887"
+        },
+        {
+          "stem": "uturn-05-aftermath",
+          "duration": 15,
+          "sourceSha256": "f766c9bb4a55a6b6826eab59f1bc1ebf0a4566747837a2aabff006f9c607daff"
+        }
+      ]
+    },
+    {
+      "id": "rain-dashcam-reenactment-20261014-v1-ko",
+      "locale": "ko",
+      "path": "/videos/columns/rain-dashcam-reenactment-20261014-v1-ko.mp4",
+      "duration": 60,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 16781910,
+      "sha256": "13509f7d7c350c95ca0ee91d1e2b9d98d397933731125cc716316065e4557a4d",
+      "segments": [
+        {
+          "stem": "rain-01-follow",
+          "duration": 10,
+          "sourceSha256": "5c6deb7f89b8be947d4b7a58d6a2b63d0f1172a20632b648cbeddcc120bcc589"
+        },
+        {
+          "stem": "rain-02-braking-contact",
+          "duration": 10,
+          "sourceSha256": "c7825f9ceefef970276b504d87a1f51b3ccf45bb7124c0fe7870f2c508421d67"
+        },
+        {
+          "stem": "rain-03-contact",
+          "duration": 10,
+          "sourceSha256": "f4a9f73fef52aaad5cb631a4e19daeeeccd1798f13aa9b8e864a366fc6a07efd"
+        },
+        {
+          "stem": "rain-04-side-contact-v2",
+          "duration": 15,
+          "sourceSha256": "c07fbdd4b225719234620513be86e8eb2fe4ad0bda78b5ddb7d0cdef13378ed0"
+        },
+        {
+          "stem": "rain-05-aftermath",
+          "duration": 15,
+          "sourceSha256": "4993d8975691a7c8d87da325d0e5a946d96f9c48e7f53815c013a59179f55af1"
+        }
+      ]
+    },
+    {
+      "id": "rain-dashcam-reenactment-20261014-v1-zh-hant",
+      "locale": "zh-hant",
+      "path": "/videos/columns/rain-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+      "duration": 60,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 16753235,
+      "sha256": "de2346b1e55601c52aa84a630935c7c6c8b217a91e037c2a4814f4736394608e",
+      "segments": [
+        {
+          "stem": "rain-01-follow",
+          "duration": 10,
+          "sourceSha256": "5c6deb7f89b8be947d4b7a58d6a2b63d0f1172a20632b648cbeddcc120bcc589"
+        },
+        {
+          "stem": "rain-02-braking-contact",
+          "duration": 10,
+          "sourceSha256": "c7825f9ceefef970276b504d87a1f51b3ccf45bb7124c0fe7870f2c508421d67"
+        },
+        {
+          "stem": "rain-03-contact",
+          "duration": 10,
+          "sourceSha256": "f4a9f73fef52aaad5cb631a4e19daeeeccd1798f13aa9b8e864a366fc6a07efd"
+        },
+        {
+          "stem": "rain-04-side-contact-v2",
+          "duration": 15,
+          "sourceSha256": "c07fbdd4b225719234620513be86e8eb2fe4ad0bda78b5ddb7d0cdef13378ed0"
+        },
+        {
+          "stem": "rain-05-aftermath",
+          "duration": 15,
+          "sourceSha256": "4993d8975691a7c8d87da325d0e5a946d96f9c48e7f53815c013a59179f55af1"
+        }
+      ]
+    }
+  ],
+  "generationReceipts": [
+    {
+      "stem": "uturn-01-approach-v2",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "3b3aee4e0bb7a1d36be0df195402cfa65400dfd180f8ddda4a535ed35e583c01",
+      "duration": "10.041667",
+      "toolCallId": "call-9c64996b-5273-4e94-a552-43ff89da61c0-0",
+      "status": "completed"
+    },
+    {
+      "stem": "uturn-02-cross",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "a7aeec406110dcc43b383f2605e6a43868675d3a57101cc05d97891712fd596d",
+      "duration": "10.041667",
+      "toolCallId": "call-d00a159b-d643-43d3-9971-a6706a7ebd33-0",
+      "status": "completed"
+    },
+    {
+      "stem": "uturn-03-contact",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "5bd2895eca63627d27871825b51da8a68e515f1d5c7007ac0b6f3c3bc3855e8e",
+      "duration": "10.041667",
+      "toolCallId": "call-64462edd-11ec-446a-84d0-05a59113db2b-0",
+      "status": "completed"
+    },
+    {
+      "stem": "uturn-04-side-contact-v3",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "a5303382a9b14c33a1a3f58768a1cd476e78d10632cc791e7a7483a75f10a887",
+      "duration": "15.041667",
+      "toolCallId": "call-a8c8f56d-ed56-4a3e-a81c-351b7b10dbf9-0",
+      "status": "completed"
+    },
+    {
+      "stem": "uturn-05-aftermath",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "f766c9bb4a55a6b6826eab59f1bc1ebf0a4566747837a2aabff006f9c607daff",
+      "duration": "15.041667",
+      "toolCallId": "call-47c150b8-7fbd-4ab5-a7a3-3e0c5dc884fc-0",
+      "status": "completed"
+    },
+    {
+      "stem": "rain-01-follow",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "5c6deb7f89b8be947d4b7a58d6a2b63d0f1172a20632b648cbeddcc120bcc589",
+      "duration": "10.041667",
+      "toolCallId": "call-0b1e19ef-3ff4-4fbc-b916-9fbfce9ce0af-0",
+      "status": "completed"
+    },
+    {
+      "stem": "rain-02-braking-contact",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "c7825f9ceefef970276b504d87a1f51b3ccf45bb7124c0fe7870f2c508421d67",
+      "duration": "10.041667",
+      "toolCallId": "call-5b2fbb42-7001-4388-95c9-a605f5e8433b-0",
+      "status": "completed"
+    },
+    {
+      "stem": "rain-03-contact",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "f4a9f73fef52aaad5cb631a4e19daeeeccd1798f13aa9b8e864a366fc6a07efd",
+      "duration": "10.041667",
+      "toolCallId": "call-e4e9ef81-fa7e-4e18-ad7e-b04c565deadc-0",
+      "status": "completed"
+    },
+    {
+      "stem": "rain-04-side-contact-v2",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "c07fbdd4b225719234620513be86e8eb2fe4ad0bda78b5ddb7d0cdef13378ed0",
+      "duration": "15.041667",
+      "toolCallId": "call-11762dc3-a3bb-4611-b038-b97cf71b9d9c-0",
+      "status": "completed"
+    },
+    {
+      "stem": "rain-05-aftermath",
+      "provider": "Grok 4.7 reference_to_video",
+      "sha256": "4993d8975691a7c8d87da325d0e5a946d96f9c48e7f53815c013a59179f55af1",
+      "duration": "15.041667",
+      "toolCallId": "call-4328a350-110f-4f84-b5c8-9f4a5b2b2481-0",
+      "status": "completed"
+    }
+  ],
+  "content": [
+    {
+      "path": "src/content/columns/601-taiwan-double-yellow-uturn-dashcam-liability.md",
+      "locale": "ko",
+      "sha256": "f3622a20fc99ec62063589d17b8ccc3daa61c7f0e6bd11c67dc0cd5bdff07904"
+    },
+    {
+      "path": "src/content/columns/602-taiwan-rain-rear-end-braking-dashcam.md",
+      "locale": "ko",
+      "sha256": "069e93348906a27b10e9c18825842c882c062de2d6761afecd877fadb1187f07"
+    },
+    {
+      "path": "src/content/columns-zh/601-taiwan-double-yellow-uturn-dashcam-liability.md",
+      "locale": "zh-hant",
+      "sha256": "000ba80c9faff45ad7a3d235c14839464a7080f9671f874a965321a21638c577"
+    },
+    {
+      "path": "src/content/columns-zh/602-taiwan-rain-rear-end-braking-dashcam.md",
+      "locale": "zh-hant",
+      "sha256": "867f3904116da27dcf31008cb217a2c3c8ffc82f36ce8b307f82135cfac08800"
+    }
+  ]
+}

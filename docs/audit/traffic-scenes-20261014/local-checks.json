@@ -1,0 +1,41 @@
+{
+  "verifiedAt": "2026-10-14T07:51:31.094211+00:00",
+  "baseCommit": "6e201485dd8d982125bf37add0ed85f94f0447fa",
+  "fullUnitRun": {
+    "filesPassed": 1423,
+    "filesFailed": 1,
+    "testsPassed": 14665,
+    "testsFailed": 1,
+    "skipped": 14,
+    "todo": 1,
+    "durationSeconds": 210.55,
+    "remainingFailure": "sitemap expected inventory omitted the four new locale URLs"
+  },
+  "followup": {
+    "file": "src/app/__tests__/sitemap.test.ts",
+    "testsPassed": 36,
+    "testsFailed": 0,
+    "fix": "Add explicit TRAFFIC_SCENE_COLUMN_FILES_20261014 to both before/after inventory sums; preserve excluded noindex count 9."
+  },
+  "earlierFailureNotes": "Initial full run also exposed shared locale-specific content inventory and missing pending embedding entries, corrected by registering the exact new ko/zh-hant files. Child processes picked the broken Homebrew Node; the final full run used NVM Node 24.14.1 at the front of PATH. Machine Node installation was not changed.",
+  "lint": "changed TypeScript/TSX files: passed, zero warnings",
+  "media": "4 H.264 files, full decode passed, 60.000s each, no audio, 1280x720 24fps; all listed source and final frames reviewed as described in REVIEW.md",
+  "logs": {
+    "full-unit-tests.log": {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/full-unit-tests.log",
+      "sha256": "1613310450af7412f68b7af9999292b1cb364f7f5a58895964753d82727cb49e"
+    },
+    "full-unit-tests-final.log": {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/full-unit-tests-final.log",
+      "sha256": "5395089e30bc941457c2d33720eadb8056d3338d530754fee88f6534ee3ec7c3"
+    },
+    "sitemap-final.log": {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/sitemap-final.log",
+      "sha256": "e8e2a10733266f92f26e98dcbbe0230f24d2ac0e223bfc1638bda8156540e068"
+    },
+    "lint-final.log": {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -27,6 +27,7 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   COUNTRY_COLUMN_FILES_20261007,
   COUNTRY_COLUMN_FILES_20261013,
   COUNTRY_COLUMN_FILES_20261014,
+  TRAFFIC_SCENE_COLUMN_FILES_20261014,
   ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 import { TAX_ACCOUNTING_COLUMN_FILES } from '@/lib/__tests__/tax-accounting-column-files';
 import { CRIMINAL_COLUMN_FILES_20261008 } from '@/lib/__tests__/criminal-coverage-column-files';
@@ -327,6 +328,7 @@ describe('sitemap column lastModified', () => {
           + Object.entries(COUNTRY_COLUMN_FILES_20261014)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
+          + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
         520 + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
@@ -352,6 +354,7 @@ describe('sitemap column lastModified', () => {
           + Object.entries(COUNTRY_COLUMN_FILES_20261014)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
+          + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });

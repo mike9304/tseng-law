@@ -633,6 +633,18 @@ export const COUNTRY_COLUMN_FILES_20261014 = {
   ],
 } as const;
 
+/** Fictional dashcam scenarios, authored only in Korean and Traditional Chinese. */
+export const TRAFFIC_SCENE_COLUMN_FILES_20261014 = {
+  ko: [
+    '601-taiwan-double-yellow-uturn-dashcam-liability.md',
+    '602-taiwan-rain-rear-end-braking-dashcam.md',
+  ],
+  'zh-hant': [
+    '601-taiwan-double-yellow-uturn-dashcam-liability.md',
+    '602-taiwan-rain-rear-end-braking-dashcam.md',
+  ],
+} as const;
+
 /** Registered locale-specific batches through 2026-10-14, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
@@ -651,6 +663,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261007 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261013 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((AIR_COLUMN_FILES_20261011 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -680,6 +693,7 @@ export function expertiseSlugsFor(locale: string): string[] {
 export function archiveLeadSlugsFor(locale: string): string[] {
   const day20261014: readonly string[] = [
     ...((COUNTRY_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(taxAccountingFilesPublishedOn('2026-10-14')[locale] ?? []),
   ];
   const day20261013: readonly string[] =
@@ -733,7 +747,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-14). */
 export function archiveLeadPublicationDate(slug: string): string {
-  const day20261014 = [...Object.values(COUNTRY_COLUMN_FILES_20261014), ...Object.values(taxAccountingFilesPublishedOn('2026-10-14')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
+  const day20261014 = [...Object.values(COUNTRY_COLUMN_FILES_20261014), ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014), ...Object.values(taxAccountingFilesPublishedOn('2026-10-14')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261014.includes(slug)) return '2026-10-14';
   if (Object.values(COUNTRY_COLUMN_FILES_20261013).flat().map(slugOf).includes(slug)) return '2026-10-13';
   if (Object.values(AIR_COLUMN_FILES_20261011).flat().map(slugOf).includes(slug)) return AIR_COLUMN_PUBLICATION_DATE;
@@ -800,6 +814,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261007),
     ...Object.values(COUNTRY_COLUMN_FILES_20261013),
     ...Object.values(COUNTRY_COLUMN_FILES_20261014),
+    ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(NEXT_TOPIC_COLUMN_FILES_20261010),
     ...Object.values(AIR_COLUMN_FILES_20261011),
     ...Object.values(GAP_COLUMN_FILES_20261010),

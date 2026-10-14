@@ -1,0 +1,319 @@
+{
+  "base": "https://tseng-law.com",
+  "checkedAt": "2026-10-14T09:53:06.768Z",
+  "rows": [
+    {
+      "action": "article",
+      "locale": "ko",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "title": "대만 황색 이중선 유턴 사고, 방향지시등을 켜도 금지되는 구간",
+      "caption": "AI로 만든 유턴 사고 가상 장면입니다. 실제 사고 사진이 아닙니다.",
+      "id": "uturn",
+      "query": "황색 이중선",
+      "width": 390,
+      "status": 200,
+      "bodySha256": "ed0914bb1af8e698dffeeda23d7f785006af86c4d7c514cbf004af6dcb1295f1",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-double-yellow-uturn-dashcam-liability",
+      "sources": 10,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/uturn-dashcam-reenactment-20261014-v1-ko.mp4",
+        "duration": 60,
+        "time": 0.211053,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI로 만든 가상 사고 재현입니다. 실제 블랙박스·CCTV나 특정 사건의 증거가 아니며, 속도·거리·충돌 시점·과실 비율을 측정한 영상이 아닙니다.",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "article",
+      "locale": "ko",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "title": "빗길에서 앞차가 급제동한 뒤 추돌했다면, 블랙박스에서 볼 두 차량의 움직임",
+      "caption": "AI로 만든 빗길 추돌 가상 장면입니다. 실제 사고나 제동거리 실험 사진이 아닙니다.",
+      "id": "rain",
+      "query": "빗길",
+      "width": 390,
+      "status": 200,
+      "bodySha256": "3bc1977b2fe7f2e3daf4475647733228fcee4e70e364ffa1fbbb82c3532e7c37",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-rain-rear-end-braking-dashcam",
+      "sources": 8,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rain-dashcam-reenactment-20261014-v1-ko.mp4",
+        "duration": 60,
+        "time": 0.207476,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI로 만든 가상 사고 재현입니다. 실제 블랙박스·CCTV나 특정 사건의 증거가 아니며, 속도·거리·충돌 시점·과실 비율을 측정한 영상이 아닙니다.",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "article",
+      "locale": "zh-hant",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "title": "跨越雙黃線迴轉撞上直行車，打了方向燈仍不能迴轉",
+      "caption": "AI生成的迴轉事故虛構情境，並非真實事故照片。",
+      "id": "uturn",
+      "query": "雙黃線",
+      "width": 390,
+      "status": 200,
+      "bodySha256": "2924d94fda324e82a280ca6ff0b110274d93613aaef855b3941e2d4c38c74de6",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-double-yellow-uturn-dashcam-liability",
+      "sources": 10,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/uturn-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+        "duration": 60,
+        "time": 0.205998,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI生成的虛構事故情境。非真實行車紀錄器、監視器或特定案件證據，未測量車速、距離、碰撞時間或責任比例。",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "article",
+      "locale": "zh-hant",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "title": "雨天前車急煞後遭追撞，兩台車的動向要一起看",
+      "caption": "AI生成的雨天追撞虛構情境，非真實事故照片或煞車距離實驗。",
+      "id": "rain",
+      "query": "雨天",
+      "width": 390,
+      "status": 200,
+      "bodySha256": "8de35e416f3fcb3b67e682d81b92b40b47988685d738ce0fd4156293b74b70f8",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-rain-rear-end-braking-dashcam",
+      "sources": 8,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rain-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+        "duration": 60,
+        "time": 0.216739,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI生成的虛構事故情境。非真實行車紀錄器、監視器或特定案件證據，未測量車速、距離、碰撞時間或責任比例。",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "article",
+      "locale": "ko",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "title": "대만 황색 이중선 유턴 사고, 방향지시등을 켜도 금지되는 구간",
+      "caption": "AI로 만든 유턴 사고 가상 장면입니다. 실제 사고 사진이 아닙니다.",
+      "id": "uturn",
+      "query": "황색 이중선",
+      "width": 1440,
+      "status": 200,
+      "bodySha256": "ed0914bb1af8e698dffeeda23d7f785006af86c4d7c514cbf004af6dcb1295f1",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-double-yellow-uturn-dashcam-liability",
+      "sources": 10,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/uturn-dashcam-reenactment-20261014-v1-ko.mp4",
+        "duration": 60,
+        "time": 0.210076,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI로 만든 가상 사고 재현입니다. 실제 블랙박스·CCTV나 특정 사건의 증거가 아니며, 속도·거리·충돌 시점·과실 비율을 측정한 영상이 아닙니다.",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "article",
+      "locale": "ko",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "title": "빗길에서 앞차가 급제동한 뒤 추돌했다면, 블랙박스에서 볼 두 차량의 움직임",
+      "caption": "AI로 만든 빗길 추돌 가상 장면입니다. 실제 사고나 제동거리 실험 사진이 아닙니다.",
+      "id": "rain",
+      "query": "빗길",
+      "width": 1440,
+      "status": 200,
+      "bodySha256": "3bc1977b2fe7f2e3daf4475647733228fcee4e70e364ffa1fbbb82c3532e7c37",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-rain-rear-end-braking-dashcam",
+      "sources": 8,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rain-dashcam-reenactment-20261014-v1-ko.mp4",
+        "duration": 60,
+        "time": 0.202561,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI로 만든 가상 사고 재현입니다. 실제 블랙박스·CCTV나 특정 사건의 증거가 아니며, 속도·거리·충돌 시점·과실 비율을 측정한 영상이 아닙니다.",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "article",
+      "locale": "zh-hant",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "title": "跨越雙黃線迴轉撞上直行車，打了方向燈仍不能迴轉",
+      "caption": "AI生成的迴轉事故虛構情境，並非真實事故照片。",
+      "id": "uturn",
+      "query": "雙黃線",
+      "width": 1440,
+      "status": 200,
+      "bodySha256": "2924d94fda324e82a280ca6ff0b110274d93613aaef855b3941e2d4c38c74de6",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-double-yellow-uturn-dashcam-liability",
+      "sources": 10,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/uturn-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+        "duration": 60,
+        "time": 0.204669,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI生成的虛構事故情境。非真實行車紀錄器、監視器或特定案件證據，未測量車速、距離、碰撞時間或責任比例。",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "article",
+      "locale": "zh-hant",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "title": "雨天前車急煞後遭追撞，兩台車的動向要一起看",
+      "caption": "AI生成的雨天追撞虛構情境，非真實事故照片或煞車距離實驗。",
+      "id": "rain",
+      "query": "雨天",
+      "width": 1440,
+      "status": 200,
+      "bodySha256": "8de35e416f3fcb3b67e682d81b92b40b47988685d738ce0fd4156293b74b70f8",
+      "referenceMatch": true,
+      "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-rain-rear-end-braking-dashcam",
+      "sources": 8,
+      "bold": 0,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rain-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+        "duration": 60,
+        "time": 0.209035,
+        "controls": true,
+        "loop": false,
+        "width": 1280,
+        "height": 720
+      },
+      "disclosure": "AI生成的虛構事故情境。非真實行車紀錄器、監視器或特定案件證據，未測量車速、距離、碰撞時間或責任比例。",
+      "ended": {
+        "ended": true,
+        "time": 60
+      },
+      "overflow": false,
+      "bad": [],
+      "apis": []
+    },
+    {
+      "action": "discovery-real-clicks",
+      "locale": "ko",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "title": "대만 황색 이중선 유턴 사고, 방향지시등을 켜도 금지되는 구간",
+      "caption": "AI로 만든 유턴 사고 가상 장면입니다. 실제 사고 사진이 아닙니다.",
+      "id": "uturn",
+      "query": "황색 이중선",
+      "board": true,
+      "search": true
+    },
+    {
+      "action": "discovery-real-clicks",
+      "locale": "ko",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "title": "빗길에서 앞차가 급제동한 뒤 추돌했다면, 블랙박스에서 볼 두 차량의 움직임",
+      "caption": "AI로 만든 빗길 추돌 가상 장면입니다. 실제 사고나 제동거리 실험 사진이 아닙니다.",
+      "id": "rain",
+      "query": "빗길",
+      "board": true,
+      "search": true
+    },
+    {
+      "action": "discovery-real-clicks",
+      "locale": "zh-hant",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "title": "跨越雙黃線迴轉撞上直行車，打了方向燈仍不能迴轉",
+      "caption": "AI生成的迴轉事故虛構情境，並非真實事故照片。",
+      "id": "uturn",
+      "query": "雙黃線",
+      "board": true,
+      "search": true
+    },
+    {
+      "action": "discovery-real-clicks",
+      "locale": "zh-hant",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "title": "雨天前車急煞後遭追撞，兩台車的動向要一起看",
+      "caption": "AI生成的雨天追撞虛構情境，非真實事故照片或煞車距離實驗。",
+      "id": "rain",
+      "query": "雨天",
+      "board": true,
+      "search": true
+    },
+    {
+      "action": "sitemap",
+      "newUrls": 4
+    }
+  ],
+  "errors": []
+}

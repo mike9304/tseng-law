@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-14T09:52:23.956Z",
+  "rows": [
+    {
+      "id": "uturn-dashcam-reenactment-20261014-v1-ko",
+      "url": "https://media.tseng-law.com/videos/columns/uturn-dashcam-reenactment-20261014-v1-ko.mp4",
+      "status": 200,
+      "type": "video/mp4",
+      "bytes": 11764295,
+      "sha256": "94236e614f1c04aa2ee92175370dc9f6345f045a32d22891445213e84d2445fd",
+      "hashMatches": true,
+      "rangeStatus": 206,
+      "rangeBytes": 1024,
+      "contentRange": "bytes 0-1023/11764295"
+    },
+    {
+      "id": "uturn-dashcam-reenactment-20261014-v1-zh-hant",
+      "url": "https://media.tseng-law.com/videos/columns/uturn-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+      "status": 200,
+      "type": "video/mp4",
+      "bytes": 11767751,
+      "sha256": "e604753ab12a2402e5cb24d4ba15966f2e52bf4cef5849c1dbd1146bdd731fb6",
+      "hashMatches": true,
+      "rangeStatus": 206,
+      "rangeBytes": 1024,
+      "contentRange": "bytes 0-1023/11767751"
+    },
+    {
+      "id": "rain-dashcam-reenactment-20261014-v1-ko",
+      "url": "https://media.tseng-law.com/videos/columns/rain-dashcam-reenactment-20261014-v1-ko.mp4",
+      "status": 200,
+      "type": "video/mp4",
+      "bytes": 16781910,
+      "sha256": "13509f7d7c350c95ca0ee91d1e2b9d98d397933731125cc716316065e4557a4d",
+      "hashMatches": true,
+      "rangeStatus": 206,
+      "rangeBytes": 1024,
+      "contentRange": "bytes 0-1023/16781910"
+    },
+    {
+      "id": "rain-dashcam-reenactment-20261014-v1-zh-hant",
+      "url": "https://media.tseng-law.com/videos/columns/rain-dashcam-reenactment-20261014-v1-zh-hant.mp4",
+      "status": 200,
+      "type": "video/mp4",
+      "bytes": 16753235,
+      "sha256": "de2346b1e55601c52aa84a630935c7c6c8b217a91e037c2a4814f4736394608e",
+      "hashMatches": true,
+      "rangeStatus": 206,
+      "rangeBytes": 1024,
+      "contentRange": "bytes 0-1023/16753235"
+    },
+    {
+      "key": "images/column-videos/uturn-dashcam-reenactment-20261014-v1-ko.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 178483,
+      "matches": true
+    },
+    {
+      "key": "images/column-videos/uturn-dashcam-reenactment-20261014-v1-zh-hant.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 181622,
+      "matches": true
+    },
+    {
+      "key": "images/column-videos/rain-dashcam-reenactment-20261014-v1-ko.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 172223,
+      "matches": true
+    },
+    {
+      "key": "images/column-videos/rain-dashcam-reenactment-20261014-v1-zh-hant.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 173934,
+      "matches": true
+    },
+    {
+      "key": "images/blog/601-taiwan-double-yellow-uturn-dashcam-liability/featured-01.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 140844,
+      "matches": true
+    },
+    {
+      "key": "images/blog/602-taiwan-rain-rear-end-braking-dashcam/featured-01.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 150672,
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-14T08:08:19.930856+00:00",
+  "build": {
+    "commit": "b8dc2ce7b2a81a8990e19f9650edb59e313e4710",
+    "builtAt": "2026-10-14T08:06:49.204Z"
+  },
+  "cleanBuild": true,
+  "pages": 2205,
+  "sitemapUrls": 2200,
+  "sitemapMissing": [],
+  "crawlMissing": [],
+  "brokenRefs": {},
+  "flightErrors": {},
+  "existingMissingMedia": [
+    "images/004-taiwan-employment-contract-guide/featured-01.jpg",
+    "images/hover.jpg",
+    "images/video-poster.jpg",
+    "videos/builder-background.mp4",
+    "videos/intro.mp4"
+  ],
+  "newMissingMedia": [],
+  "dataMirror": null,
+  "note": "Local file-backed build. Do not claim frozen builder data matches the Air deployment mirror. Public new-column text and asset hashes must still be verified."
+}

@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-14T08:03:21.530Z",
+  "rows": [
+    {
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "wallSeconds": 59.973,
+      "src": "http://127.0.0.1:4672/videos/columns/uturn-dashcam-reenactment-20261014-v1-ko.mp4",
+      "duration": 60,
+      "currentTime": 60,
+      "ended": true,
+      "loop": false,
+      "errors": []
+    },
+    {
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "wallSeconds": 59.979,
+      "src": "http://127.0.0.1:4672/videos/columns/rain-dashcam-reenactment-20261014-v1-ko.mp4",
+      "duration": 60,
+      "currentTime": 60,
+      "ended": true,
+      "loop": false,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "verifiedAt": "2026-10-14T09:54:31.138746+00:00",
+  "result": "PASS",
+  "publicBuild": {
+    "commit": "b8dc2ce7b2a81a8990e19f9650edb59e313e4710",
+    "builtAt": "2026-10-14T09:08:18.185Z",
+    "checkedBeforeAndAfterBrowserQA": true
+  },
+  "publicArticleScreens": 8,
+  "publicDiscoveryRealClicks": 8,
+  "newSitemapUrls": 4,
+  "mediaChecks": 10,
+  "browserErrors": 0,
+  "visuallyInspectedScreenshots": [
+    {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/public-browser/uturn-ko-390-top.png",
+      "sha256": "3ee25f9f62b017888c3f3ef1401197d500f71d96cb99045b33f710d312904dea"
+    },
+    {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/public-browser/rain-zh-hant-390-playing.png",
+      "sha256": "9513ce04a395421582c1a92aeae155efe44f51714d291cff47264cc9b9fe02db"
+    },
+    {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/public-browser/uturn-zh-hant-1440-46s.png",
+      "sha256": "c7db1bd11414bfc3a379ca86462f13c293ab10ac5c414088a277518e20b51558"
+    },
+    {
+      "path": "/Users/son7/tseng-traffic-scenes-20261014/qa/public-browser/rain-ko-1440-top.png",
+      "sha256": "53e0fce29b1b8e9a32ec05cac647fbcf6adb25809508d0ff486258ed50cf0d09"
+    }
+  ],
+  "scopeNotes": [
+    "Public playback used actual keyboard Space, later-position seeking, and natural end from 58.8 seconds in all eight viewport/article cases.",
+    "Separate local non-seeking playback of both scenario videos ran to 60 seconds. Public MP4 SHA256 hashes match those reviewed files.",
+    "Local static build had no frozen Air data mirror. All four public article bodies match the reviewed local body hashes.",
+    "Codex reviewed the work directly; no external lawyer, native reviewer or Fable approval is claimed."
+  ]
+}

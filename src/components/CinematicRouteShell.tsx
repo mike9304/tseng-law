@@ -9,6 +9,8 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import CinematicOpening from '@/components/CinematicOpening';
+import folioStyles from '@/components/intl-design/IntlDesign.module.css';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
 
@@ -77,7 +79,8 @@ export default function CinematicRouteShell({
 
   return (
     <div
-      className="site"
+      // Folio (2026-10-15): id, th and the 27 European locales share one scoped design under this class.
+      className={isIntlDesignLocale(locale) ? `site ${folioStyles.folio}` : 'site'}
       data-locale={locale}
       // The 45 guidance languages: their pages share one sans display layer in globals.css (2026-10-06).
       data-guidance-locale={isGuidanceLocale4(locale) ? '' : undefined}

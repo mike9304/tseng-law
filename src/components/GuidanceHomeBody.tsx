@@ -7,6 +7,8 @@ import Link from 'next/link';
 
 import FAQAccordion from '@/components/FAQAccordion';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
+import IntlHeroPlate from '@/components/intl-design/IntlHeroPlate';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 import HomeAttorneySplit from '@/components/HomeAttorneySplit';
 import HomeCaseResultsSplit from '@/components/HomeCaseResultsSplit';
 import HomeStatsSection from '@/components/HomeStatsSection';
@@ -131,7 +133,13 @@ function GuidanceHero({ locale }: { locale: GuidanceLocale }) {
 
   return (
     <section className="hero" id="hero" data-tone="dark">
-      <HeroMediaBackground controlLabels={controlLabels} />
+      {/* Folio locales show a framed plate instead of the full-bleed courthouse film, so that 5.7 MB film is never
+          requested there (hiding it with CSS alone would still download it). */}
+      {isIntlDesignLocale(locale) ? (
+        <IntlHeroPlate locale={locale} />
+      ) : (
+        <HeroMediaBackground controlLabels={controlLabels} />
+      )}
       <div className="container hero-inner">
         <div className="hero-copy">
           <SectionLabel>{page.eyebrow}</SectionLabel>

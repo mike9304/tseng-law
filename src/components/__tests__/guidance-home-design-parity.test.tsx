@@ -35,6 +35,7 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import Header from '@/components/Header';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 import GuidancePageBody from '@/components/GuidancePageBody';
 import {
   AboutLegacyPageBody,
@@ -177,7 +178,8 @@ describe('guidance home matches the English home composition', () => {
   it('uses the shared hero, archive and service-card markup', () => {
     for (const locale of GUIDANCE_LOCALES_4) {
       const markup = renderGuidanceHome(locale);
-      expect(markup, `${locale} hero media`).toContain('class="hero-media"');
+      // Folio locales (2026-10-15) frame a still/film plate instead of the full-bleed courthouse film.
+      expect(markup, `${locale} hero media`).toContain(isIntlDesignLocale(locale) ? 'data-intl-hero-plate' : 'class="hero-media"');
       expect(markup, `${locale} hero actions`).toContain('hero-links-minimal hero-cta-actions');
       expect(markup, `${locale} archive grid`).toContain('class="insights-grid"');
       expect(markup, `${locale} archive featured`).toContain('class="insights-featured"');
@@ -241,7 +243,10 @@ describe('guidance home matches the English home composition', () => {
         .replace(/(alt|aria-label|title)="[^"]*"/g, '$1=""')
         .replace(new RegExp(`"/${locale}/`, 'g'), '"/{locale}/')
         .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"')
-        .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-'),
+        .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-')
+        // Folio locales (2026-10-15) carry a framed plate instead of the courthouse film; the hero media block is
+        // asserted separately ("uses the shared hero…"), everything after it must still match.
+        .replace(/(<section class="hero" id="hero" data-tone="dark">)[\s\S]*?(<div class="container hero-inner">)/, '$1$2'),
     );
     shapes.forEach((shape, index) => {
       expect(shape, `guidance home of ${sharedLocales[index]} differs structurally from ${sharedLocales[0]}`).toEqual(shapes[0]);

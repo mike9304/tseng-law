@@ -1,0 +1,25 @@
+# C1 afix1 — 2026-10-14
+
+Edited ko.md, ja.md, en.md and zh-hant.md directly. Codex performed the checks; no lawyer or human native-speaker review is claimed.
+
+- L1 — “차액도”, “差額も”, and equivalent employer-half-pay-plus-top-up wording could imply cumulative payments → all four summaries, payment paragraphs and FAQ 1 now state the half-wage entitlement first: without the relevant insurance benefit, the employer pays half wages; with a lower benefit, the employer supplies the shortfall to that level. Preserved the shared annual 30-day window and employer responsibility; added no withholding, clawback or reimbursement procedure → [Leave Rules 4(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=4).
+- L2 — EN “in person” implied physical attendance when requesting leave → “must personally state”, retaining advance timing, reason AND duration, oral OR written submission, emergency delegation and document-request discretion. Also used “personally” consistently for personal handling/care → [Leave Rules 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=10), [7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=7), [Gender Equality in Employment Act 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=20).
+- Eligibility and threshold — compressed FAQ insurance conditions and KO “1년이면” → FAQ 1 retains all hospitalization-benefit conditions; KO now says pre-event insurance periods total “1년 이상이면”. Preserved the fourth-day start, insured-salary basis, half-monthly payments and six-plus-six-month limits → [Labor Insurance Act 33](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=33), [35](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050001&flno=35).
+- Scope and exceptions — summaries omitted the statutory qualification to ten-day protection, and FAQ 3 omitted the termination-bar exception → restored those qualifications; FAQ 3 retains the exceeded ceiling, personal OR annual leave offset, continuing illness, permissive unpaid absence and one-year maximum. KO body now explicitly says 무급휴직 → [Leave Rules 9-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=9-1), [5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=5), [Labor Standards Act 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13).
+- Citations and length → added inline official links to FAQs and each leave-table row; removed a repeated EN outpatient explanation already present above, shortened ZH phrasing, and removed generic KO/ZH scope announcements. Conditions and all 24 distinct original official URLs remain; each language's sources list covers every body/FAQ source.
+- F1 input check → disregarded facts.md’s inconsistent “Tuesday through Thursday … four days”. The KO hypothetical correctly remains Monday–Thursday, four days, returning Friday. The input fact sheet was not edited; the fictional scene has no external source.
+
+Fresh curl verification retrieved all 23 linked statute articles, the Leave Rules history, four full-law pages for amendment dates, and referenced Labor Standards Act articles 50 and 59: 30 successful fetches. All 22 cited articles present in research/C1-statutes.md exactly match official text after whitespace normalization; article 38 was checked separately. Both amendment/effective-date pairs match [article 12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030006&flno=12) and the [history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006). Evidence and original snapshots: `/private/tmp/c1-afix1/`. No judgment text files exist and no judgment is cited.
+
+Final prescribed checks:
+
+| Language | lint.py | Body length | variety_metrics.py |
+|---|---|---:|---|
+| ko | OK | 3,487 characters | 0 FAIL; CV 0.511 |
+| ja | OK | 3,909 characters | 0 FAIL; CV 0.477 |
+| en | OK | 1,565 words | 0 FAIL; CV 0.506 |
+| zh-hant | OK | 2,700 characters | 0 FAIL; CV 0.559 |
+
+The final review listed no MONOTONY rejection. Section 5 self-check completed: substantive openings, at least two very short sentences, varied paragraph starts, uncited hypothetical/question paragraphs, no repeated three-paragraph claim–citation–caveat sequence, no contrast templates, factual endings, consistent KO/JA polite registers, and preserved legal conditions and hypothetical labels. Checked C2–C6 openings and the three recent columns per language identified in round 3. Deleting the substantive sentences in C1’s first two paragraphs would remove a payment condition, coverage, limit, protection, date or source relationship. KO/JA retain the existing 94% polite-ending WARN; neither is a FAIL.
+
+Author metadata remains `legal-ai-assistant`; all three existing internal links per language remain. No bold, phone number, street address, private-party name or review credential was added. Image bytes and metadata are unchanged (SHA-256 `81376c7d41771977e532ac067583b290c88f4cebd08084c992f8fedb8eedbb27`). No Git command was run. L1 and L2 are resolved.

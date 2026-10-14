@@ -2021,6 +2021,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-rain-rear-end-braking-dashcam"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-sick-leave-half-pay-ten-day-protection"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-sick-leave-half-pay-ten-day-protection"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-sick-leave-half-pay-ten-day-protection"
     }
   ]
 }

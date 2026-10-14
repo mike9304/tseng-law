@@ -608,16 +608,19 @@ export const COUNTRY_COLUMN_FILES_20261013 = {
 /** Native audience columns published 2026-10-14. */
 export const COUNTRY_COLUMN_FILES_20261014 = {
   ko: [
+    '544-taiwan-subsidiary-korean-outward-investment-remittance.md',
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
   ],
   en: [
+    '546-taiwan-investment-delaware-llc-identity-authority.md',
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
   ],
   ja: [
+    '545-taiwan-investment-japanese-company-documents-authentication.md',
     '540-taiwan-company-preincorporation-contracts-liability.md', // jp-us-kr-20261014
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',

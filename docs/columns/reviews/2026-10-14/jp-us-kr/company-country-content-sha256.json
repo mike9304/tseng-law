@@ -1,0 +1,17 @@
+[
+  {
+    "path": "src/content/columns/544-taiwan-subsidiary-korean-outward-investment-remittance.md",
+    "sha256": "35ea6f572a68384c0ac17b82056071eb7fa3c1d008cb45b19fa8208207c64100",
+    "summaryCharacters": 127
+  },
+  {
+    "path": "src/content/columns-ja/545-taiwan-investment-japanese-company-documents-authentication.md",
+    "sha256": "fc98ac8ed3e146d5b0a01d35d82eeb573106cb94900ceb29e2ac08a718a1ef26",
+    "summaryCharacters": 121
+  },
+  {
+    "path": "src/content/columns-en/546-taiwan-investment-delaware-llc-identity-authority.md",
+    "sha256": "37457d91fd55d1b06bf1ee0b54b3693f1cf121ce489240937891ce7040eb1384",
+    "summaryCharacters": 160
+  }
+]

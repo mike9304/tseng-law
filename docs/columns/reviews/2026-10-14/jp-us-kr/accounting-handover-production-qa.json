@@ -1,0 +1,316 @@
+{
+  "base": "https://tseng-law.com",
+  "checkedAt": "2026-10-14T04:39:35.062Z",
+  "results": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "대만 기장업체를 바꿀 때, 장부 파일과 종이 원본은 누가 보관하나"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 12,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-bookkeeping-provider-records-handover",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/384-taiwan-cross-border-e-services-income-tax-foreign-platforms/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/383-taiwan-free-trade-zone-bonded-factory-science-park-tax/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/382-taiwan-customs-valuation-related-party-imports-transfer-pricing/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/accounting-production/ko-1440.png"
+    },
+    {
+      "locale": "ja",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "台湾の記帳委託先を替えるとき、帳簿データと原本をどう引き継ぐか"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 12,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-bookkeeping-provider-records-handover",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/accounting-production/ja-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "Changing Bookkeepers in Taiwan: The Records Your Company Still Needs"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 12,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-bookkeeping-provider-records-handover",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/accounting-production/en-1440.png"
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "대만 기장업체를 바꿀 때, 장부 파일과 종이 원본은 누가 보관하나"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 12,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-bookkeeping-provider-records-handover",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/384-taiwan-cross-border-e-services-income-tax-foreign-platforms/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/383-taiwan-free-trade-zone-bonded-factory-science-park-tax/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/382-taiwan-customs-valuation-related-party-imports-transfer-pricing/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/accounting-production/ko-390.png"
+    },
+    {
+      "locale": "ko",
+      "action": "related-link-real-click",
+      "url": "https://tseng-law.com/ko/columns/taiwan-cpa-audit-tax-certification-bookkeeping",
+      "target": "_blank",
+      "headings": [
+        "대만 자회사 재무제표의 회계사 감사와 법인세 인증 신고: 자본금·매출·직원 수 기준과 장부 규칙"
+      ]
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "台湾の記帳委託先を替えるとき、帳簿データと原本をどう引き継ぐか"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 12,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-bookkeeping-provider-records-handover",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/accounting-production/ja-390.png"
+    },
+    {
+      "locale": "ja",
+      "action": "related-link-real-click",
+      "url": "https://tseng-law.com/ja/columns/taiwan-cpa-audit-tax-certification-bookkeeping",
+      "target": "_blank",
+      "headings": [
+        "台湾子会社の財務諸表監査と法人税の会計師査核簽証：二つの「1億台湾元」と帳簿のルール"
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "Changing Bookkeepers in Taiwan: The Records Your Company Still Needs"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 12,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-bookkeeping-provider-records-handover",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/accounting-production/en-390.png"
+    },
+    {
+      "locale": "en",
+      "action": "related-link-real-click",
+      "url": "https://tseng-law.com/en/columns/taiwan-cpa-audit-tax-certification-bookkeeping",
+      "target": "_blank",
+      "headings": [
+        "CPA Audits, CPA-Certified Tax Returns and Bookkeeping Rules for Taiwan Subsidiaries and Branches"
+      ]
+    },
+    {
+      "locale": "ko",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ko",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "기장업체"
+    },
+    {
+      "locale": "ja",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ja",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "記帳委託先"
+    },
+    {
+      "locale": "en",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "en",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "Changing Bookkeepers"
+    },
+    {
+      "action": "sitemap",
+      "status": 200,
+      "includes": [
+        {
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "locale": "en",
+          "present": true
+        }
+      ]
+    }
+  ]
+}

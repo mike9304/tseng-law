@@ -1973,6 +1973,14 @@
     {
       "locale": "en",
       "slug": "taiwan-employee-criminal-questioning-company-paid-counsel"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-subsidiary-korean-outward-investment-remittance"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-investment-delaware-llc-identity-authority"
     }
   ]
 }

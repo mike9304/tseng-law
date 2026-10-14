@@ -5,8 +5,8 @@ import pending from '@/content/column-embeddings-pending.json';
 import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 
 const articles = [
-  { slug: 'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence', number: 172, subject: 'evidence', videoId: 'sidewalk-video-film-v1-zh-hant' },
-  { slug: 'taiwan-manhole-pothole-road-authority-utility-internal-recourse', number: 173, subject: 'liability', videoId: 'manhole-recourse-film-v1-zh-hant' },
+  { slug: 'taiwan-video-timing-sidewalk-bicycle-alley-scooter-evidence', number: 172, subject: 'evidence', videoId: 'alley-bicycle-v2-zh-hant' },
+  { slug: 'taiwan-manhole-pothole-road-authority-utility-internal-recourse', number: 173, subject: 'liability', videoId: 'pothole-scooter-v2-zh-hant' },
 ] as const;
 
 describe('video timing and road maintenance columns', () => {

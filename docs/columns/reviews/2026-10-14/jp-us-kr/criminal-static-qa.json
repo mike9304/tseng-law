@@ -1,0 +1,334 @@
+{
+  "base": "http://127.0.0.1:4629",
+  "checkedAt": "2026-10-14T04:06:49.913Z",
+  "results": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "대만에서 직원이 피의자가 됐을 때, 회사가 선임한 변호사는 누구를 변호하나"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 10,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/426-taiwan-online-review-defamation-public-insult/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/criminal-static/ko-1440.png"
+    },
+    {
+      "locale": "ja",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "台湾で従業員が被疑者になったら、会社負担の弁護士は誰を弁護するか"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 10,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/criminal-static/ja-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "When a Taiwan Employee Is a Suspect, Who Is Company-Paid Counsel Defending?"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 10,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/criminal-static/en-1440.png"
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "대만에서 직원이 피의자가 됐을 때, 회사가 선임한 변호사는 누구를 변호하나"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 10,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/426-taiwan-online-review-defamation-public-insult/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/criminal-static/ko-390.png"
+    },
+    {
+      "locale": "ko",
+      "action": "related-link-real-click",
+      "url": "http://127.0.0.1:4629/ko/columns/taiwan-criminal-witness-summons-refuse-testimony",
+      "target": "_blank",
+      "headings": [
+        "대만 형사사건의 증인으로 소환됐다면: 출석과 증언거부권"
+      ]
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "台湾で従業員が被疑者になったら、会社負担の弁護士は誰を弁護するか"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 10,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/criminal-static/ja-390.png"
+    },
+    {
+      "locale": "ja",
+      "action": "related-link-real-click",
+      "url": "http://127.0.0.1:4629/ja/columns/taiwan-criminal-witness-summons-refuse-testimony",
+      "target": "_blank",
+      "headings": [
+        "台湾の刑事事件で証人として呼ばれたら――出頭と証言拒絶"
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "When a Taiwan Employee Is a Suspect, Who Is Company-Paid Counsel Defending?"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 10,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/criminal-static/en-390.png"
+    },
+    {
+      "locale": "en",
+      "action": "related-link-real-click",
+      "url": "http://127.0.0.1:4629/en/columns/taiwan-criminal-witness-summons-refuse-testimony",
+      "target": "_blank",
+      "headings": [
+        "Called as a witness in a Taiwan criminal case"
+      ]
+    },
+    {
+      "locale": "ko",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ko",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "직원이 피의자"
+    },
+    {
+      "locale": "ko",
+      "action": "board-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ja",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ja",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "会社負担"
+    },
+    {
+      "locale": "ja",
+      "action": "board-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "en",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "en",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "Company-Paid Counsel"
+    },
+    {
+      "locale": "en",
+      "action": "board-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "sitemap",
+      "status": 200,
+      "includes": [
+        {
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "locale": "en",
+          "present": true
+        }
+      ]
+    }
+  ]
+}

@@ -23,7 +23,6 @@ import businessPremisesCaptions from './business-premises-video-captions.json';
 import logisticsCaptions from './logistics-video-captions.json';
 import precisionPartsCaptions from './precision-parts-video-captions.json';
 import gymPauseCaptions from './gym-pause-video-captions.json';
-import trafficFilms from './traffic-column-films.json';
 import formationDocumentsCaptions from './formation-documents-video-captions.json';
 import cosmeticsCheckCaptions from './cosmetics-check-video-captions.json';
 import branchModelsCaptions from './branch-models-video-captions.json';
@@ -1002,20 +1001,16 @@ export function getColumnGeneratedVideo(
   source: ColumnVideoSource = 'column',
 ): ColumnGeneratedVideoAsset | null {
   const key = `${source}/${locale}/${slug}`;
-  return (trafficFilms as Readonly<Record<string, ColumnGeneratedVideoAsset>>)[key]
-    ?? REVIEWED_COLUMN_VIDEOS[key]
-    ?? null;
+  return REVIEWED_COLUMN_VIDEOS[key] ?? null;
 }
 
-/** A combined traffic film is one player; other articles retain their reviewed scenes. */
+/** Publish only the separately reviewed scenes; article-summary films are retired. */
 export function getColumnGeneratedVideos(
   locale: string,
   slug: string,
   source: ColumnVideoSource = 'column',
 ): ColumnGeneratedVideoAsset[] {
   const key = `${source}/${locale}/${slug}`;
-  const film = (trafficFilms as Readonly<Record<string, ColumnGeneratedVideoAsset>>)[key];
-  if (film) return [film];
   const primary = getColumnGeneratedVideo(locale, slug, source);
   const additional = ADDITIONAL_COLUMN_VIDEOS[key];
   return [primary, additional].filter((video): video is ColumnGeneratedVideoAsset => Boolean(video));

@@ -58,7 +58,7 @@ describe('public column view publication visibility', () => {
     expect(renderToStaticMarkup(<ColumnDetailView {...hidden} urlLocale="ko" />)).not.toContain('data-column-generated-video');
     const shown = await props(true, true, slug);
     const html = renderToStaticMarkup(<ColumnDetailView {...shown} urlLocale="ko" />);
-    expect(html).toContain('data-column-generated-video="traffic-procedure-film-v1-ko"');
+    expect(html).toContain('data-column-generated-video="rear-end-simulation-v3-ko"');
     expect(html).toContain('preload="metadata"');
     expect(html).toContain('HIDDEN_BODY');
     expect(html).toContain('data-traffic-diagram="stop-dialogue-timeline"');
@@ -75,7 +75,7 @@ describe('public column view publication visibility', () => {
     expect(html).toContain('HIDDEN_BODY');
     expect(html).toContain('id="right-turn-observation"');
     expect(html.match(/<video\b/g)).toHaveLength(1);
-    expect(html).toContain('data-column-generated-video="right-turn-film-v1-zh-hant"');
+    expect(html).toContain('data-column-generated-video="right-turn-scooter-v2-zh-hant"');
     expect(renderToStaticMarkup(<ColumnDetailView {...shown} urlLocale="en" />)).not.toContain('data-traffic-observation');
     expect(renderToStaticMarkup(<ColumnDetailView {...shown} post={{ ...shown.post, slug: 'another-column' }} />)).not.toContain('data-traffic-observation');
   });

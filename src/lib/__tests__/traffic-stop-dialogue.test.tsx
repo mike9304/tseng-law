@@ -32,7 +32,7 @@ describe('reviewed accident departure column', () => {
     expect(matches).toHaveLength(1);
     expect(matches[0]).toMatchObject({ subject: 'evidence', hasVideo: true, columnNumber: 79 });
     expect(filterTrafficBoardItems(matches, { q: '', subject: 'evidence', video: true })).toHaveLength(1);
-    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('stop-dialogue-film-v1-zh-hant');
+    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('stop-dialogue-v1-zh-hant');
     expect(getColumnGeneratedVideo('zh-hant', slug, 'issue')).toBeNull();
     expect(isTrafficVideoDiagram(id)).toBe(false);
     for (const locale of ['ko', 'en', 'ja'] as const) {

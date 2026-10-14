@@ -1,0 +1,289 @@
+{
+  "base": "http://127.0.0.1:4629",
+  "checkedAt": "2026-10-14T04:05:33.723Z",
+  "results": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "대만 소송 전 증거보전, 무엇을 어느 법원에 신청하나"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 11,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/524-taiwan-sentence-fine-conversion-probation-deportation-foreigner/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/523-taiwan-criminal-appeal-twenty-days-third-instance-barred/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/522-taiwan-complaint-only-offense-settlement-withdrawal-deadline/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/civil-static/ko-1440.png"
+    },
+    {
+      "locale": "ja",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "台湾で訴訟を起こす前に証拠を保全する申立て"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 11,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/civil-static/ja-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "headings": [
+        "Preserving Evidence Before a Civil Suit in Taiwan"
+      ],
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": 11,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/civil-static/en-1440.png"
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "대만 소송 전 증거보전, 무엇을 어느 법원에 신청하나"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 11,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/524-taiwan-sentence-fine-conversion-probation-deportation-foreigner/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/523-taiwan-criminal-appeal-twenty-days-third-instance-barred/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/522-taiwan-complaint-only-offense-settlement-withdrawal-deadline/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/civil-static/ko-390.png"
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "台湾で訴訟を起こす前に証拠を保全する申立て"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 11,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/civil-static/ja-390.png"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "headings": [
+        "Preserving Evidence Before a Civil Suit in Taiwan"
+      ],
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": 11,
+      "prohibitedBold": 0,
+      "canonical": "https://tseng-law.com/en/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "penaltyFound": true,
+      "errors": [],
+      "apiRequests": [],
+      "screenshot": "/Users/son7/tseng-jp-us-kr-20261014/qa/civil-static/en-390.png"
+    },
+    {
+      "locale": "ko",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ko",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "증거보전"
+    },
+    {
+      "locale": "ja",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "ja",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "証拠を保全"
+    },
+    {
+      "locale": "en",
+      "action": "archive-discovery",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "locale": "en",
+      "action": "search-discovery",
+      "status": 200,
+      "count": 1,
+      "query": "Preserving Evidence"
+    },
+    {
+      "action": "sitemap",
+      "status": 200,
+      "includes": [
+        {
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "locale": "en",
+          "present": true
+        }
+      ]
+    }
+  ]
+}

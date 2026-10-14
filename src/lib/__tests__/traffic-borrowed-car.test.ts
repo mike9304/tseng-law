@@ -35,7 +35,7 @@ describe('reviewed borrowed-car liability column', () => {
     expect(matches).toHaveLength(1);
     expect(matches[0]).toMatchObject({ subject: 'liability', hasVideo: true, columnNumber: 80, aiAuthored: true });
     expect(filterTrafficBoardItems(matches, { q: '', subject: 'liability', video: true })).toHaveLength(1);
-    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('borrowed-car-film-v1-zh-hant');
+    expect(getColumnGeneratedVideo('zh-hant', slug)?.id).toBe('key-custody-v1-zh-hant');
     expect(getColumnGeneratedVideo('zh-hant', slug, 'issue')).toBeNull();
     const post = getColumnPost(slug, 'zh-hant')!;
     expect(post.diagramVideo).toBeUndefined();

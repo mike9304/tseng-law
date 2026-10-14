@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rear-end-simulation-v3-ko",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "format": {
+      "duration": "4.041667"
+    }
+  },
+  {
+    "id": "overtaking-cutback-v2-ko",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "format": {
+      "duration": "4.041667"
+    }
+  },
+  {
+    "id": "road-rage-freeway-chase-own-dashcam-too-v3-ko",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "format": {
+      "duration": "15.041667"
+    }
+  },
+  {
+    "id": "own-dashcam-cut-in-v2-ko",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "format": {
+      "duration": "4.041667"
+    }
+  }
+]

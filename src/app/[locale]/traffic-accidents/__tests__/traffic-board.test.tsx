@@ -129,10 +129,10 @@ describe('TrafficBoard SSR', () => {
   it('marks playable diagrams and reviewed generated scenes as videos', async () => {
     const html = await render('ja');
     expect(html.match(/data-traffic-board-row/g)).toHaveLength(11);
-    // All six Japanese entries now have a reviewed scene or film.
-    expect(html.match(/data-traffic-board-video/g)).toHaveLength(11);
+    // The police-document article has no independently reviewed scene.
+    expect(html.match(/data-traffic-board-video/g)).toHaveLength(10);
     const filtered = await render('ja', { video: '1' });
-    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(11);
+    expect(filtered.match(/data-traffic-board-row/g)).toHaveLength(10);
     expect(filtered).toContain('href="/ja/columns/taiwan-overtaking-accident-liability"');
     expect(filtered).toContain('href="/ja/columns/taiwan-traffic-accident-procedure"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-two-second-stop-taipei-not-enough"');
@@ -143,7 +143,7 @@ describe('TrafficBoard SSR', () => {
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-reversing-into-tailgater-no-self-defense"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-baseball-bat-fracture-damages"');
     expect(filtered).toContain('href="/ja/columns/taiwan-road-rage-freeway-cut-in-sentence-reduced"');
-    expect(filtered).toContain('href="/ja/columns/taiwan-accident-police-records"');
+    expect(filtered).not.toContain('href="/ja/columns/taiwan-accident-police-records"');
   });
 });
 

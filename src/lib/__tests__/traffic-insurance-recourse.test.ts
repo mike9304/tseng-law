@@ -5,8 +5,8 @@ import pending from '@/content/column-embeddings-pending.json';
 import { getColumnGeneratedVideo } from '@/data/column-generated-videos';
 
 const cases = [
-  ['taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse', '後座乘客', 102, 'compensation', 'passenger-insurance-film-v1-zh-hant'],
-  ['taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction', '補償基金', 103, 'compensation', 'uninsured-fund-film-v1-zh-hant'],
+  ['taiwan-motorcycle-passenger-compulsory-insurance-unlicensed-recourse', '後座乘客', 102, 'compensation', 'passenger-skid-v4-zh-hant'],
+  ['taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction', '補償基金', 103, 'compensation', 'settlement-records-v1-zh-hant'],
 ] as const;
 
 describe('reviewed passenger recourse and uninsured settlement publication batch', () => {

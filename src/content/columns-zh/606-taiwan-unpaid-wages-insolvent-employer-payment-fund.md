@@ -23,8 +23,6 @@ author: "legal-ai-assistant"
 
 # 雇主歇業、清算或宣告破產時，積欠工資的受償順序與墊償基金
 
-勞動契約寫明的月薪已經連續五個月沒有入帳，資遣費那一欄是空的，退休金也尚未給付。大門貼著歇業公告。薪資冊記載的是這家台中公司一名外籍員工的薪資；他曾向負責人追討欠款，卻未獲回覆。以上是虛構情境。契約上的雇主是這家公司。前提是這份契約適用勞動基準法。
-
 歇業、清算、宣告破產。[勞動基準法第28條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28)用這三件事，決定勞工還沒拿到的錢依什麼順序受償。公司仍在營業時，單憑薪水遲發，還不符合第28條。不保證能全額受償。
 
 受償順序在[第28條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28)第1項。下面三款債權，與第一順位抵押權、質權或留置權所擔保的債權同一順位，順序不排在擔保債權之前。同一順位裡，按債權比例受清償。比例分完仍未獲清償的部分，有最優先受清償之權。
@@ -65,7 +63,7 @@ author: "legal-ai-assistant"
 
 想用勞動契約和薪資冊分清雇主是誰、算不算歇業，可以寫信給昊鼎國際法律事務所，信箱是 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。
 
-虛構情境中的員工已向負責人要過錢，仍未獲清償。大門公告代替不了[主管機關的歇業證明](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=8)。[公司須已提繳或事後補繳](https://www.bli.gov.tw/0007239.html)，工資看[歇業前六個月內的勞動契約積欠](https://www.bli.gov.tw/0007239.html)。退休金與資遣費的墊償合計，[上限是六個月平均工資](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28)。按比例未拿到的部分，有[最優先受償權](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28)。
+以歇業為由申請墊償，要提出[辦法第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=8)所定的主管機關證明，並依[第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=9)檢附積欠工資、退休金或資遣費的債權證明文件。
 
 ## 參考的官方資料
 

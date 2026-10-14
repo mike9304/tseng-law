@@ -25,8 +25,6 @@ author: "legal-ai-assistant"
 
 폐업, 청산, 파산선고. [노동기준법 제28조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28)는 이 세 가지가 사용자에게 있을 때, 노동자가 받지 못한 돈의 변제 순서를 정합니다. 회사가 계속 영업 중이면, 월급이 밀린 것만으로는 제28조의 요건이 되지 않습니다.
 
-타이중 공장의 한국인 직원은 월급날 다음날에도 통장이 비어 있었습니다. 정문에는 폐업 안내가 붙었습니다. 사장에게 밀린 임금과 자견비를 물었으나 답이 없었습니다. 가상의 사례입니다. 노동계약의 상대는 그 공장의 회사이고, 노동기준법이 적용되는 고용을 가정합니다.
-
 [같은 법 제2조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=2)는 노동자, 사용자, 임금, 평균임금, 노동계약의 뜻을 정합니다. 사용자는 노동자를 고용하는 사업주, 사업 경영의 책임자, 또는 사업주를 대표해 노동자 사무를 처리하는 사람입니다. 정의가 어느 회사의 임금 채무인지까지 정하지는 않습니다. 지분만 가진 다른 회사를 제28조가 사용자로 지정하지는 않습니다. 노동자란 사용자에게 고용되어 일하고 임금을 받는 사람입니다. 국적은 묻지 않습니다. 노동계약은 고용관계를 약정하고 종속성(從屬性)이 있는 계약입니다. 계약서에 도급이라고 적혀 있어도, 고용되어 임금을 받는지와 종속성이 있는지를 봅니다.
 
 변제 순서는 [제28조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28) 제1항이 정합니다. 임금, 퇴직급여, 자견비의 세 채권은 1순위 저당권, 질권 또는 유치권으로 담보된 채권과 같은 순서로 놓입니다. 그 담보 채권보다 앞서는 순위는 아닙니다. 같은 순위 안에서는 채권액의 비율로 나누어 변제합니다. 비율로 나누고도 받지 못한 부분은 최우선으로 변제받을 권리가 있습니다. 전액은 보장되지 않습니다.
@@ -71,7 +69,7 @@ author: "legal-ai-assistant"
 
 고용계약의 상대방과 폐업인지 아닌지를 계약서와 임금 대장으로 가려 보고 싶다면, 호정(昊鼎)국제법률사무소 이메일 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 보내 주시면 됩니다.
 
-타이중 사례의 직원은 이미 돈을 달라고 했습니다. [폐업 증명은 별도로 필요합니다](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=8). [그 회사가 기금을 냈거나 밀린 분담을 나중에 납부했다면](https://www.bli.gov.tw/0007239.html), 임금 대지급 대상은 [폐업 전 6개월 안의 노동계약상 체불](https://www.bli.gov.tw/0007239.html)입니다. 퇴직급여와 자견비의 [대지급 합계 한도는 평균임금 6개월분](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28)입니다. 비율로 나눈 뒤 남은 임금에는 [최우선변제권이 있습니다](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28).
+폐업을 사유로 대지급을 신청할 때에는 [관리 방법 제8조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=8)에 따른 관할 기관의 폐업 증명과 [제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=9)에 따른 미지급 임금·퇴직급여·자견비의 채권 증명을 붙입니다.
 
 ## 참고한 공식 자료
 

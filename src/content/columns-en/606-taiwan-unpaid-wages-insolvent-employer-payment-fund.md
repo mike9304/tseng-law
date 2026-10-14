@@ -25,8 +25,6 @@ author: "legal-ai-assistant"
 
 [Article 28 of the Labor Standards Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28) gives specified claims a repayment rank when the employer has closed, entered liquidation, or been adjudicated bankrupt. Wages in that rank are the portion owed for less than six months. If the business is still operating, late pay alone does not bring Article 28 into play. Full payment is not promised.
 
-An American engineer hired by a Taoyuan company checked the account the week after payday and found the last month missing. A liquidation notice then arrived from that company. A demand for the unpaid wages and for severance drew no reply. This is an invented example. The employer named in the contract is the Taoyuan company. The scene assumes a labor contract covered by the Act.
-
 Three claims share that rank under [paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28). Wages are the portion owed under the labor contract for less than six months. Retirement pay is what the employer failed to pay under the Labor Standards Act. Severance is what the employer failed to pay under that Act or the Labor Pension Act. The severance calculation is in [the column on severance pay](/en/columns/taiwan-labor-severance-law).
 
 [Article 28](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28), paragraph 1 does not create the severance debt. The rank covers unpaid severance the Labor Standards Act or the Labor Pension Act already requires, and unpaid retirement pay the Labor Standards Act requires. Closure by itself does not produce severance. The Labor Pension Act is named only for severance. Item 2 names the Labor Standards Act for retirement pay. Monthly deposits into an individual account are not that item.
@@ -67,7 +65,7 @@ For disputes over wage amounts before closure, see [the column on labor-dispute 
 
 Questions about the named employer, and about whether the notice is a closure, can go to Hovering International Law Firm at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw).
 
-In the Taoyuan example, the engineer has already asked to be paid. Silence shows an unpaid demand, and nothing more. The liquidation notice is not [proof the claim was lodged with the liquidator](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=9). Whether wage debt and severance debt exist depends on [the contract and on the provisions that require payment](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28). An advance still needs [contributions already made or later made up](https://www.bli.gov.tw/0007239.html), and it takes [contract wages from the six months before liquidation](https://www.bli.gov.tw/0007239.html). The combined advance for retirement pay and severance is [capped at six months of average wage](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28). What the division leaves unpaid keeps [the most preferential right](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28).
+A liquidation application requires proof of the unpaid wage, retirement-pay or severance claim, together with proof that the claim was lodged with the liquidator ([Article 9 of the fund regulations](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=9)).
 
 ## Official sources
 

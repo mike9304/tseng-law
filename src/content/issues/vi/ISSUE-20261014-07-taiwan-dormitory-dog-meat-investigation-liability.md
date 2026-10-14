@@ -26,7 +26,7 @@ author: "legal-ai-assistant"
 
 # Điều tra vụ thịt chó ở Đài Nam: mua, ăn và giết mổ bị xử lý khác nhau
 
-Ngày 13/10, [CNA đưa tin](https://www.cna.com.tw/news/aloc/202610130179.aspx) chính quyền Đài Nam đã chuyển hồ sơ về thịt chó tại một ký túc xá lao động nước ngoài cho cơ quan công tố. Theo Sở Nông nghiệp thành phố, kết quả giám định ngày 28/7 xác định mẫu lấy tại đó là mô của chó. Cuộc kiểm tra diễn ra từ tháng 7; đến ngày 13/10, một nghị viên thành phố mở họp báo tại hội đồng thành phố, chất vấn cách thành phố xử lý vụ việc.
+Ngày 13/10, [CNA đưa tin](https://www.cna.com.tw/news/aloc/202610130179.aspx) chính quyền Đài Nam đã chuyển hồ sơ về thịt chó tại một ký túc xá lao động nước ngoài cho cơ quan công tố. Theo Sở Nông nghiệp thành phố, kết quả giám định ngày 28/7 xác định mẫu lấy tại đó là mô của chó. Cuộc kiểm tra diễn ra vào tháng 7; đến ngày 13/10, một nghị viên thành phố mở họp báo tại hội đồng thành phố, chất vấn cách thành phố xử lý vụ việc.
 
 Kết quả giám định chỉ cho biết mẫu vật là mô của chó, chưa trả lời được ai đã mua, cất giữ, ăn hay giết mổ. Với người sống trong khu nhà ở tập thể tại Đài Loan, trách nhiệm của từng người không thể suy ra chỉ từ việc dùng chung một tủ lạnh.
 
@@ -34,7 +34,7 @@ Kết quả giám định chỉ cho biết mẫu vật là mô của chó, chưa
 
 [Điểm 1 khoản 3 Điều 12 Luật Bảo vệ động vật (動物保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=12&pcode=M0060027) cấm giết mổ chó, mèo và cấm bán, mua, ăn hoặc cất giữ thân thịt, nội tạng hay thực phẩm chứa thành phần của chúng vì mục đích lấy thịt, lấy da lông hoặc làm thức ăn cho động vật khác. Phạm vi này không đồng nghĩa với cấm mọi trường hợp giữ lại xác thú cưng đã chết, chẳng hạn để chôn cất.
 
-Đối với việc bán, mua, ăn hoặc cất giữ trái quy định trên, [điểm 6 Điều 27](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=27&pcode=M0060027) quy định phạt hành chính từ 50.000 đến 250.000 Đài tệ. Vì vậy, lời giải thích “chỉ mua món ăn đã nấu sẵn” chưa đủ để loại trừ trách nhiệm theo điều này.
+Đối với việc bán, mua, ăn hoặc cất giữ trái quy định trên, [điểm 6 Điều 27](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=27&pcode=M0060027) quy định phạt hành chính từ 50.000 đến 250.000 Đài tệ. Vì vậy, lời giải thích rằng thịt chỉ được mua ở chợ, không tự tay giết mổ, chưa đủ để loại trừ trách nhiệm theo điều này.
 
 Hành vi giết mổ chó, mèo trái luật có chế tài riêng tại [điểm 2 Điều 25](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=25&pcode=M0060027): phạt tù đến hai năm hoặc giam ngắn hạn, đồng thời phạt tiền từ 200.000 đến 2 triệu Đài tệ. “Giam ngắn hạn” ở đây là hình phạt 拘役, không phải biện pháp tạm giam trong quá trình điều tra. Không thể lấy khung hình phạt này để kết luận một người bị nghi mua thịt đã thực hiện hành vi giết mổ.
 
@@ -42,7 +42,7 @@ Hành vi giết mổ chó, mèo trái luật có chế tài riêng tại [điể
 
 [Khoản 1 Điều 7 Luật Xử phạt hành chính (行政罰法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=A0030210) quy định không xử phạt hành vi không có lỗi cố ý hoặc lỗi vô ý. Câu trả lời “tôi không biết” vì vậy còn phải được đối chiếu với tình tiết thực tế, chứ không tự bảo đảm được miễn phạt. Ai đặt mua, ai nhận hàng, ai sử dụng thực phẩm và người đó biết gì là những câu hỏi khác nhau.
 
-Bản tin CNA không đề cập bản án kết tội nào. Trong tố tụng hình sự, [Điều 154 Bộ luật Tố tụng hình sự (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=154&pcode=C0010001) yêu cầu xác định sự việc phạm tội bằng chứng cứ và suy đoán vô tội trước khi có bản án kết tội đã có hiệu lực. Việc cơ quan công tố nhận hồ sơ chưa phải kết luận về trách nhiệm hình sự của bất kỳ người cư trú nào.
+Bản tin CNA không đề cập bản án kết tội nào. Trong tố tụng hình sự, [Điều 154 Bộ luật Tố tụng hình sự (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=154&pcode=C0010001) quy định sự việc phạm tội phải được xác định bằng chứng cứ, và bị cáo được suy đoán vô tội cho đến khi có bản án kết tội có hiệu lực. Việc cơ quan công tố nhận hồ sơ chưa phải kết luận về trách nhiệm hình sự của bất kỳ ai đang ở trong ký túc xá.
 
 Nếu nhận được thông báo liên quan đến một cuộc kiểm tra như vậy, nội dung thông báo và tin nhắn mua hàng, cùng thông tin về cách sử dụng khu vực cất giữ thực phẩm, giúp làm rõ sự việc. Việc xem xét phải dựa trên vai trò thực tế của người nhận thông báo, không dựa vào quốc tịch hay việc họ cùng ở một địa chỉ.
 

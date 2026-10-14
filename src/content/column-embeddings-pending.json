@@ -2117,6 +2117,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-subsidiary-annual-shareholders-meeting-director-term"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-scooter-outer-lane-left-turn-dashcam"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-scooter-outer-lane-left-turn-dashcam"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-scooter-outer-lane-left-turn-dashcam"
     }
   ]
 }

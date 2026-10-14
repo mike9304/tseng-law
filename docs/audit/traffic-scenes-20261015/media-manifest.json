@@ -1,0 +1,114 @@
+{
+  "pipeline": "Codex imagegen reference -> Grok 4.7 reference_to_video -> reviewed clips -> ffmpeg H.264",
+  "videoModelNote": "grok-4.7 directed reference_to_video; the video backend model has not been separately identified.",
+  "selectedSegments": [
+    {
+      "stem": "turn-01-approach",
+      "selectedSeconds": 10,
+      "sourceSha256": "ad26c408661ed81a692b83f16d46436d54172f0686cdc2933f3a52f86e14eeba",
+      "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-01-approach-generation.json"
+    },
+    {
+      "stem": "turn-02-left-crossing-v3",
+      "selectedSeconds": 5,
+      "sourceSha256": "b55747a3642d099aff5ebd4f8710185ec65e8236b3881223560b341bfb0a6a96",
+      "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-02-left-crossing-v3-generation.json"
+    },
+    {
+      "stem": "turn-03-contact",
+      "selectedSeconds": 10,
+      "sourceSha256": "600e2093f474db6d4b0057a848851350522196a790c81edfee04b035f76e1e57",
+      "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-03-contact-generation.json"
+    },
+    {
+      "stem": "turn-05-dashcam-aftermath",
+      "selectedSeconds": 10,
+      "sourceSha256": "52f992693930325518412eb0d603e288a339cbf5a1d5e2e9b6a626f8df2f29f5",
+      "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-05-dashcam-aftermath-generation.json"
+    },
+    {
+      "stem": "turn-04-side-aftermath",
+      "selectedSeconds": 15,
+      "sourceSha256": "821e26f256f70e5f9a3ba9ef52dc05ad68b363a70b32f89d698f857b2c44a1d5",
+      "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-04-side-aftermath-generation.json"
+    }
+  ],
+  "excludedJobs": [
+    "turn-02-left-movement",
+    "turn-02-left-movement-v2"
+  ],
+  "media": [
+    {
+      "locale": "ko",
+      "video": "/Users/son7/Projects/tseng-law-traffic-lane/public/videos/columns/scooter-left-turn-dashcam-reenactment-20261015-v1-ko.mp4",
+      "poster": "/Users/son7/Projects/tseng-law-traffic-lane/public/images/column-videos/scooter-left-turn-dashcam-reenactment-20261015-v1-ko.jpg",
+      "sha256": "8a420c9b33a8b1bc0fd7bcfcda5842286401f48632035e39118fa2db71ec927e",
+      "posterSha256": "94d250d7bc8de1242963cf8b606a1104057f9fccfc32762fc422f7381a8ae948",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1"
+          }
+        ],
+        "format": {
+          "duration": "50.000000",
+          "size": "21595319"
+        }
+      }
+    },
+    {
+      "locale": "zh-hant",
+      "video": "/Users/son7/Projects/tseng-law-traffic-lane/public/videos/columns/scooter-left-turn-dashcam-reenactment-20261015-v1-zh-hant.mp4",
+      "poster": "/Users/son7/Projects/tseng-law-traffic-lane/public/images/column-videos/scooter-left-turn-dashcam-reenactment-20261015-v1-zh-hant.jpg",
+      "sha256": "58d8492d9b839f53f04051a137ce934d8968c6782dfc2b4eb0a94fe83845eb5a",
+      "posterSha256": "b43179168c770302384c5d6d0db675a6a801b814974536358f986760e75c44bc",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1"
+          }
+        ],
+        "format": {
+          "duration": "50.000000",
+          "size": "21561054"
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "video": "/Users/son7/Projects/tseng-law-traffic-lane/public/videos/columns/scooter-left-turn-dashcam-reenactment-20261015-v1-en.mp4",
+      "poster": "/Users/son7/Projects/tseng-law-traffic-lane/public/images/column-videos/scooter-left-turn-dashcam-reenactment-20261015-v1-en.jpg",
+      "sha256": "30cec2839832e756b5b4df132d2e67c8d83986076cba12b31b1b5649d7bc69df",
+      "posterSha256": "d613b2aa99657b7d41f7af420133051487e9bfbc8cd6868c2b49deecf0c66cd4",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1"
+          }
+        ],
+        "format": {
+          "duration": "50.000000",
+          "size": "21109274"
+        }
+      }
+    }
+  ]
+}

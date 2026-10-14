@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-14T05:54:44.024708+00:00",
+  "contentCommit": "e2c55a4af657d163ae422fb03fb7aef49dc6dbdc",
+  "publicBuildBeforeQA": {
+    "commit": "e2c55a4af657d163ae422fb03fb7aef49dc6dbdc",
+    "builtAt": "2026-10-14T05:32:21.128Z"
+  },
+  "publicBuildAfterQA": {
+    "commit": "e2c55a4af657d163ae422fb03fb7aef49dc6dbdc",
+    "builtAt": "2026-10-14T05:32:21.128Z"
+  },
+  "articleChecks": 48,
+  "referenceMatches": 48,
+  "publicChecks": 133,
+  "browserErrors": 0,
+  "mediaPublicChecks": 16,
+  "manualScreens": [
+    "553-ko-390-body.png",
+    "548-ja-1440-body.png",
+    "555-en-390-body.png",
+    "551-ja-390-body.png",
+    "549-en-1440-body.png",
+    "ja-source-link-1440.png",
+    "ja-source-link-390.png"
+  ],
+  "mediaScreens": [
+    "ko-390-scene.png",
+    "ja-1440-scene.png"
+  ],
+  "scope": "24 posts, 16 subjects, four fields; each locale has eight posts; all publication requirements verified",
+  "evidenceDirectory": "/Users/son7/tseng-jp-us-kr-20261014/qa"
+}

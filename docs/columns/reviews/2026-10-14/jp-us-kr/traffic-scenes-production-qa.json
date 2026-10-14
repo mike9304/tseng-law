@@ -1,0 +1,189 @@
+{
+  "base": "https://tseng-law.com",
+  "checkedAt": "2026-10-14T05:27:53.139Z",
+  "rows": [
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": 200,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rear-end-simulation-v3-ko.mp4",
+        "duration": 4.041667,
+        "currentTime": 0.165326,
+        "controls": true,
+        "loop": false,
+        "muted": true
+      },
+      "disclosure": "AI로 만든 가상 장면이며 실제 사고 기록이 아닙니다. 도로·속도·거리·접촉 시점은 설명을 위한 설정으로, 특정 사건의 과실을 판단하는 자료로 쓸 수 없습니다.",
+      "chapters": 0,
+      "overflow": false,
+      "errors": [],
+      "bad": [],
+      "apis": []
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "status": 200,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rear-end-simulation-v3-ja.mp4",
+        "duration": 4.041667,
+        "currentTime": 0.161447,
+        "controls": true,
+        "loop": false,
+        "muted": true
+      },
+      "disclosure": "AIで作成した架空の場面であり、実際の事故映像ではありません。道路・速度・距離・接触のタイミングは説明のための設定で、個別の事故の過失を判断する資料には使えません。",
+      "chapters": 0,
+      "overflow": false,
+      "errors": [],
+      "bad": [],
+      "apis": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rear-end-simulation-v3-en.mp4",
+        "duration": 4.041667,
+        "currentTime": 0.154366,
+        "controls": true,
+        "loop": false,
+        "muted": true
+      },
+      "disclosure": "This is a fictional AI-generated scene, not actual accident footage. The road layout, speeds, distances and timing are illustrative and cannot establish fault in a real case.",
+      "chapters": 0,
+      "overflow": false,
+      "errors": [],
+      "bad": [],
+      "apis": []
+    },
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": 200,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rear-end-simulation-v3-ko.mp4",
+        "duration": 4.041667,
+        "currentTime": 0.157542,
+        "controls": true,
+        "loop": false,
+        "muted": true
+      },
+      "disclosure": "AI로 만든 가상 장면이며 실제 사고 기록이 아닙니다. 도로·속도·거리·접촉 시점은 설명을 위한 설정으로, 특정 사건의 과실을 판단하는 자료로 쓸 수 없습니다.",
+      "chapters": 0,
+      "overflow": false,
+      "errors": [],
+      "bad": [],
+      "apis": []
+    },
+    {
+      "locale": "ja",
+      "width": 1440,
+      "status": 200,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rear-end-simulation-v3-ja.mp4",
+        "duration": 4.041667,
+        "currentTime": 0.155144,
+        "controls": true,
+        "loop": false,
+        "muted": true
+      },
+      "disclosure": "AIで作成した架空の場面であり、実際の事故映像ではありません。道路・速度・距離・接触のタイミングは説明のための設定で、個別の事故の過失を判断する資料には使えません。",
+      "chapters": 0,
+      "overflow": false,
+      "errors": [],
+      "bad": [],
+      "apis": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "asset": {
+        "src": "https://media.tseng-law.com/videos/columns/rear-end-simulation-v3-en.mp4",
+        "duration": 4.041667,
+        "currentTime": 0.154747,
+        "controls": true,
+        "loop": false,
+        "muted": true
+      },
+      "disclosure": "This is a fictional AI-generated scene, not actual accident footage. The road layout, speeds, distances and timing are illustrative and cannot establish fault in a real case.",
+      "chapters": 0,
+      "overflow": false,
+      "errors": [],
+      "bad": [],
+      "apis": []
+    },
+    {
+      "locale": "ko",
+      "action": "no-police-summary",
+      "status": 200,
+      "count": 0
+    },
+    {
+      "locale": "ja",
+      "action": "no-police-summary",
+      "status": 200,
+      "count": 0
+    },
+    {
+      "locale": "en",
+      "action": "no-police-summary",
+      "status": 200,
+      "count": 0
+    },
+    {
+      "locale": "zh-hant",
+      "action": "no-police-summary",
+      "status": 200,
+      "count": 0
+    },
+    {
+      "action": "chase-two-keyboard-playbacks",
+      "chase": [
+        {
+          "src": "https://media.tseng-law.com/videos/columns/road-rage-freeway-chase-own-dashcam-too-v3-ko.mp4",
+          "duration": 15.041667,
+          "currentTime": 0.157107
+        },
+        {
+          "src": "https://media.tseng-law.com/videos/columns/own-dashcam-cut-in-v2-ko.mp4",
+          "duration": 4.041667,
+          "currentTime": 0.16177
+        }
+      ]
+    },
+    {
+      "locale": "ja",
+      "action": "video-filter-excludes-text-only",
+      "slug": "taiwan-accident-police-records",
+      "count": 0
+    },
+    {
+      "locale": "zh-hant",
+      "action": "video-filter-excludes-text-only",
+      "slug": "taiwan-accident-police-records",
+      "count": 0
+    },
+    {
+      "locale": "zh-hant",
+      "action": "video-filter-excludes-text-only",
+      "slug": "taiwan-repaired-car-diminished-value-appraisal-evidence",
+      "count": 0
+    },
+    {
+      "locale": "zh-hant",
+      "action": "video-filter-excludes-text-only",
+      "slug": "taiwan-mediation-delayed-injury-rescission",
+      "count": 0
+    },
+    {
+      "locale": "zh-hant",
+      "action": "video-filter-excludes-text-only",
+      "slug": "taiwan-accident-assessment-secondary-cause-compensation-ratio",
+      "count": 0
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-10-14T05:29:52.990385+00:00",
+  "commit": "e2c55a4af657d163ae422fb03fb7aef49dc6dbdc",
+  "command": "PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH node scripts/static-site/build.mjs --out=out-final-country --port=4620 --media-origin=https://media.tseng-law.com",
+  "exitCode": 0,
+  "summary": [
+    "[static-site] no --data: builder pages render from repo files only (legacy fallback).",
+    "[static-site] crawled 2195 pages, 9 files, 0 redirects in 41s",
+    "[static-site] out: 4707 files, 390.7 MB, 2358 html; sitemap 2190/2190; broken refs 0; oversize 0; crawl missing 0; flight errors 0",
+    "[static-site] media: 1798 files (2613.4 MB) → https://media.tseng-law.com; 1072 referenced, missing locally: images/004-taiwan-employment-contract-guide/featured-01.jpg, images/hover.jpg, images/video-poster.jpg, videos/builder-background.mp4, videos/intro.mp4"
+  ],
+  "buildInfo": {
+    "commit": "e2c55a4af657d163ae422fb03fb7aef49dc6dbdc",
+    "builtAt": "2026-10-14T05:17:01.487Z"
+  },
+  "logFile": "/tmp/tseng-jp-us-kr-final-country-build.log",
+  "limits": [
+    "The five listed missing local media references predate this work; new article images loaded in all 48 browser article checks.",
+    "Local builder frozen data is not proof of parity with the Air production data mirror. File-based column bodies are separately hash-checked."
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "checkedAt": "2026-10-14T05:24:51.543916+00:00",
+  "commit": "e2c55a4af",
+  "rows": [
+    {
+      "id": 540,
+      "locale": "ko",
+      "file": "src/content/columns/540-taiwan-company-preincorporation-contracts-liability.md",
+      "sha256": "fa9272ba83c64a07f34afe37e2595af00f853b26df7eed4b67449779cf6ec56b",
+      "reviewRecord": "preincorporation-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 540,
+      "locale": "ja",
+      "file": "src/content/columns-ja/540-taiwan-company-preincorporation-contracts-liability.md",
+      "sha256": "0735443a588258331c9387db5f339b52d507f1f3980b5ce9939c356085c7e072",
+      "reviewRecord": "preincorporation-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 540,
+      "locale": "en",
+      "file": "src/content/columns-en/540-taiwan-company-preincorporation-contracts-liability.md",
+      "sha256": "4acf6965746950b6ad04258694d6dc054923e06e19b6691a767cfc0ddd14f202",
+      "reviewRecord": "preincorporation-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 541,
+      "locale": "ko",
+      "file": "src/content/columns/541-taiwan-bookkeeping-provider-records-handover.md",
+      "sha256": "515f48de456c881f3c982d878807f52213a7cfdeb5fb6f07da820039c906fd12",
+      "reviewRecord": "accounting-handover-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 541,
+      "locale": "ja",
+      "file": "src/content/columns-ja/541-taiwan-bookkeeping-provider-records-handover.md",
+      "sha256": "a3a887681931ff9d899b5ca66aedb3cfa553216fea32b9c5b6f7f6207c6f91fe",
+      "reviewRecord": "accounting-handover-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 541,
+      "locale": "en",
+      "file": "src/content/columns-en/541-taiwan-bookkeeping-provider-records-handover.md",
+      "sha256": "56b28e066c7940fbde07415f7c296a8e14df7300364b481149b54de9d8ccdbf3",
+      "reviewRecord": "accounting-handover-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 542,
+      "locale": "ko",
+      "file": "src/content/columns/542-taiwan-civil-evidence-preservation-before-lawsuit.md",
+      "sha256": "588d0d1800bd842b72b7bd62b17fb0bd2bd660e368f2c3a0935ab247b0ae6e42",
+      "reviewRecord": "civil-criminal-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 542,
+      "locale": "ja",
+      "file": "src/content/columns-ja/542-taiwan-civil-evidence-preservation-before-lawsuit.md",
+      "sha256": "81895c458316760a8ae0dc2cc88c27f4dade69fb92cbcdf5792ec83343a2a146",
+      "reviewRecord": "civil-criminal-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 542,
+      "locale": "en",
+      "file": "src/content/columns-en/542-taiwan-civil-evidence-preservation-before-lawsuit.md",
+      "sha256": "232d9f632289d8f6a20b5680a6e1f7e400645fd56cfe05ef81c88f413f31c041",
+      "reviewRecord": "civil-criminal-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 543,
+      "locale": "ko",
+      "file": "src/content/columns/543-taiwan-employee-criminal-questioning-company-paid-counsel.md",
+      "sha256": "e9dc348810e9644f71f388ccfa280a7de00e240e16076a710357a835b6bc4202",
+      "reviewRecord": "civil-criminal-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 543,
+      "locale": "ja",
+      "file": "src/content/columns-ja/543-taiwan-employee-criminal-questioning-company-paid-counsel.md",
+      "sha256": "ec019ca7e6786304ace74eb60a8b48bfce42f3853a67ea3a6787c199e72712d5",
+      "reviewRecord": "civil-criminal-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 543,
+      "locale": "en",
+      "file": "src/content/columns-en/543-taiwan-employee-criminal-questioning-company-paid-counsel.md",
+      "sha256": "2c8b0819cd3211ce17aeaa96d5349aee64efb5f8e7f2299bfe96711fe74d0403",
+      "reviewRecord": "civil-criminal-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 544,
+      "locale": "ko",
+      "file": "src/content/columns/544-taiwan-subsidiary-korean-outward-investment-remittance.md",
+      "sha256": "35ea6f572a68384c0ac17b82056071eb7fa3c1d008cb45b19fa8208207c64100",
+      "reviewRecord": "company-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 545,
+      "locale": "ja",
+      "file": "src/content/columns-ja/545-taiwan-investment-japanese-company-documents-authentication.md",
+      "sha256": "fc98ac8ed3e146d5b0a01d35d82eeb573106cb94900ceb29e2ac08a718a1ef26",
+      "reviewRecord": "company-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 546,
+      "locale": "en",
+      "file": "src/content/columns-en/546-taiwan-investment-delaware-llc-identity-authority.md",
+      "sha256": "37457d91fd55d1b06bf1ee0b54b3693f1cf121ce489240937891ce7040eb1384",
+      "reviewRecord": "company-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 547,
+      "locale": "ko",
+      "file": "src/content/columns/547-taiwan-civil-korean-documents-chinese-translations.md",
+      "sha256": "02d20d01e2cc59f0988d0bcc21ff538521b7875e5ee643d77eb884c63925458a",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 548,
+      "locale": "ja",
+      "file": "src/content/columns-ja/548-taiwan-civil-japanese-company-litigation-authority.md",
+      "sha256": "3d95f70b61d481ef1f029db42ad133f22dfa4d6f582e4137d490386924926071",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 549,
+      "locale": "en",
+      "file": "src/content/columns-en/549-taiwan-civil-us-company-opponent-document-production.md",
+      "sha256": "f6b25be7260eef4cd275d56bc4d97eeec831ad5b10cea75025b796019aa9c7a5",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 550,
+      "locale": "ko",
+      "file": "src/content/columns/550-taiwan-investigation-korean-citizen-exit-restriction.md",
+      "sha256": "a77dfd8ea6b6ec48bbc80e3a7792702c6d0fb71c3412d4fae3874dfc11b4347c",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 551,
+      "locale": "ja",
+      "file": "src/content/columns-ja/551-taiwan-police-japanese-interpretation-record-corrections.md",
+      "sha256": "1dc0f46d483dd22b606a92e0384e9003ecf09e02bdecfa3f74584c4733859722",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 552,
+      "locale": "en",
+      "file": "src/content/columns-en/552-taiwan-us-citizen-arrest-ait-local-defense.md",
+      "sha256": "389599b8f832bd25ccfa4a947d82f4a5c524144970c16d8e245ad1f23cc4b9bb",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 553,
+      "locale": "ko",
+      "file": "src/content/columns/553-taiwan-korean-parent-service-fees-evidence.md",
+      "sha256": "e2671c13b14c0d6ede96a3f1955f6dd03dd680abddb187a084e287ffdbc739a0",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 554,
+      "locale": "ja",
+      "file": "src/content/columns-ja/554-taiwan-dividend-japanese-parent-tax-records.md",
+      "sha256": "b0c2913d80b3a00c2fb2003a1434ef52f51cc05f0638e9e9865408ea05171daa",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    },
+    {
+      "id": 555,
+      "locale": "en",
+      "file": "src/content/columns-en/555-taiwan-company-records-us-form-5471.md",
+      "sha256": "903a8570b09002cbd53bff41544c3d0dabf62b707077829281102600b52b7bda",
+      "reviewRecord": "remaining-country-content-sha256.json",
+      "matchesReviewedFile": true
+    }
+  ]
+}

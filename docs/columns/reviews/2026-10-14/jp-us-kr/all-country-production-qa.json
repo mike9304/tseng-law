@@ -1,0 +1,3423 @@
+{
+  "base": "https://tseng-law.com",
+  "checkedAt": "2026-10-14T05:50:45.938Z",
+  "results": [
+    {
+      "action": "article",
+      "id": 540,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-company-preincorporation-contracts-liability",
+      "status": 200,
+      "headings": [
+        "설립 전 대만 회사 이름으로 맺은 계약, 누가 책임지나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-company-preincorporation-contracts-liability",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/530-taiwan-supply-payment-affiliate-setoff-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/526-taiwan-business-contract-electronic-signature-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "e4e91383441daa8a5dc0316ba76c73a2517cc59ba48f628c33b790a215e83348",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 540,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-company-preincorporation-contracts-liability",
+      "status": 200,
+      "headings": [
+        "台湾法人の設立前に結ぶ契約、名義と責任はどうなるか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-company-preincorporation-contracts-liability",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "483bdfc6687575e5f5c5f1163915ba5618a35eebc6c24d7513b11e61b10f3b54",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 540,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-company-preincorporation-contracts-liability",
+      "status": 200,
+      "headings": [
+        "Signing for a Taiwan Company Before It Exists"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-company-preincorporation-contracts-liability",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "787f22847aebbff5db411b1b54328289ff2b30f877bc73cb4b4e761d4081cde8",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 541,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-bookkeeping-provider-records-handover",
+      "status": 200,
+      "headings": [
+        "대만 기장업체를 바꿀 때, 장부 파일과 종이 원본은 누가 보관하나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-bookkeeping-provider-records-handover",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=28-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=9",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=26",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=25",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340010",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/384-taiwan-cross-border-e-services-income-tax-foreign-platforms/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/383-taiwan-free-trade-zone-bonded-factory-science-park-tax/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "d1b28ee9003e499322d161f6e5506a81cd6a168fdd5a2c003d40212525a4a048",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 541,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-bookkeeping-provider-records-handover",
+      "status": 200,
+      "headings": [
+        "台湾の記帳委託先を替えるとき、帳簿データと原本をどう引き継ぐか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-bookkeeping-provider-records-handover",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=28-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=9",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=26",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=25",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340010",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b33d8b26870573e5dff0303d415aa24508f7de93587d75eacd15b01b743353f0",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 541,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-bookkeeping-provider-records-handover",
+      "status": 200,
+      "headings": [
+        "Changing Bookkeepers in Taiwan: The Records Your Company Still Needs"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-bookkeeping-provider-records-handover",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=28-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=9",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=26",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=25",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340010",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "cad67cfc28853bf63045924d0553d05e0e8f19e6b0a9c0fded150c06c2cb7336",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 542,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-civil-evidence-preservation-before-lawsuit",
+      "status": 200,
+      "headings": [
+        "대만 소송 전 증거보전, 무엇을 어느 법원에 신청하나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=371",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=373",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=374",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=375",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/524-taiwan-sentence-fine-conversion-probation-deportation-foreigner/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/523-taiwan-criminal-appeal-twenty-days-third-instance-barred/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "9e3a270c7ee346fc472bd7b9ac46649ca995162ebbd64316c2268f27121a639c",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 542,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-civil-evidence-preservation-before-lawsuit",
+      "status": 200,
+      "headings": [
+        "台湾で訴訟を起こす前に証拠を保全する申立て"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=371",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=373",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=374",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=375",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b36c73875bba6dfa7a34ac705d9659e67b35987d46cebf8b144799cce6922da1",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 542,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-civil-evidence-preservation-before-lawsuit",
+      "status": 200,
+      "headings": [
+        "Preserving Evidence Before a Civil Suit in Taiwan"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=371",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=373",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=374",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=375",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "ba8c925ca7dd0e33d1cbcc7fd75ad120b2333c33146b9f22d38dfc7c13b20534",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 543,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-employee-criminal-questioning-company-paid-counsel",
+      "status": 200,
+      "headings": [
+        "대만에서 직원이 피의자가 됐을 때, 회사가 선임한 변호사는 누구를 변호하나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "085fd48ee54458c627fedb096a656aebf2fe2392aa9da887d65606d05168d24c",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 543,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-employee-criminal-questioning-company-paid-counsel",
+      "status": 200,
+      "headings": [
+        "台湾で従業員が被疑者になったら、会社負担の弁護士は誰を弁護するか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "7f884466aaa5ed2180665fba9752e437af9ce6635cae77681d5df96f1d754496",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 543,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-employee-criminal-questioning-company-paid-counsel",
+      "status": 200,
+      "headings": [
+        "When a Taiwan Employee Is a Suspect, Who Is Company-Paid Counsel Defending?"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "64f33ec31567d385304b19d1e8d7863c4bb884282cd3d8f1457844d9f51d286d",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 544,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-subsidiary-korean-outward-investment-remittance",
+      "status": 200,
+      "headings": [
+        "한국 회사의 대만 자회사 출자, 두 나라 신고와 송금 순서"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-subsidiary-korean-outward-investment-remittance",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://www.moea.gov.tw/Mns/dir_e/Investment/DirApply_En.aspx?kind=A&menu_id=42922",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://www.moea.gov.tw/Mns/dir_e/Investment/DirApply_En.aspx?kind=A&menu_id=42922",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://www.moea.gov.tw/Mns/dir_e/Investment/DirApply_En.aspx?kind=A&menu_id=42922"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/530-taiwan-supply-payment-affiliate-setoff-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/526-taiwan-business-contract-electronic-signature-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "2e7f8161d1c7299610d45303fd7d0a99f2290c990969dbe092d5a98a34da5ce3",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 545,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-investment-japanese-company-documents-authentication",
+      "status": 200,
+      "headings": [
+        "日本法人の台湾投資、登記証明書と委任状の認証"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-investment-japanese-company-documents-authentication",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000552.html",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000548.html",
+        "https://www.mofa.go.jp/mofaj/area/taiwan/data.html",
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000548.html",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000552.html",
+        "https://www.mofa.go.jp/mofaj/area/taiwan/data.html"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "ec5c0b3853c6010f830e56302120f276a12d88f1b526bb6dcf26524b4656e10f",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 546,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-investment-delaware-llc-identity-authority",
+      "status": 200,
+      "headings": [
+        "A Delaware LLC Investing in Taiwan: Identity, Ownership and Signing Authority"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-investment-delaware-llc-identity-authority",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://delcode.delaware.gov/title6/c018/sc02/index.html#18-201",
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://delcode.delaware.gov/title6/c018/sc04/index.html#18-402",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc",
+        "https://delcode.delaware.gov/title6/c018/sc02/index.html#18-201",
+        "https://delcode.delaware.gov/title6/c018/sc04/index.html#18-402",
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "1de462e97d6d5aa909d6b24b6eb61084224c3937cafaac7ca36724dbd743a800",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 547,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-civil-korean-documents-chinese-translations",
+      "status": 200,
+      "headings": [
+        "한국어 거래기록을 대만 법원에 낼 때, 원문과 번역문을 잇는 자료"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-civil-korean-documents-chinese-translations",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=203",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=357",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=352",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=363",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=203",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=352",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=357",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=363"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/524-taiwan-sentence-fine-conversion-probation-deportation-foreigner/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/523-taiwan-criminal-appeal-twenty-days-third-instance-barred/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "51907b6bdff519038a918e4a98b8c0b91dc9750f30d6456aa6b41f39dd17f034",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 548,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-civil-japanese-company-litigation-authority",
+      "status": 200,
+      "headings": [
+        "日本本社が台湾の訴訟を委任するとき、和解と控訴の権限は誰にあるか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-civil-japanese-company-litigation-authority",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=69",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=71",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=69",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=71"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "68f548bafe75714833c4f92b5d8ee67ce3803dcfde4ae186ef6f261f9f420707",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 549,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-civil-us-company-opponent-document-production",
+      "status": 200,
+      "headings": [
+        "A US Company's Request for an Opponent's Documents in Taiwan Civil Litigation"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-civil-us-company-opponent-document-production",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=342",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=343",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=344",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=345",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=342",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=343",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=344",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=345"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "3ebb96ffc6ecac3e4bb37fa97cd2ad0290495b62de327e6afeb896f2032874b8",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 550,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-investigation-korean-citizen-exit-restriction",
+      "status": 200,
+      "headings": [
+        "대만 수사를 받는 한국인의 귀국 일정과 출국 제한 서면"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-investigation-korean-citizen-exit-restriction",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-3",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-3",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-5"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "aab5e317056eeff513f502fe616feee4a04c3783bea8c2c628d68a9db5a134ec",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 551,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-police-japanese-interpretation-record-corrections",
+      "status": 200,
+      "headings": [
+        "台湾の警察調書を日本語通訳で確認するとき、訂正はどこに残るか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-police-japanese-interpretation-record-corrections",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=41",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=41",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b600eee63260321bfa327864189402226284714e8bd918428d1c671e3b26782b",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 552,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-us-citizen-arrest-ait-local-defense",
+      "status": 200,
+      "headings": [
+        "A US Citizen Arrested in Taiwan: AIT Contact and Local Defense"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-us-citizen-arrest-ait-local-defense",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://travel.state.gov/en/international-travel/travel-advisories/taiwan.html",
+        "https://travel.state.gov/en/international-travel/help-abroad/arrest-detention.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://travel.state.gov/en/international-travel/travel-advisories/taiwan.html",
+        "https://travel.state.gov/en/international-travel/help-abroad/arrest-detention.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "83799ee8dfe1d28b86680a267bffa1cc727abbabdd1635053b361e114a663719",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 553,
+      "locale": "ko",
+      "width": 1440,
+      "slug": "taiwan-korean-parent-service-fees-evidence",
+      "status": 200,
+      "headings": [
+        "한국 본사 용역비를 대만 자회사가 부담할 때, 청구서에 연결할 업무기록"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-korean-parent-service-fees-evidence",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=62",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=67",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340019&flno=22",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=62",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=67",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340019&flno=22"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/384-taiwan-cross-border-e-services-income-tax-foreign-platforms/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/383-taiwan-free-trade-zone-bonded-factory-science-park-tax/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "c47ac70b8cad44bb86c5b7b9a9240a094190c354c9af9ba2b441aeb8e7a18ac7",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 554,
+      "locale": "ja",
+      "width": 1440,
+      "slug": "taiwan-dividend-japanese-parent-tax-records",
+      "status": 200,
+      "headings": [
+        "台湾子会社からの配当、日本本社に届く入金明細と保存書類"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-dividend-japanese-parent-tax-records",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://www.mof.go.jp/tax_policy/summary/international/h02.htm",
+        "https://laws.e-gov.go.jp/law/340AC0000000034",
+        "https://laws.e-gov.go.jp/law/340M50000040012",
+        "https://laws.e-gov.go.jp/law/340CO0000000097",
+        "https://www.mof.go.jp/tax_policy/summary/international/h02.htm",
+        "https://laws.e-gov.go.jp/law/340AC0000000034",
+        "https://laws.e-gov.go.jp/law/340CO0000000097",
+        "https://laws.e-gov.go.jp/law/340M50000040012"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "2544b0941667ade0135279002cc92d4ea0b99a17e55961acf76f7bcb967d3283",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 555,
+      "locale": "en",
+      "width": 1440,
+      "slug": "taiwan-company-records-us-form-5471",
+      "status": 200,
+      "headings": [
+        "Form 5471 Preparation: Records to Request From a Taiwan Company"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-company-records-us-form-5471",
+      "dimensions": {
+        "client": 1440,
+        "scroll": 1425
+      },
+      "sourceLinks": [
+        "https://www.irs.gov/forms-pubs/about-form-5471",
+        "https://www.irs.gov/instructions/i5471",
+        "https://www.irs.gov/forms-pubs/implementation-of-new-foreign-tax-allocation-reporting-in-schedule-e-form-5471-instructions",
+        "https://www.irs.gov/forms-pubs/about-form-5471",
+        "https://www.irs.gov/instructions/i5471",
+        "https://www.irs.gov/forms-pubs/implementation-of-new-foreign-tax-allocation-reporting-in-schedule-e-form-5471-instructions"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b292a7d82bed74389be765dfd12e3e4e7b54ae57cf7fe800fa74ab8f1d5acb86",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 540,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-company-preincorporation-contracts-liability",
+      "status": 200,
+      "headings": [
+        "설립 전 대만 회사 이름으로 맺은 계약, 누가 책임지나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-company-preincorporation-contracts-liability",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/530-taiwan-supply-payment-affiliate-setoff-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/526-taiwan-business-contract-electronic-signature-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "e4e91383441daa8a5dc0316ba76c73a2517cc59ba48f628c33b790a215e83348",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 540,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-company-preincorporation-contracts-liability",
+      "status": 200,
+      "headings": [
+        "台湾法人の設立前に結ぶ契約、名義と責任はどうなるか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-company-preincorporation-contracts-liability",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "483bdfc6687575e5f5c5f1163915ba5618a35eebc6c24d7513b11e61b10f3b54",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 540,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-company-preincorporation-contracts-liability",
+      "status": 200,
+      "headings": [
+        "Signing for a Taiwan Company Before It Exists"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-company-preincorporation-contracts-liability",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=18",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=19",
+        "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814&sub_menu_id=42813",
+        "https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=912&method=faqDetl"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "787f22847aebbff5db411b1b54328289ff2b30f877bc73cb4b4e761d4081cde8",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 541,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-bookkeeping-provider-records-handover",
+      "status": 200,
+      "headings": [
+        "대만 기장업체를 바꿀 때, 장부 파일과 종이 원본은 누가 보관하나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-bookkeeping-provider-records-handover",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=28-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=9",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=26",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=25",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340010",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/384-taiwan-cross-border-e-services-income-tax-foreign-platforms/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/383-taiwan-free-trade-zone-bonded-factory-science-park-tax/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "d1b28ee9003e499322d161f6e5506a81cd6a168fdd5a2c003d40212525a4a048",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 541,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-bookkeeping-provider-records-handover",
+      "status": 200,
+      "headings": [
+        "台湾の記帳委託先を替えるとき、帳簿データと原本をどう引き継ぐか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-bookkeeping-provider-records-handover",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=28-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=9",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=26",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=25",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340010",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b33d8b26870573e5dff0303d415aa24508f7de93587d75eacd15b01b743353f0",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 541,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-bookkeeping-provider-records-handover",
+      "status": 200,
+      "headings": [
+        "Changing Bookkeepers in Taiwan: The Records Your Company Still Needs"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-bookkeeping-provider-records-handover",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=28-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=9",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=26",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340010&flno=25",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080029&flno=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=38",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340010",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080029"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "cad67cfc28853bf63045924d0553d05e0e8f19e6b0a9c0fded150c06c2cb7336",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 542,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-civil-evidence-preservation-before-lawsuit",
+      "status": 200,
+      "headings": [
+        "대만 소송 전 증거보전, 무엇을 어느 법원에 신청하나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=371",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=373",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=374",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=375",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/524-taiwan-sentence-fine-conversion-probation-deportation-foreigner/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/523-taiwan-criminal-appeal-twenty-days-third-instance-barred/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "9e3a270c7ee346fc472bd7b9ac46649ca995162ebbd64316c2268f27121a639c",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 542,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-civil-evidence-preservation-before-lawsuit",
+      "status": 200,
+      "headings": [
+        "台湾で訴訟を起こす前に証拠を保全する申立て"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=371",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=373",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=374",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=375",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b36c73875bba6dfa7a34ac705d9659e67b35987d46cebf8b144799cce6922da1",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 542,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-civil-evidence-preservation-before-lawsuit",
+      "status": 200,
+      "headings": [
+        "Preserving Evidence Before a Civil Suit in Taiwan"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=371",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=373",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=374",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=375",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=369",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=370",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "ba8c925ca7dd0e33d1cbcc7fd75ad120b2333c33146b9f22d38dfc7c13b20534",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 543,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-employee-criminal-questioning-company-paid-counsel",
+      "status": 200,
+      "headings": [
+        "대만에서 직원이 피의자가 됐을 때, 회사가 선임한 변호사는 누구를 변호하나"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "085fd48ee54458c627fedb096a656aebf2fe2392aa9da887d65606d05168d24c",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 543,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-employee-criminal-questioning-company-paid-counsel",
+      "status": 200,
+      "headings": [
+        "台湾で従業員が被疑者になったら、会社負担の弁護士は誰を弁護するか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "7f884466aaa5ed2180665fba9752e437af9ce6635cae77681d5df96f1d754496",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 543,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-employee-criminal-questioning-company-paid-counsel",
+      "status": 200,
+      "headings": [
+        "When a Taiwan Employee Is a Suspect, Who Is Company-Paid Counsel Defending?"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=30",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=245",
+        "https://www.twba.org.tw/regulation/morale/8fd047d6-fdd4-40db-997c-8dd14cd01be5",
+        "https://www.twba.org.tw/regulation/morale/65bfe5e5-1a32-47db-b2b2-3783369c8e60"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "64f33ec31567d385304b19d1e8d7863c4bb884282cd3d8f1457844d9f51d286d",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 544,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-subsidiary-korean-outward-investment-remittance",
+      "status": 200,
+      "headings": [
+        "한국 회사의 대만 자회사 출자, 두 나라 신고와 송금 순서"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-subsidiary-korean-outward-investment-remittance",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://www.moea.gov.tw/Mns/dir_e/Investment/DirApply_En.aspx?kind=A&menu_id=42922",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://www.moea.gov.tw/Mns/dir_e/Investment/DirApply_En.aspx?kind=A&menu_id=42922",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%99%B8%EA%B5%AD%ED%99%98%EA%B1%B0%EB%9E%98%EA%B7%9C%EC%A0%95",
+        "https://www.moea.gov.tw/Mns/dir_e/Investment/DirApply_En.aspx?kind=A&menu_id=42922"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/530-taiwan-supply-payment-affiliate-setoff-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/columns/air-20261011/526-taiwan-business-contract-electronic-signature-korean.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "2e7f8161d1c7299610d45303fd7d0a99f2290c990969dbe092d5a98a34da5ce3",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 545,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-investment-japanese-company-documents-authentication",
+      "status": 200,
+      "headings": [
+        "日本法人の台湾投資、登記証明書と委任状の認証"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-investment-japanese-company-documents-authentication",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000552.html",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000548.html",
+        "https://www.mofa.go.jp/mofaj/area/taiwan/data.html",
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000548.html",
+        "https://www.mofa.go.jp/mofaj/toko/page22_000552.html",
+        "https://www.mofa.go.jp/mofaj/area/taiwan/data.html"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "ec5c0b3853c6010f830e56302120f276a12d88f1b526bb6dcf26524b4656e10f",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 546,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-investment-delaware-llc-identity-authority",
+      "status": 200,
+      "headings": [
+        "A Delaware LLC Investing in Taiwan: Identity, Ownership and Signing Authority"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-investment-delaware-llc-identity-authority",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://delcode.delaware.gov/title6/c018/sc02/index.html#18-201",
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://delcode.delaware.gov/title6/c018/sc04/index.html#18-402",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc",
+        "https://delcode.delaware.gov/title6/c018/sc02/index.html#18-201",
+        "https://delcode.delaware.gov/title6/c018/sc04/index.html#18-402",
+        "https://www.moea.gov.tw/Mns/dir_e/investment/wHandDirApply_File.ashx?file_id=438",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg",
+          "width": 900,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "1de462e97d6d5aa909d6b24b6eb61084224c3937cafaac7ca36724dbd743a800",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 547,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-civil-korean-documents-chinese-translations",
+      "status": 200,
+      "headings": [
+        "한국어 거래기록을 대만 법원에 낼 때, 원문과 번역문을 잇는 자료"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-civil-korean-documents-chinese-translations",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=203",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=357",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=352",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=363",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=203",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=352",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=357",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=363"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/524-taiwan-sentence-fine-conversion-probation-deportation-foreigner/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/523-taiwan-criminal-appeal-twenty-days-third-instance-barred/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "51907b6bdff519038a918e4a98b8c0b91dc9750f30d6456aa6b41f39dd17f034",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 548,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-civil-japanese-company-litigation-authority",
+      "status": 200,
+      "headings": [
+        "日本本社が台湾の訴訟を委任するとき、和解と控訴の権限は誰にあるか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-civil-japanese-company-litigation-authority",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=69",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=71",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=69",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=71"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "68f548bafe75714833c4f92b5d8ee67ce3803dcfde4ae186ef6f261f9f420707",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 549,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-civil-us-company-opponent-document-production",
+      "status": 200,
+      "headings": [
+        "A US Company's Request for an Opponent's Documents in Taiwan Civil Litigation"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-civil-us-company-opponent-document-production",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=342",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=343",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=344",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=345",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=342",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=343",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=344",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=345"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "3ebb96ffc6ecac3e4bb37fa97cd2ad0290495b62de327e6afeb896f2032874b8",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 550,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-investigation-korean-citizen-exit-restriction",
+      "status": 200,
+      "headings": [
+        "대만 수사를 받는 한국인의 귀국 일정과 출국 제한 서면"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-investigation-korean-citizen-exit-restriction",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-3",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-3",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-5"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp",
+          "width": 1600,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "aab5e317056eeff513f502fe616feee4a04c3783bea8c2c628d68a9db5a134ec",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 551,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-police-japanese-interpretation-record-corrections",
+      "status": 200,
+      "headings": [
+        "台湾の警察調書を日本語通訳で確認するとき、訂正はどこに残るか"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-police-japanese-interpretation-record-corrections",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=41",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=41",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b600eee63260321bfa327864189402226284714e8bd918428d1c671e3b26782b",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 552,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-us-citizen-arrest-ait-local-defense",
+      "status": 200,
+      "headings": [
+        "A US Citizen Arrested in Taiwan: AIT Contact and Local Defense"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-us-citizen-arrest-ait-local-defense",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://travel.state.gov/en/international-travel/travel-advisories/taiwan.html",
+        "https://travel.state.gov/en/international-travel/help-abroad/arrest-detention.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://travel.state.gov/en/international-travel/travel-advisories/taiwan.html",
+        "https://travel.state.gov/en/international-travel/help-abroad/arrest-detention.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "83799ee8dfe1d28b86680a267bffa1cc727abbabdd1635053b361e114a663719",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 553,
+      "locale": "ko",
+      "width": 390,
+      "slug": "taiwan-korean-parent-service-fees-evidence",
+      "status": 200,
+      "headings": [
+        "한국 본사 용역비를 대만 자회사가 부담할 때, 청구서에 연결할 업무기록"
+      ],
+      "canonical": "https://tseng-law.com/ko/columns/taiwan-korean-parent-service-fees-evidence",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=62",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=67",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340019&flno=22",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=62",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=67",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=43-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340019&flno=22"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/384-taiwan-cross-border-e-services-income-tax-foreign-platforms/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/383-taiwan-free-trade-zone-bonded-factory-science-park-tax/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "c47ac70b8cad44bb86c5b7b9a9240a094190c354c9af9ba2b441aeb8e7a18ac7",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 554,
+      "locale": "ja",
+      "width": 390,
+      "slug": "taiwan-dividend-japanese-parent-tax-records",
+      "status": 200,
+      "headings": [
+        "台湾子会社からの配当、日本本社に届く入金明細と保存書類"
+      ],
+      "canonical": "https://tseng-law.com/ja/columns/taiwan-dividend-japanese-parent-tax-records",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://www.mof.go.jp/tax_policy/summary/international/h02.htm",
+        "https://laws.e-gov.go.jp/law/340AC0000000034",
+        "https://laws.e-gov.go.jp/law/340M50000040012",
+        "https://laws.e-gov.go.jp/law/340CO0000000097",
+        "https://www.mof.go.jp/tax_policy/summary/international/h02.htm",
+        "https://laws.e-gov.go.jp/law/340AC0000000034",
+        "https://laws.e-gov.go.jp/law/340CO0000000097",
+        "https://laws.e-gov.go.jp/law/340M50000040012"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "2544b0941667ade0135279002cc92d4ea0b99a17e55961acf76f7bcb967d3283",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "article",
+      "id": 555,
+      "locale": "en",
+      "width": 390,
+      "slug": "taiwan-company-records-us-form-5471",
+      "status": 200,
+      "headings": [
+        "Form 5471 Preparation: Records to Request From a Taiwan Company"
+      ],
+      "canonical": "https://tseng-law.com/en/columns/taiwan-company-records-us-form-5471",
+      "dimensions": {
+        "client": 390,
+        "scroll": 375
+      },
+      "sourceLinks": [
+        "https://www.irs.gov/forms-pubs/about-form-5471",
+        "https://www.irs.gov/instructions/i5471",
+        "https://www.irs.gov/forms-pubs/implementation-of-new-foreign-tax-allocation-reporting-in-schedule-e-form-5471-instructions",
+        "https://www.irs.gov/forms-pubs/about-form-5471",
+        "https://www.irs.gov/instructions/i5471",
+        "https://www.irs.gov/forms-pubs/implementation-of-new-foreign-tax-allocation-reporting-in-schedule-e-form-5471-instructions"
+      ],
+      "prohibitedBold": 0,
+      "images": [
+        {
+          "src": "https://media.tseng-law.com/images/blog/305-taiwan-cpa-audit-tax-certification-bookkeeping/featured-01.webp",
+          "width": 1280,
+          "complete": true
+        },
+        {
+          "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "width": 1760,
+          "complete": true
+        }
+      ],
+      "apiRequests": [],
+      "bodySha256": "b292a7d82bed74389be765dfd12e3e4e7b54ae57cf7fe800fa74ab8f1d5acb86",
+      "expectedTextFound": true,
+      "aiCaptionFound": true,
+      "referenceMatch": true
+    },
+    {
+      "action": "archive-discovery",
+      "id": 540,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 540,
+      "locale": "ko",
+      "query": "설립 전 대만",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 540,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-company-preincorporation-contracts-liability",
+      "headings": [
+        "설립 전 대만 회사 이름으로 맺은 계약, 누가 책임지나"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 540,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 540,
+      "locale": "ja",
+      "query": "台湾法人の設立前",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 540,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-company-preincorporation-contracts-liability",
+      "headings": [
+        "台湾法人の設立前に結ぶ契約、名義と責任はどうなるか"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 540,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/en/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 540,
+      "locale": "en",
+      "query": "Signing for a Taiwan Company",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 540,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-company-preincorporation-contracts-liability",
+      "headings": [
+        "Signing for a Taiwan Company Before It Exists"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 541,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 541,
+      "locale": "ko",
+      "query": "기장업체",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 541,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-bookkeeping-provider-records-handover",
+      "headings": [
+        "대만 기장업체를 바꿀 때, 장부 파일과 종이 원본은 누가 보관하나"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 541,
+      "locale": "ko",
+      "board": "tax-accounting",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 541,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 541,
+      "locale": "ja",
+      "query": "記帳委託先",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 541,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-bookkeeping-provider-records-handover",
+      "headings": [
+        "台湾の記帳委託先を替えるとき、帳簿データと原本をどう引き継ぐか"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 541,
+      "locale": "ja",
+      "board": "tax-accounting",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 541,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/en/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 541,
+      "locale": "en",
+      "query": "Changing Bookkeepers",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 541,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-bookkeeping-provider-records-handover",
+      "headings": [
+        "Changing Bookkeepers in Taiwan: The Records Your Company Still Needs"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 541,
+      "locale": "en",
+      "board": "tax-accounting",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 542,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 542,
+      "locale": "ko",
+      "query": "증거보전",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 542,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "headings": [
+        "대만 소송 전 증거보전, 무엇을 어느 법원에 신청하나"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 542,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 542,
+      "locale": "ja",
+      "query": "証拠を保全",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 542,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "headings": [
+        "台湾で訴訟を起こす前に証拠を保全する申立て"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 542,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 0,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": true,
+      "url": "https://tseng-law.com/en/columns?topic=litigation"
+    },
+    {
+      "action": "search-discovery",
+      "id": 542,
+      "locale": "en",
+      "query": "Preserving Evidence",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 542,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-civil-evidence-preservation-before-lawsuit",
+      "headings": [
+        "Preserving Evidence Before a Civil Suit in Taiwan"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 543,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 543,
+      "locale": "ko",
+      "query": "직원이 피의자",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 543,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "headings": [
+        "대만에서 직원이 피의자가 됐을 때, 회사가 선임한 변호사는 누구를 변호하나"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 543,
+      "locale": "ko",
+      "board": "criminal-litigation",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 543,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 543,
+      "locale": "ja",
+      "query": "会社負担",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 543,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "headings": [
+        "台湾で従業員が被疑者になったら、会社負担の弁護士は誰を弁護するか"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 543,
+      "locale": "ja",
+      "board": "criminal-litigation",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 543,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/en/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 543,
+      "locale": "en",
+      "query": "Company-Paid Counsel",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 543,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-employee-criminal-questioning-company-paid-counsel",
+      "headings": [
+        "When a Taiwan Employee Is a Suspect, Who Is Company-Paid Counsel Defending?"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 543,
+      "locale": "en",
+      "board": "criminal-litigation",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 544,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 544,
+      "locale": "ko",
+      "query": "대만 자회사 출자",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 544,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-subsidiary-korean-outward-investment-remittance",
+      "headings": [
+        "한국 회사의 대만 자회사 출자, 두 나라 신고와 송금 순서"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 545,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 545,
+      "locale": "ja",
+      "query": "登記証明書",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 545,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-investment-japanese-company-documents-authentication",
+      "headings": [
+        "日本法人の台湾投資、登記証明書と委任状の認証"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 546,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/en/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 546,
+      "locale": "en",
+      "query": "Delaware LLC",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 546,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-investment-delaware-llc-identity-authority",
+      "headings": [
+        "A Delaware LLC Investing in Taiwan: Identity, Ownership and Signing Authority"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 547,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 547,
+      "locale": "ko",
+      "query": "한국어 거래기록",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 547,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-civil-korean-documents-chinese-translations",
+      "headings": [
+        "한국어 거래기록을 대만 법원에 낼 때, 원문과 번역문을 잇는 자료"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 548,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 548,
+      "locale": "ja",
+      "query": "日本本社が台湾の訴訟",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 548,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-civil-japanese-company-litigation-authority",
+      "headings": [
+        "日本本社が台湾の訴訟を委任するとき、和解と控訴の権限は誰にあるか"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 549,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/en/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 549,
+      "locale": "en",
+      "query": "Opponent's Documents",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 549,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-civil-us-company-opponent-document-production",
+      "headings": [
+        "A US Company's Request for an Opponent's Documents in Taiwan Civil Litigation"
+      ]
+    },
+    {
+      "action": "archive-discovery",
+      "id": 550,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 550,
+      "locale": "ko",
+      "query": "한국인의 귀국 일정",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 550,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-investigation-korean-citizen-exit-restriction",
+      "headings": [
+        "대만 수사를 받는 한국인의 귀국 일정과 출국 제한 서면"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 550,
+      "locale": "ko",
+      "board": "criminal-litigation",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 551,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 551,
+      "locale": "ja",
+      "query": "日本語通訳で確認",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 551,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-police-japanese-interpretation-record-corrections",
+      "headings": [
+        "台湾の警察調書を日本語通訳で確認するとき、訂正はどこに残るか"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 551,
+      "locale": "ja",
+      "board": "criminal-litigation",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 552,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/en/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 552,
+      "locale": "en",
+      "query": "AIT Contact",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 552,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-us-citizen-arrest-ait-local-defense",
+      "headings": [
+        "A US Citizen Arrested in Taiwan: AIT Contact and Local Defense"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 552,
+      "locale": "en",
+      "board": "criminal-litigation",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 553,
+      "locale": "ko",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ko/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 553,
+      "locale": "ko",
+      "query": "한국 본사 용역비",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 553,
+      "locale": "ko",
+      "url": "https://tseng-law.com/ko/columns/taiwan-korean-parent-service-fees-evidence",
+      "headings": [
+        "한국 본사 용역비를 대만 자회사가 부담할 때, 청구서에 연결할 업무기록"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 553,
+      "locale": "ko",
+      "board": "tax-accounting",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 554,
+      "locale": "ja",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/ja/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 554,
+      "locale": "ja",
+      "query": "日本本社に届く入金明細",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 554,
+      "locale": "ja",
+      "url": "https://tseng-law.com/ja/columns/taiwan-dividend-japanese-parent-tax-records",
+      "headings": [
+        "台湾子会社からの配当、日本本社に届く入金明細と保存書類"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 554,
+      "locale": "ja",
+      "board": "tax-accounting",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "archive-discovery",
+      "id": 555,
+      "locale": "en",
+      "status": 200,
+      "initialCount": 1,
+      "count": 1,
+      "visible": true,
+      "topicExpansion": false,
+      "url": "https://tseng-law.com/en/columns"
+    },
+    {
+      "action": "search-discovery",
+      "id": 555,
+      "locale": "en",
+      "query": "Form 5471 Preparation",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "search-result-real-click",
+      "id": 555,
+      "locale": "en",
+      "url": "https://tseng-law.com/en/columns/taiwan-company-records-us-form-5471",
+      "headings": [
+        "Form 5471 Preparation: Records to Request From a Taiwan Company"
+      ]
+    },
+    {
+      "action": "board-discovery",
+      "id": 555,
+      "locale": "en",
+      "board": "tax-accounting",
+      "status": 200,
+      "count": 1
+    },
+    {
+      "action": "sitemap",
+      "status": 200,
+      "includes": [
+        {
+          "id": 540,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 540,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 540,
+          "locale": "en",
+          "present": true
+        },
+        {
+          "id": 541,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 541,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 541,
+          "locale": "en",
+          "present": true
+        },
+        {
+          "id": 542,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 542,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 542,
+          "locale": "en",
+          "present": true
+        },
+        {
+          "id": 543,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 543,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 543,
+          "locale": "en",
+          "present": true
+        },
+        {
+          "id": 544,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 545,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 546,
+          "locale": "en",
+          "present": true
+        },
+        {
+          "id": 547,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 548,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 549,
+          "locale": "en",
+          "present": true
+        },
+        {
+          "id": 550,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 551,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 552,
+          "locale": "en",
+          "present": true
+        },
+        {
+          "id": 553,
+          "locale": "ko",
+          "present": true
+        },
+        {
+          "id": 554,
+          "locale": "ja",
+          "present": true
+        },
+        {
+          "id": 555,
+          "locale": "en",
+          "present": true
+        }
+      ]
+    }
+  ],
+  "globalErrors": []
+}

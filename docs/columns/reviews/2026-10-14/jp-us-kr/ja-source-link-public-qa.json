@@ -1,0 +1,124 @@
+[
+  {
+    "width": 1440,
+    "text": "69条",
+    "html": "<a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&amp;flno=69\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">69条</a>",
+    "chain": [
+      {
+        "tag": "A",
+        "className": "link-underline",
+        "color": "rgb(20, 18, 16)",
+        "background": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visibility": "visible",
+        "fontSize": "18px",
+        "fill": "rgb(20, 18, 16)",
+        "filter": "none",
+        "clipPath": "none",
+        "rect": {
+          "x": 486.390625,
+          "y": 545.046875,
+          "width": 53.875,
+          "height": 46
+        }
+      },
+      {
+        "tag": "P",
+        "className": "blog-paragraph",
+        "color": "rgb(43, 40, 36)",
+        "background": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visibility": "visible",
+        "fontSize": "18px",
+        "fill": "rgb(43, 40, 36)",
+        "filter": "none",
+        "clipPath": "none",
+        "rect": {
+          "x": 486.390625,
+          "y": 550.046875,
+          "width": 648,
+          "height": 108
+        }
+      },
+      {
+        "tag": "DIV",
+        "className": "column-markdown",
+        "color": "rgb(43, 40, 36)",
+        "background": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visibility": "visible",
+        "fontSize": "18px",
+        "fill": "rgb(43, 40, 36)",
+        "filter": "none",
+        "clipPath": "none",
+        "rect": {
+          "x": 486.390625,
+          "y": -435.078125,
+          "width": 648,
+          "height": 2327
+        }
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "text": "69条",
+    "html": "<a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&amp;flno=69\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">69条</a>",
+    "chain": [
+      {
+        "tag": "A",
+        "className": "link-underline",
+        "color": "rgb(20, 18, 16)",
+        "background": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visibility": "visible",
+        "fontSize": "17px",
+        "fill": "rgb(20, 18, 16)",
+        "filter": "none",
+        "clipPath": "none",
+        "rect": {
+          "x": 20,
+          "y": 509.765625,
+          "width": 50.890625,
+          "height": 45
+        }
+      },
+      {
+        "tag": "P",
+        "className": "blog-paragraph",
+        "color": "rgb(43, 40, 36)",
+        "background": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visibility": "visible",
+        "fontSize": "17px",
+        "fill": "rgb(43, 40, 36)",
+        "filter": "none",
+        "clipPath": "none",
+        "rect": {
+          "x": 20,
+          "y": 515.765625,
+          "width": 335,
+          "height": 204
+        }
+      },
+      {
+        "tag": "DIV",
+        "className": "column-markdown",
+        "color": "rgb(43, 40, 36)",
+        "background": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visibility": "visible",
+        "fontSize": "18px",
+        "fill": "rgb(43, 40, 36)",
+        "filter": "none",
+        "clipPath": "none",
+        "rect": {
+          "x": 20,
+          "y": -866.78125,
+          "width": 335,
+          "height": 3340.8125
+        }
+      }
+    ]
+  }
+]

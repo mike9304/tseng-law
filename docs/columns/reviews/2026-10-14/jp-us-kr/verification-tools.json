@@ -1,0 +1,26 @@
+{
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-jp-us-kr-20261014/verify-remaining-country-browser.mjs",
+      "sha256": "ad454ebcc0537384e92ec36bb30e6673fb606de49dad9626851e360ebae034ec"
+    },
+    {
+      "path": "/Users/son7/tseng-jp-us-kr-20261014/all-country-manifest.json",
+      "sha256": "74e8cd4512225f2a5812a18e8ab22ce0a03bda4339e8ff05b69ebc161b29f7ba"
+    },
+    {
+      "path": "/Users/son7/tseng-jp-us-kr-20261014/verify-media-browser.mjs",
+      "sha256": "ba0ef4428628a3214bb7de093bd303d78cf698aa65e553acd2502174a942cb24"
+    },
+    {
+      "path": "/Users/son7/tseng-jp-us-kr-20261014/wait-public-and-verify.py",
+      "sha256": "bec16a0aad0490c78deb5ba94b5a63cf6c5a55a9bd35a174d6b05d0c663531fd"
+    },
+    {
+      "path": "/Users/son7/tseng-jp-us-kr-20261014/verify-ja-source-link.mjs",
+      "sha256": "c3db403eb3e271c7a19b7bce105121012f6e17f6c9d5321c7434f1af94e1eff6"
+    }
+  ],
+  "note": "Current final public verification scripts. The article driver now waits for page load and individually visible content/images/results, instead of a global networkidle event. Static reference bodies and all content/error assertions are unchanged. Full screenshots remain in the named local evidence directory.",
+  "recordedAt": "2026-10-14T05:54:44.024708+00:00"
+}

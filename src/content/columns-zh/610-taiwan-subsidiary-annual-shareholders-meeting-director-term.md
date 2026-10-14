@@ -100,13 +100,11 @@ author: "legal-ai-assistant"
 
 得票代表選舉權最多的董事，改選後十五日內召開第一次董事會。上屆任滿前改選且決議任滿時解任的，於任滿後十五日內開會（[第203條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=203)第1項）。該董事逾期未召開，過半數當選董事得自行召集（第4項）。非公開發行公司依章程僅置一名董事時，不適用董事會規定（[第128條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項、[第192條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=192)第2項）。
 
-2020年香港法人獨資在高雄設非公開發行的股份有限公司，章程置二名董事、不置監察人（虛構情境）。三年任滿未再指派，歷年決算未承認。
-
 韓、日及美國各州的會議要求，宜向當地專業人士確認。
 
 昊鼎國際法律事務所，[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。
 
-設例的兩名董事須在會計年度終了後六個月內決議承認決算（[經濟部經商字第10302145450號函](https://gcis.nat.gov.tw/elaw/constructionDetail?consCd=8598)）。有正當事由並經主管機關核准，才可依[第170條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=170)第2項適用期限例外。決議內容與日期都須記入議事錄（[第128條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)、[第20條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=20)、[第207條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207)、[第183條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=183)）。
+法人股東只有一人的非公開發行股份有限公司，依章程置董事二人時，須在會計年度終了後六個月內決議承認決算（[經濟部經商字第10302145450號函](https://gcis.nat.gov.tw/elaw/constructionDetail?consCd=8598)）。有正當事由並經主管機關核准，才可依[第170條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=170)第2項適用期限例外。決議內容與日期都須記入議事錄（[第128條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)、[第20條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=20)、[第207條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207)、[第183條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=183)）。
 
 ## 參考的官方資料
 

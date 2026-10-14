@@ -105,13 +105,11 @@ author: "legal-ai-assistant"
 
 재선임 뒤 첫 이사회는 각 이사가 얻은 표가 대표하는 선거권 수를 비교해, 그 수가 가장 많은 이사가 15일 안에 엽니다. 임기 만료 전에 선임하고 만료 때 해임하기로 한 때는 만료 후 15일입니다([제203조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=203) 제1항). 그 이사가 넘기면 당선 이사의 과반수가 소집할 수 있습니다(같은 조 제4항). 공개발행회사가 아닌 회사가 정관상 이사를 한 명만 두면 이사회 규정은 적용되지 않습니다([제128조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1) 제2항, [제192조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=192) 제2항).
 
-2020년 서울 본사가 타이중에 세운, 공개발행회사가 아닌 주식회사를 가정합니다. 주주는 본사뿐입니다. 정관에 따라 이사는 두 명이고 감찰인은 없습니다. 3년 임기는 지났고 재선임과 매년 결산 승인은 빠져 있습니다.
-
 한국·일본·미국 각 주의 총회 요건은 현지 전문가에게 확인합니다.
 
 호정(昊鼎)국제법률사무소, [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw).
 
-가상 회사의 두 이사는 회계연도 종료 후 6개월 안에 결산을 결의로 승인해야 합니다([경제부 經商字第10302145450號 해석](https://gcis.nat.gov.tw/elaw/constructionDetail?consCd=8598)). 정당한 사유로 주무관청의 허가를 받은 경우에는 [제170조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=170) 제2항에 따른 기한의 예외가 인정됩니다. 결의 내용과 날짜는 의사록에 적습니다([제20조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=20), [제128조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1), [제207조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207), [제183조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=183)).
+법인 주주가 한 명이고 정관에 따라 이사를 두 명 두는 비공개발행 주식회사는 회계연도 종료 후 6개월 안에 이사회 결의로 결산을 승인해야 합니다([경제부 經商字第10302145450號 해석](https://gcis.nat.gov.tw/elaw/constructionDetail?consCd=8598)). 정당한 사유로 주무관청의 허가를 받은 경우에는 [제170조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=170) 제2항에 따른 기한의 예외가 인정됩니다. 결의 내용과 날짜는 의사록에 적습니다([제20조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=20), [제128조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1), [제207조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207), [제183조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=183)).
 
 ## 참고한 공식 자료
 

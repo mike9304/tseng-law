@@ -99,17 +99,15 @@ author: "legal-ai-assistant"
 
 改選後の最初の董事会は、その選挙で得た票が代表する選挙権が最も多い董事が、改選のあと十五日以内に開きます。任期満了の前に改選し、満了のときに解任すると決めたときは、満了のあと十五日以内です（[第203条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=203)第1項）。その董事が期限内に開かなければ、当選した董事の過半数が自ら招集できます（同条第4項）。公開発行会社以外で章程により董事を一人だけ置く会社には、董事会の規定は適用されません（[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項、[第192条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=192)第2項）。
 
-2019年、大阪の本社が台南に公開発行会社ではない股份有限公司を作りました。株式はすべて本社のものです。章程は董事会を置かず、董事は一人、監察人はいません。架空の設例です。設立のあと、毎年の決算承認は一度も残っていません。
+法人株主が一人で、章程により董事会を置かず董事一人だけを置く非公開発行の股份有限公司では、その董事が董事会の権限を行使します。董事会の規定と[第207条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207)は適用されません（[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項）。毎年の決算承認は[第20条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=20)に基づく義務です。承認日と内容を記録しておくことは実務上の勧めで、董事会議事録の作成義務ではありません。
 
-その董事が董事会の権限を行使します。董事会の規定と[第207条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207)は、この章程には適用されません（[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項）。毎年の決算承認は[第20条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=20)に基づく義務です。承認日と内容を記録しておくことは実務上の勧めで、董事会議事録の作成義務ではありません。
-
-董事一人で董事会を置かないこの会社でも、[商業會計法第68条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=68)第1項により、決算報表を会計年度終了後六か月以内に承認に付す必要があります。[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項により、董事会の開催手続は適用されません。
+董事一人で董事会を置かない場合も、[商業會計法第68条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=68)第1項により、決算報表を会計年度終了後六か月以内に承認に付す必要があります。[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項により、董事会の開催手続は適用されません。
 
 韓国、日本、米国各州の株主総会の要件は、現地の専門家に確認する事項です。
 
 昊鼎国際法律事務所、[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。
 
-設例で残すことを勧めるのは、一人の董事がいつ、どの会計年度の決算を承認したかという記録です。二人の董事を置く股份有限公司なら、董事会規定の準用により議事録が必要になります（[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項、[第207条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207)、[第183条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=183)）。
+董事一人の場合に記録しておくことを勧めるのは、決算を承認した日と対象となる会計年度です。二人の董事を置く股份有限公司なら、董事会規定の準用により議事録が必要になります（[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項、[第207条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207)、[第183条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=183)）。
 
 ## 参考にした公的資料
 

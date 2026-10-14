@@ -229,6 +229,12 @@ describe('home hero', () => {
     expect(size(INTL_HERO_MEDIA.filmWebm)).toBeLessThanOrEqual(700 * 1024);
   });
 
+  it('keeps every hero file under public/images, which the static build serves from the media origin (byte ranges)', () => {
+    for (const file of [INTL_HERO_MEDIA.still1280, INTL_HERO_MEDIA.still640, INTL_HERO_MEDIA.filmMp4, INTL_HERO_MEDIA.filmWebm]) {
+      expect(file).toMatch(/^\/images\/intl-design\//);
+    }
+  });
+
   it('plays the film only on wide screens with motion allowed and without Save-Data', () => {
     const win = (matches: boolean, saveData?: boolean) => ({
       matchMedia: (query: string) => ({ matches: query === INTL_HERO_FILM_QUERY && matches }) as MediaQueryList,

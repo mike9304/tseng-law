@@ -39,12 +39,17 @@ export const intlHeroAiCaption: Record<IntlDesignLocale, string> = {
   is: 'Mynd gerð með gervigreind',
 };
 
-/** Hero plate media (DIRECTION §5): the still is the trimmed film's first frame, so the fade-in is invisible. */
+/**
+ * Hero plate media (DIRECTION §5): the still is the trimmed film's first frame, so the fade-in is invisible. All four
+ * files sit under public/images so the static build serves them from the media origin (R2), which answers byte-range
+ * requests; the Sites origin does not (checked 2026-10-15: 200 without Accept-Ranges), and Safari plays video only
+ * with ranges. DIRECTION had the film under public/media (review round 1 moved it).
+ */
 export const INTL_HERO_MEDIA = {
   still1280: '/images/intl-design/hero-still-1280.webp',
   still640: '/images/intl-design/hero-still-640.webp',
-  filmMp4: '/media/intl-design/intl-hero-5s.mp4',
-  filmWebm: '/media/intl-design/intl-hero-5s.webm',
+  filmMp4: '/images/intl-design/intl-hero-5s.mp4',
+  filmWebm: '/images/intl-design/intl-hero-5s.webm',
   width: 1280,
   height: 720,
 } as const;

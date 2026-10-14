@@ -4,6 +4,7 @@ import path from 'node:path';
 import {
   extractLocalRefs,
   isServerOnlyPath,
+  FOLIO_NOT_FOUND_LOCALES,
   MAIN_LOCALES,
   pageFileFor,
   REPO_ROOT,
@@ -158,7 +159,7 @@ export async function crawlSite({ base, outDir, concurrency = 6, limit = Infinit
   }
 
   // Localized not-found pages, served by the host for unknown paths under each locale.
-  for (const locale of [...MAIN_LOCALES, '']) {
+  for (const locale of [...MAIN_LOCALES, ...FOLIO_NOT_FOUND_LOCALES, '']) {
     const probe = `${locale ? `/${locale}` : ''}/__static-site-not-found__`;
     const response = await fetch(`${base}${probe}`, { redirect: 'manual' });
     if (response.status === 404 && (response.headers.get('content-type') ?? '').includes('text/html')) {

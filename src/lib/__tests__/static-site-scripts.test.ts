@@ -2,7 +2,8 @@ import { describe, expect, it, vi } from 'vitest';
 // @ts-expect-error -- plain ESM build scripts without type declarations
 import { toHostDestination, toHostPattern } from '../../../scripts/static-site/assemble.mjs';
 // @ts-expect-error -- plain ESM build scripts without type declarations
-import { extractLocalRefs, isServerOnlyPath, pageFileFor } from '../../../scripts/static-site/shared.mjs';
+import { extractLocalRefs, FOLIO_NOT_FOUND_LOCALES, isServerOnlyPath, pageFileFor } from '../../../scripts/static-site/shared.mjs';
+import { INTL_DESIGN_LOCALES } from '@/lib/intl-design-locales';
 // @ts-expect-error -- plain ESM build scripts without type declarations
 import { parseRedirects } from '../../../scripts/static-site/sites-pack.mjs';
 // @ts-expect-error -- plain ESM build scripts without type declarations
@@ -25,6 +26,10 @@ async function nextConfigRedirects(staticSite: boolean): Promise<RedirectRule[]>
 }
 
 describe('static-site build scripts', () => {
+  it('keeps a localized not-found page for exactly the Folio locales', () => {
+    expect([...FOLIO_NOT_FOUND_LOCALES].sort()).toEqual([...INTL_DESIGN_LOCALES].sort());
+  });
+
   it('maps page paths to extension files served at the clean URL', () => {
     expect(pageFileFor('/')).toBe('index.html');
     expect(pageFileFor('/ko')).toBe('ko.html');

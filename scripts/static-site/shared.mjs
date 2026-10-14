@@ -7,6 +7,14 @@ export const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url
 export const SITE_ORIGIN = 'https://tseng-law.com';
 export const STATIC_DIST_DIR = '.next-static';
 export const MAIN_LOCALES = ['ko', 'zh-hant', 'en', 'ja'];
+/**
+ * The 29 Folio locales (src/lib/intl-design-locales.ts; a test keeps the lists equal). They have their own designed
+ * not-found page, so the snapshot keeps a localized 404.html for each instead of the English root one.
+ */
+export const FOLIO_NOT_FOUND_LOCALES = [
+  'id', 'th', 'de', 'es', 'fr', 'it', 'pt', 'nl', 'pl', 'ru', 'uk', 'el', 'sv', 'da', 'nb',
+  'fi', 'cs', 'hu', 'ro', 'sk', 'bg', 'hr', 'sr', 'sl', 'lt', 'lv', 'et', 'ca', 'is',
+];
 
 /**
  * Paths that only work with a server (APIs, admin, member/booking/store flows, builder

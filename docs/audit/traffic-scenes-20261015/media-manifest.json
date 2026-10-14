@@ -27,22 +27,23 @@
       "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-05-dashcam-aftermath-generation.json"
     },
     {
-      "stem": "turn-04-side-aftermath",
+      "stem": "turn-04-dashcam-crosswise-r1",
       "selectedSeconds": 15,
-      "sourceSha256": "821e26f256f70e5f9a3ba9ef52dc05ad68b363a70b32f89d698f857b2c44a1d5",
-      "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-04-side-aftermath-generation.json"
+      "sourceSha256": "07c67312a74013832f606446b1295ef2d6586c8b82c1f983149b9bccb0425372",
+      "receiptPath": "/Users/son7/tseng-traffic-lane/runs/20261015-0340/qa/turn-04-dashcam-crosswise-r1-generation.json"
     }
   ],
   "excludedJobs": [
     "turn-02-left-movement",
-    "turn-02-left-movement-v2"
+    "turn-02-left-movement-v2",
+    "turn-04-side-aftermath"
   ],
   "media": [
     {
       "locale": "ko",
       "video": "/Users/son7/Projects/tseng-law-traffic-lane/public/videos/columns/scooter-left-turn-dashcam-reenactment-20261015-v1-ko.mp4",
       "poster": "/Users/son7/Projects/tseng-law-traffic-lane/public/images/column-videos/scooter-left-turn-dashcam-reenactment-20261015-v1-ko.jpg",
-      "sha256": "8a420c9b33a8b1bc0fd7bcfcda5842286401f48632035e39118fa2db71ec927e",
+      "sha256": "7e907286ec03edd3f0c6cb06345716e817685da22e49804c17d1e6201eee2277",
       "posterSha256": "94d250d7bc8de1242963cf8b606a1104057f9fccfc32762fc422f7381a8ae948",
       "probe": {
         "programs": [],
@@ -58,7 +59,7 @@
         ],
         "format": {
           "duration": "50.000000",
-          "size": "21595319"
+          "size": "16659435"
         }
       }
     },
@@ -66,7 +67,7 @@
       "locale": "zh-hant",
       "video": "/Users/son7/Projects/tseng-law-traffic-lane/public/videos/columns/scooter-left-turn-dashcam-reenactment-20261015-v1-zh-hant.mp4",
       "poster": "/Users/son7/Projects/tseng-law-traffic-lane/public/images/column-videos/scooter-left-turn-dashcam-reenactment-20261015-v1-zh-hant.jpg",
-      "sha256": "58d8492d9b839f53f04051a137ce934d8968c6782dfc2b4eb0a94fe83845eb5a",
+      "sha256": "bc2c72bcf3f760a59e50087a609a5730d89aa93fb020861d0386b359677df901",
       "posterSha256": "b43179168c770302384c5d6d0db675a6a801b814974536358f986760e75c44bc",
       "probe": {
         "programs": [],
@@ -82,7 +83,7 @@
         ],
         "format": {
           "duration": "50.000000",
-          "size": "21561054"
+          "size": "16641672"
         }
       }
     },
@@ -90,7 +91,7 @@
       "locale": "en",
       "video": "/Users/son7/Projects/tseng-law-traffic-lane/public/videos/columns/scooter-left-turn-dashcam-reenactment-20261015-v1-en.mp4",
       "poster": "/Users/son7/Projects/tseng-law-traffic-lane/public/images/column-videos/scooter-left-turn-dashcam-reenactment-20261015-v1-en.jpg",
-      "sha256": "30cec2839832e756b5b4df132d2e67c8d83986076cba12b31b1b5649d7bc69df",
+      "sha256": "39ca4bc8c093712b9d37cbf06f177ff0fe491a66bb6d3e4df5aa7b45412969de",
       "posterSha256": "d613b2aa99657b7d41f7af420133051487e9bfbc8cd6868c2b49deecf0c66cd4",
       "probe": {
         "programs": [],
@@ -106,7 +107,7 @@
         ],
         "format": {
           "duration": "50.000000",
-          "size": "21109274"
+          "size": "16170769"
         }
       }
     }

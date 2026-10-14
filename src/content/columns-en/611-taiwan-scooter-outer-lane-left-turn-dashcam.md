@@ -27,7 +27,7 @@ faq:
 
 A teal scooter sits ahead and to the right in the car's forward view. It turns left. The car brakes. They touch. This is a scene invented for this article. The film and cover are AI-made, with no connection to a real crash, person or judgment.
 
-The image does not establish what kind of lane the scooter occupied. A turn arrow, a motorcycle restriction or a two-stage-turn sign could lie outside the frame. That missing context matters.
+The image does not establish what kind of lane the scooter occupied. A turn arrow, a motorcycle restriction or a two-stage-turn sign could lie outside the frame.
 
 ## Where was the rider permitted to turn?
 

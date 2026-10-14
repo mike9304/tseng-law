@@ -30,6 +30,7 @@ import columnUiVi from '@/data/column-ui-vi.json';
 import { folioArticleCopy, folioLabelValue } from '@/data/intl-design-ui';
 import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 import { buildGuidanceAttorneyFacts, GUIDANCE_FACT_SEPARATOR } from '@/lib/guidance-attorney-facts';
+import { buildFolioAuthorityCard } from '@/lib/intl-design-article';
 
 export const dynamic = 'force-dynamic';
 
@@ -372,7 +373,9 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     showSeo,
     typography,
     // Only Folio pages carry the key, so other locales' serialized props stay byte-identical.
-    ...(folioArticle ? { tableScrollHint: folioArticle.tableScrollHint } : {}),
+    ...(folioLocale && folioArticle
+      ? { folio: { tableScrollHint: folioArticle.tableScrollHint, authority: buildFolioAuthorityCard(folioLocale) } }
+      : {}),
   };
   // Every column hydrates the same synchronous view from complete public data.
   // SSR and the server's publication/visibility decisions remain intact.

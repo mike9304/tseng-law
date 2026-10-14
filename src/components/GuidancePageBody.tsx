@@ -19,7 +19,7 @@ import {
 } from '@/data/international-guidance-content';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
-import { folioChrome } from '@/data/intl-design-ui';
+import { folioChrome } from '@/data/intl-design-chrome';
 import {
   EXISTING_SITE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,

@@ -6,7 +6,7 @@ import { chromeSiteLocale } from '@/lib/public-site-chrome';
 import type { PublicLocale8 } from '@/lib/public-guidance';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
-import { folioChrome } from '@/data/intl-design-ui';
+import { folioChrome } from '@/data/intl-design-chrome';
 
 const scrollTopLabels: Record<SiteLocale, string> = {
   ko: '상단으로 이동',

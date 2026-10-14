@@ -26,8 +26,7 @@ import CriminalBoardLink from './CriminalBoardLink';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { typesetTitle } from '@/lib/ko-middot';
 import columnUiVi from '@/data/column-ui-vi.json';
-import { folioColumnsCopy } from '@/data/intl-design-columns-ui';
-import { isIntlDesignLocale } from '@/lib/intl-design-locales';
+import type { FolioColumnsCopy } from '@/data/intl-design-columns-ui';
 
 const searchCopy = {
   vi: {
@@ -520,6 +519,7 @@ export default function ColumnsGrid({
   openingSlugs,
   topicOrder,
   recommendedOrder,
+  folioLabels,
 }: {
   locale: PublicLocale8;
   posts: ColumnListItem[];
@@ -536,6 +536,8 @@ export default function ColumnsGrid({
   topicOrder?: readonly string[];
   /** Optional slugs shown first in the recommended section (en design); the rest stay newest first. */
   recommendedOrder?: readonly string[];
+  /** Folio locales: search, filter and byline labels in the page language (passed only there). */
+  folioLabels?: FolioColumnsCopy;
 }) {
   const listHref = hrefBase ?? `/${locale}/columns`;
   // Posts recommended to this locale's readers come first (also in filtered
@@ -576,9 +578,7 @@ export default function ColumnsGrid({
         ? '曾雋崴律師審閱'
         : locale === 'ja'
           ? '曾雋崴弁護士監修'
-          : isIntlDesignLocale(locale)
-            ? folioColumnsCopy[locale].reviewedBy
-            : 'Reviewed by Wei Tseng';
+          : folioLabels?.reviewedBy ?? 'Reviewed by Wei Tseng';
   const router = useRouter();
   const pathname = usePathname();
   const liveSearchParams = useSearchParams();
@@ -600,10 +600,9 @@ export default function ColumnsGrid({
     : requestedCategory ? null : 'all';
   const [searchInput, setSearchInput] = useState(requestedQuery);
   const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
-  // Folio locales (id, th, European) have their own search labels; the rest keep the topic-UI locale's.
-  const folioSearch = isIntlDesignLocale(locale) ? folioColumnsCopy[locale] : null;
-  const searchLabels = folioSearch
-    ? { ...folioSearch, resultCount: (n: number) => folioSearch.resultCount.replace('{n}', String(n)) }
+  // Folio locales (id, th, European) get their own labels from the server page; the rest keep the topic-UI locale's.
+  const searchLabels = folioLabels
+    ? { ...folioLabels, resultCount: (n: number) => folioLabels.resultCount.replace('{n}', String(n)) }
     : searchCopy[uiLocale];
   // Locales with native topic labels group by subject; other guidance locales
   // keep the category labels they already carry.

@@ -29,7 +29,7 @@ import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import { isApplePresentationLocale } from '@/lib/apple-design-locales';
 import { IS_STATIC_SITE } from '@/lib/static-site';
-import { folioChrome } from '@/data/intl-design-ui';
+import { folioChrome } from '@/data/intl-design-chrome';
 
 type MegaLink = {
   label: string;

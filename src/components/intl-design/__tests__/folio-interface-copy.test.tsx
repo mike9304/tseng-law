@@ -19,7 +19,8 @@ import ScrollTopButton from '@/components/ScrollTopButton';
 import ColumnDetailView, { type ColumnDetailViewProps } from '@/app/[locale]/columns/[slug]/ColumnDetailView';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { guidanceTeamCopy } from '@/data/international-guidance-team';
-import { folioArticleCopy, folioChrome, folioChromeCopy, folioResultsImageAlt } from '@/data/intl-design-ui';
+import { folioArticleCopy, folioResultsImageAlt } from '@/data/intl-design-ui';
+import { folioChrome, folioChromeCopy } from '@/data/intl-design-chrome';
 import { folioColumnsCopy } from '@/data/intl-design-columns-ui';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { getAllColumnPosts } from '@/lib/columns';
@@ -115,7 +116,8 @@ describe('Folio article shell (every locale)', () => {
     expect(props.t.consultationTitle).toBe(pack.nav.contact);
     expect(props.t.consultationButton).toBe(pack.contactCta);
     expect(props.t.consultationText).toContain(guidanceTeamCopy[locale].consultationLanguagesLabel);
-    expect(html).toContain(`data-folio-article-authority="${locale}"`);
+    expect(html).toContain('data-folio-article-authority=""');
+    expect(props.folio?.authority?.lawyersLabel).toBe(pack.nav.lawyers);
     expect(html).toContain(guidanceTeamCopy[locale].roles['tseng-junwei']);
     expect(JSON.stringify(props.breadcrumbJsonLd)).toContain(JSON.stringify(pack.nav.home));
   });
@@ -147,8 +149,25 @@ describe('Folio chrome and list labels; other locales unchanged', () => {
     category: 'legal', categoryLabel: 'Informations juridiques sur Taïwan', featuredImage: '/images/x.jpg', summary: 'Résumé',
   };
 
+  it('the columns page hands ColumnsGrid the Folio labels, and only on Folio locales', async () => {
+    const { default: ColumnsPage } = await import('@/app/[locale]/columns/page');
+    const find = (node: unknown): ReactElement<{ folioLabels?: unknown }> | null => {
+      if (!node || typeof node !== 'object') return null;
+      if (Array.isArray(node)) return node.map(find).find(Boolean) ?? null;
+      const element = node as ReactElement<{ children?: unknown }>;
+      if (element.type === ColumnsGrid) return element as ReactElement<{ folioLabels?: unknown }>;
+      return find(element.props?.children);
+    };
+    const page = (locale: string) => ColumnsPage({ params: Promise.resolve({ locale }), searchParams: Promise.resolve({}) } as never);
+    expect(find(await page('fr'))?.props.folioLabels).toBe(folioColumnsCopy.fr);
+    expect(find(await page('th'))?.props.folioLabels).toBe(folioColumnsCopy.th);
+    const ms = find(await page('ms'));
+    expect(ms).not.toBeNull();
+    expect(ms?.props).not.toHaveProperty('folioLabels');
+  });
+
   it('ColumnsGrid', () => {
-    const fr = renderToStaticMarkup(<ColumnsGrid locale="fr" posts={[post]} />);
+    const fr = renderToStaticMarkup(<ColumnsGrid locale="fr" posts={[post]} folioLabels={folioColumnsCopy.fr} />);
     expect(fr).toContain(folioColumnsCopy.fr.label);
     expect(fr).toContain(folioColumnsCopy.fr.resultCount.replace('{n}', '1'));
     expect(fr).toContain(folioColumnsCopy.fr.reviewedBy);

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { PublicLocale8 } from '@/lib/public-guidance';
-import { folioChrome } from '@/data/intl-design-ui';
+import { folioChrome } from '@/data/intl-design-chrome';
 import styles from './Breadcrumbs.module.css';
 
 export default function Breadcrumbs({ locale, current }: { locale: PublicLocale8; current: string }) {

@@ -1,5 +1,4 @@
-import guidanceChrome from '@/data/guidance-chrome.json';
-import { isIntlDesignLocale, type IntlDesignLocale } from '@/lib/intl-design-locales';
+import type { IntlDesignLocale } from '@/lib/intl-design-locales';
 
 /**
  * Interface and accessibility labels for the 29 Folio locales (review round 1, 2026-10-15).
@@ -11,61 +10,11 @@ import { isIntlDesignLocale, type IntlDesignLocale } from '@/lib/intl-design-loc
  * labels no pack had. They are plain interface words: no legal fact, fee, reply time, interpreting or
  * outcome promise, and nothing about the consultation languages beyond the existing team data.
  *
- * Split by consumer so each client bundle only carries its own part: chrome (Header, ScrollTopButton,
- * Breadcrumbs, GuidancePageBody) and article shell (server only) here, the column list (ColumnsGrid) in
- * `intl-design-columns-ui.ts`. Other locales never read these maps; they keep their existing labels.
+ * Split by consumer: the header and scroll-to-top labels live in `intl-design-chrome.ts` (the only part a shared
+ * client bundle imports), the column list labels in `intl-design-columns-ui.ts`, and this file holds what the
+ * server alone reads (article shell, home image alt). Page-level client components get their Folio labels as
+ * props from the server, only on Folio pages, so other locales' bundles and markup stay as they were.
  */
-
-export interface FolioChromeCopy {
-  /** aria-label of the header's main navigation. */
-  mainMenu: string;
-  /** aria-label of the header's small link row (contact, about). */
-  utilityMenu: string;
-  /** Floating scroll-to-top button. */
-  backToTop: string;
-  /** aria-label of the breadcrumb trail. */
-  breadcrumb: string;
-  /** aria-label of the answer-summary section on guidance pages. */
-  summary: string;
-}
-
-export const folioChromeCopy: Record<IntlDesignLocale, FolioChromeCopy> = {
-  id: { mainMenu: 'Menu utama', utilityMenu: 'Tautan cepat', backToTop: 'Kembali ke atas', breadcrumb: 'Anda berada di sini', summary: 'Ringkasan' },
-  th: { mainMenu: 'เมนูหลัก', utilityMenu: 'ลิงก์ด่วน', backToTop: 'กลับขึ้นด้านบน', breadcrumb: 'ตำแหน่งปัจจุบัน', summary: 'สรุป' },
-  de: { mainMenu: 'Hauptmenü', utilityMenu: 'Schnellzugriff', backToTop: 'Nach oben', breadcrumb: 'Sie befinden sich hier', summary: 'Zusammenfassung' },
-  es: { mainMenu: 'Menú principal', utilityMenu: 'Accesos rápidos', backToTop: 'Volver arriba', breadcrumb: 'Está aquí', summary: 'Resumen' },
-  fr: { mainMenu: 'Menu principal', utilityMenu: 'Liens rapides', backToTop: 'Retour en haut', breadcrumb: 'Vous êtes ici', summary: 'Résumé' },
-  it: { mainMenu: 'Menu principale', utilityMenu: 'Collegamenti rapidi', backToTop: 'Torna su', breadcrumb: 'Ti trovi qui', summary: 'Sintesi' },
-  pt: { mainMenu: 'Menu principal', utilityMenu: 'Ligações rápidas', backToTop: 'Voltar ao topo', breadcrumb: 'Está aqui', summary: 'Resumo' },
-  nl: { mainMenu: 'Hoofdmenu', utilityMenu: 'Snelkoppelingen', backToTop: 'Naar boven', breadcrumb: 'U bent hier', summary: 'Samenvatting' },
-  pl: { mainMenu: 'Menu główne', utilityMenu: 'Szybkie linki', backToTop: 'Powrót na górę', breadcrumb: 'Jesteś tutaj', summary: 'Podsumowanie' },
-  ru: { mainMenu: 'Главное меню', utilityMenu: 'Быстрые ссылки', backToTop: 'Наверх', breadcrumb: 'Вы здесь', summary: 'Краткое изложение' },
-  uk: { mainMenu: 'Головне меню', utilityMenu: 'Швидкі посилання', backToTop: 'Нагору', breadcrumb: 'Ви тут', summary: 'Короткий виклад' },
-  el: { mainMenu: 'Κύριο μενού', utilityMenu: 'Γρήγοροι σύνδεσμοι', backToTop: 'Επιστροφή στην κορυφή', breadcrumb: 'Βρίσκεστε εδώ', summary: 'Σύνοψη' },
-  sv: { mainMenu: 'Huvudmeny', utilityMenu: 'Snabblänkar', backToTop: 'Till toppen', breadcrumb: 'Du är här', summary: 'Sammanfattning' },
-  da: { mainMenu: 'Hovedmenu', utilityMenu: 'Genveje', backToTop: 'Til toppen', breadcrumb: 'Du er her', summary: 'Sammenfatning' },
-  nb: { mainMenu: 'Hovedmeny', utilityMenu: 'Snarveier', backToTop: 'Til toppen', breadcrumb: 'Du er her', summary: 'Sammendrag' },
-  fi: { mainMenu: 'Päävalikko', utilityMenu: 'Pikalinkit', backToTop: 'Takaisin ylös', breadcrumb: 'Olet tässä', summary: 'Yhteenveto' },
-  cs: { mainMenu: 'Hlavní nabídka', utilityMenu: 'Rychlé odkazy', backToTop: 'Zpět nahoru', breadcrumb: 'Nacházíte se zde', summary: 'Shrnutí' },
-  hu: { mainMenu: 'Főmenü', utilityMenu: 'Gyorslinkek', backToTop: 'Vissza az oldal tetejére', breadcrumb: 'Ön itt van', summary: 'Összefoglalás' },
-  ro: { mainMenu: 'Meniu principal', utilityMenu: 'Linkuri rapide', backToTop: 'Înapoi sus', breadcrumb: 'Vă aflați aici', summary: 'Rezumat' },
-  sk: { mainMenu: 'Hlavná ponuka', utilityMenu: 'Rýchle odkazy', backToTop: 'Späť hore', breadcrumb: 'Nachádzate sa tu', summary: 'Zhrnutie' },
-  bg: { mainMenu: 'Главно меню', utilityMenu: 'Бързи връзки', backToTop: 'Към началото', breadcrumb: 'Вие сте тук', summary: 'Резюме' },
-  hr: { mainMenu: 'Glavni izbornik', utilityMenu: 'Brze poveznice', backToTop: 'Natrag na vrh', breadcrumb: 'Nalazite se ovdje', summary: 'Sažetak' },
-  sr: { mainMenu: 'Glavni meni', utilityMenu: 'Brzi linkovi', backToTop: 'Nazad na vrh', breadcrumb: 'Nalazite se ovde', summary: 'Sažetak' },
-  sl: { mainMenu: 'Glavni meni', utilityMenu: 'Hitre povezave', backToTop: 'Na vrh', breadcrumb: 'Nahajate se tukaj', summary: 'Povzetek' },
-  lt: { mainMenu: 'Pagrindinis meniu', utilityMenu: 'Greitosios nuorodos', backToTop: 'Į viršų', breadcrumb: 'Jūs esate čia', summary: 'Santrauka' },
-  lv: { mainMenu: 'Galvenā izvēlne', utilityMenu: 'Ātrās saites', backToTop: 'Uz augšu', breadcrumb: 'Jūs atrodaties šeit', summary: 'Kopsavilkums' },
-  et: { mainMenu: 'Peamenüü', utilityMenu: 'Kiirlingid', backToTop: 'Tagasi üles', breadcrumb: 'Te olete siin', summary: 'Kokkuvõte' },
-  ca: { mainMenu: 'Menú principal', utilityMenu: 'Enllaços ràpids', backToTop: 'Torna amunt', breadcrumb: 'Sou aquí', summary: 'Resum' },
-  is: { mainMenu: 'Aðalvalmynd', utilityMenu: 'Flýtileiðir', backToTop: 'Efst á síðu', breadcrumb: 'Þú ert hér', summary: 'Samantekt' },
-};
-
-/** Chrome labels plus the pack's own word for "home", or null outside Folio. */
-export function folioChrome(locale: string): (FolioChromeCopy & { home: string }) | null {
-  if (!isIntlDesignLocale(locale)) return null;
-  return { ...folioChromeCopy[locale], home: guidanceChrome[locale].nav.home };
-}
 
 export interface FolioArticleCopy {
   /** Byline link under the article title; the same title + name the pack's key-facts heading uses. */

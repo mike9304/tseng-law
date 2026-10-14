@@ -51,6 +51,8 @@ import {
   publicDocumentLanguage,
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
+import { folioColumnsCopy } from '@/data/intl-design-columns-ui';
 
 export const dynamic = 'force-dynamic';
 
@@ -225,7 +227,12 @@ export default async function ColumnsPage(
             latestIssues={issuePosts.slice(0, 3)}
           />
         ) : <IssueBoardTabs locale={locale} active="expert" />}
-        <ColumnsGrid locale={locale} posts={listItems} initialFilters={toColumnGridFilters(searchParams)} />
+        <ColumnsGrid
+          locale={locale}
+          posts={listItems}
+          initialFilters={toColumnGridFilters(searchParams)}
+          {...(isIntlDesignLocale(locale) ? { folioLabels: folioColumnsCopy[locale] } : {})}
+        />
         <div className="container">
           <OriginalLanguageColumnsSection locale={locale} remainingPosts={remainingPosts} />
         </div>

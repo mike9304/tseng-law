@@ -246,11 +246,23 @@ describe('guidance home matches the English home composition', () => {
         .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-')
         // Folio locales (2026-10-15) carry a framed plate instead of the courthouse film; the hero media block is
         // asserted separately ("uses the shared hero…"), everything after it must still match.
-        .replace(/(<section class="hero" id="hero" data-tone="dark">)[\s\S]*?(<div class="container hero-inner">)/, '$1$2'),
+        .replace(/(<section class="hero" id="hero" data-tone="dark">)[\s\S]*?(<div class="container hero-inner">)/, '$1$2')
+        // Folio also skips the decorations its CSS hides (ornament dividers, service icons); asserted below.
+        .replace(/<div class="ornament-divider"[^>]*>[\s\S]*?<\/svg><\/div>/g, '')
+        .replace(/<span class="service-icon"[^>]*>[\s\S]*?<\/svg><\/span>/g, ''),
     );
     shapes.forEach((shape, index) => {
       expect(shape, `guidance home of ${sharedLocales[index]} differs structurally from ${sharedLocales[0]}`).toEqual(shapes[0]);
     });
+  });
+
+  it('skips the hidden decorations on Folio homes only (review round 1: less HTML, same picture)', () => {
+    for (const locale of GUIDANCE_LOCALES_4.filter((candidate) => candidate !== 'vi')) {
+      const markup = renderGuidanceHome(locale);
+      const folio = isIntlDesignLocale(locale);
+      expect(markup.includes('class="service-icon"'), `${locale} service icons`).toBe(!folio);
+      expect(markup.includes('class="ornament-divider"'), `${locale} ornament`).toBe(!folio);
+    }
   });
 
   it('labels source-language columns instead of presenting them as translated', () => {

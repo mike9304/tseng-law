@@ -20,7 +20,7 @@ const LATIN_ONLY = [/\.logo-kr\)/, /\.footer-main-brand\)/, /\.stat-number\)/, /
 
 /** Thai counterpart of a rule: same selector with `.folio` → `.folio:lang(th)`, holding a line-height ≥ floor. */
 function thaiOverride(selector: string, floor: number): boolean {
-  const variants = selector.split(/,\s*/).map((part) => part.replace(/^\.folio/, '.folio:lang(th)').replace(/^\.plateCaption/, '.folio:lang(th) .plateCaption'));
+  const variants = selector.split(/,\s*/).map((part) => part.replace(/^\.folio/, '.folio:lang(th)'));
   return variants.every((variant) =>
     rules.some((rule) => {
       if (!rule.selector.split(/,\s*/).includes(variant)) return false;

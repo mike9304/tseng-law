@@ -274,7 +274,7 @@ function GuidanceColumnArchive({
               : archivePage.description}
           </p>
         </div>
-        <OrnamentDivider />
+        {isIntlDesignLocale(locale) ? null : <OrnamentDivider />}
         <div className="insights-grid">
           <article className="insights-featured">
             <div className="insights-featured-media">
@@ -400,15 +400,18 @@ export function GuidanceServices({
             <p className="section-lede">{servicesPage.description}</p>
           </>
         ) : null}
-        <OrnamentDivider />
+        {/* Folio draws rules instead of the ornament and the icons (both display:none there), so it skips their markup. */}
+        {isIntlDesignLocale(locale) ? null : <OrnamentDivider />}
         <div className="services-detail-list services-card-grid">
           {cards.map((card, index) => (
             <div key={card.title} className="services-card-grid-item">
               <article className="services-detail-card services-card">
                 <div className="services-detail-header services-card-header">
-                  <span className="service-icon" aria-hidden>
-                    <ServicePracticeIcon index={index} />
-                  </span>
+                  {isIntlDesignLocale(locale) ? null : (
+                    <span className="service-icon" aria-hidden>
+                      <ServicePracticeIcon index={index} />
+                    </span>
+                  )}
                   <h3 className="services-detail-title">{card.title}</h3>
                 </div>
                 <div className="services-detail-body services-card-body">

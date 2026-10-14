@@ -8,8 +8,9 @@ import {
   isGuidanceLocale4,
   type PublicLocale8,
 } from '@/lib/public-guidance';
-import CinematicOpening from '@/components/CinematicOpening';
+// Folio stylesheet first: imported after CinematicOpening it split that component's small CSS into a file of its own.
 import folioStyles from '@/components/intl-design/IntlDesign.module.css';
+import CinematicOpening from '@/components/CinematicOpening';
 import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import styles from '@/components/intl-design/IntlDesign.module.css';
 import { INTL_HERO_MEDIA } from '@/data/intl-design-site';
 
 export const INTL_HERO_FILM_QUERY = '(min-width: 48rem) and (prefers-reduced-motion: no-preference)';
@@ -55,7 +54,6 @@ export default function IntlHeroFilm() {
       film.setAttribute('disablepictureinpicture', '');
       film.setAttribute('aria-hidden', 'true');
       film.tabIndex = -1;
-      film.className = styles.plateVideo;
       for (const [src, type] of [
         [INTL_HERO_MEDIA.filmWebm, 'video/webm'],
         [INTL_HERO_MEDIA.filmMp4, 'video/mp4'],
@@ -116,5 +114,5 @@ export default function IntlHeroFilm() {
     };
   }, []);
 
-  return <div ref={slotRef} className={styles.plateFilm} aria-hidden="true" />;
+  return <div ref={slotRef} aria-hidden="true" />;
 }

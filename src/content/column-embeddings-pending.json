@@ -1949,6 +1949,14 @@
     {
       "locale": "en",
       "slug": "taiwan-company-preincorporation-contracts-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-bookkeeping-provider-records-handover"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-bookkeeping-provider-records-handover"
     }
   ]
 }

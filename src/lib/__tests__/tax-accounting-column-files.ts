@@ -5,6 +5,7 @@
  */
 export const TAX_ACCOUNTING_COLUMN_FILES = {
   ko: [
+    '541-taiwan-bookkeeping-provider-records-handover.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
@@ -31,6 +32,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   ja: [
+    '541-taiwan-bookkeeping-provider-records-handover.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
@@ -57,6 +59,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   en: [
+    '541-taiwan-bookkeeping-provider-records-handover.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
@@ -116,6 +119,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
 
 /** Board columns published after 2026-10-06, by file-number prefix; every other board file is 2026-10-06. */
 const LATER_PUBLICATION_DATES: Readonly<Record<string, string>> = {
+  '541': '2026-10-14',
   '342': '2026-10-07',
   '344': '2026-10-07',
   '345': '2026-10-07',

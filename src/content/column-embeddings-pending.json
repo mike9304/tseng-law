@@ -2033,6 +2033,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-sick-leave-half-pay-ten-day-protection"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-tenant-early-lease-termination-notice-penalty"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-tenant-early-lease-termination-notice-penalty"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-tenant-early-lease-termination-notice-penalty"
     }
   ]
 }

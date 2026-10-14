@@ -615,6 +615,7 @@ export const COUNTRY_COLUMN_FILES_20261014 = {
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
     '603-taiwan-sick-leave-half-pay-ten-day-protection.md', // cols-20261013-C1
+    '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
   ],
   en: [
     '549-taiwan-civil-us-company-opponent-document-production.md',
@@ -624,6 +625,7 @@ export const COUNTRY_COLUMN_FILES_20261014 = {
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
     '603-taiwan-sick-leave-half-pay-ten-day-protection.md', // cols-20261013-C1
+    '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
   ],
   ja: [
     '548-taiwan-civil-japanese-company-litigation-authority.md',
@@ -633,9 +635,11 @@ export const COUNTRY_COLUMN_FILES_20261014 = {
     '542-taiwan-civil-evidence-preservation-before-lawsuit.md',
     '543-taiwan-employee-criminal-questioning-company-paid-counsel.md',
     '603-taiwan-sick-leave-half-pay-ten-day-protection.md', // cols-20261013-C1
+    '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
   ],
   'zh-hant': [
     '603-taiwan-sick-leave-half-pay-ten-day-protection.md', // cols-20261013-C1
+    '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
   ],
 } as const;
 

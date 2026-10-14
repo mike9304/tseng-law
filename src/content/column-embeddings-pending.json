@@ -2069,6 +2069,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-unpaid-wages-insolvent-employer-payment-fund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-student-part-time-work-permit-hours"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-student-part-time-work-permit-hours"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-student-part-time-work-permit-hours"
     }
   ]
 }

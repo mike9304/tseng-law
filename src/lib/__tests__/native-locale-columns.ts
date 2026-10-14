@@ -618,6 +618,7 @@ export const COUNTRY_COLUMN_FILES_20261014 = {
     '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
     '605-taiwan-private-loan-interest-cap-iou-repayment.md', // cols-20261013-C5
     '606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md', // cols-20261014-C1
+    '607-taiwan-foreign-student-part-time-work-permit-hours.md', // cols-20261013-C6
   ],
   en: [
     '549-taiwan-civil-us-company-opponent-document-production.md',
@@ -630,6 +631,7 @@ export const COUNTRY_COLUMN_FILES_20261014 = {
     '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
     '605-taiwan-private-loan-interest-cap-iou-repayment.md', // cols-20261013-C5
     '606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md', // cols-20261014-C1
+    '607-taiwan-foreign-student-part-time-work-permit-hours.md', // cols-20261013-C6
   ],
   ja: [
     '548-taiwan-civil-japanese-company-litigation-authority.md',
@@ -642,12 +644,14 @@ export const COUNTRY_COLUMN_FILES_20261014 = {
     '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
     '605-taiwan-private-loan-interest-cap-iou-repayment.md', // cols-20261013-C5
     '606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md', // cols-20261014-C1
+    '607-taiwan-foreign-student-part-time-work-permit-hours.md', // cols-20261013-C6
   ],
   'zh-hant': [
     '603-taiwan-sick-leave-half-pay-ten-day-protection.md', // cols-20261013-C1
     '604-taiwan-tenant-early-lease-termination-notice-penalty.md', // cols-20261013-C4
     '605-taiwan-private-loan-interest-cap-iou-repayment.md', // cols-20261013-C5
     '606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md', // cols-20261014-C1
+    '607-taiwan-foreign-student-part-time-work-permit-hours.md', // cols-20261013-C6
   ],
 } as const;
 

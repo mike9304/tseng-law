@@ -1,4 +1,5 @@
 import fontStylesheets from '@/data/font-stylesheets.json';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 // Same Noto faces, Unicode subsets and fallback metrics as the prior next/font
 // build. Standalone stylesheets let each page load only its active families.
@@ -209,8 +210,17 @@ export const KO_PRETENDARD_STYLESHEET = '/fonts/pretendard-1.3.9/pretendard-ff7d
 /** vi type (2026-10-13, Indochine design): Be Vietnam Pro 400/500/600 + 'VI Display Serif' (cut from Lora), Latin + Vietnamese (SIL OFL 1.1), hashed sheet. */
 export const VI_TYPE_STYLESHEET = '/fonts/vi-2026-10/vi-type-523b201f8301.css';
 
+/**
+ * Folio type (2026-10-15, intl design for id, th and the 27 European locales): 'Folio Serif' (Literata + Noto Serif
+ * Thai), 'Folio Text' (IBM Plex Sans + Plex Sans Thai) and 'Folio Prose' (Plex Sans Thai Looped), renamed subsets
+ * (SIL OFL 1.1), hashed sheet. It replaces the Noto sheets on those pages rather than adding to them.
+ */
+export const INTL_TYPE_STYLESHEET = '/fonts/intl-2026-10/intl-type-fea253f38e9e.css';
+
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
+  // The Folio document languages are spelled like their locales (id, th, de, …, is).
+  if (isIntlDesignLocale(language)) return [INTL_TYPE_STYLESHEET];
   const sheets = getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
   // ko leads with Pretendard; the list also feeds DocumentLocaleSync, so a client-side switch into /ko attaches it too.
   if (language === 'ko') return [...sheets, KO_PRETENDARD_STYLESHEET];

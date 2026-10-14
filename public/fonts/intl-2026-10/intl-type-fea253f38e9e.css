@@ -1,0 +1,24 @@
+/* Folio type (2026-10-15, intl design for id, th and the 27 European locales). All SIL OFL 1.1, renamed subsets:
+   'Folio Serif' = Literata variable (wght 400, opsz 12-60 kept, OFL-literata.txt) + Noto Serif Thai 500 (OFL-noto-serif-thai.txt);
+   'Folio Text' = IBM Plex Sans 400/500 (Reserved Font Name "Plex", OFL-plex-sans.txt) + IBM Plex Sans Thai 400/500 (OFL-plex-sans-thai.txt);
+   'Folio Prose' = IBM Plex Sans Thai Looped 400, Thai only (OFL-plex-sans-thai-looped.txt). Sources: github.com/google/fonts;
+   fontTools subset, unhinted woff2. Linked on Folio locale pages only (getLocaleFontStylesheets); /fonts is served immutable,
+   so this sheet and every file carry a content hash. Fallbacks are metric-matched (fontTools, average advance + hhea). */
+@font-face{font-family:'Folio Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-serif-thai-664c3c74.woff2) format('woff2');unicode-range:U+0E01-0E5B,U+25CC}
+@font-face{font-family:'Folio Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-serif-greek-5651f259.woff2) format('woff2');unicode-range:U+0370-03FF}
+@font-face{font-family:'Folio Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-serif-cyr-283f648a.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+2116}
+@font-face{font-family:'Folio Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-serif-latext-cd8ee6f5.woff2) format('woff2');unicode-range:U+0100-017F,U+0218-021B,U+1E9E}
+@font-face{font-family:'Folio Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-serif-latin-24f03945.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-400-thai-7aa89bd6.woff2) format('woff2');unicode-range:U+0E01-0E5B,U+25CC}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-400-greek-41e5ce48.woff2) format('woff2');unicode-range:U+0370-03FF}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-400-cyr-c9319159.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+2116}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-400-latext-fe15c17a.woff2) format('woff2');unicode-range:U+0100-017F,U+0218-021B,U+1E9E}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-400-latin-ab25aee1.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-500-thai-0fbe97cb.woff2) format('woff2');unicode-range:U+0E01-0E5B,U+25CC}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-500-greek-eb1f349d.woff2) format('woff2');unicode-range:U+0370-03FF}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-500-cyr-4c808c21.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+2116}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-500-latext-79f301cc.woff2) format('woff2');unicode-range:U+0100-017F,U+0218-021B,U+1E9E}
+@font-face{font-family:'Folio Text';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/intl-2026-10/folio-text-500-latin-d5f96e6c.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:'Folio Prose';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/intl-2026-10/folio-prose-400-thai-656c7698.woff2) format('woff2');unicode-range:U+0E01-0E5B,U+25CC}
+@font-face{font-family:'Folio Serif Fallback';src:local('Georgia');size-adjust:107.31%;ascent-override:109.68%;descent-override:28.70%;line-gap-override:0.00%}
+@font-face{font-family:'Folio Text Fallback';src:local('Arial');size-adjust:100.82%;ascent-override:101.67%;descent-override:27.28%;line-gap-override:0.00%}

@@ -25,7 +25,8 @@ describe('locale font resources', () => {
     ['ar', ['arabic', 'latin']], ['hi', ['devanagari', 'latin']],
     ['bn', ['bengali', 'latin']], ['ta', ['tamil', 'latin']],
     ['my', ['myanmar', 'latin']], ['km', ['khmer', 'latin']],
-    ['he', ['hebrew', 'latin']], ['th', ['thai', 'latin']], ['id', ['latin']],
+    // th and id moved to the Folio sheet (2026-10-15); ms and fil keep the Noto latin sheet.
+    ['he', ['hebrew', 'latin']], ['ms', ['latin']], ['fil', ['latin']],
   ] as const)('loads only the %s page fonts', (locale, scripts) => {
     const hrefs = getLocaleFontStylesheets(locale);
     expect(hrefs).toHaveLength(scripts.length);

@@ -3566,10 +3566,30 @@
   color: var(--f-ink-2) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-meta) > * + * {
-  margin-left: 12px;
-  padding-left: 12px;
-  border-left: 1px solid var(--f-hair);
+/* Hair separators sit in the 13px gap; a wrapped line's leading separator falls 1px outside the 6px padding box
+   and is clipped, while a focus ring (5px out) still fits inside it. */
+.folio[data-guidance-locale] :global(main) :global(.blog-meta) {
+  gap: 4px 13px !important;
+  margin: -6px !important;
+  padding: 6px !important;
+  overflow: hidden;
+}
+
+.folio[data-guidance-locale] :global(main) :global(.blog-meta) > * {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.folio[data-guidance-locale] :global(main) :global(.blog-meta) > * + *::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 1px;
+  background: var(--f-hair);
 }
 
 .folio[data-guidance-locale] :global(main) :global(.blog-meta) a {

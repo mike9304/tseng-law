@@ -4,7 +4,7 @@ import path from 'path';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
-import { archiveLeadPublicationDate, archiveLeadSlugsFor, expertiseSlugsFor } from '@/lib/__tests__/native-locale-columns';
+import { archiveLeadPublicationDate, archiveLeadSlugsFor } from '@/lib/__tests__/native-locale-columns';
 import { getColumnPost } from '@/lib/columns';
 
 const fileCorpus = vi.hoisted(() => new Map<string, import('@/lib/columns').ColumnPost[]>());

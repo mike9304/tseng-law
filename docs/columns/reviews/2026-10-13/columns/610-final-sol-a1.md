@@ -1,0 +1,30 @@
+# C2 final review — 2026-10-14
+
+Verdict: FIX. The required limited-company/no-statutory-shareholders'-meeting distinction is absent in all four versions. No column file was edited.
+
+## Scope and evidence checked
+
+- Read the batch brief, both local voice briefs, C2 topic brief, all four complete drafts, the writer's fact sheet, the complete C2 statute extract, and the sentence-variety rule and recurring lessons. No judgment is cited; `research/judgments/` is empty.
+- Independently checked the [current Company Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001), its [amendment and commencement history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080001), the [Regulations Governing Company Registration](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080020), Articles 128-1 and 5 by direct curl, and the two official registration annex PDFs by text extraction. The official Company Act history confirms the printed 2025-12-26 amendment date; its delayed commencement concerned Article 387-1, which this column does not cite. The registration rules print 2021-04-23. Sampled the encoded `J00%38...` article links by curl: HTTP 200 and correct decoded statute identifiers. The two annex PDFs returned HTTP 200 and their relevant rows match the drafts.
+- Checked all law article numbers, conditions, AND/OR formulations, deadlines, fines, share-company and limited-company branches, Article 231's exception, effective-date context, and cross-language agreement against the official text. The article claims and monetary figures checked match the current official text apart from the scope omission below. No arithmetic example or judgment holding appears. Every distinct inline official URL in the body appears in that language's source section. The source lists carry the 2026-10-13 check date; internal links match the language inventory in `topics/LINKS.md` and pass lint.
+- `lint.py` returned OK for ko (3,500 characters), ja (4,458 characters), en (1,600 words), and zh-hant (2,698 characters). Frontmatter, including the English SEO title and summary limits, passed. No private-party name, bold emphasis, phone number, street address, unmarked hypothetical, lawyer/native-review claim, or author mismatch was found. Contact is email only.
+- `variety_metrics.py check` returned no FAIL for all four. Manual sections 5–6: no stock hypothetical opener; the batch opening types remain varied; each version has at least two very short sentences, no word opens three paragraphs, no three consecutive claim–citation–caveat paragraphs, no excess or invented contrast, no formula closing, and ko/ja keep the required registers. The zh-hant checker gave only a WARN for frequent `）。` endings, below the specified rejection threshold. First-two-paragraph deletion checks found substantive question, term, or deadline context; none was removed. No MONOTONY rejection.
+
+## Blocking issue — required company-form distinction omitted
+
+The [C2 topic brief](/Users/son7/tseng-col-1013-work/topics/C2.md) expressly requires the limited-company branch to state that a 有限公司 has no statutory shareholders' meeting. [Company Act Article 110](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=110) instead sets out sending annual statements to each shareholder and obtaining approval; the [Ministry of Economic Affairs' Article 108 interpretation](https://gcis.nat.gov.tw/elaw/constructionDetailFromSingleLaw?art=108&dash=0&lawCode=19) also states that the Act has no shareholders'-meeting provision for a limited company. This is a statutory-requirement distinction, not a prohibition on shareholders gathering voluntarily. A reader must not have to infer the answer from the paperwork procedure.
+
+- KO — Original: “이사가 결산 서류를 주주 각자에게 보내고, 승인은 의결권 과반수입니다.” → Problem & reason: the limited-company section never states whether a 주주총회 must be held, though the brief makes that contrast mandatory. → Fix required: add a directly sourced sentence that the Company Act imposes no statutory shareholders' meeting on a 유한회사; retain the Article 110 dispatch, six-month limit, majority approval and one-month deemed approval. Add the MOEA interpretation to the source list if used. → Facts preserved: no meeting obligation must not become “a meeting is forbidden,” and annual approval remains required.
+- JA — Original: “有限公司では、董事が株主に決算書類を送り、承認を求めます。” → Problem & reason: sending the papers is explained, but the express no-statutory-meeting answer is missing. → Fix required: state naturally in the 有限公司 section that 公司法 does not require a 株主会 for this form, with an inline official source, then keep Article 110's approval route and its exact periods. → Facts preserved: voluntary consultation remains possible; no share-company Article 170 deadline is imported.
+- EN — Original: “Year-end statements go from the director to every shareholder. Approval takes a majority of the voting rights.” → Problem & reason: the section does not answer whether a limited company must hold a shareholders' meeting. → Fix required: state explicitly that the Company Act has no statutory shareholders' meeting requirement for a limited company, cite the official source inline, and retain every Article 110 condition. → Facts preserved: the absence of a meeting requirement does not waive annual shareholder approval.
+- ZH-HANT — Original: “表冊由董事於會計年度終了後六個月內分送股東，須表決權過半數承認。” → Problem & reason: the heading and procedure leave the required 「有限公司無法定股東會召開義務」 distinction unstated. → Fix required: add that precise Taiwan-law statement with an inline official source and list any new source at the end. → Facts preserved: do not describe a voluntary gathering as unlawful; keep Article 110's distribution, voting and deemed-approval rules.
+
+## Minor edits applied
+
+None. The requested correction changes the legal explanation and is reserved for the writer.
+
+## Image
+
+OK. Viewed `images/C2.webp` at full size: a fictional, generic shelf of blank books, a plain stamp and case, fitting accounts and records. No face, readable text or document, logo, or flag is visible.
+
+VERDICT: FIX      (major issues remain; listed in the log)

@@ -2105,6 +2105,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-mistaken-bank-transfer-unjust-enrichment"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-subsidiary-annual-shareholders-meeting-director-term"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-subsidiary-annual-shareholders-meeting-director-term"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-subsidiary-annual-shareholders-meeting-director-term"
     }
   ]
 }

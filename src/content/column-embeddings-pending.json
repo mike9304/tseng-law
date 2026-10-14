@@ -2081,6 +2081,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-foreign-student-part-time-work-permit-hours"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-false-financial-report-investor-civil-damages"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-false-financial-report-investor-civil-damages"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-false-financial-report-investor-civil-damages"
     }
   ]
 }

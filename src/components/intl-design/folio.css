@@ -605,8 +605,8 @@
     box-shadow: none !important;
   }
 
-  /* DIRECTION §focus: 44px targets. The 32px utility row keeps its height; the hit area reaches 8px above and below
-     (the nameplate's 44px key sits 10px under the row, so the areas never meet). */
+  /* DIRECTION §focus: 44px targets. The 32px utility row keeps its height and sits at the top edge of the page, so the
+     hit area grows downward: 12px under the 28px links, ending where the nameplate's 44px key begins (no overlap). */
   .intl-folio .header .utility-nav > a,
   .intl-folio .header .utility-lang > button {
     position: relative;
@@ -616,7 +616,12 @@
   .intl-folio .header .utility-lang > button::after {
     content: '';
     position: absolute;
-    inset: -8px 0;
+    inset: -8px 0 -12px;
+  }
+
+  /* The language key's 1px border: its area is measured from the padding box, so it reaches one pixel further. */
+  .intl-folio .header .utility-lang > button::after {
+    inset: -9px -1px -13px;
   }
 
   .intl-folio .header:not([data-header-content-fit='compact']) .header-main-inner {

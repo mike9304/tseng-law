@@ -223,7 +223,7 @@ export const INTL_TYPE_STYLESHEET = '/fonts/intl-2026-10/intl-type-fea253f38e9e.
  * Folio locales only. As a CSS module in the shared layout the design CSS re-ordered every other locale's CSS chunks.
  * A test checks this is the current build output.
  */
-export const INTL_FOLIO_STYLESHEET = '/fonts/intl-2026-10/intl-folio-7add5d9f45cb.css';
+export const INTL_FOLIO_STYLESHEET = '/fonts/intl-2026-10/intl-folio-1cccebc48af6.css';
 
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {

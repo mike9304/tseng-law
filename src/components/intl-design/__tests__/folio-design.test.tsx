@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
@@ -28,11 +29,12 @@ const css = read('src/components/intl-design/folio.css');
 /** DIRECTION.md header: the 29 Folio languages, exactly. */
 const DIRECTION_LOCALES = 'id th de es fr it pt nl pl ru uk el sv da nb fi cs hu ro sk bg hr sr sl lt lv et ca is'.split(' ');
 
-function renderShell(locale: (typeof PUBLIC_LOCALES_8)[number]) {
+function renderShell(locale: (typeof PUBLIC_LOCALES_8)[number], designClassName?: string) {
   navigationState.pathname = `/${locale}`;
   return renderToStaticMarkup(
     <CinematicRouteShell
       locale={locale}
+      designClassName={designClassName}
       header={<div>HEADER</div>}
       footer={<div>FOOTER</div>}
       scrollTop={<div>SCROLL_TOP</div>}
@@ -95,14 +97,34 @@ describe('Folio locale list', () => {
 });
 
 describe('Folio root class', () => {
-  it('is added to .site for Folio locales only', () => {
+  it('is added to .site for Folio locales only (the layout passes it; the shared shell imports nothing new)', async () => {
+    const { default: LocaleLayout } = await import('@/app/[locale]/layout');
+    const findShell = (node: unknown): ReactElement<Record<string, unknown>> | null => {
+      if (!node || typeof node !== 'object') return null;
+      if (Array.isArray(node)) return node.map(findShell).find(Boolean) ?? null;
+      const element = node as ReactElement<{ children?: unknown }>;
+      if (element.type === CinematicRouteShell) return element as ReactElement<Record<string, unknown>>;
+      return findShell(element.props?.children);
+    };
+    const shellProps = async (locale: string) =>
+      findShell(await LocaleLayout({ children: null, params: Promise.resolve({ locale }) }))?.props ?? {};
     for (const locale of INTL_DESIGN_LOCALES) {
-      expect(renderShell(locale), locale).toContain(`<div class="site ${INTL_DESIGN_ROOT_CLASS}"`);
+      const props = await shellProps(locale);
+      expect(props.designClassName, locale).toBe(INTL_DESIGN_ROOT_CLASS);
+      expect((props.header as ReactElement<{ folioLabels?: unknown }>).props.folioLabels, locale).toBeTruthy();
+      expect((props.scrollTop as ReactElement<{ folioLabel?: unknown }>).props.folioLabel, locale).toBeTruthy();
+      expect(renderShell(locale, INTL_DESIGN_ROOT_CLASS), locale).toContain(`<div class="site ${INTL_DESIGN_ROOT_CLASS}"`);
     }
     for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'ms', 'fil', 'ar'] as const) {
+      const props = await shellProps(locale);
+      expect(props, locale).not.toHaveProperty('designClassName');
+      expect((props.header as ReactElement<Record<string, unknown>>).props, locale).not.toHaveProperty('folioLabels');
       expect(renderShell(locale), locale).toContain('<div class="site" data-locale=');
     }
-  });
+    for (const file of ['CinematicRouteShell', 'Header', 'ScrollTopButton', 'Breadcrumbs', 'OfficeMapTabs']) {
+      expect(read(`src/components/${file}.tsx`), file).not.toMatch(/from '@\/(data|lib)\/intl-design-/);
+    }
+  }, 120_000);
 
   it('scopes every rule under the Folio root class; no rule starts with any other selector', () => {
     const selectors = styleSelectors(css);

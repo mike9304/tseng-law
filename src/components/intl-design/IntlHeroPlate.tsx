@@ -24,7 +24,7 @@ export default function IntlHeroPlate({ locale }: { locale: IntlDesignLocale }) 
           fetchPriority="high"
           decoding="async"
         />
-        <IntlHeroFilm />
+        <IntlHeroFilm webm={INTL_HERO_MEDIA.filmWebm} mp4={INTL_HERO_MEDIA.filmMp4} />
       </div>
       <figcaption>{intlHeroAiCaption[locale]}</figcaption>
     </figure>

@@ -38,6 +38,8 @@ import {
   buildGuidancePersonJsonLd,
   buildGuidanceTeamCollectionPageJsonLd,
 } from '@/lib/guidance-structured-data';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
+import { guidanceOfficeCopy } from '@/data/international-guidance-offices';
 
 /**
  * Guidance pages rendered with the same layout primitives the other four
@@ -251,7 +253,9 @@ export default function GuidancePageBody({
       {/* WO-O29 A: the same `OfficeMapTabs` the English contact page renders,
           so the office section is structurally identical in all eight
           languages instead of a flat band with different element counts. */}
-      {isContact ? <OfficeMapTabs locale={locale} /> : null}
+      {isContact ? (
+        <OfficeMapTabs locale={locale} {...(isIntlDesignLocale(locale) ? { folioLabel: guidanceOfficeCopy[locale].label } : {})} />
+      ) : null}
 
       {isContact ? (
         <Reveal>

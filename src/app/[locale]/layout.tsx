@@ -36,6 +36,8 @@ import {
   publicDocumentLanguage,
   type PublicLocale8,
 } from '@/lib/public-guidance';
+import { folioChrome } from '@/data/intl-design-chrome';
+import { INTL_DESIGN_ROOT_CLASS } from '@/lib/intl-design-locales';
 
 export const dynamicParams = false;
 
@@ -126,6 +128,9 @@ export default async function LocaleLayout(
     // widgets (search overlay, members, quick contact) stay off, because the
     // guidance surface publishes ten pages and no member/search routes.
     const language = publicDocumentLanguage(publicLocale);
+    // Folio locales (id, th, European): design root class and chrome labels go to the shared client components as
+    // props, so those components import nothing new (new shared modules re-ordered every locale's CSS chunks).
+    const folioLabels = folioChrome(publicLocale);
     return (
       <PublicColumnLanguageLinksProvider index={columnIndex} columnLocales={columnLocales}>
         {/* WO-O28: the site-wide `WebSite` / `Organization` / logo
@@ -141,9 +146,17 @@ export default async function LocaleLayout(
         />
         <CinematicRouteShell
           locale={publicLocale}
-          header={<Header locale={publicLocale} />}
+          {...(folioLabels ? { designClassName: INTL_DESIGN_ROOT_CLASS } : {})}
+          header={
+            <Header
+              locale={publicLocale}
+              {...(folioLabels
+                ? { folioLabels: { home: folioLabels.home, mainMenu: folioLabels.mainMenu, utilityMenu: folioLabels.utilityMenu } }
+                : {})}
+            />
+          }
           footer={<Footer locale={publicLocale} />}
-          scrollTop={<ScrollTopButton locale={publicLocale} />}
+          scrollTop={<ScrollTopButton locale={publicLocale} {...(folioLabels ? { folioLabel: folioLabels.backToTop } : {})} />}
         >
           {children}
         </CinematicRouteShell>

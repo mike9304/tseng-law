@@ -9,7 +9,6 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import CinematicOpening from '@/components/CinematicOpening';
-import { INTL_DESIGN_ROOT_CLASS, isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
 
@@ -59,9 +58,12 @@ export default function CinematicRouteShell({
   quickContact,
   scrollTop,
   eventPopup,
+  designClassName,
   children,
 }: {
   locale: PublicLocale8;
+  /** Folio locales only: the design root class, passed by the server layout (keeps this shared module unchanged). */
+  designClassName?: string;
   header: ReactNode;
   footer: ReactNode;
   quickContact?: ReactNode;
@@ -79,7 +81,7 @@ export default function CinematicRouteShell({
   return (
     <div
       // Folio (2026-10-15): id, th and the 27 European locales share one scoped design under this class.
-      className={isIntlDesignLocale(locale) ? `site ${INTL_DESIGN_ROOT_CLASS}` : 'site'}
+      className={designClassName ? `site ${designClassName}` : 'site'}
       data-locale={locale}
       // The 45 guidance languages: their pages share one sans display layer in globals.css (2026-10-06).
       data-guidance-locale={isGuidanceLocale4(locale) ? '' : undefined}

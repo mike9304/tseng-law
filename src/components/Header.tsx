@@ -29,7 +29,6 @@ import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import { isApplePresentationLocale } from '@/lib/apple-design-locales';
 import { IS_STATIC_SITE } from '@/lib/static-site';
-import { folioChrome } from '@/data/intl-design-chrome';
 
 type MegaLink = {
   label: string;
@@ -470,7 +469,14 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
   ];
 }
 
-export default function Header({ locale }: { locale: PublicLocale8 }) {
+export default function Header({
+  locale,
+  folioLabels,
+}: {
+  locale: PublicLocale8;
+  /** Folio locales only: header labels in the page language, passed by the server layout (no extra client module). */
+  folioLabels?: { home: string; mainMenu: string; utilityMenu: string };
+}) {
   const content = publicSiteContent(locale);
   const isGuidance = isGuidanceLocale4(locale);
   // The Apple-system locales (zh-hant, ko) draw header glyphs from the monoline set; other locales keep the markup below.
@@ -540,8 +546,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
   const skipLabel = guidanceLabels
     ? guidanceLabels.skipLink
     : locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
-  // Folio locales (id, th, European) carry their own chrome labels; every other locale keeps the ladder below.
-  const folioLabels = folioChrome(locale);
+  // Folio locales (id, th, European) get their chrome labels from the layout; every other locale keeps the ladder below.
   const homeLabel = folioLabels?.home ?? (locale === 'vi' ? 'Trang chủ' : locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home');
   const mainNavLabel = folioLabels?.mainMenu ?? (locale === 'vi' ? 'Điều hướng chính' : locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main menu');
   const memberLabels =

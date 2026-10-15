@@ -14,6 +14,7 @@ vi.mock('@/lib/builder/dynamic-template-drafts', () => ({
 }));
 
 import Breadcrumbs from '@/components/Breadcrumbs';
+import PageHeader from '@/components/PageHeader';
 import ColumnsGrid, { type ColumnListItem } from '@/components/ColumnsGrid';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import ColumnDetailView, { type ColumnDetailViewProps } from '@/app/[locale]/columns/[slug]/ColumnDetailView';
@@ -179,13 +180,15 @@ describe('Folio chrome and list labels; other locales unchanged', () => {
     expect(ko).toContain('칼럼 검색');
   });
 
-  it('Breadcrumbs and ScrollTopButton', () => {
-    const fr = renderToStaticMarkup(<Breadcrumbs locale="fr" current="Articles" />);
+  it('Breadcrumbs (labels from PageHeader) and ScrollTopButton', () => {
+    const fr = renderToStaticMarkup(<PageHeader locale="fr" label="Articles" title="Articles" />);
     expect(fr).toContain(`aria-label="${folioChromeCopy.fr.breadcrumb}"`);
     expect(fr).toContain(`>${guidanceContent.fr.nav.home}</a>`);
-    expect(renderToStaticMarkup(<Breadcrumbs locale="ms" current="Artikel" />)).toContain('>Home</a>');
+    expect(renderToStaticMarkup(<PageHeader locale="ms" label="Artikel" title="Artikel" />)).toContain('>Home</a>');
     expect(renderToStaticMarkup(<Breadcrumbs locale="ko" current="칼럼" />)).toContain('>홈</a>');
-    expect(renderToStaticMarkup(<ScrollTopButton locale="th" />)).toContain(folioChromeCopy.th.backToTop);
+    expect(renderToStaticMarkup(<ScrollTopButton locale="th" folioLabel={folioChromeCopy.th.backToTop} />)).toContain(
+      folioChromeCopy.th.backToTop,
+    );
     expect(renderToStaticMarkup(<ScrollTopButton locale="en" />)).toContain('Back to top');
   });
 });

@@ -43,6 +43,7 @@ import {
   guidanceHomeResults,
   guidanceHomeStats,
 } from '@/lib/guidance-home-bands';
+import { guidanceOfficeCopy } from '@/data/international-guidance-offices';
 
 /**
  * Home page for the four guidance locales (vi/id/th/fil).
@@ -551,7 +552,12 @@ export default function GuidanceHomeBody({
           />
         </Reveal>
       ) : null}
-      <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" />
+      <OfficeMapTabs
+        locale={locale}
+        id="offices"
+        sectionClassName="section section--light"
+        {...(isIntlDesignLocale(locale) ? { folioLabel: guidanceOfficeCopy[locale].label } : {})}
+      />
       <GuidanceContactBand locale={locale} isContact={false} />
     </div>
   );

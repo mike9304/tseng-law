@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { INTL_HERO_MEDIA } from '@/data/intl-design-site';
 
 export const INTL_HERO_FILM_QUERY = '(min-width: 48rem) and (prefers-reduced-motion: no-preference)';
 
@@ -19,7 +18,7 @@ export function intlHeroFilmAllowed(win: Pick<Window, 'matchMedia' | 'navigator'
  * injected; it fades in once it is actually playing (its first frame is the still underneath) and rests on its last
  * frame. Phones, reduced motion, Save-Data, no JS or a refused play() keep the still.
  */
-export default function IntlHeroFilm() {
+export default function IntlHeroFilm({ webm, mp4 }: { webm: string; mp4: string }) {
   const slotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -55,8 +54,8 @@ export default function IntlHeroFilm() {
       film.setAttribute('aria-hidden', 'true');
       film.tabIndex = -1;
       for (const [src, type] of [
-        [INTL_HERO_MEDIA.filmWebm, 'video/webm'],
-        [INTL_HERO_MEDIA.filmMp4, 'video/mp4'],
+        [webm, 'video/webm'],
+        [mp4, 'video/mp4'],
       ] as const) {
         const source = document.createElement('source');
         source.src = src;
@@ -112,7 +111,7 @@ export default function IntlHeroFilm() {
       cancelScheduled?.();
       removeVideo();
     };
-  }, []);
+  }, [webm, mp4]);
 
   return <div ref={slotRef} aria-hidden="true" />;
 }

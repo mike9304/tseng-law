@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import SectionLabel from '@/components/SectionLabel';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { folioChrome } from '@/data/intl-design-chrome';
 import type { PublicLocale8 } from '@/lib/public-guidance';
 import styles from './PublicChrome.module.css';
 import { typesetTitle } from '@/lib/ko-middot';
@@ -47,11 +48,16 @@ export default function PageHeader({
   description?: string;
   children?: ReactNode;
 }) {
+  const folio = folioChrome(locale);
   return (
     <section className={`section page-header ${children ? 'page-header--with-content' : 'page-header--compact'} ${styles.pageHeader}`}>
       <div className="container">
         <div className={styles.pageHeaderCopy} data-page-header-slot="copy">
-          <Breadcrumbs locale={locale} current={title} />
+          <Breadcrumbs
+            locale={locale}
+            current={title}
+            {...(folio ? { folioLabels: { home: folio.home, trail: folio.breadcrumb } } : {})}
+          />
           {label.trim().toLocaleLowerCase() !== title.trim().toLocaleLowerCase() ? (
             <SectionLabel data-builder-surface-key="section-label">{label}</SectionLabel>
           ) : null}

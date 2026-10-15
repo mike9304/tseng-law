@@ -251,3 +251,35 @@ export const folioResultsImageAlt: Record<IntlDesignLocale, string> = {
   ca: 'Sala de vistes civil moderna a Taiwan, lluminosa i buida',
   is: 'Bjartur, tómur og nútímalegur réttarsalur fyrir einkamál í Taívan',
 };
+
+/**
+ * Heading of the "recommended" column cards (home archive and article end) for the Folio locales the client component's
+ * own table lacks (it holds id, th, de, es, fr; the rest fell back to the English "Related reading"). Built on each
+ * pack's word for its articles (nav.columns). Passed as a prop on Folio pages only.
+ */
+export const folioRecommendedHeading: Partial<Record<IntlDesignLocale, string>> = {
+  it: 'Articoli consigliati',
+  pt: 'Artigos recomendados',
+  nl: 'Aanbevolen artikelen',
+  pl: 'Polecane artykuły',
+  ru: 'Рекомендуемые материалы',
+  uk: 'Рекомендовані статті',
+  el: 'Προτεινόμενα άρθρα',
+  sv: 'Rekommenderade artiklar',
+  da: 'Anbefalede artikler',
+  nb: 'Anbefalte artikler',
+  fi: 'Suositellut artikkelit',
+  cs: 'Doporučené články',
+  hu: 'Ajánlott cikkek',
+  ro: 'Articole recomandate',
+  sk: 'Odporúčané príspevky',
+  bg: 'Препоръчани статии',
+  hr: 'Preporučeni članci',
+  sr: 'Preporučeni članci',
+  sl: 'Priporočeni članki',
+  lt: 'Rekomenduojami straipsniai',
+  lv: 'Ieteicamie raksti',
+  et: 'Soovitatud artiklid',
+  ca: 'Articles recomanats',
+  is: 'Greinar sem mælt er með',
+};

@@ -48,6 +48,7 @@ export default function RecommendedForYou({
   currentSlug,
   currentTopic,
   preserveOrder = false,
+  heading: headingOverride,
 }: {
   locale: string;
   /** e.g. `/ko/columns` */
@@ -60,6 +61,8 @@ export default function RecommendedForYou({
   currentTopic?: string;
   /** Keep editorial subject relevance ahead of session interests. */
   preserveOrder?: boolean;
+  /** Section heading from the server where the table below has none (Folio locales); keeps this bundle unchanged. */
+  heading?: string;
 }) {
   const pool = useMemo(() => items.filter((item) => item.slug !== currentSlug), [items, currentSlug]);
   const [ordered, setOrdered] = useState<readonly RecommendedItem[] | null>(null);
@@ -73,7 +76,7 @@ export default function RecommendedForYou({
 
   const visible = (preserveOrder ? pool : ordered ?? pool).slice(0, count);
   if (visible.length === 0) return null;
-  const heading = HEADING[locale] ?? HEADING.en;
+  const heading = headingOverride ?? HEADING[locale] ?? HEADING.en;
 
   return (
     <section

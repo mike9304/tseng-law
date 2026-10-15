@@ -53,6 +53,7 @@ const ENGLISH_FALLBACKS = [
   'Reviewed by Wei Tseng',
   'Current location',
   'Back to top',
+  'Related reading',
 ];
 
 const flatten = (value: unknown): string[] =>

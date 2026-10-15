@@ -54,7 +54,7 @@ export type ColumnDetailViewProps = {
   showHero: boolean; showBody: boolean; showSeo: boolean;
   typography: ResolvedColumnTypography;
   /** Folio locales only: the wide-table hint and the attorney card in the page language (built on the server). */
-  folio?: { tableScrollHint: string; authority: FolioAuthorityCard | null };
+  folio?: { tableScrollHint: string; authority: FolioAuthorityCard | null; recommendedHeading?: string };
 };
 
 /**
@@ -220,6 +220,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                 currentSlug={post.slug}
                 currentTopic={post.topic}
                 preserveOrder={isTrafficColumn}
+                heading={folio?.recommendedHeading}
               />
             </div>
             <aside className="blog-sidebar">

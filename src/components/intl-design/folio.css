@@ -2350,6 +2350,7 @@
 
 /* 9.4 Image band: framed, container width, 2.4:1, no text on it; the pause key squared. */
 .intl-folio[data-guidance-locale] main .taiwan-heritage-interlude {
+  min-height: 0 !important;
   background: var(--f-paper) !important;
 }
 
@@ -3245,6 +3246,26 @@
   background: var(--f-ink-hover) !important;
 }
 
+/* The static site sends the inquiry by email: its submit is a mailto link (data-inquiry-mode='email'), which the
+   generic link colour above turned ink on the module's green. Same primary key as the form's submit button. */
+.intl-folio[data-guidance-locale] main #international-inquiry [data-inquiry-mode='email'] > a[href^='mailto:'] {
+  min-height: 48px;
+  padding: 12px 24px !important;
+  border: 1px solid var(--f-ink) !important;
+  border-radius: 0 !important;
+  background: var(--f-ink) !important;
+  color: var(--f-paper) !important;
+  font-family: var(--f-text);
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.intl-folio[data-guidance-locale] main #international-inquiry [data-inquiry-mode='email'] > a[href^='mailto:']:hover {
+  background: var(--f-ink-hover) !important;
+}
+
 .intl-folio[data-guidance-locale] main #international-inquiry h2 {
   font-size: var(--f-h2-hang) !important;
   line-height: var(--f-h2-hang-lh) !important;
@@ -3263,6 +3284,25 @@
   color: var(--f-ink) !important;
   box-shadow: none !important;
   font-family: var(--f-text);
+  text-overflow: ellipsis;
+}
+
+/* Phones: the page-language placeholders are longer than the English one this row was sized for (de 297px in a
+   235px field), so the field takes the whole row and the keys go under it. */
+@media (max-width: 47.99rem) {
+  .intl-folio[data-guidance-locale] main .columns-search-row {
+    flex-wrap: wrap !important;
+  }
+
+  .intl-folio[data-guidance-locale] main .columns-search-row .columns-search-input {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .intl-folio[data-guidance-locale] main .columns-search-row :is(.columns-search-submit, .columns-search-clear) {
+    flex: 1 1 auto !important;
+  }
 }
 
 .intl-folio[data-guidance-locale] main .columns-search-submit {
@@ -4116,6 +4156,11 @@
   flex-wrap: wrap;
   gap: 8px 28px;
   margin-top: 24px;
+}
+
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:last-of-type > li {
+  /* The module stacks the language links (.sourceItem + .sourceItem 1.75rem); in this row the gap spaces them. */
+  margin: 0 !important;
 }
 
 .intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:last-of-type :is(li, a) {

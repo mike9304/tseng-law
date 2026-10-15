@@ -264,6 +264,16 @@ describe('guidance home matches the English home composition', () => {
     });
   });
 
+  it('titles the recommended columns in the page language on every Folio home (no English "Related reading")', () => {
+    for (const locale of GUIDANCE_LOCALES_4.filter((candidate) => isIntlDesignLocale(candidate))) {
+      const markup = renderGuidanceHome(locale);
+      expect(markup, locale).toContain('recommended-for-you');
+      expect(markup, locale).not.toContain('Related reading');
+    }
+    // Outside Folio the client table's fallback is unchanged.
+    expect(renderGuidanceHome('ms')).toContain('Related reading');
+  });
+
   it('skips the hidden decorations on Folio homes only (review round 1: less HTML, same picture)', () => {
     for (const locale of GUIDANCE_LOCALES_4.filter((candidate) => candidate !== 'vi')) {
       const markup = renderGuidanceHome(locale);

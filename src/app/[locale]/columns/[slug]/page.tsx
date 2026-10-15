@@ -27,7 +27,7 @@ import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
 import columnUiVi from '@/data/column-ui-vi.json';
-import { folioArticleCopy, folioLabelValue } from '@/data/intl-design-ui';
+import { folioArticleCopy, folioLabelValue, folioRecommendedHeading } from '@/data/intl-design-ui';
 import { isIntlDesignLocale } from '@/lib/intl-design-locales';
 import { buildGuidanceAttorneyFacts, GUIDANCE_FACT_SEPARATOR } from '@/lib/guidance-attorney-facts';
 import { buildFolioAuthorityCard } from '@/lib/intl-design-article';
@@ -374,7 +374,13 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     typography,
     // Only Folio pages carry the key, so other locales' serialized props stay byte-identical.
     ...(folioLocale && folioArticle
-      ? { folio: { tableScrollHint: folioArticle.tableScrollHint, authority: buildFolioAuthorityCard(folioLocale) } }
+      ? {
+          folio: {
+            tableScrollHint: folioArticle.tableScrollHint,
+            authority: buildFolioAuthorityCard(folioLocale),
+            ...(folioRecommendedHeading[folioLocale] ? { recommendedHeading: folioRecommendedHeading[folioLocale] } : {}),
+          },
+        }
       : {}),
   };
   // Every column hydrates the same synchronous view from complete public data.

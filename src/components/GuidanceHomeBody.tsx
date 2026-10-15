@@ -44,6 +44,7 @@ import {
   guidanceHomeStats,
 } from '@/lib/guidance-home-bands';
 import { guidanceOfficeCopy } from '@/data/international-guidance-offices';
+import { folioRecommendedHeading } from '@/data/intl-design-ui';
 
 /**
  * Home page for the four guidance locales (vi/id/th/fil).
@@ -353,6 +354,7 @@ function GuidanceColumnArchive({
           locale={locale}
           hrefBase={`/${source.sourceLocale}/columns`}
           items={recommendedItems}
+          {...(isIntlDesignLocale(locale) && folioRecommendedHeading[locale] ? { heading: folioRecommendedHeading[locale] } : {})}
         />
         <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <SmartLink

@@ -475,6 +475,14 @@
   white-space: nowrap !important;
 }
 
+/* Below the masthead the logo link and the actions row share one grid cell (the menu key sits at the end): keep the
+   key's 44px and a 12px gap out of the name's line, so it never runs under the key (320px: WCAG 1.4.10 reflow). */
+@media (max-width: 74.99rem) {
+  .intl-folio .header .header-logo {
+    padding-inline-end: 56px;
+  }
+}
+
 @media (max-width: 22.49rem) {
   .intl-folio .header .header-logo .logo-kr,
   .intl-folio #public-mobile-nav-drawer .drawer-brand .logo-kr {

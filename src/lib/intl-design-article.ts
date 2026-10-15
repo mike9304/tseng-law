@@ -2,10 +2,22 @@ import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profile
 import { guidanceContent } from '@/data/international-guidance-content';
 import { guidanceTeamCopy } from '@/data/international-guidance-team';
 import { teamContent } from '@/data/team-members';
-import type { FolioAuthorityCard } from '@/components/intl-design/IntlArticleAuthority';
 import { buildGuidanceAttorneyFacts } from '@/lib/guidance-attorney-facts';
 import type { IntlDesignLocale } from '@/lib/intl-design-locales';
 import { guidancePublicPath } from '@/lib/public-guidance';
+
+/** Data for the Folio article rail's attorney card (rendered by ColumnDetailView; built below, on the server). */
+export interface FolioAuthorityCard {
+  name: string;
+  role: string;
+  photo: string;
+  photoAlt: string;
+  qualification: string;
+  practiceLabel: string;
+  practiceAreas: string[];
+  lawyersHref: string;
+  lawyersLabel: string;
+}
 
 /**
  * Server-side data for the Folio article rail's attorney card: the lead attorney's localized role, qualification

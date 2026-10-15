@@ -15,7 +15,7 @@ vi.mock('next/navigation', () => ({
 import CinematicRouteShell from '@/components/CinematicRouteShell';
 import GuidanceHomeBody from '@/components/GuidanceHomeBody';
 import IntlHeroPlate from '@/components/intl-design/IntlHeroPlate';
-import { intlHeroFilmAllowed, INTL_HERO_FILM_QUERY } from '@/components/intl-design/IntlHeroFilm';
+import { intlHeroFilmAllowed, INTL_HERO_FILM_QUERY } from '@/components/HeroMediaBackground';
 import { getLocaleFontStylesheets, INTL_DESIGN_STYLESHEET, INTL_TYPE_STYLESHEET, type DocumentLanguage } from '@/app/fonts';
 import { INTL_HERO_MEDIA, intlHeroAiCaption } from '@/data/intl-design-site';
 import { guidanceContent } from '@/data/international-guidance-content';

@@ -1,4 +1,4 @@
-import IntlHeroFilm from '@/components/intl-design/IntlHeroFilm';
+import { IntlHeroFilm } from '@/components/HeroMediaBackground';
 import { INTL_HERO_MEDIA, intlHeroAiCaption } from '@/data/intl-design-site';
 import type { IntlDesignLocale } from '@/lib/intl-design-locales';
 

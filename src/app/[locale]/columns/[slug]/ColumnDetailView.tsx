@@ -7,7 +7,7 @@ import { hasRightTurnObservation, RIGHT_TURN_OBSERVATION } from '@/data/right-tu
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import ViArticleAuthority from '@/components/vi-design/ViArticleAuthority';
 import ViArticleShell from '@/components/vi-design/ViArticleShell';
-import IntlArticleAuthority, { type FolioAuthorityCard } from '@/components/intl-design/IntlArticleAuthority';
+import type { FolioAuthorityCard } from '@/lib/intl-design-article';
 import AiAuthorBox from '@/components/AiAuthorBox';
 import RecommendedForYou from '@/components/RecommendedForYou';
 import ColumnContent from '@/components/ColumnContent';
@@ -56,6 +56,54 @@ export type ColumnDetailViewProps = {
   /** Folio locales only: the wide-table hint and the attorney card in the page language (built on the server). */
   folio?: { tableScrollHint: string; authority: FolioAuthorityCard | null };
 };
+
+/**
+ * Folio locales (id, th, European): the attorney card in the localized team record's words (role, qualification sentence,
+ * practice areas; no new fact), instead of the English AttorneyAuthorityCard. Kept in this file, not a new client
+ * module: a new module in this client tree re-grouped Next's CSS chunks for every locale (review round 1).
+ */
+function FolioAuthority({ heading, card }: { heading: string; card: FolioAuthorityCard }) {
+  return (
+    <section className="authority-card" data-folio-article-authority="">
+      <div className="authority-card-heading">{heading}</div>
+      <div className="authority-card-top">
+        <div className="authority-card-photo">
+          {/* eslint-disable-next-line @next/next/no-img-element -- same plain image as the hero above; no next/image import added here */}
+          <img
+            src={card.photo}
+            alt={card.photoAlt}
+            loading="lazy"
+            decoding="async"
+            className="person-photo"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </div>
+        <div className="authority-card-copy">
+          <Link href={card.lawyersHref} className="authority-card-name">
+            {card.name}
+          </Link>
+          <p className="authority-card-role">{card.role}</p>
+          <p className="authority-card-summary">{card.qualification}</p>
+        </div>
+      </div>
+      <div className="authority-card-block">
+        <div className="authority-card-label">{card.practiceLabel}</div>
+        <div className="authority-chip-list">
+          {card.practiceAreas.map((area) => (
+            <span key={area} className="authority-chip">
+              {area}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="authority-card-actions">
+        <Link href={card.lawyersHref} className="button button--outline">
+          {card.lawyersLabel}
+        </Link>
+      </div>
+    </section>
+  );
+}
 
 /** Shared SSR view. Data loading and publication decisions stay in the server route. */
 export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography, folio }: ColumnDetailViewProps) {
@@ -200,7 +248,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                 {urlLocale === 'vi'
                   ? <ViArticleAuthority />
                   : folio?.authority
-                    ? <IntlArticleAuthority heading={attorneyHeading} card={folio.authority} />
+                    ? <FolioAuthority heading={attorneyHeading} card={folio.authority} />
                     : <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />}
               </div>
               <div className="blog-sidebar-card">

@@ -213,21 +213,22 @@ export const VI_TYPE_STYLESHEET = '/fonts/vi-2026-10/vi-type-523b201f8301.css';
 /**
  * Folio type (2026-10-15, intl design for id, th and the 27 European locales): 'Folio Serif' (Literata + Noto Serif
  * Thai), 'Folio Text' (IBM Plex Sans + Plex Sans Thai) and 'Folio Prose' (Plex Sans Thai Looped), renamed subsets
- * (SIL OFL 1.1), hashed sheet. It replaces the Noto sheets on those pages rather than adding to them.
+ * (SIL OFL 1.1), hashed sheet. Not linked by itself: it is the first part of INTL_FOLIO_STYLESHEET below.
  */
 export const INTL_TYPE_STYLESHEET = '/fonts/intl-2026-10/intl-type-fea253f38e9e.css';
 
 /**
- * Folio design (review round 1): src/components/intl-design/folio.css built by scripts/build-intl-design-css.mjs (the
- * same PostCSS steps Next applies), hashed. Linked here, on the Folio locales only, instead of being a CSS module in the
- * shared layout, where it re-ordered every other locale's CSS chunks. A test checks this is the current build output.
+ * The one Folio sheet (review round 1): the font faces above followed by src/components/intl-design/folio.css, built by
+ * scripts/build-intl-design-css.mjs with the same PostCSS steps Next applies, hashed. It replaces the Noto sheets on the
+ * Folio locales only. As a CSS module in the shared layout the design CSS re-ordered every other locale's CSS chunks.
+ * A test checks this is the current build output.
  */
-export const INTL_DESIGN_STYLESHEET = '/fonts/intl-2026-10/intl-design-516433cb233c.css';
+export const INTL_FOLIO_STYLESHEET = '/fonts/intl-2026-10/intl-folio-7add5d9f45cb.css';
 
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
   // The Folio document languages are spelled like their locales (id, th, de, …, is).
-  if (isIntlDesignLocale(language)) return [INTL_TYPE_STYLESHEET, INTL_DESIGN_STYLESHEET];
+  if (isIntlDesignLocale(language)) return [INTL_FOLIO_STYLESHEET];
   const sheets = getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
   // ko leads with Pretendard; the list also feeds DocumentLocaleSync, so a client-side switch into /ko attaches it too.
   if (language === 'ko') return [...sheets, KO_PRETENDARD_STYLESHEET];

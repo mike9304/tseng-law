@@ -16,7 +16,7 @@ import CinematicRouteShell from '@/components/CinematicRouteShell';
 import GuidanceHomeBody from '@/components/GuidanceHomeBody';
 import IntlHeroPlate from '@/components/intl-design/IntlHeroPlate';
 import { intlHeroFilmAllowed, INTL_HERO_FILM_QUERY } from '@/components/HeroMediaBackground';
-import { getLocaleFontStylesheets, INTL_DESIGN_STYLESHEET, INTL_TYPE_STYLESHEET, type DocumentLanguage } from '@/app/fonts';
+import { getLocaleFontStylesheets, INTL_FOLIO_STYLESHEET, INTL_TYPE_STYLESHEET, type DocumentLanguage } from '@/app/fonts';
 import { INTL_HERO_MEDIA, intlHeroAiCaption } from '@/data/intl-design-site';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { INTL_DESIGN_LOCALES, INTL_DESIGN_ROOT_CLASS, isIntlDesignLocale } from '@/lib/intl-design-locales';
@@ -295,22 +295,22 @@ describe('Folio type sheet', () => {
     for (const locale of INTL_DESIGN_LOCALES) {
       const language = publicDocumentLanguage(locale) as DocumentLanguage;
       expect(language, locale).toBe(locale);
-      expect(getLocaleFontStylesheets(language), locale).toEqual([INTL_TYPE_STYLESHEET, INTL_DESIGN_STYLESHEET]);
+      expect(getLocaleFontStylesheets(language), locale).toEqual([INTL_FOLIO_STYLESHEET]);
     }
     for (const language of ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'ms', 'fil', 'ar', 'zh-Hans', 'tr', 'hi'] as const) {
-      expect(getLocaleFontStylesheets(language), language).not.toContain(INTL_TYPE_STYLESHEET);
-      expect(getLocaleFontStylesheets(language), language).not.toContain(INTL_DESIGN_STYLESHEET);
+      expect(getLocaleFontStylesheets(language), language).not.toContain(INTL_FOLIO_STYLESHEET);
     }
   });
 
-  it('links the design sheet as the current build of folio.css, imported by no component (review round 1)', async () => {
+  it('links one sheet, the current build of the font faces + folio.css, imported by no component (review round 1)', async () => {
     // @ts-expect-error -- plain ESM build script without type declarations
     const { buildIntlDesignCss } = (await import('../../../../scripts/build-intl-design-css.mjs')) as {
       buildIntlDesignCss: () => Promise<{ css: string; href: string }>;
     };
     const built = await buildIntlDesignCss();
-    expect(INTL_DESIGN_STYLESHEET).toBe(built.href);
-    expect(read(`public${INTL_DESIGN_STYLESHEET}`)).toBe(built.css);
+    expect(INTL_FOLIO_STYLESHEET).toBe(built.href);
+    expect(read(`public${INTL_FOLIO_STYLESHEET}`)).toBe(built.css);
+    expect(built.css.startsWith(read(`public${INTL_TYPE_STYLESHEET}`).trimEnd())).toBe(true);
     expect(existsSync(path.join(root, 'src/components/intl-design/IntlDesign.module.css'))).toBe(false);
     const shell = read('src/components/CinematicRouteShell.tsx');
     expect(shell).not.toMatch(/\.css['"]/);

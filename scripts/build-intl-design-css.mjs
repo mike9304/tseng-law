@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Folio stylesheet (id, th and the 27 European locales): src/components/intl-design/folio.css →
-// public/fonts/intl-2026-10/intl-design-<hash>.css, linked by src/app/fonts.ts on the Folio locales only.
+// Folio stylesheet (id, th and the 27 European locales): the Folio font faces (intl-type-<hash>.css, committed) followed
+// by src/components/intl-design/folio.css → public/fonts/intl-2026-10/intl-folio-<hash>.css, the one sheet
+// src/app/fonts.ts links on the Folio locales (one link instead of two on 822 pages).
 //
 //   node scripts/build-intl-design-css.mjs          write the hashed sheet (removes older ones) and print its URL
 //   node scripts/build-intl-design-css.mjs --check  exit 1 when the committed sheet is not the current output
@@ -27,7 +28,9 @@ const MODERN_BROWSERSLIST_TARGET = require('next/dist/shared/lib/modern-browsers
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const INTL_DESIGN_SOURCE = path.join(REPO_ROOT, 'src/components/intl-design/folio.css');
 const OUT_DIR = path.join(REPO_ROOT, 'public/fonts/intl-2026-10');
-const PREFIX = 'intl-design-';
+const PREFIX = 'intl-folio-';
+/** The Folio @font-face sheet (renamed OFL subsets); its own hash is checked by folio-design.test. */
+export const INTL_TYPE_SOURCE = path.join(OUT_DIR, 'intl-type-fea253f38e9e.css');
 
 /** Processed, minified CSS and its public URL. */
 export async function buildIntlDesignCss(source = fs.readFileSync(INTL_DESIGN_SOURCE, 'utf8')) {
@@ -41,7 +44,7 @@ export async function buildIntlDesignCss(source = fs.readFileSync(INTL_DESIGN_SO
     }),
   ]).process(source, { from: INTL_DESIGN_SOURCE });
   const minified = await postcss([cssnanoSimple({ colormin: false }, postcss)]).process(prepared.css, { from: undefined });
-  const css = `${minified.css.trim()}\n`;
+  const css = `${fs.readFileSync(INTL_TYPE_SOURCE, 'utf8').trimEnd()}\n${minified.css.trim()}\n`;
   const hash = crypto.createHash('sha256').update(css).digest('hex').slice(0, 12);
   return { css, file: `${PREFIX}${hash}.css`, href: `/fonts/intl-2026-10/${PREFIX}${hash}.css` };
 }
@@ -58,11 +61,11 @@ async function main() {
     console.log(`${href} is current`);
     return;
   }
-  for (const old of fs.readdirSync(OUT_DIR).filter((name) => name.startsWith(PREFIX) && name !== file)) {
+  for (const old of fs.readdirSync(OUT_DIR).filter((name) => /^intl-(folio|design)-[0-9a-f]{12}\.css$/.test(name) && name !== file)) {
     fs.rmSync(path.join(OUT_DIR, old));
   }
   fs.writeFileSync(target, css);
-  console.log(`${href} (${Buffer.byteLength(css)} B); set INTL_DESIGN_STYLESHEET in src/app/fonts.ts to this URL`);
+  console.log(`${href} (${Buffer.byteLength(css)} B); set INTL_FOLIO_STYLESHEET in src/app/fonts.ts to this URL`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) await main();

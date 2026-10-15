@@ -68,4 +68,5 @@ async function main() {
   console.log(`${href} (${Buffer.byteLength(css)} B); set INTL_FOLIO_STYLESHEET in src/app/fonts.ts to this URL`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await main();
+// Compared as paths: import.meta.url is percent-encoded, so a checkout path with spaces or non-ASCII never matched.
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();

@@ -801,7 +801,7 @@ export default function ColumnsGrid({
               <ul className="columns-active-filters">
                 {activeFilters.map((filter) => (
                   <li key={filter.key}>
-                    <span>{filter.label}: </span>{filter.value}
+                    <span>{filter.label}{locale === 'fr' ? ' :' : ':'} </span>{filter.value}
                   </li>
                 ))}
               </ul>

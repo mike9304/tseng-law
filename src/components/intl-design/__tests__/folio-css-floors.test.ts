@@ -70,7 +70,8 @@ describe('Folio Thai line-height floors (review round 1)', () => {
     );
     expect(floors.length).toBeGreaterThanOrEqual(24);
     for (const { selector, kind } of floors) {
-      const text = /(-copy\)? p|summary|note|address|services-bento|sidebar-text|card-copy)/.test(selector);
+      // Article figure captions are running text too (scene title, description, AI disclosure).
+      const text = /(-copy\)? p|summary|note|address|services-bento|sidebar-text|card-copy|blog-body figcaption)/.test(selector);
       expect(`${selector} ${kind}`).toBe(`${selector} ${text ? 'text' : 'head'}`);
     }
   });

@@ -234,7 +234,7 @@ describe('guidance home matches the English home composition', () => {
     // VI now dispatches to ViHomeBody, asserted in vi-public-presentation.test.tsx.
     // The remaining public guidance homes still share this exact template.
     const sharedLocales = GUIDANCE_LOCALES_4.filter((locale) => locale !== 'vi');
-    const shapes = sharedLocales.map((locale) =>
+    const languageNeutral = (locale: GuidanceLocale4) =>
       renderGuidanceHome(locale)
         // Text nodes and human-readable attributes (alt, aria-label and the
         // iframe accessible name) differ by language, as does the locale
@@ -243,7 +243,15 @@ describe('guidance home matches the English home composition', () => {
         .replace(/(alt|aria-label|title)="[^"]*"/g, '$1=""')
         .replace(new RegExp(`"/${locale}/`, 'g'), '"/{locale}/')
         .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"')
-        .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-')
+        .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-');
+    // Every guidance locale outside Folio keeps the whole template, decorations and hero film included.
+    const classicLocales = sharedLocales.filter((locale) => !isIntlDesignLocale(locale));
+    const classicShapes = classicLocales.map(languageNeutral);
+    classicShapes.forEach((shape, index) => {
+      expect(shape, `guidance home of ${classicLocales[index]} differs structurally from ${classicLocales[0]}`).toEqual(classicShapes[0]);
+    });
+    const shapes = sharedLocales.map((locale) =>
+      languageNeutral(locale)
         // Folio locales (2026-10-15) carry a framed plate instead of the courthouse film; the hero media block is
         // asserted separately ("uses the shared hero…"), everything after it must still match.
         .replace(/(<section class="hero" id="hero" data-tone="dark">)[\s\S]*?(<div class="container hero-inner">)/, '$1$2')

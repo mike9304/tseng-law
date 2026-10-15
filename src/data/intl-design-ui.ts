@@ -68,7 +68,7 @@ export const folioArticleCopy: Record<IntlDesignLocale, FolioArticleCopy> = {
   it: {
     byline: 'Avvocata Wei Tseng', relatedTopics: 'Vedi anche', previous: '← Articolo precedente', next: 'Articolo successivo →',
     consultingAttorney: 'Avvocata per le consulenze',
-    tableScrollHint: 'Scorri la tabella in orizzontale.',
+    tableScrollHint: 'Scorra la tabella in orizzontale.',
     contents: 'Indice',
   },
   pt: {
@@ -139,7 +139,7 @@ export const folioArticleCopy: Record<IntlDesignLocale, FolioArticleCopy> = {
   },
   hu: {
     byline: 'Wei Tseng ügyvédnő', relatedTopics: 'Lásd még', previous: '← Előző cikk', next: 'Következő cikk →',
-    consultingAttorney: 'Tanácsadó ügyvédnő',
+    consultingAttorney: 'Tanácsadást nyújtó ügyvédnő',
     tableScrollHint: 'Görgesse a táblázatot vízszintesen.',
     contents: 'Tartalom',
   },
@@ -200,7 +200,7 @@ export const folioArticleCopy: Record<IntlDesignLocale, FolioArticleCopy> = {
   ca: {
     byline: 'Advocada Wei Tseng', relatedTopics: 'Vegeu també', previous: '← Article anterior', next: 'Article següent →',
     consultingAttorney: 'Advocada per a consultes',
-    tableScrollHint: 'Desplaceu la taula horitzontalment.',
+    tableScrollHint: 'Desplaci la taula horitzontalment.',
     contents: 'Índex',
   },
   is: {
@@ -222,7 +222,7 @@ export function folioLabelValue(locale: IntlDesignLocale, label: string, value: 
  */
 export const folioResultsImageAlt: Record<IntlDesignLocale, string> = {
   id: 'Ruang sidang perdata modern di Taiwan yang terang dan kosong',
-  th: 'ห้องพิจารณาคดีแพ่งสมัยใหม่ในไต้หวันที่สว่างและว่างเปล่า',
+  th: 'ห้องพิจารณาคดีแพ่งสมัยใหม่ที่สว่างและว่างเปล่าในไต้หวัน',
   de: 'Heller, leerer, moderner Zivilgerichtssaal in Taiwan',
   es: 'Sala de vistas civil moderna en Taiwán, luminosa y vacía',
   fr: 'Salle d’audience civile moderne à Taïwan, claire et vide',
@@ -230,8 +230,8 @@ export const folioResultsImageAlt: Record<IntlDesignLocale, string> = {
   pt: 'Sala de audiências cível moderna em Taiwan, luminosa e vazia',
   nl: 'Lichte, lege, moderne civiele rechtszaal in Taiwan',
   pl: 'Jasna, pusta, nowoczesna sala rozpraw cywilnych na Tajwanie',
-  ru: 'Светлый пустой современный зал для гражданских дел на Тайване',
-  uk: 'Світла порожня сучасна зала для цивільних справ на Тайвані',
+  ru: 'Светлый пустой современный зал судебных заседаний по гражданским делам на Тайване',
+  uk: 'Світла порожня сучасна зала судових засідань у цивільних справах на Тайвані',
   el: 'Φωτεινή, άδεια, σύγχρονη αίθουσα πολιτικού δικαστηρίου στην Ταϊβάν',
   sv: 'Ljus, tom och modern rättssal för tvistemål i Taiwan',
   da: 'Lys, tom og moderne retssal for civile sager i Taiwan',

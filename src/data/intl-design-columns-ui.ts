@@ -44,7 +44,7 @@ export const folioColumnsCopy: Record<IntlDesignLocale, FolioColumnsCopy> = {
     resultCount: 'Ergebnisse: {n}', reset: 'Filter zurücksetzen · Alle Beiträge anzeigen', category: 'Kategorie', author: 'Autor',
     year: 'Jahr', month: 'Monat', query: 'Suchbegriff',
     noMatches: 'Keine Beiträge entsprechen den gewählten Filtern. Setzen Sie die Filter zurück, um alle Beiträge zu sehen.',
-    noPosts: 'Es sind noch keine Beiträge veröffentlicht.', reviewedBy: 'Geprüft von Rechtsanwältin Wei Tseng',
+    noPosts: 'Es wurden noch keine Beiträge veröffentlicht.', reviewedBy: 'Geprüft von Rechtsanwältin Wei Tseng',
   },
   es: {
     label: 'Buscar artículos', placeholder: 'Título, resumen o etiqueta', submit: 'Buscar', clear: 'Borrar la búsqueda',
@@ -58,7 +58,7 @@ export const folioColumnsCopy: Record<IntlDesignLocale, FolioColumnsCopy> = {
     resultCount: 'Résultats : {n}', reset: 'Effacer les filtres · Voir tous les articles', category: 'Catégorie', author: 'Auteur',
     year: 'Année', month: 'Mois', query: 'Recherche',
     noMatches: 'Aucun article ne correspond aux filtres choisis. Effacez les filtres pour voir tous les articles.',
-    noPosts: 'Aucun article n’est encore publié.', reviewedBy: 'Révisé par l’avocate Wei Tseng',
+    noPosts: 'Aucun article n’a encore été publié.', reviewedBy: 'Révisé par l’avocate Wei Tseng',
   },
   it: {
     label: 'Cerca negli articoli', placeholder: 'Titolo, sintesi o etichetta', submit: 'Cerca', clear: 'Cancella la ricerca',
@@ -173,9 +173,9 @@ export const folioColumnsCopy: Record<IntlDesignLocale, FolioColumnsCopy> = {
     noPosts: 'Все още няма публикувани статии.', reviewedBy: 'Проверено от адвокатка Wei Tseng (曾雋崴)',
   },
   hr: {
-    label: 'Pretraži članke', placeholder: 'Naslov, sažetak ili oznaka', submit: 'Pretraži', clear: 'Očisti pretragu',
+    label: 'Pretraži članke', placeholder: 'Naslov, sažetak ili oznaka', submit: 'Pretraži', clear: 'Očisti pretraživanje',
     resultCount: 'Rezultati: {n}', reset: 'Poništi filtre · Prikaži sve članke', category: 'Kategorija', author: 'Autor',
-    year: 'Godina', month: 'Mjesec', query: 'Pojam za pretragu',
+    year: 'Godina', month: 'Mjesec', query: 'Traženi pojam',
     noMatches: 'Nijedan članak ne odgovara odabranim filtrima. Poništite filtre da biste vidjeli sve članke.',
     noPosts: 'Još nema objavljenih članaka.', reviewedBy: 'Pregledala odvjetnica Wei Tseng',
   },
@@ -218,14 +218,14 @@ export const folioColumnsCopy: Record<IntlDesignLocale, FolioColumnsCopy> = {
     label: 'Cerca als articles', placeholder: 'Títol, resum o etiqueta', submit: 'Cerca', clear: 'Esborra la cerca',
     resultCount: 'Resultats: {n}', reset: 'Treu els filtres · Mostra tots els articles', category: 'Categoria', author: 'Autor',
     year: 'Any', month: 'Mes', query: 'Cerca',
-    noMatches: 'Cap article no coincideix amb els filtres seleccionats. Traieu els filtres per veure tots els articles.',
+    noMatches: 'Cap article no coincideix amb els filtres seleccionats. Tregui els filtres per veure tots els articles.',
     noPosts: 'Encara no s’ha publicat cap article.', reviewedBy: 'Revisat per l’advocada Wei Tseng',
   },
   is: {
     label: 'Leita í greinum', placeholder: 'Titill, samantekt eða merki', submit: 'Leita', clear: 'Hreinsa leit',
     resultCount: 'Niðurstöður: {n}', reset: 'Hreinsa síur · Sýna allar greinar', category: 'Flokkur', author: 'Höfundur',
     year: 'Ár', month: 'Mánuður', query: 'Leitarorð',
-    noMatches: 'Engar greinar passa við valdar síur. Hreinsaðu síurnar til að sjá allar greinar.',
+    noMatches: 'Engar greinar samsvara völdum síum. Hreinsaðu síurnar til að sjá allar greinar.',
     noPosts: 'Engar greinar hafa verið birtar enn.', reviewedBy: 'Yfirfarið af lögmanninum Wei Tseng',
   },
 };

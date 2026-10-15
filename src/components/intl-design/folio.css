@@ -475,6 +475,13 @@
   white-space: nowrap !important;
 }
 
+@media (max-width: 22.49rem) {
+  .intl-folio .header .header-logo .logo-kr,
+  .intl-folio #public-mobile-nav-drawer .drawer-brand .logo-kr {
+    white-space: normal !important;
+  }
+}
+
 .intl-folio .header .mobile-toggle {
   position: relative;
   width: 44px !important;
@@ -589,6 +596,20 @@
     font-size: 0.8125rem !important;
     font-weight: 400 !important;
     box-shadow: none !important;
+  }
+
+  /* DIRECTION §focus: 44px targets. The 32px utility row keeps its height; the hit area reaches 8px above and below
+     (the nameplate's 44px key sits 10px under the row, so the areas never meet). */
+  .intl-folio .header .utility-nav > a,
+  .intl-folio .header .utility-lang > button {
+    position: relative;
+  }
+
+  .intl-folio .header .utility-nav > a::after,
+  .intl-folio .header .utility-lang > button::after {
+    content: '';
+    position: absolute;
+    inset: -8px 0;
   }
 
   .intl-folio .header:not([data-header-content-fit='compact']) .header-main-inner {
@@ -1245,6 +1266,9 @@
   .intl-folio[data-guidance-locale] main .page-header .page-header-title {
     letter-spacing: -0.01em !important;
   }
+  .intl-folio:lang(th)[data-guidance-locale] main .page-header .page-header-title {
+    letter-spacing: 0 !important;
+  }
 }
 
 /* ---------- 8. Answer summary, section cards as hanging-title rows, the notice box ----------------------------------- */
@@ -1294,6 +1318,7 @@
 
 .intl-folio[data-guidance-locale] main .guidance-answer .contact-list li + li::before {
   content: '·';
+  content: '·' / '';
   display: inline;
   margin: 0 10px;
   color: var(--f-ink-2);
@@ -1598,7 +1623,7 @@
   line-height: var(--f-prose-lh);
 }
 
-.intl-folio[data-guidance-locale] main table {
+.intl-folio[data-guidance-locale] main :not(.column-table-wrap) > table {
   display: block;
   overflow-x: auto;
   max-width: 100%;
@@ -1819,6 +1844,9 @@
     grid-row: 2;
     margin: 4px 0 40px !important;
     letter-spacing: -0.01em !important;
+  }
+  .intl-folio:lang(th)[data-guidance-locale] [data-guidance-page='home'] .hero .hero-title {
+    letter-spacing: 0 !important;
   }
   .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero [data-intl-hero-plate] { grid-column: 1 / 8; grid-row: 3 / 7; margin: 0; }
   .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-subtitle {
@@ -3236,6 +3264,11 @@
   color: var(--f-ink-2) !important;
 }
 
+/* The strips scroll (overflow clips an outside ring): their keys draw the focus ring inside. */
+.intl-folio[data-guidance-locale] main :is(.office-tabs .tab-button, .columns-filter-btn):focus-visible {
+  outline-offset: -2px !important;
+}
+
 /* Filters: text tabs, scroll inside their own strip on phones (never the page). */
 .intl-folio[data-guidance-locale] main .columns-filters {
   display: flex !important;
@@ -3669,6 +3702,12 @@
   color: var(--f-ink) !important;
 }
 
+/* Folio Prose (Thai looped) has 400 only and weight synthesis is off: Thai bold runs (strong, table heads) take
+   Folio Text, which has a Thai 500, so they stay bold next to the Latin in the same line. */
+.intl-folio:lang(th)[data-guidance-locale] main :is(.blog-body, .faq-answer, .legal-card-copy, .legal-card-list) :is(strong, b, th) {
+  font-family: var(--f-text) !important;
+}
+
 .intl-folio[data-guidance-locale] main .blog-body .blog-paragraph {
   font-size: var(--f-prose-size) !important;
   line-height: var(--f-prose-lh) !important;
@@ -3794,7 +3833,7 @@
   color: var(--f-ink-2) !important;
   font-family: var(--f-text) !important;
   font-size: 0.875rem !important;
-  line-height: 1.5 !important;
+  line-height: max(1.5, var(--f-th-text)) !important;
 }
 
 .intl-folio[data-guidance-locale] main .blog-body figcaption * {

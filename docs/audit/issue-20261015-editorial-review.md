@@ -1,5 +1,7 @@
 # ISSUE-20261015 editorial review record
 
+KO01 repair note (2026-10-15): the KO01 opening, receipt row and [repair section](#ko01-review-repair-r1) now concern `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278`. For KO01, the earlier batch, external-report, UI and release-boundary statements concern original `dad77732f78368e84f18456211da87d9b6065a33ac692db0f2d50d51865020b8` and remain historical evidence; they do not certify the repaired version. No fresh rendered QA or full build was performed for this repair, and real Claude Code re-review remains required.
+
 Date: 2026-10-15 (Asia/Seoul). All eight final manuscripts have independent AI locale and independent final-review PASS at the versions below. This record consolidates actual author, locale, final and local UI evidence; it is not a Claude Code PASS, human native-speaker/attorney certification or authorization to publish.
 
 Worktree: `/Users/son7/tseng-air-1011/issues`; baseline HEAD: `8135aabad79707d5b3f1defa6ec77d0339eb189f`. Only eight new issue articles, paired media, the new batch test and this audit are in the planned repository handoff. No old article/test, shared application file, index, commit, push or deployment is owned by packaging.
@@ -12,17 +14,22 @@ The reviewer instructions were the full repository EDITORIAL-VOICE.md, FRONTMATT
 
 ### KO01
 
-File: `src/content/issues/ko/ISSUE-20261015-01-taiwan-kia-overseas-safety-rating-advertising.md`. Final reviewed SHA-256: `dad77732f78368e84f18456211da87d9b6065a33ac692db0f2d50d51865020b8`.
+File: `src/content/issues/ko/ISSUE-20261015-01-taiwan-kia-overseas-safety-rating-advertising.md`. Current repaired SHA-256: `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278`. Current receipts: [KO01 review-repair r1](#ko01-review-repair-r1).
 
 Paragraph 1:
 
-> [대만 중앙통신사(CNA)는 2026년 10월 14일](https://www.cna.com.tw/news/afe/202610140283.aspx), 공정거래위원회가 기아 대만 총판인 타이완 시메다비 기아에 총 200만 대만달러의 과태료를 부과했다고 보도했습니다. 스포티지의 해외 안전등급을 내세운 광고와 안전벨트 사양 표시가 각각 문제가 됐습니다.
+> [대만 중앙통신사(CNA)는 2026년 10월 14일](https://www.cna.com.tw/news/afe/202610140283.aspx), 대만 공정거래위원회(公平交易委員會, 이하 공정위)가 기아 대만 총판인 타이완 사임다비 기아(台灣森那美起亞)에 총 200만 대만달러의 과태료를 부과했다고 보도했습니다. 스포티지의 해외 안전등급을 내세운 광고와 안전벨트 사양 표시가 각각 문제가 됐습니다.
 
 Paragraph 2:
 
-> [공정위 발표](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?docid=18506&uid=126)에 따르면, 유럽에서 2022년 별 다섯 개를 받은 시험 차량은 대만 판매 차량과 사양·장비가 달랐습니다. 대만 평가인 TNCAP에서 시험한 차량은 별 두 개를 받았습니다. 공정위는 대만 판매 차량도 유럽의 별 다섯 개 평가를 받은 것처럼 광고한 데 대해 120만 대만달러를 부과했습니다. 모든 기아 차량의 현재 등급을 판단한 발표는 아닙니다.
+> [공정위 발표](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?docid=18506&uid=126)에 따르면, 유럽 신차 안전도 평가(Euro NCAP)에서 2022년 별 다섯 개를 받은 시험 차량은 대만 판매 차량과 사양·장비가 달랐습니다. 대만 신차 안전도 평가(TNCAP)에서는 대만 판매 차량이 별 두 개를 받았습니다. 공정위는 대만 판매 차량도 유로 NCAP의 별 다섯 개 평가를 받은 것처럼 광고한 데 대해 120만 대만달러를 부과했습니다. 이 발표가 기아의 다른 차종이나 현재 판매 중인 사양의 안전등급까지 판단한 것은 아닙니다.
 
-P1 S1: dated CNA event, Taiwan distributor and NT$2 million total; S2: two distinct enforcement grounds. P2 S1: overseas/local configuration mismatch; S2: distinct TNCAP result; S3: NT$1.2 million allocation; S4: excludes all-current-model extrapolation. Each deletion loses a fact or material scope limit; retain.
+- P1 S1: retains the CNA report date, explicitly Taiwanese authority, named Taiwan distributor and NT$2 million total; deletion loses the event, responsible actor and amount.
+- P1 S2: distinguishes the overseas safety-rating advertisement from the seat-belt specification issue; deletion obscures the two enforcement grounds.
+- P2 S1: identifies Euro NCAP, the 2022 five-star test and the configuration/equipment mismatch; deletion removes the basis for comparing the tested and locally sold vehicles.
+- P2 S2: identifies TNCAP and the Taiwan-market vehicle's two-star result; deletion removes the distinct local evaluation.
+- P2 S3: connects the misleading Euro NCAP claim to the NT$1.2 million fine; deletion loses the conduct-to-sanction allocation.
+- P2 S4: excludes conclusions about other Kia models or configurations currently on sale; deletion removes a material scope limit. The independent locale and final reviewers retained all six sentences.
 
 ### KO02
 
@@ -179,7 +186,7 @@ All articles were authored by separate language roles, then checked by nonauthor
 
 | Piece | Locale | Final | SHA-256 | Receipts |
 |---|---|---|---|---|
-| ko-01 | PASS | PASS | `dad77732f78368e84f18456211da87d9b6065a33ac692db0f2d50d51865020b8` | `work/review-ko.md`; `work/final-ko-vi.md` |
+| ko-01 | PASS | PASS | `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278` | [KO01 review-repair r1](#ko01-review-repair-r1); collaboration receipts `ko01_locale_review` and `ko01_final_review` |
 | ko-02 | PASS | PASS | `3394aaea7a8a656279848627ddedecb1c418d8840234538594baaa541534f50b` | `work/review-ko.md`; `work/final-ko-vi.md` |
 | ja-03 | PASS | PASS | `4a55eac6e3dc069230176bda4e9b82e5cab16f80b150bc5f378c0605e5daa003` | `work/review-ja.md`; `work/final-en-ja.md` |
 | ja-04 | PASS | PASS | `ae208cfca7100a07d97844cebbcf1404328999fcdc83d835ee654da1d842957f` | `work/review-ja.md`; `work/final-en-ja.md` |
@@ -205,3 +212,47 @@ Local static-mode development UI verified 16 article views and 8 locale-board vi
 ## Remaining release boundary
 
 The batch is ready for the operator's required real Claude Code shipping review. No human attorney/native-speaker certification, clean production build, publication, public readback, commit or push is claimed. VI08's October 19, 2026 deadline requires prompt review or refreshed framing if shipping after the window. MOJ compilation cutoffs and failed application-system access remain disclosed in external SOURCES.md/NOTES.md. No unresolved material manuscript finding remains at the frozen versions.
+
+## KO01 review-repair r1
+
+Review date: 2026-10-15 (Asia/Seoul). Scope: KO01 wording and its evidence in this audit only. Frozen manuscript SHA-256: `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278`.
+The prior KO01 version was `dad77732f78368e84f18456211da87d9b6065a33ac692db0f2d50d51865020b8`. Earlier `work/review-ko.md`, `work/final-ko-vi.md`, handoff manifests and UI evidence retain their original-version scope; none is relabeled as a review of this repair.
+
+### Six findings and meaning preservation
+
+| Finding | Before → after (short spans) | Reason | Legal meaning preserved? |
+|---|---|---|---|
+| MINOR 1 | `타이완 시메다비 기아` → `타이완 사임다비 기아(台灣森那美起亞)` in the body and FAQ 2. | Use established Korean rendering and identify the exact Chinese-named actor. | Yes; the Taiwan distributor remains the sanctioned party. |
+| MINOR 2 | `공정거래위원회가` → `대만 공정거래위원회(公平交易委員會, 이하 공정위)가`. | Distinguish Taiwan's agency at its first body mention. | Yes; jurisdiction is explicit without changing the authority or action. |
+| MINOR 3 | `유럽에서 2022년` → `유럽 신차 안전도 평가(Euro NCAP)에서 2022년`; `유럽의 별 다섯 개 평가` → `유로 NCAP의 별 다섯 개 평가`. | Name the evaluation program identified in the FTC release. | Yes; the year, result and equipment mismatch remain unchanged. |
+| MINOR 4 | `대만 평가인 TNCAP에서 시험한 차량은` → `대만 신차 안전도 평가(TNCAP)에서는 대만 판매 차량이`. | Use natural Korean and make the Taiwan-market comparison clear. | Yes; the two-star result and evaluated vehicle scope are preserved. |
+| NIT 5 | `모든 기아 차량의 현재 등급을 판단한 발표는 아닙니다.` → `이 발표가 기아의 다른 차종이나 현재 판매 중인 사양의 안전등급까지 판단한 것은 아닙니다.` | State the limit of the announced finding precisely. | Yes; no rating is assigned to other models or current configurations. |
+| NIT 6 | `충돌 시 벨트를 미리 당기는 기능이` → `충돌 시 벨트를 미리 당기는 기능(프리텐셔너)이`. | Add the familiar technical term to the existing explanation. | Yes; the reported rear-seat absence and affected period are unchanged. |
+
+These are eight occurrence replacements. No fact, legal strength, amount, date, original link or AI-media disclosure changed; no review claim required a rebuttal.
+
+### Source recheck
+
+Sources were checked on 2026-10-15. MOJ displayed a compilation cutoff of 2026-10-08; its current provisions and amendment history were checked.
+
+- [CNA, 2026-10-14](https://www.cna.com.tw/news/afe/202610140283.aspx): announced Taiwan-distributor sanction and factual context.
+- [Taiwan FTC, 2026-10-14](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?docid=18506&uid=126): Chinese actor, 1824th meeting, Euro NCAP/TNCAP comparison, overall impression, NT$1.2 million plus NT$800,000, and June 2022–October 2023 belt specifications.
+- MOJ Fair Trade Act [Article 21](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=21), paragraphs 1–2, and [Article 42](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=42): unchanged misleading-advertising and administrative-sanction explanation; [amendment history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0150002) also checked.
+- [AsiaToday Korean name usage, 2014-09-04](https://www.asiatoday.co.kr/kn/view.php?key=20140904010002689): supports the Korean rendering `사임다비`, not facts about the 2026 sanction.
+- [Kia Korean owner manual](https://ownersmanual.kia.com/full_webhelp/SP3/2026/ko_KR/topics/t00492.html): confirms the term `프리텐셔너`; it is not evidence of the Taiwan vehicle's equipment.
+
+### Current-version review and verification receipts
+
+- Independent AI locale reviewer `ko01_locale_review` (`tseng-editor-ko`, not the author): PASS at the frozen hash. All six opening sentences passed deletion checks; all three October 14 Korean comparators listed above were reviewed. No additional findings.
+- Independent AI final reviewer `ko01_final_review` (`tseng-editor-final`, neither author, repairer nor locale reviewer): PASS at the same hash, rehashed before and after review. Independently opened the news, FTC, MOJ provisions/history, Korean name article and Kia terminology source; no unresolved MAJOR/MINOR findings or additional edits.
+- These are current collaboration receipts, separate from the historical external batch reports. They are AI reviews and do not constitute human native-speaker/attorney certification or the required real Claude Code shipping review.
+- Parent exact eight-occurrence reconstruction: PASS; reversing the replacements recovers the original manuscript bytes. Original links and every numeric token, the image pair and batch-test bytes were unchanged.
+- At the parent's post-test checkpoint, HEAD was `fd30066c4a319e1242a52188a993aeb4a22e6b62` and the index matched the initial snapshot. Later readback observed separate shared-lane commits `b9b1ca9e` (JA03) and `0b35231a` (JA04), plus KO02 working edits; these were preserved. The KO01 repair agents performed no git mutation. Scoped whitespace/diff check: PASS.
+- Test: `node node_modules/vitest/vitest.mjs run src/lib/__tests__/issue-board-20261015.test.ts --project unit --configLoader runner --no-cache`.
+- Actual result: 1 file / 34 tests PASS, exit 0; start 11:30:23, duration 15.69 seconds. This is the repair's targeted test receipt, separate from the historical 97-test batch run.
+- Node body measurement: 1,034 Unicode code points including normalized spaces, 799 excluding spaces. Remove frontmatter/headings, the AI-image notice, references and disclaimer; reduce hyperlinks to display text; collapse whitespace and trim. The prose count with spaces is within the approximate 900–1,400-character lane range.
+
+### Remaining boundary
+
+This article describes an announced administrative action, not a determination of appeal finality or an individual buyer's damages. Existing media disclaimers and all legal scope limits are preserved.
+No fresh rendered QA, full build, publication, public readback, commit or push was performed for this repair. Historical UI evidence does not certify the revised wording. Real Claude Code re-review of this exact version remains required before shipping; these AI PASS receipts are not shipping approval.

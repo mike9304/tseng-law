@@ -249,7 +249,7 @@ describe('Folio hero film lifecycle', () => {
   it('keeps the still when play() is refused and does not retry', async () => {
     const t = setup();
     t.runIdle();
-    const refused = Promise.reject(new Error('NotAllowedError'));
+    const refused = Promise.reject(Object.assign(new Error('autoplay blocked'), { name: 'NotAllowedError' }));
     refused.catch(() => undefined);
     t.doc.createElement.mockImplementationOnce(() => {
       const video = new FakeVideo();
@@ -262,6 +262,31 @@ describe('Folio hero film lifecycle', () => {
     expect(t.videos[0].removed).toBe(true);
     t.setVisibility('hidden');
     t.setVisibility('visible');
+    expect(t.videos).toHaveLength(1);
+  });
+
+  it('treats the AbortError of its own pause() as a pause, not a refusal, and resumes on return', async () => {
+    const t = setup();
+    t.runIdle();
+    // The first play() is still pending (preload none, data not yet there) when the plate leaves the screen: pause()
+    // rejects it with AbortError, as the HTML spec says.
+    const aborted = Promise.reject(Object.assign(new Error('The play() request was interrupted by a call to pause()'), { name: 'AbortError' }));
+    aborted.catch(() => undefined);
+    t.doc.createElement.mockImplementationOnce(() => {
+      const video = new FakeVideo();
+      video.playResult = aborted;
+      t.videos.push(video);
+      return video;
+    });
+    t.observers[0].fire(true);
+    const [film] = t.videos;
+    t.observers[0].fire(false);
+    await flush();
+    expect(film.removed).toBe(false);
+    film.playResult = Promise.resolve();
+    t.observers[0].fire(true);
+    expect(film.play).toHaveBeenCalledTimes(2);
+    expect(film.paused).toBe(false);
     expect(t.videos).toHaveLength(1);
   });
 

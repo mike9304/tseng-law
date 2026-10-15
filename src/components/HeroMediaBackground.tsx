@@ -137,7 +137,13 @@ export function mountIntlHeroFilm(
 
   const play = (film: HTMLVideoElement) => {
     const played = film.play();
-    if (played && typeof played.catch === 'function') played.catch(() => refuse(film));
+    // Our own pause() (tab hidden, plate off screen) rejects a still-pending play() with AbortError; that is not a
+    // refusal, and the film resumes when both are back. Any other rejection (autoplay blocked, unplayable) is final.
+    if (played && typeof played.catch === 'function') {
+      played.catch((error: unknown) => {
+        if ((error as { name?: unknown } | null)?.name !== 'AbortError') refuse(film);
+      });
+    }
   };
 
   const inject = () => {

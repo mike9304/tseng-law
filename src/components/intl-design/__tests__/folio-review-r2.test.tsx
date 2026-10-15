@@ -65,43 +65,29 @@ describe('Thai recommendation titles', () => {
   });
 });
 
-describe('article film label over the burned-in English one', () => {
-  const englishAssets = new Set<string>();
-  for (const locale of INTL_DESIGN_LOCALES) {
-    const source = read('src/data/column-generated-videos.ts');
-    for (const slug of new Set([...source.matchAll(/`column\/\$\{locale\}\/([a-z0-9-]+)`/g)].map((m) => m[1]))) {
-      for (const video of getColumnGeneratedVideos(locale, slug)) if (video.id.endsWith('-en')) englishAssets.add(video.id);
-    }
-  }
-
-  it('has a label in the page language for every Folio locale', () => {
-    for (const locale of INTL_DESIGN_LOCALES) {
-      const body = rule(`.intl-folio:lang(${locale})[data-guidance-locale] main [data-column-generated-video$='-en']::before`);
-      expect(body, locale).toMatch(/content:\s*'[^']+'/);
-      expect(body, locale).not.toMatch(/AI-GENERATED SCENE|Fictional illustration|AI-generated scene|Not real accident/i);
-    }
-    expect(englishAssets.size).toBeGreaterThan(10);
+describe('article films', () => {
+  // The opaque page-language label once drawn over the burned-in English box (review round 2) covered the native
+  // fullscreen/PiP controls and, for long labels on phones, part of the scene. Folio now shows the shared en
+  // renditions as the vi pages do: the file as is, with the AI disclosure in the page language in the caption.
+  it('draws nothing over the film frame', () => {
+    expect(rules.some((r) => r.selector.includes('data-column-generated-video'))).toBe(false);
   });
 
-  it('covers the 460–780 px label box of every English asset Folio pages show', () => {
-    const overrides = new Map<string, number>();
-    for (const r of rules) {
-      const width = Number(/--f-film-label:\s*(\d+)/.exec(r.body)?.[1]);
-      for (const m of r.selector.matchAll(/\[data-column-generated-video='([a-z0-9-]+)'\]/g)) overrides.set(m[1], width);
+  it('keeps the localized AI disclosure caption for the English renditions', () => {
+    const source = read('src/data/column-generated-videos.ts');
+    let english = 0;
+    for (const locale of INTL_DESIGN_LOCALES) {
+      for (const slug of new Set([...source.matchAll(/`column\/\$\{locale\}\/([a-z0-9-]+)`/g)].map((m) => m[1]))) {
+        for (const video of getColumnGeneratedVideos(locale, slug)) {
+          if (!video.id.endsWith('-en')) continue;
+          english += 1;
+          // The disclosure under the film is in the page language, never the English file's own wording.
+          expect(video.disclosure.trim().length, `${locale} ${video.id}`).toBeGreaterThan(20);
+          expect(video.disclosure, `${locale} ${video.id}`).not.toMatch(/AI-generated|Fictional illustration/i);
+        }
+      }
     }
-    // Measured on the posters: most labels are 460 px wide (the default); these four are wider.
-    expect(Object.fromEntries(overrides)).toEqual({
-      'cosmetics-check-v1-en': 480,
-      'overtaking-cutback-v2-en': 524,
-      'branch-models-v1-en': 560,
-      'business-premises-v1-en': 780,
-      'rear-end-simulation-v3-en': 780,
-    });
-    for (const id of overrides.keys()) expect(englishAssets.has(id), id).toBe(true);
-    const box = rule(".intl-folio[data-guidance-locale] main [data-column-generated-video$='-en']::before");
-    expect(box).toMatch(/background:\s*#101714/);
-    expect(box).toMatch(/pointer-events:\s*none/);
-    expect(box).toMatch(/min-height:\s*7\.5cqw/);
+    expect(english).toBeGreaterThan(10);
   });
 });
 

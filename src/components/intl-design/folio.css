@@ -484,8 +484,7 @@
 }
 
 @media (max-width: 22.49rem) {
-  .intl-folio .header .header-logo .logo-kr,
-  .intl-folio #public-mobile-nav-drawer .drawer-brand .logo-kr {
+  .intl-folio .header .header-logo .logo-kr {
     white-space: normal !important;
   }
 }
@@ -844,6 +843,13 @@
   font-size: clamp(14px, 4vw, 20px) !important;
   line-height: 1.2 !important;
   white-space: nowrap !important;
+}
+
+/* Under 360px the name takes two lines in the drawer too, clear of the close key (after the rule above, same weight). */
+@media (max-width: 22.49rem) {
+  .intl-folio #public-mobile-nav-drawer .drawer-brand .logo-kr {
+    white-space: normal !important;
+  }
 }
 
 .intl-folio #public-mobile-nav-drawer .logo-kr {
@@ -3327,6 +3333,12 @@
   }
 }
 
+/* A focused key at the strip's end would sit in the fade: no fade while the strip holds focus. */
+.intl-folio[data-guidance-locale] main .columns-filters:focus-within {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
 .intl-folio[data-guidance-locale] main .columns-topic-section {
   margin-top: 56px;
 }
@@ -3849,86 +3861,6 @@
   font-family: var(--f-text) !important;
 }
 
-/* Article films (review round 2). Scenes exist only in ko, zh-hant, ja and en renditions, and the en file these
-   pages share carries a burned-in English label at the top left (scripts/prepare-column-video.mjs: 24 px in from the
-   corner of the 1280×720 frame, 92 px high, 460–780 px wide). An opaque label in the page language is drawn over it,
-   in frame units (cqw of the figure, which the video fills at 16:9), so the poster and the playing film show no
-   English. The localized disclosure stays in the caption under the film. Native fullscreen shows the file as is. */
-@supports (width: 1cqw) {
-  .intl-folio[data-guidance-locale] main [data-column-generated-video$='-en'] {
-    --f-film-label: 460;
-    position: relative;
-    container-type: inline-size;
-  }
-
-  .intl-folio[data-guidance-locale] main [data-column-generated-video='cosmetics-check-v1-en'] {
-    --f-film-label: 480;
-  }
-
-  .intl-folio[data-guidance-locale] main [data-column-generated-video='overtaking-cutback-v2-en'] {
-    --f-film-label: 524;
-  }
-
-  .intl-folio[data-guidance-locale] main [data-column-generated-video='branch-models-v1-en'] {
-    --f-film-label: 560;
-  }
-
-  .intl-folio[data-guidance-locale] main :is([data-column-generated-video='business-premises-v1-en'], [data-column-generated-video='rear-end-simulation-v3-en']) {
-    --f-film-label: 780;
-  }
-
-  .intl-folio[data-guidance-locale] main [data-column-generated-video$='-en']::before {
-    position: absolute;
-    z-index: 1;
-    top: 1.71875cqw;
-    left: 1.71875cqw;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    min-width: calc((var(--f-film-label) + 4) / 1280 * 100cqw);
-    min-height: 7.5cqw;
-    max-width: 96.5cqw;
-    padding: 0.5cqw 1.5625cqw;
-    background: #101714;
-    color: #fff;
-    font-family: var(--f-text);
-    font-size: max(11px, 1.875cqw);
-    font-weight: 500;
-    line-height: 1.25;
-    pointer-events: none;
-  }
-
-  .intl-folio:lang(id)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Adegan buatan AI'; }
-  .intl-folio:lang(th)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'ฉากที่สร้างด้วย AI'; line-height: 1.5; }
-  .intl-folio:lang(de)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'KI-generierte Szene'; }
-  .intl-folio:lang(es)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Escena generada con IA'; }
-  .intl-folio:lang(fr)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scène générée par IA'; }
-  .intl-folio:lang(it)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scena generata con IA'; }
-  .intl-folio:lang(pt)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Cena gerada por IA'; }
-  .intl-folio:lang(nl)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scène gemaakt met AI'; }
-  .intl-folio:lang(pl)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scena wygenerowana przez AI'; }
-  .intl-folio:lang(ru)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Сцена создана с помощью ИИ'; }
-  .intl-folio:lang(uk)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Сцену створено за допомогою ШІ'; }
-  .intl-folio:lang(el)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Σκηνή δημιουργημένη με τεχνητή νοημοσύνη'; }
-  .intl-folio:lang(sv)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scen skapad med AI'; }
-  .intl-folio:lang(da)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scene skabt med AI'; }
-  .intl-folio:lang(nb)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scene laget med KI'; }
-  .intl-folio:lang(fi)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Tekoälyllä luotu kohtaus'; }
-  .intl-folio:lang(cs)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scéna vytvořená pomocí AI'; }
-  .intl-folio:lang(hu)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Mesterséges intelligenciával készült jelenet'; }
-  .intl-folio:lang(ro)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scenă generată cu IA'; }
-  .intl-folio:lang(sk)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scéna vytvorená pomocou AI'; }
-  .intl-folio:lang(bg)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Сцена, създадена с AI'; }
-  .intl-folio:lang(hr)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scena izrađena umjetnom inteligencijom'; }
-  .intl-folio:lang(sr)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Scena napravljena veštačkom inteligencijom'; }
-  .intl-folio:lang(sl)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Prizor, ustvarjen z umetno inteligenco'; }
-  .intl-folio:lang(lt)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'DI sukurta scena'; }
-  .intl-folio:lang(lv)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Ar MI radīta aina'; }
-  .intl-folio:lang(et)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Tehisintellektiga loodud stseen'; }
-  .intl-folio:lang(ca)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Escena generada amb IA'; }
-  .intl-folio:lang(is)[data-guidance-locale] main [data-column-generated-video$='-en']::before { content: 'Atriði gert með gervigreind'; }
-}
-
 /* In-article FAQ: accordion look (static list). */
 .intl-folio[data-guidance-locale] main .column-faq {
   margin-top: 56px;
@@ -4028,6 +3960,9 @@
 }
 
 .intl-folio[data-guidance-locale] main .authority-card-name {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--f-serif) !important;
   font-size: 1.125rem !important;
   font-weight: 400 !important;

@@ -2748,6 +2748,11 @@
 }
 
 /* 9.10 Offices: text tabs, address column, greyscale framed map. */
+.intl-folio[data-guidance-locale] main .office-tabs:not(:focus-within) {
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent);
+  mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent);
+}
+
 .intl-folio[data-guidance-locale] main .office-tabs {
   display: flex !important;
   flex-wrap: nowrap;
@@ -2817,6 +2822,12 @@
 .intl-folio[data-guidance-locale] main .office-map-wrap iframe {
   filter: grayscale(1);
   border-radius: 0 !important;
+}
+
+@media (max-width: 47.99rem) {
+  .intl-folio[data-guidance-locale] main .office-map-fallback::after {
+    top: 22%;
+  }
 }
 
 .intl-folio[data-guidance-locale] main .office-map-fallback-panel {
@@ -3834,6 +3845,18 @@
   line-height: inherit !important;
 }
 
+/* The translated columns end with "<hr> > Further reading: + link list" in a blockquote: that is a list, not a pull
+   quote, so it reads at body size, and the hr before it is its only rule (no doubled rules around it). */
+.intl-folio[data-guidance-locale] main .blog-body blockquote:has(> ul, > ol) {
+  margin: 24px 0 0 !important;
+  padding: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  font-family: var(--f-prose) !important;
+  font-size: var(--f-prose-size) !important;
+  line-height: var(--f-prose-lh) !important;
+}
+
 .intl-folio[data-guidance-locale] main .blog-body table {
   border-collapse: collapse;
   font-size: 0.9375rem;
@@ -4088,6 +4111,16 @@
   color: var(--f-ink-2);
 }
 
+@media (max-width: 47.99rem) {
+  .intl-folio[data-guidance-locale] main .column-post-nav {
+    border-top: 0;
+  }
+
+  .intl-folio[data-guidance-locale] main .column-post-nav > :first-child {
+    border-top: 1px solid var(--f-ink) !important;
+  }
+}
+
 @media (min-width: 48rem) {
   .intl-folio[data-guidance-locale] main .column-post-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4156,6 +4189,12 @@
   flex-wrap: wrap;
   gap: 8px 28px;
   margin-top: 24px;
+}
+
+@media (max-width: 47.99rem) {
+  .intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:last-of-type {
+    column-gap: 16px;
+  }
 }
 
 .intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:last-of-type > li {

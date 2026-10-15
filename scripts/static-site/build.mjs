@@ -3,16 +3,18 @@
 //
 //   node scripts/static-site/build.mjs [--data=<mirror dir>] [--out=out] [--port=4610]
 //                                      [--media-origin=https://media.tseng-law.com]
-//                                      [--skip-build] [--limit=<pages>]
+//                                      [--skip-build] [--limit=<pages>] [--budget-base=<baseline out dir>]
 //
 // 1. `next build` with NEXT_PUBLIC_STATIC_SITE=1 into .next-static (src/lib/static-site.ts)
 // 2. `next start` on 127.0.0.1, reading builder content from files (--data), never from Blob
 // 3. crawl every public page → assemble out/ → verify → static-site-report.json
+// 4. with --budget-base: the per-page HTML budget against that baseline snapshot (html-budget.mjs); over budget fails
 import { execFileSync, spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { assembleSite } from './assemble.mjs';
 import { crawlSite } from './crawl.mjs';
+import { checkHtmlBudget } from './html-budget.mjs';
 import { REPO_ROOT, SITE_ORIGIN, STATIC_DIST_DIR } from './shared.mjs';
 import { verifySite } from './verify.mjs';
 
@@ -32,7 +34,7 @@ const REMOTE_STORE_ENV = [
 ];
 
 function parseArgs(argv) {
-  const args = { data: null, out: 'out', port: 4610, skipBuild: false, limit: Infinity, mediaOrigin: null };
+  const args = { data: null, out: 'out', port: 4610, skipBuild: false, limit: Infinity, mediaOrigin: null, budgetBase: null };
   for (const arg of argv) {
     if (arg.startsWith('--data=')) args.data = path.resolve(arg.slice(7));
     else if (arg.startsWith('--out=')) args.out = arg.slice(6) || args.out;
@@ -40,6 +42,7 @@ function parseArgs(argv) {
     else if (arg === '--skip-build') args.skipBuild = true;
     else if (arg.startsWith('--limit=')) args.limit = Number(arg.slice(8));
     else if (arg.startsWith('--media-origin=')) args.mediaOrigin = new URL(arg.slice(15)).origin;
+    else if (arg.startsWith('--budget-base=')) args.budgetBase = path.resolve(arg.slice(14));
     else throw new Error(`Unknown argument: ${arg}`);
   }
   return args;
@@ -176,6 +179,15 @@ async function main() {
         + `${assembled.media.referenced} referenced, missing locally: ${assembled.media.missingReferences.join(', ') || 'none'}`);
     }
     if (verification.sitemapMissing.length || verification.oversize.length || Object.keys(verification.flightErrors).length) process.exitCode = 1;
+    if (args.budgetBase) {
+      const budget = checkHtmlBudget({ baseDir: args.budgetBase, candDir: outDir });
+      report.htmlBudget = { base: args.budgetBase, ok: budget.ok, limit: budget.limit, counts: budget.counts, failures: budget.failures };
+      fs.writeFileSync(path.join(REPO_ROOT, 'static-site-report.json'), `${JSON.stringify(report, null, 2)}\n`);
+      console.log(`[static-site] html budget vs ${args.budgetBase}: ${budget.ok ? 'PASS' : `FAIL (${budget.failures.length} pages)`}; `
+        + `Folio homes ${JSON.stringify(budget.counts.folioHome)}, Folio pages ${JSON.stringify(budget.counts.folioOther)}, other ${JSON.stringify(budget.counts.other)}`);
+      for (const failure of budget.failures.slice(0, 20)) console.log(`[static-site] html budget FAIL ${failure.rel}: ${failure.rule}${failure.delta === undefined ? '' : ` (${failure.delta} B)`}`);
+      if (!budget.ok) process.exitCode = 1;
+    }
   } finally {
     server.kill('SIGTERM');
   }

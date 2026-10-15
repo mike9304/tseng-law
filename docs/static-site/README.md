@@ -33,6 +33,13 @@ node scripts/static-site/browser-check.mjs                # every page in Chromi
 node scripts/static-site/compare-live.mjs                 # every sitemap page vs the live site
 ```
 
+Design changes keep a per-page HTML budget (Folio, review round 2): build the commit you start from once, then the
+candidate with `--budget-base=<that out dir>` (or run `node scripts/static-site/html-budget.mjs --base=<out> --cand=<out>`).
+Every page may grow by at most 40 bytes, Folio homes must shrink, and the only new pages allowed are the Folio
+locales' `404.html`; the build exits 1 otherwise. Sizes are compared after removing what differs between two builds
+of the same source (hashed chunk names, RSC push cuts, React's streaming scaffolding, timing-dependent image preload
+hints), so unchanged pages compare at 0 B. The Sites package headroom does not waive the per-page budget.
+
 `build.mjs`: `next build` into `.next-static/` → `next start` on 127.0.0.1 reading builder content
 from the frozen files (never Blob; it refuses to run next to `.env*` files) → crawl every page
 reachable from `sitemap.xml` → `out/` = `public/` + Next static chunks (no source maps) + pages

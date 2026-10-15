@@ -7,6 +7,8 @@ import { ViServiceGrid } from '../ViShared';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { guidanceOfficeCopy } from '@/data/international-guidance-offices';
 import { viServicePresentation } from '@/data/vi-site';
+import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
+import ViPageBody from '../ViPageBody';
 
 const css = (file: string) => readFileSync(path.join(process.cwd(), file), 'utf8');
 const textMarkup = (text: string) => renderToStaticMarkup(<>{text}</>);
@@ -58,6 +60,12 @@ function selectorsFrom(source: string, marker: string): string[] {
 }
 
 describe('vi «Indochine» design (2026-10-13)', () => {
+  it('states the consultation languages on the contact page too (it does not render the contact band)', () => {
+    const notice = internationalInquiryCopy.vi.consultationNotice;
+    expect(renderToStaticMarkup(<ViPageBody pageKey="contact" />)).toContain(notice);
+    expect(renderToStaticMarkup(<ViHomeBody posts={[]} />)).toContain(notice);
+  });
+
   it('scopes the vi chrome block to Vietnamese pages, with square actions', () => {
     const source = css('src/components/PublicChrome.module.css');
     const marker = 'vi chrome «Indochine» (2026-10-13)';

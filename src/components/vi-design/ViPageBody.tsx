@@ -7,6 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { guidanceContent, type GuidancePageKey } from '@/data/international-guidance-content';
+import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import { viServicePresentation, viSiteCopy } from '@/data/vi-site';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import { buildGuidancePersonJsonLd, buildGuidanceTeamCollectionPageJsonLd } from '@/lib/guidance-structured-data';
@@ -57,6 +58,9 @@ function ContactBody() {
             <div className={styles.contactEmail}>
               <h2>{viSiteCopy.contact.emailLabel}</h2>
               <a href={`mailto:${CONSULTATION_EMAIL}`}>{CONSULTATION_EMAIL}</a>
+              {/* The contact page skips ViContactBand (which carries this notice everywhere else), so the
+                  consultation languages are stated here, next to the address people write to. */}
+              <p className={styles.contactLanguageNote}>{internationalInquiryCopy.vi.consultationNotice}</p>
             </div>
             {preparation ? <div className={styles.contactPreparation}><h2>{viSiteCopy.contact.preparationTitle}</h2>{preparation.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
             <div className={styles.contactAsideLinks}>

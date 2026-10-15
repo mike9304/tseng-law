@@ -19,7 +19,7 @@ faq:
   - q: "Chủ sử dụng lao động có được trừ phần 6% của mình vào tiền lương đã thỏa thuận không?"
     a: "Không. Theo giải thích hành chính được Cục Bảo hiểm lao động công bố, khoản bắt buộc này phải được đóng ngoài tiền lương đã thỏa thuận. Phần người lao động tự nguyện đóng thêm là khoản riêng."
   - q: "Người Việt có giấy phép lao động tại Đài Loan đều thuộc chế độ này không?"
-    a: "Không thể kết luận chỉ từ giấy phép lao động. Việc áp dụng còn tùy công việc, diện cư trú và quy định riêng cho từng nhóm. Người đã chọn hợp lệ việc tiếp tục chế độ hưu trí cũ thì không thuộc chế độ tài khoản cá nhân mới."
+    a: "Không thể kết luận chỉ từ giấy phép lao động. Việc áp dụng còn tùy công việc, diện cư trú và quy định riêng cho từng nhóm, kể cả quy định riêng cho người làm công việc chuyên môn. Người đã chọn hợp lệ việc tiếp tục chế độ hưu trí cũ thì không thuộc chế độ tài khoản cá nhân mới."
 audience: ["vi"]
 author: "legal-ai-assistant"
 ---
@@ -40,7 +40,7 @@ Người lao động thuộc diện được tự nguyện đóng có thể đó
 
 Theo [Điều 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=7), diện áp dụng gồm người nước ngoài kết hôn với công dân Đài Loan có hộ tịch tại Đài Loan, được phép cư trú và làm việc tại đây; cùng những người nước ngoài khác đã được phép thường trú và đang làm việc. Với các nhóm này, công việc còn phải thuộc Luật Tiêu chuẩn lao động. Người được trích lập quỹ hưu trí theo Luật Trường tư thục nằm ngoài phạm vi đó. Người đã ly hôn hoặc có vợ, chồng qua đời vẫn có thể thuộc diện áp dụng nếu pháp luật cho phép tiếp tục cư trú và làm việc.
 
-Lao động nước ngoài chỉ có giấy phép lao động thông thường, không thuộc các diện nêu trên, không nằm trong phạm vi khoản 1 Điều 7. Mặt khác, [quy định chuyển tiếp tại Điều 8-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=8-1) cho phép một số người tiếp tục chế độ hưu trí cũ khi đáp ứng điều kiện và đã lựa chọn đúng thủ tục. Ngày vào làm, ngày có tư cách cư trú liên quan và văn bản lựa chọn chế độ vì thế có thể làm thay đổi kết quả.
+Lao động nước ngoài không thuộc các diện nêu trên thì không nằm trong phạm vi khoản 1 Điều 7. Riêng người nước ngoài làm công việc chuyên môn, từ ngày 1/1/2026, được [khoản 1 Điều 24 Luật Tuyển dụng và Thuê mướn Chuyên gia Nước ngoài (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24) đưa vào chế độ của Luật Hưu trí lao động theo một con đường khác, với quy định chuyển tiếp riêng. Mặt khác, [quy định chuyển tiếp tại Điều 8-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=8-1) cho phép một số người tiếp tục chế độ hưu trí cũ khi đáp ứng điều kiện và đã lựa chọn đúng thủ tục. Ngày vào làm, ngày có tư cách cư trú liên quan và văn bản lựa chọn chế độ vì thế có thể làm thay đổi kết quả.
 
 Nếu chủ sử dụng lao động không đóng hoặc đóng thiếu và gây thiệt hại, [Điều 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=31) cho phép người lao động yêu cầu bồi thường. Quyền yêu cầu này hết thời hiệu nếu không được thực hiện trong năm năm kể từ khi nghỉ việc. Thỏa thuận lương, phiếu lương và lịch sử đóng vào tài khoản giúp phân biệt tranh chấp về khoản bị trừ khỏi lương với việc thiếu đóng hưu trí; hai vấn đề không nên bị gộp thành một con số “6%”.
 

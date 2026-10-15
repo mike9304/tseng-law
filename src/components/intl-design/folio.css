@@ -4,15 +4,19 @@
    double rules and 1px rules instead of colour fields, Literata titles at their optical size, IBM Plex text, one
    signature blue used only for lines and small type, pictures only inside a 1px ink frame with no text on them.
 
-   Scope: `.folio` sits on `.site` (CinematicRouteShell) for the Folio locales only, so every rule below starts with
-   `.folio`; shared markup classes are reached through :global(). No new body components: the shared guidance markup
+   Scope: `.intl-folio` sits on `.site` (CinematicRouteShell) for the Folio locales only, so every rule below starts with
+   `.intl-folio` (folio-design.test checks every selector). Loading (review round 1): this file is not imported by any
+   component. scripts/build-intl-design-css.mjs runs it through the same PostCSS steps Next uses and writes a hashed copy
+   to public/fonts/intl-2026-10/, which fonts.ts links on the Folio locales only. As a CSS module in the shared layout it
+   changed how Next chunks and orders every other locale's CSS (the Japanese home rendered differently).
+   No new body components: the shared guidance markup
    (GuidanceHomeBody / GuidancePageBody / Header / Footer / ColumnsGrid / ColumnDetailView) is restyled in place, so the
-   parity and header tests keep covering these locales. Root `R` = `.folio[data-guidance-locale]` (0,2,0); rules that
+   parity and header tests keep covering these locales. Root `R` = `.intl-folio[data-guidance-locale]` (0,2,0); rules that
    must beat globals.css `!important` guidance rules (0,4,0) add the page attribute or repeat the class.
    ===================================================================================================================== */
 
 /* ---------- 1. Tokens ---------------------------------------------------------------------------------------------- */
-.folio {
+.intl-folio {
   --f-paper: #ffffff;
   --f-ink: #111a2c;
   --f-ink-2: #4b5466;
@@ -83,7 +87,7 @@
 }
 
 @media (min-width: 48rem) {
-  .folio {
+  .intl-folio {
     --f-section: 80px;
     --f-body: 1.125rem;
     --f-prose-size: 1.125rem;
@@ -92,7 +96,7 @@
 }
 
 @media (min-width: 75rem) {
-  .folio {
+  .intl-folio {
     --f-section: 112px;
     --f-hero-lh: 1.08;
     --f-h1-lh: 1.1;
@@ -104,12 +108,12 @@
   }
 }
 
-.folio:lang(el) {
+.intl-folio:lang(el) {
   --f-eyebrow-track: 0.04em;
 }
 
 /* Thai: stacked tone marks and lower vowels need ≥1.5 under titles, 1.8 in text, 1.85 in long reading (DIRECTION §4). */
-.folio:lang(th) {
+.intl-folio:lang(th) {
   --f-prose: 'Folio Prose', var(--f-text);
   --f-hero-size: clamp(1.75rem, 0.95rem + 3.4vw, 3.5rem);
   --f-hero-lh: 1.5;
@@ -141,13 +145,13 @@
 }
 
 @media (min-width: 75rem) {
-  .folio:lang(th) {
+  .intl-folio:lang(th) {
     --f-h2-hang: 1.75rem;
   }
 }
 
 /* ---------- 2. Base: type, links, focus, rhythm --------------------------------------------------------------------- */
-.folio.folio[data-guidance-locale] :global(main) {
+.intl-folio.intl-folio[data-guidance-locale] main {
   --font-body: var(--f-text);
   --font-heading: var(--f-serif);
   --font-heading-ko: var(--f-serif);
@@ -162,8 +166,8 @@
 
 /* globals.css pins guidance headings to `var(--font-body) !important` at 700: swap the variable on the heading
    itself so that rule resolves to the serif, and drop the weight (DIRECTION §11). */
-.folio[data-guidance-locale] :global(main) :is(h1, h2, h3, h4, :global(.section-title), :global(.split-title),
-  :global(.page-header-title), :global(.card-title), :global(.hero-title)) {
+.intl-folio[data-guidance-locale] main :is(h1, h2, h3, h4, .section-title, .split-title,
+  .page-header-title, .card-title, .hero-title) {
   --font-body: var(--f-serif);
   font-family: var(--f-serif) !important;
   font-weight: 400 !important;
@@ -176,45 +180,45 @@
   overflow-wrap: break-word;
 }
 
-.folio[data-guidance-locale] :global(main) p {
+.intl-folio[data-guidance-locale] main p {
   text-wrap: pretty;
 }
 
-.folio[data-guidance-locale] :global(main) :is(strong, b) {
+.intl-folio[data-guidance-locale] main :is(strong, b) {
   font-weight: 500;
 }
 
-.folio :is(input, button, select, textarea) {
+.intl-folio :is(input, button, select, textarea) {
   font-family: inherit;
 }
 
-.folio[data-guidance-locale] :global(main) a:not(:global(.button)):not(:global(.card-stretched-link)) {
+.intl-folio[data-guidance-locale] main a:not(.button):not(.card-stretched-link) {
   color: var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :is(p, li, dd) a:not(:global(.button)):not(:global(.card-stretched-link)) {
+.intl-folio[data-guidance-locale] main :is(p, li, dd) a:not(.button):not(.card-stretched-link) {
   text-decoration: underline;
   text-decoration-color: var(--f-sign);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) :is(p, li, dd) a:not(:global(.button)):hover {
+.intl-folio[data-guidance-locale] main :is(p, li, dd) a:not(.button):hover {
   text-decoration-thickness: 2px;
 }
 
-.folio :focus-visible {
+.intl-folio :focus-visible {
   outline: 2px solid var(--f-focus) !important;
   outline-offset: 3px !important;
   box-shadow: none !important;
 }
 
-.folio ::selection {
+.intl-folio ::selection {
   background: var(--f-sign-tint);
   color: var(--f-ink);
 }
 
-.folio :global(.container) {
+.intl-folio .container {
   box-sizing: border-box;
   width: 100%;
   max-width: calc(75rem + 2 * var(--f-gutter));
@@ -222,7 +226,7 @@
   padding-inline: var(--f-gutter);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.section) {
+.intl-folio[data-guidance-locale] main .section {
   position: relative;
   padding-block: var(--f-section);
   background: var(--f-paper) !important;
@@ -231,14 +235,14 @@
   box-shadow: none;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.section)::before {
+.intl-folio[data-guidance-locale] main .section::before {
   content: none;
 }
 
 /* Scroll reveals: shown at once (no entrance animation; full-page captures were blank). */
-.folio[data-guidance-locale] :global(.reveal),
-.folio[data-guidance-locale] :global(.reveal-stagger) > *,
-.folio[data-guidance-locale] :global(.reveal) :global(.reveal-stagger) > * {
+.intl-folio[data-guidance-locale] .reveal,
+.intl-folio[data-guidance-locale] .reveal-stagger > *,
+.intl-folio[data-guidance-locale] .reveal .reveal-stagger > * {
   opacity: 1 !important;
   transform: none !important;
   pointer-events: auto !important;
@@ -246,15 +250,15 @@
 }
 
 /* Shared ornaments replaced by rules. */
-.folio :global(.ornament-divider),
-.folio :global(.service-icon),
-.folio :global(.split-divider),
-.folio :global(.stat-progress) {
+.intl-folio .ornament-divider,
+.intl-folio .service-icon,
+.intl-folio .split-divider,
+.intl-folio .stat-progress {
   display: none !important;
 }
 
 /* Section labels (eyebrows): Text 500, ink-2, no rule mark, no case change (the data is already capitalised). */
-.folio[data-guidance-locale] :global(main) :global(.section-label) {
+.intl-folio[data-guidance-locale] main .section-label {
   display: block;
   margin: 0 0 16px;
   padding: 0;
@@ -268,25 +272,25 @@
   background: none;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.section-label)::before,
-.folio[data-guidance-locale] :global(main) :global(.section-label)::after {
+.intl-folio[data-guidance-locale] main .section-label::before,
+.intl-folio[data-guidance-locale] main .section-label::after {
   content: none !important;
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.section-title) {
+.intl-folio[data-guidance-locale] main .section-title {
   margin: 0 0 20px;
   font-size: var(--f-h2) !important;
   line-height: var(--f-h2-lh) !important;
   max-width: 24em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.section-title)::after,
-.folio[data-guidance-locale] :global(main) :global(.section-title)::before {
+.intl-folio[data-guidance-locale] main .section-title::after,
+.intl-folio[data-guidance-locale] main .section-title::before {
   content: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.section-lede) {
+.intl-folio[data-guidance-locale] main .section-lede {
   max-width: 34em;
   margin: 0 0 16px;
   font-family: var(--f-text);
@@ -297,22 +301,22 @@
 }
 
 /* Section heads open with a 1px ink rule over the label. */
-.folio[data-guidance-locale] :global(main) :global(.section) > :global(.container) > :global(.section-label):first-child,
-.folio[data-guidance-locale] :global(main) :global(#insights) > :global(.container) > div:first-child > :global(.section-label) {
+.intl-folio[data-guidance-locale] main .section > .container > .section-label:first-child,
+.intl-folio[data-guidance-locale] main #insights > .container > div:first-child > .section-label {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--f-ink);
   margin-bottom: 28px;
 }
 
 /* ---------- 3. Buttons, text actions, chips ------------------------------------------------------------------------ */
-.folio[data-guidance-locale] :global(main) :global(.button),
-.folio[data-guidance-locale] :global(#public-mobile-nav-drawer) :global(.button) {
+.intl-folio[data-guidance-locale] main .button,
+.intl-folio[data-guidance-locale] #public-mobile-nav-drawer .button {
   display: inline-flex;
 }
 
 /* No `display` here: the header CTA is hidden below 75rem by the shared chrome. */
-.folio[data-guidance-locale] :global(.button),
-.folio[data-guidance-locale] :global(main) :global(.button) {
+.intl-folio[data-guidance-locale] .button,
+.intl-folio[data-guidance-locale] main .button {
   align-items: center;
   justify-content: center;
   gap: 12px;
@@ -338,7 +342,7 @@
   overflow-wrap: anywhere;
 }
 
-.folio[data-guidance-locale] :global(.button)::after {
+.intl-folio[data-guidance-locale] .button::after {
   content: '';
   flex: none;
   width: 7px;
@@ -353,47 +357,47 @@
   inset: auto;
 }
 
-.folio[data-guidance-locale] :global(.button):hover {
+.intl-folio[data-guidance-locale] .button:hover {
   background: var(--f-ink-hover) !important;
   color: var(--f-paper) !important;
 }
 
-.folio[data-guidance-locale] :global(.button):hover::after {
+.intl-folio[data-guidance-locale] .button:hover::after {
   transform: translateX(3px) rotate(45deg);
 }
 
 /* Secondary: outline. */
-.folio[data-guidance-locale] :is(:global(.button--outline), :global(.button.ghost), :global(.button.secondary),
-  :global(.hero-cta-secondary)),
-.folio[data-guidance-locale] :global(main) :is(:global(.button--outline), :global(.button.ghost),
-  :global(.button.secondary), :global(.hero-cta-secondary)) {
+.intl-folio[data-guidance-locale] :is(.button--outline, .button.ghost, .button.secondary,
+  .hero-cta-secondary),
+.intl-folio[data-guidance-locale] main :is(.button--outline, .button.ghost,
+  .button.secondary, .hero-cta-secondary) {
   background: transparent !important;
   color: var(--f-ink) !important;
   border-color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :is(:global(.button--outline), :global(.button.ghost), :global(.button.secondary),
-  :global(.hero-cta-secondary)):hover,
-.folio[data-guidance-locale] :global(main) :is(:global(.button--outline), :global(.button.ghost),
-  :global(.button.secondary), :global(.hero-cta-secondary)):hover {
+.intl-folio[data-guidance-locale] :is(.button--outline, .button.ghost, .button.secondary,
+  .hero-cta-secondary):hover,
+.intl-folio[data-guidance-locale] main :is(.button--outline, .button.ghost,
+  .button.secondary, .hero-cta-secondary):hover {
   background: var(--f-sign-tint) !important;
   color: var(--f-ink) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .folio[data-guidance-locale] :global(.button),
-  .folio[data-guidance-locale] :global(.button)::after {
+  .intl-folio[data-guidance-locale] .button,
+  .intl-folio[data-guidance-locale] .button::after {
     transition: none;
   }
 
-  .folio[data-guidance-locale] :global(.button):hover::after {
+  .intl-folio[data-guidance-locale] .button:hover::after {
     transform: rotate(45deg);
   }
 }
 
 /* Text actions ("… →" in the markup). */
-.folio[data-guidance-locale] :global(main) :is(:global(.link-underline), :global(.services-card-link),
-  :global(.insights-card-cta), :global(.office-map-fallback-link)) {
+.intl-folio[data-guidance-locale] main :is(.link-underline, .services-card-link,
+  .insights-card-cta, .office-map-fallback-link) {
   display: inline;
   padding: 0;
   border: 0;
@@ -406,20 +410,20 @@
   box-shadow: none;
 }
 
-.folio[data-guidance-locale] :global(main) :is(:global(.link-underline), :global(.services-card-link)):hover {
+.intl-folio[data-guidance-locale] main :is(.link-underline, .services-card-link):hover {
   text-decoration: underline;
   text-decoration-color: var(--f-sign);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) :is(:global(.link-underline), :global(.services-card-link))::after,
-.folio[data-guidance-locale] :global(main) :is(:global(.link-underline), :global(.services-card-link))::before {
+.intl-folio[data-guidance-locale] main :is(.link-underline, .services-card-link)::after,
+.intl-folio[data-guidance-locale] main :is(.link-underline, .services-card-link)::before {
   content: none !important;
 }
 
 /* ---------- 4. Header (desktop masthead ≥75rem, bar below) --------------------------------------------------------- */
-.folio :global(.header)[data-public-site-header] {
+.intl-folio .header[data-public-site-header] {
   background: var(--f-paper) !important;
   border-top: 0 !important;
   border-bottom: 1px solid var(--f-hair) !important;
@@ -428,39 +432,39 @@
   font-family: var(--f-text);
 }
 
-.folio :global(.header) :global(.header-accent-line),
-.folio :global(.header) :global(.nav-indicator) {
+.intl-folio .header .header-accent-line,
+.intl-folio .header .nav-indicator {
   display: none !important;
 }
 
 /* Bar (below 75rem): seal + one-line serif wordmark, square menu key with CSS lines. */
-.folio :global(.header) :global(.header-main) {
+.intl-folio .header .header-main {
   background: var(--f-paper) !important;
   border: 0 !important;
 }
 
-.folio :global(.header) :global(.header-main-inner) {
+.intl-folio .header .header-main-inner {
   min-height: 64px;
   gap: 12px;
 }
 
-.folio :global(.header) :global(.header-logo) {
+.intl-folio .header .header-logo {
   gap: 10px;
   color: var(--f-ink);
   min-width: 0;
 }
 
-.folio :global(.header) :global(.header-logo) :global(.logo-mark) {
+.intl-folio .header .header-logo .logo-mark {
   width: 28px !important;
   height: 28px !important;
 }
 
-.folio :global(.header) :global(.header-logo) :global(.logo-mark) img {
+.intl-folio .header .header-logo .logo-mark img {
   width: 100%;
   height: 100%;
 }
 
-.folio :global(.header) :global(.header-logo) :global(.logo-kr) {
+.intl-folio .header .header-logo .logo-kr {
   font-family: var(--f-serif) !important;
   font-optical-sizing: auto;
   font-size: clamp(14px, 4vw, 20px) !important;
@@ -471,7 +475,7 @@
   white-space: nowrap !important;
 }
 
-.folio :global(.header) :global(.mobile-toggle) {
+.intl-folio .header .mobile-toggle {
   position: relative;
   width: 44px !important;
   height: 44px !important;
@@ -484,11 +488,11 @@
   box-shadow: none !important;
 }
 
-.folio :global(.header) :global(.mobile-toggle) svg {
+.intl-folio .header .mobile-toggle svg {
   display: none;
 }
 
-.folio :global(.header) :global(.mobile-toggle)::before {
+.intl-folio .header .mobile-toggle::before {
   content: '';
   position: absolute;
   left: 12px;
@@ -500,12 +504,12 @@
   box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
 }
 
-.folio :global(.header) :global(.mobile-toggle)[aria-expanded='true']::before {
+.intl-folio .header .mobile-toggle[aria-expanded='true']::before {
   box-shadow: none;
   transform: rotate(45deg);
 }
 
-.folio :global(.header) :global(.mobile-toggle)[aria-expanded='true']::after {
+.intl-folio .header .mobile-toggle[aria-expanded='true']::after {
   content: '';
   position: absolute;
   left: 12px;
@@ -518,11 +522,11 @@
 }
 
 @media (min-width: 48rem) {
-  .folio :global(.header) :global(.header-main-inner) {
+  .intl-folio .header .header-main-inner {
     min-height: 72px;
   }
 
-  .folio :global(.header) :global(.header-logo) :global(.logo-mark) {
+  .intl-folio .header .header-logo .logo-mark {
     width: 32px !important;
     height: 32px !important;
   }
@@ -530,12 +534,12 @@
 
 /* Masthead (≥75rem): utility 32 · nameplate 64 · double rule 5 · menu 44. */
 @media (min-width: 75rem) {
-  .folio :global(.header) :global(.header-utility) {
+  .intl-folio .header .header-utility {
     background: var(--f-paper) !important;
     border-bottom: 0 !important;
   }
 
-  .folio :global(.header) :global(.header-utility) > :global(.container) {
+  .intl-folio .header .header-utility > .container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -543,12 +547,12 @@
     height: 32px;
   }
 
-  .folio :global(.header) :global(.utility-nav) {
+  .intl-folio .header .utility-nav {
     gap: 20px;
     align-items: center;
   }
 
-  .folio :global(.header) :global(.utility-nav) > a {
+  .intl-folio .header .utility-nav > a {
     display: inline-flex;
     align-items: center;
     min-height: 0 !important;
@@ -561,19 +565,19 @@
     background: none !important;
   }
 
-  .folio :global(.header) :global(.utility-nav) > a:hover {
+  .intl-folio .header .utility-nav > a:hover {
     color: var(--f-ink) !important;
     text-decoration: underline;
     text-underline-offset: 0.18em;
   }
 
-  .folio :global(.header) :global(.utility-lang) {
+  .intl-folio .header .utility-lang {
     border: 0 !important;
     padding: 0 !important;
     background: none !important;
   }
 
-  .folio :global(.header) :global(.utility-lang) > button {
+  .intl-folio .header .utility-lang > button {
     min-height: 28px !important;
     height: 28px !important;
     padding: 0 10px !important;
@@ -587,7 +591,7 @@
     box-shadow: none !important;
   }
 
-  .folio :global(.header):not([data-header-content-fit='compact']) :global(.header-main-inner) {
+  .intl-folio .header:not([data-header-content-fit='compact']) .header-main-inner {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-rows: 64px 5px 44px;
@@ -599,7 +603,7 @@
     height: auto;
   }
 
-  .folio :global(.header):not([data-header-content-fit='compact']) :global(.header-main-inner)::after {
+  .intl-folio .header:not([data-header-content-fit='compact']) .header-main-inner::after {
     content: '';
     grid-area: rule;
     align-self: stretch;
@@ -609,36 +613,36 @@
     border-bottom: 1px solid var(--f-ink);
   }
 
-  .folio :global(.header) :global(.header-main-inner)::before {
+  .intl-folio .header .header-main-inner::before {
     content: none;
   }
 
-  .folio :global(.header) :global(.header-logo) {
+  .intl-folio .header .header-logo {
     grid-area: logo;
     gap: 14px;
   }
 
-  .folio :global(.header) :global(.header-logo) :global(.logo-mark) {
+  .intl-folio .header .header-logo .logo-mark {
     width: 36px !important;
     height: 36px !important;
   }
 
-  .folio :global(.header) :global(.header-logo) :global(.logo-kr) {
+  .intl-folio .header .header-logo .logo-kr {
     font-size: 24px !important;
   }
 
-  .folio :global(.header) :global(.header-actions) {
+  .intl-folio .header .header-actions {
     grid-area: actions;
     justify-self: end;
   }
 
-  .folio :global(.header) :global(.header-actions) :global(.nav-cta.button) {
+  .intl-folio .header .header-actions .nav-cta.button {
     min-height: 44px !important;
     padding: 10px 20px !important;
     font-size: 0.9375rem !important;
   }
 
-  .folio :global(.header) :global(.main-nav) {
+  .intl-folio .header .main-nav {
     grid-area: nav;
     align-self: stretch;
     justify-self: stretch;
@@ -648,7 +652,7 @@
     min-width: 0;
   }
 
-  .folio :global(.header) :global(.main-nav) :global(.nav-list) {
+  .intl-folio .header .main-nav .nav-list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -659,12 +663,12 @@
     padding: 0;
   }
 
-  .folio :global(.header) :global(.main-nav) :global(.nav-item) {
+  .intl-folio .header .main-nav .nav-item {
     display: flex;
     align-items: stretch;
   }
 
-  .folio :global(.header) :global(.main-nav) :global(.nav-link) {
+  .intl-folio .header .main-nav .nav-link {
     display: inline-flex;
     align-items: center;
     height: 44px;
@@ -681,32 +685,32 @@
     box-shadow: none !important;
   }
 
-  .folio :global(.header) :global(.main-nav) :global(.nav-link):hover {
+  .intl-folio .header .main-nav .nav-link:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 0.3em;
   }
 
-  .folio :global(.header) :global(.main-nav) :global(.nav-link)[aria-current='page'] {
+  .intl-folio .header .main-nav .nav-link[aria-current='page'] {
     box-shadow: inset 0 -2px 0 var(--f-sign) !important;
     text-decoration: none;
   }
 
-  .folio :global(.header) :global(.main-nav) :global(.nav-link)::after,
-  .folio :global(.header) :global(.main-nav) :global(.nav-link)::before {
+  .intl-folio .header .main-nav .nav-link::after,
+  .intl-folio .header .main-nav .nav-link::before {
     content: none !important;
   }
 
   /* The width probe measures only the menu row now (logo and CTA have their own row). */
-  .folio :global(.header) [data-header-content-fit-probe] > :not(:nth-child(2)) {
+  .intl-folio .header [data-header-content-fit-probe] > :not(:nth-child(2)) {
     display: none !important;
   }
 
-  .folio :global(.header) [data-header-content-fit-probe] > :nth-child(2) {
+  .intl-folio .header [data-header-content-fit-probe] > :nth-child(2) {
     gap: 32px;
   }
 
-  .folio :global(.header) [data-header-content-fit-probe] :global(.nav-link) {
+  .intl-folio .header [data-header-content-fit-probe] .nav-link {
     padding: 0 !important;
     font-family: var(--f-text) !important;
     font-size: 0.9375rem !important;
@@ -718,26 +722,26 @@
   /* Collapsing masthead: the header wrapper is sticky at -101px (32 + 64 + 5), so after scrolling only the 44px menu
      row stays; while focus is inside, the whole masthead is shown so a focused control is never hidden above. If the
      width probe ever falls back to the compact bar (large text zoom), the shared fixed header comes back unchanged. */
-  .folio > [data-cinematic-chrome='header']:has(> :global(.header):not([data-header-content-fit='compact'])) {
+  .intl-folio > [data-cinematic-chrome='header']:has(> .header:not([data-header-content-fit='compact'])) {
     position: sticky;
     top: -101px;
     z-index: 80;
   }
 
-  .folio > [data-cinematic-chrome='header']:has(> :global(.header):not([data-header-content-fit='compact'])):focus-within {
+  .intl-folio > [data-cinematic-chrome='header']:has(> .header:not([data-header-content-fit='compact'])):focus-within {
     top: 0;
   }
 
-  .folio > [data-cinematic-chrome='header'] > :global(.header)[data-public-site-header]:not([data-header-content-fit='compact']) {
+  .intl-folio > [data-cinematic-chrome='header'] > .header[data-public-site-header]:not([data-header-content-fit='compact']) {
     position: relative !important;
     top: auto !important;
   }
 
-  .folio.folio[data-guidance-locale]:has(> [data-cinematic-chrome='header'] > :global(.header):not([data-header-content-fit='compact'])) > :global(main) {
+  .intl-folio.intl-folio[data-guidance-locale]:has(> [data-cinematic-chrome='header'] > .header:not([data-header-content-fit='compact'])) > main {
     padding-top: 0 !important;
   }
 
-  .folio :global(.header) :global(.mega-panel) {
+  .intl-folio .header .mega-panel {
     background: var(--f-paper) !important;
     border-top: 1px solid var(--f-ink);
     border-bottom: 1px solid var(--f-hair) !important;
@@ -745,14 +749,14 @@
     border-radius: 0 !important;
   }
 
-  .folio :global(.header) :global(.mega-title) {
+  .intl-folio .header .mega-title {
     font-family: var(--f-serif) !important;
     font-size: 1.5rem !important;
     font-weight: 400 !important;
   }
 
-  .folio :global(.header) :global(.mega-description),
-  .folio :global(.header) :global(.mega-intro) {
+  .intl-folio .header .mega-description,
+  .intl-folio .header .mega-intro {
     font-family: var(--f-text);
     font-size: 0.9375rem;
     color: var(--f-ink-2) !important;
@@ -760,28 +764,28 @@
 }
 
 /* Compact header (fit probe fallback) keeps the bar look. */
-.folio :global(.header)[data-header-content-fit='compact'] :global(.header-main-inner)::after {
+.intl-folio .header[data-header-content-fit='compact'] .header-main-inner::after {
   content: none;
 }
 
 /* ---------- 5. Mobile drawer ----------------------------------------------------------------------------------------- */
-.folio :global(#public-mobile-nav-drawer) {
+.intl-folio #public-mobile-nav-drawer {
   font-family: var(--f-text);
   color: var(--f-ink);
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-panel) {
+.intl-folio #public-mobile-nav-drawer .drawer-panel {
   background: var(--f-paper) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   color: var(--f-ink);
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-header) {
+.intl-folio #public-mobile-nav-drawer .drawer-header {
   border-bottom: 1px solid var(--f-ink);
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-header) {
+.intl-folio #public-mobile-nav-drawer .drawer-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -789,7 +793,7 @@
   padding-bottom: 12px;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-brand) {
+.intl-folio #public-mobile-nav-drawer .drawer-brand {
   display: inline-flex !important;
   flex-direction: row !important;
   align-items: center;
@@ -799,25 +803,25 @@
   text-align: start !important;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-brand) :global(.logo-mark) {
+.intl-folio #public-mobile-nav-drawer .drawer-brand .logo-mark {
   width: 28px !important;
   height: 28px !important;
   flex: none;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-brand) :global(.logo-kr) {
+.intl-folio #public-mobile-nav-drawer .drawer-brand .logo-kr {
   font-size: clamp(14px, 4vw, 20px) !important;
   line-height: 1.2 !important;
   white-space: nowrap !important;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.logo-kr) {
+.intl-folio #public-mobile-nav-drawer .logo-kr {
   font-family: var(--f-serif) !important;
   font-weight: 400 !important;
   color: var(--f-ink) !important;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-nav-link) {
+.intl-folio #public-mobile-nav-drawer .drawer-nav-link {
   display: flex;
   align-items: center;
   min-height: 56px;
@@ -836,11 +840,11 @@
   overflow-wrap: break-word;
 }
 
-.folio:lang(th) :global(#public-mobile-nav-drawer) :global(.drawer-nav-link) {
+.intl-folio:lang(th) #public-mobile-nav-drawer .drawer-nav-link {
   line-height: 1.5 !important;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.chip) {
+.intl-folio #public-mobile-nav-drawer .chip {
   min-height: 44px;
   border: 1px solid var(--f-field) !important;
   border-radius: 0 !important;
@@ -851,12 +855,12 @@
   box-shadow: none !important;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.drawer-footer) :global(.button) {
+.intl-folio #public-mobile-nav-drawer .drawer-footer .button {
   width: 100%;
   min-height: 52px;
 }
 
-.folio :global(#public-mobile-nav-drawer) :global(.icon-button) {
+.intl-folio #public-mobile-nav-drawer .icon-button {
   border: 1px solid var(--f-ink) !important;
   border-radius: 0 !important;
   background: var(--f-paper) !important;
@@ -865,14 +869,14 @@
 }
 
 /* Language lists render autonyms in every script: system-ui so they never pull every Folio subset. */
-.folio :global(.global-language-picker--mobile),
-.folio :global(.global-language-picker--mobile) *,
-.folio :global(.locale-flag-switcher) :is(ul, li, a) {
+.intl-folio .global-language-picker--mobile,
+.intl-folio .global-language-picker--mobile *,
+.intl-folio .locale-flag-switcher :is(ul, li, a) {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 /* ---------- 6. Footer (night) ---------------------------------------------------------------------------------------- */
-.folio :global(.site-footer) {
+.intl-folio .site-footer {
   --f-focus: var(--f-night-sign);
   position: relative;
   background: var(--f-night) !important;
@@ -881,7 +885,7 @@
   border-top: 0 !important;
 }
 
-.folio :global(.site-footer)::before {
+.intl-folio .site-footer::before {
   content: '';
   display: block;
   width: calc(100% - 2 * var(--f-gutter));
@@ -893,24 +897,24 @@
   border-bottom: 1px solid var(--f-night-muted);
 }
 
-.folio :global(.site-footer) :is(:global(.footer-offices), :global(.footer-main), :global(.footer-bottom-bar)) {
+.intl-folio .site-footer :is(.footer-offices, .footer-main, .footer-bottom-bar) {
   background: transparent !important;
   border-color: var(--f-night-hair) !important;
   color: var(--f-night-text);
 }
 
-.folio :global(.site-footer) :global(.footer-offices) {
+.intl-folio .site-footer .footer-offices {
   padding-block: 48px 40px;
   border-bottom: 1px solid var(--f-night-hair) !important;
 }
 
-.folio :global(.site-footer) :global(.office-links) {
+.intl-folio .site-footer .office-links {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 0;
 }
 
-.folio :global(.site-footer) :global(.office-label) {
+.intl-folio .site-footer .office-label {
   display: block;
   margin-bottom: 16px;
   color: var(--f-night-muted) !important;
@@ -921,7 +925,7 @@
   text-transform: none !important;
 }
 
-.folio :global(.site-footer) :global(.office-link) {
+.intl-folio .site-footer .office-link {
   display: block;
   padding: 16px 0;
   border: 0;
@@ -932,13 +936,13 @@
   text-decoration: none;
 }
 
-.folio :global(.site-footer) :global(.office-link)::before,
-.folio :global(.site-footer) :global(.office-link)::after {
+.intl-folio .site-footer .office-link::before,
+.intl-folio .site-footer .office-link::after {
   content: none !important;
   display: none !important;
 }
 
-.folio :global(.site-footer) :global(.office-link-name) {
+.intl-folio .site-footer .office-link-name {
   display: block;
   font-family: var(--f-serif) !important;
   font-optical-sizing: auto;
@@ -948,7 +952,7 @@
   color: var(--f-night-text) !important;
 }
 
-.folio :global(.site-footer) :global(.office-link-address) {
+.intl-folio .site-footer .office-link-address {
   display: block;
   margin-top: 6px;
   font-family: var(--f-text);
@@ -957,47 +961,47 @@
   color: var(--f-night-muted) !important;
 }
 
-.folio :global(.site-footer) :global(.office-link):hover :global(.office-link-name) {
+.intl-folio .site-footer .office-link:hover .office-link-name {
   color: var(--f-night-sign) !important;
 }
 
 @media (min-width: 48rem) {
-  .folio :global(.site-footer) :global(.office-links) {
+  .intl-folio .site-footer .office-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 24px;
   }
 
-  .folio :global(.site-footer) :global(.office-label) {
+  .intl-folio .site-footer .office-label {
     grid-column: 1 / -1;
   }
 }
 
 @media (min-width: 75rem) {
-  .folio :global(.site-footer) :global(.footer-offices) {
+  .intl-folio .site-footer .footer-offices {
     padding-block: 80px 48px;
   }
 
-  .folio :global(.site-footer) :global(.office-links) {
+  .intl-folio .site-footer .office-links {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .folio :global(.site-footer) :global(.office-link) {
+  .intl-folio .site-footer .office-link {
     padding: 4px 24px 8px;
     border-top: 0;
     border-left: 1px solid var(--f-night-hair);
   }
 
-  .folio :global(.site-footer) :global(.office-label) + :global(.office-link) {
+  .intl-folio .site-footer .office-label + .office-link {
     padding-left: 0;
     border-left: 0;
   }
 }
 
-.folio :global(.site-footer) :global(.footer-main) {
+.intl-folio .site-footer .footer-main {
   padding-block: 48px;
 }
 
-.folio :global(.site-footer) :global(.footer-link-list) {
+.intl-folio .site-footer .footer-link-list {
   display: flex !important;
   flex-direction: column;
   align-items: flex-start;
@@ -1005,7 +1009,7 @@
 }
 
 /* Keep the shared 44px touch target (PublicChrome.module.css); the rows themselves give the list its rhythm. */
-.folio :global(.site-footer) :global(.footer-link-list) a {
+.intl-folio .site-footer .footer-link-list a {
   padding: 0 !important;
   min-height: 44px;
   display: inline-flex;
@@ -1013,7 +1017,7 @@
   line-height: 1.5;
 }
 
-.folio :global(.site-footer) :global(.footer-main-brand) {
+.intl-folio .site-footer .footer-main-brand {
   font-family: var(--f-serif) !important;
   font-optical-sizing: auto;
   font-size: 1.75rem !important;
@@ -1023,19 +1027,19 @@
   letter-spacing: 0 !important;
 }
 
-.folio :global(.site-footer) :global(.footer-main-note) {
+.intl-folio .site-footer .footer-main-note {
   max-width: 60ch;
   font-size: 0.875rem !important;
   line-height: max(1.6, var(--f-th-text)) !important;
   color: var(--f-night-muted) !important;
 }
 
-.folio :global(.site-footer) :global(.footer-consultation-email-label) {
+.intl-folio .site-footer .footer-consultation-email-label {
   color: var(--f-night-muted) !important;
   font-size: 0.8125rem;
 }
 
-.folio :global(.site-footer) :global(.footer-consultation-email-link) {
+.intl-folio .site-footer .footer-consultation-email-link {
   color: var(--f-night-text) !important;
   text-decoration: underline;
   text-decoration-color: var(--f-field);
@@ -1043,7 +1047,7 @@
   overflow-wrap: anywhere;
 }
 
-.folio :global(.site-footer) :global(.footer-consultation-email-copy) {
+.intl-folio .site-footer .footer-consultation-email-copy {
   min-height: 44px;
   min-width: 44px;
   border: 1px solid var(--f-night-muted) !important;
@@ -1053,7 +1057,7 @@
   box-shadow: none !important;
 }
 
-.folio :global(.site-footer) :global(.footer-link-title) {
+.intl-folio .site-footer .footer-link-title {
   margin-bottom: 12px;
   color: var(--f-night-text) !important;
   font-family: var(--f-text) !important;
@@ -1063,8 +1067,8 @@
   text-transform: none !important;
 }
 
-.folio :global(.site-footer) :global(.footer-link-list) a,
-.folio :global(.site-footer) :global(.footer-legal-links) > a {
+.intl-folio .site-footer .footer-link-list a,
+.intl-folio .site-footer .footer-legal-links > a {
   color: var(--f-night-text) !important;
   font-size: 0.9375rem;
   text-decoration: underline;
@@ -1073,36 +1077,36 @@
   text-underline-offset: 0.22em;
 }
 
-.folio :global(.site-footer) :global(.footer-link-list) a:hover,
-.folio :global(.site-footer) :global(.footer-legal-links) > a:hover,
-.folio :global(.site-footer) :global(.footer-consultation-email-link):hover {
+.intl-folio .site-footer .footer-link-list a:hover,
+.intl-folio .site-footer .footer-legal-links > a:hover,
+.intl-folio .site-footer .footer-consultation-email-link:hover {
   color: var(--f-night-sign) !important;
   text-decoration-color: var(--f-night-sign);
 }
 
-.folio :global(.site-footer) :global(.footer-legal-links) > a {
+.intl-folio .site-footer .footer-legal-links > a {
   font-size: 0.8125rem;
   color: var(--f-night-muted) !important;
 }
 
-.folio :global(.site-footer) :global(.footer-bottom-bar) {
+.intl-folio .site-footer .footer-bottom-bar {
   border-top: 1px solid var(--f-night-hair) !important;
   padding-block: 24px 32px;
 }
 
-.folio :global(.site-footer) :is(:global(.footer-copyright-row), :global(.social-label)) {
+.intl-folio .site-footer :is(.footer-copyright-row, .social-label) {
   color: var(--f-night-muted) !important;
   font-size: 0.8125rem;
 }
 
-.folio :global(.site-footer) :global(.social-icon) {
+.intl-folio .site-footer .social-icon {
   border-radius: 0 !important;
   border: 1px solid var(--f-night-hair) !important;
   background: transparent !important;
   color: var(--f-night-text) !important;
 }
 
-.folio :global(.site-footer) :global(.locale-flag-switcher) summary {
+.intl-folio .site-footer .locale-flag-switcher summary {
   border: 1px solid var(--f-field) !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -1110,24 +1114,24 @@
 }
 
 @media (min-width: 75rem) {
-  .folio :global(.site-footer) :global(.footer-main) {
+  .intl-folio .site-footer .footer-main {
     padding-block: 64px 40px;
   }
 
-  .folio :global(.site-footer) :global(.footer-main-grid) {
+  .intl-folio .site-footer .footer-main-grid {
     display: grid !important;
     grid-template-columns: minmax(0, 5fr) repeat(4, minmax(0, 1.5fr));
     column-gap: 24px !important;
   }
 
-  .folio :global(.site-footer) :global(.footer-main-intro) {
+  .intl-folio .site-footer .footer-main-intro {
     padding-right: 48px;
     max-width: none;
   }
 }
 
 /* ---------- 7. Inner page head (PageHeader) ---------------------------------------------------------------------- */
-.folio[data-guidance-locale] :global(main) :global(.page-header) {
+.intl-folio[data-guidance-locale] main .page-header {
   margin-top: 0 !important;
   padding: 56px 0 0 !important;
   background: var(--f-paper) !important;
@@ -1136,11 +1140,11 @@
   text-align: start;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header)::before {
+.intl-folio[data-guidance-locale] main .page-header::before {
   content: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header)::after {
+.intl-folio[data-guidance-locale] main .page-header::after {
   content: '' !important;
   display: block !important;
   position: static !important;
@@ -1157,13 +1161,13 @@
   transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header) [data-page-header-slot='copy'] {
+.intl-folio[data-guidance-locale] main .page-header [data-page-header-slot='copy'] {
   max-width: none;
   padding: 0;
   text-align: start;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header) :global(.breadcrumb) {
+.intl-folio[data-guidance-locale] main .page-header .breadcrumb {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -1173,24 +1177,24 @@
   color: var(--f-ink-2);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header) :global(.breadcrumb) a {
+.intl-folio[data-guidance-locale] main .page-header .breadcrumb a {
   color: var(--f-ink-2) !important;
   text-decoration: underline;
   text-decoration-color: var(--f-hair);
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header) :global(.breadcrumb-current) {
+.intl-folio[data-guidance-locale] main .page-header .breadcrumb-current {
   color: var(--f-ink-2) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header) :global(.section-label) {
+.intl-folio[data-guidance-locale] main .page-header .section-label {
   padding-bottom: 12px;
   margin-bottom: 32px;
   border-bottom: 1px solid var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header) :global(.page-header-title) {
+.intl-folio[data-guidance-locale] main .page-header .page-header-title {
   max-width: 18em;
   margin: 0 0 24px !important;
   font-size: var(--f-h1-size) !important;
@@ -1200,7 +1204,7 @@
   text-align: start !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.page-header) :global(.section-lede) {
+.intl-folio[data-guidance-locale] main .page-header .section-lede {
   max-width: 34em;
   margin: 0 !important;
   font-size: var(--f-lead) !important;
@@ -1210,17 +1214,17 @@
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.page-header) :global(.page-header-title) {
+  .intl-folio[data-guidance-locale] main .page-header .page-header-title {
     letter-spacing: -0.01em !important;
   }
 }
 
 /* ---------- 8. Answer summary, section cards as hanging-title rows, the notice box ----------------------------------- */
-.folio[data-guidance-locale] :global(main) [data-page-block='answer-summary'] {
+.intl-folio[data-guidance-locale] main [data-page-block='answer-summary'] {
   padding-block: 64px 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.guidance-answer) {
+.intl-folio[data-guidance-locale] main .guidance-answer {
   max-width: 44em;
   padding: 0 !important;
   border: 0 !important;
@@ -1229,17 +1233,17 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.guidance-answer) :global(.section-lede) {
+.intl-folio[data-guidance-locale] main .guidance-answer .section-lede {
   font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.1875rem) !important;
   line-height: 1.58 !important;
   max-width: none;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.guidance-answer) :global(.section-lede) {
+.intl-folio:lang(th)[data-guidance-locale] main .guidance-answer .section-lede {
   line-height: 1.8 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.guidance-answer) :global(.contact-list) {
+.intl-folio[data-guidance-locale] main .guidance-answer .contact-list {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 0;
@@ -1249,18 +1253,18 @@
   font-size: 0.9375rem;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.guidance-answer) :global(.contact-list) li {
+.intl-folio[data-guidance-locale] main .guidance-answer .contact-list li {
   margin: 0;
   padding: 0;
   border: 0;
   background: none;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.guidance-answer) :global(.contact-list) li::before {
+.intl-folio[data-guidance-locale] main .guidance-answer .contact-list li::before {
   content: none;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.guidance-answer) :global(.contact-list) li + li::before {
+.intl-folio[data-guidance-locale] main .guidance-answer .contact-list li + li::before {
   content: '·';
   display: inline;
   margin: 0 10px;
@@ -1271,18 +1275,18 @@
   height: auto;
 }
 
-.folio[data-guidance-locale] :global(main) [data-page-block='page-sections'] > :global(.container) > :global(.section-lede),
-.folio[data-guidance-locale] :global(main) [data-guidance-article] > :global(.section-lede) {
+.intl-folio[data-guidance-locale] main [data-page-block='page-sections'] > .container > .section-lede,
+.intl-folio[data-guidance-locale] main [data-guidance-article] > .section-lede {
   max-width: 34em;
 }
 
 /* Card grid → rows: title, paragraphs and list; ≥75rem the title hangs in the left third. */
-.folio[data-guidance-locale] :global(main) :global(.grid-bento.contact-grid) {
+.intl-folio[data-guidance-locale] main .grid-bento.contact-grid {
   display: block !important;
   margin-top: 40px;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.grid-bento.contact-grid) > :global(.card.legal-card) {
+.intl-folio[data-guidance-locale] main .grid-bento.contact-grid > .card.legal-card {
   display: block;
   margin: 0;
   padding: 40px 0 0 !important;
@@ -1293,39 +1297,39 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.grid-bento.contact-grid) > :global(.card.legal-card) + :global(.card.legal-card) {
+.intl-folio[data-guidance-locale] main .grid-bento.contact-grid > .card.legal-card + .card.legal-card {
   margin-top: 40px;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.card.legal-card) :global(.card-title) {
+.intl-folio[data-guidance-locale] main .card.legal-card .card-title {
   margin: 0 0 16px !important;
   font-size: var(--f-h2-hang) !important;
   line-height: var(--f-h2-hang-lh) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.card.legal-card) :global(.legal-card-copy) {
+.intl-folio[data-guidance-locale] main .card.legal-card .legal-card-copy {
   max-width: 34em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.card.legal-card) :global(.legal-card-copy) p {
+.intl-folio[data-guidance-locale] main .card.legal-card .legal-card-copy p {
   margin: 0 0 14px;
   font-size: var(--f-body);
   line-height: var(--f-body-lh);
   color: var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.legal-card-list),
-.folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) :global(.contact-list),
-.folio[data-guidance-locale] :global(main) :global(.attorney-list) {
+.intl-folio[data-guidance-locale] main .legal-card-list,
+.intl-folio[data-guidance-locale] main .attorney-facts-section .contact-list,
+.intl-folio[data-guidance-locale] main .attorney-list {
   max-width: 34em;
   margin: 8px 0 0;
   padding: 0 0 0 1.25em !important;
   list-style: '– ' outside;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.legal-card-list) li,
-.folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) :global(.contact-list) li,
-.folio[data-guidance-locale] :global(main) :global(.attorney-list) li {
+.intl-folio[data-guidance-locale] main .legal-card-list li,
+.intl-folio[data-guidance-locale] main .attorney-facts-section .contact-list li,
+.intl-folio[data-guidance-locale] main .attorney-list li {
   display: list-item;
   color: var(--f-ink) !important;
   margin: 0 0 8px;
@@ -1336,20 +1340,20 @@
   line-height: var(--f-body-lh);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.legal-card-list) li::before,
-.folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) :global(.contact-list) li::before,
-.folio[data-guidance-locale] :global(main) :global(.attorney-list) li::before {
+.intl-folio[data-guidance-locale] main .legal-card-list li::before,
+.intl-folio[data-guidance-locale] main .attorney-facts-section .contact-list li::before,
+.intl-folio[data-guidance-locale] main .attorney-list li::before {
   content: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.legal-card-list) li::marker,
-.folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) :global(.contact-list) li::marker,
-.folio[data-guidance-locale] :global(main) :global(.attorney-list) li::marker {
+.intl-folio[data-guidance-locale] main .legal-card-list li::marker,
+.intl-folio[data-guidance-locale] main .attorney-facts-section .contact-list li::marker,
+.intl-folio[data-guidance-locale] main .attorney-list li::marker {
   color: var(--f-sign);
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.grid-bento.contact-grid) > :global(.card.legal-card) {
+  .intl-folio[data-guidance-locale] main .grid-bento.contact-grid > .card.legal-card {
     display: grid;
     grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
     column-gap: 24px;
@@ -1357,37 +1361,37 @@
     padding-top: 64px !important;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.grid-bento.contact-grid) > :global(.card.legal-card) + :global(.card.legal-card) {
+  .intl-folio[data-guidance-locale] main .grid-bento.contact-grid > .card.legal-card + .card.legal-card {
     margin-top: 64px;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.card.legal-card) > :global(.card-title) {
+  .intl-folio[data-guidance-locale] main .card.legal-card > .card-title {
     grid-column: 1;
     grid-row: 1 / span 3;
     padding-right: 24px;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.card.legal-card) > :not(:global(.card-title)) {
+  .intl-folio[data-guidance-locale] main .card.legal-card > :not(.card-title) {
     grid-column: 2;
   }
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(3) :global(.legal-card-list) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .grid-bento.contact-grid > .card.legal-card:nth-child(3) .legal-card-list {
     columns: 2;
     column-gap: 24px;
     max-width: none;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(3) :global(.legal-card-list) li {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .grid-bento.contact-grid > .card.legal-card:nth-child(3) .legal-card-list li {
     break-inside: avoid;
   }
 }
 
 /* The notice box: the one light field on a page, for the fact that consultations are in four languages only.
    Fixed by data position (tests pin it): home sections[1], contact sections[1]. */
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2),
-.folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .grid-bento.contact-grid > .card.legal-card:nth-child(2),
+.intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(2) {
   display: block !important;
   max-width: 50rem;
   padding: 32px 40px 36px !important;
@@ -1396,20 +1400,20 @@
   background: var(--f-sign-tint) !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2) :global(.card-title),
-.folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2) :global(.card-title) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .grid-bento.contact-grid > .card.legal-card:nth-child(2) .card-title,
+.intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(2) .card-title {
   font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.75rem) !important;
   line-height: max(1.22, var(--f-th-head)) !important;
   padding: 0;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2) + :global(.card.legal-card),
-.folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2) + :global(.card.legal-card) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .grid-bento.contact-grid > .card.legal-card:nth-child(2) + .card.legal-card,
+.intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(2) + .card.legal-card {
   border-top: 0 !important;
 }
 
 /* services sections[6] (scope check): the same box on paper with a 1px ink edge, so it never reads as the notice. */
-.folio[data-guidance-locale] [data-guidance-page='services'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(7) {
+.intl-folio[data-guidance-locale] [data-guidance-page='services'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(7) {
   display: block !important;
   max-width: 50rem;
   padding: 32px 40px 36px !important;
@@ -1417,22 +1421,22 @@
   background: var(--f-paper) !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='services'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(7) :global(.card-title) {
+.intl-folio[data-guidance-locale] [data-guidance-page='services'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(7) .card-title {
   font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.75rem) !important;
   line-height: max(1.22, var(--f-th-head)) !important;
 }
 
 @media (max-width: 47.99rem) {
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2),
-  .folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2),
-  .folio[data-guidance-locale] [data-guidance-page='services'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(7) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .grid-bento.contact-grid > .card.legal-card:nth-child(2),
+  .intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(2),
+  .intl-folio[data-guidance-locale] [data-guidance-page='services'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(7) {
     padding: 24px 20px 28px !important;
   }
 }
 
 /* Contact sections[0]: three things to keep apart, side by side with counters ≥75rem. */
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(1) :global(.legal-card-list) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(1) .legal-card-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
@@ -1442,18 +1446,18 @@
     counter-reset: folio-three;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(1) :global(.legal-card-list) li {
+  .intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(1) .legal-card-list li {
     padding: 0 20px !important;
     border-left: 1px solid var(--f-hair) !important;
     counter-increment: folio-three;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(1) :global(.legal-card-list) li:first-child {
+  .intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(1) .legal-card-list li:first-child {
     padding-left: 0 !important;
     border-left: 0 !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(1) :global(.legal-card-list) li::before {
+  .intl-folio[data-guidance-locale] [data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(1) .legal-card-list li::before {
     content: counter(folio-three) / '' !important;
     display: block !important;
     position: static !important;
@@ -1474,25 +1478,25 @@
 
 /* Pricing: four sections in a ruled 2×2 with counters ≥75rem (no fee figures exist in the data). */
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] [data-guidance-page='pricing'] :global(.grid-bento.contact-grid) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='pricing'] .grid-bento.contact-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     counter-reset: folio-pricing;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='pricing'] :global(.grid-bento.contact-grid) > :global(.card.legal-card) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='pricing'] .grid-bento.contact-grid > .card.legal-card {
     display: block;
     margin: 0 !important;
     padding: 40px 32px 48px 0 !important;
     counter-increment: folio-pricing;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='pricing'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2n) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='pricing'] .grid-bento.contact-grid > .card.legal-card:nth-child(2n) {
     padding-left: 32px !important;
     border-left: 1px solid var(--f-hair) !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='pricing'] :global(.grid-bento.contact-grid) > :global(.card.legal-card)::before {
+  .intl-folio[data-guidance-locale] [data-guidance-page='pricing'] .grid-bento.contact-grid > .card.legal-card::before {
     content: counter(folio-pricing, decimal-leading-zero) / '';
     display: block;
     margin-bottom: 12px;
@@ -1502,12 +1506,12 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='pricing'] :global(.card.legal-card) :global(.card-title) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='pricing'] .card.legal-card .card-title {
     font-size: 1.625rem !important;
     line-height: max(1.23, var(--f-th-head)) !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='pricing'] :global(.card.legal-card) :global(.legal-card-copy) p {
+  .intl-folio[data-guidance-locale] [data-guidance-page='pricing'] .card.legal-card .legal-card-copy p {
     font-size: 1.0625rem;
     line-height: max(1.6, var(--f-th-text));
   }
@@ -1515,41 +1519,41 @@
 
 /* Columns page without articles: three sections in three ruled columns ≥75rem, source languages as an inline index. */
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] .grid-bento.contact-grid {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card {
     display: block;
     margin: 0 !important;
     padding: 32px 24px 0 !important;
     border-left: 1px solid var(--f-hair) !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):first-child {
+  .intl-folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:first-child {
     padding-left: 0 !important;
     border-left: 0 !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] :global(.card-title) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='columns'] [data-page-block='page-sections'] .card-title {
     font-size: 1.375rem !important;
   }
 }
 
-.folio[data-guidance-locale] [data-columns-original-language] :global(.grid-bento.contact-grid) {
+.intl-folio[data-guidance-locale] [data-columns-original-language] .grid-bento.contact-grid {
   display: flex !important;
   flex-wrap: wrap;
   gap: 12px 32px;
 }
 
-.folio[data-guidance-locale] [data-columns-original-language] :global(.grid-bento.contact-grid) > :global(.card.legal-card) {
+.intl-folio[data-guidance-locale] [data-columns-original-language] .grid-bento.contact-grid > .card.legal-card {
   padding: 0 !important;
   margin: 0 !important;
   border: 0 !important;
 }
 
-.folio[data-guidance-locale] [data-columns-original-language] :global(.card-title) {
+.intl-folio[data-guidance-locale] [data-columns-original-language] .card-title {
   position: absolute !important;
   width: 1px;
   height: 1px;
@@ -1559,14 +1563,14 @@
 }
 
 /* privacy / disclaimer: long reading. */
-.folio[data-guidance-locale] :is([data-guidance-page='privacy'], [data-guidance-page='disclaimer']) :global(.card.legal-card) :global(.legal-card-copy) p,
-.folio[data-guidance-locale] :is([data-guidance-page='privacy'], [data-guidance-page='disclaimer']) :global(.legal-card-list) li {
+.intl-folio[data-guidance-locale] :is([data-guidance-page='privacy'], [data-guidance-page='disclaimer']) .card.legal-card .legal-card-copy p,
+.intl-folio[data-guidance-locale] :is([data-guidance-page='privacy'], [data-guidance-page='disclaimer']) .legal-card-list li {
   font-family: var(--f-prose);
   font-size: var(--f-prose-size);
   line-height: var(--f-prose-lh);
 }
 
-.folio[data-guidance-locale] :global(main) table {
+.intl-folio[data-guidance-locale] main table {
   display: block;
   overflow-x: auto;
   max-width: 100%;
@@ -1574,7 +1578,7 @@
 
 /* ---------- 9. Home ------------------------------------------------------------------------------------------------ */
 /* 9.1 Hero: a front-page head. Plate (framed still + film) under the title; never text over the picture. */
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
@@ -1591,21 +1595,21 @@
   color: var(--f-ink);
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero)::before,
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero)::after {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero::before,
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero::after {
   content: none !important;
   background: none !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :is(:global(.hero-inner), :global(.hero-copy)) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero :is(.hero-inner, .hero-copy) {
   display: contents !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :is(:global(.hero-bottom-crop), :global(.hero-scroll-arrow)) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero :is(.hero-bottom-crop, .hero-scroll-arrow) {
   display: none !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.section-label) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .section-label {
   margin: 0 0 24px !important;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--f-ink);
@@ -1614,7 +1618,7 @@
   font-weight: 500 !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-title) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-title {
   margin: 0 0 20px !important;
   max-width: 15em;
   color: var(--f-ink) !important;
@@ -1626,7 +1630,7 @@
   text-shadow: none !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-subtitle) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-subtitle {
   max-width: 34em;
   margin: 0 0 24px !important;
   color: var(--f-ink) !important;
@@ -1637,7 +1641,7 @@
 }
 
 /* The two information paths: a ruled index list, not pills. */
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.en-home-paths) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .en-home-paths {
   display: flex !important;
   flex-direction: column;
   gap: 0 !important;
@@ -1645,7 +1649,7 @@
   border-top: 1px solid var(--f-hair);
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.en-home-path-button) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .en-home-path-button {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
@@ -1665,7 +1669,7 @@
   text-decoration: none;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.en-home-path-button)::after {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .en-home-path-button::after {
   content: '';
   flex: none;
   width: 7px;
@@ -1676,28 +1680,28 @@
   transform: rotate(45deg);
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.en-home-path-button):hover {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .en-home-path-button:hover {
   background: none !important;
   text-decoration: underline;
   text-decoration-color: var(--f-sign);
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.en-home-path-button):focus-visible,
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-primary):focus-visible,
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-secondary):focus-visible {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .en-home-path-button:focus-visible,
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-primary:focus-visible,
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-secondary:focus-visible {
   outline: 2px solid var(--f-focus) !important;
   outline-offset: 3px !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-actions) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-actions {
   display: flex !important;
   flex-wrap: wrap;
   gap: 12px !important;
   margin: 0 0 32px !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-primary) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-primary {
   min-height: 52px !important;
   padding: 12px 24px !important;
   border: 1px solid var(--f-ink) !important;
@@ -1709,11 +1713,11 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-primary):hover {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-primary:hover {
   background: var(--f-ink-hover) !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-secondary) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-secondary {
   min-height: 52px !important;
   padding: 12px 24px !important;
   border: 1px solid var(--f-ink) !important;
@@ -1724,41 +1728,41 @@
   font-weight: 500 !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-secondary):hover {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-secondary:hover {
   background: var(--f-sign-tint) !important;
 }
 
 /* Phone: label → title → description → index → actions (full width) → plate. Focus order = reading order; the
    plate is decorative and not focusable, so moving it last changes nothing for keyboard or screen readers. */
 @media (max-width: 47.99rem) {
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-actions) > * {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-actions > * {
     flex: 1 1 100%;
     width: 100%;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) [data-intl-hero-plate] {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero [data-intl-hero-plate] {
     order: 1;
   }
 }
 
 /* Tablet: title full width, plate full width under it, then text, index and actions. */
 @media (min-width: 48rem) {
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero {
     padding-top: 56px !important;
     padding-bottom: 72px !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.section-label) { grid-row: 1; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-title) { grid-row: 2; margin-bottom: 40px !important; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) [data-intl-hero-plate] { grid-row: 3; margin-bottom: 32px; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-subtitle) { grid-row: 4; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.en-home-paths) { grid-row: 5; max-width: 34rem; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-actions) { grid-row: 6; margin-bottom: 0 !important; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .section-label { grid-row: 1; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-title { grid-row: 2; margin-bottom: 40px !important; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero [data-intl-hero-plate] { grid-row: 3; margin-bottom: 32px; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-subtitle { grid-row: 4; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .en-home-paths { grid-row: 5; max-width: 34rem; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-actions { grid-row: 6; margin-bottom: 0 !important; }
 }
 
 /* Desktop: 12 columns; plate on 1–7 spanning the right-hand column (8–12) of description, index and actions. */
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: auto auto auto auto auto minmax(0, 1fr);
     column-gap: 24px;
@@ -1766,7 +1770,7 @@
     padding-bottom: 48px !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero)::after {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero::after {
     content: '' !important;
     display: block !important;
     position: static !important;
@@ -1781,36 +1785,36 @@
     inset: auto !important;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.section-label) { grid-column: 1 / -1; grid-row: 1; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-title) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .section-label { grid-column: 1 / -1; grid-row: 1; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-title {
     grid-column: 1 / 11;
     grid-row: 2;
     margin: 4px 0 40px !important;
     letter-spacing: -0.01em !important;
   }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) [data-intl-hero-plate] { grid-column: 1 / 8; grid-row: 3 / 7; margin: 0; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-subtitle) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero [data-intl-hero-plate] { grid-column: 1 / 8; grid-row: 3 / 7; margin: 0; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-subtitle {
     grid-column: 8 / 13;
     grid-row: 3;
     padding-inline-start: 4px;
     font-size: 1.1875rem !important;
     line-height: 1.58 !important;
   }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.en-home-paths) { grid-column: 8 / 13; grid-row: 4; padding-inline-start: 4px; max-width: none; }
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-cta-actions) { grid-column: 8 / 13; grid-row: 5; padding-inline-start: 4px; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .en-home-paths { grid-column: 8 / 13; grid-row: 4; padding-inline-start: 4px; max-width: none; }
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] .hero .hero-cta-actions { grid-column: 8 / 13; grid-row: 5; padding-inline-start: 4px; }
 }
 
-.folio:lang(th)[data-guidance-locale] [data-guidance-page='home'] :global(.hero) :global(.hero-subtitle) {
+.intl-folio:lang(th)[data-guidance-locale] [data-guidance-page='home'] .hero .hero-subtitle {
   line-height: 1.8 !important;
 }
 
 /* The plate. Structural selectors under the root: the plate markup carries no class names (shorter home HTML). */
-.folio [data-intl-hero-plate] {
+.intl-folio [data-intl-hero-plate] {
   margin: 0;
   min-width: 0;
 }
 
-.folio [data-intl-hero-plate] > div {
+.intl-folio [data-intl-hero-plate] > div {
   position: relative;
   aspect-ratio: 16 / 9;
   border: 1px solid var(--f-ink, #111a2c);
@@ -1818,9 +1822,9 @@
   background: #e8ebef;
 }
 
-.folio [data-intl-hero-plate] > div > img,
-.folio [data-intl-hero-plate] > div > div,
-.folio [data-intl-hero-plate] video {
+.intl-folio [data-intl-hero-plate] > div > img,
+.intl-folio [data-intl-hero-plate] > div > div,
+.intl-folio [data-intl-hero-plate] video {
   position: absolute;
   inset: 0;
   display: block;
@@ -1829,17 +1833,17 @@
   object-fit: cover;
 }
 
-.folio [data-intl-hero-plate] > div > div {
+.intl-folio [data-intl-hero-plate] > div > div {
   opacity: 0;
   transition: opacity 300ms ease;
   pointer-events: none;
 }
 
-.folio [data-intl-hero-plate] > div > div[data-playing] {
+.intl-folio [data-intl-hero-plate] > div > div[data-playing] {
   opacity: 1;
 }
 
-.folio [data-intl-hero-plate] > figcaption {
+.intl-folio [data-intl-hero-plate] > figcaption {
   margin-top: 8px;
   font-family: var(--f-text);
   font-size: 0.8125rem;
@@ -1847,35 +1851,35 @@
   color: var(--f-ink-2);
 }
 
-.folio:lang(th) [data-intl-hero-plate] > figcaption {
+.intl-folio:lang(th) [data-intl-hero-plate] > figcaption {
   line-height: 1.6;
 }
 
 @media (max-width: 47.99rem) {
-  .folio [data-intl-hero-plate] > div > div {
+  .intl-folio [data-intl-hero-plate] > div > div {
     display: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .folio [data-intl-hero-plate] > div > div {
+  .intl-folio [data-intl-hero-plate] > div > div {
     display: none;
   }
 }
 
 /* 9.2 Column archive (#insights): featured article on 1–7, three short rows on 8–12. */
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(#insights) > :global(.container) > div:first-child {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] #insights > .container > div:first-child {
   max-width: none;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-grid) {
+.intl-folio[data-guidance-locale] main .insights-grid {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 40px !important;
   margin-top: 40px;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-featured) {
+.intl-folio[data-guidance-locale] main .insights-featured {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 20px;
@@ -1887,7 +1891,7 @@
   position: relative;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-featured-media) {
+.intl-folio[data-guidance-locale] main .insights-featured-media {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1899,7 +1903,7 @@
   height: auto !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-featured-media) img {
+.intl-folio[data-guidance-locale] main .insights-featured-media img {
   position: static !important;
   width: 100% !important;
   height: auto !important;
@@ -1910,7 +1914,7 @@
 }
 
 /* Badges move out from over the picture, under it. */
-.folio[data-guidance-locale] :global(main) :global(.insights-category-badge) {
+.intl-folio[data-guidance-locale] main .insights-category-badge {
   position: static !important;
   align-self: flex-start;
   margin: 0;
@@ -1928,8 +1932,8 @@
   backdrop-filter: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-category-badge--language),
-.folio[data-guidance-locale] :global(main) :global(.insights-language-tag) {
+.intl-folio[data-guidance-locale] main .insights-category-badge--language,
+.intl-folio[data-guidance-locale] main .insights-language-tag {
   padding: 2px 8px !important;
   border: 1px solid var(--f-ink) !important;
   color: var(--f-ink) !important;
@@ -1939,12 +1943,12 @@
   border-radius: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-featured-body) {
+.intl-folio[data-guidance-locale] main .insights-featured-body {
   padding: 0 !important;
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :is(:global(.insights-meta-row), :global(.recommended-for-you-card-meta)) {
+.intl-folio[data-guidance-locale] main :is(.insights-meta-row, .recommended-for-you-card-meta) {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 12px;
@@ -1955,46 +1959,46 @@
   font-variant-numeric: tabular-nums;
 }
 
-.folio[data-guidance-locale] :global(main) :is(:global(.insights-date), :global(.insights-readtime)) {
+.intl-folio[data-guidance-locale] main :is(.insights-date, .insights-readtime) {
   color: var(--f-ink-2) !important;
   font-size: 0.875rem !important;
   background: none !important;
   padding: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-byline) {
+.intl-folio[data-guidance-locale] main .insights-byline {
   display: block;
   margin-top: 6px;
   color: var(--f-ink-2) !important;
   font-size: 0.8125rem !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-featured-title) {
+.intl-folio[data-guidance-locale] main .insights-featured-title {
   margin: 12px 0 12px !important;
   font-size: clamp(1.5rem, 1.2rem + 0.9vw, 2rem) !important;
   line-height: 1.19 !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.insights-featured-title) {
+.intl-folio:lang(th)[data-guidance-locale] main .insights-featured-title {
   line-height: 1.5 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :is(:global(.insights-featured-title), :global(.insights-list-title),
-  :global(.recommended-for-you-card-title), :global(.columns-card-title)) a {
+.intl-folio[data-guidance-locale] main :is(.insights-featured-title, .insights-list-title,
+  .recommended-for-you-card-title, .columns-card-title) a {
   color: var(--f-ink) !important;
   text-decoration: none;
 }
 
-.folio[data-guidance-locale] :global(main) :is(:global(.insights-featured), :global(.insights-list-item),
-  :global(.recommended-for-you-card), :global(.columns-card)):hover :is(:global(.insights-featured-title),
-  :global(.insights-list-title), :global(.recommended-for-you-card-title), :global(.columns-card-title)) {
+.intl-folio[data-guidance-locale] main :is(.insights-featured, .insights-list-item,
+  .recommended-for-you-card, .columns-card):hover :is(.insights-featured-title,
+  .insights-list-title, .recommended-for-you-card-title, .columns-card-title) {
   text-decoration: underline;
   text-decoration-color: var(--f-sign);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-featured-summary) {
+.intl-folio[data-guidance-locale] main .insights-featured-summary {
   margin: 0 0 16px;
   max-width: 34em;
   color: var(--f-ink) !important;
@@ -2002,14 +2006,14 @@
   line-height: max(1.6, var(--f-th-text)) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-card-cta) {
+.intl-folio[data-guidance-locale] main .insights-card-cta {
   display: inline !important;
   font-size: 0.9375rem !important;
   font-weight: 500 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-list-wrap),
-.folio[data-guidance-locale] :global(main) :global(.insights-list) {
+.intl-folio[data-guidance-locale] main .insights-list-wrap,
+.intl-folio[data-guidance-locale] main .insights-list {
   display: block !important;
   padding: 0 !important;
   border: 0 !important;
@@ -2018,7 +2022,7 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-list-item) {
+.intl-folio[data-guidance-locale] main .insights-list-item {
   display: block !important;
   position: relative;
   padding: 20px 0 !important;
@@ -2030,16 +2034,16 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-list-item):first-child {
+.intl-folio[data-guidance-locale] main .insights-list-item:first-child {
   padding-top: 0 !important;
   border-top: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-list-thumb) {
+.intl-folio[data-guidance-locale] main .insights-list-thumb {
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-list-title) {
+.intl-folio[data-guidance-locale] main .insights-list-title {
   margin: 8px 0 6px !important;
   font-family: var(--f-serif) !important;
   font-weight: 400 !important;
@@ -2047,42 +2051,42 @@
   line-height: 1.3 !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.insights-list-title) {
+.intl-folio:lang(th)[data-guidance-locale] main .insights-list-title {
   line-height: 1.5 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.insights-list-summary) {
+.intl-folio[data-guidance-locale] main .insights-list-summary {
   margin: 0;
   color: var(--f-ink-2) !important;
   font-size: 0.9375rem !important;
   line-height: max(1.55, var(--f-th-text)) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.card-stretched-link)::after {
+.intl-folio[data-guidance-locale] main .card-stretched-link::after {
   border-radius: 0 !important;
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.insights-grid) {
+  .intl-folio[data-guidance-locale] main .insights-grid {
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
     column-gap: 24px !important;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.insights-list-wrap) {
+  .intl-folio[data-guidance-locale] main .insights-list-wrap {
     padding-left: 24px !important;
     border-left: 1px solid var(--f-hair) !important;
   }
 }
 
 /* "Recommended for you" row. */
-.folio[data-guidance-locale] :global(main) :global(.recommended-for-you) {
+.intl-folio[data-guidance-locale] main .recommended-for-you {
   margin-top: 56px;
   padding: 0 !important;
   border: 0 !important;
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.recommended-for-you-title) {
+.intl-folio[data-guidance-locale] main .recommended-for-you-title {
   margin: 0 0 16px !important;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--f-ink);
@@ -2095,11 +2099,11 @@
   text-transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.recommended-for-you-grid) {
+.intl-folio[data-guidance-locale] main .recommended-for-you-grid {
   gap: 0 24px !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.recommended-for-you-card) {
+.intl-folio[data-guidance-locale] main .recommended-for-you-card {
   padding: 16px 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -2108,34 +2112,34 @@
   transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.recommended-for-you-card) img {
+.intl-folio[data-guidance-locale] main .recommended-for-you-card img {
   border-radius: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.recommended-for-you-card-title) {
+.intl-folio[data-guidance-locale] main .recommended-for-you-card-title {
   font-family: var(--f-serif) !important;
   font-size: 1.125rem !important;
   font-weight: 400 !important;
   line-height: 1.35 !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.recommended-for-you-card-title) {
+.intl-folio:lang(th)[data-guidance-locale] main .recommended-for-you-card-title {
   line-height: 1.5 !important;
 }
 
 /* The view-all label already ends with "→" in the markup: no second chevron. */
-.folio[data-guidance-locale] :global(main) :global(#insights) :global(.button)::after {
+.intl-folio[data-guidance-locale] main #insights .button::after {
   content: none;
 }
 
 /* "View all": left-aligned text action (the wrapper carries an inline centred style). */
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(#insights) :global(.container) > div[style] {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] #insights .container > div[style] {
   text-align: start !important;
   margin-top: 32px !important;
 }
 
 /* 9.3 Practice areas: a 3×2 ruled grid (2×3 on tablets, one column on phones). */
-.folio[data-guidance-locale] :global(main) :global(.services-card-grid) {
+.intl-folio[data-guidance-locale] main .services-card-grid {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 0 !important;
@@ -2144,14 +2148,14 @@
   counter-reset: folio-services;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-card-grid-item) {
+.intl-folio[data-guidance-locale] main .services-card-grid-item {
   min-width: 0;
   padding: 0 !important;
   border-bottom: 1px solid var(--f-hair);
   counter-increment: folio-services;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-card) {
+.intl-folio[data-guidance-locale] main .services-card {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -2163,14 +2167,14 @@
   transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-card-header) {
+.intl-folio[data-guidance-locale] main .services-card-header {
   display: block !important;
   margin: 0 0 12px;
   padding: 0 !important;
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-detail-title) {
+.intl-folio[data-guidance-locale] main .services-detail-title {
   margin: 0 !important;
   font-family: var(--f-serif) !important;
   font-weight: 400 !important;
@@ -2180,7 +2184,7 @@
   overflow-wrap: break-word;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-card-body) {
+.intl-folio[data-guidance-locale] main .services-card-body {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -2188,7 +2192,7 @@
   padding: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-card-summary) {
+.intl-folio[data-guidance-locale] main .services-card-summary {
   min-height: 0 !important;
   margin: 0;
   font-size: 1rem !important;
@@ -2196,15 +2200,15 @@
   color: var(--f-ink) !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.services-card-summary) {
+.intl-folio:lang(th)[data-guidance-locale] main .services-card-summary {
   line-height: 1.8 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-card-link) {
+.intl-folio[data-guidance-locale] main .services-card-link {
   margin-top: auto;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.services-bento) :global(.container) > p {
+.intl-folio[data-guidance-locale] main .services-bento .container > p {
   max-width: 44em;
   margin: 0;
   padding: 0 !important;
@@ -2218,7 +2222,7 @@
 }
 
 /* services page: counters 01–06 over each cell. */
-.folio[data-guidance-locale] [data-guidance-page='services'] :global(.services-card-header)::before {
+.intl-folio[data-guidance-locale] [data-guidance-page='services'] .services-card-header::before {
   content: counter(folio-services, decimal-leading-zero) / '';
   display: block;
   margin-bottom: 10px;
@@ -2230,46 +2234,46 @@
 }
 
 @media (min-width: 48rem) {
-  .folio[data-guidance-locale] :global(main) :global(.services-card-grid) {
+  .intl-folio[data-guidance-locale] main .services-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.services-card-grid-item):nth-child(2n) {
+  .intl-folio[data-guidance-locale] main .services-card-grid-item:nth-child(2n) {
     padding-left: 24px !important;
     border-left: 1px solid var(--f-hair);
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.services-card-grid-item):nth-child(2n + 1) {
+  .intl-folio[data-guidance-locale] main .services-card-grid-item:nth-child(2n + 1) {
     padding-right: 24px !important;
   }
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.services-card-grid) {
+  .intl-folio[data-guidance-locale] main .services-card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.services-card-grid-item):nth-child(n) {
+  .intl-folio[data-guidance-locale] main .services-card-grid-item:nth-child(n) {
     padding: 0 24px !important;
     border-left: 1px solid var(--f-hair);
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.services-card-grid-item):nth-child(3n + 1) {
+  .intl-folio[data-guidance-locale] main .services-card-grid-item:nth-child(3n + 1) {
     padding-left: 0 !important;
     border-left: 0;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.services-card-grid-item):nth-child(3n) {
+  .intl-folio[data-guidance-locale] main .services-card-grid-item:nth-child(3n) {
     padding-right: 0 !important;
   }
 }
 
 /* 9.4 Image band: framed, container width, 2.4:1, no text on it; the pause key squared. */
-.folio[data-guidance-locale] :global(main) :global(.taiwan-heritage-interlude) {
+.intl-folio[data-guidance-locale] main .taiwan-heritage-interlude {
   background: var(--f-paper) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.taiwan-heritage-interlude__media) {
+.intl-folio[data-guidance-locale] main .taiwan-heritage-interlude__media {
   position: relative !important;
   box-sizing: border-box;
   width: calc(100% - 2 * var(--f-gutter)) !important;
@@ -2284,17 +2288,17 @@
   inset: auto !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.taiwan-heritage-interlude__media) :is(img, video) {
+.intl-folio[data-guidance-locale] main .taiwan-heritage-interlude__media :is(img, video) {
   object-fit: cover;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.taiwan-heritage-interlude__media)::after,
-.folio[data-guidance-locale] :global(main) :global(.taiwan-heritage-interlude)::before,
-.folio[data-guidance-locale] :global(main) :global(.taiwan-heritage-interlude)::after {
+.intl-folio[data-guidance-locale] main .taiwan-heritage-interlude__media::after,
+.intl-folio[data-guidance-locale] main .taiwan-heritage-interlude::before,
+.intl-folio[data-guidance-locale] main .taiwan-heritage-interlude::after {
   content: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.decorative-autoplay-video) button {
+.intl-folio[data-guidance-locale] main .decorative-autoplay-video button {
   width: 44px !important;
   height: 44px !important;
   border-radius: 0 !important;
@@ -2305,7 +2309,7 @@
 }
 
 /* 9.5 Attorney split (editorial). */
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(#about.split-section) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] #about.split-section {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 32px;
@@ -2316,7 +2320,7 @@
   min-height: 0 !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(#about) :global(.split-image) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] #about .split-image {
   position: relative !important;
   width: 100% !important;
   max-width: 22rem;
@@ -2330,7 +2334,7 @@
   inset: auto !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(#about) :global(.split-image) img {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] #about .split-image img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
@@ -2338,23 +2342,23 @@
   filter: none !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(#about) :global(.split-portrait-badge) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] #about .split-portrait-badge {
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.split-content) {
+.intl-folio[data-guidance-locale] main .split-content {
   padding: 0 !important;
   background: none !important;
   max-width: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.split-title) {
+.intl-folio[data-guidance-locale] main .split-title {
   margin: 0 0 20px !important;
   font-size: clamp(1.625rem, 1.3rem + 1.2vw, 2.25rem) !important;
   line-height: max(1.2, var(--f-th-head)) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.split-text) {
+.intl-folio[data-guidance-locale] main .split-text {
   max-width: 34em;
   margin: 0 !important;
   padding: 12px 0 !important;
@@ -2364,30 +2368,30 @@
   line-height: var(--f-body-lh) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.split-content) > :global(.link-underline) {
+.intl-folio[data-guidance-locale] main .split-content > .link-underline {
   display: inline-block;
   margin-top: 20px;
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(#about.split-section) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] #about.split-section {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: 24px;
     align-items: start;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(#about) :global(.split-image) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] #about .split-image {
     grid-column: 1 / 5;
     max-width: none;
   }
 
-  .folio[data-guidance-locale] [data-guidance-page='home'] :global(#about) :global(.split-content) {
+  .intl-folio[data-guidance-locale] [data-guidance-page='home'] #about .split-content {
     grid-column: 6 / 13;
   }
 }
 
 /* 9.6 One past matter, set as a pull quote on paper. */
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-panel) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .home-results-panel {
   display: block !important;
   box-sizing: border-box;
   max-width: calc(75rem + 2 * var(--f-gutter));
@@ -2397,11 +2401,11 @@
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-panel) :global(.home-results-media) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .home-results-panel .home-results-media {
   display: none !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-content) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .home-results-content {
   max-width: 50rem !important;
   margin: 0 auto;
   padding: 40px 0 !important;
@@ -2409,11 +2413,11 @@
   border-bottom: 1px solid var(--f-ink);
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-content) :global(.section-label) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .home-results-content .section-label {
   color: var(--f-ink-2) !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-title) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .home-results-title {
   margin: 0 0 20px !important;
   color: var(--f-ink) !important;
   font-size: clamp(1.375rem, 1.15rem + 0.9vw, 1.75rem) !important;
@@ -2421,27 +2425,27 @@
   font-style: normal;
 }
 
-.folio:lang(th)[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-title) {
+.intl-folio:lang(th)[data-guidance-locale] [data-guidance-page='home'] .home-results-title {
   line-height: 1.5 !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-text) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .home-results-text {
   border-top: 0 !important;
   padding: 0 0 12px !important;
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='home'] :global(.home-results-link) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] .home-results-link {
   color: var(--f-ink) !important;
 }
 
 /* 9.7 Public counts: ruled cells, tabular serif figures. */
-.folio[data-guidance-locale] :global(main) :global(.stats-section) :global(.section-title) {
+.intl-folio[data-guidance-locale] main .stats-section .section-title {
   font-size: var(--f-h2-hang) !important;
   line-height: var(--f-h2-hang-lh) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.stats-grid) {
+.intl-folio[data-guidance-locale] main .stats-grid {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 0 !important;
@@ -2449,7 +2453,7 @@
   border-top: 1px solid var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.stat-card) {
+.intl-folio[data-guidance-locale] main .stat-card {
   padding: 24px 0 !important;
   border: 0 !important;
   border-bottom: 1px solid var(--f-hair) !important;
@@ -2459,7 +2463,7 @@
   text-align: start;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.stat-number) {
+.intl-folio[data-guidance-locale] main .stat-number {
   font-family: var(--f-serif) !important;
   font-optical-sizing: auto;
   font-weight: 400 !important;
@@ -2471,7 +2475,7 @@
   -webkit-text-fill-color: currentColor;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.stat-label) {
+.intl-folio[data-guidance-locale] main .stat-label {
   margin: 10px 0 0;
   font-size: 0.9375rem !important;
   line-height: 1.5;
@@ -2479,74 +2483,74 @@
 }
 
 @media (min-width: 48rem) {
-  .folio[data-guidance-locale] :global(main) :global(.stats-grid) {
+  .intl-folio[data-guidance-locale] main .stats-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.stat-card) {
+  .intl-folio[data-guidance-locale] main .stat-card {
     padding: 32px 24px !important;
     border-bottom: 0 !important;
     border-left: 1px solid var(--f-hair) !important;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.stat-card):first-child {
+  .intl-folio[data-guidance-locale] main .stat-card:first-child {
     padding-left: 0 !important;
     border-left: 0 !important;
   }
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.stat-number) {
+  .intl-folio[data-guidance-locale] main .stat-number {
     font-size: 4.5rem !important;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.stats-section) > :global(.container) {
+  .intl-folio[data-guidance-locale] main .stats-section > .container {
     display: grid;
     grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
     column-gap: 24px;
     align-items: start;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.stats-section) > :global(.container) > * {
+  .intl-folio[data-guidance-locale] main .stats-section > .container > * {
     grid-column: 2;
     min-width: 0;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.stats-section) > :global(.container) > :global(.section-label) {
+  .intl-folio[data-guidance-locale] main .stats-section > .container > .section-label {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.stats-section) > :global(.container) > :global(.section-title) {
+  .intl-folio[data-guidance-locale] main .stats-section > .container > .section-title {
     grid-column: 1;
     grid-row: 2 / span 3;
     padding-right: 24px;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.stats-section) > :global(.container) > :global(.section-lede) {
+  .intl-folio[data-guidance-locale] main .stats-section > .container > .section-lede {
     grid-row: 1 / span 2;
   }
 }
 
 /* 9.8 Home detail: description and intro as standfirst. */
-.folio[data-guidance-locale] [data-guidance-page='home'] [data-guidance-article] > :global(.section-lede) {
+.intl-folio[data-guidance-locale] [data-guidance-page='home'] [data-guidance-article] > .section-lede {
   max-width: 34em;
 }
 
 /* 9.9 FAQ accordion (also faq page and the article's FAQ). */
-.folio[data-guidance-locale] :global(main) :global(.faq-list) {
+.intl-folio[data-guidance-locale] main .faq-list {
   border-top: 1px solid var(--f-hair);
   padding: 0 !important;
   background: none !important;
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :not([data-faq-layout='split']) > :global(.container) > :global(.faq-list) {
+.intl-folio[data-guidance-locale] main :not([data-faq-layout='split']) > .container > .faq-list {
   max-width: 62.5rem;
   width: 100%;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-item) {
+.intl-folio[data-guidance-locale] main .faq-item {
   margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;
@@ -2556,12 +2560,12 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-question) {
+.intl-folio[data-guidance-locale] main .faq-question {
   margin: 0 !important;
   font-size: inherit !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-question) button {
+.intl-folio[data-guidance-locale] main .faq-question button {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
@@ -2583,13 +2587,13 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-question) button:hover > span:first-child {
+.intl-folio[data-guidance-locale] main .faq-question button:hover > span:first-child {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-arrow) {
+.intl-folio[data-guidance-locale] main .faq-arrow {
   position: relative;
   flex: none;
   width: 44px !important;
@@ -2603,12 +2607,12 @@
   transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-arrow) > * {
+.intl-folio[data-guidance-locale] main .faq-arrow > * {
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-arrow)::before,
-.folio[data-guidance-locale] :global(main) :global(.faq-arrow)::after {
+.intl-folio[data-guidance-locale] main .faq-arrow::before,
+.intl-folio[data-guidance-locale] main .faq-arrow::after {
   content: '' !important;
   position: absolute !important;
   left: 15px !important;
@@ -2622,19 +2626,19 @@
   transition: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-arrow)::after {
+.intl-folio[data-guidance-locale] main .faq-arrow::after {
   transform: rotate(90deg) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-question) button[aria-expanded='true'] :global(.faq-arrow)::after {
+.intl-folio[data-guidance-locale] main .faq-question button[aria-expanded='true'] .faq-arrow::after {
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-answer-wrap) {
+.intl-folio[data-guidance-locale] main .faq-answer-wrap {
   transition: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.faq-answer) {
+.intl-folio[data-guidance-locale] main .faq-answer {
   max-width: 34em;
   margin: 0 !important;
   padding: 0 0 28px !important;
@@ -2645,25 +2649,25 @@
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) [data-faq-layout='split'] > :global(.container) {
+  .intl-folio[data-guidance-locale] main [data-faq-layout='split'] > .container {
     display: grid !important;
     grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
     column-gap: 24px;
     align-items: start;
   }
 
-  .folio[data-guidance-locale] :global(main) [data-faq-layout='split'] > :global(.container) > * {
+  .intl-folio[data-guidance-locale] main [data-faq-layout='split'] > .container > * {
     grid-column: 2;
     min-width: 0;
   }
 
-  .folio[data-guidance-locale] :global(main) [data-faq-layout='split'] > :global(.container) > :not(:global(.faq-list)) {
+  .intl-folio[data-guidance-locale] main [data-faq-layout='split'] > .container > :not(.faq-list) {
     grid-column: 1;
   }
 }
 
 /* 9.10 Offices: text tabs, address column, greyscale framed map. */
-.folio[data-guidance-locale] :global(main) :global(.office-tabs) {
+.intl-folio[data-guidance-locale] main .office-tabs {
   display: flex !important;
   flex-wrap: nowrap;
   gap: 24px !important;
@@ -2677,7 +2681,7 @@
   scrollbar-width: none;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-tabs) :global(.tab-button) {
+.intl-folio[data-guidance-locale] main .office-tabs .tab-button {
   flex: none !important;
   width: auto !important;
   min-width: 0 !important;
@@ -2694,32 +2698,32 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-tabs) :global(.tab-button)::before,
-.folio[data-guidance-locale] :global(main) :global(.office-tabs) :global(.tab-button)::after,
-.folio[data-guidance-locale] :global(main) :global(.office-tabs)::before,
-.folio[data-guidance-locale] :global(main) :global(.office-tabs)::after {
+.intl-folio[data-guidance-locale] main .office-tabs .tab-button::before,
+.intl-folio[data-guidance-locale] main .office-tabs .tab-button::after,
+.intl-folio[data-guidance-locale] main .office-tabs::before,
+.intl-folio[data-guidance-locale] main .office-tabs::after {
   content: none !important;
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-tabs) :global(.tab-button):hover {
+.intl-folio[data-guidance-locale] main .office-tabs .tab-button:hover {
   color: var(--f-ink) !important;
   box-shadow: inset 0 -1px 0 var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-tabs) :global(.tab-button.active),
-.folio[data-guidance-locale] :global(main) :global(.office-tabs) :global(.tab-button)[aria-selected='true'] {
+.intl-folio[data-guidance-locale] main .office-tabs .tab-button.active,
+.intl-folio[data-guidance-locale] main .office-tabs .tab-button[aria-selected='true'] {
   color: var(--f-ink) !important;
   box-shadow: inset 0 -2px 0 var(--f-sign) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-layout) {
+.intl-folio[data-guidance-locale] main .office-layout {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 24px !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-map-wrap) {
+.intl-folio[data-guidance-locale] main .office-map-wrap {
   position: relative;
   min-height: 280px;
   border: 1px solid var(--f-ink) !important;
@@ -2729,19 +2733,19 @@
   background: #eef0f3;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-map-wrap) iframe {
+.intl-folio[data-guidance-locale] main .office-map-wrap iframe {
   filter: grayscale(1);
   border-radius: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-map-fallback-panel) {
+.intl-folio[data-guidance-locale] main .office-map-fallback-panel {
   border-radius: 0 !important;
   box-shadow: none !important;
   border: 1px solid var(--f-ink) !important;
   background: var(--f-paper) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-card) {
+.intl-folio[data-guidance-locale] main .office-card {
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -2749,44 +2753,44 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-card) :global(.card-title) {
+.intl-folio[data-guidance-locale] main .office-card .card-title {
   margin: 0 0 12px !important;
   font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.75rem) !important;
   line-height: max(1.2, var(--f-th-head)) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-card) :global(.card-copy) {
+.intl-folio[data-guidance-locale] main .office-card .card-copy {
   font-size: 1.0625rem;
   line-height: max(1.6, var(--f-th-text));
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-gallery-item),
-.folio[data-guidance-locale] :global(main) :global(.office-gallery-item) img {
+.intl-folio[data-guidance-locale] main .office-gallery-item,
+.intl-folio[data-guidance-locale] main .office-gallery-item img {
   border-radius: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-korea) {
+.intl-folio[data-guidance-locale] main .office-korea {
   margin-top: 56px;
   padding: 0 !important;
   border: 0 !important;
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-korea) > :global(.section-label) {
+.intl-folio[data-guidance-locale] main .office-korea > .section-label {
   padding-bottom: 12px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--f-hair);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-rating-link),
-.folio[data-guidance-locale] :global(main) :global(.office-rating-text) {
+.intl-folio[data-guidance-locale] main .office-rating-link,
+.intl-folio[data-guidance-locale] main .office-rating-text {
   color: var(--f-ink) !important;
   font-weight: 500;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.office-map-fallback-kicker),
-.folio[data-guidance-locale] :global(main) :global(.office-card) :global(.section-label) {
+.intl-folio[data-guidance-locale] main .office-map-fallback-kicker,
+.intl-folio[data-guidance-locale] main .office-card .section-label {
   color: var(--f-ink-2) !important;
   font-size: 0.8125rem !important;
   text-transform: none !important;
@@ -2794,33 +2798,33 @@
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.office-layout) {
+  .intl-folio[data-guidance-locale] main .office-layout {
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
     column-gap: 24px !important;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.office-layout) > :global(.office-map-wrap) {
+  .intl-folio[data-guidance-locale] main .office-layout > .office-map-wrap {
     order: 2;
     min-height: 420px;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.office-layout) > :global(.office-card) {
+  .intl-folio[data-guidance-locale] main .office-layout > .office-card {
     order: 1;
   }
 }
 
 /* 9.11 Contact band: on paper under a double rule (was a dark band); email as the primary action. */
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) {
+.intl-folio[data-guidance-locale] main .home-contact-cta {
   color: var(--f-ink) !important;
   padding-top: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) > :global(.container) {
+.intl-folio[data-guidance-locale] main .home-contact-cta > .container {
   padding-top: var(--f-section);
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) > :global(.container)::before {
+.intl-folio[data-guidance-locale] main .home-contact-cta > .container::before {
   content: '';
   display: block;
   box-sizing: border-box;
@@ -2830,29 +2834,29 @@
   border-bottom: 1px solid var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) :global(.section-label) {
+.intl-folio[data-guidance-locale] main .home-contact-cta .section-label {
   color: var(--f-ink-2) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) :global(.section-title) {
+.intl-folio[data-guidance-locale] main .home-contact-cta .section-title {
   max-width: 20em;
   color: var(--f-ink) !important;
   text-align: start !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) :global(.section-lede) {
+.intl-folio[data-guidance-locale] main .home-contact-cta .section-lede {
   color: var(--f-ink) !important;
   text-align: start !important;
   margin-inline: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) :global(.section-lede) * {
+.intl-folio[data-guidance-locale] main .home-contact-cta .section-lede * {
   color: inherit !important;
   background: none !important;
   text-align: start !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) :global(.section-lede) aside {
+.intl-folio[data-guidance-locale] main .home-contact-cta .section-lede aside {
   max-width: 40em;
   padding: 0 !important;
   border: 0 !important;
@@ -2862,13 +2866,13 @@
   line-height: var(--f-body-lh);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-cta) :global(.section-lede) a {
+.intl-folio[data-guidance-locale] main .home-contact-cta .section-lede a {
   text-decoration: underline !important;
   text-decoration-color: var(--f-sign) !important;
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-actions) {
+.intl-folio[data-guidance-locale] main .home-contact-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start !important;
@@ -2877,30 +2881,30 @@
 }
 
 /* In the band the email action is primary (ink) and the contact-page action secondary (outline). */
-.folio[data-guidance-locale] :global(main) :global(.home-contact-actions) :global(.button.secondary) {
+.intl-folio[data-guidance-locale] main .home-contact-actions .button.secondary {
   background: var(--f-ink) !important;
   color: var(--f-paper) !important;
   order: -1;
   overflow-wrap: anywhere;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.home-contact-actions) :global(.button.secondary):hover {
+.intl-folio[data-guidance-locale] main .home-contact-actions .button.secondary:hover {
   background: var(--f-ink-hover) !important;
 }
 
 @media (max-width: 47.99rem) {
-  .folio[data-guidance-locale] :global(main) :global(.home-contact-actions) > :global(.button) {
+  .intl-folio[data-guidance-locale] main .home-contact-actions > .button {
     width: 100%;
     min-height: 52px;
   }
 }
 
 /* ---------- 10. About / lawyers ------------------------------------------------------------------------------------- */
-.folio[data-guidance-locale] :global(main) :global(.attorney-team-section) :global(.section-lede) {
+.intl-folio[data-guidance-locale] main .attorney-team-section .section-lede {
   max-width: 40em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-group-title) {
+.intl-folio[data-guidance-locale] main .attorney-group-title {
   margin: 0 0 20px !important;
   font-family: var(--f-text) !important;
   font-size: var(--f-eyebrow) !important;
@@ -2908,7 +2912,7 @@
   color: var(--f-ink-2) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-group-badge) {
+.intl-folio[data-guidance-locale] main .attorney-group-badge {
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -2919,7 +2923,7 @@
   letter-spacing: var(--f-eyebrow-track) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card) {
+.intl-folio[data-guidance-locale] main .attorney-card {
   border: 0 !important;
   border-radius: 0 !important;
   background: none !important;
@@ -2927,7 +2931,7 @@
   transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card--lead) {
+.intl-folio[data-guidance-locale] main .attorney-card--lead {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 28px !important;
@@ -2935,7 +2939,7 @@
   border-top: 1px solid var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-photo) {
+.intl-folio[data-guidance-locale] main .attorney-card-photo {
   position: relative !important;
   border-radius: 0 !important;
   overflow: hidden;
@@ -2943,30 +2947,30 @@
   background: #eef0f3;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-photo--lead) {
+.intl-folio[data-guidance-locale] main .attorney-card-photo--lead {
   width: 100% !important;
   max-width: 22rem;
   height: auto !important;
   aspect-ratio: 4 / 5;
 }
 
-.folio[data-guidance-locale] :global(main) :is(:global(.attorney-card-photo), :global(.split-image))::before,
-.folio[data-guidance-locale] :global(main) :is(:global(.attorney-card-photo), :global(.split-image))::after {
+.intl-folio[data-guidance-locale] main :is(.attorney-card-photo, .split-image)::before,
+.intl-folio[data-guidance-locale] main :is(.attorney-card-photo, .split-image)::after {
   content: none !important;
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-photo) img {
+.intl-folio[data-guidance-locale] main .attorney-card-photo img {
   border-radius: 0 !important;
   object-fit: cover;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-info) {
+.intl-folio[data-guidance-locale] main .attorney-card-info {
   padding: 0 !important;
   min-width: 0;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-name) {
+.intl-folio[data-guidance-locale] main .attorney-card-name {
   margin: 0 0 6px !important;
   font-family: var(--f-serif) !important;
   font-weight: 400 !important;
@@ -2975,12 +2979,12 @@
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-name--lead) {
+.intl-folio[data-guidance-locale] main .attorney-card-name--lead {
   font-size: clamp(1.75rem, 1.35rem + 1.4vw, 2.5rem) !important;
   line-height: max(1.15, var(--f-th-head)) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-role) {
+.intl-folio[data-guidance-locale] main .attorney-card-role {
   margin: 0 0 10px !important;
   color: var(--f-ink-2) !important;
   font-family: var(--f-text);
@@ -2990,7 +2994,7 @@
   letter-spacing: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-email) {
+.intl-folio[data-guidance-locale] main .attorney-card-email {
   color: var(--f-ink) !important;
   font-size: 0.9375rem;
   text-decoration: underline;
@@ -2999,7 +3003,7 @@
   overflow-wrap: anywhere;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-section) {
+.intl-folio[data-guidance-locale] main .attorney-card-section {
   margin-top: 20px !important;
   padding: 16px 0 0 !important;
   border: 0 !important;
@@ -3008,7 +3012,7 @@
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-label) {
+.intl-folio[data-guidance-locale] main .attorney-card-label {
   margin-bottom: 8px !important;
   color: var(--f-ink-2) !important;
   font-family: var(--f-text);
@@ -3018,31 +3022,31 @@
   letter-spacing: var(--f-eyebrow-track) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-section) p {
+.intl-folio[data-guidance-locale] main .attorney-card-section p {
   margin: 0;
   font-size: var(--f-body);
   line-height: var(--f-body-lh);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-actions) {
+.intl-folio[data-guidance-locale] main .attorney-card-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-staff-wrap),
-.folio[data-guidance-locale] :global(main) :global(.attorney-partner-wrap) {
+.intl-folio[data-guidance-locale] main .attorney-staff-wrap,
+.intl-folio[data-guidance-locale] main .attorney-partner-wrap {
   margin-top: 56px !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-staff-grid) {
+.intl-folio[data-guidance-locale] main .attorney-staff-grid {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 40px 24px !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card--sub) {
+.intl-folio[data-guidance-locale] main .attorney-card--sub {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 16px !important;
@@ -3051,50 +3055,50 @@
   height: auto !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-card-photo--sub) {
+.intl-folio[data-guidance-locale] main .attorney-card-photo--sub {
   width: 160px !important;
   height: 200px !important;
   max-width: 100%;
 }
 
 @media (min-width: 48rem) {
-  .folio[data-guidance-locale] :global(main) :global(.attorney-staff-grid) {
+  .intl-folio[data-guidance-locale] main .attorney-staff-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.attorney-card--sub) {
+  .intl-folio[data-guidance-locale] main .attorney-card--sub {
     grid-template-columns: 160px minmax(0, 1fr);
     gap: 24px !important;
   }
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.attorney-card--lead) {
+  .intl-folio[data-guidance-locale] main .attorney-card--lead {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: 24px !important;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.attorney-card--lead) > :global(.attorney-card-photo) {
+  .intl-folio[data-guidance-locale] main .attorney-card--lead > .attorney-card-photo {
     grid-column: 1 / 5;
     max-width: none;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.attorney-card--lead) > :global(.attorney-card-info) {
+  .intl-folio[data-guidance-locale] main .attorney-card--lead > .attorney-card-info {
     grid-column: 6 / 13;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.attorney-partner-wrap) :global(.attorney-card--sub) {
+  .intl-folio[data-guidance-locale] main .attorney-partner-wrap .attorney-card--sub {
     max-width: calc(50% - 12px);
   }
 }
 
-.folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) :global(.section-title) {
+.intl-folio[data-guidance-locale] main .attorney-facts-section .section-title {
   font-size: var(--f-h2-hang) !important;
   line-height: var(--f-h2-hang-lh) !important;
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) > :global(.container) {
+  .intl-folio[data-guidance-locale] main .attorney-facts-section > .container {
     display: grid;
     grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
     column-gap: 24px;
@@ -3102,18 +3106,18 @@
     border-top: 1px solid var(--f-hair);
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) > :global(.container) > * {
+  .intl-folio[data-guidance-locale] main .attorney-facts-section > .container > * {
     grid-column: 2;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.attorney-facts-section) > :global(.container) > :global(.section-title) {
+  .intl-folio[data-guidance-locale] main .attorney-facts-section > .container > .section-title {
     grid-column: 1;
     grid-row: 1 / span 4;
   }
 }
 
 /* ---------- 11. Forms (contact) -------------------------------------------------------------------------------------- */
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) :is(input, select, textarea) {
+.intl-folio[data-guidance-locale] main #international-inquiry :is(input, select, textarea) {
   min-height: 48px;
   border: 1px solid var(--f-field) !important;
   border-radius: 0 !important;
@@ -3123,28 +3127,28 @@
   font-family: var(--f-text);
 }
 
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) :is(input, select, textarea):focus-visible {
+.intl-folio[data-guidance-locale] main #international-inquiry :is(input, select, textarea):focus-visible {
   outline: 2px solid var(--f-sign) !important;
   border-color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) label {
+.intl-folio[data-guidance-locale] main #international-inquiry label {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) :is(form, aside, section, div)[class] {
+.intl-folio[data-guidance-locale] main #international-inquiry :is(form, aside, section, div)[class] {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) aside {
+.intl-folio[data-guidance-locale] main #international-inquiry aside {
   border: 1px solid var(--f-hair) !important;
   background: var(--f-paper) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) button[type='submit'] {
+.intl-folio[data-guidance-locale] main #international-inquiry button[type='submit'] {
   min-height: 48px;
   padding: 12px 24px !important;
   border: 1px solid var(--f-ink) !important;
@@ -3157,21 +3161,21 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) button[type='submit']:hover {
+.intl-folio[data-guidance-locale] main #international-inquiry button[type='submit']:hover {
   background: var(--f-ink-hover) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(#international-inquiry) h2 {
+.intl-folio[data-guidance-locale] main #international-inquiry h2 {
   font-size: var(--f-h2-hang) !important;
   line-height: var(--f-h2-hang-lh) !important;
 }
 
 /* ---------- 12. Columns list (ColumnsGrid) --------------------------------------------------------------------------- */
-.folio[data-guidance-locale] :global(main) :global(.page-header) + :global(.section) {
+.intl-folio[data-guidance-locale] main .page-header + .section {
   padding-top: 56px !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-search-input) {
+.intl-folio[data-guidance-locale] main .columns-search-input {
   min-height: 48px;
   border: 1px solid var(--f-field) !important;
   border-radius: 0 !important;
@@ -3181,7 +3185,7 @@
   font-family: var(--f-text);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-search-submit) {
+.intl-folio[data-guidance-locale] main .columns-search-submit {
   min-height: 48px;
   border: 1px solid var(--f-ink) !important;
   border-radius: 0 !important;
@@ -3192,15 +3196,15 @@
   font-weight: 500;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-search-label),
-.folio[data-guidance-locale] :global(main) :global(.columns-search-status) {
+.intl-folio[data-guidance-locale] main .columns-search-label,
+.intl-folio[data-guidance-locale] main .columns-search-status {
   font-family: var(--f-text);
   font-size: 0.875rem;
   color: var(--f-ink-2) !important;
 }
 
 /* Filters: text tabs, scroll inside their own strip on phones (never the page). */
-.folio[data-guidance-locale] :global(main) :global(.columns-filters) {
+.intl-folio[data-guidance-locale] main .columns-filters {
   display: flex !important;
   flex-wrap: nowrap !important;
   gap: 24px !important;
@@ -3214,7 +3218,7 @@
   mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-filter-btn) {
+.intl-folio[data-guidance-locale] main .columns-filter-btn {
   flex: none !important;
   width: auto !important;
   min-width: 0 !important;
@@ -3231,46 +3235,46 @@
   scroll-snap-align: start;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-filter-btn):hover {
+.intl-folio[data-guidance-locale] main .columns-filter-btn:hover {
   color: var(--f-ink) !important;
   box-shadow: inset 0 -1px 0 var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-filter-btn.active),
-.folio[data-guidance-locale] :global(main) :global(.columns-filter-btn)[aria-pressed='true'] {
+.intl-folio[data-guidance-locale] main .columns-filter-btn.active,
+.intl-folio[data-guidance-locale] main .columns-filter-btn[aria-pressed='true'] {
   color: var(--f-ink) !important;
   box-shadow: inset 0 -2px 0 var(--f-sign) !important;
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.columns-filters) {
+  .intl-folio[data-guidance-locale] main .columns-filters {
     -webkit-mask-image: none;
     mask-image: none;
   }
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-topic-section) {
+.intl-folio[data-guidance-locale] main .columns-topic-section {
   margin-top: 56px;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-topic-header) {
+.intl-folio[data-guidance-locale] main .columns-topic-header {
   padding-bottom: 12px;
   margin-bottom: 0;
   border-bottom: 1px solid var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-topic-title) {
+.intl-folio[data-guidance-locale] main .columns-topic-title {
   margin: 0 !important;
   font-size: var(--f-h2-hang) !important;
   line-height: var(--f-h2-hang-lh) !important;
 }
 
 /* Each topic: first card as a lead (picture + text), the rest as newspaper rows without thumbnails. */
-.folio[data-guidance-locale] :global(main) :global(.columns-grid) {
+.intl-folio[data-guidance-locale] main .columns-grid {
   display: block !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card) {
+.intl-folio[data-guidance-locale] main .columns-card {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 6px;
@@ -3287,18 +3291,18 @@
   height: auto !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card) :is(:global(.columns-card-img), :global(.columns-card-image-meta), :global(.columns-card-body)) {
+.intl-folio[data-guidance-locale] main .columns-card :is(.columns-card-img, .columns-card-image-meta, .columns-card-body) {
   display: contents !important;
 }
 
 /* Rows carry no thumbnail (a hidden lazy image is never fetched); the lead card of each topic keeps its picture. */
-.folio[data-guidance-locale] :global(main) :global(.columns-card) :global(.columns-card-img) img,
-.folio[data-guidance-locale] :global(main) :global(.columns-card-image-overlay),
-.folio[data-guidance-locale] :global(main) :global(.columns-card-linkhint) {
+.intl-folio[data-guidance-locale] main .columns-card .columns-card-img img,
+.intl-folio[data-guidance-locale] main .columns-card-image-overlay,
+.intl-folio[data-guidance-locale] main .columns-card-linkhint {
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card-datechip) {
+.intl-folio[data-guidance-locale] main .columns-card-datechip {
   order: 1;
   position: static !important;
   padding: 0 !important;
@@ -3317,7 +3321,7 @@
   letter-spacing: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-category-badge) {
+.intl-folio[data-guidance-locale] main .columns-category-badge {
   order: 4;
   position: static !important;
   justify-self: start;
@@ -3335,7 +3339,7 @@
   text-transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card-meta) {
+.intl-folio[data-guidance-locale] main .columns-card-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 2px 12px;
@@ -3344,14 +3348,14 @@
   font-size: 0.8125rem !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card-meta) * {
+.intl-folio[data-guidance-locale] main .columns-card-meta * {
   color: var(--f-ink-2) !important;
   background: none !important;
   padding: 0 !important;
   font-size: 0.8125rem !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card-title) {
+.intl-folio[data-guidance-locale] main .columns-card-title {
   order: 2;
   margin: 0 !important;
   font-family: var(--f-serif) !important;
@@ -3365,11 +3369,11 @@
   overflow: visible !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.columns-card-title) {
+.intl-folio:lang(th)[data-guidance-locale] main .columns-card-title {
   line-height: 1.5 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card-summary) {
+.intl-folio[data-guidance-locale] main .columns-card-summary {
   order: 3;
   margin: 0 !important;
   max-width: 44em;
@@ -3379,17 +3383,17 @@
   padding-top: 0.15em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-card):hover {
+.intl-folio[data-guidance-locale] main .columns-card:hover {
   background: none !important;
 }
 
 /* Lead card per topic. */
-.folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child {
+.intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child {
   padding-top: 28px !important;
   column-gap: 24px;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-img) img {
+.intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-img img {
   display: block !important;
   position: static !important;
   order: 0;
@@ -3402,51 +3406,51 @@
   transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-title) {
+.intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-title {
   font-size: clamp(1.5rem, 1.2rem + 0.9vw, 2rem) !important;
   line-height: 1.19 !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-title) {
+.intl-folio:lang(th)[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-title {
   line-height: 1.5 !important;
 }
 
 /* ≥75rem rows: date 1–2 · title and summary 3–9 · field 10–12, byline under the date. */
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.columns-card) {
+  .intl-folio[data-guidance-locale] main .columns-card {
     grid-template-columns: minmax(0, 2fr) minmax(0, 7fr) minmax(0, 3fr);
     column-gap: 24px;
     row-gap: 6px;
     align-items: baseline;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.columns-card-datechip) { grid-column: 1; grid-row: 1; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-card-meta) { grid-column: 1; grid-row: 2; flex-direction: column; align-self: start; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-card-title) { grid-column: 2; grid-row: 1; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-card-summary) { grid-column: 2; grid-row: 2; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-category-badge) { grid-column: 3; grid-row: 1; justify-self: end; text-align: end; }
+  .intl-folio[data-guidance-locale] main .columns-card-datechip { grid-column: 1; grid-row: 1; }
+  .intl-folio[data-guidance-locale] main .columns-card-meta { grid-column: 1; grid-row: 2; flex-direction: column; align-self: start; }
+  .intl-folio[data-guidance-locale] main .columns-card-title { grid-column: 2; grid-row: 1; }
+  .intl-folio[data-guidance-locale] main .columns-card-summary { grid-column: 2; grid-row: 2; }
+  .intl-folio[data-guidance-locale] main .columns-category-badge { grid-column: 3; grid-row: 1; justify-self: end; text-align: end; }
 
-  .folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child {
+  .intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child {
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
     grid-template-rows: auto auto auto auto minmax(0, 1fr);
     align-items: start;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-img) img {
+  .intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-img img {
     grid-column: 1;
     grid-row: 1 / -1;
     margin-bottom: 0;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-category-badge) { grid-column: 2; grid-row: 1; justify-self: start; text-align: start; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-datechip) { grid-column: 2; grid-row: 2; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-title) { grid-column: 2; grid-row: 3; margin-top: 8px !important; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-summary) { grid-column: 2; grid-row: 4; }
-  .folio[data-guidance-locale] :global(main) :global(.columns-grid) > :global(.columns-card):first-child :global(.columns-card-meta) { grid-column: 2; grid-row: 5; flex-direction: row; }
+  .intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-category-badge { grid-column: 2; grid-row: 1; justify-self: start; text-align: start; }
+  .intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-datechip { grid-column: 2; grid-row: 2; }
+  .intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-title { grid-column: 2; grid-row: 3; margin-top: 8px !important; }
+  .intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-summary { grid-column: 2; grid-row: 4; }
+  .intl-folio[data-guidance-locale] main .columns-grid > .columns-card:first-child .columns-card-meta { grid-column: 2; grid-row: 5; flex-direction: row; }
 }
 
 /* Pagination. */
-.folio[data-guidance-locale] :global(main) :global(.columns-pagination) :is(a, button, span) {
+.intl-folio[data-guidance-locale] main .columns-pagination :is(a, button, span) {
   min-width: 44px;
   min-height: 44px;
   border-radius: 0 !important;
@@ -3456,14 +3460,14 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.columns-pagination) :is(.active, [aria-current='page']) {
+.intl-folio[data-guidance-locale] main .columns-pagination :is(.active, [aria-current='page']) {
   background: var(--f-ink) !important;
   color: var(--f-paper) !important;
   border-color: var(--f-ink) !important;
 }
 
 /* ---------- 13. Column article (ColumnDetailView, rearranged by CSS only) -------------------------------------------- */
-.folio[data-guidance-locale] :global(main) :global(.blog-hero) {
+.intl-folio[data-guidance-locale] main .blog-hero {
   display: flex !important;
   flex-direction: column;
   min-height: 0 !important;
@@ -3475,12 +3479,12 @@
   overflow: visible !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-hero)::before,
-.folio[data-guidance-locale] :global(main) :global(.blog-hero)::after {
+.intl-folio[data-guidance-locale] main .blog-hero::before,
+.intl-folio[data-guidance-locale] main .blog-hero::after {
   content: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-hero-inner) {
+.intl-folio[data-guidance-locale] main .blog-hero-inner {
   order: 1;
   position: relative !important;
   z-index: auto !important;
@@ -3489,7 +3493,7 @@
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-hero-bg) {
+.intl-folio[data-guidance-locale] main .blog-hero-bg {
   order: 2;
   position: relative !important;
   inset: auto !important;
@@ -3503,7 +3507,7 @@
   border-radius: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-hero-bg) :global(.blog-hero-img) {
+.intl-folio[data-guidance-locale] main .blog-hero-bg .blog-hero-img {
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
@@ -3514,11 +3518,11 @@
   transform: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-hero-overlay) {
+.intl-folio[data-guidance-locale] main .blog-hero-overlay {
   display: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-back-link) {
+.intl-folio[data-guidance-locale] main .blog-back-link {
   display: inline-block;
   margin-bottom: 24px;
   color: var(--f-ink-2) !important;
@@ -3533,7 +3537,7 @@
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-category-badge) {
+.intl-folio[data-guidance-locale] main .blog-category-badge {
   display: block !important;
   width: fit-content;
   margin-bottom: 16px;
@@ -3550,7 +3554,7 @@
   backdrop-filter: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-hero-title) {
+.intl-folio[data-guidance-locale] main .blog-hero-title {
   max-width: 20em;
   margin: 0 0 20px !important;
   color: var(--f-ink) !important;
@@ -3560,7 +3564,7 @@
   text-align: start !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-meta) {
+.intl-folio[data-guidance-locale] main .blog-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -3572,27 +3576,27 @@
   justify-content: flex-start !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-meta) > * {
+.intl-folio[data-guidance-locale] main .blog-meta > * {
   color: var(--f-ink-2) !important;
 }
 
 /* Hair separators sit in the 13px gap; a wrapped line's leading separator falls 1px outside the 6px padding box
    and is clipped, while a focus ring (5px out) still fits inside it. */
-.folio[data-guidance-locale] :global(main) :global(.blog-meta) {
+.intl-folio[data-guidance-locale] main .blog-meta {
   gap: 4px 13px !important;
   margin: -6px !important;
   padding: 6px !important;
   overflow: hidden;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-meta) > * {
+.intl-folio[data-guidance-locale] main .blog-meta > * {
   position: relative;
   margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-meta) > * + *::before {
+.intl-folio[data-guidance-locale] main .blog-meta > * + *::before {
   content: '';
   position: absolute;
   left: -7px;
@@ -3602,23 +3606,23 @@
   background: var(--f-hair);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-meta) a {
+.intl-folio[data-guidance-locale] main .blog-meta a {
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-article) {
+.intl-folio[data-guidance-locale] main .blog-article {
   padding-block: 56px var(--f-section) !important;
   background: var(--f-paper) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-container) {
+.intl-folio[data-guidance-locale] main .blog-container {
   padding-inline: var(--f-gutter) !important;
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 56px !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) {
+.intl-folio[data-guidance-locale] main .blog-body {
   min-width: 0;
   max-width: 34em;
   font-family: var(--f-prose) !important;
@@ -3627,23 +3631,23 @@
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) :is(p, li, dd, dt, td, th) {
+.intl-folio[data-guidance-locale] main .blog-body :is(p, li, dd, dt, td, th) {
   font-family: var(--f-prose) !important;
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) :global(.blog-paragraph) {
+.intl-folio[data-guidance-locale] main .blog-body .blog-paragraph {
   font-size: var(--f-prose-size) !important;
   line-height: var(--f-prose-lh) !important;
   margin: 0 0 1.1em;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) li {
+.intl-folio[data-guidance-locale] main .blog-body li {
   font-size: var(--f-prose-size);
   line-height: var(--f-prose-lh);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) h2 {
+.intl-folio[data-guidance-locale] main .blog-body h2 {
   margin: 56px 0 16px !important;
   padding-top: 40px !important;
   border-top: 1px solid var(--f-hair) !important;
@@ -3652,16 +3656,16 @@
   background: none !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.blog-body) h2 {
+.intl-folio:lang(th)[data-guidance-locale] main .blog-body h2 {
   line-height: 1.5 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) h2::before,
-.folio[data-guidance-locale] :global(main) :global(.blog-body) h2::after {
+.intl-folio[data-guidance-locale] main .blog-body h2::before,
+.intl-folio[data-guidance-locale] main .blog-body h2::after {
   content: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) h3 {
+.intl-folio[data-guidance-locale] main .blog-body h3 {
   margin: 32px 0 12px !important;
   font-family: var(--f-text) !important;
   font-size: 1.25rem !important;
@@ -3669,11 +3673,11 @@
   line-height: 1.4 !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(main) :global(.blog-body) h3 {
+.intl-folio:lang(th)[data-guidance-locale] main .blog-body h3 {
   line-height: 1.6 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) blockquote {
+.intl-folio[data-guidance-locale] main .blog-body blockquote {
   margin: 32px 0 !important;
   padding: 20px 0 !important;
   border: 0 !important;
@@ -3687,18 +3691,18 @@
   line-height: max(1.35, var(--f-th-head)) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) blockquote * {
+.intl-folio[data-guidance-locale] main .blog-body blockquote * {
   font-family: inherit !important;
   font-size: inherit !important;
   line-height: inherit !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) table {
+.intl-folio[data-guidance-locale] main .blog-body table {
   border-collapse: collapse;
   font-size: 0.9375rem;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) :is(th, td) {
+.intl-folio[data-guidance-locale] main .blog-body :is(th, td) {
   padding: 10px 12px 10px 0;
   border: 0 !important;
   border-bottom: 1px solid var(--f-hair) !important;
@@ -3707,14 +3711,14 @@
   vertical-align: top;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) th {
+.intl-folio[data-guidance-locale] main .blog-body th {
   font-weight: 500;
   font-size: 0.875rem;
   border-bottom: 2px solid var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) :global(.link-underline),
-.folio[data-guidance-locale] :global(main) :global(.blog-body) a:not(:global(.button)):not(:global(.card-stretched-link)) {
+.intl-folio[data-guidance-locale] main .blog-body .link-underline,
+.intl-folio[data-guidance-locale] main .blog-body a:not(.button):not(.card-stretched-link) {
   display: inline;
   color: var(--f-ink) !important;
   font-size: inherit !important;
@@ -3728,7 +3732,7 @@
 
 /* Drop cap: only where supported, never for Thai. */
 @supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
-  .folio:not(:lang(th))[data-guidance-locale] :global(main) :global(.blog-body) :global(.column-markdown) > :global(.blog-paragraph):first-child::first-letter {
+  .intl-folio:not(:lang(th))[data-guidance-locale] main .blog-body .column-markdown > .blog-paragraph:first-child::first-letter {
     -webkit-initial-letter: 3;
     initial-letter: 3;
     margin-right: 8px;
@@ -3738,18 +3742,18 @@
 }
 
 /* Generated figure in the article: caption under a hair, AI disclosure kept visible. */
-.folio[data-guidance-locale] :global(main) :global(.blog-body) figure {
+.intl-folio[data-guidance-locale] main .blog-body figure {
   margin: 0 0 32px !important;
   border-radius: 0 !important;
   background: none !important;
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) figure :is(video, img) {
+.intl-folio[data-guidance-locale] main .blog-body figure :is(video, img) {
   border-radius: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) figcaption {
+.intl-folio[data-guidance-locale] main .blog-body figcaption {
   margin-top: 8px;
   padding-top: 8px !important;
   border-top: 1px solid var(--f-hair);
@@ -3760,24 +3764,24 @@
   line-height: 1.5 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-body) figcaption * {
+.intl-folio[data-guidance-locale] main .blog-body figcaption * {
   color: var(--f-ink-2) !important;
   font-family: var(--f-text) !important;
 }
 
 /* In-article FAQ: accordion look (static list). */
-.folio[data-guidance-locale] :global(main) :global(.column-faq) {
+.intl-folio[data-guidance-locale] main .column-faq {
   margin-top: 56px;
   padding: 0 !important;
   border: 0 !important;
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.column-faq-list) {
+.intl-folio[data-guidance-locale] main .column-faq-list {
   border-top: 1px solid var(--f-hair);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.column-faq-item) {
+.intl-folio[data-guidance-locale] main .column-faq-item {
   padding: 20px 0 !important;
   border: 0 !important;
   border-bottom: 1px solid var(--f-hair) !important;
@@ -3785,7 +3789,7 @@
   background: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.column-faq-question) {
+.intl-folio[data-guidance-locale] main .column-faq-question {
   margin: 0 0 8px;
   font-family: var(--f-serif) !important;
   font-size: var(--f-faq) !important;
@@ -3793,18 +3797,18 @@
   line-height: var(--f-faq-lh) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.column-faq-answer) {
+.intl-folio[data-guidance-locale] main .column-faq-answer {
   margin: 0;
   font-size: var(--f-prose-size) !important;
   line-height: var(--f-prose-lh) !important;
 }
 
 /* Sidebar (rail). */
-.folio[data-guidance-locale] :global(main) :global(.blog-sidebar) {
+.intl-folio[data-guidance-locale] main .blog-sidebar {
   min-width: 0;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-sidebar-card) {
+.intl-folio[data-guidance-locale] main .blog-sidebar-card {
   margin: 0 0 24px !important;
   padding: 24px !important;
   border: 1px solid var(--f-hair) !important;
@@ -3814,41 +3818,41 @@
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-sidebar-card):first-child {
+.intl-folio[data-guidance-locale] main .blog-sidebar-card:first-child {
   border-color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-sidebar-title) {
+.intl-folio[data-guidance-locale] main .blog-sidebar-title {
   margin: 0 0 8px !important;
   font-size: 1.25rem !important;
   line-height: max(1.3, var(--f-th-head)) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-sidebar-text),
-.folio[data-guidance-locale] :global(main) :global(.blog-sidebar) p {
+.intl-folio[data-guidance-locale] main .blog-sidebar-text,
+.intl-folio[data-guidance-locale] main .blog-sidebar p {
   font-size: 0.9375rem !important;
   line-height: max(1.55, var(--f-th-text)) !important;
   color: var(--f-ink-2) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-sidebar) :global(.button) {
+.intl-folio[data-guidance-locale] main .blog-sidebar .button {
   width: 100%;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.authority-card) {
+.intl-folio[data-guidance-locale] main .authority-card {
   padding: 0 !important;
   border: 0 !important;
   background: none !important;
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.authority-card-photo),
-.folio[data-guidance-locale] :global(main) :global(.authority-card-photo) img {
+.intl-folio[data-guidance-locale] main .authority-card-photo,
+.intl-folio[data-guidance-locale] main .authority-card-photo img {
   border-radius: 0 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.authority-card-eyebrow),
-.folio[data-guidance-locale] :global(main) :global(.authority-card-label) {
+.intl-folio[data-guidance-locale] main .authority-card-eyebrow,
+.intl-folio[data-guidance-locale] main .authority-card-label {
   color: var(--f-ink-2) !important;
   font-size: 0.8125rem !important;
   font-weight: 500 !important;
@@ -3856,21 +3860,21 @@
   letter-spacing: var(--f-eyebrow-track) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.authority-card-heading) {
+.intl-folio[data-guidance-locale] main .authority-card-heading {
   font-family: var(--f-serif) !important;
   font-size: 1.25rem !important;
   font-weight: 400 !important;
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.authority-card-name) {
+.intl-folio[data-guidance-locale] main .authority-card-name {
   font-family: var(--f-serif) !important;
   font-size: 1.125rem !important;
   font-weight: 400 !important;
   color: var(--f-ink) !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.authority-chip) {
+.intl-folio[data-guidance-locale] main .authority-chip {
   padding: 2px 8px !important;
   border: 1px solid var(--f-ink) !important;
   border-radius: 0 !important;
@@ -3880,12 +3884,12 @@
   font-weight: 500 !important;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-related-list) {
+.intl-folio[data-guidance-locale] main .blog-related-list {
   padding: 0 !important;
   list-style: none;
 }
 
-.folio[data-guidance-locale] :global(main) :global(.blog-related-link) {
+.intl-folio[data-guidance-locale] main .blog-related-link {
   display: block;
   padding: 10px 0;
   border-top: 1px solid var(--f-hair);
@@ -3896,27 +3900,27 @@
 }
 
 @media (min-width: 75rem) {
-  .folio[data-guidance-locale] :global(main) :global(.blog-container) {
+  .intl-folio[data-guidance-locale] main .blog-container {
     grid-template-columns: minmax(0, 3fr) minmax(0, 7fr) minmax(0, 2fr);
     column-gap: 24px !important;
     align-items: start;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.blog-sidebar) {
+  .intl-folio[data-guidance-locale] main .blog-sidebar {
     grid-column: 1;
     grid-row: 1;
     position: sticky !important;
     top: 60px !important;
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.blog-body) {
+  .intl-folio[data-guidance-locale] main .blog-body {
     grid-column: 2;
     grid-row: 1;
   }
 }
 
 /* Previous / next: two ruled cells. */
-.folio[data-guidance-locale] :global(main) :global(.column-post-nav) {
+.intl-folio[data-guidance-locale] main .column-post-nav {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 0 !important;
@@ -3924,7 +3928,7 @@
   border-top: 1px solid var(--f-ink);
 }
 
-.folio[data-guidance-locale] :global(main) :global(.column-post-nav) > * {
+.intl-folio[data-guidance-locale] main .column-post-nav > * {
   display: block;
   padding: 20px 0 !important;
   border: 0 !important;
@@ -3938,25 +3942,25 @@
   line-height: max(1.4, var(--f-th-head));
 }
 
-.folio[data-guidance-locale] :global(main) :global(.column-post-nav) > * span {
+.intl-folio[data-guidance-locale] main .column-post-nav > * span {
   font-family: var(--f-text);
   font-size: 0.8125rem;
   color: var(--f-ink-2);
 }
 
 @media (min-width: 48rem) {
-  .folio[data-guidance-locale] :global(main) :global(.column-post-nav) {
+  .intl-folio[data-guidance-locale] main .column-post-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .folio[data-guidance-locale] :global(main) :global(.column-post-nav) > * + * {
+  .intl-folio[data-guidance-locale] main .column-post-nav > * + * {
     padding-left: 24px !important;
     border-left: 1px solid var(--f-hair) !important;
   }
 }
 
 /* ---------- 14. Original-language columns section (columns list) --------------------------------------------------- */
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) {
   margin: 0 0 var(--f-section);
   padding: 40px 0 0 !important;
   border: 0 !important;
@@ -3966,24 +3970,24 @@
   box-shadow: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > h2 {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > h2 {
   margin: 0 0 20px !important;
   font-size: var(--f-h2-hang) !important;
   line-height: var(--f-h2-hang-lh) !important;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) ul {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) ul {
   margin: 0;
   padding: 0 !important;
   list-style: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > ul:first-of-type {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:first-of-type {
   max-width: 50rem;
   border-top: 1px solid var(--f-hair);
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > ul:first-of-type > li {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:first-of-type > li {
   margin: 0 !important;
   padding: 10px 0 !important;
   border-bottom: 1px solid var(--f-hair);
@@ -3991,30 +3995,30 @@
   line-height: 1.5;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) li::before,
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) li::marker {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) li::before,
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) li::marker {
   content: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > ul:first-of-type a {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:first-of-type a {
   color: var(--f-ink) !important;
   text-decoration: none !important;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > ul:first-of-type a:hover {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:first-of-type a:hover {
   text-decoration: underline !important;
   text-decoration-color: var(--f-sign) !important;
   text-underline-offset: 0.18em;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > ul:last-of-type {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:last-of-type {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 28px;
   margin-top: 24px;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > ul:last-of-type :is(li, a) {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:last-of-type :is(li, a) {
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -4024,7 +4028,7 @@
   font-weight: 500;
 }
 
-.folio[data-guidance-locale] :global(main) section[data-columns-original-language]:not(:global(.section)) > ul:last-of-type a {
+.intl-folio[data-guidance-locale] main section[data-columns-original-language]:not(.section) > ul:last-of-type a {
   text-decoration: underline !important;
   text-decoration-color: var(--f-sign) !important;
   text-underline-offset: 0.18em;
@@ -4032,40 +4036,40 @@
 
 /* ---------- 15. Phone safety nets ---------------------------------------------------------------------------------- */
 @media (max-width: 47.99rem) {
-  .folio[data-guidance-locale] :global(main) :is(p, li, dd) {
+  .intl-folio[data-guidance-locale] main :is(p, li, dd) {
     overflow-wrap: break-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     hyphenate-limit-chars: 10 4 4;
   }
 
-  .folio:lang(th)[data-guidance-locale] :global(main) :is(p, li, dd) {
+  .intl-folio:lang(th)[data-guidance-locale] main :is(p, li, dd) {
     hyphens: manual;
     -webkit-hyphens: manual;
   }
 }
 
-.folio[data-guidance-locale] :global(main) :is(a[href^='mailto:'], :global(.phone-number)) {
+.intl-folio[data-guidance-locale] main :is(a[href^='mailto:'], .phone-number) {
   overflow-wrap: anywhere;
 }
 
-.folio:lang(th) :is(h1, h2, h3, h4, p, li, a, button, span) {
+.intl-folio:lang(th) :is(h1, h2, h3, h4, p, li, a, button, span) {
   word-break: normal;
   letter-spacing: 0;
 }
 
 /* ---------- 16. Localised 404 body --------------------------------------------------------------------------------- */
 /* The page head already closes with the double rule; the band under it needs no second one. */
-.folio[data-guidance-locale] [data-guidance-page='not-found'] :global(.home-contact-cta) > :global(.container) {
+.intl-folio[data-guidance-locale] [data-guidance-page='not-found'] .home-contact-cta > .container {
   padding-top: 56px;
 }
 
-.folio[data-guidance-locale] [data-guidance-page='not-found'] :global(.home-contact-cta) > :global(.container)::before {
+.intl-folio[data-guidance-locale] [data-guidance-page='not-found'] .home-contact-cta > .container::before {
   content: none;
 }
 
 /* ---------- 17. Scroll-to-top key ---------------------------------------------------------------------------------- */
-.folio :global(.scroll-top) {
+.intl-folio .scroll-top {
   border-radius: 0 !important;
   border: 1px solid var(--f-ink) !important;
   background: var(--f-paper) !important;
@@ -4076,23 +4080,23 @@
 /* Thai line-height floors for shared parts the rules above do not restyle (review round 1, found with computed
    styles on every Thai page type at 1440 and 390): one-line UI and labels ≥ 1.5, running text ≥ 1.8 (DIRECTION §4.1).
    The post-nav titles carry an inline line-height, hence !important throughout. */
-.folio:lang(th)[data-guidance-locale] :global(.attorney-group-badge),
-.folio:lang(th)[data-guidance-locale] :global(.attorney-group-title),
-.folio:lang(th)[data-guidance-locale] :global(.locale-flag-switcher-link),
-.folio:lang(th)[data-guidance-locale] :global(#offices) :global(.tab-button),
-.folio:lang(th)[data-guidance-locale] :global(.office-map-fallback-panel) strong,
-.folio:lang(th)[data-guidance-locale] :global(.columns-search-status),
-.folio:lang(th)[data-guidance-locale] :global(.columns-filter-btn),
-.folio:lang(th)[data-guidance-locale] :global(.columns-category-badge),
-.folio:lang(th)[data-guidance-locale] :global(.columns-readtime-inline),
-.folio:lang(th)[data-guidance-locale] :global(.columns-card-byline),
-.folio:lang(th)[data-guidance-locale] :global(.column-post-nav) > a > span,
-.folio:lang(th)[data-guidance-locale] :global(#international-inquiry) :is(label, button, a),
-.folio:lang(th)[data-guidance-locale] :global(.home-contact-cta) aside a {
+.intl-folio:lang(th)[data-guidance-locale] .attorney-group-badge,
+.intl-folio:lang(th)[data-guidance-locale] .attorney-group-title,
+.intl-folio:lang(th)[data-guidance-locale] .locale-flag-switcher-link,
+.intl-folio:lang(th)[data-guidance-locale] #offices .tab-button,
+.intl-folio:lang(th)[data-guidance-locale] .office-map-fallback-panel strong,
+.intl-folio:lang(th)[data-guidance-locale] .columns-search-status,
+.intl-folio:lang(th)[data-guidance-locale] .columns-filter-btn,
+.intl-folio:lang(th)[data-guidance-locale] .columns-category-badge,
+.intl-folio:lang(th)[data-guidance-locale] .columns-readtime-inline,
+.intl-folio:lang(th)[data-guidance-locale] .columns-card-byline,
+.intl-folio:lang(th)[data-guidance-locale] .column-post-nav > a > span,
+.intl-folio:lang(th)[data-guidance-locale] #international-inquiry :is(label, button, a),
+.intl-folio:lang(th)[data-guidance-locale] .home-contact-cta aside a {
   line-height: 1.5 !important;
 }
 
-.folio:lang(th)[data-guidance-locale] :global(#international-inquiry) p,
-.folio:lang(th)[data-guidance-locale] :global(.home-contact-cta) aside p {
+.intl-folio:lang(th)[data-guidance-locale] #international-inquiry p,
+.intl-folio:lang(th)[data-guidance-locale] .home-contact-cta aside p {
   line-height: 1.8 !important;
 }

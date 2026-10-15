@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
-const css = readFileSync(path.join(process.cwd(), 'src/components/intl-design/IntlDesign.module.css'), 'utf8')
+const css = readFileSync(path.join(process.cwd(), 'src/components/intl-design/folio.css'), 'utf8')
   // keep offsets stable while dropping comments
   .replace(/\/\*[\s\S]*?\*\//g, (comment) => comment.replace(/[^\n]/g, ' '));
 
@@ -16,11 +16,11 @@ const rules: Rule[] = [...css.matchAll(/([^{};]+)\{([^{}]*)\}/g)].map((m) => ({
  * Elements without Thai glyphs keep their tight leading: wordmark, numerals, counters, and the list of Korean
  * source-language titles on the column index.
  */
-const LATIN_ONLY = [/\.logo-kr\)/, /\.footer-main-brand\)/, /\.stat-number\)/, /li::before/, /data-columns-original-language/];
+const LATIN_ONLY = [/\.logo-kr\b/, /\.footer-main-brand\b/, /\.stat-number\b/, /li::before/, /data-columns-original-language/];
 
-/** Thai counterpart of a rule: same selector with `.folio` → `.folio:lang(th)`, holding a line-height ≥ floor. */
+/** Thai counterpart of a rule: same selector with `.intl-folio` → `.intl-folio:lang(th)`, holding a line-height ≥ floor. */
 function thaiOverride(selector: string, floor: number): boolean {
-  const variants = selector.split(/,\s*/).map((part) => part.replace(/^\.folio/, '.folio:lang(th)'));
+  const variants = selector.split(/,\s*/).map((part) => part.replace(/^\.intl-folio/, '.intl-folio:lang(th)'));
   return variants.every((variant) =>
     rules.some((rule) => {
       if (!rule.selector.split(/,\s*/).includes(variant)) return false;
@@ -32,8 +32,8 @@ function thaiOverride(selector: string, floor: number): boolean {
 
 describe('Folio Thai line-height floors (review round 1)', () => {
   it('defines the floors: 0 by default, 1.5 / 1.8 on Thai pages', () => {
-    const base = rules.find((rule) => rule.selector === '.folio' && /--f-th-head/.test(rule.body));
-    const thai = rules.find((rule) => rule.selector === '.folio:lang(th)' && /--f-th-head/.test(rule.body));
+    const base = rules.find((rule) => rule.selector === '.intl-folio' && /--f-th-head/.test(rule.body));
+    const thai = rules.find((rule) => rule.selector === '.intl-folio:lang(th)' && /--f-th-head/.test(rule.body));
     expect(base?.body).toMatch(/--f-th-head:\s*0;/);
     expect(base?.body).toMatch(/--f-th-text:\s*0;/);
     expect(thai?.body).toMatch(/--f-th-head:\s*1\.5;/);
@@ -76,19 +76,19 @@ describe('Folio Thai line-height floors (review round 1)', () => {
   });
 
   it('lifts the shared parts the Folio rules do not restyle on Thai pages', () => {
-    const ui = rules.find((rule) => rule.selector.includes(':global(.columns-filter-btn)') && rule.selector.includes(':lang(th)'));
+    const ui = rules.find((rule) => rule.selector.includes('.columns-filter-btn') && rule.selector.includes(':lang(th)'));
     expect(ui?.body).toMatch(/line-height:\s*1\.5 !important/);
     for (const hook of ['.attorney-group-title', '.locale-flag-switcher-link', '#international-inquiry', '.column-post-nav', '.office-map-fallback-panel']) {
       expect(ui?.selector).toContain(hook);
     }
-    const text = rules.find((rule) => rule.selector.includes(':global(#international-inquiry) p') && rule.selector.includes(':lang(th)'));
+    const text = rules.find((rule) => rule.selector.includes('#international-inquiry p') && rule.selector.includes(':lang(th)'));
     expect(text?.body).toMatch(/line-height:\s*1\.8 !important/);
   });
 });
 
 describe('Folio footer touch targets (review round 1)', () => {
   it('keeps the shared 44px minimum on footer links', () => {
-    const link = rules.find((rule) => rule.selector === '.folio :global(.site-footer) :global(.footer-link-list) a');
+    const link = rules.find((rule) => rule.selector === '.intl-folio .site-footer .footer-link-list a');
     expect(link?.body).toMatch(/min-height:\s*44px;/);
     expect(link?.body).toMatch(/align-items:\s*center;/);
     expect(link?.body).not.toMatch(/min-height:\s*0/);

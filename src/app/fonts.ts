@@ -217,10 +217,17 @@ export const VI_TYPE_STYLESHEET = '/fonts/vi-2026-10/vi-type-523b201f8301.css';
  */
 export const INTL_TYPE_STYLESHEET = '/fonts/intl-2026-10/intl-type-fea253f38e9e.css';
 
+/**
+ * Folio design (review round 1): src/components/intl-design/folio.css built by scripts/build-intl-design-css.mjs (the
+ * same PostCSS steps Next applies), hashed. Linked here, on the Folio locales only, instead of being a CSS module in the
+ * shared layout, where it re-ordered every other locale's CSS chunks. A test checks this is the current build output.
+ */
+export const INTL_DESIGN_STYLESHEET = '/fonts/intl-2026-10/intl-design-516433cb233c.css';
+
 /** Content-hashed, self-hosted stylesheets for this page's script only. */
 export function getLocaleFontStylesheets(language: DocumentLanguage): string[] {
   // The Folio document languages are spelled like their locales (id, th, de, …, is).
-  if (isIntlDesignLocale(language)) return [INTL_TYPE_STYLESHEET];
+  if (isIntlDesignLocale(language)) return [INTL_TYPE_STYLESHEET, INTL_DESIGN_STYLESHEET];
   const sheets = getLocaleFontClassName(language).split(' ').map(name => fontStylesheets[name as keyof typeof fontStylesheets]);
   // ko leads with Pretendard; the list also feeds DocumentLocaleSync, so a client-side switch into /ko attaches it too.
   if (language === 'ko') return [...sheets, KO_PRETENDARD_STYLESHEET];

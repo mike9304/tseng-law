@@ -8,10 +8,8 @@ import {
   isGuidanceLocale4,
   type PublicLocale8,
 } from '@/lib/public-guidance';
-// Folio stylesheet first: imported after CinematicOpening it split that component's small CSS into a file of its own.
-import folioStyles from '@/components/intl-design/IntlDesign.module.css';
 import CinematicOpening from '@/components/CinematicOpening';
-import { isIntlDesignLocale } from '@/lib/intl-design-locales';
+import { INTL_DESIGN_ROOT_CLASS, isIntlDesignLocale } from '@/lib/intl-design-locales';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
 
@@ -81,7 +79,7 @@ export default function CinematicRouteShell({
   return (
     <div
       // Folio (2026-10-15): id, th and the 27 European locales share one scoped design under this class.
-      className={isIntlDesignLocale(locale) ? `site ${folioStyles.folio}` : 'site'}
+      className={isIntlDesignLocale(locale) ? `site ${INTL_DESIGN_ROOT_CLASS}` : 'site'}
       data-locale={locale}
       // The 45 guidance languages: their pages share one sans display layer in globals.css (2026-10-06).
       data-guidance-locale={isGuidanceLocale4(locale) ? '' : undefined}

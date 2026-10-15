@@ -15,15 +15,15 @@ import CinematicRouteShell from '@/components/CinematicRouteShell';
 import GuidanceHomeBody from '@/components/GuidanceHomeBody';
 import IntlHeroPlate from '@/components/intl-design/IntlHeroPlate';
 import { intlHeroFilmAllowed, INTL_HERO_FILM_QUERY } from '@/components/intl-design/IntlHeroFilm';
-import { getLocaleFontStylesheets, INTL_TYPE_STYLESHEET, type DocumentLanguage } from '@/app/fonts';
+import { getLocaleFontStylesheets, INTL_DESIGN_STYLESHEET, INTL_TYPE_STYLESHEET, type DocumentLanguage } from '@/app/fonts';
 import { INTL_HERO_MEDIA, intlHeroAiCaption } from '@/data/intl-design-site';
 import { guidanceContent } from '@/data/international-guidance-content';
-import { INTL_DESIGN_LOCALES, isIntlDesignLocale } from '@/lib/intl-design-locales';
+import { INTL_DESIGN_LOCALES, INTL_DESIGN_ROOT_CLASS, isIntlDesignLocale } from '@/lib/intl-design-locales';
 import { GUIDANCE_LOCALES_4, PUBLIC_LOCALES_8, publicDocumentLanguage } from '@/lib/public-guidance';
 
 const root = process.cwd();
 const read = (file: string) => readFileSync(path.join(root, file), 'utf8');
-const css = read('src/components/intl-design/IntlDesign.module.css');
+const css = read('src/components/intl-design/folio.css');
 
 /** DIRECTION.md header: the 29 Folio languages, exactly. */
 const DIRECTION_LOCALES = 'id th de es fr it pt nl pl ru uk el sv da nb fi cs hu ro sk bg hr sr sl lt lv et ca is'.split(' ');
@@ -97,18 +97,18 @@ describe('Folio locale list', () => {
 describe('Folio root class', () => {
   it('is added to .site for Folio locales only', () => {
     for (const locale of INTL_DESIGN_LOCALES) {
-      expect(renderShell(locale), locale).toMatch(/<div class="site [^"]*folio[^"]*"/);
+      expect(renderShell(locale), locale).toContain(`<div class="site ${INTL_DESIGN_ROOT_CLASS}"`);
     }
     for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'ms', 'fil', 'ar'] as const) {
       expect(renderShell(locale), locale).toContain('<div class="site" data-locale=');
     }
   });
 
-  it('scopes every rule under .folio (or the plate it renders); no rule starts with a global selector', () => {
+  it('scopes every rule under the Folio root class; no rule starts with any other selector', () => {
     const selectors = styleSelectors(css);
     expect(selectors.length).toBeGreaterThan(300);
     for (const selector of selectors) {
-      expect(/^\.(folio|plate[A-Za-z]*)\b/.test(selector), selector).toBe(true);
+      expect(selector.startsWith(`.${INTL_DESIGN_ROOT_CLASS}`) && !/^\.intl-folio[\w-]/.test(selector), selector).toBe(true);
     }
   });
 
@@ -119,7 +119,7 @@ describe('Folio root class', () => {
   });
 
   it('keeps Thai titles at ≥1.5 and Thai text at ≥1.8 line height, and never clamps Thai titles', () => {
-    const thai = css.slice(css.indexOf('.folio:lang(th) {'), css.indexOf('}', css.indexOf('.folio:lang(th) {')));
+    const thai = css.slice(css.indexOf('.intl-folio:lang(th) {'), css.indexOf('}', css.indexOf('.intl-folio:lang(th) {')));
     for (const token of ['--f-hero-lh', '--f-h1-lh', '--f-article-h1-lh', '--f-h2-lh', '--f-h2-hang-lh', '--f-h3-lh', '--f-faq-lh']) {
       const value = Number(new RegExp(`${token}:\\s*([\\d.]+)`).exec(thai)?.[1]);
       expect(value, token).toBeGreaterThanOrEqual(1.5);
@@ -183,9 +183,9 @@ describe('notice box positions (pinned by data position in the CSS)', () => {
       expect(text(pages.home.sections[1]), `${locale} home[1]`).toContain('中文');
       expect(text(pages.contact.sections[0]), `${locale} contact[0]`).toContain('中文');
     }
-    expect(css).toContain("[data-guidance-page='home'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2)");
-    expect(css).toContain("[data-guidance-page='contact'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(2)");
-    expect(css).toContain("[data-guidance-page='services'] [data-page-block='page-sections'] :global(.grid-bento.contact-grid) > :global(.card.legal-card):nth-child(7)");
+    expect(css).toContain("[data-guidance-page='home'] .grid-bento.contact-grid > .card.legal-card:nth-child(2)");
+    expect(css).toContain("[data-guidance-page='contact'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(2)");
+    expect(css).toContain("[data-guidance-page='services'] [data-page-block='page-sections'] .grid-bento.contact-grid > .card.legal-card:nth-child(7)");
   });
 });
 
@@ -273,11 +273,25 @@ describe('Folio type sheet', () => {
     for (const locale of INTL_DESIGN_LOCALES) {
       const language = publicDocumentLanguage(locale) as DocumentLanguage;
       expect(language, locale).toBe(locale);
-      expect(getLocaleFontStylesheets(language), locale).toEqual([INTL_TYPE_STYLESHEET]);
+      expect(getLocaleFontStylesheets(language), locale).toEqual([INTL_TYPE_STYLESHEET, INTL_DESIGN_STYLESHEET]);
     }
     for (const language of ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'ms', 'fil', 'ar', 'zh-Hans', 'tr', 'hi'] as const) {
       expect(getLocaleFontStylesheets(language), language).not.toContain(INTL_TYPE_STYLESHEET);
+      expect(getLocaleFontStylesheets(language), language).not.toContain(INTL_DESIGN_STYLESHEET);
     }
+  });
+
+  it('links the design sheet as the current build of folio.css, imported by no component (review round 1)', async () => {
+    // @ts-expect-error -- plain ESM build script without type declarations
+    const { buildIntlDesignCss } = (await import('../../../../scripts/build-intl-design-css.mjs')) as {
+      buildIntlDesignCss: () => Promise<{ css: string; href: string }>;
+    };
+    const built = await buildIntlDesignCss();
+    expect(INTL_DESIGN_STYLESHEET).toBe(built.href);
+    expect(read(`public${INTL_DESIGN_STYLESHEET}`)).toBe(built.css);
+    expect(existsSync(path.join(root, 'src/components/intl-design/IntlDesign.module.css'))).toBe(false);
+    const shell = read('src/components/CinematicRouteShell.tsx');
+    expect(shell).not.toMatch(/\.css['"]/);
   });
 
   it('is content-hashed and every file exists, is hashed and swaps', () => {

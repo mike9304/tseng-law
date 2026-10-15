@@ -1,7 +1,7 @@
 ---
 title: "Đề xuất nâng mức đóng hưu trí lên 9% ở Đài Loan: khoản 6% hiện nay do ai trả?"
-seoTitle: "Đài Loan đề xuất đóng hưu trí 9%: nghĩa vụ 6% hiện nay của chủ sử dụng lao động"
-summary: "Các tổ chức lao động Đài Loan đang yêu cầu nâng mức đóng hưu trí của chủ sử dụng lao động từ 6% lên 9%. Đây chưa phải mức bắt buộc mới. Với người lao động Việt Nam, việc thuộc chế độ tài khoản hưu trí cá nhân còn phụ thuộc diện cư trú, công việc và quy định chuyển tiếp."
+seoTitle: "Đề xuất đóng hưu trí 9% ở Đài Loan: nghĩa vụ 6% hiện nay của chủ sử dụng lao động"
+summary: "Các tổ chức lao động Đài Loan đang yêu cầu nâng mức đóng hưu trí bắt buộc của chủ sử dụng lao động, hiện tối thiểu 6%; các dự luật đang chờ xem xét tại Viện Lập pháp đề xuất mức 9%. Đây chưa phải mức bắt buộc mới. Với người lao động Việt Nam, việc thuộc chế độ tài khoản hưu trí cá nhân còn phụ thuộc diện cư trú, công việc và quy định chuyển tiếp."
 published: "2026-10-15"
 lastmod: "2026-10-15"
 date_display: "Ngày 15 tháng 10 năm 2026"
@@ -38,7 +38,7 @@ Người lao động thuộc diện được tự nguyện đóng có thể đó
 
 ## Không phải mọi lao động nước ngoài đều có cùng điều kiện
 
-[Điều 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=7) bao gồm người nước ngoài kết hôn với công dân Đài Loan có hộ tịch tại Đài Loan, được phép cư trú và làm việc tại đây; cùng những người nước ngoài khác đã được phép thường trú và đang làm việc. Với các nhóm này, công việc còn phải thuộc Luật Tiêu chuẩn lao động. Người được trích lập quỹ hưu trí theo Luật Trường tư thục nằm ngoài phạm vi đó. Người đã ly hôn hoặc có vợ, chồng qua đời vẫn có thể thuộc diện áp dụng nếu pháp luật cho phép tiếp tục cư trú và làm việc.
+Theo [Điều 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=7), diện áp dụng gồm người nước ngoài kết hôn với công dân Đài Loan có hộ tịch tại Đài Loan, được phép cư trú và làm việc tại đây; cùng những người nước ngoài khác đã được phép thường trú và đang làm việc. Với các nhóm này, công việc còn phải thuộc Luật Tiêu chuẩn lao động. Người được trích lập quỹ hưu trí theo Luật Trường tư thục nằm ngoài phạm vi đó. Người đã ly hôn hoặc có vợ, chồng qua đời vẫn có thể thuộc diện áp dụng nếu pháp luật cho phép tiếp tục cư trú và làm việc.
 
 Giấy phép lao động thông thường tự nó không chứng minh người lao động đã thuộc chế độ tài khoản cá nhân này. Mặt khác, [quy định chuyển tiếp tại Điều 8-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=8-1) cho phép một số người tiếp tục chế độ hưu trí cũ khi đáp ứng điều kiện và đã lựa chọn đúng thủ tục. Ngày vào làm, ngày có tư cách cư trú liên quan và văn bản lựa chọn chế độ vì thế có thể làm thay đổi kết quả.
 

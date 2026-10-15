@@ -1,5 +1,5 @@
 ---
-title: "Nissin's Australian recall: the Taiwan label and local duties"
+title: "Nissin noodle recall in Australia: the Taiwan label and local duties"
 seoTitle: "Taiwan food imports: overseas recalls and labeling"
 summary: "An October 14 report attributed different treatment of Nissin noodles in Taiwan to the local milk-allergen label. For global suppliers and Taiwan importers, the actual stock and the statutory recall trigger determine the local response."
 published: "2026-10-15"
@@ -15,7 +15,7 @@ featured_image_caption: "AI-generated illustration of a fictional food-import se
 social_image: "../images/ISSUE-20261015-05-taiwan-food-imports-overseas-recall-labeling/featured-01.jpg"
 faq:
   - q: "Does an overseas recall automatically require a Taiwan recall?"
-    a: "The foreign alert alone does not establish that every Taiwan shipment has the same defect. Under Article 7(5), however, a food business that discovers a risk to health or sanitation must immediately stop manufacturing, processing and selling the product, recall it and notify the local competent authority."
+    a: "The foreign alert alone does not establish that every Taiwan shipment has the same defect. Under Article 7(5), however, a food business that discovers a risk to sanitation and safety must immediately stop manufacturing, processing and selling the product, recall it and notify the local competent authority."
   - q: "Does a correct allergen label establish that a product has no safety problems?"
     a: "No. A conclusion about one labeling issue is limited to that issue. Other evidence of a product risk still requires assessment under Taiwan law."
   - q: "Must every food business operate the same formal traceability system?"
@@ -24,9 +24,9 @@ audience: ["en"]
 author: "legal-ai-assistant"
 ---
 
-# Nissin's Australian recall: the Taiwan label and local duties
+# Nissin noodle recall in Australia: the Taiwan label and local duties
 
-Taiwan imports of a Nissin noodle product carried Chinese labels declaring milk, the Taiwan Food and Drug Administration (TFDA) told [Focus Taiwan on October 14, 2026](https://focustaiwan.tw/society/202610140013). The report said an October 9 Australian recall concerned an undeclared milk allergen. TFDA said it had confirmed the Taiwan labeling with the importer, so the same labeling problem did not arise for those shipments. That account addresses the reported allergen-label discrepancy; it is not a general assurance about every aspect of the product's safety.
+Taiwan imports of a Nissin noodle product carried Chinese labels declaring milk, the Taiwan Food and Drug Administration (TFDA) said in a CNA report carried by [Focus Taiwan on October 14, 2026](https://focustaiwan.tw/society/202610140013). The report said an October 9 Australian recall concerned an undeclared milk allergen. TFDA said it had confirmed the Taiwan labeling with the importer, so the same labeling problem did not arise for those shipments. That account addresses the reported allergen-label discrepancy; it is not a general assurance about every aspect of the product's safety.
 
 For a US or other overseas food supplier selling through a Taiwan importer, a recall notice raises a specific operational question: does the stock here share the reported defect? The brand name alone cannot answer it. Product specifications, the Taiwan packaging and shipment records allow the importer to assess whether the overseas finding applies locally.
 
@@ -42,7 +42,7 @@ In practice, the relevant comparison may involve the affected lot identifiers, i
 
 ## A discovered risk calls for immediate action
 
-[Article 7(5)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040001&flno=7) requires a food business that discovers its product may endanger health or sanitation to act immediately: stop manufacturing, processing and selling it, arrange a recall, and notify the competent city or county authority. The duty is triggered by discovery of a risk. The business does not have to wait for an actual injury or a separate Taiwan recall order before that duty arises.
+[Article 7(5)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040001&flno=7) requires a food business that discovers its product may pose a risk to sanitation and safety to act immediately: stop manufacturing, processing and selling it, arrange a recall, and notify the competent city or county authority. The duty is triggered by discovery of a risk. The business does not have to wait for an actual injury or a separate Taiwan recall order before that duty arises.
 
 An overseas alert may supply evidence of such a risk. It may instead identify a defect limited to packaging used elsewhere, as TFDA described in this report. Which conclusion is justified depends on the product and records. A distributor's general reassurance cannot substitute for evidence about the affected shipments.
 

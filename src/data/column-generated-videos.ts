@@ -1,3 +1,4 @@
+import trafficActionNextReenactments20261015 from './traffic-action-next-reenactments-20261015.json';
 import trafficActionReenactments20261015 from './traffic-action-reenactments-20261015.json';
 import trafficReenactments20261014 from './traffic-reenactments-20261014.json';
 import trafficReenactments20261015 from './traffic-reenactments-20261015.json';
@@ -98,6 +99,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
   ...trafficReenactments20261014,
   ...trafficReenactments20261015,
   ...trafficActionReenactments20261015,
+  ...trafficActionNextReenactments20261015,
   "column/zh-hant/taiwan-manufacturing-ai-data-trade-secrets": {
     "id": "manufacturing-ai-data-processing-v1-zh-hant",
     "src": "/videos/columns/485-ai-data-processing.mp4",

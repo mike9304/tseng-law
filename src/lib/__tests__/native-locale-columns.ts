@@ -678,6 +678,10 @@ export const TRAFFIC_SCENE_COLUMN_FILES_20261014 = {
 /** Reviewed fictional traffic scenes: scooter in three languages, four further cases in Korean and Traditional Chinese. */
 export const TRAFFIC_SCENE_COLUMN_FILES_20261015 = {
   ko: [
+    '625-taiwan-unsignalized-roundabout-entry-collision.md',
+    '626-taiwan-red-signal-straight-stop-line-collision.md',
+    '627-taiwan-oneway-wrongway-head-on-collision.md',
+    '628-taiwan-parked-car-collision-external-video-evidence.md',
     '611-taiwan-scooter-outer-lane-left-turn-dashcam.md',
     '621-taiwan-lane-ending-merge-dashcam.md',
     '622-taiwan-equal-road-uncontrolled-intersection-dashcam.md',
@@ -685,6 +689,10 @@ export const TRAFFIC_SCENE_COLUMN_FILES_20261015 = {
     '624-taiwan-mountain-road-meeting-collision.md',
   ],
   'zh-hant': [
+    '625-taiwan-unsignalized-roundabout-entry-collision.md',
+    '626-taiwan-red-signal-straight-stop-line-collision.md',
+    '627-taiwan-oneway-wrongway-head-on-collision.md',
+    '628-taiwan-parked-car-collision-external-video-evidence.md',
     '611-taiwan-scooter-outer-lane-left-turn-dashcam.md',
     '621-taiwan-lane-ending-merge-dashcam.md',
     '622-taiwan-equal-road-uncontrolled-intersection-dashcam.md',

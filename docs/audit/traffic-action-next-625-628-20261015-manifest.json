@@ -1,0 +1,899 @@
+{
+  "checkedAt": "2026-10-15T12:35:11.740020+00:00",
+  "baseCommit": "e77e9899a5bf99d2b51f394ecb5ed1a4e6a17c94",
+  "publicationDate": "2026-10-15",
+  "articles": [
+    {
+      "key": "N1",
+      "number": 625,
+      "locale": "ko",
+      "slug": "taiwan-unsignalized-roundabout-entry-collision",
+      "path": "src/content/columns/625-taiwan-unsignalized-roundabout-entry-collision.md",
+      "title": "대만 무신호 회전교차로의 접촉 사고와 먼저 들어온 차량",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N1.ko.md",
+      "sourceSha256": "969ce43b4215e85db09be868f0180388568ab3d5810d162474ae7bdabe8fe3b1",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N1.ko.metadata.json",
+      "metadataSha256": "3e87bf9439a7bf679c5e062dfaeab94cb37ebab50c316e5513232b2d587839b1",
+      "sha256": "24bb11712e0379066c49e77644852eeabdac3b25e4b8e89231a8a2683bf55b88"
+    },
+    {
+      "key": "N1",
+      "number": 625,
+      "locale": "zh-hant",
+      "slug": "taiwan-unsignalized-roundabout-entry-collision",
+      "path": "src/content/columns-zh/625-taiwan-unsignalized-roundabout-entry-collision.md",
+      "title": "圓環入口的側向碰撞：讓車義務與進入先後",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N1.zh-hant.md",
+      "sourceSha256": "6c5aa6d3f335ffd39a16f0332623144c99ab164467625a74ad820512587a2432",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N1.zh-hant.metadata.json",
+      "metadataSha256": "0699d430323118b747a03d65980a95f9c1e22f5371b734c304750a6cde173715",
+      "sha256": "dca06198985bffca6d9f9cd0dd8c51c12a8f4ee34e96bee25c8eb796b5b4c81c"
+    },
+    {
+      "key": "N2",
+      "number": 626,
+      "locale": "ko",
+      "slug": "taiwan-red-signal-straight-stop-line-collision",
+      "path": "src/content/columns/626-taiwan-red-signal-straight-stop-line-collision.md",
+      "title": "대만 적색 신호 충돌, 차 앞부분이 정지선을 넘던 순간",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n2/N2.ko.md",
+      "sourceSha256": "192b124f8abe3dd123830994c49d3bd4ac6562175b2067e1434df1c61636f493",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n2/N2.ko.metadata.json",
+      "metadataSha256": "d7612caeb6c302b269b9cab464cf17b11bc92e640483c6035c5b4a41bd305513",
+      "sha256": "894f01d3b97c9e176e1d17b77bfe01292258ed6951e88cc84726ebcd1a14736d"
+    },
+    {
+      "key": "N2",
+      "number": 626,
+      "locale": "zh-hant",
+      "slug": "taiwan-red-signal-straight-stop-line-collision",
+      "path": "src/content/columns-zh/626-taiwan-red-signal-straight-stop-line-collision.md",
+      "title": "紅燈直行碰撞：停止線前後的連續影像",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n2/N2.zh-hant.md",
+      "sourceSha256": "09f2c7e33be8ecbd432a9a597b055b018239957777b265386a37b01277783a12",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n2/N2.zh-hant.metadata.json",
+      "metadataSha256": "0f09379981c7f29b7b400b2dcb29ef4e06dd951be8c631701b2319df2bf2df45",
+      "sha256": "cc50a31e9111695dd429075c0ab8dd9781efd04f93f3116bc41f7b0f1141b6a5"
+    },
+    {
+      "key": "N3",
+      "number": 627,
+      "locale": "ko",
+      "slug": "taiwan-oneway-wrongway-head-on-collision",
+      "path": "src/content/columns/627-taiwan-oneway-wrongway-head-on-collision.md",
+      "title": "대만 일방통행로에서 마주 온 차, 표지 방향과 충돌 전 경로",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N3.ko.md",
+      "sourceSha256": "eb17f7af33de324d9bbaf3f1cc7e4a3df11f0e951f7e21123639e4d6cfe5fb6b",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N3.ko.metadata.json",
+      "metadataSha256": "8173a12b84522c67e10ffb3a0c4cdaa1f46477381083b53b11f4ba40cdca852b",
+      "sha256": "851b71782d2ecee6a3b162c3bc08ea1360b5545b476d17ae5beaa770e916dd44"
+    },
+    {
+      "key": "N3",
+      "number": 627,
+      "locale": "zh-hant",
+      "slug": "taiwan-oneway-wrongway-head-on-collision",
+      "path": "src/content/columns-zh/627-taiwan-oneway-wrongway-head-on-collision.md",
+      "title": "單行道迎面碰撞，標誌方向與兩車接近的路徑",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N3.zh-hant.md",
+      "sourceSha256": "15533635655192ddd4515eb02be715965d2d30e3749449a675ebd56bf70c6d37",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n1-n3/N3.zh-hant.metadata.json",
+      "metadataSha256": "e073ca1e97c8d7868ffb146e11195af753c9f641c2dac0d0ab99b1a48766e139",
+      "sha256": "c7523394cfb43697575a2875ca8ad79866b55abd8301e78a420eecb831eea2c4"
+    },
+    {
+      "key": "N4",
+      "number": 628,
+      "locale": "ko",
+      "slug": "taiwan-parked-car-collision-external-video-evidence",
+      "path": "src/content/columns/628-taiwan-parked-car-collision-external-video-evidence.md",
+      "title": "대만 주차차량 충돌, 차 밖 영상으로 확인할 수 있는 범위",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n4/N4.ko.md",
+      "sourceSha256": "89f40b8604bcbf9a8c5bbb697fb43e5833d622d4eebee10b25bfb8143e3688bf",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n4/N4.ko.metadata.json",
+      "metadataSha256": "44407eb58609bd0419f37cad05240e7b438b7b98d5d0279aaca30fcb7949b94b",
+      "sha256": "616e577190e38b4a8f97e399767f4dfeaa39217c4a85c7ffbbb3f0baf43e8944"
+    },
+    {
+      "key": "N4",
+      "number": 628,
+      "locale": "zh-hant",
+      "slug": "taiwan-parked-car-collision-external-video-evidence",
+      "path": "src/content/columns-zh/628-taiwan-parked-car-collision-external-video-evidence.md",
+      "title": "撞上路邊停車，車外影像能看見哪些事實？",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/articles-n4/N4.zh-hant.md",
+      "sourceSha256": "34f29d33c3a45cf6a1819818621d9cd718dc1dd7eec1afd444ee5da4c7013f4d",
+      "metadata": "/Users/son7/tseng-traffic-action-next-20261015/articles-n4/N4.zh-hant.metadata.json",
+      "metadataSha256": "f159a7206b5ce1804da234dbefea7edeb949e59576f90aefcc28c07dd37a669a",
+      "sha256": "c30fa623f2344b9dcf598c9660cd6c46fb768be023eb4681c95afd7b379b491d"
+    }
+  ],
+  "covers": [
+    {
+      "path": "images/blog/625-taiwan-unsignalized-roundabout-entry-collision/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-core-attempt-03/native/frame-0018.png",
+      "sourceSha256": "9bcc08aa531919f5e9df4df866b8e5293bfd7f535b96dccb52c33d6d02d68213",
+      "sha256": "d54690554481a9ec2a7339e053ffae4e85719aa92cffa61c809da64276765f47",
+      "bytes": 330660
+    },
+    {
+      "path": "images/blog/626-taiwan-red-signal-straight-stop-line-collision/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/n2-red-signal/references/n2-crosswalk-first-v4.png",
+      "sourceSha256": "0cd5cea44df26a231f02f1abb2b0646038f1d011d622b09b5483c45cd892995f",
+      "sha256": "fc5e6873184f8987d3ea9095349059e531d8a3599817e8b59433840d023b4428",
+      "bytes": 363938
+    },
+    {
+      "path": "images/blog/627-taiwan-oneway-wrongway-head-on-collision/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/references/n3-e2-last-core-a02-f0000.png",
+      "sourceSha256": "2b897376fd7a45836ed9d71e836e4a1f02082aba74ae5c8e1ed61f840f088f42",
+      "sha256": "00b6b3cd41cf383424f8aab9fc6ce721631b935dc7f2241c72e8550ba1c5c07c",
+      "bytes": 245910
+    },
+    {
+      "path": "images/blog/628-taiwan-parked-car-collision-external-video-evidence/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-core-attempt-03/frame-0000.png",
+      "sourceSha256": "f4091a68703edec8f31000d652073a45ef28b957dbbb06d98e49bb0aab9b20fb",
+      "sha256": "31fc56b64f46ceca601e41aeb81f607a883bd119d499ad15fec64f29e825bc67",
+      "bytes": 191426
+    }
+  ],
+  "media": [
+    {
+      "id": "roundabout-entry-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-unsignalized-roundabout-entry-collision",
+      "path": "videos/columns/roundabout-entry-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/roundabout-entry-action-20261015-v1-ko.jpg",
+      "posterSha256": "ac6858c582817ebcddc13e3e424922609a9d2c2020dd5d149211fe547b8620df",
+      "duration": 20.25,
+      "sceneCount": 4,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6915601,
+      "sha256": "693f4ce17f47f4d4540e537ac9b96a782a87500e22237023fb66e9ed89a77641",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-s0-silver-dash-far-forward-a.mp4",
+          "start": 0,
+          "end": 8,
+          "sha256": "2675fc18d96b8e38ac514de80af9f5a0f258be46683f37ba4ab6e962fbe3b3d2",
+          "ko": "은색차는 이미 원형 차로를 돌고 있습니다",
+          "zh-hant": "銀車已在圓環車道內行駛",
+          "reason": "Earlier continuous circulating dashcam drive; entry remains ahead and unseen",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-s0-silver-dash-far-forward-a-generation.json",
+          "duration": 8
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-b-early-orange-dash-forward-a.mp4",
+          "start": 0,
+          "end": 8,
+          "sha256": "3bc29642da3c253698dc33dcd2e83c6a818fc03bf6be5ca167843ef85ab2f88f",
+          "ko": "다른 시점 · 주황차가 진입로를 따라 접근합니다",
+          "zh-hant": "另一視角 · 橘車沿入口道路接近",
+          "reason": "Forward orange dashcam approach ending before the roundabout entry",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-b-early-orange-dash-forward-a-generation.json",
+          "duration": 8
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-s2-wide-forward-a.mp4",
+          "start": 0,
+          "end": 1.5,
+          "sha256": "1d509b6ab79c0043b50ee63bc41856c6a1477318fe9bc769003b00df59287872",
+          "ko": "진입부로 접근하는 두 차량",
+          "zh-hant": "兩車接近入口",
+          "reason": "Two forward paths before entry; end before silver passes core location",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-s2-wide-forward-a-generation.json",
+          "duration": 1.5
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-core-attempt-03.mp4",
+          "start": 0.75,
+          "end": 3.5,
+          "sha256": "3699507eef8afed919783f6f1eda96f05c335efb61885f014cc4992dc1d1355b",
+          "ko": "진입차 전면과 순환차 측면의 접촉",
+          "zh-hant": "進入車前端與環內車側面接觸",
+          "reason": "One continuous limited side contact and touching stop; no strong recoil or new dent claim",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-core-attempt-03-generation.json",
+          "duration": 2.75
+        }
+      ],
+      "selectionSha256": "85c4b29940cdfa26d611b5f73eaf23f001bb4562394ba5d93e2d1164999670fc"
+    },
+    {
+      "id": "roundabout-entry-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-unsignalized-roundabout-entry-collision",
+      "path": "videos/columns/roundabout-entry-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/roundabout-entry-action-20261015-v1-zh-hant.jpg",
+      "posterSha256": "e0f027be36df4cb077adee66fb816f04733a75b554830fa1ef8a58564311b9a3",
+      "duration": 20.25,
+      "sceneCount": 4,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6900214,
+      "sha256": "4dd2b97766979475a3ab94b52a8a0da1ae7563de7c5a425e4e211f5dd2ce9a72",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-s0-silver-dash-far-forward-a.mp4",
+          "start": 0,
+          "end": 8,
+          "sha256": "2675fc18d96b8e38ac514de80af9f5a0f258be46683f37ba4ab6e962fbe3b3d2",
+          "ko": "은색차는 이미 원형 차로를 돌고 있습니다",
+          "zh-hant": "銀車已在圓環車道內行駛",
+          "reason": "Earlier continuous circulating dashcam drive; entry remains ahead and unseen",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-s0-silver-dash-far-forward-a-generation.json",
+          "duration": 8
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-b-early-orange-dash-forward-a.mp4",
+          "start": 0,
+          "end": 8,
+          "sha256": "3bc29642da3c253698dc33dcd2e83c6a818fc03bf6be5ca167843ef85ab2f88f",
+          "ko": "다른 시점 · 주황차가 진입로를 따라 접근합니다",
+          "zh-hant": "另一視角 · 橘車沿入口道路接近",
+          "reason": "Forward orange dashcam approach ending before the roundabout entry",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-b-early-orange-dash-forward-a-generation.json",
+          "duration": 8
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-s2-wide-forward-a.mp4",
+          "start": 0,
+          "end": 1.5,
+          "sha256": "1d509b6ab79c0043b50ee63bc41856c6a1477318fe9bc769003b00df59287872",
+          "ko": "진입부로 접근하는 두 차량",
+          "zh-hant": "兩車接近入口",
+          "reason": "Two forward paths before entry; end before silver passes core location",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-s2-wide-forward-a-generation.json",
+          "duration": 1.5
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/assets/n1-core-attempt-03.mp4",
+          "start": 0.75,
+          "end": 3.5,
+          "sha256": "3699507eef8afed919783f6f1eda96f05c335efb61885f014cc4992dc1d1355b",
+          "ko": "진입차 전면과 순환차 측면의 접촉",
+          "zh-hant": "進入車前端與環內車側面接觸",
+          "reason": "One continuous limited side contact and touching stop; no strong recoil or new dent claim",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n1-roundabout/qa/n1-core-attempt-03-generation.json",
+          "duration": 2.75
+        }
+      ],
+      "selectionSha256": "85c4b29940cdfa26d611b5f73eaf23f001bb4562394ba5d93e2d1164999670fc"
+    },
+    {
+      "id": "red-signal-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-red-signal-straight-stop-line-collision",
+      "path": "videos/columns/red-signal-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/red-signal-action-20261015-v1-ko.jpg",
+      "posterSha256": "a4de9df6820f05404e8fdd01eca3a844122a3cb3a9337602695d957aad7620a4",
+      "duration": 21.25,
+      "sceneCount": 3,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6592671,
+      "sha256": "2aedcbd77f5ae8acd7396873c1930c6ca84616498b3aa29c1cbc43341f278175",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n2-red-signal/assets/n2-b0-a.mp4",
+          "start": 0,
+          "end": 12,
+          "sha256": "3db946b74ba21ff5f2b4805d30f8a7c15d6a6519aca0cf10cbd9e7014739b8bb",
+          "reason": "Twelve seconds of continuous forward travel on uninterrupted empty residential road; no junction/signal/other participant appears.",
+          "ko": "독립 가상 장면 · 베이지색 차의 주행",
+          "zh-hant": "獨立虛構畫面 · 米色車行駛",
+          "duration": 12
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n2-red-signal/assets/n2-aearly-a.mp4",
+          "start": 0,
+          "end": 6,
+          "sha256": "624b9a9904e5a84cde0d3310008b30a67c2ac8a820671ff69cf4e0bf015599fa",
+          "reason": "Forward approach with stable own green, no beige participant in event area, final selected frame143 before stopbar. Compatible with forward time omission to core0.",
+          "ko": "다른 시점 · 녹색 신호 아래 접근하는 파란 차",
+          "zh-hant": "另一視角 · 藍車在綠燈下接近",
+          "duration": 6
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n2-red-signal/assets/n2-core-d.mp4",
+          "start": 0,
+          "end": 3.25,
+          "sha256": "6f82b5fe7dfe28c6645d68b648f2ea3a076a8423002f42f1fbe6b0e2ebe8f040",
+          "reason": "Both cars advance; beige crosses its stop bar while its red remains visible, then original two cars make one front-corner contact near 1.96–2.00 seconds. Includes short post-contact settling; omits long nearly stationary tail.",
+          "ko": "적색 신호에 정지선을 넘은 뒤 앞모서리 접촉",
+          "zh-hant": "紅燈越過停止線後，兩車前角接觸",
+          "duration": 3.25
+        }
+      ],
+      "selectionSha256": "c76b9601f543dc9d8c68ad2b38cb6d87897739ac23057ab399c20089b3cb85c9"
+    },
+    {
+      "id": "red-signal-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-red-signal-straight-stop-line-collision",
+      "path": "videos/columns/red-signal-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/red-signal-action-20261015-v1-zh-hant.jpg",
+      "posterSha256": "6ae84bb200ba7943103801be1249a03060176c8c5230836b47f109b1b575d965",
+      "duration": 21.25,
+      "sceneCount": 3,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6604989,
+      "sha256": "50dc7fe0e48dfc4580c1690f98a980007c27b9135dc392b900223e327c8cee6b",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n2-red-signal/assets/n2-b0-a.mp4",
+          "start": 0,
+          "end": 12,
+          "sha256": "3db946b74ba21ff5f2b4805d30f8a7c15d6a6519aca0cf10cbd9e7014739b8bb",
+          "reason": "Twelve seconds of continuous forward travel on uninterrupted empty residential road; no junction/signal/other participant appears.",
+          "ko": "독립 가상 장면 · 베이지색 차의 주행",
+          "zh-hant": "獨立虛構畫面 · 米色車行駛",
+          "duration": 12
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n2-red-signal/assets/n2-aearly-a.mp4",
+          "start": 0,
+          "end": 6,
+          "sha256": "624b9a9904e5a84cde0d3310008b30a67c2ac8a820671ff69cf4e0bf015599fa",
+          "reason": "Forward approach with stable own green, no beige participant in event area, final selected frame143 before stopbar. Compatible with forward time omission to core0.",
+          "ko": "다른 시점 · 녹색 신호 아래 접근하는 파란 차",
+          "zh-hant": "另一視角 · 藍車在綠燈下接近",
+          "duration": 6
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n2-red-signal/assets/n2-core-d.mp4",
+          "start": 0,
+          "end": 3.25,
+          "sha256": "6f82b5fe7dfe28c6645d68b648f2ea3a076a8423002f42f1fbe6b0e2ebe8f040",
+          "reason": "Both cars advance; beige crosses its stop bar while its red remains visible, then original two cars make one front-corner contact near 1.96–2.00 seconds. Includes short post-contact settling; omits long nearly stationary tail.",
+          "ko": "적색 신호에 정지선을 넘은 뒤 앞모서리 접촉",
+          "zh-hant": "紅燈越過停止線後，兩車前角接觸",
+          "duration": 3.25
+        }
+      ],
+      "selectionSha256": "c76b9601f543dc9d8c68ad2b38cb6d87897739ac23057ab399c20089b3cb85c9"
+    },
+    {
+      "id": "oneway-head-on-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-oneway-wrongway-head-on-collision",
+      "path": "videos/columns/oneway-head-on-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/oneway-head-on-action-20261015-v1-ko.jpg",
+      "posterSha256": "83ccd1a8c4c696e46330f746d931071942305bdd31fd66859b2dcc9b4c3758b1",
+      "duration": 19.5,
+      "sceneCount": 4,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6293440,
+      "sha256": "f87d8558eb48c1a55bb98f613280312a87923a68a18f78bef7ce14d9be1a4294",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-p0-dash-a01.mp4",
+          "start": 0,
+          "end": 6,
+          "sha256": "ee146bbc139470c562794cde9c2d7d2ff4e7bc4d9d2d9bdf244a8ccbd6964c76",
+          "ko": "은색차가 도로를 따라 전진합니다",
+          "zh-hant": "銀車沿道路向前行駛",
+          "reason": "Earlier silver dashcam approach; excluded extra-vehicle late tail",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-p0-dash-a01-generation.json",
+          "duration": 6
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-b0-dash-a01.mp4",
+          "start": 0,
+          "end": 8,
+          "sha256": "cbf6f35d992d90c8617a2c60a511ab25a94d6df9726ed03b5c5853773863fe92",
+          "ko": "다른 시점 · 반대 방향으로 다가오는 주황차",
+          "zh-hant": "另一視角 · 橘車從相反方向駛來",
+          "reason": "Earlier orange dashcam approach, true forward flow; fictional geographic/time ellipse",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-b0-dash-a01-generation.json",
+          "duration": 8
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-e2-approach-a01.mp4",
+          "start": 0,
+          "end": 2,
+          "sha256": "243d5568796ed8427b2a63f3959572e72f5f36be5224034f0e631bec45bc26ec",
+          "ko": "마주 오는 두 차의 간격이 좁아집니다",
+          "zh-hant": "相向行駛的兩車逐漸接近",
+          "reason": "Uncontacted continuous exterior approach into the actual core first frame",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-e2-approach-a01-generation.json",
+          "duration": 2
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-core-a02.mp4",
+          "start": 0,
+          "end": 3.5,
+          "sha256": "517404377cfa282ffa5c516da1754c8f31b2015593cac516a0208bdff41b25b3",
+          "ko": "정면 접촉 뒤 변형이 남은 채 멈춥니다",
+          "zh-hant": "迎面接觸後停下，車身留下變形",
+          "reason": "One uninterrupted contact, hood deformation and touching stop",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-core-a02-generation.json",
+          "duration": 3.5
+        }
+      ],
+      "selectionSha256": "4945cc9d6336e00f2587316461f0ee05e3edff1d5a008536d06f8a53aaecd63e"
+    },
+    {
+      "id": "oneway-head-on-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-oneway-wrongway-head-on-collision",
+      "path": "videos/columns/oneway-head-on-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/oneway-head-on-action-20261015-v1-zh-hant.jpg",
+      "posterSha256": "ff8e3acd073a847b23b3ac4ecaf115e3962b6c4378ad2ad86001c42957eab387",
+      "duration": 19.5,
+      "sceneCount": 4,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6297568,
+      "sha256": "1a4ce8a55824fed6105a669a08b9fab86f5901152280ea9dcadb6900f4696b83",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-p0-dash-a01.mp4",
+          "start": 0,
+          "end": 6,
+          "sha256": "ee146bbc139470c562794cde9c2d7d2ff4e7bc4d9d2d9bdf244a8ccbd6964c76",
+          "ko": "은색차가 도로를 따라 전진합니다",
+          "zh-hant": "銀車沿道路向前行駛",
+          "reason": "Earlier silver dashcam approach; excluded extra-vehicle late tail",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-p0-dash-a01-generation.json",
+          "duration": 6
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-b0-dash-a01.mp4",
+          "start": 0,
+          "end": 8,
+          "sha256": "cbf6f35d992d90c8617a2c60a511ab25a94d6df9726ed03b5c5853773863fe92",
+          "ko": "다른 시점 · 반대 방향으로 다가오는 주황차",
+          "zh-hant": "另一視角 · 橘車從相反方向駛來",
+          "reason": "Earlier orange dashcam approach, true forward flow; fictional geographic/time ellipse",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-b0-dash-a01-generation.json",
+          "duration": 8
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-e2-approach-a01.mp4",
+          "start": 0,
+          "end": 2,
+          "sha256": "243d5568796ed8427b2a63f3959572e72f5f36be5224034f0e631bec45bc26ec",
+          "ko": "마주 오는 두 차의 간격이 좁아집니다",
+          "zh-hant": "相向行駛的兩車逐漸接近",
+          "reason": "Uncontacted continuous exterior approach into the actual core first frame",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-e2-approach-a01-generation.json",
+          "duration": 2
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/assets/n3-core-a02.mp4",
+          "start": 0,
+          "end": 3.5,
+          "sha256": "517404377cfa282ffa5c516da1754c8f31b2015593cac516a0208bdff41b25b3",
+          "ko": "정면 접촉 뒤 변형이 남은 채 멈춥니다",
+          "zh-hant": "迎面接觸後停下，車身留下變形",
+          "reason": "One uninterrupted contact, hood deformation and touching stop",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n3-oneway/qa/n3-core-a02-generation.json",
+          "duration": 3.5
+        }
+      ],
+      "selectionSha256": "4945cc9d6336e00f2587316461f0ee05e3edff1d5a008536d06f8a53aaecd63e"
+    },
+    {
+      "id": "parked-car-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-parked-car-collision-external-video-evidence",
+      "path": "videos/columns/parked-car-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/parked-car-action-20261015-v1-ko.jpg",
+      "posterSha256": "9915d806151db6f86257ee063a111b5b617b38da54777b10682bc6b869d00479",
+      "duration": 22.75,
+      "sceneCount": 5,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6361023,
+      "sha256": "1e782e51281938d93cbaf5b4a3f134195981b286bc1215defe6fd98a9191a47d",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-a0-attempt-01.mp4",
+          "start": 0,
+          "end": 10,
+          "sha256": "6f27f4e7aea8881afac3fd14b712ef42b3bf98b9a2e3b2d911e65d2394c63856",
+          "ko": "흰색차의 전방에서 본 주행 장면",
+          "zh-hant": "白車前方的行駛視角",
+          "reason": "Early continuous forward dashcam drive before the incident area; genuine fixed-landmark flow",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-a0-attempt-01-generation.json",
+          "duration": 10
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-b-attempt-01.mp4",
+          "start": 0,
+          "end": 2.5,
+          "sha256": "a32fca16d5a4369b1212abc1225240a2bae513caff491b560cb176cbe288e5b3",
+          "ko": "별도 가상 장면 · 손에 든 휴대전화 조작",
+          "zh-hant": "另行生成的虛構片段 · 手持手機操作螢幕",
+          "reason": "Separate explanatory hand-action insert; no proof of vehicle motion, message contents, sending or actual causation",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-b-attempt-01-generation.json",
+          "duration": 2.5
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-a-attempt-01.mp4",
+          "start": 0,
+          "end": 4,
+          "sha256": "b279822dcaca544ee775d8c39a13b5ebc796a40cdfa766f64d0ca604db89e3d6",
+          "ko": "도로 오른쪽에 서 있는 남색 차량",
+          "zh-hant": "道路右側停放的深藍色車輛",
+          "reason": "Forward approach ends well before near parked-car tail; later source excluded to avoid position reset into C",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-a-attempt-01-generation.json",
+          "duration": 4
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-c-attempt-01.mp4",
+          "start": 0,
+          "end": 3,
+          "sha256": "68d68a59a50084a7a32239cbe783ab61339025900b27938b9b1c77f247acf9dc",
+          "ko": "흰색차가 주차차량 쪽으로 다가갑니다",
+          "zh-hant": "白車朝停放車輛接近",
+          "reason": "Same exterior geometry preceding actual core first frame; no early contact or parked-car motion",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-c-attempt-01-generation.json",
+          "duration": 3
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-core-attempt-03.mp4",
+          "start": 0,
+          "end": 3.25,
+          "sha256": "bd4af6f5d95fe15ed1c5fdea383c99e85a5624dfe380ce6a72dfb471f1739021",
+          "ko": "뒤 모서리 접촉 뒤 남색차가 앞으로 밀립니다",
+          "zh-hant": "後角接觸後，深藍車被向前推移",
+          "reason": "Single front-right to rear-left contact, passive navy shove, retained white deformation and touching stop",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-core-attempt-03-generation.json",
+          "duration": 3.25
+        }
+      ],
+      "selectionSha256": "24154ce2d05466ed722c05a35590433cc78de0bfaf5fe17cfb53586fa3deb2a9"
+    },
+    {
+      "id": "parked-car-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-parked-car-collision-external-video-evidence",
+      "path": "videos/columns/parked-car-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/parked-car-action-20261015-v1-zh-hant.jpg",
+      "posterSha256": "a915097f2dc09dbe1012efa28a751d3ca7f7e08278d9c11a63f7a2eb8cf9a9d5",
+      "duration": 22.75,
+      "sceneCount": 5,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "bytes": 6405605,
+      "sha256": "7018819961c94cb4cfafb86c8ed1149a454f04fb0c77c6c8d24a7ffe018fef25",
+      "audio": "muted; provider audio preserved but not meaning-verified",
+      "segments": [
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-a0-attempt-01.mp4",
+          "start": 0,
+          "end": 10,
+          "sha256": "6f27f4e7aea8881afac3fd14b712ef42b3bf98b9a2e3b2d911e65d2394c63856",
+          "ko": "흰색차의 전방에서 본 주행 장면",
+          "zh-hant": "白車前方的行駛視角",
+          "reason": "Early continuous forward dashcam drive before the incident area; genuine fixed-landmark flow",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-a0-attempt-01-generation.json",
+          "duration": 10
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-b-attempt-01.mp4",
+          "start": 0,
+          "end": 2.5,
+          "sha256": "a32fca16d5a4369b1212abc1225240a2bae513caff491b560cb176cbe288e5b3",
+          "ko": "별도 가상 장면 · 손에 든 휴대전화 조작",
+          "zh-hant": "另行生成的虛構片段 · 手持手機操作螢幕",
+          "reason": "Separate explanatory hand-action insert; no proof of vehicle motion, message contents, sending or actual causation",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-b-attempt-01-generation.json",
+          "duration": 2.5
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-a-attempt-01.mp4",
+          "start": 0,
+          "end": 4,
+          "sha256": "b279822dcaca544ee775d8c39a13b5ebc796a40cdfa766f64d0ca604db89e3d6",
+          "ko": "도로 오른쪽에 서 있는 남색 차량",
+          "zh-hant": "道路右側停放的深藍色車輛",
+          "reason": "Forward approach ends well before near parked-car tail; later source excluded to avoid position reset into C",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-a-attempt-01-generation.json",
+          "duration": 4
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-prelude-c-attempt-01.mp4",
+          "start": 0,
+          "end": 3,
+          "sha256": "68d68a59a50084a7a32239cbe783ab61339025900b27938b9b1c77f247acf9dc",
+          "ko": "흰색차가 주차차량 쪽으로 다가갑니다",
+          "zh-hant": "白車朝停放車輛接近",
+          "reason": "Same exterior geometry preceding actual core first frame; no early contact or parked-car motion",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-prelude-c-attempt-01-generation.json",
+          "duration": 3
+        },
+        {
+          "source": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/assets/n4-core-attempt-03.mp4",
+          "start": 0,
+          "end": 3.25,
+          "sha256": "bd4af6f5d95fe15ed1c5fdea383c99e85a5624dfe380ce6a72dfb471f1739021",
+          "ko": "뒤 모서리 접촉 뒤 남색차가 앞으로 밀립니다",
+          "zh-hant": "後角接觸後，深藍車被向前推移",
+          "reason": "Single front-right to rear-left contact, passive navy shove, retained white deformation and touching stop",
+          "sourceReceipt": "/Users/son7/tseng-traffic-action-next-20261015/n4-parked-car/qa/n4-core-attempt-03-generation.json",
+          "duration": 3.25
+        }
+      ],
+      "selectionSha256": "24154ce2d05466ed722c05a35590433cc78de0bfaf5fe17cfb53586fa3deb2a9"
+    }
+  ],
+  "preservedRegistries": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/data/traffic-reenactments-20261014.json",
+      "sha256": "2d3bf6f7603ec9af79a05c0e617f72232c9f541d8376e0a5211ffdf6a2443e9e"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/data/traffic-reenactments-20261015.json",
+      "sha256": "84b6fc61eaa91cfe88b40d3274d61e26d483b75c7485199a9123821499f0544b"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/data/traffic-action-reenactments-20261015.json",
+      "sha256": "b8730e1a2cff1bae0f68f384625be787e5331f75e8aeace90153c2d99843d884"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/data/traffic-column-films.json",
+      "sha256": "0d51bce3a7749820e58481dacc1a9e4857659bf13dc7fb68a515f2d938d4fcd5"
+    }
+  ],
+  "newFileHashes": [
+    {
+      "relative": "public/images/blog/625-taiwan-unsignalized-roundabout-entry-collision/featured-01.webp",
+      "beforeSha256": null,
+      "sha256": "d54690554481a9ec2a7339e053ffae4e85719aa92cffa61c809da64276765f47",
+      "changed": true,
+      "bytes": 330660
+    },
+    {
+      "relative": "src/content/columns/625-taiwan-unsignalized-roundabout-entry-collision.md",
+      "beforeSha256": null,
+      "sha256": "24bb11712e0379066c49e77644852eeabdac3b25e4b8e89231a8a2683bf55b88",
+      "changed": true,
+      "bytes": 9346
+    },
+    {
+      "relative": "public/videos/columns/roundabout-entry-action-20261015-v1-ko.mp4",
+      "beforeSha256": null,
+      "sha256": "693f4ce17f47f4d4540e537ac9b96a782a87500e22237023fb66e9ed89a77641",
+      "changed": true,
+      "bytes": 6915601
+    },
+    {
+      "relative": "public/images/column-videos/roundabout-entry-action-20261015-v1-ko.jpg",
+      "beforeSha256": null,
+      "sha256": "ac6858c582817ebcddc13e3e424922609a9d2c2020dd5d149211fe547b8620df",
+      "changed": true,
+      "bytes": 299082
+    },
+    {
+      "relative": "src/content/columns-zh/625-taiwan-unsignalized-roundabout-entry-collision.md",
+      "beforeSha256": null,
+      "sha256": "dca06198985bffca6d9f9cd0dd8c51c12a8f4ee34e96bee25c8eb796b5b4c81c",
+      "changed": true,
+      "bytes": 7197
+    },
+    {
+      "relative": "public/videos/columns/roundabout-entry-action-20261015-v1-zh-hant.mp4",
+      "beforeSha256": null,
+      "sha256": "4dd2b97766979475a3ab94b52a8a0da1ae7563de7c5a425e4e211f5dd2ce9a72",
+      "changed": true,
+      "bytes": 6900214
+    },
+    {
+      "relative": "public/images/column-videos/roundabout-entry-action-20261015-v1-zh-hant.jpg",
+      "beforeSha256": null,
+      "sha256": "e0f027be36df4cb077adee66fb816f04733a75b554830fa1ef8a58564311b9a3",
+      "changed": true,
+      "bytes": 301444
+    },
+    {
+      "relative": "public/images/blog/626-taiwan-red-signal-straight-stop-line-collision/featured-01.webp",
+      "beforeSha256": null,
+      "sha256": "fc5e6873184f8987d3ea9095349059e531d8a3599817e8b59433840d023b4428",
+      "changed": true,
+      "bytes": 363938
+    },
+    {
+      "relative": "src/content/columns/626-taiwan-red-signal-straight-stop-line-collision.md",
+      "beforeSha256": null,
+      "sha256": "894f01d3b97c9e176e1d17b77bfe01292258ed6951e88cc84726ebcd1a14736d",
+      "changed": true,
+      "bytes": 10083
+    },
+    {
+      "relative": "public/videos/columns/red-signal-action-20261015-v1-ko.mp4",
+      "beforeSha256": null,
+      "sha256": "2aedcbd77f5ae8acd7396873c1930c6ca84616498b3aa29c1cbc43341f278175",
+      "changed": true,
+      "bytes": 6592671
+    },
+    {
+      "relative": "public/images/column-videos/red-signal-action-20261015-v1-ko.jpg",
+      "beforeSha256": null,
+      "sha256": "a4de9df6820f05404e8fdd01eca3a844122a3cb3a9337602695d957aad7620a4",
+      "changed": true,
+      "bytes": 247137
+    },
+    {
+      "relative": "src/content/columns-zh/626-taiwan-red-signal-straight-stop-line-collision.md",
+      "beforeSha256": null,
+      "sha256": "cc50a31e9111695dd429075c0ab8dd9781efd04f93f3116bc41f7b0f1141b6a5",
+      "changed": true,
+      "bytes": 7964
+    },
+    {
+      "relative": "public/videos/columns/red-signal-action-20261015-v1-zh-hant.mp4",
+      "beforeSha256": null,
+      "sha256": "50dc7fe0e48dfc4580c1690f98a980007c27b9135dc392b900223e327c8cee6b",
+      "changed": true,
+      "bytes": 6604989
+    },
+    {
+      "relative": "public/images/column-videos/red-signal-action-20261015-v1-zh-hant.jpg",
+      "beforeSha256": null,
+      "sha256": "6ae84bb200ba7943103801be1249a03060176c8c5230836b47f109b1b575d965",
+      "changed": true,
+      "bytes": 249652
+    },
+    {
+      "relative": "public/images/blog/627-taiwan-oneway-wrongway-head-on-collision/featured-01.webp",
+      "beforeSha256": null,
+      "sha256": "00b6b3cd41cf383424f8aab9fc6ce721631b935dc7f2241c72e8550ba1c5c07c",
+      "changed": true,
+      "bytes": 245910
+    },
+    {
+      "relative": "src/content/columns/627-taiwan-oneway-wrongway-head-on-collision.md",
+      "beforeSha256": null,
+      "sha256": "851b71782d2ecee6a3b162c3bc08ea1360b5545b476d17ae5beaa770e916dd44",
+      "changed": true,
+      "bytes": 9556
+    },
+    {
+      "relative": "public/videos/columns/oneway-head-on-action-20261015-v1-ko.mp4",
+      "beforeSha256": null,
+      "sha256": "f87d8558eb48c1a55bb98f613280312a87923a68a18f78bef7ce14d9be1a4294",
+      "changed": true,
+      "bytes": 6293440
+    },
+    {
+      "relative": "public/images/column-videos/oneway-head-on-action-20261015-v1-ko.jpg",
+      "beforeSha256": null,
+      "sha256": "83ccd1a8c4c696e46330f746d931071942305bdd31fd66859b2dcc9b4c3758b1",
+      "changed": true,
+      "bytes": 230877
+    },
+    {
+      "relative": "src/content/columns-zh/627-taiwan-oneway-wrongway-head-on-collision.md",
+      "beforeSha256": null,
+      "sha256": "c7523394cfb43697575a2875ca8ad79866b55abd8301e78a420eecb831eea2c4",
+      "changed": true,
+      "bytes": 7375
+    },
+    {
+      "relative": "public/videos/columns/oneway-head-on-action-20261015-v1-zh-hant.mp4",
+      "beforeSha256": null,
+      "sha256": "1a4ce8a55824fed6105a669a08b9fab86f5901152280ea9dcadb6900f4696b83",
+      "changed": true,
+      "bytes": 6297568
+    },
+    {
+      "relative": "public/images/column-videos/oneway-head-on-action-20261015-v1-zh-hant.jpg",
+      "beforeSha256": null,
+      "sha256": "ff8e3acd073a847b23b3ac4ecaf115e3962b6c4378ad2ad86001c42957eab387",
+      "changed": true,
+      "bytes": 232845
+    },
+    {
+      "relative": "public/images/blog/628-taiwan-parked-car-collision-external-video-evidence/featured-01.webp",
+      "beforeSha256": null,
+      "sha256": "31fc56b64f46ceca601e41aeb81f607a883bd119d499ad15fec64f29e825bc67",
+      "changed": true,
+      "bytes": 191426
+    },
+    {
+      "relative": "src/content/columns/628-taiwan-parked-car-collision-external-video-evidence.md",
+      "beforeSha256": null,
+      "sha256": "616e577190e38b4a8f97e399767f4dfeaa39217c4a85c7ffbbb3f0baf43e8944",
+      "changed": true,
+      "bytes": 10117
+    },
+    {
+      "relative": "public/videos/columns/parked-car-action-20261015-v1-ko.mp4",
+      "beforeSha256": null,
+      "sha256": "1e782e51281938d93cbaf5b4a3f134195981b286bc1215defe6fd98a9191a47d",
+      "changed": true,
+      "bytes": 6361023
+    },
+    {
+      "relative": "public/images/column-videos/parked-car-action-20261015-v1-ko.jpg",
+      "beforeSha256": null,
+      "sha256": "9915d806151db6f86257ee063a111b5b617b38da54777b10682bc6b869d00479",
+      "changed": true,
+      "bytes": 179470
+    },
+    {
+      "relative": "src/content/columns-zh/628-taiwan-parked-car-collision-external-video-evidence.md",
+      "beforeSha256": null,
+      "sha256": "c30fa623f2344b9dcf598c9660cd6c46fb768be023eb4681c95afd7b379b491d",
+      "changed": true,
+      "bytes": 8017
+    },
+    {
+      "relative": "public/videos/columns/parked-car-action-20261015-v1-zh-hant.mp4",
+      "beforeSha256": null,
+      "sha256": "7018819961c94cb4cfafb86c8ed1149a454f04fb0c77c6c8d24a7ffe018fef25",
+      "changed": true,
+      "bytes": 6405605
+    },
+    {
+      "relative": "public/images/column-videos/parked-car-action-20261015-v1-zh-hant.jpg",
+      "beforeSha256": null,
+      "sha256": "a915097f2dc09dbe1012efa28a751d3ca7f7e08278d9c11a63f7a2eb8cf9a9d5",
+      "changed": true,
+      "bytes": 182025
+    },
+    {
+      "relative": "src/data/traffic-action-next-reenactments-20261015.json",
+      "beforeSha256": null,
+      "sha256": "f84783c8c8a6a516221c539c3aa697e5b6e48f259cbeb3b395d53d61714f4a61",
+      "changed": true,
+      "bytes": 6798
+    },
+    {
+      "relative": "src/data/column-generated-videos.ts",
+      "beforeSha256": "b9be9aa12164f055a1ddadac8ed320b0cc19aab0f90c46232c505bea4203cc18",
+      "sha256": "d89afb5d02aa7fa03793b014b11b4c8201d8f6b2fd81580728f103a7b2b1e87e",
+      "changed": true,
+      "bytes": 62617
+    },
+    {
+      "relative": "src/lib/__tests__/native-locale-columns.ts",
+      "beforeSha256": "8f8d0059c8d2b4e5de0d6c53d60b2dee54d7c0277ba7a2471e202acff930271d",
+      "sha256": "78adac8699af8e12b34fc256c40e5dbd7a108513e22d599ceb158575165ff4b0",
+      "changed": true,
+      "bytes": 56581
+    },
+    {
+      "relative": "src/lib/__tests__/columns-publication-date.test.ts",
+      "beforeSha256": "09b74b2e7ceff724b844ff3949d87858521b3c0baad33fa74e6635b869ced347",
+      "sha256": "533cb949d57abfec69e85e57b712927eda81298715b9da3cf8842d9bb9f09f4a",
+      "changed": true,
+      "bytes": 21124
+    },
+    {
+      "relative": "src/lib/__tests__/traffic-collection.test.ts",
+      "beforeSha256": "089c491bb8361a193c9e71929c75e925bbfb0dfb02fbeb092e0f7d88f48e75eb",
+      "sha256": "32817f46f09c966b84c8c266fb898fd951134e6018c05d980fa47e97c21cafb4",
+      "changed": true,
+      "bytes": 26282
+    }
+  ],
+  "localBrowser": {
+    "checks": 25,
+    "errors": 0,
+    "checkedAt": "2026-10-15T12:32:43.792Z"
+  },
+  "sourceEvidenceRoot": "/Users/son7/tseng-traffic-action-next-20261015",
+  "publicVerification": "Pending main push and Air deployment at commit creation"
+}

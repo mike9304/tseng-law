@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import {
   ISSUE_BOARD_LOCALES,
   ISSUE_CONTENT_ROOT,
@@ -12,7 +12,7 @@ import {
   issueSlugFromFilename,
   type IssueBoardLocale,
 } from '@/lib/columns';
-import { PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
+import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { issueBoardCopy } from '@/data/issue-board';
 
@@ -38,6 +38,15 @@ const cases = ISSUE_BOARD_LOCALES.flatMap((locale) =>
 );
 
 describe('issue board 2026-09-30', () => {
+  const expertiseSlugsByLocale = {} as Record<PublicLocale8, Set<string>>;
+
+  // Reuse real loader results for immutable content fixtures; allow 30s for a cold filesystem.
+  beforeAll(() => {
+    for (const locale of PUBLIC_LOCALES_8) {
+      expertiseSlugsByLocale[locale] = new Set(getAllColumnPosts(locale).map((post) => post.slug));
+    }
+  }, 30_000);
+
   it('ships exactly the reviewed issue files and never the held ISSUE-08', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-\d{8}-(\d{2})-/)?.[1]));
@@ -68,13 +77,13 @@ describe('issue board 2026-09-30', () => {
     expect(isAiAuthoredColumn(post)).toBe(true);
     // Separate board: no expertise list (any locale) contains an issue slug.
     for (const other of PUBLIC_LOCALES_8) {
-      expect(getAllColumnPosts(other).some((candidate) => candidate.slug === slug), `${other}/${slug}`).toBe(false);
+      expect(expertiseSlugsByLocale[other].has(slug), `${other}/${slug}`).toBe(false);
     }
   });
 
   it('issue slugs are unique within each locale across both boards', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
-      const expertise = new Set(getAllColumnPosts(locale).map((post) => post.slug));
+      const expertise = expertiseSlugsByLocale[locale];
       const issues = getAllIssuePosts(locale).map((post) => post.slug);
       expect(new Set(issues).size).toBe(issues.length);
       for (const slug of issues) expect(expertise.has(slug), `${locale}/${slug}`).toBe(false);
@@ -97,7 +106,7 @@ describe('issue board 2026-09-30', () => {
     for (const link of links) {
       const [, linkLocale, , linkSlug] = link.split('/');
       expect(linkLocale, link).toBe(locale);
-      expect(getAllColumnPosts(locale).some((post) => post.slug === linkSlug), link).toBe(true);
+      expect(expertiseSlugsByLocale[locale].has(linkSlug), link).toBe(true);
     }
   });
 

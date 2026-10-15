@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import {
   ISSUE_BOARD_LOCALES,
   ISSUE_CONTENT_ROOT,
@@ -12,7 +12,7 @@ import {
   issueSlugFromFilename,
   type IssueBoardLocale,
 } from '@/lib/columns';
-import { PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
+import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { isColumnTopic } from '@/lib/column-topics';
 
@@ -42,6 +42,15 @@ function readIssue(locale: IssueBoardLocale, file: string) {
 }
 
 describe('issue board 2026-10-15', () => {
+  const expertiseSlugsByLocale = {} as Record<PublicLocale8, Set<string>>;
+
+  // Reuse real loader results for immutable content fixtures; allow 30s for a cold filesystem.
+  beforeAll(() => {
+    for (const locale of PUBLIC_LOCALES_8) {
+      expertiseSlugsByLocale[locale] = new Set(getAllColumnPosts(locale).map((post) => post.slug));
+    }
+  }, 30_000);
+
   it('contains exactly eight issue IDs in their assigned markets', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-20261015-(\d{2})-/)?.[1]));
@@ -153,8 +162,7 @@ describe('issue board 2026-10-15', () => {
       if (other !== locale) expect(getIssuePost(slug, other), `${other}/${slug}`).toBeUndefined();
     }
     for (const other of PUBLIC_LOCALES_8) {
-      expect(getAllColumnPosts(other).some((candidate) => candidate.slug === slug), `${other}/${slug}`).toBe(false);
+      expect(expertiseSlugsByLocale[other].has(slug), `${other}/${slug}`).toBe(false);
     }
-    // Each case parses all eight expertise corpora; prior batches exceeded the 5s default.
-  }, 30_000);
+  });
 });

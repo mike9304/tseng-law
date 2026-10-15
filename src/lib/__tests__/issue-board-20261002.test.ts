@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import {
   ISSUE_BOARD_LOCALES,
   ISSUE_CONTENT_ROOT,
@@ -11,7 +11,7 @@ import {
   issueSlugFromFilename,
   type IssueBoardLocale,
 } from '@/lib/columns';
-import { PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
+import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 
 /** Issue columns ISSUE-20261002 that passed the Claude Code final review (02, 05 dropped after 4 rounds; 06, 12 skipped). */
@@ -35,6 +35,15 @@ const cases = ISSUE_BOARD_LOCALES.flatMap((locale) =>
 );
 
 describe('issue board 2026-10-02', () => {
+  const expertiseSlugsByLocale = {} as Record<PublicLocale8, Set<string>>;
+
+  // Reuse real loader results for immutable content fixtures; allow 30s for a cold filesystem.
+  beforeAll(() => {
+    for (const locale of PUBLIC_LOCALES_8) {
+      expertiseSlugsByLocale[locale] = new Set(getAllColumnPosts(locale).map((post) => post.slug));
+    }
+  }, 30_000);
+
   it('ships exactly the 8 passed files and never 02, 05, 06 or 12', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-\d{8}-(\d{2})-/)?.[1]));
@@ -64,7 +73,7 @@ describe('issue board 2026-10-02', () => {
     expect(post?.publicationDate).toBe('2026-10-02');
     expect(isAiAuthoredColumn(post)).toBe(true);
     for (const other of PUBLIC_LOCALES_8) {
-      expect(getAllColumnPosts(other).some((candidate) => candidate.slug === slug), `${other}/${slug}`).toBe(false);
+      expect(expertiseSlugsByLocale[other].has(slug), `${other}/${slug}`).toBe(false);
     }
   });
 });

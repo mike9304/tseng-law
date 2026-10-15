@@ -58,8 +58,9 @@ export type ColumnDetailViewProps = {
 };
 
 /**
- * Folio locales (id, th, European): the attorney card in the localized team record's words (role, qualification sentence,
- * practice areas; no new fact), instead of the English AttorneyAuthorityCard. Kept in this file, not a new client
+ * Folio locales (id, th, European): the attorney card in the localized team record's words (name and role; no new fact),
+ * instead of the English AttorneyAuthorityCard. The qualification sentence and practice areas stay on the lawyers page
+ * the card links to (review round 2: they cost the article pages their HTML budget). Kept in this file, not a new client
  * module: a new module in this client tree re-grouped Next's CSS chunks for every locale (review round 1).
  */
 function FolioAuthority({ heading, card }: { heading: string; card: FolioAuthorityCard }) {
@@ -71,7 +72,7 @@ function FolioAuthority({ heading, card }: { heading: string; card: FolioAuthori
           {/* eslint-disable-next-line @next/next/no-img-element -- same plain image as the hero above; no next/image import added here */}
           <img
             src={card.photo}
-            alt={card.photoAlt}
+            alt=""
             loading="lazy"
             decoding="async"
             className="person-photo"
@@ -83,17 +84,6 @@ function FolioAuthority({ heading, card }: { heading: string; card: FolioAuthori
             {card.name}
           </Link>
           <p className="authority-card-role">{card.role}</p>
-          <p className="authority-card-summary">{card.qualification}</p>
-        </div>
-      </div>
-      <div className="authority-card-block">
-        <div className="authority-card-label">{card.practiceLabel}</div>
-        <div className="authority-chip-list">
-          {card.practiceAreas.map((area) => (
-            <span key={area} className="authority-chip">
-              {area}
-            </span>
-          ))}
         </div>
       </div>
       <div className="authority-card-actions">

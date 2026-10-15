@@ -48,16 +48,13 @@ export default function PageHeader({
   description?: string;
   children?: ReactNode;
 }) {
-  const folio = folioChrome(locale);
   return (
     <section className={`section page-header ${children ? 'page-header--with-content' : 'page-header--compact'} ${styles.pageHeader}`}>
       <div className="container">
         <div className={styles.pageHeaderCopy} data-page-header-slot="copy">
-          <Breadcrumbs
-            locale={locale}
-            current={title}
-            {...(folio ? { folioLabels: { home: folio.home, trail: folio.breadcrumb } } : {})}
-          />
+          {/* Folio (id, th, European) draws no trail (DIRECTION §0, §7): the header menu marks the current page, and
+              leaving the client component out keeps these pages within the HTML budget (review round 2). */}
+          {folioChrome(locale) ? null : <Breadcrumbs locale={locale} current={title} />}
           {label.trim().toLocaleLowerCase() !== title.trim().toLocaleLowerCase() ? (
             <SectionLabel data-builder-surface-key="section-label">{label}</SectionLabel>
           ) : null}

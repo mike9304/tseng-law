@@ -716,11 +716,16 @@ export default function ColumnsGrid({
       next.delete('page');
     }, navigation);
   };
-  const renderCard = (post: ColumnListItem) => (
+  // Folio lists are newspaper rows: only the lead card of each list shows its picture, and the overlay and "read more"
+  // hint are not drawn. They were display:none there; leaving them out keeps the pages in the HTML budget (round 2).
+  const folioRows = Boolean(folioLabels);
+  const renderCard = (post: ColumnListItem, index: number) => (
     <Link key={post.slug} href={`${listHref}/${post.slug}`} className="columns-card" data-column-topic={topicMode ? topicOf(post) : post.category}>
       <div className="columns-card-img">
-        <Image src={post.featuredImage} alt={post.featuredImageAlt || post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
-        <div className="columns-card-image-overlay" />
+        {folioRows && index > 0 ? null : (
+          <Image src={post.featuredImage} alt={post.featuredImageAlt || post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+        )}
+        {folioRows ? null : <div className="columns-card-image-overlay" />}
         <div className="columns-card-image-meta">
           <span className="columns-category-badge columns-category-badge--image">{topicMode ? topicLabels[topicOf(post)] : post.categoryLabel}</span>
           {post.dateDisplay ? <time className="columns-card-datechip">{post.dateDisplay}</time> : null}
@@ -733,10 +738,12 @@ export default function ColumnsGrid({
         </div>
         <h3 className="columns-card-title">{typesetTitle(locale, post.title)}</h3>
         <p className="columns-card-summary">{post.summary}</p>
-        <span className="columns-card-linkhint">
-          {/* zh-hant: the monoline arrow instead of the typed one; other locales keep their label as is. */}
-          {locale === 'zh-hant' ? <>{columnCardCtaLabel(locale).replace(/\s*→$/, '')}<ZhHantTrail /></> : columnCardCtaLabel(locale)}
-        </span>
+        {folioRows ? null : (
+          <span className="columns-card-linkhint">
+            {/* zh-hant: the monoline arrow instead of the typed one; other locales keep their label as is. */}
+            {locale === 'zh-hant' ? <>{columnCardCtaLabel(locale).replace(/\s*→$/, '')}<ZhHantTrail /></> : columnCardCtaLabel(locale)}
+          </span>
+        )}
       </div>
     </Link>
   );

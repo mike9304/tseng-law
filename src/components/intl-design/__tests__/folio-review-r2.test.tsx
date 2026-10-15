@@ -1,10 +1,21 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { describe, expect, it, vi } from 'vitest';
+
+vi.mock('next/navigation', () => ({
+  usePathname: () => '/fr/columns',
+  useRouter: () => ({ replace: vi.fn(), push: vi.fn() }),
+  useSearchParams: () => new URLSearchParams(),
+}));
+
+import ColumnsGrid, { type ColumnListItem } from '@/components/ColumnsGrid';
 import { getColumnGeneratedVideos } from '@/data/column-generated-videos';
+import { folioColumnsCopy } from '@/data/intl-design-columns-ui';
+import { buildFolioAuthorityCard } from '@/lib/intl-design-article';
 import { INTL_DESIGN_LOCALES } from '@/lib/intl-design-locales';
 
-/** Review round 2: footer language menu, menu row, Thai recommendation titles, film labels. */
+/** Review round 2: footer language menu, menu row, Thai recommendation titles, film labels, lighter Folio markup. */
 
 const read = (file: string) => readFileSync(path.join(process.cwd(), file), 'utf8');
 const css = read('src/components/intl-design/folio.css').replace(/\/\*[\s\S]*?\*\//g, '');
@@ -91,5 +102,29 @@ describe('article film label over the burned-in English one', () => {
     expect(box).toMatch(/background:\s*#101714/);
     expect(box).toMatch(/pointer-events:\s*none/);
     expect(box).toMatch(/min-height:\s*7\.5cqw/);
+  });
+});
+
+describe('lighter Folio markup (HTML budget)', () => {
+  const posts: ColumnListItem[] = ['a', 'b', 'c'].map((slug) => ({
+    slug, title: `Titre ${slug}`, date: '2026-01-02', dateDisplay: '2 janvier 2026', readTime: '3 min',
+    category: 'legal', categoryLabel: 'Informations juridiques sur Taïwan', featuredImage: `/images/${slug}.jpg`, summary: 'Résumé',
+  }));
+
+  it('column rows draw only the lead picture and no hidden overlay or hint on Folio pages', () => {
+    const fr = renderToStaticMarkup(<ColumnsGrid locale="fr" posts={posts} folioLabels={folioColumnsCopy.fr} />);
+    expect(fr.match(/<img/g)).toHaveLength(1);
+    expect(fr).toMatch(/images(%2F|\/)a\.jpg/);
+    expect(fr).not.toContain('columns-card-image-overlay');
+    expect(fr).not.toContain('columns-card-linkhint');
+    const ms = renderToStaticMarkup(<ColumnsGrid locale="ms" posts={posts} />);
+    expect(ms.match(/<img/g)).toHaveLength(3);
+    expect(ms.match(/columns-card-image-overlay/g)).toHaveLength(3);
+    expect(ms.match(/columns-card-linkhint/g)).toHaveLength(3);
+  });
+
+  it('the article attorney card carries name, role, photo and the lawyers link only', () => {
+    const card = buildFolioAuthorityCard('th');
+    expect(Object.keys(card ?? {}).sort()).toEqual(['lawyersHref', 'lawyersLabel', 'name', 'photo', 'role']);
   });
 });

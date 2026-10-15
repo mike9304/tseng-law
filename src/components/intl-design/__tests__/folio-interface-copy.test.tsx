@@ -180,10 +180,10 @@ describe('Folio chrome and list labels; other locales unchanged', () => {
     expect(ko).toContain('칼럼 검색');
   });
 
-  it('Breadcrumbs (labels from PageHeader) and ScrollTopButton', () => {
+  it('PageHeader draws no breadcrumb trail on Folio pages (DIRECTION §7, review round 2), and ScrollTopButton', () => {
     const fr = renderToStaticMarkup(<PageHeader locale="fr" label="Articles" title="Articles" />);
-    expect(fr).toContain(`aria-label="${folioChromeCopy.fr.breadcrumb}"`);
-    expect(fr).toContain(`>${guidanceContent.fr.nav.home}</a>`);
+    expect(fr).not.toContain('breadcrumb');
+    expect(fr).toContain('Articles</h1>');
     expect(renderToStaticMarkup(<PageHeader locale="ms" label="Artikel" title="Artikel" />)).toContain('>Home</a>');
     expect(renderToStaticMarkup(<Breadcrumbs locale="ko" current="칼럼" />)).toContain('>홈</a>');
     expect(renderToStaticMarkup(<ScrollTopButton locale="th" folioLabel={folioChromeCopy.th.backToTop} />)).toContain(

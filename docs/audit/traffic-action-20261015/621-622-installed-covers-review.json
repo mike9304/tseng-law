@@ -1,0 +1,76 @@
+[
+  {
+    "article": "621",
+    "source": "/Users/son7/tseng-traffic-action-20261015/merge/references/merge-close-fixed-start-v2.png",
+    "sourceSha256": "3f8098e63470e1814aeb37f1d3487b1e3c7a3e1784eeb4438ec7ec74938e4265",
+    "installed": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/images/blog/621-taiwan-lane-ending-merge-dashcam/featured-01.webp",
+    "installedSha256": "ff2600b8fdda3593b2674f28711103e668cb9a216b2333b0cd871f98771ceb4a",
+    "probes": [
+      {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1672,
+            "height": 941,
+            "pix_fmt": "rgb24"
+          }
+        ]
+      },
+      {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1672,
+            "height": 941,
+            "pix_fmt": "yuv420p"
+          }
+        ]
+      }
+    ],
+    "comparisonExit": 0,
+    "ssim": [
+      "SSIM Y:0.986450 (18.680744) U:0.976927 (16.368981) V:0.986387 (18.660443) All:0.983255 (17.761104)"
+    ],
+    "visualReviewed": true,
+    "visualResult": "MATCH: same scene composition, vehicle colors/headings/positions and road geometry; only encoding differences expected."
+  },
+  {
+    "article": "622",
+    "source": "/Users/son7/tseng-traffic-action-20261015/uncontrolled/references/aerial-aligned-start-v3.png",
+    "sourceSha256": "b57d19980fef745aa6d22eeb07073d5c30289f1b6573a25b2b3fa7b8583c5f6b",
+    "installed": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/images/blog/622-taiwan-equal-road-uncontrolled-intersection-dashcam/featured-01.webp",
+    "installedSha256": "8d56009a3f57ae2890912c51a681f486962b093d2a9f366c0c537e7a3f1cdbf5",
+    "probes": [
+      {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1672,
+            "height": 941,
+            "pix_fmt": "rgb24"
+          }
+        ]
+      },
+      {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1672,
+            "height": 941,
+            "pix_fmt": "yuv420p"
+          }
+        ]
+      }
+    ],
+    "comparisonExit": 0,
+    "ssim": [
+      "SSIM Y:0.986055 (18.555748) U:0.982410 (17.547410) V:0.985844 (18.490658) All:0.984770 (18.172932)"
+    ],
+    "visualReviewed": true,
+    "visualResult": "MATCH: same scene composition, vehicle colors/headings/positions and road geometry; only encoding differences expected."
+  }
+]

@@ -1,0 +1,250 @@
+{
+  "verdict": "PASS",
+  "reviewed_at": "2026-10-15T09:05:12.773574+00:00",
+  "reviewer": "/root/action_video_review",
+  "scope": "Final rendered local KO/ZH media and posters: AI/nonactual disclosure, separate-view captions, all8 shot starts/ends and7 internal transitions, approved trim mapping, duration, silence, decode, end frame, and consistency with article fictional premise. Prior accepted raw source-motion QA was not repeated.",
+  "producer_manifest": "/Users/son7/tseng-traffic-action-20261015/qa/uturn-action-20261015-v1-media.json",
+  "producer_manifest_sha256": "c925d3485d0b59c61df121ad50cb3a27f3e0c2a27cd070649990522d3c6de617",
+  "selection_sha256": "4ae9abe4a16183e17a765593ba8247d359b64c109a83a22dcf29447a4b6a1127",
+  "selection_matches_manifest": true,
+  "duration": 39.25,
+  "fps": 24,
+  "frame_count": 942,
+  "resolution": [
+    1280,
+    720
+  ],
+  "timeline": [
+    {
+      "shot": 1,
+      "source": "uturn-dash-turn-01.mp4",
+      "source_interval": [
+        0,
+        7.5
+      ],
+      "final_interval": [
+        0,
+        7.5
+      ],
+      "first_frame": 0,
+      "last_frame": 179,
+      "ko_caption": "별도 시점의 재현 · 마주 오던 차량의 유턴",
+      "zh_hant_caption": "另一視角示意 · 對向車跨線迴轉",
+      "rendered_caption_match": "PASS"
+    },
+    {
+      "shot": 2,
+      "source": "uturn-wide-03.mp4",
+      "source_interval": [
+        0,
+        4
+      ],
+      "final_interval": [
+        7.5,
+        11.5
+      ],
+      "first_frame": 180,
+      "last_frame": 275,
+      "ko_caption": "별도 시점의 재현 · 도로 옆에서 본 유턴과 충돌",
+      "zh_hant_caption": "另一視角示意 · 路側所見的迴轉與碰撞",
+      "rendered_caption_match": "PASS"
+    },
+    {
+      "shot": 3,
+      "source": "uturn-dash-contact-02.mp4",
+      "source_interval": [
+        0,
+        5.75
+      ],
+      "final_interval": [
+        11.5,
+        17.25
+      ],
+      "first_frame": 276,
+      "last_frame": 413,
+      "ko_caption": "별도 시점의 재현 · 차 안에서 본 접근과 충돌",
+      "zh_hant_caption": "另一視角示意 · 車內所見的接近與碰撞",
+      "rendered_caption_match": "PASS"
+    },
+    {
+      "shot": 4,
+      "source": "uturn-high-contact-01.mp4",
+      "source_interval": [
+        0,
+        4.25
+      ],
+      "final_interval": [
+        17.25,
+        21.5
+      ],
+      "first_frame": 414,
+      "last_frame": 515,
+      "ko_caption": "별도 시점의 재현 · 높은 곳에서 본 제동과 접촉",
+      "zh_hant_caption": "另一視角示意 · 高處所見的煞車與接觸",
+      "rendered_caption_match": "PASS"
+    },
+    {
+      "shot": 5,
+      "source": "uturn-top-contact-01.mp4",
+      "source_interval": [
+        0,
+        4.75
+      ],
+      "final_interval": [
+        21.5,
+        26.25
+      ],
+      "first_frame": 516,
+      "last_frame": 629,
+      "ko_caption": "별도 시점의 재현 · 위에서 본 충돌 경로",
+      "zh_hant_caption": "另一視角示意 · 俯視碰撞路徑",
+      "rendered_caption_match": "PASS"
+    },
+    {
+      "shot": 6,
+      "source": "uturn-wide-contact-01.mp4",
+      "source_interval": [
+        0,
+        3.75
+      ],
+      "final_interval": [
+        26.25,
+        30.0
+      ],
+      "first_frame": 630,
+      "last_frame": 719,
+      "ko_caption": "별도 시점의 재현 · 뒤에서 본 측면 충돌",
+      "zh_hant_caption": "另一視角示意 · 後方所見的側面碰撞",
+      "rendered_caption_match": "PASS"
+    },
+    {
+      "shot": 7,
+      "source": "uturn-low-contact-01.mp4",
+      "source_interval": [
+        0,
+        4
+      ],
+      "final_interval": [
+        30.0,
+        34.0
+      ],
+      "first_frame": 720,
+      "last_frame": 815,
+      "ko_caption": "별도 시점의 재현 · 제동과 충돌 직후 반동",
+      "zh_hant_caption": "另一視角示意 · 煞車與碰撞後的回彈",
+      "rendered_caption_match": "PASS"
+    },
+    {
+      "shot": 8,
+      "source": "uturn-dash-contact-01.mp4",
+      "source_interval": [
+        0,
+        5.25
+      ],
+      "final_interval": [
+        34.0,
+        39.25
+      ],
+      "first_frame": 816,
+      "last_frame": 941,
+      "ko_caption": "별도 시점의 재현 · 충돌 뒤 오른쪽으로 밀린 차",
+      "zh_hant_caption": "另一視角示意 · 碰撞後向右位移",
+      "rendered_caption_match": "PASS"
+    }
+  ],
+  "internal_cut_seconds": [
+    7.5,
+    11.5,
+    17.25,
+    21.5,
+    26.25,
+    30.0,
+    34.0
+  ],
+  "internal_cut_frames": [
+    180,
+    276,
+    414,
+    516,
+    630,
+    720,
+    816
+  ],
+  "media": [
+    {
+      "locale": "ko",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/videos/columns/uturn-action-20261015-v1-ko.mp4",
+      "sha256": "e92c1e62bbe44cf5be68531d9fa7794ad92a888a899998958bf1cf8cbf97b967",
+      "poster": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/images/column-videos/uturn-action-20261015-v1-ko.jpg",
+      "poster_sha256": "c58f71aa4d26308a91f3a3b654aabb84a5e3eda1c6610d2d0b042173b99382f3",
+      "decode_exit": 0,
+      "audio_stream_count": 0,
+      "verdict": "PASS"
+    },
+    {
+      "locale": "zh-hant",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/videos/columns/uturn-action-20261015-v1-zh-hant.mp4",
+      "sha256": "8cf35c94ca91e696595c52fc5e80779479947f0b755a16d37bbef63679b2e6ec",
+      "poster": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/images/column-videos/uturn-action-20261015-v1-zh-hant.jpg",
+      "poster_sha256": "2e8bfaf4a8f88c3f80cd35ededa11f23f1fa723bba814f855b892c332309bc1c",
+      "decode_exit": 0,
+      "audio_stream_count": 0,
+      "verdict": "PASS"
+    }
+  ],
+  "observed": [
+    "Independently extracted entire1fps sequence plus last frame for both final files and actually opened all6 sheets.",
+    "Actually opened all6 cut sheets with two frames before and first two frames after every internal cut, plus opening frame and final two frames.",
+    "Actually opened both posters at1280x720. Posters show initial silver dash approach to distant blue car with double yellow, not a collision still.",
+    "Persistent AI fictional/nonactual footage disclosure visible in both languages on all inspected frames and posters.",
+    "Each of8 shots has a separate-view label from its first frame. Caption contents match the shown camera and action; no clipping or missing glyphs observed.",
+    "7 internal cuts are7.5,11.5,17.25,21.5,26.25,30,34 seconds; both last old-view/first new-view frames have the correct matching caption and no black/mixed/lag frame.",
+    "Final frame n941 at39.208333 retains damaged blue front-side and silver hood with AI and separate-view labels. No added black ending or source tail beyond approved5.25s.",
+    "Article fictional premise is blue crossing continuous double yellow into silver straight-ahead path; rendered captions and two posters do not assert a real incident, fixed fault percentage, measured speed/force or certified timing.",
+    "Both media SHA and selection SHA match actual canonical producer manifest. Each final has942 video frames,24fps,39.25seconds, no audio stream, and full decode exit0."
+  ],
+  "not_claimed": [
+    "Realtime playback, public deployment, desktop/mobile browser layout, or audio listening.",
+    "Physical dynamics calibration, synchronized multicamera evidence, independent revalidation of legal articles."
+  ],
+  "unresolved_findings": [],
+  "articles_read": [
+    {
+      "locale": "ko",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/601-taiwan-double-yellow-uturn-dashcam-liability.md",
+      "sha256": "f24cee18f92ff0f2359dd2bfa314e8397d494b595c0ba4114d0280eb9aca8772",
+      "scope": "Read for fictional scene/vehicle/line-direction consistency only; not a new legal or prose audit."
+    },
+    {
+      "locale": "zh-hant",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/601-taiwan-double-yellow-uturn-dashcam-liability.md",
+      "sha256": "bbcd86ce140cd8b56c884531b39e9f62e5304e4f9a40f799d8b4876aca6c276e",
+      "scope": "Read for fictional scene/vehicle/line-direction consistency only; not a new legal or prose audit."
+    }
+  ],
+  "evidence": {
+    "probe_hash_decode": "manifest.json",
+    "whole_sheets": [
+      "ko-whole-1fps-page-1.jpg",
+      "ko-whole-1fps-page-2.jpg",
+      "ko-whole-1fps-page-3.jpg",
+      "zh-hant-whole-1fps-page-1.jpg",
+      "zh-hant-whole-1fps-page-2.jpg",
+      "zh-hant-whole-1fps-page-3.jpg"
+    ],
+    "cut_sheets": [
+      "ko-cuts-page-1.jpg",
+      "ko-cuts-page-2.jpg",
+      "ko-cuts-page-3.jpg",
+      "zh-hant-cuts-page-1.jpg",
+      "zh-hant-cuts-page-2.jpg",
+      "zh-hant-cuts-page-3.jpg"
+    ],
+    "posters": [
+      "ko-poster.jpg",
+      "zh-hant-poster.jpg"
+    ],
+    "full_resolution_frames": "ko/ and zh-hant/ with index.json files"
+  },
+  "ownership": "Only qa/video-review/final-601 QA outputs written. Videos, posters, selections, source media, articles and repository not changed."
+}

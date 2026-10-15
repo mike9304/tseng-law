@@ -1,0 +1,278 @@
+{
+  "checked_at": "2026-10-15T18:02:44.756276+09:00",
+  "reviewer": "Codex /root/traffic_legal_review",
+  "verdict": "PASS",
+  "article_count": 8,
+  "scope": "621–624 KO/zh-hant 칼럼의 현재 exact bytes, 기존 법률·문체·FAQ·프런트매터 검수 및 623 후속 수정의 연결 확인. 새 전면 법률조사나 사이트 배포 검증은 수행하지 않음.",
+  "summary": "621·622·624 양 언어는 기존 최종 법률·문체 검수 파일과 바이트가 일치한다. 623 양 언어는 차종·접촉 표현 수정 및 회전 전 표지 alt 수정의 최종 PASS 해시와 일치한다. 현재 8편의 다양성 검사는 모두 FAIL0이며, 기존 검수와 후속 수정 범위 내 미해결 발견사항은 없다.",
+  "unresolved_major": 0,
+  "unresolved_minor": 0,
+  "exact_byte_match_count": 8,
+  "variety_fail_count_total": 0,
+  "section5_status": "기존 Codex 문체 실독·규칙5절 검수는 independent-legal-review.md에 기록. 623 변경 뒤 재점검은623-revision-review.json에 있으며 최종 alt만의 변경은 별도 SHA 복원 검사로 확인. 동일 바이트인 나머지6개는 기존 검수 결과 유지. 어미 WARN은 원래 기록을 보존하며 FAIL로 오인하지 않음.",
+  "review_times": {
+    "full_legal_editorial_final": "2026-10-15T16:47:55.282068+09:00",
+    "623_final_alt_resolved": "2026-10-15T17:56:05.968576+09:00",
+    "current_byte_and_variety_check": "2026-10-15T18:02:44.756276+09:00",
+    "primary_official_sources_opened_date": "2026-10-15",
+    "official_database_cutoff_displayed": "2026-10-08"
+  },
+  "rules_and_methods": [
+    "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/docs/columns/EDITORIAL-VOICE.md",
+    "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+    "/Users/son7/tseng-lanes-shared/LESSONS.md",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py"
+  ],
+  "official_source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=100",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=93",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=98"
+  ],
+  "reports": [
+    {
+      "purpose": "full_legal_editorial_review",
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/independent-legal-review.md",
+      "sha256": "f663ed70736f08c3eb9620178b10689595cbd312a343ae87ba1c56e25824af94"
+    },
+    {
+      "purpose": "full_legal_final_evidence",
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-review-final-evidence.json",
+      "sha256": "83148f5f30144ac9d54ae44434e10b2e38ce2978e940159dd21479c13de53fd3"
+    },
+    {
+      "purpose": "623_vehicle_contact_editorial_revision",
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/623-revision-review.json",
+      "sha256": "3dba391310653007630223f1f6be8e848aca444fa60848b90c17849f3710fe80"
+    },
+    {
+      "purpose": "623_final_alt_and_media_review",
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/verdict.json",
+      "sha256": "9ac14611d612ffe3bb072d83ac38459db71012d1e8575292c4dc14ddad0a2a93"
+    },
+    {
+      "purpose": "623_alt_only_byte_validation",
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/alt-revision-validation.json",
+      "sha256": "74c9289b9265ed85f8b3c8311ae2336da4d6b2fbcd58d682795502d49e3c8d9f"
+    },
+    {
+      "purpose": "current_exact_byte_variety_results",
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-articles-variety.json",
+      "sha256": "a148758eaa11b2555ba54d28fe91f79464ded2810cddaa1aedb34cfb473478a3"
+    }
+  ],
+  "articles": [
+    {
+      "article_id": 621,
+      "language": "ko",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/621-taiwan-lane-ending-merge-dashcam.md",
+      "repo_relative_path": "src/content/columns/621-taiwan-lane-ending-merge-dashcam.md",
+      "bytes": 7878,
+      "sha256": "f945c5ff90844a99af58db6f5c1980f2cc222112913a08baa9878a6b71809e93",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-review-final-evidence.json",
+      "review_evidence_entry": "rows[src/content/columns/621-taiwan-lane-ending-merge-dashcam.md]",
+      "full_legal_review_sha256": "f945c5ff90844a99af58db6f5c1980f2cc222112913a08baa9878a6b71809e93",
+      "changed_since_full_legal_review": false,
+      "change_review": null,
+      "alt_revision_review": null,
+      "variety_fail_count": 0,
+      "variety_warning": [
+        "WARN 92% of sentences end in '니다.' — vary endings within the register"
+      ],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=98"
+      ]
+    },
+    {
+      "article_id": 621,
+      "language": "zh-hant",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/621-taiwan-lane-ending-merge-dashcam.md",
+      "repo_relative_path": "src/content/columns-zh/621-taiwan-lane-ending-merge-dashcam.md",
+      "bytes": 6012,
+      "sha256": "befb8ef2bb6bdad7ecfa0fa9e18c792e71100be8ef473bee1e07d062125030b9",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-review-final-evidence.json",
+      "review_evidence_entry": "rows[src/content/columns-zh/621-taiwan-lane-ending-merge-dashcam.md]",
+      "full_legal_review_sha256": "befb8ef2bb6bdad7ecfa0fa9e18c792e71100be8ef473bee1e07d062125030b9",
+      "changed_since_full_legal_review": false,
+      "change_review": null,
+      "alt_revision_review": null,
+      "variety_fail_count": 0,
+      "variety_warning": [],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=98"
+      ]
+    },
+    {
+      "article_id": 622,
+      "language": "ko",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "repo_relative_path": "src/content/columns/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "bytes": 8511,
+      "sha256": "4de439db9d2dd68cbb1dd0fc78c7e2c41011d8ffeffb8535ebd35c7fc3315e92",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-review-final-evidence.json",
+      "review_evidence_entry": "rows[src/content/columns/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md]",
+      "full_legal_review_sha256": "4de439db9d2dd68cbb1dd0fc78c7e2c41011d8ffeffb8535ebd35c7fc3315e92",
+      "changed_since_full_legal_review": false,
+      "change_review": null,
+      "alt_revision_review": null,
+      "variety_fail_count": 0,
+      "variety_warning": [
+        "WARN 90% of sentences end in '니다.' — vary endings within the register"
+      ],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=93",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94"
+      ]
+    },
+    {
+      "article_id": 622,
+      "language": "zh-hant",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "repo_relative_path": "src/content/columns-zh/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "bytes": 6565,
+      "sha256": "b0a6aebc6a162a35610aa2aa91e68eed2ffe41b7315936b196a307fb56d6da3f",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-review-final-evidence.json",
+      "review_evidence_entry": "rows[src/content/columns-zh/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md]",
+      "full_legal_review_sha256": "b0a6aebc6a162a35610aa2aa91e68eed2ffe41b7315936b196a307fb56d6da3f",
+      "changed_since_full_legal_review": false,
+      "change_review": null,
+      "alt_revision_review": null,
+      "variety_fail_count": 0,
+      "variety_warning": [],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=93",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94"
+      ]
+    },
+    {
+      "article_id": 623,
+      "language": "ko",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+      "repo_relative_path": "src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+      "bytes": 7557,
+      "sha256": "891abddfb90b0af8dbc3ebf7d8b12df5439e136d47069f1ef4002dea5e6ccc39",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/verdict.json",
+      "review_evidence_entry": "articles_final[/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md]",
+      "full_legal_review_sha256": "24986510b4cd150a2432bd33854d60a9aaa65f5cb052d5da5905ae5a9d469883",
+      "changed_since_full_legal_review": true,
+      "change_review": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/623-revision-review.json",
+      "alt_revision_review": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/alt-revision-validation.json",
+      "variety_fail_count": 0,
+      "variety_warning": [
+        "WARN 84% of sentences end in '니다.' — vary endings within the register"
+      ],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94"
+      ]
+    },
+    {
+      "article_id": 623,
+      "language": "zh-hant",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+      "repo_relative_path": "src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+      "bytes": 5765,
+      "sha256": "e07763fde0a83654f31f94669410999d574ec630db83bfc23e319729b3d3f314",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/verdict.json",
+      "review_evidence_entry": "articles_final[/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md]",
+      "full_legal_review_sha256": "543bdba5ab1b8f2c2fb1d000cc61324f39347fd5067e4a8a978efcf18e137b61",
+      "changed_since_full_legal_review": true,
+      "change_review": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/623-revision-review.json",
+      "alt_revision_review": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/alt-revision-validation.json",
+      "variety_fail_count": 0,
+      "variety_warning": [],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94"
+      ]
+    },
+    {
+      "article_id": 624,
+      "language": "ko",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/624-taiwan-mountain-road-meeting-collision.md",
+      "repo_relative_path": "src/content/columns/624-taiwan-mountain-road-meeting-collision.md",
+      "bytes": 7763,
+      "sha256": "5d1127f92469371312f4fb1c565419ab8cff21918e1c630bddb401b88b73e08c",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-review-final-evidence.json",
+      "review_evidence_entry": "rows[src/content/columns/624-taiwan-mountain-road-meeting-collision.md]",
+      "full_legal_review_sha256": "5d1127f92469371312f4fb1c565419ab8cff21918e1c630bddb401b88b73e08c",
+      "changed_since_full_legal_review": false,
+      "change_review": null,
+      "alt_revision_review": null,
+      "variety_fail_count": 0,
+      "variety_warning": [
+        "WARN 92% of sentences end in '니다.' — vary endings within the register"
+      ],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=100",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=93",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94"
+      ]
+    },
+    {
+      "article_id": 624,
+      "language": "zh-hant",
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/624-taiwan-mountain-road-meeting-collision.md",
+      "repo_relative_path": "src/content/columns-zh/624-taiwan-mountain-road-meeting-collision.md",
+      "bytes": 6157,
+      "sha256": "a896c0ed1da8e313e3459dba9ef8c0d7e92747877e5e132759b440e94f6d878b",
+      "verdict": "PASS",
+      "matches_final_reviewed_bytes": true,
+      "review_evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-review-final-evidence.json",
+      "review_evidence_entry": "rows[src/content/columns-zh/624-taiwan-mountain-road-meeting-collision.md]",
+      "full_legal_review_sha256": "a896c0ed1da8e313e3459dba9ef8c0d7e92747877e5e132759b440e94f6d878b",
+      "changed_since_full_legal_review": false,
+      "change_review": null,
+      "alt_revision_review": null,
+      "variety_fail_count": 0,
+      "variety_warning": [],
+      "legal_source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=100",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=93",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94"
+      ]
+    }
+  ],
+  "limits": [
+    "이 인덱스는 명시된 해시의 파일에 적용된다. 이후 바이트 변경에는 자동 승계되지 않는다.",
+    "검수 주체는 Codex이며 사람·변호사·원어민 검수 인증을 뜻하지 않는다.",
+    "미디어 최종 출력 검수와 공개 사이트 재생·연결·배포 승인은 별도 기록 및 root 책임 범위다."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-10-15T09:07:08.638Z",
+  "data": null,
+  "scope": "isolated repo-fallback preflight build; actual production deploy uses Air frozen builder data",
+  "pages": 2256,
+  "sitemapUrls": 2251,
+  "sitemapMissing": [],
+  "brokenRefs": {},
+  "oversize": [],
+  "flightErrors": {},
+  "crawlMissing": [],
+  "mediaMissingReferences": [
+    "images/004-taiwan-employment-contract-guide/featured-01.jpg",
+    "images/hover.jpg",
+    "images/video-poster.jpg",
+    "videos/builder-background.mp4",
+    "videos/intro.mp4"
+  ]
+}

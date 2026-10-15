@@ -1,0 +1,20 @@
+[
+  {
+    "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+    "sha256": "891abddfb90b0af8dbc3ebf7d8b12df5439e136d47069f1ef4002dea5e6ccc39",
+    "alt": "featured_image_alt: \"회전 전 교차로의 맞은편 진입로에 있는 은색 세단과 파란 차의 AI 가상 장면\"",
+    "only_alt_changed_from_reviewed_article": true,
+    "exit_code": 0,
+    "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md [ko] sentences=37 mean=31.8 cv=0.45 short=0.189 run3=0.057 opener_rep=0.0 cite_end=0.054 cite_para=0.583 contrast=0 caveat=0 q=1\n  WARN 84% of sentences end in '니다.' — vary endings within the register\n",
+    "stderr": ""
+  },
+  {
+    "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+    "sha256": "e07763fde0a83654f31f94669410999d574ec630db83bfc23e319729b3d3f314",
+    "alt": "featured_image_alt: \"銀色轎車與藍色車輛轉彎前位於路口對向入口的AI虛構畫面\"",
+    "only_alt_changed_from_reviewed_article": true,
+    "exit_code": 0,
+    "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md [zh-hant] sentences=34 mean=25.7 cv=0.492 short=0.235 run3=0.094 opener_rep=0.0 cite_end=0.059 cite_para=0.583 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  }
+]

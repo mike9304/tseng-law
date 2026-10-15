@@ -1,0 +1,102 @@
+{
+  "reviewed_at": "2026-10-15T17:43:10.627258+09:00",
+  "reviewer": "Codex /root/traffic_legal_review; independent editorial/legal review, not lawyer or native-speaker certification",
+  "verdict": "PASS",
+  "scope": "623 KO/ZH body-type/contact edits and final KO alt particle correction, whole-file meaning preservation, variety rule section5. Existing official-law text PASS retained. This file supplies revised hashes for parent aggregate review; outside-scope reports were not edited.",
+  "articles": [
+    {
+      "language": "ko",
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "edc9aaa4fcf455a3d6a297f36cc8bca1322ee5eb77ca2108e3f4786a7d376af0",
+      "verdict": "PASS",
+      "reviewed_lines": [
+        12,
+        29
+      ],
+      "variety_fail_count": 0
+    },
+    {
+      "language": "zh-hant",
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "81584ff01b5051b498531a668edbdc51566e0097f39eb83da11ff5b713e98487",
+      "verdict": "PASS",
+      "reviewed_lines": [
+        12,
+        29
+      ],
+      "variety_fail_count": 0
+    }
+  ],
+  "resolved_issues": [
+    {
+      "issue": "KO contact described both sides meeting",
+      "before": "두 차의 옆면이 닿습니다.",
+      "after": "은색 차의 앞모서리와 파란 차의 옆면이 닿습니다.",
+      "why": "Matches selected corner-to-side contact without fixing an unverified exact blue panel.",
+      "meaning_preserved": true
+    },
+    {
+      "issue": "Blue hatchback body type not stable across generated viewpoints",
+      "before": "파란 해치백 / 藍色掀背車",
+      "after": "파란 차 / 藍色車輛",
+      "why": "Color and opposing turn direction remain; body class is not a legal condition.",
+      "meaning_preserved": true
+    },
+    {
+      "issue": "KO alt particle introduced during generalization",
+      "before": "파란 차이",
+      "after": "파란 차가",
+      "why": "Grammatical particle corrected; image meaning unchanged.",
+      "meaning_preserved": true
+    }
+  ],
+  "section5_self_check": [
+    {
+      "item": 1,
+      "result": "FAIL 0 both languages; evidence 623-revision-variety.json."
+    },
+    {
+      "item": 2,
+      "result": "Opening remains specific to opposing turns, distinct from other new topics; no generic preview introduction."
+    },
+    {
+      "item": 3,
+      "result": "At least two very short sentences remain: KO 직진차는 없습니다./고정 비율은 없습니다.; ZH 沒有直行車。/沒有固定比例。; sentence lengths interspersed."
+    },
+    {
+      "item": 4,
+      "result": "Paragraph openings vary; no three identical consecutive openers."
+    },
+    {
+      "item": 5,
+      "result": "No three repeated claim-caveat chains; scene and evidence paragraphs vary organization and citation placement."
+    },
+    {
+      "item": 6,
+      "result": "Automated contrast count 0; no strawman opposition."
+    },
+    {
+      "item": 7,
+      "result": "Ending asks for the turn-start positions and same-lane process, not a copied sales line."
+    },
+    {
+      "item": 8,
+      "result": "KO register is consistent; no decorative bold, invented first-person experience, or checklist-like headings."
+    },
+    {
+      "item": 9,
+      "result": "Law, obligation, conditions, exceptions, citations and AI disclosure retained. Vehicle class/contact specificity only refined."
+    }
+  ],
+  "variety_warning": {
+    "ko": "84% sentence endings in 니다; warning retained, not FAIL. Codex editorial review found varied length, paragraph openings and structure; this narrow revision did not introduce monotony.",
+    "zh-hant": null
+  },
+  "unresolved_major": 0,
+  "unresolved_minor": 0,
+  "official_sources": [
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102"
+  ],
+  "official_source_check": "Opened 2026-10-15 in prior full review; unchanged law claims were not re-browsed for these visual wording edits.",
+  "evidence": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/623-revision-variety.json"
+}

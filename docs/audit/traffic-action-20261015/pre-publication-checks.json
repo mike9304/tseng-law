@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-15T09:14:23.431348+00:00",
+  "reviewer": "Codex /root",
+  "status": "pre-publication-checks-passed",
+  "unit": {
+    "filesPassed": 1431,
+    "testsPassed": 14851,
+    "skipped": 14,
+    "todo": 1,
+    "initialFailures": "4 fixture failures: missing621–624 verified dates and49→53 board total. Fixed exact expectations; complete rerun passed."
+  },
+  "typecheck": "PASS; static build additionally typechecked final video registry import",
+  "lint": "Fullsrc PASS;3final changed fixture files PASS after expected counts/dates update",
+  "variety": "All8 final exact-byte articles FAIL0; warnings preserved in final-articles-variety.json",
+  "build": "Clean .next-static then full2256-page crawl; broken refs0, missing crawl0, sitemap2251/2251, flight errors0",
+  "pack": {
+    "expandedBytes": 158892829,
+    "limitBytes": 268435456
+  },
+  "browser": {
+    "articleViewportChecks": 24,
+    "boardAndSearchRealClickChecks": 12,
+    "sitemap": true,
+    "pageErrors": 0,
+    "source": "static-browser-results.json"
+  },
+  "visual": "Primary inspected final films and4installed covers; representative mobile/desktop browser screenshots directly opened. Independent final video QA passed six cases.",
+  "scope": "Local repo-fallback preview; production frozen builder content and live network assets still to be verified after existing Air deployer publishes main.",
+  "logs": {
+    "unit-tests-final.log": {
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/unit-tests-final.log",
+      "sha256": "7e524c24c20df63b68d7216b9a3172b166b6bcd6271b2abd9afa69bd326ab4eb"
+    },
+    "typecheck.log": {
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/typecheck.log",
+      "sha256": "9fb5235f67a105a5aab0ddc282c571908aa17d1b2579b52dd2d6eb359c3d4838"
+    },
+    "lint.log": {
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/lint.log",
+      "sha256": "c6de36bd5b72dbf76ff0fe6a003a3990c23661fa8a32450d421ef60e505d2e3f"
+    },
+    "lint-final-fixtures.log": {
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/lint-final-fixtures.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "static-build.log": {
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/static-build.log",
+      "sha256": "b6809410386238951bf332b24745d38a328cae20f578afc0fac547f1841ac674"
+    },
+    "static-browser.log": {
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/static-browser.log",
+      "sha256": "6078d9c6bd913bacfcf4f76fc6073e7453ce303e841de36682062e566f9c1465"
+    },
+    "sites-pack.log": {
+      "path": "/Users/son7/tseng-traffic-action-20261015/qa/sites-pack.log",
+      "sha256": "5924067176828146ad54411e76a621a60c402838c7ffe21be5f39f372bf1b7d7"
+    }
+  }
+}

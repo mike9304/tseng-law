@@ -1,0 +1,151 @@
+{
+  "checked_at": "2026-10-15T18:02:44.756276+09:00",
+  "reviewer": "Codex /root/traffic_legal_review",
+  "all_fail_zero": true,
+  "rows": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/621-taiwan-lane-ending-merge-dashcam.md",
+      "sha256": "f945c5ff90844a99af58db6f5c1980f2cc222112913a08baa9878a6b71809e93",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/621-taiwan-lane-ending-merge-dashcam.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/621-taiwan-lane-ending-merge-dashcam.md [ko] sentences=38 mean=35.4 cv=0.479 short=0.158 run3=0.0 opener_rep=0.077 cite_end=0.026 cite_para=0.385 contrast=0 caveat=0 q=1\n  WARN 92% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "hash_stable_after": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/621-taiwan-lane-ending-merge-dashcam.md",
+      "sha256": "befb8ef2bb6bdad7ecfa0fa9e18c792e71100be8ef473bee1e07d062125030b9",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/621-taiwan-lane-ending-merge-dashcam.md",
+        "--lang",
+        "zh-hant"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/621-taiwan-lane-ending-merge-dashcam.md [zh-hant] sentences=35 mean=28.4 cv=0.495 short=0.2 run3=0.0 opener_rep=0.0 cite_end=0.029 cite_para=0.385 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "hash_stable_after": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "sha256": "4de439db9d2dd68cbb1dd0fc78c7e2c41011d8ffeffb8535ebd35c7fc3315e92",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md [ko] sentences=39 mean=33.3 cv=0.482 short=0.205 run3=0.054 opener_rep=0.0 cite_end=0.026 cite_para=0.385 contrast=0 caveat=0 q=2\n  WARN 90% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "hash_stable_after": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "sha256": "b0a6aebc6a162a35610aa2aa91e68eed2ffe41b7315936b196a307fb56d6da3f",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+        "--lang",
+        "zh-hant"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md [zh-hant] sentences=38 mean=26.2 cv=0.549 short=0.237 run3=0.056 opener_rep=0.0 cite_end=0.026 cite_para=0.385 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "hash_stable_after": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "891abddfb90b0af8dbc3ebf7d8b12df5439e136d47069f1ef4002dea5e6ccc39",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md [ko] sentences=37 mean=31.8 cv=0.45 short=0.189 run3=0.057 opener_rep=0.0 cite_end=0.054 cite_para=0.583 contrast=0 caveat=0 q=1\n  WARN 84% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "hash_stable_after": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "e07763fde0a83654f31f94669410999d574ec630db83bfc23e319729b3d3f314",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+        "--lang",
+        "zh-hant"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md [zh-hant] sentences=34 mean=25.7 cv=0.492 short=0.235 run3=0.094 opener_rep=0.0 cite_end=0.059 cite_para=0.583 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "hash_stable_after": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/624-taiwan-mountain-road-meeting-collision.md",
+      "sha256": "5d1127f92469371312f4fb1c565419ab8cff21918e1c630bddb401b88b73e08c",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/624-taiwan-mountain-road-meeting-collision.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/624-taiwan-mountain-road-meeting-collision.md [ko] sentences=38 mean=33.7 cv=0.453 short=0.158 run3=0.0 opener_rep=0.077 cite_end=0.026 cite_para=0.538 contrast=0 caveat=0 q=1\n  WARN 92% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "hash_stable_after": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/624-taiwan-mountain-road-meeting-collision.md",
+      "sha256": "a896c0ed1da8e313e3459dba9ef8c0d7e92747877e5e132759b440e94f6d878b",
+      "checked_at": "2026-10-15T18:02:44.756276+09:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/624-taiwan-mountain-road-meeting-collision.md",
+        "--lang",
+        "zh-hant"
+      ],
+      "exit_code": 0,
+      "fail_count": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/624-taiwan-mountain-road-meeting-collision.md [zh-hant] sentences=39 mean=25.1 cv=0.475 short=0.205 run3=0.027 opener_rep=0.0 cite_end=0.026 cite_para=0.538 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "hash_stable_after": true
+    }
+  ]
+}

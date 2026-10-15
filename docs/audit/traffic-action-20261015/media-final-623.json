@@ -1,0 +1,307 @@
+{
+  "reviewed_at": "2026-10-15T17:53:25.051185+09:00",
+  "reviewer": "Codex /root/traffic_legal_review; independent visual/editorial QA, not human/lawyer/native-speaker certification",
+  "verdict": "PASS",
+  "final_master_verdict": "PASS",
+  "scope": "623 KO/ZH final19.25s masters, localized posters, top-start cover and article-media alignment. Previously approved raw source motion was not re-reviewed. Website playback/integration and publication approval excluded.",
+  "method": "Independently extracted start/middle/last of each of4segments for each language, viewed both12-frame sheets (24frames total). Viewed last contact frame at native resolution in both languages (2native frames) and raw cover plus both posters.",
+  "selection": {
+    "path": "/Users/son7/tseng-traffic-action-20261015/selections/623.json",
+    "sha256": "85e853dbfa89131fb6b197cdd9edcf8d8f4fefb4a7138f478c5ba7e1fce7fb7f",
+    "matches_render_manifest": true,
+    "all_4_source_hashes_match": true,
+    "boundaries_seconds": [
+      6.0,
+      10.25,
+      14.5,
+      19.25
+    ]
+  },
+  "masters": [
+    {
+      "source": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/videos/columns/opposing-turns-action-20261015-v1-ko.mp4",
+      "sha256": "535acaccbde3c0f0684412681e19cc6de1b4156e80b4a28936d3e3b476d06d94",
+      "locale": "ko",
+      "verdict": "PASS",
+      "duration_seconds": 19.25,
+      "frames": 462,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audio_streams": 0,
+      "sheet_actually_viewed": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko-boundaries.jpg",
+      "sampled_frames": [
+        {
+          "frame": 0,
+          "timestamp": 0.0,
+          "purpose": "s1-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-001.png"
+        },
+        {
+          "frame": 72,
+          "timestamp": 3.0,
+          "purpose": "s1-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-002.png"
+        },
+        {
+          "frame": 143,
+          "timestamp": 5.958333333333333,
+          "purpose": "s1-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-003.png"
+        },
+        {
+          "frame": 144,
+          "timestamp": 6.0,
+          "purpose": "s2-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-004.png"
+        },
+        {
+          "frame": 195,
+          "timestamp": 8.125,
+          "purpose": "s2-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-005.png"
+        },
+        {
+          "frame": 245,
+          "timestamp": 10.208333333333334,
+          "purpose": "s2-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-006.png"
+        },
+        {
+          "frame": 246,
+          "timestamp": 10.25,
+          "purpose": "s3-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-007.png"
+        },
+        {
+          "frame": 297,
+          "timestamp": 12.375,
+          "purpose": "s3-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-008.png"
+        },
+        {
+          "frame": 347,
+          "timestamp": 14.458333333333334,
+          "purpose": "s3-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-009.png"
+        },
+        {
+          "frame": 348,
+          "timestamp": 14.5,
+          "purpose": "s4-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-010.png"
+        },
+        {
+          "frame": 405,
+          "timestamp": 16.875,
+          "purpose": "s4-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-011.png"
+        },
+        {
+          "frame": 461,
+          "timestamp": 19.208333333333332,
+          "purpose": "s4-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-012.png"
+        }
+      ]
+    },
+    {
+      "source": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/videos/columns/opposing-turns-action-20261015-v1-zh-hant.mp4",
+      "sha256": "256592a722bc47af7cf3eb6a1ec52bd75f0a0c3521628796281665fd82c643ed",
+      "locale": "zh-hant",
+      "verdict": "PASS",
+      "duration_seconds": 19.25,
+      "frames": 462,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audio_streams": 0,
+      "sheet_actually_viewed": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant-boundaries.jpg",
+      "sampled_frames": [
+        {
+          "frame": 0,
+          "timestamp": 0.0,
+          "purpose": "s1-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-001.png"
+        },
+        {
+          "frame": 72,
+          "timestamp": 3.0,
+          "purpose": "s1-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-002.png"
+        },
+        {
+          "frame": 143,
+          "timestamp": 5.958333333333333,
+          "purpose": "s1-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-003.png"
+        },
+        {
+          "frame": 144,
+          "timestamp": 6.0,
+          "purpose": "s2-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-004.png"
+        },
+        {
+          "frame": 195,
+          "timestamp": 8.125,
+          "purpose": "s2-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-005.png"
+        },
+        {
+          "frame": 245,
+          "timestamp": 10.208333333333334,
+          "purpose": "s2-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-006.png"
+        },
+        {
+          "frame": 246,
+          "timestamp": 10.25,
+          "purpose": "s3-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-007.png"
+        },
+        {
+          "frame": 297,
+          "timestamp": 12.375,
+          "purpose": "s3-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-008.png"
+        },
+        {
+          "frame": 347,
+          "timestamp": 14.458333333333334,
+          "purpose": "s3-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-009.png"
+        },
+        {
+          "frame": 348,
+          "timestamp": 14.5,
+          "purpose": "s4-start",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-010.png"
+        },
+        {
+          "frame": 405,
+          "timestamp": 16.875,
+          "purpose": "s4-mid",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-011.png"
+        },
+        {
+          "frame": 461,
+          "timestamp": 19.208333333333332,
+          "purpose": "s4-last",
+          "path": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-012.png"
+        }
+      ]
+    }
+  ],
+  "native_frames_actually_viewed": [
+    "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/ko/frame-012.png",
+    "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/zh-hant/frame-012.png"
+  ],
+  "assets": [
+    {
+      "path": "/Users/son7/tseng-traffic-action-20261015/turns-mountain/turns/references/top-start.png",
+      "sha256": "54c2021c596da39a44cce73487b12fd78e28fa8474a9502e6f0398c96059164f",
+      "role": "Selected raw article cover",
+      "actually_viewed": true,
+      "finding": "Two vehicles remain in opposing approach lanes before turning; no post-turn shared-exit movement is depicted. AI label is supplied by article caption/alt, not burned into this raw image."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/images/column-videos/opposing-turns-action-20261015-v1-ko.jpg",
+      "sha256": "0ab2b8865659b5feb4dcde21d3789a3a3743c25d3c358be16a79c27d878e7ffb",
+      "role": "ko localized video poster",
+      "actually_viewed": true,
+      "finding": "First approach view with readable AI/independent-view overlays; no collision claim."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/public/images/column-videos/opposing-turns-action-20261015-v1-zh-hant.jpg",
+      "sha256": "0680feb4df5c9c5e348299e66c06f9235cc5dda7eec04a54d8ac0f7107df497f",
+      "role": "zh-hant localized video poster",
+      "actually_viewed": true,
+      "finding": "First approach view with readable AI/independent-view overlays; no collision claim."
+    }
+  ],
+  "articles_at_initial_final_review": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "891abddfb90b0af8dbc3ebf7d8b12df5439e136d47069f1ef4002dea5e6ccc39",
+      "alt": "featured_image_alt: \"회전 전 교차로의 맞은편 진입로에 있는 은색 세단과 파란 차의 AI 가상 장면\""
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "e07763fde0a83654f31f94669410999d574ec630db83bfc23e319729b3d3f314",
+      "alt": "featured_image_alt: \"銀色轎車與藍色車輛轉彎前位於路口對向入口的AI虛構畫面\""
+    }
+  ],
+  "checks": {
+    "AI_disclosure_readable_all_sampled_frames": true,
+    "independent_view_label_present_all_sampled_frames": true,
+    "four_cuts_match_selected_ranges": true,
+    "caption_changes_match_cut_boundaries": true,
+    "approach_only_first_cut_does_not_claim_contact": true,
+    "close_contact_caption_matches_corner_to_side": true,
+    "no_quantified_speed_distance_fault_claim": true,
+    "final_masters_silent_by_stream_probe": true,
+    "body_contact_wording_matches_selected_views": true,
+    "cover_alt_timing_matches": true
+  },
+  "findings": [
+    {
+      "id": "623-cover-alt-timing",
+      "severity": "MINOR",
+      "status": "RESOLVED",
+      "files": [
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+        "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md"
+      ],
+      "line": 12,
+      "sentences": [
+        "은색 세단과 파란 차가 맞은편에서 회전해 같은 출구 차로로 향하는 AI 가상 교차로 장면",
+        "銀色轎車與藍色車輛從對向轉彎後朝同一出口車道行駛的AI虛構路口畫面"
+      ],
+      "why": "Selected top-start.png depicts two vehicles before turning, still on opposing approaches. Both alt fields describe a later turning/post-turn state, especially ZH轉彎後.",
+      "required_change": "Describe the pre-turn opposing approach shown by the selected cover.",
+      "proposed_ko": "회전 전 교차로의 맞은편 진입로에 있는 은색 세단과 파란 차의 AI 가상 장면",
+      "proposed_zh_hant": "銀色轎車與藍色車輛轉彎前位於路口對向入口的AI虛構畫面",
+      "meaning_preserved": "Preserves both vehicle colors, opposing origins, hypothetical AI character and all legal/body text; narrows only the cover image time.",
+      "source": "/Users/son7/tseng-traffic-action-20261015/turns-mountain/turns/references/top-start.png",
+      "source_sha256": "54c2021c596da39a44cce73487b12fd78e28fa8474a9502e6f0398c96059164f",
+      "parent_notified": true,
+      "video_rerender_required": false,
+      "resolved_at": "2026-10-15T17:56:05.968576+09:00",
+      "resolution": "Parent applied pre-turn alt in both languages. Replacing each new alt with the prior alt reconstructs the exact prior SHA, proving no other article byte changed. Both variety checks remain FAIL0; prior section5 assessment and legal text PASS retained."
+    }
+  ],
+  "unresolved_major": 0,
+  "unresolved_minor": 0,
+  "official_source": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102",
+  "official_source_check": "Opened2026-10-15 in earlier legal/source QA. Current master adds no new legal claim; existing text law PASS remains.",
+  "limits": [
+    "Sampled frames do not certify every final frame.",
+    "Source audio not listened to; final files have no audio stream.",
+    "Raw cover correctness is distinct from website featured-image integration."
+  ],
+  "evidence_manifest": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/extraction-manifest.json",
+  "final_approval_owner": "/root",
+  "updated_at": "2026-10-15T17:56:05.968576+09:00",
+  "articles_final": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "891abddfb90b0af8dbc3ebf7d8b12df5439e136d47069f1ef4002dea5e6ccc39",
+      "alt": "featured_image_alt: \"회전 전 교차로의 맞은편 진입로에 있는 은색 세단과 파란 차의 AI 가상 장면\"",
+      "only_alt_changed_from_reviewed_article": true,
+      "variety_fail_count": 0
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "e07763fde0a83654f31f94669410999d574ec630db83bfc23e319729b3d3f314",
+      "alt": "featured_image_alt: \"銀色轎車與藍色車輛轉彎前位於路口對向入口的AI虛構畫面\"",
+      "only_alt_changed_from_reviewed_article": true,
+      "variety_fail_count": 0
+    }
+  ],
+  "final_alt_validation": "/Users/son7/tseng-traffic-action-20261015/qa/legal-media-review/final-623/alt-revision-validation.json"
+}

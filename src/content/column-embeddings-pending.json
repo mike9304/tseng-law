@@ -2129,6 +2129,38 @@
     {
       "locale": "en",
       "slug": "taiwan-scooter-outer-lane-left-turn-dashcam"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-lane-ending-merge-dashcam"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-lane-ending-merge-dashcam"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-equal-road-uncontrolled-intersection-dashcam"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-equal-road-uncontrolled-intersection-dashcam"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-opposing-turns-single-lane-collision"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-opposing-turns-single-lane-collision"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-mountain-road-meeting-collision"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-mountain-road-meeting-collision"
     }
   ]
 }

@@ -675,10 +675,22 @@ export const TRAFFIC_SCENE_COLUMN_FILES_20261014 = {
   ],
 } as const;
 
-/** Fictional left-turn scooter reenactment in Korean, Traditional Chinese and English. */
+/** Reviewed fictional traffic scenes: scooter in three languages, four further cases in Korean and Traditional Chinese. */
 export const TRAFFIC_SCENE_COLUMN_FILES_20261015 = {
-  ko: ['611-taiwan-scooter-outer-lane-left-turn-dashcam.md'],
-  'zh-hant': ['611-taiwan-scooter-outer-lane-left-turn-dashcam.md'],
+  ko: [
+    '611-taiwan-scooter-outer-lane-left-turn-dashcam.md',
+    '621-taiwan-lane-ending-merge-dashcam.md',
+    '622-taiwan-equal-road-uncontrolled-intersection-dashcam.md',
+    '623-taiwan-opposing-turns-single-lane-collision.md',
+    '624-taiwan-mountain-road-meeting-collision.md',
+  ],
+  'zh-hant': [
+    '611-taiwan-scooter-outer-lane-left-turn-dashcam.md',
+    '621-taiwan-lane-ending-merge-dashcam.md',
+    '622-taiwan-equal-road-uncontrolled-intersection-dashcam.md',
+    '623-taiwan-opposing-turns-single-lane-collision.md',
+    '624-taiwan-mountain-road-meeting-collision.md',
+  ],
   en: ['611-taiwan-scooter-outer-lane-left-turn-dashcam.md'],
 } as const;
 

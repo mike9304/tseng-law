@@ -1,0 +1,173 @@
+{
+  "reviewer": "Codex /root",
+  "checkedAt": "2026-10-15T09:05:28.528719+00:00",
+  "status": "local-media-approved-public-playback-pending",
+  "method": "Selected source motion/contact frames reviewed before selection; both locale final whole-film1fps sheets visually opened, exact output probe/decode and installed4 covers verified. Independent reviewers additionally inspected cut/contact frames. Browser playback verification remains separate.",
+  "media": [
+    {
+      "id": "uturn-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "path": "videos/columns/uturn-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/uturn-action-20261015-v1-ko.jpg",
+      "duration": 39.25,
+      "sceneCount": 8,
+      "sha256": "e92c1e62bbe44cf5be68531d9fa7794ad92a888a899998958bf1cf8cbf97b967",
+      "bytes": 10323372
+    },
+    {
+      "id": "uturn-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-double-yellow-uturn-dashcam-liability",
+      "path": "videos/columns/uturn-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/uturn-action-20261015-v1-zh-hant.jpg",
+      "duration": 39.25,
+      "sceneCount": 8,
+      "sha256": "8cf35c94ca91e696595c52fc5e80779479947f0b755a16d37bbef63679b2e6ec",
+      "bytes": 10343881
+    },
+    {
+      "id": "rain-rear-end-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "path": "videos/columns/rain-rear-end-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/rain-rear-end-action-20261015-v1-ko.jpg",
+      "duration": 40.5,
+      "sceneCount": 5,
+      "sha256": "55a18dc18c59f1ae8670b8f4712d5d9521a0d11a088ee181a0146184d22f3d67",
+      "bytes": 13000664
+    },
+    {
+      "id": "rain-rear-end-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-rain-rear-end-braking-dashcam",
+      "path": "videos/columns/rain-rear-end-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/rain-rear-end-action-20261015-v1-zh-hant.jpg",
+      "duration": 40.5,
+      "sceneCount": 5,
+      "sha256": "57d32140474657572e53848107de80512883f74930d6f8ecff0231b25b6f30b2",
+      "bytes": 13022762
+    },
+    {
+      "id": "lane-ending-merge-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-lane-ending-merge-dashcam",
+      "path": "videos/columns/lane-ending-merge-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/lane-ending-merge-action-20261015-v1-ko.jpg",
+      "duration": 16,
+      "sceneCount": 3,
+      "sha256": "04e6b31f01db730935430cce215e9c49a5638d71eb128c50ad4ab5245894b240",
+      "bytes": 4348653
+    },
+    {
+      "id": "lane-ending-merge-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-lane-ending-merge-dashcam",
+      "path": "videos/columns/lane-ending-merge-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/lane-ending-merge-action-20261015-v1-zh-hant.jpg",
+      "duration": 16,
+      "sceneCount": 3,
+      "sha256": "a7074d224476039280a65ca32199e9d722884d672b0b63110a6946372dc3b72d",
+      "bytes": 4363049
+    },
+    {
+      "id": "uncontrolled-intersection-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-equal-road-uncontrolled-intersection-dashcam",
+      "path": "videos/columns/uncontrolled-intersection-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/uncontrolled-intersection-action-20261015-v1-ko.jpg",
+      "duration": 16,
+      "sceneCount": 5,
+      "sha256": "a58131c3e1d9cf8d3570026c6fbf3ed5cef884e08352e5452d55096d9f06a835",
+      "bytes": 4968562
+    },
+    {
+      "id": "uncontrolled-intersection-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-equal-road-uncontrolled-intersection-dashcam",
+      "path": "videos/columns/uncontrolled-intersection-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/uncontrolled-intersection-action-20261015-v1-zh-hant.jpg",
+      "duration": 16,
+      "sceneCount": 5,
+      "sha256": "4964cc779a28f6e4c926df568ac73d163651e93de1b4a89ee4b4700d44aec62c",
+      "bytes": 4961373
+    },
+    {
+      "id": "opposing-turns-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-opposing-turns-single-lane-collision",
+      "path": "videos/columns/opposing-turns-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/opposing-turns-action-20261015-v1-ko.jpg",
+      "duration": 19.25,
+      "sceneCount": 4,
+      "sha256": "535acaccbde3c0f0684412681e19cc6de1b4156e80b4a28936d3e3b476d06d94",
+      "bytes": 6000020
+    },
+    {
+      "id": "opposing-turns-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-opposing-turns-single-lane-collision",
+      "path": "videos/columns/opposing-turns-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/opposing-turns-action-20261015-v1-zh-hant.jpg",
+      "duration": 19.25,
+      "sceneCount": 4,
+      "sha256": "256592a722bc47af7cf3eb6a1ec52bd75f0a0c3521628796281665fd82c643ed",
+      "bytes": 6012496
+    },
+    {
+      "id": "mountain-meeting-action-20261015-v1-ko",
+      "locale": "ko",
+      "slug": "taiwan-mountain-road-meeting-collision",
+      "path": "videos/columns/mountain-meeting-action-20261015-v1-ko.mp4",
+      "poster": "images/column-videos/mountain-meeting-action-20261015-v1-ko.jpg",
+      "duration": 43.25,
+      "sceneCount": 7,
+      "sha256": "3cbdb2732a2b9e2c4f7f1df3af460526987d34b03dd9682ab23f83e164e9be6f",
+      "bytes": 14306531
+    },
+    {
+      "id": "mountain-meeting-action-20261015-v1-zh-hant",
+      "locale": "zh-hant",
+      "slug": "taiwan-mountain-road-meeting-collision",
+      "path": "videos/columns/mountain-meeting-action-20261015-v1-zh-hant.mp4",
+      "poster": "images/column-videos/mountain-meeting-action-20261015-v1-zh-hant.jpg",
+      "duration": 43.25,
+      "sceneCount": 7,
+      "sha256": "ef998c3245295d6a5b7591d96c88ec7a25cdd91ce65c2f5ebb7b54192e734705",
+      "bytes": 14271624
+    }
+  ],
+  "covers": [
+    {
+      "path": "images/blog/621-taiwan-lane-ending-merge-dashcam/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-20261015/merge/references/merge-close-fixed-start-v2.png",
+      "sourceSha256": "3f8098e63470e1814aeb37f1d3487b1e3c7a3e1784eeb4438ec7ec74938e4265",
+      "sha256": "ff2600b8fdda3593b2674f28711103e668cb9a216b2333b0cd871f98771ceb4a"
+    },
+    {
+      "path": "images/blog/622-taiwan-equal-road-uncontrolled-intersection-dashcam/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-20261015/uncontrolled/references/aerial-aligned-start-v3.png",
+      "sourceSha256": "b57d19980fef745aa6d22eeb07073d5c30289f1b6573a25b2b3fa7b8583c5f6b",
+      "sha256": "8d56009a3f57ae2890912c51a681f486962b093d2a9f366c0c537e7a3f1cdbf5"
+    },
+    {
+      "path": "images/blog/623-taiwan-opposing-turns-single-lane-collision/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-20261015/turns-mountain/turns/references/top-start.png",
+      "sourceSha256": "54c2021c596da39a44cce73487b12fd78e28fa8474a9502e6f0398c96059164f",
+      "sha256": "a92c54a53576e588121007e6f8f4cc8e8904c22e1d7404d9b5971ecc1000b5ae"
+    },
+    {
+      "path": "images/blog/624-taiwan-mountain-road-meeting-collision/featured-01.webp",
+      "source": "/Users/son7/tseng-traffic-action-20261015/turns-mountain/mountain/references/high-start.png",
+      "sourceSha256": "827caf48cc8f4273fa148e596b1284b2b44addace40ea7acd4af4a2e4d749a6f",
+      "sha256": "a532239334a2dd4b5347c58b7f21b820d3b44a7d1ab4e5dc2eac6f661759df16"
+    }
+  ],
+  "limitations": [
+    "Independently generated illustrative views, not simultaneous recorded evidence.",
+    "No measured speeds, distances, reaction times, collision forces or fault percentages.",
+    "No audio in localized films; provider audio was not meaning-verified.",
+    "622 retains modest contact/recoil and centerline variation between views; accepted as a16s fictional explainer, not certified as a dramatic crash.",
+    "No added loops, freezes, repeat footage or slow motion to reach internal duration targets."
+  ]
+}

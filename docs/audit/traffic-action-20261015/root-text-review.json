@@ -1,0 +1,57 @@
+{
+  "status": "text-and-local-media-approved-browser-pending",
+  "articles": [
+    {
+      "file": "src/content/columns/621-taiwan-lane-ending-merge-dashcam.md",
+      "sha256": "f945c5ff90844a99af58db6f5c1980f2cc222112913a08baa9878a6b71809e93"
+    },
+    {
+      "file": "src/content/columns/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "sha256": "4de439db9d2dd68cbb1dd0fc78c7e2c41011d8ffeffb8535ebd35c7fc3315e92"
+    },
+    {
+      "file": "src/content/columns/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "891abddfb90b0af8dbc3ebf7d8b12df5439e136d47069f1ef4002dea5e6ccc39"
+    },
+    {
+      "file": "src/content/columns/624-taiwan-mountain-road-meeting-collision.md",
+      "sha256": "5d1127f92469371312f4fb1c565419ab8cff21918e1c630bddb401b88b73e08c"
+    },
+    {
+      "file": "src/content/columns-zh/621-taiwan-lane-ending-merge-dashcam.md",
+      "sha256": "befb8ef2bb6bdad7ecfa0fa9e18c792e71100be8ef473bee1e07d062125030b9"
+    },
+    {
+      "file": "src/content/columns-zh/622-taiwan-equal-road-uncontrolled-intersection-dashcam.md",
+      "sha256": "b0a6aebc6a162a35610aa2aa91e68eed2ffe41b7315936b196a307fb56d6da3f"
+    },
+    {
+      "file": "src/content/columns-zh/623-taiwan-opposing-turns-single-lane-collision.md",
+      "sha256": "e07763fde0a83654f31f94669410999d574ec630db83bfc23e319729b3d3f314"
+    },
+    {
+      "file": "src/content/columns-zh/624-taiwan-mountain-road-meeting-collision.md",
+      "sha256": "a896c0ed1da8e313e3459dba9ef8c0d7e92747877e5e132759b440e94f6d878b"
+    }
+  ],
+  "reviewer": "Codex primary agent",
+  "claimsVerified": [
+    "98 same-direction two-to-one; continuous lane; no-continuous-lane and congestion exceptions",
+    "102 uncontrolled intersection hierarchy and entry lane count; both straight from right",
+    "102 opposing left/right turns into same lane; multiple same-direction exit lanes; signals/controllers/markings",
+    "100 wall-side yields outer edge; distinct steep narrow slope rule and exception; 0.5m statutory gap not AI measurement",
+    "93 deceleration conditions;94 observation/safety; Civil184/217 conditions"
+  ],
+  "officialSourcesOpened": [
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=98",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=100",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=93",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=94",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217"
+  ],
+  "scope": "All eight articles read and exact bytes linked to independent legal review. Legal scope, FAQ, localization, sources, AI labels and final installed cover alignment checked by Codex. Not a human lawyer or native-language certification. Public playback remains pending.",
+  "mediaAlignmentRevision": "623 KO/ZH blue body type generalized; Korean front-corner-to-side contact clarified; particles corrected. Independent reviewer confirmed 2026-10-15. Final623 alt now explicitly describes opposing entrances before turning; installed4 WebP covers directly viewed by root.",
+  "checkedAt": "2026-10-15T09:05:28.528719+00:00"
+}

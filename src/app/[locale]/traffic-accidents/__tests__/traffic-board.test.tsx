@@ -38,6 +38,10 @@ describe('TrafficBoard SSR', () => {
     expect(html).toContain('subject=compensation');
     expect(html).toContain('href="/zh-hant/traffic-accidents?video=1#articles"');
     for (const slug of [
+      'taiwan-mountain-road-meeting-collision',
+      'taiwan-opposing-turns-single-lane-collision',
+      'taiwan-equal-road-uncontrolled-intersection-dashcam',
+      'taiwan-lane-ending-merge-dashcam',
       'taiwan-scooter-outer-lane-left-turn-dashcam',
       'taiwan-rain-rear-end-braking-dashcam',
       'taiwan-double-yellow-uturn-dashcam-liability',
@@ -90,7 +94,7 @@ describe('TrafficBoard SSR', () => {
     ]) {
       expect(html).toContain(`href="/zh-hant/columns/${slug}"`);
     }
-    expect(html.match(/data-traffic-board-row/g)).toHaveLength(49);
+    expect(html.match(/data-traffic-board-row/g)).toHaveLength(53);
     expect(html).toMatch(/<time datetime="2026-10-02">/i);
     expect(html).toContain('約7分鐘閱讀');
     expect(html).not.toContain('法律AI助理');
@@ -120,7 +124,7 @@ describe('TrafficBoard SSR', () => {
     expect(empty).toContain('value="不存在的關鍵字"');
 
     const unknown = await render('zh-hant', { subject: 'nonsense', page: '3' });
-    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(49);
+    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(53);
   });
 
   it('escapes the search value', async () => {

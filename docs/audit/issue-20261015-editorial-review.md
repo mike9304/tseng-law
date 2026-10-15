@@ -1,6 +1,6 @@
 # ISSUE-20261015 editorial review record
 
-KO01 repair note (2026-10-15): the KO01 opening, receipt row and [repair section](#ko01-review-repair-r1) now concern `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278`. For KO01, the earlier batch, external-report, UI and release-boundary statements concern original `dad77732f78368e84f18456211da87d9b6065a33ac692db0f2d50d51865020b8` and remain historical evidence; they do not certify the repaired version. No fresh rendered QA or full build was performed for this repair, and real Claude Code re-review remains required.
+KO01 repair note (2026-10-15): the KO01 opening, receipt row and [round-2 repair section](#ko01-review-repair-r2) now concern `d7a5849d86cd29bd4b9bdef93a8bbc2b0b92167737d52a405dfaf9f94b94c83f`. For KO01, the original batch, external-report, UI and release-boundary statements concern `dad77732f78368e84f18456211da87d9b6065a33ac692db0f2d50d51865020b8`; [r1](#ko01-review-repair-r1) concerns `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278`. Those records remain verbatim historical evidence and do not certify r2. Real Claude Code round-2 review returned FAIL on r1 for two MINOR findings. The r2 independent AI receipts below close the identified repairs; real Claude Code shipping re-review remains pending. No fresh rendered QA or full build was performed.
 
 Date: 2026-10-15 (Asia/Seoul). All eight final manuscripts have independent AI locale and independent final-review PASS at the versions below. This record consolidates actual author, locale, final and local UI evidence; it is not a Claude Code PASS, human native-speaker/attorney certification or authorization to publish.
 
@@ -14,7 +14,7 @@ The reviewer instructions were the full repository EDITORIAL-VOICE.md, FRONTMATT
 
 ### KO01
 
-File: `src/content/issues/ko/ISSUE-20261015-01-taiwan-kia-overseas-safety-rating-advertising.md`. Current repaired SHA-256: `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278`. Current receipts: [KO01 review-repair r1](#ko01-review-repair-r1).
+File: `src/content/issues/ko/ISSUE-20261015-01-taiwan-kia-overseas-safety-rating-advertising.md`. Current repaired SHA-256: `d7a5849d86cd29bd4b9bdef93a8bbc2b0b92167737d52a405dfaf9f94b94c83f`. Current receipts: [KO01 review-repair r2](#ko01-review-repair-r2).
 
 Paragraph 1:
 
@@ -22,14 +22,15 @@ Paragraph 1:
 
 Paragraph 2:
 
-> [공정위 발표](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?docid=18506&uid=126)에 따르면, 유럽 신차 안전도 평가(Euro NCAP)에서 2022년 별 다섯 개를 받은 시험 차량은 대만 판매 차량과 사양·장비가 달랐습니다. 대만 신차 안전도 평가(TNCAP)에서는 대만 판매 차량이 별 두 개를 받았습니다. 공정위는 대만 판매 차량도 유로 NCAP의 별 다섯 개 평가를 받은 것처럼 광고한 데 대해 120만 대만달러를 부과했습니다. 이 발표가 기아의 다른 차종이나 현재 판매 중인 사양의 안전등급까지 판단한 것은 아닙니다.
+> [공정위 발표](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?docid=18506&uid=126)에 따르면, 유럽 신차 안전도 평가(Euro NCAP)에서 2022년 별 다섯 개를 받은 시험 차량은 대만 판매 차량과 사양·장비가 달랐습니다. 공정위는 각국 NCAP 기관의 시험 항목과 평가 기준, 차량 사양과 안전장비가 서로 달라 평가 결과를 그대로 인용할 수 없다고도 밝혔습니다. 대만 신차 안전도 평가(TNCAP)에서는 대만 판매 차량이 별 두 개를 받았습니다. 공정위는 대만 판매 차량도 Euro NCAP의 별 다섯 개 평가를 받은 것처럼 광고한 데 대해 120만 대만달러를 부과했습니다. 이 발표가 기아의 다른 차종이나 현재 판매 중인 사양의 안전등급까지 판단한 것은 아닙니다.
 
 - P1 S1: retains the CNA report date, explicitly Taiwanese authority, named Taiwan distributor and NT$2 million total; deletion loses the event, responsible actor and amount.
 - P1 S2: distinguishes the overseas safety-rating advertisement from the seat-belt specification issue; deletion obscures the two enforcement grounds.
 - P2 S1: identifies Euro NCAP, the 2022 five-star test and the configuration/equipment mismatch; deletion removes the basis for comparing the tested and locally sold vehicles.
-- P2 S2: identifies TNCAP and the Taiwan-market vehicle's two-star result; deletion removes the distinct local evaluation.
-- P2 S3: connects the misleading Euro NCAP claim to the NT$1.2 million fine; deletion loses the conduct-to-sanction allocation.
-- P2 S4: excludes conclusions about other Kia models or configurations currently on sale; deletion removes a material scope limit. The independent locale and final reviewers retained all six sentences.
+- P2 S2: adds the FTC rationale that NCAP test items, assessment criteria, vehicle specifications and safety equipment differ across jurisdictions, so results cannot be cited directly; deletion loses a separate reason and could imply that matching equipment alone permits direct citation.
+- P2 S3: identifies TNCAP and the Taiwan-market vehicle's two-star result; deletion removes the distinct local evaluation.
+- P2 S4: connects the misleading Euro NCAP claim to the NT$1.2 million fine; deletion loses the conduct-to-sanction allocation.
+- P2 S5: excludes conclusions about other Kia models or configurations currently on sale; deletion removes a material scope limit. The r2 independent locale and final reviewers retained all seven sentences for their concrete facts or limits.
 
 ### KO02
 
@@ -186,7 +187,7 @@ All articles were authored by separate language roles, then checked by nonauthor
 
 | Piece | Locale | Final | SHA-256 | Receipts |
 |---|---|---|---|---|
-| ko-01 | PASS | PASS | `ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278` | [KO01 review-repair r1](#ko01-review-repair-r1); collaboration receipts `ko01_locale_review` and `ko01_final_review` |
+| ko-01 | PASS | PASS | `d7a5849d86cd29bd4b9bdef93a8bbc2b0b92167737d52a405dfaf9f94b94c83f` | [KO01 review-repair r2](#ko01-review-repair-r2); collaboration receipts `ko01_r2_independent_locale` and `ko01_r2_independent_final` |
 | ko-02 | PASS | PASS | `3394aaea7a8a656279848627ddedecb1c418d8840234538594baaa541534f50b` | `work/review-ko.md`; `work/final-ko-vi.md` |
 | ja-03 | PASS | PASS | `4a55eac6e3dc069230176bda4e9b82e5cab16f80b150bc5f378c0605e5daa003` | `work/review-ja.md`; `work/final-en-ja.md` |
 | ja-04 | PASS | PASS | `ae208cfca7100a07d97844cebbcf1404328999fcdc83d835ee654da1d842957f` | `work/review-ja.md`; `work/final-en-ja.md` |
@@ -256,3 +257,41 @@ Sources were checked on 2026-10-15. MOJ displayed a compilation cutoff of 2026-1
 
 This article describes an announced administrative action, not a determination of appeal finality or an individual buyer's damages. Existing media disclaimers and all legal scope limits are preserved.
 No fresh rendered QA, full build, publication, public readback, commit or push was performed for this repair. Historical UI evidence does not certify the revised wording. Real Claude Code re-review of this exact version remains required before shipping; these AI PASS receipts are not shipping approval.
+
+## KO01 review-repair r2
+
+Review date: 2026-10-15 (Asia/Seoul). Frozen manuscript SHA-256: `d7a5849d86cd29bd4b9bdef93a8bbc2b0b92167737d52a405dfaf9f94b94c83f`. Real Claude Code round-2 review returned FAIL on r1 (`ad590c3a6160754700f6fa6c1b9ce5d653844a078e2ec5494efaf0ccc4117278`) for two MINOR findings and suggested two NIT edits. All four findings were accepted as the following six occurrence changes. The r1 section above is retained verbatim as history.
+
+### Four findings, six occurrences
+
+| Finding | Before → after | Reason | Legal-meaning status |
+|---|---|---|---|
+| MINOR 1, body | After the tested/local vehicle mismatch sentence, insert `공정위는 각국 NCAP 기관의 시험 항목과 평가 기준, 차량 사양과 안전장비가 서로 달라 평가 결과를 그대로 인용할 수 없다고도 밝혔습니다.` | Restore the FTC's additional reason that differing NCAP methods and vehicle configurations prevent direct citation. | SUBSTANTIVE source-completeness correction, not merely style; restores omitted rationale without declaring all foreign-rating references prohibited. |
+| MINOR 1, FAQ 1 | `공정위는 시험 차량과 대만 판매 차량의 사양·안전장비가 다른데도 같은 평가를 받은 것처럼 광고한 점을 문제 삼았습니다.` → `공정위는 시험 차량과 대만 판매 차량의 사양·안전장비가 다르고 각국 NCAP의 시험 항목과 평가 기준도 다른데, 대만 판매 차량이 같은 평가를 받은 것처럼 광고한 점을 문제 삼았습니다.` | Align the answer with the additional NCAP-method rationale. | SUBSTANTIVE source-completeness correction; actor, misleading-impression ground and case-specific scope remain. |
+| MINOR 2 | `유로 NCAP의 별 다섯 개 평가` → `Euro NCAP의 별 다섯 개 평가`. | Use one program spelling in the same paragraph. | Reported facts and scope preserved. |
+| NIT 3 | `이번 발표에서도 공정위는 광고 전체가 주는 인상을 판단했습니다.` → `공정위도 이번 발표에서 광고가 전체적으로 주는 인상을 기준으로 판단했습니다.` | Connect the sourced overall-impression reasoning naturally to the preceding application. | Reported reasoning and scope preserved. |
+| NIT 4, occurrence 1 | `이 조항이 문제 됩니다` → `이 조항에 저촉될 수 있습니다`. | Express the provision's possible application directly. | Case-dependent legal application preserved; no automatic outcome asserted. |
+| NIT 4, occurrence 2 | `상품의 품질과 내용도 포함됩니다.` → `그 사항에는 상품의 품질과 내용도 포함됩니다.` | Link the statutory examples to the preceding defined matters. | Article 21(1)–(2) scope preserved. |
+
+No reviewer claim was incorrect; no rebuttal was needed or written. The other manuscript text, numbers, URLs, metadata and media notices were preserved.
+
+### Source receipts
+
+The parent and independent-review receipts cover live source reads on 2026-10-15: [FTC release 18506](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?docid=18506&uid=126), [CNA 202610140283](https://www.cna.com.tw/news/afe/202610140283.aspx), and MOJ Fair Trade Act [Article 21(1)–(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=21), [Article 42](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=42) and [amendment history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0150002). MOJ's compilation cutoff was 2026-10-08; the last amendment was 2017-06-14 to Article 11, and commencement of the 2015 full revision was verified in the history.
+
+The source checks preserve the Taiwan distributor and jurisdiction, NT$2 million = NT$1.2 million + NT$800,000, the 2022 tested vehicle, June 2022–October 2023 belt-specification period, differences among NCAP methods/specifications/equipment, the FTC's overall-impression reasoning and the distinction between administrative sanctions and buyer damages. The independent final reviewer checked the official provisions, history and commencement rather than treating an announcement date alone as effectiveness.
+
+### Independent AI review receipts
+
+- `ko01_r2_independent_locale` (`tseng-editor-ko`, neither author nor repairer): PASS, with start/end SHA-256 both matching the frozen r2 hash. It checked deletion of all seven opening sentences and read the three 2026-10-14 Korean comparators listed above: 01 cafe surcharge, 02 election-ad/donation boundary and 09 special-professional exit tax. No repetitive template or unresolved material finding remained.
+- `ko01_r2_independent_final` (`tseng-editor-final`, neither author, repairer nor locale reviewer): PASS at 2026-10-15 12:20 KST, with the same start/end hash. It independently checked official sources/history/commencement, the three comparators and the locale result; no unresolved MAJOR/MINOR remained. It did not rerun tests or inspect media; those receipts below belong to the parent.
+- These are independent AI reviews, not human native-speaker/attorney certification or real Claude Code shipping approval. The next required shipping check is real Claude Code re-review of this r2 hash.
+
+### Parent verification receipts and limits
+
+- Exact six-occurrence reconstruction: PASS. The repaired manuscript matches the six authorized changes from r1.
+- Test: `node node_modules/vitest/vitest.mjs run src/lib/__tests__/issue-board-20261015.test.ts --project unit --configLoader runner --no-cache`. Actual result: 1 file / 34 tests PASS, exit 0; start 12:17:36, duration 7.07 seconds. This is the r2 receipt; the original batch and r1 test records above retain their historical scope.
+- Body measurement: 1,133 Unicode code points including normalized spaces, 874 excluding spaces. Method: remove frontmatter, headings, image note, references and disclaimer; reduce Markdown hyperlinks to display text; collapse whitespace and trim. The prose count with spaces is within the approximate 900–1,400-character lane range.
+- Parent viewed both existing WebP/JPEG files: the same unbranded front seats, steering wheel and dark screen scene; alt and caption match. Image bytes, the batch test and configurations were unchanged at the parent's checkpoint.
+- At the parent's post-test checkpoint, HEAD was `4f8ef77554a24a87fd310dab6794de9ebf99ed7e` and the index matched its baseline. This records that checkpoint, not a later scope check or ownership of other lanes' changes.
+- No fresh rendered QA, full build, publication, public readback, commit or push was performed for r2. Historical UI evidence does not prove the current wording's rendering. Real Claude Code shipping re-review remains pending.

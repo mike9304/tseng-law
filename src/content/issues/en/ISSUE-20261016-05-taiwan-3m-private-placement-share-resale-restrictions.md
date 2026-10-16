@@ -1,7 +1,7 @@
 ---
 title: "3M's proposed Taiwan investment: when private-placement shares can be sold"
 seoTitle: "Taiwan private-placement shares: 3M deal and resale rules"
-summary: "Genius Electronic Optical's planned share issue to 3M United Kingdom Limited remains subject to closing conditions. Taiwan's resale periods run from share delivery, with statutory exceptions; a later exchange sale requires separate public-issuance and listing procedures."
+summary: "Genius Electronic Optical's planned private placement of shares to 3M United Kingdom Limited remains subject to closing conditions. Taiwan's resale periods run from share delivery, with statutory exceptions; a later exchange sale requires separate public-issuance and listing procedures."
 published: "2026-10-16"
 lastmod: "2026-10-16"
 date_display: "October 16, 2026"
@@ -10,11 +10,11 @@ categories:
   - "Taiwan Legal Information"
 topic: company
 featured_image: "../images/ISSUE-20261016-05-taiwan-3m-private-placement-share-resale-restrictions/featured-01.webp"
-featured_image_alt: "An unbranded optical lens assembly, glass discs and a closed navy folder on a table in an empty engineering office."
+featured_image_alt: "An unbranded optical lens assembly, glass discs and a closed navy folder on a table in an empty engineering office, with the Taipei skyline visible through the window."
 featured_image_caption: "AI-generated illustration of a fictional engineering office; it depicts no actual company, transaction documents or evidence of the reported investment."
 social_image: "../images/ISSUE-20261016-05-taiwan-3m-private-placement-share-resale-restrictions/featured-01.jpg"
 faq:
-  - q: "Had the reported 3M investment closed by the announcement?"
+  - q: "Had the reported 3M investment closed at the time of the announcement?"
     a: "CNA's October 15 report described a planned subscription by 3M United Kingdom Limited, subject to customary closing conditions. It did not establish that the shares had been delivered."
   - q: "Is every resale prohibited for three years?"
     a: "No. Securities and Exchange Act Article 43-8 includes exceptions, each with its own conditions. The time-based routes run from delivery."
@@ -26,13 +26,13 @@ author: "legal-ai-assistant"
 
 # 3M's proposed Taiwan investment: when private-placement shares can be sold
 
-Genius Electronic Optical plans to issue new common shares to 3M United Kingdom Limited as part of an optical-communications partnership, [CNA reported on October 15, 2026](https://www.cna.com.tw/news/afe/202610150092.aspx). The proposed subscription is worth approximately NT$4.81 billion and would give the 3M group a roughly 4.68% stake after completion. The report describes a board resolution to sign the subscription agreement and says customary closing conditions remain. It does not report completed share delivery.
+Genius Electronic Optical plans to issue new common shares by private placement to 3M United Kingdom Limited as part of an optical-communications partnership, [CNA reported on October 15, 2026](https://www.cna.com.tw/news/afe/202610150092.aspx). The proposed subscription is worth approximately NT$4.81 billion and would give the 3M group a roughly 4.68% stake after completion. The report describes a board resolution to sign the subscription agreement and says customary closing conditions remain. It does not report completed share delivery.
 
 ## Delivery starts the resale clock
 
 [Securities and Exchange Act Article 43-8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-8) restricts resale by subscribers and purchasers, subject to listed exceptions. One route permits transfers after one year and before three years from delivery to specified qualified buyers, subject to regulatory holding-period and quantity limits. Other exceptions include transfers by operation of law, limited small private transfers and regulator-approved transactions. The statute also permits resale once three years have elapsed from delivery.
 
-An announcement or signing date therefore cannot establish the relevant anniversary. Nor does the investor's foreign nationality supply a general exemption. The restrictions must be conspicuously noted on the shares and stated in the relevant written documents delivered to subscribers or purchasers.
+An announcement or signing date therefore cannot establish the relevant anniversary. A foreign subscriber is bound by the same list; nationality is not among the exceptions. The restrictions must be conspicuously noted on the shares and stated in the relevant written documents delivered to subscribers or purchasers.
 
 For an investment committee, the practical implication is that an assumed exit date needs a documented starting point. A schedule calculated from the press announcement could precede the applicable anniversary if delivery occurs later. That is a planning consequence of the statutory wording, not a statement about 3M's intended holding period or the terms of its proposed subscription.
 

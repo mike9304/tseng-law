@@ -2217,6 +2217,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-crypto-trading-mandate-accounting"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-property-transfer-claim-provisional-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-property-transfer-claim-provisional-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-property-transfer-claim-provisional-registration"
     }
   ]
 }

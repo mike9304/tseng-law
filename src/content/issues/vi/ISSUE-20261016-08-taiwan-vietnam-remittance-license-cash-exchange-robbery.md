@@ -26,7 +26,7 @@ author: "legal-ai-assistant"
 
 # Gửi lương từ Đài Loan về Việt Nam: giấy phép của công ty chuyển tiền
 
-Hai người chăm sóc mang quốc tịch Việt Nam bị mất tổng cộng 220.000 Đài tệ tại các cuộc hẹn đổi tiền hồi tháng 7, theo cáo buộc được [CNA đưa tin ngày 15/10/2026](https://www.cna.com.tw/news/asoc/202610150150.aspx). Viện kiểm sát Gia Nghĩa đã truy tố một người đàn ông về hành vi cướp liên quan đến các cuộc hẹn này. Bản tin nói về việc truy tố, chưa phải bản án kết tội.
+Hai người chăm sóc mang quốc tịch Việt Nam bị mất tổng cộng 220.000 Đài tệ tại các cuộc hẹn đổi tiền hồi tháng 7, theo cáo trạng được [CNA đưa tin ngày 15/10/2026](https://www.cna.com.tw/news/asoc/202610150150.aspx). Viện kiểm sát Gia Nghĩa đã truy tố một người đàn ông về hành vi cướp liên quan đến các cuộc hẹn này. Bản tin nói về việc truy tố, chưa phải bản án kết tội.
 
 [Điều 29 Luật Ngân hàng Đài Loan (銀行法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=29&pcode=G0380001) cấm tổ chức, cá nhân không phải ngân hàng kinh doanh dịch vụ chuyển tiền trong và ngoài nước, trừ trường hợp pháp luật cho phép. Điều này điều chỉnh bên kinh doanh dịch vụ; không thể chỉ từ đó kết luận khách gửi tiền đã phạm tội.
 
@@ -34,13 +34,13 @@ Hai người chăm sóc mang quốc tịch Việt Nam bị mất tổng cộng 2
 
 [Khoản 4 Điều 4 Luật Quản lý các tổ chức thanh toán điện tử (電子支付機構管理條例)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=4&pcode=G0380237) tạo cơ sở cấp phép cho dịch vụ chuyển tiền nhỏ ra nước ngoài dành cho một số nhóm lao động nước ngoài. Các công ty hoạt động theo cơ chế này phải được cơ quan quản lý cho phép và cấp giấy phép kinh doanh, theo [Điều 4 Quy định quản lý dịch vụ chuyển tiền nhỏ ra nước ngoài của lao động di trú (外籍移工國外小額匯兌業務管理辦法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=4&pcode=G0380269).
 
-Khách hàng thuộc cơ chế này phải làm công việc nêu tại [các điểm 8–11 khoản 1 Điều 46 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=46&pcode=N0090001), như chăm sóc hoặc giúp việc gia đình, và có thẻ cư trú do Cơ quan Di trú cấp còn hiệu lực. [Điều 3 của quy định](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=3&pcode=G0380269) giới hạn dịch vụ ở tiền lương gửi về nước của người lao động qua hình thức chuyển tiền bằng điện, không nhằm thanh toán giao dịch mua bán. Vì vậy, đây không phải dịch vụ mặc nhiên dành cho mọi người Việt cư trú tại Đài Loan hay mọi loại khoản tiền.
+Khách hàng thuộc cơ chế này phải làm công việc nêu tại [các điểm 8–11 khoản 1 Điều 46 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=46&pcode=N0090001), như chăm sóc hoặc giúp việc gia đình, và có thẻ cư trú do Sở Di dân (內政部移民署) cấp còn hiệu lực. [Điều 3 của quy định](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=3&pcode=G0380269) giới hạn dịch vụ ở tiền lương gửi về nước của người lao động qua hình thức chuyển tiền bằng điện, không nhằm thanh toán giao dịch mua bán. Vì vậy, đây không phải dịch vụ mặc nhiên dành cho mọi người Việt cư trú tại Đài Loan hay mọi khoản tiền.
 
 ## Công ty phải công khai giấy phép và cách bảo vệ tiền
 
 Theo [Điều 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=G0380269), ứng dụng của công ty chuyển tiền dành cho lao động di trú phải hiển thị tên, thông tin liên hệ, số và thời hạn giấy phép, tỷ giá giao dịch cùng tỷ giá ngân hàng tham chiếu. Ứng dụng còn phải nêu tổ chức tài chính cung cấp tài khoản tín thác hoặc bảo lãnh thực hiện nghĩa vụ.
 
-[Điều 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=G0380269) yêu cầu toàn bộ tiền chuyển công ty đã nhận phải được giao cho bên nhận tín thác quản lý hoặc có bảo lãnh thực hiện nghĩa vụ toàn bộ số tiền từ tổ chức tài chính. Nghĩa vụ ấy gắn với khoản tiền công ty nhận trong dịch vụ được cấp phép; không phải bảo đảm bồi thường mọi khoản tiền giao cho một người lạ.
+[Điều 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=G0380269) yêu cầu toàn bộ tiền chuyển mà công ty đã nhận phải được giao cho bên nhận tín thác quản lý hoặc có bảo lãnh thực hiện nghĩa vụ toàn bộ số tiền từ tổ chức tài chính. Nghĩa vụ ấy gắn với khoản tiền công ty nhận trong dịch vụ được cấp phép; không phải bảo đảm bồi thường mọi khoản tiền giao cho một người lạ.
 
 Tên công ty trên giao dịch, kênh nhận tiền và chứng từ xác nhận giúp xác định bên nào thực sự đã nhận khoản lương để chuyển. Một cá nhân tự nhận là người của công ty chưa đủ chứng minh tiền đã đi vào dịch vụ đó.
 

@@ -2161,6 +2161,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-mountain-road-meeting-collision"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-notarized-fixed-term-lease-direct-enforcement"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-notarized-fixed-term-lease-direct-enforcement"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-notarized-fixed-term-lease-direct-enforcement"
     }
   ]
 }

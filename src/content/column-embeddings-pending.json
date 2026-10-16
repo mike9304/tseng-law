@@ -2173,6 +2173,38 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-notarized-fixed-term-lease-direct-enforcement"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-unsignalized-roundabout-entry-collision"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-unsignalized-roundabout-entry-collision"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-red-signal-straight-stop-line-collision"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-red-signal-straight-stop-line-collision"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-oneway-wrongway-head-on-collision"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-oneway-wrongway-head-on-collision"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-parked-car-collision-external-video-evidence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-parked-car-collision-external-video-evidence"
     }
   ]
 }

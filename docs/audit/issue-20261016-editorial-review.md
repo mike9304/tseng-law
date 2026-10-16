@@ -2,13 +2,13 @@
 
 Date: 2026-10-16, Asia/Seoul. Scope: eight issue-board manuscripts, eight generated scenes in WebP/JPEG, and the batch test. Prepared in air/issues-20261016.
 
-Status: local source, independent AI locale and independent AI final review completed for the versions below. This is not the operator's Claude Code shipping PASS, a human/native-speaker/lawyer certification, or a publication claim. No commit or push was performed by the drafting team.
+Status: the original batch received local source, independent AI locale and independent AI final review. The operator's subsequent ko-01 FAIL superseded its original PASS; the ko-01 R1 correction and current review status are recorded below. This is not the operator's Claude Code shipping PASS, a human/native-speaker/lawyer certification, or a publication claim. No commit or push was performed by the drafting team or during this repair.
 
 ## Reviewed versions
 
 | Piece | Current SHA-256 | Locale report | Final report |
 | --- | --- | --- | --- |
-| ko-01 | `fd9df5cd020526bbb77f8ffe3f3dbb424faa2769875c2348696d005b19d8a051` | work/review-ko.md — PASS | work/final-ko-ja.md — PASS |
+| ko-01 | `3dca8749772e6518c30b7e52e7ed46b03f46d0463085cf75e4029e5d963aba98` | R1 locale recheck below — PASS | R1 independent AI final recheck below — PASS; Claude re-review pending |
 | ko-02 | `bd7ad5ad09b1cd1ae20a719228dba02ed73979ad5dc55ca95a18b6b0d4654a55` | work/review-ko.md — PASS | work/final-ko-ja.md — PASS |
 | ja-03 | `31b6cc0344bfaafdc823847991b7ca90e0f33b539036b8dcfee50dd804a6c9af` | work/review-ja.md — PASS | work/final-ko-ja.md — PASS |
 | ja-04 | `96e8419877fe07f799b34002e25872ee4c269231746d390f5e4d50c25431e408` | work/review-ja.md — PASS | work/final-ko-ja.md — PASS |
@@ -17,7 +17,37 @@ Status: local source, independent AI locale and independent AI final review comp
 | vi-07 | `26b66d348a07902a196007510f3f8ab23c01534495d0b3bf8b373e555bf3b00e` | work/review-vi.md — PASS | work/final-en-vi.md — PASS |
 | vi-08 | `70d1b3776d9829790c9bbb4416922015efd35757d5f24a08b476078917546abf` | work/review-vi.md — PASS | work/final-en-vi.md — PASS |
 
-All referenced reports and source/media/browser evidence are outside the repo at /Users/son7/tseng-air-1011/lanes/issues/20261016/. Research, writing, locale review and final review used separate AI roles. The final reports identify exact files and hashes.
+Original reports and source/media/browser evidence are outside the repo at /Users/son7/tseng-air-1011/lanes/issues/20261016/. Research, writing, locale review and final review used separate AI roles. The original final reports identify their reviewed files and hashes; the new ko-01 R1 evidence is recorded in this file.
+
+## ko-01 R1 correction after Claude Code FAIL
+
+Checked on 2026-10-16. All five findings were accepted, including the four NITs; no rebuttal was needed. The original ko-01 hash `fd9df5cd020526bbb77f8ffe3f3dbb424faa2769875c2348696d005b19d8a051` and its earlier PASS reports do not certify this revision.
+
+Live source checks:
+
+- [MOJ Civil Code Article 654](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=654), paragraph 1: 「旅客運送人對於旅客因運送所受之傷害及運送之遲到應負責任。但因旅客之過失，或其傷害係因不可抗力所致者，不在此限。」 Paragraph 2: 「運送之遲到係因不可抗力所致者，旅客運送人之責任，除另有交易習慣者外，以旅客因遲到而增加支出之必要費用為限。」 The injury exemption for force majeure does not exempt delay; paragraph 2 limits force-majeure delay liability to necessary additional expenses unless another trade usage applies.
+- [Article 231(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231): 「債務人遲延者，債權人得請求其賠償因遲延而生之損害。」 Retained for causal delay loss within Article 654's scope. [Article 230](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230) was also opened; its general exemption has been removed from the article because it obscured the special passenger-carriage rule. MOJ's pending-effect notices concern Articles 166-1 and 1223, not these provisions.
+- [Consumer Protection Act Article 43](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=43): 「企業經營者對於消費者之申訴，應於申訴之日起十五日內妥適處理之。」 The complaint channels, subsequent complaint to the local consumer-protection officer and distinction from a guaranteed refund/payment deadline remain unchanged.
+- [CNA, October 15 at 14:34](https://www.cna.com.tw/news/ahel/202610150152.aspx) expressly reports unannounced cancellations, no service-reduction application, and the Taipei Motor Vehicles Office's announced NT$9,000–90,000 fine range. The no-warning wording now links here and identifies 公路局 台北區監理所.
+- [CNA, October 15 at 19:30, updated 20:19](https://www.cna.com.tw/news/ahel/202610150322.aspx) supplies the October 14-to-noon October 15 total of 65, Hsinchu/Yilan services, driver shortage, apology and planned coach support. The first paragraph now says 「15일 정오까지」. No individual passenger's damages or outcome is inferred from either report.
+
+Changed sentences and meaning:
+
+| Before | R1 correction and reason | Meaning |
+| --- | --- | --- |
+| 「회사에 책임을 돌릴 수 없는 사유로 운행하지 못했다면 지체 책임을 지지 않습니다」; FAQ 2 relied on Articles 230/231. | Rebuilt the legal paragraph and FAQ 2 around Article 654(1)/(2): passenger-caused delay exception, force-majeure necessary-expense limit and trade-usage proviso; Article 231(1) addresses causal loss. References now cite Article 654 instead of 230. | Substantive correction: restores passenger protection omitted by the general-rule analysis. Driver shortage is not asserted to establish force majeure or an adjudicated liability finding. |
+| Summary: 「결행 원인과 실제 추가 비용에 따라 청구 가능성이 달라집니다」 | Cause affects the recoverable scope; actual additional expenditure affects the amount claimed. | Substantive correction consistent with the new legal section and FAQ. |
+| 「15일 낮까지」; no-warning wording beside the evening report; 「공로국」 alone. | 「15일 정오까지」; no-warning wording moved to the afternoon report; 「공로국(公路局) 타이베이구 감리소(台北區監理所)」. | Preserves and makes the report's time, source and speaker precise. The 65 trips and announced maximum NT$90,000 remain unchanged. |
+| Test required all eight files and two per assigned locale together. | Validate every present piece against its assigned locale and ID, require at least one piece and retain global ID/slug uniqueness and every per-piece content/media/loader assertion. | Allows separate piece integration without accepting empty coverage, duplicate IDs or IDs in the wrong market. |
+
+R1 checks:
+
+- Independent AI Korean reviewer `/root/ko01_locale_review` did not author the repair and returned PASS on the current hash after reopening the MOJ provisions and both CNA reports. This is an AI language/source review, not a human or operator shipping approval.
+- Independent AI final reviewer `/root/ko01_final_review`, also not an author, returned PASS on the same article hash after reopening the MOJ provisions, law history/commencement records and both CNA reports. The reviewer confirmed the special-rule priority, exceptions, expense limit, attribution, test assertions and audit accuracy with no remaining material findings. Test execution counts below were supplied by root; the reviewer statically inspected the test and did not repeat its execution, media, browser/build or production checks. The operator's Claude Code re-review remains pending.
+- `./node_modules/.bin/vitest run src/lib/__tests__/issue-board-20261016.test.ts --no-cache`: 34 tests passed. The same suite with an in-memory `fs.readdirSync` filter exposing only ko-01 from the October 16 batch passed 6 tests; no article was moved, removed or edited for this simulation.
+- Scoped ESLint with `--no-cache --max-warnings=0` and `git diff --check` passed. Body prose is 1,336 characters including spaces, excluding headings, reference list and Markdown link destinations.
+- Both ko-01 image renditions are byte-identical to HEAD. WebP SHA-256: `b0422dbe882eb0e5b7f7d54e1a85e80f952de0d300df38933299253478d803ce`; JPEG: `ca727dc28bc903428babb5ceea0cfa77ed998f1739a2913ffc3253d9d1fe7846`. Alt text, caption and generated-image notice are unchanged.
+- The earlier batch browser evidence below belongs to the original drafts. This bounded correction has not rerun browser/full-build or production checks and makes no deployment claim. No commit or push.
 
 ## First two paragraphs and recent same-locale comparison
 
@@ -33,11 +63,13 @@ These are the final first two prose paragraphs; an intervening heading is omitte
 
 File: `src/content/issues/ko/ISSUE-20261016-01-taiwan-kuo-kuang-bus-cancellation-passenger-delay-claim.md`.
 
-> 10월 14일부터 15일 낮까지 대만 국광버스(國光客運) 65편이 예고 없이 운행하지 않았다고 [중앙통신사(CNA)가 15일 보도했습니다](https://www.cna.com.tw/news/ahel/202610150322.aspx). 신주·이란 방면 등 일부 노선에서 발생한 결행입니다. 회사는 운전기사 부족을 이유로 들며 사과하고 임시 차량 투입을 추진했습니다.
+> 10월 14일부터 15일 정오까지 대만 국광버스(國光客運) 65편이 운행하지 않았다고 [중앙통신사(CNA)가 15일 보도했습니다](https://www.cna.com.tw/news/ahel/202610150322.aspx). 신주·이란 방면 등 일부 노선에서 발생한 결행입니다. 회사는 운전기사 부족을 이유로 들며 사과하고 임시 차량 투입을 추진했습니다.
 
-> 이미 표를 산 한국인 여행객이 다른 버스나 택시로 갈아탔다면, 승차권 대금 외에 추가 교통비가 문제 될 수 있습니다. [공로국은 최대 9만 대만달러의 과태료를 부과할 방침이라고 밝혔습니다](https://www.cna.com.tw/news/ahel/202610150152.aspx). 감편 신청 없이 예정된 운행을 빠뜨렸다는 것이 공로국의 설명입니다. 이 과태료는 사업자에 대한 행정 제재이며, 승객의 손해배상액을 정한 결정은 아닙니다.
+> 이미 표를 산 한국인 여행객이 다른 버스나 택시로 갈아탔다면, 승차권 대금 외에 추가 교통비가 문제 될 수 있습니다. [예고 없는 결행을 다룬 오후 보도](https://www.cna.com.tw/news/ahel/202610150152.aspx)에서 공로국(公路局) 타이베이구 감리소(台北區監理所)는 최대 9만 대만달러의 과태료를 부과할 방침이라고 밝혔습니다. 감편 신청 없이 예정된 운행을 빠뜨렸다는 설명입니다. 이 과태료는 사업자에 대한 행정 제재이며, 승객의 손해배상액을 정한 결정은 아닙니다.
 
 Retained the dated cancelled-service report, paid-ticket passenger scenario and distinction between an announced administrative fine and passenger damages. The issue is delay and additional transport expense, rather than advertising or price disclosure.
+
+R1 independent Korean deletion check retained all seven sentences: the first paragraph separately supplies the interval/count/source, affected routes, and the company's explanation/apology/response; the second supplies the paid-ticket replacement-travel scenario, named enforcement authority/maximum fine, absent reduction application, and the administrative-fine/passenger-compensation distinction. Removing any sentence loses a fact or necessary context. The three comparators above were reread: the Kia article concerns advertising evidence despite a shared fine/compensation distinction; the motorcycle article separates proposals from current law; the cafe article compares promised and delivered service. Ko-01's headings address recoverable transport costs and complaint timing, and its ending distinguishes fare return from additional-expense compensation. No repeated checklist or promotional ending was introduced.
 
 #### ko-02
 
@@ -137,7 +169,7 @@ Retained the indictment, alleged July events and total loss, followed by the ope
 | en-06 | General Article 30-3 realization routes; then broadly described pledgee “applications” | Removed general routes and specified applications for book-entry operations concerning received collateral under TWSE Article 18-1. | Substantive scope clarification; no general restriction on every possible application or offshore enforcement guarantee. |
 | vi-07 | “chủ cũ đã đồng ý” | “chủ hiện tại đã đồng ý” identifies the still-current employer. | Meaning-preserving clarification of the second-job scenario. |
 
-Repaired passages were rechecked by the independent locale reviewers and revised versions received independent final review. Author reports retain additional drafting changes. No unresolved substantive review finding remains on the listed hashes. Separate operator Claude shipping review remains required.
+The original batch's repaired passages were rechecked by independent locale reviewers and received independent final review. Author reports retain those drafting changes. The subsequent ko-01 FAIL and R1 correction supersede its original review; use the R1 status above for its current hash. Separate operator Claude shipping review remains required.
 
 ## Sources, media and checks
 

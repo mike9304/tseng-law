@@ -16,8 +16,8 @@ import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { isColumnTopic } from '@/lib/column-topics';
 
-// The batch still requires the operator's Claude Code editorial review.
-const EXPECTED: Record<IssueBoardLocale, number[]> = {
+// Pieces can land separately after the operator's Claude Code editorial review.
+const ASSIGNED_IDS: Record<IssueBoardLocale, number[]> = {
   ko: [1, 2],
   ja: [3, 4],
   'zh-hant': [],
@@ -51,13 +51,15 @@ describe('issue board 2026-10-16', () => {
     }
   }, 30_000);
 
-  it('contains exactly eight issue IDs in their assigned markets', () => {
+  it('keeps present issue IDs unique and in their assigned markets', () => {
+    expect(cases.length).toBeGreaterThan(0);
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-20261016-(\d{2})-/)?.[1]));
-      expect(numbers, locale).toEqual(EXPECTED[locale]);
+      for (const number of numbers) {
+        expect(ASSIGNED_IDS[locale], `${locale}/${number}`).toContain(number);
+      }
     }
-    expect(cases).toHaveLength(8);
-    expect(new Set(cases.map(({ file }) => issueIdFromFilename(file))).size).toBe(8);
+    expect(new Set(cases.map(({ file }) => issueIdFromFilename(file))).size).toBe(cases.length);
   });
 
   it('does not reuse an issue slug from any market or batch', () => {

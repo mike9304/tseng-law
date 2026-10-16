@@ -722,15 +722,19 @@ export const COUNTRY_COLUMN_FILES_20261015 = {
 export const COUNTRY_COLUMN_FILES_20261016 = {
   ko: [
     '629-taiwan-notarized-fixed-term-lease-direct-enforcement.md', // cols-20261016-C3
+    '630-taiwan-crypto-trading-mandate-accounting.md', // cols-20261016-C1
   ],
   en: [
     '629-taiwan-notarized-fixed-term-lease-direct-enforcement.md', // cols-20261016-C3
+    '630-taiwan-crypto-trading-mandate-accounting.md', // cols-20261016-C1
   ],
   ja: [
     '629-taiwan-notarized-fixed-term-lease-direct-enforcement.md', // cols-20261016-C3
+    '630-taiwan-crypto-trading-mandate-accounting.md', // cols-20261016-C1
   ],
   'zh-hant': [
     '629-taiwan-notarized-fixed-term-lease-direct-enforcement.md', // cols-20261016-C3
+    '630-taiwan-crypto-trading-mandate-accounting.md', // cols-20261016-C1
   ],
 } as const;
 

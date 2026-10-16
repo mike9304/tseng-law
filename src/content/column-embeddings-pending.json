@@ -2205,6 +2205,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-parked-car-collision-external-video-evidence"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-crypto-trading-mandate-accounting"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-crypto-trading-mandate-accounting"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-crypto-trading-mandate-accounting"
     }
   ]
 }

@@ -26,27 +26,27 @@ author: "legal-ai-assistant"
 
 # Taiwan startups at TechCrunch: public demos and patent filing dates
 
-About fifteen Taiwan startups exhibited at TechCrunch Disrupt in San Francisco, according to [CNA's October 15, 2026 report, updated October 16](https://www.cna.com.tw/news/ait/202610150053.aspx). The participants included businesses in medical technology, semiconductors and AI, while a Taiwan forum brought together industry and research representatives. For US founders and investors considering work with Taiwan technology teams, public presentations can raise a specific diligence question: what had already been disclosed when patent applications were filed?
+About fifteen Taiwan startups exhibited at TechCrunch Disrupt in San Francisco, according to [CNA's October 15, 2026 report, updated October 16](https://www.cna.com.tw/news/ait/202610150053.aspx). The participants included businesses in medical technology, semiconductors and AI, while a Taiwan-hosted forum brought together industry and research representatives. For US founders and investors considering work with Taiwan technology teams, public presentations can raise a specific diligence question: what had already been disclosed when patent applications were filed?
 
 The report does not provide the filing and disclosure records needed to determine any exhibitor's patent position.
 
 ## A demonstration abroad can matter in Taiwan
 
-[Patent Act Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=22) addresses inventions already described in a publication, publicly exploited or known to the public before filing. It also bars an invention that a person with ordinary skill in the field could readily make from the prior art. The provision contains no Taiwan-only geographical limit. A San Francisco presentation can therefore be relevant to a Taiwan invention-patent application.
+[Patent Act Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=22) denies a patent to an invention already described in a publication, publicly exploited or known to the public before filing. It also bars an invention that a person with ordinary skill in the field could readily make from the prior art. The provision contains no Taiwan-only geographical limit. A San Francisco presentation can therefore be relevant to a Taiwan invention-patent application.
 
 The comparison concerns the technical content actually disclosed and the invention claimed. A short commercial pitch may reveal much less than a published technical paper or a detailed demonstration. A reference to a product in a news report cannot settle that comparison. Slides, recordings and the version of the product shown provide more specific evidence of what the audience could learn.
 
-Article 22 provides an exception for disclosures resulting from the applicant's intention or occurring against its intention when the application is filed within twelve months of disclosure. That disclosure is then excluded from the article's novelty and inventive-step objections. The exception does not cover an intentional official-gazette publication resulting from a patent application in Taiwan or abroad.
+Article 22 excuses a disclosure, whether or not the applicant intended it, if the application is filed within twelve months of that disclosure. That disclosure is then excluded from the article's novelty and inventive-step objections. The exception does not cover an intentional official-gazette publication resulting from a patent application in Taiwan or abroad.
 
 The Taiwan Intellectual Property Office's [grace-period guidance](https://www.tipo.gov.tw/en/tipo2/391-2525.html) measures the period from the earliest relevant disclosure to filing. It also calls for the facts, dates and supporting evidence of each disclosure. A later conference appearance does not restart the period for technical content already disclosed earlier.
 
 ## Foreign priority uses a different starting date
 
-[Article 28](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=28) allows priority based on a qualifying first patent application for the same invention in a WTO member or a country that reciprocally recognizes priority with Taiwan. The Taiwan application must follow within twelve months of that first filing. Where priority is validly claimed, the patentability assessment uses the priority date. Applicant eligibility also matters under the article.
+[Article 28](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=28) allows priority based on a qualifying first patent application for the same invention in a WTO member or a country that reciprocally recognizes priority with Taiwan. The Taiwan application must follow within twelve months of that first filing. Where priority is validly claimed, the patentability assessment uses the priority date.
 
 That priority period does not replace the disclosure grace period. If an applicant disclosed the invention before the first foreign filing, the Taiwan disclosure analysis still has its own starting date. Treating the first US filing as a fresh twelve-month grace period for an earlier public demonstration could produce the wrong Taiwan filing deadline.
 
-Priority also needs a claim in the Taiwan application. [Article 29](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=29) requires the first filing's date, jurisdiction and application number to be declared when applying, and the certified priority document within sixteen months of the earliest priority date. The article contains a limited restoration procedure for certain unintentional omissions. A file labeled “patent pending” does not show whether those steps were completed.
+Priority must also be claimed in the Taiwan application. [Article 29](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=29) requires the first filing's date, jurisdiction and application number to be declared when applying, and the certified priority document within sixteen months of the earliest priority date. The article contains a limited restoration procedure for certain unintentional omissions. A file labeled “patent pending” does not show whether those steps were completed.
 
 ## The application must support the invention
 

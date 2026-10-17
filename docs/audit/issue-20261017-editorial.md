@@ -28,11 +28,11 @@ Comparators: the actual opening two paragraphs, headings and last substantive pa
 
 ko-01 — `src/content/issues/ko/ISSUE-20261017-01-taiwan-beitou-falling-facade-owner-liability.md`
 
-Opening excerpt: “타이베이 베이터우구에서 10월 16일 주택 외벽의 타일이 떨어져 지나가던 남성이 머리를 다쳤다고 중앙통신사(CNA)가 보도했습니다. 시 건축…”
+Opening excerpt (ko-01 r1): “타이베이 베이터우구에서 10월 16일 공동주택 외벽의 타일이 떨어져 지나가던 남성이 머리를 다쳤다고 중앙통신사(CNA)가 보도했습니다. 시 건축…”
 
 P1 identifies the dated Beitou injury and administrative fine. P2 distinguishes that fine from a Korean reader’s compensation claim and preserves the absence of a civil judgment. Each sentence adds an event fact, actor, amount or legal distinction.
 
-Reviewed file SHA-256: `14a4d0a4a2db50bd57d3777f857e2e33827f55a1e737bef164310454cd2263f3`.
+Initial reviewed file SHA-256: `14a4d0a4a2db50bd57d3777f857e2e33827f55a1e737bef164310454cd2263f3`. Current ko-01 r1 SHA-256: `a6fba39f3a9beb604115f16ca4fde60a2409c0f5d535e80bfc57ba8519fa3959`; repair evidence is recorded below.
 
 ko-02 — `src/content/issues/ko/ISSUE-20261017-02-taiwan-election-online-betting-foreign-residents.md`
 
@@ -127,3 +127,40 @@ Comparison result: Earlier pieces concern remittance providers, outside-work per
 Detailed source, author and independent reviewer records are under `/Users/son7/tseng-air-1011/lanes/issues/20261017/work/`. `SOURCES.md`, `NOTES.md`, `queue.tsv` and `tests.txt` are outside the repository in the lane directory. Body lengths, asset hashes and final automated checks are recorded there. No judgments, consultations, human credentials or case outcomes were invented.
 
 Generated images are fictional, contain no text/logos/identifiable people and were visually inspected before WebP/JPG conversion. The same image supplies each social rendition. Local development preview encountered the environment’s EMFILE watcher limit and was stopped; generated configuration changes were restored. No browser/rendered-page or production QA success is claimed.
+
+## ko-01 r1 — repair after Claude Code review FAIL
+
+Rechecked on 2026-10-17 in the assigned issues worktree. This repair changes only the ko-01 Markdown, the shared 20261017 test and this audit. Both ko-01 image files were opened and visually inspected; their bytes remain unchanged. The ko-02 disclosure mentioned by the reviewer is outside this repair's scope.
+
+| Finding | Original wording or behavior | R1 correction and reason | Meaning preserved |
+| --- | --- | --- | --- |
+| 1 — MINOR, body disclosure | “이미지: AI로 만든 가상의 주택가이며, 실제 사고 현장을 촬영한 사진이 아닙니다.” | “대표 이미지는 AI로 만든 가상의 주택가이며, 베이터우 사고 현장이나 실제 건물의 결함을 촬영한 사진이 아닙니다.” Restores sentence-form prose and identifies both limits of the fictional image. | AI provenance retained; no claim of actual scene or defect evidence. |
+| 2 — NIT, hypothetical shop | “바로 아래 가게를 운영한다는 이유만으로 그 업주가 제191조의 소유자가 되는 것은 아닙니다.” | “예컨대 1층에서 가게를 운영하는 사람이 있더라도, 그 이유만으로 그 업주가 제191조의 소유자가 되는 것은 아닙니다.” Marks the shop as an example, not a reported fact. | Article 191's ownership requirement retained; no finding about a tenant's other potential liability added. |
+| 3 — NIT, judgment wording | “이번 보도에는 민사 배상액을 정한 판결이 나오지 않습니다.” | “이번 보도에 민사 배상액을 정한 판결은 언급되지 않습니다.” Clarifies the limit of the news report. | Does not claim that no judgment exists outside the report. |
+| 4 — NIT, building type | “주택 외벽” | “공동주택 외벽” in the opening, matching the reported 公寓外牆 more precisely. | Date, location, injury, agency, liable addressee and NT$120,000 fine unchanged. |
+| 5 — NIT, alt text | “사람 없는 골목” | “한적한 골목”; distant scooters are visible and the presence of riders cannot be excluded. | Fictional-scene description retained without asserting an empty alley. |
+| 6 — NIT, partial shipping | Exact two-per-market and eight-file assertions. | Require the exact ko-01 file, allow the remaining batch IDs to arrive separately, and reject duplicate or unexpected locale/ID combinations. Existing per-file metadata, image, source, loading and expertise-board exclusion checks still cover every present piece. | A passing content test does not certify editorial approval or completeness of the eight-piece batch. |
+
+### News and current-law verification
+
+- Opened the [original CNA report, 2026-10-16](https://www.cna.com.tw/news/asoc/202610160225.aspx). It reports the Beitou exterior-tile injury and the city construction-management agency's NT$120,000 administrative fine against the building owner for deficient maintenance. It does not mention a shop, tenant, civil award or settlement. The article's illustrative shop sentence is now explicitly hypothetical.
+- Opened MOJ [Civil Code Article 191](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=191): the owner is the statutory addressee; the alternatives include “設置或保管並無欠缺”, damage not caused by a defect, or reasonable care to prevent the damage. The Korean body and FAQ preserve all three alternatives.
+- Opened MOJ [Article 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=193): “喪失或減少勞動能力或增加生活上之需要” preserves the OR relationship between lost/reduced work capacity and increased living needs. No further legal rewrite was needed.
+- Opened MOJ [Article 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=195): paragraph 1 permits an appropriate amount for non-property damage from unlawful bodily/health injury. The paraphrase does not assert an automatic amount.
+- Checked the [MOJ Civil Code history and commencement notice](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001). The pending-effect notice concerns Articles 166-1 and 1223, not the three provisions cited here. MOJ displayed a compilation cutoff of 2026-10-08. All four unique source URLs in the article resolved and their contents were read. No reviewer claim required a rebuttal file.
+
+### Opening comparison and verification
+
+The three Korean comparator files listed above were reread. All use a complete sentence for the body image disclosure. The bus article also separates an administrative fine from compensation, but concerns carrier delay and extra transport costs; ko-01 concerns ownership, falling tiles and injury records. The e-cigarette piece concerns product classification and import penalties, and the motorcycle piece distinguishes a proposal from current rules. Ko-01 retains its single issue-specific heading and evidence-focused ending without adding a checklist or consultation promotion.
+
+Sentence-deletion review of the first two paragraphs: P1 sentence 1 supplies the dated, located injury and CNA source; sentence 2 adds the agency, owner, maintenance failure and fine. P2 sentence 1 connects the issue to a Korean traveller/resident's own compensation claim; sentence 2 identifies the fine's recipient distinction and the absence of a reported civil award. Each sentence supplies information that would otherwise be lost.
+
+- Full existing batch: `node node_modules/vitest/vitest.mjs run src/lib/__tests__/issue-board-20261017.test.ts --configLoader native --no-cache --reporter=dot` — 17/17 passed.
+- Ko-01-only scenario: the same test file was run through Vitest's API with an in-memory `fs.readdirSync` mock hiding the other seven batch files — 3/3 passed, including actual post loading. No article was moved or deleted, and no temporary test file was written.
+- Scoped ESLint with `--no-cache --max-warnings=0` and `git diff --check` passed. Native config loading avoided writing a bundled config into the shared dependency directory. The Node module-type warning is unrelated to these content changes; package configuration was not changed.
+- Visible main text: 1,063 characters; complete visible body including title, references and verification note: 1,313 characters (Unicode code points, Markdown link destinations removed). Three FAQs retained; no bold markup found.
+- Unchanged asset SHA-256: WebP `0d5251f51e40fb96e922f23ac14d55b90de76e8f237ee39a74499dd92be53898`; JPG `e69cf8a06d8b4c8907a7c0f7d4401ea1f2d099d895f6232756e5fb6ec254f2c6`. Both show the same fictional scene, with no readable text, logos or identifiable people.
+- Independent AI Korean repair reviewer `ko01_repair_locale` returned PASS on manuscript SHA-256 `a6fba39f3a9beb604115f16ca4fde60a2409c0f5d535e80bfc57ba8519fa3959`. The reviewer did not author or edit the article; it independently read the source pages, both images and the three Korean comparators. Its caveat about the initial audit excerpt/hash was resolved in the r1 audit update above.
+- Independent AI final reviewer `ko01_repair_final` returned PASS with no unresolved material findings on the same manuscript, test SHA-256 `715b80e1dd88446dc3db61479fdaeecca7740c1d068c5f5d4f4c9a7c0cbe1fb4` and audit SHA-256 `f019064768d1b72e172ebbb74608ab99fe69d30d20b58a09861f78f8abbaf3be` (before this result line was added). The reviewer independently opened CNA and the MOJ provisions/history, inspected both images and reviewed all six repairs; it did not author the article, edit files or rerun tests. These AI reviews do not constitute the separate Claude Code shipping review.
+
+This is a local repair record for Claude Code re-review. No new browser, production, build, commit, push or publication success is claimed.

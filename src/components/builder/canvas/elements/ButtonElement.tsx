@@ -1,6 +1,7 @@
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
 import { getLegacyZhHantHeroButtonIcon } from '@/lib/builder/canvas/home-zh-hant-parity';
 import { linkValueFromLegacy, sanitizeLinkValue } from '@/lib/builder/links';
+import { upgradeLegacyConsultationMailto } from '@/lib/consultation/legacy-mailto';
 import type { Locale } from '@/lib/locales';
 import { getButtonInspectorCopy, localizedButtonLabel } from '@/lib/builder/components/button/button-copy';
 import type { BuilderTheme } from '@/lib/builder/site/types';
@@ -24,7 +25,12 @@ export default function ButtonElement({
   const { className, as, label } = node.content;
   const copy = getButtonInspectorCopy(locale);
   const buttonLabel = localizedButtonLabel(label, copy.defaultLabel);
-  const link = sanitizeLinkValue(linkValueFromLegacy(node.content));
+  const effectiveLink = linkValueFromLegacy(node.content);
+  // Match the stored href before sanitization trims it; never mutate the saved node.
+  const link = sanitizeLinkValue(effectiveLink && {
+    ...effectiveLink,
+    href: upgradeLegacyConsultationMailto(effectiveLink.href),
+  });
   const href = link?.href ?? '';
   const lightboxSlug = href.startsWith('lightbox:') ? href.slice('lightbox:'.length).trim() : '';
   const interactive = mode === 'published';

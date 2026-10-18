@@ -20,11 +20,11 @@ import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
 import { isApplePresentationLocale } from '@/lib/apple-design-locales';
 import { taiwanOfficeData } from '@/data/office-locations';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { IS_STATIC_SITE } from '@/lib/static-site';
 import {
   CONSULTATION_EMAIL,
   getConsultationCtaLabel,
-  getConsultationPublicMailto,
   getOfficialConsultationEmailLabel,
 } from '@/lib/consultation/public-contact';
 
@@ -131,7 +131,7 @@ export default function Footer({
     address: locale === 'vi' ? taiwanOfficeData['zh-hant'][index]?.address ?? office.details[0] : office.details[0],
     href: `/${locale}/contact#offices`,
   }));
-  const consultationMailto = locale === 'vi' ? `mailto:${CONSULTATION_EMAIL}` : getConsultationPublicMailto(chromeLocale);
+  const consultationMailto = getLocalizedConsultationMailto(locale);
   // vi and the Folio locales name the email link with their own contact CTA instead of the English label.
   const consultationCtaLabel = locale === 'vi' || isIntlDesignLocale(locale) ? content.nav.cta.label : getConsultationCtaLabel(chromeLocale);
   const legalLinks = isGuidanceLocale4(locale)

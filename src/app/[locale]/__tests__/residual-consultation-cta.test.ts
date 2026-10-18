@@ -10,9 +10,10 @@ import type { SiteLocale } from '@/lib/locales';
 import { landingContent } from '@/app/[locale]/korean-lawyer-in-taiwan/content';
 
 const root = process.cwd();
+// ColumnDetailView now has rendered href coverage for site and guidance locales
+// in columns/[slug]/__tests__/column-view-visibility.test.tsx.
 const pagePaths = [
   'src/app/[locale]/services/[slug]/page.tsx',
-  'src/app/[locale]/columns/[slug]/ColumnDetailView.tsx',
   'src/app/[locale]/lawyers/[slug]/page.tsx',
   'src/app/[locale]/korean-lawyer-in-taiwan/page.tsx',
   'src/app/[locale]/guides/taiwan-company-setup/page.tsx',
@@ -35,13 +36,7 @@ describe('residual public consultation CTAs', () => {
 
     expect(source).toContain('CONSULTATION_EMAIL');
     expect(source).toContain('getConsultationPublicMailto');
-    // vi has no SiteLocale mail template (the English one would open), so vi articles send readers to the Vietnamese
-    // contact page, which states the consultation languages and, in the static build, opens a plain mailto.
-    // Every other locale and page keeps the localized mailto.
-    const ctaHref = pagePath.endsWith('ColumnDetailView.tsx')
-      ? "href={urlLocale === 'vi' ? '/vi/contact' : getConsultationPublicMailto(locale)}"
-      : 'href={getConsultationPublicMailto(locale)}';
-    expect(source).toContain(ctaHref);
+    expect(source).toContain('href={getConsultationPublicMailto(locale)}');
     expect(source).toContain('aria-label=');
     expect(source).not.toContain('tel:');
     expect(source).not.toMatch(/kakaotalk|kakao|line\.me/i);

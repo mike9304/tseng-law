@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import { getAiIntakeDiscovery, type AiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { JULY_CONSULTATION_MAILTO } from '@/lib/consultation/legacy-mailto';
 import { createHomeButtonNode, createHomeContainerNode } from './decompose-home-shared';
 import { getOfficeLocationPresets } from './office-locations';
 import { createDefaultCanvasNodeStyle, type BuilderCanvasDocument, type BuilderCanvasNode } from './types';
@@ -369,6 +370,11 @@ export async function normalizeLegacyZhHantHomeRead(
 const ZINDEX_INSERTION_IDS = ['home-hero-email-consultation-link', 'home-attorney-detail-flow'] as const;
 const KNOWN_INSERTED_GROUP_ID = 'home-attorney-detail-flow';
 
+/** Exact approved links only: authored recipients, subjects, bodies and extra parameters still opt out. */
+export function isApprovedJulyZhHantConsultationMailto(href: string | null): boolean {
+  return href === JULY_CONSULTATION_MAILTO || href === getConsultationPublicMailto('zh-hant');
+}
+
 /** Comparison-only: save compaction reindexes zIndex and fills the inserted group defaults. Actual nodes stay unchanged. */
 function nodesForJulyFingerprint(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
   const insertions = ZINDEX_INSERTION_IDS
@@ -377,7 +383,13 @@ function nodesForJulyFingerprint(nodes: BuilderCanvasNode[]): BuilderCanvasNode[
     .sort((left, right) => left - right);
   const sequential = insertions.length === ZINDEX_INSERTION_IDS.length
     && nodes.every((node, index) => node.zIndex === index);
-  return nodes.map((node, index) => {
+  return nodes.map((savedNode, index) => {
+    // Both the saved old link and the current approved draft represent the same stock CTA.
+    // Normalize only this node's exact approved href; retain all other authored fields.
+    const node = savedNode.id === 'home-hero-email-consultation-link' && savedNode.kind === 'button'
+      && isApprovedJulyZhHantConsultationMailto(savedNode.content.href)
+      ? { ...savedNode, content: { ...savedNode.content, href: JULY_CONSULTATION_MAILTO } }
+      : savedNode;
     const zIndex = sequential
       ? index - insertions.filter((position) => position < index).length
       : node.zIndex;

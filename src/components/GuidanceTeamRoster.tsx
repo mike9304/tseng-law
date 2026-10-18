@@ -11,6 +11,8 @@ import {
 } from '@/data/international-guidance-team';
 import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import { teamContent, type TeamMember } from '@/data/team-members';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
+import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import { guidancePublicPath } from '@/lib/public-guidance';
 
 /**
@@ -103,7 +105,7 @@ function GuidanceMemberCard({
         </h3>
         <p className="attorney-card-role">{role}</p>
         {member.email ? (
-          <a href={`mailto:${member.email}`} className="attorney-card-email">
+          <a href={member.email === CONSULTATION_EMAIL ? getLocalizedConsultationMailto(locale) : `mailto:${member.email}`} className="attorney-card-email">
             {member.email}
           </a>
         ) : null}

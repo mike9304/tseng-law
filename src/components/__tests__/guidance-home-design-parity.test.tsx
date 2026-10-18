@@ -241,6 +241,8 @@ describe('guidance home matches the English home composition', () => {
         // segment; everything structural must not.
         .replace(/>[^<]*</g, '><')
         .replace(/(alt|aria-label|title)="[^"]*"/g, '$1=""')
+        // Draft text in mailto query parameters is localized content, too.
+        .replace(/href="mailto:wei@hoveringlaw\.com\.tw\?[^"]+"/g, 'href="mailto:{consultation-draft}"')
         .replace(new RegExp(`"/${locale}/`, 'g'), '"/{locale}/')
         .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"')
         .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-');

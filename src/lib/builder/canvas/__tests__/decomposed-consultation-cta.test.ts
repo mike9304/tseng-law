@@ -7,15 +7,15 @@ import { createAttorneyProfileSectionNodes } from '../decompose-page-shared';
 const expectedTemplateCopy: Record<Locale, { subject: string; body: string }> = {
   ko: {
     subject: '[tseng-law.com 상담문의] 대만 법률 및 기업 업무 상담',
-    body: '안녕하세요, 증준외 대만 변호사님.',
+    body: '안녕하세요\n\n이름:\n\n',
   },
   'zh-hant': {
     subject: '【tseng-law.com 法律諮詢】台灣法律及企業服務諮詢',
-    body: '曾雋崴律師您好：',
+    body: '您好\n\n姓名：\n\n',
   },
   en: {
     subject: '[tseng-law.com Consultation] Taiwan Legal and Corporate Services',
-    body: 'Dear Attorney Tseng,',
+    body: 'Hello,\n\nName:\n\n',
   },
 };
 
@@ -25,7 +25,7 @@ function expectLocalizedConsultationMailto(href: string, locale: Locale): void {
   expect(parsed.protocol).toBe('mailto:');
   expect(parsed.pathname).toBe(CONSULTATION_EMAIL);
   expect(parsed.searchParams.get('subject')).toBe(expectedTemplateCopy[locale].subject);
-  expect(parsed.searchParams.get('body')).toContain(expectedTemplateCopy[locale].body);
+  expect(parsed.searchParams.get('body')?.startsWith(expectedTemplateCopy[locale].body)).toBe(true);
   expect(href).toContain(encodeURIComponent(expectedTemplateCopy[locale].subject));
   expect(href).toContain(encodeURIComponent(expectedTemplateCopy[locale].body));
   expect(href).not.toMatch(/\/contact|010-2992-9304|kakao|line\.me/i);

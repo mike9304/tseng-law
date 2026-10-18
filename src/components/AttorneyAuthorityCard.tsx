@@ -45,9 +45,12 @@ const cardLabels = {
 export default function AttorneyAuthorityCard({
   locale,
   heading,
+  consultationHref,
 }: {
   locale: SiteLocale;
   heading?: string;
+  /** A guidance page can supply its own localized consultation draft. */
+  consultationHref?: string;
 }) {
   const profile = getAttorneyProfile(locale, primaryAttorneySlug);
 
@@ -113,7 +116,7 @@ export default function AttorneyAuthorityCard({
           {labels.profile}
         </Link>
         <a
-          href={getConsultationPublicMailto(locale)}
+          href={consultationHref ?? getConsultationPublicMailto(locale)}
           className="button"
           aria-label={`${labels.contact} — ${getConsultationCtaLabel(locale)}`}
         >

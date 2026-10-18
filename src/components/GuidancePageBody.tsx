@@ -18,6 +18,7 @@ import {
   type GuidancePageKey,
 } from '@/data/international-guidance-content';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import { folioChrome } from '@/data/intl-design-chrome';
 import {
@@ -302,7 +303,7 @@ export function GuidanceContactBand({
           </div>
           <div className="home-contact-actions">
             {isContact ? (
-              <a className="button ghost" href={`mailto:${CONSULTATION_EMAIL}`}>
+              <a className="button ghost" href={getLocalizedConsultationMailto(locale)}>
                 {CONSULTATION_EMAIL}
               </a>
             ) : (
@@ -310,7 +311,7 @@ export function GuidanceContactBand({
                 {pack.contactCta}
               </Link>
             )}
-            <a className="button secondary" href={`mailto:${CONSULTATION_EMAIL}`}>
+            <a className="button secondary" href={getLocalizedConsultationMailto(locale)}>
               {CONSULTATION_EMAIL}
             </a>
           </div>

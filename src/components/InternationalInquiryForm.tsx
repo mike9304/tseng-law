@@ -17,10 +17,9 @@ import {
   CONSULTATION_LANGUAGES,
   inquiryLanguageSchema,
 } from '@/lib/consultation/intake-language-contract';
-import { isSiteLocale } from '@/lib/locales';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import {
   getConsultationPublicEmail,
-  getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import { IS_STATIC_SITE } from '@/lib/static-site';
 import styles from './InternationalInquiryForm.module.css';
@@ -271,9 +270,7 @@ export function InternationalInquiryNotice({
  */
 function InternationalInquiryEmailCta({ locale }: { locale: InquiryCopyLocale }) {
   const copy = internationalInquiryCopy[locale];
-  const mailto = isSiteLocale(locale)
-    ? getConsultationPublicMailto(locale)
-    : `mailto:${getConsultationPublicEmail()}`;
+  const mailto = getLocalizedConsultationMailto(locale);
 
   return (
     <section className={styles.form} lang={locale} data-inquiry-mode="email">

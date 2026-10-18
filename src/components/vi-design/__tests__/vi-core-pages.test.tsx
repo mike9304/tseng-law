@@ -10,6 +10,7 @@ import { teamContent } from '@/data/team-members';
 import { viSiteCopy } from '@/data/vi-site';
 import type { ColumnPost } from '@/lib/column-post';
 import { CONSULTATION_LANGUAGES } from '@/lib/consultation/intake-language-contract';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import { GUIDANCE_PAGE_KEYS } from '@/lib/public-guidance';
 
@@ -69,7 +70,12 @@ describe('Vietnamese core pages preserve the complete public content', () => {
       expect(html).toContain(textMarkup(member.name));
       expect(html).toContain(textMarkup(guidanceTeamCopy.vi.roles[memberId]));
       expect(html).toContain(encodeURIComponent(member.photo));
-      if (member.email) expect(html).toContain(`href="mailto:${member.email}"`);
+      if (member.email) {
+        const href = member.email === CONSULTATION_EMAIL
+          ? getLocalizedConsultationMailto('vi').replace(/&/g, '&amp;')
+          : `mailto:${member.email}`;
+        expect(html).toContain(`href="${href}"`);
+      }
     }
     expect(html).toContain(textMarkup(internationalInquiryCopy.vi.consultationNotice));
     expect(html).toContain('href="/vi/contact"');
@@ -87,7 +93,7 @@ describe('Vietnamese core pages preserve the complete public content', () => {
     expect(form).not.toContain('<option value="vi"');
     expect(form).toContain('href="/vi/privacy"');
     expect(form).toContain('type="submit"');
-    expect(html).toContain(`href="mailto:${CONSULTATION_EMAIL}"`);
+    expect(html).toContain(`href="${getLocalizedConsultationMailto('vi').replace(/&/g, '&amp;')}"`);
     expect(html).toContain(taiwanOfficeData['zh-hant'][0].address);
     for (const paragraph of guidanceContent.vi.pages.contact.sections[2].paragraphs) {
       expect(html).toContain(textMarkup(paragraph));

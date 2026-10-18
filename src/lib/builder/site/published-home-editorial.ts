@@ -6,7 +6,8 @@ import {
   PUBLISHED_HOME_COMPOSITE_STAGE_HEIGHT_BY_LOCALE,
   type HomeCompositeSectionId,
 } from '@/lib/builder/canvas/home-composite-parity';
-import { getConsultationCtaLabel, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { getConsultationCtaLabel } from '@/lib/consultation/public-contact';
+import { isApprovedJulyZhHantConsultationMailto } from '@/lib/builder/canvas/home-zh-hant-parity';
 import { siteContent } from '@/data/site-content';
 
 const STAGE_WIDTH = 1280;
@@ -1185,7 +1186,7 @@ export function deriveJulyHeroEditorialPresentation(
   if (email) {
     const emailHref = readContentString(email, ['href']);
     const emailLabel = readContentString(email, ['label', 'text']);
-    if (emailHref !== getConsultationPublicMailto('zh-hant')) return null;
+    if (!isApprovedJulyZhHantConsultationMailto(emailHref)) return null;
     if (emailLabel && emailLabel !== '申請電子郵件諮詢' && emailLabel !== getConsultationCtaLabel('zh-hant')) {
       return null;
     }

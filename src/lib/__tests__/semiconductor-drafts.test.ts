@@ -3,6 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { getServiceArea } from '@/data/service-details';
+import { getConsultationEmailTemplate } from '@/lib/consultation/public-contact';
 import {
   SEMICONDUCTOR_DRAFT_CATEGORY_ID,
   getSemiconductorDraftBySlug,
@@ -10,6 +11,7 @@ import {
   listSemiconductorArticleDrafts,
   listSemiconductorDrafts,
   semiconductorDraftBodyWithoutLeadingTitle,
+  semiconductorInquiryMailto,
 } from '@/lib/semiconductor-drafts';
 
 type ManifestContent = {
@@ -27,6 +29,23 @@ const manifest = JSON.parse(
 ) as { content: ManifestContent[] };
 
 describe('semiconductor unpublished drafts', () => {
+  it.each([
+    ['taiwan-entry', '[tseng-law.com 상담문의] 반도체 기업 — 대만 진출'],
+    ['commercial-contracts', '[tseng-law.com 상담문의] 반도체 기업 — 공급계약'],
+    ['transaction-disputes', '[tseng-law.com 상담문의] 반도체 기업 — 대금분쟁'],
+  ] as const)('keeps the %s inquiry subject and uses the concise Korean draft', (kind, subject) => {
+    const parsed = new URL(semiconductorInquiryMailto(kind));
+    const body = parsed.searchParams.get('body');
+
+    expect(parsed.protocol).toBe('mailto:');
+    expect(parsed.pathname).toBe('wei@hoveringlaw.com.tw');
+    expect(parsed.searchParams.get('subject')).toBe(subject);
+    expect(body).toBe(getConsultationEmailTemplate('ko').body);
+    expect(body).toMatch(/^안녕하세요\n\n이름:\n\n/);
+    expect(body).toContain('사건 관련 자료(있으면 민감정보를 제외한 사본 첨부):\n\n※ ');
+    expect(body).not.toMatch(/증준외|변호사님|감사합니다|희망 상담 언어|문의 분야/);
+  });
+
   it('keeps the four Korean manuscripts byte-identical to the package manifest hashes', () => {
     const drafts = listSemiconductorDrafts();
     expect(drafts.map((item) => item.id)).toEqual([

@@ -1,3 +1,4 @@
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { describe, expect, it, vi } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 
@@ -13,9 +14,10 @@ describe('InternationalInquiryForm on the static site', () => {
     expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');
   });
 
-  it('falls back to a plain mailto for guidance locales', async () => {
+  it('opens a localized draft for guidance locales', async () => {
     const { default: InternationalInquiryForm } = await import('../InternationalInquiryForm');
     const html = renderToStaticMarkup(<InternationalInquiryForm locale="vi" />);
-    expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw"');
+    expect(html).toContain(`href="${getLocalizedConsultationMailto('vi').replace(/&/g, '&amp;')}"`);
+    expect(html).not.toContain('href="mailto:wei@hoveringlaw.com.tw"');
   });
 });

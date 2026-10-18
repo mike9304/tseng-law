@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { createHomePageCanvasDocument } from '@/lib/builder/canvas/seed-home';
 import { normalizeCanvasDocument } from '@/lib/builder/canvas/types';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import savedJulyHome from '@/lib/builder/canvas/__tests__/fixtures/legacy-zh-home-july.json';
 import {
   hasLegacyJulyZhHantHomeDualTree,
@@ -27,6 +28,26 @@ import {
 } from '@/lib/builder/site/published-home-editorial';
 
 const LOCALES = ['ko', 'en', 'zh-hant'] as const;
+
+// Frozen pre-October-18 input: do not derive this saved link from the current template.
+const savedConsultationMailto = 'mailto:wei@hoveringlaw.com.tw?subject='
+  + encodeURIComponent('【tseng-law.com 法律諮詢】台灣法律及企業服務諮詢')
+  + '&body=' + encodeURIComponent([
+    '曾雋崴律師您好：',
+    '',
+    '我想就以下事項提出諮詢。',
+    '',
+    '姓名或公司名稱：',
+    '電子郵件：',
+    '聯絡電話：',
+    '諮詢類型：',
+    '案件或業務概要：',
+    '希望使用的語言：中文 / 한국어 / English / 日本語',
+    '',
+    '※ 初次聯絡時不提供身分證字號、護照號碼、銀行帳戶資料或證件正本等敏感資訊。相關文件將於律師另行指示後，以安全方式提供。',
+    '',
+    '謝謝。',
+  ].join('\n'));
 
 function normalizedFactory(locale: (typeof LOCALES)[number]) {
   return normalizeCanvasDocument(createHomePageCanvasDocument(locale), locale);
@@ -246,6 +267,63 @@ describe('current9 published home editorial admission', () => {
 });
 
 describe('july published home editorial derivation', () => {
+  it.each(['old', 'new'] as const)('admits an already-saved %s consultation link without mutating it', async (version) => {
+    const saved = normalizeCanvasDocument(julyFixture(), 'zh-hant');
+    const email = saved.nodes.find((node) => node.id === 'home-hero-email-consultation-link');
+    if (email?.kind !== 'button') throw new Error('consultation button expected');
+    email.content.href = version === 'old' ? savedConsultationMailto : getConsultationPublicMailto('zh-hant');
+    const before = structuredClone(saved);
+
+    expect(await hasLegacyJulyZhHantHomeDualTree(saved, 'zh-hant', true)).toBe(true);
+    const read = await normalizeLegacyZhHantHomeRead(saved, 'zh-hant', true);
+    expect(await hasLegacyJulyZhHantHomeDualTree(read, 'zh-hant', true)).toBe(true);
+    expect(deriveJulyHeroEditorialPresentation(read, 'zh-hant')).not.toBeNull();
+    expect(read.nodes.find((node) => node.id === email.id)?.content).toEqual(email.content);
+    expect(saved).toEqual(before);
+    expect(await normalizeLegacyZhHantHomeRead(read, 'zh-hant', true)).toBe(read);
+  });
+
+  it.each(['old', 'new'] as const)('rejects authored edits alongside the approved %s consultation link', async (version) => {
+    const saved = normalizeCanvasDocument(julyFixture(), 'zh-hant');
+    const email = saved.nodes.find((node) => node.id === 'home-hero-email-consultation-link');
+    const title = saved.nodes.find((node) => node.id === 'home-hero-title');
+    if (email?.kind !== 'button' || title?.kind !== 'text') throw new Error('hero nodes expected');
+    email.content.href = version === 'old' ? savedConsultationMailto : getConsultationPublicMailto('zh-hant');
+    title.content.text = '作者自行撰寫的首頁標題';
+    const before = structuredClone(saved);
+
+    expect(await hasLegacyJulyZhHantHomeDualTree(saved, 'zh-hant', true)).toBe(false);
+    expect(await normalizeLegacyZhHantHomeRead(saved, 'zh-hant', true)).toBe(saved);
+    expect(saved).toEqual(before);
+  });
+
+  it.each(['recipient', 'subject', 'body', 'cc', 'label', 'geometry', 'other-link'] as const)(
+    'rejects an authored consultation %s change', async (change) => {
+      const saved = normalizeCanvasDocument(julyFixture(), 'zh-hant');
+      const email = saved.nodes.find((node) => node.id === 'home-hero-email-consultation-link');
+      if (email?.kind !== 'button') throw new Error('consultation button expected');
+      if (change === 'recipient') email.content.href = email.content.href.replace('wei@hoveringlaw.com.tw', 'author@example.com');
+      if (change === 'subject' || change === 'body' || change === 'cc') {
+        const href = new URL(email.content.href);
+        href.searchParams.set(change, 'author@example.com');
+        email.content.href = href.toString();
+      }
+      if (change === 'label') email.content.label = '作者的連結';
+      if (change === 'geometry') email.rect.width += 1;
+      if (change === 'other-link') {
+        const columns = saved.nodes.find((node) => node.id === 'home-hero-columns-link');
+        if (columns?.kind !== 'button') throw new Error('columns button expected');
+        columns.content.href = getConsultationPublicMailto('zh-hant');
+      }
+      const before = structuredClone(saved);
+
+      expect(await hasLegacyJulyZhHantHomeDualTree(saved, 'zh-hant', true)).toBe(false);
+      expect(await normalizeLegacyZhHantHomeRead(saved, 'zh-hant', true)).toBe(saved);
+      if (change !== 'geometry') expect(deriveJulyHeroEditorialPresentation(saved, 'zh-hant')).toBeNull();
+      expect(saved).toEqual(before);
+    },
+  );
+
   it('uses the real fixture and unchanged SHA guard, preserving 聯絡 and primitive hero strings', async () => {
     const rawCount = savedJulyHome.nodes.length;
     const normalized = julyFixture();

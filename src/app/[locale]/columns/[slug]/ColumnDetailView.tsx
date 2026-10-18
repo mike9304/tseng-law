@@ -15,7 +15,9 @@ import ColumnGeneratedVideo from '@/components/ColumnGeneratedVideo';
 import ColumnToc from '@/components/ColumnToc';
 import { extractColumnToc, type ColumnTocEntry } from '@/lib/column-toc';
 import JsonLd from '@/components/JsonLd';
-import { CONSULTATION_EMAIL, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
+import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
+import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import type { SiteLocale } from '@/lib/locales';
 import type { ColumnPost, ColumnFaqItem } from '@/lib/column-post';
 import type { TrafficDiagramId, TrafficDiagramLocale } from '@/data/traffic-diagrams';
@@ -97,6 +99,8 @@ function FolioAuthority({ heading, card }: { heading: string; card: FolioAuthori
 
 /** Shared SSR view. Data loading and publication decisions stay in the server route. */
 export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography, folio }: ColumnDetailViewProps) {
+  const guidanceLocale = isGuidanceLocale4(urlLocale) ? urlLocale : undefined;
+  const consultationHref = getLocalizedConsultationMailto(guidanceLocale ?? locale);
   const showObservation = showBody && hasRightTurnObservation(urlLocale, post.slug);
   const visibleToc = showObservation
     ? [...tocEntries, { id: RIGHT_TURN_OBSERVATION.id, text: RIGHT_TURN_OBSERVATION.title }]
@@ -176,10 +180,11 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
               <ColumnGeneratedVideo locale={urlLocale} slug={post.slug} autoPlay={isTrafficColumn} />
               {diagramVideo && diagramSplit ? (
                 <>
-                  <ColumnContent content={diagramSplit[0]} locale={locale} uiLocale={urlLocale === 'vi' ? 'vi' : locale} />
+                  <ColumnContent content={diagramSplit[0]} consultationLocale={guidanceLocale} locale={locale} uiLocale={urlLocale === 'vi' ? 'vi' : locale} />
                   <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
                   <ColumnContent
                     content={diagramSplit[1]}
+                    consultationLocale={guidanceLocale}
                     locale={locale}
                     uiLocale={urlLocale === 'vi' ? 'vi' : locale}
                     sectionIdOffset={extractColumnToc(diagramSplit[0]).length}
@@ -192,6 +197,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                   ) : null}
                   <ColumnContent
                     content={post.content}
+                    consultationLocale={guidanceLocale}
                     locale={locale}
                     uiLocale={urlLocale === 'vi' ? 'vi' : locale}
                     tableScrollHint={folio?.tableScrollHint}
@@ -228,7 +234,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                 <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
                 <p className="blog-sidebar-text">{t.consultationText}</p>
                 <a
-                  href={urlLocale === 'vi' ? '/vi/contact' : getConsultationPublicMailto(locale)}
+                  href={urlLocale === 'vi' ? '/vi/contact' : consultationHref}
                   className="button blog-sidebar-btn"
                   aria-label={urlLocale === 'vi' ? t.consultationButton : `${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
                 >
@@ -240,7 +246,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                   ? <ViArticleAuthority />
                   : folio?.authority
                     ? <FolioAuthority heading={attorneyHeading} card={folio.authority} />
-                    : <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />}
+                    : <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} consultationHref={consultationHref} />}
               </div>
               <div className="blog-sidebar-card">
                 <h3 className="blog-sidebar-title">{t.guideTitle}</h3>

@@ -9,6 +9,7 @@ import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { guidanceContent, type GuidancePageKey } from '@/data/international-guidance-content';
 import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import { viServicePresentation, viSiteCopy } from '@/data/vi-site';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import { buildGuidancePersonJsonLd, buildGuidanceTeamCollectionPageJsonLd } from '@/lib/guidance-structured-data';
 import { guidanceCanonicalUrl } from '@/lib/public-guidance';
@@ -57,7 +58,7 @@ function ContactBody() {
           <aside className={styles.contactAside}>
             <div className={styles.contactEmail}>
               <h2>{viSiteCopy.contact.emailLabel}</h2>
-              <a href={`mailto:${CONSULTATION_EMAIL}`}>{CONSULTATION_EMAIL}</a>
+              <a href={getLocalizedConsultationMailto('vi')}>{CONSULTATION_EMAIL}</a>
               {/* The contact page skips ViContactBand (which carries this notice everywhere else), so the
                   consultation languages are stated here, next to the address people write to. */}
               <p className={styles.contactLanguageNote}>{internationalInquiryCopy.vi.consultationNotice}</p>
@@ -113,7 +114,7 @@ export default function ViPageBody({ pageKey }: { pageKey: ViPageKey }) {
       {collection ? <JsonLd data={collection} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <ViPageHeader title={page.title} description={page.description}>
-        {pageKey === 'contact' ? <div className={styles.actions}><a className={styles.primaryButton} href="#international-inquiry">{viSiteCopy.contact.formAction}</a><a className={styles.textLink} href={`mailto:${CONSULTATION_EMAIL}`}>{CONSULTATION_EMAIL}</a></div> : null}
+        {pageKey === 'contact' ? <div className={styles.actions}><a className={styles.primaryButton} href="#international-inquiry">{viSiteCopy.contact.formAction}</a><a className={styles.textLink} href={getLocalizedConsultationMailto('vi')}>{CONSULTATION_EMAIL}</a></div> : null}
       </ViPageHeader>
       {pageKey === 'services' ? <ServicesBody /> : null}
       {pageKey === 'lawyers' ? <div className={styles.teamPage}><GuidanceTeamRoster locale="vi" showIntro={false} /><GuidanceAttorneyFacts locale="vi" /></div> : null}
@@ -122,7 +123,7 @@ export default function ViPageBody({ pageKey }: { pageKey: ViPageKey }) {
       {isProse ? <ProseBody pageKey={pageKey as Exclude<ViPageKey, 'services' | 'contact' | 'faq' | 'lawyers'>} /> : null}
       {pageKey === 'about' ? <ViTeamPreview /> : null}
       {pageKey !== 'contact' && pageKey !== 'privacy' && pageKey !== 'disclaimer' ? <ViContactBand /> : null}
-      {pageKey === 'privacy' || pageKey === 'disclaimer' ? <ViContainer><p className={styles.legalContact}><Link href="/vi/contact">{pack.nav.contact}</Link><span aria-hidden="true"> · </span><a href={`mailto:${CONSULTATION_EMAIL}`}>{CONSULTATION_EMAIL}</a></p></ViContainer> : null}
+      {pageKey === 'privacy' || pageKey === 'disclaimer' ? <ViContainer><p className={styles.legalContact}><Link href="/vi/contact">{pack.nav.contact}</Link><span aria-hidden="true"> · </span><a href={getLocalizedConsultationMailto('vi')}>{CONSULTATION_EMAIL}</a></p></ViContainer> : null}
     </div>
   );
 }

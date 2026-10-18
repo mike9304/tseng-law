@@ -10,7 +10,7 @@ import ViArticleAuthority from '../ViArticleAuthority';
 import { taiwanOfficeData } from '@/data/office-locations';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { guidanceLanguageNames } from '@/data/international-guidance-team';
-import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 
 describe('Vietnamese article and shared factual UI', () => {
   it('localizes table and footnote UI while preserving markdown source links', () => {
@@ -51,7 +51,7 @@ describe('Vietnamese article and shared factual UI', () => {
     const footerText = footer.replace(/<[^>]*>/g, '');
     for (const entry of taiwanOfficeData['zh-hant']) expect(footerText).toContain(entry.address);
     expect(footerText).toContain('19號6樓之1');
-    expect(footer).toContain(`href="mailto:${CONSULTATION_EMAIL}"`);
+    expect(footer).toContain(`href="${getLocalizedConsultationMailto('vi').replace(/&/g, '&amp;')}"`);
     expect(footer).not.toContain('Preferred%20language');
     const english = renderToStaticMarkup(<OfficeMapTabs locale="en" presentation="editorial" />);
     expect(english).toContain(taiwanOfficeData.en[0].address);

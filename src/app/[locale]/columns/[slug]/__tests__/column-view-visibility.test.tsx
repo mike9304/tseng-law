@@ -4,6 +4,9 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import ColumnDetailView from '../ColumnDetailView';
 import PublicColumnView from '../PublicColumnView';
 import type { ColumnDetailViewProps } from '../ColumnDetailView';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { EXISTING_SITE_LOCALES_4 } from '@/lib/public-guidance';
 
 const state = vi.hoisted(() => ({ body: false, seo: false, traffic: true, criminal: false, slug: 'visibility-fixture' }));
 vi.mock('@/lib/consultation/columns-blob-reader', () => ({
@@ -30,6 +33,35 @@ async function props(body: boolean, seo: boolean, slug = 'visibility-fixture', t
 }
 
 describe('public column view publication visibility', () => {
+  it.each(EXISTING_SITE_LOCALES_4)('preserves the final %s draft on article consultation buttons', async (locale) => {
+    const data = await props(true, false, 'visibility-fixture', false);
+    const html = renderToStaticMarkup(<ColumnDetailView {...data} locale={locale} urlLocale={locale} />);
+    const links = [...html.matchAll(/href="(mailto:wei@hoveringlaw\.com\.tw[^"]*)"/g)]
+      .map((match) => match[1].replace(/&amp;/g, '&').replace(/&#x27;/g, "'"));
+    expect(links.length).toBeGreaterThan(0);
+    for (const href of links) expect(href).toBe(getConsultationPublicMailto(locale));
+  });
+
+  it.each(['vi', 'ar', 'de', 'zh-hans', 'id', 'th', 'fil'] as const)('uses %s drafts for article consultation buttons and plain mailbox links', async (urlLocale) => {
+    const data = await props(true, false, 'visibility-fixture', false);
+    const html = renderToStaticMarkup(
+      <ColumnDetailView
+        {...data}
+        locale="en"
+        urlLocale={urlLocale}
+        diagramVideo={null}
+        diagramSplit={null}
+        post={{ ...data.post, content: '[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)\n\n[Authored draft](mailto:wei@hoveringlaw.com.tw?subject=Custom)' }}
+      />,
+    );
+    const links = [...html.matchAll(/href="(mailto:wei@hoveringlaw\.com\.tw[^"]*)"/g)]
+      .map((match) => match[1].replace(/&amp;/g, '&').replace(/&#x27;/g, "'"));
+    expect(links).toContain('mailto:wei@hoveringlaw.com.tw?subject=Custom');
+    const consultationLinks = links.filter((href) => !href.endsWith('?subject=Custom'));
+    expect(consultationLinks.length).toBeGreaterThan(0);
+    for (const href of consultationLinks) expect(href).toBe(getLocalizedConsultationMailto(urlLocale));
+  });
+
   it('lets readers return from a tagged article to its native criminal board', async () => {
     const data = await props(true, true, 'visibility-fixture', false, true);
     const html = renderToStaticMarkup(<ColumnDetailView {...data} />);

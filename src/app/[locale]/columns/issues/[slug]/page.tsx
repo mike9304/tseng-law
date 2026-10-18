@@ -191,7 +191,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
             <p className={boardStyles.dateNote} data-issue-date-note>{t.dateNote}</p>
             {tocEntries.length >= MIN_TOC_SECTIONS ? <ColumnToc entries={tocEntries} label={t.tocLabel} /> : null}
             <ColumnGeneratedVideo locale={locale} slug={post.slug} source="issue" autoPlay={resolveTrafficSubject(post, 'issue') !== null} />
-            <ColumnContent content={post.content} locale={shell} uiLocale={locale === 'vi' ? 'vi' : shell} />
+            <ColumnContent content={post.content} consultationLocale={locale === 'vi' ? 'vi' : undefined} locale={shell} uiLocale={locale === 'vi' ? 'vi' : shell} />
             {faqItems.length > 0 ? (
               <section className="column-faq" aria-label={t.faqHeading}>
                 <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>

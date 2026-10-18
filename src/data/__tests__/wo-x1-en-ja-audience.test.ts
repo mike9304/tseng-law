@@ -91,11 +91,15 @@ describe('WO-X1 EN/JA audience copy', () => {
     expect(siteContent.ko.contact.locations[1].details.join(' ')).not.toContain('+886');
   });
 
-  it('prefills only the page language in the EN/JA consultation email', () => {
-    expect(getConsultationEmailTemplate('en').body).toContain('Preferred language: English\n');
-    expect(getConsultationEmailTemplate('ja').body).toContain('ご希望の言語：日本語\n');
+  it('uses localized consultation drafts without a language-preference field', () => {
+    expect(getConsultationEmailTemplate('en').body).toMatch(/^Hello,\n\nName:\n\n/);
+    expect(getConsultationEmailTemplate('ja').body).toMatch(/^こんにちは\n\nお名前：\n\n/);
     expect(getConsultationEmailTemplate('ja').body).not.toMatch(/한국어/);
-    expect(getConsultationEmailTemplate('ko').body).toContain('희망 상담 언어: 한국어 / 中文 / English / 日本語');
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      expect(getConsultationEmailTemplate(locale).body).not.toMatch(
+        /희망 상담 언어|希望使用的語言|Preferred language|ご希望の言語/,
+      );
+    }
   });
 
   it('adds the NT$ billing note on EN/JA pricing without converted amounts', () => {

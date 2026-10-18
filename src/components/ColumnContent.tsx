@@ -9,7 +9,9 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { remarkUnderline } from '@/lib/builder/columns/remark-underline';
 import type { SiteLocale } from '@/lib/locales';
-import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
+import { CONSULTATION_EMAIL, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import type { GuidanceLocale4 } from '@/lib/public-guidance';
 import { remarkColumnSectionIds } from '@/lib/column-toc';
 
 const CONSULTATION_CTA_LABELS: Record<SiteLocale, ReadonlySet<string>> = {
@@ -159,6 +161,7 @@ export default function ColumnContent({
   uiLocale = locale,
   sectionIdOffset = 0,
   tableScrollHint,
+  consultationLocale,
 }: {
   content: string;
   locale?: SiteLocale;
@@ -168,6 +171,8 @@ export default function ColumnContent({
   sectionIdOffset?: number;
   /** Wide-table hint for a page language outside `ColumnUiLocale` (the Folio locales). */
   tableScrollHint?: string;
+  /** Page language for stock consultation links on guidance articles. */
+  consultationLocale?: GuidanceLocale4;
 }) {
   return (
     <div className="column-markdown" data-column-content="markdown">
@@ -223,7 +228,9 @@ export default function ColumnContent({
           u: ({ children }) => <u className="column-underline">{children}</u>,
           a: ({ href, children, id, title, 'aria-label': ariaLabel, 'aria-describedby': ariaDescribedBy }) => {
             const linkLabel = Children.toArray(children).map(getNodeText).join('');
-            const resolvedHref = resolveColumnMarkdownLinkHref(href, linkLabel, locale);
+            const resolvedHref = consultationLocale && href === `mailto:${CONSULTATION_EMAIL}`
+              ? getLocalizedConsultationMailto(consultationLocale)
+              : resolveColumnMarkdownLinkHref(href, linkLabel, locale);
             if (uiLocale === 'vi' && resolvedHref.startsWith('#')) {
               // Footnote references need their generated IDs and accessible
               // return labels, and must stay in this article's document.

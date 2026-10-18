@@ -10,6 +10,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import { taiwanOfficeData } from '@/data/office-locations';
 import { teamContent } from '@/data/team-members';
 import { viServicePresentation, viSiteCopy } from '@/data/vi-site';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import { buildGuidanceAttorneyFacts } from '@/lib/guidance-attorney-facts';
 import styles from './ViSite.module.css';
@@ -138,7 +139,7 @@ export function ViContactBand() {
           </div>
           <div className={styles.contactBandActions}>
             <Link href="/vi/contact#international-inquiry" className={styles.primaryButton}>{guidanceContent.vi.contactCta}</Link>
-            <a href={`mailto:${CONSULTATION_EMAIL}`} className={styles.emailLink}>{CONSULTATION_EMAIL}</a>
+            <a href={getLocalizedConsultationMailto('vi')} className={styles.emailLink}>{CONSULTATION_EMAIL}</a>
           </div>
         </div>
         <p className={styles.languageNote}>{internationalInquiryCopy.vi.consultationNotice}</p>

@@ -2277,6 +2277,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-traffic-ticket-other-driver-notice"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-related-company-loan-permitted-conditions"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-related-company-loan-permitted-conditions"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-related-company-loan-permitted-conditions"
     }
   ]
 }

@@ -749,24 +749,28 @@ export const COUNTRY_COLUMN_FILES_20261018 = {
     '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
     '634-taiwan-employee-resignation-notice-indefinite-contract.md', // cols-20261016-C6
     '635-taiwan-traffic-ticket-other-driver-notice.md', // cols-20261016-C7
+    '636-taiwan-related-company-loan-permitted-conditions.md', // cols-20261016-C8
   ],
   en: [
     '632-taiwan-company-liquidation-creditor-claim-notice.md', // cols-20261016-C4
     '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
     '634-taiwan-employee-resignation-notice-indefinite-contract.md', // cols-20261016-C6
     '635-taiwan-traffic-ticket-other-driver-notice.md', // cols-20261016-C7
+    '636-taiwan-related-company-loan-permitted-conditions.md', // cols-20261016-C8
   ],
   ja: [
     '632-taiwan-company-liquidation-creditor-claim-notice.md', // cols-20261016-C4
     '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
     '634-taiwan-employee-resignation-notice-indefinite-contract.md', // cols-20261016-C6
     '635-taiwan-traffic-ticket-other-driver-notice.md', // cols-20261016-C7
+    '636-taiwan-related-company-loan-permitted-conditions.md', // cols-20261016-C8
   ],
   'zh-hant': [
     '632-taiwan-company-liquidation-creditor-claim-notice.md', // cols-20261016-C4
     '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
     '634-taiwan-employee-resignation-notice-indefinite-contract.md', // cols-20261016-C6
     '635-taiwan-traffic-ticket-other-driver-notice.md', // cols-20261016-C7
+    '636-taiwan-related-company-loan-permitted-conditions.md', // cols-20261016-C8
   ],
 } as const;
 

@@ -187,3 +187,47 @@ Localized alt and captions disclose the fictional generated scene. The existing 
 ## Renumber note (2026-10-18 14:20 KST)
 
 ISSUE-20261018-01..05 were already published from the Mac Studio batch, so this batch was renumbered: ko 01→06, ko 02→07, ja 03→08, ja 04→09, en 06→10, vi 07→11, vi 08→12. en-05 was withdrawn because ISSUE-20261018-03 (en) already covers the same Xiaoliuqiu sea-turtle story. File hashes above predate the renumber.
+
+## ko-01 review repair r1 — 2026-10-18
+
+This entry supersedes the earlier ko-01 wording, count and hash for the present repair only. The supplied review identified two MINOR findings: the Korean issue page does not render `featured_image_caption`, and the required sentence-variety check failed. Both findings were reproduced and accepted. No rebuttal was needed. The earlier image-wiring statement did not describe the pre-repair ko-01 body accurately: its visible disclosure was added in this round.
+
+Article: `src/content/issues/ko/ISSUE-20261018-06-taiwan-cat-scooter-collision-animal-possessor-liability.md`. Before SHA-256: `b8cb01f8cf615c264d2ef663240332e4d7f3b5a55934f5ca0af683e9f146f9d5`. Repaired SHA-256: `c6ee8d2619305d63d71ca284f157efdf0d4dd995f24f8bb16d992c784b34c237`. Narrative length is 915 characters including normalized spaces, excluding headings, link destinations, disclosure and references; it is 976 including the disclosure.
+
+### Exact changes and preservation of meaning
+
+| Before | Applied wording | Reason and preserved meaning |
+| --- | --- | --- |
+| “병원으로 옮겨졌으나 숨졌다고 보도했습니다.” | “병원으로 옮겨졌다고 보도했습니다. 운전자는 숨졌습니다.” | Separates the reported death into a short sentence. Hospital transfer, death, the CNA attribution and pending inquiry into the cause remain. |
+| “대만에서 비슷한 사고를 당한 한국인이 배상을 청구할 때, 법이 책임 주체로 삼는 사람은 동물의 ‘점유자’입니다.” | “대만에서 비슷한 사고를 당한 한국인은 누구에게 배상을 청구할 수 있을까요? 그 상대는 점유자입니다.” | Adds a direct reader question and short answer. The respondent remains the animal's possessor; the following Article 940 definition and owner/controller distinction are unchanged. |
+| “다만 동물의 종류와 성질에 맞춰 상당한 주의를 기울여 통제한 경우, 또는 그렇게 통제했더라도 손해를 피할 수 없었던 경우에는 예외입니다.” | “예외는 두 가지입니다. 동물의 종류와 성질에 맞춰 상당한 주의를 기울여 통제했거나, 그렇게 통제했더라도 손해를 피할 수 없었던 경우입니다.” | Introduces the exceptions with a short sentence. Article 190's two defenses remain alternatives, with the animal's type/nature, due care and unavoidable harm conditions preserved. |
+| “그러나 그 영상만으로 누가 점유자였는지까지 밝혀지는 것은 아닙니다. 사고 전 누가 어떤 방식으로 동물을 관리하고 통제했는지는 별도로 확인할 사실입니다.” | “그러나 그 영상만으로 누가 점유자였는지까지 밝혀지는 것은 아니므로, 사고 전 누가 어떤 방식으로 동물을 관리하고 통제했는지는 별도로 확인할 사실입니다.” | Connects the video's evidentiary limit to the need to establish actual control. No possessor, owner or responsibility for this accident is invented. |
+| No visible body disclosure. | “대표 이미지는 가상의 골목 장면입니다. 가오슝 사고 현장이나 사고에 연루된 고양이를 촬영한 사진이 아닙니다.” immediately before `## 참고 자료`. | Makes the fictional-scene limitation part of the rendered body. Existing frontmatter caption, image pair and runtime component are unchanged. |
+
+### Actual repaired opening and comparison
+
+> [중앙통신사(CNA)는 10월 17일](https://www.cna.com.tw/news/asoc/202610170061.aspx), 이틀 전 가오슝 구산구에서 오토바이 운전자가 고양이와 충돌해 넘어진 뒤 병원으로 옮겨졌다고 보도했습니다. 운전자는 숨졌습니다. 경찰은 사망 원인을 밝히기 위해 검찰에 검시를 요청할 예정이라고 설명했습니다. 보도에는 고양이가 누구의 관리 아래 있었는지 나오지 않습니다.
+>
+> 대만에서 비슷한 사고를 당한 한국인은 누구에게 배상을 청구할 수 있을까요? 그 상대는 점유자입니다. [민법 제940조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=940)는 사실상 지배·관리할 힘을 가진 사람을 점유자로 정합니다. 소유자가 누구인지와 사고 당시 누가 실제로 동물을 관리했는지는 구분해서 살펴야 합니다.
+
+Deletion check: the first paragraph's four sentences respectively supply the dated news event, death, pending cause inquiry and unknown animal controller. The second paragraph's four sentences identify the Korean claimant's question, the respondent, the statutory actual-control definition and the ownership/control distinction. Removing these loses the reported outcome, a legal condition, the reader's context or a material uncertainty; no generic preview was added.
+
+The three Korean comparators listed above were reread. The October 17 facade article moves from an injury and administrative fine to ownership and damages; this repair instead asks who possessed the animal and explains Article 190's defenses. The October 17 online-betting article moves from an investigation to the Korean resident's conduct/location; this repair introduces a short question and answer without copying that sequence. The October 16 nicotine-free e-cigarette article separates product classification and penalties; this article retains one substantive heading and ends its legal discussion with causation and control. The shared dated-news opening is relevant source context, not a repeated promotional setup. Dates are repository metadata, not independently certified publication dates.
+
+### Live sources and verification
+
+On 2026-10-18, the following pages were opened and their text checked:
+
+- [CNA, October 17 report](https://www.cna.com.tw/news/asoc/202610170061.aspx): October 15 collision in Kaohsiung, hospital treatment and death, with a planned prosecutorial examination to establish the cause. It does not identify the cat's possessor or adjudicate civil liability.
+- [Civil Code Article 190](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=190&pcode=B0000001): the possessor's liability and two alternative defenses match the revised wording.
+- [Civil Code Article 940](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=940&pcode=B0000001): possession rests on factual control, supporting the unchanged ownership/control distinction.
+- [Animal Protection Act Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=M0060027): the keeper must prevent unjustified injury to others' life, body, liberty or property. That duty alone does not identify this accident's civil defendant.
+
+MOJ displayed a 2026-10-08 consolidation cutoff. The Civil Code page's pending-effect notice concerns Articles 166-1 and 1223, not the cited Articles 190 or 940. A failed Python TLS fetch was not counted as verification; the successful web reads exposed the actual statutory text.
+
+- `python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check src/content/issues/ko/ISSUE-20261018-06-taiwan-cat-scooter-collision-animal-possessor-liability.md --lang ko`: exit 0, zero FAIL; 20 sentences, CV 0.454, short-sentence share 0.150. The nonblocking warning about 95% `니다.` endings remains; the required 합니다 register is preserved.
+- `node node_modules/vitest/vitest.mjs run src/lib/__tests__/issue-board-20261018.test.ts --project unit --configLoader runner --no-cache`: 25/25 tests passed, exit 0. The test file was unchanged.
+- An exact replacement comparison against baseline commit `1506f6d5ba13146d012b00df32cb79ca5d032994` confirmed only the four prescribed wording edits and disclosure addition in the manuscript. Frontmatter/FAQ, source URLs, source-date disclaimer and absence of bold were checked. Both original image formats were viewed, match the quiet alley/cat/scooter description and remain byte-identical to baseline.
+- Caption visibility was checked in the issue renderer source: the caption remains vi-only, while the Korean disclosure is now in the content passed to `ColumnContent`. No fresh browser/mobile run, full application build or publication is claimed for this narrow repair. Only ko-01's manuscript and this audit were edited by this task; other lanes' concurrent manuscript changes were preserved. No staging, commit or push was performed.
+- Fresh independent Korean AI reviewer `ko01_r1_locale_review` returned PASS at matching start/end SHA `c6ee8d2619305d63d71ca284f157efdf0d4dd995f24f8bb16d992c784b34c237`, with no material findings. The reviewer did not author or repair this article, read all three Korean comparators, assessed all eight opening sentences and independently reopened the four cited sources.
+- Separate independent AI final reviewer `ko01_r1_final_review` returned PASS at the same end SHA, checked at 2026-10-18 14:29:56 KST. This reviewer did not author, repair or perform the locale review; it independently checked the news, statutory text and both law histories, reread the comparators and this repair entry, viewed both images and incorporated the separate locale PASS. Metrics and tests were parent evidence, not independently rerun by either reviewer. No material finding remains in this bounded repair; these AI reviews do not claim the operator's separate Claude Code re-review or authorize publication.

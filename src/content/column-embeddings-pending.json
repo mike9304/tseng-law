@@ -2253,6 +2253,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-subsidiary-board-video-proxy-written-vote"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-employee-resignation-notice-indefinite-contract"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-employee-resignation-notice-indefinite-contract"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-employee-resignation-notice-indefinite-contract"
     }
   ]
 }

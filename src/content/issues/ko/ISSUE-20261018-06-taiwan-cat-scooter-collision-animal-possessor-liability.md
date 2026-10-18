@@ -12,7 +12,7 @@ topic: litigation
 tags: ["traffic-accidents", "traffic-liability"]
 featured_image: "../images/ISSUE-20261018-06-taiwan-cat-scooter-collision-animal-possessor-liability/featured-01.webp"
 featured_image_alt: "한적한 골목의 담 위에서 쉬는 고양이와 멀리 주차된 오토바이를 표현한 가상의 장면."
-featured_image_caption: "AI로 만든 가상의 골목 이미지입니다. 가오슝 사고 현장이나 사고에 연루된 고양이를 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 골목 장면입니다. 가오슝 사고 현장이나 사고에 연루된 고양이를 촬영한 사진이 아닙니다."
 social_image: "../images/ISSUE-20261018-06-taiwan-cat-scooter-collision-animal-possessor-liability/featured-01.jpg"
 faq:
   - q: "동물 때문에 다치면 그 주인에게 곧바로 배상을 청구하나요?"
@@ -40,8 +40,6 @@ author: "legal-ai-assistant"
 [동물보호법 제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=M0060027&flno=7)도 사육자에게 자신이 기르는 동물이 정당한 이유 없이 타인의 생명·신체·자유·재산을 침해하지 않도록 할 의무를 둡니다. 이 의무가 있다는 사실과 개별 사고에서 배상책임자가 확정됐다는 것은 다릅니다. 대만에서 동물을 기르는 한국인에게도 동물을 어떻게 관리했는지가 책임 판단에 관련될 수 있습니다.
 
 배상을 요구하는 쪽에서는 동물 때문에 손해가 발생한 경위와 점유자를 연결해야 하고, 관리자로 지목된 쪽에서는 실제 관리 관계와 통제 조치가 쟁점이 됩니다.
-
-대표 이미지는 AI로 만든 가상의 골목이며, 가오슝 사고 현장이나 사고에 연루된 고양이를 촬영한 사진이 아닙니다.
 
 ## 참고 자료
 

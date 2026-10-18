@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261018-11-taiwan-micro-electric-two-wheeler-registration/featured-01.webp"
 featured_image_alt: "Một chiếc xe điện hai bánh nhỏ, không có nhãn hiệu, dựng yên bên tường và không có người lái."
-featured_image_caption: "Hình minh họa do AI tạo về một chiếc xe và khung cảnh hư cấu; không phải xe của người tham gia buổi phổ biến pháp luật hay mẫu xe được xác nhận đủ điều kiện lưu thông."
+featured_image_caption: "Hình minh họa một chiếc xe và khung cảnh hư cấu; không phải xe của người tham gia buổi phổ biến pháp luật hay mẫu xe được xác nhận đủ điều kiện lưu thông."
 social_image: "../images/ISSUE-20261018-11-taiwan-micro-electric-two-wheeler-registration/featured-01.jpg"
 faq:
   - q: "Xe đã có tem kiểm định thì có được chạy mà không gắn biển số không?"

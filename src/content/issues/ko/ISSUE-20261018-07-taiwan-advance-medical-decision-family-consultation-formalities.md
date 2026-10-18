@@ -11,7 +11,7 @@ categories:
 topic: family
 featured_image: "../images/ISSUE-20261018-07-taiwan-advance-medical-decision-family-consultation-formalities/featured-01.webp"
 featured_image_alt: "조용한 상담실의 책상 위에 놓인 무지 서류철과 마주 보는 빈 의자를 표현한 가상의 장면."
-featured_image_caption: "AI로 만든 가상의 상담실 이미지입니다. 보도된 행사나 실제 의료기관을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 상담실 장면입니다. 보도된 행사나 실제 의료기관을 촬영한 사진이 아닙니다."
 social_image: "../images/ISSUE-20261018-07-taiwan-advance-medical-decision-family-consultation-formalities/featured-01.jpg"
 faq:
   - q: "한국인도 대만에서 사전의료결정을 작성할 수 있나요?"
@@ -41,8 +41,6 @@ author: "legal-ai-assistant"
 해당 친족이 없거나 사망·실종·특별한 사유로 참석할 수 없을 때는 [상담 의료기관 관리규정 제8조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020198&flno=8)에 따라 본인이 불참 사유를 서면으로 내거나 관련 증빙을 제출합니다. 가족이 한국에 산다는 사실만으로 자동 면제된다는 규정은 아닙니다. 어느 가족이 참석할 수 있는지와 참석이 어려운 이유를 상담기관에 설명하는 과정이 필요합니다.
 
 마음이 바뀌면 [의료기관에 서면으로 철회하거나 변경](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020199&flno=6)할 수 있습니다. 의료기관이 그 서류를 전자파일로 보관하고 주무기관이 건강보험증의 기재를 갱신합니다. 가족에게 새 뜻을 전하는 것만으로 건강보험증의 기록이 바뀌지는 않습니다.
-
-대표 이미지는 AI로 만든 가상의 상담실이며, 보도된 행사나 실제 의료기관을 촬영한 사진이 아닙니다.
 
 ## 참고 자료
 

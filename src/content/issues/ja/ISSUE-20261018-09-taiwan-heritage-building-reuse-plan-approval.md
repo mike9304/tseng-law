@@ -11,7 +11,7 @@ categories:
 topic: "company"
 featured_image: "../images/ISSUE-20261018-09-taiwan-heritage-building-reuse-plan-approval/featured-01.webp"
 featured_image_alt: "アーチが連なる修復された古い建物の廊下に、木枠の窓から柔らかな光が入る風景"
-featured_image_caption: "歴史ある建物の再利用をイメージした架空のAI生成画像です。台中州庁や実在する文化財建築を写したものではありません。"
+featured_image_caption: "歴史ある建物の再利用をイメージした架空の画像です。台中州庁や実在する文化財建築を写したものではありません。"
 social_image: "../images/ISSUE-20261018-09-taiwan-heritage-building-reuse-plan-approval/featured-01.jpg"
 faq:
   - q: "台湾の古跡は、元と違う用途には使えないのですか？"
@@ -53,8 +53,6 @@ author: "legal-ai-assistant"
 今回の台中州庁の報道は施設の再公開を伝えるもので、民間店舗の新たな募集や、特定の商業用途への承認を示したものではありません。
 
 ニュース・法令確認日：2026年10月18日。台湾の古跡の再利用に関する一般情報であり、個別建物の改修の可否を判断するものではありません。
-
-画像はAIで生成した架空の建物で、台中州庁や実在する文化財建築の写真ではありません。
 
 ## 参照資料
 

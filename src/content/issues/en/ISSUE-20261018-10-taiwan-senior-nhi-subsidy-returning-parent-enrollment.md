@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261018-10-taiwan-senior-nhi-subsidy-returning-parent-enrollment/featured-01.webp"
 featured_image_alt: "A blank folder and reading glasses on a quiet domestic table, with a suitcase beside a window."
-featured_image_caption: "AI-generated illustration of a fictional home; it shows no actual family, insurance card, application or official document."
+featured_image_caption: "A fictional home scene; it shows no actual family, insurance card, application or official document."
 social_image: "../images/ISSUE-20261018-10-taiwan-senior-nhi-subsidy-returning-parent-enrollment/featured-01.jpg"
 faq:
   - q: "Does the senior-premium vote establish coverage for a parent arriving from the United States?"
@@ -47,8 +47,6 @@ Under [Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001
 For an adult child arranging the move from abroad, an NHI enrollment history and the household-registration record can explain why the parent's situation differs from another returnee's. A withdrawal date, a later period of participation or the date registration was reestablished may change which part of the returnee guidance applies. The National Health Insurance Administration can address the enrollment date using those records, without the family having to infer coverage from a broad subsidy headline.
 
 That date is the useful answer when a family is considering medical appointments around the return. Who pays a qualifying person's premiums is a different question from whether the parent is enrolled on the proposed appointment date. Neither question is resolved by the October 16 legislative report alone.
-
-Illustration: AI-generated fictional home; it is not a photograph of an actual family or its insurance documents.
 
 ## Sources
 

@@ -11,7 +11,7 @@ categories:
 topic: "visa"
 featured_image: "../images/ISSUE-20261018-08-taiwan-japanese-performer-work-permit-applicant/featured-01.webp"
 featured_image_alt: "暖かな照明が当たる無人の舞台に置かれたマイクとケーブル"
-featured_image_caption: "公演準備をイメージした架空のAI生成画像です。米津玄師の公演や台北ドームを写したものではありません。"
+featured_image_caption: "公演準備をイメージした架空の画像です。米津玄師の公演や台北ドームを写したものではありません。"
 social_image: "../images/ISSUE-20261018-08-taiwan-japanese-performer-work-permit-applicant/featured-01.jpg"
 faq:
   - q: "台湾公演の就労許可は、必ず雇用主が申請するのですか？"
@@ -51,8 +51,6 @@ author: "legal-ai-assistant"
 また、出演者本人の許可から、同行する別の演奏者や制作スタッフの扱いまで判断することはできません。誰について、どの業務を検討しているのかを分けることで、代表者1人の許可を公演全体の許可として扱う誤りを避けられます。ほかの法定の例外が適用される可能性も含め、各人の立場と仕事に即した検討になります。
 
 ニュース・法令確認日：2026年10月18日。台湾の就労許可に関する一般情報です。
-
-画像はAIで生成した架空の舞台で、報道された公演や台北ドームの写真ではありません。
 
 ## 参照資料
 

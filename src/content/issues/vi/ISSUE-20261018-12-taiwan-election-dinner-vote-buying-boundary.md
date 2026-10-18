@@ -11,7 +11,7 @@ categories:
 topic: criminal
 featured_image: "../images/ISSUE-20261018-12-taiwan-election-dinner-vote-buying-boundary/featured-01.webp"
 featured_image_alt: "Bàn ăn với bát đĩa trong một phòng sinh hoạt cộng đồng giản dị, không có người tham dự."
-featured_image_caption: "Hình minh họa do AI tạo về một phòng ăn hư cấu; không phải địa điểm, bữa ăn hay chứng cứ trong vụ việc được đưa tin."
+featured_image_caption: "Hình minh họa một phòng ăn hư cấu; không phải địa điểm, bữa ăn hay chứng cứ trong vụ việc được đưa tin."
 social_image: "../images/ISSUE-20261018-12-taiwan-election-dinner-vote-buying-boundary/featured-01.jpg"
 faq:
   - q: "Dự một bữa ăn miễn phí trong mùa bầu cử có tự động là nhận hối lộ không?"

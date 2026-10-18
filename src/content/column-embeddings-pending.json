@@ -2265,6 +2265,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-employee-resignation-notice-indefinite-contract"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-traffic-ticket-other-driver-notice"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-traffic-ticket-other-driver-notice"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-traffic-ticket-other-driver-notice"
     }
   ]
 }

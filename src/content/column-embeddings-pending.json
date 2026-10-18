@@ -2241,6 +2241,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-company-liquidation-creditor-claim-notice"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-subsidiary-board-video-proxy-written-vote"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-subsidiary-board-video-proxy-written-vote"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-subsidiary-board-video-proxy-written-vote"
     }
   ]
 }

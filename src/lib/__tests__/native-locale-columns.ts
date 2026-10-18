@@ -746,15 +746,19 @@ export const COUNTRY_COLUMN_FILES_20261016 = {
 export const COUNTRY_COLUMN_FILES_20261018 = {
   ko: [
     '632-taiwan-company-liquidation-creditor-claim-notice.md', // cols-20261016-C4
+    '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
   ],
   en: [
     '632-taiwan-company-liquidation-creditor-claim-notice.md', // cols-20261016-C4
+    '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
   ],
   ja: [
     '632-taiwan-company-liquidation-creditor-claim-notice.md', // cols-20261016-C4
+    '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
   ],
   'zh-hant': [
     '632-taiwan-company-liquidation-creditor-claim-notice.md', // cols-20261016-C4
+    '633-taiwan-subsidiary-board-video-proxy-written-vote.md', // cols-20261016-C5
   ],
 } as const;
 

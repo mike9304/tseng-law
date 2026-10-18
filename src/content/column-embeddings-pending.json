@@ -2229,6 +2229,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-property-transfer-claim-provisional-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-company-liquidation-creditor-claim-notice"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-company-liquidation-creditor-claim-notice"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-company-liquidation-creditor-claim-notice"
     }
   ]
 }

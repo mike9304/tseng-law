@@ -18,10 +18,10 @@ import { isColumnTopic } from '@/lib/column-topics';
 
 // Pieces can land separately after the operator's Claude Code editorial review.
 const ASSIGNED_IDS: Record<IssueBoardLocale, number[]> = {
-  ko: [1, 2],
+  ko: [1, 2, 10, 11],
   ja: [3, 4],
   'zh-hant': [],
-  en: [5, 6],
+  en: [5, 6, 9, 15],
   vi: [7, 8],
 };
 

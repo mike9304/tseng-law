@@ -10,6 +10,9 @@ categories:
   - "Taiwan Legal Information"
 topic: labor
 featured_image: "../images/ISSUE-20261016-15-taiwan-thai-farm-recruitment-work-permit-raid/featured-01.webp"
+featured_image_alt: "Under a wooden pavilion at sunrise: work gloves, a basket of greens and a plain notebook looking out over farm fields."
+featured_image_caption: "A fictional farm pavilion scene; it depicts no actual farm, employer or enforcement action."
+social_image: "../images/ISSUE-20261016-15-taiwan-thai-farm-recruitment-work-permit-raid/featured-01.jpg"
 faq:
   - q: "Does a valid visa or residence card mean a foreign national may work on my farm?"
     a: "Not by itself. Employment Service Act Article 43 provides that, unless the Act provides otherwise, a foreign national may not work in Taiwan without a permit applied for by an employer. Article 57 also bars an employer from hiring someone whose permit was applied for by another person, hiring in its own name for someone else's work, or assigning a hired foreign national to work outside the permit."
@@ -77,7 +80,7 @@ A recruitment video shows people at work. It does not show their permits. Before
 
 Hovering International Law Firm (昊鼎國際法律事務所) can review a proposed labor arrangement, the permits for the workers involved and any notice received from the labor or immigration authorities. Attorney Wei Tseng (曾雋崴) handles consultations. To start, email wei@hoveringlaw.com.tw with the recruiting arrangement, the permit holder and the planned work.
 
-Taipei office: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan  
+Taipei office: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan
 Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453, Taiwan
 
 ## Sources

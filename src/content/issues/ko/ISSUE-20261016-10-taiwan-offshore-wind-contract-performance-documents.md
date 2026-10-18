@@ -9,7 +9,10 @@ read_time: "6분 분량"
 categories:
   - "대만 법률정보"
 topic: labor
-featured_image: "../images/ISSUE-20261016-01-taiwan-offshore-wind-contract-performance-documents/featured-01.webp"
+featured_image: "../images/ISSUE-20261016-10-taiwan-offshore-wind-contract-performance-documents/featured-01.webp"
+featured_image_alt: "창가에 안전모·작업장갑·서류가 놓여 있고, 창 밖으로 바다 위 풍력 터빈이 보이는 장면."
+featured_image_caption: "가상의 항만 사무실 창가입니다. 실제 해상풍력 현장이나 특정 업체를 찍은 사진이 아닙니다."
+social_image: "../images/ISSUE-20261016-10-taiwan-offshore-wind-contract-performance-documents/featured-01.jpg"
 faq:
   - q: "노동부가 발표한 추가 서류 두 가지는 모든 계약이행 인력에게 필요한가요?"
     a: "발표 내용으로 보면 모든 인력이 대상은 아닙니다. 노동부의 2026년 10월 15일 발표에 따르면 추가 대상은 이주노동자 송출국(移工來源國) 출신 외국인을 계약이행 인력으로 신청하는 경우이고, 노동부는 이 경우 두 서류를 추가하도록 구비서류 규정을 개정·발표했다고 밝혔습니다. 어느 나라가 송출국에 해당하는지, 서류 양식과 시행일은 발표에 나오지 않습니다. 지금 접수하는 신청에 두 서류가 필요한지는 신청 전에 접수 창구에서 확인할 필요가 있습니다."

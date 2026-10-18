@@ -9,7 +9,10 @@ read_time: "5분 분량"
 categories:
   - "대만 법률정보"
 topic: inheritance
-featured_image: "../images/ISSUE-20261016-02-taiwan-life-policyholder-gift-estate-tax/featured-01.webp"
+featured_image: "../images/ISSUE-20261016-11-taiwan-life-policyholder-gift-estate-tax/featured-01.webp"
+featured_image_alt: "나무 책상 위에 서류 철과 빈 종이, 작은 상자, 찻잔이 놓인 조용한 책상 장면."
+featured_image_caption: "가상의 책상 장면입니다. 실제 보험 증권이나 특정 계약·납세자를 찍은 사진이 아닙니다."
+social_image: "../images/ISSUE-20261016-11-taiwan-life-policyholder-gift-estate-tax/featured-01.jpg"
 faq:
   - q: "대만 생명보험의 계약자만 자녀로 무상 변경해도 증여가 될 수 있나요?"
     a: "그럴 수 있습니다. [대만 북구국세국은 2026년 10월 15일 공지](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=8dc6a10d26f741118b60c2b72ca6cf01)에서 계약자에게 해약환급금 수령과 보험계약대출 등 재산적 권리가 있다고 설명하며, 이를 대가 없이 넘기면 증여세 문제가 생긴다고 안내했습니다. 대만이 과세하는지와 신고 대상인지는 증여자의 국적·거주, 권리가 대만 안의 재산인지, 그해 증여총액이 면세액을 넘는지에 따라 달라집니다."

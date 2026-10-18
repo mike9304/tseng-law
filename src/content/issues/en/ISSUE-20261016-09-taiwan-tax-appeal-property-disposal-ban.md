@@ -10,6 +10,9 @@ categories:
   - "Taiwan Legal Information"
 topic: tax
 featured_image: "../images/ISSUE-20261016-09-taiwan-tax-appeal-property-disposal-ban/featured-01.webp"
+featured_image_alt: "Dark wood desk with a small house model, a closed folder and a brass paperweight by a city-facing window."
+featured_image_caption: "A fictional office desk scene; it depicts no actual property, tax file or taxpayer."
+social_image: "../images/ISSUE-20261016-09-taiwan-tax-appeal-property-disposal-ban/featured-01.jpg"
 faq:
   - q: "Does a Taiwan tax re-examination let me transfer property while I contest the bill?"
     a: "Not necessarily. A qualifying re-examination delays referral for compulsory execution under Tax Collection Act Article 39, but it does not by itself prevent an Article 24 restriction on transferring the taxpayer's property or creating a new right over it, such as a mortgage, when tax remains unpaid, unless equivalent security has already been provided."
@@ -65,7 +68,7 @@ Of the three, only this route needs neither a payment nor security; what holds t
 
 Hovering International Law Firm (昊鼎國際法律事務所) can review the assessment, the status of the challenge and the registry record before a planned transfer. Attorney Wei Tseng (曾雋崴) handles consultations. Send the name of the tax office, the property involved and the planned transfer date to wei@hoveringlaw.com.tw, and we can weigh the payment and security options against that timetable.
 
-Taipei office: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan  
+Taipei office: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan
 Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453, Taiwan
 
 ## Sources

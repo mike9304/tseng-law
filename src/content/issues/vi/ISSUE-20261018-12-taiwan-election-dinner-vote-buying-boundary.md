@@ -36,11 +36,11 @@ Bản tin không nêu quốc tịch của nhóm tân di dân. Với người g�
 
 Quy định không chỉ nhắm vào tiền mặt đã trao. Lợi ích khác cũng nằm trong phạm vi điều luật, và hành vi đề nghị hoặc hứa hẹn đã được nêu riêng. Không thể lấy lý do chưa phát tiền để loại trừ mọi khả năng vi phạm.
 
-Phía cử tri chịu quy định tại [Điều 143 Bộ luật Hình sự (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=143). Người có quyền bỏ phiếu yêu cầu, thỏa thuận nhận hoặc nhận tiền hay lợi ích bất chính, đồng thời đồng ý không bỏ phiếu hoặc bỏ phiếu theo hướng nhất định, có thể bị phạt tù đến ba năm; tòa án còn có thể phạt tiền đến 300.000 Đài tệ. Không thể chuyển nguyên khung phạt dành cho bên mua phiếu sang mọi khách dự bữa ăn.
+Trách nhiệm hình sự của cử tri được quy định tại [Điều 143 Bộ luật Hình sự (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=143). Người có quyền bỏ phiếu yêu cầu, thỏa thuận nhận hoặc nhận tiền hay lợi ích bất chính, đồng thời đồng ý không bỏ phiếu hoặc bỏ phiếu theo hướng nhất định, có thể bị phạt tù đến ba năm; tòa án còn có thể phạt tiền đến 300.000 Đài tệ. Không thể chuyển nguyên khung phạt dành cho bên mua phiếu sang mọi khách dự bữa ăn.
 
 ## Giá bữa ăn không quyết định tất cả
 
-Trong [hướng dẫn công bố ngày 21/9/2026](https://www.tcc.moj.gov.tw/295804/295830/657577/1441818/post), Viện kiểm sát Đài Trung giải thích rằng tặng quà hoặc mời ăn trong mùa bầu cử không tự động cấu thành mua phiếu. Ngược lại, giá trị thấp cũng không tự bảo đảm hợp pháp. Cơ quan này nêu các yếu tố cần xem xét cùng nhau: giá trị và tính chất lợi ích, người được mời, thời điểm, cách cung cấp, thông lệ giao tiếp và lời đề nghị bỏ phiếu rõ ràng hoặc ngầm hiểu.
+Trong [hướng dẫn công bố ngày 21/9/2026](https://www.tcc.moj.gov.tw/295804/295830/657577/1441818/post), Viện kiểm sát Đài Trung giải thích rằng tặng quà hoặc mời ăn trong mùa bầu cử không tự động cấu thành mua phiếu. Ngược lại, giá trị thấp cũng không tự bảo đảm tính hợp pháp. Cơ quan này nêu các yếu tố cần xem xét cùng nhau: giá trị và tính chất lợi ích, người được mời, thời điểm, cách cung cấp, thông lệ giao tiếp và lời đề nghị bỏ phiếu rõ ràng hoặc ngầm hiểu.
 
 Đó là hướng dẫn phổ biến pháp luật của cơ quan công tố, không phải phán quyết trong vụ Đài Đông. Hướng dẫn không đưa ra một mức tiền để mọi bữa ăn dưới mức ấy đều được coi là an toàn. Tên gọi “gặp mặt cộng đồng” cũng không tự giải quyết câu hỏi có sự trao đổi lợi ích lấy sự ủng hộ bằng lá phiếu hay không.
 

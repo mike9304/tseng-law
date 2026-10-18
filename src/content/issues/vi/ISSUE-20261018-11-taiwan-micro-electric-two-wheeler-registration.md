@@ -42,12 +42,12 @@ Xe điện hai bánh cỡ nhỏ (微型電動二輪車) dùng điện là chính
 
 Khoản 4 Điều 69-1 yêu cầu chủ xe điện hai bánh cỡ nhỏ mua bảo hiểm trách nhiệm bắt buộc theo luật. Khi chưa có bảo hiểm đúng quy định, cơ quan quản lý phương tiện không tiếp nhận việc đăng ký, đổi hoặc cấp biển số. Giấy mua bán và lời cam đoan rằng xe “đã kiểm định” không thay thế điều kiện về bảo hiểm này.
 
-Với người nhận lại xe đã qua sử dụng, hồ sơ chứng nhận kiểu loại, tình trạng biển số và bảo hiểm trả lời những câu hỏi khác nhau. Có một trong các giấy tờ ấy chưa chứng minh xe đã đáp ứng toàn bộ yêu cầu để đi trên đường.
+Xe điện hai bánh cỡ nhỏ đã qua sử dụng vẫn phải đáp ứng các yêu cầu về chứng nhận kiểu loại, đăng ký, gắn biển số và bảo hiểm. Đáp ứng một trong các yêu cầu đó chưa đủ để xe được lưu thông.
 
 ## Phạt chủ sở hữu và xử lý chiếc xe
 
 Theo [Điều 71-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=71-1), các trường hợp như chạy xe chưa được cấp biển số đúng quy định, dùng biển giả hoặc biển của xe khác, hay đã nhận nhưng không gắn biển, bị phạt từ 1.200 đến 3.600 Đài tệ và cấm tiếp tục lưu thông. Điều này xác định người chịu khoản phạt là chủ sở hữu; không thể mặc nhiên gán khoản phạt đó cho mọi người đang cầm lái.
 
-Xe đã được chứng nhận kiểu loại bị đưa đi tạm giữ; xe chưa được chứng nhận kiểu loại bị tịch thu. Tạm giữ và tịch thu là hai cách xử lý khác nhau. Nộp phạt cũng không tự thay cho việc đáp ứng điều kiện đăng ký, gắn biển và bảo hiểm còn thiếu.
+Xe đã được chứng nhận kiểu loại bị đưa đi tạm giữ; xe chưa được chứng nhận kiểu loại bị tịch thu. Tạm giữ và tịch thu là hai cách xử lý khác nhau. Việc nộp phạt không thay thế nghĩa vụ đăng ký, gắn biển số và mua bảo hiểm nếu các yêu cầu này chưa được đáp ứng.
 
 Ngày kiểm tra nguồn: 18/10/2026. Bài viết cung cấp thông tin chung về pháp luật Đài Loan, không xác nhận tình trạng pháp lý của một chiếc xe cụ thể.

@@ -174,3 +174,7 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 01:33 KST: Opus P1 수정3 비평. 첨부 0원·2배는 249조를 가리키고, JA 자료 문장과 EN 세입자 책임 칸이 맞다. review-studio/grok-on-opus-r7-fix3.md. PNG는 열지 않음. 게시 없음.
 
 2026-10-21 01:39 KST: Astra r7 수정3 PASS(review-studio/ASTRA-R7-FIX3-20261021.md). MAJOR·MINOR 0. Grok 초안은 다시 쓰지 않음. STATUS는 건드리지 않음. 게시 없음.
+
+2026-10-21 01:42 KST 대기: PASS 이후 새 FACTS·초안·Bot 검수가 없다. STATUS는 10/20 21:45 그대로다. Grok 초안은 다시 쓰지 않는다.
+
+2026-10-21 01:44 KST: Opus의 Air r1 비평(review-studio/opus-on-air-opus-r1.md)은 비교 기록이다. 선정 재개 아님. Grok 초안은 다시 쓰지 않음. 게시 없음.

@@ -23,6 +23,7 @@ Fetched 2026-10-20 from law.moj.gov.tw (cache research/cache/).
 
 ## 入出國及移民法 31(4) (D0080132; 2023-06-28)
 - Items 1-3: 因依親對象死亡; 配偶因遭受家庭暴力離婚且未再婚; 離婚後對在臺設籍未成年子女有撫育事實、行使負擔權利義務或會面交往 → drafts say the Nationality Act keeps the 3-year route for "nearly the same" people (comparison, not legal equivalence).
+- Astra r2 (2026-10-21): MOJ text of 31(4)(3) = 「外國人於離婚後對在臺灣地區已設有戶籍未成年子女，有撫育事實、行使負擔權利義務或會面交往。」 The comparison sentence now gives household registration + all three alternatives (x4). Nationality Act 4(1)(3) = 「對無行為能力、或限制行為能力之中華民國國籍子女，有扶養事實、行使負擔權利義務或會面交往。」 (nationality + capacity, no 戶籍 element), so each draft adds one sentence noting that difference instead of calling the two lists identical.
 
 ## Hypotheticals
 - ko: Korean wife in Taichung widowed after 1.5 years (가상의 사례입니다). ja/en/zh: no invented person in body (FAQ questions are reader questions).

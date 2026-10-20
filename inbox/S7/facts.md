@@ -44,3 +44,8 @@ URL (Executive Yuan file): https://www.ey.gov.tw/File/F86FD1FD1EB5BE6F
 - MOTC scooter terms point 14 (evidence/motc-scooter-rental-terms.txt): 「除有正當理由不能向警察機關報案或非屬警察機關受理之情形外，承租人應立即報案」 → both exceptions (x4). Car terms point 10: 「除有不能向警察機關報案之情形外」 → stated for cars.
 - Point 15(2): 「修理期間逾租賃期間之日起七日以內…(不得高於百分之五十)…第八日至十五日…(不得高於百分之四十)」 → ko/ja now count from the end of the contractual rental period (「계약상 임대기간 만료 후」/「契約上の賃貸期間満了後」), not the actual return; en "past the end of the contractual rental period". Point 15(3) 大型重型機車 → ko 「대형 중량급 이륜차(大型重型機車)」.
 - Checklist headings/instructions removed: ko 「사고 신고와 렌탈업체 통지 의무」「계약서의 보험란과 출차 기록」; ja 「警察への届出とレンタル業者への通知」「契約書の保険欄と貸出時の記録」; en "Reporting to the police and notifying the rental company", "Insurance boxes and the pickup record"; zh 「報案與通知出租人的義務」「保險勾選欄與取車存證」; "Start with…/Then…/まず…/先看…" sentences rewritten as declaratives.
+
+## Astra r2 (2026-10-21)
+- 小客車租賃定型化契約應記載事項 point 11 (evidence/motc-car-rental-terms.txt): 「修理期間在十日以內者，並應償付該期間百分之○（不得高於七十）之租金；在十一日以上十五日以內，…（不得高於六十）…；在十六日以上者，…（不得高於五十）…。但期間之計算，最長以二十日為限。」 → band chosen by total repair duration, applied to that period's rent (en rewritten; ko/ja/zh already banded by total duration).
+- Point 10: 「除有不能向警察機關報案之情形外，承租人應立即報案並通知出租人」 → ko/ja now say "the same reporting/notice duty", no order implied.
+- 強制汽車責任保險法29(1)(2): 「駕駛汽車，經測試檢定有吸食毒品、迷幻藥、麻醉藥品或其他相類似管制藥品。」; (4) 「從事犯罪行為或逃避合法拘捕」; 29(2) two years from payment. ko/ja/en now state testing + the listed substances, and add evading lawful arrest; zh split into Art 28 / Art 9 / Art 29 / limitation sentences.

@@ -88,3 +88,21 @@ Lengths:
     drafts/S6/ja.md chars(no space)= 2132 chars(with space)= 2161 en-words= 95
     drafts/S6/en.md chars(no space)= 4873 chars(with space)= 5815 en-words= 951
     drafts/S6/zh.md chars(no space)= 1640 chars(with space)= 1668 en-words= 63
+
+## Astra r2 fixes (2026-10-21)
+1. MAJOR ko/ja/zh summaries (+en summary, ko/ja/zh/en openings): eligibility = actual job within a designated category; Art 50-1 definitions apply to supervisors/managers, responsibility-system professionals and monitoring/intermittent work (84-1(1)(1)-(2)), not as a universal test.
+2. MAJOR ko/ja/en (+zh): 84-1 lets parties agree hours, 例假, Art 37 holidays and women's night work; Art 38 annual leave is not displaced and still applies.
+3. MAJOR en: 'Normal hours and overtime combined may not exceed 12 hours a day' + emergency rules kept.
+4. MINOR ko: label metaphor removed; opening starts with designation, written agreement and 核備.
+5. MINOR ja: 外せません.
+6. MINOR x4: Art 32 limits split into consent / 12h combined + 46h / 54h & 138h with consent to the higher limit / 30-worker reporting / emergency sentences.
+Variety (2026-10-21, explicit --lang):
+    ko.md [ko] sentences=46 mean=44.4 cv=0.471 short=0.087 run3=0.091 opener_rep=0.0 cite_end=0.13 cite_para=0.727 contrast=1 caveat=0 q=1
+      WARN 85% of sentences end in '니다.' — vary endings within the register
+    ja.md [ja] sentences=49 mean=44.0 cv=0.48 short=0.122 run3=0.043 opener_rep=0.0 cite_end=0.122 cite_para=0.75 contrast=0 caveat=0 q=0
+      WARN 86% of sentences end in 'desu-masu' — vary endings within the register
+    en.md [en] sentences=51 mean=19.7 cv=0.503 short=0.176 run3=0.041 opener_rep=0.0 cite_end=0.118 cite_para=0.833 contrast=1 caveat=0 q=1
+      OK — no variety limit violated
+    zh.md [zh-hant] sentences=39 mean=42.2 cv=0.6 short=0.179 run3=0.0 opener_rep=0.0 cite_end=0.179 cite_para=0.818 contrast=0 caveat=0 q=1
+      WARN opens with the stock hypothetical ("가령/例えば…とします/Suppose…/假設") — allowed at most 1 in 4 columns; prefer a concrete fact, number, question or scene
+Length: en 1,014 words; ko 2,197 chars (no space).

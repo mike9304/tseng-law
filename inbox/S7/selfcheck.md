@@ -94,3 +94,20 @@ Lengths:
     drafts/S7/ja.md chars(no space)= 2113 chars(with space)= 2144 en-words= 50
     drafts/S7/en.md chars(no space)= 4613 chars(with space)= 5580 en-words= 968
     drafts/S7/zh.md chars(no space)= 1645 chars(with space)= 1679 en-words= 42
+
+## Astra r2 fixes (2026-10-21)
+1. MAJOR en: car-rental repair rent cap = 70% if repair takes up to 10 days / 60% if 11-15 days / 50% if 16+ days, applied to that period's rent; max 20 days (official terms point 11).
+2. MAJOR ko/ja/en: CALI 29(1)(2) = testing confirms use of 毒品, hallucinogens, narcotic drugs or similar controlled substances (no generic 'drugs'); 29(1)(4) evading lawful arrest added (ko/ja/en; zh already had it).
+3. MINOR ko/ja: car-rental terms 'same reporting/notice duty' (no order).
+4. MINOR ja: 被害者に代位し、その請求権を被保険者に対して行使できます.
+5. MINOR zh: Art 28 exclusion, Art 9 insured definition, Art 29 recovery grounds and the two-year limit now separate sentences, all conditions kept.
+Variety (2026-10-21, explicit --lang):
+    ko.md [ko] sentences=47 mean=40.4 cv=0.574 short=0.106 run3=0.022 opener_rep=0.0 cite_end=0.213 cite_para=0.273 contrast=1 caveat=3 q=0
+      WARN 77% of sentences end in '니다.' — vary endings within the register
+    ja.md [ja] sentences=50 mean=40.4 cv=0.594 short=0.12 run3=0.062 opener_rep=0.091 cite_end=0.2 cite_para=0.273 contrast=0 caveat=3 q=0
+      WARN 80% of sentences end in 'desu-masu' — vary endings within the register
+    en.md [en] sentences=47 mean=21.2 cv=0.593 short=0.17 run3=0.0 opener_rep=0.273 cite_end=0.255 cite_para=0.273 contrast=0 caveat=0 q=0
+      OK — no variety limit violated
+    zh.md [zh-hant] sentences=38 mean=40.6 cv=0.707 short=0.105 run3=0.028 opener_rep=0.083 cite_end=0.263 cite_para=0.333 contrast=0 caveat=1 q=1
+      OK — no variety limit violated
+Length: en 1,010 words; ko 2,068 chars (no space).

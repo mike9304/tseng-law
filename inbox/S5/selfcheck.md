@@ -91,3 +91,20 @@ Lengths:
     drafts/S5/ja.md chars(no space)= 1862 chars(with space)= 1893 en-words= 51
     drafts/S5/en.md chars(no space)= 4156 chars(with space)= 4975 en-words= 820
     drafts/S5/zh.md chars(no space)= 1471 chars(with space)= 1503 en-words= 35
+
+## Astra r2 fixes (2026-10-21)
+1. MAJOR ko/ja/en (+zh proactive): Immigration Act 31(4)(3) comparison now says 'minor child with household registration in Taiwan' (在臺灣地區已設有戶籍) and lists all three alternatives (actual upbringing / exercising-bearing rights and duties / contact). zh already had 設籍 but lacked 行使負擔權利義務; added. Each locale adds that Nationality Act 4(1)(3) defines the child by nationality + capacity, not household registration (MOJ text checked 2026-10-21).
+2. MINOR ja: 行為能力がない、または行為能力が制限されている台湾籍の子 (summary, FAQ2, body).
+3. MINOR en summary: 'foreigners whose Taiwanese spouse has died, if they have not remarried and remain in contact...' with conditions kept.
+4. MINOR ko: redundant second opening paragraph deleted.
+5. MINOR zh: 「國籍法把這條路留給了幾種『已經不是配偶』的人。」 deleted.
+Variety (2026-10-21, explicit --lang):
+    ko.md [ko] sentences=39 mean=43.0 cv=0.637 short=0.154 run3=0.0 opener_rep=0.0 cite_end=0.154 cite_para=0.583 contrast=1 caveat=1 q=1
+      WARN opens with the stock hypothetical ("가령/例えば…とします/Suppose…/假設") — allowed at most 1 in 4 columns; prefer a concrete fact, number, question or scene
+      WARN 80% of sentences end in '니다.' — vary endings within the register
+    ja.md [ja] sentences=41 mean=45.3 cv=0.631 short=0.098 run3=0.026 opener_rep=0.0 cite_end=0.171 cite_para=0.538 contrast=1 caveat=2 q=0
+      WARN 76% of sentences end in 'desu-masu' — vary endings within the register
+    en.md [en] sentences=39 mean=21.6 cv=0.666 short=0.179 run3=0.0 opener_rep=0.25 cite_end=0.103 cite_para=0.583 contrast=2 caveat=0 q=1
+      OK — no variety limit violated
+    zh.md [zh-hant] sentences=30 mean=46.8 cv=0.522 short=0.1 run3=0.0 opener_rep=0.0 cite_end=0.2 cite_para=0.583 contrast=0 caveat=0 q=1
+      OK — no variety limit violated

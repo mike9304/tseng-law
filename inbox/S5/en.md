@@ -1,7 +1,7 @@
 ---
 title: "Widowed or Divorced in Taiwan: The Three-Year Route to Naturalization That Stays Open"
 seoTitle: "Taiwan Naturalization After a Spouse Dies or Divorce"
-summary: "Taiwan's Nationality Act keeps a three-year naturalization route for foreigners widowed by a Taiwanese spouse who have not remarried and remain in contact with the late spouse's relatives (no contact requirement if the marriage lasted two years or more), who divorced because of domestic violence and have not remarried, or who support, exercise parental rights and duties over, or have contact with a Taiwan-national child who has no or limited legal capacity. What each must prove, how the three years are counted, and which residence periods do not count."
+summary: "Taiwan's Nationality Act keeps a three-year naturalization route for foreigners whose Taiwanese spouse has died, if they have not remarried and remain in contact with the late spouse's relatives (no contact requirement if the marriage lasted two years or more); for those who divorced because of domestic violence and have not remarried; and for those who support, exercise parental rights and duties over, or have contact with a Taiwan-national child who has no or limited legal capacity. What each must prove, how the three years are counted, and which residence periods do not count."
 published: "2026-10-20"
 lastmod: "2026-10-20"
 date_display: "October 20, 2026"
@@ -35,7 +35,7 @@ Item 2 covers two situations. A former spouse of a Taiwan national who divorced 
 
 Item 3 covers a foreigner who supports, exercises parental rights and duties over, or has contact with a Taiwan-national child who has no or limited legal capacity. A foreign parent raising or visiting a child after a divorce can fall within it.
 
-The list may look familiar. [Article 31(4) of the Immigration Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31), which allows continued residence after the reason for it ends, opens with nearly the same three cases: the spouse's death, a domestic-violence divorce without remarriage, and caring for or visiting a Taiwanese minor child after divorce. The Nationality Act keeps the shorter route for roughly the same people.
+The list may look familiar. [Article 31(4) of the Immigration Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31), which allows continued residence after the reason for it ends, opens with nearly the same three cases: the spouse's death, a domestic-violence divorce without remarriage, and, after a divorce, actually raising, exercising parental rights and duties over, or having contact with a minor child whose household is registered in Taiwan. The Nationality Act keeps the shorter route for roughly the same people, though its item 3 defines the child by Taiwan nationality and legal capacity, not household registration.
 
 The other requirements are those of ordinary naturalization: legal capacity under both Taiwan law and your own country's law, no bad conduct, no criminal case on a police criminal record certificate (警察刑事紀錄證明), and basic language ability and civic knowledge ([Article 3(1)(2)–(5)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=3)).
 

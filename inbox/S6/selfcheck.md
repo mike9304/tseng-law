@@ -46,3 +46,27 @@ taiwan-responsibility-system-overtime-approval-interpretation-726 (0 matches).
 
 ## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
 - Art. 32: the overtime cap now includes 54 h/month (≤138 h per 3 months) with union or labor-management consent, plus the disaster/sudden-event exception (all 4). Added evidence copies: J.Y. 726 page text, MOL 84-1 page excerpt, MOL designated-worker list.
+
+
+## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
+    drafts/S6/ko.md [ko] sentences=37 mean=40.3 cv=0.466 short=0.108 run3=0.0 opener_rep=0.0 cite_end=0.108 cite_para=0.636 contrast=1 caveat=0 q=1
+    drafts/S6/ja.md [ja] sentences=39 mean=39.6 cv=0.487 short=0.154 run3=0.0 opener_rep=0.0 cite_end=0.103 cite_para=0.583 contrast=0 caveat=0 q=0
+    drafts/S6/en.md [en] sentences=39 mean=19.4 cv=0.504 short=0.205 run3=0.0 opener_rep=0.0 cite_end=0.128 cite_para=0.667 contrast=1 caveat=0 q=1
+    drafts/S6/zh.md [ko] sentences=29 mean=41.9 cv=0.653 short=0.276 run3=0.0 opener_rep=0.0 cite_end=0.172 cite_para=0.727 contrast=0 caveat=0 q=1
+
+
+## Astra r1 response (2026-10-20 21:55 KST)
+1. MAJOR, framing: the ko/en titles and H1s were rewritten (ko 「근로시간을 따로 정해도 연장근로수당은 남는다」; en "\"You're Covered by the Responsibility System\": Taiwan's Article 84-1 and Overtime Pay"). The ja passage 「その説明が法律上通るのは…」 and the zh 「這句話要成立，至少得過三關」 now describe a special-hours arrangement and state that overtime beyond approved normal hours is still paid. The summaries say the same (x4). The en heading "No approval, no exemption" became "When the agreement was never approved".
+2. MAJOR, manager test: management duties plus decision power over hiring, dismissal or working conditions (x4).
+3. MAJOR, designated engineers: each list item now carries its Art. 50-1 qualification, and the actual duties must fit. The zh hypothetical engineer is tested against 50-1(2). ko/ja closings add the duties test.
+4. MAJOR, 8h/40h: the rule is limited to an ordinary schedule; a lawful redistribution under Arts. 30(2)–(3)/30-1 moves the threshold (Enforcement Rules Art. 20-1, added to the sources).
+5. MAJOR, consent route: union consent, LMC consent only where there is no union, and the 30-worker reporting duty for the 54-hour extension (x4).
+6. MINOR, Art. 49: a current-law note on J.Y. 807 (Art. 49(1) without effect from 2021-08-20) in the body and FAQ 2 (x4), with J.Y. 807 in the sources.
+7. MINOR, checklist headings: 「세 가지 조건」/「三つの条件」/"Three conditions, not one label"/「三個條件」 were replaced by issue-specific headings on which jobs and agreements Art. 84-1 covers.
+Variety (FAIL 0):
+    drafts/S6/ko.md [ko] sentences=43 mean=44.6 cv=0.512 short=0.093 run3=0.049 opener_rep=0.0 cite_end=0.116 cite_para=0.727 contrast=1 caveat=0 q=1
+    drafts/S6/ja.md [ja] sentences=45 mean=44.4 cv=0.525 short=0.133 run3=0.023 opener_rep=0.0 cite_end=0.111 cite_para=0.75 contrast=0 caveat=0 q=0
+    drafts/S6/en.md [en] sentences=45 mean=21.0 cv=0.577 short=0.178 run3=0.047 opener_rep=0.0 cite_end=0.133 cite_para=0.833 contrast=1 caveat=0 q=1
+    drafts/S6/zh.md [ko] sentences=33 mean=47.3 cv=0.634 short=0.182 run3=0.0 opener_rep=0.0 cite_end=0.182 cite_para=0.818 contrast=0 caveat=0 q=1
+Lengths: ko 2,070 chars, ja 2,132, zh 1,639, en 951 words.

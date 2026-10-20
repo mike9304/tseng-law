@@ -47,3 +47,28 @@ taiwan-naturalization-after-spouse-death-or-divorce (0 filename matches).
 
 ## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
 - Other naturalization routes: now described as 'one of the requirements in Enforcement Rules Art. 7, e.g. income > 2× basic wage or assets > NT$5m' (ko/ja; en already said 'for example'). Domicile now includes the intent-to-stay element (ko/ja).
+
+
+## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
+    drafts/S5/ko.md [ko] sentences=37 mean=40.3 cv=0.579 short=0.189 run3=0.0 opener_rep=0.0 cite_end=0.081 cite_para=0.538 contrast=0 caveat=0 q=1
+    drafts/S5/ja.md [ja] sentences=36 mean=44.1 cv=0.552 short=0.083 run3=0.029 opener_rep=0.077 cite_end=0.111 cite_para=0.538 contrast=0 caveat=1 q=0
+    drafts/S5/en.md [en] sentences=38 mean=18.8 cv=0.611 short=0.237 run3=0.0 opener_rep=0.25 cite_end=0.053 cite_para=0.583 contrast=1 caveat=0 q=1
+    drafts/S5/zh.md [ko] sentences=30 mean=40.8 cv=0.52 short=0.167 run3=0.036 opener_rep=0.0 cite_end=0.1 cite_para=0.583 contrast=0 caveat=0 q=1
+
+
+## Astra r1 response (2026-10-20 21:45 KST)
+1. MAJOR, widow eligibility: zh opening and en summary now give both conditions (not remarried + continuing contact with the late spouse's relatives, contact waived if the marriage lasted 2+ years). ko/ja/zh summaries match.
+2. MAJOR, criminal record: in all four locales it now means a criminal case on the police criminal record certificate, kept separate from the conduct requirement (Art. 3(1)(3)).
+3. MAJOR, en Art. 7(1)(2): "more than" NT$5 million, Taiwan income averaged over the most recent year, property in Taiwan. The comparison is limited to routes covered by 7(1)(2) (e.g. the general five-year route).
+4. MAJOR, certificate issuer: "issued by a Taiwan government agency" (x4). Other evidence is listed as a separate option assessed by the MOI.
+5. MAJOR, zh: the substantive requirement is separated from the proof; APRC holders may omit the proof (Art. 9(3)). The same sentence is added in ko/ja/en.
+6. MINOR, child category: summaries and FAQ 2 use the capacity wording and all three alternatives (x4).
+7. MINOR, closing: the "lapse" sentence is replaced by "the certificate must be valid when you apply" (x4).
+8. MINOR, sequence: the application is filed at the domicile's household registration office and goes through the city/county government to the MOI (Art. 2(2)), with the review and record checks under Art. 8 (x4). Art. 2 and 9 are added to the sources.
+Variety (FAIL 0):
+    drafts/S5/ko.md [ko] sentences=39 mean=42.2 cv=0.644 short=0.179 run3=0.0 opener_rep=0.0 cite_end=0.154 cite_para=0.538 contrast=0 caveat=0 q=1
+    drafts/S5/ja.md [ja] sentences=39 mean=45.7 cv=0.634 short=0.103 run3=0.027 opener_rep=0.0 cite_end=0.179 cite_para=0.538 contrast=0 caveat=1 q=0
+    drafts/S5/en.md [en] sentences=39 mean=20.9 cv=0.658 short=0.179 run3=0.0 opener_rep=0.25 cite_end=0.103 cite_para=0.583 contrast=2 caveat=0 q=1
+    drafts/S5/zh.md [ko] sentences=31 mean=44.5 cv=0.54 short=0.097 run3=0.0 opener_rep=0.0 cite_end=0.194 cite_para=0.583 contrast=0 caveat=0 q=1
+Lengths: ko 1,746+ chars, ja 1,860, zh 1,472, en 820 words (all in range).

@@ -29,3 +29,14 @@ Fetched 2026-10-20 from law.moj.gov.tw (cache research/cache/).
 
 ## Internal links (verified, titles checked)
 - 028 taiwan-foreign-spouse-residence (all 4 locales); 257 taiwan-naturalization-keep-original-nationality (all 4 locales).
+
+
+## Astra r1 additions (2026-10-20 21:45 KST) — texts re-read on law.moj.gov.tw (國籍法 113-05-24; 施行細則 113-11-19)
+- 國籍法4(1)(2): 「…或其配偶死亡後未再婚且有事實足認與其亡故配偶之親屬仍有往來，但與其亡故配偶婚姻關係已存續二年以上者，不受與親屬仍有往來之限制。」 → zh opening, en summary and ko/ja/zh summaries now state both conditions (no remarriage + contact, contact waived at 2+ years).
+- 國籍法3(1)(3): 「無不良素行，且無警察刑事紀錄證明之刑事案件紀錄。」 → all locales now name the police criminal record certificate (警察刑事紀錄證明) and keep the separate conduct requirement.
+- 4(1)(3): 「對無行為能力、或限制行為能力之中華民國國籍子女，有扶養事實、行使負擔權利義務或會面交往。」 → summaries/FAQ 2 use the capacity wording and all three alternatives.
+- 施行細則7(1)(1): 「得檢具下列文件之一，由內政部認定之：（一）國內之收入、納稅、動產或不動產資料。（二）雇主開立之聘僱證明或申請人自行以書面敘明其工作內容及所得。（三）我國政府機關核發之專門職業及技術人員或技能檢定證明文件。（四）其他足資證明足以自立或生活保障無虞之資料。」 → the issuer (Taiwan government agency) is now stated in all four languages.
+- 7(1)(2): 「以前款以外情形申請歸化者，應具備下列情形之一：（一）最近一年於國內平均每月收入逾勞動部公告基本工資二倍者。（二）國內之動產及不動產估價總值逾新臺幣五百萬元者。…」 → "more than", "in Taiwan", "most recent year", and the comparison limited to routes covered by 7(1)(2) (e.g. the general five-year route), not exempt applicants.
+- 施行細則9(3): 「已取得外僑永久居留證者，其申請歸化，得免附前條第一項第三款所定證明文件。」 8(1)(3) proviso: 本法第四條第一項第一款與第四條第二項之申請人…免附. → zh (and ko/ja/en) now separate the substantive self-support requirement from the APRC exemption from submitting proof.
+- 施行細則2(2): 「申請歸化…向國內住所地戶政事務所為之，層轉直轄市、縣（市）政府轉內政部許可。」 8(4): 「前三項各款文件，應由各直轄市、縣（市）政府先行審查，併同戶政事務所查明…轉送內政部。」 → the sequence now starts at the household registration office (x4).
+- 施行細則4: 住所 = 久住之意思 + 持有有效之外僑居留證或外僑永久居留證; 6: 逾期居留未達三十日視為不中斷 → the closings now say only that the certificate must be valid when applying (no absolute "lapse" wording).

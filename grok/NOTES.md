@@ -253,3 +253,4 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 07:09 KST r8b 경쟁 초안 KO를 grok/P1·P2·P3/r8b에 넣었다. 카드 PNG와 JA/EN은 그리지 않음. 선정 r8과 STATUS는 그대로. 게시 없음.
 2026-10-21 07:10 KST Opus r8b 카드 문구만 비평. 본문·PNG는 아직 없음. Grok r8b 본문은 그대로. 게시 없음.
 2026-10-21 07:15 KST Opus r8b 본문을 비평했다. Grok r8b 초안은 그대로. PNG·STATUS·게시 없음.
+2026-10-21 07:21 KST ASTRA-R8B PASS. MAJOR 0. EN·JA MINOR 2건은 통과본이라 Grok이 고치지 않음. STATUS는 10/20 21:45 그대로. 게시 없음.

@@ -1,10 +1,10 @@
 # P3 EN C09 버스 사고 배상 / バス事故 / bus crash damages (士林簡易庭 111年度士簡字第875號) — 게시 구성 r8b (opus/P3/en/r8b)
 
-게시·전송하지 않았다. r8b = shared/R8B-BRIEF.md 반영: 카드 1을 결과·판결 없는 장면 훅으로 다시 렌더, 본문 끝을 아이 전액 vs 운전자 27,808 대비로. 서명 줄·사무장 반응 줄 없음 · 가족관계 표기 없이 사실 표현만. 첫 댓글·첨부는 r8과 같다. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
+게시·전송하지 않았다. r8b = shared/R8B-BRIEF.md 반영: 카드 1을 결과·판결 없는 장면 훅으로 다시 렌더, 본문 끝을 아이 전액 vs 운전자 27,808 대비로. 서명 줄·사무장 반응 줄 없음 · 가족관계 표기 없이 사실 표현만. 첫 댓글·첨부는 r8과 같다. Astra r8b 수정1 반영. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
 
 원글: 본문 + 카드 6장(opus/P3/en/r8b/images/en/card-01~06.png). 첫 텍스트 답글: 첫 댓글 + 텍스트 첨부. 카드 1만 r8과 다르다. 한국어 뜻풀이: opus/P3/en/r8b/ko-meaning.md
 
-## 본문 · 497자
+## 본문 · 498자
 
 ```text
 Taipei, 2020. A bus ran a red light; a scooter's front hit its right side. A middle-schooler rode behind.
@@ -13,7 +13,7 @@ For future implant-plan dental work, the kid sought NT$343,000. The rider broke 
 
 The trial court weighed the kid's age at the crash and teeth's role in chewing and looks.
 
-The kid won all NT$343,000. The rider, lacking income records, was awarded NT$27,808.
+The kid won all NT$343,000. The rider filed no income proof and was awarded NT$27,808.
 ```
 
 ## 카드 대체 텍스트(alt)

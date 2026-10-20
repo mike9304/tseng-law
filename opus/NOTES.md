@@ -142,3 +142,4 @@
 - 10-21 07:04 Air r8 교차 비평 제출. Opus r8 수정1 Astra 재검수 대기.
 - 10-21 07:04 r8 Astra PASS, 선택 MINOR 2건 반영(opus/R8-FIX2-DONE.md). Bot·사용자 최종 확인 대기.
 - 10-21 07:14 r8b 완료(opus/R8B-DONE.md). Astra 검수 대기.
+- 10-21 07:21 r8b Astra PASS, 선택 MINOR 2건 반영(opus/R8B-FIX1-DONE.md). Bot·사용자 최종 확인 대기.

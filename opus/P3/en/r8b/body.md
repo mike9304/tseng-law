@@ -4,4 +4,4 @@ For future implant-plan dental work, the kid sought NT$343,000. The rider broke 
 
 The trial court weighed the kid's age at the crash and teeth's role in chewing and looks.
 
-The kid won all NT$343,000. The rider, lacking income records, was awarded NT$27,808.
+The kid won all NT$343,000. The rider filed no income proof and was awarded NT$27,808.

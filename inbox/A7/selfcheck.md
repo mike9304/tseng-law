@@ -35,3 +35,7 @@ Queued angle (dissolution, liquidation, deregistration, tax clearance before rep
 ## Astra r1 fixes (2026-10-20)
 - 7/7 findings applied: Art.10(3) final-judgment/6-month/authority-deadline conditions + 10(4) pre-order submission exception (ko/ja/en); liquidator default split by company type — 股份有限公司 Art.322 directors, 有限公司 Art.113→79 all shareholders, 81 court appointment (summary, FAQ2, body; all four); Art.397 headings 'may be revoked' + no-timely-objection/insufficient-grounds condition (ko/ja/zh body; en body+FAQ3 aligned); ko checklist heading/fragment removed; line-39 conclusions qualified to 'where the director default applies' (all four); ko 해산 결정 (also ja 裁判所の決定による解散); en 'Article 87(1)–(2), as applied through Article 113' (ko/ja/zh aligned).
 - Arts. 10, 79, 81, 113, 322, 397 re-fetched live from LawSingle 2026-10-20 20:4x KST.
+
+## Astra r2 re-check (2026-10-21 ~00:20 KST)
+- variety FAIL 0 (ko/ja/en; zh --lang zh-hant). links.py BAD 0. YAML OK x4; faq 3; featured_image TBD; no 曾雋崴; no bold.
+- Lengths (blen.py): en 904 words, ko 1,910 chars without spaces, ja 1,978, zh 1,491.

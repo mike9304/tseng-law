@@ -31,3 +31,39 @@
 - Live re-fetch (LawSingle, 20:27 KST): 強制汽車責任保險法 Art. 11 (claimants: injured person / surviving family in order; funeral payer), Art. 14 (I: 「自知有損害發生及保險人時起，二年間不行使而消滅」; II: 「前項時效完成前，請求權人已向保險人為保險給付之請求者，自請求發生效力之時起，至保險人為保險給付決定之通知到達時止，不計入時效期間」; IV ①–④ separate triggers incl. ③ 「自知有損害發生及確認被保險汽車係未經同意使用或管理之事實起算」); 給付標準 Art. 2 (para. 5 nursing cap; para. 6 NHI subrogation; para. 7 Fund excludes NHI).
 - Fixes: (1) ja/zh NHI subrogation → Art. 2(6). (2) en/zh Fund limitation now lists the unauthorized-use trigger with the other two (ko already limited its sentence to the untraceable/uninsured cases; ja does not discuss Fund limitation). (3) ko summary: injury benefits to the injured, death benefit to eligible survivors; 「사망자 1인당」. (4) ko 48: trigger = knowledge of damage and of insurer. (5) ko 46 / en FAQ 2 + body / zh FAQ 2: excluded time only for a claim made before limitation expires (Art. 14(2)). (6) en opening scooter scene labelled "an invented example". (7) ko 「청구의 효력이 발생한 때」 (2 places). (8) ko 「그대로입니다」 deleted. (9) ja 「救急外来・一般外来を受診した日」 (2 places; source 「急診、門診治療日」).
 - Contact line (2026-10-20 no-byline rule) already neutral in all four.
+
+## Astra r2 fix log (2026-10-21 ~00:10 KST)
+### ja rewritten on a new angle (finding 1: old ja duplicated ja 271 line 38)
+Old ja (non-NHI traveler medical-fee cap) is withdrawn; backup at research/fix/A6-ja-before-r2.md. The sections above on 給付標準 Art. 2 II ②(二) and 核退辦法 Art. 6 no longer apply to ja. Findings 2 (「得按…核付」) and 4 (代位 wording) concerned only that withdrawn text; the new ja does not state either rule.
+New ja angle: multi-vehicle accidents — 強制汽車責任保險法 Art. 36 joint payment, no fault-ratio split, Art. 31 settlement deduction — through 臺灣彰化地方法院113年度保險簡上字第1號 (2026-03-31). Duplicate check: no column in any locale cites Art. 36 or this judgment (grep 第36條/第36条/Article 36/제36조 and 保險簡上 over ref/src/content/columns*); zh 103 discusses Art. 31 only for uninsured-vehicle / Fund deduction cases (新竹・臺南), zh 102 is a single-vehicle passenger + recourse case; ja 003 has one sentence that multi-vehicle drivers may claim from other vehicles' insurers.
+
+Statutes (LawSingle, live re-fetch 2026-10-20 23:5x KST):
+- G0390060 Art. 7 (no-fault), Art. 13 「本法所稱汽車交通事故，指使用或管理汽車致乘客或車外第三人傷害或死亡之事故。」
+- Art. 14(1) 「…自知有損害發生及保險人時起，二年間不行使而消滅。自汽車交通事故發生時起，逾十年者，亦同。」 (4) Fund claims: 「一、事故汽車無法查究者，自知有損害及確認肇事汽車無法查究時起算。二、…未保險汽車者，自知有損害及確認肇事汽車為未保險汽車時起算。…」
+- Art. 25(2) 「保險人應於被保險人或請求權人交齊相關證明文件之次日起十個工作日內給付之」
+- Art. 31 「被保險汽車發生汽車交通事故，被保險人已為一部之賠償者，保險人僅於本法規定之保險金額扣除該賠償金額之餘額範圍內，負給付責任。但請求權人與被保險人約定不得扣除者，從其約定。／前項被保險人先行賠償之金額，保險人於本法規定之保險金額範圍內給付被保險人。但前項但書之情形，不在此限。」
+- Art. 36 「同一汽車交通事故牽涉數汽車時，依下列規定處理：一、事故汽車全部為被保險汽車者，請求權人得請求各應負給付義務之保險人連帶為保險給付。二、…特別補償基金補償。三、事故汽車部分為被保險汽車，部分為第四十條第一項所定之汽車者，請求權人得請求各應負給付義務之保險人與特別補償基金連帶為保險給付或補償。／前項保險人間或保險人與特別補償基金間，按其所應給付或補償之事故汽車數量比例，負分擔之責。」
+- Art. 40(1) 「一、事故汽車無法查究。二、事故汽車為未保險汽車。三、事故汽車係未經被保險人同意使用或管理之被保險汽車。四、事故汽車全部或部分為無須訂立本保險契約之汽車。」 → ja lists the first three.
+- 民法 Art. 272(1) 「數人負同一債務，明示對於債權人各負全部給付之責任者，為連帶債務。」 Art. 274 「因連帶債務人中之一人為清償、代物清償、提存、抵銷或混同而債務消滅者，他債務人亦同免其責任。」
+
+Judgment 臺灣彰化地方法院113年度保險簡上字第1號民事判決 (2026-03-31), opened through two channels:
+- printData https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=CHDV%2C113%2C%E4%BF%9D%E9%9A%AA%E7%B0%A1%E4%B8%8A%2C1%2C20260331%2C1 — text 15,225 B, SHA-256 2852ebf68665f19505f04e3d81880d372cb41c4d872279f64e6a6ab49adafbbd (cached research/jud/CHDV-113-保險簡上-1-20260331-1.txt).
+- open-data PDF https://data.judicial.gov.tw/opendl/JDocFile/CHDV/113%2C%E4%BF%9D%E9%9A%AA%E7%B0%A1%E4%B8%8A%2C1%2C20260331%2C1.pdf — 561,874 B, %PDF-1.4, SHA-256 013172958b55e1b046763d52655f7f605c8f4f837439766917ab0997e94481ec; pdftotext confirms each quoted passage below.
+Point-by-point (ja sentence → judgment text):
+- accident 2022-02-27 16:40, passenger on 甲機車 hit 乙汽車; 「右側髖部脫臼、左側足部第三、第四及第五蹠骨骨折…」 (不爭執事項㈠, 上訴人主張㈠).
+- 7:3 is the claimant's position: 「就系爭事故郭家豪應負70％肇事責任、陳致成應負30％肇事責任」 (上訴人主張); court found only that both bear fault (不爭執事項㈡). ja says 「同乗者の側は、過失はバイク7割、乗用車3割だとして」.
+- both vehicles insured: 不爭執事項㈤ (國泰 = bike, 南山 = car).
+- settlement with car driver: 「參拾陸萬元。上開金額包括強制汽車責任保險法規定之醫療給付，但不包含強制汽車責任保險法規定之失能給付。給付方式：當場給付陸萬元…」 (不爭執事項㈢); 「上訴人已自陳致成取得6萬元，並經南山產險撥付30萬元」 (理由㈢⒉). 南山 paid 76,981 CALI + 223,019 third-party liability (不爭執事項㈥).
+- settlement with rider: 「貳拾伍萬元。上開金額不包括強制汽車責任保險法規定之給付，強制汽車責任保險法規定之各項給付則由聲請人另行請求」 (不爭執事項㈣).
+- internal share: 「被上訴人有因系爭事故分擔強制保險理賠金53,886元」 (不爭執事項㈦).
+- claim: 「以郭家豪應負擔肇事責任70％計算，請求金額為142,091元」 (final appeal claim 142,091).
+- holding on joint payment: 「甲機車、乙汽車之各保險人就系爭事故，應負連帶給付保險金責任，並無依被保險人肇事責任比例分別計算後，再行給付保險金之可能」.
+- mediator witness: 「強制險都是一次請求全部，原則上不會分開請求，依其調解經驗，並無區分不同保險人依比例申請強制險的」.
+- discharge and Art. 31: 「堪認上訴人得請求之強制險醫療費用給付…已經清償完畢，上開清償結果，依民法第274條規定，對於被上訴人之被保險人郭家豪亦生清償效果」; 「依強制汽車責任保險法第31條第1項規定，上訴人就強制險醫療費用給付項目，不問是否已經向南山產險申請，均不得再向其他債務人（即郭家豪）之保險人請求給付」; rider-settlement clause 「亦無礙於上開認定結果」.
+- outcome / finality: 主文 「上訴駁回。」; 「不得上訴。」; first instance 員林簡易庭113年度員保險簡字第1號 (2024-07-15) dismissed the claim.
+- Inferences labelled as such in ja: the passenger is a 乗客 for the bike and a 車外第三人 for the car (「第13条に当てはめると」); the taxi case is an application of Art. 36 when both vehicles are insured; 「書き方次第で結論は変わりえます」 follows from the Art. 31(1) proviso.
+
+### ko/en/zh closings (finding 3)
+- Closings now present accident date / insurer / medical papers as starting materials, then add the Art. 14(1)–(2) conditions (knowledge of damage and insurer; time from a claim taking effect until the decision notice arrives is not counted) and the disability assessment condition. 給付標準 Art. 3(2) live: 「本保險所稱失能，指受害人因汽車交通事故致身體傷害，經治療後症狀固定，再行治療仍不能期待治療效果，並經合格醫師診斷為永不能復原之狀態。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390067&flno=3
+### zh NHI Act Art. 95 (finding 5)
+- Linked inline and added to the source list: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=95 — Art. 95(1) 「保險對象因汽車交通事故，經本保險之保險人提供保險給付後，得向強制汽車責任保險之保險人請求償付該項給付。」 zh wording changed from 「代位求償」 to 「代位請求」 to match 給付標準 Art. 2(6) 「…依全民健康保險法第九十五條規定，向本保險之保險人代位請求。」

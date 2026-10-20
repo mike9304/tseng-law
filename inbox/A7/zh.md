@@ -24,7 +24,7 @@ author: "legal-ai-assistant"
 
 # 外商在台子公司停擺不處理：命令解散、廢止登記之後，清算義務還在
 
-公司法第10條給的期限是六個月。開始營業後自行停止營業六個月以上，又沒有辦妥停業登記，主管機關就可以依職權或利害關係人的申請命令解散。員工走光、沒有營收、帳戶裡還剩一點錢的子公司，在公司法上仍然是一家存續中的公司。
+依[公司法第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=10)，開始營業後自行停止營業六個月以上，又沒有辦妥停業登記，主管機關就可以依職權或利害關係人的申請命令解散。員工走光、沒有營收、帳戶裡還剩一點錢的子公司，在公司法上仍然是一家存續中的公司。
 
 ## 命令解散的幾種情形
 
@@ -50,7 +50,7 @@ author: "legal-ai-assistant"
 
 登記廢止了，清算的問題還在。[第26條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=26-2)規定，經解散、撤銷或廢止登記的公司，自登記之日起逾十年未清算完結，其公司名稱得為他人申請核准使用；有正當理由、於期限屆滿前六個月內報中央主管機關核准者除外。這條規定本身就預設了登記廢止後仍可能長期處於未清算完結的狀態。
 
-正式清算的順序、稅務期限與賸餘財產匯出，見〈[外商在台子公司、分公司結束營業的稅務申報](/zh-hant/columns/closing-taiwan-subsidiary-branch-liquidation-tax-filings)〉與〈[公司解散登記後，清算人還要處理哪些事](/zh-hant/columns/taiwan-company-dissolution-liquidation)〉。停止營業的日期、公司種類與現任董事或股東名單、帳戶餘額，三樣先查清楚，才知道這家子公司還剩哪條路。
+正式清算的順序、稅務期限與賸餘財產匯出，見〈[外商在台子公司、分公司結束營業的稅務申報](/zh-hant/columns/closing-taiwan-subsidiary-branch-liquidation-tax-filings)〉與〈[公司解散登記後，清算人還要處理哪些事](/zh-hant/columns/taiwan-company-dissolution-liquidation)〉。停止營業的日期、公司種類與現任董事或股東名單、資產與負債的紀錄，是判斷這家子公司還剩哪條路的起點。
 
 昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
 

@@ -43,7 +43,7 @@ author: "legal-ai-assistant"
 
 失能等級的認定方法也沒有改。依給付標準第4條，同時符合兩個以上失能項目時，原則上按最高等級給付，符合一定條件還會再升一到三級；第8條則規定，保險人對等級有疑義時，可以要求受害人提供甲種診斷書，或到地區教學醫院以上的醫院檢驗查證，費用由保險人負擔。等級表的金額提高了，鑑定的程序還是同一套。
 
-受害人用健保就醫的部分，由健保署依全民健康保險法第95條向強制險保險人代位求償，代位金額以20萬元扣除強制險保險人已給付請求權人的金額後的餘額為限（第2條第6項）。
+受害人用健保就醫的部分，由健保署依[全民健康保險法第95條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=95)向強制險保險人代位請求，代位金額以20萬元扣除強制險保險人已給付請求權人的金額後的餘額為限（第2條第6項）。
 
 ## 不論過失，但有期限
 
@@ -51,7 +51,7 @@ author: "legal-ai-assistant"
 
 強制險給付視為被保險人損害賠償金額的一部分，被保險人受賠償請求時可以扣除（[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=32)）。7月以後發生的重大傷亡事故，強制險這一塊變大了，和解時要扣多少，也跟著不同。肇事車輛沒有投保時的補償基金規則，見〈[和解寫「不含強制險」，就能另外領足嗎？](/zh-hant/columns/taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction)〉。
 
-事故發生日、對方的保險公司、診斷書與收據，三樣湊齊，才算得出能領哪一套、多少錢、到哪一天為止。
+事故發生日、對方的保險公司、診斷書與收據，是申請的起點。時效還要看何時知有損害及保險人，以及先前是否已向保險人請求；請求發生效力後到給付決定的通知到達前，不計入時效（[第14條第1項、第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)）。失能給付另須經治療後症狀固定，並由合格醫師診斷為永不能復原，才依等級審核（[給付標準第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390067&flno=3)）。
 
 昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
@@ -59,5 +59,6 @@ author: "legal-ai-assistant"
 
 - 全國法規資料庫・強制汽車責任保險法：[第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=7)、[第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=11)、[第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)、[第25條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=25)、[第27條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=27)、[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=32)、[第40條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=40)（修正至111年6月15日）
 - 全國法規資料庫・[強制汽車責任保險給付標準](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390067)第1條至第4條、第6條至第9條（115年5月29日修正第3條、第6條、第7條、第9條，115年7月1日施行）；[修正前條文](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=G0390067&lnndate=20260225&lser=001)；[法規沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0390067)
+- 全國法規資料庫・全民健康保險法：[第95條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=95)
 
 資料查核日期：2026年10月20日

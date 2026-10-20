@@ -16,7 +16,7 @@ faq:
   - q: "同一個假投資群組騙了幾十個人，可以推派一個人代表大家起訴嗎？"
     a: "符合條件就可以。[詐欺犯罪危害防制條例第55條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=55)規定，詐欺犯罪被害人提起民事訴訟所主張之主要攻擊或防禦方法相同者，得由其中選定一人或數人，為選定人及被選定人全體起訴或被訴，並準用民事訴訟法選定當事人之規定。訴訟繫屬後經選定者，其他當事人脫離訴訟；被選定人得更換或增減，但非通知他造不生效力（[民事訴訟法第41條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=41)）。"
   - q: "被告自首後說要和解，條例有什麼規定？"
-    a: "[第46條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46)規定，犯詐欺犯罪，於犯罪後自首，並於自首之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕或免除其刑；並因而查獲發起、主持、操縱或指揮詐欺犯罪組織之人，或得以扣押該組織所取得全部被害人交付之財物者，得免除其刑。減免看的是調解或和解的金額有沒有在期限內付清。第46條是115年1月21日修正公布、同月23日施行的條文，修正前的行為須依刑法第2條第1項比較新舊法。"
+    a: "[第46條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46)規定，犯詐欺犯罪，於犯罪後自首，並於自首之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕或免除其刑；並因而查獲發起、主持、操縱或指揮詐欺犯罪組織之人，或得以扣押該組織所取得全部被害人交付之所有財物或財產上利益者，得免除其刑。減免看的是調解或和解的金額有沒有在期限內付清。第46條是115年1月21日修正公布、同月23日施行的條文，修正前的行為須依刑法第2條第1項比較新舊法。"
   - q: "所有詐騙案件都適用這部條例嗎？"
     a: "不是。依[第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=2)，詐欺犯罪指犯[刑法第339條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=339-4)之罪、條例第43條或第44條之罪，以及與其有裁判上一罪關係之其他犯罪。單一行為人私下以網路交友騙錢，是否構成第339條之4，要看個案事實。"
 audience: ["zh-hant"]
@@ -41,11 +41,11 @@ author: "legal-ai-assistant"
 
 選定之後怎麼運作？依[民事訴訟法第41條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=41)，訴訟繫屬後經選定者，其他當事人脫離訴訟；被選定人可以更換或增減，但要通知他造才生效。大家的被害金額不同。請求的數字，仍要一一列清楚。
 
-費用也有減輕。被害人依民事訴訟程序起訴或上訴，暫免繳納訴訟費用，聲請強制執行時暫免繳納執行費；為保全強制執行聲請假扣押、假處分，或法院宣告假執行，所命供的擔保都不得高於請求標的金額或價額的十分之一（[第54條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=54)）。司法人員、司法警察發現被害人符合法律扶助法的申請要件，應告知可以申請並給予協助（[第52條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=52)）。假扣押的實際操作可參考〈[凍結車手的財產有兩條路，被害人自己能走的只有一條](/zh-hant/columns/fraud-victim-provisional-attachment-security-taiwan)〉。
+訴訟費用可以暫緩繳納。被害人依民事訴訟程序起訴或上訴，暫免繳納訴訟費用，聲請強制執行時暫免繳納執行費；為保全強制執行聲請假扣押、假處分，或法院宣告假執行，所命供的擔保都不得高於請求標的金額或價額的十分之一（[第54條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=54)）。司法人員、司法警察發現被害人符合法律扶助法的申請要件，應告知可以申請並給予協助（[第52條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=52)）。假扣押的實際操作可參考〈[凍結車手的財產有兩條路，被害人自己能走的只有一條](/zh-hant/columns/fraud-victim-provisional-attachment-security-taiwan)〉。
 
 ## 115年修正的第46條、第47條：付清和解金額與減免其刑
 
-條例把減刑和賠償綁在一起。115年1月21日修正公布、同月23日施行的[第46條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46)規定，自首的被告在自首之日起六個月內，付清與被害人達成調解或和解的全部金額者，得減輕或免除其刑；並因而查獲發起、主持、操縱或指揮詐欺犯罪組織之人，或得以扣押該組織所取得全部被害人交付的財物者，得免除其刑。偵查及歷次審判中均自白的被告適用[第47條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=47)，須在檢察官偵查中首次自白之日起六個月內付清，得減輕其刑。
+條例把減刑和賠償綁在一起。115年1月21日修正公布、同月23日施行的[第46條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46)規定，自首的被告在自首之日起六個月內，付清與被害人達成調解或和解的全部金額者，得減輕或免除其刑；並因而查獲發起、主持、操縱或指揮詐欺犯罪組織之人，或得以扣押該組織所取得全部被害人交付之所有財物或財產上利益者，得免除其刑。偵查及歷次審判中均自白的被告適用[第47條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=47)，須在檢察官偵查中首次自白之日起六個月內付清，得減輕其刑。
 
 修正前的犯行，依[刑法第2條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=2)要比較新舊法，適用最有利於行為人的法律。依[司法周刊的報導](https://www.judicial.gov.tw/tw/cp-1429-1504544-47483-1.html)，司法院說明會也提到，逾期才達成調解、和解或付款，或者還停在未遂階段，雖然不適用這兩條，仍可能適用其他相關規定。修法前後的差異見〈[車手認罪「繳回犯罪所得」就減刑，那筆錢會到被害人手上嗎](/zh-hant/columns/fraud-crime-prevention-act-2024-victims-taiwan)〉。
 

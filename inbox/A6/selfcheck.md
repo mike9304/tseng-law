@@ -49,3 +49,10 @@ Source: ASTRA-FAIL.md (r1), renamed ASTRA-FAIL-fixed-1.md. All 9 findings were a
 - ko: 「청구의 효력이 발생한 때」. 「그대로입니다」 deleted.
 - ja: 「救急外来・一般外来を受診した日」.
 Checks: variety FAIL 0 and no WARN in en after the opener change (ko/ja/en; zh --lang zh-hant). Links BAD 0, YAML OK x4. Lengths: en 737 words, ko 1,547 chars without spaces, ja 1,521, zh 1,372.
+
+## Astra r2 fix (2026-10-21 ~00:10 KST)
+- Duplicate check for the new ja angle: see facts.md r2 log. No column in any locale covers Art. 36 multi-vehicle joint payment or 彰化地院113保險簡上1; ja 271/003 untouched (ref is read-only for this lane).
+- Variety: ko OK, ja OK (cv 0.505, short 0.158), en OK, zh (--lang zh-hant) OK. FAIL 0.
+- links.py BAD 0 (new: CHDV printData 200, L0060001 Art. 95 200, internal /ja/.../taiwan-traffic-accident-compensation-items-japanese = 271). YAML OK x4; faq 3 each; featured_image TBD; no 曾雋崴; no bold; address once per file.
+- Lengths (blen.py): ja 1,876 chars without spaces, ko 1,665, en 798 words, zh 1,467.
+- Open risk: the judgment is a 簡易訴訟 appellate ruling of a district court (final, 「不得上訴」); it is one case, presented as such, not as settled practice.

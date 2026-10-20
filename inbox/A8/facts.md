@@ -31,3 +31,16 @@
 - Effective date & Judicial Yuan explanation: 司法院 司法周刊 第2298期第1版 (115-03-06), https://www.judicial.gov.tw/tw/cp-1429-1504544-47483-1.html (fetched 2026-10-20, 48491 bytes, SHA-256 735b4f11b0adb5f1285778f2d9a89f08b34eb343a2e2a7730a8c3d45c0aa0eab): 「詐欺犯罪危害防制條例則甫於115年1月21日修正公布、同年月23日施行」; 「若詐欺犯罪行為人尚未取得財物或財產上利益而處於詐欺未遂階段，或於所定期間屆滿後始與被害人達成調解或和解或支付全部金額，均無上開規定之適用，惟仍得適用其他相關規定」. Drafts use only these two points (no claim about the outcome of the old/new comparison).
 - LawHistory (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080226), re-opened: 115-01-21 華總一義字第11500003941號令修正公布第7～11、13、42～44、46、47、50條.
 - Art. 11 now framed as a procedure for unwithdrawn balances only; drafts state that civil claims / mediation / settlement do not depend on the account being emptied (no sequence).
+
+## Astra r2 fix log (2026-10-21 ~00:30 KST)
+- Live re-fetch (LawSingle) 詐欺犯罪危害防制條例:
+  - Art. 46 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46 : 「犯詐欺犯罪，於犯罪後自首，並於自首之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕或免除其刑。／前項情形，並因而查獲發起、主持、操縱或指揮詐欺犯罪組織之人，或得以扣押該組織所取得全部被害人交付之所有財物或財產上利益者，得免除其刑。」
+  - Art. 47 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=47 : 「犯詐欺犯罪，在偵查及歷次審判中均自白，並於檢察官偵查中首次自白之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕其刑。／前項情形，並因而查獲…或得以扣押該組織所取得全部被害人交付之所有財物或財產上利益者，得減輕或免除其刑。」
+  - Art. 54(1) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=54 : 「詐欺犯罪被害人依民事訴訟程序…起訴請求損害賠償或提起上訴時，暫免繳納訴訟費用，於聲請強制執行時，並暫免繳納執行費。」 (temporary exemption, not a final reduction).
+- Fixes:
+  1. en summary: Art. 46 "within six months of surrender"; Art. 47 "within six months of first confessing during the prosecutor's investigation".
+  2. en body: paragraph 2 now requires that the defendant's qualifying conduct "leads to the capture … or makes it possible to seize all the money, property and financial benefits the organization obtained from all its victims" (並因而; 所有財物或財產上利益). ko/ja paragraph-2 wording aligned (재물과 재산상 이익 / 財物や財産上の利益).
+  3. zh FAQ 1 and body: 「全部被害人交付之所有財物或財產上利益」 restored (2 places).
+  4. ko 「선정된 사람은 선정한 사람 모두를 위해 소송합니다.」 deleted.
+  5. ja 「条例は賠償と刑を結びつけています。」 deleted.
+  6. zh 「費用也有減輕。」 → 「訴訟費用可以暫緩繳納。」

@@ -24,3 +24,12 @@ Hypothetical (ko only): subsidiary stopped business end-2025 — labelled 「(�
 - Art. 81 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=81) — 不能依第七十九條規定定其清算人時，法院得因利害關係人之聲請，選派清算人。
 - Art. 113 II (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=113) — 除前項規定外，公司變更章程、合併、解散及清算，準用無限公司有關之規定。 → 有限公司 liquidators: Art. 79/81 via 113 (all shareholders by default); 股份有限公司: Art. 322 (directors by default).
 - Art. 397 II — 除命令解散或裁定解散外，應定三十日之期間，催告公司負責人聲明異議；逾期不為聲明或聲明理由不充分者，即廢止其登記。 → headings now "may be revoked"; condition restated in body.
+
+## Astra r2 fix log (2026-10-21 ~00:20 KST)
+- Live re-fetch (LawSingle): 公司法 Art. 81 「不能依第七十九條規定定其清算人時，法院得因利害關係人之聲請，選派清算人。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=81 ; Art. 322(2) 「不能依前項之規定定清算人時，法院得因利害關係人之聲請，選派清算人。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=322 — both require an interested party's application and use 得 (discretion).
+- Fixes:
+  1. ko Art. 81 sentence → 「정할 수 없으면 이해관계인의 신청에 따라 법원이 청산인을 선임할 수 있습니다」; the two Art. 322 sentences (FAQ 2, body) aligned the same way.
+  2. ja Art. 81 sentence → 「それでも清算人を定められないときは、利害関係人の申請により、裁判所が選任できます」; the two Art. 322 sentences (FAQ 2, body) aligned to 「利害関係人の申請により、裁判所が選任できます」.
+  3. en closing: "three things are the starting points … records of its assets and debts" (was "three facts show which route is still open … the bank balance"); en body Art. 322 and Art. 81 sentences now include "on an interested party's application". ko/ja/zh closings aligned (starting point; 자산과 채무 기록 / 資産と債務の記録 / 資產與負債的紀錄).
+  4. ko summary sentence 「본사가 자회사를 방치할 때 남는 의무를 조문으로 정리합니다.」 deleted.
+  5. zh opening 「公司法第10條給的期限是六個月。」 deleted; the next sentence now opens 「依公司法第10條，…」 (linked) so the attribution survives.

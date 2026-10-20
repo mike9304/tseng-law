@@ -51,7 +51,7 @@ author: "legal-ai-assistant"
 
 강제보험금은 피보험자, 곧 사고 차량 쪽이 물어야 할 손해배상의 일부로 봅니다. 피보험자는 배상을 청구받을 때 이미 지급된 보험금을 공제할 수 있습니다([제32조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=32)). 강제보험금을 받으면 더 청구할 것이 없을까요? 급부는 기준표의 한도까지이고, 그보다 큰 손해는 민법의 불법행위 규정에 따라 상대방에게 청구합니다([민법 제184조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)). 그래서 합의금을 정할 때는 강제보험에서 받았거나 받을 금액을 포함하는지가 문서에 적혀 있어야 계산이 맞습니다. 과실치상의 고소 기간과 합의 뒤 고소 취하는 [대만 상해·과실상해 합의 뒤 고소 취하](/ko/columns/taiwan-complaint-only-offense-settlement-withdrawal-deadline)에서 다뤘습니다.
 
-사고일, 보험사 이름, 진단서와 영수증. 이 셋이 있어야 어느 기준으로 얼마를 언제까지 청구할지가 정해집니다.
+사고일, 보험사 이름, 진단서와 영수증은 청구를 시작하는 자료입니다. 기한은 손해와 보험사를 안 날에 따라 달라지고, 이미 보험사에 청구했다면 청구의 효력이 생긴 때부터 지급 결정 통지가 도착할 때까지는 시효에 넣지 않습니다([제14조 제1항·제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)). 장해급부는 치료 뒤 증상이 고정되고 자격 있는 의사가 영구히 회복할 수 없다고 진단해야 등급 심사로 넘어갑니다([급부기준 제3조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390067&flno=3)).
 
 호정(昊鼎)국제법률사무소의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
 

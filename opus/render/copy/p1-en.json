@@ -92,8 +92,8 @@
      {
       "title": "The renter's own reason",
       "body": "After paying, their\nstuff wouldn't fit",
-      "proves_label": "The judge saw it as",
-      "proves": "The renter's side",
+      "proves_label": "The judge's finding",
+      "proves": "The renter was\nresponsible.",
       "status": "On record",
       "kind": "ok"
      },

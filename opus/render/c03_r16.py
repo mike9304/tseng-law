@@ -299,7 +299,8 @@ def proof(card, lang, total):
             block(out, d['title'], x + 36, top + 74, 40, lang, w - 72, 900, INK, 1.2, 'label', 2)
             ty = top + 74 + (len(wrap(d['title'], lang, 40, w - 72, 900)) - 1) * 48
             out.append(line(x + 36, ty + 28, x + w - 36, ty + 28, INK, 2))
-            block(out, d['body'], x + 36, ty + 104, 44, lang, w - 72, 800, INK, 1.25, 'object', 2)
+            by, _, _ = block(out, d['body'], x + 36, ty + 104, 44, lang, w - 72, 800, INK, 1.25, 'object', 3)
+            assert by <= top + 300, f'[{lang}] proof body too tall ({by - top})'
             out.append(put(d['proves_label'], x + 36, top + 360, 32, MUTED, 700, lang, w - 72, role='label'))
             block(out, d['proves'], x + 36, top + 414, 42, lang, w - 72, 900, ACCENT if ok else INK, 1.2, 'object', 2)
             sy = top + h - 52

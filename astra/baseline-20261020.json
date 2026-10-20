@@ -1,0 +1,404 @@
+{
+  "observed_at": "2026-10-20 19:52 KST",
+  "method": "Python len after strip; file lines are not rendered phone lines",
+  "openings": [
+    {
+      "topic": "P1",
+      "package": "r16",
+      "language": "ko",
+      "body_codepoints": 420,
+      "comment_codepoints": 143,
+      "first_two_nonempty_file_lines": [
+        "대만에서 계약서 쓰기 전에 집 계약금부터 보냈다가, 마음 바꿔서 돌려 달라고 소송 낸 사람이 졌어요.",
+        "법원 얘기는, 집 보면서 월세랑 기간을 말로 다 맞췄으니 서명 전이어도 계약은 된 거래요."
+      ],
+      "first_two_file_lines_codepoints": 107,
+      "comment_question": "집 구할 때 계약서부터 썼어요, 돈부터 보냈어요?"
+    },
+    {
+      "topic": "P1",
+      "package": "r16",
+      "language": "zh-TW",
+      "body_codepoints": 243,
+      "comment_codepoints": 139,
+      "first_two_nonempty_file_lines": [
+        "租約還沒簽，看完房先匯了訂金，反悔想拿回來，告上法院一審輸了",
+        "法官認為看房那天租金、租期都講好了，租約當天就成立"
+      ],
+      "first_two_file_lines_codepoints": 56,
+      "comment_question": "你們付訂金的時候，對方有先講「不租就沒收」嗎？"
+    },
+    {
+      "topic": "P1",
+      "package": "r16",
+      "language": "ja",
+      "body_codepoints": 373,
+      "comment_codepoints": 145,
+      "first_two_nonempty_file_lines": [
+        "部屋の契約書にサインする前に、手付金を振り込んだ人の話。気が変わって返してほしいと台湾で裁判を起こしたけど、負けました。",
+        "裁判所の判断だと、内見の日に家賃と期間を口で決めた時点で、契約はもう成立していた。"
+      ],
+      "first_two_file_lines_codepoints": 102,
+      "comment_question": "台湾の部屋探し、手付金と契約書、どっちが先でした？"
+    },
+    {
+      "topic": "P1",
+      "package": "r16",
+      "language": "en",
+      "body_codepoints": 496,
+      "comment_codepoints": 200,
+      "first_two_nonempty_file_lines": [
+        "Someone in Taipei wired a holding deposit before signing a lease, then wanted out hours later. They sued for it and lost.",
+        "The lease already existed, the court said, since rent and a one-year minimum were settled verbally at the viewing."
+      ],
+      "first_two_file_lines_codepoints": 236,
+      "comment_question": "Anyone here paid a deposit in Taiwan before seeing an actual lease?"
+    },
+    {
+      "topic": "P2",
+      "package": "c13-r3",
+      "language": "ko",
+      "body_codepoints": 437,
+      "comment_codepoints": 145,
+      "first_two_nonempty_file_lines": [
+        "부부가 같이 가서 이혼 등록까지 마쳤는데, 대만 법원이 그 이혼은 무효라고 했어요.",
+        "서류에 서명한 증인 두 명 중 한 명이 남편한테 정말 이혼할 건지 직접 확인한 적이 없어서요."
+      ],
+      "first_two_file_lines_codepoints": 99,
+      "comment_question": "친구가 이혼 서류에 증인 서명 좀 해 달라고 하면, 해 줄 것 같아요?"
+    },
+    {
+      "topic": "P2",
+      "package": "c13-r3",
+      "language": "zh-TW",
+      "body_codepoints": 241,
+      "comment_codepoints": 128,
+      "first_two_nonempty_file_lines": [
+        "夫妻一起去戶政事務所辦完離婚登記，法院卻判這個離婚無效",
+        "因為兩位證人裡，有一位從來沒跟先生本人確認過他到底要不要離婚"
+      ],
+      "first_two_file_lines_codepoints": 58,
+      "comment_question": "有沒有人被朋友拜託過，當離婚協議書的證人？"
+    },
+    {
+      "topic": "P2",
+      "package": "c13-r3",
+      "language": "ja",
+      "body_codepoints": 407,
+      "comment_codepoints": 140,
+      "first_two_nonempty_file_lines": [
+        "夫婦そろって役所で離婚の手続きまで済ませたのに、台湾の裁判所の答えは「この離婚は無効。2人はまだ夫婦」。",
+        "引っかかったのは証人。サインした2人のうち1人が、夫に本当に離婚するのか一度も確かめていなかった。"
+      ],
+      "first_two_file_lines_codepoints": 102,
+      "comment_question": "友だちに離婚届の証人を頼まれたら、相手の方にも話を聞きます？"
+    },
+    {
+      "topic": "P2",
+      "package": "c13-r3",
+      "language": "en",
+      "body_codepoints": 495,
+      "comment_codepoints": 216,
+      "first_two_nonempty_file_lines": [
+        "He and his wife signed and registered their divorce. Then he sued, and a Taiwan court said they were still married.",
+        "A divorce like that needs two or more witnesses. One of theirs never asked him if he really wanted out."
+      ],
+      "first_two_file_lines_codepoints": 219,
+      "comment_question": "Would you sign as a witness on a friend's divorce papers without talking to the other spouse?"
+    },
+    {
+      "topic": "P3",
+      "package": "c09-r2",
+      "language": "ko",
+      "body_codepoints": 392,
+      "comment_codepoints": 151,
+      "first_two_nonempty_file_lines": [
+        "타이베이에서 빨간불에 그냥 들어온 버스 옆구리에, 아이를 태운 오토바이가 부딪힌 사고.",
+        "1심 법원은 아이 앞니 치료비는 달라는 대로 다 인정했는데, 부모가 일 못 한 손해는 청구한 돈의 10분의 1도 안 쳐 줬어요."
+      ],
+      "first_two_file_lines_codepoints": 120,
+      "comment_question": "사고 나서 일 쉬어 본 분, 그동안 못 번 돈은 어떻게 했어요?"
+    },
+    {
+      "topic": "P3",
+      "package": "c09-r2",
+      "language": "zh-TW",
+      "body_codepoints": 284,
+      "comment_codepoints": 151,
+      "first_two_nonempty_file_lines": [
+        "大客車闖紅燈，跟家長載著孩子的機車撞在一起",
+        "一審判下來，孩子門牙的治療費要多少就認多少，家長養傷不能工作的損失，連要的一成都不到"
+      ],
+      "first_two_file_lines_codepoints": 64,
+      "comment_question": "騎車被撞過的人，那段沒辦法上班的收入，後來是拿什麼證明的？"
+    },
+    {
+      "topic": "P3",
+      "package": "c09-r2",
+      "language": "ja",
+      "body_codepoints": 350,
+      "comment_codepoints": 160,
+      "first_two_nonempty_file_lines": [
+        "赤信号を無視した大型バスに、親子2人乗りのバイクがぶつかった台北の事故。裁判所は、子どもの前歯の治療費は全額認めたのに、親が仕事を休んだ分は請求の1割も認めませんでした。",
+        "親の側から、収入の明細も税務申告も出ていなかったんです。"
+      ],
+      "first_two_file_lines_codepoints": 114,
+      "comment_question": "けがで仕事を休んで、その分を相手に請求したことがある方。収入は何で証明しました？"
+    },
+    {
+      "topic": "P3",
+      "package": "c09-r2",
+      "language": "en",
+      "body_codepoints": 481,
+      "comment_codepoints": 215,
+      "first_two_nonempty_file_lines": [
+        "A bus ran a red light in Taipei, and a scooter carrying a parent and kid hit its side. A district court gave the kid the full amount claimed for dental work. The parent got under a tenth of their lost-income claim. They never turned in income records or tax returns.",
+        "The kid had four upper front teeth knocked out or snapped. The defense said a cheaper option would do. The judge went with the implant plan anyway, since the kid was still a minor and teeth shape how a face looks."
+      ],
+      "first_two_file_lines_codepoints": 480,
+      "comment_question": "If you've had to prove lost income after getting hurt in Taiwan, what did you use?"
+    }
+  ],
+  "input_hashes": [
+    {
+      "path": "prior-opus-1019/out/r16/post-body-ko.md",
+      "sha256": "78fd3ef4a487ac078604d5293ff966aea725a37a978f1b1dbd5a00f3ec64ae2a"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/first-comment-ko.md",
+      "sha256": "12a42fc51a814bbfc2e4b4e87348de9b633008339653437950dcc51d123bc671"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/text-attachment-ko.md",
+      "sha256": "30051df58f8f5f9e98ed2cf94a108075e4545b8beb1255511780cf94bbfa4b50"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/post-body-zh-TW.md",
+      "sha256": "49f1602db215f457ae01a2e942db8eaf8a074ce3f3ecb36dc9704f49bddf746e"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/first-comment-zh-TW.md",
+      "sha256": "eea3044408aba7e18621cb8154033ab03ccd59af33106ea1b3d2d95088b974a0"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/text-attachment-zh-TW.md",
+      "sha256": "bc3a707eac1cca19bd52cf4db2c71b9fc1f0bd47a4915a85b5c365d6d6e3b71f"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/post-body-ja.md",
+      "sha256": "1005b7c530efa86a1cefc08611ff31c87291f7606705353e4a31e04f8c944da9"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/first-comment-ja.md",
+      "sha256": "9b6e8ddab41e043cd385de9f0688f706f6eabe88b46ff926ec673623affb271f"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/text-attachment-ja.md",
+      "sha256": "7fbf6feaa893c74cc541732b21117499c2337602c32dea7d73fcf64a3492dba8"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/post-body-en.md",
+      "sha256": "7cac0e72f12dac1f42998c2b2ffd0eb8c465c7db0dbbbe22f8bde9c49c476ba2"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/first-comment-en.md",
+      "sha256": "71322327ca3a747282897eb1ac947cbf13a154a574feba3ce5238347091f4b06"
+    },
+    {
+      "path": "prior-opus-1019/out/r16/text-attachment-en.md",
+      "sha256": "5a40a233b4ef7dae7644e035ccd5315f5f2258cf69c73368c843d57a3c818e64"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/post-body-ko.md",
+      "sha256": "3b778cd3c247827e5b83e21f1e5c6e287edf3f06c8815a9a65feafa1663dbf9e"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/first-comment-ko.md",
+      "sha256": "51a0a6c383606fb7da140c56bf09ad9e3d73579cf1c5b073b65db9d59565cf6c"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/text-attachment-ko.md",
+      "sha256": "5cb7719b6c4073a4ffe39c2caf5076f28d54b351f4957268b0247d220c22f6ef"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/ko-overview.png",
+      "sha256": "39de59564ca50ea568dfa73458addf0763eb186a26c5d5dcad0184871aab2b14"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ko/card-01.png",
+      "sha256": "96fbe109537178499be20ee371670779a1afafdef4e716f824bd81c2242bb425"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ko/card-02.png",
+      "sha256": "167ad369e6bb4c51a4769f16ce182de86a95916b31abc9d8c65dfe0928a5a17b"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ko/card-03.png",
+      "sha256": "484d4d75c3f63804dbfa21ac3bb5d177db419cb67b137fa0ad639524f239d82f"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ko/card-04.png",
+      "sha256": "d6539179f7d3e14fe442c96462f7f3cb10c728e60af3647f39ee5e8485f82cc2"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ko/card-05.png",
+      "sha256": "c54264a3145e0870de5f756919ceed747e4de6153df49a21a642093456fd3396"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/post-body-zh-TW.md",
+      "sha256": "9285098534726152362a444373e19f9cb61b794c6cd96f6fc5347a2e675932db"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/first-comment-zh-TW.md",
+      "sha256": "69c62c8f836070b410048e768c1ae17f074b894bcb4c88be690c8150982c5aa7"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/text-attachment-zh-TW.md",
+      "sha256": "c270d1827955da0def7ba3de6af41248597c60575f2d821d9fd99ec2c39206c3"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/zh-TW-overview.png",
+      "sha256": "3c1e7b862b9d245978222aacafb2fb4e0b70990cdbe88e261a08554e9aacd7a3"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/zh-TW/card-01.png",
+      "sha256": "ce682fcbaacfade617140c64e45d3f4c06b2a9b76a9426d26a7fecfd1edabab9"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/zh-TW/card-02.png",
+      "sha256": "2a95bd3dcf8d474109739bd10d9132ab8ad4278e2eac6ef9943b427b5e6066e3"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/zh-TW/card-03.png",
+      "sha256": "6b4776d968f2dafc13a0ebf5d5f333a9cb334c5b09693144d5b1319a7b7e1b81"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/zh-TW/card-04.png",
+      "sha256": "f70582063861b275a57964e716af293fc4c186788d96a3a2b4aaa5ad62d98291"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/zh-TW/card-05.png",
+      "sha256": "f9da32a5a19c427562fbe7581d354e8b3a48705225eff7ff30ec36bcadb50392"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/post-body-ja.md",
+      "sha256": "20ddfe3b52c382fabd57476a558da13969f62a2f9518d62c5487347b4ec79281"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/first-comment-ja.md",
+      "sha256": "d26a96267b4f684e01cdc7a0f2ac430433aab2317cf30806d8399f77792b02ef"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/text-attachment-ja.md",
+      "sha256": "c6b36799e3b3097bb8f99c3f89cd798abae3ff1aecfdef7553e23d12950f8fc1"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/ja-overview.png",
+      "sha256": "01646e710835b2f1185d40e009532bfa915b58057ab4c9324c15fa9c812a1509"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ja/card-01.png",
+      "sha256": "1d5f239c471350740dcc41883ce94ae2e13a0314f27051ff9ad11d24105faee0"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ja/card-02.png",
+      "sha256": "d5ffc4dcad0c134d0005cd87268350f057dcdabb184dace742c7f46e490c40d7"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ja/card-03.png",
+      "sha256": "2ea38e45494680b08bc858128ae585220fc62195f7de5a3fc93845cd8f558e9d"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ja/card-04.png",
+      "sha256": "e41c493e1b91e5c57c81f3a5694e12ac8d39f68984520fed727efb1cec4286bf"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/ja/card-05.png",
+      "sha256": "50ddbc8350e94a62748a35770fdc42632c2d0304b96105cde434115d28b354b9"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/post-body-en.md",
+      "sha256": "70557192a679de952ebd526b02db7369dd34063545f0c368427bde7f0d65bcda"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/first-comment-en.md",
+      "sha256": "e8eff49a88d5de74411c79293b4abb40dd1b721c795bcbcd88353a2faa3bcaec"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/text-attachment-en.md",
+      "sha256": "0caa3c9a5222923bb353b4d6444268be3a7831d159169091df508a6d5d8b538b"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/en-overview.png",
+      "sha256": "26c2dc1c1587a022fe8d1a51bc0d66b31b39983aca49eb29be4a637c57d18252"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/en/card-01.png",
+      "sha256": "b727cca6ba2fbca60ad40182df41441e20d0ee6ff80ab9af206ca494ef6a7cc1"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/en/card-02.png",
+      "sha256": "9d4f58c05aec0193ccd25e8c52e414c5e8c167bbc3e36060c3b4d1fb93683528"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/en/card-03.png",
+      "sha256": "53e8b378287d9f2331576ed0617971c05c2729680c166524883f591d86b16735"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/en/card-04.png",
+      "sha256": "7fec7fa99fedf3c23d0e20687b310699f6c331a51443c61b84029e85da98eee1"
+    },
+    {
+      "path": "prior-opus-1019/out/c13-r3/images/en/card-05.png",
+      "sha256": "68bee7406a512ab7c521180542c01ef140cd155c819d130d511386fae5afa452"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/post-body-ko.md",
+      "sha256": "2064843b5288b51f09de8671aec7d3377049e41a5d0fff3d8ef3f8738b0ffa3c"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/first-comment-ko.md",
+      "sha256": "6baecc8668b45c69bfe2a2cc65a461f08ae2d3f7acbc49e4eb925203f76c6b63"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/text-attachment-ko.md",
+      "sha256": "aa9dbcad7034a5846ae8264e97c837ecb623fa728870ea90f1e15571292c0041"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/post-body-zh-TW.md",
+      "sha256": "72eb1ca71125e2330ce3338dc6c8be67f7105462d2fd2a4c92ab5e6fed74348d"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/first-comment-zh-TW.md",
+      "sha256": "d0997590c14a260bab2c0ffa1228f92e1054ba4d9451eb89e22d91174d281d9c"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/text-attachment-zh-TW.md",
+      "sha256": "156b5ea476a7dd9e228a6ddab666a93a41dd05e31f03f57f2048d8c3de6ef0c7"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/post-body-ja.md",
+      "sha256": "27e068c2ce4f7a6f0d65c034cb5017445b678f1495ae97ebf0d07848e8004d6e"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/first-comment-ja.md",
+      "sha256": "ef206cb34e386dbf769e85fb6211278e1fae327771cf141e9f3bfa487359af18"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/text-attachment-ja.md",
+      "sha256": "0b428942f16d19526641933d4b0f04dd73507da38316ec9ddaeb5a01e5c24114"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/post-body-en.md",
+      "sha256": "e50e4794416580fda55e21a49f000628f35f9eee4f27f538d30fdc743f6fb371"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/first-comment-en.md",
+      "sha256": "da6666024b50edcfe66711bca8f8e445d6399b6c26c73ea30b42ce54cf93bb97"
+    },
+    {
+      "path": "prior-opus-1019/out/c09-r2/text-attachment-en.md",
+      "sha256": "56129e3b33f451d3174b5add7ec16a7f1f400ccc2742c3be7a82d99cbd2b1ba3"
+    }
+  ]
+}

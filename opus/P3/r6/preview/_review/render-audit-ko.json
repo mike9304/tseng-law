@@ -1,0 +1,1226 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 법원 1심 · 버스 신호위반 사고",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     64,
+     163,
+     615,
+     199
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아이 앞니 치료비는 다 인정됐는데",
+    "role": "headline",
+    "size": 69,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     246,
+     1012,
+     312
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부모가 일 못 한 손해는",
+    "role": "headline",
+    "size": 69,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     329,
+     695,
+     395
+    ],
+    "rotate": null
+   },
+   {
+    "text": "10분의 1도 인정 안 됐어요.",
+    "role": "headline",
+    "size": 69,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     412,
+     845,
+     478
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아이 앞니 치료비",
+    "role": "label",
+    "size": 40,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     554.0,
+     336,
+     592.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "청구한 만큼 다",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     780.9,
+     554.0,
+     1019.9,
+     592.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부모가 일 못 한 손해",
+    "role": "label",
+    "size": 40,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     825.5,
+     391,
+     863.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "10분의 1도 안 됨",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     735.5,
+     825.5,
+     1020.5,
+     863.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "테두리 = 청구한 돈 · 빨간 칸 = 인정된 돈",
+    "role": "object",
+    "size": 32,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1054,
+     592,
+     1084
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부모 쪽은 소득 자료를 안 냈어요.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1146,
+     675,
+     1189
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 스린지방법원 간이법정",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     428,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號 · 2024.01.09 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     662,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "crash",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "가상의 장면",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     865.6,
+     56,
+     1019.6,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "오토바이를 몰던 부모",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     108,
+     289,
+     387,
+     319
+    ],
+    "rotate": null
+   },
+   {
+    "text": "버스가 빨간불에",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     108,
+     348,
+     588,
+     417
+    ],
+    "rotate": null
+   },
+   {
+    "text": "그냥 들어왔어요.",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     108,
+     445,
+     613,
+     513
+    ],
+    "rotate": null
+   },
+   {
+    "text": "2020년 타이베이, 뒤에는 아이가 타고 있었어요.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1070,
+     963,
+     1119
+    ],
+    "rotate": null
+   },
+   {
+    "text": "오토바이가 버스 옆구리에 부딪혔어요.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1142,
+     846,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 스린지방법원 간이법정",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     428,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號 · 2024.01.09 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     662,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "injuries",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "판결에 적힌 부상",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     799.6,
+     56,
+     1019.6,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아이는 윗앞니 넷을",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     149,
+     654,
+     222
+    ],
+    "rotate": null
+   },
+   {
+    "text": "다쳤어요.",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     245,
+     366,
+     318
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아이",
+    "role": "label",
+    "size": 36,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     405,
+     126,
+     439
+    ],
+    "rotate": null
+   },
+   {
+    "text": "빠진 이 1개 · 부러진 이 3개",
+    "role": "object",
+    "size": 40,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     311.1,
+     832,
+     769.1,
+     870
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부모",
+    "role": "label",
+    "size": 36,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     957,
+     126,
+     989
+    ],
+    "rotate": null
+   },
+   {
+    "text": "왼쪽 쇄골 골절",
+    "role": "object",
+    "size": 44,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     757.0,
+     948,
+     1020.0,
+     990
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 스린지방법원 간이법정",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     428,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號 · 2024.01.09 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     662,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "ruling",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이 사건 1심 판단",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     804.1,
+     56,
+     1020.1,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "앞니 치료비는 달라는 대로",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     91,
+     224,
+     869,
+     292
+    ],
+    "rotate": null
+   },
+   {
+    "text": "343,000元",
+    "role": "amount",
+    "size": 179,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     418,
+     956,
+     601
+    ],
+    "rotate": null
+   },
+   {
+    "text": "임플란트가 들어간 치료 계획 기준",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     64,
+     613,
+     588,
+     649
+    ],
+    "rotate": null
+   },
+   {
+    "text": "판결 이유 요약",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     64,
+     673,
+     255,
+     703
+    ],
+    "rotate": null
+   },
+   {
+    "text": "다칠 때 아직 미성년자였고,",
+    "role": "quote",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     100,
+     762,
+     656,
+     817
+    ],
+    "rotate": null
+   },
+   {
+    "text": "치아는 생김새와도 관계있다.",
+    "role": "quote",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     100,
+     827,
+     691,
+     875
+    ],
+    "rotate": null
+   },
+   {
+    "text": "버스 쪽은 같은 계획서의 12만~15만元짜리",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1087,
+     871,
+     1131
+    ],
+    "rotate": null
+   },
+   {
+    "text": "방안이면 된다고 했어요.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1146,
+     518,
+     1189
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 스린지방법원 간이법정",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     428,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號 · 2024.01.09 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     662,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "cuts",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부모 청구 · 1심 판단",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     749.5,
+     56,
+     1019.5,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "소득 자료를 안 내서",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     153,
+     639,
+     221
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이만큼만.",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     245,
+     350,
+     313
+    ],
+    "rotate": null
+   },
+   {
+    "text": "다쳐서 쉬는 동안 일 못 한 손해",
+    "role": "label",
+    "size": 50,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     586,
+     680,
+     632
+    ],
+    "rotate": null
+   },
+   {
+    "text": "385,022元",
+    "role": "amount-old",
+    "size": 79,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     672,
+     444,
+     752
+    ],
+    "rotate": null
+   },
+   {
+    "text": "→",
+    "role": "sign",
+    "size": 74,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     480.7,
+     685,
+     554.7,
+     732
+    ],
+    "rotate": null
+   },
+   {
+    "text": "27,808元",
+    "role": "amount",
+    "size": 96,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     589.9,
+     661,
+     1011.9,
+     759
+    ],
+    "rotate": null
+   },
+   {
+    "text": "버스 쪽도 이만큼은 인정한 금액까지만",
+    "role": "reason",
+    "size": 50,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     768,
+     841,
+     814
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아침밥 가게 일은 아르바이트생이",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1011,
+     683,
+     1054
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대신했다며 버스 쪽이 낸 숫자예요.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1070,
+     707,
+     1113
+    ],
+    "rotate": null
+   },
+   {
+    "text": "시급 158元 × 하루 8시간 × 22일.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1142,
+     793,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 스린지방법원 간이법정",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     428,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號 · 2024.01.09 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     662,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 6,
+  "layout": "docs",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "알아 둘 것",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     887.9,
+     56,
+     1019.9,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "다친 건 진단서로,",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     149,
+     611,
+     231
+    ],
+    "rotate": null
+   },
+   {
+    "text": "못 번 돈은 소득 자료로.",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     245,
+     786,
+     318
+    ],
+    "rotate": null
+   },
+   {
+    "text": "진단서",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     96,
+     430,
+     206,
+     468
+    ],
+    "rotate": null
+   },
+   {
+    "text": "수술 뒤",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     96,
+     526,
+     245,
+     573
+    ],
+    "rotate": null
+   },
+   {
+    "text": "4주 휴양",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     96,
+     587,
+     275,
+     635
+    ],
+    "rotate": null
+   },
+   {
+    "text": "보여 주는 것",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     96,
+     692,
+     258,
+     723
+    ],
+    "rotate": null
+   },
+   {
+    "text": "쉬어야 했던 기간",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     96,
+     738,
+     386,
+     778
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이 사건: 냄",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     174,
+     865,
+     345,
+     902
+    ],
+    "rotate": null
+   },
+   {
+    "text": "소득 자료",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     606,
+     430,
+     762,
+     468
+    ],
+    "rotate": null
+   },
+   {
+    "text": "소득 내역·",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     606,
+     526,
+     831,
+     573
+    ],
+    "rotate": null
+   },
+   {
+    "text": "세금 신고 같은 것",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     606,
+     587,
+     962,
+     635
+    ],
+    "rotate": null
+   },
+   {
+    "text": "보여 주는 것",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     606,
+     692,
+     768,
+     723
+    ],
+    "rotate": null
+   },
+   {
+    "text": "그동안 못 번 돈",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     606,
+     738,
+     867,
+     778
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이 사건: 안 냄",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     684,
+     865,
+     898,
+     902
+    ],
+    "rotate": null
+   },
+   {
+    "text": "일 못 한 손해는 소득 자료를 안 내서,",
+    "role": "body",
+    "size": 44,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1092,
+     709,
+     1138
+    ],
+    "rotate": null
+   },
+   {
+    "text": "4주 휴양 진단과 버스 쪽도 인정한 금액으로 정했어요.",
+    "role": "body",
+    "size": 44,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1148,
+     1018,
+     1189
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 스린지방법원 간이법정",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     428,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號 · 2024.01.09 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     662,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "06",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

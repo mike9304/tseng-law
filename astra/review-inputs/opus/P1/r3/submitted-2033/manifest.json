@@ -1,0 +1,30 @@
+{
+  "observed": "2026-10-20T20:35:38.481657+09:00",
+  "source": "opus/P1/r3",
+  "files": {
+    "body.md": {
+      "sha256": "9c693149b7f9c0260187bfaf2c4f52d25dc9d329d79bdfbc1e5302d1fa164610",
+      "codepoints_trimmed": 498
+    },
+    "body-perspective.md": {
+      "sha256": "1584f7f897fa40499964b3b6ea5cfe66d4fbaccfe8401b54a4d6dba687c8438b",
+      "codepoints_trimmed": 495
+    },
+    "first-comment.md": {
+      "sha256": "2a989f2a7f22db25d9ea65daa7b9f11516877295ac06045a157b44eb070c5b46",
+      "codepoints_trimmed": 148
+    },
+    "attachment-v2.md": {
+      "sha256": "616efad555d620701f5c342d4df20d57e1b0c3ef96f6ac446eb0d3c60fb9ef5c",
+      "codepoints_trimmed": 2258
+    },
+    "threads-ready-ko.md": {
+      "sha256": "50d96558dad4a08041a95b2bd0d3c93d97e2f075373458d02a2a3dd74cf3e908",
+      "codepoints_trimmed": 4373
+    },
+    "cards.md": {
+      "sha256": "e3aa2b532f34d5074597359fca9cfd6c8ef0e9767ee4c4144f24abae338158a0",
+      "codepoints_trimmed": 1371
+    }
+  }
+}

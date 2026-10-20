@@ -1,0 +1,135 @@
+{
+  "observed": "2026-10-20T20:35:38.481657+09:00",
+  "scope": "Opus candidate text package and attachment revision; not winner or READY",
+  "topics": [
+    {
+      "topic": "P1",
+      "version": "r3",
+      "files": {
+        "body.md": {
+          "sha256": "9c693149b7f9c0260187bfaf2c4f52d25dc9d329d79bdfbc1e5302d1fa164610",
+          "codepoints_trimmed": 498
+        },
+        "body-perspective.md": {
+          "sha256": "1584f7f897fa40499964b3b6ea5cfe66d4fbaccfe8401b54a4d6dba687c8438b",
+          "codepoints_trimmed": 495
+        },
+        "first-comment.md": {
+          "sha256": "2a989f2a7f22db25d9ea65daa7b9f11516877295ac06045a157b44eb070c5b46",
+          "codepoints_trimmed": 148
+        },
+        "attachment-v2.md": {
+          "sha256": "616efad555d620701f5c342d4df20d57e1b0c3ef96f6ac446eb0d3c60fb9ef5c",
+          "codepoints_trimmed": 2258
+        },
+        "threads-ready-ko.md": {
+          "sha256": "50d96558dad4a08041a95b2bd0d3c93d97e2f075373458d02a2a3dd74cf3e908",
+          "codepoints_trimmed": 4373
+        },
+        "cards.md": {
+          "sha256": "e3aa2b532f34d5074597359fca9cfd6c8ef0e9767ee4c4144f24abae338158a0",
+          "codepoints_trimmed": 1371
+        }
+      },
+      "bundle_matches_sources": {
+        "body-perspective.md": true,
+        "first-comment.md": true,
+        "attachment-v2.md": true
+      },
+      "short_copy_unchanged": {
+        "body.md": true,
+        "body-perspective.md": true,
+        "first-comment.md": true,
+        "cards.md": true
+      },
+      "prohibited_public_labels": [],
+      "old_attachment_approval_claim_present": false
+    },
+    {
+      "topic": "P2",
+      "version": "r4",
+      "files": {
+        "body.md": {
+          "sha256": "f3e11c4680b649caada793fd7cd81ae6e9c19659df93de87ab670782be24551e",
+          "codepoints_trimmed": 497
+        },
+        "body-perspective.md": {
+          "sha256": "e56601973d84c78b9b8e9b71612288be63b0a060652def578efeeb2d7a0c38e7",
+          "codepoints_trimmed": 499
+        },
+        "first-comment.md": {
+          "sha256": "51a0a6c383606fb7da140c56bf09ad9e3d73579cf1c5b073b65db9d59565cf6c",
+          "codepoints_trimmed": 145
+        },
+        "attachment-v2.md": {
+          "sha256": "cdde4faa3e856e43484c30049fb373b3ec33fd3e01571dca661867a3346c4b7f",
+          "codepoints_trimmed": 2197
+        },
+        "threads-ready-ko.md": {
+          "sha256": "d78a95ffc402bbe1848590dd33116da77c6aa07ae4b9bea5f74411f7cef5b6a0",
+          "codepoints_trimmed": 4324
+        },
+        "cards.md": {
+          "sha256": "2e4b70a691b8d902322c3bd403553425a4433f0a49a1f8e3e2a51368b4db30e8",
+          "codepoints_trimmed": 1285
+        }
+      },
+      "bundle_matches_sources": {
+        "body-perspective.md": true,
+        "first-comment.md": true,
+        "attachment-v2.md": true
+      },
+      "short_copy_unchanged": {
+        "body.md": true,
+        "body-perspective.md": true,
+        "first-comment.md": true,
+        "cards.md": true
+      },
+      "prohibited_public_labels": [],
+      "old_attachment_approval_claim_present": false
+    },
+    {
+      "topic": "P3",
+      "version": "r4",
+      "files": {
+        "body.md": {
+          "sha256": "eec4bb2be3c84ec8264c0a2ba1d653056ebf3e54b70c3dafb7e24cdd03e0c439",
+          "codepoints_trimmed": 495
+        },
+        "body-perspective.md": {
+          "sha256": "1905a2d22d633965156b6ca6f96f4df53370a1ca87506dbcff32f88c8f275bd5",
+          "codepoints_trimmed": 497
+        },
+        "first-comment.md": {
+          "sha256": "cb1f52064f38bac842c82db15507def47741161719adc0b9b6b03ab8e3795990",
+          "codepoints_trimmed": 156
+        },
+        "attachment-v2.md": {
+          "sha256": "877ad048aa2bd8f577f5959c6a9011f09ef2a2b640b1f0ed986f64b5d3d93bea",
+          "codepoints_trimmed": 3367
+        },
+        "threads-ready-ko.md": {
+          "sha256": "71383496750ae837ef283f7731cb02c588e1f56f15abef50488b69107c9e582d",
+          "codepoints_trimmed": 5597
+        },
+        "cards.md": {
+          "sha256": "999a18ad5c990d89b3b0d5afddd63b705ee0282e082e46c2cb272770ce52270d",
+          "codepoints_trimmed": 1509
+        }
+      },
+      "bundle_matches_sources": {
+        "body-perspective.md": true,
+        "first-comment.md": true,
+        "attachment-v2.md": true
+      },
+      "short_copy_unchanged": {
+        "body.md": true,
+        "body-perspective.md": true,
+        "first-comment.md": true,
+        "cards.md": true
+      },
+      "prohibited_public_labels": [],
+      "old_attachment_approval_claim_present": false
+    }
+  ]
+}

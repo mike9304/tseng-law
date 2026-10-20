@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-20T20:01:13.427794+09:00",
+  "files": [
+    {
+      "file": "opus/P2/r2/body.md",
+      "sha256": "324cc938545d96877a95652b745fbab92f352312daefbe53e1643e9fa53d0c26",
+      "codepoints_stripped": 498
+    },
+    {
+      "file": "opus/P2/r2/first-comment.md",
+      "sha256": "51a0a6c383606fb7da140c56bf09ad9e3d73579cf1c5b073b65db9d59565cf6c",
+      "codepoints_stripped": 145
+    },
+    {
+      "file": "opus/P2/r2/cards.md",
+      "sha256": "809fcf836362581f7570621026f52c5877cc6eb3f156bf3e7e3c55cb80aa50c0",
+      "codepoints_stripped": 1263
+    }
+  ]
+}

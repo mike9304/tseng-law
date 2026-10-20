@@ -1,0 +1,1296 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾の一審判決・部屋の手付金",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     64,
+     163,
+     596,
+     200
+    ],
+    "rotate": null
+   },
+   {
+    "text": "契約書にサインする前でも",
+    "role": "headline",
+    "size": 60,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     244,
+     780,
+     302
+    ],
+    "rotate": null
+   },
+   {
+    "text": "手付金を返してもらう裁判で負けた",
+    "role": "headline",
+    "size": 60,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     316,
+     1015,
+     375
+    ],
+    "rotate": null
+   },
+   {
+    "text": "賃貸借契約書",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     128,
+     508.0,
+     368,
+     548.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "署名前",
+    "role": "object",
+    "size": 34,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     128,
+     791.0,
+     230,
+     824.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "振り込んだ手付金",
+    "role": "object",
+    "size": 34,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     596,
+     583.0,
+     868,
+     616.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "21,800元",
+    "role": "amount",
+    "size": 83,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     596,
+     676.0,
+     961,
+     761.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "裁判所は、内見のときに",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     947,
+     566,
+     991
+    ],
+    "rotate": null
+   },
+   {
+    "text": "契約はもう成立していたと見ました。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1005,
+     839,
+     1050
+    ],
+    "rotate": null
+   },
+   {
+    "text": "振り込んだその日に、",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1078,
+     559,
+     1126
+    ],
+    "rotate": null
+   },
+   {
+    "text": "気が変わったそうです。",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1141,
+     605,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "115年度士小字第864號・2026.06.30・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "space",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "借り手の言い分・架空の場面",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     604.0,
+     56,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "内見した借り手（名前は伏せています）",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     94,
+     176,
+     670,
+     208
+    ],
+    "rotate": null
+   },
+   {
+    "text": "荷物が入らない。やめます。",
+    "role": "headline",
+    "size": 67,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     94,
+     232,
+     958,
+     298
+    ],
+    "rotate": null
+   },
+   {
+    "text": "契約書もまだだから、お金は返してほしい。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1069,
+     979,
+     1114
+    ],
+    "rotate": null
+   },
+   {
+    "text": "管理会社は断りました。",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1142,
+     610,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "115年度士小字第864號・2026.06.30・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "agreement",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "管理会社の言い分・架空の場面",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     572.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "管理会社",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     192,
+     180,
+     320,
+     211
+    ],
+    "rotate": null
+   },
+   {
+    "text": "家賃は決めたし、期間も広告に。",
+    "role": "headline",
+    "size": 52,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     192,
+     249,
+     972,
+     300
+    ],
+    "rotate": null
+   },
+   {
+    "text": "部屋・家賃・最短期間",
+    "role": "object",
+    "size": 34,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     137,
+     472,
+     477,
+     505
+    ],
+    "rotate": null
+   },
+   {
+    "text": "家賃",
+    "role": "object",
+    "size": 34,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     137,
+     574,
+     205,
+     607
+    ],
+    "rotate": null
+   },
+   {
+    "text": "21,800",
+    "role": "amount",
+    "size": 135,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     137,
+     649,
+     544.0,
+     783
+    ],
+    "rotate": null
+   },
+   {
+    "text": "元",
+    "role": "unit",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     554.0,
+     713,
+     604.0,
+     757
+    ],
+    "rotate": null
+   },
+   {
+    "text": "最短",
+    "role": "object",
+    "size": 34,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     768,
+     574,
+     836,
+     607
+    ],
+    "rotate": null
+   },
+   {
+    "text": "1",
+    "role": "amount",
+    "size": 135,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     768,
+     651,
+     818.0,
+     752
+    ],
+    "rotate": null
+   },
+   {
+    "text": "年",
+    "role": "unit",
+    "size": 47,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     857,
+     711,
+     904,
+     756
+    ],
+    "rotate": null
+   },
+   {
+    "text": "あと3組の内見も断りました",
+    "role": "object",
+    "size": 38,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     449,
+     968,
+     927,
+     1005
+    ],
+    "rotate": null
+   },
+   {
+    "text": "借り手が送ったLINEも、判決に出てきます。",
+    "role": "open-loop",
+    "size": 42,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1133,
+     905,
+     1175
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "115年度士小字第864號・2026.06.30・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "message",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "判決に引用されたメッセージ",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     604.6,
+     55,
+     1019.6,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "振込のあとに借り手が送ったLINE",
+    "role": "object",
+    "size": 38,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     181,
+     638,
+     218
+    ],
+    "rotate": null
+   },
+   {
+    "text": "21,800元",
+    "role": "amount",
+    "size": 118,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     126,
+     371,
+     645,
+     491
+    ],
+    "rotate": null
+   },
+   {
+    "text": "「承租訂金」として",
+    "role": "headline",
+    "size": 84,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     126,
+     596,
+     879,
+     676
+    ],
+    "rotate": null
+   },
+   {
+    "text": "振り込みました。",
+    "role": "headline",
+    "size": 84,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     126,
+     722,
+     798,
+     802
+    ],
+    "rotate": null
+   },
+   {
+    "text": "中国語の原文を訳したもの",
+    "role": "object",
+    "size": 36,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     126,
+     867,
+     558,
+     902
+    ],
+    "rotate": null
+   },
+   {
+    "text": "このLINE、証拠として",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1078,
+     572,
+     1126
+    ],
+    "rotate": null
+   },
+   {
+    "text": "出したのは借り手本人です。",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1142,
+     705,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "115年度士小字第864號・2026.06.30・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "judgment",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "この事件の一審判断",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     732.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "一審：返さなくていい",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     91,
+     220,
+     849,
+     292
+    ],
+    "rotate": null
+   },
+   {
+    "text": "契約書（未署名）",
+    "role": "object",
+    "size": 33,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     113,
+     511,
+     377,
+     544
+    ],
+    "rotate": null
+   },
+   {
+    "text": "内見のとき口頭で",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     513,
+     445,
+     833,
+     485
+    ],
+    "rotate": null
+   },
+   {
+    "text": "まとまった条件",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     513,
+     497,
+     791,
+     536
+    ],
+    "rotate": null
+   },
+   {
+    "text": "家賃21,800元",
+    "role": "object",
+    "size": 40,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     513,
+     603,
+     764,
+     647
+    ],
+    "rotate": null
+   },
+   {
+    "text": "最短1年",
+    "role": "object",
+    "size": 40,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     513,
+     670,
+     657,
+     709
+    ],
+    "rotate": null
+   },
+   {
+    "text": "LINE：「承租訂金」",
+    "role": "object",
+    "size": 44,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     451,
+     834,
+     862,
+     876
+    ],
+    "rotate": null
+   },
+   {
+    "text": "契約は内見の日に成立していた。",
+    "role": "body",
+    "size": 44,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1018,
+     719,
+     1061
+    ],
+    "rotate": null
+   },
+   {
+    "text": "狭いと思ってやめたのは",
+    "role": "open-loop",
+    "size": 48,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1083,
+     586,
+     1129
+    ],
+    "rotate": null
+   },
+   {
+    "text": "借り手側の事情だと見ました。",
+    "role": "open-loop",
+    "size": 48,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1143,
+     732,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "115年度士小字第864號・2026.06.30・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 6,
+  "layout": "proof",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "この事件の一審判断",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     732.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "会社の責任は、",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     158,
+     508,
+     221
+    ],
+    "rotate": null
+   },
+   {
+    "text": "借り手が証明する必要があった。",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     253,
+     1020,
+     317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "借り手の理由",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     96,
+     429,
+     336,
+     469
+    ],
+    "rotate": null
+   },
+   {
+    "text": "振り込んだあと",
+    "role": "object",
+    "size": 42,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     96,
+     532,
+     390,
+     572
+    ],
+    "rotate": null
+   },
+   {
+    "text": "荷物が入りきらない",
+    "role": "object",
+    "size": 42,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     96,
+     583,
+     474,
+     624
+    ],
+    "rotate": null
+   },
+   {
+    "text": "裁判官の判断",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     96,
+     722,
+     288,
+     754
+    ],
+    "rotate": null
+   },
+   {
+    "text": "借り手側の事情",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     95,
+     767,
+     390,
+     809
+    ],
+    "rotate": null
+   },
+   {
+    "text": "記録にある",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     174,
+     865,
+     364,
+     902
+    ],
+    "rotate": null
+   },
+   {
+    "text": "会社の責任を",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     606,
+     429,
+     846,
+     469
+    ],
+    "rotate": null
+   },
+   {
+    "text": "示す証拠",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     606,
+     477,
+     766,
+     517
+    ],
+    "rotate": null
+   },
+   {
+    "text": "会社のせいで契約を",
+    "role": "object",
+    "size": 37,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     606,
+     584,
+     938,
+     620
+    ],
+    "rotate": null
+   },
+   {
+    "text": "果たせなくなった資料",
+    "role": "object",
+    "size": 37,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     606,
+     630,
+     976,
+     666
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証明する人",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     606,
+     723,
+     766,
+     754
+    ],
+    "rotate": null
+   },
+   {
+    "text": "借り手",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     605,
+     767,
+     732,
+     809
+    ],
+    "rotate": null
+   },
+   {
+    "text": "出していない",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     684,
+     865,
+     911,
+     902
+    ],
+    "rotate": null
+   },
+   {
+    "text": "そのため、21,800元と利息の請求は",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1086,
+     803,
+     1136
+    ],
+    "rotate": null
+   },
+   {
+    "text": "どちらも認められませんでした。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1146,
+     746,
+     1188
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "115年度士小字第864號・2026.06.30・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "06",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

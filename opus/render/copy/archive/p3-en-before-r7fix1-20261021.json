@@ -1,0 +1,129 @@
+{
+ "case": "p3",
+ "lang": "en",
+ "cards": [
+  {
+   "number": 1,
+   "layout": "core",
+   "tag": "",
+   "headline": "Kid's dental claim: all awarded.\nScooter rider's lost income:\nunder a tenth.",
+   "labels": {
+    "kicker": "Taiwan court · bus ran a red light",
+    "size": 84,
+    "bars": [
+     {
+      "what": "Kid's future dental costs",
+      "result": "All awarded",
+      "ratio": 1.0
+     },
+     {
+      "what": "Scooter rider's lost income",
+      "result": "Under a tenth",
+      "ratio": 0.07222444431746758
+     }
+    ],
+    "legend": "Outline = amount claimed · red = amount allowed"
+   },
+   "foot": [
+    "The rider filed no income records.",
+    ""
+   ]
+  },
+  {
+   "number": 2,
+   "layout": "crash",
+   "tag": "Made-up scene",
+   "speaker": "The scooter rider",
+   "headline": "The bus just ran\nthe red light.",
+   "labels": {
+    "scene": true
+   },
+   "foot": [
+    "It was Taipei, 2020, with the kid on the back.",
+    "The scooter hit the side of the bus."
+   ]
+  },
+  {
+   "number": 3,
+   "layout": "injuries",
+   "tag": "Injuries in the ruling",
+   "headline": "Four upper front teeth,\nknocked out or broken.",
+   "labels": {
+    "who_a": "The kid",
+    "teeth_note": "1 knocked out · 3 broken",
+    "who_b": "The rider",
+    "b_note": "Broken left collarbone"
+   },
+   "foot": [
+    "",
+    ""
+   ]
+  },
+  {
+   "number": 4,
+   "layout": "ruling",
+   "tag": "The ruling",
+   "headline": "Future dental costs: full claim",
+   "labels": {
+    "amount": "NT$343,000",
+    "amount_note": "Implant plan; it leaves the method open till adulthood",
+    "reason_label": "The court's reason",
+    "reason": "The kid was still a minor,\nand teeth affect how a face looks."
+   },
+   "foot": [
+    "The driver and bus company pushed a cheaper NT$120k–150k option.",
+    ""
+   ]
+  },
+  {
+   "number": 5,
+   "layout": "cuts",
+   "tag": "Rider's claim · the ruling",
+   "headline": "No income records filed,\nso the defense's figure stood.",
+   "labels": {
+    "items": [
+     {
+      "what": "Income lost while recovering",
+      "from": "NT$385,022",
+      "to": "NT$27,808",
+      "why": "The amount the defense itself put forward"
+     }
+    ]
+   },
+   "foot": [
+    "The defense said a part-timer covered the breakfast shop.",
+    "NT$158/hr × 8 hrs × 22 days."
+   ]
+  },
+  {
+   "number": 6,
+   "layout": "docs",
+   "tag": "Worth knowing",
+   "headline": "Injury: the doctor's note.\nLost income: pay records.",
+   "labels": {
+    "docs": [
+     {
+      "title": "Doctor's note",
+      "body": "Rest 4 weeks\nafter surgery",
+      "proves_label": "Shows",
+      "proves": "Time you had to rest",
+      "status": "Here: filed",
+      "kind": "ok"
+     },
+     {
+      "title": "Pay records",
+      "body": "Pay slips, tax\nreturns, etc.",
+      "proves_label": "Shows",
+      "proves": "Money you lost",
+      "status": "Here: not filed",
+      "kind": "x"
+     }
+    ]
+   },
+   "foot": [
+    "With no income records filed, the court\nused the 4-week note and the defense's figure.",
+    ""
+   ]
+  }
+ ]
+}

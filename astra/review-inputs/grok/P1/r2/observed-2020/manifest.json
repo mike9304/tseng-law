@@ -1,0 +1,27 @@
+{
+  "source": "grok/P1/r2",
+  "observed_at": "2026-10-20T20:20:55.590095",
+  "scope": "observed r2 full set, completion note not required for byte-specific review",
+  "files": [
+    {
+      "path": "grok/P1/r2/body.md",
+      "sha256": "478e78768035ceb01550180ee4faba1572626971f6eb4c7bd5c1319755991952",
+      "codepoints_without_final_newlines": 487
+    },
+    {
+      "path": "grok/P1/r2/body-perspective.md",
+      "sha256": "f09042512e56d4d0f4f1a62ad43a33ee3563ce3117bd69bc713fbccd2f647e3e",
+      "codepoints_without_final_newlines": 498
+    },
+    {
+      "path": "grok/P1/r2/first-comment.md",
+      "sha256": "3b2f24a5c06e1df7b33b78b22e1364b0bdf241fe590cb16de64e5a201e71a786",
+      "codepoints_without_final_newlines": 150
+    },
+    {
+      "path": "grok/P1/r2/cards.md",
+      "sha256": "038c3df683ae446f631827d7bb2b85b539442a2bb7521f1fb5e272df6ed95591",
+      "codepoints_without_final_newlines": 808
+    }
+  ]
+}

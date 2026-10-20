@@ -1,0 +1,1092 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Taiwan court · divorce by agreement",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     64,
+     164,
+     751,
+     205
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Divorce registered.",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     249,
+     785,
+     330
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Court says: still married.",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     340,
+     1009,
+     420
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Divorce agreement",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     194,
+     554.0,
+     597,
+     600.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Registered",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     266.1,
+     800.0,
+     482.1,
+     842.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "VOID",
+    "role": "object",
+    "size": 100,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     674.5,
+     686.0,
+     924.5,
+     763.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "One witness never asked the",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1019,
+     685,
+     1057
+    ],
+    "rotate": null
+   },
+   {
+    "text": "husband if he really wanted out.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1077,
+     762,
+     1126
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Talking only to the wife wasn't enough.",
+    "role": "open-loop",
+    "size": 44,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1149,
+     907,
+     1195
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Hsinchu District Court · 113 Hun-Zi 59",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     622,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 11, 2024 · district court ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     580,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "restaurant",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Made-up scene, based on testimony",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     486.7,
+     58,
+     1020.7,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Wife → a friend",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     94,
+     178,
+     324,
+     204
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Can you sign as a witness here?",
+    "role": "headline",
+    "size": 55,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     94,
+     245,
+     960,
+     304
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Agreement",
+    "role": "object",
+    "size": 32,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     449,
+     596,
+     629,
+     627
+    ],
+    "rotate": null
+   },
+   {
+    "text": "It was just the wife and the",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1012,
+     644,
+     1061
+    ],
+    "rotate": null
+   },
+   {
+    "text": "friend. The husband wasn't there.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1071,
+     798,
+     1110
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Neither spouse had signed yet.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1144,
+     815,
+     1197
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Hsinchu District Court · 113 Hun-Zi 59",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     622,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 11, 2024 · district court ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     580,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "testimony",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Paraphrased testimony",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     675.9,
+     58,
+     1019.9,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The friend, in court",
+    "role": "object",
+    "size": 38,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     182,
+     405,
+     222
+    ],
+    "rotate": null
+   },
+   {
+    "text": "I don't have",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     120,
+     392,
+     552,
+     451
+    ],
+    "rotate": null
+   },
+   {
+    "text": "her husband's number.",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     120,
+     520,
+     958,
+     579
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     767,
+     97,
+     780
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Never met the husband before or after signing",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     120,
+     747,
+     995,
+     790
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     843,
+     97,
+     856
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Never asked him if he wanted a divorce",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     120,
+     823,
+     861,
+     857
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     919,
+     97,
+     932
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Didn't go on registration day",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     120,
+     900,
+     661,
+     942
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Neither spouse disputed this testimony.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1008,
+     931,
+     1056
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The court didn't count",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1080,
+     607,
+     1122
+    ],
+    "rotate": null
+   },
+   {
+    "text": "the friend as a witness.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1144,
+     627,
+     1186
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Hsinchu District Court · 113 Hun-Zi 59",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     622,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 11, 2024 · district court ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     580,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "witnesses",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Why the friend didn't count",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     614.4,
+     57,
+     1020.4,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "A witness must see or hear",
+    "role": "headline",
+    "size": 70,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     59,
+     156,
+     999,
+     215
+    ],
+    "rotate": null
+   },
+   {
+    "text": "both spouses want out.",
+    "role": "headline",
+    "size": 70,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     250,
+     884,
+     321
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Husband",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     183.4,
+     483,
+     396.4,
+     523
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Wife",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     737.4,
+     482,
+     842.4,
+     523
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The friend",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     166.8,
+     882,
+     412.8,
+     923
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Other witness",
+    "role": "node",
+    "size": 37,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     660.6,
+     891,
+     919.6,
+     923
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Not ruled on",
+    "role": "node-note",
+    "size": 34,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     689.2,
+     991,
+     891.2,
+     1018
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Never",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     137.4,
+     671.0,
+     237.4,
+     697.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "checked",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     97.6,
+     710.0,
+     235.6,
+     738.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Talked only to wife",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     600,
+     715.0,
+     913,
+     750.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Hearing it secondhand doesn't count,",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1089,
+     881,
+     1138
+    ],
+    "rotate": null
+   },
+   {
+    "text": "even from one of the spouses.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1147,
+     714,
+     1195
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Hsinchu District Court · 113 Hun-Zi 59",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     622,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 11, 2024 · district court ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     580,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "formula",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Taiwan divorce by agreement",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     584.1,
+     58,
+     1020.1,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "A witness line",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     59,
+     151,
+     589,
+     215
+    ],
+    "rotate": null
+   },
+   {
+    "text": "isn't just a name.",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     247,
+     719,
+     327
+    ],
+    "rotate": null
+   },
+   {
+    "text": "In",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     183.6,
+     682,
+     226.6,
+     714
+    ],
+    "rotate": null
+   },
+   {
+    "text": "writing",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     126.5,
+     731,
+     283.5,
+     777
+    ],
+    "rotate": null
+   },
+   {
+    "text": "2+ qualified",
+    "role": "object",
+    "size": 43,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     415.3,
+     678,
+     664.3,
+     723
+    ],
+    "rotate": null
+   },
+   {
+    "text": "witnesses",
+    "role": "object",
+    "size": 43,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     435.2,
+     730,
+     645.2,
+     767
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Registered",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     760.2,
+     678,
+     990.2,
+     724
+    ],
+    "rotate": null
+   },
+   {
+    "text": "with office",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     761.1,
+     731,
+     989.1,
+     768
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Even counting the other witness,",
+    "role": "result",
+    "size": 50,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     885,
+     890,
+     938
+    ],
+    "rotate": null
+   },
+   {
+    "text": "fewer than two → void.",
+    "role": "result",
+    "size": 50,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     947,
+     645,
+     989
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Each witness must see or hear",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1089,
+     719,
+     1127
+    ],
+    "rotate": null
+   },
+   {
+    "text": "that both spouses want out (case law).",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1146,
+     902,
+     1195
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Taiwan Civil Code Arts. 1050, 73",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     526,
+     1281
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Form of a divorce by agreement",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1287,
+     530,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

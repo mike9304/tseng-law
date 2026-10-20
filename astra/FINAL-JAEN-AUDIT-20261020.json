@@ -1,0 +1,729 @@
+{
+  "checked_at": "2026-10-20T21:28:59.377932+09:00",
+  "state": "READY-FOR-GROK-BOT",
+  "packages": {
+    "P1-ja-r2": {
+      "source": "opus/P1/ja/r2",
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/P1/ja/r2",
+      "files": {
+        "attachment.md": {
+          "sha256": "63bf7df6a5bc41ab95a6019827cdd0081e748eace7570e2d4ce904231fa85db6",
+          "codepoints": 2059
+        },
+        "body.md": {
+          "sha256": "2961b467a52a0107047901ee54572054edf17c5390b28a096b1ec9bb54692a9b",
+          "codepoints": 481
+        },
+        "cards.md": {
+          "sha256": "e327315f64b70e101fb23ad2d5c61911ee32210494772ec38aa73d7735516ba9",
+          "codepoints": 1287
+        },
+        "first-comment.md": {
+          "sha256": "25851edabf7356c925e4d38097185447be58b7677b0b4f780d5315d2c4e37608",
+          "codepoints": 173
+        },
+        "images/ja/card-01.png": {
+          "sha256": "3110a734e791e0159131a559d43df7ba3160788797a98a9a4c6c80c93ad8896e",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-02.png": {
+          "sha256": "2797c10b4af63a629f37489bc276559120494924278e067aa8262bc26f4ad062",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-03.png": {
+          "sha256": "045cad61131d9a951654bc5f0759632cd7b29e1916db7e4d782dad6951eb2110",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-04.png": {
+          "sha256": "2d78cdf7244bc712e456f0ab7f18ee1084c02d124d00624118f806ea10a1a3fb",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-05.png": {
+          "sha256": "e6afd596f84fc41f11f7f9fb518b7ec25e139c08dae5ec8fa895882f1d65d875",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-06.png": {
+          "sha256": "54f72c25ed3376c813553bbfdaddfb4811a9da024c6bfa3a99d4f856d818c09d",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "ja-overview.png": {
+          "sha256": "4e34edfed25e8c4b65c042f1e682d38efed64409e6da6c0e05d2e1f08f260234"
+        },
+        "ko-meaning.md": {
+          "sha256": "c0e70de45d4e63d0ad41ab257df6c52a2562e8f8f5eb7867ccde2ae0cbdae932",
+          "codepoints": 1408
+        },
+        "threads-ready-ja.md": {
+          "sha256": "d3ea9be5f4d2ba697b97e610e786286af93b6e1d0c1643f943c244f878b5d78f",
+          "codepoints": 3790
+        }
+      },
+      "png_count": 6,
+      "same_png_as_visual_review": true,
+      "bundle_matches": [
+        true,
+        true,
+        true
+      ],
+      "alt_count": 6,
+      "alt_matches": true,
+      "public_label_hits": [],
+      "source_stable": true
+    },
+    "P1-en-r4": {
+      "source": "opus/P1/en/r4",
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/P1/en/r4",
+      "files": {
+        "attachment.md": {
+          "sha256": "69a29c5f54b18cbfb75e5675cf76c83cd1a620156850ecfb2687162076742dfa",
+          "codepoints": 4379
+        },
+        "body.md": {
+          "sha256": "8b3e065a52b6fd5a2bb7dc6322b7b65016ab573ea7d1049fe690c79518fbd869",
+          "codepoints": 493
+        },
+        "cards.md": {
+          "sha256": "d312e948fe9fb73b9f321e7f8c18867aacd1e9cb530a2256e9d7022f070328fa",
+          "codepoints": 2077
+        },
+        "en-overview.png": {
+          "sha256": "f83751241e1e8e66a27a19b1b598bce815b20990ceaaa65a5d5d94bdd17aa217"
+        },
+        "first-comment.md": {
+          "sha256": "25436a934ed7fa53eb956328f914bee5d618c98afb56a72cf74e981a66621c9b",
+          "codepoints": 215
+        },
+        "images/en/card-01.png": {
+          "sha256": "a49891403f1b62695e63c78f2e488f1b86fe62799aa1d43aff603b02179c9760",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-02.png": {
+          "sha256": "8828049a402574c43955588507b090fb39581a88087198022bf848c476af01f7",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-03.png": {
+          "sha256": "ae7266880f3995af6b6005da2f631f8870c330da5a0f0105b324887680fe0bc6",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-04.png": {
+          "sha256": "5b57a36b56d41eb90aee8ced9186ddb251f12235d70786cdb632967eddfa96bb",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-05.png": {
+          "sha256": "1b3abfa42fb9ec29b4d4175ae275b6a42b46b36193ca0e3b4080149e095a8814",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-06.png": {
+          "sha256": "74a48089074edf49228cc4925aab0599831b35d9138ce827de6bb912a37eeb0f",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "ko-meaning.md": {
+          "sha256": "1d53a1eda833a12faabf0d46673a4721ba3a32d20f20fb9dd014a91de647783a",
+          "codepoints": 1204
+        },
+        "threads-ready-en.md": {
+          "sha256": "e1e131771ddd9714187536dc8edf937aa616f5ab58ceabb41200f8092fe363b0",
+          "codepoints": 6913
+        }
+      },
+      "png_count": 6,
+      "same_png_as_visual_review": true,
+      "bundle_matches": [
+        true,
+        true,
+        true
+      ],
+      "alt_count": 6,
+      "alt_matches": true,
+      "public_label_hits": [],
+      "source_stable": true
+    },
+    "P2-ja-r2": {
+      "source": "opus/P2/ja/r2",
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/P2/ja/r2",
+      "files": {
+        "attachment.md": {
+          "sha256": "2e888c1a5c7774b5c8b6f00c76cedf841c6720f617213c1ad72431cab5e98efe",
+          "codepoints": 1995
+        },
+        "body.md": {
+          "sha256": "be59d27632a8a6f2bef905ffe351a702859c1c765d144f3bf8353b9687dd11ac",
+          "codepoints": 482
+        },
+        "cards.md": {
+          "sha256": "3c16f71b029acb383f2e848e0bb29bfc845b7dd5db8332368e4f4131be59fbf5",
+          "codepoints": 1086
+        },
+        "first-comment.md": {
+          "sha256": "9098c00ec6f57d21506cc3630c74353752de1d3fad8eb7a87474e2a537097d80",
+          "codepoints": 140
+        },
+        "images/ja/card-01.png": {
+          "sha256": "1d5f239c471350740dcc41883ce94ae2e13a0314f27051ff9ad11d24105faee0",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-02.png": {
+          "sha256": "bd82ca258745e09f2d5c99890fd8ae902df96bdf3fa54e0112e41d7092656260",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-03.png": {
+          "sha256": "5db5efa366439f0b261aaede5a16eea5f9d379d95fd0e28f19d0326e2e662f1b",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-04.png": {
+          "sha256": "e41c493e1b91e5c57c81f3a5694e12ac8d39f68984520fed727efb1cec4286bf",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-05.png": {
+          "sha256": "57e0b473cc968b471c026e5f61bd9829b95a1e65c9b5acd94bbcdad204455502",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "ja-overview.png": {
+          "sha256": "b85b99fa7f017f034821e7924fad13beae45d105216d3885a24d1eff394d176d"
+        },
+        "ko-meaning.md": {
+          "sha256": "4f16bf3346725d734230cf8c62a86eeac51538868ce629d05bf820d287b6d7bf",
+          "codepoints": 1539
+        },
+        "threads-ready-ja.md": {
+          "sha256": "64313f05039718465ae7ae49c4b9b85c4a994cb0f6dafb85b89086755dbce99e",
+          "codepoints": 3623
+        }
+      },
+      "png_count": 5,
+      "same_png_as_visual_review": true,
+      "bundle_matches": [
+        true,
+        true,
+        true
+      ],
+      "alt_count": 5,
+      "alt_matches": true,
+      "public_label_hits": [],
+      "source_stable": true
+    },
+    "P2-en-r4": {
+      "source": "opus/P2/en/r4",
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/P2/en/r4",
+      "files": {
+        "_review/render-audit-en.json": {
+          "sha256": "0a90ca9d7f59a217ec3bb047fbb53d2fe050dc14e757a3c81d236035148f59a0"
+        },
+        "attachment.md": {
+          "sha256": "575b019eb0f1f3cbc63096f34c86d5e96f84906997dd4e795834ef6621b5bfe9",
+          "codepoints": 4060
+        },
+        "body.md": {
+          "sha256": "db8cbdad2d08a07f6b844c36bf446445c8b1132e546a7b16aa06676950f404af",
+          "codepoints": 498
+        },
+        "cards.md": {
+          "sha256": "b9e212526379d053961194ee6e242eb9eb71b9bb1fa55fa851fb39b783e21d94",
+          "codepoints": 1752
+        },
+        "en-overview.png": {
+          "sha256": "33fceb7276da234cb3cdc3c811da18d501fbe2978a838b748886938f699b7339"
+        },
+        "first-comment.md": {
+          "sha256": "ad541cba9760ca89ee852032d17fde1390ac003f1cc5445caec92181ddcea879",
+          "codepoints": 213
+        },
+        "images/en/card-01.png": {
+          "sha256": "1cb5e0a0a0b47c9f3eb9b2dfe798a9ac5d546de9095bd905974cc28dd80e754c",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-02.png": {
+          "sha256": "813699ab0e966c703d22250a8e36973c0b0dee4de19c03d5718d9e4169c278da",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-03.png": {
+          "sha256": "53e8b378287d9f2331576ed0617971c05c2729680c166524883f591d86b16735",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-04.png": {
+          "sha256": "2dff660d25213b8e6b322269d23cf0cd310194c29c7077c7533de0d25596a1ea",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-05.png": {
+          "sha256": "c3a682fc33efa7f2e2aac88536849d295ea56f66f84aa24997e0d0b8a660b589",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "ko-meaning.md": {
+          "sha256": "49c2b06de28e1bb3944572399d358843598e6a4a930a9b735b8de0581172f5e0",
+          "codepoints": 1119
+        },
+        "threads-ready-en.md": {
+          "sha256": "285021cc7cf2ab6234d1dea6c09b836d64c6d5af86d396d284d1d323363cc7a5",
+          "codepoints": 6488
+        }
+      },
+      "png_count": 5,
+      "same_png_as_visual_review": true,
+      "bundle_matches": [
+        true,
+        true,
+        true
+      ],
+      "alt_count": 5,
+      "alt_matches": true,
+      "public_label_hits": [],
+      "source_stable": true
+    },
+    "P3-ja-r3": {
+      "source": "opus/P3/ja/r3",
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/P3/ja/r3",
+      "files": {
+        "attachment.md": {
+          "sha256": "ff05eed23c3bf18ba5d7825f2621319fc64de0cfeab5f03fb9e7b0eb49760201",
+          "codepoints": 2728
+        },
+        "body.md": {
+          "sha256": "fcce80b324550a77d879b52c3ebb142e7a14a731a1aa1a793cfcbc82a0dbfec0",
+          "codepoints": 405
+        },
+        "cards.md": {
+          "sha256": "bb8463add61382943057ee1989ca8a114a59468d576a1af10b7be625cf32ec39",
+          "codepoints": 1498
+        },
+        "first-comment.md": {
+          "sha256": "2c2f8c7dac7ca5c9bf2c18f66600f3508369456926ef85d46257714f86a081a3",
+          "codepoints": 159
+        },
+        "images/ja/card-01.png": {
+          "sha256": "957509d965343b5823938474b5f1391ac123614000a88117887e702d4e361521",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-02.png": {
+          "sha256": "fad5cb6de3eae6d44de2ae5438741cae6bb926aa50b24c519ddb5128e2aca82e",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-03.png": {
+          "sha256": "3d597ec5ca6bc7817b4cbc29177ad7e67df70bd8af9929c7ae0e4a92791b6b55",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-04.png": {
+          "sha256": "2da0eb6f05e316fd574fa0320cfa7ef56c0f27e1a5dadff61f63059466a89305",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-05.png": {
+          "sha256": "f89a9157fcc97651c71f8c5882643b977515db23766364fb329d89556d93a489",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/ja/card-06.png": {
+          "sha256": "ab3e0dcc5177b7576b5e8589762f2085e7f23bd1fa9aa92cb4db7fbc706bb55f",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "ja-overview.png": {
+          "sha256": "8f86c1d4e1273d90d905794dc0ce94ac0eaacf71e50d30217665d6f34cb22350"
+        },
+        "ko-meaning.md": {
+          "sha256": "fe8008ffee113b21ecbd5ededb9290f054471ce616fde9d34c2932ee67362f6f",
+          "codepoints": 1538
+        },
+        "threads-ready-ja.md": {
+          "sha256": "3f59a39fd24d812337256cb993f19184f779acd7d3a2d4c221c7621eb6a8ab0e",
+          "codepoints": 4429
+        }
+      },
+      "png_count": 6,
+      "same_png_as_visual_review": true,
+      "bundle_matches": [
+        true,
+        true,
+        true
+      ],
+      "alt_count": 6,
+      "alt_matches": true,
+      "public_label_hits": [],
+      "source_stable": true
+    },
+    "P3-en-r4": {
+      "source": "opus/P3/en/r4",
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/P3/en/r4",
+      "files": {
+        "attachment.md": {
+          "sha256": "a33ca08f3700bd2741d5eac2e8aea392b1d11e2ad1f35b18684da6175d1cf9d8",
+          "codepoints": 6074
+        },
+        "body.md": {
+          "sha256": "dd7adbeec80d76c7ad1cd7b05e5423666d90c8958e6aa5dd7d3983da3c148b22",
+          "codepoints": 500
+        },
+        "cards.md": {
+          "sha256": "a46b3fdb71872544babb99442e0ec7745b7dc1900a4241313332a5df84ea7e2d",
+          "codepoints": 2240
+        },
+        "en-overview.png": {
+          "sha256": "d88879261ffeabca164963363c95c492d1b09fee91ae3471747be5da4c7c1b23"
+        },
+        "first-comment.md": {
+          "sha256": "3b567d449dd72fc2e99217c574968d5816524922a101ed4abe597aa1d2fdd1dd",
+          "codepoints": 229
+        },
+        "images/en/card-01.png": {
+          "sha256": "cf4eb92267534161bb12f213c337580607d88314f13e7f7f93d9d9fa3ef55f5a",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-02.png": {
+          "sha256": "46ffc1f8587fb75ea8897c1ac71d90f01cc221c8c08e7211b36c80b345b6ab13",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-03.png": {
+          "sha256": "95ccc227bca1b818ea2bb522c71542c9d6083ad57ad464547e26ba5f1134c52c",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-04.png": {
+          "sha256": "990f72d5570b2dd446116529a5c9963bb913376e8cff08a8d00ecfff09fbd15c",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-05.png": {
+          "sha256": "52d7e3c1638136df838c1592abbf84f06f6add068938fdde8e0c0d67da139118",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "images/en/card-06.png": {
+          "sha256": "f434bd9f03c69ed3349e7536cdff18af3c301cb5e17492bf47506cf480d01515",
+          "size": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IHDR",
+            "bKGD",
+            "IDAT",
+            "IEND"
+          ]
+        },
+        "ko-meaning.md": {
+          "sha256": "b2b5cd232a98a2f7962366d97f6c97e75aab4eafd7502d54b2cab04357f1873d",
+          "codepoints": 1334
+        },
+        "threads-ready-en.md": {
+          "sha256": "4afbed7d5ca09c909c7da21d156c020815f8a79ff7806bf964e0f3e531c63632",
+          "codepoints": 8709
+        }
+      },
+      "png_count": 6,
+      "same_png_as_visual_review": true,
+      "bundle_matches": [
+        true,
+        true,
+        true
+      ],
+      "alt_count": 6,
+      "alt_matches": true,
+      "public_label_hits": [],
+      "source_stable": true
+    }
+  },
+  "alt": {
+    "ja": {
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/alt-ja.json",
+      "sha256": "712b96fd4884aca4b8b05ce077b9d72d0627df058c35551bc883416da840f52b"
+    },
+    "en": {
+      "snapshot": "astra/review-inputs/opus/final-jaen-2128/alt-en.json",
+      "sha256": "8cbf8a5a797481b4ef4c7e6cbd1a75f0e26583b861e19d6ccecfe04264bb64d1"
+    }
+  },
+  "P3_EN_requested_restoration": true,
+  "P3_JA_ko_meaning_teeth_explicit": true,
+  "final_recheck_at": "2026-10-20T21:31:44.050624+09:00",
+  "remaining_mandatory_edits": []
+}

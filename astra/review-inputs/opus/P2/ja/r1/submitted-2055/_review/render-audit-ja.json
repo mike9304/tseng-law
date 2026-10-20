@@ -1,0 +1,1078 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾の一審判決・協議離婚",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     64,
+     163,
+     520,
+     200
+    ],
+    "rotate": null
+   },
+   {
+    "text": "役所で離婚の手続きまで済ませたのに",
+    "role": "headline",
+    "size": 56,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     243,
+     1010,
+     298
+    ],
+    "rotate": null
+   },
+   {
+    "text": "裁判所は「まだ夫婦」",
+    "role": "headline",
+    "size": 56,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     310,
+     620,
+     365
+    ],
+    "rotate": null
+   },
+   {
+    "text": "離婚協議書",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     194,
+     554.5,
+     404,
+     596.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "離婚登記済み",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     254.0,
+     799.5,
+     494.0,
+     839.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "無効",
+    "role": "object",
+    "size": 120,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     680.0,
+     667.7,
+     920.0,
+     783.7
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証人の1人が、夫の意思を確かめていなかった。",
+    "role": "body",
+    "size": 44,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1071,
+     1008,
+     1113
+    ],
+    "rotate": null
+   },
+   {
+    "text": "妻と話しただけでは足りなかった。",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1142,
+     860,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・新竹地方法院",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     348,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號・2024.06.11・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     629,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "restaurant",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証言をもとにした架空の場面",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     604.6,
+     56,
+     1019.6,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "妻 → 古い知人",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     94,
+     176,
+     300,
+     208
+    ],
+    "rotate": null
+   },
+   {
+    "text": "ここの証人欄にサインして。",
+    "role": "headline",
+    "size": 67,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     94,
+     233,
+     961,
+     298
+    ],
+    "rotate": null
+   },
+   {
+    "text": "離婚協議書",
+    "role": "object",
+    "size": 32,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     450,
+     592,
+     610,
+     624
+    ],
+    "rotate": null
+   },
+   {
+    "text": "妻と知人の2人だけで、夫は",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1012,
+     636,
+     1057
+    ],
+    "rotate": null
+   },
+   {
+    "text": "その場にいませんでした。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1072,
+     608,
+     1116
+    ],
+    "rotate": null
+   },
+   {
+    "text": "夫婦の欄は、まだ空欄だったそうです。",
+    "role": "open-loop",
+    "size": 48,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1144,
+     919,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・新竹地方法院",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     348,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號・2024.06.11・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     629,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "testimony",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "判決にある証言・要約",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     700.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "その知人、法廷で",
+    "role": "object",
+    "size": 38,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     181,
+     364,
+     218
+    ],
+    "rotate": null
+   },
+   {
+    "text": "旦那さんの連絡先は",
+    "role": "headline",
+    "size": 93,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     120,
+     370,
+     957,
+     460
+    ],
+    "rotate": null
+   },
+   {
+    "text": "知りません。",
+    "role": "headline",
+    "size": 93,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     120,
+     498,
+     675,
+     587
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     767,
+     97,
+     780
+    ],
+    "rotate": null
+   },
+   {
+    "text": "サインの前にも後にも夫には会っていない",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     120,
+     746,
+     878,
+     784
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     843,
+     97,
+     856
+    ],
+    "rotate": null
+   },
+   {
+    "text": "夫に離婚するのか聞いたことはない",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     120,
+     822,
+     760,
+     860
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     919,
+     97,
+     932
+    ],
+    "rotate": null
+   },
+   {
+    "text": "登記の日も行っていない",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     120,
+     898,
+     558,
+     936
+    ],
+    "rotate": null
+   },
+   {
+    "text": "この証言に、夫婦どちらも異議はありませんでした。",
+    "role": "body",
+    "size": 40,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1010,
+     1016,
+     1049
+    ],
+    "rotate": null
+   },
+   {
+    "text": "裁判所は、その知人を",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1078,
+     560,
+     1126
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証人と認めませんでした。",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1143,
+     656,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・新竹地方法院",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     348,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號・2024.06.11・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     629,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "witnesses",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証人の資格・判決の理由",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     668.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証人になれるのは、",
+    "role": "headline",
+    "size": 65,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     159,
+     645,
+     220
+    ],
+    "rotate": null
+   },
+   {
+    "text": "夫婦2人の意思を見聞きした人。",
+    "role": "headline",
+    "size": 65,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     250,
+     1010,
+     313
+    ],
+    "rotate": null
+   },
+   {
+    "text": "夫",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     266.0,
+     480,
+     314.0,
+     527
+    ],
+    "rotate": null
+   },
+   {
+    "text": "妻",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     766.0,
+     481,
+     814.0,
+     527
+    ],
+    "rotate": null
+   },
+   {
+    "text": "その知人",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     194.0,
+     881,
+     386.0,
+     927
+    ],
+    "rotate": null
+   },
+   {
+    "text": "もう1人の証人",
+    "role": "node",
+    "size": 39,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     661.9,
+     889,
+     917.9,
+     926
+    ],
+    "rotate": null
+   },
+   {
+    "text": "判決は判断していない",
+    "role": "node-note",
+    "size": 33,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     625.5,
+     989,
+     954.5,
+     1022
+    ],
+    "rotate": null
+   },
+   {
+    "text": "夫には",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     134.0,
+     668.0,
+     236.0,
+     700.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "確認なし",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     100.0,
+     709.0,
+     236.0,
+     741.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "妻と話しただけ",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     600,
+     713.0,
+     838,
+     747.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "人づてに聞いただけでは足りません。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1087,
+     841,
+     1131
+    ],
+    "rotate": null
+   },
+   {
+    "text": "聞いた相手が夫婦の片方でも同じです。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1145,
+     883,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・新竹地方法院",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     348,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號・2024.06.11・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     629,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "formula",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾の協議離婚の条件",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     700.0,
+     56,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証人欄は、",
+    "role": "headline",
+    "size": 56,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     166,
+     340,
+     220
+    ],
+    "rotate": null
+   },
+   {
+    "text": "名前を書くだけの場所じゃなかった。",
+    "role": "headline",
+    "size": 56,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     261,
+     1012,
+     316
+    ],
+    "rotate": null
+   },
+   {
+    "text": "書面の",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     139.0,
+     676,
+     271.0,
+     719
+    ],
+    "rotate": null
+   },
+   {
+    "text": "協議書",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     139.0,
+     729,
+     271.0,
+     772
+    ],
+    "rotate": null
+   },
+   {
+    "text": "資格のある証人",
+    "role": "object",
+    "size": 36,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     414.0,
+     683,
+     666.0,
+     718
+    ],
+    "rotate": null
+   },
+   {
+    "text": "2人以上の署名",
+    "role": "object",
+    "size": 36,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     421.4,
+     726,
+     658.4,
+     761
+    ],
+    "rotate": null
+   },
+   {
+    "text": "戸籍の役所で",
+    "role": "object",
+    "size": 42,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     749.0,
+     678,
+     1001.0,
+     719
+    ],
+    "rotate": null
+   },
+   {
+    "text": "離婚登記",
+    "role": "object",
+    "size": 42,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     791.0,
+     728,
+     959.0,
+     769
+    ],
+    "rotate": null
+   },
+   {
+    "text": "もう1人を認めても",
+    "role": "result",
+    "size": 50,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     884,
+     486,
+     931
+    ],
+    "rotate": null
+   },
+   {
+    "text": "2人に届かず → 無効。",
+    "role": "result",
+    "size": 50,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     945,
+     563,
+     994
+    ],
+    "rotate": null
+   },
+   {
+    "text": "証人は一人ひとり、夫婦2人の意思を",
+    "role": "body",
+    "size": 45,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1088,
+     803,
+     1131
+    ],
+    "rotate": null
+   },
+   {
+    "text": "直接見聞きしていないといけません（判例）。",
+    "role": "body",
+    "size": 45,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1146,
+     1002,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾民法第1050条・第73条",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1247,
+     455,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "協議離婚の方式",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1286,
+     284,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

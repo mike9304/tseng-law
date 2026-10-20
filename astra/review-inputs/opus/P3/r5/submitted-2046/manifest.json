@@ -1,0 +1,29 @@
+{
+  "observed": "2026-10-20T20:49:34.031752+09:00",
+  "files": {
+    "body.md": {
+      "sha256": "eec4bb2be3c84ec8264c0a2ba1d653056ebf3e54b70c3dafb7e24cdd03e0c439",
+      "codepoints_trimmed": 495
+    },
+    "body-perspective.md": {
+      "sha256": "1905a2d22d633965156b6ca6f96f4df53370a1ca87506dbcff32f88c8f275bd5",
+      "codepoints_trimmed": 497
+    },
+    "first-comment.md": {
+      "sha256": "27ef34a50761eee78c00560ae9bf2b6beda451c25f945fa6941819b8609690f5",
+      "codepoints_trimmed": 161
+    },
+    "attachment-v2.md": {
+      "sha256": "877ad048aa2bd8f577f5959c6a9011f09ef2a2b640b1f0ed986f64b5d3d93bea",
+      "codepoints_trimmed": 3367
+    },
+    "cards.md": {
+      "sha256": "cd43d79cd5b1753c6b371aa7ffff1cab4ee580044813774e3f64b7e52653f5ea",
+      "codepoints_trimmed": 1509
+    },
+    "threads-ready-ko.md": {
+      "sha256": "6840d9dbcf32c4d57314e71b69920aba5541932ca5f13d7442abcdc607c530bb",
+      "codepoints_trimmed": 5381
+    }
+  }
+}

@@ -1,0 +1,1240 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Taiwan court · bus ran a red light",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     64,
+     164,
+     681,
+     205
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Kid's dental claim: all awarded.",
+    "role": "headline",
+    "size": 60,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     246,
+     1014,
+     297
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Parent's lost income:",
+    "role": "headline",
+    "size": 60,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     318,
+     697,
+     369
+    ],
+    "rotate": null
+   },
+   {
+    "text": "under a tenth.",
+    "role": "headline",
+    "size": 60,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     392,
+     493,
+     441
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Kid's future dental costs",
+    "role": "label",
+    "size": 40,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     521.0,
+     532,
+     555.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "All awarded",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     779.0,
+     522.0,
+     1020.0,
+     555.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Parent's lost income",
+    "role": "label",
+    "size": 40,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     809.5,
+     458,
+     843.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Under a tenth",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     741.0,
+     810.5,
+     1020.0,
+     843.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Outline = amount claimed · red = amount allowed",
+    "role": "object",
+    "size": 32,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1056,
+     822,
+     1081
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The parent filed no income records.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1147,
+     835,
+     1195
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin Summary Court · 111 Shi-Jian-Zi 875",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     701,
+     1281
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Jan 9, 2024 · trial-level ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     495,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "crash",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Made-up scene",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     795.2,
+     58,
+     1020.2,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The parent on the scooter",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     108,
+     291,
+     499,
+     323
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The bus just ran",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     108,
+     350,
+     683,
+     426
+    ],
+    "rotate": null
+   },
+   {
+    "text": "the red light.",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     108,
+     446,
+     580,
+     523
+    ],
+    "rotate": null
+   },
+   {
+    "text": "It was Taipei, 2020, with the kid on the back.",
+    "role": "body",
+    "size": 45,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1072,
+     1003,
+     1119
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The scooter hit the side of the bus.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1144,
+     901,
+     1186
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin Summary Court · 111 Shi-Jian-Zi 875",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     701,
+     1281
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Jan 9, 2024 · trial-level ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     495,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "injuries",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Injuries in the ruling",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     722.6,
+     58,
+     1019.6,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Four upper front teeth,",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     153,
+     947,
+     231
+    ],
+    "rotate": null
+   },
+   {
+    "text": "knocked out or broken.",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     250,
+     955,
+     311
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The kid",
+    "role": "label",
+    "size": 36,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     407,
+     191,
+     437
+    ],
+    "rotate": null
+   },
+   {
+    "text": "1 knocked out · 3 broken",
+    "role": "object",
+    "size": 40,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     291.3,
+     834,
+     788.3,
+     867
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The parent",
+    "role": "label",
+    "size": 36,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     957,
+     253,
+     994
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Broken left collarbone",
+    "role": "object",
+    "size": 44,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     532.4,
+     949,
+     1020.4,
+     987
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin Summary Court · 111 Shi-Jian-Zi 875",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     701,
+     1281
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Jan 9, 2024 · trial-level ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     495,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "ruling",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The ruling",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     869.2,
+     58,
+     1020.2,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Future dental costs: full claim",
+    "role": "headline",
+    "size": 59,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     91,
+     235,
+     972,
+     286
+    ],
+    "rotate": null
+   },
+   {
+    "text": "NT$343,000",
+    "role": "amount",
+    "size": 149,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     432,
+     957,
+     594
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Implant plan; it leaves the method open till adulthood",
+    "role": "label",
+    "size": 33,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     64,
+     620,
+     940,
+     654
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The court's reason",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     64,
+     674,
+     353,
+     700
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The kid was still a minor,",
+    "role": "quote",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     100,
+     764,
+     704,
+     817
+    ],
+    "rotate": null
+   },
+   {
+    "text": "and teeth affect how a face looks.",
+    "role": "quote",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     100,
+     829,
+     917,
+     871
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The driver and bus company pushed",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1089,
+     854,
+     1137
+    ],
+    "rotate": null
+   },
+   {
+    "text": "a cheaper NT$120k–150k option.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1146,
+     774,
+     1195
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin Summary Court · 111 Shi-Jian-Zi 875",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     701,
+     1281
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Jan 9, 2024 · trial-level ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     495,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "cuts",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Parent's claim · the ruling",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     634.0,
+     58,
+     1020.0,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "No income records filed,",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     161,
+     842,
+     229
+    ],
+    "rotate": null
+   },
+   {
+    "text": "so the defense's figure stood.",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     253,
+     1006,
+     321
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Income lost while recovering",
+    "role": "label",
+    "size": 50,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     589,
+     741,
+     641
+    ],
+    "rotate": null
+   },
+   {
+    "text": "NT$385,022",
+    "role": "amount-old",
+    "size": 63,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     681,
+     427,
+     748
+    ],
+    "rotate": null
+   },
+   {
+    "text": "→",
+    "role": "sign",
+    "size": 58,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     463.6,
+     695,
+     521.6,
+     732
+    ],
+    "rotate": null
+   },
+   {
+    "text": "NT$27,808",
+    "role": "amount",
+    "size": 80,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     572.8,
+     668,
+     1005.8,
+     755
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The amount the defense itself put forward",
+    "role": "reason",
+    "size": 47,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     771,
+     1002,
+     821
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The defense said a part-timer",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1012,
+     700,
+     1060
+    ],
+    "rotate": null
+   },
+   {
+    "text": "covered the breakfast shop.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1071,
+     664,
+     1119
+    ],
+    "rotate": null
+   },
+   {
+    "text": "NT$158/hr × 8 hrs × 22 days.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1142,
+     786,
+     1197
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin Summary Court · 111 Shi-Jian-Zi 875",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     701,
+     1281
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Jan 9, 2024 · trial-level ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     495,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 6,
+  "layout": "docs",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Worth knowing",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     793.1,
+     58,
+     1020.1,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Injury: the doctor's note.",
+    "role": "headline",
+    "size": 74,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     152,
+     990,
+     230
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Lost income: pay records.",
+    "role": "headline",
+    "size": 74,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     248,
+     1010,
+     326
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Doctor's note",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     96,
+     433,
+     365,
+     465
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Rest 4 weeks",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     96,
+     528,
+     415,
+     569
+    ],
+    "rotate": null
+   },
+   {
+    "text": "after surgery",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     96,
+     589,
+     418,
+     642
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shows",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     96,
+     694,
+     199,
+     720
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Time you",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     96,
+     738,
+     291,
+     784
+    ],
+    "rotate": null
+   },
+   {
+    "text": "had to rest",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     96,
+     790,
+     323,
+     825
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Here: filed",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     174,
+     867,
+     375,
+     899
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Pay records",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     606,
+     432,
+     841,
+     473
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Pay slips, tax",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     606,
+     527,
+     930,
+     580
+    ],
+    "rotate": null
+   },
+   {
+    "text": "returns, etc.",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     606,
+     594,
+     911,
+     642
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shows",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     606,
+     694,
+     709,
+     720
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Money you lost",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     606,
+     739,
+     924,
+     784
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Here: not filed",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     684,
+     867,
+     959,
+     899
+    ],
+    "rotate": null
+   },
+   {
+    "text": "With no income records filed, the court",
+    "role": "body",
+    "size": 43,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1094,
+     852,
+     1139
+    ],
+    "rotate": null
+   },
+   {
+    "text": "used the 4-week note and the defense's figure.",
+    "role": "body",
+    "size": 43,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1149,
+     1009,
+     1195
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin Summary Court · 111 Shi-Jian-Zi 875",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     701,
+     1281
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Jan 9, 2024 · trial-level ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     495,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "06",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

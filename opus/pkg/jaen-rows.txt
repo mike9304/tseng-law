@@ -1,0 +1,6 @@
+| P1 JA | opus/P1/ja/r1/threads-ready-ja.md | 498 | 173 | 2059 | 6 |
+| P1 EN | opus/P1/en/r2/threads-ready-en.md | 499 | 215 | 4398 | 6 |
+| P2 JA | opus/P2/ja/r1/threads-ready-ja.md | 496 | 140 | 1995 | 5 |
+| P2 EN | opus/P2/en/r2/threads-ready-en.md | 498 | 213 | 4060 | 5 |
+| P3 JA | opus/P3/ja/r1/threads-ready-ja.md | 445 | 159 | 2707 | 6 |
+| P3 EN | opus/P3/en/r1/threads-ready-en.md | 493 | 229 | 6074 | 6 |

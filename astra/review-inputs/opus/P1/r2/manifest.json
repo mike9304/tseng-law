@@ -1,0 +1,20 @@
+{
+  "source": "opus/P1/r2",
+  "files": [
+    {
+      "path": "opus/P1/r2/body.md",
+      "sha256": "ff825477210d06998281348a55f30298f6532136c93474e80d14719fd2dfa43b",
+      "codepoints_without_final_newlines": 496
+    },
+    {
+      "path": "opus/P1/r2/first-comment.md",
+      "sha256": "2a989f2a7f22db25d9ea65daa7b9f11516877295ac06045a157b44eb070c5b46",
+      "codepoints_without_final_newlines": 148
+    },
+    {
+      "path": "opus/P1/r2/cards.md",
+      "sha256": "e3aa2b532f34d5074597359fca9cfd6c8ef0e9767ee4c4144f24abae338158a0",
+      "codepoints_without_final_newlines": 1371
+    }
+  ]
+}

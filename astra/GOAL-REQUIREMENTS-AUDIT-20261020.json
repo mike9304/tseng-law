@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-20T21:38:58.078690+09:00",
+  "baseline_file_count": 60,
+  "baseline_differences": [],
+  "selected_file_count": 118,
+  "selected_differences_from_current_audit": [],
+  "KO_baseline_authorized_differences": [
+    "opus/P2/r6/body.md",
+    "opus/P2/r6/threads-ready-ko.md"
+  ],
+  "KO_bot_pass": "review-studio/GROKBOT-20261020-2135.md",
+  "JA_EN_bot_pass": null,
+  "goal_complete": false,
+  "remaining": [
+    "KO user final confirmation and three decisions via Grok Bot",
+    "JA/EN final Grok Bot review"
+  ],
+  "rewrite_freeze": "Until user reply per Bot 21:35"
+}

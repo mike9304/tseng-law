@@ -1,0 +1,1268 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾の一審判決・バスの信号無視事故",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     64,
+     163,
+     710,
+     200
+    ],
+    "rotate": null
+   },
+   {
+    "text": "前歯の治療費は全額認められ、",
+    "role": "headline",
+    "size": 68,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     245,
+     1013,
+     311
+    ],
+    "rotate": null
+   },
+   {
+    "text": "親が働けなかった分は",
+    "role": "headline",
+    "size": 68,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     326,
+     740,
+     393
+    ],
+    "rotate": null
+   },
+   {
+    "text": "請求の1割も認められなかった",
+    "role": "headline",
+    "size": 68,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     409,
+     985,
+     474
+    ],
+    "rotate": null
+   },
+   {
+    "text": "子どもの前歯の治療費",
+    "role": "label",
+    "size": 40,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     549.0,
+     460,
+     589.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "請求どおり全額",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     740.0,
+     549.0,
+     1020.0,
+     588.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "親が働けなかった分",
+    "role": "label",
+    "size": 40,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     822.5,
+     420,
+     862.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "1割未満",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     875.6,
+     822.5,
+     1019.6,
+     862.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "枠＝請求した額・赤＝認められた額",
+    "role": "object",
+    "size": 32,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1053,
+     572,
+     1085
+    ],
+    "rotate": null
+   },
+   {
+    "text": "親の側は、収入の資料を出していませんでした。",
+    "role": "body",
+    "size": 43,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1148,
+     1001,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號・2024.01.09・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "crash",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "架空の場面",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     860.0,
+     56,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "バイクを運転していた親",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     108,
+     288,
+     458,
+     320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "バスが赤信号で",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     108,
+     353,
+     556,
+     417
+    ],
+    "rotate": null
+   },
+   {
+    "text": "そのまま入ってきた。",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     108,
+     453,
+     743,
+     513
+    ],
+    "rotate": null
+   },
+   {
+    "text": "2020年の台北で、後ろには",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1010,
+     623,
+     1055
+    ],
+    "rotate": null
+   },
+   {
+    "text": "子どもが乗っていました。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1069,
+     610,
+     1114
+    ],
+    "rotate": null
+   },
+   {
+    "text": "バイクがバスの横にぶつかりました。",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1141,
+     909,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號・2024.01.09・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "injuries",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "判決にあるけが",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     796.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "子どもは上の前歯4本を",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     148,
+     866,
+     221
+    ],
+    "rotate": null
+   },
+   {
+    "text": "けがしました。",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     243,
+     592,
+     317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "子ども",
+    "role": "label",
+    "size": 36,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     405,
+     168,
+     439
+    ],
+    "rotate": null
+   },
+   {
+    "text": "抜けた歯1本・折れた歯3本",
+    "role": "object",
+    "size": 40,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     296.0,
+     831,
+     784.0,
+     871
+    ],
+    "rotate": null
+   },
+   {
+    "text": "親",
+    "role": "label",
+    "size": 36,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     955,
+     96,
+     990
+    ],
+    "rotate": null
+   },
+   {
+    "text": "左の鎖骨を骨折",
+    "role": "object",
+    "size": 44,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     712.0,
+     948,
+     1020.0,
+     991
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號・2024.01.09・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "ruling",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "この事件の一審判断",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     732.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "前歯の治療費は請求どおり",
+    "role": "headline",
+    "size": 72,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     91,
+     222,
+     955,
+     293
+    ],
+    "rotate": null
+   },
+   {
+    "text": "343,000元",
+    "role": "amount",
+    "size": 179,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     418,
+     956,
+     601
+    ],
+    "rotate": null
+   },
+   {
+    "text": "インプラントを含む治療計画で計算",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     64,
+     613,
+     671,
+     650
+    ],
+    "rotate": null
+   },
+   {
+    "text": "判決の理由",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     64,
+     672,
+     224,
+     704
+    ],
+    "rotate": null
+   },
+   {
+    "text": "けがのときまだ未成年で、",
+    "role": "quote",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     100,
+     761,
+     698,
+     810
+    ],
+    "rotate": null
+   },
+   {
+    "text": "歯は顔の見た目にも関わる。",
+    "role": "quote",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     100,
+     827,
+     750,
+     875
+    ],
+    "rotate": null
+   },
+   {
+    "text": "バス側は、同じ計画書の12〜15万元の",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1087,
+     855,
+     1131
+    ],
+    "rotate": null
+   },
+   {
+    "text": "案で足りると言いました。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1146,
+     612,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號・2024.01.09・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "cuts",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "親の請求・一審判断",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     732.0,
+     55,
+     1020.0,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "収入の資料を出さなかったので、",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     159,
+     1017,
+     221
+    ],
+    "rotate": null
+   },
+   {
+    "text": "これだけ。",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     253,
+     377,
+     312
+    ],
+    "rotate": null
+   },
+   {
+    "text": "休んでいる間に働けなかった分",
+    "role": "label",
+    "size": 50,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     585,
+     758,
+     633
+    ],
+    "rotate": null
+   },
+   {
+    "text": "385,022元",
+    "role": "amount-old",
+    "size": 79,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     672,
+     444,
+     752
+    ],
+    "rotate": null
+   },
+   {
+    "text": "→",
+    "role": "sign",
+    "size": 74,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     480.7,
+     685,
+     554.7,
+     732
+    ],
+    "rotate": null
+   },
+   {
+    "text": "27,808元",
+    "role": "amount",
+    "size": 96,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     589.9,
+     661,
+     1011.9,
+     759
+    ],
+    "rotate": null
+   },
+   {
+    "text": "バス側もこれだけは認めた額まで",
+    "role": "reason",
+    "size": 50,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     767,
+     810,
+     815
+    ],
+    "rotate": null
+   },
+   {
+    "text": "朝ごはん屋の仕事はアルバイトが",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1010,
+     750,
+     1055
+    ],
+    "rotate": null
+   },
+   {
+    "text": "代わったとして、バス側が出した数字です。",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1069,
+     972,
+     1114
+    ],
+    "rotate": null
+   },
+   {
+    "text": "時給158元×1日8時間×22日。",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1142,
+     767,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號・2024.01.09・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 6,
+  "layout": "docs",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "台湾の判決から",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     84,
+     55,
+     308,
+     87
+    ],
+    "rotate": null
+   },
+   {
+    "text": "知っておきたいこと",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     734.5,
+     56,
+     1019.5,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "けがは診断書で、",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     157,
+     569,
+     221
+    ],
+    "rotate": null
+   },
+   {
+    "text": "稼げなかった分は収入の資料で。",
+    "role": "headline",
+    "size": 64,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     60,
+     255,
+     1017,
+     317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "診断書",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     96,
+     429,
+     216,
+     469
+    ],
+    "rotate": null
+   },
+   {
+    "text": "手術後",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     96,
+     525,
+     246,
+     574
+    ],
+    "rotate": null
+   },
+   {
+    "text": "4週間の休養",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     96,
+     586,
+     376,
+     635
+    ],
+    "rotate": null
+   },
+   {
+    "text": "示すもの",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     96,
+     693,
+     224,
+     724
+    ],
+    "rotate": null
+   },
+   {
+    "text": "休む必要が",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     95,
+     737,
+     306,
+     779
+    ],
+    "rotate": null
+   },
+   {
+    "text": "あった期間",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     96,
+     788,
+     306,
+     829
+    ],
+    "rotate": null
+   },
+   {
+    "text": "この事件：提出",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     174,
+     865,
+     440,
+     902
+    ],
+    "rotate": null
+   },
+   {
+    "text": "収入の資料",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     606,
+     429,
+     806,
+     469
+    ],
+    "rotate": null
+   },
+   {
+    "text": "収入明細・",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     606,
+     525,
+     856,
+     574
+    ],
+    "rotate": null
+   },
+   {
+    "text": "税務申告など",
+    "role": "object",
+    "size": 50,
+    "weight": 800,
+    "lang": "ja",
+    "bbox": [
+     606,
+     587,
+     906,
+     636
+    ],
+    "rotate": null
+   },
+   {
+    "text": "示すもの",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "ja",
+    "bbox": [
+     606,
+     693,
+     734,
+     724
+    ],
+    "rotate": null
+   },
+   {
+    "text": "その間に稼げ",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     606,
+     738,
+     859,
+     779
+    ],
+    "rotate": null
+   },
+   {
+    "text": "なかった額",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     606,
+     788,
+     816,
+     829
+    ],
+    "rotate": null
+   },
+   {
+    "text": "この事件：未提出",
+    "role": "label",
+    "size": 37,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     684,
+     866,
+     980,
+     902
+    ],
+    "rotate": null
+   },
+   {
+    "text": "収入の資料が出ていないので、",
+    "role": "body",
+    "size": 44,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1091,
+     674,
+     1134
+    ],
+    "rotate": null
+   },
+   {
+    "text": "休養4週間とバス側も認めた額で決まりました。",
+    "role": "body",
+    "size": 44,
+    "weight": 500,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1147,
+     1009,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "台湾・士林地方法院 士林簡易庭",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1246,
+     515,
+     1278
+    ],
+    "rotate": null
+   },
+   {
+    "text": "111年度士簡字第875號・2024.01.09・一審",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ja",
+    "bbox": [
+     60,
+     1285,
+     679,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "06",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ja",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

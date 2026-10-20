@@ -1,0 +1,22 @@
+{
+  "observed": "2026-10-20T20:30:00.135799+09:00",
+  "source": "grok/P2/r3",
+  "files": {
+    "body.md": {
+      "sha256": "ac0746df1249b6ed19366e8e17a4d7e3538ef9dc1f8a7f098bf3250cae1681cd",
+      "codepoints_trimmed": 489
+    },
+    "body-perspective.md": {
+      "sha256": "dca43d1416d2523df2ceac74e5174aa52c65482ba61b44c20680b3fb579d6760",
+      "codepoints_trimmed": 500
+    },
+    "first-comment.md": {
+      "sha256": "6207b8793c52b86c69ac47a1478cf75858bbe6fbd5521f20261ee2d4afa856b1",
+      "codepoints_trimmed": 130
+    },
+    "cards.md": {
+      "sha256": "36c697c9ace18e78fa048f8a94a374862aad6ba28778ac1e40534e166b91c905",
+      "codepoints_trimmed": 777
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "ja": {
+    "files": {
+      "_review/render-audit-ja.json": {
+        "sha256": "696014c6cb95e134f608d77fd29909a0dfe5d592bfdef626105c344880f03236",
+        "codepoints": null
+      },
+      "body.md": {
+        "sha256": "24b3961be43888d45ce94215044264acc675fab91bf04393a2055598e2092c0f",
+        "codepoints": 445
+      },
+      "cards.md": {
+        "sha256": "ad9fb37aabe52380109e1e271f317dfcfe6aac832e050dfc7021698cfc94ce5e",
+        "codepoints": 1480
+      },
+      "first-comment.md": {
+        "sha256": "2c2f8c7dac7ca5c9bf2c18f66600f3508369456926ef85d46257714f86a081a3",
+        "codepoints": 159
+      },
+      "images/ja/card-01.png": {
+        "sha256": "957509d965343b5823938474b5f1391ac123614000a88117887e702d4e361521",
+        "codepoints": null
+      },
+      "images/ja/card-02.png": {
+        "sha256": "fad5cb6de3eae6d44de2ae5438741cae6bb926aa50b24c519ddb5128e2aca82e",
+        "codepoints": null
+      },
+      "images/ja/card-03.png": {
+        "sha256": "3d597ec5ca6bc7817b4cbc29177ad7e67df70bd8af9929c7ae0e4a92791b6b55",
+        "codepoints": null
+      },
+      "images/ja/card-04.png": {
+        "sha256": "2da0eb6f05e316fd574fa0320cfa7ef56c0f27e1a5dadff61f63059466a89305",
+        "codepoints": null
+      },
+      "images/ja/card-05.png": {
+        "sha256": "0bb5256a77fb30d2168abd59f290d6a60389e2cbaf95671adb68bd4f51980235",
+        "codepoints": null
+      },
+      "images/ja/card-06.png": {
+        "sha256": "5d1e095cb9fe2960d6ab265825de9c150b4cc3a152cd1684356dcc225f10ee48",
+        "codepoints": null
+      },
+      "ja-overview.png": {
+        "sha256": "e32123ca3636460b0a1d075314c33b251c2996967ed40a6327afcd37ab36a368",
+        "codepoints": null
+      },
+      "ko-meaning.md": {
+        "sha256": "14313828aba0594e9568d6cdc45b46ced9ef2db9ca970163912bc7fb2d34c2b5",
+        "codepoints": 1416
+      }
+    },
+    "render": [
+      {
+        "card": 1,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 2,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 3,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 4,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 5,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 6,
+        "problems": [],
+        "min_size": 32
+      }
+    ]
+  },
+  "en": {
+    "files": {
+      "_review/render-audit-en.json": {
+        "sha256": "f92c593e27459dbfe858f8e94ff7a5116124d15f93a1c6db06d27519be4eea9f",
+        "codepoints": null
+      },
+      "body.md": {
+        "sha256": "d609029950536c575daaf25a6fd6cb8c99b933d97955ca1a5581ae197954999c",
+        "codepoints": 493
+      },
+      "cards.md": {
+        "sha256": "8b1fc98936e2344f07dc05d5f4bb23e9bae451b3c5b3532c5499feca8308b979",
+        "codepoints": 2148
+      },
+      "en-overview.png": {
+        "sha256": "fc437f7677b151ac26c444b41a19d97de3fa4c42972d8af4ab3e678aebe17226",
+        "codepoints": null
+      },
+      "first-comment.md": {
+        "sha256": "3b567d449dd72fc2e99217c574968d5816524922a101ed4abe597aa1d2fdd1dd",
+        "codepoints": 229
+      },
+      "images/en/card-01.png": {
+        "sha256": "efd65022d82ba6c2e380ddb73e75b91d464085f019c450161ff3817b03061682",
+        "codepoints": null
+      },
+      "images/en/card-02.png": {
+        "sha256": "46ffc1f8587fb75ea8897c1ac71d90f01cc221c8c08e7211b36c80b345b6ab13",
+        "codepoints": null
+      },
+      "images/en/card-03.png": {
+        "sha256": "95ccc227bca1b818ea2bb522c71542c9d6083ad57ad464547e26ba5f1134c52c",
+        "codepoints": null
+      },
+      "images/en/card-04.png": {
+        "sha256": "a157307a39224dfa2f188a0a4ea5964a93f3a73a125584c2799b122eabc2289b",
+        "codepoints": null
+      },
+      "images/en/card-05.png": {
+        "sha256": "ca7f76580760529cbb457591b107c8b24c1adc5ed99b20262b7ad16a366ff99c",
+        "codepoints": null
+      },
+      "images/en/card-06.png": {
+        "sha256": "4311d803176e3f92555a3ae2156bf611993f693cbb9a33a724f40211fdb74e8d",
+        "codepoints": null
+      },
+      "ko-meaning.md": {
+        "sha256": "0f2fee75134631df8a7f772447cfb1ede418009ba0e0fd49ded61cb5f2f09b4c",
+        "codepoints": 1154
+      }
+    },
+    "render": [
+      {
+        "card": 1,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 2,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 3,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 4,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 5,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 6,
+        "problems": [],
+        "min_size": 32
+      }
+    ]
+  }
+}

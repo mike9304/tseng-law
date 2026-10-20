@@ -1,0 +1,27 @@
+{
+  "source": "opus/P1/r3",
+  "observed_at": "2026-10-20T20:15:44.170966",
+  "basis": "Opus NOTES 20:14 submission",
+  "files": [
+    {
+      "path": "opus/P1/r3/body.md",
+      "sha256": "9c693149b7f9c0260187bfaf2c4f52d25dc9d329d79bdfbc1e5302d1fa164610",
+      "codepoints_without_final_newlines": 498
+    },
+    {
+      "path": "opus/P1/r3/body-perspective.md",
+      "sha256": "1584f7f897fa40499964b3b6ea5cfe66d4fbaccfe8401b54a4d6dba687c8438b",
+      "codepoints_without_final_newlines": 495
+    },
+    {
+      "path": "opus/P1/r3/cards.md",
+      "sha256": "e3aa2b532f34d5074597359fca9cfd6c8ef0e9767ee4c4144f24abae338158a0",
+      "codepoints_without_final_newlines": 1371
+    },
+    {
+      "path": "opus/P1/r3/first-comment.md",
+      "sha256": "2a989f2a7f22db25d9ea65daa7b9f11516877295ac06045a157b44eb070c5b46",
+      "codepoints_without_final_newlines": 148
+    }
+  ]
+}

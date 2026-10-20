@@ -1,0 +1,323 @@
+{
+  "observed": "2026-10-20T20:30:00.135799+09:00",
+  "scope": "candidate bundle consistency, not final package approval",
+  "checks": [
+    {
+      "topic": "P1",
+      "version": "r3",
+      "fenced_block_count": 3,
+      "body_matches": true,
+      "comment_matches": true,
+      "attachment_matches_v1": false,
+      "alt_count": 6,
+      "all_alt_in_bundle": true,
+      "images": [
+        {
+          "path": "opus/P1/r2/preview/images/ko/card-01.png",
+          "sha256": "57180c51594ced367f32c9a73ea3d83b6817a192e8827774c5864286736ebd5b",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P1/r2/preview/images/ko/card-02.png",
+          "sha256": "2042c5d437030a80013a206841e129feb3fdf9fc06354edef299b75fedf4baae",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P1/r2/preview/images/ko/card-03.png",
+          "sha256": "e61af11d5a9d823c95382f3a6364c971a013a777a81e41a33dd1345fcfb8eaac",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P1/r2/preview/images/ko/card-04.png",
+          "sha256": "4879fe26547b7eb5c3ed6eda82579fe9cedad80a467f452088d6fadfb51046e1",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P1/r2/preview/images/ko/card-05.png",
+          "sha256": "5f085e0132b1d0b91ea702b9295a54952d5493fdde2a0d8a60b05445bfac073c",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P1/r2/preview/images/ko/card-06.png",
+          "sha256": "3c25641a1d3aae103c81be92f8efb6377797939df93512b62a0887880b76d761",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        }
+      ],
+      "attachment_matches_v2": true,
+      "old_attachment_approval_claim_present": false,
+      "source_note": "Checks refer to preserved snapshot; attachment-v1 mismatch is expected after replacement by v2."
+    },
+    {
+      "topic": "P2",
+      "version": "r4",
+      "fenced_block_count": 3,
+      "body_matches": true,
+      "comment_matches": true,
+      "attachment_matches_v1": false,
+      "alt_count": 5,
+      "all_alt_in_bundle": true,
+      "images": [
+        {
+          "path": "opus/P2/r4/preview/images/ko/card-01.png",
+          "sha256": "96fbe109537178499be20ee371670779a1afafdef4e716f824bd81c2242bb425",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": true,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P2/r4/preview/images/ko/card-02.png",
+          "sha256": "a94f567de60935e906f0d4f0b5041ac4569089cf503048282701f6e2fbc9819a",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": true,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P2/r4/preview/images/ko/card-03.png",
+          "sha256": "4e11de28392f2a770c1e38d94c88a48ccfb4ea1a7db698794a78b1db79abc20d",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": true,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P2/r4/preview/images/ko/card-04.png",
+          "sha256": "86d42fec4fb30cfaa747469c79879cfee43fec948c200dde49b6a3af0f742f81",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": true,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P2/r4/preview/images/ko/card-05.png",
+          "sha256": "f33b6e475437639c11e1d71ecd5579389be8c7afddfc57516b2bf13aeef8906b",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": false,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        }
+      ],
+      "attachment_matches_v2": true,
+      "old_attachment_approval_claim_present": false,
+      "source_note": "Checks refer to preserved snapshot; attachment-v1 mismatch is expected after replacement by v2."
+    },
+    {
+      "topic": "P3",
+      "version": "r4",
+      "fenced_block_count": 3,
+      "body_matches": true,
+      "comment_matches": true,
+      "attachment_matches_v1": false,
+      "alt_count": 6,
+      "all_alt_in_bundle": true,
+      "images": [
+        {
+          "path": "opus/P3/r3/preview/images/ko/card-01.png",
+          "sha256": "14eb03bd1c0d47ff1d9744b38e549dd4cbcc474e5c25a70dae872cd974601b16",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P3/r3/preview/images/ko/card-02.png",
+          "sha256": "e638bb1f7e7d4c7818597501a6271abe5761c31ffad2fc33267ba4559c092a14",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P3/r3/preview/images/ko/card-03.png",
+          "sha256": "426a8a6b9a4543ee433f92493852fb210e4d36dccde7352f82ae3122cc6dca44",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P3/r3/preview/images/ko/card-04.png",
+          "sha256": "145444b9449373315626f1cedbb795ef64294c3e642cbbb8b1cbdb0e67fae9c9",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P3/r3/preview/images/ko/card-05.png",
+          "sha256": "57dc61b5c3c0f3622fcad548477f1acd52f616b102f61ebab43f8c1f265fa1c2",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        },
+        {
+          "path": "opus/P3/r3/preview/images/ko/card-06.png",
+          "sha256": "c83cf794fc51138cc5a315f15360f99648743c6faf35bd0b7ba97c23641fc909",
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "png_chunk_types": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ],
+          "same_as_p2_r3": null,
+          "visual_basis": "P2 r4 card05 opened individually; other P2 images byte matched r3; P1 r2 and P3 r3 previously opened"
+        }
+      ],
+      "attachment_matches_v2": true,
+      "old_attachment_approval_claim_present": false,
+      "source_note": "Checks refer to preserved snapshot; attachment-v1 mismatch is expected after replacement by v2."
+    }
+  ]
+}

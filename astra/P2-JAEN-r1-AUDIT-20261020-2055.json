@@ -1,0 +1,152 @@
+{
+  "ja": {
+    "files": {
+      "_review/render-audit-ja.json": {
+        "sha256": "99c85419811ca210c07e8b6c863f9f7486bd8d94e8b704fb609588d82d0da07c",
+        "codepoints": null
+      },
+      "body.md": {
+        "sha256": "241cb6114c2dce6d2fa0c202b374084e746509e9257942fd7ad74021aa2ed7ab",
+        "codepoints": 496
+      },
+      "cards.md": {
+        "sha256": "9d9b7f9f26a23ceead5e91478df3979a87d21fcaa8adad5f34c9b6d95d66b0e7",
+        "codepoints": 1115
+      },
+      "first-comment.md": {
+        "sha256": "9098c00ec6f57d21506cc3630c74353752de1d3fad8eb7a87474e2a537097d80",
+        "codepoints": 140
+      },
+      "images/ja/card-01.png": {
+        "sha256": "1d5f239c471350740dcc41883ce94ae2e13a0314f27051ff9ad11d24105faee0",
+        "codepoints": null
+      },
+      "images/ja/card-02.png": {
+        "sha256": "bd82ca258745e09f2d5c99890fd8ae902df96bdf3fa54e0112e41d7092656260",
+        "codepoints": null
+      },
+      "images/ja/card-03.png": {
+        "sha256": "5db5efa366439f0b261aaede5a16eea5f9d379d95fd0e28f19d0326e2e662f1b",
+        "codepoints": null
+      },
+      "images/ja/card-04.png": {
+        "sha256": "e41c493e1b91e5c57c81f3a5694e12ac8d39f68984520fed727efb1cec4286bf",
+        "codepoints": null
+      },
+      "images/ja/card-05.png": {
+        "sha256": "57e0b473cc968b471c026e5f61bd9829b95a1e65c9b5acd94bbcdad204455502",
+        "codepoints": null
+      },
+      "ja-overview.png": {
+        "sha256": "b85b99fa7f017f034821e7924fad13beae45d105216d3885a24d1eff394d176d",
+        "codepoints": null
+      },
+      "ko-meaning.md": {
+        "sha256": "0b80179e85301bc2aa85e201594e535eb49009b909894940264ce2c999fc3cf8",
+        "codepoints": 1446
+      }
+    },
+    "render": [
+      {
+        "card": 1,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 2,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 3,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 4,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 5,
+        "problems": [],
+        "min_size": 32
+      }
+    ]
+  },
+  "en": {
+    "files": {
+      "_review/render-audit-en.json": {
+        "sha256": "6b07d7b6fa4a902bc149471fc7461c9f47f5caae07160b4597f380ac35799701",
+        "codepoints": null
+      },
+      "body.md": {
+        "sha256": "4dfa3b0e4c60bf21e720d19d133875afc63144f3ac0dc47164c114e749ee4a37",
+        "codepoints": 493
+      },
+      "cards.md": {
+        "sha256": "59a70512fca7188e359024b4adb0a73524b0f6903d6fc5eedf074104c977b471",
+        "codepoints": 1732
+      },
+      "en-overview.png": {
+        "sha256": "557bed70aacb88c1f051a085080bd48062e623a31e2ec86ec9f6a2acc35c30ba",
+        "codepoints": null
+      },
+      "first-comment.md": {
+        "sha256": "ad541cba9760ca89ee852032d17fde1390ac003f1cc5445caec92181ddcea879",
+        "codepoints": 213
+      },
+      "images/en/card-01.png": {
+        "sha256": "b727cca6ba2fbca60ad40182df41441e20d0ee6ff80ab9af206ca494ef6a7cc1",
+        "codepoints": null
+      },
+      "images/en/card-02.png": {
+        "sha256": "813699ab0e966c703d22250a8e36973c0b0dee4de19c03d5718d9e4169c278da",
+        "codepoints": null
+      },
+      "images/en/card-03.png": {
+        "sha256": "53e8b378287d9f2331576ed0617971c05c2729680c166524883f591d86b16735",
+        "codepoints": null
+      },
+      "images/en/card-04.png": {
+        "sha256": "7fec7fa99fedf3c23d0e20687b310699f6c331a51443c61b84029e85da98eee1",
+        "codepoints": null
+      },
+      "images/en/card-05.png": {
+        "sha256": "fd5df111a9f8c4d69f9d8421ec860f14373223e2a070fb1285f6aef8e5e303d9",
+        "codepoints": null
+      },
+      "ko-meaning.md": {
+        "sha256": "4d1aaeb6deb93cb38ab7c6a00302b7152a846cab061627ab851e49e071bb21aa",
+        "codepoints": 938
+      }
+    },
+    "render": [
+      {
+        "card": 1,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 2,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 3,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 4,
+        "problems": [],
+        "min_size": 32
+      },
+      {
+        "card": 5,
+        "problems": [],
+        "min_size": 32
+      }
+    ]
+  }
+}

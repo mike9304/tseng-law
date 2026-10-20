@@ -1,0 +1,20 @@
+{
+  "source": "grok/P1/r1",
+  "files": [
+    {
+      "path": "grok/P1/r1/body.md",
+      "sha256": "ce9cf40e487f0e3cbfb2448b3e2254cbb435bdcc00b8f6f5e2f1a9d8608ccc8c",
+      "codepoints_without_final_newlines": 419
+    },
+    {
+      "path": "grok/P1/r1/first-comment.md",
+      "sha256": "1137702798748e763c7c49bc4b448a55f2436b6117d15c6686ed1012c1747836",
+      "codepoints_without_final_newlines": 149
+    },
+    {
+      "path": "grok/P1/r1/cards.md",
+      "sha256": "425d6ef68667844cc4ba76035f2b4753df5dba0d1a862814d8ea9e7e681efa5f",
+      "codepoints_without_final_newlines": 927
+    }
+  ]
+}

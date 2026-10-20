@@ -1,0 +1,137 @@
+{
+  "P1": {
+    "files": {
+      "_review/render-audit-en.json": {
+        "sha256": "cb633448bbf24a467e1d8249ca3d933705fbcace7027b59e65062224bf4bfad6",
+        "codepoints": null
+      },
+      "attachment.md": {
+        "sha256": "7192a80df7a8045fa768e88b4c3f047f759befce23c147e1a7edd011a3fa0804",
+        "codepoints": 4398
+      },
+      "body.md": {
+        "sha256": "0aba9cb03cd461fae425c27e4ce38c7b936fa62c64006de43e1579089d8053c7",
+        "codepoints": 499
+      },
+      "cards.md": {
+        "sha256": "543dbe94fdd95efa896e49274e230164e5264a513dbc71822c4d88262fac24a5",
+        "codepoints": 2103
+      },
+      "en-overview.png": {
+        "sha256": "f83751241e1e8e66a27a19b1b598bce815b20990ceaaa65a5d5d94bdd17aa217",
+        "codepoints": null
+      },
+      "first-comment.md": {
+        "sha256": "25436a934ed7fa53eb956328f914bee5d618c98afb56a72cf74e981a66621c9b",
+        "codepoints": 215
+      },
+      "images/en/card-01.png": {
+        "sha256": "a49891403f1b62695e63c78f2e488f1b86fe62799aa1d43aff603b02179c9760",
+        "codepoints": null
+      },
+      "images/en/card-02.png": {
+        "sha256": "8828049a402574c43955588507b090fb39581a88087198022bf848c476af01f7",
+        "codepoints": null
+      },
+      "images/en/card-03.png": {
+        "sha256": "ae7266880f3995af6b6005da2f631f8870c330da5a0f0105b324887680fe0bc6",
+        "codepoints": null
+      },
+      "images/en/card-04.png": {
+        "sha256": "5b57a36b56d41eb90aee8ced9186ddb251f12235d70786cdb632967eddfa96bb",
+        "codepoints": null
+      },
+      "images/en/card-05.png": {
+        "sha256": "1b3abfa42fb9ec29b4d4175ae275b6a42b46b36193ca0e3b4080149e095a8814",
+        "codepoints": null
+      },
+      "images/en/card-06.png": {
+        "sha256": "74a48089074edf49228cc4925aab0599831b35d9138ce827de6bb912a37eeb0f",
+        "codepoints": null
+      },
+      "ko-meaning.md": {
+        "sha256": "68575439f84b161cf38e13c82210fc2030039bdf0ac2c07c8dd64f0dcb84bd50",
+        "codepoints": 865
+      },
+      "threads-ready-en.md": {
+        "sha256": "17264596af399efa4fde39e910512b1343e62ff614b9954e1f4fbf0492e7059e",
+        "codepoints": 6930
+      }
+    },
+    "unchanged_cards": [
+      "card-02.png",
+      "card-03.png",
+      "card-05.png"
+    ],
+    "changed_cards": [
+      "card-01.png",
+      "card-04.png",
+      "card-06.png"
+    ]
+  },
+  "P2": {
+    "files": {
+      "_review/render-audit-en.json": {
+        "sha256": "fcef3e94f35092c3af161a05d901699c5e6319731bb59f6bdde23ec8bc1f6ec7",
+        "codepoints": null
+      },
+      "attachment.md": {
+        "sha256": "575b019eb0f1f3cbc63096f34c86d5e96f84906997dd4e795834ef6621b5bfe9",
+        "codepoints": 4060
+      },
+      "body.md": {
+        "sha256": "8689d7e197f9dbe2a3e94ddce95cfbf3489241589d2816a27e9760a3d5de4988",
+        "codepoints": 498
+      },
+      "cards.md": {
+        "sha256": "d49ef65a5714f415eb5b6fcd1d214458bb89ecf70dfd083aff746cb90f0c74f3",
+        "codepoints": 1844
+      },
+      "en-overview.png": {
+        "sha256": "8d878a64723a0f21d9933ca7d6ed5150ea1b5bf22ff6e8fcc5fafaa669267ab2",
+        "codepoints": null
+      },
+      "first-comment.md": {
+        "sha256": "ad541cba9760ca89ee852032d17fde1390ac003f1cc5445caec92181ddcea879",
+        "codepoints": 213
+      },
+      "images/en/card-01.png": {
+        "sha256": "1cb5e0a0a0b47c9f3eb9b2dfe798a9ac5d546de9095bd905974cc28dd80e754c",
+        "codepoints": null
+      },
+      "images/en/card-02.png": {
+        "sha256": "813699ab0e966c703d22250a8e36973c0b0dee4de19c03d5718d9e4169c278da",
+        "codepoints": null
+      },
+      "images/en/card-03.png": {
+        "sha256": "53e8b378287d9f2331576ed0617971c05c2729680c166524883f591d86b16735",
+        "codepoints": null
+      },
+      "images/en/card-04.png": {
+        "sha256": "2dff660d25213b8e6b322269d23cf0cd310194c29c7077c7533de0d25596a1ea",
+        "codepoints": null
+      },
+      "images/en/card-05.png": {
+        "sha256": "3d05d553ea9d6b7c77b70feef5c3e761cfbdaafb038142210dfcd819c513a3d6",
+        "codepoints": null
+      },
+      "ko-meaning.md": {
+        "sha256": "6772a74cc4f078ec0e871e3c291aad93fc0bdb3723726070352999ead0b6b6f4",
+        "codepoints": 610
+      },
+      "threads-ready-en.md": {
+        "sha256": "f9c91f0fb8621d38cb906ed7ade9c10f9b6e3b48a2f2b9ce8fa970753e90489c",
+        "codepoints": 6469
+      }
+    },
+    "unchanged_cards": [
+      "card-02.png",
+      "card-03.png"
+    ],
+    "changed_cards": [
+      "card-01.png",
+      "card-04.png",
+      "card-05.png"
+    ]
+  }
+}

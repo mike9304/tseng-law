@@ -6,7 +6,7 @@ from pathlib import Path
 import cardkit
 from cardkit import *
 
-MODULES = {'c03': 'c03_r16', 'c13': 'c13_r3', 'c09': 'c09_r2'}
+MODULES = {'c03': 'c03_r16', 'c13': 'c13_r3', 'c09': 'c09_r2', 'p1': 'c03_r16', 'p2': 'c13_r3', 'p3': 'c09_r2'}
 
 
 def overview(paths, outfile):

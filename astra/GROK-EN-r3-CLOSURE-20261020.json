@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-20T21:42:53.138562+09:00",
+  "scope": "Grok EN r3 nonselected candidates; no rewrite or selection reopened",
+  "packages": {
+    "P1": {
+      "source": "grok/P1/en/r3",
+      "snapshot": "astra/review-inputs/grok/P1/en/r3/submitted-2135",
+      "files": {
+        "body.md": {
+          "sha256": "8f9b40620dd75967c56a82c2acbf03aea10406da9fb8bde3dc3cd6bce2937187",
+          "codepoints": 497,
+          "same_as_r2": false
+        },
+        "cards.md": {
+          "sha256": "0d446adc55be95b49139e2c54058c0433c62bbae28f7e83022ba65ad153ec5f5",
+          "codepoints": 1564,
+          "same_as_r2": true
+        },
+        "first-comment.md": {
+          "sha256": "07d19e44a0905150c7bc61bc93403949510f79de443d4d1ce2864ff9155ef134",
+          "codepoints": 221,
+          "same_as_r2": true
+        },
+        "ko-meaning.md": {
+          "sha256": "519f71bc38b12b7c26dd3d2b49f1894b6d2746af1b1cf4380f7fa27d2857d3e0",
+          "codepoints": 485,
+          "same_as_r2": false
+        }
+      }
+    },
+    "P2": {
+      "source": "grok/P2/en/r3",
+      "snapshot": "astra/review-inputs/grok/P2/en/r3/submitted-2135",
+      "files": {
+        "body.md": {
+          "sha256": "21b193f9eeb62f13eea856e0e6b386ea692eb70c1fd1d20650a534079d7b5650",
+          "codepoints": 493,
+          "same_as_r2": false
+        },
+        "cards.md": {
+          "sha256": "735cd03a4eec04fbef9b9373ad4174a8ae1831044fa4c202e79644b0f6833158",
+          "codepoints": 1435,
+          "same_as_r2": true
+        },
+        "first-comment.md": {
+          "sha256": "1916160d67962284f9e48ac2489cbfedb8f01aa6d204155bfe440c8407453416",
+          "codepoints": 194,
+          "same_as_r2": true
+        },
+        "ko-meaning.md": {
+          "sha256": "ffb446fe24ce5a30cd43dd907396fe8ca7f3a0cd423fed13f7f06c3e41ce7b36",
+          "codepoints": 467,
+          "same_as_r2": false
+        }
+      }
+    },
+    "P3": {
+      "source": "grok/P3/en/r3",
+      "snapshot": "astra/review-inputs/grok/P3/en/r3/submitted-2135",
+      "files": {
+        "body.md": {
+          "sha256": "f362ba744d02f752a3075efe5389a167ebfe762fd0138b310308ad884cd09de5",
+          "codepoints": 499,
+          "same_as_r2": false
+        },
+        "cards.md": {
+          "sha256": "c44e891b8a9d759a912a7712b25895ceb8def85a1924fb3abf0f14b2d16fab51",
+          "codepoints": 1814,
+          "same_as_r2": true
+        },
+        "first-comment.md": {
+          "sha256": "5049303a68b55c9e465031fb5496eff9bb014398a2c2c3da6e5c45cd053aad2f",
+          "codepoints": 227,
+          "same_as_r2": true
+        },
+        "ko-meaning.md": {
+          "sha256": "6b2c78a2ac7550012b0c9c82ed8c675438c60c70593b800aa0967c407f659030",
+          "codepoints": 658,
+          "same_as_r2": false
+        }
+      }
+    }
+  },
+  "selected_opus_unchanged_by_this_review": true,
+  "rewrite_freeze": "GROKBOT-20261020-2135 remains in force"
+}

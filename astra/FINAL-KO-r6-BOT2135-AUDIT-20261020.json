@@ -1,0 +1,451 @@
+{
+  "checked_at": "2026-10-20T21:37:57.907380+09:00",
+  "bot_review": "review-studio/GROKBOT-20261020-2135.md",
+  "changed_files": [
+    "opus/P2/r6/body.md",
+    "opus/P2/r6/threads-ready-ko.md"
+  ],
+  "only_authorized_replacement": true,
+  "snapshot_P2": "astra/review-inputs/opus/P2/r6/after-bot2135-2137",
+  "bundles_match": true,
+  "alt_unchanged": true,
+  "status": "BOT-PASS / awaiting user final confirmation",
+  "packages": {
+    "P1": {
+      "files": {
+        "attachment-v2.md": {
+          "sha256": "616efad555d620701f5c342d4df20d57e1b0c3ef96f6ac446eb0d3c60fb9ef5c",
+          "codepoints": 2258
+        },
+        "body.md": {
+          "sha256": "5ac8dcd718659b0b1f1f190dddcf86ffc7f634caf94ea1f1b88f3a0070c99aa4",
+          "codepoints": 488
+        },
+        "cards.md": {
+          "sha256": "e3aa2b532f34d5074597359fca9cfd6c8ef0e9767ee4c4144f24abae338158a0",
+          "codepoints": 1371
+        },
+        "first-comment.md": {
+          "sha256": "5c876e26cc7811ee3b24218322443f3e314a800ab8d3da361de90b86c06cb638",
+          "codepoints": 166
+        },
+        "images/ko/card-01.png": {
+          "sha256": "57180c51594ced367f32c9a73ea3d83b6817a192e8827774c5864286736ebd5b",
+          "codepoints": null
+        },
+        "images/ko/card-02.png": {
+          "sha256": "2042c5d437030a80013a206841e129feb3fdf9fc06354edef299b75fedf4baae",
+          "codepoints": null
+        },
+        "images/ko/card-03.png": {
+          "sha256": "e61af11d5a9d823c95382f3a6364c971a013a777a81e41a33dd1345fcfb8eaac",
+          "codepoints": null
+        },
+        "images/ko/card-04.png": {
+          "sha256": "4879fe26547b7eb5c3ed6eda82579fe9cedad80a467f452088d6fadfb51046e1",
+          "codepoints": null
+        },
+        "images/ko/card-05.png": {
+          "sha256": "5f085e0132b1d0b91ea702b9295a54952d5493fdde2a0d8a60b05445bfac073c",
+          "codepoints": null
+        },
+        "images/ko/card-06.png": {
+          "sha256": "3c25641a1d3aae103c81be92f8efb6377797939df93512b62a0887880b76d761",
+          "codepoints": null
+        },
+        "threads-ready-ko.md": {
+          "sha256": "6973d66e2327a624d3ef267ed26fc31e265efdedb8a9d058e4f39ed19751486b",
+          "codepoints": 4079
+        }
+      },
+      "changed_text": {
+        "body.md": true,
+        "first-comment.md": false,
+        "attachment-v2.md": false,
+        "cards.md": false
+      },
+      "image_same_as_r5": {
+        "card-05.png": true,
+        "card-04.png": true,
+        "card-06.png": true,
+        "card-03.png": true,
+        "card-02.png": true,
+        "card-01.png": true
+      },
+      "bundle_sources_match": true,
+      "alt_count": 6,
+      "alt_matches_bundle": true,
+      "pngs": {
+        "card-05.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-04.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-06.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-03.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-02.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-01.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        }
+      }
+    },
+    "P2": {
+      "files": {
+        "attachment-v2.md": {
+          "sha256": "7d7a0b47cf4ed13e89409c24dd106afce07a877cce05ee4dc9780b608c786e08",
+          "codepoints": 2816
+        },
+        "body.md": {
+          "sha256": "45b3b7d07111e43afb83cfeb60bc360613765b7ae13c5cd6dba59aef3970f808",
+          "codepoints": 494
+        },
+        "cards.md": {
+          "sha256": "d9f4da785cb2a0580fcff2a97aa823a8265948fb2d2e90c2f1394853385153ca",
+          "codepoints": 1287
+        },
+        "first-comment.md": {
+          "sha256": "7a432fff947a4f959f91a065e3834ede850ed3aa14e51dbda7e8550505e25b23",
+          "codepoints": 144
+        },
+        "images/ko/card-01.png": {
+          "sha256": "96fbe109537178499be20ee371670779a1afafdef4e716f824bd81c2242bb425",
+          "codepoints": null
+        },
+        "images/ko/card-02.png": {
+          "sha256": "a94f567de60935e906f0d4f0b5041ac4569089cf503048282701f6e2fbc9819a",
+          "codepoints": null
+        },
+        "images/ko/card-03.png": {
+          "sha256": "4e11de28392f2a770c1e38d94c88a48ccfb4ea1a7db698794a78b1db79abc20d",
+          "codepoints": null
+        },
+        "images/ko/card-04.png": {
+          "sha256": "86d42fec4fb30cfaa747469c79879cfee43fec948c200dde49b6a3af0f742f81",
+          "codepoints": null
+        },
+        "images/ko/card-05.png": {
+          "sha256": "d2544e6fd6cb7c6eaa9223b51b5660d41988a3f35b736aa4c9a99a77d36bf269",
+          "codepoints": null
+        },
+        "threads-ready-ko.md": {
+          "sha256": "b40f56432ed7dcfe6783123c87407fa97b978bda4b28536fb7740b92d969f085",
+          "codepoints": 4616
+        }
+      },
+      "changed_text": {
+        "body.md": true,
+        "first-comment.md": false,
+        "attachment-v2.md": false,
+        "cards.md": false
+      },
+      "image_same_as_r5": {
+        "card-05.png": true,
+        "card-04.png": true,
+        "card-03.png": true,
+        "card-02.png": true,
+        "card-01.png": true
+      },
+      "bundle_sources_match": true,
+      "alt_count": 5,
+      "alt_matches_bundle": true,
+      "pngs": {
+        "card-05.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-04.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-03.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-02.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-01.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        }
+      }
+    },
+    "P3": {
+      "files": {
+        "attachment-v2.md": {
+          "sha256": "877ad048aa2bd8f577f5959c6a9011f09ef2a2b640b1f0ed986f64b5d3d93bea",
+          "codepoints": 3367
+        },
+        "body.md": {
+          "sha256": "d97a614eb45645e5e14181e56fca8994e48395a3220b70fcb326985e4d60ee3a",
+          "codepoints": 460
+        },
+        "cards.md": {
+          "sha256": "75c0f9932689555e5f8dbc9f2256a965b944a8af4ead6605ae094469d6e17298",
+          "codepoints": 1509
+        },
+        "first-comment.md": {
+          "sha256": "27ef34a50761eee78c00560ae9bf2b6beda451c25f945fa6941819b8609690f5",
+          "codepoints": 161
+        },
+        "images/ko/card-01.png": {
+          "sha256": "14eb03bd1c0d47ff1d9744b38e549dd4cbcc474e5c25a70dae872cd974601b16",
+          "codepoints": null
+        },
+        "images/ko/card-02.png": {
+          "sha256": "e638bb1f7e7d4c7818597501a6271abe5761c31ffad2fc33267ba4559c092a14",
+          "codepoints": null
+        },
+        "images/ko/card-03.png": {
+          "sha256": "426a8a6b9a4543ee433f92493852fb210e4d36dccde7352f82ae3122cc6dca44",
+          "codepoints": null
+        },
+        "images/ko/card-04.png": {
+          "sha256": "193dfedcd4fd4d337dacd9ef43cc472a7c0122882eda690f1ac01ce3bca93a14",
+          "codepoints": null
+        },
+        "images/ko/card-05.png": {
+          "sha256": "d717e9cc08d910dec244a858389c0da464c8706d1b86ff3df8b10bf06f00720d",
+          "codepoints": null
+        },
+        "images/ko/card-06.png": {
+          "sha256": "9ffcedfbac1194f4aecc2f3e69daeb74d90d2204495f419a956b66a3c6645c83",
+          "codepoints": null
+        },
+        "ko-overview.png": {
+          "sha256": "78a35320fe59f634685007c2d9620e78fcdee35bad8893f5f3e8b3093d9b2c6c",
+          "codepoints": null
+        },
+        "preview/_review/render-audit-ko.json": {
+          "sha256": "eae4e4baca111d241f7261678cf92699aea927ab55929a5a1ee8602b3787bc3f",
+          "codepoints": null
+        },
+        "preview/images/ko/card-01.png": {
+          "sha256": "14eb03bd1c0d47ff1d9744b38e549dd4cbcc474e5c25a70dae872cd974601b16",
+          "codepoints": null
+        },
+        "preview/images/ko/card-02.png": {
+          "sha256": "e638bb1f7e7d4c7818597501a6271abe5761c31ffad2fc33267ba4559c092a14",
+          "codepoints": null
+        },
+        "preview/images/ko/card-03.png": {
+          "sha256": "426a8a6b9a4543ee433f92493852fb210e4d36dccde7352f82ae3122cc6dca44",
+          "codepoints": null
+        },
+        "preview/images/ko/card-04.png": {
+          "sha256": "193dfedcd4fd4d337dacd9ef43cc472a7c0122882eda690f1ac01ce3bca93a14",
+          "codepoints": null
+        },
+        "preview/images/ko/card-05.png": {
+          "sha256": "d717e9cc08d910dec244a858389c0da464c8706d1b86ff3df8b10bf06f00720d",
+          "codepoints": null
+        },
+        "preview/images/ko/card-06.png": {
+          "sha256": "9ffcedfbac1194f4aecc2f3e69daeb74d90d2204495f419a956b66a3c6645c83",
+          "codepoints": null
+        },
+        "preview/ko-overview.png": {
+          "sha256": "78a35320fe59f634685007c2d9620e78fcdee35bad8893f5f3e8b3093d9b2c6c",
+          "codepoints": null
+        },
+        "threads-ready-ko.md": {
+          "sha256": "4dde7300e0d60a833ec26234ed133561434aaa6cfd7e2cf31800cdc6d648acdc",
+          "codepoints": 5291
+        }
+      },
+      "changed_text": {
+        "body.md": true,
+        "first-comment.md": false,
+        "attachment-v2.md": false,
+        "cards.md": true
+      },
+      "image_same_as_r5": {
+        "card-05.png": false,
+        "card-04.png": false,
+        "card-06.png": false,
+        "card-03.png": true,
+        "card-02.png": true,
+        "card-01.png": true
+      },
+      "bundle_sources_match": true,
+      "alt_count": 6,
+      "alt_matches_bundle": true,
+      "pngs": {
+        "card-05.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-04.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-06.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-03.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-02.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        },
+        "card-01.png": {
+          "dimensions": [
+            1080,
+            1350
+          ],
+          "chunks": [
+            "IDAT",
+            "IEND",
+            "IHDR",
+            "bKGD"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -274,4 +274,47 @@ def proof(card, lang, total):
     return finish(out, lang, card['number'], total, False, SRC[lang])
 
 
-LAYOUTS = {f.__name__: f for f in [core, crash, injuries, prepaid, versus, ruling, cuts, math, proof]}
+def mark(kind, cx, cy, size, color):
+    if kind == 'ok':
+        return (f'<path d="M{cx-size*0.45} {cy} L{cx-size*0.12} {cy+size*0.33} L{cx+size*0.5} {cy-size*0.38}" '
+                f'fill="none" stroke="{color}" stroke-width="{size*0.16}" stroke-linecap="round" stroke-linejoin="round"/>')
+    return (f'<path d="M{cx-size*0.4} {cy-size*0.4} L{cx+size*0.4} {cy+size*0.4} M{cx+size*0.4} {cy-size*0.4} L{cx-size*0.4} {cy+size*0.4}" '
+            f'fill="none" stroke="{color}" stroke-width="{size*0.16}" stroke-linecap="round"/>')
+
+
+def docs(card, lang, total):
+    """Light info card (P3 r1): what each paper proves. Left = submitted, right = not submitted (dashed)."""
+    out = start(lang, False, card.get('tag', ''))
+    rows = card['headline'].split('\n')
+    hs = common_size(rows, 76, lang, 960)
+    for i, v in enumerate(rows):
+        out.append(put(v, 60, 214 + i * 96, hs, INK, 900, lang, 960, role='headline', minimum=52))
+    n, m = len(AUDIT), len(OBSTACLES)
+    ft = foot([], card, lang, False, arrow_on=False)
+    del AUDIT[n:], OBSTACLES[m:]
+    top = 214 + (len(rows) - 1) * 96 + 80
+    h = min(560, ft - 60 - top)
+    assert h >= 440, f'[{lang}] no room for the two papers ({top}..{ft})'
+    w, xs = 450, (60, 570)
+    for x, d in zip(xs, card['labels']['docs']):
+        ok = d['kind'] == 'ok'
+        out.append(obstacle(d['title'], x, top, x + w + 14, top + h + 16))
+        if ok:
+            out.append(paper(x, top, w, h, 0, True))
+        else:
+            out.append(f'<rect x="{x}" y="{top}" width="{w}" height="{h}" rx="6" fill="none" stroke="{INK}" '
+                       f'stroke-width="4" stroke-dasharray="18 12"/>')
+        with grouped(d['title']):
+            out.append(put(d['title'], x + 36, top + 74, 40, INK, 900, lang, w - 110, role='label'))
+            out.append(line(x + 36, top + 102, x + w - 36, top + 102, INK, 2))
+            block(out, d['body'], x + 36, top + 178, 50, lang, w - 72, 800, INK, 1.25, 'object', 2)
+            out.append(put(d['proves_label'], x + 36, top + 330, 32, MUTED, 700, lang, w - 72, role='label'))
+            block(out, d['proves'], x + 36, top + 384, 42, lang, w - 72, 900, ACCENT if ok else INK, 1.2, 'object', 2)
+            sy = top + h - 52
+            out.append(mark(d['kind'], x + 70, sy - 14, 54, INK if ok else ACCENT))
+            out.append(put(d['status'], x + 114, sy, 38, INK if ok else ACCENT, 900, lang, w - 150, role='label'))
+    foot(out, card, lang, False, arrow_on=False)
+    return finish(out, lang, card['number'], total, False, SRC[lang])
+
+
+LAYOUTS = {f.__name__: f for f in [core, crash, injuries, prepaid, versus, ruling, cuts, math, proof, docs]}

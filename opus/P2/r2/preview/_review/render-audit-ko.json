@@ -1,0 +1,1036 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 법원 1심 · 협의이혼",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     64,
+     163,
+     458,
+     199
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이혼 등록까지 했는데",
+    "role": "headline",
+    "size": 96,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     250,
+     899,
+     342
+    ],
+    "rotate": null
+   },
+   {
+    "text": "법원은 ‘아직 부부’",
+    "role": "headline",
+    "size": 96,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     365,
+     790,
+     457
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이혼 합의서",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     194,
+     611.5,
+     397,
+     651.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이혼 등록 완료",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     254.5,
+     856.5,
+     493.5,
+     894.5
+    ],
+    "rotate": null
+   },
+   {
+    "text": "무효",
+    "role": "object",
+    "size": 120,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     689.6,
+     725.7,
+     910.6,
+     838.7
+    ],
+    "rotate": null
+   },
+   {
+    "text": "증인 한 명이 남편 뜻을",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1078,
+     519,
+     1126
+    ],
+    "rotate": null
+   },
+   {
+    "text": "직접 확인한 적이 없었대요.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1142,
+     616,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 신주지방법원",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     303,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號 · 2024.06.11 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     613,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "restaurant",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "증언을 바탕으로 한 가상의 장면",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     608.6,
+     56,
+     1019.6,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아내 → 오래 알고 지낸 지인",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     94,
+     177,
+     456,
+     207
+    ],
+    "rotate": null
+   },
+   {
+    "text": "여기 증인란에 서명 좀 해 줘.",
+    "role": "headline",
+    "size": 70,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     94,
+     231,
+     907,
+     298
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이혼 합의서",
+    "role": "object",
+    "size": 32,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     450,
+     592,
+     605,
+     623
+    ],
+    "rotate": null
+   },
+   {
+    "text": "식당에서 아내랑 단둘이. 남편은 그 자리에 없었어요.",
+    "role": "body",
+    "size": 45,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1071,
+     1017,
+     1113
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부부 서명란은 그때 아직 빈칸.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1142,
+     674,
+     1189
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 신주지방법원",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     303,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號 · 2024.06.11 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     613,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "testimony",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "판결에 적힌 증언 · 요약",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     708.4,
+     56,
+     1020.4,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "그 지인, 법정에서",
+    "role": "object",
+    "size": 38,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     182,
+     333,
+     222
+    ],
+    "rotate": null
+   },
+   {
+    "text": "남편분 연락처는",
+    "role": "headline",
+    "size": 96,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     120,
+     368,
+     760,
+     460
+    ],
+    "rotate": null
+   },
+   {
+    "text": "없어요.",
+    "role": "headline",
+    "size": 96,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     120,
+     497,
+     419,
+     588
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     775,
+     97,
+     788
+    ],
+    "rotate": null
+   },
+   {
+    "text": "서명 전에도 후에도 남편은 못 만남",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     120,
+     754,
+     680,
+     792
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     859,
+     97,
+     872
+    ],
+    "rotate": null
+   },
+   {
+    "text": "남편한테 이혼할 건지 물어본 적 없음",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     120,
+     838,
+     717,
+     876
+    ],
+    "rotate": null
+   },
+   {
+    "text": "—",
+    "role": "bullet",
+    "size": 40,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     943,
+     97,
+     956
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이혼 등록하는 날도 안 감",
+    "role": "fact",
+    "size": 40,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     120,
+     922,
+     524,
+     959
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부부 둘 다 이 증언엔 이의 없음.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1070,
+     644,
+     1114
+    ],
+    "rotate": null
+   },
+   {
+    "text": "판사는 그 지인을 증인으로 안 쳤어요.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1142,
+     823,
+     1190
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 신주지방법원",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     303,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號 · 2024.06.11 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     613,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "witnesses",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "증인 자격 · 판결 이유",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     737.9,
+     56,
+     1019.9,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "증인은 부부 둘 다 이혼하려는 걸",
+    "role": "headline",
+    "size": 70,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     154,
+     977,
+     221
+    ],
+    "rotate": null
+   },
+   {
+    "text": "직접 보거나 들었어야 한대요.",
+    "role": "headline",
+    "size": 70,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     246,
+     906,
+     313
+    ],
+    "rotate": null
+   },
+   {
+    "text": "남편",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     245.8,
+     481,
+     333.8,
+     526
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아내",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     745.8,
+     481,
+     833.8,
+     526
+    ],
+    "rotate": null
+   },
+   {
+    "text": "그 지인",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     218.3,
+     881,
+     361.3,
+     926
+    ],
+    "rotate": null
+   },
+   {
+    "text": "다른 증인",
+    "role": "node",
+    "size": 48,
+    "weight": 800,
+    "lang": "ko",
+    "bbox": [
+     696.2,
+     881,
+     884.2,
+     926
+    ],
+    "rotate": null
+   },
+   {
+    "text": "판결이 따로 판단 안 함",
+    "role": "node-note",
+    "size": 34,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     633.9,
+     989,
+     945.9,
+     1021
+    ],
+    "rotate": null
+   },
+   {
+    "text": "남편 확인",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     103.2,
+     668.0,
+     236.2,
+     700.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "없음",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     173.4,
+     709.0,
+     236.4,
+     742.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "아내 얘기만 들음",
+    "role": "node-note",
+    "size": 34,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     600,
+     714.0,
+     834,
+     746.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "부부 중 한 사람한테 전해 들은 것도 안 됨.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1146,
+     833,
+     1189
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 신주지방법원",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     303,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "113年度婚字第59號 · 2024.06.11 · 1심",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1285,
+     613,
+     1317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "formula",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "대만의 판결",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     84,
+     56,
+     238,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 협의이혼 요건",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     770.2,
+     56,
+     1020.2,
+     86
+    ],
+    "rotate": null
+   },
+   {
+    "text": "증인 칸은",
+    "role": "headline",
+    "size": 68,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     156,
+     326,
+     220
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이름만 채우는 자리가 아니었어요.",
+    "role": "headline",
+    "size": 68,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     251,
+     1006,
+     317
+    ],
+    "rotate": null
+   },
+   {
+    "text": "서면",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     164.5,
+     676,
+     245.5,
+     718
+    ],
+    "rotate": null
+   },
+   {
+    "text": "합의서",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     144.3,
+     729,
+     265.3,
+     771
+    ],
+    "rotate": null
+   },
+   {
+    "text": "증인 2명 이상",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     415.8,
+     677,
+     663.8,
+     718
+    ],
+    "rotate": null
+   },
+   {
+    "text": "서명",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     499.5,
+     730,
+     580.5,
+     771
+    ],
+    "rotate": null
+   },
+   {
+    "text": "호적 관청에",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     768.8,
+     676,
+     980.8,
+     718
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이혼 등록",
+    "role": "object",
+    "size": 44,
+    "weight": 700,
+    "lang": "ko",
+    "bbox": [
+     789.0,
+     729,
+     961.0,
+     771
+    ],
+    "rotate": null
+   },
+   {
+    "text": "이 사건은 제대로 된 증인이",
+    "role": "result",
+    "size": 50,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     883,
+     612,
+     931
+    ],
+    "rotate": null
+   },
+   {
+    "text": "많아야 한 명 → 무효.",
+    "role": "result",
+    "size": 50,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     60,
+     945,
+     495,
+     993
+    ],
+    "rotate": null
+   },
+   {
+    "text": "다 같이 한자리에서 서명할 필요는 없지만,",
+    "role": "body",
+    "size": 36,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1108,
+     674,
+     1147
+    ],
+    "rotate": null
+   },
+   {
+    "text": "증인마다 부부 둘 다의 이혼 뜻을 직접 보거나 들어야 해요(판례).",
+    "role": "body",
+    "size": 36,
+    "weight": 500,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1154,
+     997,
+     1193
+    ],
+    "rotate": null
+   },
+   {
+    "text": "대만 민법 1050조 · 73조",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1247,
+     390,
+     1277
+    ],
+    "rotate": null
+   },
+   {
+    "text": "협의이혼의 방식",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "ko",
+    "bbox": [
+     60,
+     1286,
+     273,
+     1316
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "ko",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "piece": "P1",
+    "files": {
+      "body.md": {
+        "sha256": "20f62f0ec9a9ccf0d60be06a2dece52ee6cc5e713605d3dc1b69f84aa1ba16ed",
+        "codepoints": 489
+      },
+      "body-perspective.md": {
+        "sha256": "5b49a85456028f55e946943cbba410b332bddc35c729c9092090c9bc9feaf05b",
+        "codepoints": 500
+      },
+      "first-comment.md": {
+        "sha256": "997072af868d9e8f6dea084e45a7f776a94ad83f645f6824f7ccc610325c7dc6",
+        "codepoints": 163
+      },
+      "cards.md": {
+        "sha256": "6cbc4c4f1bca7d48d8da81b304c8c22c9421952e40775b4c2fed33f5c19fb843",
+        "codepoints": 809
+      }
+    }
+  },
+  {
+    "piece": "P2",
+    "files": {
+      "body.md": {
+        "sha256": "b952507a9b4874e29eb2b3b629e914ad8be0e74906af6fe3d57575301164bd0d",
+        "codepoints": 489
+      },
+      "body-perspective.md": {
+        "sha256": "dbddb3f8ca0272855c8793f7a9043e165dd4481c0500d1e640413e4314665266",
+        "codepoints": 500
+      },
+      "first-comment.md": {
+        "sha256": "24906ced6d706525b7350a1e2de58511dfd8b4525d62faf75923e537d58fccfa",
+        "codepoints": 143
+      },
+      "cards.md": {
+        "sha256": "a54cd138fdd1506496953961c813887ebfa0a0af6dd31850cfec37df420009f6",
+        "codepoints": 780
+      }
+    }
+  },
+  {
+    "piece": "P3",
+    "files": {
+      "body.md": {
+        "sha256": "e8f416bb41ef24542bc9706c6752a3765acd740c0a3c4ccbf0ac9f0393cfa6db",
+        "codepoints": 489
+      },
+      "body-perspective.md": {
+        "sha256": "cbf0af4a9384878420d6f4d628ee5c673a95e1cb1ab1ba02a301a84459bfd461",
+        "codepoints": 500
+      },
+      "first-comment.md": {
+        "sha256": "f1a7393bbe8641b1a4cf7ad818351e33a886ea6525a54f039666b7772752ffbb",
+        "codepoints": 159
+      },
+      "cards.md": {
+        "sha256": "b025906d3f1ed0e35f7afe29c85c966815ec5d8dbfcfe5218e99803539747408",
+        "codepoints": 971
+      }
+    }
+  }
+]

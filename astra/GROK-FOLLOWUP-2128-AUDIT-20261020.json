@@ -1,0 +1,152 @@
+{
+  "checked_at": "2026-10-20T21:34:27.157219+09:00",
+  "snapshots": {
+    "P1/r7": {
+      "path": "astra/review-inputs/grok/P1/r7/submitted-2128-2134",
+      "files": {
+        "body-perspective.md": {
+          "sha256": "4d2e71136ce879d2847c7f71f959363144b17754650f4cf1947faabe4abc5b84",
+          "codepoints": 497
+        },
+        "body.md": {
+          "sha256": "4d2e71136ce879d2847c7f71f959363144b17754650f4cf1947faabe4abc5b84",
+          "codepoints": 497
+        },
+        "first-comment.md": {
+          "sha256": "997072af868d9e8f6dea084e45a7f776a94ad83f645f6824f7ccc610325c7dc6",
+          "codepoints": 163
+        },
+        "cards.md": {
+          "sha256": "6cbc4c4f1bca7d48d8da81b304c8c22c9421952e40775b4c2fed33f5c19fb843",
+          "codepoints": 809
+        }
+      }
+    },
+    "P2/r7": {
+      "path": "astra/review-inputs/grok/P2/r7/submitted-2128-2134",
+      "files": {
+        "body-perspective.md": {
+          "sha256": "4312ddad381bfeee520934e9e72e0798089710049e2e4e22189797927d580ef3",
+          "codepoints": 500
+        },
+        "body.md": {
+          "sha256": "4312ddad381bfeee520934e9e72e0798089710049e2e4e22189797927d580ef3",
+          "codepoints": 500
+        },
+        "first-comment.md": {
+          "sha256": "24906ced6d706525b7350a1e2de58511dfd8b4525d62faf75923e537d58fccfa",
+          "codepoints": 143
+        },
+        "cards.md": {
+          "sha256": "a54cd138fdd1506496953961c813887ebfa0a0af6dd31850cfec37df420009f6",
+          "codepoints": 780
+        }
+      }
+    },
+    "P3/r7": {
+      "path": "astra/review-inputs/grok/P3/r7/submitted-2128-2134",
+      "files": {
+        "body-perspective.md": {
+          "sha256": "0053175d47b8c69632ca4c43ba8b011c80f8d9193a3cf65825ce05b298f41dad",
+          "codepoints": 492
+        },
+        "body.md": {
+          "sha256": "0053175d47b8c69632ca4c43ba8b011c80f8d9193a3cf65825ce05b298f41dad",
+          "codepoints": 492
+        },
+        "first-comment.md": {
+          "sha256": "f1a7393bbe8641b1a4cf7ad818351e33a886ea6525a54f039666b7772752ffbb",
+          "codepoints": 159
+        },
+        "cards.md": {
+          "sha256": "096cca3b4a34d9a83bd5d02de7432c77a1ed8f9a790b051914db61518dc4eef6",
+          "codepoints": 984
+        }
+      }
+    },
+    "P1/ja/r3": {
+      "path": "astra/review-inputs/grok/P1/ja/r3/submitted-2128-2134",
+      "files": {
+        "body.md": {
+          "sha256": "c53249accfa091ab49a0c1f669375aa4811bf10ddb85459ae06050eeaa2e43a8",
+          "codepoints": 385
+        },
+        "ko-meaning.md": {
+          "sha256": "424096abe6b88840cd3d55fb3e30d0aa3a10880a21f7e05bb5b2f0add9e52e6a",
+          "codepoints": 598
+        },
+        "first-comment.md": {
+          "sha256": "08fa198def719a531a37de2cc80b0c55a85a2995b50a117a34e7770c6da1ff4e",
+          "codepoints": 159
+        },
+        "cards.md": {
+          "sha256": "a5aa276ca7b8de728e0e4e9748780ca5d3949122047188bab8643803a70f37b2",
+          "codepoints": 555
+        }
+      }
+    },
+    "P1/en/r2": {
+      "path": "astra/review-inputs/grok/P1/en/r2/submitted-2128-2134",
+      "files": {
+        "body.md": {
+          "sha256": "397d950b789ed3161bd1bfedc840ca85d5c0c84546072e0eb742ad5a587a86d5",
+          "codepoints": 497
+        },
+        "ko-meaning.md": {
+          "sha256": "d5b6c4c2122cc7a6797f04134972e6a8f7e8372aa98e4996a85d9dd8f2d2f0fc",
+          "codepoints": 491
+        },
+        "first-comment.md": {
+          "sha256": "07d19e44a0905150c7bc61bc93403949510f79de443d4d1ce2864ff9155ef134",
+          "codepoints": 221
+        },
+        "cards.md": {
+          "sha256": "0d446adc55be95b49139e2c54058c0433c62bbae28f7e83022ba65ad153ec5f5",
+          "codepoints": 1564
+        }
+      }
+    },
+    "P2/en/r2": {
+      "path": "astra/review-inputs/grok/P2/en/r2/submitted-2128-2134",
+      "files": {
+        "body.md": {
+          "sha256": "7acae796360520ce4f74e8b1eb3ba292fe233cca97252ecad1d9a855827ecdb8",
+          "codepoints": 491
+        },
+        "ko-meaning.md": {
+          "sha256": "a32a600ebf854492d00cc294994e29f04d9f43c437ad5bf2169d69e9eb4c685a",
+          "codepoints": 461
+        },
+        "first-comment.md": {
+          "sha256": "1916160d67962284f9e48ac2489cbfedb8f01aa6d204155bfe440c8407453416",
+          "codepoints": 194
+        },
+        "cards.md": {
+          "sha256": "735cd03a4eec04fbef9b9373ad4174a8ae1831044fa4c202e79644b0f6833158",
+          "codepoints": 1435
+        }
+      }
+    },
+    "P3/en/r2": {
+      "path": "astra/review-inputs/grok/P3/en/r2/submitted-2128-2134",
+      "files": {
+        "body.md": {
+          "sha256": "8d79b27801d08d2dc3823e081105de31f690952f3f9cbc246525484e621302b7",
+          "codepoints": 498
+        },
+        "ko-meaning.md": {
+          "sha256": "0f46b0a241221ac414d1a64e08e44a651dfff47c93c5b44f49f87b5118ab2bd5",
+          "codepoints": 595
+        },
+        "first-comment.md": {
+          "sha256": "5049303a68b55c9e465031fb5496eff9bb014398a2c2c3da6e5c45cd053aad2f",
+          "codepoints": 227
+        },
+        "cards.md": {
+          "sha256": "c44e891b8a9d759a912a7712b25895ceb8def85a1924fb3abf0f14b2d16fab51",
+          "codepoints": 1814
+        }
+      }
+    }
+  }
+}

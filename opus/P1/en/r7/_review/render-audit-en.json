@@ -1,0 +1,1282 @@
+[
+ {
+  "card": 1,
+  "layout": "core",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Taiwan trial court · rental deposit",
+    "role": "label",
+    "size": 38,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     64,
+     164,
+     694,
+     204
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Never signed the lease.",
+    "role": "headline",
+    "size": 74,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     248,
+     926,
+     328
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Still lost the deposit case.",
+    "role": "headline",
+    "size": 74,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     337,
+     1016,
+     414
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Lease",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     128,
+     569.0,
+     242,
+     599.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Not signed",
+    "role": "object",
+    "size": 34,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     128,
+     848.0,
+     311,
+     883.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Deposit wired",
+    "role": "object",
+    "size": 34,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     596,
+     639.0,
+     828,
+     674.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "NT$21,800",
+    "role": "amount",
+    "size": 68,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     596,
+     738.0,
+     964,
+     814.0
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The court said the lease was formed at the",
+    "role": "body",
+    "size": 39,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1029,
+     842,
+     1062
+    ],
+    "rotate": null
+   },
+   {
+    "text": "viewing, when rent and term were settled verbally.",
+    "role": "body",
+    "size": 39,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1080,
+     998,
+     1121
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter backed out the same day.",
+    "role": "open-loop",
+    "size": 48,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1146,
+     916,
+     1196
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin District Court · 115 Shi-Xiao-Zi 864",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     663,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 30, 2026 · small-claims ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     579,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "01",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 2,
+  "layout": "space",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Renter's side · made-up scene",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     568.9,
+     58,
+     1019.9,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter (name withheld)",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     94,
+     177,
+     512,
+     211
+    ],
+    "rotate": null
+   },
+   {
+    "text": "My stuff won't fit. I'm out.",
+    "role": "headline",
+    "size": 66,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     94,
+     236,
+     964,
+     306
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Nothing was signed, so they",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1013,
+     671,
+     1062
+    ],
+    "rotate": null
+   },
+   {
+    "text": "wanted the money back.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1072,
+     599,
+     1120
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The company said no.",
+    "role": "open-loop",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1144,
+     592,
+     1197
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin District Court · 115 Shi-Xiao-Zi 864",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     663,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 30, 2026 · small-claims ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     579,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "02",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 3,
+  "layout": "agreement",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Company's side · made-up scene",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     524.8,
+     58,
+     1019.8,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Management company",
+    "role": "speaker",
+    "size": 32,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     192,
+     183,
+     540,
+     214
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Rent's set. The ad said 1 year.",
+    "role": "headline",
+    "size": 52,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     192,
+     251,
+     961,
+     306
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Unit · rent · minimum term",
+    "role": "object",
+    "size": 34,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     137,
+     474,
+     587,
+     501
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Rent (NT$)",
+    "role": "object",
+    "size": 34,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     137,
+     574,
+     310,
+     610
+    ],
+    "rotate": null
+   },
+   {
+    "text": "21,800",
+    "role": "amount",
+    "size": 135,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     137,
+     649,
+     541.0,
+     783
+    ],
+    "rotate": null
+   },
+   {
+    "text": "/mo",
+    "role": "unit",
+    "size": 50,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     556.0,
+     712,
+     655.0,
+     762
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Min.",
+    "role": "object",
+    "size": 34,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     768,
+     576,
+     837,
+     603
+    ],
+    "rotate": null
+   },
+   {
+    "text": "1",
+    "role": "amount",
+    "size": 135,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     768,
+     651,
+     818.0,
+     752
+    ],
+    "rotate": null
+   },
+   {
+    "text": "yr",
+    "role": "unit",
+    "size": 47,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     857,
+     725,
+     905,
+     763
+    ],
+    "rotate": null
+   },
+   {
+    "text": "We canceled 3 other viewings",
+    "role": "object",
+    "size": 36,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     449,
+     972,
+     966,
+     1010
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter's own LINE message came up too.",
+    "role": "open-loop",
+    "size": 39,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1138,
+     911,
+     1180
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin District Court · 115 Shi-Xiao-Zi 864",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     663,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 30, 2026 · small-claims ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     579,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "03",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 4,
+  "layout": "message",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Message quoted in the ruling",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     592.6,
+     58,
+     1019.6,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter's LINE message after wiring the money",
+    "role": "object",
+    "size": 38,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     182,
+     957,
+     224
+    ],
+    "rotate": null
+   },
+   {
+    "text": "NT$21,800",
+    "role": "amount",
+    "size": 118,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     126,
+     363,
+     764,
+     491
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Sent as the",
+    "role": "headline",
+    "size": 84,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     126,
+     601,
+     597,
+     669
+    ],
+    "rotate": null
+   },
+   {
+    "text": "“rental deposit.”",
+    "role": "headline",
+    "size": 84,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     126,
+     724,
+     841,
+     811
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Translated from Chinese",
+    "role": "object",
+    "size": 36,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     126,
+     869,
+     543,
+     899
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter gave this chat to the court.",
+    "role": "open-loop",
+    "size": 46,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1146,
+     906,
+     1196
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin District Court · 115 Shi-Xiao-Zi 864",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     663,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 30, 2026 · small-claims ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     579,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "04",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 5,
+  "layout": "judgment",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The ruling",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     869.2,
+     58,
+     1020.2,
+     90
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Ruling: no refund owed",
+    "role": "headline",
+    "size": 76,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     91,
+     222,
+     986,
+     303
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Lease (unsigned)",
+    "role": "object",
+    "size": 33,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     113,
+     512,
+     379,
+     548
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Terms agreed",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     513,
+     448,
+     787,
+     489
+    ],
+    "rotate": null
+   },
+   {
+    "text": "at the viewing",
+    "role": "object",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     513,
+     499,
+     802,
+     541
+    ],
+    "rotate": null
+   },
+   {
+    "text": "NT$21,800/month",
+    "role": "object",
+    "size": 40,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     513,
+     604,
+     870,
+     647
+    ],
+    "rotate": null
+   },
+   {
+    "text": "1-year minimum",
+    "role": "object",
+    "size": 40,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     513,
+     672,
+     838,
+     715
+    ],
+    "rotate": null
+   },
+   {
+    "text": "LINE: “承租訂金”",
+    "role": "object",
+    "size": 44,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     451,
+     834,
+     811,
+     876
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The lease existed from the viewing day.",
+    "role": "body",
+    "size": 44,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1087,
+     878,
+     1134
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Backing out over space was on the renter.",
+    "role": "open-loop",
+    "size": 42,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     60,
+     1151,
+     914,
+     1195
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin District Court · 115 Shi-Xiao-Zi 864",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     663,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 30, 2026 · small-claims ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     579,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "05",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ },
+ {
+  "card": 6,
+  "layout": "proof",
+  "problems": [],
+  "min_size": 32,
+  "rows": [
+   {
+    "text": "Taiwan court files",
+    "role": "masthead",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     84,
+     57,
+     361,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "This case · trial court",
+    "role": "tag",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     705.3,
+     58,
+     1020.3,
+     83
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Proving the company's fault",
+    "role": "headline",
+    "size": 67,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     159,
+     1011,
+     230
+    ],
+    "rotate": null
+   },
+   {
+    "text": "was up to the renter.",
+    "role": "headline",
+    "size": 67,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     60,
+     257,
+     756,
+     324
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter's",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     96,
+     432,
+     341,
+     465
+    ],
+    "rotate": null
+   },
+   {
+    "text": "own reason",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     96,
+     489,
+     329,
+     513
+    ],
+    "rotate": null
+   },
+   {
+    "text": "After paying, their",
+    "role": "object",
+    "size": 41,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     95,
+     582,
+     469,
+     626
+    ],
+    "rotate": null
+   },
+   {
+    "text": "stuff wouldn't fit",
+    "role": "object",
+    "size": 41,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     96,
+     633,
+     441,
+     668
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The judge saw it as",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     96,
+     724,
+     392,
+     757
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter's side",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     96,
+     768,
+     451,
+     805
+    ],
+    "rotate": null
+   },
+   {
+    "text": "On record",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     174,
+     868,
+     362,
+     899
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Proof of",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     606,
+     432,
+     770,
+     465
+    ],
+    "rotate": null
+   },
+   {
+    "text": "company fault",
+    "role": "label",
+    "size": 40,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     606,
+     480,
+     897,
+     521
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The company caused",
+    "role": "object",
+    "size": 36,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     606,
+     587,
+     980,
+     625
+    ],
+    "rotate": null
+   },
+   {
+    "text": "the deal to fail",
+    "role": "object",
+    "size": 36,
+    "weight": 800,
+    "lang": "en",
+    "bbox": [
+     606,
+     631,
+     863,
+     662
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Who had to show it",
+    "role": "label",
+    "size": 32,
+    "weight": 700,
+    "lang": "en",
+    "bbox": [
+     606,
+     724,
+     905,
+     750
+    ],
+    "rotate": null
+   },
+   {
+    "text": "The renter",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     606,
+     770,
+     829,
+     805
+    ],
+    "rotate": null
+   },
+   {
+    "text": "None filed",
+    "role": "label",
+    "size": 38,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     684,
+     867,
+     881,
+     899
+    ],
+    "rotate": null
+   },
+   {
+    "text": "So the claim for the NT$21,800",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1087,
+     729,
+     1136
+    ],
+    "rotate": null
+   },
+   {
+    "text": "and interest was rejected.",
+    "role": "body",
+    "size": 46,
+    "weight": 500,
+    "lang": "en",
+    "bbox": [
+     60,
+     1148,
+     622,
+     1196
+    ],
+    "rotate": null
+   },
+   {
+    "text": "Shilin District Court · 115 Shi-Xiao-Zi 864",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1249,
+     663,
+     1275
+    ],
+    "rotate": null
+   },
+   {
+    "text": "June 30, 2026 · small-claims ruling",
+    "role": "source",
+    "size": 32,
+    "weight": 400,
+    "lang": "en",
+    "bbox": [
+     60,
+     1288,
+     579,
+     1320
+    ],
+    "rotate": null
+   },
+   {
+    "text": "06",
+    "role": "page",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     968.8,
+     1274,
+     1019.8,
+     1308
+    ],
+    "rotate": null
+   }
+  ]
+ }
+]

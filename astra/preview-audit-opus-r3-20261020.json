@@ -1,0 +1,225 @@
+{
+  "scope": "P2/P3 r3 preliminary previews; P1 reuses checked r2 preview",
+  "images": [
+    {
+      "path": "opus/P2/r3/preview/images/ko/card-01.png",
+      "sha256": "96fbe109537178499be20ee371670779a1afafdef4e716f824bd81c2242bb425",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": true,
+      "visual_basis": "identical to independently viewed r2",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P2/r3/preview/images/ko/card-02.png",
+      "sha256": "a94f567de60935e906f0d4f0b5041ac4569089cf503048282701f6e2fbc9819a",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": false,
+      "visual_basis": "opened r3 individually",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P2/r3/preview/images/ko/card-03.png",
+      "sha256": "4e11de28392f2a770c1e38d94c88a48ccfb4ea1a7db698794a78b1db79abc20d",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": false,
+      "visual_basis": "opened r3 individually",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P2/r3/preview/images/ko/card-04.png",
+      "sha256": "86d42fec4fb30cfaa747469c79879cfee43fec948c200dde49b6a3af0f742f81",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": false,
+      "visual_basis": "opened r3 individually",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P2/r3/preview/images/ko/card-05.png",
+      "sha256": "5066ca31e90861b472e0a6899c5ddf1eb0476862ee18402a17026f9e6c44d45a",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": true,
+      "visual_basis": "identical to independently viewed r2",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P3/r3/preview/images/ko/card-01.png",
+      "sha256": "14eb03bd1c0d47ff1d9744b38e549dd4cbcc474e5c25a70dae872cd974601b16",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": true,
+      "visual_basis": "identical to independently viewed r2",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P3/r3/preview/images/ko/card-02.png",
+      "sha256": "e638bb1f7e7d4c7818597501a6271abe5761c31ffad2fc33267ba4559c092a14",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": false,
+      "visual_basis": "opened r3 individually",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P3/r3/preview/images/ko/card-03.png",
+      "sha256": "426a8a6b9a4543ee433f92493852fb210e4d36dccde7352f82ae3122cc6dca44",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": true,
+      "visual_basis": "identical to independently viewed r2",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P3/r3/preview/images/ko/card-04.png",
+      "sha256": "145444b9449373315626f1cedbb795ef64294c3e642cbbb8b1cbdb0e67fae9c9",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": true,
+      "visual_basis": "identical to independently viewed r2",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P3/r3/preview/images/ko/card-05.png",
+      "sha256": "57dc61b5c3c0f3622fcad548477f1acd52f616b102f61ebab43f8c1f265fa1c2",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": false,
+      "visual_basis": "opened r3 individually",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    },
+    {
+      "path": "opus/P3/r3/preview/images/ko/card-06.png",
+      "sha256": "c83cf794fc51138cc5a315f15360f99648743c6faf35bd0b7ba97c23641fc909",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "png_chunk_types": [
+        "IDAT",
+        "IEND",
+        "IHDR",
+        "bKGD"
+      ],
+      "identical_to_r2": true,
+      "visual_basis": "identical to independently viewed r2",
+      "renderer_report": {
+        "problems": [],
+        "min_size": 32
+      }
+    }
+  ]
+}

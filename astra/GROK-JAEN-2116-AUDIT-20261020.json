@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-20T21:23:50.741887+09:00",
+  "packages": {
+    "P1-ja-r2": {
+      "snapshot": "astra/review-inputs/grok/P1/ja/r2/submitted-2116-2123",
+      "files": {
+        "body.md": {
+          "sha256": "c53249accfa091ab49a0c1f669375aa4811bf10ddb85459ae06050eeaa2e43a8",
+          "codepoints": 385
+        },
+        "cards.md": {
+          "sha256": "5cba30b8614bf3a962c948c9dbc0cf85e3144e19fd8f3d6b7a78e138687f1627",
+          "codepoints": 549
+        },
+        "first-comment.md": {
+          "sha256": "08fa198def719a531a37de2cc80b0c55a85a2995b50a117a34e7770c6da1ff4e",
+          "codepoints": 159
+        },
+        "ko-meaning.md": {
+          "sha256": "70c29a3dbc7e85f32c725d70bfff9f656fffea949a07f1b824eef69a4b09b984",
+          "codepoints": 513
+        }
+      }
+    },
+    "P2-ja-r2": {
+      "snapshot": "astra/review-inputs/grok/P2/ja/r2/submitted-2116-2123",
+      "files": {
+        "body.md": {
+          "sha256": "3996fa8fe6e91cbb8315d7c41b2afd37b8eb79c88c29468f58cc718c8cebdd97",
+          "codepoints": 430
+        },
+        "cards.md": {
+          "sha256": "28cdec4802c7a78c4a3ae40200ab3bc9ac434005e0a940e0f40c0f75e7e03455",
+          "codepoints": 466
+        },
+        "first-comment.md": {
+          "sha256": "1ef7c854057212b43c472928e24ce7c2fc3910cd8bc4f6942b7466d82635043f",
+          "codepoints": 135
+        },
+        "ko-meaning.md": {
+          "sha256": "9e7d4d369b8c441f51a99c5d7bfb11d0ebaecfda4d02247739a2e21b5eaf078b",
+          "codepoints": 530
+        }
+      }
+    },
+    "P3-ja-r2": {
+      "snapshot": "astra/review-inputs/grok/P3/ja/r2/submitted-2116-2123",
+      "files": {
+        "body.md": {
+          "sha256": "36afb8c80cea2ef62d0e6446cff0c7271c0215f22b986c06fcd05f9bd06a021f",
+          "codepoints": 419
+        },
+        "cards.md": {
+          "sha256": "37b4ef5bbb0d8a8c6b9a5544adaf53f17e1aa363a8a65649e005e6f232e09b37",
+          "codepoints": 700
+        },
+        "first-comment.md": {
+          "sha256": "fb237a38f75b08b706083bf4352b1f1de3545468c607cfd0beb74d5abeb1dc81",
+          "codepoints": 152
+        },
+        "ko-meaning.md": {
+          "sha256": "725848643e0cacca2aecb4751515e0b2a0baa7266468ebb2758c67f276e5dea2",
+          "codepoints": 677
+        }
+      }
+    },
+    "P1-en-r1": {
+      "snapshot": "astra/review-inputs/grok/P1/en/r1/submitted-2116-2123",
+      "files": {
+        "body.md": {
+          "sha256": "24dfb1ee696d582ab20cd74abddbf43b19b086773ab57574cb78365d75fa8a6c",
+          "codepoints": 484
+        },
+        "cards.md": {
+          "sha256": "0d446adc55be95b49139e2c54058c0433c62bbae28f7e83022ba65ad153ec5f5",
+          "codepoints": 1564
+        },
+        "first-comment.md": {
+          "sha256": "07d19e44a0905150c7bc61bc93403949510f79de443d4d1ce2864ff9155ef134",
+          "codepoints": 221
+        },
+        "ko-meaning.md": {
+          "sha256": "8660040ac6bac494ab7e7c8056a9166af79e1005707b74df52188365b562e014",
+          "codepoints": 461
+        }
+      }
+    },
+    "P2-en-r1": {
+      "snapshot": "astra/review-inputs/grok/P2/en/r1/submitted-2116-2123",
+      "files": {
+        "body.md": {
+          "sha256": "38012f927da813845cad99938c5eaa75db5968b81a5c22a2b0cba5c5cb3505d2",
+          "codepoints": 475
+        },
+        "cards.md": {
+          "sha256": "575992186ba738c6ece8c6f28d54553f16ee89d7e1138eacd83091ad6c760a05",
+          "codepoints": 1442
+        },
+        "first-comment.md": {
+          "sha256": "1916160d67962284f9e48ac2489cbfedb8f01aa6d204155bfe440c8407453416",
+          "codepoints": 194
+        },
+        "ko-meaning.md": {
+          "sha256": "8f162f0a78c44c5a88fd2e53c8fd1574b3534774f92bab719bcc0ff276d0e9cd",
+          "codepoints": 463
+        }
+      }
+    },
+    "P3-en-r1": {
+      "snapshot": "astra/review-inputs/grok/P3/en/r1/submitted-2116-2123",
+      "files": {
+        "body.md": {
+          "sha256": "cf08914aaea561c839339a0926d569bbc0308d0e7acf572d54924082eb95f33c",
+          "codepoints": 499
+        },
+        "cards.md": {
+          "sha256": "05d7dd16f85062ce2f22e36b17a21cc31d3c783faff5a93431b77cb6a7b4be2a",
+          "codepoints": 1993
+        },
+        "first-comment.md": {
+          "sha256": "5049303a68b55c9e465031fb5496eff9bb014398a2c2c3da6e5c45cd053aad2f",
+          "codepoints": 227
+        },
+        "ko-meaning.md": {
+          "sha256": "945372a85b96426ea8fc3005e60845fb53236fe98a684fac38f432c34286ca32",
+          "codepoints": 679
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 About Dec 2023, a Hsinchu restaurant. A wife had a friend witness her divorce agreement. The couple's lines were blank.
 
-On Dec 14 the couple signed and registered it.
+On Dec 14 they signed and registered it.
 
-The husband sued, saying no one had asked him. The friend saw the couple at a gathering five years before but testified to never meeting, contacting or asking him then. Neither spouse objected.
+The husband sued. The friend had seen the couple at a party five years before. Around the signing, the friend never met or contacted him or checked whether he wanted a divorce. Neither spouse objected.
 
-The trial court didn't count the friend; even with the other witness, there weren't two. The divorce was void; they were still married.
+The trial court didn't count the friend; even with the other witness, there weren't two. The divorce was void; they remained married.

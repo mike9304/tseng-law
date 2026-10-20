@@ -1,4 +1,4 @@
-No names here: just the husband, the wife, and the friend who signed as a witness. The speech bubbles and the restaurant drawing on the cards are made-up scenes based on the ruling, not real conversations or photos.
+No names here: just the husband, the wife, and the friend who signed as a witness. The restaurant scene on card 2 is reconstructed from the testimony in the ruling, and the speech bubble on card 3 summarizes testimony recorded in the ruling. Neither is a real conversation or photo.
 
 They married in January 2007 and have two minor children. On Dec 14, 2023, they signed a divorce agreement and registered the divorce together at the household registration office (戶政事務所) the same day. Neither side disputes that, and the court checked the registration records.
 

@@ -30,7 +30,7 @@ Taiwan's labor rules have had no probation provision since June 12, 1997. That w
 
 The Ministry's note on [probation agreements](https://www.mol.gov.tw/1607/28162/28296/28340/28342/28356/47085/post) says employers and workers may agree on a reasonable probation period suited to the job, provided it is consistent with good faith. A worker on probation has the same rights as any other. To end the contract during probation or when it finishes, the employer still needs a ground under [Article 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11) or [Article 12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12) of the Labor Standards Act, or the proviso to Article 13. A worker assessed as unsuitable is dismissed under Article 11, with notice and severance. The Ministry's [FAQ](https://www.mol.gov.tw/1607/28690/2282/2326/2288/7100/post) adds Articles 16 and 17 and Article 12 of the Labor Pension Act to that list.
 
-Attendance is the other route. Absence without good reason for three days in a row, or six days in a month, allows dismissal without notice, and the employer must act within 30 days of learning of it ([Article 12(1)(vi) and (2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)). In that case the worker cannot claim notice pay or severance ([Article 18(i)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)).
+Unjustified absence can also support dismissal. Three consecutive days, or six days in a month, without good reason allow dismissal without notice, and the employer must act within 30 days of learning of it ([Article 12(1)(vi) and (2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)). In that case the worker cannot claim notice pay or severance ([Article 18(i)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)).
 
 ## How much room the courts give
 
@@ -50,7 +50,7 @@ Which system covers a foreign employee changed in 2026. [Article 24 of the Act f
 
 Once a labor dispute is in mediation, arbitration or adjudication, the employer may not terminate the contract because of that dispute ([Act for Settlement of Labor-Management Disputes, Article 8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8)). In the 2024 Supreme Court case, a dismissal notice sent during mediation was held unlawful; the later termination, after mediation failed, took effect. For what a dismissal means for a foreign worker's permit and ARC, see [our column on being told a Taiwan job is ending](/en/columns/foreign-professional-dismissed-taiwan).
 
-In the 2026 cases, the courts looked at the same kinds of record: the probation assessment, the interview notes, and the reason given for the dismissal.
+The records that decided the two 2026 cases were different. In the pharmacy case, the probation assessment sheet and three interview records signed by both sides supported the dismissal. The bus driver's case turned on the LINE messages the driver exchanged with the dispatch center and the manager on the day of the accident, and the file held no evidence of earlier misconduct.
 
 Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
 

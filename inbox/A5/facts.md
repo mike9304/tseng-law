@@ -58,3 +58,14 @@
     - TPHV/115,勞上,39,20260818,1: 1,020,057 B, SHA-256 a53bf54fb22c417c7fbc44a24d7984b73a83d2e3ce0c96f9fc248986629e0898; 67/75 windows, misses in tables.
     - KSHV/115,勞上易,11,20261007,1: 678,233 B, SHA-256 adb10f3918b6244ba9dd2decbe7da51e81806ef6baa26a6cf63b56c6d6701baa; 44/44 windows.
     - TPHV/115,勞上,92,20260901,1: 758,362 B, SHA-256 a471215f6d41f7d8ea27d4285758a7ad96d5cb1d1ff62c7e83fe5bd29aca2f6f; 53/53 windows.
+
+## Astra r2 fix log (2026-10-20 ~23:58 KST)
+Evidence each 2026 court actually relied on (from the cached printData texts, unchanged since the r1 re-open; byte counts in the r1 log above):
+- 臺灣高等法院 115勞上39 (pharmacy): 不爭執事項 ㈢ 「被上訴人分別於113年7月29日、同年8月8日、15日與上訴人進行訪談及紀錄，兩造均在歷次訪談紀錄上簽名（原審卷第115至121頁）」; ㈤ 「門市新進人員試用評該表，認定…核定分數為17.5分，未達正式任用資格之門檻80分」; reasoning cites 「學習紀錄表及…人員訪談紀錄可稽」.
+- 臺灣高等法院高雄分院 115勞上易11 (bus driver): 「有LINE對話紀錄在卷可佐（見原審卷一第101、102頁）」 (driver ↔ 行控中心 / 洪傳諒經理, 2025-02-07); 不爭執事項 ㈥ LINE對話紀錄, ㈤ 道路交通事故談話紀錄表; 「卷內並無證據顯示其曾有違反交通安全、違反勤務規範、或遭申訴、不服指揮監督等不良紀錄」. No assessment sheet or interview record is relied on.
+- 臺灣高等法院 115勞上92 (zh only, 新北環保局): 「有刷卡資料可稽」; 「曾對上訴人進行多次訪談並發出書面告誡，有訪談紀錄表、書面告誡報告單可稽」; 「有訪談紀錄表、終止勞動契約通知書可稽」.
+Fixes:
+1. Closings rewritten (x4) to distinguish the evidence: pharmacy = assessment sheet + three interview records signed by both sides; driver = same-day LINE messages with the dispatch center and manager, no evidence of earlier misconduct; zh also 環保局 = swipe-card data, interview records, written warnings.
+2. ko 「최장 6개월분」 → 「최대 6개월분」 (FAQ 2 and body).
+3. ja opening sentences 「試用期間なら…辞めてもらえる。台湾ではこの前提が通りません。」 deleted.
+4. en "Attendance is the other route." → "Unjustified absence can also support dismissal." (next sentence trimmed to avoid repeating "Absence without good reason").

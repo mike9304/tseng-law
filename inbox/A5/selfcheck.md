@@ -50,3 +50,8 @@ Source: ASTRA-FAIL.md (r1), renamed ASTRA-FAIL-fixed-1.md. All 11 findings were 
 - zh title, H1 and summary.
 - Verification blocker: four judgments re-opened via printData and the official PDFs (rebuttal.md).
 Checks: variety FAIL 0 (ko/ja/en; zh --lang zh-hant). Links BAD 0. YAML OK x4. Lengths: en 884 words, ko 1,811 chars without spaces, ja 1,865, zh 1,642.
+
+## Astra r2 re-check (2026-10-20 ~23:58 KST)
+- variety: ko OK (short 0.103), ja OK (short 0.081), en OK, zh (--lang zh-hant) OK. FAIL 0.
+- links.py BAD 0; YAML (ruby safe_load) OK x4; faq 3 each; featured_image TBD; no 曾雋崴, no bold.
+- Lengths (blen.py): en 918 words, ko 1,896 chars without spaces, ja 1,919, zh 1,721.

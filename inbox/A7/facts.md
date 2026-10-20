@@ -17,3 +17,10 @@
 
 Internal links (exist in ref): 002 withdraw-capital-taiwan-company, 055 taiwan-company-dissolution-liquidation, 343 closing-taiwan-subsidiary-branch-liquidation-tax-filings in each locale. Link check BAD 0.
 Hypothetical (ko only): subsidiary stopped business end-2025 — labelled 「(가상의 예입니다)」.
+
+## Astra r1 re-check (2026-10-20 20:4x KST, LawSingle fetched live via research/bin/law.py)
+- Art. 10 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=10) — 三、公司名稱經法院判決確定不得使用，公司於判決確定後六個月內尚未辦妥名稱變更登記，並經主管機關令其限期辦理仍未辦妥。四、未於第七條第一項所定期限內，檢送經會計師查核簽證之文件者。但於主管機關命令解散前已檢送者，不在此限。 → ko/ja/en now state all conditions and the exception.
+- Art. 79 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=79) — 公司之清算，以全體股東為清算人。但本法或章程另有規定或經股東決議，另選清算人者，不在此限。
+- Art. 81 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=81) — 不能依第七十九條規定定其清算人時，法院得因利害關係人之聲請，選派清算人。
+- Art. 113 II (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=113) — 除前項規定外，公司變更章程、合併、解散及清算，準用無限公司有關之規定。 → 有限公司 liquidators: Art. 79/81 via 113 (all shareholders by default); 股份有限公司: Art. 322 (directors by default).
+- Art. 397 II — 除命令解散或裁定解散外，應定三十日之期間，催告公司負責人聲明異議；逾期不為聲明或聲明理由不充分者，即廢止其登記。 → headings now "may be revoked"; condition restated in body.

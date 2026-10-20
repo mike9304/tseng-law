@@ -1,24 +1,24 @@
 # A7 selfcheck (2026-10-20)
 
-## Variety check
+## Variety check (re-run after Astra r1 fixes, 2026-10-20 20:5x KST)
 ```
-drafts/A7/ko.md [ko] sentences=38 mean=38.9 cv=0.506 short=0.105 run3=0.028 opener_rep=0.083 cite_end=0.263 cite_para=0.667 contrast=1 caveat=1 q=3
+drafts/A7/ko.md [ko] sentences=42 mean=40.0 cv=0.489 short=0.119 run3=0.05 opener_rep=0.083 cite_end=0.262 cite_para=0.667 contrast=1 caveat=1 q=3
   OK — no variety limit violated
-drafts/A7/ja.md [ja] sentences=39 mean=40.3 cv=0.501 short=0.128 run3=0.0 opener_rep=0.167 cite_end=0.205 cite_para=0.667 contrast=0 caveat=0 q=0
+drafts/A7/ja.md [ja] sentences=45 mean=40.0 cv=0.532 short=0.156 run3=0.0 opener_rep=0.167 cite_end=0.2 cite_para=0.667 contrast=0 caveat=0 q=0
   OK — no variety limit violated
-drafts/A7/en.md [en] sentences=33 mean=23 cv=0.52 short=0.182 run3=0.065 opener_rep=0.083 cite_end=0.212 cite_para=0.667 contrast=2 caveat=0 q=2
+drafts/A7/en.md [en] sentences=38 mean=23.6 cv=0.544 short=0.211 run3=0.056 opener_rep=0.083 cite_end=0.211 cite_para=0.667 contrast=2 caveat=0 q=2
   OK — no variety limit violated
-drafts/A7/zh.md [zh-hant] sentences=28 mean=43.2 cv=0.756 short=0.179 run3=0.0 opener_rep=0.083 cite_end=0.286 cite_para=0.75 contrast=0 caveat=0 q=3
+drafts/A7/zh.md [zh-hant] sentences=30 mean=45.3 cv=0.726 short=0.2 run3=0.0 opener_rep=0.083 cite_end=0.3 cite_para=0.75 contrast=0 caveat=0 q=3
   OK — no variety limit violated
 ```
 FAIL 0 in all four.
 
 ## Length
 ```
-drafts/A7/en.md words 713
-drafts/A7/ja.md chars_nospace 1625 chars_with_space 1657
-drafts/A7/ko.md chars_nospace 1602 chars_with_space 2075
-drafts/A7/zh.md chars_nospace 1275 chars_with_space 1307
+drafts/A7/en.md words 885
+drafts/A7/ja.md chars_nospace 1948 chars_with_space 1980
+drafts/A7/ko.md chars_nospace 1881 chars_with_space 2427
+drafts/A7/zh.md chars_nospace 1498 chars_with_space 1530
 ```
 
 ## Duplicate check
@@ -31,3 +31,7 @@ Queued angle (dissolution, liquidation, deregistration, tax clearance before rep
 - Resolved before READY: inspection duty now split by company type (Art. 326 for companies limited by shares; Art. 87 I–II via Art. 113 for limited companies).
 - Art. 26-2 "presupposes" reading is interpretive.
 - No judgment or MOEA statistic cited for how often Art. 10 / 397 are used.
+
+## Astra r1 fixes (2026-10-20)
+- 7/7 findings applied: Art.10(3) final-judgment/6-month/authority-deadline conditions + 10(4) pre-order submission exception (ko/ja/en); liquidator default split by company type — 股份有限公司 Art.322 directors, 有限公司 Art.113→79 all shareholders, 81 court appointment (summary, FAQ2, body; all four); Art.397 headings 'may be revoked' + no-timely-objection/insufficient-grounds condition (ko/ja/zh body; en body+FAQ3 aligned); ko checklist heading/fragment removed; line-39 conclusions qualified to 'where the director default applies' (all four); ko 해산 결정 (also ja 裁判所の決定による解散); en 'Article 87(1)–(2), as applied through Article 113' (ko/ja/zh aligned).
+- Arts. 10, 79, 81, 113, 322, 397 re-fetched live from LawSingle 2026-10-20 20:4x KST.

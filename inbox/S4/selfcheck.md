@@ -64,7 +64,7 @@ Also proactive: Art. 23(1) proviso (court-appointed administrator → runs from 
 featured_image "TBD" kept: user decision A via son-bridge (IN-claude-20261020-195011). The integrator adds the image and the 4 alts before deploy.
 
 
-## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+## 2026-10-20 21:11 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
 I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
     drafts/S4/ko.md [ko] sentences=53 mean=41.7 cv=0.478 short=0.094 run3=0.039 opener_rep=0.0 cite_end=0.094 cite_para=0.333 contrast=1 caveat=0 q=2
     drafts/S4/ja.md [ja] sentences=56 mean=42.4 cv=0.51 short=0.161 run3=0.111 opener_rep=0.067 cite_end=0.089 cite_para=0.333 contrast=1 caveat=0 q=0
@@ -72,7 +72,7 @@ I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The 
     drafts/S4/zh.md [ko] sentences=41 mean=44.4 cv=0.602 short=0.171 run3=0.0 opener_rep=0.0 cite_end=0.122 cite_para=0.312 contrast=0 caveat=0 q=2
 
 
-## Astra r2 response (2026-10-20 21:35 KST)
+## Astra r2 response (2026-10-20 21:13 KST)
 1–4. MAJOR, lawyer name: removed (x4), as in the 21:11 note.
 5. MAJOR, mortgage alternative (FAQ 3, x4): now "real estate that meets Tax Collection Act Art. 11-1, mortgaged to the tax authority", with Art. 11-1 linked inline and in the sources.
 6. MAJOR, zh counter route: online application is open to anyone abroad who can use an accepted credential; the counter (in person or through an agent) is for those who cannot. The passport rule applies to counter applicants without a national ID.

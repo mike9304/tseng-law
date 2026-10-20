@@ -31,7 +31,7 @@ Fetched 2026-10-20 from law.moj.gov.tw (cache research/cache/).
 - 028 taiwan-foreign-spouse-residence (all 4 locales); 257 taiwan-naturalization-keep-original-nationality (all 4 locales).
 
 
-## Astra r1 additions (2026-10-20 21:45 KST) — texts re-read on law.moj.gov.tw (國籍法 113-05-24; 施行細則 113-11-19)
+## Astra r1 additions (2026-10-20 21:17 KST) — texts re-read on law.moj.gov.tw (國籍法 113-05-24; 施行細則 113-11-19)
 - 國籍法4(1)(2): 「…或其配偶死亡後未再婚且有事實足認與其亡故配偶之親屬仍有往來，但與其亡故配偶婚姻關係已存續二年以上者，不受與親屬仍有往來之限制。」 → zh opening, en summary and ko/ja/zh summaries now state both conditions (no remarriage + contact, contact waived at 2+ years).
 - 國籍法3(1)(3): 「無不良素行，且無警察刑事紀錄證明之刑事案件紀錄。」 → all locales now name the police criminal record certificate (警察刑事紀錄證明) and keep the separate conduct requirement.
 - 4(1)(3): 「對無行為能力、或限制行為能力之中華民國國籍子女，有扶養事實、行使負擔權利義務或會面交往。」 → summaries/FAQ 2 use the capacity wording and all three alternatives.

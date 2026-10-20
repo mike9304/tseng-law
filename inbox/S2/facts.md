@@ -89,7 +89,7 @@ Other judgments read, not used: TCDV 113婚268, CYDV 113婚127, HLDV 112婚58, K
 - zh /zh-hant/columns/divorce-agreement-terms-before-signing (columns-zh/114) and /zh-hant/columns/taiwanese-spouse-divorce-agreement-registration (columns-zh/019)
 
 
-## Astra r2 additions (2026-10-20 21:05 KST)
+## Astra r2 additions (2026-10-20 21:11 KST)
 
 ### Appellate history (official 歷審裁判 endpoint, evidence/judgment-history.txt)
 - 新北 113婚455 → 臺灣高等法院 114年度審家上字第14號 (2025-05-27) [撤回上訴]. No public text for the withdrawal; the history entry is the source. Drafts: "appeal withdrawn on May 27, 2025".

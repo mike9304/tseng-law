@@ -36,7 +36,7 @@ URL (Executive Yuan file): https://www.ey.gov.tw/File/F86FD1FD1EB5BE6F
 - 6-month complaint period, CALI claims procedure (A6, Air lane). International driving permits (not verified).
 
 
-## Astra r1 additions (2026-10-20 22:05 KST) — texts re-read on law.moj.gov.tw and the MOTC terms (evidence/)
+## Astra r1 additions (2026-10-20 21:25 KST) — texts re-read on law.moj.gov.tw and the MOTC terms (evidence/)
 - 鄉鎮市調解條例27(2): 「經法院核定之民事調解，與民事確定判決有同一之效力；經法院核定之刑事調解，以給付金錢…為標的者，其調解書得為執行名義。」 → every summary now says "civil" mediation.
 - 29: (1) 因當事人聲請而成立之民事調解 → 向原核定法院提起宣告調解無效或撤銷調解之訴; (2) 法院移付而成立之民事調解 → 請求續行訴訟程序; (3) 「應於法院核定之調解書送達後三十日內為之」. → body and FAQ 3 give both routes and the deadline from service of the approved record (x4).
 - 20: 「當事人無正當理由，於調解期日不到場者，視為調解不成立。但調解委員會認為有成立調解之望者，得另定調解期日。」 15(1): 「…通知當事人或其代理人到場」. → rescheduling proviso + attendance through a representative, before the departure-date conclusion (x4).

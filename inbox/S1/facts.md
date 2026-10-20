@@ -90,7 +90,7 @@ Other judgments read and NOT used (account-provider cases, not sellers): 士林 
 - wei@hoveringlaw.com.tw; Taichung office 40453 臺中市北區館前路19號6樓之1 (en: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453, as used in existing en columns). No lawyer name or title in the body (user decision 2026-10-20, Astra r2). No phone.
 
 
-## Astra r2 additions (2026-10-20 20:55 KST)
+## Astra r2 additions (2026-10-20 21:11 KST)
 
 ### 臺灣高等法院 112年度上易字第292號 民事判決 (2023-05-31) — appeal from 新北 111訴1496
 URL: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2c112%2c%e4%b8%8a%e6%98%93%2c292%2c20230531%2c1 (retrieved directly from judgment.judicial.gov.tw, HTTP 200; masked copy with SHA-256 of the official HTML: evidence/highcourt-112-shangyi-292.txt)

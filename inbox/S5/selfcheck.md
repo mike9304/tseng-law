@@ -49,7 +49,7 @@ taiwan-naturalization-after-spouse-death-or-divorce (0 filename matches).
 - Other naturalization routes: now described as 'one of the requirements in Enforcement Rules Art. 7, e.g. income > 2× basic wage or assets > NT$5m' (ko/ja; en already said 'for example'). Domicile now includes the intent-to-stay element (ko/ja).
 
 
-## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+## 2026-10-20 21:11 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
 I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
     drafts/S5/ko.md [ko] sentences=37 mean=40.3 cv=0.579 short=0.189 run3=0.0 opener_rep=0.0 cite_end=0.081 cite_para=0.538 contrast=0 caveat=0 q=1
     drafts/S5/ja.md [ja] sentences=36 mean=44.1 cv=0.552 short=0.083 run3=0.029 opener_rep=0.077 cite_end=0.111 cite_para=0.538 contrast=0 caveat=1 q=0
@@ -57,7 +57,7 @@ I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The 
     drafts/S5/zh.md [ko] sentences=30 mean=40.8 cv=0.52 short=0.167 run3=0.036 opener_rep=0.0 cite_end=0.1 cite_para=0.583 contrast=0 caveat=0 q=1
 
 
-## Astra r1 response (2026-10-20 21:45 KST)
+## Astra r1 response (2026-10-20 21:17 KST)
 1. MAJOR, widow eligibility: zh opening and en summary now give both conditions (not remarried + continuing contact with the late spouse's relatives, contact waived if the marriage lasted 2+ years). ko/ja/zh summaries match.
 2. MAJOR, criminal record: in all four locales it now means a criminal case on the police criminal record certificate, kept separate from the conduct requirement (Art. 3(1)(3)).
 3. MAJOR, en Art. 7(1)(2): "more than" NT$5 million, Taiwan income averaged over the most recent year, property in Taiwan. The comparison is limited to routes covered by 7(1)(2) (e.g. the general five-year route).

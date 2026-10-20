@@ -28,3 +28,14 @@ URL: https://gazette.nat.gov.tw/egFront/detail.do?metaid=161826&log=detailLog (P
 
 ## Scope note
 - Severance entitlement (labor law) = A5 Air lane; this column is tax-only. Home-country taxation / treaties not analysed (caveat sentence only).
+
+
+## Astra r1 additions (2026-10-20 21:28 KST) — texts re-read on law.moj.gov.tw (所得稅法 115-09-11; 扣繳率標準 110-06-30)
+- 所得稅法71-1(2): 「中華民國境內居住之個人，於年度中廢止中華民國境內之住所或居所離境者，應於離境前就該年度之所得辦理結算申報納稅。但其配偶如為中華民國境內居住之個人，仍繼續居住中華民國境內者，應由其配偶依第七十一條規定，合併辦理結算申報納稅。」 → the departure filing now requires giving up the domicile/residence (x4); the spouse exception is kept and attributed to Art. 71.
+- 17-1: 「個人於年度進行中因死亡或離境，依第七十一條之一規定辦理綜合所得稅結算申報者，其免稅額及標準扣除額之減除，應分別按該年度死亡前日數，或在中華民國境內居住日數，占全年日數之比例，換算減除。」 → NT$101,000 / NT$136,000 marked as annual amounts and proration explained (ko/ja/en/zh). The drafts note that 17-1 is written for 71-1 returns and do not state how the spouse's Art. 71 joint return treats the departing spouse.
+- 14(1) 第三類: 「薪資所得之計算，以在職務上或工作上取得之各種薪資收入，減除第十七條第一項第二款第三目之2薪資所得特別扣除額後之餘額為所得額，餘額為負數者，以零計算。」 → en separates the salary deduction (salary income only, not below zero) from the exemption/standard deduction.
+- 94: 「如原扣稅額與稽徵機關核定稅額不符時，扣繳義務人於繳納稅款後，應將溢扣之款，退還納稅義務人。」 → en "So are refunds" deleted; the sentence now only says there is no annual progressive-rate settlement.
+- 扣繳率標準13(1): 「中華民國境內居住之個人如有第二條規定之所得，扣繳義務人每次應扣繳稅額不超過新臺幣二千元者，免予扣繳。」 (退職所得 is not among the listed separately-taxed exceptions) → body, summaries and FAQ 3 add the exemption; body adds that exemption from withholding is not exemption from tax (x4).
+- 92(1): 1月底前彙報, 2月10日前填發; 1月連續三日以上國定假日 → 2月5日 / 2月15日. 94-1: an issuer that filed on time, where the taxpayer is a resident individual and the data are in the filing-season income-data query service, 「得免填發憑單予納稅義務人」, but 「如納稅義務人要求填發時，仍應填發」. → the certificate paragraph is qualified (x4).
+- 扣繳率標準3(1)(2) and (11): non-resident salary 18% with the 1.5× basic wage 6% exception; retirement income 18% after the tax-free amount → en now names "Article 3 of the Withholding Standards" for the salary rule.
+- Headings: 「떠나기 전에 받아 둘 서류」/「帰国前に受け取っておく書類」/"Papers to collect before you go"/「回國前拿齊文件」 → headings on when the withholding statement is issued. ja 「税務署で検証を受けてから」 → 「税務当局に申告し、確認を受けてから」.

@@ -67,7 +67,7 @@ featured_image "TBD": same as S1. It is kept per TASK.md, and the user decision 
 Variety after fixes: FAIL 0 in all four files (ko cv 0.466, ja 0.485, en 0.551, zh 0.612). Lengths: ko 1,971 chars, ja 2,163, zh 1,657, en 915 words.
 
 
-## Astra r2 response (2026-10-20 21:20 KST)
+## Astra r2 response (2026-10-20 21:11 KST)
 1. MAJOR, lawyer name: removed in all four contact lines.
 2. MAJOR, en summary: "If the divorce is void for failure to satisfy the witness requirement, the marriage never ended". The summary also says "lacked two qualified witnesses" and that the Taoyuan dismissal was upheld on appeal.
 3. MAJOR, zh summary: 「三件因未具備兩名適格證人而認定離婚無效」. The same correction is made in ko/ja/en (New Taipei: only one witness failed).

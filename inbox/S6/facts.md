@@ -32,7 +32,7 @@ Fetched 2026-10-20.
 - ko → 207 (columns/207-taiwan-semiconductor-shift-work-labor-law-korean-subsidiary); en → 221; zh → 062. ja: none (no ja overtime column exists).
 
 
-## Astra r1 additions (2026-10-20 21:55 KST)
+## Astra r1 additions (2026-10-20 21:21 KST)
 - 勞基法32 (N0030001 flno=32): (1) 「雇主經工會同意，如事業單位無工會者，經勞資會議同意後，得將工作時間延長之」; (2) 46h, 但書 54h/138h with the same union-first consent; (3) 「雇主僱用勞工人數在三十人以上，依前項但書規定延長勞工工作時間者，應報當地主管機關備查」. → all four drafts: union consent, LMC only where there is no union, plus the 30-worker reporting duty.
 - 施行細則20-1 (N0030002 flno=20-1): 「每日工作時間超過八小時或每週工作總時數超過四十小時之部分。但依本法第三十條第二項、第三項或第三十條之一第一項第一款變更工作時間者，為超過變更後工作時間之部分。」 + 勞基法30(4) (only designated industries) and 30-1 → the 8h/40h sentence is now limited to an ordinary schedule; lawful redistribution moves the threshold (x4).
 - 施行細則50-1: 監督、管理人員 = 「負責事業之經營及管理工作，並對一般勞工之受僱、解僱或勞動條件具有決定權力之主管級人員」; 責任制專業人員 = 「以專門知識或技術完成一定任務並負責其成敗之工作者」. → manager test now covers management duties plus power over hiring, dismissal or working conditions; responsibility-system professional definition added in ko/ja (en/zh already had it).

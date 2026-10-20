@@ -56,7 +56,7 @@ Header: 「稽徵機關單一窗口受理查詢被繼承人金融遺產資料作
 - 保險法 Art 13(3): 「人身保險，包括人壽保險、健康保險、傷害保險及年金保險。」 LawSingle pcode=G0390002&flno=13.
 
 
-## Astra r2 additions (2026-10-20 21:35 KST)
+## Astra r2 additions (2026-10-20 21:13 KST)
 - 遺產及贈與稅法第41條 (current text, law.moj.gov.tw LawSingle G0340072 flno=41): 「其有特殊原因必須於繳清稅款前辦理產權移轉者，得提出確切納稅保證，或同意以符合稅捐稽徵法第十一條之一規定之應稅不動產設定抵押權予稽徵機關，申請該管主管稽徵機關核發同意移轉證明書。」 → FAQ 3 (x4) now says the property must meet Tax Collection Act Art. 11-1 and the mortgage is in favour of the tax authority.
 - 稅捐稽徵法第11條之1 (G0340001 flno=11-1): 相當擔保 list; item 4 「易於變價、無產權糾紛且能足額清償之土地或已辦妥建物所有權登記之房屋」. Added to sources (x4). URL HTTP 200.
 - 第42條: 「應通知當事人檢附稽徵機關核發之稅款繳清證明書，或核定免稅證明書或不計入遺產總額證明書或不計入贈與總額證明書，或同意移轉證明書之副本」 → ko/ja now list the payment certificate with the exemption, exclusion and consent-to-transfer certificates; en says "one of those certificates or a tax payment certificate".

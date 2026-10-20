@@ -48,7 +48,7 @@ taiwan-responsibility-system-overtime-approval-interpretation-726 (0 matches).
 - Art. 32: the overtime cap now includes 54 h/month (≤138 h per 3 months) with union or labor-management consent, plus the disaster/sudden-event exception (all 4). Added evidence copies: J.Y. 726 page text, MOL 84-1 page excerpt, MOL designated-worker list.
 
 
-## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+## 2026-10-20 21:11 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
 I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
     drafts/S6/ko.md [ko] sentences=37 mean=40.3 cv=0.466 short=0.108 run3=0.0 opener_rep=0.0 cite_end=0.108 cite_para=0.636 contrast=1 caveat=0 q=1
     drafts/S6/ja.md [ja] sentences=39 mean=39.6 cv=0.487 short=0.154 run3=0.0 opener_rep=0.0 cite_end=0.103 cite_para=0.583 contrast=0 caveat=0 q=0
@@ -56,7 +56,7 @@ I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The 
     drafts/S6/zh.md [ko] sentences=29 mean=41.9 cv=0.653 short=0.276 run3=0.0 opener_rep=0.0 cite_end=0.172 cite_para=0.727 contrast=0 caveat=0 q=1
 
 
-## Astra r1 response (2026-10-20 21:55 KST)
+## Astra r1 response (2026-10-20 21:21 KST)
 1. MAJOR, framing: the ko/en titles and H1s were rewritten (ko 「근로시간을 따로 정해도 연장근로수당은 남는다」; en "\"You're Covered by the Responsibility System\": Taiwan's Article 84-1 and Overtime Pay"). The ja passage 「その説明が法律上通るのは…」 and the zh 「這句話要成立，至少得過三關」 now describe a special-hours arrangement and state that overtime beyond approved normal hours is still paid. The summaries say the same (x4). The en heading "No approval, no exemption" became "When the agreement was never approved".
 2. MAJOR, manager test: management duties plus decision power over hiring, dismissal or working conditions (x4).
 3. MAJOR, designated engineers: each list item now carries its Art. 50-1 qualification, and the actual duties must fit. The zh hypothetical engineer is tested against 50-1(2). ko/ja closings add the duties test.

@@ -51,7 +51,7 @@ taiwan-rental-scooter-car-accident-repair-loss-of-use-mediation (0 matches).
 - Scooter repair costs by degree of fault: added 'unless otherwise agreed' (term 14). CALI: 'in principle' in ko/ja summaries; Art. 28 victim-intent/crime exclusion; Art. 29 insurer pays and then recovers from a drunk or unlicensed driver (Road Traffic Management and Penalty Act 21/21-1). Sources updated. Added evidence copies of both MOTC rental-term documents.
 
 
-## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+## 2026-10-20 21:11 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
 I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
     drafts/S7/ko.md [ko] sentences=43 mean=36.1 cv=0.484 short=0.093 run3=0.0 opener_rep=0.0 cite_end=0.233 cite_para=0.273 contrast=1 caveat=2 q=0
     drafts/S7/ja.md [ja] sentences=46 mean=35.2 cv=0.499 short=0.152 run3=0.068 opener_rep=0.0 cite_end=0.217 cite_para=0.273 contrast=0 caveat=2 q=0
@@ -59,7 +59,7 @@ I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The 
     drafts/S7/zh.md [ko] sentences=35 mean=35.5 cv=0.574 short=0.229 run3=0.03 opener_rep=0.0 cite_end=0.229 cite_para=0.333 contrast=0 caveat=0 q=1
 
 
-## Astra r1 response (2026-10-20 22:05 KST)
+## Astra r1 response (2026-10-20 21:25 KST)
 1. MAJOR, "civil": added in all four summaries (Art. 27(2)).
 2. MAJOR, Art. 29 routes: a party-initiated civil mediation is challenged by an invalidity/rescission suit in the approving court; a court-referred one by a request to resume the lawsuit. In both cases the deadline is 30 days from service of the approved record (body + FAQ 3, x4).
 3. MAJOR, CALI Art. 29: the insured person (Art. 9: including a driver using the vehicle with the policyholder's consent), the accident caused under the listed circumstances, the breath/blood alcohol limit, drugs/intent/crime, and the 21/21-1 licensing breach as a separate item, with the 2-year subrogation limit (x4). ko 「술을 마셨거나」 and the ja grouping are gone.

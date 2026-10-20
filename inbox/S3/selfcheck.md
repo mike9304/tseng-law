@@ -60,7 +60,7 @@ featured_image "TBD": same as S1 and S2, kept per TASK.md. The user's decision i
 Variety after fixes: FAIL 0 in all four files (ko cv 0.483, ja 0.479, en 0.514, zh 0.597). en has 842 words.
 
 
-## Astra r2 response (2026-10-20 21:20 KST)
+## Astra r2 response (2026-10-20 21:11 KST)
 1–4. MAJOR, lawyer name: removed in all four contact lines.
 5. MAJOR, ja trigger: 「法定財産制が終了するとき」.
 6. MAJOR, en "jointly": now "jointly and severally, limited to the inherited estate" (主文 「於繼承…遺產範圍內，連帶給付」).

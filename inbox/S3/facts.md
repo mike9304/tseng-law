@@ -58,7 +58,7 @@ https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c111%2c%e9%87%8d%
 - zh /zh-hant/columns/taiwan-marital-property-regime-international-couples (columns-zh/046), /zh-hant/columns/remaining-property-distribution-calculation (columns-zh/106)
 
 
-## Astra r2 additions (2026-10-20 21:15 KST)
+## Astra r2 additions (2026-10-20 21:11 KST)
 
 ### Appellate history (official 歷審裁判 endpoint, evidence/judgment-history.txt)
 - 最高法院 111台上2561 (from 士林地院 108婚198 → 高院 109家上5) → 臺灣高等法院 111年度家上更一字第22號 判決 (2023-07-05). URL https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2c111%2c%e5%ae%b6%e4%b8%8a%e6%9b%b4%e4%b8%80%2c22%2c20230705%2c1 ; evidence/highcourt-111-remand-22.txt (names masked). Key passages:

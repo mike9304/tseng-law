@@ -48,9 +48,27 @@ taiwan-severance-retirement-income-tax-foreign-employees-183-days (0 matches).
 - Art. 71-1(2): added the proviso that a resident spouse staying in Taiwan files jointly. Art. 92: added the 5-day extension for 3+ consecutive holidays and the Feb 15 extension. Added evidence/mof-2026-amounts-announcement.txt (gazette text).
 
 
-## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+## 2026-10-20 21:11 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
 I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
     drafts/S8/ko.md [ko] sentences=36 mean=38.3 cv=0.48 short=0.083 run3=0.029 opener_rep=0.0 cite_end=0.167 cite_para=0.385 contrast=0 caveat=2 q=0
     drafts/S8/ja.md [ja] sentences=35 mean=40.3 cv=0.46 short=0.171 run3=0.03 opener_rep=0.0 cite_end=0.171 cite_para=0.385 contrast=0 caveat=1 q=0
     drafts/S8/en.md [en] sentences=43 mean=17.2 cv=0.498 short=0.186 run3=0.049 opener_rep=0.0 cite_end=0.047 cite_para=0.462 contrast=1 caveat=0 q=1
     drafts/S8/zh.md [ko] sentences=30 mean=38.4 cv=0.631 short=0.1 run3=0.0 opener_rep=0.0 cite_end=0.1 cite_para=0.462 contrast=0 caveat=0 q=1
+
+
+## Astra r1 response (2026-10-20 21:28 KST)
+1. MAJOR, 71-1(2): the departure filing applies to a resident who gives up a Taiwan domicile or residence and leaves; the resident-spouse exception is kept (x4).
+2. MAJOR, proration: the annual amounts are marked as annual, and Art. 17-1 proration for departure returns is explained; the spouse's Art. 71 joint return is distinguished (17-1 is written for 71-1 returns) without stating more than the text says.
+3. MAJOR, en salary deduction: it applies only in calculating salary income (not below zero), so it does not reduce retirement income.
+4. MAJOR, en "So are refunds": deleted (Art. 94 refunds over-withheld tax).
+5. MAJOR, NT$2,000 withholding exemption for residents (Withholding Standards Art. 13): added in the body (with "not tax-free"), the summaries and FAQ 3 (x4).
+6. MAJOR, certificate delivery: Art. 92(1) filing/issuing deadlines incl. the holiday extensions; Art. 94-1 lets issuers skip delivery to residents in qualifying cases, but they must issue on request (x4).
+7. MINOR, en: "Article 3 of the Withholding Standards" is named.
+8. MINOR, headings: now about when the withholding statement is issued (x4).
+9. MINOR, ja: 「税務当局に申告し、確認を受けてから」.
+Variety (FAIL 0):
+    drafts/S8/ko.md [ko] sentences=42 mean=39.1 cv=0.459 short=0.095 run3=0.075 opener_rep=0.0 cite_end=0.214 cite_para=0.385 contrast=0 caveat=3 q=0
+    drafts/S8/ja.md [ja] sentences=40 mean=42.7 cv=0.45 short=0.15 run3=0.132 opener_rep=0.0 cite_end=0.2 cite_para=0.385 contrast=0 caveat=2 q=0
+    drafts/S8/en.md [en] sentences=46 mean=19.7 cv=0.543 short=0.152 run3=0.023 opener_rep=0.0 cite_end=0.087 cite_para=0.462 contrast=1 caveat=0 q=1
+    drafts/S8/zh.md [ko] sentences=32 mean=42.8 cv=0.662 short=0.094 run3=0.033 opener_rep=0.0 cite_end=0.156 cite_para=0.462 contrast=0 caveat=0 q=1
+Lengths: ko 1,890 chars, ja 1,930, zh 1,530, en 926 words.

@@ -69,3 +69,10 @@ Point-by-point (ja sentence → judgment text):
 - Linked inline and added to the source list: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=95 — Art. 95(1) 「保險對象因汽車交通事故，經本保險之保險人提供保險給付後，得向強制汽車責任保險之保險人請求償付該項給付。」 zh wording changed from 「代位求償」 to 「代位請求」 to match 給付標準 Art. 2(6) 「…依全民健康保險法第九十五條規定，向本保險之保險人代位請求。」
 
 r3 (2026-10-21): ja now also states the Art. 31(2) proviso (no reimbursement to the insured where the claimant and insured agreed against deduction) — source: Art. 31 text above, re-fetched live 2026-10-21. en Art. 32 sentence → "counts toward the damages the insured owes" (Art. 32: 「視為被保險人損害賠償金額之一部分；被保險人受賠償請求時，得扣除之」).
+
+## Astra r4 fix log (2026-10-21 ~03:30 KST)
+- Finding 1 (MAJOR, owner vs insured): Arts. 9 and 40 re-fetched live 2026-10-21 (research/law/G0390060-9.txt, -40.txt).
+  - Art. 9(2) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=9 「本法所稱被保險人，指經保險人承保之要保人及經該要保人同意使用或管理被保險汽車之人。」
+  - Art. 40(1)(iii) 「事故汽車係未經被保險人同意使用或管理之被保險汽車。」; Art. 40(2) 「前項第三款規定未經被保險人同意使用或管理認定如有疑義，在確認前，應由被保險汽車之保險人暫先給付保險金。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=40
+  - ko 「소유자 동의 없이」 → 「피보험자의 동의 없이 피보험차량이 사용·관리되었는지」; ja 「持ち主の同意なく使われていた」 → 「被保険者の同意なく使用・管理されていた被保険車だった」; en "without the insured owner's consent" → "the insured vehicle was being used or managed without the insured's consent" (Art. 14(4) sentence aligned: "an insured vehicle used or managed without the insured's consent"); zh aligned to 「被保險汽車未經被保險人同意而使用或管理的」.
+- Finding 2 (MINOR): ko summary content-preview sentence deleted.

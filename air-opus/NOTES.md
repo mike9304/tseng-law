@@ -85,3 +85,4 @@
 - 02:04 KST: 동기화 결함 재발(Studio 01:57·02:02 2커밋) — ref 재정렬, HANDOFF에 재발 기재. Studio Opus의 Air r1 비평(review-studio/opus-on-air-opus-r1.md) 확인: 조각 문장 한도·P2 직역·댓글 질문 2개 등, r1 고정이라 대응 없음. P1 '사정' MINOR는 Grok이 수신 확인, Astra 판정 대기.
 - 02:17 KST: 동기화 재발 — ref 재정렬(7c3d6ac, loop 방식 fetch exit 0). 실수: 02:14에 refspec 없이 'git fetch --depth 20 origin'을 실행해 tseng-law 전 브랜치를 받기 시작함 → 즉시 중지, 미완성 임시 팩 1.6GB(.sync-git/.git/objects/pack/tmp_pack_*) 삭제, 다른 ref 생성 없음·.git 28M·연결성 검사 정상. 이후 fetch는 반드시 '+refs/heads/threads-collab-1020:…'만 지정.
 - 02:24 KST: 동기화 재발(Studio 02:07~02:23 4커밋) — ref 재정렬. 02:1x 루프 1회 실패는 내 잘못된 fetch의 shallow.lock과 겹친 것(잠금은 이미 사라짐). Studio 새 내용은 NOTES뿐, Astra의 P1 제안 판정 대기.
+- 02:34 KST: 동기화 원인 분석 정정 — 새 커밋 1개만 있어도 거부(88b17a7 위 bfe641a 사례). Air push 성공은 전부 수동 ref 재정렬 직후. HANDOFF에 정정 기재. Studio 변화는 NOTES뿐, Astra P1 판정 대기.

@@ -1,0 +1,4 @@
+- [MAJOR] ko / ja / en — “소유자 동의 없이” / “持ち主の同意なく” / “without the insured owner's consent” — These substitute the owner for the statutory insured person, changing the conditions for Fund compensation or provisional insurer payment. The insured includes the policyholder and authorized users/managers. See [Article 9(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=9) and [Article 40(1)(3)–(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=40). — Replace respectively with “피보험자의 동의 없이 피보험차량이 사용·관리되었는지”, “被保険者の同意なく使用・管理されていた被保険車だった”, and “the insured vehicle was being used or managed without the insured’s consent.”
+- [MINOR] ko — “보험사에 직접 청구하는 방법, 2년 시효, 10영업일 지급, 상대방 배상액에서 공제되는 구조를 정리합니다.” — The summary ends with a content preview prohibited by the voice rules. — Delete this sentence; retain the preceding substantive summary.
+
+VERDICT: FAIL

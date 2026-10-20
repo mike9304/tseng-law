@@ -2289,6 +2289,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-related-company-loan-permitted-conditions"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-work-permit-side-gig-other-employer"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-work-permit-side-gig-other-employer"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-work-permit-side-gig-other-employer"
     }
   ]
 }

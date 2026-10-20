@@ -1,0 +1,103 @@
+{
+ "case": "p2",
+ "lang": "en",
+ "cards": [
+  {
+   "number": 1,
+   "layout": "core_hook",
+   "tag": "",
+   "headline": "Two witnesses signed.\nThe divorce was registered.",
+   "labels": {
+    "kicker": "Taiwan trial court · divorce by agreement",
+    "paper_title": "Divorce agreement",
+    "stamp": "Registered",
+    "hero": "2",
+    "hero_label": "Witness signatures"
+   },
+   "foot": [
+    "",
+    "But the husband said he didn't even know who they were."
+   ]
+  },
+  {
+   "number": 2,
+   "layout": "restaurant",
+   "tag": "Made-up scene, based on testimony",
+   "speaker": "Wife → a friend",
+   "headline": "Can you sign as a witness here?",
+   "labels": {
+    "doc": "Agreement",
+    "dashed": ""
+   },
+   "foot": [
+    "It was just the wife and the friend. The husband wasn't there.",
+    "Neither spouse had signed yet."
+   ]
+  },
+  {
+   "number": 3,
+   "layout": "testimony",
+   "tag": "Paraphrased testimony",
+   "headline": "I don't have\nher husband's number.",
+   "labels": {
+    "who": "The friend, in court",
+    "mark": 1,
+    "facts": [
+     "Never met the husband before or after signing",
+     "Never asked him if he wanted a divorce",
+     "Didn't go on registration day"
+    ]
+   },
+   "foot": [
+    "Neither spouse disputed this testimony.",
+    "The court didn't count the friend as a witness."
+   ]
+  },
+  {
+   "number": 4,
+   "layout": "witnesses",
+   "tag": "Why the friend didn't count",
+   "headline": "A witness must see or hear\nthat both spouses want out.",
+   "labels": {
+    "sub": "",
+    "husband": "Husband",
+    "wife": "Wife",
+    "w1": "The friend",
+    "w2": "Other witness",
+    "w2_note": "Not ruled on",
+    "c_note": "Never\nchecked",
+    "wife_note": "Talked only to wife"
+   },
+   "foot": [
+    "Hearing it secondhand doesn't count,\neven from one of the spouses.",
+    ""
+   ]
+  },
+  {
+   "number": 5,
+   "layout": "formula",
+   "tag": "This case · trial court",
+   "headline": "Only two witnesses signed,\nand the friend didn't count.",
+   "labels": {
+    "items": [
+     [
+      "ok",
+      "In\nwriting"
+     ],
+     [
+      "x",
+      "2+ qualified\nwitnesses sign"
+     ],
+     [
+      "ok",
+      "Registered at\nthe office"
+     ]
+    ],
+    "result": "The other witness wasn't ruled on;\nfewer than two → void."
+   },
+   "foot": [
+    "Following case law, the judge asked whether each witness\nsaw or heard that both spouses wanted out."
+   ]
+  }
+ ]
+}

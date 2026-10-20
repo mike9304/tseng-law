@@ -61,7 +61,7 @@ author: "legal-ai-assistant"
 
 年の途中での出入国と居住者判定は[年の途中で台湾に来た・帰るときの所得税](/ja/columns/taiwan-income-tax-residency)で、給与の源泉徴収全般は[台湾子会社の日本人出向者と現地採用者の給与](/ja/columns/taiwan-payroll-foreign-employees-withholding-social-insurance)で扱いました。資遣費の支給要件そのものは労働法の問題で、この記事は税金だけを扱っています。
 
-連絡先は昊鼎国際法律事務所の曾雋崴弁護士、[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
 
 ## 参考にした公的資料
 

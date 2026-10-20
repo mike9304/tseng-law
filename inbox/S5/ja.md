@@ -55,7 +55,7 @@ author: "legal-ai-assistant"
 
 死別・離婚後に居留を続ける方法は[台湾人と結婚した外国人配偶者の居留](/ja/columns/taiwan-foreign-spouse-residence)で、帰化後の日本国籍の扱いは[台湾に帰化すると日本国籍はどうなるか](/ja/columns/taiwan-naturalization-keep-original-nationality)で扱いました。結婚から2年たたずに配偶者を亡くした人なら、配偶者の家族と連絡を取り続けてきた記録が、3年ルートの最初の証明になります。
 
-連絡先は昊鼎国際法律事務所の曾雋崴弁護士、[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
 
 ## 参考にした公的資料
 

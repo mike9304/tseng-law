@@ -53,7 +53,7 @@ Approval buys flexibility, not free hours. The Ministry of Labor's guidance says
 
 US managers looking for a salaried-exempt box will not find one; [our column on field engineers](/en/columns/us-equipment-vendor-field-engineers-taiwan-labor-law) covers that gap from the employer's side. For the manager who was simply told "you're on responsibility system," the questions are short: which item on the Ministry's list covers the job, where the written agreement is, and where the approval is.
 
-Attorney Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
 
 ## Official sources
 

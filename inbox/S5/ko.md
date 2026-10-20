@@ -55,7 +55,7 @@ author: "legal-ai-assistant"
 
 사별·이혼 뒤 거류를 이어 가는 방법은 [대만인과 결혼한 외국인 배우자의 거류](/ko/columns/taiwan-foreign-spouse-residence)에서, 귀화 뒤 한국 국적 문제는 [대만에 귀화하면 한국 국적은 어떻게 되나](/ko/columns/taiwan-naturalization-keep-original-nationality)에서 다뤘습니다. 앞의 가상 사례라면, 남편 쪽 가족과 연락을 이어 온 기록이 3년 경로의 첫 번째 증명이 됩니다.
 
-호정국제법률사무소(昊鼎國際法律事務所) 증준외(曾雋崴) 변호사 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
+호정국제법률사무소(昊鼎國際法律事務所) 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
 
 ## 참고한 공식 자료
 

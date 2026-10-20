@@ -55,7 +55,7 @@ author: "legal-ai-assistant"
 
 帰国日が決まっている旅行者には、期日に出られるかどうかが大きな分かれ目です。出国前に入った調解期日に行けなければ、その場で終えられた話が訴訟に移ることもあります。
 
-連絡先は昊鼎国際法律事務所の曾雋崴弁護士、[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
 
 ## 参考にした公的資料
 

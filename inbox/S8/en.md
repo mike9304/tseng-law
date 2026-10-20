@@ -61,7 +61,7 @@ Severance and retirement pay are among the payments an employer must withhold on
 
 Midyear residence rules are covered in [our column on arriving or leaving midyear](/en/columns/taiwan-income-tax-residency), and payroll withholding more broadly in [our column on payroll for US assignees and foreign hires](/en/columns/taiwan-payroll-foreign-employees-withholding-social-insurance). Whether severance is owed in the first place is a labor-law question; this piece deals only with tax.
 
-Attorney Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
 
 ## Official sources
 

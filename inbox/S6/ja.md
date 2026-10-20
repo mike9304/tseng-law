@@ -53,7 +53,7 @@ author: "legal-ai-assistant"
 
 「責任制」と説明された管理職に残る確認事項は三つです。自分の職務が労働部の一覧のどれに当たるのか、書面の合意があるのか、核備の文書があるのか。
 
-連絡先は昊鼎国際法律事務所の曾雋崴弁護士、[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
 
 ## 参考にした公的資料
 

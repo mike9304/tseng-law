@@ -65,7 +65,7 @@ author: "legal-ai-assistant"
 
 人在國外，光是文件驗證就要等上一段時間。死亡證明和關係證明備齊，這張查詢申請就能送出，六個月的申報期限也從死亡次日就開始算了。
 
-如需聯繫，可寫信至昊鼎國際法律事務所曾雋崴律師 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
+如需聯繫昊鼎國際法律事務所，可寫信至 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考的官方資料
 

@@ -63,7 +63,7 @@ Small balances are treated differently. Under the 1995 Ministry ruling (台財�
 
 Six months is not long from abroad. Counting the time an overseas mission needs to authenticate documents, an early search request leaves more room both to decide on renunciation and to prepare the return.
 
-Attorney Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
 
 ## Official sources
 

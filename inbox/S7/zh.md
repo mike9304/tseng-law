@@ -57,7 +57,7 @@ author: "legal-ai-assistant"
 
 當事人無正當理由在調解期日不到場，視為調解不成立（第20條）。遊客回程日期已定，若調解排在出國之後又無法到場，原本一次談完的事，就可能走向訴訟。核定後如有無效或得撤銷的原因，要在調解書送達後30日內起訴（第29條）；遲發傷勢的問題，可參考[車禍調解後才發現重大傷勢](/zh-hant/columns/taiwan-mediation-delayed-injury-rescission)。
 
-如需聯繫，可寫信至昊鼎國際法律事務所曾雋崴律師 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
+如需聯繫昊鼎國際法律事務所，可寫信至 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考的官方資料
 

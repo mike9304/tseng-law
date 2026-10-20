@@ -61,7 +61,7 @@ author: "legal-ai-assistant"
 
 年度中來台或離台的居住者判斷，見[年中來台或離台，所得稅的居住者身分怎麼判斷？](/zh-hant/columns/taiwan-income-tax-residency)；外籍員工薪資的扣繳，見[外商在台子公司的外籍員工薪資](/zh-hant/columns/taiwan-payroll-foreign-employees-withholding-social-insurance)。資遣費該不該給、給多少是勞動法的問題，本文只談稅。
 
-如需聯繫，可寫信至昊鼎國際法律事務所曾雋崴律師 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
+如需聯繫昊鼎國際法律事務所，可寫信至 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考的官方資料
 

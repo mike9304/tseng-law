@@ -55,7 +55,7 @@ For settling with the other party, each township, town and city office runs a me
 
 Attendance is the catch. That rule matters most to a visitor with a flight booked. A session set after your departure date that you cannot attend can turn a settlement you could have closed in one afternoon into a lawsuit.
 
-Attorney Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
 
 ## Official sources
 

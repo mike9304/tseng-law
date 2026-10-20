@@ -61,7 +61,7 @@ author: "legal-ai-assistant"
 
 연도 중 입출국 때의 거주자 판단은 [대만에 연도 중간에 입국하거나 출국했다면](/ko/columns/taiwan-income-tax-residency)에서, 급여 원천징수 전반은 [대만 자회사의 한국인 파견자·현지 채용자 급여](/ko/columns/taiwan-payroll-foreign-employees-withholding-social-insurance)에서 다뤘습니다. 해고수당의 지급 요건 자체는 노동법의 문제로, 이 글은 세금만 다룹니다.
 
-호정국제법률사무소(昊鼎國際法律事務所) 증준외(曾雋崴) 변호사 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
+호정국제법률사무소(昊鼎國際法律事務所) 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
 
 ## 참고한 공식 자료
 

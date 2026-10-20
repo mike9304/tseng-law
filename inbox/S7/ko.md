@@ -55,7 +55,7 @@ author: "legal-ai-assistant"
 
 귀국 날짜가 정해진 여행자라면 마지막 문장이 중요합니다. 출국 전에 잡힌 조정기일에 나가지 못하면, 그 자리에서 끝낼 수 있었던 일이 소송으로 넘어갈 수 있습니다.
 
-호정국제법률사무소(昊鼎國際法律事務所) 증준외(曾雋崴) 변호사 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
+호정국제법률사무소(昊鼎國際法律事務所) 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
 
 ## 참고한 공식 자료
 

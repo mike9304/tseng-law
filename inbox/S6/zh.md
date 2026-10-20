@@ -51,7 +51,7 @@ author: "legal-ai-assistant"
 
 加班費的請求期限、出勤紀錄在訴訟中的推定，可參考[加班費沒給或少給](/zh-hant/columns/taiwan-unpaid-overtime-pay)。回到那位工程師：系統研發工程師確實在名單上，接下來要問的，是書面約定在哪裡，核備的公文又在哪裡。
 
-如需聯繫，可寫信至昊鼎國際法律事務所曾雋崴律師 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
+如需聯繫昊鼎國際法律事務所，可寫信至 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考的官方資料
 

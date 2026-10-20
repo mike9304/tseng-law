@@ -63,7 +63,7 @@ author: "legal-ai-assistant"
 
 海外にいる相続人にとって、6か月は長くありません。在外機関の認証にも日数がかかります。葬儀後の早い段階で照会を申し込むと、申告の準備を進めやすくなります。
 
-連絡先は昊鼎国際法律事務所の曾雋崴弁護士、[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)です。台中事務所は40453 臺中市北區館前路19號6樓之1にあります。
 
 ## 参考にした公的資料
 

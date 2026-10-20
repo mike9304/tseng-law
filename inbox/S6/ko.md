@@ -51,7 +51,7 @@ author: "legal-ai-assistant"
 
 교대근무와 월 46시간 연장근로 한도는 [대만 반도체 협력사 자회사의 교대근무와 연장근로 한도](/ko/columns/taiwan-semiconductor-shift-work-labor-law-korean-subsidiary)에서 다뤘습니다. '책임제'라는 설명을 들은 관리자에게 남는 질문은 세 가지입니다. 내 직무가 노동부 목록의 어느 항목인지, 서면 약정이 있는지, 핵비 문서가 있는지.
 
-호정국제법률사무소(昊鼎國際法律事務所) 증준외(曾雋崴) 변호사 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
+호정국제법률사무소(昊鼎國際法律事務所) 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)이고, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1에 있습니다.
 
 ## 참고한 공식 자료
 

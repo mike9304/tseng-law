@@ -55,7 +55,7 @@ author: "legal-ai-assistant"
 
 喪偶或離婚後怎麼延續居留，見[與台灣人結婚的外籍配偶居留](/zh-hant/columns/taiwan-foreign-spouse-residence)；歸化後原國籍的問題，見[外國人歸化我國國籍，一定要放棄原國籍嗎？](/zh-hant/columns/taiwan-naturalization-keep-original-nationality)。結婚未滿兩年就喪偶的人，和公婆、親戚一直保持聯絡的紀錄，就是三年歸化最先要準備的一份證明。
 
-如需聯繫，可寫信至昊鼎國際法律事務所曾雋崴律師 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
+如需聯繫昊鼎國際法律事務所，可寫信至 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；台中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考的官方資料
 

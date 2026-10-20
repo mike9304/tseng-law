@@ -55,7 +55,7 @@ Some residence never counts. Article 5 of the Enforcement Rules excludes time sp
 
 How to keep residence after a death or divorce is covered in [our column on residence as the foreign spouse of a Taiwanese national](/en/columns/taiwan-foreign-spouse-residence); what happens to your original citizenship is in [our naturalization column](/en/columns/taiwan-naturalization-keep-original-nationality). For someone widowed less than two years into a marriage, the record of staying in touch with the spouse's family is the first piece of evidence the three-year route asks for.
 
-Attorney Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
 
 ## Official sources
 

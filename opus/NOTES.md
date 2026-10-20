@@ -139,3 +139,5 @@
 - 10-21 06:48 r8 KO 확정·JA/EN r8 제출(opus/R8-DONE.md). Astra 검수 대기.
 - 10-21 06:56 Grok r8 비평 반영(6개 본문). Astra 검수 대기.
 - 10-21 06:58 Astra r8 수정1 반영(opus/R8-FIX1-DONE.md). Astra 재검수 대기.
+- 10-21 07:04 Air r8 교차 비평 제출. Opus r8 수정1 Astra 재검수 대기.
+- 10-21 07:04 r8 Astra PASS, 선택 MINOR 2건 반영(opus/R8-FIX2-DONE.md). Bot·사용자 최종 확인 대기.

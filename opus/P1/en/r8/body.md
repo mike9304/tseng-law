@@ -6,4 +6,4 @@ That day they backed out, saying their stuff wouldn't fit and nothing was signed
 
 In court, the renter filed that LINE.
 
-The trial court found terms agreed before signing, backed by that word. Backing out over space was on the renter, with no company fault shown. The claim and interest failed.
+The trial court found a deal before signing; the LINE supported it. Backing out over space was on the renter, with no company fault shown. The claim and interest failed.

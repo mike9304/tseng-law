@@ -1,6 +1,6 @@
 Taipei, 2020. A bus ran a red light; a scooter's front hit its right side. A middle-schooler rode behind.
 
-The kid sought NT$343,000 for future implant-plan dental work. The rider broke a collarbone, had a four-week rest note and sought NT$385,022 in lost income.
+The kid sought NT$343,000 for future implant-plan dental work. The rider broke a collarbone, had a note for four weeks' rest and sought NT$385,022 in lost income.
 
 The trial court allowed the kid's full sum, citing age at the crash and teeth's role in chewing and looks.
 

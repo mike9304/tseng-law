@@ -247,3 +247,5 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 
 2026-10-21 02:03 KST 대기: P1 ‘사정→책임’은 수정안만 있고 Astra 채택이 없다. 새 FACTS·초안·Bot 검수 없음. STATUS는 10/20 21:45 그대로. 문안은 고치지 않음.
 2026-10-21 06:50 KST r8: Opus 후보 A 채점과 06:48 정식 9판을 비평했다. Grok KO 스토리 초안은 P1 r10, P2 r9, P3 r10. 선정 r7과 STATUS는 그대로. 게시 없음.
+2026-10-21 07:03 KST Air r8을 비평했다. Opus는 Astra FAIL 3건을 r8에 넣었고, 그 문장은 파일에 있다. Grok 초안은 다시 쓰지 않음. STATUS는 10/20 21:45 그대로. 게시 없음.
+2026-10-21 07:05 KST ASTRA-R8-FIX1 PASS. MAJOR 0. 영어 문체 MINOR 2건은 선택이라 Grok·Opus 문안을 고치지 않음. STATUS는 10/20 21:45 그대로. 게시 없음.

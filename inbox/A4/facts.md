@@ -74,3 +74,9 @@ https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpswwwim
   5. Deleted: ko 「그 일 때문에 받은 거류증도 무사하지 않습니다.」, ja 「期限は短いのです。」, en "This one stays with the family." (cross-link kept), zh 「三日內通報的對象裡有移民署，原因就在下一步。」
   6. en closing: four dates (employment end, certificate issue date, notification date, each ARC expiry). ko/ja/zh closing aligned to the same four dates.
 - ja short-sentence ratio fell below 0.08 after deletion 5; added 「認めるかどうかは移民署の判断です。」 (31(4) proviso is 「得准予」, discretionary).
+
+## Astra r3 (2026-10-21 ~01:15 KST)
+- 外國專業人才延攬及僱用法 Art. 15(1), re-fetched live https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=15 : 「外國特定專業人才及外國高級專業人才之配偶，經內政部移民署許可在我國依親居留者，得逕向勞動部申請許可，在我國從事工作；該工作許可期間不得逾其依親居留期間。」 — a duration ceiling only; it says nothing about automatic expiry when dependent residence ends early. en sentence "If the dependent residence ends, the spouse's work permit runs out with it." deleted (MAJOR 1). ko/ja/zh do not discuss Art. 15.
+- Art. 17(1) (cache research/law/A0030295-17.txt): 「…其本人及原經內政部移民署許可居留之配偶、未成年子女與因身心障礙無法自理生活之成年子女，得向內政部移民署申請延期居留。」 — names who may apply; no joint/household procedure. en heading → "An extension available to qualifying family members", "joint extension" sentence deleted, "are included" → "may apply as well", FAQ 1 rephrased so each eligible person applies (MINOR 2). zh 「第17條的延期也把他們納入」 → 「第17條也讓他們可以申請延期居留」 for the same reason.
+- ko: 「통지를 받는 곳에 이민서가 들어 있다는 점이 직원에게는 중요합니다.」 deleted (MINOR 3).
+- ko/ja summary second half now states the rule: eligible professional (worked in Taiwan, before expiry, residence still needed) may apply for a 6-month extension (once more, max 1 year); during labor-dispute litigation etc. the Agency may permit continued residence (移民法 31(4) 「得准予繼續居留」); the new employer applies for the permit with the separation certificate (就服法 53(1)) (MINOR 4).

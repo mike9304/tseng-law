@@ -2313,6 +2313,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-account-provider-scam-victim-civil-damages"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-rental-holding-deposit-dingjin"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-rental-holding-deposit-dingjin"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-rental-holding-deposit-dingjin"
     }
   ]
 }

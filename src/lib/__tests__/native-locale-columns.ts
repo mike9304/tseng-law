@@ -779,18 +779,22 @@ export const COUNTRY_COLUMN_FILES_20261020 = {
   ko: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
+    '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
   ],
   en: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
+    '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
   ],
   ja: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
+    '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
   ],
   'zh-hant': [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
+    '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
   ],
 } as const;
 

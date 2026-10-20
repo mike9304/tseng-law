@@ -48,7 +48,7 @@ author: "legal-ai-assistant"
 
 労働紛争の調停を申し立てられたら、その期間中、使用者はその紛争を理由に契約を終了できません（[勞資爭議處理法第8条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8)）。上の最高法院の事件でも、調停中の解雇通知は違法とされ、調停不成立後の解雇が効力を持ちました。試用期間以外の解雇手続は[台湾子会社で従業員を解雇するには](/ja/columns/taiwan-subsidiary-employee-dismissal)で扱っています。
 
-評価シート、面談記録、解雇通知に書いた条文。争いになれば、この三つが最初に読まれます。
+評価シート、面談記録、解雇の理由。2026年の判決も、こうした記録を手がかりに判断しています。
 
 昊鼎国際法律事務所の曾雋崴弁護士への連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
 

@@ -17,7 +17,7 @@ faq:
   - q: "별거 중인 배우자의 동의 없이 아이의 대만 여권을 만들 수 있나요?"
     a: "[여권조례 제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=16)는 미성년자의 여권 신청에 법정대리인의 동의나 신청을 요구하면서, 법정대리인이 두 사람 이상이면 그중 한 사람이 할 수 있다고 정합니다. 다만 사법기관이 주무관청에 통지한 경우 여권은 발급되지 않습니다([같은 조례 제23조 제1항 제2호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=23)). 여권 발급과 아이를 외국으로 옮겨 살게 할 권한은 따로 판단합니다."
   - q: "출국금지 임시처분은 언제 풀리나요?"
-    a: "결정문이 정한 기간, 보통은 본안이 취하·조정 성립·재판 확정으로 끝날 때까지 유지됩니다. 그 전에는 [가사사건법 제88조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=88)에 따라 처분이 부당하거나 더 이상 필요 없다고 인정될 때 본안 법원이 취소하거나 변경할 수 있습니다. 2026년 6월 25일 타이베이지방법원 115년도 家聲抗자 제42호 결정은 친권 판단 중 교육 방식 부분이 아직 항고심에 있다는 이유로 취소 신청을 받아들이지 않았습니다."
+    a: "이 글에서 본 두 결정은 금지 기간을 본안이 취하·조정(화해) 성립·재판 확정으로 끝날 때까지로 정했습니다. 법률은 별도로 실효 사유를 둡니다. 법률이나 법원이 달리 정하지 않으면 본안 청구가 기각 확정되거나 취하된 경우, 본안 재판·조정·화해의 내용과 다른 부분 등에서 임시처분은 효력을 잃습니다([가사사건법 제89조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=89)). 또 임시처분 결정이 확정된 뒤 부당하거나 더 이상 필요 없다고 인정되면 본안 법원이 취소하거나 변경할 수 있습니다([제88조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=88)). 2026년 6월 25일 타이베이지방법원 115년도 家聲抗자 제42호 결정은 친권 판단 중 교육 방식 부분이 아직 항고심에 있다는 이유로 취소 신청을 받아들이지 않았습니다."
 audience: ["ko"]
 author: "legal-ai-assistant"
 ---
@@ -30,7 +30,7 @@ author: "legal-ai-assistant"
 
 이혼 전이라면 미성년 자녀에 대한 권리와 의무는 원칙적으로 부모가 함께 행사합니다([민법 제1089조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1089)). 중요한 사항에서 뜻이 맞지 않으면 법원에 정해 달라고 청구할 수 있습니다. 따로 산 지 6개월 이상이면 [제1089조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1089-1)에 따라 이혼 때의 친권 결정 규정(제1055조부터 제1055조의2까지)을 준용해 누가 친권을 행사할지 법원이 정할 수 있습니다. 함께 살 수 없는 정당한 이유가 있거나 법률에 다른 규정이 있으면 예외입니다.
 
-여권은 생각보다 쉽게 나옵니다. [여권조례 제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=16)는 미성년자의 여권 신청에 법정대리인의 동의나 신청을 요구하면서, 법정대리인이 둘 이상이면 그중 한 사람이 해도 된다고 정합니다. 사법기관이 주무관청에 통지하면 대만 여권은 발급되지 않습니다([같은 조례 제23조 제1항 제2호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=23)). 아이에게 한국 여권도 있다면, 그 여권은 대만 여권조례가 다루는 대상이 아닙니다.
+여권은 요건이 다릅니다. [여권조례 제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=16)는 미성년자의 여권 신청에 법정대리인의 서면 동의(7세 이상)나 신청(7세 미만)을 요구하면서, 법정대리인이 둘 이상이면 그중 한 사람이 할 수 있다고 정합니다. 이 요건을 채운다고 발급이 보장되지는 않습니다. 사법기관이 주무관청에 통지하면 대만 여권은 발급되지 않습니다([같은 조례 제23조 제1항 제2호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=23)). 아이에게 한국 여권도 있다면, 그 여권은 대만 여권조례가 다루는 대상이 아닙니다.
 
 ## 출국금지 임시처분이 나오는 조건
 
@@ -42,11 +42,11 @@ author: "legal-ai-assistant"
 
 신베이 사건의 부모는 2024년 10월 이혼하면서 한쪽이 단독으로 친권을 행사하기로 했고, 면접교섭 방법은 2025년 2월 법원 조정으로 정했습니다. 친권자는 2026년 1월 상대방과 상의 없이 아이들을 중국 본토로 데려갔습니다. 신청한 쪽은 그 뒤 연락이 끊겼다고 했고, 법원도 조정에서 정한 면접교섭이 그동안 이뤄지지 않았다고 보았습니다.
 
-아이들은 2026년 8월 19일 대만에 돌아왔습니다. 결정은 그다음 날 나왔습니다. 법원은 친권자가 그사이 세 차례 혼자서만 대만에 잠깐 들어왔다는 출입국 기록을 확인했고, 친권 변경 사건의 조사와 이후 집행, 아이들과 다른 부모의 면접교섭을 지키려면 지금 출국을 막아야 한다고 판단했습니다. 친권 변경 사건의 결론은 아직입니다. 법원이 친권자를 정할 때 살피는 사정에는 부모 한쪽이 다른 쪽의 친권 행사를 방해했는지도 들어 있습니다([민법 제1055조의1 제1항 제6호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055-1)).
+아이들은 2026년 8월 19일 대만에 돌아왔습니다. 결정은 그다음 날 나왔습니다. 법원은 친권자가 그사이 세 차례 혼자서만 대만에 잠깐 들어왔다는 출입국 기록을 확인했고, 친권 변경 사건의 조사와 이후 집행, 아이들과 다른 부모의 면접교섭을 지키려면 지금 출국을 막아야 한다고 판단했습니다. 당시 친권 변경 사건은 진행 중이었습니다. 법원이 친권자를 정할 때 살피는 사정에는 부모 한쪽이 다른 쪽의 친권 행사를 방해했는지도 들어 있습니다([민법 제1055조의1 제1항 제6호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055-1)).
 
 ## 금지는 언제 풀리나
 
-[가사사건법 제88조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=88)에 따르면 확정된 임시처분이 부당하거나 더 이상 필요 없을 때 본안 법원이 취소하거나 바꿀 수 있습니다. 쉬운 일은 아닙니다. 타이베이지방법원은 2026년 6월 25일 세 아이의 출국금지를 풀어 달라는 신청을 받아들이지 않았습니다([115년도 家聲抗자 제42호](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDU%2C115%2C%E5%AE%B6%E8%81%B2%E6%8A%97%2C42%2C20260625%2C1)).
+[가사사건법 제88조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=88)에 따르면 확정된 임시처분이 부당하거나 더 이상 필요 없을 때 본안 법원이 취소하거나 바꿀 수 있습니다. 본안 청구의 기각 확정이나 취하 등 [제89조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=89)가 정한 사유가 생기면 처분은 따로 효력을 잃습니다. 취소 신청이 쉬운 일은 아닙니다. 타이베이지방법원은 2026년 6월 25일 세 아이의 출국금지를 풀어 달라는 신청을 받아들이지 않았습니다([115년도 家聲抗자 제42호](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDU%2C115%2C%E5%AE%B6%E8%81%B2%E6%8A%97%2C42%2C20260625%2C1)).
 
 그 부모는 친권 결정이 대부분 확정되어 이제 혼자서 아이의 출국을 정할 수 있다고 주장했습니다. 법원은 출국을 정할 권한이 누구에게 있는지와 임시처분이 필요한지는 차원이 다른 문제라고 했습니다. 교육 방식에 관한 부분이 아직 항고심에 있었고, 아이들은 외국 국적과 그 나라의 장기 체류 자격을 갖고 있었습니다. 부모는 아이들이 그 나라에서 공부하기를 바랐습니다. 법원은 출국을 허용하면 돌아오지 않을 가능성이 있다고 보았습니다.
 
@@ -59,7 +59,7 @@ author: "legal-ai-assistant"
 ## 참고한 공식 자료
 
 - 대만 민법 [제1055조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055), [제1055조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055-1), [제1089조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1089), [제1089조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1089-1)
-- 가사사건법(家事事件法) [제85조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=85), [제88조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=88), [제91조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=91)
+- 가사사건법(家事事件法) [제85조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=85), [제88조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=88), [제89조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=89), [제91조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=91)
 - 가사비송사건 임시처분 유형 및 방법 규정(家事非訟事件暫時處分類型及方法辦法) [제2조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010056&flno=2), [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010056&flno=4), [제7조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010056&flno=7)(현행 조문. 2026년 7월 개정 대상은 제20조·제22조)
 - 사법원 상담 문답 [「暫時處分怎麼執行？」](https://www.judicial.gov.tw/tw/cp-1654-57336-94446-1.html)(소년·가사청, 2019년 10월 22일 게시)
 - 여권조례(護照條例) [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=16), [제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=23)

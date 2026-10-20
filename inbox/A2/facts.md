@@ -1,4 +1,4 @@
-# A2 facts — claim → source (checked 2026-10-20 KST)
+# A2 facts — claim → source (checked 2026-10-20 KST; Astra r1 fixes applied ~19:20 KST)
 
 Statutes fetched from law.moj.gov.tw on 2026-10-20 (LawSingle / LawAll pages; cached in research/law and printed via research/bin/lawall.py). Rulings opened in the Judicial Yuan database on 2026-10-20 (cached in research/jud/).
 
@@ -60,3 +60,13 @@ https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDU%2C115%2C%E5%AE%B6%E
 - Internal link zh: /zh-hant/columns/child-taken-abroad-taiwan-parent-remedies (ref columns-zh/241-…). Link check BAD 0.
 - English names: Family Act; Passport Act; Civil Code (law.moj ENG). B0010056 has no ENG page.
 - Hypothetical (en opening: Manchester tickets) labelled "(an invented example)".
+
+## Astra r1 fix log (2026-10-20 ~19:20 KST)
+- Independent re-verification: both rulings re-fetched live from judgment.judicial.gov.tw printData.aspx (session via research/bin/jud.py) at ~19:18 KST; whitespace-normalized text identical to the cached copies (PCDU sha256 prefix ab8d03f8c56c0171, TPDU d943453b2a910cbe). Checked live: quote 「如父母已於離婚時協議由一方單獨行使親權者，法院豈非均無限制子女出境之必要？」; PCDU dates 113-10-22 (divorce/sole custody), 114-02-17 (visitation mediation), 115-01-23 (taken to 大陸地區), 115-08-19 (children entered), 115-08-20 (order), 「未得兩造同意…不得出境」; TPDU 115-06-25, 出境至日本, 擔保, 長期居留身分, 就學方式 on appeal, 單獨決定子女出境 argument.
+- 家事事件法 Art. 89 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=89 — 「暫時處分之裁定，除法律別有規定或法院另有裁定外，有下列各款情形之一者，失其效力：一、本案請求經裁判駁回確定。二、本案程序經撤回請求或因其他事由視為終結。三、暫時處分之內容與本案請求經裁判准許確定、調解或和解成立之內容相異部分。四、暫時處分經裁定撤銷或變更確定。」 → added to all four (FAQ + body) and endpoints now attributed to the two cited orders only.
+- Passport wording: Art. 16 restated as legal representative's written consent (≥7) / application (<7), one of two or more legal representatives may act; added "does not guarantee issuance"; removed 「父母のどちらか一人の手続で発給」, 「여권은 생각보다 쉽게 나옵니다」, "Passports are the easier part", 「護照卻是一人就能辦」.
+- ko: 「친권 변경 사건의 결론은 아직입니다」 → 「당시 친권 변경 사건은 진행 중이었습니다」.
+- ja: custody (Oct 2024, on divorce) and visitation (Feb 2025 mediation) split into separate sentences.
+- ko/ja/en FAQ3: Art. 88 "final" qualifier restored.
+- en: "A pending case did the work." deleted.
+- zh: heading 「不撤銷，也不等於完全不能出國」.

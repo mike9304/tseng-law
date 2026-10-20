@@ -1,14 +1,14 @@
 # A2 selfcheck (2026-10-20)
 
-## Variety check
+## Variety check (after Astra r1 fixes)
 ```
-drafts/A2/ko.md [ko] sentences=42 mean=38.1 cv=0.466 short=0.119 run3=0.05 opener_rep=0.083 cite_end=0.167 cite_para=0.583 contrast=0 caveat=0 q=1
+drafts/A2/ko.md [ko] sentences=44 mean=37.9 cv=0.462 short=0.114 run3=0.048 opener_rep=0.083 cite_end=0.159 cite_para=0.583 contrast=0 caveat=0 q=1
   OK — no variety limit violated
-drafts/A2/ja.md [ja] sentences=41 mean=42 cv=0.472 short=0.122 run3=0.077 opener_rep=0.077 cite_end=0.195 cite_para=0.615 contrast=0 caveat=0 q=0
+drafts/A2/ja.md [ja] sentences=44 mean=41.2 cv=0.457 short=0.114 run3=0.095 opener_rep=0.077 cite_end=0.182 cite_para=0.615 contrast=0 caveat=0 q=0
   OK — no variety limit violated
-drafts/A2/en.md [en] sentences=44 mean=18.5 cv=0.508 short=0.205 run3=0.024 opener_rep=0.077 cite_end=0.068 cite_para=0.538 contrast=0 caveat=0 q=1
+drafts/A2/en.md [en] sentences=45 mean=18.9 cv=0.519 short=0.2 run3=0.023 opener_rep=0.154 cite_end=0.067 cite_para=0.538 contrast=0 caveat=0 q=1
   OK — no variety limit violated
-drafts/A2/zh.md [zh-hant] sentences=36 mean=36.9 cv=0.482 short=0.167 run3=0.0 opener_rep=0.0 cite_end=0.111 cite_para=0.538 contrast=0 caveat=0 q=2
+drafts/A2/zh.md [zh-hant] sentences=38 mean=38.0 cv=0.505 short=0.158 run3=0.0 opener_rep=0.0 cite_end=0.132 cite_para=0.538 contrast=0 caveat=0 q=2
   OK — no variety limit violated
 ```
 FAIL 0 in all four.
@@ -39,3 +39,6 @@ Slug `taiwan-child-exit-ban-sole-custody-provisional-order`: 0 matches.
 - New Taipei facts on loss of contact are the applicant's assertions; drafts attribute them; the court's own findings (no visits, three solo returns) are stated as findings.
 - Which paragraph of 入出國及移民法第6條 the immigration agency applies to family-court exit bans was not verified; drafts rely only on the Judicial Yuan FAQ for the notification point.
 - The FAQ page is dated 2019-10-22; no newer contrary guidance found, but not exhaustively searched.
+
+## Astra r1 (2026-10-20)
+All 8 findings accepted and fixed (see facts.md fix log). No rebuttal. Variety FAIL 0 after fixes; links BAD 0.

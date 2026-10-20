@@ -50,7 +50,7 @@ Which system covers a foreign employee changed in 2026. [Article 24 of the Act f
 
 Once a labor dispute is in mediation, arbitration or adjudication, the employer may not terminate the contract because of that dispute ([Act for Settlement of Labor-Management Disputes, Article 8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8)). In the 2024 Supreme Court case, a dismissal notice sent during mediation was held unlawful; the later termination, after mediation failed, took effect. For what a dismissal means for a foreign worker's permit and ARC, see [our column on being told a Taiwan job is ending](/en/columns/foreign-professional-dismissed-taiwan).
 
-Three documents decide most of these disputes: the probation assessment, the interview notes, and the article cited in the dismissal letter.
+In the 2026 cases, the courts looked at the same kinds of record: the probation assessment, the interview notes, and the reason given for the dismissal.
 
 Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
 

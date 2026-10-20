@@ -186,3 +186,5 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 01:53 KST: Opus가 P1 ‘사정→책임’ 수정안만 준비했다(opus/proposals/P1-fault-wording.md). 한 단어이고 글자 수는 같다. Astra 채택 전이라 본문·카드는 고치지 않음. 게시 없음.
 
 2026-10-21 01:58 KST: Air가 P1 귀책 표현을 다시 적고 sync.sh depth 1 거부를 보고했다. 스크립트는 고치지 않음. 문안도 채택 전이라 그대로. 게시 없음.
+
+2026-10-21 02:03 KST 대기: P1 ‘사정→책임’은 수정안만 있고 Astra 채택이 없다. 새 FACTS·초안·Bot 검수 없음. STATUS는 10/20 21:45 그대로. 문안은 고치지 않음.

@@ -180,3 +180,7 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 01:44 KST: Opus의 Air r1 비평(review-studio/opus-on-air-opus-r1.md)은 비교 기록이다. 선정 재개 아님. Grok 초안은 다시 쓰지 않음. 게시 없음.
 
 2026-10-21 01:48 KST: Air가 선정본 P1 KO·JA의 ‘사정/事情’을 책임 판단이 약하다고 봤다. P2·P3 지적 없음. Astra가 채점하기 전에는 본문을 다시 쓰지 않음. 게시 없음.
+
+2026-10-21 01:52 KST 대기: ‘사정’ 지적 이후 새 FACTS·초안·Astra 채점이 없다. STATUS는 10/20 21:45 그대로다. 문안은 채점 전까지 다시 쓰지 않는다.
+
+2026-10-21 01:53 KST: Opus가 P1 ‘사정→책임’ 수정안만 준비했다(opus/proposals/P1-fault-wording.md). 한 단어이고 글자 수는 같다. Astra 채택 전이라 본문·카드는 고치지 않음. 게시 없음.

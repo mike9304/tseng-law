@@ -1,0 +1,58 @@
+---
+title: "同じ投資詐欺・ロマンス詐欺の被害者が大勢いるとき：台湾の詐欺犯罪危害防制条例の示談減軽、検察官の調停、選定当事者訴訟"
+seoTitle: "台湾の詐欺被害の回復：示談減軽と選定当事者訴訟"
+summary: "台湾の詐欺犯罪危害防制条例は、刑法第339条の4などの「詐欺犯罪」について、被告人が自首や自白の後6か月以内に被害者と調停・和解した金額を全額支払えば刑を減軽または免除できるとし、検察官と裁判所が調停・和解で賠償を促すと定めています。被害者は訴訟費用の猶予、仮差押えの担保の10分の1上限、選定当事者の制度を使って共同で訴えることができます。"
+published: "2026-10-20"
+lastmod: "2026-10-20"
+date_display: "2026年10月20日"
+read_time: "約6分"
+categories:
+  - "台湾法律情報"
+topic: "litigation"
+tags: ["fraud", "被害回復", "選定当事者"]
+featured_image: "TBD"
+featured_image_alt: "裁判所の待合スペースで、書類封筒を手にした数人が間をあけて座っている後ろ姿。"
+faq:
+  - q: "同じ詐欺の被害者が何人もいる場合、代表者にまとめて訴訟を任せられますか。"
+    a: "[詐欺犯罪危害防制条例第55条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=55)は、詐欺犯罪の被害者が民事訴訟で主張する主な攻撃防御方法が同じであれば、その中から一人または数人を選び、全員のために訴えさせることができると定め、民事訴訟法の選定当事者の規定を準用しています。訴訟係属後に選定されると他の当事者は訴訟から離脱し、選定された人は変更・増減できますが、相手方に通知しなければ効力を生じません（[民事訴訟法第41条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=41)）。"
+  - q: "被告人が減刑のために示談を申し入れてきたら、お金は本当に支払われますか。"
+    a: "[第47条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=47)は、捜査と各審級の裁判のすべてで自白し、検察官の捜査中に初めて自白した日から6か月以内に、被害者と調停・和解で合意した金額を全額支払った場合に、刑を減軽できるとしています。自首した場合は[第46条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46)が、自首の日から6か月以内の全額支払いを条件に減軽または免除を認めます。基準は合意した金額で、損害の全額と一致するとは限りません。"
+  - q: "この条例はすべての詐欺事件に使えますか。"
+    a: "使えるとは限りません。[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=2)の詐欺犯罪は、[刑法第339条の4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=339-4)の加重詐欺（公務員の名義の冒用、3人以上の共同、放送・通信・インターネット等による公衆への散布、合成映像・音声の利用）、条例第43条・第44条の罪、これらと裁判上一罪の関係にある罪です。一人だけで行われた単純な詐欺に条例の被害者規定が及ぶかは、別に検討が必要です。"
+audience: ["ja"]
+author: "legal-ai-assistant"
+---
+
+# 同じ投資詐欺・ロマンス詐欺の被害者が大勢いるとき：台湾の詐欺犯罪危害防制条例の示談減軽、検察官の調停、選定当事者訴訟
+
+台湾の詐欺犯罪危害防制条例には、被害者への支払いを刑の減軽に結びつける条文が二つあります。2024年7月31日に制定され、2026年1月21日にその二つ（第46条・第47条）が改正されました。同じ投資アプリ、同じ「恋人」にお金を送った被害者が何十人もいる事件では、この仕組みと、条例が用意した共同訴訟の方法が、回収の道筋を左右します。
+
+## 条例の「詐欺犯罪」はどこまでか
+
+まず範囲です。[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=2)の詐欺犯罪は、[刑法第339条の4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=339-4)の加重詐欺、条例第43条・第44条の罪、これらと裁判上一罪の関係にある罪です。加重詐欺は、公務員の名義の冒用、3人以上の共同、放送・通信・インターネット等で公衆に散布した場合、合成した映像・音声を使った場合で、1年以上7年以下の有期徒刑です。役割を分けた組織なら「3人以上の共同」に当たるかがまず検討されます。一人で近づいてきたロマンス詐欺なら、条例の規定が及ぶかどうかから確かめることになります。
+
+## 被告人が減軽を受けるには、先に払う
+
+条例は賠償と刑を結びつけています。[第47条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=47)は、捜査と各審級の裁判のすべてで自白し、検察官の捜査中に初めて自白した日から6か月以内に、被害者と調停・和解で合意した金額を全額支払えば、刑を減軽できるとしています。自首した場合は[第46条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46)が、自首の日から6か月以内の全額支払いを条件に減軽または免除を認めます。それによって組織の首謀者を検挙でき、または組織が得た被害財産の全部を押収できたときは、刑の免除まであり得ます（各条第2項）。
+
+検察官と裁判所にも役割があります。[第53条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=53)により、検察官や裁判所は調停・和解の手続で被告人に一定額の賠償を促すことができ、賠償していない被告人については、検察官が量刑で考慮するよう裁判所に求めることができ、必要なら上訴しなければなりません。起訴猶予にするときは、被害者への賠償を優先して命じるのが望ましいとされています。被告人が賠償や支払いを終える前に、通常の生活水準を超える消費・投資・贈与をしていないかも、裁判所が量刑で特に注意すべき事情です（[第50条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=50)）。
+
+基準は合意した金額です。示談書の金額が損害の全額である必要はありません。被害者の側に残るのは、金額、支払期限、支払われなかったときの扱いを書面にはっきり書くことです。
+
+## 一緒に訴える：選定当事者と費用の猶予
+
+民事訴訟では、[第55条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=55)が、主な攻撃防御方法が同じ被害者たちに、その中の一人または数人を選んで全員のために訴えさせることを認めています。民事訴訟法の選定当事者の規定を準用するので、訴訟係属後に選定されれば他の当事者は訴訟から離れ、選定された人の変更は相手方に通知しなければ効力を生じません（[民事訴訟法第41条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=41)）。
+
+費用の面でも手当てがあります。詐欺犯罪の被害者が賠償責任のある人を訴えたり上訴したりするとき、訴訟費用の納付は暫定的に免除され、強制執行を申し立てるときの執行費用も同様です。仮差押え・仮処分や仮執行のために裁判所が命じる担保は、請求額の10分の1を超えられません（[第54条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=54)）。司法警察や検察官、裁判官は、法律扶助の要件に当たる被害者に申請できることを知らせなければなりません（[第52条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=52)）。
+
+日本から告訴する方法と刑事手続の中の附帯民事訴訟は、[日本から台湾の口座へ送金した後、台湾で告訴できるのか](/ja/columns/japanese-victim-fraud-complaint-taiwan-account)で扱っています。被害者の名簿、送金の記録、同じ手口を示すやり取り。一緒に訴えるなら、まずこの三つを集めることになります。
+
+昊鼎国際法律事務所の曾雋崴弁護士への連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
+
+## 参考にした公的資料
+
+- 全國法規資料庫・詐欺犯罪危害防制條例：[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=2)、[第46条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46)、[第47条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=47)、[第50条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=50)、[第52条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=52)、[第53条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=53)、[第54条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=54)、[第55条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=55)（2024年7月31日制定、2026年1月21日に第46条・第47条などを改正公布。[沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080226)）
+- 同・刑法：[第339条の4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=339-4)
+- 同・民事訴訟法：[第41条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=41)
+
+確認日：2026年10月20日

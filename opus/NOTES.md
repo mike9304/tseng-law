@@ -137,3 +137,5 @@
 - 10-21 06:31 r8 KO 후보 6개 제출(opus/R8-CANDIDATES-DONE.md). Astra 검수·선정 대기.
 - 10-21 06:33 대기: r8 KO 후보 6개 제출 뒤 Astra 검수·선정 대기. 다른 작성자 r8 초안 아직 없음(교차 비평 대상 없음).
 - 10-21 06:48 r8 KO 확정·JA/EN r8 제출(opus/R8-DONE.md). Astra 검수 대기.
+- 10-21 06:56 Grok r8 비평 반영(6개 본문). Astra 검수 대기.
+- 10-21 06:58 Astra r8 수정1 반영(opus/R8-FIX1-DONE.md). Astra 재검수 대기.

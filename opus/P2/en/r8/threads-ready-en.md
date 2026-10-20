@@ -1,19 +1,19 @@
 # P2 EN C13 협의이혼 증인 / 協議離婚の証人 / divorce witness (新竹地院 113年度婚字第59號) — 게시 구성 r8 (opus/P2/en/r8)
 
-게시·전송하지 않았다. r8 = KO r8(Astra ASTRA-R8-PICK-20261021.md 선택 A + 지적 반영)과 같은 몰입형 구조. 서명 줄·사무장 반응 줄 없음. 첫 댓글·첨부는 r7과 같다. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
+게시·전송하지 않았다. r8 = KO r8(Astra ASTRA-R8-PICK-20261021.md 선택 A + 지적 반영)과 같은 몰입형 구조. 서명 줄·사무장 반응 줄 없음. 첨부는 r7과 같다. Astra r8 수정1 반영. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
 
 원글: 본문 + 카드 5장(opus/P2/en/r8/images/en/card-01~05.png). 첫 텍스트 답글: 첫 댓글 + 텍스트 첨부. 카드는 r7과 같은 파일. 한국어 뜻풀이: opus/P2/en/r8/ko-meaning.md
 
-## 본문 · 498자
+## 본문 · 494자
 
 ```text
-Around December 2023, a Hsinchu restaurant. A wife had a friend sign her divorce agreement as a witness, just the two of them. The couple's lines were blank.
+Around December 2023, a Hsinchu restaurant. A wife had a friend witness her divorce agreement, just the two of them. The couple's lines were blank.
 
 On Dec 14, the couple signed and registered the divorce.
 
-Then the husband sued, saying no one had asked him. The friend testified to never meeting or contacting him around the signing.
+The husband sued, saying no one had asked him. The friend testified to never meeting or contacting him then.
 
-The trial court didn't count the friend, who never confirmed his wish firsthand, so even with the other witness there weren't two. The divorce was void.
+The trial court didn't count the friend, who never confirmed his wish firsthand, so even with the other witness there weren't two. The divorce was void; they were still married.
 ```
 
 ## 카드 대체 텍스트(alt)
@@ -26,10 +26,10 @@ The trial court didn't count the friend, who never confirmed his wish firsthand,
 | 04 | Diagram of witness rules: husband, wife, the friend, and the other witness. The friend never checked with the husband and talked only to the wife; the other witness was not ruled on. A witness must see or hear that both spouses want out; secondhand doesn't count. | 263 |
 | 05 | This case, trial court. Only two witnesses signed, and the friend didn't count. Taiwan divorce by agreement, three requirements: in writing (met), 2+ qualified witnesses sign (not met here), registered at the office (met). The other witness wasn't ruled on; fewer than two, so void. Following case law, the judge asked whether each witness saw or heard that both spouses wanted out. | 382 |
 
-## 첫 댓글 · 213자
+## 첫 댓글 · 215자
 
 ```text
-If you married in Taiwan, who signed as your two witnesses for the household registration?
+Witnessed a divorce agreement in Taiwan? How did you confirm both spouses wanted to divorce?
 
 Full ruling (Chinese):
 https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SCDU%2C113%2C%E5%A9%9A%2C59%2C20240611%2C1

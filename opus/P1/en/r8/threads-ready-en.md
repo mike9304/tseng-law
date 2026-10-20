@@ -1,21 +1,21 @@
 # P1 EN C03 집 계약금 / 手付金 / rental deposit (士林簡易庭 115年度士小字第864號) — 게시 구성 r8 (opus/P1/en/r8)
 
-게시·전송하지 않았다. r8 = KO r8(Astra ASTRA-R8-PICK-20261021.md 선택 A + 지적 반영)과 같은 몰입형 구조. 서명 줄·사무장 반응 줄 없음. 첫 댓글·첨부는 r7과 같다. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
+게시·전송하지 않았다. r8 = KO r8(Astra ASTRA-R8-PICK-20261021.md 선택 A + 지적 반영)과 같은 몰입형 구조. 서명 줄·사무장 반응 줄 없음. 첫 댓글·첨부는 r7과 같다. Astra r8 수정1 반영. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
 
 원글: 본문 + 카드 6장(opus/P1/en/r8/images/en/card-01~06.png). 첫 텍스트 답글: 첫 댓글 + 텍스트 첨부. 카드는 r7과 같은 파일. 한국어 뜻풀이: opus/P1/en/r8/ko-meaning.md
 
-## 본문 · 492자
+## 본문 · 499자
 
 ```text
-Nov 28, 2025, Taipei. A renter viewed a unit; rent, a one-year minimum and house rules came up.
+Nov 28, 2025, Taipei. A renter viewed a unit; rent, a 1-year minimum and rules came up.
 
-At 2:51 p.m. they wired NT$21,800, then sent a LINE message calling it a "rental deposit."
+At 2:51 p.m. they wired NT$21,800 and sent a LINE calling it 承租訂金, a "rental deposit."
 
-That day they backed out, saying their stuff wouldn't fit and nothing was signed. The company said no.
+That day they backed out, saying their stuff wouldn't fit and nothing was signed. The firm refused a refund.
 
 In court, the renter filed that LINE.
 
-The trial court found the terms agreed before signing, backed by the word "deposit." Backing out over space was on the renter. The claim, with interest, failed.
+The trial court found terms agreed before signing, backed by that word. Backing out over space was on the renter, with no company fault shown. The claim and interest failed.
 ```
 
 ## 카드 대체 텍스트(alt)

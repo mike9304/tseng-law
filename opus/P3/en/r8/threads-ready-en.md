@@ -1,19 +1,19 @@
 # P3 EN C09 버스 사고 배상 / バス事故 / bus crash damages (士林簡易庭 111年度士簡字第875號) — 게시 구성 r8 (opus/P3/en/r8)
 
-게시·전송하지 않았다. r8 = KO r8(Astra ASTRA-R8-PICK-20261021.md 선택 A + 지적 반영)과 같은 몰입형 구조. 서명 줄·사무장 반응 줄 없음 · 가족관계 표기 없이 사실 표현만. 첫 댓글·첨부는 r7과 같다. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
+게시·전송하지 않았다. r8 = KO r8(Astra ASTRA-R8-PICK-20261021.md 선택 A + 지적 반영)과 같은 몰입형 구조. 서명 줄·사무장 반응 줄 없음 · 가족관계 표기 없이 사실 표현만. 첫 댓글·첨부는 r7과 같다. Astra r8 수정1 반영. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
 
 원글: 본문 + 카드 6장(opus/P3/en/r8/images/en/card-01~06.png). 첫 텍스트 답글: 첫 댓글 + 텍스트 첨부. 카드는 r7과 같은 파일. 한국어 뜻풀이: opus/P3/en/r8/ko-meaning.md
 
-## 본문 · 499자
+## 본문 · 492자
 
 ```text
-Oct 26, 2020, Taipei. A bus ran a red light and a scooter hit it, a middle-schooler riding behind.
+Taipei, 2020. A bus ran a red light; a scooter's front hit its right side. A middle-schooler rode behind.
 
-For future dental work under an implant plan, the kid sought NT$343,000. The rider broke a collarbone, got a four-week rest note and sought NT$385,022 in lost income.
+The kid sought NT$343,000 for future implant-plan dental work. The rider broke a collarbone, had a four-week rest note and sought NT$385,022 in lost income.
 
-The trial court allowed the kid's full sum, as the kid was a minor then and teeth affect chewing and looks.
+The trial court allowed the kid's full sum, citing age at the crash and teeth's role in chewing and looks.
 
-Filing no income records, the rider was allowed NT$27,808. The defense computed it. It said a part-timer covered the shop.
+Filing no income records, the rider was allowed NT$27,808, the defense's figure. It said a part-timer covered the shop.
 ```
 
 ## 카드 대체 텍스트(alt)

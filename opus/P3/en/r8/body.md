@@ -1,7 +1,7 @@
-Oct 26, 2020, Taipei. A bus ran a red light and a scooter hit it, a middle-schooler riding behind.
+Taipei, 2020. A bus ran a red light; a scooter's front hit its right side. A middle-schooler rode behind.
 
-For future dental work under an implant plan, the kid sought NT$343,000. The rider broke a collarbone, got a four-week rest note and sought NT$385,022 in lost income.
+The kid sought NT$343,000 for future implant-plan dental work. The rider broke a collarbone, had a four-week rest note and sought NT$385,022 in lost income.
 
-The trial court allowed the kid's full sum, as the kid was a minor then and teeth affect chewing and looks.
+The trial court allowed the kid's full sum, citing age at the crash and teeth's role in chewing and looks.
 
-Filing no income records, the rider was allowed NT$27,808. The defense computed it. It said a part-timer covered the shop.
+Filing no income records, the rider was allowed NT$27,808, the defense's figure. It said a part-timer covered the shop.

@@ -18,7 +18,7 @@ faq:
   - q: "검찰에서 불기소 처분을 받았는데도 피해자에게 배상해야 하나요?"
     a: "그럴 수 있습니다. [민법 제184조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)은 과실에 의한 침해에도 배상책임을 지우고, [제185조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=185)은 방조한 사람을 공동행위자로 봅니다. 타이베이지방법원 114년도 簡上자 제212호 판결(2026년 9월 30일, 2심)은 불기소 처분이 고의 여부만 판단한 것이라며 계좌 제공자의 과실을 인정해 15만 대만달러와 이자의 지급을 명했습니다. 반대로 연인 관계에서 계좌를 넘긴 사람의 과실을 부정한 2심 판결도 있어, 넘길 당시의 사정에 따라 결론이 달라집니다."
   - q: "피해자는 언제까지 배상을 청구할 수 있나요?"
-    a: "[민법 제197조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)에 따라 손해와 배상의무자를 안 날부터 2년, 불법행위가 있은 날부터 10년이 지나면 청구권이 소멸합니다. 계좌 제공자가 기소되면 피해자는 [형사소송법 제487조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)에 따라 형사소송 안에서 부대민사소송을 낼 수 있고, 시기는 [제488조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)가 정합니다."
+    a: "[민법 제197조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)에 따라 손해와 배상의무자를 안 날부터 2년, 불법행위가 있은 날부터 10년이 지나면 청구권이 소멸합니다. 계좌 제공자가 기소되었고 피해자의 손해가 그 기소된 범죄로 생긴 경우라면, 피해자는 [형사소송법 제487조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)에 따라 그 형사소송 안에서 부대민사소송을 낼 수도 있고, 시기는 [제488조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)가 정합니다."
 audience: ["ko"]
 author: "legal-ai-assistant"
 ---
@@ -37,17 +37,19 @@ author: "legal-ai-assistant"
 
 귀국을 앞두고 통장을 5,000 대만달러에 넘기기로 했다고 해 봅시다(가상의 예입니다). 돈을 아직 못 받았어도 조문의 '期約', 곧 대가를 약속한 경우에 들어갈 수 있습니다. 계좌가 하나뿐이어도 그렇습니다.
 
-고계를 받으면 은행 거래도 묶입니다. 제22조 제6항에 근거한 관리 규정 [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0030062&flno=4)와 [제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0030062&flno=6)에 따르면 고계일부터 5년 동안 ATM 이체와 인출이 계좌마다 각각 하루 1만 대만달러로 제한되고, 인터넷·모바일뱅킹과 결제 앱 연결이 막힙니다.
+고계를 받으면 은행 거래도 묶입니다. 제22조 제6항에 근거한 관리 규정 [제4조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0030062&flno=4)와 [제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0030062&flno=6)에 따르면, 고계일부터 5년 동안 ATM 이체와 인출은 계좌마다 각각 하루 1만 대만달러까지로 제한되고 인터넷·모바일뱅킹이나 전화뱅킹, 결제 플랫폼에 연결한 계좌로 지급·이체하는 것도 금지됩니다. 예외는 있습니다. 수도·전기·가스 같은 공공요금, 세금, 벌금(罰金)·과태료(罰鍰), 연체료(滯納金)를 내는 거래입니다.
 
 넘긴 계좌가 실제 사기에 쓰였다면 사기와 자금세탁의 방조범도 문제됩니다([형법 제30조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=30), [제339조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=339), [洗錢防制法 제19조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=19)). [형법 제13조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=13)은 범죄가 일어날 수 있다고 예견하고도 받아들인 경우를 고의로 봅니다.
 
 ## 불기소 처분 뒤에 남는 민사책임
 
-사기범은 대개 이름조차 알 수 없습니다. 그래서 피해자는 돈을 보낸 계좌의 명의인을 상대로 소송을 냅니다. [민법 제184조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)은 과실로 남의 권리를 침해한 사람에게도 배상책임을 지우고, [제185조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=185)는 방조한 사람을 공동행위자로 보아 사기범과 연대해 배상하게 합니다. 연대책임이므로 피해자는 [민법 제273조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=273)에 따라 계좌 제공자 한 사람에게 손해 전액을 청구할 수 있습니다.
+사기범의 신원이 끝내 드러나지 않으면, 피해자가 소송 상대로 특정할 수 있는 사람은 돈을 보낸 계좌의 명의인일 수 있습니다. [민법 제184조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)은 과실로 남의 권리를 침해한 사람에게도 배상책임을 지우고, [제185조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=185)는 방조한 사람을 공동행위자로 보아 연대해 배상하게 합니다.
+
+과실 하나로 책임이 정해지지는 않습니다. 방조자로서 연대책임을 지려면 방조 행위에 고의나 과실이 있고, 피해자의 손해와 그 방조 행위 사이에 상당인과관계가 있어야 합니다. 아래 두 판결도 이 틀로 판단했습니다. 요건이 갖춰지면 피해자는 [민법 제273조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=273)에 따라 그 불법행위로 생긴 손해 전부를 계좌 제공자 한 사람에게 청구할 수 있습니다.
 
 앞의 타이베이 사건에서 계좌 제공자는 대출을 받으려다 속은 것이며 당시 21세였다고 주장했습니다. 검찰은 불기소했고, 1심도 피해자의 청구를 받아들이지 않았습니다. 항소심은 결론을 뒤집었습니다. 일반인에게는 자기 계좌 자료를 신중히 보관하고 함부로 남에게 넘기지 않을 주의의무가 있으며, 불기소 처분은 직접·간접 고의가 있었는지만 판단했을 뿐 민사상 과실은 기준이 다르다고 보았습니다.
 
-무엇이 과실의 근거였을까요? 법원은 모르는 사람의 아들이라고 둘러대라는 말, 돈이 들어온 날 바로 찾으라는 지시, 송금 대신 현금으로 돌려 달라는 요구를 들었습니다. 일반적인 거래 관행과 맞지 않는 지시들이었습니다. 제공자는 실제로 돈을 찾아 전달했습니다.
+무엇이 과실의 근거였을까요? 법원은 모르는 사람의 아들이라고 둘러대라는 말, 돈이 들어온 날 바로 찾으라는 지시, 송금 대신 현금으로 돌려 달라는 요구를 들었습니다. 일반적인 거래 관행과 맞지 않는 지시들이었습니다. 제공자는 실제로 돈을 찾아 전달했고, 법원은 계좌 제공과 이 인출·전달을 과실에 의한 방조로 보아 피해자의 손해와 상당인과관계가 있다고 판단했습니다.
 
 배상액을 줄여 달라는 주장도 받아들여지지 않았습니다. 법원은 손해가 사기범의 고의적 기망으로 생긴 이상 피해자가 속임수를 알아채지 못했다고 과실상계를 할 수 없다고 보았습니다([민법 제217조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217)). 배상하면 생계에 중대한 영향이 생긴다는 증거도 없었습니다([제218조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=218)).
 
@@ -59,9 +61,9 @@ author: "legal-ai-assistant"
 
 ## 피해자의 청구 기한과 형사절차 안의 청구
 
-배상청구권은 피해자가 손해와 배상의무자를 안 날부터 2년, 불법행위가 있은 날부터 10년이 지나면 소멸합니다([민법 제197조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)). 계좌 제공자가 기소되면 피해자는 그 형사소송 안에서 부대민사소송을 낼 수 있습니다([형사소송법 제487조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487), [제488조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)). 형사재판에서 무죄가 선고되면 부대민사소송은 판결로 기각되지만, 피해자가 신청하면 관할 법원 민사부로 이송됩니다([같은 법 제503조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=503)).
+배상청구권은 피해자가 손해와 배상의무자를 안 날부터 2년, 불법행위가 있은 날부터 10년이 지나면 소멸합니다([민법 제197조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)). [형사소송법 제487조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)는 범죄로 손해를 입은 사람에게 형사소송 안에서 부대민사소송을 낼 길을 열어 둡니다. 조건이 붙습니다. 계좌 제공자가 기소되었고, 피해자의 손해가 바로 그 기소된 범죄로 생긴 것이어야 합니다. 시기는 [제488조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)가 정합니다. 형사재판에서 무죄가 선고되면 부대민사소송은 판결로 기각되지만, 피해자가 신청하면 관할 법원 민사부로 이송됩니다([같은 법 제503조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=503)).
 
-통장·카드·비밀번호나 인터넷뱅킹 정보를 이미 넘겼다면, 무엇을 언제 넘겼는지 은행에 알리고 거래 정지를 상의할 수 있습니다. 그 뒤 들어온 돈을 상대의 지시대로 찾거나 다른 계좌로 보내는 일은 타이베이 판결에서 과실의 근거가 된 행동과 겹칩니다. 넘길 때 들은 설명과 대화 기록은 형사 절차의 고의 판단에도, 민사 절차의 과실 판단에도 쓰입니다.
+통장·카드·비밀번호나 인터넷뱅킹 정보를 이미 넘겼다면, 무엇을 언제 넘겼는지 은행에 알리고 거래 정지를 상의할 수 있습니다. 그 뒤 들어온 돈을 상대의 지시대로 현금으로 찾아 건네는 일은, 타이베이 판결이 과실에 의한 방조로 본 바로 그 행동입니다. 넘길 때 들은 설명과 대화 기록은 형사 절차의 고의 판단에도, 민사 절차의 과실 판단에도 쓰입니다.
 
 호정(昊鼎)국제법률사무소 曾雋崴 변호사의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
 

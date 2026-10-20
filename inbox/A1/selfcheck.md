@@ -1,28 +1,26 @@
 # A1 selfcheck (2026-10-20)
 
-## Variety check (variety_metrics.py check; zh with --lang zh-hant)
+## Variety check (variety_metrics.py check; zh with --lang zh-hant) — re-run after Astra r1 fix
 ```
-drafts/A1/ko.md [ko] sentences=49 mean=38.9 cv=0.464 short=0.122 run3=0.043 opener_rep=0.0 cite_end=0.122 cite_para=0.5 contrast=0 caveat=0 q=1
-  WARN 84% of sentences end in '니다.' — vary endings within the register
-drafts/A1/ja.md [ja] sentences=41 mean=38.4 cv=0.467 short=0.146 run3=0.077 opener_rep=0.143 cite_end=0.122 cite_para=0.357 contrast=1 caveat=0 q=0
+drafts/A1/ko.md [ko] sentences=56 mean=39.1 cv=0.511 short=0.161 run3=0.074 opener_rep=0.0 cite_end=0.089 cite_para=0.529 contrast=0 caveat=0 q=1
+  WARN 88% of sentences end in '니다.' — vary endings within the register
+drafts/A1/ja.md [ja] sentences=43 mean=41.5 cv=0.465 short=0.116 run3=0.049 opener_rep=0.133 cite_end=0.116 cite_para=0.4 contrast=1 caveat=0 q=0
   OK — no variety limit violated
-drafts/A1/en.md [en] sentences=56 mean=17.4 cv=0.584 short=0.232 run3=0.093 opener_rep=0.118 cite_end=0.054 cite_para=0.471 contrast=1 caveat=0 q=3
+drafts/A1/en.md [en] sentences=61 mean=17.8 cv=0.543 short=0.213 run3=0.085 opener_rep=0.111 cite_end=0.033 cite_para=0.5 contrast=1 caveat=0 q=3
   OK — no variety limit violated
-drafts/A1/zh.md [zh-hant] sentences=37 mean=35.8 cv=0.568 short=0.135 run3=0.086 opener_rep=0.067 cite_end=0.135 cite_para=0.467 contrast=0 caveat=0 q=2
+drafts/A1/zh.md [zh-hant] sentences=39 mean=38.4 cv=0.557 short=0.128 run3=0.108 opener_rep=0.0 cite_end=0.103 cite_para=0.5 contrast=0 caveat=0 q=2
   OK — no variety limit violated
 ```
-FAIL 0 in all four. ko WARN (84% '니다.' endings) is inherent to 합니다체; not a hard limit.
+FAIL 0 in all four. ko WARN (88% '니다.' endings) is inherent to 합니다체; not a hard limit.
 
-## Length (body excl. front matter, H1, sources; research/bin/blen.py)
+## Length (body excl. front matter, H1, sources; research/bin/blen.py) — after r1 fix
 ```
-drafts/A1/en.md words 984
-drafts/A1/facts.md chars_nospace 6551 chars_with_space 7237
-drafts/A1/ja.md chars_nospace 1742 chars_with_space 1781
-drafts/A1/ko.md chars_nospace 2114 chars_with_space 2721
-drafts/A1/selfcheck.md chars_nospace 842 chars_with_space 970
-drafts/A1/zh.md chars_nospace 1464 chars_with_space 1505
+drafts/A1/en.md words 1090
+drafts/A1/ja.md chars_nospace 1945 chars_with_space 1986
+drafts/A1/ko.md chars_nospace 2397 chars_with_space 3085
+drafts/A1/zh.md chars_nospace 1626 chars_with_space 1669
 ```
-ko counted without spaces (house measure in SENTENCE-VARIETY-RULE); with spaces it is ~2,720.
+ko counted without spaces (house measure). en 1,090 words (limit 1,100).
 
 ## Duplicate check
 grep of all four locales in ref/src/content for 洗錢防制法 / 人頭帳戶 / 提供帳戶 / 口座 / account lending:
@@ -44,5 +42,16 @@ Slug `taiwan-bank-account-lending-scam-victim-civil-liability`: 0 matches in ref
 - Finality of the two judgments not checked (stated in each sources list). Both are second-instance; amounts suggest no further appeal, but this is not asserted.
 - Taipei judgment: holder's age 21 and "loan" story are the holder's assertions; drafts present them as claims.
 - Art. 503 summarized for acquittal only (statute also covers 免訴/不受理).
-- Art. 6 of the regulation also has exceptions (utilities, taxes, fines) and a counter-transaction rule, omitted for length.
-- ko body is 2,114 chars without spaces / ~2,720 with spaces; if the gate counts spaces, it is above 2,500.
+- Art. 6 of the regulation: exceptions (utilities, taxes, 罰金, 罰鍰, 滯納金) and the payment/transfer scope of the e-banking ban now stated (r1). Debit-purchase aggregation, counter-justification rule and e-payment-account limits still omitted for length.
+- ko body is 2,397 chars without spaces / ~3,085 with spaces; if the gate counts spaces, it is above 2,500.
+- Both judgment texts end with 不得上訴; drafts keep the conservative 'finality not separately checked' line (unchanged in r1).
+
+## Astra r1 fix (2026-10-20)
+Source: ASTRA-FAIL.md (r1) → renamed ASTRA-FAIL-fixed-1.md. All points verified against live law.moj.gov.tw LawSingle pages and the two printData judgments (see facts.md).
+1. MAJOR ja — Taipei judgment does not mention transfer to another account → replaced with cash withdrawal on the day of deposit and handover. Same inaccuracy also fixed in ko (다른 계좌로 보내는), en ("forwarding"), zh (轉走).
+2. MAJOR ja/zh — negligence alone presented as sufficient, loss unbounded → added fault + adequate causation requirement (Hualien quoting 最高法院110年度台上字第204號; Taipei applied same test) and "loss caused by that tort". Applied to ko/en as well for consistency; Taipei paragraph in all four now records the court's causation finding.
+3. MAJOR ko/en — Art. 6 restrictions unconditional → added utility/tax/罰金/罰鍰/滯納金 exceptions; e-banking ban described as payments/transfers via online/mobile/telephone banking or payment-platform-linked accounts.
+4. MAJOR all — Art. 487 eligibility → body and FAQ in all four now require that the victim's loss arose from the crime charged.
+5. MAJOR all — prevalence claims about scammers' names → conditional formulation in all four (ja/zh headings adjusted too).
+6. featured_image "TBD" — expected per TASK.md; left as is.
+Links: research/bin/links.py → BAD total 0.

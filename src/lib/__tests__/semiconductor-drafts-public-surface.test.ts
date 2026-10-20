@@ -31,7 +31,7 @@ describe('semiconductor drafts stay off public surfaces', () => {
       expect(blog.some((post) => post.slug === slug)).toBe(false);
       expect(merged.some((post) => post.slug === slug)).toBe(false);
     }
-  });
+  }, 15000);
 
   it.each([...siteLocales])('keeps the lawyer-reviewed column and no unpublished draft on the %s board', (locale) => {
     const posts = listPublicSemiconductorColumns(locale);

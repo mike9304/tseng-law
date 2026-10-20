@@ -2337,6 +2337,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-spouse-debt-family-living-expenses-joint-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-right-turn-crosswalk-pedestrian-dashcam"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-right-turn-crosswalk-pedestrian-dashcam"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-right-turn-crosswalk-pedestrian-dashcam"
     }
   ]
 }

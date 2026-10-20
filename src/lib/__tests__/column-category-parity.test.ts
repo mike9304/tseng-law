@@ -30,12 +30,12 @@ describe('column category parity with English', () => {
   );
 
   it('has the English baseline this test compares against', () => {
-    // Prior 40 + seven 2026-10-02 (063–069) + traffic 051 + road-rage 099, 109, 122, 188, 191, 194, 201, 204 + inheritance 230 + inheritance 231 + inheritance 232 + inheritance 233 + inheritance 234 + inheritance 249 + expert 250 + expert 251 + expert 252 + expert 253 + expert 254 + expert 255 + expert 256 + expert 257 + expert 258 + expert 259 + expert 260 + divorce money claims 275 + expert 518 + expert 519 + expert 520 + expert 521 + expert 522 + expert 523 + expert 524 + expert 540 + civil 542 + criminal 543 + expert 603 + expert 604 + expert 605 + expert 606 + expert 607 + expert 608 + expert 609 + expert 610 + traffic 611 + expert 629 + expert 630 + expert 631 + expert 632 + expert 633 + expert 634 + expert 635 + expert 636 + expert 637 + expert 638 + expert 639 + expert 640.
+    // Prior 40 + seven 2026-10-02 (063–069) + traffic 051 + road-rage 099, 109, 122, 188, 191, 194, 201, 204 + inheritance 230 + inheritance 231 + inheritance 232 + inheritance 233 + inheritance 234 + inheritance 249 + expert 250 + expert 251 + expert 252 + expert 253 + expert 254 + expert 255 + expert 256 + expert 257 + expert 258 + expert 259 + expert 260 + divorce money claims 275 + expert 518 + expert 519 + expert 520 + expert 521 + expert 522 + expert 523 + expert 524 + expert 540 + civil 542 + criminal 543 + expert 603 + expert 604 + expert 605 + expert 606 + expert 607 + expert 608 + expert 609 + expert 610 + traffic 611 + expert 629 + expert 630 + expert 631 + expert 632 + expert 633 + expert 634 + expert 635 + expert 636 + expert 637 + expert 638 + expert 639 + expert 640 + traffic 641.
     // Four criminal-procedure columns share the English/Korean/Vietnamese cluster.
-    expect(english.size).toBe(108);
+    expect(english.size).toBe(109);
     const counts = { formation: 0, legal: 0, case: 0 };
     for (const category of english.values()) counts[category] += 1;
-    expect(counts).toEqual({ formation: 9, legal: 98, case: 1 });
+    expect(counts).toEqual({ formation: 9, legal: 99, case: 1 });
   });
 
   it.each(Object.keys(NATIVE_LOCALE_COLUMN_FILES) as (keyof typeof NATIVE_LOCALE_COLUMN_FILES)[])(

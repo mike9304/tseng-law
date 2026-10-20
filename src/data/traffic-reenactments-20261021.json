@@ -1,0 +1,41 @@
+{
+  "column/ko/taiwan-right-turn-crosswalk-pedestrian-dashcam": {
+    "id": "crosswalk-dashcam-reenactment-20261021-v1-ko",
+    "src": "/videos/columns/crosswalk-dashcam-reenactment-20261021-v1-ko.mp4",
+    "poster": "/images/column-videos/crosswalk-dashcam-reenactment-20261021-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "우회전 차량과 횡단보도 보행자의 접촉 재연",
+    "description": "우회전 차량의 전방 화면과 별도로 생성한 다른 차량 시점에서 보행자의 횡단, 차량 접근, 접촉 직후를 보여 줍니다. 장면 간 위치와 시간은 연속된 실측값이 아닙니다.",
+    "disclosure": "AI로 만든 가상 사고 재연입니다. 실제 블랙박스·CCTV 또는 특정 사건의 증거가 아니며, 속도·거리·접촉 시점·과실 비율을 측정한 영상이 아닙니다.",
+    "loop": false,
+    "durationSeconds": 50,
+    "sceneCount": 5
+  },
+  "column/zh-hant/taiwan-right-turn-crosswalk-pedestrian-dashcam": {
+    "id": "crosswalk-dashcam-reenactment-20261021-v1-zh-hant",
+    "src": "/videos/columns/crosswalk-dashcam-reenactment-20261021-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/crosswalk-dashcam-reenactment-20261021-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "右轉車與斑馬線行人接觸的虛構情境",
+    "description": "以右轉車的前方視角及另行生成的其他車輛視角呈現行人穿越、車輛接近與接觸後情況。各段位置及時間並非連續實測資料。",
+    "disclosure": "AI生成的虛構事故情境。非真實行車紀錄器、監視器或特定案件證據；車速、距離、接觸時點及責任比例均非實測。",
+    "loop": false,
+    "durationSeconds": 50,
+    "sceneCount": 5
+  },
+  "column/en/taiwan-right-turn-crosswalk-pedestrian-dashcam": {
+    "id": "crosswalk-dashcam-reenactment-20261021-v1-en",
+    "src": "/videos/columns/crosswalk-dashcam-reenactment-20261021-v1-en.mp4",
+    "poster": "/images/column-videos/crosswalk-dashcam-reenactment-20261021-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Fictional right-turn and pedestrian contact reenactment",
+    "description": "A turning driver's view and a separately generated second dashcam view illustrate the crossing, approach and moments after contact. Positions and times across shots are not synchronized measurements.",
+    "disclosure": "AI-generated fictional reenactment, not actual dashcam or CCTV footage or evidence from a specific case. Speed, distance, contact timing and fault shares are not measured.",
+    "loop": false,
+    "durationSeconds": 50,
+    "sceneCount": 5
+  }
+}

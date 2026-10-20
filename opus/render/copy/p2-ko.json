@@ -4,18 +4,19 @@
  "cards": [
   {
    "number": 1,
-   "layout": "core",
+   "layout": "core_hook",
    "tag": "",
-   "headline": "이혼 등록까지 했는데\n법원은 ‘아직 부부’",
+   "headline": "증인 두 명의 서명을 받아\n이혼 등록까지 마쳤어요.",
    "labels": {
     "kicker": "대만 법원 1심 · 협의이혼",
     "paper_title": "이혼 합의서",
     "stamp": "이혼 등록 완료",
-    "void": "무효"
+    "hero": "2",
+    "hero_label": "증인 서명"
    },
    "foot": [
     "",
-    "증인 한 명이 남편 뜻을 직접 확인한 적이 없었대요."
+    "그런데 남편은 증인이 누군지도 몰랐대요."
    ]
   },
   {

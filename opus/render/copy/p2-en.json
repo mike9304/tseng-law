@@ -4,19 +4,19 @@
  "cards": [
   {
    "number": 1,
-   "layout": "core",
+   "layout": "core_hook",
    "tag": "",
-   "headline": "Divorce registered.\nCourt says: still married.",
+   "headline": "Two witnesses signed.\nThe divorce was registered.",
    "labels": {
     "kicker": "Taiwan trial court · divorce by agreement",
-    "size": 90,
     "paper_title": "Divorce agreement",
     "stamp": "Registered",
-    "void": "VOID"
+    "hero": "2",
+    "hero_label": "Witness signatures"
    },
    "foot": [
-    "One witness never asked the husband if he really wanted out.",
-    "Talking only to the wife wasn't enough."
+    "",
+    "But the husband said he didn't even know who they were."
    ]
   },
   {

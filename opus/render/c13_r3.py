@@ -313,4 +313,28 @@ def core(card, lang, total):
     return core_card(card, lang, total, art_void, SRC[lang])
 
 
-LAYOUTS = {f.__name__: f for f in [core, hook, restaurant, sides, testimony, verdict, formula, witnesses]}
+
+def art_witness(out, x0, y0, x1, y1, card, lang):
+    """r8b card-1 hook: the registered agreement (left) and the two witness signatures as a hero number (right). No verdict."""
+    L = card['labels']
+    h = min(420, y1 - y0)
+    top = y0 + (y1 - y0 - h) / 2
+    px, pw = 110, 520
+    out.append(f'<g transform="rotate(-5 {px + pw / 2} {top + h / 2})">')
+    out.append(paper(px, top + 10, pw, h - 30, 0, True))
+    out.append(put(L['paper_title'], px + 44, top + 84, 42, INK, 900, lang, pw - 140, role='object'))
+    out.append(line(px + 44, top + 114, px + pw - 44, top + 114, INK, 2))
+    out.append(scribble(px + 50, top + 196, 150) + scribble(px + 270, top + 196, 150))
+    out.append(line(px + 44, top + 220, px + 230, top + 220, INK, 2) + line(px + 264, top + 220, px + pw - 44, top + 220, INK, 2))
+    out.append(rect(px + 44, top + h - 150, 360, 84, ACCENT))
+    out.append(put(L['stamp'], px + 224, top + h - 93, 40, INK, 900, lang, 330, 'middle', role='object'))
+    out.append('</g>')
+    cx = 840
+    out.append(put(L['hero'], cx, top + h / 2 + 70, 240, ACCENT, 900, lang, 300, 'middle', role='amount', minimum=120))
+    block(out, L['hero_label'], cx - 150, top + h / 2 + 140, 38, lang, 300, 700, PAPER, 1.2, 'label', 2)
+
+
+def core_hook(card, lang, total):
+    return core_card(card, lang, total, art_witness, SRC[lang])
+
+LAYOUTS = {f.__name__: f for f in [core, hook, restaurant, sides, testimony, verdict, formula, witnesses, core_hook]}

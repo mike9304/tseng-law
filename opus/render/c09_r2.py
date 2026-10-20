@@ -317,4 +317,25 @@ def docs(card, lang, total):
     return finish(out, lang, card['number'], total, False, SRC[lang])
 
 
-LAYOUTS = {f.__name__: f for f in [core, crash, injuries, prepaid, versus, ruling, cuts, math, proof, docs]}
+
+def art_claims(out, x0, y0, x1, y1, card, lang):
+    """r8b card-1 hook: the two claims from one crash as two slips, amounts claimed only. No outcome."""
+    L = card['labels']
+    h = min(380, y1 - y0)
+    top = y0 + (y1 - y0 - h) / 2
+    w = 430
+    for i, (x, ang, c) in enumerate(zip((70, 560), (-4, 3), L['claims'])):
+        cx, cy = x + w / 2, top + h / 2
+        out.append(f'<g transform="rotate({ang} {cx} {cy})">')
+        out.append(rect(x + 14, top + 16, w, h - 20, ACCENT, 16) + rect(x, top, w, h - 20, PAPER, 16, INK, 3))
+        out.append(put(c['who'], x + 34, top + 66, 36, INK, 900, lang, w - 68, role='object'))
+        out.append(line(x + 34, top + 92, x + w - 34, top + 92, INK, 2))
+        block(out, c['what'], x + 34, top + 150, 34, lang, w - 68, 700, INK, 1.25, 'object', 2)
+        out.append(put(c['amount'], x + 34, top + h - 60, 64, INK, 900, lang, w - 68, role='amount', minimum=44))
+        out.append('</g>')
+
+
+def core_claims(card, lang, total):
+    return core_card(card, lang, total, art_claims, SRC[lang])
+
+LAYOUTS = {f.__name__: f for f in [core, crash, injuries, prepaid, versus, ruling, cuts, math, proof, docs, core_claims]}

@@ -1,0 +1,116 @@
+{
+ "case": "p1",
+ "lang": "en",
+ "cards": [
+  {
+   "number": 1,
+   "layout": "core",
+   "tag": "",
+   "headline": "Never signed the lease.\nStill lost the deposit case.",
+   "labels": {
+    "kicker": "Taiwan trial court · rental deposit",
+    "size": 90,
+    "paper_title": "Lease",
+    "unsigned": "Not signed",
+    "amount_label": "Deposit wired",
+    "amount": "NT$21,800"
+   },
+   "foot": [
+    "The court said the lease was formed at the viewing, when rent and term were settled verbally.",
+    "The renter backed out the same day."
+   ]
+  },
+  {
+   "number": 2,
+   "layout": "space",
+   "tag": "Renter's side · made-up scene",
+   "speaker": "The renter (name withheld)",
+   "headline": "My stuff won't fit. I'm out.",
+   "foot": [
+    "Nothing was signed, so they wanted the money back.",
+    "The company said no."
+   ]
+  },
+  {
+   "number": 3,
+   "layout": "agreement",
+   "tag": "Company's side · made-up scene",
+   "speaker": "Management company",
+   "headline": "Rent's set. The ad said 1 year.",
+   "labels": {
+    "terms": "Unit · rent · minimum term",
+    "rent": "Rent (NT$)",
+    "unit": "/mo",
+    "min": "Min.",
+    "year": "yr",
+    "memo_note": "We canceled 3 other viewings"
+   },
+   "foot": [
+    "",
+    "The renter's own LINE message came up too."
+   ]
+  },
+  {
+   "number": 4,
+   "layout": "message",
+   "tag": "Message quoted in the ruling",
+   "headline": "Sent as the\n“rental deposit.”",
+   "labels": {
+    "context": "The renter's LINE message after wiring the money",
+    "amount": "NT$21,800",
+    "mark": 1,
+    "note": "Translated from Chinese"
+   },
+   "foot": [
+    "The renter gave this chat to the court."
+   ]
+  },
+  {
+   "number": 5,
+   "layout": "judgment",
+   "tag": "The ruling",
+   "headline": "Ruling: no refund owed",
+   "labels": {
+    "contract": "Lease (unsigned)",
+    "agreed": "Terms agreed at the viewing",
+    "rent": "NT$21,800/month",
+    "period": "1-year minimum",
+    "message": "LINE: “承租訂金”"
+   },
+   "foot": [
+    "The lease existed from the viewing day.",
+    "Backing out over space was on the renter."
+   ]
+  },
+  {
+   "number": 6,
+   "layout": "proof",
+   "tag": "This case · trial court",
+   "headline": "Proving the company's fault\nwas up to the renter.",
+   "labels": {
+    "docs": [
+     {
+      "title": "The renter's own reason",
+      "body": "After paying, their\nstuff wouldn't fit",
+      "proves_label": "The judge's finding",
+      "proves": "The renter was\nresponsible.",
+      "status": "On record",
+      "kind": "ok"
+     },
+     {
+      "title": "Proof of company fault",
+      "body": "The company caused\nthe deal to fail",
+      "proves_label": "Who had to show it",
+      "proves": "The renter",
+      "status": "None filed",
+      "kind": "x"
+     }
+    ]
+   },
+   "foot": [
+    "So the claim for the NT$21,800\nand interest was rejected.",
+    ""
+   ]
+  }
+ ]
+}

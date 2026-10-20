@@ -4,29 +4,27 @@
  "cards": [
   {
    "number": 1,
-   "layout": "core",
+   "layout": "core_claims",
    "tag": "",
-   "headline": "Kid's dental claim: all awarded.\nScooter rider's lost income:\nunder a tenth.",
+   "headline": "Two people sued\nover one crash.",
    "labels": {
-    "kicker": "Taiwan court · bus ran a red light",
-    "size": 84,
-    "bars": [
+    "kicker": "Taiwan trial court · bus ran a red light",
+    "claims": [
      {
-      "what": "Kid's future dental costs",
-      "result": "All awarded",
-      "ratio": 1.0
+      "who": "The kid behind",
+      "what": "Future dental\nwork",
+      "amount": "NT$343,000"
      },
      {
-      "what": "Scooter rider's lost income",
-      "result": "Under a tenth",
-      "ratio": 0.07222444431746758
+      "who": "The scooter rider",
+      "what": "Income lost\nwhile hurt",
+      "amount": "NT$385,022"
      }
-    ],
-    "legend": "Outline = amount claimed · red = amount allowed"
+    ]
    },
    "foot": [
-    "The rider filed no income records.",
-    ""
+    "Oct 26, 2020, Taipei: a bus ran a red light\nand a scooter hit its side.",
+    "The papers behind each claim differed."
    ]
   },
   {

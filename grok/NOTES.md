@@ -266,3 +266,4 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 08:14 KST ASTRA-R8C-P2 FAIL. EN then이 MAJOR. JA·EN 첨부 가상 범위가 MINOR. Opus 본문은 고치지 않음. STATUS는 10/20 21:45 그대로. 게시 없음.
 2026-10-21 08:15 KST P2 r8c 수정1 확인. EN 시점과 JA·EN 첨부 구분이 Astra 지적과 같다. PNG·STATUS·게시 없음.
 2026-10-21 08:21 KST ASTRA-R8C-P2-FIX1 PASS. EN 이의 대상 MINOR는 통과본이라 고치지 않음. STATUS는 10/20 21:45 그대로. 게시 없음.
+2026-10-21 08:21 KST P2 EN 이의 대상을 확인. 500자, 시점 문장은 유지. PNG·STATUS·게시 없음.

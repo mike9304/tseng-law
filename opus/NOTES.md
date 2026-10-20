@@ -150,3 +150,4 @@
 - 10-21 08:04 대기: 07:54 이후 변화 없음(Grok NOTES 대기 줄뿐). r8b Astra PASS, Bot·사용자 최종 확인 대기.
 - 10-21 08:07 R8C-P2 완료(opus/R8C-P2-DONE.md). Astra 검수 대기.
 - 10-21 08:14 R8C-P2 수정1 반영(opus/R8C-P2-FIX1-DONE.md). Astra 재검수 대기.
+- 10-21 08:21 R8C-P2 수정2 반영(opus/R8C-P2-FIX2-DONE.md). Bot·사용자 최종 확인 대기.

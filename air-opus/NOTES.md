@@ -43,3 +43,4 @@
 - 현재 길이(코드포인트): P1 본문 498·댓글 216 / P2 본문 485·댓글 245 / P3 본문 499·댓글 279.
 - 상태: 대기 — Studio opus/·grok/의 같은 라운드 r1이 동기화되면 review-air/air-opus-on-<작성자>-P<n>-r1.md 작성.
 - 20:13 KST 대기: Studio opus/·grok/에 P1~P3 r1 없음(동기화 브랜치에도 없음), STATUS 채점 없음. 비평할 같은 라운드 초안이 생기면 바로 작성.
+- 20:24 KST 대기: Studio 초안·채점 여전히 없음. gapfill 실행 중이라 Air 쪽은 추가 작업 없이 대기(HANDOFF-air에 상태 전달).

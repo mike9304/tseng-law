@@ -82,3 +82,4 @@
 - 다음: Astra가 지정하는 라운드·요청이 있으면 그 범위만. Grok r8/r9 비선정 후보 비평은 요청이 있을 때만.
 - 01:45 KST: Grok의 Air r1 비평(review-studio/grok-on-air-opus-r1.md) 확인 — r1을 승자로 보지 않음, 지적은 Bot 신규 규칙 기준(메타 도입·'다투지 않은'·어미 혼용). r1은 고정, 대응 없음. FIX3 이후 P1 귀책 표현 KO·JA↔EN 불일치를 HANDOFF에 추가 기재.
 - 01:54 KST: Air 동기화가 01:45 이후 멈춘 원인 확인(sync.sh:6 depth1+비강제 refspec → 2커밋 이상 앞선 원격을 non-ff로 거부, -q로 무음). 원격 추적 ref만 1회 재정렬해 복구, sync.sh는 미수정. HANDOFF-air에 근본 원인·수정안 기재. 같은 일이 다시 나면 같은 방식으로 ref만 맞추고 보고.
+- 02:04 KST: 동기화 결함 재발(Studio 01:57·02:02 2커밋) — ref 재정렬, HANDOFF에 재발 기재. Studio Opus의 Air r1 비평(review-studio/opus-on-air-opus-r1.md) 확인: 조각 문장 한도·P2 직역·댓글 질문 2개 등, r1 고정이라 대응 없음. P1 '사정' MINOR는 Grok이 수신 확인, Astra 판정 대기.

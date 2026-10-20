@@ -57,3 +57,22 @@ I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The 
     drafts/S7/ja.md [ja] sentences=46 mean=35.2 cv=0.499 short=0.152 run3=0.068 opener_rep=0.0 cite_end=0.217 cite_para=0.273 contrast=0 caveat=2 q=0
     drafts/S7/en.md [en] sentences=44 mean=18.6 cv=0.528 short=0.182 run3=0.0 opener_rep=0.182 cite_end=0.273 cite_para=0.273 contrast=0 caveat=0 q=0
     drafts/S7/zh.md [ko] sentences=35 mean=35.5 cv=0.574 short=0.229 run3=0.03 opener_rep=0.0 cite_end=0.229 cite_para=0.333 contrast=0 caveat=0 q=1
+
+
+## Astra r1 response (2026-10-20 22:05 KST)
+1. MAJOR, "civil": added in all four summaries (Art. 27(2)).
+2. MAJOR, Art. 29 routes: a party-initiated civil mediation is challenged by an invalidity/rescission suit in the approving court; a court-referred one by a request to resume the lawsuit. In both cases the deadline is 30 days from service of the approved record (body + FAQ 3, x4).
+3. MAJOR, CALI Art. 29: the insured person (Art. 9: including a driver using the vehicle with the policyholder's consent), the accident caused under the listed circumstances, the breath/blood alcohol limit, drugs/intent/crime, and the 21/21-1 licensing breach as a separate item, with the 2-year subrogation limit (x4). ko 「술을 마셨거나」 and the ja grouping are gone.
+4. MAJOR, ko/ja clock: 「계약상 임대기간 만료 후」/「契約上の賃貸期間満了後」 in the summary, opening and body (en: "past the end of the contractual rental period").
+5. MAJOR, reporting exceptions: both scooter exceptions (good reason / not a police matter), plus the car-terms exception (x4).
+6. MAJOR, Art. 20 + representation: the rescheduling proviso and attendance through a representative (Art. 15) come before the departure-date closing (x4).
+7. MAJOR, ko 大型重型機車: 「대형 중량급 이륜차(大型重型機車)」 in FAQ 1 and the body.
+8. MAJOR, checklist headings and instructional sequencing: replaced with descriptive headings and declarative sentences (x4, zh too).
+9. MINOR, ko closing: names the attendance issue directly.
+10. MINOR, ja 出租単: 「貸出時の確認書（機車出租單）」.
+Variety (FAIL 0):
+    drafts/S7/ko.md [ko] sentences=47 mean=39.5 cv=0.516 short=0.106 run3=0.022 opener_rep=0.0 cite_end=0.213 cite_para=0.273 contrast=1 caveat=3 q=0
+    drafts/S7/ja.md [ja] sentences=50 mean=39.3 cv=0.524 short=0.12 run3=0.062 opener_rep=0.091 cite_end=0.2 cite_para=0.273 contrast=0 caveat=3 q=0
+    drafts/S7/en.md [en] sentences=44 mean=21.7 cv=0.657 short=0.159 run3=0.0 opener_rep=0.273 cite_end=0.273 cite_para=0.273 contrast=0 caveat=0 q=0
+    drafts/S7/zh.md [ko] sentences=35 mean=42.9 cv=0.785 short=0.2 run3=0.03 opener_rep=0.0 cite_end=0.2 cite_para=0.333 contrast=0 caveat=0 q=1
+Lengths: ko 2,030 chars, ja 2,110, zh 1,645, en 969 words.

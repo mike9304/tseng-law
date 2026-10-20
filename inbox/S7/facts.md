@@ -34,3 +34,13 @@ URL (Executive Yuan file): https://www.ey.gov.tw/File/F86FD1FD1EB5BE6F
 
 ## Not covered on purpose (other lanes)
 - 6-month complaint period, CALI claims procedure (A6, Air lane). International driving permits (not verified).
+
+
+## Astra r1 additions (2026-10-20 22:05 KST) — texts re-read on law.moj.gov.tw and the MOTC terms (evidence/)
+- 鄉鎮市調解條例27(2): 「經法院核定之民事調解，與民事確定判決有同一之效力；經法院核定之刑事調解，以給付金錢…為標的者，其調解書得為執行名義。」 → every summary now says "civil" mediation.
+- 29: (1) 因當事人聲請而成立之民事調解 → 向原核定法院提起宣告調解無效或撤銷調解之訴; (2) 法院移付而成立之民事調解 → 請求續行訴訟程序; (3) 「應於法院核定之調解書送達後三十日內為之」. → body and FAQ 3 give both routes and the deadline from service of the approved record (x4).
+- 20: 「當事人無正當理由，於調解期日不到場者，視為調解不成立。但調解委員會認為有成立調解之望者，得另定調解期日。」 15(1): 「…通知當事人或其代理人到場」. → rescheduling proviso + attendance through a representative, before the departure-date conclusion (x4).
+- 強制汽車責任保險法29(1): 「被保險人有下列情事之一，致被保險汽車發生汽車交通事故者，保險人仍應依本法規定負保險給付之責。但得在給付金額範圍內，代位行使請求權人對被保險人之請求權：一、飲用酒類…其吐氣或血液中所含酒精濃度超過道路交通管理法規規定之標準。二、…毒品…三、故意行為所致。四、從事犯罪行為或逃避合法拘捕。五、違反道路交通管理處罰條例第二十一條或第二十一條之一規定而駕車。」 (2): 代位權 2 years from payment. 9(2): 被保險人 = 要保人 + 經該要保人同意使用或管理被保險汽車之人. → insured-person and causation conditions, alcohol threshold, drink-driving kept separate from the Art. 21/21-1 licensing breach (ja fixed), 2-year limit (x4).
+- MOTC scooter terms point 14 (evidence/motc-scooter-rental-terms.txt): 「除有正當理由不能向警察機關報案或非屬警察機關受理之情形外，承租人應立即報案」 → both exceptions (x4). Car terms point 10: 「除有不能向警察機關報案之情形外」 → stated for cars.
+- Point 15(2): 「修理期間逾租賃期間之日起七日以內…(不得高於百分之五十)…第八日至十五日…(不得高於百分之四十)」 → ko/ja now count from the end of the contractual rental period (「계약상 임대기간 만료 후」/「契約上の賃貸期間満了後」), not the actual return; en "past the end of the contractual rental period". Point 15(3) 大型重型機車 → ko 「대형 중량급 이륜차(大型重型機車)」.
+- Checklist headings/instructions removed: ko 「사고 신고와 렌탈업체 통지 의무」「계약서의 보험란과 출차 기록」; ja 「警察への届出とレンタル業者への通知」「契約書の保険欄と貸出時の記録」; en "Reporting to the police and notifying the rental company", "Insurance boxes and the pickup record"; zh 「報案與通知出租人的義務」「保險勾選欄與取車存證」; "Start with…/Then…/まず…/先看…" sentences rewritten as declaratives.

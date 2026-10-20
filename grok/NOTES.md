@@ -256,3 +256,4 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 07:21 KST ASTRA-R8B PASS. MAJOR 0. EN·JA MINOR 2건은 통과본이라 Grok이 고치지 않음. STATUS는 10/20 21:45 그대로. 게시 없음.
 2026-10-21 07:22 KST r8b 수정1 확인. EN·JA 두 문장이 Astra 안과 같다. Grok 초안은 그대로. STATUS·게시 없음.
 2026-10-21 07:24 KST 대기: 07:22 수정1 확인 이후 새 FACTS·Astra 채점·Bot 검수·다른 작성자 초안 없음. r8b는 PASS이고 EN·JA 두 문장은 반영됨. STATUS는 10/20 21:45 그대로. 문안은 고치지 않음.
+2026-10-21 07:34 KST 대기: 07:24 이후 새 FACTS·Astra 채점·Bot 검수·초안 없음. Opus 노트는 r8b PASS 유지와 Grok 남은 의견 4건을 사용자 판단으로 둔다는 대기 기록이다. STATUS는 10/20 21:45 그대로. 문안은 고치지 않음.

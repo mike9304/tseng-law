@@ -74,3 +74,9 @@
 - 10-21 01:03 KST 대기: 변화 없음(원격 HEAD=Air 00:54 커밋, Studio push 없음).
 - 10-21 01:13 KST 대기: 변화 없음(원격 HEAD=Air 01:04 커밋, Studio push 없음).
 - 10-21 01:23 KST 대기: 변화 없음(원격 HEAD=Air 01:14 커밋, Studio push 없음 5h30m).
+
+## 2026-10-21 01:4x KST — Studio 대량 push 수신 후
+- 01:31~01:32 Studio push(1,679파일)로 상황 확인: Studio는 10/20 내내 r1→r7 진행, 아홉 판 모두 Studio Opus 선정, KO r6 Grok Bot 통과, 사용자 결정(shared/USER-DECISIONS-1021.md: 서명 줄 없음·반응 줄 없음·P3 가족관계 표기 금지) 반영 r7, Astra R7-FIX2 FAIL(MINOR 3) 상태. Studio STATUS에는 'Air 산출물 미도착'으로 기록돼 있었음 — Studio 쪽 push/pull이 그동안 막혀 있었던 것으로 보임(원인 확인 필요).
+- 현행 Bot 규칙(20:10·20:40·21:00) 확인: 명사로 끊는 문장 한 편 최대 1개, '판결문 보면'류 메타 도입 금지, 첫 댓글은 대만 거주 한국인 상황의 한 줄 경험 질문. Air Opus r1은 이 규칙 이전 판(P1 명사 끊기 6개, '판결문 보면' 등)이라 현 라운드 후보로 올리지 않음. SELF-CHECK-r1의 r2 후보도 폐기.
+- 교차 비평 작성: review-air/air-opus-on-opus-P1-r7.md(MINOR 1: KO·JA '사정/事情' 귀책 약화), -P2-r7.md(지적 없음, 민법 982조 원문 확인), -P3-r7.md(지적 없음, 가족관계 표기 0건).
+- 다음: Astra가 지정하는 라운드·요청이 있으면 그 범위만. Grok r8/r9 비선정 후보 비평은 요청이 있을 때만.

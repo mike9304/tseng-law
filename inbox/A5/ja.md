@@ -13,7 +13,7 @@ featured_image: "TBD"
 featured_image_alt: "会議室のテーブルに置かれた白紙の評価シートとペン、向かいの椅子は空いている。"
 faq:
   - q: "試用期間中なら理由を示さずに解雇できますか。"
-    a: "できません。労働部は、試用期間について法令の定めはなく、試用期間中や満了時に契約を終了するには[勞動基準法第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)・[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)または第13条ただし書の事由が必要だと案内しています。台湾高等法院高雄分院115年度勞上易字第11号判決（2026年10月7日）は、試用期間中の適格性判断にも客観的な事実の裏付けが必要だとして、運転手に落ち度のない事故一件と、重大な落ち度が認められない事故後の対応を理由とする解雇を無効としました。"
+    a: "できません。労働部は、試用期間について法令の定めはなく、試用期間中や満了時に契約を終了するには[勞動基準法第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)・[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)または[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)ただし書の事由が必要だと案内しています。台湾高等法院高雄分院115年度勞上易字第11号判決（2026年10月7日）は、試用期間中の適格性判断にも客観的な事実の裏付けが必要だとして、運転手に落ち度のない事故一件と、重大な落ち度が認められない事故後の対応を理由とする解雇を無効としました。"
   - q: "3か月未満で辞めてもらう場合も資遣費は必要ですか。"
     a: "第11条のように資遣費を伴う事由で契約を終了するなら、必要です。労働部の案内は、試用期間中にそうした事由で契約を終了する場合にも[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)・[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)と[勞工退休金條例第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)を適用するとしています。予告期間は継続勤務3か月以上から定められていますが、資遣費は1年未満も比例で計算します。勞工退休金條例の制度なら1年ごとに平均賃金0.5か月分、上限6か月分で、契約終了後30日以内に支払います。一方、第12条に基づき適法に予告なく解雇した場合は、資遣費の請求はできません（[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)）。"
   - q: "外国人の社員にも同じ資遣費の計算が使われますか。"
@@ -28,7 +28,7 @@ author: "legal-ai-assistant"
 
 ## 試用期間でも解雇事由が要る
 
-同じ案内によれば、試用期間中の労働者の権利は一般の労働者と変わりません。試用期間中も満了時も、契約を終了するには[勞動基準法第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)・[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)または第13条ただし書の事由が必要です。評価の結果が不適任なら、第11条によって予告し、資遣費を払うことになります。労働部の[FAQ](https://www.mol.gov.tw/1607/28690/2282/2326/2288/7100/post)は、第16条・第17条と勞工退休金條例第12条も挙げています。
+同じ案内によれば、試用期間中の労働者の権利は一般の労働者と変わりません。試用期間中も満了時も、契約を終了するには[勞動基準法第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)・[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)または[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)ただし書の事由が必要です。評価の結果が不適任なら、第11条によって予告し、資遣費を払うことになります。労働部の[FAQ](https://www.mol.gov.tw/1607/28690/2282/2326/2288/7100/post)は、第16条・第17条と勞工退休金條例第12条も挙げています。
 
 勤怠の問題なら、もう一つの道があります。正当な理由なく3日連続、または1か月に6日欠勤した場合は予告なしに解雇できる事由で、使用者はそれを知った日から30日以内に行う必要があります（[第12条第1項第6号・第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)）。この場合、労働者は予告期間の賃金も資遣費も請求できません（[第18条第1号](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)）。
 
@@ -44,7 +44,7 @@ author: "legal-ai-assistant"
 
 ## 予告と資遣費の計算
 
-予告期間は、継続勤務3か月以上1年未満なら10日前、1年以上3年未満なら20日前です（[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)）。3か月未満の人の予告期間は条文にありません。資遣費は違います。勞工退休金條例の制度なら1年ごとに平均賃金0.5か月分、1年未満は比例計算、上限6か月分で、契約終了後30日以内に支払います（[勞工退休金條例第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)）。勞動基準法の制度なら1年ごとに1か月分で、1か月未満は1か月と数えます（[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)）。
+予告期間は、継続勤務3か月以上1年未満なら10日前、1年以上3年未満なら20日前です（[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)）。3か月未満の人の予告期間は条文にありません。資遣費は違います。勞工退休金條例の制度なら1年ごとに平均賃金0.5か月分、1年未満は比例計算、上限6か月分で、契約終了後30日以内に支払います（[勞工退休金條例第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)）。勞動基準法の制度なら満1年ごとに平均賃金1か月分で、端数の月数や1年未満の勤務は比例で計算し、1か月未満は1か月と数えます（[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)）。
 
 外国人社員には2026年の変化があります。[外國專業人才延攬及僱用法第24条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)は、専門的な仕事に従事する外国専門人材と外国特定専門人材に勞工退休金條例の制度を適用しました。改正施行前から同じ事業所に勤めていた人は、施行日から6か月以内に書面で勞動基準法の制度の継続を選べました。施行前からすでに新制度だった人や旧制度を選んでいた人はそのままで（同条第5項）、新制度に移った場合、それまでの勤続年数は保留されます（同条第3項、勞工退休金條例第11条）。
 
@@ -56,7 +56,7 @@ author: "legal-ai-assistant"
 
 ## 参考にした公的資料
 
-- 全國法規資料庫・勞動基準法：[第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)、[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)、[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)、[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)（2024年7月31日改正まで反映）
+- 全國法規資料庫・勞動基準法：[第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)、[第13条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)、[第16条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)、[第17条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)、[第18条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)（2024年7月31日改正まで反映）
 - 同・勞工退休金條例：[第11条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=11)、[第12条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)
 - 同・勞資爭議處理法：[第8条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8)
 - 同・外國專業人才延攬及僱用法：[第24条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)（2025年9月24日全文改正公布、2026年1月1日施行）

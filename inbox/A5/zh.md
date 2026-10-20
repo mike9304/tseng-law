@@ -13,7 +13,7 @@ featured_image: "TBD"
 featured_image_alt: "會議室桌上放著一張空白考核表和一支筆，對面的椅子沒有人坐。"
 faq:
   - q: "試用期間，公司可以不說理由就請員工走人嗎？"
-    a: "不行。勞動部說明，現行法令對試用期間並無明文規範，試用期內或屆期時終止勞動契約，仍須有[勞動基準法第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)或第13條但書規定的情事。臺灣高等法院高雄分院115年度勞上易字第11號判決（2026年10月7日）指出，試用期的適任判斷仍應以客觀事實為基礎，僅憑一件不可歸責於司機的事故，事故後的處理也看不出重大違反工作規範，終止契約不生合法終止的效力。"
+    a: "不行。勞動部說明，現行法令對試用期間並無明文規範，試用期內或屆期時終止勞動契約，仍須有[勞動基準法第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)或[第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)但書規定的情事。臺灣高等法院高雄分院115年度勞上易字第11號判決（2026年10月7日）指出，試用期的適任判斷仍應以客觀事實為基礎，僅憑一件不可歸責於司機的事故，事故後的處理也看不出重大違反工作規範，終止契約不生合法終止的效力。"
   - q: "試用不到三個月就資遣，還要給資遣費嗎？"
     a: "勞動部常見問答說明，試用期內或屆期以第11條等事由終止契約，仍應依勞基法[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)、[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)及[勞工退休金條例第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)辦理。預告期間從繼續工作三個月以上才有規定，資遣費則未滿一年也按比例計給；適用勞退新制者，每滿一年發給二分之一個月平均工資，最高六個月，應於終止勞動契約後三十日內發給。若是依第12條合法不經預告終止，勞工不得請求資遣費（[第18條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)）。"
   - q: "外籍專業人員的資遣費也照勞退新制算嗎？"
@@ -28,7 +28,7 @@ author: "legal-ai-assistant"
 
 ## 試用期的勞工，權益和一般勞工一樣
 
-同一份說明寫得很直接：勞工在試用期間的勞動權益，與一般受僱勞工並無不同。試用期內或屆期時，雇主要終止勞動契約，仍須有[勞基法第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)或第13條但書的情事。考核不適任，就依第11條預告並給付資遣費。勞動部的[常見問答](https://www.mol.gov.tw/1607/28690/2282/2326/2288/7100/post)另外點名了第16條、第17條和勞工退休金條例第12條。
+同一份說明寫得很直接：勞工在試用期間的勞動權益，與一般受僱勞工並無不同。試用期內或屆期時，雇主要終止勞動契約，仍須有[勞基法第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)或[第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)但書的情事。考核不適任，就依第11條預告並給付資遣費。勞動部的[常見問答](https://www.mol.gov.tw/1607/28690/2282/2326/2288/7100/post)另外點名了第16條、第17條和勞工退休金條例第12條。
 
 出勤有問題，是另一條路。無正當理由繼續曠工三日，或一個月內曠工達六日，雇主得不經預告終止契約，但要在知悉之日起三十日內為之（[第12條第1項第6款、第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)）；這時勞工不得請求預告期間工資和資遣費（[第18條第1款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)）。
 
@@ -44,7 +44,7 @@ author: "legal-ai-assistant"
 
 ## 預告期間與資遣費
 
-繼續工作三個月以上未滿一年，十日前預告；一年以上未滿三年，二十日前預告（[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)）。未滿三個月的預告期間，條文沒有規定。資遣費就不同了。適用勞退新制者，每滿一年發給二分之一個月平均工資，未滿一年按比例，最高六個月，應於終止後三十日內發給（[勞工退休金條例第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)）；適用勞基法舊制者，每滿一年一個月，未滿一個月以一個月計（[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)）。
+繼續工作三個月以上未滿一年，十日前預告；一年以上未滿三年，二十日前預告（[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)）。未滿三個月的預告期間，條文沒有規定。資遣費就不同了。適用勞退新制者，每滿一年發給二分之一個月平均工資，未滿一年按比例，最高六個月，應於終止後三十日內發給（[勞工退休金條例第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)）；適用勞基法舊制者，每滿一年發給一個月平均工資，剩餘月數或未滿一年者按比例計給，未滿一個月以一個月計（[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)）。
 
 外籍專業人員在2026年有變化。[外國專業人才延攬及僱用法第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)規定，從事專業工作的外國專業人才及外國特定專業人才，適用勞工退休金條例的退休金制度；修正施行前已受僱、仍在同一事業單位者，可在施行之日起六個月內以書面表明繼續適用勞基法的退休金規定。施行前已是新制，或已表明繼續適用舊制的人，維持原狀（同條第5項）；改適用新制的人，之前的工作年資予以保留（同條第3項、勞工退休金條例第11條）。
 
@@ -56,7 +56,7 @@ author: "legal-ai-assistant"
 
 ## 參考資料
 
-- 全國法規資料庫・勞動基準法：[第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)、[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)、[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)、[第18條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)（修正至113年7月31日）
+- 全國法規資料庫・勞動基準法：[第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12)、[第13條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13)、[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)、[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)、[第18條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)（修正至113年7月31日）
 - 全國法規資料庫・勞工退休金條例：[第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=11)、[第12條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)
 - 全國法規資料庫・勞資爭議處理法：[第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8)
 - 全國法規資料庫・外國專業人才延攬及僱用法：[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)（114年9月24日修正公布全文，115年1月1日施行）

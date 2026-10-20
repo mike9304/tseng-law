@@ -75,3 +75,15 @@ Fixes:
 - Finding 2 (ko opening): first two sentences now carry one number (3개월); chronology moved after them, all dates kept (2025-01-01 hire, 02-07 afternoon rear contact while parked, 02-19 notice). KSHV txt lines 18-22, 27, 84.
 - Finding 3 (ja heading): 「試用期間中に使用者へ認められる裁量とその限界」. ko heading aligned for the same reason: 「수습기간 중 사용자에게 인정되는 재량과 그 한계」.
 - Finding 4 (en): "Latitude has an edge, though." → "That latitude has limits."
+
+## Astra r4 fix log (2026-10-21 03:11 KST)
+Statutes re-fetched live 2026-10-21 ~03:10 KST (research/bin/law.py; cache research/law/N0020007-{6,8,39}.txt, N0030001-{13,17}.txt):
+- 勞資爭議處理法第8條 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8): 「勞資爭議在調解、仲裁或裁決期間，資方不得因該勞資爭議事件而歇業、停工、終止勞動契約或為其他不利於勞工之行為；勞方不得因該勞資爭議事件而罷工或為其他爭議行為。」
+- 同法第6條第1項 (flno=6): 「權利事項之勞資爭議，得依本法所定之調解、仲裁或裁決程序處理之。」; 第3項第3款: 「因工會法第三十五條第一項第一款至第四款所定事由，依本法申請裁決。」
+- 同法第39條第1項 (flno=39): 「勞工因工會法第三十五條第二項規定所生爭議，得向中央主管機關申請裁決。」 → the 裁決 in Art.8 is the Act's own adjudication of union-related (unfair-labor-practice) disputes under 工會法35, not court litigation.
+- 勞動基準法第13條 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13): 「勞工在第五十條規定之停止工作期間或第五十九條規定之醫療期間，雇主不得終止契約。但雇主因天災、事變或其他不可抗力致事業不能繼續，經報主管機關核定者，不在此限。」
+- 勞動基準法第17條 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17): 「一、在同一雇主之事業單位繼續工作，每滿一年發給相當於一個月平均工資之資遣費。二、依前款計算之剩餘月數，或工作未滿一年者，以比例計給之。未滿一個月者以一個月計。」; 第2項: 「前項所定資遣費，雇主應於終止勞動契約三十日內發給。」
+Fixes:
+1. en (MAJOR): "in mediation, arbitration or adjudication" → "in mediation or arbitration under the Act, or in unfair-labor-practice adjudication" (Art.8 with Arts 6(1), 6(3)(iii), 39(1)). ko/ja describe only mediation (the procedure in the 2024 Supreme Court case), which is within Art.8; zh keeps the statutory wording 調解、仲裁或裁決.
+2. ko/ja/zh (MINOR): old-system severance now states the average-wage basis, pro-rating of leftover months and of service under a year, and the round-up of part of a month (Art.17(1)(i)-(ii)). en aligned ("one month's average wage for each full year of service; leftover months, or service under a year, are pro-rated, and part of a month counts as a full month").
+3. all four (MINOR): Art.13 proviso now linked inline in FAQ 1 and the body, and Art.13 added to the Labor Standards Act source-list line.

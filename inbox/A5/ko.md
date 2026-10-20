@@ -13,7 +13,7 @@ featured_image: "TBD"
 featured_image_alt: "회의실 탁자 위에 놓인 빈 평가표와 펜, 맞은편 의자가 비어 있는 장면"
 faq:
   - q: "수습기간에는 이유 없이 해고할 수 있나요?"
-    a: "그렇지 않습니다. 노동부는 수습기간에 관한 법령 규정이 없고, 수습 중이나 종료 때 근로계약을 끝내려면 [노동기준법 제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)·[제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12) 또는 제13조 단서의 사유가 있어야 한다고 안내합니다. 대만고등법원 가오슝분원 115년도 勞上易자 제11호 판결(2026년 10월 7일)은 수습 중 적격 판단에도 객관적 사실의 근거가 필요하다며, 운전기사 잘못이 아닌 사고 한 건과, 중대한 잘못이 확인되지 않은 사고 뒤 대처를 이유로 한 해고를 무효로 봤습니다."
+    a: "그렇지 않습니다. 노동부는 수습기간에 관한 법령 규정이 없고, 수습 중이나 종료 때 근로계약을 끝내려면 [노동기준법 제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)·[제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12) 또는 [제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13) 단서의 사유가 있어야 한다고 안내합니다. 대만고등법원 가오슝분원 115년도 勞上易자 제11호 판결(2026년 10월 7일)은 수습 중 적격 판단에도 객관적 사실의 근거가 필요하다며, 운전기사 잘못이 아닌 사고 한 건과, 중대한 잘못이 확인되지 않은 사고 뒤 대처를 이유로 한 해고를 무효로 봤습니다."
   - q: "수습 3개월이 안 되었는데도 해고수당을 받나요?"
     a: "노동기준법 제11조처럼 해고수당이 따르는 사유로 계약이 끝났다면 받을 수 있습니다. 노동부 안내는 수습 중 그런 사유로 계약을 끝낼 때에도 [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)·[제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)와 [노동자퇴직금조례 제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)를 적용한다고 합니다. 예고기간은 계속 근무 3개월 이상부터 정해져 있지만, 해고수당 조문은 1년 미만의 근속도 비례해 계산하게 합니다. 퇴직금조례 기준이면 1년마다 평균임금 0.5개월분, 최대 6개월분이고 계약 종료 후 30일 안에 지급해야 합니다. 반면 제12조에 따라 적법하게 예고 없이 해고된 경우에는 해고수당을 청구할 수 없습니다([제18조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18))."
   - q: "외국인 직원도 같은 퇴직금 기준을 적용받나요?"
@@ -30,7 +30,7 @@ author: "legal-ai-assistant"
 
 수습에 관한 규정은 원래 노동기준법 시행세칙에 있었지만 1997년 6월 12일 삭제되었습니다. 노동부는 [「試用期之約定」 안내](https://www.mol.gov.tw/1607/28162/28296/28340/28342/28356/47085/post)에서, 이제는 노사가 업무 특성에 맞춰 신의칙에 어긋나지 않는 범위에서 수습을 약정할 수 있다고 설명합니다. 같은 안내는 수습 중 근로자의 권리가 일반 근로자와 다르지 않다고 적습니다.
 
-해고도 마찬가지입니다. 노동부는 수습 중이든 수습이 끝날 때든 계약을 끝내려면 [노동기준법 제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)·[제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12) 또는 제13조 단서의 사유가 있어야 하고, 평가 결과 부적격이면 제11조로 예고하고 해고수당(資遣費)을 지급해야 한다고 안내합니다. 노동부의 [FAQ](https://www.mol.gov.tw/1607/28690/2282/2326/2288/7100/post)는 여기에 제16조·제17조와 노동자퇴직금조례 제12조를 함께 듭니다.
+해고도 마찬가지입니다. 노동부는 수습 중이든 수습이 끝날 때든 계약을 끝내려면 [노동기준법 제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11)·[제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12) 또는 [제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13) 단서의 사유가 있어야 하고, 평가 결과 부적격이면 제11조로 예고하고 해고수당(資遣費)을 지급해야 한다고 안내합니다. 노동부의 [FAQ](https://www.mol.gov.tw/1607/28690/2282/2326/2288/7100/post)는 여기에 제16조·제17조와 노동자퇴직금조례 제12조를 함께 듭니다.
 
 ## 수습기간 중 사용자에게 인정되는 재량과 그 한계
 
@@ -42,7 +42,7 @@ author: "legal-ai-assistant"
 
 ## 예고와 해고수당은 어떻게 계산하나
 
-예고기간은 계속 근무 3개월 이상 1년 미만이면 10일, 1년 이상 3년 미만이면 20일입니다([제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)). 3개월이 안 된 사람에 대한 예고기간은 조문에 없습니다. 해고수당은 다릅니다. 노후에 받는 퇴직금(退休金)과는 별개의 돈이지만, 어느 퇴직금 제도를 적용받는지에 따라 계산법이 갈립니다. 노동자퇴직금조례 제도라면 1년마다 평균임금 0.5개월분, 1년 미만은 비례 계산, 최대 6개월분이고, 계약 종료 후 30일 안에 줘야 합니다([노동자퇴직금조례 제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)). 노동기준법 제도라면 1년마다 1개월분이고 1개월 미만은 1개월로 봅니다([제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)).
+예고기간은 계속 근무 3개월 이상 1년 미만이면 10일, 1년 이상 3년 미만이면 20일입니다([제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16)). 3개월이 안 된 사람에 대한 예고기간은 조문에 없습니다. 해고수당은 다릅니다. 노후에 받는 퇴직금(退休金)과는 별개의 돈이지만, 어느 퇴직금 제도를 적용받는지에 따라 계산법이 갈립니다. 노동자퇴직금조례 제도라면 1년마다 평균임금 0.5개월분, 1년 미만은 비례 계산, 최대 6개월분이고, 계약 종료 후 30일 안에 줘야 합니다([노동자퇴직금조례 제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)). 노동기준법 제도라면 만 1년마다 평균임금 1개월분이고, 남은 개월 수나 1년이 안 되는 근속은 비례해 계산하며, 1개월 미만은 1개월로 봅니다([제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17)).
 
 외국인 직원에게는 2026년의 변화가 있습니다. [외국전문인재법 제24조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)는 전문 업무에 종사하는 외국전문인재와 외국특정전문인재에게 노동자퇴직금조례 제도를 적용하게 했습니다. 개정 시행 전부터 같은 회사에 다니던 사람은 시행일부터 6개월 안에 서면으로 노동기준법 제도를 계속 고를 수 있었습니다. 시행 전에 이미 노동자퇴직금조례 제도였거나 노동기준법 제도를 골라 둔 사람은 그대로이고(같은 조 제5항), 새 제도로 옮기면 그 전 근속연수는 보존됩니다(같은 조 제3항, 노동자퇴직금조례 제11조).
 
@@ -54,7 +54,7 @@ author: "legal-ai-assistant"
 
 ## 참고한 공식 자료
 
-- 노동기준법(勞動基準法) [제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11), [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12), [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16), [제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17), [제18조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)(2024년 7월 31일 개정까지 반영)
+- 노동기준법(勞動基準法) [제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11), [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12), [제13조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13), [제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=16), [제17조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17), [제18조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18)(2024년 7월 31일 개정까지 반영)
 - 노동자퇴직금조례(勞工退休金條例) [제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=11), [제12조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12)
 - 노사분쟁처리법(勞資爭議處理法) [제8조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8)
 - 외국전문인재법(外國專業人才延攬及僱用法) [제24조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)(2025년 9월 24일 전문 개정 공포, 2026년 1월 1일 시행)

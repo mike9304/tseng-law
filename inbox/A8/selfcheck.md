@@ -1,24 +1,24 @@
 # A8 selfcheck (2026-10-20)
 
-## Variety check
+## Variety check (re-run after Astra r1 fixes, 2026-10-20 21:0x KST)
 ```
-drafts/A8/ko.md [ko] sentences=33 mean=42.2 cv=0.526 short=0.121 run3=0.0 opener_rep=0.0 cite_end=0.182 cite_para=0.7 contrast=0 caveat=0 q=1
+drafts/A8/ko.md [ko] sentences=36 mean=49.1 cv=0.507 short=0.083 run3=0.0 opener_rep=0.0 cite_end=0.167 cite_para=0.727 contrast=0 caveat=0 q=1
+  WARN 78% of sentences end in '니다.' — vary endings within the register
+drafts/A8/ja.md [ja] sentences=32 mean=55.3 cv=0.518 short=0.156 run3=0.0 opener_rep=0.0 cite_end=0.125 cite_para=0.7 contrast=0 caveat=0 q=0
+  WARN 84% of sentences end in 'desu-masu' — vary endings within the register
+drafts/A8/en.md [en] sentences=41 mean=21.8 cv=0.597 short=0.171 run3=0.0 opener_rep=0.091 cite_end=0.098 cite_para=0.636 contrast=0 caveat=0 q=1
   OK — no variety limit violated
-drafts/A8/ja.md [ja] sentences=29 mean=48.4 cv=0.5 short=0.172 run3=0.0 opener_rep=0.0 cite_end=0.138 cite_para=0.667 contrast=0 caveat=0 q=0
-  WARN 79% of sentences end in 'desu-masu' — vary endings within the register
-drafts/A8/en.md [en] sentences=35 mean=20.1 cv=0.573 short=0.2 run3=0.0 opener_rep=0.1 cite_end=0.114 cite_para=0.6 contrast=0 caveat=0 q=1
-  OK — no variety limit violated
-drafts/A8/zh.md [zh-hant] sentences=29 mean=40.6 cv=0.69 short=0.172 run3=0.0 opener_rep=0.182 cite_end=0.172 cite_para=0.727 contrast=0 caveat=0 q=2
+drafts/A8/zh.md [zh-hant] sentences=32 mean=43.8 cv=0.688 short=0.156 run3=0.0 opener_rep=0.083 cite_end=0.156 cite_para=0.75 contrast=0 caveat=1 q=2
   OK — no variety limit violated
 ```
 FAIL 0 in all four.
 
 ## Length
 ```
-drafts/A8/ko.md chars_nospace 1511 chars_with_space 1968
-drafts/A8/ja.md chars_nospace 1504 chars_with_space 1530
-drafts/A8/en.md words 712
-drafts/A8/zh.md chars_nospace 1265 chars_with_space 1298
+drafts/A8/en.md words 906
+drafts/A8/ja.md chars_nospace 1896 chars_with_space 1924
+drafts/A8/ko.md chars_nospace 1915 chars_with_space 2499
+drafts/A8/zh.md chars_nospace 1500 chars_with_space 1535
 ```
 
 ## Duplicate check
@@ -28,5 +28,9 @@ Queued angle (complaint, freezing the receiving account, incidental civil action
 - Openings: ko = reader question, ja = fact about the Act, en = labelled scene, zh = reader question. No prevalence claims; no bold/emoji/checklist headings; ko 합니다체; ja です・ます (WARN 79% desu-masu endings only).
 
 ## Open risks
-- Transitional application of the 2026-01-21 amendments to Arts. 46/47 (acts before promulgation) not discussed; drafts give current text and the amendment date only.
+- Resolved (Astra r1): effective date 2026-01-23 and 刑法2 I comparison for earlier conduct now stated in all four, with the Judicial Yuan 司法周刊 report; drafts do not predict the comparison outcome.
 - No judgment applying Art. 55 was searched/cited.
+
+## Astra r1 fixes (2026-10-20)
+- 11/11 findings applied: summaries split Art.46 (surrender → reduce/exempt) vs Art.47 (confession throughout, clock from first confession in prosecutor's investigation → reduce) (ko/ja/en); headings limited to amended Arts.46–47 + effective 2026-01-23 + 刑法2 I comparison + other provisions still relevant (x4); zh summary 53 得 + 必要時應上訴, zh body '也有角色'; 339-4 categories restored (政府機關, 關於他人, 電磁紀錄) body+FAQ (x4); en paragraph-2 wording (no payment-causes-arrest); Art.11 no longer sequenced before litigation (ko/en/zh); zh descriptive headings; en 'principal grounds supporting their claims or defences' (x3); ko/ja 緩起訴 explained + 刑訴253-1 (en aligned); 'Scope comes first' and equivalents deleted (ko/ja/en); en title 'Fraud Crime Hazard Prevention Act'.
+- Extra skeptical-reader pass: closing list fragments rewritten as sentences (ko/ja/zh), ko/ja paragraph-2 phrasing smoothed.

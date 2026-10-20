@@ -21,3 +21,13 @@
 - Hypothetical: en opening (200 people, fake trading app) labelled "(an invented example)".
 
 ## Internal links (exist): ko 059 taiwan-criminal-accessory-civil-suit-fraud, ko 064 taiwan-warning-account-foreigners; ja 225 japanese-victim-fraud-complaint-taiwan-account; en 059, en 237 us-victim-scam-funds-taiwan-bank-complaint; zh 235 fraud-crime-prevention-act-2024-victims-taiwan, zh 247 fraud-victim-provisional-attachment-security-taiwan. Link check BAD 0.
+
+## Astra r1 re-check (2026-10-20 20:5x KST; LawSingle fetched live via research/bin/law.py)
+- 條例 Arts. 2, 11, 46, 47, 53, 55 re-fetched: text identical to entries above. Art. 46 I → reduce OR exempt (surrender + full payment within 6 months of surrender); II → exempt. Art. 47 I → reduce only (confession in investigation AND every trial + full payment within 6 months of FIRST confession during prosecutor's investigation); II → reduce or exempt. II in both: 「前項情形，並因而查獲發起、主持、操縱或指揮詐欺犯罪組織之人，或得以扣押該組織所取得全部被害人交付之所有財物或財產上利益者」 — drafts now state "paragraph 1 conditions plus the discovery/seizure result", no payment-causes-arrest wording.
+- Art. 53 I — 「檢察官或法院於偵查或審判中，得運用調解、和解程序…必要時應提起上訴」 → zh summary now 得 (permission) + 必要時應提起上訴.
+- 刑法 Art. 2 I (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=2) — 行為後法律有變更者，適用行為時之法律。但行為後之法律有利於行為人者，適用最有利於行為人之法律。
+- 刑法 Art. 339-4 I — 一、冒用政府機關或公務員名義 … 四、以電腦合成或其他科技方法製作關於他人不實影像、聲音或電磁紀錄之方法犯之。 → all four now include 政府機關, 關於他人 and 電磁紀錄.
+- 刑事訴訟法 Art. 253-1 I (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=253-1) — 檢察官…認以緩起訴為適當者，得定一年以上三年以下之緩起訴期間為緩起訴處分 → ko/ja explain 緩起訴; en "deferred prosecution" linked.
+- Effective date & Judicial Yuan explanation: 司法院 司法周刊 第2298期第1版 (115-03-06), https://www.judicial.gov.tw/tw/cp-1429-1504544-47483-1.html (fetched 2026-10-20, 48491 bytes, SHA-256 735b4f11b0adb5f1285778f2d9a89f08b34eb343a2e2a7730a8c3d45c0aa0eab): 「詐欺犯罪危害防制條例則甫於115年1月21日修正公布、同年月23日施行」; 「若詐欺犯罪行為人尚未取得財物或財產上利益而處於詐欺未遂階段，或於所定期間屆滿後始與被害人達成調解或和解或支付全部金額，均無上開規定之適用，惟仍得適用其他相關規定」. Drafts use only these two points (no claim about the outcome of the old/new comparison).
+- LawHistory (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080226), re-opened: 115-01-21 華總一義字第11500003941號令修正公布第7～11、13、42～44、46、47、50條.
+- Art. 11 now framed as a procedure for unwithdrawn balances only; drafts state that civil claims / mediation / settlement do not depend on the account being emptied (no sequence).

@@ -47,3 +47,9 @@ Source: ASTRA-FAIL.md (r1), renamed ASTRA-FAIL-fixed-1.md. All six findings were
 - MINOR en: "employment separation certificate".
 - MINOR ko/ja/zh: 移民法第21條第1項 now has an inline link and a source-list entry.
 Checks: variety FAIL 0 (ko/ja/en; zh --lang zh-hant). The ja WARN (stock hypothetical opener, endings) is unchanged and not a FAIL. Links BAD 0, YAML OK x4. Lengths: en 744 words (en is a narrower angle, see Duplicate check), ko 1,602 chars without spaces, ja 1,706, zh 1,488.
+
+## Astra r2 re-check (2026-10-20 ~23:50 KST)
+- variety: ko OK, en OK, zh (--lang zh-hant) OK, ja FAIL 0 (WARN only: stock-hypothetical opener, desu-masu 77%; unchanged from before, not flagged by the gate).
+- links.py: BAD 0 (incl. goldcard.nat.gov.tw en/ja/zh 200; internal /en/columns/taiwan-employment-gold-card exists as columns-en/027).
+- YAML (ruby safe_load) OK x4; faq 3 each; featured_image TBD; author token only; no 曾雋崴 in any file; no bold.
+- Lengths (blen.py): en 863 words, ko 1,706 chars without spaces, ja 1,850, zh 1,557.

@@ -55,3 +55,22 @@ https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpswwwim
   4. en: "adult children unable to live independently because of a disability who already held residence permission". ko/ja/zh family lists completed the same way (they had listed only spouse and minor children).
   5. en: "departure certificate" became "employment separation certificate" (2 places).
   6. ko/ja/zh: 入出國及移民法第21條第1項 linked inline and added to the source lists. zh source list also gained 行政程序法第110條.
+
+## Astra r2 fix log (2026-10-20 ~23:50 KST)
+- Live re-fetch 23:46 KST from LawSingle:
+  - 攬才法 Art. 9(1) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9 : 「外國特定專業人才擬在我國從事專業工作者，得逕向內政部移民署申請核發具工作許可、居留簽證、外僑居留證及重入國許可四證合一之就業金卡。…」
+  - 移民法 Art. 31(4) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31 : 「移民署對於外國人於居留期間內，居留原因消失者，廢止其居留許可，並註銷其外僑居留證。但有下列各款情形之一者，得准予繼續居留：一、因依親對象死亡。…五、外國人與本國雇主發生勞資爭議，正在進行爭訟程序。六、外國人發生職業災害尚在治療中。七、…八、依第二十一條第一項規定禁止出國。九、…」 (nine items counted).
+  - 就服法 Art. 56(1) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=56 : 「…聘僱關係終止之情事，雇主應於三日內以書面載明相關事項通知當地主管機關、入出國管理機關及警察機關。…」 — an employer duty, not proof that notice was given or received.
+  - 就服法 Art. 43: 「除本法另有規定外，外國人未經雇主申請許可，不得在中華民國境內工作。」
+- Taiwan Employment Gold Card Office (National Development Council), FAQ tag "Work", opened 23:45 KST:
+  - en https://goldcard.nat.gov.tw/en/tags/work/ (HTML 130,057 bytes, SHA-256 8ffc760429056180ab530daf231ab7a1e133870aafa03ff2ca5964123cba6133): "Do employers need to apply for a work permit for Gold Card holders? No, the Employment Gold Card already includes an open work permit, so employers do not need to apply for a separate work permit for the cardholder." / "If I become unemployed, can I still retain my Gold Card status? Yes, the validity of the Gold Card will not be affected by changes in employment."
+  - ja https://goldcard.nat.gov.tw/ja/tags/work/ (SHA-256 f31a329c97045c18c07e61c40fe5d40e8b9d0a4be1cc261a72370a0732c4a86f): 「雇用主は就業ゴールドカード保持者のために就労許可を申請する必要がありますか？ いいえ、必要ありません。「就業ゴールドカード」自体に個人の就労許可が含まれているため、別途、雇用主が就労許可を申請する必要はありません。」 / 「失業した場合でも、ゴールドカード保持者の身分を保持できますか？ はい、できます。「就業ゴールドカード」の有効性は、仕事の変動によって影響を受けません。」 Site name: 台湾就業ゴールドカードオフィス.
+  - zh https://goldcard.nat.gov.tw/zh/tags/work/ (SHA-256 da00b5fb49641d7a023d0a641c8a82419f606eff7590377cf5e71be502465e94): 「雇主需要替就業金卡持卡人申請工作許可嗎？ 不需要。就業金卡本身已包含個人工作許可，因此雇主無需額外為持卡人申請工作許可。」 / 「失業了，還能保有金卡身分嗎？ 可以。金卡的有效性不會受到工作變動的影響。」 Site name: 台灣就業金卡辦公室.
+- Fixes:
+  1. en: intro and section heading limited to residence resting on an employer-sponsored permit; new paragraph on the Gold Card (Art. 9 four-in-one; FAQ: validity unaffected by employment changes, no separate employer permit) with link to /en/columns/taiwan-employment-gold-card; rest of column stated to concern employer-sponsored residence.
+  2. ko/ja/zh FAQ 3 qualified to workers whose permit was obtained through an employer; Gold Card holders: employer need not apply (FAQ link per locale). Body "new employer" paragraphs and zh summary qualified the same way; Gold Card paragraphs gained the two FAQ points.
+  3. "notice reaches the Agency within three days" (x4) → the employer must notify the authorities, including the Agency, in writing within three days after employment ends. ko/ja "이것도 3일 안에 통지합니다 / これも3日以内に通知します" also changed to obligation form; en spouse paragraph "duty to give written notice".
+  4. ko/ja/zh: "같은 항 / 同項 / 同一項" → explicit 입출국및이민법 제31조 제4항 / 入出國及移民法第31条第4項 / 入出國及移民法第31條第4項.
+  5. Deleted: ko 「그 일 때문에 받은 거류증도 무사하지 않습니다.」, ja 「期限は短いのです。」, en "This one stays with the family." (cross-link kept), zh 「三日內通報的對象裡有移民署，原因就在下一步。」
+  6. en closing: four dates (employment end, certificate issue date, notification date, each ARC expiry). ko/ja/zh closing aligned to the same four dates.
+- ja short-sentence ratio fell below 0.08 after deletion 5; added 「認めるかどうかは移民署の判断です。」 (31(4) proviso is 「得准予」, discretionary).

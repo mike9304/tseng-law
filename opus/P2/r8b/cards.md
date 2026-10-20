@@ -1,6 +1,6 @@
 # P2 KO 카드 문구 · r8b (5장, 렌더: opus/P2/r8b/images/ko/)
 
-r8b(shared/R8B-BRIEF.md): 카드 1을 결과·판결 없는 장면 훅으로 다시 설계해 재렌더. 나머지 카드는 r8과 같은 파일. 렌더 원본: opus/render/copy/p2-ko.json
+r8b(R8B-BRIEF: 카드 1 장면 훅) + r8c-P2(shared/R8C-P2.md: 카드 3 증언 정밀화). 렌더 원본: opus/render/copy/p2-ko.json
 
 ## 1 · core_hook
 - headline: 증인 두 명의 서명을 받아 / 이혼 등록까지 마쳤어요.
@@ -22,8 +22,8 @@ r8b(shared/R8B-BRIEF.md): 카드 1을 결과·판결 없는 장면 훅으로 다
 - headline: 남편분 연락처는 / 없어요.
 - who: 그 지인, 법정에서
 - mark: 1
-- facts: ["서명 전에도 후에도 남편은 못 만남", "남편한테 이혼할 건지 물어본 적 없음", "이혼 등록하는 날도 안 감"]
-- foot 1: 부부 둘 다 이 증언엔 이의가 없었어요.
+- facts: ["5년쯤 전 모임에서 부부를 본 적은 있음", "서명 무렵 전후로는 남편을 못 만남", "남편한테 이혼할 건지 확인한 적 없음"]
+- foot 1: 이 증언엔 남편도 아내도 이의를 달지 않았어요.
 - foot 2: 판사는 그 지인을 증인으로 안 쳤어요.
 
 ## 4 · witnesses (증인 자격 · 판결 이유)

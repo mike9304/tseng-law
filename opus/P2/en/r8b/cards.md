@@ -1,6 +1,6 @@
 # P2 EN 카드 문구 · r8b (5장, 렌더: opus/P2/en/r8b/images/en/)
 
-r8b(shared/R8B-BRIEF.md): 카드 1을 결과·판결 없는 장면 훅으로 다시 설계해 재렌더. 나머지 카드는 r8과 같은 파일. 렌더 원본: opus/render/copy/p2-en.json
+r8b(R8B-BRIEF: 카드 1 장면 훅) + r8c-P2(shared/R8C-P2.md: 카드 3 증언 정밀화). 렌더 원본: opus/render/copy/p2-en.json
 
 ## 1 · core_hook
 - headline: Two witnesses signed. / The divorce was registered.
@@ -22,8 +22,8 @@ r8b(shared/R8B-BRIEF.md): 카드 1을 결과·판결 없는 장면 훅으로 다
 - headline: I don't have / her husband's number.
 - who: The friend, in court
 - mark: 1
-- facts: ["Never met the husband before or after signing", "Never asked him if he wanted a divorce", "Didn't go on registration day"]
-- foot 1: Neither spouse disputed this testimony.
+- facts: ["Saw the couple at a gathering five years before", "Didn't meet the husband around the signing", "Never asked him if he wanted a divorce"]
+- foot 1: Neither spouse objected to this testimony.
 - foot 2: The court didn't count the friend as a witness.
 
 ## 4 · witnesses (Why the friend didn't count)

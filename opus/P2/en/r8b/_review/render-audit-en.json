@@ -442,7 +442,7 @@
     "rotate": null
    },
    {
-    "text": "Never met the husband before or after signing",
+    "text": "Saw the couple at a gathering five years before",
     "role": "fact",
     "size": 40,
     "weight": 500,
@@ -450,7 +450,7 @@
     "bbox": [
      120,
      747,
-     995,
+     1004,
      790
     ],
     "rotate": null
@@ -470,16 +470,16 @@
     "rotate": null
    },
    {
-    "text": "Never asked him if he wanted a divorce",
+    "text": "Didn't meet the husband around the signing",
     "role": "fact",
     "size": 40,
     "weight": 500,
     "lang": "en",
     "bbox": [
      120,
-     823,
-     861,
-     857
+     824,
+     959,
+     866
     ],
     "rotate": null
    },
@@ -498,21 +498,21 @@
     "rotate": null
    },
    {
-    "text": "Didn't go on registration day",
+    "text": "Never asked him if he wanted a divorce",
     "role": "fact",
     "size": 40,
     "weight": 500,
     "lang": "en",
     "bbox": [
      120,
-     900,
-     661,
-     942
+     899,
+     861,
+     933
     ],
     "rotate": null
    },
    {
-    "text": "Neither spouse disputed this testimony.",
+    "text": "Neither spouse objected to this testimony.",
     "role": "body",
     "size": 46,
     "weight": 500,
@@ -520,7 +520,7 @@
     "bbox": [
      60,
      1008,
-     931,
+     984,
      1056
     ],
     "rotate": null

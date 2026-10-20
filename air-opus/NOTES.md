@@ -52,3 +52,4 @@
 - 21:23 KST 대기: 변화 없음(원격 HEAD=Air 21:18 커밋, Studio push 없음).
 - 21:33 KST 대기: 변화 없음. Studio 무응답 1h40m — HANDOFF-air에 확인 요청 1회 기재.
 - 21:43 KST 대기: 변화 없음(원격 HEAD=Air 21:38 커밋, Studio push 없음).
+- 21:55 KST: 대기 중 SELF-CHECK-r1.md 작성(첫 두 줄·첫 두 문단 삭제 시험·직전 3편 비교, r2 후보 3건). r1 파일은 고정.

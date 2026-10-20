@@ -2301,6 +2301,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-work-permit-side-gig-other-employer"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-account-provider-scam-victim-civil-damages"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-account-provider-scam-victim-civil-damages"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-account-provider-scam-victim-civil-damages"
     }
   ]
 }

@@ -778,15 +778,19 @@ export const COUNTRY_COLUMN_FILES_20261018 = {
 export const COUNTRY_COLUMN_FILES_20261020 = {
   ko: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
+    '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
   ],
   en: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
+    '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
   ],
   ja: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
+    '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
   ],
   'zh-hant': [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
+    '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
   ],
 } as const;
 

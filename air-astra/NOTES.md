@@ -31,3 +31,34 @@
 - 20:03:01에 읽은 HANDOFF의 20:05·20:07은 작성자가 기입한 시각이며 당시 로컬 시각보다 앞선다. 실제 관측 시각은 파일 조회 시각으로 기록한다(당시 HANDOFF mtime 20:02:26).
 - `~/threads-cardnews-air-1018/shared-rules/EDITORIAL-VOICE.md` 사본의 존재를 확인했다. shared 사본과 동일 여부는 아직 확인하지 않았고, 비평 재개 시 전문을 읽는다.
 - 이번 턴에는 초안 0건 → 부분 묶음 → P1 r1 세 파일 도착이라는 실제 상태 변화가 있었다. 우선 레인 접근/가용성 제약은 두 번째 목표 턴에서 지속됐다. 다른 작성자와 JA·EN 비평은 여전히 미착수.
+
+## 2026-10-20 20:09:00 KST 차단 감사 및 재개 인계
+
+- 이전 목표 턴 분류: 진행 있음. P1 완성 묶음 및 우선 레인 실행 보고를 새로 확인했다. 현재 턴에는 P2·P3 완성 묶음도 도착했다. 이 관측은 비평 완료가 아니다.
+- 현재 제출: Air Opus P1·P2·P3 KO r1, 각 본문·첫 댓글·카드 문안 3파일 존재. Studio Opus/Grok 정식 라운드, JA·EN은 아직 이 작업 폴더에 없다. `review-air/` 비평 산출물 0건.
+- 동일 차단 사유 세 목표 턴 연속: 우선 칼럼 배포 게이트·gapfill 가용성 확인 불가. 최신 담당자 인계는 실행 중 보고이며 종료/유휴 인계 없음. 이번 턴에 실제 `gapfill-gate-1020`을 지정한 tmux 조회도 `Operation not permitted`로 실패했다. 현재 생존을 직접 확인한 verified wait가 아니다. 접근 제한이나 관측 부재를 프로세스 종료로 해석하지 않는다.
+- 20:08:09 KST 재확인: PIPELINE v2 자원 우선 규칙 동일. sync 로그에 20:07:41 pushed가 추가됐지만 우선 레인 가용성 증거는 아니다. 자동 동기화를 별도로 실행하거나 고치지 않았다.
+- 더 이상의 비평은 우선 레인 규칙과 충돌할 수 있어 시작하지 않는다. 새 상태 확인 없이 인계·대기 문구만 반복하는 것도 진전이 아니다. 목표 상태를 blocked로 전환한다. 완료·일시정지 선언이 아니다.
+
+### 재개 조건과 순서
+
+1. 우선 레인 담당자가 실제 종료/유휴를 확인하거나, 허용된 관측 수단으로 해당 세션의 상태를 직접 확인할 수 있어야 한다. 그 전에는 비평·추가 리서치를 하지 않는다.
+2. 재개 시 PIPELINE·BRIEF·양쪽 HANDOFF와 실제 파일을 다시 읽는다. 아래 해시는 이번 시점의 식별 자료이며 제출 고정 선언이 아니다.
+3. 공통 문체 파일이 도착하면 전문을 읽는다. 현재 확인한 Air 사본은 `~/threads-cardnews-air-1018/shared-rules/EDITORIAL-VOICE.md`; shared 사본과 동일 여부는 미확인.
+4. P1→P2→P3 순서로 `review-air/air-astra-on-air-opus-P<n>-r1.md` 작성. 공개 판결·현행 조문 직접 대조, 첫 두 줄·판결 이유·문체·과장·훅·마지막 정보·길이 검수. 추가 작성자의 같은 라운드도 도착 후 같은 기준으로 검수.
+5. P3 인계에서 작성자는 가족관계 표기 HOLD와 27,808 산식 확인을 요청했다. 아직 평가하지 않았다. 사용자 미결정 3건은 그대로 보류하며 비평 과정에서 임의로 확정하지 않는다.
+6. JA·EN 단계 도착 후 현지 독자 관점의 문체와 의미·관할 보존을 비평한다. 전체 목표를 KO 세 편의 수신 확인으로 축소하지 않는다.
+
+### 수신 파일 식별값
+
+| 파일 | SHA-256 |
+|---|---|
+| `air-opus/P1/r1/body.md` | `7d6f14f8666097e4d043488c170c2344c1db6ff7c414ad4d8deaf30d17329979` |
+| `air-opus/P1/r1/first-comment.md` | `b71b61e5a9f903b11cab76195ca39f3765c537d7e2bc3a13b63be30b5ef4feeb` |
+| `air-opus/P1/r1/cards.md` | `1eac495ff387575c5c3ac6f3a2949f21c826a9a4aa88f7f3fe1afbf5d688acd3` |
+| `air-opus/P2/r1/body.md` | `7faf5f18a633ee1f439659047e000534b0321d6a1cb6c8fc95e1d9792a930a2a` |
+| `air-opus/P2/r1/first-comment.md` | `dcbe8d9c2db97be52f3fde355ada737c690fb9eb59dcedcbf67c18946030bd07` |
+| `air-opus/P2/r1/cards.md` | `8658c957df1b5cfdf929a7b6ac9c5b5c3bbfc69c245f0b470ca5dc0021daa8c2` |
+| `air-opus/P3/r1/body.md` | `844558c598d889560aa385583c2dae6fb91201d9079fc32e0f665cd8348268c1` |
+| `air-opus/P3/r1/first-comment.md` | `9b7d027cf83ec834c4bae7577cce73f94b985baa336b059d10c7b78b59ebc73e` |
+| `air-opus/P3/r1/cards.md` | `b10a3a3e9dd4257bdee34329b78aab90c8f226e4c55045d7cba97d966c5d1452` |

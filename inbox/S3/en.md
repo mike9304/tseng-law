@@ -53,7 +53,7 @@ Taipei went the same way in the case from the opening ([111年度重家財訴字
 
 Neither deadline is generous. A claim expires two years after the claimant learns of the difference, and in any event five years after the regime ends (paragraph 5). For a spouse living abroad who discovers the other's assets late, when those two years started can become the real dispute. The claim cannot be assigned or inherited unless acknowledged by contract or already in litigation (paragraph 4).
 
-Across these judgments, the courts cared less about the number of years apart than about who did what during them and when the property came into being. Land bought before a separation stayed in the equal split, however long the couple then lived apart.
+Each court gave its own grounds. The Supreme Court faulted the lower court for not examining spending, housework and child care; the Taipei court counted the widow's homemaking and care for her mother-in-law; the Tainan Branch relied on the land having been bought before the separation. In the Tainan case, that land stayed in the equal split, however long the couple then lived apart.
 
 Attorney Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Taichung office: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
 

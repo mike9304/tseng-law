@@ -4,6 +4,10 @@ All statute text fetched 2026-10-20 from law.moj.gov.tw LawSingle pages (cached 
 
 ## Statutes
 
+(Astra r1 MAJOR 1) Art 3 item 3 emergency-notification exception now cited in body + FAQ 1 of all four locales:
+> 三、通報：…惟如屬重大緊急案件，得以電話、傳真或其他可行方式先行通知，並應於通知後五個營業日內補辦公文書資料送達銀行，逾期未送達者，銀行應先與原通報機關聯繫後解除警示帳戶。
+
+
 ### 存款帳戶及其疑似不法或顯屬異常交易管理辦法 (pcode G0380199; law-level 修正日期 民國115年08月31日 = 2026-08-31)
 
 - Art 3 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380199&flno=3
@@ -52,6 +56,9 @@ All statute text fetched 2026-10-20 from law.moj.gov.tw LawSingle pages (cached 
   > 無法律上之原因而受利益，致他人受損害者，應返還其利益。雖有法律上之原因，而其後已不存在者，亦同。
 
 ## Judgments (public, judgment.judicial.gov.tw)
+
+Verification (Astra r1 MAJOR 2): both judgments re-retrieved 2026-10-20 19:27 KST with curl, HTTP 200 (a browser User-Agent is required — FJUD bot-defense rejects plain curl). Text copies with source URL, 裁判字號, 裁判日期, 裁判案由 and full body are in drafts/S1/evidence/ (party names masked). Key passages confirmed present: 竹東 「原告既係依他人指示將13,000元匯予被告，兩造間即無給付關係」; 新北 「未提出實際購買23000顆泰達幣之交易資料」, 「無法提出…泰達幣買家…任何對話紀錄」, 「本件即非屬指示給付類型」, 「不起訴處分尚無從拘束本院之認定」.
+
 
 ### 臺灣新竹地方法院 114年度竹東小字第28號 民事小額判決 (竹東簡易庭, 2025-03-03)
 URL: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=CPEV%2c114%2c%e7%ab%b9%e6%9d%b1%e5%b0%8f%2c28%2c20250303%2c1 (verified 200, header 「竹北簡易庭(含竹東) 114 年度竹東小字第 28 號民事判決」; judgment signed 竹東簡易庭)

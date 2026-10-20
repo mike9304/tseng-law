@@ -62,3 +62,27 @@ taiwan-deceased-parent-financial-assets-inquiry-heirs-abroad (0 filename matches
 11. ja closing: replaced with Astra's sentence "葬儀後の早い段階で照会を申し込むと、申告の準備を進めやすくなります。"
 Also proactive: Art. 23(1) proviso (court-appointed administrator → runs from the day after appointment) added x4. Sources sections now cite the MOF regulations database (GL010834), the process sheet, ruling GL006995, Art. 4 and Insurance Act Art. 13.
 featured_image "TBD" kept: user decision A via son-bridge (IN-claude-20261020-195011). The integrator adds the image and the 4 alts before deploy.
+
+
+## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
+    drafts/S4/ko.md [ko] sentences=53 mean=41.7 cv=0.478 short=0.094 run3=0.039 opener_rep=0.0 cite_end=0.094 cite_para=0.333 contrast=1 caveat=0 q=2
+    drafts/S4/ja.md [ja] sentences=56 mean=42.4 cv=0.51 short=0.161 run3=0.111 opener_rep=0.067 cite_end=0.089 cite_para=0.333 contrast=1 caveat=0 q=0
+    drafts/S4/en.md [en] sentences=50 mean=21.8 cv=0.521 short=0.12 run3=0.042 opener_rep=0.067 cite_end=0.08 cite_para=0.333 contrast=1 caveat=0 q=1
+    drafts/S4/zh.md [ko] sentences=41 mean=44.4 cv=0.602 short=0.171 run3=0.0 opener_rep=0.0 cite_end=0.122 cite_para=0.312 contrast=0 caveat=0 q=2
+
+
+## Astra r2 response (2026-10-20 21:35 KST)
+1–4. MAJOR, lawyer name: removed (x4), as in the 21:11 note.
+5. MAJOR, mortgage alternative (FAQ 3, x4): now "real estate that meets Tax Collection Act Art. 11-1, mortgaged to the tax authority", with Art. 11-1 linked inline and in the sources.
+6. MAJOR, zh counter route: online application is open to anyone abroad who can use an accepted credential; the counter (in person or through an agent) is for those who cannot. The passport rule applies to counter applicants without a national ID.
+7. MAJOR, hypothetical labels: en and zh opening scenes are now labelled.
+8. MINOR, ko/ja certificate list: the payment certificate is now named with the others (Art. 42). en gets the same fix.
+9. MINOR, ko: statutory residence wording, with the Chinese term in brackets.
+10. MINOR, en: "Insurance replies cover a narrow category of policies." Proactively, the ko/ja openers of the same paragraph ("좁게 읽어야", "狭く読む必要") are now descriptive, not instructions.
+Variety (FAIL 0):
+    drafts/S4/ko.md [ko] sentences=54 mean=41.8 cv=0.486 short=0.093 run3=0.038 opener_rep=0.0 cite_end=0.093 cite_para=0.333 contrast=1 caveat=0 q=2
+    drafts/S4/ja.md [ja] sentences=56 mean=43.1 cv=0.501 short=0.143 run3=0.111 opener_rep=0.067 cite_end=0.089 cite_para=0.333 contrast=1 caveat=0 q=0
+    drafts/S4/en.md [en] sentences=51 mean=21.5 cv=0.524 short=0.137 run3=0.041 opener_rep=0.067 cite_end=0.098 cite_para=0.333 contrast=1 caveat=0 q=1
+    drafts/S4/zh.md [ko] sentences=43 mean=43.0 cv=0.611 short=0.186 run3=0.0 opener_rep=0.0 cite_end=0.116 cite_para=0.312 contrast=0 caveat=0 q=2
+Lengths: ko 2,397 chars, ja 2,529, zh 1,942, en 1,099 words.

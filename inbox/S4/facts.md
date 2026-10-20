@@ -54,3 +54,12 @@ Header: 「稽徵機關單一窗口受理查詢被繼承人金融遺產資料作
 - Art 23(1) proviso: 依第六條第二項由稽徵機關聲請法院選任遺產管理人者，自選任之次日起算 — added x4. Art 23(2) now tied to the Art 4 test.
 - Art 6(1) (amended 115-09-11) re-fetched: 「遺產稅之納稅義務人為繼承人及受遺贈人，無繼承人者，為遺產管理人，並以被繼承人之遺產為限負繳納義務…」 — drafts' summary (heirs and legatees, limited to the estate) unchanged.
 - 保險法 Art 13(3): 「人身保險，包括人壽保險、健康保險、傷害保險及年金保險。」 LawSingle pcode=G0390002&flno=13.
+
+
+## Astra r2 additions (2026-10-20 21:35 KST)
+- 遺產及贈與稅法第41條 (current text, law.moj.gov.tw LawSingle G0340072 flno=41): 「其有特殊原因必須於繳清稅款前辦理產權移轉者，得提出確切納稅保證，或同意以符合稅捐稽徵法第十一條之一規定之應稅不動產設定抵押權予稽徵機關，申請該管主管稽徵機關核發同意移轉證明書。」 → FAQ 3 (x4) now says the property must meet Tax Collection Act Art. 11-1 and the mortgage is in favour of the tax authority.
+- 稅捐稽徵法第11條之1 (G0340001 flno=11-1): 相當擔保 list; item 4 「易於變價、無產權糾紛且能足額清償之土地或已辦妥建物所有權登記之房屋」. Added to sources (x4). URL HTTP 200.
+- 第42條: 「應通知當事人檢附稽徵機關核發之稅款繳清證明書，或核定免稅證明書或不計入遺產總額證明書或不計入贈與總額證明書，或同意移轉證明書之副本」 → ko/ja now list the payment certificate with the exemption, exclusion and consent-to-transfer certificates; en says "one of those certificates or a tax payment certificate".
+- Directive GL010834 point 四(三)1: online application with 自然人憑證, 健保卡網路服務註冊, 行動自然人憑證, 行動電話認證 or other MOF-approved e-certificates; point 四(四)1 乙: for counter applications, applicants without a national ID card show a passport original, optionally with 華僑身分證明, pre-emigration household records or 居留證. zh now ties the counter route to inability to use an accepted credential, not to lacking an ID card, and lists 居留證 too.
+- Hypothetical labels: en opening scene "(an invented example)"; zh opening scene 「（虛構情境）」. ko has no invented scene (rhetorical question only); ja already labelled.
+- ko 「'대만 경내에 경상 거주'」 → 「대만에 통상 거주한 것으로 분류되는(經常居住中華民國境內)」; en adds the Chinese term after "habitually residing in Taiwan".

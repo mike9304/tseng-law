@@ -111,3 +111,14 @@ Variety (2026-10-21, explicit --lang):
     zh.md [zh-hant] sentences=38 mean=40.6 cv=0.707 short=0.105 run3=0.028 opener_rep=0.083 cite_end=0.263 cite_para=0.333 contrast=0 caveat=1 q=1
       OK — no variety limit violated
 Length: en 1,010 words; ko 2,068 chars (no space).
+
+## Astra r3 re-check (2026-10-21 KST, explicit --lang)
+    ko.md [ko] sentences=47 mean=40.4 cv=0.577 short=0.106 run3=0.022 opener_rep=0.0 cite_end=0.213 cite_para=0.273 contrast=1 caveat=3 q=0
+      WARN 77% of sentences end in '니다.' — vary endings within the register
+    ja.md [ja] sentences=50 mean=40.4 cv=0.595 short=0.12 run3=0.062 opener_rep=0.091 cite_end=0.2 cite_para=0.273 contrast=0 caveat=3 q=0
+      WARN 80% of sentences end in 'desu-masu' — vary endings within the register
+    en.md [en] sentences=47 mean=21.3 cv=0.587 short=0.17 run3=0.0 opener_rep=0.273 cite_end=0.255 cite_para=0.273 contrast=0 caveat=0 q=0
+      OK — no variety limit violated
+    zh.md [zh-hant] sentences=38 mean=40.7 cv=0.704 short=0.105 run3=0.028 opener_rep=0.083 cite_end=0.263 cite_para=0.333 contrast=0 caveat=1 q=1
+      OK — no variety limit violated
+- Lengths: ko 2,078 chars, ja 2,174, zh 1,672, en 1,015 words. 4 front matters parse (3 FAQ, featured_image TBD). No bold, no lawyer name.

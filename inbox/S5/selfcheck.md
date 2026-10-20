@@ -108,3 +108,15 @@ Variety (2026-10-21, explicit --lang):
       OK — no variety limit violated
     zh.md [zh-hant] sentences=30 mean=46.8 cv=0.522 short=0.1 run3=0.0 opener_rep=0.0 cite_end=0.2 cite_para=0.583 contrast=0 caveat=0 q=1
       OK — no variety limit violated
+
+## Astra r3 re-check (2026-10-21 KST, explicit --lang)
+    ko.md [ko] sentences=42 mean=43 cv=0.665 short=0.167 run3=0.0 opener_rep=0.0 cite_end=0.167 cite_para=0.583 contrast=1 caveat=0 q=1
+      WARN opens with the stock hypothetical ("가령/例えば…とします/Suppose…/假設") — allowed at most 1 in 4 columns; prefer a concrete fact, number, question or scene
+      WARN 79% of sentences end in '니다.' — vary endings within the register
+    ja.md [ja] sentences=44 mean=45.6 cv=0.643 short=0.114 run3=0.024 opener_rep=0.0 cite_end=0.182 cite_para=0.538 contrast=1 caveat=2 q=0
+      OK — no variety limit violated
+    en.md [en] sentences=42 mean=21.8 cv=0.694 short=0.167 run3=0.025 opener_rep=0.25 cite_end=0.095 cite_para=0.583 contrast=2 caveat=0 q=1
+      OK — no variety limit violated
+    zh.md [zh-hant] sentences=33 mean=47.1 cv=0.534 short=0.091 run3=0.0 opener_rep=0.083 cite_end=0.212 cite_para=0.583 contrast=0 caveat=0 q=1
+      OK — no variety limit violated
+- Lengths: ko 1,933 chars, ja 2,113, zh 1,654, en 924 words. 4 front matters parse (3 FAQ, featured_image TBD). No bold, no lawyer name. New URLs (D0080132 Art 3 LawSingle, LawAll) HTTP 200.

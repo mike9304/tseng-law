@@ -22,6 +22,10 @@ Fetched 2026-10-20 from law.moj.gov.tw (cache research/cache/).
 - Art 8(4) — 直轄市、縣（市）政府先行審查; 戶政事務所查明居留資料、入出國日期紀錄、刑事案件紀錄、戶籍資料 → 轉送內政部.
 
 ## 入出國及移民法 31(4) (D0080132; 2023-06-28)
+- Astra r3 (2026-10-21): 31(4)(2) = 「外國人為居住臺灣地區設有戶籍國民之配偶，因遭受家庭暴力離婚，且未再婚。」 The comparison sentence now states that the former spouse is a 居住臺灣地區設有戶籍國民 (x4).
+- Art 3(4) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=3 = 「居住臺灣地區設有戶籍國民：指在臺灣地區設有戶籍，現在或原在臺灣地區居住之國民，且未依臺灣地區與大陸地區人民關係條例喪失臺灣地區人民身分。」 Full definition (current or former residence + no loss of status) given x4.
+- Nationality Act 4(1)(2) = 「為中華民國國民配偶，因受家庭暴力離婚且未再婚」: no 戶籍 element in the text, so each draft notes that wording difference (broader naturalization rule preserved).
+- zh: Art 3(1)(4) now quoted in full 「有相當之財產或專業技能，足以自立，或生活保障無虞」 (secure-livelihood alternative restored).
 - Items 1-3: 因依親對象死亡; 配偶因遭受家庭暴力離婚且未再婚; 離婚後對在臺設籍未成年子女有撫育事實、行使負擔權利義務或會面交往 → drafts say the Nationality Act keeps the 3-year route for "nearly the same" people (comparison, not legal equivalence).
 - Astra r2 (2026-10-21): MOJ text of 31(4)(3) = 「外國人於離婚後對在臺灣地區已設有戶籍未成年子女，有撫育事實、行使負擔權利義務或會面交往。」 The comparison sentence now gives household registration + all three alternatives (x4). Nationality Act 4(1)(3) = 「對無行為能力、或限制行為能力之中華民國國籍子女，有扶養事實、行使負擔權利義務或會面交往。」 (nationality + capacity, no 戶籍 element), so each draft adds one sentence noting that difference instead of calling the two lists identical.
 

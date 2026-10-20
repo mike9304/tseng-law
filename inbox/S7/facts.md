@@ -49,3 +49,9 @@ URL (Executive Yuan file): https://www.ey.gov.tw/File/F86FD1FD1EB5BE6F
 - 小客車租賃定型化契約應記載事項 point 11 (evidence/motc-car-rental-terms.txt): 「修理期間在十日以內者，並應償付該期間百分之○（不得高於七十）之租金；在十一日以上十五日以內，…（不得高於六十）…；在十六日以上者，…（不得高於五十）…。但期間之計算，最長以二十日為限。」 → band chosen by total repair duration, applied to that period's rent (en rewritten; ko/ja/zh already banded by total duration).
 - Point 10: 「除有不能向警察機關報案之情形外，承租人應立即報案並通知出租人」 → ko/ja now say "the same reporting/notice duty", no order implied.
 - 強制汽車責任保險法29(1)(2): 「駕駛汽車，經測試檢定有吸食毒品、迷幻藥、麻醉藥品或其他相類似管制藥品。」; (4) 「從事犯罪行為或逃避合法拘捕」; 29(2) two years from payment. ko/ja/en now state testing + the listed substances, and add evading lawful arrest; zh split into Art 28 / Art 9 / Art 29 / limitation sentences.
+
+## Astra r3 (2026-10-21)
+- CALI Art 9(2) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=9 = 「本法所稱被保險人，指經保險人承保之要保人及經該要保人同意使用或管理被保險汽車之人。」 → insured = policyholder + person using or managing the vehicle with the policyholder's consent (not "the rental company/owner") x4; zh adds 或管理.
+- CALI 29(1)(2) 管制藥品 rendered 규제 대상 약물 / 規制薬物 (testing requirement and named categories kept).
+- Titles ko/ja/zh: repair cost = borne by fault (point 14), cap only on loss-of-use (point 15) → 수리비 부담과 휴차료 상한 / 修理代の負担と休車補償の上限 / 修車費怎麼算、營業損失的上限.
+- ja: scooter terms point 15 「修理期間逾租賃期間之日起七日以內(含)」 → 契約上の賃貸期間を過ぎた日から7日まで (evidence/motc-scooter-rental-terms.txt).

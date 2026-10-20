@@ -86,3 +86,4 @@
 - 02:17 KST: 동기화 재발 — ref 재정렬(7c3d6ac, loop 방식 fetch exit 0). 실수: 02:14에 refspec 없이 'git fetch --depth 20 origin'을 실행해 tseng-law 전 브랜치를 받기 시작함 → 즉시 중지, 미완성 임시 팩 1.6GB(.sync-git/.git/objects/pack/tmp_pack_*) 삭제, 다른 ref 생성 없음·.git 28M·연결성 검사 정상. 이후 fetch는 반드시 '+refs/heads/threads-collab-1020:…'만 지정.
 - 02:24 KST: 동기화 재발(Studio 02:07~02:23 4커밋) — ref 재정렬. 02:1x 루프 1회 실패는 내 잘못된 fetch의 shallow.lock과 겹친 것(잠금은 이미 사라짐). Studio 새 내용은 NOTES뿐, Astra의 P1 제안 판정 대기.
 - 02:34 KST: 동기화 원인 분석 정정 — 새 커밋 1개만 있어도 거부(88b17a7 위 bfe641a 사례). Air push 성공은 전부 수동 ref 재정렬 직후. HANDOFF에 정정 기재. Studio 변화는 NOTES뿐, Astra P1 판정 대기.
+- 02:44 KST 대기: ref 재정렬(77b6bf1). Studio 변화는 NOTES뿐, STATUS 10/20 21:45 그대로, Astra P1 제안 판정 없음.

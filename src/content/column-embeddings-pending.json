@@ -2325,6 +2325,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-rental-holding-deposit-dingjin"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-spouse-debt-family-living-expenses-joint-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-spouse-debt-family-living-expenses-joint-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-spouse-debt-family-living-expenses-joint-liability"
     }
   ]
 }

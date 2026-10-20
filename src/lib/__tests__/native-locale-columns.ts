@@ -780,21 +780,25 @@ export const COUNTRY_COLUMN_FILES_20261020 = {
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
     '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
+    '640-taiwan-spouse-debt-family-living-expenses-joint-liability.md', // cols-20261019-C2
   ],
   en: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
     '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
+    '640-taiwan-spouse-debt-family-living-expenses-joint-liability.md', // cols-20261019-C2
   ],
   ja: [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
     '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
+    '640-taiwan-spouse-debt-family-living-expenses-joint-liability.md', // cols-20261019-C2
   ],
   'zh-hant': [
     '637-taiwan-work-permit-side-gig-other-employer.md', // cols-20261019-C3
     '638-taiwan-account-provider-scam-victim-civil-damages.md', // cols-20261019-C4
     '639-taiwan-rental-holding-deposit-dingjin.md', // cols-20261019-C1
+    '640-taiwan-spouse-debt-family-living-expenses-joint-liability.md', // cols-20261019-C2
   ],
 } as const;
 

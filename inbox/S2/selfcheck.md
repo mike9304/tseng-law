@@ -112,3 +112,15 @@ Lengths:
     drafts/S2/ja.md chars(no space)= 2662 chars(with space)= 2695 en-words= 74
     drafts/S2/en.md chars(no space)= 5340 chars(with space)= 6424 en-words= 1098
     drafts/S2/zh.md chars(no space)= 2007 chars(with space)= 2041 en-words= 72
+
+## Astra r4 re-check (10-21 02:06 KST)
+    drafts/S2/ko.md [ko] sentences=61 mean=36.5 cv=0.481 short=0.148 run3=0.017 opener_rep=0.0 cite_end=0.098 cite_para=0.643 contrast=1 caveat=2 q=2
+      WARN 82% of sentences end in '니다.' — vary endings within the register
+    drafts/S2/ja.md [ja] sentences=60 mean=41.0 cv=0.464 short=0.15 run3=0.0 opener_rep=0.071 cite_end=0.117 cite_para=0.643 contrast=0 caveat=2 q=0
+      WARN 80% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S2/en.md [en] sentences=56 mean=19.3 cv=0.527 short=0.125 run3=0.056 opener_rep=0.143 cite_end=0.089 cite_para=0.643 contrast=1 caveat=0 q=0
+      OK — no variety limit violated
+    drafts/S2/zh.md [zh-hant] sentences=51 mean=34.6 cv=0.551 short=0.157 run3=0.02 opener_rep=0.071 cite_end=0.078 cite_para=0.643 contrast=0 caveat=1 q=1
+      OK — no variety limit violated
+    drafts/S2/ko.md chars(no space)= 2440 chars(with space)= 3115 en-words= 164
+    drafts/S2/zh.md chars(no space)= 1974 chars(with space)= 2008 en-words= 72

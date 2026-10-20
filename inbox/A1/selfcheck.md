@@ -55,3 +55,14 @@ Source: ASTRA-FAIL.md (r1) → renamed ASTRA-FAIL-fixed-1.md. All points verifie
 5. MAJOR all — prevalence claims about scammers' names → conditional formulation in all four (ja/zh headings adjusted too).
 6. featured_image "TBD" — expected per TASK.md; left as is.
 Links: research/bin/links.py → BAD total 0.
+
+## Astra r2 fix (2026-10-20 ~20:10 KST)
+Source: ASTRA-FAIL.md (r2) → renamed ASTRA-FAIL-fixed-2.md. Statutes re-fetched live (刑訴487/488/503, 洗錢防制法22: text identical to facts.md quotes).
+1. MAJOR ko/zh, Art. 487: the holder's own indictment is no longer stated as a condition. Body and FAQ 3 now say the action is filed inside a pending criminal case, against the defendant and anyone liable under the Civil Code (「對於被告及依民法負賠償責任之人」), and that the loss must arise from the crime charged in that case. The same r1 wording was also in ja/en, so the fix was applied to all four.
+2. MAJOR en, "Requests for an account rarely say what they are." Deleted. The three requests are now introduced as "three illustrative requests, none from a real case". "Taiwan's courts ask…" became "Each raises two separate questions under Taiwan law".
+3. MAJOR all, judgment verification blocker: both judgments were re-opened live through printData (identical to cache) and through the official open-data PDFs (HTTP 200, SHA-256 in facts.md). Every case description was confirmed and no text changed. The reviewer-environment explanation is in rebuttal.md.
+4. MINOR ko: "…요구를 과실의 근거로 들었습니다." The preceding question became "법원은 어디에서 과실을 찾았을까요?" so the wording doesn't repeat.
+5. MINOR en: "negligent assistance with an adequate causal link to the victim's loss."
+6. MINOR zh: 洗錢防制法第22條 linked in the body, plus a reference-list entry 「全國法規資料庫・洗錢防制法：第22條」.
+facts.md: corrected an arithmetic slip in the notes only (the six Taipei withdrawals add up to 15萬元, not 13萬5,000). No draft ever stated a total.
+Checks after the fix: variety FAIL 0 (ko/ja/en; zh --lang zh-hant). ko WARN on '니다.' endings is unchanged. Links BAD 0. YAML OK x4 with 3 FAQ each. Lengths: en 1,097 words, ko 2,452 chars without spaces, ja 1,984, zh 1,668.

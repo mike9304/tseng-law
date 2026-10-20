@@ -1,4 +1,4 @@
-# A1 facts — claim → source (checked 2026-10-20 KST; re-verified 2026-10-20 ~19:00 KST for Astra r1 fix)
+# A1 facts — claim → source (checked 2026-10-20 KST; re-verified ~19:00 KST for Astra r1 and 20:03–20:05 KST for Astra r2)
 
 All statute texts fetched from law.moj.gov.tw LawSingle pages on 2026-10-20 (cached copies: research/law/<pcode>-<flno>.txt). Judgments opened in the Judicial Yuan database on 2026-10-20 (cached: research/jud/*.txt).
 Astra r1 fix: I0030062 Art. 2/4/6, 刑訴 487/488, 民法 184/185/273 re-fetched live from LawSingle (text identical to cache; I0030062 LawAll 修正日期 民國114年05月01日). Both judgments re-fetched live from printData.aspx (byte-identical to cache).
@@ -46,6 +46,7 @@ Astra r1 fix: I0030062 Art. 2/4/6, 刑訴 487/488, 民法 184/185/273 re-fetched
 ### 刑事訴訟法 (C0010001)
 - Art. 487 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487 — 「因犯罪而受損害之人，於刑事訴訟程序得附帶提起民事訴訟，對於被告及依民法負賠償責任之人，請求回復其損害。／前項請求之範圍，依民法之規定。」
   - r1 fix: body and FAQ in all four now state the eligibility condition — available only where the holder is indicted AND the victim's loss arose from the crime charged (「因犯罪而受損害之人」). No claim that any account-related indictment opens the route.
+  - r2 fix (Astra r2 MAJOR ko/zh, also applied to ja/en): the r1 wording made the account holder's own indictment a condition. The article's text names the defendant 「及依民法負賠償責任之人」 as possible respondents, so the drafts now say: the incidental action is filed inside a pending criminal case, against the defendant and anyone liable under the Civil Code; the holder need not be the one on trial (ko/ja/zh phrased as 'there is room to claim against the holder'); the loss must arise from the crime charged in that case. FAQ 3 in all four rewritten the same way. Live re-fetch 2026-10-20 20:05 KST: Art. 487/488/503 text identical to the quotes here.
   - Supporting public judgment (opened 2026-10-20 ~18:59 KST, fixer session 64898; cached research/jud/TPDM-115-簡附民-131-20260811-1.txt; not cited in drafts): 臺灣臺北地方法院115年度簡附民字第131號刑事判決 (2026-08-11) https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDM%2C115%2C%E7%B0%A1%E9%99%84%E6%B0%91%2C131%2C20260811%2C1 — 「其請求回復之損害，以被告被訴犯罪事實所生者為限…（最高法院111年度台附字第3號判決意旨參照）」; defendant charged/convicted only under 洗錢防制法第22條第3項第2款 (幫助詐欺・幫助洗錢 不另為不起訴) → fraud victim is an indirect victim, incidental action dismissed as 不合法 under 刑訴§502(1), 「不影響原告另依民事訴訟程序請求之權利」. Confirms the r1 condition is correct and that an Art. 22-only indictment does not open the incidental route.
 - Art. 488 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488 — 「提起附帶民事訴訟，應於刑事訴訟起訴後第二審辯論終結前為之。但在第一審辯論終結後提起上訴前，不得提起。」 (timing stated in zh body; ko/ja/en cite only)
 - Art. 503 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=503 — 第1項「刑事訴訟諭知無罪、免訴或不受理之判決者，應以判決駁回原告之訴。但經原告聲請時，應將附帶民事訴訟移送管轄法院之民事庭。」 → drafts mention the acquittal case only (subset, accurate).
@@ -59,7 +60,7 @@ https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDV%2C114%2C%E7%B0%A1%E
 - 不起訴: 「臺灣臺中地方檢察署113年度偵字第11828號為不起訴處分，復經臺灣高等檢察署臺中檢察分署113年度上聲議字第1186號處分書駁回上訴人再議之聲請」 → prosecutors declined; victim's 再議 rejected (ja/zh mention 再議).
 - Duty: 「一般人自負有謹慎保管自身帳戶資料，不得任意提供予他人使用之注意義務。」
 - Instructions: 「詐欺集團要求被上訴人謊稱其為不認識之「李正之」之子、款項匯入系爭帳戶當日旋即領出、要求被上訴人以現金而非匯款之方式返還款項等情…顯與一般商業及交易習慣不符」 (name not used in drafts).
-- Withdrew and handed over: 「復遭被上訴人提領、轉交予真實姓名年籍不詳之詐欺集團成員」. Victim's transfer 111-12-23 12:48; holder withdrew 13:10–13:27 the same day, total 13萬5,000元, 「再轉交予真實姓名年籍不詳之詐欺集團成員」 → ja/zh 'withdrew cash on the day of the deposit and handed it to the other side'.
+- Withdrew and handed over: 「復遭被上訴人提領、轉交予真實姓名年籍不詳之詐欺集團成員」. Victim's transfer 111-12-23 12:48; holder withdrew 13:10–13:27 the same day in six withdrawals (5,000+5,000+5,000+5萬+5萬+3萬5,000 = 15萬元; r2 correction of an arithmetic slip in this note only, drafts never stated a total), 「再轉交予真實姓名年籍不詳之詐欺集團成員」 → ja/zh 'withdrew cash on the day of the deposit and handed it to the other side'.
 - r1 fix: the judgment mentions NO transfer to another account; it describes cash withdrawal + handover and the instruction 「以現金而非匯款之方式返還款項」. Removed 'sent to another account' (ja 別の口座へ送った / ko 다른 계좌로 보내는 / zh 轉走 / en 'forwarding') in all four.
 - Causation: 「被上訴人提供系爭帳戶、提領轉交上訴人匯款之過失幫助行為，與詐欺集團成員詐騙上訴人之故意行為，均為上訴人受有本件損害15萬元之共同原因，自具相當因果關係。」; 「客觀上有幫助行為，且主觀上有過失，被上訴人之幫助行為與上訴人之損害間，亦具有相當因果關係，依民法第185條第2項規定，被上訴人與詐欺集團成員為共同行為人」 → 'court treated providing the account + withdrawal/handover as negligent aiding with adequate causation' (all four).
 - Non-prosecution vs negligence: 「…不起訴處分…然此僅就被上訴人有無直接或間接故意為認定，與構成民事侵權行為責任之過失情形，尚有不同…」
@@ -79,6 +80,17 @@ https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=HLHV%2C115%2C%E4%B8%8A%E
 - Own money: 「原帳戶內本身之存款約17,000元亦於同年月18日遭「大○」轉出」, plaintiff's transfer 「同年月22日」 → "about NT$17,000, four days before the victim's first transfer".
 - Holder's defence: 「並以其亦為被害人置辯」 → zh "主張自己也是被害人".
 - Online: 「被上訴人網路交友對象」.
+
+## Astra r2 — independent re-opening of both judgments (2026-10-20 20:03 KST)
+Both decisions were re-opened live through two separate official Judicial Yuan channels and every case description in ko/ja/en/zh was re-checked against the text (excerpts above).
+- Channel 1, judgment database print view (judgment.judicial.gov.tw/FJUD/printData.aspx, session cookie from FJUD/default.aspx; a cookieless request gets the site's bot-defense "Request Rejected" page, which explains why a sandboxed fetch can fail):
+  - TPDV,114,簡上,212,20260930,1 → 19,232 bytes of text, identical to research/jud/TPDV-114-簡上-212-20260930-1.txt.
+  - HLHV,115,上易,12,20260729,1 → 9,021 bytes of text, identical to research/jud/HLHV-115-上易-12-20260729-1.txt.
+- Channel 2, Judicial Yuan open-data PDF (data.judicial.gov.tw, plain GET, no cookie needed; HTTP 200):
+  - https://data.judicial.gov.tw/opendl/JDocFile/TPDV/114%2C%E7%B0%A1%E4%B8%8A%2C212%2C20260930%2C1.pdf — 664,325 bytes, SHA-256 9305bc40c6dda4da69d34aba26da2475b2c098ed939f3aeb3993ed120b2165e0
+  - https://data.judicial.gov.tw/opendl/JDocFile/HLHV/115%2C%E4%B8%8A%E6%98%93%2C12%2C20260729%2C1.pdf — 376,086 bytes, SHA-256 7d372bd24241f196b3e31f4966be97bb6b93d41872af630d915763e680dfbfca
+  - pdftotext of each PDF (line numbers stripped, whitespace removed) compared with the print view in 30-character windows every 150 characters: Hualien 19/19 windows found in the PDF; Taipei 39/43, the 4 misses being page markers (第一頁/第二頁/第三頁/第五頁) inserted by the PDF layout, checked one by one. Same text through both channels.
+- Point-by-point result (all confirmed, no draft change needed for facts): Taipei — 原判決廢棄 + NT$150,000 and interest; first instance 臺北簡易庭 114年度北簡更一字第2號 had ruled against the victim; holder's own account of being 21 and seeking a loan; 不起訴 (臺中地檢113偵11828) + 再議 rejected; duty to keep account data safe; non-prosecution decided only direct/indirect intent; instructions (pose as son of a stranger, withdraw same day, return in cash not by remittance) inconsistent with ordinary practice; holder withdrew and handed over the money; negligent aiding with adequate causation, §185(2); §217 rejected (intentional fraud), §218 rejected (no evidence). Hualien — 上訴駁回 on a NT$620,000 claim; met online, called each other 老公/老婆, account lent for the partner's business; doubt that a person in a romance weighs every request rationally; everyday account paying car loan and telecom bills; about NT$17,000 of the holder's own money moved out on 113-05-18, four days before the victim's first transfer on 113-05-22; standard of 最高法院110年度台上字第204號 (fault + adequate causation).
 
 ## Other
 - Address 40453 臺中市北區館前路19號6樓之1 and email wei@hoveringlaw.com.tw: as used in existing site columns (ref/src/content/columns-ja/310-…, issues/zh-hant/ISSUE-20261018-05-…).

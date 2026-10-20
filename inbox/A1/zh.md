@@ -18,7 +18,7 @@ faq:
   - q: "我也是被騙才交出帳戶，一定要賠嗎？"
     a: "不一定。臺灣高等法院花蓮分院115年度上易字第12號民事判決（2026年7月29日，第二審）認定，基於交往信任把帳戶借給網路交往對象的提供者沒有過失，駁回請求六十二萬元的被害人上訴。法院看的是交出帳戶當時，一般謹慎的人能否預見帳戶會被拿去犯罪。"
   - q: "被害人可以在什麼期間內求償？"
-    a: "依[民法第197條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)，自請求權人知有損害及賠償義務人時起二年間不行使而消滅，自有侵權行為時起逾十年者亦同。提供者被起訴，且被害人的損害是起訴的犯罪所造成時，被害人也可以依[刑事訴訟法第487條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)在該刑事程序提起附帶民事訴訟，提起時點依[第488條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)。"
+    a: "依[民法第197條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)，自請求權人知有損害及賠償義務人時起二年間不行使而消滅，自有侵權行為時起逾十年者亦同。造成損害的犯罪已經進入刑事訴訟程序時，被害人也可以依[刑事訴訟法第487條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)在該程序中，對被告及依民法負賠償責任之人提起附帶民事訴訟；前提是損害由該案起訴的犯罪所造成，提起時點依[第488條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)。"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 ---
@@ -27,7 +27,7 @@ author: "legal-ai-assistant"
 
 十五萬元，加上利息。臺灣臺北地方法院在2026年9月30日的二審判決中，判命一位交出帳戶的人把這筆錢賠給詐騙被害人（[114年度簡上字第212號](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDV%2C114%2C%E7%B0%A1%E4%B8%8A%2C212%2C20260930%2C1)）。這位提供者先前已獲不起訴處分。
 
-交出帳戶在刑事上可能涉及洗錢防制法第22條、幫助詐欺與幫助洗錢，這部分可以參考〈[代工材料沒來，地檢署傳票先到：交出提款卡後的有罪與無罪](/zh-hant/columns/account-lending-prosecutor-summons-money-laundering-taiwan)〉。被害人提起的民事求償，法院用的是另一把尺。
+交出帳戶在刑事上可能涉及[洗錢防制法第22條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=22)、幫助詐欺與幫助洗錢，這部分可以參考〈[代工材料沒來，地檢署傳票先到：交出提款卡後的有罪與無罪](/zh-hant/columns/account-lending-prosecutor-summons-money-laundering-taiwan)〉。被害人提起的民事求償，法院用的是另一把尺。
 
 ## 找不到詐騙集團時，被告可能是帳戶名義人
 
@@ -59,7 +59,7 @@ author: "legal-ai-assistant"
 
 被害人的請求權，自知有損害及賠償義務人時起二年間不行使而消滅，自有侵權行為時起逾十年者亦同（[民法第197條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)）。
 
-[刑事訴訟法第487條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)讓「因犯罪而受損害之人」在刑事程序中附帶提起民事訴訟。提供者被起訴，而且被害人的損害正是起訴的犯罪所造成，才走得了這條路。期間是起訴後到第二審辯論終結前，但第一審辯論終結後、提起上訴前不能提起（[第488條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)）。刑事判決無罪時，附帶民事訴訟會被判決駁回；被害人聲請的話，案件就移送管轄法院的民事庭（[第503條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=503)）。
+[刑事訴訟法第487條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)讓「因犯罪而受損害之人」在刑事程序中附帶提起民事訴訟，請求對象是被告及依民法負賠償責任之人，所以被起訴的即使不是提供者本人，也有在這個程序向提供者請求的空間。前提是被害人的損害，必須是該案起訴的犯罪所造成。期間是起訴後到第二審辯論終結前，但第一審辯論終結後、提起上訴前不能提起（[第488條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)）。刑事判決無罪時，附帶民事訴訟會被判決駁回；被害人聲請的話，案件就移送管轄法院的民事庭（[第503條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=503)）。
 
 交帳戶時對方怎麼說、雙方傳過的訊息、帳戶平常拿來做什麼。臺北和花蓮兩件判決，都是從這些紀錄判斷有沒有過失。錢匯進來當天照指示領出現金、交給對方，在臺北那件也被列入判斷。
 
@@ -68,6 +68,7 @@ author: "legal-ai-assistant"
 ## 參考資料
 
 - 全國法規資料庫・民法：[第184條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)、[第185條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=185)、[第273條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=273)、[第197條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197)、[第217條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217)、[第218條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=218)
+- 全國法規資料庫・洗錢防制法：[第22條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=22)
 - 全國法規資料庫・刑事訴訟法：[第487條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=487)、[第488條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=488)、[第503條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=503)
 - 司法院裁判書系統：[臺灣臺北地方法院114年度簡上字第212號民事判決](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDV%2C114%2C%E7%B0%A1%E4%B8%8A%2C212%2C20260930%2C1)（2026年9月30日，第二審）、[臺灣高等法院花蓮分院115年度上易字第12號民事判決](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=HLHV%2C115%2C%E4%B8%8A%E6%98%93%2C12%2C20260729%2C1)（2026年7月29日，第二審）。兩件判決是否確定，本文未另行查證。
 

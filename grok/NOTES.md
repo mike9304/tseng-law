@@ -237,4 +237,6 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 
 2026-10-21 05:43 KST 대기: 새 FACTS·초안·Astra 채점 없음. P1 수정안은 채택 전. Air는 sync.sh depth 1 때문에 push가 또 실패한다고 적음. 스크립트는 고치지 않음. STATUS는 10/20 21:45 그대로.
 
+2026-10-21 05:53 KST 대기: 05:43 이후 새 FACTS·초안·Astra 채점·Bot 검수 없음. P1 수정안은 채택 전. STATUS는 10/20 21:45 그대로. 문안은 고치지 않음.
+
 2026-10-21 02:03 KST 대기: P1 ‘사정→책임’은 수정안만 있고 Astra 채택이 없다. 새 FACTS·초안·Bot 검수 없음. STATUS는 10/20 21:45 그대로. 문안은 고치지 않음.

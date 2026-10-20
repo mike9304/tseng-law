@@ -17,6 +17,7 @@ Header: 「稽徵機關單一窗口受理查詢被繼承人金融遺產資料作
 - Pt 9: results are 「供申報遺產稅參考，被繼承人如遺有其他財產，仍應依法申報；未依規定申報而有短報或漏報情事者…處罰」.
 - Pt 10: 「經其確認國稅稽徵機關提供之被繼承人金融遺產資料與被繼承人死亡日之資料相符者，得免檢附相關證明文件。」
 - Version check: latest version found = effective 2024-01-01 (search 2026-10-20 found no later version). Flagged as risk.
+- UPDATE 2026-10-21 (Astra r4): Point 2 was amended by MOF Order 台財稅字第11500660840號 of 115-10-19 (2026-10-19), 「自即日生效」, Executive Yuan Gazette vol. 32 no. 193 (https://gazette.nat.gov.tw/egFront/detail.do?metaid=168973; PDF https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg032193/ch04/type2/gov30/num5/Eg.pdf). Amended pt 2: same 12 categories; 受理查詢機構 adds 「１１、中華民國電子支付商業同業公會及所屬會員機構。」 (items 1-10 unchanged). Other points of this directive not amended by that order. The same order also amended 遺產稅納稅義務人查詢被繼承人財產參考資料作業要點, 遺產稅申報稅額試算服務作業要點 (part), 遺產稅跨局臨櫃申辦作業要點 pts 3/4/6 and 遺產及贈與稅電子申辦作業要點 pt 10; the drafts do not rely on those. MOF regulations database (GL010834) still showed the 112-12-26 version on 2026-10-21. MOF process sheet re-fetched 2026-10-21: text unchanged. Evidence: evidence/gazette-2026-10-19-mof-11500660840-pt2.txt.
 - "Fiscal Information Agency" = official English of 財政部財政資訊中心.
 
 ## 遺產及贈與稅法 (G0340072; amended 2026-09-11, Arts 6, 17-1, 23, 26, 30, 41, 51 per LawHistory)

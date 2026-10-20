@@ -108,3 +108,19 @@ Lengths:
 
 ## Astra r3 fix (2026-10-21)
 1. MAJOR, zh Art 1174: 「要不要拋棄繼承，得在…以書面向法院表示」 implied a court filing either way. Now 「如果要拋棄繼承，須在知悉自己得繼承之時起三個月內，以書面向法院為之」, matching MOJ text 「前項拋棄，應於知悉其得繼承之時起三個月內，以書面向法院為之。」 ko/ja/en checked: they state the renunciation deadline or filing only (en: "Renunciation has to be filed in writing with a court within three months…"), so no change. zh variety (zh-hant) OK.
+
+## Astra r4 re-check (10-21 02:10 KST)
+    drafts/S4/ko.md [ko] sentences=55 mean=41.9 cv=0.481 short=0.091 run3=0.038 opener_rep=0.0 cite_end=0.091 cite_para=0.333 contrast=1 caveat=0 q=2
+      WARN 84% of sentences end in '니다.' — vary endings within the register
+    drafts/S4/ja.md [ja] sentences=58 mean=42.5 cv=0.505 short=0.155 run3=0.107 opener_rep=0.067 cite_end=0.086 cite_para=0.333 contrast=1 caveat=0 q=0
+      WARN opens with the stock hypothetical ("가령/例えば…とします/Suppose…/假設") — allowed at most 1 in 4 columns; prefer a concrete fact, number, question or scene
+      WARN 81% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S4/en.md [en] sentences=51 mean=21.5 cv=0.543 short=0.157 run3=0.041 opener_rep=0.067 cite_end=0.098 cite_para=0.333 contrast=1 caveat=0 q=1
+      OK — no variety limit violated
+    drafts/S4/zh.md [zh-hant] sentences=44 mean=43.2 cv=0.6 short=0.159 run3=0.024 opener_rep=0.0 cite_end=0.114 cite_para=0.312 contrast=0 caveat=0 q=2
+      OK — no variety limit violated
+    drafts/S4/ko.md chars(no space)= 2457 chars(with space)= 3160 en-words= 142
+    drafts/S4/ja.md chars(no space)= 2595 chars(with space)= 2634 en-words= 44
+    drafts/S4/en.md chars(no space)= 5713 chars(with space)= 6824 en-words= 1099
+    drafts/S4/zh.md chars(no space)= 1998 chars(with space)= 2040 en-words= 34
+    Open risk: MOF regulations database still displays the 2023 text of the directive (10 bodies); the drafts cite the gazette order for the 2026-10-19 point-2 amendment.

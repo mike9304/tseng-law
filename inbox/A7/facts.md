@@ -25,7 +25,7 @@ Hypothetical (ko only): subsidiary stopped business end-2025 — labelled 「(�
 - Art. 113 II (https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=113) — 除前項規定外，公司變更章程、合併、解散及清算，準用無限公司有關之規定。 → 有限公司 liquidators: Art. 79/81 via 113 (all shareholders by default); 股份有限公司: Art. 322 (directors by default).
 - Art. 397 II — 除命令解散或裁定解散外，應定三十日之期間，催告公司負責人聲明異議；逾期不為聲明或聲明理由不充分者，即廢止其登記。 → headings now "may be revoked"; condition restated in body.
 
-## Astra r2 fix log (2026-10-21 ~00:20 KST)
+## Astra r2 fix log (2026-10-21 ~00:05 KST)
 - Live re-fetch (LawSingle): 公司法 Art. 81 「不能依第七十九條規定定其清算人時，法院得因利害關係人之聲請，選派清算人。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=81 ; Art. 322(2) 「不能依前項之規定定清算人時，法院得因利害關係人之聲請，選派清算人。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=322 — both require an interested party's application and use 得 (discretion).
 - Fixes:
   1. ko Art. 81 sentence → 「정할 수 없으면 이해관계인의 신청에 따라 법원이 청산인을 선임할 수 있습니다」; the two Art. 322 sentences (FAQ 2, body) aligned the same way.

@@ -35,7 +35,7 @@ Queued angle (complaint, freezing the receiving account, incidental civil action
 - 11/11 findings applied: summaries split Art.46 (surrender → reduce/exempt) vs Art.47 (confession throughout, clock from first confession in prosecutor's investigation → reduce) (ko/ja/en); headings limited to amended Arts.46–47 + effective 2026-01-23 + 刑法2 I comparison + other provisions still relevant (x4); zh summary 53 得 + 必要時應上訴, zh body '也有角色'; 339-4 categories restored (政府機關, 關於他人, 電磁紀錄) body+FAQ (x4); en paragraph-2 wording (no payment-causes-arrest); Art.11 no longer sequenced before litigation (ko/en/zh); zh descriptive headings; en 'principal grounds supporting their claims or defences' (x3); ko/ja 緩起訴 explained + 刑訴253-1 (en aligned); 'Scope comes first' and equivalents deleted (ko/ja/en); en title 'Fraud Crime Hazard Prevention Act'.
 - Extra skeptical-reader pass: closing list fragments rewritten as sentences (ko/ja/zh), ko/ja paragraph-2 phrasing smoothed.
 
-## Astra r2 re-check (2026-10-21 ~00:30 KST)
+## Astra r2 re-check (2026-10-21 ~00:07 KST)
 - variety FAIL 0 (ko/ja/en; zh --lang zh-hant). WARN only: ko 77% 니다 endings, ja 84% desu-masu (pre-existing, not flagged by the gate).
 - links.py BAD 0. YAML OK x4; faq 3; featured_image TBD; no 曾雋崴; no bold.
 - Lengths (blen.py): en 916 words, ko 1,901 chars without spaces, ja 1,890, zh 1,512.

@@ -32,7 +32,7 @@
 - Fixes: (1) ja/zh NHI subrogation → Art. 2(6). (2) en/zh Fund limitation now lists the unauthorized-use trigger with the other two (ko already limited its sentence to the untraceable/uninsured cases; ja does not discuss Fund limitation). (3) ko summary: injury benefits to the injured, death benefit to eligible survivors; 「사망자 1인당」. (4) ko 48: trigger = knowledge of damage and of insurer. (5) ko 46 / en FAQ 2 + body / zh FAQ 2: excluded time only for a claim made before limitation expires (Art. 14(2)). (6) en opening scooter scene labelled "an invented example". (7) ko 「청구의 효력이 발생한 때」 (2 places). (8) ko 「그대로입니다」 deleted. (9) ja 「救急外来・一般外来を受診した日」 (2 places; source 「急診、門診治療日」).
 - Contact line (2026-10-20 no-byline rule) already neutral in all four.
 
-## Astra r2 fix log (2026-10-21 ~00:10 KST)
+## Astra r2 fix log (2026-10-21 ~00:03 KST)
 ### ja rewritten on a new angle (finding 1: old ja duplicated ja 271 line 38)
 Old ja (non-NHI traveler medical-fee cap) is withdrawn; backup at research/fix/A6-ja-before-r2.md. The sections above on 給付標準 Art. 2 II ②(二) and 核退辦法 Art. 6 no longer apply to ja. Findings 2 (「得按…核付」) and 4 (代位 wording) concerned only that withdrawn text; the new ja does not state either rule.
 New ja angle: multi-vehicle accidents — 強制汽車責任保險法 Art. 36 joint payment, no fault-ratio split, Art. 31 settlement deduction — through 臺灣彰化地方法院113年度保險簡上字第1號 (2026-03-31). Duplicate check: no column in any locale cites Art. 36 or this judgment (grep 第36條/第36条/Article 36/제36조 and 保險簡上 over ref/src/content/columns*); zh 103 discusses Art. 31 only for uninsured-vehicle / Fund deduction cases (新竹・臺南), zh 102 is a single-vehicle passenger + recourse case; ja 003 has one sentence that multi-vehicle drivers may claim from other vehicles' insurers.

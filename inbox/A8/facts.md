@@ -32,7 +32,7 @@
 - LawHistory (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080226), re-opened: 115-01-21 華總一義字第11500003941號令修正公布第7～11、13、42～44、46、47、50條.
 - Art. 11 now framed as a procedure for unwithdrawn balances only; drafts state that civil claims / mediation / settlement do not depend on the account being emptied (no sequence).
 
-## Astra r2 fix log (2026-10-21 ~00:30 KST)
+## Astra r2 fix log (2026-10-21 ~00:07 KST)
 - Live re-fetch (LawSingle) 詐欺犯罪危害防制條例:
   - Art. 46 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=46 : 「犯詐欺犯罪，於犯罪後自首，並於自首之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕或免除其刑。／前項情形，並因而查獲發起、主持、操縱或指揮詐欺犯罪組織之人，或得以扣押該組織所取得全部被害人交付之所有財物或財產上利益者，得免除其刑。」
   - Art. 47 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080226&flno=47 : 「犯詐欺犯罪，在偵查及歷次審判中均自白，並於檢察官偵查中首次自白之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕其刑。／前項情形，並因而查獲…或得以扣押該組織所取得全部被害人交付之所有財物或財產上利益者，得減輕或免除其刑。」

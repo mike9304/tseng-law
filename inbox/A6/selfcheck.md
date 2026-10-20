@@ -37,3 +37,15 @@ drafts/A6/zh.md chars_nospace 1353 chars_with_space 1385
 - Traffic columns: FRONTMATTER/TRAFFIC-COLLECTION expects tags ["traffic-accidents", narrower tag] (added) and, for hub-linked columns, a per-column Blender diagram registered in src/data/traffic-still-diagrams.ts — integrator's decision; no diagram fields added.
 - NHIA quarterly average-cost figures not quoted (site 403); ja explains the rule only.
 - Which insurer a passenger claims from in multi-vehicle accidents is not stated (not verified).
+
+## Astra r1 fix (2026-10-20 ~20:50 KST)
+Source: ASTRA-FAIL.md (r1), renamed ASTRA-FAIL-fixed-1.md. All 9 findings were accepted after a live LawSingle re-check (details in facts.md).
+- ja/zh: subrogation is now cited as 給付標準 Art. 2(6). The facts.md paragraph numbering was corrected too.
+- en/zh: Fund limitation now includes the unauthorized-use trigger (Art. 14(4)③).
+- ko: the summary separates injury benefits from survivors' death benefit, and the text now reads 「사망자 1인당」.
+- ko: the limitation trigger is knowledge of both the damage and the insurer.
+- ko/en/zh: time is excluded only for a claim made before limitation expires (Art. 14(2)); en has this in both places.
+- en: the opening scene is labelled "(The scene is an invented example.)". It was first rewritten as "Take an invented example: …", but that drew the stock-hypothetical opener WARN, so the question opener was kept with a trailing label.
+- ko: 「청구의 효력이 발생한 때」. 「그대로입니다」 deleted.
+- ja: 「救急外来・一般外来を受診した日」.
+Checks: variety FAIL 0 and no WARN in en after the opener change (ko/ja/en; zh --lang zh-hant). Links BAD 0, YAML OK x4. Lengths: en 737 words, ko 1,547 chars without spaces, ja 1,521, zh 1,372.

@@ -35,3 +35,18 @@ Dismissal/severance in general is covered (008/009 all locales, ja 037 subsidiar
 - 2nd-instance judgments' finality not checked (stated).
 - Severance formula for foreign professionals with mixed pre/post-2026 service (勞退條例11) not detailed; drafts state only the Art. 24 rule.
 - MOL "試用期之約定" page dated 2021-11-24; FAQ updated 2026-09-03 — both current on the site as of check date.
+
+## Astra r1 fix (2026-10-20 ~20:45 KST)
+Source: ASTRA-FAIL.md (r1), renamed ASTRA-FAIL-fixed-1.md. All 11 findings were accepted and verified against live LawSingle and the live judgment texts; details are in facts.md.
+- Contact line without the lawyer's name, all 4. The same change was made in A1–A8 because of the 2026-10-20 no-byline rule.
+- Art. 24(5) and (3) added (FAQ 3 and body, all 4).
+- Severance FAQ limited to severance-bearing grounds, with the Art. 12/18 exclusion (all 4).
+- en heading "Dismissal during a labor dispute".
+- Kaohsiung post-accident handling finding added (all 4).
+- zh 92 chronology and 環保局.
+- ko 해고수당(資遣費).
+- ja 「おおむね職務を遂行できない」.
+- en notice bands.
+- zh title, H1 and summary.
+- Verification blocker: four judgments re-opened via printData and the official PDFs (rebuttal.md).
+Checks: variety FAIL 0 (ko/ja/en; zh --lang zh-hant). Links BAD 0. YAML OK x4. Lengths: en 884 words, ko 1,811 chars without spaces, ja 1,865, zh 1,642.

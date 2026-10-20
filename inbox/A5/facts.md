@@ -33,3 +33,28 @@
 ## Other
 - Internal links: /ja/columns/taiwan-subsidiary-employee-dismissal (ja 037), /en/columns/foreign-professional-dismissed-taiwan (en 034). Link check BAD 0.
 - English names (law.moj ENG): Labor Standards Act; Labor Pension Act; Act for Settlement of Labor-Management Disputes; Act for the Recruitment and Employment of Foreign Professionals.
+
+## Astra r1 fix log (2026-10-20 ~20:45 KST)
+- Statutes re-fetched live from LawSingle at 20:22–20:25 KST:
+  - 外國專業人才延攬及僱用法 Art. 24. Para. 5: 「第一項外國專業人才及外國特定專業人才於本法中華民國一百十四年八月二十九日修正之條文施行前已適用勞工退休金條例，或已依法向雇主表明繼續適用勞動基準法之退休金制度者，仍依各該規定辦理，不適用前四項規定。」 Para. 3: 「依第一項規定適用勞工退休金條例退休金制度者，其適用前之工作年資依該條例第十一條規定辦理。」
+  - 勞工退休金條例 Art. 11(1): 「…仍服務於同一事業單位而選擇適用本條例之退休金制度者，其適用本條例前之工作年資，應予保留。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=11. Art. 12(1): 資遣費 is due on termination under 勞基法 11, 13 proviso, 14, 20 (not 12).
+  - 勞基法 Art. 16 (「繼續工作三個月以上一年未滿者，於十日前預告之。二、繼續工作一年以上三年未滿者，於二十日前預告之」). Art. 18: 「有左列情形之一者，勞工不得向雇主請求加發預告期間工資及資遣費：一、依第十二條或第十五條規定終止勞動契約者。…」
+  - 勞資爭議處理法 Art. 8: 「勞資爭議在調解、仲裁或裁決期間，資方不得因該勞資爭議事件而…終止勞動契約…」
+- Fixes:
+  1. All 4: contact line no longer names the lawyer. It now reads as the firm's email and address only (TASK.md / gate rule of 2026-10-20). Applied to all eight topics A1–A8.
+  2. All 4: Art. 24 transitional election. Added para. 5 (people already under the new system, or who had already elected the old one, keep that arrangement) and para. 3 with 勞退條例 Art. 11 (earlier service preserved on switching). Covers FAQ 3 and the body.
+  3. ko/ja/en FAQ 2 (zh aligned): severance is tied to a ground that carries it, such as Art. 11. A lawful Art. 12 dismissal is expressly excluded (Art. 18).
+  4. en heading: "Dismissal during a labor dispute". Art. 8 is a prohibition and has no deadline-pause effect.
+  5. All 4, Kaohsiung (KSHV 115勞上易11): the employer's second allegation is added. The driver allegedly failed to confirm the 16:30 pickup after the 15:40 collision. The court rejected it: 「被上訴人於系爭事故發生當場，即立刻通報上訴人行控中心…自足使被上訴人合理信賴後續派車業務已由行控中心接手處理」; 「客觀上亦難認有何重大怠忽」; 「事故後之處理方式亦未見重大違反工作規範情事」.
+  6. zh, TPHV 115勞上92: the chronology now follows the judgment. Probation ran to 113-11-30. Oral notice at the 113-11-26 interview: 「伊於113年11月26日訪談時，即口頭告知上訴人不符合試用期滿轉正職情形」; the court: 「被上訴人於113年11月26日訪談上訴人時，口頭通知上訴人不符合試用期滿轉正職情形；復於同年12月12日…書面通知上訴人於同年12月26日終止」. The employer is 新北市政府環境保護局, so 「公司」 became 「環保局」.
+  7. ko: 「자遣費」 (malformed) replaced by 「해고수당(資遣費)」 on first use and 「해고수당」 after (10 occurrences). One sentence added distinguishing it from 퇴직금(退休金).
+  8. ja: 「おおむね勝任できない」 became 「おおむね職務を遂行できない」 (judgment: 「大致不能勝任」).
+  9. en: notice bands are now "at least three months but less than one year" and "at least one year but less than three years".
+  10. zh title, H1 and summary: 「2026年法院判決」. The summary no longer counts the judgments.
+- Judgment verification blocker. All four judgments were re-opened live on 2026-10-20 at 20:21 KST:
+  - Channel 1, printData: identical to the research/jud cache. Byte counts: TPSV 10,024; TPHV39 32,411; KSHV11 19,635; TPHV92 21,814.
+  - Channel 2, official open-data PDFs (data.judicial.gov.tw/opendl/JDocFile, HTTP 200). PDF text matches printData in 30-character windows every 150 characters, with digits normalised for mid-line line numbers:
+    - TPSV/113,台上,101,20240131,1: 380,409 B, SHA-256 48453f8ba8b4995068344dc09bb12dfa4243ba74ac00bb7e2486b65f741043e5; 21/21 windows.
+    - TPHV/115,勞上,39,20260818,1: 1,020,057 B, SHA-256 a53bf54fb22c417c7fbc44a24d7984b73a83d2e3ce0c96f9fc248986629e0898; 67/75 windows, misses in tables.
+    - KSHV/115,勞上易,11,20261007,1: 678,233 B, SHA-256 adb10f3918b6244ba9dd2decbe7da51e81806ef6baa26a6cf63b56c6d6701baa; 44/44 windows.
+    - TPHV/115,勞上,92,20260901,1: 758,362 B, SHA-256 a471215f6d41f7d8ea27d4285758a7ad96d5cb1d1ff62c7e83fe5bd29aca2f6f; 53/53 windows.

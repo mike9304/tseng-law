@@ -13,7 +13,7 @@
 
 ## 強制汽車責任保險給付標準 (G0390067) — current text fetched 2026-10-20; LawHistory #13: 115-05-29 金管會·交通部會銜修正發布第3、6、7、9條，依第9條自115-07-01施行 (#12: 115-02-25 第3條附表)
 - Art. 1 II — 特別補償基金…為補償時，除第二條第六項規定外，準用本標準之規定。
-- Art. 2 (not amended in 2026) — 醫療 必須且合理之實際支出, 每一受害人每一事故 20萬元; items 急救/診療/接送/看護; 診療 (一) 健保被保險人 incl. 健保外項目 病房費差額、掛號費、診斷證明書費、膳食費…; (二) 非以健保被保險人診療者，診療費用不得高於…全民健康保險自墊醫療費用核退辦法規定急診、門診治療日或出院日前一季之平均費用標準。但請求權人就其全部診療費用，提供該全民健康保險給付項目及費用之證明文件時，得按…被保險人診療者之規定核付; caps: 病房費差額 1,500/日, 膳食 180/日, 義肢 5萬/肢, 義齒 1萬/齒 (5齒以上 5萬), 義眼 1萬, 其他 2萬; 接送 2萬; 看護 1,200/日 不得逾30日; V: 健保代位 以20萬扣除已給付請求權人金額後之餘額為限; VI: 基金醫療補償不含健保給付金額.
+- Art. 2 (not amended in 2026) — 醫療 必須且合理之實際支出, 每一受害人每一事故 20萬元; items 急救/診療/接送/看護; 診療 (一) 健保被保險人 incl. 健保外項目 病房費差額、掛號費、診斷證明書費、膳食費…; (二) 非以健保被保險人診療者，診療費用不得高於…全民健康保險自墊醫療費用核退辦法規定急診、門診治療日或出院日前一季之平均費用標準。但請求權人就其全部診療費用，提供該全民健康保險給付項目及費用之證明文件時，得按…被保險人診療者之規定核付; caps: 病房費差額 1,500/日, 膳食 180/日, 義肢 5萬/肢, 義齒 1萬/齒 (5齒以上 5萬), 義眼 1萬, 其他 2萬; 接送 2萬; 看護 1,200/日 不得逾30日 (para. V); VI: 健保代位 以20萬扣除已給付請求權人金額後之餘額為限; VII: 基金醫療補償不含健保給付金額. (r1 fix: paragraph numbers corrected after live re-fetch 2026-10-20 20:27 KST — subrogation is para. 6, not 5; ja 「同条第6項」, zh 「第2條第6項」.)
 - Art. 3 (new) — 失能 15等級: 300萬, 250萬, 210萬, 185萬, 160萬, 135萬, 110萬, 90萬, 70萬, 55萬, 40萬, 25萬, 15萬, 10萬, 8萬.
 - Art. 4 — 多項失能 升等規則 (zh). Art. 8 — 甲種診斷書／地區教學醫院以上檢驗查證，費用由保險人負擔 (zh).
 - Art. 6 (new) — 死亡給付每一人 300萬元. Art. 7 (new) — 合計最高 320萬元.
@@ -26,3 +26,8 @@
 
 ## Internal links (exist): /ko|en/columns/taiwan-complaint-only-offense-settlement-withdrawal-deadline (522), /ja/columns/taiwan-traffic-accident-compensation-items-japanese (271), /zh-hant/columns/taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction (103). Link check BAD 0.
 ## English names: Compulsory Automobile Liability Insurance Act (law.moj ENG).
+
+## Astra r1 fix log (2026-10-20 ~20:50 KST)
+- Live re-fetch (LawSingle, 20:27 KST): 強制汽車責任保險法 Art. 11 (claimants: injured person / surviving family in order; funeral payer), Art. 14 (I: 「自知有損害發生及保險人時起，二年間不行使而消滅」; II: 「前項時效完成前，請求權人已向保險人為保險給付之請求者，自請求發生效力之時起，至保險人為保險給付決定之通知到達時止，不計入時效期間」; IV ①–④ separate triggers incl. ③ 「自知有損害發生及確認被保險汽車係未經同意使用或管理之事實起算」); 給付標準 Art. 2 (para. 5 nursing cap; para. 6 NHI subrogation; para. 7 Fund excludes NHI).
+- Fixes: (1) ja/zh NHI subrogation → Art. 2(6). (2) en/zh Fund limitation now lists the unauthorized-use trigger with the other two (ko already limited its sentence to the untraceable/uninsured cases; ja does not discuss Fund limitation). (3) ko summary: injury benefits to the injured, death benefit to eligible survivors; 「사망자 1인당」. (4) ko 48: trigger = knowledge of damage and of insurer. (5) ko 46 / en FAQ 2 + body / zh FAQ 2: excluded time only for a claim made before limitation expires (Art. 14(2)). (6) en opening scooter scene labelled "an invented example". (7) ko 「청구의 효력이 발생한 때」 (2 places). (8) ko 「그대로입니다」 deleted. (9) ja 「救急外来・一般外来を受診した日」 (2 places; source 「急診、門診治療日」).
+- Contact line (2026-10-20 no-byline rule) already neutral in all four.

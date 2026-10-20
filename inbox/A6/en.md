@@ -18,20 +18,20 @@ faq:
   - q: "Do the higher July 2026 amounts apply to an accident in June 2026?"
     a: "No. [Article 27(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=27) applies a revised benefit standard to accidents occurring on or after its effective date. The [benefit standards](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390067) revised on May 29, 2026 took effect on July 1, 2026. Earlier accidents stay under the old figures: NT$2 million for death and NT$50,000 to NT$2 million for disability."
   - q: "How long do I have to claim?"
-    a: "The claim against the insurer lapses two years after the claimant learns of the damage and of the insurer, and in any event ten years after the accident ([Article 14(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)). Time stops running from when a claim takes effect until the insurer's decision reaches the claimant (Article 14(2))."
+    a: "The claim against the insurer lapses two years after the claimant learns of the damage and of the insurer, and in any event ten years after the accident ([Article 14(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)). If a claim is made before the limitation period runs out, time stops running from when it takes effect until the insurer's decision reaches the claimant (Article 14(2))."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
 
 # Hurt in a Taiwan Traffic Accident: Claiming Compulsory Auto Insurance, and the July 2026 Increase
 
-Who pays the first hospital bills after a scooter knocks you down in Taipei, while the rider insists you stepped out without looking? Taiwan's answer starts with compulsory automobile liability insurance, which the owner of a vehicle required to be insured must take out ([Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=6)). It pays injured people without anyone first having to prove fault.
+Who pays the first hospital bills if a scooter knocks you down in Taipei and the rider insists you stepped out without looking? (The scene is an invented example.) Taiwan's answer starts with compulsory automobile liability insurance, which the owner of a vehicle required to be insured must take out ([Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=6)). It pays injured people without anyone first having to prove fault.
 
 ## A no-fault layer
 
 [Article 7 of the Compulsory Automobile Liability Insurance Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=7) lets the claimant recover from the insurer whether or not the person who caused the accident was at fault. The accidents covered are those in which using or managing a vehicle injures or kills a passenger or someone outside the vehicle ([Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=13)). An injured person claims personally; after a death, parents, children and spouse come first in the order of family claimants, followed by grandparents, grandchildren and siblings ([Article 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=11)). If there is no family claimant at all, whoever paid the funeral costs may claim up to those costs.
 
-Where the vehicle cannot be identified, was uninsured, or was being used without the insured owner's consent, the claim goes to the Special Compensation Fund instead, within the same limits ([Article 40](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=40)). Two differences matter. Time for a Fund claim runs from when the claimant knows of the damage and confirms that the vehicle cannot be traced or was uninsured ([Article 14(4)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)). And the Fund's medical payment excludes amounts paid by National Health Insurance.
+Where the vehicle cannot be identified, was uninsured, or was being used without the insured owner's consent, the claim goes to the Special Compensation Fund instead, within the same limits ([Article 40](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=40)). Two differences matter. Time for a Fund claim runs from when the claimant knows of the damage and confirms the relevant fact: that the vehicle cannot be traced, was uninsured, or was being used without the insured's consent ([Article 14(4)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)). And the Fund's medical payment excludes amounts paid by National Health Insurance.
 
 ## What it pays
 
@@ -45,7 +45,7 @@ Disability and death did change. For accidents on or after July 1, 2026, disabil
 
 Claims go straight to the insurer of the vehicle involved. Once the documents are complete, the insurer must pay within ten working days, and if it is late through its own fault it owes interest at 10% a year ([Article 25](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=25)). The right to the benefit cannot be seized, assigned or pledged.
 
-Two years is the main deadline. It runs from when the claimant learns of the damage and of the insurer, with an outer limit of ten years from the accident ([Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)). A claim already lodged stops the clock until the insurer's decision arrives. Article 14 has no separate rule for claimants who have gone home; the same two years apply wherever the claimant lives. In practice that means the hospital records and receipts need to be gathered before leaving Taiwan, or requested from abroad in good time.
+Two years is the main deadline. It runs from when the claimant learns of the damage and of the insurer, with an outer limit of ten years from the accident ([Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=14)). A claim lodged before the period expires stops the clock until the insurer's decision arrives. Article 14 has no separate rule for claimants who have gone home; the same two years apply wherever the claimant lives. In practice that means the hospital records and receipts need to be gathered before leaving Taiwan, or requested from abroad in good time.
 
 ## How it fits with the other side's liability
 

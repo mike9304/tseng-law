@@ -168,3 +168,6 @@ Astra r7 검수 반영은 opus/R7-FIX1-DONE.md. 첨부 글자 수 변경: P1 KO 
 
 ## 수정2
 Astra 재검수 반영은 opus/R7-FIX2-DONE.md(P1 카드 06·alt만).
+
+## 수정3
+Astra 3차 MINOR 반영은 opus/R7-FIX3-DONE.md(P1 첨부 세 언어, JA·EN 카드 06·alt).

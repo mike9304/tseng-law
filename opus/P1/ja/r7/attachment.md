@@ -25,7 +25,7 @@ https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=248
 この事件に関わるのは2号と3号です。
 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=249
 
-カードの0元・2倍は、定金をいくら返すかだけを比べたもので、損害賠償全体の金額ではありません。
+上の第249条の0元・2倍は、定金をいくら返すかだけを決めたもので、損害賠償全体の金額ではありません。
 
 これは臺灣士林地方法院士林簡易庭115年度士小字第864號、2026年6月30日の少額訴訟の一審判決です。控訴したか、確定したかは調べきれていません。その後お金が動いたかもわかりません。
 https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLEV%2C115%2C%E5%A3%AB%E5%B0%8F%2C864%2C20260630%2C1

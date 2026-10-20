@@ -48,5 +48,5 @@ r7 = 사용자 결정 10/21 + 수정1(Astra ASTRA-R7-20261021.md) + 수정2(Astr
 
 ## 6 · proof (This case · trial court)
 - headline: Proving the company's fault / was up to the renter.
-- docs: [{"title": "The renter's own reason", "body": "After paying, their stuff wouldn't fit", "proves_label": "The judge saw it as", "proves": "The renter's side", "status": "On record", "kind": "ok"}, {"title": "Proof of company fault", "body": "The company caused the deal to fail", "proves_label": "Who had to show it", "proves": "The renter", "status": "None filed", "kind": "x"}]
+- docs: [{"title": "The renter's own reason", "body": "After paying, their stuff wouldn't fit", "proves_label": "The judge's finding", "proves": "The renter was responsible.", "status": "On record", "kind": "ok"}, {"title": "Proof of company fault", "body": "The company caused the deal to fail", "proves_label": "Who had to show it", "proves": "The renter", "status": "None filed", "kind": "x"}]
 - foot 1: So the claim for the NT$21,800 / and interest was rejected.

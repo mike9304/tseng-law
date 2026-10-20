@@ -1,6 +1,6 @@
 # P1 EN C03 집 계약금 / 手付金 / rental deposit (士林簡易庭 115年度士小字第864號) — 게시 구성 r7 (opus/P1/en/r7)
 
-게시·전송하지 않았다. 사용자 결정(10/21): 서명 줄 없음 · 사무장 반응 줄 없음 · Astra r7 수정1·2 반영. 글자 수는 유니코드 코드포인트.
+게시·전송하지 않았다. 사용자 결정(10/21): 서명 줄 없음 · 사무장 반응 줄 없음 · Astra r7 수정1·2·3 반영. 글자 수는 유니코드 코드포인트.
 
 원글: 본문 + 카드 6장(opus/P1/en/r7/images/en/card-01~06.png). 첫 텍스트 답글: 첫 댓글 + 텍스트 첨부. 한국어 뜻풀이: opus/P1/en/r7/ko-meaning.md
 
@@ -24,7 +24,7 @@ The renter's own LINE chat, which they filed as evidence, called the money a "re
 | 03 | Made-up scene, company's side. Speech bubble: Rent's set. The ad said 1 year. A note shows NT$21,800 a month and a one-year minimum, and the company says it canceled 3 other viewings. | 183 |
 | 04 | Message quoted in the ruling, translated from Chinese: the renter's LINE message after wiring the money, sent as the rental deposit. The renter gave this chat to the court. | 172 |
 | 05 | The ruling: no refund owed. An unsigned lease beside the terms agreed at the viewing (NT$21,800 a month, one-year minimum) and the LINE wording 承租訂金. The lease existed from the viewing day, and backing out over space was on the renter. | 235 |
-| 06 | This case, trial court. Proving the company's fault was up to the renter. Left, a paper: the renter's own reason (after paying, their stuff wouldn't fit); the judge saw it as the renter's side; on record. Right, an empty dashed box: proof that the company caused the deal to fail; the renter had to show it; none filed. So the claim for the NT$21,800 and interest was rejected. | 377 |
+| 06 | This case, trial court. Proving the company's fault was up to the renter. Left, a paper: the renter's own reason (after paying, their stuff wouldn't fit); the judge's finding: the renter was responsible; on record. Right, an empty dashed box: proof that the company caused the deal to fail; the renter had to show it; none filed. So the claim for the NT$21,800 and interest was rejected. | 387 |
 
 ## 첫 댓글 · 215자
 
@@ -35,7 +35,7 @@ Full ruling (Chinese):
 https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLEV%2C115%2C%E5%A3%AB%E5%B0%8F%2C864%2C20260630%2C1
 ```
 
-## 텍스트 첨부 · 4407자 · 링크 3개
+## 텍스트 첨부 · 4416자 · 링크 3개
 
 ```text
 I've left out the renter's name, which the ruling gives. What the post calls a deposit is 定金 in the ruling: earnest money, not a security deposit (押金).
@@ -62,7 +62,7 @@ https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=248
 Art. 249, unless the parties agreed otherwise. Item 1: when the contract is carried out, the earnest money is returned or counted toward payment. Item 2: if the payer's fault makes performance impossible, the payer can't ask for it back. Item 3: if it's the recipient's fault, the recipient pays back double what it received. Item 4: if it can't be carried out and neither side is at fault, it's returned. Items 2 and 3 are the ones that matter here.
 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=249
 
-The "0" and "2x" on the cards only compare how the earnest money itself comes back, not total damages.
+The zero and double under Art. 249 above cover only how the earnest money itself comes back, not total damages.
 
 Source: Taiwan Shilin District Court, Shilin Summary Court, Case 115 Shi-Xiao-Zi No. 864, a small-claims first-instance ruling dated June 30, 2026. I don't know if it was appealed or has become final.
 https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLEV%2C115%2C%E5%A3%AB%E5%B0%8F%2C864%2C20260630%2C1

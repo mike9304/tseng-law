@@ -1068,30 +1068,44 @@
     "rotate": null
    },
    {
-    "text": "The judge saw it as",
+    "text": "The judge's finding",
     "role": "label",
     "size": 32,
     "weight": 700,
     "lang": "en",
     "bbox": [
      96,
-     724,
-     392,
-     757
+     704,
+     395,
+     737
     ],
     "rotate": null
    },
    {
-    "text": "The renter's side",
+    "text": "The renter was",
     "role": "object",
     "size": 42,
     "weight": 900,
     "lang": "en",
     "bbox": [
      96,
-     768,
-     451,
-     805
+     750,
+     412,
+     785
+    ],
+    "rotate": null
+   },
+   {
+    "text": "responsible.",
+    "role": "object",
+    "size": 42,
+    "weight": 900,
+    "lang": "en",
+    "bbox": [
+     96,
+     798,
+     359,
+     843
     ],
     "rotate": null
    },
@@ -1103,9 +1117,9 @@
     "lang": "en",
     "bbox": [
      174,
-     868,
+     880,
      362,
-     899
+     911
     ],
     "rotate": null
    },
@@ -1173,9 +1187,9 @@
     "lang": "en",
     "bbox": [
      606,
-     724,
+     704,
      905,
-     750
+     730
     ],
     "rotate": null
    },
@@ -1187,9 +1201,9 @@
     "lang": "en",
     "bbox": [
      606,
-     770,
+     750,
      829,
-     805
+     785
     ],
     "rotate": null
    },
@@ -1201,9 +1215,9 @@
     "lang": "en",
     "bbox": [
      684,
-     867,
+     879,
      881,
-     899
+     911
     ],
     "rotate": null
    },

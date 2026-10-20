@@ -1124,7 +1124,7 @@
     "rotate": null
    },
    {
-    "text": "会社の責任を",
+    "text": "会社の責任の証拠",
     "role": "label",
     "size": 40,
     "weight": 900,
@@ -1132,50 +1132,50 @@
     "bbox": [
      606,
      429,
-     846,
+     926,
      469
     ],
     "rotate": null
    },
    {
-    "text": "示す証拠",
-    "role": "label",
-    "size": 40,
-    "weight": 900,
+    "text": "会社の責任で契約を",
+    "role": "object",
+    "size": 42,
+    "weight": 800,
     "lang": "ja",
     "bbox": [
      606,
-     477,
-     766,
-     517
+     531,
+     984,
+     573
     ],
     "rotate": null
    },
    {
-    "text": "会社のせいで契約を",
+    "text": "履行できなくなった",
     "role": "object",
-    "size": 37,
+    "size": 42,
     "weight": 800,
     "lang": "ja",
     "bbox": [
      606,
      584,
-     938,
-     620
+     984,
+     625
     ],
     "rotate": null
    },
    {
-    "text": "果たせなくなった資料",
+    "text": "ことを示す資料",
     "role": "object",
-    "size": 37,
+    "size": 42,
     "weight": 800,
     "lang": "ja",
     "bbox": [
      606,
-     630,
-     976,
-     666
+     636,
+     900,
+     677
     ],
     "rotate": null
    },

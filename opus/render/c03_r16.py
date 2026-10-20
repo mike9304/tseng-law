@@ -287,6 +287,9 @@ def proof(card, lang, total):
     h = min(560, ft - 60 - top)
     assert h >= 440, f'[{lang}] no room for the two papers ({top}..{ft})'
     w, xs = 450, (60, 570)
+    two = any(len(d['proves'].split('\n') if '\n' in d['proves'] else wrap(d['proves'], lang, 42, w - 72, 900)) > 1
+              for d in card['labels']['docs'])
+    lab_y, st_off = (340, 40) if two else (360, 52)
     for x, d in zip(xs, card['labels']['docs']):
         ok = d['kind'] == 'ok'
         out.append(obstacle(d['title'], x, top, x + w + 14, top + h + 16))
@@ -301,9 +304,9 @@ def proof(card, lang, total):
             out.append(line(x + 36, ty + 28, x + w - 36, ty + 28, INK, 2))
             by, _, _ = block(out, d['body'], x + 36, ty + 104, 44, lang, w - 72, 800, INK, 1.25, 'object', 3)
             assert by <= top + 300, f'[{lang}] proof body too tall ({by - top})'
-            out.append(put(d['proves_label'], x + 36, top + 360, 32, MUTED, 700, lang, w - 72, role='label'))
-            block(out, d['proves'], x + 36, top + 414, 42, lang, w - 72, 900, ACCENT if ok else INK, 1.2, 'object', 2)
-            sy = top + h - 52
+            out.append(put(d['proves_label'], x + 36, top + lab_y, 32, MUTED, 700, lang, w - 72, role='label'))
+            block(out, d['proves'], x + 36, top + lab_y + 54, 42, lang, w - 72, 900, ACCENT if ok else INK, 1.2, 'object', 2)
+            sy = top + h - st_off
             out.append(mark(d['kind'], x + 70, sy - 14, 54, INK if ok else ACCENT))
             out.append(put(d['status'], x + 114, sy, 38, INK if ok else ACCENT, 900, lang, w - 150, role='label'))
     foot_plain(out, card, lang)

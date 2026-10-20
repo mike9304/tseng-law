@@ -22,7 +22,7 @@ https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=248
 Art. 249, unless the parties agreed otherwise. Item 1: when the contract is carried out, the earnest money is returned or counted toward payment. Item 2: if the payer's fault makes performance impossible, the payer can't ask for it back. Item 3: if it's the recipient's fault, the recipient pays back double what it received. Item 4: if it can't be carried out and neither side is at fault, it's returned. Items 2 and 3 are the ones that matter here.
 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=249
 
-The "0" and "2x" on the cards only compare how the earnest money itself comes back, not total damages.
+The zero and double under Art. 249 above cover only how the earnest money itself comes back, not total damages.
 
 Source: Taiwan Shilin District Court, Shilin Summary Court, Case 115 Shi-Xiao-Zi No. 864, a small-claims first-instance ruling dated June 30, 2026. I don't know if it was appealed or has become final.
 https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLEV%2C115%2C%E5%A3%AB%E5%B0%8F%2C864%2C20260630%2C1

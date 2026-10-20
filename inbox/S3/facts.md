@@ -13,7 +13,13 @@ Fetched 2026-10-20 (statutes: research/cache; judgments: research/judg).
   - Official English (law.moj.gov.tw/ENG): "The court may adjust or waive the share of distribution provided that equal distribution is unfair…"; "the length of time of living together or separately, the time of receiving the property acquired in marriage…".
 - 涉外民事法律適用法 48 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=48 — governing law of marital property regime (cited only as the reason the column applies to couples under Taiwan's statutory regime; detail in linked columns).
 
+## Pre-2021 adjustment power (Astra r1 MAJOR 6)
+- The adjustment/waiver power existed before the 2021-01-20 amendment (old para 2 used a 「顯失公平」 standard). Source: 最高法院111年度台上字第2561號 (evidence copy) — the 原審 applied 「平均分配夫妻剩餘財產差額應無顯失公平之情事」 and the Supreme Court explains 「為避免法院對於具體個案平均分配或有顯失公平情形之認定標準不一，乃於110年1月20日修正…其第2項修正為…並增列第3項」. Drafts now say the amendment rewrote the standard and added the factors (not that the power began in 2021).
+
 ## Judgments
+
+Verification (Astra r1 MAJOR 1): all three re-retrieved 2026-10-20 with curl + browser User-Agent, HTTP 200; text copies with source URL, 裁判字號, 裁判日期, 裁判案由 in drafts/S3/evidence/ (personal names masked). Confirmed passages: TPSV 「未免速斷」, 「兩造自101年間分房」; TNHV 「同居長達約38年」, 「系爭四筆土地係上訴人於兩造104年4月間分居前所購置」; TPDV 「兩人夫妻關係存續期間約3年4月」, 「未生養子女之原因甚多」, 「勢將形同具文」.
+
 ### 最高法院 111年度台上字第2561號 (2022-11-25)
 https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPSV%2c111%2c%e5%8f%b0%e4%b8%8a%2c2561%2c20221125%2c1
 - 主文: 「原判決關於命上訴人給付及該訴訟費用部分廢棄，發回臺灣高等法院。」

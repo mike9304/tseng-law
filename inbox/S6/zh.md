@@ -41,7 +41,7 @@ author: "legal-ai-assistant"
 
 在這號解釋之前，最高法院102年度台上字第1866號判決認為未核備的約定並非無效，最高行政法院100年度判字第226號判決則認為兩個要件都要具備。大法官把核備要件定性為民法第71條的強制規定，也影響約定的民事效力，統一了見解。理由寫得很實際：工時延長對勞工健康及福祉影響甚鉅；相同性質的工作在不同地區仍可能有實質差異，需要當地主管機關逐案核實；勞方在談判中通常居於弱勢，核備也可防止勞工受到不當影響。
 
-接下來就是一般的算法。每日超過八小時、每週超過四十小時就是延長工時，前二小時按平日每小時工資加給三分之一以上，再二小時加給三分之二以上（[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24)）；休息日工作另有加給，國定假日工作工資加倍（[第39條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=39)）。延長工時本身也不能超過一日合計十二小時、一個月四十六小時的上限（[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32)）。
+接下來就是一般的算法。每日超過八小時、每週超過四十小時就是延長工時，前二小時按平日每小時工資加給三分之一以上，再二小時加給三分之二以上（[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24)）；休息日工作另有加給，國定假日工作工資加倍（[第39條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=39)）。延長工時本身也有上限：一日合計不得超過十二小時，延長工時一個月不得超過四十六小時；經工會或勞資會議同意，一個月可到五十四小時、每三個月不超過一百三十八小時；天災、事變或突發事件另有規定（[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32)）。
 
 證據從出勤紀錄來。雇主要逐日記載到分鐘、保存五年，勞工申請副本時不得拒絕（[第30條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30)第5項、第6項）。違反工時或加班費規定，可處新臺幣二萬元以上一百萬元以下罰鍰（[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)）。
 

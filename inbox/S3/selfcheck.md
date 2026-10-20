@@ -46,3 +46,15 @@ taiwan-remaining-property-split-adjustment-separation (0 filename matches).
 1. Balance: none of the three cited judgments ends in a confirmed reduction. The Supreme Court remanded for a fuller review but did not reduce the share itself. A Taichung High Court case reported in a secondary source as a one-third reduction could not be opened, so it is not cited. The summary/FAQ wording ("not because of the years alone", "the exception") reflects this. If Astra wants a reduction example, one should be located via FJUD first.
 2. Remand outcome of 111台上2561 not checked; drafts only describe the Supreme Court decision.
 3. The TPDV judgment is first instance, and its finality was not checked.
+
+## Astra r1 response (2026-10-20)
+1. MAJOR, judgment verification: re-verified all three judgments (HTTP 200). Text copies are in drafts/S3/evidence/ with personal names masked, and the key passages are listed in facts.md.
+2. MAJOR, ko/ja summaries mixing up the role of pre-separation acquisition: rewritten. The lower courts are now described separately: one kept the equal split, citing among other things the land's pre-separation acquisition; the other rejected the heirs' short-marriage reduction argument.
+3. MAJOR, the condition in paragraph 2: en/ko/ja now read "if a spouse's lack of contribution or collaboration, or other circumstances, makes equal division unfair". zh quotes the statute verbatim.
+4. MAJOR, en hypothetical: now describes the lower-surplus spouse's claim to half the difference between the two surpluses, and asks whether the separation allows that share to be cut.
+5. MAJOR, en "does not treat a work posting differently": replaced in en with "paragraph 3 lists the length of separation without specifying its reasons, and also requires weighing overall contribution and the other factors". ko/ja/zh were aligned to the same wording.
+6. MAJOR, the 2021 amendment's role: summaries and body in all four languages now say the adjustment power existed before 2021, and that the amendment rewrote the standard and added the factors.
+7. MINOR ko: "제1항에서 계산에서" changed to "제1항에 따라 계산에서". "평균 분배" changed to "균등 분배" throughout ko.
+8. MINOR en: "would empty that rule" changed to "would undermine that exclusion".
+featured_image "TBD": same as S1 and S2, kept per TASK.md. The user's decision is pending via the bridge.
+Variety after fixes: FAIL 0 in all four files (ko cv 0.483, ja 0.479, en 0.514, zh 0.597). en has 842 words.

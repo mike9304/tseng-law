@@ -52,3 +52,16 @@ taiwan-paper-divorce-witnesses-void (0 filename matches for "paper-divorce").
 2. Of the four judgments, three are first instance and one is second instance. Finality was not checked, and the drafts make no claim of finality.
 3. Statements like "courts mostly checked the formalities" are limited to the four judgments read (summary/FAQ say "in these cases" or similar). Astra may want even softer wording in the summary.
 4. FAQ 3 / body on remarriage covers only the Taiwan Civil Code rule. The drafts flag that the law governing a remarriage abroad is a separate question, and this is not analysed.
+
+## Astra r1 response (2026-10-20)
+1. MAJOR, registration vs validity: in ko/ja/en/zh the summary, FAQ 1 and the opening now say that registration records the divorce on the household register but does not cure missing formalities, and that where Taiwan law governs, validity can still be challenged (Arts. 1049–1050, 73).
+2. MAJOR, governing law: added a premise paragraph at the start of the "how a divorce is made" section in all four languages. The column covers divorces governed by Taiwan law and made in Taiwan form, with choice-of-law Arts. 50 and 16 cited and added to sources. The "foreign spouse too" sentence is now qualified with "where Taiwan law governs".
+3. MAJOR, Art. 988-1(2): the body and FAQ 3 in all four languages now state that a remaining-property distribution or agreement already made controls and cannot be reopened. This comes before the 2-year/5-year limits.
+4. MAJOR, judgment verification: all four judgments were re-verified (HTTP 200). Copies are in drafts/S2/evidence/. The conviction passage and the "need not decide Art. 87" passages are quoted in facts.md. The Art. 87 sentence was narrowed: two judgments expressly did not need to reach it, and the other two did not mention it.
+5. MINOR ko/ja/zh, "nobody confirmed": narrowed to "that witness did not personally confirm the foreign spouse's intent". en was changed the same way.
+6. MINOR ja, the Taitung sentence: now reads 「（2025年1月9日）でも、離婚は無効とされました。」
+7. MINOR en: now reads "Both spouses' convictions for uttering forged private documents had become final."
+8. MINOR ko sources: added 민사소송법 제247조·제277조, plus 섭외민사법률적용법 제16조·제50조.
+Also: titles no longer generalize. ko "무효 판결을 가른 것은 증인이었다", ja 「無効の判断を分けたのは証人だった」, en "The Witnesses Decided Which Ones Were Void", zh 「判決無效的關鍵在證人」. The en H1 now matches its title exactly (quote style).
+featured_image "TBD": same as S1. It is kept per TASK.md, and the user decision is pending via bridge (ASK-20261020-192554-claude.md).
+Variety after fixes: FAIL 0 in all four files (ko cv 0.466, ja 0.485, en 0.551, zh 0.612). Lengths: ko 1,971 chars, ja 2,163, zh 1,657, en 915 words.

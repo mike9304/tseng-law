@@ -11,7 +11,7 @@ Statutes fetched 2026-10-20 from law.moj.gov.tw (cache research/cache/). Judgmen
 - Art 87 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=87 — 「表意人與相對人通謀而為虛偽意思表示者，其意思表示無效。但不得以其無效對抗善意第三人。…」 (EN official: "A fictitious expression of intent made by the expresser in collusion with other party is void…")
 - Art 985 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=985 — 「有配偶者，不得重婚。」
 - Art 988 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=988 — 「…三、違反第九百八十五條規定。但重婚之雙方當事人因善意且無過失信賴一方前婚姻消滅之兩願離婚登記或離婚確定判決而結婚者，不在此限。」
-- Art 988-1 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=988-1 — para 1 「前條第三款但書之情形，前婚姻自後婚姻成立之日起視為消滅。」; para 2 準用離婚之效力; para 3 「…剩餘財產差額之分配請求權，自請求權人知有剩餘財產之差額時起，二年間不行使而消滅。自撤銷兩願離婚登記或廢棄離婚判決確定時起，逾五年者，亦同。」; para 4 「…無過失之前婚配偶得向他方請求賠償。」; para 5 non-pecuniary damages.
+- Art 988-1 (incl. para 2 proviso 「但剩餘財產已為分配或協議者，仍依原分配或協議定之，不得另行主張」, now stated in body and FAQ 3) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=988-1 — para 1 「前條第三款但書之情形，前婚姻自後婚姻成立之日起視為消滅。」; para 2 準用離婚之效力; para 3 「…剩餘財產差額之分配請求權，自請求權人知有剩餘財產之差額時起，二年間不行使而消滅。自撤銷兩願離婚登記或廢棄離婚判決確定時起，逾五年者，亦同。」; para 4 「…無過失之前婚配偶得向他方請求賠償。」; para 5 non-pecuniary damages.
 - Art 1052 para 2 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1052 — 「有前項以外之重大事由，難以維持婚姻者，夫妻之一方得請求離婚。…」
 
 ### 民事訴訟法 (B0010001)
@@ -21,7 +21,15 @@ Statutes fetched 2026-10-20 from law.moj.gov.tw (cache research/cache/). Judgmen
 ### 刑法 (C0000001) — checked, not cited by article in drafts (drafts only report the conviction stated in the High Court judgment)
 - Art 210, 216 (偽造私文書 / 行使).
 
+## Choice of law (added for Astra r1 MAJOR 2)
+- 涉外民事法律適用法 Art 50 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=50 — 「離婚及其效力，依協議時或起訴時夫妻共同之本國法；無共同之本國法時，依共同之住所地法；無共同之住所地法時，依與夫妻婚姻關係最切地之法律。」
+- Art 16 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=16 — 「法律行為之方式，依該行為所應適用之法律。但依行為地法所定之方式者，亦為有效…」
+- Drafts now state the column assumes a divorce governed by Taiwan law and made in Taiwan form.
+
 ## Judgments
+
+Verification (Astra r1 MAJOR 4): all four re-retrieved 2026-10-20 with curl + browser User-Agent, HTTP 200; text copies with source URL, 裁判字號, 裁判日期, 裁判案由 in drafts/S2/evidence/ (party names were already masked by the courts). Passages confirmed: TPHV 「兩造均因偽造甲○○、乙○○署押，以不實之系爭協議申辦離婚登記之行為，經法院以行使偽造私文書罪判刑確定」 and 「…通謀虛偽為離婚意思表示乙節，即毋庸再予審究」; PCDV 「…是否出於離婚之真意，或屬通謀虛偽意思表示而為無效，既不影響…爰不予贅述」; TTDV and TYDV do not mention 民法87 (drafts now say exactly that).
+
 
 ### 臺灣新北地方法院 113年度婚字第455號 (2024-12-20) — divorce void
 URL https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c113%2c%e5%a9%9a%2c455%2c20241220%2c1

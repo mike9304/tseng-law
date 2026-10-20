@@ -51,7 +51,7 @@ author: "legal-ai-assistant"
 
 ## 六個月，與銀行的那一關
 
-遺產稅應在死亡次日起算六個月內，向戶籍所在地主管稽徵機關申報（[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）；被繼承人是經常居住境外的國民，則向中央政府所在地的稽徵機關申報。納稅義務人是繼承人及受遺贈人，以遺產為限負繳納義務（[第6條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）。有正當理由不能如期申報，要在期限屆滿前以書面申請延長，最多三個月（[第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)）。
+遺產稅應在死亡次日起算六個月內，向戶籍所在地主管稽徵機關申報（[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)）；被繼承人是經常居住境外的國民，則向中央政府所在地的稽徵機關申報。納稅義務人是繼承人及受遺贈人，以遺產為限負繳納義務（[第6條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=6)）。有正當理由不能如期申報，要在期限屆滿前以書面申請延長，以三個月為限；因不可抗力或其他特殊事由者，得由稽徵機關視實際情形核定（[第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=26)）。
 
 存款為什麼領不出來？第8條規定，遺產稅未繳清前不得分割遺產或辦理移轉登記；銀行這類公私事業辦移轉時，要看到第41、42條所列的繳清、免稅或同意移轉等證明書。手上有存摺，帳戶也不會因此打開。
 

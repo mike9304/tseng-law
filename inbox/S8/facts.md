@@ -39,3 +39,9 @@ URL: https://gazette.nat.gov.tw/egFront/detail.do?metaid=161826&log=detailLog (P
 - 92(1): 1月底前彙報, 2月10日前填發; 1月連續三日以上國定假日 → 2月5日 / 2月15日. 94-1: an issuer that filed on time, where the taxpayer is a resident individual and the data are in the filing-season income-data query service, 「得免填發憑單予納稅義務人」, but 「如納稅義務人要求填發時，仍應填發」. → the certificate paragraph is qualified (x4).
 - 扣繳率標準3(1)(2) and (11): non-resident salary 18% with the 1.5× basic wage 6% exception; retirement income 18% after the tax-free amount → en now names "Article 3 of the Withholding Standards" for the salary rule.
 - Headings: 「떠나기 전에 받아 둘 서류」/「帰国前に受け取っておく書類」/"Papers to collect before you go"/「回國前拿齊文件」 → headings on when the withholding statement is issued. ja 「税務署で検証を受けてから」 → 「税務当局に申告し、確認を受けてから」.
+
+## Astra r2 (2026-10-21)
+- 扣繳率標準13 (MOJ, 110-06-30): 「中華民國境內居住之個人如有第二條規定之所得，扣繳義務人每次應扣繳稅額不超過新臺幣二千元者，免予扣繳。」 (proviso lists only separately taxed interest/lottery/whistleblower items) → added to en FAQ3.
+- 所得稅法17: 「按第十四條及前二條規定計得之個人綜合所得總額，減除下列免稅額及扣除額後之餘額，為個人之綜合所得淨額」 → en sentence now: deducted from total consolidated income to calculate net taxable income.
+- 所得稅法7 → ko opening now ties withholding to days in Taiwan and residence status, not the resignation month.
+- Source lists x4 now include ITA 17-1, 71, 94-1 and Withholding Standards 13 (all cited in the bodies).

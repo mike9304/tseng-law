@@ -90,3 +90,18 @@ Lengths:
     drafts/S8/ja.md chars(no space)= 1932 chars(with space)= 1972 en-words= 95
     drafts/S8/en.md chars(no space)= 4417 chars(with space)= 5340 en-words= 926
     drafts/S8/zh.md chars(no space)= 1530 chars(with space)= 1571 en-words= 79
+
+## Astra r2 fixes (2026-10-21)
+1. MAJOR en FAQ3: resident 6% withholding, or none if the tax to be withheld on a payment is NT$2,000 or less (Withholding Standards Art 13), then annual progressive settlement.
+2. MINOR ko opening: '그해 대만 체류일수와 세법상 거주자 여부에 따라 원천징수 방식도 달라집니다.' (len_cv then fell to 0.447; the preceding sentence was split into '다만 면세 한도가 있습니다.' + reason, cv 0.463).
+3. MINOR en: exemption and standard deduction deducted from total consolidated income to calculate net taxable income (ITA Art 17).
+4. MINOR x4: source lists add ITA 17-1, 71, 94-1 and Withholding Standards 13.
+Variety (2026-10-21, explicit --lang):
+    ko.md [ko] sentences=43 mean=38.8 cv=0.463 short=0.116 run3=0.073 opener_rep=0.0 cite_end=0.209 cite_para=0.385 contrast=0 caveat=3 q=0
+      OK — no variety limit violated
+    ja.md [ja] sentences=40 mean=42.7 cv=0.45 short=0.15 run3=0.132 opener_rep=0.0 cite_end=0.2 cite_para=0.385 contrast=0 caveat=2 q=0
+      OK — no variety limit violated
+    en.md [en] sentences=46 mean=19.7 cv=0.54 short=0.152 run3=0.023 opener_rep=0.0 cite_end=0.087 cite_para=0.462 contrast=1 caveat=0 q=1
+      OK — no variety limit violated
+    zh.md [zh-hant] sentences=32 mean=42.8 cv=0.662 short=0.094 run3=0.033 opener_rep=0.0 cite_end=0.156 cite_para=0.462 contrast=1 caveat=1 q=1
+      OK — no variety limit violated

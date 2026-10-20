@@ -67,6 +67,6 @@ author: "legal-ai-assistant"
 
 查證日：2026年10月20日
 
-- [所得稅法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003) 第2條、第7條、第14條、第71條之1、第73條、第88條、第92條。
-- [各類所得扣繳率標準](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340028) 第2條、第3條。
+- [所得稅法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003) 第2條、第7條、第14條、第17條之1、第71條、第71條之1、第73條、第88條、第92條、第94條之1。
+- [各類所得扣繳率標準](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340028) 第2條、第3條、第13條。
 - 財政部114年11月27日[台財稅字第11404664070號公告](https://gazette.nat.gov.tw/egFront/detail.do?metaid=161826&log=detailLog)（115年度免稅額、扣除額、課稅級距及退職所得定額免稅金額；行政院公報）。

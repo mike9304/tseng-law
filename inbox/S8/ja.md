@@ -67,6 +67,6 @@ author: "legal-ai-assistant"
 
 確認日：2026年10月20日
 
-- 台湾[所得税法（所得稅法）](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003) 第2条、第7条、第14条、第71条の1、第73条、第88条、第92条。
-- [各類所得扣繳率標準](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340028) 第2条、第3条。
+- 台湾[所得税法（所得稅法）](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003) 第2条、第7条、第14条、第17条の1、第71条、第71条の1、第73条、第88条、第92条、第94条の1。
+- [各類所得扣繳率標準](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340028) 第2条、第3条、第13条。
 - 財政部公告[台財稅字第11404664070號](https://gazette.nat.gov.tw/egFront/detail.do?metaid=161826&log=detailLog)（2025年11月27日、2026年度の免税額・控除額・課税区分・退職所得の定額非課税額。行政院公報）。

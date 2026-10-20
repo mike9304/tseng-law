@@ -27,3 +27,12 @@ Retrieved: 2026-10-20 20:55 KST via curl
    - 臺灣臺東地方法院 113 年度 婚 字第 27 號判決(114.01.09) | data.aspx?ty=JD&id=TTDV%2c113%2c%e5%a9%9a%2c27%2c20250109%2c2
    - 臺灣高等法院 花蓮分院 114 年度 家上 字第 6 號判決(114.12.24) | data.aspx?ty=JD&id=HLHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c6%2c20251224%2c1
    - 最高法院 115 年度 台上 字第 756 號裁定(115.05.07) | data.aspx?ty=JD&id=TPSV%2c115%2c%e5%8f%b0%e4%b8%8a%2c756%2c20260507%2c1
+
+Added 2026-10-21 (Astra r3, consolidated High Court appeals 114家上26/28):
+== TPHV,114,家上,26,20250423,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=TPHV%60114%60%E5%AE%B6%E4%B8%8A%6026%60114%2C%E5%AE%B6%E4%B8%8A%2C26%2C20250423%2C1
+   count: 4
+   - 臺灣基隆地方法院 113 年度 婚 字第 9 號判決(113.03.11) | data.aspx?ty=JD&id=KLDV%2c113%2c%e5%a9%9a%2c9%2c20240311%2c1
+   - 臺灣基隆地方法院 113 年度 婚 字第 9 號裁定(113.04.29) | data.aspx?ty=JD&id=KLDV%2c113%2c%e5%a9%9a%2c9%2c20240429%2c2
+   - 臺灣高等法院 113 年度 審家上 字第 244 號(114.01.22) | 
+   - 臺灣高等法院 114 年度 家上 字第 26 號判決(114.04.23) | data.aspx?ty=JD&id=TPHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c26%2c20250423%2c1

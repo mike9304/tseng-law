@@ -70,3 +70,21 @@ Variety (FAIL 0):
     drafts/S6/en.md [en] sentences=45 mean=21.0 cv=0.577 short=0.178 run3=0.047 opener_rep=0.0 cite_end=0.133 cite_para=0.833 contrast=1 caveat=0 q=1
     drafts/S6/zh.md [ko] sentences=33 mean=47.3 cv=0.634 short=0.182 run3=0.0 opener_rep=0.0 cite_end=0.182 cite_para=0.818 contrast=0 caveat=0 q=1
 Lengths: ko 2,070 chars, ja 2,132, zh 1,639, en 951 words.
+
+## zh-hant variety recheck (2026-10-21)
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S6/ko.md [ko] sentences=43 mean=44.6 cv=0.512 short=0.093 run3=0.049 opener_rep=0.0 cite_end=0.116 cite_para=0.727 contrast=1 caveat=0 q=1
+      WARN 86% of sentences end in '니다.' — vary endings within the register
+    drafts/S6/ja.md [ja] sentences=45 mean=44.4 cv=0.525 short=0.133 run3=0.023 opener_rep=0.0 cite_end=0.111 cite_para=0.75 contrast=0 caveat=0 q=0
+      WARN 84% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S6/en.md [en] sentences=45 mean=21.0 cv=0.577 short=0.178 run3=0.047 opener_rep=0.0 cite_end=0.133 cite_para=0.833 contrast=1 caveat=0 q=1
+      OK — no variety limit violated
+    drafts/S6/zh.md [zh-hant] sentences=33 mean=47.3 cv=0.634 short=0.182 run3=0.0 opener_rep=0.0 cite_end=0.182 cite_para=0.818 contrast=0 caveat=0 q=1
+      WARN opens with the stock hypothetical ("가령/例えば…とします/Suppose…/假設") — allowed at most 1 in 4 columns; prefer a concrete fact, number, question or scene
+Lengths:
+    drafts/S6/ko.md chars(no space)= 2070 chars(with space)= 2629 en-words= 170
+    drafts/S6/ja.md chars(no space)= 2132 chars(with space)= 2161 en-words= 95
+    drafts/S6/en.md chars(no space)= 4873 chars(with space)= 5815 en-words= 951
+    drafts/S6/zh.md chars(no space)= 1640 chars(with space)= 1668 en-words= 63

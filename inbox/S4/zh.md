@@ -39,7 +39,7 @@ author: "legal-ai-assistant"
 
 貸款和信用卡債務也查得到，只是走另一條路。同一份說明寫到，金融聯合徵信中心會把亡故者的「當事人綜合信用報告」（包含貸款及信用卡等銀行債務資訊）另行掛號寄給申請人，在下載每週申請資料後約5個工作日就先寄出，讓繼承人及時評估要不要拋棄繼承。國稅局提供的「遺產稅金融遺產參考清單」只會列出這份報告的郵寄日期，不會列出內容。
 
-要不要拋棄繼承，得在知悉得繼承之時起三個月內以書面向法院表示（[民法第1174條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1174)）。人在海外辦拋棄繼承的細節，可參考[父母留下債務，人在日本的子女如何拋棄繼承](/zh-hant/columns/taiwan-parent-debt-renunciation-heir-in-japan)。
+如果要拋棄繼承，須在知悉自己得繼承之時起三個月內，以書面向法院為之（[民法第1174條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1174)）。人在海外辦拋棄繼承的細節，可參考[父母留下債務，人在日本的子女如何拋棄繼承](/zh-hant/columns/taiwan-parent-debt-renunciation-heir-in-japan)。
 
 ## 人在國外，怎麼申請
 

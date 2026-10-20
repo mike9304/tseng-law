@@ -76,3 +76,21 @@ Variety (FAIL 0):
     drafts/S7/en.md [en] sentences=44 mean=21.7 cv=0.657 short=0.159 run3=0.0 opener_rep=0.273 cite_end=0.273 cite_para=0.273 contrast=0 caveat=0 q=0
     drafts/S7/zh.md [ko] sentences=35 mean=42.9 cv=0.785 short=0.2 run3=0.03 opener_rep=0.0 cite_end=0.2 cite_para=0.333 contrast=0 caveat=0 q=1
 Lengths: ko 2,030 chars, ja 2,110, zh 1,645, en 969 words.
+
+## zh-hant variety recheck (2026-10-21)
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S7/ko.md [ko] sentences=47 mean=39.5 cv=0.516 short=0.106 run3=0.022 opener_rep=0.0 cite_end=0.213 cite_para=0.273 contrast=1 caveat=3 q=0
+      WARN 77% of sentences end in '니다.' — vary endings within the register
+    drafts/S7/ja.md [ja] sentences=50 mean=39.3 cv=0.524 short=0.12 run3=0.062 opener_rep=0.091 cite_end=0.2 cite_para=0.273 contrast=0 caveat=3 q=0
+      WARN 80% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S7/en.md [en] sentences=44 mean=21.7 cv=0.657 short=0.159 run3=0.0 opener_rep=0.273 cite_end=0.273 cite_para=0.273 contrast=0 caveat=0 q=0
+      OK — no variety limit violated
+    drafts/S7/zh.md [zh-hant] sentences=35 mean=42.9 cv=0.785 short=0.114 run3=0.03 opener_rep=0.083 cite_end=0.2 cite_para=0.333 contrast=0 caveat=1 q=1
+      OK — no variety limit violated
+Lengths:
+    drafts/S7/ko.md chars(no space)= 2022 chars(with space)= 2599 en-words= 135
+    drafts/S7/ja.md chars(no space)= 2113 chars(with space)= 2144 en-words= 50
+    drafts/S7/en.md chars(no space)= 4613 chars(with space)= 5580 en-words= 968
+    drafts/S7/zh.md chars(no space)= 1645 chars(with space)= 1679 en-words= 42

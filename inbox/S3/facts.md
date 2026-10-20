@@ -76,3 +76,6 @@ https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c111%2c%e9%87%8d%
 - en "that raises an obvious question" → the question itself.
 - ko closing: the repeated land-acquisition clause removed; closing now lists each court's own ground once.
 - zh 「煮飯給茶園工人吃」 → 「煮飯給茶廠工人吃」 (TNHV: 「曾煮飯供茶廠工人食用」); zh 「往往就是爭點」 → 「就可能成為爭點」 (no frequency claim).
+
+## Astra r3 additions (2026-10-21)
+- 7/25 period (高院 111家上更一22, 2023-07-05, evidence/highcourt-111-remand-22.txt): 「兩造於84年2月7日結婚，至基準日由反請求被告訴請裁判離婚為止，其間歷經約25年」; 「反請求被告於108年8月15日（下稱基準日）依民法第1052條第2項規定起訴請求裁判離婚，經本院以109年度家上字第5號判決…准兩造離婚確定」; 「該期間占自兩造結婚日起至基準日止之整體比例約為25分之7」; 「5號判決係前開修法後之111年5月27日判准兩造離婚」. → Drafts now say the separate-rooms period (from 2012) was about 7 of the roughly 25 years from the 1995-02-07 wedding to the 2019-08-15 calculation date (the date the other spouse filed for judicial divorce), i.e. about 7/25. The 30% award (NT$1,365,199 of a NT$4,550,663 difference) is unchanged.

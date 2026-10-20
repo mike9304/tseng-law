@@ -87,3 +87,28 @@ Lengths:
     drafts/S2/en.md chars(no space)= 5233 chars(with space)= 6296 en-words= 1077
     drafts/S2/zh.md chars(no space)= 1894 chars(with space)= 1928 en-words= 64
 YAML front matter parses (Ruby YAML.safe_load), 3 FAQ, author token, featured_image "TBD" (user decision, option A). Every URL in the four files returns HTTP 200 (curl, browser User-Agent, 2026-10-20). No bold, no lawyer name, no byline.
+
+## Astra r3 fixes (2026-10-21)
+1. MAJOR, ko 988-1(2): 「협의했다면」 → 「그 분배에 합의했다면」 in FAQ 3 and the body.
+2. MAJOR, ja 988-1(2): 「または協議していれば」 → 「またはその分配について合意している場合は」 in FAQ 3 and the body. The ja piece keeps its established term 剰余財産 (Astra's suggestion wrote 残余財産); the meaning is identical, and switching terms mid-article would confuse readers.
+3. MINOR, en title/H1 → "Taiwan's 'Paper Divorces': How Courts Assessed the Witnesses".
+4. MINOR, zh title/H1 → 「「假離婚」事後反悔：離婚被判無效的關鍵在證人」.
+5. MINOR, "four judgments" → "four cases" in all four locales (summary, opening, Art 87 paragraph, confirmation-interest paragraph, closing). Each case is presented through its main judgment (three district court first-instance judgments, one High Court appeal judgment), with later appeals stated separately. Summaries now say: New Taipei appeal withdrawn; the other three cases kept their result in the higher court.
+6. Found while checking the count: the High Court 114家上28 case had two Keelung first-instance judgments: 113婚9 (2024-03-11, marriage confirmed to exist) and 113婚21 (2024-05-30, judicial divorce under 1052(2)). The High Court heard 家上26/28 together and dismissed both appeals. The body now says this in all four locales, and both Keelung judgments are listed in the sources with evidence copies (HTTP 200 + SHA-256) and the 家上26 history added to judgment-history.txt. The earlier wording ("the court upheld a judicial divorce") stays accurate, but it now names which court granted it first.
+7. Length after edits: en 1,098 words (trimmed one duplicate closing sentence and a repeated Art 87 clause), ko 2,441 chars, ja 2,662, zh 2,007. ja cv 0.464 after adding 「厄介なのは再婚です。」 (parallel to ko/en/zh).
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S2/ko.md [ko] sentences=61 mean=36.5 cv=0.482 short=0.148 run3=0.017 opener_rep=0.0 cite_end=0.098 cite_para=0.643 contrast=1 caveat=2 q=2
+      WARN 82% of sentences end in '니다.' — vary endings within the register
+    drafts/S2/ja.md [ja] sentences=60 mean=41.0 cv=0.464 short=0.15 run3=0.0 opener_rep=0.071 cite_end=0.117 cite_para=0.643 contrast=0 caveat=2 q=0
+      WARN 80% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S2/en.md [en] sentences=56 mean=19.3 cv=0.527 short=0.125 run3=0.056 opener_rep=0.143 cite_end=0.089 cite_para=0.643 contrast=1 caveat=0 q=0
+      OK — no variety limit violated
+    drafts/S2/zh.md [zh-hant] sentences=51 mean=34.9 cv=0.558 short=0.157 run3=0.02 opener_rep=0.071 cite_end=0.078 cite_para=0.643 contrast=0 caveat=1 q=1
+      OK — no variety limit violated
+Lengths:
+    drafts/S2/ko.md chars(no space)= 2441 chars(with space)= 3117 en-words= 164
+    drafts/S2/ja.md chars(no space)= 2662 chars(with space)= 2695 en-words= 74
+    drafts/S2/en.md chars(no space)= 5340 chars(with space)= 6424 en-words= 1098
+    drafts/S2/zh.md chars(no space)= 2007 chars(with space)= 2041 en-words= 72

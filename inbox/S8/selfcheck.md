@@ -72,3 +72,21 @@ Variety (FAIL 0):
     drafts/S8/en.md [en] sentences=46 mean=19.7 cv=0.543 short=0.152 run3=0.023 opener_rep=0.0 cite_end=0.087 cite_para=0.462 contrast=1 caveat=0 q=1
     drafts/S8/zh.md [ko] sentences=32 mean=42.8 cv=0.662 short=0.094 run3=0.033 opener_rep=0.0 cite_end=0.156 cite_para=0.462 contrast=0 caveat=0 q=1
 Lengths: ko 1,890 chars, ja 1,930, zh 1,530, en 926 words.
+
+## zh-hant variety recheck (2026-10-21)
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S8/ko.md [ko] sentences=42 mean=39.1 cv=0.459 short=0.095 run3=0.075 opener_rep=0.0 cite_end=0.214 cite_para=0.385 contrast=0 caveat=3 q=0
+      OK — no variety limit violated
+    drafts/S8/ja.md [ja] sentences=40 mean=42.7 cv=0.45 short=0.15 run3=0.132 opener_rep=0.0 cite_end=0.2 cite_para=0.385 contrast=0 caveat=2 q=0
+      OK — no variety limit violated
+    drafts/S8/en.md [en] sentences=46 mean=19.7 cv=0.543 short=0.152 run3=0.023 opener_rep=0.0 cite_end=0.087 cite_para=0.462 contrast=1 caveat=0 q=1
+      OK — no variety limit violated
+    drafts/S8/zh.md [zh-hant] sentences=32 mean=42.8 cv=0.662 short=0.094 run3=0.033 opener_rep=0.0 cite_end=0.156 cite_para=0.462 contrast=1 caveat=1 q=1
+      OK — no variety limit violated
+Lengths:
+    drafts/S8/ko.md chars(no space)= 1890 chars(with space)= 2420 en-words= 163
+    drafts/S8/ja.md chars(no space)= 1932 chars(with space)= 1972 en-words= 95
+    drafts/S8/en.md chars(no space)= 4417 chars(with space)= 5340 en-words= 926
+    drafts/S8/zh.md chars(no space)= 1530 chars(with space)= 1571 en-words= 79

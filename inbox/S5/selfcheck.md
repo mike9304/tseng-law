@@ -72,3 +72,22 @@ Variety (FAIL 0):
     drafts/S5/en.md [en] sentences=39 mean=20.9 cv=0.658 short=0.179 run3=0.0 opener_rep=0.25 cite_end=0.103 cite_para=0.583 contrast=2 caveat=0 q=1
     drafts/S5/zh.md [ko] sentences=31 mean=44.5 cv=0.54 short=0.097 run3=0.0 opener_rep=0.0 cite_end=0.194 cite_para=0.583 contrast=0 caveat=0 q=1
 Lengths: ko 1,746+ chars, ja 1,860, zh 1,472, en 820 words (all in range).
+
+## zh-hant variety recheck (2026-10-21)
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S5/ko.md [ko] sentences=39 mean=42.2 cv=0.644 short=0.179 run3=0.0 opener_rep=0.0 cite_end=0.154 cite_para=0.538 contrast=0 caveat=0 q=1
+      WARN opens with the stock hypothetical ("가령/例えば…とします/Suppose…/假設") — allowed at most 1 in 4 columns; prefer a concrete fact, number, question or scene
+      WARN 80% of sentences end in '니다.' — vary endings within the register
+    drafts/S5/ja.md [ja] sentences=39 mean=45.7 cv=0.634 short=0.103 run3=0.027 opener_rep=0.0 cite_end=0.179 cite_para=0.538 contrast=0 caveat=1 q=0
+      OK — no variety limit violated
+    drafts/S5/en.md [en] sentences=39 mean=20.9 cv=0.658 short=0.179 run3=0.0 opener_rep=0.25 cite_end=0.103 cite_para=0.583 contrast=2 caveat=0 q=1
+      OK — no variety limit violated
+    drafts/S5/zh.md [zh-hant] sentences=31 mean=44.5 cv=0.54 short=0.097 run3=0.0 opener_rep=0.0 cite_end=0.194 cite_para=0.583 contrast=0 caveat=0 q=1
+      OK — no variety limit violated
+Lengths:
+    drafts/S5/ko.md chars(no space)= 1746 chars(with space)= 2275 en-words= 120
+    drafts/S5/ja.md chars(no space)= 1862 chars(with space)= 1893 en-words= 51
+    drafts/S5/en.md chars(no space)= 4156 chars(with space)= 4975 en-words= 820
+    drafts/S5/zh.md chars(no space)= 1471 chars(with space)= 1503 en-words= 35

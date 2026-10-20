@@ -80,3 +80,26 @@ Lengths:
     drafts/S3/en.md chars(no space)= 5068 chars(with space)= 6079 en-words= 1015
     drafts/S3/zh.md chars(no space)= 1674 chars(with space)= 1706 en-words= 60
 YAML front matter parses (Ruby YAML.safe_load), 3 FAQ, author token, featured_image "TBD" (user decision, option A). Every URL in the four files returns HTTP 200 (curl, browser User-Agent, 2026-10-20). No bold, no lawyer name, no byline.
+
+## Astra r3 fixes (2026-10-21)
+1. MAJOR, 7/25 period (all four locales): the drafts said "7/25 of the marriage". The remand judgment compares the separate-rooms period with the time from the wedding (1995-02-07) to the calculation date (2019-08-15, when the other spouse filed for judicial divorce); the divorce judgment came in 2022. All four locales now say about 7 of roughly 25 years from the 1995 wedding to the 2019-08-15 calculation date, i.e. about 7/25. 30% award unchanged. Quote in facts.md.
+2. MINOR, ko: 「협력과 기여를 드러내 보호하려는 것이고」 → 「경제적으로 약한 배우자의 협력과 기여를 인정하고 그 배우자를 보호하기 위한 것이며」.
+3. MINOR, ja opening: 「夫婦の剰余財産は、結局半分ずつでした」 → 「夫婦の剰余財産の差額は、結局半分ずつに分配されました」.
+4. MINOR, en: "contribution or collaboration to married life" → "contribution to or cooperation in married life".
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S3/ko.md [ko] sentences=49 mean=42.3 cv=0.494 short=0.163 run3=0.043 opener_rep=0.0 cite_end=0.041 cite_para=0.5 contrast=0 caveat=0 q=1
+      WARN 88% of sentences end in '니다.' — vary endings within the register
+    drafts/S3/ja.md [ja] sentences=49 mean=44.8 cv=0.498 short=0.143 run3=0.043 opener_rep=0.167 cite_end=0.041 cite_para=0.5 contrast=0 caveat=1 q=0
+      WARN 88% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S3/en.md [en] sentences=52 mean=20.0 cv=0.517 short=0.154 run3=0.04 opener_rep=0.0 cite_end=0.0 cite_para=0.385 contrast=0 caveat=0 q=1
+      OK — no variety limit violated
+    drafts/S3/zh.md [zh-hant] sentences=38 mean=42.9 cv=0.681 short=0.105 run3=0.056 opener_rep=0.167 cite_end=0.053 cite_para=0.5 contrast=0 caveat=0 q=1
+      OK — no variety limit violated
+Lengths:
+    drafts/S3/ko.md chars(no space)= 2197 chars(with space)= 2818 en-words= 156
+    drafts/S3/ja.md chars(no space)= 2305 chars(with space)= 2336 en-words= 77
+    drafts/S3/en.md chars(no space)= 5213 chars(with space)= 6257 en-words= 1048
+    drafts/S3/zh.md chars(no space)= 1735 chars(with space)= 1767 en-words= 65
+Post-polish recheck (S3 ko/ja subject added, zh sentence split): variety FAIL 0 x4; ko 2,205 / ja 2,317 / zh 1,737 chars.

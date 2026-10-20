@@ -85,3 +85,24 @@ Lengths:
     drafts/S1/en.md chars(no space)= 5387 chars(with space)= 6488 en-words= 1095
     drafts/S1/zh.md chars(no space)= 1952 chars(with space)= 1988 en-words= 51
 YAML front matter parses (Ruby YAML.safe_load), 3 FAQ, author token, featured_image "TBD" (user decision, option A). Every URL in the four files returns HTTP 200 (curl, browser User-Agent, 2026-10-20). No bold, no lawyer name, no byline.
+
+## Astra r3 fixes (2026-10-21)
+1. MAJOR, zh variety: the r2 self-check ran zh.md with Korean settings. With --lang zh-hant, short_share was 0.059 (FAIL). Replaced 「新北那一件，一審和二審的結論不同。」 with Astra's 「新北案經過兩審。兩審結論不同。」; short_share now 0.096 and the file passes.
+2. MINOR, ko opening repeated the title: deleted the first sentence. The piece now opens with 「대만에서 '삼자 사기(三方詐騙)'로 불리는 수법에서는 실제 구매자와 돈을 보낸 사람이 다릅니다.」
+3. MINOR, ja opening repeated the title and column 635's question formula: deleted the question and kept the explanation, now a plain statement (「…お金を振り込んだ人と品物を受け取った人が別人です。」).
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S1/ko.md [ko] sentences=54 mean=37.9 cv=0.479 short=0.111 run3=0.0 opener_rep=0.0 cite_end=0.093 cite_para=0.643 contrast=0 caveat=0 q=2
+      WARN 85% of sentences end in '니다.' — vary endings within the register
+    drafts/S1/ja.md [ja] sentences=56 mean=40.3 cv=0.455 short=0.107 run3=0.037 opener_rep=0.0 cite_end=0.125 cite_para=0.643 contrast=0 caveat=0 q=1
+      WARN 82% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S1/en.md [en] sentences=56 mean=19.4 cv=0.46 short=0.125 run3=0.019 opener_rep=0.071 cite_end=0.054 cite_para=0.643 contrast=0 caveat=0 q=1
+      OK — no variety limit violated
+    drafts/S1/zh.md [zh-hant] sentences=52 mean=35.2 cv=0.521 short=0.096 run3=0.02 opener_rep=0.0 cite_end=0.115 cite_para=0.643 contrast=0 caveat=0 q=1
+      OK — no variety limit violated
+Lengths:
+    drafts/S1/ko.md chars(no space)= 2215 chars(with space)= 2855 en-words= 132
+    drafts/S1/ja.md chars(no space)= 2388 chars(with space)= 2423 en-words= 52
+    drafts/S1/en.md chars(no space)= 5387 chars(with space)= 6488 en-words= 1095
+    drafts/S1/zh.md chars(no space)= 1950 chars(with space)= 1986 en-words= 51

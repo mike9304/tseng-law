@@ -86,3 +86,25 @@ Variety (FAIL 0):
     drafts/S4/en.md [en] sentences=51 mean=21.5 cv=0.524 short=0.137 run3=0.041 opener_rep=0.067 cite_end=0.098 cite_para=0.333 contrast=1 caveat=0 q=1
     drafts/S4/zh.md [ko] sentences=43 mean=43.0 cv=0.611 short=0.186 run3=0.0 opener_rep=0.0 cite_end=0.116 cite_para=0.312 contrast=0 caveat=0 q=2
 Lengths: ko 2,397 chars, ja 2,529, zh 1,942, en 1,099 words.
+
+## zh-hant variety recheck (2026-10-21)
+
+Note: earlier zh.md runs in this file show [ko] because variety_metrics.py guess_lang() maps a file named zh.md to the default (ko). From this round on, zh.md is checked with --lang zh-hant (short-sentence threshold 12 chars).
+Variety (2026-10-21, explicit --lang for each file):
+    drafts/S4/ko.md [ko] sentences=54 mean=41.8 cv=0.486 short=0.093 run3=0.038 opener_rep=0.0 cite_end=0.093 cite_para=0.333 contrast=1 caveat=0 q=2
+      WARN 83% of sentences end in '니다.' — vary endings within the register
+    drafts/S4/ja.md [ja] sentences=56 mean=43.1 cv=0.501 short=0.143 run3=0.111 opener_rep=0.067 cite_end=0.089 cite_para=0.333 contrast=1 caveat=0 q=0
+      WARN opens with the stock hypothetical ("가령/例えば…とします/Suppose…/假設") — allowed at most 1 in 4 columns; prefer a concrete fact, number, question or scene
+      WARN 80% of sentences end in 'desu-masu' — vary endings within the register
+    drafts/S4/en.md [en] sentences=51 mean=21.5 cv=0.524 short=0.137 run3=0.041 opener_rep=0.067 cite_end=0.098 cite_para=0.333 contrast=1 caveat=0 q=1
+      OK — no variety limit violated
+    drafts/S4/zh.md [zh-hant] sentences=43 mean=43.0 cv=0.611 short=0.163 run3=0.0 opener_rep=0.0 cite_end=0.116 cite_para=0.312 contrast=0 caveat=0 q=2
+      OK — no variety limit violated
+Lengths:
+    drafts/S4/ko.md chars(no space)= 2395 chars(with space)= 3083 en-words= 141
+    drafts/S4/ja.md chars(no space)= 2529 chars(with space)= 2568 en-words= 44
+    drafts/S4/en.md chars(no space)= 5694 chars(with space)= 6804 en-words= 1099
+    drafts/S4/zh.md chars(no space)= 1942 chars(with space)= 1984 en-words= 34
+
+## Astra r3 fix (2026-10-21)
+1. MAJOR, zh Art 1174: 「要不要拋棄繼承，得在…以書面向法院表示」 implied a court filing either way. Now 「如果要拋棄繼承，須在知悉自己得繼承之時起三個月內，以書面向法院為之」, matching MOJ text 「前項拋棄，應於知悉其得繼承之時起三個月內，以書面向法院為之。」 ko/ja/en checked: they state the renunciation deadline or filing only (en: "Renunciation has to be filed in writing with a court within three months…"), so no change. zh variety (zh-hant) OK.

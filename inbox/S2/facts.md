@@ -105,3 +105,10 @@ New Taipei: only one witness failed (the other had confirmed both spouses' inten
 
 ### Motives listed in the opening (all from the cited judgments)
 新北: 債務協商; 臺東: 「若係單親身分較容易取得補助」 (ko/ja/en/zh now say "to make subsidies easier to get" rather than "single-parent subsidies"); 桃園: 配偶父母擔任保證人, 免原告財產遭查封; 高院 114家上28: 藝人身分 (not listed in the drafts).
+
+## Astra r3 additions (2026-10-21)
+- Article 988-1(2) wording: 「但剩餘財產已為分配或協議者，仍依原分配或協議定之，不得另行主張。」 → ko 「잔여재산을 이미 분배했거나 그 분배에 합의했다면」, ja 「剰余財産をすでに分配し、またはその分配について合意している場合は」 (FAQ 3 and body). 協議 here = an agreement reached, not mere discussion. ja keeps the column's term 剰余財産 (same as the rest of the piece) rather than 残余財産.
+- "Four cases": main judgments = 新北 113婚455 (1st inst.), 臺東 113婚27 (1st inst.), 桃園 112婚449 (1st inst.), 高院 114家上28 (2nd inst., consolidated with 114家上26). Appeals: 新北 appeal withdrawn 2025-05-27 (高院 114審家上14); 臺東 → 花蓮分院 114家上6 dismissed 2025-12-24 → 最高法院 115台上756 improper 2026-05-07; 桃園 → 高院 114家上95 dismissed 2025-10-22; 高院 114家上26/28: first instance 基隆 113婚9 (2024-03-11, 確認兩造之婚姻關係存在; reason: 系爭協議書欠缺2人以上證人簽名之法定要件) and 基隆 113婚21 (2024-05-30, 准原告與被告離婚 under 1052(2)); High Court 主文 「兩造上訴均駁回」; third-instance appeal dismissed as improper 2025-06-25 (裁定). Sources: evidence/keelung-113-hun-9.txt, evidence/keelung-113-hun-21.txt (HTTP 200, SHA-256 in header), evidence/judgment-history.txt (家上26 history appended).
+- Note: the High Court text refers to 「中華民國113年3月11日臺灣基隆地方法院第一審判決（113年度婚字第9、21號）」; the official history shows 婚9 decided 113.03.11 and 婚21 decided 113.05.30, and the 婚21 text itself is dated accordingly. The drafts use the two separate dates.
+- Art 87 statement: none of the four main judgments decided under Art 87 (新北: 「不予贅述」; 高院28: 「即毋庸再予審究」; 臺東 and 桃園 first-instance texts contain no 通謀虛偽/第87條). 
+- Confirmation interest (民訴247) found in all four main judgments: 新北 壹、程序方面; 臺東 三、㈠; 桃園 壹、一/二; 高院28 三、㈠.

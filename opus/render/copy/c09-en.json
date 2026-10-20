@@ -1,0 +1,155 @@
+{
+ "case": "c09",
+ "lang": "en",
+ "cards": [
+  {
+   "number": 1,
+   "layout": "core",
+   "tag": "",
+   "headline": "Full dental costs for the kid.\nUnder a tenth of the parent's\nlost-income claim.",
+   "labels": {
+    "kicker": "Taiwan court · bus ran a red light",
+    "size": 84,
+    "bars": [
+     {
+      "what": "Kid's dental work",
+      "result": "All allowed",
+      "ratio": 1.0
+     },
+     {
+      "what": "Parent's lost income",
+      "result": "Under a tenth",
+      "ratio": 0.07222444431746758
+     }
+    ],
+    "legend": "Outline = amount claimed · red = amount allowed"
+   },
+   "foot": [
+    "The parent filed no income records.",
+    ""
+   ]
+  },
+  {
+   "number": 2,
+   "layout": "crash",
+   "tag": "Made-up scene",
+   "speaker": "The parent on the scooter",
+   "headline": "The bus just ran\nthe red light.",
+   "labels": {
+    "scene": true
+   },
+   "foot": [
+    "Taipei, 2020. The kid was on the back.",
+    "The scooter hit the side of the bus."
+   ]
+  },
+  {
+   "number": 3,
+   "layout": "injuries",
+   "tag": "Injuries in the ruling",
+   "headline": "Four upper front teeth,\nknocked out or broken.",
+   "labels": {
+    "who_a": "The kid",
+    "teeth_note": "1 knocked out · 3 broken",
+    "who_b": "The parent",
+    "b_note": "Broken left collarbone"
+   },
+   "foot": [
+    "The defense didn't dispute bills already paid.",
+    "It called future dental costs and damages too high."
+   ]
+  },
+  {
+   "number": 4,
+   "layout": "ruling",
+   "tag": "The ruling",
+   "headline": "The full dental claim, allowed",
+   "labels": {
+    "amount": "NT$343,000",
+    "amount_note": "Based on the treatment plan with implants",
+    "reason_label": "The court's reason",
+    "reason": "The kid was still a minor,\nand front teeth affect how a face looks."
+   },
+   "foot": [
+    "The defense pushed a cheaper option.",
+    "Most of the parent's lost-income claim was cut."
+   ]
+  },
+  {
+   "number": 5,
+   "layout": "cuts",
+   "tag": "Parent's claim · the ruling",
+   "headline": "No income records filed,\nso the defense's number stood.",
+   "labels": {
+    "items": [
+     {
+      "what": "Income lost while recovering",
+      "from": "NT$385,022",
+      "to": "NT$27,808",
+      "why": "The amount the defense itself accepted"
+     }
+    ]
+   },
+   "foot": [
+    "Based on the 4 weeks of rest on the doctor's note.",
+    ""
+   ]
+  },
+  {
+   "number": 6,
+   "layout": "math",
+   "tag": "How the court counted",
+   "headline": "Money already paid\ncame off the total.",
+   "labels": {
+    "people": [
+     {
+      "who": "Kid",
+      "lines": [
+       [
+        "Damages allowed",
+        "723,854"
+       ],
+       [
+        "Paid during criminal case",
+        "− 50,000"
+       ],
+       [
+        "Compulsory insurance",
+        "− 2,030"
+       ],
+       [
+        "Ordered to pay",
+        "NT$671,824"
+       ]
+      ]
+     },
+     {
+      "who": "Parent",
+      "lines": [
+       [
+        "Damages allowed",
+        "328,980"
+       ],
+       [
+        "Paid during criminal case",
+        "− 50,000"
+       ],
+       [
+        "Compulsory insurance",
+        "− 57,948"
+       ],
+       [
+        "Ordered to pay",
+        "NT$221,032"
+       ]
+      ]
+     }
+    ]
+   },
+   "foot": [
+    "The driver and the bus company are jointly liable.",
+    ""
+   ]
+  }
+ ]
+}

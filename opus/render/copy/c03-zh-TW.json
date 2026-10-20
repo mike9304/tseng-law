@@ -1,0 +1,101 @@
+{
+ "case": "c03",
+ "lang": "zh-TW",
+ "cards": [
+  {
+   "number": 1,
+   "layout": "core",
+   "tag": "",
+   "headline": "租約還沒簽，\n訂金還是拿不回來",
+   "labels": {
+    "kicker": "士林小額一審·租屋訂金",
+    "paper_title": "房屋租賃契約",
+    "unsigned": "還沒簽名",
+    "amount_label": "看完房匯的訂金",
+    "amount": "21,800元"
+   },
+   "foot": [
+    "法官說，看房那天主要條件都口頭講好了，\n租約當天就成立。",
+    "匯款後幾個小時，房客反悔了。"
+   ]
+  },
+  {
+   "number": 2,
+   "layout": "space",
+   "tag": "房客的說法·虛構情境",
+   "speaker": "看房的房客",
+   "headline": "東西放不下，我不租了。",
+   "foot": [
+    "房客說，租約都沒簽，錢要拿回來。",
+    "代管公司不退。"
+   ]
+  },
+  {
+   "number": 3,
+   "layout": "agreement",
+   "tag": "代管公司的說法·虛構情境",
+   "speaker": "代管公司",
+   "headline": "月租講好了，租期廣告有寫啊。",
+   "labels": {
+    "terms": "房屋·月租·最短租期",
+    "rent": "月租",
+    "unit": "元",
+    "min": "至少",
+    "year": "年",
+    "memo_note": "後面三組看房也推掉了"
+   },
+   "foot": [
+    "",
+    "房客匯完款，還傳了一則LINE。"
+   ]
+  },
+  {
+   "number": 4,
+   "layout": "message",
+   "tag": "判決引用的訊息",
+   "headline": "作為○○\n承租訂金",
+   "labels": {
+    "context": "房客匯款後傳給公司的LINE（節錄）",
+    "amount": "＄21,800元",
+    "mark": 1
+   },
+   "foot": [
+    "這則LINE，是房客自己交給法院的。"
+   ]
+  },
+  {
+   "number": 5,
+   "layout": "judgment",
+   "tag": "本案一審判斷",
+   "headline": "一審：這筆錢不用退",
+   "labels": {
+    "contract": "書面租約（還沒簽）",
+    "agreed": "看房時口頭談好的條件",
+    "rent": "月租21,800元",
+    "period": "至少租1年",
+    "message": "LINE：「承租訂金」"
+   },
+   "foot": [
+    "租約在看房那天就成立，這筆是證明租約的定金。",
+    "空間不夠，算房客自己的原因。"
+   ]
+  },
+  {
+   "number": 6,
+   "layout": "deposit_rule",
+   "tag": "民法第249條·一般規則",
+   "headline": "不能履約時，\n看是誰的責任。",
+   "labels": {
+    "payer": "因付定金方的責任\n無法履約",
+    "recipient": "因收定金方的責任\n無法履約",
+    "zero_unit": "元",
+    "multiplier": "倍",
+    "payer_note": "不能請求返還",
+    "recipient_note": "退還所收定金的兩倍"
+   },
+   "foot": [
+    "雙方沒有另外約定時，這樣算。\n第4款：雙方都沒有責任，定金原數退還。"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+/goal 호정 Threads 카드뉴스 협업 레인의 Codex Astra 역할: ~/threads-collab-1020/BRIEF.md의 규칙과 역할을 지키며 리서치·데이터·패턴 분석(훅·참여 유도·공개 판결 후보 발굴, law.moj.gov.tw 대조)과 Opus 산출물 엄격 검수(AI티 0·사실 오류 0·과장 0·첫 두 줄 테스트)를 멈추지 않고 계속한다. prior-opus-1019 STATUS와 prior-codex-1018에서 이어 가고 다시 시작하지 않는다. 쓰기는 astra/·review/ASTRA-*·HANDOFF(append)·STATUS의 Astra 섹션만. 게시·전송·소리 재생 금지, ~/Projects/tseng-law 금지, AI 표시 금지.

@@ -53,7 +53,7 @@ Compulsory insurance is not the whole of what an injured person can recover. Ben
 
 The accident date, the other vehicle's insurer, and the medical receipts: with those three, the amount and the deadline can be worked out.
 
-Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
 
 ## Official sources
 

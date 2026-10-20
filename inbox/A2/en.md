@@ -58,7 +58,7 @@ Travel had not been impossible, though. The children had earlier gone to Japan u
 
 What the two courts looked at was concrete: entry and exit records, residence status abroad, the plans a parent had stated, and whether earlier promises had been kept.
 
-Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
 
 ## Official sources
 

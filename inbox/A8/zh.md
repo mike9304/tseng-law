@@ -53,7 +53,7 @@ author: "legal-ai-assistant"
 
 被害人名單、匯款紀錄、證明同一套話術的對話截圖，要一起提告，這三樣得先湊齊。
 
-昊鼎國際法律事務所曾雋崴律師的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
+昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考資料
 

@@ -63,7 +63,7 @@ author: "legal-ai-assistant"
 
 交帳戶時對方怎麼說、雙方傳過的訊息、帳戶平常拿來做什麼。臺北和花蓮兩件判決，都是從這些紀錄判斷有沒有過失。錢匯進來當天照指示領出現金、交給對方，在臺北那件也被列入判斷。
 
-昊鼎國際法律事務所曾雋崴律師的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
+昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考資料
 

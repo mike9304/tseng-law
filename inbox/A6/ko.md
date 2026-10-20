@@ -53,7 +53,7 @@ author: "legal-ai-assistant"
 
 사고일, 보험사 이름, 진단서와 영수증. 이 셋이 있어야 어느 기준으로 얼마를 언제까지 청구할지가 정해집니다.
 
-호정(昊鼎)국제법률사무소 曾雋崴 변호사의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
+호정(昊鼎)국제법률사무소의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
 
 ## 참고한 공식 자료
 

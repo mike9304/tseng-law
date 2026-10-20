@@ -53,7 +53,7 @@ author: "legal-ai-assistant"
 
 事故發生日、對方的保險公司、診斷書與收據，三樣湊齊，才算得出能領哪一套、多少錢、到哪一天為止。
 
-昊鼎國際法律事務所曾雋崴律師的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
+昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考資料
 

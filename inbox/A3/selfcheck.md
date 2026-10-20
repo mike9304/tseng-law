@@ -44,3 +44,12 @@ Slug `taiwan-deceased-parent-bank-withdrawal-forgery-renunciation`: 0 matches.
 All 8 findings accepted and fixed (see facts.md fix log); ko re-run after adding two short sentences: FAIL 0. Links BAD 0. No rebuttal.
 drafts/A3/ko.md [ko] sentences=47 mean=41.3 cv=0.604 short=0.085 run3=0.0 opener_rep=0.0 cite_end=0.149 cite_para=0.769 contrast=1 caveat=1 q=0
   OK — no variety limit violated
+
+## Astra r2 fix (2026-10-20 ~20:25 KST)
+Source: ASTRA-FAIL.md (r2), renamed to ASTRA-FAIL-fixed-2.md.
+1. MAJOR ko/ja title and H1: changed to 「장례비 목적이어도 형사처벌 위험」 and 「葬儀費用に充てる場合も文書偽造のリスク」.
+2. MAJOR all, Art. 550: the two separate exceptions (contract / nature of the matter) are now named. The Taoyuan court is tied to the nature exception only, and the contractual ground is described as not in issue. ko/ja FAQ 1 and the Taoyuan paragraphs were aligned. zh 「或許有狹窄的例外」 was corrected to the court's actual holding.
+3. MAJOR all, verification blocker: all five decisions were re-opened live (printData, identical to cache), and four were also fetched as official open-data PDFs (SHA-256 recorded). Every fact, amount and disposition was confirmed. One imprecision was fixed in ko/en/zh: who made each of the two withdrawals in 112台上1703. See rebuttal.md.
+4. MAJOR ja, JP Civil Code 921/602: current text verified through the e-Gov API (v1 article endpoint plus the v2 CurrentEnforced revision of 2026-06-24). No change needed.
+5. MINOR ko: 「위조사문서행사죄」 now used throughout.
+Checks: variety FAIL 0 (ko/ja/en; zh --lang zh-hant). ko needed one more very short sentence ("카드도 마찬가지입니다."), and ko/ja WARN on endings is unchanged. Links BAD 0, YAML OK x4. Lengths: en 1,048 words, ko 2,296 chars without spaces, ja 2,485, zh 1,845.

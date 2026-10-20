@@ -52,7 +52,7 @@ author: "legal-ai-assistant"
 
 正式清算的順序、稅務期限與賸餘財產匯出，見〈[外商在台子公司、分公司結束營業的稅務申報](/zh-hant/columns/closing-taiwan-subsidiary-branch-liquidation-tax-filings)〉與〈[公司解散登記後，清算人還要處理哪些事](/zh-hant/columns/taiwan-company-dissolution-liquidation)〉。停止營業的日期、現任董事名單、帳戶餘額，三樣先查清楚，才知道這家子公司還剩哪條路。
 
-昊鼎國際法律事務所曾雋崴律師的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
+昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考資料
 

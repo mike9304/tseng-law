@@ -37,3 +37,13 @@ drafts/A4/zh.md chars_nospace 1379 chars_with_space 1413
 ## Open risks
 - NIA guide predates the 2026 renumbering; drafts say so. Whether NIA still uses the same document list after 2026-01-01 not confirmed.
 - How NIA handles mid-term job loss vs. the Art. 17 extension (timing) is not settled by any source found; drafts tell readers to confirm in writing.
+
+## Astra r1 fix (2026-10-20 ~20:35 KST)
+Source: ASTRA-FAIL.md (r1), renamed ASTRA-FAIL-fixed-1.md. All six findings were accepted and verified against live LawSingle and the live NIA guide (details in facts.md).
+- MAJOR ko/ja: the 「除另有規定外」 exception was restored in FAQ 2 and the body.
+- MAJOR zh: termination is now described as the revocation ground, and the disposition's effective date follows 行政程序法110. ko/ja/en wording aligned.
+- MAJOR ja: 就業服務法第56条第2項 and 外國專業人才延攬及僱用法第9条 are now named explicitly.
+- MAJOR en: the disability condition (unable to live independently) is restored. ko/ja/zh family lists completed.
+- MINOR en: "employment separation certificate".
+- MINOR ko/ja/zh: 移民法第21條第1項 now has an inline link and a source-list entry.
+Checks: variety FAIL 0 (ko/ja/en; zh --lang zh-hant). The ja WARN (stock hypothetical opener, endings) is unchanged and not a FAIL. Links BAD 0, YAML OK x4. Lengths: en 744 words (en is a narrower angle, see Duplicate check), ko 1,602 chars without spaces, ja 1,706, zh 1,488.

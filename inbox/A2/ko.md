@@ -56,7 +56,7 @@ author: "legal-ai-assistant"
 
 두 결정에서 법원이 살핀 것은 출입국 기록, 외국 체류 자격, 부모가 밝힌 앞으로의 계획, 이전의 약속을 지켰는지였습니다.
 
-호정(昊鼎)국제법률사무소 曾雋崴 변호사의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
+호정(昊鼎)국제법률사무소의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
 
 ## 참고한 공식 자료
 

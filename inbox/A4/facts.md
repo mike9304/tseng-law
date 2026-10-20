@@ -40,3 +40,18 @@ https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpswwwim
 
 ## Internal links (exist in ref)
 - /ko|ja|zh-hant/columns/taiwan-employment-gold-card (027), /en/columns/foreign-professional-dismissed-taiwan (034). Link check BAD 0.
+
+## Astra r1 fix log (2026-10-20 ~20:35 KST)
+- Live re-fetch at 20:30 KST from LawSingle: 就業服務法 Art. 73, 行政程序法 (A0030055) Art. 110, 入出國及移民法 Arts. 21 and 31, 外國專業人才延攬及僱用法 Art. 17. Texts:
+  - 就服法 Art. 73: 「雇主聘僱之外國人，有下列情事之一者，廢止其聘僱許可：…三、連續曠職三日失去聯繫或聘僱關係終止。」
+  - 行政程序法 Art. 110(1): 「書面之行政處分自送達相對人及已知之利害關係人起；書面以外之行政處分自以其他適當方法通知或使其知悉時起，依送達、通知或使知悉之內容對其發生效力。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030055&flno=110
+  - 移民法 Art. 21(1): 「外國人有下列情形之一者，移民署應禁止其出國：一、經司法機關通知限制出國。二、經財稅機關或各權責機關依法律通知限制出國。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=21. Art. 31(4)⑧: 「依第二十一條第一項規定禁止出國。」
+  - 攬才法 Art. 17(1): 「…其本人及原經內政部移民署許可居留之配偶、未成年子女與因身心障礙無法自理生活之成年子女，得向內政部移民署申請延期居留。」
+- NIA guide (live re-fetch 20:28 KST), item (十): 「在延長居留期間，未持有勞動部核發之聘僱許可，除另有規定外，不得在臺工作。」 Document list (三)2(4): 「一個月內核發之離職證明（持個人工作許可無雇主者，免附）」.
+- Fixes:
+  1. ko/ja FAQ 2 and body: the guide's 「除另有規定外」 exception restored as 「법령에 별도 규정이 있는 경우를 제외하고」 / 「法令に別段の定めがある場合を除き」. en already had "unless another rule allows it" and zh had 「除另有規定外」.
+  2. zh: 「聘僱關係終止時就廢止」 became: termination is the ground (第73條第3款) on which the authority revokes the permit; revocation is an administrative disposition, and a written disposition takes effect on service (行政程序法第110條第1項), so the leaving date and the date the disposition takes effect need not coincide. zh summary aligned. ko/ja/en wording also changed from "revoked when employment ends" to "termination is a revocation ground" (summary, FAQ 1, body).
+  3. ja: 「同条第2項」 became 「就業服務法第56条第2項」 and 「同法第9条」 became 「外國專業人才延攬及僱用法第9条」 (text and link now match).
+  4. en: "adult children unable to live independently because of a disability who already held residence permission". ko/ja/zh family lists completed the same way (they had listed only spouse and minor children).
+  5. en: "departure certificate" became "employment separation certificate" (2 places).
+  6. ko/ja/zh: 入出國及移民法第21條第1項 linked inline and added to the source lists. zh source list also gained 行政程序法第110條.

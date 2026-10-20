@@ -49,7 +49,7 @@ author: "legal-ai-assistant"
 
 형사재판 안에서 배상을 청구하는 부대민사소송은 [대만 사기 피해, 형사 부대민사소송을 낼 수 있는 시기](/ko/columns/taiwan-criminal-accessory-civil-suit-fraud)에서 다뤘습니다. 피해자 명단, 송금 내역, 같은 수법을 보여 주는 대화 기록. 함께 소송하려면 이 세 가지를 먼저 모아야 합니다.
 
-호정(昊鼎)국제법률사무소 曾雋崴 변호사의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
+호정(昊鼎)국제법률사무소의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
 
 ## 참고한 공식 자료
 

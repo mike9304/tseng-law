@@ -49,7 +49,7 @@ Costs come down too. A fraud-crime victim suing or appealing against those liabl
 
 Damages claims inside the criminal case are covered in [our column on the incidental civil action](/en/columns/taiwan-criminal-accessory-civil-suit-fraud). For a group of victims, three things come first: a list of who was hit, the transfer records, and the messages that show the same script.
 
-Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
 
 ## Official sources
 

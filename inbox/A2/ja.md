@@ -58,7 +58,7 @@ author: "legal-ai-assistant"
 
 二つの裁定で裁判所が見ていたのは、出入国の記録、外国での居留資格、親が述べた今後の計画、そして以前の約束を守ったかどうかです。どれも記録で確かめられる事実です。
 
-昊鼎国際法律事務所の曾雋崴弁護士への連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
 
 ## 参考にした公的資料
 

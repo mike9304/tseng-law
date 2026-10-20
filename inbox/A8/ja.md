@@ -47,7 +47,7 @@ author: "legal-ai-assistant"
 
 日本から告訴する方法と刑事手続の中の附帯民事訴訟は、[日本から台湾の口座へ送金した後、台湾で告訴できるのか](/ja/columns/japanese-victim-fraud-complaint-taiwan-account)で扱っています。被害者の名簿、送金の記録、同じ手口を示すやり取り。一緒に訴えるなら、まずこの三つを集めることになります。
 
-昊鼎国際法律事務所の曾雋崴弁護士への連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
 
 ## 参考にした公的資料
 

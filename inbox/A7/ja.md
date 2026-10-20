@@ -52,7 +52,7 @@ author: "legal-ai-assistant"
 
 正式な清算の順序と税務の期限は、[台湾子会社・支店を閉じるときの税務申告](/ja/columns/closing-taiwan-subsidiary-branch-liquidation-tax-filings)と[台湾子会社の解散登記後、残余財産を送金できるまで](/ja/columns/taiwan-company-dissolution-liquidation)にあります。営業を止めた日、董事の名簿、口座の残高。この三つを確かめると、子会社に残された道が見えてきます。
 
-昊鼎国際法律事務所の曾雋崴弁護士への連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
 
 ## 参考にした公的資料
 

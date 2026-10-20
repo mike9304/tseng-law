@@ -52,7 +52,7 @@ Revocation does not finish the liquidation. [Article 26-2](https://law.moj.gov.t
 
 The formal route, with its tax deadlines and the steps before cash can leave Taiwan, is set out in [our column on liquidation tax filings](/en/columns/closing-taiwan-subsidiary-branch-liquidation-tax-filings) and [the one on when remaining cash can leave](/en/columns/taiwan-company-dissolution-liquidation). For a dormant subsidiary, three facts show which route is still open: the date trading stopped, the current list of directors, and the bank balance.
 
-Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
 
 ## Official sources
 

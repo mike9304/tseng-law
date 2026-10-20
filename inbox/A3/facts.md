@@ -19,6 +19,11 @@ Statutes fetched from law.moj.gov.tw LawSingle pages on 2026-10-20 (research/law
 ## Foreign statutes (comparison only)
 - 한국 민법 제1026조 제1호 (law.go.kr DRF, 시행 2026-03-17): 「상속인이 상속재산에 대한 처분행위를 한 때」 단순승인을 한 것으로 본다. https://www.law.go.kr/법령/민법/제1026조 (ko only)
 - 日本 民法第921条第1号 (e-Gov): 「相続人が相続財産の全部又は一部を処分したとき」単純承認をしたものとみなす（保存行為等を除く）。 https://laws.e-gov.go.jp/law/129AC0000000089#Mp-At_921 (ja only)
+  - r2 current-law check (2026-10-20 ~20:15 KST). Read from e-Gov's official API in two ways:
+    - API v1: https://laws.e-gov.go.jp/api/1/articles;lawNum=明治二十九年法律第八十九号;article=921 and ;article=602 (result code 0).
+    - API v2: https://laws.e-gov.go.jp/api/2/law_revisions/129AC0000000089 lists the revision with current_revision_status "CurrentEnforced" as 129AC0000000089_20260624_508AC0000000045 (令和八年法律第四十五号, enforced 2026-06-24). The full text of that revision from https://laws.e-gov.go.jp/api/2/law_data/129AC0000000089_20260624_508AC0000000045 gives the same wording for both articles.
+  - Art. 921 (current), 第1号: 「相続人が相続財産の全部又は一部を処分したとき。ただし、保存行為及び第六百二条に定める期間を超えない賃貸をすることは、この限りでない。」 This supports the ja proviso in the body and in FAQ 2.
+  - Art. 602 (current, 短期賃貸借): 「処分の権限を有しない者が賃貸借をする場合には、次の各号に掲げる賃貸借は、それぞれ当該各号に定める期間を超えることができない。…一 樹木の栽植又は伐採を目的とする山林の賃貸借 十年 二 前号に掲げる賃貸借以外の土地の賃貸借 五年 三 建物の賃貸借 三年 四 動産の賃貸借 六箇月」. ja names Art. 602 only as the period reference and does not quote the periods.
 
 ## Judgments
 ### 最高法院 112年度台上字第1703號 刑事判決 (2023-05-04), final (third instance)
@@ -59,3 +64,24 @@ https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TCDU%2C115%2C%E5%AE%B6%E
 - en summary: no longer states the money was spent on funeral costs; now "savings he said paid medical and funeral bills".
 - ja: 日本民法第921条第1号 proviso restored — e-Gov API (laws.e-gov.go.jp/api/1/articles;lawId=129AC0000000089;article=921) fetched 2026-10-20: 「相続人が相続財産の全部又は一部を処分したとき。ただし、保存行為及び第六百二条に定める期間を超えない賃貸をすることは、この限りでない。」
 - ko: 「두 차례에 걸쳐 합계 24만 5,000 대만달러」. zh: 「五件裁判」.
+
+## Astra r2 fix log (2026-10-20 ~20:25 KST)
+- Civil Code Art. 550 (all four). The draft had described a single, funeral-only narrow exception. It now names the two separate exceptions in the proviso: 「契約另有訂定」 and 「因委任事務之性質不能消滅」. It also says the Taoyuan judgment dealt only with the second, and that the contractual ground was not in issue. Taoyuan text: 「人的死後事務之處理…遺體處理、喪葬儀式、祭祀方法等對死者有重大意義的「身後事」…性質上即屬於民法第550條但書所規定「因委任事務之性質不能消滅」之委任關係。然為避免牴觸遺囑或侵害繼承人之繼承權…自應限於處理對死者有重大意義的事項」; 「當僅限於「不抵觸遺囑及不侵害其他繼承人繼承權，且用於處理對死者有重大意義的事項，並應一併考量提領之必要性及急迫性等情」」; 「清償喪葬費用一事當無爭議」. zh Taoyuan sentence corrected from 「或許有狹窄的例外」 to the court's actual position (funeral costs can fall within the nature exception, but the NT$6M transfer was neither necessary nor urgent).
+- ko/ja title and H1: 「장례비 목적이어도 형사처벌 위험」 / 「葬儀費用に充てる場合も文書偽造のリスク」.
+- ko: offence name now 「위조사문서행사죄」 throughout (4 occurrences).
+- Supreme Court facts made precise in ko/en/zh: the first withdrawal of 12萬 was made by the son's wife acting jointly with him (「推由王金玉…盜蓋…領取…12萬元」), and the second of 12萬5,000 by the son himself (「由上訴人自行於105年8月1日…領取…12萬5,000元」). Total 24萬5,000.
+- Japanese Civil Code Arts. 921/602: current text verified through the e-Gov API (see Foreign statutes above). No draft change was needed.
+- Judgment verification blocker. All five decisions were re-opened live on 2026-10-20 at 20:13 KST:
+  - Channel 1, judgment.judicial.gov.tw printData (session cookie from FJUD/default.aspx). All five texts are identical to the research/jud cache. Byte counts: TPSM 12,231; TYDM 21,151; TPDM 24,231; PCDM 16,816; TCDU 6,826.
+  - Channel 2, Judicial Yuan open-data PDFs (data.judicial.gov.tw/opendl/JDocFile/<court>/<id>.pdf, no cookie, HTTP 200). PDF text, with line numbers and page markers stripped, was compared with printData in 30-character windows every 150 characters. Every miss traced to a line number or page marker inserted mid-line, or to table layout; misses were spot-checked.
+    - TPSM/112,台上,1703,20230504,1: 435,865 B, SHA-256 475d036c1a0e94f0195b2601fcf4f89cb9382f38f7e23b77ff98e25691acfb2d; 22/25 windows.
+    - TYDM/114,訴,2074,20260629,1: 757,745 B, SHA-256 dad58dd19446993907fd134d506283af5fe49a004ecc64a9ccdfa6323619a58a; 47/47.
+    - TPDM/114,易,1349,20260723,1: 1,038,843 B, SHA-256 6608e89cdf05b9e3c190be5cdaae7ecec48569ff424987a9092598526c1311b5; 49/58, misses in the withdrawal table.
+    - PCDM/115,審簡,523,20260603,1: 652,740 B, SHA-256 eaa8f3b1dd830bccd810588e99b784cd738fd71f1388ff039eb6fcd5db858e57; 32/38, misses in the appended indictment table.
+    - TCDU/115,家聲,28,20260526,1 (family ruling): the open-data endpoint returns "arguments error!", so only channel 1 was available.
+  - Facts, amounts and dispositions re-confirmed against the live text:
+    - TPSM: 上訴駁回. Father died 105-07-29. Two withdrawals of 12萬 and 12萬5,000. 3 months each, 應執行 5 months. Holding on authority ending at death, medical/funeral use going to 不法所有意圖, and silence not being consent.
+    - TYDM: 有期徒刑伍月, 緩刑貳年. NT$6,000,000 transferred with the son's seal. Heirs were two sons born 97/100. Son died after a car accident (105-08-20). The estate could pay the 148萬3,830 of medical and funeral costs. List of bank documents.
+    - TPDM: §339-2(1), 有期徒刑5月, 犯罪所得 NT$373,608 沒收. Cohabiting partner; death 112-12-22.
+    - PCDM: ex-wife (前妻) of the deceased. Two children renounced, leaving the daughter 徐藝 as heir and complainant. 應執行有期徒刑陸月, 緩刑貳年.
+    - TCDU: 相對人不得享有限定繼承之利益 under §1163③. Payment order served 114-11-24; transfer by sale registered 114-12-08; proceeds not used to repay. Not filing an inventory does not by itself forfeit limited liability.

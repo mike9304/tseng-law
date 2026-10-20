@@ -67,7 +67,7 @@ A victim's claim lapses two years after learning of the damage and who is liable
 
 Once a passbook, card, PIN or online-banking login has gone out, the bank can be told exactly what was handed over and when, and asked about stopping the account. Withdrawing money that arrives afterwards and handing it over in cash, as instructed, is the very conduct the Taipei court held against the holder. The messages from the day the account changed hands are what a prosecutor reads for intent and what a civil judge reads for negligence.
 
-Wei Tseng (曾雋崴) of Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
+Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office address is 40453 臺中市北區館前路19號6樓之1.
 
 ## Official sources
 

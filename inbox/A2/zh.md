@@ -58,7 +58,7 @@ author: "legal-ai-assistant"
 
 兩件裁定裡，法院翻看的是入出境紀錄、外國居留身分、父母自己說過的打算，還有先前的約定有沒有守住。
 
-昊鼎國際法律事務所曾雋崴律師的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
+昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，臺中事務所地址為40453 臺中市北區館前路19號6樓之1。
 
 ## 參考資料
 

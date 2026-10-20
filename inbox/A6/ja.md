@@ -53,7 +53,7 @@ author: "legal-ai-assistant"
 
 台湾の病院でもらう診断書と領収書、そして健保の給付項目と費用がわかる明細。帰国前にどこまで手元にそろえられるかが、医療費の計算を左右します。
 
-昊鼎国際法律事務所の曾雋崴弁護士への連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
+昊鼎国際法律事務所の連絡先は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)、所在地は40453 臺中市北區館前路19號6樓之1です。
 
 ## 参考にした公的資料
 

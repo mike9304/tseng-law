@@ -54,7 +54,7 @@ author: "legal-ai-assistant"
 
 해산 결의, 해산등기, 청산인 취임, 채권자 공고와 세무 신고, 잔여재산 송금. 정식 청산의 순서와 세무 기한은 [대만 자회사·지점을 닫을 때의 세무 신고](/ko/columns/closing-taiwan-subsidiary-branch-liquidation-tax-filings)와 [대만 자회사 해산등기 뒤에도 청산은 남습니다](/ko/columns/taiwan-company-dissolution-liquidation)에 있습니다. 위 예의 회사라면 영업을 멈춘 날짜, 이사 명단, 계좌 잔액부터 확인해야 어느 길이 남았는지 보입니다.
 
-호정(昊鼎)국제법률사무소 曾雋崴 변호사의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
+호정(昊鼎)국제법률사무소의 연락처는 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 주소는 40453 臺中市北區館前路19號6樓之1입니다.
 
 ## 참고한 공식 자료
 

@@ -1,19 +1,19 @@
 # P2 EN C13 협의이혼 증인 / 協議離婚の証人 / divorce witness (新竹地院 113年度婚字第59號) — 게시 구성 r8b (opus/P2/en/r8b)
 
-게시·전송하지 않았다. r8b = shared/R8B-BRIEF.md 반영: 카드 1을 결과·판결 없는 장면 훅으로 다시 렌더, r8c-P2(shared/R8C-P2.md): 증인 진술 정밀화·‘이의 없음’, 본문·카드 3·alt 3·첨부. Astra r8c 수정1 반영. 서명 줄·사무장 반응 줄 없음. 첫 댓글은 r8과 같다. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
+게시·전송하지 않았다. r8b = shared/R8B-BRIEF.md 반영: 카드 1을 결과·판결 없는 장면 훅으로 다시 렌더, r8c-P2(shared/R8C-P2.md): 증인 진술 정밀화·‘이의 없음’, 본문·카드 3·alt 3·첨부. Astra r8c 수정1·2 반영. 서명 줄·사무장 반응 줄 없음. 첫 댓글은 r8과 같다. 원어민·변호사 검수 아님(AI 검수). 글자 수는 유니코드 코드포인트.
 
 원글: 본문 + 카드 5장(opus/P2/en/r8b/images/en/card-01~05.png). 첫 텍스트 답글: 첫 댓글 + 텍스트 첨부. 카드 1·3이 r8과 다르다. 한국어 뜻풀이: opus/P2/en/r8b/ko-meaning.md
 
-## 본문 · 499자
+## 본문 · 500자
 
 ```text
-About Dec 2023, a Hsinchu restaurant. A wife had a friend witness her divorce agreement. The couple's lines were blank.
+About Dec 2023, a Hsinchu restaurant. A wife had a friend witness her divorce agreement, the couple's lines blank.
 
-On Dec 14 they signed and registered it.
+On Dec 14 they signed and registered.
 
-The husband sued. The friend had seen the couple at a party five years before. Around the signing, the friend never met or contacted him or checked whether he wanted a divorce. Neither spouse objected.
+The husband sued. The friend had seen the couple at a party five years back. Around the signing, the friend never met or contacted him or checked whether he wanted a divorce. Neither spouse disputed this testimony.
 
-The trial court didn't count the friend; even with the other witness, there weren't two. The divorce was void; they remained married.
+The trial court didn't count the friend; even with the other witness, there weren't two. The divorce was void; the marriage held.
 ```
 
 ## 카드 대체 텍스트(alt)

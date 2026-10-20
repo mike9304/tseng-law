@@ -143,3 +143,4 @@
 - 10-21 07:04 r8 Astra PASS, 선택 MINOR 2건 반영(opus/R8-FIX2-DONE.md). Bot·사용자 최종 확인 대기.
 - 10-21 07:14 r8b 완료(opus/R8B-DONE.md). Astra 검수 대기.
 - 10-21 07:21 r8b Astra PASS, 선택 MINOR 2건 반영(opus/R8B-FIX1-DONE.md). Bot·사용자 최종 확인 대기.
+- 10-21 07:24 대기: r8b Astra PASS·선택 MINOR 반영 완료. Grok r8b 비평의 남은 의견(KO ‘인정받았어요’·EN ‘won’이 지급으로 읽힐 수 있음, KO 본문 임플란트 생략, P3 카드1이 장면보다 청구 소개에 가까움, P2 카드2 반말 말풍선)은 Astra 지적이 아니고 사용자가 KO 수정 금지를 지시해 고치지 않음 — Bot·사용자 판단 대기.

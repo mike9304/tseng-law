@@ -42,3 +42,13 @@ Slug `taiwan-child-exit-ban-sole-custody-provisional-order`: 0 matches.
 
 ## Astra r1 (2026-10-20)
 All 8 findings accepted and fixed (see facts.md fix log). No rebuttal. Variety FAIL 0 after fixes; links BAD 0.
+
+## Astra r2 fix (2026-10-20 ~20:20 KST)
+Source: ASTRA-FAIL.md (r2), renamed ASTRA-FAIL-fixed-2.md. Details and sources are in facts.md under "Astra r2 fix log".
+1. MAJOR ja/en, Art. 88: the "has become improper" wording is gone. It now reads "is considered improper or no longer necessary" / 「不当と認められる／もはや必要がないと認められる」 in FAQ 3 and the body. The provisional order must still be final first. ko body aligned.
+2. MAJOR ko/ja/zh, Art. 89(3): the text now separates two cases. If the main petition is dismissed by a final ruling or withdrawn, the whole order lapses. If a final ruling grants the main petition, or a mediation or settlement is concluded, only the inconsistent portion lapses. en FAQ aligned.
+3. MAJOR ko/ja/en, governing law: new paragraph on 涉外民事法律適用法 Art. 55 (child's national law) and Art. 2 (multiple nationalities). The Civil Code explanation is stated to assume Taiwan law, separately from the provisional-order procedure. Joint exercise is described as the general rule. zh got the same qualifier. Source lists updated in all four.
+4. MAJOR all, ruling verification blocker: both rulings were re-opened live via printData (identical to cache, hashes in facts.md). The zh quote was found verbatim and every description was confirmed. One zh detail was corrected: the children were questioned by the 原審 judge. Reviewer-environment explanation is in rebuttal.md.
+5. MINOR ko FAQ 1: 「본안 청구의 목적을 확보할 수 없는」.
+6. MINOR en: "In practice that can be hard to show." deleted. Related generalisations in ko and the ja heading were neutralised too.
+Checks: variety FAIL 0 (ko/ja/en; zh --lang zh-hant), links BAD 0, YAML OK x4 (3 FAQ each), no bold. Lengths: en 957 words, ko 2,139 chars without spaces, ja 2,272, zh 1,707.

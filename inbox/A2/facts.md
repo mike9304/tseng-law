@@ -23,6 +23,11 @@ Statutes fetched from law.moj.gov.tw on 2026-10-20 (LawSingle / LawAll pages; ca
 - Art. 4 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010056&flno=4 — 「暫時處分，非有立即核發，不足以確保本案聲請之急迫情形者，不得核發。」
 - Art. 7 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010056&flno=7 — 第1項第4款「禁止關係人或特定人攜帶未成年子女離開特定處所或出境。」; 第2項「法院核發前項暫時處分，應審酌未成年子女之最佳利益，並應儘速優先處理之。」 (applies to 家事事件法第104條第1項第1、3、5款 and 第113條 cases)
 
+### 涉外民事法律適用法 (B0000007) — 修正日期 民國99年05月26日 (LawAll, fetched 2026-10-20 20:10 KST); ENG title: Act Governing the Choice of Law in Civil Matters Involving Foreign Elements
+- Art. 55 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=55 — 「父母與子女間之法律關係，依子女之本國法。」 (ENG: "The legal relationship between parents and their children is governed by the national law of the children.")
+- Art. 2 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=2 — 「依本法應適用當事人本國法，而當事人有多數國籍時，依其關係最切之國籍定其本國法。」
+  - Used for (r2, all four): the Civil Code explanation assumes Taiwan law governs; in a case with a foreign element Art. 55 points to the child's national law, Art. 2 picks the most closely connected nationality; this is separate from the Taiwan court's provisional-order procedure. zh says 「依子女的本國法」 without further qualification; renvoi (Art. 6) is not discussed.
+
 ### 護照條例 (E0030001) — 修正日期 110-01-20
 - Art. 16 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=16 — 「七歲以上之未成年人申請護照，應經其法定代理人書面同意。未滿七歲之未成年人或受監護宣告之人申請護照，應由其法定代理人申請。前二項之法定代理人有二人以上者，得由其中一人為之。」
 - Art. 23 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030001&flno=23 — 第1項「護照申請人有下列情形之一者，主管機關或駐外館處應不予核發護照：…二、經司法或軍法機關通知主管機關。三、經內政部移民署…依法律限制或禁止申請人出國並通知主管機關。…」
@@ -53,7 +58,7 @@ https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDU%2C115%2C%E5%AE%B6%E
 - Foreign nationality and long-term residence: 「3名子女均具〇〇國籍」「抗告人、未成年子女3人均享有〇〇長期居留身分」; wish to study there: 「抗告人並甚嚮往子女於〇〇就學」; risk: 「如准許抗告人攜未成年子女3人出境，亦有可能滯留國外無法歸返」.
 - Earlier trip to Japan under settlement with security: 「相對人係因抗告人出具…作為擔保，而同意3名未成年子女出境〇〇」 and 「未成年子女3人曾因本院…和解筆錄而出境至日本」.
 - One-day trip (zh only): 「先暫准甲00偕同一名子女丙00於本院指定時間內出境一次，並應於當日返回臺灣」.
-- Children not re-heard (zh only): 「未成年子女3人已於…陳述意見，至今僅4月…如過度、反覆訊問…恐對渠等有不良影響」.
+- Children not re-heard (zh only): 「本件原審承辦法官已於000年0月00日訊問未成年子女3人」; 「未成年子女3人已於…陳述意見，至今僅4月…如過度、反覆訊問…恐對渠等有不良影響」.
 - Re-appeal only for 適用法規顯有錯誤 (not stated in drafts).
 
 ## Other
@@ -70,3 +75,16 @@ https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDU%2C115%2C%E5%AE%B6%E
 - ko/ja/en FAQ3: Art. 88 "final" qualifier restored.
 - en: "A pending case did the work." deleted.
 - zh: heading 「不撤銷，也不等於完全不能出國」.
+
+## Astra r2 fix log (2026-10-20 ~20:15 KST)
+- Live re-fetch 20:07–20:10 KST: 家事事件法 88/89, 民法 1089, 涉外民事法律適用法 2/3/55 (LawSingle). Text identical to the quotes in this file.
+- Art. 88 (ja/en): "不当になった" / "has become improper" replaced with 「不当と認められる／もはや必要がないと認められる」 and "is considered improper or no longer necessary", in both FAQ 3 and the body. The finality of the provisional order itself is kept. ko body aligned the same way (「…확정된 뒤 부당하거나 더 이상 필요 없다고 인정되면」).
+- Art. 89(3) (ko/ja/zh; en aligned too): the lapse ground now reads as a final ruling granting the main petition (「本案請求經裁判准許確定」), or a concluded mediation/settlement (「調解或和解成立」), with only the inconsistent portion lapsing.
+- Governing law (ko/ja/en; zh added for consistency): new paragraph citing 涉外民事法律適用法 Arts. 55 and 2. The Civil Code explanation is stated to assume Taiwan law. The joint-exercise rule is described as the general rule 「除法律另有規定外」. ko/ja headings were qualified. Source-list entries were added in all four.
+- ko FAQ 1: 「본안 청구의 목적을 확보할 수 없는」 (Article 4 of the rules: 「不足以確保本案聲請之急迫情形」).
+- en: "In practice that can be hard to show." deleted. The similar generalisations in ko (「취소 신청이 쉬운 일은 아닙니다」) and the ja heading (「取消しは簡単ではない」) were also replaced with neutral wording.
+- zh (self-found while re-reading the ruling): 「孩子四個月前才在本案表示過意見」 became 「原審法官四個月前已訊問過三個孩子」, because the ruling says the 原審 judge questioned the children.
+- Ruling verification blocker. Both rulings were re-opened live at 2026-10-20 20:08 KST via judgment.judicial.gov.tw/FJUD/printData.aspx (session cookie from FJUD/default.aspx). Raw text is identical to research/jud cache. SHA-256 of the text after the URL line: PCDU-115-家暫-205 c9cb4b5779e1e2910991b953239b04c43350b7b4b3599fd54939538ef5babadc (5,905 bytes); TPDU-115-家聲抗-42 f1fa8e4c95e72806f8ad5aafa9294c5d1a4e72ff90d3c5badb4ad367d1f4629f (15,163 bytes).
+  - The zh quotation 「如父母已於離婚時協議由一方單獨行使親權者，法院豈非均無限制子女出境之必要？」 appears verbatim in the TPDU text (grep count 1).
+  - Point-by-point confirmation. PCDU: divorce 113-10-22 with sole exercise by 相對人; visitation mediation 114-02-17; children taken to 大陸地區 115-01-23; three solo returns (4/9–4/14, 6/8–6/14, 8/6–8/12); children entered 115-08-19; order dated 115-08-20; two children; order runs until the custody-modification case is withdrawn, mediated/settled or finally decided, with no exit without both parents' consent. TPDU: panel of three judges; single-judge original set aside for improper composition and the panel decided itself; the appellant argued the custody and visitation parts were final; procedure versus substantive custody distinction; education part on appeal; foreign nationality and long-term residence; wish to study there; risk of not returning; earlier Japan trip under a settlement after security; one-day trip with one child; children questioned by the 原審 judge four months earlier.
+  - The Judicial Yuan open-data PDF channel (data.judicial.gov.tw/opendl/JDocFile/...), which served A1's civil judgments, returns "arguments error!" for both family rulings under either URL encoding. Only the printData channel is available for them.

@@ -50,3 +50,12 @@ https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TCDU%2C115%2C%E5%AE%B6%E
 ## Other
 - Internal links: none. External links checked (research/bin/links.py) BAD 0.
 - Office/email as in A1.
+
+## Astra r1 fix log (2026-10-20 ~19:35 KST)
+- Independent re-verification: all five decisions re-fetched live from judgment.judicial.gov.tw printData.aspx (session via research/bin/jud.py); whitespace-normalized text identical to cache: TPSM 112台上1703 (sha256 prefix 8cb6fd59897e291f), TYDM 114訴2074 (bcac064891e0eb2e), TPDM 114易1349 (78cc04445df99ec6), PCDM 115審簡523 (f0751d85e3ec16ba), TCDU 115家聲28 (a6ac00423a605047). Facts/amounts/dispositions in the drafts were drawn from these texts (see above).
+- 民法 Art. 550 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=550 — 「委任關係，因當事人一方死亡、破產或喪失行為能力而消滅。但契約另有訂定，或因委任事務之性質不能消滅者，不在此限。」 → general rule + exception now stated in all four; Supreme Court reasoning framed as its forgery holding; Taoyuan conditions (不抵觸遺囑、不侵害其他繼承人繼承權、對死者有重大意義的事項、必要性及急迫性) stated.
+- 刑法 Art. 210 element 「足以生損害於公眾或他人」 and Art. 339-2 elements 「意圖為自己或第三人不法之所有，以不正方法」 added; headings made conditional ("criminal risks").
+- 涉外民事法律適用法 (B0000007) Art. 58 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=58 — 「繼承，依被繼承人死亡時之本國法。但依中華民國法律中華民國國民應為繼承人者，得就其在中華民國之遺產繼承之。」 → succession sections limited to cases governed by Taiwan law (ko/ja/en/zh); 刑法 Art. 3 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=3 — 「本法於在中華民國領域內犯罪者，適用之。…」 for the separate criminal question.
+- en summary: no longer states the money was spent on funeral costs; now "savings he said paid medical and funeral bills".
+- ja: 日本民法第921条第1号 proviso restored — e-Gov API (laws.e-gov.go.jp/api/1/articles;lawId=129AC0000000089;article=921) fetched 2026-10-20: 「相続人が相続財産の全部又は一部を処分したとき。ただし、保存行為及び第六百二条に定める期間を超えない賃貸をすることは、この限りでない。」
+- ko: 「두 차례에 걸쳐 합계 24만 5,000 대만달러」. zh: 「五件裁判」.

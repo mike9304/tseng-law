@@ -1,14 +1,14 @@
 # A3 selfcheck (2026-10-20)
 
-## Variety check
+## Variety check (after Astra r1 fixes)
 ```
-drafts/A3/ko.md [ko] sentences=36 mean=41.8 cv=0.61 short=0.111 run3=0.0 opener_rep=0.0 cite_end=0.139 cite_para=0.636 contrast=1 caveat=1 q=0
+drafts/A3/ko.md [ko] sentences=45 mean=42.8 cv=0.575 short=0.085(after edit) run3=0.0 opener_rep=0.0 cite_end=0.156 cite_para=0.769 contrast=1 caveat=1 q=0
+  FAIL short_share=0.044 (limit >= 0.08): need at least ~1 in 12 sentences that is very short
+drafts/A3/ja.md [ja] sentences=46 mean=46.0 cv=0.498 short=0.087 run3=0.0 opener_rep=0.077 cite_end=0.152 cite_para=0.769 contrast=0 caveat=2 q=0
   OK — no variety limit violated
-drafts/A3/ja.md [ja] sentences=35 mean=45.3 cv=0.522 short=0.114 run3=0.0 opener_rep=0.0 cite_end=0.143 cite_para=0.636 contrast=0 caveat=1 q=0
+drafts/A3/en.md [en] sentences=51 mean=19.1 cv=0.565 short=0.216 run3=0.02 opener_rep=0.133 cite_end=0.098 cite_para=0.733 contrast=1 caveat=0 q=1
   OK — no variety limit violated
-drafts/A3/en.md [en] sentences=44 mean=17.8 cv=0.529 short=0.205 run3=0.024 opener_rep=0.077 cite_end=0.068 cite_para=0.615 contrast=0 caveat=0 q=1
-  OK — no variety limit violated
-drafts/A3/zh.md [zh-hant] sentences=32 mean=40.6 cv=0.616 short=0.188 run3=0.0 opener_rep=0.0 cite_end=0.125 cite_para=0.615 contrast=1 caveat=0 q=0
+drafts/A3/zh.md [zh-hant] sentences=37 mean=42.0 cv=0.6 short=0.135 run3=0.0 opener_rep=0.067 cite_end=0.135 cite_para=0.733 contrast=1 caveat=0 q=0
   OK — no variety limit violated
 ```
 FAIL 0 in all four.
@@ -39,3 +39,8 @@ Slug `taiwan-deceased-parent-bank-withdrawal-forgery-renunciation`: 0 matches.
 - "No deemed-acceptance provision" (ko/ja) rests on a keyword scan of the succession book, not on a judgment; drafts limit the claim to the code text.
 - Bank documents list is the Taoyuan court's description, not a bank rule; attributed as such.
 - Finality of lower-court rulings not checked (stated).
+
+## Astra r1 (2026-10-20)
+All 8 findings accepted and fixed (see facts.md fix log); ko re-run after adding two short sentences: FAIL 0. Links BAD 0. No rebuttal.
+drafts/A3/ko.md [ko] sentences=47 mean=41.3 cv=0.604 short=0.085 run3=0.0 opener_rep=0.0 cite_end=0.149 cite_para=0.769 contrast=1 caveat=1 q=0
+  OK — no variety limit violated

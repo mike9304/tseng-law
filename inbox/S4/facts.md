@@ -38,3 +38,19 @@ Header: 「稽徵機關單一窗口受理查詢被繼承人金融遺產資料作
 
 ## Internal links (verified)
 - /ko|ja|en|zh-hant/columns/taiwan-parent-debt-renunciation-heir-in-japan (233 exists in all four locales).
+
+## Astra r1 fixes (2026-10-20) — added sources (text copies in evidence/)
+- MOF regulations database copy of the directive: https://law-out.mof.gov.tw/LawContent.aspx?id=GL010834 (公發布 109-06-30, 修正 112-12-26, 台財稅字第11200696380號令). Now the primary citation (replaces the NTPC copy). evidence/mof-lawdb-GL010834-directive.txt.
+  - Pt 8 exact: 「由申請人自行於申請後三十日起九十日內，至財政部電子申報繳稅服務網…下載」.
+- MOF process sheet 「查詢金融遺產內容及相關作業流程說明」 (download.tax.nat.gov.tw/dfx/…pdf, 4 pp.). evidence/mof-financial-estate-process-sheet.txt.
+  - p.1 life insurance association: 壽險保單 info (policy name/no., 要保人, 被保險人, 保險金額, 死亡日之保單價值準備金) — 「以上僅提供被繼承人於死亡日為要保人，且要保人與被保險人不同之投保情形」.
+  - p.2 JCIC: 「聯徵中心將另行郵寄亡故者之『當事人綜合信用報告』(銀行債務資訊-包含貸款及信用卡等)予申請人，俾利繼承人即時評估是否向法院辦理拋棄繼承事宜」; 「非國稅稽徵機關提供之『遺產稅金融遺產參考清單』」; 「參考清單僅會列示聯徵中心寄發上開…報告予申請人之郵寄日期」.
+  - p.3 二(一): 財資中心 posts Wednesday, institutions download Thursday; 「聯徵中心：將於下載後約5個工作日即先行以掛號郵寄回復申請人」. (二) others: completed within 30 days of application.
+  - p.4 五(二)1: download 「資料下載期間為『申請後30日』起90日內」 → drafts now say a 90-day window opening 30 days after the application (ko 30일째부터 90일 동안 / ja 30日後から90日間 / en 90-day window that opens 30 days after / zh 申請後第30日起90日內).
+- MOF ruling 台財稅第841611225號 (84-03-15): https://law-out.mof.gov.tw/LawContent.aspx?id=GL006995 — 「被繼承人在金融機構及郵政儲金單位之存款，繼承人於辦理該項存款之繼承移轉或提領時，該項存款餘額在新臺幣20萬元以下者，可免檢附稅捐稽徵機關核發之遺產稅繳清證明書或免稅證明書，惟該項存款仍應依法列入被繼承人之遺產總額內，申報遺產稅。」 Listed in MOF database (system updated 115-09-22), no repeal note. evidence/mof-ruling-84-841611225-deposit-200k.txt.
+  - Current bank practice confirmation (not cited in body): E.SUN FAQ lists 「遺產稅繳清或免稅證明書（繼承存款金額新臺幣20萬元以下免附時，仍應徵提被繼承人死亡證明文件…）」. evidence/esun-deposit-inheritance-faq.txt.
+- 遺產及贈與稅法 Art 4(3)(4): 經常居住境內 = (1) 死亡前二年內在境內有住所; (2) 境內無住所而有居所，且死亡前二年內居留合計逾365天，但受政府聘請從事工作、有特定居留期限者不在此限; 境外 = not meeting (3). LawSingle flno=4.
+- Art 8(1) full proviso (consent-to-transfer certificate under Art 41 obtained in advance; exemption certificate; certificate of exclusion from gross estate) now stated in body x4; Art 8 also bars 交付遺贈 (now included).
+- Art 23(1) proviso: 依第六條第二項由稽徵機關聲請法院選任遺產管理人者，自選任之次日起算 — added x4. Art 23(2) now tied to the Art 4 test.
+- Art 6(1) (amended 115-09-11) re-fetched: 「遺產稅之納稅義務人為繼承人及受遺贈人，無繼承人者，為遺產管理人，並以被繼承人之遺產為限負繳納義務…」 — drafts' summary (heirs and legatees, limited to the estate) unchanged.
+- 保險法 Art 13(3): 「人身保險，包括人壽保險、健康保險、傷害保險及年金保險。」 LawSingle pcode=G0390002&flno=13.

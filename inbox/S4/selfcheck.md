@@ -47,3 +47,18 @@ taiwan-deceased-parent-financial-assets-inquiry-heirs-abroad (0 filename matches
 
 ## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
 - Art. 26: added the force-majeure / special-circumstances exception to the 3-month extension (all 4). Added evidence/mof-financial-estate-inquiry-directive.txt (full directive text, MOF order of 2023-12-26).
+
+## Astra r1 fixes (2026-10-20 KST) — ASTRA-FAIL.md → ASTRA-FAIL-fixed-1.md
+1. Art. 26 three-month cap: the force-majeure/special-circumstances exception was already in all four bodies (proactive pass, 19:37). Rechecked, no "3개월까지"-type absolute remains.
+2. Download window: corrected to "a 90-day window opening 30 days after the application" in all four (process sheet p.4).
+3. Delivery routes: new section in all four. JCIC mails its own credit report (loans/cards) separately by registered post about 5 working days after the weekly pickup; the tax-office reference list shows only its mailing date; the other results come by the route chosen (tax-office registered mail / site download / e-filing software).
+4. Art. 8: the body now states the general bar (division, delivery of bequests, transfer registration) together with the proviso (advance consent-to-transfer certificate, exemption certificate, exclusion certificate); en uses "transfers may not be registered" / "registering a transfer of title".
+5. Bank "only": added MOF ruling 台財稅第841611225號 (balance ≤ NT$200,000 → no tax certificate needed; the deposit must still be reported) to the body, FAQ 3 and the summary in all four, with the document-waiver vs reporting-duty distinction stated explicitly.
+6. Residence: ko/ja (and en/zh for consistency) now use the statutory "經常居住境內" test with Art. 4 linked and explained (2-year domicile, or residence plus >365 days, with the government-hire proviso); the Art. 23(2) filing office is tied to that test.
+7. 人身保險: ko 인신보험(人身保險), ja 人身保険, en personal insurance (人身保險). Insurance Act Art. 13 scope added, plus the process-sheet limit (only policies where the deceased was policyholder and not the insured; reserve value) and the statement that a policy on the parent's own life does not appear.
+8. Summaries ko/ja/en now state both conditions: a Taiwan national with an ID number, and an heir who has not renounced.
+9. en "save months of letters" replaced with "one application can cover inquiries to multiple institutions."
+10. ko/ja/zh "all financial institutions" replaced with the bodies/institutions listed in the directive and their members (opening + list paragraph).
+11. ja closing: replaced with Astra's sentence "葬儀後の早い段階で照会を申し込むと、申告の準備を進めやすくなります。"
+Also proactive: Art. 23(1) proviso (court-appointed administrator → runs from the day after appointment) added x4. Sources sections now cite the MOF regulations database (GL010834), the process sheet, ruling GL006995, Art. 4 and Insurance Act Art. 13.
+featured_image "TBD" kept: user decision A via son-bridge (IN-claude-20261020-195011). The integrator adds the image and the 4 alts before deploy.

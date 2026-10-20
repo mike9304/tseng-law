@@ -45,3 +45,4 @@
 - 20:13 KST 대기: Studio opus/·grok/에 P1~P3 r1 없음(동기화 브랜치에도 없음), STATUS 채점 없음. 비평할 같은 라운드 초안이 생기면 바로 작성.
 - 20:24 KST 대기: Studio 초안·채점 여전히 없음. gapfill 실행 중이라 Air 쪽은 추가 작업 없이 대기(HANDOFF-air에 상태 전달).
 - 20:33 KST 대기: 변화 없음(PIPELINE·BRIEF·STATUS·HANDOFF-studio 크기 동일, 동기화로 시각만 갱신). Studio r1·채점 없음.
+- 20:43 KST 대기: 변화 없음(Studio r1·채점·비평 없음, 공용 파일 크기 동일). 백그라운드 감시 21:38까지.

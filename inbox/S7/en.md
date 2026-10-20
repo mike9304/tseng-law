@@ -65,5 +65,5 @@ Checked October 20, 2026. Titles of the rental terms are descriptive translation
 - Ministry of Transportation and Communications, [mandatory and prohibited terms for car rental standard-form contracts](https://www.ey.gov.tw/File/BB4C685E009D5373?A=C) (小客車租賃定型化契約應記載及不得記載事項), as amended May 8, 2015 (交路字第10400089281號); Executive Yuan copy.
 - [Civil Code](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001) (民法), Articles 191-2 and 432.
 - [Compulsory Automobile Liability Insurance Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390060) (強制汽車責任保險法), Articles 7, 9, 27, 28 and 29.
-- [Road Traffic Management and Penalty Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21) (道路交通管理處罰條例), Article 21.
+- Road Traffic Management and Penalty Act (道路交通管理處罰條例), [Article 21](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21) and [Article 21-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21-1).
 - [Township and County-Administered City Mediation Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020003) (鄉鎮市調解條例), Articles 1, 10, 15, 20, 23, 26, 27, 29 and 35.

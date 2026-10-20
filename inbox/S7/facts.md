@@ -55,3 +55,8 @@ URL (Executive Yuan file): https://www.ey.gov.tw/File/F86FD1FD1EB5BE6F
 - CALI 29(1)(2) 管制藥品 rendered 규제 대상 약물 / 規制薬物 (testing requirement and named categories kept).
 - Titles ko/ja/zh: repair cost = borne by fault (point 14), cap only on loss-of-use (point 15) → 수리비 부담과 휴차료 상한 / 修理代の負担と休車補償の上限 / 修車費怎麼算、營業損失的上限.
 - ja: scooter terms point 15 「修理期間逾租賃期間之日起七日以內(含)」 → 契約上の賃貸期間を過ぎた日から7日まで (evidence/motc-scooter-rental-terms.txt).
+
+## Astra r4 additions (2026-10-21)
+- 道路交通管理處罰條例 21-1 (cited in every body via CALI 29(1)(5); now in source lists x4): https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21-1 — 「汽車駕駛人駕駛聯結車、大客車或大貨車有下列情形之一者…一、未領有駕駛執照駕車。…」 (MOJ, law amended 115-08-17; HTTP 200 on 2026-10-21).
+- 鄉鎮市調解條例 26(1): 「鄉、鎮、市公所應於調解成立之日起十日內，將調解書及卷證送請移付或管轄之法院審核。」; 35(2): 「本條例除前項規定外，於直轄市、市之區調解委員會準用之。」 → ko now says 향·진·시 사무소(公所) instead of 공소/구청.
+- zh summary: large heavy motorcycle exception (point 15, Executive Yuan copy https://www.ey.gov.tw/File/F86FD1FD1EB5BE6F) added, matching body/FAQ.

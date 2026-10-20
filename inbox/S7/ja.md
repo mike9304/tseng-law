@@ -65,5 +65,5 @@ author: "legal-ai-assistant"
 - 交通部[小客車租賃定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/BB4C685E009D5373?A=C)（2015年5月8日交路字第10400089281號公告で改正。行政院掲載版）。
 - 台湾[民法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001) 第191条の2、第432条。
 - [強制汽車責任保険法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390060) 第7条、第9条、第27条、第28条、第29条。
-- [道路交通管理処罰条例（道路交通管理處罰條例）第21条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21)。
+- [道路交通管理処罰条例（道路交通管理處罰條例）第21条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21)、[第21条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21-1)。
 - [郷鎮市調解条例（鄉鎮市調解條例）](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020003) 第1条、第15条、第20条、第23条、第26条、第27条、第29条、第35条。

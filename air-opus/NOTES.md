@@ -83,3 +83,5 @@
 - 01:45 KST: Grok의 Air r1 비평(review-studio/grok-on-air-opus-r1.md) 확인 — r1을 승자로 보지 않음, 지적은 Bot 신규 규칙 기준(메타 도입·'다투지 않은'·어미 혼용). r1은 고정, 대응 없음. FIX3 이후 P1 귀책 표현 KO·JA↔EN 불일치를 HANDOFF에 추가 기재.
 - 01:54 KST: Air 동기화가 01:45 이후 멈춘 원인 확인(sync.sh:6 depth1+비강제 refspec → 2커밋 이상 앞선 원격을 non-ff로 거부, -q로 무음). 원격 추적 ref만 1회 재정렬해 복구, sync.sh는 미수정. HANDOFF-air에 근본 원인·수정안 기재. 같은 일이 다시 나면 같은 방식으로 ref만 맞추고 보고.
 - 02:04 KST: 동기화 결함 재발(Studio 01:57·02:02 2커밋) — ref 재정렬, HANDOFF에 재발 기재. Studio Opus의 Air r1 비평(review-studio/opus-on-air-opus-r1.md) 확인: 조각 문장 한도·P2 직역·댓글 질문 2개 등, r1 고정이라 대응 없음. P1 '사정' MINOR는 Grok이 수신 확인, Astra 판정 대기.
+- 02:17 KST: 동기화 재발 — ref 재정렬(7c3d6ac, loop 방식 fetch exit 0). 실수: 02:14에 refspec 없이 'git fetch --depth 20 origin'을 실행해 tseng-law 전 브랜치를 받기 시작함 → 즉시 중지, 미완성 임시 팩 1.6GB(.sync-git/.git/objects/pack/tmp_pack_*) 삭제, 다른 ref 생성 없음·.git 28M·연결성 검사 정상. 이후 fetch는 반드시 '+refs/heads/threads-collab-1020:…'만 지정.
+- 02:24 KST: 동기화 재발(Studio 02:07~02:23 4커밋) — ref 재정렬. 02:1x 루프 1회 실패는 내 잘못된 fetch의 shallow.lock과 겹친 것(잠금은 이미 사라짐). Studio 새 내용은 NOTES뿐, Astra의 P1 제안 판정 대기.

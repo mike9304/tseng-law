@@ -69,3 +69,9 @@ Fixes:
 2. ko 「최장 6개월분」 → 「최대 6개월분」 (FAQ 2 and body).
 3. ja opening sentences 「試用期間なら…辞めてもらえる。台湾ではこの前提が通りません。」 deleted.
 4. en "Attendance is the other route." → "Unjustified absence can also support dismissal." (next sentence trimmed to avoid repeating "Absence without good reason").
+
+## Astra r3 fix log (2026-10-21 ~01:25 KST)
+- Finding 1 (MAJOR, verification blocker): official open-data PDFs re-downloaded 01:14 KST into drafts/A5/sources/ (sizes and SHA-256 identical to the r1 values above: 380,409 / 1,020,057 / 678,233 / 758,362 B). pdftotext .txt beside each; sources/README.md maps every judgment statement to file lines (e.g. TPHV 39 「大致不能勝任…不受解僱最後手段性原則之限制」 lines 253-256 in the court's own reasoning; KSHV 11 objective-facts/good-faith standard lines 126-128, no serious failure 176-181, no prior misconduct 198-199, contract continues after probation 213-219; TPHV 92 11/26 oral notice 170/184, 12/12 written notice of 12/26 termination 171-172). See rebuttal.md.
+- Finding 2 (ko opening): first two sentences now carry one number (3개월); chronology moved after them, all dates kept (2025-01-01 hire, 02-07 afternoon rear contact while parked, 02-19 notice). KSHV txt lines 18-22, 27, 84.
+- Finding 3 (ja heading): 「試用期間中に使用者へ認められる裁量とその限界」. ko heading aligned for the same reason: 「수습기간 중 사용자에게 인정되는 재량과 그 한계」.
+- Finding 4 (en): "Latitude has an edge, though." → "That latitude has limits."

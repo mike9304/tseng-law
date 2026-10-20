@@ -55,3 +55,9 @@ Checks: variety FAIL 0 (ko/ja/en; zh --lang zh-hant). Links BAD 0. YAML OK x4. L
 - variety: ko OK (short 0.103), ja OK (short 0.081), en OK, zh (--lang zh-hant) OK. FAIL 0.
 - links.py BAD 0; YAML (ruby safe_load) OK x4; faq 3 each; featured_image TBD; no 曾雋崴, no bold.
 - Lengths (blen.py): en 918 words, ko 1,896 chars without spaces, ja 1,919, zh 1,721.
+
+## Astra r3 re-check (2026-10-21 ~01:25 KST)
+- variety: ko FAIL 0 (WARN 78% '니다.' ending, not a blocker), ja OK, en OK, zh (--lang zh-hant) OK.
+- YAML (ruby safe_load) OK x4, faq 3 each, featured_image TBD. links.py BAD 0. No 曾雋崴, no bold.
+- Lengths: en 917 words, ko 1,920 chars without spaces, ja 1,925, zh 1,721.
+- sources/: 4 official PDFs + pdftotext .txt (diff identical) + README.md with SHA-256 and line map.

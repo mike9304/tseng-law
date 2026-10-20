@@ -13,3 +13,12 @@ The two substantive points the reviewer raised from the transcripts were confirm
 - The 11/26 oral notice and 12/12 written notice by 新北市環保局.
 
 The reviewer could not open the pages because judgment.judicial.gov.tw serves a bot-defense page to requests without its session cookie, and the review ran read-only with no shell network and approval "never". The PDF links above work without a cookie.
+
+## Astra r3 finding 1 (verification blocker): official PDFs now supplied in the draft folder
+
+As requested ("Supply the official PDFs themselves"), the four official Judicial Yuan open-data PDFs are now in `sources/` inside this draft folder, so they can be read without network access:
+- sources/TPSV-113-台上-101-20240131.pdf, sources/TPHV-115-勞上-39-20260818.pdf, sources/KSHV-115-勞上易-11-20261007.pdf, sources/TPHV-115-勞上-92-20260901.pdf
+- each with a `pdftotext -layout` .txt next to it (reproducible with /opt/homebrew/bin/pdftotext; diff verified identical on 2026-10-21 before 01:16 KST)
+- sources/README.md: download URL, byte size and SHA-256 per file, plus a line-by-line map from every judgment statement in ko/ja/en/zh to the supporting lines of the judgment text.
+
+The files were downloaded on 2026-10-21 01:14 KST; byte sizes and SHA-256 are identical to the r1 download recorded in facts.md (2026-10-20 20:21 KST). Every judgment statement in the four drafts was re-checked against these files; no wording change was needed for finding 1.

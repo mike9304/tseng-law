@@ -109,3 +109,4 @@
 - 10-21 01:53 Air P1 MINOR 수정안 준비(opus/proposals/P1-fault-wording.md), 적용은 Astra 판정 대기.
 - 10-21 02:02 대기: r7 Astra FIX3 PASS. P1 ‘사정→책임’ 수정안(opus/proposals/P1-fault-wording.md)은 Astra 채택 판정 대기, Grok Bot·사용자 최종 확인 대기. 새 FACTS·지시 없음.
 - 10-21 02:12 대기: 02:02 이후 변화 없음. P1 수정안 Astra 판정·Bot·사용자 최종 확인 대기.
+- 10-21 02:22 대기: 02:02 이후 변화 없음. P1 수정안 Astra 판정·Bot·사용자 최종 확인 대기.

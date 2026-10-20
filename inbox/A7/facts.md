@@ -33,3 +33,7 @@ Hypothetical (ko only): subsidiary stopped business end-2025 — labelled 「(�
   3. en closing: "three things are the starting points … records of its assets and debts" (was "three facts show which route is still open … the bank balance"); en body Art. 322 and Art. 81 sentences now include "on an interested party's application". ko/ja/zh closings aligned (starting point; 자산과 채무 기록 / 資産と債務の記録 / 資產與負債的紀錄).
   4. ko summary sentence 「본사가 자회사를 방치할 때 남는 의무를 조문으로 정리합니다.」 deleted.
   5. zh opening 「公司法第10條給的期限是六個月。」 deleted; the next sentence now opens 「依公司法第10條，…」 (linked) so the attribution survives.
+
+r3 (2026-10-21), re-fetched live:
+- 公司法 Art. 7(1) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=7 「公司申請設立登記之資本額，應經會計師查核簽證；公司應於申請設立登記時或設立登記後三十日內，檢送經會計師查核簽證之文件。」 (the period referred to in Art. 10 item 4).
+- 公司法 Art. 8(3) https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8 「公司之非董事，而實質上執行董事業務或實質控制公司之人事、財務或業務經營而實質指揮董事執行業務者，與本法董事同負民事、刑事及行政罰之責任。但政府為發展經濟、促進社會安定或其他增進公共利益等情形，對政府指派之董事所為之指揮，不適用之。」 → all four locales state the proviso with both limits.

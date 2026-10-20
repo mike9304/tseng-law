@@ -56,3 +56,10 @@ Checks: variety FAIL 0 and no WARN in en after the opener change (ko/ja/en; zh -
 - links.py BAD 0 (new: CHDV printData 200, L0060001 Art. 95 200, internal /ja/.../taiwan-traffic-accident-compensation-items-japanese = 271). YAML OK x4; faq 3 each; featured_image TBD; no 曾雋崴; no bold; address once per file.
 - Lengths (blen.py): ja 1,876 chars without spaces, ko 1,665, en 798 words, zh 1,467.
 - Open risk: the judgment is a 簡易訴訟 appellate ruling of a district court (final, 「不得上訴」); it is one case, presented as such, not as settled practice.
+
+## Astra r3 (2026-10-21)
+1. MAJOR ja Art. 31(2): verified live (LawSingle G0390060 flno=31: 「但前項但書之情形，不在此限」). Added 「ただし、請求権者との間で賠償額を保険給付から差し引かないと約定していたときは、この請求はできません。」 after the 同条第2項 sentence. Only ja cites Art. 31 (grep ko/en/zh: none).
+2. MINOR en Art. 32 wording → "counts toward the damages the insured owes" (Art. 32 re-fetched: 視為被保險人損害賠償金額之一部分).
+3. MINOR ja summary preview sentence deleted.
+4. MINOR zh citation rhythm: 「依給付標準第3條，失能給付仍分十五等級……」 (end citation moved forward).
+Checks: variety OK ko/ja/en/zh, links BAD 0, YAML OK x4 (faq 3 each), ja 1,926 chars, en 797 words.

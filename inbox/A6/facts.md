@@ -67,3 +67,5 @@ Point-by-point (ja sentence → judgment text):
 - Closings now present accident date / insurer / medical papers as starting materials, then add the Art. 14(1)–(2) conditions (knowledge of damage and insurer; time from a claim taking effect until the decision notice arrives is not counted) and the disability assessment condition. 給付標準 Art. 3(2) live: 「本保險所稱失能，指受害人因汽車交通事故致身體傷害，經治療後症狀固定，再行治療仍不能期待治療效果，並經合格醫師診斷為永不能復原之狀態。」 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390067&flno=3
 ### zh NHI Act Art. 95 (finding 5)
 - Linked inline and added to the source list: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=95 — Art. 95(1) 「保險對象因汽車交通事故，經本保險之保險人提供保險給付後，得向強制汽車責任保險之保險人請求償付該項給付。」 zh wording changed from 「代位求償」 to 「代位請求」 to match 給付標準 Art. 2(6) 「…依全民健康保險法第九十五條規定，向本保險之保險人代位請求。」
+
+r3 (2026-10-21): ja now also states the Art. 31(2) proviso (no reimbursement to the insured where the claimant and insured agreed against deduction) — source: Art. 31 text above, re-fetched live 2026-10-21. en Art. 32 sentence → "counts toward the damages the insured owes" (Art. 32: 「視為被保險人損害賠償金額之一部分；被保險人受賠償請求時，得扣除之」).

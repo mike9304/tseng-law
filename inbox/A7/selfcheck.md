@@ -39,3 +39,10 @@ Queued angle (dissolution, liquidation, deregistration, tax clearance before rep
 ## Astra r2 re-check (2026-10-21 ~00:05 KST)
 - variety FAIL 0 (ko/ja/en; zh --lang zh-hant). links.py BAD 0. YAML OK x4; faq 3; featured_image TBD; no 曾雋崴; no bold.
 - Lengths (blen.py): en 904 words, ko 1,910 chars without spaces, ja 1,978, zh 1,491.
+
+## Astra r3 (2026-10-21)
+1. MAJOR Art. 8(3) proviso (x4): re-fetched live (LawSingle J0080001 flno=8: 「但政府為發展經濟、促進社會安定或其他增進公共利益等情形，對政府指派之董事所為之指揮，不適用之」). Each locale now states both limits — the government itself gives the direction, to directors it appointed, for economic development / social stability / other public interest — as a separate sentence after the Art. 8(3) citation.
+2. MINOR ja FAQ2: split into 「…その定めや選任に従います。清算人を定められないときは、利害関係人の申請により、裁判所が選任できます」.
+3. MINOR ja summary announcement sentence deleted.
+4. MINOR Art. 7(1) (x4): inline LawSingle link added and 第7条/제7조/Art. 7/第7條 added to each source list (Art. 7 re-fetched live: 設立登記時或設立登記後三十日內檢送會計師查核簽證文件).
+Checks: variety OK ko/ja/en/zh, links BAD 0, YAML OK x4 (faq 3 each), ko 1,949 / ja 2,015 / zh 1,525 chars, en ~930 words; no lawyer name, no bold.

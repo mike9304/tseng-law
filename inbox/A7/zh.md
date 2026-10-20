@@ -28,7 +28,7 @@ author: "legal-ai-assistant"
 
 ## 命令解散的幾種情形
 
-命令解散的事由，[公司法第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=10)列了四款：設立登記後六個月尚未開始營業，但已辦妥延展登記者除外；開始營業後自行停止營業六個月以上，但已辦妥停業登記者除外；公司名稱經法院判決確定不得使用，判決確定後六個月內未辦妥名稱變更登記，經主管機關限期辦理仍未辦妥；未在第7條第1項所定期限內檢送會計師查核簽證文件，但命令解散前已檢送者除外。
+命令解散的事由，[公司法第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=10)列了四款：設立登記後六個月尚未開始營業，但已辦妥延展登記者除外；開始營業後自行停止營業六個月以上，但已辦妥停業登記者除外；公司名稱經法院判決確定不得使用，判決確定後六個月內未辦妥名稱變更登記，經主管機關限期辦理仍未辦妥；未在[第7條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=7)所定期限內檢送會計師查核簽證文件，但命令解散前已檢送者除外。
 
 停業登記的期間、程序和停業期間的稅務申報，可以參考〈[結束台灣公司時，資本額與公司財產應如何處理？](/zh-hant/columns/withdraw-capital-taiwan-company)〉。
 
@@ -38,7 +38,7 @@ author: "legal-ai-assistant"
 
 誰來清算？要看公司種類。股份有限公司以董事為清算人；公司法或章程另有規定、股東會另選清算人時從其規定，不能依此定清算人時，法院得因利害關係人之聲請選派（[第322條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=322)）。有限公司依第113條準用無限公司規定，原則上以全體股東為清算人，但本法或章程另有規定或經股東決議另選清算人者除外（[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=79)）；不能依此定清算人時，法院得因利害關係人之聲請選派（[第81條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=81)）。子公司如果是股份有限公司，又適用董事為清算人的原則，母公司派來兼任董事的主管，在公司解散後就坐上了清算人的位子。
 
-清算人在執行職務範圍內也是公司負責人（[第8條第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)）。股份有限公司的清算人就任後，應即檢查公司財產情形，造具財務報表及財產目錄，送經監察人審查，提請股東會承認後並即報法院；妨礙、拒絕或規避檢查的，各處二萬元以上十萬元以下罰鍰（[第326條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=326)）。有限公司的清算人則依第113條準用第87條第1項、第2項，造具資產負債表及財產目錄送交股東查閱。不是董事、卻實質上執行董事業務，或實質控制公司人事、財務、業務而指揮董事的人，與董事同負民事、刑事及行政罰責任（[第8條第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)，政府對其指派董事所為指揮等除外）。
+清算人在執行職務範圍內也是公司負責人（[第8條第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)）。股份有限公司的清算人就任後，應即檢查公司財產情形，造具財務報表及財產目錄，送經監察人審查，提請股東會承認後並即報法院；妨礙、拒絕或規避檢查的，各處二萬元以上十萬元以下罰鍰（[第326條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=326)）。有限公司的清算人則依第113條準用第87條第1項、第2項，造具資產負債表及財產目錄送交股東查閱。不是董事、卻實質上執行董事業務，或實質控制公司人事、財務、業務而指揮董事的人，與董事同負民事、刑事及行政罰責任（[第8條第3項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)）。但政府為發展經濟、促進社會安定或其他增進公共利益等情形，對政府指派的董事所為之指揮，不適用這項規定。
 
 期限是六個月。清算人應於六個月內完結清算，不能完結時得申敘理由向法院聲請展期；逾期未完結，各處一萬元以上五萬元以下罰鍰（第87條第3項、第4項）。股份有限公司依[第334條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=334)準用，有限公司則依[第113條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=113)準用無限公司的規定。
 
@@ -56,6 +56,6 @@ author: "legal-ai-assistant"
 
 ## 參考資料
 
-- 全國法規資料庫・公司法：[第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)、[第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=10)、[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=24)、[第25條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=25)、[第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=26)、[第26條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=26-2)、[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=79)、[第81條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=81)、[第87條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87)、[第89條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=89)、[第113條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=113)、[第322條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=322)、[第326條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=326)、[第334條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=334)、[第397條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=397)（修正至114年12月26日）
+- 全國法規資料庫・公司法：[第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=7)、[第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)、[第10條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=10)、[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=24)、[第25條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=25)、[第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=26)、[第26條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=26-2)、[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=79)、[第81條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=81)、[第87條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87)、[第89條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=89)、[第113條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=113)、[第322條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=322)、[第326條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=326)、[第334條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=334)、[第397條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=397)（修正至114年12月26日）
 
 資料查核日期：2026年10月20日

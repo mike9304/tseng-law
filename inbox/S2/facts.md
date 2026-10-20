@@ -87,3 +87,21 @@ Other judgments read, not used: TCDV 113婚268, CYDV 113婚127, HLDV 112婚58, K
 - ja /ja/columns/taiwanese-spouse-divorce-agreement-registration (columns-ja/019)
 - en /en/columns/taiwanese-spouse-divorce-agreement-registration (columns-en/019)
 - zh /zh-hant/columns/divorce-agreement-terms-before-signing (columns-zh/114) and /zh-hant/columns/taiwanese-spouse-divorce-agreement-registration (columns-zh/019)
+
+
+## Astra r2 additions (2026-10-20 21:05 KST)
+
+### Appellate history (official 歷審裁判 endpoint, evidence/judgment-history.txt)
+- 新北 113婚455 → 臺灣高等法院 114年度審家上字第14號 (2025-05-27) [撤回上訴]. No public text for the withdrawal; the history entry is the source. Drafts: "appeal withdrawn on May 27, 2025".
+- 桃園 112婚449 → 臺灣高等法院 114年度審家上字第10號 (2025-06-02, no text) → 臺灣高等法院 114年度家上字第95號 判決 (2025-10-22) 主文「上訴駁回」. URL https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c95%2c20251022%2c1 ; evidence/highcourt-114-jiashang-95.txt. Key: 「證人甲○○等2人對兩造之離婚真意均有見聞，再據以同意為離婚見證」. No later decision listed (third-instance appeal was possible; drafts do not call it final).
+- 臺東 113婚27 → 臺灣高等法院花蓮分院 114年度家上字第6號 判決 (2025-12-24) 主文「上訴駁回」 (appellant = the wife, first-instance defendant) → 最高法院 115年度台上字第756號 裁定 (2026-05-07) 「上訴駁回」, reason 「應認其上訴為不合法」. URLs: HLHV …%2c6%2c20251224%2c1 ; TPSV …%2c756%2c20260507%2c1 ; evidence/hualien-114-jiashang-6.txt, evidence/supreme-115-756.txt.
+- 高院 114家上28 (from 基隆地院 113婚21) → 裁定 2025-06-04 (order to pay NT$6,750 third-instance fee and appoint a lawyer within 7 days) → 裁定 2025-06-25 主文「上訴駁回」 because not cured (「上訴人逾期迄未補正…其上訴自非合法」). URL TPHV …%2c28%2c20250625%2c3 ; evidence/highcourt-114-28-ruling-0604.txt, -0625.txt. The 6/25 ruling itself was open to 抗告 within 10 days; no later decision listed.
+
+### Taitung witness testimony (Astra r2 MAJOR, zh line 46) — now attributed
+evidence/taitung-113-27.txt: 丁○○ 「我是跟被告說，妳真的要跟妳老公離婚嗎？她們兩個就點頭」, 「是我靠到副駕駛座的車窗那邊」; 丙○○ 「她老公有口頭上回答『對』」. Court: 「足徵證人丁○○及丙○○於離婚協議書上簽名之前，既不認識原告，於簽名見證之際，亦未核對確認彼時與被告同往之人，是否確為被告之配偶即原告」; the witnesses' account that both spouses had already signed contradicted the defendant's own account that the spouses signed later at the household registration office → 「證人丁○○、丙○○上開所為證述是否真實，殊值懷疑」; conclusion 「即非屬適格之證人」. All four drafts now present the car-side questioning as testimony, then the court's doubt and its finding.
+
+### Count statements (Astra r2 MAJOR zh line 4 / line 30)
+New Taipei: only one witness failed (the other had confirmed both spouses' intent) → summaries now say "lacked two qualified witnesses" (三件因未具備兩名適格證人而認定離婚無效 / 적격 증인 두 명이 갖추어지지 않았다 / 適格な証人が二人そろっていない). Frequency wording ("判決書裡常見", "法官先翻開的往往是", "Taiwanese judgments describe", "判決文には", "판결문에 나오는") replaced in all four locales with the bounded statement about the four judgments cited.
+
+### Motives listed in the opening (all from the cited judgments)
+新北: 債務協商; 臺東: 「若係單親身分較容易取得補助」 (ko/ja/en/zh now say "to make subsidies easier to get" rather than "single-parent subsidies"); 桃園: 配偶父母擔任保證人, 免原告財產遭查封; 高院 114家上28: 藝人身分 (not listed in the drafts).

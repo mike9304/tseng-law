@@ -58,3 +58,25 @@ taiwan-remaining-property-split-adjustment-separation (0 filename matches).
 8. MINOR en: "would empty that rule" changed to "would undermine that exclusion".
 featured_image "TBD": same as S1 and S2, kept per TASK.md. The user's decision is pending via the bridge.
 Variety after fixes: FAIL 0 in all four files (ko cv 0.483, ja 0.479, en 0.514, zh 0.597). en has 842 words.
+
+
+## Astra r2 response (2026-10-20 21:20 KST)
+1–4. MAJOR, lawyer name: removed in all four contact lines.
+5. MAJOR, ja trigger: 「法定財産制が終了するとき」.
+6. MAJOR, en "jointly": now "jointly and severally, limited to the inherited estate" (主文 「於繼承…遺產範圍內，連帶給付」).
+7. MAJOR, authentication: same method as S1 (official FJUD HTML with SHA-256 + 歷審裁判 endpoint; evidence/README.md).
+8. MINOR, en: the "obvious question" sentence was replaced by the question itself.
+9. MINOR, ko: the repeated land-acquisition clause was removed from the closing.
+Proactive (appeal histories): 最高法院 111台上2561 was followed on remand by 高院 111家上更一22 (2023-07-05), which split the remaining property 30/70 (NT$1,365,199 instead of the NT$2,275,331 claimed), 「兩造均不得上訴」. This is the confirmed reduction example that r1 lacked, and it is now in the body, summary, FAQ 1 and closing of all four locales. 臺南高分院 113重家上3: 最高法院 114台上565 (2025-03-26) rejected the appeal as improper, so the judgment is final. 臺北地院 111重家財訴10 was appealed and settled in mediation at the High Court on 2024-12-03 (terms not public); summary, FAQ 2 and body say so. zh: 茶園→茶廠 (as in the judgment); 「往往就是爭點」→「就可能成為爭點」.
+
+Variety after fixes (FAIL 0 in all four):
+    drafts/S3/ko.md [ko] sentences=47 mean=42.5 cv=0.467 short=0.149 run3=0.044 opener_rep=0.0 cite_end=0.043 cite_para=0.5 contrast=0 caveat=0 q=1
+    drafts/S3/ja.md [ja] sentences=47 mean=45.1 cv=0.479 short=0.128 run3=0.044 opener_rep=0.167 cite_end=0.043 cite_para=0.5 contrast=0 caveat=1 q=0
+    drafts/S3/en.md [en] sentences=51 mean=19.8 cv=0.51 short=0.137 run3=0.041 opener_rep=0.0 cite_end=0.0 cite_para=0.385 contrast=0 caveat=0 q=1
+    drafts/S3/zh.md [ko] sentences=38 mean=41.3 cv=0.595 short=0.184 run3=0.056 opener_rep=0.0 cite_end=0.053 cite_para=0.5 contrast=0 caveat=0 q=1
+Lengths:
+    drafts/S3/ko.md chars(no space)= 2125 chars(with space)= 2726 en-words= 147
+    drafts/S3/ja.md chars(no space)= 2230 chars(with space)= 2261 en-words= 71
+    drafts/S3/en.md chars(no space)= 5068 chars(with space)= 6079 en-words= 1015
+    drafts/S3/zh.md chars(no space)= 1674 chars(with space)= 1706 en-words= 60
+YAML front matter parses (Ruby YAML.safe_load), 3 FAQ, author token, featured_image "TBD" (user decision, option A). Every URL in the four files returns HTTP 200 (curl, browser User-Agent, 2026-10-20). No bold, no lawyer name, no byline.

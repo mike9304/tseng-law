@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c28%2c20250423%2c1
 Retrieved: 2026-10-20 19:30 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: 9e93d98dfa1b40bf8acc261266a6cb2e2de92639f6134357f599bf77778caf80
 裁判字號: 臺灣高等法院 114 年度家上字第 28 號民事判決
 裁判日期: 民國 114 年 04 月 23 日
 裁判案由: 離婚

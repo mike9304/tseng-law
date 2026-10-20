@@ -1,0 +1,6 @@
+Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2C113%2C%E5%AF%A9%E5%AE%B6%E4%B8%8A%E7%A7%BB%E8%AA%BF%2C70%2C20241203%2C1
+Retrieved: 2026-10-20 20:55 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: 3023adc915ea360d26a0e3d617e989bd95e8cb187f774befac0ce6c4610f5199
+
+字號:                     臺灣高等法院 113 年度審家上移調字第 70 號民事調解筆錄
+                                【113審家上移調70】本件經程式判定為依法不得公開或須去識別化後公開之案件，如非屬此類案件，請至裁判法院之[司法信箱]投書，法院將儘速處理。

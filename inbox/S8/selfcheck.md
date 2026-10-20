@@ -46,3 +46,11 @@ taiwan-severance-retirement-income-tax-foreign-employees-183-days (0 matches).
 
 ## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
 - Art. 71-1(2): added the proviso that a resident spouse staying in Taiwan files jointly. Art. 92: added the 5-day extension for 3+ consecutive holidays and the Feb 15 extension. Added evidence/mof-2026-amounts-announcement.txt (gazette text).
+
+
+## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
+    drafts/S8/ko.md [ko] sentences=36 mean=38.3 cv=0.48 short=0.083 run3=0.029 opener_rep=0.0 cite_end=0.167 cite_para=0.385 contrast=0 caveat=2 q=0
+    drafts/S8/ja.md [ja] sentences=35 mean=40.3 cv=0.46 short=0.171 run3=0.03 opener_rep=0.0 cite_end=0.171 cite_para=0.385 contrast=0 caveat=1 q=0
+    drafts/S8/en.md [en] sentences=43 mean=17.2 cv=0.498 short=0.186 run3=0.049 opener_rep=0.0 cite_end=0.047 cite_para=0.462 contrast=1 caveat=0 q=1
+    drafts/S8/zh.md [ko] sentences=30 mean=38.4 cv=0.631 short=0.1 run3=0.0 opener_rep=0.0 cite_end=0.1 cite_para=0.462 contrast=0 caveat=0 q=1

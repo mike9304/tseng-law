@@ -1,0 +1,12 @@
+Judgment history (歷審裁判) from the Judicial Yuan FJUD endpoint judgment.judicial.gov.tw/controls/GetJudHistory.ashx
+Retrieved: 2026-10-20 20:55 KST via curl
+
+== CPEV,114,竹東小,28,20250303,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=CPEV%60114%60%E7%AB%B9%E6%9D%B1%E5%B0%8F%6028%60114%2C%E7%AB%B9%E6%9D%B1%E5%B0%8F%2C28%2C20250303%2C1
+   count: 0
+== PCDV,111,訴,1496,20221026,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=PCDV%60111%60%E8%A8%B4%601496%60111%2C%E8%A8%B4%2C1496%2C20221026%2C1
+   count: 3
+   - 臺灣新北地方法院 111 年度 補 字第 884 號裁定(111.05.25) | data.aspx?ty=JD&id=PCDV%2c111%2c%e8%a3%9c%2c884%2c20220525%2c1
+   - 臺灣新北地方法院 111 年度 訴 字第 1496 號判決(111.10.26) | data.aspx?ty=JD&id=PCDV%2c111%2c%e8%a8%b4%2c1496%2c20221026%2c1
+   - 臺灣高等法院 112 年度 上易 字第 292 號判決(112.05.31) | data.aspx?ty=JD&id=TPHV%2c112%2c%e4%b8%8a%e6%98%93%2c292%2c20230531%2c1

@@ -1,0 +1,24 @@
+Judgment history (歷審裁判) from the Judicial Yuan FJUD endpoint judgment.judicial.gov.tw/controls/GetJudHistory.ashx
+Retrieved: 2026-10-20 20:55 KST via curl
+
+== TPSV,111,台上,2561,20221125,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=TPSV%60111%60%E5%8F%B0%E4%B8%8A%602561%60111%2C%E5%8F%B0%E4%B8%8A%2C2561%2C20221125%2C1
+   count: 5
+   - 臺灣士林地方法院 108 年度 婚 字第 198 號判決(108.10.29) | data.aspx?ty=JD&id=SLDV%2c108%2c%e5%a9%9a%2c198%2c20191029%2c1
+   - 臺灣高等法院 109 年度 家上 字第 5 號裁定(109.05.29) | data.aspx?ty=JD&id=TPHV%2c109%2c%e5%ae%b6%e4%b8%8a%2c5%2c20200529%2c1
+   - 臺灣高等法院 109 年度 家上 字第 5 號判決(111.05.27) | data.aspx?ty=JD&id=TPHV%2c109%2c%e5%ae%b6%e4%b8%8a%2c5%2c20220527%2c2
+   - 最高法院 111 年度 台上 字第 2561 號判決(111.11.25) | data.aspx?ty=JD&id=TPSV%2c111%2c%e5%8f%b0%e4%b8%8a%2c2561%2c20221125%2c1
+   - 臺灣高等法院 111 年度 家上更一 字第 22 號判決(112.07.05) | data.aspx?ty=JD&id=TPHV%2c111%2c%e5%ae%b6%e4%b8%8a%e6%9b%b4%e4%b8%80%2c22%2c20230705%2c1
+== TNHV,113,重家上,3,20241218,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=TNHV%60113%60%E9%87%8D%E5%AE%B6%E4%B8%8A%603%60113%2C%E9%87%8D%E5%AE%B6%E4%B8%8A%2C3%2C20241218%2C1
+   count: 4
+   - 臺灣嘉義地方法院 111 年度 家財訴 字第 12 號判決(112.12.18) | data.aspx?ty=JD&id=CYDV%2c111%2c%e5%ae%b6%e8%b2%a1%e8%a8%b4%2c12%2c20231218%2c1
+   - 臺灣嘉義地方法院 111 年度 家財訴 字第 12 號裁定(113.01.04) | data.aspx?ty=JD&id=CYDV%2c111%2c%e5%ae%b6%e8%b2%a1%e8%a8%b4%2c12%2c20240104%2c2
+   - 臺灣高等法院 臺南分院 113 年度 重家上 字第 3 號判決(113.12.18) | data.aspx?ty=JD&id=TNHV%2c113%2c%e9%87%8d%e5%ae%b6%e4%b8%8a%2c3%2c20241218%2c1
+   - 最高法院 114 年度 台上 字第 565 號裁定(114.03.26) | data.aspx?ty=JD&id=TPSV%2c114%2c%e5%8f%b0%e4%b8%8a%2c565%2c20250326%2c1
+== TPDV,111,重家財訴,10,20240227,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=TPDV%60111%60%E9%87%8D%E5%AE%B6%E8%B2%A1%E8%A8%B4%6010%60111%2C%E9%87%8D%E5%AE%B6%E8%B2%A1%E8%A8%B4%2C10%2C20240227%2C1
+   count: 3
+   - 臺灣臺北地方法院 111 年度 重家財訴 字第 10 號判決(113.02.27) | data.aspx?ty=JD&id=TPDV%2c111%2c%e9%87%8d%e5%ae%b6%e8%b2%a1%e8%a8%b4%2c10%2c20240227%2c1
+   - 臺灣高等法院 113 年度 審重家上 字第 41 號(113.12.03)[調解成立] | 
+   - 臺灣高等法院 113 年度 審家上移調 字第 70 號調解筆錄(113.12.03) | data.aspx?ty=JD&id=TPHV%2c113%2c%e5%af%a9%e5%ae%b6%e4%b8%8a%e7%a7%bb%e8%aa%bf%2c70%2c20241203%2c1

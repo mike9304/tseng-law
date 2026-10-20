@@ -1,0 +1,29 @@
+Judgment history (歷審裁判) from the Judicial Yuan FJUD endpoint judgment.judicial.gov.tw/controls/GetJudHistory.ashx
+Retrieved: 2026-10-20 20:55 KST via curl
+
+== PCDV,113,婚,455,20241220,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=PCDV%60113%60%E5%A9%9A%60455%60113%2C%E5%A9%9A%2C455%2C20241220%2C1
+   count: 2
+   - 臺灣新北地方法院 113 年度 婚 字第 455 號判決(113.12.20) | data.aspx?ty=JD&id=PCDV%2c113%2c%e5%a9%9a%2c455%2c20241220%2c1
+   - 臺灣高等法院 114 年度 審家上 字第 14 號(114.05.27)[撤回上訴] | 
+== TYDV,112,婚,449,20241115,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=TYDV%60112%60%E5%A9%9A%60449%60112%2C%E5%A9%9A%2C449%2C20241115%2C1
+   count: 3
+   - 臺灣桃園地方法院 112 年度 婚 字第 449 號判決(113.11.15) | data.aspx?ty=JD&id=TYDV%2c112%2c%e5%a9%9a%2c449%2c20241115%2c1
+   - 臺灣高等法院 114 年度 審家上 字第 10 號(114.06.02) | 
+   - 臺灣高等法院 114 年度 家上 字第 95 號判決(114.10.22) | data.aspx?ty=JD&id=TPHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c95%2c20251022%2c1
+== TPHV,114,家上,28,20250423,1
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=TPHV%60114%60%E5%AE%B6%E4%B8%8A%6028%60114%2C%E5%AE%B6%E4%B8%8A%2C28%2C20250423%2C1
+   count: 5
+   - 臺灣基隆地方法院 113 年度 婚 字第 21 號判決(113.05.30) | data.aspx?ty=JD&id=KLDV%2c113%2c%e5%a9%9a%2c21%2c20240530%2c1
+   - 臺灣高等法院 113 年度 審家上 字第 248 號(114.01.22) | 
+   - 臺灣高等法院 114 年度 家上 字第 28 號判決(114.04.23) | data.aspx?ty=JD&id=TPHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c28%2c20250423%2c1
+   - 臺灣高等法院 114 年度 家上 字第 28 號裁定(114.06.04) | data.aspx?ty=JD&id=TPHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c28%2c20250604%2c2
+   - 臺灣高等法院 114 年度 家上 字第 28 號裁定(114.06.25) | data.aspx?ty=JD&id=TPHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c28%2c20250625%2c3
+== TTDV,113,婚,27,20250109,2
+   endpoint: https://judgment.judicial.gov.tw/controls/GetJudHistory.ashx?jid=TTDV%60113%60%E5%A9%9A%6027%60113%2C%E5%A9%9A%2C27%2C20250109%2C2
+   count: 4
+   - 臺灣臺東地方法院 113 年度 婚 字第 27 號裁定(113.12.04) | data.aspx?ty=JD&id=TTDV%2c113%2c%e5%a9%9a%2c27%2c20241204%2c1
+   - 臺灣臺東地方法院 113 年度 婚 字第 27 號判決(114.01.09) | data.aspx?ty=JD&id=TTDV%2c113%2c%e5%a9%9a%2c27%2c20250109%2c2
+   - 臺灣高等法院 花蓮分院 114 年度 家上 字第 6 號判決(114.12.24) | data.aspx?ty=JD&id=HLHV%2c114%2c%e5%ae%b6%e4%b8%8a%2c6%2c20251224%2c1
+   - 最高法院 115 年度 台上 字第 756 號裁定(115.05.07) | data.aspx?ty=JD&id=TPSV%2c115%2c%e5%8f%b0%e4%b8%8a%2c756%2c20260507%2c1

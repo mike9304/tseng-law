@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TNHV%2c113%2c%e9%87%8d%e5%ae%b6%e4%b8%8a%2c3%2c20241218%2c1
 Retrieved: 2026-10-20 19:33 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: 2e9abd93eb27d6e8563792e1b38f2999e48cf3986049395eb96473dd5cf1e438
 裁判字號: 臺灣高等法院 臺南分院 113 年度重家上字第 3 號民事判決
 裁判日期: 民國 113 年 12 月 18 日
 裁判案由: 夫妻剩餘財產分配

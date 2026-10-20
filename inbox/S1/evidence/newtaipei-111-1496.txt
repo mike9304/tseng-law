@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c111%2c%e8%a8%b4%2c1496%2c20221026%2c1
 Retrieved: 2026-10-20 19:27 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: 5cc88d22b8d2f2cd38e458719950b1d5c54ed79badea56fb1aaecdd78fdb8f0b
 裁判字號: 臺灣新北地方法院 111 年度訴字第 1496 號民事判決
 裁判日期: 民國 111 年 10 月 26 日
 裁判案由: 返還不當得利

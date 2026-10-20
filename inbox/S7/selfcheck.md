@@ -49,3 +49,11 @@ taiwan-rental-scooter-car-accident-repair-loss-of-use-mediation (0 matches).
 
 ## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
 - Scooter repair costs by degree of fault: added 'unless otherwise agreed' (term 14). CALI: 'in principle' in ko/ja summaries; Art. 28 victim-intent/crime exclusion; Art. 29 insurer pays and then recovers from a drunk or unlicensed driver (Road Traffic Management and Penalty Act 21/21-1). Sources updated. Added evidence copies of both MOTC rental-term documents.
+
+
+## 2026-10-20 21:20 KST — no-byline rule (TASK.md 2026-10-20; Astra r2 on S1–S3)
+I removed the lawyer's name and title from the contact line in ko/ja/en/zh. The line now gives the firm, wei@hoveringlaw.com.tw and the Taichung address (19號6樓之1) only. This topic cites no court judgments (S6 cites J.Y. Interpretation 726, which has no appeal history). Variety rechecked:
+    drafts/S7/ko.md [ko] sentences=43 mean=36.1 cv=0.484 short=0.093 run3=0.0 opener_rep=0.0 cite_end=0.233 cite_para=0.273 contrast=1 caveat=2 q=0
+    drafts/S7/ja.md [ja] sentences=46 mean=35.2 cv=0.499 short=0.152 run3=0.068 opener_rep=0.0 cite_end=0.217 cite_para=0.273 contrast=0 caveat=2 q=0
+    drafts/S7/en.md [en] sentences=44 mean=18.6 cv=0.528 short=0.182 run3=0.0 opener_rep=0.182 cite_end=0.273 cite_para=0.273 contrast=0 caveat=0 q=0
+    drafts/S7/zh.md [ko] sentences=35 mean=35.5 cv=0.574 short=0.229 run3=0.03 opener_rep=0.0 cite_end=0.229 cite_para=0.333 contrast=0 caveat=0 q=1

@@ -56,3 +56,23 @@ https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c111%2c%e9%87%8d%
 - ja /ja/columns/japan-taiwan-couple-marital-property-governing-law (columns-ja/267)
 - en /en/columns/taiwan-marital-property-division-us-assets (columns-en/213)
 - zh /zh-hant/columns/taiwan-marital-property-regime-international-couples (columns-zh/046), /zh-hant/columns/remaining-property-distribution-calculation (columns-zh/106)
+
+
+## Astra r2 additions (2026-10-20 21:15 KST)
+
+### Appellate history (official 歷審裁判 endpoint, evidence/judgment-history.txt)
+- 最高法院 111台上2561 (from 士林地院 108婚198 → 高院 109家上5) → 臺灣高等法院 111年度家上更一字第22號 判決 (2023-07-05). URL https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2c111%2c%e5%ae%b6%e4%b8%8a%e6%9b%b4%e4%b8%80%2c22%2c20230705%2c1 ; evidence/highcourt-111-remand-22.txt (names masked). Key passages:
+  - 主文 「反請求被告應給付反請求原告新臺幣壹佰參拾陸萬伍仟壹佰玖拾玖元」; claimed 「請求反請求被告給付伊227萬5,331元」.
+  - 「反請求原告於兩造分房後…僅支應如有線電視、健保費、部分學貸本金及利息等家中最低生活需求…對於兩造分房後彼此婚後財產增益之貢獻應非甚高」
+  - 「該期間占自兩造結婚日起至基準日止之整體比例約為25分之7等一切情事，認由反請求原告、反請求被告依序按30%、70%之比例分配剩餘財產為適當」; difference 455萬663元 × 30% = 136萬5,199元.
+  - 「正本係照原本作成。兩造均不得上訴。」 → drafts: "neither side may appeal" / (확정) / （確定）.
+  - This resolves the r1 open risk "no confirmed reduction example": the reduction example is now in body, summary and FAQ 1 of all four locales.
+- 臺南高分院 113重家上3 → 最高法院 114年度台上字第565號 裁定 (2025-03-26) 「上訴駁回」, 「應認其上訴為不合法」. URL https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPSV%2c114%2c%e5%8f%b0%e4%b8%8a%2c565%2c20250326%2c1 ; evidence/supreme-114-565.txt. The ruling restates the Tainan findings (land bought before the 2015 separation, 雜貨店, 煮3餐供…茶廠工人, travel within means). Drafts: final.
+- 臺北地院 111重家財訴10 → 臺灣高等法院 113年度審重家上字第41號 (2024-12-03) [調解成立]; 調解筆錄 113審家上移調70 is not public (FJUD: 「依法不得公開或須去識別化後公開之案件」, evidence/highcourt-113-mediation-70.txt). Drafts: appealed, settled in mediation on 2024-12-03, terms not public. Who appealed is not shown, so drafts do not say.
+
+### Astra r2 item fixes
+- ja 「夫婦の関係が終わるとき」 → 「法定財産制が終了するとき」 (Art. 1030-1(1) trigger is the end of the statutory regime; cf. Art. 1010 judicial separation of property).
+- en "jointly" → "jointly and severally, limited to the inherited estate" (主文 「被告應於繼承被繼承人丁ＯＯ之遺產範圍內，連帶給付原告」, evidence/taipei-111-10.txt).
+- en "that raises an obvious question" → the question itself.
+- ko closing: the repeated land-acquisition clause removed; closing now lists each court's own ground once.
+- zh 「煮飯給茶園工人吃」 → 「煮飯給茶廠工人吃」 (TNHV: 「曾煮飯供茶廠工人食用」); zh 「往往就是爭點」 → 「就可能成為爭點」 (no frequency claim).

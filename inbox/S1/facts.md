@@ -87,4 +87,25 @@ Other judgments read and NOT used (account-provider cases, not sellers): 士林 
 - ko: Korean in Taipei selling a camera; ja: Japanese in Taichung selling a bicycle; en: reader in Kaohsiung selling a road bike; zh: reader selling a game console in a secondhand group. Each labelled (가상의 사례입니다 / 架空の例です / an invented example / 虛構情境).
 
 ## Contact
-- wei@hoveringlaw.com.tw; Taichung office 40453 臺中市北區館前路19號6樓之1 (en: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453, as used in existing en columns). Lawyer 曾雋崴. No phone.
+- wei@hoveringlaw.com.tw; Taichung office 40453 臺中市北區館前路19號6樓之1 (en: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453, as used in existing en columns). No lawyer name or title in the body (user decision 2026-10-20, Astra r2). No phone.
+
+
+## Astra r2 additions (2026-10-20 20:55 KST)
+
+### 臺灣高等法院 112年度上易字第292號 民事判決 (2023-05-31) — appeal from 新北 111訴1496
+URL: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2c112%2c%e4%b8%8a%e6%98%93%2c292%2c20230531%2c1 (retrieved directly from judgment.judicial.gov.tw, HTTP 200; masked copy with SHA-256 of the official HTML: evidence/highcourt-112-shangyi-292.txt)
+- 「上訴人對於中華民國111年10月26日臺灣新北地方法院111年度訴字第1496號第一審判決提起上訴」 → it is the appeal of the New Taipei judgment.
+- 主文 「原判決廢棄。被上訴人在第一審之訴及假執行之聲請均駁回。」 → first-instance judgment set aside, claim dismissed.
+- 「趙威翰於109年1月8日出售23,000顆泰達幣予JASON，而取得系爭款項，有虛擬貨幣交易紀錄等件可稽…且檢察官偵查後亦認趙威翰係因泰達幣買賣而取得系爭款項，有…不起訴處分書…可佐」 → sale of 23,000 USDT accepted on transaction records + non-prosecution decision of the same view.
+- 「其性質核屬指示給付關係…兩造間僅存在履行關係，並無給付關係及給付目的存在…被上訴人或張家瑋自不得向非「致」其財產受損害之上訴人為請求」; 「被上訴人亦僅得向指示人（袁夢菲、亨達全球）請求返還」 → directed payment; claim lies against the instructor.
+- 「至於袁夢菲、亨達全球與JASON是否為同一詐騙集團均無礙於認定…」 → same-group question does not change the result.
+- 「被證2、10之泰達幣交易紀錄雖因截圖不當漏載電子錢包幣址最後一碼…上訴人於本院審理時已提出完整版本上證3、4」 → first-instance screenshots missed the last character of the sender address; complete versions filed on appeal.
+- 「正本係照原本作成。不得上訴。」 → no further appeal.
+
+### Appellate status of both cited first-instance judgments (official 歷審裁判 endpoint)
+evidence/judgment-history.txt (GetJudHistory.ashx on judgment.judicial.gov.tw, retrieved 2026-10-20 20:55 KST):
+- 新北 111訴1496 → history lists 111補884 (fee ruling), 111訴1496, 臺灣高等法院112上易292. Drafts now describe the reversal in body, summary, FAQ 3, sources and closing (all four locales).
+- 竹東 114竹東小28 → history count 0 (no higher-instance record listed). Drafts call it a first-instance small-claims judgment and do not claim finality.
+
+### Authentication note
+Astra r2 could not open judicial.gov.tw. All three judgment texts were fetched from judgment.judicial.gov.tw/FJUD/data.aspx by curl with a browser User-Agent (HTTP 200 on 2026-10-20). Each evidence copy now carries the Source URL, retrieval time, HTTP status and the SHA-256 of the official HTML as retrieved. Party names are masked only in the evidence copies; the drafts name no parties.

@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=CPEV%2c114%2c%e7%ab%b9%e6%9d%b1%e5%b0%8f%2c28%2c20250303%2c1
 Retrieved: 2026-10-20 19:27 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: 3bbe0deb68391672f8e66d44db27de7ed9de6229fe45d36b68a2ce438f0f30a2
 裁判字號: 竹北簡易庭(含竹東) 114 年度竹東小字第 28 號民事判決
 裁判日期: 民國 114 年 03 月 03 日
 裁判案由: 返還不當得利

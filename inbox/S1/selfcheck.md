@@ -65,3 +65,23 @@ taiwan-triangular-scam-seller-account-frozen (0 matches for "triangular|seller-a
 6. MINOR, en: replaced "the account side" with "the company that received the money". I made the matching change in ko/ja/zh (계좌 쪽 / 口座側 / 帳戶一方 → the company that received the money / the account-holding company).
 7. MINOR, zh: replaced "在櫃檯解釋再久也沒用。" with "單憑在櫃檯說明交易經過，不能解除警示。"
 Variety after fixes: FAIL 0 in all four files (ko cv 0.503, ja 0.464, en 0.499, zh 0.526). Lengths: ko 2,074 chars, ja 2,198, zh 1,786, en 1,002 words, all within range.
+
+
+## Astra r2 response (2026-10-20 21:20 KST)
+1. MAJOR, appellate history: verified on judicial.gov.tw (FJUD data.aspx + official 歷審裁判 endpoint). 新北 111訴1496 was reversed by 臺灣高等法院 112年度上易字第292號 (2023-05-31): judgment set aside, claim dismissed, 「不得上訴」. All four locales now describe the first instance and the appeal separately (body, summary, FAQ 3, closing, sources). The appellate reasoning is given as the court's own: sale of 23,000 USDT accepted on the transaction records + the non-prosecution decision; first-instance screenshots missed the last character of the sender wallet address; directed payment → claim lies against the instructor; same-group question irrelevant. The closing states only the two final outcomes (竹東 and the High Court both dismissed and pointed to the instructor) plus the fact that the High Court first checked the sale records; no cross-case causal claim. 竹東: history count 0, now labelled "first-instance small-claims judgment" without a finality claim.
+2–5. MAJOR, lawyer name in contact line: removed in ko/ja/en/zh (and, proactively, in S2–S8). Contact line keeps the firm, email and Taichung address only.
+6. MAJOR, authentication: all three judgments retrieved from judgment.judicial.gov.tw (HTTP 200); evidence copies carry Source URL, time, status and SHA-256 of the official HTML; evidence/judgment-history.txt holds the official appeal history; evidence/README.md explains the method. I cannot reproduce the gate's network block from here.
+7. MINOR, en antecedent: "The ordinary watch-list period is two years from notification." Same fix in ko (경시 기간은…), ja (警示期限は…), zh (警示期限自通報時起算兩年).
+8. MINOR, en opener: the "Here is how it can look" sentence is gone; the road-bike sentence now carries "(an invented example)".
+
+Variety after fixes (FAIL 0 in all four):
+    drafts/S1/ko.md [ko] sentences=55 mean=37.7 cv=0.478 short=0.109 run3=0.0 opener_rep=0.0 cite_end=0.091 cite_para=0.643 contrast=0 caveat=0 q=2
+    drafts/S1/ja.md [ja] sentences=57 mean=40.3 cv=0.452 short=0.105 run3=0.036 opener_rep=0.0 cite_end=0.123 cite_para=0.643 contrast=0 caveat=0 q=1
+    drafts/S1/en.md [en] sentences=56 mean=19.4 cv=0.46 short=0.125 run3=0.019 opener_rep=0.071 cite_end=0.054 cite_para=0.643 contrast=0 caveat=0 q=1
+    drafts/S1/zh.md [ko] sentences=51 mean=35.9 cv=0.497 short=0.137 run3=0.02 opener_rep=0.0 cite_end=0.118 cite_para=0.643 contrast=0 caveat=0 q=1
+Lengths:
+    drafts/S1/ko.md chars(no space)= 2245 chars(with space)= 2894 en-words= 133
+    drafts/S1/ja.md chars(no space)= 2429 chars(with space)= 2464 en-words= 52
+    drafts/S1/en.md chars(no space)= 5387 chars(with space)= 6488 en-words= 1095
+    drafts/S1/zh.md chars(no space)= 1952 chars(with space)= 1988 en-words= 51
+YAML front matter parses (Ruby YAML.safe_load), 3 FAQ, author token, featured_image "TBD" (user decision, option A). Every URL in the four files returns HTTP 200 (curl, browser User-Agent, 2026-10-20). No bold, no lawyer name, no byline.

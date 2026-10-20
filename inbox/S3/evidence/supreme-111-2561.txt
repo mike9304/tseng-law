@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPSV%2c111%2c%e5%8f%b0%e4%b8%8a%2c2561%2c20221125%2c1
 Retrieved: 2026-10-20 19:33 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: d8f6bcc2ccb17fa1244cadfc02e53727321f4cbf8b9e2866904390a7445fed89
 裁判字號: 最高法院 111 年度台上字第 2561 號民事判決
 裁判日期: 民國 111 年 11 月 25 日
 裁判案由: 請求離婚等

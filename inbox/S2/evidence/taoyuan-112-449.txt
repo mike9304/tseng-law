@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TYDV%2c112%2c%e5%a9%9a%2c449%2c20241115%2c1
 Retrieved: 2026-10-20 19:30 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: 18bedbe23bcbd4a48c12301457759c0b41275abba0ce3705c773521ef49e24e2
 裁判字號: 臺灣桃園地方法院 112 年度婚字第 449 號民事判決
 裁判日期: 民國 113 年 11 月 15 日
 裁判案由: 確認婚姻關係存在

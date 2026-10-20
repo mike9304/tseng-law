@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c111%2c%e9%87%8d%e5%ae%b6%e8%b2%a1%e8%a8%b4%2c10%2c20240227%2c1
 Retrieved: 2026-10-20 19:33 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: 6c0acb84de6d839d735dcdf0f1edc2c0e98a2c257f296f9daffdaab92b63af4e
 裁判字號: 臺灣臺北地方法院 111 年度重家財訴字第 10 號民事判決
 裁判日期: 民國 113 年 02 月 27 日
 裁判案由: 夫妻剩餘財產分配

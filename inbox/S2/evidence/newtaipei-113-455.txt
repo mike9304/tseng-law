@@ -1,5 +1,6 @@
 Source: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c113%2c%e5%a9%9a%2c455%2c20241220%2c1
 Retrieved: 2026-10-20 19:30 KST via curl (HTTP 200)
+SHA-256 of the official HTML as retrieved: c3afcc1c4bb8839bc2b456c3542880dcdfe8a7498d45a3e8bfc5cf4e28b8d918
 裁判字號: 臺灣新北地方法院 113 年度婚字第 455 號民事判決
 裁判日期: 民國 113 年 12 月 20 日
 裁判案由: 確認婚姻關係存在

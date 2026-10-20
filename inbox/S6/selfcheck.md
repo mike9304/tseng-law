@@ -43,3 +43,6 @@ taiwan-responsibility-system-overtime-approval-interpretation-726 (0 matches).
 1. The NT$150,000 supervisor category also requires meeting 施行細則50-1(1). The drafts state both conditions.
 2. Several MOL list categories are paraphrased, so the list is partial. Drafts say the list "includes" these categories.
 3. No post-726 court judgment is cited to illustrate. The column relies on the Interpretation itself plus statute and MOL guidance.
+
+## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
+- Art. 32: the overtime cap now includes 54 h/month (≤138 h per 3 months) with union or labor-management consent, plus the disaster/sudden-event exception (all 4). Added evidence copies: J.Y. 726 page text, MOL 84-1 page excerpt, MOL designated-worker list.

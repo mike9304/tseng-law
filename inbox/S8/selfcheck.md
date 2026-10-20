@@ -43,3 +43,6 @@ taiwan-severance-retirement-income-tax-foreign-employees-183-days (0 matches).
 1. I did not compute the withholding base for the half-taxed band ("給付額減除定額免稅後之餘額") because it was not confirmed. The drafts state the rule verbatim and give no worked withholding figure.
 2. Whether a particular "goodwill/transition" payment counts as 離職金/退職金 depends on the facts. The drafts say it "may" fall within the list.
 3. The income-source question (service partly abroad for a group company) is not discussed.
+
+## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
+- Art. 71-1(2): added the proviso that a resident spouse staying in Taiwan files jointly. Art. 92: added the 5-day extension for 3+ consecutive holidays and the Feb 15 extension. Added evidence/mof-2026-amounts-announcement.txt (gazette text).

@@ -49,7 +49,7 @@ author: "legal-ai-assistant"
 
 在國內沒有住所的外籍人士，一個課稅年度內在台居留合計滿183天，才是居住者（[第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=7)）。同一筆資遣費，落在這條線的兩邊，處理方式不同。
 
-居住者的部分，依[各類所得扣繳率標準第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=2)，退職所得按給付額減除定額免稅後的餘額扣取6%。這只是預扣。退職所得要併入當年度綜合所得，扣除免稅額與各項扣除額後，依累進稅率結算；115年度稅率從5%到40%分五級，5%適用到綜合所得淨額610,000元。年度中離境的居住者，應在離境前辦理當年度結算申報（[第71條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71-1)第2項）。
+居住者的部分，依[各類所得扣繳率標準第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=2)，退職所得按給付額減除定額免稅後的餘額扣取6%。這只是預扣。退職所得要併入當年度綜合所得，扣除免稅額與各項扣除額後，依累進稅率結算；115年度稅率從5%到40%分五級，5%適用到綜合所得淨額610,000元。年度中離境的居住者，應在離境前辦理當年度結算申報（[第71條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71-1)第2項）。但配偶為境內居住者且仍繼續居住國內的，由配偶合併辦理結算申報。
 
 非居住者沒有結算這一步。[第3條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)規定退職所得按減除定額免稅後的餘額扣取18%，依[所得稅法第73條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=73)由扣繳義務人扣繳後即完稅，用不到較低的級距和扣除額。
 
@@ -57,7 +57,7 @@ author: "legal-ai-assistant"
 
 ## 回國前拿齊文件
 
-退休金、資遣費屬於給付時應扣繳的所得（[第88條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=88)第1項第2款）。給付對象是非居住者時，扣繳義務人應在代扣稅款之日起10日內繳清稅款，開具扣繳憑單向稽徵機關申報核驗後發給本人（[第92條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=92)第2項）；居住者則在次年2月10日前收到扣繳憑單。這筆錢在員工母國怎麼課稅，要另依當地稅法與租稅協定判斷，屆時也需要在台灣繳過稅的證明。
+退休金、資遣費屬於給付時應扣繳的所得（[第88條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=88)第1項第2款）。給付對象是非居住者時，扣繳義務人應在代扣稅款之日起10日內繳清稅款，開具扣繳憑單向稽徵機關申報核驗後發給本人（[第92條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=92)第2項）；遇連續三日以上國定假日，期間延長五日；居住者則在次年2月10日前收到扣繳憑單；一月遇連續三日以上國定假日者，延至2月15日。這筆錢在員工母國怎麼課稅，要另依當地稅法與租稅協定判斷，屆時也需要在台灣繳過稅的證明。
 
 年度中來台或離台的居住者判斷，見[年中來台或離台，所得稅的居住者身分怎麼判斷？](/zh-hant/columns/taiwan-income-tax-residency)；外籍員工薪資的扣繳，見[外商在台子公司的外籍員工薪資](/zh-hant/columns/taiwan-payroll-foreign-employees-withholding-social-insurance)。資遣費該不該給、給多少是勞動法的問題，本文只談稅。
 

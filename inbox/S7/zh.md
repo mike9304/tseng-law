@@ -37,13 +37,13 @@ author: "legal-ai-assistant"
 
 承租人應以善良管理人之注意保管租賃物，違反致毀損者，負損害賠償責任（[民法第432條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=432)）。租賃契約把這份責任換成數字。
 
-機車部分，可歸責於承租人所生的必要合理拖車費、修理費，按其歸責情節輕重負擔。修理期間還在租期內，照付租金；超過租期，前7日最多賠相當租金的五成，第8日到第15日最多四成，最長15日。大型重型機車待料超過15日，按百分之二十五計算，最長30日。
+機車部分，可歸責於承租人所生的必要合理拖車費、修理費，按其歸責情節輕重負擔；另有約定者，從其約定。修理期間還在租期內，照付租金；超過租期，前7日最多賠相當租金的五成，第8日到第15日最多四成，最長15日。大型重型機車待料超過15日，按百分之二十五計算，最長30日。
 
 小客車的算法不同。修理期間10日以內，最多付該期間租金的七成；11日到15日最多六成；16日以上最多五成，期間最長算20日。如果另有折舊費用約定，不得超過修理費用的百分之二十。無法修復的，兩者都照當時市價賠償。
 
 ## 對方受傷、對方車損
 
-駕駛人在使用中加損害於他人者，應負賠償責任；能證明已盡相當注意的才可免責（[民法第191條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=191-2)）。對方受傷或死亡，不論加害人有無過失，都可以請求強制汽車責任保險給付（[強制汽車責任保險法第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=7)）。但給付項目只有傷害醫療費用、失能與死亡（第27條）。車損不在裡面。
+駕駛人在使用中加損害於他人者，應負賠償責任；能證明已盡相當注意的才可免責（[民法第191條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=191-2)）。對方受傷或死亡，不論加害人有無過失，都可以請求強制汽車責任保險給付（[強制汽車責任保險法第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=7)）。但給付項目只有傷害醫療費用、失能與死亡（第27條）。車損不在裡面。事故如果是受害人故意或從事犯罪行為所致，保險人不負給付責任（[第28條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=28)）；駕駛人酒駕，或違反道路交通管理處罰條例第21條、第21條之1規定（例如無照）駕車，保險人仍須給付受害人，但得在給付範圍內向駕駛人代位求償（[第29條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=29)）。
 
 ## 簽約時看什麼
 
@@ -66,5 +66,6 @@ author: "legal-ai-assistant"
 - 交通部[機車租賃定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/F86FD1FD1EB5BE6F)（110年12月28日交路(一)字第11086008044號公告，111年1月1日生效；行政院網站刊載）。
 - 交通部[小客車租賃定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/BB4C685E009D5373?A=C)（104年5月8日交路字第10400089281號公告修正；行政院網站刊載）。
 - [民法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001) 第191條之2、第432條。
-- [強制汽車責任保險法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390060) 第7條、第27條。
+- [強制汽車責任保險法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390060) 第7條、第27條、第28條、第29條。
+- [道路交通管理處罰條例第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=21)。
 - [鄉鎮市調解條例](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020003) 第1條、第10條、第20條、第23條、第26條、第27條、第29條、第35條。

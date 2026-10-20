@@ -44,3 +44,6 @@ taiwan-deceased-parent-financial-assets-inquiry-heirs-abroad (0 filename matches
 2. Art. 26: the drafts say "up to three months" and omit the force-majeure exception, which lets the tax office set a longer period. FAQ/body could add it if Astra wants.
 3. Online eligibility for heirs abroad: the drafts say only that the listed e-credentials are required, and they make no claim about whether foreigners can obtain them.
 4. Art. 42 "public and private enterprises" is applied to banks (a bank is a private enterprise). This is reasonable, but the article's text does not name banks.
+
+## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
+- Art. 26: added the force-majeure / special-circumstances exception to the 3-month extension (all 4). Added evidence/mof-financial-estate-inquiry-directive.txt (full directive text, MOF order of 2023-12-26).

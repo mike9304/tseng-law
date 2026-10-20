@@ -44,3 +44,6 @@ taiwan-naturalization-after-spouse-death-or-divorce (0 filename matches).
 1. "DV proof" (受家庭暴力之證明文件) is not defined in the rules. The drafts do not say what counts as proof (protection order, judgment, etc.).
 2. The 2× minimum wage / NT$5 million comparison describes the other route (施行細則7(1)(2)) only as an example.
 3. Whether residence as a spouse before the death or divorce and the continued residence after it count together toward the 3 years: the drafts state only the counting rule and the exclusion list, without asserting a combination rule.
+
+## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
+- Other naturalization routes: now described as 'one of the requirements in Enforcement Rules Art. 7, e.g. income > 2× basic wage or assets > NT$5m' (ko/ja; en already said 'for example'). Domicile now includes the intent-to-stay element (ko/ja).

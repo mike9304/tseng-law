@@ -46,3 +46,6 @@ taiwan-rental-scooter-car-accident-repair-loss-of-use-mediation (0 matches).
 1. Car-rental terms: the only version I found is the 2015 amendment (EY site). A later revision was not found but cannot be ruled out.
 2. Rental terms are mandatory content for standard-form contracts. An individual contract that departs from them raises a consumer-protection question, and the drafts do not analyse its validity in detail.
 3. Diagram requirement for traffic-tagged columns (see above).
+
+## Post-READY revision (2026-10-20, applying Astra r1 lessons from S1-S3)
+- Scooter repair costs by degree of fault: added 'unless otherwise agreed' (term 14). CALI: 'in principle' in ko/ja summaries; Art. 28 victim-intent/crime exclusion; Art. 29 insurer pays and then recovers from a drunk or unlicensed driver (Road Traffic Management and Penalty Act 21/21-1). Sources updated. Added evidence copies of both MOTC rental-term documents.

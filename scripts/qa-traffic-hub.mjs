@@ -62,7 +62,10 @@ try {
       }
       await page.locator('#articles a[href$="/taiwan-accident-police-records"]').click();
       await page.waitForURL('**/columns/taiwan-accident-police-records');
-      await page.locator('[data-column-byline="ai"]').waitFor();
+      await page.locator('[data-column-disclaimer]').waitFor();
+      if (await page.locator('[data-column-byline], [data-column-ai-author], meta[name=author], meta[property="article:author"]').count()) throw new Error(`${locale}: public author attribution`);
+      const article = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(node => JSON.parse(node.textContent)).find(node => node['@type'] === 'Article'));
+      if (!article || Object.hasOwn(article, 'author')) throw new Error(`${locale}: Article author must be absent`);
       if (await page.locator('[data-column-updated]').count()) throw new Error(`${locale}: new article must not show a same-day update`);
       const [deadlinePage] = await Promise.all([
         page.waitForEvent('popup'),

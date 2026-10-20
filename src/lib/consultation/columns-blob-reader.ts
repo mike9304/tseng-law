@@ -12,6 +12,7 @@ import type { ColumnDocument } from '@/lib/builder/columns/types';
 import { filterPublicColumnPosts } from '@/lib/builder/columns/public-post-filter';
 import { resolveColumnTopic } from '@/lib/column-topics';
 import { removeColumnBoldEmphasis } from '@/lib/column-emphasis';
+import { stripColumnAttribution, stripColumnHtmlAttribution } from '@/lib/column-attribution';
 
 /**
  * Blob-aware column reader that merges file-based legal columns
@@ -109,7 +110,7 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
   );
   // Body is whatever the editor produced — prefer markdown for AI ingestion
   // since the column-knowledge stripMarkdown flow expects markdown-ish text.
-  const content = removeColumnBoldEmphasis(doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '');
+  const content = stripColumnAttribution(removeColumnBoldEmphasis(doc.bodyMarkdown || stripHtml(stripColumnHtmlAttribution(doc.bodyHtml || '')) || doc.summary || ''));
   const typography = normalizeTypography(doc.frontmatter?.typography);
   return {
     slug: doc.slug,
@@ -142,7 +143,7 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     doc.frontmatter.category === 'formation' || doc.frontmatter.category === 'legal' || doc.frontmatter.category === 'case'
       ? doc.frontmatter.category
       : 'legal';
-  const content = removeColumnBoldEmphasis(doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '');
+  const content = stripColumnAttribution(removeColumnBoldEmphasis(doc.bodyMarkdown || stripHtml(stripColumnHtmlAttribution(doc.bodyHtml || '')) || doc.summary || ''));
   const dateIso = doc.frontmatter.lastmod || doc.updatedAt;
   const publicationDate = parseColumnPublicationDate(doc.frontmatter.publishedAt)
     || parseColumnPublicationDate(doc.frontmatter.dateDisplay);
@@ -340,7 +341,7 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
   }
   // Likewise `audience`, `author: legal-ai-assistant` and the file number are
   // frontmatter/file-only: keep them when a builder/Blob copy shadows the file
-  // so per-locale recommendations and AI bylines survive publishing.
+  // so per-locale recommendations and internal provenance survive publishing.
   const fileBySlug = new Map(filePosts.map((post) => [post.slug, post]));
   for (const post of filterPublicColumnPosts([...builderPosts, ...blobPosts, ...filePosts])) {
     if (seen.has(post.slug)) continue;

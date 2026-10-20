@@ -43,7 +43,6 @@ export interface ArticleJsonLd {
   description?: string;
   datePublished: string;
   dateModified?: string;
-  author?: { '@type': 'Person' | 'Organization'; name: string };
   image?: string[];
   inLanguage?: string;
 }
@@ -81,7 +80,6 @@ export function buildArticleJsonLd(args: {
   description?: string;
   datePublished: string;
   dateModified?: string;
-  authorName?: string;
   image?: string[];
   inLanguage?: string;
 }): ArticleJsonLd {
@@ -93,7 +91,6 @@ export function buildArticleJsonLd(args: {
   };
   if (args.description) out.description = args.description;
   if (args.dateModified) out.dateModified = args.dateModified;
-  if (args.authorName) out.author = { '@type': 'Organization', name: args.authorName };
   if (args.image && args.image.length > 0) out.image = args.image;
   if (args.inLanguage) out.inLanguage = args.inLanguage;
   return out;

@@ -16,14 +16,12 @@ export function toColumnListItems(posts: readonly ColumnListItem[]): ColumnListI
     categoryLabel: post.categoryLabel,
     topic: post.topic,
     blogCategory: post.blogCategory,
-    authorName: post.authorName,
     tags: post.tags,
     featuredImage: post.featuredImage,
     ...(post.featuredImageAlt ? { featuredImageAlt: post.featuredImageAlt } : {}),
     summary: post.summary,
     publicationDate: post.publicationDate,
     audience: post.audience,
-    aiAuthored: post.aiAuthored,
       columnNumber: post.columnNumber,
   }));
 }

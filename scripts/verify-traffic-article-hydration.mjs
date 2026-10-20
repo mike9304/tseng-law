@@ -84,7 +84,9 @@ try {
           check(await page.locator('link[rel=canonical]').getAttribute('href') === `https://tseng-law.com/zh-hant/columns/${slug}`, 'canonical');
           const schema = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(n => JSON.parse(n.textContent)).find(n => n['@type'] === 'Article'));
           check(schema.headline === title, 'Article structured data');
-          check(await page.locator('[data-column-byline=ai]').count() === 1, 'AI byline');
+          check(await page.locator('[data-column-byline], [data-column-ai-author], meta[name=author], meta[property="article:author"]').count() === 0, 'no public author');
+          check(!Object.hasOwn(schema, 'author'), 'no Article author');
+          check(await page.locator('[data-column-disclaimer]').count() === 1, 'general-information disclaimer');
           step = 'reload'; await Promise.all([page.waitForEvent('load'), page.evaluate(() => window.location.reload())]); await record();
           check(row.visits.at(-1).title === title, 'reload preserves title');
           step = 'hub'; await page.locator('.blog-hero a[href="/zh-hant/traffic-accidents#articles"]').click();

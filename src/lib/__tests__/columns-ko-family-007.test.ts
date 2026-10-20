@@ -686,7 +686,7 @@ describe('Korean family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post?.content).toContain(`## ${headings[9]}`);
     expect(post?.content).toContain(`## ${headings[10]}`);
     expect(post?.content).toContain(disclaimer);
-    expect(post?.content).toContain(author);
+    expect(post?.content).not.toContain(author);
     expect(post?.content).not.toContain(`# ${title}`);
     expect(post?.content).not.toContain(bodyImage);
   });

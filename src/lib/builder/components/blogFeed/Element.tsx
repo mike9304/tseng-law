@@ -90,7 +90,6 @@ function BlogFeedElementCore({
   const archiveVisibleLimit = archive?.visibleLimit ?? postsPerPage;
   const archiveCategory = archive?.category ?? '';
   const archiveTag = archive?.tag ?? '';
-  const archiveAuthor = archive?.author ?? '';
   const archiveQuery = archive?.query ?? '';
 
   useEffect(() => {
@@ -109,7 +108,6 @@ function BlogFeedElementCore({
     const tagFilter = c.filterByTag || (archiveEnabled ? archiveTag : '');
     if (categoryFilter) params.set('category', categoryFilter);
     if (tagFilter) params.set('tag', tagFilter);
-    if (archiveEnabled && archiveAuthor) params.set('author', archiveAuthor);
     if (archiveEnabled && archiveQuery) params.set('q', archiveQuery);
 
     fetch(`/api/builder/blog/posts?${params.toString()}`)
@@ -136,7 +134,6 @@ function BlogFeedElementCore({
       cancelled = true;
     };
   }, [
-    archiveAuthor,
     archiveCategory,
     archiveQuery,
     archiveTag,
@@ -232,7 +229,7 @@ function BlogFeedElementCore({
               key={item.postId}
               item={item}
               index={index}
-              content={c}
+              content={isBuilder ? c : { ...c, showAuthor: false }}
               layout={layout}
               locale={effectiveLocale}
               copy={copy}

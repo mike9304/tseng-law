@@ -82,8 +82,8 @@ describe.each(Object.entries(localeExpectations) as Array<
     });
     expect(metadata.description).toBe(siteContent[locale].meta.description);
     expect(metadata.applicationName).toBe(expected.organizationName);
-    expect(metadata.authors).toEqual([{ name: expected.organizationName }]);
-    expect(metadata.creator).toBe(expected.organizationName);
+    expect(metadata).not.toHaveProperty('authors');
+    expect(metadata).not.toHaveProperty('creator');
     expect(metadata.publisher).toBe(expected.organizationName);
 
     if (locale !== 'ko') {
@@ -93,7 +93,6 @@ describe.each(Object.entries(localeExpectations) as Array<
         metadata.creator,
         metadata.publisher,
       ]).not.toContain('법무법인 호정');
-      expect(JSON.stringify(metadata.authors)).not.toContain('법무법인 호정');
     }
   });
 

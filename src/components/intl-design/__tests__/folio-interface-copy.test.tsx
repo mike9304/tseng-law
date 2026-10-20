@@ -83,9 +83,9 @@ describe('Folio interface copy maps', () => {
     }
   });
 
-  it('reuses the reviewed pack wording for the column byline and the home label', () => {
+  it('keeps navigation copy without public attribution labels', () => {
     for (const locale of INTL_DESIGN_LOCALES) {
-      expect(folioColumnsCopy[locale].reviewedBy).toBe(guidanceContent[locale].home.columnsReviewLabel);
+      expect(folioColumnsCopy[locale]).not.toHaveProperty('reviewedBy');
       expect(folioChrome(locale)?.home).toBe(guidanceContent[locale].nav.home);
     }
     expect(folioChrome('ko')).toBeNull();
@@ -110,10 +110,10 @@ describe('Folio article shell (every locale)', () => {
       expect(html, `${locale} html: ${english}`).not.toContain(english);
       expect(JSON.stringify(props), `${locale} props: ${english}`).not.toContain(english);
     }
-    // Reviewed column: byline and the pack's own review label, exactly as the list and home say.
-    expect(props.attorneyHeading).toBe(pack.home.columnsReviewLabel);
-    expect(html).toContain(`>${folioArticleCopy[locale].byline}</a>`);
-    expect(props.articleJsonLd.author).toMatchObject({ '@type': 'Person', name: folioArticleCopy[locale].byline });
+    // Original attorney columns also have no public byline or authorship schema.
+    expect(props.attorneyHeading).toBe(folioArticleCopy[locale].consultingAttorney);
+    expect(html).not.toContain(`>${folioArticleCopy[locale].byline}</a>`);
+    expect(props.articleJsonLd).not.toHaveProperty('author');
     // Consultation card: the pack's contact label and CTA, plus the four consultation languages from the team record.
     expect(props.t.consultationTitle).toBe(pack.nav.contact);
     expect(props.t.consultationButton).toBe(pack.contactCta);
@@ -172,11 +172,11 @@ describe('Folio chrome and list labels; other locales unchanged', () => {
     const fr = renderToStaticMarkup(<ColumnsGrid locale="fr" posts={[post]} folioLabels={folioColumnsCopy.fr} />);
     expect(fr).toContain(folioColumnsCopy.fr.label);
     expect(fr).toContain(folioColumnsCopy.fr.resultCount.replace('{n}', '1'));
-    expect(fr).toContain(folioColumnsCopy.fr.reviewedBy);
+    expect(fr).not.toContain('columns-card-byline');
     expect(fr).not.toMatch(/Search columns|Reviewed by Wei Tseng|\d+ results?\b/);
     const ms = renderToStaticMarkup(<ColumnsGrid locale="ms" posts={[post]} />);
     expect(ms).toContain('Search columns');
-    expect(ms).toContain('Reviewed by Wei Tseng');
+    expect(ms).not.toContain('Reviewed by Wei Tseng');
     const ko = renderToStaticMarkup(<ColumnsGrid locale="ko" posts={[post]} />);
     expect(ko).toContain('칼럼 검색');
   });

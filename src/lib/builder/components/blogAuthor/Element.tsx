@@ -87,18 +87,17 @@ export default function BlogAuthorElement({ node, mode = 'edit', locale }: BlogA
   const copy = getBlogAuthorCopy(effectiveLocale);
   const mockAuthors = useMemo(() => createMockAuthors(effectiveLocale, copy), [copy, effectiveLocale]);
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    if (!isBuilder) return;
     let cancelled = false;
     setPosts(null);
-    setLoading(!isBuilder);
 
     const params = new URLSearchParams({
       locale: effectiveLocale,
       limit: '100',
       sort: 'newest',
-      scope: isBuilder ? 'all' : 'public',
+      scope: 'all',
     });
     if (c.authorName) params.set('author', c.authorName);
 
@@ -108,10 +107,7 @@ export default function BlogAuthorElement({ node, mode = 'edit', locale }: BlogA
         if (cancelled) return;
         if (json?.ok && Array.isArray(json.posts)) setPosts(json.posts as BlogPost[]);
       })
-      .catch(() => undefined)
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
+      .catch(() => undefined);
 
     return () => {
       cancelled = true;
@@ -124,13 +120,7 @@ export default function BlogAuthorElement({ node, mode = 'edit', locale }: BlogA
     return grouped.filter((group) => group.author.name === c.authorName);
   }, [c.authorName, copy.fallbackAuthorName, isBuilder, mockAuthors, posts]);
 
-  if (!isBuilder && loading) {
-    return (
-      <div className={styles.state} data-builder-blog-author="true" role="status">
-        {copy.loading}
-      </div>
-    );
-  }
+  if (!isBuilder) return null;
 
   if (authors.length === 0) {
     return (

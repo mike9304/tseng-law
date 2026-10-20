@@ -204,7 +204,7 @@ describe('public columns filter recovery', () => {
     expect(html).not.toContain('disabled=');
   });
 
-  it('retains combined query, author, date and category filtering with a truthful count', () => {
+  it('ignores legacy author filters while retaining query, date and category filtering', () => {
     navigation.params = new URLSearchParams({
       category: 'formation', author: 'Wei Tseng', q: 'registration', year: '2026', month: '1',
     });
@@ -215,7 +215,8 @@ describe('public columns filter recovery', () => {
     expect(html).toContain('A complete company guide');
     expect(html).not.toContain('A complete labor guide');
     expect(html).toContain('Category: </span>Company Setup');
-    expect(html).toContain('Author: </span>Wei Tseng');
+    expect(html).not.toContain('Author:');
+    expect(html).not.toContain('Wei Tseng');
     expect(html).toContain('Search: </span>registration');
     // Legacy ?category= links still filter; topic chips stay unpressed.
     expect(html).not.toContain('aria-pressed="true"');

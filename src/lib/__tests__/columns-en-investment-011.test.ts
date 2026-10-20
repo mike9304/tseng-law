@@ -366,7 +366,8 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
 Wei Tseng (曾雋崴), Taiwan Attorney`;
 
     expect(parsed.content.trimEnd().endsWith(exactEnding)).toBe(true);
-    expect(post?.content.trimEnd().endsWith(exactEnding)).toBe(true);
+    expect(post?.content.trimEnd().endsWith(exactEnding.replace('\n\nWei Tseng (曾雋崴), Taiwan Attorney', ''))).toBe(true);
+    expect(post?.content).not.toContain('Wei Tseng (曾雋崴), Taiwan Attorney');
   });
 
   it('freezes the exact visible word count and calculated 200-wpm read time', () => {

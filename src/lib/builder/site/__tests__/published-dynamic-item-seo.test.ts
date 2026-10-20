@@ -123,8 +123,8 @@ describe('published dynamic item SEO', () => {
       datePublished: '2026-06-01',
       image: '/api/builder/assets/alpha-recipe.webp',
       url: 'https://tseng-law.com/ko/recipes/alpha-recipe',
-      author: { '@type': 'Person', name: 'Chef Seo' },
     });
+    expect(jsonLd).not.toHaveProperty('author');
   });
 
   it('only treats published custom CMS item records as public-routable', () => {

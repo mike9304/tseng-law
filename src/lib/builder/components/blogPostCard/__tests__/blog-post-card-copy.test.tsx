@@ -687,7 +687,8 @@ describe('blog post card client-fetch disclosure', () => {
         // resolved selected branch, not loading, not-found, or mock.
         expect(html).toContain('跨境併購法律實務要點');
         expect(html).toContain('解析跨國併購的盡職調查與交割流程。');
-        expect(html).toContain('林志明律師');
+        if (mode === 'published') expect(html).not.toContain('林志明律師');
+        else expect(html).toContain('林志明律師');
         expect(html).toContain('閱讀 9 分鐘');
         expect(html).toContain('2026-03-15');
         // Real fetched content, never the mock item.

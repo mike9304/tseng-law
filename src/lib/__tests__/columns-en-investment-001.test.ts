@@ -424,7 +424,7 @@ describe('English investment column 001 — company-formation basics', () => {
       ),
     );
     expect(post?.content).toContain(disclaimer);
-    expect(post?.content.trimEnd()).toMatch(
+    expect(post?.content.trimEnd()).not.toMatch(
       /Wei Tseng \(曾雋崴\), Taiwan Attorney$/,
     );
   });

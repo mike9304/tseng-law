@@ -355,7 +355,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
     expect(raw).toContain(disclaimer);
     expect(post?.content).toContain(disclaimer);
     expect(raw).toContain('曾雋崴弁護士（Wei Tseng）');
-    expect(post?.content).toContain('曾雋崴弁護士（Wei Tseng）');
+    expect(post?.content).not.toContain('曾雋崴弁護士（Wei Tseng）');
 
     // The old closing summary and blockquote link list must stay removed.
     expect(raw).not.toContain('## まとめ');

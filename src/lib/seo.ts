@@ -51,12 +51,6 @@ type ArticleJsonLdInput = {
   image?: string;
   datePublished?: string;
   dateModified?: string;
-  authorName?: string;
-  authorUrl?: string;
-  authorSameAs?: string[];
-  authorAlternateNames?: string[];
-  /** Optional explicit author; omit authorName and authorEntity for unbylined articles. */
-  authorEntity?: Record<string, unknown>;
   articleSection?: string;
 };
 
@@ -643,11 +637,6 @@ export function buildArticleJsonLd({
   image = DEFAULT_SOCIAL_IMAGE_PATH,
   datePublished,
   dateModified,
-  authorName,
-  authorUrl,
-  authorSameAs,
-  authorAlternateNames,
-  authorEntity,
   articleSection,
 }: ArticleJsonLdInput) {
   return {
@@ -661,16 +650,6 @@ export function buildArticleJsonLd({
     dateModified,
     mainEntityOfPage: buildAbsoluteUrl(path),
     articleSection,
-    ...(authorEntity || authorName ? {
-      author: authorEntity ?? {
-        '@type': 'Person',
-        '@id': authorUrl ? `${buildAbsoluteUrl(authorUrl)}#person` : undefined,
-        name: authorName,
-        url: authorUrl ? buildAbsoluteUrl(authorUrl) : undefined,
-        sameAs: authorSameAs,
-        alternateName: authorAlternateNames,
-      },
-    } : {}),
     publisher: {
       '@type': 'Organization',
       name: organizationName[chromeSiteLocale(locale)],

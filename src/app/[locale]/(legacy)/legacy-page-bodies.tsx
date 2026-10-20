@@ -71,7 +71,6 @@ function firstSearchParamValue(value: string | string[] | undefined): string | u
 function toColumnGridFilters(searchParams?: ColumnsSearchParams): ColumnsGridFilters {
   return {
     category: firstSearchParamValue(searchParams?.category),
-    author: firstSearchParamValue(searchParams?.author),
     q: firstSearchParamValue(searchParams?.q),
     year: firstSearchParamValue(searchParams?.year),
     month: firstSearchParamValue(searchParams?.month),

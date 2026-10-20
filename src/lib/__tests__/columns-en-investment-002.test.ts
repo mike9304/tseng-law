@@ -331,7 +331,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       ),
     );
     expect(post?.content).toContain(disclaimer);
-    expect(post?.content.trimEnd()).toMatch(
+    expect(post?.content.trimEnd()).not.toMatch(
       /Wei Tseng \(曾雋崴\), Taiwan Attorney$/,
     );
   });

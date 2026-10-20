@@ -298,7 +298,7 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
       eojeolCount / koreanLegalEojeolPerMinute,
     );
 
-    expect(eojeolCount).toBe(1_224);
+    expect(eojeolCount).toBe(1_220);
     expect(calculatedMinutes).toBe(7);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);

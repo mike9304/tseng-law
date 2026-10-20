@@ -5,8 +5,8 @@
  * provenance even though public author attribution is omitted.
  *
  * 001–017 are the attorney's own columns imported from the original site, and
- * 018 was published as an attorney-reviewed text, so they keep the attorney
- * byline.
+ * 018 was published as an attorney-reviewed text. Since 2026-10-20 no column
+ * displays a public author, regardless of its internal provenance.
  */
 export const AI_AUTHORED_COLUMN_SLUGS: ReadonlySet<string> = new Set([
   'taiwan-accident-police-records',
@@ -66,7 +66,7 @@ export function getColumnDisclaimer(locale: string): string {
   return COLUMN_DISCLAIMER[locale] ?? COLUMN_DISCLAIMER.en;
 }
 
-/** Sidebar heading for the attorney card on AI-written columns (no review claim). */
+/** Consultation sidebar heading for all columns; never an authorship/review claim. */
 export const AI_COLUMN_ATTORNEY_HEADING: Record<string, string> = {
   ko: '상담 변호사',
   'zh-hant': '諮詢律師',

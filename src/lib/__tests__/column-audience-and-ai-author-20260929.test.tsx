@@ -180,23 +180,20 @@ describe('AI-written columns', () => {
       title: 't',
       description: 'd',
       path: '/en/columns/taiwan-exit-ban-foreigners',
-      authorUrl: '/en/lawyers/wei-tseng',
-      authorAlternateNames: ['Wei Tseng'],
     });
     expect(jsonLd).not.toHaveProperty('author');
     expect(JSON.stringify(jsonLd)).not.toMatch(/Wei Tseng|reviewedBy|Legal AI Assistant/);
     expect(jsonLd).toHaveProperty('publisher');
   });
 
-  it('preserves the named attorney author for the attorney columns', () => {
+  it('omits authors for the original attorney columns too', () => {
     const jsonLd = buildArticleJsonLd({
       locale: 'en',
       title: 't',
       description: 'd',
       path: '/en/columns/taiwan-divorce-lawsuit-qna',
-      authorName: 'Attorney Wei Tseng',
-      authorUrl: '/en/lawyers/wei-tseng',
     });
-    expect(jsonLd.author).toMatchObject({ '@type': 'Person', name: 'Attorney Wei Tseng' });
+    expect(jsonLd).not.toHaveProperty('author');
+    expect(jsonLd.publisher['@type']).toBe('Organization');
   });
 });

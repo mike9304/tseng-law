@@ -115,7 +115,6 @@ export function generateArticleSchema(article: {
   description?: string;
   datePublished: string;
   dateModified?: string;
-  author?: string;
   image?: string;
   url: string;
 }): Record<string, unknown> {
@@ -126,9 +125,6 @@ export function generateArticleSchema(article: {
     description: article.description,
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
-    author: article.author
-      ? { '@type': 'Person', name: article.author }
-      : { '@type': 'Organization', name: '호정국제 법률사무소' },
     image: article.image,
     url: article.url,
     publisher: {

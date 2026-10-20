@@ -1050,7 +1050,10 @@ export async function PublishedSitePageView({
     isTopLevel = false,
     parentLayoutMode?: ParentLayoutMode,
     bindingContext: BuilderDatasetFieldBindingContext = datasetBindingContext,
-  ): JSX.Element {
+  ): JSX.Element | null {
+    // Old saved canvases can still contain column byline nodes. Do not publish them.
+    const columnClassName = (node.content as { className?: string }).className ?? '';
+    if (/(?:^|\s)(?:insights-byline|columns-card-byline)(?:\s|$)/.test(columnClassName)) return null;
     const decorativeAltNode = projectPublishedStockZhHeroDecorativeAlt(node, legacyZhTabletParity);
     const localeProjectedNode = projectImageNodeForLocale(decorativeAltNode, locale);
     const renderedNode = projectPublishedEnHomeCopy(

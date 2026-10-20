@@ -79,7 +79,7 @@ function initials(name: string): string {
   return Array.from(trimmed).slice(0, 2).join('').toUpperCase();
 }
 
-function toCardItem(post: BlogPost): CardItem {
+function toCardItem(post: BlogPost, isBuilder: boolean): CardItem {
   return {
     postId: post.postId,
     slug: post.slug,
@@ -90,9 +90,9 @@ function toCardItem(post: BlogPost): CardItem {
     readingTimeMinutes: post.readingTimeMinutes,
     featured: post.featured,
     featuredImage: post.featuredImage,
-    authorName: post.author?.name ?? '',
-    authorPhoto: post.author?.photo,
-    authorTitle: post.author?.title,
+    authorName: isBuilder ? post.author?.name ?? '' : '',
+    authorPhoto: isBuilder ? post.author?.photo : undefined,
+    authorTitle: isBuilder ? post.author?.title : undefined,
     date: fmtDate(post.publishedAt ?? post.updatedAt),
   };
 }
@@ -325,7 +325,7 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme, locale
     };
   }, [c.postId, effectiveLocale, isBuilder]);
 
-  const selectedItem = useMemo(() => (post ? toCardItem(post) : null), [post]);
+  const selectedItem = useMemo(() => (post ? toCardItem(post, isBuilder) : null), [post, isBuilder]);
 
   const hasPostId = Boolean(c.postId);
 

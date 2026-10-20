@@ -1153,7 +1153,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post?.content).toContain(`## ${headings[10]}`);
     expect(post?.content).toContain(relatedGuidanceHeading);
     expect(post?.content).toContain(disclaimer);
-    expect(post?.content).toContain(author);
+    expect(post?.content).not.toContain(author);
     expect(post?.content).not.toContain(`# ${title}`);
     expect(post?.content).not.toContain(bodyImage);
     expect(post?.category).toBe('legal');
@@ -1306,7 +1306,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post?.faq?.map((item) => item.a)).toContain(faq1Answer);
     expect(post?.faq?.map((item) => item.a)).toContain(faq4Answer);
     expect(post?.content).toContain(disclaimer);
-    expect(post?.content).toContain(author);
+    expect(post?.content).not.toContain(author);
     for (const link of officialLinks) {
       expect(post?.content).toContain(link);
     }

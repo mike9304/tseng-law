@@ -88,7 +88,8 @@ describe('Vietnamese public presentation dispatch', () => {
     expect(articleLinks.length).toBeGreaterThan(0);
     for (const href of articleLinks) expect(nativeHrefs.has(href)).toBe(true);
     expect(html).toContain(`data-columns-visible-count="${posts.length}"`);
-    expect(html).toContain('Luật sư Wei Tseng');
+    expect(html).not.toContain('Luật sư Wei Tseng');
+    expect(html).not.toContain('columns-card-byline');
     expect(html).not.toContain('Reviewed by Wei Tseng');
     expect(html).toContain('data-issue-board-tab="issues"');
     expect(html).toContain(issueBoardCopy.vi.label);

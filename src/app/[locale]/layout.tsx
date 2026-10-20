@@ -82,8 +82,6 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
       },
       description: home.description,
       applicationName: organizationName,
-      authors: [{ name: organizationName }],
-      creator: organizationName,
       publisher: organizationName,
     };
   }
@@ -98,8 +96,6 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     },
     description: content.meta.description,
     applicationName: organizationName,
-    authors: [{ name: organizationName }],
-    creator: organizationName,
     publisher: organizationName,
   };
 }

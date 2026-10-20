@@ -143,7 +143,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
         '/images/blog/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg',
       faq,
     });
-    expect(post?.content).toBe(canonicalContent(parsed.content));
+    expect(post?.content).toBe(canonicalContent(parsed.content).replace(author, '').trim());
   });
 
   it('resolves the canonical and alias slugs to identical content', () => {

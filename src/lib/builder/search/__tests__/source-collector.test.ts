@@ -12,7 +12,14 @@ vi.mock('@/lib/builder/site/published-canvas', () => ({readPublishedPageCanvas:v
 vi.mock('@/lib/builder/site/persistence', () => ({
   listPages: vi.fn(async () => []),
   readExistingSiteDocument: vi.fn(async () => ({ pages: (await Promise.all(['ko','en','zh-hant'].map(locale => mockedListPages('default', locale as Locale)))).flat() })),
-  readPageCanvas: vi.fn(async (_site, pageId) => ({locale:pageId==='page-en-1'?'en':'ko',nodes:[{content:{text:'published body'}}]})),
+  readPageCanvas: vi.fn(async (_site, pageId) => ({
+    locale: pageId === 'page-en-1' ? 'en' : 'ko',
+    nodes: [
+      { id: 'body', content: { text: 'published body' } },
+      { id: 'old-byline', content: { className: 'insights-byline', text: 'Hidden Writer' } },
+      { id: 'old-byline-child', parentId: 'old-byline', content: { text: 'Hidden Reviewer' } },
+    ],
+  })),
 }));
 
 const mockedListPages = vi.mocked(listPages);
@@ -27,8 +34,8 @@ vi.mock('@/lib/builder/blog/column-adapter', () => ({
             locale,
             title: 'F44 블로그 검색 글',
             excerpt: '블로그 공개 검색 위젯 검증',
-            bodyHtml: '<p>대만 법률 검색 본문</p>',
-            bodyMarkdown: '대만 법률 검색 본문',
+            bodyHtml: '<p>대만 법률 검색 본문</p><p>Author: F44 Author</p>',
+            bodyMarkdown: '대만 법률 검색 본문\n\nAuthor: F44 Author',
             category: 'labor-law',
             tags: ['f44'],
             readingTimeMinutes: 2,
@@ -97,7 +104,8 @@ describe('search source collector', () => {
       tags: ['f44'],
     });
     expect(blogDoc?.body).toContain('대만 법률 검색 본문');
-    expect(blogDoc?.body).toContain('F44 Author');
+    expect(blogDoc?.body).not.toContain('F44 Author');
+    expect(blogDoc?.body).not.toContain('Editor');
     expect(faqDoc).toMatchObject({
       kind: 'faq',
       locale: 'ko',
@@ -162,6 +170,7 @@ describe('search source collector', () => {
     const docs = await collectAllSearchDocs('default');
     const pageDoc = docs.find((doc) => doc.id === 'page:en:page-en-1');
 
+    expect(pageDoc?.body).toBe('published body');
     expect(pageDoc).toMatchObject({
       kind: 'page',
       locale: 'en',

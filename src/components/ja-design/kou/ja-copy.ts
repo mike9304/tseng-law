@@ -37,7 +37,6 @@ export const JA_KOU_REUSED = {
   prev: { text: '前へ', source: 'src/components/InsightsArchiveSection.tsx' },
   next: { text: '次へ', source: 'src/components/InsightsArchiveSection.tsx' },
   viewAllColumns: { text: 'すべてのコラムを見る', source: 'src/components/InsightsArchiveSection.tsx' },
-  attorneyReviewed: { text: '曾雋崴弁護士監修', source: 'src/components/InsightsArchiveSection.tsx' },
   publishedColumns: { text: '公開コラム', source: 'src/components/AttorneyMediaHubView.tsx' },
   officeTimeZoneLabel: { text: '事務所の時間帯', source: 'src/components/OfficeMapTabs.tsx' },
   officeTimeZone: { text: '台湾時間（日本時間−1時間）', source: 'src/components/OfficeMapTabs.tsx' },

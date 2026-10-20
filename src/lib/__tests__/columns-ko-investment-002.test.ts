@@ -289,7 +289,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
     expect(eojeolCount).toBeGreaterThanOrEqual(1_000);
-    expect(eojeolCount).toBe(1_821);
+    expect(eojeolCount).toBe(1_818);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

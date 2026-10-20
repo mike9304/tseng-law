@@ -1,6 +1,5 @@
 import type { BuilderCanvasNode } from './types';
 import type { Locale } from '@/lib/locales';
-import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { resolveHomeInsightsCardLabels } from '@/lib/builder/home-insights-card-format';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
 import { interleaveColumnsByTopic } from '@/lib/column-topics';
@@ -214,9 +213,6 @@ export function createInsightsDecomposedNodes(
   const listWrapBottomPadding = 10;
   const listWrapHeight = listTop + listHeight + listWrapBottomPadding;
   const gridHeight = Math.max(430, listWrapHeight);
-  const authorLabel =
-    locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾雋崴律師審閱' : 'Reviewed by Wei Tseng';
-  const authorHref = getAttorneyProfilePath(locale);
   const rootId = 'home-insights-root';
   const containerId = 'home-insights-container';
   const dividerId = 'home-insights-divider';
@@ -366,17 +362,6 @@ export function createInsightsDecomposedNodes(
       text: featured.readTime,
       className: 'insights-readtime',
       as: 'span',
-    }),
-    createHomeButtonNode({
-      id: 'home-insights-featured-byline',
-      parentId: 'home-insights-featured-body',
-      rect: { x: 0, y: 24, width: 200, height: 20 },
-      zIndex: 1,
-      label: authorLabel,
-      href: authorHref,
-      style: 'link',
-      className: 'insights-byline',
-      as: 'a',
     }),
     createHomeTextNode({
       id: 'home-insights-featured-title',
@@ -545,17 +530,6 @@ export function createInsightsDecomposedNodes(
         text: post.readTime,
         className: 'insights-readtime',
         as: 'span',
-      }),
-      createHomeButtonNode({
-        id: `${itemId}-byline`,
-        parentId: copyId,
-        rect: { x: 0, y: 20, width: 190, height: 18 },
-        zIndex: 1,
-        label: authorLabel,
-        href: authorHref,
-        style: 'link',
-        className: 'insights-byline',
-        as: 'a',
       }),
       createHomeTextNode({
         id: `${itemId}-title`,

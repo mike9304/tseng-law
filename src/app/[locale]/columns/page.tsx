@@ -15,7 +15,6 @@ import { EN_COLUMN_TOPIC_ORDER, EN_RECOMMENDED_COLUMN_ORDER } from '@/components
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
-import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { pageCopy } from '@/data/page-copy';
 import { toBuilderLocale } from '@/lib/locales';
@@ -72,7 +71,6 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams) {
   return {
     category: firstSearchParamValue(searchParams?.category),
     topic: firstSearchParamValue(searchParams?.topic),
-    author: firstSearchParamValue(searchParams?.author),
     q: firstSearchParamValue(searchParams?.q),
     year: firstSearchParamValue(searchParams?.year),
     month: firstSearchParamValue(searchParams?.month),
@@ -173,11 +171,8 @@ export default async function ColumnsPage(
     const remainingPosts = locale === 'vi' ? [] : getAllColumnPosts('ko')
       .filter((post) => !translatedSlugs.has(post.slug))
       .map((post) => ({ slug: post.slug, title: post.title }));
-    const byline = locale === 'vi' ? 'Luật sư Wei Tseng' : 'Attorney Wei Tseng';
     const issuePosts = locale === 'vi' ? getAllIssuePosts('vi') : [];
-    const listItems = toColumnListItems(posts).map((post) => (
-      locale === 'vi' && !post.authorName && !isAiAuthoredColumn(post) ? { ...post, authorName: byline } : post
-    ));
+    const listItems = toColumnListItems(posts);
 
     const guidanceBody = (
       <>
@@ -206,7 +201,7 @@ export default async function ColumnsPage(
             name: copy.title,
             description: copy.description,
             items: posts.slice(0, 20).map((post) => ({
-              name: isAiAuthoredColumn(post) ? post.title : `${post.title} · ${byline}`,
+              name: post.title,
               path: `/${locale}/columns/${post.slug}`,
               description: post.summary,
             })),
@@ -294,14 +289,6 @@ export default async function ColumnsPage(
       ? getAllColumnPosts('ja')
       : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale)),
   );
-  const byline =
-    locale === 'ko'
-      ? '증준외 변호사'
-      : locale === 'zh-hant'
-        ? '曾雋崴律師'
-        : locale === 'ja'
-          ? '曾雋崴弁護士'
-          : 'Attorney Wei Tseng';
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.list-template',
     toBuilderLocale(locale)
@@ -320,7 +307,7 @@ export default async function ColumnsPage(
     name: copy.title,
     description: copy.description,
     items: posts.slice(0, 20).map((post) => ({
-      name: isAiAuthoredColumn(post) ? post.title : `${post.title} · ${byline}`,
+      name: post.title,
       path: `/${locale}/columns/${post.slug}`,
       description: post.summary,
     })),

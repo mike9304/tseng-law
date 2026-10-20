@@ -80,7 +80,6 @@ export default async function IssueBoardPage(props: {
         initialFilters={{
           category: first(searchParams?.category),
           topic: first(searchParams?.topic),
-          author: first(searchParams?.author),
           q: first(searchParams?.q),
           year: first(searchParams?.year),
           month: first(searchParams?.month),

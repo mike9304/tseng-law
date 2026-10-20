@@ -51,7 +51,7 @@ describe('blog author localization', () => {
     expect(html).not.toContain('대만 회사설립 체크리스트');
   });
 
-  it('renders localized published empty state in zh-hant', () => {
+  it('renders no public author widget, including its empty state', () => {
     const Render = blogAuthorComponent.Render as React.ComponentType<{
       node: BuilderBlogAuthorCanvasNode;
       locale?: 'ko' | 'zh-hant' | 'en';
@@ -62,7 +62,6 @@ describe('blog author localization', () => {
       <Render node={node} mode="published" locale="zh-hant" />,
     );
 
-    expect(html).toContain('沒有可顯示的作者。');
-    expect(html).not.toContain('표시할 작성자가 없습니다.');
+    expect(html).toBe('');
   });
 });

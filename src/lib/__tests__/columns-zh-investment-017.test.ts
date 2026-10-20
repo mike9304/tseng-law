@@ -306,7 +306,7 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
         traditionalChineseCharactersPerMinute,
     );
 
-    expect(traditionalChineseCharacterCount).toBe(3_089);
+    expect(traditionalChineseCharacterCount).toBe(3_084);
     expect(calculatedMinutes).toBe(8);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

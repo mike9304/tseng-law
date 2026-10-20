@@ -289,7 +289,7 @@ describe('Korean investment column 001 — company-establishment basics', () => 
     const eojeolCount = publicText.split(/\s+/).filter(Boolean).length;
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
-    expect(eojeolCount).toBe(1_296);
+    expect(eojeolCount).toBe(1_292);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

@@ -579,3 +579,30 @@ describe('published July office reading order', () => {
     expect(canvas).toEqual(before);
   });
 });
+
+describe('saved column byline removal', () => {
+  it('omits saved byline nodes even without live archive posts, without changing the saved canvas', async () => {
+    const { createHomeTextNode } = await import('@/lib/builder/canvas/decompose-home-shared');
+    const resolved = publishedHomeResolved('ko');
+    resolved.columnPosts = [];
+    resolved.canvas.nodes = ['insights-byline', 'columns-card-byline', 'article-title'].map((className, index) => createHomeTextNode({
+      id: `saved-${className}`, className, text: index < 2 ? 'PRIVATE_AUTHOR_SENTINEL' : 'Saved article title',
+      rect: { x: 0, y: index * 30, width: 400, height: 30 }, zIndex: index,
+    }));
+    const before = JSON.stringify(resolved.canvas);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved }));
+    expect(html).toContain('Saved article title');
+    expect(html).not.toContain('PRIVATE_AUTHOR_SENTINEL');
+    expect(stripNonRenderedMarkup(html)).not.toMatch(/insights-byline|columns-card-byline/);
+    expect(JSON.stringify(resolved.canvas)).toBe(before);
+  });
+
+  it('never seeds author nodes into new archives', async () => {
+    const { createInsightsDecomposedNodes } = await import('@/lib/builder/canvas/decompose-insights');
+    for (const locale of ['ko', 'zh-hant', 'en'] as const) {
+      const nodes = createInsightsDecomposedNodes(0, locale, 0, insightPosts);
+      expect(nodes.length).toBeGreaterThan(0);
+      expect(JSON.stringify(nodes)).not.toMatch(/insights-byline|-byline|Reviewed by|律師審閱|변호사 검토/);
+    }
+  });
+});

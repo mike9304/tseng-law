@@ -1,6 +1,8 @@
 import { fileURLToPath } from 'node:url';
 
 const srcRoot = fileURLToPath(new URL('./src', import.meta.url));
+// Worktrees can share a read-only node_modules symlink; keep test caches local.
+const cacheDir = fileURLToPath(new URL('./.next-vitest-cache', import.meta.url));
 
 const defaultExcluded = ['node_modules', '.next', 'out', 'coverage'];
 const cwdTests = [
@@ -12,6 +14,7 @@ const cwdTests = [
 ];
 
 const config = {
+  cacheDir,
   // Match Next.js's automatic JSX runtime so components rendered in tests do not
   // need an explicit `import React` (Next uses the automatic runtime; the esbuild
   // default would otherwise emit classic React.createElement and throw "React is
@@ -33,8 +36,8 @@ const config = {
     // These integration tests intentionally change cwd, which Node only
     // permits in processes. Keep their existing fork isolation and assertions.
     projects: [
-      { extends: true, test: { name: 'unit', pool: 'threads', exclude: [...defaultExcluded, ...cwdTests] } },
-      { esbuild: { jsx: 'automatic' }, resolve: { alias: { '@': srcRoot } }, test: { name: 'cwd-integration', pool: 'forks', include: cwdTests, exclude: defaultExcluded, environment: 'node', globals: true, setupFiles: ['./tests/setup.ts'] } },
+      { extends: true, cacheDir, test: { name: 'unit', pool: 'threads', exclude: [...defaultExcluded, ...cwdTests] } },
+      { cacheDir, esbuild: { jsx: 'automatic' }, resolve: { alias: { '@': srcRoot } }, test: { name: 'cwd-integration', pool: 'forks', include: cwdTests, exclude: defaultExcluded, environment: 'node', globals: true, setupFiles: ['./tests/setup.ts'] } },
     ],
     environment: 'node',
     exclude: defaultExcluded,

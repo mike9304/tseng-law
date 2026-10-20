@@ -838,7 +838,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post?.content).toContain(`## ${headings[0]}`);
     expect(post?.content).toContain(`## ${headings[9]}`);
     expect(post?.content).toContain(disclaimer);
-    expect(post?.content).toContain(author);
+    expect(post?.content).not.toContain(author);
     expect(post?.content).not.toContain(`# ${title}`);
     expect(post?.content).not.toContain(bodyImage);
     expect(post?.category).toBe('legal');
@@ -936,7 +936,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post?.faq?.map((item) => item.a)).toContain(faq1Answer);
     expect(post?.faq?.map((item) => item.a)).toContain(faq3Answer);
     expect(post?.content).toContain(disclaimer);
-    expect(post?.content).toContain(author);
+    expect(post?.content).not.toContain(author);
     for (const link of inlineColumnLinks) {
       expect(post?.content).toContain(link);
     }
@@ -959,7 +959,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(normalizedHtml).toContain(
       '申請期間は、一般に30日です（戸籍法第48条）。',
     );
-    expect(normalizedHtml).toContain('曾雋崴');
+    expect(normalizedHtml).not.toContain('曾雋崴');
 
     for (const link of [
       ...inlineColumnLinks,

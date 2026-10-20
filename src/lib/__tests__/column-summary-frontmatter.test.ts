@@ -93,7 +93,6 @@ describe('column loader summary frontmatter', () => {
       title: post!.title,
       description: post!.summary,
       path: `/en/columns/${post!.slug}`,
-      authorName: 'Attorney Wei Tseng',
     });
     expect(article.description).toBe(AUTHORED_SUMMARY);
     expect(String(article.description).endsWith('...')).toBe(false);
@@ -167,7 +166,6 @@ describe('English column corpus summaries', () => {
         title: post.title,
         description: post.summary,
         path: `/en/columns/${post.slug}`,
-        authorName: 'Attorney Wei Tseng',
       });
       expect(article.description).toBe(post.summary);
 

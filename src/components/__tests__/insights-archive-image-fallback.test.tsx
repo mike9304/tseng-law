@@ -96,12 +96,13 @@ describe('column public author identity', () => {
   it.each([
     ['ja', '曾雋崴弁護士監修'],
     ['zh-hant', '曾雋崴律師審閱'],
-  ] as const)('renders the official %s review byline', (locale, expectedByline) => {
+  ] as const)('omits the former %s review byline', (locale, expectedByline) => {
     const html = renderToStaticMarkup(
       <InsightsArchiveSection locale={locale} posts={[emptyImagePost]} />,
     );
 
-    expect(html).toContain(expectedByline);
+    expect(html).not.toContain(expectedByline);
+    expect(html).not.toContain('insights-byline');
   });
 
   it('does not retain the incorrect Chinese name in the four product sources', () => {
@@ -117,13 +118,13 @@ describe('column public author identity', () => {
     }
   });
 
-  it('uses the canonical profile URL and official alternate name in Article JSON-LD source', () => {
+  it('does not send author identity into Article JSON-LD', () => {
     const detailSource = readFileSync(
       new URL('../../app/[locale]/columns/[slug]/page.tsx', import.meta.url),
       'utf8',
     );
 
-    expect(detailSource).toContain('https://www.wei-wei-lawyer.com/lawyertseng');
-    expect(detailSource).toContain("authorAlternateNames: ['증준외', '曾雋崴', 'Wei Tseng']");
+    expect(detailSource).not.toContain('authorName:');
+    expect(detailSource).not.toContain('authorAlternateNames:');
   });
 });

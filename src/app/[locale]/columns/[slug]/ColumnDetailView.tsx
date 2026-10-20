@@ -42,8 +42,6 @@ export type ColumnDetailViewProps = {
   tocEntries: ColumnTocEntry[];
   diagramVideo: { id: TrafficDiagramId; locale: TrafficDiagramLocale } | null;
   diagramSplit: [string, string] | null;
-  authorName: string; authorHref: string;
-  aiAuthored: boolean;
   attorneyHeading: string;
   guideLinks: { href: string; label: string }[];
   recommendedItems: Pick<ColumnPost, 'slug' | 'title' | 'featuredImage' | 'topic' | 'dateDisplay' | 'readTime'>[];
@@ -98,7 +96,7 @@ function FolioAuthority({ heading, card }: { heading: string; card: FolioAuthori
 }
 
 /** Shared SSR view. Data loading and publication decisions stay in the server route. */
-export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, authorName, authorHref, aiAuthored, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography, folio }: ColumnDetailViewProps) {
+export default function ColumnDetailView({ locale, urlLocale, post, prevPost, nextPost, t, tocEntries, diagramVideo, diagramSplit, attorneyHeading, guideLinks, recommendedItems, isTrafficColumn, showTrafficUpdate, modifiedDate, prevLabel, nextLabel, faqItems, showFaq, faqJsonLd, breadcrumbJsonLd, articleJsonLd, showHero, showBody, showSeo, typography, folio }: ColumnDetailViewProps) {
   const guidanceLocale = isGuidanceLocale4(urlLocale) ? urlLocale : undefined;
   const consultationHref = getLocalizedConsultationMailto(guidanceLocale ?? locale);
   const showObservation = showBody && hasRightTurnObservation(urlLocale, post.slug);
@@ -143,11 +141,6 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
             <span className="blog-category-badge">{post.categoryLabel}</span>
             <h1 className="blog-hero-title">{typesetTitle(locale, post.title)}</h1>
             <div className="blog-meta">
-              {!aiAuthored ? (
-                <Link href={authorHref} className="link-underline">
-                  {authorName}
-                </Link>
-              ) : null}
               <time>{post.dateDisplay || post.date}</time>
               {showTrafficUpdate ? (
                 <time dateTime={modifiedDate} data-column-updated>
@@ -218,7 +211,7 @@ export default function ColumnDetailView({ locale, urlLocale, post, prevPost, ne
                   </dl>
                 </section>
               ) : null}
-              {aiAuthored ? <AiAuthorBox locale={urlLocale} /> : null}
+              <AiAuthorBox locale={urlLocale} />
               <RecommendedForYou
                 locale={urlLocale}
                 hrefBase={`/${urlLocale}/columns`}

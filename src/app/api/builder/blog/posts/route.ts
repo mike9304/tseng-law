@@ -19,6 +19,7 @@ import { columnLocaleSchema } from '@/lib/builder/columns/types';
 import { listAllBlogPosts, listBlogPosts } from '@/lib/builder/blog/column-adapter';
 import { filterPosts, sortPosts, type BlogPost } from '@/lib/builder/blog/blog-engine';
 import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
+import { stripColumnAttribution, stripColumnHtmlAttribution } from '@/lib/column-attribution';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -77,10 +78,17 @@ export async function GET(request: NextRequest) {
       ? await listAllBlogPosts(parsed.locale)
       : await listBlogPosts(parsed.locale);
 
-    let filtered = filterPosts(all, {
+    // Public feeds expose article data without authors, including legacy fallback authors.
+    const visible = parsed.scope === 'all' ? all : all.map(({ author: _author, ...post }) => ({
+      ...post,
+      excerpt: stripColumnAttribution(post.excerpt),
+      bodyMarkdown: stripColumnAttribution(post.bodyMarkdown),
+      bodyHtml: stripColumnHtmlAttribution(post.bodyHtml),
+    }));
+    let filtered = filterPosts(visible, {
       category: parsed.category,
       tag: parsed.tag,
-      author: parsed.author,
+      author: parsed.scope === 'all' ? parsed.author : undefined,
       query: parsed.q,
       locale: parsed.locale,
     });

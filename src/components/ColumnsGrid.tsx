@@ -20,7 +20,6 @@ import {
   type ColumnTopic,
 } from '@/lib/column-topics';
 import { RECOMMENDED_SECTION_TITLE, splitRecommendedColumns } from '@/lib/en-recommended-columns';
-import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import styles from './ColumnsGrid.module.css';
 import CriminalBoardLink from './CriminalBoardLink';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
@@ -41,7 +40,6 @@ const searchCopy = {
     resultCount: (n: number) => `${n}개 결과`,
     reset: '필터 초기화 · 모든 칼럼 보기',
     category: '카테고리',
-    author: '작성자',
     year: '연도',
     month: '월',
     query: '검색어',
@@ -56,7 +54,6 @@ const searchCopy = {
     resultCount: (n: number) => `${n} 篇結果`,
     reset: '清除篩選 · 查看所有專欄',
     category: '分類',
-    author: '作者',
     year: '年份',
     month: '月份',
     query: '關鍵字',
@@ -71,7 +68,6 @@ const searchCopy = {
     resultCount: (n: number) => `${n} result${n === 1 ? '' : 's'}`,
     reset: 'Clear filters · View all columns',
     category: 'Category',
-    author: 'Author',
     year: 'Year',
     month: 'Month',
     query: 'Search',
@@ -86,7 +82,6 @@ const searchCopy = {
     resultCount: (n: number) => `${n}件`,
     reset: '絞り込みを解除 · すべてのコラムを見る',
     category: 'カテゴリー',
-    author: '著者',
     year: '年',
     month: '月',
     query: '検索語',
@@ -504,7 +499,6 @@ function postMatchesQuery(post: ColumnListItem, query: string, locale: PublicLoc
       ? COLUMN_TOPIC_LABELS[locale][post.topic ?? resolveColumnTopic(post.slug, undefined, post.category)]
       : undefined,
     post.blogCategory,
-    post.authorName,
     ...(post.tags ?? []),
   ].filter(Boolean).join(' ').toLowerCase().includes(normalized);
 }
@@ -536,7 +530,7 @@ export default function ColumnsGrid({
   topicOrder?: readonly string[];
   /** Optional slugs shown first in the recommended section (en design); the rest stay newest first. */
   recommendedOrder?: readonly string[];
-  /** Folio locales: search, filter and byline labels in the page language (passed only there). */
+  /** Folio locales: search and filter labels in the page language. */
   folioLabels?: FolioColumnsCopy;
 }) {
   const listHref = hrefBase ?? `/${locale}/columns`;
@@ -571,14 +565,6 @@ export default function ColumnsGrid({
   }, [featuredSlugs, openingSlugs, posts, recommended]);
   const uiLocale = isColumnTopicUiLocale(locale) ? locale : 'en';
   const labels = categoryFilterLabels(locale);
-  const byline =
-    locale === 'ko'
-      ? '증준외 변호사 검토'
-      : locale === 'zh-hant'
-        ? '曾雋崴律師審閱'
-        : locale === 'ja'
-          ? '曾雋崴弁護士監修'
-          : folioLabels?.reviewedBy ?? 'Reviewed by Wei Tseng';
   const router = useRouter();
   const pathname = usePathname();
   const liveSearchParams = useSearchParams();
@@ -591,7 +577,6 @@ export default function ColumnsGrid({
   const searchParams = urlFiltersReady ? liveSearchParams : null;
   const requestedCategory = normalizeFilterValue(searchParams ? searchParams.get('category') : initialFilters.category);
   const requestedTopic = normalizeFilterValue(searchParams ? searchParams.get('topic') : initialFilters.topic);
-  const requestedAuthor = normalizeFilterValue(searchParams ? searchParams.get('author') : initialFilters.author);
   const requestedQuery = normalizeFilterValue(searchParams ? searchParams.get('q') : initialFilters.q);
   const requestedYear = normalizeFilterValue(searchParams ? searchParams.get('year') : initialFilters.year);
   const requestedMonth = normalizeFilterValue(searchParams ? searchParams.get('month') : initialFilters.month);
@@ -652,7 +637,6 @@ export default function ColumnsGrid({
           : true;
         if (!categoryMatches) return false;
         if (requestedTopic && topicMode && topicOf(post) !== requestedTopic) return false;
-        if (requestedAuthor && post.authorName !== requestedAuthor) return false;
         if (requestedYear && !post.date.startsWith(requestedYear)) return false;
         if (requestedMonth) {
           const month = post.date.slice(5, 7).replace(/^0/, '');
@@ -661,7 +645,7 @@ export default function ColumnsGrid({
         return postMatchesQuery(post, appliedQuery, locale);
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps -- topicOf is derived from props only
-    [appliedQuery, locale, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear, requestedTopic, topicMode],
+    [appliedQuery, locale, posts, requestedCategory, requestedMonth, requestedYear, requestedTopic, topicMode],
   );
 
   const cats: { id: ColumnCategory | 'all'; label: string }[] = [
@@ -673,7 +657,6 @@ export default function ColumnsGrid({
   const activeFilters = [
     { key: 'category', label: searchLabels.category, value: requestedCategory ? (active ? labels[active] : requestedCategory) : '' },
     { key: 'topic', label: topicCopy.nav, value: requestedTopic && topicMode ? (activeTopic ? topicLabels[activeTopic] : requestedTopic) : '' },
-    { key: 'author', label: searchLabels.author, value: requestedAuthor },
     { key: 'year', label: searchLabels.year, value: requestedYear },
     { key: 'month', label: searchLabels.month, value: requestedMonth },
     { key: 'query', label: searchLabels.query, value: appliedQuery },
@@ -733,7 +716,6 @@ export default function ColumnsGrid({
       </div>
       <div className="columns-card-body">
         <div className="columns-card-meta">
-          {!isAiAuthoredColumn(post) ? <span className="columns-card-byline">{post.authorName || byline}</span> : null}
           {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
         </div>
         <h3 className="columns-card-title">{typesetTitle(locale, post.title)}</h3>

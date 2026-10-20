@@ -162,18 +162,19 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     }
   });
 
-  it('retains the fine warning, closing advice, and required byline', () => {
+  it('retains the fine warning and closing advice without a public byline', () => {
     const required = [
       'the competent authority may later impose an administrative fine and order the use to stop',
       'please feel free to contact a Taiwan attorney',
       'Administrative agency rules may change frequently',
       'confirm the latest regulations before registering a company',
-      'Wei Tseng (曾雋崴), Taiwan Attorney',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+    expect(raw).toContain('Wei Tseng (曾雋崴), Taiwan Attorney');
+    expect(post?.content).not.toContain('Wei Tseng (曾雋崴), Taiwan Attorney');
     expect(raw).not.toContain('the competent authority may later impose a fine');
     expect(post?.content).not.toContain(
       'the competent authority may later impose a fine',

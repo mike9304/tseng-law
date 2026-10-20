@@ -19,6 +19,7 @@ import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
 import { getAllColumnPosts } from '@/lib/columns';
+import { stripColumnAttribution, stripColumnHtmlAttribution } from '@/lib/column-attribution';
 import type { SearchDoc } from './types';
 
 export class SearchCurrentDataUnavailableError extends Error {
@@ -33,7 +34,22 @@ export class SearchCurrentDataUnavailableError extends Error {
  */
 
 function extractTextFromDocument(nodes: BuilderCanvasNode[]): string {
-  return nodes.map(extractVisibleNodeText).filter((s) => s.length > 0).join('\n');
+  // Match the public renderer's suppression of legacy saved column bylines.
+  const hidden = new Set(nodes.filter((node) => {
+    const className = (node.content as { className?: string }).className ?? '';
+    return /(?:^|\s)(?:insights-byline|columns-card-byline)(?:\s|$)/.test(className);
+  }).map((node) => node.id));
+  let expanded = true;
+  while (expanded) {
+    expanded = false;
+    for (const node of nodes) {
+      if (node.parentId && hidden.has(node.parentId) && !hidden.has(node.id)) {
+        hidden.add(node.id);
+        expanded = true;
+      }
+    }
+  }
+  return nodes.filter((node) => !hidden.has(node.id)).map(extractVisibleNodeText).filter((s) => s.length > 0).join('\n');
 }
 
 function isSearchablePage(page: BuilderPageMeta, locale: Locale): boolean {
@@ -108,10 +124,8 @@ async function collectBlogDocsForLocale(locale: Locale): Promise<SearchDoc[]> {
     summary: post.excerpt,
     body: [
       post.excerpt,
-      post.bodyMarkdown,
-      stripHtml(post.bodyHtml),
-      post.author?.name,
-      post.author?.title,
+      stripColumnAttribution(post.bodyMarkdown),
+      stripHtml(stripColumnHtmlAttribution(post.bodyHtml)),
       post.category,
       ...(post.tags ?? []),
     ].filter(Boolean).join('\n'),

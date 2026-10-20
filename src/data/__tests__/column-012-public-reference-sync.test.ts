@@ -461,7 +461,6 @@ describe('column 012 public reference synchronization', () => {
         title: post!.title,
         description: post!.summary,
         path: `/${locale}/columns/${post!.slug}`,
-        authorName: 'test-author',
       });
 
       expect(article.headline, locale).toBe(expectedTitles[locale]);

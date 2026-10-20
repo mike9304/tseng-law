@@ -80,8 +80,8 @@ describe('public column view publication visibility', () => {
     expect(meta).toBeDefined();
     expect(meta).not.toContain('曾雋崴');
     const attorney = await props(true, true, 'taiwan-divorce-lawsuit-qna', false);
-    expect(attorney.articleJsonLd.author).toMatchObject({ '@type': 'Person', name: '曾雋崴律師' });
-    expect(renderToStaticMarkup(<ColumnDetailView {...attorney} />)).toMatch(/class="blog-meta"><a[^>]*>曾雋崴律師<\/a>/);
+    expect(attorney.articleJsonLd).not.toHaveProperty('author');
+    expect(renderToStaticMarkup(<ColumnDetailView {...attorney} />)).not.toMatch(/class="blog-meta"><a/);
   });
 
   it('keeps the generated clip behind body visibility without removing the article', async () => {

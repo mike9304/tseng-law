@@ -17,7 +17,6 @@ social_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-
 ---
 # 開了六分鐘又被攔下，持球棒的駕駛辯稱只是攔車
 
-作者：法律 AI 助理
 
 高速公路交流道南港出口往舊宗路的車道上，一輛自小客車變換車道，停在另一輛自小客車前方。前車駕駛手持棒狀物下車。被擋的車之後繼續往前開了六分鐘，同一輛車又從行車紀錄器畫面中雙黃線左側逆向駛來，再切回右側車道。[臺灣士林地方法院115年度易字第383號刑事判決，2026年6月26日](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLDM%2C115%2C%E6%98%93%2C383%2C20260626%2C1)
 

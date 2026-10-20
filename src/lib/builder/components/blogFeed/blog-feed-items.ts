@@ -36,7 +36,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 }
 
 function isBlogPost(value: unknown): value is BlogPost {
-  if (!isRecord(value) || !isRecord(value.author)) return false;
+  if (!isRecord(value)) return false;
   return typeof value.postId === 'string'
     && typeof value.slug === 'string'
     && typeof value.locale === 'string'
@@ -49,7 +49,7 @@ function isBlogPost(value: unknown): value is BlogPost {
     && typeof value.readingTimeMinutes === 'number'
     && typeof value.updatedAt === 'string'
     && typeof value.featured === 'boolean'
-    && typeof value.author.name === 'string';
+    && (value.author === undefined || (isRecord(value.author) && typeof value.author.name === 'string'));
 }
 
 export function parseBlogPostsPayload(value: unknown): BlogPostsPayload | null {
@@ -74,7 +74,7 @@ export function toFeedItem(post: BlogPost, isBuilder: boolean, locale: Locale): 
     readingTimeMinutes: post.readingTimeMinutes,
     featured: post.featured,
     featuredImage: post.featuredImage,
-    authorName: post.author?.name ?? '',
+    authorName: isBuilder ? post.author?.name ?? '' : '',
     date: fmtDate(post.publishedAt ?? post.updatedAt),
     href: isBuilder ? `#${post.slug}` : `/${locale}/columns/${post.slug}`,
   };

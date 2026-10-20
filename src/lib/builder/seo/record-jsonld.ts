@@ -56,7 +56,6 @@ export function buildBuilderRecordJsonLd({
         title: post.title,
         description: post.summary,
         datePublished: post.date,
-        author: post.authorName,
         image: post.featuredImage,
         url: buildAbsoluteUrl(siteUrl, `/${locale}/columns/${post.slug}`),
       });

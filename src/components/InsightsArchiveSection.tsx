@@ -17,7 +17,6 @@ import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import { interleaveColumnsByTopic, type ColumnTopic } from '@/lib/column-topics';
 import { splitRecommendedColumns } from '@/lib/column-audience';
 import RecommendedForYou from '@/components/RecommendedForYou';
-import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import {
   INSIGHTS_IMAGE_FALLBACK,
   resolveInsightsImageSrc,
@@ -184,14 +183,6 @@ export default function InsightsArchiveSection({
   const copy = copyByLocale[locale];
   // zh-hant and ko: the monoline set replaces the typed → ‹ › of this section; other locales render the glyphs as before.
   const zhIcons = isAppleDesignLocale(locale);
-  const authorLabel =
-    locale === 'ko'
-      ? '증준외 변호사 검토'
-      : locale === 'zh-hant'
-        ? '曾雋崴律師審閱'
-        : locale === 'ja'
-          ? '曾雋崴弁護士監修'
-          : 'Reviewed by Wei Tseng';
   const protectInsightTitle = (title: string) => {
     if (locale === 'ko') return typesetTitle(locale, title);
     if (presentation !== 'editorial') return title;
@@ -293,9 +284,6 @@ export default function InsightsArchiveSection({
               </div>
               {/* Whole card opens the column: one stretched link on the title,
                   no other interactive element inside the card. */}
-              {!isAiAuthoredColumn(featured) ? (
-                <span className="insights-byline">{authorLabel}</span>
-              ) : null}
               <h3 className="insights-featured-title">
                 <SmartLink className="card-stretched-link" href={`/${locale}/columns/${featured.slug}`}>
                   {protectInsightTitle(featured.title)}
@@ -364,9 +352,6 @@ export default function InsightsArchiveSection({
                       </time>
                       {post.readTime ? <span className="insights-readtime">{post.readTime}</span> : null}
                     </div>
-                    {!isAiAuthoredColumn(post) ? (
-                      <span className="insights-byline">{authorLabel}</span>
-                    ) : null}
                     <h4 className="insights-list-title">
                       <SmartLink className="card-stretched-link" href={`/${locale}/columns/${post.slug}`}>
                         {protectInsightTitle(post.title)}

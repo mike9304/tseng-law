@@ -28,8 +28,6 @@ export const metadata: Metadata = {
   title: '법무법인 호정',
   description:
     '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·중문·영문으로 안내하는 법무법인 호정 공식 사이트.',
-  authors: [{ name: '법무법인 호정' }],
-  creator: '법무법인 호정',
   publisher: '법무법인 호정',
   category: 'legal services',
   manifest: '/manifest.webmanifest',

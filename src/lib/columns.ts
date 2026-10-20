@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { normalizeColumnAudience } from './column-audience';
+import { stripColumnAttribution } from './column-attribution';
 import { normalizeColumnDiagramVideo } from '@/data/traffic-diagrams';
 import path from 'path';
 import matter from 'gray-matter';
@@ -409,7 +410,7 @@ function parseColumnPostsFromDir(
     const columnNumber = toNumber(file);
     const categories = (data.categories as string[]) || [];
     const cat = categoryFromString(categories[0] || '');
-    const fixedContent = fixImagePaths(content);
+    const fixedContent = fixImagePaths(stripColumnAttribution(content));
     const cleanContent = stripInlineImages(stripLeadingDuplicates(fixedContent));
     const featuredRaw = (data.featured_image as string) || '';
     const featuredImage = featuredRaw ? featuredRaw.replace(/^\.\.\/images\//, '/images/blog/') : '/images/placeholder-article-hero.jpg';

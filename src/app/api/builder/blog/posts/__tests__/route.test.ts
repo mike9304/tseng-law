@@ -60,7 +60,7 @@ describe('builder blog posts API', () => {
     listAllBlogPostsMock.mockResolvedValue([publishedPost, draftPost] as never);
   });
 
-  it('returns published posts while preserving success response shape', async () => {
+  it('returns published posts without exposing internal author data', async () => {
     const response = await GET(request('locale=ko&sort=newest&limit=9'));
     const payload = await response.json();
 
@@ -71,7 +71,7 @@ describe('builder blog posts API', () => {
       ok: true,
       locale: 'ko',
       total: 1,
-      posts: [publishedPost],
+      posts: [expect.not.objectContaining({ author: expect.anything() })],
     });
   });
 
@@ -156,5 +156,35 @@ describe('builder blog posts API', () => {
     expect(JSON.stringify(payload)).not.toContain('blog posts secret leaked');
     expect(consoleError).toHaveBeenCalledWith('[builder/blog/posts] GET failed:', expect.any(Error));
     consoleError.mockRestore();
+  });
+});
+
+describe('public blog feed author policy', () => {
+  it('omits manuscript bylines from public Markdown and rich-text payloads', async () => {
+    listBlogPostsMock.mockResolvedValueOnce([{
+      ...publishedPost,
+      bodyMarkdown: 'Legal conditions.\n\nWei Tseng (曾雋崴), Taiwan Attorney',
+      bodyHtml: '<p>Legal conditions.</p><p>Author: Another Writer</p>',
+    }] as never);
+    const payload = await (await GET(request('locale=ko'))).json();
+    expect(payload.posts[0].bodyMarkdown.trim()).toBe('Legal conditions.');
+    expect(payload.posts[0].bodyHtml).toBe('<p>Legal conditions.</p>');
+    expect(JSON.stringify(payload)).not.toMatch(/Wei Tseng|Another Writer|Author One/);
+  });
+
+  it('ignores author filters and omits authors, including fallback authors, from JSON', async () => {
+    listBlogPostsMock.mockResolvedValueOnce([publishedPost] as never);
+    const response = await GET(request('locale=ko&author=Unknown%20Author'));
+    const payload = await response.json();
+    expect(payload.total).toBe(1);
+    expect(payload.posts[0].title).toBe(publishedPost.title);
+    expect(payload.posts[0]).not.toHaveProperty('author');
+    expect(JSON.stringify(payload)).not.toContain('Author One');
+  });
+
+  it('does not make internal author names searchable on the public feed', async () => {
+    listBlogPostsMock.mockResolvedValueOnce([publishedPost] as never);
+    const response = await GET(request('locale=ko&q=Author%20One'));
+    expect((await response.json()).posts).toEqual([]);
   });
 });

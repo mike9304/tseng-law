@@ -683,7 +683,7 @@ describe('Japanese labor column 014 — minimum-service-period clauses', () => {
       .replace(/^#\s+.+\n*/, '')
       .replace(/^\s*!\[[^\]]*\]\([^)]+\)\s*\n*/, '')
       .trim();
-    expect(post?.content).toBe(expectedRendererContent);
+    expect(post?.content).toBe(expectedRendererContent.replace(author, '').trim());
     expect(post?.content).toContain(`## ${headings[0]}`);
     expect(post?.content).toContain(`## ${headings.at(-1)}`);
     expect(post?.faq).toEqual(faq);

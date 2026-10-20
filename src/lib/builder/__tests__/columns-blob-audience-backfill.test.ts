@@ -36,7 +36,7 @@ describe('published column copies keep file-only recommendation metadata', () =>
     vi.unstubAllEnvs();
   });
 
-  it.each([true, false])('backfills image descriptions only for the same image (same=%s)', async (sameImage) => {
+  it.each([true, false])('backfills matching image descriptions and strips CMS body attribution (same=%s)', async (sameImage) => {
     const root = await mkdtemp(path.join(tmpdir(), 'tseng-column-image-'));
     const slug = 'taiwan-lane-change-side-rear-collision-liability';
     const file = getColumnPost(slug, 'zh-hant')!;
@@ -46,7 +46,9 @@ describe('published column copies keep file-only recommendation metadata', () =>
       await mkdir(localeDir, { recursive: true });
       await writeFile(path.join(localeDir, `${slug}.published.json`), JSON.stringify({
         version: 1, slug, locale: 'zh-hant', title: file.title,
-        summary: 'Published copy', bodyMarkdown: 'Published body', bodyHtml: '<p>Published body</p>',
+        summary: 'Published copy',
+        bodyMarkdown: sameImage ? 'Published body\n\n曾雋崴律師（Wei Tseng）' : '',
+        bodyHtml: '<p>Published body</p><p>曾雋崴律師（Wei Tseng）</p>',
         linkedSlugs: {}, frontmatter: {
           category: 'legal', featuredImage: sameImage ? file.featuredImage : '/images/different-cms-image.webp',
           lastmod: '2026-10-02T00:00:00.000Z', dateDisplay: '2026年10月2日',
@@ -62,7 +64,7 @@ describe('published column copies keep file-only recommendation metadata', () =>
       vi.stubEnv('CONSULTATION_LOG_BACKEND', '');
       vi.stubEnv('NODE_ENV', 'development');
       const post = (await getAllColumnPostsIncludingBlob('zh-hant')).find(p => p.slug === slug)!;
-      expect(post.content).toBe('Published body');
+      expect(post.content.trim()).toBe('Published body');
       if (sameImage) {
         expect(post.featuredImageAlt).toBe(file.featuredImageAlt);
         expect(post.featuredImageCaption).toBe(file.featuredImageCaption);

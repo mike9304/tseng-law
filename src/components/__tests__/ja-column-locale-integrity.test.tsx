@@ -73,13 +73,13 @@ describe('Japanese column locale integrity', () => {
     expect(html).not.toContain('/en/lawyers/wei-tseng');
   });
 
-  it('shows the Japanese reviewed-by byline inside a card with a single column link', () => {
+  it('keeps one column link without a Japanese byline', () => {
     const html = renderToStaticMarkup(
       <InsightsArchiveSection locale="ja" posts={[samplePost]} />,
     );
 
-    expect(html).toContain('曾雋崴弁護士監修');
-    // Whole-card link: the byline is text, so the card has no nested links.
+    expect(html).not.toContain('曾雋崴弁護士監修');
+    // The whole card keeps its single article link.
     const card = html.slice(html.indexOf('<article class="insights-featured"'), html.indexOf('</article>'));
     expect(card.match(/<a /g)).toHaveLength(1);
     expect(card).toContain('class="card-stretched-link" href="/ja/columns/');
@@ -93,8 +93,6 @@ describe('Japanese column locale integrity', () => {
       title: samplePost.title,
       description: samplePost.summary,
       path: `/ja/columns/${samplePost.slug}`,
-      authorName: japaneseProfile.name,
-      authorUrl: '/ja/lawyers/wei-tseng',
     });
     const faq = buildFaqJsonLd(
       [{ q: '相談は日本語でできますか？', a: 'はい、日本語でご相談いただけます。' }],
@@ -106,7 +104,7 @@ describe('Japanese column locale integrity', () => {
       name: '台湾法律コラム',
       description: '日本語で台湾法務を解説するコラムです。',
       items: [{
-        name: `${samplePost.title} · 曾雋崴弁護士`,
+        name: samplePost.title,
         path: `/ja/columns/${samplePost.slug}`,
         description: samplePost.summary,
       }],
@@ -115,11 +113,8 @@ describe('Japanese column locale integrity', () => {
     expect(article).toMatchObject({
       inLanguage: 'ja',
       publisher: { name: '昊鼎国際法律事務所' },
-      author: {
-        name: '曾雋崴弁護士',
-        url: 'https://tseng-law.com/ja/lawyers/wei-tseng',
-      },
     });
+    expect(article).not.toHaveProperty('author');
     expect(faq).toMatchObject({
       '@type': 'FAQPage',
       inLanguage: 'ja',
@@ -131,7 +126,7 @@ describe('Japanese column locale integrity', () => {
       description: '日本語で台湾法務を解説するコラムです。',
       mainEntity: {
         itemListElement: [{
-          name: '台湾会社設立の基本 · 曾雋崴弁護士',
+          name: '台湾会社設立の基本',
           url: 'https://tseng-law.com/ja/columns/taiwan-company-establishment-basics',
           description: samplePost.summary,
         }],
@@ -149,7 +144,7 @@ describe('Japanese column locale integrity', () => {
       'utf8',
     );
 
-    expect(detailSource).toContain('const authorProfilePath = getAttorneyProfilePath(locale);');
+    expect(detailSource).not.toContain('authorProfilePath');
     expect(detailSource).toContain("buildBreadcrumbJsonLd(urlLocale === 'vi' ? 'vi' : locale,");
     expect(detailSource).toContain('const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, urlLocale) : null;');
     // The actual draft hrefs (including Japanese) are asserted by the rendered

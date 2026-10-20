@@ -1,7 +1,7 @@
 # Column frontmatter: audience and author
 
 Each locale file (`src/content/columns*/NNN-slug.md`) can carry two fields
-that drive recommendations and the byline. Add them inside the frontmatter
+for recommendations and internal provenance. Add them inside the frontmatter
 block (between the `---` lines).
 
 ## `audience` (per-locale recommendations)
@@ -47,16 +47,22 @@ Only the locale's own files are used, so a locale never shows another
 language's text. A new column appears at the top of its locale automatically
 once its file carries the field; nothing else needs to change.
 
-## `author` (AI-written columns)
+## `author` (internal provenance only)
 
 ```yaml
 author: "legal-ai-assistant"
 ```
 
-Marks a column as written by AI: no attorney byline or review claim, the
-"Legal AI Assistant" author box is added at the end, and the Article JSON-LD
-author is the Legal AI Assistant. Columns without the field keep the attorney
-byline (019–040 are also listed in src/lib/ai-authored-columns.ts).
+Marks a column as written by AI for internal records. The field is optional
+in the content loader; existing lane lint may require this internal value.
+Older AI-written slugs are also listed in `src/lib/ai-authored-columns.ts`.
+
+The user decision of 2026-10-20 removes every public author, including original
+lawyer bylines. Neither this field nor its absence may produce an author name,
+profile, filter, image-alt attribution, metadata, JSON-LD author or public-feed
+author. An Organization may appear as `publisher` only. The neutral
+general-information disclaimer must not mention an author or AI. Preserve
+internal provenance and separate generated-media notices.
 
 ## Example (daily column routine)
 

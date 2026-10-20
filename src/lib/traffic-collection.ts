@@ -260,8 +260,6 @@ export type TrafficBoardCopy = {
   all: string;
   videoOnly: string;
   video: string;
-  /** Same author wording as the article's AI author box (ai-authored-columns.ts). */
-  aiAuthor: string;
   clear: string;
   empty: string;
   resultCount: (shown: number, total: number, filtered: boolean) => string;
@@ -277,7 +275,6 @@ export const TRAFFIC_BOARD_COPY: Record<SiteLocale, TrafficBoardCopy> = {
     all: '전체',
     videoOnly: '영상 도해가 있는 글',
     video: '영상 도해',
-    aiAuthor: '법률 AI 어시스턴트 작성',
     clear: '필터 모두 해제',
     empty: '조건에 맞는 칼럼이 없습니다.',
     resultCount: (shown, total, filtered) => (filtered ? `${total}편 중 ${shown}편` : `${total}편`),
@@ -291,7 +288,6 @@ export const TRAFFIC_BOARD_COPY: Record<SiteLocale, TrafficBoardCopy> = {
     all: '全部',
     videoOnly: '附影片示意',
     video: '影片示意',
-    aiAuthor: '法律AI助理撰文',
     clear: '清除全部條件',
     empty: '沒有符合條件的專欄。',
     resultCount: (shown, total, filtered) => (filtered ? `${total} 篇中符合 ${shown} 篇` : `共 ${total} 篇`),
@@ -305,7 +301,6 @@ export const TRAFFIC_BOARD_COPY: Record<SiteLocale, TrafficBoardCopy> = {
     all: 'All',
     videoOnly: 'With video diagram',
     video: 'Video diagram',
-    aiAuthor: 'Written by Legal AI Assistant',
     clear: 'Clear all filters',
     empty: 'No articles match these filters.',
     resultCount: (shown, total, filtered) => (filtered
@@ -321,7 +316,6 @@ export const TRAFFIC_BOARD_COPY: Record<SiteLocale, TrafficBoardCopy> = {
     all: 'すべて',
     videoOnly: '動画図解つき',
     video: '動画図解',
-    aiAuthor: '法律AIアシスタント執筆',
     clear: '条件をすべて解除',
     empty: '条件に合うコラムはありません。',
     resultCount: (shown, total, filtered) => (filtered ? `${total}件中 ${shown}件` : `${total}件`),

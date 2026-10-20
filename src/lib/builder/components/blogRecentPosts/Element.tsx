@@ -124,7 +124,7 @@ export default function BlogRecentPostsElement({
           <strong>{item.title}</strong>
           {c.showExcerpt && item.excerpt ? <span className={styles.excerpt}>{item.excerpt}</span> : null}
           <span className={styles.meta}>
-            {c.showAuthor && item.authorName ? <span>{item.authorName}</span> : null}
+            {isBuilder && c.showAuthor && item.authorName ? <span>{item.authorName}</span> : null}
             {c.showDate && item.date ? <time>{item.date}</time> : null}
           </span>
         </a>

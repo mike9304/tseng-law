@@ -24,7 +24,6 @@ const descriptionKeyPreferences = [
 ] as const;
 const imageKeyPreferences = ['ogImage', 'featuredImage', 'heroImage', 'image', 'thumbnail', 'cover'] as const;
 const dateKeyPreferences = ['publishedAt', 'publishDate', 'date', 'createdAt', 'updatedAt'] as const;
-const authorKeyPreferences = ['author', 'authorName', 'writer', 'byline'] as const;
 const noIndexKeyPreferences = ['noIndex', 'noindex', 'robotsNoindex'] as const;
 const keywordKeyPreferences = ['keywords', 'tags', 'category'] as const;
 
@@ -138,7 +137,6 @@ export function resolvePublishedDynamicItemRecordJsonLd({
     title,
     description: readRecordDescription(resolved.collection, resolved.record, title),
     datePublished: readRecordDate(resolved.record) ?? resolved.record.createdAt,
-    author: readFirstRecordText(resolved.record, authorKeyPreferences) ?? undefined,
     image: readRecordImage(resolved.collection, resolved.record),
     url: canonicalUrl,
   });

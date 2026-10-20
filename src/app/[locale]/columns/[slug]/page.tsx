@@ -8,10 +8,8 @@ import { notFound } from 'next/navigation';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
 import {
   AI_COLUMN_ATTORNEY_HEADING,
-  isAiAuthoredColumn,
 } from '@/lib/ai-authored-columns';
 import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
-import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { getAllColumnPosts, getColumnPost, getColumnPublicationDate, parseColumnPublicationDate } from '@/lib/columns';
 import { columnAlternateLocales } from '@/lib/column-language-links';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
@@ -47,7 +45,7 @@ const copy: Record<SiteLocale | 'vi', {
   vi: columnUiVi.article,
   ko: {
     backLabel: '← 칼럼 목록으로',
-    attorneyHeading: '이 글 검토 변호사',
+    attorneyHeading: '상담 변호사',
     guideTitle: '함께 보는 주제',
     consultationTitle: '상담 예약',
     consultationText: '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.',
@@ -57,7 +55,7 @@ const copy: Record<SiteLocale | 'vi', {
   },
   'zh-hant': {
     backLabel: '← 返回專欄列表',
-    attorneyHeading: '審閱本文的律師',
+    attorneyHeading: '諮詢律師',
     guideTitle: '延伸主題',
     consultationTitle: '預約諮詢',
     consultationText: '如有台灣法律問題，歡迎來信諮詢。',
@@ -67,7 +65,7 @@ const copy: Record<SiteLocale | 'vi', {
   },
   en: {
     backLabel: '← Back to Insights',
-    attorneyHeading: 'Reviewing Attorney',
+    attorneyHeading: 'Consulting Attorney',
     guideTitle: 'Related Topics',
     consultationTitle: 'Book Consultation',
     consultationText: 'If you have any questions about Taiwan law, feel free to contact us.',
@@ -77,7 +75,7 @@ const copy: Record<SiteLocale | 'vi', {
   },
   ja: {
     backLabel: '← コラム一覧へ',
-    attorneyHeading: '本稿の監修弁護士',
+    attorneyHeading: 'ご相談いただける弁護士',
     guideTitle: '関連トピック',
     consultationTitle: '相談予約',
     consultationText: '台湾法務についてご不明点があれば、お気軽にお問い合わせください。',
@@ -175,7 +173,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // continue to use their existing translated navigation with English fallbacks.
   const guidancePack = guidanceLocale ? guidanceContent[guidanceLocale] : null;
   // Folio locales (id, th, European): no English fallback left in the shell. The consultation card names the
-  // consultation languages from the team record, the attorney heading keeps the pack's review label.
+  // consultation languages from the team record, the attorney heading describes consultation only.
   const folioLocale = guidancePack && isIntlDesignLocale(urlLocale) ? urlLocale : null;
   const folioArticle = folioLocale ? folioArticleCopy[folioLocale] : null;
   const folioFacts = folioLocale ? buildGuidanceAttorneyFacts(folioLocale) : null;
@@ -187,7 +185,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         consultationButton: guidancePack.contactCta,
         ...(folioLocale && folioArticle
           ? {
-              attorneyHeading: guidancePack.home.columnsReviewLabel,
+              attorneyHeading: folioArticle.consultingAttorney,
               guideTitle: folioArticle.relatedTopics,
               consultationTitle: guidancePack.nav.contact,
               consultationText: folioFacts
@@ -205,23 +203,9 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   const diagramSplit = diagramVideo && post.diagramVideo?.afterHeading
     ? splitColumnContentAfterHeading(post.content, post.diagramVideo.afterHeading)
     : null;
-  const authorName =
-    folioArticle ? folioArticle.byline : urlLocale === 'vi' ? 'Luật sư Wei Tseng' : locale === 'ko'
-      ? '증준외 변호사'
-      : locale === 'zh-hant'
-        ? '曾雋崴律師'
-        : locale === 'ja'
-          ? '曾雋崴弁護士'
-          : 'Attorney Wei Tseng';
-  // Retain provenance so AI-written columns never inherit an attorney byline.
-  const aiAuthored = isAiAuthoredColumn(post);
-  const attorneyHeading = urlLocale === 'vi' ? t.attorneyHeading : aiAuthored
-    ? folioArticle?.consultingAttorney ?? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en
-    : t.attorneyHeading;
-  const authorProfilePath = getAttorneyProfilePath(locale);
-  const authorHref = guidanceLocale
-    ? guidancePublicPath(guidanceLocale, 'lawyers')
-    : authorProfilePath;
+  // Consultation information is independent of the article's internal provenance.
+  const attorneyHeading = urlLocale === 'vi' ? t.attorneyHeading
+    : folioArticle?.consultingAttorney ?? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en;
   const guideLinks =
     guidanceLocale
       ? [
@@ -318,15 +302,6 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     image: post.featuredImage,
     datePublished: post.publicationDate || post.date,
     dateModified: post.date,
-    authorName: aiAuthored ? undefined : authorName,
-    authorUrl: authorHref,
-    authorSameAs: [
-      'https://www.hoveringlaw.com.tw/en/wei.html',
-      'https://www.wei-wei-lawyer.com/lawyertseng',
-      'https://www.youtube.com/@weilawyer',
-      'https://blog.naver.com/wei_lawyer/223461663913',
-    ],
-    authorAlternateNames: ['증준외', '曾雋崴', 'Wei Tseng'],
     articleSection: post.categoryLabel,
   });
   const viewProps: ColumnDetailViewProps = {
@@ -352,9 +327,6 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     tocEntries: showBody ? tocEntries : [],
     diagramVideo: showBody ? diagramVideo : null,
     diagramSplit: showBody ? diagramSplit : null,
-    authorName,
-    authorHref,
-    aiAuthored,
     attorneyHeading,
     guideLinks: showBody ? guideLinks : [],
     recommendedItems: showBody ? recommendedItems : [],

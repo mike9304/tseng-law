@@ -24,7 +24,8 @@ export interface BlogPost {
   bodyHtml: string;
   bodyMarkdown: string;
   featuredImage?: string;
-  author: BlogAuthor;
+  /** Internal CMS attribution; omitted from public feeds. */
+  author?: BlogAuthor;
   category: string;
   tags: string[];
   readingTimeMinutes: number;

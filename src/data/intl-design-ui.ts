@@ -17,15 +17,15 @@ import type { IntlDesignLocale } from '@/lib/intl-design-locales';
  */
 
 export interface FolioArticleCopy {
-  /** Byline link under the article title; the same title + name the pack's key-facts heading uses. */
+  /** Legacy copy retained for reference only; never render as a public column byline. */
   byline: string;
   /** Sidebar heading over the services / lawyers links. */
   relatedTopics: string;
   previous: string;
   next: string;
   /**
-   * Attorney card heading on AI-written columns: who can be consulted, never a review claim (mirrors
-   * `AI_COLUMN_ATTORNEY_HEADING`). Reviewed columns use the pack's `columnsReviewLabel` instead.
+   * Attorney card heading on all columns: who can be consulted, never a review claim (mirrors
+   * `AI_COLUMN_ATTORNEY_HEADING`).
    */
   consultingAttorney: string;
   /** Hint (and region label) above a wide table in an article body: short, it is printed twice per table. */

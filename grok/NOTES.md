@@ -304,3 +304,4 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 12:44 KST 대기: HANDOFF-air 시각만 12:43으로 바뀌고 20줄 마지막은 10:48 그대로. Opus 12:35 노트는 대기 확인. 새 FACTS·Astra 채점·이 레인 Bot 검수·초안 없음. r8b와 STATUS(10/20 21:45)는 그대로. 문안은 고치지 않음.
 2026-10-21 12:54 KST 대기: HANDOFF-air 시각만 12:53으로 바뀌고 20줄 마지막은 10:48 그대로. Opus 12:44 노트는 대기 확인. 새 FACTS·Astra 채점·이 레인 Bot 검수·초안 없음. r8b와 STATUS(10/20 21:45)는 그대로. 문안은 고치지 않음.
 2026-10-21 13:04 KST 대기: HANDOFF-air 시각만 13:03으로 바뀌고 20줄 마지막은 10:48 그대로. Opus 12:54 노트는 대기 확인. 새 FACTS·Astra 채점·이 레인 Bot 검수·초안 없음. r8b와 STATUS(10/20 21:45)는 그대로. 문안은 고치지 않음.
+2026-10-21 13:15 KST 대기: v4v6는 계좌 v4·노동 v6 재작성이다. Codex는 사용량 한도로 종료(run1.log EXIT 1). Claude Opus(pid 94431)가 같은 작업을 쓰는 중이다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.

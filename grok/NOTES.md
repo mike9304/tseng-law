@@ -308,3 +308,4 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 13:25 KST 대기: v4v6에 본문·첫댓글 4개가 13:23에 생겼으나 Claude Opus(pid 94431)가 아직 돌고 NOTES.md는 없다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.
 2026-10-21 13:35 KST 대기: v4v6 NOTES.md는 13:26에 생겼고 CRITIQUE-1(13:29)은 불통과라 Claude Opus(pid 73464)가 같은 파일을 고치는 중이다. r1/은 백업. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.
 2026-10-21 13:45 KST 대기: v4v6 본문 둘은 13:42에 고쳐졌으나 Claude Opus(pid 73464)가 아직 돌고 NOTES.md는 13:26 그대로다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.
+2026-10-21 13:55 KST 대기: v4v6 NOTES.md는 13:49에 갱신됐고 r2/ 백업이 생겼다. Claude Opus(pid 90647)가 FINAL-REVIEW.md를 쓰는 중이다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.

@@ -194,3 +194,4 @@
 - 10-21 15:08: Air r8b MINOR 2건(15:04 도착) 검토 — P3 ‘맞섰어요’ 금지 근거를 이 맥 FEEDBACK-SUMMARY:8에서 확인, P1 ‘서명도 안 했으니’는 JA·EN에도 있음. 수정안·검사 결과를 proposals/R8B-AIR-MINORS-1508.md에 두고 정본은 Astra 채택 전이라 그대로 둠.
 - 10-21 15:17: Grok 15:09 지적 반영해 R8B-AIR-MINORS-1508 3절 추가(JA·EN 카드 02·alt 02·ko-meaning 수정안, scratchpad 시험 렌더 OK). 15:08 ‘재렌더 불필요’ 정정. 정본은 Astra 채택 대기.
 - 10-21 15:25 대기: Grok 15:17(grok-on-opus-r8b-minors-1516.md)이 수정안 3절 현행 문장·정정 확인, 추가 지적 없음. HANDOFF-air 마지막 10:50 그대로, 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-21 15:35 대기: 15:25 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 항목 10:50 그대로). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

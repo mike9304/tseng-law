@@ -219,3 +219,4 @@
 - 10-21 19:16 대기: 19:06 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 항목 10:50 그대로). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-21 19:26 대기: 19:16 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 항목 10:50 그대로). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-21 19:36 대기: 새 폴더 mkt-research-1021/(Threads 마케팅 연구 지시서)는 run-claude.sh로 띄운 별도 claude -p 프로세스(pid 90055)가 진행 중 — 이 세션 작업 아님, 그 폴더에 쓰지 않음. 그 밖엔 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10:50). R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-21 19:46 대기: 19:36 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10:50). mkt-research-1021은 별도 프로세스 진행 중(REPORT 미완), 이 세션 작업 아님. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

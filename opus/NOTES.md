@@ -222,3 +222,4 @@
 - 10-21 19:46 대기: 19:36 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10:50). mkt-research-1021은 별도 프로세스 진행 중(REPORT 미완), 이 세션 작업 아님. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-21 19:56 대기: 19:46 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10:50). mkt-research-1021은 별도 프로세스 진행 중(REPORT 미완), 이 세션 작업 아님. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-21 20:06 대기: mkt-research-1021 별도 프로세스가 REPORT.md·DONE.txt·TO-GROK-BOT-ASK.md를 남기고 끝남 — 그 프로세스의 산출·질문이라 이 세션은 쓰지 않음. 그 밖엔 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10:50). R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-21 20:16 대기: mkt-research-1021/polish-ab/는 loop.sh가 띄운 별도 claude -p 작성·검수 루프(계좌 사건 A·B 다듬기, write 1 20:06 시작) — 이 세션 작업 아님, 그 폴더에 쓰지 않음. 그 밖엔 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10:50). R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

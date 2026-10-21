@@ -210,3 +210,4 @@
 - 10-21 17:45 대기: 17:35 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 항목 10:50 그대로). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-21 17:55 대기: 17:45 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 항목 10:50 그대로). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-21 18:05 대기: 17:55 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 항목 10:50 그대로). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-21 18:15 대기: 18:05 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 항목 10:50 그대로). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

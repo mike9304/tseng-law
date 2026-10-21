@@ -1,7 +1,7 @@
 # r8b Air MINOR 2건 대응 수정안 (Studio Opus, 2026-10-21 15:08 KST)
 
 대상 비평: review-air/air-opus-on-opus-P1-r8.md, -P3-r8.md 10:50 추가 절(15:04 동기화로 도착). Studio Grok 15:04 확인: review-studio/grok-on-air-r8b-1504.md.
-정본(opus/P{1,3}/r8b/, ja·en/r8b/)은 고치지 않았다. Astra가 채택하면 아래 문장을 그대로 반영하고 threads-ready를 다시 만든다. 카드·alt·첨부에는 해당 문장이 없어 재렌더가 필요 없다(grep 확인).
+정본(opus/P{1,3}/r8b/, ja·en/r8b/)은 고치지 않았다. Astra가 채택하면 아래 문장을 그대로 반영하고 threads-ready를 다시 만든다. KO 카드·alt·첨부와 P3 세 언어에는 해당 문장이 없다. 다만 P1 JA·EN 카드 02와 alt 02에는 같은 내용이 있어, 채택하면 그 두 장은 재렌더해야 한다(15:15 정정, 3절).
 
 ## 1. P3 KO 「맞섰어요」 — 근거 확인
 
@@ -26,6 +26,24 @@ Air가 인용한 ~/threads-cardnews-air-1018/VOICE-DIRECTIVE-1019.md는 이 맥�
 | EN | That day they backed out, saying their stuff wouldn't fit and nothing was signed. | That day they backed out over LINE, saying their stuff wouldn't fit. | 498→485, FAIL 0 (cv 0.476) |
 
 EN은 다음 문장 "The firm refused a refund."가 반환 요구를 받쳐 준다. 서명 전 계약 성립이라는 쟁점은 3행 이후(1심 판단)와 카드에 그대로 있다.
+
+## 3. 15:15 추가 — 채택 때 같이 바꿀 곳 (Grok 15:09 지적 + 카드 확인)
+
+Grok(review-studio/grok-on-opus-r8b-minors-1508.md)이 JA ko-meaning 8행을 짚었다. 다시 찾아보니 EN 뜻풀이와 JA·EN 카드 02에도 같은 내용이 있다. KO 카드 02 foot은 이미 「세입자는 LINE으로 취소하고 돈을 돌려 달라고 했어요.」라 문제없다.
+
+| 위치 | 현행 | 수정안 |
+|---|---|---|
+| JA 카드 02 foot 1 (render/copy/p1-ja.json, P1/ja/r8b/cards.md 18행) | 契約書もまだだから、お金は返してほしい。 | 借り手はLINEで取り消し、返金を求めました。 |
+| JA alt 02 (pkg/r8b/alt-ja.json 4행, threads-ready-ja 표) | …契約書もまだだからお金は返してほしい、管理会社は断った、という説明。 | …借り手はLINEで取り消して返金を求め、管理会社は断った、という説明。 |
+| EN 카드 02 foot 1 (render/copy/p1-en.json, P1/en/r8b/cards.md 19행) | Nothing was signed, so they wanted the money back. | They backed out over LINE and asked for the money back. |
+| EN alt 02 (pkg/r8b/alt-en.json 4행, threads-ready-en 표) | …I'm out. Nothing was signed, so they wanted the money back. The company said no. | …I'm out. They backed out over LINE and asked for the money back. The company said no. |
+| JA ko-meaning 8행 | …아직 서명도 안 했으니 돌려 달라고 했습니다. | …LINE으로 취소하고 돌려 달라고 했습니다. |
+| EN ko-meaning 8행 | 그날 세입자는 짐이 다 안 들어가고 서명한 것도 없다며 물렀다. | 그날 세입자는 짐이 다 안 들어간다며 LINE으로 물렀다. |
+| EN ko-meaning 19행 (카드 02 풀이) | 아무것도 서명 안 했으니 돈을 돌려받고 싶었다. | LINE으로 물리고 돈을 돌려 달라고 했다. |
+
+손대지 않을 것: EN 첨부 9행(세입자가 법정에서 한 주장)과 11행 「The company didn't dispute that nothing was signed」(회사도 다투지 않은 범위), KO·JA 첨부의 같은 소송 주장. 카드 01·05·06의 「서명 전/署名前/unsigned」 표시는 사실(서면 계약 미체결)이라 그대로 둔다.
+
+시험 렌더: render를 세션 scratchpad에 복사해 JA·EN 카드 02 foot만 바꿔 렌더했다. 감사 problems 0, 최소 32px, 정본과 비교해 카드 02만 픽셀이 달라지고 01·03~06은 같다. JA·EN 카드 02 PNG를 직접 열어 겹침·잘림이 없음을 확인했다(JA는 한 줄, EN은 두 줄). 정본 copy JSON·PNG는 그대로다.
 
 ## 범위
 

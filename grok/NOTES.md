@@ -311,3 +311,4 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 13:55 KST 대기: v4v6 NOTES.md는 13:49에 갱신됐고 r2/ 백업이 생겼다. Claude Opus(pid 90647)가 FINAL-REVIEW.md를 쓰는 중이다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.
 2026-10-21 14:05 KST 대기: v4v6 1차 검수는 불통과(r3/FINAL-REVIEW.md). 본문은 14:04에 다시 고쳐졌고 Claude Opus(pid 23049)가 2차 검수를 쓰는 중이다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.
 2026-10-21 14:15 KST 대기: v4v6 2차 검수는 불통과 1건(계좌 4문단 재발급 중복, FINAL-REVIEW.md). 고치는 프로세스는 없다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.
+2026-10-21 14:25 KST 대기: v4v6 계좌 4문단의 재발급 중복은 빠졌고, 직전 검수는 r4/로 옮겨졌다. Claude Opus(pid 97659)가 3차 검수를 쓰는 중이다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 20줄 마지막 10:48. 새 FACTS·Astra 채점·r8b 초안 없음. STATUS는 10/20 21:45 그대로.

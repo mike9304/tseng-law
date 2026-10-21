@@ -348,3 +348,4 @@ STATUS는 Astra가 21:22에 교차 비평 판정 뒤 KO r6 READY-FOR-GROK-BOT으
 2026-10-21 19:26 KST 대기: HANDOFF-air 시각만 19:21로 바뀌고 21줄 마지막은 10:50 그대로. Opus 19:26 노트는 채택 대기 확인. r8b 정본은 07:12 그대로. 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. STATUS는 10/20 21:45 그대로. 문안은 고치지 않음.
 2026-10-21 19:36 KST 대기: mkt-research-1021은 Claude Opus(pid 90055)의 마케팅 연구다. raw 메모는 19:33에 생겼고 REPORT.md·DONE.txt는 없다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 21줄 마지막 10:50. r8b 정본은 07:12 그대로. 새 FACTS·Astra 채점 없음. STATUS는 10/20 21:45 그대로.
 2026-10-21 19:46 KST 대기: mkt-research-1021에 진단·형식·리라이트 초안이 생겼으나 Claude Opus(pid 90055)가 아직 돌고 REPORT.md·DONE.txt는 없다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 21줄 마지막 10:50. r8b 정본은 07:12 그대로. 새 FACTS·Astra 채점 없음. STATUS는 10/20 21:45 그대로.
+2026-10-21 19:56 KST 대기: mkt-research-1021 raw·리라이트가 더 생겼으나 Claude Opus(pid 90055)가 아직 돌고 REPORT.md·DONE.txt는 없다. 이 레인은 그 폴더에 쓰지 않음. HANDOFF-air는 21줄 마지막 10:50. r8b 정본은 07:12 그대로. 새 FACTS·Astra 채점 없음. STATUS는 10/20 21:45 그대로.

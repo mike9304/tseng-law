@@ -812,18 +812,23 @@ export const COUNTRY_COLUMN_FILES_20261020 = {
 export const COUNTRY_COLUMN_FILES_20261022 = {
   ko: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
+    '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
   ],
   en: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
+    '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
   ],
   ja: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
+    '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
   ],
   'zh-hant': [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
+    '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
   ],
   es: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
+    '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
   ],
 } as const;
 

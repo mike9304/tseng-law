@@ -2361,6 +2361,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-parent-instructions-director-dissent-supervisor-stop-notice"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-parent-instructions-director-dissent-supervisor-stop-notice"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-parent-instructions-director-dissent-supervisor-stop-notice"
     }
   ]
 }

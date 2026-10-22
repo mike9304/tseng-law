@@ -865,6 +865,10 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
     '652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md', // ship-20261022-G6
   ],
+  fr: [
+    '653-taiwan-business-takeover-shares-or-assets-foreign-buyer.md', // esfr-20261022 COL-fr-1
+    '654-taiwan-working-holiday-visa-work-insurance-tax.md', // esfr-20261022 COL-fr-3
+  ],
 } as const;
 
 /** Registered locale-specific batches through 2026-10-22, in filename order. */

@@ -868,6 +868,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
   fr: [
     '653-taiwan-business-takeover-shares-or-assets-foreign-buyer.md', // esfr-20261022 COL-fr-1
     '654-taiwan-working-holiday-visa-work-insurance-tax.md', // esfr-20261022 COL-fr-3
+    '655-taiwan-criminal-plea-bargaining-foreign-defendant.md', // esfr-20261022 COL-fr-2
   ],
 } as const;
 

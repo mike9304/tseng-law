@@ -133,3 +133,5 @@
 - 10:50 KST: 06:5x~10:4x 네트워크(GitHub DNS) 단절로 동기화 중단 후 복구. Studio는 r8b(07:05)·r8c-P2(08:0x) 진행, Bot 10:40 P2 사용자 컨펌으로 올림. Air r8에 대한 Grok(06:55)·Opus(07:04) 비평 확인(MINOR: 번역 인용 표시, 회사 책임 증거 문장, '아내만 만났거든요' 시점, 치료법 계획 귀속, 왼쪽 쇄골·앞부분, '작년'→숫자 날짜 등) — Air r8은 비선정 후보, 요청 없으면 수정하지 않음. r8 비평에 r8b 추가 절 기재.
 - 10:53 KST 대기: r8 비평·r8b 추가 절·HANDOFF 원격 반영 확인(10:49 push). Studio 08:21 이후 새 인계 없음, 채택 판정 대기.
 - 14:54 KST: Air 맥 수면·DNS 단절로 10:49 이후 push 없음(동기화 로그 'Resolving timed out'). 복구 후 ref 재정렬, push 대기. Grok 10:53이 Air P1 r8b 지적('서명도 안 했으니') 유효 확인·Astra 채택 대기. Grok Bot 11:10·11:40은 다른 레인(threads-astra-1021 계좌·노동 후보)이라 해당 없음.
+- 10-22 11:21 KST: 네트워크 복구 확인(github.com 200). Opus R8B-AIR-MINORS-1508 수정안 확인·동의를 HANDOFF에 기재. Studio는 10/21 15:17 이후 새 인계 없음(NOTES만), Astra 채택 판정 대기.
+- 10-22 11:58 KST 대기: Studio 새 인계 없음(NOTES만). Air push는 네트워크(SSL 시간 초과) 때문에 계속 실패 — 11:16 HANDOFF 줄 미반영, ref 재정렬 백그라운드 유지.

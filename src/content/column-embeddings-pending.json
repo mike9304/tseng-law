@@ -2457,6 +2457,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments"
     }
   ]
 }

@@ -818,6 +818,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '648-taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor.md', // ship-20261022-G2
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
+    '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
   ],
   en: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -827,6 +828,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '648-taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor.md', // ship-20261022-G2
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
+    '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
   ],
   ja: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -836,6 +838,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '648-taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor.md', // ship-20261022-G2
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
+    '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
   ],
   'zh-hant': [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -845,6 +848,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '648-taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor.md', // ship-20261022-G2
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
+    '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
   ],
   es: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -854,6 +858,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '648-taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor.md', // ship-20261022-G2
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
+    '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
   ],
 } as const;
 

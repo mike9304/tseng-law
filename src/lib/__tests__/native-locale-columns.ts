@@ -814,26 +814,31 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
     '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
+    '647-taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents.md', // ship-20261022-G1
   ],
   en: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
     '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
+    '647-taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents.md', // ship-20261022-G1
   ],
   ja: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
     '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
+    '647-taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents.md', // ship-20261022-G1
   ],
   'zh-hant': [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
     '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
+    '647-taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents.md', // ship-20261022-G1
   ],
   es: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
     '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
+    '647-taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents.md', // ship-20261022-G1
   ],
 } as const;
 

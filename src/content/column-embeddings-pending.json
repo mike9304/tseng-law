@@ -2409,6 +2409,18 @@
     {
       "locale": "en",
       "slug": "taiwan-mixed-technology-contract-source-contribution-evidence"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents"
     }
   ]
 }

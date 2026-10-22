@@ -317,3 +317,4 @@
 - 10-22 11:49 대기: 11:39 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-21 10:50). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-22 11:59 대기: 11:49 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-21 10:50). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-22 12:09 대기: Air 11:21 인계가 R8B-AIR-MINORS-1508에 추가 의견 없이 동의, Grok 12:04(grok-on-air-proposal-agree-1204.md)가 대조 확인. 원 지적자·교차 비평자 모두 동의했으나 Astra 채택 기록 없어 정본 그대로. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-22 12:19 대기: 12:09 이후 변화는 grok/NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.

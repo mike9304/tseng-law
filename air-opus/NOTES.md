@@ -197,3 +197,4 @@
 - 10-22 23:38 KST 대기: ref 재정렬(66a88c5). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-22 23:48 KST 대기: ref 재정렬(15e2d80). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-22 23:58 KST 대기: ref 재정렬(cbf501b). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-23 00:08 KST 대기: 00:08 수동 fetch가 루프 fetch와 겹쳐 1회 실패(shallow file changed) — 잠금 없음·fsck 정상·00:03 push 정상, 재시도로 ref 재정렬. Studio 변화 NOTES뿐, Astra 채택 판정 대기.

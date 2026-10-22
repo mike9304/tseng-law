@@ -536,7 +536,7 @@ export function fileBackedColumnAlternateLocales(slug: string): PublicLocale8[] 
  * lowercase and carry no date.
  * ------------------------------------------------------------------------ */
 
-export const ISSUE_BOARD_LOCALES = ['ko', 'zh-hant', 'en', 'ja', 'vi'] as const;
+export const ISSUE_BOARD_LOCALES = ['ko', 'zh-hant', 'en', 'ja', 'vi', 'es', 'fr'] as const;
 export type IssueBoardLocale = (typeof ISSUE_BOARD_LOCALES)[number];
 export const ISSUE_CONTENT_ROOT = 'src/content/issues';
 const ISSUE_FILE_PREFIX_RE = /^ISSUE-(\d{8})-(\d{2})-/;

@@ -54,7 +54,7 @@ describe('issue board 2026-10-15', () => {
   it('contains exactly eight issue IDs in their assigned markets', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-20261015-(\d{2})-/)?.[1]));
-      expect(numbers, locale).toEqual(EXPECTED[locale]);
+      expect(numbers, locale).toEqual(EXPECTED[locale as keyof typeof EXPECTED] ?? []);
     }
     expect(cases).toHaveLength(8);
     expect(new Set(cases.map(({ file }) => issueIdFromFilename(file))).size).toBe(8);

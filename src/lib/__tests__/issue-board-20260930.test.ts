@@ -50,7 +50,7 @@ describe('issue board 2026-09-30', () => {
   it('ships exactly the reviewed issue files and never the held ISSUE-08', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-\d{8}-(\d{2})-/)?.[1]));
-      expect(numbers, locale).toEqual(EXPECTED[locale]);
+      expect(numbers, locale).toEqual(EXPECTED[locale as keyof typeof EXPECTED] ?? []);
     }
     expect(cases).toHaveLength(14);
     expect(cases.some(({ file }) => file.startsWith('ISSUE-20260930-08-'))).toBe(false);

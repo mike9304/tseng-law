@@ -47,7 +47,7 @@ describe('issue board 2026-10-02', () => {
   it('ships exactly the 8 passed files and never 02, 05, 06 or 12', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
       const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-\d{8}-(\d{2})-/)?.[1]));
-      expect(numbers, locale).toEqual(EXPECTED[locale]);
+      expect(numbers, locale).toEqual(EXPECTED[locale as keyof typeof EXPECTED] ?? []);
     }
     expect(cases).toHaveLength(8);
     expect(cases.some(({ file }) => /^ISSUE-20261002-(02|05|06|12)-/.test(file))).toBe(false);

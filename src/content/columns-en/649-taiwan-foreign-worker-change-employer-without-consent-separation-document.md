@@ -1,7 +1,7 @@
 ---
 title: "Switching Employers Inside Taiwan on a Work Permit: The New Employer Files, and Your Start Date Follows the Permit"
-seoTitle: "Switching Employers in Taiwan on a Work Permit"
-summary: "A foreign employee who moves to a new Taiwan employer while the current work permit is valid depends on the new employer's application, which attaches a separation document; no provision asks for the old employer's consent. Starting before the permit issues exposes the new employer to a fine of NT$150,000 to NT$750,000 and the worker to NT$30,000 to NT$150,000, an order to leave and, under the statute, a bar on working in Taiwan again. The old employer cannot refuse proof of service record when the contract ends. During the permit term, factory, fishing and care workers can switch only in four statutory situations and with Ministry of Labor approval; one of them is a contract ended over unpaid wages."
+seoTitle: "Changing Employers in Taiwan on a Work Permit"
+summary: "A foreign employee switching Taiwan employers relies on the new employer's permit application, not the old employer's consent; starting early risks fines."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

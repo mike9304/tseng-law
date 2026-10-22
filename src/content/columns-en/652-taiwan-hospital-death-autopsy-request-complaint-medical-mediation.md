@@ -1,7 +1,7 @@
 ---
 title: "A Family Member Dies in a Taiwan Hospital: Autopsy Requests, Criminal Complaints and Mandatory Mediation"
-seoTitle: "Death in a Taiwan Hospital: Autopsy, Complaint and Mediation"
-summary: "When a patient dies in a Taiwan hospital, the spouse or a lineal relative can ask for an autopsy, and the forensic pathologist must then recommend one to the prosecutor in writing. Since January 1, 2024, a criminal case over a medical dispute goes to the local medical dispute mediation board first, and the investigation pauses while it is mediated. A civil damages suit also requires mediation first. Once a court approves a mediated settlement, the parties can no longer sue on the same civil matter or file a criminal complaint or private prosecution over the dispute, and a certificate stating the cause of death does not by itself prove negligence."
+seoTitle: "Hospital Death in Taiwan: Autopsy, Mediation"
+summary: "When a patient dies in a Taiwan hospital, a spouse or lineal relative can ask for an autopsy; since 2024 medical dispute claims must first go to mediation."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

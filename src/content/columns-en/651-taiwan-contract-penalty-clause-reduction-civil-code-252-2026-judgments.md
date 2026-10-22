@@ -1,7 +1,7 @@
 ---
 title: "Penalty Clauses in Taiwan Contracts: How Courts Cut Them Down, and When They Refuse"
-seoTitle: "Taiwan Contract Penalties: Reduction Under Civil Code 252"
-summary: "A U.S. company can meet a Taiwan penalty clause from either side: as a supplier whose payment is cut for delay, or as a buyer enforcing one against a Taiwan vendor. Taiwan's Civil Code lets a court reduce an excessive penalty and, after partial performance, reduce it in light of the benefit the creditor received from that performance. In 2026 the Taiwan High Court cut a 1%-per-day delay penalty to 0.1% where the late item was only part of the job, the Taipei District Court refused any cut for a Japanese contractor that could not prove excess, and the Supreme Court told courts to classify a penalty before judging whether it is too high."
+seoTitle: "Taiwan Contract Penalty Clause Reductions"
+summary: "Taiwan's Civil Code lets a court reduce an excessive contract penalty, even after partial performance; 2026 rulings show courts cutting some, refusing others."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

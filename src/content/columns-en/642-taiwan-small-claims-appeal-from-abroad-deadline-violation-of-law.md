@@ -1,7 +1,7 @@
 ---
 title: "Appealing a Taiwan Small Claims Judgment From the United States: What the Court Will Hear, and How the 20-Day Clock Stretches"
-seoTitle: "Taiwan Small Claims Appeals From Abroad: Grounds, Deadline"
-summary: "A Taiwan small claims judgment can be appealed only for violating the law, so a complaint that the judge believed the other side, or that the judgment gives no reasons, will not get far. A defect in how the hearing notice was served is a real ground, though the appeal court then decides the case itself. The appeal is due 20 days after service, plus a travel-time allowance (在途期間) of 44 days for a party living in North America or Europe, unless a litigation agent living in the court's city could file in time."
+seoTitle: "Taiwan Small Claims Appeals From Abroad"
+summary: "A Taiwan small claims judgment can be appealed only for violating the law, within 20 days of service plus any travel-time allowance for a party abroad."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

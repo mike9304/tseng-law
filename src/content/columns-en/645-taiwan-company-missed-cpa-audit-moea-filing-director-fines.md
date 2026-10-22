@@ -1,7 +1,7 @@
 ---
 title: "Seated on a Taiwan Subsidiary's Board? How a Missed CPA Audit Turns Into Per-Person Fines"
-seoTitle: "Taiwan Company Act Article 20: Missed CPA Audit Fines"
-summary: "If a Taiwan company that must have its financial statements audited by a CPA under Company Act Article 20 approves them without an audit, the responsible persons at fault, typically directors, can each be fined NT$10,000 to NT$50,000. A 2015 Taipei District Court judgment held that a dormant company is not excused. The Ministry of Economic Affairs can inspect the approved year-end documents at any time or order them filed by a deadline; evading, obstructing or refusing that, or missing the deadline, can cost each responsible person NT$20,000 to NT$100,000."
+seoTitle: "Taiwan Missed CPA Audit: Per-Person Fines"
+summary: "If a Taiwan company needing a CPA audit approves its statements without one, each responsible person at fault, often a director, can be fined NT$10,000-50,000."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

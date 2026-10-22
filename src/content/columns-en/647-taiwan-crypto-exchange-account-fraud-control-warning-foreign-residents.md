@@ -1,7 +1,7 @@
 ---
 title: "Frozen on a Taiwan Crypto Exchange Under the Anti-Fraud Rules: The 20-Day and 48-Hour Clocks, and Why Damages Are Hard"
-seoTitle: "Taiwan Crypto Account Frozen as Suspected Fraud: Rules"
-summary: "Under Taiwan's Fraud Crime Hazard Prevention Act, an exchange may suspend deposits, withdrawals and trading on an account it suspects of fraud links, and the July 2026 regulations list a foreigner's residence certificate cancelled before expiry among the warning signs. If the exchange reports the account, police are to say within 20 days whether control continues; silence lets the exchange keep it. An amount held because another institution reported scam proceeds is released if police do not designate the account within 48 hours. Exchanges are exempt from damages for measures taken under the Act, so the realistic fight is over release and withdrawal under the terms."
+seoTitle: "Taiwan Crypto Account Frozen Over Fraud"
+summary: "Under Taiwan's anti-fraud law an exchange can suspend an account it suspects of fraud links; police are to say within 20 days whether control continues."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

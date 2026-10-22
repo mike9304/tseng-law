@@ -1,7 +1,7 @@
 ---
 title: "One Defendant, Two Answers: How Taiwan Courts Decide Whether a Foreigner Under a Criminal Exit Ban May Travel Home"
-seoTitle: "Taiwan Criminal Exit Ban: Temporary Travel and Bail"
-summary: "A defendant under a criminal exit ban in Taiwan, or the defense lawyer, can ask the prosecutor or the court to revoke or change it (Code of Criminal Procedure Article 93-5). Courts sometimes lift a ban for a few weeks so a foreign defendant can go home, on condition of a cash deposit; one New Taipei ruling spelled out that a late return would cost the deposit. Published rulings show settlement with the complainant, an admission, ties to Taiwan and the stage of the case weighing heavily."
+seoTitle: "Taiwan Criminal Exit Ban: Temporary Travel"
+summary: "A defendant under a criminal exit ban in Taiwan can ask the prosecutor or court to lift or change it; courts sometimes allow a few weeks home on a cash deposit."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

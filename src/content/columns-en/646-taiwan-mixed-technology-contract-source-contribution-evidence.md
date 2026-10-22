@@ -1,7 +1,7 @@
 ---
 title: "A US technology contract and the evidence of work contributed in Taiwan"
-seoTitle: "Taiwan Withholding: Evidence in Mixed Technology Contracts"
-summary: "When a US supplier's service needs help from a Taiwan team, the work records matter to source and attribution. A contract that also grants technology rights needs evidence connecting its price allocation, the rights acquired and each team's contribution."
+seoTitle: "Taiwan Withholding on Mixed Tech Contracts"
+summary: "When a US supplier's service relies on a Taiwan team, work records matter to source and attribution; a contract granting technology rights needs evidence too."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

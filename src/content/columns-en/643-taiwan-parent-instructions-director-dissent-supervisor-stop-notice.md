@@ -1,7 +1,7 @@
 ---
 title: "A Taiwan supervisor's stop notice reaches US head office"
-seoTitle: "Taiwan Supervisor Notices and US Parent Instructions"
-summary: "A Taiwan subsidiary's statutory supervisor can require the board or a director to stop unlawful conduct. For a US parent, that notice raises separate questions about local directors' objections, head-office control and responsibility for loss."
+seoTitle: "Taiwan Supervisor Stop Notices and US Parents"
+summary: "A Taiwan subsidiary's statutory supervisor can require the board or a director to stop unlawful conduct, raising questions for a US parent and local directors."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

@@ -1,7 +1,7 @@
 ---
 title: "Your Child's Name in a U.S.–Taiwan Family: Taiwan's Surname Agreement, Chinese Name Rules and the CRBA"
-seoTitle: "U.S.–Taiwan Baby Names: Surname Agreement, HRT and CRBA"
-summary: "A child whose father or mother is a Republic of China national at the time of birth is an ROC national, and a child born in Taiwan must be registered within 60 days. Before registering, the parents must agree in writing on the father's or the mother's surname; without agreement, the household registration office draws lots. The child is registered under a Chinese name that must follow Taiwanese naming custom. AIT uses the English names on the child's Taiwan Household Registration Transcript for the Consular Report of Birth Abroad, and that English name follows a set order: ROC passport, then a document already showing an English name, then transliteration."
+seoTitle: "U.S.-Taiwan Baby Names: Surname and CRBA"
+summary: "A Taiwan-born child of an ROC national must be registered within 60 days, surname agreed in writing first; the CRBA uses the household record's English name."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

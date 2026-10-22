@@ -1,7 +1,7 @@
 ---
 title: "When a Taiwan Brokerage Employee Trades Your Account: Remedies for Foreign Investors"
-seoTitle: "Taiwan Brokerage Disputes: SFIPC Mediation and Ombudsman"
-summary: "A foreign individual investor in a dispute with a Taiwan securities firm can apply to the Securities and Futures Investors Protection Center (SFIPC) for mediation, or complain to the firm and then go to the Financial Ombudsman Institution. For claims of NT$1 million or less, if the firm skips the mediation session without good reason, the mediators may issue a proposal that is deemed accepted unless a party objects in writing within 10 days of service. Taiwan courts have held a brokerage jointly liable when its employee sold a client's shares through the branch system, but rejected liability where the client handed a staff member the trading password for private management."
+seoTitle: "Taiwan Brokerage Disputes: SFIPC Mediation"
+summary: "A foreign investor in a dispute with a Taiwan securities firm can seek SFIPC mediation or the Financial Ombudsman; rulings on employee trading go both ways."
 published: "2026-10-22"
 lastmod: "2026-10-22"
 date_display: "October 22, 2026"

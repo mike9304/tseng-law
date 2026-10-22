@@ -2421,6 +2421,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor"
     }
   ]
 }

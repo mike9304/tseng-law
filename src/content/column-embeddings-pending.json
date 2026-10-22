@@ -2397,6 +2397,18 @@
     {
       "locale": "en",
       "slug": "taiwan-company-missed-cpa-audit-moea-filing-director-fines"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-mixed-technology-contract-source-contribution-evidence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-mixed-technology-contract-source-contribution-evidence"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-mixed-technology-contract-source-contribution-evidence"
     }
   ]
 }

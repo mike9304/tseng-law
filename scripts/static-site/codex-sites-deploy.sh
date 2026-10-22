@@ -15,7 +15,10 @@ OUT="$(cd "${1:?usage: codex-sites-deploy.sh <static build dir>}" && pwd)"
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SITE_REPO="${SITE_REPO:-$HOME/tseng-sites-deploy/repo}"
 PROJECT_ID="${SITES_PROJECT_ID:-appgprj_6acd9a1a4ce4819184cc51672a764431}"
-PACKAGER="$(ls -d "$HOME"/.codex/plugins/cache/openai-curated-remote/sites/*/skills/sites/scripts/package-site.sh | tail -1)"
+# Sites plugin 1.1+ ships scripts/package-site.mjs; older versions had skills/sites/scripts/package-site.sh.
+SITES_DIR="$HOME/.codex/plugins/cache/openai-curated-remote/sites"
+PKG="$(ls -d "$SITES_DIR"/*/scripts/package-site.mjs 2>/dev/null | sort -V | tail -1)"
+if [ -n "$PKG" ]; then PACKAGER="node $PKG"; else PACKAGER="bash $(ls -d "$SITES_DIR"/*/skills/sites/scripts/package-site.sh | tail -1)"; fi
 STAMP="$(date +%Y%m%d-%H%M%S)"
 LOGDIR="$(dirname "$SITE_REPO")/deploy-logs"
 mkdir -p "$LOGDIR"

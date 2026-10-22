@@ -14,7 +14,7 @@ change its access, or touch custom domains — those are the owner's decisions.
 2. `create_source_repository_write_credential` (no `publish_on_push`). `git push origin main` (fast-forward only;
    if the remote has commits the checkout lacks, stop and report).
 3. Package with macOS metadata disabled:
-   `COPYFILE_DISABLE=1 bash __PACKAGER__ __SITE_REPO__ __ARCHIVE__`.
+   `COPYFILE_DISABLE=1 __PACKAGER__ __SITE_REPO__ __ARCHIVE__`.
    Check with `tar -tzf`: `dist/.openai/hosting.json`, `dist/server/index.js`, `dist/server/wrangler.json`,
    `dist/client/__p/ko.html.gz` present, no `._*` entries; sum of file sizes below 268,435,456 bytes.
 4. Publish `__HEAD_SHA__` with that archive, keeping the Site's audience:

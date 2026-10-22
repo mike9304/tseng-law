@@ -114,7 +114,11 @@ describe('Vietnamese public presentation dispatch', () => {
     expect(html).toContain('aria-label="Vị trí hiện tại"');
     expect(html).toMatch(/<a[^>]*href="\/vi"[^>]*>Trang chủ<\/a>/);
     expect(html).not.toContain('aria-label="Current location"');
-    for (const post of getAllIssuePosts('vi')) expect(html).toContain(`/vi/columns/issues/${post.slug}`);
+    // The CollectionPage lists the 20 newest issues and topic sections preview three each, so from the 21st
+    // vi issue (2026-10-22) the oldest is reached through its topic or search rather than this first render.
+    const issues = getAllIssuePosts('vi');
+    expect(html).toContain(`data-columns-visible-count="${issues.length}"`);
+    for (const post of issues.slice(0, 20)) expect(html).toContain(`/vi/columns/issues/${post.slug}`);
     expect(html).not.toContain('href="/en/columns');
   });
 

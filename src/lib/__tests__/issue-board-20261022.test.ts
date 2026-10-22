@@ -21,6 +21,8 @@ const ALLOWED_NUMBERS: Record<IssueBoardLocale, number[]> = {
   'zh-hant': [],
   en: [6, 7, 11, 12],
   vi: [8, 13, 14],
+  es: [],
+  fr: [17, 18],
 };
 
 function issueFiles(locale: IssueBoardLocale): string[] {

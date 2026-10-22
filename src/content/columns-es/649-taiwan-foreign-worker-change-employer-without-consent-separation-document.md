@@ -15,11 +15,11 @@ featured_image_alt: "Una mochila y una carpeta cerrada junto a la puerta de un a
 featured_image_caption: "Escena ficticia"
 faq:
   - q: "Doy clases a tiempo completo en un buxiban. ¿Se aplica lo mismo si me cambio a otra academia?"
-    a: "Sí. Los profesores a tiempo completo de academias de corta duración (短期補習班) registradas conforme a la Ley de Educación Complementaria y Continua (補習及進修教育法) forman una de las categorías del [artículo 46 de la Ley de Servicios de Empleo](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=46), apartado 1, número 4. Para cambiar de empleador rige el [artículo 53](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=53), apartado 1: la nueva academia solicita el permiso y adjunta el documento de cese."
+    a: "Sí. Los profesores a tiempo completo de academias de corta duración (短期補習班) registradas conforme a la Ley de Educación Complementaria y Continua (補習及進修教育法) forman una de las categorías del artículo 46 de la Ley de Servicios de Empleo, apartado 1, número 4. Para cambiar de empleador rige el artículo 53, apartado 1: la nueva academia solicita el permiso y adjunta el documento de cese."
   - q: "¿Puedo trabajar para dos academias a la vez?"
-    a: "El mismo apartado 1 del artículo 53 contempla al extranjero contratado por dos o más empleadores, y también en ese caso la solicitud corresponde al nuevo empleador. Trabajar para el segundo sin ese permiso infringe el [artículo 43](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43)."
+    a: "El mismo apartado 1 del artículo 53 contempla al extranjero contratado por dos o más empleadores, y también en ese caso la solicitud corresponde al nuevo empleador. Trabajar para el segundo sin ese permiso infringe el artículo 43."
   - q: "¿Puede la academia quedarse con mi pasaporte hasta que me vaya?"
-    a: "No. El [artículo 57](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57), número 8, prohíbe al empleador retener ilegalmente o apropiarse del pasaporte, los documentos de residencia o los bienes del extranjero que contrata. El [artículo 67](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=67), apartado 1, castiga la infracción con una multa de 60.000 a 300.000 nuevos dólares taiwaneses."
+    a: "No. El artículo 57, número 8, prohíbe al empleador retener ilegalmente o apropiarse del pasaporte, los documentos de residencia o los bienes del extranjero que contrata. El artículo 67, apartado 1, castiga la infracción con una multa de 60.000 a 300.000 nuevos dólares taiwaneses."
 audience: ["es"]
 author: "legal-ai-assistant"
 ---

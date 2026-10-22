@@ -15,9 +15,9 @@ featured_image_alt: "Un contrato impreso con varias páginas marcadas con notas 
 featured_image_caption: "Escena ficticia"
 faq:
   - q: "Entregamos todo, pero con retraso. ¿Puede un juez de Taiwán rebajar la pena por demora?"
-    a: "Puede, si la pena es excesiva: el [artículo 252 del Código Civil de Taiwán](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=252) permite reducirla a una cantidad razonable y no exige que el cumplimiento haya sido parcial. El exceso debe alegarlo y probarlo quien pide la rebaja, como recordó en mayo de 2026 el Tribunal de Distrito de Taipéi citando al Tribunal Supremo."
+    a: "Puede, si la pena es excesiva: el artículo 252 del Código Civil de Taiwán permite reducirla a una cantidad razonable y no exige que el cumplimiento haya sido parcial. El exceso debe alegarlo y probarlo quien pide la rebaja, como recordó en mayo de 2026 el Tribunal de Distrito de Taipéi citando al Tribunal Supremo."
   - q: "¿El cliente taiwanés puede exigir a la vez la entrega y la pena por retraso?"
-    a: "Sí, cuando la pena se pactó para el cumplimiento tardío o inadecuado. El [artículo 250](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=250), apartado 2, permite al acreedor pedir el cumplimiento y, además, la pena, que se considera entonces la indemnización total por el retraso. El texto del artículo 1153 del Código Civil español, en cambio, solo admite esa acumulación cuando la facultad se haya otorgado claramente."
+    a: "Sí, cuando la pena se pactó para el cumplimiento tardío o inadecuado. El artículo 250, apartado 2, permite al acreedor pedir el cumplimiento y, además, la pena, que se considera entonces la indemnización total por el retraso. El texto del artículo 1153 del Código Civil español, en cambio, solo admite esa acumulación cuando la facultad se haya otorgado claramente."
   - q: "¿Cómo se sabe si una pena es punitiva?"
     a: "Salvo pacto en contrario, la pena se considera la cuantía total de los daños (artículo 250, apartado 2). El Tribunal Supremo de Taiwán exige que el juez califique la pena antes de valorar si es excesiva (115 Tai-Shang n.º 1386). En un caso de 2026, la frase que obligaba además a indemnizar todos los daños llevó al Tribunal Superior a tratar la pena como punitiva (112 Chong-Shang n.º 684)."
 audience: ["es"]

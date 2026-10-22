@@ -15,11 +15,11 @@ featured_image_alt: "A document folder and a handbag resting on a bench in a hos
 featured_image_caption: "Fictional scene"
 faq:
   - q: "Can the family ask for an autopsy in Taiwan?"
-    a: "Yes, within limits. After the body is examined, if the deceased's spouse or a lineal blood relative asks for an autopsy, the forensic pathologist must recommend one to the prosecutor in writing ([Forensic Pathologist Act Article 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0010052&flno=10), item 1). The prosecutor decides (Code of Criminal Procedure [Articles 212](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=212) and [213](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=213), item 4). A request from a brother or sister is not one of the grounds in that item."
+    a: "Yes, within limits. After the body is examined, if the deceased's spouse or a lineal blood relative asks for an autopsy, the forensic pathologist must recommend one to the prosecutor in writing (Forensic Pathologist Act Article 10, item 1). The prosecutor decides (Code of Criminal Procedure Articles 212 and 213, item 4). A request from a brother or sister is not one of the grounds in that item."
   - q: "We live in the United States. Can we take part in the mediation?"
-    a: "Yes, through an agent. An applicant with no domicile, residence, office or place of business in Taiwan must appoint an agent who has a domicile, office or place of business in Taiwan ([Regulations on the Organization and Operation of Medical Dispute Mediation Boards, Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020232&flno=7)). Mediation under the Act is free of charge ([Article 30](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=30))."
+    a: "Yes, through an agent. An applicant with no domicile, residence, office or place of business in Taiwan must appoint an agent who has a domicile, office or place of business in Taiwan (Regulations on the Organization and Operation of Medical Dispute Mediation Boards, Article 7). Mediation under the Act is free of charge (Article 30)."
   - q: "If we settle in mediation, can we still file a criminal complaint?"
-    a: "Not once the court has approved the settlement. After approval, the parties may not sue again on the same civil matter and may not file a criminal complaint or private prosecution over the medical dispute ([Medical Accident Prevention and Dispute Resolution Act, Article 28](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=28))."
+    a: "Not once the court has approved the settlement. After approval, the parties may not sue again on the same civil matter and may not file a criminal complaint or private prosecution over the medical dispute (Medical Accident Prevention and Dispute Resolution Act, Article 28)."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---

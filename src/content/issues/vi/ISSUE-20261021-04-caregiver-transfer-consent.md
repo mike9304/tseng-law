@@ -17,7 +17,7 @@ faq:
   - q: "Chủ cũ không đồng ý thì người chăm sóc có hết đường chuyển chủ không?"
     a: "Người lao động có thể tự nộp đơn theo điều 2 của quy định chuyển đổi nếu có căn cứ tại điều 59 Luật Dịch vụ việc làm. Hồ sơ gửi Bộ Lao động gồm giấy tờ chứng minh căn cứ và sự đồng ý chuyển của người lao động; nếu thiếu giấy tờ, cơ quan có thể xác minh rồi miễn nộp. Việc chuyển cần được chấp thuận."
   - q: "Thỏa thuận ba bên có thay cho thủ tục xin phép không?"
-    a: "Chủ mới phải đáp ứng điều kiện và nộp hồ sơ xin phép. Điều 22 yêu cầu văn bản đồng thuận ba bên cùng giấy tờ chứng minh một căn cứ tại [điều 2 khoản 1 mục 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090023&flno=2), biên nhận thông báo địa phương và các tài liệu khác theo quy định."
+    a: "Chủ mới phải đáp ứng điều kiện và nộp hồ sơ xin phép. Điều 22 yêu cầu văn bản đồng thuận ba bên cùng giấy tờ chứng minh một căn cứ tại điều 2 khoản 1 mục 2, biên nhận thông báo địa phương và các tài liệu khác theo quy định."
   - q: "Chủ mới có hai thời hạn nào sau thỏa thuận tiếp nhận?"
     a: "Với diện thỏa thuận hai hoặc ba bên thuộc điều 17 khoản 1 mục 5 hoặc 6, chủ mới thông báo cơ quan lao động địa phương trong ba ngày và nộp đơn xin tiếp nhận tại Bộ Lao động trong 15 ngày. Cả hai thời hạn đều tính từ ngày sau ngày tiếp nhận lao động theo thỏa thuận (合意接續聘僱日). Hồ sơ gửi Bộ cần kèm biên nhận thông báo địa phương. Trách nhiệm chủ thuê theo điều 30 bắt đầu ngay từ ngày tiếp nhận lao động theo thỏa thuận."
 audience: ["vi"]

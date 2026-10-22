@@ -2349,6 +2349,18 @@
     {
       "locale": "en",
       "slug": "taiwan-right-turn-crosswalk-pedestrian-dashcam"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law"
     }
   ]
 }

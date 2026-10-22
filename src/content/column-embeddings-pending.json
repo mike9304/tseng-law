@@ -2445,6 +2445,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-foreign-worker-change-employer-without-consent-separation-document"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration"
     }
   ]
 }

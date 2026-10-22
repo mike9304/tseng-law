@@ -200,3 +200,4 @@
 - 10-23 00:08 KST 대기: 00:08 수동 fetch가 루프 fetch와 겹쳐 1회 실패(shallow file changed) — 잠금 없음·fsck 정상·00:03 push 정상, 재시도로 ref 재정렬. Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-23 00:18 KST 대기: 루프 실행 중이라 수동 fetch 생략(충돌 방지). Studio 변화 없음, Astra 채택 판정 대기.
 - 10-23 00:28 KST 대기: 수동 fetch 생략 판단 조건이 루프 래퍼 셸에도 걸리는 오탐이었음(00:18·00:28) → '^bash …sync.sh'로 고쳐 ref 재정렬. Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-23 00:38 KST 대기: ref 재정렬(7f25b23), Air 00:33 push 확인. Studio 변화 NOTES뿐, Astra 채택 판정 대기.

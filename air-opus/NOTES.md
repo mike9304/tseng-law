@@ -145,3 +145,4 @@
 - 10-22 13:19 KST 대기: ref 재정렬(cd07fa1). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-22 13:29 KST 대기: ref 재정렬(29aa465). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-22 13:39 KST 대기: ref 재정렬(6308981). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-22 13:49 KST 대기: ref 재정렬(5610e59). Studio 변화 NOTES뿐, Astra 채택 판정 대기.

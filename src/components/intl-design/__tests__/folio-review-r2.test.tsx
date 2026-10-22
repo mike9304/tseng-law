@@ -68,12 +68,12 @@ describe('Thai recommendation titles', () => {
 describe('article films', () => {
   // The opaque page-language label once drawn over the burned-in English box (review round 2) covered the native
   // fullscreen/PiP controls and, for long labels on phones, part of the scene. Folio now shows the shared en
-  // renditions as the vi pages do: the file as is, with the AI disclosure in the page language in the caption.
+  // renditions as the vi pages do: the file as is, with the fictional-scene caption in the page language in the caption.
   it('draws nothing over the film frame', () => {
     expect(rules.some((r) => r.selector.includes('data-column-generated-video'))).toBe(false);
   });
 
-  it('keeps the localized AI disclosure caption for the English renditions', () => {
+  it('keeps the localized fictional-scene caption for the English renditions', () => {
     const source = read('src/data/column-generated-videos.ts');
     let english = 0;
     for (const locale of INTL_DESIGN_LOCALES) {
@@ -82,8 +82,8 @@ describe('article films', () => {
           if (!video.id.endsWith('-en')) continue;
           english += 1;
           // The disclosure under the film is in the page language, never the English file's own wording.
-          expect(video.disclosure.trim().length, `${locale} ${video.id}`).toBeGreaterThan(20);
-          expect(video.disclosure, `${locale} ${video.id}`).not.toMatch(/AI-generated|Fictional illustration/i);
+          expect(video.disclosure.trim().length, `${locale} ${video.id}`).toBeGreaterThan(3);
+          expect(video.disclosure, `${locale} ${video.id}`).not.toMatch(/AI-generated|Fictional illustration|\bAI\b|\bIA\b|\bKI\b/i);
         }
       }
     }

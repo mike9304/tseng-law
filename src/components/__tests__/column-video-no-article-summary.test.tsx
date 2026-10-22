@@ -22,7 +22,7 @@ describe('public column scenes after retiring article-summary films', () => {
     expect(html).toContain('/videos/columns/rear-end-simulation-v3-ko.mp4');
     expect(html).toContain('controls=""');
     expect(html).toContain('data-column-video-disclosure');
-    expect(html).toContain('실제 사고 기록이 아닙니다');
+    expect(html).toContain('가상의 장면');
   });
 
   it('leaves the police-document article without a video when no separate reviewed scene exists', () => {

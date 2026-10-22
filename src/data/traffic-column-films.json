@@ -7,7 +7,7 @@
     "height": 720,
     "title": "교통사고 뒤 현장 기록과 배상 자료를 준비하는 과정",
     "description": "추돌 뒤 안전 확보와 신고, 현장 사진, 원본 자료 보존, 진료, 수리비와 소득 자료, 합의 검토까지 이어지는 80초 무음 영상입니다.",
-    "disclosure": "AI로 만든 가상 인물과 장면이며 실제 사고 기록이 아닙니다. 차량·장소·시간은 설명을 위한 설정입니다. 영상은 본문의 주요 자료 준비 과정을 요약하며 개별 사고의 과실, 치료 필요성이나 배상액을 판단하는 증거가 아닙니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -61,7 +61,7 @@
     "height": 720,
     "title": "From the crash scene to records for a compensation claim",
     "description": "This silent 80-second film follows safety and reporting, scene photographs, original records, medical care, repair and income records, and review of settlement terms.",
-    "disclosure": "Fictional AI-generated people and scenes, not actual accident footage. Vehicles, locations and timing are illustrative. The film summarizes parts of the article; it is not evidence of fault, medical necessity or compensation in an individual case.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -115,7 +115,7 @@
     "height": 720,
     "title": "從事故現場到求償資料的整理過程",
     "description": "這段80秒無聲影片依序呈現安全與報案、現場拍照、原始資料保存、就醫、修車與收入資料，以及和解條款的確認。",
-    "disclosure": "人物與場景均由AI生成，非真實事故影像。車輛、地點與時間為說明而設定。影片摘要呈現本文部分資料準備流程，不能作為認定個案過失、治療必要性或賠償金額的證據。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -169,7 +169,7 @@
     "height": 720,
     "title": "事故現場の記録から賠償請求の資料整理まで",
     "description": "安全確保と通報、現場撮影、原本の保存、受診、修理費と収入の資料、示談条件の確認をたどる80秒の無音映像です。",
-    "disclosure": "人物と場面はAIで作成した架空の設定で、実際の事故映像ではありません。車両・場所・時間は説明用です。本文にある資料準備の一部を示す映像であり、個別事件の過失、治療の必要性や賠償額を判断する証拠にはなりません。",
+    "disclosure": "架空の情景",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -223,7 +223,7 @@
     "height": 720,
     "title": "사고 기록을 남기고 경찰 자료와 위임 범위를 확인하는 과정",
     "description": "현장 기록, 경찰 자료의 신청 시점과 온라인 신청 조건, 대리 권한, 출국 전 연락 준비를 보여주는 80초 무음 영상입니다.",
-    "disclosure": "AI로 만든 가상 인물·기관·화면입니다. 실제 사고나 실제 신청 절차를 촬영한 영상이 아닙니다. 신청 화면은 설명용이며 공식 사이트를 재현하지 않았습니다. 구체적인 의무·신청 조건·기한은 본문과 공식 안내에서 확인해야 합니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -277,7 +277,7 @@
     "height": 720,
     "title": "Recording a crash and arranging police records and representation",
     "description": "An 80-second silent film about scene records, application times and online eligibility, authorization, and contact arrangements before leaving Taiwan.",
-    "disclosure": "The people, office and screens are fictional and AI-generated, not footage of a real accident or application. The illustrative form does not reproduce the official website. Consult the article and official guidance for the applicable duties, eligibility and deadlines.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -331,7 +331,7 @@
     "height": 720,
     "title": "事故紀錄、警方資料申請與離台前的安排",
     "description": "這段80秒無聲影片呈現現場紀錄、各項警方資料的申請時間、線上申請條件、委任權限，以及離台前的聯絡安排。",
-    "disclosure": "人物、機關與畫面均為AI生成的假想情境，並非真實事故或申辦過程。表單畫面僅供說明，未重建官方網站。具體義務、申請條件與期限，仍須對照本文及官方說明。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -385,7 +385,7 @@
     "height": 720,
     "title": "事故の記録、警察資料の申請と帰国前の準備",
     "description": "現場記録、警察資料の申請時期とオンライン申請の条件、代理権、帰国前の連絡準備を示す80秒の無音映像です。",
-    "disclosure": "人物・窓口・画面はAIで作成した架空の場面です。実際の事故や申請手続を撮影したものではありません。フォームは説明用で、公式サイトの再現ではありません。具体的な義務・申請条件・期限は本文と公式案内をご確認ください。",
+    "disclosure": "架空の情景",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -439,7 +439,7 @@
     "height": 720,
     "title": "休養診斷如何接上工作內容、期間與收入損失",
     "description": "這段80秒無聲影片依序呈現醫療資料、原有職務、出勤與時間線，以及受僱、自營和代班支出的核對方式。",
-    "disclosure": "AI生成的獨立假想人物與場景，並非本文判決或真實職場的重建。影片並列受僱、自營與替代人力的資料情境，不代表同一人的完整經歷。畫面中的工作、就診與文件不能證明任何人的醫療限制、實際失收或賠償金額。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -493,7 +493,7 @@
     "height": 720,
     "title": "家屬照護的需要、時段與費用資料",
     "description": "這段80秒影片呈現醫療評估、日常協助、夜間照顧、交班時間與費用資料，說明看護費需要核對的事實。",
-    "disclosure": "AI生成的獨立假想人物與居家照護場景，非本文判決或真實病況的重建。影像不能證明照護的必要性、期間、實際付款或賠償金額；各項請求仍須依實際事證判斷。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -547,7 +547,7 @@
     "height": 720,
     "title": "車損、修理項目、換新零件與求償資料",
     "description": "這段80秒無聲影片將事故照片、修復說明、逐項估價、零件比較與單據核對串在一起，並區分必要修復、折舊及可請求範圍。",
-    "disclosure": "AI生成的獨立假想人物、車輛與修車情境，非本文判決或原始卷證的重建。零件比較只是示意，不能證明畫中車輛需要更換該零件。畫面與示意單據不能認定任何實際修理的必要性、價格、折舊或賠償額。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -601,7 +601,7 @@
     "height": 720,
     "title": "代步需求、修車工期與租車單據的核對",
     "description": "這段80秒無聲影片依序呈現車損、修車工期、租用與還車紀錄，以及付款和其他代步安排的核對。",
-    "disclosure": "AI生成的獨立假想人物、車輛與租車情境，非本文判決或原始卷證的重建。畫面中的櫃檯、車輛、鑰匙與示意單據，不能證明任何人實際租車、付款、代步需要或可獲賠的期間。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -655,7 +655,7 @@
     "height": 720,
     "title": "新傷勢、調解內容與救濟期限的核對",
     "description": "這段80秒無聲影片把前後就醫、原調解文件、實際送達與後續損害資料接在一起，說明新診斷之外還需查明的條件。",
-    "disclosure": "AI生成的獨立假想人物與資料檢視情境，非本文判決、真實患者、調解過程或原始卷證的重建。畫面沒有呈現診斷結果、有效送達或裁判結論，不能證明任何實際傷勢、期限、撤銷原因或賠償額。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -709,7 +709,7 @@
     "height": 720,
     "title": "肇事次因、原始資料與覆議日期的核對",
     "description": "這段80秒無聲影片依序檢視鑑定意見、原始影像、道路配置、比較資料與收件日期，區分肇事原因的分析和賠償範圍。",
-    "disclosure": "AI生成的獨立假想人物與資料檢視情境，非本文判決、事故現場或原始卷證的重建。圖面、照片與螢幕上的街景都是虛構示意，不能拿來估速、判斷真實行向或證明任何案件的過失與責任比例。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -763,7 +763,7 @@
     "height": 720,
     "title": "추월 조건과 사고 뒤 확인할 증거",
     "description": "추월 금지 조건과 신호·간격, 가상의 복귀 중 접촉, 손상 사진과 원본 영상 보존, 도로·시간·과실 자료 검토를 잇는 100초 무음 영상입니다.",
-    "disclosure": "AI로 만든 가상 인물·차량·자료입니다. 두 승용차의 접촉은 본문의 익명 오토바이 사고와 별개인 설명용 설정입니다. 신호·양보·거리 요건을 실제로 충족했다는 증거가 아니며, 모형의 간격은 실측값이 아닙니다. 손상 촬영은 이후 주차장에서 하는 장면으로 사고 당시 차량 위치를 보여 주지 않습니다. 영상은 제101조의 일부 요건과 자료 확인 과정을 요약하며, 전체 요건은 본문과 공식 규정에서 확인해야 합니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -827,7 +827,7 @@
     "height": 720,
     "title": "Overtaking conditions and evidence after a collision",
     "description": "This silent 100-second film connects overtaking restrictions, signals and spacing, a fictional cut-back collision, damage photographs, original recordings and review of road conditions, timing and fault.",
-    "disclosure": "Fictional AI-generated people, vehicles and records. The two-car contact is separate from the anonymous motorcycle case in the article. It does not prove compliance with signaling, yielding or distance requirements; the models are not calibrated. Damage photographs are taken later in a parking area and do not show original crash positions. The film summarizes selected Article 101 requirements and evidence checks; consult the article and official rule for all conditions.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -891,7 +891,7 @@
     "height": 720,
     "title": "追越しの条件と事故後に確認する証拠",
     "description": "追越しの禁止条件と合図・間隔、車線復帰時の架空の接触、損傷の撮影、原本の保存、道路・時間・過失に関する資料の確認をたどる100秒の無音映像です。",
-    "disclosure": "人物・車両・資料はAIで作成した架空の設定です。乗用車2台の接触は、本文の匿名のオートバイ事故とは別の説明用場面です。合図・進路を譲る行為・距離の要件を満たした証拠ではなく、模型の間隔も実測値ではありません。損傷の撮影は後日の駐車場で行う設定で、事故当時の車両位置を示しません。第101条の一部の要件と資料確認を要約した映像のため、全要件は本文と公式規定で確認してください。",
+    "disclosure": "架空の情景",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -955,7 +955,7 @@
     "height": 720,
     "title": "超車條件與事故後應確認的證據",
     "description": "這段100秒無聲影片依序呈現超車限制、示警與間隔、假想的回切碰撞、車損拍照、原始影像保存，以及道路、時間與過失資料的檢視。",
-    "disclosure": "人物、車輛與資料均由AI生成。兩部轎車的接觸是獨立的假想情境，並非重現本文匿名機車事故。畫面不能證明示警、允讓或距離要件已獲遵守，模型間隔也不是實測值。車損拍照設定在事後的停車場，並非事故原始車位。影片摘要第101條部分要件與資料檢視流程，完整條件仍須閱讀本文及官方規定。",
+    "disclosure": "虛構情境",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -1019,7 +1019,7 @@
     "height": 720,
     "title": "從借車、鑰匙保管到事故責任資料",
     "description": "這段80秒無聲影片依序呈現駕駛資格確認、借用交接、鑰匙保管、假想事故、原始紀錄，以及車主、管理人與僱用人責任的檢視。",
-    "disclosure": "人物、車輛、證件與文件均為AI生成的獨立假想情境，並非本文父子與第三人機車事故的重建。畫面不能證明駕照有效、借用已獲合法同意、保管已盡注意或特定人應負責。鎖櫃只是保管方式的示意，不是免責保證。影片摘要本文部分條件；不同法律依據、例外及個案事實仍須分別確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -1073,7 +1073,7 @@
     "height": 720,
     "title": "從後座乘客的給付要件到保險追償",
     "description": "這段80秒無聲影片以停車、就醫及資料核對的假想場景，說明後座乘客的強制險給付、無照駕駛的追償條件、實付金額與騎士自己的保障。",
-    "disclosure": "人物、機車、保單與付款文件均為AI生成的獨立假想情境，並非本文雨夜自摔事故的重建或原始證據。停車畫面不能證明誰是騎士、乘客或被保險人，文件畫面也不能證明承保、付款或過失。給付與追償有各自要件；影片摘要不能取代本文的完整條件、例外與來源，也未呈現個案實際追回款項。",
+    "disclosure": "虛構情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -1127,7 +1127,7 @@
     "height": 720,
     "title": "從和解文字、實際收款到基金扣除",
     "description": "這段100秒無聲影片用十個資料核對場景，依序說明事故當日投保、和解與實收的差別、基金扣除、財損分項、代位追償及親屬例外。",
-    "disclosure": "人物、保單、和解與付款文件均為AI生成的假想示意，並非本文判決的當事人、契約或付款紀錄。畫面沒有實際計算補償金，也不能證明任何款項已經收取。約定金額不等於實際收款；寫「不含強制險」不能直接排除基金依法扣除。影片摘要部分條件，適用範圍、例外、時效及個案標準仍須查本文與官方來源。",
+    "disclosure": "虛構情境",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -1191,7 +1191,7 @@
     "height": 720,
     "title": "事故後的交談、通報與完整紀錄",
     "description": "這段100秒無聲影片以十個假想場景，串起事故警告、救護通報、交談與聯絡資料、移車條件、完整影音及後續就醫時序。",
-    "disclosure": "人物、兩輛轎車、對話與文件均為AI生成的獨立假想情境，並非本文兩輛機車擦撞案件的重建或原始監視器。站立、交談與記錄資料的畫面，不能證明沒有人受傷、已同意離場或已履行全部法定義務。影片未完整呈現救護、警告設置距離與標繪程序；資料保存建議也不是不起訴或無罪的保證。具體條件、例外及來源見本文。",
+    "disclosure": "虛構情境",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -1255,7 +1255,7 @@
     "height": 720,
     "title": "從公車內失衡到運送責任與損失資料",
     "description": "這段94秒無聲影片把4秒假想失衡場景與九段10秒說明連成一個檔案，依序核對乘車紀錄、車內外影像、就醫資料、駕駛與運送公司責任，以及各項損失。",
-    "disclosure": "人物、公車、票卡、文件與螢幕畫面均為AI生成的獨立假想情境，並非本文案件的當事人或原始影音。開場未呈現車外原因或完整煞車過程，不能用來測量減速度、認定過失或傷勢。兩個示意影像未經對時，也不能證明外部車輛行為或因果關係。駕駛與運送人責任、旅客過失及不可抗力例外，仍須依本文所述要件與個案證據判斷。",
+    "disclosure": "虛構情境",
     "durationSeconds": 94,
     "sceneCount": 10,
     "chapters": [
@@ -1319,7 +1319,7 @@
     "height": 720,
     "title": "從側後方接觸到換道過程與反應餘裕",
     "description": "這段94秒無聲影片把4秒假想接觸場景與九段10秒說明連成一個檔案，依序查方向燈、禮讓義務、車損、原始影像及雙方反應，避免只憑撞擊部位判責。",
-    "disclosure": "車輛、人物、文件與螢幕均為AI生成的獨立假想情境，並非本文判決、當事人或原始影像。開場橙色車向左橫移，與藍綠色車發生側後方接觸；方向燈特寫是另一個停車示意，不能證明開場車輛是否打燈。本片只示意小客車；機車另須依第99條先遵守標誌、標線，無標誌或標線時依該項規定行駛。示意時間、車距及車損不能用來估速、界定換道完成或認定責任比例。",
+    "disclosure": "虛構情境",
     "durationSeconds": 94,
     "sceneCount": 10,
     "chapters": [
@@ -1383,7 +1383,7 @@
     "height": 720,
     "title": "從連環接觸到第一下與各項證據",
     "description": "這段94秒無聲影片把4秒假想連環接觸與九段10秒說明連成一個檔案，依序對照前後鏡頭、保存原檔、標記接觸順序，並核對中間車前後的行車義務與損失。",
-    "disclosure": "開場深色後車先碰銀色中間車，銀色車再接觸白色前車，只是其中一條假想順序，不是本文任何判決或當事人的事故重建。其餘人物、文件、車損及螢幕畫面也由AI生成，分別示意資料整理；前後鏡頭未經對時，不能證明實際車距或哪一車有過失。示意車速、碰撞時間、停住位置與損傷均不能用作物理計算、法定安全距離或責任比例。",
+    "disclosure": "虛構情境",
     "durationSeconds": 94,
     "sceneCount": 10,
     "chapters": [
@@ -1447,7 +1447,7 @@
     "height": 720,
     "title": "從右轉接觸到車道、亮燈位置與反應證據",
     "description": "這段114秒無聲影片把4秒假想接觸與十一段10秒說明連成一個檔案，逐一核對右轉前的位置、方向燈、機車路徑、現場管制、反應餘裕及資料缺口。",
-    "disclosure": "人物、銀色小客車、機車、道路、文件與螢幕均為AI生成的獨立假想情境，並非本文大貨車判決、官方消息所指事故或原始證據。開場呈現小客車右轉、機車接觸後失衡；未完整呈現亮燈、換入車道或讓行過程，也沒有可驗證的三十公尺尺度。後續各資料場景不是同一事故的原始紀錄，不能用來估速、量距、判定騎士傷勢或責任比例。",
+    "disclosure": "虛構情境",
     "durationSeconds": 114,
     "sceneCount": 12,
     "chapters": [
@@ -1521,7 +1521,7 @@
     "height": 720,
     "title": "從路邊起步到出口性質、視線與讓行",
     "description": "這段94秒無聲影片把4秒假想路邊起步接觸與九段10秒說明連成一個檔案，依序辨認原位置、讓行義務、場所性質、視線限制及刑民事判斷的差別。",
-    "disclosure": "開場橙色車從路邊向車道移動後與後方車輛接觸，僅為AI假想小客車示意，並非本文兩件判決的重建。方向燈、道路拍攝與停車場反射鏡是另外的獨立場景，不能證明開場駕駛有無打燈或盡到注意義務。人物、文件、畫面、車速、車距及損傷皆非實際證據；鏡頭位置不等於駕駛視點，閘門或路形也不能單獨認定是否屬供公眾通行的道路。",
+    "disclosure": "虛構情境",
     "durationSeconds": 94,
     "sceneCount": 10,
     "chapters": [
@@ -1585,7 +1585,7 @@
     "height": 720,
     "title": "從開門動作到接觸、傷勢與費用證據",
     "description": "這段114秒無聲影片以4秒假想開門接觸，加上十一段10秒說明，連成單一檔案，依序核對開關車門義務、乘客側別、連續影像、醫療費用與各人的責任。",
-    "disclosure": "開場為AI生成的獨立假想：銀色車開門與機車接觸，騎士失去平衡。並非本文士林案的膝部接觸、沙鹿案的小客車事故或原始影像，也與文內接觸前定格示意圖不同。後續人物、車輛、文件、診療、照護及協商均為各自的虛構說明場景，不能證明停車合法、傷勢、費用、開門安全或任何人的責任比例。",
+    "disclosure": "虛構情境",
     "durationSeconds": 114,
     "sceneCount": 12,
     "chapters": [
@@ -1659,7 +1659,7 @@
     "height": 720,
     "title": "從閃紅停讓、閃黃減速到完整影像證據",
     "description": "這段104秒無聲影片把4秒假想路口接觸與十段10秒說明連成一個檔案，依序核對兩方向義務、號誌明滅、停讓動作、視線與責任資料。",
-    "disclosure": "人物、道路、車輛、燈具、文件與螢幕均為AI生成。開場假設藍車來向為閃黃、紅車來向為閃紅，與文內兩段式示意圖是不同設定，也未重建所引判決。單燈桌上道具並非現場號誌，明滅頻率沒有校準；後續車庫等場景也不屬於開場事故。這些畫面不能證明實際車速、完整停讓、視距、反應餘裕、傷勢或責任比例。",
+    "disclosure": "虛構情境",
     "durationSeconds": 104,
     "sceneCount": 11,
     "chapters": [
@@ -1728,7 +1728,7 @@
     "height": 720,
     "title": "左轉讓行、三件民事比例與鑑定程序",
     "description": "134秒無聲影片以4秒假想接觸及十三段10秒說明，連成單一檔案，核對轉彎路徑、速度證據、三件民事判決與鑑定、覆議條件。",
-    "disclosure": "全部人物、車輛、道路、診療、文件及螢幕為AI生成的獨立虛構示例，並非所引判決或原始證據。開場呈現接觸，不代表三重案曾發生兩車碰撞，也不能證明實際車速、傷勢或責任。判決章節依公開文字說明，畫面不屬於該案。70%、60%、50%均為各案的汽車過失認定，不能套用；本文保留各判決來源。",
+    "disclosure": "虛構情境",
     "durationSeconds": 134,
     "sceneCount": 14,
     "chapters": [
@@ -1812,7 +1812,7 @@
     "height": 720,
     "title": "좌회전 양보, 세 판결의 과실 비율과 감정 절차",
     "description": "4초 가상 접촉 장면과 10초 설명 장면 13개를 한 파일로 이은 134초 무음 영상입니다. 회전 경로, 속도 증거, 세 민사 판결과 감정·복의 조건을 설명합니다.",
-    "disclosure": "인물·차량·도로·진료·문서·화면은 모두 별도로 만든 AI 가상 장면이며 판결의 실제 사고나 원본 증거가 아닙니다. 첫 접촉 장면은 신베이 사건에서 두 차량이 접촉했다는 뜻이 아닙니다. 속도·상해·책임을 증명하지 않습니다. 판결 설명은 공개 문서에 근거하며 배경 영상은 해당 사건과 무관합니다. 자동차 과실 70%·60%·50%는 각 사건의 판단입니다. 판결 출처는 본문에 있습니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 134,
     "sceneCount": 14,
     "chapters": [
@@ -1896,7 +1896,7 @@
     "height": 720,
     "title": "Left turns, three civil fault findings and appraisal procedure",
     "description": "One silent 134-second file joins a four-second fictional contact with thirteen distinct ten-second explanations of turning paths, speed evidence, three civil cases and appraisal/review conditions.",
-    "disclosure": "All people, vehicles, roads, consultations, documents and screens are independent AI-generated fiction, not court exhibits or reconstructions. The opening contact does not imply contact in the New Taipei case. It proves no speed, injury or fault. Case chapters summarize public judgments over unrelated illustrative scenes. The 70%, 60% and 50% car-driver findings belong to those cases only; judgment links remain in the article.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 134,
     "sceneCount": 14,
     "chapters": [
@@ -1980,7 +1980,7 @@
     "height": 720,
     "title": "第三名行人、A柱視線與判決如何看證據",
     "description": "這段114秒無聲影片把4秒白天假想接觸與十一段10秒說明連成單一檔案，核對暫停讓行、觀察位置、判決時間與測速資料，以及第三審的審查範圍。",
-    "disclosure": "所有人物、車輛、道路、文件與螢幕均為AI生成。開場是白天的獨立虛構情境，非本文夜間事故；沒有重現前兩人、機車、汽車與第三人的完整先後。後續停車觀察及測距也未還原原案視野或重做鑑定。畫面不能證明號誌、實際注意方向、可用反應時間、車速、重傷或罪責。判決章節依公開文字說明，並未取得原始錄影與完整卷證；各裁判來源保留在本文。",
+    "disclosure": "虛構情境",
     "durationSeconds": 114,
     "sceneCount": 12,
     "chapters": [
@@ -2054,7 +2054,7 @@
     "height": 720,
     "title": "油罐車倒車、警示聲與兩方注意義務",
     "description": "134秒無聲影片將4秒假想接觸與十三段10秒說明連成一個檔案，核對大型車倒車義務、喇叭與時鐘證據、個案七三過失，以及刑事與民事的不同問題。",
-    "disclosure": "人物、車輛、道路、加油站、車庫、文件與螢幕均為各自獨立的AI虛構場景。開場非本文凌晨事故，接觸側別與視野也不同；畫面中的員工沒有實施完整倒車指引。畫面不能證明蜂鳴器或喇叭、視距、車速、傷勢或責任。判決章節依公開文字說明，並無該案原始影像；70%與30%僅屬本案民事判斷，兩案確定情形未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 134,
     "sceneCount": 14,
     "chapters": [
@@ -2138,7 +2138,7 @@
     "height": 720,
     "title": "飛來物來源：兩件判決如何看連續影像",
     "description": "124秒無聲影片把4秒假想鐵片接觸與十二段10秒解說連成單一檔案，依次比較兩案來源證據、舉證例外、駕駛與僱用人責任、保險代位及安全保存資料。",
-    "disclosure": "全部人物、車輛、道路、文件、螢幕與車損均為獨立AI虛構示例。開場畫面未交代來源，也未呈現貨車掉落物品；不重建臺南或新竹案。後續灰色車損與開場銀色引擎蓋也不是同一事故。文字依公開判決整理，畫面並非原始證據，不能辨認物品性質、證明來源或分配責任。未取得原始影片，兩案是否確定尚未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 124,
     "sceneCount": 13,
     "chapters": [
@@ -2217,7 +2217,7 @@
     "height": 720,
     "title": "救護車緊急通行與路口注意義務",
     "description": "134秒無聲影片以4秒失衡後的假想接觸，加上十三段10秒說明連成一檔，核對勤務資料、雙方避讓與安全義務、法院推論及新舊法的不同。",
-    "disclosure": "所有人物、車輛、道路、車庫、文件及螢幕都是各自獨立的AI虛構示例。開場只從失衡後開始，接觸救護車側後方，與本文救護車右前方接觸機車的記載不同；也沒有呈現乘客、煞車起點、號誌、警號、病人或傷勢，不能證明勤務合法或責任。判決章節依公開文字整理，未取得該案原始影片，沒有重建個案。",
+    "disclosure": "虛構情境",
     "durationSeconds": 134,
     "sceneCount": 14,
     "chapters": [
@@ -2301,7 +2301,7 @@
     "height": 720,
     "title": "違停未碰撞：空間障礙、因果關係與民事分擔",
     "description": "164秒無聲影片將4秒已到側倒階段的虛構片段與十六段10秒說明連成單一檔案，從站區空間、六鏡頭與鑑定前提，說明刑事因果、個案民事比例及連帶責任。",
-    "disclosure": "人物、車輛、街道、文件、測距與螢幕均為AI獨立假想。開場沒有機車先前繞行與變換車道的完整過程，也沒有呈現本文後座乘客、死亡經過或實際夜間場景；計程車與公車未被撞，不表示畫面已證明因果關係。後續空站區與測距輪並非事故現場或校準測量。六個原始鏡頭未取得，文字依裁判記載整理；民事比例限於本案，民事判決是否確定未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 164,
     "sceneCount": 17,
     "chapters": [
@@ -2400,7 +2400,7 @@
     "height": 720,
     "title": "停車場輪擋與鎖扣：安全性、因果關係與求償",
     "description": "124秒無聲影片將4秒單次倒車示意與十二段10秒說明連成一檔，對照判決的兩次倒車、服務安全舉證、因果關係及請求金額。",
-    "disclosure": "所有人物、車輛、設施、文件與螢幕都是各自獨立的AI虛構示例。開場只有一次倒車，畫面中的車輪擋未被碰到，並非本文先碰輪擋再倒車的兩段經過，也不能用車身亮線認定損傷程度。空車位及鎖扣配置不是案件現場；沒有實際尺寸、原始監視器或完整卷證，不能據畫面判斷設施安全、因果關係或責任。判決是否確定未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 124,
     "sceneCount": 13,
     "chapters": [
@@ -2417,7 +2417,7 @@
       {
         "start": 14,
         "title": "車位、輪擋與鎖扣要一起記錄",
-        "text": "安全後拍全景、相對位置、視線、照明與警示，後補照片註明日期。 這段空車位是另一個AI假想配置，不是案件現場，也不能證明尺寸或安全性。"
+        "text": "安全後拍全景、相對位置、視線、照明與警示，後補照片註明日期。 這段空車位是另一個假想配置，不是案件現場，也不能證明尺寸或安全性。"
       },
       {
         "start": 24,
@@ -2479,7 +2479,7 @@
     "height": 720,
     "title": "限高架調低：警示、國賠因果與駕駛過失",
     "description": "174秒無聲影片將4秒貨廂接觸的假想片段與十七段10秒說明連成一檔，分開說明牌面與實際高度、設施安全、個案七三比例、發回更審及更正金額。",
-    "disclosure": "人物、道路、貨車、橫桿、文件與螢幕均為各自獨立的AI虛構情境。開場使用箱式貨車，非本文貨櫃車及實際道路；畫面未呈現事故前的高度調整或警示過程，也不代表實際高度、速度、視距或反應時間。後續拍攝空路設施不是案件測量。判決說明依公開文字，未取得原始行車影片或卷證；2017年責任依事故時法規，現行程序另標明條件。",
+    "disclosure": "虛構情境",
     "durationSeconds": 174,
     "sceneCount": 18,
     "chapters": [
@@ -2583,7 +2583,7 @@
     "height": 720,
     "title": "兩車競速：未接觸者的共同侵權與連帶賠償",
     "description": "164秒無聲影片將4秒接觸示意與十六段10秒說明連成一檔，從碰撞前的共同原因，講到對外連帶、內部分擔、上訴新增扶養費與原始資料保存。",
-    "disclosure": "車輛、人物、道路、文件、螢幕及道具均為各自獨立的AI虛構示例。開場旁車始終靜止，未呈現競速、先前換道、其他涉案車輛、夜間環境或傷亡，不能據此認定旁車負責。後續路段及桌上模型也不是事故重建，未校準速度、距離或因果。判決說明依公開文字，未取得原始卷證或行車影像；記憶卡收存畫面不表示備份已完成，兩份民事判決確定狀態仍未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 164,
     "sceneCount": 17,
     "chapters": [
@@ -2682,7 +2682,7 @@
     "height": 720,
     "title": "國道反覆攔擋：沒有碰撞的公共危險與強制",
     "description": "164秒無聲影片將4秒未碰撞假想與十六段10秒說明連成一檔，說明反覆攔擋的證據、故意與具體危險、量刑上訴、再審結果及安全通報。",
-    "disclosure": "全部人物、車輛、道路、文件、螢幕與模型都是各自獨立的AI虛構情境。開場是白天的一次短暫切入與減速，與判決凌晨反覆攔擋不同；畫面不能量測速度、距離或證明故意。乘客通話片段在停妥車內，不表示實際報案完成。本文未取得本案原始行車影片，依公開裁判整理，沒有重建全部動作，也未取得影像公開權。",
+    "disclosure": "虛構情境",
     "durationSeconds": 164,
     "sceneCount": 17,
     "chapters": [
@@ -2781,7 +2781,7 @@
     "height": 720,
     "title": "前車被追撞：傷害故意、證據與量刑上訴",
     "description": "154秒無聲影片把4秒接觸假想與十五段10秒說明連成一檔，分開說明碰撞前行為、目擊與醫療資料、直接故意、後車距離、調解及易科罰金條件。",
-    "disclosure": "所有人物、車輛、道路、訪談、醫療及文件畫面均為各自獨立的AI虛構情境。開場沒有呈現先前糾紛、丟瓶、右偏或煞車起點，不能用來認定故意、傷勢或責任比例；貨車與道路也不是案件現場。訪談並非案件證人或正式筆錄，診療與螢幕不是實際卷證。本文依公開裁判文字說明，未取得事故原始影片；調解給付依判決記載，實際刑罰執行、確定日與非常救濟未另核實。",
+    "disclosure": "虛構情境",
     "durationSeconds": 154,
     "sceneCount": 16,
     "chapters": [
@@ -2875,7 +2875,7 @@
     "height": 720,
     "title": "大貨車攔擋：四組鏡頭、時碼差異與交通裁罰",
     "description": "144秒無聲影片把4秒接觸假想與十四段10秒說明連成一檔，對照雙方主張、四組來源與時碼限制，區分行政裁罰、歷史金額及現行規範。",
-    "disclosure": "人物、貨車、藍車、道路、裝置、螢幕與文件都是各自獨立的AI虛構示例。開場藍車並非案件紅車，接觸方向與道路也未重建實際左轉過程；沒有前段鳴笛、超車、原始多角度影像或校準，不能用畫面判斷速度、距離、故意、傷害或責任。四裝置與四分割螢幕只說明來源整理，不是本案紀錄器或證據。本文依公開勘驗文字，未取得案件影片；後續上訴及確定狀態未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 144,
     "sceneCount": 15,
     "chapters": [
@@ -2964,14 +2964,14 @@
     "height": 720,
     "title": "林口逼車案：十二秒截圖與四十日拘役",
     "description": "174秒無聲影片以一段4秒假想及十七段10秒說明，串起匝道標誌、相互爭道證據、量刑上訴與易科罰金條件。",
-    "disclosure": "所有道路、人物、車輛、螢幕、訪談與文件都是各自獨立的AI虛構示例，非林口案現場或卷證。開場僅一次切入減速，沒有重建四次切入、三次急煞、計程車動作或自動煞車；螢幕、紙本圖片不是案件截圖，訪談不是實際警詢。不能由畫面量測車速、校準時鐘或判斷責任。說明依公開判決文字，未取得原始影片與車輛數據；未核實後續上訴、確定或執行。",
+    "disclosure": "虛構情境",
     "durationSeconds": 174,
     "sceneCount": 18,
     "chapters": [
       {
         "start": 0,
         "title": "貨車切入後，車距迅速縮短",
-        "text": "開場僅是一次切入與減速的AI假想。 並非林口案重建，也不能證明自動煞車。"
+        "text": "開場僅是一次切入與減速的假想。 並非林口案重建，也不能證明自動煞車。"
       },
       {
         "start": 4,
@@ -3068,14 +3068,14 @@
     "height": 720,
     "title": "린커우 끼어들기: 12초 캡처와 구류 40일",
     "description": "174초 무음 영상입니다. 4초 가상 장면과 10초 장면 17개를 이어 진입로 표지, 양측 운전, 형량 항소와 벌금 전환 조건을 설명합니다.",
-    "disclosure": "도로·인물·차량·화면·면담·서류는 각각 독립된 AI 가상 예시이며 린커우 사건 현장이나 증거가 아닙니다. 도입은 한 번의 끼어들기와 감속만 보여주며 네 번의 끼어들기, 세 번의 급제동, 택시의 동작이나 자동 제동을 재현하지 않습니다. 화면과 인쇄 사진은 사건 캡처가 아니고 면담은 실제 경찰 조사도 아닙니다. 영상으로 속도·시각 보정·책임을 판단할 수 없습니다. 공개 판결에 따른 설명이며 원본 영상과 차량 데이터는 확보하지 않았습니다. 후속 상소·확정·집행은 확인되지 않았습니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 174,
     "sceneCount": 18,
     "chapters": [
       {
         "start": 0,
         "title": "끼어든 화물차와 좁아지는 간격",
-        "text": "도입은 한 번의 끼어들기와 감속을 그린 AI 가상 장면입니다. 린커우 사건 재현이나 자동 제동의 증거가 아닙니다."
+        "text": "도입은 한 번의 끼어들기와 감속을 그린 가상 장면입니다. 린커우 사건 재현이나 자동 제동의 증거가 아닙니다."
       },
       {
         "start": 4,
@@ -3172,14 +3172,14 @@
     "height": 720,
     "title": "Linkou cut-ins: screenshots and a reduced sentence",
     "description": "A silent 174-second film joins a four-second fictional opening and seventeen ten-second scenes on the ramp sign, both drivers’ conduct, sentence-only appeal and fine-conversion conditions.",
-    "disclosure": "Every road, person, vehicle, screen, interview and document is an independent AI-generated illustration, not the Linkou location or court evidence. The opening shows one cut-in and slowing sequence, not the four cut-ins, three brakes, taxi movements or automatic-braking activation. Screens and printed images are not case screenshots, and the conversation is not a police interview. These images establish no speed, clock calibration or liability. Explanations follow public judgments; no original recording or vehicle data was obtained. Later appeals, finality and execution remain unverified.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 174,
     "sceneCount": 18,
     "chapters": [
       {
         "start": 0,
         "title": "A cut-in closes the gap",
-        "text": "The opening is one fictional AI-generated cut-in and slowing sequence. It does not reconstruct Linkou or prove automatic braking."
+        "text": "The opening is one fictional cut-in and slowing sequence. It does not reconstruct Linkou or prove automatic braking."
       },
       {
         "start": 4,
@@ -3276,14 +3276,14 @@
     "height": 720,
     "title": "林口の割り込み：画像と拘役四十日",
     "description": "4秒の架空映像と17本の10秒場面をつないだ174秒の無音映像です。入口の標識、双方の運転、刑だけの控訴と易科罰金の条件を説明します。",
-    "disclosure": "道路・人物・車両・画面・面談・書類はそれぞれ独立したAIの架空例で、林口事件の現場や証拠ではありません。冒頭は一度の割り込みと減速だけで、四回の割り込み、三回の急ブレーキ、タクシーの動作や自動ブレーキを再現していません。画面や写真は事件の画像ではなく、面談は実際の警察供述でもありません。速度、時刻の補正、責任はこの映像から判断できません。公開判決に基づく説明で、元映像と車両データは取得していません。その後の上訴・確定・執行は未確認です。",
+    "disclosure": "架空の情景",
     "durationSeconds": 174,
     "sceneCount": 18,
     "chapters": [
       {
         "start": 0,
         "title": "割り込みで縮まる車間",
-        "text": "冒頭は一度の割り込みと減速を描いたAIの架空映像です。 林口事件の再現や、自動ブレーキの作動を証明する映像ではありません。"
+        "text": "冒頭は一度の割り込みと減速を描いた架空映像です。 林口事件の再現や、自動ブレーキの作動を証明する映像ではありません。"
       },
       {
         "start": 4,
@@ -3380,14 +3380,14 @@
     "height": 720,
     "title": "球棒傷害案：七月徒刑與208萬元民事賠償",
     "description": "234秒無聲影片以4秒假想開場與23段10秒場景，分別說明傷害罪、證據、五項損害、利息與假執行。",
-    "disclosure": "所有人物、道路、車輛、醫療與照護場景、文件、螢幕都是各自獨立的AI假想，不是基隆事件重建、卷證或實際病患。開場沒有擊打或接觸，不表示持棒者是駕駛。右膝支架的會談不是臺大醫院的私鑑定，也不是醫療或運動指導。說明依公開判決，未取得原始錄影、病歷或114上易1128全文；傷害案確定係依民事判決記載，民事確定、清償與執行仍未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 234,
     "sceneCount": 24,
     "chapters": [
       {
         "start": 0,
         "title": "持球棒走近，未呈現毆打",
-        "text": "開場是AI假想：男子持下垂球棒走近，沒有擊打或接觸。 不是基隆案重建，也不能由此認定駕駛、傷勢或責任。"
+        "text": "開場是假想：男子持下垂球棒走近，沒有擊打或接觸。 不是基隆案重建，也不能由此認定駕駛、傷勢或責任。"
       },
       {
         "start": 4,
@@ -3514,14 +3514,14 @@
     "height": 720,
     "title": "방망이 상해 사건: 징역 7개월과 약 208만 달러 배상",
     "description": "4초 가상 도입과 10초 장면 23개를 이은 234초 무음 영상입니다. 상해죄, 증거, 다섯 손해 항목, 이자와 가집행을 구분해 설명합니다.",
-    "disclosure": "인물·도로·차량·진료·돌봄·문서·화면은 각각 독립된 AI 가상 예시입니다. 지룽 사건 재현, 사건 증거나 실제 환자가 아닙니다. 도입에 타격·접촉은 없으며 방망이를 든 사람이 운전자라고 보여주는 장면도 아닙니다. 오른쪽 무릎 보조기 상담은 실제 사적 감정이나 의료·운동 지도가 아닙니다. 공개 판결을 설명하며 원본 녹화, 진료기록과 114上易1128 전문은 확보하지 않았습니다. 형사 확정은 민사판결의 기록에 따릅니다. 민사 확정·변제·집행은 미확인입니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 234,
     "sceneCount": 24,
     "chapters": [
       {
         "start": 0,
         "title": "방망이를 내리고 다가오는 장면",
-        "text": "도입은 방망이를 아래로 든 남성이 다가오는 AI 가상 장면입니다. 타격과 접촉은 없습니다. 지룽 사건 재현이 아니며 운전자, 부상이나 책임을 이 화면으로 정할 수 없습니다."
+        "text": "도입은 방망이를 아래로 든 남성이 다가오는 가상 장면입니다. 타격과 접촉은 없습니다. 지룽 사건 재현이 아니며 운전자, 부상이나 책임을 이 화면으로 정할 수 없습니다."
       },
       {
         "start": 4,
@@ -3648,14 +3648,14 @@
     "height": 720,
     "title": "Bat assault: seven months and NT$2.08 million in damages",
     "description": "A silent 234-second film connects a four-second fictional opening with 23 ten-second scenes on assault, evidence, five heads of loss, interest and provisional enforcement.",
-    "disclosure": "All people, roads, vehicles, medical and care scenes, documents and screens are independent AI illustrations, not the Keelung incident, court evidence or actual patients. The opening contains no strike or contact and does not identify the man as the driver. The right-knee-brace discussion is not the private hospital assessment or medical or exercise advice. Explanations follow public judgments; no original recording, medical file or full appeal 114上易1128 was obtained. Criminal finality follows the civil judgment’s record; civil finality, payment and execution remain unverified.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 234,
     "sceneCount": 24,
     "chapters": [
       {
         "start": 0,
         "title": "A lowered bat, with no strike shown",
-        "text": "The AI-fiction opening shows a man approaching with a lowered bat. No strike or contact occurs. It identifies no real driver, injury or liability."
+        "text": "The fictional opening shows a man approaching with a lowered bat. No strike or contact occurs. It identifies no real driver, injury or liability."
       },
       {
         "start": 4,
@@ -3782,14 +3782,14 @@
     "height": 720,
     "title": "バットによる傷害：徒刑七か月と約208万ドルの賠償",
     "description": "4秒の架空の冒頭と23本の10秒場面をつなぐ234秒の無音映像です。傷害罪、証拠、五つの損害、利息、仮執行を分けて説明します。",
-    "disclosure": "人物・道路・車両・診療・介護・書類・画面はそれぞれ独立したAIの架空例です。基隆事件の再現、事件証拠や実際の患者ではありません。冒頭に打撃や接触はなく、バットを持つ人を運転者と示すものでもありません。右膝装具の会話は実際の私的鑑定、医療・運動指導ではありません。公開判決による説明で、元映像、診療記録や114上易1128全文は未取得です。刑事の確定は民事判決の記録に基づき、民事の確定・弁済・執行は未確認です。",
+    "disclosure": "架空の情景",
     "durationSeconds": 234,
     "sceneCount": 24,
     "chapters": [
       {
         "start": 0,
         "title": "下げたバットを持って近づく",
-        "text": "冒頭はAIの架空映像です。打撃や接触はありません。 基隆事件の再現ではなく、運転者や傷害を示す証拠でもありません。"
+        "text": "冒頭は架空映像です。打撃や接触はありません。 基隆事件の再現ではなく、運転者や傷害を示す証拠でもありません。"
       },
       {
         "start": 4,
@@ -3916,14 +3916,14 @@
     "height": 720,
     "title": "倒車撞後車：三次撞擊與未成立的正當防衛",
     "description": "224秒無聲影片由4秒假想開場與22段10秒說明組成，串起畫面時序、雙方說法、公共危險與正當防衛要件、五個月徒刑及案件界限。",
-    "disclosure": "全部人物、車輛、道路、電話、照片、螢幕與文件均為各自獨立的AI虛構示例，非新北環河快速道路事件、原始影像或卷證。開場是白天單次倒車碰撞，不是本案夜間三次撞擊；不能量測速度、重建力學或證明故意。五張照片與面談沒有還原勘驗或警詢，電話也不是實際報案。說明依公開判決文字，未取得兩車原檔、原音或完整卷宗；畫面時刻未另校驗，後續上訴、確定與執行未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 224,
     "sceneCount": 23,
     "chapters": [
       {
         "start": 0,
         "title": "前車後退，碰上後車",
-        "text": "開場是白天一次倒車碰撞的AI假想；本案則發生於夜間、共有三次撞擊。 車輛、地點與動作並非案件重建，不能量測速度或推定故意。"
+        "text": "開場是白天一次倒車碰撞的假想；本案則發生於夜間、共有三次撞擊。 車輛、地點與動作並非案件重建，不能量測速度或推定故意。"
       },
       {
         "start": 4,
@@ -4045,14 +4045,14 @@
     "height": 720,
     "title": "뒤차에 후진 충돌: 세 번의 충돌과 정당방위 판단",
     "description": "4초 가상 도입과 10초 장면 22개를 이은 224초 무음 영상입니다. 사건 순서, 양측 주장, 통행 위험과 정당방위, 징역 5개월 및 판결 범위를 설명합니다.",
-    "disclosure": "인물·차량·도로·전화·사진·화면·문서는 각각 독립된 AI 가상 예시입니다. 신베이 환허 쾌속도로 사건이나 실제 영상·증거가 아닙니다. 도입은 낮의 한 차례 후진 충돌이며 사건의 야간 세 차례 충돌을 재현하지 않습니다. 속도·충격·고의를 판단할 수 없습니다. 사진 다섯 장과 면담은 법정 검증이나 경찰 조사 재현이 아니고 전화도 실제 신고가 아닙니다. 공개 판결에 따른 설명이며 양측 원본 영상·음성·전체 기록은 확보하지 않았습니다. 화면 시각을 별도 검증하지 않았고 후속 상소·확정·집행은 미확인입니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 224,
     "sceneCount": 23,
     "chapters": [
       {
         "start": 0,
         "title": "앞차가 후진해 뒤차에 닿는 장면",
-        "text": "도입은 낮의 한 차례 후진 충돌을 그린 AI 가상 장면입니다. 실제 사건은 밤에 세 번 충돌했습니다. 차량·장소·동작은 사건 재현이 아닙니다. 이 영상으로 속도나 고의를 판단할 수 없습니다."
+        "text": "도입은 낮의 한 차례 후진 충돌을 그린 가상 장면입니다. 실제 사건은 밤에 세 번 충돌했습니다. 차량·장소·동작은 사건 재현이 아닙니다. 이 영상으로 속도나 고의를 판단할 수 없습니다."
       },
       {
         "start": 4,
@@ -4174,7 +4174,7 @@
     "height": 720,
     "title": "Reversing into the rear car: why self-defence failed",
     "description": "A silent 224-second film combines one four-second fictional opening with 22 ten-second scenes on chronology, accounts, traffic danger, self-defence, the five-month sentence and the limits of the judgments.",
-    "disclosure": "All people, vehicles, roads, calls, photos, screens and documents are independent AI illustrations, not the Huanhe Expressway incident or its evidence. The opening is one daytime reversing contact, not three nighttime collisions. It establishes no speed, mechanics or intent. The five photos and conversations do not recreate the inspection or police interviews, and the phone scene is not the actual report. Explanations follow public judgments; neither original recording, original audio nor the full case file was obtained. Screen times were not independently calibrated. Later appeals, finality and execution remain unverified.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 224,
     "sceneCount": 23,
     "chapters": [
@@ -4303,7 +4303,7 @@
     "height": 720,
     "title": "後車への後退衝突：三回の接触と正当防衛の判断",
     "description": "4秒の架空の冒頭と22本の10秒場面をつなぐ224秒の無音映像です。時系列、双方の説明、往来の危険、正当防衛、徒刑五か月と判決の範囲を説明します。",
-    "disclosure": "人物・車両・道路・電話・写真・画面・書類は独立したAIの架空例で、新北環河快速道路事件や実際の証拠ではありません。冒頭は昼の一回の後退衝突で、本件の夜の三回の衝突を再現していません。速度・力学・故意は判断できません。写真五枚や面談は勘験・警察供述の再現ではなく、電話も実際の通報ではありません。公開判決に基づく説明で、双方の元映像・音声や全記録は未取得です。画面時刻は独自に校正せず、後続の上訴・確定・執行も未確認です。",
+    "disclosure": "架空の情景",
     "durationSeconds": 224,
     "sceneCount": 23,
     "chapters": [
@@ -4432,14 +4432,14 @@
     "height": 720,
     "title": "巷口四支錄影：位置、時間與車速的證據限制",
     "description": "將20段各10秒的獨立場景串成200秒無聲影片，說明四支錄影的用途、遮蔽與播放異常、舉證規則及已上訴的一審結果。",
-    "disclosure": "人物、巷口、車輛、螢幕、照片、文件及面談均為AI獨立假想，非板橋本案原始影音、當事人或事故重建。開場自行車騎士已下車、機車停妥；本案自行車則在騎行。各段不是同一人物連續經歷，也不重演各支錄影中的碰撞。說明依公開判決與法規；未取得原始影音、原音、全卷、時間校正或實測車速。檔案存取異常的設備原因未明，後續上訴結果亦未確認。NIST僅為保存方法參考，不代表臺灣法定格式或本案採用的程序。",
+    "disclosure": "虛構情境",
     "durationSeconds": 200,
     "sceneCount": 20,
     "chapters": [
       {
         "start": 0,
         "title": "巷口的柱子，擋住哪些視線",
-        "text": "畫面是下車牽自行車、機車停妥的AI假想，沒有重演碰撞。 本案自行車當時在騎行；人物、車輛及柱子位置都不是案件現場。"
+        "text": "畫面是下車牽自行車、機車停妥的假想，沒有重演碰撞。 本案自行車當時在騎行；人物、車輛及柱子位置都不是案件現場。"
       },
       {
         "start": 10,
@@ -4546,14 +4546,14 @@
     "height": 720,
     "title": "坑洞摔車後，281萬元由誰分擔",
     "description": "24段各10秒的獨立場景串成240秒無聲影片，區分道路與管線養護義務、事故因果、已付協議金、內部60%／40%分擔及未確認的確定狀態。",
-    "disclosure": "所有人、道路、孔蓋、螢幕、照片、文件及面談均為AI獨立假想，不是臺中環河路本案當事人或證據。開場圓形孔蓋不是本案長方形3號孔蓋，也不反映實際尺寸、深度或管理單位。各段不是同一人或同一事故的連續經歷；沒有重演摔車、傷勢、測量、鑑定或付款。說明依公開判決、官方新聞與法規；未取得事故原始資料或全卷。附表的車速、時間為分析假設，不能由本片驗證；二審是否確定、公司是否償還與後續執行仍未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 240,
     "sceneCount": 24,
     "chapters": [
       {
         "start": 0,
         "title": "人孔蓋旁的坑洞與養護責任",
-        "text": "開場是一般圓形孔蓋與路面缺口的AI假想，人物始終留在安全的人行道。 不是本案3號孔蓋、現場尺寸或摔車重建；不從本片推算事故原因。"
+        "text": "開場是一般圓形孔蓋與路面缺口的假想，人物始終留在安全的人行道。 不是本案3號孔蓋、現場尺寸或摔車重建；不從本片推算事故原因。"
       },
       {
         "start": 10,
@@ -4680,7 +4680,7 @@
     "height": 720,
     "title": "Les pièces à conserver après un accident de la route",
     "description": "Ce film muet de 80 secondes présente la mise en sécurité, le signalement, les photos, la conservation des originaux, les soins, les frais de réparation, la perte de revenus et les conditions d’un accord.",
-    "disclosure": "Personnages et scènes fictifs générés par IA, sans images d’un accident réel. Les véhicules, lieux et horaires sont illustratifs. Le film résume certaines parties de l’article ; il ne prouve ni une faute, ni la nécessité de soins, ni le montant d’une indemnisation dans un cas particulier.",
+    "disclosure": "Scène fictive",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -4734,7 +4734,7 @@
     "height": 720,
     "title": "Unterlagen nach einem Verkehrsunfall",
     "description": "Der 80-sekündige Stummfilm zeigt Absicherung und Meldung, Unfallfotos, Originalunterlagen, Behandlung, Reparaturkosten, Verdienstausfall und die Prüfung eines Vergleichs.",
-    "disclosure": "Fiktive, mit KI erzeugte Personen und Szenen; keine echten Unfallaufnahmen. Fahrzeuge, Orte und Zeiten dienen der Veranschaulichung. Der Film fasst Teile des Artikels zusammen. Er beweist weder Verschulden noch die medizinische Notwendigkeit oder einen Entschädigungsbetrag im Einzelfall.",
+    "disclosure": "Fiktive Szene",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -4788,7 +4788,7 @@
     "height": 720,
     "title": "Documentos que conservar tras un accidente de tráfico",
     "description": "Este vídeo de 80 segundos sin sonido recorre la seguridad y el aviso del accidente, las fotos, los originales, la atención médica, las reparaciones, la pérdida de ingresos y la revisión del acuerdo.",
-    "disclosure": "Personas y escenas ficticias generadas con IA, no imágenes de un accidente real. Vehículos, lugares y tiempos son ilustrativos. El vídeo resume partes del artículo; no prueba la culpa, la necesidad de tratamiento ni la indemnización de un caso concreto.",
+    "disclosure": "Escena ficticia",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -4842,7 +4842,7 @@
     "height": 720,
     "title": "Documentos após um acidente de trânsito",
     "description": "Este vídeo de 80 segundos sem som mostra a segurança e a comunicação do acidente, fotos, arquivos originais, atendimento médico, reparos, perda de renda e análise do acordo.",
-    "disclosure": "Pessoas e cenas fictícias geradas por IA, sem imagens de um acidente real. Veículos, locais e tempos são ilustrativos. O vídeo resume partes do artigo; não prova a culpa, a necessidade de tratamento nem o valor da indenização em um caso concreto.",
+    "disclosure": "Cena fictícia",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -4896,7 +4896,7 @@
     "height": 720,
     "title": "Dépassement : conditions et preuves après une collision",
     "description": "Ce film muet de 100 secondes présente les restrictions au dépassement, les signaux et distances, une collision fictive lors du rabattement, les photos des dégâts, les originaux et l’examen des lieux, du temps et des fautes.",
-    "disclosure": "Personnes, véhicules et documents fictifs générés par IA. Le contact entre deux voitures est distinct du cas anonyme de moto décrit dans l’article. Il ne prouve pas le respect des signaux, du passage cédé ou des distances ; les modèles ne sont pas étalonnés. Les photos des dégâts sont prises plus tard sur un parking et ne montrent pas les positions lors de l’accident. Le film résume certaines conditions de l’article 101 et la vérification des preuves ; consultez l’article et le texte officiel pour l’ensemble des conditions.",
+    "disclosure": "Scène fictive",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -4960,7 +4960,7 @@
     "height": 720,
     "title": "Überholen: Voraussetzungen und Beweise nach dem Unfall",
     "description": "Der 100-sekündige Stummfilm zeigt Überholverbote, Signale und Abstände, einen fiktiven Unfall beim Einscheren, Schadensfotos, Originalaufnahmen und die Prüfung von Straßenlage, Zeitablauf und Verschulden.",
-    "disclosure": "Fiktive Personen, Fahrzeuge und Unterlagen, mit KI erzeugt. Der Kontakt zweier Autos stellt nicht den anonymen Motorradfall des Artikels dar. Er belegt weder korrekte Signale noch das Gewähren der Vorbeifahrt oder ausreichende Abstände; die Modelle sind nicht kalibriert. Schadensfotos entstehen später auf einem Parkplatz und zeigen keine ursprünglichen Unfallpositionen. Der Film fasst ausgewählte Vorgaben aus Artikel 101 und die Beweisprüfung zusammen. Sämtliche Voraussetzungen stehen im Artikel und in der amtlichen Regelung.",
+    "disclosure": "Fiktive Szene",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5024,7 +5024,7 @@
     "height": 720,
     "title": "Adelantamiento: condiciones y pruebas tras una colisión",
     "description": "Este vídeo de 100 segundos sin sonido muestra restricciones, señales y distancias, una colisión ficticia al volver al carril, fotos de daños, grabaciones originales y revisión de la vía, los tiempos y la culpa.",
-    "disclosure": "Personas, vehículos y documentos ficticios generados con IA. El contacto entre dos coches es distinto del caso anónimo de motocicleta del artículo. No prueba el cumplimiento de señales, cesión del paso o distancias; los modelos no están calibrados. Las fotos de daños se toman después en un aparcamiento y no muestran las posiciones originales del accidente. El vídeo resume algunas condiciones del artículo 101 y la revisión de pruebas; consulte el artículo y la norma oficial para conocer todas las condiciones.",
+    "disclosure": "Escena ficticia",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5088,7 +5088,7 @@
     "height": 720,
     "title": "Ultrapassagem: condições e provas após a colisão",
     "description": "Este vídeo de 100 segundos sem som reúne restrições, sinais e distâncias, uma colisão fictícia na volta à faixa, fotos dos danos, gravações originais e análise da via, dos tempos e da culpa.",
-    "disclosure": "Pessoas, veículos e documentos fictícios gerados por IA. O contato entre dois carros é separado do caso anônimo de motocicleta do artigo. Não comprova o cumprimento dos sinais, da cessão de passagem ou das distâncias; os modelos não são calibrados. As fotos dos danos são feitas depois em um estacionamento e não mostram as posições originais do acidente. O vídeo resume alguns requisitos do artigo 101 e a análise das provas; consulte o artigo e a norma oficial para conhecer todas as condições.",
+    "disclosure": "Cena fictícia",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5152,7 +5152,7 @@
     "height": 720,
     "title": "Handlingar efter en trafikolycka",
     "description": "Denna ljudlösa film på 80 sekunder visar säkerhet och anmälan, foton, originalfiler, vård, reparationer, inkomstförlust och granskning av en förlikning.",
-    "disclosure": "Fiktiva personer och scener skapade med AI, inte bilder från en verklig olycka. Fordon, platser och tider är exempel. Filmen sammanfattar delar av artikeln och bevisar inte vållande, vårdbehov eller ersättningsbelopp i ett enskilt fall.",
+    "disclosure": "Fiktiv scen",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5206,7 +5206,7 @@
     "height": 720,
     "title": "Dokumenter efter en trafikulykke",
     "description": "Denne lydløse film på 80 sekunder viser sikkerhed og anmeldelse, fotos, originalfiler, behandling, reparation, indtægtstab og gennemgang af et forlig.",
-    "disclosure": "Fiktive personer og scener skabt med AI, ikke optagelser af en virkelig ulykke. Køretøjer, steder og tider er illustrative. Filmen opsummerer dele af artiklen og beviser ikke skyld, behandlingsbehov eller erstatningsbeløb i en konkret sag.",
+    "disclosure": "Fiktiv scene",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5260,7 +5260,7 @@
     "height": 720,
     "title": "Dokumenter etter en trafikkulykke",
     "description": "Denne lydløse filmen på 80 sekunder viser sikkerhet og varsling, bilder, originalfiler, behandling, reparasjon, inntektstap og gjennomgang av et forlik.",
-    "disclosure": "Fiktive personer og scener laget med KI, ikke opptak av en virkelig ulykke. Kjøretøy, steder og tider er illustrasjoner. Filmen oppsummerer deler av artikkelen og beviser ikke skyld, behandlingsbehov eller erstatningsbeløp i en konkret sak.",
+    "disclosure": "Oppdiktet scene",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5314,7 +5314,7 @@
     "height": 720,
     "title": "Asiakirjat liikenneonnettomuuden jälkeen",
     "description": "Äänetön 80 sekunnin video näyttää turvallisuustoimet, ilmoituksen, kuvat, alkuperäistiedostot, hoidon, korjaukset, ansionmenetyksen ja sovinnon tarkistamisen.",
-    "disclosure": "Henkilöt ja kohtaukset ovat tekoälyn luomaa fiktiota, eivät aidon onnettomuuden tallenteita. Ajoneuvot, paikat ja ajat ovat havainnollistavia. Video tiivistää osia artikkelista eikä osoita yksittäisen tapauksen tuottamusta, hoidon tarpeellisuutta tai korvauksen määrää.",
+    "disclosure": "Kuvitteellinen kohtaus",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5368,7 +5368,7 @@
     "height": 720,
     "title": "Documenti da conservare dopo un incidente stradale",
     "description": "Questo video muto di 80 secondi mostra sicurezza e segnalazione, foto, conservazione degli originali, cure, riparazioni, perdita di reddito e verifica dell’accordo.",
-    "disclosure": "Persone e scene immaginarie create con IA, non riprese di un incidente reale. Veicoli, luoghi e tempi sono illustrativi. Il video riassume parti dell’articolo; non prova la colpa, la necessità delle cure o il risarcimento in un singolo caso.",
+    "disclosure": "Scena immaginaria",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5422,7 +5422,7 @@
     "height": 720,
     "title": "Documenten na een verkeersongeval",
     "description": "Deze stille film van 80 seconden toont veiligheid en melding, foto's, originele bestanden, medische zorg, reparatiekosten, inkomensverlies en de beoordeling van een schikking.",
-    "disclosure": "Fictieve personen en scènes gemaakt met AI, geen beelden van een echt ongeval. Voertuigen, locaties en tijden dienen ter illustratie. De film vat delen van het artikel samen en bewijst geen schuld, medische noodzaak of schadebedrag in een concrete zaak.",
+    "disclosure": "Fictieve scène",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5476,7 +5476,7 @@
     "height": 720,
     "title": "Documents després d’un accident de trànsit",
     "description": "Aquest vídeo sense so de 80 segons mostra seguretat i avís, fotografies, originals, atenció mèdica, reparacions, pèrdua d’ingressos i revisió de l’acord.",
-    "disclosure": "Persones i escenes fictícies generades amb IA, no imatges d’un accident real. Vehicles, llocs i temps són il·lustratius. El vídeo resumeix parts de l’article; no prova la culpa, la necessitat de tractament ni la indemnització d’un cas concret.",
+    "disclosure": "Escena fictícia",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5530,7 +5530,7 @@
     "height": 720,
     "title": "Documente de păstrat după un accident rutier",
     "description": "Filmul fără sunet de 80 de secunde prezintă siguranța și anunțarea, fotografiile, originalele, îngrijirea medicală, reparațiile, pierderea veniturilor și verificarea acordului.",
-    "disclosure": "Persoane și scene fictive generate cu IA, nu imagini ale unui accident real. Vehiculele, locurile și timpii sunt ilustrativi. Filmul rezumă părți ale articolului; nu dovedește culpa, necesitatea tratamentului sau despăgubirea într-un caz concret.",
+    "disclosure": "Scenă fictivă",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -5584,7 +5584,7 @@
     "height": 720,
     "title": "Forbikjøring: vilkår og bevis etter en kollisjon",
     "description": "Denne lydløse filmen på 100 sekunder viser forbud, signaler og avstander, en fiktiv kollisjon ved retur til feltet, skadebilder, originaler og vurdering av vei, tidsforløp og skyld.",
-    "disclosure": "Fiktive personer, kjøretøy og dokumenter laget med KI. Kontakten mellom to biler er atskilt fra artikkelens anonyme motorsykkelsak. Den beviser ikke at krav til signaler, å slippe forbi eller avstand er oppfylt; modellene er ikke kalibrert. Skadebilder tas senere på en parkeringsplass og viser ikke de opprinnelige ulykkesposisjonene. Filmen oppsummerer utvalgte vilkår i artikkel 101 og kontroll av bevis; les artikkelen og den offisielle regelen for alle vilkår.",
+    "disclosure": "Oppdiktet scene",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5648,7 +5648,7 @@
     "height": 720,
     "title": "Ohitus: edellytykset ja todisteet törmäyksen jälkeen",
     "description": "Äänetön 100 sekunnin video näyttää kiellot, merkit ja etäisyydet, kuvitteellisen törmäyksen kaistalle palattaessa, vauriokuvat, alkuperäistallenteet sekä tien, ajoituksen ja tuottamuksen arvioinnin.",
-    "disclosure": "Henkilöt, ajoneuvot ja asiakirjat ovat tekoälyn luomaa fiktiota. Kahden auton kosketus on erillinen artikkelin anonymisoidusta moottoripyörätapauksesta. Se ei osoita merkinanto-, väistämis- tai etäisyysvaatimusten täyttymistä; malleja ei ole kalibroitu. Vauriokuvat otetaan myöhemmin pysäköintialueella, eivätkä ne näytä alkuperäisiä onnettomuusasemia. Video tiivistää joitakin 101 artiklan ehtoja ja todisteiden tarkistusta; kaikki ehdot löytyvät artikkelista ja virallisesta säännöksestä.",
+    "disclosure": "Kuvitteellinen kohtaus",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5712,7 +5712,7 @@
     "height": 720,
     "title": "Omkörning: villkor och bevis efter en kollision",
     "description": "Denna ljudlösa film på 100 sekunder visar förbud, signaler och avstånd, en fiktiv kollision vid återgång till körfältet, skadefoton, original och granskning av väg, tid och vållande.",
-    "disclosure": "Fiktiva personer, fordon och handlingar skapade med AI. Kontakten mellan två bilar är skild från artikelns anonyma motorcykelfall. Den bevisar inte att regler om signaler, att lämna plats eller avstånd har följts; modellerna är inte kalibrerade. Skadefoton tas senare på en parkering och visar inte fordonens ursprungliga lägen. Filmen sammanfattar vissa villkor i artikel 101 och beviskontroller; läs artikeln och den officiella regeln för samtliga villkor.",
+    "disclosure": "Fiktiv scen",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5776,7 +5776,7 @@
     "height": 720,
     "title": "Overhaling: betingelser og beviser efter en kollision",
     "description": "Denne lydløse film på 100 sekunder viser forbud, signaler og afstande, en fiktiv kollision ved tilbagekørsel i vognbanen, skadefotos, originaler og vurdering af vej, tid og skyld.",
-    "disclosure": "Fiktive personer, køretøjer og dokumenter skabt med AI. Kontakten mellem to biler er adskilt fra artiklens anonyme motorcykelsag. Den beviser ikke, at krav om signaler, at give plads eller afstand er opfyldt; modellerne er ikke kalibrerede. Skadefotos tages senere på en parkeringsplads og viser ikke de oprindelige ulykkespositioner. Filmen opsummerer udvalgte betingelser i artikel 101 og beviskontrol; læs artiklen og den officielle regel for alle betingelser.",
+    "disclosure": "Fiktiv scene",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5840,7 +5840,7 @@
     "height": 720,
     "title": "Avançament: condicions i proves després d’una col·lisió",
     "description": "Aquest vídeo sense so de 100 segons presenta restriccions, senyals i distàncies, una col·lisió fictícia en tornar al carril, fotos dels danys, originals i revisió de la via, els temps i la culpa.",
-    "disclosure": "Persones, vehicles i documents ficticis generats amb IA. El contacte entre dos cotxes és independent del cas anònim de motocicleta de l’article. No prova el compliment dels senyals, de la cessió del pas ni de les distàncies; els models no estan calibrats. Les fotos dels danys es fan després en un aparcament i no mostren les posicions originals de l’accident. El vídeo resumeix alguns requisits de l’article 101 i la revisió de proves; consulteu l’article i la norma oficial per conèixer totes les condicions.",
+    "disclosure": "Escena fictícia",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5904,7 +5904,7 @@
     "height": 720,
     "title": "Depășirea: condiții și probe după o coliziune",
     "description": "Filmul fără sunet de 100 de secunde prezintă interdicții, semnale și distanțe, o coliziune fictivă la revenirea pe bandă, fotografii ale daunelor, originale și analiza drumului, timpilor și culpei.",
-    "disclosure": "Persoane, vehicule și documente fictive generate cu IA. Contactul dintre două mașini este separat de cazul anonim de motocicletă din articol. Nu dovedește respectarea semnalelor, a cedării trecerii sau a distanțelor; modelele nu sunt calibrate. Fotografiile daunelor sunt făcute ulterior într-o parcare și nu arată pozițiile inițiale ale accidentului. Filmul rezumă unele cerințe ale articolului 101 și verificarea probelor; consultați articolul și norma oficială pentru toate condițiile.",
+    "disclosure": "Scenă fictivă",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -5968,7 +5968,7 @@
     "height": 720,
     "title": "Sorpasso: condizioni e prove dopo la collisione",
     "description": "Questo video muto di 100 secondi mostra divieti, segnali e distanze, una collisione immaginaria al rientro, foto dei danni, originali e verifica di strada, tempi e colpa.",
-    "disclosure": "Persone, veicoli e documenti immaginari creati con IA. Il contatto fra due auto è distinto dal caso anonimo di motocicletta dell’articolo. Non prova il rispetto di segnali, cessione del passo o distanze; i modelli non sono calibrati. Le foto dei danni sono scattate dopo, in un parcheggio, e non mostrano le posizioni originarie dell’incidente. Il video riassume alcune condizioni dell’articolo 101 e la verifica delle prove; consultate l’articolo e la norma ufficiale per tutte le condizioni.",
+    "disclosure": "Scena immaginaria",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6032,7 +6032,7 @@
     "height": 720,
     "title": "Inhalen: voorwaarden en bewijs na een botsing",
     "description": "Deze stille film van 100 seconden toont inhaalverboden, signalen en afstanden, een fictieve botsing bij het invoegen, schadefoto's, originele opnamen en onderzoek van weg, tijdverloop en schuld.",
-    "disclosure": "Fictieve personen, voertuigen en documenten gemaakt met AI. Het contact tussen twee auto's staat los van de anonieme motorzaak in het artikel. Het bewijst niet dat aan signalering, ruimte geven of afstandseisen is voldaan; de modellen zijn niet gekalibreerd. Schadefoto's worden later op een parkeerplaats gemaakt en tonen niet de oorspronkelijke ongevalsposities. De film vat enkele voorwaarden van artikel 101 en bewijscontroles samen; raadpleeg het artikel en de officiële regel voor alle voorwaarden.",
+    "disclosure": "Fictieve scène",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6096,7 +6096,7 @@
     "height": 720,
     "title": "Dokumenty po wypadku drogowym",
     "description": "Niemy film trwający 80 sekund pokazuje zabezpieczenie miejsca i zgłoszenie, zdjęcia, oryginalne nagrania, leczenie, naprawę, utratę dochodu i sprawdzenie ugody.",
-    "disclosure": "Postacie i sceny są fikcją wygenerowaną przez AI, a nie zapisem prawdziwego wypadku. Pojazdy, miejsca i czas mają charakter ilustracyjny. Film streszcza wybrane części artykułu; nie dowodzi winy, konieczności leczenia ani wysokości odszkodowania w konkretnej sprawie.",
+    "disclosure": "Scena fikcyjna",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6150,7 +6150,7 @@
     "height": 720,
     "title": "Doklady po dopravní nehodě",
     "description": "Němý film o délce 80 sekund ukazuje zajištění bezpečnosti a oznámení nehody, fotografie, původní záznamy, léčbu, opravu, ztrátu příjmu a kontrolu narovnání.",
-    "disclosure": "Postavy a scény jsou fikcí vytvořenou pomocí AI, nikoli záznamem skutečné nehody. Vozidla, místa a čas jsou ilustrační. Film shrnuje části článku a neprokazuje zavinění, nutnost léčby ani výši náhrady v konkrétní věci.",
+    "disclosure": "Smyšlená scéna",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6204,7 +6204,7 @@
     "height": 720,
     "title": "Doklady po dopravnej nehode",
     "description": "Nemý 80-sekundový film ukazuje zaistenie bezpečnosti a oznámenie nehody, fotografie, pôvodné záznamy, liečbu, opravu, stratu príjmu a kontrolu dohody o urovnaní.",
-    "disclosure": "Postavy a scény sú fikciou vytvorenou pomocou AI, nie záznamom skutočnej nehody. Vozidlá, miesta a čas sú ilustračné. Film zhŕňa časti článku a nepreukazuje zavinenie, potrebu liečby ani výšku náhrady v konkrétnej veci.",
+    "disclosure": "Vymyslená scéna",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6258,7 +6258,7 @@
     "height": 720,
     "title": "Iratok a közúti baleset után",
     "description": "A 80 másodperces néma film a biztonsági intézkedéseket, a bejelentést, a fotókat, az eredeti felvételeket, a kezelést, a javítást, a jövedelemkiesést és az egyezség ellenőrzését mutatja be.",
-    "disclosure": "Mesterséges intelligenciával létrehozott, kitalált szereplők és jelenetek, nem valódi baleseti felvételek. A járművek, helyszínek és időpontok szemléltető jellegűek. A film a cikk egyes részeit foglalja össze; nem bizonyítja a felelősséget, a kezelés szükségességét vagy a kártérítés összegét egy konkrét ügyben.",
+    "disclosure": "Kitalált jelenet",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6312,7 +6312,7 @@
     "height": 720,
     "title": "Dokumenti nakon prometne nesreće",
     "description": "Ovaj nijemi film od 80 sekundi prikazuje sigurnost i prijavu, fotografije, izvorne snimke, liječenje, popravak, gubitak prihoda i provjeru nagodbe.",
-    "disclosure": "Osobe i scene izmišljene su i stvorene umjetnom inteligencijom; nisu snimke stvarne nesreće. Vozila, mjesta i vrijeme služe za ilustraciju. Film sažima dijelove članka i ne dokazuje krivnju, nužnost liječenja ni iznos naknade u pojedinom predmetu.",
+    "disclosure": "Izmišljena scena",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6366,7 +6366,7 @@
     "height": 720,
     "title": "Dokumenti po prometni nesreči",
     "description": "Ta nemi 80-sekundni film prikazuje varnost in prijavo, fotografije, izvirne posnetke, zdravljenje, popravilo, izgubo dohodka in pregled poravnave.",
-    "disclosure": "Osebe in prizori so izmišljeni ter ustvarjeni z umetno inteligenco, ne posnetki resnične nesreče. Vozila, kraji in čas so ponazoritve. Film povzema dele članka in ne dokazuje krivde, nujnosti zdravljenja ali višine odškodnine v posamezni zadevi.",
+    "disclosure": "Izmišljen prizor",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6420,7 +6420,7 @@
     "height": 720,
     "title": "Dokumenti posle saobraćajne nezgode",
     "description": "Ovaj nemi film od 80 sekundi prikazuje bezbednost i prijavu, fotografije, izvorne snimke, lečenje, popravku, gubitak prihoda i proveru poravnanja.",
-    "disclosure": "Osobe i scene su izmišljene i stvorene veštačkom inteligencijom; nisu snimci stvarne nezgode. Vozila, mesta i vreme služe za ilustraciju. Film sažima delove članka i ne dokazuje nehat, nužnost lečenja ni iznos naknade u pojedinačnom predmetu.",
+    "disclosure": "Izmišljeni prizor",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6474,7 +6474,7 @@
     "height": 720,
     "title": "Документи след пътно произшествие",
     "description": "Този 80-секунден филм без звук показва обезопасяване и съобщаване, снимки, оригинални записи, лечение, ремонт, загуба на доход и проверка на спогодбата.",
-    "disclosure": "Измислени лица и сцени, създадени с изкуствен интелект, а не записи на реално произшествие. Превозните средства, местата и времето са илюстративни. Филмът обобщава части от статията и не доказва вина, необходимост от лечение или размер на обезщетение по конкретен случай.",
+    "disclosure": "Измислена сцена",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -6528,7 +6528,7 @@
     "height": 720,
     "title": "Warunki wyprzedzania i dowody po zderzeniu",
     "description": "Niemy film trwający 100 sekund łączy zakazy wyprzedzania, sygnały i odstępy, fikcyjne zderzenie przy zbyt wczesnym powrocie na pas, zdjęcia szkód, oryginalne nagrania oraz ocenę drogi, czasu i winy.",
-    "disclosure": "Postacie, pojazdy i dokumenty są fikcją wygenerowaną przez AI. Kontakt dwóch aut nie jest odtworzeniem anonimowej sprawy motocyklisty opisanej w artykule. Nie dowodzi zachowania wymogów sygnalizacji, ustąpienia ani odstępu; modele nie są skalibrowane. Zdjęcia szkód wykonano później na parkingu, nie pokazują więc pierwotnego położenia pojazdów. Film streszcza wybrane wymogi art. 101 i kwestie dowodowe; wszystkie warunki znajdują się w artykule i oficjalnym przepisie.",
+    "disclosure": "Scena fikcyjna",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6592,7 +6592,7 @@
     "height": 720,
     "title": "Podmínky předjíždění a důkazy po střetu",
     "description": "Němý film o délce 100 sekund propojuje zákazy předjíždění, znamení a odstupy, fiktivní střet při předčasném návratu, fotografie škod, původní záznamy a posouzení silnice, časové posloupnosti a zavinění.",
-    "disclosure": "Postavy, vozidla a dokumenty jsou fikcí vytvořenou pomocí AI. Kontakt dvou aut je oddělený od anonymního případu motocyklu v článku. Neprokazuje splnění požadavků na znamení, uvolnění cesty či odstup; modely nejsou kalibrované. Fotografie škod vznikají později na parkovišti a neukazují původní polohu při nehodě. Film shrnuje vybrané požadavky článku 101 a kontrolu důkazů; všechny podmínky najdete v článku a úředním předpisu.",
+    "disclosure": "Smyšlená scéna",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6656,7 +6656,7 @@
     "height": 720,
     "title": "Podmienky predchádzania a dôkazy po zrážke",
     "description": "Nemý 100-sekundový film spája zákazy predchádzania, znamenia a odstupy, fiktívnu zrážku pri predčasnom návrate, fotografie škôd, pôvodné záznamy a posúdenie cesty, časovej postupnosti a zavinenia.",
-    "disclosure": "Postavy, vozidlá a dokumenty sú fikciou vytvorenou pomocou AI. Kontakt dvoch áut je oddelený od anonymného prípadu motocykla v článku. Nepreukazuje dodržanie požiadaviek na znamenia, uvoľnenie cesty ani odstup; modely nie sú kalibrované. Fotografie škôd vznikajú neskôr na parkovisku a neukazujú pôvodnú polohu pri nehode. Film zhŕňa vybrané požiadavky článku 101 a kontrolu dôkazov; všetky podmienky sú v článku a úradnom predpise.",
+    "disclosure": "Vymyslená scéna",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6720,7 +6720,7 @@
     "height": 720,
     "title": "Az előzés feltételei és az ütközés bizonyítékai",
     "description": "A 100 másodperces néma film az előzési tilalmakat, a jelzéseket és távolságokat, egy kitalált korai visszatérést és ütközést, a kárfotókat, az eredeti felvételeket, valamint az út, az időrend és a felelősség vizsgálatát kapcsolja össze.",
-    "disclosure": "Mesterséges intelligenciával létrehozott, kitalált szereplők, járművek és iratok. A két autó érintkezése nem a cikk anonimizált motoros ügyének rekonstrukciója. Nem bizonyítja a jelzési, elengedési vagy távolsági előírások betartását; a modellek nem kalibráltak. A kárfotók később, parkolóban készülnek, nem az eredeti baleseti helyzetet mutatják. A film a 101. cikk egyes követelményeit és a bizonyítékok ellenőrzését foglalja össze; az összes feltételt a cikkben és a hivatalos szabályban kell ellenőrizni.",
+    "disclosure": "Kitalált jelenet",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6784,7 +6784,7 @@
     "height": 720,
     "title": "Uvjeti pretjecanja i dokazi nakon sudara",
     "description": "Ovaj nijemi film od 100 sekundi povezuje zabrane pretjecanja, signale i razmake, izmišljeni sudar pri preranom povratku, fotografije štete, izvorne snimke te ocjenu ceste, vremena i krivnje.",
-    "disclosure": "Osobe, vozila i dokumenti izmišljeni su i stvoreni umjetnom inteligencijom. Kontakt dvaju automobila odvojen je od anonimiziranog predmeta s motociklom iz članka. Ne dokazuje poštivanje pravila o signalima, ustupanju puta ili razmaku; modeli nisu kalibrirani. Fotografije štete snimljene su kasnije na parkiralištu i ne prikazuju izvorne položaje pri nesreći. Film sažima odabrane uvjete članka 101. i provjere dokaza; za sve uvjete pročitajte članak i službeni propis.",
+    "disclosure": "Izmišljena scena",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6848,7 +6848,7 @@
     "height": 720,
     "title": "Pogoji prehitevanja in dokazi po trčenju",
     "description": "Ta nemi 100-sekundni film povezuje prepovedi prehitevanja, signale in razmike, izmišljeno trčenje ob prezgodnji vrnitvi, fotografije škode, izvirne posnetke ter presojo ceste, časa in krivde.",
-    "disclosure": "Osebe, vozila in dokumenti so izmišljeni ter ustvarjeni z umetno inteligenco. Stik dveh avtomobilov je ločen od anonimizirane zadeve z motorjem v članku. Ne dokazuje spoštovanja zahtev glede signalov, sprostitve poti ali razmika; modeli niso kalibrirani. Fotografije škode so posnete pozneje na parkirišču in ne kažejo prvotnih položajev ob nesreči. Film povzema izbrane zahteve 101. člena in preverjanje dokazov; vse pogoje preverite v članku in uradnem predpisu.",
+    "disclosure": "Izmišljen prizor",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6912,7 +6912,7 @@
     "height": 720,
     "title": "Uslovi preticanja i dokazi nakon sudara",
     "description": "Ovaj nemi film od 100 sekundi povezuje zabrane preticanja, signale i razmake, izmišljeni sudar pri preranom povratku, fotografije štete, izvorne snimke i ocenu puta, vremena i nehata.",
-    "disclosure": "Osobe, vozila i dokumenti su izmišljeni i stvoreni veštačkom inteligencijom. Kontakt dva automobila odvojen je od anonimizovanog predmeta s motociklom iz članka. Ne dokazuje poštovanje pravila o signalima, ustupanju puta ili razmaku; modeli nisu kalibrisani. Fotografije štete snimljene su kasnije na parkingu i ne prikazuju izvorne položaje pri nezgodi. Film sažima izabrane uslove člana 101 i proveru dokaza; za sve uslove pročitajte članak i zvanični propis.",
+    "disclosure": "Izmišljeni prizor",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -6976,7 +6976,7 @@
     "height": 720,
     "title": "Условия за изпреварване и доказателства след сблъсък",
     "description": "Този 100-секунден филм без звук свързва забраните за изпреварване, сигналите и разстоянията, измислен сблъсък при ранно връщане, снимки на щетите, оригинални записи и преценка на пътя, времето и вината.",
-    "disclosure": "Измислени лица, автомобили и документи, създадени с изкуствен интелект. Контактът на двете коли е отделен от анонимизираното дело с мотоциклет в статията. Той не доказва спазване на изискванията за сигнали, отстъпване или разстояние; моделите не са калибрирани. Снимките на щетите са направени по-късно на паркинг и не показват първоначалните положения при произшествието. Филмът обобщава избрани изисквания на член 101 и проверки на доказателства; всички условия са в статията и официалната разпоредба.",
+    "disclosure": "Измислена сцена",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7040,7 +7040,7 @@
     "height": 720,
     "title": "Документы после ДТП",
     "description": "Этот 80-секундный фильм без звука показывает меры безопасности и сообщение о ДТП, фотографии, исходные записи, лечение, ремонт, потерю дохода и проверку условий соглашения.",
-    "disclosure": "Вымышленные люди и сцены, созданные ИИ, а не запись реального ДТП. Автомобили, места и время служат иллюстрацией. Фильм кратко передаёт отдельные части статьи и не доказывает вину, необходимость лечения или размер возмещения по конкретному делу.",
+    "disclosure": "Вымышленная сцена",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7094,7 +7094,7 @@
     "height": 720,
     "title": "Документи після ДТП",
     "description": "Цей 80-секундний фільм без звуку показує заходи безпеки та повідомлення про ДТП, фотографії, оригінальні записи, лікування, ремонт, втрату доходу й перевірку умов угоди.",
-    "disclosure": "Вигадані люди та сцени, створені ШІ, а не запис справжньої ДТП. Автомобілі, місця й час є ілюстративними. Фільм стисло передає окремі частини статті й не доводить вину, необхідність лікування чи розмір відшкодування в конкретній справі.",
+    "disclosure": "Вигадана сцена",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7148,7 +7148,7 @@
     "height": 720,
     "title": "Έγγραφα μετά το τροχαίο",
     "description": "Αυτό το βίντεο 80 δευτερολέπτων χωρίς ήχο δείχνει ασφάλεια και αναγγελία, φωτογραφίες, πρωτότυπα αρχεία, θεραπεία, επισκευή, απώλεια εισοδήματος και έλεγχο του συμβιβασμού.",
-    "disclosure": "Φανταστικά πρόσωπα και σκηνές που δημιουργήθηκαν με τεχνητή νοημοσύνη, όχι καταγραφή πραγματικού ατυχήματος. Τα οχήματα, οι τόποι και ο χρόνος είναι ενδεικτικά. Το βίντεο συνοψίζει μέρη του άρθρου και δεν αποδεικνύει πταίσμα, αναγκαιότητα θεραπείας ή ύψος αποζημίωσης σε συγκεκριμένη υπόθεση.",
+    "disclosure": "Φανταστική σκηνή",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7202,7 +7202,7 @@
     "height": 720,
     "title": "Trafik kazasından sonraki belgeler",
     "description": "Bu 80 saniyelik sessiz film güvenliği ve bildirimi, fotoğrafları, özgün kayıtları, tedaviyi, onarımı, gelir kaybını ve uzlaşma koşullarının incelenmesini gösterir.",
-    "disclosure": "Kişiler ve sahneler yapay zekâ ile üretilmiş kurgudur; gerçek kaza görüntüleri değildir. Araçlar, yerler ve zamanlar örnek niteliğindedir. Film yazının bazı bölümlerini özetler; somut bir olayda kusuru, tedavinin gerekliliğini veya tazminat tutarını kanıtlamaz.",
+    "disclosure": "Kurgusal sahne",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7256,7 +7256,7 @@
     "height": 720,
     "title": "Dokumentai po eismo įvykio",
     "description": "Šiame begarsiame 80 sekundžių filme rodomas saugumas ir pranešimas, nuotraukos, pirminiai įrašai, gydymas, remontas, pajamų praradimas ir taikos susitarimo peržiūra.",
-    "disclosure": "Dirbtinio intelekto sukurti išgalvoti žmonės ir scenos, ne tikro eismo įvykio įrašas. Transporto priemonės, vietos ir laikas yra iliustraciniai. Filmas apibendrina straipsnio dalis ir neįrodo kaltės, gydymo būtinumo ar žalos atlyginimo dydžio konkrečioje byloje.",
+    "disclosure": "Išgalvota scena",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7310,7 +7310,7 @@
     "height": 720,
     "title": "Dokumenti pēc satiksmes negadījuma",
     "description": "Šī 80 sekunžu filma bez skaņas rāda drošību un ziņošanu, fotogrāfijas, oriģinālos ierakstus, ārstēšanu, remontu, ienākumu zaudējumu un izlīguma pārbaudi.",
-    "disclosure": "Izdomātas personas un ainas, kas radītas ar mākslīgo intelektu, nevis īsta negadījuma ieraksts. Transportlīdzekļi, vietas un laiks ir ilustratīvi. Filma apkopo daļu raksta un nepierāda vainu, ārstēšanas nepieciešamību vai atlīdzības apmēru konkrētā lietā.",
+    "disclosure": "Izdomāta aina",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7364,7 +7364,7 @@
     "height": 720,
     "title": "Dokumendid pärast liiklusõnnetust",
     "description": "See 80-sekundiline helita film näitab ohutust ja teatamist, fotosid, algseid salvestisi, ravi, remonti, saamata jäänud tulu ja kokkuleppe kontrollimist.",
-    "disclosure": "Tehisintellekti loodud väljamõeldud inimesed ja stseenid, mitte tegeliku õnnetuse salvestis. Sõidukid, kohad ja ajad on illustratiivsed. Film võtab kokku osa artiklist ega tõenda konkreetses asjas süüd, ravi vajalikkust või hüvitise suurust.",
+    "disclosure": "Väljamõeldud stseen",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7418,7 +7418,7 @@
     "height": 720,
     "title": "Gögn eftir umferðarslys",
     "description": "Þetta 80 sekúndna hljóðlausa myndband sýnir öryggi og tilkynningu, ljósmyndir, frumupptökur, meðferð, viðgerð, tekjutap og yfirferð sáttarsamnings.",
-    "disclosure": "Skáldað fólk og senur búin til með gervigreind, ekki upptaka af raunverulegu slysi. Ökutæki, staðir og tímasetningar eru til skýringar. Myndbandið dregur saman hluta greinarinnar og sannar ekki sök, nauðsyn meðferðar eða bótafjárhæð í einstöku máli.",
+    "disclosure": "Skálduð mynd",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -7472,7 +7472,7 @@
     "height": 720,
     "title": "Условия обгона и доказательства после столкновения",
     "description": "Этот 100-секундный фильм без звука объединяет запреты обгона, сигналы и интервалы, вымышленное столкновение при раннем возврате, фотографии повреждений, исходные записи и оценку дороги, времени и вины.",
-    "disclosure": "Вымышленные люди, автомобили и документы, созданные ИИ. Контакт двух автомобилей не является реконструкцией анонимного дела о мотоцикле из статьи. Он не доказывает соблюдение требований к сигналам, уступке дороги и расстоянию; модели не калиброваны. Повреждения снимают позднее на парковке, а не в исходных положениях после ДТП. Фильм кратко передаёт отдельные требования статьи 101 и проверку доказательств; все условия приведены в статье и официальных правилах.",
+    "disclosure": "Вымышленная сцена",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7536,7 +7536,7 @@
     "height": 720,
     "title": "Умови обгону та докази після зіткнення",
     "description": "Цей 100-секундний фільм без звуку поєднує заборони обгону, сигнали й інтервали, вигадане зіткнення при ранньому поверненні, фото пошкоджень, оригінальні записи та оцінку дороги, часу й вини.",
-    "disclosure": "Вигадані люди, автомобілі й документи, створені ШІ. Контакт двох автомобілів не є реконструкцією анонімної справи про мотоцикл зі статті. Він не доводить дотримання вимог щодо сигналів, надання дороги й відстані; моделі не калібровані. Пошкодження знімають пізніше на парковці, а не у вихідних положеннях після ДТП. Фільм стисло передає окремі вимоги статті 101 та перевірку доказів; усі умови наведено у статті й офіційних правилах.",
+    "disclosure": "Вигадана сцена",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7600,7 +7600,7 @@
     "height": 720,
     "title": "Όροι προσπέρασης και αποδείξεις μετά τη σύγκρουση",
     "description": "Αυτό το βίντεο 100 δευτερολέπτων χωρίς ήχο συνδέει απαγορεύσεις προσπέρασης, σήματα και αποστάσεις, φανταστική σύγκρουση κατά την πρόωρη επιστροφή, φωτογραφίες ζημιών, πρωτότυπα βίντεο και έλεγχο δρόμου, χρόνου και πταίσματος.",
-    "disclosure": "Φανταστικά πρόσωπα, οχήματα και έγγραφα που δημιουργήθηκαν με τεχνητή νοημοσύνη. Η επαφή δύο αυτοκινήτων είναι χωριστή από την ανωνυμοποιημένη υπόθεση μοτοσικλέτας του άρθρου. Δεν αποδεικνύει τήρηση των όρων για σήματα, παραχώρηση διέλευσης και αποστάσεις· τα μοντέλα δεν είναι βαθμονομημένα. Οι ζημιές φωτογραφίζονται αργότερα σε χώρο στάθμευσης, όχι στις αρχικές θέσεις του ατυχήματος. Το βίντεο συνοψίζει επιλεγμένους όρους του άρθρου 101 και έλεγχο αποδείξεων· όλοι οι όροι βρίσκονται στο άρθρο και στον επίσημο κανονισμό.",
+    "disclosure": "Φανταστική σκηνή",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7664,7 +7664,7 @@
     "height": 720,
     "title": "Sollama koşulları ve çarpışmadan sonraki deliller",
     "description": "Bu 100 saniyelik sessiz film sollama yasaklarını, sinyalleri ve aralıkları, erken dönüşteki kurgu çarpışmayı, hasar fotoğraflarını, özgün kayıtları ve yol, zaman ve kusur değerlendirmesini birleştirir.",
-    "disclosure": "Kişiler, araçlar ve belgeler yapay zekâ ile üretilmiş kurgudur. İki otomobilin teması, yazıdaki anonim motosiklet davasından ayrıdır. Sinyal, yol verme ve mesafe koşullarına uyulduğunu kanıtlamaz; modeller kalibre edilmemiştir. Hasarlar sonradan otoparkta görüntülenir; kazadaki ilk araç konumlarını göstermez. Film 101. maddenin seçilmiş koşullarını ve delil incelemesini özetler; tüm koşullar için yazıya ve resmî düzenlemeye bakın.",
+    "disclosure": "Kurgusal sahne",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7728,7 +7728,7 @@
     "height": 720,
     "title": "Lenkimo sąlygos ir įrodymai po susidūrimo",
     "description": "Šis begarsis 100 sekundžių filmas jungia lenkimo draudimus, signalus ir atstumus, išgalvotą susidūrimą per anksti grįžtant, apgadinimų nuotraukas, pirminius įrašus ir kelio, laiko bei kaltės vertinimą.",
-    "disclosure": "Dirbtinio intelekto sukurti išgalvoti žmonės, automobiliai ir dokumentai. Dviejų automobilių kontaktas atskiras nuo straipsnio anonimizuotos motociklo bylos. Jis neįrodo signalų, kelio užleidimo ir atstumo reikalavimų laikymosi; modeliai nekalibruoti. Apgadinimai fotografuojami vėliau aikštelėje ir nerodo pradinių padėčių per įvykį. Filmas apibendrina pasirinktas 101 straipsnio sąlygas ir įrodymų patikrą; visas sąlygas rasite straipsnyje ir oficialiose taisyklėse.",
+    "disclosure": "Išgalvota scena",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7792,7 +7792,7 @@
     "height": 720,
     "title": "Apdzīšanas nosacījumi un pierādījumi pēc sadursmes",
     "description": "Šī 100 sekunžu filma bez skaņas apvieno apdzīšanas aizliegumus, signālus un atstarpes, izdomātu sadursmi pāragrā atgriešanās brīdī, bojājumu fotogrāfijas, oriģinālos ierakstus un ceļa, laika un vainas vērtējumu.",
-    "disclosure": "Izdomātas personas, automobiļi un dokumenti, kas radīti ar mākslīgo intelektu. Divu automobiļu saskare ir atsevišķa no raksta anonimizētās motocikla lietas. Tā nepierāda signālu, ceļa došanas un attāluma prasību ievērošanu; modeļi nav kalibrēti. Bojājumi fotografēti vēlāk stāvvietā un nerāda sākotnējās pozīcijas negadījumā. Filma apkopo izvēlētus 101. panta nosacījumus un pierādījumu pārbaudi; visi nosacījumi ir rakstā un oficiālajos noteikumos.",
+    "disclosure": "Izdomāta aina",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7856,7 +7856,7 @@
     "height": 720,
     "title": "Möödasõidu tingimused ja tõendid pärast kokkupõrget",
     "description": "See 100-sekundiline helita film ühendab möödasõidukeelud, märguanded ja vahemaad, väljamõeldud kokkupõrke liiga varasel naasmisel, kahjustuste fotod, algsed salvestised ning tee, aja ja süü hindamise.",
-    "disclosure": "Tehisintellekti loodud väljamõeldud inimesed, autod ja dokumendid. Kahe auto kokkupuude on eraldi artikli anonüümitud mootorrattaasjast. See ei tõenda märguannete, tee andmise ja vahemaa nõuete täitmist; mudelid pole kalibreeritud. Kahjustusi pildistatakse hiljem parklas, mitte õnnetusaegsetes algsetes asendites. Film võtab kokku artikli 101 valitud tingimused ja tõendite kontrolli; kõik tingimused leiate artiklist ja ametlikest reeglitest.",
+    "disclosure": "Väljamõeldud stseen",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7920,7 +7920,7 @@
     "height": 720,
     "title": "Skilyrði framúraksturs og gögn eftir árekstur",
     "description": "Þetta 100 sekúndna hljóðlausa myndband tengir bönn við framúrakstri, merki og bil, skáldaðan árekstur við of snemmbæra endurkomu, skemmdamyndir, frumupptökur og mat á vegi, tíma og sök.",
-    "disclosure": "Skáldað fólk, ökutæki og gögn búin til með gervigreind. Snerting tveggja bíla er aðskilin frá nafnlausa mótorhjólamálinu í greininni. Hún sannar ekki að skilyrðum um merki, að víkja og fjarlægðir hafi verið fullnægt; líkönin eru ekki kvörðuð. Skemmdir eru myndaðar síðar á bílastæði og sýna ekki upphaflegar stöður við slysið. Myndbandið tekur saman valin skilyrði 101. gr. og yfirferð sönnunargagna; öll skilyrði eru í greininni og opinberu reglunum.",
+    "disclosure": "Skálduð mynd",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -7984,7 +7984,7 @@
     "height": 720,
     "title": "Mga dokumento matapos ang aksidente",
     "description": "Ipinapakita ng 80 segundong bidyong ito na walang tunog ang kaligtasan at pag-uulat, mga larawan, orihinal na rekord, paggamot, pagkukumpuni, nawalang kita at pagsusuri ng kasunduan.",
-    "disclosure": "Mga kathang tao at eksenang ginawa ng AI, hindi kuha ng tunay na aksidente. Pang-ilustrasyon ang mga sasakyan, lugar at oras. Binubuod ng bidyo ang ilang bahagi ng artikulo; hindi nito pinatutunayan ang kapabayaan, pangangailangan ng paggamot o halaga ng kabayaran sa isang tiyak na kaso.",
+    "disclosure": "Kathang-isip na eksena",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8038,7 +8038,7 @@
     "height": 720,
     "title": "Dokumen setelah kecelakaan lalu lintas",
     "description": "Film tanpa suara berdurasi 80 detik ini menampilkan keselamatan dan pelaporan, foto, rekaman asli, pengobatan, perbaikan, kehilangan penghasilan dan pemeriksaan perdamaian.",
-    "disclosure": "Tokoh dan adegan fiktif buatan AI, bukan rekaman kecelakaan nyata. Kendaraan, tempat dan waktu bersifat ilustratif. Film merangkum bagian tertentu dari artikel; tidak membuktikan kelalaian, kebutuhan pengobatan atau besarnya ganti rugi dalam perkara tertentu.",
+    "disclosure": "Adegan fiksi",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8092,7 +8092,7 @@
     "height": 720,
     "title": "Dokumen selepas kemalangan jalan raya",
     "description": "Filem senyap selama 80 saat ini menunjukkan keselamatan dan laporan, foto, rakaman asal, rawatan, pembaikan, kehilangan pendapatan dan semakan penyelesaian.",
-    "disclosure": "Watak dan adegan rekaan yang dijana AI, bukan rakaman kemalangan sebenar. Kenderaan, tempat dan masa adalah untuk ilustrasi. Filem merumuskan bahagian tertentu artikel; ia tidak membuktikan kecuaian, keperluan rawatan atau jumlah pampasan dalam kes tertentu.",
+    "disclosure": "Adegan rekaan",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8146,7 +8146,7 @@
     "height": 720,
     "title": "Hồ sơ sau tai nạn giao thông",
     "description": "Video không tiếng dài 80 giây này thể hiện an toàn và trình báo, ảnh chụp, bản ghi gốc, điều trị, sửa chữa, mất thu nhập và kiểm tra thỏa thuận.",
-    "disclosure": "Nhân vật và cảnh hư cấu do AI tạo, không phải bản ghi tai nạn thật. Xe, địa điểm và thời gian chỉ để minh họa. Video tóm tắt một số phần của bài viết; không chứng minh lỗi, sự cần thiết của điều trị hay mức bồi thường trong vụ việc cụ thể.",
+    "disclosure": "Cảnh hư cấu",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8254,7 +8254,7 @@
     "height": 720,
     "title": "交通事故后的资料与处理步骤",
     "description": "这段80秒无声影片依次呈现安全与通报、现场照片、原始记录、就医、维修、收入损失及和解条款核对。",
-    "disclosure": "AI生成的虚构人物与场景，并非真实事故影像。车辆、地点和时间仅供说明。影片概括文章的部分内容，不能证明具体案件的过失、治疗必要性或赔偿金额。",
+    "disclosure": "虚构情境",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8308,7 +8308,7 @@
     "height": 720,
     "title": "Mga kundisyon sa paglampas at ebidensya ng banggaan",
     "description": "Pinag-uugnay ng 100 segundong tahimik na bidyo ang mga bawal sa paglampas, senyas at agwat, kathang banggaan sa maagang pagbalik, larawan ng pinsala, orihinal na rekord at pagsusuri ng kalsada, oras at kapabayaan.",
-    "disclosure": "Mga kathang tao, sasakyan at dokumentong ginawa ng AI. Hiwalay ang pagdikit ng dalawang kotse sa anonimong kaso ng motorsiklo sa artikulo. Hindi ito patunay ng pagsunod sa senyas, pagbibigay-daan at distansya; hindi naka-calibrate ang mga modelo. Kinukuhanan ang pinsala sa paradahan kalaunan, hindi sa orihinal na posisyon noong aksidente. Ilang kundisyon ng Artikulo 101 at pagsusuri ng ebidensya lang ang buod; nasa artikulo at opisyal na tuntunin ang lahat ng kundisyon.",
+    "disclosure": "Kathang-isip na eksena",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -8372,7 +8372,7 @@
     "height": 720,
     "title": "Syarat mendahului dan bukti setelah tabrakan",
     "description": "Film tanpa suara berdurasi 100 detik ini menghubungkan larangan mendahului, isyarat dan jarak, tabrakan fiktif saat terlalu cepat kembali, foto kerusakan, rekaman asli serta penilaian jalan, waktu dan kelalaian.",
-    "disclosure": "Tokoh, kendaraan dan dokumen fiktif buatan AI. Kontak dua mobil terpisah dari perkara sepeda motor anonim dalam artikel. Adegan ini tidak membuktikan kepatuhan pada syarat isyarat, pemberian jalan dan jarak; model tidak dikalibrasi. Kerusakan difoto kemudian di tempat parkir, bukan pada posisi awal saat kecelakaan. Film merangkum sebagian syarat Pasal 101 dan pemeriksaan bukti; seluruh syarat ada dalam artikel dan peraturan resmi.",
+    "disclosure": "Adegan fiksi",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -8436,7 +8436,7 @@
     "height": 720,
     "title": "Syarat memotong dan bukti selepas perlanggaran",
     "description": "Filem senyap selama 100 saat ini menghubungkan larangan memotong, isyarat dan jarak, perlanggaran rekaan ketika kembali terlalu awal, foto kerosakan, rakaman asal serta penilaian jalan, masa dan kecuaian.",
-    "disclosure": "Watak, kenderaan dan dokumen rekaan yang dijana AI. Sentuhan dua kereta berasingan daripada kes motosikal tanpa nama dalam artikel. Ia tidak membuktikan pematuhan syarat isyarat, pemberian laluan dan jarak; model tidak ditentukur. Kerosakan dirakam kemudian di tempat letak kereta, bukan pada kedudukan asal semasa kemalangan. Filem merumuskan beberapa syarat perkara 101 dan semakan bukti; semua syarat terdapat dalam artikel dan peraturan rasmi.",
+    "disclosure": "Adegan rekaan",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -8500,7 +8500,7 @@
     "height": 720,
     "title": "Điều kiện vượt xe và chứng cứ sau va chạm",
     "description": "Video không tiếng dài 100 giây này nối các điều kiện cấm vượt, tín hiệu và khoảng cách, va chạm hư cấu khi trở về làn quá sớm, ảnh hư hỏng, bản ghi gốc và đánh giá đường, thời gian và lỗi.",
-    "disclosure": "Nhân vật, xe và tài liệu hư cấu do AI tạo. Va chạm giữa hai ô tô tách biệt với vụ xe máy ẩn danh trong bài viết. Cảnh này không chứng minh đã tuân thủ điều kiện về tín hiệu, nhường đường và khoảng cách; mô hình không được hiệu chuẩn. Hư hỏng được chụp sau đó tại bãi đỗ, không thể hiện vị trí ban đầu khi tai nạn xảy ra. Video tóm tắt một số yêu cầu của Điều 101 và việc kiểm tra chứng cứ; toàn bộ điều kiện nằm trong bài viết và quy định chính thức.",
+    "disclosure": "Cảnh hư cấu",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -8628,7 +8628,7 @@
     "height": 720,
     "title": "超车条件与事故后的证据核对",
     "description": "这段100秒无声影片串联超车禁止条件、信号与间距、虚构的过早返回车道碰撞、损伤照片、原始录像以及道路、时间和过失资料核对。",
-    "disclosure": "AI生成的虚构人物、车辆与资料。两辆轿车的接触并非重现本文的匿名摩托车事故。画面不能证明已满足信号、让行与距离要求，模型间距也不是实测值。损伤拍摄设定在事后的停车场，不表示事故当时的车辆位置。影片仅概括第101条的部分要求和资料核对过程，完整条件须参照正文与官方规定。",
+    "disclosure": "虚构情境",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -8692,7 +8692,7 @@
     "height": 720,
     "title": "সড়ক দুর্ঘটনার পরের নথি",
     "description": "৮০ সেকেন্ডের এই নীরব ভিডিওতে নিরাপত্তা ও দুর্ঘটনা জানানো, ছবি, মূল রেকর্ড, চিকিৎসা, মেরামত, আয়ের ক্ষতি এবং মীমাংসার শর্ত যাচাই দেখানো হয়েছে।",
-    "disclosure": "AI-তৈরি কাল্পনিক মানুষ ও দৃশ্য; বাস্তব দুর্ঘটনার রেকর্ড নয়। গাড়ি, স্থান ও সময় শুধু বোঝানোর জন্য। ভিডিওতে নিবন্ধের কিছু অংশ সংক্ষেপ করা হয়েছে; কোনো নির্দিষ্ট মামলায় অবহেলা, চিকিৎসার প্রয়োজন বা ক্ষতিপূরণের পরিমাণ এতে প্রমাণিত হয় না।",
+    "disclosure": "কাল্পনিক দৃশ্য",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8746,7 +8746,7 @@
     "height": 720,
     "title": "सड़क दुर्घटना के बाद के दस्तावेज़",
     "description": "80 सेकंड की इस मूक फ़िल्म में सुरक्षा और सूचना देना, तस्वीरें, मूल रिकॉर्ड, इलाज, मरम्मत, आय की हानि और समझौते की शर्तें जाँचना दिखाया गया है।",
-    "disclosure": "AI से बनाए गए काल्पनिक लोग और दृश्य; यह वास्तविक दुर्घटना की रिकॉर्डिंग नहीं है। वाहन, स्थान और समय केवल समझाने के लिए हैं। फ़िल्म लेख के कुछ हिस्सों का सार देती है; इससे किसी मामले में लापरवाही, इलाज की ज़रूरत या मुआवज़े की राशि साबित नहीं होती।",
+    "disclosure": "काल्पनिक दृश्य",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8800,7 +8800,7 @@
     "height": 720,
     "title": "ឯកសារក្រោយគ្រោះថ្នាក់ចរាចរណ៍",
     "description": "វីដេអូគ្មានសំឡេងរយៈពេល ៨០ វិនាទីនេះបង្ហាញពីសុវត្ថិភាព និងការរាយការណ៍ រូបថត ឯកសារដើម ការព្យាបាល ការជួសជុល ការបាត់បង់ចំណូល និងការពិនិត្យលក្ខខណ្ឌសម្រុះសម្រួល។",
-    "disclosure": "មនុស្ស និងឈុតប្រឌិតបង្កើតដោយ AI មិនមែនជារូបភាពគ្រោះថ្នាក់ពិតទេ។ យានយន្ត ទីកន្លែង និងពេលវេលាគ្រាន់តែសម្រាប់ពន្យល់។ វីដេអូសង្ខេបផ្នែកខ្លះនៃអត្ថបទ មិនបញ្ជាក់កំហុស ភាពចាំបាច់នៃការព្យាបាល ឬទឹកប្រាក់សំណងក្នុងករណីជាក់លាក់ទេ។",
+    "disclosure": "ឈុតឆាកប្រឌិត",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8854,7 +8854,7 @@
     "height": 720,
     "title": "ယာဉ်မတော်တဆမှုနောက်ပိုင်း စာရွက်စာတမ်းများ",
     "description": "ဤအသံမပါသော စက္ကန့် ၈၀ ဗီဒီယိုတွင် ဘေးကင်းရေးနှင့် သတင်းပို့ခြင်း၊ ဓာတ်ပုံ၊ မူရင်းမှတ်တမ်း၊ ဆေးကုသမှု၊ ပြုပြင်မှု၊ ဝင်ငွေဆုံးရှုံးမှုနှင့် ကျေအေးမှုစည်းကမ်းများ စစ်ဆေးခြင်းတို့ကို ပြထားသည်။",
-    "disclosure": "AI ဖန်တီးထားသော စိတ်ကူးယဉ်လူများနှင့် မြင်ကွင်းများဖြစ်ပြီး တကယ့်မတော်တဆမှု မှတ်တမ်းမဟုတ်ပါ။ ယာဉ်၊ နေရာနှင့် အချိန်တို့သည် ရှင်းပြရန်သာ ဖြစ်သည်။ ဗီဒီယိုသည် ဆောင်းပါး၏ အချို့အပိုင်းများကို အကျဉ်းချုပ်ထားခြင်းဖြစ်ပြီး အမှုတစ်ခု၏ ပေါ့ဆမှု၊ ကုသမှုလိုအပ်ချက် သို့မဟုတ် လျော်ကြေးပမာဏကို သက်သေမပြပါ။",
+    "disclosure": "စိတ်ကူးယဉ်မြင်ကွင်း",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8908,7 +8908,7 @@
     "height": 720,
     "title": "सडक दुर्घटनापछिका कागजात",
     "description": "८० सेकेन्डको यो मौन भिडियोमा सुरक्षा र खबर गर्ने काम, फोटो, मूल रेकर्ड, उपचार, मर्मत, आम्दानीको क्षति र मिलापत्रका सर्त जाँच्ने प्रक्रिया देखाइएको छ।",
-    "disclosure": "AI ले बनाएका काल्पनिक व्यक्ति र दृश्य हुन्; वास्तविक दुर्घटनाको रेकर्ड होइन। गाडी, स्थान र समय बुझाउनका लागि मात्र हुन्। भिडियोले लेखका केही भागको सार दिन्छ; कुनै खास मुद्दामा लापरबाही, उपचारको आवश्यकता वा क्षतिपूर्तिको रकम प्रमाणित गर्दैन।",
+    "disclosure": "काल्पनिक दृश्य",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -8962,7 +8962,7 @@
     "height": 720,
     "title": "சாலை விபத்துக்குப் பிந்தைய ஆவணங்கள்",
     "description": "ஒலியில்லாத இந்த 80 வினாடி காணொளி பாதுகாப்பு, விபத்தைத் தெரிவித்தல், படங்கள், மூலப் பதிவுகள், சிகிச்சை, பழுது நீக்கம், வருமான இழப்பு மற்றும் சமரச நிபந்தனைகளைச் சரிபார்த்தல் ஆகியவற்றைக் காட்டுகிறது.",
-    "disclosure": "AI உருவாக்கிய கற்பனை நபர்களும் காட்சிகளும்; உண்மை விபத்தின் பதிவு அல்ல. வாகனங்கள், இடம், நேரம் ஆகியவை விளக்கத்திற்காக மட்டுமே. கட்டுரையின் சில பகுதிகளை இக்காணொளி சுருக்குகிறது; குறிப்பிட்ட வழக்கின் கவனக்குறைவு, சிகிச்சைத் தேவை அல்லது இழப்பீட்டுத் தொகையை இது நிரூபிக்காது.",
+    "disclosure": "கற்பனைக் காட்சி",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -9016,7 +9016,7 @@
     "height": 720,
     "title": "เอกสารหลังอุบัติเหตุจราจร",
     "description": "วิดีโอไม่มีเสียงยาว 80 วินาทีนี้แสดงเรื่องความปลอดภัยและการแจ้งเหตุ ภาพถ่าย บันทึกต้นฉบับ การรักษา การซ่อม รายได้ที่เสียไป และการตรวจข้อตกลงยอมความ",
-    "disclosure": "บุคคลและฉากสมมติที่สร้างด้วย AI ไม่ใช่ภาพอุบัติเหตุจริง รถ สถานที่และเวลาใช้ประกอบคำอธิบายเท่านั้น วิดีโอสรุปเนื้อหาบางส่วนของบทความ ไม่ได้พิสูจน์ความประมาท ความจำเป็นในการรักษาหรือจำนวนค่าสินไหมในคดีใดคดีหนึ่ง",
+    "disclosure": "ภาพฉากสมมติ",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -9070,7 +9070,7 @@
     "height": 720,
     "title": "ওভারটেকের শর্ত ও সংঘর্ষের প্রমাণ",
     "description": "১০০ সেকেন্ডের এই নীরব ভিডিওতে ওভারটেকের নিষেধ, সংকেত, ফাঁক, তাড়াতাড়ি লেনে ফেরার কাল্পনিক সংঘর্ষ, ক্ষতির ছবি, মূল রেকর্ড এবং রাস্তা, সময় ও অবহেলার প্রমাণ যাচাই দেখানো হয়েছে।",
-    "disclosure": "AI-তৈরি কাল্পনিক মানুষ, গাড়ি ও নথি। দুই গাড়ির এই সংঘর্ষ নিবন্ধের নাম-গোপন মোটরসাইকেল মামলা থেকে আলাদা। দৃশ্যগুলি সংকেত, পথ ছেড়ে দেওয়া বা দূরত্বের নিয়ম মানার প্রমাণ নয়; মডেলগুলি মাপার জন্য ক্যালিব্রেট করা নয়। ক্ষতির পর গাড়ি যেখানে থেমেছে, তা সংঘর্ষের মূল অবস্থান নয়। ভিডিওতে ১০১ ধারার কিছু বিষয় ও প্রমাণ যাচাই দেখানো হয়েছে; সম্পূর্ণ শর্ত নিবন্ধ ও সরকারি বিধিতে আছে।",
+    "disclosure": "কাল্পনিক দৃশ্য",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9134,7 +9134,7 @@
     "height": 720,
     "title": "ओवरटेक की शर्तें और टक्कर के सबूत",
     "description": "100 सेकंड की यह मूक फ़िल्म ओवरटेक पर रोक, संकेत, दूरी, जल्दी लेन में लौटने की काल्पनिक टक्कर, नुकसान की तस्वीरों, मूल रिकॉर्ड तथा सड़क, समय और लापरवाही की जाँच को जोड़ती है।",
-    "disclosure": "AI से बनाए गए काल्पनिक लोग, वाहन और दस्तावेज़। दो कारों की यह टक्कर लेख के अनाम मोटरसाइकिल मामले से अलग है। दृश्य संकेत, रास्ता देने या दूरी की शर्तों के पालन का प्रमाण नहीं हैं; मॉडल माप के लिए अंशांकित नहीं हैं। नुकसान के बाद खड़ी कारें टक्कर की मूल स्थिति नहीं दिखातीं। फ़िल्म अनुच्छेद 101 के कुछ बिंदु और सबूतों की जाँच दिखाती है; पूरी शर्तें लेख और आधिकारिक नियमों में हैं।",
+    "disclosure": "काल्पनिक दृश्य",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9198,7 +9198,7 @@
     "height": 720,
     "title": "លក្ខខណ្ឌវ៉ាជែង និងភស្តុតាងបុក",
     "description": "វីដេអូគ្មានសំឡេងរយៈពេល ១០០ វិនាទីនេះភ្ជាប់ការហាមវ៉ាជែង សញ្ញា គម្លាត ការបុកប្រឌិតពេលត្រឡប់ចូលគន្លងឆាប់ពេក រូបថតខូចខាត ឯកសារដើម និងការពិនិត្យផ្លូវ ពេលវេលា និងកំហុស។",
-    "disclosure": "មនុស្ស យានយន្ត និងឯកសារប្រឌិតដោយ AI។ ការបុករវាងរថយន្តពីរនេះដាច់ដោយឡែកពីករណីម៉ូតូអនាមិកក្នុងអត្ថបទ។ ឈុតមិនបញ្ជាក់ថាបានគោរពលក្ខខណ្ឌសញ្ញា ការទុកផ្លូវ ឬចម្ងាយទេ ហើយម៉ូដែលមិនបានក្រិតសម្រាប់វាស់ទេ។ រថយន្តដែលឈប់ក្រោយខូចខាតមិនបង្ហាញទីតាំងដើមពេលបុកទេ។ វីដេអូបង្ហាញចំណុចខ្លះនៃមាត្រា ១០១ និងការពិនិត្យភស្តុតាង; លក្ខខណ្ឌពេញលេញមានក្នុងអត្ថបទ និងបទប្បញ្ញត្តិផ្លូវការ។",
+    "disclosure": "ឈុតឆាកប្រឌិត",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9262,7 +9262,7 @@
     "height": 720,
     "title": "ကျော်တက်ခြင်းစည်းကမ်းနှင့် တိုက်မိမှုအထောက်အထား",
     "description": "ဤအသံမပါသော စက္ကန့် ၁၀၀ ဗီဒီယိုတွင် ကျော်တက်ခြင်းတားမြစ်ချက်၊ အချက်ပြမှု၊ အကွာအဝေး၊ လမ်းကြောင်းသို့ စောစီးစွာပြန်ဝင်သည့် စိတ်ကူးယဉ်တိုက်မိမှု၊ ပျက်စီးမှုဓာတ်ပုံ၊ မူရင်းမှတ်တမ်းနှင့် လမ်း၊ အချိန်၊ ပေါ့ဆမှု ဆန်းစစ်ခြင်းတို့ကို ချိတ်ဆက်ပြထားသည်။",
-    "disclosure": "AI ဖန်တီးထားသော စိတ်ကူးယဉ်လူများ၊ ယာဉ်များနှင့် စာရွက်စာတမ်းများဖြစ်သည်။ ကားနှစ်စီးတိုက်မိမှုသည် ဆောင်းပါးပါ အမည်ဖျောက်ထားသည့် ဆိုင်ကယ်အမှုနှင့် သီးခြားဖြစ်သည်။ မြင်ကွင်းများက အချက်ပြမှု၊ လမ်းပေးမှု သို့မဟုတ် အကွာအဝေးစည်းကမ်းကို လိုက်နာကြောင်း သက်သေမပြပါ။ မော်ဒယ်များကို တိုင်းတာရေးအတွက် ချိန်ညှိမထားပါ။ ပျက်စီးပြီးနောက် ရပ်ထားသောကားများက တိုက်မိချိန် မူလနေရာကို မပြပါ။ ဗီဒီယိုတွင် ပုဒ်မ ၁၀၁ ၏ အချို့အချက်နှင့် အထောက်အထားစစ်ဆေးမှုကို ပြထားပြီး စည်းကမ်းအပြည့်အစုံမှာ ဆောင်းပါးနှင့် တရားဝင်စည်းမျဉ်းများတွင် ရှိသည်။",
+    "disclosure": "စိတ်ကူးယဉ်မြင်ကွင်း",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9326,7 +9326,7 @@
     "height": 720,
     "title": "ओभरटेकका सर्त र ठक्करका प्रमाण",
     "description": "१०० सेकेन्डको यो मौन भिडियोले ओभरटेक निषेध, सङ्केत, दूरी, छिटो लेनमा फर्कँदाको काल्पनिक ठक्कर, क्षतिका फोटो, मूल रेकर्ड तथा सडक, समय र लापरबाहीको जाँच देखाउँछ।",
-    "disclosure": "AI ले बनाएका काल्पनिक व्यक्ति, गाडी र कागजात हुन्। दुई कारको यो ठक्कर लेखमा नाम गोप्य राखिएको मोटरसाइकल मुद्दाभन्दा अलग छ। दृश्यले सङ्केत, बाटो छोड्ने वा दूरीका सर्त पालना भएको प्रमाण दिँदैनन्; मोडेल मापनका लागि क्यालिब्रेट गरिएका छैनन्। क्षतिपछि गाडी रोकिएको ठाउँले ठक्कर हुँदाको मूल स्थान देखाउँदैन। भिडियोले धारा १०१ का केही बुँदा र प्रमाण जाँच देखाउँछ; सबै सर्त लेख र आधिकारिक नियममा छन्।",
+    "disclosure": "काल्पनिक दृश्य",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9390,7 +9390,7 @@
     "height": 720,
     "title": "முந்திச் செல்லும் நிபந்தனைகளும் மோதல் ஆதாரங்களும்",
     "description": "ஒலியில்லாத இந்த 100 வினாடி காணொளி முந்திச் செல்லும் தடை, சைகை, இடைவெளி, விரைவாகத் தடத்துக்குத் திரும்பும் கற்பனை மோதல், சேதப் படங்கள், மூலப் பதிவுகள் மற்றும் சாலை, நேரம், கவனக்குறைவு ஆய்வை இணைக்கிறது.",
-    "disclosure": "AI உருவாக்கிய கற்பனை நபர்கள், வாகனங்கள், ஆவணங்கள். இரண்டு கார்கள் மோதும் காட்சி, கட்டுரையின் பெயர் மறைக்கப்பட்ட மோட்டார் சைக்கிள் வழக்கிலிருந்து தனியானது. சைகை, வழிவிடுதல், இடைவெளி நிபந்தனைகள் நிறைவேறியதை இக்காட்சிகள் நிரூபிக்காது; மாதிரிகள் அளவீட்டுக்காக அளவுத்திருத்தம் செய்யப்படவில்லை. சேதத்திற்குப் பின் நிறுத்தப்பட்ட கார்கள் மோதலின் தொடக்க இடங்களைக் காட்டுவதில்லை. விதி 101-இன் சில அம்சங்களையும் ஆதார ஆய்வையும் காணொளி காட்டுகிறது; முழு நிபந்தனைகள் கட்டுரையிலும் அதிகாரப்பூர்வ விதிகளிலும் உள்ளன.",
+    "disclosure": "கற்பனைக் காட்சி",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9454,7 +9454,7 @@
     "height": 720,
     "title": "เงื่อนไขการแซงและหลักฐานการชน",
     "description": "วิดีโอไม่มีเสียงยาว 100 วินาทีนี้เชื่อมข้อห้ามแซง สัญญาณ ระยะห่าง ฉากชนสมมติจากการกลับเข้าเลนเร็ว ภาพความเสียหาย บันทึกต้นฉบับ และการตรวจถนน เวลาและความประมาท",
-    "disclosure": "บุคคล รถและเอกสารสมมติที่สร้างด้วย AI การชนของรถสองคันนี้แยกจากคดีรถจักรยานยนต์ที่ปกปิดชื่อในบทความ ฉากไม่ได้พิสูจน์ว่าปฏิบัติตามเงื่อนไขเรื่องสัญญาณ การให้ทางหรือระยะห่าง โมเดลไม่ได้สอบเทียบเพื่อวัดระยะ รถที่จอดหลังเสียหายไม่ได้แสดงตำแหน่งเดิมขณะชน วิดีโอแสดงบางประเด็นของข้อ 101 และการตรวจหลักฐาน เงื่อนไขทั้งหมดอยู่ในบทความและกฎทางการ",
+    "disclosure": "ภาพฉากสมมติ",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9518,7 +9518,7 @@
     "height": 720,
     "title": "السجلات بعد حادث المرور",
     "description": "فيلم صامت مدته 80 ثانية عن السلامة والإبلاغ، وصور الموقع، والسجلات الأصلية، والعلاج، والإصلاح، وفقدان الدخل، ومراجعة شروط الصلح.",
-    "disclosure": "أشخاص ومشاهد خيالية مولدة بالذكاء الاصطناعي، وليست تسجيلًا لحادث حقيقي. المركبات والأماكن والتوقيت للتوضيح. يلخص الفيلم أجزاء من المقال، ولا يثبت الخطأ أو ضرورة العلاج أو مبلغ التعويض في قضية بعينها.",
+    "disclosure": "مشهد خيالي",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -9572,7 +9572,7 @@
     "height": 720,
     "title": "مدارک پس از تصادف رانندگی",
     "description": "این فیلم بی‌صدا در 80 ثانیه ایمنی و اعلام حادثه، عکس‌های محل، سوابق اصلی، درمان، تعمیر، کاهش درآمد و بررسی شروط سازش را نشان می‌دهد.",
-    "disclosure": "افراد و صحنه‌ها ساختگی و تولیدشده با هوش مصنوعی‌اند؛ این تصاویر ضبط یک تصادف واقعی نیستند. خودروها، مکان‌ها و زمان‌بندی فقط برای توضیح‌اند. فیلم بخش‌هایی از مقاله را خلاصه می‌کند و تقصیر، ضرورت درمان یا مبلغ غرامت را در پرونده‌ای مشخص ثابت نمی‌کند.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -9626,7 +9626,7 @@
     "height": 720,
     "title": "התיעוד לאחר תאונת דרכים",
     "description": "סרט ללא קול באורך 80 שניות מציג בטיחות ודיווח, צילומי זירה, תיעוד מקורי, טיפול רפואי, תיקונים, אובדן הכנסה ובדיקת תנאי פשרה.",
-    "disclosure": "אנשים וסצנות בדיוניים שנוצרו בבינה מלאכותית; אין זה תיעוד של תאונה אמיתית. כלי הרכב, המקומות והתזמון נועדו להמחשה. הסרט מסכם חלקים מהמאמר ואינו מוכיח רשלנות, צורך רפואי או סכום פיצוי במקרה מסוים.",
+    "disclosure": "סצנה בדיונית",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -9734,7 +9734,7 @@
     "height": 720,
     "title": "شروط التجاوز والأدلة بعد الاصطدام",
     "description": "فيلم صامت مدته 100 ثانية يربط منع التجاوز والإشارات والمسافات باصطدام خيالي عند العودة إلى المسار، ثم بصور الأضرار والتسجيلات الأصلية وفحص الطريق والتوقيت والخطأ.",
-    "disclosure": "أشخاص ومركبات وسجلات خيالية مولدة بالذكاء الاصطناعي. اصطدام السيارتين منفصل عن قضية الدراجة النارية مجهولة الأسماء في المقال. المشاهد لا تثبت الالتزام بالإشارات أو إفساح الطريق أو المسافة؛ والمجسمات غير معايرة. صور الأضرار مأخوذة لاحقًا في موقف ولا تُظهر مواقع المركبات الأصلية عند الحادث. يلخص الفيلم بعض شروط المادة 101 وفحص الأدلة؛ راجعوا المقال والنص الرسمي لجميع الشروط.",
+    "disclosure": "مشهد خيالي",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9798,7 +9798,7 @@
     "height": 720,
     "title": "شرایط سبقت و شواهد پس از برخورد",
     "description": "این فیلم بی‌صدا در 100 ثانیه ممنوعیت سبقت، علامت‌ها، فاصله، برخورد ساختگی هنگام بازگشت به خط، عکس خسارت، فیلم اصلی و بررسی راه، زمان‌بندی و تقصیر را به هم پیوند می‌دهد.",
-    "disclosure": "افراد، خودروها و مدارک ساختگی و تولیدشده با هوش مصنوعی‌اند. برخورد دو خودرو جدا از پرونده موتورسیکلت با نام‌های پنهان در مقاله است. صحنه‌ها رعایت علامت‌دادن، راه‌دادن یا فاصله را ثابت نمی‌کنند؛ مدل‌ها کالیبره نیستند. عکس خسارت بعداً در پارکینگ گرفته می‌شود و موقعیت اولیه خودروها هنگام حادثه را نشان نمی‌دهد. فیلم برخی شروط ماده 101 و بررسی شواهد را خلاصه می‌کند؛ برای همه شروط، مقاله و مقررات رسمی را بخوانید.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9862,7 +9862,7 @@
     "height": 720,
     "title": "תנאי עקיפה וראיות לאחר התנגשות",
     "description": "סרט ללא קול באורך 100 שניות מקשר בין איסורי עקיפה, איתות ומרווח, התנגשות בדיונית בחזרה לנתיב, צילומי נזק, הקלטות מקוריות ובדיקת הדרך, התזמון והאשם.",
-    "disclosure": "אנשים, כלי רכב ומסמכים בדיוניים שנוצרו בבינה מלאכותית. ההתנגשות בין שתי המכוניות נפרדת ממקרה האופנוע האנונימי שבמאמר. הסצנות אינן מוכיחות עמידה בדרישות איתות, מתן אפשרות לעקוף או מרחק; הדגמים אינם מכוילים. הנזק מצולם מאוחר יותר בחניון, ולא במיקומם המקורי של כלי הרכב בתאונה. הסרט מסכם חלק מדרישות סעיף 101 ובדיקות הראיות; לכל התנאים יש לעיין במאמר ובתקנה הרשמית.",
+    "disclosure": "סצנה בדיונית",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9990,14 +9990,14 @@
     "height": 720,
     "title": "兩次攔車、六分鐘行駛與持棒威嚇的判斷",
     "description": "140秒無聲影片分開說明兩次攔車、其間的行駛、物品辨識、被告辯解、強制與恐嚇的競合，以及一審刑度和證據範圍。",
-    "disclosure": "人物、車輛、場地、文件和螢幕都是AI生成的獨立假想情境，不是士林案重建或原始錄影。開場沒有揮棒或擊打；畫面不能補足判決未載的日期、停車時間或動作，也不是法院證據。字幕依本文與公開判決整理，一審是否上訴或確定仍未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
       {
         "start": 0,
         "title": "持棒站在車旁的假想",
-        "text": "男子持下垂球棒站在車旁，沒有揮棒、擊打或接觸。 本段是AI情境，並非士林案的當事人或兩次攔車重建。"
+        "text": "男子持下垂球棒站在車旁，沒有揮棒、擊打或接觸。 本段是虛構情境，並非士林案的當事人或兩次攔車重建。"
       },
       {
         "start": 10,
@@ -10074,7 +10074,7 @@
     "height": 720,
     "title": "두 차례 진로 차단과 방망이를 든 행동의 판단",
     "description": "140초 무음 영상으로 두 차례 진로 차단과 사이의 주행, 물건 식별, 피고인의 주장, 강제·협박죄의 관계, 1심 형량과 증거 범위를 설명합니다.",
-    "disclosure": "인물·차량·장소·서류·화면은 AI로 만든 독립된 가상 장면입니다. 스린 사건의 재현이나 원본 블랙박스가 아닙니다. 첫 장면은 방망이를 휘두르거나 때리지 않습니다. 판결에 없는 날짜·정차 시간·행동을 영상으로 보충할 수 없습니다. 자막은 본문과 공개 판결을 요약하며, 1심의 상소·확정 여부는 확인되지 않았습니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
@@ -10158,7 +10158,7 @@
     "height": 720,
     "title": "Two blocked routes, six minutes of driving and a bat",
     "description": "A silent 140-second film distinguishes the two stops, intervening driving, object identification, the defence, the two offences and the limits of the first-instance judgment.",
-    "disclosure": "People, vehicles, places, documents and screens are separate AI-generated fictional illustrations. This is not a reconstruction of the Shilin case or original dashcam footage. The opening shows no swing or strike. Images cannot supply dates, stopping times or actions missing from the judgment. Captions summarize the article and public judgment; any later appeal or finality remains unverified.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
@@ -10242,7 +10242,7 @@
     "height": 720,
     "title": "二度の進路妨害、六分間の走行とバットの評価",
     "description": "140秒の無音映像で、二度の停車とその間の走行、物の識別、被告人の説明、強制と脅迫の関係、一審の刑と証拠の範囲を整理します。",
-    "disclosure": "人物・車両・場所・書類・画面はAIで作った独立した架空の場面です。士林事件の再現や元の車載映像ではありません。冒頭にバットを振る動作や殴打はありません。判決にない日時・停車時間・行動を画像で補えません。字幕は本文と公開判決の要約で、その後の上訴・確定は未確認です。",
+    "disclosure": "架空の情景",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
@@ -10326,7 +10326,7 @@
     "height": 720,
     "title": "修復後價差、鑑價前提與14,700元的計算",
     "description": "160秒無聲影片依嘉義案說明必要修復、價差證明、個案2%與70%的計算、利息及鑑價費，並與臺北案採認的報告作對照。",
-    "disclosure": "車輛、人物、維修空間、文件及螢幕均是AI生成的獨立假想情境，並非兩案實車、原始報告或鑑定過程。影片沒有替畫面中的車估價，也不重建事故。字幕依本文及公開裁判整理；2%、70%與金額僅屬各該案件，不能當成通用費率或已收款證明。",
+    "disclosure": "虛構情境",
     "durationSeconds": 160,
     "sceneCount": 16,
     "chapters": [
@@ -10419,15 +10419,15 @@
     "width": 1280,
     "height": 720,
     "title": "機車自摔假想與一審撤銷的程序結果",
-    "description": "前約4秒是機車在碎石路肩滑倒的AI假想，後接160秒說明。先交代被告死亡、二審撤銷並不受理，再以已撤銷一審為限，區分早先碰撞、後段未接觸追逐、故意與死亡因果的證據。",
-    "disclosure": "開頭僅為機車未與後車接觸而滑倒的AI假想，沒有呈現先前碰撞、追逐全程、身體撞樹或傷亡結果。人物、道路、車輛、醫療及文件均為假想，沒有本案原始影音。臺南一審九年徒刑已由二審撤銷；被告死亡後判公訴不受理，並非實體無罪判決。後續字幕中的一審分析只是介紹已撤銷判決的理由，不是確定有罪結論；畫面不能證明速度、故意、傷勢或因果關係。",
+    "description": "前約4秒是機車在碎石路肩滑倒的假想，後接160秒說明。先交代被告死亡、二審撤銷並不受理，再以已撤銷一審為限，區分早先碰撞、後段未接觸追逐、故意與死亡因果的證據。",
+    "disclosure": "虛構情境",
     "durationSeconds": 164.04166666666666,
     "sceneCount": 17,
     "chapters": [
       {
         "start": 0,
         "title": "自摔假想；一審九年已撤銷",
-        "text": "此AI示例只呈現未接觸滑倒。本案因被告死亡判公訴不受理，不是實體無罪。"
+        "text": "此虛構示例只呈現未接觸滑倒。本案因被告死亡判公訴不受理，不是實體無罪。"
       },
       {
         "start": 4.041666666666667,
@@ -10442,7 +10442,7 @@
       {
         "start": 24.041666666666668,
         "title": "道路情境，沒有重演致死追逐",
-        "text": "畫面只是汽車與機車在一般道路前進的AI假想，沒有接觸或摔倒。 不是本案路段、車距、速度或騎士的真實動作。"
+        "text": "畫面只是汽車與機車在一般道路前進的假想，沒有接觸或摔倒。 不是本案路段、車距、速度或騎士的真實動作。"
       },
       {
         "start": 34.041666666666664,
@@ -10519,14 +10519,14 @@
     "height": 720,
     "title": "夜間快車道停車，27輛減速與具體通行危險",
     "description": "140秒無聲影片整理台66線案的2分56秒、道路條件、27輛車減速與4輛開啟警示燈、檢方勘驗、法院判刑及未判斷的事項。",
-    "disclosure": "AI生成的獨立人物、道路、車輛與資料場景，不是台66線案的重建或原始錄影。開場車數、天候、位置和十秒片長不代表本案27輛車、2分56秒或真實路況；沒有人走入車道。本片依公開判決及其附起訴書摘要，一審上訴與確定未確認。",
+    "disclosure": "虛構情境",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
       {
         "start": 0,
         "title": "夜間停車的假想場景",
-        "text": "兩車停在內側車道，外側仍有車通過；畫面沒有下車對質。 只是AI說明，不重建本案位置、車數、停車時間或路況。"
+        "text": "兩車停在內側車道，外側仍有車通過；畫面沒有下車對質。 只是示意說明，不重建本案位置、車數、停車時間或路況。"
       },
       {
         "start": 10,
@@ -10603,14 +10603,14 @@
     "height": 720,
     "title": "야간 추월차로 정차와 주변 27대의 감속",
     "description": "140초 무음 영상으로 2분 56초의 정차, 도로 조건, 27대의 감속과 4대의 비상등, 검찰의 영상 검증, 법원의 형량과 판단 범위를 설명합니다.",
-    "disclosure": "인물·도로·차량·자료는 AI로 만든 독립된 가상 장면이며 타이66선 사건의 재현이나 원본 영상이 아닙니다. 첫 장면의 차량 수·날씨·위치·10초 길이는 사건의 27대·2분 56초나 실제 도로 조건을 나타내지 않습니다. 사람이 차로로 내려가지 않습니다. 공개 판결과 첨부 공소장을 요약했으며, 1심의 상소·확정 여부는 확인되지 않았습니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
       {
         "start": 0,
         "title": "야간 정차를 설명하는 가상 장면",
-        "text": "안쪽 차로의 두 차는 멈추고 바깥 차로로 다른 차가 지나갑니다. AI 장면이며 실제 위치·차량 수·정차 시간·도로 상태의 재현이 아닙니다."
+        "text": "안쪽 차로의 두 차는 멈추고 바깥 차로로 다른 차가 지나갑니다. 가상 장면이며 실제 위치·차량 수·정차 시간·도로 상태의 재현이 아닙니다."
       },
       {
         "start": 10,
@@ -10687,7 +10687,7 @@
     "height": 720,
     "title": "A night-time lane stop and 27 passing cars slowing",
     "description": "A silent 140-second film explains the 2-minute-56-second stop, road conditions, passing traffic, the prosecutor's inspection, the sentence and the judgment's limits.",
-    "disclosure": "People, roads, vehicles and records are separate AI-generated illustrations, not a reconstruction or original footage of the Route 66 case. The opening's vehicle count, weather, positions and ten-second duration do not represent the real 27 cars, 2 minutes 56 seconds or road conditions. No one enters the traffic lane on foot. Captions summarize the judgment and attached indictment; later appeal and finality remain unverified.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
@@ -10771,7 +10771,7 @@
     "height": 720,
     "title": "夜の追越車線での停車と、減速した27台",
     "description": "140秒の無音映像で、2分56秒の停車、道路条件、27台の減速と4台のハザード、検察の検証、刑と判断の範囲を整理します。",
-    "disclosure": "人物・道路・車両・資料はAIで作った独立した架空の場面です。台66線事件の再現や元映像ではありません。冒頭の車の数・天候・位置・10秒の長さは、事件の27台・2分56秒や実際の道路状況を表しません。人が車線へ降りる場面はありません。公開判決と添付起訴状の要約で、一審の上訴・確定は未確認です。",
+    "disclosure": "架空の情景",
     "durationSeconds": 140,
     "sceneCount": 14,
     "chapters": [
@@ -10855,19 +10855,19 @@
     "height": 720,
     "title": "切入碰撞假想與151公里記錄的來源",
     "description": "前約4秒呈現一次假想碰撞，後接180秒說明，區分黑白兩車的速度來源、位置、時鐘差異、41B路徑與煞車說法，再說明具體危險、五個月刑度及第三審的法律審範圍。",
-    "disclosure": "開頭約4秒是AI假想，從變換車道途中開始，只呈現一次碰撞，未重現本文的反覆追逐、煞車、出口路徑或周圍車流。碰撞角度與車損不是本案測量結果，不能用來判斷兩名駕駛的責任。 AI生成的人物、設備、道路、文件及螢幕均為獨立假想，沒有本案原始行車紀錄器或精確事故重建。畫面不測量兩車速度、車距或時間，數字只引自字幕所述判決。法院分別檢查兩車錄影；151公里不是白車獨立測得的精確速度。最高法院駁回的是白車駕駛不合法的第三審上訴，不是從頭重作事實審。",
+    "disclosure": "虛構情境",
     "durationSeconds": 184.04166666666666,
     "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
         "title": "假想場景：撞上前車後角",
-        "text": "AI生成的碰撞示例，不是本案速度或兩名駕駛過失的證明。"
+        "text": "虛構的碰撞示例，不是本案速度或兩名駕駛過失的證明。"
       },
       {
         "start": 4.041666666666667,
         "title": "兩台相機，兩份原始資料",
-        "text": "裝置、記憶卡和檔案先區分來源；開場只是AI整理資料的假想。 不是本案設備或真實錄影，不能由螢幕讀出案件速度。"
+        "text": "裝置、記憶卡和檔案先區分來源；開場只是整理資料的假想。 不是本案設備或真實錄影，不能由螢幕讀出案件速度。"
       },
       {
         "start": 14.041666666666668,
@@ -10964,19 +10964,19 @@
     "height": 720,
     "title": "끼어들기 충돌 예시와 시속 151km 기록의 출처",
     "description": "약 4초의 가상 충돌 장면 뒤에 180초의 설명이 이어집니다. 두 차량의 속도 출처, 위치와 시계 차이, 41B 출구와 제동 주장을 구분하고, 구체적 위험과 징역 5개월, 대법원 심사의 범위를 설명합니다.",
-    "disclosure": "첫 약 4초는 차로 변경 도중부터 한 번의 충돌만 보여 주는 AI 가상 장면입니다. 본문의 반복 추격·급제동·출구 경로·주변 교통량을 재현하지 않았으며, 충돌 각도와 차량 손상도 실제 사건의 측정값이 아닙니다. 이 장면으로 두 운전자의 책임을 판단할 수 없습니다. 인물·장비·도로·문서·화면은 AI로 만든 독립된 가상 자료입니다. 사건의 원본 블랙박스나 정밀 재현이 아닙니다. 화면으로 속도·차간 거리·시간을 측정하지 않으며 숫자는 자막에 적힌 판결 기록에서 가져왔습니다. 법원은 두 차의 영상을 각각 검토했습니다. 시속 151km는 흰 차에서 따로 측정한 정확한 속도가 아닙니다. 대법원은 흰 차 운전자의 부적법한 상고를 기각했으며 사실심을 처음부터 다시 하지 않았습니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 184.04166666666666,
     "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
         "title": "가상 장면: 앞차 뒷모서리와 충돌",
-        "text": "AI로 만든 충돌 예시입니다. 실제 사건의 속도·과실을 재현한 장면은 아닙니다."
+        "text": "가상의 충돌 예시입니다. 실제 사건의 속도·과실을 재현한 장면은 아닙니다."
       },
       {
         "start": 4.041666666666667,
         "title": "카메라 두 대, 출처가 다른 원본",
-        "text": "장비·메모리 카드·파일의 출처를 나눕니다. 첫 장면은 AI 가상 자료 정리입니다. 실제 장비나 영상이 아니므로 화면에서 사건 차량의 속도를 읽을 수 없습니다."
+        "text": "장비·메모리 카드·파일의 출처를 나눕니다. 첫 장면은 가상의 자료 정리입니다. 실제 장비나 영상이 아니므로 화면에서 사건 차량의 속도를 읽을 수 없습니다."
       },
       {
         "start": 14.041666666666668,
@@ -11073,19 +11073,19 @@
     "height": 720,
     "title": "A fictional cut-in collision and the source of the 151 km/h reading",
     "description": "A four-second fictional collision leads into the 180-second explanation of the cars’ speed sources, positions, clocks, the 41B exit and braking claims, concrete danger, five-month sentences and the Supreme Court’s legal review.",
-    "disclosure": "The opening four seconds show one fictional AI collision beginning during a lane change. They do not recreate the repeated chase, braking, exit route or surrounding traffic. Contact angle and vehicle damage are not measurements of the actual incident, and the scene cannot establish either driver’s liability. People, equipment, roads, documents and screens are separate AI-generated illustrations, not the case's original dashcam footage or a precise reconstruction. The images do not measure speed, distance or time; numbers come from the judgments described in the captions. The courts examined both recordings. The 151 km/h display was not an independently measured exact speed for the white car. The Supreme Court dismissed that driver's legally deficient appeal; it did not retry the facts.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 184.04166666666666,
     "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
         "title": "Fictional scene: one rear-corner impact",
-        "text": "AI-generated illustration. It does not reproduce this case’s speed or establish either driver’s fault."
+        "text": "Fictional illustration. It does not reproduce this case’s speed or establish either driver’s fault."
       },
       {
         "start": 4.041666666666667,
         "title": "Two cameras, two original sources",
-        "text": "Keep devices, memory cards and files separate by source. This AI filing scene shows no real case equipment or measurable case speed."
+        "text": "Keep devices, memory cards and files separate by source. This fictional filing scene shows no real case equipment or measurable case speed."
       },
       {
         "start": 14.041666666666668,
@@ -11182,19 +11182,19 @@
     "height": 720,
     "title": "割込み衝突の架空例と、151キロの記録の出典",
     "description": "約4秒の架空の衝突場面に、180秒の説明が続きます。速度の出典、車の位置、時計の差、41B出口と制動の主張を分け、具体的危険、各5か月の刑、最高法院の法律審を整理します。",
-    "disclosure": "冒頭の約4秒は、車線変更の途中から一度の衝突を示すAIの架空場面です。本文の繰り返された追走・制動、出口の経路や周囲の交通量は再現していません。衝突角度や車両の損傷も本件の測定値ではなく、この場面から両運転者の責任は判断できません。 人物・機器・道路・書類・画面はAIで作った独立した架空の資料です。本件の元映像や精密な再現ではありません。画面から速度・車間距離・時間を測定せず、数字は字幕に示す判決の記録に基づきます。裁判所は両車の映像を別々に確認しました。151キロは白い車で独立に測定した正確な速度ではありません。最高法院は白い車の運転者の不適法な上訴を棄却し、事実審を最初からやり直したわけではありません。",
+    "disclosure": "架空の情景",
     "durationSeconds": 184.04166666666666,
     "sceneCount": 19,
     "chapters": [
       {
         "start": 0,
         "title": "架空の場面：前車の後部の角に衝突",
-        "text": "AIで作った衝突の例です。本件の速度や両運転者の過失を示す映像ではありません。"
+        "text": "架空の衝突の例です。本件の速度や両運転者の過失を示す映像ではありません。"
       },
       {
         "start": 4.041666666666667,
         "title": "二台のカメラと、出典が異なる原本",
-        "text": "機器、カードとファイルを出典別に整理。冒頭はAIの架空の場面です。 本件の機器や映像ではなく、画面から事件の車の速度を読み取ることはできません。"
+        "text": "機器、カードとファイルを出典別に整理。冒頭は架空の場面です。 本件の機器や映像ではなく、画面から事件の車の速度を読み取ることはできません。"
       },
       {
         "start": 14.041666666666668,
@@ -11291,7 +11291,7 @@
     "height": 720,
     "title": "114秒減52秒：兩個時鐘與無罪判斷的範圍",
     "description": "180秒無聲影片區分兩台相機的時間、紅燈52秒、道路空間和實際離開，再整理強制與公然侮辱無罪的理由及個案限制。",
-    "disclosure": "人物、車輛、交叉路口、文件和螢幕都是AI生成的獨立假想。沒有使用中和案原始影音，十秒紅燈畫面不重建52秒，也不確定當事人開窗或開門的差異。無罪是本文案件的刑事結果，不表示62秒內可任意攔車、辱罵或掉頭。字幕只整理公開判決，不推定未判斷的行政或民事結果。",
+    "disclosure": "虛構情境",
     "durationSeconds": 180,
     "sceneCount": 18,
     "chapters": [
@@ -11395,7 +11395,7 @@
     "height": 720,
     "title": "114초에서 52초를 뺀 판단: 서로 다른 시계와 무죄의 범위",
     "description": "180초 무음 영상으로 두 카메라의 시각, 빨간불 52초, 도로 폭과 실제 이탈을 구분하고 강제죄·공연모욕죄 무죄의 이유와 이 사건의 한계를 설명합니다.",
-    "disclosure": "인물·차량·교차로·문서·화면은 AI로 만든 독립된 가상 장면입니다. 중허 사건의 원본 영상·음성을 쓰지 않았으며 10초짜리 빨간불 장면은 실제 52초를 재현하지 않습니다. 판결에 다르게 적힌 창문·문 열기도 어느 쪽으로 확정하지 않습니다. 이 사건의 형사 무죄는 62초 안에 임의로 차를 막거나 욕하거나 유턴해도 된다는 뜻이 아닙니다. 자막은 공개 판결을 정리하며 판단되지 않은 행정·민사 결과를 추정하지 않습니다.",
+    "disclosure": "가상의 장면",
     "durationSeconds": 180,
     "sceneCount": 18,
     "chapters": [
@@ -11499,7 +11499,7 @@
     "height": 720,
     "title": "114 seconds minus 52: two clocks and the limits of an acquittal",
     "description": "A silent 180-second film separates two camera clocks, the 52-second red light, road space and the rider's departure, then explains the case-specific acquittals for coercion and public insult.",
-    "disclosure": "People, vehicles, the intersection, records and screens are separate AI-generated illustrations. No original Zhonghe case video or audio is used. The ten-second red-light shot does not reconstruct the real 52 seconds or resolve the judgment's differing references to opening a window or a door. This case's criminal acquittal does not permit arbitrary blocking, insults or U-turns within 62 seconds. Captions summarize the public judgments without assuming unadjudicated administrative or civil outcomes.",
+    "disclosure": "Fictional scene",
     "durationSeconds": 180,
     "sceneCount": 18,
     "chapters": [
@@ -11603,7 +11603,7 @@
     "height": 720,
     "title": "114秒から引いた52秒：二つの時計と無罪判断の範囲",
     "description": "180秒の無音映像で、二つの時計、赤信号の52秒、道路の幅と実際の離脱を分け、強制罪・公然侮辱罪の無罪理由と本件の限界を整理します。",
-    "disclosure": "人物・車両・交差点・書類・画面はAIで作った独立した架空の場面です。中和事件の元映像や音声は使っていません。10秒の赤信号は本件の52秒を再現せず、判決で異なる窓・ドアの記載も補いません。本件の刑事無罪は、62秒以内なら勝手に進路をふさいだり、罵倒したり、Uターンしてよいという意味ではありません。公開判決の要約であり、未判断の行政・民事結果は推定しません。",
+    "disclosure": "架空の情景",
     "durationSeconds": 180,
     "sceneCount": 18,
     "chapters": [

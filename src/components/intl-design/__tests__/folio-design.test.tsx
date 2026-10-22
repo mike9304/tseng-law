@@ -231,7 +231,7 @@ describe('home hero', () => {
     }
   });
 
-  it('serves a decorative, eager, high-priority still with both widths and a visible AI caption', () => {
+  it('serves a decorative, eager, high-priority still with both widths and a visible fictional-scene caption', () => {
     const markup = renderToStaticMarkup(<IntlHeroPlate locale="de" />);
     expect(markup).toContain('alt=""');
     expect(markup).toContain('fetchPriority="high"');
@@ -239,7 +239,8 @@ describe('home hero', () => {
     expect(markup).toContain(`${INTL_HERO_MEDIA.still640} 640w`);
     expect(markup).toContain(`${INTL_HERO_MEDIA.still1280} 1280w`);
     expect(markup).toContain('<figcaption');
-    expect(markup).toContain('Mit KI erzeugtes Bild');
+    expect(markup).toContain('Fiktive Szene');
+    expect(markup).not.toMatch(/\bKI\b|\bAI\b/);
     expect(markup.length).toBeLessThan(1200);
   });
 

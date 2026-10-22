@@ -11,20 +11,21 @@ import cosmeticsCheckCaptions from '@/data/cosmetics-check-video-captions.json';
 
 describe('reviewed column scenes', () => {
   it.each([
-    ['ko', '실제 사고 기록이 아닙니다'],
-    ['en', 'not actual accident footage'],
-    ['ja', '実際の事故映像ではありません'],
-    ['zh-hant', '非真實事故影像'],
-    ['fr', 'Scène fictive générée par IA'],
-    ['de', 'Fiktive, KI-generierte Szene'],
-    ['es', 'Escena ficticia generada con IA'],
-    ['pt', 'Cena fictícia gerada por IA'],
-    ['it', 'Scena fittizia generata con IA'],
-  ])('keeps the native collision asset and AI disclosure in %s', (locale, disclosure) => {
+    ['ko', '가상의 장면'],
+    ['en', 'Fictional scene'],
+    ['ja', '架空の情景'],
+    ['zh-hant', '虛構情境'],
+    ['fr', 'Scène fictive'],
+    ['de', 'Fiktive Szene'],
+    ['es', 'Escena ficticia'],
+    ['pt', 'Cena fictícia'],
+    ['it', 'Scena immaginaria'],
+  ])('keeps the native collision asset and fictional-scene caption in %s', (locale, disclosure) => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug="taiwan-traffic-accident-procedure" autoPlay />);
     expect(html.match(/<video\b/g)).toHaveLength(1);
     expect(html).toContain(`/videos/columns/rear-end-simulation-v3-${locale}.mp4`);
     expect(html).toContain(disclosure);
+    expect(html).not.toMatch(/\bAI\b|\bIA\b|\bKI\b/);
     expect(html).toContain('preload="metadata"');
     expect(html).toContain('muted=""');
     expect(html).not.toContain('data-column-video-chapter');
@@ -45,9 +46,9 @@ describe('reviewed column scenes', () => {
   });
 
   it.each([
-    ['ko', '판결이나 비접촉 사고를 재현한 영상이 아닙니다'],
-    ['en', 'not a reconstruction of any judgment'],
-    ['zh-hant', '未重現本文任何判決'],
+    ['ko', '가상의 장면'],
+    ['en', 'Fictional scene'],
+    ['zh-hant', '虛構情境'],
   ])('keeps the left-turn scene separate from the cited cases in %s', (locale, disclosure) => {
     const slug = 'taiwan-left-turn-vs-straight-motorcycle';
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale={locale} slug={slug} />);
@@ -124,7 +125,7 @@ describe('reviewed column scenes', () => {
   });
 
 
-  it('renders the reviewed local clip with controls, description and an AI disclosure', () => {
+  it('renders the reviewed local clip with controls, description and a fictional-scene caption', () => {
     const html = renderToStaticMarkup(<ColumnGeneratedVideo locale="ko" slug="taiwan-traffic-accident-procedure" />);
     expect(html).toContain('<video');
     expect(html).toContain('controls=""');
@@ -134,7 +135,7 @@ describe('reviewed column scenes', () => {
     expect(html).toContain('preload="none"');
     expect(html).toContain('src="/videos/columns/rear-end-simulation-v3-ko.mp4"');
     expect(html).not.toContain('<iframe');
-    expect(html).toContain('실제 사고 기록이 아닙니다');
+    expect(html).toContain('가상의 장면');
     const describedBy = html.match(/aria-describedby="([^"]+)"/)![1];
     expect(html).toContain(`id="${describedBy}"`);
   });

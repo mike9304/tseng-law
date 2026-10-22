@@ -7,7 +7,7 @@
     "height": 720,
     "title": "스쿠터의 좌회전과 직진차의 제동 — 가상 재연",
     "description": "접근, 좌회전 경로, 접촉과 사고 직후를 별도 장면으로 설명합니다. 시점 사이의 위치와 시각은 일치하는 실측값이 아닙니다.",
-    "disclosure": "AI로 만든 가상 사고 재연입니다. 실제 블랙박스나 특정 사건의 증거가 아니며 속도·거리·반응 시간·과실 비율을 측정한 영상이 아닙니다.",
+    "disclosure": "가상의 장면",
     "loop": false,
     "durationSeconds": 50,
     "sceneCount": 5
@@ -20,7 +20,7 @@
     "height": 720,
     "title": "機車左轉與直行汽車煞車——虛構再現",
     "description": "由接近路口、左轉路徑、接觸到事後位置，分別生成畫面說明；不同視角的位置與時間並非同步實測資料。",
-    "disclosure": "AI生成的虛構事故再現，非真實行車紀錄器或特定案件證據；車速、距離、反應時間及責任比例均未測量。",
+    "disclosure": "虛構情境",
     "loop": false,
     "durationSeconds": 50,
     "sceneCount": 5
@@ -33,7 +33,7 @@
     "height": 720,
     "title": "A scooter turns left across a straight-going car — fictional reenactment",
     "description": "Separately generated scenes show the approach, leftward path, contact and aftermath. Views do not share measured positions or synchronized times.",
-    "disclosure": "AI-generated fictional reenactment. It is not real dashcam footage or evidence of a particular accident, and it measures no speed, distance, reaction time or fault percentage.",
+    "disclosure": "Fictional scene",
     "loop": false,
     "durationSeconds": 50,
     "sceneCount": 5

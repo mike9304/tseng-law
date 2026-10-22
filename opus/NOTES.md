@@ -326,3 +326,4 @@
 - 10-22 13:19 대기: 13:10 이후 변화는 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.
 - 10-22 13:29 대기: 13:19 이후 변화는 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.
 - 10-22 13:40 대기: 13:29 이후 변화는 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.
+- 10-22 13:50 대기: 브리지 IN-claude-20261022-134434(Grok Bot 답)는 FAQ 링크 ASK(ko 01·ja 02 FAQ 마크다운 링크 제거) 답으로, 이 세션이 낸 질문이 아님(다른 칼럼/이슈 세션 건) — 조치 없음. 그 밖엔 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

@@ -16,10 +16,10 @@ import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 
 /** Pieces may land separately after review; validate every batch file present. */
 const ALLOWED_NUMBERS: Record<IssueBoardLocale, number[]> = {
-  ko: [],
+  ko: [1],
   ja: [2],
   'zh-hant': [],
-  en: [],
+  en: [6],
   vi: [],
 };
 

@@ -9,7 +9,7 @@ read_time: "約6分"
 categories:
   - "台湾法律情報"
 topic: "criminal"
-tags: ["台湾の刑事手続", "出国制限", "限制出境", "保証金", "外国人被告人"]
+tags: ["criminal-litigation", "台湾の刑事手続", "出国制限", "限制出境", "保証金", "外国人被告人"]
 featured_image: "../images/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "空港の出国審査カウンター前に置かれたスーツケースと、折りたたまれた書類封筒"
 featured_image_caption: "架空の情景"

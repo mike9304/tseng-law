@@ -9,7 +9,7 @@ read_time: "5분 분량"
 categories:
   - "대만 법률정보"
 topic: "criminal"
-tags: ["대만 형사절차", "출국금지", "限制出境", "보증금", "외국인 피고인"]
+tags: ["criminal-litigation", "대만 형사절차", "출국금지", "限制出境", "보증금", "외국인 피고인"]
 featured_image: "../images/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "공항 출국 심사대 앞에 놓인 빈 여행 가방과 접힌 서류 봉투"
 featured_image_caption: "가상의 장면"

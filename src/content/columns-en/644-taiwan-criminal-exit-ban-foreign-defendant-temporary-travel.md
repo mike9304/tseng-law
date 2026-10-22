@@ -9,7 +9,7 @@ read_time: "5 min read"
 categories:
   - "Taiwan Legal Information"
 topic: "criminal"
-tags: ["taiwan-criminal-procedure", "exit-ban", "temporary-travel", "bail", "foreign-defendants"]
+tags: ["criminal-litigation", "taiwan-criminal-procedure", "exit-ban", "temporary-travel", "bail", "foreign-defendants"]
 featured_image: "../images/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "A suitcase and a folded document envelope in front of an airport departure inspection counter"
 featured_image_caption: "Fictional scene"

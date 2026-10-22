@@ -9,7 +9,7 @@ read_time: "約5分鐘閱讀"
 categories:
   - "台灣法律資訊"
 topic: "criminal"
-tags: ["限制出境", "暫時解除限制出境", "具保", "保證金", "外籍被告"]
+tags: ["criminal-litigation", "限制出境", "暫時解除限制出境", "具保", "保證金", "外籍被告"]
 featured_image: "../images/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "機場出境查驗櫃檯前的行李箱與一個摺起來的公文信封"
 featured_image_caption: "虛構情境"

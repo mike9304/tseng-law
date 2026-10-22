@@ -17,7 +17,7 @@ import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { isColumnTopic } from '@/lib/column-topics';
 
 // Pieces can land separately after the operator's Claude Code editorial review.
-const ASSIGNED_IDS: Record<IssueBoardLocale, number[]> = {
+const ASSIGNED_IDS: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 2, 10, 11],
   ja: [3, 4],
   'zh-hant': [],

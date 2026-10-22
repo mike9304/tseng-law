@@ -25,7 +25,7 @@ function first(value: string | string[] | undefined): string | undefined {
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await props.params;
-  if (!isIssueBoardLocale(locale)) return {};
+  if (!isIssueBoardLocale(locale) || getAllIssuePosts(locale).length === 0) return {};
   const copy = issueBoardCopy[locale];
   return buildSeoMetadata({
     locale,
@@ -33,7 +33,8 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     description: copy.description,
     path: '/columns/issues',
     keywords: [copy.title],
-    alternateLocales: [...ISSUE_BOARD_LOCALES],
+    // Only boards that have published pieces; a locale stays hidden until its first issue.
+    alternateLocales: ISSUE_BOARD_LOCALES.filter((candidate) => getAllIssuePosts(candidate).length > 0),
   });
 }
 
@@ -46,6 +47,8 @@ export default async function IssueBoardPage(props: {
   if (!isIssueBoardLocale(locale)) notFound();
   const copy = issueBoardCopy[locale];
   const posts = getAllIssuePosts(locale);
+  // A board locale with no published pieces yet (es before its first issue) stays hidden.
+  if (posts.length === 0) notFound();
   const boardPath = issueBoardPath(locale);
   const body = (
     <>

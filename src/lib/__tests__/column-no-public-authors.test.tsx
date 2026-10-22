@@ -18,6 +18,7 @@ import ColumnsPage, { generateMetadata as columnsMetadata } from '@/app/[locale]
 import IssuePage, { generateMetadata as issueMetadata } from '@/app/[locale]/columns/issues/[slug]/page';
 import IssuesPage, { generateMetadata as issuesMetadata } from '@/app/[locale]/columns/issues/page';
 import TrafficPage, { generateMetadata as trafficMetadata } from '@/app/[locale]/traffic-accidents/page';
+import { isCriminalBoardLocale } from '@/lib/criminal-litigation-board';
 import CriminalPage, { generateMetadata as criminalMetadata } from '@/app/[locale]/criminal-litigation/page';
 import { generateMetadata as localeMetadata } from '@/app/[locale]/layout';
 import { metadata as rootMetadata } from '@/app/layout';
@@ -128,7 +129,12 @@ describe('all public columns omit author attribution (2026-10-20)', () => {
 
   it.each(ISSUE_BOARD_LOCALES)('%s issue detail, index and criminal board', async (locale) => {
     const posts = getAllIssuePosts(locale);
-    expect(posts.length).toBeGreaterThan(0);
+    if (posts.length === 0) {
+      // Board locale without a published piece yet: the board stays hidden (404) and has no metadata.
+      await expect(IssuesPage({ params: Promise.resolve({ locale }), searchParams: Promise.resolve({}) })).rejects.toThrow();
+      expect(await issuesMetadata({ params: Promise.resolve({ locale }) })).toEqual({});
+      return;
+    }
     const params = Promise.resolve({ locale, slug: posts[0].slug });
     const html = renderToStaticMarkup(await IssuePage({ params }));
     assertPublicHtml(html);
@@ -138,8 +144,10 @@ describe('all public columns omit author attribution (2026-10-20)', () => {
     const boardParams = Promise.resolve({ locale });
     assertPublicHtml(renderToStaticMarkup(await IssuesPage({ params: boardParams, searchParams: Promise.resolve({ author: 'PRIVATE_AUTHOR_SENTINEL' }) })));
     await assertMetadata(locale, await issuesMetadata({ params: boardParams }));
-    assertPublicHtml(renderToStaticMarkup(await CriminalPage({ params: boardParams })));
-    await assertMetadata(locale, await criminalMetadata({ params: boardParams }));
+    if (isCriminalBoardLocale(locale)) {
+      assertPublicHtml(renderToStaticMarkup(await CriminalPage({ params: boardParams })));
+      await assertMetadata(locale, await criminalMetadata({ params: boardParams }));
+    }
     for (const post of posts) {
       expect(post.content, `${locale}/${post.slug}`).not.toMatch(bodyByline);
       expect(post.featuredImageAlt ?? '').not.toMatch(attribution);

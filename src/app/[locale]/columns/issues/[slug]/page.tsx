@@ -15,6 +15,8 @@ import { AI_COLUMN_ATTORNEY_HEADING } from '@/lib/ai-authored-columns';
 import { getAllIssuePosts, isIssueBoardLocale, type ColumnPost, type IssueBoardLocale } from '@/lib/columns';
 import { extractColumnToc } from '@/lib/column-toc';
 import { getConsultationPublicMailto, CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
+import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
+import { buildFolioAuthorityCard } from '@/lib/intl-design-article';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { issueBoardCopy, issueBoardPath } from '@/data/issue-board';
@@ -35,10 +37,30 @@ const MIN_TOC_SECTIONS = 3;
 
 /** Legacy markdown/link locale. Vietnamese UI and authority copy use their own components. */
 function shellLocale(locale: IssueBoardLocale): SiteLocale {
-  return locale === 'vi' ? 'en' : locale;
+  return locale === 'vi' || locale === 'es' || locale === 'fr' ? 'en' : locale;
+}
+
+/** es/fr read like the folio (European) column pages: native guidance nav, consultation template and attorney card. */
+function isFolioIssueLocale(locale: IssueBoardLocale): locale is 'es' | 'fr' {
+  return locale === 'es' || locale === 'fr';
 }
 
 type GuideLink = { href: string; label: string };
+
+function FolioIssueAttorney({ locale }: { locale: 'es' | 'fr' }) {
+  const card = buildFolioAuthorityCard(locale);
+  return (
+    <div data-issue-attorney={locale}>
+      <h3 className="blog-sidebar-title">{AI_COLUMN_ATTORNEY_HEADING[locale]}</h3>
+      {card ? (
+        <>
+          <p className="blog-sidebar-text"><strong>{card.name}</strong><br />{card.role}</p>
+          <Link href={card.lawyersHref} className="blog-related-link">{card.lawyersLabel}</Link>
+        </>
+      ) : null}
+    </div>
+  );
+}
 
 /** Practice-area links chosen by topic (not category), per the issue-board advice. */
 function guideLinksFor(locale: IssueBoardLocale, post: ColumnPost): GuideLink[] {
@@ -47,6 +69,13 @@ function guideLinksFor(locale: IssueBoardLocale, post: ColumnPost): GuideLink[] 
       { href: guidancePublicPath('vi', 'services'), label: guidanceContent.vi.nav.services },
       { href: guidancePublicPath('vi', 'lawyers'), label: guidanceContent.vi.nav.lawyers },
       { href: '/vi/columns', label: guidanceContent.vi.nav.columns },
+    ];
+  }
+  if (isFolioIssueLocale(locale)) {
+    return [
+      { href: guidancePublicPath(locale, 'services'), label: guidanceContent[locale].nav.services },
+      { href: guidancePublicPath(locale, 'lawyers'), label: guidanceContent[locale].nav.lawyers },
+      { href: `/${locale}/columns`, label: issueBoardCopy[locale].expertTab },
     ];
   }
   if (locale === 'ja') {
@@ -191,7 +220,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
             <p className={boardStyles.dateNote} data-issue-date-note>{t.dateNote}</p>
             {tocEntries.length >= MIN_TOC_SECTIONS ? <ColumnToc entries={tocEntries} label={t.tocLabel} /> : null}
             <ColumnGeneratedVideo locale={locale} slug={post.slug} source="issue" autoPlay={resolveTrafficSubject(post, 'issue') !== null} />
-            <ColumnContent content={post.content} consultationLocale={locale === 'vi' ? 'vi' : undefined} locale={shell} uiLocale={locale === 'vi' ? 'vi' : shell} />
+            <ColumnContent content={post.content} consultationLocale={locale === 'vi' || isFolioIssueLocale(locale) ? locale : undefined} locale={shell} uiLocale={locale === 'vi' ? 'vi' : shell} />
             {faqItems.length > 0 ? (
               <section className="column-faq" aria-label={t.faqHeading}>
                 <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>
@@ -221,7 +250,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
               <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
               <p className="blog-sidebar-text">{t.consultationText}</p>
               <a
-                href={locale === 'vi' ? '/vi/contact' : getConsultationPublicMailto(shell)}
+                href={locale === 'vi' ? '/vi/contact' : isFolioIssueLocale(locale) ? getLocalizedConsultationMailto(locale) : getConsultationPublicMailto(shell)}
                 className="button blog-sidebar-btn"
                 aria-label={locale === 'vi' ? t.consultationButton : `${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
               >
@@ -229,7 +258,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
               </a>
             </div>
             <div className="blog-sidebar-card blog-sidebar-card--attorney">
-              {locale === 'vi' ? <ViArticleAuthority /> : <AttorneyAuthorityCard locale={shell} heading={AI_COLUMN_ATTORNEY_HEADING[shell] ?? AI_COLUMN_ATTORNEY_HEADING.en} />}
+              {locale === 'vi' ? <ViArticleAuthority /> : isFolioIssueLocale(locale) ? <FolioIssueAttorney locale={locale} /> : <AttorneyAuthorityCard locale={shell} heading={AI_COLUMN_ATTORNEY_HEADING[shell] ?? AI_COLUMN_ATTORNEY_HEADING.en} />}
             </div>
             <div className="blog-sidebar-card">
               <h3 className="blog-sidebar-title">{t.relatedTitle}</h3>

@@ -17,7 +17,7 @@ import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { isColumnTopic } from '@/lib/column-topics';
 
 // The batch still requires the operator's Claude Code editorial review.
-const EXPECTED: Record<IssueBoardLocale, number[]> = {
+const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 2],
   ja: [3, 4],
   'zh-hant': [],

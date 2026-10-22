@@ -17,7 +17,7 @@ import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { isColumnTopic } from '@/lib/column-topics';
 
 // Only this batch is counted; later publication batches have their own tests.
-const EXPECTED: Record<IssueBoardLocale, number[]> = {
+const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 2],
   ja: [3, 4],
   'zh-hant': [],

@@ -17,7 +17,7 @@ import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { issueBoardCopy } from '@/data/issue-board';
 
 /** Issue columns released 2026-09-30 (both final reviews passed; ISSUE-08 held). */
-const EXPECTED: Record<IssueBoardLocale, number[]> = {
+const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 2, 3],
   ja: [4, 5, 6],
   'zh-hant': [7, 9],

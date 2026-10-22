@@ -17,7 +17,7 @@ import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { isColumnTopic } from '@/lib/column-topics';
 
 // Scope the inventory to this batch so future issues do not change its count.
-const EXPECTED: Record<IssueBoardLocale, number[]> = {
+const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 2, 9],
   ja: [3, 4, 10, 11],
   'zh-hant': [13],

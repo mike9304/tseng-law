@@ -59,6 +59,8 @@ const COLUMN_DISCLAIMER: Record<string, string> = {
   vi: 'Bài viết này cung cấp thông tin chung, không phải là tư vấn pháp lý cho trường hợp cụ thể.',
   id: 'Artikel ini memberikan informasi umum dan bukan nasihat hukum untuk kasus tertentu.',
   th: 'บทความนี้ให้ข้อมูลทั่วไป และไม่ใช่คำแนะนำทางกฎหมายสำหรับกรณีเฉพาะ',
+  es: 'Este artículo ofrece información general y no constituye asesoramiento jurídico sobre ningún caso concreto.',
+  fr: 'Cet article donne des informations générales et ne constitue pas un conseil juridique sur une situation particulière.',
   fil: 'Ang artikulong ito ay nagbibigay ng pangkalahatang impormasyon at hindi ito legal na payo para sa isang partikular na kaso.',
 };
 
@@ -72,4 +74,6 @@ export const AI_COLUMN_ATTORNEY_HEADING: Record<string, string> = {
   'zh-hant': '諮詢律師',
   en: 'Consulting Attorney',
   ja: 'ご相談いただける弁護士',
+  es: 'Abogado para su consulta',
+  fr: 'Avocat consulté',
 };

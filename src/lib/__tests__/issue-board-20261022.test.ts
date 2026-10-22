@@ -15,7 +15,7 @@ import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 
 /** Pieces may land separately after review; validate every batch file present. */
-const ALLOWED_NUMBERS: Record<IssueBoardLocale, number[]> = {
+const ALLOWED_NUMBERS: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1],
   ja: [2, 3, 9, 10],
   'zh-hant': [],

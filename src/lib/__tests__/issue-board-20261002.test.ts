@@ -15,7 +15,7 @@ import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 
 /** Issue columns ISSUE-20261002 that passed the Claude Code final review (02, 05 dropped after 4 rounds; 06, 12 skipped). */
-const EXPECTED: Record<IssueBoardLocale, number[]> = {
+const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 3],
   ja: [4],
   'zh-hant': [],

@@ -21,7 +21,7 @@ const ALLOWED_NUMBERS: Partial<Record<IssueBoardLocale, number[]>> = {
   'zh-hant': [],
   en: [6, 7, 11, 12],
   vi: [8, 13, 14],
-  es: [],
+  es: [15, 16],
   fr: [17, 18],
 };
 

@@ -865,6 +865,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
     '652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md', // ship-20261022-G6
     '656-taiwan-one-shareholder-limited-company-director.md', // esfr-20261022 COL-es-1
+    '657-taiwan-spanish-document-legalization-taipei-office.md', // esfr-20261022 COL-es-3
   ],
   fr: [
     '653-taiwan-business-takeover-shares-or-assets-foreign-buyer.md', // esfr-20261022 COL-fr-1

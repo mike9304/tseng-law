@@ -2433,6 +2433,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-worker-change-employer-without-consent-separation-document"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-worker-change-employer-without-consent-separation-document"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-worker-change-employer-without-consent-separation-document"
     }
   ]
 }

@@ -1,0 +1,72 @@
+---
+title: "外籍員工要跳槽，公司不開離職證明擋得住嗎？就服法第53條與第59條的界線"
+seoTitle: "外籍員工轉換雇主：離職證明、服務證明書與第59條"
+summary: "外國人在聘僱許可期間轉換雇主，由新雇主申請許可，並附上離職證明文件；法條沒有要求原雇主同意。勞工在勞動契約終止時請求服務證明書，雇主不得拒絕，違者可處2萬元以上30萬元以下罰鍰。原雇主在聘僱關係終止後3日內要書面通報，新雇主在許可下來前就讓人上班，則可能面臨15萬元以上75萬元以下罰鍰。從事製造、營造、看護等工作的移工，在聘僱許可期間內，只有第59條的情形經勞動部核准才能轉換。"
+published: "2026-10-22"
+lastmod: "2026-10-22"
+date_display: "2026年10月22日"
+read_time: "約6分鐘閱讀"
+categories:
+  - "台灣法律資訊"
+topic: "labor"
+tags: ["外籍員工", "轉換雇主", "離職證明", "就業服務法", "移工"]
+featured_image: "../images/649-taiwan-foreign-worker-change-employer-without-consent-separation-document/featured-01.webp"
+featured_image_alt: "辦公室櫃檯上放著一個牛皮紙信封和一枚公司印章，背景是模糊的會議室玻璃門"
+featured_image_caption: "虛構情境"
+faq:
+  - q: "外籍工程師要離職去競爭對手那裡，公司可以拒開離職證明嗎？"
+    a: "[就業服務法第53條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=53)第1項是由新雇主申請許可並附離職證明文件，沒有規定原雇主同意。另外，勞動契約終止時勞工請求服務證明書，雇主不得拒絕（[勞動基準法第19條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=19)），違反可處2萬元以上30萬元以下罰鍰（第79條第3項）。服務證明書能否直接作為離職證明文件，條文沒有明定，須依勞動部的申請規定確認。"
+  - q: "外籍員工離職後，公司還要做什麼？"
+    a: "聘僱關係終止，雇主應於3日內以書面通知當地主管機關、入出國管理機關及警察機關（[就業服務法第56條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=56)第1項），違反可處3萬元以上15萬元以下罰鍰（第68條第1項）。聘僱關係終止也是廢止聘僱許可的事由（第73條第3款）。"
+  - q: "工廠的移工說薪水沒照約定給，要轉換雇主，可以不同意嗎？"
+    a: "雇主不依勞動契約給付工作報酬而經終止勞動契約，是[第59條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59)第1項第3款的轉換事由；經勞動部核准就可以轉換。依轉換程序準則第2條，移工本人可以檢附證明文件和自己的同意轉換文件提出申請，文件不齊時，主管機關查證後可以免附。原雇主同意不是要件。"
+audience: ["zh-hant"]
+author: "legal-ai-assistant"
+---
+
+# 外籍員工要跳槽，公司不開離職證明擋得住嗎？就服法第53條與第59條的界線
+
+人資信箱收到外籍工程師的信：「最後上班日請開服務證明書給我，下個月要去新公司。」主管的回覆只有兩個字：先壓（虛構情境）。壓得住嗎？答案是很難。
+
+## 法條要的是文件，不是同意
+
+除本法另有規定外，外國人沒有經雇主申請許可，不得在我國工作（[就業服務法第43條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43)）。聘僱許可期間要轉換雇主，[第53條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=53)第1項規定由新雇主申請許可，申請時附上受聘僱外國人的離職證明文件。條文沒有寫原雇主同意。
+
+公司手上能拖的，其實只有那份文件。不過，勞動契約終止時，勞工請求發給服務證明書，雇主或代理人不得拒絕（[勞動基準法第19條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=19)），違反者處2萬元以上30萬元以下罰鍰（[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)第3項）。服務證明書能否直接充當第53條第1項的離職證明文件，條文沒有明定，要依勞動部的申請規定確認。
+
+若員工持有就業金卡，連這份文件都用不上。就業金卡本身結合工作許可、居留簽證、外僑居留證及重入國許可（[外國專業人才延攬及僱用法第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9)），[移民署網站的說明](https://news.immigration.gov.tw/NewsSection/Detail/646ccc29-c816-4f3e-bf58-c755eec59980?lang=EN)指出，持卡人換工作不需要新雇主申請聘僱許可。
+
+## 員工走了以後，公司要做的事
+
+依[第56條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=56)第1項，聘僱關係終止，雇主應於3日內以書面通知當地主管機關、入出國管理機關及警察機關。漏了這一步，[第68條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68)第1項的罰鍰是3萬元以上15萬元以下。
+
+員工那邊，時間更緊。[第73條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=73)第3款把聘僱關係終止列為廢止聘僱許可的事由，許可被廢止的外國人，除本法另有規定外，應即令出國，不得再於我國境內工作（[第74條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=74)第1項）。居留原因消失時，移民署也會廢止居留許可、註銷居留證；但與本國雇主發生勞資爭議、正在進行爭訟程序，或發生職業災害尚在治療中的，可以准予繼續居留（[入出國及移民法第31條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31)第4項）。
+
+## 如果你是新雇主
+
+許可沒下來就先讓人上班，風險在兩邊。新雇主聘僱未經許可的外國人，處15萬元以上75萬元以下罰鍰，5年內再犯有刑責（第57條第1款、[第63條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=63)）。外國人本人違反第43條，可處3萬元以上15萬元以下罰鍰，應即令出國，且不得再於我國境內工作（第68條第1項、第3項）。到職日排在許可之後，是最省事的做法。
+
+## 移工在許可期間內轉換，要看第59條
+
+從事海洋漁撈、家庭幫傭與看護，或勞動部指定的製造、營造等工作（[第46條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=46)第1項第8款至第11款）的外國人，原則上不得轉換雇主（第53條第4項）。例外是[第59條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59)第1項四款情形，經勞動部核准：雇主或被看護者死亡或移民；船舶被扣押、沈沒或修繕而無法繼續作業；雇主關廠、歇業或不依勞動契約給付工作報酬經終止勞動契約；其他不可歸責於受聘僱外國人的事由。聘僱許可期間屆滿前2至4個月，與原雇主協議不續聘、願意由新雇主接續聘僱的「期滿轉換」，則另依[轉換程序準則第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090023&flno=23)辦理。
+
+薪資這一款要和勞基法一起看。雇主不依勞動契約給付工作報酬，勞工得不經預告終止契約（[勞動基準法第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=14)第1項第5款）。契約終止後，就符合第59條第1項第3款。
+
+這時移工本人就可以申請，檢附事由證明和自己同意轉換的文件；文件不齊的，主管機關查證後可以免附（[轉換程序準則第2條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090023&flno=2)）。公立就業服務機構辦理轉換作業的期間是60日，有特殊情形經核准可以延長60日一次；受雇主等人身侵害而經廢止聘僱許可的，申請延長不受次數限制（[第11條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090023&flno=11)第1項、第2項）。薪資爭議一旦成為轉換事由，雇主同不同意已經不是重點。
+
+另外要注意，原本從事第46條第1項第1款至第7款工作的外國人，轉換雇主或工作後，不能改做第8款至第11款的工作（第53條第3項）。
+
+## 律師可以幫忙的地方
+
+公司端，律師可以檢查離職與服務證明書的開立、3日通報和新雇主到職時程是否合法，處理競業或保密約定的爭議；員工端，可以代為書面請求服務證明書，在薪資爭議時申請調解或起訴，並安排新雇主申請與居留變更。昊鼎國際法律事務所曾雋崴律師的信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，台北事務所在103 臺北市大同區承德路一段35號7樓之2，台中事務所在40453 臺中市北區館前路19號6樓之1。那封要求服務證明書的信若一直壓著，要面對罰鍰的是公司，員工的轉職未必因此停下。
+
+## 參考資料
+
+確認日期：2026年10月22日
+
+- [就業服務法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001)第43條、第46條、第53條、第56條、第57條、第59條、第63條、第68條、第73條、第74條（114年1月20日修正）。
+- [勞動基準法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001)第14條、第19條、第79條。
+- [入出國及移民法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132)第31條。
+- [外國專業人才延攬及僱用法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030295)第9條。
+- [外國人受聘僱從事就業服務法第四十六條第一項第八款至第十一款規定工作之轉換雇主或工作程序準則](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090023)第2條、第11條、第23條（115年4月11日修正）。
+- 內政部移民署，[Employment Gold Card: Work-Related FAQs](https://news.immigration.gov.tw/NewsSection/Detail/646ccc29-c816-4f3e-bf58-c755eec59980?lang=EN)（2025年1月12日）。

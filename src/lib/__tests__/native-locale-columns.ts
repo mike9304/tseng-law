@@ -813,22 +813,27 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
   ko: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
+    '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
   ],
   en: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
+    '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
   ],
   ja: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
+    '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
   ],
   'zh-hant': [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
+    '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
   ],
   es: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
     '643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md', // ship-20261022-P-CORP
+    '644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md', // ship-20261022-P-CRIM
   ],
 } as const;
 

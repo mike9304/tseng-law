@@ -2373,6 +2373,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-parent-instructions-director-dissent-supervisor-stop-notice"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-criminal-exit-ban-foreign-defendant-temporary-travel"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-criminal-exit-ban-foreign-defendant-temporary-travel"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-criminal-exit-ban-foreign-defendant-temporary-travel"
     }
   ]
 }

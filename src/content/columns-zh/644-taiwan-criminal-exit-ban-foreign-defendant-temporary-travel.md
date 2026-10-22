@@ -1,0 +1,77 @@
+---
+title: "外籍員工或家人被限制出境，想先回國一趟：誰能聲請、誰替他具保、法院看什麼"
+seoTitle: "外籍被告暫時解除限制出境：聲請人、具保人風險與法院考量"
+summary: "外籍被告在刑事案件中被限制出境、出海，能向檢察官或法院聲請撤銷或變更的，只有被告本人和辯護人（刑事訴訟法第93條之5）；配偶與一定範圍的親屬可以獨立替他選任辯護人，雇主則不在名單上。本文引用的准許裁定都要求繳保證金；具保的被告逃匿，具保人繳的錢會被沒入，新北地院的裁定也寫明逾期未返即沒入。從公開裁定看，回國理由、與告訴人調解賠償、在台連結與案件進度，都影響結果。"
+published: "2026-10-22"
+lastmod: "2026-10-22"
+date_display: "2026年10月22日"
+read_time: "約5分鐘閱讀"
+categories:
+  - "台灣法律資訊"
+topic: "criminal"
+tags: ["限制出境", "暫時解除限制出境", "具保", "保證金", "外籍被告"]
+featured_image: "../images/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
+featured_image_alt: "機場出境查驗櫃檯前的行李箱與一個摺起來的公文信封"
+featured_image_caption: "虛構情境"
+faq:
+  - q: "公司的外籍員工被限制出境，雇主可以替他向法院聲請暫時出境嗎？"
+    a: "不能直接聲請。[刑事訴訟法第93條之5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-5)規定，能向檢察官或法院聲請撤銷或變更限制出境、出海的是被告及其辯護人。被告的法定代理人、配偶、直系或三親等內旁系血親、家長、家屬，可以獨立為他選任辯護人（[第27條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27)第2項），雇主不在這份名單內。"
+  - q: "替外籍配偶或員工繳保證金，如果他沒回來會怎樣？"
+    a: "具保的被告逃匿時，法院會命具保人繳納指定的保證金額並沒入；已經繳納的，直接沒入，實收利息也一併沒入（[第118條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=118)、第119條之1第2項）。如期返臺，錢也不是自動退回：要經法院或檢察官免除具保責任或准予退保，未沒入的保證金才連同實收利息發還（第119條第3項、第119條之1第1項）。桃園地院114年度聲字第3576號裁定認為，為擔保被告遵期歸國的保證事由已經消滅，免除這部分具保責任，准把第三人繳的8萬元發還。"
+  - q: "法院駁回暫時解除的聲請，還能怎麼辦？"
+    a: "法院的裁定，送達後10日內可以抗告（[第404條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=404)第1項第2款、[第406條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=406)）；檢察官或審判長的處分，則在處分之日起10日內（送達者自送達後起算）聲請所屬法院撤銷或變更（[第416條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=416)）。抗告不停止執行（第409條）。"
+audience: ["zh-hant"]
+author: "legal-ai-assistant"
+---
+
+# 外籍員工或家人被限制出境，想先回國一趟：誰能聲請、誰替他具保、法院看什麼
+
+外籍員工涉入刑事案件、被限制出境，母國家裡偏偏出了事。公司能不能出面，向法院說明讓他先回去一趟？換成外籍配偶的台灣家人，問題也一樣。
+
+## 能聲請的，只有被告和辯護人
+
+[刑事訴訟法第93條之5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-5)第1項寫得很清楚：向檢察官或法院聲請撤銷或變更限制出境、出海的，是被告及其辯護人。公司或家人不能自己遞狀。
+
+家人能做的，是替他找律師。被告的法定代理人、配偶、直系或三親等內旁系血親、家長、家屬，可以獨立為被告選任辯護人（[第27條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27)第2項）。雇主不在這份名單上，只能協助員工自己委任。
+
+限制本身的規則，也先知道個大概。被告犯罪嫌疑重大，且無一定住居所，或有相當理由足認有逃亡、湮滅證據、勾串共犯或證人之虞，必要時檢察官或法官可以逕行限制；最重本刑為拘役或專科罰金的案件，不能逕行限制（[第93條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2)）。命具保、責付或限制住居時，也可以一併限制（[第93條之6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-6)）。偵查中檢察官限制不得逾8個月，聲請法院延長以兩次為限，第一次4個月、第二次2個月；審判中每次不得逾8個月，最重本刑10年以下之罪累計不得逾5年，其餘之罪不得逾10年；被告逃匿遭通緝的那段時間，不算進這些期間（[第93條之3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-3)第1項至第3項）。在機場把人擋下的是移民署，它依司法機關通知禁止外國人出國，查驗時要當場交付書面並告知理由（[入出國及移民法第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=21)）。這一章是108年6月19日公布、公布後六個月施行的。
+
+## 出面具保的人，押上的是自己的錢
+
+桃園與新北這兩件准許裁定都附帶保證金，具保人卻不一樣。
+
+桃園地院114年8月6日裁定，准一位涉傷害等罪的菲律賓籍被告在提出8萬元保證金後，解除114年8月10日至31日的限制，9月1日零時起恢復（[114年度聲字第2886號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TYDM%2c114%2c%e8%81%b2%2c2886%2c20250806%2c1)）。8月12日繳錢的是一位第三人具保人。被告8月17日出境、8月30日返臺。法院在9月30日認定，為擔保被告遵期歸國的保證事由已經消滅，免除這部分具保責任，准予把8萬元連同實收利息發還給這位具保人（[114年度聲字第3576號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TYDM%2c114%2c%e8%81%b2%2c3576%2c20250930%2c1)）。
+
+如果沒回來，結局相反。新北地院的准許裁定寫明逾期未返臺即沒入；一般規定則是具保的被告逃匿時，法院命具保人繳納指定的保證金額並沒入，已繳的直接沒入（[第118條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=118)），實收利息一併沒入（[第119條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=119-1)第2項）。人回來了，也要等具保責任經免除或准予退保，未沒入的保證金才會發還（[第119條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=119)第3項）。
+
+新北地院115年3月2日的裁定，則限定由越南籍被告本人擔任具保人，以本人名義提出10萬元保證金（[115年度聲字第345號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c115%2c%e8%81%b2%2c345%2c20260302%2c1)）。
+
+## 准與不准，法院斟酌了什麼
+
+把公開的准駁裁定放在一起看，有幾個因素反覆出現。審查標準，桃園那份裁定講得最直白：訴訟進行與證據調查會不會受影響，替代的擔保手段能不能防止被告逃匿境外。
+
+先看回國理由。新北地院114年11月26日駁回越南籍被告的第一次聲請時說，被告以來臺求學為由入境，子女照顧應已安排，透過通訊軟體也能聯繫處理（[114年度聲字第4373號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c114%2c%e8%81%b2%2c4373%2c20251126%2c1)）。屏東地院113年7月1日駁回一位想回越南奔喪的被告，也寫到其父過世隔天就已下葬（[113年度聲字第696號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PTDM%2c113%2c%e8%81%b2%2c696%2c20240701%2c1)）。
+
+再來是和告訴人之間處理到哪裡。新北那位被告第二次聲請時，聲請狀說已和告訴人調解成立並履行賠償，還附上訂好的機票影本。法院斟酌機票、訴訟進度與被告在審理中證述的情形，准予3月15日至4月3日出境，逾期未返就沒入保證金（[115年度聲字第345號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c115%2c%e8%81%b2%2c345%2c20260302%2c1)）。這位被告先前曾多次無正當理由未到庭而遭通緝，114年7月入境時才被緝獲。
+
+在台灣的連結也有分量。屏東那位被告有固定工作，法院仍認為被告只是因工作簽證短期居留，住的是員工宿舍，有相當理由足認有逃亡之虞。臺北地院110年11月29日駁回一位蒙古籍學生，也指出其家人都在蒙古、在臺沒有資產；這名學生在偵查中還說過，若回蒙古完成線上課程、學校願意發給學位，就不會回臺灣（[110年度聲字第1998號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDM%2c110%2c%e8%81%b2%2c1998%2c20211129%2c1)）。
+
+罪名輕重與案件進度，同樣寫進了理由。那位學生涉嫌運輸第二級毒品，法定最輕本刑10年以上，願繳5萬元保證金，法院認為無從以保證金替代。屏東案還在等醫事審議委員會鑑定，日後也可能交互詰問；桃園那位被告則已在準備程序坦承犯行，新北案也已改行簡易程序。
+
+這些都是程序上的裁定，不涉有罪無罪；判決確定前，被告仍受無罪推定。
+
+## 被駁回之後
+
+法院的裁定，送達後10日內可以抗告（[第404條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=404)第1項第2款、[第406條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=406)）。檢察官的處分，依[第416條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=416)在10日內聲請法院撤銷或變更。抗告不停止執行（[第409條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=409)）。受不起訴、緩起訴處分或無罪、緩刑等判決時，限制出境視為撤銷；上訴期間或上訴中，必要時仍可繼續限制（[第93條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-4)）。
+
+被告8月30日返臺後，桃園地院於9月30日准予發還具保人的8萬元及實收利息。
+
+被帶進警局後最初24小時的程序，見[外籍家人被帶進警局後，24小時不是倒數放人的保證](/zh-hant/columns/taken-taiwan-police-station-first-24-hours-not-release)。昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，台中事務所在40453 臺中市北區館前路19號6樓之1。
+
+## 參考的官方資料
+
+查證日：2026年10月21日
+
+- [刑事訴訟法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0010001) 第27條、第93條之2至第93條之6（108年6月19日公布，公布後六個月施行）、第118條、第119條、第119條之1、第404條、第406條、第409條、第416條。
+- [入出國及移民法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132) 第21條。
+- 司法院裁判書查詢：臺灣新北地方法院[114年度聲字第4373號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c114%2c%e8%81%b2%2c4373%2c20251126%2c1)（114年11月26日）、[115年度聲字第345號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c115%2c%e8%81%b2%2c345%2c20260302%2c1)（115年3月2日）；臺灣桃園地方法院[114年度聲字第2886號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TYDM%2c114%2c%e8%81%b2%2c2886%2c20250806%2c1)（114年8月6日）、[114年度聲字第3576號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TYDM%2c114%2c%e8%81%b2%2c3576%2c20250930%2c1)（114年9月30日）；臺灣屏東地方法院[113年度聲字第696號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PTDM%2c113%2c%e8%81%b2%2c696%2c20240701%2c1)（113年7月1日）；臺灣臺北地方法院[110年度聲字第1998號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDM%2c110%2c%e8%81%b2%2c1998%2c20211129%2c1)（110年11月29日）。以上均為地方法院裁定。

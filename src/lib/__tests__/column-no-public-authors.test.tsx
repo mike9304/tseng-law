@@ -158,7 +158,7 @@ describe('all public columns omit author attribution (2026-10-20)', () => {
     const posts = getAllIssuePosts('fr');
     expect(posts.length).toBeGreaterThan(0);
     const html = renderToStaticMarkup(await IssuePage({ params: Promise.resolve({ locale: 'fr', slug: posts[0].slug }) }));
-    expect(html).toContain('subject=%5Btseng-law.com%20Consultation%5D%20Affaire');
+    expect(html).toMatch(/<a href="mailto:[^"]*subject=%5Btseng-law\.com%20Consultation%5D%20Affaire[^"]*" class="button blog-sidebar-btn"/);
     expect(html).toContain('data-issue-attorney="fr"');
     expect(html).toContain('Avocate pour les consultations');
     expect(html).toContain('Scène fictive');

@@ -54,9 +54,7 @@ function FolioIssueAttorney({ locale }: { locale: 'es' | 'fr' }) {
     <div data-issue-attorney={locale}>
       <h3 className="blog-sidebar-title">{folioArticleCopy[locale].consultingAttorney}</h3>
       {card ? (
-        <>
-          <p className="blog-sidebar-text"><Link href={card.lawyersHref} className="blog-related-link">{card.name}</Link><br />{card.role}</p>
-        </>
+        <p className="blog-sidebar-text"><Link href={card.lawyersHref} className="blog-related-link">{card.name}</Link><br />{card.role}</p>
       ) : null}
     </div>
   );

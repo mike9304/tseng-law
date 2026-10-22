@@ -156,3 +156,10 @@
 - 10-22 15:09 KST 대기: ref 재정렬(418ea2f). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-22 15:19 KST 대기: ref 재정렬(a74f820). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-22 15:29 KST 대기: ref 재정렬(809db4b). Studio 변화 NOTES뿐, Astra 채택 판정 대기. Air push 14:41 이후 밀림(NOTES만).
+- 10-22 15:39 KST 대기: 원격 HEAD=Air 15:31 커밋. Studio 새 변화 없음, Astra 채택 판정 대기.
+- 10-22 15:49 KST 대기: ref 재정렬(d4436d8). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-22 15:59 KST 대기: ref 재정렬(e8187a6). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-22 16:09 KST 대기: ref 재정렬(21de6b6). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-22 16:19 KST 대기: ref 재정렬(803b126). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-22 16:30 KST 대기: ref 재정렬(ecce62a). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-22 18:18 KST 대기: 16:30~18:1x 맥 수면·DNS 단절 후 복구, ref 재정렬(0f47e3e). Studio 변화 NOTES뿐, Astra 채택 판정 대기.

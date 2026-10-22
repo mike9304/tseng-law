@@ -5,6 +5,7 @@
  */
 export const TAX_ACCOUNTING_COLUMN_FILES = {
   ko: [
+    '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '553-taiwan-korean-parent-service-fees-evidence.md',
     '541-taiwan-bookkeeping-provider-records-handover.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -33,6 +34,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   ja: [
+    '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '554-taiwan-dividend-japanese-parent-tax-records.md',
     '541-taiwan-bookkeeping-provider-records-handover.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -61,6 +63,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   en: [
+    '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '555-taiwan-company-records-us-form-5471.md',
     '541-taiwan-bookkeeping-provider-records-handover.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -91,6 +94,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '385-taiwan-cfc-rules-vietnamese-subsidiary-incentives.md',
   ] as string[],
   'zh-hant': [
+    '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
     '302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md',
     '303-taiwan-withholding-tax-payments-to-foreign-companies.md',
@@ -122,6 +126,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
 
 /** Board columns published after 2026-10-06, by file-number prefix; every other board file is 2026-10-06. */
 const LATER_PUBLICATION_DATES: Readonly<Record<string, string>> = {
+  '645': '2026-10-22',
   '553': '2026-10-14',
   '554': '2026-10-14',
   '555': '2026-10-14',

@@ -890,8 +890,10 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const day20261022: readonly string[] =
-    (COUNTRY_COLUMN_FILES_20261022 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261022: readonly string[] = [
+    ...((COUNTRY_COLUMN_FILES_20261022 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...(taxAccountingFilesPublishedOn('2026-10-22')[locale] ?? []),
+  ];
   const day20261021: readonly string[] =
     (TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261020: readonly string[] =
@@ -960,7 +962,8 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-22). */
 export function archiveLeadPublicationDate(slug: string): string {
-  if (Object.values(COUNTRY_COLUMN_FILES_20261022).flat().map(slugOf).includes(slug)) return '2026-10-22';
+  const day20261022 = [...Object.values(COUNTRY_COLUMN_FILES_20261022), ...Object.values(taxAccountingFilesPublishedOn('2026-10-22')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
+  if (day20261022.includes(slug)) return '2026-10-22';
   if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().map(slugOf).includes(slug)) return '2026-10-21';
   if (Object.values(COUNTRY_COLUMN_FILES_20261020).flat().map(slugOf).includes(slug)) return '2026-10-20';
   if (Object.values(COUNTRY_COLUMN_FILES_20261018).flat().map(slugOf).includes(slug)) return '2026-10-18';

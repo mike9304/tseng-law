@@ -58,7 +58,10 @@ describe('column category parity with English', () => {
       const fileCount = readdirSync(dir).filter((file) => file.endsWith('.md')).length;
       expect(posts.length).toBe(fileCount);
       expect(posts.length).toBeGreaterThan(0);
-      const translated = posts.filter((post) => !isNativeOrExpertiseNativeSlug(locale, post.slug));
+      // Tax-board columns are outside the English baseline (es carries 645/646 since 2026-10-22).
+      const translated = posts.filter(
+        (post) => !isNativeOrExpertiseNativeSlug(locale, post.slug) && !isTaxAccountingBoardColumn(post),
+      );
       const mismatches = translated
         .filter((post) => english.get(post.slug) !== post.category)
         .map((post) => `${post.slug}: ${post.category} (en: ${english.get(post.slug)})`);

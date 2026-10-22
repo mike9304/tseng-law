@@ -1,0 +1,87 @@
+---
+title: "公司沒營業，財報就不用簽證？從年度結束到罰單的時間表"
+seoTitle: "公司財報未經會計師查核簽證：決算期限、公司法第20條罰鍰與決算書表查核"
+summary: "決算原則上要在會計年度結束後2個月內辦完，必要時可延長2個半月；提請股東承認則是會計年度結束後6個月內；依公司法第20條應經會計師查核簽證的公司，承認前要先簽證。沒有簽證就提請承認，應負責的公司負責人各處1萬元以上5萬元以下罰鍰；規避、妨礙、拒絕主管機關查核或屆期不申報，各處2萬元以上10萬元以下。臺北地院104年判決認為，公司沒有實際營業也不能免除簽證義務。"
+published: "2026-10-22"
+lastmod: "2026-10-22"
+date_display: "2026年10月22日"
+read_time: "約6分鐘閱讀"
+categories:
+  - "台灣法律資訊"
+topic: "tax"
+tags: ["tax-accounting"]
+featured_image: "../images/645-taiwan-company-missed-cpa-audit-moea-filing-director-fines/featured-01.webp"
+featured_image_alt: "會議桌上的資料夾、公司大小章和闔上的筆電"
+featured_image_caption: "虛構情境"
+faq:
+  - q: "財報應簽證卻沒簽證，罰的是公司還是董事？"
+    a: "[公司法第20條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=20)第5項罰的是公司負責人，而且是「各處」新臺幣1萬元以上5萬元以下。有限公司、股份有限公司的負責人是董事，經理人、監察人等在執行職務範圍內也是負責人（[第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)）。各處是逐人處罰，誰有責任、有無故意或過失，要分別認定（[行政罰法第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030210&flno=7)）。臺北地院104年度簡字第101號判決中，三位董事各被處1萬元，法院維持原處分。"
+  - q: "公司早就沒有營業了，財報還要簽證嗎？"
+    a: "臺北地院104年度簡字第101號判決認為，公司設立後到清算完結、法人格消滅前，都要設帳、辦理決算、編製財報，達到門檻者要先經會計師查核簽證再提請承認，這是負責人的作為義務，不因沒有實際營業而免除。這是第一審判決，判決時得上訴。門檻則看財務報導期間結束日的實收資本額、營業收入淨額與勞保投保人數。"
+  - q: "經濟部要求限期申報決算書表，不理會會怎樣？"
+    a: "依[公司決算書表申報暨查核辦法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080012)第3條，公司要把經承認的決算書表備置於本公司，主管機關可以隨時派員查核或令其限期申報，也可以委託會計師、律師代理申報。規避、妨礙、拒絕查核或屆期不申報，依公司法第20條第5項，負責人各處2萬元以上10萬元以下罰鍰。"
+audience: ["zh-hant"]
+author: "legal-ai-assistant"
+---
+
+# 公司沒營業，財報就不用簽證？從年度結束到罰單的時間表
+
+公司早就沒在營業，財報還要找會計師簽證嗎？臺北地方法院104年8月的判決說要，三位董事各收到1萬元罰鍰，法院維持處分。
+
+## 年度結束後兩個月：決算
+
+決算要在會計年度終了後2個月內辦理完竣，必要時得延長2個半月（[商業會計法第65條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=65)）。決算報表包括營業報告書與財務報表，由代表商業之負責人、經理人和主辦會計人員簽名或蓋章負責（[第66條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=66)）。12月底結帳的公司，2月底就是第一個關卡。
+
+未如期辦理決算，代表商業之負責人、經理人、主辦及經辦會計人員處6萬元以上30萬元以下罰鍰（[第76條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=76)第4款）。整張時間表裡，這一項金額最高。
+
+## 要不要簽證，看期末那一天
+
+經濟部107年11月8日經商字第10702425340號公告，以「財務報導期間結束日」的數字判斷。實收資本額達3千萬元，財報要先經會計師查核簽證，再提請股東同意或股東常會承認。未達3千萬元，但營業收入淨額達1億元，或參加勞保員工達100人的，也一樣。108年會計年度起適用；公開發行公司另依證券主管機關規定（[行政院公報第24卷第213期](https://gazette.nat.gov.tw/egFront/detail.do?metaid=102593&log=detailLog)）。年中增資，看的是期末。
+
+第一次達到門檻的那一年，會計師還要處理期初餘額。[會計師查核簽證財務報表規則](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080023)第7條要求首次受託查核時，依審計準則510號執行期初餘額的必要查核程序。期初餘額就是上一年度的期末數字。前一年的帳，也會被翻出來看。
+
+## 六個月內提請承認，承認之後
+
+商業負責人要在會計年度終了後6個月內，把決算報表提請股東承認（[商業會計法第68條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=68)第1項）；逾期未提請，處1萬元以上5萬元以下（[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080009&flno=79)第5款）。應簽證的公司，簽證一定排在承認前面（[公司法第20條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=20)第1項、第2項）。會計師的委任、解任與報酬，股份有限公司由董事會以董事過半數出席、出席董事過半數同意決議，有限公司要全體股東表決權過半數同意；章程有較高規定的，從其規定（第20條第3項準用[第29條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=29)第1項）。
+
+承認有實際效果。各項表冊經股東會決議承認後，視為公司已解除董事及監察人對公司的責任，但有不法行為者不在此限（[第231條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=231)）。
+
+## 承認以後，主管機關還可以來查
+
+公司法第20條第4項規定，決算書表主管機關可以隨時派員查核，或令其限期申報。細節在經濟部的[公司決算書表申報暨查核辦法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080012)：經承認的營業報告書、財務報表、盈餘分配或虧損撥補表，要備置在本公司（第2條、第3條）。申報可以委託會計師或律師辦理。
+
+會計師這一端也要申報。受託查核簽證的會計師，要在主管機關規定的期限內申報年度簽證案件清單（第4條第2項）。主管機關可以令公司提出證明文件、單據與表冊並加說明（第9條），也可以調閱會計師的查核工作底稿（第10條）。發現不合規定時，主管機關應即依法處理，也得通知公司限期申復（第11條）。
+
+## 罰單怎麼開：「各處」
+
+第20條第5項的關鍵是「各處」兩個字。違反第1項（提請承認）或第2項（查核簽證），負責人各處1萬元以上5萬元以下；規避、妨礙、拒絕查核或屆期不申報，各處2萬元以上10萬元以下。罰單一人一張，開給應負責的每一位負責人。登記了幾位董事，不等於自動開幾張：誰有責任要逐人認定，違反義務的行為非出於故意或過失者，不予處罰（[行政罰法第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030210&flno=7)）。
+
+誰是負責人？有限公司、股份有限公司是董事；經理人、監察人在執行職務範圍內也是（[第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8)第1項、第2項）。妨礙、拒絕或規避業務及財務狀況檢查，各處2萬元以上10萬元以下，連續妨礙者按次各處4萬元以上20萬元以下（[第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=21)第2項）；拒絕提出文件也是同樣的級距（[第22條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=22)第2項）。外國公司在台分公司準用第20條第1項至第4項，罰則規定在[第377條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=377)。
+
+## 兩件臺北地院判決
+
+第一件是開頭那家公司。實收資本額在3千萬元以上，經濟部限期要它申報101年度決算書表，它交不出會計師查核簽證報告。董事的輔佐人在法庭上說，公司93年10月後就沒有營業，從93年起也沒再委請會計師簽證。法院認為，公司一經設立，到清算完結前，設帳、決算、編表、達門檻者先經簽證再提請承認，都是負責人的作為義務，不能以沒有實際營業解免。
+
+說不知道法規，也沒用。[行政罰法第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030210&flno=8)規定不得因不知法規而免責，只是依情節得減輕或免除。法院指出，這家公司資本總額達2億元，過去也辦過簽證，沒有減免的特殊情狀；經濟部以法定最低額裁罰，沒有違法。這是第一審判決，判決書載明得於送達後20日內上訴（[104年度簡字第101號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDA%2c104%2c%e7%b0%a1%2c101%2c20150819%2c1)）。
+
+第二件的勝負，不在罰鍰本身。兩位登記董事因公司105年度財報未經簽證各被罰1萬元，主張自己是被掛名。法院認定處分書送到兩人沒有實際居住的戶籍地址，送達不合法，訴願期間沒有起算，因此撤銷以逾期為由不受理的訴願決定；罰鍰本身是否合法，並未審酌（[110年度簡更一字第7號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDA%2c110%2c%e7%b0%a1%e6%9b%b4%e4%b8%80%2c7%2c20210507%2c1)）。
+
+## 收到罰單之後
+
+不服罰鍰，要在處分書達到次日起30日內提起訴願（[訴願法第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030020&flno=14)）。之後的行政訴訟，50萬元以下罰鍰的案件，第一審由高等行政法院地方行政訴訟庭管轄（[行政訴訟法第3條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030154&flno=3-1)、[第229條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030154&flno=229)）。
+
+回到開頭那家公司：93年起沒再簽證，最後三位董事各收到法定最低額1萬元的罰鍰。
+
+門檻、承認程序和營所稅簽證申報的差別，另見[外商在台子公司何時要會計師簽證](/zh-hant/columns/taiwan-cpa-audit-tax-certification-bookkeeping)。簽證由會計師辦理；董事會、股東會程序或罰鍰救濟的問題，可以寫信到昊鼎國際法律事務所（[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)），台中事務所在40453 臺中市北區館前路19號6樓之1。
+
+## 參考的官方資料
+
+查證日：2026年10月21日
+
+- [公司法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)（114年12月26日修正）第8條、第20條、第21條、第22條、第29條、第231條、第377條。
+- 經濟部[公司決算書表申報暨查核辦法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080012)（107年11月8日修正發布，107年11月1日施行）第2條至第4條、第9條至第11條。
+- 經濟部[會計師查核簽證財務報表規則](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080023)（111年12月27日修正）第7條。
+- 經濟部107年11月8日經商字第10702425340號公告「公司法第二十條第二項之公司資本額一定數額及一定規模」，[行政院公報第24卷第213期](https://gazette.nat.gov.tw/egFront/detail.do?metaid=102593&log=detailLog)。
+- [商業會計法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080009) 第65條、第66條、第68條、第76條、第79條。
+- [行政罰法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030210)第7條、第8條、[訴願法](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030020&flno=14)第14條、[行政訴訟法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030154)第3條之1、第229條。
+- 司法院裁判書查詢：臺灣臺北地方法院行政訴訟判決[104年度簡字第101號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDA%2c104%2c%e7%b0%a1%2c101%2c20150819%2c1)（104年8月19日，第一審）、[110年度簡更一字第7號](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDA%2c110%2c%e7%b0%a1%e6%9b%b4%e4%b8%80%2c7%2c20210507%2c1)（110年5月7日，發回後第一審，判決時得於送達後20日內以違背法令為由上訴）。

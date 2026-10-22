@@ -2385,6 +2385,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-criminal-exit-ban-foreign-defendant-temporary-travel"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-company-missed-cpa-audit-moea-filing-director-fines"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-company-missed-cpa-audit-moea-filing-director-fines"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-company-missed-cpa-audit-moea-filing-director-fines"
     }
   ]
 }

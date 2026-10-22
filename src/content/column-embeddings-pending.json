@@ -2469,6 +2469,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-hospital-death-autopsy-request-complaint-medical-mediation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-hospital-death-autopsy-request-complaint-medical-mediation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-hospital-death-autopsy-request-complaint-medical-mediation"
     }
   ]
 }

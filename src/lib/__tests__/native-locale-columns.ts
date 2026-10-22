@@ -819,6 +819,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
     '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
+    '652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md', // ship-20261022-G6
   ],
   en: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -829,6 +830,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
     '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
+    '652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md', // ship-20261022-G6
   ],
   ja: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -839,6 +841,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
     '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
+    '652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md', // ship-20261022-G6
   ],
   'zh-hant': [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -849,6 +852,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
     '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
+    '652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md', // ship-20261022-G6
   ],
   es: [
     '642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md', // ship-20261022-P-CIV
@@ -859,6 +863,7 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
     '649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md', // ship-20261022-G3
     '650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md', // ship-20261022-G4
     '651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md', // ship-20261022-G5
+    '652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md', // ship-20261022-G6
   ],
 } as const;
 

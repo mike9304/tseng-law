@@ -19,7 +19,7 @@ faq:
   - q: "When must a fatal occupational accident be reported?"
     a: "Article 37 requires the employer to notify the labor inspection authority within eight hours. It also requires immediate first aid and rescue. Apart from necessary rescue, the employer may not move or disturb the scene without permission from the judicial or labor inspection authorities. Other specified serious accidents also trigger notification."
   - q: "Does the report establish that a particular company committed an offense?"
-    a: "No. The October 20 report attributed a suspected mechanism to the Southern Taiwan Science Park Bureau and said the cause was still being examined. Criminal liability requires proof of the offense, and the presumption of innocence applies until a conviction is final."
+    a: "No. The October 20 report attributed a suspected mechanism to the Southern Taiwan Science Park Bureau and said the cause was still being examined. On October 21, prosecutors released two on-site supervisors on bail on suspicion of negligent homicide, but that is an investigative step, not a charge or a finding of guilt. Criminal liability requires proof of the offense, and the presumption of innocence applies until a conviction is final."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
@@ -68,7 +68,7 @@ Article 25 treats joint damages separately from occupational compensation. Its s
 
 Other claims may require different evidence. [Civil Code Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184) addresses tort liability, while [Criminal Code Article 276](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=276) concerns causing death through negligence. Neither makes liability follow automatically from a job title or a contractor's presence on site.
 
-No criminal finding follows from the report. Under [Code of Criminal Procedure Article 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=154), an accused person is presumed innocent until a conviction is final, and criminal facts must be proved by evidence. The suspected bolt failure remains under investigation.
+A criminal investigation is under way. [CNA reported on the evening of October 21](https://www.cna.com.tw/news/asoc/202610210255.aspx) that the Qiaotou District Prosecutors Office had inspected the site and examined the bodies. After questioning, prosecutors found strong suspicion of negligent homicide against two on-site supervisors, one from a steel-structure firm and one from its subcontractor, Shang Hao Machinery (上昊機械). Each was released on NT$1 million bail with a residence restriction, and prosecutors said they would keep investigating the cause and whether anyone bears criminal responsibility. None of this is a conviction. Under [Code of Criminal Procedure Article 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=154), an accused person is presumed innocent until a conviction is final, and criminal facts must be proved by evidence. The suspected bolt failure remains under investigation.
 
 ## Documents that connect the people and the project
 
@@ -79,6 +79,7 @@ Our offices are at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 
 ## Sources
 
 - United Daily News, [Kaohsiung TSMC construction accident: death toll rises to four](https://udn.com/news/story/7320/9827672), October 21, 2026, 8:56 a.m., updated 9:09 a.m. Taiwan time.
+- CNA, [Four deaths at TSMC Kaohsiung site: two on-site supervisors released on NT$1 million bail each](https://www.cna.com.tw/news/asoc/202610210255.aspx), October 21, 2026, 5:31 p.m., updated 5:51 p.m. Taiwan time.
 - CNA, [Kaohsiung TSMC construction accident: three dead and one injured; steel installation stopped](https://www.cna.com.tw/news/asoc/202610200361.aspx), October 20, 2026, updated 11:02 p.m. Taiwan time.
 - Occupational Safety and Health Act, [Article 25](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=25), [Article 26](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=26), [Article 27](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=27) and [Article 37](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=37), current text checked October 21, 2026.
 - Taiwan Occupational Safety and Health Administration (Ministry of Labor), [amendment implementation notice](https://www.osha.gov.tw/48110/48713/207079/207115/207278/post), effective July 1, 2026.
@@ -86,4 +87,4 @@ Our offices are at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 
 - Labor Standards Act, [Article 59](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=59) and [Article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=62), checked October 21, 2026.
 - Civil Code, [Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184); Criminal Code, [Article 276](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=276); Code of Criminal Procedure, [Article 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=154), checked October 21, 2026.
 
-Checked: October 21, 2026
+Checked: October 22, 2026

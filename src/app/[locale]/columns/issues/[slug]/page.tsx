@@ -17,6 +17,7 @@ import { extractColumnToc } from '@/lib/column-toc';
 import { getConsultationPublicMailto, CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { buildFolioAuthorityCard } from '@/lib/intl-design-article';
+import { folioArticleCopy } from '@/data/intl-design-ui';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { issueBoardCopy, issueBoardPath } from '@/data/issue-board';
@@ -51,11 +52,10 @@ function FolioIssueAttorney({ locale }: { locale: 'es' | 'fr' }) {
   const card = buildFolioAuthorityCard(locale);
   return (
     <div data-issue-attorney={locale}>
-      <h3 className="blog-sidebar-title">{AI_COLUMN_ATTORNEY_HEADING[locale]}</h3>
+      <h3 className="blog-sidebar-title">{folioArticleCopy[locale].consultingAttorney}</h3>
       {card ? (
         <>
-          <p className="blog-sidebar-text"><strong>{card.name}</strong><br />{card.role}</p>
-          <Link href={card.lawyersHref} className="blog-related-link">{card.lawyersLabel}</Link>
+          <p className="blog-sidebar-text"><Link href={card.lawyersHref} className="blog-related-link">{card.name}</Link><br />{card.role}</p>
         </>
       ) : null}
     </div>
@@ -196,7 +196,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={post.featuredImage} alt="" aria-hidden="true" className={styles.heroBackdrop} />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={post.featuredImage} alt={locale === 'vi' ? post.featuredImageAlt || post.title : post.title} aria-describedby={locale === 'vi' && post.featuredImageCaption ? 'issue-image-caption' : undefined} className="blog-hero-img" />
+          <img src={post.featuredImage} alt={locale === 'vi' || isFolioIssueLocale(locale) ? post.featuredImageAlt || post.title : post.title} aria-describedby={(locale === 'vi' || isFolioIssueLocale(locale)) && post.featuredImageCaption ? 'issue-image-caption' : undefined} className="blog-hero-img" />
           <div className="blog-hero-overlay" />
         </div>
         <div className="container blog-hero-inner">
@@ -209,7 +209,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           </div>
         </div>
       </section>
-      {locale === 'vi' && post.featuredImageCaption ? (
+      {(locale === 'vi' || isFolioIssueLocale(locale)) && post.featuredImageCaption ? (
         <div className="container">
           <p id="issue-image-caption" className={styles.imageCaption} data-column-image-caption>{post.featuredImageCaption}</p>
         </div>
@@ -220,7 +220,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
             <p className={boardStyles.dateNote} data-issue-date-note>{t.dateNote}</p>
             {tocEntries.length >= MIN_TOC_SECTIONS ? <ColumnToc entries={tocEntries} label={t.tocLabel} /> : null}
             <ColumnGeneratedVideo locale={locale} slug={post.slug} source="issue" autoPlay={resolveTrafficSubject(post, 'issue') !== null} />
-            <ColumnContent content={post.content} consultationLocale={locale === 'vi' || isFolioIssueLocale(locale) ? locale : undefined} locale={shell} uiLocale={locale === 'vi' ? 'vi' : shell} />
+            <ColumnContent content={post.content} consultationLocale={locale === 'vi' || isFolioIssueLocale(locale) ? locale : undefined} locale={shell} uiLocale={locale === 'vi' ? 'vi' : shell} tableScrollHint={isFolioIssueLocale(locale) ? folioArticleCopy[locale].tableScrollHint : undefined} />
             {faqItems.length > 0 ? (
               <section className="column-faq" aria-label={t.faqHeading}>
                 <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>

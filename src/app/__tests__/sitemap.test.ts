@@ -172,6 +172,13 @@ describe('sitemap column lastModified', () => {
     sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
   });
 
+  it('lists an issue board only once the locale has a published piece (fr yes, es not before its first)', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const urls = (await sitemap()).map((entry) => entry.url);
+    expect(urls.some((url) => url.endsWith('/fr/columns/issues'))).toBe(getAllIssuePosts('fr').length > 0);
+    if (getAllIssuePosts('es').length === 0) expect(urls.some((url) => url.includes('/es/columns/issues'))).toBe(false);
+  });
+
   it('advertises column 051 only in its three published languages', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();

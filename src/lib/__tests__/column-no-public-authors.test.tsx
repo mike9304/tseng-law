@@ -131,7 +131,7 @@ describe('all public columns omit author attribution (2026-10-20)', () => {
     const posts = getAllIssuePosts(locale);
     if (posts.length === 0) {
       // Board locale without a published piece yet: the board stays hidden (404) and has no metadata.
-      await expect(IssuesPage({ params: Promise.resolve({ locale }), searchParams: Promise.resolve({}) })).rejects.toThrow();
+      await expect(IssuesPage({ params: Promise.resolve({ locale }), searchParams: Promise.resolve({}) })).rejects.toThrow('Unexpected missing fixture'); // notFound() is mocked above
       expect(await issuesMetadata({ params: Promise.resolve({ locale }) })).toEqual({});
       return;
     }
@@ -152,6 +152,19 @@ describe('all public columns omit author attribution (2026-10-20)', () => {
       expect(post.content, `${locale}/${post.slug}`).not.toMatch(bodyByline);
       expect(post.featuredImageAlt ?? '').not.toMatch(attribution);
     }
+  });
+
+  it('fr issue page uses the French consultation mail, attorney card and caption; boards without pieces are left out of hreflang', async () => {
+    const posts = getAllIssuePosts('fr');
+    expect(posts.length).toBeGreaterThan(0);
+    const html = renderToStaticMarkup(await IssuePage({ params: Promise.resolve({ locale: 'fr', slug: posts[0].slug }) }));
+    expect(html).toContain('subject=%5Btseng-law.com%20Consultation%5D%20Affaire');
+    expect(html).toContain('data-issue-attorney="fr"');
+    expect(html).toContain('Avocate pour les consultations');
+    expect(html).toContain('Scène fictive');
+    const languages = Object.keys((await issuesMetadata({ params: Promise.resolve({ locale: 'ko' }) })).alternates?.languages ?? {});
+    expect(languages).toContain('fr');
+    if (getAllIssuePosts('es').length === 0) expect(languages).not.toContain('es');
   });
 
   it.each(siteLocales)('%s traffic board and traffic article, including original lawyer content', async (locale) => {

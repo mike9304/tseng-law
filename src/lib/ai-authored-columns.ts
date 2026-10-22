@@ -74,6 +74,4 @@ export const AI_COLUMN_ATTORNEY_HEADING: Record<string, string> = {
   'zh-hant': '諮詢律師',
   en: 'Consulting Attorney',
   ja: 'ご相談いただける弁護士',
-  es: 'Abogado para su consulta',
-  fr: 'Avocat consulté',
 };

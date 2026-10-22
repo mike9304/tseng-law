@@ -13,6 +13,8 @@ import { EnIssuesShell } from '@/components/en-design/EnColumns';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { ISSUE_BOARD_LOCALES, getAllColumnPosts, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
 import { issueBoardCopy, issueBoardPath } from '@/data/issue-board';
+import { isIntlDesignLocale } from '@/lib/intl-design-locales';
+import { folioColumnsCopy } from '@/data/intl-design-columns-ui';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -76,6 +78,7 @@ export default async function IssueBoardPage(props: {
       <PageHeader locale={locale} label={locale === 'en' ? copy.columns : copy.label} title={copy.title} description={copy.description} />
       {isApplePresentationLocale(locale) ? <ZhHantBoardSwitch active="issues" expertCount={locale === 'vi' ? getAllColumnPosts('vi').length : undefined} issueCount={posts.length} locale={locale} /> : <IssueBoardTabs locale={locale} active="issues" />}
       <ColumnsGrid
+        {...(isIntlDesignLocale(locale) ? { folioLabels: folioColumnsCopy[locale] } : {})}
         locale={locale}
         posts={toColumnListItems(posts)}
         hrefBase={boardPath}

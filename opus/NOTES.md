@@ -321,3 +321,4 @@
 - 10-22 12:29 대기: 12:19 이후 변화는 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.
 - 10-22 12:39 대기: 12:29 이후 변화는 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.
 - 10-22 12:49 대기: 12:39 이후 변화는 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.
+- 10-22 12:59 대기: 12:49 이후 변화는 air-opus·grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-22 11:21). 새 브리지·FACTS·Astra 채점·이 레인 Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기(Air·Grok 동의 완료), r8b Bot·사용자 최종 확인 대기.

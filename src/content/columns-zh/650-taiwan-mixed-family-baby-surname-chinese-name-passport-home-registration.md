@@ -67,6 +67,6 @@ author: "legal-ai-assistant"
 - [姓名條例](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030011)第1條至第3條。
 - [護照條例施行細則](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=E0030004&flno=14)第14條。
 - 內政部核發英文戶籍謄本作業要點部分規定修正規定（新北市中和區戶政事務所公告，[PDF](https://www.zhonghe.ris.ca.ntpc.gov.tw/Content/Upload/file/20250710/6388775407869299149151520.pdf)）第3點、第4點。
-- 韓國法制處「찾기쉬운 생활법령정보」[결혼이민자：자녀의 출생 신고](https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=47&ccfNo=3&cciNo=2&cnpClsNo=1)（引用韓國民法第781條）。
+- 韓國法制處「簡明生活法令資訊」[結婚移民者：子女的出生申報](https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=47&ccfNo=3&cciNo=2&cnpClsNo=1)（引用韓國民法第781條）。
 - 日本裁判所「[氏の変更許可](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_19/index.html)」。
 - 日本法務省「[国際結婚、海外での出生等に関する戸籍Ｑ＆Ａ](https://www.moj.go.jp/MINJI/minji15.html)」Q6。

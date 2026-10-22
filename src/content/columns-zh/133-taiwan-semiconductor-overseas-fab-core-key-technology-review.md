@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "對外投資審查", "國家核心關鍵技術", "產業創新條例"]
 featured_image: "../images/semiconductor/taiwan-semiconductor-overseas-fab-core-key-technology-review/featured-01.webp"
 featured_image_alt: "兩隻戴淺色手套的手握著圓形晶圓的邊緣，晶圓表面映著燈光，背景是金屬工作檯。"
-featured_image_caption: "AI 生成的虛構場景示意圖，非真實公司、廠房或人物。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "台灣半導體公司到美國、日本或德國設廠，一定要先經投審會核准嗎？"
     a: "依現行的公司國外投資處理辦法，投資金額逾新臺幣15億元須在實行前向經濟部申請核准；15億元以下可事前申請，或在實行後6個月內報請備查。已取得核准的公司，仍須依第8條在實行投資後6個月內檢附文件送主管機關備查。2025年修正的產業創新條例第22條將事前核准擴及特定國家或地區、特定產業或技術，但施行日期由行政院另訂，到2026年10月3日仍未施行；同條例2026年9月30日再次修正公布的是第19條之1、第23條之1、第23條之2和第72條，沒有動到第22條。"

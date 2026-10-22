@@ -11,7 +11,7 @@ audience: ["vi"]
 read_time: "7 phút đọc"
 featured_image: "/images/columns/20261004/vi-agency-fees-hero-1600x900.webp"
 featured_image_alt: "Trên bàn gỗ có một tập giấy trắng, một máy tính cầm tay với màn hình không hiển thị và hai bìa hồ sơ không có nhãn."
-featured_image_caption: "Hình minh họa hư cấu do AI tạo ra, không phải ảnh chụp một đơn vị môi giới, buổi tư vấn hoặc vụ việc có thật."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "/images/columns/20261004/vi-agency-fees-hero-1600x900.webp"
 ---
 # Đổi chủ ở Đài Loan có phải trả thêm “phí mua việc” cho môi giới?

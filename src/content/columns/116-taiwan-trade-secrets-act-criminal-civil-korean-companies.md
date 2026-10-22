@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["semiconductor", "영업비밀", "대만 영업비밀법", "민사소송", "형사책임", "한국 소부장"]
 featured_image: "../images/semiconductor/taiwan-trade-secrets-act-criminal-civil-korean-companies/featured-01.webp"
 featured_image_alt: "긴 무광 짙은 회색 석재 벤치 위에 투명한 유리 구와 코르크 마개가 꽂힌 작은 호박색 유리병이 떨어져 놓여 있다. 부드러운 자연광이 벤치를 가로지르고 오른쪽은 비어 있다."
-featured_image_caption: "AI가 생성한 가상의 장면입니다. 실제 기업, 시설, 인물이나 사건의 자료가 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "비밀유지계약을 맺은 기술자료는 모두 대만 영업비밀법의 보호를 받나요?"
     a: "아닙니다. 계약상 비밀유지 의무와 별개로, 대만 영업비밀법 제2조의 비공지성, 비밀성에 따른 실제 또는 잠재적 경제가치, 소유자의 합리적 비밀유지 조치를 해당 정보별로 살펴야 합니다."

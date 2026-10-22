@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 featured_image_alt: "흐린 낮 차 안에서 바라본 고가 도로에 검은 헬멧을 쓴 운전자가 탄 스쿠터가 빨간 후미등을 켜고 있고, 왼쪽 차로에는 회색 화물칸을 단 대형 트럭이 보입니다."
-featured_image_caption: "이 글에서 다루는 주행 중 감속과 정지 상황을 설명하기 위해 AI로 만든 가상의 장면입니다. 판결 속 실제 사건을 찍은 사진이나 재현한 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 ---
 # 차로를 바꾸다 2초 멈춘 승용차와 다리 위에 선 오토바이, 급제동 처분은 한쪽만 남았다

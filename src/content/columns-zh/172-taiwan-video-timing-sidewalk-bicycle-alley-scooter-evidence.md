@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約5分鐘閱讀"
 featured_image: "/images/columns/20261004/alley-video-evidence-1600x900.webp"
 featured_image_alt: "空曠巷道通往人行道，右側建築柱列旁的退縮空間停放一輛自行車。"
-featured_image_caption: "AI 生成之虛構示意圖，呈現一般巷口、建築柱列與停放自行車的街景，非本案影像截圖或事故重建，亦不表示任何人的行進路線、速度或責任。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261004/alley-video-evidence-1600x900.webp"
 ---
 # 影片忽快忽慢，能證明車速嗎？人行道自行車與巷口機車的一審判斷

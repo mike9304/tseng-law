@@ -14,7 +14,7 @@ targetMarket: "United States"
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/507-taiwan-investor-company-records-access.webp"
 featured_image_alt: "Two people reviewing a small set of company folders across a meeting table, with an open laptop and closed records cabinet nearby."
-featured_image_caption: "AI-generated illustration of a fictional records review; it does not depict an actual company or investor meeting."
+featured_image_caption: "Fictional scene"
 ---
 
 A shareholder register and the bank statements behind last quarter's expenses do not fall under the same access right in every Taiwan company. Before sending another demand for “all financial records,” identify the company's legal form and the particular documents being withheld. Those details determine which statutory or contractual right to use.

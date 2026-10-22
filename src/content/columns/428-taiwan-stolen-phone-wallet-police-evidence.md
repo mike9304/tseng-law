@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/428-taiwan-stolen-phone-wallet-police-evidence/featured-01.webp"
 featured_image_alt: "빈 휴대전화 포장 상자와 클립으로 묶은 종이 두 장, 입구가 열린 남색 주머니를 표현한 입체 삽화"
-featured_image_caption: "AI로 만든 가상의 삽화입니다. 실제 의뢰인이나 분실·도난 사건의 물품과 기록을 보여 주는 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만에서 휴대전화·지갑이 없어졌을 때: 도난 신고와 분실 접수
 

@@ -10,7 +10,7 @@ categories: ["대만 법률정보"]
 topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
-featured_image_caption: "AI로 만든 설명용 이미지입니다. 실제 조사실이나 사건을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "회사가 변호사 비용을 내면 직원 상담 내용도 모두 받을 수 있나요?"
     a: "비용 지급만으로 그렇게 판단할 수 없습니다. 변호사윤리규범 제33조는 제3자 지급에 의뢰인의 고지 후 동의와 변호사의 독립성 유지 등을 요구하며, 이 경우에도 의뢰인에 대한 비밀유지 의무가 남는다고 정합니다. 보고 범위와 의뢰인이 누구인지 확인해야 합니다."

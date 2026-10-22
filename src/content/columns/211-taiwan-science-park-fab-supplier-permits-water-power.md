@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "대만 과학원구", "한국 반도체 협력사", "용수", "전력", "환경영향평가", "재생에너지"]
 featured_image: "../images/semiconductor/taiwan-science-park-fab-supplier-permits-water-power/featured-01.webp"
 featured_image_alt: "옅은 콘크리트 수로에 무광 검은 케이블과 고인 물이 든 투명한 관이 나란히 놓여 있습니다. 관을 따라 따뜻한 호박색 빛이 비치고, 양쪽 콘크리트 바닥은 비어 있습니다."
-featured_image_caption: "AI로 생성한 가상의 장면입니다. 실제 회사·시설·인물을 촬영하거나 재현한 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "과학원구 입주 승인을 받으면 용수와 전력도 확보되나요?"
     a: "아닙니다. 원구 수전 관리 규정은 공장을 짓거나 임차할 때 관리국에 용수·전력 계획서를 내고 심사를 받은 다음, 승인 문서로 공급기관과 전기사업자에게 공급을 신청하도록 합니다. 신주 관리국은 입주 신청 단계의 수요 평가와 정식 임차 후 계획서도 구분합니다. 실제 공급 시점과 용량은 해당 부지의 심사 결과와 공급계약을 확인해야 합니다."

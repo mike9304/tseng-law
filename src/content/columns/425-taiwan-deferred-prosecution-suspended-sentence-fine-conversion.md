@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/425-taiwan-deferred-prosecution-suspended-sentence-fine-conversion/featured-01.webp"
 featured_image_alt: "서류가 꽂힌 남색·회색·적갈색 파일 세 개가 나무 정리함에 나란히 놓인 모습"
-featured_image_caption: "문서의 종류를 구분해 보관하는 모습을 AI로 생성한 가상 장면입니다. 실제 의뢰인이나 사건을 촬영한 것이 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만 기소유예·집행유예·벌금 대체, 받은 문서에 따라 달라지는 의무
 

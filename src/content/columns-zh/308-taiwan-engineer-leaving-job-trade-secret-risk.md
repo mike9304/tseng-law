@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["semiconductor", "營業秘密", "國家安全法", "國家核心關鍵技術", "競業禁止"]
 featured_image: "../images/308-taiwan-engineer-leaving-job-trade-secret-risk/featured-01.webp"
 featured_image_alt: "辦公桌上的紙箱裝著盆栽與筆記本，旁邊是闔上的筆電與翻面的空白識別證"
-featured_image_caption: "AI 生成的虛構場景示意圖，非真實公司、廠房或人物。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "離職前把公司的製程文件列印或寄到私人信箱，會構成犯罪嗎？"
     a: "文件如果符合營業秘密法第2條的三個要件，未經授權或逾越授權範圍重製，就可能構成第13條之1的罪，這是告訴乃論之罪。本文引用的判決裡，離職前列印工作上不需要的製程文件、改檔名後把資料寄到私人信箱，都被認定為逾越授權範圍的重製。是否成罪仍要看個案中的秘密性、保密措施與主觀意圖。"

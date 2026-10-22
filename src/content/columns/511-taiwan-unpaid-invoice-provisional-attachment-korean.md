@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/511-taiwan-unpaid-invoice-provisional-attachment-korean.webp"
 featured_image_alt: "창고가 보이는 사무실 창가에 놓인 서류철과 여러 장의 거래 서류"
-featured_image_caption: "미수금 청구를 앞두고 거래 자료를 정리하는 상황을 표현한 AI 생성 이미지입니다. 실제 사건이나 사업장 사진은 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 대만 거래처가 창고를 비우거나 설비를 옮긴다는 말을 들었다면, 미지급 송장과 그 이야기를 전해 들은 경위부터 구분해 두어야 합니다. 물품대금을 받을 권리가 있다는 것과 나중에 집행할 재산이 부족해질 우려가 있다는 것은 법원에 각각 설명할 문제입니다. [대만 민사소송법 제522·523·526조](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001)는 가압류(假扣押)를 통해 금전채권의 집행을 보전할 수 있도록 하면서 청구와 가압류 사유를 모두 소명하도록 정합니다.

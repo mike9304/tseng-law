@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
-featured_image_alt: "AIで生成した架空の場面です。車内から見た夜の濡れた市街地の道路で、すぐ前の黒っぽいセダンのブレーキランプが赤く光っています。"
-featured_image_caption: "この記事で扱うような車同士の接近を示す、AIで生成した架空の場面です。実際の写真でも、判決で扱われた事件の再現でもありません。"
+featured_image_alt: "架空の場面です。車内から見た夜の濡れた市街地の道路で、すぐ前の黒っぽいセダンのブレーキランプが赤く光っています。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
 ---
 # 後ろの車のクラクションに急停止とバックで応じた運転者に、台湾の裁判所は正当防衛を認めなかった

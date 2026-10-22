@@ -11,7 +11,7 @@ categories:
 topic: "company"
 featured_image: "../images/ISSUE-20261014-04-taiwan-permit-application-delay-remedy-japanese/featured-01.webp"
 featured_image_alt: "人のいない行政窓口の待合空間と、閉じた書類ファイル"
-featured_image_caption: "行政窓口の待合空間を描いた架空のAI生成画像です。実在の申請案件や日本工商会の白書発表の写真ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261014-04-taiwan-permit-application-delay-remedy-japanese/featured-01.jpg"
 faq:
   - q: "台湾の許可申請は、すべて2か月で処理されますか？"
@@ -50,7 +50,7 @@ author: "legal-ai-assistant"
 
 日本本社と台湾側で進捗を共有するとき、申請書の控え、受理を示す記録、機関から届いた通知があれば、待っているのが正式な処分なのか、追加資料への対応なのかを整理できます。「審査中」という一言だけでは分からない、期間と手続の経過をたどる材料になります。
 
-画像は行政窓口の待合空間を描いた架空のAI生成画像で、実在の申請案件や日本工商会の白書発表を示すものではありません。
+架空の情景
 
 ## 参照資料
 

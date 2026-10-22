@@ -12,7 +12,7 @@ topic: "labor"
 tags: ["semiconductor", "海外派任", "勞動契約", "競業禁止"]
 featured_image: "../images/semiconductor/taiwan-semiconductor-employees-overseas-assignment-labor-law/featured-01.webp"
 featured_image_alt: "一只燕麥米色硬殼行李箱闔上箱蓋，帶著素面提把，獨自立在寬闊的磨面混凝土地坪上，前方空地橫過一道溫暖的晨光。"
-featured_image_caption: "AI生成示意圖，呈現虛構的行李箱與室內場景，並非真實公司、設施或人物的影像。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "簽過接受公司調動的條款，就一定要接受海外派任嗎？"
     a: "不能只看這一句。適用台灣勞動基準法時，調動不得違反勞動契約，並須符合第10條之1的五項原則；若涉及將勞務請求權讓與另一家公司，民法第484條另要求受僱人同意。具體結果仍取決於原約定、派任內容及生活利益等事實。"

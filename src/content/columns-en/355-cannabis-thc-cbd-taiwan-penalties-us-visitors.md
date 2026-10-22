@@ -11,8 +11,8 @@ categories:
 topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "../images/355-cannabis-thc-cbd-taiwan-penalties-us-visitors/featured-01.webp"
-featured_image_alt: "AI-generated fictional scene: a distant view of a vacant inspection hall with rows of empty stainless-steel tables and a long unmarked gray conveyor belt under cool daylight from high windows; no people, signage or text."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real airport, person or case."
+featured_image_alt: "Fictional scene: a distant view of a vacant inspection hall with rows of empty stainless-steel tables and a long unmarked gray conveyor belt under cool daylight from high windows; no people, signage or text."
+featured_image_caption: "Fictional scene"
 faq: [{"q": "Does legal cannabis in my US state become legal to bring into Taiwan?", "a": "No. Taiwan classifies cannabis under its own Category 2 schedule. Conduct may involve possession, transport or other offenses depending on the facts. Personal use is not an exemption from the transport offense, although Article 17(3) allows a reduction for personal-use transport in minor circumstances."}, {"q": "Is every CBD product below 10 ppm THC legal in Taiwan?", "a": "No. The narcotics schedule has specific plant-product and THC rules; a low-THC claim does not settle product classification. TFDA’s September 2026 guidance says CBD may not be added to food or cosmetics and explains a separate import process for CBD medicines. Taiwan now has approved CBD medicine licenses."}, {"q": "Does a cannabis allegation always mean imprisonment?", "a": "No single outcome follows from the label. Ordinary Category 2 possession under Article 11(2) includes a criminal-fine alternative, while transport carries a very different statutory range. Use offenses have additional treatment and deferred-prosecution procedures. The substance, conduct, evidence, prior procedures and available statutory conditions must be assessed."}]
 audience: ["en"]
 author: "legal-ai-assistant"

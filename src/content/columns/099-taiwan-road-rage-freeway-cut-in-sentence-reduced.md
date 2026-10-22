@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
-featured_image_alt: "AI로 만든 가상 장면입니다. 낮 시간 도심 고속도로를 차 안에서 앞유리 너머로 본 모습으로, 바로 앞에 후미등이 켜진 흰색 소형 탑차가 달리고 양옆 차로에 짙은 회색 세단과 흰색 SUV가 있으며 멀리 고가도로와 고층 건물이 보입니다."
-featured_image_caption: "AI로 만든 가상 장면입니다. 차 안에서 본 흰색 탑차와 주변 차로의 차량을 그린 이미지로, 실제 사건의 사진이나 판결이 인정한 사실을 재현한 장면이 아닙니다."
+featured_image_alt: "가상의 장면입니다. 낮 시간 도심 고속도로를 차 안에서 앞유리 너머로 본 모습으로, 바로 앞에 후미등이 켜진 흰색 소형 탑차가 달리고 양옆 차로에 짙은 회색 세단과 흰색 SUV가 있으며 멀리 고가도로와 고층 건물이 보입니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
 ---
 # 택시 자동 제동까지 부른 끼어들기, 고등법원은 왜 징역 4개월을 구류 40일로 낮췄나

@@ -12,7 +12,7 @@ topic: "labor"
 tags: ["semiconductor", "labor-standards-act", "working-hours", "overtime", "field-service", "Taiwan"]
 featured_image: "../images/semiconductor/us-equipment-vendor-field-engineers-taiwan-labor-law/featured-01.webp"
 featured_image_alt: "A loosely coiled ivory cable lies on the left of a pale grey raised access floor and ends in a plain matte clay-orange connector boot, with soft morning light leaving the rest of the floor empty."
-featured_image_caption: "AI-generated illustration of a fictional interior; it does not depict a real company, facility or person."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Can a U.S. equipment vendor treat its Taiwan field engineers as salaried-exempt and skip overtime pay?"
     a: "No. Taiwan's Labor Standards Act has no general exempt category. Article 84-1 flexibility applies only to worker categories the Ministry of Labor has designated, under a written agreement submitted to the local authority for approval and record. The ministry's list checked on October 5, 2026 contains no semiconductor equipment service category, and the ministry states that designation never means unlimited hours or no overtime pay."

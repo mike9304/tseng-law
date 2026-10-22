@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約7分鐘閱讀"
 featured_image: "/images/columns/20261003/tseng-law-camera-evidence-1600x900.webp"
 featured_image_alt: "柔和日光下，桌面擺放未見品牌標示的行車紀錄器、讀卡機與闔上的灰褐色筆記本。"
-featured_image_caption: "AI 生成的情境示意圖，非本案現場或實際證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/tseng-law-camera-evidence-1600x900.webp"
 ---
 # 「只是擦撞」，為什麼法院認為是故意逼車？多個鏡頭還原大貨車攔擋

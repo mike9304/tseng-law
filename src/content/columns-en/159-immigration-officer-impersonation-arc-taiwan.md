@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b02/immigration-officer-impersonation-arc-taiwan.png"
 featured_image_alt: "A person holding a telephone receiver and a paper folder beside a laptop displaying generic contact icons."
-featured_image_caption: "AI-generated fictional scene; the person, screen and papers do not represent an actual resident, government webpage, identity document or reported incident."
+featured_image_caption: "Fictional scene"
 ---
 
 # An ‘Immigration Officer’ Calls About Your Taiwan ARC

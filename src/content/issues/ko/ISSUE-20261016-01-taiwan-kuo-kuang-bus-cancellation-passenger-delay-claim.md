@@ -11,7 +11,7 @@ categories:
 topic: litigation
 featured_image: "../images/ISSUE-20261016-01-taiwan-kuo-kuang-bus-cancellation-passenger-delay-claim/featured-01.webp"
 featured_image_alt: "사람 없는 조용한 터미널 승강장에 세워진 상표 없는 시외버스."
-featured_image_caption: "AI로 만든 가상의 버스터미널 장면입니다. 실제 국광버스 차량이나 이번 결행 현장을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261016-01-taiwan-kuo-kuang-bus-cancellation-passenger-delay-claim/featured-01.jpg"
 faq:
   - q: "국광버스가 과태료를 내면 승객에게도 그 돈이 지급되나요?"
@@ -42,7 +42,7 @@ author: "legal-ai-assistant"
 
 승차권은 약속한 운송 내용을, 결행 안내는 운행하지 않은 사유와 안내 시점을, 대체 교통편의 영수증은 실제 지출을 보여 줍니다. 같은 노선의 승객이라도 추가 지출의 유무와 내역에 따라 청구 내용이 달라집니다. 회사에 제시하는 청구에서도 승차권 대금의 반환과 추가 비용의 배상을 구분하면 어떤 부분에 다툼이 남는지 분명해집니다.
 
-대표 이미지는 AI로 만든 가상의 터미널이며, 실제 국광버스나 이번 결행 현장을 촬영한 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

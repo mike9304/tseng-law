@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261015-02-taiwan-motorcycle-plate-angle-proposal-current-rules/featured-01.webp"
 featured_image_alt: "주택가 주차 구획에 세워진 회색 스쿠터의 뒷모습과 글자가 없는 흰 번호판."
-featured_image_caption: "AI로 만든 가상의 스쿠터입니다. 실제 단속 사진이나 법정 부착 각도를 측정해 보여 주는 자료가 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261015-02-taiwan-motorcycle-plate-angle-proposal-current-rules/featured-01.jpg"
 faq:
   - q: "지금 대만에서는 오토바이 번호판을 위로 40도까지 기울여도 되나요?"
@@ -38,7 +38,7 @@ author: "legal-ai-assistant"
 
 중고 스쿠터를 구입하는 한국인에게는 출고 당시의 거치대와 현재 부착 상태가 같은지, 별도 장치를 달거나 번호를 가렸는지가 구체적인 확인 대상입니다. 판매자의 설명과 당시 사진, 검사 자료는 원래 상태와 이후 변경을 구별하는 데 쓰입니다. 개정안의 숫자에 맞춰 임의로 거치대를 바꾸는 행위가 현재 규정에 맞는다는 보장은 없습니다.
 
-대표 이미지는 AI로 만든 가상의 스쿠터이며, 실제 단속 사진이나 법정 각도를 보여 주는 자료가 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

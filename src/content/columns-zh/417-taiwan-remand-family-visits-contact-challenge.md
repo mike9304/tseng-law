@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/417-taiwan-remand-family-visits-contact-challenge/featured-01.webp"
 featured_image_alt: "木凳上的帆布提袋內放著灰藍色文件夾，前方整齊擺放手機與透明卡套。"
-featured_image_caption: "AI 生成的虛構示意畫面，呈現家屬整理資料的情境，並非真實當事人或案件現場。"
+featured_image_caption: "虛構情境"
 ---
 # 家人被羈押後：接見、禁見與聲請停止羈押
 

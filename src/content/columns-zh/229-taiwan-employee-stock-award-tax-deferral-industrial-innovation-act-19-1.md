@@ -12,7 +12,7 @@ topic: "tax"
 tags: ["semiconductor", "employee-stock-awards", "tax-deferral", "industrial-innovation-act"]
 featured_image: "../images/semiconductor/taiwan-employee-stock-award-tax-deferral-industrial-innovation-act-19-1/featured-01.webp"
 featured_image_alt: "畫面左側是一疊厚厚的空白象牙色紙張，看得到最上面一張的紙面與側邊的毛邊紙緣，中間繫著一條酒紅色棉質扁帶；右側深色胡桃木桌面空無一物。"
-featured_image_caption: "AI生成的虛構示意圖，並非真實企業、設施或人物。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "限制員工權利新股在2026年交付、2027年才既得，可緩課的額度是500萬元還是1,000萬元？"
     a: "依條文文義是1,000萬元。《產業創新條例緩課所得稅適用辦法》第7條以既得條件達成日為限制員工權利新股的可處分日，額度又按可處分日年度計算，這批股票因此落在2027年度。條文沒有另訂過渡規定，資料庫所載該辦法尚未配合修正，截至2026年10月5日也未查得財政部函釋，個案宜待子法與函釋確認。"

@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "證人傳票", "拒絕證言", "刑事證人請假"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "窗邊的空桌與相對擺放的椅子"
-featured_image_caption: "AI生成的程序說明示意圖，並非真實偵訊室或案件照片。"
+featured_image_caption: "虛構情境"
 faq: [{"q": "有拒絕證言的理由，就可以不去嗎？", "a": "拒絕證言的事由不會自行免除出庭義務。依第183條，證人須釋明拒絕的原因，偵查中由檢察官決定，審判中由審判長或受命法官裁定。不能到庭時，仍應向傳喚機關說明並確認是否獲准變更期日。 第181條的情形，亦得命具結以代釋明。"}, {"q": "外籍同事作證需要通譯嗎？", "a": "語言不通的受訊問人，依第99條應由通譯傳譯；第192條將這項規定準用於證人訊問。應在到庭前向承辦單位說明需要的語言。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"

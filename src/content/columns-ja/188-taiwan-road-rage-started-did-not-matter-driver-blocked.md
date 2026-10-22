@@ -12,7 +12,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 featured_image_alt: "車内から見た昼間の下り坂に灰色のセダンが斜めに止まり、長い棒を持った人が開いたドアの横に立っています。"
-featured_image_caption: "この記事で扱うような路上での対立を説明するために、AIで生成した架空の場面です。判決で扱われた事件を撮影した写真でも、その事実関係を再現した画像でもありません。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 ---
 # 6分走った先でも、同じ車に道をふさがれた

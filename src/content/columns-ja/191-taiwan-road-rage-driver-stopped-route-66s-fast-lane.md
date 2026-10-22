@@ -12,7 +12,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 featured_image_alt: "後続車のフロントガラス越しに、夜の複数車線の道路でコンクリートの防護壁沿いの車線にいる濃いグレーのSUVが、赤いブレーキランプをつけているのが見えます。"
-featured_image_caption: "記事で取り上げるような道路上の状況を示すため、AIで生成した架空の場面です。実際の写真でも、判決で扱われた事件を再現した画像でもありません。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 ---
 # パッシングのあと、台66線の追越車線がふさがれた

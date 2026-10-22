@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/406-taiwan-criminal-judgment-summary-appeal-service/featured-01.webp"
 featured_image_alt: "Anonymous hands arrange a stack of cream papers beside an opened kraft envelope on a pale oak bench."
-featured_image_caption: "AI-generated illustration of a fictional document-preparation scene. It does not show an actual client, court document or event."
+featured_image_caption: "Fictional scene"
 ---
 # A Taiwan criminal judgment arrived: when the appeal period starts
 

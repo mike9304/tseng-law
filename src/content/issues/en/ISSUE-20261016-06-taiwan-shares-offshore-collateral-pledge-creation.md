@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261016-06-taiwan-shares-offshore-collateral-pledge-creation/featured-01.webp"
 featured_image_alt: "Closed charcoal and navy folders, a glass paperweight and a pen on a table in an empty financial office, with a city skyline through the window."
-featured_image_caption: "AI-generated illustration of a fictional financial office; it shows no actual bank, financing documents or evidence of a completed pledge."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261016-06-taiwan-shares-offshore-collateral-pledge-creation/featured-01.jpg"
 faq:
   - q: "Did Taiwan introduce this pledge framework on October 15?"
@@ -52,7 +52,7 @@ For the collateral received under the collateral rules, Article 18-1 limits the 
 
 An offshore default clause consequently needs to be read alongside the Taiwan custodian's permitted instructions and procedures. The documents may define when a contractual default occurs, but that definition does not itself complete a Taiwan disposal or release. Pricing, collateral valuation and the effect of foreign insolvency law require their own analysis; the announcement supplies no answer to those questions.
 
-Illustration: AI-generated fictional financial office; no actual bank or financing document is depicted.
+Fictional scene
 
 ## Sources
 

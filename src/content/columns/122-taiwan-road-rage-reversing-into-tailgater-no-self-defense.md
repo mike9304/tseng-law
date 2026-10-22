@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
-featured_image_alt: "AI로 만든 가상의 장면입니다. 차 안에서 본 밤의 젖은 시내 도로에 바로 앞 짙은 색 세단의 뒷모습과 붉게 켜진 브레이크등이 보입니다."
-featured_image_caption: "이 글에서 다루는 것과 같은 유형의 운전 상황을 보여 주기 위해 AI로 만든 가상의 장면입니다. 실제 사진이나 판결 속 사건의 재현이 아닙니다."
+featured_image_alt: "가상의 장면입니다. 차 안에서 본 밤의 젖은 시내 도로에 바로 앞 짙은 색 세단의 뒷모습과 붉게 켜진 브레이크등이 보입니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
 ---
 # 경적 울린 뒤차에 후진으로 세 번 부딪친 앞차, 법원은 정당방위로 보지 않았다

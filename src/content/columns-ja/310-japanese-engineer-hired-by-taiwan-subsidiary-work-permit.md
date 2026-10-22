@@ -12,7 +12,7 @@ topic: "visa"
 tags: ["semiconductor", "就労許可", "履約人員", "装置メーカー", "ゴールドカード"]
 featured_image: "../images/310-japanese-engineer-hired-by-taiwan-subsidiary-work-permit/featured-01.webp"
 featured_image_alt: "木の机に置かれた白いヘルメットと透明な保護メガネ、裏返しの名札と閉じたノート"
-featured_image_caption: "AI生成の架空の場面です。実在の企業、施設または人物を写したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "台湾子会社が日本人技術者を雇う場合、報酬に下限はありますか。"
     a: "資格審査標準第8条は、雇用される外国人の給与または所得報酬が労働部の公告額を下回ってはならないとしています。労働力発展署のFAQ（2026年5月13日更新）は、専門性・技術性の仕事（A類）の月平均額を原則47,971新台湾ドル以上とし、2017年8月14日付の公告を根拠に挙げています（2026年10月時点）。"

@@ -11,7 +11,7 @@ categories:
 topic: "company"
 featured_image: "../images/ISSUE-20261016-03-taiwan-forklift-road-permit-japanese-factories/featured-01.webp"
 featured_image_alt: "工場の荷さばき場に、荷物を載せずフォークを下げて停車したフォークリフトと、門の向こうに見える道路"
-featured_image_caption: "工場内の停車風景を描いた架空のAI生成画像です。報道された台中の車両や現場ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261016-03-taiwan-forklift-road-permit-japanese-factories/featured-01.jpg"
 faq:
   - q: "隣の倉庫まで3km以内なら、通行証は不要ですか？"
@@ -52,6 +52,6 @@ author: "legal-ai-assistant"
 
 通知書が届いた場面では、対象機械と通行証の有無、指摘された走行の内容が、処分の根拠を読む手掛かりになります。自社所有の機械か、外部事業者の機械かに加え、通知の名宛人が所有者なのか運転者なのかも、実際の使用状況と照合する材料になります。
 
-画像はAIで生成した架空の停車風景で、報道された車両や現場ではありません。
+画像は架空の停車風景で、報道された車両や現場ではありません。
 
 ニュース・法令確認日：2026年10月16日。台湾の道路走行に関する一般情報です。個別の通行可否は、機械の種類、事業者の資格、申請内容などによって異なります。

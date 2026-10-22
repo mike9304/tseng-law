@@ -12,7 +12,7 @@ topic: "labor"
 tags: ["semiconductor", "台湾子会社", "労働組合", "団体協約", "不当労働行為"]
 featured_image: "../images/semiconductor/taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary/featured-01.webp"
 featured_image_alt: "温かみのある灰色の壁に、オートミール色と濃い灰色の布製エプロンが、離れた木製のフックに掛かっている。オートミール色のエプロンには細いテラコッタ色のひもが下がり、右側の壁には何もない。"
-featured_image_caption: "AI生成の架空のイメージです。実在の企業、施設または人物を写したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "台湾の企業工会が従業員の過半数を組織していなければ、団体協約の交渉を断れますか。"
     a: "過半数に満たないという理由だけでは断れません。團體協約法第6条第3項第1号は企業工会を交渉資格のある労働側当事者に挙げ、同号には過半数要件がありません。産業工会などには別の資格基準があるため、まず組合の種類と相手方を確認します。"

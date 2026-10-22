@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/527-fraud-induced-contract-rescission-one-year-taiwan.webp"
 featured_image_alt: "一人在木桌前拿著兩張素色卡片，左側放著舊紙張與泛黃信封，右側是綠色資料夾中的紙張；旁邊有杯子和筆。"
-featured_image_caption: "AI生成的示意畫面，人物與文件均為虛構，並非真實契約、撤銷通知或案件照片。"
+featured_image_caption: "虛構情境"
 ---
 
 因詐欺而簽約，撤銷的期間從發現詐欺起算，不是等刑事判決確定才開始。[民法第93條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=93)規定，應在發現詐欺後一年內撤銷；自原意思表示後經過十年，即使發現受騙還不到一年，也不得撤銷。

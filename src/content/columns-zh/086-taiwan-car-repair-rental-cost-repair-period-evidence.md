@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約9分鐘閱讀"
 featured_image: "/images/columns/20261003/rental-car-cost-hero-1600x900.webp"
 featured_image_alt: "汽車鑰匙放在櫃檯上的空白文件夾板上，玻璃後方是一輛模糊的灰色小型車。"
-featured_image_caption: "AI 生成的假想租車情境示意圖，非實際案件照片。圖中空白文件不是實際租賃或賠償證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/rental-car-cost-hero-1600x900.webp"
 ---
 # 車送修就能請求租車費嗎？租車單還要對上修車期間

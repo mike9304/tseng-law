@@ -1387,7 +1387,7 @@ describe('English family column 275 — property, damages and support moved out 
       featured_image: propertyImage,
       featured_image_alt: propertyImageAlt,
       featured_image_caption:
-        'AI-generated fictional scene; it does not depict a real company, facility or person.',
+        'Fictional scene',
       faq: propertyFaq,
       audience: ['en'],
     });

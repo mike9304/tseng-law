@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261014-02-taiwan-election-ad-scam-political-donation-boundary/featured-01.webp"
 featured_image_alt: "조용한 회의 탁자 위에 놓인 흰 종이와 닫힌 남색 서류철, 연필."
-featured_image_caption: "AI로 만든 가상의 회의 장면입니다. 실제 정치행사나 후보자, 사건 자료를 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261014-02-taiwan-election-ad-scam-political-donation-boundary/featured-01.jpg"
 faq:
   - q: "대만에 법인을 세우면 정치헌금을 할 수 있나요?"
@@ -42,7 +42,7 @@ author: "legal-ai-assistant"
 
 이사회 직책 등 다른 요건도 있으므로, 외국인 등의 주주권이 30% 미만이라는 이유만으로 기부할 수 있다고 단정할 수 없습니다. 회사 형태와 구성원에 따라 살필 기준이 달라집니다. 정상적인 광고 거래인지, 경제적 지원이라면 기부 자격이 있는지는 별도로 판단해야 합니다.
 
-대표 이미지는 AI로 만든 가상의 회의 탁자이며, 실제 정치행사나 사건 자료를 촬영한 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

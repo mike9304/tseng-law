@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約6分鐘閱讀"
 featured_image: "/images/columns/20261003/tanker-column-hero-1600x900.webp"
 featured_image_alt: "暖色天光下的加油站棚下，一輛白色車頭、銀色圓筒槽體的油罐車位於兩座加油島之間；前方鋪面空曠，周圍有立柱與黃黑防撞柱，畫面中無人。"
-featured_image_caption: "AI生成的虛構加油站示意圖，非本案現場或事故重建；本案事故發生於凌晨，圖中天色與視野不代表事故時的情況。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/tanker-column-hero-1600x900.webp"
 ---
 # 倒車蜂鳴器響了，就不用再看後方？加油站油罐車碰撞的兩方責任

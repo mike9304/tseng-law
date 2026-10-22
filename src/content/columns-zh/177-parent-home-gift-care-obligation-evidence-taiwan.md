@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/parent-home-gift-care-obligation-evidence-taiwan.png"
 featured_image_alt: "兩人在餐桌前查看攤開的計畫本與一張帶有房屋圖示的紙，桌上放著鑰匙和杯子。"
-featured_image_caption: "AI生成的概念示意圖，人物與文件均為虛構，並非真實贈與契約、照護紀錄或案件照片。"
+featured_image_caption: "虛構情境"
 ---
 
 # 贈屋後說好的照顧沒有履行：如何證明當初附了什麼負擔

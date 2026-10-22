@@ -11,7 +11,7 @@ categories:
 topic: "other"
 featured_image: "../images/ISSUE-20261017-04-taiwan-museum-insect-specimens-import-permits/featured-01.webp"
 featured_image_alt: "チョウや甲虫の標本を並べた木製トレーと拡大鏡、奥に収蔵用の引き出しがある資料整理の机"
-featured_image_caption: "標本の収蔵作業をイメージした架空のAI生成画像です。寄贈された標本や実際の博物館を写したものではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261017-04-taiwan-museum-insect-specimens-import-permits/featured-01.jpg"
 faq:
   - q: "乾燥した昆虫標本にも台湾の野生動物保育法は関わりますか？"
@@ -48,6 +48,6 @@ author: "legal-ai-assistant"
 
 寄贈を受ける側が確認したいのは、箱の総数だけでなく、中にどの種の標本が何点あるかです。対象が特定できれば、博物館と収集家は、受入れの合意とは別に、どの標本について行政の同意が必要かを検討できます。収集家の記録と受入れ側の一覧で種名や点数が食い違っていれば、どの標本について同意を求めるのかも定まりません。
 
-画像はAIで生成した架空の標本整理の場面で、今回の寄贈品や実際の博物館を写したものではありません。
+画像は架空の標本整理の場面で、今回の寄贈品や実際の博物館を写したものではありません。
 
 ニュース・法令確認日：2026年10月17日。台湾の野生動物保育法に関する一般情報です。今回の寄贈品が保育類に該当する、または手続に違反したと判断するものではありません。

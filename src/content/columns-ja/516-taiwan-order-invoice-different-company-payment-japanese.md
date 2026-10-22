@@ -12,7 +12,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/next-four-columns-20261010/516-taiwan-order-invoice-different-company-payment-japanese.webp"
 featured_image_alt: "青と薄茶色のフォルダーに載せた書類を、机の上で見比べている様子。"
-featured_image_caption: "二組の書類を机に並べて見比べる様子。AI生成イメージであり、実在の取引や書類を再現したものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾のA社から注文を受けて納品した後、「請求書はグループのB社宛てに出し直してください」と言われたとします。「承知しました」とだけ返すと、書類の宛先を変えたのか、代金を支払う会社まで変えたのかが、後から争われる余地を残します。

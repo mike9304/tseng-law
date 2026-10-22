@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261004/tyre-maintenance-hero-1600x900.webp"
 featured_image_alt: "停放於室內維修車間的大型車輛輪胎與金屬輪圈近照。"
-featured_image_caption: "AI 生成虛構示意圖：一般大型車輪胎與輪圈的保養情境，非本案事故、檢查或鑑定照片；不得由本圖推論檢查紀錄、零件瑕疵或事故原因。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261004/tyre-maintenance-hero-1600x900.webp"
 ---
 # 輪胎砸車，六天後才就醫：一審無罪為何被撤銷？

@@ -18,7 +18,7 @@ faq:
     a: "Ghi lại ngay câu bị sai, ý thực sự đã trình bày và thời điểm buổi hỏi. Có thể gửi văn bản bổ sung và đề nghị kiểm tra bản ghi âm qua luật sư hoặc cơ quan thụ lý. Điều 100-1 có quy định về phần biên bản không khớp bản ghi; ký rồi không tự làm mọi sai sót trở thành đúng."
 featured_image: "/images/blog/column-media-20261010/442-taiwan-police-interview-vietnamese-interpreter-lawyer/featured-01.webp"
 featured_image_alt: "Hai bàn tay xem một xấp giấy; bên cạnh là một chiếc bút đã đậy nắp và một máy ghi âm nhỏ."
-featured_image_caption: "Tranh minh họa do AI tạo về việc đọc và đối chiếu biên bản. Đây là bối cảnh giả định, không tái hiện khách hàng hay một buổi lấy lời khai có thật."
+featured_image_caption: "Cảnh hư cấu"
 ---
 
 # Cảnh sát Đài Loan lấy lời khai: phiên dịch, luật sư và biên bản tiếng Hoa

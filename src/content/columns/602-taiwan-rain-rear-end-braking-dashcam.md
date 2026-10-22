@@ -9,8 +9,8 @@ categories: ["대만 법률정보"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/602-taiwan-rain-rear-end-braking-dashcam/featured-01.webp"
-featured_image_alt: "비가 내리는 도로에서 흰색 차량 후면에 접근한 운전자 시점의 AI 가상 장면"
-featured_image_caption: "AI로 만든 빗길 추돌 가상 장면입니다. 실제 사고나 제동거리 실험 사진이 아닙니다."
+featured_image_alt: "비가 내리는 도로에서 흰색 차량 후면에 접근한 운전자 시점의 가상 장면"
+featured_image_caption: "가상의 장면"
 audience: ["ko"]
 author: "legal-ai-assistant"
 faq:
@@ -26,7 +26,7 @@ faq:
 
 앞차가 갑자기 멈췄다는 이유만으로 뒤따르던 운전자의 책임이 없어질까요? 대만 도로교통안전규칙은 앞차의 제동과 뒷차의 거리 유지를 함께 다룹니다. 제동한 이유도 봅니다.
 
-첨부 영상은 비가 내리는 도로에서 흰색 차량이 멈추고 뒤차가 추돌하는 가상사례입니다. 표지와 영상은 AI로 만들었습니다. 특정 사건의 기록이나 제동거리 실험이 아니며, 앞차가 왜 멈췄는지는 영상만으로 확정하지 않습니다.
+첨부 영상은 비가 내리는 도로에서 흰색 차량이 멈추고 뒤차가 추돌하는 가상사례입니다. 표지와 영상은 가상으로 만들었습니다. 특정 사건의 기록이나 제동거리 실험이 아니며, 앞차가 왜 멈췄는지는 영상만으로 확정하지 않습니다.
 
 ## 앞차가 멈춘 이유
 

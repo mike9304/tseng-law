@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261015-05-taiwan-food-imports-overseas-recall-labeling/featured-01.webp"
 featured_image_alt: "A plain noodle cup with a partly lifted foil lid, a sealed carton and a closed beige folder on a wooden stockroom table."
-featured_image_caption: "AI-generated illustration of a fictional food-import setting; it does not show the reported product, an actual inspection or evidence of its safety."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261015-05-taiwan-food-imports-overseas-recall-labeling/featured-01.jpg"
 faq:
   - q: "Does an overseas recall automatically require a Taiwan recall?"
@@ -48,7 +48,7 @@ An overseas alert may supply evidence of such a risk. It may instead identify a 
 
 There is also a separate regulatory route for defective labeling. Under [Article 52(1)(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040001&flno=52), when statutory inspection or testing establishes specified labeling violations, the local authority must require recall and correction within a deadline. The goods cannot continue to be sold before correction. That mechanism does not make relabeling an adequate answer to every safety defect, nor does it postpone the business's own immediate duty under Article 7 when the risk threshold is met.
 
-Illustration: AI-generated fictional food-import setting; no actual recalled product or inspection is depicted.
+Fictional scene
 
 ## Sources
 

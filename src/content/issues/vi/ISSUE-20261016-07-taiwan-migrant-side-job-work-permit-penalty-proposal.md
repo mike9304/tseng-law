@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261016-07-taiwan-migrant-side-job-work-permit-penalty-proposal/featured-01.webp"
 featured_image_alt: "Áo lao động màu xanh được gấp gọn, găng tay và bìa hồ sơ trên bàn làm việc trong nhà máy vắng người."
-featured_image_caption: "Hình minh họa do AI tạo về một góc làm việc hư cấu; không phải ảnh nơi làm việc hay giấy tờ của người lao động trong bản tin."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261016-07-taiwan-migrant-side-job-work-permit-penalty-proposal/featured-01.jpg"
 faq:
   - q: "Đài Loan đã áp dụng mức phạt cao hơn theo bản tin ngày 15/10 chưa?"

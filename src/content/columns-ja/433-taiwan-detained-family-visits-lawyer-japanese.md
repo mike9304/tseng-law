@@ -18,7 +18,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/433-taiwan-detained-family-visits-lawyer-japanese/featured-01.webp"
 featured_image_alt: "椅子の横の小さなテーブルに置かれた封筒とスマートフォン。"
-featured_image_caption: "AIで生成したイメージ画像です。実際の相談者や面会の様子を写したものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾で勾留された家族との面会、手紙、弁護士への連絡

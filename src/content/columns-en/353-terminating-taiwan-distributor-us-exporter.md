@@ -10,8 +10,8 @@ categories:
   - "Taiwan Legal Information"
 topic: "company"
 featured_image: "../images/353-terminating-taiwan-distributor-us-exporter/featured-01.webp"
-featured_image_alt: "AI-generated fictional scene: a warehouse loading dock with a half-raised metal roll-up door opening onto a bright empty street, plain cardboard boxes stacked on pallets along one wall, long shadows; no people or text."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real company, warehouse or dispute."
+featured_image_alt: "Fictional scene: a warehouse loading dock with a half-raised metal roll-up door opening onto a bright empty street, plain cardboard boxes stacked on pallets along one wall, long shadows; no people or text."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Our Taiwan distributor has an exclusive territory and we want to start selling direct. Can we just stop shipping?"
     a: "Not safely: an exclusivity clause binds you for the term, and ending the framework early without a contractual ground is a breach that supports a damages or penalty claim, although a court may reduce an excessive penalty (Civil Code, Article 252). If the distributor is a commercial agent that sells in your name, Article 561 lets either party end an open-ended agency on three months' notice. For a buy-sell distributor the contract and the good-faith principle govern, so give written notice timed to the renewal date."

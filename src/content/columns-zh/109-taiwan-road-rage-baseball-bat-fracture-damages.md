@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-compensation"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
-featured_image_alt: "AI生成的虛構畫面：黃昏時從車內望向停著機車的狹窄住宅區巷道，一輛深灰色掀背車左前車門敞開停在路中，一名手持球棒的男子背對鏡頭站在車旁。"
-featured_image_caption: "AI生成的虛構畫面：一名男子手持球棒，站在停著的車旁。並非實拍照片，也不是判決所載案件的重現。"
+featured_image_alt: "虛構畫面：黃昏時從車內望向停著機車的狹窄住宅區巷道，一輛深灰色掀背車左前車門敞開停在路中，一名手持球棒的男子背對鏡頭站在車旁。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
 ---
 # 基隆行車糾紛揮球棒，刑期7個月、賠償另算207萬餘元

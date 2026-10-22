@@ -18,7 +18,7 @@ faq:
     a: "Điểm 3 Điều 32 Luật Xuất nhập cảnh và Di dân loại trừ án treo khỏi căn cứ thu hồi đang xét về bản án tù từ một năm đã có hiệu lực. Đây chỉ là một căn cứ; các điều kiện cư trú khác và giấy phép làm việc vẫn phải được kiểm tra riêng."
 featured_image: "/images/blog/column-media-20261010/444-taiwan-short-sentence-fine-suspension-residence/featured-01.webp"
 featured_image_alt: "Túi đựng giấy tờ nhiều ngăn có bìa hồ sơ và bao đựng thẻ, bên cạnh túi đeo vai bằng vải đựng sổ tay; cả hai đặt trên kệ gỗ."
-featured_image_caption: "Hình minh họa do AI tạo về việc sắp xếp riêng giấy tờ thi hành án và giấy tờ cư trú. Đây là bối cảnh giả định, không tái hiện hồ sơ khách hàng thực tế."
+featured_image_caption: "Cảnh hư cấu"
 ---
 
 # Án tù ngắn và án treo ở Đài Loan: tiền phải nộp, nghĩa vụ và thẻ cư trú

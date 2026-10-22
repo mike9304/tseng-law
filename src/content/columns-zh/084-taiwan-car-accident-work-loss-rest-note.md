@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約10分鐘閱讀"
 featured_image: "/images/columns/20261002/work-loss-hero-1600x900.webp"
 featured_image_alt: "無人的小吃攤不鏽鋼工作檯旁，圍裙披在圓凳上，檯面放著闔上的筆記本與紙張，後方排列碗盤和廚具。"
-featured_image_caption: "AI 生成示意圖，場景虛構，非實際案件；圖中物品不作為傷勢、停業或收入的證明。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261002/work-loss-hero-1600x900.webp"
 ---
 # 診斷書寫「宜休養」，車禍工作損失就能照算嗎？

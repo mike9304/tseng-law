@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["fraud", "criminal-complaint", "victim-rights"]
 featured_image: "../images/236-fraud-complaint-filing-police-prosecutor-taiwan/featured-01.webp"
 featured_image_alt: "素面木質櫃檯上放著一只黃銅服務鈴，一隻手停在鈴的上方，背景是日光下模糊的空等候椅。"
-featured_image_caption: "AI生成的虛構情境示意圖，以服務鈴比喻按鈴申告；並非真實案件、當事人、檢警機關的設備或文件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "已經在派出所做完筆錄、拿到證明單，還要另外向地檢署遞詐欺告訴狀嗎？"
     a: "不一定。依刑事訴訟法第242條，告訴可以用書狀，也可以用言詞向檢察官或司法警察官提出，以言詞提出的要做成筆錄。警詢筆錄已記明要提出告訴的，不必為了手續再遞一次；筆錄沒有記載，或要補充事實與證據時，可以再向地檢署遞告訴狀。"

@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "Đài Loan không truy tố", "yêu cầu xem xét lại 10 ngày", "准許提起自訴"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Bàn tay đặt trên giấy tờ và phong bì trên bàn"
-featured_image_caption: "Hình minh họa do AI tạo, không phải quyết định hay ảnh vụ án có thật."
+featured_image_caption: "Cảnh hư cấu"
 faq: [{"q": "Gửi yêu cầu xem xét lại quyết định không truy tố đến đâu?", "a": "Theo Điều 256, người có tư cách 告訴人 nêu lý do bằng văn bản trong 10 ngày sau khi nhận quyết định, gửi qua kiểm sát viên ban đầu đến người đứng đầu cơ quan kiểm sát cấp trên trực tiếp hoặc Tổng kiểm sát trưởng. Cần đối chiếu thời hạn và nơi nhận ghi trên quyết định. Cần kiểm tra lúc tống đạt có hiệu lực; đọc hoặc dịch muộn không làm thời hạn bắt đầu lại."}, {"q": "Yêu cầu bị bác thì tòa sẽ kết tội ngay không?", "a": "Không. Theo Điều 258-1, người đủ điều kiện có 10 ngày sau khi nhận quyết định bác yêu cầu để ủy nhiệm luật sư nộp bản nêu lý do xin phép tự tố tại tòa sơ thẩm có thẩm quyền. Việc cho phép không phải phán quyết có tội."}]
 audience: ["vi"]
 author: "legal-ai-assistant"

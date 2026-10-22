@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 featured_image_alt: "밤의 다차로 도로에서 붉은 브레이크등을 켠 짙은 회색 SUV가 콘크리트 방호벽 옆 차로에 있는 모습이 뒤차 앞유리 너머로 보입니다."
-featured_image_caption: "칼럼에서 다루는 도로 위 상황을 설명하기 위해 AI로 만든 가상 장면입니다. 실제 사진이나 판결 속 사건을 재현한 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 ---
 # 상향등을 깜빡인 뒤차 앞에 멈춰 선 2분 56초

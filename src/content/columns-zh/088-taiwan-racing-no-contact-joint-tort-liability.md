@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約9分鐘閱讀"
 featured_image: "/images/columns/20261003/joint-liability-hero.webp"
 featured_image_alt: "寬闊市區道路上，前景的銀白色與深灰色轎車分別位於不同車道，後方視角可見車尾、道路標線、行道樹與建築。"
-featured_image_caption: "AI 生成之虛構街景示意圖，非本案影像或事故重建；僅供情境說明，不能據此判斷是否競速、逼車或應負賠償責任。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/joint-liability-hero.webp"
 ---
 # 沒撞到對方，也可能要一起賠？兩車競速逼車與第三人的損害

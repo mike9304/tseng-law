@@ -10,8 +10,8 @@ categories:
   - "Taiwan Legal Information"
 topic: "litigation"
 featured_image: "../images/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
-featured_image_alt: "AI-generated fictional scene: a pale wooden tray on an oak desk holds a blank cream sheet and a closed dark fountain pen, beside a window overlooking a quiet harbor of small boats in soft overcast light; no people or text."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real company, document or dispute."
+featured_image_alt: "Fictional scene: a pale wooden tray on an oak desk holds a blank cream sheet and a closed dark fountain pen, beside a window overlooking a quiet harbor of small boats in soft overcast light; no people or text."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "How long do we have to sue a Taiwanese buyer for unpaid goods?"
     a: "Two years if Taiwan law governs the sale, not the fifteen-year general period. Article 127 of Taiwan's Civil Code gives a merchant's or manufacturer's claim for the price of goods supplied a two-year limitation period. Filing an application for a court payment order interrupts the period in the same way as filing suit (Article 129), while a reminder letter counts only as a demand that lapses unless suit, or a step with the same effect such as a payment-order application, follows within six months (Article 130), so act on old invoices before the second anniversary of the due date."

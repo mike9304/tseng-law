@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "台湾 証人 召喚状", "台湾 証言拒絶", "台湾 刑事裁判"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "窓際の机と向かい合わせに置かれた椅子"
-featured_image_caption: "手続説明用のAI生成イメージです。実際の取調室や事件を撮影したものではありません。"
+featured_image_caption: "架空の情景"
 faq: [{"q": "証言を拒める場合は出頭しなくてもよいですか。", "a": "拒絶できる事情だけで出頭義務がなくなるわけではありません。第183条に基づいて拒絶の理由を疎明し、捜査中は検察官、公判中は裁判長または受命裁判官の判断を受けます。出頭が難しい場合は発行機関に事情と資料を提出し、期日の変更が認められたか確認してください。 第181条の場合は、命令により宣誓（具結）で疎明に代えることもあります。"}, {"q": "日本語通訳は頼めますか。", "a": "言葉が通じない人の尋問には第99条による通訳が必要で、第192条はこの規定を証人尋問にも準用しています。必要な言語を担当機関に事前に伝えてください。"}]
 audience: ["ja"]
 author: "legal-ai-assistant"

@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["fraud", "confiscation", "victim-restitution"]
 featured_image: "../images/246-criminal-confiscation-return-to-fraud-victims-taiwan/featured-01.webp"
 featured_image_alt: "日光照進素淨的保管室，一整面沒有任何標示的金屬抽屜櫃中有一格半開，一隻手正伸向那格抽屜。"
-featured_image_caption: "AI生成的虛構情境示意圖，以保管櫃比喻扣押物的保管與發還；並非真實案件、當事人、檢警機關的設備或文件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "判決書附表有我的名字和被騙金額，還要先打贏民事官司才能聲請發還沒收的詐騙款嗎？"
     a: "不以此為必要。依檢察機關辦理沒收物及追徵財產之發還或給付執行辦法第2條，經刑事確定判決認定受損害具體數額的被害人就是請求權人，可在沒收裁判確定後一年內，以書狀向執行檢察官聲請。但檢察官能發還的，以實際執行沒收或追徵到的財產扣除必要費用後為限；多人聲請時按金額比例分配，不足的部分仍要另循民事程序求償。"

@@ -10,7 +10,7 @@ topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/641-taiwan-right-turn-crosswalk-pedestrian-dashcam/featured-01.webp"
 featured_image_alt: "우회전하려는 차 안에서 횡단보도와 보행자의 뒷모습을 바라본 가상 장면"
-featured_image_caption: "AI로 만든 가상의 횡단보도 장면입니다. 실제 사고 현장이나 당사자를 찍은 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 audience: ["ko"]
 author: "legal-ai-assistant"
 faq:

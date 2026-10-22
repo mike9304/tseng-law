@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/412-taiwan-short-sentence-fine-community-service-suspension/featured-01.webp"
 featured_image_alt: "Canvas garden gloves, a teal watering can and small seedling pots sit on a weathered workbench in a sunny courtyard."
-featured_image_caption: "AI-generated illustration of a fictional garden-work setting, not an actual client or event; the activity shown does not represent an approved service assignment."
+featured_image_caption: "Fictional scene"
 ---
 # A short Taiwan prison sentence: payment, service or suspension
 

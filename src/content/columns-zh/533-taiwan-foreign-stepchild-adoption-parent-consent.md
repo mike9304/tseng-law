@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/533-taiwan-foreign-stepchild-adoption-parent-consent.webp"
 featured_image_alt: "窗邊的橢圓木桌上放著灰色資料夾與藍色小冊，桌邊擺有兩張大椅和一張兒童椅。"
-featured_image_caption: "AI 生成的示意畫面，並非真實家庭或收養案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 台灣人想收養外籍配偶的未成年子女，手上即使已有由配偶單獨行使親權的離婚或監護文件，仍不能直接推論另一方父母不必同意。

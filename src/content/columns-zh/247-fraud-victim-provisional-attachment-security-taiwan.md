@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["fraud", "provisional-attachment", "criminal-seizure"]
 featured_image: "../images/247-fraud-victim-provisional-attachment-security-taiwan/featured-01.webp"
 featured_image_alt: "日光下的戶外停車場，一輛深色休旅車的後輪鎖著黃色車輪鎖，畫面中沒有車牌與人物。"
-featured_image_caption: "AI生成的虛構情境示意圖，以車輪鎖比喻財產被暫時凍結；並非真實案件、當事人、車輛或法院的執行方式。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "詐騙被害人可以自己向法院聲請刑事扣押被告的財產嗎？"
     a: "現行刑事訴訟法第133條之2規定，偵查中聲請扣押裁定的是檢察官，司法警察官須先報請檢察官許可，條文沒有列被害人或告訴人。臺灣新北地方法院111年度聲字第2218號裁定（第一審）認為，告訴人提出聲請只是促請法院依職權發動。被害人可以把財產線索交給檢察官，或另依民事訴訟法第522條聲請假扣押。"

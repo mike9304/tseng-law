@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/418-taiwan-sexual-assault-report-evidence-victim-support/featured-01.webp"
 featured_image_alt: "柔和日光灑入安靜房間，兩張空扶手椅之間的小圓桌上放著紙巾盒與兩杯水。"
-featured_image_caption: "AI 生成的虛構示意畫面，呈現安靜的支持空間，並非真實當事人、機構或事件現場。"
+featured_image_caption: "虛構情境"
 ---
 # 遭遇性侵害後：驗傷採證、報案陪同與出庭保護
 

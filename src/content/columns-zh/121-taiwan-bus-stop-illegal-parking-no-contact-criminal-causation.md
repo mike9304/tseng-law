@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約6分鐘閱讀"
 featured_image: "/images/columns/20261003/empty-bus-bay-1600x900.webp"
 featured_image_alt: "日光下的空置路側停靠區，白色標線沿著人行道延伸，右側立著沒有文字的站牌。"
-featured_image_caption: "AI 生成的虛構站區街景，僅供文章示意；非個案現場或證據，不表示曾有違停、車輛受阻、碰撞或因果關係。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/empty-bus-bay-1600x900.webp"
 ---
 # 違停沒撞到人，也會有刑責？公車站計程車案的因果關係

@@ -18,7 +18,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/436-taiwan-shoplifting-found-property-japanese/featured-01.webp"
 featured_image_alt: "みかん、紙包み、裏返したレシートが置かれた店舗の会計カウンター。"
-featured_image_caption: "AIで生成したイメージ画像です。実際の店舗や事件を示すものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾で万引きを疑われたら――会計漏れと落とし物の持ち帰り

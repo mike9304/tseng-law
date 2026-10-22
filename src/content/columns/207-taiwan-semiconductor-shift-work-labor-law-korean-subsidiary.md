@@ -12,7 +12,7 @@ topic: "labor"
 tags: ["semiconductor", "교대근무", "대만 노동법", "한국 기업"]
 featured_image: "../images/semiconductor/taiwan-semiconductor-shift-work-labor-law-korean-subsidiary/featured-01.webp"
 featured_image_alt: "빈 공장 콘크리트 바닥 왼쪽으로 연회색 금속 의자들이 길게 늘어서 있고, 앞쪽 의자가 크게 보입니다. 바닥에는 따뜻한 호박색 빛이 좁게 드리우며 오른쪽 공간은 비어 있습니다."
-featured_image_caption: "AI로 생성한 가상의 공장 내부 이미지입니다. 실제 회사·시설·인물을 촬영하거나 재현한 장면이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "대만 반도체 부품공장은 4주 변형근로시간을 쓸 수 있나요?"
     a: "제조업은 4주 변형근로시간 적용 대상이 아닙니다. 2주·8주 제도는 적용 가능하지만 노조 동의, 노조가 없는 사업단위에서는 노사회의 동의와 각 제도의 시간·휴일 기준을 충족해야 합니다. 서비스센터는 이름만으로 업종을 정할 수 없어 실제 사업과 지정 업종을 대조해야 합니다."

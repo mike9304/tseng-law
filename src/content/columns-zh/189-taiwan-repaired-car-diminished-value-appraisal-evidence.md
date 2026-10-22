@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約8分鐘閱讀"
 featured_image: "/images/columns/20261004/repaired-car-value-ai-hero-1600x900.webp"
 featured_image_alt: "銀色轎車停在室內維修空間，畫面近距離呈現側面車門、後視鏡與車輪。"
-featured_image_caption: "AI 生成之虛構示意圖：銀色轎車停放於維修空間，僅作車輛修復後交易價值議題之情境插圖，非實際案件照片或鑑價證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261004/repaired-car-value-ai-hero-1600x900.webp"
 ---
 # 車修好了，事故車價差還能求償嗎？鑑價報告為何不一定照單全收

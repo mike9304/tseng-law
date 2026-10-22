@@ -11,7 +11,7 @@ categories:
 topic: litigation
 featured_image: "../images/ISSUE-20261014-07-taiwan-dormitory-dog-meat-investigation-liability/featured-01.webp"
 featured_image_alt: "Phòng ăn chung vắng người, bàn ghế gọn gàng và bát đĩa trống dưới ánh sáng ban ngày."
-featured_image_caption: "Hình minh họa do AI tạo về một phòng ăn chung hư cấu; không phải ký túc xá, hiện trường hay chứng cứ trong bản tin."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261014-07-taiwan-dormitory-dog-meat-investigation-liability/featured-01.jpg"
 faq:
   - q: "Chỉ mua hoặc ăn thịt chó, không giết mổ, có thể bị phạt không?"

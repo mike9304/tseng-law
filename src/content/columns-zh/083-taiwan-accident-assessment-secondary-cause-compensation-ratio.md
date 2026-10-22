@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-evidence"]
 audience: ["zh-hant"]
 read_time: "約10分鐘閱讀"
 featured_image: "/images/columns/20261002/accident-assessment-evidence-hero-1600x900.webp"
-featured_image_alt: "AI 生成的假想證據檢視情境：木桌上放著黑色行車記錄器、記憶卡、空白紙張與資料夾，後方筆電顯示一般街道畫面；非真實事故鑑定或證據。"
-featured_image_caption: "AI 生成示意圖：行車記錄器、記憶卡與空白文件構成假想的資料檢視情境。畫面並非真實事故影像、事故鑑定結果或法院證據，亦不代表任何個案的肇事原因或責任比例，也與本文所述判決中的監視器影像無關。"
+featured_image_alt: "假想證據檢視情境：木桌上放著黑色行車記錄器、記憶卡、空白紙張與資料夾，後方筆電顯示一般街道畫面；非真實事故鑑定或證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261002/accident-assessment-evidence-hero-1600x900.webp"
 ---
 # 鑑定寫我是肇事次因，就得少拿三成賠償嗎？

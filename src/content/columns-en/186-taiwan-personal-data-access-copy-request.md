@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b05/taiwan-personal-data-access-copy-request.png"
 featured_image_alt: "A person holds a pen over a notebook beside a laptop showing abstract panels. A closed folder lies on the desk, and a cat rests in the background."
-featured_image_caption: "AI-generated fictional scene. The screen and papers do not depict an actual personal data record, submitted request or official response."
+featured_image_caption: "Fictional scene"
 ---
 
 A Taiwan business must answer your inquiry, let you review the personal data it has collected about you, or provide a copy when you request it, subject to the exceptions in [Article 10 of the Personal Data Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=10). [Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=3) protects these rights against advance waiver or contractual restriction.

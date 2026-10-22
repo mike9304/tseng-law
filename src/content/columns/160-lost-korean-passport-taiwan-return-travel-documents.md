@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b02/lost-korean-passport-taiwan-return-travel-documents.png"
 featured_image_alt: "공항 탁자 앞에서 한 사람이 빈 짙은 녹색 여권 케이스를 펼쳐 들고 있다. 옆에는 열린 여행가방과 글자가 읽히지 않는 종이, 휴대전화가 놓여 있고 배경의 사람들은 흐릿하게 보인다."
-featured_image_caption: "AI 생성 설명용 이미지입니다. 실제 여행자·여권·공문서 또는 분실 사건을 재현한 장면이 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 # 대만에서 여권을 잃고 귀국을 앞뒀다면: 분실증명과 긴급여권

@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/411-taiwan-shoplifting-found-property-theft/featured-01.webp"
 featured_image_alt: "A closed brown leather wallet rests in a gray felt-lined tray on a pale reception counter."
-featured_image_caption: "AI-generated illustrative scene featuring a fictional wallet and reception area, not an actual client’s property or event."
+featured_image_caption: "Fictional scene"
 ---
 # Shoplifting and keeping found property in Taiwan
 

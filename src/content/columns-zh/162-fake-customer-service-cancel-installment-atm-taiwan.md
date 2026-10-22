@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b03/fake-customer-service-cancel-installment-atm-taiwan.png"
 featured_image_alt: "一人站在大廳的ATM旁查看手機，手未接觸提款機，後方人物與座位模糊。"
-featured_image_caption: "AI生成的虛構情境示意圖，並非真實買家、銀行介面、客服紀錄或案件照片。"
+featured_image_caption: "虛構情境"
 ---
 
 # 客服說訂單誤設分期，取消前為什麼要操作ATM？

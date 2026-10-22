@@ -11,7 +11,7 @@ categories:
 topic: "company"
 featured_image: "../images/ISSUE-20261016-04-taiwan-ceatec-sale-by-sample-quality-japanese/featured-01.webp"
 featured_image_alt: "展示台に置かれた金属製の小型電子機器と部品、緩衝材を入れた開いたサンプルケース"
-featured_image_caption: "機器の商談をイメージした架空のAI生成画像です。CEATECの出展製品や実際の会場を写したものではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261016-04-taiwan-ceatec-sale-by-sample-quality-japanese/featured-01.jpg"
 faq:
   - q: "展示機を見てから発注すれば、台湾民法の見本売買になりますか？"
@@ -48,6 +48,6 @@ author: "legal-ai-assistant"
 
 機器と一緒に保守や追加開発を発注する場合、その業務の範囲は、見本と同じ品質の物を納める約束とは別に読む必要があります。展示時と違う使用環境での動作や、将来追加する機能まで、見本売買というだけで当然に保証されるわけではありません。注文書が参照する見積書と仕様書の版をそろえることで、納入品の品質と、別途依頼する仕事の境界を記録に残せます。
 
-画像はAIで生成した架空の製品展示で、CEATECの出展製品や会場ではありません。
+画像は架空の製品展示で、CEATECの出展製品や会場ではありません。
 
 ニュース・法令確認日：2026年10月16日。台湾法が適用される物品売買の一般情報です。個別の保証範囲や請求の可否は、契約内容と取引経緯によって異なります。

@@ -10,7 +10,7 @@ categories: ["台湾法律情報"]
 topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
-featured_image_caption: "AIで作成した説明用画像です。実際の取調室や事件を撮影した写真ではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "中国語での質問を十分理解できない場合、通訳は必要ですか。"
     a: "刑事訴訟法99条は言語が通じない場合などに通訳を用いることを定めています。必要に応じて書面で質問し、書面で答えさせることもできます。100-2条により警察の被疑者聴取にも準用されます。"

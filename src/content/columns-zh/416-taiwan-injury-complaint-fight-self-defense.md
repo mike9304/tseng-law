@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/416-taiwan-injury-complaint-fight-self-defense/featured-01.webp"
 featured_image_alt: "青綠色資料夾旁擺著透明盒中的記憶卡，以及三張依序排列的建築入口空景圖卡。"
-featured_image_caption: "AI 生成的虛構示意插畫，呈現文件與影像資料的保存概念，並非真實當事人、事件或證據。"
+featured_image_caption: "虛構情境"
 ---
 # 被打後驗傷、提告與互毆：傷害案要留下哪些證據
 

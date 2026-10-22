@@ -13,7 +13,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b05/taiwan-trademark-nonuse-three-years-korean-brand.png"
 featured_image_alt: "나무 탁자 위에 무지 상자 두 개와 빈 종이 태그, 회색 선이 인쇄된 종이들이 놓여 있다. 한 사람이 녹색 상자 한 개와 종이를 양손에 들고 있다."
-featured_image_caption: "AI로 만든 가상의 포장·자료 정리 장면입니다. 실제 브랜드나 거래를 재현하지 않았으며, 상표 등록 또는 사용을 입증하는 자료가 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 # 대만 상표 등록 후 판매를 쉬었다면: 3년 미사용과 유통사 기록

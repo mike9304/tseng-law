@@ -10,8 +10,8 @@ categories:
   - "Taiwan Legal Information"
 topic: "labor"
 featured_image: "../images/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
-featured_image_alt: "AI-generated fictional scene: a closed dark laptop, a speckled ceramic cup and a small fern in a terracotta pot on a pale wood desk by a window, with tiled rooftops of a narrow Taipei lane outside; no people or text."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real person, company or workplace."
+featured_image_alt: "Fictional scene: a closed dark laptop, a speckled ceramic cup and a small fern in a terracotta pot on a pale wood desk by a window, with tiled rooftops of a narrow Taipei lane outside; no people or text."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Can we just sign a contractor agreement with someone in Taiwan and pay them from the US?"
     a: "You can sign it, but the label does not decide the relationship: Taiwan's Labor Standards Act defines a labor contract by subordination, so a full-time person who takes your instructions and works your hours is likely an employee with statutory severance, leave and insurance rights, whoever signs the invoice. For a Taiwanese national the employer must also enroll them in national health insurance and employment insurance, contribute at least 6% to the labor pension, and, at five or more workers, enroll them in labor insurance, each of which needs a registered Taiwanese enrolling unit. That gap is why employer-of-record arrangements exist."

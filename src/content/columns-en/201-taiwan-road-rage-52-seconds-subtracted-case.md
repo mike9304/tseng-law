@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 featured_image_alt: "A silver sedan sits diagonally ahead of a scooter on a multilane city street at dusk, with a red traffic light overhead."
-featured_image_caption: "This fictional AI-generated scene illustrates a car obstructing a scooter's path, the kind of situation discussed in the column. It is not a photograph or a reconstruction of the case in the judgment."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 ---
 # The 52 seconds a Taiwan court subtracted from a road-rage case

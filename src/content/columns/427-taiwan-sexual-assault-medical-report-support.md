@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/427-taiwan-sexual-assault-medical-report-support/featured-01.webp"
 featured_image_alt: "패브릭 가림막 앞에 편안한 의자 두 개와 작은 원형 탁자가 놓인 햇빛 드는 빈 방"
-featured_image_caption: "AI로 만든 가상의 상담 공간 이미지입니다. 실제 의뢰인이나 사건, 의료기관을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만 성폭력 피해 후 병원과 경찰에서 받을 수 있는 지원
 

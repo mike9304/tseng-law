@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "TSMC", "CHIPS Act", "outbound investment", "Taiwan", "Arizona"]
 featured_image: "../images/semiconductor/tsmc-arizona-chips-act-taiwan-outbound-approval/featured-01.webp"
 featured_image_alt: "Three separated panes of pale smoked glass on tan gravel beneath a hazy dawn sky, with apricot light at the base of the middle pane"
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real company, facility or person."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Does TSMC's $6.6 billion CHIPS award fund its entire $265 billion U.S. plan?"
     a: "The November 2024 award was announced for an Arizona project then described as more than $65 billion across three fabs. The $265 billion figure is TSMC's later planned U.S. investment as announced in July 2026; the public award announcement does not establish that the award funds the entire expanded plan."

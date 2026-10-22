@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b03/parcel-pickup-job-scam-bank-cards-taiwan.png"
 featured_image_alt: "A person seen from behind holds a sealed parcel beside green parcel lockers, with a mobile phone lowered at their side."
-featured_image_caption: "AI-generated fictional scene beside parcel lockers; it does not depict an actual job applicant, employer, shipment or reported incident."
+featured_image_caption: "Fictional scene"
 ---
 
 # A Parcel-Pickup Job in Taiwan: Whose Package Are You Collecting?

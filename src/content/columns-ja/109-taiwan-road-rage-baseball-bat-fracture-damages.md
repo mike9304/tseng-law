@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-compensation"]
 audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
-featured_image_alt: "AI生成の架空の場面です。夕暮れの狭い住宅街の路地で、左前のドアを開けたまま止まった濃いグレーのハッチバックと、その横でバットを手に背を向けて立つ男性を、後ろの車の中から見ています。"
-featured_image_caption: "停車中の車のそばでバットを手に立つ男性を描いた、AI生成の架空の場面です。実際の写真ではなく、判決で扱われた事件を再現したものでもありません。"
+featured_image_alt: "架空の場面です。夕暮れの狭い住宅街の路地で、左前のドアを開けたまま止まった濃いグレーのハッチバックと、その横でバットを手に背を向けて立つ男性を、後ろの車の中から見ています。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
 ---
 # 基隆の交通トラブルで同乗者が振るった野球バット、有期徒刑7か月と約208万台湾元の賠償

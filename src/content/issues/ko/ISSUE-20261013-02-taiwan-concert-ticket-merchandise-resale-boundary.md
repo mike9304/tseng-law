@@ -11,7 +11,7 @@ categories:
 topic: litigation
 featured_image: "../images/ISSUE-20261013-02-taiwan-concert-ticket-merchandise-resale-boundary/featured-01.webp"
 featured_image_alt: "탁자 위의 무늬 없는 응원봉과 빈 티켓 카드 뒤로 흐릿하게 보이는 공연장 좌석."
-featured_image_caption: "AI로 만든 가상 장면입니다. 실제 공연의 응원봉이나 티켓, 거래 증거가 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261013-02-taiwan-concert-ticket-merchandise-resale-boundary/featured-01.jpg"
 faq:
   - q: "응원봉을 비싸게 되팔면 공연표 웃돈 판매 규정이 적용되나요?"
@@ -44,7 +44,7 @@ author: "legal-ai-assistant"
 
 같은 검찰청 안내는 웃돈 판매 신고에 판매 정보를 얻은 출처, 공연·좌석 정보, 거래와 연락 자료가 필요하다고 설명합니다. ‘굿즈값’이라는 명칭만 남은 송금 기록보다, 무엇을 함께 사야 표를 넘겨준다고 했는지 드러나는 판매 글과 대화가 거래 조건을 확인하는 자료가 됩니다.
 
-대표 이미지는 AI로 만든 가상 장면이며, 실제 공연의 응원봉이나 티켓, 거래 증거가 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

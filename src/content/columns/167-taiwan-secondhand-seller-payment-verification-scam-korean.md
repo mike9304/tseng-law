@@ -13,7 +13,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b03/taiwan-secondhand-seller-payment-verification-scam-korean.png"
 featured_image_alt: "나무 탁자 위 포장지에 카메라가 놓여 있고, 옆에는 완충지가 든 열린 상자와 글자가 읽히지 않는 대화 화면의 휴대전화, 닫힌 갈색 지갑이 있다. 탁자 앞에 앉은 사람의 두 손이 보인다."
-featured_image_caption: "AI가 생성한 가상의 설명용 이미지입니다. 실제 판매자·구매자·사기 사건이나 특정 플랫폼의 화면을 재현하지 않았습니다."
+featured_image_caption: "가상의 장면"
 ---
 
 # 대만 중고거래, 물건값을 받으려는데 ‘인증금’을 보내라고 합니다

@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/ISSUE-20261013-03-taiwan-unregistered-lodging-booking-advertising-japanese/featured-01.webp"
 featured_image_alt: "窓から柔らかな光が入る客室と、置かれたスーツケース"
-featured_image_caption: "架空の客室を描いたAI生成画像です。実在の宿泊施設や違反事例の写真ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261013-03-taiwan-unregistered-lodging-booking-advertising-japanese/featured-01.jpg"
 faq:
   - q: "予約サイトで支払えれば、営業登録のある宿ですか？"
@@ -46,7 +46,7 @@ author: "legal-ai-assistant"
 
 サービスをめぐる紛争では、[同法第43条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=43)に基づき、事業者、消費者保護団体、消費者サービスセンターまたはその分センターに苦情を申し立てられます。事業者には申立ての日から15日以内に適切に処理する義務があり、適切な処理を受けられなければ地方政府の消費者保護官に申し立てられます。15日は対応の期限であり、返金が保証される期限ではありません。
 
-画像は架空の客室を描いたAI生成画像で、実在の施設や違反事例を示すものではありません。
+架空の情景
 
 ## 参照資料
 

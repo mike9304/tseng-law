@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "giấy triệu tập làm chứng Đài Loan", "quyền từ chối làm chứng", "phiên dịch tiếng Việt"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "Bàn trống và hai chiếc ghế đặt đối diện gần cửa sổ"
-featured_image_caption: "Hình minh họa tạo bằng AI, không phải ảnh phòng lấy lời khai hay vụ việc có thật."
+featured_image_caption: "Cảnh hư cấu"
 faq: [{"q": "Có quyền từ chối lời khai thì tôi được nghỉ buổi làm chứng không?", "a": "Lý do từ chối lời khai không tự miễn nghĩa vụ có mặt. Theo Điều 183, cần làm rõ căn cứ từ chối để kiểm sát viên hoặc thẩm phán có thẩm quyền quyết định. Nếu không thể đến, hãy báo cho cơ quan triệu tập và xác nhận họ đã chấp thuận đổi lịch hay chưa. Với căn cứ thuộc Điều 181, cơ quan có thẩm quyền có thể yêu cầu tuyên thệ (具結) để thay việc làm rõ căn cứ theo cách thông thường."}, {"q": "Tôi có được yêu cầu phiên dịch tiếng Việt không?", "a": "Điều 99 yêu cầu có phiên dịch khi người được hỏi không hiểu ngôn ngữ sử dụng; Điều 192 áp dụng quy định này cho người làm chứng. Nên báo trước cho cơ quan triệu tập rằng bạn cần phiên dịch tiếng Việt."}]
 audience: ["vi"]
 author: "legal-ai-assistant"

@@ -9,8 +9,8 @@ categories: ["台灣法律資訊"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/623-taiwan-opposing-turns-single-lane-collision/featured-01.webp"
-featured_image_alt: "銀色轎車與藍色車輛轉彎前位於路口對向入口的AI虛構畫面"
-featured_image_caption: "AI生成的對向左、右轉車虛構情境，非真實事故照片或路口測量資料。"
+featured_image_alt: "銀色轎車與藍色車輛轉彎前位於路口對向入口的虛構畫面"
+featured_image_caption: "虛構情境"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 faq:
@@ -26,7 +26,7 @@ faq:
 
 從相反方向駛來的兩台車，一台左轉、一台右轉，轉彎後須進入同一車道時，右轉車應讓左轉車先行（[道路交通安全規則](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102)）。
 
-本篇的虛構情境中，銀色轎車左轉，對向的藍色車輛右轉，兩車朝同一出口車道匯入。藍車未讓行，車身側面發生擦撞。沒有直行車。影片及封面都由AI生成，沒有重現真實事故或判決。
+本篇的虛構情境中，銀色轎車左轉，對向的藍色車輛右轉，兩車朝同一出口車道匯入。藍車未讓行，車身側面發生擦撞。沒有直行車。影片及封面都是虛構畫面，沒有重現真實事故或判決。
 
 ## 雙方都轉彎，才有這一組條件
 

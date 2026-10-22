@@ -10,7 +10,7 @@ categories: ["대만 법률정보"]
 topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
-featured_image_caption: "AI로 만든 설명용 이미지입니다. 실제 조사실이나 사건을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "출국 제한 통지서를 못 받았으면 한국으로 돌아갈 수 있나요?"
     a: "통지서를 받지 못했다는 사실만으로 제한이 없다고 판단할 수 없습니다. 형사소송법 제93-2조는 제한 후 서면 통지를 허용하되 원칙적으로 6개월을 넘기지 않도록 합니다. 통지 전에 제한 사실을 알게 됐다면 서면 교부를 요구할 수 있습니다."

@@ -10,7 +10,7 @@ categories: ["台湾法律情報"]
 topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
-featured_image_caption: "AIで制作した説明用画像です。実際の取調室や事件を撮影した写真ではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "会社が費用を払えば、従業員の相談内容もすべて報告されますか。"
     a: "費用負担だけでは判断できません。律師倫理規範33条は、第三者による支払について依頼者への説明と同意、弁護士の独立した判断が損なわれないことを求め、依頼者に対する秘密保持義務も残ると定めています。"

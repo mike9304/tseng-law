@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/504-ai-product-open-source-license-delivery-taiwan.webp"
 featured_image_alt: "工程人員在工作桌上整理小型運算裝置、筆電與文件。"
-featured_image_caption: "AI 生成示意圖：產品與相關文件一併交付的情境，非實際產品或授權證明。"
+featured_image_caption: "虛構情境"
 ---
 
 AI 檢測程式交到客戶手上時，裡面可能同時裝著自行開發的介接程式、開源影像套件，以及從外部取得的模型。專案人員若只交一份「第三方套件清單」，客戶仍不知道授權文件放在哪裡、哪些檔案改過，或下次更新後要保留哪些告示。功能驗收通過，也無法補上這些缺漏。

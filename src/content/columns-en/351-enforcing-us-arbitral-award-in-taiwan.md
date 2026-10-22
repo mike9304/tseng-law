@@ -10,8 +10,8 @@ categories:
   - "Taiwan Legal Information"
 topic: "litigation"
 featured_image: "../images/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp"
-featured_image_alt: "AI-generated fictional scene: an empty pale limestone colonnade in morning light, with a row of plain stone columns casting long shadows across a broad paved terrace; no people, flags or text."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real court, company or case."
+featured_image_alt: "Fictional scene: an empty pale limestone colonnade in morning light, with a row of plain stone columns casting long shadows across a broad paved terrace; no people, flags or text."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Taiwan is not a party to the New York Convention. Can a US award still be enforced there?"
     a: "Yes. Article 47 of Taiwan's Arbitration Act treats an award made outside Taiwan as a foreign award and provides that, once a Taiwanese court recognizes it by ruling, it has the same effect between the parties as a final judgment and can be enforced. The court must refuse on its own only on public-policy or non-arbitrability grounds (Article 49), the respondent may apply within twenty days for dismissal on the Article 50 grounds, and refusal for lack of reciprocity is discretionary; an article in the Chinese Arbitration Association's journal reports a Taiwan High Court ruling (106年度非抗字第79號) that upheld recognition of a US award despite a US decision declining to recognize a Taiwanese one."

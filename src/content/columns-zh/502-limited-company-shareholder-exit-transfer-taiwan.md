@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/502-limited-company-shareholder-exit-transfer-taiwan.webp"
 featured_image_alt: "兩人在辦公室桌旁一起查看資料夾中的文件。"
-featured_image_caption: "AI 生成示意圖：股東討論出資轉讓安排，非實際個案。"
+featured_image_caption: "虛構情境"
 ---
 
 有限公司的股東想離開，公司仍要繼續營業時，找到願意接手的人，只解決了交易的一部分。買方願意付多少、其他股東是否同意，以及自己替公司簽過的保證能不能解除，都會影響這次退出是否談得成。向同業或其他股東轉讓出資，也不等於要求公司把當初投入的資本原額退回。

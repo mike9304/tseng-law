@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/534-taiwan-account-admonition-online-seller-payment-limits.webp"
 featured_image_alt: "網拍包裝工作桌上放著封好的紙箱、膠帶和螢幕空白的收款機。"
-featured_image_caption: "AI生成的虛構示意畫面，並非實際商家、支付服務或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 網拍賣家因違反[洗錢防制法第22條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=22)受警方告誡後，原有第三方支付賣方帳號，須依[洗錢防制法第二十二條第六項帳戶帳號暫停限制功能或逕予關閉管理辦法（下稱管理辦法）第8條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0030062&flno=8)接受收款與撥款限制。其中撥款天數「不得短於交易請款日起算二十日」，即使貨已寄出，也不能只看原先與業者約好的入帳日。

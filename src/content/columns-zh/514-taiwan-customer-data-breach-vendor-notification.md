@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/next-four-columns-20261010/514-taiwan-customer-data-breach-vendor-notification.webp"
 featured_image_alt: "兩人在店內辦公桌旁查看紙本文件，桌上放著筆電，門外可見商品陳列架。"
-featured_image_caption: "AI 生成示意圖：店家同事在辦公室核對文件，並非實際個案。"
+featured_image_caption: "虛構情境"
 ---
 
 會員系統廠商已確認有資料外洩，卻還在調查責任，零售業者不能只用「廠商還沒認責」作為延後通知會員的理由。查明哪些資料、哪些人受到影響，和最後由誰賠償，是不同的問題。

@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/409-taiwan-police-criminal-record-certificate-omitted-conviction/featured-01.webp"
 featured_image_alt: "An open gray folio holds two separate translucent sleeves with ivory sheets and blue dividers."
-featured_image_caption: "AI-generated illustration of fictional document folders; it does not show an actual client’s records or case."
+featured_image_caption: "Fictional scene"
 ---
 # What a Taiwan police criminal-record certificate leaves out
 

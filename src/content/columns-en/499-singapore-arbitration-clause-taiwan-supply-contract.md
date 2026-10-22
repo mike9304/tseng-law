@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["singapore","arbitration"]
 featured_image: "/images/blog/singapore-20261010/arbitration-1600x900.webp"
 featured_image_alt: "Contract folders, a pen and a packaged industrial component on a meeting table overlooking Singapore’s waterfront."
-featured_image_caption: "AI-generated illustration of a fictional commercial meeting room in Singapore."
+featured_image_caption: "Fictional scene"
 social_image: "/images/blog/singapore-20261010/arbitration-1600x900.webp"
 audience: ["en"]
 targetMarket: "Singapore"

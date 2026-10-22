@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b05/rental-electricity-average-price-bill-taiwan.png"
 featured_image_alt: "一人在走廊上拿著帶有灰綠色線條和區塊的紙張，旁邊牆上裝有電表，後方可見房門與盆栽。"
-featured_image_caption: "AI生成的示意畫面，紙張與電表顯示均為虛構，並非真實帳單、用電度數、電價或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 # 房東按度收電費，房客可以核對哪些帳單資料？

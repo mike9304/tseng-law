@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約7分鐘閱讀"
 featured_image: "/images/columns/20261004/manhole-road-maintenance-1600x900.webp"
 featured_image_alt: "圓形人孔蓋位於柏油路面，旁邊可見邊緣不平的瀝青修補區。"
-featured_image_caption: "AI 生成之虛構示意圖，呈現一般人孔蓋與路面修補情境，非本案現場、尺寸或事故原因之重建。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261004/manhole-road-maintenance-1600x900.webp"
 ---
 # 人孔蓋旁的坑洞害騎士摔車：道路主管機關和管線公司，誰要負責？

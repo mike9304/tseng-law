@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-compensation"]
 audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
-featured_image_alt: "AI로 만든 가상 장면입니다. 해 질 무렵 오토바이가 세워진 좁은 주택가 골목에서, 왼쪽 앞문을 연 채 멈춘 짙은 회색 해치백 옆에 야구방망이를 든 남성이 등을 보이고 서 있는 모습을 뒤차 안에서 바라봅니다."
-featured_image_caption: "멈춘 차 옆에 야구방망이를 들고 선 남성을 그린 AI 생성 가상 장면입니다. 실제 사진도, 판결에 나온 사건을 재현한 것도 아닙니다."
+featured_image_alt: "가상의 장면입니다. 해 질 무렵 오토바이가 세워진 좁은 주택가 골목에서, 왼쪽 앞문을 연 채 멈춘 짙은 회색 해치백 옆에 야구방망이를 든 남성이 등을 보이고 서 있는 모습을 뒤차 안에서 바라봅니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
 ---
 # 운전 시비 끝에 휘두른 야구방망이, 징역 7개월과 따로 매겨진 배상금 207만여 대만달러

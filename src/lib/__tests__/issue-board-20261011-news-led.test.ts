@@ -49,7 +49,7 @@ describe('four news-led issues approved on 2026-10-11', () => {
     expect(typeof data.title === 'string' && data.title.trim().length > 0).toBe(true);
     expect(typeof data.summary === 'string' && data.summary.trim().length > 0).toBe(true);
     expect(Array.isArray(data.faq) && data.faq.length > 0).toBe(true);
-    expect(content).toMatch(/AI/); // The existing issue template renders this body disclosure.
+    expect(content).not.toMatch(/AI-generated|AIで生成|AI로 만든|AI 생성|do AI tạo/); // No AI image marks anywhere on the site (user rule 2026-10-22).
     expect(raw).not.toMatch(/\*\*|__[^\n]+__|<strong\b|<b(?:\s|>)/i);
     expect(data.featured_image).toBe(`../images/${id}-${slug}/featured-01.webp`);
 

@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/529-taiwan-civil-court-deposit-service-japanese.webp"
 featured_image_alt: "金属製の郵便受けのそばで、人物が灰色の線のあるカードと白い封筒を持っています。"
-featured_image_caption: "AI生成の架空の場面です。実際の裁判所の通知書や送達の事実・日付を示す写真ではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾の民事裁判書類が適法に「寄存送達」された場合、本人がまだ受け取っていなくても、原則として寄存の日から10日を経過すると送達の効力が生じます（[民事訴訟法第138条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=138)）。ただし、10日以内に文書を受け取ったときは、実際の受取日に効力が生じます（[司法院の注意事項第141点](https://legal.judicial.gov.tw/FLAW/dat02.aspx?lsid=FL001384)）。

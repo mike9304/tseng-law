@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/423-taiwan-crime-report-complaint-korean-return/featured-01.webp"
 featured_image_alt: "두 손이 남색 여행용 서류 지갑에 종이와 작은 수첩을 정리하고 있습니다."
-featured_image_caption: "AI로 제작한 가상의 서류 정리 장면입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만에서 범죄 피해를 신고할 때: 접수증, 고소 의사, 귀국 후 연락
 

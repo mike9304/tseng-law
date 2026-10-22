@@ -12,7 +12,7 @@ topic: "tax"
 tags: ["semiconductor", "한-대만 이중과세방지 약정", "고정사업장", "183일", "파견 엔지니어", "대만 원천징수"]
 featured_image: "../images/semiconductor/korea-taiwan-tax-agreement-dispatched-engineers-permanent-establishment/featured-01.webp"
 featured_image_alt: "길고 옅은 석회암 탁자 왼쪽에 무늬 없는 작은 무광 도자기 잔 두 개가 놓여 있습니다. 앞쪽 잔은 접어 놓은 차분한 청록색 리넨 위에 있고, 탁자 오른쪽은 비어 있습니다."
-featured_image_caption: "AI로 생성한 가상의 장면입니다. 실제 회사·시설·인물을 촬영하거나 재현한 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "대만 출장이 183일을 넘지 않으면 한국 엔지니어는 대만 소득세를 내지 않나요?"
     a: "183일은 한-대만 이중과세방지 약정 제15조 제2항의 세 조건 중 하나입니다. 해당 과세연도에 시작하거나 끝나는 어느 12개월을 잡아도 대만 체류가 합계 183일 이하이고, 급여를 대만 거주자가 아닌 고용주가 지급하며, 그 급여를 고용주의 대만 고정사업장이 부담하지 않아야 한국에서만 과세됩니다. 대만에서는 신고할 때 거주자증명서, 여권, 고용계약서 등을 내야 하고 세무서가 감면되는 소득을 정합니다."

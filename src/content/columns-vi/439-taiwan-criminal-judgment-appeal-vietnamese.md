@@ -18,7 +18,7 @@ faq:
     a: "Trong vụ công tố, người bị hại hoặc người có tư cách 告訴人 nêu lý do để đề nghị kiểm sát viên kháng cáo theo Điều 344. Thời hạn kháng cáo của kiểm sát viên tính theo việc tống đạt cho kiểm sát viên, không phải ngày bạn nhận bản án. Thủ tục phần dân sự cần được xem riêng."
 featured_image: "/images/blog/column-media-20261010/439-taiwan-criminal-judgment-appeal-vietnamese/featured-01.webp"
 featured_image_alt: "Phong bì mở và một xấp giấy màu kem có thẻ đánh dấu nhỏ, được tạo hình bằng giấy trên nền xanh."
-featured_image_caption: "Hình minh họa do AI tạo theo phong cách tạo hình giấy. Đây là bố cục giả định, không phải bản án hay hồ sơ của khách hàng có thật."
+featured_image_caption: "Cảnh hư cấu"
 ---
 
 # Nhận bản án hình sự Đài Loan: hạn kháng cáo và nơi nộp đơn

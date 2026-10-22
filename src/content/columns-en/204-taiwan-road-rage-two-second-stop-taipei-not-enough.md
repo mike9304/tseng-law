@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 featured_image_alt: "Through a car windscreen on an overcast day, a scooter with a glowing red tail light is visible ahead on an elevated road, alongside a large grey box truck in the left lane."
-featured_image_caption: "This AI-generated fictional scene illustrates the slowing and stopping situations discussed in the column. It is not a photograph or reconstruction of the events in the judgments."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 ---
 # A two-second stop in Taipei was not enough to prove dangerous driving

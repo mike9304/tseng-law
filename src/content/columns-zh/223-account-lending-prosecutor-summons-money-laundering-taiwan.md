@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["fraud", "account-lending", "criminal-defense"]
 featured_image: "../images/223-account-lending-prosecutor-summons-money-laundering-taiwan/featured-01.webp"
 featured_image_alt: "窗邊的小工作桌上擺著幾個空的零件分類盒和一盞檯燈，一人背對鏡頭坐著，雙手擱在桌面上。"
-featured_image_caption: "AI生成的虛構情境示意圖，呈現等不到代工材料的桌面；並非真實案件、當事人、銀行畫面或文件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "只交了一個帳戶，也沒拿到錢，為什麼還是被列為被告？"
     a: "洗錢防制法第22條的刑責，以期約或收受對價、交付三個以上帳戶或裁處後五年內再犯為條件；幫助詐欺與幫助洗錢則不以帳戶數量或報酬為條件，而看交付時是否已預見帳戶可能被用於犯罪，仍容任其發生。這份犯意由檢察官舉證，被告在有罪判決確定前推定無罪。"

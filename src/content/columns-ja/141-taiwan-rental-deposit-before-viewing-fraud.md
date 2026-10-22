@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/fraud-20261003/taiwan-rental-deposit-before-viewing-fraud.png"
 featured_image_alt: "台湾の賃貸契約と送金前の確認を題材にした、説明用の架空のイメージ。"
-featured_image_caption: "AI生成のイメージです。実在の物件、契約書、人物や被害事例を示すものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 「大家は国外にいる。内見を手配するには先に送金してほしい」。台北市警察の士林分局は、こうした説明で仲介業者を装う相手に送金させる手口を、[2017年の注意喚起](https://sl.police.gov.taipei/News_Content.aspx?n=A6B82B0E3D41260F&s=986942DD663471F2&sms=77CBE2BE1727C4A7)で紹介しています。同分局は、写真や貸主の説明だけで支払わず、実際の部屋と所有権を確認するよう呼びかけています。

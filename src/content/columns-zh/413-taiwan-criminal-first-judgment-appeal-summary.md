@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/413-taiwan-criminal-first-judgment-appeal-summary/featured-01.webp"
 featured_image_alt: "一隻手將素面信封與紙束放在軟木托盤中，旁邊是灰藍色記事本。"
-featured_image_caption: "AI 生成的虛構示意場景，呈現信封與文件的整理方式，並非真實當事人或案件。"
+featured_image_caption: "虛構情境"
 ---
 # 收到刑事判決後的20日：上訴狀交哪裡，簡易判決怎麼辦
 

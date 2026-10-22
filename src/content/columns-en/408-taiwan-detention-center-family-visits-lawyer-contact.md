@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/408-taiwan-detention-center-family-visits-lawyer-contact/featured-01.webp"
 featured_image_alt: "Two wooden chairs in a sunlit home entryway hold a plain gray document pouch and a cream canvas tote."
-featured_image_caption: "AI-generated illustration of family preparation in a fictional home. It does not depict an actual client, detention facility or visit, or indicate that a visit has been approved."
+featured_image_caption: "Fictional scene"
 ---
 # Visiting a family member held in a Taiwan detention center
 

@@ -11,8 +11,8 @@ categories:
 topic: "litigation"
 tags: ["fraud", "口座貸与", "刑事弁護", "台湾在住日本人"]
 featured_image: "../images/218-japanese-resident-taiwan-account-lending-crime/featured-01.webp"
-featured_image_alt: "明るい面談室の丸いテーブルを囲む三人の手元と椅子を写した、AI生成の架空の相談場面。"
-featured_image_caption: "AIで生成した架空の相談場面です。実際の事件、相談者、弁護士や通訳を撮影したものではなく、銀行画面や書類も示していません。"
+featured_image_alt: "明るい面談室の丸いテーブルを囲む三人の手元と椅子を写した、架空の相談場面。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "一つの口座を貸しただけでも犯罪になりますか？"
     a: "なり得ます。洗錢防制法第22条第1項に違反し、口座提供の対価を約束した場合は、口座が一つでも同条第3項の刑事処罰が問題になります。無償でも、同条所定の再犯や、詐欺・マネーロンダリングへの幇助が成立する可能性があります。実際の利用関係、正当な理由の有無、当時の認識を調べる必要があります。"

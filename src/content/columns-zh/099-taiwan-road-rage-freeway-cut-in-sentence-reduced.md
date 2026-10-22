@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
-featured_image_alt: "AI生成的虛構畫面：白天從車內透過擋風玻璃看出去的市區多線道快速道路，正前方是一輛亮著尾燈的白色廂型小貨車，左右車道分別有一輛深灰色轎車和一輛白色休旅車，遠處可見高架道路與高樓。"
-featured_image_caption: "AI生成的虛構畫面，呈現從車內看見的白色廂型小貨車與周圍車流，並非本案的實際照片，也不是判決認定事實的重建。"
+featured_image_alt: "虛構畫面：白天從車內透過擋風玻璃看出去的市區多線道快速道路，正前方是一輛亮著尾燈的白色廂型小貨車，左右車道分別有一輛深灰色轎車和一輛白色休旅車，遠處可見高架道路與高樓。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
 ---
 # 小貨車逼到計程車自動煞車，高院為何仍把徒刑4月改成拘役40日

@@ -12,7 +12,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 featured_image_alt: "Through a car windshield at dusk, a white sedan is in the left lane of an elevated road, while a black sedan straddles the edge of a white-hatched area at a fork."
-featured_image_caption: "This AI-generated fictional scene illustrates the type of driving situation discussed in the column. It is not a photograph or reconstruction of the case described in the judgment."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 ---
 # The freeway chase was on his own dashcam too

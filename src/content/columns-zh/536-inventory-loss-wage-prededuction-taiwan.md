@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/536-inventory-loss-wage-prededuction-taiwan.webp"
 featured_image_alt: "一人在放有紙箱的層架旁，拿著夾板和綠色鉛筆；前方木桌放著素色信封。"
-featured_image_caption: "AI 生成的示意畫面，人物與文件均為虛構，並非真實盤點、薪資扣款或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 適用《勞動基準法》的勞工，即使公司已發現盤損，只要賠償責任、範圍或金額尚未確定，公司仍不能先扣工資抵償。[第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26)規定：「雇主不得預扣勞工工資作為違約金或賠償費用。」[勞動部說明](https://www.mol.gov.tw/1607/28690/2282/2284/2290/7146/)指出，禁止預扣不只適用於損失尚未發生時，也包括損失已發生、責任卻未確定的情形。

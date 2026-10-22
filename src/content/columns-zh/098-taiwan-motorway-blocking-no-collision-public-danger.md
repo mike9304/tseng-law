@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約6分鐘閱讀"
 featured_image: "/images/columns/20261003/motorway-two-cars-neutral-hero-1600x900.webp"
 featured_image_alt: "陰天下的多車道高速公路，遠處兩輛汽車分處不同車道，道路兩側可見護欄、樹木與山丘。"
-featured_image_caption: "AI 生成之虛構高速公路情境示意圖，非實際行車紀錄或個案重建；畫面不代表阻擋通行或犯罪事實。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/motorway-two-cars-neutral-hero-1600x900.webp"
 ---
 # 沒撞上也可能犯罪？國道攔擋、減速與危險駕駛的界線

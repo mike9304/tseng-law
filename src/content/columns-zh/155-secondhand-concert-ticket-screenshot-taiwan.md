@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b02/secondhand-concert-ticket-screenshot-taiwan.png"
 featured_image_alt: "一人指向手機上的虛構票券畫面，桌上放著兩張紙本票券，背景是模糊的舞台燈光。"
-featured_image_caption: "AI生成示意圖，票券與畫面均為虛構，並非真實演唱會門票、藝人或詐騙案件。"
+featured_image_caption: "虛構情境"
 ---
 
 # 二手演唱會票只有截圖，還不能確認哪些事？

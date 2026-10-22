@@ -11,7 +11,7 @@ categories:
 topic: "family"
 featured_image: "../images/275-taiwan-divorce-property-damages-support/featured-01.webp"
 featured_image_alt: "A single house key on a ring beside two separate stacks of blank papers on a wooden table."
-featured_image_caption: "AI-generated fictional scene; it does not depict a real company, facility or person."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Does paying for a house or holding title decide ownership and residual-property distribution?"
     a: "No. Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. The parties must separately examine their actual agreement, the cause and timing of acquisition, fund flows, debts, whether property was acquired gratuitously, and the supporting evidence. Neither paying part of the cost with premarital funds nor registering the house in one party’s name determines every issue."

@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/422-taiwan-cannabis-drugs-luggage-parcel-criminal-risk/featured-01.webp"
 featured_image_alt: "햇빛이 드는 현관에 닫힌 여행 가방이 서 있고, 옆 벤치에는 소포와 서류 봉투가 놓여 있습니다."
-featured_image_caption: "AI로 만든 가상의 여행 준비 장면입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대마가 든 젤리·전자담배를 대만에 가져오면: 휴대와 해외배송의 형사 문제
 

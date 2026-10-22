@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b05/handwritten-will-typed-print-signature-taiwan.png"
 featured_image_alt: "木桌上放著帶有淡色山水圖樣的紙、鋼筆和杯子，一隻手停在筆旁，後方是闔上的筆電與書本。"
-featured_image_caption: "AI生成的概念示意圖，紙上為虛構圖樣，並非真實遺囑、簽署紀錄或案件照片。"
+featured_image_caption: "虛構情境"
 ---
 
 # 遺囑用電腦打好再簽名，符合自書遺囑的要求嗎？

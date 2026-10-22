@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約4分鐘閱讀"
 featured_image: "/images/columns/20261003/vehicle-hood-damage-1600x900.webp"
 featured_image_alt: "停靠路旁的灰色轎車引擎蓋近照，表面可見一處小凹痕與短刮痕，畫面邊緣可見頭燈及擋風玻璃。"
-featured_image_caption: "AI 生成的虛構車損示意圖，非實際個案照片；僅呈現車身外觀，不表示物體來源、碰撞過程或責任歸屬。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/vehicle-hood-damage-1600x900.webp"
 ---
 # 飛來的鐵片是前車掉的嗎？兩段行車紀錄器，為什麼判決不同？

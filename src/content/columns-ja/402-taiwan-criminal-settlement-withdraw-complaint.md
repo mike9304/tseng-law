@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "台湾 刑事 示談", "台湾 告訴 取消し", "告訴期間 6か月"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "机の上の書類封筒に添えられた両手"
-featured_image_caption: "AI生成の説明用イメージです。実際の示談書や依頼者の写真ではありません。"
+featured_image_caption: "架空の情景"
 faq: [{"q": "示談金を払えば台湾の刑事事件は終わりますか。", "a": "示談だけですべての事件が終わるわけではありません。告訴を必要とする罪か、有効な取消しがあったか、その時期が第一審弁論終結前かなどを確認します。告訴を必要としない罪では、被害者の取消しの意思だけで手続が終わることはありません。"}, {"q": "取消し後に示談金が支払われなければ、もう一度告訴できますか。", "a": "第238条により、告訴を取り消した人は同じ事件について再び告訴できません。示談に基づく民事上の請求や執行の可否を検討することになり、不払いだけで告訴が復活することはありません。"}]
 audience: ["ja"]
 author: "legal-ai-assistant"

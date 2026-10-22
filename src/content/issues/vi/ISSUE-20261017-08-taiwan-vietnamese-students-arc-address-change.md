@@ -11,7 +11,7 @@ categories:
 topic: visa
 featured_image: "../images/ISSUE-20261017-08-taiwan-vietnamese-students-arc-address-change/featured-01.webp"
 featured_image_alt: "Chìa khóa và bìa hồ sơ khép kín trên bàn học, cạnh một thùng chuyển nhà trong căn phòng yên tĩnh."
-featured_image_caption: "Hình minh họa do AI tạo về một phòng sinh viên giả định; không phải ảnh người nộp hồ sơ hay giấy tờ cư trú thật."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261017-08-taiwan-vietnamese-students-arc-address-change/featured-01.jpg"
 faq:
   - q: "Thẻ ARC còn hạn thì có thể chờ đến lúc gia hạn mới đổi địa chỉ không?"

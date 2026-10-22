@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/contractor-employee-status-control-work-taiwan.png"
 featured_image_alt: "一人在辦公桌前拿著兩張紙，一張有灰色橫線，另一張是帶有灰綠色區塊的表格；桌上放著闔上的筆電、筆記本和空白證件套。"
-featured_image_caption: "AI生成的虛構工作情境示意圖，並非真實工作者、公司文件或案件照片。"
+featured_image_caption: "虛構情境"
 ---
 
 # 「承攬」契約下的打卡與工作指示：勞工身分怎麼判斷

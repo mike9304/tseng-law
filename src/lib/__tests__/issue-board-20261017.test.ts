@@ -82,7 +82,7 @@ describe('issue board 2026-10-17', () => {
     expect(fs.existsSync(path.join(process.cwd(), socialImage)), socialImage).toBe(true);
     // The issue page currently renders the frontmatter caption only for Vietnamese.
     // The other locales therefore retain a public image disclosure in the body.
-    if (locale !== 'vi') expect(content).toMatch(/AI/);
+    expect(content).not.toMatch(/AI-generated|AIで生成|AI로 만든|AI 생성|do AI tạo/);
     const urls = [...content.matchAll(/\]\((https:\/\/[^\s)]+)\)/g)].map((match) => new URL(match[1]));
     expect(urls.some((url) => url.hostname === 'law.moj.gov.tw'
       && url.pathname === '/LawClass/LawSingle.aspx'

@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
-featured_image_alt: "AI生成的虛構場景：從車內望向夜間潮濕的市區道路，正前方一輛深色轎車亮著紅色煞車燈。"
-featured_image_caption: "這是AI生成的虛構場景，用來示意本文討論的行車情境。不是實景照片，也不是判決中案件的重現。"
+featured_image_alt: "虛構場景：從車內望向夜間潮濕的市區道路，正前方一輛深色轎車亮著紅色煞車燈。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
 ---
 # 被按喇叭後在快速道路急停、倒車撞後車3次，前車駕駛主張正當防衛未獲採納

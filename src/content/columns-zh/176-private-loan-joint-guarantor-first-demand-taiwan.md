@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/private-loan-joint-guarantor-first-demand-taiwan.png"
 featured_image_alt: "兩人坐在木桌前查看一張帶有灰色線條的紙，一人指著紙面，另一人將筆停在紙上方；桌上放著兩個杯子和闔上的筆記本。"
-featured_image_caption: "AI生成的示意畫面，人物與文件均為虛構，並非真實借貸、保證契約或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 # 替親友的私人借款簽連帶保證，債權人可以先找我嗎？

@@ -10,7 +10,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "Taiwan witness summons", "refuse testimony Taiwan", "American witness Taiwan"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "An empty table and two chairs beside a window"
-featured_image_caption: "AI-generated illustration, not a photograph of an actual interview room or case."
+featured_image_caption: "Fictional scene"
 faq: [{"q": "Can I ignore the summons if an answer might incriminate me?", "a": "A ground for refusing testimony does not itself excuse attendance. Under Article 183, the reason must be substantiated and the prosecutor or relevant judge decides whether to allow refusal. Contact the issuing office about any difficulty attending. For an Article 181 ground, the authority may order a sworn declaration in place of substantiation."}, {"q": "Can an English-speaking witness use an interpreter?", "a": "Article 99 requires interpretation where the person being questioned cannot communicate in the language being used. Article 192 applies this rule to witness examination. Tell the issuing office which language you need before the appointment."}]
 audience: ["en"]
 author: "legal-ai-assistant"

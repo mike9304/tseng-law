@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/419-taiwan-suspended-sentence-obligations-revocation/featured-01.webp"
 featured_image_alt: "一雙手在膝上拿著深灰色記事本，封面夾著數張素色紙條與一張小卡片。"
-featured_image_caption: "AI 生成的虛構示意畫面，呈現整理隨身紀錄的情境，並非真實當事人或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 # 拿到緩刑判決後，賠償、報到與撤銷條件怎麼看
 

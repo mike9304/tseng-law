@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["semiconductor", "IC設計", "專利授權", "標準必要專利", "FRAND", "跨境訴訟"]
 featured_image: "../images/semiconductor/taiwan-ic-design-cross-border-patent-licensing-disputes/featured-01.webp"
 featured_image_alt: "鏡面拋光的空白矽晶圓弧形邊緣占據畫面下方，邊緣有一道柔和的紫色干涉光帶，背景漸入失焦的暗處。"
-featured_image_caption: "AI 生成的虛構晶圓示意圖，並非真實公司、廠房或人物。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "英國法院已在聯發科與華為的案件中判定侵權或權利金嗎？"
     a: "沒有。2025年3月公開的英國判決處理管轄、送達與程序中止等爭點，沒有裁定專利侵權、FRAND費率或核發禁制令。聯發科於2026年2月公布的2025年度財報另揭露雙方已達成和解，但未公開授權條款。"

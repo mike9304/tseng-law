@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/426-taiwan-online-review-defamation-public-insult/featured-01.webp"
 featured_image_alt: "휴대전화의 추상적인 게시물 화면 옆에 영수증과 집게로 묶은 자료가 놓인 삽화"
-featured_image_caption: "온라인 기록과 영수증을 함께 보관하는 상황을 AI로 표현한 가상 삽화입니다. 실제 게시물이나 의뢰인의 사건을 나타내지 않습니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만 가게 후기와 온라인 댓글, 명예훼손·모욕은 어디서 갈리나
 

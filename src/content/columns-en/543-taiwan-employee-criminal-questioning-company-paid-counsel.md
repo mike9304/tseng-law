@@ -10,7 +10,7 @@ categories: ["Taiwan Legal Information"]
 topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
-featured_image_caption: "AI-generated illustration. It does not depict an actual interview room or case."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Does paying the fees entitle the company to every employee consultation?"
     a: "No such entitlement follows merely from payment. Article 33 of Taiwan's legal ethics rules conditions third-party payment on disclosure to and consent from the client, without impairing independent judgment. Confidentiality duties to that client continue. Clarify who the client is and what reporting is authorized."

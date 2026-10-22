@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261014-12-vietnam-stainless-steel-taiwan-antidumping-preliminary-injury/featured-01.webp"
 featured_image_alt: "Một cuộn thép không gỉ cán dẹt và một tấm thép đặt trong nhà kho vắng."
-featured_image_caption: "Hình minh họa do AI tạo về một nhà kho hư cấu; không phải sản phẩm hay doanh nghiệp trong vụ điều tra."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261014-12-vietnam-stainless-steel-taiwan-antidumping-preliminary-injury/featured-01.jpg"
 faq:
   - q: "Đài Loan đã kết luận một số sản phẩm inox dẹt cán nguội từ Việt Nam bị bán phá giá chưa?"

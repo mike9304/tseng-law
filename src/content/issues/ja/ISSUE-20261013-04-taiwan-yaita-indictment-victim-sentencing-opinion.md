@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/ISSUE-20261013-04-taiwan-yaita-indictment-victim-sentencing-opinion/featured-01.webp"
 featured_image_alt: "人のいない裁判所の待合廊下と、ベンチに置かれた書類ファイル"
-featured_image_caption: "架空の裁判所の待合空間を描いたAI生成画像です。実在の事件現場や裁判資料の写真ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261013-04-taiwan-yaita-indictment-victim-sentencing-opinion/featured-01.jpg"
 faq:
   - q: "報道された5年は、裁判所が決めた刑ですか？"
@@ -50,7 +50,7 @@ author: "legal-ai-assistant"
 
 帰国後も台湾の裁判が続く場合、委任の有無だけでは出頭予定を決められません。裁判所から届いた通知が誰の出頭を求め、どの手続を予定しているかを、代理人との委任内容と併せて読むことになります。
 
-画像は架空の裁判所の待合空間を描いたAI生成画像で、実在の事件現場や裁判資料を示すものではありません。
+架空の情景
 
 ## 参照資料
 

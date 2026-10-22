@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/532-taiwan-cross-border-separation-presumed-paternity.webp"
 featured_image_alt: "窗邊的圓木桌上放著闔上的綠色資料夾與盆栽，旁邊是搭著針織毯的淺色座椅。"
-featured_image_caption: "AI 生成的示意畫面，並非真實家庭或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 與外籍配偶分居後生下孩子，如果想讓生父認領，先要確認孩子在法律上是否仍被視為婚生子女。跨國家庭不能只看孩子出生地：[涉外民事法律適用法第51條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=51)規定，依出生時子女、母親或母親之夫的本國法為婚生子女者，即為婚生子女。

@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["semiconductor", "台湾特許", "智慧財產及商業法院", "特許訴訟", "仮処分"]
 featured_image: "../images/semiconductor/taiwan-ip-commercial-court-semiconductor-patent-judgments/featured-01.webp"
 featured_image_alt: "暗いチャコール色の石のベンチの左側に、小さな透明の三角柱のガラスが置かれている。石の上には細い紫色の光が差し、隣にも何も置かれていないベンチが続く。奥の明るい窓はぼけている。"
-featured_image_caption: "AIで生成した架空の情景です。実在の企業、施設、人物や裁判の現場を写したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "台湾で特許の無効を抗弁として主張すると、民事裁判所が特許を取り消しますか。"
     a: "智慧財產案件審理法第41条により、裁判所はその訴訟で取消しの理由があるかを自ら判断します。理由があると判断した場合、権利者はその民事訴訟で相手方に権利を主張できません。この判断と、行政手続で特許そのものを取り消すことは区別されます。"

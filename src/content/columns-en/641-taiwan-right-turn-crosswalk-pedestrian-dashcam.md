@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/641-taiwan-right-turn-crosswalk-pedestrian-dashcam/featured-01.webp"
 featured_image_alt: "Fictional view from a car preparing to turn right toward a crosswalk and a pedestrian seen from behind"
-featured_image_caption: "AI-created fictional crosswalk scene, not a photograph of an actual collision or person involved in one."
+featured_image_caption: "Fictional scene"
 audience: ["en"]
 author: "legal-ai-assistant"
 faq:

@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "窗邊空著的會議桌與兩張椅子"
-featured_image_caption: "AI生成的程序說明示意圖，並非真實扣押現場或偵訊室。"
+featured_image_caption: "虛構情境"
 faq: [{"q": "一定要結案才能拿回扣押物嗎？", "a": "依第142條，無留存必要的扣押物，不待案件終結，應以法院裁定或檢察官命令發還。所有人、持有人或保管人也可請求暫行發還，由機關命其負保管責任，但不是一提出就必須准許。"}, {"q": "不服檢察官的扣押物發還處分，要向哪裡提出？", "a": "受第416條所定處分的人，可向檢察官所屬法院聲請撤銷或變更。期間為10日，自處分日起算；以送達方式為之者，自送達後起算。依第417條，須以書狀敘述不服理由，向該管法院提出。不同警察措施或法院裁定，不能一律套用這個途徑。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"

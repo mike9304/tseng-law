@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png"
 featured_image_alt: "상자가 쌓인 사무실에서 두 사람이 나무 책상 위 문서를 살펴보고 있다. 한 사람은 회색 선이 있는 종이를 가리키고, 다른 사람 앞에는 표 형태의 종이와 펜이 놓여 있다."
-featured_image_caption: "AI가 생성한 가상의 설명용 이미지입니다. 실제 거래처·의뢰인이나 실제 합의 문서를 재현하지 않았습니다."
+featured_image_caption: "가상의 장면"
 ---
 
 # 대만 거래처와 미수금 합의, 청구 포기는 서명할 때 효력이 생기나요?

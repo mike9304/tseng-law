@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "대만 형사합의", "대만 고소취소", "고소기간 6개월"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "탁자 위 서류 봉투에 놓인 두 손"
-featured_image_caption: "AI로 만든 설명용 이미지입니다. 실제 합의서나 의뢰인 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq: [{"q": "대만에서 형사합의를 하면 사건이 자동으로 끝나나요?", "a": "합의만으로 모든 형사사건이 끝나지는 않습니다. 고소가 소추 요건인 죄인지, 적법한 고소취소가 있었는지, 취소 시점이 1심 변론 종결 전인지 등을 살펴야 합니다. 고소가 필요 없는 죄는 피해자의 취소 의사만으로 수사가 종결되지 않습니다."}, {"q": "고소를 취소했는데 합의금을 주지 않으면 다시 고소할 수 있나요?", "a": "제238조에 따라 고소를 취소한 사람은 같은 사건을 다시 고소할 수 없습니다. 합의금 미지급은 합의서에 따른 민사상 청구·집행 가능성을 검토할 문제이며, 미지급만으로 취소한 고소가 되살아나지는 않습니다."}]
 audience: ["ko"]
 author: "legal-ai-assistant"

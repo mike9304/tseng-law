@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "창가의 빈 회의 탁자와 두 개의 의자"
-featured_image_caption: "AI로 만든 절차 설명용 이미지입니다. 실제 압수 현장이나 조사실 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq: [{"q": "대만 형사사건이 끝나야 압수물을 받을 수 있나요?", "a": "제142조에 따라 보관할 필요가 없는 압수물은 사건 종결을 기다리지 않고 법원 결정이나 검사 명령으로 반환해야 합니다. 소유자·소지자·보관인의 요청으로 보관 책임을 지우고 임시 반환하는 방법도 있지만, 요청만으로 허가되는 것은 아닙니다."}, {"q": "검사의 압수물 반환 처분에 불복하려면 어디로 가나요?", "a": "제416조가 정한 처분을 받은 사람은 소속 법원에 취소·변경을 신청할 수 있습니다. 기간은 10일이며 처분일부터, 송달하는 경우에는 송달 후부터 계산합니다. 제417조에 따라 불복 이유를 적은 서면을 관할 법원에 제출합니다. 모든 경찰 조치나 법원 결정에 같은 절차가 적용되는 것은 아닙니다."}]
 audience: ["ko"]
 author: "legal-ai-assistant"

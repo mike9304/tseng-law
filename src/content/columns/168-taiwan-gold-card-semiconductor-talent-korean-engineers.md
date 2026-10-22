@@ -12,7 +12,7 @@ topic: "visa"
 tags: ["semiconductor", "대만 취업금카드", "반도체 인력", "외국전문인재연용법", "대만 소득세", "한국 엔지니어"]
 featured_image: "../images/semiconductor/taiwan-gold-card-semiconductor-talent-korean-engineers/featured-01.webp"
 featured_image_alt: "긴 옅은 참나무 탁자 위에 크기가 다른 따뜻한 상아색 도자기 컵 두 개가 떨어져 놓여 있다. 좁고 부드러운 금빛 띠가 나무를 따라 지나가고, 뒤의 회벽은 흐릿하게 보인다."
-featured_image_caption: "AI가 생성한 가상의 장면입니다. 실제 기업, 시설, 인물이나 사건의 자료가 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "반도체 회사에서 일하면 월급과 관계없이 취업금카드를 받을 수 있나요?"
     a: "아닙니다. 과학기술 분야의 최근 월급 16만 대만달러는 여러 자격 경로 중 하나입니다. 경제 분야에는 반도체 관련 기업에서 전문 또는 분야 간 통합 직무를 맡은 경력 8년 이상 등의 경로가 있지만, 경력과 증빙은 관할 기관의 심사를 받습니다."

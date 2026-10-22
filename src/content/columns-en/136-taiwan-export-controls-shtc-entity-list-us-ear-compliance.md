@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "export-controls", "entity-list", "EAR", "Huawei", "SMIC", "Taiwan"]
 featured_image: "../images/semiconductor/taiwan-export-controls-shtc-entity-list-us-ear-compliance/featured-01.webp"
 featured_image_alt: "Two plain kraft-paper parcels of different sizes set apart on a pale limestone ledge, with a solid blue tape line running diagonally between them in an empty, high-ceilinged room."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real company, facility, shipment or person."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Does a Taiwan export permit also cover U.S. export licensing requirements?"
     a: "No. A Taiwan Strategic High-Tech Commodities export permit is issued under Taiwan’s Foreign Trade Act. Whether an item is subject to the U.S. Export Administration Regulations, and whether a BIS license is needed, is a separate question under U.S. law. One authorization does not substitute for the other."

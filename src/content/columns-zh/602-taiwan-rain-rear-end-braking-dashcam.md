@@ -10,7 +10,7 @@ topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/602-taiwan-rain-rear-end-braking-dashcam/featured-01.webp"
 featured_image_alt: "雨中駕駛視角接近白色車輛後方的虛構情境"
-featured_image_caption: "AI生成的雨天追撞虛構情境，非真實事故照片或煞車距離實驗。"
+featured_image_caption: "虛構情境"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 faq:
@@ -26,7 +26,7 @@ faq:
 
 前車突然停下，後車撞了上去，責任就全在急煞的人身上嗎？道路交通安全規則同時規範前車的煞車行為與後車的跟車距離。還得知道為何煞車。
 
-附片設定在下雨的台灣一般道路，白色車輛停止後遭後車追撞。封面和影片都是AI生成的虛構情境，沒有重現特定事件，也不是煞車距離實驗。前車停止的原因，不能只靠這段影像確定。
+附片設定在下雨的台灣一般道路，白色車輛停止後遭後車追撞。封面和影片都是虛構情境，沒有重現特定事件，也不是煞車距離實驗。前車停止的原因，不能只靠這段影像確定。
 
 ## 急煞之前發生了什麼
 

@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/538-coowned-house-court-partition-taiwan.webp"
 featured_image_alt: "三人圍在木桌旁，桌上放著房屋模型、平面圖、杯子和素色紙片，其中一人指向圖面。"
-featured_image_caption: "AI生成的示意畫面，人物、房屋模型及平面圖均為虛構，並非真實持分安排或法院分割結果。"
+featured_image_caption: "虛構情境"
 ---
 
 房屋為分別共有時，依[民法第823條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=823)，各共有人原則上「得隨時請求分割共有物」。能否立即請求分割，仍受法令、房屋使用目的與不分割約定限制；方法談不攏，可請法院決定，但不保證一定能按持分換回現金。

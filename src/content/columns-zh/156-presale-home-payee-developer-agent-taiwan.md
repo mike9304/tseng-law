@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b02/presale-home-payee-developer-agent-taiwan.png"
 featured_image_alt: "住宅模型旁攤開建築圖片、平面圖與文件，兩人以手勢指向桌面資料。"
-featured_image_caption: "AI生成的虛構場景，呈現住宅模型、平面圖與文件的討論情境，並非真實人物、建案或契約。"
+featured_image_caption: "虛構情境"
 ---
 
 # 預售屋的建商、代銷與收款戶名不同，房款該匯給誰？

@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["semiconductor", "trade-secrets", "civil-litigation", "injunctions", "evidence-preservation", "Taiwan"]
 featured_image: "../images/semiconductor/taiwan-trade-secrets-act-civil-remedies-injunctions-us-tech/featured-01.webp"
 featured_image_alt: "A pale oak archive drawer stands open among matching unmarked drawers, revealing a dark interior, folded undyed cotton cloth and a narrow band of teal light; the surrounding drawers are closed and no one is present."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real company, facility or person."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Must a U.S. company obtain a criminal conviction before suing in Taiwan?"
     a: "No. The Trade Secrets Act provides separate civil claims to stop or prevent infringement and recover damages. The claimant must establish the applicable civil requirements; a criminal complaint does not itself obtain civil relief."

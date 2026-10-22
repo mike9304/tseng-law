@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "Taiwan criminal settlement", "withdraw criminal complaint Taiwan", "Taiwan complaint deadline"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Two hands resting on a document envelope on a table"
-featured_image_caption: "AI-generated illustration, not a real settlement document or client photograph."
+featured_image_caption: "Fictional scene"
 faq: [{"q": "Does paying a settlement automatically end a Taiwan criminal case?", "a": "No. The effect depends on whether the offense requires a complaint, whether a valid withdrawal has been made and whether the deadline has passed. A victim’s wish to withdraw does not itself end proceedings for an offense that does not require a complaint."}, {"q": "Can I revive the complaint if the promised payment never comes?", "a": "Article 238 prevents the person who withdrew from making the same complaint again. Civil remedies under the settlement need separate assessment; nonpayment alone does not restore the withdrawn complaint."}]
 audience: ["en"]
 author: "legal-ai-assistant"

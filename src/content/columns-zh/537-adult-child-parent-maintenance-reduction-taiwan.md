@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/537-adult-child-parent-maintenance-reduction-taiwan.webp"
 featured_image_alt: "一人在木桌前拿著泛黃的信封，桌上分放著舊紙張、素色資料夾、闔上的書和杯子。"
-featured_image_caption: "AI 生成的示意畫面，人物與文件均為虛構，並非真實家庭紀錄或扶養案件照片。"
+featured_image_caption: "虛構情境"
 ---
 
 父母過去無正當理由未盡扶養義務，若現在由成年子女負擔扶養「顯失公平」，子女可以依[民法第1118條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1118-1)請求法院減輕。父母對子女的這類行為情節重大時，法院得免除義務；多年沒有聯絡，本身不會使扶養義務自動消失。

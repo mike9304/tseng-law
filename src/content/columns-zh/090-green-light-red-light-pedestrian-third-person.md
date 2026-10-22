@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約8分鐘閱讀"
 featured_image: "/images/columns/20261003/taiwan-crosswalk-night-hero-1600x900.webp"
 featured_image_alt: "夜間街角的斑馬線從近處人行道延伸至對街，路燈照亮路面，旁有行道樹、建築及停放車輛。"
-featured_image_caption: "AI 生成的虛構街景示意圖，非實際案件現場。圖中未見號誌；路旁停放車輛及畫面呈現的配置、照明與視距，均不作為本案事實的證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/taiwan-crosswalk-night-hero-1600x900.webp"
 ---
 # 綠燈撞上闖紅燈行人，為什麼駕駛仍有過失？先讓過兩人，卻漏看第三人

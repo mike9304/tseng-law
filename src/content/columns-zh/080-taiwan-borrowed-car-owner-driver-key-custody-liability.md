@@ -11,8 +11,8 @@ lastmod: "2026-10-02"
 published: "2026-10-02"
 date_display: "2026年10月2日"
 featured_image: "/images/columns/20261002/borrowed-car-liability-hero-1600x900.webp"
-featured_image_alt: "AI 生成的假設情境：黑色汽車遙控器與金屬鑰匙放在桌上的素面文件夾上，後方可見柔焦的銀色房車；非真實個案或事故證據。"
-featured_image_caption: "AI 生成示意圖。桌上的汽車鑰匙與素面文件夾、後方停放的銀色房車，呈現借用車輛的假設情境；並非真實案件照片、事故證據或責任認定依據。"
+featured_image_alt: "假設情境：黑色汽車遙控器與金屬鑰匙放在桌上的素面文件夾上，後方可見柔焦的銀色房車；非真實個案或事故證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261002/borrowed-car-liability-hero-1600x900.webp"
 ---
 

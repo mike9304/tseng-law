@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261013-06-taiwan-job-ad-salary-disclosure-proposal/featured-01.webp"
 featured_image_alt: "An empty interview table with a closed laptop and an unmarked notebook."
-featured_image_caption: "AI-generated illustration of a fictional interview room; it does not depict a particular employer or recruitment event."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261013-06-taiwan-job-ad-salary-disclosure-proposal/featured-01.jpg"
 faq:
   - q: "Is a higher threshold already in effect after the October 7 report?"
@@ -56,7 +56,7 @@ An employer may choose a broader disclosure policy while the proposal is conside
 
 The October 7 report leaves consultation and review ahead of implementation. Until a later measure and its commencement are verified, the practical work remains aligning the vacancy's actual pay structure with the information applicants receive under the existing rule.
 
-Illustration: AI-generated fictional interview room; it does not depict a particular employer or recruitment event.
+Fictional scene
 
 ## Sources
 

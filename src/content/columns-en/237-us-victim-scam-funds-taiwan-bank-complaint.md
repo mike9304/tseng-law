@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["fraud", "cross-border-fraud", "warning-account", "criminal-complaint"]
 featured_image: "../images/237-us-victim-scam-funds-taiwan-bank-complaint/featured-01.webp"
 featured_image_alt: "A hand rests beside a small brass desk globe next to a closed laptop and a blank notepad in warm evening light."
-featured_image_caption: "AI-generated fictional scene; it does not depict a real victim, case, bank screen or document."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Do I have to travel to Taiwan to file a criminal complaint?"
     a: "Not necessarily. Under Article 236-1 of the Code of Criminal Procedure a complaint can be made through an agent who files a written power of attorney with the prosecutor or judicial police officer, but they may order the complainant to appear in person when they think it necessary. The article does not say whether a power of attorney signed abroad needs notarization or authentication, so confirm that with the office handling the complaint before you sign."

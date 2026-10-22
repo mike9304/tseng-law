@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "bồi thường hình sự Đài Loan", "rút đơn Đài Loan", "hòa giải chưa trả tiền"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Hai bàn tay đặt cạnh phong bì hồ sơ trên bàn gỗ"
-featured_image_caption: "Hình minh họa bằng AI, không phải ảnh thỏa thuận hay khách hàng thật."
+featured_image_caption: "Cảnh hư cấu"
 faq: [{"q": "Thỏa thuận bồi thường có làm vụ án tự kết thúc không?", "a": "Không phải mọi vụ đều kết thúc. Cần xác định tội có thuộc nhóm chỉ được truy tố khi có yêu cầu của người có quyền hay không, đã rút yêu cầu hợp lệ chưa và có đúng thời điểm trước khi kết thúc tranh luận sơ thẩm không. Tội không cần yêu cầu đó không tự chấm dứt chỉ vì nạn nhân muốn rút."}, {"q": "Đã rút mà người kia không trả tiền thì tôi yêu cầu lại được không?", "a": "Điều 238 không cho người đã rút yêu cầu đưa lại yêu cầu đó trong cùng vụ. Cần xem các biện pháp dân sự dựa trên thỏa thuận; việc chưa thanh toán không tự khôi phục yêu cầu xử lý hình sự đã rút."}]
 audience: ["vi"]
 author: "legal-ai-assistant"

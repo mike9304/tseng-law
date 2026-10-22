@@ -11,8 +11,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
-featured_image_alt: "AIで生成した架空の場面です。日中の都市高速道路を車内からフロントガラス越しに見た様子で、すぐ前を後部ランプが点灯した白い箱型の小型トラックが走り、左右の車線には濃いグレーのセダンと白いSUV、遠くには高架道路と高層ビルが見えます。"
-featured_image_caption: "AIで作成した架空の場面です。車内から見た白い箱型トラックと周囲の車を描いたもので、実際の事件を撮影した写真でも、判決が認定した事実を再現したものでもありません。"
+featured_image_alt: "架空の場面です。日中の都市高速道路を車内からフロントガラス越しに見た様子で、すぐ前を後部ランプが点灯した白い箱型の小型トラックが走り、左右の車線には濃いグレーのセダンと白いSUV、遠くには高架道路と高層ビルが見えます。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
 ---
 # 林口インターのあおり運転、タクシーも車線を譲らなかった事情が高等法院の量刑を変えた

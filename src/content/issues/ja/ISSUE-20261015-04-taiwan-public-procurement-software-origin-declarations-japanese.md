@@ -11,7 +11,7 @@ categories:
 topic: "company"
 featured_image: "../images/ISSUE-20261015-04-taiwan-public-procurement-software-origin-declarations-japanese/featured-01.webp"
 featured_image_alt: "会議用の机に置かれたノートパソコンと小さなUSBメモリー、奥にぼけて見えるサーバーラック"
-featured_image_caption: "ソフトウェア調達をイメージした架空のAI生成画像です。実在の企業、政府機関、捜査資料を示すものではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261015-04-taiwan-public-procurement-software-origin-declarations-japanese/featured-01.jpg"
 faq:
   - q: "今回の報道は、業者の違法行為が確定したという意味ですか？"
@@ -54,7 +54,7 @@ author: "legal-ai-assistant"
 
 日本の供給元と台湾の販売会社の間で残した仕様書、開発元の説明、提出済みの誓約書を対照すれば、誰がどの情報を基に何を説明したかをたどれます。調達先への表明と、供給元が引き受けた保証の範囲に違いがある場合、その差は契約上の責任を検討する際にも残ります。
 
-画像はソフトウェア調達をイメージした架空のAI生成画像で、実在の企業、政府機関、捜査資料を示すものではありません。
+架空の情景
 
 ## 参照資料
 

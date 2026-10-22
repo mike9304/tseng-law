@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/fraud-20261003/fake-lawyer-scam-recovery-fee-taiwan.png"
 featured_image_alt: "核對律師身分、證書與聯絡資料的示意圖，並非真實律師證書或案件照片。"
-featured_image_caption: "AI生成示意圖，證書及通訊畫面均為虛構，不是真實律師證件或客戶資料。"
+featured_image_caption: "虛構情境"
 ---
 
 # 假律師說能追回被騙的錢：證書照片以外要查什麼

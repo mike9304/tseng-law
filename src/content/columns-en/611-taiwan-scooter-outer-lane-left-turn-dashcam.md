@@ -10,8 +10,8 @@ categories: ["Taiwan Legal Insights"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/611-taiwan-scooter-outer-lane-left-turn-dashcam/featured-01.webp"
-featured_image_alt: "AI-created dashcam view of a teal scooter travelling ahead and to the right at a generic intersection"
-featured_image_caption: "AI-created fictional intersection scene. It is neither an accident photograph nor a record of actual lane markings or signs."
+featured_image_alt: "Fictional dashcam view of a teal scooter travelling ahead and to the right at a generic intersection"
+featured_image_caption: "Fictional scene"
 audience: ["en"]
 author: "legal-ai-assistant"
 faq:
@@ -20,12 +20,12 @@ faq:
   - q: "Who is responsible when the turning scooter and a straight-going car touch?"
     a: "Article 102(1)(7) requires a turning vehicle to yield to straight traffic. Article 94(3) also requires the car driver to watch ahead and take necessary safety measures. Actual paths, visibility, causation and damage must be assessed; there is no preset fault percentage."
   - q: "Can the reenactment establish the actual speed or stopping distance?"
-    a: "No. It is an AI-generated fictional scene without measured speed, distance or reaction time. An actual case calls for original footage and scene records."
+    a: "No. It is a fictional scene without measured speed, distance or reaction time. An actual case calls for original footage and scene records."
 ---
 
 # A scooter turns left from the outer lane in Taiwan: what a dashcam cannot settle
 
-A teal scooter sits ahead and to the right in the car's forward view. It turns left. The car brakes. They touch. This is a scene invented for this article. The film and cover are AI-made, with no connection to a real crash, person or judgment.
+A teal scooter sits ahead and to the right in the car's forward view. It turns left. The car brakes. They touch. This is a scene invented for this article. The film and cover are fictional, with no connection to a real crash, person or judgment.
 
 The image does not establish what kind of lane the scooter occupied. A turn arrow, a motorcycle restriction or a two-stage-turn sign could lie outside the frame.
 

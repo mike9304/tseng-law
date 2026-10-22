@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261014-14-grab-foodpanda-taiwan-merger-review-singapore-platforms/featured-01.webp"
 featured_image_alt: "Two insulated delivery bags resting on a wooden bench in an empty corridor."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not show either company's couriers, brands or equipment."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261014-14-grab-foodpanda-taiwan-merger-review-singapore-platforms/featured-01.jpg"
 faq:
   - q: "Does October 27 guarantee a decision or closing for Grab and foodpanda Taiwan?"

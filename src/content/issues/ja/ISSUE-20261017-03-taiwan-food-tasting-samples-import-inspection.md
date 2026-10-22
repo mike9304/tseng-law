@@ -11,7 +11,7 @@ categories:
 topic: "company"
 featured_image: "../images/ISSUE-20261017-03-taiwan-food-tasting-samples-import-inspection/featured-01.webp"
 featured_image_alt: "野菜やかんきつ類を盛った陶器の皿と、その奥に白い保冷容器が置かれたレストランのテーブル"
-featured_image_caption: "試食会の準備をイメージした架空のAI生成画像です。報道された催しや実際の輸入食品を写したものではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261017-03-taiwan-food-tasting-samples-import-inspection/featured-01.jpg"
 faq:
   - q: "無料の試食会なら、食品の輸入検査は免除されますか？"
@@ -52,6 +52,6 @@ author: "legal-ai-assistant"
 
 主催者が輸入担当者から「貨物が出た」と連絡を受けても、それだけでは試食を始められるかは分かりません。検査を免除された貨物なのか、検査を受ける途中で先行搬出された貨物なのかで、その後の扱いは異なります。試食の日程と合わせるべきなのは、到着予定だけでなく、どの手続を経て会場で使用できる状態になるかです。
 
-画像はAIで生成した架空の試食会の準備風景で、報道された催しを撮影したものではありません。
+画像は架空の試食会の準備風景で、報道された催しを撮影したものではありません。
 
 ニュース・法令確認日：2026年10月17日。台湾の食品輸入検査に関する一般情報であり、報道された催しの手続に問題があったと述べるものではありません。

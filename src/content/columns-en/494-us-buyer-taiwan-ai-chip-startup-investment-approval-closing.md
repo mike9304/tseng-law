@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/ai-semiconductor-20261010/494-us-buyer-taiwan-ai-chip-startup-investment-approval-closing/featured-01.webp"
 featured_image_alt: "Two people review folders and a sheet of connected blank boxes in a meeting room."
-featured_image_caption: "AI-generated fictional scene of an investment document review."
+featured_image_caption: "Fictional scene"
 ---
 
 Even a small stake in a private Taiwan AI-chip company can require a foreign-investment application before the investment proceeds. The Ministry of Economic Affairs’ [official guidance](https://investtaiwan.nat.gov.tw/faqQContent?lang=cht&search=19) applies that requirement regardless of the amount invested when the company is outside Taiwan’s listed, over-the-counter and emerging-stock markets.

@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "不起訴再議", "再議10日", "准許提起自訴"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "手扶著桌上的文件與信封"
-featured_image_caption: "AI生成的程序說明示意圖，並非真實處分書或案件照片。"
+featured_image_caption: "虛構情境"
 faq: [{"q": "再議書狀要交給法院嗎？", "a": "第256條的再議，須由告訴人於接受處分書後10日內，以書狀敘明理由，經原檢察官向直接上級檢察署檢察長或檢察總長提出。請核對處分書記載的期間與申請對象。 期間須依合法送達的效力核對，不會因本人較晚閱讀或翻譯而重新起算。"}, {"q": "再議遭駁回後，法院會直接判被告有罪嗎？", "a": "不會。符合資格的告訴人得依第258條之1，在接受駁回處分書後10日內委任律師提出理由狀，向管轄的第一審法院聲請准許提起自訴。許可本身不是有罪判決。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"

@@ -11,7 +11,7 @@ categories:
 topic: "criminal"
 featured_image: "../images/ISSUE-20261014-13-taiwan-cross-border-surveillance-current-law-proposed-amendment/featured-01.webp"
 featured_image_alt: "窗邊木桌上放著牛皮紙信封、手機和一杯茶，百葉窗半掩。"
-featured_image_caption: "AI 生成的虛構室內示意圖，與新聞中的人物、徵信業者或案件無關。"
+featured_image_caption: "虛構情境"
 social_image: "../images/ISSUE-20261014-13-taiwan-cross-border-surveillance-current-law-proposed-amendment/featured-01.jpg"
 faq:
   - q: "接了跟監的案子，就構成反滲透法的罪嗎？"

@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["semiconductor", "營業秘密", "國家安全法", "國家核心關鍵技術"]
 featured_image: "../images/semiconductor/taiwan-engineer-job-change-trade-secret-national-security-judgments/featured-01.webp"
 featured_image_alt: "灰泥牆的房間裡，一張淺色木桌旁放著一把淡色梣木椅；桌面空無一物，只有一顆橄欖綠的小玻璃球停在一道傍晚的斜陽裡。"
-featured_image_caption: "AI 生成的虛構場景示意圖，非真實公司、廠房或人物。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "新東家是外商在台灣的子公司，資料也沒有帶出國，為什麼會被認定「意圖在外國使用」？"
     a: "營業秘密法第13條之2與國家安全法第3條第2項看的是行為人的意圖。最高法院2022年的判決指出，只須有此意圖，不以實際已在境外使用為必要。2026年4月的國安法首例判決中，離職工程師自白有此意圖，翻拍內容也寫進寄給日本母公司人員的工作週報，法院認定他意圖在日本使用。"

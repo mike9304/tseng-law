@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "공급계약", "TSMC", "영업비밀", "중재", "하자담보"]
 featured_image: "../images/semiconductor/korean-supplier-tsmc-vendor-qualification-contract/featured-01.webp"
 featured_image_alt: "밝고 비어 있는 회의실의 긴 연한 오크색 탁자 건너편에 닫힌 크림색 리넨 서류철 두 개와 회색 펜이 놓여 있는 모습."
-featured_image_caption: "AI가 생성한 가상의 장면입니다. 실제 기업, 시설, 인물을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "TSMC 공급업체 행동강령에 서명하면 공급계약도 체결된 것인가요?"
     a: "행동강령 서명만으로 개별 거래의 가격·납기·보증 범위까지 합의했다고 단정할 수는 없습니다. 2026년 10월 3일 확인한 행동강령과 지속가능성 기준에는 주문·계약 없는 공급 금지, 공급업체가 직접 이행할 의무를 TSMC 동의 없이 제3자에게 넘기는 행위 금지, 구매부서의 동의·주선·참여 없는 비구매부서와의 거래 협의 제한도 있습니다. 실제 받은 계약서·주문서와 공개 기준을 함께 검토해야 하며, 공개자료만으로 등록·심사·서명의 고정 순서를 알 수는 없습니다."

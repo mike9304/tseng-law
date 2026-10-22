@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b03/promissory-note-enforcement-undisbursed-loan-taiwan.png"
 featured_image_alt: "木桌上攤放數張文件、兩個信封與鋼筆，旁邊的手機顯示列表畫面。"
-featured_image_caption: "AI生成示意圖；紙本及手機畫面為虛構，並非真實本票、法院文書或銀行交易紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 # 借款還沒拿到，卻收到本票強制執行裁定

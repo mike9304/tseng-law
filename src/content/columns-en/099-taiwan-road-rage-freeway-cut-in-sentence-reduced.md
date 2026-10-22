@@ -12,8 +12,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
-featured_image_alt: "AI-generated fictional scene: a view through a car windshield on a multi-lane city expressway in daytime, with a white box truck showing its rear lights directly ahead, a dark grey sedan and a white SUV in the lanes on either side, and an overpass and high-rise buildings in the distance."
-featured_image_caption: "An AI-generated fictional scene showing a white box truck and surrounding traffic from inside a car. It is not a photograph of the actual incident or a reconstruction of the facts found in the judgment."
+featured_image_alt: "Fictional scene: a view through a car windshield on a multi-lane city expressway in daytime, with a white box truck showing its rear lights directly ahead, a dark grey sedan and a white SUV in the lanes on either side, and an overpass and high-rise buildings in the distance."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-freeway-cut-in-sentence-reduced-hero-1600x900.webp"
 ---
 # Four cut-ins and three brake checks near Linkou, and a taxi that wouldn't yield either

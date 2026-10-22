@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "대만 수출통제", "실체관리명단", "전략성 첨단기술 물품", "한국 반도체 유통"]
 featured_image: "../images/semiconductor/taiwan-export-control-entity-list-korean-traders/featured-01.webp"
 featured_image_alt: "긴 연한 석회암 선반 왼쪽에 글자 없는 크라프트 서류철이 서 있고, 앞에는 남색 면끈이 말려 두 끝이 선반 아래로 늘어져 있다. 오른쪽 선반과 회색 회벽은 비어 있다."
-featured_image_caption: "AI가 생성한 가상의 장면입니다. 실제 기업, 시설, 인물을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "대만 실체관리명단에 오른 회사와 거래하면 수출이 전면 금지되나요?"
     a: "2025년 6월 대만 국제무역서 발표는 명단 대상에 수출하려는 대만 업체가 전략성 첨단기술 물품 수출허가증을 미리 받아야 한다고 설명합니다. 등재 사실만으로 모든 거래가 일률적으로 금지된다는 뜻은 아닙니다. 허가 필요 여부와 심사 결과는 현재 명단, 물품, 실제 거래 상대 및 최종 사용자를 기준으로 판단해야 합니다."

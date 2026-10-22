@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261017-06-taiwan-techcrunch-demo-patent-grace-period/featured-01.webp"
 featured_image_alt: "An unbranded hardware prototype and a closed laptop on a demonstration counter in an empty, softly lit conference hall."
-featured_image_caption: "AI-generated illustration of a fictional product demonstration; it depicts no actual TechCrunch exhibit, company, invention or patent evidence."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261017-06-taiwan-techcrunch-demo-patent-grace-period/featured-01.jpg"
 faq:
   - q: "Can a public demonstration in the United States affect a Taiwan patent application?"
@@ -54,7 +54,7 @@ Dates are only part of the assessment. Under [Article 26](https://law.moj.gov.tw
 
 For a US investor financing further development with a Taiwan team, the useful comparison is between the disclosed prototype, the filed technical description and the claimed invention. An earlier filing date cannot establish that every feature added for a later demonstration was already supported. The presentation record and the patent file answer different parts of that question.
 
-Illustration: AI-generated fictional product demonstration; no actual TechCrunch exhibit or patent evidence is depicted.
+Fictional scene
 
 ## Sources
 

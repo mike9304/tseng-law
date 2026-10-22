@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/421-taiwan-assault-injury-medical-evidence-complaint/featured-01.webp"
 featured_image_alt: "밝은 대기실 나무 의자 위에 파란 서류철과 영수증, 휴대전화가 놓여 있습니다."
-featured_image_caption: "이해를 돕기 위해 AI로 제작한 가상 이미지입니다. 실제 의뢰인이나 사건을 묘사하지 않습니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만에서 폭행으로 다쳤다면: 진단서와 고소기간, 맞대응의 책임
 

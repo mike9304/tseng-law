@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b03/taiwan-issued-card-unauthorized-charge-dispute-japanese.png"
 featured_image_alt: "窓口のカウンターで、人物が紙の明細書とスマートフォンを手に持っている。"
-featured_image_caption: "AIで生成した架空の銀行窓口の場面です。実際の銀行や利用者、取引明細を撮影したものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾発行のクレジットカードに身に覚えのない請求があれば、カードが手元にあっても発行銀行へすぐ連絡してください。[台新銀行の案内](https://www.taishinbank.com.tw/TSB/personal/credit/-00001/card-spending-dispute/Common-QA/index.html)も、本人のものではないと疑われる取引について、直ちに同行の窓口へ連絡するよう求めています。届いた通知のリンクを使わず、カード裏面や自分で開いた銀行の公式サイトから連絡先を確認します。

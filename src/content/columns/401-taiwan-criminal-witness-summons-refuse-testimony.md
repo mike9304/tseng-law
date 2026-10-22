@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "대만 증인 소환장", "증언거부권", "대만 형사재판"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "창가의 빈 탁자와 마주 놓인 의자"
-featured_image_caption: "AI로 만든 설명용 이미지입니다. 실제 조사실이나 사건을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq: [{"q": "증언을 거부할 사유가 있으면 소환장을 무시해도 되나요?", "a": "그 사유만으로 출석 의무가 사라지지는 않습니다. 제183조에 따라 거부 사유를 소명하고, 수사 중에는 검사, 재판 중에는 재판장 또는 수명법관의 판단을 받습니다. 출석이 어렵다면 발송 기관에 사유와 자료를 제출해 변경 여부를 확인해야 합니다. 제181조의 경우에는 명에 따른 선서(具結)로 소명을 대신하게 할 수도 있습니다."}, {"q": "한국어 통역을 요청할 수 있나요?", "a": "언어가 통하지 않는 사람의 신문에는 제99조에 따라 통역이 필요하며, 제192조는 이를 증인 신문에도 적용합니다. 출석 전에 필요한 언어를 담당 기관에 알리는 것이 좋습니다."}]
 audience: ["ko"]
 author: "legal-ai-assistant"

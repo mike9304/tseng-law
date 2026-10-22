@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png"
 featured_image_alt: "Conceptual illustration: a person uses a desk telephone beside a laptop and two invoice sheets."
-featured_image_caption: "AI-generated conceptual illustration; it does not show an actual transaction, client document or case evidence."
+featured_image_caption: "Fictional scene"
 ---
 
 # A Taiwanese Supplier's New Bank Account: Who Approved It?

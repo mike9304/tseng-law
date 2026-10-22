@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/526-taiwan-business-contract-electronic-signature-korean.webp"
 featured_image_alt: "태블릿 옆에서 흰 펜을 든 손과 종이의 회색 선을 가리키는 손"
-featured_image_caption: "전자계약 검토를 표현한 AI 생성 이미지입니다. 실제 계약서나 특정 서비스 화면, 계약 체결의 증거가 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 한국 기업이 대만 거래처와 납품계약을 맺을 때, 대만법이 적용되고 별도의 법정 형식 제한이 없다면 전자문서·전자서명을 쓸 수 있습니다. 「전자서명법(電子簽章法)」 제4조는 이 법에 맞는 문서·서명에 대해 “不得僅因其電子形式而否認其法律效力”라고 정합니다. 전자 형식이라는 이유만으로 법적 효력을 부정할 수 없다는 뜻입니다. [전자서명법 제4·5·11조](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037)

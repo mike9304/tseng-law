@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "Taiwan non-prosecution reconsideration", "Taiwan criminal complaint appeal", "Taiwan ten-day deadline"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "Hands holding a document envelope on a table"
-featured_image_caption: "AI-generated procedural illustration, not an actual disposition or case photograph."
+featured_image_caption: "Fictional scene"
 faq: [{"q": "Where do I file for reconsideration of a Taiwan non-prosecution disposition?", "a": "Under Article 256, the complainant submits written reasons within ten days after receipt through the original prosecutor to the chief prosecutor of the directly superior prosecutors office or the Prosecutor General. Check the period and authority stated in the disposition. Check when service legally took effect; later reading or translation does not restart the period."}, {"q": "Does rejection of reconsideration lead directly to a criminal trial?", "a": "No. Article 258-1 permits an eligible complainant to retain a lawyer and apply to the competent first-instance court for permission to bring a private prosecution within ten days after receipt of the rejection. Permission is not a finding of guilt."}]
 audience: ["en"]
 author: "legal-ai-assistant"

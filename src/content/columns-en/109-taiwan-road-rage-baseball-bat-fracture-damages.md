@@ -12,8 +12,8 @@ tags: ["traffic-accidents", "traffic-compensation"]
 audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
-featured_image_alt: "AI-generated fictional scene viewed from inside a car at dusk: in a narrow residential lane lined with parked scooters, a dark grey hatchback has stopped with its front left door open, and a man holding a baseball bat stands beside it with his back to the camera."
-featured_image_caption: "AI-generated fictional scene of a man holding a baseball bat beside a stopped car. It is not an actual photograph or a reconstruction of the case discussed in the judgment."
+featured_image_alt: "Fictional scene viewed from inside a car at dusk: in a narrow residential lane lined with parked scooters, a dark grey hatchback has stopped with its front left door open, and a man holding a baseball bat stands beside it with his back to the camera."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-baseball-bat-fracture-damages-hero-1600x900.webp"
 ---
 # How a traffic quarrel in Keelung became a bat attack and an NT$2.08 million award

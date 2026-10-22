@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 featured_image_alt: "黃昏時從車內透過擋風玻璃望向高架道路分岔處，可見白色轎車在左側車道，黑色轎車斜跨在右側白色槽化線區域的邊緣。"
-featured_image_caption: "這是AI生成的虛構場景，示意本文討論的這類行車情境。不是判決所涉案件的現場照片，也不是案情重建。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 ---
 # 黑車錄到時速151，白車的行車紀錄器也進了法庭

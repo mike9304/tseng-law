@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/508-taiwan-equipment-acceptance-unpaid-balance-japanese.webp"
 featured_image_alt: "稼働中の設備の外側で、点検記録を確かめる作業者。"
-featured_image_caption: "設備の検収をイメージしたAI生成画像です。実際の工場や取引を写したものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 残金の支払条件が「現地検収の完了」となっている装置取引では、台湾の工場が生産に使い始めた日と、請求できる日が一致するとは限りません。検収試験を通過したのに署名だけが止まっているのか、まだ約束した試験を終えていないのかで、供給者が求めるべき対応は変わります。

@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 featured_image_alt: "從後車擋風玻璃往前看，一輛深灰色休旅車在夜間的多車道道路上亮著紅色煞車燈，旁邊是水泥護欄。"
-featured_image_caption: "這是AI生成的虛構場景，用來示意本文討論的道路情境，並非實景照片，也不是判決中案件的重現。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 ---
 # 他說當時車少，右側卻有27輛車被迫減速

@@ -37,6 +37,6 @@ describe('reviewed tire injury and warning-triangle columns', () => {
     for (const m of post.content.matchAll(/\]\[([^\]]+)\]/g)) expect(definitions.has(m[1])).toBe(true);
     expect(definitions.size).toBe(a.number === 205 ? 10 : 9);
     expect(post.content).not.toMatch(/\*\*|<strong|<b\b/);
-    expect(post.featuredImageCaption).toContain('AI 生成虛構示意圖');
+    expect(post.featuredImageCaption).toBe('虛構情境');
   });
 });

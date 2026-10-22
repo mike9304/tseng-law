@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261015-06-taiwan-hiring-public-judgments-criminal-record-data/featured-01.webp"
 featured_image_alt: "A closed beige folder, face-down blank papers and a closed laptop on an office desk beside an empty chair."
-featured_image_caption: "AI-generated illustration of a fictional hiring desk; it shows no real applicant, court record or document from the reported case."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261015-06-taiwan-hiring-public-judgments-criminal-record-data/featured-01.jpg"
 faq:
   - q: "Can lawfully public criminal-record data fall within a permitted exception?"
@@ -50,7 +50,7 @@ Written consent does not eliminate these limits. Article 6's consent exception d
 
 Accuracy is also part of the employer's duty. [PDPA Article 11(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=11) requires personal data to be kept accurate and corrected or supplemented proactively or on request. A name match in a search result is not, by itself, reliable identification of a candidate. The source, the connection to that person and the procedural outcome need to support what the hiring file actually says.
 
-Illustration: AI-generated fictional hiring desk; no real applicant or court record is depicted.
+Fictional scene
 
 ## Sources
 

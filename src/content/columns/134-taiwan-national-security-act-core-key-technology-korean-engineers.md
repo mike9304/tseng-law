@@ -12,7 +12,7 @@ topic: "labor"
 tags: ["semiconductor", "국가안전법", "국가핵심관건기술", "영업비밀", "엔지니어 채용"]
 featured_image: "../images/semiconductor/taiwan-national-security-act-core-key-technology-korean-engineers/featured-01.webp"
 featured_image_alt: "사람 없는 복도의 밝은 석재 바닥에 단순한 버클로 닫힌 짙은 회색 캔버스 가방이 놓여 있고, 그 뒤 반투명 유리 칸막이 아래로 가느다란 호박색 빛이 비치는 모습."
-featured_image_caption: "AI가 생성한 가상의 장면입니다. 실제 기업, 시설 또는 인물을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "한국에서만 사용할 기술자료도 대만 국가안전법의 대상이 되나요?"
     a: "될 수 있습니다. 국가안전법 제3조 제2항은 외국에서 사용할 목적으로 국가핵심관건기술의 영업비밀을 부정 취득하거나 권한 없이 복제·사용·누설하는 등의 행위를 금지합니다. 다만 기술 목록에 해당하는지, 영업비밀의 요건을 갖췄는지, 어떤 행위와 목적이 있었는지를 각각 판단해야 합니다. 한국 기업에 취업하거나 한국으로 자료를 보냈다는 사실만으로 범죄가 성립하지는 않습니다."

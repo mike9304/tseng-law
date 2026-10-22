@@ -13,7 +13,7 @@ tags: ["inheritance", "bank-account", "power-of-attorney"]
 audience: ["en"]
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "A plain blue folder, cream envelope, closed green booklet and fountain pen on a dark wooden desk."
-featured_image_caption: "AI-generated illustration of document preparation. The scene is fictional and does not depict actual client records, bank documents or a signed power of attorney."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 ---
 # Inheriting a Taiwan Bank Account From the U.S.: What to Check Before Signing a Power of Attorney

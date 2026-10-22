@@ -10,7 +10,7 @@ topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/641-taiwan-right-turn-crosswalk-pedestrian-dashcam/featured-01.webp"
 featured_image_alt: "從準備右轉的車內望向斑馬線與行人背影的虛構畫面"
-featured_image_caption: "AI生成的虛構行人穿越道情境，並非真實事故現場或當事人影像。"
+featured_image_caption: "虛構情境"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 faq:

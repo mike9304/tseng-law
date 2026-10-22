@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 featured_image_alt: "해 질 무렵 여러 차로가 있는 도심 도로에서 은색 승용차가 스쿠터 앞에 비스듬히 서 있고, 위쪽 신호등은 빨간불입니다."
-featured_image_caption: "이 글에서 다루는 진로 방해 상황을 설명하기 위해 AI로 만든 가상 장면입니다. 실제 사진이 아니며, 판결 속 사건을 재현한 이미지도 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 ---
 # 오토바이 앞을 막고 욕한 운전자, 대만 법원은 왜 무죄로 봤나

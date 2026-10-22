@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261014-11-taiwan-2027-minimum-wage-japanese-employer-payroll/featured-01.webp"
 featured_image_alt: "作業台の上に軍手とエプロン、封筒が置かれた、人のいない休憩室。"
-featured_image_caption: "AIで生成した架空の作業場のイメージです。実在の企業や従業員の給与書類ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261014-11-taiwan-2027-minimum-wage-japanese-employer-payroll/featured-01.jpg"
 faq:
   - q: "2026年10月14日現在、月額3万900台湾元は現行の最低賃金ですか。"

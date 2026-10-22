@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/531-taiwan-semiconductor-outsourced-testing-supplier-liability.webp"
 featured_image_alt: "A tray of electronic components, a test probe and a closed folder on an empty laboratory workbench."
-featured_image_caption: "AI-generated illustration of a fictional testing workspace; it does not depict an actual laboratory, test result or dispute."
+featured_image_caption: "Fictional scene"
 ---
 
 When Taiwan law governs a chip supply contract, outsourcing promised testing does not by itself remove the supplier's responsibility for how that testing is performed. The agreement may nevertheless allocate responsibility differently under [Civil Code Article 224](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=224).

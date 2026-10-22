@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261015-07-taiwan-pension-nine-percent-proposal-employer-contribution/featured-01.webp"
 featured_image_alt: "Máy tính cầm tay, sổ tay bìa trơn và đôi găng tay lao động trên bàn gỗ cạnh cửa sổ."
-featured_image_caption: "Hình minh họa do AI tạo về một góc bàn hư cấu; không phải ảnh sự kiện hay tài sản của người lao động thật."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261015-07-taiwan-pension-nine-percent-proposal-employer-contribution/featured-01.jpg"
 faq:
   - q: "Mức đóng hưu trí bắt buộc đã tăng lên 9% chưa?"

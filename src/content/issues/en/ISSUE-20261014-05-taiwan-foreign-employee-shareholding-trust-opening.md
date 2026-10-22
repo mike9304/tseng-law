@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261014-05-taiwan-foreign-employee-shareholding-trust-opening/featured-01.webp"
 featured_image_alt: "An open folder with blank pages, a pen and a water glass on an office meeting table."
-featured_image_caption: "AI-generated illustration of a fictional benefits meeting; it does not show a real employer, enrollment document or employee."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261014-05-taiwan-foreign-employee-shareholding-trust-opening/featured-01.jpg"
 faq:
   - q: "Can foreign employees enroll immediately after the announcement?"
@@ -54,7 +54,7 @@ If the documents use different departure dates or payment conditions, the discre
 
 For a hire comparing compensation offers, the employer's contribution and the eventual value of the investment are therefore different figures. Neither an anticipated regulatory opening nor the use of a trustee fixes what the shares will be worth when the employee receives them.
 
-Illustration: AI-generated fictional benefits-meeting scene; no real employer or employee records are shown.
+Fictional scene
 
 ## Sources
 

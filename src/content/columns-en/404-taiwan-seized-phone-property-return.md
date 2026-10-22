@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "An empty meeting table and two chairs beside a window"
-featured_image_caption: "AI-generated procedural illustration, not an actual seizure scene or interview room."
+featured_image_caption: "Fictional scene"
 faq: [{"q": "Must I wait until the criminal case ends to get a seized item back?", "a": "No. Article 142 requires return by court ruling or prosecutor’s order when continued retention is unnecessary, without waiting for the case to end. It also allows temporary return on request by an owner, holder or custodian, with a duty of safekeeping; approval is not automatic."}, {"q": "How do I challenge a prosecutor’s decision about return?", "a": "A person subject to a disposition covered by Article 416 may ask the court to which the prosecutor belongs to cancel or change it. The period is ten days from the disposition, or after service where it is served. Article 417 requires written reasons submitted to the competent court. This is not a universal route for every police action or court ruling."}]
 audience: ["en"]
 author: "legal-ai-assistant"

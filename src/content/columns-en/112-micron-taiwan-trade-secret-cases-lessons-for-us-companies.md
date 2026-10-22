@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["semiconductor", "trade-secrets", "litigation", "Micron", "Taiwan"]
 featured_image: "../images/semiconductor/micron-taiwan-trade-secret-cases-lessons-for-us-companies/featured-01.webp"
 featured_image_alt: "A closed brushed-steel document case with a plain latch on a dark walnut desk, crossed by a narrow band of cool daylight."
-featured_image_caption: "AI-generated illustration of a fictional scene; it does not depict a real company, facility or person, or evidence from the cases discussed."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Did UMC’s U.S. guilty plea establish Fujian Jinhua’s guilt?"
     a: "No. UMC pleaded guilty to one trade-secret offense in October 2020. In February 2024, the U.S. district court found Fujian Jinhua not guilty on the three counts before it. Those are separate outcomes for separate defendants."

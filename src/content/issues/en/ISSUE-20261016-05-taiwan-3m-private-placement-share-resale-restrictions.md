@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261016-05-taiwan-3m-private-placement-share-resale-restrictions/featured-01.webp"
 featured_image_alt: "An unbranded optical lens assembly, glass discs and a closed navy folder on a table in an empty engineering office, with the Taipei skyline visible through the window."
-featured_image_caption: "AI-generated illustration of a fictional engineering office; it depicts no actual company, transaction documents or evidence of the reported investment."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261016-05-taiwan-3m-private-placement-share-resale-restrictions/featured-01.jpg"
 faq:
   - q: "Had the reported 3M investment closed at the time of the announcement?"
@@ -50,7 +50,7 @@ There is also a limited statutory information right before completion. Under [Ar
 
 These rules give counsel concrete terms to assess together: evidence of delivery, the proposed transfer route and the issuer's promised assistance. The announcement alone does not reveal how the reported parties allocated those responsibilities.
 
-Illustration: AI-generated fictional engineering office; no actual company or transaction document is depicted.
+Fictional scene
 
 ## Sources
 

@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約6分鐘閱讀"
 featured_image: "/images/columns/20261003/ambulance-street-hero-1600x900.webp"
 featured_image_alt: "日光下的街道路口與斑馬線，路邊凹入的柏油區域停著白色紅條紋廂型車，車頂燈組未亮起。"
-featured_image_caption: "AI 生成的虛構街景，僅供文章示意；非事故現場照片或個案證據，不代表實際車輛位置、勤務狀態或肇責。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/ambulance-street-hero-1600x900.webp"
 ---
 # 救護車鳴笛通過紅燈，為什麼仍被判有過失？

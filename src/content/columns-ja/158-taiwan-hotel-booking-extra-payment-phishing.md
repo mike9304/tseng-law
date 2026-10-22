@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b02/taiwan-hotel-booking-extra-payment-phishing.png"
 featured_image_alt: "ホテルの客室で、紙の予約資料と机のスマートフォンを見比べる旅行者の手元。"
-featured_image_caption: "予約資料とスマートフォンを見比べる架空の場面を描いたAI生成画像です。実在の人物、宿泊施設、予約画面や被害事例を示すものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾旅行の宿を予約した後、「追加決済をしないと予約を取り消す」と連絡が来たら、元の予約確認書を開き、支払条件を確認してください。届いたリンクから支払う前に、予約サイトの公式窓口や宿へ別の経路で確認します。

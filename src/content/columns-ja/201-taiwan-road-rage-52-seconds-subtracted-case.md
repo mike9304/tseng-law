@@ -12,7 +12,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 featured_image_alt: "夕暮れの市街地の道路で、銀色のセダンがスクーターの前に斜めに止まり、頭上の信号は赤です。"
-featured_image_caption: "この記事で扱う進路妨害の状況を説明するために、AIで作成した架空の場面です。実際の写真でも、判決で扱われた事件の再現画像でもありません。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 ---
 # バイクを塞いだ1分54秒、台湾の裁判所が差し引いた52秒

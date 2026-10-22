@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "半導体材料", "秘密保持契約", "共同開発", "営業秘密"]
 featured_image: "../images/semiconductor/japanese-materials-supplier-taiwan-nda-trade-secrets/featured-01.webp"
 featured_image_alt: "暗い色の丸皿に、細かな白い粉の低い山と、淡い緑色で半透明の薄いフィルムの巻いた切片が置かれている。柔らかな光が差し、周囲の作業台には何も置かれていない。"
-featured_image_caption: "AIが生成した架空の材料試料のイメージです。実在の企業、施設、人物や実際の製品を写したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "台湾の顧客とNDAを結べば、渡す資料はすべて営業秘密になりますか。"
     a: "NDAの締結だけでは決まりません。台湾の營業秘密法第2条は、その種の情報を通常扱う人々に一般に知られていないこと、秘密性による現実または潜在的な経済的価値、所有者による合理的な秘密保持措置の三要件を求めています。契約上の秘密情報の範囲と、同法上の営業秘密に当たるかは分けて検討します。"

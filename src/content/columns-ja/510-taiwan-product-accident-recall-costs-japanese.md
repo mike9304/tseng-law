@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/510-taiwan-product-accident-recall-costs-japanese.webp"
 featured_image_alt: "電源を抜いた電気ケトルと、同じ製品の箱を並べた確認用の作業台。"
-featured_image_caption: "製品の確認と回収準備をイメージしたAI生成画像です。実際の製品事故やリコールを示すものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾で販売した家庭用電気ケトルについて、使用中に台座が溶けたとの連絡を受けたら、日本の工場の調査結果を待つ間にも、台湾側で確認することがあります。誰が事故を知り、同じ製品がどこに何台あるのか。使用を続ける危険がないか。これらを確かめる作業と、メーカー・輸入者間の費用交渉は、並行して進める必要があります。

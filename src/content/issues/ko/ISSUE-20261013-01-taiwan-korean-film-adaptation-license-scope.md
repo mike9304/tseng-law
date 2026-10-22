@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261013-01-taiwan-korean-film-adaptation-license-scope/featured-01.webp"
 featured_image_alt: "작업대 위에 놓인 작은 필름 릴과 무지 서류철, 닫힌 노트북."
-featured_image_caption: "AI로 만든 가상의 영화 제작 작업대입니다. 실제 협약식이나 계약 자료를 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261013-01-taiwan-korean-film-adaptation-license-scope/featured-01.jpg"
 faq:
   - q: "이번 협력 발표로 특정 대만 작품의 리메이크 권리가 넘어갔나요?"
@@ -42,7 +42,7 @@ author: "legal-ai-assistant"
 
 대만 회사가 참여했다고 모든 법률관계에 대만법이 적용되는 것은 아닙니다. 대만 [섭외민사법률적용법 제20조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20)는 계약상 채권관계의 성립과 효력에 관해 당사자가 선택한 법을 원칙으로 하고, 유효한 명시적 선택이 없으면 가장 밀접한 관련이 있는 법을 적용합니다. [제42조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=42)은 지식재산권에 관해 그 권리의 보호가 요구되는 곳(보호국)의 법을 따르도록 합니다. 계약의 준거법 조항과 실제 서비스 국가를 함께 검토해야 하며, 대만법 조문만으로 해외 이용까지 판단할 수는 없습니다.
 
-대표 이미지는 AI로 만든 가상의 영화 제작 작업대이며, 실제 협약식이나 계약 자료의 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

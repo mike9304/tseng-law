@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約6分鐘閱讀"
 featured_image: "/images/columns/20261003/settlement-insurance-hero-1600x900.webp"
 featured_image_alt: "淺色木桌上攤開一個素色資料夾，左右各放一張空白白紙，右側擺著一支黑色筆。"
-featured_image_caption: "AI 生成的虛構文件檢視情境示意圖；紙張均為空白，非真實和解書、保險文件、官方表單或案件證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/settlement-insurance-hero-1600x900.webp"
 ---
 # 和解寫「不含強制險」，就能另外領足嗎？對方沒投保時，補償基金有不同規則

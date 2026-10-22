@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b05/taiwan-hotel-typhoon-cancellation-refund-japanese.png"
 featured_image_alt: "雨粒のついた窓のそばで、人物が飛行機のアイコンと抽象的な線がある紙を持っています。横にスーツケースが置かれています。"
-featured_image_caption: "AI生成の架空の場面です。紙面や窓外の景色は実際の予約、欠航、台風被害や返金決定を示すものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾のホテル予約では、不可抗力や、双方に責任のないその他の事情で宿泊契約を履行できなくなった場合、業者は、受領した予約金（原文「定金」）とその他の費用を直ちに無利息で全額返還する義務を負います。根拠は、観光署の[個別旅客の宿泊予約に関する定型契約基準・第9項](https://law.tad.gov.tw/MOTCTALRS/web_page/MOTCTALRS010300.jsp?LawLevel=%E6%B3%95%E8%A6%8F%E5%91%BD%E4%BB%A4&LawName=%E5%80%8B%E5%88%A5%E6%97%85%E5%AE%A2%E8%A8%82%E6%88%BF%E5%AE%9A%E5%9E%8B%E5%8C%96%E5%A5%91%E7%B4%84%E6%87%89%E8%A8%98%E8%BC%89%E5%8F%8A%E4%B8%8D%E5%BE%97%E8%A8%98%E8%BC%89%E4%BA%8B%E9%A0%85)です。

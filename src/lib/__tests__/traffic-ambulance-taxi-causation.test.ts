@@ -18,7 +18,7 @@ const articles = [
       }
     ],
     "heroAlt": "日光下的街道路口與斑馬線，路邊凹入的柏油區域停著白色紅條紋廂型車，車頂燈組未亮起。",
-    "heroCaption": "AI 生成的虛構街景，僅供文章示意；非事故現場照片或個案證據，不代表實際車輛位置、勤務狀態或肇責。"
+    "heroCaption": "虛構情境"
   },
   {
     "number": 121,
@@ -38,7 +38,7 @@ const articles = [
       }
     ],
     "heroAlt": "日光下的空置路側停靠區，白色標線沿著人行道延伸，右側立著沒有文字的站牌。",
-    "heroCaption": "AI 生成的虛構站區街景，僅供文章示意；非個案現場或證據，不表示曾有違停、車輛受阻、碰撞或因果關係。"
+    "heroCaption": "虛構情境"
   }
 ];
 describe('reviewed ambulance and bus-stop causation publications', () => {

@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 featured_image_alt: "Seen from a following car at night, a dark gray SUV has its red brake lights on beside a concrete barrier on a multi-lane road."
-featured_image_caption: "This fictional, AI-generated scene illustrates the type of road situation discussed in the column. It is not a photograph or a reconstruction of the case in the judgment."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-driver-stopped-route-66s-fast-lane-hero-1600x900.webp"
 ---
 # A driver stopped in Route 66's fast lane to confront the motorist behind

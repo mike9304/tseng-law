@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/415-taiwan-fine-conversion-community-service-execution/featured-01.webp"
 featured_image_alt: "花園木凳上放著折好的藍色工作圍裙、棉質手套、手刷與素面紙袋。"
-featured_image_caption: "AI 生成的虛構示意場景，呈現服務用品的準備，並非真實當事人、案件或指定執行機構。"
+featured_image_caption: "虛構情境"
 ---
 # 判六個月以下就能繳錢嗎？易科罰金與社會勞動的聲請
 

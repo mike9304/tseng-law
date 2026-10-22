@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/fraud-20261003/land-registration-alert-property-fraud-taiwan.png"
 featured_image_alt: "房屋、地籍文件與手機通知的示意圖，並非真實地政通知或案件照片。"
-featured_image_caption: "AI生成示意圖，畫面中的文件與通知不是真實地政資料，亦非個案重現。"
+featured_image_caption: "虛構情境"
 ---
 
 # 收到地籍異動即時通，房子已被過戶了嗎？

@@ -13,8 +13,8 @@ tags: ["traffic-accidents", "traffic-compensation"]
 audience: ["zh-hant"]
 read_time: "約8分鐘閱讀"
 featured_image: "/images/columns/20261002/tseng-law-repair-estimate-depreciation-hero-ai-1600x900.webp"
-featured_image_alt: "AI 生成的假設情境：修車廠內銀色車輛的車尾側邊靠近後輪處有局部刮痕，前景工作檯放著黑色塑膠零件與封面無文字的闔起資料夾。非真實案件照片，與本文判決車輛無關。"
-featured_image_caption: "AI 生成的修車廠假設情境，與本文基隆地院判決的車輛無關，亦非真實事故照片、案件重建、估價單或證據。圖中刮痕與零件不能用來判斷該案或任何車輛的受損範圍、修理必要性、是否需更換零件或費用。"
+featured_image_alt: "假設情境：修車廠內銀色車輛的車尾側邊靠近後輪處有局部刮痕，前景工作檯放著黑色塑膠零件與封面無文字的闔起資料夾。非真實案件照片，與本文判決車輛無關。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261002/tseng-law-repair-estimate-depreciation-hero-ai-1600x900.webp"
 ---
 

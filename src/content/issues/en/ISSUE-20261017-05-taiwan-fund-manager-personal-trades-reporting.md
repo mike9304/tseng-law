@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261017-05-taiwan-fund-manager-personal-trades-reporting/featured-01.webp"
 featured_image_alt: "A closed notebook, a phone lying face down and a single unlit monitor on a desk in an empty investment office, beside a window overlooking the city skyline."
-featured_image_caption: "AI-generated illustration of a fictional investment office; it depicts no actual firm, employee, trading record or regulatory inspection."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261017-05-taiwan-fund-manager-personal-trades-reporting/featured-01.jpg"
 faq:
   - q: "Did the FSC announce that Taiwan fund managers may trade without restrictions?"
@@ -48,7 +48,7 @@ This affects staffing as well as account monitoring. A manager's spouse may have
 
 [Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400097&flno=13) also imposes duties of care, loyalty and good faith on the enterprise's covered personnel and employees. Subject to exceptions provided by law, it prohibits leaking information learned through work or using it for securities trading. These duties concern the use of information, regardless of whether it passes through an office terminal or a personal device. The reported review provides no basis to promise a new hire that those duties have ended.
 
-Illustration: AI-generated fictional investment office; no actual firm or trading record is depicted.
+Fictional scene
 
 ## Sources
 

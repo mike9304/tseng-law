@@ -18,7 +18,7 @@ faq:
     a: "Không tự động. Điều 23 xét hành vi bảo vệ quyền của mình hoặc người khác trước sự xâm hại trái pháp luật đang diễn ra; vượt quá giới hạn phòng vệ có thể được giảm hoặc miễn hình phạt. Toàn bộ diễn biến, thời điểm nguy hiểm chấm dứt và cách phản ứng đều cần được xem xét."
 featured_image: "/images/blog/column-media-20261010/438-taiwan-assault-threats-evidence-complaint-deadline/featured-01.webp"
 featured_image_alt: "Tập giấy trong bìa đựng hồ sơ, điện thoại tắt màn hình và USB được đặt gọn trên nền vải xanh nhạt."
-featured_image_caption: "Hình minh họa do AI tạo về cách sắp xếp tài liệu trong một tình huống giả định, không phải hồ sơ khách hàng hay vụ việc có thật."
+featured_image_caption: "Cảnh hư cấu"
 ---
 
 # Bị đánh hoặc đe dọa ở Đài Loan: chứng cứ và thời hạn yêu cầu xử lý

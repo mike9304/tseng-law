@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/420-taiwan-threats-coercion-messages-evidence/featured-01.webp"
 featured_image_alt: "紙感插畫中的手機螢幕排列著無字對話色塊，旁邊以傳輸線連接一個灰藍色外接裝置。"
-featured_image_caption: "AI 生成的虛構示意插畫，呈現保存數位紀錄的概念，並非真實對話、當事人或案件證據。"
+featured_image_caption: "虛構情境"
 ---
 # 收到威脅訊息、被堵住去路：恐嚇與強制的報案資料
 

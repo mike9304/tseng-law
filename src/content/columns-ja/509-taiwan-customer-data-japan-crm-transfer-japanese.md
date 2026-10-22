@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/509-taiwan-customer-data-japan-crm-transfer-japanese.webp"
 featured_image_alt: "二つの画面に顧客情報の管理画面を模した図形が映る、静かなオフィスの机。"
-featured_image_caption: "顧客情報を社内システム間で扱う場面をイメージしたAI生成画像です。実在する顧客情報やシステムは使用していません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾の営業部門が集めた担当者名、メールアドレス、商談履歴を日本本社のCRMへ移すと、本社の誰が何のために使うのかが新たに問われます。問い合わせの引継ぎに使うのか、日本本社が別の商品を案内するのか。

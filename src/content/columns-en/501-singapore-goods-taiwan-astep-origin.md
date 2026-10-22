@@ -11,7 +11,7 @@ topic: "tax"
 tags: ["singapore","astep"]
 featured_image: "/images/blog/singapore-20261010/astep-1600x900.webp"
 featured_image_alt: "Open carton of packed metal components beside a blank clipboard, with a container terminal in the background."
-featured_image_caption: "AI-generated illustration of a fictional goods-inspection workspace; it does not depict an actual shipment or certify ASTEP origin."
+featured_image_caption: "Fictional scene"
 social_image: "/images/blog/singapore-20261010/astep-1600x900.webp"
 audience: ["en"]
 targetMarket: "Singapore"

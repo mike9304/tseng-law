@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約5分鐘閱讀"
 featured_image: "/images/columns/20261003/motorcycle-passenger-hero-1600x900.webp"
 featured_image_alt: "雨後有遮棚的停車區內，一輛銀灰色機車以中柱停放，旁邊的矮牆上並排放著深灰色與米白色安全帽。"
-featured_image_caption: "AI 生成的虛構情境示意圖，非真實事故、當事人車輛或證據；無法據此判斷是否載有乘客、投保情形或駕照狀態。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/motorcycle-passenger-hero-1600x900.webp"
 ---
 # 後座乘客自摔受傷，強制險賠了，為什麼無照騎士還被追討？

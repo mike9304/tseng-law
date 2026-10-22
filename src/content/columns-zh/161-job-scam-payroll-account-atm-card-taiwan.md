@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b03/job-scam-payroll-account-atm-card-taiwan.png"
 featured_image_alt: "一人在咖啡桌前雙手扶著白色信封，桌上放著深綠色卡套、文件與螢幕朝下的手機。"
-featured_image_caption: "AI生成的虛構求職情境示意圖，並非真實求職者、銀行資料、招募畫面或案件照片。"
+featured_image_caption: "虛構情境"
 ---
 
 # 公司說要設定薪轉，為什麼要交提款卡和密碼？

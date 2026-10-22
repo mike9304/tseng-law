@@ -12,7 +12,7 @@ topic: "tax"
 tags: ["semiconductor", "cross-border-tax", "royalties", "withholding-tax"]
 featured_image: "../images/semiconductor/us-taiwan-double-taxation-semiconductor-expansion/featured-01.webp"
 featured_image_alt: "A tall pane of clear glass divides an empty plaster room, with a pale limestone block on the cool gray floor to the left and warm sand-colored light to the right."
-featured_image_caption: "AI-generated illustration of a fictional interior; it does not depict a real company, facility or person."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Has Congress enacted H.R. 33 to provide U.S.–Taiwan double-tax relief?"
     a: "As checked on October 4, 2026, Congress.gov records House passage on January 15, 2025, followed by referral to Senate Finance on January 16. It does not record enactment. Proposed relief should not be used as an effective withholding rate."

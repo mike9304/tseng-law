@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/503-parent-capacity-guardianship-assistance-authority-taiwan.webp"
 featured_image_alt: "年長女性與成年女性在家中桌旁一起討論文件。"
-featured_image_caption: "AI 生成示意圖：家人共同討論事務安排，非實際個案，亦不表示已取得代理權或監護權。"
+featured_image_caption: "虛構情境"
 ---
 
 拿著父母的印章、存摺，或一直負責照顧父母，都不會因此取得處理父母全部財產的代理權。需要代簽照護契約、辦理提款或處分房屋時，仍要找出權限的來源：本人有效的授權，或法院選任監護人後，在監護權限內的代理。兄弟姊妹都同意，也不能單靠家庭會議替父母作成授權。[民法第103條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=103)、[第1111條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1111)。

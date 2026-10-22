@@ -10,7 +10,7 @@ categories:
 topic: "family"
 featured_image: "../images/275-taiwan-divorce-property-damages-support/featured-01.webp"
 featured_image_alt: "나무 탁자 위에 놓인 집 열쇠 하나와 나뉘어 쌓인 서류 두 묶음"
-featured_image_caption: "AI로 생성한 가상의 장면입니다. 실제 회사·시설·인물을 촬영하거나 재현한 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "혼전 자금으로 집값을 냈거나 한쪽 명의로 등기하면 소유권과 재산분할이 결정되나요?"
     a: "아닙니다. 주택 등기명의와 매수자금의 출처는 중요한 증거이지만, 소유권·증여·명의신탁·대여·부당이득 같은 개별 청구와 민법 제1030조의1의 잔여재산 차액분배는 서로 다른 문제입니다. 실제 합의, 취득 원인과 시기, 자금 흐름, 채무, 무상취득 여부와 증거를 나누어 검토해야 하며, 혼전 자금으로 일부 비용을 냈거나 한쪽 명의로 등기되었다는 사실만으로 모든 결론이 정해지지 않습니다."

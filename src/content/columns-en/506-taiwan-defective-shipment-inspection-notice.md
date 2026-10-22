@@ -13,7 +13,7 @@ targetMarket: "United States"
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp"
 featured_image_alt: "Metal component samples, a separate reference part, and a caliper arranged on an inspection table."
-featured_image_caption: "AI-generated illustration of a fictional shipment inspection; no particular defect or inspection result is shown."
+featured_image_caption: "Fictional scene"
 ---
 
 Under Taiwan's sale-of-goods rules, a buyer must inspect received goods promptly, using the ordinary procedure appropriate to their nature, and immediately notify the seller of defects for which the seller is responsible. An internal quality hold at a US warehouse does not communicate those findings to the Taiwan supplier. Waiting for a final root-cause report can leave a notice problem even while the engineers are working on the failure. [Civil Code Article 356](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=356).

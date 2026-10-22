@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261013-05-taiwan-server-patent-investigation-contract-costs/featured-01.webp"
 featured_image_alt: "Generic server components and unmarked folders on a worktable."
-featured_image_caption: "AI-generated illustration of a fictional equipment and contract review; it does not show the products or companies in the reported investigation."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261013-05-taiwan-server-patent-investigation-contract-costs/featured-01.jpg"
 faq:
   - q: "Has the US investigation established that the Taiwan suppliers infringed a patent?"
@@ -54,7 +54,7 @@ The parties may instead negotiate an interim funding arrangement. It can state w
 
 Contractual limits also have legal boundaries. [Civil Code Article 222](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=222) prohibits an advance exemption from liability for intentional conduct or gross negligence. A broad exclusion therefore needs more analysis than simply locating it in the signed agreement.
 
-Illustration: AI-generated fictional equipment and contract review; it does not depict the reported investigation.
+Fictional scene
 
 ## Sources
 

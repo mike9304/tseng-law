@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 featured_image_alt: "白天從車內往前看，一輛灰色轎車斜停在下坡路上，一個人拿著長棍站在敞開的前車門旁。"
-featured_image_caption: "這是以 AI 生成的虛構場景，用來示意本文討論的路上對峙情境。並非判決所涉案件的現場照片，也不是案情重現。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 ---
 # 開了六分鐘又被攔下，持球棒的駕駛辯稱只是攔車

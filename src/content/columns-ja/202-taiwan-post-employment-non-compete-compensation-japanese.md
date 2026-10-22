@@ -11,7 +11,7 @@ audience: ["ja"]
 read_time: "約10分"
 featured_image: "/images/columns/20261004/ja-noncompete-hero-1600x900.webp"
 featured_image_alt: "街並みを望む窓際の無人の会議室。木製のテーブルに閉じた無地のフォルダー2冊とペンが置かれている。"
-featured_image_caption: "AI生成による架空のイメージです。実在の事務所、契約締結の場面、個別の事件を撮影したものではありません。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261004/ja-noncompete-hero-1600x900.webp"
 ---
 # 台湾で退職後の転職を制限されたら：競業避止条項と補償の確認点

@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261016-02-taiwan-nicotine-free-e-cigarette-entry-ban/featured-01.webp"
 featured_image_alt: "공항 검색대 바구니 안에 여행용 주머니와 함께 놓인 상표 없는 전자담배 기기."
-featured_image_caption: "AI로 만든 가상의 공항 검색대 장면입니다. 실제 압수품이나 특정 제품의 법적 분류를 보여 주는 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261016-02-taiwan-nicotine-free-e-cigarette-entry-ban/featured-01.jpg"
 faq:
   - q: "니코틴이 없는 전자담배 한 개는 개인용으로 가져갈 수 있나요?"
@@ -42,7 +42,7 @@ author: "legal-ai-assistant"
 
 가열담배는 따로 구분됩니다. [타이베이 세관 안내](https://web.customs.gov.tw/taipei/singlehtml/3392?cntId=cus2_3392_3392_1344)에 따르면, 위생복리부(衛生福利部)의 건강위험평가 심사를 통과한 지정 담배제품에만 별도의 휴대 반입 기준이 적용됩니다. 해외에서 팔린다는 사실만으로 대만에서 승인된 제품은 아닙니다. 한국 판매명이 ‘전자담배’로 같아도 대만법상 제품 분류와 승인 여부까지 같지는 않습니다. 세관에서 반입이 문제 된 경우에는 세관의 통지서에 적힌 처분 사유와 제품 설명서·성분·구성 자료에 나타난 제품의 구조를 함께 대조해야 어떤 규정이 적용됐는지 알 수 있습니다.
 
-대표 이미지는 AI로 만든 가상의 공항 검색대 장면이며, 실제 압수품이나 특정 제품의 적법성을 보여 주는 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

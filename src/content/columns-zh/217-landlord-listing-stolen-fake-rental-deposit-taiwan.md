@@ -11,8 +11,8 @@ categories:
 topic: "litigation"
 tags: ["fraud", "rental-fraud", "stolen-listing-photos"]
 featured_image: "../images/217-landlord-listing-stolen-fake-rental-deposit-taiwan/featured-01.webp"
-featured_image_alt: "AI生成的虛構租屋場景：明亮空屋裡，兩名僅露出背影的大人站在窗邊，前景是一台鏡頭朝向室內的相機。"
-featured_image_caption: "AI生成的虛構情境示意圖，並非真實屋主、房客、物件或案件照片，畫面不呈現真實文件或銀行介面。"
+featured_image_alt: "虛構的租屋場景：明亮空屋裡，兩名僅露出背影的大人站在窗邊，前景是一台鏡頭朝向室內的相機。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "房子的照片被拿去詐騙，屋主就要退還房客付的訂金嗎？"
     a: "不能只憑照片相同認定屋主負責。要查屋主是否締約、授權他人代理或收款，是否有表見代理的條件，以及是否參與侵權或實際取得無法律原因的利益。純粹遭冒用，與屋主自己作出授權表示，是不同情形。"

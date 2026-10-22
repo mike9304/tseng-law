@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261017-07-taiwan-naturalized-residents-local-election-voter-eligibility/featured-01.webp"
 featured_image_alt: "Thùng phiếu trơn và vách ngăn trong một phòng học không có người, dưới ánh sáng ban ngày."
-featured_image_caption: "Hình minh họa do AI tạo về một phòng bỏ phiếu giả định; không phải ảnh buổi học tại Bình Đông hay một điểm bỏ phiếu có thật."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261017-07-taiwan-naturalized-residents-local-election-voter-eligibility/featured-01.jpg"
 faq:
   - q: "Có thẻ cư trú và đã kết hôn với người Đài Loan thì được bỏ phiếu chưa?"

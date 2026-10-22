@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/taiwan-hotel-luggage-loss-custody-japanese.png"
 featured_image_alt: "無地のタグを持つ手の向こうに、緑色のスーツケースと小さなバッグが置かれたカウンターが見えます。"
-featured_image_caption: "AI生成の架空の場面です。実在する宿泊施設、荷物の預かり証、紛失事故や相談事例を示す写真ではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 宿泊中にフロントへ預けた荷物がなくなったと分かったら、ホテルにすぐ知らせてください。台湾の[民法第610条](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL001351&LawNo=610)は、物品の破損・紛失を知った客に直ちにホテル側へ通知するよう求め、通知を怠ると損害賠償請求権を失うと定めています。帰国便が近い場合も、預けた時刻と紛失を知った時刻を伝え、対応した担当者と連絡先を記録します。

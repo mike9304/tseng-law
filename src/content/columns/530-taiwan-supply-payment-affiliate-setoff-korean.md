@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/530-taiwan-supply-payment-affiliate-setoff-korean.webp"
 featured_image_alt: "창고 책상에 떨어져 놓인 녹색·회색 서류철과 빈 종이 묶음, 전자부품 트레이"
-featured_image_caption: "공급대금과 거래 자료 검토를 표현한 AI 생성 이미지입니다. 실제 회사의 서류나 특정 분쟁의 증거가 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 대만 구매자가 반도체 부품대금에서 다른 계열사 공장의 손실을 뺀 잔액만 보냈다면, 공제에 쓰인 손해배상채권이 누구 것인지가 문제입니다. 한국 공급자에게 납품대금을 지급할 회사와 손해를 입었다는 회사가 다르면, 같은 그룹이라는 설명만으로 상계 요건이 채워지지는 않습니다.

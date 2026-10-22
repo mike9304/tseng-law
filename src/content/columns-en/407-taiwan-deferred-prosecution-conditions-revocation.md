@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/407-taiwan-deferred-prosecution-conditions-revocation/featured-01.webp"
 featured_image_alt: "A wall organizer with rust, green and blue fabric pockets holding blank envelopes and cards."
-featured_image_caption: "AI-generated illustration of a fictional record organizer. It does not depict an actual client, official document or event."
+featured_image_caption: "Fictional scene"
 ---
 # Deferred prosecution in Taiwan still carries deadlines
 

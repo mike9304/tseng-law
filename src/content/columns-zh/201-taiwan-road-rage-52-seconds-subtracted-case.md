@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 featured_image_alt: "黃昏的市區道路上，一輛銀色轎車斜停在機車前方，上方的號誌亮著紅燈。"
-featured_image_caption: "這是 AI 生成的虛構場景，用來說明本文討論的汽車擋在機車前方的情境。並非實拍照片，也不是判決中案件的重現。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-52-seconds-subtracted-case-hero-1600x900.webp"
 ---
 # 攔下按喇叭的機車還罵髒話，法院扣掉紅燈52秒判無罪

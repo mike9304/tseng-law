@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261014-08-taiwan-national-day-work-holiday-pay/featured-01.webp"
 featured_image_alt: "Găng tay làm việc và một phong bì đặt trên bàn trong phòng nghỉ của nhà máy vắng người."
-featured_image_caption: "Hình minh họa do AI tạo về phòng nghỉ tại một nhà máy hư cấu; không phải nơi làm việc hay giấy tờ của người lao động trong bản tin."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261014-08-taiwan-national-day-work-holiday-pay/featured-01.jpg"
 faq:
   - q: "Ngày 9/10 có phải ngày nghỉ bù bắt buộc của mọi người lao động không?"

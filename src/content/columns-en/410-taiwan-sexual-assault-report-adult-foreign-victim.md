@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/410-taiwan-sexual-assault-report-adult-foreign-victim/featured-01.webp"
 featured_image_alt: "A sage armchair and a small table with a glass of water stand in front of closed linen curtains."
-featured_image_caption: "AI-generated illustrative scene of a fictional private consultation space, not an actual client, care facility or event."
+featured_image_caption: "Fictional scene"
 ---
 # Reporting sexual assault in Taiwan as an English-speaking adult
 

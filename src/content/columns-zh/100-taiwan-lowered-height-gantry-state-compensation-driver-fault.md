@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約6分鐘閱讀"
 featured_image: "/images/columns/20261003/public-road-clearance-bar-1600x900.webp"
 featured_image_alt: "陰天下的空曠道路，兩側金屬立柱支撐橫跨路面的黑黃條紋限高橫桿，遠處可見建築與樹木。"
-featured_image_caption: "AI 生成的虛構道路示意圖，非實際案發現場；畫面不代表個案的限高數值、設施尺寸或道路配置。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/public-road-clearance-bar-1600x900.webp"
 ---
 # 限高架調低後撞車：貨車超高，政府就一定不用賠嗎？

@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "대만 불기소 재의", "대만 재의 10일", "准許提起自訴"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "탁자에 놓인 봉투와 서류를 짚은 손"
-featured_image_caption: "AI로 만든 절차 설명용 이미지입니다. 실제 처분서나 사건 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq: [{"q": "대만 불기소 처분의 재의는 누구에게 내나요?", "a": "제256조에 따라 고소인은 처분서를 받은 후 10일 이내에 불복 이유를 서면으로 적고 원 검사를 거쳐 바로 위 검찰서의 검사장 또는 검찰총장에게 재의를 신청합니다. 처분서에 기재된 기간과 관할을 확인해야 합니다. 기한은 적법한 송달의 효력을 기준으로 확인하며, 뒤늦게 읽거나 번역한 날부터 다시 시작하지 않습니다."}, {"q": "재의가 기각되면 바로 법원이 유죄를 판단하나요?", "a": "그렇지 않습니다. 제258조의1에 따른 절차는 변호사를 선임해 관할 1심 법원에 사적 기소(自訴)를 허가해 달라고 신청하는 것입니다. 기각 처분서를 받은 뒤 10일의 별도 기한과 신청 자격 요건을 살펴야 하며, 허가 자체는 유죄 판단이 아닙니다."}]
 audience: ["ko"]
 author: "legal-ai-assistant"

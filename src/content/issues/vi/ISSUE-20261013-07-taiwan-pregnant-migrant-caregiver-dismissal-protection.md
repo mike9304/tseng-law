@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261013-07-taiwan-pregnant-migrant-caregiver-dismissal-protection/featured-01.webp"
 featured_image_alt: "Căn phòng chăm sóc tại nhà yên tĩnh với áo khoác gấp gọn và tập hồ sơ trên bàn."
-featured_image_caption: "Hình minh họa do AI tạo về một căn phòng chăm sóc tại nhà; không mô tả người thật hay nơi ở trong bản tin."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261013-07-taiwan-pregnant-migrant-caregiver-dismissal-protection/featured-01.jpg"
 faq:
   - q: "Đề nghị khôi phục xét nghiệm thai đã thành quy định mới chưa?"
@@ -48,4 +48,4 @@ Theo [Điều 34](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&
 
 Ngày kiểm tra nguồn: 13/10/2026. Bài viết cung cấp thông tin chung về pháp luật Đài Loan, không thay thế tư vấn theo hồ sơ cụ thể.
 
-Hình minh họa do AI tạo về căn phòng hư cấu, không phải nơi ở của người lao động trong bản tin.
+Cảnh hư cấu

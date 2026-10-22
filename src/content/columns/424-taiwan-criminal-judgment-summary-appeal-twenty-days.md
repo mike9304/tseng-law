@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/424-taiwan-criminal-judgment-summary-appeal-twenty-days/featured-01.webp"
 featured_image_alt: "나무 선반 위에 열린 봉투와 종이 묶음, 작은 기록지, 파란 탁상시계가 놓여 있습니다."
-featured_image_caption: "이해를 돕기 위해 AI로 제작한 가상 삽화입니다. 실제 판결문이나 의뢰인의 사건을 묘사하지 않습니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만 형사판결문을 받았다면: 20일 항소기간과 약식판결의 법원
 

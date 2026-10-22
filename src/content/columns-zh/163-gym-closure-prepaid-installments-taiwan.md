@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b03/gym-closure-prepaid-installments-taiwan.png"
 featured_image_alt: "一人拿著文件夾與紙本資料站在關閉的玻璃門前，門內可見跑步機及重量訓練器材。"
-featured_image_caption: "AI生成的虛構場景，並非真實健身業者停業照片，人物與文件亦非個案資料。"
+featured_image_caption: "虛構情境"
 ---
 
 # 健身房停業了，還在繳的分期能不能停？

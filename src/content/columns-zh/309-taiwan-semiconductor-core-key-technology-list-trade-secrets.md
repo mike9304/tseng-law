@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "對外投資審查", "國家核心關鍵技術", "國家安全法", "營業秘密"]
 featured_image: "../images/309-taiwan-semiconductor-core-key-technology-list-trade-secrets/featured-01.webp"
 featured_image_alt: "透明晶圓盒裡的矽晶圓，旁邊是封好的信封與闔上的筆電"
-featured_image_caption: "AI 生成的虛構場景示意圖，非真實公司、廠房或人物。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "技術列入國家核心關鍵技術清單，是否就不能用在海外廠？"
     a: "列入清單不等於禁止海外使用。國家安全法第3條區分兩種情形：第1項是任何人為條文列舉的境外勢力，或其設立、實質控制的組織或派遣之人，實施侵害行為；第2項是任何人意圖在外國、大陸地區、香港或澳門使用而實施侵害行為；兩者均須符合各款行為要件，第8條分別規定刑責。台灣對外投資是否核准或備查，依投資規範辦理；特定設備、技術資料的輸出許可與設廠所在地法規，仍須分別判斷。技術是否落入清單，國家核心關鍵技術認定辦法第10條要求技術主管機關協助釐清。"

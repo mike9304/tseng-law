@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/414-taiwan-deferred-prosecution-duties-revocation/featured-01.webp"
 featured_image_alt: "苔綠色三格文件夾放著不同形狀的素面紙卡，前方橫放一支鉛筆。"
-featured_image_caption: "AI 生成的示意插畫，呈現分類保存紀錄的概念，並非真實案件文件或履行證明。"
+featured_image_caption: "虛構情境"
 ---
 # 緩起訴處分確定後：繳款、義務勞務與撤銷再議
 

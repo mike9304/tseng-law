@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "和解撤告", "和解金沒付", "告訴期間六個月"]
 featured_image: "/images/blog/059-taiwan-criminal-accessory-civil-suit-fraud/featured-01.webp"
 featured_image_alt: "雙手放在木桌上的文件信封旁"
-featured_image_caption: "AI生成的說明示意圖，並非真實和解書或當事人照片。"
+featured_image_caption: "虛構情境"
 faq: [{"q": "刑事案件和解後就一定結案嗎？", "a": "不一定。要看罪名是否告訴乃論、是否已合法撤回，以及撤回是否在第一審辯論終結前。非告訴乃論之罪，不會僅因被害人表示撤告就結束追訴。"}, {"q": "撤告後對方不付款，可以再告一次嗎？", "a": "第238條規定，撤回告訴的人不得再行告訴。和解金未付，應另評估和解書所生的民事請求及執行途徑，不會僅因未付款就恢復原來的告訴。"}]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"

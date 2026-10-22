@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["fraud", "romance-scams", "loan-disputes"]
 featured_image: "../images/224-romance-scam-loan-or-fraud-evidence-taiwan/featured-01.webp"
 featured_image_alt: "傍晚的河濱長椅上，一人背對鏡頭坐著，身旁放著兩個素面紙杯，遠方是模糊的城市燈光。"
-featured_image_caption: "AI生成的虛構情境示意圖，並非真實案件、當事人、對話畫面或文件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "對方還過一點錢，也簽名承認欠款，還能告詐欺嗎？"
     a: "不能只憑這兩點排除。臺灣高等法院高雄分院114年度上易字第389號判決中，被告陸續還過一部分，也在欠款明細上簽名，法院仍就謊稱借款原因與還款能力的各筆認定詐欺取財。這是個案判斷，仍要看每一筆付款前對方說了什麼、是否不實。"

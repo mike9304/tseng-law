@@ -11,7 +11,7 @@ categories:
 topic: litigation
 featured_image: "../images/ISSUE-20261017-01-taiwan-beitou-falling-facade-owner-liability/featured-01.webp"
 featured_image_alt: "타일 외벽이 있는 오래된 타이베이 주택과 한적한 골목을 표현한 가상의 장면."
-featured_image_caption: "AI로 만든 가상의 주택가 이미지입니다. 베이터우 사고 현장이나 실제 건물의 결함을 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261017-01-taiwan-beitou-falling-facade-owner-liability/featured-01.jpg"
 faq:
   - q: "기사에 나온 12만 대만달러가 피해자가 받는 배상금인가요?"
@@ -40,7 +40,7 @@ author: "legal-ai-assistant"
 
 한국으로 돌아온 뒤 치료를 이어갔다면 대만 사고와 이어지는 진료 내용·기간, 실제 지출과 업무 영향이 드러나는 자료가 청구의 근거가 됩니다. 대만에서 받은 진단서와 이후 진료 기록이 연결되면 부상의 경과를 설명할 수 있습니다. 응급실 영수증만 있는 경우와 후유증이나 업무 차질까지 기록으로 설명하는 경우에는 주장하는 손해의 범위가 달라집니다.
 
-대표 이미지는 AI로 만든 가상의 주택가이며, 베이터우 사고 현장이나 실제 건물의 결함을 촬영한 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

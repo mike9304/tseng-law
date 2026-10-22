@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/513-taiwan-industrial-ai-update-defect-dispute-korean.webp"
 featured_image_alt: "검사대의 금속 부품과 펼쳐 놓은 기록을 비교하는 담당자"
-featured_image_caption: "AI 업데이트 전후의 검사 기록과 기준 부품을 비교하는 상황을 표현한 AI 생성 이미지입니다. 불량의 원인을 단정하는 장면은 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 대만 공장의 AI 검사 시스템을 이전 버전으로 되돌리면 검사 결과뿐 아니라 설정값과 로그도 바뀔 수 있습니다. 고객이 생산을 빨리 정상화해 달라고 요청한 때에는 복구 전 어떤 상태를 남길 수 있는지, 누가 변경을 승인하는지를 함께 정해야 합니다. 원인 조사를 끝낼 때까지 공장을 계속 세워 두자는 뜻은 아닙니다. 안전하게 복구하면서도 적법하게 보존할 수 있는 자료를 잃지 않도록 순서를 잡는 문제입니다.

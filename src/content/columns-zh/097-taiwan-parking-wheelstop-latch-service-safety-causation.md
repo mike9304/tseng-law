@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約6分鐘閱讀"
 featured_image: "/images/columns/20261003/parking-facility-neutral-hero-1600x900.webp"
 featured_image_alt: "有遮蔽的空停車格，白色格線內設有混凝土擋輪器，後方是金屬護欄與城市建築。"
-featured_image_caption: "AI 生成之虛構停車場情境示意圖，非實際案發現場或個案重建。 本圖僅作一般停車場情境配圖，不能用來證明本案鎖扣或輪擋的尺寸、配置、安全性或因果關係。圖中沒有案件鎖扣、車輛、碰撞或人物。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/parking-facility-neutral-hero-1600x900.webp"
 ---
 # 倒車碰到輪擋，又撞上後方鎖扣：停車場一定要賠嗎？

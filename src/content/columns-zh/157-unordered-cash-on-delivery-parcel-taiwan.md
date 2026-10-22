@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b02/unordered-cash-on-delivery-parcel-taiwan.png"
 featured_image_alt: "住家門口的櫃面放著紙箱、手機與闔上的皮夾，兩人的手分別放在紙箱及皮夾上。"
-featured_image_caption: "AI生成的虛構收件場景，並非真實收件人、包裹或交易紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 # 沒下單的貨到付款包裹：拒收、家人代付與退款怎麼分

@@ -14,7 +14,7 @@ targetMarket: "United States"
 author: "legal-ai-assistant"
 featured_image: "/images/blog/next-four-columns-20261010/515-taiwan-business-acquisition-engineer-employment.webp"
 featured_image_alt: "Three colleagues looking at an open folder at a table beside an engineering workbench."
-featured_image_caption: "AI-generated illustration of a fictional workplace discussion."
+featured_image_caption: "Fictional scene"
 ---
 
 In a share purchase, the Taiwan company generally remains the engineers' employer. Moving an operating business to a different company can instead require an employment transition, even if the engineers keep their desks and projects. [Ministry of Labor guidance](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82247/).

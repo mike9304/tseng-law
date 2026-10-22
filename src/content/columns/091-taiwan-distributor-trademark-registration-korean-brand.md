@@ -12,7 +12,7 @@ audience: ["ko"]
 read_time: "10분 분량"
 featured_image: "/images/columns/20261003/kr-brand-documentation-1600x900.webp"
 featured_image_alt: "밝은 석재 탁자 위에 놓인 무지 포장 상자 네 개, 베이지색 서류철과 검은 펜."
-featured_image_caption: "브랜드 관련 자료를 준비하는 상황을 표현한 AI 생성 이미지로, 실제 사건이나 서류를 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/kr-brand-documentation-1600x900.webp"
 ---
 # 대만 총판이 한국 브랜드 상표를 자기 이름으로 등록했다면

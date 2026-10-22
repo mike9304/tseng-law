@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "JASM", "対外投資", "営業秘密"]
 featured_image: "../images/semiconductor/tsmc-kumamoto-jasm-taiwan-outbound-investment-rules/featured-01.webp"
 featured_image_alt: "青い夜明けの霧の中、静かな水路に沿って灰色の太い工業用配管が続く。手前に葦が茂り、水面に小さな琥珀色の光が映る。"
-featured_image_caption: "AI生成の架空の工業風景です。実在の企業、工場または人物を写したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "台湾企業が日本の会社に出資する場合、必ず事前許可が必要ですか。"
     a: "2026年10月時点の台湾の現行制度では、会社による国外投資額が15億新台湾ドルを超えると投資前の核准（事前承認）が必要です。15億新台湾ドル以下なら事前承認を申請するか、投資実行後6か月以内に備查（投資実行後の届出）を行えます。個別案件の投資額と取引形態を確認する必要があります。"

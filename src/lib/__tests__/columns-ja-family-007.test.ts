@@ -1005,7 +1005,7 @@ describe('Japanese family column 275 — property, damages and support moved out
       featured_image: propertyImage,
       featured_image_alt: propertyImageAlt,
       featured_image_caption:
-        'AIで生成した架空の情景です。実在の企業、施設、人物を写したものではありません。',
+        '架空の情景',
       faq: propertyFaq,
       audience: ['ja'],
     });
@@ -1172,7 +1172,7 @@ describe('Japanese family column 307 — children, support and relocation moved 
       featured_image: childrenImage,
       featured_image_alt: childrenImageAlt,
       featured_image_caption:
-        'AIで生成した架空の場面です。実在の家庭や人物を撮影・再現した画像ではありません。',
+        '架空の情景',
       faq: childrenFaq,
       audience: ['ja'],
     });

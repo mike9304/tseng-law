@@ -12,7 +12,7 @@ topic: "visa"
 tags: ["semiconductor", "foreign-talent", "employment-gold-card"]
 featured_image: "../images/semiconductor/taiwan-semiconductor-foreign-talent-recruitment-law/featured-01.webp"
 featured_image_alt: "長形白色桌面左側立著透明壓克力卡座，卡槽留空，底座帶有氧化銅色痕跡；右側桌面與淺色牆面沒有其他物品。"
-featured_image_caption: "AI生成的虛構辦公場景示意圖，並非實際企業、工作場所或證件照片。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "持有效就業金卡的工程師到職，公司還要申請聘僱許可嗎？"
     a: "就業金卡本身包含個人工作許可，持卡人在有效期間內可就職及轉換工作，公司通常無須再為同一工作申請雇主聘僱許可。公司仍須確認金卡效期及辦理適用的勞動、薪資與退休金事項。"

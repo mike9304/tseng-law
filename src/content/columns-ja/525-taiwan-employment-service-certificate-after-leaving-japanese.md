@@ -13,7 +13,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/525-taiwan-employment-service-certificate-after-leaving-japanese.webp"
 featured_image_alt: "人物が濃い緑色の封筒から灰色の線がある紙を取り出しています。机には閉じたノートパソコンとペンが置かれています。"
-featured_image_caption: "AI生成の架空の場面です。実際に発行された勤務証明書、雇用記録や相談事例を示す写真ではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 台湾の労働基準法が適用される雇用関係では、退職した労働者が勤務証明書（服務證明書）を求めたとき、雇用主またはその代理人は発行を拒めません（[同法第19条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=19)）。

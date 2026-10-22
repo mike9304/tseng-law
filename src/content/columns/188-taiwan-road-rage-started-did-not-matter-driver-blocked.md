@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 featured_image_alt: "차 안에서 바라본 낮의 내리막길에 회색 세단이 비스듬히 멈춰 있고, 긴 막대를 든 사람이 열린 앞문 옆에 서 있습니다."
-featured_image_caption: "이 글에서 다루는 도로 위 대치 상황을 설명하기 위해 AI로 만든 가상 장면입니다. 판결 속 사건을 촬영한 사진이나 재현한 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 ---
 # 앞을 막고 6분 뒤 역주행까지 해 다시 막아선 운전자, 대만 법원은 강제죄로 징역 3개월을 선고했다

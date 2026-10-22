@@ -9,8 +9,8 @@ categories: ["대만 법률정보"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/623-taiwan-opposing-turns-single-lane-collision/featured-01.webp"
-featured_image_alt: "회전 전 교차로의 맞은편 진입로에 있는 은색 세단과 파란 차의 AI 가상 장면"
-featured_image_caption: "AI로 만든 맞은편 좌·우회전 차량의 가상 장면입니다. 실제 사고 사진이나 교차로 측량 자료가 아닙니다."
+featured_image_alt: "회전 전 교차로의 맞은편 진입로에 있는 은색 세단과 파란 차의 가상 장면"
+featured_image_caption: "가상의 장면"
 audience: ["ko"]
 author: "legal-ai-assistant"
 faq:
@@ -26,7 +26,7 @@ faq:
 
 마주 오던 차들이 좌·우회전을 한 뒤 같은 차로로 들어가야 한다면, 우회전차가 좌회전차를 먼저 보내야 합니다([대만 도로교통안전규칙](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102)).
 
-이 글의 가상사례에서는 은색 세단이 좌회전하고, 맞은편 파란 차는 우회전해 같은 출구 차로로 향합니다. 파란 차가 양보하지 않은 채 들어오면서 은색 차의 앞모서리와 파란 차의 옆면이 닿습니다. 직진차는 없습니다. 첨부 영상과 표지는 AI로 만든 설명용 장면이며 실제 사고나 판결을 재현하지 않습니다.
+이 글의 가상사례에서는 은색 세단이 좌회전하고, 맞은편 파란 차는 우회전해 같은 출구 차로로 향합니다. 파란 차가 양보하지 않은 채 들어오면서 은색 차의 앞모서리와 파란 차의 옆면이 닿습니다. 직진차는 없습니다. 첨부 영상과 표지는 설명용 가상 장면이며 실제 사고나 판결을 재현하지 않습니다.
 
 ## 회전차와 직진차가 만나는 경우의 구별
 
@@ -52,7 +52,7 @@ faq:
 
 고의 또는 과실로 타인의 권리를 위법하게 침해했다면 [민법 제184조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)에 따른 배상책임이 문제 됩니다. 피해자 자신의 과실도 손해 발생이나 확대에 기여한 경우, 법원은 [제217조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217)에 따라 배상액을 줄이거나 면제할 수 있습니다. 고정 비율은 없습니다.
 
-AI 영상에는 실측한 속도나 거리가 없습니다. 다른 시점의 장면도 각각 생성한 것으로, 같은 사고를 동시에 촬영한 기록처럼 시간과 위치를 맞출 수 없습니다. 실제 사건에서 남겨야 할 것은 두 차가 회전을 시작한 지점과 같은 차로로 모인 과정입니다.
+가상 영상에는 실측한 속도나 거리가 없습니다. 다른 시점의 장면도 각각 생성한 것으로, 같은 사고를 동시에 촬영한 기록처럼 시간과 위치를 맞출 수 없습니다. 실제 사건에서 남겨야 할 것은 두 차가 회전을 시작한 지점과 같은 차로로 모인 과정입니다.
 
 [교통사고 칼럼 모음](/ko/traffic-accidents)
 

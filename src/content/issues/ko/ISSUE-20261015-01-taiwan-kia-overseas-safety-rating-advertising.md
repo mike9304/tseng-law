@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261015-01-taiwan-kia-overseas-safety-rating-advertising/featured-01.webp"
 featured_image_alt: "밝은 전시장에서 바라본 상표 없는 자동차의 앞좌석과 운전대, 꺼진 화면."
-featured_image_caption: "AI로 만든 가상의 자동차 실내입니다. 실제 기아 차량이나 이번 제재의 증거를 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261015-01-taiwan-kia-overseas-safety-rating-advertising/featured-01.jpg"
 faq:
   - q: "해외에서 받은 안전등급은 대만 광고에 전혀 쓸 수 없나요?"
@@ -40,7 +40,7 @@ author: "legal-ai-assistant"
 
 [제42조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=42)에 따라 공정위는 제21조 위반 사업자에게 시정 등을 명하고 과태료를 부과할 수 있습니다. 이번 발표는 이와 같은 행정 제재에 관한 것으로, 구매자에게 배상금을 지급하라는 판결은 아닙니다.
 
-대표 이미지는 AI로 만든 가상의 자동차 실내이며, 실제 기아 차량이나 사건 증거를 촬영한 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

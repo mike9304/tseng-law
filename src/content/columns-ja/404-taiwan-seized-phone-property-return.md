@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "窓際の誰もいない会議机と二脚の椅子"
-featured_image_caption: "AI生成の手続説明用イメージです。実際の押収現場や取調室ではありません。"
+featured_image_caption: "架空の情景"
 faq: [{"q": "事件が終わるまで押収物は戻りませんか。", "a": "第142条では、留置の必要がない押収物は事件終結を待たずに、裁判所の決定または検察官の命令で還付する必要があります。所有者・所持者・保管者の請求により、保管責任を負わせて一時的に還付する制度もありますが、自動的に認められるものではありません。"}, {"q": "検察官の還付処分に不服があれば、どこに申し立てますか。", "a": "第416条の対象となる処分を受けた人は、検察官が所属する裁判所に取消し・変更を申し立てられます。期間は10日で、処分日から、送達する場合は送達後から起算します。第417条により理由を書いた書面を管轄裁判所へ提出します。すべての警察の措置や裁判所の決定に共通する手続ではありません。"}]
 audience: ["ja"]
 author: "legal-ai-assistant"

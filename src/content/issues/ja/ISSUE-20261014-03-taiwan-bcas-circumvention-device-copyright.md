@@ -11,7 +11,7 @@ categories:
 topic: "criminal"
 featured_image: "../images/ISSUE-20261014-03-taiwan-bcas-circumvention-device-copyright/featured-01.webp"
 featured_image_alt: "机の上に置かれた無地のカードと、ロゴのない受信機"
-featured_image_caption: "受信機器を描いた架空のAI生成画像です。押収品や実在する製品、事件現場の写真ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261014-03-taiwan-bcas-circumvention-device-copyright/featured-01.jpg"
 faq:
   - q: "今回の4人には、すでに有罪判決が出ていますか？"
@@ -48,7 +48,7 @@ author: "legal-ai-assistant"
 
 取引記録に機器の仕様、供給元、許諾の範囲が残っていれば、何を輸入・販売し、どの権限に基づいて扱ったのかを説明する材料になります。販売広告の「無料で見られる」という表示だけでは、その許諾を裏付けられません。
 
-画像は受信機器を描いた架空のAI生成画像で、押収品や実在する製品、事件現場を示すものではありません。
+架空の情景
 
 ## 参照資料
 

@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "Bàn họp trống và hai chiếc ghế bên cửa sổ"
-featured_image_caption: "Hình minh họa do AI tạo, không phải hiện trường thu giữ hay phòng lấy lời khai có thật."
+featured_image_caption: "Cảnh hư cấu"
 faq: [{"q": "Phải chờ kết thúc vụ án mới nhận lại vật bị thu giữ không?", "a": "Điều 142 yêu cầu trả lại vật không còn cần lưu giữ theo quyết định của tòa hoặc lệnh của kiểm sát viên, không phải đợi kết thúc vụ án. Chủ sở hữu, người nắm giữ hoặc người bảo quản có thể xin trả tạm thời và chịu trách nhiệm bảo quản; việc chấp thuận không tự động."}, {"q": "Phản đối quyết định của kiểm sát viên về việc trả lại thì gửi đến đâu?", "a": "Người chịu quyết định thuộc Điều 416 có thể yêu cầu tòa nơi kiểm sát viên trực thuộc hủy hoặc thay đổi quyết định. Thời hạn là 10 ngày tính từ ngày ra quyết định; nếu tống đạt thì tính sau khi tống đạt. Điều 417 yêu cầu nêu lý do bằng văn bản gửi tòa có thẩm quyền. Không thể áp dụng cùng cách này cho mọi biện pháp cảnh sát hay quyết định của tòa."}]
 audience: ["vi"]
 author: "legal-ai-assistant"

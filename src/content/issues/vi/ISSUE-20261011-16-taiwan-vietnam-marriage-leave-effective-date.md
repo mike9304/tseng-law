@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261011-16-taiwan-vietnam-marriage-leave-effective-date/featured-01.webp"
 featured_image_alt: "Hai người cùng xem giấy tờ và lịch để sắp xếp thời gian nghỉ cưới."
-featured_image_caption: "Hình minh họa do AI tạo về một cặp đôi xem giấy tờ và lịch; không mô tả người thật hay hồ sơ kết hôn thực tế."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261011-16-taiwan-vietnam-marriage-leave-effective-date/featured-01.jpg"
 faq:
   - q: "Đài Loan đã áp dụng 14 ngày nghỉ cưới chưa?"
@@ -24,7 +24,7 @@ author: "legal-ai-assistant"
 
 # Kết hôn ở Việt Nam, xin nghỉ cưới tại Đài Loan: tính hạn từ ngày nào?
 
-*Hình minh họa do AI tạo; không mô tả người thật hay hồ sơ kết hôn thực tế.*
+*Cảnh hư cấu*
 
 Người lao động mang quốc tịch Đài Loan đã kết hôn hợp lệ với người Việt Nam có thể phải tính hạn nghỉ cưới từ ngày hôn nhân có hiệu lực ở Việt Nam. Việc chưa đăng ký hộ tịch tại Đài Loan không tự động làm thời hạn này dừng lại. Đây là trường hợp Bộ Lao động Đài Loan đã giải thích trong [công văn ngày 9/11/2023, số 1120148649](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?datatype=etype&no=FE389663).
 

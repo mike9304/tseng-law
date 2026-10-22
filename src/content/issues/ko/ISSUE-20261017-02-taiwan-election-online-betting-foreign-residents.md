@@ -11,7 +11,7 @@ categories:
 topic: criminal
 featured_image: "../images/ISSUE-20261017-02-taiwan-election-online-betting-foreign-residents/featured-01.webp"
 featured_image_alt: "닫힌 노트북과 지갑, 화면을 아래로 향한 휴대전화가 놓인 조용한 책상을 표현한 가상의 장면."
-featured_image_caption: "AI로 만든 가상의 책상 이미지입니다. 실제 베팅 화면이나 수사기관이 확보한 증거를 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261017-02-taiwan-election-online-betting-foreign-residents/featured-01.jpg"
 faq:
   - q: "대만 선거권이 없는 한국인도 선거 도박 규정을 적용받나요?"
@@ -42,7 +42,7 @@ author: "legal-ai-assistant"
 
 대만에 머물며 접속한 경우라면 외국 IP 주소가 행위 장소를 바꾸지는 않습니다. 반대로 한국에만 머물며 한 행위까지 이번 기사만으로 같은 결론을 낼 수는 없습니다. 접속 당시 체류지와 거래 기록, 어떤 선거 결과에 재물을 걸었는지를 함께 보아야 적용 범위를 판단할 수 있습니다.
 
-대표 이미지는 AI로 만든 가상의 책상이며, 실제 베팅 화면이나 수사 증거를 촬영한 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

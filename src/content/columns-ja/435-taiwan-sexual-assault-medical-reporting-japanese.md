@@ -20,7 +20,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/435-taiwan-sexual-assault-medical-reporting-japanese/featured-01.webp"
 featured_image_alt: "2脚の椅子と、水やティッシュが置かれたテーブルのある相談スペース。"
-featured_image_caption: "AIで生成した架空の相談スペースです。実在の施設や相談者を写したものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾で性被害に遭ったとき、受診・証拠保全・相談をどう進めるか

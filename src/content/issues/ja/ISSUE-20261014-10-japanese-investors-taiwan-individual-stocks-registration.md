@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261014-10-japanese-investors-taiwan-individual-stocks-registration/featured-01.webp"
 featured_image_alt: "窓辺の木の机に、茶碗と蓋つきの器、閉じたノートが置かれている。"
-featured_image_caption: "AIで生成した架空の室内のイメージです。報道に登場する証券会社や投資家とは関係ありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261014-10-japanese-investors-taiwan-individual-stocks-registration/featured-01.jpg"
 faq:
   - q: "10月13日の配信で、日本の大手証券から台湾の個別株を直接買えるようになりましたか。"

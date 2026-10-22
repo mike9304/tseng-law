@@ -9,8 +9,8 @@ categories: ["台灣法律資訊"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/622-taiwan-equal-road-uncontrolled-intersection-dashcam/featured-01.webp"
-featured_image_alt: "無號誌十字路口中，紅色掀背車從銀色車輛右方進入的AI虛構畫面"
-featured_image_caption: "AI生成的無號誌路口事故情境，非真實事故照片，也非特定路口通行條件的紀錄。"
+featured_image_alt: "無號誌十字路口中，紅色掀背車從銀色車輛右方進入的虛構畫面"
+featured_image_caption: "虛構情境"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 faq:
@@ -26,7 +26,7 @@ faq:
 
 路口兩邊的車道數相同、兩車都直行，就要先讓右邊的車嗎？沒有號誌、沒有人員指揮，也沒有幹支線劃分時，左方車應暫停讓右方車先行（[《道路交通安全規則》第102條第1項第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102)）。壅塞時則改採交互通行。
 
-附片採用上述條件，交通未壅塞。銀色車在一般道路往北直行，紅色掀背車從其右方往左穿越路口，銀色車煞車時兩車碰撞。雙方都直行。封面與影片由AI生成，屬於虛構情境，沒有重現真實行車紀錄器畫面或特定判決。
+附片採用上述條件，交通未壅塞。銀色車在一般道路往北直行，紅色掀背車從其右方往左穿越路口，銀色車煞車時兩車碰撞。雙方都直行。封面與影片屬於虛構情境，沒有重現真實行車紀錄器畫面或特定判決。
 
 ## 左右方，是前面條件相同後才比
 

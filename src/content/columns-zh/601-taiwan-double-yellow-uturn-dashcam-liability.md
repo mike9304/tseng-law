@@ -10,7 +10,7 @@ topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/601-taiwan-double-yellow-uturn-dashcam-liability/featured-01.webp"
 featured_image_alt: "駕駛視角中的藍色車左側與銀色車車頭相接的虛構情境"
-featured_image_caption: "AI生成的迴轉事故虛構情境，並非真實事故照片。"
+featured_image_caption: "虛構情境"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 faq:
@@ -19,14 +19,14 @@ faq:
   - q: "對方違規迴轉，直行車就一定沒有過失嗎？"
     a: "直行車仍有注意車前狀況並採取必要安全措施的義務。被害人的過失若也促成損害發生或擴大，法院得依民法第217條減輕或免除賠償金額。比例須依實際證據判斷。"
   - q: "可以用這段影片計算真實事故的速度或責任比例嗎？"
-    a: "不可以。影片是AI生成的虛構情境，沒有測量真實車速、距離或碰撞時間。實際案件須保留未剪輯的原始影片並對照現場資料。"
+    a: "不可以。影片是虛構情境，沒有測量真實車速、距離或碰撞時間。實際案件須保留未剪輯的原始影片並對照現場資料。"
 ---
 
 # 跨越雙黃線迴轉撞上直行車，打了方向燈仍不能迴轉
 
 分向限制線是雙黃實線。[道路交通標誌標線號誌設置規則第165條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040014&flno=165)規定，這種標線用來劃分雙向車道，禁止車輛跨越行駛，也不得迴轉。實際事故要回到當時道路，確認迴轉處有沒有缺口及其他管制。
 
-附片設定藍色車輛跨越連續劃設的雙黃線，轉進直行車路徑的虛構情境。封面與影片均由AI生成，沒有重現特定判決或真實事故。
+附片設定藍色車輛跨越連續劃設的雙黃線，轉進直行車路徑的虛構情境。封面與影片均為虛構畫面，沒有重現特定判決或真實事故。
 
 ## 先看迴轉位置的標線
 

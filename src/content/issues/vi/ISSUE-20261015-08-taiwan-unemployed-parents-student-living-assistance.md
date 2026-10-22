@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261015-08-taiwan-unemployed-parents-student-living-assistance/featured-01.webp"
 featured_image_alt: "Sách, sổ tay, túi bút và bìa hồ sơ trên bàn học cạnh hai chiếc ghế trống, dưới ánh nắng cửa sổ."
-featured_image_caption: "Hình minh họa do AI tạo về một góc học tập hư cấu; không phải ảnh gia đình hay hồ sơ xin trợ cấp thật."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261015-08-taiwan-unemployed-parents-student-living-assistance/featured-01.jpg"
 faq:
   - q: "Con đã được miễn hoặc giảm học phí thì còn xin hỗ trợ sinh hoạt được không?"

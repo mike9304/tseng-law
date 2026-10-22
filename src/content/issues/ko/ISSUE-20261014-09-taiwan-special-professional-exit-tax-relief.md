@@ -11,7 +11,7 @@ categories:
 topic: tax
 featured_image: "../images/ISSUE-20261014-09-taiwan-special-professional-exit-tax-relief/featured-01.webp"
 featured_image_alt: "빈 방의 탁자 위에 열쇠 하나가 놓여 있고, 바닥에는 낡은 여행 가방이 있다."
-featured_image_caption: "AI로 만든 가상의 빈 방 그림입니다. 기사 속 인물이나 실제 거처가 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261014-09-taiwan-special-professional-exit-tax-relief/featured-01.jpg"
 faq:
   - q: "대만에서 잠시 여행을 떠나도 출국 전에 그해 소득세를 신고해야 하나요?"

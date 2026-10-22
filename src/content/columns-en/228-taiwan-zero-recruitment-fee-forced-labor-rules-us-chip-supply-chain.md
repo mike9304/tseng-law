@@ -12,7 +12,7 @@ topic: "labor"
 tags: ["semiconductor", "forced-labor", "migrant-workers", "recruitment-fees", "supply-chain-audit", "Taiwan"]
 featured_image: "../images/semiconductor/taiwan-zero-recruitment-fee-forced-labor-rules-us-chip-supply-chain/featured-01.webp"
 featured_image_alt: "A plain undyed canvas apron hangs from a pale hook on the left of a cool grey plaster wall, its pocket stitched in sea-glass green thread, beside an empty hook on bare wall to the right."
-featured_image_caption: "AI-generated illustration of a fictional interior; it does not depict a real company, facility or person."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Does Taiwan law already prohibit recruitment fees for migrant workers?"
     a: "Partly. A broker in Taiwan may charge a factory, fishing or care worker only a monthly service fee capped at NT$1,800 in year one, NT$1,700 in year two and NT$1,500 from year three, never in advance, and no placement fee. Fees charged by agencies in the worker's home country before departure are outside those rules. The U.S.–Taiwan Agreement on Reciprocal Trade would require Taiwan to prohibit charging recruitment fees and related costs to manufacturing and fishing workers, including, where applicable, pre-departure costs, within three years of entry into force. As of October 5, 2026, public records checked show the agreement signed but not yet in force."

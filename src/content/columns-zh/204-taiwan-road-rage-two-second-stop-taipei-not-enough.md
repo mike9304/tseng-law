@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 featured_image_alt: "陰天，從車內望向高架道路，前方是一名戴黑色安全帽的機車騎士，機車的紅色尾燈亮著，左側車道有一輛配有灰色貨廂的大貨車。"
-featured_image_caption: "這是AI生成的虛構場景，用來說明本文討論的行駛中減速、停車情境。並非判決中真實案件的照片，也不是案情重建畫面。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 ---
 # 白車靠近時停了兩秒，喇叭聲後在橋上煞停，兩張罰單不同命運

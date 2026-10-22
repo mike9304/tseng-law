@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261016-08-taiwan-vietnam-remittance-license-cash-exchange-robbery/featured-01.webp"
 featured_image_alt: "Điện thoại tắt màn hình, ví màu nâu và sổ tay màu kem trên bàn trong một căn hộ yên tĩnh."
-featured_image_caption: "Hình minh họa do AI tạo về một góc bàn hư cấu; không phải đồ dùng của nạn nhân hay hình ảnh tái hiện vụ án được đưa tin."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261016-08-taiwan-vietnam-remittance-license-cash-exchange-robbery/featured-01.jpg"
 faq:
   - q: "Chỉ ngân hàng mới được chuyển tiền từ Đài Loan về Việt Nam sao?"

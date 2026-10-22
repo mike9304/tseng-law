@@ -18,7 +18,7 @@ faq:
     a: "Điều 27 cho vợ/chồng, người đại diện theo pháp luật và một số thân nhân được tự mình chọn người bào chữa cho bị can hoặc người bị tình nghi. Cần xác nhận quan hệ và thủ tục ủy nhiệm với luật sư tại Đài Loan; việc không có mặt ở Đài Loan không tự biến môi giới thành người bào chữa."
 featured_image: "/images/blog/column-media-20261010/437-taiwan-arrest-detention-bail-vietnamese-families/featured-01.webp"
 featured_image_alt: "Hai ghế bọc vải đặt quanh bàn tròn, trên bàn có tập giấy mở, điện thoại và bao đựng giấy tờ màu xanh."
-featured_image_caption: "Hình minh họa do AI tạo về một góc chuẩn bị tư vấn giả định, không phải cơ sở giam giữ, khách hàng hay vụ việc có thật."
+featured_image_caption: "Cảnh hư cấu"
 ---
 
 # Người thân bị bắt ở Đài Loan: tạm giam, luật sư và tiền bảo lãnh

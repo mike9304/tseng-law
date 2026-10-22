@@ -10,7 +10,7 @@ categories: ["Taiwan Legal Information"]
 topic: "criminal"
 tags: ["criminal-litigation"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
-featured_image_caption: "AI-generated illustration, not a photograph of an actual interview room or case."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Who should a US citizen in Taiwan ask to notify AIT after an arrest?"
     a: "The State Department's Taiwan guidance says to ask police or prison authorities to notify AIT immediately. AIT can provide a list of English-speaking lawyers. Asking for notification does not establish that a lawyer has been retained."

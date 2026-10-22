@@ -12,7 +12,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 featured_image_alt: "夕暮れの高架道路の分岐点で、車内のフロントガラス越しに左車線の白いセダンと、右側の白い斜線区画の縁に斜めにかかった黒いセダンが見えます。"
-featured_image_caption: "AIで生成した架空の場面で、この記事で扱うような走行状況を示しています。判決で扱われた事件の写真や再現画像ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 ---
 # 151キロの表示と、白い車のドラレコ

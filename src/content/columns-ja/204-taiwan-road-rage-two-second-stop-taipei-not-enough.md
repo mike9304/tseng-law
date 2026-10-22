@@ -12,7 +12,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 featured_image_alt: "曇りの日中、車内から見た高架道路の前方には黒いヘルメットの運転者が乗るスクーターが赤いテールランプを灯しており、左の車線には灰色の荷台を備えた大型トラックが見えます。"
-featured_image_caption: "この記事で扱う走行中の減速や停止を説明するために、AIで生成した架空の場面です。判決で扱われた実際の事件を撮影した写真や、その再現画像ではありません。"
+featured_image_caption: "架空の情景"
 social_image: "/images/columns/20261003/road-rage-two-second-stop-taipei-not-enough-hero-1600x900.webp"
 ---
 # 車道で止まった理由が分けた、台湾の急ブレーキ処分

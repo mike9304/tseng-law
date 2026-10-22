@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約8分鐘閱讀"
 featured_image: "/images/columns/20261004/pursuit-rural-road-ai-hero-1600x900.webp"
 featured_image_alt: "空無車輛與行人的瀝青道路彎道，兩側可見綠色植被、水泥護欄及排水溝。"
-featured_image_caption: "AI 生成之虛構道路情境示意圖，非實際案件現場照片，未重建任何追逐或碰撞經過。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261004/pursuit-rural-road-ai-hero-1600x900.webp"
 ---
 # 被追騎士自撞死亡：傷害故意與因果關係，法院怎麼看？

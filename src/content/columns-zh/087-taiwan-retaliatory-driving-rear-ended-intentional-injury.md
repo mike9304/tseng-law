@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約10分鐘閱讀"
 featured_image: "/images/columns/20261003/taiwan-road-rage-hero-1600x900.webp"
 featured_image_alt: "從汽車車內透過擋風玻璃望向黃昏街道，前方一輛淺色廂式小貨車亮著紅色後燈，兩車之間留有一段可見路面。"
-featured_image_caption: "AI 生成虛構情境，非本案現場；紅色後燈亮起本身不代表煞車，更不代表傷害意圖。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/taiwan-road-rage-hero-1600x900.webp"
 ---
 # 被追撞的前車，為什麼反而被判傷害罪？

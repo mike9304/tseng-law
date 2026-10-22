@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/512-taiwan-equipment-installation-suspension-costs-korean.webp"
 featured_image_alt: "포장이 일부 남은 장비 옆에서 서류를 확인하는 기술자"
-featured_image_caption: "장비 설치가 중단된 현장에서 준비 상태를 확인하는 상황을 표현한 AI 생성 이미지입니다. 실제 현장 사진은 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 대만 고객사가 장비 설치를 멈춰 달라고 요청하면, 한국 공급자는 중단된 작업과 계속할 수 있는 작업부터 나눠야 합니다. 전원 연결이 안 돼 시운전만 못 하는 경우와 출입 자체가 금지된 경우는 필요한 인력도, 다시 시작하는 데 걸리는 시간도 다릅니다. 이 차이를 남기지 않고 출장비 전액을 ‘고객 사정으로 생긴 대기비’로 청구하면 비용의 근거부터 다투게 됩니다.

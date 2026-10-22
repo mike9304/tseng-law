@@ -11,8 +11,8 @@ tags: ["fraud", "대금미지급", "공급계약", "한국기업"]
 audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/fraud-20261003/taiwan-unpaid-invoice-fraud-or-contract.png"
-featured_image_alt: "물품대금 거래와 출하 기록을 설명하기 위한 AI 생성 가상 이미지. 실제 사건의 재연이 아닙니다."
-featured_image_caption: "AI 생성 설명용 이미지입니다. 실제 거래처·고객의 자료나 사건을 재현한 장면이 아닙니다."
+featured_image_alt: "물품대금 거래와 출하 기록을 설명하기 위한 가상 이미지. 실제 사건의 재연이 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 # 대만 거래처가 대금을 주지 않습니다. 계약 분쟁과 사기는 어디서 갈리나
 

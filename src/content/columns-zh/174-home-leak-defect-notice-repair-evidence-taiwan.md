@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/home-leak-defect-notice-repair-evidence-taiwan.png"
 featured_image_alt: "一人拿著手機對準窗下帶有不規則水痕的牆面，旁邊的木桌上放著盆栽和杯子。"
-featured_image_caption: "AI生成的虛構場景，並非真實房屋、屋主或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 # 交屋後才發現漏水，通知賣方與修繕怎麼安排？

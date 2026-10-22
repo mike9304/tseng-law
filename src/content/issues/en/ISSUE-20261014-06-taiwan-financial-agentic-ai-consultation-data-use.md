@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261014-06-taiwan-financial-agentic-ai-consultation-data-use/featured-01.webp"
 featured_image_alt: "A closed silver laptop and a plain dark folder on a desk in an empty office with glass partitions."
-featured_image_caption: "AI-generated illustration of a fictional bank meeting room; it depicts no real institution, customer records or operational system."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261014-06-taiwan-financial-agentic-ai-consultation-data-use/featured-01.jpg"
 faq:
   - q: "Did the FSC introduce a new binding agentic-AI law on October 13?"
@@ -52,7 +52,7 @@ In another hypothetical pilot, the initial service prepares a response for bank 
 
 In practical terms, the contract description, system permissions and bank approvals need to describe the same operation. The consultation's suggested monitoring, shutdown and recovery mechanisms also give the parties concrete matters to discuss: who can stop the agent, which actions remain pending, and what records would explain an unexpected result. The proposal leaves the choice of controls tied to the use case and its risks. A deployment decision still requires assessment under the applicable rules.
 
-Illustration: AI-generated fictional bank meeting room; no real institution, customer records or operational system is depicted.
+Fictional scene
 
 ## Sources
 

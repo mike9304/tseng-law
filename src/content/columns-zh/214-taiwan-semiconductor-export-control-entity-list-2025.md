@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "export-control", "SHTC"]
 featured_image: "../images/semiconductor/taiwan-semiconductor-export-control-entity-list-2025/featured-01.webp"
 featured_image_alt: "灰色泡棉的空圓形凹槽間放著一枚銅色細邊的黑色方塊，右側凹槽逐漸失焦。"
-featured_image_caption: "AI生成的虛構示意圖，非真實公司的產品、設施或人物，也不呈現任何實際交易。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "貨品沒有列在SHTC清單，出口給列名企業還需要許可嗎？"
     a: "不能只憑貨品未列清單就出貨。國際貿易署說明，SHTC亦涵蓋因最終用途或最終使用者而受管制的清單外貨品；出口予我國實體管理名單中受管制實體，應先取得戰略性高科技貨品輸出許可證。"

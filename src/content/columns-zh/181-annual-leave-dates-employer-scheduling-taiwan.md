@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b05/annual-leave-dates-employer-scheduling-taiwan.png"
 featured_image_alt: "一隻手在沒有日期文字的桌曆格線前拿著橘色紙條，格線上另有綠色紙條；桌上放著闔上的筆記本、筆和盆栽。"
-featured_image_caption: "AI生成的虛構示意畫面，並非真實排班、請假申請或核准紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 # 公司統一排特休，或把病假改成特休，可以嗎？

@@ -11,7 +11,7 @@ categories:
 topic: litigation
 featured_image: "../images/ISSUE-20261011-15-taiwan-offshore-wind-supervised-payment-subcontractor/featured-01.webp"
 featured_image_alt: "Fictional editorial illustration of offshore wind turbines and project payment paperwork."
-featured_image_caption: "AI-generated illustration of a fictional offshore-wind project and payment paperwork; it does not depict the parties or site in the reported dispute."
+featured_image_caption: "Fictional scene"
 social_image: "../images/ISSUE-20261011-15-taiwan-offshore-wind-supervised-payment-subcontractor/featured-01.jpg"
 faq:
   - q: "Does supervised payment make the project owner liable for every unpaid subcontract invoice?"
@@ -30,7 +30,7 @@ Suppose your company installs equipment on a Taiwan wind project under a subcont
 
 In its [September 29, 2026 statement](https://mnscdn.moea.gov.tw/Mns/Populace/news/News.aspx?kind=1&menu_id=40&news_id=124091), Taipower said it was following supervised-payment arrangements after Public Construction Commission coordination, while some subcontractors reported nonpayment. [CNA’s October 7 report](https://www.cna.com.tw/news/afe/202610070324.aspx) described continuing disagreement between the project parties. Those public statements do not establish what any particular subcontractor can recover. That requires the project’s contracts and payment arrangements.
 
-Illustration: AI-generated offshore-wind project and payment paperwork. The scene is fictional and does not depict the reported dispute.
+Fictional scene
 
 ## The sender of the money and the debtor
 

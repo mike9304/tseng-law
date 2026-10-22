@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/539-custom-goods-online-seven-day-cancellation-taiwan.webp"
 featured_image_alt: "穿著淡綠色圍裙的人雙手扶著有綠色與棕色圖樣的陶杯，木桌上放著兩塊色樣、素色盒子和帶有圖樣的紙。"
-featured_image_caption: "AI生成的概念示意圖，人物、陶杯與紙上圖樣均為虛構，並非真實訂單或案件紀錄；畫面不表示商品已符合客製化例外。"
+featured_image_caption: "虛構情境"
 ---
 
 [通訊交易解除權合理例外情事適用準則第2條](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170012)將「依消費者要求所為之客製化給付」列為七日解除權的例外，但也要求業者已告知消費者排除這項權利。

@@ -9,7 +9,7 @@ categories: ["Thông tin pháp luật Đài Loan"]
 topic: "labor"
 featured_image: "/images/columns/20261002/vi-passport-arc-return.webp"
 featured_image_alt: "Bàn tay người lao động sắp xếp hộ chiếu, thẻ cư trú và phong bì hồ sơ trên bàn tư vấn."
-featured_image_caption: "Hình minh họa do AI tạo, không phải ảnh khách hàng, giấy tờ hay vụ việc có thật."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "/images/columns/20261002/vi-passport-arc-return.jpg"
 audience: ["vi"]
 author: "legal-ai-assistant"

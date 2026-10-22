@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "科学園区", "台湾進出", "入区審査", "保税"]
 featured_image: "../images/semiconductor/taiwan-science-park-entry-japanese-semiconductor-companies/featured-01.webp"
 featured_image_alt: "曇り空の下、雨にぬれたコンクリートの遊歩道の左側に、若いイチョウを植えた四角い鉢がある。目地には苔が生え、鉢の横に浅い水たまりが見える。低い壁が両側の奥へかすみ、右側の通路が開けている。"
-featured_image_caption: "AIで生成した架空の風景です。実在の企業、施設、人物を写したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "半導体の顧客に納品していれば、販売拠点だけでも科学園区に入れますか。"
     a: "取引先が半導体企業であることだけで入区資格は決まりません。科學園區設置管理條例第4条の科學事業に該当するか、第5条の運営・管理・技術サービスを提供する園區事業として申請するかを、台湾拠点の実際の業務に即して管理局と協議します。いずれも承認が必要です。"

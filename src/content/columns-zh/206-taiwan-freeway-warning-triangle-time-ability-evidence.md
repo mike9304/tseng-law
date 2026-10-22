@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261004/warning-triangle-folded-hero-1600x900.webp"
 featured_image_alt: "摺疊的紅色反光警告三角牌與深灰色長形收納盒，並排放在車內行李廂地墊上。"
-featured_image_caption: "AI 生成虛構示意圖：車內收納的警告三角牌與收納盒，非本案現場照片，也不表示當事人當時具備安全設置警示的條件。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261004/warning-triangle-folded-hero-1600x900.webp"
 ---
 # 警告標誌還拿在手上，後車已撞來：法院怎麼看來不及完成的義務？

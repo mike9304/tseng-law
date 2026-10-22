@@ -11,7 +11,7 @@ categories:
 topic: company
 featured_image: "../images/ISSUE-20261014-01-taiwan-cafe-no-ice-surcharge-price-disclosure/featured-01.webp"
 featured_image_alt: "차분한 카페 카운터에 놓인 무늬 없는 음료 잔과 작은 우유 주전자."
-featured_image_caption: "AI로 만든 가상의 카페 장면입니다. 실제 매장이나 보도된 음료, 거래 증거를 촬영한 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "../images/ISSUE-20261014-01-taiwan-cafe-no-ice-surcharge-price-disclosure/featured-01.jpg"
 faq:
   - q: "대만 카페에서 얼음을 빼면 항상 추가 요금을 내나요?"
@@ -40,7 +40,7 @@ author: "legal-ai-assistant"
 
 제4조와 제22조가 모든 음료의 무료 보충을 보장하는 것은 아닙니다. 개별 분쟁에서는 당시 메뉴와 광고, 주문할 때 받은 설명, 영수증과 실제 음료 사진을 함께 보아야 합니다. 가격 변경을 알렸다는 사실과, 이미 약속한 서비스를 제대로 제공했는지는 각각 살필 문제입니다.
 
-대표 이미지는 AI로 만든 가상의 카페 장면이며, 실제 매장이나 해당 분쟁을 촬영한 사진이 아닙니다.
+가상의 장면
 
 ## 참고 자료
 

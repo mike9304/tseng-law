@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約9分鐘閱讀"
 featured_image: "/images/columns/20261002/taiwan-mediation-later-injury-hero-1600x900.webp"
 featured_image_alt: "木桌上放著無字資料夾、白色信封、原子筆與指針手錶，玻璃後方是模糊的走廊。"
-featured_image_caption: "AI 生成之假設情境示意圖；不代表真實調解案件，亦非實際病歷或醫療證據。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261002/taiwan-mediation-later-injury-hero-1600x900.webp"
 ---
 

@@ -18,7 +18,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/434-taiwan-search-warrant-consent-home-office-japanese/featured-01.webp"
 featured_image_alt: "閉じたノートパソコンと書類入れが置かれた仕事用デスク。"
-featured_image_caption: "AIで生成した架空の場面です。実際の捜索や押収の様子を示すものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾の自宅や会社に捜索が入ったとき、捜索票と同意を確かめる

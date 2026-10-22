@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b05/limited-company-shareholder-books-inspection-taiwan.png"
 featured_image_alt: "兩人在木桌前查看攤開的表格頁面，一人持筆指向紙面，另一人拿著一張紙；桌上放著灰色資料夾、筆記本和杯子。"
-featured_image_caption: "AI生成的概念示意圖，人物與文件均為虛構，並非真實公司帳冊、股東查閱或案件紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 # 有限公司的小股東不是董事，能要求看帳簿嗎？

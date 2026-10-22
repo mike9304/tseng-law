@@ -11,7 +11,7 @@ categories:
 topic: "other"
 featured_image: "../images/ISSUE-20261015-03-taiwan-pork-rice-ball-quarantine-declaration-japanese/featured-01.webp"
 featured_image_alt: "空港のカウンターに置かれた小さなポーチと、透明な包装のおにぎり、紺色の旅券カバー"
-featured_image_caption: "架空の空港風景を描いたAI生成画像です。報道の携行品や当事者を写したものではありません。"
+featured_image_caption: "架空の情景"
 social_image: "../images/ISSUE-20261015-03-taiwan-pork-rice-ball-quarantine-declaration-japanese/featured-01.jpg"
 faq:
   - q: "日本から肉製品を持ち込むと、必ず20万台湾元の過料になりますか？"
@@ -52,7 +52,7 @@ author: "legal-ai-assistant"
 
 今回の分納は、行政執行署台中分署が男性の生活状況を調べたうえで認めたものです。過料が取り消されたわけではなく、支払義務は残ります。処分の根拠や金額を争うことと、支払方法を相談することは、別の問題です。手元の処分書が何を違反としたのか、本人の携行状況とどう対応するのかが、個別の判断の出発点になります。
 
-画像は架空の空港風景を描いたAI生成画像で、報道の携行品や当事者を写したものではありません。
+架空の情景
 
 ## 参照資料
 

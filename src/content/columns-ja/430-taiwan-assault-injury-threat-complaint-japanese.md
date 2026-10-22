@@ -18,7 +18,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/430-taiwan-assault-injury-threat-complaint-japanese/featured-01.webp"
 featured_image_alt: "布の上に置いた画面の暗いスマートフォン、青いノート、銀色の保存媒体と短いケーブルを描いたイラスト。"
-featured_image_caption: "AIで生成した架空のイラストです。実際の依頼者の持ち物や事件の証拠を示すものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾で殴られた、殴ったと言われた――傷害の告訴と証拠

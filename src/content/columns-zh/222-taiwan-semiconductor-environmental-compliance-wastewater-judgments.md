@@ -12,7 +12,7 @@ topic: "company"
 tags: ["semiconductor", "environmental-compliance", "water-pollution", "judgments"]
 featured_image: "../images/semiconductor/taiwan-semiconductor-environmental-compliance-wastewater-judgments/featured-01.webp"
 featured_image_alt: "淺色混凝土窄渠裡盛著一層靜止的橄欖綠水，渠道從左下角往遠處延伸，右側留有一大片裸露的混凝土平面。"
-featured_image_caption: "AI生成的虛構示意圖，非真實公司、設施或人物，也不是任何判決案件的現場。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "同一次放流水超標，可能同時引發刑事與行政責任嗎？"
     a: "可能，而且對象不一定相同。K7案中，同一天的超標讓四名廠務人員受廢棄物清理法的刑事判決，公司則受水污染防治法的行政裁罰，要件、證據與結果各自獨立。個案是否成立，取決於具體事實與行為時適用的條文。"

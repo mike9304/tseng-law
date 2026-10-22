@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 featured_image_alt: "해 질 녘 차 앞유리 너머로 보이는 고가도로 분기점에서 흰색 세단은 왼쪽 차로에 있고, 검은색 세단은 오른쪽 흰 빗금 구역 가장자리에 비스듬히 걸쳐 있습니다."
-featured_image_caption: "이 글에서 다루는 유형의 주행 상황을 설명하기 위해 AI로 만든 가상 장면입니다. 판결 속 사건의 사진이나 재현 이미지가 아닙니다."
+featured_image_caption: "가상의 장면"
 social_image: "/images/columns/20261003/road-rage-freeway-chase-own-dashcam-too-hero-1600x900.webp"
 ---
 # 시속 151km는 상대 블랙박스 숫자라던 백색 차 운전자, 법원은 그의 블랙박스도 봤다

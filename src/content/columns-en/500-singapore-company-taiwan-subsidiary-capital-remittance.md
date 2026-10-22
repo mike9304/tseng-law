@@ -10,8 +10,8 @@ categories: ["Taiwan Legal Information"]
 topic: "company"
 tags: ["singapore","foreign-investment"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
-featured_image_alt: "AI-generated illustration of document folders, a calculator and a pen on a desk overlooking Taipei, representing preparations to fund a Taiwan subsidiary."
-featured_image_caption: "AI-generated illustrative scene of company records and funding preparations; no actual client, transaction or office is depicted."
+featured_image_alt: "Illustration of document folders, a calculator and a pen on a desk overlooking Taipei, representing preparations to fund a Taiwan subsidiary."
+featured_image_caption: "Fictional scene"
 social_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 audience: ["en"]
 targetMarket: "Singapore"

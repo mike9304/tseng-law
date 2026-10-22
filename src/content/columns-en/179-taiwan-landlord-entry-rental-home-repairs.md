@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/taiwan-landlord-entry-rental-home-repairs.png"
 featured_image_alt: "A person holds a phone showing a calendar grid inside a home with a closed green entrance door. A desk calendar, keys and a closed toolbox are nearby."
-featured_image_caption: "AI-generated fictional scene of a home interior with calendar displays. It does not depict an actual rental dispute or confirmed repair appointment."
+featured_image_caption: "Fictional scene"
 ---
 
 For planned repairs, section 9 of Taiwan's [mandatory residential lease terms](https://www.ey.gov.tw/File/43BC094940995CFC?A=C) requires the landlord to give reasonable advance notice. It also says a tenant may not refuse necessary steps to carry out the repairs without a proper reason. If you will be away, respond with arrangements you can agree to: who will enter, which part of the home they need and when the visit can take place.

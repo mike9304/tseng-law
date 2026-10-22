@@ -12,8 +12,8 @@ tags: ["traffic-accidents", "traffic-liability"]
 audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
-featured_image_alt: "AI-generated fictional scene: from inside a car, a dark sedan with glowing red brake lights is visible just ahead on a wet city road at night."
-featured_image_caption: "This AI-generated fictional scene illustrates the kind of driving situation discussed in the column. It is not a photograph or a reconstruction of the case in the judgment."
+featured_image_alt: "Fictional scene: from inside a car, a dark sedan with glowing red brake lights is visible just ahead on a wet city road at night."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-reversing-into-tailgater-no-self-defense-hero-1600x900.webp"
 ---
 # Honked at from behind, a driver reversed into the other car three times and called it self-defence

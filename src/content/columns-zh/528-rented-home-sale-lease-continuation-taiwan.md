@@ -14,7 +14,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/528-rented-home-sale-lease-continuation-taiwan.webp"
 featured_image_alt: "一人坐在住家木桌前拿著紙張，對面的人雙手交握；桌上有鑰匙、素色信封和杯子。"
-featured_image_caption: "AI生成的示意畫面，人物與紙張內容均為虛構，並非真實租約、房屋買賣或點交紀錄。"
+featured_image_caption: "虛構情境"
 ---
 
 房東已交付房屋，房客仍在占有中，房東才將所有權移轉給買方，依[民法第425條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=425)，原租約原則上對新屋主繼續存在。只有簽約在先，尚未受領房屋，不能直接套用這項規定。

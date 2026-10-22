@@ -17,8 +17,8 @@ describe('reviewed starting-entry publication', () => {
     expect(sha(body)).toBe('03c711f1506f0d90a64fc2726f583e722d9d0ad8086930de27fec0226c8aea2d');
     const post = getColumnPost(slug, 'zh-hant')!;
     expect(sha(fs.readFileSync(`public${post.featuredImage}`))).toBe('b891ad9efbe8582c39c5af70ddf4ceab90385691cbfd95551cf705318254eb1e');
-    expect(post.featuredImageAlt).toBe('AI 生成的假想情境示意圖：銀色轎車停在住宅車棚出口內側，前方為空曠的住宅區道路；非真實事故照片。');
-    expect(post.featuredImageCaption).toBe('AI 生成之假想情境示意圖，呈現車輛停放於住宅車棚、面向前方道路的情境；非真實事故照片、現場重建或責任認定依據。');
+    expect(post.featuredImageAlt).toBe('假想情境示意圖：銀色轎車停在住宅車棚出口內側，前方為空曠的住宅區道路；非真實事故照片。');
+    expect(post.featuredImageCaption).toBe('虛構情境');
   });
   it('joins the traffic board by tags without extending the reviewed legacy slug map', () => {
     expect(LEGACY_TRAFFIC_SUBJECT_BY_SLUG[slug]).toBeUndefined();

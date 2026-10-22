@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 featured_image_alt: "Through a car's windshield, a person holding a long stick stands beside the open front door of a gray sedan stopped at an angle on a downhill road in daylight."
-featured_image_caption: "This fictional AI-generated scene illustrates the kind of road dispute discussed in the column. It is not a photograph or a reconstruction of the case in the judgment."
+featured_image_caption: "Fictional scene"
 social_image: "/images/columns/20261003/road-rage-started-did-not-matter-driver-blocked-hero-1600x900.webp"
 ---
 # Who started it did not matter to a Taiwan court after a driver blocked the same car twice and got out with a bat

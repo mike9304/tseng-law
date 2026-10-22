@@ -12,7 +12,7 @@ topic: "litigation"
 tags: ["fraud", "fraud-prevention-act", "victim-compensation"]
 featured_image: "../images/235-fraud-crime-prevention-act-2024-victims-taiwan/featured-01.webp"
 featured_image_alt: "明亮的小會議室裡，素面長桌兩側各有一張空椅，桌上放著兩杯水，窗邊一人背對鏡頭站著。"
-featured_image_caption: "AI生成的虛構情境示意圖，呈現等待調解的空會議室；並非真實案件、當事人、法院、銀行畫面或文件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "我不同意和解，被告還能依詐欺犯罪危害防制條例減刑嗎？"
     a: "要看被告行為的時間。2026年1月23日修正生效後的第47條，以六個月內付清與被害人達成調解或和解的全部金額為條件，沒有達成調解或和解就不符合這一條。行為在此之前的案件，法院依刑法第2條第1項比較新舊法，可能適用修正前條文，自白並繳交個人犯罪所得即減輕。此外，法院依刑法第57條量刑時，仍會審酌犯罪後的態度等情狀。"

@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b02/family-voice-impersonation-transfer-taiwan.png"
 featured_image_alt: "一人手持家用電話話筒，桌上手機顯示聲音波形，旁邊相框內的合照模糊。"
-featured_image_caption: "AI生成示意圖，並非真實親友、通話紀錄或詐騙案件的重現。"
+featured_image_caption: "虛構情境"
 ---
 
 # 親友的借款語音很像本人，匯款前怎麼核對？

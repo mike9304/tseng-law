@@ -14,7 +14,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/405-taiwan-assault-injury-self-defense-compensation/featured-01.webp"
 featured_image_alt: "A translucent folder of blank papers, a dark phone and a small portable drive grouped on a light stone table."
-featured_image_caption: "AI-generated illustrative scene of record preservation. The objects and setting are fictional and do not depict an actual client or event."
+featured_image_caption: "Fictional scene"
 ---
 # An assault in Taiwan: injury evidence, self-defense and compensation
 

@@ -11,7 +11,7 @@ categories:
 topic: labor
 featured_image: "../images/ISSUE-20261013-08-taiwan-migrant-worker-replacement-contract-wages/featured-01.webp"
 featured_image_alt: "Hai tập hồ sơ hợp đồng, găng tay và mũ bảo hộ đặt trên bàn trong văn phòng công trường."
-featured_image_caption: "Hình minh họa do AI tạo về hồ sơ và đồ bảo hộ tại một công trường hư cấu; không phải chứng cứ hay ảnh hiện trường của vụ việc."
+featured_image_caption: "Cảnh hư cấu"
 social_image: "../images/ISSUE-20261013-08-taiwan-migrant-worker-replacement-contract-wages/featured-01.jpg"
 faq:
   - q: "Ký hợp đồng thứ hai có đồng nghĩa với mất quyền yêu cầu mức lương ban đầu không?"
@@ -48,4 +48,4 @@ Trong phạm vi luật này, [Điều 74](https://law.moj.gov.tw/LawClass/LawSin
 
 Ngày kiểm tra nguồn: 13/10/2026. Bài viết cung cấp thông tin chung về pháp luật Đài Loan, không thay thế tư vấn theo hồ sơ cụ thể.
 
-Hình minh họa do AI tạo; hồ sơ và công trường là hư cấu, không phải chứng cứ của vụ việc trong bản tin.
+Cảnh hư cấu

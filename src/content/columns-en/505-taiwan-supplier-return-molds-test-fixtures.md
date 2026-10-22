@@ -14,7 +14,7 @@ targetMarket: "United States"
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp"
 featured_image_alt: "A steel production mold and a compact test fixture arranged for an inventory check at an industrial packing bench."
-featured_image_caption: "AI-generated illustration of a fictional equipment inventory; it does not depict an actual supplier or dispute."
+featured_image_caption: "Fictional scene"
 ---
 
 A paid tooling invoice may show that your company funded a mold. It does not, by itself, settle who owns it or when the Taiwan supplier must release it. Before arranging collection, put the tooling agreement, payment record and inventory list together. The claim needs to identify the particular equipment and the obligation to hand it over.

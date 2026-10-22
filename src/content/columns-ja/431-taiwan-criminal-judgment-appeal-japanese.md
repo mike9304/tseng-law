@@ -20,7 +20,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/column-media-20261010/431-taiwan-criminal-judgment-appeal-japanese/featured-01.webp"
 featured_image_alt: "玄関脇の木製トレーに、開いた封筒と紙の束、薄い方眼のメモ帳が置かれています。"
-featured_image_caption: "AIで生成した架空の郵便物整理の場面です。実際の依頼者に届いた判決書や事件を写したものではありません。"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾の刑事判決が届いたら、上訴の20日と提出先を確かめる

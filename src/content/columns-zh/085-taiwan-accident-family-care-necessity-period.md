@@ -12,7 +12,7 @@ audience: ["zh-hant"]
 read_time: "約10分鐘閱讀"
 featured_image: "/images/columns/20261003/family-care-hero-1600x900.webp"
 featured_image_alt: "自然光照入居家休息角落，空著的布面扶手椅扶手上搭著摺好的針織毯，椅旁靠著一支木製手杖，圓形木邊桌上擺著一杯水與一盆綠色植物。"
-featured_image_caption: "AI 生成的虛構居家休養情境示意圖，非真實個案紀錄，與文中判決無關。"
+featured_image_caption: "虛構情境"
 social_image: "/images/columns/20261003/family-care-hero-1600x900.webp"
 ---
 # 家人照顧能請求車禍看護費嗎？先分清照護需求與期間

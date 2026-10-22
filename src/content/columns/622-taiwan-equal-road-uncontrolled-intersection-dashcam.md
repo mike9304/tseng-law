@@ -9,8 +9,8 @@ categories: ["대만 법률정보"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
 featured_image: "../images/622-taiwan-equal-road-uncontrolled-intersection-dashcam/featured-01.webp"
-featured_image_alt: "무신호 사거리에서 은색 차량의 오른쪽으로부터 빨간 해치백이 진입하는 AI 가상 장면"
-featured_image_caption: "AI로 만든 무신호 교차로의 가상 사고 장면입니다. 실제 사고나 특정 교차로의 통행 조건을 기록한 사진이 아닙니다."
+featured_image_alt: "무신호 사거리에서 은색 차량의 오른쪽으로부터 빨간 해치백이 진입하는 가상 장면"
+featured_image_caption: "가상의 장면"
 audience: ["ko"]
 author: "legal-ai-assistant"
 faq:
@@ -26,7 +26,7 @@ faq:
 
 차로 수가 같은 사거리에서 둘 다 직진했다면, 오른쪽 차량을 먼저 보내야 할까요? 신호나 교통정리자가 없고 간선·지선 지정도 없다면, 왼쪽 차량이 일시 정지해 오른쪽 차량에 양보해야 합니다([도로교통안전규칙 제102조 제1항 제2호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=102)). 정체 때는 교대로 통행합니다.
 
-첨부 영상은 이 조건을 둔 일반도로의 가상사례이며 교통은 정체되지 않은 것으로 설정했습니다. 은색 차량이 북쪽으로 직진하는 동안 빨간 해치백이 그 오른쪽에서 왼쪽으로 교차로를 가로지르고, 은색 차가 제동하는 사이 충돌합니다. 두 차 모두 직진합니다. 표지와 영상은 AI로 제작했으며 실제 블랙박스나 특정 판결을 재현하지 않습니다.
+첨부 영상은 이 조건을 둔 일반도로의 가상사례이며 교통은 정체되지 않은 것으로 설정했습니다. 은색 차량이 북쪽으로 직진하는 동안 빨간 해치백이 그 오른쪽에서 왼쪽으로 교차로를 가로지르고, 은색 차가 제동하는 사이 충돌합니다. 두 차 모두 직진합니다. 표지와 영상은 가상으로 제작했으며 실제 블랙박스나 특정 판결을 재현하지 않습니다.
 
 ## 오른쪽을 따지기 전에 정해지는 순서
 

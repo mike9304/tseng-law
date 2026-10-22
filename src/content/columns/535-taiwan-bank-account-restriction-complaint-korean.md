@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/air-20261011/535-taiwan-bank-account-restriction-complaint-korean.webp"
 featured_image_alt: "사람이 없는 은행 상담 책상에 놓인 서류철과 휴대전화"
-featured_image_caption: "은행 상담 준비를 표현한 AI 생성 이미지입니다. 실제 은행 창구나 고객의 계좌 자료가 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 대만 은행에 사기 의심 거래에 관한 자료를 냈는데도 개인 계좌의 이체 제한이 계속된다면, 은행의 처리에 이의를 제기하는 절차가 있습니다. 다만 은행이 자체 판단으로 제한한 것인지, 수사기관 등의 통보로 지정된 경시계좌(警示帳戶)인지, 자금이 압류된 것인지에 따라 해결 절차가 달라집니다.

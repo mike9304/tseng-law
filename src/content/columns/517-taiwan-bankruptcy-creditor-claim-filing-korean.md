@@ -12,7 +12,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/next-four-columns-20261010/517-taiwan-bankruptcy-creditor-claim-filing-korean.webp"
 featured_image_alt: "서류철과 문서 묶음이 놓인 책상에서 스캐너에 서류를 올리는 모습"
-featured_image_caption: "거래자료를 정리하는 상황을 표현한 AI 생성 이미지입니다. 실제 사건이나 고객의 문서를 재현한 장면은 아닙니다."
+featured_image_caption: "가상의 장면"
 ---
 
 대만 거래처에 파산선고가 내려졌다면, 담보가 없는 일반 물품대금 채권은 법원 공고에 나온 파산관리인(破產管理人)에게 정해진 기간 안에 신고해야 합니다. 거래처 영업담당자에게 그동안 독촉장을 보냈거나 잔액 확인을 받았더라도, 파산관리인에게 채권이 신고됐는지는 별도로 확인해야 합니다. [대만 파산법 제65조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010006&flno=65)는 기한 안에 신고하지 않은 채권자는 파산재단에서 변제받을 수 없다고 정합니다.

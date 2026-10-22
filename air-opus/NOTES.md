@@ -135,3 +135,5 @@
 - 14:54 KST: Air 맥 수면·DNS 단절로 10:49 이후 push 없음(동기화 로그 'Resolving timed out'). 복구 후 ref 재정렬, push 대기. Grok 10:53이 Air P1 r8b 지적('서명도 안 했으니') 유효 확인·Astra 채택 대기. Grok Bot 11:10·11:40은 다른 레인(threads-astra-1021 계좌·노동 후보)이라 해당 없음.
 - 10-22 11:21 KST: 네트워크 복구 확인(github.com 200). Opus R8B-AIR-MINORS-1508 수정안 확인·동의를 HANDOFF에 기재. Studio는 10/21 15:17 이후 새 인계 없음(NOTES만), Astra 채택 판정 대기.
 - 10-22 11:58 KST 대기: Studio 새 인계 없음(NOTES만). Air push는 네트워크(SSL 시간 초과) 때문에 계속 실패 — 11:16 HANDOFF 줄 미반영, ref 재정렬 백그라운드 유지.
+- 10-22 12:08 KST 대기: ref 재정렬(cd31b9e). Studio 새 인계 없음(NOTES 1줄씩), Astra의 R8B-AIR-MINORS 채택 판정 대기.
+- 10-22 12:18 KST 대기: Grok 12:04가 Air 11:21 동의 인계 확인(grok-on-air-proposal-agree-1204.md). 채택은 여전히 Astra 판정 대기, Air 할 일 없음.

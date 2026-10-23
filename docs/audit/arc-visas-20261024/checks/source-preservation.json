@@ -1,0 +1,259 @@
+{
+  "checkedAt": "2026-10-23T17:59:24.619490+00:00",
+  "articles": [
+    {
+      "path": "src/content/columns/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 47,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 34,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 41,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 37,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 36,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 40,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-ja/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 39,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-ja/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 33,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-ja/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 40,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-vi/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 35,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-vi/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 33,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-vi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 38,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 35,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 34,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 40,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-th/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 44,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 43,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 44,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-id/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 30,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 31,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 34,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-hi/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 38,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-hi/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 41,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-hi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 43,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 39,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 33,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 41,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-de/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 39,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-de/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 40,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-de/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 42,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-it/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 36,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-it/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 32,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-it/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 34,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-es/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 35,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-es/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 34,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-es/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 34,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 43,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 33,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 41,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-ar/704-taiwan-arc-first-application.md",
+      "sourceBlocks": 43,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-ar/705-taiwan-visa-residence-work-study-family.md",
+      "sourceBlocks": 39,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    },
+    {
+      "path": "src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceBlocks": 40,
+      "allSourceBlocksPresentInOrder": true,
+      "missingSourceLinks": []
+    }
+  ],
+  "errors": [],
+  "scope": "All raw-source body blocks and official/external links compared with saved HTML, excluding YAML metadata. Not browser visibility or visual QA."
+}

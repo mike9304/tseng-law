@@ -1,0 +1,30 @@
+{
+  "scope": "Source/app changes clean; copied immutable research/review/log evidence retains original whitespace",
+  "checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 2,
+      "stdout": "docs/audit/arc-visas-20261024/authors/es-author.md:174: new blank line at EOF.\ndocs/audit/arc-visas-20261024/authors/hi-author.md:209: new blank line at EOF.\ndocs/audit/arc-visas-20261024/authors/it-author.md:222: new blank line at EOF.\ndocs/audit/arc-visas-20261024/authors/th-author.md:183: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:186: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:190: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:193: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:197: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:200: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:204: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:207: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:216: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:219: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:223: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:226: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:230: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/authors/th-author.md:233: trailing whitespace.\n+ \ndocs/audit/arc-visas-20261024/checks/vitest-integrated.log:116: trailing whitespace.\n+     57| \ndocs/audit/arc-visas-20261024/checks/vitest-integrated.log:125: new blank line at EOF.\ndocs/audit/arc-visas-20261024/checks/vitest-market-integrated-r2.log:23: new blank line at EOF.\ndocs/audit/arc-visas-20261024/research/research-arc.md:101: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "048d9c619c31feebfd6d1ffdce2f3304e1b57081..HEAD",
+        "--",
+        "src"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "resolution": "Preserve evidence bytes and report SHA-256; no application or article whitespace error. Do not normalize reviewed historical reports or quoted diffs."
+}

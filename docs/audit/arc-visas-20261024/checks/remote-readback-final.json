@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-23T17:35:43.491047+00:00",
+  "method": "fresh DoH A response; one git command curloptResolve; normal TLS verification retained; no persistent network/config changes",
+  "ip": "20.200.245.247",
+  "exitCode": 0,
+  "stdout": "048d9c619c31feebfd6d1ffdce2f3304e1b57081\trefs/heads/main\n",
+  "stderr": ""
+}

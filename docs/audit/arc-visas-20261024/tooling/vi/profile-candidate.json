@@ -1,0 +1,423 @@
+{
+  "locale": "vi",
+  "directory": "columns-vi",
+  "join_hyphens": false,
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:Nguồn(?:[^\\S\\r\\n]+tham[^\\S\\r\\n]+khảo|[^\\S\\r\\n]+chính[^\\S\\r\\n]+thức)?|(?:Danh[^\\S\\r\\n]+mục[^\\S\\r\\n]+)?Tài[^\\S\\r\\n]+liệu[^\\S\\r\\n]+tham[^\\S\\r\\n]+khảo)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "abbreviations": [
+    "TP",
+    "TS",
+    "ThS",
+    "GS",
+    "PGS",
+    "PGS.TS",
+    "PGS. TS",
+    "tr",
+    "v.v",
+    "v. v",
+    "Dr",
+    "Prof"
+  ],
+  "terminal_abbreviations": [
+    "v.v",
+    "v. v"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bkhông[^\\S\\r\\n]+phải\\b[^.!?\\n]*?\\bmà[^\\S\\r\\n]+là\\b)",
+    "(?i:\\bkhông[^\\S\\r\\n]+phải\\b[^.!?\\n]*?,[^\\S\\r\\n]*mà\\b(?![^\\S\\r\\n]+còn\\b))",
+    "(?i:\\bchứ[^\\S\\r\\n]+không(?:[^\\S\\r\\n]+phải)?\\b)",
+    "(?i:\\bthay[^\\S\\r\\n]+vì\\b)",
+    "(?i:\\bkhác[^\\S\\r\\n]+với\\b)"
+  ],
+  "caveat_pattern": "(?i:^[\\s“\"‘'(\\[]*(?:Tuy[^\\S\\r\\n]+nhiên|Tuy[^\\S\\r\\n]+vậy|Dù[^\\S\\r\\n]+vậy|Mặc[^\\S\\r\\n]+dù[^\\S\\r\\n]+vậy|Dẫu[^\\S\\r\\n]+vậy|Nhưng|Lưu[^\\S\\r\\n]+ý|Cần[^\\S\\r\\n]+lưu[^\\S\\r\\n]+ý)\\b)",
+  "hypo_pattern": "(?i:^[\\s“\"‘'(\\[]*(?:Giả[^\\S\\r\\n]+sử|Giả[^\\S\\r\\n]+định|Ví[^\\S\\r\\n]+dụ|Chẳng[^\\S\\r\\n]+hạn|Hãy[^\\S\\r\\n]+hình[^\\S\\r\\n]+dung|Một[^\\S\\r\\n]+tình[^\\S\\r\\n]+huống[^\\S\\r\\n]+giả[^\\S\\r\\n]+định)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:Bài[^\\S\\r\\n]+viết|Nội[^\\S\\r\\n]+dung)[^\\S\\r\\n]+này[^\\S\\r\\n]+(?:chỉ[^\\S\\r\\n]+)?(?:cung[^\\S\\r\\n]+cấp|mang[^\\S\\r\\n]+tính)[^\\S\\r\\n]+(?:thông[^\\S\\r\\n]+tin[^\\S\\r\\n]+(?:chung|tổng[^\\S\\r\\n]+quát)|tham[^\\S\\r\\n]+khảo)\\b|\\bcông[^\\S\\r\\n]+ty[^\\S\\r\\n]+luật[^\\S\\r\\n]+chúng[^\\S\\r\\n]+tôi[^\\S\\r\\n]+có[^\\S\\r\\n]+thể[^\\S\\r\\n]+(?:hỗ[^\\S\\r\\n]+trợ|giúp)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Chiếc hộp đã đóng. Nhãn màu xanh nằm bên cạnh.",
+      "sentences": [
+        "Chiếc hộp đã đóng.",
+        "Nhãn màu xanh nằm bên cạnh."
+      ]
+    },
+    {
+      "text": "Cuốn sổ ở đâu? Nó ở ngăn kéo!",
+      "sentences": [
+        "Cuốn sổ ở đâu?",
+        "Nó ở ngăn kéo!"
+      ]
+    },
+    {
+      "text": "TS. An đọc bản nháp. ThS. Bình sửa dòng cuối.",
+      "sentences": [
+        "TS. An đọc bản nháp.",
+        "ThS. Bình sửa dòng cuối."
+      ]
+    },
+    {
+      "text": "Bì thư ghi địa chỉ tại TP. Đà Nẵng. Người nhận đã lấy thư.",
+      "sentences": [
+        "Bì thư ghi địa chỉ tại TP. Đà Nẵng.",
+        "Người nhận đã lấy thư."
+      ]
+    },
+    {
+      "text": "Phiếu mẫu ghi ngày 12.10.2026 và khối lượng 2,5 kg. Dòng dưới ghi 1.250,50 g.",
+      "sentences": [
+        "Phiếu mẫu ghi ngày 12.10.2026 và khối lượng 2,5 kg.",
+        "Dòng dưới ghi 1.250,50 g."
+      ]
+    },
+    {
+      "text": "Trong hộp có bút, thước, nhãn, v.v. Chiếc kéo nằm ngoài hộp.",
+      "sentences": [
+        "Trong hộp có bút, thước, nhãn, v.v.",
+        "Chiếc kéo nằm ngoài hộp."
+      ]
+    },
+    {
+      "text": "Bút, thước, nhãn, v.v. đều nằm trong hộp. Nắp hộp vẫn mở.",
+      "sentences": [
+        "Bút, thước, nhãn, v.v. đều nằm trong hộp.",
+        "Nắp hộp vẫn mở."
+      ]
+    },
+    {
+      "text": "“Tờ giấy đã khô.” Mai gấp tờ giấy lại.",
+      "sentences": [
+        "“Tờ giấy đã khô.”",
+        "Mai gấp tờ giấy lại."
+      ]
+    },
+    {
+      "text": "“Cậu thấy chiếc chìa khóa chưa?” cô ấy hỏi. Tôi lắc đầu.",
+      "sentences": [
+        "“Cậu thấy chiếc chìa khóa chưa?” cô ấy hỏi.",
+        "Tôi lắc đầu."
+      ]
+    },
+    {
+      "text": "“Cậu thấy chiếc chìa khóa chưa?” Mai hỏi. Tôi lắc đầu.",
+      "sentences": [
+        "“Cậu thấy chiếc chìa khóa chưa?” Mai hỏi.",
+        "Tôi lắc đầu."
+      ]
+    },
+    {
+      "text": "Tờ giấy đã khô. Nhãn màu xanh nằm trên bàn.",
+      "sentences": [
+        "Tờ giấy đã khô.",
+        "Nhãn màu xanh nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Dr. Lin ghi “working copy” trên nhãn. Bản còn lại được đặt cạnh máy scan.",
+      "sentences": [
+        "Dr. Lin ghi “working copy” trên nhãn.",
+        "Bản còn lại được đặt cạnh máy scan."
+      ]
+    },
+    {
+      "text": "Ghi chú nằm ở tr. 5. Phần hình vẽ bắt đầu ở tr. 6.",
+      "sentences": [
+        "Ghi chú nằm ở tr. 5.",
+        "Phần hình vẽ bắt đầu ở tr. 6."
+      ]
+    },
+    {
+      "text": "Trong khay có giấy, bìa, v. v. Ngăn dưới còn trống.",
+      "sentences": [
+        "Trong khay có giấy, bìa, v. v.",
+        "Ngăn dưới còn trống."
+      ]
+    },
+    {
+      "text": "PGS.TS. An đọc nhãn. PGS. TS. Bình kiểm tra tờ giấy.",
+      "sentences": [
+        "PGS.TS. An đọc nhãn.",
+        "PGS. TS. Bình kiểm tra tờ giấy."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Chiếc hộp đã đóng.",
+      "tokens": [
+        "Chiếc",
+        "hộp",
+        "đã",
+        "đóng"
+      ]
+    },
+    {
+      "text": "Sinh viên đọc tài liệu tham khảo.",
+      "tokens": [
+        "Sinh",
+        "viên",
+        "đọc",
+        "tài",
+        "liệu",
+        "tham",
+        "khảo"
+      ]
+    },
+    {
+      "text": "TP. Đà Nẵng; TS. An; ThS. Bình.",
+      "tokens": [
+        "TP",
+        "Đà",
+        "Nẵng",
+        "TS",
+        "An",
+        "ThS",
+        "Bình"
+      ]
+    },
+    {
+      "text": "Bút, thước, v.v.",
+      "tokens": [
+        "Bút",
+        "thước",
+        "v",
+        "v"
+      ]
+    },
+    {
+      "text": "Mẫu nặng 2,5 kg; ô bên cạnh ghi 1.250,50.",
+      "tokens": [
+        "Mẫu",
+        "nặng",
+        "2,5",
+        "kg",
+        "ô",
+        "bên",
+        "cạnh",
+        "ghi",
+        "1.250,50"
+      ]
+    },
+    {
+      "text": "Ngày 12/10/2026; mã A-12; bản beta-test.",
+      "tokens": [
+        "Ngày",
+        "12",
+        "10",
+        "2026",
+        "mã",
+        "A",
+        "12",
+        "bản",
+        "beta",
+        "test"
+      ]
+    },
+    {
+      "text": "Tiếng Việt có đủ dấu.",
+      "tokens": [
+        "Tiếng",
+        "Việt",
+        "có",
+        "đủ",
+        "dấu"
+      ]
+    },
+    {
+      "text": "Tiếng Việt có đủ dấu.",
+      "tokens": [
+        "Tiếng",
+        "Việt",
+        "có",
+        "đủ",
+        "dấu"
+      ]
+    },
+    {
+      "text": "Dòng này có khoảng trắng và dấu cách.",
+      "tokens": [
+        "Dòng",
+        "này",
+        "có",
+        "khoảng",
+        "trắng",
+        "và",
+        "dấu",
+        "cách"
+      ]
+    },
+    {
+      "text": "Nhãn ghi L’Écho, O'Neil và A4.",
+      "tokens": [
+        "Nhãn",
+        "ghi",
+        "L’Écho",
+        "O'Neil",
+        "và",
+        "A4"
+      ]
+    },
+    {
+      "text": "Nhãn ghi “in-house”—chữ đã mờ.",
+      "tokens": [
+        "Nhãn",
+        "ghi",
+        "in",
+        "house",
+        "chữ",
+        "đã",
+        "mờ"
+      ]
+    },
+    {
+      "text": "1 250,50 ₫; 1 250,50 đồng; 25%.",
+      "tokens": [
+        "1",
+        "250,50",
+        "1",
+        "250,50",
+        "đồng",
+        "25"
+      ]
+    },
+    {
+      "text": "Tệp PDF chứa mã QR và chữ café.",
+      "tokens": [
+        "Tệp",
+        "PDF",
+        "chứa",
+        "mã",
+        "QR",
+        "và",
+        "chữ",
+        "café"
+      ]
+    },
+    {
+      "text": "Ngày 12.10.2026 ghi trên nhãn.",
+      "tokens": [
+        "Ngày",
+        "12.10.2026",
+        "ghi",
+        "trên",
+        "nhãn"
+      ]
+    }
+  ],
+  "body_fixtures": [
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Nguồn\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Nguồn tham khảo\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n### Nguồn chính thức:\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Tài liệu tham khảo\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Danh mục tài liệu tham khảo\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## 3. Nguồn tham khảo\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n### 2) TÀI LIỆU THAM KHẢO：\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Nguồn tham khảo ##\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Nguồn tham khảo\n\nCuốn sổ mẫu ghi số 7.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Nguồn vốn của dự án\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Nguồn dữ liệu còn thiếu\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Cơ sở pháp lý\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Tài liệu cần chuẩn bị\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Tham khảo ví dụ dưới đây\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## Nguồn tham khảo và cách sử dụng tài liệu\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n####### Nguồn tham khảo\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Bản nháp nằm trên bàn.\n\n## 3.Nguồn tham khảo\n\nChiếc hộp màu xanh đã đóng.\n",
+      "sentences": [
+        "Bản nháp nằm trên bàn.",
+        "Chiếc hộp màu xanh đã đóng."
+      ]
+    },
+    {
+      "text": "Nhãn ghi “Nguồn tham khảo”. Chiếc hộp nằm bên cửa sổ.\n",
+      "sentences": [
+        "Nhãn ghi “Nguồn tham khảo”.",
+        "Chiếc hộp nằm bên cửa sổ."
+      ]
+    }
+  ]
+}

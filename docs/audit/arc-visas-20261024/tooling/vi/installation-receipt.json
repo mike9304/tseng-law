@@ -1,0 +1,19 @@
+{
+  "installedAt": "2026-10-23T17:44:51.371743+00:00",
+  "preimageMatched": true,
+  "profileReviewedBeforeTargets": true,
+  "neutralChecks": 247,
+  "existingArticlesCompared": 1148,
+  "existingMeasured": 1120,
+  "existingUnavailableUnchanged": 28,
+  "existingChanges": 0,
+  "hardThresholdsChanged": false,
+  "installed": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "bb6bb2e8b18496b4422d291c2d273f119e4038e2d20005e6231e85c4c11b8c8b",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+    "/Users/son7/tseng-lanes-shared/variety/MULTILINGUAL-METHOD.md": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+    "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md": "8e920e820529bb049ac27e67b6233ae369badcc901291909867665e39bb1d616"
+  },
+  "backup": "/Users/son7/tseng-arc-visas-20261024/work/vi-measurement/shared-before"
+}

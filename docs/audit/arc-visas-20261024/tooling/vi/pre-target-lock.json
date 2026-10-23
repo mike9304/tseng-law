@@ -1,0 +1,14 @@
+{
+  "approvedAt": "2026-10-23T17:44:51.363932+00:00",
+  "targetMetricsRead": false,
+  "files": {
+    "profile-candidate.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+    "profile-author.md": "8bed74dc77b6211b23439f46da611ce6fac9c67e8bcecb22faf9cc4cb8b4efd0",
+    "profile-review.md": "4ee90621af930580a2f53bc95199ebe67c59898784d6639ea5d5b987d63d3f30",
+    "fixture-tests.json": "c2b91952bc8a54112b084236ca3419fd0c6fdbd8534a3b33244b4bf5f227de8e",
+    "existing-regression.json": "7cad94bc0f87f1bdc4e77c3e4e6866baf45678cb57e0f11a326531d0e88d02d4",
+    "candidate/variety_metrics.py": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+    "candidate/variety_multilingual.py": "bb6bb2e8b18496b4422d291c2d273f119e4038e2d20005e6231e85c4c11b8c8b",
+    "candidate/profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df"
+  }
+}

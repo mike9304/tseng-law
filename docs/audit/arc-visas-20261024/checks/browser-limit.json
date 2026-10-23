@@ -1,0 +1,9 @@
+{
+  "remote": "https://tseng-law.com/ko/columns",
+  "local": "http://127.0.0.1:4664/ko/columns/taiwan-arc-first-application/",
+  "result": "access denied before page load",
+  "reason": "The admin-enforced policy could not be verified, so access was not granted.",
+  "visualQA": "NOT VERIFIED",
+  "attempts": "remote initially and one own-local preview attempt; no indirect workaround",
+  "localPreviewServer": "stopped"
+}

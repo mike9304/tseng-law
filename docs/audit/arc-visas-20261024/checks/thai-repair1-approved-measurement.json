@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md"
+    ],
+    "source_sha256": "1b452257ab7572246ad8fbd37fa1f25bb1b97cfda236396562a650ba21ee9024",
+    "returncode": 0,
+    "stdout": "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md [th] sentences=55 mean=23.7 cv=0.505 short=0.091 run3=0.019 opener_rep=0.136 cite_end=0.0 cite_para=0.318 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md"
+    ],
+    "source_sha256": "6c5d2ec5032ac5f404abc180bd1875275a64ba6bcf28fae4f732767b37017800",
+    "returncode": 0,
+    "stdout": "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md [th] sentences=66 mean=21.7 cv=0.494 short=0.091 run3=0.062 opener_rep=0.2 cite_end=0.0 cite_para=0.36 contrast=3 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  }
+]

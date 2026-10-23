@@ -1,0 +1,51 @@
+{
+  "counts": {
+    "sentence": 71,
+    "words": 60,
+    "body": 30,
+    "contracts": 52
+  },
+  "total": 213,
+  "errors": [
+    {
+      "kind": "sentence",
+      "locale": "vi",
+      "index": 10,
+      "actual": [
+        "“Cậu thấy chiếc chìa khóa chưa?”",
+        "Mai hỏi.",
+        "Tôi lắc đầu."
+      ],
+      "expected": [
+        "“Cậu thấy chiếc chìa khóa chưa?” Mai hỏi.",
+        "Tôi lắc đầu."
+      ]
+    },
+    {
+      "kind": "sentence",
+      "locale": "vi",
+      "index": 14,
+      "actual": [
+        "Trong khay có giấy, bìa, v.",
+        "v.",
+        "Ngăn dưới còn trống."
+      ],
+      "expected": [
+        "Trong khay có giấy, bìa, v. v.",
+        "Ngăn dưới còn trống."
+      ]
+    },
+    {
+      "kind": "body",
+      "locale": "vi",
+      "index": 9,
+      "actual": [
+        "Bản nháp nằm trên bàn.",
+        "Cuốn sổ mẫu ghi số 7."
+      ],
+      "expected": [
+        "Bản nháp nằm trên bàn."
+      ]
+    }
+  ]
+}

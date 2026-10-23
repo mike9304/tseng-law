@@ -1,0 +1,29 @@
+{
+  "sourceBranch": "codex/arc-visas-20261024",
+  "originalBase": "55fca2c91fa44e8b3c97c08f0ac9fa32da4f8851",
+  "integratedUpstream": "048d9c619c31feebfd6d1ffdce2f3304e1b57081",
+  "localDraftCommit": "b1b237bf",
+  "upstreamArticles": 1789,
+  "newArticles": 42,
+  "remoteWrites": false,
+  "conflictsResolved": [
+    "src/app/__tests__/sitemap.test.ts",
+    "src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx",
+    "src/lib/__tests__/columns-publication-date.test.ts",
+    "src/lib/__tests__/native-locale-columns.ts"
+  ],
+  "resolution": "Preserve all upstream 659–703 registry/count/date entries and add704–706; retain upstream nine-market recommendation assertions.",
+  "runtimeFix": "Include ARC706-linked Arabic voluntary-resignation article in ar shared market board list; existing link-discovery test now passes.",
+  "tests": {
+    "fullIntegrationFiles": 22,
+    "fullIntegrationTests": 373,
+    "initialPass": 372,
+    "initialFail": 1,
+    "affectedRerunFiles": 2,
+    "affectedRerunTests": 66,
+    "affectedRerunFail": 0,
+    "currentAggregatePass": 373
+  },
+  "initialScopedArticles": 1104,
+  "upstreamCountScope": "All file-backed column Markdown files from git tree, including locales outside the14new-article scope"
+}

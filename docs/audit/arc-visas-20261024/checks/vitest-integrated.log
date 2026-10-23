@@ -1,0 +1,125 @@
+
+ RUN  v3.2.6 /Users/son7/tseng-arc-visas-20261024/repo
+
+ ✓ |unit| src/lib/__tests__/column-language-links.test.tsx (15 tests) 20615ms
+   ✓ column 051 (ko, zh-hant and en only) > links the three published versions from every one of them and never ja  1555ms
+   ✓ column 051 (ko, zh-hant and en only) > renders the server HTML of the footer switcher without any ja link  439ms
+   ✓ column 051 (ko, zh-hant and en only) > emits no ja hreflang and keeps x-default inside the cluster  414ms
+   ✓ column 051 (ko, zh-hant and en only) > builds the column page metadata alternates from the same cluster  2261ms
+   ✓ a column published in every language > links every language with that language's own URL  1736ms
+   ✓ every column in every language > switches only to versions that render, and to every version that does  2274ms
+   ✓ every column in every language > emits hreflang alternates only for versions that render  309ms
+   ✓ a builder/Blob-only column (no markdown file in any language) > lists only its own language and keeps x-default on it  1317ms
+   ✓ issue-board columns > list only their own language, since each is written for one language  5191ms
+   ✓ pages that are not column articles > keep listing every language  2464ms
+   ✓ client-side navigation > follows the pathname, since the shared layout does not re-render  641ms
+   ✓ client-side navigation > never applies one language's index to another language's article  581ms
+   ✓ client-side navigation > does not read inherited object properties as column slugs  648ms
+ ✓ |unit| src/app/__tests__/sitemap.test.ts (37 tests) 6541ms
+   ✓ sitemap column lastModified > does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings  479ms
+ ✓ |unit| src/lib/__tests__/native-locale-columns-20260929.test.ts (37 tests) 1910ms
+ ✓ |unit| src/lib/__tests__/divorce-columns-20260927.test.ts (10 tests) 1542ms
+   ✓ native divorce columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  631ms
+ ✓ |unit| src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx (12 tests) 1558ms
+   ✓ audience frontmatter recommendations > leads each locale with its own-audience columns newest first, then shared, from its own files only  816ms
+   ✓ audience frontmatter recommendations > breaks same-day ties by column number regardless of input order  355ms
+ ✓ |unit| src/lib/builder/__tests__/columns-backend.test.ts (12 tests) 1389ms
+ ✓ |unit| src/lib/__tests__/columns-publication-date.test.ts (12 tests) 862ms
+ ✓ |unit| src/lib/__tests__/expertise-columns-20260930.test.ts (37 tests) 1334ms
+ ✓ |unit| src/lib/__tests__/family-columns-20260927.test.ts (10 tests) 1630ms
+   ✓ native marriage and birth columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  619ms
+ ✓ |unit| src/lib/__tests__/column-category-parity.test.ts (49 tests) 513ms
+ ✓ |unit| src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts (3 tests) 575ms
+ ✓ |unit| src/lib/__tests__/columns-ja-content.test.ts (7 tests) 565ms
+   ✓ Japanese full column corpus + site locale > preserves FAQ count for known sources  422ms
+ ✓ |unit| src/lib/__tests__/domestic-zh-columns-20261001.test.ts (13 tests) 708ms
+ ✓ |unit| src/lib/__tests__/column-summary-frontmatter.test.ts (8 tests) 377ms
+ ✓ |unit| src/lib/__tests__/columns-en-content.test.ts (7 tests) 389ms
+stderr | src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx > market boards render only their columns (2026-10-24) > th home: no hidden column links
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/tseng-arc-visas-20261024/repo/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/tseng-arc-visas-20261024/repo/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/tseng-arc-visas-20261024/repo/src/components/GuidanceHomeBody.tsx:753:3)
+
+ ✓ |unit| src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx (29 tests) 4000ms
+   ✓ market boards render only their columns (2026-10-24) > th board: no hidden or Korean-title links, opens with every own column  2101ms
+   ✓ market boards render only their columns (2026-10-24) > th home: no hidden column links  526ms
+ ✓ |unit| src/lib/__tests__/columns-zh-content.test.ts (5 tests) 268ms
+ ✓ |unit| src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts (6 tests) 218ms
+ ✓ |unit| src/lib/__tests__/column-seo-title-frontmatter.test.ts (6 tests) 93ms
+ ✓ |unit| src/lib/__tests__/columns-new-four-locales.test.ts (7 tests) 86ms
+ ✓ |unit| src/components/__tests__/ColumnsGrid-topics.test.tsx (14 tests) 181ms
+ ❯ |unit| src/lib/__tests__/market-board-columns-20261024.test.ts (37 tests | 1 failed) 587ms
+   ✓ market column boards (2026-10-24) > th: every file without its own or a global audience was reviewed for the board 23ms
+   ✓ market column boards (2026-10-24) > id: every file without its own or a global audience was reviewed for the board 11ms
+   ✓ market column boards (2026-10-24) > hi: every file without its own or a global audience was reviewed for the board 12ms
+   ✓ market column boards (2026-10-24) > fr: every file without its own or a global audience was reviewed for the board 11ms
+   ✓ market column boards (2026-10-24) > de: every file without its own or a global audience was reviewed for the board 9ms
+   ✓ market column boards (2026-10-24) > it: every file without its own or a global audience was reviewed for the board 10ms
+   ✓ market column boards (2026-10-24) > es: every file without its own or a global audience was reviewed for the board 12ms
+   ✓ market column boards (2026-10-24) > pt: every file without its own or a global audience was reviewed for the board 9ms
+   ✓ market column boards (2026-10-24) > ar: every file without its own or a global audience was reviewed for the board 10ms
+   ✓ market column boards (2026-10-24) > th: picked shared columns exist in the locale and were reviewed 12ms
+   ✓ market column boards (2026-10-24) > id: picked shared columns exist in the locale and were reviewed 9ms
+   ✓ market column boards (2026-10-24) > hi: picked shared columns exist in the locale and were reviewed 11ms
+   ✓ market column boards (2026-10-24) > fr: picked shared columns exist in the locale and were reviewed 9ms
+   ✓ market column boards (2026-10-24) > de: picked shared columns exist in the locale and were reviewed 8ms
+   ✓ market column boards (2026-10-24) > it: picked shared columns exist in the locale and were reviewed 9ms
+   ✓ market column boards (2026-10-24) > es: picked shared columns exist in the locale and were reviewed 11ms
+   ✓ market column boards (2026-10-24) > pt: picked shared columns exist in the locale and were reviewed 8ms
+   ✓ market column boards (2026-10-24) > ar: picked shared columns exist in the locale and were reviewed 9ms
+   ✓ market column boards (2026-10-24) > th: lists every column written for it and none of the excluded shared columns 12ms
+   ✓ market column boards (2026-10-24) > id: lists every column written for it and none of the excluded shared columns 9ms
+   ✓ market column boards (2026-10-24) > hi: lists every column written for it and none of the excluded shared columns 11ms
+   ✓ market column boards (2026-10-24) > fr: lists every column written for it and none of the excluded shared columns 10ms
+   ✓ market column boards (2026-10-24) > de: lists every column written for it and none of the excluded shared columns 8ms
+   ✓ market column boards (2026-10-24) > it: lists every column written for it and none of the excluded shared columns 9ms
+   ✓ market column boards (2026-10-24) > es: lists every column written for it and none of the excluded shared columns 11ms
+   ✓ market column boards (2026-10-24) > pt: lists every column written for it and none of the excluded shared columns 8ms
+   ✓ market column boards (2026-10-24) > ar: lists every column written for it and none of the excluded shared columns 9ms
+   ✓ market column boards (2026-10-24) > th: shared columns its own columns link to are listed, unless off every board 12ms
+   ✓ market column boards (2026-10-24) > id: shared columns its own columns link to are listed, unless off every board 9ms
+   ✓ market column boards (2026-10-24) > hi: shared columns its own columns link to are listed, unless off every board 11ms
+   ✓ market column boards (2026-10-24) > fr: shared columns its own columns link to are listed, unless off every board 10ms
+   ✓ market column boards (2026-10-24) > de: shared columns its own columns link to are listed, unless off every board 8ms
+   ✓ market column boards (2026-10-24) > it: shared columns its own columns link to are listed, unless off every board 9ms
+   ✓ market column boards (2026-10-24) > es: shared columns its own columns link to are listed, unless off every board 11ms
+   ✓ market column boards (2026-10-24) > pt: shared columns its own columns link to are listed, unless off every board 8ms
+   × market column boards (2026-10-24) > ar: shared columns its own columns link to are listed, unless off every board 14ms
+     → expected [ Array(1) ] to deeply equal []
+   ✓ market column boards (2026-10-24) > keeps global columns and leaves other locales unchanged 214ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| src/lib/__tests__/market-board-columns-20261024.test.ts > market column boards (2026-10-24) > ar: shared columns its own columns link to are listed, unless off every board
+AssertionError: expected [ Array(1) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "taiwan-voluntary-resignation-severance",
++ ]
+
+ ❯ src/lib/__tests__/market-board-columns-20261024.test.ts:55:70
+     53|       .flatMap((post) => [...post.content.matchAll(new RegExp(`\\]\\(/…
+     54|       .filter((slug) => MARKET_BOARD_REVIEWED_SHARED_SLUGS.includes(sl…
+     55|     expect([...new Set(linked)].filter((slug) => !listed.has(slug))).t…
+       |                                                                      ^
+     56|   });
+     57| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 21 passed (22)
+      Tests  1 failed | 372 passed (373)
+   Start at  02:38:29
+   Duration  50.80s (transform 2.77s, setup 21ms, collect 2.16s, tests 45.94s, environment 2ms, prepare 913ms)
+

@@ -1,0 +1,28 @@
+[crawl] ... 100 fetched, 2426 queued
+[crawl] ... 200 fetched, 2326 queued
+[crawl] ... 300 fetched, 2226 queued
+[crawl] ... 400 fetched, 2126 queued
+[crawl] ... 500 fetched, 2026 queued
+[crawl] ... 600 fetched, 1926 queued
+[crawl] ... 700 fetched, 1826 queued
+[crawl] ... 800 fetched, 1726 queued
+[crawl] ... 900 fetched, 1626 queued
+[crawl] ... 1000 fetched, 1526 queued
+[crawl] ... 1100 fetched, 1426 queued
+[crawl] ... 1200 fetched, 1326 queued
+[crawl] ... 1300 fetched, 1226 queued
+[crawl] ... 1400 fetched, 1126 queued
+[crawl] ... 1500 fetched, 1026 queued
+[crawl] ... 1600 fetched, 926 queued
+[crawl] ... 1700 fetched, 826 queued
+[crawl] ... 1800 fetched, 726 queued
+[crawl] ... 1900 fetched, 626 queued
+[crawl] ... 2000 fetched, 526 queued
+[crawl] ... 2100 fetched, 426 queued
+[crawl] ... 2200 fetched, 326 queued
+[crawl] ... 2300 fetched, 226 queued
+[crawl] ... 2400 fetched, 126 queued
+[crawl] ... 2500 fetched, 26 queued
+[static-site] crawled 2517 pages, 9 files, 0 redirects in 68s
+[static-site] out: 5099 files, 431.9 MB, 2728 html; sitemap 2512/2512; broken refs 7; oversize 0; crawl missing 0; flight errors 0
+[static-site] media: 2043 files (2947.9 MB) → https://media.tseng-law.com; 1251 referenced, missing locally: images/004-taiwan-employment-contract-guide/featured-01.jpg, images/hover.jpg, images/video-poster.jpg, videos/builder-background.mp4, videos/intro.mp4

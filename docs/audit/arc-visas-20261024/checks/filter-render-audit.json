@@ -1,0 +1,24 @@
+{
+  "scope": "Actual ColumnsGrid React server rendering with route context and topic/search filters; no browser interaction or hydration verified",
+  "rows": [
+    {
+      "locale": "en",
+      "slug": "taiwan-arc-first-application",
+      "topicFound": true,
+      "searchFound": true
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-visa-residence-work-study-family",
+      "topicFound": true,
+      "searchFound": true
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-arc-renewal-changes-reentry",
+      "topicFound": true,
+      "searchFound": true
+    }
+  ],
+  "errors": []
+}

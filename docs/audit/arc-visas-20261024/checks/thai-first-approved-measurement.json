@@ -1,0 +1,38 @@
+[
+  {
+    "sourceSha256": "680b7c2e7e9d8653f15c8b0e8ec46392ca122c270a73dbd1a952eea3bb3b18f0",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md"
+    ],
+    "exitCode": 0,
+    "stdout": "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md [th] sentences=57 mean=20.7 cv=0.53 short=0.088 run3=0.055 opener_rep=0.048 cite_end=0.0 cite_para=0.238 contrast=3 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "sourceSha256": "69424f50ab80a33091f3a485a154ab41b7c2c90069b148fa041a53e23e79c017",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md"
+    ],
+    "exitCode": 1,
+    "stdout": "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md [th] sentences=52 mean=25.1 cv=0.454 short=0.019 run3=0.02 opener_rep=0.091 cite_end=0.0 cite_para=0.318 contrast=1 caveat=0 q=1\n  FAIL short_share=0.019 (limit >= 0.08): need at least ~1 in 12 sentences that is very short\n",
+    "stderr": ""
+  },
+  {
+    "sourceSha256": "7544dfe49600005b2583e27e625c13458e829a3f1e7daebb55470b4964108915",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md"
+    ],
+    "exitCode": 1,
+    "stdout": "/Users/son7/tseng-arc-visas-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md [th] sentences=64 mean=22.4 cv=0.461 short=0.047 run3=0.081 opener_rep=0.24 cite_end=0.0 cite_para=0.36 contrast=3 caveat=0 q=1\n  FAIL short_share=0.047 (limit >= 0.08): need at least ~1 in 12 sentences that is very short\n",
+    "stderr": ""
+  }
+]

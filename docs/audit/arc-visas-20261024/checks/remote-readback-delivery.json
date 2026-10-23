@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-23T17:58:36.740612+00:00",
+  "command": [
+    "git",
+    "-c",
+    "http.curloptResolve=github.com:443:20.200.245.247",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "main"
+  ],
+  "returncode": 0,
+  "stdout": "048d9c619c31feebfd6d1ffdce2f3304e1b57081\trefs/heads/main\n",
+  "stderr": "",
+  "transport": "fresh TLS-verified DNS over HTTPS, per-command resolution only",
+  "persistentConfigurationChanged": false,
+  "writes": false
+}

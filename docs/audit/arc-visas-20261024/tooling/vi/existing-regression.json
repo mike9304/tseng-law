@@ -1,0 +1,22 @@
+{
+  "articlesCompared": 1148,
+  "locales": [
+    "ar",
+    "de",
+    "en",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "it",
+    "ja",
+    "ko",
+    "pt",
+    "th",
+    "zh-hant"
+  ],
+  "measured": 1120,
+  "unavailableSame": 28,
+  "errors": [],
+  "scope": "All original thirteen locales; VI target articles excluded"
+}

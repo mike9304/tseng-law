@@ -227,3 +227,4 @@
 - 10-23 12:34 KST 대기: ref 재정렬(d3a9518). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-23 12:44 KST 대기: ref 재정렬(e6b66c2). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-23 12:54 KST 대기: ref 재정렬(39a8bad). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
+- 10-23 19:56 KST 대기: 12:5x~19:5x 맥 수면·DNS 단절 후 복구, ref 재정렬(fb2d0a5). Studio 변화 grok NOTES뿐(42줄), Astra 채택 판정 대기.

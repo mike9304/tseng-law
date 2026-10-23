@@ -215,3 +215,4 @@
 - 10-23 02:38 KST 대기: Studio push 01:05 이후 없음, 원격 HEAD=Air 02:29. Astra 채택 판정 대기.
 - 10-23 02:48 KST 대기: Studio push 01:05 이후 없음, 원격 HEAD=Air 02:39. Astra 채택 판정 대기.
 - 10-23 02:58 KST 대기: Studio push 01:05 이후 없음, 원격 HEAD=Air 02:49. Astra 채택 판정 대기.
+- 10-23 11:04 KST 대기: 03:0x~10:5x 맥 수면·DNS 단절 후 복구, ref 재정렬(5c47dbc). Studio는 10:38부터 push 재개(NOTES만), Astra 채택 판정 대기.

@@ -228,3 +228,5 @@
 - 10-23 12:44 KST 대기: ref 재정렬(e6b66c2). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-23 12:54 KST 대기: ref 재정렬(39a8bad). Studio 변화 NOTES뿐, Astra 채택 판정 대기.
 - 10-23 19:56 KST 대기: 12:5x~19:5x 맥 수면·DNS 단절 후 복구, ref 재정렬(fb2d0a5). Studio 변화 grok NOTES뿐(42줄), Astra 채택 판정 대기.
+- 10-23 21:08 KST 대기: ref 재정렬(41c37d8). Air push 19:56 이후 없음(맥 수면 추정). Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-23 21:18 KST 대기: Air push 19:56 이후 밀림 — Studio push 직후 재정렬하는 백그라운드 실행. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.

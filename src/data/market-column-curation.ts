@@ -81,8 +81,8 @@ export const MARKET_BOARD_SHARED_COLUMN_SLUGS: Record<MarketBoardLocale, readonl
   es: [...MARKET_ENTRY, ...SMALL_FOUNDER, ...WORK, ...LIFE],
   // Companies and former employees.
   pt: [...MARKET_ENTRY, ...WORK],
-  // Companies in the UAE and Saudi Arabia, plus inheritance.
-  ar: [...MARKET_ENTRY, ...INHERITANCE],
+  // Companies in the UAE and Saudi Arabia, inheritance, and ARC 706's employment-ending reference.
+  ar: [...MARKET_ENTRY, ...INHERITANCE, 'taiwan-voluntary-resignation-severance'],
 };
 
 /** True when the column belongs on this market board: written for it, shared with every locale, or picked above. */

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "reviewer": "/root/review_th",
+  "entries": [
+    {
+      "source_sha256": "1b452257ab7572246ad8fbd37fa1f25bb1b97cfda236396562a650ba21ee9024",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "cd67ccefa5274f1498949e6240758375de0909aa960e016b7b76eb25e529f4c3"
+    },
+    {
+      "source_sha256": "6c5d2ec5032ac5f404abc180bd1875275a64ba6bcf28fae4f732767b37017800",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "37ceb8b773b57977b8bc4de013555a4e84dff98b64c4e71406527b7f9475bd0d"
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "arc-20261024-th-boundaries-review-r1.md",
+      "sha256": "5705b1c00a0c859d9de378fa12dd44b99a8b54cfe18a9aabb4bb928a0820084c"
+    },
+    {
+      "role": "author-adjudication",
+      "path": "arc-20261024-th-boundaries-author-r1.md",
+      "sha256": "8c16d164ed2d5cff559e24fa38b13922621838a250990513bb30df869e671b14"
+    }
+  ]
+}

@@ -875,7 +875,74 @@ export const COUNTRY_COLUMN_FILES_20261022 = {
   ],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-22, in filename order. */
+/** Native audience columns published 2026-10-23. */
+export const COUNTRY_COLUMN_FILES_20261023 = {
+  ar: [
+    '699-uae-importer-taiwan-supplier-advance-refund.md', // nine-market-20261023
+    '700-saudi-arbitral-award-taiwan-assets.md', // nine-market-20261023
+    '701-uae-court-judgment-taiwan-enforcement.md', // nine-market-20261023
+    '702-overseas-heir-taiwan-estate-nationality-documents.md', // nine-market-20261023
+    '703-uae-resident-taiwan-counsel-arabic-documents.md', // nine-market-20261023
+  ],
+  de: [
+    '679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md', // nine-market-20261023
+    '680-taiwan-bauteile-maengelruege-pruefmuster.md', // nine-market-20261023
+    '681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md', // nine-market-20261023
+    '682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md', // nine-market-20261023
+    '683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md', // nine-market-20261023
+  ],
+  es: [
+    '689-spain-exporter-taiwan-unpaid-invoices.md', // nine-market-20261023
+    '690-spain-buyer-taiwan-defective-goods-notice.md', // nine-market-20261023
+    '691-spanish-judgment-taiwan-assets-enforcement.md', // nine-market-20261023
+    '692-return-spain-unpaid-taiwan-wages.md', // nine-market-20261023
+    '693-spain-resident-taiwan-divorce-property.md', // nine-market-20261023
+  ],
+  fr: [
+    '674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md', // nine-market-20261023
+    '675-french-brand-taiwan-trademark-registered-distributor.md', // nine-market-20261023
+    '676-french-supplier-taiwan-distributor-termination-stock-online-accounts.md', // nine-market-20261023
+    '677-france-resident-heir-taiwan-bank-property-documents.md', // nine-market-20261023
+    '678-french-employee-taiwan-unpaid-wages-employer-closure.md', // nine-market-20261023
+  ],
+  hi: [
+    '669-indian-supplier-unpaid-taiwan-invoice.md', // nine-market-20261023
+    '670-indian-buyer-taiwan-machinery-defect-notice.md', // nine-market-20261023
+    '671-indian-engineer-taiwan-noncompete-compensation.md', // nine-market-20261023
+    '672-indian-resident-taiwan-rental-deposit-handover.md', // nine-market-20261023
+    '673-indian-importer-taiwan-supplier-bank-change-fraud.md', // nine-market-20261023
+  ],
+  id: [
+    '664-indonesian-home-caregiver-unpaid-wages-taiwan.md', // nine-market-20261023
+    '665-indonesian-worker-passport-broker-dispute-taiwan.md', // nine-market-20261023
+    '666-indonesian-worker-bank-account-cash-job-police-taiwan.md', // nine-market-20261023
+    '667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md', // nine-market-20261023
+    '668-indonesian-buyer-taiwan-machinery-defect-notice.md', // nine-market-20261023
+  ],
+  it: [
+    '684-italian-exporter-taiwan-unpaid-installation-balance.md', // nine-market-20261023
+    '685-italian-brand-taiwan-distributor-trademark-registration.md', // nine-market-20261023
+    '686-taiwan-oem-molds-design-files-handover.md', // nine-market-20261023
+    '687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md', // nine-market-20261023
+    '688-italian-business-visitor-taiwan-summons-interpreter-defense.md', // nine-market-20261023
+  ],
+  pt: [
+    '694-portugal-exportador-acordo-prestacoes-taiwan.md', // nine-market-20261023
+    '695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md', // nine-market-20261023
+    '696-portugal-sentenca-arbitral-bens-taiwan.md', // nine-market-20261023
+    '697-portugal-mandatario-processo-civil-taiwan.md', // nine-market-20261023
+    '698-portugal-fim-contrato-taiwan-salarios-em-falta.md', // nine-market-20261023
+  ],
+  th: [
+    '659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md', // nine-market-20261023
+    '660-thai-worker-taiwan-factory-closure-wage-fund.md', // nine-market-20261023
+    '661-thai-worker-taiwan-bank-account-police-notice.md', // nine-market-20261023
+    '662-thai-return-home-taiwan-traffic-injury-records.md', // nine-market-20261023
+    '663-thai-supplier-taiwan-buyer-unpaid-invoice.md', // nine-market-20261023
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-23, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -898,6 +965,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261018 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261020 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261022 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261023 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -923,11 +991,13 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-22, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-23, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261023: readonly string[] =
+    (COUNTRY_COLUMN_FILES_20261023 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261022: readonly string[] = [
     ...((COUNTRY_COLUMN_FILES_20261022 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(taxAccountingFilesPublishedOn('2026-10-22')[locale] ?? []),
@@ -994,12 +1064,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const latestSlugs = [...latest].sort().map(slugOf);
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
-  const head = [...day20261022].sort().map(slugOf).concat([...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
+  const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
   return [...head, ...expertiseSlugsFor(locale).filter((slug) => !head.includes(slug))];
 }
 
-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-22). */
+/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-23). */
 export function archiveLeadPublicationDate(slug: string): string {
+  if (Object.values(COUNTRY_COLUMN_FILES_20261023).flat().map(slugOf).includes(slug)) return '2026-10-23';
   const day20261022 = [...Object.values(COUNTRY_COLUMN_FILES_20261022), ...Object.values(taxAccountingFilesPublishedOn('2026-10-22')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261022.includes(slug)) return '2026-10-22';
   if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().map(slugOf).includes(slug)) return '2026-10-21';
@@ -1079,6 +1150,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261018),
     ...Object.values(COUNTRY_COLUMN_FILES_20261020),
     ...Object.values(COUNTRY_COLUMN_FILES_20261022),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261023),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),

@@ -66,8 +66,10 @@ describe('audience frontmatter recommendations', () => {
     expect(first('en')).toBe(newestLeadSlug('en'));
     expect(first('ja')).toBe(newestLeadSlug('ja'));
     expect(first('ko')).toBe(newestLeadSlug('ko'));
-    expect(first('th')).toBe('baby-taiwan-nationality-birth-registration');
-    for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'zh-hans', 'id', 'th', 'fil'] as const) {
+    for (const locale of ['th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar'] as const) {
+      expect(first(locale), locale).toBe(newestLeadSlug(locale));
+    }
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'zh-hans', 'id', 'th', 'fil', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar'] as const) {
       const posts = getAllColumnPosts(locale);
       const { recommended, rest } = splitRecommendedColumns(locale, posts);
       expect(recommended.length, locale).toBeGreaterThan(0);

@@ -133,4 +133,11 @@ export const RECOMMENDED_SECTION_TITLE: Record<string, string> = {
   id: 'Artikel pilihan untuk pembaca Indonesia',
   th: 'บทความแนะนำสำหรับผู้อ่านชาวไทย',
   fil: 'Mga inirerekomendang artikulo para sa mga Pilipino',
+  hi: 'हिंदी पाठकों के लिए सुझाए गए लेख',
+  fr: 'Articles recommandés aux lecteurs en France',
+  de: 'Empfohlene Beiträge für Leser in Deutschland',
+  it: 'Articoli consigliati per i lettori italiani',
+  es: 'Artículos recomendados para lectores de España',
+  pt: 'Artigos recomendados para leitores de Portugal',
+  ar: 'مقالات مقترحة باللغة العربية',
 };

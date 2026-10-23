@@ -13,6 +13,9 @@ vi.mock('next/image', () => ({
 }));
 
 import ColumnsGrid, { type ColumnListItem } from '@/components/ColumnsGrid';
+import { getAllColumnPosts } from '@/lib/columns';
+import { toColumnListItems } from '@/lib/column-list-items';
+import { COUNTRY_COLUMN_FILES_20261023 } from '@/lib/__tests__/native-locale-columns';
 
 function post(slug: string, topic: ColumnListItem['topic'], category: ColumnListItem['category'] = 'legal'): ColumnListItem {
   return {
@@ -37,6 +40,25 @@ const posts: ColumnListItem[] = [
 ];
 
 describe('ColumnsGrid topic grouping', () => {
+  it.each(['th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar'] as const)(
+    'shows the %s market recommendations and finds each new article by its title',
+    (locale) => {
+      const items = toColumnListItems(getAllColumnPosts(locale));
+      nav.params = new URLSearchParams();
+      const archive = renderToStaticMarkup(<ColumnsGrid locale={locale} posts={items} />);
+      expect(archive).toContain(`data-columns-recommended="${locale}"`);
+      for (const file of COUNTRY_COLUMN_FILES_20261023[locale]) {
+        const slug = file.replace(/^\d+-/, '').replace(/\.md$/, '');
+        const article = items.find((item) => item.slug === slug);
+        expect(article, `${locale}/${slug}`).toBeDefined();
+        nav.params = new URLSearchParams({ q: article!.title });
+        const filtered = renderToStaticMarkup(<ColumnsGrid locale={locale} posts={items} />);
+        expect(filtered, `${locale}/${slug}`).toContain(`href="/${locale}/columns/${slug}"`);
+        expect(filtered).toContain('data-columns-visible-count="1"');
+      }
+    },
+  );
+
   it('limits the opening recommendations to three without losing the remaining topic links', () => {
     nav.params = new URLSearchParams();
     const many = Array.from({ length: 8 }, (_, i) => ({ ...post(`r${i}`, 'family'), audience: ['ko'] }));

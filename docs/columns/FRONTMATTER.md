@@ -47,6 +47,16 @@ Only the locale's own files are used, so a locale never shows another
 language's text. A new column appears at the top of its locale automatically
 once its file carries the field; nothing else needs to change.
 
+Market boards (`th`, `id`, `hi`, `fr`, `de`, `it`, `es`, `pt`, `ar`, since
+2026-10-24) list only columns that fit the market: those whose `audience`
+contains the locale or `global`, and the shared translations picked in
+src/data/market-column-curation.ts. The board opens with all of the market's
+own columns. A column without either stays at its URL and in the sitemap but is
+left off the board, its search, previous/next and recommendations and the
+locale home — so give every new column for these locales an `audience`, or add
+it to the curation file (src/lib/__tests__/market-board-columns-20261024.test.ts
+fails until you do).
+
 ## `author` (internal provenance only)
 
 ```yaml

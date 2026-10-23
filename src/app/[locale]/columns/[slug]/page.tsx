@@ -6,6 +6,7 @@ import { resolveTrafficSubject } from '@/lib/traffic-collection';
 import { isTrafficDiagramId, isTrafficDiagramLocale, splitColumnContentAfterHeading } from '@/data/traffic-diagrams';
 import { notFound } from 'next/navigation';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
+import { filterMarketBoardColumns } from '@/data/market-column-curation';
 import {
   AI_COLUMN_ATTORNEY_HEADING,
 } from '@/lib/ai-authored-columns';
@@ -165,9 +166,12 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     && resolveTrafficSubject(post) !== null
     && Boolean(modifiedDate && publicationDate && modifiedDate !== publicationDate);
 
-  const currentIndex = allPosts.indexOf(post);
-  const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
-  const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+  // Market locales (th, id, hi, …): previous/next and recommendations stay within the columns their board lists.
+  // A column left off the board still opens at its URL, without previous/next links.
+  const listedPosts = filterMarketBoardColumns(urlLocale, allPosts);
+  const currentIndex = listedPosts.indexOf(post);
+  const prevPost = currentIndex > 0 ? listedPosts[currentIndex - 1] : null;
+  const nextPost = currentIndex >= 0 && currentIndex < listedPosts.length - 1 ? listedPosts[currentIndex + 1] : null;
 
   // Vietnamese has a complete native article shell. Other guidance locales
   // continue to use their existing translated navigation with English fallbacks.
@@ -245,9 +249,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // "Recommended for you" at the end: static order = same topic (newest
   // first), then this locale's recommended columns, then the rest. The client
   // may reorder by session interests (sessionStorage only).
-  const otherPosts = prioritizeRecommendedColumns(urlLocale, allPosts.filter((p) => p.slug !== post.slug));
+  const otherPosts = prioritizeRecommendedColumns(urlLocale, listedPosts.filter((p) => p.slug !== post.slug));
   const isTrafficColumn = resolveTrafficSubject(post) !== null;
-  const recommendedItems = (isTrafficColumn ? otherPosts.filter((p) => resolveTrafficSubject(p) !== null) : [
+  const trafficPosts = isTrafficColumn ? otherPosts.filter((p) => resolveTrafficSubject(p) !== null) : [];
+  // A market board may list no other traffic column; then the topic order applies.
+  const recommendedItems = (trafficPosts.length > 0 ? trafficPosts : [
     ...otherPosts.filter((p) => p.topic && p.topic === post.topic),
     ...otherPosts.filter((p) => !p.topic || p.topic !== post.topic),
   ])

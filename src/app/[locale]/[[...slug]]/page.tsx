@@ -20,6 +20,7 @@ import GuidanceHomeBody, {
   resolveGuidanceHomeColumns,
 } from '@/components/GuidanceHomeBody';
 import { getAllColumnPosts } from '@/lib/columns';
+import { filterMarketBoardColumns } from '@/data/market-column-curation';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
   buildGuidanceCoreLanguageAlternates,
@@ -162,9 +163,9 @@ export default async function MainSiteCatchAllPage(
       // Same section sequence as the English home. Columns come from the
       // locale's own files when the translation pipeline has written any, and
       // otherwise from the first source language that has files, always behind
-      // an explicit "original language" badge.
+      // an explicit "original language" badge. Market locales show only the columns their board lists.
       const columns = resolveGuidanceHomeColumns(params.locale, (source) =>
-        getAllColumnPosts(source),
+        filterMarketBoardColumns(source, getAllColumnPosts(source)),
       );
       return <GuidanceHomeBody locale={params.locale} columns={columns} />;
     }

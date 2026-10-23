@@ -14,7 +14,8 @@ import { EnColumnsShell, EnColumnsStartHere } from '@/components/en-design/EnCol
 import { EN_COLUMN_TOPIC_ORDER, EN_RECOMMENDED_COLUMN_ORDER } from '@/components/en-design/en-design-data';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
-import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
+import { prioritizeRecommendedColumns, splitRecommendedColumns } from '@/lib/en-recommended-columns';
+import { filterMarketBoardColumns, isMarketBoardLocale } from '@/data/market-column-curation';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { pageCopy } from '@/data/page-copy';
 import { toBuilderLocale } from '@/lib/locales';
@@ -159,7 +160,7 @@ export default async function ColumnsPage(
 
   if (isGuidanceLocale4(params.locale)) {
     const locale = params.locale;
-    const posts = prioritizeRecommendedColumns(locale, getAllColumnPosts(locale));
+    const posts = filterMarketBoardColumns(locale, prioritizeRecommendedColumns(locale, getAllColumnPosts(locale)));
     const copy = guidanceContent[locale].pages.columns;
     if (posts.length === 0) {
       // Body only: `[locale]/layout.tsx` already wraps guidance locales in the
@@ -168,11 +169,16 @@ export default async function ColumnsPage(
     }
 
     const translatedSlugs = new Set(posts.map((post) => post.slug));
-    const remainingPosts = locale === 'vi' ? [] : getAllColumnPosts('ko')
+    // vi and the market boards list no untranslated Korean titles.
+    const remainingPosts = locale === 'vi' || isMarketBoardLocale(locale) ? [] : getAllColumnPosts('ko')
       .filter((post) => !translatedSlugs.has(post.slug))
       .map((post) => ({ slug: post.slug, title: post.title }));
     const issuePosts = locale === 'vi' ? getAllIssuePosts('vi') : [];
     const listItems = toColumnListItems(posts);
+    // Market boards open with every column written for the market (and shared with all), not a three-card preview.
+    const openingSlugs = isMarketBoardLocale(locale)
+      ? splitRecommendedColumns(locale, listItems).recommended.map((post) => post.slug)
+      : undefined;
 
     const guidanceBody = (
       <>
@@ -226,6 +232,7 @@ export default async function ColumnsPage(
           locale={locale}
           posts={listItems}
           initialFilters={toColumnGridFilters(searchParams)}
+          openingSlugs={openingSlugs}
           {...(isIntlDesignLocale(locale) ? { folioLabels: folioColumnsCopy[locale] } : {})}
         />
         <div className="container">

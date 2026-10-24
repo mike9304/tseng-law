@@ -26,7 +26,7 @@ describe('media widgets localization', () => {
     expect(copy.video.backgroundBadge).toBe('背景影片');
     expect(copy.video.inspector.modes.box).toBe('影片框');
     expect(copy.video.inspector.urlPlaceholder).toBe('/videos/en-after-rain-loop.mp4 或 https://youtu.be/...');
-    expect(copy.video.inspector.posterPlaceholder).toBe('/images/blog/004-taiwan-employment-contract-guide/featured-01.jpg');
+    expect(copy.video.inspector.posterPlaceholder).toBe('/images/blog/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg');
     expect(copy.lottie.fallbackLabel).toBe('Lottie 動畫');
     expect(copy.lottie.inspector.urlPlaceholder).toBe('https://lottie.host/embed/<id>/<hash>.lottie');
     expect(copy.lottie.inspector.emptyHint.spaceAfterSource).toBe(true);
@@ -134,7 +134,7 @@ describe('media widgets localization', () => {
     expect(inspectorHtml).toContain('背景影片');
     expect(inspectorHtml).toContain('封面 / 縮圖');
     expect(inspectorHtml).toContain('placeholder="/videos/en-after-rain-loop.mp4 或 https://youtu.be/..."');
-    expect(inspectorHtml).toContain('placeholder="/images/blog/004-taiwan-employment-contract-guide/featured-01.jpg"');
+    expect(inspectorHtml).toContain('placeholder="/images/blog/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"');
     expect(inspectorHtml).toContain('循環播放');
     expect(inspectorHtml).toContain('靜音');
     expect(inspectorHtml).toContain('顯示控制列');

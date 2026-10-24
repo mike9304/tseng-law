@@ -84,7 +84,7 @@ describe('image edit copy', () => {
     expect(copy.runtime.svgIconLabels.shield).toBe('盾牌圖示');
     expect(copy.inspector.openImageEditor).toBe('裁切 / 篩選 / Alt');
     expect(copy.inspector.sourceUrlPlaceholder).toBe('https://example.com/image.jpg');
-    expect(copy.inspector.hoverSwapImagePlaceholder).toBe('/images/blog/004-taiwan-employment-contract-guide/img-01.jpg');
+    expect(copy.inspector.hoverSwapImagePlaceholder).toBe('/images/blog/004-taiwan-company-subsidiary-vs-branch/img-01.jpg');
     expect(copy.inspector.svgColorPlaceholder).toBe('#116dff 或預設的主題權杖');
     expect(copy.inspector.gifSearchQueryPlaceholder).toBe('法律辦公室');
     expect(copy.dialog.ariaLabel).toBe('裁切、篩選與替代文字');

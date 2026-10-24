@@ -83,7 +83,7 @@ function getMockProducts(locale: Locale, copy: ProductGalleryCopy): CommerceProd
         {
           mediaId: 'consultation-cover',
           type: 'image',
-          url: '/images/blog/004-taiwan-employment-contract-guide/featured-01.jpg',
+          url: '/images/blog/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg',
           alt: consultation.mediaAlt,
           sortOrder: 1,
         },

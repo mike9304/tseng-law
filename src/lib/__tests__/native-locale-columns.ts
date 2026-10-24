@@ -980,6 +980,181 @@ export const COUNTRY_COLUMN_FILES_20261024 = {
     '719-taiwan-promissory-note-security-court-ruling-enforcement-japanese.md', // ja-gap-20261024
     '720-taiwan-supplement-health-food-advertising-rules-japanese-brands.md', // ja-gap-20261024
   ],
+  fil: [
+    '801-filipino-caregiver-taiwan-patient-died-transfer-employer.md', // world-columns-20261024
+    '802-filipino-factory-worker-taiwan-overtime-deductions-broker-fee.md', // world-columns-20261024
+    '803-filipino-worker-taiwan-reported-missing-overstay-surrender.md', // world-columns-20261024
+  ],
+  'zh-hans': [
+    '804-mainland-chinese-heirs-taiwan-estate-cap-deadline.md', // world-columns-20261024
+    '805-mainland-chinese-spouse-taiwan-residence-after-divorce.md', // world-columns-20261024
+    '806-mainland-chinese-judgment-arbitral-award-taiwan-recognition.md', // world-columns-20261024
+  ],
+  ms: [
+    '807-malaysian-student-taiwan-part-time-work-permit.md', // world-columns-20261024
+    '808-malaysian-brand-taiwan-subsidiary-branch-first-shop.md', // world-columns-20261024
+    '809-malaysian-rider-taiwan-scooter-accident-licence-insurance.md', // world-columns-20261024
+  ],
+  km: [
+    '813-cambodian-spouse-marry-taiwanese-interview-list-registration.md', // world-columns-20261024
+    '814-cambodian-wife-divorce-taiwanese-husband-arc-children.md', // world-columns-20261024
+    '815-cambodian-widow-taiwanese-husband-death-inheritance-arc.md', // world-columns-20261024
+  ],
+  ne: [
+    '819-nepali-student-taiwan-part-time-work-permit-20-hours.md', // world-columns-20261024
+    '820-nepali-graduate-taiwan-stay-work-after-degree-points.md', // world-columns-20261024
+    '821-nepali-student-taiwan-bank-account-easy-job-police.md', // world-columns-20261024
+  ],
+  bn: [
+    '822-bangladeshi-garment-factory-taiwan-fabric-defect-notice.md', // world-columns-20261024
+    '823-bangladeshi-student-taiwan-part-time-work-permit-20-hours.md', // world-columns-20261024
+    '824-bangladeshi-importer-taiwan-supplier-new-bank-account-email.md', // world-columns-20261024
+  ],
+  ur: [
+    '825-pakistani-exporter-unpaid-taiwan-buyer-invoice.md', // world-columns-20261024
+    '826-pakistani-engineer-taiwan-work-permit-arc-family.md', // world-columns-20261024
+    '827-pakistani-fiance-marry-taiwanese-national-interview.md', // world-columns-20261024
+  ],
+  fa: [
+    '828-iranian-professional-taiwan-work-permit-visa-arc.md', // world-columns-20261024
+    '829-iranian-buyer-taiwan-supplier-export-control-permit.md', // world-columns-20261024
+    '830-iranian-spouse-marry-taiwanese-national-registration.md', // world-columns-20261024
+  ],
+  ta: [
+    '831-tamil-engineer-taiwan-work-permit-family-residence.md', // world-columns-20261024
+    '832-tamil-engineer-taiwan-job-ends-permit-arc-severance.md', // world-columns-20261024
+    '833-tamil-manufacturer-taiwan-machine-defect-shipping-risk.md', // world-columns-20261024
+  ],
+  nl: [
+    '834-dutch-company-taiwan-subsidiary-branch-office.md', // world-columns-20261024
+    '835-dutch-employer-taiwan-first-hire-eor.md', // world-columns-20261024
+    '836-dutch-working-holiday-taiwan-work-insurance-tax.md', // world-columns-20261024
+  ],
+  el: [
+    '855-greek-shipowner-arbitral-award-taiwan-enforcement.md', // world-columns-20261024
+    '856-greek-exporter-taiwan-unpaid-olive-oil-invoices.md', // world-columns-20261024
+    '857-greek-professionals-taiwan-work-permit-residence.md', // world-columns-20261024
+  ],
+  he: [
+    '858-israeli-tech-taiwan-source-code-trade-secrets.md', // world-columns-20261024
+    '859-israeli-company-taiwan-subsidiary-branch-investment.md', // world-columns-20261024
+    '860-israeli-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+  ],
+  ru: [
+    '864-russian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '865-russian-buyer-taiwan-export-controls-end-user.md', // world-columns-20261024
+    '866-russian-spouse-taiwan-divorce-child-residence.md', // world-columns-20261024
+  ],
+  pl: [
+    '870-polish-company-taiwan-subsidiary-branch-office.md', // world-columns-20261024
+    '871-polish-working-holiday-taiwan-six-month-work.md', // world-columns-20261024
+    '872-polish-exporter-taiwan-unpaid-euro-invoices.md', // world-columns-20261024
+  ],
+  cs: [
+    '873-czech-company-taiwan-subsidiary-branch-office.md', // world-columns-20261024
+    '874-czech-working-holiday-taiwan-work-limits.md', // world-columns-20261024
+    '875-czech-buyer-taiwan-defective-machine-claim.md', // world-columns-20261024
+  ],
+  lt: [
+    '897-lithuanian-laser-company-taiwan-subsidiary-branch.md', // world-columns-20261024
+    '898-lithuanian-engineer-taiwan-work-permit-residence.md', // world-columns-20261024
+    '899-lithuanian-brand-taiwan-distributor-trademark-registration.md', // world-columns-20261024
+  ],
+  hu: [
+    '879-hungarian-working-holiday-taiwan-employer-limit.md', // world-columns-20261024
+    '880-hungarian-company-taiwan-subsidiary-branch-setup.md', // world-columns-20261024
+    '881-hungarian-heir-taiwan-estate-deadlines-documents.md', // world-columns-20261024
+  ],
+  mn: [
+    '816-mongolian-student-taiwan-part-time-work-permit-hours.md', // world-columns-20261024
+    '817-mongolian-worker-taiwan-unpaid-overtime-wages-labor-mediation.md', // world-columns-20261024
+    '818-mongolian-student-taiwan-scooter-accident-police-records-insurance.md', // world-columns-20261024
+  ],
+  my: [
+    '810-myanmar-student-taiwan-part-time-work-permit-graduation.md', // world-columns-20261024
+    '811-myanmar-resident-taiwan-bank-account-lending-police-warning.md', // world-columns-20261024
+    '812-myanmar-spouse-taiwanese-marriage-interview-registration-visa.md', // world-columns-20261024
+  ],
+  sv: [
+    '837-swedish-company-taiwan-subsidiary-branch-office.md', // world-columns-20261024
+    '838-swedish-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '839-swedish-heir-taiwan-estate-deadlines-documents.md', // world-columns-20261024
+  ],
+  da: [
+    '840-danish-company-taiwan-subsidiary-branch-project-office.md', // world-columns-20261024
+    '841-danish-buyer-taiwan-wind-components-defect-notice.md', // world-columns-20261024
+    '842-danish-engineer-taiwan-work-permit-family-residence.md', // world-columns-20261024
+  ],
+  tr: [
+    '861-turkish-exporter-taiwan-unpaid-marble-invoices.md', // world-columns-20261024
+    '862-turkish-importer-taiwan-machine-defect-notice.md', // world-columns-20261024
+    '863-turkish-professionals-taiwan-work-permit-residence.md', // world-columns-20261024
+  ],
+  sk: [
+    '876-slovak-working-holiday-taiwan-six-month-work-limit.md', // world-columns-20261024
+    '877-slovak-exporter-taiwan-unpaid-invoice-recovery.md', // world-columns-20261024
+    '878-slovak-business-taiwan-subsidiary-branch-office.md', // world-columns-20261024
+  ],
+  ro: [
+    '882-romanian-exporter-taiwan-unpaid-panel-invoices.md', // world-columns-20261024
+    '883-romanian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '884-romanian-visitor-taiwan-traffic-injury-return-home.md', // world-columns-20261024
+  ],
+  bg: [
+    '885-bulgarian-exporter-taiwan-unpaid-invoice.md', // world-columns-20261024
+    '886-bulgarian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '887-bulgarian-taiwanese-marriage-registration-residence.md', // world-columns-20261024
+  ],
+  hr: [
+    '888-croatian-buyer-taiwan-defective-machine-evidence.md', // world-columns-20261024
+    '889-croatian-professionals-taiwan-work-permit-residence.md', // world-columns-20261024
+    '890-croatian-traveler-taiwan-accident-return-home.md', // world-columns-20261024
+  ],
+  fi: [
+    '846-finnish-supplier-taiwan-distributor-exit-stock.md', // world-columns-20261024
+    '847-finnish-professional-taiwan-work-permit-family.md', // world-columns-20261024
+    '848-finnish-heir-taiwan-estate-renunciation-documents.md', // world-columns-20261024
+  ],
+  uk: [
+    '867-ukrainian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '868-ukrainian-taiwanese-marriage-documents-residence.md', // world-columns-20261024
+    '869-ukrainian-oil-exporter-taiwan-unpaid-invoice.md', // world-columns-20261024
+  ],
+  nb: [
+    '843-norwegian-seafood-exporter-taiwan-unpaid-invoices.md', // world-columns-20261024
+    '844-norwegian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '845-norwegian-traveller-taiwan-traffic-accident-return-home.md', // world-columns-20261024
+  ],
+  is: [
+    '849-icelandic-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '850-icelandic-traveller-taiwan-accident-return-home.md', // world-columns-20261024
+    '851-icelandic-exporter-taiwan-unpaid-shipment-invoice.md', // world-columns-20261024
+  ],
+  ca: [
+    '852-catalan-brand-taiwan-trademark-distributor.md', // world-columns-20261024
+    '853-catalan-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '854-catalan-taiwan-divorce-children-residence.md', // world-columns-20261024
+  ],
+  sr: [
+    '891-serbian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '892-serbian-fruit-exporter-taiwan-unpaid-invoices.md', // world-columns-20261024
+    '893-serbian-resident-taiwan-police-summons-interpreter.md', // world-columns-20261024
+  ],
+  sl: [
+    '894-slovenian-supplier-taiwan-distributor-exit-stock.md', // world-columns-20261024
+    '895-slovenian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '896-slovenian-heir-taiwan-estate-documents-deadlines.md', // world-columns-20261024
+  ],
+  lv: [
+    '900-latvian-timber-exporter-taiwan-unpaid-invoices.md', // world-columns-20261024
+    '901-latvian-professional-taiwan-work-permit-family.md', // world-columns-20261024
+    '902-latvian-visitor-taiwan-traffic-injury-return-home.md', // world-columns-20261024
+  ],
+  et: [
+    '903-estonian-company-taiwan-first-hire-eor.md', // world-columns-20261024
+    '904-estonian-professional-taiwan-work-permit-residence.md', // world-columns-20261024
+    '905-estonian-supplier-taiwan-unpaid-technology-invoices.md', // world-columns-20261024
+  ],
 } as const;
 
 /** Registered locale-specific batches through 2026-10-24, in filename order. */

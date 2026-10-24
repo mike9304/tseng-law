@@ -21,7 +21,7 @@ En particular, la dimissió voluntària del treballador (自請離職) segueix u
 
 No pot percebre la indemnització per acomiadament (資遣費) (article 18 de la Llei de normes laborals).
 
-Això difereix d’alguns ordenaments, com el coreà.
+Aquesta regla està subjecta a les excepcions previstes per la llei.
 
 ​
 

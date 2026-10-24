@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tajvanon kap-e végkielégítést a munkavállaló, ha maga mond fel?"
-    a: "Nem. Egyes más jogrendszerektől – például Koreától – eltérően Tajvanon a végkielégítés (資遣費) fizetésének kötelezettsége csak akkor keletkezik, ha a társaság bocsátja el a munkavállalót; ha a munkavállaló maga mond fel, a társaságnak nem kell végkielégítést fizetnie. Ha viszont fennáll a munkaügyi törvény 14. cikke szerinti ok – például a társaság nem fizeti ki a bért, vagy megsérti a munkajogi jogszabályokat –, és a munkavállaló emiatt szünteti meg a szerződést, a társaságnak végkielégítést kell fizetnie."
+    a: "Nem. Tajvanon a végkielégítés (資遣費) fizetésének kötelezettsége csak akkor keletkezik, ha a társaság bocsátja el a munkavállalót; ha a munkavállaló maga mond fel, a társaságnak nem kell végkielégítést fizetnie. Ha viszont fennáll a munkaügyi törvény 14. cikke szerinti ok – például a társaság nem fizeti ki a bért, vagy megsérti a munkajogi jogszabályokat –, és a munkavállaló emiatt szünteti meg a szerződést, a társaságnak végkielégítést kell fizetnie."
   - q: "Fegyelmi felmondáskor is kell a társaságnak végkielégítést fizetnie?"
     a: "Nem. Ha a munkavállaló jogellenes cselekményt követ el, súlyosan megsérti a munkaszerződést vagy a belső szabályzatot, vagy indokolt ok nélkül 3 napon át egymás után vagy egy hónapban 6 napon hiányzik (a munkaügyi törvény 12. cikke, 勞動基準法第12條), a társaság előzetes felmondás nélkül elbocsáthat, és nem kell végkielégítést fizetnie. Ezzel szemben a gazdasági felmondás (11. cikk) előzetes felmondást és végkielégítés kifizetését igényli."
   - q: "Hogyan számítják a tajvani végkielégítést?"
@@ -28,9 +28,9 @@ A cikk a tajvani végkielégítést (資遣費) ismerteti.
 
 A végkielégítés szabálya jogrendszerenként eltér.
 
-Egyes jogrendszerekben – például Koreában – a társaság végkielégítést köteles fizetni, amikor a munkavállaló elhagyja a vállalkozást.
+Tajvanon önmagában a munkaviszony megszűnése nem jogosít végkielégítésre.
 
-Tajvanon ez másként van.
+A jogosultság a munkaviszony megszűnésének okától függ.
 
 A végkielégítés fizetésének kötelezettsége csak akkor keletkezik, ha a társaság bocsátja el a munkavállalót.
 

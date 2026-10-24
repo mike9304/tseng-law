@@ -21,7 +21,7 @@ En particulier, si le salarié démissionne de son propre chef (自請離職),
 
 il ne peut pas percevoir l’indemnité de licenciement (資遣費) (article 18 de la loi sur les normes du travail),
 
-et cela diffère de certains autres droits, par exemple celui de la Corée.
+sous réserve des exceptions décrites ci-dessous.
 
 ​
 

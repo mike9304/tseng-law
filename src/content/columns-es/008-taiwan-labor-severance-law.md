@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "En Taiwán, ¿percibe indemnización por despido el trabajador que dimite de forma voluntaria?"
-    a: "No. A diferencia de algunos ordenamientos (Corea, por ejemplo), en Taiwán la obligación de pagar la indemnización por despido (資遣費) solo nace cuando la empresa despide al trabajador; si el trabajador dimite de forma voluntaria, la empresa no tiene que pagarla. Sin embargo, si existe un motivo del artículo 14 de la Ley de Normas Laborales (勞動基準法第14條), por ejemplo que la empresa no pague el salario o infrinja las leyes y reglamentos laborales, y el trabajador resuelve el contrato por ese motivo, la empresa debe pagar la indemnización por despido."
+    a: "No. En Taiwán la obligación de pagar la indemnización por despido (資遣費) solo nace cuando la empresa despide al trabajador; si el trabajador dimite de forma voluntaria, la empresa no tiene que pagarla. Sin embargo, si existe un motivo del artículo 14 de la Ley de Normas Laborales (勞動基準法第14條), por ejemplo que la empresa no pague el salario o infrinja las leyes y reglamentos laborales, y el trabajador resuelve el contrato por ese motivo, la empresa debe pagar la indemnización por despido."
   - q: "En caso de despido disciplinario, ¿debe la empresa pagar igualmente la indemnización por despido?"
     a: "No. Si el trabajador comete un acto ilícito, infringe gravemente el contrato de trabajo o las normas de la empresa, o falta al trabajo sin causa justificada durante 3 días consecutivos o 6 días en un mes (artículo 12 de la Ley de Normas Laborales, 勞動基準法第12條), la empresa puede despedir sin preaviso y no está obligada a pagar la indemnización por despido. En cambio, el despido económico (artículo 11) exige preaviso y el pago de la indemnización por despido."
   - q: "¿Cómo se calcula la indemnización por despido en Taiwán?"
@@ -28,9 +28,9 @@ La indemnización por despido (資遣費) en Taiwán funciona así.
 
 Es posible que este punto ya le resulte conocido.
 
-En algunos ordenamientos —Corea es un ejemplo señalado— la empresa debe pagar, por regla general, una indemnización cuando el trabajador cesa.
+En Taiwán, el derecho a una indemnización depende de la causa de extinción de la relación laboral.
 
-Taiwán, en cambio, es distinto.
+El despido y la dimisión voluntaria tienen consecuencias distintas.
 
 La obligación de pagar la indemnización por despido solo nace cuando la empresa despide al trabajador.
 

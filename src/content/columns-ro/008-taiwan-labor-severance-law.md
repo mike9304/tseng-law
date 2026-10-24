@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "În Taiwan, salariații primesc o indemnizație de concediere dacă demisionează ei înșiși?"
-    a: "Nu. Spre deosebire de unele state — de exemplu Coreea —, în Taiwan obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu are obligația de a plăti indemnizație de concediere. Totuși, dacă există un motiv prevăzut la art. 14 din legea standardelor muncii, de exemplu societatea nu plătește salariul sau încalcă legile și reglementările muncii, iar persoana angajată pune capăt contractului pe acest temei, societatea trebuie să plătească indemnizația de concediere."
+    a: "Nu. În Taiwan, obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu are obligația de a plăti indemnizație de concediere. Totuși, dacă există un motiv prevăzut la art. 14 din legea standardelor muncii, de exemplu societatea nu plătește salariul sau încalcă legile și reglementările muncii, iar persoana angajată pune capăt contractului pe acest temei, societatea trebuie să plătească indemnizația de concediere."
   - q: "Societatea trebuie să plătească o indemnizație de concediere și în caz de concediere disciplinară?"
     a: "Nu. Dacă persoana angajată săvârșește o faptă ilicită, încalcă grav contractul de muncă sau regulamentul intern ori lipsește fără motiv legitim 3 zile la rând sau 6 zile într-o lună (art. 12 din legea standardelor muncii, 勞動基準法第12條), societatea poate concedia fără preaviz și nu are obligația de a plăti indemnizație de concediere. În schimb, o concediere economică (art. 11) cere un preaviz și plata indemnizației de concediere."
   - q: "Cum se calculează indemnizația de concediere în Taiwan?"
@@ -28,9 +28,9 @@ Acest text explică indemnizația de concediere (資遣費) din Taiwan.
 
 Mulți dintre dumneavoastră știți deja acest lucru.
 
-În unele state, precum Coreea, societatea trebuie de regulă să plătească o indemnizație atunci când salariatul pleacă din întreprindere.
+În Taiwan, dreptul la indemnizația de concediere depinde de modul în care încetează raportul de muncă.
 
-În Taiwan însă lucrurile stau altfel:
+Regula generală este următoarea:
 
 Obligația de a plăti indemnizația de concediere se naște numai când societatea concediază persoana angajată.
 

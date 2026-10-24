@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Kas töötaja, kes Taiwanis omal soovil lahkub, saab lahkumishüvitist?"
-    a: "Ei. Erinevalt mõnest õiguskorrast (näiteks Koreast) tekib Taiwanis kohustus maksta seadusjärgset lahkumishüvitist (資遣費) alles siis, kui äriühing töötaja üles ütleb; kui töötaja lahkub omal soovil, ei pea äriühing lahkumishüvitist maksma. Kui aga esineb tööstandardite seaduse artikli 14 alusel põhjus, näiteks äriühing ei maksa palka või rikub tööseadusi ja -eeskirju, ning töötaja lõpetab selle alusel lepingu, peab äriühing lahkumishüvitist maksma."
+    a: "Ei. Taiwanis tekib kohustus maksta seadusjärgset lahkumishüvitist (資遣費) alles siis, kui äriühing töötaja üles ütleb; kui töötaja lahkub omal soovil, ei pea äriühing lahkumishüvitist maksma. Kui aga esineb tööstandardite seaduse artikli 14 alusel põhjus, näiteks äriühing ei maksa palka või rikub tööseadusi ja -eeskirju, ning töötaja lõpetab selle alusel lepingu, peab äriühing lahkumishüvitist maksma."
   - q: "Kas äriühing peab lahkumishüvitist maksma ka distsiplinaarse ülesütlemise korral?"
     a: "Ei. Kui töötaja paneb toime õigusvastase teo, rikub töölepingut või töökorralduseeskirja raskelt või puudub mõjuva põhjuseta 3 järjestikusel päeval või 6 päeval ühe kuu jooksul (tööstandardite seaduse artikkel 12, 勞動基準法第12條), võib äriühing üles öelda etteteatamiseta ja ei pea lahkumishüvitist maksma. Majanduslik ülesütlemine (artikkel 11) eeldab seevastu etteteatamist ja lahkumishüvitise maksmist."
   - q: "Kuidas arvutatakse Taiwani lahkumishüvitis?"
@@ -26,11 +26,11 @@ Järgnev selgitab seadusjärgset lahkumishüvitist (資遣費) Taiwanis.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Võrdlus mõne teise õiguskorraga, näiteks Koreaga, on järgmine.
+Taiwanis sõltub lahkumishüvitise maksmine töösuhte lõpetamise alusest.
 
-Mõnes õiguskorras, näiteks Koreas, peab äriühing maksma lahkumishüvitist, kui töötaja lahkub.
+Töösuhte lõppemine ei anna Taiwanis iseenesest õigust lahkumishüvitisele.
 
-Taiwanis on olukord siiski teine:
+Taiwanis kehtib järgmine reegel:
 
 Kohustus maksta lahkumishüvitist tekib alles siis, kui äriühing töötaja üles ütleb.
 

@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tayvan’da çalışan kendi isteğiyle ayrılırsa kıdem tazminatı (資遣費) alır mı?"
-    a: "Hayır. Bazı hukuk düzenlerinden — örneğin Kore’den — farklı olarak Tayvan’da kıdem tazminatı (資遣費) ödeme yükümlülüğü ancak şirket çalışanı işten çıkardığında doğar; çalışan kendi isteğiyle ayrılırsa şirket kıdem tazminatı ödemek zorunda değildir. Ancak İş Standartları Kanununun 14. maddesindeki bir neden varsa — örneğin şirketin ücreti ödememesi veya iş mevzuatını ihlal etmesi — ve çalışan bu nedenle sözleşmeyi feshederse şirket kıdem tazminatı ödemelidir."
+    a: "Hayır. Tayvan’da kıdem tazminatı (資遣費) ödeme yükümlülüğü ancak şirket çalışanı işten çıkardığında doğar; çalışan kendi isteğiyle ayrılırsa şirket kıdem tazminatı ödemek zorunda değildir. Ancak İş Standartları Kanununun 14. maddesindeki bir neden varsa — örneğin şirketin ücreti ödememesi veya iş mevzuatını ihlal etmesi — ve çalışan bu nedenle sözleşmeyi feshederse şirket kıdem tazminatı ödemelidir."
   - q: "Disiplin nedeniyle işten çıkarmada da şirket kıdem tazminatı ödemeli midir?"
     a: "Hayır. Çalışan hukuka aykırı bir fiil işlerse, iş sözleşmesini veya şirket kurallarını ağır biçimde ihlal ederse veya meşru neden olmadan 3 gün üst üste ya da bir ayda 6 gün izinsiz devamsızlık yaparsa (İş Standartları Kanununun 12. maddesi, 勞動基準法第12條) şirket önceden bildirim olmadan işten çıkarabilir ve kıdem tazminatı ödemek zorunda değildir. Buna karşılık ekonomik işten çıkarma (11. madde) önceden bildirimi ve kıdem tazminatı ödemesini gerektirir."
   - q: "Tayvan’da kıdem tazminatı nasıl hesaplanır?"
@@ -28,7 +28,7 @@ Tayvan’da kıdem tazminatının (資遣費) ne zaman doğduğu aşağıda anla
 
 Bu ayrım uygulamada sık karıştırılır.
 
-Bazı hukuk düzenlerinde — Kore bunlardan biridir — çalışan işten ayrıldığında şirket kural olarak kıdem tazminatı öder
+Bazı hukuk düzenlerinde çalışan işten ayrıldığında şirket kural olarak kıdem tazminatı öder
 
 Tayvan ise bundan farklıdır:
 

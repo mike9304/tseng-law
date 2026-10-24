@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Na Tajvanu, da li zaposleni dobija otpremninu ako sam da otkaz?"
-    a: "Ne. Za razliku od nekih pravnih poredaka (na primer Koreje), na Tajvanu obaveza isplate otpremnine (資遣費) nastaje tek kada društvo otpusti zaposlenog; ako zaposleni sam da otkaz, društvo otpremninu ne mora da isplati. Međutim, ako postoji osnov iz člana 14 Zakona o radnim standardima (勞動基準法), na primer društvo ne isplaćuje platu ili krši propise o radu, i zaposleni na tom osnovu raskine ugovor, društvo mora da isplati otpremninu."
+    a: "Ne. Na Tajvanu obaveza isplate otpremnine (資遣費) nastaje tek kada društvo otpusti zaposlenog; ako zaposleni sam da otkaz, društvo otpremninu ne mora da isplati. Međutim, ako postoji osnov iz člana 14 Zakona o radnim standardima (勞動基準法), na primer društvo ne isplaćuje platu ili krši propise o radu, i zaposleni na tom osnovu raskine ugovor, društvo mora da isplati otpremninu."
   - q: "Mora li društvo da isplati otpremninu i pri disciplinskom otkazu?"
     a: "Ne. Ako zaposleni učini protivpravni akt, teško prekrši ugovor o radu ili pravilnik o radu, ili se bez opravdanog razloga ne pojavi 3 dana uzastopno ili 6 dana u mesecu (član 12 Zakona o radnim standardima, 勞動基準法第12條), društvo može da otpusti bez prethodnog obaveštenja i otpremninu ne mora da isplati. Nasuprot tome, privredni otkaz (član 11) zahteva prethodni otkaz i isplatu otpremnine."
   - q: "Kako se na Tajvanu otpremnina obračunava?"
@@ -28,7 +28,7 @@ Tekst objašnjava kada pravo na otpremninu nastaje i kada ne.
 
 Uređenje se od države do države razlikuje.
 
-U nekim pravnim porecima, na primer u Koreji, društvo načelno mora da isplati otpremninu kada zaposleni ode.
+U nekim pravnim porecima društvo načelno mora da isplati otpremninu kada zaposleni ode.
 
 Na Tajvanu je drugačije:
 

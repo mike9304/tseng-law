@@ -47,6 +47,8 @@ describe('audience frontmatter recommendations', () => {
   it('normalizes locale codes, country aliases and shared values', () => {
     expect(normalizeColumnAudience(['JP', 'us', 'TW', 'all'])).toEqual(['ja', 'en', 'zh-hant', 'global']);
     expect(normalizeColumnAudience('vi')).toEqual(['vi']);
+    // `uk` is the Ukrainian site locale; `GB` stays an English alias.
+    expect(normalizeColumnAudience(['uk', 'GB'])).toEqual(['uk', 'en']);
     expect(normalizeColumnAudience(undefined)).toEqual([]);
   });
 

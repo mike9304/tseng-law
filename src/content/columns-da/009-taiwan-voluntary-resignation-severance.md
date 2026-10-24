@@ -21,7 +21,7 @@ Navnlig når arbejdstagere selv siger op (自請離職), er udgangspunktet et an
 
 De kan da ikke modtage godtgørelse ved afskedigelse (artikel 18 i loven om arbejdsnormer, 勞動基準法),
 
-og dette adskiller sig fra reglerne i visse andre lande — Korea er ét eksempel.
+med de undtagelser, som loven fastsætter.
 
 ​
 

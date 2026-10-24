@@ -21,7 +21,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 即不能领取资遣费（劳动基准法第18条），
 
-这与不少法域（例如韩国）的做法不同。
+这是台湾劳动法关于资遣费的一般规则。
 
 ​
 

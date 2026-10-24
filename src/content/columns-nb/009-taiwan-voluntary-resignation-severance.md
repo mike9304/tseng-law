@@ -19,9 +19,9 @@ Som tidligere belyst er det i Taiwan ikke lett for arbeidstakere å motta sluttv
 
 Særlig når arbeidstakere selv sier opp (自請離職),
 
-kan de ikke motta sluttvederlag (artikkel 18 i loven om arbeidsnormer, 勞動基準法),
+kan de ikke motta sluttvederlag (artikkel 18 i loven om arbeidsnormer, 勞動基準法)
 
-og dette skiller seg fra ordningen i enkelte andre land, for eksempel Korea.
+etter reglene i Taiwan.
 
 ​
 

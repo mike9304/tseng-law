@@ -21,7 +21,7 @@ Különösen, ha a munkavállaló saját elhatározásából távozik (自請離
 
 nem kaphat végkielégítést (資遣費) (a munkaügyi törvény 18. cikke),
 
-ami egyes más jogrendszerektől – például Koreától – eltér.
+kivéve az alább ismertetett eseteket.
 
 ​
 

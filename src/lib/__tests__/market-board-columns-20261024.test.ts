@@ -39,7 +39,8 @@ describe('market column boards (2026-10-24)', () => {
     const all = getAllColumnPosts(locale);
     const listed = filterMarketBoardColumns(locale, all).map((post) => post.slug);
     const own = all.filter((post) => columnAudienceRank(locale, post.audience) === 0).map((post) => post.slug);
-    expect(own.length).toBeGreaterThanOrEqual(5);
+    // Nine markets carry five or more own columns; the world-columns locales three or more.
+    expect(own.length).toBeGreaterThanOrEqual(3);
     expect(listed).toEqual(expect.arrayContaining(own));
     for (const slug of OFF_EVERY_BOARD) expect(listed).not.toContain(slug);
     expect(listed).toHaveLength(own.length + MARKET_BOARD_SHARED_COLUMN_SLUGS[locale].length);
@@ -59,7 +60,7 @@ describe('market column boards (2026-10-24)', () => {
     expect(isMarketBoardColumn('de', { slug: 'any-new-column', audience: ['global'] })).toBe(true);
     expect(isMarketBoardColumn('de', { slug: 'any-new-column', audience: ['th'] })).toBe(false);
     expect(isMarketBoardColumn('de', { slug: 'taiwan-gym-injury-lawsuit' })).toBe(false);
-    for (const locale of ['vi', 'en', 'ko', 'ja', 'zh-hant', 'nl'] as const) {
+    for (const locale of ['vi', 'en', 'ko', 'ja', 'zh-hant'] as const) {
       const all = getAllColumnPosts(locale);
       expect(filterMarketBoardColumns(locale, all)).toEqual(all);
     }

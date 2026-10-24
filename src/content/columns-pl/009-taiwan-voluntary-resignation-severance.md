@@ -17,11 +17,11 @@ Jak wskazano wcześniej, na Tajwanie uzyskanie odprawy (資遣費) nie jest dla 
 
 ​
 
-W szczególności, jeśli pracownik odchodzi z własnej woli (自請離職),
+Jeśli pracownik na Tajwanie odchodzi z własnej woli (自請離職),
 
-nie może otrzymać odprawy (資遣費) (art. 18 ustawy o normach pracy),
+nie może otrzymać odprawy (資遣費)
 
-co odróżnia Tajwan od niektórych innych porządków prawnych, na przykład koreańskiego.
+(art. 18 ustawy o normach pracy).
 
 ​
 

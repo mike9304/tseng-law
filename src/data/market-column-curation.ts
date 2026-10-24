@@ -5,8 +5,18 @@ import { columnAudienceRank } from '@/lib/column-audience';
  * columns that fit that market's readers — the columns written for it (`audience`) and the shared translated columns
  * picked below. A shared column left out keeps its URL and sitemap entry; it is only dropped from the board, its
  * search, the article's previous/next links and recommendations, and the locale home.
+ *
+ * The world-columns batch of the same day gave the remaining 35 guidance locales their own columns (801–905), so their
+ * boards follow the same rule: their own columns plus the shared translations that do not assume a Korean reader, and
+ * no list of untranslated Korean titles.
  */
-export const MARKET_BOARD_LOCALES = ['th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar'] as const;
+const NINE_MARKET_BOARD_LOCALES = ['th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar'] as const;
+export const WORLD_BOARD_LOCALES = [
+  'fil', 'zh-hans', 'ms', 'my', 'km', 'mn', 'ne', 'bn', 'ur', 'fa', 'ta',
+  'nl', 'sv', 'da', 'nb', 'fi', 'is', 'ca', 'el', 'he', 'tr', 'ru', 'uk',
+  'pl', 'cs', 'sk', 'hu', 'ro', 'bg', 'hr', 'sr', 'sl', 'lt', 'lv', 'et',
+] as const;
+export const MARKET_BOARD_LOCALES = [...NINE_MARKET_BOARD_LOCALES, ...WORLD_BOARD_LOCALES] as const;
 export type MarketBoardLocale = (typeof MARKET_BOARD_LOCALES)[number];
 
 export function isMarketBoardLocale(locale: string): locale is MarketBoardLocale {
@@ -64,7 +74,24 @@ const LIFE = [...TRAFFIC, 'taiwan-divorce-lawsuit-qna', ...INHERITANCE] as const
  * Shared columns listed on each market board, besides the columns written for that market. A shared column that one
  * of the market's own columns links to is listed too, unless it is off every board.
  */
+// World-batch boards keep every shared translation except the five built on Korean premises.
+const OFF_EVERY_BOARD: readonly string[] = [
+  'taiwan-company-establishment-basics',
+  'taiwan-company-subsidiary-vs-branch',
+  'taiwan-company-establishment-advanced-2',
+  'taiwan-massage-history-law',
+  'taiwan-gym-injury-lawsuit',
+];
+const WORLD_SHARED = MARKET_BOARD_REVIEWED_SHARED_SLUGS.filter((slug) => !OFF_EVERY_BOARD.includes(slug));
+
+function worldBoardSharedSlugs(): Record<(typeof WORLD_BOARD_LOCALES)[number], readonly string[]> {
+  const picks = {} as Record<(typeof WORLD_BOARD_LOCALES)[number], readonly string[]>;
+  for (const locale of WORLD_BOARD_LOCALES) picks[locale] = WORLD_SHARED;
+  return picks;
+}
+
 export const MARKET_BOARD_SHARED_COLUMN_SLUGS: Record<MarketBoardLocale, readonly string[]> = {
+  ...worldBoardSharedSlugs(),
   // Workers and caregivers in Taiwan.
   th: [...WORK, ...LIFE],
   // Workers and caregivers; 668 (machinery defects) points buyers to the semiconductor-entry column.

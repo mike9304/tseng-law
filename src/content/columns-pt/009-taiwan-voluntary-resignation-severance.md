@@ -21,7 +21,7 @@ Em particular, a demissão por iniciativa própria do trabalhador (自請離職)
 
 O trabalhador não pode perceber a indemnização por despedimento (資遣費) (artigo 18 da lei sobre as normas do trabalho).
 
-Isso difere de alguns outros ordenamentos, por exemplo do coreano.
+Esta é a regra geral em Taiwan.
 
 ​
 

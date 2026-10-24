@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Modtager arbejdstagere i Taiwan godtgørelse ved afskedigelse, når de selv siger op?"
-    a: "Nej. I modsætning til visse andre lande — Korea er ét eksempel — opstår pligten til at udbetale godtgørelse ved afskedigelse (資遣費) i Taiwan først, når selskabet afskediger arbejdstageren; siger arbejdstageren selv op, behøver selskabet ikke at udbetale godtgørelse ved afskedigelse. Foreligger der derimod en grund efter artikel 14 i loven om arbejdsnormer (勞動基準法第14條), for eksempel at selskabet ikke udbetaler løn eller overtræder arbejdsretlige regler, og bringer arbejdstageren aftalen til ophør af den grund, skal selskabet udbetale godtgørelse ved afskedigelse."
+    a: "Nej. I Taiwan opstår pligten til at udbetale godtgørelse ved afskedigelse (資遣費) først, når selskabet afskediger arbejdstageren; siger arbejdstageren selv op, behøver selskabet ikke at udbetale godtgørelse ved afskedigelse. Foreligger der derimod en grund efter artikel 14 i loven om arbejdsnormer (勞動基準法第14條), for eksempel at selskabet ikke udbetaler løn eller overtræder arbejdsretlige regler, og bringer arbejdstageren aftalen til ophør af den grund, skal selskabet udbetale godtgørelse ved afskedigelse."
   - q: "Skal selskabet også ved en disciplinær afskedigelse udbetale godtgørelse ved afskedigelse?"
     a: "Nej. Begår arbejdstageren et retsbrud, groft krænker arbejdsaftalen eller interne regler eller udebliver uden gyldig grund 3 dage i træk eller 6 dage i løbet af 1 måned (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af godtgørelse ved afskedigelse."
   - q: "Hvordan beregnes godtgørelsen ved afskedigelse i Taiwan?"
@@ -28,9 +28,9 @@ Denne artikel gennemgår godtgørelsen ved afskedigelse (資遣費) i Taiwan.
 
 Udgangspunktet er ikke det samme i alle lande.
 
-I nogle andre lande — Korea er ét eksempel — skal selskabet som udgangspunkt udbetale fratrædelsesgodtgørelse, når arbejdstagere fratræder.
+I Taiwan afhænger retten til godtgørelse ved afskedigelse af, hvordan ansættelsesforholdet ophører.
 
-I Taiwan forholder det sig anderledes.
+Reglerne skelner mellem afskedigelse og egen opsigelse.
 
 Pligten til udbetaling af godtgørelse ved afskedigelse opstår først, når selskabet afskediger arbejdstageren.
 

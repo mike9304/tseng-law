@@ -1,0 +1,36 @@
+### 813-cambodian-spouse-marry-taiwanese-interview-list-registration.md
+
+VERDICT: REQUEST_CHANGES
+MUST:
+
+- [M1] “លិខិតមិនមានទោសពីរដ្ឋាភិបាលកម្ពុជា ចេញក្នុង 1 ឆ្នាំ មានការបកប្រែជាភាសាចិនឬអង់គ្លេស និងការផ្ទៀងផ្ទាត់” — The one-year issue-date condition is incomplete: [BOCA, required document 5](https://www.boca.gov.tw/cp-402-179-2abae-1.html) also requires compliance with any expiry date printed on the certificate. A certificate issued within one year can already be unusable. — Replace with: “លិខិតមិនមានទោសពីរដ្ឋាភិបាលកម្ពុជា ចេញក្នុង 1 ឆ្នាំ ហើយបើលិខិតកំណត់ថ្ងៃផុតសុពលភាព ត្រូវមិនទាន់ហួសថ្ងៃនោះ។ លិខិតនេះត្រូវមានការបកប្រែជាភាសាចិនឬអង់គ្លេស និងការផ្ទៀងផ្ទាត់។” This preserves the document, translation and authentication requirements while restoring the expiry condition.
+
+SHOULD:
+
+- [S1] “ចំពោះលិខិតបញ្ជាក់ស្ថានភាពអាពាហ៍ពិពាហ៍ ក្នុងឆ្នាំ 2017 ក្រសួងមហាផ្ទៃតៃវ៉ាន់ [បានណែនាំ](https://laws.gov.taipei/law/Interpretation/ContentPrint/FE302996?type=5) ការិយាល័យបញ្ជីគ្រួសារថា បើភាគីខ្មែរមិនអាចទទួលលិខិតបញ្ជាក់ភាពទទេមានគូតាមទម្រង់ធម្មតា ការិយាល័យអាចទទួលឯកសារទម្រង់ផ្សេងដែលបង្ហាញស្ថានភាពអាពាហ៍ពិពាហ៍ ដូចជាលិខិតបញ្ជាក់សមាជិកគ្រួសារ។” — “ភាពទទេមានគូ” does not clearly convey single/unmarried status. My confidence in Khmer idiom is limited throughout this three-file review. — Replace that document name with “លិខិតបញ្ជាក់ភាពនៅលីវ”; retain the 2017 attribution, discretionary acceptance and warning to confirm current practice. The legal meaning is unchanged.
+
+### 814-cambodian-wife-divorce-taiwanese-husband-arc-children.md
+
+VERDICT: REQUEST_CHANGES
+MUST:
+
+- [M1] “ច្បាប់សញ្ជាតិក៏មានផ្លូវដាច់ដោយឡែក៖ [មាត្រា 4 កថាខណ្ឌទី 1 ចំណុច 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=4) អនុញ្ញាតឱ្យមាតាបិតាបរទេសដែលចិញ្ចឹមថែ ប្រើអំណាច ឬជួបទាក់ទងកូនសញ្ជាតិតៃវ៉ាន់ដែលគ្មានសមត្ថភាព ឬមានសមត្ថភាពកំណត់ ដូចជាកូនមិនគ្រប់អាយុ សុំចូលសញ្ជាតិបាន បន្ទាប់ពីស្នាក់នៅស្របច្បាប់យ៉ាងតិច 183 ថ្ងៃក្នុងមួយឆ្នាំ ជាប់គ្នា 3 ឆ្នាំ ហើយត្រូវបំពេញលក្ខខណ្ឌទូទៅនៃមាត្រា 3 ចំណុច 2 ដល់ 5 ដូចជាអាចចិញ្ចឹមខ្លួនបាន។” — Nationality Act 4(1) additionally requires a present domicile in Taiwan (現於中華民國領域內有住所). Neither the historical residence period nor the listed Article 3(1)(2)–(5) conditions supplies that requirement. — Add: “នៅពេលដាក់ពាក្យ អ្នកដាក់ពាក្យក៏ត្រូវមានទីលំនៅនៅតៃវ៉ាន់ដែរ។” Retain the existing residence, child-related and other eligibility conditions; link [Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=3) in the body and sources.
+- [M2] “បើមានថ្ងៃចុះហត្ថលេខាកំណត់ហើយ សូមផ្ញើអ៊ីមែលមក wei@hoveringlaw.com.tw ឬតាមទំព័រ[ទំនាក់ទំនង](/km/contact) មុនថ្ងៃនោះ ដោយមានសេចក្តីសង្ខេបមិនរសើប ឈ្មោះប្តីឬប្រពន្ធសម្រាប់ពិនិត្យការប៉ះទង្គិចផលប្រយោជន៍ ទំនាក់ទំនងជាមួយតៃវ៉ាន់ អាយុកូន និងថ្ងៃផុតសុពលភាពប័ណ្ណស្នាក់នៅ។” — The explicit request for the child's age exceeds the brief's four permitted first-inquiry fields. — Delete “អាយុកូន” so the final enumeration reads “ទំនាក់ទំនងជាមួយតៃវ៉ាន់ និងថ្ងៃផុតសុពលភាពប័ណ្ណស្នាក់នៅ។” This preserves the permitted summary, conflict-check name, Taiwan connection and deadlines.
+
+SHOULD:
+none
+
+### 815-cambodian-widow-taiwanese-husband-death-inheritance-arc.md
+
+VERDICT: REQUEST_CHANGES
+MUST:
+
+- [M1] “ចំពោះអ្នកទទួលមរតកបរទេស [មាត្រា 17 កថាខណ្ឌទី 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=17) ចែងថា ដីប្រភេទខ្លះដែលបានរាយក្នុងកថាខណ្ឌទី 1 (ដូចជាដីព្រៃ ដីរ៉ែ ដីប្រភពទឹក) ដែលទទួលដោយមរតក ត្រូវលក់ឱ្យជនជាតិតៃវ៉ាន់ក្នុង 3 ឆ្នាំបន្ទាប់ពីចុះបញ្ជីមរតកបញ្ចប់ ; ដីផ្សេងទៀតមានវិធានក្នុងមាត្រា 18 ដល់ 20 ដូច្នេះគួរសួរការិយាល័យដីធ្លីមុនចុះបញ្ជី។” — This incorrectly confines the Article 18 caveat to “other land.” The [Taipei Land Department](https://land.gov.taipei/News_Content.aspx?n=9B9F6009D2FBB642&s=382E700702EC6D68&sms=87415A8B9CE81B16) confirms reciprocity also governs inheritance; the [official country table](https://www.land.ntpc.gov.tw/News.aspx?PageSize=200&n=13377&page=1&sms=9730) lists Cambodia as non-reciprocal. Article 17(2) does not bypass [Article 18](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=18). The author note's unresolved concern must be resolved before offering this acquisition-and-sale route to Cambodian widows. — Replace with: “ការទទួលដីតាមមរតកដោយជនបរទេសក៏ត្រូវបំពេញលក្ខខណ្ឌផ្តល់សិទ្ធិស្មើគ្នាទៅវិញទៅមកតាមមាត្រា 18 ដែរ។ បញ្ជីផ្លូវការឆ្នាំ 2021 ដែលនៅតែផ្សាយលើគេហទំព័ររដ្ឋាភិបាល ចាត់កម្ពុជាជាប្រទេសមិនមានលក្ខខណ្ឌនេះ។ ដូច្នេះ ប្រពន្ធដែលមានតែសញ្ជាតិខ្មែរមិនអាចពឹងលើមាត្រា 17 កថាខណ្ឌទី 2 ដើម្បីចុះបញ្ជីដីជាឈ្មោះខ្លួនបានទេ។ គួរសួរការិយាល័យដីធ្លីអំពីចំណាត់ថ្នាក់បច្ចុប្បន្ន និងវិធីចាត់ចែងចំណែកមរតកដែលពាក់ព័ន្ធនឹងដី។” Add these sources inline and at the end. Preserve the distinction between inheriting an estate and qualifying to acquire its land.
+- [M2] “ពន្ធមរតកមានកាលកំណត់ 6 ខែដូចគ្នា តែរាប់ពីថ្ងៃបន្ទាប់ពីស្លាប់ ហើយត្រូវប្រកាសនៅការិយាល័យពន្ធតាមទីកន្លែងបញ្ជីគ្រួសារ (戶籍所在地) របស់អ្នកស្លាប់ ([មាត្រា 23 នៃច្បាប់ពន្ធមរតក និងអំណោយ](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23))។” — Article 23(2) sends the Taiwan-estate return of a Taiwanese national habitually resident abroad to the tax authority at the central government's location, not necessarily the household-registration office's jurisdiction. This matters to the cross-border readership. The opening also contradicts the next-day tax trigger by saying “មានតែ 3 ខែប៉ុណ្ណោះដែលរាប់ពីថ្ងៃដែលអ្នកដឹងថាខ្លួនទទួលមរតក ; កាលកំណត់ដទៃទៀតរាប់ពីថ្ងៃស្លាប់។” — Replace the tax sentence with: “ជាទូទៅ ត្រូវប្រកាសពន្ធមរតកក្នុង 6 ខែគិតពីថ្ងៃបន្ទាប់ពីស្លាប់ នៅអាជ្ញាធរពន្ធតាមទីកន្លែងបញ្ជីគ្រួសាររបស់អ្នកស្លាប់។ ប៉ុន្តែបើអ្នកស្លាប់ជាពលរដ្ឋតៃវ៉ាន់ដែលរស់នៅក្រៅប្រទេសជាប្រចាំ ហើយមានទ្រព្យនៅតៃវ៉ាន់ ត្រូវប្រកាសនៅអាជ្ញាធរពន្ធនៅទីតាំងរដ្ឋាភិបាលកណ្តាល។” In the opening, replace “កាលកំណត់ដទៃទៀតរាប់ពីថ្ងៃស្លាប់” with “កាលកំណត់ផ្សេងទៀតមានថ្ងៃចាប់រាប់តាមនីតិវិធីនីមួយៗ”. Retain Article 23's link and the separate Article 26 extension rules.
+- [M3] “[មាត្រា 23 កថាខណ្ឌទី 1 ចំណុច 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) ក៏ឱ្យជនបរទេសដែលដៃគូស្លាប់ជាពលរដ្ឋមានបញ្ជីគ្រួសារតៃវ៉ាន់ ហើយខ្លួនមានកូនមិនគ្រប់អាយុដែលមានបញ្ជីគ្រួសារនៅតៃវ៉ាន់ ដែលខ្លួនចិញ្ចឹមថែ ប្រើអំណាច ឬជួបទាក់ទង ដាក់ពាក្យសុំស្នាក់នៅ (ជាមួយលក្ខខណ្ឌទិដ្ឋាការនៃផ្នែកដើមកថាខណ្ឌទី 1) ; ហើយ [មាត្រា 25 កថាខណ្ឌទី 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=25) អនុញ្ញាតឱ្យអ្នកស្ថិតក្នុងករណីនោះសុំស្នាក់នៅអចិន្ត្រៃយ៍ ក្នុងអំឡុងស្នាក់នៅស្របច្បាប់ ដោយមិនអនុវត្តលក្ខខណ្ឌរយៈពេលស្នាក់នៅនៃកថាខណ្ឌទី 1។” — Immigration Act 23(1)(9) requires the deceased spouse to have been residing in Taiwan AND household-registered there at death. Household registration alone does not state both conditions; Article 25(11) incorporates the same eligibility. — Add immediately before this sentence: “សម្រាប់ផ្លូវតាមមាត្រា 23 កថាខណ្ឌទី 1 ចំណុច 9 ដៃគូដែលស្លាប់ត្រូវជាពលរដ្ឋតៃវ៉ាន់ដែលរស់នៅតៃវ៉ាន់ និងមានបញ្ជីគ្រួសារនៅតៃវ៉ាន់ នៅពេលស្លាប់។” Preserve the child-related alternatives, visa conditions and limited residence-period exemption.
+
+SHOULD:
+
+- [S1] “ក្នុងរយៈ 3 ខែ លះបង់ ឬទទួលមរតក” — The heading suggests a three-month acceptance procedure, although [Civil Code 1148(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148) provides automatic succession and this section concerns renunciation and inventory filing. — Use “កាលកំណត់ 3 ខែសម្រាប់លះបង់ និងដាក់បញ្ជីមរតក”; keep both distinct procedures and their existing conditions.
+
+OVERALL: REQUEST_CHANGES

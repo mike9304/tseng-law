@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Dostane na Taiwane zamestnanec odstupné, ak odíde sám?"
-    a: "Nie. Na rozdiel od niektorých právnych poriadkov (napríklad Kórey) vzniká na Taiwane povinnosť vyplatiť odstupné (資遣費) až vtedy, keď spoločnosť zamestnanca prepustí; ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí. Ak však existuje dôvod podľa článku 14 zákona o pracovných normách, napríklad spoločnosť nevypláca mzdu alebo porušuje pracovnoprávne predpisy, a zamestnanec z tohto dôvodu zmluvu ukončí, spoločnosť musí odstupné vyplatiť."
+    a: "Nie. Na Taiwane vzniká povinnosť vyplatiť odstupné (資遣費) až vtedy, keď spoločnosť zamestnanca prepustí; ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí. Ak však existuje dôvod podľa článku 14 zákona o pracovných normách, napríklad spoločnosť nevypláca mzdu alebo porušuje pracovnoprávne predpisy, a zamestnanec z tohto dôvodu zmluvu ukončí, spoločnosť musí odstupné vyplatiť."
   - q: "Musí spoločnosť vyplatiť odstupné aj pri kárnom prepustení?"
     a: "Nie. Ak sa zamestnanec dopustí protiprávneho činu, závažne poruší pracovnú zmluvu alebo pracovný poriadok (工作規則), alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe alebo 6 dní v jednom mesiaci (článok 12 zákona o pracovných normách, 勞動基準法第12條), môže ho spoločnosť prepustiť bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Naproti tomu hospodárske prepustenie (článok 11) vyžaduje predchádzajúcu výpoveď a výplatu odstupného."
   - q: "Ako sa na Taiwane odstupné počíta?"
@@ -28,9 +28,9 @@ Text vysvetľuje, kedy nárok na odstupné vzniká a kedy nie.
 
 Úprava sa líši podľa právneho poriadku.
 
-V niektorých právnych poriadkoch, napríklad v Kórei, musí spoločnosť vyplatiť odstupné aj vtedy, keď zamestnanec odíde sám.
+Na Taiwane nárok na odstupné závisí od spôsobu skončenia pracovného pomeru.
 
-Na Taiwane je to inak:
+Platí toto všeobecné pravidlo:
 
 Povinnosť vyplatiť odstupné vzniká až vtedy, keď spoločnosť zamestnanca prepustí.
 

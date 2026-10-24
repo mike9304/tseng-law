@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Erhalten Beschäftigte in Taiwan Abfindung, wenn sie von sich aus kündigen?"
-    a: "Nein. Anders als in manchen Rechtsordnungen — Korea ist ein Beispiel — entsteht in Taiwan die Pflicht zur Zahlung der Abfindung (資遣費) erst, wenn die Gesellschaft die beschäftigte Person entlässt; kündigt die beschäftigte Person selbst, muss die Gesellschaft keine Abfindung zahlen. Liegt jedoch ein Grund nach Artikel 14 des Arbeitsstandardsgesetzes (勞動基準法第14條) vor, etwa dass die Gesellschaft den Lohn nicht zahlt oder gegen arbeitsrechtliche Vorschriften verstößt, und kündigt die beschäftigte Person deshalb den Vertrag, muss die Gesellschaft Abfindung zahlen."
+    a: "Nein. In Taiwan entsteht die Pflicht zur Zahlung der Abfindung (資遣費) erst, wenn die Gesellschaft die beschäftigte Person entlässt; kündigt die beschäftigte Person selbst, muss die Gesellschaft keine Abfindung zahlen. Liegt jedoch ein Grund nach Artikel 14 des Arbeitsstandardsgesetzes (勞動基準法第14條) vor, etwa dass die Gesellschaft den Lohn nicht zahlt oder gegen arbeitsrechtliche Vorschriften verstößt, und kündigt die beschäftigte Person deshalb den Vertrag, muss die Gesellschaft Abfindung zahlen."
   - q: "Muss die Gesellschaft auch bei einer Disziplinarkündigung Abfindung zahlen?"
     a: "Nein. Begeht die beschäftigte Person eine rechtswidrige Handlung, verletzt sie den Arbeitsvertrag oder die Betriebsregeln in schwerwiegender Weise oder bleibt sie ohne berechtigten Grund 3 Tage hintereinander oder 6 Tage in einem Monat unentschuldigt fern (Artikel 12 des Arbeitsstandardsgesetzes, 勞動基準法第12條), kann die Gesellschaft ohne vorherige Ankündigung kündigen und muss keine Abfindung zahlen. Dagegen erfordert eine wirtschaftliche Kündigung (Artikel 11) vorherige Ankündigung und Abfindungszahlung."
   - q: "Wie wird die Abfindung in Taiwan berechnet?"
@@ -28,9 +28,9 @@ Dieser Beitrag behandelt die Abfindung (資遣費) in Taiwan.
 
 Der Unterschied zu anderen Rechtsordnungen ist der Ausgangspunkt.
 
-Im Vergleich zu manchen anderen Rechtsordnungen — Korea ist ein gekennzeichnetes Beispiel — muss die Gesellschaft dort in der Regel Abfindung zahlen, wenn Beschäftigte ausscheiden.
+Ob eine Abfindung zu zahlen ist, hängt in Taiwan vom Grund der Beendigung des Arbeitsverhältnisses ab.
 
-In Taiwan ist es jedoch anders:
+Dabei wird zwischen einer Entlassung und einer Eigenkündigung unterschieden:
 
 Die Pflicht zur Abfindungszahlung entsteht erst, wenn die Gesellschaft die beschäftigte Person entlässt.
 

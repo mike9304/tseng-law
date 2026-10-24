@@ -21,7 +21,7 @@ Tại Đài Loan, theo quy định chung, người lao động không dễ đư�
 
 người lao động không được nhận trợ cấp thôi việc (Điều 18 Luật Tiêu chuẩn Lao động), vì nghĩa vụ chi trả khoản này về nguyên tắc chỉ phát sinh khi công ty chủ động cho người lao động thôi việc,
 
-và điểm này khác với một số nước, ví dụ Hàn Quốc.
+đây là nguyên tắc chung theo pháp luật Đài Loan.
 
 ​
 

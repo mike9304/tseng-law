@@ -1,0 +1,809 @@
+{
+ "batch": "world-columns-20261024",
+ "published": "2026-10-24",
+ "locales": {
+  "bg": {
+   "files": {
+    "885-bulgarian-exporter-taiwan-unpaid-invoice.md": {
+     "sha256": "66c1ad99f8246021ea22d3aa994dc76e1b220126440938c49db7a62c5e343641",
+     "matches_reviewed_draft": true
+    },
+    "886-bulgarian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "abcb4287845c7d67b643a24a084aeaf38d4316c927db57a85bd9d179fc91b310",
+     "matches_reviewed_draft": true
+    },
+    "887-bulgarian-taiwanese-marriage-registration-residence.md": {
+     "sha256": "cabbbb831fec95b6d0b3658068ee76402ba9c0669cc9cdaf6fef50905c1e1774",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-bg-r1.md"
+   ],
+   "repairs": []
+  },
+  "bn": {
+   "files": {
+    "822-bangladeshi-garment-factory-taiwan-fabric-defect-notice.md": {
+     "sha256": "e8646a45b80520c3794b73eced5d70adea80b7afa271dcce330f72c462ffb6a4",
+     "matches_reviewed_draft": true
+    },
+    "823-bangladeshi-student-taiwan-part-time-work-permit-20-hours.md": {
+     "sha256": "d5596e79240bf8b48577a5bfcdc6986486e286939b948b1c6833123083c29a0b",
+     "matches_reviewed_draft": true
+    },
+    "824-bangladeshi-importer-taiwan-supplier-new-bank-account-email.md": {
+     "sha256": "cab1c5be7b73d3a09adff2e9b3da87a668a84285b016d36bb94b6af47fd37dc5",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2",
+   "reviews": [
+    "codex-bn-r1.md",
+    "codex-bn-r2.md"
+   ],
+   "repairs": [
+    "bn-repair-r1.md"
+   ]
+  },
+  "ca": {
+   "files": {
+    "852-catalan-brand-taiwan-trademark-distributor.md": {
+     "sha256": "694874421a8d9f7b3dcb75e42bd6646b90d0c2cacaae2b196420521a471b895f",
+     "matches_reviewed_draft": true
+    },
+    "853-catalan-professional-taiwan-work-permit-residence.md": {
+     "sha256": "59f437a70c1cc3ca375531404b167a4f872b247ba7844c2d3497afe2481fc886",
+     "matches_reviewed_draft": true
+    },
+    "854-catalan-taiwan-divorce-children-residence.md": {
+     "sha256": "3add035975d9b1276c8ab7d0a558219d9ad8ec603c9cd986590c6e9fc5ec572c",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-ca-r1.md",
+    "grok-ca-r2.md"
+   ],
+   "repairs": [
+    "ca-repair-r1.md"
+   ]
+  },
+  "cs": {
+   "files": {
+    "873-czech-company-taiwan-subsidiary-branch-office.md": {
+     "sha256": "ce0561d8022beb4520f7c18f8890cf7eae4b50057a2ed15ef279dc879f5e2591",
+     "matches_reviewed_draft": true
+    },
+    "874-czech-working-holiday-taiwan-work-limits.md": {
+     "sha256": "911c019e7b5e8b8e204c30097fa4e6ca675f5a886ecc87ce536bbdf7016b5120",
+     "matches_reviewed_draft": true
+    },
+    "875-czech-buyer-taiwan-defective-machine-claim.md": {
+     "sha256": "309c3b1a079df595aea82a02b5aab2c02ccdd75f80d0c37738265bfbd5808f6b",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-cs-r1.md",
+    "grok-cs-r2.md"
+   ],
+   "repairs": [
+    "cs-repair-r1.md"
+   ]
+  },
+  "da": {
+   "files": {
+    "840-danish-company-taiwan-subsidiary-branch-project-office.md": {
+     "sha256": "63e44f22808a60df145f2d3ebffa4219dda719faa6af85e47b9850e31bbb5a33",
+     "matches_reviewed_draft": true
+    },
+    "841-danish-buyer-taiwan-wind-components-defect-notice.md": {
+     "sha256": "5f9acc0cf86338ad04a8c7bbf82b96b9995fd96f8dd5f6d2b2ad7971e81c91e9",
+     "matches_reviewed_draft": true
+    },
+    "842-danish-engineer-taiwan-work-permit-family-residence.md": {
+     "sha256": "518f3b631256ca43e18527aa578bee7c416be54b069656e0c69538f6126fb4ad",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-da-r1.md",
+    "grok-da-r2.md"
+   ],
+   "repairs": [
+    "da-repair-r1.md"
+   ]
+  },
+  "el": {
+   "files": {
+    "855-greek-shipowner-arbitral-award-taiwan-enforcement.md": {
+     "sha256": "bfce4fedf20b85c3777a043cd2c566393b37bd9c46f9e1d5170590d0add969f6",
+     "matches_reviewed_draft": true
+    },
+    "856-greek-exporter-taiwan-unpaid-olive-oil-invoices.md": {
+     "sha256": "dddf18954587a4a6278a0fe4c3eeb435fd51c4d25ab28e3b009e59089b1a1fb7",
+     "matches_reviewed_draft": true
+    },
+    "857-greek-professionals-taiwan-work-permit-residence.md": {
+     "sha256": "efdb7022f24170791529dff5dd8456ac4426069a1937ba45d992d71cbd5bf184",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-el-r1.md"
+   ],
+   "repairs": []
+  },
+  "et": {
+   "files": {
+    "903-estonian-company-taiwan-first-hire-eor.md": {
+     "sha256": "1f3971c5b36bd06cc3d2eee6c66401db00f45369bdfa147e58169a18cdd15c53",
+     "matches_reviewed_draft": true
+    },
+    "904-estonian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "5e1a7db6c92ade03bc31bc8d789699c0f107309d7e9ea3c15133bab6d2e5112c",
+     "matches_reviewed_draft": true
+    },
+    "905-estonian-supplier-taiwan-unpaid-technology-invoices.md": {
+     "sha256": "a92830076984b50909dac13b86af09dd54b8a650eb8c629488c33f8285337242",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-et-r1.md"
+   ],
+   "repairs": []
+  },
+  "fa": {
+   "files": {
+    "828-iranian-professional-taiwan-work-permit-visa-arc.md": {
+     "sha256": "2f6e9ad7b2ea90e9ac9347049eecafa36e4aea604514e8f63b1d3ed27ce070ce",
+     "matches_reviewed_draft": true
+    },
+    "829-iranian-buyer-taiwan-supplier-export-control-permit.md": {
+     "sha256": "5bdf28545e39c34c02a080974f89f36280cb05006d458552f4f5053dc8e83ab4",
+     "matches_reviewed_draft": true
+    },
+    "830-iranian-spouse-marry-taiwanese-national-registration.md": {
+     "sha256": "c6d591620e5a9676b485047fd29a8afad649eb25b56d28ab664cec8ef2b9c40a",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2",
+   "reviews": [
+    "codex-fa-r1.md",
+    "codex-fa-r2.md"
+   ],
+   "repairs": [
+    "fa-repair-r1.md"
+   ]
+  },
+  "fi": {
+   "files": {
+    "846-finnish-supplier-taiwan-distributor-exit-stock.md": {
+     "sha256": "fb0c07b1f7c22798ea0f854888272331584bb61c23f1a7b6d53759878cf9b108",
+     "matches_reviewed_draft": true
+    },
+    "847-finnish-professional-taiwan-work-permit-family.md": {
+     "sha256": "391d3a7d13b2e406eeeb81e9ba8de1ec97af9a7df26408ae9424f099787ed7f7",
+     "matches_reviewed_draft": true
+    },
+    "848-finnish-heir-taiwan-estate-renunciation-documents.md": {
+     "sha256": "7b1bf74f6e265647222fbbd9bba86c43519dfd80b4e39af11889ce452f1dfd71",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-fi-r1.md"
+   ],
+   "repairs": []
+  },
+  "fil": {
+   "files": {
+    "801-filipino-caregiver-taiwan-patient-died-transfer-employer.md": {
+     "sha256": "9853ed4c62119389aae60a8f9bccce47541c2328afce0de540d5911b35c0bcb6",
+     "matches_reviewed_draft": true
+    },
+    "802-filipino-factory-worker-taiwan-overtime-deductions-broker-fee.md": {
+     "sha256": "11c5df75473d1a60d2b1033d5039ef4ca0b865b74731c7d08af768e706ff7e93",
+     "matches_reviewed_draft": true
+    },
+    "803-filipino-worker-taiwan-reported-missing-overstay-surrender.md": {
+     "sha256": "567139a86d53c1aa568d376b72923b44cce06b3ee4cc8b46bf6505f6a4f64bf3",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2 + conductor fixes (802 art.66(5) non-cash exception, 803 ESA art.74(2) condition; work/fil-repair-r2.md)",
+   "reviews": [
+    "codex-fil-r1.md",
+    "codex-fil-r2.md"
+   ],
+   "repairs": [
+    "fil-repair-r1.md",
+    "fil-repair-r2.md"
+   ]
+  },
+  "he": {
+   "files": {
+    "858-israeli-tech-taiwan-source-code-trade-secrets.md": {
+     "sha256": "4a0cf8594175c854a1c654eaa0800f99f9c1da330901ef911d2cd0b9f82108b1",
+     "matches_reviewed_draft": true
+    },
+    "859-israeli-company-taiwan-subsidiary-branch-investment.md": {
+     "sha256": "111c08ddc0b635004c65f020001591cee06e13aa3e3f5b6bc3f7ec474e08ba11",
+     "matches_reviewed_draft": true
+    },
+    "860-israeli-professional-taiwan-work-permit-residence.md": {
+     "sha256": "1744dbffeb3de30181e8cd9bce7355c9eb3512600c680e653c872b45719da760",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-he-r1.md",
+    "sonnet-he-r1.md"
+   ],
+   "repairs": []
+  },
+  "hr": {
+   "files": {
+    "888-croatian-buyer-taiwan-defective-machine-evidence.md": {
+     "sha256": "0ff1a70280cbe37057f122cc2a5fecd1bad633cad36599d8e4b9f178190d5494",
+     "matches_reviewed_draft": true
+    },
+    "889-croatian-professionals-taiwan-work-permit-residence.md": {
+     "sha256": "52c5c18cddbc459af2a3a1b1c1e1b41dbcd2fafc692d0afbfc48ce67b23e1139",
+     "matches_reviewed_draft": true
+    },
+    "890-croatian-traveler-taiwan-accident-return-home.md": {
+     "sha256": "62296363b777dee237c2c47d4e8027635379f6113220e1a2cc47c40de989f282",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-hr-r1.md"
+   ],
+   "repairs": []
+  },
+  "hu": {
+   "files": {
+    "879-hungarian-working-holiday-taiwan-employer-limit.md": {
+     "sha256": "3b7abbc7c191d7b7c9bb504881490efc50a4e22f1c258a84f6bdfb3c60c16295",
+     "matches_reviewed_draft": true
+    },
+    "880-hungarian-company-taiwan-subsidiary-branch-setup.md": {
+     "sha256": "0aca5ad7eec932c6bce4b9e9140fc319ddd4381f95ae8ba404efffe1339eae96",
+     "matches_reviewed_draft": true
+    },
+    "881-hungarian-heir-taiwan-estate-deadlines-documents.md": {
+     "sha256": "6b57f7c93892e687f39096e0850536e4fa6dc2f6541ceb8cca87cb864f0a9b2c",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-hu-r1.md",
+    "grok-hu-r2.md"
+   ],
+   "repairs": [
+    "hu-repair-r1.md"
+   ]
+  },
+  "is": {
+   "files": {
+    "849-icelandic-professional-taiwan-work-permit-residence.md": {
+     "sha256": "435ec8687670d1b0cd29bdf68925acfad985ff29a156d0ca072d2871d838a9cd",
+     "matches_reviewed_draft": true
+    },
+    "850-icelandic-traveller-taiwan-accident-return-home.md": {
+     "sha256": "4d3e9a69dbeb0f9f302ce039d807b9f581780639f6c9bbdcf77b91caf91ab5d1",
+     "matches_reviewed_draft": true
+    },
+    "851-icelandic-exporter-taiwan-unpaid-shipment-invoice.md": {
+     "sha256": "0947ab01127e014ff30358c7b70e92737e6b8fc7c7d48cd1dd2ce4664007c2d8",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-is-r1.md"
+   ],
+   "repairs": []
+  },
+  "km": {
+   "files": {
+    "813-cambodian-spouse-marry-taiwanese-interview-list-registration.md": {
+     "sha256": "fb4aeaaaaeb810b3dd37faa2e9c075c3dc37cb483d266ed3c7a053b600c1befa",
+     "matches_reviewed_draft": true
+    },
+    "814-cambodian-wife-divorce-taiwanese-husband-arc-children.md": {
+     "sha256": "832677161a1f8bf5581be487b0bca5892584deeef62eddafcb00e152590d9049",
+     "matches_reviewed_draft": true
+    },
+    "815-cambodian-widow-taiwanese-husband-death-inheritance-arc.md": {
+     "sha256": "158235a33525642cca8e3ddc5f9124421ebf445b89cb09fbc7d72bb54b0b9dcb",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2 + conductor fix (815 Land Act 17(2) buyer restriction, work/km-repair-r2.md)",
+   "reviews": [
+    "codex-km-r1.md",
+    "codex-km-r2.md"
+   ],
+   "repairs": [
+    "km-repair-r1.md",
+    "km-repair-r2.md"
+   ]
+  },
+  "lt": {
+   "files": {
+    "897-lithuanian-laser-company-taiwan-subsidiary-branch.md": {
+     "sha256": "7a257f8b02bee6f58a1a84dd8376b62653fc9c8355ea4085d4f44e38a8cae8dc",
+     "matches_reviewed_draft": true
+    },
+    "898-lithuanian-engineer-taiwan-work-permit-residence.md": {
+     "sha256": "7560db694fc470f6e902a784dc537ee8586ab4ecbf3834ddd263e1ae1a637f36",
+     "matches_reviewed_draft": true
+    },
+    "899-lithuanian-brand-taiwan-distributor-trademark-registration.md": {
+     "sha256": "fa6dfd1b6d4476ca1fd89f35ac849492229bfc7f5c61a2916a443f20804e9b84",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-lt-r1.md"
+   ],
+   "repairs": []
+  },
+  "lv": {
+   "files": {
+    "900-latvian-timber-exporter-taiwan-unpaid-invoices.md": {
+     "sha256": "681e93258f33d87d2af01567054f01ac4b228b034abc7071dfe57484ae1f7561",
+     "matches_reviewed_draft": true
+    },
+    "901-latvian-professional-taiwan-work-permit-family.md": {
+     "sha256": "135c7694a75ecc2a5686b296ce56f1d1023f47b24ab5d5334d2c0131d41117a8",
+     "matches_reviewed_draft": true
+    },
+    "902-latvian-visitor-taiwan-traffic-injury-return-home.md": {
+     "sha256": "1dd1f36062c0b26ff02d41ca31e3ddea8df931441a6306d9797c6ff78893d0a3",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-lv-r1.md"
+   ],
+   "repairs": []
+  },
+  "mn": {
+   "files": {
+    "816-mongolian-student-taiwan-part-time-work-permit-hours.md": {
+     "sha256": "293694a1b00a30f6d9f3ff9721bbd977c075fc656713e4afafa642d621c35035",
+     "matches_reviewed_draft": true
+    },
+    "817-mongolian-worker-taiwan-unpaid-overtime-wages-labor-mediation.md": {
+     "sha256": "029c36ccd42aac0f694c545a3ae2da77b50d3819cc631ef2cb8251c4e3e60fda",
+     "matches_reviewed_draft": true
+    },
+    "818-mongolian-student-taiwan-scooter-accident-police-records-insurance.md": {
+     "sha256": "00864a0a070b8547a7e0278921b5607873aa44bc6d733930af3ec14bb4c437e3",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2 + conductor fix (817 FPA art.12 degree condition, work/mn-repair-r2.md)",
+   "reviews": [
+    "codex-mn-r1.md",
+    "codex-mn-r2.md"
+   ],
+   "repairs": [
+    "mn-repair-r1.md",
+    "mn-repair-r2.md"
+   ]
+  },
+  "ms": {
+   "files": {
+    "807-malaysian-student-taiwan-part-time-work-permit.md": {
+     "sha256": "43d9015f10c60f1e6bd65bee1df59ed33597db36919bf9c4eb96d68aeafbd896",
+     "matches_reviewed_draft": true
+    },
+    "808-malaysian-brand-taiwan-subsidiary-branch-first-shop.md": {
+     "sha256": "c9cc65e94eb9138206c55d7d4efa6b2ceabf105b838b71fbda0e8011fe19344d",
+     "matches_reviewed_draft": true
+    },
+    "809-malaysian-rider-taiwan-scooter-accident-licence-insurance.md": {
+     "sha256": "3ddd7b07de5b1ced348093b965ef60734dc85f307b10bc51c4b9ebef0d9ac9ed",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2 + conductor fix (807 Permit Regs art.51(2)(1); work/ms-repair-r2.md)",
+   "reviews": [
+    "codex-ms-r1.md",
+    "codex-ms-r2.md"
+   ],
+   "repairs": [
+    "ms-repair-r1.md",
+    "ms-repair-r2.md"
+   ]
+  },
+  "my": {
+   "files": {
+    "810-myanmar-student-taiwan-part-time-work-permit-graduation.md": {
+     "sha256": "7e525559452566dcaa0bbfea32b5129273421ae7bdab35ae78ac41117bc12d85",
+     "matches_reviewed_draft": true
+    },
+    "811-myanmar-resident-taiwan-bank-account-lending-police-warning.md": {
+     "sha256": "74c98486615c8f6aa5d8ecb98a5bf7c61c9e9fa6ff5bcc9b7ac15ad9af71b3b8",
+     "matches_reviewed_draft": true
+    },
+    "812-myanmar-spouse-taiwanese-marriage-interview-registration-visa.md": {
+     "sha256": "ec69ca5614cd72f0779475341b5e2f592df26e4ab207a2249659e942e698b50a",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2",
+   "reviews": [
+    "codex-my-r1.md",
+    "codex-my-r2.md"
+   ],
+   "repairs": [
+    "my-repair-r1.md"
+   ]
+  },
+  "nb": {
+   "files": {
+    "843-norwegian-seafood-exporter-taiwan-unpaid-invoices.md": {
+     "sha256": "0c8825a98358571536e49eb4a5c27cecb426c3b6c0188e1146df676d2cbe3bcd",
+     "matches_reviewed_draft": true
+    },
+    "844-norwegian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "cf93f6bdae3a40d9752e4763662131d34c5b1238a672b3f18b6418c51a8eb099",
+     "matches_reviewed_draft": true
+    },
+    "845-norwegian-traveller-taiwan-traffic-accident-return-home.md": {
+     "sha256": "44a3f4baf19b12ca93de4b66439d3d03ddcfa8ee5c2f223c7764a383a0bbfc35",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-nb-r1.md"
+   ],
+   "repairs": []
+  },
+  "ne": {
+   "files": {
+    "819-nepali-student-taiwan-part-time-work-permit-20-hours.md": {
+     "sha256": "472b361bc3b008e849f5c36542e4a65fcae791e28ff55314b784adc21c3a73d6",
+     "matches_reviewed_draft": true
+    },
+    "820-nepali-graduate-taiwan-stay-work-after-degree-points.md": {
+     "sha256": "2424f8fed6357206781712392480b94037928f4e10038484f92b9dc0558a3132",
+     "matches_reviewed_draft": true
+    },
+    "821-nepali-student-taiwan-bank-account-easy-job-police.md": {
+     "sha256": "31c5fd02550fcce02add3926a4b86d83311a767d2a4c134096242706eeed6265",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2",
+   "reviews": [
+    "codex-ne-r1.md",
+    "codex-ne-r2.md"
+   ],
+   "repairs": [
+    "ne-repair-r1.md"
+   ]
+  },
+  "nl": {
+   "files": {
+    "834-dutch-company-taiwan-subsidiary-branch-office.md": {
+     "sha256": "a48099143da3442295e5df3fba06bb426f85db2d778d2da445e3c37c704a2ced",
+     "matches_reviewed_draft": true
+    },
+    "835-dutch-employer-taiwan-first-hire-eor.md": {
+     "sha256": "acc99ca7a2809d513778d9c5f2187b2dc79d58b331a626d5afb769b769b70250",
+     "matches_reviewed_draft": true
+    },
+    "836-dutch-working-holiday-taiwan-work-insurance-tax.md": {
+     "sha256": "a20827f6b136cfae498ca07878486c926b2ec60d6b46ba4fb08460c7e9ddbea4",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-nl-r1.md",
+    "grok-nl-r2.md"
+   ],
+   "repairs": [
+    "nl-repair-r1.md"
+   ]
+  },
+  "pl": {
+   "files": {
+    "870-polish-company-taiwan-subsidiary-branch-office.md": {
+     "sha256": "851f6ab74ced595afb28ad046a60b868a38e2b0e9b2c3e0accbe355eb8431dd0",
+     "matches_reviewed_draft": true
+    },
+    "871-polish-working-holiday-taiwan-six-month-work.md": {
+     "sha256": "39786ebba649fff8e6a89f7d671ba655a1c0ad3d43bd2cf4626fa53c1a3d45f7",
+     "matches_reviewed_draft": true
+    },
+    "872-polish-exporter-taiwan-unpaid-euro-invoices.md": {
+     "sha256": "89833e0873507618b4eadf5b356e06f4cc1908de3f32a10717335abd9db3596c",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-pl-r1.md",
+    "sonnet-pl-r1.md"
+   ],
+   "repairs": []
+  },
+  "ro": {
+   "files": {
+    "882-romanian-exporter-taiwan-unpaid-panel-invoices.md": {
+     "sha256": "915c740d9a6c6205dd7cca892d7a596dded88bff87237190e5de12c7ced7df66",
+     "matches_reviewed_draft": true
+    },
+    "883-romanian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "dd1a04679bd6387ad98beebbd9e876d4dfd0fa2ab1da7b1d581de0d6caac10ed",
+     "matches_reviewed_draft": true
+    },
+    "884-romanian-visitor-taiwan-traffic-injury-return-home.md": {
+     "sha256": "8043fe25c3895f013d6a5e4e0d89f74dfc7514a954d623e078780d23319c1707",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-ro-r1.md"
+   ],
+   "repairs": []
+  },
+  "ru": {
+   "files": {
+    "864-russian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "3ca5e457d30ee96cf31a159710364d26b2b41eb2dca5b4e2f198f7d57d47a216",
+     "matches_reviewed_draft": true
+    },
+    "865-russian-buyer-taiwan-export-controls-end-user.md": {
+     "sha256": "36b319f7849771ae27b8a033b0831a7fc199c6c20589d8e1e37a23c20ca76ee5",
+     "matches_reviewed_draft": true
+    },
+    "866-russian-spouse-taiwan-divorce-child-residence.md": {
+     "sha256": "d98f1635baa3866c462ef339a0a6b78303f6e64e0e278aa337cac5dabc070456",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-ru-r1.md",
+    "grok-ru-r2.md"
+   ],
+   "repairs": [
+    "ru-repair-r1.md"
+   ]
+  },
+  "sk": {
+   "files": {
+    "876-slovak-working-holiday-taiwan-six-month-work-limit.md": {
+     "sha256": "4872d651d8e00993758d96ea11288572ded7869abeebedc9b75e7ca3eff8b0d9",
+     "matches_reviewed_draft": true
+    },
+    "877-slovak-exporter-taiwan-unpaid-invoice-recovery.md": {
+     "sha256": "6ea8b00d34437efa448b92dd3e768ecd245df96300aebd28e8dc18ea545becc1",
+     "matches_reviewed_draft": true
+    },
+    "878-slovak-business-taiwan-subsidiary-branch-office.md": {
+     "sha256": "fc52c963e0670f3317f9cd50ebe4b5b65fc1d364fbc298e1df0f21dc29ef624f",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-sk-r1.md"
+   ],
+   "repairs": []
+  },
+  "sl": {
+   "files": {
+    "894-slovenian-supplier-taiwan-distributor-exit-stock.md": {
+     "sha256": "1226d9dd4572b26a41522f4f6d99f00a879559c815a49b5bd8504ffc012da81d",
+     "matches_reviewed_draft": true
+    },
+    "895-slovenian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "87ec86924d3a1c59da12d9c1a15647a9361b8f734132d004c3f02af9a1ac4d00",
+     "matches_reviewed_draft": true
+    },
+    "896-slovenian-heir-taiwan-estate-documents-deadlines.md": {
+     "sha256": "3012a854088f446419b5aca8ff00d5963ed610243c201c873ec375105b6b660b",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-sl-r1.md"
+   ],
+   "repairs": []
+  },
+  "sr": {
+   "files": {
+    "891-serbian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "caacb03586383f0cb09ba8e78ecfce533b5e0d2a61d2189707d9dbe186f608bb",
+     "matches_reviewed_draft": true
+    },
+    "892-serbian-fruit-exporter-taiwan-unpaid-invoices.md": {
+     "sha256": "e018fa70eb2d555a6a81f9001ab4524749398175df792d42b47f27c87817d0cb",
+     "matches_reviewed_draft": true
+    },
+    "893-serbian-resident-taiwan-police-summons-interpreter.md": {
+     "sha256": "036d8f0e03a9c48a9e7474eb7e581dfbca27781d4bb690c825e16090b1594dc8",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-sr-r1.md",
+    "grok-sr-r2.md"
+   ],
+   "repairs": [
+    "sr-repair-r1.md"
+   ]
+  },
+  "sv": {
+   "files": {
+    "837-swedish-company-taiwan-subsidiary-branch-office.md": {
+     "sha256": "7bc250364c8bb4c2b07d44a627172c01728ccaa691d5d8000b70155a883bac05",
+     "matches_reviewed_draft": true
+    },
+    "838-swedish-professional-taiwan-work-permit-residence.md": {
+     "sha256": "f4f39e384c845a706ea2e80729e914c357741c7849c4ca5127c1775c7b25989d",
+     "matches_reviewed_draft": true
+    },
+    "839-swedish-heir-taiwan-estate-deadlines-documents.md": {
+     "sha256": "747f5070754ab79e43c6bf38264ef4d740f3ce34519a16edf950c7c85d027ce4",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-sv-r1.md",
+    "grok-sv-r2.md"
+   ],
+   "repairs": [
+    "sv-repair-r1.md"
+   ]
+  },
+  "ta": {
+   "files": {
+    "831-tamil-engineer-taiwan-work-permit-family-residence.md": {
+     "sha256": "6c59b6efc99258c82fc7441f7fc33adb22c67036f25677bb000584f93356194e",
+     "matches_reviewed_draft": true
+    },
+    "832-tamil-engineer-taiwan-job-ends-permit-arc-severance.md": {
+     "sha256": "cffdc9d27b2b92791dd60b2a8c775d0b39b074ef57c78ee0151313013d9ed45d",
+     "matches_reviewed_draft": true
+    },
+    "833-tamil-manufacturer-taiwan-machine-defect-shipping-risk.md": {
+     "sha256": "4923257f6e8cddcb92408dc25dcd3fdfa2b823cef5661316247c3ee230a5bf04",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r3",
+   "reviews": [
+    "codex-ta-r1.md",
+    "codex-ta-r2.md",
+    "codex-ta-r3.md"
+   ],
+   "repairs": [
+    "ta-repair-r1.md",
+    "ta-repair-r2.md"
+   ]
+  },
+  "tr": {
+   "files": {
+    "861-turkish-exporter-taiwan-unpaid-marble-invoices.md": {
+     "sha256": "030a4b71c43dab230cde45b16123e564fb4a45850f123e7462f3880ab8531f9d",
+     "matches_reviewed_draft": true
+    },
+    "862-turkish-importer-taiwan-machine-defect-notice.md": {
+     "sha256": "64ea59531817dc2c5881bff3ccad40058e3a80a2840cd9e26e10f18c2d793945",
+     "matches_reviewed_draft": true
+    },
+    "863-turkish-professionals-taiwan-work-permit-residence.md": {
+     "sha256": "6859d9d7b5d0d86ea13052cb227db1b7e95a698c1b87b4aea0a7167329692888",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r2",
+   "reviews": [
+    "grok-tr-r1.md",
+    "grok-tr-r2.md"
+   ],
+   "repairs": [
+    "tr-repair-r1.md"
+   ]
+  },
+  "uk": {
+   "files": {
+    "867-ukrainian-professional-taiwan-work-permit-residence.md": {
+     "sha256": "74f6c03570e036376834b46486882d12e1525a55eb9dc9adde07dbf2549e8a73",
+     "matches_reviewed_draft": true
+    },
+    "868-ukrainian-taiwanese-marriage-documents-residence.md": {
+     "sha256": "1165661aa6663f0aba7725678f09e55f961e1acbc9d0e429c6d12bed6aa75ced",
+     "matches_reviewed_draft": true
+    },
+    "869-ukrainian-oil-exporter-taiwan-unpaid-invoice.md": {
+     "sha256": "a5b3c61d30e64b691e4e4b23abdb7cd451dc85d0621c958f745d4025a2f31a46",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS r1",
+   "reviews": [
+    "grok-uk-r1.md"
+   ],
+   "repairs": []
+  },
+  "ur": {
+   "files": {
+    "825-pakistani-exporter-unpaid-taiwan-buyer-invoice.md": {
+     "sha256": "38b3ade9055bf2234d3451d739f9141877c81323f7488cf9a12914a5d3722231",
+     "matches_reviewed_draft": true
+    },
+    "826-pakistani-engineer-taiwan-work-permit-arc-family.md": {
+     "sha256": "83cda33f444aa6ac3f162d4a696aacbd2f570a081221d61eb0325720a5bfdc00",
+     "matches_reviewed_draft": true
+    },
+    "827-pakistani-fiance-marry-taiwanese-national-interview.md": {
+     "sha256": "0398011a4b47293132710a5694ff2c0fe13d42a09261112adfa76c6e7f5b6d5a",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2",
+   "reviews": [
+    "codex-ur-r1.md",
+    "codex-ur-r2.md"
+   ],
+   "repairs": [
+    "ur-repair-r1.md"
+   ]
+  },
+  "zh-hans": {
+   "files": {
+    "804-mainland-chinese-heirs-taiwan-estate-cap-deadline.md": {
+     "sha256": "75bea889acaaffe6a87e92f3a5f78a290215457a16eb3159152350fe23b0983e",
+     "matches_reviewed_draft": true
+    },
+    "805-mainland-chinese-spouse-taiwan-residence-after-divorce.md": {
+     "sha256": "c65b83b2861d0e2772bffaa178834a0f951cee3f92a896f364245b3733a538d0",
+     "matches_reviewed_draft": true
+    },
+    "806-mainland-chinese-judgment-arbitral-award-taiwan-recognition.md": {
+     "sha256": "0c5dd7b7a2f258d10946e2c811107c73a3e6b7721b4893a3358a87221d5abc4e",
+     "matches_reviewed_draft": true
+    }
+   },
+   "status": "PASS codex-r2",
+   "reviews": [
+    "codex-zh-hans-r1.md",
+    "codex-zh-hans-r2.md"
+   ],
+   "repairs": [
+    "zh-hans-repair-r1.md"
+   ]
+  }
+ }
+}

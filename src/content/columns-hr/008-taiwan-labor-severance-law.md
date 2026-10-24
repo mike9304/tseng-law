@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Na Tajvanu, prima li radnik zakonsku otpremninu ako sam ode?"
-    a: "Ne. Za razliku od nekih pravnih poredaka (Koreje, na primjer), na Tajvanu obveza isplate zakonske otpremnine (資遣費) nastaje tek kada društvo otpusti radnika; ako radnik sam ode, društvo zakonsku otpremninu ne mora isplatiti. Međutim, ako postoji razlog iz članka 14. Zakona o standardima rada, primjerice društvo ne isplaćuje plaću ili krši radnopravne propise, a radnik zbog toga raskine ugovor, društvo mora isplatiti zakonsku otpremninu."
+    a: "Ne. Na Tajvanu obveza isplate zakonske otpremnine (資遣費) nastaje tek kada društvo otpusti radnika; ako radnik sam ode, društvo zakonsku otpremninu ne mora isplatiti. Međutim, ako postoji razlog iz članka 14. Zakona o standardima rada, primjerice društvo ne isplaćuje plaću ili krši radnopravne propise, a radnik zbog toga raskine ugovor, društvo mora isplatiti zakonsku otpremninu."
   - q: "Mora li društvo isplatiti zakonsku otpremninu i pri stegovnom otkazu?"
     a: "Ne. Ako radnik počini protupravnu radnju, teško povrijedi ugovor o radu ili radna pravila ili se bez opravdanog razloga ne pojavi 3 dana uzastopce ili 6 dana u jednom mjesecu (članak 12. Zakona o standardima rada, 勞動基準法第12條), društvo može otpustiti bez prethodne obavijesti i zakonsku otpremninu ne mora isplatiti. Nasuprot tomu, gospodarski otkaz (članak 11.) zahtijeva prethodnu obavijest i isplatu zakonske otpremnine."
   - q: "Kako se na Tajvanu računa zakonska otpremnina?"
@@ -28,9 +28,9 @@ Tekst objašnjava kada pravo na zakonsku otpremninu nastaje, a kada ne.
 
 Uređenje se od države do države razlikuje.
 
-U nekim pravnim poredcima, na primjer u Koreji, društvo mora isplatiti zakonsku otpremninu pa i kada radnik sam ode.
+Na Tajvanu sam prestanak radnog odnosa ne daje radniku pravo na zakonsku otpremninu.
 
-Na Tajvanu je drukčije:
+Na Tajvanu vrijedi sljedeće pravilo:
 
 Obveza isplate zakonske otpremnine nastaje tek kada društvo otpusti radnika.
 

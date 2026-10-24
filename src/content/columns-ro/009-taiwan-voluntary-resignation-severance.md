@@ -17,11 +17,11 @@ După cum am arătat într-un articol anterior, în Taiwan nu este ușor pentru 
 
 ​
 
-În special, dacă salariatul demisionează din proprie inițiativă (自請離職),
+În Taiwan, dacă salariatul demisionează din proprie inițiativă (自請離職),
 
-nu poate primi indemnizația de concediere (資遣費) (art. 18 din legea standardelor muncii),
+nu poate primi indemnizația de concediere (資遣費)
 
-spre deosebire de unele state, de exemplu Coreea.
+(art. 18 din legea standardelor muncii).
 
 ​
 

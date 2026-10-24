@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Ontvangen werknemers in Taiwan een ontslagvergoeding wanneer zij zelf ontslag nemen?"
-    a: "Nee. Anders dan in sommige andere landen — Korea is daarvan een voorbeeld — ontstaat in Taiwan de plicht tot betaling van de ontslagvergoeding (資遣費) pas wanneer de werkgever de werknemer ontslaat; neemt de werknemer zelf ontslag, dan hoeft de vennootschap geen ontslagvergoeding te betalen. Bestaat er echter een grond als bedoeld in artikel 14 van de wet op de arbeidsnormen (勞動基準法第14條), zoals dat de vennootschap het loon niet betaalt of de arbeidswetten en -voorschriften schendt, en beëindigt de werknemer de overeenkomst daarom, dan moet de vennootschap wel een ontslagvergoeding betalen."
+    a: "Nee. In Taiwan ontstaat de plicht tot betaling van de ontslagvergoeding (資遣費) pas wanneer de werkgever de werknemer ontslaat; neemt de werknemer zelf ontslag, dan hoeft de vennootschap geen ontslagvergoeding te betalen. Bestaat er echter een grond als bedoeld in artikel 14 van de wet op de arbeidsnormen (勞動基準法第14條), zoals dat de vennootschap het loon niet betaalt of de arbeidswetten en -voorschriften schendt, en beëindigt de werknemer de overeenkomst daarom, dan moet de vennootschap wel een ontslagvergoeding betalen."
   - q: "Moet de vennootschap ook bij een tuchtontslag een ontslagvergoeding betalen?"
     a: "Nee. Pleegt de werknemer een onrechtmatige handeling, schendt hij de arbeidsovereenkomst of interne regels ernstig of blijft hij zonder geldige reden 3 dagen achtereen of 6 dagen in 1 maand ongewettigd afwezig (artikel 12 van de wet op de arbeidsnormen, 勞動基準法第12條), dan kan de vennootschap zonder voorafgaande opzegging ontslaan en hoeft zij geen ontslagvergoeding te betalen. Daarentegen vereist een economisch ontslag (artikel 11) voorafgaande opzegging en betaling van de ontslagvergoeding."
   - q: "Hoe wordt de ontslagvergoeding in Taiwan berekend?"
@@ -28,9 +28,9 @@ Hieronder staat wanneer die vergoeding verschuldigd is en wanneer niet.
 
 Dat beginsel is algemeen bekend.
 
-In sommige andere landen — Korea bijvoorbeeld — moet de vennootschap een ontslagvergoeding betalen wanneer werknemers vertrekken.
+In Taiwan hangt het recht op een ontslagvergoeding af van de manier waarop het dienstverband eindigt.
 
-In Taiwan ligt dat anders:
+Daarvoor geldt de volgende hoofdregel:
 
 De plicht tot betaling van de ontslagvergoeding ontstaat pas wanneer de vennootschap de werknemer ontslaat.
 

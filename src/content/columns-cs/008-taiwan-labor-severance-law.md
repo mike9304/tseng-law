@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Na Tchaj-wanu dostane zaměstnanec odstupné, pokud sám odejde?"
-    a: "Ne. Na rozdíl od některých jurisdikcí (například Koreje) vzniká na Tchaj-wanu povinnost vyplatit odstupné (資遣費) teprve tehdy, když společnost zaměstnance propustí; pokud zaměstnanec sám odejde, společnost odstupné vyplácet nemusí. Pokud však existuje důvod podle článku 14 zákona o pracovních normách, například společnost nevyplácí mzdu nebo porušuje pracovněprávní předpisy, a zaměstnanec z tohoto důvodu smlouvu ukončí, musí společnost odstupné vyplatit."
+    a: "Ne. Na Tchaj-wanu vzniká povinnost vyplatit odstupné (資遣費) teprve tehdy, když společnost zaměstnance propustí; pokud zaměstnanec sám odejde, společnost odstupné vyplácet nemusí. Pokud však existuje důvod podle článku 14 zákona o pracovních normách, například společnost nevyplácí mzdu nebo porušuje pracovněprávní předpisy, a zaměstnanec z tohoto důvodu smlouvu ukončí, musí společnost odstupné vyplatit."
   - q: "Musí společnost vyplatit odstupné i při kárném propuštění?"
     a: "Ne. Dopustí-li se zaměstnanec protiprávního činu, závažně poruší pracovní smlouvu nebo vnitřní řád, nebo se bez oprávněného důvodu nedostaví 3 dny po sobě nebo 6 dnů v jednom měsíci (článek 12 zákona o pracovních normách, 勞動基準法第12條), může společnost propustit bez výpovědi a odstupné vyplácet nemusí. Naproti tomu hospodářské propuštění (článek 11) vyžaduje předchozí výpověď a výplatu odstupného."
   - q: "Jak se na Tchaj-wanu odstupné počítá?"
@@ -28,9 +28,9 @@ Text vysvětluje, kdy nárok na odstupné vzniká a kdy nikoli.
 
 Úprava se liší stát od státu.
 
-V některých jurisdikcích, například v Koreji, musí společnost vyplatit odstupné i tehdy, když zaměstnanec odejde sám.
+Na Tchaj-wanu závisí nárok na odstupné na důvodu skončení pracovního poměru.
 
-Na Tchaj-wanu je to jiné:
+Rozlišuje se propuštění zaměstnance a jeho dobrovolný odchod:
 
 Povinnost vyplatit odstupné vzniká teprve tehdy, když společnost zaměstnance propustí.
 

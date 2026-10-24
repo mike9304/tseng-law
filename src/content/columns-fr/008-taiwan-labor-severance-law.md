@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "À Taïwan, les salariés perçoivent-ils une indemnité de licenciement s’ils démissionnent d’eux-mêmes ?"
-    a: "Non. Contrairement à certains droits — par exemple la Corée —, à Taïwan l’obligation de verser l’indemnité de licenciement (資遣費) ne naît que lorsque la société licencie le salarié ; si le salarié démissionne de lui-même, la société n’a pas à verser d’indemnité de licenciement. Toutefois, s’il existe un motif visé à l’article 14 de la loi sur les normes du travail (勞動基準法第14條), par exemple si la société ne verse pas le salaire ou enfreint les lois et règlements du travail, et que le salarié met fin au contrat pour ce motif, la société doit verser l’indemnité de licenciement."
+    a: "Non. À Taïwan, l’obligation de verser l’indemnité de licenciement (資遣費) ne naît que lorsque la société licencie le salarié ; si le salarié démissionne de lui-même, la société n’a pas à verser d’indemnité de licenciement. Toutefois, s’il existe un motif visé à l’article 14 de la loi sur les normes du travail (勞動基準法第14條), par exemple si la société ne verse pas le salaire ou enfreint les lois et règlements du travail, et que le salarié met fin au contrat pour ce motif, la société doit verser l’indemnité de licenciement."
   - q: "La société doit-elle aussi verser une indemnité de licenciement en cas de licenciement disciplinaire ?"
     a: "Non. Si le salarié commet un acte illicite, viole gravement le contrat de travail ou le règlement intérieur, ou s’absente sans motif légitime 3 jours de suite ou 6 jours dans un mois (article 12 de la loi sur les normes du travail, 勞動基準法第12條), la société peut licencier sans préavis et n’a pas à verser d’indemnité de licenciement. En revanche, un licenciement économique (article 11) exige un préavis préalable et le versement de l’indemnité de licenciement."
   - q: "Comment l’indemnité de licenciement se calcule-t-elle à Taïwan ?"
@@ -28,9 +28,9 @@ Aujourd’hui, je voudrais parler avec vous de l’indemnité de licenciement (�
 
 Beaucoup d’entre vous le savent déjà.
 
-Dans certains autres droits — la Corée en est un exemple —, la société doit verser une indemnité de départ lorsque les salariés quittent l’entreprise.
+À Taïwan, le départ d’un salarié ne donne pas automatiquement droit à une indemnité de licenciement.
 
-À Taïwan, la règle est toutefois différente :
+La règle applicable à Taïwan est la suivante :
 
 L’obligation de verser l’indemnité de licenciement ne naît que lorsque la société licencie le salarié.
 

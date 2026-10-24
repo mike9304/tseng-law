@@ -21,7 +21,7 @@ Zvláště pokud zaměstnanec odejde z vlastní vůle (自請離職),
 
 nemůže obdržet odstupné (資遣費) (článek 18 zákona o pracovních normách),
 
-což se liší od úpravy v některých jurisdikcích, například v Koreji.
+s výjimkou zákonem stanovených případů.
 
 ​
 

@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Ali delavec na Tajvanu prejme odpravnino, če sam odide?"
-    a: "Ne. Za razliko od nekaterih pravnih ureditev (na primer Koreje) na Tajvanu obveznost izplačila odpravnine (資遣費) nastane šele tedaj, ko družba delavca odpusti; če delavec sam odide, družba odpravnine ni dolžna izplačati. Če pa obstaja razlog po 14. členu zakona o temeljnih delovnih standardih, na primer družba ne izplačuje plače ali krši delovnopravne predpise, in delavec zaradi tega pogodbo odpove, mora družba odpravnino izplačati."
+    a: "Ne. Na Tajvanu obveznost izplačila odpravnine (資遣費) nastane šele tedaj, ko družba delavca odpusti; če delavec sam odide, družba odpravnine ni dolžna izplačati. Če pa obstaja razlog po 14. členu zakona o temeljnih delovnih standardih, na primer družba ne izplačuje plače ali krši delovnopravne predpise, in delavec zaradi tega pogodbo odpove, mora družba odpravnino izplačati."
   - q: "Mora družba izplačati odpravnino tudi pri disciplinski odpovedi?"
     a: "Ne. Če delavec stori protipravno dejanje, hudo krši pogodbo o zaposlitvi ali interni delovni red ali se brez utemeljenega razloga ne zglasi 3 dni zapored ali 6 dni v enem mesecu (12. člen zakona o temeljnih delovnih standardih, 勞動基準法第12條), lahko družba odpusti brez odpovedi in odpravnine ni dolžna izplačati. Nasprotno pa gospodarska odpoved (11. člen) zahteva predhodno odpoved in izplačilo odpravnine."
   - q: "Kako se na Tajvanu odpravnina izračuna?"
@@ -28,9 +28,9 @@ Besedilo pojasnjuje, kdaj pravica do odpravnine nastane in kdaj ne.
 
 Ureditev se od države do države razlikuje.
 
-V nekaterih pravnih ureditvah, na primer v Koreji, mora družba izplačati odpravnino tudi tedaj, ko delavec sam odide.
+Na Tajvanu je pravica do odpravnine odvisna od načina prenehanja delovnega razmerja.
 
-Na Tajvanu je to drugače:
+Velja naslednje splošno pravilo:
 
 Obveznost izplačila odpravnine nastane šele tedaj, ko družba delavca odpusti.
 

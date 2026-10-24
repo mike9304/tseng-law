@@ -10,7 +10,7 @@ Who this language version was written for.
 
 ```yaml
 audience: ["ja"]          # written for Japanese readers
-audience: ["en"]          # English-speaking readers (US/UK/other)
+audience: ["en"]          # English-speaking readers (US/GB/other)
 audience: ["global"]      # shared: meant for readers of every locale
 audience: ["vi", "global"]
 ```
@@ -20,7 +20,7 @@ Values (case-insensitive):
 | value | meaning | accepted aliases |
 |---|---|---|
 | `ko` | Korean readers | `KR` |
-| `en` | English-speaking readers | `US`, `GB`, `UK` |
+| `en` | English-speaking readers | `US`, `GB` (not `UK`: `uk` is the Ukrainian locale) |
 | `ja` | Japanese readers | `JP` |
 | `zh-hant` | Taiwan / Traditional Chinese readers | `TW`, `zh-TW` |
 | `zh-hans` | Simplified Chinese readers | `CN`, `zh-CN` |
@@ -48,7 +48,9 @@ language's text. A new column appears at the top of its locale automatically
 once its file carries the field; nothing else needs to change.
 
 Market boards (`th`, `id`, `hi`, `fr`, `de`, `it`, `es`, `pt`, `ar`, since
-2026-10-24) list only columns that fit the market: those whose `audience`
+2026-10-24, and the 35 world-columns locales listed in
+src/data/market-column-curation.ts `WORLD_BOARD_LOCALES` — every guidance
+locale except `vi`) list only columns that fit the market: those whose `audience`
 contains the locale or `global`, and the shared translations picked in
 src/data/market-column-curation.ts. The board opens with all of the market's
 own columns. A column without either stays at its URL and in the sitemap but is

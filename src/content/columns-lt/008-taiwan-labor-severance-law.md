@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Ar Taivane darbuotojas, savo noru išeinantis iš darbo, gauna išeitinę išmoką?"
-    a: "Ne. Skirtingai nei kai kuriose jurisdikcijose (pavyzdžiui, Korėjoje), Taivane pareiga mokėti išeitinę išmoką pagal Taivano teisę (資遣費) atsiranda tik tada, kai bendrovė atleidžia darbuotoją; jei darbuotojas išeina savo noru, bendrovė išeitinės išmokos mokėti neprivalo. Tačiau jei yra Darbo standartų įstatymo 14 straipsnyje numatytas pagrindas, pavyzdžiui, bendrovė nemoka darbo užmokesčio arba pažeidžia darbo teisės aktus, ir darbuotojas dėl to nutraukia sutartį, bendrovė privalo mokėti išeitinę išmoką."
+    a: "Ne. Taivane pareiga mokėti išeitinę išmoką pagal Taivano teisę (資遣費) atsiranda tik tada, kai bendrovė atleidžia darbuotoją; jei darbuotojas išeina savo noru, bendrovė išeitinės išmokos mokėti neprivalo. Tačiau jei yra Darbo standartų įstatymo 14 straipsnyje numatytas pagrindas, pavyzdžiui, bendrovė nemoka darbo užmokesčio arba pažeidžia darbo teisės aktus, ir darbuotojas dėl to nutraukia sutartį, bendrovė privalo mokėti išeitinę išmoką."
   - q: "Ar drausminio atleidimo atveju bendrovė vis tiek privalo mokėti išeitinę išmoką?"
     a: "Ne. Jei darbuotojas padaro neteisėtą veiką, šiurkščiai pažeidžia darbo sutartį ar vidaus darbo taisykles arba be pateisinamos priežasties neatvyksta į darbą 3 dienas iš eilės arba 6 dienas per mėnesį (Darbo standartų įstatymo 12 straipsnis, 勞動基準法第12條), bendrovė gali atleisti be išankstinio įspėjimo ir išeitinės išmokos mokėti neprivalo. Tuo tarpu ekonominis atleidimas (11 straipsnis) reikalauja išankstinio įspėjimo ir išeitinės išmokos išmokėjimo."
   - q: "Kaip Taivane apskaičiuojama išeitinė išmoka?"
@@ -28,7 +28,7 @@ Toliau paaiškinama išeitinė išmoka pagal Taivano teisę (資遣費).
 
 Daugelis skaitytojų jau žino, kad kitose valstybėse išeitinė išmoka mokama ir išeinant savo noru.
 
-Kai kuriose jurisdikcijose, pavyzdžiui, Korėjoje, bendrovė išeitinę išmoką privalo mokėti ir tada, kai darbuotojas išeina pats.
+Gali atrodyti, kad bendrovė išeitinę išmoką privalo mokėti ir tada, kai darbuotojas išeina pats.
 
 Taivane yra kitaip:
 

@@ -21,7 +21,7 @@ Lalo na kung kusang-loob na nagbitiw (自請離職) ang empleyado,
 
 hindi siya makakatanggap ng separation pay (Artikulo 18 ng Batas sa mga Pamantayan sa Paggawa),
 
-at ito ay naiiba sa ilang bansa (halimbawa ang Korea); huwag itumbas ang 資遣費 sa separation pay sa ilalim ng batas paggawa ng ibang bansa.
+maliban sa mga eksepsiyong nakasaad sa ibaba; huwag itumbas ang 資遣費 sa separation pay sa ilalim ng batas paggawa ng ibang bansa.
 
 ​
 

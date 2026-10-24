@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Em Taiwan, os trabalhadores percebem uma indemnização por despedimento se se demitirem por si próprios?"
-    a: "Não. Ao contrário de alguns ordenamentos (por exemplo a Coreia), em Taiwan a obrigação de pagar a indemnização por despedimento (資遣費) só nasce quando a sociedade despede a pessoa empregada; se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar indemnização por despedimento. Contudo, se existir um fundamento previsto no artigo 14 da lei sobre as normas do trabalho (勞動基準法第14條), por exemplo, se a sociedade não pagar o salário ou violar as leis e regulamentos do trabalho, e a pessoa empregada rescindir o contrato com esse fundamento, a sociedade deve pagar a indemnização por despedimento."
+    a: "Não. Em Taiwan, a obrigação de pagar a indemnização por despedimento (資遣費) só nasce quando a sociedade despede a pessoa empregada; se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar indemnização por despedimento. Contudo, se existir um fundamento previsto no artigo 14 da lei sobre as normas do trabalho (勞動基準法第14條), por exemplo, se a sociedade não pagar o salário ou violar as leis e regulamentos do trabalho, e a pessoa empregada rescindir o contrato com esse fundamento, a sociedade deve pagar a indemnização por despedimento."
   - q: "A sociedade deve também pagar uma indemnização por despedimento em caso de despedimento disciplinar?"
     a: "Não. Se a pessoa empregada cometer um ato ilícito, violar gravemente o contrato de trabalho ou o regulamento interno, ou faltar sem motivo legítimo 3 dias seguidos ou 6 dias num mês (artigo 12 da lei sobre as normas do trabalho, 勞動基準法第12條), a sociedade pode despedir sem pré-aviso e não tem de pagar indemnização por despedimento. Em contrapartida, um despedimento económico (artigo 11) exige um pré-aviso e o pagamento da indemnização por despedimento."
   - q: "Como se calcula a indemnização por despedimento em Taiwan?"
@@ -28,9 +28,9 @@ Este texto trata da indemnização por despedimento (資遣費) em Taiwan.
 
 Muitos já o sabem.
 
-Em alguns ordenamentos, por exemplo na Coreia, a sociedade deve pagar uma indemnização de saída quando os trabalhadores deixam a empresa
+Em Taiwan, o direito à indemnização por despedimento depende
 
-Em Taiwan, a regra é contudo diferente:
+da forma como termina a relação laboral:
 
 A obrigação de pagar a indemnização por despedimento só nasce quando a sociedade despede a pessoa empregada.
 

@@ -21,7 +21,7 @@ Tayvan’da çalışanın kıdem tazminatı (資遣費) alması, genel olarak, k
 
 kıdem tazminatı (資遣費) alamaz (İş Standartları Kanununun 18. maddesi),
 
-ve bu, bazı hukuk düzenlerinden — örneğin Kore’den — farklıdır.
+bu, Tayvan hukukundaki genel kuraldır.
 
 ​
 

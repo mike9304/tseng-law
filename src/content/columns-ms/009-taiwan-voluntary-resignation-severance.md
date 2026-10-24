@@ -21,7 +21,7 @@ Khususnya, jika pekerja meletakkan jawatan atas kehendaknya sendiri (自請離�
 
 ia tidak boleh menerima pampasan pemberhentian (資遣費) (perkara 18 undang-undang piawaian buruh),
 
-dan ini berbeza daripada sesetengah bidang kuasa lain — Korea, sebagai contoh.
+dan di Taiwan, penamatan hubungan pekerjaan sahaja tidak secara automatik melayakkan pekerja menerima pampasan tersebut.
 
 ​
 

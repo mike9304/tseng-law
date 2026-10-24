@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Mottar arbeidstakere i Taiwan sluttvederlag når de selv sier opp?"
-    a: "Nei. I motsetning til det som gjelder i noen andre land — Korea er ett eksempel — oppstår plikten til å betale sluttvederlag (資遣費) i Taiwan først når arbeidsgiveren sier opp arbeidstakeren; sier arbeidstakeren selv opp, trenger selskapet ikke å utbetale sluttvederlag. Foreligger det derimot en grunn etter artikkel 14 i loven om arbeidsnormer (勞動基準法第14條), for eksempel at selskapet ikke betaler lønn eller bryter arbeidsrettslige regler, og arbeidstakeren av den grunn sier opp avtalen, skal selskapet utbetale sluttvederlag."
+    a: "Nei. I Taiwan oppstår plikten til å betale sluttvederlag (資遣費) først når arbeidsgiveren sier opp arbeidstakeren; sier arbeidstakeren selv opp, trenger selskapet ikke å utbetale sluttvederlag. Foreligger det derimot en grunn etter artikkel 14 i loven om arbeidsnormer (勞動基準法第14條), for eksempel at selskapet ikke betaler lønn eller bryter arbeidsrettslige regler, og arbeidstakeren av den grunn sier opp avtalen, skal selskapet utbetale sluttvederlag."
   - q: "Skal selskapet også ved en disiplinær avskjed utbetale sluttvederlag?"
     a: "Nei. Begår arbeidstakeren et delikt (侵權行為), grovt krenker arbeidsavtalen eller interne regler eller uteblir uten gyldig grunn 3 dager på rad eller 6 dager i løpet av 1 måned (artikkel 12 i loven om arbeidsnormer, 勞動基準法第12條), kan selskapet avskjedige uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Derimot krever en økonomisk oppsigelse (artikkel 11) forutgående varsel og utbetaling av sluttvederlag."
   - q: "Hvordan beregnes sluttvederlaget i Taiwan?"
@@ -28,9 +28,9 @@ Nedenfor står når sluttvederlag (資遣費) utbetales i Taiwan, og når det ik
 
 Det vet mange allerede.
 
-I noen land — Korea er ett eksempel — skal selskapet betale sluttvederlag når arbeidstakeren slutter
+I Taiwan avhenger retten til sluttvederlag av
 
-I Taiwan er ordningen en annen:
+hvordan arbeidsforholdet avsluttes:
 
 Plikten til å betale sluttvederlag oppstår først når arbeidsgiveren sier opp arbeidstakeren.
 

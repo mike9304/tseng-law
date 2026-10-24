@@ -21,7 +21,7 @@ Eriti kui töötajad lahkuvad omal soovil (自請離職),
 
 ei saa nad lahkumishüvitist (tööstandardite seaduse artikkel 18, 勞動基準法),
 
-ja see erineb mõne teise õiguskorra, näiteks Korea, korrast.
+välja arvatud allpool kirjeldatud erandjuhtudel.
 
 ​
 

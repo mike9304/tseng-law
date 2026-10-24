@@ -21,7 +21,7 @@ Einkum þegar starfsmaðurinn segir sjálfur upp (自請離職) er rétturinn ta
 
 Hann á almennt ekki rétt á starfslokabótum (18. gr. laga um vinnustaðla, 勞動基準法).
 
-Þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi.
+Á Taívan veita starfslok því ekki sjálfkrafa rétt til starfslokabóta.
 
 ​
 

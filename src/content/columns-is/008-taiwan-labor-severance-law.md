@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Fær starfsmaður á Taívan lögbundnar starfslokabætur ef hann segir sjálfur upp?"
-    a: "Nei. Ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — myndast skylda til greiðslu lögboðinna starfslokabóta samkvæmt rétti Taívan (資遣費) fyrst þegar félagið segir starfsmanninum upp; segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokabætur. Sé hins vegar fyrir hendi ástæða samkvæmt 14. gr. laga um vinnustaðla, svo sem að félagið greiði ekki laun eða brjóti gegn vinnulöggjöf, og starfsmaðurinn slítur samningnum á þeim grundvelli, skal félagið greiða starfslokabætur."
+    a: "Nei. Skylda til greiðslu lögboðinna starfslokabóta samkvæmt rétti Taívan (資遣費) myndast fyrst þegar félagið segir starfsmanninum upp; segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokabætur. Sé hins vegar fyrir hendi ástæða samkvæmt 14. gr. laga um vinnustaðla, svo sem að félagið greiði ekki laun eða brjóti gegn vinnulöggjöf, og starfsmaðurinn slítur samningnum á þeim grundvelli, skal félagið greiða starfslokabætur."
   - q: "Á félagið einnig að greiða starfslokabætur við agalega uppsögn?"
     a: "Nei. Fremji starfsmaðurinn ólögmæta háttsemi, brjóti hann alvarlega gegn ráðningarsamningi eða vinnureglum eða sé fjarverandi án gildrar ástæðu 3 daga í röð eða 6 daga á einum mánuði (12. gr. laga um vinnustaðla, 勞動基準法第12條), má félagið segja upp án fyrirvara og þarf ekki að greiða starfslokabætur. Efnahagsleg uppsögn (11. gr.) krefst hins vegar fyrirvara og greiðslu starfslokabóta."
   - q: "Hvernig eru starfslokabætur á Taívan reiknaðar?"
@@ -29,7 +29,7 @@ Wei Tseng (曾雋崴) er löggiltur lögmaður á Taívan.
 
 Eftirfarandi er almenn skýring á fyrirkomulaginu.
 
-Í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — skal félagið greiða starfslokabætur þegar starfsmaður lætur af störfum.
+Ætla mætti að félagið þurfi að greiða starfslokabætur í hvert sinn sem starfsmaður lætur af störfum.
 
 Á Taívan er fyrirkomulagið hins vegar annað:
 

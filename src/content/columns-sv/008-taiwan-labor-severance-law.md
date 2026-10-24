@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Får anställda i Taiwan avgångsvederlag om de säger upp sig själva?"
-    a: "Nej. Till skillnad från vad som gäller i en del andra länder, till exempel Korea, uppstår i Taiwan skyldigheten att betala avgångsvederlag (資遣費) först när företaget säger upp den anställda; om den anställda själv säger upp sig behöver företaget inte betala avgångsvederlag. Om det däremot finns en grund enligt artikel 14 i lagen om arbetsnormer (勞動基準法第14條), till exempel att företaget inte betalar lön eller bryter mot arbetsrättsliga bestämmelser, och den anställda av det skälet avslutar avtalet, måste företaget betala avgångsvederlag."
+    a: "Nej. I Taiwan uppstår skyldigheten att betala avgångsvederlag (資遣費) först när företaget säger upp den anställda; om den anställda själv säger upp sig behöver företaget inte betala avgångsvederlag. Om det däremot finns en grund enligt artikel 14 i lagen om arbetsnormer (勞動基準法第14條), till exempel att företaget inte betalar lön eller bryter mot arbetsrättsliga bestämmelser, och den anställda av det skälet avslutar avtalet, måste företaget betala avgångsvederlag."
   - q: "Måste företaget betala avgångsvederlag även vid disciplinär uppsägning?"
     a: "Nej. Om den anställda handlar olagligt, allvarligt bryter mot arbetsavtalet eller arbetsreglerna eller är frånvarande utan giltigt skäl 3 dagar i följd eller 6 dagar under 1 månad (artikel 12 i lagen om arbetsnormer, 勞動基準法第12條), kan företaget säga upp utan varsel och behöver inte betala avgångsvederlag. Däremot kräver ekonomisk uppsägning (artikel 11) förhandsvarsel och utbetalning av avgångsvederlag."
   - q: "Hur beräknas avgångsvederlaget i Taiwan?"
@@ -28,7 +28,7 @@ Texten går igenom avgångsvederlag (資遣費) i Taiwan.
 
 Många känner redan till det.
 
-I en del länder, till exempel Korea, måste företaget betala avgångsvederlag när den anställda lämnar företaget.
+I en del länder måste företaget betala avgångsvederlag när den anställda lämnar företaget.
 
 I Taiwan är ordningen en annan:
 

@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Vai Taivānā darbinieks, kurš aiziet pēc paša gribas, saņem atlaišanas pabalstu?"
-    a: "Nē. Atšķirībā no dažām valstīm (piemēram, Korejas) Taivānā pienākums izmaksāt likumā noteikto atlaišanas pabalstu (資遣費) rodas tikai tad, kad sabiedrība darbinieku atlaiž; ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav jāizmaksā. Ja tomēr pastāv Darba standartu likuma 14. pantā paredzēts pamats, piemēram, sabiedrība nemaksā algu vai pārkāpj darba tiesību aktus, un darbinieks uz šā pamata izbeidz līgumu, sabiedrībai atlaišanas pabalsts jāizmaksā."
+    a: "Nē. Taivānā pienākums izmaksāt likumā noteikto atlaišanas pabalstu (資遣費) rodas tikai tad, kad sabiedrība darbinieku atlaiž; ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav jāizmaksā. Ja tomēr pastāv Darba standartu likuma 14. pantā paredzēts pamats, piemēram, sabiedrība nemaksā algu vai pārkāpj darba tiesību aktus, un darbinieks uz šā pamata izbeidz līgumu, sabiedrībai atlaišanas pabalsts jāizmaksā."
   - q: "Vai sabiedrībai atlaišanas pabalsts jāizmaksā arī disciplinārās atlaišanas gadījumā?"
     a: "Nē. Ja darbinieks izdara pretlikumīgu darbību, smagi pārkāpj darba līgumu vai iekšējos darba noteikumus vai bez attaisnojoša iemesla 3 dienas pēc kārtas vai 6 dienas mēneša laikā neierodas darbā (Darba standartu likuma 12. pants, 勞動基準法第12條), sabiedrība var atlaist bez iepriekšēja paziņojuma un atlaišanas pabalstu neizmaksāt. Turpretim ekonomiskā atlaišana (11. pants) prasa iepriekšēju paziņojumu un atlaišanas pabalsta izmaksu."
   - q: "Kā Taivānā aprēķina atlaišanas pabalstu?"
@@ -28,7 +28,7 @@ faq:
 
 Regulējums no valsts uz valsti atšķiras.
 
-Dažās valstīs, piemēram, Korejā, sabiedrībai atlaišanas pabalsts jāizmaksā arī tad, kad darbinieks aiziet pats.
+Varētu šķist, ka sabiedrībai atlaišanas pabalsts jāizmaksā arī tad, kad darbinieks aiziet pats.
 
 Taivānā tas ir citādi:
 

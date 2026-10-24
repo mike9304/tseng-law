@@ -21,7 +21,7 @@ Ypač jei darbuotojas išeina savo noru (自請離職),
 
 išeitinės išmokos (資遣費) gauti negali (Darbo standartų įstatymo 18 straipsnis),
 
-tai skiriasi nuo kai kurių jurisdikcijų, pavyzdžiui, Korėjos.
+tad Taivane vien darbo santykių pabaiga teisės į šią išmoką nesuteikia.
 
 ​
 

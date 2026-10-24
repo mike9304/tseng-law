@@ -1,0 +1,27 @@
+### 837-swedish-company-taiwan-subsidiary-branch-office.md
+VERDICT: PASS
+MUST:
+none
+SHOULD:
+- [S1] "Ett befogat behov av förlängning ska tas upp före fristens slut." — Artikel 9 i lagen om utländska investeringar återkallar den del av det godkända kapitalet som inte har tillförts när fristen löper ut. Förlängning förutsätter befogat skäl och ansökan före fristens slut. Meningen anger bara förlängningsplikten. — "Kapital som inte har tillförts när fristen löper ut återkallas. Har investeraren befogat skäl ska förlängning sökas hos myndigheten före fristens slut."
+
+### 838-swedish-professional-taiwan-work-permit-residence.md
+VERDICT: PASS
+MUST:
+none
+SHOULD:
+- [S1] UNVERIFIED-BY-REVIEWER: "Tiden räknas från dagen efter inresan." samt "Viseringsfri inresa förutsätter bland annat ett godtagbart pass med minst sex månaders återstående giltighet och bekräftad vidare- eller återresa. Provisoriska svenska pass omfattas inte av den vanliga viseringsfriheten." — Landfaktalegrn bekräftar endast 90 viseringsfria dagar för Sverige, via andra BOCA-adresser. Startdag, passgiltighet, vidare- eller återresa och provisoriska pass varken bekräftas eller motsägs. Samma startdag återkommer i FAQ. — Behåll 90-dagarspåståendet. Låt övriga villkor stå kvar endast om den citerade BOCA-sidan bär dem ordagrant.
+- [S2] UNVERIFIED-BY-REVIEWER: "Inget färdigt jobberbjudande krävs för Gold Card, enligt programmets officiella presentation. Arbetstillståndet är öppet. Det är inte knutet till en enda arbetsgivare." — Artikel 9 bekräftar egen ansökan, de fyra funktionerna, ett till tre år och att visumdelen kan undantas efter inresa. Kravet på jobb och att tillståndet är öppet och obundet till en arbetsgivare finns inte i lagtexten och kan inte kontrolleras mot den angivna programsidan här. — Behåll lagens delar. Låt de tre meningarna stå kvar endast om goldcard.nat.gov.tw uttryckligen säger detsamma.
+- [S3] UNVERIFIED-BY-REVIEWER: "NIA:s anvisning för denna ansökan kräver underlag för den aktuella kategorin och anger begränsningar för vissa inreseformer." och "NIA:s dokumentanvisning kräver bestyrkande av utomlands utfärdade handlingar och medger att myndigheten begär en bestyrkt eller notariserad kinesisk översättning." — Påståendena citerar officiella sidor som varken bekräftas eller motsägs av lagtexten eller landfaktalegrn. — Behåll hänvisningarna endast om de två NIA-sidorna bär just dessa krav.
+
+### 839-swedish-heir-taiwan-estate-deadlines-documents.md
+VERDICT: REQUEST_CHANGES
+MUST:
+- [M1] "När taiwanesisk arvsrätt gäller kräver civillagens artikel 1174 ett skriftligt avstående till domstolen inom tre månader från det att du fick kännedom om din arvsrätt." — Artikel 1174 första stycket är 得: arvingen får avstå. Skriftlighet, domstol och tre månader från kännedom är formen och fristen för ett avstående (應), inte en plikt att avstå. Öppningen gör en möjlighet till ett krav. FAQ:ns "ska avståendet lämnas" behöver samma villkor. — "När taiwanesisk arvsrätt gäller får du enligt civillagens artikel 1174 avstå från arvet. Avståendet ska då göras skriftligen till domstolen inom tre månader från det att du fick kännedom om din arvsrätt." FAQ: "Om du avstår ska avståendet, när artikel 1174 gäller, lämnas skriftligen till domstolen inom tre månader från kännedom om arvsrätten."
+- [M2] "Markslag som omfattas av artikel 17 måste säljas till en taiwanesisk medborgare inom tre år efter arvsregistreringen." — Artikel 17 förbjuder överlåtelse av de uppräknade markslagen till utlänningar. Arv är undantaget, men en utländsk arvinge ska därefter sälja till en inhemsk medborgare inom tre år från det att arvsregistreringen är slutförd. Meningen gör säljplikten generell för alla arvingar och alla sådana markslag. Följden om utebliven försäljning stämmer med lagen. — "Om en utländsk arvinge genom arv får mark som omfattas av artikel 17 ska den säljas till en taiwanesisk medborgare inom tre år efter att arvsregistreringen har slutförts."
+SHOULD:
+- [S1] "Arvsskattedeklarationen ska som huvudregel lämnas inom sex månader räknat från dagen efter dödsfallet enligt arvsskatte- och gåvoskattelagens artikel 23." — Frist och de särskilda startpunkterna stämmer. Artikel 23 andra stycket saknas: är den avlidne taiwanesisk medborgare med vanlig hemvist utomlands, eller inte taiwanesisk medborgare, och finns egendom i Taiwan, lämnas deklarationen till myndigheten på den centrala regeringens säte. I övriga fall är det skattemyndigheten på folkbokföringsorten. — Lägg till dessa två mottagare utan att ändra sexmånadersfristen.
+- [S2] "Jordlagens artikel 73 anger sex månader från arvsöppningen för arvsregistreringen." — Lagen säger att arvsregistrering får göras inom sex månader från arvsöppningen (得). En för sent inlämnad ansökan kan, för varje månad fristen överskrids, medföra en avgift motsvarande registreringsavgiften, högst tjugo gånger. Rätten att registrera upphör inte. — "Arvsregistrering får göras inom sex månader från arvsöppningen. En för sen ansökan kan medföra en avgift för varje månad fristen överskrids, högst tjugo gånger registreringsavgiften."
+- [S3] UNVERIFIED-BY-REVIEWER: "För skatteärendet visar finansministeriets förberedelseanvisning bland annat dödsfallsunderlag, släktöversikt, arvingarnas identitetsuppgifter, tillgångshandlingar och fullmakt när någon annan deklarerar." — Dokumentlistan varken bekräftas eller motsägs av det material som kunde läsas här. "Bland annat" gör den inte till en sluten lista. — Behåll meningen endast om etax-sidan räknar upp just dessa underlag.
+
+OVERALL: REQUEST_CHANGES

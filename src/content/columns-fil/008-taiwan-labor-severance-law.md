@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Sa Taiwan, makakatanggap ba ng separation pay (資遣費) ang empleyadong kusang nagbitiw sa trabaho?"
-    a: "Hindi. Hindi tulad ng ilang bansa — ang Korea ay isang halimbawa — sa Taiwan ay lumilitaw lamang ang obligasyon ng kompanya na magbayad ng 資遣費 kapag ang kompanya mismo ang nagtanggal sa empleyado. Kapag kusang-loob na nagbitiw ang empleyado, hindi kailangang magbayad ng separation pay ang kompanya. Gayunman, kung may batayan sa ilalim ng Artikulo 14 ng Batas sa mga Pamantayan sa Paggawa (勞動基準法), tulad ng hindi pagbabayad ng kompanya ng sahod o paglabag sa mga batas at regulasyon sa paggawa, at winakasan ng empleyado ang kontrata dahil doon, kailangang magbayad ng separation pay ang kompanya."
+    a: "Hindi. Sa Taiwan ay lumilitaw lamang ang obligasyon ng kompanya na magbayad ng 資遣費 kapag ang kompanya mismo ang nagtanggal sa empleyado. Kapag kusang-loob na nagbitiw ang empleyado, hindi kailangang magbayad ng separation pay ang kompanya. Gayunman, kung may batayan sa ilalim ng Artikulo 14 ng Batas sa mga Pamantayan sa Paggawa (勞動基準法), tulad ng hindi pagbabayad ng kompanya ng sahod o paglabag sa mga batas at regulasyon sa paggawa, at winakasan ng empleyado ang kontrata dahil doon, kailangang magbayad ng separation pay ang kompanya."
   - q: "Sa kaso ba ng disciplinary dismissal (懲戒解僱) ay kailangan pa ring magbayad ng separation pay ang kompanya?"
     a: "Hindi. Kapag ang empleyado ay gumawa ng gawaing labag sa batas, malubhang lumabag sa kontrata sa paggawa o sa mga tuntunin ng kompanya (工作規則), o lumiban nang walang makatwirang dahilan (曠工) nang tatlong sunod na araw o anim na araw sa loob ng isang buwan (Artikulo 12 ng Batas sa mga Pamantayan sa Paggawa 勞動基準法), maaari siyang tanggalin ng kompanya nang walang paunang abiso at hindi kailangang bayaran ng separation pay. Sa kabaligtaran, sa economic dismissal (經濟解僱, Artikulo 11) ay kailangan ang paunang abiso at ang pagbabayad ng separation pay."
   - q: "Paano kinakalkula ang separation pay sa Taiwan?"
@@ -28,9 +28,9 @@ Ngayon ay nais kong talakayin sa inyo ang 資遣費 sa Taiwan — ang bayad sa p
 
 Alam na siguro ito ng marami sa inyo.
 
-Sa Korea, kapag umalis sa trabaho ang isang empleyado ay kailangang magbayad ang kompanya ng retirement allowance (退職金); panuntunan iyon ng batas ng Korea, hindi ng Taiwan.
+Sa Taiwan, hindi awtomatikong may separation pay kapag umalis sa trabaho ang isang empleyado.
 
-Ngunit hindi tulad ng ilang bansa (halimbawa ang Korea), iba ang tuntunin sa Taiwan.
+Nakabatay ang karapatan sa separation pay sa dahilan ng pagwawakas ng kontrata.
 
 Lumilitaw lamang ang obligasyong magbayad ng separation pay kapag ang kompanya mismo ang nagtanggal sa empleyado.
 

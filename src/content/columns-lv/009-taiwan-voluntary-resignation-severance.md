@@ -21,7 +21,7 @@ Kā jau iepriekš norādīts, Taivānā darbiniekam nav viegli saņemt atlaišan
 
 viņš nevar saņemt atlaišanas pabalstu (資遣費) (Darba standartu likuma 18. pants),
 
-kas atšķiras no regulējuma dažās valstīs, piemēram, Korejā.
+tātad Taivānā darba attiecību izbeigšanās pati par sevi nerada tiesības uz šo pabalstu.
 
 ​
 

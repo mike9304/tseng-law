@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "A Taiwan, percep indemnització per acomiadament el treballador que dimiteix voluntàriament?"
-    a: "No. A diferència d’alguns ordenaments (Corea, per exemple), a Taiwan l’obligació de pagar la indemnització per acomiadament (資遣費) només neix quan l’empresa acomiada el treballador; si el treballador dimiteix voluntàriament, l’empresa no l’ha de pagar. Tanmateix, si hi ha una causa de l’article 14 de la Llei de normes laborals (勞動基準法第14條), per exemple que l’empresa no pagui el salari o infringeixi les lleis i reglaments laborals, i el treballador resol el contracte per aquest motiu, l’empresa ha de pagar la indemnització per acomiadament."
+    a: "No. A Taiwan l’obligació de pagar la indemnització per acomiadament (資遣費) només neix quan l’empresa acomiada el treballador; si el treballador dimiteix voluntàriament, l’empresa no l’ha de pagar. Tanmateix, si hi ha una causa de l’article 14 de la Llei de normes laborals (勞動基準法第14條), per exemple que l’empresa no pagui el salari o infringeixi les lleis i reglaments laborals, i el treballador resol el contracte per aquest motiu, l’empresa ha de pagar la indemnització per acomiadament."
   - q: "En cas d’acomiadament disciplinari, l’empresa ha de pagar igualment la indemnització per acomiadament?"
     a: "No. Si el treballador comet un acte il·lícit, infringeix greument el contracte de treball o les normes de l’empresa, o falta a la feina sense causa justificada durant 3 dies consecutius o 6 dies en un mes (article 12 de la Llei de normes laborals, 勞動基準法第12條), l’empresa pot acomiadar sense preavís i no està obligada a pagar la indemnització per acomiadament. En canvi, l’acomiadament econòmic (article 11) exigeix preavís i el pagament de la indemnització per acomiadament."
   - q: "Com es calcula la indemnització per acomiadament a Taiwan?"
@@ -28,9 +28,9 @@ Avui vull explicar la indemnització per acomiadament (資遣費) a Taiwan.
 
 Potser aquest punt ja li resulta conegut.
 
-En alguns ordenaments —Corea n’és un exemple assenyalat— l’empresa ha de pagar, per regla general, una indemnització quan el treballador cessa.
+A Taiwan, l’obligació de pagar una indemnització depèn de la causa del cessament.
 
-Taiwan, en canvi, és diferent.
+L’acomiadament i la dimissió voluntària tenen conseqüències diferents.
 
 Només genera l’obligació de pagar la indemnització per acomiadament quan l’empresa acomiada el treballador.
 

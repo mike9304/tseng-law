@@ -17,11 +17,11 @@ Ako bolo uvedené skôr, na Taiwane nie je pre zamestnanca ľahké získať odst
 
 ​
 
-Zvlášť ak zamestnanec odíde z vlastnej vôle (自請離職),
+Ak zamestnanec na Taiwane odíde z vlastnej vôle (自請離職),
 
-nemôže dostať odstupné (資遣費) (článok 18 zákona o pracovných normách),
+nemôže dostať odstupné (資遣費)
 
-čo sa líši od úpravy v niektorých jurisdikciách, napríklad v Kórei.
+(článok 18 zákona o pracovných normách).
 
 ​
 

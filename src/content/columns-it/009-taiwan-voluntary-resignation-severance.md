@@ -21,7 +21,7 @@ In particolare, se il lavoratore si dimette di propria iniziativa (自請離職)
 
 non può percepire l’indennità di licenziamento (資遣費) (articolo 18 della legge sugli standard del lavoro),
 
-e ciò differisce da altri ordinamenti, per esempio dalla Corea.
+e la cessazione del rapporto di lavoro a Taiwan non dà quindi automaticamente diritto all’indennità.
 
 ​
 

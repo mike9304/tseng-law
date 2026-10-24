@@ -1,0 +1,24 @@
+### 834-dutch-company-taiwan-subsidiary-branch-office.md
+VERDICT: PASS
+MUST:
+none
+SHOULD:
+- [S1] "Verdragsbescherming hangt onder meer af van de fiscale woonplaats en de soort inkomsten; zie artikelen 1 en 4 van de overeenkomst." — UNVERIFIED-BY-REVIEWER: de landenledger bevestigt het algemene verdrag (ondertekening 2001/02/27, inwerkingtreding 2001/05/16); de tekst van de artikelen 1 en 4 zit niet in de aangeleverde wetsteksten. — Geen herschrijving: laat de zin staan als de officiële Engelse PDF die koppeling draagt.
+
+### 835-dutch-employer-taiwan-first-hire-eor.md
+VERDICT: REQUEST_CHANGES
+MUST:
+- [M1] "De Taiwanese inkomstenbelastingwet kent een vaste bedrijfsplaats en een bedrijfsagent, onder meer bij gewoonlijk uitgeoefende bevoegdheid om zaken te onderhandelen en contracten te sluiten, buiten louter inkoop: artikel 10." — Artikel 10 van de inkomstenbelastingwet eist voor deze agentcategorie dat de agent de bevoegdheid heeft om regelmatig namens de onderneming zaken te onderhandelen én contracten te sluiten (有權經常代表…接洽業務，並簽訂契約), buiten louter inkoop (除代理採購事務外). "Uitgeoefende bevoegdheid" maakt daar feitelijk gebruik van. De andere agentgronden blijven via "onder meer" terecht open. — "De Taiwanese inkomstenbelastingwet kent een vaste bedrijfsplaats en een bedrijfsagent, onder meer wanneer iemand buiten louter inkoop de bevoegdheid heeft om regelmatig namens de onderneming zaken te onderhandelen en contracten te sluiten."
+SHOULD:
+- [S1] "Daarnaast kan dienstverlening via personeel voor hetzelfde of een samenhangend project een vaste inrichting vormen wanneer die activiteiten in Taiwan samen meer dan 183 dagen binnen twaalf maanden duren: artikel 5, derde lid, onder b." — UNVERIFIED-BY-REVIEWER: hetzelfde geldt voor de vaste bedrijfsplaats, de contractsluitende vertegenwoordiger, de voorbereidende en ondersteunende uitzonderingen, de onafhankelijke agent en de winsttoerekening onder de artikelen 5 en 7. Het bestaan van het verdrag is bevestigd; de artikeltekst niet. — Geen herschrijving: laat deze verdragszinnen staan als de officiële Engelse PDF ze dekt.
+
+### 836-dutch-working-holiday-taiwan-work-insurance-tax.md
+VERDICT: REQUEST_CHANGES
+MUST:
+- [M1] "De uitzondering voor maximaal negentig dagen geldt voor een niet-inwoner en beloning van een buitenlandse werkgever; zie artikel 8, onderdeel 3." — Artikel 8, onderdeel 3, sluit de beloning alleen uit als de persoon geen fiscaal inwoner is, in één belastingjaar in totaal niet meer dan negentig dagen verblijft (一課稅年度內…合計不超過九十天) én de beloning van een werkgever buiten Taiwan komt. Zonder de jaargrens en de samentelling klopt de uitzondering niet voor een verblijf over de jaarwisseling. — "De uitzondering geldt alleen voor een niet-inwoner die in één belastingjaar in totaal niet meer dan negentig dagen in Taiwan verblijft, en alleen voor beloning van een werkgever buiten Taiwan; zie artikel 8, onderdeel 3."
+SHOULD:
+- [S1] "De Nederland-specifieke voorwaarden van BOCA verlangen onder meer een paspoort dat nog minstens twaalf maanden geldig is, bewijs van minstens €2.500 aan startmiddelen en een verklaring omtrent het gedrag." — UNVERIFIED-BY-REVIEWER: quotum 100, leeftijd 18 tot en met 30 bij de aanvraag en 180 + 180 dagen staan in de landenledger. Niet bevestigd zijn €2.500, paspoorttermijn, verklaring omtrent het gedrag, tickets, woonplaats in eigen land, eerste deelname, geen gezinsleden, persoonlijke indiening, vakantiedoel voorop, verbod op permanent werk, en de eigen verzekering met ziekenhuisopname en repatriëring. — Geen herschrijving: laat deze BOCA- en programma-zinnen staan als de aangehaalde pagina's ze dekken.
+- [S2] "Het bezoekersvisum voor meerdere binnenkomsten is één jaar geldig vanaf afgifte. Per binnenkomst geldt maximaal 180 dagen verblijf, gerekend vanaf de dag na aankomst, volgens BOCA's Nederlandse regeling." — UNVERIFIED-BY-REVIEWER: "maximaal 180 dagen" en een verlenging van 180 dagen sluiten aan op "180 days + 180 days". Niet bevestigd zijn meerdere binnenkomsten, één jaar geldigheid vanaf afgifte, telling vanaf de dag na aankomst, de aanvraag binnen vijftien dagen, de jaargrens vanaf de eerste binnenkomst, het niet terugzetten door een korte reis, het omzetverbod na binnenkomst, en dat dit visum een bezoekersvisum is zonder verblijfsdocument. De én-structuur van artikel 9 van de zorgverzekeringswet klopt wel. — Geen herschrijving: laat deze verblijfs- en visumzinnen staan als de BOCA- en MOFA-pagina's ze dekken.
+- [S3] "Volgens de fiscale overheidsuitleg loopt dat jaar van januari tot en met december." — UNVERIFIED-BY-REVIEWER: artikel 7 noemt één belastingjaar, maar de aangeleverde tekst maakt daar geen kalenderjaar van. Het voorbeeld van september tot augustus steunt op die pagina. — Geen herschrijving: laat de zin staan als de eTax-pagina het kalenderjaar zo definieert.
+
+OVERALL: REQUEST_CHANGES

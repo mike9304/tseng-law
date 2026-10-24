@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Na Tajwanie, czy pracownicy otrzymują odprawę, jeśli sami rezygnują z pracy?"
-    a: "Nie. W odróżnieniu od niektórych porządków prawnych — na przykład koreańskiego — na Tajwanie obowiązek wypłaty odprawy (資遣費) powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę; jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy. Jeżeli jednak istnieje przyczyna z art. 14 ustawy o normach pracy, na przykład spółka nie wypłaca wynagrodzenia albo narusza przepisy prawa pracy, a zatrudniona osoba rozwiązuje umowę z tego powodu, spółka musi wypłacić odprawę."
+    a: "Nie. Na Tajwanie obowiązek wypłaty odprawy (資遣費) powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę; jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy. Jeżeli jednak istnieje przyczyna z art. 14 ustawy o normach pracy, na przykład spółka nie wypłaca wynagrodzenia albo narusza przepisy prawa pracy, a zatrudniona osoba rozwiązuje umowę z tego powodu, spółka musi wypłacić odprawę."
   - q: "Czy spółka musi też wypłacić odprawę przy zwolnieniu dyscyplinarnym?"
     a: "Nie. Jeśli zatrudniona osoba popełnia czyn bezprawny, poważnie narusza umowę o pracę lub regulamin pracy albo opuszcza pracę bez uzasadnionej przyczyny przez 3 dni z rzędu lub 6 dni w jednym miesiącu (art. 12 ustawy o normach pracy, 勞動基準法第12條), spółka może zwolnić bez wypowiedzenia i nie musi wypłacać odprawy. Natomiast zwolnienie ekonomiczne (art. 11) wymaga wcześniejszego wypowiedzenia i wypłaty odprawy."
   - q: "Jak oblicza się odprawę na Tajwanie?"
@@ -28,9 +28,9 @@ Poniżej omawiam odprawę (資遣費) na Tajwanie.
 
 Poniższe rozróżnienie warto mieć na uwadze.
 
-W niektórych państwach — na przykład w Korei — spółka musi wypłacić odprawę także wtedy, gdy pracownik sam odchodzi z przedsiębiorstwa.
+Na Tajwanie prawo do odprawy zależy od sposobu zakończenia stosunku pracy.
 
-Na Tajwanie jest to jednak uregulowane inaczej:
+Ogólna zasada jest następująca:
 
 Obowiązek wypłaty odprawy powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę.
 

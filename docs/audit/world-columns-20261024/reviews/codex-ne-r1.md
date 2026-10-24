@@ -1,0 +1,34 @@
+### 819-nepali-student-taiwan-part-time-work-permit-20-hours.md
+VERDICT: REQUEST_CHANGES
+MUST:
+
+- [M1] “दुई, भाषा विशेषज्ञता भएको विद्यार्थीले शिक्षा मन्त्रालयको विशेष स्वीकृतिसहित भाषा शिक्षणमा संलग्न हुँदा।” — This broadens the language-teaching exception. [Permit Regulations Art. 51(2)(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=51) requires post-enrolment work in one of two specified settings, as well as language expertise and special MOE approval. Preserve those cumulative conditions: “दुई, भाषा विशेषज्ञता भएको विद्यार्थीले भर्नापछि कलेज वा विश्वविद्यालयको भाषा केन्द्र वा ताइवानस्थित विदेशी सांस्कृतिक–शैक्षिक संस्थाको भाषा केन्द्रमा अंशकालीन विदेशी भाषा शिक्षकका रूपमा काम गर्दा, वा कुनै तहको विद्यालयमा आफ्नो भाषा विशेषज्ञतासँग सम्बन्धित शिक्षण गतिविधिमा सहयोग गर्दा, शिक्षा मन्त्रालयको विशेष स्वीकृति भए यो छुट लाग्छ।”
+
+SHOULD:
+
+- [S1] “आवेदनमा फारम, शुल्कको रसिद र एजेन्सीले तोकेका अन्य कागजात लाग्छ ([धारा 53](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=53))।” — Identify the applicant. The opening explains the employer-application rule without explaining the student route; Art. 53 and the cited WDA student page describe the student's application. Clarify without changing the permit requirement: “विद्यार्थीले कार्य अनुमतिका लागि आफैँ आवेदन दिन्छन्। आवेदनमा फारम, शुल्कको रसिद र एजेन्सीले तोकेका अन्य कागजात लाग्छ।” Retain the Art. 53 link.
+- [S2] Review scope and limits, applying to all three files: Nepali idiom/register confidence is limited; these proposed corrections are not native-speaker certification. All 35 distinct linked provisions were requested through `tools/law.py`; its parser missed the attachment-bearing N0090031 Art. 5-1, which was checked directly with curl. The unlinked Art. 2, relevant supplementary provisions, all six cited WDA/NIA pages and the official points appendix were also checked. The prescribed variety checker misclassifies these files as Korean, while `--lang hi` raises `KeyError`; the author's automated PASS cannot be reproduced with that installation. Manual sentence/paragraph checks do not support a MONOTONY rejection.
+
+### 820-nepali-graduate-taiwan-stay-work-after-degree-points.md
+VERDICT: REQUEST_CHANGES
+MUST:
+
+- [M1] “पेशाकर्मी (專門性或技術性工作) को सामान्य बाटोमा [योग्यता तथा समीक्षा मापदण्ड (外國人從事就業服務法第四十六條第一項第一款至第六款工作資格及審查標準) को धारा 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090031&flno=5) ले चारमध्ये एक योग्यता माग्छ: पेशागत परीक्षाको प्रमाणपत्र; सम्बन्धित विभागको स्नातकोत्तर वा सोभन्दा माथिको डिग्री, वा सम्बन्धित विभागको स्नातक र 2 वर्ष वा बढी सम्बन्धित काम अनुभव; बहुराष्ट्रिय कम्पनीमा एक वर्ष सेवा गरेर खटिएर आएको; वा तालिम वा स्वअध्ययनबाट 5 वर्ष वा बढी अनुभव र विशेष उपलब्धि।” — The general-route explanation omits the applicable experience exemption in [Foreign Professionals Act Art. 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=6), effective 1 January 2026 under the [official commencement history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=A0030295). A qualifying bachelor's graduate can use that exemption without the separate 70-point route. Retain the general alternatives and add: “तर विदेशी पेशाकर्मी भर्ना तथा रोजगार ऐनको धारा 6 अनुसार ताइवान वा विदेशका विश्वविद्यालयबाट स्नातकोत्तर वा माथिको डिग्री, वा ताइवानको शिक्षा मन्त्रालयले घोषणा गरेको विश्वका शीर्ष 1,500 विश्वविद्यालयमध्ये कुनैबाट स्नातक वा माथिको डिग्री पाएकालाई यस्तो पेशागत वा प्राविधिक काम गर्न निश्चित अवधिको कार्य अनुभव चाहिँदैन। पेशागत इजाजत, काम गर्ने तरिका तथा अन्य कानुनी शर्त भने पूरा गर्नुपर्छ।” Link Art. 6 inline and add it to Sources.
+- [M2] “पहिल्यै बसाइ अनुमति पाएका पति वा पत्नी, 18 वर्षमुनिका सन्तान र शारीरिक वा मानसिक अपाङ्गताले स्वतन्त्र जीवन चलाउन नसक्ने 18 वर्ष नाघेका सन्तान पनि यसमा पर्छन्।” — “18 वर्ष नाघेका” says over 18; [Residence Regulations Art. 11(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080129&flno=11) says 年滿十八歲, including age 18. Preserve the disability and existing-residence conditions: “पहिल्यै बसाइ अनुमति पाएका पति वा पत्नी, 18 वर्षमुनिका सन्तान र शारीरिक वा मानसिक अपाङ्गताले स्वतन्त्र जीवन चलाउन नसक्ने 18 वर्ष पुगेका वा सोभन्दा माथिका सन्तान पनि यसमा पर्छन्।”
+
+SHOULD:
+none
+
+### 821-nepali-student-taiwan-bank-account-easy-job-police.md
+VERDICT: REQUEST_CHANGES
+MUST:
+
+- [M1] “त्यसभन्दा बढी भए 3 देखि 10 वर्षसम्म कैद र NT$100,000,000 सम्म जरिवाना।” — [Money Laundering Control Act Art. 19(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=19) applies the lower range only below NT$100,000,000; exactly that amount belongs to the higher range. Preserve the mandatory concurrent fine: “रकम NT$100,000,000 वा बढी भए 3 देखि 10 वर्षसम्म कैद र NT$100,000,000 सम्म जरिवाना सँगै हुन्छ।”
+- [M2] “उचित कारणबिना उपस्थित नभए प्रहरीले अभियोजकसँग पक्राउ पुर्जी (拘票) माग्न सक्छ।” — [Code of Criminal Procedure Art. 71-1(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=71-1) additionally requires lawful notification (經合法通知). Restore that prerequisite and retain discretion: “कानुनबमोजिम सूचना दिइएको भए पनि उचित कारणबिना उपस्थित नभए प्रहरीले अभियोजकसँग पक्राउ पुर्जी (拘票) जारी गर्न अनुरोध गर्न सक्छ।”
+- [M3] “संदेह गम्भीर भएको र तल लेखिएमध्ये कुनै एक अवस्था भएमा, आवश्यक ठानेमा, अभियोजक वा न्यायाधीशले विदेश यात्रा रोक्न (限制出境) सक्छन्: निश्चित बासस्थान नभएको, भाग्ने पर्याप्त कारण भएको, वा प्रमाण नष्ट गर्ने तथा सहअभियुक्त वा साक्षीसँग मिलेर बयान बनाउने डर भएको।” — [Code of Criminal Procedure Art. 93-2(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2) requires reasonable grounds to apprehend flight or evidence interference. Destruction, fabrication, alteration and collusion are alternatives, not the draft's destruction AND collusion. Restore the alternatives and statutory exception: “अपराध गरेको गम्भीर शंका हुनुका साथै निश्चित बसोबास नहुनु, भाग्ने जोखिम छ भन्ने पर्याप्त आधार हुनु, वा प्रमाण नष्ट गर्ने, किर्ते गर्ने वा फेरबदल गर्ने अथवा सहअभियुक्त वा साक्षीसँग मिलेमतो गर्ने जोखिम छ भन्ने पर्याप्त आधार हुनु—यीमध्ये कुनै एक अवस्था भए आवश्यकताअनुसार अभियोजक वा न्यायाधीशले विदेश जान रोक लगाउन सक्छन्। अधिकतम मूल सजाय थुना (拘役) हुने वा केवल जरिवाना हुने मुद्दामा यस्तो प्रत्यक्ष रोक लगाउन मिल्दैन।”
+- [M4] “रोकिएपछि बढीमा छ महिनाभित्र कारण, अवधि र असन्तुष्टि जनाउने उपाय लेखिएको लिखित सूचना दिनुपर्छ।” — [Code of Criminal Procedure Art. 93-2(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2) excepts an unknown residence preventing notification and requires immediate disclosure plus the written notice if the defendant is interrogated before notification. Six months is not an unconditional waiting period. Proposed: “ठेगाना अज्ञात भएर सूचना दिन नसकिने अवस्था बाहेक, धारा 93-2 को दोस्रो उपधाराले तोकेको विवरण भएको लिखित सूचना रोक लगाएको छ महिनाभित्र दिनुपर्छ। तर त्यसअघि अभियोजक वा न्यायाधीशले अभियुक्तसँग सोधपुछ गरेमा सोही बेला रोकबारे बताएर लिखित सूचना दिनुपर्छ।”
+
+SHOULD:
+none
+
+OVERALL: REQUEST_CHANGES

@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tại Đài Loan, người lao động tự xin nghỉ việc có được nhận trợ cấp thôi việc (資遣費) không?"
-    a: "Không. Khác với một số nước — ví dụ Hàn Quốc — tại Đài Loan nghĩa vụ chi trả trợ cấp thôi việc (資遣費) chỉ phát sinh khi người sử dụng lao động chủ động cho người lao động thôi việc; nếu người lao động tự xin nghỉ việc thì công ty không phải chi trả khoản này. Tuy nhiên, nếu tồn tại một căn cứ theo Điều 14 Luật Tiêu chuẩn Lao động (勞動基準法), chẳng hạn công ty không trả lương hoặc vi phạm các quy định pháp luật về lao động, và người lao động chấm dứt hợp đồng dựa trên căn cứ đó, thì công ty phải chi trả trợ cấp thôi việc."
+    a: "Không. Tại Đài Loan nghĩa vụ chi trả trợ cấp thôi việc (資遣費) chỉ phát sinh khi người sử dụng lao động chủ động cho người lao động thôi việc; nếu người lao động tự xin nghỉ việc thì công ty không phải chi trả khoản này. Tuy nhiên, nếu tồn tại một căn cứ theo Điều 14 Luật Tiêu chuẩn Lao động (勞動基準法), chẳng hạn công ty không trả lương hoặc vi phạm các quy định pháp luật về lao động, và người lao động chấm dứt hợp đồng dựa trên căn cứ đó, thì công ty phải chi trả trợ cấp thôi việc."
   - q: "Trong trường hợp sa thải kỷ luật, công ty có phải chi trả trợ cấp thôi việc không?"
     a: "Không. Khi người lao động có hành vi vi phạm pháp luật, vi phạm nghiêm trọng hợp đồng lao động hoặc nội quy lao động (工作規則), hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày hoặc 6 ngày trong một tháng (Điều 12 Luật Tiêu chuẩn Lao động (勞動基準法)), công ty được chấm dứt hợp đồng mà không cần báo trước và không phải chi trả trợ cấp thôi việc. Ngược lại, trường hợp cho thôi việc vì lý do kinh tế (Điều 11) thì phải báo trước và phải chi trả trợ cấp thôi việc."
   - q: "Trợ cấp thôi việc tại Đài Loan được tính như thế nào?"
@@ -28,9 +28,9 @@ Bài viết này trình bày chế độ trợ cấp thôi việc (資遣費) c�
 
 Chắc hẳn nhiều quý vị đã từng nghe nói đến khoản tiền này.
 
-Ở Hàn Quốc, khi người lao động nghỉ việc thì công ty phải chi trả khoản trợ cấp một lần theo pháp luật Hàn Quốc (退職金).
+Quyền hưởng trợ cấp thôi việc tại Đài Loan phụ thuộc vào căn cứ chấm dứt hợp đồng lao động.
 
-Nhưng tại Đài Loan, quy định lại khác với một số nước, ví dụ Hàn Quốc:
+Theo quy định tại Đài Loan:
 
 chỉ khi phía công ty cho người lao động thôi việc thì mới phát sinh nghĩa vụ chi trả trợ cấp thôi việc.
 

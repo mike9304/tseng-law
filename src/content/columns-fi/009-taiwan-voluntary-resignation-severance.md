@@ -21,7 +21,7 @@ Erityisesti kun työntekijät irtisanoutuvat itse (自請離職),
 
 he eivät voi saada erorahaa (työstandardilain 18 artikla, 勞動基準法),
 
-ja tämä eroaa eräiden muiden maiden, esimerkiksi Korean, järjestelmästä.
+ellei kyse ole jäljempänä kuvatuista poikkeustapauksista.
 
 ​
 

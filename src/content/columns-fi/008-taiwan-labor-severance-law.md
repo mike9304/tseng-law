@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Saavatko työntekijät Taiwanissa erorahaa, kun he irtisanoutuvat itse?"
-    a: "Eivät. Toisin kuin joissakin muissa maissa — Korea on yksi esimerkki — velvollisuus maksaa erorahaa (資遣費) syntyy Taiwanissa vasta, kun yhtiö irtisanoo työntekijän; jos työntekijä irtisanoutuu itse, yhtiön ei tarvitse maksaa erorahaa. Jos kuitenkin työstandardilain 14 artiklan mukainen peruste on olemassa, esimerkiksi yhtiö ei maksa palkkaa tai rikkoo työlainsäädäntöä, ja työntekijä päättää sopimuksen sen perusteella, yhtiön on maksettava eroraha."
+    a: "Eivät. Velvollisuus maksaa erorahaa (資遣費) syntyy Taiwanissa vasta, kun yhtiö irtisanoo työntekijän; jos työntekijä irtisanoutuu itse, yhtiön ei tarvitse maksaa erorahaa. Jos kuitenkin työstandardilain 14 artiklan mukainen peruste on olemassa, esimerkiksi yhtiö ei maksa palkkaa tai rikkoo työlainsäädäntöä, ja työntekijä päättää sopimuksen sen perusteella, yhtiön on maksettava eroraha."
   - q: "Tuleeko yhtiön maksaa erorahaa myös kurinpidollisessa irtisanomisessa?"
     a: "Ei. Jos työntekijä tekee lainvastaisen teon, rikkoo vakavasti työsopimusta tai työsääntöjä tai on ilman pätevää syytä poissa 3 peräkkäisenä päivänä tai 6 päivänä kuukauden aikana (työstandardilain 12 artikla, 勞動基準法第12條), yhtiö voi irtisanoa ilman ennakkoilmoitusta eikä sen tarvitse maksaa erorahaa. Taloudellinen irtisanominen (11 artikla) sen sijaan edellyttää ennakkoilmoitusta ja erorahan maksamista."
   - q: "Miten eroraha lasketaan Taiwanissa?"
@@ -28,9 +28,9 @@ Alla selvitetään, milloin eroraha (資遣費) Taiwanissa maksetaan ja milloin 
 
 Monet teistä tietävät tämän jo.
 
-Joissakin maissa, esimerkiksi Koreassa, yhtiön on maksettava eroraha, kun työntekijä lähtee.
+Taiwanissa työsuhteen päättyminen ei yksin oikeuta erorahaan.
 
-Taiwanissa tilanne on kuitenkin toinen:
+Taiwanissa sääntö on seuraava:
 
 Velvollisuus maksaa erorahaa syntyy vasta, kun yhtiö irtisanoo työntekijän.
 

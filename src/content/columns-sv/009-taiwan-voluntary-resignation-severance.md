@@ -21,7 +21,7 @@ Särskilt om den anställda säger upp sig på eget initiativ (自請離職),
 
 kan den anställda inte få avgångsvederlag (資遣費) (artikel 18 i lagen om arbetsnormer),
 
-och det skiljer sig från vad som gäller i en del andra länder, till exempel Korea.
+enligt Taiwans regler om avgångsvederlag.
 
 ​
 

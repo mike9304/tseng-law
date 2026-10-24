@@ -17,11 +17,11 @@ Kot sem že navedla, na Tajvanu delavcu ni lahko pridobiti odpravnine (資遣費
 
 ​
 
-Zlasti če delavec odide po lastni volji (自請離職),
+Če delavec na Tajvanu odide po lastni volji (自請離職),
 
-odpravnine (資遣費) ni mogoče prejeti (18. člen zakona o temeljnih delovnih standardih),
+odpravnine (資遣費) ni mogoče prejeti
 
-kar se razlikuje od ureditve v nekaterih pravnih redih, na primer v Koreji.
+(18. člen zakona o temeljnih delovnih standardih).
 
 ​
 

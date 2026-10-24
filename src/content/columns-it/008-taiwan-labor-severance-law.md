@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "A Taiwan, i lavoratori percepiscono un’indennità di licenziamento se si dimettono da sé?"
-    a: "No. A differenza di alcuni ordinamenti (per esempio la Corea), a Taiwan l’obbligo di pagare l’indennità di licenziamento (資遣費) nasce solo quando la società licenzia il lavoratore; se il lavoratore si dimette di propria iniziativa, la società non è tenuta a pagare indennità di licenziamento. Tuttavia, se sussiste un motivo previsto dall’articolo 14 della legge sugli standard del lavoro (勞動基準法第14條), per esempio se la società non paga il salario o viola le leggi e i regolamenti del lavoro, e il lavoratore recede dal contratto per tale motivo, la società deve pagare l’indennità di licenziamento."
+    a: "No. A Taiwan l’obbligo di pagare l’indennità di licenziamento (資遣費) nasce solo quando la società licenzia il lavoratore; se il lavoratore si dimette di propria iniziativa, la società non è tenuta a pagare indennità di licenziamento. Tuttavia, se sussiste un motivo previsto dall’articolo 14 della legge sugli standard del lavoro (勞動基準法第14條), per esempio se la società non paga il salario o viola le leggi e i regolamenti del lavoro, e il lavoratore recede dal contratto per tale motivo, la società deve pagare l’indennità di licenziamento."
   - q: "La società deve anche pagare un’indennità di licenziamento in caso di licenziamento disciplinare?"
     a: "No. Se il lavoratore commette una condotta illecita, viola gravemente il contratto di lavoro o il regolamento interno, o manca senza motivo legittimo 3 giorni di seguito o 6 giorni in un mese (articolo 12 della legge sugli standard del lavoro, 勞動基準法第12條), la società può licenziare senza preavviso e non è tenuta a pagare indennità di licenziamento. Per contro, un licenziamento economico (articolo 11) esige un preavviso e il pagamento dell’indennità di licenziamento."
   - q: "Come si calcola l’indennità di licenziamento a Taiwan?"
@@ -28,7 +28,7 @@ L’oggetto è l’indennità di licenziamento (資遣費) a Taiwan.
 
 Molti già lo sanno.
 
-In alcuni ordinamenti — per esempio in Corea — la società deve pagare un’indennità di uscita quando i lavoratori lasciano l’impresa.
+Si potrebbe pensare che la società debba pagare un’indennità di uscita ogni volta che un lavoratore lascia l’impresa.
 
 A Taiwan la regola è diversa:
 

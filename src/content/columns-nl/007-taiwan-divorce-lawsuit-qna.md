@@ -28,7 +28,7 @@ faq:
 
 In een echtscheidingszaak in Taiwan moeten niet alleen de wijze van beëindiging van het huwelijk, maar ook de ordening van de burgerlijke stand (戶籍), de werking in het buitenland, het huwelijksvermogen, de schadevergoeding, het onderhoud van de echtgenoot na de echtscheiding (贍養費) en beslissingen over minderjarige kinderen (未成年子女) en kinderalimentatie (扶養費) van elkaar worden onderscheiden. Dezelfde feiten kunnen materiaal zijn voor meerdere vorderingen, maar de voorwaarden, de werking, het voorwerp van bewijs en de termijnen van elk recht zijn niet dezelfde.
 
-Vooral bij gezinnen die met 2 of meer staten of gebieden zijn verbonden — Taiwan (臺灣) en een ander land, bijvoorbeeld Korea (韓國) — kan de procedure niet alleen aan de hand van de nationaliteit van 1 van de partijen of van de plaats van huwelijkssluiting worden vastgesteld. Eerst moeten het centrum van hun leven, de stand van bestaande procedures en registers, de plaats van opstelling van de stukken, het verblijf van het kind en de ligging van het vermogen worden nagegaan, om onnodige dubbele procedures en executieleemten te verminderen.
+Vooral bij gezinnen die met 2 of meer staten of gebieden zijn verbonden — Taiwan (臺灣) en een ander land of gebied — kan de procedure niet alleen aan de hand van de nationaliteit van 1 van de partijen of van de plaats van huwelijkssluiting worden vastgesteld. Eerst moeten het centrum van hun leven, de stand van bestaande procedures en registers, de plaats van opstelling van de stukken, het verblijf van het kind en de ligging van het vermogen worden nagegaan, om onnodige dubbele procedures en executieleemten te verminderen.
 
 ## 1. 3 wegen van echtscheiding in Taiwan en eerste toetsingspunten in een internationale zaak
 
@@ -147,7 +147,7 @@ Bij de executie van kinderalimentatie zijn de bewoording van de bestaande execut
 
 ## 10. Internationale verhuizing met het kind
 
-Alleen de afspraak dat het kind buiten Taiwan gaat wonen — bijvoorbeeld in Korea — maakt het levenspeil daar niet tot een zelfstandige formule voor de kinderalimentatie. Werkelijke woon-, onderwijs-, ziekte- en reiskosten en de behoefte van het kind, inkomen, vermogen en zorglast van beide ouders en bestaande overeenkomst of beslissing, moeten samen worden onderzocht. Kosten van de verblijfsstaat kunnen materiaal zijn om concrete uitgaven te beoordelen, maar leggen op zich het lastbedrag niet vast.
+Alleen de afspraak dat het kind buiten Taiwan gaat wonen maakt het levenspeil daar niet tot een zelfstandige formule voor de kinderalimentatie. Werkelijke woon-, onderwijs-, ziekte- en reiskosten en de behoefte van het kind, inkomen, vermogen en zorglast van beide ouders en bestaande overeenkomst of beslissing, moeten samen worden onderzocht. Kosten van de verblijfsstaat kunnen materiaal zijn om concrete uitgaven te beoordelen, maar leggen op zich het lastbedrag niet vast.
 
 Bij internationale verhuizing moet eerst worden nagegaan wie bevoegd is verblijf en reizen van het kind te bepalen, en of toestemming van de andere ouder of een toepasselijke rechterlijke beslissing over het ouderlijk gezag (親權) bestaat. Vervolgens onderzoekt men of de verhuizing aan het belang van het kind beantwoordt en welke werking zij heeft op onderwijs, medische zorg, continuïteit van het leven en voortgezette omgang met de achterblijvende ouder. Een werkelijk uitvoerbaar plan zoals contactfrequentie, verblijf in de vakantie, reiskosten en overdrachtsplaats is nodig.
 

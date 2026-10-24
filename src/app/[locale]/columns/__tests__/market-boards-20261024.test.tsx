@@ -60,10 +60,11 @@ describe('market boards render only their columns (2026-10-24)', () => {
     expect(section?.[1]).toContain(String(opening));
   }, SLOW);
 
-  it('a non-market guidance board keeps the shared columns and the Korean-title list', async () => {
-    const html = await boardHtml('nl');
-    expect(links(html, 'nl', 'taiwan-gym-injury-lawsuit')).toBe(true);
-    expect(html).toMatch(/href="\/ko\/columns\/[^"]+"/);
+  it('vi stays outside the market boards: every shared column, no Korean-title list', async () => {
+    expect(MARKET_BOARD_LOCALES).not.toContain('vi' as never);
+    const html = await boardHtml('vi');
+    expect(links(html, 'vi', 'taiwan-gym-injury-lawsuit')).toBe(true);
+    expect(html).not.toMatch(/href="\/ko\/columns\/[^"]+"/);
   }, SLOW);
 
   it.each(MARKET_BOARD_LOCALES)('%s articles: a hidden column still opens; links stay on the board', async (locale) => {

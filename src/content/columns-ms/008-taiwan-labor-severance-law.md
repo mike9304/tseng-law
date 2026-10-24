@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Di Taiwan, adakah pekerja menerima pampasan pemberhentian jika mereka meletakkan jawatan sendiri?"
-    a: "Tidak. Berbeza dengan sesetengah bidang kuasa — Korea, sebagai contoh — di Taiwan kewajipan membayar pampasan pemberhentian (資遣費) hanya lahir apabila syarikat memberhentikan pekerja; jika pekerja meletakkan jawatan sendiri, syarikat tidak perlu membayar pampasan pemberhentian. Walau bagaimanapun, jika wujud sesuatu alasan menurut perkara 14 undang-undang piawaian buruh (勞動基準法), seperti syarikat tidak membayar gaji atau melanggar undang-undang dan peraturan buruh, dan pekerja menamatkan kontrak atas alasan itu, syarikat mesti membayar pampasan pemberhentian."
+    a: "Tidak. Di Taiwan kewajipan membayar pampasan pemberhentian (資遣費) hanya lahir apabila syarikat memberhentikan pekerja; jika pekerja meletakkan jawatan sendiri, syarikat tidak perlu membayar pampasan pemberhentian. Walau bagaimanapun, jika wujud sesuatu alasan menurut perkara 14 undang-undang piawaian buruh (勞動基準法), seperti syarikat tidak membayar gaji atau melanggar undang-undang dan peraturan buruh, dan pekerja menamatkan kontrak atas alasan itu, syarikat mesti membayar pampasan pemberhentian."
   - q: "Adakah syarikat juga mesti membayar pampasan pemberhentian dalam kes pemberhentian disiplin?"
     a: "Tidak. Jika pekerja melakukan perbuatan yang dilarang undang-undang, melanggar kontrak kerja atau peraturan dalaman secara serius atau tidak hadir tanpa sebab yang sah 3 hari berturut-turut atau 6 hari dalam satu bulan (perkara 12 undang-undang piawaian buruh, 勞動基準法第12條), syarikat boleh memberhentikan tanpa notis dan tidak perlu membayar pampasan pemberhentian. Sebaliknya, pemberhentian ekonomi (perkara 11) menuntut notis terdahulu dan pembayaran pampasan pemberhentian."
   - q: "Bagaimana pampasan pemberhentian dikira di Taiwan?"
@@ -28,7 +28,7 @@ Hari ini, saya ingin berbicara dengan anda mengenai pampasan pemberhentian (資�
 
 Ramai antara anda sudah mengetahuinya.
 
-Sebagai perbandingan dengan sesetengah bidang kuasa lain — Korea, sebagai contoh — syarikat di sana pada umumnya mesti membayar pampasan apabila pekerja meninggalkan pekerjaan.
+Anda mungkin menyangka bahawa syarikat mesti membayar pampasan setiap kali pekerja meninggalkan pekerjaan.
 
 Di Taiwan, keadaannya berbeza:
 

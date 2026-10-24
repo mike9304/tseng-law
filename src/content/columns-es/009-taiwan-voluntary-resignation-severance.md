@@ -21,7 +21,7 @@ En particular, la dimisión voluntaria (自請離職) es el supuesto general.
 
 El trabajador no puede percibir la indemnización por despido (資遣費) (artículo 18 de la Ley de Normas Laborales).
 
-Ello difiere de algunos ordenamientos, como el coreano.
+Esta regla está sujeta a las excepciones previstas en la ley.
 
 ​
 

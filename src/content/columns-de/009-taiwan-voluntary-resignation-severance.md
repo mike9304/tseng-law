@@ -21,7 +21,7 @@ Das gilt insbesondere, wenn Beschäftigte von sich aus kündigen (自請離職).
 
 Dann können sie keine Abfindung erhalten (Artikel 18 des Arbeitsstandardsgesetzes, 勞動基準法).
 
-Das unterscheidet sich von manchen anderen Rechtsordnungen; Korea ist ein gekennzeichnetes Beispiel.
+Dabei gelten die gesetzlich vorgesehenen Ausnahmen.
 
 ​
 

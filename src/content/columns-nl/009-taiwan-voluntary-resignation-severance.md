@@ -19,9 +19,9 @@ Zoals eerder toegelicht, is het in Taiwan voor werknemers niet licht een ontslag
 
 In het bijzonder wanneer werknemers zelf ontslag nemen (自請離職),
 
-kunnen zij geen ontslagvergoeding ontvangen (artikel 18 van de wet op de arbeidsnormen, 勞動基準法),
+kunnen zij geen ontslagvergoeding ontvangen (artikel 18 van de wet op de arbeidsnormen, 勞動基準法)
 
-en dat verschilt van de regels in veel andere landen, waaronder Korea.
+volgens de regels in Taiwan.
 
 ​
 

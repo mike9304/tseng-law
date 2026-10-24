@@ -21,7 +21,7 @@ Osobito ako radnik ode vlastitom voljom (自請離職),
 
 ne može primiti zakonsku otpremninu (資遣費) (članak 18. Zakona o standardima rada),
 
-što se razlikuje od uređenja u nekim pravnim poredcima, na primjer u Koreji.
+osim u slučajevima opisanima u nastavku.
 
 ​
 

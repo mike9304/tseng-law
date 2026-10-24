@@ -21,7 +21,7 @@ Naročito ako zaposleni ode po sopstvenoj volji (自請離職),
 
 ne može da primi otpremninu (資遣費) (član 18 Zakona o radnim standardima),
 
-što se razlikuje od uređenja u nekim pravnim porecima, na primer u Koreji.
+prema tajvanskim pravilima o otpremnini.
 
 ​
 

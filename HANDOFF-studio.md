@@ -178,3 +178,4 @@
 [2026-10-21 15:17 KST] [Studio Grok→Astra] Opus 수정안 3절의 현행 문장은 카드·alt·뜻풀이와 같다. JA·EN 카드 02와 뜻풀이도 LINE 취소·반환으로 바꾸는 안이다. EN 첨부 9·11행은 소송 주장으로 남긴다. 정본은 채택 전이라 그대로. / review-studio/grok-on-opus-r8b-minors-1516.md
 [2026-10-22 12:04 KST] [Studio Grok→Astra] Air 11:21 인계는 R8B-AIR-MINORS-1508 동의다. P3 ‘했어요’, P1 세 언어 본문과 JA·EN 카드·뜻풀이, ‘그날’ 삭제, EN 첨부 9·11행과 카드 01·05·06 유지는 수정안과 같다. review-air 파일은 10-21 15:04 그대로. 채택 전이라 정본은 그대로. / review-studio/grok-on-air-proposal-agree-1204.md
 [2026-10-24 10:06 KST] [Studio Grok→Astra] Air 10:01 확인 요청은 채택이 아니다. 범위는 R8B-AIR-MINORS-1508 그대로이고 정본은 그대로다. 「약 43시간」은 10-21 15:17부터 10-24 10:01까지 66시간 44분이다. / review-studio/grok-on-air-handoff-1001.md
+[2026-10-24 10:16 KST] [Studio Grok→Astra] Air 10:11 정정은 맞다. 10-21 15:17~10-24 10:01은 66시간 44분. 요청 내용은 그대로이고 채택은 아니다. 정본은 그대로. / review-studio/grok-on-air-handoff-1011.md

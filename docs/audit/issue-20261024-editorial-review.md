@@ -6,13 +6,13 @@ Rules applied: the lane `RULES.md`; repository `AGENTS.md`, `docs/columns/EDITOR
 
 Four locale authors were followed by four independent locale reviewers and four fresh independent final reviewers. They are model-based reviews; no human-native, attorney or Claude Code certification is asserted. Detailed opened-source records, author changes, reviewer findings and repair rechecks are retained in `/Users/son7/tseng-air-1011/lanes/issues/20261024/work/`. The source ledger is `../SOURCES.md` relative to that work directory. Root read the actual final openings, review reports and validation outputs.
 
-## Final frozen versions
+## Frozen review versions
 
-All eight current versions received locale PASS and independent final PASS. EN06 and VI07 have superseding repair addenda in their locale reports; earlier REQUEST_CHANGES entries remain as review history, not unresolved findings.
+At the original batch freeze, all eight versions received locale PASS and independent final PASS. EN06 and VI07 have superseding repair addenda in their locale reports; earlier REQUEST_CHANGES entries remain as review history. The ko-01 row and opening below now reflect its Claude Code round-1 repair; its superseding checks are recorded in the addendum at the end. Other rows preserve the original batch review versions and do not certify subsequent concurrent repairs.
 
 | Piece | Article | SHA-256 | Locale / final |
 |---|---|---|---|
-| ko-01 | `src/content/issues/ko/ISSUE-20261024-01-taiwan-seoul-illustration-fair-typhoon-booth-fee.md` | `13c8ee05af626eddd258f0af86b93bb08b2da43d13250fdd101cc13b87579e40` | PASS / PASS |
+| ko-01 | `src/content/issues/ko/ISSUE-20261024-01-taiwan-seoul-illustration-fair-typhoon-booth-fee.md` | `c1422d65d1fe6db74521cc6b347ef0d00238dfb975c421c9be24e8d32e6a4a0e` | R1 PASS / PASS; Claude Code re-review pending |
 | ko-02 | `src/content/issues/ko/ISSUE-20261024-02-taiwan-typhoon-house-tax-damage-area-relief.md` | `4e531ae2be96732612fa2162e74a2de5c9d28101507b4feff4e05ec8c5d58f22` | PASS / PASS |
 | ja-03 | `src/content/issues/ja/ISSUE-20261024-03-taiwan-chiikawa-cargo-customs-declarations.md` | `81f94ead96ea4f2f1330998d02849c79f607c938cad3107cc5b61147b98c468d` | PASS / PASS |
 | ja-04 | `src/content/issues/ja/ISSUE-20261024-04-taiwan-medical-advertising-social-media-fertility-event.md` | `d0334a638f4312db64977414663536ca40699e08a13a4f2eb02f1a9aeaf807ba` | PASS / PASS |
@@ -23,19 +23,19 @@ All eight current versions received locale PASS and independent final PASS. EN06
 
 ## Actual first two prose paragraphs and deletion tests
 
-The following are the actual final paragraphs, with link labels preserved and link destinations omitted for readability. Headings and image captions are not counted as prose paragraphs. The detailed sentence-level tests are in the locale reports.
+The following are the reviewed paragraphs, with link labels preserved and link destinations omitted for readability. The ko-01 quotation is updated for round 1; the other quotations retain the original freeze. Headings and image captions are not counted as prose paragraphs. The detailed sentence-level tests are in the locale reports and the ko-01 addendum.
 
 ### ko-01
 
 Paragraph 1:
 
-> 한국 작가들도 참여하는 서일페 타이베이가 태풍으로 휴장 일정을 알렸습니다. 보도에 소개된 원래 일정은 10월 23일부터 26일까지 나흘입니다. 주최 측은 10월 22일 다음 날 전시를 쉬겠다고 공지했습니다. 23일 추가 공지에서는 24일도 휴장한다고 밝혔습니다.
+> 한국 작가가 160명 넘게 참여하는 서일페 인 타이베이(SIF in Taipei)가 태풍으로 휴장 일정을 알렸습니다. 행사 소개 기사에 실린 원래 일정은 10월 23일부터 26일까지 나흘입니다. 주최 측은 10월 22일 공지에서 다음 날인 23일 하루 전시를 쉬겠다고 했습니다. 23일 추가 공지에서는 24일도 휴장한다고 밝혔습니다.
 
 Paragraph 2:
 
 > 추가 공지는 태풍으로 입장권을 취소하는 관람객에게 수수료 없이 전액 환불하겠다고 안내했습니다. 환불 절차는 예매처에 따릅니다. 부스 참가비도 전액 환불일까요? 공지에는 부스 참가비에 관한 약속이 없습니다.
 
-The opening identifies the Korean exhibitors, original four-day schedule and two separately dated closure notices. The second paragraph preserves ticket-refund scope, platform procedure and the unanswered exhibitor-fee question. Deleting these loses facts and the concrete contract problem; retain.
+The opening identifies more than 160 Korean exhibitors and the event's Korean name, the original four-day schedule, the October 22 notice announcing October 23 closure, and the October 23 notice adding October 24 closure. Each sentence adds a separate fact. The second paragraph preserves ticket-refund scope, platform procedure, the exhibitor's refund question and the absence of any booth-fee promise in the notices. Deleting these loses facts or the concrete contract problem; retain.
 
 ### ko-02
 
@@ -164,7 +164,7 @@ Manual section 5 findings:
 
 ## Sources, images and tests
 
-The eight original news hooks were published October 21–23. The cargo article explicitly distinguishes the July inspection from its recent announcement; the fair's October 24 follow-up was checked only for contradiction, not used as the earlier news hook. Every piece links verified MOJ LawSingle pages. Pending legislative announcements, existing duties and reported administrative findings are distinguished. No judgment is invented or cited.
+The eight original news hooks were published October 21–23. The cargo article explicitly distinguishes the July inspection from its recent announcement. At the original freeze, the fair's October 24 follow-up was checked only for contradiction; ko-01 round 1 now cites it for the remaining two days' extended hours while retaining the earlier news hook. Every piece links verified MOJ LawSingle pages. Pending legislative announcements, existing duties and reported administrative findings are distinguished. No judgment is invented or cited.
 
 The 91APP incident and other duplicate candidates were rejected. A new VASP rule was replaced when the MOJ text did not reflect the new official rule. Three storm pieces address separate transactions and statutes, not translations. Source-retrieval methods, MOJ consolidation cutoff and effectivity limits are retained in the source ledger and reviews.
 
@@ -177,3 +177,46 @@ The exact requested Vitest invocation passed after the EN06/VI07 repairs: three 
 ## Handoff boundary
 
 The first queue entry owns this shared audit and the new test in addition to its own article/images. The eight-row queue, test command, source ledger and operator notes are external lane handoff files. Local drafting/review completion is separate from the lane's later commits, Claude Code review and deployment. No live-site success is claimed. Any subsequent article edit changes the frozen hash and requires checking its affected review scope.
+
+## ko-01 — Claude Code round-1 repair, 2026-10-24
+
+Scope: only the named ko-01 manuscript, `src/lib/__tests__/issue-board-20261024.test.ts` and this audit were edited. Both named images were inspected or verified and remain byte-identical. The other piece repairs in the shared worktree belong to their respective tasks. No staging, commit, push or deployment was performed in this repair.
+
+The original manuscript hash `13c8ee05af626eddd258f0af86b93bb08b2da43d13250fdd101cc13b87579e40` was reproduced before editing. The repaired hash is `c1422d65d1fe6db74521cc6b347ef0d00238dfb975c421c9be24e8d32e6a4a0e`. Original external author/review/manifest files still describe the earlier freeze; this addendum supersedes them only for ko-01. Those external files are outside the authorized edit scope.
+
+### Finding disposition and meaning preservation
+
+| Finding | Applied change | Reason and preserved meaning |
+|---|---|---|
+| MINOR 1, shared test | Renamed `EXPECTED` to `ALLOWED_NUMBERS`; copied the October 22 present-file validation pattern with duplicate-ID checking and `ALLOWED_NUMBERS[locale] ?? []`; removed exact locale-array equality and the mandatory eight-file count. | Separately approved pieces can arrive in any subset. Unknown or duplicate IDs still fail. Current allocated numbers remain unchanged; a later publication renumber must update the allowlist with the assigned number. |
+| MINOR 2, notice date | `주최 측은 10월 22일 다음 날 전시를 쉬겠다고 공지했습니다.` became `주최 측은 10월 22일 공지에서 다음 날인 23일 하루 전시를 쉬겠다고 했습니다.` with the notice link on `10월 22일 공지`. | Clearly distinguishes the announcement date from the one-day closure. The separate October 23 notice/October 24 closure remains. |
+| MINOR 3 and NIT 4, event framing | `한국 작가들도 참여하는 서일페 타이베이` became `한국 작가가 160명 넘게 참여하는 서일페 인 타이베이(SIF in Taipei)`. | Removes incidental-participation framing; the count is supported by Walkerland's event listing and the Korean event name by the organizer announcement reported in Seoul Shinmun. No claim of observed attendance or a new booth-refund entitlement. |
+| NIT 5, image caption | Prefixed the in-body caption with `대표 이미지는`. | Connects the remote caption to the representative image. The exact frontmatter caption remains contained in the body; fictional-scene and non-documentary limits are unchanged. |
+| NIT 6, later notice | Added one sentence attributing the remaining two days' extended visiting hours to the October 24 notice, with the same URL in the source list. | Supports the discussion of remaining services without treating extended hours as agreed compensation or a promised booth-fee refund. |
+| NIT 7, source description | `보도에 소개된 원래 일정` became `행사 소개 기사에 실린 원래 일정`. | Accurately identifies the event listing. October 23–26 and the original four-day duration remain. |
+| NIT 8, summary | `부스 참가비는 참가계약을 따로 봅니다.` became `부스 참가비는 참가계약에 따라 따로 판단합니다.` | Completes the sentence naturally; Taiwan-law applicability, actual impossibility and responsibility conditions remain. |
+| Sentence-variety repair | Split `참가계약에서도 태풍의 발생뿐 아니라, 주최 측이 계약상 약속한 일을 실제로 이행할 수 없었는지가 문제됩니다.` into `태풍의 발생만으로는 부족합니다. 참가계약에서도 주최 측이 약속한 일을 실제로 이행할 수 없었는지가 문제됩니다.` | Gives the insufficiency of a typhoon alone a short sentence and preserves the requirement of actual inability to perform the promised contractual service. The preceding Article 225 no-fault condition is unchanged. |
+
+All review findings were supported; no rebuttal file was warranted or created.
+
+### Fresh source verification
+
+- [Walkerland event listing](https://www.walkerland.com.tw/subject/view/425413): displayed publication time October 22, 2026, 17:30; more than 160 Korean illustrators; originally October 23–26 at Huashan 1914 East 2. The current listing also reflects the two closures and revised hours. It is an event roundup, not a judicial or official legal report.
+- Organizer notices dated [October 22](https://sifintaipei.com.tw/news/ef388ef2-1378-4ade-8a85-78b025dbaf6a), [October 23](https://sifintaipei.com.tw/news/6e5f9b3f-cd0e-42bf-88bb-f0c44f90406b) and [October 24](https://sifintaipei.com.tw/news/a1afdd18-f7cc-4b64-8d39-cf97d338e39f) were opened independently. The October 22 page returned HTTP 200 through a direct HTTPS retrieval after the web tool timed out. They respectively announce October 23 closure, add October 24 closure/full ticket refunds without a handling fee under the ticket platform process, and extend October 25 hours to 10:00–20:00 and October 26 hours to 10:00–19:30. None specifies booth-fee repayment or exhibitor compensation.
+- [Seoul Shinmun's organizer-announcement report](https://m.seoul.co.kr/news/economy/2026/05/15/20260515500084), whose displayed publication date is May 18, 2026, supports the Korean name `서일페 인 타이베이`. Its earlier proposed 200-team scale is not substituted for Walkerland's later creator count.
+- [Civil Code Article 225](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=225), [Article 266](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=266) and [history/effectivity](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001) were opened. Article 225 paragraph 1 retains non-attributability to the debtor and actual impossibility. Article 266 retains non-attributability to both parties, full versus proportional counter-performance relief, and recovery under unjust-enrichment rules. The database's pending-effectivity notes concern Articles 166-1 and 1223, not these two provisions; the displayed consolidation cutoff is October 16, 2026. No individual exhibitor contract or judicial outcome was verified or asserted.
+
+### Checks on the repaired version
+
+- Fresh Vitest run at 15:57:14 KST: `./node_modules/.bin/vitest run src/lib/__tests__/issue-board-20261024.test.ts src/lib/__tests__/issue-board-20261002.test.ts src/lib/__tests__/issue-board-20260930.test.ts --no-cache --configLoader runner` — 3 files, 80 tests PASS, exit 0; October 24 contributes 17 tests. Older tests were not edited.
+- Scoped lint: `./node_modules/.bin/eslint src/lib/__tests__/issue-board-20261024.test.ts` — exit 0, no findings.
+- The actual updated ID-validation callback and allowlist were extracted with the TypeScript parser and evaluated in memory: ko-01 alone, an empty batch, partial markets and the complete current batch pass; duplicate IDs, unallocated IDs and a wrong-locale ID fail as intended. Seven checks passed without moving articles or writing fixture files.
+- Shared checker: `python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check src/content/issues/ko/ISSUE-20261024-01-taiwan-seoul-illustration-fair-typhoon-booth-fee.md --lang ko` — zero FAIL; 24 sentences, length CV 0.450, short share 0.125, same-length runs 0.045, repeated paragraph starts 0, sentence-end citation share 0, contrast/caveat counts 0, one reader question. One nonblocking warning reports the expected 합니다체 ending concentration; varied syntax and the question were checked manually. Excluding the caption gives 22 sentences, CV 0.456 and short share 0.136. The first provisional repair had CV 0.430 and was corrected before this freeze.
+- Body length is 1,050 characters including spaces and single paragraph separators, excluding frontmatter, headings, image caption, sources and closing disclaimer. The original batch counts above remain historical. All six body source URLs occur in the source list; all original URLs remain. FAQ text, legal conditions, dates, internal author metadata and the image disclosure are preserved.
+- Manual section 5: factual event opening; three useful very short sentences; no consecutive long sentences or repeated paragraph opener; no repeated claim/citation/caveat template; one concrete ticket-versus-booth question; no manufactured contrast; ending tied to contracted services and date-specific notices; consistent 합니다체, no bold, fabricated first person or imperative checklist. The creator count and original date range are retained because they are substantive review corrections, rather than deleting facts to satisfy a numeric-opening preference.
+- The actual openings, headings and substantive endings of Korean columns 706, 705 and 704 listed above were reread. Their residence-change, entry-route and first-ARC topics use different openings and procedural headings; ko-01 remains a dated-notice/contract-performance article ending on the promised services. This compares available repository versions, not verified live ordering or the older articles' legal merits.
+- Image hashes remain WebP `758aaabd9d14452b1712140a1fd820376c11ff8074aa2cc23c9c4fc231c6a624` and JPEG `1a22c88283754d3533bfc9403bc061a06eb0afc1ac6c60441b763d79e2024b1a`. The JPEG was visually inspected: empty booth, table, boxes and rain on the glass; no visible text, logo or face. `git diff --check` passed.
+
+Independent nonauthor reviewers `ko01_r1_locale` (`tseng-editor-ko`) and `ko01_r1_final` (`tseng-editor-final`) both returned PASS on the repaired SHA above, with no unresolved MAJOR/MINOR. They independently read the actual article, source material, image and three Korean comparators; both reproduced the zero-FAIL variety check. The final reviewer reopened all three organizer notices successfully over HTTPS, checked current MOJ text/history and the Korean event name, and confirmed the test/audit repair scope. The final reviewer relied on root's recorded Vitest result rather than claiming a separate run. Neither reviewer wrote any files; their findings were returned in the repair session and recorded here by root. These are model-based editorial reviews, not attorney/native-speaker certification or Claude Code approval.
+
+This is a bounded local repair record; Claude Code re-review, publication numbering and release remain separate operator work. No build, browser-rendering or live-site claim is made.
